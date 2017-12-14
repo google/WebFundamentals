@@ -1,0 +1,84 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: Jika Anda adalah pemilik situs dan melihat salah satu hal berikut...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Mungkin Anda sedang diretas
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Setiap hari, penjahat dunia maya menyusupi ribuan situs web. Peretasan hampir
+        tak terlihat oleh pengguna, namun tetap berbahaya bagi siapa pun yang menayangkan
+        laman — termasuk pemilik situs. Misalnya, tanpa sepengetahuan pemilik situs,
+        peretas mungkin telah menginfeksi situs dengan kode berbahaya yang dapat merekam
+        penekanan tombol pada komputer pengunjung dan mencuri kredensial masuk untuk
+        transaksi keuangan atau perbankan online.
+  - heading: Pelajari tentang peretasan
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>Video ini mencakup:</strong></br> <ul><li>Cara dan alasan situs diretas</li>
+        <li>Proses pemulihan situs dan menghapus peringatan apa pun yang dilihat pengguna</li>
+        <li>Perkiraan waktu perbaikan situs</li> <li>Memperbaiki sendiri atau menyewa
+        seorang profesional</li></ul>
+  - heading: Ambil tindakan
+    columns:
+    - items:
+      - heading: 1. Bentuk tim
+        description: >
+          Hubungi host web dan bentuk tim dukungan.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Karantina situs
+        description: >
+          Cegah peretas membuat kerusakan lebih jauh.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Gunakan Search Console
+        description: >
+          Gunakan Search Console untuk membantu identifikasi jenis peretasan.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. Taksir kerusakan (spam)
+        description: >
+          Untuk peretasan spam, cari tahu apa yang perlu diperbaiki.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. Taksir kerusakan (perangkat lunak perusak)
+        description: >
+          Untuk peretasan perangkat lunak perusak, cari tahu apa yang perlu diperbaiki.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. Identifikasi kerentanan
+        description: >
+          Cari tahu cara peretas masuk.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Bersihkan dan pelihara situs Anda
+        description: >
+          Tutupi kerentanan yang memungkinkan peretas masuk.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. Minta peninjauan
+        description: >
+          Mintalah Google mempertimbangkan ulang pemberian label diretas.
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

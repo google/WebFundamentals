@@ -1,0 +1,87 @@
+<html devsite><head>
+  <title>Search Console の利用</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>既にサイトの<a href="https://www.support.google.com/webmasters/answer/35179">所有権を確認</a>している場合は、下記の最初の対策を省略して、Search Console でのサイト情報の確認に進んでください。</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>必要なもの:</h3>
+
+<ul>
+  <li>ルート ディレクトリへのファイルの追加、<a href="https://www.support.google.com/webmasters/answer/79812">メタタグ</a>の作成、サイトの Google アナリティクス管理者アカウントの所有などの方法で、サイトの<a href="https://www.support.google.com/webmasters/answer/35179">所有権を確認</a>できること。</li>
+</ul>
+
+<div class="action">
+  <h3>実施する対策:</h3>
+
+  <p>この項目では、次の対策を行います。</p>
+
+  <ol>
+    <li><a href="#verify">Search Console でサイトの所有権を確認します。</a></li>
+    <li><a href="#check">ハッカーが Search Console で所有権の確認を行っていないこと、設定を勝手に変更していないことを調べます。</a></li>
+    <li><a href="#determine">攻撃の性質を判断します。</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Search Console でサイトの所有権を確認する</h4>
+
+<ol>
+  <li>ブラウザを開いて、ウェブマスター セントラル（<a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>）に移動します。</li>
+  <li>[<strong>Search Console</strong>] をクリックします。</li>
+  <li><a href="https://www.google.com/accounts">Google アカウント</a>を使って Search Console にログインします。Google アカウントをお持ちでない場合は、[<strong>アカウントを作成</strong>] をクリックします。新しい Google アカウントを作成しても、別の会社の既存のメール アカウントが使用できなくなることはありません（<a href="https://accounts.google.com/SignUp">アカウントに関する詳細</a>）。</li>
+  <li>[<strong>サイトを追加</strong>] をクリックします。サイトの URL をボックスに入力してから、[<strong>続行</strong>] をクリックします。</li>
+  <li>最も便利な確認方法を判断します。確認ページの [<strong>おすすめの方法</strong>] タブに Google が推奨する方法が表示されます。[<strong>別の方法</strong>] タブにはその他の方法が表示されます（<a href="https://goo.gl/kQnHQ">確認に関する詳細</a>）。</li>
+  <li>HTML メタタグや HTML ファイルなど、サイトへのアクセスが必要な確認方法を選択した場合は、サイトをオンラインに戻します。</li>
+  <li>[<strong>確認</strong>] をクリックして、選択した方法で所有権を確認します。確認が正常に終了すると、確認済みの所有者であることを示す画面が表示されます。サイトをオフラインに戻してかまいません。ただし、今後のステップでオンラインに戻す必要があります。</li>
+</ol>
+<a name="check"></a>
+
+<h4>所有権の確認後、ハッカーが Search Console で所有権の確認を行っていないことと、設定を勝手に変更していないことを調べる</h4>
+
+<ol>
+  <li>Search Console のロゴをクリックして、Search Console のホームページに移動します。</li>
+  <li>問題のサイトを見つけて、[<strong>サイトを管理</strong>] をクリックします。</li>
+  <li>[<strong>ユーザーを追加 / 削除</strong>] をクリックします。</li>
+  <li>表示されるすべての<a href="https://www.support.google.com/webmasters/answer/44227">ユーザーと所有者</a>が正当かどうかを確認します。</li>
+  <li>不正なユーザーがあれば、メールアドレスを書き留めて（今後必要になったときのため）、そのユーザーをサイトから削除します。不正な所有者の場合は、その所有者と確認トークンと思われるもの（ホームページ上の確認用メタタグやサーバーにある HTML ファイルなど）の両方を削除する必要があります（<a href="https://www.support.google.com/webmasters/answer/2454036">詳細</a>）。</li>
+  <li>Search Console で不要な設定変更がないかどうか調べます。<span class="material-icons">設定</span>アイコン、[<a href="https://www.support.google.com/webmasters/answer/2454036"><strong>サイトの設定</strong></a>] の順にクリックして、ハッカーによる不要な変更がないかどうかを確認します。たとえば、検索エンジンのスパイダーを避けることを目的とした<a href="https://www.support.google.com/webmasters/answer/48620">クロール速度の引き下げ</a>などです。また、[<strong>Google インデックス</strong>] &gt; [<a href="https://www.support.google.com/webmasters/answer/164734">URL の削除</a>] または [<span class="material-icons">設定</span>] &gt; [<a href="https://www.support.google.com/webmasters/answer/83106">アドレス変更</a>] に通常とは異なる項目がないかどうかを確認します。</li>
+</ol>
+<a name="determine"></a>
+
+<h4>攻撃の性質を判断する</h4>
+
+<p>Search Console のメッセージ センターと [セキュリティの問題] の情報は、サイトが以下のような侵害を受けたかどうかを判断するのに役立ちます。</p>
+
+<ul>
+  <li>検索結果の品質や関連性を低下させる可能性のあるスパム コンテンツ</li>
+  <li>フィッシング</li>
+  <li>マルウェアの配信</li>
+</ul>
+
+<p>Search Console を使ってハッキングやマルウェアを調べるには、次の手順を行います。</p>
+
+<ol>
+  <li>上部にある Search Console のロゴをクリックして、Search Console のホームページに移動します。</li>
+  <li>[<strong>メッセージ</strong>] をクリックします。</li>
+  <li>サイトが 1）スパムのページ、テキスト、リンクの配信、2）フィッシング、3）マルウェアの配信に使用されたかどうかに関する Google からの重要なメッセージが届いているかどうかを確認します。フィッシングの通知がある場合、復旧プロセス全体を完了するまでそのメッセージを削除しないでください。</li>
+  <li>Search Console の [<strong>セキュリティの問題</strong>] に移動します。
+    <ul>
+      <li>マルウェアで侵害されたサイトには、1 番上に [マルウェア] という見出しが表示され、マルウェアのタイプを示すカテゴリ（[変更されたサーバー設定] や [エラー テンプレート インジェクション] など）が表示されます。このような場合、ハッカーはそのサイトを利用して、機密情報へのアクセスやパソコンへの侵害を目的としたソフトウェアに、ユーザーを感染させているおそれがあります。この問題の修正方法を調べるには、<a href="hacked_with_malware">マルウェアによる被害の程度の確認</a>に進んでください。
+      </li>
+      <li>スパムを配信するようにハッキングされたサイトには、1 番上に [ハッキング] という見出しが表示され、ハッキングのタイプを示すカテゴリ（[コンテンツ インジェクション] など）が表示されます。ハッカーがスパムのページ、テキスト、リンクをサイトに配置しているおそれがあります。この問題の修正方法を調べるには、<a href="hacked_with_spam">スパムによる被害の程度の確認</a>に進んでください。</li>
+      <li>Search Console のメッセージ センターに「フィッシングの通知」が届いたサイトは、[セキュリティの問題] に情報が表示されない場合があります。ハッカーはサイト上にフィッシング ページを作成し、そのサイトを利用して、ユーザーのログイン名、パスワード、金融情報を入手します。信頼できるサイトになりすますこともよくあります。フィッシングのクリーンアップはスパムの場合と同様のため、<a href="hacked_with_spam">スパムによる被害の程度の確認</a>に進んでください。</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>次のステップ</h2>
+
+<p>プロセスの次のステップは、<a href="hacked_with_spam">被害の程度の確認（スパムを含むハッキング）</a>または<a href="hacked_with_malware">被害の程度の確認（マルウェアを含むハッキング）</a>です。</p>
+
+</body></html>

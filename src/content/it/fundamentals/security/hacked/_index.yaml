@@ -1,0 +1,85 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: Se sei proprietario di un sito e vedi uno di questi messaggi...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: Il tuo sito potrebbe essere stato compromesso
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        Ogni giorno, migliaia di siti web sono compromessi da criminali informatici.
+        Le compromissioni sono spesso invisibili agli utenti, ma risultano dannose
+        per chiunque visualizzi la pagina, incluso il proprietario del sito. Ad esempio,
+        all'insaputa di quest'ultimo, l'hacker potrebbe aver infettato il sito con
+        codice dannoso che registra i tasti premuti sui computer dei visitatori, scoprendo
+        così le credenziali di accesso per i servizi bancari online o le transazioni
+        finanziarie.
+  - heading: Scopri informazioni sulle compromissioni
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>Argomenti trattati nel video:</strong></br> <ul><li>Modalità e motivi
+        della compromissione di siti</li> <li>Processo di ripristino di un sito e
+        rimozione di avvisi per gli utenti</li> <li>Tempo approssimativo per correggere
+        il sito</li> <li>Correzione da parte dell'utente o di un professionista</li></ul>
+  - heading: Intervieni
+    columns:
+    - items:
+      - heading: 1. Forma un team
+        description: >
+          Contatta l'hoster e forma un team di assistenza.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. Metti il sito in quarantena
+        description: >
+          Impedisci all'hacker di fare altri danni.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Utilizza Search Console
+        description: >
+          Utilizza Search Console per identificare il tipo di compromissione.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. Valuta il danno (spam)
+        description: >
+          Per le compromissioni da spam, scopri che cosa correggere.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. Valuta il danno (malware)
+        description: >
+          Per le compromissioni da malware, scopri che cosa correggere.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. Identifica la vulnerabilità
+        description: >
+          Scopri come è avvenuta compromissione.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. Ripulisci e gestisci il sito
+        description: >
+          Chiudi la vulnerabilità sfruttata dall'hacker.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. Richiedi un controllo
+        description: >
+          Chiedi a Google di riconsiderare la tua etichetta di "sito compromesso".
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>Memperbaiki peretasan penyelubungan kata kunci dan link</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Panduan ini dibuat khusus untuk jenis peretasan yang menambahkan halaman nonsens penuh kata kunci ke situs Anda, yang akan kita sebut sebagai peretasan nonsens. Panduan ini ditujukan bagi pengguna <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Sistem Manajemen Konten (CMS) populer</a>, tetapi juga berguna sekalipun Anda tidak menggunakan CMS.</p>
+
+<p><strong>Catatan:</strong> Tidak yakin apakah situs Anda diretas atau tidak? Mulailah dengan membaca panduan <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">cara mengetahui apakah situs saya diretas</a>.</p>
+
+
+
+<aside class="note">Kami ingin memastikan panduan ini benar-benar bermanfaat bagi Anda. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Berikan masukan</a> Anda untuk membantu kami menyempurnakan panduan ini!</aside>
+
+<h2>Daftar Isi</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Langkah 1: Mengidentifikasi jenis peretasan ini</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Langkah 2: Memperbaiki peretasan</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Langkah 3: Resource tambahan</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">FAQs for Hacked Sites (FAQ untuk Situs yang Diretas)</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Mengidentifikasi jenis peretasan ini</h2>
+
+<p>Peretasan penyelubungan kata kunci dan link secara otomatis membuat banyak halaman yang memuat teks, link, dan gambar nonsens. Halaman ini terkadang memuat elemen template dasar dari situs asli, sehingga sekilas tidak terlihat adanya kejanggalan hingga Anda membaca isinya.</p>
+
+<p>Peretasan halaman dilakukan untuk memanipulasi faktor pemeringkatan Google. Peretas akan sering mencoba memonetisasi situs ini dengan menjual link pada halaman yang diretas ke berbagai pihak ke-3. Seringkali halaman yang diretas juga akan mengalihkan pengunjung ke halaman yang tidak terkait, seperti situs porno tempat peretas dapat mendapatkan uang.</p>
+
+<p>Untuk memeriksa adanya masalah ini, mulailah dengan alat <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Masalah Keamanan</a> di <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> untuk melihat apakah Google telah menemukan contoh halaman yang diretas ini di situs Anda. Terkadang Anda juga dapat menemukan halaman seperti ini dengan membuka jendela Google Search dan mengetikkan <code class="notranslate l10n-notranslate">site:[your site]</code>. Langkah ini akan menampilkan halaman situs Anda yang telah diindeks oleh Google, termasuk halaman yang diretas. Lihat beberapa halaman hasil penelusuran untuk melihat apakah Anda menemukan URL yang tidak biasa. Jika Anda tidak melihat konten yang diretas di Google Penelusuran, cobalah istilah penelusuran yang sama dengan mesin telusur berbeda. Mesin telusur lain mungkin menampilkan konten yang diretas yang telah dihapus Google dari indeks.
+  Contoh dari tindakan ini diilustrasikan di bawah ini.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Catatan:</strong> <em>Perhatikan bahwa hasil penelusuran di sini memuat banyak halaman yang tidak dibuat oleh pemilik situs.Jika Anda mencermati deskripsi dari hasil penelusuran kedua dan ketiga, Anda akan melihat contoh teks nonsens yang dibuat oleh peretasan ini.</em></p>
+
+<p>Saat mengunjungi halaman yang diretas, Anda mungkin melihat pesan yang menunjukkan bahwa halaman tersebut tidak ada (misalnya, error 404). Jangan tertipu! Peretas akan mencoba menipu Anda agar berpikir bahwa situs Anda telah diperbaiki dengan membuat Anda yakin bahwa halaman yang diretas telah hilang atau diperbaiki. Mereka melakukan ini dengan teknik <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">penyelubungan</a> konten. Periksa apakah peretas menggunakan penyelubungan dengan mengetikkan URL situs Anda pada fitur <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch sebagai Google</a>. Fitur Fetch sebagai Google memungkinkan Anda melihat konten tersembunyi yang mendasarinya.
+  Contoh tampilan halaman yang diretas adalah seperti ini.</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>Memperbaiki peretasan</h2>
+
+<p>Sebagai langkah awal, buat salinan offline dari semua file sebelum Anda menghapusnya, sebagai jaga-jaga jika Anda perlu memulihkannya nanti. Akan lebih baik lagi jika Anda mem-backup seluruh situs sebelum memulai proses pembersihan. Anda dapat melakukannya dengan menyimpan semua file yang ada di server ke sebuah lokasi di luar server atau mencari opsi backup terbaik untuk CMS yang Anda gunakan.</p>
+
+<h3>Memeriksa file .htaccess (3 langkah)</h3>
+
+<p>Peretasan penyelubungan kata kunci dan link menggunakan file .htaccess untuk membuat halaman terselubung secara otomatis di situs Anda. Menguasai <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">dasar-dasar .htaccess</a> di situs resmi Apache dapat membantu Anda memperdalam pemahaman tentang bagaimana peretasan ini memengaruhi situs Anda, namun tidak wajib. </p>
+
+<p><b>Langkah 1</b></p>
+<p>Temukan file .htaccess di situs Anda. Jika Anda tidak yakin tempatnya, dan Anda menggunakan CMS seperti WordPress, Joomla, atau Drupal, ketikkan "lokasi file .htaccess" beserta nama CMS Anda di mesin telusur. Bergantung situsnya, Anda mungkin menemukan beberapa file .htaccess. Buat daftar semua lokasi file .htaccess.
+</p>
+
+<p><strong>Catatan:</strong> .htaccess sering merupakan "file tersembunyi". Pastikan mengaktifkan menampilkan file tersembunyi saat menjalankan penelusuran.</p>
+
+
+<p><b>Langkah 2</b></p>
+<p>Buka file .htaccess untuk melihat isinya. Dalam file tersebut, Anda akan menemukan satu baris kode seperti di bawah ini:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>Variabel pada baris ini dapat berubah. Baik "cj2fa" maupun "tobeornottobe" bisa berupa campuran sembarang huruf atau kata. Yang penting adalah mengidentifikasi .php yang direferensikan dalam baris ini.</p>
+
+<p>Tulis file .php yang disebutkan dalam file .htaccess. Dalam contoh ini, file .php bernama "injected_file.php" namun, dalam kasus sebenarnya, nama file .php tidak akan sejelas itu. Biasanya nama tersebut berupa rangkaian acak kata-kata tidak berbahaya seperti "horsekeys.php", "potatolake.php", dan sebagainya. Ada kemungkinan besar ini adalah file .php berbahaya yang perlu dilacak dan kemudian dihapus.</p>
+
+<div class="alert">Tidak semua baris dengan RewriteRule dan file .php dalam .htaccess Anda berbahaya.
+  Jika Anda tidak yakin dengan fungsi serangkaian kode yang ada, Anda dapat meminta bantuan kepada sekelompok webmaster berpengalaman di <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">Forum Bantuan Webmaster</a>.</div>
+
+<p><b>Langkah 3</b></p>
+<p>Ganti semua file .htaccess dengan file .htaccess versi bersih atau default. Biasanya Anda dapat menemukan file .htaccess versi default dengan mengetikkan "file .htaccess default" dan nama CMS Anda di mesin telusur. Untuk situs yang memiliki beberapa file .htaccess, temukan versi bersih dari setiap file, lalu lakukan penggantian.</p>
+
+<p>Jika .htaccess default tidak ada dan Anda belum pernah mengonfigurasi file .htaccess di situs Anda, maka file .htaccess yang ada di situs Anda kemungkinan berbahaya. Simpan salinan file .htaccess ini secara offline sebagai jaga-jaga, lalu hapuslah dari situs Anda.</p>
+
+<h3>Menemukan dan menghapus file berbahaya lainnya (5 langkah)</h3>
+
+<p>Mengidentifikasi file berbahaya bisa jadi rumit dan memerlukan waktu berjam-jam. Luangkan waktu untuk memeriksa file Anda. Jika belum, inilah saat yang tepat untuk mem-backup file di situs Anda. Ketikkan "situs backup" dan nama CMS Anda di mesin telusur Google untuk menemukan petunjuk cara mem-backup situs.</p>
+
+<p><b>Langkah 1</b></p>
+<p>Jika Anda menggunakan CMS, instal ulang semua file inti (default) yang ada dalam distribusi default CMS Anda, plus semua komponen yang mungkin telah Anda tambahkan (seperti tema, modul, dan plugin). Langkah ini membantu memastikan bahwa file-file tersebut aman dari konten yang diretas. Anda dapat mengetik "instal ulang" dan nama CMS Anda di mesin telusur Google untuk menemukan petunjuk tentang proses penginstalan ulang. Jika Anda menggunakan plugin, modul, ekstensi, atau tema, pastikan untuk juga menginstal ulang semua komponen tersebut.</p>
+
+<div class="alert">Menginstal ulang file inti dapat menyebabkan hilangnya semua penyesuaian yang telah Anda buat. Pastikan Anda membuat backup database dan semua file sebelum menjalankan penginstalan ulang.</div>
+
+<p><b>Langkah 2</b></p>
+<p>Mulailah dengan mencari file .php yang Anda identifikasi pada file .htaccess tadi. Bergantung cara Anda mengakses file di server, Anda akan menemukan sejenis fungsi penelusuran. Cari nama file yang berbahaya. Jika Anda menemukannya, pertama-tama backup file tersebut dan simpan di lokasi lain sebagai jaga-jaga jika Anda perlu mengembalikannya, lalu hapus dari situs Anda.</p>
+
+<p><b>Langkah 3</b></p>
+<p>Cari file berbahaya atau file yang telah disusupi yang masih tersisa. Anda mungkin telah menghapus semua file berbahaya dalam dua langkah sebelumnya, namun sebaiknya Anda melakukan beberapa langkah berikut jika ada lebih banyak file di situs Anda yang telah disusupi.</p>
+
+<p>Jangan merasa kewalahan dengan berpikir bahwa Anda harus membuka dan memeriksa setiap file PHP. Mulailah dengan membuat daftar file PHP mencurigakan yang ingin Anda selidiki. Berikut adalah beberapa cara untuk menentukan file PHP mana yang mencurigakan:</p><p>
+
+</p><ul>
+<li>Jika Anda telah memuat ulang file CMS, lihat hanya file yang bukan merupakan bagian dari file atau folder CMS default Anda. Cara ini akan menyingkirkan sejumlah besar file PHP dan menyisakan beberapa file saja yang perlu Anda periksa.</li>
+<li>Urutkan file di situs Anda berdasarkan tanggal perubahan terakhir. Cari file yang diubah dalam beberapa bulan sejak Anda mulai mendapati bahwa situs Anda diretas.</li>
+<li>Urutkan file di situs Anda berdasarkan ukurannya. Cari file yang terlampau besar.</li>
+</ul>
+
+<p><b>Langkah 4</b></p>
+<p>Setelah memiliki daftar file PHP yang mencurigakan, periksa apakah file tersebut berbahaya.
+  Jika Anda tidak terbiasa dengan PHP, proses ini dapat menghabiskan waktu lama, jadi pertimbangkan untuk mempelajari kembali beberapa <a href="https://php.net/docs.php">dokumentasi PHP</a>.
+  Namun, sekalipun Anda masih baru mengenal coding, ada beberapa pola dasar yang dapat Anda cari untuk mengidentifikasi file berbahaya.</p>
+
+<p>Pertama, pindai file mencurigakan yang telah Anda identifikasi untuk menemukan blok-blok besar teks yang memuat kombinasi huruf dan angka yang tampak campur-aduk. Blok besar teks tersebut biasanya didahului dengan kombinasi fungsi PHP seperti base64_decode, rot13, eval, strrev, dan gzinflate. Tampilan blok kode adalah seperti di bawah ini. Terkadang semua kode ini akan dimasukkan ke dalam satu baris teks yang panjang, sehingga terlihat lebih kecil daripada yang sebenarnya:</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Ada kalanya, kode tidak tampak campur-aduk dan justru menyerupai skrip normal. Jika Anda tidak yakin apakah kode tersebut berbahaya atau tidak, kunjungi <a href="https://productforums.google.com/forum/#!forum/webmasters">Forum Bantuan Webmaster</a> kami, tempat sekelompok webmaster berpengalaman dapat membantu Anda memeriksa file tersebut.</p>
+
+<p><b>Langkah 5</b></p>
+<p>Setelah mengetahui file-file yang mencurigakan, buatlah backup atau salinan lokal dengan menyimpannya ke komputer Anda sebagai jaga-jaga jika file tersebut tidak berbahaya, lalu hapus file yang mencurigakan.</p>
+
+<h3>Memeriksa apakah situs Anda bersih</h3>
+
+<p>Setelah selesai menyingkirkan file yang diretas, periksa apakah jerih payah Anda terbayar. Ingat halaman-halaman nonsens yang Anda identifikasi tadi? Gunakan lagi fitur Fetch sebagai Google untuk melihat apakah halaman itu masih ada. Jika Fetch sebagai Google mendapatkan respons "Tidak Ditemukan", kemungkinan Anda telah berhasil menyelesaikan masalah dan Anda dapat terus memperbaiki kerentanan di situs Anda.</p>
+
+<div class="tip">Anda juga dapat mengikuti langkah-langkah di <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Pemecah Masalah Situs yang Diretas</a> untuk memeriksa apakah masih ada konten yang diretas di situs Anda.</div>
+
+<h2>Bagaimana supaya saya tidak diretas lagi?</h2>
+
+<p>Memperbaiki kerentanan di situs Anda merupakan langkah penting terakhir untuk memperbaiki situs. Sebuah studi baru-baru ini menemukan bahwa 20% situs yang diretas akan diretas lagi dalam waktu 1 hari. Mengetahui secara persis bagaimana situs Anda diretas akan sangat membantu. Bacalah panduan <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">metode yang paling sering digunakan pengirim spam untuk meretas situs</a> untuk mengawali penyelidikan Anda. Namun, jika tidak dapat mengetahui bagaimana situs Anda diretas, berikut adalah checklist tentang hal-hal yang dapat dilakukan untuk mengurangi kerentanan di situs Anda:</p>
+
+<ul>
+<li>Mengupdate CMS, plugin, ekstensi, dan modul secara teratur: Mudah-mudahan Anda telah melakukan langkah ini. Banyak situs diretas karena menjalankan software usang. Beberapa CMS mendukung update otomatis.</li>
+<li>Memindai komputer secara teratur: Gunakan pemindai virus populer untuk mendeteksi virus atau kerentanan.</li>
+<li>Mengganti sandi secara teratur: Mengganti sandi secara teratur untuk semua akun situs web seperti penyedia hosting, FTP, dan CMS dapat mencegah akses tidak sah ke situs Anda.
+  Buatlah sandi yang kuat dan unik untuk setiap akun.</li>
+<li>Menggunakan <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">Autentikasi Dua Faktor (2FA)</a>: Pertimbangkan mengaktifkan 2FA pada semua layanan yang mengharuskan Anda untuk login. 2FA mempersulit peretas untuk login sekalipun mereka berhasil mencuri sandi Anda.</li>
+<li>Mempertimbangkan langganan layanan keamanan untuk memantau situs: Ada banyak layanan hebat di luar sana yang dapat membantu Anda memantau situs dengan biaya yang kecil. Pertimbangkan untuk mendaftar agar situs Anda tetap aman.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Resource tambahan</h2>
+<p>Jika Anda masih mengalami masalah dalam memperbaiki situs, ada beberapa resource lain yang mungkin bisa membantu.</p>
+
+<p>Program berikut ini memindai situs Anda dan mungkin dapat menemukan konten yang bermasalah. Selain VirusTotal, Google tidak menjalankan atau mendukung program lainnya.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Ini hanyalah beberapa program yang mungkin bisa memindai situs untuk menemukan konten bermasalah. Namun tidak ada jaminan bahwa program pemindai ini akan mengidentifikasi semua jenis konten yang bermasalah.</p>
+
+<p>Berikut adalah resource tambahan dari Google yang dapat membantu Anda:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Forum Bantuan Google Webmaster</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Bantuan Google Webmaster untuk Situs yang Diretas</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">Tidak menemukan program yang menurut Anda mungkin berguna? <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Tulis masukan</a> dan sampaikan kepada kami</div>
+
+
+</body></html>

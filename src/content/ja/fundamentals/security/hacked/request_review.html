@@ -1,0 +1,61 @@
+<html devsite><head>
+<title>再審査をリクエストする</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>Google に再審査をリクエストして、ユーザーにとって危険または不正なページやサイトであるという表示を解除してもらう必要があります。</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>必要なもの:</h3>
+<ul>
+  <li>シェルまたはターミナルのコマンドの知識</li>
+</ul>
+<h3>実施する対策:</h3>
+<h4>1. 前提条件</h4>
+<p>再審査をリクエストする前に、以下の手順を行ったことを確認します。</p>
+<ul>
+  <li>Search Console でサイトの所有権を確認した。</li>
+  <li>サイトからハッカーによる被害をクリーンアップした。</li>
+  <li>脆弱性を修正した。</li>
+  <li>正常なサイトをオンラインに戻した。</li>
+</ul>
+<h4>2. ページが利用可能で正常であることを再確認する</h4>
+<p>念のため、Wget または cURL を使って、サイトのページ（ホームページやハッカーによって改ざんされた URL など）を表示し、現在は正常に表示されることを確認します。正常に表示され、サイトの他のページも同様であるとの確信があれば、再審査をリクエストできます。</p>
+  <p><strong>重要:</strong> ページが正常であることを確認するために、ページが Googlebot によってクロールできる状態になっている必要があります。「noindex」robots メタタグやディレクティブによって、ロボットのアクセスやインデックス登録がブロックされていないか確認してください。</p>
+<h4 id="request_review">3. 再審査をリクエストする</h4>
+<p>再審査をリクエストする前に、問題が本当に修正されたかどうかを確認します。問題が残っているのに再審査をリクエストした場合、サイトが危険であると表示される期間がさらに長くなってしまいます。</p>
+<ul>
+  <li><strong>フィッシング</strong>
+    <ol>
+      <li><a href="https://www.google.com/safebrowsing/report_error/">google.com/safebrowsing/report_error/</a> から再審査を完了します。この再審査では、クリーンアップしたフィッシング ページからフィッシング警告が削除されます。これは、ページが誤ってフィッシングとして報告されたと考えるサイト所有者が、報告ツールとして使用することもできます。</li>
+    </ol>
+  </li>
+  <li><strong>マルウェアまたはスパム</strong>
+    <ol>
+      <li>Search Console の [<a href="https://www.google.com/webmasters/tools/security-issues" target="new"><strong>セキュリティの問題</strong></a>] を開きます。このレポートには通常、以前に確認した警告と感染した URL のサンプルが引き続き表示されています。</li>
+      <li>一覧に表示された URL のサンプルがすべて正常になったと思われる場合は、[<strong>再審査をリクエスト</strong>] を選択します。リクエストを送信するには、ハッカーの被害をサイトからクリーンアップしたという詳細情報の入力を求められます。たとえば、[セキュリティの問題] の各カテゴリについて、サイトをどのようにクリーンアップしたかを説明する文を入力できます（例: 「コンテンツ インジェクション タイプのハッキング URL については、スパム コンテンツを削除し、古くなったプラグインを更新して脆弱性を修正しました」）。
+</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. 再審査が行われるまで待つ</h4>
+<ul>
+  <li><strong>マルウェアの場合の再審査所要時間:</strong> マルウェアに感染したサイトの再審査には、数日かかります。再審査が完了すると、Search Console の [<strong>メッセージ</strong>] に回答が表示されます。</li>
+  <li><strong>スパムを含むハッキングの場合の再審査所要時間:</strong> ハッキングされてスパムを含むサイトの再審査には、数週間かかることがあります。スパムの場合の再審査には、手動による調査やハッキングされたページの完全な再処理が含まれるためです。審査に合格すると、[セキュリティの問題] には、ハッキング カテゴリのタイプやハッキングされた URL のサンプルは表示されなくなります。</li>
+  <li><strong>フィッシングの場合の再審査所要時間:</strong> フィッシングの場合の再審査には 1 日ほどかかります。審査に合格した場合は、ユーザーに表示されるフィッシング警告が削除され、ページが再び検索結果に表示されるようになります。</li>
+</ul>
+<p>サイトが正常であることが Google で確認されると、72 時間以内にブラウザや検索結果から警告が削除されます。</p>
+<p>問題が解決していないと Google が判断した場合は通常、Search Console の [セキュリティの問題] のレポートに、調査を続ける役に立つように、感染した URL のサンプルがさらに表示されます。マルウェアやハッキングされてスパムを含むサイトの警告は、ユーザーを保護するための注意として、検索結果やブラウザに表示されたままになります。</p>
+<h4>最終ステップ</h4>
+<ul>
+  <li><strong>審査に合格した場合</strong>、サイトが想定どおり機能すること（ページが正しく読み込まれ、リンクがクリックできること）を確認します。サイトの安全性を保つため、<a href="clean_site">サイトの問題を修正して管理する</a>ステップで作成した管理計画とセキュリティ計画を実施することを、すべてのサイト所有者におすすめします。詳細については、<a href="https://www.stopbadware.org">StopBadware</a> の以下の情報についてご検討ください。<ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">Additional resources: hacked sites</a></li>
+    </ul>
+  </li>
+  <li><strong>審査に合格しなかった場合</strong>、サイトに<a href="hacked_with_malware">マルウェア</a>や<a href="hacked_with_spam">スパム</a>がないかどうか、またはハッカーによる変更や新たに作成されたファイルがないかどうかを再度確認してください。または、<a href="support_team">サポートチームの専門家</a>に支援を依頼することをご検討ください。</li>
+</ul>
+
+</body></html>

@@ -1,0 +1,78 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: あなたのサイトにこの警告が表示されたら...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: ハッキングされているおそれがあります
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        日々、何千ものウェブサイトがサイバー犯罪者からの攻撃を受けています。ハッキングは通常、ユーザーにはわかりませんが、そのページを表示するすべてのユーザー、そしてサイト所有者にも害を及ぼすおそれがあります。ハッカーはたとえば、サイト所有者には知られずに、サイトを有害なコードに感染させて、アクセスしたユーザーのパソコン上のキー入力を記録したり、オンライン
+        バンキングや金融取引のログイン認証情報を盗んだりすることがあります。
+  - heading: ハッキングの詳細
+    items:
+    - youtube_id: mbJvL61DOZg
+    - description: >
+        <strong>この動画の内容:</strong></br> <ul><li>サイトのハッキングの仕組みと理由</li> <li>サイトを復旧してユーザーへの警告を削除するプロセス</li>
+        <li>サイトの修正に要するおおよその時間</li> <li>自分で修正する場合と専門家を雇う場合</li></ul>
+  - heading: 対策
+    columns:
+    - items:
+      - heading: 1. チームを作る
+        description: >
+          ウェブホストに連絡し、サポートチームを編成します。
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. サイトを隔離する
+        description: >
+          ハッカーにこれ以上侵害されるのを防ぎます。
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Search Console を利用する
+        description: >
+          Search Console を利用してハッキングのタイプを特定します。
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+      - heading: 4A. 被害の程度を確認する（スパム）
+        description: >
+          スパムのハッキングについて、何を修正する必要があるかを調べます。
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. 被害の程度を確認する（マルウェア）
+        description: >
+          マルウェアのハッキングについて、何を修正する必要があるかを調べます。
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+      - heading: 5. サイトの脆弱性を特定する
+        description: >
+          ハッカーがどのように侵入したかを調べます。
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. サイトの問題を修正して管理する
+        description: >
+          ハッカーの侵入につながった脆弱性を修正します。
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. 再審査をリクエストする
+        description: >
+          ハッキングされているという判定を再審査するように Google に依頼します。
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done

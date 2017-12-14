@@ -1,0 +1,152 @@
+<html devsite><head>
+  <title>Come risolvere la compromissione con parole chiave giapponesi</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoailNK2BnFK9vo6D7ZUkV7Qcmve4gLC1dniNzb2FV146rz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Questa guida è stata creata specificamente per un tipo di compromissione, denominata "Compromissione con parole chiave giapponesi", che crea un testo in giapponese generato automaticamente nel tuo sito. Pur essendo destinata agli utenti <a href="https://it.wikipedia.org/wiki/Content_management_system#CMS_pi.C3.B9_diffusi" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">dei più diffusi sistemi di gestione dei contenuti</a>, può risultare utile anche per chi non li utilizza.</p>
+
+<p><strong>Nota:</strong> non sei sicuro che il tuo sito sia stato compromesso? Leggi la nostra guida <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">Come faccio a sapere se il mio sito è compromesso</a>.</p>
+
+<aside class="note">Vogliamo essere sicuri che questa guida sia davvero utile. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Lasciaci un feedback</a> per aiutarci a migliorarla.</aside>
+
+<h2>Sommario</h2>
+
+<ul>
+  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Passaggio 1: come identificare questo tipo di compromissione</a></li>
+  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Passaggio 2: come risolvere la compromissione</a></li>
+  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Passaggio 3: altre risorse</a></li>
+  <li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Domande frequenti per i siti compromessi</a></li>
+</ul>
+
+<a name="identifying"></a>
+  <h2>Come identificare questo tipo di compromissione</h2>
+
+<p>La compromissione con parole chiave giapponesi crea sul tuo sito nuove pagine, con testo in giapponese generato automaticamente, in nomi di directory generati casualmente (ad esempio, http://example.com/ltjmnjp/341.html). Queste pagine vengono monetizzate grazie a link di affiliazione a store che vendono merci contraffatte, quindi vengono visualizzate nella Ricerca Google. Ecco un esempio di come si potrebbe presentare una di queste pagine:</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
+
+<p>Con questo tipo di attacco, l'hacker in genere aggiunge se stesso come proprietario di una proprietà in Search Console, manipolando le impostazioni del tuo sito, come il targeting geografico o le Sitemap, per ottenere maggiori profitti. Se hai ricevuto una notifica che ti informa che qualcuno che non conosci ha verificato il tuo sito in <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, è molto probabile che il tuo sito sia stato compromesso.</p>
+
+<p>Per prima cosa, accedi allo <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">strumento Problemi di sicurezza</a> in Search Console per controllare se Google ha rilevato una di queste pagine compromesse sul tuo sito. Per individuare questo genere di pagine, puoi anche aprire la Ricerca Google e digitare <code class="notranslate l10n-notranslate">site:[your site root URL]</code> nel campo di ricerca. In questo modo vedrai le pagine che Google ha indicizzato per il tuo sito, incluse quelle compromesse. Scorri alcune pagine dei risultati di ricerca per vedere se sono presenti URL insoliti. Se la Ricerca Google non mostra contenuti compromessi, utilizza gli stessi termini di ricerca con un altro motore di ricerca. Altri motori potrebbero mostrare contenuti compromessi che Google ha invece rimosso dall'indice. Ecco un esempio dei risultati che potresti visualizzare.</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p>Come puoi notare, i risultati di ricerca riportati in questa figura contengono molte pagine che non sono state create dal proprietario del sito. Se osservi attentamente le descrizioni, puoi vedere un esempio del testo in giapponese creato da questo tipo di compromissione.</p>
+
+<p>Quando visiti una pagina compromessa, potresti visualizzare un messaggio che indica che la pagina non esiste (ad esempio, un errore 404). Non farti ingannare. Gli hacker tentano di farti credere che il sito è stato pulito dall'infezione mostrando che le pagine compromesse non sono più disponibili o sono state corrette.
+  A tale scopo effettuano il <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">cloaking</a> dei contenuti. Per verificare l'eventuale presenza del cloaking, inserisci gli URL del tuo sito nello strumento <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Visualizza come Google</a>,
+  che ti consente di vedere i contenuti sottostanti anche se sono nascosti.</p>
+
+<a name="fixing"></a>
+  <h2>Come risolvere la compromissione</h2>
+<p>Prima di iniziare, crea una copia offline dei file da rimuovere, nel caso in cui fosse necessario ripristinarli in un secondo momento. Ancor meglio, esegui il backup dell'intero sito prima di iniziare la procedura di pulizia, salvando tutti i file presenti sul server in un percorso offline o individuando le migliori opzioni di backup per il tuo sistema specifico di gestione dei contenuti. Se utilizzi un sistema di gestione dei contenuti, ti consigliamo di eseguire anche il backup del database.</p>
+
+  <h3>Rimuovere gli account di nuova creazione da Search Console</h3>
+<p>Se non riconosci un nuovo proprietario che è stato aggiunto al tuo account Search Console, intervieni il più presto possibile con la revoca dell'accesso. Nella <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">pagina di verifica di Search Console</a> puoi controllare quali utenti sono verificati per il tuo sito. Per visualizzare tutti gli utenti verificati, fai clic sul pulsante "Dettagli verifica" relativo al sito.</p>
+
+<p>Per rimuovere un proprietario da Search Console, consulta la sezione dedicata all'argomento <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">nella pagina Gestione di utenti, proprietari e autorizzazioni del Centro assistenza</a>.
+  Dovrai eliminare il token di verifica associato, che in genere è un file HTML incluso nella pagina principale del tuo sito o un file .htaccess, generato dinamicamente, che simula un file HTML.</p>
+
+<p>Se non riesci a trovare un token di verifica HTML sul tuo sito, controlla se è presente una regola di riscrittura nel file .htaccess. La regola di riscrittura sarà simile alla seguente:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteEngine On
+  RewriteRule ^google(.*)\.html$ dir/file.php?google=$1 [L] </pre>
+
+<p><b>Nota:</b> in genere, per controllare se sei riuscito a rimuovere un token di verifica generato dinamicamente, puoi accedere a un file token di verifica simulato, come <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code>.
+  Ad esempio, se il tuo sito è www.brandonsbaseballcards.com, prova ad accedere a www.brandonsbaseballcards.com/google1234.html.
+  Se la pagina restituisce un errore HTTP 404, il problema relativo al token di verifica generato dinamicamente è stato probabilmente risolto.</p>
+
+<p>Per rimuovere dal file .htaccess il token di verifica generato dinamicamente, procedi nel seguente modo.
+
+  </p><h3>Controllare il file .htaccess (2 passaggi)</h3>
+<p>Oltre a utilizzare un file .htaccess per creare token di verifica generati dinamicamente, gli hacker spesso ricorrono alle regole .htaccess per eseguire il reindirizzamento degli utenti o creare pagine contenenti spam e contenuti senza senso. Se non hai impostato regole .htaccess personalizzate, valuta la possibilità di sostituire il file .htaccess con una copia completamente nuova.</p>
+
+  <strong>Passaggio 1</strong>
+<p>Individua il file .htaccess sul tuo sito. Se non sai dove trovarlo e stai usando un sistema di gestione dei contenuti come WordPress, Joomla o Drupal, cerca "percorso file .htaccess" in un motore di ricerca, insieme al nome del tuo sistema di gestione dei contenuti. In base al tuo sito potresti avere diversi file .htaccess. Crea un elenco di tutti i percorsi dei file .htaccess.</p>
+
+  <strong>Passaggio 2</strong>
+<p>Sostituisci tutti i file .htaccess con una versione predefinita o non infetta del file .htaccess. Di solito puoi trovare una versione predefinita del file .htaccess cercando "file .htaccess predefinito" insieme al nome del tuo sistema di gestione dei contenuti. Per i siti con diversi file .htaccess, individua una versione non infetta di ciascuno di essi e procedi con la sostituzione.</p>
+
+<p><strong>Nota:</strong> .htaccess è spesso un "file nascosto". Quando esegui la ricerca, assicurati di aver attivato l'opzione che consente di visualizzare i file nascosti.</p>
+
+  <h3>Rimuovere tutti gli script e i file dannosi (4 passaggi)</h3>
+<p>L'identificazione dei file dannosi può essere complicata e richiedere diverse ore.
+  Prenditi tutto il tempo necessario per controllare i file. Se non l'hai ancora fatto, questo è il momento giusto per eseguire il backup dei file presenti sul tuo sito. Per trovare istruzioni su come eseguire il backup del sito, esegui una ricerca in Google con i termini "backup sito" e il nome del tuo sistema di gestione dei contenuti.</p>
+
+  <strong>Passaggio 1</strong>
+<p>Se utilizzi un sistema di gestione dei contenuti, installa nuovamente tutti i file core (predefiniti) che vengono distribuiti per impostazione predefinita insieme al sistema, e tutti i componenti che hai aggiunto (ad esempio, temi, moduli, plug-in). Così avrai la certezza che in questi file non sono presenti contenuti compromessi. Per trovare istruzioni relative al processo di reinstallazione, puoi eseguire una ricerca in Google con il termine "reinstallazione" e il nome del tuo sistema di gestione dei contenuti. Se sono presenti plug-in, moduli, estensioni o temi, ricordati di reinstallare anche questi.</p>
+
+<p>La reinstallazione dei file core può causare la perdita delle personalizzazioni eventualmente introdotte con la modifica diretta dei file. Prima di eseguire la reinstallazione, assicurati di aver eseguito il backup del database e di tutti i file.</p>
+
+  <strong>Passaggio 2</strong>
+<p>Spesso gli hacker modificano la Sitemap del tuo sito o aggiungono nuove Sitemap per far sì che l'indicizzazione dei loro URL avvenga più rapidamente. Se in precedenza avevi un file Sitemap, controlla se contiene link sospetti e rimuovili dalla Sitemap. Se non ricordi di aver aggiunto alcuni file Sitemap al sito, esegui una verifica accurata e rimuovili solo se presentano URL contenenti spam.</p>
+
+  <strong>Passaggio 3</strong>
+<p>Ora controlla se sono rimasti altri file compromessi o dannosi. Nei due passaggi precedenti potresti aver già rimosso tutti i file dannosi, ma è meglio svolgere anche i passaggi indicati di seguito per avere la certezza che non siano stati compromessi altri file sul tuo sito.</p>
+
+<p>Non farti spaventare dal pensiero di dover aprire ed esaminare tutti i file PHP. Per cominciare, crea un elenco dei file PHP sospetti che vorresti sottoporre ad accertamenti. Di seguito sono riportate alcune procedure che consentono di determinare quali file PHP sono sospetti:</p>
+   <ul>
+    <li>Siccome hai già ricaricato tutti i file relativi al sistema di gestione dei contenuti, esamina solo quelli che non rientrano nelle cartelle o nei file predefiniti del sistema di gestione dei contenuti. Con questa operazione dovresti eliminare buona parte dei file PHP e restare solo con pochi file da analizzare.</li>
+    <li>Ordina i file presenti sul sito in base alla data dell'ultima modifica. Cerca i file che sono stati modificati entro alcuni mesi dal momento in cui hai scoperto che il tuo sito era compromesso.</li>
+    <li>Ordina i file presenti sul sito in base alle dimensioni. Cerca i file di dimensioni insolitamente grandi.</li>
+  </ul>
+
+<p><strong>Nota:</strong> solitamente, i malintenzionati inseriscono script nei seguenti file: index.php, wp-load.php, 404.php e view.php.</p>
+
+  <strong>Passaggio 4</strong>
+<p>Dopo aver creato un elenco dei file PHP sospetti, controlla se sono normali o dannosi. Se non hai dimestichezza con i file PHP, questa procedura potrebbe richiedere più tempo. Ti consigliamo quindi di dare una lettura alla <a href="https://php.net/docs.php">documentazione relativa ai file PHP</a>.
+  Se è la primissima volta che hai a che fare con la codifica, ti consigliamo di <a href="/web/fundamentals/security/hacked/support_team">chiedere assistenza</a>. Nel frattempo, puoi identificare i file sospetti cercando alcune sequenze di base.</p>
+
+<p>Se utilizzi un sistema di gestione dei contenuti e non sei abituato a modificare direttamente i file, confronta i file presenti sul server con un elenco dei file predefiniti inclusi con il sistema, insieme a eventuali temi e plug-in. Cerca file che non appartengono al sistema e file che presentano dimensioni maggiori rispetto a quelli predefiniti.</p>
+
+<p>Scorri i file sospetti che hai già individuato per cercare delle porzioni di codice nascosto. Le porzioni potrebbero essere costituite da una serie di numeri e lettere combinati apparentemente alla rinfusa. Il codice nascosto è preceduto solitamente da una combinazione di funzioni PHP, come base64_decode PHP, rot13, eval, strrev, gzinflate, benché talvolta risultino nascoste anche queste funzioni. Ecco un esempio di come si potrebbe presentare la porzione di codice. A volte questo codice è interamente compresso in una lunga riga di testo, che lo fa sembrare più piccolo di quanto non lo sia effettivamente.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  $O_O0O_O0_0=urldecode("%6E1%7A%62%2F%6D%615%5C%76%740%6928%2D%70
+  %78%75%71%79%2A6%6C%72%6B%64%679%5F%65%68%63%73%77%6F4%2B%6637%6A");
+  $OO0_0OO0__=$O_O0O_O0_0{26}.$O_O0O_O0_0{6}.$O_O0O_O0_0{10}.$O_O0O_O0_0{30}</pre>
+
+  <h3>Verificare se il sito è pulito</h3>
+<p>Dopo aver eliminato i file compromessi, controlla se i tuoi sforzi sono stati ripagati. Ricordi le pagine di contenuti senza senso identificate in precedenza? Utilizza di nuovo lo strumento Visualizza come Google per vedere se esistono ancora. Se lo strumento restituisce "Non trovato", è probabile che il tuo sito goda di ottima salute.</p>
+
+<p>Per controllare se sul tuo sito sono ancora presenti contenuti compromessi, puoi anche seguire la procedura descritta nello <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Strumento per la risoluzione dei problemi per siti compromessi</a>.</p>
+
+  <h3>Come faccio a evitare future compromissioni?</h3>
+<p>Correggere le vulnerabilità del tuo sito è l'ultimo passaggio indispensabile per la procedura di pulizia. Secondo un <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">recente studio</a>, il 12% dei siti compromessi subisce un nuovo attacco entro 30 giorni. È quindi utile sapere esattamente come è stato compromesso il tuo sito. Per iniziare gli accertamenti, leggi la guida <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Principali modalità di compromissione dei siti web da parte degli spammer</a>. Tuttavia, se non riesci a scoprire come è stato compromesso il tuo sito, attieniti al seguente elenco di controllo che indica quali misure puoi adottare per mitigare le vulnerabilità nel tuo sito:</p>
+  <ul>
+    <li><strong>Esegui periodicamente la scansione del computer:</strong> utilizza un programma antivirus attendibile per verificare la presenza di virus o vulnerabilità.</li>
+    <li><strong>Modifica regolarmente le password:</strong> la modifica regolare delle password di tutti gli account associati al tuo sito web, come quelli del provider host, della piattaforma FTP e del sistema di gestione dei contenuti, può impedire l'accesso non autorizzato al tuo sito web. È importante creare una password univoca e complessa per ogni account.</li>
+    <li><strong>Utilizza<a href="https://it.wikipedia.org/wiki/Autenticazione_a_due_fattori" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g=="> l'autenticazione a due fattori (2FA)</a>:</strong> prova ad attivare l'autenticazione a due fattori in tutti i servizi che richiedono l'accesso. L'autenticazione a due fattori complica l'accesso per gli hacker, anche se sono riusciti a rubarti la password.</li>
+    <li><strong>Aggiorna regolarmente il sistema di gestione dei contenuti, i plug-in, le estensioni e i moduli:</strong> sperabilmente, hai già completato questo passaggio. Molti siti vengono compromessi perché eseguono software obsoleti. In alcuni sistemi di gestione dei contenuti è supportato l'aggiornamento automatico.</li>
+    <li><strong>Valuta la possibilità di attivare un abbonamento a un servizio di sicurezza che monitori il tuo sito:</strong> il mercato offre molti servizi eccellenti che possono monitorare il tuo sito in cambio di una modesta tariffa. Per mantenere sicuro il tuo sito, valuta se registrarti a tali servizi.</li>
+  </ul>
+
+
+<a name="resources"></a>
+  <h2>Altre risorse</h2>
+<p>Se continui ad avere problemi con la correzione del sito, sono disponibili altre risorse che potrebbero aiutarti.</p>
+
+<p>Questi strumenti analizzano i siti e potrebbero riuscire a rilevare contenuti problematici.
+  Google non li esegue e non li supporta, ad eccezione dello strumento VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a> sono solo alcuni degli strumenti che potrebbero essere in grado di analizzare il sito per rilevare eventuali contenuti problematici. Tieni presente che questi strumenti di analisi non garantiscono l'identificazione di ogni tipo di contenuto problematico.</p>
+
+<p>Ecco alcune risorse aggiuntive di Google che potrebbero essere utili:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+  Forum di assistenza per i webmaster di Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Guida per i siti compromessi destinata ai webmaster di Google</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+
+
+
+
+
+</body></html>

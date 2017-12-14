@@ -1,0 +1,162 @@
+<html devsite><head>
+  <title>キーワードとリンクのクローキングによるハッキングを解決する</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>このガイドでは、意味不明な文、リンク、画像を含むページをサイトに追加するハッキング行為について説明します。このタイプのハッキングを、キーワードとリンクのクローキングと呼びます。<a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">一般的なコンテンツ管理システム</a>（CMS）のユーザーを対象としていますが、CMS をご利用になっていない場合でもこのガイドは役立ちます。</p>
+
+<p><strong>注:</strong> サイトがハッキングされているかどうかわからない場合は、まず、<a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">サイトがハッキングされているかどうかを確認する方法</a>のガイドをご覧ください。</p>
+
+
+
+<aside class="note">このガイドがお役に立てば幸いです。皆様からの<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">ご意見、ご要望</a>をお待ちしています。品質向上にご協力ください。</aside>
+
+<h2>目次</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">ステップ 1: このタイプのハッキングを特定する</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">ステップ 2: ハッキングの問題を解決する</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">ステップ 3: その他のリソース</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">ハッキングされたサイトに関するよくある質問</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>このタイプのハッキングを特定する</h2>
+
+<p>キーワードやリンクのクローキングによるハッキングでは、意味不明な文、リンク、画像を含む大量のページが自動的に生成されます。これらのページには元のサイトのテンプレート要素が使用されていることがあるため、一目見ただけでは自分のサイトと区別がつきにくく、コンテンツをよく読むまで気付かないこともあります。</p>
+
+<p>ページをハッキングする目的は、Google のランキング要素を操作することにあります。一般に、ハッカーはハッキングしたページ上のリンクを別の第三者に売ることで収益を得ようとします。また、ハッキングしたページからポルノサイトなどの無関係なページへ訪問者をリダイレクトすることでもハッカーは収益を得ることができます。</p>
+
+<p>この問題を確認するには、まず <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> の<a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">セキュリティの問題</a>のツールを使って、サイト上でこのハッキングの被害にあっているページが Google によって検出されているかどうかを確認します。また、Google 検索ウィンドウを開いて「<code class="notranslate l10n-notranslate">site:[your site]</code>」と入力してこのようなページを検出することもできます。この方法では、ハッキングされたページを含め、Google のインデックスに登録されているサイトのページが表示されます。検索結果のページをいくつか見て問題のある URL があるかどうかを確認します。Google 検索結果にハッキングされたコンテンツが表示されない場合は、別の検索エンジンで同じ検索キーワードを使用してください。他の検索エンジンで、Google がインデックスから削除したハッキングされたコンテンツが表示される可能性もあります。次に、この例を示します。</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>注:</strong> <em>上記の検索結果には、サイトの所有者が作成したものではないページが多く含まれています。2 番目と 3 番目の検索結果の説明をよく見ると、このハッキング行為によって作成された意味不明な内容のテキストが表示されています。</em></p>
+
+<p>ハッキングされたページにアクセスすると、ページが存在しないことを示すメッセージ（404 エラーなど）が表示されることがありますが、これは偽装です。ハッカーは、ハッキングされたページがなくなったか修正されて、サイトが修正されたかのように思わせているのです。このハッキングは、コンテンツの<a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">クローキング</a>という手法によるものです。クローキングを確認するには、<a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch as Google</a> ツールにサイトの URL を入力します。Fetch as Google ツールを使うことで、下に隠れているコンテンツを確認できます。次に、ハッキングされたページの例を示します。</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>ハッキングの問題を解決する</h2>
+
+<p>まず、ファイルを削除する前に、後で復元が必要になったときに備えてファイルのオフライン コピーを作成しておきます。できれば、クリーンアップ プロセスを開始する前に、サイト全体をバックアップしておくことをおすすめします。バックアップを作成するには、サーバー上にあるすべてのファイルをサーバー外の場所に保存するか、お使いの CMS に最適なバックアップ方法を検索してください。</p>
+
+<h3>.htaccess ファイルを確認する（3 ステップ）</h3>
+
+<p>キーワードとリンクのクローキングによるハッキングでは、.htaccess ファイルを使って、サイト上にクローキングしたページが自動的に作成されます。必須ではありませんが、このハッキングがサイトに及ぼす影響について詳しく把握したいという方は、Apache の公式サイトにある <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">.htaccess の基本事項</a>をご覧ください。</p>
+
+<p><b>ステップ 1</b></p>
+<p>サイトで .htaccess ファイルを探します。ファイルの場所がわからず、WordPress、Joomla、Drupal などの CMS を使っている場合は、検索エンジンで「.htaccess ファイルの場所」と CMS 名を入力して検索してください。サイトによっては、.htaccess ファイルが複数あることもあります。.htaccess ファイルの場所がすべて収められたリストを作成します。
+</p>
+
+<p><strong>注</strong>: 通常、.htaccess は「隠しファイル」になっています。このファイルを検索する場合は隠しファイルの表示を有効にしてください。</p>
+
+
+<p><b>ステップ 2</b></p>
+<p>.htaccess ファイルを開いてファイルの内容を確認します。このファイルには、次のようなコードが 1 行あります。</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>この行の変数は変更可能です。「cj2fa」と「tobeornottobe」はどちらも、任意の文字や単語の組み合わせである可能性があります。ここで重要なのは、この行で参照されている .php を特定することです。</p>
+
+<p>.htaccess ファイルに記述されている .php ファイルの名前を書き留めます。この例では、.php ファイルの名前は「injected_file.php」ですが、実際の .php ファイルはそれほどわかりやすい名前ではありません。通常は、「horsekeys.php」、「potatolake.php」など、無意味な単語をランダムに組み合わせた名前です。このファイルが悪意のある .php ファイルである可能性が非常に高いため、探し出して削除する必要があります。</p>
+
+<div class="alert">.htaccess 内の RewriteRule と .php ファイルを含む行がすべて悪意があるわけではありません。コード行が何を行っているかわからない場合は、<a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">ウェブマスター ヘルプ フォーラム</a>をご利用ください。経験豊富なウェブマスターがサポートいたします。</div>
+
+<p><b>ステップ 3</b></p>
+<p>すべての .htaccess ファイルを問題のないバージョンまたはデフォルト バージョンの .htaccess ファイルに置き換えます。通常、デフォルト バージョンの .htaccess ファイルを探すには、「デフォルト .htaccess ファイル」と CMS 名を入力して検索します。サイトに複数の .htaccess ファイルがある場合は、ファイルごとに問題のないバージョンを探して置換します。</p>
+
+<p>デフォルト バージョンの .htaccess がなく、サイトに .htaccess ファイルを設定したことが一度もない場合、サイトで見つかった .htaccess ファイルはおそらく悪意があるファイルです。万一に備えて .htaccess ファイルのコピーをオフラインに保存して、サイトからその .htaccess ファイルを削除します。</p>
+
+<h3>その他の悪意のあるファイルを探して削除する（5 ステップ）</h3>
+
+<p>悪意のあるファイルを特定することは難しく、数時間がかかることもあります。ファイルの確認には時間をかけてください。まだサイトのファイルをバックアップしていない場合は、この機会にバックアップを作成することをおすすめします。サイトをバックアップする方法については、Google 検索で「バックアップ サイト」と CMS の名前を入力して検索してください。</p>
+
+<p><b>ステップ 1</b></p>
+<p>CMS を使用している場合は、CMS のデフォルトのディストリビューションに付属のコア（デフォルト）ファイルと、追加したファイル（テーマ、モジュール、プラグインなど）をすべて再インストールします。これで、ファイルからハッキングされたコンテンツを除去できます。再インストールの手順については、Google 検索で「再インストール」と CMS 名を入力して検索してください。プラグイン、モジュール、拡張機能、テーマがある場合は、これらも再インストールします。</p>
+
+<div class="alert">コアファイルにカスタマイズを加えた場合は、再インストールするとその設定が失われる可能性があります。再インストールする前にデータベースとすべてのファイルのバックアップを作成しておいてください。</div>
+
+<p><b>ステップ 2</b></p>
+<p>まず、.htaccess ファイルで特定した前述の .php ファイルを探します。サーバー上のファイルへのアクセス方法に応じて、何らかの種類の検索機能があります。悪意のあるファイルの名前を検索します。見つかったら、まずバックアップ コピーを作成し、復元が必要になった場合に備えて別の場所に保存しておきます。その後、サイトからそのファイルを削除します。</p>
+
+<p><b>ステップ 3</b></p>
+<p>他に悪意のあるファイルや不正使用されているファイルが残っていないかどうかを確認します。前述の 2 つのステップで悪意のあるファイルはすべて削除されたと思われますが、サイト上に不正使用されているファイルが残っている場合に備えて、次のステップを行うことをおすすめします。</p>
+
+<p>すべての PHP ファイルを 1 つずつ開いて確認する必要はありません。まず、調査を必要とする不審な PHP ファイルのリストを作成します。次のいずれかの方法で不審な PHP ファイルを判断することができます。</p><p>
+
+</p><ul>
+<li>CMS ファイルの再読み込みをすでに完了している場合、確認するのは、デフォルトの CMS ファイルやフォルダ以外のファイルのみです。これで、多くの PHP ファイルが除外され、確認対象の数件のファイルが残ります。</li>
+<li>最終更新日を基準にサイト上のファイルを並べ替えます。サイトがハッキングされたことに初めて気づいてから数か月以内に変更されたファイルを探します。</li>
+<li>ファイルのサイズを基準にサイト上のファイルを並べ替えます。著しく大きいファイルを探します。</li>
+</ul>
+
+<p><b>ステップ 4</b></p>
+<p>不審な PHP ファイルのリストを作成したところで、そのファイルが正常なファイルか悪意のあるファイルかを判断します。PHP をよくご存じないとこの確認作業は時間がかかる可能性があるため、<a href="https://php.net/docs.php">PHP の資料</a>を見直すことをご検討ください。なお、コーディングが初めてであっても、基本的なパターンに沿えば、悪意のあるファイルを探して特定することができます。</p>
+
+<p>まず、特定した不審なファイルを調べ、文字や数字が乱雑に組み合わされたような大きいテキスト ブロックを探します。通常、この大きいテキスト ブロックの前には、base64_decode、rot13、eval、strrev、gzinflate などの PHP 関数の組み合わせが指定されています。次に、コードブロックの例を示します。このコードは長い 1 行のテキストに詰め込まれ、実際より短く見えることもあります。</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>コードが乱雑ではなく、正常なスクリプトのように見えることもあります。不正なコードかどうかわからない場合は、<a href="https://productforums.google.com/forum/#!forum/webmasters">ウェブマスター ヘルプ フォーラム</a>をご利用ください。経験豊富なウェブマスターがファイルの確認をサポートいたします。</p>
+
+<p><b>ステップ 5</b></p>
+<p>不審なファイルを特定できたら、万が一それが悪意のあるファイルではなかった場合に備えてバックアップまたはローカルコピーをコンピュータに保存しておいた上で、その不審なファイルを削除します。</p>
+
+<h3>サイトに問題がないかどうかを確認する</h3>
+
+<p>ハッキングされたファイルを取り除き終えたら、問題が解決したかどうかを確認します。前に特定した意味不明な内容のページがまだ存在するかどうかを、Fetch as Google ツールをもう一度使って確認します。Fetch as Google の結果が「Not Found」であれば、おそらく問題はありません。</p>
+
+<div class="tip">また、<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">サイトがハッキングされた場合のトラブルシューティング</a>の手順に沿って、サイト上にまだハッキングが解決していないコンテンツがあるかどうかを確認することもできます。</div>
+
+<h2>二度とハッキングされないようにするには</h2>
+
+<p>サイトの脆弱性を修正することは、サイトを修正するための重要な最後のステップです。最近の調査によると、ハッキングされたサイトの 20% が 1 日以内に再びハッキングされています。サイトがどのようにハッキングされたかを正しく把握することが大切です。調査を始めるにあたっては、<a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">スパマーがウェブサイトのハッキングでよく利用する手段</a>のガイドをご覧ください。なお、サイトがどのようにハッキングされたかがわからない場合は、次のチェックリストでサイト上の脆弱性を削減する方法をご確認ください。</p>
+
+<ul>
+<li>CMS、プラグイン、拡張機能、モジュールを定期的に更新する: このステップはすでに実施していることと思います。サイトで古いソフトウェアが実行されていることが原因で多くのサイトがハッキングされています。自動更新に対応している CMS もあります。</li>
+<li>コンピュータを定期的にスキャンする: 信頼できるウィルス スキャナを使ってウィルスや脆弱性を調べます。</li>
+<li>定期的にパスワードを変更する: ホスティング プロバイダ、FTP、CMS などのすべてのウェブサイト アカウントのパスワードを定期的に変更することで、サイトへの不正アクセスを防ぐことができます。アカウントごとに、安全性の高い、一意のパスワードを作成することが重要です。</li>
+<li><a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">2 段階認証プロセス（2FA）</a>を使用する: ログインする必要があるすべてのサービスで 2FA を有効にすることをご検討ください。2FA を利用すれば、ハッカーはパスワードを盗んでもログインすることが難しくなります。</li>
+<li>サイトのモニタリングを行うセキュリティ サービスへの登録を検討する: わずかな料金でサイトのモニタリングを行ってくれるサービスはたくさんあります。サイトの安全性を確保するため、こうしたサービスへの登録をご検討ください。</li>
+</ul>
+
+<a name="resources"></a>
+<h2>その他のリソース</h2>
+<p>上記の方法を行ってもサイトの問題が解決しない場合は、参考となるリソースがさらにいくつかあります。</p>
+
+<p>次のツールを使ってサイトをスキャンし、問題のあるコンテンツを探し出すことができます。ただし、Google がサポートしている（Google 上で利用できる）ツールは VirusTotal のみです。</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>、<a href="https://aw-snap.info/">Aw-snap.info</a>、<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>、<a href="https://www.quttera.com/">Quttera</a>: これは、サイトをスキャンして問題のあるコンテンツがあるかどうかを探すことができるツールの一部です。なお、いずれのツールも、問題のあるコンテンツをすべて特定することを保証しているわけではありません。</p>
+
+<p>Google が提供するリソースは次のとおりです。</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google ウェブマスター ヘルプ フォーラム</a></li>
+<li><a href="/web/fundamentals/security/hacked/">ハッキングされたサイトに関する Google ウェブマスター向けヘルプ</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google セーフ ブラウジング</a></li>
+</ul>
+
+<div class="alert">役立つと思われるツールが他にもありましたら、<a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">フィードバック</a>でお知らせください。お待ちしております。</div>
+
+
+</body></html>

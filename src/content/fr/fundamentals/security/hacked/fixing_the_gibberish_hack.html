@@ -1,0 +1,185 @@
+<html devsite><head>
+  <title>Nettoyage du piratage par contenu vide de sens</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>Ce guide a été spécifiquement créé pour un type de piratage qui ajoute à votre site des pages truffées de mots clés, mais au contenu vide de sens. C'est ce que nous appelons le "piratage par contenu vide de sens". Ce guide s'adresse avant tout aux <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">utilisateurs de systèmes de gestion de contenu populaires</a> (CMS), mais il peut vous être utile, même si vous ne vous servez pas d'un tel système.</p>
+
+<p><strong>Remarque</strong> : Vous ignorez si votre site a été piraté ? Commencez par lire notre guide <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">Comment savoir si mon site a été piraté ?</a></p>
+
+<aside class="note">Nous voulons nous assurer que ce guide vous est vraiment utile. N'hésitez pas à nous <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">faire part de vos commentaires</a> pour nous permettre de l'améliorer.</aside>
+
+<h2>Sommaire</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Étape 1 : Identification du type de piratage</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Étape 2 : Nettoyage du piratage</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Étape 3 : Ressources supplémentaires</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Questions fréquentes sur les sites piratés</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Identification du type de piratage</h2>
+
+<p>Le piratage par contenu vide de sens consiste à générer automatiquement de nombreuses pages contenant des phrases incompréhensibles remplies de mots clés sur le site ciblé. Vous n'êtes pas l'auteur de ces pages, mais leur URL peut inciter les internautes à cliquer dessus. Les pirates informatiques emploient cette méthode pour que les URLs injectées sur le site piraté s'affiche dans la recherche Google. Ensuite, lorsque les internautes tentent de consulter ces pages, ils sont redirigés vers une page sans rapport, comme un site pornographique.
+  Les pirates gagnent de l'argent lorsque les internautes consultent ces pages. Voici des exemples du type de fichiers que vous pouvez être amené à rencontrer sur un site infecté par une opération de piratage par contenu vide de sens :</p>
+
+  <ul>
+    <li>www.example.com/cheap-hair-styles-cool.html</li>
+    <li>www.example.com/free-pictures-fun.html</li>
+    <li>www.example.com/nice-song-download-file.php</li>
+   </ul>
+
+<p>Parfois, ils apparaissent dans un dossier composé de caractères aléatoires et utilisent différentes langues :</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/cheap-hair-styles-cool.html</li>
+   <li>www.example.com/jfwoea/free-pictures-fun.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>Commencez par consulter l'outil <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problèmes de sécurité</a> dans la Search Console pour voir si nous avons découvert l'une de ces pages piratées sur votre site. Vous pouvez également découvrir ce type de page en saisissant <code class="notranslate l10n-notranslate">site:<i>votre site url</i></code>, avec l'URL racine de votre site dans une fenêtre de recherche Google. Les pages que nous avons indexées pour votre site, y compris les pages piratées, sont alors affichées. Parcourez quelques pages des résultats de recherche pour voir si vous rencontrez des URL inhabituelles. Si vous ne détectez aucun contenu piraté dans la recherche Google, utilisez les mêmes termes de recherche dans un autre moteur de recherche. Exemple :</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">Notez que les résultats de recherche contiennent ici plusieurs pages non créées par le propriétaire du site. Si vous regardez attentivement les descriptions, vous verrez des exemples de texte vide de sens créés par ce type de piratage.</div>
+
+<p>En règle générale, lorsque vous cliquez sur un lien renvoyant à une page piratée, vous êtes redirigé vers un autre site ou vers une page pleine de contenu vide de sens. Vous pouvez également obtenir un message vous informant que la page n'existe pas (par exemple, une erreur 404). Faites attention. Les pirates tenteront de vous faire croire que la page a disparu ou qu'elle a été corrigée alors qu'elle est encore piratée. Pour ce faire, les pirates utilisent des <a href="/webmasters/answer/66355" l10n-encrypted-href="uDM31iN8CLdSvuKmuk5DvFAVB44doULc4CE9XvK9iII=">techniques de dissimulation (cloaking)</a> pour cacher leur contenu. Vérifiez si votre site est concerné par le cloaking en saisissant les URL infectées dans l'outil <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Explorer comme Google</a>. Cet outil vous permet de voir le contenu masqué sous-jacent. </p>
+
+<p>Si vous constatez de tels problèmes, votre site a probablement été infecté par ce type de piratage.</p>
+
+<a name="fixing"></a>
+<h2>Nettoyage du piratage</h2>
+
+<p>Avant toute chose, faites une copie hors ligne des fichiers que vous souhaitez supprimer, au cas où vous devriez les restaurer plus tard. Il est même préférable de sauvegarder l'intégralité de votre site avant de commencer le processus de nettoyage.
+  Pour cela, vous pouvez sauvegarder tous les fichiers de votre serveur hors ligne ou rechercher les meilleures options de sauvegarde pour votre système CMS.</p>
+
+<h3>Vérifier le fichier .htaccess (deux étapes)</h3>
+
+<p>Le piratage par contenu vide de sens redirige les visiteurs de votre site à l'aide du fichier .htaccess.</p>
+
+<p><b>Étape 1</b></p>
+<p>Trouvez le fichier .htaccess sur votre site. Si vous ne savez pas où chercher et si vous utilisez un CMS comme WordPress, Joomla ou Drupal, saisissez "emplacement fichier .htaccess" dans un moteur de recherche en indiquant le nom de votre CMS. En fonction de votre site, il se peut que vous trouviez plusieurs fichiers .htaccess.
+  Répertoriez alors l'emplacement de chacun d'eux.</p>
+
+<p><strong>Remarque</strong> : Le fichier .htaccess est souvent un fichier "caché". Veillez à activer l'affichage des fichiers cachés lorsque vous effectuez une recherche.</p>
+
+<p><b>Étape 2</b></p>
+<p>Remplacez tous les fichiers .htaccess par leur version propre ou par défaut. Vous pouvez généralement trouver une version par défaut d'un fichier .htaccess en recherchant "fichier .htaccess par défaut" et le nom de votre système de gestion de contenu. Pour les sites contenant plusieurs fichiers .htaccess, trouvez une version non infectée de chacun d'eux et procédez au remplacement.</p>
+
+<p>S'il n'existe aucun fichier .htaccess par défaut et si vous n'avez jamais configuré ce type de fichier sur votre site, le fichier .htaccess que vous trouvez sur votre site est probablement malveillant. Par précaution, enregistrez une copie du ou des fichiers .htaccess hors ligne et supprimez-les de votre site.</p>
+
+<h3>Recherche et suppression des autres fichiers malveillants (cinq étapes)</h3>
+
+<p>L'identification des fichiers malveillants peut être délicate et fastidieuse. Prenez votre temps lors de la vérification des fichiers. Le cas échéant, profitez-en pour sauvegarder les fichiers de votre site. Dans la recherche Google, saisissez "sauvegarder le site" et le nom de votre système CMS pour obtenir la procédure de sauvegarde de votre site.</p>
+
+<p><b>Étape 1</b></p>
+<p>Si vous utilisez un système de gestion de contenu, réinstallez tous les fichiers par défaut/de base fournis avec votre système CMS, ainsi que tout ce que vous avez pu ajouter (thèmes, modules, plug-ins, etc.). Vous serez ainsi certain que ces fichiers sont exempts de tout contenu piraté. Pour connaître la procédure de réinstallation, saisissez "réinstaller" et le nom de votre système de gestion de contenu dans la recherche Google. Si vous disposez de plug-ins, de modules, d'extensions ou de thèmes, veillez à les réinstaller également.</p>
+
+<p>La réinstallation des fichiers par défaut peut vous faire perdre certaines personnalisations. Pensez à créer une sauvegarde de votre base de données et de tous les fichiers avant de procéder à la réinstallation.</p>
+
+<p><b>Étape 2</b></p>
+<p>Maintenant, vous devez rechercher les autres fichiers malveillants ou infectés. C'est la partie la plus difficile et la plus fastidieuse. Après cela, vous aurez presque terminé.</p>
+
+<p>Cette méthode de piratage laisse généralement deux types de fichiers : des fichiers .txt et des fichiers .php. Les fichiers .txt servent de fichiers de modèle ; les fichiers .php déterminent le type de contenu vide de sens à charger sur votre site. Commencez par rechercher les fichiers .txt. Selon la manière dont vous vous connectez à votre site, vous devriez pouvoir accéder à une fonctionnalité de recherche de fichiers. Recherchez ".txt" pour extraire tous les fichiers portant cette extension. La plupart des fichiers trouvés sont des fichiers texte légitimes comme des accords de licence, des fichiers "lisez-moi", etc. Vous recherchez un ensemble de fichiers .txt précis contenant le code HTML utilisé pour créer des modèles de type spam. Voici des extraits de différents morceaux de code que vous pouvez trouver dans ces fichiers .txt malveillants.</p><p>
+
+</p><p>Les pirates utilisent le remplacement de mots clés pour créer des pages contenant du spam. Il est fort probable que vous trouviez un mot générique qui peut être remplacé dans l'ensemble du fichier piraté.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>En outre, la plupart de ces fichiers contiennent du code qui positionne les liens contenant du spam et le texte indésirable en dehors de la page visible.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>Supprimez ces fichiers .txt. S'ils se trouvent tous dans le même dossier, vous pouvez supprimer le dossier.</p>
+
+<p><b>Étape 3</b></p>
+<p>Les fichiers PHP malveillants sont un peu plus difficiles à repérer. Votre site peut être infecté par un ou plusieurs de ces fichiers. Ils peuvent être tous contenus dans le même sous-répertoire ou être dispersés dans votre site.</p>
+
+<p>Rassurez-vous, vous ne serez pas obligé d'ouvrir chacun des fichiers PHP. Commencez par répertorier les fichiers PHP suspects que vous souhaitez examiner. Les méthodes suivantes vous permettront de les identifier :</p>
+
+<ul>
+<li>Puisque vous avez déjà rechargé vos fichiers CMS, vérifiez uniquement les fichiers qui ne font pas partie de vos fichiers ou de vos dossiers CMS par défaut. Vous pourrez ainsi éliminer un grand nombre de fichiers PHP. Il ne vous restera alors plus qu'un petit nombre de fichiers à examiner.</li>
+<li>Triez les fichiers de votre site en fonction de leur date de dernière modification. Recherchez les fichiers qui ont été modifiés quelques mois avant la découverte du piratage de votre site.</li>
+<li>Triez les fichiers de votre site par taille. Recherchez les fichiers exceptionnellement volumineux.</li>
+</ul>
+
+<p><b>Étape 4</b></p>
+<p>Après avoir identifié les fichiers PHP suspects, vous devez vérifier s'ils sont sans danger ou malveillants. Si vous n'êtes pas habitué au langage PHP, cette procédure sera plus fastidieuse. Prenez donc le temps de parcourir la <a href="https://php.net/docs.php">documentation PHP</a> au préalable.  Même si vous ignorez tout du codage, vous pouvez tout de même rechercher certains modèles de base afin d'identifier les fichiers malveillants.</p>
+
+<p>Tout d'abord, parcourez les fichiers suspects déjà identifiés et recherchez de gros blocs de texte contenant un mélange de lettres et de chiffres. Ces grands blocs de texte sont généralement précédés d'une combinaison de fonctions PHP comme base64_decode, rot13, eval, strrev et gzinflate. Voici un exemple de ce à quoi pourrait ressembler un tel bloc de code. Parfois, ce code apparaît dans une longue ligne de texte. Il semble donc plus petit qu'il ne l'est en réalité.</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Les pirates essaient de tromper les webmasters en injectant du code malicieux dans des
+blocs de texte. Attention aux blocs de code bizarre comme celui ci-dessous :--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>Dans certains cas, le code n'est pas constitué d'un mélange de lettres et de chiffres, et ressemble à un script normal. Si vous ignorez si le code est correct, consultez nos <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">forums d'aide pour les webmasters</a>. Un groupe de webmasters expérimentés pourra vous aider à examiner les fichiers.</p>
+
+<p><b>Étape 5</b></p>
+<p>Maintenant que vous avez identifié les fichiers suspects, créez-en une copie de sauvegarde ou une copie locale en les enregistrant sur votre ordinateur, au cas où ils ne seraient pas malveillants, puis supprimez ces fichiers suspects.</p>
+
+<h3>Vérifier si votre site est propre</h3>
+
+<p>Une fois que les fichiers piratés ont été supprimés, vérifiez si votre travail est concluant. Vous rappelez-vous les pages vides de sens identifiées précédemment ? Utilisez à nouveau l'outil Explorer comme Google sur ces pages pour vérifier si elles existent encore. Si ces pages sont indiquées comme inexistantes dans cet outil, il y a de fortes chances pour que votre site soit nettoyé.</p>
+
+<p>Vous pouvez également suivre les étapes de l'<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">outil de dépannage pour les sites piratés</a> pour vérifier si votre site contient encore du contenu piraté.</p>
+
+<h3>Comment ne plus être piraté ?</h3>
+
+<p>Pour finir de nettoyer votre site, il est indispensable d'en corriger les failles. Une étude récente a permis de constater que 20 % des sites piratés font l'objet d'un nouveau piratage dans le jour qui suit. Il est très utile de savoir exactement comment votre site a été piraté. Pour commencer vos recherches, lisez notre guide consacré aux <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">principales méthodes de piratage des sites Web par les spammeurs</a>. Si vous ne parvenez pas à savoir comment votre site a été piraté, reportez-vous à la liste ci-dessous pour savoir quoi faire pour réduire le nombre de vulnérabilités sur votre site.</p>
+
+<ul>
+  <li><strong>Analysez régulièrement votre ordinateur</strong> : utilisez un antivirus classique pour rechercher les virus ou les vulnérabilités.</li>
+<li><strong>Modifiez régulièrement vos mots de passe</strong> : modifiez régulièrement les mots de passe de tous vos comptes de site Web, comme votre fournisseur d'hébergement, votre FTP et votre CMS, afin d'empêcher tout accès non autorisé à votre site. Il est important de créer un mot de passe sécurisé et unique pour chaque compte.</li>
+<li><strong>Utilisez <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">l'authentification à deux facteurs (2FA)</a></strong> : pensez à activer ce type d'authentification sur tous les services qui nécessitent une connexion. Avec ce type d'authentification, les pirates informatiques ont plus de difficultés à se connecter, même s'ils réussissent à dérober votre mot de passe.</li>
+<li><strong>Mettez régulièrement à jour votre système de gestion de contenu, les plug-ins, les extensions et les modules</strong> : vous devez normalement déjà avoir effectué cette étape. De nombreux sites sont piratés parce que des logiciels obsolètes y sont exécutés. Certains CMS acceptent la mise à jour automatique.</li>
+<li><strong>Pensez à vous abonner à un service de sécurité pour surveiller votre site</strong> : de nombreux services très performants peuvent vous aider à surveiller votre site moyennant des frais modiques.
+  Pensez à vous enregistrer auprès de ces services afin de protéger votre site.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Ressources supplémentaires</h2>
+<p>Si vous avez toujours des difficultés à nettoyer votre site, reportez-vous aux ressources supplémentaires suivantes.</p>
+
+<p>Ces outils analysent votre site et sont en mesure de détecter tout contenu problématique. Hormis VirusTotal, nous ne gérons aucun de ces outils et nous n'en sommes pas non plus responsables.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a> et <a href="https://www.quttera.com/">Quttera</a> : ces outils (entre autres) sont susceptibles de rechercher des contenus problématiques sur votre site. N'oubliez pas que ces analyseurs n'identifieront pas forcément tous les types de contenus problématiques.</p>
+
+<p>Les ressources supplémentaires Google suivantes pourront vous aider :</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Forum d'aide Google pour les webmasters
+  </a></li>
+<li><a href="/web/fundamentals/security/hacked/">Aide Google destinée aux webmasters de sites piratés</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Navigation sécurisée Google</a></li>
+</ul>
+
+<div class="alert">Il vous manque un outil qui vous serait utile ? <a href="https://docs.google.com/a  /google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AZV1HFx+9thIM0C4UiCOHzc03KC6nJ7AyWMICIX6+KL/rhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Laissez-nous un commentaire</a> pour nous en informer.</div>
+
+
+
+</body></html>

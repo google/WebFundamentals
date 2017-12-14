@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>Come risolvere la compromissione con parole chiave e link con cloaking</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Questa guida è stata creata specificamente per un tipo di compromissione, denominata "Compromissione con contenuti senza senso", che crea pagine con contenuti senza senso e numerose parole chiave. Pur essendo destinata agli utenti <a href="https://it.wikipedia.org/wiki/Content_management_system#CMS_pi.C3.B9_diffusi" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">dei più diffusi sistemi di gestione dei contenuti</a>, può risultare utile anche per chi non li utilizza.</p>
+
+<p><strong>Nota:</strong> non sei sicuro che il tuo sito sia stato compromesso? Leggi la nostra guida <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">Come faccio a sapere se il mio sito è compromesso</a>.</p>
+
+
+
+<aside class="note">Vogliamo essere sicuri che questa guida sia davvero utile. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Lasciaci un feedback</a> per aiutarci a migliorarla.</aside>
+
+<h2>Sommario</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Passaggio 1: come identificare questo tipo di compromissione</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Passaggio 2: come risolvere la compromissione</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Passaggio 3: altre risorse</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/hacked/FAQs_for_hacked_sites">Domande frequenti per i siti compromessi</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Come identificare questo tipo di compromissione</h2>
+
+<p>La compromissione con parole chiave e link con cloaking crea automaticamente numerose pagine con testi privi di senso, link e immagini. Queste pagine talvolta contengono elementi di base inerenti al modello del sito di origine, perciò a prima vista potrebbero sembrare una normale pagina del sito, finché non se ne legge il contenuto.</p>
+
+<p>Lo scopo delle pagine compromesse è manipolare i fattori di posizionamento utilizzati da Google. Spesso, gli hacker cercano di trarre un vantaggio economico vendendo i link contenuti nelle pagine compromesse a terze parti diverse. Le pagine compromesse, inoltre, reindirizzano i visitatori a una pagina non correlata, ad esempio un sito porno tramite il quale gli hacker possono guadagnare denaro.</p>
+
+<p>Per verificare la presenza di questo problema, inizia utilizzando lo strumento <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemi di sicurezza</a> di <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> per controllare se Google ha riscontrato esempi di pagine compromesse sul tuo sito. A volte, per individuare questo genere di pagine, puoi aprire una finestra di Ricerca Google e digitare nella casella di ricerca <code class="notranslate l10n-notranslate">site:[your site]</code>. In questo modo vedrai le pagine che Google ha indicizzato per il tuo sito, incluse quelle compromesse. Dai un'occhiata ad alcune pagine dei risultati di ricerca per vedere se sono presenti URL insoliti. Se la Ricerca Google non mostra contenuti compromessi, prova a inserire gli stessi termini di ricerca in un motore di ricerca diverso. Altri motori potrebbero mostrare contenuti compromessi che Google ha invece rimosso dall'indice.
+  Ecco un esempio dei risultati che potresti visualizzare.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Nota:</strong> <em>come puoi notare, i risultati di ricerca riportati in questa figura contengono molte pagine che non sono state create dal proprietario del sito.Se osservi attentamente le descrizioni del secondo e del terzo risultato di ricerca, puoi vedere un esempio del testo senza senso creato da questo tipo di compromissione.</em></p>
+
+<p>Quando visiti una pagina compromessa, potresti visualizzare un messaggio che indica che la pagina non esiste (ad esempio, un errore 404). Non farti ingannare. Gli hacker tentano di farti credere che il sito è stato pulito dall'infezione mostrando che le pagine compromesse non sono più disponibili o sono state corrette. A tale scopo effettuano il <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">cloaking</a> dei contenuti. Per verificare l'eventuale presenza del cloaking, inserisci gli URL del tuo sito nello strumento <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Visualizza come Google</a>, che ti consente di vedere i contenuti sottostanti anche se sono nascosti.
+  Ecco un esempio di come si può presentare una di queste pagine compromesse:</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>Come risolvere la compromissione</h2>
+
+<p>Prima di iniziare, crea una copia offline dei file da rimuovere, nel caso in cui fosse necessario ripristinarli in un secondo momento. Ancor meglio, esegui il backup dell'intero sito prima di iniziare la procedura di pulizia, salvando tutti i file presenti sul server in un percorso offline o individuando le migliori opzioni di backup per il tuo sistema specifico di gestione dei contenuti.</p>
+
+<h3>Controllare il file .htaccess (3 passaggi)</h3>
+
+<p>La compromissione con parole chiave e link con cloaking utilizza il file .htaccess per creare automaticamente pagine con cloaking sul tuo sito. Acquisire familiarità con le <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">nozioni fondamentali relative ai file .htaccess</a>, disponibili sul sito ufficiale Apache, può aiutarti a capire meglio in che modo la compromissione sta danneggiando il tuo sito, ma non è indispensabile. </p>
+
+<p><b>Passaggio 1</b></p>
+<p>Individua il file .htaccess sul tuo sito. Se non sai dove trovarlo e stai usando un sistema di gestione dei contenuti come WordPress, Joomla o Drupal, cerca "percorso file .htaccess" in un motore di ricerca, insieme al nome del tuo sistema di gestione dei contenuti. In base al tuo sito potresti notare diversi file .htaccess. Crea un elenco di tutti i percorsi dei file .htaccess.
+</p>
+
+<p><strong>Nota:</strong> spesso .htaccess è un "file nascosto". Quando esegui la ricerca, assicurati di aver attivato l'opzione che consente di visualizzare i file nascosti.</p>
+
+
+<p><b>Passaggio 2</b></p>
+<p>Apri il file .htaccess per vedere cosa contiene. Nel file dovresti riuscire a individuare una riga di codice simile alla seguente:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>Le variabili in questa riga possono variare, ad esempio sia "cj2fa" sia "tobeornottobe" possono contenere una combinazione qualsiasi di lettere o parole. L'importante è identificare il file .php a cui fa riferimento questa riga.</p>
+
+<p>Prendi nota del file .php indicato nel file .htaccess. Nell'esempio, il file .php è denominato "injected_file.php", ma in realtà il nome non sarà tanto scontato. Di solito è un insieme casuale di parole innocue, come "horsekeys.php", "potatolake.php" e così via. È molto probabile che si tratti di un file .php dannoso, che dovremo trovare e rimuovere più avanti.</p>
+
+<div class="alert">Non tutte le righe del file .htaccess che contengono RewriteRule e un file .php sono dannose.
+  Se non sei sicuro dello scopo di una riga del codice, puoi farti aiutare dal gruppo di webmaster esperti dei <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">forum di assistenza per i webmaster</a>.</div>
+
+<p><b>Passaggio 3</b></p>
+<p>Sostituisci tutti i file .htaccess con una versione predefinita o non infetta del file .htaccess. Di solito, per trovare una versione predefinita del file .htaccess, puoi cercare "file .htaccess predefinito" insieme al nome del tuo sistema di gestione dei contenuti. Per i siti con diversi file .htaccess, individua una versione non infetta di ciascuno di essi e procedi con la sostituzione.</p>
+
+<p>Se non esistono file .htaccess predefiniti e non hai mai configurato un file di questo genere sul tuo sito, il file .htaccess che trovi sarà probabilmente dannoso. Per precauzione, salva una copia offline del file .htaccess e quindi eliminalo dal tuo sito.</p>
+
+<h3>Individuare e rimuovere altri file dannosi (5 passaggi)</h3>
+
+<p>L'identificazione dei file dannosi può essere complicata e richiedere diverse ore. Prenditi tutto il tempo necessario per controllare i file. Se non l'hai ancora fatto, questo è il momento giusto per eseguire il backup dei file presenti sul tuo sito. Per trovare istruzioni su come eseguire il backup del sito, esegui una ricerca in Google con i termini "backup sito" e il nome del tuo sistema di gestione dei contenuti.</p>
+
+<p><b>Passaggio 1</b></p>
+<p>Se utilizzi un sistema di gestione dei contenuti, installa nuovamente tutti i file core (predefiniti) che vengono distribuiti per impostazione predefinita insieme al sistema, e tutti i componenti che hai aggiunto (ad esempio, temi, moduli, plug-in). Così avrai la certezza che in questi file non sono presenti contenuti compromessi. Per trovare istruzioni relative alla procedura di reinstallazione, puoi eseguire una ricerca in Google con il termine "reinstallazione" e il nome del tuo sistema di gestione dei contenuti. Se sono presenti plug-in, moduli, estensioni o temi, ricordati di reinstallare anche questi.</p>
+
+<div class="alert">La reinstallazione dei file core può causare la perdita delle personalizzazioni eventualmente apportate. Prima di effettuare la reinstallazione, assicurati di aver eseguito il backup del database e di tutti i file.</div>
+
+<p><b>Passaggio 2</b></p>
+<p>Inizia cercando il file .php identificato in precedenza nel file .htaccess. A seconda delle modalità con cui puoi accedere ai file presenti sul server, dovrebbe essere disponibile qualche tipo di funzionalità di ricerca. Cerca il nome del file dannoso. Se lo trovi, crea per prima cosa una copia di backup e memorizzala in una posizione diversa, nel caso in cui fosse necessario ripristinarla, quindi elimina il file dal tuo sito.</p>
+
+<p><b>Passaggio 3</b></p>
+<p>Ora controlla se sono rimasti altri file compromessi o dannosi. Nei due passaggi precedenti potresti aver già rimosso tutti i file dannosi, ma è meglio svolgere anche i passaggi indicati di seguito, così da avere la certezza che non siano stati compromessi altri file del tuo sito.</p>
+
+<p>Non farti spaventare dal pensiero di dover aprire ed esaminare tutti i file PHP. Per cominciare, crea un elenco dei file PHP sospetti che vorresti sottoporre ad accertamenti. Di seguito sono riportate alcune procedure che consentono di determinare quali file PHP sono sospetti:</p><p>
+
+</p><ul>
+<li>Se hai già ricaricato tutti i file relativi al sistema di gestione dei contenuti, esamina solo quelli che non rientrano nelle cartelle o nei file predefiniti del sistema di gestione dei contenuti. Con questa operazione dovresti escludere buona parte dei file PHP e restare solo con pochi file da analizzare.</li>
+<li>Ordina i file presenti sul sito in base alla data dell'ultima modifica. Cerca i file che sono stati modificati entro alcuni mesi dal momento in cui hai scoperto che il tuo sito era compromesso.</li>
+<li>Ordina i file presenti sul sito in base alle dimensioni. Cerca i file di dimensioni insolitamente grandi.</li>
+</ul>
+
+<p><b>Passaggio 4</b></p>
+<p>Dopo aver creato un elenco dei file PHP sospetti, controlla se sono normali o dannosi.
+  Se non hai dimestichezza con i file PHP, questa procedura potrebbe richiedere più tempo. Ti consigliamo quindi di dare una lettura alla <a href="https://php.net/docs.php">documentazione relativa ai file PHP</a>.
+  Anche se è la primissima volta che hai a che fare con la codifica, puoi identificare i file sospetti cercando alcune sequenze di base.</p>
+
+<p>Per prima cosa, scorri i file sospetti che hai già individuato per cercare grandi porzioni di testo con una serie di numeri e lettere combinati apparentemente alla rinfusa. Queste porzioni di testo sono precedute solitamente da una combinazione di funzioni PHP, come base64_decode, rot13, eval, strrev e gzinflate. Ecco un esempio di come si potrebbe presentare la porzione di codice. A volte questo codice è interamente compresso in una lunga riga di testo, che lo fa sembrare più piccolo di quanto non lo sia effettivamente.</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Altre volte, invece, il codice non è una combinazione di lettere e numeri alla rinfusa e ha l'aspetto di uno script normale. Se non sei sicuro della pericolosità del codice, rivolgiti ai <a href="https://productforums.google.com/forum/#!forum/webmasters">forum di assistenza per i webmaster</a>, dove troverai un gruppo di webmaster esperti che ti aiuteranno a esaminare i file.</p>
+
+<p><b>Passaggio 5</b></p>
+<p>Ora che sai quali file sono sospetti, crea una copia di backup o una copia locale salvandola sul computer in uso, per non correre rischi nel caso in cui non fossero dannosi, ed elimina i file sospetti.</p>
+
+<h3>Verificare se il sito è pulito</h3>
+
+<p>Dopo aver eliminato i file compromessi, controlla se i tuoi sforzi sono stati ripagati. Ricordi le pagine con contenuti senza senso identificate in precedenza? Utilizza di nuovo lo strumento Visualizza come Google per vedere se esistono ancora. Se lo strumento restituisce "Non trovato", è probabile che il tuo sito goda di ottima salute.</p>
+
+<div class="tip">Per controllare se sul tuo sito sono ancora presenti contenuti compromessi, puoi anche seguire la procedura descritta nello <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Strumento per la risoluzione dei problemi per siti compromessi</a>.</div>
+
+<h2>Come faccio a evitare future compromissioni?</h2>
+
+<p>Correggere le vulnerabilità del tuo sito è l'ultimo passaggio indispensabile per la procedura di pulizia. Secondo un recente studio, il 20% dei siti compromessi subisce un nuovo attacco entro 1 giorno. È quindi utile sapere esattamente come è stato compromesso il tuo sito. Per iniziare gli accertamenti, leggi la guida <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Principali modalità di compromissione dei siti web da parte degli spammer</a>. Tuttavia, se non riesci a scoprire come è stato compromesso il tuo sito, attieniti al seguente elenco di controllo, che indica quali misure puoi adottare per mitigare le vulnerabilità nel tuo sito:</p>
+
+<ul>
+<li>Aggiorna regolarmente il sistema di gestione dei contenuti, i plug-in, le estensioni e i moduli: sperabilmente, hai già completato questo passaggio. Molti siti vengono compromessi perché eseguono software obsoleti. In alcuni sistemi di gestione dei contenuti è supportato l'aggiornamento automatico.</li>
+<li>Esegui periodicamente la scansione del computer: utilizza uno dei più diffusi programmi antivirus per verificare la presenza di virus o vulnerabilità.</li>
+<li>Modifica regolarmente le password: la modifica regolare delle password di tutti gli account associati al tuo sito web, come quelli del provider host, della piattaforma FTP e del sistema di gestione dei contenuti, può impedire l'accesso non autorizzato al tuo sito web.
+  È importante creare una password univoca e complessa per ogni account.</li>
+<li>Utilizza<a href="https://it.wikipedia.org/wiki/Autenticazione_a_due_fattori" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g=="> l'autenticazione a due fattori (2FA):</a> prova ad attivare l'autenticazione a due fattori in tutti i servizi che richiedono l'accesso. L'autenticazione a due fattori complica l'accesso per gli hacker, anche se sono riusciti a rubarti la password.</li>
+<li>Valuta la possibilità di attivare un abbonamento a un servizio di sicurezza che monitori il tuo sito: il mercato offre molti servizi eccellenti che possono monitorare il tuo sito in cambio di una modesta tariffa. Per mantenere sicuro il tuo sito, valuta se registrarti a tali servizi.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Altre risorse</h2>
+<p>Se continui ad avere problemi con la correzione del sito, sono disponibili altre risorse che potrebbero aiutarti.</p>
+
+<p>Questi strumenti analizzano i siti e potrebbero riuscire a rilevare contenuti problematici. Google non li esegue e non li supporta, ad eccezione dello strumento VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a> sono solo alcuni degli strumenti che potrebbero essere in grado di analizzare il sito per rilevare eventuali contenuti problematici. Tieni presente che questi strumenti di analisi non garantiscono l'identificazione di ogni tipo di contenuto problematico.</p>
+
+<p>Ecco alcune risorse aggiuntive di Google che potrebbero essere utili:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Forum di assistenza per i webmaster di Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Guida per i siti compromessi destinata ai webmaster di Google</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">Manca uno strumento che ritieni potrebbe essere utile? <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Lascia un feedback</a> per comunicarcelo.</div>
+
+
+</body></html>

@@ -1,0 +1,91 @@
+project_path: /webmasters/hacked/_project.yaml
+book_path: /webmasters/hacked/_book.yaml
+landing_page:
+  rows:
+  - heading: अगर आप साइट के मालिक हैं और आपको इनमें से कोई दिखाई देता है...
+    columns:
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-harm.png
+      - image_path: https://www.google.com/webmasters/hacked/example-malwarechrome.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-compromised.png
+      - image_path: https://www.google.com/webmasters/hacked/example-reportedattack.png
+    - items:
+      - image_path: https://www.google.com/webmasters/hacked/example-interstitial.png
+      - image_path: https://www.google.com/webmasters/hacked/example-phishing.png
+  - heading: हो सकता है कि आपको हैक कर लिया गया हो
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        हर दिन, साइबर अपराधी हज़ारों वेबसाइट में छेड़छाड़ करते हैं. हैक अक्सर उपयोगकर्ताओं
+        के लिए अदृश्य होते हैं, फिर भी - साइट के मालिक सहित साइट को देखने वाले किसी
+        भी व्यक्ति के लिए ये हानिकारक होते हैं. उदाहरण के लिए, हो सकता है कि साइट
+        के मालिक की जानकारी के बिना, हैकर ने उनकी साइट को हानिकारक कोड से संक्रमित
+        किया हो, जिससे वह वेबसाइट पर आने वाले लोगों के कंप्यूटर पर कीस्ट्रोक रिकॉर्ड
+        कर सकता है, ऑनलाइन बैंकिंग या वित्तीय लेनदेन के लॉगिन क्रेडेंशियल की चोरी
+        कर सकता है. अगर आप पक्के तौर पर यह नहीं जानते हैं कि आपकी साइट को हैक किया
+        गया है या नहीं, तो हमारी <a href="/web/fundamentals/hacked/how_do_I_know_if_site_hacked">मुझे
+        कैसे पता चलेगा कि मेरी साइट हैक कर ली गई है?</a> मार्गदर्शिका पढ़़ना शुरू करें.
+  - heading: हैकिंग के बारे में जानें
+    items:
+    - youtube_id: mbJvL61DOZg
+    - heading: "वीडियो में शामिल है:"
+      description: >
+        <ul><li>साइटें कैसे और क्यों हैक की जाती हैं</li> <li>किसी साइट को पुनर्प्राप्त
+        करने और किसी भी प्रकार की उपयोगकर्ता-संबंधी चेतावनियों को हटाने की प्रक्रिया</li>
+        <li>साइट ठीक करने का अनुमानित समय</li> <li>आप इसे अपने आप ठीक कर रहे हैं या
+        इसके लिए किसी पेशेवर को नियुक्त कर रहे हैं</li></ul>
+  - heading: कार्रवाई करें
+    columns:
+    - items:
+      - heading: 1. टीम बनाएं
+        description: >
+          अपने वेब होस्ट से संपर्क करें और सहायता टीम बनाएं.
+        path: /web/fundamentals/security/hacked/support_team
+        icon:
+          icon_name: supervisor_account
+      - heading: 2. अपनी साइट को क्वारंटाइन करें
+        description: >
+          हैकर को अधिक नुकसान पहुंचाने से रोकें.
+        path: /web/fundamentals/security/hacked/quarantine_site
+        icon:
+          icon_name: error_outline
+      - heading: 3. Search Console का इस्तेमाल करें
+        description: >
+          किस प्रकार की हैकिंग हुई है, इसकी पहचान करने के लिए Search Console का इस्तेमाल
+          करें.
+        path: /web/fundamentals/security/hacked/use_search_console
+        icon:
+          icon_name: build
+    - items:
+      - heading: 4A. क्षति (स्पैम) का आकलन करें
+        description: >
+          स्पैम हैक के लिए, पता लगाएं कि किस चीज़ को ठीक करना होगा.
+        path: /web/fundamentals/security/hacked/hacked_with_spam
+        icon:
+          icon_name: bug_report
+      - heading: 4B. क्षति (मैलवेयर) का आकलन करें
+        description: >
+          मैलवेयर हैक के लिए, पता लगाएं कि किस चीज़ को ठीक करना होगा.
+        path: /web/fundamentals/security/hacked/hacked_with_malware
+        icon:
+          icon_name: bug_report
+    - items:
+      - heading: 5. कमज़ोरी की पहचान करें
+        description: >
+          पता लगाएं कि हैकर में कैसे प्रवेश किया.
+        path: /web/fundamentals/security/hacked/vulnerability
+        icon:
+          icon_name: search
+      - heading: 6. अपनी साइट को साफ़ करें और इसका रखरखाव करें
+        description: >
+          ऐसी कमज़ोरी बंद करें, जो हैकर को प्रवेश करने का मौका देती है.
+        path: /web/fundamentals/security/hacked/clean_site
+        icon:
+          icon_name: verified_user
+      - heading: 7. समीक्षा के लिए अनुरोध करें
+        description: >
+          Google से अपनी हैक की गई लेबलिंग पर फिर से विचार करने के लिए कहें.
+        path: /web/fundamentals/security/hacked/request_review
+        icon:
+          icon_name: done
