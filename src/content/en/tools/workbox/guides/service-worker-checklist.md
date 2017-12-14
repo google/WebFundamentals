@@ -12,12 +12,12 @@ description:A checklist of things to ensure when setting up a service worker.
 
 This page contains a couple of tips that will ensure your users get the
 best experience from your web app as well as ensuring there aren't any
-hidden suprises while developing your site.
+hidden surprises while developing your site.
 
 ## Register your service worker the right way
 
 In general, you should wait for the window load event before registering your
-service worker. This will allow the browser to prioritise assets for the page
+service worker. This will allow the browser to prioritize assets for the page
 and will prevent any risk of precaching interfering with the page.
 
 ```js

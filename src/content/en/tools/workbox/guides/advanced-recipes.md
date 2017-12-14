@@ -94,7 +94,7 @@ window.addEventListener('load', function() {
 });
 ```
 
-This code handles the verious possible lifecycles of the service worker
+This code handles the various possible lifecycles of the service worker
 and detects when a new service worker has become installed and is waiting to
 activate.
 
@@ -107,7 +107,7 @@ Note: This is one possible approach to refreshing the page on a new service
 worker. For a more thorough answer as well as an explanation of alternative
 approaches this
 [article by Redfin Engineering](https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68)
-discuess a range of options.
+discuss a range of options.
 
 **Add to your service worker**
 

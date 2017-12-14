@@ -146,7 +146,7 @@ module.exports = {
 
 This will generate a service worker file called in `sw.js` in the configurations
 output path. By default this will cache the files that Webpack has in it's
-dependcy graph.
+dependency graph.
 
 ## Configure
 
@@ -209,7 +209,7 @@ worker.
 If this behaviour isn't desirable, you can use `skipWaiting` and `clientsClaim`
 to force the new service worker to immediately take control of open pages.
 
-The only risk is that previuosly open pages can end up in an unstable state
+The only risk is that previously open pages can end up in an unstable state
 if your web app is relying on cached items which may be removed by the new
 service worker.
 
@@ -224,7 +224,7 @@ service worker.
 ### Navigation Fallback
 
 If you have a single page app, you'll likely want to use navigation fallback
-so that any navigation requests are reponded to with a precached page.
+so that any navigation requests are reopened to with a precached page.
 
 ```javascript
 {
