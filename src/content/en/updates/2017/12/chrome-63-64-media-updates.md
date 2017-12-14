@@ -219,7 +219,7 @@ example above needs to be updated based on your video encoding properties.
 </ul>
 <script>
   document.querySelector('#colorDepth').innerHTML = 
-      (screen.colorDepth >= 48) ? '&#x2714;' : '&#x274C;';
+      (Math.sign(screen.colorDepth - 47) == 1) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#p3').innerHTML =
       (window.matchMedia("(color-gamut: p3)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#vp9').innerHTML =
