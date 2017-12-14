@@ -98,6 +98,8 @@ toc:
   path: /web/tools/lighthouse/audits/fast-3g
 - title: Perceptual Speed Index
   path: /web/tools/lighthouse/audits/speed-index
+- title: Prevents Users From Pasting Into Password Fields
+  path: /web/tools/lighthouse/audits/password-pasting
 - title: Redirects HTTP Traffic To HTTPS
   path: /web/tools/lighthouse/audits/http-redirects-to-https
 - title: Registers A Service Worker
