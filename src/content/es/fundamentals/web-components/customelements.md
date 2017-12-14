@@ -264,7 +264,7 @@ También pueden crear una instancia en JavaScript:
     console.assert(image.height === 200);
     
 
-Note: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis  <code>is=""</code>. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión <a href='https://github.com/w3c/webcomponents/issues/662'>en Github</a>.
+Note: Algunos navegadores exhiben un rechazo manifiesto por la implementación de la sintaxis  <code>is=""</code>. Esto representa una desventaja para la accesibilidad y la mejora progresiva. Si crees que extender elementos HTML nativos es útil, danos tu opinión en <a href='https://github.com/w3c/webcomponents/issues/509'>509</a> y <a href='https://github.com/w3c/webcomponents/issues/662'>622</a> en Github.
 
 ## Reacciones de los elementos personalizados {: #reactions}
 

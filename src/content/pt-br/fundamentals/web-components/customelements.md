@@ -264,7 +264,7 @@ Ou criam uma instância no JavaScript:
     console.assert(image.height === 200);
     
 
-Observação: Alguns navegadores demonstraram aversão à implementação da sintaxe  <code>is=""</code>. Isso é uma má notícia para a acessibilidade e os aprimoramentos progressivos. Se você acha que a extensão de elementos nativos do HTML é útil, divulgue sua opinião <a href='https://github.com/w3c/webcomponents/issues/662'>no Github</a>.
+Observação: Alguns navegadores demonstraram aversão à implementação da sintaxe  <code>is=""</code>. Isso é uma má notícia para a acessibilidade e os aprimoramentos progressivos. Se você acha que a extensão de elementos nativos do HTML é útil, divulgue sua opinião no <a href='https://github.com/w3c/webcomponents/issues/509'>509</a> e <a href='https://github.com/w3c/webcomponents/issues/662'>662</a> no GitHub.
 
 ## Reações do elemento personalizado {: #reactions}
 
