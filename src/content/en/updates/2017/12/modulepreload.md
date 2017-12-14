@@ -70,7 +70,7 @@ fetching the resource twice. Needless to say, double-fetching is bad, because it
 wastes the user's bandwidth and makes them wait longer, for no good reason.
 
 For `<script>` and `<link>` tags, you can set the credentials mode with the `crossorigin`
-attribute. However, it turns out while that a `<script type="module">` with no
+attribute. However, it turns out that a `<script type="module">` with no
 `crossorigin` attribute means that the credentials mode is `omit`, which doesn't exist
 for `<link rel="preload">`. This means that you would have to
 change the `crossorigin` attribute in both your `<script>` and `<link>` to one
@@ -90,7 +90,8 @@ and compiles the code as a JavaScript module.
 ## So is `<link rel="modulepreload">` just `<link rel="preload">` for modules?
 
 In a nutshell, yes. By having a specific `link` type for preloading modules, we can
-write simple HTML without worrying about what credentials mode we're using.
+write simple HTML without worrying about what credentials mode we're using. The
+defaults just work.
 
 ```html
 <head>
