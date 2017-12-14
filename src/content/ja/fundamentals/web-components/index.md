@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-descriptio: コンポーネントは、最新の Web アプリケーションの構成要素です。独自のコンポーネントをを構築する場合、どのベストプラクティスに従うべきでしょうか？
+description: コンポーネントは、最新の Web アプリケーションの構成要素です。独自のコンポーネントをを構築する場合、どのベストプラクティスに従うべきでしょうか？
 
 {# wf_updated_on: 2017-08-14 #}
 {# wf_published_on: 2017-08-14 #}
