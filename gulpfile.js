@@ -30,7 +30,7 @@ global.WF = {
   },
   maxArticlesInFeed: 10,
   langs: [
-    'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'hu', 'id', 'it', 'ja',
+    'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
     'ko', 'nl', 'pl', 'pt-br', 'ru', 'th', 'tr', 'vi', 'zh-cn', 'zh-tw',
   ],
 };

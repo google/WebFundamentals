@@ -23,6 +23,8 @@ for online banking or financial transactions. If you’re not sure whether
 or not your site was hacked, start by reading
 [how do I know if my site is hacked?](how_do_I_know_if_site_hacked)
 
+<div class="clearfix"></div>
+
 ## Learn more about hacking
 
 <div class="video-wrapper">
