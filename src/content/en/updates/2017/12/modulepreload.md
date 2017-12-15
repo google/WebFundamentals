@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: &lt;link rel="modulepreload"&gt; offers a way of declaratively loading JavaScript modules ahead of time.
+description: Module preload offers a way of declaratively loading JavaScript modules ahead of time.
 
 {# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-12-14 #}
@@ -30,12 +30,13 @@ around this is by preloading the dependencies, so that the browser knows about a
 the files ahead of time and can keep the connection busy.
 
 Until now, there wasn't really a good way of declaratively preloading modules.
-Chrome 64 ships with `<link rel="modulepreload">` enabled by default, a module-specific
+Chrome 64 ships with `<link rel="modulepreload">` behind the "Experimental Web
+Platform Features" flag. `<link rel="modulepreload">` is a module-specific
 version of `<link rel="preload">` that solves a number of the latter's problems.
 
 Warning: It's still very much early days for modules in the browser, so while we
-encourage experimentation, we do not recommend using this technology in production
-just yet!
+encourage experimentation, we advise caution when using this technology in production
+for now!
 
 ## Wait, what's `<link rel="preload">`?
 
@@ -46,7 +47,7 @@ before the browser needs them.
 ```html
 <head>
   <link rel="preload" as="style" href="critical-styles.css">
-  <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="myfont.woff2">
 </head>
 ```
 
@@ -137,7 +138,7 @@ it needs to fetch so that it's not stuck with nothing to do during those long ro
 If you're experimenting with modules and running into performance issues due to deep
 dependency trees, creating a flat list of preloads can definitely help!
 
-That said, there may be other performance issues with modules for now, so make sure
+That said, module performance is still being worked on, so make sure
 you take a close look at what's happening in your application with Developer Tools, and
 consider bundling your application into several chunks in the meantime. There's plenty of
 ongoing module work happening in Chrome, though, so we're getting closer to giving
