@@ -28,7 +28,8 @@ these images in WebP.
 Browser support is not universal for WebP, but similar savings should be available in
 most major browsers in an alternative next-gen format. You'll need to serve a fallback PNG
 or JPEG image for other browser support. See [How can I detect browser
-support for WebP?][fallback] for an overview of fallback techniques and the table below for browser support of image formats.
+support for WebP?][fallback] for an overview of fallback techniques and the table below for browser 
+support of image formats.
 
 [fallback]: /speed/webp/faq#how_can_i_detect_browser_support_for_webp
 
