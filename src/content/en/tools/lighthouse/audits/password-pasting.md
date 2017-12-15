@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Prevents users from pasting into password fields" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-13 #}
+{# wf_updated_on: 2017-12-15 #}
 {# wf_published_on: 2017-12-13 #}
 {# wf_blink_components: N/A #}
 
@@ -49,7 +49,7 @@ event listener.
 
 Lighthouse gathers all `<input type="password">` elements, pastes some text into each element,
 and then verifies that the element's content has been set to the pasted text. If a page
-doesn't use `<input type="password">` for its password input fields, Lighthouse does't detect
+doesn't use `<input type="password">` for its password input fields, Lighthouse doesn't detect
 those elements. It's also possible to prevent pasting outside of a `paste` event listener.
 Lighthouse doesn't detect that scenario, either.
 
