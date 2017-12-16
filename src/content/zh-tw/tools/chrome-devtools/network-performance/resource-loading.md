@@ -76,7 +76,7 @@ Network 面板由五個窗格組成：
 點擊此按鈕可以開始或停止記錄，也可以按鍵盤快捷鍵 <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd>。
 
 
-## 在記錄期間捕捉屏幕截圖{:#filmstrip}
+## 在記錄期間捕捉屏幕截圖 {:#filmstrip}
 
 **Network** 面板可以在頁面加載期間捕捉屏幕截圖。此功能稱爲**幻燈片**。
  
@@ -315,7 +315,7 @@ Network 面板由五個窗格組成：
 使用內容類型按鈕可以僅顯示選定內容類型的資源。
  
 
-注：按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd> (Windows/Linux) 並點擊過濾器可以同時啓用多個過濾器。
+Note: 按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd> (Windows/Linux) 並點擊過濾器可以同時啓用多個過濾器。
 
 ![同時選擇了多個內容類型過濾器]
 (imgs/multiple-content-type-filters.png)
