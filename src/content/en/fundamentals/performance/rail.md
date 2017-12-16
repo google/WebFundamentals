@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2017-12-08 #}
+{# wf_updated_on: 2017-12-15 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -11,196 +11,195 @@ description: RAIL is a user-centric performance model. Every web app has these f
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-RAIL is a **user-centric** performance model. It breaks down the user's experience
-into key actions, providing **goals** and **guidelines** for these actions.
-By laying out a structure for thinking about performance, RAIL enables
-designers and developers to reliably target the highest-impact work.
+**RAIL** is a **user-centric** performance model that breaks down the user's
+experience into key actions. RAIL's [**goals** and **guidelines**](#goals-and-guidelines) aim to
+help developers and designers ensure a good user experience for each of these actions. By
+laying out a structure for thinking about performance, RAIL enables designers and developers to
+reliably target the work that has the highest impact on user experience.
 
-Every web app has these four distinct aspects to its life cycle, and performance 
-fits into them in different ways:
+Every web app has four distinct aspects to its life cycle, and performance fits into them in
+different ways:
 
-![RAIL performance model](images/rail.png)
+<figure>
+  <img src="images/rail.png"
+    alt="The 4 parts of the RAIL performance model: Response, Animation, Idle, and Load."/>
+  <figcaption>
+    <b>Figure X</b>. The 4 parts of the RAIL performance model
+  </figcaption>
+</figure>
 
-### TL;DR {: .hide-from-toc }
+## Goals and guidelines {: #goals-and-guidelines }
 
-- Focus on the user; the end goal isn't to make your site perform fast on any 
-specific device, it's to ultimately make users happy.
-- Respond to users immediately; acknowledge user input in under 100ms.
-- When animating or scrolling, produce a frame in under 10ms.
-- Maximize main thread idle time.
-- Keep users engaged; deliver interactive content in under 5s on slow 3G on median mobile phones
+In the context of RAIL, the terms **goals** and **guidelines** have specific meanings:
 
-## Focus on the user
+* **Goals**. Key performance metrics related to user experience. Since human perception is
+  relatively constant, these goals are unlikely to change any time soon.
+* **Guidelines**. Recommendations that help you achieve goals. These may be specific to current
+  hardware and network connection conditions, and therefore may change over time.
 
-Make users the focal point of your performance effort.
-The majority of time users spend in your site isn't waiting for it to load,
-but waiting for it to respond while using it.
+## Focus on the user {: #ux }
 
-Understand how users perceive performance delays:
+Make users the focal point of your performance effort. The table below describes key metrics of
+how users perceive performance delays:
 
 <table class="responsive">
   <thead>
-      <th colspan="2">Delay &amp; User Reaction</th>
+      <th colspan="2">User Perception Of Performance Delays</th>
   </thead>
   <tbody>
     <tr>
-      <td data-th="Delay">0 - 16ms</td>
-      <td data-th="User Reaction">People are exceptionally good at tracking
-      motion, and they dislike it when animations aren't smooth. Users
-      perceive animations as smooth so long as 60 new frames are rendered
-      every second. That's 16ms per frame, including the time it takes for
-      the browser to paint the new frame to the screen, leaving an app
-      about 10ms to produce a frame.</td>
+      <td data-th="Delay">0 to 16ms</td>
+      <td data-th="User Reaction">Users are exceptionally good at tracking motion, and they
+      dislike it when animations aren't smooth. Users perceive animations as smooth so long as
+      60 new frames are rendered every second. That's 16ms per frame, including the time it
+      takes for the browser to paint the new frame to the screen, leaving an app about 10ms to
+      produce a frame.</td>
     </tr>
     <tr>
-      <td data-th="Delay">0 - 100ms</td>
-      <td data-th="User Reaction">Respond to a user action within this time window and users feel like the result is immediate. Any longer, and the connection between action and reaction is broken.</td>
+      <td data-th="Delay">0 to 100ms</td>
+      <td data-th="User Reaction">Respond to user actions within this time window and users
+      feel like the result is immediate. Any longer, and the connection between action and
+      reaction is broken.</td>
     </tr>
     <tr>
-      <td data-th="Delay">100 - 300ms</td>
+      <td data-th="Delay">100 to 300ms</td>
       <td data-th="User Reaction">Users experience a slight perceptible delay.</td>
     </tr>
     <tr>
-      <td data-th="Delay">300 - 1000 ms</td>
+      <td data-th="Delay">300 to 1000ms</td>
       <td data-th="User Reaction">Within this window, things feel part of a natural and continuous progression of tasks. For most users on the web, loading pages or changing views represents a task.</td>
     </tr>
     <tr>
-      <td data-th="Delay">1000+ms</td>
-      <td data-th="User Reaction">Beyond 1 second, the user loses focus on the task they are performing.</td>
+      <td data-th="Delay">1000ms or more</td>
+      <td data-th="User Reaction">Beyond 1000 milliseconds (1 second), the user loses focus on
+      the task they are performing.</td>
     </tr>
     <tr>
-      <td data-th="Delay">10,000+ms</td>
-      <td data-th="User Reaction">The user is frustrated and is likely to abandon the task; they may or may not come back later.</td>
+      <td data-th="Delay">10000ms or more</td>
+      <td data-th="User Reaction">Beyond 10000 milliseconds (10 seconds), users are frustrated
+      and are likely to abandon tasks. They may or may not come back later.</td>
     </tr>
   </tbody>
 </table>
 
-The perception of performance delays can vary based on mobile hardware
-and network conditions. While loading an experience in 1000ms is plausible on
-a powerful desktop machine over cable, on mobile, ensuring users can load and 
-interact with content in under 5000s is a more [realistic](http://chimera.labs.oreilly.com/books/1230000000545/ch08.html#MOBILE_NETWORK_LATENCY_OVERHEAD) target under slow 3G.
-
-A user on a 2G/3G/4G connection is almost never always on such a connection
-either. Due to packet loss and network variance, their **effective connection
-type** could be significantly slower.
-
-## Goals and guidelines
-
-RAIL offers a set of performance **guidelines** which map closely to set of 
-**goals** regarding user-facing performance metrics. We believe that our
-guidelines can help you achieve the goals.
-
-* **Goals** aim to be timeless
-* Following the **Guidelines** should result in achieving goals, but may
-be specific to current hardware / connection speed distributions.
+Users perceive performance delays differently, depending on network conditions and hardware.
+For example, loading an experience in 1000ms is plausible on a powerful desktop machine over a
+fast Wi-Fi connection, so users have grown accustomed to a 1000ms loading experience. But for
+mobile devices over slow 3G connections, loading in 5000ms is a more realistic goal, so mobile
+users are generally more patient.
 
 ## Response: respond in under 50ms {: #response }
 
-**Guideline**: You have 100ms to perform work related to transitioning.
+**Goal**: Complete a transition initiated by user input within 100ms. Users spend the majority
+of their time waiting for sites to respond to their input, not waiting for the sites to load.
 
-**Goal**:
-We want to transition in under this time and suggest you have 50ms to 
-respond to user input before they notice a lag. This applies to most inputs, 
-such as clicking buttons, toggling form controls, or starting animations. 
-This does not apply to touch drags or scrolls.
+**Guidelines**:
 
-If you don't respond, the connection between action and reaction is broken. Users will notice.
-
-While it may seem obvious to respond to user's actions immediately,
-that's not always the right call.
-Use this 100ms window to do other expensive work, but be careful not to block the user.
-If possible, do work in the background.
-
-For actions that take longer than 500ms to complete, always provide feedback.
+* Respond to user input within 50ms, or else the connection between action and
+  reaction is broken. This applies to most inputs, such as clicking buttons, toggling form
+  controls, or starting animations. This does not apply to touch drags or scrolls.
+* Though it may sound counterintuitive, it's not always the right call to respond to user
+  input immediately. You can use this 100ms window to do other expensive work. But be
+  careful not to block the user. If possible, do work in the background.
+* For actions that take longer than 500ms to complete, always provide feedback.
 
 ## Animation: produce a frame in 10ms {: #animation }
 
-**Guideline**: You have 10ms to perform work related to producting a frame
-in an animation.
+**Goal**: Produce frames as fast as the user's hardware can display them. Users notice when
+animation frame rates vary.
 
-**Goal**
-Animations aren't just fancy UI effects. Users notice when the animation 
-frame rate varies.
+**Guidelines**:
 
-Animation includes the following:
+<ul>
+  <li>
+    Produce each frame in an animation in 10ms or less. Technically, the maximum budget for
+    each frame is 16ms (1000ms / 60 frames per second ≈ 16ms), but browsers need about 6ms to
+    render each frame, hence the guideline of 10ms per frame.
+  </li>
+  <li>
+    In high pressure points like animations, the key is to do nothing where you
+    can, and the absolute minimum where you can't. Whenever possible, make use of
+    the 100ms response to pre-calculate expensive work so that you maximize your
+    chances of hitting 60fps.
+  </li>
+  <li>
+    See <a href="/web/fundamentals/performance/rendering/">Rendering Performance</a>
+    for various animation optimization strategies.
+  </li>
+  <li>
+  Recognize all the types of animations. Animations aren't just fancy UI effects. Each of these
+  interactions are considered animations:
+  <ul>
+    <li>
+      Visual animations, such as entrances and exits, 
+      <a href="https://www.webopedia.com/TERM/T/tweening.html">tweens</a>, and loading indicators.
+    </li>
+    <li>
+      Scrolling. This includes flinging, which is when the user starts scrolling, then lets go,
+      and the page continues scrolling.
+    </li>
+    <li>
+      Dragging. Animations often follow user interactions, such as panning a map or pinching to
+      zoom.
+    </li>
+  </ul>
+</ul>
 
-* **visual animation**: This includes entrance and exit animations, tweened state 
-changes, and loading indicators.
-* **scrolling**: This refers to when the user starts scrolling and lets go and the 
-page is flung.
-* **drag**: While we need to respond to the user’s interaction in under 100 ms, 
-animation might follow as a result, as when panning a map or pinching to zoom.
-
-Your goal is to produce frames as fast as the hardware can display them.
-
-* For 60hz devices, this is once every 16ms. 
-* For the 60hz case, we've leaving Chrome 6ms to do its work
-
-When you're attempting to produce 60 frames per second, and every frame has to go 
-through all of these steps:
-
-![Steps to render a frame](images/render-frame.png)
-
-From a purely mathematical point of view, every frame has a budget of about 
-16ms (1000ms / 60 frames per second = 16.66ms per frame). However, because
-browsers need some time to paint the new frame to the screen, **your code
-should finish executing in under 10ms**. 
-
-In high pressure points like animations, the key is to do nothing where you
-can, and the absolute minimum where you can't. Whenever possible, make use of
-the 100ms response to pre-calculate expensive work so that you maximize your
-chances of hitting 60fps.
-
-For more information, see
-[Rendering Performance](/web/fundamentals/performance/rendering/).
 
 ## Idle: maximize idle time {: #idle }
 
-**Guideline**: You have 50ms to perform work during idle periods.
+**Goal**: Maximize idle time to increase the odds that the page responds to user input within
+50ms.
 
-**Goal**: This is part of achieving 100ms response times.
+**Guidelines**: 
 
-Use idle time to complete deferred work. For example, keep pre-load data to a minimum so that your app loads fast, and use idle time to load remaining data.
+* Use idle time to complete deferred work. For example, for the initial page load, load as little
+  data as possible, then use idle time to load the rest.
+* Perform work during idle time in 50ms or less. Any longer, and you risk interfering with the
+  app's ability to respond to user input within 50ms.
+* If a user interacts with a page during idle time work, the user interaction should always
+  take the highest priority and interrupt the idle time work.
 
-Deferred work should be grouped into blocks of about 50ms. Should a user begin interacting, then the highest priority is to respond to that. 
+## Load: deliver content and become interactive in under 5 seconds {: #load }
 
-To allow for <100ms response,
-the app must yield control back to main thread every <50ms,
-such that it can execute its pixel pipeline, react to user input, and so on.
+When pages load slowly, user attention wanders, and users perceive the task as broken. Sites
+that load quickly have longer average sessions, lower bounce rates, and higher ad viewability.
+See [The Need For Mobile Speed: How Mobile Latency Impacts Publisher Revenue][NEED4SPEED].
 
-Working in 50ms blocks allows the task to finish while still ensuring instant response.
+[NEED4SPEED]: https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/
 
-## Load: deliver content & become interactive in under 5 seconds {: #load }
+**Goals**: 
 
-**Goal**: 
+* For first loads, pages should load and be interactive in 5 seconds or less. 
 
 * On first load, pages should load and get [interactive](/web/tools/lighthouse/audits/time-to-interactive) in under 5 
 seconds over slow 3G on median mobile hardware.
 * Subsequent loads should take under 2s
 
-**Guideline**:  
+**Guidelines**:
 
-Loading your site quickly matters. If you don't, user attention wanders,
-and their perception of dealing with the task is broken. Sites that load
-in under [5 seconds](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/) have longer average sessions, lower bounce rates and higher ad viewability.
+* Pages should load and be interactive in 5 seconds or less for first-time mobile users.
+* Subsequent visits should load in 2 seconds or less for mobile users.
+* Test your load performance on the mobile devices and network connections that are common
+  among your users. If your business has information on what devices and network connections your
+  users are on, then you can use that combination and set your own loading performance targets. 
+  Otherwise, [The Mobile Economy 2017][ME17] suggests that a good global baseline is a
+  mid-range Android phone, such as a Moto G4, and a slow 3G network, defined as 400ms RTT and
+  400kbps transfer speed. This combination is available on [WebPageTest][WPT].
+* Keep in mind that although your typical mobile user's device might claim that it's on a 2G, 3G,
+  or 4G connection, in reality the *effective connection speed* is often significantly slower,
+  due to packet loss and network variance.
+* Focus on optimizing the [Critical Rendering Path][CRP] to unblock rendering.
+* You don't have to load everything in under 5 seconds to produce the perception of a complete
+  load. Enable progressive rendering and do some work in the background. Defer non-essential
+  loads to periods of idle time. See [Website Performance Optimization][Udacity].
+
+[ME17]: https://www.gsma.com/mobileeconomy/
+[WPT]: https://www.webpagetest.org/easy
+[CRP]: /web/fundamentals/performance/critical-rendering-path/
+[Udacity]: https://www.udacity.com/course/website-performance-optimization--ud884
 
 <img src="images/speed-metrics.png" alt="Speed metrics include first paint and time to interactive">
-
-Some teams and businesses are intimately aware of their audience and can
-make informed estimates about the devices and networks their prospective
-users are on. When this is the case, you're in a good position to set your
-own targets for loading performance.
-
-Many of us do not have such a baseline easily accessible however. Data suggests 
-that [the median user is on a slow network](https://goo.gl/fDkY1g) so it's 
-important to ensure pages can load and be interactive even on slower networks.
-
-A global baseline we recommend for testing loading performance on mobile is:
-
-* A median Android phone (such as the Moto G4)
-* On a slow 3G network, emulated at 400ms RTT and 400kbps transfer.
-
-This [configuration](https://github.com/WPO-Foundation/webpagetest/blob/6a79fedb6bb5792f11d2891d9ae80f8ffb8b1a7d/www/settings/connectivity.ini.sample#L61) is available on [WebPageTest](https://www.webpagetest.org/easy) allowing us to re-create these conditions in a straight-forward way.
 
 How quickly a page loads can be impacted by a number of different factors:
 
@@ -209,12 +208,6 @@ How quickly a page loads can be impacted by a number of different factors:
 * Cache eviction
 * Differences in L2/L3 caching
 * Parsing JavaScript
-
-Focus on
-[optimizing the critical rendering path](/web/fundamentals/performance/critical-rendering-path/)
-to unblock rendering.
-
-You don't have to load everything in under 5 seconds to produce the perception of a complete load. Enable progressive rendering and do some work in the background. Defer non-essential loads to periods of idle time (see this [Website Performance Optimization Udacity course](https://www.udacity.com/course/website-performance-optimization--ud884) for more information).
 
 Note: To learn more about loading performance budgets for mobile, see [Real-world Performance
 Budgets](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/).
@@ -270,10 +263,14 @@ speed metrics like [Time-to-Interactive](/web/tools/lighthouse/audits/time-to-in
 
 <img src="images/lighthouse-performance.png" alt="Lighthouse performance metrics">
 
-## Conclusions
+## Summary {: #summary }
 
 RAIL is a lens to look at a website's user experience as a journey composed 
 of individual interactions. Once you're of where each interaction fits, you'll
 know what users will perceive and what your performance goals are. 
 
-
+* **Focus on the user**.
+* **Respond to user input in under 100ms**.
+* **Produce a frame in under 10ms when animating or scrolling**.
+* **Maximize main thread idle time**.
+* **Load interactive content in under 5000ms**.
