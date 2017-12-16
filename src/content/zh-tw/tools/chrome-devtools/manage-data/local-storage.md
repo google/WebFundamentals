@@ -20,7 +20,7 @@ description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 - 點擊一次按鈕即可清除所有存儲、數據庫、緩存和服務工作線程。
 
 
-## 本地存儲 {:#local-storage}
+## 本地存儲 {: #local-storage}
 
 如果您使用[本地存儲][ls]存儲鍵值對 (KVP)，則可以從 **Local Storage** 窗格中檢查、修改和刪除這些 KVP。
 
@@ -42,7 +42,7 @@ description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 [refresh]: /web/tools/chrome-devtools/manage-data/imgs/refresh.png
 [delete]: /web/tools/chrome-devtools/manage-data/imgs/delete.png
 
-## Session storage {:#session-storage}
+## Session storage {: #session-storage}
 
 **Session Storage** 窗格與 **Local Storage** 窗格的工作方式相同。
 參閱上面的[本地存儲](#local-storage)部分，瞭解如何查看和編輯[會話存儲][ss]。
@@ -50,7 +50,7 @@ description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 
 [ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
-## IndexedDB {:#indexeddb}
+## IndexedDB {: #indexeddb}
 
 使用 **IndexedDB** 窗格可以檢查、修改和刪除 IndexedDB 數據。
 
@@ -98,7 +98,7 @@ description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 [idb-filter]: /web/tools/chrome-devtools/manage-data/imgs/idb-filter.png
 [cos]: /web/tools/chrome-devtools/manage-data/imgs/clear-object-store.png
 
-## Web SQL {:#web-sql}
+## Web SQL {: #web-sql}
 
 使用 **Web SQL** 窗格可以查詢和修改 Web SQL 數據庫。
 
@@ -123,7 +123,7 @@ description:從 Application 面板檢查和管理存儲、數據庫與緩存。
 [wsc]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-console.png
 [wst]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-table.png
 
-## 應用緩存 {:#application-cache}
+## 應用緩存 {: #application-cache}
 
 使用 **Application Cache** 窗格可以檢查通過 [Application Cache API][appcache-api] 創建的資源和規則。
 

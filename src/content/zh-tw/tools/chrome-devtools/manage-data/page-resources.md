@@ -20,7 +20,7 @@ description:按框架、網域、類型或其他條件組織資源。
 - 在 <strong>Network</strong> 面板中按名稱或其他條件過濾資源。
 
 
-## 按框架組織資源 {:#frames}
+## 按框架組織資源 {: #frames}
 
 使用 **Application** 面板的 **Frames** 窗格可以按框架組織頁面的資源。
 

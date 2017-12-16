@@ -20,7 +20,7 @@ description:從 Application 面板檢查和刪除 Cookie。
 - 刪除單個 Cookie、選定網域的 Cookie 或所有網域的全部 Cookie。
 
 
-## 概覽 {:#cookies}
+## 概覽 {: #cookies}
 
 使用 **Cookies** 窗格可以查看和刪除 Cookie。您無法修改 Cookie 值。
 
@@ -83,7 +83,7 @@ Cookie 按網域列示。其中包括主文檔和所有嵌套的框架。
   </tbody>
 </table>
 
-## 刪除 Cookie {:#delete}
+## 刪除 Cookie {: #delete}
 
 可以通過多種方式刪除 Cookie：
 
