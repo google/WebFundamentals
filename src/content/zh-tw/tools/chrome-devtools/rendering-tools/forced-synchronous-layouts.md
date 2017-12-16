@@ -71,7 +71,7 @@ description:請遵循此互動指南，瞭解如何使用 DevTools 診斷強制�
 堆棧的頂端是 `Animation Frame Fired` 事件。只要觸發此事件，就會調用傳遞至 `requestAnimationFrame()` 的函數。在 `Animation Frame Fired` 下方，您會看到 `Function Call`，在它的下方，您會看到 `update`。您可以推斷名爲 `update()` 的方法是 `requestAnimationFrame()` 的回調。
  
 
-注：這是您之前啓用 **JS Profile** 選項的作用。
+Note: 這是您之前啓用 **JS Profile** 選項的作用。
 如果停用，您就會看到 `Function Call`，後面是所有紫色小事件（稍後介紹），不包含具體調用了哪些函數的詳情。
 
 
