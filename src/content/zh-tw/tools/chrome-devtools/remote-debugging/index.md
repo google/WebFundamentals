@@ -26,7 +26,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 
 ![遠程調試圖示](imgs/remote-debugging.png)
 
-## 要求{: #requirements }
+## 要求 {: #requirements }
 
 * 開發計算機上已安裝 Chrome 32 或更高版本。
 * 開發計算機上已安裝 [USB 驅動程序][drivers]（如果您使用 Windows）。
@@ -37,7 +37,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 
 [drivers]: https://developer.android.com/tools/extras/oem-usb.html
 
-## 第 1 步：發現您的 Android 設備{: #discover }
+## 第 1 步：發現您的 Android 設備 {: #discover }
 
 1. 在您的 Android 設備上，選擇 **Settings** > **Developer Options** > **Enable USB Debugging**。
 在運行 Android 4.2 及更新版本的設備上，**Developer options** 默認情況下處於隱藏狀態。
@@ -86,11 +86,11 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 綠色圓圈和 **Connected** 文本表示您已大功告成，可以從開發計算機遠程調試您的 Android 設備。
 
 
-注：如果您在發現流程中遇到任何問題，您可以通過在 Android 設備上選擇 **Settings** > **Developer Options** > **Revoke USB Debugging Authorizations** 重啓該流程。
+Note: 如果您在發現流程中遇到任何問題，您可以通過在 Android 設備上選擇 **Settings** > **Developer Options** > **Revoke USB Debugging Authorizations** 重啓該流程。
 
 
 
-## 第 2 步：從您的開發計算機調試 Android 設備上的內容。{: #debug }
+## 第 2 步：從您的開發計算機調試 Android 設備上的內容。 {: #debug }
 
 1. 如果您尚未在 Android 設備上打開 Chrome，則現在打開它。
 
@@ -121,7 +121,7 @@ description:從 Windows、Mac 或 Linux 計算機遠程調試 Android 設備上�
 
 ![重新加載、聚焦或關閉一個標籤](imgs/reload.png)
 
-### 檢查元素{: #inspect }
+### 檢查元素 {: #inspect }
 
 轉到您的 DevTools 實例的 **Elements** 面板，將鼠標懸停在一個元素上以在 Android 設備的視口中突出顯示它。
 
@@ -158,7 +158,7 @@ Element][select]{:.devtools-inline}，然後在您的 Android 設備屏幕上點
 將您的 Android 設備屏幕解鎖可自動恢復抓屏。
 
 
-## 反饋{: #feedback }
+## 反饋 {: #feedback }
 
 如果您想幫助我們改進此教程，請回答下面的問題！
 
