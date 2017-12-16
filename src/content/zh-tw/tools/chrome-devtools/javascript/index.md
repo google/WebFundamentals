@@ -96,7 +96,7 @@ DevTools 讓您可以暫停執行中的代碼，並對暫停時刻的*所有*變
 
 
 
-注：這不過是 DevTools 提供的衆多斷點類型中的一種。應使用的斷點類型取決於您要調試的問題類型。
+Note: 這不過是 DevTools 提供的衆多斷點類型中的一種。應使用的斷點類型取決於您要調試的問題類型。
 
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
