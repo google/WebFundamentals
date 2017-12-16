@@ -33,7 +33,7 @@ Chrome DevTools 的堆分析器可以按頁面的 JavaScript 對象和相關 DOM
 
 ![可到達對象的總大小](imgs/total-size.png)
 
-注：只有可到達對象纔會包含到快照中。此外，拍攝快照始終從垃圾回收開始。
+Note: 只有可到達對象纔會包含到快照中。此外，拍攝快照始終從垃圾回收開始。
 
 ## 清除快照
 
@@ -65,7 +65,7 @@ Chrome DevTools 的堆分析器可以按頁面的 JavaScript 對象和相關 DOM
 
 ![切換視圖選擇器](imgs/switch-views.png)
 
-注：並不是所有屬性都存儲在 JavaScript 堆上。不會捕捉使用執行原生代碼的 getter 實現的屬性。另外，也不會捕捉數字等非字符串值。
+Note: 並不是所有屬性都存儲在 JavaScript 堆上。不會捕捉使用執行原生代碼的 getter 實現的屬性。另外，也不會捕捉數字等非字符串值。
 
 ### Summary 視圖
 
