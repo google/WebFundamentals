@@ -33,7 +33,7 @@ landing_page:
         Welcome, Workbox is a set of libraries and Node modules that make it
         easy to cache assets and take full advantage of features used to
         build
-        <a href="https://developers.google.com/web/progressive-web-apps/">progressive web apps</a>.
+        <a href="https://developers.google.com/web/progressive-web-apps/">progressive web app's</a>.
 
   - custom_html: >
       <style>
@@ -120,12 +120,12 @@ landing_page:
         <li>Request routing</li>
         <li>Background sync</li>
         <li>Helpful debugging</li>
-        <li>Greate flexibility and feature set than sw-precache and sw-toolbox</li>
+        <li>Greater flexibility and feature set than sw-precache and sw-toolbox</li>
         </ul>
 
   - custom_html: >
-      <h2>Whats the API Like?</h2>
-      <p>Below is a few examples of the Workbox API demonstrating some of
+      <h2>What's the API Like?</h2>
+      <p>Below are a few examples of the Workbox API demonstrating some of
       the common approaches developers take in their service workers.</p>
 
       <h3>Cache Google Fonts</h3>
@@ -155,7 +155,7 @@ landing_page:
       <h3>Cache Images</h3>
       <p>Images carry most of the weight for a web page. Use this rule to
       serve them quickly from the cache, while making sure you don’t cache
-      them indefinitely, consuming your user’s stoage.</p>
+      them indefinitely, consuming your users' stoage.</p>
 
       <pre class="prettyprint lang-javascript">
       workbox.routing.registerRoute(
