@@ -88,6 +88,18 @@ toc:
         path: /web/fundamentals/performance/prpl-pattern/
       - title: Resource Prioritization
         path: /web/fundamentals/performance/resource-prioritization
+      - title: Web Performance Optimization with webpack
+        section:
+          - title: Introduction
+            path: /web/fundamentals/performance/webpack/
+          - title: Decrease Front-end Size
+            path: /web/fundamentals/performance/webpack/decrease-frontend-size
+          - title: Make Use of Long-term Caching
+            path: /web/fundamentals/performance/webpack/use-long-term-caching
+          - title: Monitor and analyze the app
+            path: /web/fundamentals/performance/webpack/monitor-and-analyze
+          - title: Conclusion
+            path: /web/fundamentals/performance/webpack/conclusion
     - title: Rendering Performance
       section:
       - title: Overview
