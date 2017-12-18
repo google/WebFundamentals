@@ -233,3 +233,5 @@ At this point, you should be able to load your app and open your test site!
 
 We hope that you can experiment with this API and give us feedback at
 [@ChromiumDev](https://twitter.com/ChromiumDev)
+
+{% include "comment-widget.html" %}
