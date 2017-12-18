@@ -14,6 +14,10 @@ This is a plugin for the [webpack](https://webpack.js.org/) which generates a li
 [precache](workbox-precaching) (known as a "precache manifest") based on the assets in a webpack
 compilation.
 
+Guidance on using the plugin within the context of a larger webpack build can be found in the
+"[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section
+of the webpack documentation.
+
 ## Considerations
 
 There are a few decisions to make which will determine the right configuration for your use case.
