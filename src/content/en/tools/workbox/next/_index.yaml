@@ -84,7 +84,7 @@ landing_page:
           </div>
           <div class="row-details">
             <h3>Performance</h3>
-            <p>Stop waiting on the network! You can improve your web apps performance by caching and serving your files, powered by a service worker.</p>
+            <p>Stop waiting on the network! You can improve your web app's performance by caching and serving your files, powered by a service worker.</p>
           </div>
         </div>
         <div class="workbox-columns__column">
