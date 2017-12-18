@@ -18,9 +18,9 @@ _Looking for the code?_
 * [Sample using 
   TrustedWebUtils](https://github.com/GoogleChrome/custom-tabs-client/tree/master/svgomg)
 
-There are many different ways to integrate web content on Android, each having 
-their own benefits and drawbacks. Developers have frequently asked for a simple 
-way to launch content fullscreen like a WebView, which is run using the latest 
+There are many different ways to integrate web content on Android, each having
+their own benefits and drawbacks. Developers have frequently asked for a simple
+way to launch content fullscreen like a WebView, which is run using the latest
 and preferred browser of the user.
 
 At the Chrome Developer Summit 2017 (October 2017) we announced a new technology 
@@ -30,7 +30,7 @@ Canary](https://play.google.com/store/apps/details?id=com.chrome.canary) and
 Trusted Web activities are a new way to integrate _your_ web-app content such as 
 _your_ PWA with _your_ Android app using a protocol based on Custom Tabs.
 
-There are a few things that make Trusted Web activities different from other 
+There are a few things that make Trusted Web activities different from other
 ways to integrate web content with your app:
 
 1. Content in a Trusted Web activity is **trusted** -- the app and the site it 
@@ -65,11 +65,11 @@ audit your site for these requirements using the
 [Lighthouse](/web/tools/lighthouse/) "user can be 
 prompted to Add to Home screen" audit.
 
-Today, if the user's version of Chrome doesn't support Trusted Web activities, 
-we'll fall back to a simple toolbar like the one you'd see in a Custom Tab. It 
-is also possible for other browsers to implement the same protocol that Trusted 
-Web activities use. While the host app has the final say on what browser gets 
-opened, we recommend the same policy as for Custom Tabs: use the user's default 
+Today, if the user's version of Chrome doesn't support Trusted Web activities,
+we'll fall back to a simple toolbar like the one you'd see in a Custom Tab. It
+is also possible for other browsers to implement the same protocol that Trusted
+Web activities use. While the host app has the final say on what browser gets
+opened, we recommend the same policy as for Custom Tabs: use the user's default
 browser, so long as that browser provides the required capabilities. 
 
 We hope that you can experiment with this API and give us feedback at 
@@ -77,7 +77,7 @@ We hope that you can experiment with this API and give us feedback at
 
 ## Getting started
 
-You can quickly build an app that launches a Trusted Web activity in three 
+You can quickly build an app that launches a Trusted Web activity in three
 simple steps.
 
 1. Set up Digital Asset Links in an Android app
@@ -90,14 +90,14 @@ allows you to open an SVG in the [SVGOMG](https://svgomg.firebaseapp.com) PWA.
 
 ### Set up Digital Asset Links in an Android app
 
-The basis of Trusted Web activities is the developer-defined trust relationship 
-between the Android app and the web content it launches established via [Digital 
-Asset Links](/digital-asset-links/v1/getting-started). 
-This assures the browser that the app opening a site is controlled by the same 
-developer. In Chrome, attempting to launch a URL that you can't prove ownership 
-over will fall back to opening a Custom Tab.
+The basis of Trusted Web activities is the developer-defined trust relationship
+between the Android app and the web content it launches established via [Digital
+Asset Links](/digital-asset-links/v1/getting-started). This assures the browser
+that the app opening a site is controlled by the same developer. In Chrome,
+attempting to launch a URL that you can't prove ownership over will fall back to
+opening a Custom Tab.
 
-By setting `autoVerify="true"` in any intent filters you add to your app, links 
+By setting `autoVerify="true"` in any intent filters you add to your app, links
 will also open by default on devices higher than API level 23.
 
 First, add a statement to your 
@@ -137,19 +137,21 @@ Note: the backslashes are intentional!
 
 ### Deploy your assetlinks.json to prove ownership of the domain
 
-To launch [the site](https://svgomg.firebaseapp.com/.well-known/assetlinks.json), 
-you'll need to add a "statement" to the `.well-known/assetlinks.json` file with 
-the package name and hash of your app's certificate. This allows Digital Asset 
-Links to establish a bidirectional relationship between your site content and 
-the app opening it in a Trusted Web activity (only you can generate the cert 
-fingerprint and only you can host this file).
+To launch [the
+site](https://svgomg.firebaseapp.com/.well-known/assetlinks.json), you'll need
+to add a "statement" to the `.well-known/assetlinks.json` file with the package
+name and hash of your app's certificate. This allows Digital Asset Links to
+establish a bidirectional relationship between your site content and the app
+opening it in a Trusted Web activity (only you can generate the cert fingerprint
+and only you can host this file).
 
 Note: you can get the hash of your app's certificate with the following command:  
 `keytool -exportcert -list -v -alias androiddebugkey -keystore 
 ~/.android/debug.keystore`
 
-Creating a statement is documented [here](/digital-asset-links/v1/create-statement). 
-An example statement for the sample app is:
+Creating a statement is documented
+[here](/digital-asset-links/v1/create-statement). An example statement for the
+sample app is:
 
 ```
 [{  
@@ -162,7 +164,8 @@ An example statement for the sample app is:
 }]
 ```
 
-You can verify the assertion on your site with [the validator](/digital-asset-links/tools/generator).
+You can verify the assertion on your site with [the
+validator](/digital-asset-links/tools/generator).
 
 Troubleshooting:
 
@@ -183,15 +186,15 @@ own, following
 [TwaLauncherActivity](https://github.com/GoogleChrome/custom-tabs-client/blob/master/svgomg/src/main/java/org/chromium/twa/svgomg/TwaLauncherActivity.java)
 in the sample.
 
-Inside the TwaLauncherActivity, we use the onCreate event to ask the
-TwaSessionHelper to establish a connection to the CustomTabsService behind the
-scenes by calling the bindService method.
+Inside the `TwaLauncherActivity`, we use the `onCreate` event to ask the
+`TwaSessionHelper` to establish a connection to the `CustomTabsService` behind the
+scenes by calling the `bindService` method.
 
-We also set the TwaLauncherActivity as a listener for the session events, so we
+We also set the `TwaLauncherActivity` as a listener for the session events, so we
 can control what to do once a connection to the browser is established.
 
-The first parameter for bindService is the Context to which the service will be 
-bound to. The second parameter is an URI to the origin that we want to validate 
+The first parameter for `bindService` is the `Context` to which the service will be 
+bound to. The second parameter is an `URI` to the origin that we want to validate 
 for the Trusted Web activity.
 
 ```
@@ -202,7 +205,7 @@ twaSessionHelper.bindService(this, originUri);
 ```
 
 When the relationship has been validated and the browser has been warmed up, 
-onTwaSessionReady is invoked, to allow the TwaLauncherActivity to know that the 
+`onTwaSessionReady` is invoked, to allow the `TwaLauncherActivity` to know that the 
 Trusted Web activity is ready to be opened.
 
 ```
@@ -210,14 +213,14 @@ TwaSessionCallback twaSessionCallback = mTwaSessionCallback.get();
 if (twaSessionCallback != null) twaSessionCallback.onTwaSessionReady();
 ```
 
-The onTwaSessionReady callback tells us that the we are ready to open the page. 
+The `onTwaSessionReady` callback tells us that the we are ready to open the page. 
 In the context of this sample, we want to open it as soon as the session is 
 ready, but other applications may want to open the Trusted Web activity as a 
 result of a user action, and this event can be used to enable that action (eg: 
 enable a button.)
 
-Opening the Trusted Web activity is implemented in the openTwa method. The API 
-allows us to pass our own CustomTabsIntent so we can change start and exit 
+Opening the Trusted Web activity is implemented in the `openTwa` method. The API 
+allows us to pass our own `CustomTabsIntent` so we can change start and exit 
 animations. Customising animations is mostly relevant for applications opening 
 Trusted Web activities from an existing activity. 
 
