@@ -120,7 +120,34 @@ workbox.routing.registerRoute(
         ],
     }),
 );
+```
 
+## Force a Timeout on Network Requests
+
+There may be network requests that would be beneficial if they were served
+from the network, but could benefit by being served by the cache if the
+network request is taking too long.
+
+For this, you can use a `NetworkFirst` strategy with the
+`networkTimetoutSeconds` option configured.
+
+```javascript
+workbox.routing.registerRoute(
+    'https://hacker-news.firebaseio.com/v0/*',
+    workbox.strategies.networkFirst({
+        networkTimetoutSeconds: 3,
+        cacheName: 'stories',
+        plugins: [
+          new workbox.expiration.Plugin({
+            maxEntries: 50,
+            maxAgeSeconds: 5 * 60, // 5 minutes
+          }),
+          new workbox.cacheableResponse.Plugin({
+            statuses: [0, 200],
+          }),
+        ],
+    }),
+);
 ```
 
 ## Cache Resources from a Specific Subdirectory
