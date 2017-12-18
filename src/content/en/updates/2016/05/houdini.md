@@ -4,6 +4,7 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 
 {# wf_updated_on: 2017-03-23 #}
 {# wf_published_on: 2016-05-19 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png #}
 
@@ -401,7 +402,7 @@ If you want to get involved, there’s always the [Houdini mailing list].
 [CompWorklet Polyfill]: https://github.com/googlechrome/houdini-samples
 [Web Components]: http://webcomponents.org/
 [parallax scrolling]: https://en.wikipedia.org/wiki/Parallax_scrolling
-[CSS Custom Properties]: https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care
+[CSS Custom Properties]: /web/updates/2016/02/css-variables-why-should-you-care
 [Houdini Demo]: https://googlechrome.github.io/houdini-samples/animation-worklet/twitter-header/
 [Paint Worklet demo]: http://googlechrome.github.io/houdini-samples/paint-worklet/ripple/
 [Paint Worklet source]: https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet/ripple

@@ -33,7 +33,7 @@ images only when the user has scrolled halfway down the page. See [Intersect
 all the things!][IATT] for more on this approach.
 
 [IATT]: /web/updates/2016/04/intersectionobserver#intersect_all_the_things
-[IO]: https://developers.google.com/web/updates/2016/04/intersectionobserver
+[IO]: /web/updates/2016/04/intersectionobserver
 
 If you do use an IntersectionObserver, make sure to include the
 [polyfill][polyfill], because native browser support is limited.

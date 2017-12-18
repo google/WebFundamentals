@@ -19,7 +19,7 @@ an overview.
 See the [Explainer][explainer] in the passive event listener specification
 for a technical deep-dive.
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## Recommendations {: #recommendations }
