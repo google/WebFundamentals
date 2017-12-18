@@ -19,7 +19,7 @@ UCBrowser. See [googlechrome/lighthouse#1710][uc].
 
 [uc]: https://github.com/GoogleChrome/lighthouse/issues/1710#issuecomment-294470505
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Recommendations {: #recommendations }
 
