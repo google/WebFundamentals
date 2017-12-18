@@ -5,7 +5,7 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 {# wf_updated_on: 2017-12-18 #}
 {# wf_published_on: 2017-10-24 #}
 {# wf_tags: trusted-web-activity #}
-{# wf_featured_image: /web/updates/images/generic/devices.png  #}
+{# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs. #}
 {# wf_blink_components: N/A #}
 
@@ -111,7 +111,7 @@ First, add a statement to your
 android:resource="@string/asset\_statements" />
     ...  
   </application>
-</manifest&gt;
+</manifest>;
 ```
 
 And in 
@@ -121,7 +121,7 @@ website:
 
 ```
 <resources>
-    <string name="app\_name"&gt;SVGOMG</string>
+    <string name="app\_name">SVGOMG</string>
     <string name="asset\_statements">
         [{  
             \"relation\": [\"delegate\_permission/common.handle\_all\_urls\"],  
