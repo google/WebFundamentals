@@ -10,9 +10,9 @@ description: The module guide for workbox-webpack-plugin.
 
 ## What's the Workbox webpack Plugin?
 
-This is a plugin for the [webpack](https://webpack.js.org/) which generates a list of URLs to
-[precache](workbox-precaching) (known as a "precache manifest") based on the assets in a webpack
-compilation.
+This is a plugin for [webpack](https://webpack.js.org/) which generates a list of URLs to
+[precache](/web/tools/workbox/guides/precache-files) (known as a "precache manifest") based on the
+assets in a webpack compilation.
 
 Guidance on using the plugin within the context of a larger webpack build can be found in the
 "[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section
@@ -79,7 +79,6 @@ configuration as properties of an `Object` to the plugin's constructor. For exam
       <th colspan="2">Supported Options</th>
     </tr>
 {% include "web/tools/workbox/guides/_shared/webpack-specific.html" %}
-{% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/base-schema.html" %}
   </tbody>
