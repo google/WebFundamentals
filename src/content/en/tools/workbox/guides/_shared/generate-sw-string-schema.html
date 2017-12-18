@@ -13,7 +13,9 @@
     <p>
       This only needs to be set if you want to precache local files matching <code>glob</code>
       patterns. It does not need to be set if you have <code>self.__precacheManifest</code> defined
-      via a file included in <code>importScripts</code>.
+      via a file included in <code>importScripts</code>. In other words, developers using the
+      <code>workbox-webpack-plugin</code> do not need to set this option unless there are additional
+      files not included in your webpack bundles that you need to precache.
     </p>
     <p>
       If you do set this, make sure to also configure <code>globPatterns</code>.
@@ -44,7 +46,9 @@ globDirectory: '.'</pre>
     <p>
       This only needs to be set if you want to precache local files matching <code>glob</code>
       patterns. It does not need to be set if you have <code>self.__precacheManifest</code> defined
-      via a file included in <code>importScripts</code>.
+      via a file included in <code>importScripts</code>. In other words, developers using the
+      <code>workbox-webpack-plugin</code> do not need to set this option unless there are additional
+      files not included in your webpack bundles that you need to precache.
     </p>
     <p>
       If you do set this, make sure to also configure <code>globDirectory</code>.
@@ -76,12 +80,14 @@ globDirectory: '.'</pre>
       those entries will be automatically precached in the generated service worker.
     </p>
     <p>
-      This is also useful when you want to let Workbox create your top-level service worker file,
-      but want to include some additional code, such as a <code>push</code> event listener.
+      If you are using the <code>workbox-webpack-plugin</code> then this option will be
+      automatically set on your behalf, configured to import both the precache manifest and the
+      Workbox runtime code. You can list additional scripts, like code to add a
+      <code>push</code> event listener, that should be imported as well.
     </p>
     <p>
       <strong>Example:</strong>
     </p>
-    <pre class="prettyprint">importScripts: ['precache-manifest.abcd1234.js']</pre>
+    <pre class="prettyprint">importScripts: ['push-listener.js']</pre>
   </td>
 </tr>
