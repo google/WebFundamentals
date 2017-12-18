@@ -107,8 +107,8 @@ First, add a statement to your
 <manifest>
   <application>
     ...  
-    <meta-data android:name="asset\_statements" 
-android:resource="@string/asset\_statements" />
+    <meta-data android:name="asset_statements" 
+android:resource="@string/asset_statements" />
     ...  
   </application>
 </manifest>;
@@ -121,10 +121,10 @@ website:
 
 ```
 <resources>
-    <string name="app\_name">SVGOMG</string>
-    <string name="asset\_statements">
+    <string name="app_name">SVGOMG</string>
+    <string name="asset_statements">
         [{  
-            \"relation\": [\"delegate\_permission/common.handle\_all\_urls\"],  
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],  
             \"target\": {  
                 \"namespace\": \"web\",  
                 \"site\": \"https://svgomg.firebaseapp.com\"}  
@@ -153,11 +153,11 @@ An example statement for the sample app is:
 
 ```
 [{  
-  "relation": ["delegate\_permission/common.handle\_all\_urls"],  
+  "relation": ["delegate_permission/common.handle_all_urls"],  
   "target": {  
-    "namespace": "android\_app",  
-    "package\_name": "org.chromium.twa.svgomg",  
-    "sha256\_cert\_fingerprints": 
+    "namespace": "android_app",  
+    "package_name": "org.chromium.twa.svgomg",  
+    "sha256_cert_fingerprints": 
 ["82:04:C5:DB:19:A8:B9:8A:27:14:F0:3E:F5:23:2C:6B:B6:B9:63:10:F2:F9:CD:44:72:AA:C6:7E:09:E1:1C:47","91:45:8F:34:E3:13:E4:58:1C:12:21:7A:FD:1E:BD:5C:BE:9B:DE:2C:1E:57:DC:0D:2B:0E:91:1D:A6:36:CA:E8"]}  
 }]
 ```
@@ -195,7 +195,7 @@ bound to. The second parameter is an URI to the origin that we want to validate
 for the Trusted Web activity.
 
 ```
-Uri originUri = Uri.parse(TWA\_ORIGIN);
+Uri originUri = Uri.parse(TWA_ORIGIN);
 TwaSessionHelper twaSessionHelper = TwaSessionHelper.getInstance();
 twaSessionHelper.setTwaSessionCallback(this);
 twaSessionHelper.bindService(this, originUri);
@@ -226,7 +226,7 @@ Trusted Web activities from an existing activity.
 CustomTabsIntent customTabsIntent = twaSessionHelper.createIntentBuilder()
         .setStartAnimations(this, 0, 0)
         .build();
-Uri openUri = Uri.parse(TARGET\_URL);
+Uri openUri = Uri.parse(TARGET_URL);
 twaSessionHelper.openTwa(this, customTabsIntent, openUri);
 ```
 
