@@ -368,7 +368,7 @@ function getFiles() {
     if (IS_TRAVIS) {
       cmd += '$(git merge-base FETCH_HEAD master) FETCH_HEAD';
     } else {
-      cmd += '$(git merge-base master HEAD)';
+      cmd += '$(git merge-base origin/master HEAD)';
     }
     return wfHelper.promisedExec(cmd, '.')
     .then(function(results) {
@@ -376,7 +376,6 @@ function getFiles() {
       let warnForSideEffect = false;
       results.split('\n').forEach(function(filename) {
         if (RE_GULP_BASE.test(filename) || filename === 'gulpfile.js') {
-          console.log(filename);
           warnForSideEffect = true;
           files.push(filename);
         } else if (RE_SRC_BASE.test(filename) || RE_DATA_BASE.test(filename) ||
