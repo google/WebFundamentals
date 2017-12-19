@@ -96,8 +96,8 @@ The plugin comes bundled with webpack. To enable it, add it to the `plugins` sec
 
     module.exports = {
       plugins: [
-        new webpack.optimize.UglifyJsPlugin()
-      ]
+        new webpack.optimize.UglifyJsPlugin(),
+      ],
     };
 
 The second way is loader-specific options ([what a loader
@@ -130,11 +130,11 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: <strong>{ minimize: true }</strong> }
-        ]
-      }
-    ]
-  }
+          { loader: 'css-loader', options: <strong>{ minimize: true }</strong> },
+        ],
+      },
+    ],
+  },
 };
 </pre>
 
@@ -199,10 +199,10 @@ increase the library size. Configure webpack to remove them with the
     module.exports = {
       plugins: [
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': '"production"'
+          'process.env.NODE_ENV': '"production"',
         }),
-        new webpack.optimize.UglifyJsPlugin()
-      ]
+        new webpack.optimize.UglifyJsPlugin(),
+      ],
     };
 
 The `DefinePlugin` replaces all occurrences of a specified variable with a specific value. With the
@@ -395,10 +395,10 @@ module.exports = {
         loader: 'url-loader',
         options: {
           // Inline files smaller than 10 kB (10240 bytes)
-          limit: 10 * 1024
-        }
-      }
-    ]
+          limit: 10 * 1024,
+        },
+      },
+    ],
   }
 };
 </pre>
@@ -435,11 +435,11 @@ more size-effective:
               limit: 10 * 1024,
               // Remove the quotes from the url
               // (they’re unnecessary in most cases)
-              noquotes: true
-            }
-          }
-        ]
-      }
+              noquotes: true,
+            },
+          },
+        ],
+      },
     };
 
 Note: svg-url-loader has options that improve Internet Explorer support, but worsen inlining for
@@ -461,10 +461,10 @@ one for SVG ones), we'll include this loader as a separate rule with [`enforce: 
             test: /\.(jpe?g|png|gif|svg)$/,
             loader: 'image-webpack-loader',
             // This will apply the loader before the other ones
-            enforce: 'pre'
-          }
-        ]
-      }
+            enforce: 'pre',
+          },
+        ],
+      },
     };
 
 The default settings of the loader are already good to go – but if you want to configure it
@@ -584,8 +584,8 @@ To enable this behavior, add `ModuleConcatenationPlugin` into the list of plugin
 
     module.exports = {
       plugins: [
-        new webpack.optimize.ModuleConcatenationPlugin()
-      ]
+        new webpack.optimize.ModuleConcatenationPlugin(),
+      ],
     };
 
 Note: Wonder why this behavior is not enabled by default? Concatenating modules is cool, [but it
@@ -629,8 +629,8 @@ dependency names to variable names:
     module.exports = {
       externals: {
         'react': 'React',
-        'react-dom': 'ReactDOM'
-      }
+        'react-dom': 'ReactDOM',
+      },
     };
 
 With this config, webpack won't bundle `react` and `react-dom` packages. Instead, they will be
@@ -662,8 +662,8 @@ To do this, compile the webpack code as an AMD bundle and alias modules to libra
 
       externals: {
         'react': { amd: '/libraries/react.min.js' },
-        'react-dom': { amd: '/libraries/react-dom.min.js' }
-      }
+        'react-dom': { amd: '/libraries/react-dom.min.js' },
+      },
     };
 
 Webpack will wrap the bundle into `define()` and make it depend on these URLs:

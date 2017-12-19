@@ -58,9 +58,9 @@ include the hash into the file name, use
 module.exports = {
   entry: './index.js',
   output: {
-    filename: 'bundle.<strong>[chunkhash]</strong>.js'
+    filename: 'bundle.<strong>[chunkhash]</strong>.js',
         // → bundle.8e0d62a03.js
-  }
+  },
 };
 </pre>
 
@@ -115,9 +115,9 @@ Replace the output filename with <code>[name].[chunkname].js</code>:
 // webpack.config.js
 module.exports = {
   output: {
--   filename: 'bundle.[chunkhash].js'
-+   filename: '[name].[chunkhash].js'
-  }
+-   filename: 'bundle.[chunkhash].js',
++   filename: '[name].[chunkhash].js',
+  },
 };
 </pre>
 
@@ -165,9 +165,9 @@ module.exports = {
 
       // A function that determines which modules to include into this chunk
       minChunks: module => module.context &&
-        module.context.includes('node_modules')
-    })
-  ]
+        module.context.includes('node_modules'),
+    }),
+  ],
 };
 </pre>
 
@@ -239,7 +239,7 @@ To solve this, let's move the runtime into a separate file by creating an extra 
           name: 'vendor',
 
           minChunks: module => module.context &&
-            module.context.includes('node_modules')
+            module.context.includes('node_modules'),
         }),
 
         // This plugin must come after the vendor one (because webpack
@@ -249,9 +249,9 @@ To solve this, let's move the runtime into a separate file by creating an extra 
 
           // minChunks: Infinity means that no app modules
           // will be included into this chunk
-          minChunks: Infinity
-        })
-      ]
+          minChunks: Infinity,
+        }),
+      ],
     };
 
 After these changes, each build will be generating three files:
@@ -325,11 +325,11 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime',
       minChunks: Infinity,
-      filename: 'runtime.js'
+      filename: 'runtime.js',
         // → Now the runtime file will be called
         // “runtime.js”, not “runtime.79f17c27b335abc7aaf4.js”
-    })
-  ]
+    }),
+  ],
 };
 </pre>
 
@@ -460,7 +460,7 @@ home page, the article page and the user account page, – it should have three 
         home: './src/Home/index.js',
         article: './src/Article/index.js',
         profile: './src/Profile/index.js'
-      }
+      },
     };
 
 For each entry file, webpack will build a separate dependency tree and generate a bundle that
@@ -498,9 +498,9 @@ dependencies into a separate file:
           // The plugin will move a module into a common file
           // only if it’s included into `minChunks` chunks
           // (Note that the plugin analyzes all chunks, not only entries)
-          minChunks: 2    // 2 is the default value
-        })
-      ]
+          minChunks: 2,    // 2 is the default value
+        }),
+      ],
     };
 
 Feel free to play with the `minChunks` value to find the best one. Generally, you want to keep it
@@ -626,8 +626,8 @@ To enable the plugin, add it to the `plugins` section of the config:
     // webpack.config.js
     module.exports = {
       plugins: [
-        new webpack.HashedModuleIdsPlugin()
-      ]
+        new webpack.HashedModuleIdsPlugin(),
+      ],
     };
 
 ### Further reading {: .hide-from-toc }

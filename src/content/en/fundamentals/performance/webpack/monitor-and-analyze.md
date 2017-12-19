@@ -45,8 +45,8 @@ And add the plugin into the `plugins` section of the config:
 
     module.exports = {
       plugins: [
-        new DashboardPlugin()
-      ]
+        new DashboardPlugin(),
+      ],
     };
 
 or using `compiler.apply()` if you're using an Express-based dev server:
@@ -212,8 +212,8 @@ add a plugin to the webpack config:
     
     module.exports = {
       plugins: [
-        new BundleAnalyzerPlugin()
-      ]
+        new BundleAnalyzerPlugin(),
+      ],
     };
 
 
