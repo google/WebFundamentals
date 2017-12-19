@@ -7,10 +7,9 @@ description: 洗練されたユーザ体験を提供するために、あなた�
 
 # Credential Management API を使ったサインインフローの効率化 {: .page-title }
 
+{%include "web/_shared/contributors/agektmr.html" %}
 
-Translated By:
-{% include "web/_shared/contributors/yoichiro.html" %}
-
+Warning: 本翻訳記事公開後仕様が大幅に変更されています。変更点は[こちらから](https://developers.google.com/web/updates/2017/06/credential-management-updates)ご確認ください。
 
 洗練されたユーザ体験を提供するために、ウェブサイト上でユーザ認証を手助けすることは非常に重要なことです。
 認証されたユーザは、専用のプロフィール、デバイス間やオフライン状態で処理された情報の同期など
@@ -362,5 +361,8 @@ mediation モードを有効にすることができます。
 * [デモ](https://credential-management-sample.appspot.com)
 * [デモのソースコード](https://github.com/GoogleChrome/credential-management-sample)
 * [コードラボ "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
+
+Translated By:
+{% include "web/_shared/contributors/yoichiro.html" %}
 
 {% include "comment-widget.html" %}
