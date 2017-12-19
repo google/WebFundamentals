@@ -191,8 +191,8 @@ You might want to dig deeper into the bundle to see what modules take space in i
 [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer):
 
 <figure>
-  <img src="./webpack-bundle-analyzer.gif" alt="A screen recording of the webpack bundle analyzer
-page">
+  <video src="./webpack-bundle-analyzer.mp4" alt="A screen recording of the webpack bundle analyzer
+page" autoplay controls loop>
   <figcaption>(Image from <a
 href="https://github.com/webpack-contrib/webpack-bundle-analyzer">github.com/webpack-contrib/webpack
 -bundle-analyzer</a>)</figcaption>
