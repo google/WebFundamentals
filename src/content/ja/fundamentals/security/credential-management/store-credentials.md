@@ -9,7 +9,7 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Warning: 本翻訳記事公開後仕様が大幅に変更されています。[英語版](?hl=en)をご確認頂くか、変更点を[こちらから](/web/updates/2017/06/credential-management-updates)ご確認ください。
+{% include "web/_shared/translation-out-of-date.html" %}
 
 `navigator.credentials.store()` API を使用すると、ユーザーの認証情報を簡単に保存およびアップデートできます。
 
