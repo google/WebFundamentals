@@ -175,8 +175,8 @@ landing_page:
           As part of your Webpack build process add Workbox and precache
           assets.
         buttons:
-        # - label: Learn more
-        #  path: ./workbox-webpack-plugin
+        - label: Learn more
+          path: ./workbox-webpack-plugin
         - label: Reference
           path: ../reference-docs/prerelease/module-workbox-webpack-plugin
 

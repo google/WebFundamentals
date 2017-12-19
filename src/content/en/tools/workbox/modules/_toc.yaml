@@ -30,5 +30,5 @@ toc:
   path: /web/tools/workbox/modules/workbox-cli
 # - title: workbox-build
 #  path: /web/tools/workbox/modules/workbox-build
-# - title: workbox-webpack-plugin
-#  path: /web/tools/workbox/modules/workbox-webpack-plugin
+- title: workbox-webpack-plugin
+  path: /web/tools/workbox/modules/workbox-webpack-plugin

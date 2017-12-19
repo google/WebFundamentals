@@ -11,11 +11,6 @@
       current working directory.
     </p>
     <p>
-      This only needs to be set if you want to precache local files matching <code>glob</code>
-      patterns. It does not need to be set if you have <code>self.__precacheManifest</code> defined
-      via a file included in <code>importScripts</code>.
-    </p>
-    <p>
       If you do set this, make sure to also configure <code>globPatterns</code>.
     </p>
     <p>
@@ -40,11 +35,6 @@ globDirectory: '.'</pre>
     <p>
       For more information, see the
       <a href="https://github.com/isaacs/node-glob#glob-primer" class="external">glob primer</a>.
-    </p>
-    <p>
-      This only needs to be set if you want to precache local files matching <code>glob</code>
-      patterns. It does not need to be set if you have <code>self.__precacheManifest</code> defined
-      via a file included in <code>importScripts</code>.
     </p>
     <p>
       If you do set this, make sure to also configure <code>globDirectory</code>.
@@ -82,6 +72,6 @@ globDirectory: '.'</pre>
     <p>
       <strong>Example:</strong>
     </p>
-    <pre class="prettyprint">importScripts: ['precache-manifest.abcd1234.js']</pre>
+    <pre class="prettyprint">importScripts: ['push-notifications.abcd1234.js']</pre>
   </td>
 </tr>
