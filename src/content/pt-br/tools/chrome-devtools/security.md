@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use o Security Panel para garantir que todos os recursos do seu site sejam protegidos por HTTPS.
 
-{# wf_updated_on: 2016-03-09 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2015-12-21 #}
+{# wf_blink_components: Security #}
 
 # [Entendendo problemas de segurança] {: .page-title }
 

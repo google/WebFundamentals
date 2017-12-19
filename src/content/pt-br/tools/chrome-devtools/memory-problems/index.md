@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como usar o Chrome e o DevTools para encontrar problemas de memória que afetam o desempenho da página, incluindo vazamentos de memória, ocupação excessiva de memória e coletas de lixo frequentes.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Blink>MemoryAllocator #}
 
 # Consertar problemas de memória {: .page-title }
 

@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“網站不使用舊版 CSS Flexbox”Lighthouse 審查的參考文檔。
 
-{# wf_updated_on:2016-12-05 #}
+{# wf_updated_on:2017-12-19 #}
 {# wf_published_on:2016-12-05 #}
+{# wf_blink_components: N/A #}
 
 # 網站不使用舊版 CSS Flexbox {: .page-title }
 
