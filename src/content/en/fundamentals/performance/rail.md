@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load.
+description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -10,6 +10,7 @@ description: RAIL is a user-centric performance model. Every web app has these f
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 **RAIL** is a **user-centric** performance model that breaks down the user's
 experience into key actions. RAIL's [**goals** and **guidelines**](#goals-and-guidelines) aim to
@@ -50,7 +51,7 @@ how users perceive performance delays:
     <tr>
       <td data-th="Delay">0 to 16ms</td>
       <td data-th="User Reaction">Users are exceptionally good at tracking motion, and they
-      dislike it when animations aren't smooth. Users perceive animations as smooth so long as
+      dislike it when animations aren't smooth. They perceive animations as smooth so long as
       60 new frames are rendered every second. That's 16ms per frame, including the time it
       takes for the browser to paint the new frame to the screen, leaving an app about 10ms to
       produce a frame.</td>
@@ -67,11 +68,13 @@ how users perceive performance delays:
     </tr>
     <tr>
       <td data-th="Delay">300 to 1000ms</td>
-      <td data-th="User Reaction">Within this window, things feel part of a natural and continuous progression of tasks. For most users on the web, loading pages or changing views represents a task.</td>
+      <td data-th="User Reaction">Within this window, things feel part of a natural and
+      continuous progression of tasks. For most users on the web, loading pages or changing
+      views represents a task.</td>
     </tr>
     <tr>
       <td data-th="Delay">1000ms or more</td>
-      <td data-th="User Reaction">Beyond 1000 milliseconds (1 second), the user loses focus on
+      <td data-th="User Reaction">Beyond 1000 milliseconds (1 second), users lose focus on
       the task they are performing.</td>
     </tr>
     <tr>
@@ -110,40 +113,23 @@ animation frame rates vary.
 
 **Guidelines**:
 
-<ul>
-  <li>
-    Produce each frame in an animation in 10ms or less. Technically, the maximum budget for
-    each frame is 16ms (1000ms / 60 frames per second ≈ 16ms), but browsers need about 6ms to
-    render each frame, hence the guideline of 10ms per frame.
-  </li>
-  <li>
-    In high pressure points like animations, the key is to do nothing where you
-    can, and the absolute minimum where you can't. Whenever possible, make use of
-    the 100ms response to pre-calculate expensive work so that you maximize your
-    chances of hitting 60fps.
-  </li>
-  <li>
-    See <a href="/web/fundamentals/performance/rendering/">Rendering Performance</a>
-    for various animation optimization strategies.
-  </li>
-  <li>
-  Recognize all the types of animations. Animations aren't just fancy UI effects. Each of these
+* Produce each frame in an animation in 10ms or less. Technically, the maximum budget for
+  each frame is 16ms (1000ms / 60 frames per second ≈ 16ms), but browsers need about 6ms to
+  render each frame, hence the guideline of 10ms per frame.
+* In high pressure points like animations, the key is to do nothing where you
+  can, and the absolute minimum where you can't. Whenever possible, make use of
+  the 100ms response to pre-calculate expensive work so that you maximize your
+  chances of hitting 60fps.
+* See <a href="/web/fundamentals/performance/rendering/">Rendering Performance</a>
+  for various animation optimization strategies.
+* Recognize all the types of animations. Animations aren't just fancy UI effects. Each of these
   interactions are considered animations:
-  <ul>
-    <li>
-      Visual animations, such as entrances and exits, 
+    * Visual animations, such as entrances and exits, 
       <a href="https://www.webopedia.com/TERM/T/tweening.html">tweens</a>, and loading indicators.
-    </li>
-    <li>
-      Scrolling. This includes flinging, which is when the user starts scrolling, then lets go,
+    * Scrolling. This includes flinging, which is when the user starts scrolling, then lets go,
       and the page continues scrolling.
-    </li>
-    <li>
-      Dragging. Animations often follow user interactions, such as panning a map or pinching to
+    * Dragging. Animations often follow user interactions, such as panning a map or pinching to
       zoom.
-    </li>
-  </ul>
-</ul>
 
 
 ## Idle: maximize idle time {: #idle }
@@ -170,16 +156,26 @@ See [The Need For Mobile Speed: How Mobile Latency Impacts Publisher Revenue][NE
 
 **Goals**: 
 
-* For first loads, pages should load and be interactive in 5 seconds or less. 
+* For first loads, load the page and be [interactive][tti] in 5 seconds or less on mid-range
+  mobile devices with slow 3G connections. See [Can You Afford It? Real-World Web Performance
+  Budgets][Budgets].
+* For subsequent loads, load the page in under 2 seconds.
 
-* On first load, pages should load and get [interactive](/web/tools/lighthouse/audits/time-to-interactive) in under 5 
-seconds over slow 3G on median mobile hardware.
-* Subsequent loads should take under 2s
+<figure>
+  <img src="images/speed-metrics.png"
+    alt="Each loading metric (First Paint, First Contentful Paint, First Meaningful Paint, Time
+         To Interactive) represents a different phase of the user's perception of the loading
+         experience"/>
+  <figcaption>
+    <b>Figure X</b>. Each loading metric represents a different phase of the user's perception of
+    the loading experience
+  </figcaption>
+</figure>
+
+[tti]: /web/tools/lighthouse/audits/time-to-interactive
 
 **Guidelines**:
 
-* Pages should load and be interactive in 5 seconds or less for first-time mobile users.
-* Subsequent visits should load in 2 seconds or less for mobile users.
 * Test your load performance on the mobile devices and network connections that are common
   among your users. If your business has information on what devices and network connections your
   users are on, then you can use that combination and set your own loading performance targets. 
@@ -193,81 +189,159 @@ seconds over slow 3G on median mobile hardware.
 * You don't have to load everything in under 5 seconds to produce the perception of a complete
   load. Enable progressive rendering and do some work in the background. Defer non-essential
   loads to periods of idle time. See [Website Performance Optimization][Udacity].
+* Recognize the factors that affect page load performance:
+    * Network speed and latency
+    * Hardware (slower CPUs, for example)
+    * Cache eviction
+    * Differences in L2/L3 caching
+    * Parsing JavaScript
 
 [ME17]: https://www.gsma.com/mobileeconomy/
 [WPT]: https://www.webpagetest.org/easy
 [CRP]: /web/fundamentals/performance/critical-rendering-path/
 [Udacity]: https://www.udacity.com/course/website-performance-optimization--ud884
+[Budgets]: https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/
 
-<img src="images/speed-metrics.png" alt="Speed metrics include first paint and time to interactive">
+## Tools for measuring RAIL {: #tools }
 
-How quickly a page loads can be impacted by a number of different factors:
+There are a few tools to help you automate your RAIL measurements. Which one you use depends
+on what type of information you need, and what type of workflow you prefer:
 
-* Network speed and latency
-* Hardware (e.g with slower CPUs)
-* Cache eviction
-* Differences in L2/L3 caching
-* Parsing JavaScript
+* [**Chrome DevTools**](#devtools). The developer tools built into Google Chrome. Provides
+  in-depth analysis on everything that happens while your page loads or runs.
+* [**Lighthouse**](#lighthouse). Available in Chrome DevTools, as a Chrome Extension, as a
+  Node.js module, and within WebPageTest.
+  You give it a URL, it simulates a mid-range device with a slow 3G connection, runs a
+  series of audits on the page, and then gives you a report on load performance, as well
+  as suggestions on how to improve. Also provides audits to improve
+  accessibility, make the page easier to maintain, qualify as a Progressive Web App, and more.
+* [**WebPageTest**](#webpagetest). Available at
+  [webpagetest.org/easy](https://webpagetest.org/easy). You give
+  it a URL, it loads the page on a real Moto G4 device with a slow 3G connection, and then gives
+  you a detailed report on the page's load performance. You can also configure it to include a
+  Lighthouse audit.
 
-Note: To learn more about loading performance budgets for mobile, see [Real-world Performance
-Budgets](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/).
+The sections below give you more information on how to use each tool to measure RAIL.
 
-## Summary of key RAIL metrics
+### Chrome DevTools {: #devtools }
 
-To evaluate your site against RAIL metrics, you can use [Chrome DevTools](/web/tools/chrome-devtools/), [Lighthouse](/web/tools/lighthouse/) and [WebPageTest](https://webpagetest.org/easy).
+The **Performance** panel is the main place to analyze your RAIL metrics. See [Get Started With
+Analyzing Runtime Performance][cdt-runtime] to get familiar with the **Performance** panel UI.
+The workflow and UI for analyzing load performance is mostly the same, the only difference is how
+you start and stop the recording. See [Record load performance][cdt-load].
 
-### Chrome DevTools
+[cdt-runtime]: /web/tools/chrome-devtools/evaluate-performance/
+[cdt-load]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
 
-Use the Chrome DevTools [Performance Panel](/web/tools/chrome-devtools/evaluate-performance/reference) to record user actions. Then check the recording times in the Timeline against these key RAIL metrics:
+The following DevTools features are especially relevant:
 
-<table>
-  <thead>
-      <th>RAIL Step</th>
-      <th>Key Metric</th>
-      <th>User Actions</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="RAIL Step"><strong>Response</strong></td>
-      <td data-th="Key Metric">Input latency (from tap to paint) < 100ms.</td>
-      <td data-th="User Test">User taps a button (for example, opening navigation).</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Animation</strong></td>
-      <td data-th="Key Metric">Each frame's work (from JS to paint) completes < 16ms.</td>
-      <td data-th="User Test">User scrolls the page, drags a finger (to open
-        a menu, for example), or sees an animation. When dragging, the app's
-        response is bound to the finger position, such as pulling to refresh,
-        or swiping a carousel. This metric applies only to the continuous
-        phase of drags, not the start.
-      </td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Idle</strong></td>
-      <td data-th="Key Metric">Main thread JS work chunked no larger than 50ms.</td>
-      <td data-th="User Test">User isn't interacting with the page, but main thread should be available enough to handle the next user input.</td>
-    </tr>
-    <tr>
-      <td data-th="RAIL Step"><strong>Load</strong></td>
-      <td data-th="Key Metric">Page can be interacted with in 5000ms on mobile over 3G.</td>
-      <td data-th="User Test">User loads the page and sees the critical path content. This 
-      can be tested using the DevTools <a href="/web/tools/chrome-devtools/network-performance/network-conditions">network</a> and <a href="/web/tools/chrome-devtools/evaluate-performance/">CPU</a> emulation.</td>
-    </tr>
-  </tbody>
-</table> 
+* [Throttle your CPU][CPU] to simulate a less-powerful device.
+* [Throttle the network][Net] to simulate slower connections.
+* [View main thread activity][main] to view every event that occurred on the main thread while
+  you were recording.
+* [View main thread activities in a table][table] to sort activities based on which ones took
+  up the most time.
+* [Analyze frames per second (FPS)][FPS] to measure whether your animations truly run smoothly.
+* [Monitor CPU usage, JS heap size, DOM nodes, layouts per second, and more][PM] in real-time
+  with the **Performance Monitor**.
+* [Vizualize network requests][NW] that occurred while you were recording with the
+  **Network** section.
+* [Capture screenshots while recording][screenshots] to play back exactly how the page looked
+  while the page loaded, or an animation fired, and so on.
+* [View interactions][interactions] to quickly identify what happened on a page after a user
+  interacted with it.
+* [Find scroll performance issues in real-time][scroll-issues] by highlighting the page whenever
+  a potentially problematic listener fires.
+* [View paint events in real-time][paint-issues] to identify costly paint events that may be
+  harming the performance of your animations.
 
-### Lighthouse
+[CPU]: /web/tools/chrome-devtools/evaluate-performance/reference#cpu-throttle
+[Net]: /web/tools/chrome-devtools/evaluate-performance/reference#network-throttle
+[main]: /web/tools/chrome-devtools/evaluate-performance/reference#main
+[table]: /web/tools/chrome-devtools/evaluate-performance/reference#activities
+[FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps
+[PM]: /web/updates/2017/11/devtools-release-notes#perf-monitor
+[NW]: /web/tools/chrome-devtools/evaluate-performance/reference#network
+[screenshots]: /web/tools/chrome-devtools/evaluate-performance/reference#screenshots
+[interactions]: /web/tools/chrome-devtools/evaluate-performance/reference#interactions
+[scroll-issues]: /web/tools/chrome-devtools/evaluate-performance/reference#scrolling-performance-issues
+[paint-issues]: /web/tools/chrome-devtools/evaluate-performance/reference#paint-flashing
 
-Lighthouse can audit for different page load performance metrics including modern
-speed metrics like [Time-to-Interactive](/web/tools/lighthouse/audits/time-to-interactive).
+### Lighthouse {: #lighthouse }
 
-<img src="images/lighthouse-performance.png" alt="Lighthouse performance metrics">
+See [Get started](/web/tools/lighthouse/#get-started) to learn how to set up and run Lighthouse.
+
+<figure>
+  <img src="images/lighthouse-performance.png"
+    alt="An example Lighthouse report"/>
+  <figcaption>
+    <b>Figure X</b>. An example Lighthouse report
+  </figcaption>
+</figure>
+
+The following audits are especially relevant:
+
+* **Response**
+    * [Estimated Input Latency][EIL]. Estimates how long your app will take to respond to user
+      input, based on main thread idle time.
+    * [Uses Passive Event Listeners To Improve Scrolling][PEL].
+* **Load**
+    * [Registers A Service Worker][SW]. A service worker can cache common resources on a user's
+      device, reducing time spent fetching resources over the network.
+    * [Page Load Is Fast Enough On 3G][3G].
+    * [First Meaningful Paint][FMP]. Measures when the page appears meaningfully complete.
+    * [First Interactive][FI]. Measures when a user can first interact with some page elements.
+    * [Consistently Interactive][CI]. Measures when a user can consistently interact with all
+      page elements.
+    * [Perceptual Speed Index][PSI].
+    * [Reduce Render-Blocking Resources][RB].
+    * [Offscreen Images][OI]. Defer the loading of offscreen images until they're needed.
+    * [Properly Size Images][PSImages]. Don't serve images that are significantly larger than
+      the size that's rendered in the mobile viewport.
+    * [Critical Request Chains][CRC]. Vizualize your [Critical Rendering Path][CRP].
+    * [Uses HTTP/2][HTTP2].
+    * [Optimize Images][OptI].
+    * [Enable Text Compression][ETC].
+    * [Avoid Enormous Network Payloads][AENP].
+    * [Uses An Excessive DOM Size][DOM]. Reduce network bytes by only shipping DOM nodes that are
+      needed for rendering the page.
+
+[EIL]: /web/tools/lighthouse/audits/estimated-input-latency
+[PEL]: /web/tools/lighthouse/audits/passive-event-listeners
+[SW]: /web/tools/lighthouse/audits/registered-service-worker
+[3G]: /web/tools/lighthouse/audits/fast-3g
+[FMP]: /web/tools/lighthouse/audits/first-meaningful-paint
+[FI]: /web/tools/lighthouse/audits/first-interactive
+[CI]: /web/tools/lighthouse/audits/consistently-interactive
+[PSI]: /web/tools/lighthouse/audits/speed-index
+[RB]: /web/tools/lighthouse/audits/blocking-resources
+[OI]: /web/tools/lighthouse/audits/offscreen-images
+[PSImages]: /web/tools/lighthouse/audits/oversized-images
+[CRC]: /web/tools/lighthouse/audits/critical-request-chains
+[HTTP2]: /web/tools/lighthouse/audits/http2
+[OptI]: /web/tools/lighthouse/audits/optimize-images
+[ETC]: /web/tools/lighthouse/audits/text-compression
+[AENP]: /web/tools/lighthouse/audits/network-payloads
+[DOM]: /web/tools/lighthouse/audits/dom-size
+
+### WebPageTest {: #webpagetest }
+
+Enter a URL at [webpagetest.org/easy](https://webpagetest.org/easy) to get a report on how that
+page loads on a real mid-range Android device with a slow 3G connection.
+
+<figure>
+  <img src="images/wpt-report.png"
+    alt="An example WebPageTest report"/>
+  <figcaption>
+    <b>Figure X</b>. An example WebPageTest report
+  </figcaption>
+</figure>
 
 ## Summary {: #summary }
 
-RAIL is a lens to look at a website's user experience as a journey composed 
-of individual interactions. Once you're of where each interaction fits, you'll
-know what users will perceive and what your performance goals are. 
+RAIL is a lens for looking at a website's user experience as a journey composed of distinct
+interactions. Understand how users perceive your site in order to set performance goals with the
+greatest impact on user experience.
 
 * **Focus on the user**.
 * **Respond to user input in under 100ms**.
