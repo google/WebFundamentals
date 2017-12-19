@@ -6,8 +6,7 @@ description: An update on better ads.
 {# wf_published_on: 2017-12-19 #}
 {# wf_tags: news #}
 {# wf_featured_image: /web/updates/images/generic/star.png #}
-{# wf_featured_snippet: Yesterday, the Coalition for Better Ads announced the "Better Ads Experience
-Program." #}
+{# wf_featured_snippet: Yesterday, the <i>Coalition for Better Ads</i> announced the "Better Ads Experience Program."  This Program provides guidelines for companies on how they can use the Better Ads Standards to help improve users' experience with ads on the web.#}
 {# wf_blink_components:  N/A #}
 
 # An update on Better Ads {: .page-title }
@@ -16,7 +15,7 @@ Yesterday, the Coalition for Better Ads [announced the "Better Ads Experience
 Program."](https://www.betterads.org/coalition-for-better-ads-to-introduce-better-ads-experience-program/)
 This Program provides guidelines for companies like Google on how they can use
 the [Better Ads Standards](http://betterads.org/standards) to help improve
-users' experience with ads on the web. 
+users' experience with ads on the web.
 
 In June, [we
 announced](https://blog.chromium.org/2017/06/improving-advertising-on-web.html)
@@ -34,4 +33,4 @@ forums](https://productforums.google.com/forum/#!forum/ad-experience-report) are
 available to help address any questions or feedback.
 
 We look forward to continuing to work with industry bodies to improve the user
-experience for everyone. 
+experience for everyone.
