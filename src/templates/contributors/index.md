@@ -47,7 +47,7 @@ book_path: /web/resources/_book.yaml
 
 <div class="contributor-container">
   {{#each contributors}}
-  <div class="contributor" id="{{id}}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+  <div class="contributor" id="{{id}}" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="person" itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
     <section class="wf-byline-meta">
       <h3 itemprop="name">
