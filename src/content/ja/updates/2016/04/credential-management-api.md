@@ -9,7 +9,7 @@ description: 洗練されたユーザ体験を提供するために、あなた�
 
 {%include "web/_shared/contributors/agektmr.html" %}
 
-Warning: 本翻訳記事公開後仕様が大幅に変更されています。変更点は[こちらから](https://developers.google.com/web/updates/2017/06/credential-management-updates)ご確認ください。
+Warning: 本翻訳記事公開後仕様が大幅に変更されています。変更点は[こちらから](/web/updates/2017/06/credential-management-updates)ご確認ください。
 
 洗練されたユーザ体験を提供するために、ウェブサイト上でユーザ認証を手助けすることは非常に重要なことです。
 認証されたユーザは、専用のプロフィール、デバイス間やオフライン状態で処理された情報の同期など
