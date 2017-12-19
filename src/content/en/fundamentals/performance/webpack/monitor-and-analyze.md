@@ -10,9 +10,9 @@ description: What tools to use to keep track of and analyze the webpack bundle
 
 {% include "web/_shared/contributors/iamakulov.html" %}
 
-Even when you configure webpack to make the app as small as possible, it's still important to keep
+Even when you configure webpack to make the app as small as possible, it’s still important to keep
 track of it and know what it includes. Otherwise, you can install a dependency that will make the
-app twice as large – and won't even notice it!
+app twice as large – and won’t even notice it!
 
 This section describes tools that help you to understand your bundle.
 
@@ -25,13 +25,13 @@ To monitor your app size, use
 ### webpack-dashboard
 
 [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard/) enhances webpack output
-with sizes of dependencies, progress and other details. Here's how it looks:
+with sizes of dependencies, progress and other details. Here’s how it looks:
 
 <figure>
   <img src="./webpack-dashboard.png" alt="A screenshot of the webpack-dashboard output">
 </figure>
 
-This dashboard helps to track large dependencies – if you add one, you'll immediately see it in
+This dashboard helps to track large dependencies – if you add one, you’ll immediately see it in
 the _Modules_ section!
 
 To enable it, install the `webpack-dashboard` package:
@@ -49,7 +49,7 @@ And add the plugin into the `plugins` section of the config:
       ],
     };
 
-or using `compiler.apply()` if you're using an Express-based dev server:
+or using `compiler.apply()` if you’re using an Express-based dev server:
 
     compiler.apply(new DashboardPlugin());
 
@@ -59,12 +59,12 @@ smaller alternatives.
 
 ### bundlesize
 
-[bundlesize](https://github.com/siddharthkp/bundlesize) verifies that webpack assets don't exceed
+[bundlesize](https://github.com/siddharthkp/bundlesize) verifies that webpack assets don’t exceed
 the specified sizes. Integrate it with a CI to get notified when the app becomes too large:
 
 <figure>
   <img src="./bundlesize.jpg" alt="A screenshot the CI section of a pull request on GitHub. Among
-the CI tools, there's the Bundlesize output">
+the CI tools, there’s the Bundlesize output">
 </figure>
 
 To configure it:
@@ -106,7 +106,7 @@ PASS  ./dist/vendor.ff9f7ea865884e6a84c8.js: 31.49KB
 
 </li>
 
-<li>Add 10-20% to each size, and you'll get the maximum sizes. This 10-20% margin would let you
+<li>Add 10-20% to each size, and you’ll get the maximum sizes. This 10-20% margin would let you
 develop the app as usual while warning you when its size grows too much.</li>
 </ol>
 
@@ -161,11 +161,11 @@ Add an npm script to run the check:
 
 <li>Configure the CI to execute <code>npm run check-size</code> on each push. (And <a
 href="https://github.com/siddharthkp/bundlesize#2-build-status">integrate <code>bundlesize</code>
-with GitHub</a> if you're developing the project on it.)
+with GitHub</a> if you’re developing the project on it.)
 </li>
 </ol>
 
-That's it! Now, if you run `npm run check-size` or push the code, you'll see if the output files are
+That’s it! Now, if you run `npm run check-size` or push the code, you’ll see if the output files are
 small enough:
 
 <figure>
@@ -198,7 +198,7 @@ href="https://github.com/webpack-contrib/webpack-bundle-analyzer">github.com/web
 -bundle-analyzer</a>)</figcaption>
 </figure>
 
-webpack-bundle-analyzer scans the bundle and builds a visualization of what's inside it. Use this
+webpack-bundle-analyzer scans the bundle and builds a visualization of what’s inside it. Use this
 visualization to find large or unnecessary dependencies.
 
 To use the analyzer, install the `webpack-bundle-analyzer` package:
@@ -220,7 +220,7 @@ add a plugin to the webpack config:
 and run the production build. The plugin will open the stats page in a browser.
 
 Note: By default, the stats page shows the size of parsed files (i.e., of files as they appear in
-the bundle). You'll likely want to compare gzip sizes since that's closer to what real users
+the bundle). You’ll likely want to compare gzip sizes since that’s closer to what real users
 experience. Use the sidebar on the left to switch the sizes.
 
 Note: If you use the
@@ -228,7 +228,7 @@ Note: If you use the
 merge a part of modules in the webpack-bundle-analyzer output, making the report less detailed. If
 you use this plugin, disable it during the analysis.
 
-Here's what to look for in the report:
+Here’s what to look for in the report:
 
 - **Large dependencies.** Why are they so large? Are there smaller alternatives (e.g., Preact
 instead of React)? Do you use all the code it includes (e.g., Moment.js includes a lot of locales
@@ -241,7 +241,7 @@ of the same library?
 - **Similar dependencies.** Are there similar libraries that do approximately the same job? (E.g.
 `moment` and `date-fns`, or `lodash` and `lodash-es`.) Try sticking with a single tool.
 
-Also, check out Sean Larkin's [great analysis of webpack
+Also, check out Sean Larkin’s [great analysis of webpack
 bundles](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab38
 9e5f318).
 

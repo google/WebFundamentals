@@ -27,13 +27,13 @@ tell the browser to cache a file for a very long time (e.g., a year):
 Cache-Control: max-age=31536000
 </pre>
 
-Note: If you aren't familiar what `Cache-Control` does, see Jake Archibald's excellent post <a
+Note: If you aren’t familiar what `Cache-Control` does, see Jake Archibald’s excellent post <a
 href="https://jakearchibald.com/2016/caching-best-practices/">on caching best practices</a>.
 
 </li>
 
 <li>
-and rename the file when it's changed to force the re-download:
+and rename the file when it’s changed to force the re-download:
 
 <pre class="prettyprint">
 &lt;!-- Before the change -->
@@ -72,7 +72,7 @@ If you need the file name to send it to the client, use either the `HtmlWebpackP
 
 The [`HtmlWebpackPlugin`](https://github.com/jantimon/html-webpack-plugin) is a simple, but less
 flexible approach. During compilation, this plugin generates an HTML file which includes all
-compiled resources. If your server logic isn't complex, then it should be enough for you:
+compiled resources. If your server logic isn’t complex, then it should be enough for you:
 
     <!-- index.html -->
     <!doctype html>
@@ -99,7 +99,7 @@ on the server to find out which file to work with:
 ### Dependencies
 
 App dependencies tend to change less often than the actual app code. If you move them into a
-separate file, the browser will be able to cache them separately – and don't re-download them each
+separate file, the browser will be able to cache them separately – and don’t re-download them each
 time the app code changes.
 
 Key Term: In webpack terminology, separate files with the app code are called _chunks_.
@@ -123,7 +123,7 @@ module.exports = {
 
 When webpack builds the app, it replaces <a
 href="https://webpack.js.org/configuration/output/#output-filename"><code>[name]</code></a> with a
-name of a chunk. If we don't add the <code>[name]</code> part, we'll have to differentiate between
+name of a chunk. If we don’t add the <code>[name]</code> part, we’ll have to differentiate between
 chunks by their hash – which is pretty hard!
 
 </li>
@@ -142,10 +142,10 @@ module.exports = {
 };
 </pre>
 
-In this snippet, "main" is a name of a chunk. This name will be substituted in place of
+In this snippet, “main” is a name of a chunk. This name will be substituted in place of
 <code>[name]</code> from step 1.
 
-By now, if you build the app, this chunk will include the whole app code – just like we haven't
+By now, if you build the app, this chunk will include the whole app code – just like we haven’t
 done these steps. But this will change in a sec.
 
 </li>
@@ -201,7 +201,7 @@ app code:
 
     + console.log('Wat');
 
-you'll notice that the `vendor` hash also changes:
+you’ll notice that the `vendor` hash also changes:
 
 <pre class="prettyprint">
 <strong>                           Asset   Size  Chunks             Chunk Names</strong>
@@ -229,7 +229,7 @@ Webpack includes this runtime into the last generated chunk, which is `vendor` i
 every time any chunk changes, this piece of code changes too, causing the whole <code>vendor</code>
 chunk to change.
 
-To solve this, let's move the runtime into a separate file by creating an extra empty chunk with the
+To solve this, let’s move the runtime into a separate file by creating an extra empty chunk with the
 `CommonsChunkPlugin`:
 
     // webpack.config.js
@@ -267,7 +267,7 @@ Time: 3816ms
 ./runtime.79f17c27b335abc7aaf4.js  1.45 kB       3  [emitted]  runtime
 </pre>
 
-Include them into `index.html` in the reverse order – and you're done:
+Include them into `index.html` in the reverse order – and you’re done:
 
     <!-- index.html -->
     <script src="./runtime.79f17c27b335abc7aaf4.js"></script>
@@ -280,8 +280,8 @@ Include them into `index.html` in the reverse order – and you're done:
 
 * Webpack docs [about webpack runtime and manifest](https://webpack.js.org/concepts/manifest/)
 
-* ["Getting the most out of the
-  CommonsChunkPlugin"](https://medium.com/webpack/webpack-bits-getting-the-most-out-
+* [“Getting the most out of the
+  CommonsChunkPlugin”](https://medium.com/webpack/webpack-bits-getting-the-most-out-
   of-the-commonschunkplugin-ab389e5f318)
 
 ## Inline webpack runtime to save an extra HTTP request
@@ -302,7 +302,7 @@ do this:
 The runtime is small, and inlining it will help you save an HTTP request (pretty important with
 HTTP/1; less important with HTTP/2 but might still play an effect).
 
-Here's how to do it.
+Here’s how to do it.
 
 ### If you generate HTML with the HtmlWebpackPlugin
 
@@ -356,7 +356,7 @@ app.get('/', (req, res) => {
 </li>
 </ol>
 
-## Lazy-load code that you don't need right now
+## Lazy-load code that you don’t need right now
 
 Sometimes, a page has more and less important parts:
 
@@ -405,9 +405,9 @@ Time: 4273ms
 and downloads it only when execution reaches the `import()` function.
 
 This will make the `main` bundle smaller, improving the initial loading time. Even more, it will
-improve caching – if you change the code in the main chunk, comments chunk won't get affected.
+improve caching – if you change the code in the main chunk, comments chunk won’t get affected.
 
-Note: If you compile this code with Babel, you'll have a syntax error because Babel doesn't
+Note: If you compile this code with Babel, you’ll have a syntax error because Babel doesn’t
 understand `import()` out of the box. To avoid the error, add the
 [`syntax-dynamic-import`](https://www.npmjs.com/package/babel-plugin-syntax-dynamic-import) plugin.
 
@@ -420,37 +420,37 @@ understand `import()` out of the box. To avoid the error, add the
 
 ## Split the code into routes and pages
 
-If your app has multiple routes or pages, but there's only a single JS file with the code (a single
-`main` chunk), it's likely that you're serving extra bytes on each request. For example, when a user
+If your app has multiple routes or pages, but there’s only a single JS file with the code (a single
+`main` chunk), it’s likely that you’re serving extra bytes on each request. For example, when a user
 visits a home page of your site:
 
 <figure>
   <img src="./site-home-page.png" alt="A WebFundamentals home page">
 </figure>
 
-they don't need to load the code for rendering an article that's on a different page – but they
+they don’t need to load the code for rendering an article that’s on a different page – but they
 will load it. Moreover, if the user always visits only the home page, and you make a change in the
 article code, webpack will invalidate the whole bundle – and the user will have to re-download the
 whole app.
 
-If we split the app into pages (or routes, if it's a single-page app), the user will download only
+If we split the app into pages (or routes, if it’s a single-page app), the user will download only
 the relevant code. Plus, the browser will cache the app code better: if you change the home page
 code, webpack will invalidate only the corresponding chunk.
 
 ### For single-page apps
 
-To split single-page apps by routes, use `import()` (see the "Lazy-load code that you don't need
-right now" section TODO: link). If you use a framework, it might have an existing solution for this:
+To split single-page apps by routes, use `import()` (see the “Lazy-load code that you don’t need
+right now” section TODO: link). If you use a framework, it might have an existing solution for this:
 
-* ["Code Splitting"](https://reacttraining.com/react-router/web/guides/code-splitting) in
+* [“Code Splitting”](https://reacttraining.com/react-router/web/guides/code-splitting) in
   `react-router`'s docs (for React)
 
-* ["Lazy Loading Routes"](https://router.vuejs.org/en/advanced/lazy-loading.html) in `vue-router`'s
+* [“Lazy Loading Routes”](https://router.vuejs.org/en/advanced/lazy-loading.html) in `vue-router`'s
   docs (for Vue.js)
 
 ### For traditional multi-page apps
 
-To split traditional apps by pages, use webpack's [entry
+To split traditional apps by pages, use webpack’s [entry
 points](https://webpack.js.org/concepts/entry-points/). If your app has three kinds of pages: the
 home page, the article page and the user account page, – it should have three entries:
 
@@ -480,8 +480,8 @@ Time: 4273ms
 ./runtime.318d7b8490a7382bf23b.js  1.45 kB       5  [emitted]  runtime
 </pre>
 
-So, if only the article page uses Lodash, the `home` and the `profile` bundles won't include it –
-and the user won't have to download this library when visiting the home page.
+So, if only the article page uses Lodash, the `home` and the `profile` bundles won’t include it –
+and the user won’t have to download this library when visiting the home page.
 
 Separate dependency trees have their drawbacks though. If two entry points are using Lodash, both
 will include a copy of it. To solve this, use the
@@ -548,7 +548,7 @@ Time: 2150ms
 
 By default, IDs are calculated using a counter (i.e. the first module has ID 0, the second one has
 ID 1, and so on). The problem with this is that when you add a new module, it might appear in the
-middle of the module list, changing all the next modules' IDs:
+middle of the module list, changing all the next modules’ IDs:
 
 <pre class="prettyprint">
 $ webpack
@@ -586,8 +586,8 @@ now has ID 5 instead of 4
 </pre>
 
 This invalidates all chunks that include or depend on modules with changed IDs – even if their
-actual code hasn't changed. In our case, the `0` chunk (the chunk with `comments.js`) and the `main`
-chunk (the chunk with the other app code) get invalidated – whereas only the `main` one should've
+actual code hasn’t changed. In our case, the `0` chunk (the chunk with `comments.js`) and the `main`
+chunk (the chunk with the other app code) get invalidated – whereas only the `main` one should’ve
 been.
 
 To solve this, change how module IDs are calculated using the
@@ -619,7 +619,7 @@ Time: 2150ms
 </pre>
 
 With this approach, the ID of a module only changes if you rename or move that module. New modules
-won't affect other modules' IDs.
+won’t affect other modules’ IDs.
 
 To enable the plugin, add it to the `plugins` section of the config:
 

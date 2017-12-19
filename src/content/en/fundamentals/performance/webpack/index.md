@@ -9,7 +9,7 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Modern web applications often use a bundling tool to create a production "bundle" of files (scripts,
+Modern web applications often use a bundling tool to create a production “bundle” of files (scripts,
 stylesheets, etc.) that is optimized, minified and can be downloaded in less time by your users. In
 this article, we will walk through how to effectively optimize site resources using webpack. This
 can help users load and interact with your sites more quickly.
@@ -19,7 +19,7 @@ optimizing modern code, code-splitting scripts into critical and non-critical pi
 out unused code (to name but a few optimizations) can ensure your app has a minimal network and
 processing cost.
 
-Let's get started by looking at optimizing one of the costliest resources in a modern app –
+Let’s get started by looking at optimizing one of the costliest resources in a modern app –
 JavaScript.
 
 Note: We created a training app to play with optimizations described in this article. Try squeezing

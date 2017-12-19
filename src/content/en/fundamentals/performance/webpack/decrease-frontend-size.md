@@ -39,7 +39,7 @@ Webpack supports two ways to minify the code: _the UglifyJS plugin_ and _loader-
 They should be used simultaneously.
 
 [The UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) works on the level
-of the bundle – it compresses the bundle after compilation. Here's how it works:
+of the bundle – it compresses the bundle after compilation. Here’s how it works:
 
 <ol>
 <li>
@@ -102,7 +102,7 @@ The plugin comes bundled with webpack. To enable it, add it to the `plugins` sec
 
 The second way is loader-specific options ([what a loader
 is](https://webpack.js.org/concepts/loaders/)). With loader options, you can compress things that
-the UglifyJS plugin can't minify. For example, when you import a CSS file with
+the UglifyJS plugin can’t minify. For example, when you import a CSS file with
 [`css-loader`](https://github.com/webpack-contrib/css-loader), the file is compiled into a string:
 
     /* comments.css */
@@ -118,7 +118,7 @@ exports=module.exports=__webpack_require__(1)(),
 exports.push([module.i,<strong>".comment {\r\n  color: black;\r\n}"</strong>,""]);
 </pre>
 
-UglifyJS can't compress this code because it's a string. To minify the file content, we need to
+UglifyJS can’t compress this code because it’s a string. To minify the file content, we need to
 configure the loader to do this:
 
 <pre class="prettyprint">
@@ -138,11 +138,11 @@ module.exports = {
 };
 </pre>
 
-Note: The UglifyJS plugin can't compile the ES2015+ (ES6+) code. This means that if your code uses
-classes, arrow functions or other new language features, and you don't compile them into ES5, the
+Note: The UglifyJS plugin can’t compile the ES2015+ (ES6+) code. This means that if your code uses
+classes, arrow functions or other new language features, and you don’t compile them into ES5, the
 plugin will throw an error. <br><br> If you need to compile the new syntax, use the
 [uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) package. This
-is the same plugin that's bundled with webpack, but newer, and it's able to compile the ES2015+
+is the same plugin that’s bundled with webpack, but newer, and it’s able to compile the ES2015+
 code.
 
 ### Further reading {: .hide-from-toc }
@@ -271,20 +271,20 @@ Note: If you prefer to configure environment variables via CLI, take a look at t
 [EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/). It works like the
 `DefinePlugin`, but reads the environment and replaces `process.env.` expressions automatically.
 
-Note: You're not required to use the `UglifyJsPlugin`. You can use any different minifier as soon as
+Note: You’re not required to use the `UglifyJsPlugin`. You can use any different minifier as soon as
 it supports dead code removal (e.g., the [Babel Minify
 plugin](https://github.com/webpack-contrib/babel-minify-webpack-plugin) or the [Google Closure
 Compiler plugin](https://github.com/roman01la/webpack-closure-compiler)).
 
-Note: There's a [webpack's `-p` console
+Note: There’s a [webpack’s `-p` console
 flag](https://webpack.js.org/guides/production/#cli-alternatives) that enables minification and
 `NODE_ENV=production` replacement. It might be useful for small prototypes; for real apps though,
-it's still better to use a production config because it gives you more transparency and better
-flexibility. You'll thank yourself later!
+it’s still better to use a production config because it gives you more transparency and better
+flexibility. You’ll thank yourself later!
 
 ### Further reading {: .hide-from-toc }
 
-* [What "environment variables"
+* [What “environment variables”
   are](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables
   -and-how-can-i-set-or-use-them)
 
@@ -319,7 +319,7 @@ render();
 
 <li>
 
-Webpack understands that <code>commentRestEndpoint</code> is not used and doesn't generate a
+Webpack understands that <code>commentRestEndpoint</code> is not used and doesn’t generate a
 separate export point in the bundle:
 
 <pre class="prettyprint">
@@ -350,25 +350,25 @@ The <code>UglifyJsPlugin</code> removes the unused variable:
 
 This works even with libraries if they are written with ES modules.
 
-Note: In webpack, tree-shaking doesn't work without a minifier. Webpack just removes export
-statements for exports that aren't used; it's the `UglifyJsPlugin` that removes unused code.
-Therefore, if you compile the bundle without the minifier, it won't get smaller. <br><br>
-You aren't required to use precisely this plugin though. Any minifier that supports
+Note: In webpack, tree-shaking doesn’t work without a minifier. Webpack just removes export
+statements for exports that aren’t used; it’s the `UglifyJsPlugin` that removes unused code.
+Therefore, if you compile the bundle without the minifier, it won’t get smaller. <br><br>
+You aren’t required to use precisely this plugin though. Any minifier that supports
 dead code removal
 (e.g. [Babel Minify plugin](https://github.com/webpack-contrib/babel-minify-webpack-plugin)
 or [Google Closure Compiler plugin](https://github.com/roman01la/webpack-closure-compiler))
 will do the trick.
 
 
-Warning: Don't accidentally compile ES modules into CommonJS ones. <br><br>
+Warning: Don’t accidentally compile ES modules into CommonJS ones. <br><br>
 If you use Babel with `babel-preset-env` or `babel-preset-es2015`, check the settings of these
-presets. By default, they transpile ES' `import` and `export` to CommonJS' `require` and
+presets. By default, they transpile ES’ `import` and `export` to CommonJS’ `require` and
 `module.exports`. [Pass the `{ modules: false }`
 option](https://github.com/babel/babel/tree/master/experimental/babel-preset-env) to disable this.
 
 ### Further reading {: .hide-from-toc }
 
-* ["ES6 Modules in depth"](https://ponyfoo.com/articles/es6-modules-in-depth)
+* [“ES6 Modules in depth”](https://ponyfoo.com/articles/es6-modules-in-depth)
 
 * Webpack docs [about tree shaking](https://webpack.js.org/guides/tree-shaking/)
 
@@ -376,7 +376,7 @@ option](https://github.com/babel/babel/tree/master/experimental/babel-preset-env
 
 Images account for [more than a
 half](http://httparchive.org/interesting.php?a=All&l=Oct%2016%202017) of the page size. While they
-are not as critical as JavaScript (e.g., they don't block rendering), they still eat a large part of
+are not as critical as JavaScript (e.g., they don’t block rendering), they still eat a large part of
 the bandwidth. Use `url-loader`, `svg-url-loader` and `image-webpack-loader` to optimize them in
 webpack.
 
@@ -448,11 +448,11 @@ other browsers. If you need to support this browser, [apply the `iesafe: true`
 option](https://github.com/bhovhannes/svg-url-loader#iesafe).
 
 [`image-webpack-loader`](https://github.com/tcoopman/image-webpack-loader) compresses images that go
-through it. It supports JPG, PNG, GIF and SVG images, so we're going to use it for all these types.
+through it. It supports JPG, PNG, GIF and SVG images, so we’re going to use it for all these types.
 
-This loader doesn't embed images into the app, so it must work in pair with `url-loader` and
+This loader doesn’t embed images into the app, so it must work in pair with `url-loader` and
 `svg-url-loader`. To avoid copy-pasting it into both rules (one for JPG/PNG/GIF images, and another
-one for SVG ones), we'll include this loader as a separate rule with [`enforce: 'pre'`](https://webpack.js.org/configuration/module/#rule-enforce):
+one for SVG ones), we’ll include this loader as a separate rule with [`enforce: 'pre'`](https://webpack.js.org/configuration/module/#rule-enforce):
 
      // webpack.config.js
     module.exports = {
@@ -470,7 +470,7 @@ one for SVG ones), we'll include this loader as a separate rule with [`enforce: 
 
 The default settings of the loader are already good to go – but if you want to configure it
 further, see [the plugin options](https://github.com/tcoopman/image-webpack-loader#options). To
-choose what options to specify, check out Addy Osmani's excellent [guide on image
+choose what options to specify, check out Addy Osmani’s excellent [guide on image
 optimization](https://images.guide/).
 
 ### Further reading {: .hide-from-toc }
@@ -478,7 +478,7 @@ optimization](https://images.guide/).
 * ["What is base64 encoding used
   for?"](https://stackoverflow.com/questions/201479/what-is-base-64-encoding-used-for)
 
-* Addy Osmani's [guide on image optimization](https://images.guide/)
+* Addy Osmani’s [guide on image optimization](https://images.guide/)
 
 ## Optimize dependencies
 
@@ -493,10 +493,10 @@ the average size of JavaScript on a page [was 452 KB in October
 2017](http://httparchive.org/interesting.php?a=All&l=Oct%2016%202017). However, 170 KB of that size
 is [localization
 files](https://github.com/moment/moment/tree/4caa268356434f3ae9b5041985d62a0e8c246c78/locale). If
-you don't use Moment.js with multiple languages, these files will bloat the bundle without a
+you don’t use Moment.js with multiple languages, these files will bloat the bundle without a
 purpose.
 
-All these dependencies can be easily optimized. We've collected optimization approaches in a GitHub
+All these dependencies can be easily optimized. We’ve collected optimization approaches in a GitHub
 repo – check it out! TODO: link
 
 ## Enable module concatenation for ES modules (aka scope hoisting)
@@ -540,7 +540,7 @@ a size and performance overhead for each module.
 
 Webpack 2 introduced support for ES modules which, unlike CommonJS and AMD modules, can be bundled
 without wrapping each with a function. And webpack 3 made such bundling possible – with
-[`ModuleConcatenationPlugin`](https://webpack.js.org/plugins/module-concatenation-plugin/). Here's
+[`ModuleConcatenationPlugin`](https://webpack.js.org/plugins/module-concatenation-plugin/). Here’s
 what this plugin does:
 
     // index.js
@@ -591,7 +591,7 @@ To enable this behavior, add `ModuleConcatenationPlugin` into the list of plugin
 
 Note: Wonder why this behavior is not enabled by default? Concatenating modules is cool, [but it
 comes with increased build time and breaks hot module
-replacement](https://twitter.com/TheLarkInn/status/925800563144454144). That's why it should only be
+replacement](https://twitter.com/TheLarkInn/status/925800563144454144). That’s why it should only be
 enabled in production.
 
 ### Further reading {: .hide-from-toc }
@@ -599,8 +599,8 @@ enabled in production.
 * Webpack docs [for the
   ModuleConcatenationPlugin](https://webpack.js.org/plugins/module-concatenation-plugin/)
 
-* ["Brief introduction to scope
-  hoisting"](https://medium.com/webpack/brief-introduction-to-scope-hoisting-in-webpack-8435084c171f)
+* [“Brief introduction to scope
+  hoisting”](https://medium.com/webpack/brief-introduction-to-scope-hoisting-in-webpack-8435084c171f)
 
 * Detailed description of [what this plugin
   does](https://medium.com/webpack/webpack-freelancing-log-book-week-5-7-4764be3266f5)
@@ -617,7 +617,7 @@ might be not:
 </figure>
 
 If both pieces of code have common dependencies, you can share them to avoid downloading their code
-multiple times. This is done with [the webpack's `externals`
+multiple times. This is done with [the webpack’s `externals`
 option](https://webpack.js.org/configuration/externals/) – it replaces modules with variables or
 other external imports.
 
@@ -634,7 +634,7 @@ dependency names to variable names:
       },
     };
 
-With this config, webpack won't bundle `react` and `react-dom` packages. Instead, they will be
+With this config, webpack won’t bundle `react` and `react-dom` packages. Instead, they will be
 replaced with something like this:
 
     // bundle.js (part of)
@@ -651,7 +651,7 @@ replaced with something like this:
 
 ### If dependencies are loaded as AMD packages
 
-If your non-webpack code doesn't expose dependencies into `window`, things are more complicated.
+If your non-webpack code doesn’t expose dependencies into `window`, things are more complicated.
 However, you can still avoid loading the same code twice if the non-webpack code consumes these
 dependencies as [AMD packages](http://requirejs.org/docs/whyamd.html#amd).
 
@@ -676,8 +676,8 @@ If non-webpack code uses the same URLs to load its dependencies, then these file
 only once – additional requests will use the loader cache.
 
 Note: Webpack replaces only those imports that exactly match keys of the `externals` object. This
-means that if you write `import React from 'react/umd/react.production.min.js'`, this library won't
-be excluded from the bundle. This is reasonable – webpack doesn't know if `import 'react'` and
+means that if you write `import React from 'react/umd/react.production.min.js'`, this library won’t
+be excluded from the bundle. This is reasonable – webpack doesn’t know if `import 'react'` and
 `import 'react/umd/react.production.min.js'` are the same things – so stay careful.
 
 ### Further reading {: .hide-from-toc }
