@@ -28,7 +28,7 @@ fixed. Starting on February 15, in line with the Coalition's guidelines, Chrome
 will remove all ads from sites that have a "failing" status in the Ad Experience
 Report for more than 30 days. All of this information can be found in the [Ad
 Experience Report Help
-Center](https://support.google.com/webtools/topic/7073612?hl=en&ref_topic=7566613),
+Center](https://support.google.com/webtools/topic/7073612?ref_topic=7566613),
 and our [product
 forums](https://productforums.google.com/forum/#!forum/ad-experience-report) are
 available to help address any questions or feedback.
