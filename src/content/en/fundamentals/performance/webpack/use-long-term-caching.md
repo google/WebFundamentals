@@ -356,7 +356,7 @@ app.get('/', (req, res) => {
 </li>
 </ol>
 
-## Lazy-load code that you don’t need right now
+## Lazy-load code that you don’t need right now {: #lazy-loading } 
 
 Sometimes, a page has more and less important parts:
 
@@ -439,8 +439,8 @@ code, webpack will invalidate only the corresponding chunk.
 
 ### For single-page apps
 
-To split single-page apps by routes, use `import()` (see the “Lazy-load code that you don’t need
-right now” section TODO: link). If you use a framework, it might have an existing solution for this:
+To split single-page apps by routes, use `import()` (see the [“Lazy-load code that you don’t need
+right now”](#lazy-loading) section). If you use a framework, it might have an existing solution for this:
 
 * [“Code Splitting”](https://reacttraining.com/react-router/web/guides/code-splitting) in
   `react-router`'s docs (for React)
