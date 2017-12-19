@@ -73,7 +73,12 @@ function onNewServiceWorker(registration, callback) {
 
 window.addEventListener('load', function() {
   // When the user asks to refresh the UI, we'll need to reload the window
+  var refreshing;
   navigator.serviceWorker.addEventListener('controllerchange', function(event) {
+    // Ensure refresh is only called once.
+    // This works around a bug in "force update on reload".
+    if (refreshing) return;
+    refreshing = true;
     console.log('Controller loaded');
     window.location.reload();
   });
