@@ -368,7 +368,7 @@ function getFiles() {
     if (IS_TRAVIS) {
       cmd += '$(git merge-base FETCH_HEAD master) FETCH_HEAD';
     } else {
-      cmd += '$(git merge-base master HEAD)';
+      cmd += '$(git merge-base origin/master HEAD)';
     }
     return wfHelper.promisedExec(cmd, '.')
     .then(function(results) {
