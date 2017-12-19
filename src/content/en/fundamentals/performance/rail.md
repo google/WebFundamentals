@@ -25,7 +25,7 @@ different ways:
   <img src="images/rail.png"
     alt="The 4 parts of the RAIL performance model: Response, Animation, Idle, and Load."/>
   <figcaption>
-    <b>Figure X</b>. The 4 parts of the RAIL performance model
+    <b>Figure 1</b>. The 4 parts of the RAIL performance model
   </figcaption>
 </figure>
 
@@ -167,7 +167,7 @@ See [The Need For Mobile Speed: How Mobile Latency Impacts Publisher Revenue][NE
          To Interactive) represents a different phase of the user's perception of the loading
          experience"/>
   <figcaption>
-    <b>Figure X</b>. Each loading metric represents a different phase of the user's perception of
+    <b>Figure 2</b>. Each loading metric represents a different phase of the user's perception of
     the loading experience
   </figcaption>
 </figure>
@@ -275,7 +275,7 @@ See [Get started](/web/tools/lighthouse/#get-started) to learn how to set up and
   <img src="images/lighthouse-performance.png"
     alt="An example Lighthouse report"/>
   <figcaption>
-    <b>Figure X</b>. An example Lighthouse report
+    <b>Figure 3</b>. An example Lighthouse report
   </figcaption>
 </figure>
 
@@ -333,7 +333,7 @@ page loads on a real mid-range Android device with a slow 3G connection.
   <img src="images/wpt-report.png"
     alt="An example WebPageTest report"/>
   <figcaption>
-    <b>Figure X</b>. An example WebPageTest report
+    <b>Figure 4</b>. An example WebPageTest report
   </figcaption>
 </figure>
 
