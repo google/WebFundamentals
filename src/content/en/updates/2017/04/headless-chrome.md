@@ -537,7 +537,9 @@ that uses `node:8-slim` as a base image, installs +
 [runs Lighthouse](https://github.com/ebidel/lighthouse-ci/blob/master/builder/entrypoint.sh)
 on App Engine Flex.
 
-Note: `--no-sandbox` is not needed if you [properly setup a user](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile#L35-L40) in the container. 
+Note: `--no-sandbox` is not needed if you
+[properly setup a user](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile#L35-L40)
+in the container. 
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 
