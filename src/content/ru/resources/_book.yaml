@@ -1,0 +1,29 @@
+---
+upper_tabs:
+- include: "/web/_upper_tabs-Fundamentals.yaml"
+- include: "/web/_upper_tabs-Tools.yaml"
+- include: "/web/_upper_tabs-Updates.yaml"
+- include: "/web/_upper_tabs-Showcase.yaml"
+- lower_tabs:
+    other:
+    - contents:
+      - path: "/web/resources/"
+        title: Обзор
+      - path: "/web/resources/writing-an-article"
+        title: Как писать статьи
+      - path: "/web/resources/writing-an-update"
+        title: Как писать обновления или исследования
+      - path: "/web/resources/yaml-and-attr-reference"
+        title: YAML Front Matter &amp; Attribute Reference
+      - path: "/style/"
+        status: external
+        title: Writing style guide
+      - path: "/web/resources/markdown-syntax"
+        title: Markdown синтаксис
+      - path: "/web/resources/widgets"
+      - path: "/web/resources/including-videos"
+        title: Добавление видео
+      - path: "/web/resources/contributors"
+        title: Контрибьюторы
+      - path: "/web/resources/translations"
+  path: "/web/resources/"
