@@ -214,7 +214,7 @@ PRPL 仅需最少的功能代码即可让用户所在的路由变得可交互，
 
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[Resource hints]: /web/updates/2016/03/link-rel-preload
 [HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 

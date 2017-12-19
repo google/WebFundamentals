@@ -18,7 +18,7 @@ description: '스크롤 성능 개선을 위해 패시브 이벤트 리스너를
 심층적 기술 정보는 패시브 이벤트 리스너 사양의 [Explainer][explainer]를 참조하세요.
 
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## 감사를 통과하는 방법 {: #how }

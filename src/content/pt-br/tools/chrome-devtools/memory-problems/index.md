@@ -150,7 +150,7 @@ do que começou (com o "início" sendo o ponto após a coleta
 de lixo forçada). No mundo real, se você perceber esse padrão de tamanho crescente
 de pilha de JS ou nó, isso poderá significar um vazamento de memória.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

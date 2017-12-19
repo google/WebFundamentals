@@ -13,7 +13,7 @@ Spesifikasi flexbox lama tahun 2009 tidak digunakan lagi dan 2,3x lebih lambat
 dari spesifikasi terbaru. Lihat [Layout Flexbox Tidak Lambat][slow] untuk mengetahui
 selengkapnya.
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Cara untuk lulus audit {: #how }
 

@@ -18,7 +18,7 @@ obter uma visão geral.
 Consulte o [Explainer][explainer] na especificação do detector de evento
 para obter detalhes técnicos.
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## Como ser aprovado na auditoria {: #how }

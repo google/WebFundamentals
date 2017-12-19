@@ -18,7 +18,7 @@ description:“網站使用被動事件偵聽器以提升滾動性能”Lighthou
 有關技術詳細信息，請參閱被動事件偵聽器規範中的[說明][explainer]。
 
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## 如何通過此審查 {: #how }

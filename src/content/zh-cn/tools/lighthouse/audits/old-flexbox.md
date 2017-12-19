@@ -13,7 +13,7 @@ description:“网站不使用旧版 CSS Flexbox”Lighthouse 审查的参考文
 请参阅 [Flexbox 布局并不慢][slow]了解更多信息。
 
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## 如何通过此审查{: #how }
 

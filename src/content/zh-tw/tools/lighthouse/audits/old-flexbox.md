@@ -13,7 +13,7 @@ description:“網站不使用舊版 CSS Flexbox”Lighthouse 審查的參考文
 請參閱 [Flexbox 佈局並不慢][slow]瞭解更多信息。
 
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## 如何通過此審查 {: #how }
 

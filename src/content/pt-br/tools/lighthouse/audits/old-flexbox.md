@@ -13,7 +13,7 @@ A especificação antiga de 2009 para o Flexbox tornou-se obsoleta e é 2,3 veze
 do que a especificação mais recente. Consulte [O layout do Flexbox não é lento][slow] para saber
 mais.
 
-[lento]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[lento]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Como ser aprovado na auditoria {: #how }
 
