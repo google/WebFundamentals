@@ -8,6 +8,8 @@ description: What tools to use to keep track of and analyze the webpack bundle
 
 # Monitor and analyze the app {: .page-title }
 
+{% include "web/_shared/contributors/iamakulov.html" %}
+
 Even when you configure webpack to make the app as small as possible, it's still important to keep
 track of it and know what it includes. Otherwise, you can install a dependency that will make the
 app twice as large – and won't even notice it!

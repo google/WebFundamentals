@@ -7,6 +7,8 @@ book_path: /web/fundamentals/_book.yaml
 
 # Introduction {: .page-title }
 
+{% include "web/_shared/contributors/addyosmani.html" %}
+
 Modern web applications often use a bundling tool to create a production "bundle" of files (scripts,
 stylesheets, etc.) that is optimized, minified and can be downloaded in less time by your users. In
 this article, we will walk through how to effectively optimize site resources using webpack. This

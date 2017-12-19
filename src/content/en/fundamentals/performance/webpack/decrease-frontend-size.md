@@ -1,5 +1,5 @@
-project_path: /web/fundamentals/\_project.yaml
-book_path: /web/fundamentals/\_book.yaml
+project_path: /web/fundamentals/_project.yaml
+book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
 {# wf_updated_on: 2017-12-18 #}
@@ -7,6 +7,8 @@ description: How to use webpack to make your app as small as possible
 {# wf_blink_components: N/A #}
 
 # Decrease Front-end Size {: .page-title }
+
+{% include "web/_shared/contributors/iamakulov.html" %}
 
 One of the first things to do when you’re optimizing an application is to make it as small as
 possible. Here’s how to do this with webpack.
