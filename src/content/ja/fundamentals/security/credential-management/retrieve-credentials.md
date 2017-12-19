@@ -9,6 +9,8 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
+Warning: 本翻訳記事公開後仕様が大幅に変更されています。[英語版](?hl=en)をご確認頂くか、変更点を[こちらから](/web/updates/2017/06/credential-management-updates)ご確認ください。
+
 ユーザーのログインを実行するには、ブラウザのパスワード マネージャーから認証情報を取得し、その情報を使用してログイン処理を行う必要があります。
 
 
@@ -338,7 +340,7 @@ Google Sign-In では、ID トークンが認証の証明になり、この ID �
 
 
 
-##  ログアウト{: #sign-out }
+##  ログアウト {: #sign-out }
 
 ユーザーがウェブサイトからログアウトした場合、ユーザーが次にウェブサイトにアクセスしたときに、自動的にログインしないようにする必要があります。
 自動ログオンをオフにするには、[`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation) を呼び出します。
