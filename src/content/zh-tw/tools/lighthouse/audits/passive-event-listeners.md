@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“網站使用被動事件偵聽器以提升滾動性能”Lighthouse 審查的參考文檔。
 
-{# wf_updated_on:2016-11-30 #}
+{# wf_updated_on:2017-12-19 #}
 {# wf_published_on:2016-11-30 #}
+{# wf_blink_components: N/A #}
 
 # 網站使用被動事件偵聽器以提升滾動性能 {: .page-title }
 
@@ -18,7 +19,7 @@ description:“網站使用被動事件偵聽器以提升滾動性能”Lighthou
 有關技術詳細信息，請參閱被動事件偵聽器規範中的[說明][explainer]。
 
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## 如何通過此審查 {: #how }

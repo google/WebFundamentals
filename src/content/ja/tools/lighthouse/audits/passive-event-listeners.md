@@ -18,7 +18,7 @@ description: Lighthouse の監査項目「Passive Event Listener を使用して
 技術的な詳細については、Passive Event Listener の仕様の [Explainer][explainer] をご確認ください。
 
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ##  監査に合格する方法 {: #how }

@@ -18,7 +18,7 @@ ringkasannya.
 Lihat [Explainer][explainer] dalam spesifikasi event listener pasif untuk
 penyelaman teknis yang lebih mendalam.
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## Cara untuk lulus audit {: #how }

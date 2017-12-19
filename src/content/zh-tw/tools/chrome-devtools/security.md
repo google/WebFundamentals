@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Security 面板確保您的網站上的所有資源均通過 HTTPS 進行保護。
 
-{# wf_updated_on:2016-03-09 #}
+{# wf_updated_on:2017-12-19 #}
 {# wf_published_on:2015-12-21 #}
+{# wf_blink_components: Security #}
 
 # 瞭解安全問題 {: .page-title }
 
@@ -77,9 +78,9 @@ Security 面板可以區分兩種非安全頁面。
 
 
 
-[mixed-content]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[mixed-content]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [same-origin-policy]: https://en.wikipedia.org/wiki/Same-origin_policy
-[why-https]: https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+[why-https]: /web/fundamentals/security/encrypt-in-transit/why-https
 
 
 {# wf_devsite_translation #}
