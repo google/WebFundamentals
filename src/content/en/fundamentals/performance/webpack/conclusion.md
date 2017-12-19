@@ -22,8 +22,9 @@ Summing up:
 
 * **Keep track of the size.** Use tools like
   [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard/) and
-  [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) to stay aware
-  how large is your app. Take a fresh look at your app's performance at whole every few months
+  [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+  to stay aware how large is your app.
+  Take a fresh look at your app's performance at whole every few months
 
 Webpack is not the only tool that could help you make an app faster. Consider making your
 application [a Progressive Web App](/web/progressive-web-apps/) for even better experience and use

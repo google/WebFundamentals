@@ -102,8 +102,8 @@ App dependencies tend to change less often than the actual app code. If you move
 separate file, the browser will be able to cache them separately – and don't re-download them each
 time the app code changes.
 
-Key Term: In webpack terminology, separate files with the app code are called _chunks_. We’ll use this
-name later.
+Key Term: In webpack terminology, separate files with the app code are called _chunks_.
+We’ll use this name later.
 
 To extract dependencies into a separate chunk, perform three steps:
 
@@ -281,8 +281,8 @@ Include them into `index.html` in the reverse order – and you're done:
 * Webpack docs [about webpack runtime and manifest](https://webpack.js.org/concepts/manifest/)
 
 * ["Getting the most out of the
-  CommonsChunkPlugin"](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschun
-  kplugin-ab389e5f318)
+  CommonsChunkPlugin"](https://medium.com/webpack/webpack-bits-getting-the-most-out-
+  of-the-commonschunkplugin-ab389e5f318)
 
 ## Inline webpack runtime to save an extra HTTP request
 
@@ -515,8 +515,8 @@ the common file, inflating it too much.
 * Webpack docs [about the CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/)
 
 * [Getting the most out of the
-  CommonsChunkPlugin](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunk
-  plugin-ab389e5f318)
+  CommonsChunkPlugin](https://medium.com/webpack/webpack-bits-getting-the-most-out-
+  of-the-commonschunkplugin-ab389e5f318)
 
 ## Make module ids more stable
 

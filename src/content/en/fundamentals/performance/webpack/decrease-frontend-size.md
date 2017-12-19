@@ -285,8 +285,8 @@ flexibility. You'll thank yourself later!
 ### Further reading {: .hide-from-toc }
 
 * [What "environment variables"
-  are](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-ca
-  n-i-set-or-use-them)
+  are](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables
+  -and-how-can-i-set-or-use-them)
 
 * Webpack docs about: [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/),
   [`EnvironmentPlugin`](https://webpack.js.org/plugins/environment-plugin/)
@@ -360,7 +360,8 @@ or [Google Closure Compiler plugin](https://github.com/roman01la/webpack-closure
 will do the trick.
 
 
-Warning: Don't accidentally compile ES modules into CommonJS ones. <br><br> If you use Babel with `babel-preset-env` or `babel-preset-es2015`, check the settings of these
+Warning: Don't accidentally compile ES modules into CommonJS ones. <br><br>
+If you use Babel with `babel-preset-env` or `babel-preset-es2015`, check the settings of these
 presets. By default, they transpile ES' `import` and `export` to CommonJS' `require` and
 `module.exports`. [Pass the `{ modules: false }`
 option](https://github.com/babel/babel/tree/master/experimental/babel-preset-env) to disable this.
