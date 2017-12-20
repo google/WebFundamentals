@@ -88,14 +88,11 @@ function buildIndividualPages(contributors) {
     if (!(key in filesByAuthor)) {
       return;
     }
+    const contributor = contributors[key];
     filesByAuthor[key].sort(wfHelper.publishedComparator);
-    const name = contributors[key].name;
-    let title = 'Latest contributions from ' + name.given;
-    if (name.family) {
-      title += ' ' + name.family;
-    }
     const context = {
-      title: title,
+      id: key,
+      contributor: contributor,
       articles: filesByAuthor[key],
     };
     const dest = DEST_ARTICLE_LIST.replace('{{key}}', key);
