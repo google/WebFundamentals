@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 63/64.
 
-{# wf_updated_on: 2017-12-08 #}
+{# wf_updated_on: 2017-12-20 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -316,8 +316,9 @@ The chrome team is always trying to find new ways to improve battery life and
 Chrome 63 was no exception.
 
 If the video doesn't contain any audio tracks, the video will be automatically
-paused when played in the background in Chrome desktop. This is a follow-up
-from a similar change that was only applying to [MSE videos in Chrome 62].
+paused when played in the background (e.g., in a non-visible tab) in Chrome
+desktop (Windows, Mac, Linux, and Chrome OS). This is a follow-up from a
+similar change that was only applying to [MSE videos in Chrome 62].
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=663999)
 
@@ -349,3 +350,4 @@ crazy fast now.
 [Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa
 [https://biograf-155113.appspot.com/ttt/episode-2/]: https://biograf-155113.appspot.com/ttt/episode-2/
 [HTML specification change]: https://github.com/whatwg/html/pull/2829
+[MSE videos in Chrome 62]: /web/updates/2017/09/chrome-62-media-updates#background-video-track-optimizations
