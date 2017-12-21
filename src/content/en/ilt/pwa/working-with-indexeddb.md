@@ -443,7 +443,7 @@ We create the cursor by calling the  [openCursor](https://developer.mozilla.org/
 someObjectStore.openCursor(optionalKeyRange, optionalDirection);
 ```
 
-This method returns a promise for a cursor object representing the first object in the object store or `undefined` if there is no object. To move on to the next object in the object store, we call `cursor.continue`. This moves the cursor object onto the next object or returns `undefined` if there isn't another object. We put this inside a loop to move through all of the entries in the store one by one. The optional key range in the `openCursor` method limits `cursor.continue` to a subset of the objects in the store. The direction option can be `next` or `prev` specifying forward or backward traversal through the data.
+This method returns a promise that resolves with a cursor object representing the first object in the object store or `undefined` if the store has no objects. To move on to the next object in the object store, we call `cursor.continue`. This returns a promise that resolves with the next object, or `undefined` if there are no more objects. We put this inside a loop to move through all of the entries in the store one by one. The optional key range in the `openCursor` method limits the iteration to a subset of the objects in the store. The direction option can be `"next"` or `"prev"` specifying forward or backward traversal through the data.
 
 The next example uses a cursor to iterate through all the items in the "store" object store and log them to the console:
 
@@ -453,7 +453,7 @@ dbPromise.then(function(db) {
   var store = tx.objectStore('store');
   return store.openCursor();
 }).then(function logItems(cursor) {
-  if (!cursor) {return;}
+  if (!cursor) return;
   console.log('Cursored at:', cursor.key);
   for (var field in cursor.value) {
     console.log(cursor.value[field]);
@@ -464,9 +464,9 @@ dbPromise.then(function(db) {
 });
 ```
 
-As usual, we start by getting the database object, creating a transaction, and opening an object store. We call the `openCursor` method on the object store and pass the cursor object to the callback function in `.then`. This time we name the callback function "logItems" so we can call it from inside the function and make a loop. The line `if (!cursor) return;` breaks the loop if `cursor.continue` returns `undefined` (that is, runs out of items to select). 
+As usual, we start by getting the database object, creating a transaction, and opening an object store. We call the `openCursor` method on the object store and pass the cursor object to the callback function in `.then`. This time we name the callback function "logItems" so we can call it from inside the function and make a loop. The line `if (!cursor) return;` breaks the loop if the promise returned by `store.openCursor()` resolves with `undefined`, or the one returned by `cursor.continue()` resolves with `undefined` (indicating that there are no more objects).
 
-The cursor object contains a `key` property that represents the primary key for the item. It also contains a `value` property that represents the data. At the end of `logItems`, we return `cursor.continue().then(logItems)`. `cursor.continue` that resolves to a cursor object representing the next item in the store or `undefined` if it doesn't exist. This is passed to the callback function in `.then,` which we have chosen to be `logItems,`so that the function loops. `logItems` continues to call itself until `cursor.continue` runs out of objects.
+The cursor object contains a `key` property that represents the primary key for the item. It also contains a `value` property that represents the data. At the end of `logItems`, we return `cursor.continue().then(logItems)`. `cursor.continue()` returns a promise that resolves with a cursor object representing the next object in the store or `undefined` if there are no more objects. This result is passed to the callback function in `.then`, which we have chosen to be `logItems`, so that the function "loops". Thus, `logItems` continues to call itself until we run out of objects.
 
 <div id="ranges"></div>
 
