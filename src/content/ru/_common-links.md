@@ -8,3 +8,5 @@
 {# wf_auto_generated #}
 
 {% endcomment %}
+
+[service-worker-primer]: /web/fundamentals/getting-started/primers/service-workers "Service Workers: An Introduction"
