@@ -1402,6 +1402,15 @@ sunyunjia:
   description:
     en: "Software Engineer working on Chromium"
 
+ossu:
+  name:
+    given: Oskar
+    family: Sundbom
+  org:
+    name: Google
+  description:
+    en: Software Engineer working on WebRTC and Audio in Chromium
+
 surma:
   name:
     given: Surma
