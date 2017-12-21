@@ -313,7 +313,7 @@ dbPromise.then(function(db) {
 
 First, we get the database object. We call `.then` on `dbPromise`, which resolves to the database object, and pass this object to the callback function in `.then`. Because `dbPromise` (`idb.open`) is a promise, we can safely assume that when `.then` executes, the database is open and all object stores and indexes are ready for use. 
 
-The next step is to open a transaction by calling the `transaction` method on the database object. This method takes a list of names of object stores and indexes, which defines the scope of the transaction (in our example it is just the "store" object store). The transaction method also has an optional second argument for the mode, which can be `readonly` or `readwrite`. This option is read-only by default.
+The next step is to open a transaction by calling the `transaction` method on the database object. This method takes a list of object stores names, which defines the scope of the transaction (if it is a single store name, we can pass it directly instead of passing an array of names, as we did in our example where we just want the "store" object store). The transaction method also has an optional second argument for the mode, which can be `readonly` or `readwrite`. This option is read-only by default.
 
 We can then open the "store" object store on this transaction and assign it to the `store` variable. Now when we call `store.add`, the add operation occurs within the transaction. Finally, we return `tx.complete` and log a success message once the transaction has completed.
 
