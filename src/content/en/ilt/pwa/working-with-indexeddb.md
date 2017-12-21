@@ -494,7 +494,7 @@ The `bound` method is used to specify both an upper and lower limit, and takes t
 IDBKeyRange.bound(lowerIndexKey, upperIndexKey);
 ```
 
-The range for these functions is inclusive by default, but can be specified as exclusive by passing `false` in the second argument (or the third in the case of `bound`). An inclusive range includes the data at the limits of the range. An exclusive range does not.
+The range for these functions is inclusive by default, but can be specified as exclusive by passing `true` as the second argument (or the third and fourth in the case of `bound`, for the lower and upper limits respectively). An inclusive range includes the data at the limits of the range. An exclusive range does not.
 
 Let's look at an example. For this demo, we have created an index on the "price" property in the "store" object store. We have also added a small form with two inputs for the upper and lower limits of the range. Imagine we are passing in the lower and upper bounds to the function as floating point numbers representing prices:
 
