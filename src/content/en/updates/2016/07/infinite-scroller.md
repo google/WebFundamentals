@@ -4,6 +4,7 @@ description: Infinite scrollers are a common UI pattern. Here we explore how to 
 
 {# wf_updated_on: 2017-11-07 #}
 {# wf_published_on: 2016-07-01 #}
+{# wf_blink_components: Blink>Scroll #}
 {# wf_tags: javascript,css #}
 {# wf_featured_image: /web/updates/images/2016/07/infinite-scroller/featured.png #}
 
@@ -354,9 +355,9 @@ npm or as a separate repo. The primary use is educational.
 
 [Infscroller Demo]: http://googlechromelabs.github.io/ui-element-samples/infinite-scroller/
 [Infscroller Code]: https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/infinite-scroller
-[Containment]: https://developers.google.com/web/updates/2016/06/css-containment
-[IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
-[Compositor Worklet]: https://developers.google.com/web/updates/2016/05/houdini
+[Containment]: /web/updates/2016/06/css-containment
+[IntersectionObserver]: /web/updates/2016/04/intersectionobserver
+[Compositor Worklet]: /web/updates/2016/05/houdini
 
 
 {% include "comment-widget.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cacheable Response  {: .page-title }
@@ -132,7 +132,7 @@ transient error response is mitigated by the fact that the next time
 the cache is updated, a proper, successful response will hopefully be used.
 
 For strategies that involve caching the first response received and
-reusing that cached response indefinitely, the reprocussions of a
+reusing that cached response indefinitely, the repercussions of a
 transient error getting cached and reused are more severe. To err on the
 safe side by default, cacheFirst will refuse to save a response unless it
 has a status code of 200.

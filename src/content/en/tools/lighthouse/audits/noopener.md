@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Opens External Anchors Using rel="noopener"" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-11-30 #}
+{# wf_blink_components: N/A #}
 
 # Opens External Anchors Using rel="noopener"  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 When your page links to another page using `target="_blank"`, the new page
 runs on the same process as your page. If the new page is executing expensive
@@ -21,7 +22,7 @@ See [The Performance Benefits of rel=noopener][jake] for more information.
 
 [jake]: https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Add `rel="noopener"` to each of the links that Lighthouse has identified in your
 report. In general, always add `rel="noopener"` when you open an external link
@@ -29,7 +30,7 @@ in a new window or tab.
 
     <a href="https://examplepetstore.com" target="_blank" rel="noopener">...</a>
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse uses the following algorithm to flag links as `rel="noopener"`
 candidates:

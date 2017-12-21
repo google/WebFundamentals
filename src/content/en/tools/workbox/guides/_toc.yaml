@@ -10,12 +10,12 @@ toc:
   path: /web/tools/workbox/guides/configure-workbox
 - title: "Handle Third-Party Requests"
   path: /web/tools/workbox/guides/handle-third-party-requests
-# - title: "Build and Use Plugins"
-#  path: /web/tools/workbox/guides/build-and-use-plugins
+- title: "Using Plugins"
+  path: /web/tools/workbox/guides/using-plugins
 - title: "Common Recipes"
   path: /web/tools/workbox/guides/common-recipes
-# - title: "Enable Offline Analytics"
-#  path: /web/tools/workbox/guides/enable-offline-analytics
+- title: "Enable Offline Google Analytics"
+  path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 # - title: "Generate a Complete Service Worker"
@@ -26,3 +26,5 @@ toc:
 #  path: /web/tools/workbox/guides/use-es2015-imports
 - title: "Service Worker Checklist"
   path: /web/tools/workbox/guides/service-worker-checklist
+- title: "Advanced Recipes"
+  path: /web/tools/workbox/guides/advanced-recipes

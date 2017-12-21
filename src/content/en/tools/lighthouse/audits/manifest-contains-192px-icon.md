@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Manifest Contains Icons at Least 192px" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-21 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-21 #}
+{# wf_blink_components: N/A #}
 
 # Manifest Contains Icons at Least 192px  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 When a user adds your app to the homescreen, the mobile device needs an icon to
 display. That icon is specified in the `icons` array of the Web App Manifest.
@@ -18,7 +19,7 @@ can scale down the 192-pixel icon with reasonable accuracy. In other words,
 although you can provide smaller-sized icons in your Web App Manifest, it's
 unnecessary.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Add a 192-pixel icon to your Web App Manifest.
 
@@ -32,11 +33,11 @@ Add a 192-pixel icon to your Web App Manifest.
       ...
     }
 
-Check out [Manifest Exists](manifest-exists#how)
+Check out [Manifest Exists](manifest-exists#recommendations)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 This audit can only guarantee that your icon displays well on Android devices.
 Other operating systems may require a different icon size for optimal

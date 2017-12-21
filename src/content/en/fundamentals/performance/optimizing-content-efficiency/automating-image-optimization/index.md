@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-11-23 #}
+{# wf_updated_on: 2017-12-15 #}
 {# wf_published_on: 2017-11-16 #}
+{# wf_blink_components: Blink>Image,Internals>Images,Internals>Images>Codecs #}
 
 # Automating image optimization {: .page-title }
 
@@ -1458,8 +1459,8 @@ data to achieve better compression.
 *   Use [ffmpeg](https://www.ffmpeg.org/) to convert your animated GIFs (or
     sources) to H.264 MP4s. I use this one-liner from[
     Rigor](http://rigor.com/blog/2015/12/optimizing-animated-gifs-with-html5-video):
-    ffmpeg -i animated.gif -movflags faststart -pix_fmt yuv420p -vf
-    "scale=trunc(iw/2)*2:trunc(ih/2)*2" video.mp4
+    `ffmpeg -i animated.gif -movflags faststart -pix_fmt yuv420p -vf
+    "scale=trunc(iw/2)*2:trunc(ih/2)*2" video.mp4`
 *   ImageOptim API also supports [converting animated gifs to WebM/H.264
     video](https://imageoptim.com/api/ungif), [removing dithering from
     GIFs](https://github.com/pornel/undither#examples) which can help video
@@ -2182,7 +2183,7 @@ Optionally you can also add a src attribute with a low quality image:
 </iframe>
 ```
 
-For the web version of this book, I paired Lazysizes (athough you can use any
+For the web version of this book, I paired Lazysizes (although you can use any
 alternative) with Cloudinary for on-demand responsive images. This allowed me
 the freedom to experiment with different values for scale, quality, format and
 whether or not to progressively load with minimal effort:
@@ -2399,7 +2400,7 @@ operations](https://docs.imgix.com/apis/url?_ga=2.52377449.1538976134.1501179780
     against Guetzli as a default)
 *   Strips all associated metadata from the transformed image file (the original
     image is left untouched). To override this behavior and deliver a
-    transformed image with its metadata intact, add the keep_iptc flag.
+    transformed image with its metadata intact, add the `keep_iptc` flag.
 *   Can generate WebP, GIF, JPEG, and JPEG-XR formats with automatic quality. To
     override the default adjustments, set the quality parameter in your
     transformation.
@@ -2495,7 +2496,7 @@ default
 [session_cache_limiter](http://php.net/manual/en/function.session-cache-limiter.php)
 setting. This can be a disaster for image caching and you may want to [work
 around](https://stackoverflow.com/a/3905468) this by setting
-session_cache_limiter('public') which will set public, max-age=. Disabling and
+session_cache_limiter('public') which will set `public, max-age=`. Disabling and
 setting custom cache-control headers is also fine.
 
 ## Preloading critical image assets {: #preload-critical-image-assets }

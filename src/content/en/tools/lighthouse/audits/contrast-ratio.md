@@ -2,18 +2,19 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Background and Foreground Colors Have Sufficient Contrast Ratio" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-20 #}
+{# wf_blink_components: N/A #}
 
 # Background and Foreground Colors Have Sufficient Contrast Ratio  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Low-contrast text is difficult or impossible for many users to read.
 
 See [Accessible Styles](/web/fundamentals/accessibility/accessible-styles) for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To find and fix each of element that does not have a sufficient contrast ratio:
 
@@ -50,7 +51,7 @@ To find and fix each of element that does not have a sufficient contrast ratio:
 [AE]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
 [CR]: http://leaverou.github.io/contrast-ratio/
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [Text elements
 must have sufficient color contrast against the background][axe] for more

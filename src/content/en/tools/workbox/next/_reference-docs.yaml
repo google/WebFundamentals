@@ -24,6 +24,8 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse
 - title: "workbox.broadcastUpdate"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate
+- title: "workbox.rangeRequests"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.rangeRequests
 
 - heading: Node Modules
 - title: workbox-build

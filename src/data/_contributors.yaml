@@ -900,7 +900,7 @@ petelepage:
   lanyrd: petele
   description:
     en: Pete is a Developer Advocate
- 
+
 kennith:
   name:
     given: Kennith
@@ -909,7 +909,7 @@ kennith:
   twitter: kennith
   google: +kennith
   email: kennith.leung@gmail.com
-  role: 
+  role:
     - translator
 
 paullewis:
@@ -1152,6 +1152,23 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+satyakresna:
+  name:
+    given: Kresna
+    family: Satya
+  org:
+    name: Independent
+    unit: Web Programmer
+  country: ID
+  role:
+    - translator
+  homepage: 'https://satyakresna.com'
+  google: +SatyaKresnaAdiPratama
+  twitter: _satyakresna
+  email: satyakresna6295@gmail.com
+  description:
+    en: Kresna is a Web Programmer.
+
 taylorsavage:
   name:
     given: Taylor
@@ -1315,7 +1332,7 @@ dmitryskripunov:
   email: dskripunov@gmail.com
   description:
     en: Dmitry is a Software Engineer
-    
+
 andismith:
   name:
     given: Andi

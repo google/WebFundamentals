@@ -585,6 +585,6 @@ requests.
 [JW Player]: https://developer.jwplayer.com/
 [Video.js]: http://videojs.com/
 [Android bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=612909
-[Delivering Fast and Light Applications with Save-Data]: https://developers.google.com/web/updates/2016/02/save-data
+[Delivering Fast and Light Applications with Save-Data]: /web/updates/2016/02/save-data
 [Network Information sample]: https://googlechrome.github.io/samples/network-information/
 [in Chrome]: https://github.com/whatwg/fetch/issues/569

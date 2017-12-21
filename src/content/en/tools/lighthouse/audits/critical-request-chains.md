@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Critical Request Chains" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-06 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-06 #}
+{# wf_blink_components: N/A #}
 
 # Critical Request Chains  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The Critical Request Chain is a concept from the Critical Rendering Path (CRP)
 optimization strategy. CRP enables the browser to load a page as quickly as
@@ -18,7 +19,7 @@ Check out the [Critical Rendering
 Path](/web/fundamentals/performance/critical-rendering-path/) docs to learn
 more.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 This audit is currently not structured as something to "pass" or "fail". The
 information that this audit provides gives you an opportunity to improve
@@ -60,7 +61,7 @@ You can use this diagram to improve your CRP by:
 
 Optimizing any of these factors results in a faster page load.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse uses network priority as a proxy for identifying render-blocking
 critical resources. See [Chrome Resource Priorities and

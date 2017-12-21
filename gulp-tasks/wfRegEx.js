@@ -38,7 +38,7 @@ const RE_PODCAST_SIZE = /^{#\s?wf_podcast_fileSize: (.*?)\s?#}\s?\n/m;
 
 const RE_INCLUDE_MD = /^<<(.*?)>>/gm;
 const RE_INCLUDE_FILE = /["|'](.*)["|']/;
-const RE_INCLUDES = /^{%\s?include ["|'](.*)["|']\s?%}/gm;
+const RE_INCLUDES = /^{%\s?include (["|']?)(.+?)(["|']?)\s?%}/gm;
 
 const RE_INCLUDE_CODE = /{% includecode .*?%}/gm;
 const RE_INCLUDE_CODE_PATH = /content_path=["']?(.*?)["' ]/;

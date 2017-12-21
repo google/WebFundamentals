@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -21,7 +21,7 @@ can cache and serve these files using a service worker and Workbox.
 Before we can use Workbox, we need to create a service worker file and
 register it to our web site.
 
-Strart by creating a file called `sw.js` at the root of your site and add a
+Start by creating a file called `sw.js` at the root of your site and add a
 console message to the file (This is so we can see it load).
 
 ```javascript
@@ -41,7 +41,7 @@ if ('serviceWorker' in navigator) {
 }
 </pre>
 
-This tell's the browser this is the service worker to use for site.
+This tells the browser this is the service worker to use for site.
 
 If you refresh your page you'll see the log from your service worker file.
 

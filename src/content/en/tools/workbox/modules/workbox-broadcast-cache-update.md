@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2017-11-29 #}
+{# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-29 #}
 
 # Workbox Broadcast Cache Update {: .page-title }
@@ -69,7 +69,7 @@ workbox.routing.registerRoute(
 ```
 
 This will broadcast messages on the channel 'api-updates', but you should
-customise it to something relevant to your app.
+customize it to something relevant to your app.
 
 In your web app, you can listen for these events like so:
 
@@ -112,9 +112,9 @@ Note: This message format adheres to the
 [Flux standard action format](https://github.com/acdlite/flux-standard-action#introduction),
 though it is not tied in any way to the Flux framework.
 
-### Customise Headers to Check
+### Customize Headers to Check
 
-You can customise the headers to check by setting the `headersToCheck`
+You can customize the headers to check by setting the `headersToCheck`
 property.
 
 ```js

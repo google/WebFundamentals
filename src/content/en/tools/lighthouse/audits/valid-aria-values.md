@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Have Valid Values" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-18 #}
+{# wf_blink_components: N/A #}
 
 # Element aria-* Attributes Have Valid Values  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Invalid ARIA attribute values may be preventing the screen reader
 from properly understanding the current state of a widget. This could make the
@@ -15,7 +16,7 @@ page unusable to users who rely on screen readers.
 
 See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 <<_shared/query.md>>
 
@@ -35,7 +36,7 @@ To find each listed element's invalid attribute values:
 [xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [states]: https://www.w3.org/TR/wai-aria/states_and_properties#state_prop_def
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid values][axe] for more information.
