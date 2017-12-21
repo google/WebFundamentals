@@ -547,7 +547,7 @@ Note: The browser throws an error if we try to create object stores or indexes t
 
 
 
-The UpgradeDB object gets a special `oldVersion` method that returns the version number of the database existing in the browser. We can pass this version number into a `switch` statement to execute blocks of code inside the upgrade callback based on the existing database version number. Let's look at an example:
+The UpgradeDB object has a special `oldVersion` property, which indicates the version number of the database existing in the browser. We can pass this version number into a `switch` statement to execute blocks of code inside the upgrade callback based on the existing database version number. Let's look at an example:
 
 ```
 var dbPromise = idb.open('test-db7', 2, function(upgradeDb) {
