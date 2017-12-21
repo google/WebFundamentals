@@ -1,6 +1,8 @@
 toc:
 - title: Overview
   path: /web/tools/lighthouse/
+- title: Scoring Guide
+  path: /web/tools/lighthouse/scoring
 
 - heading: Audit Reference
 
