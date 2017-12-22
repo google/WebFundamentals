@@ -60,7 +60,7 @@ access to the original Doc files. This will likely only work for Googlers.
 
 1. Download the `claat` tool and place it in your `tools` directory.
 1. Run `tools/update-codelabs.sh`
-1. Check the latest changes into GitHub
+1. Check the latest changes to GitHub
 
 ## Start the development server
 1. Run `npm start`
