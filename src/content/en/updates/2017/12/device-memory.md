@@ -24,9 +24,8 @@ platform feature aimed at helping web developers deal with the modern device
 landscape. It adds a read-only property to the `navigator` object,
 `navigator.deviceMemory`, which returns how much RAM the device has in
 gigabytes, rounded down to the nearest power of two. The API also features a
-[Client Hints Header](/web/updates/2015/09
-/automating-resource-selection-with-client-hints), `Device-Memory`, that reports
-the same value.
+[Client Hints Header](/web/updates/2015/09/automating-resource-selection-with-client-hints),
+`Device-Memory`, that reports the same value.
 
 <aside>
   <strong>Note:</strong> The JavaScript API is new in Chrome 63, while the
@@ -212,10 +211,9 @@ ga('send', 'pageview');
 ### Reporting on Device Memory data
 
 Once the device memory dimension is
-[`set`](/analytics/devguides/collection/analyticsjs
-/accessing-trackers) on the tracker object, all data you send to Google
-Analytics will include this value. This will allow you to break down any metric
-you want (e.g. [page load
+[`set`](/analytics/devguides/collection/analyticsjs/accessing-trackers) on the
+tracker object, all data you send to Google Analytics will include this value.
+This will allow you to break down any metric you want (e.g. [page load
 times](https://support.google.com/analytics/answer/1205784), [goal completion
 rate](https://support.google.com/analytics/answer/1012040), etc.) by device
 memory to see if there are any correlations.

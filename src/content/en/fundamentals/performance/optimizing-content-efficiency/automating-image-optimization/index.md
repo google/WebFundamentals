@@ -208,7 +208,7 @@ better.
 
 The wrong format can cost you. The logical flow for choosing the right format
 can be fraught with peril so experiment with the savings other formats can
-afford with care. 
+afford with care.
 
 Jeremy Wagner has covered
 [trade-offs](http://jlwagner.net/talks/these-images/#/2/2) worth considering
@@ -413,7 +413,7 @@ gulp.task('images', function () {
             progressive: true
 
         }))
-        .pipe(gulp.dest('dist'));       
+        .pipe(gulp.dest('dist'));
 });
 ```
 
@@ -766,7 +766,7 @@ this offering some value.
 <img src="images/Modern-Image13.jpg" alt="comparison of guetzli at different
         qualities. q=100, 945KB. q=90, 687KB. q=85, 542KB." /> Guetzli: A
         comparison of file sizes and visual similarity scores at different
-        qualities. 
+        qualities.
 
 
 
@@ -1250,7 +1250,7 @@ well:
 On Windows, you can also download the [WebP codec
 package](https://storage.googleapis.com/downloads.webmproject.org/releases/webp/WebpCodecSetup.exe)
 allowing WebP images to be previewed in the File Explorer and Windows Photo
-Viewer.  
+Viewer.
 
 ### How do I serve WebP? {: #how-do-i-serve-webp }
 
@@ -1369,8 +1369,8 @@ Here is some sample HTML:
   <img src="/path/to/image.jpg" alt="">
 </picture>
 
-<picture>   
-    <source srcset='paul_irish.jxr' type='image/vnd.ms-photo'>  
+<picture>
+    <source srcset='paul_irish.jxr' type='image/vnd.ms-photo'>
     <source srcset='paul_irish.jp2' type='image/jp2'>
     <source srcset='paul_irish.webp' type='image/webp'>
     <img src='paul_irish.jpg' alt='paul'>
@@ -1424,7 +1424,7 @@ spec](https://www.w3.org/Graphics/GIF/spec-gif89a.txt) notes "the GIF is not
 intended as a platform for animation". The [number of colors, number of frames
 and
 dimensions](http://gifbrewery.tumblr.com/post/39564982268/can-you-recommend-a-good-length-of-clip-to-keep-gifs)
-all impact animated GIF size. Switching to video offers the largest savings.  
+all impact animated GIF size. Switching to video offers the largest savings.
 
 
 
@@ -1492,7 +1492,7 @@ SVG that's being rendered.
          />
 [SVGOMG](https://jakearchibald.github.io/svgomg/), by Jake Archibald, is a GUI
 interface enabling you to optimize your SVGs to your preference  by selecting
-optimizations, with a live preview of the outputted markup 
+optimizations, with a live preview of the outputted markup
 
 
 **Some general rules for SVG optimization (SVGO):**
@@ -1518,7 +1518,7 @@ optimizations, with a live preview of the outputted markup
 * Use a tool to optimize your SVGs.
   [SVGOMG](https://jakearchibald.github.io/svgomg/) is a super handy web-based
   GUI for [SVGO](https://github.com/svg/svgo) by Jake Archibald that I’ve found
-  invaluable. If you use Sketch, the [SVGO Compressor plugin]([Sketch plugin for
+  invaluable. If you use Sketch, the SVGO Compressor plugin([Sketch plugin for
   running SVGO](https://www.sketchapp.com/extensions/plugins/svgo-compressor/))
   can be used when exporting to shrink the file size.
 
@@ -1701,7 +1701,7 @@ When a browser fetches an image, it has to decode the image from the original
 source format (e.g JPEG) to a bitmap in memory. Often the image needs to be
 resized (e.g width has been set to a percentage of its container). Decoding and
 resizing images are expensive and can delay how long it takes for an image to be
-displayed. 
+displayed.
 
 
 Sending down images that a browser can render without needing to resize at all
@@ -1853,7 +1853,7 @@ generating a complete range of colors from a smaller set of primary colors.
 There are different types of color spaces which use different parameters to
 control colors. Some color spaces have fewer control parameters than others -
 e.g grayscale only has a single parameter for controlling brightness between
-black and white colors. 
+black and white colors.
 
 Two common color models are additive and subtractive. Additive color models
 (like RGB, used for digital displays) use light to show color while subtractive
@@ -1865,7 +1865,7 @@ color models (like CMYK, used in printing) work by taking light away.
         RGB red, green and blue light are added in different combinations to
         produce a broad spectrum of colors. CYMK (cyan, magenta, yellow and
         black) works through different colors of ink subtracting brightness from
-        white paper.  
+        white paper.
 
 
 [Understanding Color Models and Spot Color
@@ -1902,7 +1902,7 @@ generally focused on.
 
 Color spaces have three channels (red, green and blue). There are 255 colors
 possible in each channel under 8-bit mode, bringing us to a total of 16.7
-million colors. 16-bit images can show trillions of colors. 
+million colors. 16-bit images can show trillions of colors.
 
 
 <img src="images/srgb-rgb_ntuhi4.jpg" alt="sRGB, Adobe RGB and ProPhoto RGB" />
@@ -1926,7 +1926,7 @@ gamut larger than sRGB. These types of displays are becoming more common. That
 said, many digital displays are still simply unable to display color profiles
 that are significantly better than sRGB. When saving for the web in Photoshop,
 consider using the 'Convert to sRGB’ option unless targeting users with
-higher-end wide-gamut screens. 
+higher-end wide-gamut screens.
 
 <aside class="key-point"><b>Note:</b> When working with original photography,
 avoid using sRGB as your primary color space. It's smaller than the color spaces
@@ -1938,7 +1938,7 @@ space (like ProPhoto RGB) and output to sRGB when exporting for the web.</aside>
 Yes. If an image contains very saturated/juicy/vibrant color and you care about
 it being just as juicy on screens that support it. However, in real photos that
 rarely happens. Often it's easy to tweak color to make it appear vibrant,
-without it actually exceeding sRGB gamut 
+without it actually exceeding sRGB gamut
 
 That's because human color perception is not absolute, but relative to our
 surroundings and is easily fooled. If your image contains a fluorescent
@@ -1949,7 +1949,7 @@ highlighter color, then you'll have an easier time with wide gamut.
 [Gamma correction](https://en.wikipedia.org/wiki/Gamma_correction) (or just
 Gamma) controls the overall brightness of an image. Changing the gamma can also
 alter the ratio of red to green and blue colors. Images without gamma correction
-can look like their colors are bleached out or too dark. 
+can look like their colors are bleached out or too dark.
 
 In video and computer graphics, gamma is used for compression, similar to data
 compression. This allows you to squeeze useful levels of brightness in fewer
@@ -1957,7 +1957,7 @@ bits (8-bit rather than 12 or 16). Human perception of brightness is not
 linearly proportional to physical amount of light. Representing colors in their
 true physical form would be wasteful when encoding images for human eyes. Gamma
 compression is used to encode brightness on a scale that is closer to human
-perception. 
+perception.
 
 With gamma compression useful scale of brightness fits in 8 bits of precision
 (0-255 used by most RGB colors). All of this comes from the fact that if colors
@@ -1967,13 +1967,13 @@ million where values 0-1000 would look distinct, but values between
 just 1 candle. Light a second candle and you notice significant increases in
 brightness in the room light. Add a third candle and it’ll seem even brighter.
 Now imagine being in a room with 100 candles. Light the 101st candle, the 102nd.
-You won’t notice a change in brightness. 
+You won’t notice a change in brightness.
 
 Even though in both cases, physically, exactly the same amount of light was
 added. So because eyes are less sensitive when light is bright, gamma
 compression "compresses" bright values, so in physical terms bright levels are
 less precise but the scale is adjusted for humans so from the human perspective
-all values are equally precise. 
+all values are equally precise.
 
 <aside class="key-point"><b>Note:</b> Gamma compression/correction here is
 different to the image gamma curves you might configure in Photoshop. When gamma
@@ -1984,7 +1984,7 @@ compression works as it should, it doesn't look like anything.</aside>
 A color profile is the information describing what that the color space of a
 device is. It’s used to convert between different color spaces. Profiles attempt
 to ensure an image looks as similar as possible on these different kinds of
-screens and mediums. 
+screens and mediums.
 
 Images can have an embedded color profile as described by the [International
 Color Consortium](http://www.color.org/icc_specs2.xalter) (ICC) to represent
@@ -1993,7 +1993,7 @@ including JPEGs, PNGs, SVGs and
 [WebP](/speed/webp/docs/riff_container) and most
 major browsers support embedded ICC profiles. When an image is displayed in an
 app and it knows the monitor's capabilities, these colors can be adjusted based
-on the color profile. 
+on the color profile.
 
 <aside class="key-point"><b>Note:</b> Some monitors have a color profile similar
 to sRGB and cannot display much better profiles so depending on your target
@@ -2023,7 +2023,7 @@ different systems and browsers. Safari, Edge and Firefox can now also take ICC
 profiles into account, so images with a different color profile (e.g ICC) can
 now display them correctly whether your screen has wide gamut or not.
 
-Note: For a great guide on how color applies to a broader spectrum of ways we 
+Note: For a great guide on how color applies to a broader spectrum of ways we
 work on the web, see the [nerd’s guide to color on the web](https://css-tricks.com/nerds-guide-color-web/) by Sarah
 Drasner.
 
@@ -2450,7 +2450,7 @@ of the most important metrics for both user experience and conversion.
 Cloudinary has [160K customers](http://cloudinary.com/customers) including
 Netflix, eBay and Dropbox. Imgix doesn't report how many customers it has, but
 it is smaller than Cloudinary. Even so, imgix's base includes heavyweight image
-users such as Kickstarter, Exposure, unsplash, and Eventbrite.  
+users such as Kickstarter, Exposure, unsplash, and Eventbrite.
 
 There are so many uncontrolled variables in image manipulation that a
 head-to-head performance comparison between the two services is difficult. So
@@ -2502,12 +2502,12 @@ setting custom cache-control headers is also fine.
 ## Preloading critical image assets {: #preload-critical-image-assets }
 
 Critical image assets can be preloaded using [`<link
-rel=preload>`](https://www.w3.org/TR/preload/). 
+rel=preload>`](https://www.w3.org/TR/preload/).
 
 `<link rel=preload>` is a declarative fetch, allowing you to force the browser
 to make a request for a resource without blocking the document’s `onload` event.
 It enables increasing the priority of requests for resources that might
-otherwise not be discovered until later in the document parsing process. 
+otherwise not be discovered until later in the document parsing process.
 
 Images can be preloaded by specifying an `as` value of `image`:
 
@@ -2536,7 +2536,7 @@ image for their header is loaded as soon as possible.
          />
 
 
-**What is the Link preload header?** 
+**What is the Link preload header?**
 
 A preload link can be specified using either an HTML tag or an [HTTP Link
 header](https://www.w3.org/wiki/LinkHeader). In either case, a preload link
@@ -2579,7 +2579,7 @@ requests, you may end up pushing other resources further down the queue.
 It's important to avoid using `rel=preload` to preload image formats without
 broad browser support (e.g WebP). It's also good to avoid using it for
 responsive images defined in `srcset` where the retrieved source may vary based
-on device conditions. 
+on device conditions.
 
 To learn more about preloading, see [Preload, Prefetch and Priorities in
 Chrome](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
