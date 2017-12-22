@@ -13,7 +13,7 @@ La especificación de 2009 para Flexbox es obsoleta y es 2,3 veces más lenta
 que la última especificación. Consulta [El diseño de Flexbox no es lento][slow] para obtener más
 información.
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Cómo aprobar la auditoría {: #how }
 

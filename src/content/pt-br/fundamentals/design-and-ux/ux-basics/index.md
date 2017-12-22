@@ -339,8 +339,8 @@ O que você deve descobrir:
 - Quais são os pontos positivos do protótipo?
 - Quais são os pontos negativos do protótipo?
 - Quais são as áreas de dificuldade?
-      * Por que um fluxo funcionou?
-      * Por que um fluxo não funcionou?
+  - Por que um fluxo funcionou?
+  - Por que um fluxo não funcionou?
 - O que o usuário gostaria de melhorar?
 - O design/fluxo geral atende às suas necessidades?
 

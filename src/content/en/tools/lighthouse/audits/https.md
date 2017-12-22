@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-19 #}
+{# wf_blink_components: N/A #}
 
 # Uses HTTPS  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 All websites should be protected with HTTPS, even ones that don't handle
 sensitive data. HTTPS prevents intruders from tampering with or passively
@@ -23,7 +24,7 @@ service workers, require HTTPS.
 For more information on why all sites should be protected with HTTPS, see
 [Why You Should Always Use HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Migrate your site to HTTPS.
 
@@ -36,13 +37,13 @@ certificates, check out [Let's Encrypt](https://letsencrypt.org/){: .external }.
 on enabling HTTPS on your servers, see the following set of docs: [Encrypting
 data in transit](/web/fundamentals/security/encrypt-in-transit/enable-https).
 
-If you're page is already running on HTTPS but you're failing this audit, then
+If your page is already running on HTTPS but you're failing this audit, then
 you may have problems with mixed content. Mixed content is when a secure site
 requests an unprotected (HTTP) resource. Check out the following doc on the
 Chrome DevTools Security panel to learn how to debug these situations:
 [Understand security issues](/web/tools/chrome-devtools/debug/security).
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse waits for an event from the Chrome Debugger Protocol indicating that
 the page is running on a secure connection. If the event is not heard within 10

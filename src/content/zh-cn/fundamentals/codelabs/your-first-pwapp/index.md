@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在此代码实验室中，您将构建一个 Progressive Web App，该应用即使在不可靠网络上也能快速加载、拥有桌面图标，并且可采用顶层全屏体验的方式加载。
 
-{# wf_updated_on:2017-01-05T16:32:36Z #}
+{# wf_updated_on:2017-01-05 #}
 {# wf_published_on:2016-01-01 #}
 
 

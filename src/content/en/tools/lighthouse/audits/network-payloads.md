@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Enormous Network Payloads" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-21 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-06-21 #}
+{# wf_blink_components: N/A #}
 
 # Avoids Enormous Network Payloads  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Reducing the total size of network requests speeds up page load time and
 saves your users money that they would have spent on cellular data.
@@ -23,7 +24,7 @@ power.
 [httparchive]: http://httparchive.org/interesting.php#onLoad
 [cost]: https://whatdoesmysitecost.com/
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Click **View Details** to see your page's requests. The largest requests are
 presented first. Reduce the size of the requests to reduce your total
@@ -43,14 +44,14 @@ Here are some strategies for reducing payload size:
   visits. See [HTTP Caching][http] and [Service Workers: An Introduction][SW].
 
 [PRPL]: /web/fundamentals/performance/prpl-pattern/
-[txtcompression]: /web/tools/lighthouse/audits/text-compression#how
+[txtcompression]: /web/tools/lighthouse/audits/text-compression#recommendations
 [mini]: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#minification_preprocessing_context-specific_optimizations
 [webp]: /web/tools/lighthouse/audits/webp
-[opto]: /web/tools/lighthouse/audits/optimize-images#how
+[opto]: /web/tools/lighthouse/audits/optimize-images#recommendations
 [http]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
 [SW]: /web/fundamentals/getting-started/primers/service-workers
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse sums up the total byte size of all resources that the page
 requested.

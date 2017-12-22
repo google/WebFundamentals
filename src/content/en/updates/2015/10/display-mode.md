@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Detecting if a web app is launched from the home screen
 
-{# wf_updated_on: 2015-10-15 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2015-10-15 #}
 {# wf_tags: news,addtohomescreen #}
 {# wf_featured_image: /web/updates/images/2015/10/splashscreen.png #}
@@ -15,7 +15,7 @@ During the past year we have focused on enabling users to build app like
 experiences on the web by making it possible for apps to work offline using 
 [service worker](/web/fundamentals/getting-started/primers/service-workers) and to get a 
 presence on the home screen using the 
-[Web App Manifest](/web/fundamentals/engage-and-retain/app-install-banners/).
+[Web App Manifest](/web/fundamentals/app-install-banners).
 
 Now apps tend to offer different experiences as sites, and developers might want to
 offer different experiences depending on whether the site is viewed in the browser

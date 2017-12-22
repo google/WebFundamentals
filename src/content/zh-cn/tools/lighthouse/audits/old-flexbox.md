@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站不使用旧版 CSS Flexbox”Lighthouse 审查的参考文档。
 
-{# wf_updated_on:2016-12-05 #}
+{# wf_updated_on:2017-12-19 #}
 {# wf_published_on:2016-12-05 #}
+{# wf_blink_components: N/A #}
 
 # 网站不使用旧版 CSS Flexbox {: .page-title }
 
@@ -13,7 +14,7 @@ description:“网站不使用旧版 CSS Flexbox”Lighthouse 审查的参考文
 请参阅 [Flexbox 布局并不慢][slow]了解更多信息。
 
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## 如何通过此审查{: #how }
 

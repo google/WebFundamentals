@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방법을 배워봅니다.
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -58,11 +58,11 @@ description: 이 코드랩에서는 웹 앱에 푸시 알림을 추가하는 방
 
 [링크](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요. 
+Web Server for Chrome 앱을 설치한 후 북마크바에서 Apps 단축키를 클릭하세요.
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-확인하는 창에서 Web Server 아이콘을 클릭하세요. 
+확인하는 창에서 Web Server 아이콘을 클릭하세요.
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 ### 애플리케이션 서버 키 가져오기
 
-이 코드랩으로 작업하려면 애플리케이션 서버 키를 몇 개 생성할 필요가 있는데, 도우미 사이트인 [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)에서 생성할 수 있습니다.
+이 코드랩으로 작업하려면 애플리케이션 서버 키를 몇 개 생성할 필요가 있는데, 도우미 사이트인 [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)에서 생성할 수 있습니다.
 
 여기서 공개 키 쌍과 비공개 키 쌍을 생성할 수 있습니다.
 
@@ -528,7 +528,7 @@ DevTools에서 푸시 메시지를 다시 트리거하고 알림을 클릭해보
 
 보통 이를 위한 프로세스는 웹페이지에서 백엔드로 구독을 전송하면 백엔드가 구독에서 엔드포인트에 대한 API 호출을 실행하여 푸시 메시지를 트리거하는 것입니다.
 
-이 내용은 본 코드랩의 범위를 벗어나지만, 이 코드랩의 도우미 사이트([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/))를 통해 실제 푸시 메시지를 트리거할 수 있습니다. 다음과 같이 구독 정보를 복사해 페이지 하단에 붙여넣으세요.
+이 내용은 본 코드랩의 범위를 벗어나지만, 이 코드랩의 도우미 사이트([https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/))를 통해 실제 푸시 메시지를 트리거할 수 있습니다. 다음과 같이 구독 정보를 복사해 페이지 하단에 붙여넣으세요.
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -643,13 +643,13 @@ swRegistration.pushManager.getSubscription()
 
 드디어 코드랩을 완성했습니다!
 
-이 코드랩에서는 웹 앱에 푸시를 추가하여 활성화하고 실행하는 방법을 알 수 있었습니다. 웹 알림으로 무엇을 할 수 있을지 좀 더 자세히 알아보고 싶으면 [이 문서를 확인해보세요](/web/fundamentals/engage-and-retain/push-notifications/). 
+이 코드랩에서는 웹 앱에 푸시를 추가하여 활성화하고 실행하는 방법을 알 수 있었습니다. 웹 알림으로 무엇을 할 수 있을지 좀 더 자세히 알아보고 싶으면 [이 문서를 확인해보세요](/web/fundamentals/push-notifications).
 
 사이트에 푸시를 배포할 방법을 찾고 있다면, GCM을 사용하는 과거의 브라우저나 표준을 준수하지 않는 브라우저를 위한 지원을 추가하는 데도 관심이 있을지 모르겠습니다. [자세한 내용은 여기서 확인할 수 있습니다](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### 추가 자료
 
-*  Web__Fundamentals__의 [웹 푸시 알림](/web/fundamentals/engage-and-retain/push-notifications/) 문서
+*  Web__Fundamentals__의 [웹 푸시 알림](/web/fundamentals/push-notifications) 문서
 *  [웹 푸시 라이브러리](https://github.com/web-push-libs/) - Node.js, PHP, 자바 및 Python을 포함한 웹 푸시 라이브러리
 
 #### 관련 블로그 게시물
@@ -664,7 +664,7 @@ swRegistration.pushManager.getSubscription()
 
 
 ## 문제가 있거나 의견이 있으세요? {: .hide-from-toc }
-언제든 망설이지 말고 
+언제든 망설이지 말고
 [문제](https://github.com/googlechrome/push-notifications/issues)를 제출해 주시면 코드랩에서 더욱 나은 서비스를 제공하는 데 큰 도움이 될 것입니다. 감사합니다!
 
 {# wf_devsite_translation #}

@@ -1,0 +1,137 @@
+<html devsite><head>
+  <title>Menggunakan Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Jika telah <a href="https://www.support.google.com/webmasters/answer/35179">
+      memverifikasi kepemilikan</a> situs, Anda dapat melewati tindakan pertama di bawah dan langsung
+      memeriksa informasi situs di Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Anda membutuhkan:</h3>
+
+<ul>
+  <li>Kemampuan untuk <a href="https://www.support.google.com/webmasters/answer/35179">memverifikasi
+    kepemilikan</a> situs menggunakan teknik seperti menambahkan file ke direktori root,
+    membuat <a href="https://www.support.google.com/webmasters/answer/79812">tag meta</a>,
+    memiliki akun administratif Google Analytics untuk situs tersebut, dsb.</li>
+</ul>
+
+<div class="action">
+  <h3>Yang akan Anda lakukan:</h3>
+
+  <p>Pada bagian ini, Anda akan melakukan tindakan berikut:</p>
+
+  <ol>
+    <li><a href="#verify">Memverifikasi kepemilikan situs di Search Console.</a></li>
+    <li><a href="#check">Memastikan peretas belum memverifikasi kepemilikan di Search Console dan
+      membuat perubahan setelan yang tidak diinginkan.</a></li>
+    <li><a href="#determine">Menentukan sifat dasar serangan</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Memverifikasi kepemilikan situs di Search Console</h4>
+
+<ol>
+  <li>Buka browser dan navigasikan ke Pusat Webmaster di
+    <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Klik <strong>Search Console</strong>.</li>
+  <li>Masuk ke Search Console menggunakan <a href="https://www.google.com/accounts">akun Google</a>.
+    Jika belum punya akun Google, klik <strong>Buat akun</strong>. Membuat akun
+    Google baru tidak membuat Anda kehilangan akun email yang sudah ada yang dibuat dengan perusahaan lain.
+    (<a href="https://accounts.google.com/SignUp">Informasi selengkapnya tentang akun</a>.)</li>
+  <li>Klik <strong>Tambahkan situs</strong>. Ketik URL situs di dalam kotak, lalu klik
+    <strong>Lanjutkan</strong>.</li>
+  <li>Tentukan metode verifikasi yang paling nyaman untuk Anda. Tab <strong>Metode yang disarankan</strong>
+    di halaman verifikasi menampilkan metode yang dianggap Google paling cocok. Metode tambahan
+    dicantumkan di tab <strong>Metode alternatif</strong>.
+    (<a href="https://goo.gl/kQnHQ">Informasi selengkapnya tentang verifikasi</a>.)</li>
+  <li>Buat situs Anda kembali online jika Anda memilih metode verifikasi yang memerlukan
+    akses ke situs, seperti tag meta HTML atau file HTML.</li>
+  <li>Klik <strong>Verifikasi</strong> untuk memverifikasikan kepemilikan menggunakan metode yang Anda pilih. Jika verifikasi berhasil,
+    Anda akan melihat layar yang berisi ucapan selamat yang menyebutkan bahwa Anda adalah pemilik yang terverifikasi.
+    Anda dapat mengembalikan situs menjadi offline, namun ingat bahwa situs harus online pada langkah
+    selanjutnya.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Setelah diverifikasi, pastikan peretas belum memverifikasi kepemilikan di Search Console dan membuat
+  perubahan setelan yang tidak diinginkan.</h4>
+
+<ol>
+  <li>Navigasikan ke beranda utama Search Console dengan mengeklik logo Search Console.</li>
+  <li>Cari situs Anda, lalu klik <strong>Kelola situs</strong>.</li>
+  <li>Klik <strong>Tambahkan atau hapus pengguna</strong>.</li>
+  <li>Pastikan semua <a href="https://www.support.google.com/webmasters/answer/44227">pengguna dan
+    pemilik</a> yang tercantum adalah yang sah.</li>
+  <li>Dokumentasikan alamat email setiap pengguna yang tidak sah (jika hal ini akan membantu di masa mendatang), lalu
+    hapus pengguna dari situs Anda. Untuk pemilik yang tidak sah, Anda akan perlu menghapus pemilik
+    dan token verifikasi apa pun yang mungkin, seperti tag meta verifikasi di beranda atau file HTML
+    di server Anda. (<a href="https://www.support.google.com/webmasters/answer/2454036">Informasi
+    selengkapnya.</a>)</li>
+  <li>Selidiki perubahan setelan yang tidak dinginkan di Search Console. Klik ikon
+    Setelan <span class="material-icons">setelan</span>, lalu klik
+    <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Setelan Situs</strong></a>
+    untuk memeriksa kemungkinan perubahan yang tidak diinginkan, yang dilakukan peretas, seperti
+    <a href="https://www.support.google.com/webmasters/answer/48620">Kecepatan crawling</a>
+    yang lebih rendah (mungkin dengan tujuan menghindari spider mesin telusur). Pastikan juga hal yang
+    tidak wajar tidak tercantum di bagian <strong>Google Indeks</strong>
+    &gt; <a href="https://www.support.google.com/webmasters/answer/164734">Hapus URL</a> atau
+    <span class="material-icons">setelan</span> &gt;
+    <a href="https://www.support.google.com/webmasters/answer/83106">Ganti Alamat</a>.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Menentukan sifat dasar serangan</h4>
+
+<p>Informasi di Pusat Pesan dan Masalah Keamanan di Search Console dapat membantu Anda
+  menentukan apakah situs disusupi menggunakan salah satu cara berikut:</p>
+
+<ul>
+  <li>Dengan konten yang berisi spam yang dapat mengurangi kualitas dan relevansi hasil penelusuran.</li>
+  <li>Untuk tujuan phishing.</li>
+  <li>Untuk mendistribusikan software perusak.</li>
+</ul>
+
+<p>Untuk menyelidiki peretasan atau software perusak menggunakan Search Console, selesaikan langkah berikut:</p>
+
+<ol>
+  <li>Navigasikan ke beranda Search Console dengan mengeklik logo Search Console di pojok atas.</li>
+  <li>Klik <strong>Pesan</strong>.</li>
+  <li>Periksa apakah ada pesan penting dari Google mengenai apakah situs Anda digunakan
+    untuk 1) menyajikan halaman, teks, atau link yang berisi spam, 2) phishing, 3) mendistribusikan malware. Jika Anda mendapatkan notifikasi
+    phishing, jangan hapus pesan ini sampai Anda menyelesaikan seluruh
+    proses pemulihan.</li>
+  <li>Navigasikan <strong>Masalah Keamanan</strong> di alat Webmaster.
+    <ul>
+      <li>Situs yang terpengaruh software perusak akan menampilkan heading tingkat tinggi "Perangkat lunak perusak", kemudian
+        kategori jenis software perusak, seperti "Konfigurasi server yang dimodifikasi" atau "Injeksi template
+        kesalahan". Dalam kasus ini, peretas mungkin menggunakan situs Anda untuk menginfeksi pengunjung menggunakan
+        software yang didesain untuk mengakses informasi rahasia atau membahayakan komputer mereka. Untuk mengetahui cara
+        memperbaiki hal ini, lanjutkan ke <a href="hacked_with_malware">Menaksir kerusakan akibat software perusak</a>.
+      </li>
+      <li>Situs yang diretas untuk menyajikan spam dapat menampilkan heading tingkat tinggi "Diretas" kemudian
+        kategori jenis peretasan, seperti "Injeksi konten". Tampaknya peretas telah meletakkan halaman,
+        teks, atau link yang berisi spam di situs Anda. Untuk mencari tahu cara memperbaiki hal ini, lanjutkan ke
+        <a href="hacked_with_spam">Menaksir kerusakan akibat spam</a>.</li>
+      <li>Situs dengan "notifikasi phishing” di Pusat Pesan Search Console mungkin tidak
+        menampilkan informasi apa pun dalam Masalah Keamanan. Dengan membuat halaman phishing di situs Anda, peretas
+        menggunakan situs untuk mendapatkan info masuk, sandi, atau detail
+        keuangan pengguna, sering kali dengan menyamar sebagai situs tepercaya. Karena pembersihan phishing mirip dengan pembersihan untuk spam,
+        lanjutkan ke <a href="hacked_with_spam">Menaksir kerusakan akibat spam</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Langkah berikutnya</h2>
+
+<p>Langkah berikutnya dalam proses ini
+  adalah <a href="hacked_with_spam">Menaksir kerusakan akibat spam (Diretas dengan spam)</a> atau
+  <a href="hacked_with_malware">Menaksir kerusakan akibat malware (Diretas dengan malware)</a>.</p>
+
+</body></html>

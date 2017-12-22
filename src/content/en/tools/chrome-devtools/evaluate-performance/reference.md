@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on all the ways to record and analyze performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-05-17 #}
+{# wf_updated_on: 2017-11-02 #}
 {# wf_published_on: 2017-05-08 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -854,6 +854,10 @@ To enable Layer Borders:
     <b>Figure 38</b>. <b>Layer Borders</b>
   </figcaption>
 </figure>
+
+See the comments in [`debug_colors.cc`][layer colors] for an explanation of the color-codings.
+
+[layer colors]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
 
 ### Find scroll performance issues in realtime {: #scrolling-performance-issues }
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to incorporate accessibility into your team's process.
 
 
-{# wf_updated_on: 2017-08-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-08-01 #}
 {# wf_blink_components: Blink>Accessibility #}
 
@@ -320,7 +320,7 @@ open source project for auditing the performance of your Progressive Web Apps.
 In addition to checking if your PWA has support for things like [Service
 Worker](/web/fundamentals/getting-started/primers/service-workers)
 and a [Web App
-Manifest](/web/fundamentals/engage-and-retain/web-app-manifest/),
+Manifest](/web/fundamentals/web-app-manifest),
 Lighthouse will also run a series of best practice tests, including tests for
 accessibility issues.
 

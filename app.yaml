@@ -19,6 +19,9 @@ handlers:
 - url: /wf-local/styles/
   static_dir: gae/styles/
 
+- url: /wf-local/images/
+  static_dir: gae/images/
+
 - url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
   static_files: src/content/en/\1
   expiration: 1d

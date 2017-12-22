@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>클로킹된 키워드 및 링크 해킹 문제해결</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>이 가이드는 클로킹된 키워드 및 링크 해킹이라는 해킹 유형을 위해 특별히 작성되었습니다. 이 가이드는 인기 있는 <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">CMS</a>(콘텐츠 관리 시스템) 사용자를 위해 디자인되었지만 CMS를 사용하지 않는 경우에도 유용합니다.</p>
+
+<p><strong>참고:</strong> 사이트가 해킹당했는지 확실하지 않은가요? 먼저 <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">사이트가 해킹당했는지 확인하는 방법</a> 가이드를 읽어보세요.</p>
+
+
+
+<aside class="note">이 가이드가 많은 도움이 되기를 바랍니다. 가이드를 개선할 수 있도록 <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">의견을 남겨주세요</a>.</aside>
+
+<h2>목차</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">1단계: 이 유형의 해킹을 확인하는 방법</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">2단계: 해킹 문제해결</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">3단계: 추가 리소스</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">해킹된 사이트 관련 FAQ</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>이 유형의 해킹을 확인하는 방법</h2>
+
+<p>클로킹된 키워드와 해킹된 링크로 인해 의미없는 텍스트, 링크, 이미지로 수많은 페이지가 자동으로 생성됩니다. 이와 같은 페이지는 원래 페이지의 기본 템플릿 요소를 포함할 때도 있어서, 언뜻 봐서 콘텐츠를 읽기 전까지는 사이트의 정상적인 페이지처럼 보일 수 있습니다.</p>
+
+<p>해킹된 페이지는 Google의 순위 요소를 조작하기 위해 생성됩니다. 해커는 일반적으로 해킹된 페이지의 링크를 제3자 여러 명에게 판매하여 수익을 올리려고 시도합니다. 해킹된 페이지는 또한 방문자를 포르노 사이트와 같이 해커가 돈을 벌 수 있는 관계없는 페이지로 리디렉션합니다.</p>
+
+<p>이 문제가 있는지 확인하려면 먼저 <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>의 <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">보안 문제</a>를 확인하여 Google이 사이트에서 해킹된 페이지를 발견했는지 확인하세요. Google 검색 창을 열고 <code class="notranslate l10n-notranslate">site:[your site]</code>을 입력하여 이와 같은 페이지를 발견할 수도 있습니다. 이렇게 하면 해킹된 페이지를 포함하여 Google에서 사이트의 색인을 생성한 페이지가 표시됩니다. 검색결과를 몇 페이지 훑어보면서 비정상적인 URL이 있는지 확인하세요. Google 검색에서 해킹된 콘텐츠가 보이지 않으면 다른 검색 엔진에서 동일한 검색어를 사용하여 검색해 보세요. 다른 검색 엔진에서는 Google이 색인에서 삭제한 해킹된 콘텐츠가 표시될 수도 있습니다.
+  다음은 해킹된 페이지가 검색되었을 때의 예입니다.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>참고:</strong> <em>검색결과에서 사이트 소유자가 만들지 않은 여러 페이지가 표시된 것을 볼 수 있습니다. 두 번째와 세 번째 검색결과 설명을 자세히 보면 해킹으로 인해 생성된 의미없는 텍스트의 예를 확인할 수 있습니다.</em></p>
+
+<p>해킹된 페이지를 방문할 때 페이지가 존재하지 않는다는 메시지(예를 들어 404 오류)가 표시될 수 있습니다. 속지 마세요. 해커는 해킹된 페이지가 사라졌거나 수정되었다고 믿도록 하여 사이트가 수정되었다고 생각하도록 속이려고 시도합니다. 사용자를 속이기 위해 해커들은 콘텐츠를 <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">클로킹</a>합니다. <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch as Google</a> 도구에 사이트 URL을 입력하여 클로킹되었는지 확인하세요. Fetch as Google 도구를 사용하면 숨겨진 콘텐츠를 확인할 수 있습니다.
+  다음은 이러한 방식으로 해킹된 페이지의 예입니다.</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>해킹 문제해결</h2>
+
+<p>문제해결을 시작하기에 앞서, 나중에 파일을 복원해야 할 경우에 대비하여 파일을 삭제하기 전에 오프라인 사본을 만드세요. 정리 작업을 시작하기 전에 사이트 전체를 백업하면 더욱 좋습니다. 서버에 있는 모든 파일을 서버 외부 위치에 저장하거나 해당 CMS별로 가장 적합한 백업 옵션을 검색하면 됩니다.</p>
+
+<h3>.htaccess 파일 확인(3단계)</h3>
+
+<p>클로킹된 키워드 및 링크 해킹은 .htaccess 파일을 사용하여 사이트에 클로킹된 페이지를 자동 생성합니다. 공식 Apache 사이트의 <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">.htaccess 기본 사항</a>을 숙지하면 해킹이 사이트에 어떤 영향을 미치는지 더 잘 알 수 있지만 필수는 아닙니다. </p>
+
+<p><b>1단계</b></p>
+<p>사이트에서 .htaccess 파일을 찾습니다. 어디에서 파일을 찾아야 할지 잘 모르고 WordPress, Joomla 또는 Drupal과 같은 CMS를 사용하는 경우에는 검색 엔진에서 CMS의 이름과 함께 '.htaccess 파일 위치'를 검색하세요. 사이트에 따라 .htaccess 파일이 여러 개 표시될 수도 있습니다. 모든 .htaccess 파일 위치의 목록을 만드세요.
+</p>
+
+<p><strong>참고:</strong> .htaccess 파일은 일반적으로 숨겨져 있습니다. .htaccess 파일을 검색할 때는 숨겨진 파일을 표시하도록 설정하세요.</p>
+
+
+<p><b>2단계</b></p>
+<p>.htaccess 파일을 열어 파일의 내용을 확인합니다. 파일에서 다음과 같은 코드 줄을 찾으세요.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>이 줄의 변수는 변경될 수 있습니다. 'cj2fa'와 'tobeornottobe' 모두 임의의 문자 또는 단어의 조합입니다. 중요한 것은 이 줄에 언급된 .php를 식별하는 것입니다.</p>
+
+<p>.htaccess 파일에서 언급된 .php 파일을 적어둡니다. 이 예에서는 .php 파일의 이름이 'injected_file.php'이지만 실제로는 .php 파일의 이름이 분명하지 않습니다. 일반적으로 'horsekeys.php', 'potatolake.php' 등 무해한 단어들의 집합입니다. 이 파일이 나중에 추적하여 삭제해야 할 악성 .php 파일일 가능성이 높습니다.</p>
+
+<div class="alert">.htaccess에서 RewriteRule과 .php 파일이 있는 모든 줄이 악성인 것은 아닙니다.
+  코드 줄의 기능을 잘 모를 경우에는 <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">웹마스터 도움말 포럼</a>에서 경험 많은 웹마스터들의 도움을 받으세요.</div>
+
+<p><b>3단계</b></p>
+<p>모든 .htaccess 파일을 .htaccess 파일의 깨끗한 버전 또는 기본 버전으로 바꿉니다. 일반적으로 '기본 .htaccess 파일'과 CMS 이름을 검색하여 .htaccess 파일의 기본 버전을 찾을 수 있습니다. .htaccess 파일이 여러 개 있는 사이트의 경우 각 파일의 깨끗한 버전을 찾아 교체하세요.</p>
+
+<p>기본 .htaccess 파일이 존재하지 않고 사이트에서 .htaccess 파일을 구성한 적이 없는 경우 사이트에 있는 .htaccess 파일은 악성 파일일 가능성이 있습니다. 만일에 대비해 .htaccess 파일의 사본을 오프라인으로 저장하고 사이트에서 .htaccess 파일을 삭제하세요.</p>
+
+<h3>기타 악성 파일 찾기 및 삭제(5단계)</h3>
+
+<p>악성 파일을 식별하는 작업은 까다로울 수 있으며 몇 시간이 걸릴 수 있습니다. 천천히 파일을 확인하세요. 사이트의 파일을 아직 백업하지 않았으면 이 단계에서 백업하는 것이 좋습니다. 사이트를 백업하는 방법에 관한 안내를 찾으려면 Google에서 '사이트 백업'과 CMS의 이름을 함께 검색하세요.</p>
+
+<p><b>1단계</b></p>
+<p>CMS를 사용하는 경우 CMS의 기본 배포에 포함된 모든 핵심(기본) 파일 및 내가 추가한 모든 항목(예: 테마, 모듈, 플러그인)을 다시 설치합니다. 이러한 파일에 해킹된 콘텐츠가 포함되지 않도록 하기 위한 조치입니다. 재설치 방법에 관한 안내를 찾으려면 Google에서 '재설치'와 CMS의 이름을 함께 검색하세요. 플러그인, 모듈, 확장 프로그램, 테마가 있으면 이러한 항목도 다시 설치하세요.</p>
+
+<div class="alert">핵심 파일을 다시 설치하면 맞춤설정한 내용을 잃을 수도 있습니다. 다시 설치하기 전에 데이터베이스와 모든 파일을 백업하세요.</div>
+
+<p><b>2단계</b></p>
+<p>먼저 앞서 .htaccess 파일에서 식별한 .php 파일을 찾습니다. 서버에서 파일에 액세스하는 방식에 따라 몇 가지 유형의 파일 검색 기능이 표시됩니다. 악성 파일 이름을 검색하세요. 파일을 찾으면 파일을 복원해야 하는 경우에 대비하여 백업 사본을 만들어 다른 위치에 저장한 다음 사이트에서 삭제하세요.</p>
+
+<p><b>3단계</b></p>
+<p>남아 있는 악성 파일 또는 손상된 파일을 찾습니다. 이전 두 단계에서 악성 파일을 모두 삭제했을 수도 있지만 사이트의 다른 파일이 더 손상된 경우에 대비하여 다음 몇 단계를 수행하는 것이 가장 좋습니다.</p>
+
+<p>모든 PHP 파일을 열고 확인해야 한다는 생각이 들어도 당황하지 마세요. 먼저 확인하고자 하는 의심스러운 PHP 파일의 목록을 만드세요. 다음은 어떤 PHP 파일이 의심스러운지 정하는 몇 가지 방법입니다.</p><p>
+
+</p><ul>
+<li>이미 CMS 파일을 새로고침했으므로 기본 CMS 파일 또는 폴더에 포함되지 않은 파일만 확인합니다. 이렇게 하면 많은 PHP 파일이 제거되고 확인이 필요한 파일 몇 개만 남게 됩니다.</li>
+<li>파일이 최종 수정된 날짜를 기준으로 사이트의 파일을 정렬합니다. 사이트가 해킹당한 것을 처음 발견한 때로부터 몇 개월 이내에 수정된 파일을 찾으세요.</li>
+<li>크기를 기준으로 사이트의 파일을 정렬합니다. 비정상적으로 큰 파일을 찾으세요.</li>
+</ul>
+
+<p><b>4단계</b></p>
+<p>PHP 파일 중 어떤 파일이 의심스러운지 좁혀졌으니 이제 정상 파일인지 악성 파일인지 확인해야 합니다.
+  PHP에 익숙하지 않을 경우 이 과정에 더 시간이 걸릴 수 있으므로 <a href="https://php.net/docs.php">PHP 문서</a>를 참조하여 관련 지식을 습득하세요.
+  전혀 코딩 경험이 없어도 몇 가지 기본 패턴을 찾아 악성 파일을 식별할 수 있습니다.</p>
+
+<p>먼저 이미 식별된 의심스러운 파일을 검색하여 겉보기에 뒤죽박죽된 문자와 숫자의 조합처럼 보이는 큰 텍스트 블록을 찾으세요. 큰 텍스트 블록 앞에는 일반적으로 base64_decode, rot13, eval, strrev, gzinflate와 같은 PHP 함수의 조합이 나옵니다. 다음은 이러한 코드 블록의 예입니다. 코드가 실제보다 짧아 보이도록 긴 한 줄 텍스트로 만들어진 경우도 있습니다.</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>코드가 뒤죽박죽되지 않고 일반 스크립트처럼 보이는 경우도 있습니다. 코드가 악성 코드인지 잘 모르겠는 경우에는 <a href="https://productforums.google.com/forum/#!forum/webmasters">웹마스터 도움말 포럼</a>에서 경험 많은 웹마스터들의 도움을 받아 파일을 살펴보세요.</p>
+
+<p><b>5단계</b></p>
+<p>이제 의심스러운 파일을 찾았으므로, 파일이 악성 파일이 아닌 경우에 대비하여 컴퓨터에 파일을 저장하여 백업 또는 로컬 사본을 만든 후 의심스러운 파일을 삭제하세요.</p>
+
+<h3>사이트가 깨끗한지 확인</h3>
+
+<p>해킹된 파일을 제거한 후에는 사이트가 깨끗하게 정리되었는지 확인하세요. Fetch as Google 도구를 사용하여 이전에 식별된 의미없는 페이지가 아직 존재하는지 다시 확인하세요. 사이트에서 해킹된 파일이 모두 제거된 경우, Fetch As Google에서 '찾을 수 없음' 응답이 반환됩니다.</p>
+
+<div class="tip"><a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">해킹된 사이트 문제해결 도구</a>의 단계에 따라 사이트에 아직 해킹된 콘텐츠가 있는지 확인할 수도 있습니다.</div>
+
+<h2>다시 해킹당하지 않으려면 어떻게 해야 하나요?</h2>
+
+<p>사이트의 취약한 부분을 고치는 작업이 사이트의 문제를 해결하는 데 필요한 마지막 단계입니다. 최근 연구에 따르면 해킹된 사이트의 20%가 1일 이내에 다시 해킹되는 것으로 나타났습니다. 사이트가 해킹당한 방식을 정확히 알면 도움이 됩니다. 조사를 시작하기 전에 <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">스팸 발송자가 웹사이트를 해킹하는 방법</a> 가이드를 읽어보세요. 그러나 사이트가 해킹당한 방식을 알 수 없는 경우에는 다음 체크리스트를 확인하여 사이트의 취약성을 줄일 수 있습니다.</p>
+
+<ul>
+<li>CMS, 플러그인, 확장 프로그램 및 모듈을 정기적으로 업데이트: 이 작업은 평상시에도 하는 것이 좋습니다. 많은 사이트가 사이트에서 실행되는 오래된 소프트웨어 때문에 해킹당합니다. 일부 CMS는 자동 업데이트를 지원합니다.</li>
+<li>정기적으로 컴퓨터 검사: 인기 있는 바이러스 검색 프로그램을 사용하여 바이러스나 취약성이 있는지 확인합니다.</li>
+<li>정기적으로 비밀번호 변경: 호스팅 제공업체, FTP 및 CMS 등 모든 웹사이트 계정의 비밀번호를 정기적으로 변경하면 승인되지 않은 사이트 액세스를 방지할 수 있습니다.
+  계정마다 안전하고 중복되지 않는 비밀번호를 만드는 것이 중요합니다.</li>
+<li><a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">2FA(2단계 인증)</a> 사용: 로그인이 필요한 모든 서비스에서 2FA를 사용 설정합니다. 2FA를 사용하면 해커가 비밀번호를 알게 되더라도 로그인하기가 더 어려워집니다.</li>
+<li>사이트를 모니터링하기 위해 보안 서비스에 가입: 적은 비용으로 사이트를 모니터링할 수 있는 효과적인 서비스가 시중에 많이 나와 있습니다. 사이트를 안전하게 유지하려면 이러한 서비스에 가입해 보세요.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>추가 리소스</h2>
+<p>그래도 사이트의 문제가 해결되지 않은 경우 도움이 될만한 리소스가 더 있습니다.</p>
+
+<p>다음과 같은 도구를 사용하여 사이트를 검색하고 문제가 되는 콘텐츠를 찾을 수 있습니다. VirusTotal을 제외한 도구는 Google에서 실행하거나 지원하지 않습니다.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: 이러한 도구는 내 사이트에서 문제가 되는 콘텐츠를 검색할 수 있는 도구 중 일부입니다. 이들 검색 프로그램으로 문제가 되는 모든 유형의 콘텐츠를 식별할 수 있는 것은 아닙니다.</p>
+
+<p>다음은 Google에서 제공하는 추가 리소스입니다.</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google 웹마스터 도움말 포럼</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Google 웹마스터 해킹된 사이트 관련 도움말</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">유용하다고 생각되는 도구가 누락되었으면 <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">의견을 남겨</a> 알려주세요.</div>
+
+
+</body></html>

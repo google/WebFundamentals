@@ -72,10 +72,10 @@ HTTPS는 HTTP Secure(Hyper(t)ext Transfer Protocol Secure)의 약자입니다. �
 HTTPS, TLS 및 SSL에 대한 자세한 정보는 이 글에서는 다루지 않습니다. 
 자세한 정보는 다음을 참조하세요.
 
-* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS){: .external}
-* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security){: .external}
-* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography){: .external}
-* [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545){: .external}의 [TLS 장](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html){: .external}(저자: Ilya Grigorik) 
+* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS)
+* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography)
+* [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) 의 [TLS 장](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html) (저자: Ilya Grigorik) 
 
 ## 혼합 콘텐츠로 인한 HTTPS 약화
 

@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Poner el sitio web en cuarentena</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Lo que necesitarás:</h3>
+<ul>
+  <li>Capacidad para evitar que el servidor web publique páginas (otra opción es hablar con el proveedor de servicios de alojamiento para que te indique otras opciones). En pasos posteriores tendrás que volver a conectar el sitio web a Internet durante breves períodos de tiempo.</li>
+  <li>Permisos de gestión de cuentas (la capacidad de ver a todos los usuarios, eliminar usuarios y cambiar todas las contraseñas relacionadas con tu cuenta).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Pasos siguientes</h3>
+<ol>
+  <li><strong>Desconecta el sitio web</strong> para que deje de ofrecer contenido a los usuarios. Por ejemplo, detén el servidor web o dirige las entradas de DNS del sitio web a una página estática de otro servidor que utilice un código de respuesta HTTP 503.
+<p>Si desconectas el sitio web pirateado, podrás completar las tareas administrativas con menos interferencias por parte del hacker y, mientras tanto, los visitantes no podrán acceder al código malicioso ni a los archivos con contenido fraudulento. Es poco probable que el hecho de desconectar tu sitio web intermitentemente o temporalmente durante la recuperación repercuta en la futura clasificación de tu sitio web en los resultados de búsqueda.</p>
+      <ul>
+        <li>Si no estás seguro de cómo desconectar el sitio web, te será de ayuda contactar con el proveedor de servicios de alojamiento. Por ejemplo, es posible que el proveedor de servicios de alojamiento configure una respuesta 503 para tu sitio web <em>desde fuera de los directorios infectados</em> (es una opción aceptable). Haz saber a tu proveedor de servicios de alojamiento que pronto tendrás que activar y desactivar el sitio en Internet para hacer pruebas. Es posible que eso le ayude a proporcionarte el mejor método de autogestión para desconectar el sitio web.
+        </li><li>Que tu sitio web muestre el <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">código de estado HTTP</a> 4xx o 5xx no es suficiente para proteger a los usuarios. Los contenidos dañinos todavía pueden mostrarse a los usuarios con 404, 503, etc. <em>El código de estado 503 es un aviso útil cuando el sitio web está fuera de servicio temporalmente, pero la respuesta debería producirse desde fuera del servidor o del sitio web pirateado.</em>
+        </li>
+        <li>El uso de una función que <a href="/search/reference/robots_txt">bloquee los archivos robots.txt</a> tampoco es suficiente porque solo bloquea a los rastreadores de motores de búsquedas. Los usuarios pueden seguir accediendo a contenido dañino.</li>
+      </ul>
+  </li>
+  <li>Si todavía no lo has hecho, <strong>ponte en contacto con el proveedor de servicios de alojamiento para informarle de la situación</strong>. Si tu proveedor de servicios de alojamiento también ha sido pirateado, esto le ayudará a entender el alcance del problema.</li>
+  <li><strong>Analiza minuciosamente las cuentas de usuario</strong>
+    <ul>
+      <li>Consulta la lista de cuentas de usuario de tu sitio web y comprueba que el hacker no haya creado una nueva cuenta. Si se han creado cuentas fraudulentas, escribe sus nombres para investigarlas más adelante. A continuación, elimina las cuentas para evitar que el hacker se conecte de nuevo.</li>
+      <li>Cambia las contraseñas de todos los usuarios y de todas las cuentas del sitio web. Esto incluye inicios de sesión para FTP, acceso a bases de datos, administradores del sistema y cuentas de sistema de gestión de contenido (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Paso siguiente</h2>
+<p>La siguiente fase del proceso es <a href="use_search_console">utilizar Search Console</a>.</p>
+
+</body></html>

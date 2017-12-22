@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse “Site não usa o Flexbox CSS antigo”.
 
-{# wf_updated_on: 2016-12-05 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2016-12-05 #}
+{# wf_blink_components: N/A #}
 
 # Site não usa o Flexbox CSS antigo {: .page-title }
 
@@ -13,7 +14,7 @@ A especificação antiga de 2009 para o Flexbox tornou-se obsoleta e é 2,3 veze
 do que a especificação mais recente. Consulte [O layout do Flexbox não é lento][slow] para saber
 mais.
 
-[lento]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[lento]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## Como ser aprovado na auditoria {: #how }
 

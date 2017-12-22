@@ -2,18 +2,19 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Application Cache" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-04 #}
+{# wf_blink_components: N/A #}
 
 # Avoids Application Cache  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Application Cache, also known as AppCache, is [deprecated][deprecated].
 
 [deprecated]: https://html.spec.whatwg.org/multipage/browsers.html#offline
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Consider using the service worker [Cache API][API] instead.
 
@@ -30,7 +31,7 @@ offline.
 
 [sw-appcache-behavior]: https://github.com/GoogleChrome/sw-appcache-behavior
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 The audit passes if no AppCache manifest is detected.
 

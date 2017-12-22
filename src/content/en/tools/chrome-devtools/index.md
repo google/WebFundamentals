@@ -57,6 +57,7 @@ Log diagnostic information during development or interact with the JavaScript on
 
 * [Using the Console](/web/tools/chrome-devtools/console/)
 * [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
+* [Console API Reference](/web/tools/chrome-devtools/console/console-reference)
 
 <div style="clear:both;"></div>
 

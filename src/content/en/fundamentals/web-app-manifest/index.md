@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-02-11 #}
 
 # The Web App Manifest {: .page-title }
@@ -249,7 +249,7 @@ properties. See [Web app
 manifest](/web/tools/chrome-devtools/progressive-web-apps#manifest) over
 at the Chrome DevTools docs for more information on this tab. You can
 also simulate Add to Homescreen events from here. See [Testing the app install
-banner](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
+banner](/web/fundamentals/app-install-banners#test)
 for more on this topic.
 
 If you want an automated approach towards validating your web app manifest,
@@ -270,7 +270,7 @@ This article has given you a quick introduction to web app manifests, but
 there's more to learn.
 
 * If you're using a web app manifest, you'll probably want set up an
-[app install banner](/web/fundamentals/engage-and-retain/app-install-banners/) as well. 
+[app install banner](/web/fundamentals/app-install-banners) as well.
 
 * [A complete reference](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 to the web app manifest is available on the Mozilla Developer Network.

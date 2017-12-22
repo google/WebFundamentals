@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
 
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
@@ -11,10 +11,10 @@ Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are
 many things that can take a PWA from a baseline to exemplary experience.
 
 To help teams create the best possible experiences we've put together this 
-checklist which breaks down all the things we think it takes to be a [Baseline](#baseline) 
-PWA, and how to take that a step further with an [Exemplary](#exemplary) PWA by providing a 
-more meaningful offline experience, reaching interactive even faster and taking 
-care of many more important details.
+checklist which breaks down all the things we think it takes to be a
+[Baseline](#baseline) PWA, and how to take that a step further with an
+[Exemplary](#exemplary) PWA by providing a more meaningful offline experience,
+reaching interactive even faster and taking care of many more important details.
 
 [lighthouse]: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk
 
@@ -61,8 +61,8 @@ on the this list and may prove helpful in easily testing sites.
       <td>
         <ul>
           <li>
-            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly</b>,
-            although manually checking can also be helpful.
+            Use Lighthouse to verify Yes to all of <b>Design is mobile-friendly
+            </b>, although manually checking can also be helpful.
           </li>
           <li>
             Check the <a href="//search.google.com/test/mobile-friendly">
@@ -119,7 +119,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Add a <a href="/web/fundamentals/engage-and-retain/web-app-manifest/">
+        Add a <a href="/web/fundamentals/web-app-manifest">
         Web App Manifest</a> file to your project.
       </td>
     </tr>
@@ -619,7 +619,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           <li>Intercept the <code>beforeinstallprompt</code> event and prompt later</li>
           <li>
             Chrome manages when to trigger the prompt but for situations this
-            might not be ideal. You can <a href="/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt">defer the prompt</a>
+            might not be ideal. You can <a href="/web/fundamentals/app-install-banners#defer_or_cancel">defer the prompt</a>
             to a later time in the app's usage. It may also help to dim the screen,
             as advised for requesting permissions below.
           </li>

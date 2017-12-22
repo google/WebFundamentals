@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Can Be Prompted To Install The Web App" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-16 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-06-16 #}
+{# wf_blink_components: N/A #}
 
 # User Can Be Prompted To Install The Web App  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The prompt to install a web app lets users add your app to their homescreen.
 Users that add apps to homescreens engage those apps more.
@@ -20,7 +21,7 @@ Twitter's case study.
 
 [TL]: /web/showcase/2017/twitter#increasing_engagement_with_add_to_homescreen_prompt_and_web_push_notifications
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Google Chrome automatically displays the install prompt once it detects that
 a site qualifies as a Progressive Web App. These are Chrome's criteria:
@@ -41,7 +42,7 @@ a site qualifies as a Progressive Web App. These are Chrome's criteria:
 See [Web App Install Banners][WAIB] to learn more.
 
 [HTTPS]: /web/tools/lighthouse/audits/https
-[WAIB]: /web/fundamentals/engage-and-retain/app-install-banners/
+[WAIB]: /web/fundamentals/app-install-banners
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
@@ -67,10 +68,7 @@ var feedback = {
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
-
-The audit passes if all of the criteria specified in [How to pass the
-audit](#how) are met.
+## More information {: #more-info }
 
 [Audit source][src]{:.external}
 

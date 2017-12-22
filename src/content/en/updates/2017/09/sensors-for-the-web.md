@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Generic Sensor API is available for Origin Trials in Chrome 62.
+description: Generic Sensor API is available for Origin Trials in Chrome 63.
 
-{# wf_updated_on: 2017-09-22 #}
+{# wf_updated_on: 2017-12-20 #}
 {# wf_published_on: 2017-09-18 #}
 {# wf_tags: sensors,origintrials,chrome63,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
-{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 62. #}
+{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 63. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -244,7 +244,7 @@ document.
 ## Let’s code! {: #lets-code }
 
 The Generic Sensor API is very simple and easy-to-use! The Sensor interface has
-[`start()`](https://w3c.github.io/sensors/#sensor-start) and 
+[`start()`](https://w3c.github.io/sensors/#sensor-start) and
 [`stop()`](https://w3c.github.io/sensors/#sensor-stop) methods to control sensor state
 and several event handlers for receiving notifications about sensor activation, errors and newly
 available readings. The concrete sensor classes usually add their specific reading attributes to
@@ -343,23 +343,42 @@ so let’s briefly list them.
 
 ### Only HTTPS
 
-Because Generic Sensor API is a powerful feature, Chrome only allows it on secure contexts.
-In practice it means that to use Generic Sensor API you'll need to access your page
-through HTTPS. During development you can do so via http://localhost but for production
-you'll need to have HTTPS on your server. See Security with [HTTPS article](/web/fundamentals/security/)
+Because Generic Sensor API is a powerful feature, Chrome only allows it on
+secure contexts.
+In practice it means that to use Generic Sensor API you'll need to access your
+page through HTTPS. During development you can do so via http://localhost but
+for production
+you'll need to have HTTPS on your server. See Security with [HTTPS
+article](/web/fundamentals/security/)
 for best practices and guidelines there.
 
-### Only the main frame
+### Feature Policy integration
 
-To prevent iframes from reading sensor data the Sensor objects can be created
+The [Feature Policy integration](https://w3c.github.io/sensors/#feature-policy-api)
+in Generic Sensor API is used to control access to sensors data for a frame.
+
+By default the `Sensor` objects can be created only within a main frame or
+same-origin subframes, thus preventing cross-origin iframes from unsanctioned
+reading of sensor data. This default behavior can be modified by explicitly
+enabling or disabling of the corresponding [policy-controlled
+features](https://wicg.github.io/feature-policy/#policy-controlled-feature).
+
+The snippet below illustrates granting accelerometer data access to a
+cross-origin iframe, meaning that now `Accelerometer` or
+`LinearAccelerationSensor` objects can be created there.
+
+`<iframe src="https://third-party.com" allow="accelerometer"/>`
+
+Note: The Feature Policy integration for sensors is available in Chrome 65 or
+later. In the earlier versions of Chrome the `Sensor` objects can be created
 only within a main frame.
 
 ### Sensor readings delivery can be suspended
 
 Sensor readings are only accessible by a visible web page, i.e., when the user
 is actually interacting with it. Moreover, sensor data would not be provided
-if the user focuses from a main frame to a cross-origin iframe, so that the
-main frame cannot infer user input.
+to the parent frame if the user focuses to a cross-origin subframe in order to
+disallow the parent frame infer user input.
 
 ## What’s next? {: #whats-next }
 

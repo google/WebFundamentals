@@ -1,0 +1,61 @@
+<html devsite><head>
+<title>提交审核请求</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>要想使您的网页或网站不再被标记为危险网站或欺骗性网站，必须向 Google 提交审核请求。</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>您需要：</h3>
+<ul>
+  <li>关于外壳/终端命令的知识</li>
+</ul>
+<h3>您应执行的操作：</h3>
+<h4>1. 前提条件</h4>
+<p>在提交审核请求之前，请确认您已完成以下步骤：</p>
+<ul>
+  <li>已在 Search Console 中验证您对网站的所有权</li>
+  <li>已清除黑客在网站中造成的破坏</li>
+  <li>已修复漏洞</li>
+  <li>已将干净的网站恢复在线状态</li>
+</ul>
+<h4>2. 仔细检查以确保您的网页是可供抓取的干净网页</h4>
+<p>为了安全起见，请使用 Wget 或 cURL 查看您网站上的网页，例如首页以及曾被黑客修改过的网页，这些网页现在应该是干净的。倘若确实如此，并且您确信您网站上的其他网页也是干净的，即可提交审核请求。</p>
+  <p><strong>重要提示</strong>：您的网页必须可被 Googlebot 抓取，才能确保这些网页是干净的。请确保您没有使用“noindex”漫游器元标记或指令将这些网页排除在抓取范围之外或禁止将其编入索引。</p>
+<h4 id="request_review">3. 提交审核请求</h4>
+<p>提交审核请求之前，请确保相关问题确实已得到解决；若在问题仍存在的情况下提交审核请求，只会延长您的网站被标记为危险网站的时间。</p>
+<ul>
+  <li><strong>网上诱骗</strong>
+    <ol>
+      <li>前往 <a href="https://www.google.com/safebrowsing/report_error/">google.com/safebrowsing/report_error/</a> 完成审核。此项审核的目的是从经过清理的网页中移除网上诱骗警告。如果网站所有者认为自己的网页被错误地标记为网上诱骗网页，也可以前往该网址向我们报告具体情况。</li>
+    </ol>
+  </li>
+  <li><strong>恶意软件或网络垃圾</strong>
+    <ol>
+      <li>打开 Search Console 中的<a href="https://www.google.com/webmasters/tools/security-issues" target="new"><strong>“安全问题”报告</strong></a>。该报告可能仍会显示您之前看到的警告和受感染网址示例。</li>
+      <li>如果您认为列出的示例网址现在全都是干净的，请选择<strong>提交审核请求</strong>。要提交审核请求，您需要提供更多信息，以表明您的网站已清除黑客造成的破坏。例如，对于“安全问题”部分的每个类别，您可以分别写一句话来说明是如何清理网站的（例如，“对于遭到内容注入攻击的网址，我移除了垃圾内容并修复了漏洞；并更新了过期插件”）。</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. 等待 Google 处理审核请求</h4>
+<ul>
+  <li><strong>感染恶意软件时的审核处理时间</strong>：对于感染恶意软件的网站，审核过程需要几天的时间。审核完毕后，您将会在 Search Console 的<strong>消息</strong>部分收到回复。</li>
+  <li><strong>遭到网络垃圾入侵时的审核处理时间</strong>：对于遭到网络垃圾入侵的网站，审核过程可能需要长达数周的时间。这是因为在进行网络垃圾审核时，可能需要进行人工调查或彻底重新处理被黑网页。网站通过审核后，“安全问题”部分将不会再显示入侵类别或被黑网址示例。</li>
+  <li><strong>存在网上诱骗时的审核处理时间</strong>：对于网上诱骗网站，审核过程大约需要一天的时间。网站通过审核后，我们将会移除向用户显示的网上诱骗警告，您的网页可以重新出现在搜索结果中。</li>
+</ul>
+<p>如果 Google 发现您的网站是干净的，则会在 72 小时内从浏览器和搜索结果中移除相关警告。</p>
+<p>如果 Google 判定您并未解决相关问题，Search Console 中的“安全问题”报告内通常会显示更多受感染网址示例，以便您展开后续调查。为了保护用户，搜索结果和/或浏览器中仍会显示相应网站存在恶意软件或遭到网络垃圾入侵的警告。</p>
+<h4>最后步骤</h4>
+<ul>
+  <li><strong>如果您的网站通过了审核</strong>，请验证您的网站是否如预期一样正常运作：网页能正常加载，链接可点击。为了维持网站的安全，我们建议每位网站所有者都实施<a href="clean_site">清理并维护网站</a>中制定的维护和安全计划。如需更多信息，请参阅 <a href="https://www.stopbadware.org">StopBadware</a> 中的以下资源：
+    <ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">防范有害软件：基础知识</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">更多资源：被黑网站</a></li>
+    </ul>
+  </li>
+  <li><strong>如果您的网站未能成功通过审核</strong>，请重新评估您的网站是否存在<a href="hacked_with_malware">恶意软件</a>或<a href="hacked_with_spam">网络垃圾</a>，或者是否存在由黑客做出的修改或创建的新文件。您也可以考虑向<a href="support_team">支持团队中的专家</a>寻求更多帮助。</li>
+</ul>
+
+</body></html>

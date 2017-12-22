@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Consistently Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-06-23 #}
+{# wf_blink_components: N/A #}
 
 # Consistently Interactive {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The Consistently Interactive metric measures when a page is *fully* interactive:
 
@@ -26,7 +27,7 @@ to respond to user input in the target time of 100ms or less.
 
 See also [First Interactive](first-interactive).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To improve your Consistently Interactive score:
 
@@ -43,7 +44,7 @@ To improve your Consistently Interactive score:
 [OCE]: /web/fundamentals/performance/optimizing-content-efficiency
 [OJE]: /web/fundamentals/performance/rendering/optimize-javascript-execution
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 The score is a lognormal distribution of some complicated calculations based on
 the definition of the Consistently Interactive metric. See [First Interactive

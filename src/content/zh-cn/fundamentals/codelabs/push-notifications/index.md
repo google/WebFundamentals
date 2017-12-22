@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在此代码实验室中，您将学习如何向网络应用添加推送通知。
 
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -58,11 +58,11 @@ description:在此代码实验室中，您将学习如何向网络应用添加�
 
 [链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式：
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-在随后出现的窗口中，点击 Web Server 图标： 
+在随后出现的窗口中，点击 Web Server 图标：
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 
 ### 获取应用服务器密钥
 
-如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作：[https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+如需使用此代码实验室，您需要生成一些应用服务器密钥，我们可以使用此配套网站执行这一操作：[https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 您可以在这里生成一个公私密钥对。
 
@@ -528,7 +528,7 @@ clients.openWindow('https://developers.google.com/web/')
 
 一般情况下，这个过程就是从网页向后端发送订阅，然后后端通过对订阅中的端点实施 API 调用，进而触发推送消息。
 
-这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) 来触发实际的推送消息。复制粘贴页面底部的订阅：
+这超出了此代码实验室的讨论范围，但您可以使用此代码实验室的配套网站 ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) 来触发实际的推送消息。复制粘贴页面底部的订阅：
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -643,13 +643,13 @@ swRegistration.pushManager.getSubscription()
 
 恭喜您完成此代码实验室！
 
-此代码实验室向您介绍了如何设置和运行向网络应用中添加推送的过程。如果您想要了解有关网络通知可以执行的操作的详细信息，[请查看这些文档](/web/fundamentals/engage-and-retain/push-notifications/)。 
+此代码实验室向您介绍了如何设置和运行向网络应用中添加推送的过程。如果您想要了解有关网络通知可以执行的操作的详细信息，[请查看这些文档](/web/fundamentals/push-notifications)。
 
 如果您准备在自己的网站上部署推送，可能会有兴趣了解为使用 GCM 的旧版/非标准合规浏览器添加支持，[在此处了解详细信息](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/)。
 
 ### 深入阅读
 
-*  Web__Fundamentals__ 上的[网络推送通知](/web/fundamentals/engage-and-retain/push-notifications/)文档
+*  Web__Fundamentals__ 上的[网络推送通知](/web/fundamentals/push-notifications)文档
 *  [网络推送库](https://github.com/web-push-libs/) - 网络推送库包括 Node.js、PHP、Java 和 Python。
 
 #### 相关博文

@@ -13,7 +13,7 @@ description: Lighthouse の監査項目「サイトで古い CSS Flexbox を使�
 詳細については、[Flexbox Layout Isn't Slow][slow] をご覧ください。
 
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ##  監査に合格する方法 {: #how }
 

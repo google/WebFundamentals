@@ -135,7 +135,7 @@ Once we have our service worker registered and we've got permission, we can subs
 calling `registration.pushManager.subscribe()`.
 
     function subscribeUserToPush() {
-      return getSWRegistration()
+      return navigator.serviceWorker.register('service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,
@@ -236,7 +236,7 @@ Whenever you read something referring to *"application server keys"* or
 #### How to Create Application Server Keys
 
 You can create a public and private set of application server keys by visiting
-[web-push-codelab.appspot.com](https://web-push-codelab.appspot.com/) or you can use the
+[web-push-codelab.glitch.me](https://web-push-codelab.glitch.me/) or you can use the
 [web-push command line](https://github.com/web-push-libs/web-push#command-line)
 to generate keys by doing the following:
 
@@ -260,7 +260,7 @@ We call `subscribe()`, pass in some options, and in return we get a promise that
 `PushSubscription` resulting in some code like so:
 
     function subscribeUserToPush() {
-      return getSWRegistration()
+      return navigator.serviceWorker.register('service-worker.js')
       .then(function(registration) {
         const subscribeOptions = {
           userVisibleOnly: true,

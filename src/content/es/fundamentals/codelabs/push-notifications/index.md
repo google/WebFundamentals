@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En este codelab, aprenderás a agregar notificaciones push a tu app web.
 
-{# wf_updated_on: 2017-07-12T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -58,11 +58,11 @@ A pesar de que puedes usar tu propio servidor web, este codelab está diseñado 
 
 [Vínculo](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Después de instalar la app Web Server for Chrome, haz clic en el atajo Apps de la barra de marcadores: 
+Después de instalar la app Web Server for Chrome, haz clic en el atajo Apps de la barra de marcadores:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-En la ventana resultante, haz clic en el ícono de Web Server: 
+En la ventana resultante, haz clic en el ícono de Web Server:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ Abre Chrome DevTools para revisar la consola de `Service Worker is registered`, 
 
 ### Obtén claves del servidor de la app
 
-Para trabajar con este code lab, tienes que generar claves del servidor de la app, cosa que podemos hacer con este sitio complementario:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+Para trabajar con este code lab, tienes que generar claves del servidor de la app, cosa que podemos hacer con este sitio complementario:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Aquí puedes crear un par de claves pública y privada.
 
@@ -528,7 +528,7 @@ Hemos visto que nuestra app web es capaz de mostrar una notificación usando Dev
 
 Normalmente, el proceso para esto sería enviar una suscripción de una página web a un backend y el backend dispararía un mensaje push haciendo que una API llame al terminal de la suscripción.
 
-Esto está fuera de alcance para este codelab, pero puedes usar el sitio complementario ([https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) para que este code lab dispare un mensaje push real. Copia y pega la suscripción en la parte inferior de la página:
+Esto está fuera de alcance para este codelab, pero puedes usar el sitio complementario ([https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) para que este code lab dispare un mensaje push real. Copia y pega la suscripción en la parte inferior de la página:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -643,13 +643,13 @@ Deberías poder presionar  *Enable Push Messaging*  /  *Disable Push Messaging* 
 
 ¡Felicitaciones por completar este codelab!
 
-Este code lab te ha enseñado a desarrollar tus conocimiento para agregar push a tu app web. Si quieres conocer más sobre lo que pueden hacer las notificaciones web,  [consulta estos documentos](/web/fundamentals/engage-and-retain/push-notifications/). 
+Este code lab te ha enseñado a desarrollar tus conocimiento para agregar push a tu app web. Si quieres conocer más sobre lo que pueden hacer las notificaciones web,  [consulta estos documentos](/web/fundamentals/push-notifications).
 
 Si buscas implementar push en tu sitio, te puede interesar agregar soporte para navegadores más viejos/no estándar compatibles que usen GCM,  [conoce más aquí](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Consultas adicionales
 
-*  Documentación sobre [notificación web push](/web/fundamentals/engage-and-retain/push-notifications/) en Web __Fundamentals__
+*  Documentación sobre [notificación web push](/web/fundamentals/push-notifications) en Web __Fundamentals__
 *  [Bibliotecas web push](https://github.com/web-push-libs/) - Bibliotecas web push que incluyen Node.js, PHP, Java y Python.
 
 #### Entradas de blogs relevantes
@@ -664,7 +664,7 @@ Si buscas implementar push en tu sitio, te puede interesar agregar soporte para 
 
 
 ## ¿Encontraste un problema o tienes comentarios? {: .hide-from-toc }
-Ayúdanos a que nuestros code labs sean mejores enviando un 
+Ayúdanos a que nuestros code labs sean mejores enviando un
 [problema](https://github.com/googlechrome/push-notifications/issues) hoy. ¡Gracias!
 
 {# wf_devsite_translation #}

@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Requesting The Notification Permission On Page Load" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-19 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-12-05 #}
+{# wf_blink_components: N/A #}
 
 # Avoids Requesting The Notification Permission On Page Load  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 As explained in [What Makes a Good Notification][good], good notifications are
 timely, relevant, and precise. If your page asks for permission to send
@@ -18,13 +19,13 @@ after they opt-in.
 
 [good]: /web/fundamentals/push-notifications/
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Under **URLs**, Lighthouse reports the line and column numbers where your
 code is requesting permission to send notifications. Remove these calls,
 and tie the requests to user gestures instead.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 If notification permissions was already granted or denied to a page before
 Lighthouse's audit, Lighthouse cannot determine if the page requests

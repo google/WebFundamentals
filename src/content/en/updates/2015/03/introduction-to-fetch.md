@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The fetch() API is landing in the window object and is looking to replace XHRs
 
 
-{# wf_updated_on: 2015-03-10 #}
+{# wf_updated_on: 2017-10-18 #}
 {# wf_published_on: 2015-03-10 #}
 {# wf_tags: news,fetch,xhr #}
 
@@ -39,46 +39,46 @@ An `XMLHttpRequest` would need two listeners to be set to handle the success
 and error cases and a call to `open()` and `send()`. _[Example from MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)_.
 
 
-    function reqListener() {  
-      var data = JSON.parse(this.responseText);  
-      console.log(data);  
+    function reqListener() {
+      var data = JSON.parse(this.responseText);
+      console.log(data);
     }
-    
-    function reqError(err) {  
-      console.log('Fetch Error :-S', err);  
+
+    function reqError(err) {
+      console.log('Fetch Error :-S', err);
     }
-    
-    var oReq = new XMLHttpRequest();  
-    oReq.onload = reqListener;  
-    oReq.onerror = reqError;  
-    oReq.open('get', './api/some.json', true);  
+
+    var oReq = new XMLHttpRequest();
+    oReq.onload = reqListener;
+    oReq.onerror = reqError;
+    oReq.open('get', './api/some.json', true);
     oReq.send();
-    
+
 
 ### Fetch
 
 Our fetch request looks a little like this:
 
 
-    fetch('./api/some.json')  
-      .then(  
-        function(response) {  
-          if (response.status !== 200) {  
-            console.log('Looks like there was a problem. Status Code: ' +  
-              response.status);  
-            return;  
+    fetch('./api/some.json')
+      .then(
+        function(response) {
+          if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+              response.status);
+            return;
           }
-    
-          // Examine the text in the response  
-          response.json().then(function(data) {  
-            console.log(data);  
-          });  
-        }  
-      )  
-      .catch(function(err) {  
-        console.log('Fetch Error :-S', err);  
+
+          // Examine the text in the response
+          response.json().then(function(data) {
+            console.log(data);
+          });
+        }
+      )
+      .catch(function(err) {
+        console.log('Fetch Error :-S', err);
       });
-     
+
 
 We start by checking that the response status is 200 before parsing the response
 as JSON.
@@ -96,16 +96,16 @@ parse the response as JSON. Other metadata we may want to access, like headers,
 are illustrated below.
 
 
-    fetch('users.json').then(function(response) {  
-        console.log(response.headers.get('Content-Type'));  
+    fetch('users.json').then(function(response) {
+        console.log(response.headers.get('Content-Type'));
         console.log(response.headers.get('Date'));
-    
-        console.log(response.status);  
-        console.log(response.statusText);  
-        console.log(response.type);  
-        console.log(response.url);  
+
+        console.log(response.status);
+        console.log(response.statusText);
+        console.log(response.type);
+        console.log(response.url);
     });
-    
+
 
 ## Response Types
 
@@ -128,12 +128,7 @@ headers you can view to \`Cache-Control\`, \`Content-Language\`,
 An `opaque` response is for a request made for a resource on a different origin
 that doesn't return CORS headers. With an opaque response we won't be able to
 read the data returned or view the status of the request, meaning we can't check
-if the request was successful or not. With the current `fetch()` implementation it's
-not possible to make requests for resources on a different origin from the
-window global scope. Find out why
-[here](https://code.google.com/p/chromium/issues/detail?id=457157&q=fetch%20no-cors&colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified),
-it should be added when the [Cache API](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#cache-objects)
-is available in the window object.
+if the request was successful or not.
 
 You can define a mode for a fetch request such that only certain requests will
 resolve. The modes you can set are as follows:
@@ -152,17 +147,17 @@ To define the mode, add an options object as the second parameter in the
 `fetch` request and define the mode in that object:
 
 
-    fetch('http://some-site.com/cors-enabled/some.json', {mode: 'cors'})  
-      .then(function(response) {  
-        return response.text();  
-      })  
-      .then(function(text) {  
-        console.log('Request successful', text);  
-      })  
-      .catch(function(error) {  
-        log('Request failed', error)  
+    fetch('http://some-site.com/cors-enabled/some.json', {mode: 'cors'})
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(text) {
+        console.log('Request successful', text);
+      })
+      .catch(function(error) {
+        log('Request failed', error)
       });
-     
+
 
 ## Chaining Promises
 
@@ -175,27 +170,27 @@ parsing in separate functions which return promises, freeing you to only worry
 about handling the final data and the error case.
 
 
-    function status(response) {  
-      if (response.status >= 200 && response.status < 300) {  
-        return Promise.resolve(response)  
-      } else {  
-        return Promise.reject(new Error(response.statusText))  
-      }  
+    function status(response) {
+      if (response.status >= 200 && response.status < 300) {
+        return Promise.resolve(response)
+      } else {
+        return Promise.reject(new Error(response.statusText))
+      }
     }
-    
-    function json(response) {  
-      return response.json()  
+
+    function json(response) {
+      return response.json()
     }
-    
-    fetch('users.json')  
-      .then(status)  
-      .then(json)  
-      .then(function(data) {  
-        console.log('Request succeeded with JSON response', data);  
-      }).catch(function(error) {  
-        console.log('Request failed', error);  
+
+    fetch('users.json')
+      .then(status)
+      .then(json)
+      .then(function(data) {
+        console.log('Request succeeded with JSON response', data);
+      }).catch(function(error) {
+        console.log('Request failed', error);
       });
-     
+
 
 We define the `status` function which checks the **response.status** and
 returns the result of
@@ -220,21 +215,21 @@ To do this we can set the `method` and `body` parameters in the `fetch()`
 options.
 
 
-    fetch(url, {  
-        method: 'post',  
-        headers: {  
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
-        },  
-        body: 'foo=bar&lorem=ipsum'  
+    fetch(url, {
+        method: 'post',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: 'foo=bar&lorem=ipsum'
       })
-      .then(json)  
-      .then(function (data) {  
-        console.log('Request succeeded with JSON response', data);  
-      })  
-      .catch(function (error) {  
-        console.log('Request failed', error);  
+      .then(json)
+      .then(function (data) {
+        console.log('Request succeeded with JSON response', data);
+      })
+      .catch(function (error) {
+        console.log('Request failed', error);
       });
-     
+
 
 ## Sending Credentials with a Fetch Request
 
@@ -242,10 +237,10 @@ Should you want to make a fetch request with credentials such as cookies, you
 should set the `credentials` of the request to `"include"`.
 
 
-    fetch(url, {  
-      credentials: 'include'  
+    fetch(url, {
+      credentials: 'include'
     })
-    
+
 
 ## FAQ
 

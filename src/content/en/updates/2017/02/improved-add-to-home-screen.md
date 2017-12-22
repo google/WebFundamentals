@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-04-17 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-02-02 #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -13,7 +13,7 @@ description: Progressive Web Apps are becoming more integrated with your device.
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome first introduced the ["Add to Home screen"
-banners](/web/fundamentals/engage-and-retain/app-install-banners/) in [Chrome
+banners](/web/fundamentals/app-install-banners) in [Chrome
 42](https://blog.chromium.org/2015/03/chrome-42-beta-push-notifications_12.html).
 This was a big step for the web as it provided users the ability to easily keep
 a favorite site on their home screen, much like native apps. We've heard from
@@ -41,29 +41,11 @@ home screen in the coming months.
 The improved add to home screen experience is already available in Chrome Canary
 and will be rolling out to Chrome 57 beta over the next few weeks.
 
-**You can test your site by following these steps:**
+Note: it has been rolled to all users on Chrome's stable channel as of Chrome
+59.
 
-Warning: These instructions are for web developers only. You should not enable
-"Unknown sources" unless you're testing your own site.
-
-1. Install the latest [Chrome
-   Dev](https://play.google.com/store/apps/details?id=com.chrome.dev) or [Chrome
-   Beta](https://play.google.com/store/apps/details?id=com.chrome.beta) from the
-   Play Store if you don't have it already.
-1. Enable improved add to home screen. These steps are only needed during the 
-   developer preview.
-    1. Open chrome://flags in Chrome dev and enable the flag 
-       `#enable-improved-a2hs` ("Find in page" in the triple-dot menu is helpful 
-       for finding it.) You'll be prompted to restart Chrome.
-    1. Once Chrome is restarted, you'll be prompted to go to settings to turn on
-       "Unknown sources" if it's not enabled already. (In general you shouldn't
-       have this enabled, so we recommend disabling it when you're done
-       testing.) If you don't see the prompt you can find it in Android Settings
-       &gt; Security &gt; Device Administration.
-1. Visit your PWA. You can start install from the three dot menu &gt; "Add to 
-   Home screen" or through the add to home screen banner.
-    1. In the developer preview you'll additionally see a prompt from the 
-       package installer to confirm.
+To test your site, visit your PWA. You can start install from the three dot menu
+&gt; "Add to Home screen" or through the add to home screen banner.
 
 This new experience is a huge improvement over the original version of add to
 home screen, but there are some differences between these installed Progressive
@@ -178,7 +160,7 @@ Here are some simple rules:
 
 Some examples:
 
-|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `caluclated start_url` | `valid?` |
+|  `manifest url` | `start_url` | `scope attr` | `calculated scope` | `calculated start_url` | `valid?` |
 |  ------ | ------ | ------ | ------ | ------ | ------ |
 |  /tech-today/manifest.json | ./index.html | undefined | /tech-today/ | /tech-today/index.html | valid |
 |  /tech-today/manifest.json | ./index.html | ../ | / | /index.html | valid - but scope leaks to higher level |
@@ -231,7 +213,7 @@ questions you might have.
 
 The requirements are designed to be the same as the [technical requirements for
 the add to home screen
-banner](/web/fundamentals/engage-and-retain/app-install-banners/).
+banner](/web/fundamentals/app-install-banners).
 
 We recommend using [Lighthouse](/web/tools/lighthouse/) to audit your PWA.
 
@@ -311,11 +293,6 @@ No, the site opens in the version of Chrome the user added the site from.
 
 No. The update to the service worker will be processed the next time that the
 user visits the page.
-
-### When will the "Unknown sources" restriction be removed?
-
-It is being removed right now in a staged manner.  We anticipate that when this
-hits the stable channel of Chrome this will not be needed at all.
 
 ### Can we upload the APKs that are created to the Play Store?
 

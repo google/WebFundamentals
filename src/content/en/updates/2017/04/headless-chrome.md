@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -307,7 +307,7 @@ launchChrome().then(async chrome => {
 
 Results in something like: `HeadlessChrome/60.0.3082.0`
 
-**Example** - check if the site has a [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/)
+**Example** - check if the site has a [web app manifest](/web/fundamentals/web-app-manifest)
 
 ```javascript
 const CDP = require('chrome-remote-interface');

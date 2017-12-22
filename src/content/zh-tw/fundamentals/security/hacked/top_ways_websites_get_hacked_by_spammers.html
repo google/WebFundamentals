@@ -1,0 +1,65 @@
+<html devsite><head>
+  <title>垃圾內容發佈者入侵網站的常見方式</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="9zItsxS/fL9X/nV/RwRY/vxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKril0ujkfrC/WCkVnHV2soTDmc2ORF1Lkt+7NCiGHaIhRh2JUKRR0pmqTL220uNkfsc838Y4Gpr0QFRjk8ksx2sc="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+<p>瞭解網站遭到入侵的方式相當重要，如此才能確保網站日後不受攻擊。本文將說明一些可能導致網站遭到入侵的安全性漏洞。</p>
+
+    <h2>密碼遭到破解</h2>
+<p>攻擊者可能會使用密碼猜測手法，不斷嘗試不同密碼，直到猜對為止。密碼猜測攻擊的執行方法眾多，例如嘗試常用密碼或掃描隨機字母和數字組合，直到發現正確密碼為止。防範之道是建立不容易被猜到的高強度密碼。如需<a href="https://support.google.com/accounts/answer/32040" l10n-encrypted-href="PUOk06V/bRLmdopV/wSCnkkCfIu7sCbUls/iCrWrRlwtKD7X+LQoliQ3R5q6BgM3JMvPx64R34Rzm9AG5IWykA==">建立高強度密碼的提示</a>，請參閱 Google 的說明中心文章。</p>
+
+<p>請謹記兩個重點。首先，請避免在不同服務中使用相同的密碼。一旦攻擊者成功找到有效的使用者名稱和密碼組合，就會儘可能在眾多服務嘗試使用該組合。因此，在不同服務使用不同密碼可避免其他服務的帳戶遭到入侵。</p>
+
+<p>其次，請儘量善用雙重驗證 (2FA)，例如 <a href="https://www.google.com/landing/2step/" l10n-encrypted-href="pyyfMXvZENy75E/2vywa8JmZYYtAdDjPTefDHHQyT1nxc28SLLGdF5SejxVMBGG0">Google 兩步驟驗證機制</a>。2FA 通常會要求提供簡訊驗證碼或其他動態產生的 PIN 碼，讓登入憑證多一層安全防護。即使攻擊者竊取了密碼，仍不易存取帳戶。部分 CMS 供應商會引導您設定 2FA：請參閱 <a href="https://docs.joomla.org/J3.x:Two_Factor_Authentication" l10n-encrypted-href="glT/uv7x/xTfB7pJVh6/sanzoyv6n9NsKZNFKjvLxzww8ChbysK9ugRJaWk119QiorChdJArL3HyrwYjcdJreA==">Joomla!</a>、<a href="https://codex.wordpress.org/Two_Step_Authentication" l10n-encrypted-href="xa6/TlZ/be6PkfmUSgvbQDRQy6HTqvZI/qXrac1BQEkp1emfq+OONcQ7OzAz5+8BZ0lJVLgkuxbrZuca+oAOCg==">WordPress</a> 或 <a href="https://www.drupal.org/project/tfa" l10n-encrypted-href="DqO1CNU8DNKESLi7tYKuiWsZMbSsRVdCkmwmMfDONH3Gh4U25ylCwrIOz14uXUZn">Drupal</a> 的專屬說明文件。</p>
+
+    <h2>未安裝安全性更新</h2>
+<p>版本較舊的軟體可能會受到高風險的安全性漏洞影響，讓攻擊者乘機入侵整個網站。攻擊者會主動尋找有安全性漏洞的舊版軟體。忽略網站上的安全性漏洞會讓網站更容易遭到攻擊。</p>
+
+<p><b>注意：</b>請務必為您的網站定期檢查軟體更新，以修補安全性漏洞。您甚至可以為您的軟體設定自動更新，並針對您網站目前執行的所有軟體申請訂閱安全性宣告清單。</p>
+
+<p>建議保持最新版本的一些軟體範例包括：</p>
+<ul>
+  <li>網路伺服器軟體 (如果您執行自己的伺服器)</li>
+  <li>內容管理系統。例如：<a href="https://wordpress.org/news/category/security/" l10n-encrypted-href="W+9PxfeRyWb/RzbKS6a0sLxh9UnE0mkXXvvktk1Dxe1RNObDS28WP/zNormWufvFqvP4zdF86Pqj1NbCoHpRoQ==">Wordpress</a>、<a href="https://www.drupal.org/security" l10n-encrypted-href="ce91eMLVR+A4rhrrOr4rbSfTTkV/xGd2qLdiFF0fAgkuIpAt8qN4rd7/Y0xv3gnm">Drupal</a> 和 <a href="https://developer.joomla.org/security-centre.html" l10n-encrypted-href="r9wGZnZ5gWTdBk9DubOim4ZndVF978w0JzgzHtbJoLMGMY2rSgOaHEHaNq9eE5zraort4qj/MEcLxlAk3CkpBw==">Joomla!</a> 發佈的安全性更新。</li>
+  <li>您在網站上使用的所有外掛程式</li>
+</ul>
+
+  <h2>主題和外掛程式不安全</h2>
+<p>在 CMS 上使用外掛程式和主題可增添實用的強大功能。不過，一旦主題和外掛程式版本過舊或未修補漏洞，就會成為網站上的重大安全性漏洞。如果您在網站上使用主題或外掛程式，請務必保持最新版本。請移除開發人員已停止維護的主題或外掛程式。</p>
+
+<p>如果是不信任的網站免費提供的外掛程式或主題，請格外小心。在付費外掛程式或主題的免費版本中加入惡意程式碼是攻擊者常用的手段。移除外掛程式時，請確實將所有相關檔案從您的伺服器上移除，而不要只停用外掛程式。</p>
+
+    <h2>社交工程</h2>
+<p><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)" l10n-encrypted-href="GNl3mBL0HYVq6mbgtcZZBAOrZfK8qSBsW73e1nANJzDhdag+xA68+MwQ16jfZc75PDy3vtY3O31aYZLUJFuYjA==">社交工程</a>一種是利用人性弱點而規避精密安全性基礎架構的手法。這類攻擊會誘使經過授權的使用者提供密碼之類的機密資訊。舉例來說，網路詐騙就是常見的社交工程型態。攻擊者試圖進行網路詐騙時，會假冒合法機構的身分傳送電子郵件，請使用者提供機密資訊。</p>
+
+<p><b>注意：</b>根據 <a href="https://research.google.com/pubs/pub43469.html">Google 對社交工程的研究</a>，部分最有效率的網路詐騙活動的成功率可達到 45%！</p>
+
+<p>提醒您，除非您確定要求者的身分，否則切勿提供任機密資訊 (例如密碼、信用卡號碼、銀行資訊，甚至是出生日期)。如果您的網站由多人共同管理，建議您提供合理的訓練，提升管理員對於社交功能攻擊的安全防範意識。請參閱 Gmail 說明中心提供的<a href="https://support.google.com/mail/answer/8253" l10n-encrypted-href="Qxy7djzLrQDlRvlnztgY6uGsVVamVB4dakLBAujPCV5MZGYTR6r2uoEtKSMEEuiF">基本網路詐騙防範提示</a>。</p>
+
+    <h2>安全性政策漏洞</h2>
+<p>系統管理員或自行管理網站營運者請謹記，不完善的安全性政策會讓攻擊者入侵您的網站。容易遭入侵的政策範例如下：</p>
+  <ul>
+    <li>允許使用者建立低強度密碼</li>
+    <li>將管理權限授予不需要的使用者</li>
+    <li>網站未啟用 HTTPS，且允許使用者使用 HTTP 登入</li>
+    <li>允許未經驗證的使用者上傳檔案，或未檢查檔案類型</li>
+  </ul>
+
+<p>確保網站安全的一些基本提示：</p>
+  <ul>
+    <li>停用不需要服務，確保網站受到高度安全防護</li>
+    <li>測試存取權控管與使用者權限</li>
+    <li>針對處理機密資訊的網頁 (例如登入頁面) 使用加密保護措施</li>
+    <li>定期檢查紀錄中有無任何可疑的活動</li>
+  </ul>
+
+
+    <h2>資料外洩</h2>
+<p>上傳機密資料時，如果因設定錯誤導致機密資訊公開，資料就可能外洩。舉例來說，在網路應用程式中發生處理錯誤或訊息傳送錯誤時，未經處理的錯誤訊息可能會洩漏設定資訊。惡意操作者會利用搜尋引擎的功能，透過所謂的「<a href="https://en.wikipedia.org/wiki/Google_hacking" l10n-encrypted-href="FDZcx272AJOi7Y9OblQ6JQOrZfK8qSBsW73e1nANJzCd/pbaXyxvswzDfzJkDrry">Dorking</a>」方式找到這類資料。</p>
+
+<p>您可以定期進行檢查，並透過安全性政策將機密資料傳送對象限定為信任的實體，確保網站不會洩漏機密資訊給未經授權的使用者。如果您發現網站上洩露了機密資訊，需要緊急從 Google 搜尋結果中移除，可以使用<a href="https://www.google.com/webmasters/tools/removals" l10n-encrypted-href="8XmwXx73jEjMr74g6qSO7wSJUyK0ahq5p2Xo+yKO2LCb6sVoHIw/dbKYlYNpC3bE6alqqczRgjG7j5E4wpj/eg==">網址移除工具</a>，要求我們從 Google 搜尋服務中移除個別網址。</p>
+
+
+</body></html>

@@ -1,0 +1,91 @@
+<html devsite><head>
+  <title>Search Console verwenden</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Wenn Sie bereits die <a href="https://www.support.google.com/webmasters/answer/35179">Inhaberschaft Ihrer Website bestätigt haben</a>, können Sie die erste Aktion unten überspringen und sofort mit der Prüfung der Informationen Ihrer Website in der Search Console beginnen.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Sie benötigen Folgendes:</h3>
+
+<ul>
+  <li>Die Möglichkeit, die <a href="https://www.support.google.com/webmasters/answer/35179">Inhaberschaft Ihrer Website zu bestätigen</a>. Hierzu sollten Sie beispielsweise eine Datei im Stammverzeichnis hinzufügen, <a href="https://www.support.google.com/webmasters/answer/79812">Meta-Tags</a> erstellen oder über ein Google Analytics-Administratorkonto für die Website verfügen.</li>
+</ul>
+
+<div class="action">
+  <h3>Folgendes ist zu tun:</h3>
+
+  <p>In diesem Abschnitt werden folgende Aktionen erläutert:</p>
+
+  <ol>
+    <li><a href="#verify">Inhaberschaft Ihrer Website in der Search Console bestätigen</a></li>
+    <li><a href="#check">Prüfen, ob der Hacker die Inhaberschaft in der Search Console schon bestätigt und unerwünschte Änderungen an den Einstellungen vorgenommen hat</a></li>
+    <li><a href="#determine">Art des Angriffs bestimmen</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Inhaberschaft Ihrer Website in der Search Console bestätigen</h4>
+
+<ol>
+  <li>Öffnen Sie einen Browser und gehen Sie zur Webmaster-Zentrale unter <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Klicken Sie auf <strong>Search Console</strong>.</li>
+  <li>Melden Sie sich in der Search Console mit einem <a href="https://www.google.com/accounts">Google-Konto</a> an.
+    Wenn Sie über kein Google-Konto verfügen, klicken Sie auf <strong>Konto erstellen</strong>. Ihr vorhandenes E-Mail-Konto bei einem anderen Unternehmen bleibt erhalten, auch wenn Sie ein neues Google-Konto erstellen.
+    <a href="https://accounts.google.com/SignUp">Weitere Informationen zu Konten</a></li>
+  <li>Klicken Sie auf <strong>Website hinzufügen</strong>. Geben Sie die URL Ihrer Website in das Feld ein und klicken Sie auf <strong>Weiter</strong>.</li>
+  <li>Wählen Sie die Bestätigungsmethode, die am einfachsten durchführbar ist. Auf der Seite "Bestätigung" können Sie auf dem Tab <strong>Empfohlene Methode</strong> einsehen, welche Methode nach Einschätzung von Google am besten funktioniert. Weitere Methoden sind auf dem Tab <strong>Alternative Methoden</strong> aufgelistet.
+    <a href="https://goo.gl/kQnHQ">Weitere Informationen zur Bestätigung</a></li>
+  <li>Stellen Sie Ihre Website wieder online, falls Sie eine Bestätigungsmethode ausgewählt haben, die den Zugriff auf Ihre Website erfordert – beispielsweise ein HTML-Meta-Tag oder eine HTML-Datei.</li>
+  <li>Klicken Sie auf <strong>Überprüfen</strong>, um die Inhaberschaft mit der ausgewählten Methode zu überprüfen. Wenn die Überprüfung erfolgreich ist, sehen Sie ein Bestätigungsfenster.
+    Sie können Ihre Website wieder offline nehmen. Denken Sie aber daran, dass die Website bei späteren Schritten wieder online verfügbar sein muss.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Prüfen, ob der Hacker die Inhaberschaft in der Search Console schon bestätigt und unerwünschte Änderungen an den Einstellungen vorgenommen hat</h4>
+
+<ol>
+  <li>Klicken Sie auf das Search Console-Logo, um die Startseite der Search Console aufzurufen.</li>
+  <li>Suchen Sie Ihre Website und klicken Sie dann auf <strong>Website verwalten</strong>.</li>
+  <li>Klicken Sie auf <strong>Nutzer hinzufügen oder entfernen</strong>.</li>
+  <li>Stellen Sie sicher, dass alle aufgeführten <a href="https://www.support.google.com/webmasters/answer/44227">Nutzer und Inhaber</a> wirklich autorisiert sind.</li>
+  <li>Schreiben Sie die E-Mail-Adresse jedes unbefugten Nutzers auf, da diese Information später hilfreich sein könnte. Löschen Sie anschließend den betreffenden Nutzer von Ihrer Website. Im Fall von unberechtigten Inhabern müssen Sie sowohl den Inhaber selbst als auch mögliche Überprüfungs-Tokens löschen, etwa ein Überprüfungs-Meta-Tag auf der Startseite oder eine HTML-Datei auf dem Server. <a href="https://www.support.google.com/webmasters/answer/2454036">Weitere Informationen</a></li>
+  <li>Prüfen Sie, ob unerwünschte Änderungen in den Einstellungen der Search Console vorgenommen wurden. Klicken Sie auf das Zahnradsymbol <span class="material-icons">settings</span> und anschließend auf <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Website-Einstellungen</strong></a>, um unerwünschte Änderungen wie beispielsweise einer niedrigere <a href="https://www.support.google.com/webmasters/answer/48620">Crawling-Frequenz</a> zu ermitteln. Der Hacker wählt eventuell eine solche Einstellung, um Suchmaschinen-Spider zu umgehen. Prüfen Sie außerdem, ob ungewöhnliche Einträge im Abschnitt <strong>Google-Index</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">URLs entfernen</a> oder unter <span class="material-icons">"Einstellungen"</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">Adressänderung</a> vorhanden sind.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Art des Angriffs bestimmen</h4>
+
+<p>Die Informationen im Nachrichten-Center und unter "Sicherheitsprobleme" in der Search Console helfen Ihnen herauszufinden, ob Ihre Website auf eine der folgenden Weisen gehackt wurde:</p>
+
+<ul>
+  <li>Unter Einfügung von Spam-Inhalten, die die Qualität und Relevanz der Suchergebnisse verringern könnten</li>
+  <li>Für Phishing-Zwecke</li>
+  <li>Zur Verbreitung von Malware</li>
+</ul>
+
+<p>Führen Sie die folgenden Schritte durch, um Ihre Website mit der Search Console auf Hacking oder Malware zu überprüfen:</p>
+
+<ol>
+  <li>Klicken Sie auf das Search Console-Logo in der oberen Ecke, um die Startseite der Search Console aufzurufen.</li>
+  <li>Klicken Sie auf <strong>Nachrichten</strong>.</li>
+  <li>Prüfen Sie, ob wichtige Nachrichten von Google vorliegen, in denen Ihnen mitgeteilt wird, dass Ihre Website für 1) Spam-Seiten, -Texte oder -Links, 2) Phishing oder 3) die Verbreitung von Malware verwendet wurde. Eine Phishing-Benachrichtigung sollten Sie erst löschen, wenn das gesamte Wiederherstellungsverfahren abgeschlossen ist.</li>
+  <li>Gehen Sie in den Webmaster-Tools zu <strong>Sicherheitsprobleme</strong>.
+    <ul>
+      <li>Für Websites, die von Malware befallen sind, wird eine Top-Level-Überschrift "Malware" gefolgt von den Kategorien der Malware-Typen angezeigt, wie beispielsweise "Serverkonfiguration geändert" oder "Fehlervorlage eingeschleust". In diesen Fällen nutzt der Hacker Ihre Website möglicherweise, um die Systeme der Besucher mit Software zu infizieren, die auf deren vertrauliche Informationen zugreift oder die Computer beschädigt. Wie Sie dieses Problem beheben können, erfahren Sie im Abschnitt <a href="hacked_with_malware">Schaden durch Malware beurteilen</a>.
+      </li>
+      <li>Websites, die gehackt wurden, um Spam zu verbreiten, weisen möglicherweise eine Top-Level-Überschrift "Gehackt" und dann Kategorien mit Hack-Typen wie "Inhalt eingeschleust" auf. Der Hacker hat wahrscheinlich Spam-Seiten, -Texte oder -Links auf Ihrer Website platziert. Wie Sie dieses Problem beheben können, erfahren Sie im Abschnitt <a href="hacked_with_spam">Schaden durch Spam beurteilen</a>.</li>
+      <li>Wenn für Websites im Nachrichten-Center der Search Console eine Phishing-Benachrichtigung vorliegt, werden möglicherweise keine Informationen im Abschnitt "Sicherheitsprobleme" angezeigt. Der Hacker erstellt Phishing-Seiten auf Ihrer Website, um vertrauliche Anmeldedaten, Passwörter oder Finanzdaten zu erhalten. Oftmals wird hierfür eine vertrauenswürdige Website vorgetäuscht. Phishing wird ähnlich bereinigt wie Spam. Deshalb verweisen wir in diesem Fall auf den Abschnitt <a href="hacked_with_spam">Schaden durch Spam beurteilen</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Nächster Schritt</h2>
+
+<p>Der nächste Schritt im Verfahren ist: <a href="hacked_with_spam">Schaden durch Spam beurteilen </a> bzw. <a href="hacked_with_malware">Schaden durch Malware beurteilen</a>.</p>
+
+</body></html>

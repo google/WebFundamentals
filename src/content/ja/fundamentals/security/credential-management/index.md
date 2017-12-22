@@ -9,6 +9,10 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
+
+{% include "web/_shared/translation-out-of-date.html" %}
+
+
 [Credential Management API](https://www.w3.org/TR/credential-management/) は標準ベースのブラウザ API であり、複数の端末でのシームレスなログインを実現するためにサイトとブラウザ間にプログラム インターフェースを提供し、ログインフローを簡潔にします。
 
 

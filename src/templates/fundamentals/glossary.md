@@ -7,26 +7,34 @@ book_path: /web/fundamentals/_book.yaml
 
 # Glossary {: .page-title }
 
-{{#each sortedTerms }}
+{{#each sortedTerms}}
 
 ## {{ @key }}
 
 {{#each this}}
 <dl itemscope="" itemType="http://schema.org/Thing">
   <dt>
-    <h3 {{#if acronym}}id="{{ acronym }}"{{/if}}>
-      <span itemprop="name">{{ term }}</span>
-      {{#if acronym}}(<abbr title="{{ term }}" itemprop="alternateName">{{ acronym }}</abbr>){{/if}}
+    <h3 {{~#if acronym}} id="{{ acronym }}"{{/if}}>
+      <span itemprop="name">{{ term }}</span>{{~#if acronym}}
+      (<abbr title="{{ term }}" itemprop="alternateName">{{ acronym }}</abbr>){{/if}}
     </h3>
   </dt>
-  <dd>
-    {{#if description}}<p itemprop="description">{{{description}}}</p>{{/if}}
-    {{#if see}}<p><b>See</b> <a href="{{see.link}}" itemprop="mainEntityOfPage">{{see.title}}</a></p>{{/if}}
-    {{#if links}}<ul>
+  <dd>{{~#if description}}
+    <p itemprop="description">
+      {{{description}}}
+    </p>{{/if}}{{~#if see}}
+    <p>
+      <b>See</b>
+      <a href="{{see.link}}" itemprop="mainEntityOfPage">
+        {{see.title}}
+      </a>
+    </p>{{/if}}{{~#if links}}
+    <ul>
       {{#each links}}<li><a href="{{link}}">{{title}}</a></li>{{/each}}
-    <ul>{{/if}}
+    </ul>{{/if}}
   </dd>
 </dl>
+
 {{/each}}
 
 {{/each}}

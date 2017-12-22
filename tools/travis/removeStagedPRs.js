@@ -1,9 +1,10 @@
-'use strict';
-
-/*
-    removeStagedPRs.js
-    Removes Staged PRs that are either closed or merged.
+/**
+ * @fileoverview Removes Staged PRs that are either closed or merged.
+ *
+ * @author Pete LePage <petele@google.com>
  */
+
+'use strict';
 
 let chalk = require('chalk');
 let GitHubApi = require('github');

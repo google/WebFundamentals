@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to store data locally for improved response time and offline support.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>Storage #}
 
 # Offline Storage for Progressive Web Apps {: .page-title }
 
@@ -35,7 +36,7 @@ experience offline.
 Let’s get right to the point with a general recommendation for storing data
 offline:
 
-* For URL addressable resources, use the [**Cache API**](https://davidwalsh.name/cache)
+* For the network resources necessary to load your app while offline, use the [**Cache API**](cache-api)
   (part of [service workers](/web/fundamentals/primers/service-worker/)).
 * For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
   (with a [promises wrapper](https://www.npmjs.com/package/idb)).
@@ -114,7 +115,11 @@ sufficiently mature or standardized to encourage widespread adoption yet.
     </tr>
     <tr>
       <td>Edge</td>
-      <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">Dependent on volume size</a></td>
+      <td>
+        <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">
+          Dependent on volume size
+        </a>
+      </td>
     </tr>
   <tbody>
 </table>

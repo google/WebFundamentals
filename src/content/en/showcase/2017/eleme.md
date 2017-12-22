@@ -20,7 +20,7 @@ cities all around China, and has over 1.3 million restaurant listings.
 With 99% of its users ordering food on mobile, Ele.me set out to improve its
 mobile web experience, making it faster and more reliable in flaky connections,
 all while relying on the core technical model of a multi-page app to 
-accommodate fit their operational needs.
+accommodate their operational needs.
 
 * Loading time decreased by 11.6% across all pre-cached pages
 * Loading time decreased on average by 6.35% across all pages. 

@@ -1,0 +1,97 @@
+<html devsite><head>
+<title>Meminta peninjauan</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>Anda harus meminta peninjauan dari Google untuk menghapus tanda pada halaman atau situs sebagai berbahaya atau kemungkinan
+  menipu pengguna.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>Anda membutuhkan:</h3>
+<ul>
+  <li>Pengetahuan tentang perintah terminal/shell</li>
+</ul>
+<h3>Yang akan Anda lakukan:</h3>
+<h4>1. Prasyarat</h4>
+<p>Sebelum meminta peninjauan, konfirmasi bahwa Anda telah melakukan langkah berikut:</p>
+<ul>
+  <li>Memverifikasi kepemilikan situs di Search Console</li>
+  <li>Membersihkan situs dari vandalisme peretas</li>
+  <li>Memperbaiki kerentanan</li>
+  <li>Menjadikan situs bersih Anda online kembali</li>
+</ul>
+<h4>2. Memeriksa kembali bahwa halaman Anda tersedia dan bersih</h4>
+<p>Agar aman, gunakan Wget atau cURL untuk melihat halaman situs Anda, seperti beranda
+  dan URL yang dimodifikasi oleh peretas; sekarang ini seharusnya sudah bersih. Jika demikian, dan Anda
+  yakin bahwa hal yang sama juga berlaku untuk halaman lainnya
+  di situs, ini adalah saat yang tepat untuk meminta peninjauan.</p>
+  <p><strong>Penting:</strong> Halaman Anda harus tersedia untuk di-crawl oleh Googlebot guna memastikan bahwa halaman tersebut bersih. Pastikan bahwa halaman tidak di-crawl robot atau diblokir dari pengindeksan oleh perintah
+  atau tag META robot 'noindex'.</p>
+<h4 id="request_review">3 Meminta peninjauan</h4>
+<p>Sebelum meminta peninjauan, pastikan bahwa masalah sudah sepenuhnya diperbaiki; meminta peninjauan jika masih ada masalah
+  hanya akan memperpanjang jangka waktu penandaan situs Anda sebagai berbahaya.</p>
+<ul>
+  <li><strong>Phishing</strong>
+    <ol>
+      <li>Selesaikan peninjauan di <a href="https://www.google.com/safebrowsing/report_error/">google.com/safebrowsing/report_error/</a>.
+        Peninjauan ini menghilangkan peringatan phishing dari halaman phishing yang telah dibersihkan. Proses ini
+        juga berfungsi sebagai alat pelaporan untuk pemilik situs yang yakin bahwa halaman mereka tidak seharusnya ditandai
+        karena phishing.</li>
+    </ol>
+  </li>
+  <li><strong>Malware atau Spam</strong>
+    <ol>
+      <li>Buka <a href="https://www.google.com/webmasters/tools/security-issues" target="new">
+      <strong>Laporan Masalah Keamanan</strong></a> di Search Console. Laporan mungkin masih
+       menampilkan peringatan dan contoh URL terinfeksi yang sebelumnya Anda lihat.</li>
+      <li>Jika Anda yakin bahwa contoh URL yang tercantum
+        semuanya sudah bersih, pilih <strong>Minta peninjauan</strong>. Untuk mengirimkan peninjauan, berikan informasi
+        selengkapnya bahwa situs tersebut telah bersih dari kerusakan peretas. Sebagai contoh,
+        untuk setiap kategori dalam Masalah Keamanan, Anda dapat menulis kalimat yang menjelaskan cara
+        situs dibersihkan (misalnya, "Untuk URL yang diretas dengan injeksi konten, saya menghapus konten berisi spam
+        dan memperbaiki kerentanannya: memperbarui plugin yang usang.").</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. Tunggu proses peninjauan</h4>
+<ul>
+  <li><strong>Waktu pemrosesan peninjauan malware:</strong> Peninjauan situs yang terinfeksi malware memerlukan waktu proses beberapa hari. Setelah peninjauan selesai,
+    tanggapan akan tersedia dalam bagian <strong>Pesan</strong> di Search Console.</li>
+  <li><strong>Waktu proses peninjauan situs yang diretas dengan spam:</strong> Proses peninjauan
+    situs yang diretas dengan spam mungkin perlu waktu hingga beberapa minggu. Alasannya
+    karena peninjauan spam dapat melibatkan penyelidikan manual atau pemrosesan ulang
+    seluruh halaman yang diretas. Jika peninjauan disetujui, Masalah Keamanan tidak lagi
+    menampilkan jenis kategori atau contoh URL yang diretas. </li>
+  <li><strong>Waktu proses peninjauan phishing:</strong> Proses peninjauan phishing dapat
+    memakan waktu sekitar satu hari. Jika berhasil, peringatan phising yang dapat terlihat oleh pengguna akan dihapus
+    dan halaman Anda dapat muncul kembali di hasil penelusuran.</li>
+</ul>
+<p>Jika Google menemukan bahwa situs Anda bersih, peringatan dari browser dan
+  hasil penelusuran seharusnya dihapus dalam waktu 72 jam.</p>
+<p>Jika Google menetapkan bahwa Anda belum memperbaiki masalah, laporan Masalah Keamanan di Search Console
+  biasanya akan menampilkan lebih banyak contoh URL terinfeksi untuk membantu penyelidikan Anda berikutnya.
+  Peringatan malware atau situs yang diretas akan tetap ada dalam hasil penelusuran dan/atau browser sebagai
+  peringatan untuk melindungi pengguna.</p>
+<h4>Langkah akhir</h4>
+<ul>
+  <li><strong>Jika permintaan Anda disetujui,</strong> verifikasi bahwa situs berfungsi seperti yang diharapkan: halaman dimuat
+    dengan semestinya dan link dapat diklik. Untuk menjaga keamanan situs, sebaiknya semua pemilik situs
+    membuat rencana pemeliharaan dan keamanan yang dibuat di <a href="clean_site">Membersihkan
+    dan memelihara situs Anda</a>. Untuk informasi selengkapnya, pertimbangkan referensi berikut
+    dari <a href="https://www.stopbadware.org">StopBadware</a>:
+    <ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">Mencegah badware:
+        dasar-dasar</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">Referensi tambahan:
+        situs yang diretas</a></li>
+    </ul>
+  </li>
+  <li><strong>Jika permintaan Anda tidak disetujui,</strong> periksa kembali situs
+    apakah terdapat <a href="hacked_with_malware">malware</a>, <a href="hacked_with_spam">spam</a>,
+    perubahan, atau file baru apa pun yang dibuat oleh peretas. Atau, pertimbangkan untuk
+    meminta bantuan lebih lanjut dari <a href="support_team">para pakar dalam tim dukungan Anda</a>.</li>
+</ul>
+
+</body></html>
