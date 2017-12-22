@@ -8,11 +8,11 @@ SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 def getPage(requestPath, lang):
   fileLocations = [
     os.path.join(SOURCE_PATH, lang, requestPath) + '.md',
-    os.path.join(SOURCE_PATH, 'en', requestPath) + '.md',
-    os.path.join(SOURCE_PATH, lang, requestPath) + '.jshtml',
-    os.path.join(SOURCE_PATH, 'en', requestPath) + '.jshtml',
     os.path.join(SOURCE_PATH, lang, requestPath) + '.html',
+    os.path.join(SOURCE_PATH, lang, requestPath) + '.jshtml',
+    os.path.join(SOURCE_PATH, 'en', requestPath) + '.md',
     os.path.join(SOURCE_PATH, 'en', requestPath) + '.html',
+    os.path.join(SOURCE_PATH, 'en', requestPath) + '.jshtml',
   ]
   for fileLocation in fileLocations:
     if os.path.isfile(fileLocation):

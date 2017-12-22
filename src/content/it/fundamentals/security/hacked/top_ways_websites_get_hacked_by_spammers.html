@@ -1,0 +1,72 @@
+<html devsite><head>
+  <title>Principali modalità di compromissione dei siti web da parte degli spammer</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="9zItsxS/fL9X/nV/RwRY/vxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKril0ujkfrC/WCkVnHV2soTDmc2ORF1Lkt+7NCiGHaIhRh2JUKRR0pmqTL220uNkfsc838Y4Gpr0QFRjk8ksx2sc="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+<p>Capire in che modo il tuo sito è stato compromesso è un requisito importante per proteggerlo da eventuali attacchi. In questo articolo parleremo di alcune vulnerabilità della sicurezza che possono causare la compromissione di un sito.</p>
+
+    <h2>Password compromesse</h2>
+<p>I malintenzionati possono utilizzare varie tecniche per decifrare la password, ad esempio provando a inserire password diverse finché non trovano quella corretta. Gli attacchi basati sulla decifrazione delle password possono essere sferrati con metodi diversi, ad esempio inserendo password comuni o provando a utilizzare combinazioni casuali di lettere e numeri finché non si scopre la password.
+   Per evitare questi attacchi, scegli una password complessa che risulti difficile da decifrare.
+   Nell'articolo del Centro assistenza di Google <a href="https://support.google.com/accounts/answer/32040" l10n-encrypted-href="PUOk06V/bRLmdopV/wSCnkkCfIu7sCbUls/iCrWrRlwtKD7X+LQoliQ3R5q6BgM3JMvPx64R34Rzm9AG5IWykA==">puoi trovare suggerimenti per la creazione di una password complessa</a>.</p>
+
+<p>Ci sono due aspetti importanti da tenere a mente. Per prima cosa, è importante evitare di utilizzare le stesse password per più servizi. Dopo aver identificato una combinazione di password e nome utente funzionante, i malintenzionati cercheranno di utilizzarla con il maggior numero possibile di servizi.
+  Pertanto, se utilizzi password diverse in servizi diversi, puoi evitare la compromissione degli account relativi ad altri servizi.</p>
+
+<p>In secondo luogo, se l'opzione è disponibile, usufruisci di una tecnica di autenticazione a due fattori, come <a href="https://www.google.com/landing/2step/" l10n-encrypted-href="pyyfMXvZENy75E/2vywa8JmZYYtAdDjPTefDHHQyT1nxc28SLLGdF5SejxVMBGG0">la verifica in due passaggi di Google</a>. L'autenticazione a due fattori prevede un secondo livello di credenziali di accesso, solitamente sotto forma di un codice inviato tramite SMS o di un altro PIN generato dinamicamente, che riducono la possibilità che un malintenzionato riesca ad accedere al tuo account solo con una password rubata. Alcuni fornitori di sistemi di gestione dei contenuti offrono indicazioni su come configurare l'autenticazione a due fattori. Consulta la documentazione relativa a <a href="https://docs.joomla.org/J3.x:Two_Factor_Authentication" l10n-encrypted-href="glT/uv7x/xTfB7pJVh6/sanzoyv6n9NsKZNFKjvLxzww8ChbysK9ugRJaWk119QiorChdJArL3HyrwYjcdJreA==">Joomla!</a>
+  , <a href="https://codex.wordpress.org/Two_Step_Authentication" l10n-encrypted-href="xa6/TlZ/be6PkfmUSgvbQDRQy6HTqvZI/qXrac1BQEkp1emfq+OONcQ7OzAz5+8BZ0lJVLgkuxbrZuca+oAOCg==">WordPress</a> o <a href="https://www.drupal.org/project/tfa" l10n-encrypted-href="DqO1CNU8DNKESLi7tYKuiWsZMbSsRVdCkmwmMfDONH3Gh4U25ylCwrIOz14uXUZn">Drupal</a>.</p>
+
+    <h2>Mancata esecuzione degli aggiornamenti di sicurezza</h2>
+<p>Le versioni obsolete dei software possono presentare vulnerabilità di sicurezza molto pericolose, che consentono ai malintenzionati di compromettere un sito intero. I malintenzionati cercano attivamente software obsoleti con vulnerabilità. Ignorare una vulnerabilità nel tuo sito aumenta la probabilità che divenga oggetto di un attacco.</p>
+
+<p><b>Nota:</b> per porre rimedio alle vulnerabilità, è indispensabile verificare periodicamente la presenza di aggiornamenti software per il tuo sito.
+  Ancor meglio sarebbe configurare gli aggiornamenti automatici per il software, laddove possibile, e iscriversi agli elenchi di annunci relativi alla sicurezza per tutti i software attivi e in esecuzione.</p>
+
+<p>Tra i software che è consigliabile tenere sempre aggiornati, ad esempio, sono inclusi:</p>
+<ul>
+  <li>I software per i server web, se esegui server di tua proprietà</li>
+  <li>I sistemi di gestione dei contenuti, ad esempio release di sicurezza di <a href="https://wordpress.org/news/category/security/" l10n-encrypted-href="W+9PxfeRyWb/RzbKS6a0sLxh9UnE0mkXXvvktk1Dxe1RNObDS28WP/zNormWufvFqvP4zdF86Pqj1NbCoHpRoQ==">Wordpress</a>, <a href="https://www.drupal.org/security" l10n-encrypted-href="ce91eMLVR+A4rhrrOr4rbSfTTkV/xGd2qLdiFF0fAgkuIpAt8qN4rd7/Y0xv3gnm">Drupal</a> e <a href="https://developer.joomla.org/security-centre.html" l10n-encrypted-href="r9wGZnZ5gWTdBk9DubOim4ZndVF978w0JzgzHtbJoLMGMY2rSgOaHEHaNq9eE5zraort4qj/MEcLxlAk3CkpBw==">Joomla!</a></li>
+  <li>Tutti i plug-in e i componenti aggiuntivi utilizzati sul tuo sito</li>
+</ul>
+
+  <h2>Plug-in e temi non sicuri</h2>
+<p>Con i temi e i plug-in puoi aggiungere funzionalità avanzate molto utili a un sistema di gestione dei contenuti.
+  Tuttavia, la presenza di temi e plug-in obsoleti o privi di patch costituisce un'importante fonte di vulnerabilità nei siti web. Se il tuo sito utilizza temi o plug-in, assicurati di tenerli sempre aggiornati e di rimuovere i temi o i plug-in che non sono più mantenuti dai loro sviluppatori.</p>
+
+<p>Fai molta attenzione ai temi o ai plug-in gratuiti che provengono da siti non attendibili.
+  Una tattica comune dei malintenzionati consiste nell'aggiungere codice dannoso alle versioni gratuite di temi o plug-in a pagamento. Quando rimuovi un plug-in, verifica di non averlo soltanto disattivato, ma di avere rimosso tutti i relativi file dal tuo server.</p>
+
+    <h2>Ingegneria sociale</h2>
+<p>L'<a href="https://it.wikipedia.org/wiki/Ingegneria_sociale" l10n-encrypted-href="GNl3mBL0HYVq6mbgtcZZBAOrZfK8qSBsW73e1nANJzDhdag+xA68+MwQ16jfZc75PDy3vtY3O31aYZLUJFuYjA==">ingegneria sociale</a> sfrutta le debolezze umane per aggirare un'infrastruttura di sicurezza sofisticata. Questo tipo di attacco inganna gli utenti autorizzati per estorcere informazioni riservate, come le password. Una forma comune di ingegneria sociale, ad esempio, è il phishing. Durante un tentativo di phishing, un malintenzionato invia un'email nella quale si spaccia per un'organizzazione legittima, richiedendo di fornire informazioni riservate.</p>
+
+<p><b>Nota:</b> in base a una <a href="https://research.google.com/pubs/pub43469.html">ricerca condotta da Google in materia di ingegneria sociale</a>, alcune delle più efficaci campagne di phishing hanno una percentuale di successo del 45%.</p>
+
+<p>Non fornire mai dati sensibili, come la password, il numero della carta di credito, le informazioni bancarie o perfino la tua data di nascita, se non sei sicuro dell'identità del richiedente. Se il tuo sito è gestito da più persone, ti consigliamo di organizzare corsi di formazione che promuovano la consapevolezza riguardo ai problemi di sicurezza posti dagli attacchi di ingegneria sociale. Nel Centro assistenza di Gmail puoi trovare alcuni <a href="https://support.google.com/mail/answer/8253" l10n-encrypted-href="Qxy7djzLrQDlRvlnztgY6uGsVVamVB4dakLBAujPCV5MZGYTR6r2uoEtKSMEEuiF">suggerimenti di base per proteggerti dal phishing.</a></p>
+
+    <h2>Falle nelle policy di sicurezza</h2>
+<p>Se sei un amministratore di sistema o gestisci un sito, tieni presente che l'impostazione di policy di sicurezza non adeguate può consentire ai malintenzionati di compromettere il tuo sito. Ecco alcuni esempi di policy:</p>
+  <ul>
+    <li>Consentire agli utenti di creare password deboli</li>
+    <li>Concedere l'accesso come amministratore agli utenti che non devono averlo</li>
+    <li>Consentire agli utenti di eseguire l'accesso utilizzando metodi HTTP senza aver attivato la modalità HTTPS sul tuo sito</li>
+    <li>Consentire il caricamento dei file da parte di utenti non autenticati o senza sistemi di controllo del tipo</li>
+  </ul>
+
+<p>Di seguito sono riportati alcuni suggerimenti di base per proteggere il tuo sito:</p>
+  <ul>
+    <li>Verifica che sul tuo sito siano configurati controlli di sicurezza avanzati disattivando i servizi inutili</li>
+    <li>Verifica i privilegi degli utenti e i controlli di accesso</li>
+    <li>Utilizza la crittografia per le pagine che gestiscono dati sensibili, come le pagine di accesso</li>
+    <li>Controlla regolarmente i log per individuare l'eventuale presenza di attività sospette.</li>
+  </ul>
+
+
+    <h2>Divulgazione dei dati</h2>
+<p>La divulgazione dei dati si verifica quando un errore di configurazione rende disponibili al pubblico le informazioni riservate caricate online. Le funzioni di messaggistica e gestione degli errori in un'applicazione web, per esempio, possono potenzialmente causare la diffusione dei dati relativi alla configurazione in un messaggio di errore non gestito. I malintenzionati, grazie a un metodo noto come <a href="https://en.wikipedia.org/wiki/Google_hacking" l10n-encrypted-href="FDZcx272AJOi7Y9OblQ6JQOrZfK8qSBsW73e1nANJzCd/pbaXyxvswzDfzJkDrry">"dorking"</a>, possono sfruttare le funzionalità dei motori di ricerca per trovare questi dati.</p>
+
+<p>Per verificare che i dati sensibili non vengano divulgati a utenti non autorizzati, svolgi controlli periodici e adotta policy di sicurezza che limitino l'accesso ai dati riservati solo alle entità attendibili. Se ti accorgi che il tuo sito mostra dati sensibili da rimuovere urgentemente dai risultati di Ricerca Google, puoi utilizzare lo <a href="https://www.google.com/webmasters/tools/removals" l10n-encrypted-href="8XmwXx73jEjMr74g6qSO7wSJUyK0ahq5p2Xo+yKO2LCb6sVoHIw/dbKYlYNpC3bE6alqqczRgjG7j5E4wpj/eg==">strumento di rimozione URL</a> per rimuovere singoli URL da Ricerca Google.</p>
+
+
+</body></html>

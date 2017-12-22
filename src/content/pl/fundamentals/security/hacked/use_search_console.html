@@ -1,0 +1,91 @@
+<html devsite><head>
+  <title>Użyj Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Jeśli jesteś już <a href="https://www.support.google.com/webmasters/answer/35179">zweryfikowanym właścicielem</a> swojej witryny, możesz pominąć pierwszą czynność poniżej i od razu sprawdzić informacje o witrynie w Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Czego potrzebujesz:</h3>
+
+<ul>
+  <li>Możliwości <a href="https://www.support.google.com/webmasters/answer/35179">zweryfikowania własności</a> witryny, np. przez dodanie pliku do katalogu głównego, utworzenie <a href="https://www.support.google.com/webmasters/answer/79812">metatagów</a> czy potwierdzenie, że w Google Analytics masz konto administracyjne witryny.</li>
+</ul>
+
+<div class="action">
+  <h3>Co musisz zrobić:</h3>
+
+  <p>Na tym etapie wykonasz następujące czynności:</p>
+
+  <ol>
+    <li><a href="#verify">Zweryfikujesz własność witryny w Search Console.</a></li>
+    <li><a href="#check">Sprawdzisz, czy haker nie zweryfikował własności witryny w Search Console i nie wprowadził niepożądanych zmian w ustawieniach.</a></li>
+    <li><a href="#determine">Określisz charakter ataku.</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Zweryfikuj własność witryny w Search Console</h4>
+
+<ol>
+  <li>Uruchom przeglądarkę i otwórz Centrum dla webmasterów na <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Kliknij <strong>Search Console</strong>.</li>
+  <li>Zaloguj się w Search Console, korzystając z <a href="https://www.google.com/accounts">konta Google</a>.
+    Jeśli nie masz konta Google, kliknij <strong>Utwórz konto</strong>. Nowe konto Google nie oznacza, że stracisz dotychczasowe konto e-mail, które masz na serwerze innej firmy.
+    <a href="https://accounts.google.com/SignUp">Więcej informacji o kontach</a></li>
+  <li>Kliknij <strong>Dodaj witrynę</strong>. Wpisz URL witryny w polu, a potem kliknij <strong>Dalej</strong>.</li>
+  <li>Wybierz metodę weryfikacji, która najbardziej Ci odpowiada. Na karcie <strong>Metoda zalecana</strong> na stronie weryfikacji podajemy metodę, która naszym zdaniem sprawdzi się najlepiej. Dodatkowe metody znajdziesz na karcie <strong>Metody alternatywne</strong>.
+    <a href="https://goo.gl/kQnHQ">Więcej informacji o weryfikacji</a></li>
+  <li>Gdy wybierzesz metodę weryfikacji, która wymaga dostępu do witryny (np. użycie metatagu lub pliku HTML), przełącz witrynę z powrotem w tryb online.</li>
+  <li>Kliknij <strong>Weryfikuj</strong>, by zweryfikować własność wybraną metodą. Jeśli weryfikacja się uda, zobaczysz ekran z gratulacjami i informacją, że jesteś zweryfikowanym właścicielem.
+    Możesz ponownie przełączyć witrynę w tryb offline, ale pamiętaj, że na kolejnych etapach znowu trzeba będzie udostępnić ją online.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Po weryfikacji sprawdź, czy haker nie zweryfikował własności witryny w Search Console i nie wprowadził niepożądanych zmian w ustawieniach</h4>
+
+<ol>
+  <li>Kliknij logo Search Console, by wejść na stronę główną tej usługi.</li>
+  <li>Znajdź odpowiednią witrynę, a potem kliknij <strong>Zarządzaj witryną</strong>.</li>
+  <li>Kliknij <strong>Dodaj lub usuń użytkowników</strong>.</li>
+  <li>Upewnij się, że każdy <a href="https://www.support.google.com/webmasters/answer/44227">użytkownik lub właściciel</a> na liście jest autoryzowany.</li>
+  <li>Zanotuj adresy e-mail wszystkich nieautoryzowanych użytkowników (na wypadek, gdyby były potrzebne w przyszłości), a potem usuń ich z witryny. W przypadku nieautoryzowanych właścicieli musisz usunąć zarówno właściciela, jak i wszystkie możliwe tokeny weryfikacyjne – na przykład metatag weryfikacyjny na stronie głównej lub plik HTML na serwerze. <a href="https://www.support.google.com/webmasters/answer/2454036">Więcej informacji</a></li>
+  <li>Poszukaj niepożądanych zmian ustawień w Search Console. Kliknij ikonę koła zębatego, a następnie wybierz <span class="material-icons"></span><a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Ustawienia witryny</strong></a>, by sprawdzić, czy haker nie wprowadził szkodliwych zmian, takich jak <a href="https://www.support.google.com/webmasters/answer/48620">zmniejszenie częstotliwości</a> indeksowania (bo na przykład chciał uniknąć ingerencji robotów wyszukiwarek). Upewnij się też, że w sekcji <strong>Indeks Google</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">Usuń adresy URL</a> ani w sekcji <span class="material-icons">Ustawienia</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">Zmiana adresu</a> nie ma nietypowych wpisów.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Określ charakter ataku</h4>
+
+<p>Informacje z Centrum wiadomości i strony Problemy dotyczące bezpieczeństwa w Search Console mogą pomóc ustalić, czy celem hakera, który przejął witrynę, było:</p>
+
+<ul>
+  <li>rozsyłanie spamerskich treści, które mogą obniżyć jakość i trafność wyników wyszukiwania;</li>
+  <li>wyłudzanie informacji;</li>
+  <li>rozpowszechnianie złośliwego oprogramowania.</li>
+</ul>
+
+<p>Aby w Search Console zbadać sposób ataku lub złośliwe oprogramowanie, wykonaj te czynności:</p>
+
+<ol>
+  <li>Kliknij logo Search Console w górnym rogu, by wejść na stronę główną tej usługi.</li>
+  <li>Kliknij <strong>Wiadomości</strong>.</li>
+  <li>Poszukaj otrzymanych od Google wiadomości o krytycznym znaczeniu, które informują o tym, że Twoja witryna jest używana do 1) wyświetlania spamerskich stron, tekstów lub linków, 2) wyłudzania informacji, 3) rozpowszechniania złośliwego oprogramowania. Jeśli znajdziesz tam powiadomienie o wyłudzaniu informacji, nie usuwaj tej wiadomości, zanim nie ukończysz wszystkich etapów odzyskiwania witryny.</li>
+  <li>Otwórz <strong>Problemy dotyczące bezpieczeństwa</strong> w Search Console.
+    <ul>
+      <li>Gdy witryna zawiera złośliwe oprogramowanie, nagłówek najwyższego poziomu to „Złośliwe oprogramowanie”, pod którym widać kategorie odpowiadające typom złośliwego oprogramowania, np. „Zmodyfikowana konfiguracja serwera” czy „Wstrzyknięty szablon błędu”. W tych przypadkach haker może wykorzystywać witrynę, by infekować komputery użytkowników oprogramowaniem, które odczytuje poufne informacje lub powoduje szkody. Aby dowiedzieć się, jak rozwiązać te problemy, przeczytaj rozdział <a href="hacked_with_malware">Oceń szkody (złośliwe oprogramowanie)</a>.
+      </li>
+      <li>Jeśli haker przejął witrynę z zamiarem wyświetlania spamu, nagłówek najwyższego poziomu to „Atak hakera”, pod którym są kategorie odpowiadające typom ataków, np. „Wstrzyknięta zawartość”. Haker prawdopodobnie umieścił w witrynie spamerskie strony, teksty lub linki. Aby dowiedzieć się, jak rozwiązać te problemy, przeczytaj rozdział <a href="hacked_with_spam">Oceń szkody (spam)</a>.</li>
+      <li>Gdy w Centrum wiadomości w Search Console otrzymasz powiadomienie o wyłudzaniu informacji w witrynie, strona „Problemy dotyczące bezpieczeństwa” może nie zawierać żadnych danych. Haker umieścił w witrynie strony, które pozwalają mu wyłudzać informacje w postaci loginów, haseł i danych finansowych użytkowników. Często wyglądem i działaniem naśladują one wiarygodne witryny. Takie strony usuwa się podobnie jak spam, dlatego przeczytaj rozdział <a href="hacked_with_spam">Oceń szkody (spam)</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Kolejny etap</h2>
+
+<p>Kolejny etap – <a href="hacked_with_spam">Oceń szkody (atak ze spamem)</a> lub <a href="hacked_with_malware">Oceń szkody (atak ze złośliwym oprogramowaniem)</a>.</p>
+
+</body></html>
