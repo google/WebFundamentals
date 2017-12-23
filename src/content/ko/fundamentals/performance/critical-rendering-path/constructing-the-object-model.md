@@ -32,7 +32,7 @@ description: 브라우저가 DOM 및 CSSOM 트리를 생성하는 방법에 대�
 
 1. **변환:** 브라우저가 HTML의 원시 바이트를 디스크나 네트워크에서 읽어와서, 해당 파일에 대해 지정된 인코딩(예: UTF-8)에 따라 개별 문자로 변환합니다.
 2. **토큰화:** 브라우저가 문자열을 [W3C HTML5 표준](http://www.w3.org/TR/html5/){: .external }에 지정된 고유 토큰으로 변환합니다(예: '<html>', '<body>' 및 꺽쇠괄호로 묶인 기타 문자열). 각 토큰은 특별한 의미와 고유한 규칙을 가집니다.
-3. **Lexing:** The emitted tokens are converted into "objects," which define their properties and rules.
+3. **어휘 분석:** 방출된 토큰은 해당 속성 및 규칙을 정의하는 '객체'로 변환됩니다.
 4. **DOM 생성:** 마지막으로, HTML 마크업이 여러 태그(일부 태그는 다른 태그 안에 포함되어 있음) 간의 관계를 정의하기 때문에 생성된 객체는 트리 데이터 구조 내에 연결됩니다. 이 트리 데이터 구조에는 원래 마크업에 정의된 상위-하위 관계도 포합됩니다. 즉, *HTML* 객체는 *body* 객체의 상위이고, *body* 는 *paragraph* 객체의 상위인 식입니다.
 
 <img src="images/dom-tree.png" alt="DOM tree">
