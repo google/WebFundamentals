@@ -16,8 +16,8 @@ description: Experimentally disabling hardware noise suppression in Chrome 64.
 In Chrome 64 we're trying a new behavior for getUserMedia audio streams that
 have the `echoCancellation` constraint enabled. What's new is that such streams
 will temporarily disable hardware noise suppression for the duration of the
-stream. We anticipate this will make the echo canceller perform better. As this
-is functionality is experimental, it needs to be explicitly turned on; [see
+stream. We anticipate this will make the echo canceller perform better. As this 
+functionality is experimental, it needs to be explicitly turned on; [see
 below](#heading-experiment).
 
 At this point, this behavior is only supported for certain input devices and
