@@ -220,7 +220,7 @@ Click on a yellow node to investigate it further. In the **Objects** pane
 you can see more information about the code that's referencing it. For example,
 in the screenshot below you can see that the `detachedTree` variable is
 referencing the node. To fix this particular memory leak, you would study 
-the code that uses `detachedTree` and ensure that it removes it's reference to
+the code that uses `detachedTree` and ensure that it removes its reference to
 the node when it's no longer needed.
 
 ![investigating a yellow node][yn]
