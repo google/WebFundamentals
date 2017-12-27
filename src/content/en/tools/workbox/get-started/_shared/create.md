@@ -3,11 +3,14 @@
 
 Up until now, you've been letting Workbox generate your entire service
 worker. If you've got a big project, or you want to customize how you cache
-certain resources, or do custom logic in your service worker, such as add
-support for push notifications, which you're going to add in this section,
+certain resources, or do custom logic in your service worker,
 then you need to create a custom service worker that calls Workbox instead.
 Think of the service worker code you write as a template. You write your custom logic with
 placeholder keywords that instruct Workbox where to inject its code.
+
+In this section, you add push notification support in your service worker. Since this is custom
+logic, you need to write custom service worker code, and then inject the Workbox code into
+the service worker at build-time.
 
 1. Re-focus the tab containing your project source code.
 1. Open `package.json`.
@@ -39,9 +42,9 @@ placeholder keywords that instruct Workbox where to inject its code.
 [UX]: /web/fundamentals/push-notifications/permission-ux
 
 1. Click **New File**, enter `src/sw.js`, then press <kbd>Enter</kbd>.
-1. Insert the following code into `src/sw.js`.
+1. Add the following code to `src/sw.js`.
 
-    <pre class="prettyprint"><strong>// TODO: Replace Xs.
+    <pre class="prettyprint">// TODO: Replace Xs.
     importScripts('/node_modules/workbox-sw/build/importScripts/workbox-sw.prod.vX.X.X.js');
 
     // Note: Ignore the error that Glitch raises about WorkboxSW being undefined.
@@ -63,7 +66,7 @@ placeholder keywords that instruct Workbox where to inject its code.
       event.waitUntil(self.registration.showNotification(title, options));
     });
 
-    workbox.precache([]);</strong></pre>
+    workbox.precache([]);</pre>
 
     <aside class="important">**Important**: `workbox.precache([])` is a placeholder keyword.
     At build-time, Workbox injects the list of files to cache into the array.</aside>
