@@ -14,9 +14,6 @@ description: Multi-client remote debugging, push notifications with custom data,
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: The video version of these release notes will be published around
-early-December 2017.
-
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
 * [Multi-client remote debugging support](#multi-client).
@@ -28,6 +25,14 @@ Welcome back! New features coming to DevTools in Chrome 63 include:
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
+
+Read on or watch the video below to learn more!
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Eyw_mwbABIQ"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Multi-client remote debugging support {: #multi-client }
 
