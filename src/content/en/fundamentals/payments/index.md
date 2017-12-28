@@ -91,7 +91,7 @@ the site.
 
 Note: Pay with Google is one of payment methods you can use to get cards from a
 user's Google account and payment tokens on the device. To learn more, read [the
-Google Payment API docs](/payments/mobile-web-setup).
+Google Payment API docs](/payments/web/paymentrequest/tutorial).
 
 <div class="attempt-right">
   <figure>
