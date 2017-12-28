@@ -38,6 +38,9 @@ to improve:
 
 ## More information {: #more-info }
 
+This audit fails when the browser waits more than 600ms for the server to respond to the
+main document request.
+
 This audit is also referred to as "Time To First Byte", which represents the time that it takes
 for a user's browser to receive the first byte of page content.
 
