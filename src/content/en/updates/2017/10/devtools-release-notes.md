@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0.
 
-{# wf_updated_on: 2017-10-12 #}
-{# wf_published_on: 2017-10-11 #}
+{# wf_updated_on: 2017-12-28 #}
+{# wf_published_on: 2017-12-28 #}
 {# wf_tags: chrome63,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
