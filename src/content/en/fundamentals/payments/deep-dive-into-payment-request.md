@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-11-07 #}
+{# wf_updated_on: 2017-12-27 #}
+{# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
