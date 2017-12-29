@@ -26,8 +26,7 @@ project_path: /web/_project.yaml
 book_path: /web/section/_book.yaml
 ```
 
-Note: If the path to the project or book cannot be found, the page will not
-include the left nav and the upper tabs will not be properly highlighted.
+Note: Если project или book не будут найдены, то на странице не будет навигации слева, а верхние вкладки не будут правильно подсвечены.
 
 ### Описание (необязательный)
 
@@ -39,28 +38,27 @@ include the left nav and the upper tabs will not be properly highlighted.
 description: Lorem ipsum
 ```
 
-Внимание: Не добавляйте блоки <code> (или `) поле описания.
+Caution: Не добавляйте блоки &lt;code&gt; (или `) поле описания.
 
 ### Другие YAML атрибуты
 
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">Other Attributes</th>
+      <th colspan="2">Другие атрибуты</th>
     </tr>
     <tr>
       <td><code>full_width: true</code></td>
       <td>
-        Relinquishes control over the layout for the area below the site
-        header and project bar and above the site footer. Not supported in
-        the development environment.
+        Передаёт управление разметкой области ниже заголовка и панели проекта 
+        и выше футера. Не поддерживается в development окружении.
       </td>
     </tr>
     <tr>
       <td><code>hide_last_updated: true</code></td>
       <td>
-        Hides the automatically generated last updated field at the bottom of
-        the page. Not supported in the development environment.
+        Скрывает автоматически сгенерированное поле последних обновлений внизу страницы.
+        Не поддерживается в development окружении.
       </td>
     </tr>
   </tbody>
@@ -76,14 +74,14 @@ description: Lorem ipsum
 &num; Writing an Article {: .page-title }
 </pre>
 
-Внимание: Заголовки страниц не должны включать никакие markdown или HTML тэги.
+Caution: Заголовки страниц не должны включать никакие markdown или HTML тэги.
 
 ## Автор и переводчик
 
 Чтобы добавить автора и переводчика используйте:
 
 <pre class="prettyprint">
-{% include "web/_shared/contributors/petelepage.html" %}
+&#123;% include "web/_shared/contributors/petelepage.html" %}
 </pre>
 
 ## Написать свой контент
@@ -104,3 +102,8 @@ description: Lorem ipsum
 
 Когда будете готовы, запустите `gulp test`, чтобы убедиться, что нет проблем с
 вашим контентом, а затем посылайте ваш pull request.
+
+
+
+Translated by
+{% include "web/_shared/contributors/dmitryskripunov.html" %}
