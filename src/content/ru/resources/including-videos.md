@@ -1,8 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
-description: Если у вас короткое видео и вы хотите, чтобы оно воспроизводилось
-автоматически - в основном, если это GIF - то это руководство, возможно, то, что
-вам нужно.
+description: Если у вас короткое видео и вы хотите, чтобы оно воспроизводилось автоматически - в основном, если это GIF - то это руководство, возможно, то, что вам нужно.
 
 {# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2016-10-12 #}
@@ -98,9 +96,9 @@ DevTool консоль или терминал.
   <source src="[url to .mp4 file]" type="video/mp4; codecs=h264">
 </video>
 
+```
 
 
 
 Translated by
 {% include "web/_shared/contributors/dmitryskripunov.html" %}
-```
