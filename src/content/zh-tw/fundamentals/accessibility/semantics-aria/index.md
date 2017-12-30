@@ -49,7 +49,7 @@ description:ARIA 和非原生 HTML 語義簡介
     </li>
     
 
-注：我們將[稍後](#what-can-aria-do)介紹 ARIA 屬性列表以及它們的使用時機。
+Note: 我們將[稍後](#what-can-aria-do)介紹 ARIA 屬性列表以及它們的使用時機。
 
 ARIA 通過更改和補充標準 DOM 無障礙樹來發揮作用。
 
