@@ -264,7 +264,7 @@ self.addEventListener('install', function(e) {
 
 
 
-## 發現問題，或者有反饋？{: .hide-from-toc }
+## 發現問題，或者有反饋？ {: .hide-from-toc }
 立即提交[問題](https://github.com/googlesamples/io2015-codelabs/issues)，幫助我們讓代碼實驗室更加強大。謝謝！
 
 {# wf_devsite_translation #}

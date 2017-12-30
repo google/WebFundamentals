@@ -149,7 +149,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 const applicationServerPublicKey = '<Your Public Key>';
 ```
 
-注：決不能將私鑰放在網絡應用中！
+Note: 決不能將私鑰放在網絡應用中！
 
 
 ## 初始化狀態
@@ -663,7 +663,7 @@ swRegistration.pushManager.getSubscription()
 
 
 
-## 發現問題，或者有反饋？{: .hide-from-toc }
+## 發現問題，或者有反饋？ {: .hide-from-toc }
 立即提交[問題](https://github.com/googlechrome/push-notifications/issues)，幫助我們讓代碼實驗室更加強大。謝謝！
 
 {# wf_devsite_translation #}
