@@ -115,8 +115,10 @@ Replace the output filename with <code>[name].[chunkname].js</code>:
 // webpack.config.js
 module.exports = {
   output: {
--   filename: 'bundle.[chunkhash].js',
-+   filename: '[name].[chunkhash].js',
+    // Before
+    filename: 'bundle.[chunkhash].js',
+    // After
+    filename: '[name].[chunkhash].js',
   },
 };
 </pre>
@@ -135,10 +137,12 @@ Convert the <code>entry</code> field into an object:
 <pre class="prettyprint">
 // webpack.config.js
 module.exports = {
-- entry: './index.js'
-+ entry: {
-+   main: './index.js'
-+ }
+  // Before
+  entry: './index.js',
+  // After
+  entry: {
+    main: './index.js',
+  },
 };
 </pre>
 
@@ -196,10 +200,11 @@ Unfortunately, extracting just the vendor code is not enough. If you try to chan
 app code:
 
     // index.js
-      …
-      …
+    …
+    …
 
-    + console.log('Wat');
+    // E.g. add this:
+    console.log('Wat');
 
 you’ll notice that the `vendor` hash also changes:
 
