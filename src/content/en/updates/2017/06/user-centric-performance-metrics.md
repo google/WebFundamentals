@@ -320,8 +320,8 @@ observer.observe({entryTypes: ['resource', 'paint']});
 What `PerformanceObserver` gives us that we've never had before is the ability
 to subscribe to performance events as they happen and respond to them in an
 asynchronous fashion. This replaces the older
-[PerformanceTiming](https://www.w3.org/TR/navigation-timing/#sec-navigation-
-timing-interface) interface, which often required polling to see when the data
+[PerformanceTiming](https://www.w3.org/TR/navigation-timing/#sec-navigation-timing-interface)
+interface, which often required polling to see when the data
 was available.
 
 ### Tracking FP/FCP
@@ -449,9 +449,9 @@ aware of how often this is happening, so you can make efforts to minimize it.
 
 To detect long tasks in JavaScript you create a new `PerformanceObserver` and
 observe entries of type `longtask`. One nice feature of long task entries is
-they contain an [attribution property](https://w3c.github.io/longtasks/#sec-
-TaskAttributionTiming), so you can more easily track down which code caused the
-long task:
+they contain an [attribution
+property](https://w3c.github.io/longtasks/#sec-TaskAttributionTiming), so
+you can more easily track down which code caused the long task:
 
 ```
 const observer = new PerformanceObserver((list) => {

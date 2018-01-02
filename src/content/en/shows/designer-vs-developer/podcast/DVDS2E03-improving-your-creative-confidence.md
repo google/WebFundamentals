@@ -12,18 +12,18 @@ description: Mat talks imposter syndrome.
 
 # Improving your creative confidence {: .page-title }
 
-Welcome to Designer Vs. Developer, a show that tries to solve the 
-challenges faced in the industry by opening a conversation between 
-the two, providing take aways, solutions to workflows, tools and 
-discussions on everyday struggles. 
+Welcome to Designer Vs. Developer, a show that tries to solve the
+challenges faced in the industry by opening a conversation between
+the two, providing take aways, solutions to workflows, tools and
+discussions on everyday struggles.
 
-Mustafa speaks to Mat Scales, a Developer Programs Engineer on 
-the Google Developer Relations Team, about how to the 
-Dunning-Kruger effect and how having a little bit of knowledge 
-in design shows that you may know more than you think you know. 
+Mustafa speaks to Mat Scales, a Developer Programs Engineer on
+the Google Developer Relations Team, about how to the
+Dunning-Kruger effect and how having a little bit of knowledge
+in design shows that you may know more than you think you know.
 
-<img 
-src="/web/shows/designer-vs-developer/podcast/images/dvd-s02-e03-cover.jpg" 
+<img
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s02-e03-cover.jpg"
 class="attempt-right">
 
 In this episode:
@@ -32,16 +32,15 @@ In this episode:
 * Cognitive Bias.
 * [Designing VR experiences](/web/fundamentals/vr/).
 
-<audio 
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3" 
+<audio
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
-<a href="https://goo.gl/USHXv8">Feedburner</a>, 
-<a href="https://goo.gl/1E9U0G">iTunes</a> Or 
+<a href="https://goo.gl/USHXv8">Feedburner</a>,
+<a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">
 Google Music</a>
 
-Watch <a href="
-https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
+Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.

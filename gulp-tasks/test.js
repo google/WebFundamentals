@@ -84,6 +84,7 @@ let remarkLintOptions = {
   wfLinksInternal: true,
   wfLinksForcedLang: true,
   wfLinksUnsafeShort: true,
+  wfLinksLineBreak: true,
 
   /* from check-headings.js */
   wfHeadingsTldr: true,
@@ -97,6 +98,7 @@ let remarkLintOptions = {
   wfHtmlDgcLinks: true,
   wfHtmlLinkForcedLang: true,
   wfHtmlInternalLinks: true,
+  wfHtmlLinkLineBreaks: true,
   wfHtmlUnsafeShortLinks: true,
 
   /* from check-images.js */

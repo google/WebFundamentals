@@ -17,7 +17,29 @@ module.exports = {
   'wf-links-dgc': wfDGCLinks,
   'wf-links-unsafe-short': wfUnsafeShort,
   'wf-links-internal': wfInternalLinks,
+  'wf-links-line-break': wfLineBreakInLink,
 };
+
+/**
+ * Remark Lint Test - check if links have whitespace or line breaks.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
+function wfLineBreakInLink(ast, file, setting) {
+  const msg = 'Link contains unescaped whitespace or accidental line break.';
+  const RE_WHITESPACE = /\n/;
+  visit(ast, 'link', function(node) {
+    let nodeUrl = node.url;
+    if (nodeUrl.indexOf('href=') >= 0) {
+      nodeUrl = nodeUrl.match(/href=['|"]((.|\n)*?)['|"]/i)[1];
+    }
+    if (RE_WHITESPACE.test(nodeUrl)) {
+      file.message(msg, node);
+    }
+  });
+}
 
 /**
  * Remark Lint Test - check if links have hard coded languages.
