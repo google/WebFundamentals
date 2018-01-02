@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2017-12-17 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -72,12 +72,6 @@ function onNewServiceWorker(registration, callback) {
 }
 
 window.addEventListener('load', function() {
-  // When the user asks to refresh the UI, we'll need to reload the window
-  navigator.serviceWorker.addEventListener('controllerchange', function(event) {
-    console.log('Controller loaded');
-    window.location.reload();
-  });
-
   navigator.serviceWorker.register('/sw.js')
   .then(function (registration) {
       // Track updates to the Service Worker.
@@ -86,6 +80,17 @@ window.addEventListener('load', function() {
       // worker that will activate immediately
       return;
     }
+
+    // When the user asks to refresh the UI, we'll need to reload the window
+    var preventDevToolsReloadLoop;
+    navigator.serviceWorker.addEventListener('controllerchange', function(event) {
+      // Ensure refresh is only called once.
+      // This works around a bug in "force update on reload".
+      if (preventDevToolsReloadLoop) return;
+      preventDevToolsReloadLoop = true;
+      console.log('Controller loaded');
+      window.location.reload();
+    });
 
     onNewServiceWorker(registration, function() {
       showRefreshUI(registration);
