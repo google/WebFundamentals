@@ -1241,6 +1241,18 @@ function testFile(filename, opts) {
     let testPromise;
     let filenameObj = path.parse(filename.toLowerCase());
 
+    // Check the filename for illegal characters
+    if (filename.indexOf(' ') >= 0 ||
+        filename.indexOf('%') >= 0 ||
+        filename.indexOf('(') >= 0 ||
+        filename.indexOf(')') >= 0 ||
+        filename.indexOf('[') >= 0 ||
+        filename.indexOf(']') >= 0 ||
+        filename.indexOf('?') >= 0) {
+          msg = 'Illegal character(s) in filename.';
+          logError(filename, null, msg);
+    }
+
     // Check if the file is an extension we skip
     if (EXTENSIONS_TO_SKIP.indexOf(filenameObj.ext) >= 0) {
       if (global.WF.options.verbose) {
