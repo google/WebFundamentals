@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Keep Server Response Times Low" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-22 #}
-{# wf_published_on: 2017-12-22 #}
+{# wf_updated_on: 2018-01-03 #}
+{# wf_published_on: 2018-01-03 #}
 {# wf_blink_components: N/A #}
 
 # Keep Server Response Times Low  {: .page-title }
