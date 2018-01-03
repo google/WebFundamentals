@@ -14,6 +14,7 @@ const wfHelper = require('../wfHelper');
 /**
  * Helper method that checks the JSDoc config file exists.
  * @param {string} jsdocConfPath
+ * @return {Promise}
  */
 const canFindJSDocConf = (jsdocConfPath) => {
   try {

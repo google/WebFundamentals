@@ -2,6 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-27 #}
 
