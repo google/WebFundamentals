@@ -3,6 +3,12 @@
     <title>Index All</title>
   {{/content}}
   {{#content 'body-main-content'}}
+    {{!--
+      This is a custom handlebars template to add version information to the
+      output.
+    --}}
+    {{~#embed 'symbol-version'}}{{/embed~}}
+
     <ul>
       {{#each longnames}}
         <li>{{link this}}</li>
