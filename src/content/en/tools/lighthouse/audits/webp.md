@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Serve Images in Next-Gen Formats" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2018-01-03 #}
 {# wf_published_on: 2017-06-20 #}
 {# wf_blink_components: N/A #}
 
@@ -28,18 +28,16 @@ these images in WebP.
 Browser support is not universal for WebP, but similar savings should be available in
 most major browsers in an alternative next-gen format. You'll need to serve a fallback PNG
 or JPEG image for other browser support. See [How can I detect browser
-support for WebP?][fallback] for an overview of fallback techniques and the table below for browser 
-support of image formats.
+support for WebP?][fallback] for an overview of fallback techniques and the list below for
+browser support of image formats.
 
 [fallback]: /speed/webp/faq#how_can_i_detect_browser_support_for_webp
 
-| Browser | WebP | JPEG 2000 | JPEG XR | JPEG | PNG |
-| -- | :--: | :--: | :--: | -- | -- |
-| Chrome | ✓ | | | ✓ | ✓ |
-| Edge/IE | | | ✓ | ✓ | ✓ |
-| Firefox | | | | ✓ | ✓ |
-| Opera | ✓ | | | ✓ | ✓ |
-| Safari | | ✓ |  | ✓ | ✓ |
+To see the current browser support for each next-gen format, check out the entries below:
+
+* [WebP](https://caniuse.com/#feat=webp)
+* [JPEG 2000](https://caniuse.com/#feat=jpeg2000)
+* [JPEG XR](https://caniuse.com/#feat=jpegxr)
 
 ## More information {: #more-info }
 
@@ -50,40 +48,3 @@ savings are less than 8KB.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-webp-images.js
-
-## Feedback {: #feedback }
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'WebP / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
