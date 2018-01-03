@@ -40,13 +40,13 @@ const buildReferenceDocsForTags =
         return getSourceCode(gitUrl, tag, tmpSrCodePath)
         .then(() => {
           const taggedOutputPath = path.join(docPath, tag);
-          return buildJSDocs(tmpSrCodePath, taggedOutputPath, jsdocConfPath);
+          return buildJSDocs(tag, tmpSrCodePath, taggedOutputPath, jsdocConfPath);
         })
         .then(() => {
           if (tag === latestTags[0]) {
             const latestOutputPath = path.join(docPath, latestDirName);
             fs.removeSync(latestOutputPath);
-            return buildJSDocs(tmpSrCodePath, latestOutputPath, jsdocConfPath);
+            return buildJSDocs(tag, tmpSrCodePath, latestOutputPath, jsdocConfPath);
           }
         });
       });

@@ -9,8 +9,6 @@ description: The module guide for workbox-sw.
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-sw/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox)
-
 ## What is Workbox SW?
 
 The `workbox-sw` module provide an extremely easy way to get up and running

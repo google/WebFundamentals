@@ -9,8 +9,6 @@ description: The module guide for workbox-core.
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-precaching/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.precaching)
-
 ## What is Precaching?
 
 One feature of service workers is the ability to save a set of files to the

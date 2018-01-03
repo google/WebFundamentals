@@ -9,8 +9,6 @@ description: The module guide for workbox-cache-expiration.
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.expiration)
-
 ## What is Cache Expiration?
 
 It’s fairly common to want to put restrictions on a cache in terms of how long

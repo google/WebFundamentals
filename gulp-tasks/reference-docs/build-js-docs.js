@@ -30,11 +30,13 @@ const canFindJSDocConf = (jsdocConfPath) => {
 
 /**
  * Build Devsite friend JSDocs.
+ * @param {string} tag Tag name of the update
  * @param {string} srcCodePath Path of source code to generate docs for.
  * @param {string} docOutputPath Where the docs should be written to.
  * @param {string} jsdocConfPath Path of the JSDoc config file.
+ * @return {Promise}
  */
-const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
+const buildJSDocs = (tag, srcCodePath, docOutputPath, jsdocConfPath) => {
   // Make sure the JSDoc conf exists
   if (!canFindJSDocConf(jsdocConfPath)) {
     return;
@@ -70,6 +72,7 @@ const buildJSDocs = (srcCodePath, docOutputPath, jsdocConfPath) => {
     `projectRoot=${jsdocConfig.webFundamentals.projectRoot}`,
     `basepath=${basePath}`,
     `productName=${jsdocConfig.webFundamentals.productName}`,
+    `tag=${tag}`,
   ].join('&');
   gutil.log(`QueryString: '--query ${queryString}'`);
 
