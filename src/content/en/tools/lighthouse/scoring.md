@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A guide on how scoring works in Lighthouse.
 
-{# wf_updated_on: 2017-12-27 #}
+{# wf_updated_on: 2018-01-03 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
@@ -29,8 +29,8 @@ that particular category. This guide explains how Lighthouse calculates those sc
 
 Lighthouse returns a Performance score between 0 and 100. 0 is the lowest possible score. A 0
 score usually indicates an error in Lighthouse. If you see a 0 score repeatedly, please
-[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. Typically a score
-above 90 represents the top 5 percent of top-performing pages.
+[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. Typically
+a score above 90 represents the top 5 percent of top-performing pages.
 
 [bug]: https://github.com/GoogleChrome/lighthouse/issues/new
 
@@ -62,14 +62,14 @@ a Lighthouse score of 99.
 ### How the Performance score is weighted {: #perf-weighting }
 
 The audits that contribute to the Performance score are not equally weighted. See [Scoring
-Details][details]{:.external} to see how each Performance audit is weighted. The heaver-weighted audits have
-a larger impact on your overall Performance score. The weightings are based on heuristics. The
-Lighthouse team is working on formalizing this approach through more field data.
+Details][details]{:.external} to see how each Performance audit is weighted. The heaver-weighted
+audits have a larger impact on your overall Performance score. The weightings are based on
+heuristics. The Lighthouse team is working on formalizing this approach through more field data.
 
 The overall Performance score is a weighted average of these audits. See [Weighted Averages
 Without Percentages][WikiHow]{:.external} to learn how weighted averages work.
-See [Scoring Calculator][calculator]{:.external} to experiment with how getting different scores in each
-audit affects your overall Performance score.
+See [Scoring Calculator][calculator]{:.external} to experiment with how getting different scores
+in each audit affects your overall Performance score.
 
 [calculator]: https://docs.google.com/spreadsheets/d/1dXH-bXX3gxqqpD1f7rp6ImSOhobsT1gn_GQ2fGZp8UU/edit?ts=59fb61d2#gid=283330180
 
@@ -107,8 +107,8 @@ equally, so each one contributes approximately 9 points to your PWA score.
 ## The Accessibility score {: #a11y }
 
 The Accessibility score is a weighted average of all the accessibility audits. See [Scoring
-Details][details]{:.external} for a full list of how each audit is weighted. The heavier-weighted audits
-have a bigger impact on your score.
+Details][details]{:.external} for a full list of how each audit is weighted. The heavier-weighted
+audits have a bigger impact on your score.
 
 Each accessibility audit is pass or fail. Unlike the Performance audits, a page doesn't get
 points for partially passing an accessibility audit. For example, if some elements have
