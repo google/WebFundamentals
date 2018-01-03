@@ -1244,6 +1244,10 @@ function testFile(filename, opts) {
     // Check the filename for illegal characters
     if (filename.indexOf(' ') >= 0 ||
         filename.indexOf('%') >= 0 ||
+        filename.indexOf('(') >= 0 ||
+        filename.indexOf(')') >= 0 ||
+        filename.indexOf('[') >= 0 ||
+        filename.indexOf(']') >= 0 ||
         filename.indexOf('?') >= 0) {
           msg = 'Illegal character(s) in filename.';
           logError(filename, null, msg);
