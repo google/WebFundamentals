@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Displays Images With Incorrect Aspect Ratio" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-14 #}
-{# wf_published_on: 2017-12-14 #}
+{# wf_updated_on: 2018-01-03 #}
+{# wf_published_on: 2018-01-03 #}
 {# wf_blink_components: N/A #}
 
 # Displays Images With Incorrect Aspect Ratio  {: .page-title }
@@ -16,20 +16,18 @@ creating an unpleasant user experience.
 
 ## Recommendations {: #recommendations }
 
-Use `vw` for *both* the width and height of images.
-
-    img {
-      width: 20vw;
-      height: 20vw;
-    }
-
-`1vw` is equal to 1% of the width of the viewport. Adjust the width and height values based on
-the aspect ratio that you want to maintain. For example, for an image that is twice as wide as
-it is tall, you can preserve the aspect ratio by setting `width` to `20vw` and `height` to
-`10vw`. The `vw` unit is well-supported in modern browsers. See [Can I use viewport
-units?][caniuse] You could alternatively use the `vh` unit, which maps to the viewport height.
-
-[caniuse]: https://caniuse.com/#feat=viewport-units
+* Avoiding setting the width or height of an element as a percentage of a variably-sized
+  container.
+* Avoid setting explicit width or height values that differ from the source image's dimensions.
+* Consider using [css-aspect-ratio](https://www.npmjs.com/package/css-aspect-ratio) or
+  [Aspect Ratio Boxes](https://css-tricks.com/aspect-ratio-boxes/) to help preserve aspect
+  ratios.
+* When possible, it's a good practice to specify image width and height in HTML, so that the
+  browser can allocate space for the image, which prevents it from jumping around as the page
+  loads. It's more optimal to specify width and height in HTML rather than CSS, because the
+  browser allocates space before parsing the CSS. In practice this approach can be difficult
+  if you're working with responsive images, because there's no way to specify width and height
+  until you know the viewport dimensions.
 
 ### Inspecting rendered images with incorrect aspect ratios {: #inspecting }
 
