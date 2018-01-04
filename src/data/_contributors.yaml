@@ -1514,6 +1514,21 @@ johyphenel:
   twitter: johyphenel
   email: jo-el@google.com
 
+rviscomi:
+  name:
+    given: Rick
+    family: Viscomi
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://twitter.com/rick_viscomi'
+  twitter: rick_viscomi
+  github: rviscomi
+  role:
+    - author
+  email: rviscomi@google.com
+
 philipwalton:
   name:
     given: Philip
