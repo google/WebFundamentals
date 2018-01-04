@@ -35,4 +35,6 @@ toc:
 
 - heading: Reference
 - title: "View Full API"
-  path: /web/tools/workbox/reference-docs/prerelease/index-all
+  style: accordion
+  section:
+  - include: /web/tools/workbox/reference-docs/prerelease/_toc.yaml
