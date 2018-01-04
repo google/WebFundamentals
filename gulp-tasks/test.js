@@ -47,7 +47,7 @@ const REMARK_WARNING_ONLY = [
 ];
 const RE_BOM = /^\uFEFF/;
 const RE_SRC_BASE = /src\/content\//;
-const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)..\/.*/;
+const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
 const RE_DATA_BASE = /src\/data\//;
 const RE_GULP_BASE = /^gulp-tasks\/?/;
 const ESLINT_RC_FILE = '.eslintrc';
