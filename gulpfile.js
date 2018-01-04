@@ -67,16 +67,16 @@ if (global.WF.options.lang) {
     }
   });
   global.WF.options.lang = langs;
+  gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
 } else {
   global.WF.options.lang = global.WF.langs;
 }
-gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
 
 // Show verbose output
 if (global.WF.options.verbose !== false) {
   global.WF.options.verbose = true;
+  gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 }
-gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 
 // Test all files
 if (global.WF.options.testAll !== false) {
