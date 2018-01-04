@@ -2,6 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
@@ -149,12 +150,14 @@ workbox.routing.registerRoute(
   workbox.strategies.cacheFirst({
     // Use a custom cache name
     cacheName: 'image-cache',
-    cacheExpiration: {
-      // Cache only 20 images
-      maxEntries: 20,
-      // Cache for a maximum of a week
-      maxAgeSeconds: 7 * 24 * 60 * 60,
-    }
+    plugins: [
+      new workbox.expiration.Plugin({
+        // Cache only 20 images
+        maxEntries: 20,
+        // Cache for a maximum of a week
+        maxAgeSeconds: 7 * 24 * 60 * 60,
+      })
+    ],
   })
 );
 ```
