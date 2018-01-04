@@ -7,6 +7,8 @@ description: The module guide for workbox-google-analytics.
 
 # Workbox Google Analytics  {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 ## What is Workbox Google Analytics
 
 If you're building an application that works offline, then understanding

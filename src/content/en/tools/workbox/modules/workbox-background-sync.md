@@ -8,6 +8,8 @@ description: The module guide for workbox-background-sync.
 
 # Workbox Background Sync {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 ## What is Workbox Background Sync?
 
 When you send data to a web server, sometimes the requests will fail. It

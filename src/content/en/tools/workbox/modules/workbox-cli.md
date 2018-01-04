@@ -7,6 +7,8 @@ description: The module guide for workbox-cli.
 
 # Workbox CLI  {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 ## What's the Workbox CLI?
 
 The Workbox command line interface (contained in the the
