@@ -687,11 +687,21 @@ function testMarkdown(filename, contents, options) {
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, contents);
     matched.forEach(function(match) {
       let inclFile = path.resolve(path.parse(filename).dir, match[1]);
-      if (doesFileExist(inclFile) !== true) {
-        position = {line: getLineNumber(contents, match.index)};
-        msg = `Markdown include ${match[0]} found, but couldn't find file.`;
-        logError(filename, position, msg);
+      if (doesFileExist(inclFile)) {
+        return;
       }
+      if (isTranslation) {
+        // Check to see if there's an EN version of the include file
+        let enFilename = filename.replace(/src\/content\/.*?\/(.*)/, '$1');
+        enFilename = `src/content/en/${enFilename}`;
+        inclFile = path.resolve(path.parse(enFilename).dir, match[1]);
+        if (doesFileExist(inclFile)) {
+          return;
+        }
+      }
+      position = {line: getLineNumber(contents, match.index)};
+      msg = `Markdown include ${match[0]} found, but couldn't find file.`;
+      logError(filename, position, msg);
     });
 
     // Error on single line comments
