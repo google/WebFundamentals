@@ -15,11 +15,11 @@ Workbox是個是一個能讓您的網頁資源儲存在用戶的設備的JavaScr
 
 ## Workbox背後的科技
 
-現代離線web應用程序能被實現是因為[**服务工作者(service workers)**](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)。Service workers是個JavaScript的背景工作者。Service workers可以將您需要的資源儲存，以在離線中使用。
+現代離線web應用程序能被實現是因為[**服务工作者(service workers)**](/web/fundamentals/getting-started/primers/service-workers)。Service workers是個JavaScript的背景工作者。Service workers可以將您需要的資源儲存，以在離線中使用。
 
 您可以將service worker想像成一個在用戶的設備中背景運行的[代理服務器 ](https://en.wikipedia.org/wiki/Proxy_server)。當您的網頁在請求資源時，service worker就會攔截那個請求，並決定是否將那資源儲存起來，或者直接從網路上下載最新版本的資源。
 
-Workbox將會把資源儲存在**緩存 (Cache)**。Workbox是使用[緩存API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)來**緩存**資源，這是與[HTTP緩存](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)完全不一樣。Workbox使用緩存API的最大原因是緩存API可以在*還沒*被請求的情況下被緩存。HTTP緩存是做不到的，因為HTTP緩存只能緩存已經被請求的資源。預先儲存資源是叫做**预缓存 (Precache)**。 预缓存 HTML文件是Workbox主要可以提高您的網頁的加載性能。因此Workbox可以在不使用網路的情況下，直接從緩存中提供網頁資源。
+Workbox將會把資源儲存在**緩存 (Cache)**。Workbox是使用[緩存API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)來**緩存**資源，這是與[HTTP緩存](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)完全不一樣。Workbox使用緩存API的最大原因是緩存API可以在*還沒*被請求的情況下被緩存。HTTP緩存是做不到的，因為HTTP緩存只能緩存已經被請求的資源。預先儲存資源是叫做**预缓存 (Precache)**。 预缓存 HTML文件是Workbox主要可以提高您的網頁的加載性能。因此Workbox可以在不使用網路的情況下，直接從緩存中提供網頁資源。
 
 用來決定某資源是否要從緩存獲取還是從網路下載新的資源的策略是叫做**緩存策略**。不一樣的資源設置不一樣的緩存策略是很正常的。例如：
 
