@@ -765,3 +765,7 @@ Translated by:
     <td>Информация о переводчике должна располагаться в конце страницы.</td>
   </tr>
 </table>
+
+
+Translated by
+{% include "web/_shared/contributors/dmitryskripunov.html" %}
