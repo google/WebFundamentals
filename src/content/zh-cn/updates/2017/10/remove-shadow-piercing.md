@@ -13,8 +13,6 @@ description: 向shadow-piercing CSS选择器说再见。
 
 {% include "web/_shared/contributors/robdodson.html" %}
 
-Translated by
-{% include "web/_shared/contributors/henrylim.html" %}
 
 在Chrome63之后，你将无法使用shadow-piercing 选择器， `::shadow` 和 `/deep/` 来设计(style) shadow root里面的内容。
 
@@ -39,5 +37,8 @@ Note: 目前JavaScript API如`querySelector()` 和`querySelectorAll()`会继续�
 `::shadow` 和 `/deep/` 选择器只会影响旧版的Shadow DOM v0组件。如果您已使用Shadow DOM v1，您不必为您的网页更改任何东西。
 
 您可以使用[Chrome Canary](https://www.google.com/chrome/browser/canary.html)来确认您的网站不会因这更新而导致故障。如果你发现了问题，您可以尝试删除代码中所有的`::shadow` 和 `/deep/`。如果删除这些选择器对您来说太复杂，您可以尝试考虑用shady DOM polyfill来代替native shadow DOM。如果你的网页正在使用native shadow DOM v0，你才要需要做这个改变。
+
+Translated by
+{% include "web/_shared/contributors/henrylim.html" %}
 
 {% include "comment-widget.html" %}

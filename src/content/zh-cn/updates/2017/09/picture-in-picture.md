@@ -13,8 +13,6 @@ description: 让我们来讨论如何使用一个Web API以在桌面创建一个
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Translated by
-{% include "web/_shared/contributors/henrylim.html" %}
 
 自2017年4月起，[Android O的Chrome支持画中画](https://developer.android.com/about/versions/oreo/android-8.0.html#opip)。这功能可让用户在同个时间，在悬浮窗中的`<video>`元素播放视频，一边做其他的事情。
 
@@ -94,5 +92,8 @@ window.addEventListener('resize', function() {
   }
 });
 ```
+
+Translated by
+{% include "web/_shared/contributors/henrylim.html" %}
 
 {% include "comment-widget.html" %}
