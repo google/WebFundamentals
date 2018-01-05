@@ -115,12 +115,9 @@ Note: виджет комментариев **не** отображается в
 ```
 gulp build
 
-
-
-
+```
 
 
 
 Translated by
 {% include "web/_shared/contributors/dmitryskripunov.html" %}
-```
