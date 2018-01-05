@@ -67,7 +67,7 @@ retried request.
 
 If you want to be able to differentiate retried requests from non-retried
 requests, you can specify either the `parameterOverrides` or `hitFilters`
-[configuration options](../next/reference-docs/latest/workbox.googleAnalytics#.initialize).
+[configuration options](/web/tools/workbox/reference-docs/prerelease/workbox.googleAnalytics#.initialize).
 
 These options let you modify the
 [Measurement Protocol parameters](/analytics/devguides/collection/protocol/v1/parameters)

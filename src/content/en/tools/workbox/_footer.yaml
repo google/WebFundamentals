@@ -8,7 +8,7 @@ footer:
     - label: Modules
       path: /web/tools/workbox/modules/
     - label: Reference Docs
-      path: /web/tools/workbox/reference-docs/next/
+      path: /web/tools/workbox/reference-docs/prerelease/
 
   - name: Get in Touch
     icon_name: star
