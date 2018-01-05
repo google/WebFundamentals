@@ -459,7 +459,7 @@ href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updat
     <td>Только markdown файлам эпизода подкаста</td>
   </tr>
   <tr>
-    <td>Description</td>
+    <td>Описание</td>
     <td>Размер MP3 файла (в байтах) для скачивания
     </td>
   </tr>
