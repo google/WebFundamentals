@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/tools/_project.yaml" />
-  <meta name="book_path" value="/web/tools/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: NavigationRoute</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -17,6 +17,10 @@
           <header class="page-header">
             <h1><small><a href="module-workbox-routing.html">workbox-routing</a>.<wbr></small><span class="symbol-name">NavigationRoute</span></h1>
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v2.1.2</small></span>
+            </div>
             <p>NavigationRoute is a helper class to create a <a href="module-workbox-routing.Route.html">Route</a> that matches for browser navigation requests, i.e. requests for HTML pages.</p>
             <p>It will only match incoming requests whose <a href="https://fetch.spec.whatwg.org/#concept-request-mode"><code>mode</code></a> is set to <code>navigate</code>.</p>
             <p>You can optionally only apply this route to a subset of navigation requests by using one or both of the <code>blacklist</code> and <code>whitelist</code> parameters. If both lists are provided, and there's a navigation to a URL which matches

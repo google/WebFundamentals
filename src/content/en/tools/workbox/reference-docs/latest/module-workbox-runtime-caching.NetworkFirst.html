@@ -2,8 +2,8 @@
 <html devsite>
 
 <head>
-  <meta name="project_path" value="/web/tools/_project.yaml" />
-  <meta name="book_path" value="/web/tools/_book.yaml" />
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
   <title>Class: NetworkFirst</title>
   <link href="jsdoc.css" rel="stylesheet">
@@ -17,6 +17,10 @@
           <header class="page-header">
             <h1><small><a href="module-workbox-runtime-caching.html">workbox-runtime-caching</a>.<wbr></small><span class="symbol-name">NetworkFirst</span></h1>
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v2.1.2</small></span>
+            </div>
             <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache">network first</a> request strategy.</p>
             <p>By default, <code>NetworkFirst</code> will cache responses with a 200 status code as well as <a href="http://stackoverflow.com/q/39109789">opaque responses</a> (responses from cross-origin servers which don't support
               <a href="https://enable-cors.org/">CORS</a>). You can override this default by passing in a <code>RequestWrapper</code> that includes an appropriately-configured

@@ -2,10 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-11-27 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
+
+{% include "web/tools/workbox/_shared/alpha.html" %}
 
 ## What's the Workbox CLI?
 

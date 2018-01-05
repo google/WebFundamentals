@@ -2,14 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
-
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.expiration)
 
 ## What is Cache Expiration?
 
