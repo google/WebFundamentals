@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses An Excessive DOM Size" Lighthouse audit.
 
-{# wf_updated_on: 2017-11-06 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-11-06 #}
+{# wf_blink_components: N/A #}
 
 # Uses An Excessive DOM Size  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 A large DOM tree can harm your page performance in multiple ways.
 
@@ -21,7 +22,7 @@ A large DOM tree can harm your page performance in multiple ways.
   you may be unknowingly storing references to a very large number of nodes, which can overwhelm
   the memory capabilities of your users' devices.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 An optimal DOM tree:
 

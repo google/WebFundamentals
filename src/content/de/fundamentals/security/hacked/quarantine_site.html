@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Website unter Quarantäne stellen</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Sie benötigen Folgendes:</h3>
+<ul>
+  <li>Die Möglichkeit, Ihren Webserver an der Bereitstellung von Seiten zu hindern. Alternativ können Sie mögliche Optionen auch mit Ihrem Webhosting-Anbieter besprechen. Vorsicht: Für die späteren Schritte ist es zum Teil erforderlich, Ihre Website kurzzeitig wieder online zu stellen.</li>
+  <li>Berechtigungen zur Kontoverwaltung – das heißt: Alle Nutzer abrufen, Nutzer löschen und alle zum Konto gehörigen Passwörter ändern.</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Nächste Aktionen:</h3>
+<ol>
+  <li><strong>Nehmen Sie Ihre Website offline</strong>, sodass keinerlei Inhalte mehr bereitgestellt werden. Dafür können Sie zum Beispiel den Webserver stoppen oder in die DNS-Einträge Ihrer Website einen Verweis zu einer statischen Seite auf einem anderen Server einfügen, der den HTTP-Antwortcode 503 verwendet.
+<p>Indem Sie Ihre manipulierte Website vollständig offline nehmen, können Sie weitere Störungen durch den Hacker vermeiden, während Sie die folgenden Schritte ausführen. Außerdem verhindern Sie dadurch, dass Ihre Besucher mit schädlichem Code oder mit Spamdateien auf der Website in Berührung kommen. Diese kurzzeitige Offlinephase hat wahrscheinlich keine Auswirkungen auf das zukünftige Ranking Ihrer Website in den Suchergebnissen.</p>
+      <ul>
+        <li>Wenden Sie sich an Ihren Webhosting-Anbieter, falls Sie nicht wissen, wie Sie Ihre Website offline nehmen können. Eine gute Lösung besteht zum Beispiel darin, dass Ihr Webhosting-Anbieter eine 503-Rückmeldung für Ihre Website konfiguriert, die <em>außerhalb Ihrer infizierten Verzeichnisse</em> liegt. Informieren Sie Ihren Webhosting-Anbieter, dass Sie den Status Ihrer Website zu Testzwecken mehrfach zwischen "online" und "offline" ändern müssen. So kann Ihr Webhosting-Anbieter die beste Methode anbieten, mit der Sie diesen Vorgang einfach und eigenständig steuern können.
+        </li><li>Für den Schutz Ihrer Besucher ist es nicht ausreichend, einfach nur einen <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">4xx- oder 5xx-HTTP-Statuscode</a> auszugeben. <em>Statuscodes wie  503, 404 usw. sind zwar hilfreiche Signale, dass Ihre Website vorübergehend nicht verfügbar ist; aber schädliche Inhalte können auch in Verbindung mit solchen Statuscodes an Ihre Nutzer übermittelt werden. Deshalb sollte die Rückmeldung von einem Bereich außerhalb des gehackten Servers bzw. außerhalb der gehackten Website übermittelt werden.</em>
+        </li>
+        <li>Auch eine Blockierung durch <a href="/search/reference/robots_txt">robots.txt disallow</a> ist unzureichend, weil dadurch nur die Crawler von Suchmaschinen blockiert werden. Sie verhindert aber nicht, dass normale Nutzer auf schädliche Inhalte zugreifen.</li>
+      </ul>
+  </li>
+  <li><strong>Informieren Sie Ihren Webhosting-Anbieter über die Situation</strong>, falls Sie es noch nicht getan haben. Falls Ihr Webhosting-Anbieter selbst auch direkt vom Hackerangriff betroffen ist, können zusätzliche Informationen dabei helfen, das Ausmaß des Problems besser einzuschätzen.</li>
+  <li><strong>Überprüfen Sie sorgfältig die Sicherheit der Nutzerkonten.</strong>
+    <ul>
+      <li>Rufen Sie eine Liste aller Nutzerkonten Ihrer Website ab. So können Sie herausfinden, ob der Hacker sich selbst ein neues Nutzerkonto eingerichtet hat. Dokumentieren Sie die Namen aller nicht erwünschten Konten zur späteren Untersuchung. Löschen Sie danach diese Konten, um weitere Zugriffe durch den Hacker zu verhindern.</li>
+      <li>Ändern Sie die Passwörter für alle Website-Nutzer und -Konten. Dazu gehören auch Anmeldedaten für FTP-Server, Datenbanken, Systemadministratoren und CMS-Konten (Content-Management-System).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Nächster Schritt</h2>
+<p>Der nächste Schritt des Verfahrens ist: <a href="use_search_console">Search Console verwenden</a>.</p>
+
+</body></html>

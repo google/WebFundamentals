@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-cli/src/lib/questions/ask-sw-dest.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-cli/src/lib/questions/ask-sw-dest.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+
+const assert &#x3D; require(&#x27;assert&#x27;);
+const inquirer &#x3D; require(&#x27;inquirer&#x27;);
+const ol &#x3D; require(&#x27;common-tags&#x27;).oneLine;
+
+const errors &#x3D; require(&#x27;../errors&#x27;);
+
+// The key used for the question/answer.
+const name &#x3D; &#x27;swDest&#x27;;
+
+/**
+ * @return {Promise&amp;lt;Object&gt;} The answers from inquirer.
+ */
+function askQuestion() {
+  return inquirer.prompt([{
+    name,
+    message: ol&#x60;Where would you like your service worker file to be saved?&#x60;,
+    type: &#x27;input&#x27;,
+    default: &#x27;build/sw.js&#x27;,
+  }]);
+}
+
+module.exports &#x3D; async () &#x3D;&gt; {
+  const answers &#x3D; await askQuestion();
+  const swDest &#x3D; answers[name].trim();
+
+  assert(swDest, errors[&#x27;invalid-sw-dest&#x27;]);
+
+  return swDest;
+};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

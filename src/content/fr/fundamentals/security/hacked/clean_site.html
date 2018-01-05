@@ -1,0 +1,200 @@
+<html devsite><head>
+  <title>Nettoyer votre site et en assurer la maintenance</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Vous aurez besoin :</h3>
+
+<ul>
+  <li>d'un accès aux serveurs de votre site (Web, base de données, fichiers) en tant qu'administrateur du shell/du terminal ;</li>
+  <li>d'une bonne connaissance des commandes du shell/du terminal ;</li>
+  <li>d'une bonne compréhension des codes (tels que PHP ou JavaScript) ;</li>
+  <li>de stockage pour créer des sauvegardes de votre site (incluant notamment les fichiers, la base de données et les images).</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Actions suivantes :</h3>
+
+<p>Nous aborderons les points suivants lors de cette étape : </p>
+
+<ul>
+  <li>Où trouver des ressources supplémentaires si vous pensez que le pirate informatique souhaitait obtenir les informations personnelles des internautes (à l'aide de pages d'hameçonnage par exemple)</li>
+  <li>La possibilité d'accélérer la <a href="https://www.google.com/webmasters/tools/removals">suppression des URL</a> de nos résultats de recherche à l'aide de la Search Console, lorsque vous identifiez de nouvelles URL qui ont été créées par le pirate informatique et qui sont visibles par les internautes</li>
+  <li>La possibilité d'utiliser l'outil <a href="https://www.support.google.com/webmasters/answer/1352276">Explorer comme Google</a> de la Search Console pour accélérer le traitement par Google des pages non infectées, c'est-à-dire des pages que vous venez de créer ou que vous avez récemment mises à jour, et que vous souhaitez voir s'afficher dans nos résultats de recherche</li>
+  <li>L'installation de la version la plus récente et la plus sécurisée des logiciels</li>
+  <li>La suppression des applications ou des plug-ins, inutiles ou inutilisés, qui pourraient rendre votre site plus vulnérable à l'avenir</li>
+  <li>La restauration du contenu non infecté et la suppression du contenu injecté par le pirate informatique</li>
+  <li>La réparation de la cause principale de la faille exploitée par le pirate informatique</li>
+  <li>La modification de tous les mots de passe</li>
+  <li>la planification qui permet de conserver un site sécurisé.</li>
+</ul>
+
+<h4>1. Localiser les ressources d'aide concernant la perte d'informations confidentielles, comme en cas d'hameçonnage</h4>
+
+<p>Si des informations confidentielles d'internautes ont été obtenues à partir de votre site (par exemple, parce qu'il a été victime d'une attaque d'hameçonnage), vous devriez envisager toutes les responsabilités juridiques, réglementaires ou commerciales que cela implique, avant de procéder au nettoyage de votre site ou à la suppression de fichiers. Dans les cas d'hameçonnage, le site <a href="https://antiphishing.org">antiphishing.org</a> comprend des ressources utiles telles que le document <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">What to do if you your site has been hacked by phishers</a> (Comment faire si votre site a fait l'objet d'une attaque d'hameçonnage – en anglais).</p>
+
+<h4>2. Envisager d'accélérer la suppression des URL créées par le pirate informatique</h4>
+
+<p>Si le pirate informatique a créé des URL visibles par les internautes, vous pouvez supprimer ces pages plus rapidement de nos résultats de recherche à l'aide de la fonctionnalité <a href="https://www.google.com/webmasters/tools/removals">URL à supprimer</a> de la Search Console. Cette étape est totalement facultative. Si vous supprimez simplement les pages, puis configurez votre serveur afin qu'il affiche un <a href="https://www.support.google.com/webmasters/answer/40132">code d'état 404</a>, les pages disparaîtront naturellement petit à petit de l'index Google.</p>
+
+<ul>
+  <li>La décision d'utiliser la fonctionnalité "URL à supprimer" dépend souvent du nombre de pages indésirables créées (il peut être fastidieux d'ajouter trop de pages dans cet outil), ainsi que des dommages que ces pages pourraient éventuellement causer aux internautes. Afin d'éviter que les pages soumises dans "URL à supprimer" ne s'affichent dans les résultats de recherche, assurez-vous qu'elles sont également configurées pour afficher une réponse 404 "Fichier introuvable".</li>
+  <li>N'utilisez pas cet outil pour demander la suppression de pages auparavant saines, qui ont simplement été endommagées par le pirate informatique. Ces pages devront se réafficher dans les résultats de recherche Google dès qu'elles auront été nettoyées.
+    <em>L'outil "URL à supprimer" ne convient qu'aux pages que vous ne souhaitez jamais voir s'afficher dans les résultats.</em></li>
+</ul>
+
+<h4>3. Envisager d'accélérer le traitement par nos services de vos pages non infectées</h4>
+
+<p>Si vous avez de nouvelles pages saines ou des pages saines mises à jour, vous pouvez utiliser la fonctionnalité <a href="https://www.support.google.com/webmasters/answer/1352276">Explorer comme Google</a> de la Search Console pour soumettre ces pages à l'index Google. Cette étape est totalement facultative : si vous ne l'effectuez pas, vos nouvelles pages ou vos pages modifiées seront explorées et traitées petit à petit.</p>
+
+<h4>4. Commencer le nettoyage de votre/vos serveur(s)</h4>
+
+<p>Il est maintenant temps de commencer à nettoyer votre site à l'aide des notes que vous avez prises au cours des étapes <a href="hacked_with_spam">Évaluer les dommages</a> et <a href="vulnerability">Identifier la faille</a>. La procédure suivante que vous allez effectuer au cours de cette étape dépend du type de sauvegarde à votre disposition.</p>
+
+<ul>
+  <li>Sauvegarde non infectée et actualisée</li>
+  <li>Sauvegarde non infectée, mais obsolète</li>
+  <li>Pas de sauvegarde disponible   </li>
+</ul>
+
+<p>Assurez-vous d'abord que cette sauvegarde a été créée <strong>avant</strong> le piratage de votre site.</p>
+
+<ul>
+  <li><strong>Sauvegarde non infectée et actualisée</strong>
+
+    <ol>
+      <li>Restaurez votre sauvegarde.</li>
+      <li>Installez toutes les mises à jour et tous les correctifs logiciels disponibles. Cela concerne le logiciel du système d'exploitation (OS) si vous avez le contrôle du serveur, et toutes les applications, telles que le système de gestion de contenu, la plate-forme d'e-commerce, les plug-ins ou les modèles.</li>
+      <li>Envisagez la possibilité de supprimer des logiciels de votre serveur (par exemple, des widgets, des plug-ins ou des applications) que le site n'utilise plus.</li>
+      <li>Corrigez la faille.</li>
+      <li>Assurez-vous que tous les problèmes rencontrés au cours de l'étape <a href="hacked_with_spam">Évaluer les dommages</a> sont résolus.</li>
+      <li>Modifiez à nouveau les mots de passe de tous les comptes liés au site, par exemple les identifiants pour accéder au serveur FTP, à la base de données, pour les administrateurs système et pour les comptes du système de gestion de contenu. Pour les systèmes d'exploitation Unix :
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Sauvegarde non infectée, mais obsolète</strong>
+    <ol>
+      <li>Créez une image disque de votre site actuel, même s'il est toujours infecté. Il ne s'agit que d'une copie de sûreté. Marquez la copie comme infectée pour la distinguer des autres. Sur un système d'exploitation Unix, la création d'une image disque peut se faire de la manière suivante :
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Créez une copie de sauvegarde du système de fichiers de votre serveur, qui comprend les fichiers image et multimédias. Si vous avez une base de données, sauvegardez-la également.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Restaurez la sauvegarde non infectée, mais obsolète sur votre serveur.</li>
+      <li>Envisagez la possibilité de supprimer de votre serveur des logiciels (par exemple, des widgets, des plug-ins ou des applications) que le site n'utilise plus.</li>
+      <li>Mettez à jour tous les logiciels, notamment l'OS si vous avez le contrôle du serveur, et toutes les applications logicielles, comme le système de gestion de contenu, la plate-forme de e-commerce, les plug-ins, les modèles, etc. Assurez-vous d'installer tous les correctifs et toutes les mises à jour de sécurité disponibles.</li>
+      <li>Corrigez la faille.</li>
+      <li>Effectuez une comparaison <code>diff</code>, soit manuellement, soit de manière automatisée, entre la sauvegarde non infectée et la copie actuellement infectée.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Importez tout nouveau contenu non infecté que vous souhaitez préserver de la copie infectée dans le serveur mis à jour.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Vérifiez que chaque URL identifiée au cours de l'étape <a href="hacked_with_spam">Évaluer les dommages</a> a été corrigée.</li>
+      <li>Modifiez à nouveau les mots de passe de tous les comptes liés au site, par exemple les identifiants pour accéder au serveur FTP, à la base de données, pour les administrateurs système et pour les comptes du système de gestion de contenu. Pour les systèmes d'exploitation Unix :
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Pas de sauvegarde disponible</strong>
+    <ol>
+      <li>Créez deux sauvegardes de votre site, même s'il est toujours infecté. Avoir une sauvegarde supplémentaire vous aide à récupérer le contenu supprimé accidentellement, ou vous permet de revenir en arrière et de recommencer en cas de problème. Ajoutez un libellé "infecté" à chaque sauvegarde pour vous en rappeler.
+        <ul>
+          <li>L'une de vos sauvegardes doit être une image disque ou une "version clonée" de votre site. Ce format rend la restauration du contenu encore plus simple. Vous pouvez laisser l'image disque de côté pour une urgence. Sur un système d'exploitation Unix, la création d'une image disque peut se faire de la manière suivante :
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>L'autre sauvegarde doit être une copie du système de fichiers de votre serveur, qui comprend les fichiers image et multimédias. Si vous possédez une base de données, sauvegardez-la également.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Si vous ne disposez pas d'une image disque, créez deux sauvegardes de la base de données et deux sauvegardes du système de fichiers.</li>
+        </ul>
+      </li>
+      <li>Nettoyez le contenu du site sur la copie de sauvegarde du système de fichiers (et non sur le serveur lui-même).
+        <ol>
+          <li>Si lors de votre examen préalable, vous aviez trouvé des autorisations trop larges concernant des fichiers, vous pouvez les corriger. Assurez-vous de le faire sur la copie de sauvegarde, et non sur le serveur lui-même.</li>
+          <li>Sur la copie de sauvegarde, vous pouvez également nettoyer tous les fichiers qui correspondent aux URL mentionnées comme piratées à l'étape <a href="hacked_with_spam">Évaluer les dommages</a>. Il peut s'agir de fichiers de configuration du serveur ou de code JavaScript, HTML, PHP.</li>
+          <li>Assurez-vous de supprimer également (en affichant une réponse 404) les fichiers créés par le pirate (que vous avez peut-être soumis à l'aide de la fonctionnalité "URL à supprimer" de la Search Console).</li>
+          <li>Si la faille réside dans votre code ou dans des mots de passe piratés, corrigez-la. Des bibliothèques de validation de données tierces ou des audits de sécurité peuvent vous servir.</li>
+          <li>Si votre site possède une base de données, commencez par nettoyer les enregistrements modifiés par le pirate dans votre sauvegarde.
+            Avant de terminer, effectuez un contrôle de sûreté d'enregistrements supplémentaires afin de vous assurer qu'ils ne sont pas infectés.</li>
+          <li>Modifiez à nouveau les mots de passe de tous les comptes liés au site (par exemple, les identifiants pour accéder au serveur FTP, à la base de données, pour les administrateurs système et pour les comptes du système de gestion de contenu). Pour les systèmes d'exploitation Unix :
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>À ce stade, la copie de sauvegarde auparavant infectée de votre site ne doit contenir que des données non infectées. Mettez cette copie non infectée de côté et passez à l'action nº 5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Éliminer les logiciels inutiles</h4>
+
+<p>Envisagez de supprimer des logiciels de votre serveur, tels que des widgets, des plug-ins ou des applications, que le site n'utilise plus. Cela peut vous permettre d'accroître la sécurité et de simplifier la maintenance à l'avenir.</p>
+
+<h4>6.  Nettoyer tous les serveurs</h4>
+
+<ol>
+  <li>Effectuez une installation non infectée et non une simple mise à jour. Les mises à jour peuvent conserver des fichiers provenant de versions précédentes. Si un fichier infecté reste sur le serveur, il est plus probable qu'un autre piratage se produise.
+    <ul>
+      <li>La nouvelle installation doit comprendre l'OS si vous avez le contrôle du serveur, et toutes les applications logicielles, telles que le système de gestion de contenu, la plate-forme de e-commerce, les plug-ins, les modèles, etc. Assurez-vous d'installer tous les correctifs et toutes les mises à jour de sécurité disponibles.</li>
+    </ul>
+  </li>
+  <li>Transférez le contenu non infecté depuis la copie de sauvegarde du système de fichiers non infecté vers les serveurs nouvellement installés.
+    N'importez ou ne restaurez que les fichiers (ou la base de données) qui ne sont pas infectés. Assurez-vous de conserver les autorisations appropriées pour les fichiers et de ne pas écraser les fichiers système nouvellement installés.</li>
+  <li>Modifiez une dernière fois les mots de passe de tous les comptes liés au site (par exemple les identifiants pour accéder au serveur FTP, à la base de données, pour les administrateurs système et pour les comptes du système de gestion de contenu). Pour les systèmes d'exploitation Unix :
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7.  Créer un plan de maintenance à long terme</h4>
+
+<p>De nombreuses ressources informatives sur le Web sont consacrées à l'importance de la maintenance d'un site. On peut notamment citer <a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics</a> (Les bases de la prévention contre les programmes malveillants – en anglais) de StopBadware. Nous vous conseillons également vivement d'adopter les bonnes pratiques suivantes :</p>
+
+<ul>
+  <li>Effectuez régulièrement des sauvegardes automatiques de votre site.</li>
+  <li>Assurez-vous que vos logiciels sont toujours à jour.</li>
+  <li>Familiarisez-vous avec les pratiques de sécurité de toutes les applications, plug-ins, logiciels tiers, etc. avant de les installer sur votre serveur. Une faille de sécurité dans une seule application logicielle peut affecter la sécurité de l'ensemble de votre site.</li>
+  <li>Appliquez des règles strictes de création de mots de passe.</li>
+  <li>Maintenez la sécurité de tous les appareils utilisés pour se connecter à la machine (système d'exploitation et navigateur mis à jour).</li>
+</ul>
+
+<h4>8.  Vérifier à nouveau que le nettoyage est terminé</h4>
+
+<p>Vous devez pouvoir répondre "oui" aux questions suivantes :</p>
+
+<ul>
+  <li>Ai-je pris les mesures appropriées si le pirate informatique a obtenu les informations personnelles des internautes ? </li>
+  <li>Mon site utilise-t-il les versions les plus récentes et les plus sécurisées des logiciels ? </li>
+  <li>Ai-je supprimé toutes les applications ou tous les plug-ins, inutiles ou inutilisés, qui pourraient rendre mon site plus vulnérable à l'avenir ? </li>
+  <li>Ai-je restauré mon contenu et supprimé le contenu du pirate informatique ? </li>
+  <li>Ai-je corrigé la faille initiale qui a permis le piratage de mon site ? </li>
+  <li>Ai-je un plan pour assurer la sécurité de mon site ?</li>
+</ul>
+
+<h4>9. Remettre votre site en ligne</h4>
+<h2>Étape suivante</h2>
+<p>Vous y êtes presque ! La dernière étape du processus consiste à <a href="request_review">faire une demande de réexamen</a>.</p>
+
+</body></html>

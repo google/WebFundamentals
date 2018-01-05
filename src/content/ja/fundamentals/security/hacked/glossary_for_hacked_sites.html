@@ -1,0 +1,108 @@
+<html devsite><head>
+  <title>ハッキングされたサイトに関する用語集</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrqsQHZlsqVBKu4wZSjaEFKJIPAOqs+xT2RCDIWwrEV/gpUzI6ZNy12sV3gCBh2qtgA=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>この用語集には、セキュリティに関する文書で言及される技術用語が収められています。アルファベット順にリストし、用語（太字）の後にその用語の定義を示します。</p>
+
+<p><strong>管理者権限（Administrator privileges）</strong><br>
+管理者権限とは、システムで最上位の権限が付与されるアカウント設定です。このタイプの権限では、サイト全体の削除、パスワードのリセット、ファイルのアップロードなどの操作が許可されます。</p>
+
+<p><strong>バックドア（Back door）</strong><br>
+バックドアとは、認証管理を回避してアクセスを維持することを目的としてシステムにインストールされるプログラムです。</p>
+
+<p><strong>クローキング（Cloaking）</strong><br>
+クローキングとは、ユーザーや検索エンジンに対しそれぞれ異なるコンテンツや URL を表示する行為です。</p>
+
+<p>たとえば、動的なスクリプトや .htaccess ルールでは、リクエストの処理に基づいてステータス コードが返されることがあります。この手法を使って、ハッカーは一部の IP アドレスやブラウザには 404 または 500 のエラーコードを返して痕跡を隠し、他の IP アドレスやブラウザにはスパムを配信します。</p>
+
+<p><strong>設定ファイル（Configuration files）</strong><br>
+データベースの場所や動的なサイトの認証情報などの情報を保存する場合に使うファイルです。</p>
+
+<p><strong>コンテンツ管理システム（Content Management System（CMS））</strong><br>
+コンテンツ管理システムとは、ユーザーがウェブサイトを簡単に作成、編集することができるソフトウェア パッケージです。たとえば、WordPress、Drupal、Joomla! がありますが、カスタム製品など、他にも多くの CMS があります。</p>
+
+<p><strong>デジタル フォレンジック スペシャリスト（Digital forensic specialists）</strong><br>
+サイトの問題を修正し、サイトがどのように不正使用されていたかを特定できるよう支援する人またはチームです。</p>
+
+<p><strong>静的ウェブページ（Static web page）</strong><br>
+静的ウェブページには、ウェブサイトのコンテンツを表示する 1 つの不変のファイルが含まれます。</p>
+
+<p><strong>動的ウェブぺージ（Dynamic web page）</strong><br>
+動的ウェブページは、スクリプトを使ってサイト上のコンテンツを生成します。動的ウェブページでは、リクエストを受けるたびにソフトウェアを使ってページが生成され、スクリプトとテンプレートの組み合わせを使ってコンテンツを配置します。</p>
+
+<p><strong>eval()</strong><br>
+PHP と JavaScript で、eval() は文字列を評価して結果を返す関数です。サイトでユーザー入力を処理する場合は eval 関数を使用しないことをおすすめします。この関数には、攻撃者が悪意のあるコードを挿入させる（つまり、有害な PHP コマンドを注入する）ことができる脆弱性があります。</p>
+
+<p><strong>FTP</strong><br>
+ファイル転送プロトコル（File Transfer Protocol: FTP）は、マシン間でファイルを転送する場合に使うプロトコルです。</p>
+
+<p><strong>隠しファイル（Hidden files）</strong><br>
+隠しファイルとは、デフォルトではディレクトリに表示されないファイルです。通常、.htaccess などのファイルは、重要な情報が間違って変更されないよう保護するため表示されません。隠しファイルの表示と編集を可能にするには、ファイルシステムの設定が必要です。</p>
+
+<p><strong>HTTP ステータス コード</strong><br>
+HTTP ステータス コードとは、ページの読み込みやコメントの送信など、ユーザーがページを操作しようとしたときにウェブサーバーがコンテンツと一緒に返す定型の応答です。このコードから、ユーザーはウェブサイトがどのように応答しているかどうかを理解し、エラーを特定することができます。ステータス コードとその意味の完全なリストについては、<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" l10n-encrypted-href="9nYxONWXOH4FIosRKPqouDhx6YATw6wJO7zfRVvjYC6+7B3Bocm/Xmav88bng2xPLXljSFw+UlAn3sUgrCwJlA==">World Wide Web Consortium のステータスコードのページ</a>をご覧ください。</p>
+
+
+<p><strong>iframe</strong><br>
+iframe によって、あるウェブページのコンテンツを別のウェブページ内に表示できます。隠し iframe は、ハッカーが自分のサイトにユーザーをリダイレクトさせるときに用いる一般的な手法です。</p>
+
+<p><strong>ログファイル（Log file）</strong><br>
+ログファイルとは、ウェブサーバーがユーザー リクエストを記録するファイルで、そのサーバー上で実行されたすべてのアクティビティが記録されます。ログファイルを調べることで、サイトに対するハッキング行為や不審なトラフィックを特定できます。</p>
+
+<p><strong>マルウェア（Malware）</strong><br>
+マルウェアとは、パソコン、パソコンで実行されているソフトウェア、またはそのユーザーに危害を加えることを目的としたソフトウェアです。<a href="https://support.google.com/webmasters/answer/3258249" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauhztT57Grw5+ReYbQNHYtQQ==">マルウェアの詳細</a></p>
+
+<p><strong>難読化（Obfuscation）</strong><br>
+難読化とは、コードを読みにくくすることでコードの解釈を混乱させるために使う手法です。ハッカーによる一般的な難読化の手法には、文字の置換、変数名の意図的な混乱、base64、rot13、gzip、url エンコーディング、16 進数エンコーディング、またはそれらの組み合わせがあります。また、base64、gzip などの手法は、ウェブシェル全体などの大量のコードを圧縮して隠す場合にも使われることがあります。</p>
+
+
+<p><strong>フィッシング（Phishing）</strong><br>
+フィッシングはソーシャル エンジニアリングの 1 つの手法で、信頼できるソースを装ってユーザーをだまし、機密情報（ユーザー名、パスワードなど）を提供させます。たとえば、フィッシング詐欺では、銀行のふりをして狙った相手にメールを送り、銀行口座の認証情報を聞き出します。<a href="https://support.google.com/websearch/answer/106318" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGAHTeD7bxMBoPlsV4KiKHOJsR3u0dXNMOyCVv27n839Q==">フィッシングの詳細</a></p>
+
+
+<p><strong>Search Console</strong><br>
+Google Search Console は、Google 検索結果でのサイトの掲載順位の監視、管理に役立つ Google の無料サービスです。Google では、ウェブマスターにウェブサイトの問題を伝える場合にも Search Console を使用します。
+  <a href="https://support.google.com/webmasters/answer/4559176?ref_topic=3309469" l10n-encrypted-href="q2EDTir6RTCdyGTquP02hV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauQ1yb/yjdt4kGCO632wy4ypiFSnhi3np8M/fJJxUKyfU=">Search Console の詳細</a></p>
+
+
+<p><strong>サイトマップ（Sitemap）</strong><br>
+サイトマップとは、サイト上のウェブページのリストが含まれ、検索エンジンにサイトのコンテンツの構成を伝えるファイルです。
+  <a href="https://support.google.com/webmasters/answer/156184" l10n-encrypted-href="4LUJLudjkgNLQp+AvLhhyl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqaurb74yg4s7zaZWrbm3m7y/Q==">サイトマップの詳細</a></p>
+
+<p><strong>ソーシャル エンジニアリング（Social engineering）</strong><br>
+ソーシャル エンジニアリングとは、コードを直接攻撃するのではなく、人をだましてアクセス権を提供させるよう試みることで、機密情報へのアクセスやその制御を奪う手法です。ソーシャル エンジニアリングの最も一般的な手法の 1 つがフィッシングです。
+  <a href="https://support.google.com/webmasters/answer/6350487" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauNW/X51fuaEJZCisswYtK4g==">ソーシャル エンジニアリングの詳細</a></p>
+
+<p><strong>トラフィック スパイク（Traffic spike）</strong><br>
+トラフィック スパイクとは、ウェブサイト トラフィックの急増または予想外の増加です。</p>
+
+<p><strong>2 段階認証プロセス（Two-factor authentication（2FA））</strong><br>
+2 段階認証プロセスとは、少なくとも 2 つの証拠を要求することでアカウントのログインを保護するセキュリティ メカニズムです。たとえば、2 段階認証プロセスを使用するユーザーは、自分のアカウントにアクセスするためにパスワードと SMS から届いたセキュリティ コードの両方が必要になります。</p>
+
+<p><strong>ウェブ ホスティング サービス（Web hosting service）</strong><br>
+ウェブ ホスティング サービスは、Google サイトなど、ウェブサーバー上でサイトをホストするスペースをユーザーに提供します。サービスに応じて、他の機能やツールが利用できることもあります。</p>
+
+<p><strong>ウェブ スクリプト言語（Web scripting languages）</strong><br>
+通常、ウェブ スクリプト言語は、サイトに機能を追加するために HTML と組み合わせて使用します。たとえば、フォームを処理する、不適切なコメントを削除する、特殊な視覚効果を作る場合などに使われます。ここでは、ハッキングされたサイトの復旧についてのガイドで、PHP または JavaScript のいずれかを指す場合にスクリプト言語という言葉を使っています。</p>
+
+<p>PHP はサーバー側のスクリプト言語で、ウェブサーバーがそのコマンドを解釈して実行します。</p>
+
+<p>Javascript は主としてクライアント側の言語で、ユーザーのブラウザがそのコマンドを解釈して実行します。</p>
+
+<p><strong>ウェブサーバー（Web server）</strong><br>
+ウェブサーバーとは、ウェブページと、ウェブサイトに関連するその他のファイルをホストし管理するマシンとソフトウェアです。</p>
+
+<p><strong>ウェブシェル（Web shell）</strong><br>
+ウェブシェルとはバックドア スクリプトで、これによって攻撃者はサーバー上でアクセスを維持します。</p>
+
+<p><strong>ウェブスパム（Webspam）</strong><br>
+ウェブスパムとは、検索エンジンを欺いて操作し、サイトのランキングや人気度を上げることを試みる、ブラックハットの検索エンジン最適化（SEO）手法またはスパム コンテンツです。</p>
+
+
+
+
+</body></html>

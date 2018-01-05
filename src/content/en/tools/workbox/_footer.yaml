@@ -1,0 +1,27 @@
+footer:
+- linkboxes:
+  - name: Key Topics
+    icon_name: star
+    contents:
+    - label: Guides
+      path: /web/tools/workbox/guides/
+    - label: Modules
+      path: /web/tools/workbox/modules/
+    - label: Reference Docs
+      path: /web/tools/workbox/reference-docs/next/
+
+  - name: Get in Touch
+    icon_name: star
+    contents:
+    - label: "@workboxjs on Twitter"
+      path: https://twitter.com/workboxjs
+    - label: Join the Slack Channel
+      path: /web/tools/workbox/community
+
+  - name: Contribute
+    icon_name: bug_report
+    contents:
+    - label: Ask a Question on StackOverflow
+      path: https://stackoverflow.com/questions/ask?tags=workbox
+    - label: File an Issue
+      path: https://github.com/googlechrome/workbox/issues

@@ -253,7 +253,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     <tr>
       <td>Increment / decrement a property value by 100</td>
       <td>Click a value then press <kbd>Command</kbd>+<kbd>Up Arrow</kbd> / <kbd>Command</kbd>+<kbd>Down Arrow</kbd></td>
-      <td>Click a value then press <kbd>Shift</kbd>+<kbd>Page Up</kbd> / <kbd>Shift</kbd>+<kbd>Page Down</kbd></td>
+      <td>Click a value then press <kbd>Control</kbd>+<kbd>Up Arrow</kbd> / <kbd>Control</kbd>+<kbd>Down Arrow</kbd></td>
     </tr>
   </tbody>
 </table>

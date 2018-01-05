@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-webpack-plugin/src/lib/utils/read-file.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-webpack-plugin/src/lib/utils/read-file.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2017 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+/**
+ * Use the &#x60;compiler.inputFileSystem._readFile&#x60; method instead of &#x60;fs.readFile&#x60;,
+ * &#x60;readFile&#x60; is configured to use &#x60;compiler.inputFileSystem._readFile&#x60; during
+ * the run phase of the webpack compilation lifecycle by passing the function
+ * to the &#x60;setReadFile&#x60; function.
+ */
+let readFileFn;
+
+/**
+ * Sets the read file function.
+ *
+ * @param {Function} fn The function to use.
+ *
+ * @private
+ */
+function setReadFile(fn) {
+  readFileFn &#x3D; fn;
+}
+
+/**
+ * A wrapper that calls readFileFn and returns a promise for the contents.
+ *
+ * @param {string} filePath The file to read.
+ * @return {Promise&amp;lt;string&gt;} The contents of the file.
+ *
+ * @private
+ */
+function readFile(filePath) {
+  return new Promise((resolve, reject) &#x3D;&gt; {
+    readFileFn(filePath, &#x27;utf8&#x27;, (error, data) &#x3D;&gt; {
+      if (error) {
+        return reject(error);
+      }
+      resolve(data);
+    });
+  });
+}
+
+module.exports &#x3D; {
+  readFile,
+  setReadFile,
+};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

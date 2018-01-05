@@ -1,0 +1,47 @@
+<html devsite><head>
+  <title>Cách ly trang web của bạn</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Bạn sẽ cần:</h3>
+<ul>
+  <li>Khả năng ngăn máy chủ web của bạn phân phối các trang (hoặc bạn có thể
+    thảo luận các tùy chọn với nhà cung cấp dịch vụ lưu trữ). Xin lưu ý rằng trong
+    các bước sau, bạn sẽ cần đưa trang web của bạn trở lại trực tuyến
+    trong một khoảng thời gian ngắn.</li>
+  <li>Quyền quản lý tài khoản (khả năng xem tất cả người dùng, xóa người dùng
+    và thay đổi tất cả mật khẩu liên quan đến tài khoản của bạn).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Các hành động tiếp theo:</h3>
+<ol>
+  <li><strong>Gỡ trang web của bạn xuống</strong> để trang không còn phân phối nội dung cho người dùng. Ví dụ: dừng máy chủ web của bạn hoặc trỏ các mục nhập DNS trên trang web tới một trang tĩnh trên máy chủ khác sử dụng mã phản hồi HTTP 503.
+<p>Bằng cách gỡ bỏ hoàn toàn trang web bị xâm nhập, bạn có thể hoàn thành các nhiệm vụ quản trị với ít can thiệp hơn từ tin tặc và đồng thời khách truy cập sẽ không bị tiếp xúc với mã độc hại hay tệp spam. Việc gỡ trang web của bạn tạm thời trong quá trình khôi phục ít có khả năng ảnh hưởng đến xếp hạng trang web của bạn trong kết quả tìm kiếm trong tương lai.</p>
+      <ul>
+        <li>Việc liên hệ với nhà cung cấp dịch vụ lưu trữ sẽ hữu ích nếu bạn không chắc làm thế nào để gỡ trang web của mình. Ví dụ: nhà cung cấp dịch vụ lưu trữ của bạn có thể định cấu hình mã phản hồi 503 cho trang web của bạn <em>từ bên ngoài thư mục bị nhiễm của bạn</em> (đây là một lựa chọn tốt). Báo cho nhà cung cấp dịch vụ lưu trữ rằng bạn sẽ cần phải chuyển đổi trang web của mình giữa trạng thái trực tuyến và ngoại tuyến nhằm mục đích thử nghiệm vì điều đó có thể giúp họ cung cấp cho bạn phương pháp tự chủ nhất để gỡ trang web xuống.
+        </li><li>Việc định cấu hình để trang web của bạn trả lại <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">mã trạng thái HTTP</a> 4xx hoặc 5xx là không đủ để bảo vệ người dùng của bạn. Nội dung độc hại vẫn có thể được trả lại cho người dùng với 404, 503, v.v. <em>Mã trạng thái 503 là một tín hiệu hữu ích cho thấy trang web của bạn đang tạm thời ngừng hoạt động, nhưng phản hồi sẽ đến từ bên ngoài máy chủ/trang web bị xâm nhập của bạn.</em>
+        </li>
+        <li>Sử dụng lệnh <a href="/search/reference/robots_txt">cấm robots.txt</a> cũng không đủ vì lệnh này chỉ chặn trình thu thập dữ liệu của công cụ tìm kiếm. Người dùng thường xuyên vẫn có thể truy cập nội dung có hại.</li>
+      </ul>
+  </li>
+  <li>Nếu bạn chưa làm điều này thì <strong>hãy liên hệ với nhà cung cấp dịch vụ lưu trữ để thông báo tình hình</strong>. Nếu nhà cung cấp dịch vụ lưu trữ của bạn cũng bị xâm nhập, thông tin này có thể giúp họ hiểu được phạm vi của vấn đề.</li>
+  <li><strong>Thực hiện quản lý tài khoản người dùng kỹ lưỡng</strong>.
+    <ul>
+      <li>Xem danh sách tài khoản người dùng trên trang web của bạn và kiểm tra xem
+      tin tặc có tạo tài khoản người dùng mới hay không. Nếu có tài khoản bất hợp pháp
+      được tạo, hãy viết ra tên các tài khoản không mong muốn để điều tra sau. Sau đó xóa
+      các tài khoản để ngăn chặn tin tặc đăng nhập trong tương lai.</li>
+      <li>Thay đổi mật khẩu cho tất cả người dùng trang web và tài khoản. Điều này bao gồm
+      thông tin đăng nhập cho FTP, truy cập cơ sở dữ liệu, quản trị viên hệ thống
+      và tài khoản hệ thống quản lý nội dung (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Bước tiếp theo</h2>
+<p>Bước tiếp theo trong quy trình là <a href="use_search_console">Sử dụng Search Console</a>.</p>
+
+</body></html>

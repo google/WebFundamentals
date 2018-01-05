@@ -1,21 +1,18 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_updated_on: 2017-12-12 #}
 {# wf_published_on: 2017-10-23 #}
+{# wf_blink_components: N/A #}
 
 # Chrome User Experience Report {: .page-title }
 
 <img src="images/dataset.png" class="attempt-right" alt="">
 
-The Chrome User Experience Report is a public dataset of key user experience 
-metrics for popular origins on the web, as experienced by Chrome users under 
-real-world conditions.
-
-Note: The initial release includes data from a sample of 10k origins and 
-focuses on loading metrics — see our 
-[Chromium blog post](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html) 
-for more details.
+The Chrome User Experience Report is a
+[public dataset](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html)
+of key user experience metrics for popular origins on the web, as experienced 
+by Chrome users under real-world conditions.
 
 ## Methodology {: #methodology }
 
@@ -23,7 +20,8 @@ The Chrome User Experience Report is powered by real user measurement of key
 user experience metrics across the public web, aggregated from users who have 
 opted-in to syncing their browsing history, have not set up a Sync passphrase, 
 and have [usage statistic reporting](https://www.google.com/chrome/browser/privacy/whitepaper.html#usagestats) 
-enabled. The resulting metrics are aggregated by origin and split across 
+enabled. The resulting metrics are aggregated by origin, for all origins that
+are known by Google's web crawlers, and split across 
 multiple dimensions outlined below.
 
 ### Metrics {: #metrics }
@@ -34,7 +32,7 @@ origin-resolution. Site owners that want more detailed (URL level resolution)
 analysis and insight into their site performance and can use the same APIs to 
 gather detailed real user measurement (RUM) data for their own origins.
 
-Note: The initial release of the Chrome User Experience Report is focused on 
+Note: Currently the Chrome User Experience Report is focused on 
 loading performance. With time, we hope to add more metrics and dimensions, 
 both to provide more insight into loading and other [critical factors that 
 most affect user experience](/web/updates/2017/06/user-centric-performance-metrics).

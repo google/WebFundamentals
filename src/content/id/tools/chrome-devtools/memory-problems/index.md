@@ -150,7 +150,7 @@ dari saat dimulai ("dimulai" disini adalah titik setelah pengumpulan sampah
 secara paksa). Dalam kondisi nyata, jika Anda melihat pola meningkatnya
 ukuran heap JS atau ukuran simpul, ini berarti ada kemungkinan kebocoran memori.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

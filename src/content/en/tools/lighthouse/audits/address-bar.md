@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Address Bar Matches Brand Colors" Lighthouse audit.
 
-{# wf_updated_on: 2017-09-02 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-05-12 #}
+{# wf_blink_components: N/A #}
 
 # Address Bar Matches Brand Colors  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Theming the browser's address bar to match your brand's colors provides
 a more immersive user experience.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To ensure that the address bar is always themed to your colors:
 
@@ -45,10 +46,10 @@ CSS color value.
       ...
     }
 
-See [Manifest Exists](manifest-exists#how) for more resources on adding a
+See [Manifest Exists](manifest-exists#recommendations) for more resources on adding a
 manifest to your app.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 The audit passes if Lighthouse finds a `theme-color` meta tag in the page's
 HTML and a `theme_color` property in the Web App Manifest. Lighthouse does

@@ -4,6 +4,7 @@ description: Workbox Examples.
 
 {# wf_published_on: 2017-10-04 #}
 {# wf_updated_on: 2017-11-10 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Overview {: .page-title }
 
@@ -21,7 +22,7 @@ Modern offline web apps are possible thanks to [**service workers**][sw].
 Service workers are background workers, written in JavaScript, that can
 locally store all of the resources needed to run your site offline.
 
-[sw]: https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+[sw]: /web/fundamentals/getting-started/primers/service-workers
 
 You can think of a service worker as a [proxy server][proxy] that's running in
 the background of your users' devices. Your site makes a request for a
@@ -44,7 +45,7 @@ than going to the network for the document, Workbox just serves it from the
 cache.
 
 [cache]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
-[http]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching
+[http]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
 
 The logic for determining whether to serve a resource from the cache or to
 fetch a fresh version is called the **caching strategy** for that resource.

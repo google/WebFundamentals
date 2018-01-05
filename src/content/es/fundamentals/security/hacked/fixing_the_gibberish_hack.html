@@ -1,0 +1,185 @@
+<html devsite><head>
+  <title>Corregir el ataque de texto autogenerado</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>Esta guía se ha elaborado para hacer frente a un tipo de ataque concreto que genera páginas de texto autogenerado con muchas palabras clave en tu sitio web y al que nos referiremos como ataque de texto autogenerado. Se ha diseñado pensando en los usuarios de los <a href="https://es.wikipedia.org/wiki/Sistema_de_gestión_de_contenido_web" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">sistemas de gestión de contenido (CMS)</a> más populares; no obstante, te resultará útil aunque no utilices dichos sistemas.</p>
+
+<p><strong>Nota:</strong> Si no estás seguro de si te han pirateado el sitio web, lee nuestra guía sobre <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">cómo comprobarlo</a>.</p>
+
+<aside class="note">Queremos asegurarnos de que esta guía te resulte realmente útil; <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">envíanos comentarios</a> para que podamos mejorarla.</aside>
+
+<h2>Índice</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Paso 1: Identificar este tipo de ataque</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Paso 2: Corregir el ataque</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Paso 3: Recursos adicionales</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Preguntas frecuentes sobre sitios web pirateados</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Identificar este tipo de ataque</h2>
+
+<p>El ataque de texto autogenerado crea automáticamente muchas páginas con frases sin sentido llenas de palabras clave en tu sitio web. Estas páginas no las has creado tú, pero contienen URLs que los usuarios pueden encontrar atractivas y en las que pueden hacer clic. Los hackers, de esta forma, intentan que las páginas pirateadas aparezcan entre los resultados de la Búsqueda de Google. Después, si los usuarios intentan visitar estas páginas, se les redirige a una página no relacionada, como un sitio web con contenido pornográfico.
+  Los hackers ganan dinero cuando estas páginas no relacionadas reciben visitas. A continuación te mostramos algunos ejemplos del tipo de archivos que puedes ver en un sitio web afectado por el ataque de texto autogenerado:</p>
+
+  <ul>
+    <li>www.example.com/cheap-hair-styles-cool.html</li>
+    <li>www.example.com/free-pictures-fun.html</li>
+    <li>www.example.com/nice-song-download-file.php</li>
+   </ul>
+
+<p>A veces, aparecen en una carpeta cuyo nombre son caracteres aleatorios y están en diferentes idiomas:</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/cheap-hair-styles-cool.html</li>
+   <li>www.example.com/jfwoea/free-pictures-fun.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>En primer lugar, consulta la herramienta <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemas de seguridad</a> de Search Console para comprobar si Google ha descubierto alguna de estas páginas pirateadas en tu sitio web. También se pueden descubrir si escribes <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> con la URL de nivel raíz de tu sitio web en la Búsqueda de Google. Al usarla, te mostrará las páginas de tu sitio web que ha indexado, incluidas las pirateadas. Consulta algunas páginas de resultados de búsqueda para comprobar que no aparezca ninguna URL inusual. Si la Búsqueda de Google no devuelve contenido pirateado, utiliza los mismos términos de búsqueda en otros motores de búsqueda. A continuación te mostramos un ejemplo del aspecto que tendría una búsqueda de este tipo:</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">En la imagen se puede ver que los resultados de búsqueda contienen muchas páginas web que el propietario del sitio web no ha creado. Si observas atentamente las descripciones, verás un ejemplo del texto autogenerado que se crea con este ataque.</div>
+
+<p>Normalmente, al hacer clic en un enlace a una página pirateada, se te redirige a otro sitio web o ves una página llena de texto autogenerado. Sin embargo, también es posible que aparezca un mensaje que indique que la página no existe (por ejemplo, un error 404). Se trata de un engaño: los hackers tratarán de convencerte de que la página ha desaparecido o de que ya se ha corregido, cuando no es el caso. Para ello, realizan un <a href="https://support.google.com/webmasters/answer/66355">encubrimiento</a> del contenido. Para comprobar que no haya encubrimiento, introduce las URL de tu sitio web en la herramienta <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Explorar como Google</a> de Search Console, que te permite ver el contenido oculto subyacente. </p>
+
+<p>Si observas estos problemas, es muy probable que tu sitio web se haya visto afectado por un ataque de este tipo.</p>
+
+<a name="fixing"></a>
+<h2>Corregir el ataque</h2>
+
+<p>En primer lugar, haz una copia en local de los archivos antes de eliminarlos, para poder restaurarlos más adelante. De hecho, te recomendamos que realices una copia de seguridad de todo el sitio web antes de iniciar el proceso de limpieza.
+  Para ello, copia todos los archivos de tu servidor en local o busca la mejor opción para hacer copias de seguridad de tu CMS concreto.</p>
+
+<h3>Comprueba el archivo .htaccess (2 pasos)</h3>
+
+<p>El ataque de texto autogenerado redirige a los visitantes de tu sitio web usando el archivo .htaccess.</p>
+
+<p><b>Paso 1</b></p>
+<p>Busca el archivo .htaccess en tu sitio web. Si no estás seguro de dónde encontrarlo y utilizas un sistema de gestión de contenido, como WordPress, Joomla! o Drupal, busca "ubicación de archivo .htaccess" y el nombre del sistema que uses en un motor de búsqueda. Dependiendo de tu sitio web, es posible que tengas varios archivos .htaccess,
+  por lo que te recomendamos que elabores una lista de todas sus ubicaciones.</p>
+
+<p><strong>Nota:</strong> El archivo .htaccess suele ser un "archivo oculto". Asegúrate de habilitar la visualización de archivos ocultos cuando lo busques.</p>
+
+<p><b>Paso 2</b></p>
+<p>Sustituye todos los archivos .htaccess por una versión limpia o predeterminada del archivo. Para encontrar una versión predeterminada, busca "archivo .htaccess predeterminado" y el nombre de tu sistema de gestión de contenido. En el caso de los sitios web con varios archivos de este tipo, busca una versión limpia de cada uno de ellos y sustitúyelos.</p>
+
+<p>Si no hay ningún .htaccess predeterminado y nunca has configurado uno en tu sitio web, es probable que el que encuentres sea malicioso. Guarda una copia sin conexión de los archivos .htaccess por si acaso y elimínalos de tu sitio web.</p>
+
+<h3>Encontrar otros archivos maliciosos y eliminarlos (5 pasos)</h3>
+
+<p>Identificar los archivos maliciosos puede ser complicado y llevar varias horas, así que tómate tu tiempo. Haz una copia de seguridad de los archivos de tu sitio web, si aún no lo has hecho; para obtener instrucciones, busca "hacer una copia de seguridad de un sitio web" y el nombre de tu CMS en Google.</p>
+
+<p><b>Paso 1</b></p>
+<p>Si utilizas un sistema de gestión de contenido, vuelve a instalar todos los archivos principales de la distribución predeterminada de tu CMS; de este modo, te aseguras de que estos archivos no tengan contenido pirateado. Para consultar cómo volver a instalar tu CMS, busca "volver a instalar" y el nombre del CMS en Google. Si tienes algún complemento, módulo, extensión o tema, asegúrate de volver a instalarlos.</p>
+
+<p>Si vuelves a instalar los archivos principales, es posible que pierdas las funciones que hayas personalizado, por lo que te recomendamos que hagas una copia de seguridad de tu base de datos y de todos los archivos antes de empezar.</p>
+
+<p><b>Paso 2</b></p>
+<p>Ahora debes buscar los archivos que queden que sean maliciosos o que se hayan vulnerado. Esta es la parte más complicada del proceso y lleva mucho tiempo; sin embargo, al terminarla, prácticamente habrás acabado.</p>
+
+<p>Este ataque normalmente deja dos tipos de archivos: .txt y .php. Los archivos .txt son plantillas, mientras que los archivos .php determinan el tipo de contenido sin sentido que se cargará en tu sitio web. En primer lugar, busca los archivos .txt; debería haber algún tipo de funcionalidad de búsqueda de archivos, en función del modo en que te conectes a tu sitio web. Busca ".txt" para extraer todos los archivos con esta extensión; la mayoría serán archivos de texto auténticos, como acuerdos de licencia y archivos léeme, entre otros. En los resultados, busca archivos .txt concretos que contengan código HTML que utilicen para crear plantillas con contenido fraudulento. Más adelante te mostramos diferentes fragmentos de código que se pueden encontrar en estos archivos .txt maliciosos.</p><p>
+
+</p><p>Los hackers sustituyen palabras clave para crear páginas con contenido fraudulento. Lo más probable es que veas alguna palabra genérica que se puede reemplazar en todo el archivo pirateado.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>Además, la mayoría de estos archivos contienen algún tipo de código que coloca enlaces y texto con contenido fraudulento en las partes no visibles de la página.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>Elimina estos archivos .txt. Si se encuentran todos en la misma carpeta, puedes eliminarla entera.</p>
+
+<p><b>Paso 3</b></p>
+<p>Los archivos PHP maliciosos son más difíciles de localizar. Podría haber varios archivos PHP maliciosos en tu sitio web; todos en el mismo subdirectorio o en diferentes lugares.</p>
+
+<p>No te preocupes pensando que debes abrir y mirar todos los archivos PHP: primero, crea una lista con los archivos PHP sospechosos que quieras investigar. Puedes determinar qué archivos PHP resultan sospechosos de las siguientes maneras:</p>
+
+<ul>
+<li>Ya has vuelto a cargar los archivos del CMS, por lo que solo debes comprobar los archivos que no formen parte de sus carpetas o archivos predeterminados. De este modo, se eliminan muchos archivos PHP y solo tendrás que revisar un número reducido.</li>
+<li>Ordena los archivos de tu sitio web por la fecha de la última modificación. Busca archivos que se hayan modificado durante los meses previos a haber descubierto que te habían pirateado el sitio web.</li>
+<li>Ordena los archivos de tu sitio web por tamaño. Busca archivos que sean más grandes de lo habitual.</li>
+</ul>
+
+<p><b>Paso 4</b></p>
+<p>Ahora que tienes una lista de archivos PHP sospechosos, tienes que comprobar si son normales o maliciosos. Si no estás familiarizado con PHP, este proceso durará más tiempo, por lo que te recomendamos que repases la <a href="https://php.net/docs.php">documentación de PHP</a>.  Aunque no sepas nada de programación, hay algunos patrones básicos que puedes buscar para identificar archivos maliciosos.</p>
+
+<p>En primer lugar, examina los archivos sospechosos que ya hayas identificado para buscar bloques de texto de letras y números sin orden aparente. Estos bloques suelen ir precedidos de una combinación de funciones PHP, como base64_decode, rot13, eval, strrev y gzinflate. A continuación, te mostramos un ejemplo del aspecto que podría tener el bloque de código. A veces, todo este código se incluye en una larga línea de texto, por lo que puede parecer más pequeño de lo que realmente es:</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks
+of texts. Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>En algunas ocasiones, el código no es confuso y tiene el aspecto de una secuencia de comandos normal. Si no estás seguro de si el código es malicioso, visita nuestros <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">foros de ayuda para webmasters</a>, en los que un grupo de webmasters con experiencia puede ayudarte a examinarlos.</p>
+
+<p><b>Paso 5</b></p>
+<p>Una vez que hayas identificado los archivos sospechosos, haz una copia de seguridad o una copia local en tu ordenador para poder recuperarlos si no son maliciosos y elimínalos.</p>
+
+<h3>Comprueba que el sitio web esté limpio</h3>
+
+<p>Una vez que hayas terminado de deshacerte de los archivos pirateados, comprueba si el esfuerzo ha valido la pena. Vuelve a utilizar la herramienta Explorar como Google en las páginas de texto autogenerado para verificar que ya no existan. Si la herramienta devuelve el resultado "No se encuentra", lo más probable es que se haya solucionado el problema.</p>
+
+<p>También puedes seguir los pasos que se describen en la <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Herramienta de recuperación de sitios web atacados</a> para comprobar si todavía hay contenido pirateado en tu sitio web.</p>
+
+<h3>¿Cómo puedo evitar que vuelvan a piratear mi sitio web?</h3>
+
+<p>Corregir las vulnerabilidades de tu sitio web es un último paso fundamental para solucionar el problema. Un estudio reciente ha descubierto que el 20% de los sitios web pirateados vuelven a recibir un ataque al cabo de menos de un día. Resulta muy útil saber exactamente cómo se pirateó el sitio web, por lo que te recomendamos que leas nuestra guía sobre las <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">formas más habituales en que los spammers piratean los sitios web</a> para empezar a investigar. No obstante, si no consigues averiguar cómo se ha pirateado tu sitio web, a continuación encontrarás una lista de comprobación con cosas que puedes hacer para reducir su vulnerabilidad:</p>
+
+<ul>
+  <li><strong>Examina periódicamente el ordenador:</strong> usa cualquier antivirus popular para comprobar que no haya virus o vulnerabilidades.</li>
+<li><strong>Cambia las contraseñas con frecuencia:</strong> cambiar regularmente las contraseñas de todas las cuentas de tu sitio web, como las de tu proveedor de alojamiento, FTP y CMS, puede evitar que se acceda sin permiso a él. Es fundamental que cada cuenta disponga de una contraseña única y segura.</li>
+<li><strong>Utiliza la <a href="https://es.wikipedia.org/wiki/Autenticación_de_múltiples_factores" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">autenticación de doble factor (A2F)</a>:</strong> te recomendamos que habilites la A2F en todos los servicios en los que sea necesario iniciar sesión, ya que este método dificulta que los hackers puedan acceder aunque roben tu contraseña.</li>
+<li><strong>Actualiza tu CMS, complementos, extensiones y módulos con frecuencia:</strong> esperamos que ya hayas seguido este paso. Se piratean muchos sitios web porque su software está obsoleto. Algunos CMS admiten actualizaciones automáticas.</li>
+<li><strong>Te recomendamos que te suscribas a un servicio de seguridad para controlar tu sitio web:</strong> existen muchos servicios de calidad y económicos que puedes usar para controlar tu sitio web.
+  Regístrate en alguno de ellos para mantener tu sitio web seguro.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Recursos adicionales</h2>
+<p>Si todavía tienes problemas para arreglar tu sitio web, hay más recursos que podrían ayudarte.</p>
+
+<p>Las herramientas que aparecen a continuación analizan sitios web y pueden encontrar contenido problemático; sin embargo, Google no es compatible con ninguna de ellas ni puede ejecutarlas, con la excepción de VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: son solo algunas herramientas que pueden analizar tu sitio web en busca de contenido que pueda suponer un problema; no obstante, no se garantiza que puedan identificar todos los tipos de contenido problemático.</p>
+
+<p>A continuación te mostramos más recursos de Google que pueden resultarte útiles:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Foro de ayuda para webmasters de Google
+  </a></li>
+<li><a href="/web/fundamentals/security/hacked/">Ayuda para webmasters de Google para sitios web pirateados</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Navegación Segura de Google</a></li>
+</ul>
+
+<div class="alert">Si crees que falta alguna herramienta que podría ser útil, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">envíanos un comentario</a>.</div>
+
+
+
+</body></html>

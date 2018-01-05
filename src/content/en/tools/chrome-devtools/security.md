@@ -4,6 +4,7 @@ description: Use the Security Panel to ensure that all resources on your  site a
 
 {# wf_updated_on: 2016-03-09 #}
 {# wf_published_on: 2015-12-21 #}
+{# wf_blink_components: Security #}
 
 # Understand Security Issues {: .page-title }
 
@@ -79,6 +80,6 @@ served over HTTP.
 
 
 
-[mixed-content]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[mixed-content]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [same-origin-policy]: https://en.wikipedia.org/wiki/Same-origin_policy
-[why-https]: https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+[why-https]: /web/fundamentals/security/encrypt-in-transit/why-https

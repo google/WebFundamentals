@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-11-07 #}
+{# wf_updated_on: 2017-12-27 #}
+{# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
 
@@ -174,9 +175,8 @@ If the user has no cards set up they'll be prompted to add details, otherwise
 an existing card will be selected for them.
 
 Note: To get access to all forms of payment available with Google, developers
-will need to implement the Pay with Google method. Refer to [Payment Method:
-Multiple Payment Methods](#payment_method_multiple_payment_methods) section then
-the [Google Payment API](/payments/) docs for more information.
+will need to implement the Pay with Google method. Refer to the
+[Google Payment API](/payments/web/paymentrequest/tutorial) docs for more information.
 
 <div class="attempt-center">
   <figure>
@@ -344,7 +344,7 @@ const payWithGooglePaymentMethod = {
 </div>
 
 We won't go into details of how to add Pay with Google in this article, [we have
-a dedicated document to that](/payments/mobile-web-setup).
+a dedicated document to that](/payments/web/paymentrequest/tutorial).
 
 
 #### Edge Cases
@@ -504,7 +504,7 @@ items. You should use this for high level entries instead of an itemized list,
 for example subtotal, discount, tax and shipping cost.
 
 <div class="warning">
-It's worth repeating that the the <code>PaymentRequest</code> API does not perform any
+It's worth repeating that the <code>PaymentRequest</code> API does not perform any
 arithmetic. If you look at the above example, all the items values do not add up
 to the total. This is because we've set the total to have a value of zero.
 <strong>It is the responsibility of your web app to calculate the correct total.</strong>
