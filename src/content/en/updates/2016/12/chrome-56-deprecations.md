@@ -206,6 +206,6 @@ deprecated in Chrome 54 and has now been removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5665473114931200) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=633908)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

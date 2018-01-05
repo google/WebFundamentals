@@ -9,7 +9,7 @@ description: A round up of the deprecations and removals in Chrome 63 to help yo
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to <code>RTCRtcpMuxPolicy</code>. #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and removals in Chrome 63 {: .page-title }
 
@@ -70,6 +70,6 @@ In Chrome 63, "negotiate" is removed.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

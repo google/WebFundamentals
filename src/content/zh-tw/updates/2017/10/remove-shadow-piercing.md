@@ -9,7 +9,7 @@ description: 向shadow-piercing CSS選擇器說再見。
 {# wf_featured_snippet: 向shadow-piercing CSS選擇器說再見。 #}
 {# wf_blink_components: Blink>DOM #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Chrome 63將刪除::shadow 和 /deep/ {: .page-title }
 
