@@ -1,4 +1,6 @@
-project_path: /web/tools/_project.yaml book_path: /web/tools/_book.yaml description: Workbox的例子。
+project_path: /web/tools/_project.yaml 
+book_path: /web/tools/_book.yaml 
+description: Workbox的例子。
 
 {# wf_published_on: 2017-10-04 #}
 {# wf_updated_on: 2017-11-10 #}
