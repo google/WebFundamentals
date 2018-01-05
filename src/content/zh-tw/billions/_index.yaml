@@ -1,0 +1,127 @@
+---
+book_path: "/web/_book.yaml"
+landing_page:
+  custom_css_path: "/web/styles/wf-root.css"
+  header:
+    description: |-
+      <h2 class="\"wf-header-title\"">為百億用戶建設</h2> <p>接下來的十億人的位置，文化體驗，計算機專業知識，連接訪問以及他們使用的設備種類將會在各個方面變得多樣化。
+      </p>
+  rows:
+  - classname: devsite-landing-row-50
+    items:
+    - description: |-
+        <h4>接下來的十億用戶將幾乎都在移動手機中</h4> <p>
+          這給網絡開發者帶來了獨特的挑戰，他們必須放棄有限的移動優先方式，轉而採用全面的移動戰略
+        </p> <p>
+        您可以通過關注以下幾個關鍵領域來應對這些挑戰。
+        </p>
+      youtube_id: 9Bz5TikmJ-A
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - buttons:
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/poor-connectivity/#testing"
+        label: 測試模擬低帶寬和高延遲
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/poor-connectivity/#lie-fi"
+        label: 處理不可靠的連接和“lie-fi \\”
+      - classname: wf-small-link
+        label: 離線設計
+        path: "/web/fundamentals/codelabs/offline/"
+      - classname: wf-small-link
+        label: 減少資源要求的數量
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads"
+      - classname: wf-small-link
+        label: 盡可能使安裝和更新又小又快
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer"
+      description: 低帶寬和間歇性連接是許多人訪問網絡的常態。網上大多數人仍然有2G連接或“3G”降級到2G。即使到2020年，仍有超過10％的用戶仍然使用2G。許多智能手機在離線模式中使用和用戶會定期打開飛行模式以避免數據消耗。
+      image_path: images/connectivity.png
+      heading: 設計無縫連接
+    - buttons:
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/responsive/content#weight"
+        label: 了解加載頁面和應用程序組件的成本
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/"
+        label: 減少交互所需的數據量
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/principles/#home-page-and-site-navigation"
+        label: 簡化導航：幫助用戶獲得他們想要的
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/critical-rendering-path/"
+        label: 優先顯示內容
+      image_path: images/cost.png
+      description: 高數據成本通常是比差連接更大的訪問障礙​​。移動用戶具有成本意識;甚至“無限制”的計劃在漫遊時或如果採用意外費用時可能會變得昂貴。許多移動用戶的成本意識非常強，原因很多：例如，印度的500MB數據計劃與17小時的最低工資工作相同。
+      heading: 節省數據使用量
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - buttons:
+      - classname: wf-small-link
+        path: "/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts"
+        label: 避免重新繪製，回流和需要重新定位
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/"
+        label: 避免昂貴的UI動畫
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads"
+        label: 避免無線電使用：消除不必要的下載
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/principles/"
+        label: 減少訪問內容所需的用戶操作
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/animations/animations-and-performance"
+        label: 避免昂貴的動畫
+      image_path: images/consumption.png
+      description: 許多人，即使在城市地區，也無法獲得可靠和經濟的電力供應。這使節能成為所有應用和內容設計的關鍵因素。
+      heading: 減少電池消耗
+    - buttons:
+      - classname: wf-small-link
+        label: 迎合一系列視窗和設備
+        path: "/web/fundamentals/codelabs/your-first-multi-screen-site/"
+      - classname: wf-small-link
+        path: "/web/fundamentals/performance/"
+        label: 有限的內存和CPU設計：減少和優化
+      image_path: images/capability.png
+      description: 低規格是常態。在全球範圍內，大多數新的互聯網用戶都使用基本硬件的低成本設備：單核處理器，4“屏幕，有限的內存和有限的存儲空間。
+      heading: 優化設備功能
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - buttons:
+      - classname: wf-small-link
+        label: 設計內容可以在不同的視窗尺寸下正常工作
+        path: "/web/fundamentals/design-and-ux/responsive/content#viewport"
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/responsive/content#redundant"
+        label: 消除多餘的內容
+      - classname: wf-small-link
+        label: 為手機而寫
+        path: "/web/fundamentals/design-and-ux/responsive/content#write"
+      - classname: wf-small-link
+        path: https://www.ampproject.org/
+        label: 考慮AMP HTML
+      description: 大型佈局，圖形大量的內容令用戶感到惱怒，並阻止他們使用您的應用程序或網站。太寬或太高的內容被某些用戶忽略，並被別人故意避免 -
+        而多餘的內容會增加頁面的重量和數據成本。
+      image_path: images/content.png
+      heading: 構建多設備內容
+    - buttons:
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/principles/#commerce-and-conversion"
+        label: 簡化交易
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/input/forms/"
+        label: 簡化表單
+      - classname: wf-small-link
+        path: "/web/fundamentals/design-and-ux/principles/#usability-and-form-factor"
+        label: 為小屏幕設計方向友好的佈局
+      description: 網絡上許多人無法訪問支付系統。全球許多用戶沒有銀行賬戶，也沒有使用信用卡，其中包括美國8％的家庭。許多支付系統在小視窗或不可靠連接上都不能很好地工作。
+      image_path: images/monetization.png
+      heading: 交易和貨幣化：思考全球
+    - buttons:
+      - classname: wf-small-link
+        label: 啟用您的網站架構本地化
+        path: https://support.google.com/webmasters/answer/182192/
+      description: 本地化可以幫助您進接新的市場。許多網站只以英文出版，但英文不是大多數在線人的第一語言。世界上只有5.52％的人是以英語為母語的人，而美國或歐洲的文化習俗可能並不熟悉或有直接關係。用英文簡潔而緊湊的說明或提示可能在其他語言中是冗長而突兀的。
+      image_path: images/localization.png
+      heading: 規劃本地化
+project_path: "/web/_project.yaml"
+title: 為數十億用戶建立
