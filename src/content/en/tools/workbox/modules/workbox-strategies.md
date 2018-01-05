@@ -188,4 +188,4 @@ self.addEventListener('fetch', (event) => {
 ```
 
 You can find the list of available classes in the
-[workbox-strategies reference docs](../next/reference-docs/latest/workbox.strategies).
+[workbox-strategies reference docs](/web/tools/workbox/reference-docs/prerelease/workbox.strategies).

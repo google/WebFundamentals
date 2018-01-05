@@ -157,7 +157,7 @@ to ensure it doesn’t cause unexpected behaviors in you web app.
 ## How to Register a Navigation Route
 
 If your site is a single page app, you can use a
-[NavigationRoute](../next/reference-docs/latest/workbox.routing.NavigationRoute) to
+[NavigationRoute](/web/tools/workbox/reference-docs/prerelease/workbox.routing.NavigationRoute) to
 return a specific response for all
 [navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
@@ -249,8 +249,8 @@ setting the log level.
 
 If you want to have more control over when the Workbox Router is given
 requests you can create your own
-[Router](../next/reference-docs/latest/workbox.routing.Router) instance and call
-it’s [handleRequest()](../next/reference-docs/latest/workbox.routing.Router#handleRequest)
+[Router](/web/tools/workbox/reference-docs/prerelease/workbox.routing.Router) instance and call
+it’s [handleRequest()](/web/tools/workbox/reference-docs/prerelease/workbox.routing.Router#handleRequest)
 method whenever you want to use the router to respond to a request.
 
 ```javascript
