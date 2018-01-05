@@ -9,7 +9,7 @@ description: Say goodbye to shadow-piercing CSS selectors.
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
 {# wf_blink_components: Blink>DOM #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Removing ::shadow and /deep/ in Chrome 63 {: .page-title }
 

@@ -205,6 +205,6 @@ instead on cookies and other session management mechanisms.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=435547)
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

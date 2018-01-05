@@ -9,7 +9,7 @@ description: A round up of the deprecations and removals in Chrome 62 to help yo
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, more restrictions on insecure origins and a change to the shadow-piercing descendant combinator. #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and Removals in Chrome 62 {: .page-title }
 
@@ -81,6 +81,6 @@ notification permission.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

@@ -9,7 +9,7 @@ description: A round up of the deprecations and removals in Chrome 64 to help yo
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 64 to help you plan. In this version, performance API changes, removal of support for multiple shadow roots, and removal of a WebKit API. #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and removals in Chrome 64 {: .page-title }
 
@@ -46,6 +46,6 @@ StackOverflow](https://stackoverflow.com/questions/2952667/find-all-css-rules-th
 [Chromestatus Tracker](https://www.chromestatus.com/features/4606972603138048) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=437569&desc=2)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

@@ -17,7 +17,7 @@ Platform. This article describes the changes in Chrome 52, which is in beta as
 of June 9. This list is subject to change at any time.
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 
 ## DHE-based ciphers being phased out

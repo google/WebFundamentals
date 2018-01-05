@@ -10,7 +10,7 @@ description: The non-standard chrome.loadTimes() API will be deprecated in Chrom
 {# wf_featured_snippet: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its useful features. #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
 
-<<../../_deprecation-blurb.md>>
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Chrome 64 to deprecate the chrome.loadTimes() API {: .page-title }
 

@@ -53,6 +53,6 @@ deprecated in Chrome 54 and has now been removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5686865248124928){: .external} &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=395838){: .external}
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

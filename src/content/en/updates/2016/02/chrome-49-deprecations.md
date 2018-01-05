@@ -16,7 +16,7 @@ improvements to the product, its performance, and also capabilities of the web
 platform.
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 In Chrome 49 (Beta Feb 2nd, 2016. Estimated stable date: March 2016) there are a
 number of changes to Chrome
