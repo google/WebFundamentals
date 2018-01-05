@@ -1,5 +1,5 @@
-project_path: /web/tools/_project.yaml 
-book_path: /web/tools/_book.yaml 
+project_path: /web/tools/_project.yaml
+book_path: /web/tools/_book.yaml
 description: Workbox的例子。
 
 {# wf_published_on: 2017-10-04 #}
@@ -88,4 +88,4 @@ workbox.precache([
 
 還是不明白什麼是Workbox? 我們希望能聽到您的意見。請在[此文檔的repo開啟新的issue](https://github.com/GoogleChrome/workbox-microsite/issues/new?title=%5BOverview%5D)並告訴我們您的意見。
 
-Translated by {% include "web/_shared/contributors/henrylim.html %}
+Translated by {% include "web/_shared/contributors/henrylim.html" %}
