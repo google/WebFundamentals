@@ -518,7 +518,7 @@ the common file, inflating it too much.
 
 * Webpack docs [about the CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/)
 
-* [Getting the most out of the CommonsChunkPlugin](https://medium.com/webpack/webpack-bits-
+* [“Getting the most out of the CommonsChunkPlugin”](https://medium.com/webpack/webpack-bits-
 getting-the-most-out-of-the-commonschunkplugin-ab389e5f318)
 
 ## Make module ids more stable
