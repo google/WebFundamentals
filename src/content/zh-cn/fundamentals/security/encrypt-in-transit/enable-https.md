@@ -130,7 +130,7 @@ description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
 
 
 
-注：记住，在通配符证书中，通配符只适用于一个 DNS 标签。对 \*.example.com 有效的证书将对 foo.example.com 和 bar.example.com 有效，但对于 foo.bar.example.com 无效。
+Note: 记住，在通配符证书中，通配符只适用于一个 DNS 标签。对 \*.example.com 有效的证书将对 foo.example.com 和 bar.example.com 有效，但对于 foo.bar.example.com 无效。
 
 将证书复制到所有前端服务器的非网络可访问位置，例如 `/etc/ssl`（Linux 和 Unix）或 IIS 需要它们的位置 (Windows)。
 
@@ -173,7 +173,7 @@ Windows XP 上的 IE 和 2.3 版以前的 Android 的问题是，它们不理解
 
 警告：如果您已完成上述步骤，但您使用 HTTPS 仅仅是为了将客户端重定向回 HTTP，那么，请马上停止这么做。参考下一部分以确保 HTTPS 和 HTTP 顺畅工作。
 
-注：最终，您应将 HTTP 请求重定向到 HTTPS 并使用 HTTP 严格传输安全 (HSTS)。不过，现在不是向这种做法进行迁移的合适阶段；请参考“将 HTTP 重定向到 HTTPS”和“打开严格传输安全和安全 Cookie”。
+Note: 最终，您应将 HTTP 请求重定向到 HTTPS 并使用 HTTP 严格传输安全 (HSTS)。不过，现在不是向这种做法进行迁移的合适阶段；请参考“将 HTTP 重定向到 HTTPS”和“打开严格传输安全和安全 Cookie”。
 
 现在，以及您网站的整个生命周期中，使用 [Qualys 便捷的 SSL 服务器测试](https://www.ssllabs.com/ssltest/){: .external }来检查您的 HTTPS 配置。
 您的网站得分应为 A 或 A+；将导致等级较低的任何因素均视为错误。（今天的 A 在明天会变成 B，因为针对算法和协议的攻击始终在改进！）
@@ -192,7 +192,7 @@ Windows XP 上的 IE 和 2.3 版以前的 Android 的问题是，它们不理解
 当您通过 HTTPS 提供一个包括 HTTP 资源的页面（称为[混合内容](/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content)）时会出现问题。
 浏览器将警告用户，已失去 HTTPS 的全部能力。事实上，如果是主动混合内容（脚本、插件、CSS、iframe），则浏览器通常根本不会加载或执行此内容，从而导致页面残缺。
 
-注：在 HTTP 页面中包括 HTTPS 资源完全没问题。
+Note: 在 HTTP 页面中包括 HTTPS 资源完全没问题。
 
 此外，当您链接到您网站中的其他页面时，用户可能从 HTTPS 降级为 HTTP。
 
@@ -255,7 +255,7 @@ Windows XP 上的 IE 和 2.3 版以前的 Android 的问题是，它们不理解
 此外，您不必信任第三方，尽管他们总是很不错。
 
 
-注：请记住，您还需要更改样式表、JavaScript、重定向规则、`<link>` 标记和 CSP 声明中的站内网址，而不仅是 HTML 页面。
+Note: 请记住，您还需要更改样式表、JavaScript、重定向规则、`<link>` 标记和 CSP 声明中的站内网址，而不仅是 HTML 页面。
 
 ## 将 HTTP 重定向到 HTTPS
 
@@ -278,13 +278,13 @@ Windows XP 上的 IE 和 2.3 版以前的 Android 的问题是，它们不理解
 
 
 
-注：如果您的网站在其传输层安全协议 (TLS) 配置中出现过错误（例如过期证书），则已将您的网站注明为已知 HSTS 主机的客户端可能出现<a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>硬故障</i></a>。通过此方式显式设计 HSTS 可确保网络攻击者无法欺骗客户端访问没有 HTTPS 的网站。在确认您的网站运营足够可靠之前，不要启用 HSTS，以避免部署 HTTPS 时总是出现证书验证错误。
+Note: 如果您的网站在其传输层安全协议 (TLS) 配置中出现过错误（例如过期证书），则已将您的网站注明为已知 HSTS 主机的客户端可能出现<a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>硬故障</i></a>。通过此方式显式设计 HSTS 可确保网络攻击者无法欺骗客户端访问没有 HTTPS 的网站。在确认您的网站运营足够可靠之前，不要启用 HSTS，以避免部署 HTTPS 时总是出现证书验证错误。
 
 通过设置 `Strict-Transport-Security` 标头来打开 HTTP 严格传输安全 (HSTS)。[OWASP 的 HSTS 页面有说明链接](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)，提供了针对各种服务器软件的说明。
 
 大多数网络服务器提供相似的功能来添加自定义标头。
 
-注：`max-age` 的计算单位为秒。您可以从较小的值开始，并随着您越来越熟练自如地运营纯 HTTPS 网站而逐步增加 `max-age`。
+Note: `max-age` 的计算单位为秒。您可以从较小的值开始，并随着您越来越熟练自如地运营纯 HTTPS 网站而逐步增加 `max-age`。
 
 还要务必确保客户端从不通过 HTTP 发送 Cookie（例如用于身份验证或网站偏好）。
 例如，如果用户的身份验证 Cookie 将在明文中暴露，则其整个会话的安全保障将被破坏 — 即使其他的一切都正确无误！
@@ -330,7 +330,7 @@ Chris Palmer [在 Chrome 开发峰会 2014 上做过一个演讲，讨论 HTTPS 
 
 由于各搜索引擎正在迁移到 HTTPS，将来，当您迁移到 HTTPS 时，可能会看到更多的引用站点标头。
 
-注意：根据 [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)，如果引用页面是通过安全协议传输的，则客户端**不能**在（非安全）HTTP 请求中包括引用站点标头字段。
+Caution: 根据 [HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)，如果引用页面是通过安全协议传输的，则客户端**不能**在（非安全）HTTP 请求中包括引用站点标头字段。
 
 ### 广告收入
 
