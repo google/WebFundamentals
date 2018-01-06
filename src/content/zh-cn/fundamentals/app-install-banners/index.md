@@ -26,7 +26,7 @@ description:应用安装横幅有两种：网络应用安装横幅和本机应�
 然后，Chrome 使用一组条件和访问频率启发式算法来确定何时显示横幅。
 请继续阅读以了解更多详情。
 
-注：Add to Homescreen（有时缩写为 A2HS）是网络应用安装横幅的另一个名称。两个术语相等同。
+Note: Add to Homescreen（有时缩写为 A2HS）是网络应用安装横幅的另一个名称。两个术语相等同。
 
 ### 条件有哪些？
 
@@ -42,7 +42,7 @@ Chrome 将在您的应用符合以下条件时自动显示横幅：
 * 通过 [HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https) 提供（这是使用服务工作线程的一项要求）。
 * 被访问至少两次，这两次访问至少间隔五分钟。
 
-注：网络应用安装横幅是一种新兴技术。显示应用安装横幅的条件将来可能会有所变化。请参阅[究竟是什么造就了 Progressive Web App？](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/)，了解最新网络应用安装横幅条件中的规范引用（将随时间推移不断更新）。
+Note: 网络应用安装横幅是一种新兴技术。显示应用安装横幅的条件将来可能会有所变化。请参阅[究竟是什么造就了 Progressive Web App？](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/)，了解最新网络应用安装横幅条件中的规范引用（将随时间推移不断更新）。
 
 ### 测试应用安装横幅 {: #test }
 
