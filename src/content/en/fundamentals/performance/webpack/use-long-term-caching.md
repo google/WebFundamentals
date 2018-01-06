@@ -285,9 +285,8 @@ Include them into `index.html` in the reverse order – and you’re done:
 
 * Webpack docs [about webpack runtime and manifest](https://webpack.js.org/concepts/manifest/)
 
-* [“Getting the most out of the
-  CommonsChunkPlugin”](https://medium.com/webpack/webpack-bits-getting-the-most-out-
-  of-the-commonschunkplugin-ab389e5f318)
+* [“Getting the most out of the CommonsChunkPlugin”](https://medium.com/webpack/
+webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab389e5f318)
 
 ## Inline webpack runtime to save an extra HTTP request
 
@@ -519,9 +518,8 @@ the common file, inflating it too much.
 
 * Webpack docs [about the CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/)
 
-* [Getting the most out of the
-  CommonsChunkPlugin](https://medium.com/webpack/webpack-bits-getting-the-most-out-
-  of-the-commonschunkplugin-ab389e5f318)
+* [Getting the most out of the CommonsChunkPlugin](https://medium.com/webpack/webpack-bits-
+getting-the-most-out-of-the-commonschunkplugin-ab389e5f318)
 
 ## Make module ids more stable
 
