@@ -237,7 +237,13 @@ if (typeof val === 'string') {
 </pre>
 
 </li>
+</ol>
 
+Note: If you prefer to configure environment variables via CLI, take a look at the
+[EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/). It works like the
+`DefinePlugin`, but reads the environment and replaces `process.env.` expressions automatically.
+
+<ol start="2">
 <li>
 
 And then the <code>UglifyJsPlugin</code> will remove all such <code>if</code> branches – because
@@ -267,20 +273,10 @@ if (typeof val === 'string') {
 </li>
 </ol>
 
-Note: If you prefer to configure environment variables via CLI, take a look at the
-[EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/). It works like the
-`DefinePlugin`, but reads the environment and replaces `process.env.` expressions automatically.
-
 Note: You’re not required to use the `UglifyJsPlugin`. You can use any different minifier as soon as
 it supports dead code removal (e.g., the [Babel Minify
 plugin](https://github.com/webpack-contrib/babel-minify-webpack-plugin) or the [Google Closure
 Compiler plugin](https://github.com/roman01la/webpack-closure-compiler)).
-
-Note: There’s a [webpack’s `-p` console
-flag](https://webpack.js.org/guides/production/#cli-alternatives) that enables minification and
-`NODE_ENV=production` replacement. It might be useful for small prototypes; for real apps though,
-it’s still better to use a production config because it gives you more transparency and better
-flexibility. You’ll thank yourself later!
 
 ### Further reading {: .hide-from-toc }
 

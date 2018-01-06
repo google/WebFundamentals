@@ -219,9 +219,9 @@ add a plugin to the webpack config:
 
 and run the production build. The plugin will open the stats page in a browser.
 
-Note: By default, the stats page shows the size of parsed files (i.e., of files as they appear in
+By default, the stats page shows the size of parsed files (i.e., of files as they appear in
 the bundle). You’ll likely want to compare gzip sizes since that’s closer to what real users
-experience. Use the sidebar on the left to switch the sizes.
+experience; use the sidebar on the left to switch the sizes.
 
 Note: If you use the
 [ModuleConcatenationPlugin](https://webpack.js.org/plugins/module-concatenation-plugin/), it might
