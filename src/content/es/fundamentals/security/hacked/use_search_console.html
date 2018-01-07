@@ -1,0 +1,92 @@
+<html devsite><head>
+  <title>Utilizar Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Si ya has <a href="https://www.support.google.com/webmasters/answer/35179">demostrado que eres el propietario</a> del sitio web, puedes omitir la primera acción que encontrarás a continuación y comprobar directamente la información de tu sitio web en Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Lo que necesitarás:</h3>
+
+<ul>
+  <li><a href="https://www.support.google.com/webmasters/answer/35179">Verificar la propiedad</a> de tu sitio web. Para ello, puedes añadir un archivo al directorio raíz, crear <a href="https://www.support.google.com/webmasters/answer/79812">metaetiquetas</a>, disponer de una cuenta de administrador de Google Analytics vinculada al sitio web, etc.</li>
+</ul>
+
+<div class="action">
+  <h3>Lo que debes hacer:</h3>
+
+  <p>En esta sección, realizarás los siguientes pasos:</p>
+
+  <ol>
+    <li><a href="#verify">Demostrar que eres el propietario del sitio web en Search Console</a></li>
+    <li><a href="#check">Comprobar si el hacker ha verificado la propiedad del sitio web en Search Console y ha realizado cambios no deseados en la configuración</a></li>
+    <li><a href="#determine">Determinar la naturaleza del ataque</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Demostrar que eres el propietario del sitio web en Search Console</h4>
+
+<ol>
+  <li>Abre un navegador y accede al Centro para webmasters en la página <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Haz clic en <strong>Search Console</strong>.</li>
+  <li>Inicia sesión en Search Console con una <a href="https://www.google.com/accounts">cuenta de Google</a>.
+    Si no tienes ninguna cuenta de Google, haz clic en <strong>Crear una cuenta</strong>. Si creas una nueva cuenta de Google, no perderás la cuenta de correo electrónico que ya tengas con otra empresa.
+    <a href="https://accounts.google.com/SignUp">Obtén más información sobre las cuentas</a>.</li>
+  <li>Haz clic en <strong>Añadir un sitio web</strong>. Introduce la URL de tu sitio web en el cuadro y, a continuación, haz clic en <strong>Continuar</strong>.</li>
+  <li>Escoge el método de verificación que quieras utilizar. En la pestaña <strong>Método recomendado</strong> de la página de verificación se muestra el método que Google considera que funcionará mejor. Se incluyen métodos adicionales en la pestaña <strong>Métodos alternativos</strong>.
+    <a href="https://goo.gl/kQnHQ">Obtén más información sobre la verificación</a>.</li>
+  <li>Conecta de nuevo el sitio web si has seleccionado un método de verificación que necesite acceder a tu sitio web, por ejemplo, la metaetiqueta HTML o el archivo HTML.</li>
+  <li>Haz clic en <strong>Verificar</strong> para demostrar que eres propietario con el método seleccionado. Si la verificación se completa con éxito, aparecerá una pantalla de felicitación en la que se indica que eres el propietario verificado.
+    Puedes volver a desconectar el sitio web, pero tendrás que conectarlo de nuevo en pasos posteriores.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Una vez realizada la verificación, comprueba si el hacker ha verificado la propiedad del sitio web en Search Console y si ha realizado cambios no deseados en la configuración.</h4>
+
+<ol>
+  <li>Ve a la página principal de Search Console haciendo clic en el logotipo de Search Console.</li>
+  <li>Busca tu sitio web y haz clic en <strong>Gestionar sitio web</strong>.</li>
+  <li>Haz clic en <strong>Añadir o eliminar propietarios</strong>.</li>
+  <li>Asegúrate de que todos los <a href="https://www.support.google.com/webmasters/answer/44227">usuarios y propietarios</a> de la lista tengan autorización.</li>
+  <li>Anota la dirección de correo electrónico de los usuarios no autorizados (por si te puede ser útil más adelante) y, a continuación, elimínalos del sitio web. En el caso de los propietarios no autorizados, debes eliminar tanto el propietario como cualquier posible token de verificación, por ejemplo, una metaetiqueta de verificación en tu página principal o un archivo HTML en tu servidor. <a href="https://www.support.google.com/webmasters/answer/2454036">
+Obtén más información</a>.</li>
+  <li>Comprueba que no se hayan realizado cambios no deseados en la configuración de Search Console. Haz clic en el icono <span class="material-icons">Configuración</span> y, a continuación, en <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Configuración del sitio</strong></a> para asegurarte de que el hacker no haya modificado nada, como la <a href="https://www.support.google.com/webmasters/answer/48620">frecuencia de rastreo</a> (quizá para evitar las arañas de los motores de búsqueda). También te recomendamos que compruebes que no haya nada fuera de lo común en la sección <strong>Índice de Google</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">Eliminar URLs</a> o en <span class="material-icons">Configuración</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">Cambio de dirección</a>.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Determinar la naturaleza del ataque</h4>
+
+<p>La información del Centro de mensajes y de los Problemas de seguridad de Search Console puede ser de gran ayuda para determinar si tu sitio web se ha pirateado de alguna de estas formas:</p>
+
+<ul>
+  <li>Con contenido fraudulento que podría reducir la calidad y la relevancia de los resultados de búsqueda.</li>
+  <li>Con finalidades de phishing.</li>
+  <li>Para distribuir software malicioso.</li>
+</ul>
+
+<p>Para investigar la piratería o el uso de software malicioso con Search Console, completa los siguientes pasos:</p>
+
+<ol>
+  <li>Accede a la página principal de Search Console haciendo clic en el logotipo de Search Console, situado en la esquina superior.</li>
+  <li>Haz clic en <strong>Mensajes</strong>.</li>
+  <li>Comprueba si hay mensajes importantes de Google acerca del uso de tu sitio web para 1) publicar páginas, texto o enlaces con contenido fraudulento, 2) phishing o 3) distribuir software malicioso. Si tienes una notificación de phishing, no elimines el mensaje hasta que hayas completado el proceso de recuperación.</li>
+  <li>Accede a <strong>Problemas de seguridad</strong> en Search Console.
+    <ul>
+      <li>En los sitios web afectados por software malicioso se muestra un título que indica "Software malicioso" en la parte superior y, a continuación, categorías de tipos de software malicioso, como "Configuración de un servidor modificado" o "Inyección de plantillas de error". En estos casos, el hacker puede estar utilizando tu sitio para infectar a los visitantes con software diseñado para acceder a información confidencial o para dañar sus equipos. Para solucionar este problema, continúa con el paso <a href="hacked_with_malware">Evaluar los daños provocados por software malicioso</a>.
+      </li>
+      <li>Es posible que los sitios web pirateados para que publiquen spam muestren el título "Pirateado" en la parte superior y, a continuación, categorías de tipos de piratería, por ejemplo, "Inyección de contenido". El hacker puede haber colocado páginas, texto o enlaces con contenido fraudulento en el sitio web. Para solucionar este problema, continúa con el paso <a href="hacked_with_spam">Evaluar los daños provocados por spam</a>.</li>
+      <li>Es posible que en los sitios web que muestren una "notificación de phishing” en el Centro de mensajes de Search Console no aparezca información alguna en la sección Problemas de seguridad. Mediante la creación de páginas de phishing en tu sitio web, el hacker obtiene información de inicio de sesión, contraseñas o detalles financieros de los usuarios, a menudo haciéndose pasar por un sitio de confianza. Como la limpieza del phishing es muy parecida a la del spam, continúa con el paso <a href="hacked_with_spam">Evaluar los daños provocados por spam</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Paso siguiente</h2>
+
+<p>La siguiente fase del proceso es <a href="hacked_with_spam">evaluar los daños provocados por spam (sitio web pirateado con spam)</a>, o bien <a href="hacked_with_malware">evaluar los daños provocados por software malicioso (sitio web pirateado con software malicioso)</a>.</p>
+
+</body></html>

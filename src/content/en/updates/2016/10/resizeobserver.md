@@ -6,6 +6,7 @@ description: ResizeObserver lets you know when an element has changed its size.
 {# wf_published_on: 2016-10-07 #}
 {# wf_tags: chrome54 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
+{# wf_blink_components: N/A #}
 
 # ResizeObserver: It’s Like document.onresize for Elements {: .page-title }
 
@@ -168,6 +169,6 @@ you have questions.
 
 {% include "comment-widget.html" %}
 
-[MutationObserver]: https://developers.google.com/web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
-[PerformanceObserver]: https://developers.google.com/web/updates/2016/06/performance-observer
-[IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
+[MutationObserver]: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
+[PerformanceObserver]: /web/updates/2016/06/performance-observer
+[IntersectionObserver]: /web/updates/2016/04/intersectionobserver

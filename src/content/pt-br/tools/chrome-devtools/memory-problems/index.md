@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Saiba como usar o Chrome e o DevTools para encontrar problemas de memória que afetam o desempenho da página, incluindo vazamentos de memória, ocupação excessiva de memória e coletas de lixo frequentes.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Blink>MemoryAllocator #}
 
 # Consertar problemas de memória {: .page-title }
 
@@ -150,7 +151,7 @@ do que começou (com o "início" sendo o ponto após a coleta
 de lixo forçada). No mundo real, se você perceber esse padrão de tamanho crescente
 de pilha de JS ou nó, isso poderá significar um vazamento de memória.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

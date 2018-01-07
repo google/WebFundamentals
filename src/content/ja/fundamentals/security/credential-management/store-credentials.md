@@ -9,6 +9,8 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
+{% include "web/_shared/translation-out-of-date.html" %}
+
 `navigator.credentials.store()` API を使用すると、ユーザーの認証情報を簡単に保存およびアップデートできます。
 
 

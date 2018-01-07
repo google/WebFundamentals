@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 62.
 
-{# wf_updated_on: 2017-09-12 #}
+{# wf_updated_on: 2017-12-20 #}
 {# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,chrome62,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -106,9 +106,9 @@ and HLS) has a demo for you to try Widevine L1 out:
 The chrome team is always trying to find new ways to improve battery life and
 Chrome 62 is no exception.
 
-Chrome now disables video tracks when the video is played in the background if
-the video uses [Media Source Extensions (MSE)]. Check out our [previous article]
-to learn more.
+Chrome now disables video tracks when the video is played in the background
+(e.g., in a non-visible tab) if the video uses [Media Source Extensions (MSE)].
+Check out our [previous article] to learn more.
 
 ## Customize seekable range on live MSE streams {: #seekable }
 

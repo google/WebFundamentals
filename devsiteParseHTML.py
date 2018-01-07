@@ -13,18 +13,26 @@ UNSUPPORTED_TAGS = [
 def parse(requestPath, fileLocation, content, lang='en'):
   template = 'gae/article.tpl'
 
-  if content.find('<html devsite>') == -1:
-    return content
+  ## Get the HTML tag
+  htmlTag = re.search(r'<html.*?>', content)
+  if htmlTag is None:
+    log.warning('Does not contain <html> root element')
+  else:
+    htmlTag = htmlTag.group(0)
+    # Check the HTML tag contains the devsite
+    if htmlTag.find('devsite') == -1:
+      return content
 
   # Isolate the <head>
-  headStart = content.find('<head>')
+  headStart = content.find('<head')
   headEnd = content.find('</head>')
   head = content[headStart:headEnd].strip()
 
   # Isolate the <body>
-  bodyStart = content.find('<body>')
+  bodyStart = content.find('<body')
   bodyEnd = content.rfind('</body>')
   body = content[bodyStart:bodyEnd].strip()
+  body = re.sub(r'<body.*?>', '', body)
 
   dateUpdated = re.search(r"{# wf_updated_on:[ ]?(.*)[ ]?#}", content)
   if dateUpdated is None:
@@ -57,6 +65,8 @@ def parse(requestPath, fileLocation, content, lang='en'):
     title = '** UNKNOWN TITLE **'
   else:
     title = title.group(1)
+    if body.find('<h1>') == -1:
+      body = '<h1 class="page-title">' + title + '</h1>\n\n' + body
 
   # Read the book.yaml file and generate the left hand nav
   bookPath = re.search('name=\"book_path\" value=\"(.*?)\"', head)
@@ -77,7 +87,7 @@ def parse(requestPath, fileLocation, content, lang='en'):
   else:
     projectPath = projectPath.group(1)
     announcementBanner = devsiteHelper.getAnnouncementBanner(projectPath, lang)
-  
+
   # Replaces <pre> tags with prettyprint enabled tags
   body = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', body)
 

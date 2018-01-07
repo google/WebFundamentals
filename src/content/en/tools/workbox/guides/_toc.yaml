@@ -1,0 +1,30 @@
+toc:
+
+- title: "Get Started"
+  path: /web/tools/workbox/guides/get-started
+- title: "Precache Files"
+  path: /web/tools/workbox/guides/precache-files
+- title: "Route Requests"
+  path: /web/tools/workbox/guides/route-requests
+- title: "Configure Workbox"
+  path: /web/tools/workbox/guides/configure-workbox
+- title: "Handle Third-Party Requests"
+  path: /web/tools/workbox/guides/handle-third-party-requests
+- title: "Using Plugins"
+  path: /web/tools/workbox/guides/using-plugins
+- title: "Common Recipes"
+  path: /web/tools/workbox/guides/common-recipes
+- title: "Enable Offline Google Analytics"
+  path: /web/tools/workbox/guides/enable-offline-analytics
+- title: "Troubleshoot and Debug"
+  path: /web/tools/workbox/guides/troubleshoot-and-debug
+# - title: "Generate a Complete Service Worker"
+#  path: /web/tools/workbox/guides/generate-complete-sw
+# - title: "Migrate from sw-<toolbox|precache>"
+#  path: /web/tools/workbox/guides/migrate
+# - title: "Use as ES2015 Imports"
+#  path: /web/tools/workbox/guides/use-es2015-imports
+- title: "Service Worker Checklist"
+  path: /web/tools/workbox/guides/service-worker-checklist
+- title: "Advanced Recipes"
+  path: /web/tools/workbox/guides/advanced-recipes

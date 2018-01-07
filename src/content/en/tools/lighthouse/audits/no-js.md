@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Contains Some Content When JavaScript Is Not Available" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-18 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-20 #}
+{# wf_blink_components: N/A #}
 
 # Contains Some Content When JavaScript Is Not Available  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
 is a web development strategy that ensures that your site is accessible to the
@@ -21,7 +22,7 @@ styling using CSS, or interactivity using JavaScript, can be layered on top for
 the browsers that support those technologies. But basic content and page
 functionality should not rely on CSS or JavaScript.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Progressive enhancement is a large and contentious topic. One camp says that,
 in order to adhere to the strategy of progressive enhancement, pages should
@@ -52,7 +53,7 @@ To see how your site looks and performs when JavaScript is disabled, use
 Chrome DevTools' [Disable
 JavaScript](/web/tools/chrome-devtools/settings#disable-js) feature.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty then the audit fails. If the HTML is not empty then the audit

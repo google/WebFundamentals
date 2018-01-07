@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-build/src/entry-points/generate-sw.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-build/src/entry-points/generate-sw.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2017 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+const path &#x3D; require(&#x27;path&#x27;);
+
+const cdnUtils &#x3D; require(&#x27;../lib/cdn-utils&#x27;);
+const copyWorkboxLibraries &#x3D; require(&#x27;../lib/copy-workbox-libraries&#x27;);
+const generateSWSchema &#x3D; require(&#x27;./options/generate-sw-schema&#x27;);
+const getFileManifestEntries &#x3D; require(&#x27;../lib/get-file-manifest-entries&#x27;);
+const validate &#x3D; require(&#x27;./options/validate&#x27;);
+const writeServiceWorkerUsingDefaultTemplate &#x3D;
+  require(&#x27;../lib/write-sw-using-default-template&#x27;);
+
+/**
+ * This method creates a list of URLs to precache, referred to as a &quot;precache
+ * manifest&quot;, based on the options you provide.
+ *
+ * It also takes in additional options that configures the service worker&#x27;s
+ * behavior, like any &#x60;runtimeCaching&#x60; rules it should use.
+ *
+ * Based on the precache manifest and the additional configuration, it writes
+ * a ready-to-use service worker file to disk at &#x60;swDest&#x60;.
+ *
+ * @param {Object} input
+ * @return {Promise&amp;lt;{count: Number, size: Number}&gt;} A promise that resolves once
+ * the service worker file has been written to &#x60;swDest&#x60;. The &#x60;size&#x60; property
+ * contains the aggregate size of all the precached entries, in bytes, and the
+ * &#x60;count&#x60; property contains the total number of precached entries.
+ *
+ * @memberof module:workbox-build
+ */
+async function generateSW(input) {
+  const options &#x3D; validate(input, generateSWSchema);
+
+  const destDirectory &#x3D; path.dirname(options.swDest);
+
+  if (options.importWorkboxFromCDN) {
+    const cdnUrl &#x3D; cdnUtils.getModuleUrl(&#x27;workbox-sw&#x27;);
+    // importScripts may or may not already be an array containing other URLs.
+    // Either way, list cdnUrl first.
+    options.importScripts &#x3D; [cdnUrl].concat(options.importScripts || []);
+  } else {
+    // If we&#x27;re not importing the Workbox scripts from the CDN, then copy
+    // over the dev + prod version of all of the core libraries.
+    const workboxDirectoryName &#x3D; await copyWorkboxLibraries(destDirectory);
+
+    // The Workbox library files should not be precached, since they&#x27;re cached
+    // automatically by virtue of being used with importScripts().
+    options.globIgnores &#x3D; [
+      &#x60;**/${workboxDirectoryName}/*.js*&#x60;,
+    ].concat(options.globIgnores || []);
+
+    const workboxSWPkg &#x3D; require(&#x60;workbox-sw/package.json&#x60;);
+    const workboxSWFilename &#x3D; path.basename(workboxSWPkg.main);
+
+    // importScripts may or may not already be an array containing other URLs.
+    // Either way, list workboxSWFilename first.
+    options.importScripts &#x3D; [
+      &#x60;${workboxDirectoryName}/${workboxSWFilename}&#x60;,
+    ].concat(options.importScripts || []);
+
+    options.modulePathPrefix &#x3D; workboxDirectoryName;
+  }
+
+  const {count, size, manifestEntries} &#x3D; await getFileManifestEntries(options);
+
+  await writeServiceWorkerUsingDefaultTemplate(Object.assign({
+    manifestEntries,
+  }, options));
+
+  return {count, size};
+}
+
+module.exports &#x3D; generateSW;
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

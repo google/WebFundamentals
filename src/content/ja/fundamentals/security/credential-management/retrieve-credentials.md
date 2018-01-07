@@ -9,6 +9,10 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
+
+{% include "web/_shared/translation-out-of-date.html" %}
+
+
 ユーザーのログインを実行するには、ブラウザのパスワード マネージャーから認証情報を取得し、その情報を使用してログイン処理を行う必要があります。
 
 
@@ -27,7 +31,7 @@ book_path: /web/fundamentals/_book.yaml
       }
     }).then(function(cred) {
       if (cred) {
-        // Use provided credential to sign user in  
+        // Use provided credential to sign user in
       }
     });
 
@@ -150,7 +154,7 @@ navigator.credentials.get({
 `PasswordCredential` と `FederatedCredential` のどちらで解決するかを決定するには、オブジェクトの `.type` プロパティを確認します。このプロパティは、`password` または `federated` です。
 
 
- 
+
 
 `.type` が `federated` である場合、`.provider` プロパティは、ID プロバイダを表す文字列です。
 
@@ -313,14 +317,14 @@ ID プロバイダによってユーザーを認証するには、`FederatedCred
     // Is this user already signed in?
     if (auth2.isSignedIn.get()) {
       var googleUser = auth2.currentUser.get();
-      
+
       // Same user as in the credential object?
       if (googleUser.getBasicProfile().getEmail() === id) {
         // Continue with the signed-in user.
         return Promise.resolve(googleUser);
       }
     }
-    
+
     // Otherwise, run a new authentication flow.
     return auth2.signIn({
       login_hint: id || ''
@@ -338,7 +342,7 @@ Google Sign-In では、ID トークンが認証の証明になり、この ID �
 
 
 
-##  ログアウト{: #sign-out }
+##  ログアウト {: #sign-out }
 
 ユーザーがウェブサイトからログアウトした場合、ユーザーが次にウェブサイトにアクセスしたときに、自動的にログインしないようにする必要があります。
 自動ログオンをオフにするには、[`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation) を呼び出します。

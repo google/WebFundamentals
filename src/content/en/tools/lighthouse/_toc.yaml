@@ -1,9 +1,9 @@
 toc:
 - title: Overview
   path: /web/tools/lighthouse/
-
+- title: Scoring Guide
+  path: /web/tools/lighthouse/scoring
 - heading: Audit Reference
-
 - title: Address Bar Matches Brand Colors
   path: /web/tools/lighthouse/audits/address-bar
 - title: Avoids Application Cache
@@ -66,6 +66,10 @@ toc:
   path: /web/tools/lighthouse/audits/first-meaningful-paint
 - title: Has A Viewport Meta Tag With width Or initial-scale
   path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+- title: Includes Front-End JavaScript Libraries With Known Security Vulnerabilities
+  path: /web/tools/lighthouse/audits/vulnerabilities
+- title: Keep Server Response Times Low
+  path: /web/tools/lighthouse/audits/ttfb
 - title: Manifest Contains Icons at Least 192px
   path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
 - title: Manifest Contains background_color
@@ -92,10 +96,14 @@ toc:
   path: /web/tools/lighthouse/audits/optimize-images
 - title: Oversized Images
   path: /web/tools/lighthouse/audits/oversized-images
+- title: Page has unsuccessful HTTP status code
+  path: /web/tools/lighthouse/audits/successful-http-code
 - title: Page Load Is Fast Enough On 3G
   path: /web/tools/lighthouse/audits/fast-3g
 - title: Perceptual Speed Index
   path: /web/tools/lighthouse/audits/speed-index
+- title: Prevents Users From Pasting Into Password Fields
+  path: /web/tools/lighthouse/audits/password-pasting
 - title: Redirects HTTP Traffic To HTTPS
   path: /web/tools/lighthouse/audits/http-redirects-to-https
 - title: Registers A Service Worker

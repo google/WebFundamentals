@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent" Lighthouse audit.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2017-01-18 #}
+{# wf_blink_components: N/A #}
 
 # Element ARIA Attributes Are Valid And Not Misspelled Or Non-Existent  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Misspelled or nonexistent ARIA attributes may be preventing the screen reader
 from properly understanding the current state of a widget. This could make the
@@ -15,7 +16,7 @@ page unusable to users who rely on screen readers.
 
 See [Introduction to ARIA](/web/fundamentals/accessibility/semantics-aria/) for more information.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 <<_shared/query.md>>
 
@@ -36,7 +37,7 @@ To find each listed element's invalid attribute names:
 [xp]: /web/tools/chrome-devtools/console/command-line-reference#xpath
 [roles]: https://www.w3.org/TR/wai-aria/roles#role_definitions
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid names][axe] for more information.

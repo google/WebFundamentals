@@ -265,6 +265,17 @@ samchen:
   description:
     en: Sam is a Front End Developer
 
+hongchanchoi:
+  name:
+    given: Hongchan
+    family: Choi
+  org:
+    name: Google
+  homepage: https://hoch.io
+  twitter: hochsays
+  description:
+    en: Software Engineer working on Web Audio in Chromium
+
 kenchris:
   name:
     given: Kenneth
@@ -901,6 +912,17 @@ petelepage:
   description:
     en: Pete is a Developer Advocate
 
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role:
+    - translator
+
 paullewis:
   name:
     given: Paul
@@ -934,7 +956,7 @@ henrylim:
   description:
     en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
-wayouliu:
+wayouliu:  
   name:
     given: Wayou
     family: Liu
@@ -1141,6 +1163,23 @@ rupl:
   description:
     en: Chris is a frontend developer and web performance advocate.
 
+satyakresna:
+  name:
+    given: Kresna
+    family: Satya
+  org:
+    name: Independent
+    unit: Web Programmer
+  country: ID
+  role:
+    - translator
+  homepage: 'https://satyakresna.com'
+  google: +SatyaKresnaAdiPratama
+  twitter: _satyakresna
+  email: satyakresna6295@gmail.com
+  description:
+    en: Kresna is a Web Programmer.
+
 taylorsavage:
   name:
     given: Taylor
@@ -1291,6 +1330,20 @@ vinamratasingal:
   description:
     en: Lighthouse Product Manager
 
+dmitryskripunov:
+  name:
+    given: Dmitry
+    family: Skripunov
+  country: Russia
+  role:
+    - translator
+  twitter: dmitryskripunov
+  google: "116954151022889696749"
+  github: dmitryskripunov
+  email: dskripunov@gmail.com
+  description:
+    en: Dmitry is a Software Engineer
+
 andismith:
   name:
     given: Andi
@@ -1348,6 +1401,15 @@ sunyunjia:
   email: sunyunjia@google.com
   description:
     en: "Software Engineer working on Chromium"
+
+ossu:
+  name:
+    given: Oskar
+    family: Sundbom
+  org:
+    name: Google
+  description:
+    en: Software Engineer working on WebRTC and Audio in Chromium
 
 surma:
   name:
@@ -1451,6 +1513,21 @@ johyphenel:
   google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
+
+rviscomi:
+  name:
+    given: Rick
+    family: Viscomi
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://twitter.com/rick_viscomi'
+  twitter: rick_viscomi
+  github: rviscomi
+  role:
+    - author
+  email: rviscomi@google.com
 
 philipwalton:
   name:

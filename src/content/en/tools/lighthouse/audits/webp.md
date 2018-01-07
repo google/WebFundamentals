@@ -1,75 +1,50 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Serve Images As WebP" Lighthouse audit.
+description: Reference documentation for the "Serve Images in Next-Gen Formats" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-20 #}
+{# wf_updated_on: 2018-01-03 #}
 {# wf_published_on: 2017-06-20 #}
+{# wf_blink_components: N/A #}
 
-# Serve Images As WebP  {: .page-title }
+# Serve Images in Next-Gen Formats  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
-WebP is a new image format that provides better lossy and lossless compression
-for images on the web, compared to PNG and JPEG. Encoding your images in WebP
-rather than JPEG or PNG means that they will load faster and consume less
-cellular data. See [A New Image Format For The Web](/speed/webp/) for more on
+JPEG 2000, JPEG XR, and WebP are image formats that have superior compression and quality
+characteristics compared to their older JPEG and PNG counterparts. Encoding your images
+in these formats rather than JPEG or PNG means that they will load faster and consume
+less cellular data.
+
+WebP is supported in Chrome and Opera and provides better lossy and lossless compression
+for images on the web. See [A New Image Format For The Web](/speed/webp/) for more on
 WebP.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Click **View Details** to see the potential savings of encoding your page's
 images with WebP rather than JPEG or PNG. To pass this audit, encode all of
 these images in WebP.
 
-Browser support is not universal for WebP. You'll need to serve a fallback PNG
-or JPEG image when WebP is not available. See [How can I detect browser
-support for WebP?][fallback] for an overview of fallback techniques.
+Browser support is not universal for WebP, but similar savings should be available in
+most major browsers in an alternative next-gen format. You'll need to serve a fallback PNG
+or JPEG image for other browser support. See [How can I detect browser
+support for WebP?][fallback] for an overview of fallback techniques and the list below for
+browser support of image formats.
 
 [fallback]: /speed/webp/faq#how_can_i_detect_browser_support_for_webp
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+To see the current browser support for each next-gen format, check out the entries below:
 
-Lighthouse collects each JPEG and PNG image on the page, and then converts
+* [WebP](https://caniuse.com/#feat=webp)
+* [JPEG 2000](https://caniuse.com/#feat=jpeg2000)
+* [JPEG XR](https://caniuse.com/#feat=jpegxr)
+
+## More information {: #more-info }
+
+Lighthouse collects each BMP, JPEG, and PNG image on the page, and then converts
 each to WebP. Lighthouse omits the image from its report if the potential
 savings are less than 8KB.
 
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-webp-images.js
-
-## Feedback {: #feedback }
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'WebP / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    { 
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}

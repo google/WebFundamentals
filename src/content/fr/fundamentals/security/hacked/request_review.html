@@ -1,0 +1,63 @@
+<html devsite><head>
+<title>Demander un examen</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>Pour que nous cessions d'indiquer aux internautes que votre site ou votre page sont dangereux, ou potentiellement trompeurs, vous devez nous demander de les réexaminer.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>Vous aurez besoin :</h3>
+<ul>
+  <li>d'une bonne connaissance des commandes du shell/du terminal.</li>
+</ul>
+<h3>Ce que vous allez devoir faire :</h3>
+<h4>1. Prérequis</h4>
+<p>Avant d'envoyer une demande d'examen, vérifiez que vous avez effectué les étapes ci-dessous :</p>
+<ul>
+  <li>Validation de la propriété de votre site dans la Search Console</li>
+  <li>Réparation des dommages causés par le pirate informatique sur votre site</li>
+  <li>Correction de la faille</li>
+  <li>Remise en ligne de votre site nettoyé</li>
+</ul>
+<h4>2. Vérifier plusieurs fois que vos pages sont disponibles et non infectées</h4>
+<p>Pour plus de sûreté, utilisez les commandes Wget ou cURL pour consulter les pages de votre site, telles que votre page d'accueil et une URL modifiée par le pirate informatique. Elles devraient à présent être saines. Si c'est le cas, et que vous êtes certain qu'il en est de même pour l'ensemble des pages de votre site, vous pouvez procéder à une demande d'examen.</p>
+  <p><strong>Important</strong> : Vos pages doivent pouvoir être explorées par Googlebot pour s'assurer qu'elles ne sont pas infectées. Assurez-vous qu'aucun fichier robots.txt ne bloque leur exploration et qu'aucune balise Meta ou directive noindex pour les robots n'empêche leur indexation.</p>
+<h4 id="request_review">3. Demander un examen</h4>
+<p>Avant d'envoyer une telle demande, assurez-vous d'avoir bien résolu le problème. Dans le cas contraire, votre site sera signalé comme étant dangereux pendant encore plus longtemps.</p>
+<ul>
+  <li><strong>Hameçonnage</strong>
+    <ol>
+      <li>Remplissez la demande de réexamen disponible sur <a href="https://www.google.com/safebrowsing/report_error/">google.com/safebrowsing/report_error/</a>.
+        Ce réexamen permet de supprimer les avertissements pour cause d'hameçonnage des pages concernées qui ont été nettoyées. Le formulaire sert également à signaler les avertissements qui, selon le propriétaire du site, ne sont pas justifiés.</li>
+    </ol>
+  </li>
+  <li><strong>Logiciels malveillants ou spam</strong>
+    <ol>
+      <li>Ouvrez le rapport <a href="https://www.google.com/webmasters/tools/security-issues" target="new"><strong>Problèmes de sécurité</strong></a> de la Search Console. Il affiche encore peut-être les avertissements et les exemples d'URL infectées que vous avez pu consulter précédemment.</li>
+      <li>Si vous pensez que les URL affichées en exemple ne sont plus infectées, sélectionnez <strong>Faire une demande de réexamen</strong>. Pour ce faire, nous vous demandons de fournir des informations supplémentaires afin de prouver que votre site a bien été nettoyé. Pour chaque catégorie de problème de sécurité, vous pouvez écrire une phrase qui décrit la manière dont le site a été nettoyé (par exemple : "Pour les URL piratées par injection de contenu, j'ai supprimé les éléments contenant du spam et corrigé la faille en mettant à jour un plug-in obsolète").</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. Attendre la fin du nouvel examen</h4>
+<ul>
+  <li>Le <strong>traitement des demandes de réexamen suite à un piratage de type logiciel malveillant</strong> prend quelques jours. Une fois le réexamen terminé, vous recevrez la réponse dans vos <strong>Messages</strong> de la Search Console.</li>
+  <li>Le <strong>traitement des demandes de réexamen suite à un piratage de type spam</strong> peut prendre plusieurs semaines, car ces demandes peuvent nécessiter un traitement manuel ou complet de toutes les pages piratées. Si le réexamen est concluant, les catégories de piratage et les exemples d'URL piratées ne s'afficheront plus dans la section "Problèmes de sécurité". </li>
+  <li>Le <strong>traitement des demandes de réexamen suite à un problème d'hameçonnage</strong> prend environ une journée. Si le nouvel examen est concluant, l'avertissement pour cause d'hameçonnage visible par les internautes sera supprimé et votre page s'affichera à nouveau dans les résultats de recherche.</li>
+</ul>
+<p>Si nous constatons que votre site n'est plus infecté, les avertissements dans les navigateurs et les résultats de recherche seront supprimés dans les 72 heures.</p>
+<p>Si Google estime que vous n'avez pas résolu le problème, d'autres exemples d'URL infectées s'affichent généralement dans le rapport "Problèmes de sécurité" de la Search Console, afin de vous aider lors de votre prochaine recherche.
+  Les avertissements pour cause de logiciels malveillants ou de piratage de type spam continuent de s'afficher dans les résultats de recherche et/ou les navigateurs afin de protéger les internautes.</p>
+<h4>Étapes finales</h4>
+<ul>
+  <li><strong>Si votre demande a été approuvée</strong>, vérifiez que votre site fonctionne comme prévu, c'est-à-dire que les pages chargent correctement et que l'on peut cliquer sur les liens. Pour que leur site reste sûr, nous recommandons à tous les propriétaires de mettre en œuvre le plan de maintenance et de sécurité établi au cours de l'étape <a href="clean_site">Nettoyer votre site et en assurer la maintenance</a>. Pour en savoir plus, vous pouvez consulter les <a href="https://www.stopbadware.org">ressources suivantes de StopBadware</a> (en anglais) :
+    <ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics (Les bases de la prévention contre les logiciels malveillants)</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">Additional resources: hacked sites (Ressources supplémentaires : sites piratés)</a></li>
+    </ul>
+  </li>
+  <li><strong>Si votre demande n'a pas été approuvée</strong>, réexaminez votre site à la recherche de <a href="hacked_with_malware">logiciels malveillants</a> ou de <a href="hacked_with_spam">spam</a>, et vérifiez que de nouvelles modifications ou de nouveaux fichiers n'ont pas été ajoutés par le pirate informatique. Vous pouvez également envisager de demander une aide supplémentaire aux <a href="support_team">spécialistes de votre équipe d'assistance</a>.</li>
+</ul>
+
+</body></html>

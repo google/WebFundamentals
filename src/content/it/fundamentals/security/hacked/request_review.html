@@ -1,0 +1,63 @@
+<html devsite><head>
+<title>Richiedi un controllo</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>Devi chiedere a Google di esaminare la tua pagina o il tuo sito in modo che non venga più contrassegnato come pericoloso o potenzialmente ingannevole per gli utenti.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>Requisiti:</h3>
+<ul>
+  <li>Conoscenza dei comandi di shell/terminale</li>
+</ul>
+<h3>Operazioni da eseguire:</h3>
+<h4>1. Prerequisiti</h4>
+<p>Prima di richiedere un controllo, assicurati di aver svolto i seguenti passaggi:</p>
+<ul>
+  <li>Verifica della proprietà del tuo sito in Search Console</li>
+  <li>Pulizia del sito dai danni provocati dall'hacker</li>
+  <li>Correzione della vulnerabilità</li>
+  <li>Ripubblicazione online del sito pulito</li>
+</ul>
+<h4>2. Verifica che le pagine siano disponibili e corrette</h4>
+<p>Per esserne certo, utilizza Wget o cURL per visualizzare le pagine del tuo sito come, ad esempio, la home page e un URL modificato dall'hacker che ora dovrebbero essere corretti. Se è questo il caso e sei certo che lo stesso valga per le restanti pagine del tuo sito, è il momento di chiedere un controllo.</p>
+  <p><strong>Importante:</strong> le tue pagine devono poter essere sottoposte a scansione da Googlebot per essere sicuri che siano corrette. Assicurati che possano essere sottoposte a scansione dai robot e che non ne sia bloccata l'indicizzazione tramite istruzioni o META tag robots "noindex".</p>
+<h4 id="request_review">3. Richiedi un controllo</h4>
+<p>Prima di richiedere un controllo, devi essere sicuro che il problema sia stato veramente corretto; altrimenti, se il problema è ancora presente, il controllo prolungherà il periodo di tempo in cui il sito sarà contrassegnato come pericoloso.</p>
+<ul>
+  <li><strong>Phishing</strong>
+    <ol>
+      <li>Completa il controllo all'indirizzo<a href="https://www.google.com/safebrowsing/report_error/"> google.com/safebrowsing/report_error/</a>.
+        Questo controllo rimuove gli avvisi di phishing dalle pagine di phishing che sono state pulite. Serve anche come strumento di reporting per i proprietari di siti che ritengono che la loro pagina sia stata erroneamente segnalata per phishing.</li>
+    </ol>
+  </li>
+  <li><strong>Malware o spam</strong>
+    <ol>
+      <li>Apri il <a href="https://www.google.com/webmasters/tools/security-issues" target="new"><strong>rapporto Problemi di sicurezza</strong></a> in Search Console. Il rapporto mostrerà ancora probabilmente gli avvisi e gli URL di esempio infettati che hai visto prima.</li>
+      <li>Se ritieni che gli URL d'esempio elencati siano puliti, seleziona <strong>Richiedi un controllo</strong>. Per inviare una richiesta di controllo, ti chiediamo di fornire più informazioni riguardanti la pulizia del sito dai danni provocati dall'hacker. Ad esempio, per ogni categoria all'interno dei Problemi di sicurezza, puoi scrivere una frase in cui spieghi in che modo il sito è stato pulito, ad esempio, "Nel caso di URL compromessi dall'iniezione di contenuti, ho rimosso i contenuti con spam e ho corretto la vulnerabilità aggiornando un plug-in obsoleto".</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. Attendi l'elaborazione del controllo</h4>
+<ul>
+  <li><strong>Tempo di elaborazione del controllo di malware.</strong> L'elaborazione dei controlli di siti infetti da malware richiede alcuni giorni. Una volta che il controllo è stato completato, la risposta è disponibile nella sezione <strong>Messaggi</strong> di Search Console.</li>
+  <li><strong>Tempo di elaborazione del controllo di spam.</strong> L'elaborazione dei controlli di siti compromessi da spam può richiedere anche diverse settimane. Ciò è dovuto al fatto che i controlli per spam possono comportare un'indagine manuale o una rielaborazione completa delle pagine compromesse. Se il controllo ha esito positivo, in Problemi di sicurezza non vengono più visualizzati i tipi di categorie compromesse o URL compromessi di esempio. </li>
+  <li><strong>Tempo di elaborazione del controllo di phishing.</strong> L'elaborazione dei controlli di phishing richiede circa un giorno. Se l'operazione viene conclusa correttamente, l'avviso di phishing visibile per l'utente viene rimosso e la pagina può di nuovo essere mostrata nei risultati di ricerca.</li>
+</ul>
+<p>Se Google riscontra che il tuo sito è pulito, gli avvisi nel browser e nei risultati di ricerca vengono rimossi entro 72 ore.</p>
+<p>Se invece viene stabilito che il problema non è stato risolto, nel rapporto Problemi di sicurezza di Search Console vengono mostrati più URL infetti d'esempio per aiutarti nel corso dell'indagine successiva.
+  Avvisi del sito compromesso con malware o spam rimangono nei risultati di ricerca e/o nel browser come avvertimento per proteggere gli utenti.</p>
+<h4>Passaggi finali</h4>
+<ul>
+  <li><strong>Se la tua richiesta è stata approvata,</strong> verifica che il sito funzioni come previsto: le pagine vengono caricate correttamente e i link sono selezionabili. Per mantenere la sicurezza del sito, consigliamo a tutti i proprietari di siti di implementare il programma di manutenzione e sicurezza creato al passaggio <a href="clean_site">Ripulisci e gestisci il sito</a>. Per ulteriori informazioni, considera le seguenti risorse da <a href="https://www.stopbadware.org">StopBadware</a>:
+    <ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics (Prevenire il badware: nozioni di base)</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">Additional resources: hacked sites (Altre risorse: siti compromessi)</a></li>
+    </ul>
+  </li>
+  <li><strong>Se invece la tua richiesta è stata rifiutata,</strong> esamina di nuovo il sito alla ricerca di <a href="hacked_with_malware">malware</a> o <a href="hacked_with_spam">spam</a> oppure di eventuali modifiche o nuovi file creati dall'hacker. In alternativa, puoi richiedere ulteriore aiuto agli <a href="support_team">esperti del tuo team di assistenza</a>.</li>
+</ul>
+
+</body></html>

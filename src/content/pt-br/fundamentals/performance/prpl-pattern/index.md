@@ -1,8 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2016-09-28 #}
+{# wf_blink_components: Blink>Network,Blink>Loader #}
 
 # O padrão PRPL {: .page-title }
 
@@ -247,7 +248,7 @@ Superando esse desafio, o PRPL pode ajudar a fornecer o código funcional mínim
 os usuários caem interativa
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[Resource hints]: /web/updates/2016/03/link-rel-preload
 [HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 

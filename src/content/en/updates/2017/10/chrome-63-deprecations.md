@@ -2,11 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to RTCRtcpMuxPolicy.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_tags: deprecations,removals,chrome63 #}
+{# wf_blink_components: Blink>Bindings,Blink>CSS,Blink>WebRTC>Network #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 63 to help you plan. In this version, new behavior on interface properties, removal of a webkit function, and a change to <code>RTCRtcpMuxPolicy</code>. #}
+
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and removals in Chrome 63 {: .page-title }
 
@@ -48,7 +51,7 @@ removed from Chrome in version 63. Developers who need this functionality can
 look at [this Stackoverflow post](https://stackoverflow.com/questions/2952667/find-all-css-rules-that-apply-to-an-element)
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
-[Chromestatus Tracker](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-_Al0I5Rm9Q/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4606972603138048) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=437569&desc=2)
 
 ## Remove RTCRtcpMuxPolicy of "negotiate"
@@ -67,6 +70,6 @@ In Chrome 63, "negotiate" is removed.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685727)
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}
