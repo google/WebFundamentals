@@ -14,23 +14,22 @@ page_type: landing
 </style>
 
 <div class="wf-hero">
-  <p>The core foundations of a delightful web experience are...</p>
+  <p>Суть основ восхитительного web'a это...</p>
   <img src="/web/images/hero-2x.png" class="attempt-right">
   <ul>
-    <li><span class="compare-yes"></span> <b><a href="#fast">Fast</a></b> - It respond quickly to user
-      interactions with silky smooth animations and no janky scrolling.</li>
-    <li><span class="compare-yes"></span> <b><a href="#integrated">Integrated</a></b> - The user doesn’t have to
-      reach through the browser, it uses the full capabilities of the device
-      to create an experience true to the device.</li>
-    <li><span class="compare-yes"></span> <b><a href="#reliable">Reliable</a></b> - Load instantly and reliably,
-      never showing the downasaur, even in uncertain network conditions.</li>
-    <li><span class="compare-yes"></span> <b><a href="#engaging">Engaging</a></b> - Keeps the user coming back
-      to the app with beautifully designed experiences that look and feel
-      natural.</li>
+    <li><span class="compare-yes"></span> <b><a href="#fast">Быстрота</a></b> - Он быстро реагирует на действия 
+    пользователей с шелковистой плавной анимацией и без дерганной прокрутки.</li>
+    <li><span class="compare-yes"></span> <b><a href="#integrated">Интеграция</a></b> - Пользователь не обязан 
+        видеть и использовать браузер, он использует все возможности устройства, чтобы пользоваться интерфейсом, 
+         соответствующим устройству.</li>
+    <li><span class="compare-yes"></span> <b><a href="#reliable">Надежность</a></b> - Загружает контент мгновенно 
+        и надежно, никогда не показывает downasaur, даже при неопределённой сети.</li>
+    <li><span class="compare-yes"></span> <b><a href="#engaging">Привлекательность</a></b> - Заставляет пользователя 
+       вернуться в приложение с красиво спроектированным интерфейсом, который выглядит и ощущается естесственно.</li>
   </ul>
 </div>
 
-<h2 class="nope">Delightful web experiences are...</h2>
+<h2 class="nope">Восхитительный web это...</h2>
 
 <section class="devsite-landing-row devsite-landing-row-2-up devsite-landing-row-cards">
   <div class="devsite-landing-row-group">
@@ -39,17 +38,16 @@ page_type: landing
         <img src="/web/images/pwa-f-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3>Fast</h3>
+        <h3>Быстрота</h3>
         <div class="devsite-landing-row-item-description-content">
           <p>
-            Users don’t expect janky scrolling or slow load performance. Making your
-            site fast is a process that starts with understanding
-            <a href="performance/rail">how RAIL affects the performance</a> of your
-            site and how use that to measure and improve your performance. 
+            Пользователи не ожидают дёрганой прокрутки или медленной загрузки. Процесс убыстрения вашего сайта 
+            начинается с понимания того <a href="performance/rail">как RAIL влияет на производительность</a> вашего
+            сайта как использовать это для измерения и улучшения вашей производительности. 
           </p>
           <ul>
-            <li><span class="compare-yes"></span> <a href="performance/critical-rendering-path/">Critical Rendering Path</a></li>
-            <li><span class="compare-yes"></span> <a href="performance/rendering/">Rendering Performance</a></li>
+            <li><span class="compare-yes"></span> <a href="performance/critical-rendering-path/">Процесс рендеринга</a></li>
+            <li><span class="compare-yes"></span> <a href="performance/rendering/">Производительность рендеринга</a></li>
           </ul>
         </div>
       </div>
@@ -59,16 +57,15 @@ page_type: landing
         <img src="/web/images/pwa-i-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3>Integrated</h3>
+        <h3>Интеграция</h3>
         <div class="devsite-landing-row-item-description-content">
           <p>
-            User experiences on the web should feel like an integrated part of the
-            user's device; instead of having to reach through a browser window, the
-            experience should feel true to how the user interacts with the device.
+            Пользователь должен чувствовать web как часть устройства; должно быть ощущение, что взаимодействие 
+            происходит с устройством, а не с окном браузера.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Get a <a href="app-install-banners/">place on the users home screen</a>.</li>
-            <li><span class="compare-yes"></span> Simplify payments with the <a href="payments/">Payment Request API</a>.</li>
+            <li><span class="compare-yes"></span> Получите <a href="app-install-banners/">место на домашнем экране пользователя</a>.</li>
+            <li><span class="compare-yes"></span> Упростите платежи с <a href="payments/">Payment Request API</a>.</li>
           </ul>
         </div>
       </div>
@@ -83,16 +80,16 @@ page_type: landing
         <img src="/web/images/pwa-r-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3>Reliable</h3>
+        <h3>Надежность</h3>
         <div class="devsite-landing-row-item-description-content">
           <p>
-            Users don’t expect the web to work without a network connect, and often
-            don’t even bother to try when it’s a slow or intermittent connection.
-            <i>We need to change that perception</i>. The web <b>must</b> be reliable.
+            Пользователи не ожидают, что web работает без соединения с сетью, и часто даже не пытаются, если
+             это медленное или нестабильное соединение.
+            <i>Нам нужно изменить такое восприятие</i>. Web <b>должен</b> быть надежным.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Use the <a href="instant-and-offline/offline-cookbook/">Offline Cookbook</a> to improve reliablity.</li>
-            <li><span class="compare-yes"></span> What should you consider when <a href="instant-and-offline/offline-ux">designing for slow or intermittent networks?</a></li>
+            <li><span class="compare-yes"></span> Используйте <a href="instant-and-offline/offline-cookbook/">Offline Cookbook</a> для повышения надежности.</li>
+            <li><span class="compare-yes"></span> Что вы должны учитывать, когда <a href="instant-and-offline/offline-ux">проектируете для медленных или нестабильных сетей?</a></li>
           </ul>
         </div>
       </div>
@@ -102,18 +99,17 @@ page_type: landing
         <img src="/web/images/pwa-e-16x9.gif">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3>Engaging</h3>
+        <h3>Привлекательность</h3>
         <div class="devsite-landing-row-item-description-content">
           <p>
-            An engaging app goes beyond functional, but ensures that the whole
-            experience is delightful making it easy for the user to do what they
-            need to do. Using features like Web Push, it’s always up to date, and
-            Notifications keeps users informed. It uses the right capabilities,
-            at the right time, in a beautiful way.
+            Привлекательное приложение выходит за рамки функциональности, но гарантирует, что весь интерфейс восхитительно
+            помогает пользователю делать то, что ему нужно делать. Используя такие функции как Web Push, он всегда остается 
+            в курсе событий, а Notifications информируют пользователей. Он использует правильные возможности, 
+            в нужное время, красивым способом.
           </p>
           <ul>
-            <li><span class="compare-yes"></span> Use <a href="push-notifications/">Web Push &amp; Notifications</a> to re-engage with users.</li>
-            <li><span class="compare-yes"></span> Designing <a href="design-and-ux/ux-basics/">beautiful user experiences</a>.</li>
+            <li><span class="compare-yes"></span> Используйте <a href="push-notifications/">Web Push &amp; Notifications</a> для взаимодействия с пользователем.</li>
+            <li><span class="compare-yes"></span> Проектирование <a href="design-and-ux/ux-basics/">прекрасных пользовательских интерфейсов</a>.</li>
           </ul>
         </div>
       </div>
@@ -121,14 +117,14 @@ page_type: landing
   </div>
 </section>
 
-## What's new?
+## Что нового?
 
 {% include "web/_shared/latest_show.html" %}
 
 {% include "web/_shared/latest_articles.html" %}
 
 
-## What's hot?
+## Горячие темы?
 
 <section class="wf-hot devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards">
   <div class="devsite-landing-row-group">
@@ -137,12 +133,13 @@ page_type: landing
         <img src="images/web-comp.png">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3><a href="web-components/">Web Components</a></h3>
+        <h3><a href="web-components/">Web Компоненты</a></h3>
         <div class="devsite-landing-row-item-description-content">
-          Web Components are a new set of standards which let you create your own HTML elements. You can use them to build anything, from simple UI elements, to entire applications.
+          Web Компоненты это новый набор стандартов, которые позволяют вам создавать ваши собтвенные HTML элементы.
+           Вы можете использовать их для того, чтобы построить что угодно, от простых UI элементов, до целых приложений.
         </div>
         <div class="devsite-landing-row-item-buttons">
-          <a href="web-components/" class="button button-white">Learn more</a>
+          <a href="web-components/" class="button button-white">Узнать больше</a>
         </div>
       </div>
     </div>
@@ -154,10 +151,12 @@ page_type: landing
       <div class="devsite-landing-row-item-description">
         <h3><a href="payments/">Payment Request API</a></h3>
         <div class="devsite-landing-row-item-description-content">
-          The Payment Request API is a W3C standard candidate meant to eliminate checkout forms. It  improves the purchase process, provides a more consistent user experience and allows you to easily leverage different payment methods.
+          Payment Request API это кандидат в стандарты W3C предназначенный для устранения кассовых форм. 
+          Он улучшает процесс оплаты, предоставляет более однородный пользовательский интерфейс и 
+          позволяет вам легко использовать различные способы оплаты.
         </div>
         <div class="devsite-landing-row-item-buttons">
-          <a href="payments/" class="button button-white">Learn more</a>
+          <a href="payments/" class="button button-white">Узнать больше</a>
         </div>
       </div>
     </div>
@@ -167,12 +166,13 @@ page_type: landing
         <img src="images/cred-mgt.png">
       </figure>
       <div class="devsite-landing-row-item-description">
-        <h3><a href="/web/fundamentals/security/credential-management/">Credential Management API</a></h3>
+        <h3><a href="/web/fundamentals/security/credential-management/">API Учетных данных</a></h3>
         <div class="devsite-landing-row-item-description-content">
-          The Credential Management API is a standards-based browser API that provides a programmatic interface between the site and the browser for seamless sign-in across devices.
+          API Учетных данных это основанный на стандартах браузерный API, который предоставляет
+           программный интерфейс между сайтом и браузером для беспрепятственной авторизации между устройствами.
         </div>
         <div class="devsite-landing-row-item-buttons">
-          <a href="/web/fundamentals/security/credential-management/" class="button button-white">Learn more</a>
+          <a href="/web/fundamentals/security/credential-management/" class="button button-white">Узнать больше</a>
         </div>
       </div>
     </div>
