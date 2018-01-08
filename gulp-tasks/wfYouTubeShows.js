@@ -47,8 +47,16 @@ function buildFeeds(buildType, callback) {
         videoPlaceholder,
       ],
     };
-    const template = path.join(global.WF.src.templates, 'shows', 'index.md');
-    const outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+    // Generate shows index page
+    let template = path.join(global.WF.src.templates, 'shows', 'index.md');
+    let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+    wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+    // Generate Latest Show Include
+    context = {video: videoPlaceholder};
+    template = path.join(global.WF.src.templates, 'shows', 'latest.html');
+    outputFile =
+      path.join(global.WF.src.content, '_shared', 'latest_show.html');
     wfTemplateHelper.renderTemplate(template, context, outputFile);
     callback();
     return;

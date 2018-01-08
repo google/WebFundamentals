@@ -109,6 +109,7 @@ gulp.task('clean', function() {
   const filesToDelete = [
     'test-results.json',
     'src/content/en/_shared/contributors/*',
+    'src/content/en/_shared/latest_*.html',
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
     'src/content/**/_files.json',
