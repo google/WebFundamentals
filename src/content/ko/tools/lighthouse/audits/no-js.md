@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '스크립트를 사용할 수 없을 때 페이지에 일부 콘텐츠 포함' Lighthouse 감사의 참조 문서입니다.
 

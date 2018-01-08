@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Buat agar kode sisi klien tetap bisa dibaca dan di-debug bahkan setelah Anda mengombinasikan, mengecilkan, atau mengompilasinya.
 

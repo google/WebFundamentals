@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Fragmentos são scripts pequenos que você pode criar e executar dentro do painel Sources do Chrome DevTools. É possível acessar e executá-losem qualquer página. Ao executar um snippet, ele é executado no contexto da página atualmente aberta.
 

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-02-02T18:00:00.000Z #}
-{# wf_updated_on: 2017-02-02T18:00:00.000Z #}
+{# wf_published_on: 2017-02-02 #}
+{# wf_updated_on: 2017-02-02 #}
 {# wf_featured_image: /web/showcase/2017/images/playcanvas/vr-lab.png #}
 {# wf_featured_snippet: The PlayCanvas WebVR Lab is a living project from the PlayCanvas team. It represents the team's research into developing scalable and responsive WebVR applications for all devices. It elegantly scales from a Google Cardboard or a Daydream View headset to a desktop VR device. The project is continually updated with new experiments that implement core interactions like teleportation, grabbing, manipulating objects, user interface and controllers. #}
 {# wf_tags: webvr,casestudy #}

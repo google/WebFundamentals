@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Can Be Prompted To Install The Web App" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-16 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-06-16 #}
 
 # User Can Be Prompted To Install The Web App  {: .page-title }
@@ -41,7 +41,7 @@ a site qualifies as a Progressive Web App. These are Chrome's criteria:
 See [Web App Install Banners][WAIB] to learn more.
 
 [HTTPS]: /web/tools/lighthouse/audits/https
-[WAIB]: /web/fundamentals/engage-and-retain/app-install-banners/
+[WAIB]: /web/fundamentals/app-install-banners
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>

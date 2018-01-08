@@ -36,7 +36,7 @@ Note: Wir weisen darauf hin, dass `visibility: hidden` sich von `display: none` 
 
 Das finale Rendering enthält sowohl die Inhalte als auch die Formatinformationen aller sichtbaren Inhalte auf dem Bildschirm - wir haben es fast geschafft! **Da die Rendering-Baumstruktur nun eingerichtet ist, können wir mit der `Layout`-Phase fortfahren.**
 
-Bis zu diesem Punkt haben wir analysiert, welche Knoten sichtbar sein sollten und ihre Formatierung umgesetzt, allerdings haben wir ihre exakte Position und Größe im [Anzeigebereich](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) des Geräts nicht berechnet - dies geschieht in der Layout-Phase, die gelegentlich auch als `Reflow` bezeichnet wird.
+Bis zu diesem Punkt haben wir analysiert, welche Knoten sichtbar sein sollten und ihre Formatierung umgesetzt, allerdings haben wir ihre exakte Position und Größe im [Anzeigebereich](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) des Geräts nicht berechnet - dies geschieht in der Layout-Phase, die gelegentlich auch als `Reflow` bezeichnet wird.
 
 Mit der Ermittlung der exakten Größe und Position der einzelnen Objekte beginnt der Browser im Stammverzeichnis der Rendering-Baumstruktur und arbeitet diese ab, um die Geometrie eines jeden Objekts auf der Seite zu berechnen. Sehen wir uns ein einfaches praktisches Beispiel an:
 

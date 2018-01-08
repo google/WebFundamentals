@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Elements 패널에 있는 DOM 트리 뷰에 현재 웹 페이지의 DOM 구조가 표시됩니다. DOM 업데이트를 통해 페이지의 콘텐츠와 구조를 실시간으로 편집할 수 있습니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: O Chrome DevTools fornece ferramentas para ajudar a corrigir páginas da Web acionando exceções e erros de depuração no JavaScript.
 

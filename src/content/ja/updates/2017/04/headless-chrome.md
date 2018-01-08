@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ヘッドレス Chrome とはなにか、そしてその使い方を紹介します。
 
-{# wf_updated_on: 2017-04-27 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -190,7 +190,7 @@ launchChrome().then(launcher => {
 
 `HeadlessChrome/60.0.3082.0` といった文字列が出てくるでしょう。
 
-**例** - サイトに [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/) があるかを確認する
+**例** - サイトに [web app manifest](/web/fundamentals/web-app-manifest) があるかを確認する
 
 ```javascript
 const chrome = require('chrome-remote-interface');

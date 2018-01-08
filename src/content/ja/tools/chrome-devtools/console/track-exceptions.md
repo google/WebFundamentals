@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools には、例外をスローしているウェブページの修正や JavaScript のエラーのデバッグに役立つツールが用意されています。
 

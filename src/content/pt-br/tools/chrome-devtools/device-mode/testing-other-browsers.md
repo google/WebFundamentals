@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Seu trabalho não acaba depois de garantir que o site funciona perfeitamente no Chrome e no Android. Embora o Device Mode possa simular diversos outros dispositivos, como iPhones, recomendamos que você confira soluções de emulação para outros navegadores.
 

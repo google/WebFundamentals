@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '예상된 입력 지연' Lighthouse 감사의 참조 문서입니다.
 

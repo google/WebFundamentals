@@ -1,5 +1,5 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/events/_book.yaml
 landing_page:
   custom_css_path: training-landing.css
   header:

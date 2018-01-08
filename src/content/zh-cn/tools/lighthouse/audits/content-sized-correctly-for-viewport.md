@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“正确调整内容大小，使其适合视口”Lighthouse 审查的参考文档。
 
@@ -17,7 +17,7 @@ description:“正确调整内容大小，使其适合视口”Lighthouse 审查
 ## 如何通过此审查{: #how }
 
 此审查是一种确定页面是否已针对移动设备进行优化的迂回方式。
-如果您的网站未优化，并且您想要优化它，请先参阅[自适应网页设计基础知识](/web/fundamentals/design-and-ui/responsive/)。
+如果您的网站未优化，并且您想要优化它，请先参阅[自适应网页设计基础知识](/web/fundamentals/design-and-ux/responsive/)。
 
 
 

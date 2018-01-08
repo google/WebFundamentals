@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console API를 사용하여 콘솔에 정보를 기록하고 자바스크립트 프로필을 만들고 디버깅 세션을 시작합니다.
 

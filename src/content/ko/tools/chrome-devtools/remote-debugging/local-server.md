@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 개발용 컴퓨터 웹 서버에서 사이트를 호스팅한 다음 Android 기기에서 콘텐츠에 액세스합니다.
 

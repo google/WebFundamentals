@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Situs Tidak Menggunakan Tautan Tag Yang Menunda Gambar Pertama" dan "Situs Tidak Menggunakan Tag Skrip Di Header Yang Menunda Gambar Pertama".
 

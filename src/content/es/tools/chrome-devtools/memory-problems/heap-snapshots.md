@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aprende a registrar capturas de pantalla de montón con el generador de perfiles de montón de Chrome DevTools y a encontrar fugas de memoria.
 

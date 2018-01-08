@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-06-27 #}
+{# wf_updated_on: 2017-10-12 #}
 {# wf_published_on: 2017-06-12 #}
-{# wf_tags: performance #}
+{# wf_tags: credentials,chrome57,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Latest updates coming to the Credential Management API in Chrome 60. Also includes an update landed in Chrome 57. #}
+{# wf_blink_components: Blink #}
 
 # Latest Updates to the Credential Management API {: .page-title }
 
@@ -77,8 +78,9 @@ asynchronously creates credential objects.
 <aside class="warning">
   <strong>Warning:</strong>
 Because updates to the Credential Management API landed on Chrome 60 contains
-backward incompatibile changes, it's important that your implementation won't be
-triggered on older versions. (If you intentionally want to do so, checkout <a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
+backward incompatible changes, it's important that your implementation won't be
+triggered on older versions. (If you intentionally want to do so, checkout
+<a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
 migration guide doc.</a>
 </aside>
 
@@ -116,14 +118,14 @@ You can use existing methods to deliver credential information to your server:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
-    }).then(c => {
-      if (c) {
+    }).then(passwordCred => {
+      if (passwordCred) {
         let form = new FormData();
-        form.append('email', c.id);
-        form.append('password', c.password);
+        form.append('email', passwordCred.id);
+        form.append('password', passwordCred.password);
         form.append('csrf_token', csrf_token);
         return fetch('/signin', {
           method: 'POST',
@@ -174,7 +176,7 @@ with a boolean flag. For example:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       unmediated: true
     }).then(c => {
@@ -229,7 +231,7 @@ the equivalent of the previous flag, `unmediated: true`:
     navigator.credentials.get({
       password: true,
       federated: {
-        provider: [ 'https://accounts.google.com' ]
+        providers: [ 'https://accounts.google.com' ]
       },
       mediation: 'silent'
     }).then(c => {

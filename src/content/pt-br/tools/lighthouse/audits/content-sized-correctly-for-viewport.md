@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse "Conteúdo dimensionado corretamente para a janela de visualização".
 
@@ -18,7 +18,7 @@ telas de dispositivos móveis.
 
 Esta auditoria é uma forma indireta de determinar se a página está otimizada para
 dispositivos móveis. Se o site não estiver otimizado e você quiser otimizá-lo, consulte
-[Princípios básicos do Web design responsivo](/web/fundamentals/design-and-ui/responsive/)
+[Princípios básicos do Web design responsivo](/web/fundamentals/design-and-ux/responsive/)
 para começar.
 
 Você poderá ignorar esta auditoria se:

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 사용자가 휴대기기를 사용할 때 직면할 네트워크 조건은 간과하기 쉬운 부분입니다. DevTools를 사용하여 여러 가지 네트워크 조건을 에뮬레이트하세요. 각종 로드 시간 문제를 해결하여 사용자 만족을 이끌어낼 수 있습니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A Command Line API do Chrome DevTools oferece diversas maneiras de observar e inspecionar detectores de evento
 

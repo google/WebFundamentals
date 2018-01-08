@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:本部分将介绍内存分析中的常用术语，适用于不同语言的各种内存分析工具。
 

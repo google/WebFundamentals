@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Aloja un sitio en un servidor web de un equipo de desarrollo y accede al contenido desde un dispositivo Android.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Laman Tidak Secara Otomatis Meminta Izin Notifikasi Saat Pemuatan Laman".
 
@@ -16,7 +16,7 @@ atau sesuai dengan kebutuhan mereka. Pengalaman pengguna yang lebih baik adalah 
 notifikasi tipe tertentu, dan menampilkan permintaan izin
 setelah mereka ikut serta.
 
-[good]: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+[good]: /web/fundamentals/push-notifications/
 
 ## Cara untuk lulus audit {: #how }
 

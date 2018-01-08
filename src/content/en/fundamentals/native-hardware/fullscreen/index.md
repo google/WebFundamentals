@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Going fullscreen.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Making Fullscreen Experiences {: .page-title }
@@ -231,7 +231,7 @@ A better option is to use the Web App Manifest.
 
 #### Web App Manifest (Chrome, Opera, Firefox, Samsung)
 
-The [Manifest for Web applications](/web/fundamentals/engage-and-retain/web-app-manifest/)
+The [Manifest for Web applications](/web/fundamentals/web-app-manifest)
 is a simple JSON file that gives you, the
 developer, the ability to control how your app appears to the user in the areas
 that they would expect to see apps (for example the mobile home screen), direct

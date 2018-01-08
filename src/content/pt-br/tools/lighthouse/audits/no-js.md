@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse “A página apresenta conteúdo quando seus scripts não estão disponíveis”.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 코드를 한 번에 한 줄씩 또는 한 함수씩 실행함으로써, 데이터와 페이지의 변경사항을 관찰하여 무슨 일이 발생하는지 정확히 이해할 수 있습니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
@@ -89,7 +89,7 @@ than the success they were expecting.
 While script resources are the most obvious security risks, CSP provides a rich
 set of policy directives that enable fairly granular control over the resources
 that a page is allowed to load. You've already seen `script-src`, so the concept
-should be clear. 
+should be clear.
 
 Let's quickly walk through the rest of the resource directives. The list below
 represents the state of the directives as of level 2. A [level 3
@@ -100,7 +100,7 @@ browsers.
 * **`base-uri`** restricts the URLs that can appear in a page's `<base>` element.
 * **`child-src`** lists the URLs for workers and embedded frame contents. For
   example: `child-src https://youtube.com` would enable embedding videos from
-  YouTube but not from other origins. 
+  YouTube but not from other origins.
 * **`connect-src`** limits the origins that you can connect to (via XHR,
   WebSockets, and EventSource).
 * **`font-src`** specifies the origins that can serve web fonts. Google's web
@@ -216,7 +216,7 @@ inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range o
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
-["Sandboxing" section of the HTML5 spec](https://developers.whatwg.org/origin-0.html#sandboxing)..
+["Sandboxing" section of the HTML5 spec](https://html.spec.whatwg.org/dev/origin.html#sandboxing)..
 
 ### The meta tag
 

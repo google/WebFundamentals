@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 

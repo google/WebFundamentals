@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Application 패널을 사용하여 웹 앱 매니페스트, 서비스 워커 및 서비스 워커 캐시를 검사, 수정 및 디버그합니다.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Progressive Web App 디버그 {: .page-title }
@@ -39,9 +39,9 @@ description: Application 패널을 사용하여 웹 앱 매니페스트, 서비�
 관련 가이드:
 
 * [웹 앱 매니페스트로 사용자
-  환경 개선](/web/fundamentals/engage-and-retain/web-app-manifest)
+  환경 개선](/web/fundamentals/web-app-manifest)
 * [앱 설치 배너
-  사용](/web/fundamentals/engage-and-retain/app-install-banners)
+  사용](/web/fundamentals/app-install-banners)
 
 매니페스트를 설정하면 **Application** 패널의
 **Manifest** 창을 사용하여 매니페스트를 검사할 수 있습니다.
@@ -103,7 +103,7 @@ debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescree
 
 * [서비스 워커 소개](/web/fundamentals/primers/service-worker)
 * [푸시 알림: 시기 적절, 관련성,
-  섬세함](/web/fundamentals/engage-and-retain/push-notifications)
+  섬세함](/web/fundamentals/push-notifications)
 
 **Application** 패널의 **Service Workers** 창은 DevTools에서 서비스 워커를 검사하고 디버그하기 위한
 기본 장소입니다.
@@ -155,7 +155,7 @@ debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescree
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## 서비스 워커 캐시 {:#caches}

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:代码段是您可以在 Chrome DevTools 的 Sources 面板中制作和执行的小脚本。您可以从任何页面访问和运行它们。在您运行代码段时，它会从当前已打开页面的上下文执行。
 

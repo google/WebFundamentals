@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-cli/src/lib/questions/ask-extensions-to-cache.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-cli/src/lib/questions/ask-extensions-to-cache.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ **/
+
+const assert &#x3D; require(&#x27;assert&#x27;);
+const glob &#x3D; require(&#x27;glob&#x27;);
+const inquirer &#x3D; require(&#x27;inquirer&#x27;);
+const ora &#x3D; require(&#x27;ora&#x27;);
+const path &#x3D; require(&#x27;path&#x27;);
+
+const errors &#x3D; require(&#x27;../errors&#x27;);
+const {ignoredDirectories} &#x3D; require(&#x27;../constants&#x27;);
+
+// The key used for the question/answer.
+const name &#x3D; &#x27;globPatterns&#x27;;
+
+/**
+ * @param {string} globDirectory The directory used for the root of globbing.
+ * @return {Promise&amp;lt;Array&amp;lt;string&gt;&gt;} The unique file extensions corresponding
+ * to all of the files under globDirectory.
+ */
+async function getAllFileExtensions(globDirectory) {
+  const files &#x3D; await new Promise((resolve, reject) &#x3D;&gt; {
+    // Use a pattern to match any file that contains a &#x27;.&#x27;, since that signifies
+    // the presence of a file extension.
+    glob(&#x27;**/*.*&#x27;, {
+      cwd: globDirectory,
+      nodir: true,
+      ignore: ignoredDirectories.map((directory) &#x3D;&gt; &#x60;**/${directory}/**&#x60;),
+    }, (error, files) &#x3D;&gt; {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(files);
+      }
+    });
+  });
+
+  const extensions &#x3D; new Set();
+  for (const file of files) {
+    const extension &#x3D; path.extname(file);
+    if (extension) {
+      // Get rid of the leading . character.
+      extensions.add(extension.replace(/^\./, &#x27;&#x27;));
+    }
+  }
+
+  return [...extensions];
+}
+
+/**
+ * @param {string} globDirectory The directory used for the root of globbing.
+ * @return {Promise&amp;lt;Object&gt;} The answers from inquirer.
+ */
+async function askQuestion(globDirectory) {
+  // We need to get a list of extensions corresponding to files in the directory
+  // to use when asking the next question. That could potentially take some
+  // time, so we show a spinner and explanatory text.
+  const spinner &#x3D; ora({
+    text: &#x60;Examining files in ${globDirectory}...&#x60;,
+    stream: process.stdout,
+  }).start();
+  const fileExtensions &#x3D; await getAllFileExtensions(globDirectory);
+  spinner.stop();
+
+  assert(fileExtensions.length &gt; 0, errors[&#x27;no-file-extensions-found&#x27;]);
+
+  return inquirer.prompt([{
+    name,
+    message: &#x27;Which file types would you like to precache?&#x27;,
+    type: &#x27;checkbox&#x27;,
+    choices: fileExtensions,
+    default: fileExtensions,
+  }]);
+}
+
+module.exports &#x3D; async (globDirectory) &#x3D;&gt; {
+  const answers &#x3D; await askQuestion(globDirectory);
+  const extensions &#x3D; answers[name];
+  assert(extensions.length &gt; 0, errors[&#x27;no-file-extensions-selected&#x27;]);
+
+  // glob isn&#x27;t happy with a single option inside of a {} group, so use a
+  // pattern without a {} group when there&#x27;s only one extension.
+  const extensionsPattern &#x3D; extensions.length &#x3D;&#x3D;&#x3D; 1 ?
+    extensions[0] :
+    &#x60;{${extensions.join(&#x27;,&#x27;)}}&#x60;;
+  return [&#x60;**/*.${extensionsPattern}&#x60;];
+};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2017-08-29 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -49,7 +49,7 @@ don’t forget to check if the user is already signed in:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -131,7 +131,7 @@ but fail to authenticate the user, you should show an error message:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -191,7 +191,7 @@ When `mediation` is `required`, the user is always shown an account chooser to s
 This option allows users with multiple accounts to easily switch between them.
 When `mediation` is `optional`,
 the user is explicitly shown an account chooser to sign in after a
-[`navigator.credentials.preventSilentAccess()`](web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
+[`navigator.credentials.preventSilentAccess()`](/web/fundamentals/security/credential-management/retrieve-credentials#turn_off_auto_sign-in_for_future_visits)
 call.
 This is normally to ensure automatic sign-in doesn't happen
 after the user chooses to sign-out or unregister.
@@ -204,7 +204,7 @@ Example showing `mediation: 'optional'`:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -246,7 +246,7 @@ You should fallback to a sign-in form for any of these reasons:
        navigator.credentials.get({
          password: true,
          federated: {
-           provider: [
+           providers: [
              'https://accounts.google.com'
            ]
          },
@@ -361,7 +361,7 @@ Then invoke
 to store the identity information.
 
 After successful federation,
-instantiate a `FederatedCredential` synchronously, or asychronously:
+instantiate a `FederatedCredential` synchronously, or asynchronously:
 
 Example of synchronous approach:
 

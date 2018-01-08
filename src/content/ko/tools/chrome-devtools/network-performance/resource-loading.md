@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools Network 패널을 사용하여 웹 애플리케이션의 네트워크 성능을 측정합니다.
 

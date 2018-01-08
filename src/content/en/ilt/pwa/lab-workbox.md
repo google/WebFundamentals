@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-08-15T17:45:20Z #}
+{# wf_updated_on: 2017-10-10 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,12 +21,13 @@ book_path: /web/ilt/pwa/_book.yaml
 
 [Workbox](https://workboxjs.org/) is the successor to  [`sw-precache`](https://github.com/GoogleChrome/sw-precache) and  [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox). It is a collection of libraries and tools used for generating a service worker, precaching, routing, and runtime-caching. Workbox also includes modules for easily integrating  [background sync](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-background-sync) and  [Google analytics](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics) into your service worker.
 
-See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we will practice using the main Workbox library, `workbox-sw`, as well as `workbox-build` to inject an array of static assets to precache into a service worker.
+See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox. In this lab, we use the main Workbox library, `workbox-sw`, and `workbox-build` to inject an array of static assets that you want to precache into a service worker.
 
 #### What you will learn
 
 * How to write a service worker using the `workbox-sw` library
 * How to add routes to your service worker using `workbox-sw`
+* How to use the predefined caching strategies provided in `workbox-sw`
 * How to inject a manifest into your service worker using `workbox-build` and the `workbox-webpack-plugin`
 
 #### What you should already know
@@ -53,7 +54,7 @@ See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an exp
 
 
 
-If you have not downloaded the repository, follow the instructions in [Setting up the labs](setting-up-the-labs). You don't need to start the server for this lab.
+If you have not already downloaded the repository, follow the instructions in [Setting up the labs](setting-up-the-labs). You don't need to start the server for this lab.
 
 If you have a text editor that lets you open a project, open the __workbox-lab/project__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __project__ folder is where you will be building the lab. 
 
@@ -117,7 +118,7 @@ Save the __service-worker.js __file. In the command line, run `gulp serve` to op
 
 Here we import the `workbox-sw` library and create an instance of `WorkboxSW` so we can access  [the library methods](https://workboxjs.org/reference-docs/latest/module-workbox-sw.WorkboxSW.html#main) from this object.
 
-In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). We will do that in the next step. 
+In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step. 
 
 The `precache` method takes care of precaching files, removing cached files no longer in the manifest, updating existing cached files, and it even sets up a fetch handler to respond to any requests for URLs in the manifest using a cache-first strategy. See  [this example](https://workboxjs.org/examples/workbox-sw/#explore-the-code) for a full explanation.
 
@@ -129,13 +130,15 @@ The `precache` method takes care of precaching files, removing cached files no l
 
 
 
-Install the  [`workbox-build`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html) module:
+This step uses gulp and `workbox-build` to build a service worker. 
+
+Start by installing the  [`workbox-build`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html) module:
 
 ```
 npm install --save workbox-build
 ```
 
-This module can be used to generate a list of assets that should be precached in a service worker. The list items are created with a hash that can be used to intelligently update a cache when the service worker is updated.
+This module is used to generate a list of assets that should be precached in a service worker. The list items are created with a hash that Workbox uses to intelligently update a cache when the service worker is updated.
 
 Next, add a line to include the workbox-build library at the top of __gulpfile.js__:
 
@@ -145,7 +148,7 @@ Next, add a line to include the workbox-build library at the top of __gulpfile.j
 const wbBuild = require('workbox-build');
 ```
 
-Now paste the following gulp task into the gulpfile:
+Now copy and paste the following gulp task into the gulpfile:
 
 #### gulpfile.js
 
@@ -180,13 +183,28 @@ gulp.task('default', ['clean'], cb => {
 });
 ```
 
-Save the file and run `gulp serve` in the command line (you can use `Ctrl-c` to terminate the previous `gulp serve` process). When the command finishes executing, open __build/service-worker.js__ and check that the manifest has been added to the `precache` method in the service worker.
+Save the file and run `gulp serve` in the command line (you can use `Ctrl-c` to terminate the previous `gulp serve` process). When the command finishes executing, open __build/service-worker.js__ and check that the manifest has been added to the `precache` method in the service worker. It should look like this:
+
+#### build/service-worker.js
+
+```
+workboxSW.precache([
+  {
+    "url": "index.html",
+    "revision": "ee7d4366f82a736863dc612c50d16e54"
+  },
+  {
+    "url": "css/main.css",
+    "revision": "3a78f101efdbf4c896cef53c323c7bb7"
+  }
+]);
+```
 
 When the app opens in the browser, make sure to close any other open instances of the app. [Update the service worker](tools-for-pwa-developers#update) and [check the cache](tools-for-pwa-developers#cache) in your browser's developer tools. You should see the __index.html__ and __main.css__ files are cached.
 
 #### Explanation
 
-In this step we installed the `workbox-build` module and wrote a gulp task that uses the module's  [`injectManifest`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html#.injectManifest) method. This method copies the source service worker file to the destination service worker file, will search the new service worker for an empty `precache()` call, like `.precache([])`, and replace the empty array with the array of assets defined in `staticFileGlobs`.
+In this step, we installed the `workbox-build` module and wrote a gulp task that uses the module's  [`injectManifest`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html#.injectManifest) method. This method copies the source service worker file to the destination service worker file, searches the new service worker for an empty `precache()` call, like `.precache([])`, and populates the empty array with the assets defined in `staticFileGlobs`.
 
 <div id="5"></div>
 
@@ -234,15 +252,15 @@ workboxSW.router.registerRoute(/\.(?:png|gif|jpg)$/,
 );
 ```
 
-Save the file. This should rebuild __build/service-worker.js__, restart the server automatically and refresh the page. [Update the service worker](tools-for-pwa-developers#update) and refresh the page a couple times so that the service worker intercepts some network requests. Check the caches to see that the `googleapis`, `iconfonts`, and `images-cache` all exist and contain the right assets. You may need to refresh the caches in developer tools to see the contents. Now you can take the app offline by either stopping the server or using [developer tools](tools-for-pwa-developers#offline). The app should work as normal!
+Save the file. Saving the file should trigger the gulp watch task which automatically rebuilds __build/service-worker.js__, restarts the server, and refreshes the page. [Update the service worker](tools-for-pwa-developers#update) and refresh the page a couple times so that the service worker intercepts some network requests. Check the caches to see that the `googleapis`, `iconfonts`, and `images-cache` all exist and contain the right assets. You may need to refresh the caches in developer tools to see the contents. Now you can take the app offline by either stopping the server or using [developer tools](tools-for-pwa-developers#offline). The app should work as normal!
 
 #### Explanation
 
 Here we add a few routes to the service worker using  [`registerRoute`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#registerRoute) method on the  [`router`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#main) class. `registerRoute` takes an Express-style or regular expression URL pattern, or a  [Route](https://workboxjs.org/reference-docs/latest/module-workbox-routing.Route.html#main) instance. The second argument is the handler that provides a response if the route matches. The handler argument is ignored if you pass in a Route object, otherwise it's required.
 
-In each route we are using the  [`strategies`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#main) class to access the  [`cacheFirst`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#cacheFirst) run-time caching strategy. The built-in caching strategies have several  [configuration options](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#.StrategyOptions) for controlling how resources are cached.
+Each route uses the  [`strategies`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#main) class to access the  [`cacheFirst`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#cacheFirst) run-time caching strategy. The built-in caching strategies have several  [configuration options](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#.StrategyOptions) for controlling how resources are cached.
 
-The domains in the first two routes are not  [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)-enabled so we must use the `cacheableResponse` option to allow responses with a status of `0` ( [opaque responses](https://jakearchibald.com/2015/thats-so-fetch/#no-cors-and-opaque-responses)). Otherwise, Workbox does not cache these responses if you're using the `cacheFirst` strategy. (Opaque responses are allowed when using `networkFirst` and `staleWhileRevalidate`, since even if an error response is cached, it will be replaced in the near future.)
+The domains in the first two routes are not  [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)-enabled so we must use the `cacheableResponse` option to allow responses with a status of `0` ( [opaque responses](https://jakearchibald.com/2015/thats-so-fetch/#no-cors-and-opaque-responses)). Otherwise, Workbox does not cache these responses if you're using the `cacheFirst` strategy. (Opaque responses are allowed when using `networkFirst` and `staleWhileRevalidate`, because even if an error response is cached, it will be replaced in the near future.)
 
 <div id="6"></div>
 

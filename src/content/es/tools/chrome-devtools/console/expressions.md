@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explora el estado de cualquier elemento en tu página desde la consola de DevTools.
 

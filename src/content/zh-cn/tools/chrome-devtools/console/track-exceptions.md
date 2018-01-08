@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:利用 Chrome DevTools 提供的工具，您可以修复引发异常的网页和在 JavaScript 中调试错误。
 

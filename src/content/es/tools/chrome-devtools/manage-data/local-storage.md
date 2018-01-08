@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspecciona y administra almacenamiento, bases de datos y memorias caché desde el panel Application.
 

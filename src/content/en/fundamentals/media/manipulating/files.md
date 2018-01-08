@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2017-08-22 #}
 {# wf_published_on: 2017-06-30 #}
 
 # From Raw Video to Web Ready {: .page-title }
@@ -144,7 +144,7 @@ command.
 A full discussion of audio and video formats is beyond the scope of this
 article, though in the next section I'll cover what you need for DASH and HLS.
 One thing to note is that the audio stream of an mp4 file is the [advanced audio
-coding]([https://en.wikipedia.org/wiki/Advanced_Audio_Coding) format for which
+coding](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) format for which
 m4a is a common file extension.
 
 Shaka Packager presents demuxing as though you're _extracting_ a stream into a
@@ -249,7 +249,8 @@ as well. For demonstration purposes, I'm going to target 3G.
 
 In ffmpeg you set the bitrate with the (surprise!) bitrate (`-b`) flag.
 
-    ffmpeg -i glocken.mov -b:v 350K -b:a 64K glocken.mp4
+    ffmpeg -i glocken.mov -b:v 350k glocken.mp4
+    ffmpeg -i glocken.mov -b:a 64k glocken.m4a
 
 Notice that there are two bitrate flags, `-b:a` and `-b:v`. One is for audio and the
 other is for video.
@@ -334,9 +335,9 @@ digits and does not allow a 32 digit key, both flags are the same length.
 ### Widevine Encryption
 
 Unless your company completes the Master License Agreement with
-[Widevine]([http://www.widevine.com/contact.html](http://www.widevine.com/contact.html))
-, this type of encryption can really only be used for testing. Since this is
-covered without much explanation on the Shaka Packager README here it goes.
+[Widevine](http://www.widevine.com/contact.html), this type of encryption
+can really only be used for testing. Since this is covered without much
+explanation on the Shaka Packager README here it goes.
 
 Everything in this command except the name of your files and the `--content_id`
 flag should be copied exactly from the example. The `--content_id` is 16 or 32

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent.
 
-{# wf_updated_on: 2015-12-08 #}
+{# wf_updated_on: 2017-09-22 #}
 {# wf_published_on: 2015-12-08 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/12/sync/emojoy.png #}
@@ -17,7 +17,7 @@ Background sync is a new web API that lets you defer actions until the user has 
 
 ## The problem
 
-The internet is a great place to waste time. Without wasting time on the internet, we wouldn’t know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "You do What They Told Ya" as sung by "Rage Against the Machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for, "Break the chicken nugget, daddy"</a>.
+The internet is a great place to waste time. Without wasting time on the internet, we wouldn’t know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, or that our very own <a href="https://twitter.com/ebidel/">Eric Bidelman</a> is <a href="https://youtu.be/SFa9mxPjXcg?t=3m3s">a putt putt golfing hero of the late 90s</a>.
 
 But sometimes, just sometimes, we’re not looking to waste time. The desired user experience is more like:
 

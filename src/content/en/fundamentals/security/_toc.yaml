@@ -1,5 +1,6 @@
 toc:
-  - title: Security and Identity
+  - title: Security
+    style: accordion
     section:
     - title: Overview
       path: /web/fundamentals/security/
@@ -9,21 +10,18 @@ toc:
       section:
       - title: Why HTTPS
         path: /web/fundamentals/security/encrypt-in-transit/why-https
+        step_group: security-https
       - title: Important Security Terminology
         path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+        step_group: security-https
       - title: Enabling HTTPS on Your Servers
         path: /web/fundamentals/security/encrypt-in-transit/enable-https
+        step_group: security-https
     - title: Preventing Mixed Content
       section:
       - title: What Is Mixed Content?
         path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+        step_group: security-mixed-content
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
-    - title: Credential Management API
-      section:
-      - title: Overview
-        path: /web/fundamentals/security/credential-management/
-      - title: Sign in Users
-        path: /web/fundamentals/security/credential-management/retrieve-credentials
-      - title: Save Credentials from Forms
-        path: /web/fundamentals/security/credential-management/save-forms
+        step_group: security-mixed-content

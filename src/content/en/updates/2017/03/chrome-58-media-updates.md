@@ -1,14 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media updates in Chrome 58.
+description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2017-03-24 #}
+{# wf_updated_on: 2017-10-17 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Media controls customization, Autoplay for Progressive Web Apps added to the home screen, pause the autoplaying of muted video when invisible, and color-gamut media query are there! #}
+{# wf_blink_components: Blink>Media #}
 
-# Media Updates in Chrome 58 {: .page-title }
+# Audio/Video Updates in Chrome 58 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -52,17 +53,20 @@ sample](https://googlechrome.github.io/samples/media/controlslist.html).
 Usage in HTML:
 
 <pre class="prettyprint lang-html">
-&lt;video controls <b>controlsList="nofullscreen nodownload noremote foobar"</b>>&lt;/video>
+&lt;video controls <b>controlsList="nofullscreen nodownload noremoteplayback"</b>>&lt;/video>
 </pre>
 
 Usage in JavaScript:
 
     var video = document.querySelector('video');
     video.controls; // true
-    video.controlsList; // "nofullscreen nodownload noremote" - "foobar" not present
-    video.controlsList.remove('noremote');
-    video.controlsList; // "nofullscreen nodownload" - "noremote" not present
+    video.controlsList; // ["nofullscreen", "nodownload", "noremoteplayback"]
+    video.controlsList.remove('noremoteplayback');
+    video.controlsList; // ["nofullscreen", "nodownload"]
     video.getAttribute('controlsList'); // "nofullscreen nodownload"
+
+    video.controlsList.supports('foo'); // false
+    video.controlsList.supports('noremoteplayback'); // true
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/tFuQd3AcsIQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5737006365671424) &#124;
@@ -215,7 +219,7 @@ Usage in JavaScript:
   document.querySelector('#srgb').innerHTML = 
       (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#p3').innerHTML =
-      (window.matchMedia("(color-gamut: p3)").matches) ? '&#x27014;' : '&#x274C;';
+      (window.matchMedia("(color-gamut: p3)").matches) ? '&#x2714;' : '&#x274C;';
   document.querySelector('#rec2020').innerHTML =
       (window.matchMedia("(color-gamut: rec2020)").matches) ? '&#x2714;' : '&#x274C;';
 </script>
@@ -230,6 +234,6 @@ Usage in JavaScript:
 [remoteplayback]: https://w3c.github.io/remote-playback/
 [ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
-[web app manifest]: /web/fundamentals/engage-and-retain/web-app-manifest/
+[web app manifest]: /web/fundamentals/web-app-manifest
 [Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
 [switch between encrypted and clear streams]: /web/updates/2017/03/mixing-streams

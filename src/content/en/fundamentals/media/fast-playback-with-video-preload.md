@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
@@ -331,8 +331,8 @@ Player], [JW Player], and [Video.js] are built to handle this for you.
 ### Considerations
 
 As you're now in control of the entire media buffering experience, I suggest you
-consider the device's battery level and the "Data-Saver Mode" user preference
-when thinking about preloading.
+consider the device's battery level, the "Data-Saver Mode" user preference and
+network information when thinking about preloading.
 
 #### Battery awareness
 
@@ -366,6 +366,25 @@ users.
 Learn more by reading our complete [Delivering Fast and Light
 Applications with Save-Data] article.
 
+#### Smart loading based on network information
+
+You may want to check `navigator.connection.type` prior to preloading. When
+it's set to `cellular`, you could prevent preloading and advise users that
+their mobile network operator might be charging for the bandwidth, and only start
+automatic playback of previously cached content.
+
+```
+if ('connection' in navigator) {
+  if (navigator.connection.type == 'cellular') {
+    // TODO: Prompt user before preloading video
+  } else {
+    // TODO: Preload the first segment of a video.
+  }
+}
+```
+
+Checkout the [Network Information sample] to learn how to react to network
+changes as well.
 
 ### Pre-cache multiple first segments
 
@@ -570,4 +589,5 @@ requests.
 [Video.js]: http://videojs.com/
 [Android bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=612909
 [Delivering Fast and Light Applications with Save-Data]: https://developers.google.com/web/updates/2016/02/save-data
+[Network Information sample]: https://googlechrome.github.io/samples/network-information/
 [in Chrome]: https://github.com/whatwg/fetch/issues/569

@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Application 面板检查、修改和调试网络应用清单、服务工作线程和服务工作线程缓存。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
 # 调试 Progressive Web App {: .page-title }
@@ -38,8 +38,8 @@ description:使用 Application 面板检查、修改和调试网络应用清单�
 
 相关指南：
 
-* [通过网络应用清单改进用户体验](/web/fundamentals/engage-and-retain/web-app-manifest)
-* [使用应用安装横幅](/web/fundamentals/engage-and-retain/app-install-banners)
+* [通过网络应用清单改进用户体验](/web/fundamentals/web-app-manifest)
+* [使用应用安装横幅](/web/fundamentals/app-install-banners)
 
 
 设置好清单后，您可以使用 **Application** 面板的 **Manifest** 窗格对其进行检查。
@@ -96,7 +96,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 相关指南：
 
 * [服务工作线程简介](/web/fundamentals/primers/service-worker)
-* [推送通知：及时、相关且精确](/web/fundamentals/engage-and-retain/push-notifications)
+* [推送通知：及时、相关且精确](/web/fundamentals/push-notifications)
 
 
 **Application** 面板中的 **Service Workers** 窗格是在 DevTools 中检查和调试服务工作线程的主要地方。
@@ -130,7 +130,7 @@ Console 会告诉您清单是否存在任何问题，并记录与 Add to Homescr
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## 服务工作线程缓存 {:#caches}

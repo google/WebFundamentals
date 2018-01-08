@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools の [Network] パネルを使って、ウェブ アプリケーションのネットワーク パフォーマンスを測定します。
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:进入全屏模式。
 
-{# wf_updated_on:2016-10-01 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-10-01 #}
 
 # 打造全屏体验 {: .page-title }
@@ -224,7 +224,7 @@ Chrome 团队近期实现的一项功能可在用户已将页面添加到主屏�
 
 #### 网络应用清单（Chrome、Opera、Firefox、Samsung）
 
-[网络应用清单](/web/fundamentals/engage-and-retain/web-app-manifest/)是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。未来，清单将让您对应用进行更多控制，但现在我们只侧重于如何启动应用。
+[网络应用清单](/web/fundamentals/web-app-manifest)是一个简单的 JSON 文件，使您（开发者）能够控制在用户可能看到应用的区域（例如手机主屏幕）中如何向用户显示应用，指示用户可以启动哪些功能，更重要的是说明启动方法。未来，清单将让您对应用进行更多控制，但现在我们只侧重于如何启动应用。
 
 具体而言：
 

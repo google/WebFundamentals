@@ -30,7 +30,7 @@ Native support for this method - and its player object - became widely available
 It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera, and is under [active development](https://birtles.github.io/areweanimatedyet/){: .external } for Firefox.
 This is a powerful primitive that deserves a place in your toolbox.
 
-> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](/web/fundamentals/design-and-ui/animations/).
+> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](/web/fundamentals/design-and-ux/animations/).
 
 ## Codelabs
 

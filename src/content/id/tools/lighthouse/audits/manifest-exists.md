@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk "Manifest Exists" audit Lighthouse.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-20 #}
 
 # Manifest Exists  {: .page-title }
@@ -21,7 +21,7 @@ Layar Utama Pengguna](https://codelabs.developers.google.com/codelabs/add-to-hom
 
 Untuk panduan terstruktur-bebas yang membahas lebih mendalam tentang Manifes
 Aplikasi Web, lihat [Meningkatkan Pengalaman Pengguna dengan Manifes
-Aplikasi Web](/web/fundamentals/engage-and-retain/web-app-manifest).
+Aplikasi Web](/web/fundamentals/web-app-manifest).
 
 Gunakan apa yang Anda pelajari dalam panduan ini untuk menambahkan dukungan A2HS dalam
 aplikasi web Anda sendiri.

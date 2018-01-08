@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Esta seção descreve termos comuns usados na análise de memória e aplica-se a diversas ferramentas de criação de perfis de memória para diferentes idiomas.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '뷰포트 메타 태그가 있는 HTML' Lighthouse 감사의 참조 문서입니다.
 
@@ -15,7 +15,7 @@ description: '뷰포트 메타 태그가 있는 HTML' Lighthouse 감사의 참�
 자세한 내용은 다음 링크를 참조하세요.
 
 * [뷰포트 구성](/speed/docs/insights/ConfigureViewport)
-* [뷰포트 설정](/web/fundamentals/design-and-ui/responsive/#set-the-viewport)
+* [뷰포트 설정](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)
 
 ## 감사를 통과하는 방법 {: #how }
 

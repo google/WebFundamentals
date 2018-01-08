@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome의 Device Mode에서 가상 기기를 사용하여 모바일 우선 웹사이트를 빌드할 수 있습니다.
 

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 타임라인 이벤트 모드는 기록을 작성하는 동안 트리거된 모든 이벤트를 표시합니다. 타임라인 이벤트 참조를 이용하여 각 타임라인 이벤트 유형에 대해 자세히 알아봅니다.
 

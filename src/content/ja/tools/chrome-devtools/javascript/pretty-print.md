@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: JavaScript を読みやすい形式に変換するには、Chrome DevTools で [Pretty-Print] アイコンをクリックします。
 

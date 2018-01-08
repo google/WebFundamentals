@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:このインタラクティブなガイドに従って、レイアウトの強制同期の診断に DevTools を使う方法を習得します。
 

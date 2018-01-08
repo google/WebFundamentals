@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: アプリケーション実行中のすべてのアクティビティを記録して分析するには、Chrome DevTools の [Timeline] パネルを使います。アプリケーションで感じたパフォーマンスの問題の調査を開始する場合は、このパネルが適しています。
 

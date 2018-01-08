@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: En esta sección se describen términos comunes que se usan en el análisis de memoria y que se pueden aplicar a una variedad de herramientas de generación de perfiles de memoria para diferentes idiomas.
 

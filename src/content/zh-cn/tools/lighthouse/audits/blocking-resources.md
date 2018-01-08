@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站不使用延迟首次绘制的链接标记”与“网站在标头中不使用延迟首次绘制的脚本标记”Lighthouse 审查的参考文档。
 

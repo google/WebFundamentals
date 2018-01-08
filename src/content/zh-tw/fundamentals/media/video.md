@@ -75,7 +75,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 對於行動環境來說，上述的所有要點更是重要，因為這類環境極度重視頻寬和延遲，而且使用者的耐心十分有限。
 如果未納入類型屬性，當多個來源具有不支援的類型時，效能就可能大受影響。
 
-請使用行動瀏覽器開發人員工具，比較<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">具有類型屬性</a>的網路活動和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/notype.html">沒有類型屬性</a>的網路活動。
+請使用行動瀏覽器開發人員工具，比較<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">具有類型屬性</a>的網路活動和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/notype.html">沒有類型屬性</a>的網路活動。
 同時，請檢查瀏覽器開發人員工具中的回應標題，以[確認伺服器回報了正確的 MIME 類型](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)；否則，影片來源類型檢查將無法正常運作。
 
 ### 指定開始和結束時間
@@ -228,7 +228,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 很簡單，只要在 JavaScript 中使用影片的 `currentSrc` 屬性，即可傳回瀏覽器所採用的來源資訊。
 
-如要瞭解這項操作的實際情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html">這部示範影片</a>：Chrome 和 Firefox 會選擇 `chrome.webm` (因為這是上述瀏覽器的潛在來源支援清單中的第一個選項)，而 Safari 則會選擇 `chrome.mp4`。
+如要瞭解這項操作的實際情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/video-main.html">這部示範影片</a>：Chrome 和 Firefox 會選擇 `chrome.webm` (因為這是上述瀏覽器的潛在來源支援清單中的第一個選項)，而 Safari 則會選擇 `chrome.mp4`。
 
 
 ## 正確設定影片大小 
@@ -297,7 +297,7 @@ Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。�
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-請嘗試比較<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html">回應式示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/unyt.html">非回應式版本</a>有何不同。
+請嘗試比較<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/responsive_embed.html">回應式示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/unyt.html">非回應式版本</a>有何不同。
 
 
 ## 自訂影片播放器 
@@ -388,7 +388,7 @@ iPad 版 Safari 以內嵌模式播放影片：
      <p>這個瀏覽器不支援影片元素。</p>
 </video>
 
-如要瞭解這項操作的實際運作情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/fullscreen.html">示範</a>。
+如要瞭解這項操作的實際運作情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html">示範</a>。
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -582,7 +582,7 @@ video 元素各項屬性的快速概覽。
   </tbody>
 </table>
 
-playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">觀看示範</a>) 和 volume 都無法在行動裝置上使用。
+playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">觀看示範</a>) 和 volume 都無法在行動裝置上使用。
 
 #### 方法
 
@@ -612,7 +612,7 @@ playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/fundamen
 </table>
 
 在行動裝置上 (Android 版 Opera 除外)，
-除非因為回應使用者操作(例如點擊按鈕) 而呼叫 play() 和 pause()，否則這兩種方法無法運作：請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/scripted.html">示範影片</a> (同樣地，您也無法對嵌入式 YouTube 影片等內容執行開始播放的操作)。
+除非因為回應使用者操作(例如點擊按鈕) 而呼叫 play() 和 pause()，否則這兩種方法無法運作：請觀看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/scripted.html">示範影片</a> (同樣地，您也無法對嵌入式 YouTube 影片等內容執行開始播放的操作)。
 
 #### 事件
 

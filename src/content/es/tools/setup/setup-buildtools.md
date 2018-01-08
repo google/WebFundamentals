@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Crea tu sitio para varios dispositivos desde cero. Obtén información sobre cómo acelerar el desarrollo y crear un sitio de carga rápida con un conjunto de herramientas de proceso de compilación.
 

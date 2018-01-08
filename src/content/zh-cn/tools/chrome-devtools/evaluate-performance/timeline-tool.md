@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools 的 Timeline 面板可以记录和分析您的应用在运行时的所有活动。这里是开始调查应用中可觉察性能问题的最佳位置。
 

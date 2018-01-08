@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use a ferramenta do criador de perfil de alocação para encontrar objetos que não foram coletados da lixeira corretamente e continuam retendo memória.
 

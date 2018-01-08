@@ -1,37 +1,37 @@
 toc:
-  - title: Accessibility
+- title: Accessibility
+  section:
+  - title: Overview
+    path: /web/fundamentals/accessibility/
+  - title: Focus
     section:
-    - title: Overview
-      path: /web/fundamentals/accessibility/
-    - title: Focus
-      section:
-      - title: Introduction to Focus
-        path: /web/fundamentals/accessibility/focus/
-      - title: DOM Order Matters
-        path: /web/fundamentals/accessibility/focus/dom-order-matters
-      - title: Using tabindex
-        path: /web/fundamentals/accessibility/focus/using-tabindex
-    - title: Semantics Built-in
-      section:
-      - title: Introduction to Semantics
-        path: /web/fundamentals/accessibility/semantics-builtin/
-      - title: The Accessibility Tree
-        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
-      - title: Text Alternatives for Images
-        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
-      - title: Navigating Content
-        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
-    - title: Semantics and ARIA
-      section:
-      - title: Introduction to ARIA
-        path: /web/fundamentals/accessibility/semantics-aria/
-      - title: ARIA Labels and Relationships
-        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
-      - title: Hiding and Updating Content
-        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
-    - title: Accessible Styles
-      path: /web/fundamentals/accessibility/accessible-styles
-    - title: How To Do an Accessibility Review
-      path: /web/fundamentals/accessibility/how-to-review
-    - title: Accessibility for Teams
-      path: /web/fundamentals/accessibility/a11y-for-teams
+    - title: Introduction to Focus
+      path: /web/fundamentals/accessibility/focus/
+    - title: DOM Order Matters
+      path: /web/fundamentals/accessibility/focus/dom-order-matters
+    - title: Using tabindex
+      path: /web/fundamentals/accessibility/focus/using-tabindex
+  - title: Semantics Built-in
+    section:
+    - title: Introduction to Semantics
+      path: /web/fundamentals/accessibility/semantics-builtin/
+    - title: The Accessibility Tree
+      path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+    - title: Text Alternatives for Images
+      path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
+    - title: Navigating Content
+      path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
+  - title: Semantics and ARIA
+    section:
+    - title: Introduction to ARIA
+      path: /web/fundamentals/accessibility/semantics-aria/
+    - title: ARIA Labels and Relationships
+      path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+    - title: Hiding and Updating Content
+      path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
+  - title: Accessible Styles
+    path: /web/fundamentals/accessibility/accessible-styles
+  - title: How To Do an Accessibility Review
+    path: /web/fundamentals/accessibility/how-to-review
+  - title: Accessibility for Teams
+    path: /web/fundamentals/accessibility/a11y-for-teams

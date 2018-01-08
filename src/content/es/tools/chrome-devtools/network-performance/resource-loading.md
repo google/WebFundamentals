@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Mide el rendimiento de la red de tu app web por medio del panel de red Chrome DevTools.
 

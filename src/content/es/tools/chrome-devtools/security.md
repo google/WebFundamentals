@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Usa el panel Security para asegurarte de que todos los recursos de tu sitio estén protegidos con HTTPS.
 

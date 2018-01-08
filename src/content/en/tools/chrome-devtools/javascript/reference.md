@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
 

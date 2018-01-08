@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: '매니페스트의 존재' Lighthouse 감사의 참조 문서입니다.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-20 #}
 
 # 매니페스트의 존재  {: .page-title }
@@ -21,7 +21,7 @@ description: '매니페스트의 존재' Lighthouse 감사의 참조 문서입�
 
 웹 앱 매니페스트에 대해 심층적으로 다루는, 좀 더 느슨한 구조의 가이드는
 [웹 앱 매니페스트로 사용자 환경
-개선](/web/fundamentals/engage-and-retain/web-app-manifest)을 참조하세요.
+개선](/web/fundamentals/web-app-manifest)을 참조하세요.
 
 이 가이드에서 배운 내용을 활용하여 웹 앱에서 A2HS 지원을 추가해보세요.
 

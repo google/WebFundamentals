@@ -1,14 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the media updates in Chrome 61.
+description: A round up of the audio/video updates in Chrome 61.
 
-{# wf_updated_on: 2017-07-28 #}
+{# wf_updated_on: 2017-09-12 #}
 {# wf_published_on: 2017-07-28 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 {# wf_featured_snippet: Background video track optimizations and automatic video fullscreen when device is rotated are here! #}
+{# wf_blink_components: Blink>Media #}
 
-# Media Updates in Chrome 61 {: .page-title }
+# Audio/Video Updates in Chrome 61 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -17,6 +18,8 @@ description: A round up of the media updates in Chrome 61.
 - Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
+
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/752726](http://crbug.com/752726).
 
 To improve battery life, Chrome now disables video tracks when the video is
 played in the background if the video uses [Media Source Extensions (MSE)].
@@ -67,6 +70,8 @@ And here are some restrictions:
 
 ## Automatic video fullscreen when device is rotated {: #auto-fullscreen-rotate }
 
+Warning: This feature has been delayed until Chrome 62. See [http://crbug.com/713233](https://bugs.chromium.org/p/chromium/issues/detail?id=713233#c30).
+
 If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
 portrait puts the video back to windowed mode.
@@ -95,7 +100,7 @@ This magic behaviour only happens when:
 
 {% include "comment-widget.html" %}
 
-[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/seamless-playback
+[Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression
 [Mobile Web Video Playback]: /web/fundamentals/media/mobile-web-video-playback#fullscreen

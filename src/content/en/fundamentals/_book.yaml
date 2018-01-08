@@ -1,28 +1,34 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 upper_tabs:
   - name: Fundamentals
     heading: Web Fundamentals
     path: /web/fundamentals/
     lower_tabs:
       other:
-      - name: Fundamentals
+      - name: Guides
         contents:
-        - title: Home
+        - title: Overview
           path: /web/fundamentals/
-        - include: /web/fundamentals/getting-started/_toc.yaml
-        - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/architecture/_toc.yaml
-        - include: /web/fundamentals/instant-and-offline/_toc.yaml
+        - include: /web/fundamentals/design-and-ux/_toc.yaml
+        - include: /web/fundamentals/integration/_toc.yaml
+        - title: Media & VR
+          style: accordion
+          section:
+          - include: /web/fundamentals/media/_toc.yaml
+          - include: /web/fundamentals/vr/_toc.yaml
+        - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
-        - include: /web/fundamentals/design-and-ui/_toc.yaml
-        - include: /web/fundamentals/engage-and-retain/_toc.yaml
-        - include: /web/fundamentals/discovery-and-monetization/_toc.yaml
-        - include: /web/fundamentals/native-hardware/_toc.yaml
-        - include: /web/fundamentals/accessibility/_toc.yaml
-        - include: /web/fundamentals/media/_toc.yaml
-        - include: /web/fundamentals/vr/_toc.yaml
+        - include: /web/fundamentals/_toc-base.yaml
+        - break: True
         - title: Glossary
           path: /web/fundamentals/glossary
+      - name: Code Labs
+        contents:
+        - include: /web/fundamentals/codelabs/_toc.yaml
+      - name: Samples
+        contents:
+        - title: Samples
+          path: https://www.chromestatus.com/samples
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml

@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 61.
 
-{# wf_updated_on: 2017-07-10 #}
+{# wf_updated_on: 2017-10-02 #}
 {# wf_published_on: 2017-07-10 #}
-{# wf_tags: chrome61,devtools #}
+{# wf_tags: chrome61,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 61. #}
 
@@ -30,6 +30,15 @@ New features and major changes coming to DevTools in Chrome 61 include:
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
+
+Check out the video version of these release notes below or read on to learn
+more.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Lscb4SL58X4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Simulate low-end and mid-tier mobile devices in Device Mode {: #throttling }
 
@@ -58,7 +67,7 @@ you simulate a low-end or mid-tier mobile device with a couple of clicks.
 
 The new **Usage** section in the **Clear Storage** tab of the **Application**
 panel shows you how much storage an [origin][origin] is using, as well as the
-maximum quota for the entire device.
+maximum quota for the origin on this device.
 
 [origin]: https://tools.ietf.org/html/rfc6454#section-3.2
 
@@ -67,7 +76,7 @@ maximum quota for the entire device.
        alt="The Usage section"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Usage</b> section shows that
-    <code>https://airhorner.com</code> is using 66.9KB out of the device's
+    <code>https://airhorner.com</code> is using 66.9KB out of the origin's
     quota of 15214MB
   </figcaption>
 </figure>

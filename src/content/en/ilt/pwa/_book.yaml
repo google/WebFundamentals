@@ -81,6 +81,10 @@ upper_tabs:
             path: /web/ilt/pwa/workbox-slides
           - title: Lab
             path: /web/ilt/pwa/lab-workbox
+        - title: Migrating to Workbox
+          section:
+          - title: Lab
+            path: /web/ilt/pwa/lab-migrating-to-workbox-from-sw-precache-and-sw-toolbox
         - title: Responsive Design
           section:
           - title: Slides & Video

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools의 Device Mode를 사용하면 개발 사이트가 제작을 마친 뒤 다양한 기기에서 어떻게 보일지 흉내 낼 수 있습니다.
 
@@ -175,7 +175,7 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
  규칙
 
-* 이미지의 [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup)
+* 이미지의 [srcset](/web/fundamentals/design-and-ux/media/images/images-in-markup)
  속성
 
 * `window.devicePixelRatio` 속성
@@ -188,7 +188,7 @@ Nexus 6P와 같이 Retina 디스플레이가 탑재된 기기의 경우, 일반 
 
 ### 미디어 쿼리 {: #media-queries }
 
-[미디어 쿼리](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)는
+[미디어 쿼리](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)는
 응답형 웹 디자인의 필수적인 부분입니다. 미디어 쿼리 검사기를 보려면
 세 점 메뉴에서 **Show Media queries**를 클릭하세요. DevTools는 스타일시트의 미디어
 쿼리를 감지하여 이를 상단의 눈금자에 컬러 막대로 표시합니다.

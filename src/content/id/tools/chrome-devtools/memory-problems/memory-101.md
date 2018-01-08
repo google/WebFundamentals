@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Bagian ini menjelaskan istilah utama yang digunakan dalam analisis memori dan berlaku untuk berbagai alat pembuat profil memori untuk bahasa yang berbeda.
 

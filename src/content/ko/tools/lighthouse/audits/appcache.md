@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'Application Cache를 사용하지 않는 사이트' Lighthouse 감사의 참조 문서입니다.
 
