@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2017-12-27 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -1654,7 +1654,7 @@ has an available payment method set-up (i.e. will the payment request UI have a
 preselected payment method or not).
 
 The `canMakePayment()` method tells you whether the user has a payment method that
-fulfils the current `PaymentRequest`'s supported payment methods.
+fulfills the current `PaymentRequest`'s supported payment methods.
 
 ```
 const paymentRequest = new PaymentRequest(

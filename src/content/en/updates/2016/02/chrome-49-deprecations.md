@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and API removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-07-28 #}
+{# wf_blink_components: Internals>WebRTC #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: deprecations,removals,chrome49 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}

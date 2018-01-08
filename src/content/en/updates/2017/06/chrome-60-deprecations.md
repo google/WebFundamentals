@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 60 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_blink_components: Blink>WebCrypto,Blink>CSS,Blink>WebRTC>PeerConnection,Blink>SVG,Blink>Storage>IndexedDB,UI>Browser #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_tags: deprecations,removals,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}

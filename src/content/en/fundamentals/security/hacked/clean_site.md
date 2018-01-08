@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -184,7 +184,7 @@ First, check that this backup was created **before** your site was hacked.
     * If you don’t have a disk image, make two backups of the database and
       two backups of the filesystem.
 
-2. Clean the site’s content on the new backup filesytem copy (not the server
+2. Clean the site’s content on the new backup filesystem copy (not the server
    itself)
     1. If your earlier investigation found too lenient file permissions, go
        ahead and correct them. Make sure you do this on the backup copy,

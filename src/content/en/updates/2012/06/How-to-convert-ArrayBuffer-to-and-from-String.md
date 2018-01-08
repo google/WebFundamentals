@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How to convert ArrayBuffer to and from String
 
-{# wf_updated_on: 2017-08-07 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2012-06-14 #}
 {# wf_tags: news,performance,arraybuffer #}
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-12-19 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -516,7 +516,7 @@ post on using Headless with api.ai.
 **Do I need the `--disable-gpu` flag?**
 
 Only on Windows. Other platforms no longer require it. The `--disable-gpu` flag is a
-temporary workd around for a few bugs. You won't need this flag in future versions of
+temporary work around for a few bugs. You won't need this flag in future versions of
 Chrome. See [crbug.com/737678](https://bugs.chromium.org/p/chromium/issues/detail?id=737678)
 for more information.
 
