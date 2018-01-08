@@ -11,7 +11,7 @@ description:使用 Chrome 的 Device Mode 下的虛擬設備打造移動設備�
 
 使用 Chrome DevTools 的 Device Mode 打造移動設備優先的完全自適應式網站。瞭解如何使用 Device Mode 模擬多種設備及其功能。
 
-警告：Device Mode 可以讓您瞭解您的網站在移動設備上的大致顯示效果，但要獲得全面的瞭解，則應始終在真實設備上測試您的網站。DevTools 無法模擬移動設備的性能特性。
+Warning: Device Mode 可以讓您瞭解您的網站在移動設備上的大致顯示效果，但要獲得全面的瞭解，則應始終在真實設備上測試您的網站。DevTools 無法模擬移動設備的性能特性。
 
 
 

@@ -7,7 +7,7 @@ description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體
 
 # WebVR 狀態和注意事項 {: .page-title }
 
-警告：WebVR 仍處於實驗階段，並且隨時可能更改。
+Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 ## WebVR 實現狀態
 

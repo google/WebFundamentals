@@ -48,7 +48,7 @@ DOM 元素可继承下列任何状态：default、focus、hover 和 active。
 请认真考虑所设置的样式以及用户完成触摸后会看到的外观。
 
 
-注：定位标记和按钮在不同浏览器中可能有不同的行为，因此可以假定在某些情况下保持 **hover** 状态，在其他情况下保持 **focus** 状态。
+Note: 定位标记和按钮在不同浏览器中可能有不同的行为，因此可以假定在某些情况下保持 **hover** 状态，在其他情况下保持 **focus** 状态。
 
 
 
@@ -95,7 +95,7 @@ Firefox 有两个副作用需要处理。
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/states-example.html){: target="_blank" .external }
 
-注意：请仅在有对应 `:hover`、`:active` 和 `:focus` 的伪类时禁止上面提到的默认样式！
+Note: 请仅在有对应 `:hover`、`:active` 和 `:focus` 的伪类时禁止上面提到的默认样式！
 
 
 ### 停用用户选择
@@ -128,7 +128,7 @@ Firefox 有两个副作用需要处理。
 
 
 
-注意：别忘了，一些用户需要键盘输入，并且在触摸屏设备上运行辅助技术的用户可能因手势被辅助技术拦截/使用而无法执行手势。
+Note: 别忘了，一些用户需要键盘输入，并且在触摸屏设备上运行辅助技术的用户可能因手势被辅助技术拦截/使用而无法执行手势。
 
 
 
@@ -189,7 +189,7 @@ Firefox 有两个副作用需要处理。
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/touch/touch-demo-1.html){: target="_blank" .external }
 
-注：由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown` 事件便可同时处理鼠标和触摸事件。
+Note: 由于 API 采用了特殊设计，PointerEvents 只需单个 `pointerdown` 事件便可同时处理鼠标和触摸事件。
 
 
 #### 处理单元素交互

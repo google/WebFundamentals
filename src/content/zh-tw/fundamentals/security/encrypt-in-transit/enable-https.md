@@ -138,7 +138,7 @@ www.example.com.csr
 可能會發現要在您伺服器上啟用 HTTPS 時，萬用字元憑證較為方便。)
 
 
-**注意：** 請記住，在萬用字元憑證中，
+Note: 請記住，在萬用字元憑證中，
 萬用字元僅適用於 1 個 DNS 標籤 (label)。適用於 \*.example.com 範圍內的憑證，
 將適用於 forfoo.example.com 和 bar.example.com，但_不_適用於 foo.bar.example.com。
 
@@ -190,12 +190,12 @@ Configuration
 如果您有很多的主機名稱/子網域，
 它們每一個都會需要使用正確的憑證。
 
-**注意：** 許多網站營運者已經完成了我們討論過的步驟，
+Note: 許多網站營運者已經完成了我們討論過的步驟，
 但使用 HTTPS 時只是為了是將用戶端重新導向回 HTTP 的唯一目的。 如果這是您的情況，
 請停止這麼做。 請見下一章節，
 以確保 HTTPS 和 HTTP 能順利運作。
 
-**注意：** 您最終應該將 HTTP 要求重新導向至 HTTPS，
+Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 並使用 HTTP Strict Transport Security (HSTS)。 這麼做並不是遷移程序中的正確階段；
 請見「重新導向 HTTP 至 HTTPS」及「開啟 Strict Transport Security 與 Secure Cookies」。
 
@@ -271,7 +271,7 @@ Configuration
 協定相對 (缺少通訊協定，以 //example.com 開頭) 或主機相對 (/jquery.js 一樣僅以路徑起頭)。
 
 
-**注意：** 請以指令碼為之，而非手動。 如果您的網站內容是在資料庫中，
+Note: 請以指令碼為之，而非手動。 如果您的網站內容是在資料庫中，
 您應該將指令碼在資料庫的開發副本上測試。
  如果您的網站內容是在簡單的純檔案中，
 在這些檔案的開發副本上測試您的指令碼。 像平常一樣，只有在變更通過 QA 時，
@@ -279,11 +279,11 @@ Configuration
 的指令碼](https://github.com/bramus/mixed-content-scan){: .external} 或類似的東西，以偵測您網站中的混合內容。
 
 
-**注意：** 當連結至其他網站時 (而非包含其資源)，請不要改變通訊協定，
+Note: 當連結至其他網站時 (而非包含其資源)，請不要改變通訊協定，
 因為您無法控制這些網站的運作方式。
 
 
-**注意：** 我推薦使用通訊協定相對的 URL，
+Note: 我推薦使用通訊協定相對的 URL，
 使大型網站的移轉更順暢。 如果您不確定您能夠完全部署 HTTPS，
 若強迫您網站針對所有子資源使用 HTTPS，可能會適得其反。 可能會有一段時間，HTTPS 對你而言是個新奇古怪的技術，
 但 HTTP 網站仍必須維持運作。
@@ -430,7 +430,7 @@ Google 也發行一份指南，教導
 因為各大搜尋引擎正在移轉至 HTTPS，當您移轉到 HTTPS 時，
 有可能會看到比現在 _更多的_ 參照者標頭。
 
-<blockquote>如果參照頁面是以安全通訊協定傳輸，用戶端不應該在 (非安全) HTTP 要求中包含一參照者標頭欄位。<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">根據 HTTP RFC</a></p></blockquote>
+Caution: 如果參照頁面是以安全通訊協定傳輸，用戶端**不應該**在 (非安全) HTTP 要求中包含一參照者標頭欄位。[根據 HTTP RFC](https://tools.ietf.org/html/rfc2616#section-15.1.3)
 
 ### 廣告營收
 

@@ -28,7 +28,7 @@ App“shell”是支持用戶界面所需的最小的 HTML、CSS 和 JavaScript�
 
 
 
-注：請嘗試[第一個 Progressive Web App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0) 代碼實驗室，瞭解如何爲天氣應用構建和實現第一個 App Shell。[使用 App Shell 模型即時加載](https://www.youtube.com/watch?v=QhUzmR8eZAo)視頻也演練了這種模式。
+Note: 請嘗試[第一個 Progressive Web App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0) 代碼實驗室，瞭解如何爲天氣應用構建和實現第一個 App Shell。[使用 App Shell 模型即時加載](https://www.youtube.com/watch?v=QhUzmR8eZAo)視頻也演練了這種模式。
 
 
 
@@ -84,7 +84,7 @@ App Shell 可保證 UI 的本地化以及從 API 動態加載內容，但同時�
 
 
 
-注：[Lighthouse](https://github.com/googlechrome/lighthouse) 審覈擴展可用於驗證使用 App Shell 的 PWA 是否獲得了高性能。[To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E) 介紹了使用這個工具優化 PWA 的過程。
+Note: [Lighthouse](https://github.com/googlechrome/lighthouse) 審覈擴展可用於驗證使用 App Shell 的 PWA 是否獲得了高性能。[To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E) 介紹了使用這個工具優化 PWA 的過程。
 
 
 
@@ -175,7 +175,7 @@ App Shell 可保證 UI 的本地化以及從 API 動態加載內容，但同時�
 <div class="clearfix"></div>
 
 
-注：請參閱 [https://app-shell.appspot.com/](https://app-shell.appspot.com/)，查看一個非常簡單的、使用 App Shell 和內容服務器端渲染的 PWA 的真實演示。App Shell 可通過使用任意內容庫或框架實現（如我們的<a
+Note: 請參閱 [https://app-shell.appspot.com/](https://app-shell.appspot.com/)，查看一個非常簡單的、使用 App Shell 和內容服務器端渲染的 PWA 的真實演示。App Shell 可通過使用任意內容庫或框架實現（如我們的<a
 href="https://www.youtube.com/watch?v=srdKq0DckXQ">所有框架上的 Progressive Web App</a> 講座中所述）。您可以使用 Polymer (<a
 href="https://shop.polymer-project.org">Shop</a>) 和 React （<a
 href="https://github.com/insin/react-hn">ReactHN</a>、<a
@@ -189,7 +189,7 @@ href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iF
 
 
 
-注：這些示例僅爲呈現一般信息以及進行說明而提供。
+Note: 這些示例僅爲呈現一般信息以及進行說明而提供。
 您的應用使用的實際資源很可能不同。
 
 
@@ -245,7 +245,7 @@ sw-precache 生成的服務工作線程會緩存並提供您在構建過程中�
 
 
 
-注：sw-precache 對於離線緩存您的靜態資源非常有用。對於運行時/動態資源，我們建議使用我們的免費內容庫 [sw-toolbox](https://github.com/googlechrome/sw-toolbox)。
+Note: sw-precache 對於離線緩存您的靜態資源非常有用。對於運行時/動態資源，我們建議使用我們的免費內容庫 [sw-toolbox](https://github.com/googlechrome/sw-toolbox)。
 
 
 

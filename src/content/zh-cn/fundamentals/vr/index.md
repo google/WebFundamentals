@@ -7,7 +7,7 @@ description:WebVR
 
 # WebVR {: .page-title }
 
-警告：WebVR 仍处于实验阶段，并且随时可能更改。
+Warning: WebVR 仍处于实验阶段，并且随时可能更改。
 
 WebVR 是一个 JavaScript API，其利用用户拥有的任意 VR 耳机和 VR 设备（如 [Daydream 耳机](https://vr.google.com/daydream/)和 Pixel 手机）在浏览器中营造身临其境的 3D 体验。
 
