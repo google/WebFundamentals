@@ -658,6 +658,21 @@ ilmariheikkinen:
   role:
     - author
 
+patrickhulce:
+  name:
+    given: Patrick
+    family: Hulce
+  org:
+    name: Google
+    unit: Chrome DevTools
+  country: US
+  role:
+    - author
+  description:
+    en: Performance Poet
+  github: patrickhulce
+  twitter: patrickhulce
+
 paulirish:
   name:
     given: Paul
