@@ -3,19 +3,19 @@ book_path: /web/fundamentals/_book.yaml
 description: Precaricare video e audio per una riproduzione più veloce.
 
 {# wf_published_on: 2017-08-17 #}
-{# wf_updated_on: 2017-12-18 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_blink_components: Blink>Media #}
 
-# Riproduzione veloce con video preload {: .page-title}
+# Riproduzione veloce con il precaricamento dei video {: .page-title}
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 Un avvio più veloce della riproduzione significa che più persone possono
-guardare il tuo video. Questo è un fatto noto. In questo articolo esaminerò le
+guardare un video. È un fatto noto. In questo articolo esaminerò le
 tecniche che è possibile utilizzare per accelerare la riproduzione multimediale
 attivando il pre-caricamento delle risorse in relazione al caso d'uso.
 
-Note: questo articolo si applica anche all'elemento audio se non diversamente
+Note: questo articolo si applica anche all'elemento audio, se non diversamente
 specificato.
 
 <figure>
@@ -86,15 +86,15 @@ senza bloccare l'evento <code>onload</code> del documento.</td>
 
 Se la sorgente video è un file univoco ospitato su un server web potresti voler
 utilizzare l'attributo video `preload` per fornire un suggerimento al browser
-sulla [quantità di informazioni o contenuto da
+sulla [quantità di informazioni o contenuti da
 precaricare](/web/fundamentals/media/video#preload) . Ciò significa che [Media
 Source Extensions (MSE)](/web/fundamentals/media/mse/basics) non è compatibile
-con  `preload`.
+con `preload`.
 
 Il recupero delle risorse inizierà solo quando il documento HTML iniziale è
 stato completamente caricato ed analizzato (ad esempio l'evento
-`DOMContentLoaded` è stato attivato) mentre diversamente l'evento
-`window.onload` verrà attivato quando la risorsa è stata effettivamente
+`DOMContentLoaded` è stato attivato) a differenza dell'evento
+`window.onload` che sarà attivato quando la risorsa viene effettivamente
 recuperata.
 
 <figure>
@@ -102,7 +102,7 @@ recuperata.
 </figure>
 
 L'impostazione dell'attributo `preload` sui `metadata` indica che non è previsto
-che l'utente abbia bisogno del video, ma è desiderabile recuperarne i metadati
+che l'utente abbia bisogno del video, ma si consiglia di recuperare i metadati
 (dimensioni, elenco di brani, durata e così via).
 
 ```
@@ -135,12 +135,12 @@ riproduzione senza richiedere arresti per ulteriore buffering.
 </script>
 ```
 
-Ci sono alcuni avvertimenti però. Poiché questo è solo un suggerimento, il
+Bisogna fare attenzione però, perché questo è solo un suggerimento e il
 browser potrebbe ignorare completamente l'attributo `preload`. Al momento della
 stesura ecco alcune regole applicate da Chrome:
 
 - Quando [Data Saver](https://support.google.com/chrome/answer/2392284) è
-abilitato Chrome impone il valore di `preload` su `none` .
+abilitato, Chrome impone il valore di `preload` su `none` .
 - In Android 4.3 Chrome impone il valore di `preload` a `none` causa di un [bug
 di Android](https://bugs.chromium.org/p/chromium/issues/detail?id=612909) .
 - Su una connessione cellulare (2G, 3G e 4G) Chrome impone il valore `preload` a
@@ -149,25 +149,25 @@ di Android](https://bugs.chromium.org/p/chromium/issues/detail?id=612909) .
 ### Suggerimenti
 
 Se il vostro sito contiene molte risorse video sullo stesso dominio vi consiglio
-di impostare il valore `preload` su `metadata` o definire attributi `poster` ed
+di impostare il valore `preload` su `metadata` o definire gli attributi `poster` e
 impostare `preload` a `none`. Facendo ciò eviterai di raggiungere il numero
-massimo di connessioni HTTP allo stesso dominio (6 in base alle specifiche di
+massimo di connessioni HTTP per lo stesso dominio (6 in base alle specifiche di
 HTTP 1.1) che possono bloccare il caricamento di risorse. Tieni presente che ciò
 può anche migliorare la velocità della pagina se i video non fanno parte
 dell'esperienza utente principale.
 
 ## Link preload
 
-Come [coperto](/web/updates/2016/03/link-rel-preload) in altri
+Come [abbiamo letto](/web/updates/2016/03/link-rel-preload) in altri
 [articoli](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/),
 [link preload](https://w3c.github.io/preload/) è un recupero dichiarativo che
 consente di forzare il browser ad effettuare la richiesta di una risorsa senza
-bloccare l'evento `window.onload` e mentre la pagina viene scaricata. Le risorse
+bloccare l'evento `window.onload`, mentre la pagina viene scaricata. Le risorse
 caricate tramite `<link rel="preload">` sono memorizzate localmente nel browser
 e sono effettivamente inerti fino a quando non vengono esplicitamente
 referenziate da DOM, JavaScript o CSS.
 
-Il preload è diverso da prefetch in quanto si concentra sulla navigazione
+Preload è diverso da prefetch in quanto si concentra sulla navigazione
 corrente e recupera le risorse con priorità in base al loro tipo (script, stile,
 carattere, video, audio, ecc.). Dovrebbe essere usato per riempire la cache del
 browser per le sessioni correnti.
@@ -179,9 +179,9 @@ browser per le sessioni correnti.
 ### Preload del video completo
 
 Ecco come precaricare un video completo sul tuo sito Web in modo che quando il
-tuo JavaScript chiede di recuperare il contenuto del video, verrà letto dalla
+JavaScript chiede di recuperare il contenuto del video, questo viene letto dalla
 cache in quanto la risorsa potrebbe essere già stata memorizzata nella cache del
-browser. Se la richiesta di preload non è ancora terminata si verificherà un
+browser. Se la richiesta di preload non è ancora terminata, si verificherà un
 recupero regolare della rete.
 
 ```
@@ -202,15 +202,15 @@ recupero regolare della rete.
 Note: raccomanderei l'utilizzo solo per file multimediali di piccole dimensioni
 (<5 MB).
 
-Poiché la risorsa precaricata sta per essere consumata da un elemento video
-nell'esempio il valore del preload link `as` è `video`. Se si trattasse di un
+Poiché la risorsa preload sta per essere consumata da un elemento video
+nell'esempio, il valore del preload link `as` è `video`. Se si trattasse di un
 elemento audio sarebbe stato `as="audio"` .
 
 ### Preload del primo segmento
 
 L'esempio seguente mostra come precaricare il primo segmento di un video con
 `<link rel="preload">` e usarlo con Media Source Extensions. Se non hai
-familiarità con l'API Javascript di MSE leggi le [nozioni di base di
+familiarità con l'API Javascript di MSE, leggi le [nozioni di base di
 MSE](/web/fundamentals/media/mse/basics) .
 
 Per semplicità supponiamo che l'intero video sia stato diviso in file più
@@ -247,15 +247,15 @@ piccoli come "file_1.webm", "file_2.webm", "file_3.webm", ecc.
 </script>
 ```
 
-Warning: per le risorse di cross-origin assicurarsi che le intestazioni CORS
+Warning: per le risorse di cross-origin, assicurati che le intestazioni CORS
 siano impostate correttamente. Poiché non possiamo creare un buffer di array da
-una response opaca recuperata con `fetch(videoFileUrl, { mode: 'no-cors' })` non
+una response opaca recuperata con `fetch(videoFileUrl, { mode: 'no-cors' })`, non
 saremo in grado di alimentare alcun elemento video o audio.
 
 ### Supporto
 
-Link preload non è ancora supportato in tutti i browser. Potresti voler rilevare
-la sua disponibilità con i frammenti di seguito per adattare le tue metriche di
+Link preload non è ancora supportato in tutti i browser. Accertati
+della sua disponibilità con i segmenti seguenti per adattare le tue metriche di
 performance.
 
 ```
@@ -274,11 +274,11 @@ function preloadFirstSegmentSupported() {
 
 ## Buffering manuale
 
-Prima di approfondire [Cache
-API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) ed i service worker
+Prima di approfondire l'argomento dell'[API
+Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) e dei service worker,
 vediamo come eseguire il buffering manuale di un video con MSE. L'esempio
 seguente presuppone che il tuo server web supporti richieste HTTP Range ma
-questo sarebbe abbastanza simile con i segmenti di file. Nota che alcune
+sarebbe abbastanza simile anche se si trattasse di segmenti di file. Nota che alcune
 librerie middleware come [Shaka Player](https://github.com/google/shaka-player)
 , [JW Player](https://developer.jwplayer.com/) e [Video.js di
 Google](http://videojs.com/) sono progettate per gestire questo per te.
@@ -327,14 +327,14 @@ Google](http://videojs.com/) sono progettate per gestire questo per te.
 
 ### Considerazioni
 
-Dato che ora hai il controllo dell'intera esperienza di buffering multimediale
+Dato che ora hai il controllo dell'intera esperienza di buffering multimediale,
 ti suggerisco di considerare il livello della batteria del dispositivo, la
 preferenza utente "Modalità risparmio dati" e le informazioni di rete quando
 pensi al pre-caricamento.
 
 #### Consapevolezza della batteria
 
-Si prega di considerare il livello di batteria dei dispositivi degli utenti
+Ti consigliamo di considerare il livello di batteria dei dispositivi degli utenti
 prima di pensare al preload di un video. Ciò conserverà la durata della batteria
 quando il livello di potenza è basso.
 
@@ -353,21 +353,21 @@ if ('getBattery' in navigator) {
 }
 ```
 
-#### Rileva "Data-Saver"
+#### Rilevamento di "Data-Saver"
 
 Utilizza l'intestazione della richiesta di suggerimento del client `Save-Data`
 per fornire applicazioni veloci e light agli utenti che hanno optato per la
-modalità "risparmio di dati" nel proprio browser. Identificando questa
+modalità "Data-saver" nel proprio browser. Identificando questa
 intestazione della richiesta, l'applicazione può personalizzare ed offrire
-un'esperienza utente ottimizzata agli utenti con limiti di costi e prestazioni.
+un'esperienza ottimizzata agli utenti con limitazioni di costi e prestazioni.
 
-Scopri di più leggendo la nostra guida completa alla [pubblicazione di
+Scopri di più leggendo la nostra guida completa su come [Fornire
 applicazioni veloci e light con
 Save-Data](/web/updates/2016/02/save-data).
 
 #### Caricamento intelligente basato sulle informazioni di rete
 
-Si consiglia di controllare `navigator.connection.type` prima del
+Ti consigliamo di controllare `navigator.connection.type` prima del
 precaricamento. Quando è impostato su `cellular`, è possibile impedire il
 pre-caricamento ed avvisare gli utenti che il proprio operatore di rete mobile
 potrebbe addebitare la larghezza di banda ed avviare la riproduzione automatica
@@ -383,23 +383,23 @@ if ('connection' in navigator) {
 }
 ```
 
-Scopri l'[esempio Network
+Scopri l'[Esempio Network
 Information](https://googlechrome.github.io/samples/network-information/) per
 sapere come reagire alle modifiche di rete.
 
 ### Pre-cache primi segmenti multipli
 
-Ora cosa succede se voglio precaricare speculativamente alcuni contenuti
-multimediali senza sapere quale pezzo di media l'utente alla fine sceglierà. Se
+Cosa succede se voglio precaricare alcuni contenuti
+multimediali senza sapere quale sceglierà l'utente alla fine? Se
 l'utente si trova su una pagina Web che contiene 10 video, probabilmente abbiamo
-abbastanza memoria per recuperare un file di segmento da ciascuno, ma non
-dobbiamo assolutamente creare 10 elementi video nascosti e 10 oggetti
-`MediaSource` ed iniziare a riempirli di dati.
+abbastanza memoria per recuperare un file di segmento da ciascuno, ma
+dobbiamo evitare di creare 10 elementi video nascosti e 10 oggetti
+`MediaSource` e iniziare ad alimentare quei dati.
 
 L'esempio in due parti qui sotto mostra come pre-cache più segmenti video
-utilizzando Cache API potente e facile da usare. Si noti che qualcosa di simile
+utilizzando l'API Cache, potente e facile da usare. Nota che qualcosa di simile
 può essere raggiunto anche con IndexedDB. Non stiamo ancora utilizzando i
-service worker in quanto Cache API è accessibile anche dall'oggetto Window.
+service worker in quanto l'API Cache è accessibile anche dall'oggetto Window.
 
 #### Fetch e cache
 
@@ -434,14 +434,14 @@ function fetchAndCache(videoFileUrl, cache) {
 }
 ```
 
-Si noti che se utilizzi richieste HTTP Range dovresti ricreare manualmente un
-oggetto `Response` poiché Cache API non supporta
+Nota che se utilizzi le richieste HTTP Range, dovresti ricreare manualmente un
+oggetto `Response` poiché l'API Cache non supporta
 [ancora](https://github.com/whatwg/fetch/issues/144) le risposte Range. Tieni
 presente che la chiamata `networkResponse.arrayBuffer()` recupera l'intero
 contenuto della risposta in una sola volta nella memoria del renderer, motivo
 per cui potresti voler utilizzare intervalli di piccole dimensioni.
 
-Come riferimento ho modificato parte dell'esempio sopra riportato per salvare le
+Per riferimento ho modificato parte dell'esempio precedente per salvare le
 richieste di intervallo HTTP sulla pre-cache del video.
 
 ```
@@ -456,16 +456,16 @@ richieste di intervallo HTTP sulla pre-cache del video.
     });
 ```
 
-#### Riproduci video
+#### Riproduzione video
 
-Quando un utente fa clic sul pulsante di riproduzione, recupereremo il primo
-segmento video disponibile nella Cache API in modo che la riproduzione inizi
+Quando un utente fa clic sul pulsante di riproduzione, recuperiamo il primo
+segmento video disponibile nell'API Cache in modo che la riproduzione inizi
 immediatamente se disponibile. Altrimenti, lo preleveremo semplicemente dalla
 rete. Tieni presente che i browser e gli utenti possono decidere di cancellare
 la [cache](/web/fundamentals/instant-and-offline/web-storage/offline-for-pwa) .
 
 Come visto in precedenza utilizziamo MSE per alimentare quel primo segmento di
-video con l'elemento video.
+video all'elemento video.
 
 ```
 function onPlayButtonClick(videoFileUrl) {
@@ -493,19 +493,19 @@ function onPlayButtonClick(videoFileUrl) {
 }
 ```
 
-Warning: per risorse cross-origin assicurarsi che le intestazioni CORS siano
-impostate correttamente. Poiché non possiamo creare un buffer di array da una
-risposta opaca recuperata con `fetch(videoFileUrl, { mode: 'no-cors' })` , non
+Warning: per le risorse cross-origin, assicurati che le intestazioni CORS siano
+impostate correttamente. Non possiamo creare un buffer di array da una
+risposta opaca recuperata con `fetch(videoFileUrl, { mode: 'no-cors' })`, poiché non
 saremo in grado di alimentare alcun elemento video o audio.
 
-### Crea risposte Range con un service worker
+### Creazione di risposte Range con service worker
 
-Cosa fare dopo aver recuperato un intero file video ed averlo salvato in Cache
-API . Quando il browser invia una richiesta di HTTP Range, certamente non si
-desidera portare l'intero video nella memoria del renderer poiché Cache API non
+Supponiamo di aver recuperato un intero file video e averlo salvato nell'API
+Cache. Quando il browser invia una richiesta di HTTP Range, certamente non
+vuoi includere l'intero video nella memoria del renderer poiché l'API Cache non
 supporta ancora le risposte Range.
 
-Quindi mostriamo come intercettare queste richieste e restituire una risposta
+Ecco come intercettare queste richieste e restituire una risposta
 Range personalizzata da un service worker.
 
 ```
@@ -552,13 +552,13 @@ function loadFromCacheOrFetch(request) {
 }
 ```
 
-È importante notare che l'uso di `response.blob()` per ricreare questa risposta
+È importante notare che ho usato `response.blob()` per ricreare questa risposta
 divisa in slice in quanto ciò mi fornisce semplicemente un handle per il file
-([in Chrome](https://github.com/whatwg/fetch/issues/569)) mentre
+([in Chrome](https://github.com/whatwg/fetch/issues/569)), mentre
 `response.arrayBuffer()` porta l'intero file nella memoria del renderer.
 
 La mia intestazione HTTP personalizzata `X-From-Cache` può essere utilizzata per
-sapere se questa richiesta proviene dalla cache o dalla rete. Può essere usato
+sapere se questa richiesta provenga dalla cache o dalla rete. Può essere usata
 da un servizio come
 [ShakaPlayer](https://github.com/google/shaka-player/blob/master/docs/tutorials/service-worker.md)
 per ignorare il tempo di risposta come indicatore della velocità della rete.
@@ -573,7 +573,7 @@ Dai un'occhiata all'app ufficiale [Sample
 Media](https://github.com/GoogleChrome/sample-media-pwa) ed in particolare al
 file
 [ranged-response.js](https://github.com/GoogleChrome/sample-media-pwa/blob/master/src/client/scripts/ranged-response.js)
-per una soluzione completa su come gestire le richieste Range.
+per una soluzione completa di gestione delle richieste Range.
 
 Translated by
 {% include "web/_shared/contributors/lucaberton.html" %}
