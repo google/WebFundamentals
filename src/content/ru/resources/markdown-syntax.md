@@ -615,3 +615,8 @@ Time travel is fun.
 I do it literally all the time.
 {% endcomment %}
 </pre>
+
+
+
+Translated by
+{% include "web/_shared/contributors/dmitryskripunov.html" %}
