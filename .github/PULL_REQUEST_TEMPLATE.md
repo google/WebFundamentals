@@ -11,4 +11,4 @@ What's changed, or what was fixed?
 - [ ] I have added the appropriate `type-something` label.
 - [ ] I've staged the site and manually verified that my content displays correctly.
 
-**R:** @petele
+**CC:** @petele

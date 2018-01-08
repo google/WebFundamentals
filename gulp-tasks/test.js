@@ -47,7 +47,7 @@ const REMARK_WARNING_ONLY = [
 ];
 const RE_BOM = /^\uFEFF/;
 const RE_SRC_BASE = /src\/content\//;
-const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)..\/.*/;
+const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
 const RE_DATA_BASE = /src\/data\//;
 const RE_GULP_BASE = /^gulp-tasks\/?/;
 const ESLINT_RC_FILE = '.eslintrc';
@@ -84,6 +84,7 @@ let remarkLintOptions = {
   wfLinksInternal: true,
   wfLinksForcedLang: true,
   wfLinksUnsafeShort: true,
+  wfLinksLineBreak: true,
 
   /* from check-headings.js */
   wfHeadingsTldr: true,
@@ -97,6 +98,7 @@ let remarkLintOptions = {
   wfHtmlDgcLinks: true,
   wfHtmlLinkForcedLang: true,
   wfHtmlInternalLinks: true,
+  wfHtmlLinkLineBreaks: true,
   wfHtmlUnsafeShortLinks: true,
 
   /* from check-images.js */
@@ -685,11 +687,12 @@ function testMarkdown(filename, contents, options) {
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_MD, contents);
     matched.forEach(function(match) {
       let inclFile = path.resolve(path.parse(filename).dir, match[1]);
-      if (doesFileExist(inclFile) !== true) {
-        position = {line: getLineNumber(contents, match.index)};
-        msg = `Markdown include ${match[0]} found, but couldn't find file.`;
-        logError(filename, position, msg);
+      if (doesFileExist(inclFile)) {
+        return;
       }
+      position = {line: getLineNumber(contents, match.index)};
+      msg = `Markdown include ${match[0]} found, but couldn't find file.`;
+      logError(filename, position, msg);
     });
 
     // Error on single line comments
@@ -1238,6 +1241,18 @@ function testFile(filename, opts) {
     let msg;
     let testPromise;
     let filenameObj = path.parse(filename.toLowerCase());
+
+    // Check the filename for illegal characters
+    if (filename.indexOf(' ') >= 0 ||
+        filename.indexOf('%') >= 0 ||
+        filename.indexOf('(') >= 0 ||
+        filename.indexOf(')') >= 0 ||
+        filename.indexOf('[') >= 0 ||
+        filename.indexOf(']') >= 0 ||
+        filename.indexOf('?') >= 0) {
+          msg = 'Illegal character(s) in filename.';
+          logError(filename, null, msg);
+    }
 
     // Check if the file is an extension we skip
     if (EXTENSIONS_TO_SKIP.indexOf(filenameObj.ext) >= 0) {

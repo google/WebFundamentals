@@ -204,6 +204,6 @@ lost. If the user never interacted with the page, then the user cannot have any
 state that might be lost, and therefore we do not risk user data loss by
 suppressing the dialog in that case.
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

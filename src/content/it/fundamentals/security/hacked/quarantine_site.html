@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Metti il sito in quarantena</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Requisiti:</h3>
+<ul>
+  <li>Funzionalità per impedire al server web di pubblicare pagine (in alternativa, puoi consultare l'hoster per valutare altre opzioni). Tieni presente che, nei prossimi passaggi, devi riportare il sito online per brevi intervalli di tempo.</li>
+  <li>Autorizzazioni di gestione dell'account (possibilità di visualizzare tutti gli utenti, eliminare utenti e modificare tutte le password correlate al tuo account).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Prossime operazioni:</h3>
+<ol>
+  <li><strong>Metti il sito offline</strong> in modo che non pubblichi più contenuti agli utenti. Ad esempio, arresta il server web o indirizza gli elementi DNS del sito web a una pagina statica su un altro server che utilizza un codice di risposta 503 HTTP.
+<p>Mettendo completamente offline il sito compromesso, puoi completare le attività amministrative riducendo l'interferenza dell'hacker e, allo stesso tempo, il codice dannoso o i file contenenti spam non verranno esposti ai visitatori. È improbabile che mettere il sito offline a intermittenza o per brevi intervalli di tempo durante il processo di ripristino influisca sul futuro posizionamento del tuo sito nei risultati di ricerca.</p>
+      <ul>
+        <li>Se non sai esattamente come mettere offline il sito, può essere utile contattare l'hoster, che ad esempio potrebbe configurare la risposta 503 per il sito <em>dall'esterno delle directory infette</em>. Comunica all'hoster che, per esigenze di test, hai bisogno di portare il sito da online a offline e viceversa, in modo da farti consigliare il miglior metodo per eseguire questa operazione autonomamente.
+        </li><li>Fare in modo che il tuo sito restituisca un <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">codice di stato HTTP</a> 4xx o 5xx non è sufficiente a garantire la sicurezza degli utenti. I contenuti dannosi vengono comunque restituiti agli utenti anche con i codici 404, 503 e così via. <em>Il codice di stato 503 è utile per segnalare che il sito è temporaneamente disattivato, ma la risposta dovrebbe provenire dall'esterno del server o del sito compromesso.</em>
+        </li>
+        <li>Neanche utilizzare un'istruzione <a href="/search/reference/robots_txt">robots.txt disallow</a> è sufficiente, perché vengono bloccati solo i crawler dei motori di ricerca. Gli utenti normali sono comunque esposti ai contenuti dannosi.</li>
+      </ul>
+  </li>
+  <li>Se non hai ancora provveduto, <strong>contatta l'hoster per informarlo della situazione</strong>. Se anche l'hoster ha riscontrato il problema, contattandolo potresti aiutarlo a comprenderne l'entità.</li>
+  <li><strong>Esegui un'accurata gestione degli account utente</strong>.
+    <ul>
+      <li>Visualizza un elenco degli account utente del sito e controlla se l'hacker ne ha creato uno nuovo. Se sono stati creati account illeciti, annota i nomi degli account indesiderati per le successive indagini. Quindi elimina gli account per impedire accessi futuri da parte dell'hacker.</li>
+      <li>Modifica le password di tutti gli utenti e account del sito, tra cui le credenziali di accesso al sito FTP, l'accesso al database, gli account degli amministratori di sistema e quelli del sistema di gestione dei contenuti (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Passaggio successivo</h2>
+<p>Procedi al passaggio <a href="use_search_console">Utilizza Search Console</a>.</p>
+
+</body></html>

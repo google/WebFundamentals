@@ -8,6 +8,8 @@ description: The module guide for workbox-webpack-plugin.
 
 # Workbox webpack Plugin  {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 ## What's the Workbox webpack Plugin?
 
 This is a plugin for [webpack](https://webpack.js.org/) which generates a list of URLs to
@@ -64,7 +66,7 @@ configuration as properties of an `Object` to the plugin's constructor. For exam
 
     // Inside of webpack.config.js:
     const WorkboxPlugin = require('workbox-webpack-plugin');
-    
+
     module.exports = {
       // Other webpack config...
       plugins: [

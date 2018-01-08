@@ -31,7 +31,7 @@ global.WF = {
   maxArticlesInFeed: 10,
   langs: [
     'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
-    'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw',
+    'ko', 'nl', 'pl', 'pt-br', 'ru', 'th', 'tr', 'vi', 'zh-cn', 'zh-tw',
   ],
 };
 
@@ -67,16 +67,16 @@ if (global.WF.options.lang) {
     }
   });
   global.WF.options.lang = langs;
+  gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
 } else {
   global.WF.options.lang = global.WF.langs;
 }
-gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
 
 // Show verbose output
 if (global.WF.options.verbose !== false) {
   global.WF.options.verbose = true;
+  gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 }
-gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 
 // Test all files
 if (global.WF.options.testAll !== false) {

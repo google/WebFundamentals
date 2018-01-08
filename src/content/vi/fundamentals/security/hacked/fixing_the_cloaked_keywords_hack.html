@@ -1,0 +1,288 @@
+<html devsite><head>
+  <title>Khắc phục Tấn công bằng liên kết và từ khóa bị che giấu</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+
+<body>
+
+<p>Hướng dẫn này được tạo riêng cho một kiểu tấn công bằng
+  hình thức thêm các trang vô nghĩa nhiều từ khóa vào
+  trang web của bạn mà chúng tôi gọi là tấn công bằng liên kết và từ khóa bị che giấu. Hướng dẫn được thiết kế cho người dùng của
+  <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">
+    Hệ thống quản lý nội dung phổ biến</a> (CMS) nhưng bạn sẽ thấy hướng dẫn này      hữu ích ngay cả khi bạn
+  không sử dụng CMS.</p>
+
+<p><strong>Lưu ý:</strong> Bạn không chắc liệu trang web của mình có bị tấn công hay không? Hãy bắt đầu bằng cách đọc hướng dẫn
+  <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">cách kiểm tra xem trang web của bạn
+  có bị tấn công hay không</a> của chúng tôi.</p>
+
+<aside class="note">Chúng tôi muốn đảm bảo rằng hướng dẫn này thực sự hữu ích
+  cho bạn. Vui lòng
+  <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">để lại phản hồi</a> để giúp chúng tôi cải thiện!</aside>
+
+<h2>Mục lục</h2>
+
+<ul>
+<p></p><li><a href="#identifying">Bước 1: Xác định kiểu tấn công này</a></li><p></p>
+<p></p><li><a href="#fixing">Bước 2: Khắc phục tấn công</a></li><p></p>
+<p></p><li><a href="#resources">Bước 3: Tài nguyên bổ sung</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Câu hỏi thường gặp về trang web bị tấn công</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Xác định kiểu tấn công này</h2>
+
+<p>Tấn công bằng liên kết và từ khóa bị che giấu tự động tạo nhiều trang với
+  văn bản, liên kết và hình ảnh vô nghĩa. Các trang này đôi khi chứa các thành phần mẫu cơ bản từ
+  trang web ban đầu, vì thế khi nhìn qua trang có thể trông giống như các
+  phần bình thường của trang web của bạn cho đến khi bạn đọc nội dung.</p>
+
+<p>Các trang bị tấn công được tạo ra để thao túng các yếu tố xếp hạng của Google. Các tin tặc thường
+  cố gắng kiếm tiền bằng cách bán các liên kết trên trang bị tấn công cho các
+  bên thứ ba khác. Thông thường các trang bị tấn công cũng sẽ chuyển hướng khách truy cập đến
+  một trang không liên quan, như trang web khiêu dâm mà tại đó tin tặc có thể kiếm tiền.</p>
+
+<p>Để kiểm tra vấn đề này, hãy bắt đầu với
+  công cụ <a href="https://www.google.com/webmasters/tools/security-issues">Vấn đề bảo mật</a> trong
+  <a href="https://www.google.com/webmasters/tools/">Search Google</a> để xem Google có phát hiện
+  thấy bất kỳ ví dụ nào về các trang bị tấn công này trên trang web của bạn không. Đôi khi bạn
+  cũng có thể phát hiện các trang như thế này bằng cách mở cửa sổ
+  Google Tìm kiếm và nhập <code>site:[your site]</code>. Tìm kiếm này sẽ hiển thị cho bạn
+  các trang Google đã lập chỉ mục cho trang web của bạn, bao gồm cả các trang bị tấn công. Xem
+  qua một vài trang kết quả tìm kiếm để xem bạn có phát hiện bất kỳ URL
+  bất thường nào không. Nếu bạn không thấy bất kỳ nội dung bị tấn công nào
+  trong Google Tìm kiếm, hãy sử dụng các cụm từ tìm kiếm tương tự với công cụ tìm kiếm khác. Các
+  công cụ tìm kiếm khác có thể hiển thị nội dung bị tấn công mà Google đã xóa khỏi chỉ mục.
+  Dưới
+  đây là ví dụ về kết quả.</p>
+
+<img style="padding: 0px 25px" src="/webmasters/images/CloakedKeywordHackExampleSearch.png"/>
+
+<p style="padding: 0px 25px"><strong>Lưu ý:</strong> <em>Xin lưu ý rằng kết quả tìm kiếm này chứa nhiều trang không được tạo bởi
+  chủ sở hữu trang web.Nếu nhìn kỹ các mô tả về kết quả thứ hai và thứ ba,
+  bạn sẽ thấy các ví dụ về văn bản vô nghĩa mà kiểu tấn công này tạo ra.</em></p>
+
+<p>Khi truy cập một trang bị tấn công, bạn có thể thấy thông báo cho biết trang không
+  tồn tại (ví dụ: lỗi 404). Đừng để bị lừa! Các tin tặc sẽ cố gắng lừa bạn nghĩ rằng
+  trang web của mình đã được khắc phục bằng cách làm cho bạn tin rằng các
+  trang bị tấn công đã biến mất hoặc đã được khắc phục. Chúng làm điều này
+  bằng cách <a href="//support.google.com/webmasters/answer/66355">che giấu</a> nội dung. Hãy kiểm tra che giấu bằng cách
+  nhập các URL thuộc trang web của bạn vào
+  công cụ <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Tìm nạp như Google</a>. Công cụ Tìm nạp như Google cho phép bạn xem nội dung
+  bị ẩn.
+  Dưới đây là ví dụ về hình thức của các trang bị tấn công này.</p>
+
+<img style="padding: 0px 25px" src="/webmasters/images/CloakedKeywordHackExamplePage.png"/>
+
+<a name="fixing"></a>
+<h2>Khắc phục tấn công</h2>
+
+<p>Trước khi bắt đầu, hãy tạo một bản sao ngoại tuyến của bất kỳ tệp nào trước khi bạn xóa tệp,
+  phòng khi bạn cần khôi phục tệp sau này. Tốt hơn là bạn nên sao lưu toàn bộ trang web của mình
+  trước khi bắt đầu quá trình dọn dẹp. Bạn có thể thực hiện việc này bằng cách lưu tất cả các tệp trên
+  máy chủ của bạn vào một vị trí ngoài máy chủ hoặc tìm các tùy chọn sao lưu
+  tốt nhất cho Hệ thống quản lý nội dung (CMS) cụ thể của bạn.</p>
+
+<h3>Kiểm tra tệp .htaccess của bạn (3 bước)</h3>
+
+<p>Tấn công bằng liên kết và từ khóa bị che giấu sử dụng tệp .htaccess để
+  tự động tạo các trang bị che giấu trên trang web của bạn. Việc tự làm quen với
+  <a href="https://httpd.apache.org/docs/current/howto/htaccess.html">những điều cơ bản về .htaccess</a> trên trang chính thức
+  của Apache có thể giúp bạn hiểu rõ hơn về cách mà tấn công ảnh hưởng
+  đến trang web của bạn, nhưng điều này không bắt buộc. </p>
+
+<p><b>Bước 1</b></p>
+<p>Xác định vị trí tệp .htaccess trên trang web của bạn. Nếu bạn không biết chắc nên tìm tệp ở đâu và bạn đang sử dụng
+  CMS như WordPress, Joomla hoặc Drupal, hãy tìm ".htaccess file location" trong một công cụ
+   tìm kiếm cùng với tên của CMS của bạn. Tùy thuộc vào trang web của mình,
+  bạn có thể thấy nhiều tệp .htaccess. Hãy lập danh sách tất cả các vị trí của tệp .htaccess.
+</p>
+
+<p><strong>Lưu ý:</strong> Tệp .htaccess thường là một "tệp ẩn". Hãy đảm bảo cho phép
+  hiển thị các tệp ẩn khi bạn đang tìm kiếm tệp này.</p>
+
+<p><b>Bước 2</b></p>
+<p>Mở tệp .htaccess để xem nội dung trong tệp. Trong tệp, bạn sẽ có thể
+  xác định một dòng mã trông giống như sau:</p>
+
+<pre class="prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>Các biến trên dòng này có thể thay đổi. Cả "cj2fa" và "tobeornottobe" đều có thể
+  là bất kỳ tổ hợp chữ cái hoặc từ nào. Điều quan trọng là xác định tệp .php được tham chiếu
+  trong dòng này.</p>
+
+<p>Viết tên tệp .php được đề cập trong tệp .htaccess. Trong ví dụ, tệp .php có tên
+  "injected_file.php", nhưng trên thực tế tên tệp .php sẽ không hiển thị rõ ràng đến thế. Tên tệp
+  thường là tập hợp ngẫu nhiên các từ vô hại như "horsekeys.php", "potatolake.php", v.v. Có khả năng
+  đây là một tệp .php độc hại mà chúng ta sẽ cần theo dõi và xóa sau.</p>
+
+<div class="alert">Không phải tất cả các dòng có RewriteRule và tệp .php trong .htaccess của bạn đều
+  độc hại.
+  Nếu bạn không chắc
+  chức năng của một dòng mã là gì, bạn có thể nhờ giúp đỡ từ một nhóm
+  quản trị viên có kinh nghiệm trong <a href="https://support.google.com/webmasters/go/community">Diễn đàn trợ giúp
+  quản trị trang web</a>.</div>
+
+<p><b>Bước 3</b></p>
+<p>Thay thế tất cả các tệp .htaccess bằng một phiên bản sạch hoặc mặc định của tệp .htaccess. Bạn thường
+  có thể tìm phiên bản mặc định của tệp .htaccess bằng cách tìm kiếm "default .htaccess file"
+  và tên CMS của bạn. Đối với các trang web có nhiều tệp .htaccess, hãy tìm phiên bản sạch của
+  mỗi tệp và thay thế.</p>
+
+<p>Nếu không có tệp .htaccess mặc định và bạn chưa bao giờ định cấu hình tệp .htaccess trên trang web của mình,
+  tệp .htaccess mà bạn tìm thấy trên trang web của mình có thể là tệp độc hại. Hãy lưu một bản sao của (các) tệp .htaccess
+  ngoại tuyến để đề phòng và xóa tệp .htaccess khỏi trang web của bạn.</p>
+
+<h3>Tìm và xóa các tệp độc hại khác (5 bước)</h3>
+
+<p>Việc xác định các tệp độc hại có thể rất phức tạp và có thể mất vài giờ. Hãy dành thời gian
+  kiểm tra tệp của bạn. Nếu bạn chưa làm điều này thì đây là thời điểm tốt để sao lưu các tệp trên
+  trang web của bạn. Hãy tìm "sao lưu trang web" kèm theo tên CMS của bạn trên Google để tìm hướng dẫn về
+  cách sao lưu trang web của bạn.</p>
+
+<p><b>Bước 1</b></p>
+<p>Nếu bạn sử dụng CMS, hãy cài đặt lại tất cả các tệp chính (mặc định) có trong phân phối mặc định của
+  CMS của bạn cũng như bất kỳ nội dung nào bạn có thể đã thêm vào (chẳng hạn như chủ đề, mô-đun, plugin). Điều này
+  giúp đảm bảo rằng các tệp này không có nội dung bị tấn công. Bạn có thể tìm kiếm "cài đặt lại"
+  kèm theo tên CMS của bạn trên Google để tìm hướng dẫn về quá trình cài đặt lại. Nếu bạn có
+  bất kỳ plugin, mô-đun, tiện ích hay chủ đề nào, hãy đảm bảo cài đặt lại các
+  plugin, mô-đun, tiện ích hay chủ đề đó.</p>
+
+<div class="alert">Việc cài đặt lại các tệp chính có thể khiến bạn mất bất kỳ tùy chỉnh nào
+  mà bạn đã thực hiện. Hãy đảm bảo tạo một bản sao lưu cơ sở dữ liệu và tất cả các tệp trước khi
+  cài đặt lại.</div>
+
+<p><b>Bước 2</b></p>
+<p>Bắt đầu bằng cách tìm tệp .php mà bạn đã xác định trong tệp .htaccess trước đó. Tùy thuộc vào cách
+  bạn truy cập các tệp trên máy chủ của mình, bạn sẽ có một số chức năng tìm kiếm. Hãy tìm tên tệp
+  độc hại. Nếu bạn tìm thấy tệp, trước tiên hãy sao lưu
+  và lưu trữ tệp ở một vị trí khác phòng khi bạn cần khôi phục, sau đó
+  xóa tệp khỏi trang web của bạn.</p>
+
+<p><b>Bước 3</b></p>
+<p>Tìm bất kỳ tệp độc hại hay bị xâm nhập nào còn lại. Bạn có thể đã xóa tất cả
+  các tệp độc hại trong hai bước trước, nhưng tốt nhất bạn nên thực hiện
+  các bước tiếp theo này phòng khi trên trang web còn nhiều tệp khác
+  có thể đã bị xâm nhập.</p>
+
+<p>Đừng nản lòng khi nghĩ rằng bạn cần mở và xem qua mọi tệp PHP. Hãy bắt đầu
+  bằng cách tạo một danh sách tệp PHP đáng ngờ mà bạn muốn điều tra. Dưới đây là một số cách
+  để xác định tệp PHP đáng ngờ:</p><p>
+
+</p><ul>
+<li>Nếu bạn đã tải lại các tệp CMS của mình, hãy chỉ xem các tệp không thuộc
+    các tệp hoặc thư mục CMS mặc định của bạn. Điều này sẽ loại bỏ một số lượng lớn các tệp
+    PHP và bạn chỉ cần phải xem một số tệp còn lại.</li>
+<li>Sắp xếp các tệp trên trang web của bạn theo ngày sửa đổi lần cuối. Tìm các tệp
+    đã được sửa đổi trong vòng vài tháng kể từ lần đầu tiên
+    bạn phát hiện ra trang web của mình bị tấn công.</li>
+<li>Sắp xếp các tệp trên trang web của bạn theo kích thước. Tìm bất kỳ tệp nào có kích thước lớn bất thường.</li>
+</ul>
+
+<p><b>Bước 4</b></p>
+<p>Khi bạn đã có danh sách các tệp PHP đáng ngờ, đây là lúc để xem
+  các tệp này có độc hại hay không.
+  Nếu bạn không quen thuộc với PHP, quá trình này có thể
+  tốn nhiều thời gian hơn, vì vậy hãy cân nhắc việc xem một số <a href="http://php.net/docs.php">tài liệu PHP</a>.
+  Nhưng ngay cả khi
+  bạn hoàn toàn không biết gì về mã hóa, có một số mô hình cơ bản mà bạn có thể tìm để xác định
+  các tệp độc hại.</p>
+
+<p>Trước tiên, hãy quét qua các tệp đáng ngờ mà bạn đã xác định để tìm các khối văn bản lớn
+  là kết hợp của các chữ cái và chữ số có vẻ lộn xộn. Các khối văn bản lớn thường
+  đứng sau tổ hợp các hàm PHP như base64_decode, rot13, eval, strrev,
+  gzinflate. Dưới đây là một ví dụ về hình thức của khối mã. Đôi khi toàn bộ mã này
+  sẽ được chèn vào một dòng văn bản dài, làm cho mã trông nhỏ hơn kích thước thực sự.</p>
+
+<pre class="prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Đôi khi mã không bị lộn xộn và trông giống như tập lệnh bình thường. Nếu bạn không chắc
+  liệu mã có hại hay không, hãy ghé qua <a href="http://productforums.google.com/forum/#!forum/webmasters">Diễn đàn trợ giúp quản trị trang web</a> của chúng tôi, ở đó
+  một nhóm quản trị viên web có kinh nghiệm có thể giúp bạn xem các tệp.</p>
+
+<p><b>Bước 5</b></p>
+<p>Giờ khi bạn đã biết tệp nào đáng ngờ, hãy tạo bản sao lưu hoặc bản sao cục bộ bằng cách lưu
+  các tệp đó vào máy tính của bạn phòng khi tệp không độc hại và xóa các tệp đáng ngờ.</p>
+
+<h3>Kiểm tra xem trang web của bạn đã sạch chưa</h3>
+
+<p>Khi bạn đã hoàn tất việc loại bỏ các tệp bị tấn công, hãy kiểm tra để xem liệu nỗ lực của bạn có thành công không. Bạn có nhớ
+  những trang vô nghĩa mà bạn đã xác định trước đó không? Hãy sử dụng lại công cụ Tìm nạp
+  như Google để xem các trang đó còn tồn tại hay không. Nếu Tìm nạp như Google cho kết quả
+  "Không tìm thấy", có khả năng là bạn đã thành công!</p>
+
+<div class="tip">Bạn cũng có thể làm theo các bước trong <a href="https://support.google.com/webmasters/troubleshooter/6155978">
+  Trình khắc phục sự cố trang web bị tấn công</a> để kiểm tra xem liệu còn nội dung bị tấn công trên trang web của bạn hay không.</div>
+
+<h2>Làm cách nào để tôi ngăn chặn việc bị tấn công lại?</h2>
+
+<p>Việc khắc phục các lỗ hổng trên trang web là bước thiết yếu cuối cùng để sửa lỗi trang web của bạn. Một nghiên cứu
+  gần đây đã phát hiện ra rằng 20% trang web bị tấn công lại trong vòng 1 ngày. Việc biết chính xác cách thức
+  trang web của bạn bị tấn công rất hữu ích. Hãy đọc các <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">
+  cách hàng đầu mà trang web bị người gửi spam tấn công</a> để bắt đầu điều tra. Tuy nhiên, nếu bạn không thể tìm được
+  cách thức trang web của mình bị tấn công, dưới đây là danh sách kiểm tra gồm những điều bạn có thể làm để giảm các lỗ hổng
+  trên trang web của mình.</p>
+
+<ul>
+<li>Cập nhật CMS, plugin, tiện ích và mô-đun của bạn thường xuyên: Hy vọng
+  bạn đã thực hiện bước này. Nhiều trang web bị tấn công vì phần mềm lỗi thời
+  đang chạy trên trang web. Một số CMS hỗ trợ tự động cập nhật.</li>
+<li>Thường xuyên quét máy tính của bạn: Sử dụng bất kỳ trình quét virus phổ biến nào để kiểm tra
+  virus hoặc các lỗ hổng.</li>
+<li>Thay đổi mật khẩu thường xuyên: Việc thường xuyên thay đổi mật khẩu cho
+  tất cả tài khoản trang web như nhà cung cấp dịch vụ lưu trữ, FTP và CMS có thể ngăn chặn
+  truy cập trái phép vào trang web của bạn.
+  Điều quan trọng là tạo một mật khẩu mạnh và
+  duy nhất cho mỗi tài khoản.</li>
+<li>Sử dụng <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">Xác thực
+  hai yếu tố (2FA):</a> Cân nhắc việc bật 2FA trên bất kỳ dịch vụ nào yêu cầu bạn
+  đăng nhập. 2FA làm cho tin tặc khó đăng nhập hơn ngay cả khi chúng đã ăn cắp mật khẩu của
+  bạn thành công.</li>
+<li>Xem xét đăng ký dịch vụ bảo mật để theo dõi trang web
+      của bạn: Có rất nhiều dịch vụ tốt trên mạng có thể giúp bạn theo dõi
+      trang web của mình với một khoản phí nhỏ. Hãy cân nhắc việc đăng ký với họ để
+      giữ cho trang web của bạn an toàn.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Tài nguyên bổ sung</h2>
+<p>Nếu bạn vẫn gặp sự cố khi khắc phục trang web của mình, thì có một vài tài nguyên
+  có thể giúp bạn.</p>
+
+<p>Những công cụ này quét trang web của bạn và có thể tìm thấy nội dung có vấn đề. Ngoài VirusTotal,
+  Google không chạy hoặc hỗ trợ các công cụ này.</p>
+
+<p><a href="https://www.virustotal.com/">Virus Total</a>, <a href="http://aw-snap.info/">
+  Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>,
+  <a href="http://www.quttera.com/">Quttera</a>:
+ Đây chỉ là một số công cụ có thể quét trang web của bạn
+ để tìm nội dung có vấn đề. Xin lưu ý rằng các trình quét này
+  không thể đảm bảo sẽ xác định được mọi loại nội dung có vấn đề.</p>
+
+<p>Dưới đây là các tài nguyên bổ sung từ Google có thể giúp bạn:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community">Diễn đàn trợ giúp về quản trị trang web
+  của Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Trợ giúp quản trị trang web về trang web bị tấn công</a></li>
+<li><a href="//safebrowsing.google.com/">Duyệt web an toàn của Google</a></li>
+</ul>
+
+<div class="alert">Còn thiếu một công cụ mà bạn nghĩ có thể hữu ích? Hãy <a href="https://docs.google.com/a/
+  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">để lại phản hồi</a>
+  và cho chúng tôi biết.</div>
+
+</body></html>

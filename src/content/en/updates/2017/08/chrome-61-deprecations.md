@@ -91,6 +91,6 @@ notification permission.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

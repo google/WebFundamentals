@@ -197,6 +197,6 @@ The `SVGZoomEvent`  is not part of the SVG2.0 specification and does not functio
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760883808534528) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=367890)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

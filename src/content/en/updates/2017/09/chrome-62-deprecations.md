@@ -2,12 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, security improvements, further webkit deprecations, and more.
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2017-12-14 #}
 {# wf_published_on: 2017-09-15 #}
 {# wf_tags: deprecations,removals,chrome62 #}
 {# wf_blink_components: Blink>WebRTC>PeerConnection,Blink>PerformanceAPIs,Blink>SVG #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 62 to help you plan. In this version, more restrictions on insecure origins and a change to the shadow-piercing descendant combinator. #}
+
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Deprecations and Removals in Chrome 62 {: .page-title }
 
@@ -79,6 +81,6 @@ notification permission.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6451284559265792) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=695693)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

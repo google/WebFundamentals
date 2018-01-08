@@ -2,10 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-11-27 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
+
+{% include "web/tools/workbox/_shared/alpha.html" %}
 
 ## What is Workbox Google Analytics
 
@@ -64,7 +67,7 @@ retried request.
 
 If you want to be able to differentiate retried requests from non-retried
 requests, you can specify either the `parameterOverrides` or `hitFilters`
-[configuration options](../next/reference-docs/latest/workbox.googleAnalytics#.initialize).
+[configuration options](/web/tools/workbox/reference-docs/prerelease/workbox.googleAnalytics#.initialize).
 
 These options let you modify the
 [Measurement Protocol parameters](/analytics/devguides/collection/protocol/v1/parameters)

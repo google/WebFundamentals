@@ -1,6 +1,6 @@
 {# wf_md_include #}
 * `globDirectory` is where Workbox watches for changes. `globPatterns`
-  is relative to this directory.
+  is relative to `globDirectory`.
 
     <aside class="note">**Note**: A glob is a wildcard pattern. See [Glob Primer][Glob] to
     learn more.</aside>

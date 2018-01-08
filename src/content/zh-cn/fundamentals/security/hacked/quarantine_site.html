@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>隔离网站</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>您需要：</h3>
+<ul>
+  <li>能够禁止您的网络服务器提供网页（或者，您可以与托管服务商讨论可选方案）。请注意，在后续步骤中，您需要将网站短暂恢复在线状态。</li>
+  <li>帐号管理权限（能够查看所有用户、删除用户，以及更改与您的帐号相关的所有密码）。</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>后续操作：</h3>
+<ol>
+  <li><strong>将您的网站设为离线状态</strong>，使其不再向用户提供内容。例如，关闭您的网络服务器，或者使网站的 DNS 条目指向其他服务器上某个返回 503 HTTP 响应代码的静态网页。
+<p>通过使遭到入侵的网站完全处于离线状态，您可以在完成管理任务的过程中受到较少的黑客干扰，同时使访问者免受恶意代码或垃圾文件的侵扰。在恢复网站的过程中，间歇性地/暂时使网站处于离线状态通常不会影响网站日后在搜索结果中的排名。</p>
+      <ul>
+        <li>如果您不确定如何使网站处于离线状态，可以向托管服务商寻求帮助。例如，托管服务商可以从受感染目录之外对您的网站进行配置，以返回 503 响应代码（这是一种不错的方案）。<em></em>请告知托管服务商，为了进行测试，您不久之后需要切换您网站的在线和离线状态。这有助于他们为您提供自助程度最高的网站离线设置方法。
+        </li><li>让您的网站返回 4xx 或 5xx <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP 状态代码</a>并不足以保护用户的安全。在返回 404、503 等代码的情况下，有害内容仍可能会返回给用户。503 状态代码能够很好地表明您的网站暂时处于离线状态，但该响应必须来自遭到入侵的服务器/网站之外。<em></em>
+        </li>
+        <li>使用 <a href="/search/reference/robots_txt">robots.txt 文件屏蔽网页</a>也是不够的，因为这样只能阻止搜索引擎抓取工具访问相应网页。普通用户仍可能接触到有害内容。</li>
+      </ul>
+  </li>
+  <li><strong>联系托管服务商，让其了解相关情况</strong>（如果您还没有这么做的话）。如果托管服务商也遭到了入侵，这可能有助于他们确定问题的范围。</li>
+  <li><strong>进行全面的用户帐号管理</strong>。
+    <ul>
+      <li>查看您网站的用户帐号列表，检查黑客是否创建了新的用户帐号。如果发现非法帐号，请记下这些帐号的名称，以便日后调查。然后删除这些帐号，以阻止黑客继续登录。</li>
+      <li>更改网站上所有用户和帐号的密码，其中包括用于登录 FTP 帐号、数据库访问帐号、系统管理员帐号以及内容管理系统 (CMS) 帐号的密码。</li>
+    </ul>
+  </li>
+</ol>
+ <h2>后续步骤</h2>
+<p>此流程中的下一步是<a href="use_search_console">使用 Search Console</a>。</p>
+
+</body></html>

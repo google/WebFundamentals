@@ -276,6 +276,6 @@ This feature is removed in Chrome 60.
 &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

@@ -945,7 +945,7 @@ henrylim:
   description:
     en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
-wayouliu:
+wayouliu:  
   name:
     given: Wayou
     family: Liu
@@ -1391,6 +1391,15 @@ sunyunjia:
   description:
     en: "Software Engineer working on Chromium"
 
+ossu:
+  name:
+    given: Oskar
+    family: Sundbom
+  org:
+    name: Google
+  description:
+    en: Software Engineer working on WebRTC and Audio in Chromium
+
 surma:
   name:
     given: Surma
@@ -1493,6 +1502,21 @@ johyphenel:
   google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
+
+rviscomi:
+  name:
+    given: Rick
+    family: Viscomi
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://twitter.com/rick_viscomi'
+  twitter: rick_viscomi
+  github: rviscomi
+  role:
+    - author
+  email: rviscomi@google.com
 
 philipwalton:
   name:

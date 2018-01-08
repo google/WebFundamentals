@@ -1,0 +1,87 @@
+<html devsite><head>
+  <title>使用 Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>如果您已<a href="https://www.support.google.com/webmasters/answer/35179">驗證過網站擁有權</a>，可跳過下方第一個動作，直接在 Search Console 中查看您的網站資訊。</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>您需要：</h3>
+
+<ul>
+  <li>能以有效方式<a href="https://www.support.google.com/webmasters/answer/35179">驗證網站擁有權</a>，例如在根目錄中加入檔案、製作<a href="https://www.support.google.com/webmasters/answer/79812">中繼標記</a>、擁有網站的 Google Analytics (分析) 管理帳戶等。</li>
+</ul>
+
+<div class="action">
+  <h3>實際行動：</h3>
+
+  <p>在這個階段中，您將會執行下列動作：</p>
+
+  <ol>
+    <li><a href="#verify">在 Search Console 中驗證您的網站擁有權。</a></li>
+    <li><a href="#check">確認駭客未在 Search Console 中驗證擁有權，或是對設定進行不必要的變更。</a></li>
+    <li><a href="#determine">判斷攻擊性質。</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>在 Search Console 中驗證您的網站擁有權</h4>
+
+<ol>
+  <li>開啟瀏覽器並前往網站管理員中心：<a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>。</li>
+  <li>按一下 [Search Console]。<strong></strong></li>
+  <li>使用 <a href="https://www.google.com/accounts">Google 帳戶</a>登入 Search Console。如果您沒有 Google 帳戶，請按一下 [建立帳戶]<strong></strong>。建立新的 Google 帳戶，不代表您會失去現有其他公司的電子郵件帳戶 (<a href="https://accounts.google.com/SignUp">進一步瞭解帳戶</a>)。</li>
+  <li>按一下 [新增網站]。<strong></strong>在方塊中輸入您網站的網址，然後按一下 [繼續]。<strong></strong></li>
+  <li>決定您最方便的驗證方法。驗證網頁的 [推薦的方法]<strong></strong> 分頁上會顯示 Google 認為最適合的方法，[其他方法]<strong></strong> 分頁上則會列出其他方法 (<a href="https://goo.gl/kQnHQ">進一步瞭解如何驗證</a>)。</li>
+  <li>如果您選取的驗證方法需要存取網站 (例如 HTML 中繼標記或 HTML 檔案)，請將您的網站重新上線。</li>
+  <li>按一下 [驗證]<strong></strong>，即可使用您選擇的方法驗證擁有權。如果驗證成功，畫面上將會顯示恭賀訊息，指出您已驗證擁有權。您可以將網站重新下線，不過請注意，您的網站在後續步驟中還需要重新上線。</li>
+</ol>
+<a name="check"></a>
+
+<h4>驗證後，請確認駭客未在 Search Console 中驗證擁有權，或是對設定進行不必要的變更。</h4>
+
+<ol>
+  <li>按一下 Search Console 標誌，前往 Search Console 首頁。</li>
+  <li>找到您的網站，然後按一下 [管理網站]<strong></strong>。</li>
+  <li>按一下 [新增或移除使用者]<strong></strong>。</li>
+  <li>確認畫面上列出的<a href="https://www.support.google.com/webmasters/answer/44227">使用者和擁有者</a>均有授權。</li>
+  <li>記下任何未經授權使用者的電子郵件地址 (以備日後使用)，並且將這些使用者從您的網站上刪除。如有未經授權的擁有者，您必須將擁有者與任何可能的驗證憑證一併刪除，例如首頁上的驗證中繼標記，或是伺服器上的 HTML 檔案 (<a href="https://www.support.google.com/webmasters/answer/2454036">瞭解詳情</a>)。</li>
+  <li>檢查 Search Console 中是否有不必要的設定變更。按一下「設定」圖示<span class="material-icons"></span>，然後按一下 [<a href="https://www.support.google.com/webmasters/answer/2454036"><strong>網站設定</strong></a>]，檢查駭客是否做了不必要的變更，例如降低<a href="https://www.support.google.com/webmasters/answer/48620">檢索頻率</a> (可能是為了避開搜尋引擎的自動尋檢程式)。此外，也請檢查 [Google 索引]<strong></strong> &gt; [<a href="https://www.support.google.com/webmasters/answer/164734">移除網址</a>] 或 [設定]<span class="material-icons"></span> &gt; [<a href="https://www.support.google.com/webmasters/answer/83106">變更網址</a>] 部分中是否列有不尋常的項目。</li>
+</ol>
+<a name="determine"></a>
+
+<h4>判斷攻擊性質</h4>
+
+<p>您可參考 Search Console 在「訊息中心」和「安全性問題」中的資訊，判斷網站是否遭到下列任何形式入侵：</p>
+
+<ul>
+  <li>使搜尋結果品質和關聯性降低的垃圾內容。</li>
+  <li>網路釣魚攻擊。</li>
+  <li>散佈惡意軟體。</li>
+</ul>
+
+<p>如要使用 Search Console 調查入侵方式或惡意軟體，請完成以下步驟：</p>
+
+<ol>
+  <li>按一下右上角的 Search Console 標誌，前往 Search Console 首頁。</li>
+  <li>按一下 [訊息]<strong></strong>。</li>
+  <li>查看 Google 是否發送任何重大訊息，指出您的網站涉及下列行為：1) 提供垃圾網頁、文字或連結；2) 網路釣魚；3) 散佈惡意軟體。如果您收到了網路釣魚攻擊通知，請等到所有修復程序完成之後，再刪除這則訊息。</li>
+  <li>前往 Search Console 中的「安全性問題」<strong></strong>。
+    <ul>
+      <li>受到惡意軟體影響的網站將在頂層標題顯示「惡意軟體」和惡意軟體類別，例如「伺服器設定遭到竄改」或「錯誤範本植入」。在這種情況下，駭客可能在您的網站上以軟體存取訪客的機密資訊，或是使訪客的電腦受損。如要瞭解修復這個問題的方法，請繼續閱讀<a href="hacked_with_malware">評估惡意軟體損害</a>。
+      </li>
+      <li>如果網站遭到入侵放置垃圾內容，頂層標題可能會顯示「遭到入侵」和駭客入侵類別，例如「植入內容」。駭客可能在您的網站上放置垃圾網頁、文字或連結。如要瞭解修復這個問題的方法，請繼續閱讀<a href="hacked_with_spam">評估垃圾內容損害</a>。</li>
+      <li>如果您因為某個網頁，在 Search Console 的「訊息中心」內收到「釣魚攻擊通知」，系統不一定會在「安全性問題」裡顯示該網頁的任何資訊。在您的網站上建立網路釣魚頁面，駭客往往就會以偽裝成可信網站的方式，透過您的網站竊取使用者的登入資訊、密碼或財務詳細資料。由於清除網路釣魚內容和垃圾內容的做法大同小異，請繼續閱讀<a href="hacked_with_spam">評估垃圾內容損害</a>。</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>後續步驟</h2>
+
+<p>本程序的下一個步驟可以是<a href="hacked_with_spam">評估垃圾內容損害 (遭到垃圾內容入侵)</a> 或者是<a href="hacked_with_malware">評估惡意軟體損害 (遭到惡意軟體入侵)</a>。</p>
+
+</body></html>

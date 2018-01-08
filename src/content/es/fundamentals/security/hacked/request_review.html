@@ -1,0 +1,63 @@
+<html devsite><head>
+<title>Solicitar una revisión</title>
+<meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+<meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+<body>
+<p>Para que tu página o sitio web dejen de estar marcados como peligrosos o como posiblemente engañosos para los usuarios, debes solicitar una revisión a Google.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lc3UjnDcMxo" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen> </iframe>
+</div>
+<h3>Lo que necesitarás:</h3>
+<ul>
+  <li>Conocimientos de los comandos de shell/terminal</li>
+</ul>
+<h3>Lo que debes hacer:</h3>
+<h4>1. Requisitos previos</h4>
+<p>Antes de solicitar una revisión, asegúrate de que hayas hecho lo siguiente:</p>
+<ul>
+  <li>Has demostrado que eres el propietario de tu sitio web en Search Console.</li>
+  <li>Has eliminado del sitio el contenido malicioso de los hackers.</li>
+  <li>Has corregido la vulnerabilidad.</li>
+  <li>Has vuelto a conectar el sitio web.</li>
+</ul>
+<h4>2. Comprueba que las páginas estén disponibles y limpias</h4>
+<p>Para mayor seguridad, utiliza Wget o cURL para ver las páginas del sitio web, por ejemplo, la página principal y una URL modificada por el hacker que ahora tendrían que estar limpias. Si es el caso y has comprobado que el resto de las páginas del sitio web también estén limpias, ya puedes solicitar una revisión.</p>
+  <p><strong>Importante:</strong> Para verificar que las páginas estén limpias, Googlebot debe poder rastrearlas. Comprueba que no estén excluidas en el archivo robots.txt y que no se haya bloqueado su indexación por haberse añadido "noindex" a las metaetiquetas o directivas de los robots.</p>
+<h4 id="request_review">3. Solicita una revisión</h4>
+<p>Antes de solicitar una revisión, asegúrate de que el problema se haya corregido de verdad. Si solicitas una revisión y el problema sigue ahí, solo lograrás prolongar el tiempo durante el que el sitio web estará marcado como peligroso.</p>
+<ul>
+  <li><strong>Phishing</strong>
+    <ol>
+      <li>Completa la revisión que encontrarás en <a href="https://www.google.com/safebrowsing/report_error/">google.com/safebrowsing/report_error/</a>.
+        Con esta revisión se retiran las advertencias de phishing de páginas que han contenido esta amenaza pero que ya están limpias. También sirve como herramienta de información para los propietarios de sitios web que creen que su página se ha marcado incorrectamente como un lugar de phishing.</li>
+    </ol>
+  </li>
+  <li><strong>Software malicioso o spam</strong>
+    <ol>
+      <li>En Search Console, abre el informe <a href="https://www.google.com/webmasters/tools/security-issues" target="new"><strong>Problemas de seguridad</strong></a>. Es probable que se sigan mostrando las advertencias y URL infectadas de ejemplo que aparecían antes.</li>
+      <li>Si crees que las URL de ejemplo que se muestran están limpias, selecciona <strong>Solicitar una revisión</strong>. Para presentar una revisión, debes proporcionarnos información que demuestre que los daños del hacker se han limpiado del sitio. Por ejemplo, para cada categoría de Problemas de seguridad, se puede escribir una frase que explique cómo se limpió el sitio web (por ejemplo, "En cuanto a las URL pirateadas con inyección de contenido, he retirado el contenido fraudulento y he corregido la vulnerabilidad actualizando un complemento desactualizado").</li>
+    </ol>
+  </li>
+</ul>
+<h4>4. Espera a que finalice la revisión</h4>
+<ul>
+  <li><strong>Tiempo de procesamiento de la revisión por software malicioso:</strong> son necesarios unos cuantos días para procesar las revisiones de sitios web infectados con software malicioso. Cuando la revisión haya finalizado, podrás consultar el resultado en la sección <strong>Mensajes</strong> de Search Console.</li>
+  <li><strong>Tiempo de procesamiento de la revisión de un sitio web pirateado con spam:</strong> se requieren unas cuantas semanas para procesar las revisiones de sitios web pirateados con spam. Esto se debe a que las revisiones de spam pueden implicar una investigación manual o tener que volver a procesar completamente las páginas pirateadas. Si la revisión tiene un resultado positivo, los tipos de la categoría pirateada o los ejemplos de URL pirateadas dejarán de mostrarse en la sección Problemas de seguridad. </li>
+  <li><strong>Tiempo de procesamiento de la revisión por phishing:</strong> este tipo de revisiones acostumbran a procesarse en un día aproximadamente. Si el resultado de la revisión es positivo, se retirará la advertencia de phishing que puede ver el usuario y la página se podrá volver a mostrar en los resultados de búsqueda.</li>
+</ul>
+<p>Si Google decide que tu sitio web está limpio, se retirarán las advertencias de los navegadores y de los resultados de búsqueda en un plazo de 72 horas.</p>
+<p>Si Google determina que no se ha resuelto el problema, en el informe Problemas de seguridad de Search Console se mostrarán más URL infectadas de ejemplo para ayudarte a investigar la causa.
+  Las advertencias de software malicioso o de sitio web pirateado permanecerán en los resultados de búsqueda o en los navegadores como precaución para proteger a los usuarios.</p>
+<h4>Últimos pasos</h4>
+<ul>
+  <li><strong>Si la solicitud ha tenido un resultado positivo</strong>, comprueba que el sitio web funcione correctamente, que las páginas se carguen sin problemas y que se pueda hacer clic en los enlaces. Para mantener la seguridad del sitio web, recomendamos a todos los propietarios de sitios web que implementen el plan de mantenimiento y seguridad creado en el paso <a href="clean_site">Limpiar el sitio web y hacer tareas de mantenimiento</a>. Para obtener más información, consulta los siguientes recursos de <a href="https://www.stopbadware.org">StopBadware</a>:
+    <ul>
+      <li><a href="https://www.stopbadware.org/prevent-badware-basics">Prevención de software malicioso: conceptos básicos</a></li>
+      <li><a href="https://www.stopbadware.org/hacked-sites-resources">Recursos adicionales: sitios web pirateados</a></li>
+    </ul>
+  </li>
+  <li><strong>Si la solicitud no se ha aprobado</strong>, vuelve a revisar el sitio web para detectar <a href="hacked_with_malware">software malicioso</a> o <a href="hacked_with_spam">spam</a>, o para comprobar si el hacker ha modificado o creado archivos. También puedes solicitar ayuda a los <a href="support_team">especialistas del equipo de asistencia</a>.</li>
+</ul>
+
+</body></html>

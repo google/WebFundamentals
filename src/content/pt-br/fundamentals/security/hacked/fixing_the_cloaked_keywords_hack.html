@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>Correção de palavras-chave e links invadidos com técnicas de cloaking</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Este guia foi criado especificamente para um tipo de invasão que adiciona páginas com conteúdo sem sentido e cheias de palavras-chave ao site, a qual chamamos de invasão com conteúdo sem sentido. Ele foi projetado para usuários dos <a href="https://pt.wikipedia.org/wiki/Sistema_de_gerenciamento_de_conte%C3%BAdo" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Sistemas de gerenciamento de conteúdo mais conhecidos</a> (CMS, na sigla em inglês), mas será útil mesmo se você não usar um CMS.</p>
+
+<p><strong>Observação:</strong> você não tem certeza se o site foi invadido? Comece com a leitura do guia sobre <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">como verificar se o site foi invadido</a>.</p>
+
+
+
+<aside class="note">Esperamos que este guia seja realmente útil para você. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Deixe seu feedback</a> para nos ajudar a melhorar!</aside>
+
+<h2>Índice</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Etapa 1: como identificar esse tipo de invasão</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Etapa 2: como corrigir a invasão</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Etapa 3: outros recursos</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Perguntas frequentes sobre sites invadidos</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Como identificar esse tipo de invasão</h2>
+
+<p>A invasão de links e palavras-chave com cloaking cria automaticamente várias páginas com frases, links e imagens sem sentido. Às vezes, essas páginas contêm elementos do modelo básico do site original, de modo que, à primeira vista, elas parecem fazer parte do site, até você ler o conteúdo.</p>
+
+<p>As páginas invadidas são criadas para manipular os fatores de classificação do Google. Os hackers muitas vezes tentarão gerar receita com a venda dos links nas páginas invadidas para terceiros. Geralmente, as páginas invadidas também redirecionarão os visitantes para uma página não relacionada, como um site pornográficos onde os hackers podem ganhar dinheiro.</p>
+
+<p>Para verificar esse problema, comece usando a ferramenta <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemas de segurança</a> no <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> para ver se o Google descobriu algum exemplo dessas páginas invadidas no seu site. Às vezes, também é possível descobrir páginas como essa abrindo uma janela da Pesquisa Google e digitando <code class="notranslate l10n-notranslate">site:[your site]</code>. Isso mostrará as páginas do seu site que o Google indexou, incluindo as páginas invadidas. Confira algumas páginas dos resultados da pesquisa para ver se você consegue identificar URLs incomuns. Caso não encontre conteúdo invadido na Pesquisa Google, tente usar os mesmos termos de pesquisa em um mecanismo de pesquisa diferente. Outros mecanismos de pesquisa podem mostrar conteúdos invadidos que o Google removeu do índice.
+  Veja abaixo um exemplo disso.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Observação:</strong> <em>os resultados da pesquisa contêm várias páginas que não foram criadas pelo proprietário do site.Se você ler com atenção as descrições do segundo e do terceiro resultado da pesquisa, verá exemplos do texto sem sentido criados por essa invasão.</em></p>
+
+<p>Ao visitar uma página invadida, talvez encontre uma mensagem informando que a página não existe (por exemplo, um erro 404). Não se deixe enganar! Os hackers tentarão fazer com que você acredite que as páginas invadidas saíram do ar ou foram corrigidas. Eles fazem isso com <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">técnicas de cloaking</a> de conteúdo. Verifique se há técnicas de cloaking inserindo os URLs do site na ferramenta <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch as Google</a>. Com a ferramenta Fetch as Google, você pode ver o conteúdo escondido subjacente.
+  Veja abaixo um exemplo da aparência desse tipo de página invadida.</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>Como corrigir a invasão</h2>
+
+<p>Faça uma cópia off-line dos arquivos antes de removê-los, caso precise restaurá-los mais tarde. Ou, então, faça backup do site inteiro antes de iniciar o processo de limpeza. É possível fazer isso salvando todos os arquivos que estão no seu servidor para um local fora dele ou procurando as melhores opções de backup para seu CMS específico.</p>
+
+<h3>Verificar o arquivo .htaccess (3 etapas)</h3>
+
+<p>A invasão de links e palavras-chave com cloaking usam o arquivo .htaccess para criar automaticamente páginas com cloaking no site. Conhecer os <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">princípios básicos do .htaccess</a> no site oficial do Apache pode ajudar você a entender melhor como a invasão afeta seu site (mas não é uma exigência). </p>
+
+<p><b>Etapa 1</b></p>
+<p>Localize o arquivo .htaccess no site. Se você não tiver certeza de onde encontrá-lo e estiver usando um CMS, como WordPress, Joomla ou Drupal, pesquise "local do arquivo .htaccess" em um mecanismo de pesquisa junto com o nome do CMS. Dependendo do site, você encontrará vários arquivos .htaccess. Faça uma lista com todos os locais dos arquivos .htaccess.
+</p>
+
+<p><strong>Observação:</strong> muitas vezes, o .htaccess é um "arquivo oculto". Ative a exibição de arquivos ocultos ao procurar por ele.</p>
+
+
+<p><b>Etapa 2</b></p>
+<p>Abra o arquivo .htaccess para visualizar o conteúdo dele. No arquivo, encontre uma linha de código semelhante a esta:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>As variáveis nessa linha podem ser diferentes. As sequências "cj2fa" e "tobeornottobe" podem ser uma mistura de letras ou palavras. O mais importante é identificar o .php ao qual essa linha faz referência.</p>
+
+<p>Anote o arquivo .php mencionado no arquivo .htaccess. No exemplo, o arquivo .php se chama "injected_file.php", mas, na realidade, o nome do arquivo .php não será tão óbvio. Geralmente, ele é um conjunto aleatório de palavras sem sentido, como "horsekeys.php" ou "potatolake.php". Há uma grande chance de que esse seja um arquivo .php malicioso que precisaremos rastrear e remover mais tarde.</p>
+
+<div class="alert">Nem todas as linhas com "RewriteRule" e um arquivo .php no .htaccess são maliciosas.
+  Se você não tiver certeza da função de uma linha de código, peça ajuda a um grupo de webmasters experientes nos <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">Fóruns de Ajuda para webmasters</a>.</div>
+
+<p><b>Etapa 3</b></p>
+<p>Substitua todos os arquivos .htaccess por uma versão limpa ou padrão. Normalmente, é possível encontrar uma versão padrão do arquivo .htaccess pesquisando por "arquivo .htaccess padrão" e o nome do CMS. Para sites com vários arquivos .htaccess, encontre a versão limpa de cada um deles e faça a substituição.</p>
+
+<p>Se não houver um .htaccess padrão e você nunca tiver configurado um arquivo .htaccess no site, o arquivo .htaccess que você encontrar no site provavelmente será malicioso. Por segurança, salve uma cópia off-line dos arquivos .htaccess e exclua-os do site.</p>
+
+<h3>Localizar e remover outros arquivos maliciosos (5 etapas)</h3>
+
+<p>Identificar arquivos maliciosos pode ser complicado e demorar várias horas. Leve o tempo que precisar para verificar os arquivos. Este é um bom momento para fazer backup dos arquivos do site, caso ainda não o tenha feito. Pesquise no Google "backup de site" e o nome do CMS para encontrar instruções sobre como fazer isso.</p>
+
+<p><b>Etapa 1</b></p>
+<p>Se você usar um CMS, reinstale todos os arquivos principais (padrão) que vêm na distribuição padrão do CMS, além de tudo o que você tiver adicionado (como temas, módulos e plug-ins). Isso ajuda a garantir que esses arquivos não tenham conteúdo invadido. Pesquise no Google "reinstalar" e o nome do CMS para encontrar instruções sobre o processo de reinstalação. Se você tiver plug-ins, módulos, extensões ou temas, reinstale-os também.</p>
+
+<div class="alert">A reinstalação dos arquivos principais pode fazer com que você perca as personalizações feitas. Faça backup do seu banco de dados e de todos os arquivos antes da reinstalação.</div>
+
+<p><b>Etapa 2</b></p>
+<p>Comece procurando o arquivo .php identificado anteriormente no arquivo .htaccess. Dependendo de como você acessa os arquivos no seu servidor, deve haver algum tipo de funcionalidade de pesquisa. Pesquise o nome do arquivo malicioso. Se você o encontrar, faça uma cópia de backup e armazene-a em outro local, caso seja necessário restaurá-lo, e depois exclua o arquivo do site.</p>
+
+<p><b>Etapa 3</b></p>
+<p>Procure por outros arquivos maliciosos ou comprometidos. Todos os arquivos maliciosos podem já ter sido removidos nas duas etapas anteriores, mas é melhor seguir estas próximas etapas caso haja mais arquivos comprometidos no site.</p>
+
+<p>Não se preocupe achando que vai precisar abrir e examinar todos os arquivos PHP. Comece criando uma lista de arquivos PHP suspeitos que você quer investigar. Veja algumas maneiras de determinar quais arquivos PHP são suspeitos:</p><p>
+
+</p><ul>
+<li>Se você já atualizou os arquivos do CMS, verifique somente os arquivos que não fazem parte dos arquivos ou pastas padrão do CMS. Isso eliminará um grande número de arquivos PHP e deixará você com menos arquivos a serem examinados.</li>
+<li>Classifique os arquivos do site por data da última modificação. Procure arquivos que foram modificados nos meses anteriores ao momento em que você descobriu pela primeira vez que o site foi invadido.</li>
+<li>Classifique os arquivos do site por tamanho. Procure os arquivos muito grandes.</li>
+</ul>
+
+<p><b>Etapa 4</b></p>
+<p>Depois de fazer uma lista de arquivos PHP suspeitos, verifique se eles são normais ou maliciosos.
+  Se você não estiver familiarizado com PHP, esse processo pode ser mais demorado. Por isso, recomendamos consultar a <a href="https://php.net/docs.php">documentação sobre PHP</a>.
+  Contudo, mesmo que você seja totalmente leigo em codificação, existem alguns padrões básicos que você pode procurar para identificar arquivos maliciosos.</p>
+
+<p>Primeiro, analise os arquivos suspeitos já identificados para procurar blocos grandes de texto com uma combinação de letras e números aparentemente sem sentido. Em geral, o bloco grande de texto é precedido por uma combinação de funções PHP como base64_decode, rot13, eval, strrev, gzinflate. Veja abaixo um exemplo desse bloco de código. Muitas vezes, todo esse código está em uma linha longa de texto, o que faz com que ele pareça menor do que realmente é:</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Às vezes, o código não está desorganizado e parece um script normal. Caso você não tenha certeza se o código está ou não corrompido, acesse os <a href="http://productforums.google.com/forum/#!forum/webmaster" l10n-encrypted-href="fQuXjFBxhmb/QZLlBRRStclzk68vmg1gLAq//4NlIetgQfzyhj0grWcwKF9ndL8Cf1GLS0ZtWCnPTJXQEew+pg==">Fóruns de Ajuda para webmasters</a>, onde um grupo de webmasters experientes poderá ajudá-lo a examinar os arquivos.</p>
+
+<p><b>Etapa 5</b></p>
+<p>Agora que você sabe quais arquivos são suspeitos, crie um backup ou uma cópia local e salve os dados no seu computador, no caso de os arquivos não serem maliciosos, e exclua os arquivos suspeitos.</p>
+
+<h3>Verificar se o site está limpo</h3>
+
+<p>Depois de remover os arquivos invadidos, verifique se o trabalho valeu a pena. Você lembra das páginas sem sentido identificadas anteriormente? Use a ferramenta Fetch as Google novamente para ver se elas ainda existem. Se a resposta do Fetch as Google for "Não encontrado", será provável que o site esteja em boas condições, e você poderá começar a corrigir as vulnerabilidades nele.</p>
+
+<div class="tip">Também é possível seguir as etapas no <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Solucionador de problemas para sites invadidos</a> para verificar se ainda há conteúdo invadido no site.</div>
+
+<h2>Como evitar ser invadido novamente?</h2>
+
+<p>A correção de vulnerabilidades é uma etapa final essencial para a correção do site. Um estudo recente descobriu que 20% dos sites invadidos são invadidos novamente dentro de um dia. É importante saber exatamente como o site foi invadido. Leia o guia <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Formas mais comuns de invasão de websites por criadores de spam</a> para começar sua investigação. No entanto, se você não conseguir descobrir como seu site foi invadido, veja abaixo uma lista de verificação de medidas que você pode tomar para reduzir as vulnerabilidades do site.</p>
+
+<ul>
+<li>Atualize regularmente o CMS, plug-ins, extensões e módulos: se tudo estiver certo, você já deve ter feito esta etapa. Muitos sites são invadidos por causa de um software desatualizado sendo executado no site. Alguns CMSs são compatíveis com a atualização automática.</li>
+<li>Faça uma varredura regularmente no seu computador: use um programa antivírus confiável para verificar a presença de vírus ou vulnerabilidades.</li>
+<li>Troque suas senhas regularmente: trocar regularmente as senhas de todas as contas do seu website, como a senha do provedor de hospedagem, do FTP e do CMS, pode impedir o acesso não autorizado ao site.
+  É importante criar uma senha forte e exclusiva para cada conta.</li>
+<li>Use a <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">autenticação de dois fatores (2FA)</a>: recomendamos a ativação da 2FA em todos os serviços que exijam login. A 2FA dificulta o login de hackers, mesmo que eles roubem sua senha.</li>
+<li>Considere se inscrever em um serviço de segurança para monitorar o site: há muitos serviços excelentes que podem ajudar você no monitoramento do site por uma pequena taxa. Recomendamos que você faça registro em um deles para manter o site seguro.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Outros recursos</h2>
+<p>Se você ainda estiver com problemas para corrigir o site, há mais alguns recursos que podem ajudá-lo.</p>
+
+<p>Estas ferramentas fazem a varredura do site e podem encontrar conteúdos problemáticos. O Google não desenvolve nem oferece suporte para elas, a não ser a VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: são algumas ferramentas que podem fazer a varredura do site em busca de conteúdos problemáticos. Esses scanners não garantem a identificação de todos os tipos de conteúdo problemático.</p>
+
+<p>Veja outros recursos do Google que podem ajudar você:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Fórum de Ajuda para webmasters do Google</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Ajuda para webmasters do Google para sites invadidos</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+</ul>
+
+<div class="alert">Não encontra nenhuma ferramenta que pode ser útil? <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Dê seu feedback</a> e nos avise.</div>
+
+
+</body></html>

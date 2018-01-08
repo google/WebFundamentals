@@ -113,3 +113,32 @@ redirects:
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
+
+
+# From list of 404s
+- from: /web/fundamentals/primers/push-notifications/
+  to: /web/fundamentals/push-notifications/
+
+- from: /web/fundamentals/push-notifications/good-notification
+  to: /web/fundamentals/push-notifications/common-notification-patterns
+
+- from: /web/fundamentals/principles/...
+  to: /web/fundamentals/design-and-ux/principles/
+
+- from: /web/fundamentals/discovery-and-distribution/avoid-mixed-content/...
+  to: /web/fundamentals/security/prevent-mixed-content/...
+
+- from: /web/fundamentals/design-and-ux/browser-customization/theme-color
+  to: /web/fundamentals/design-and-ux/browser-customization/#color_browser_elements
+
+- from: /web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries
+  to: /web/fundamentals/design-and-ux/responsive/#css-media-queries
+
+- from: /web/fundamentals/user-input/form-input/
+  to: /web/fundamentals/design-and-ux/input/forms/
+
+- from: /web/fundamentals/discovery-and-distribution/security-with-https/
+  to: /web/fundamentals/security/encrypt-in-transit/why-https
+
+- from: /web/fundamentals/design-and-ux/input/
+  to: /web/fundamentals/design-and-ux/input/forms/

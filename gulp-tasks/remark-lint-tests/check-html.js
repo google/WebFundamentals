@@ -17,6 +17,7 @@ module.exports = {
   'wf-html-dgc-links': wfHTMLDGCLinks,
   'wf-html-internal-links': wfInternalLinks,
   'wf-html-link-forced-lang': wfForcedLang,
+  'wf-html-link-line-breaks': wfLineBreakInLink,
   'wf-html-unsafe-short-links': wfUnsafeShortLinks,
 };
 
@@ -26,6 +27,27 @@ const reDGCLink = /^<a\s.*?href=['|"]?(https?:)?\/\/developers.google.com/i;
 const reSandboxedLink = /^<a\s.*?href=['|"]?(https?:)?\/\/sandbox.google.com/i;
 const reGooGL = /^<a\s.*?href=['|"]?http:\/\/goo\.gl\//i;
 const reHref = /^<a\s.*href=['|"](.*)['|"]>/i;
+
+/**
+ * Remark Lint Test - check if links have whitespace or line breaks.
+ *
+ * @param {Object} ast
+ * @param {Object} file
+ * @param {Object} setting
+ */
+function wfLineBreakInLink(ast, file, setting) {
+  const msg = 'Link contains unescaped whitespace or accidental line break.';
+  const RE_WHITESPACE = /\s/;
+  visit(ast, 'html', function(node) {
+    const anchorTag = node.value.match(/<a((.|\n)*?)>/i);
+    if (anchorTag && anchorTag[1]) {
+      const href = anchorTag[1].match(/href=["|']((.|\n)*?)["|']/i);
+      if (href && href[1] && RE_WHITESPACE.test(href[1])) {
+        file.message(msg, node);
+      }
+    }
+  });
+}
 
 /**
  * Remark Lint Test - flags iframes that embed YouTube content.

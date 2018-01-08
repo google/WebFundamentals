@@ -38,7 +38,7 @@
 
   /* Expand/Collapses the Primary Left Hand Nav */
   function toggleNav(event) {
-    var srcElement = event.srcElement;
+    var srcElement = event.srcElement || event.target;
     var srcParent = srcElement.parentElement;
     // Ensure's we're in the outer most <span>
     if (srcElement.localName === 'span' && srcParent.localName === 'span') {

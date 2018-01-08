@@ -151,7 +151,7 @@ You can use existing methods to deliver credential information to your server:
 <aside class="warning">
   <strong>Warning:</strong>
   Now that passwords are no longer returned in the <code>PasswordCredential</code> object,
-  the custom <code>fetch()</code> function will stop working in Chrome 62.
+  the custom <code>fetch()</code> function will stop working in Chrome 64 (expected [23 Jan 2018](https://www.chromestatus.com/features/schedule)).
   Developers <strong>must</strong> update their code.
 </aside>
 

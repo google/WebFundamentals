@@ -2,20 +2,18 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0.
 
-{# wf_updated_on: 2017-10-12 #}
-{# wf_published_on: 2017-10-11 #}
+{# wf_updated_on: 2017-12-28 #}
+{# wf_published_on: 2017-12-28 #}
 {# wf_tags: chrome63,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 # What's New In DevTools (Chrome 63) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-Note: The video version of these release notes will be published around
-early-December 2017.
 
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
@@ -28,6 +26,14 @@ Welcome back! New features coming to DevTools in Chrome 63 include:
 Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
+
+Read on or watch the video below to learn more!
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Eyw_mwbABIQ"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Multi-client remote debugging support {: #multi-client }
 

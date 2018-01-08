@@ -25,3 +25,4 @@ toc:
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
         step_group: security-mixed-content
+    - include: /web/fundamentals/security/hacked/_toc.yaml

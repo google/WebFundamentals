@@ -2,14 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
-
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.expiration)
 
 ## What is Cache Expiration?
 
@@ -40,7 +39,7 @@ workbox.routing.registerRoute(
 ```
 
 With this, the
-[CacheExpirationPlugin](../next/reference-docs/latest/workbox.expiration.CacheExpirationPlugin)
+[Plugin](/web/tools/workbox/reference-docs/prerelease/workbox.expiration.Plugin)
 will be added to this route. After a cached response is used or a new request
 is added to the cache the plugin will look at the configured cache and ensure
 that the number of cached entries doesn’t exceed the limit. If it does,
@@ -80,7 +79,7 @@ as it doesn’t require an IndexedDB lookup..
 
 If you’d like to use the expiration logic separate from any other Workbox
 modules you can do so with the
-[CacheExpiration](../next/reference-docs/latest/workbox.expiration.CacheExpiration)
+[CacheExpiration](/web/tools/workbox/reference-docs/prerelease/workbox.expiration.CacheExpiration)
 class.
 
 To apply restrictions to a cache, you’d create an instance of `CacheExpiration`

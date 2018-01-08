@@ -18,7 +18,7 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the changes in Chrome 52, which is in beta as 
 of June 9. This list is subject to change at any time.
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 ## Deprecate MediaStream ended event and attribute and onended attribute
 
