@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Mariko explains creative coding.
 
-{# wf_updated_on: 2017-07-21 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-07-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3 #}
 {# wf_podcast_duration: 00:11:20 #}

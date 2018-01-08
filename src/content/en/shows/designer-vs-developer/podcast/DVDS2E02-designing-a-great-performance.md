@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Addy talks about designing performance.
 
-{# wf_updated_on: 2017-08-07 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-08-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3 #}
 {# wf_podcast_duration: 00:13:34 #}

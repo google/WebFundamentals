@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Sam talks about designing for the next billion users
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-09-25 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3 #}
 {# wf_podcast_duration: 00:09:23 #}
@@ -30,7 +31,7 @@ class="attempt-right">
 In this episode:
 
 * Is it worth designing for the emerging markets?
-* What are the advantages of using NBU performance techinques?
+* What are the advantages of using NBU performance techniques?
 * Designing for data costs.
 * Design restrictions.
 * Packaging and print design.

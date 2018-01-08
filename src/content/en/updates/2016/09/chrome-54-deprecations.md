@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-09-14 #}
+{# wf_blink_components: Internals>Network>HTTP2,IO>Keyboard,Blink>MediaStream>*,Blink>SVG #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-09-14 #}
 {# wf_tags: deprecations,removals,chrome54 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -12,7 +13,7 @@ description: An round up of the deprecations and removals in Chrome to help you 
 {% include "web/_shared/contributors/josephmedley.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-In nearly every version of Chrome, we see a significant number of updates and improvements to the product, its performance, and also capabilities of the Web Platform. This article describes the deprecations and removals in Chrome 54, which is in beta as of Setempber 15. This list is subject to change at any time.
+In nearly every version of Chrome, we see a significant number of updates and improvements to the product, its performance, and also capabilities of the Web Platform. This article describes the deprecations and removals in Chrome 54, which is in beta as of September 15. This list is subject to change at any time.
 
 ## Disable navigations in the unload handler
 

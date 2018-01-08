@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_blink_components: UI>Shell>TouchView,Internals>Media>Encrypted,Blink>Storage>IndexedDB #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}

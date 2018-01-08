@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Module preload offers a way of declaratively loading JavaScript modules ahead of time.
 
-{# wf_updated_on: 2017-12-14 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-12-14 #}
 {# wf_tags: performance, modules #}
 {# wf_blink_components: Blink>Loader #}
@@ -22,7 +22,7 @@ JavaScript that runs natively in the browser, without transpilers or bundlers.
 Module-based development offers some real advantages in terms of cacheability,
 helping you reduce the number of bytes you need to ship to your users.
 The finer granularity of the code also helps with the loading story, by letting you
-prioritise the critical code in your application.
+prioritize the critical code in your application.
 
 However, module dependencies introduce a loading problem, in that the browser needs
 to wait for a module to load before it finds out what its dependencies are. One way
@@ -107,7 +107,7 @@ until it tries to run.
 
 ## But what about modules' dependencies?
 
-Funny you should ask! There is indeed something we haven't talked about: recursivity.
+Funny you should ask! There is indeed something we haven't talked about: recursively.
 
 The `<link rel="modulepreload">` spec actually allows for optionally loading not just
 the requested module, but all of its dependency tree as well. Browsers don't have to

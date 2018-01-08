@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Matt talks about PWA's competing with native
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E06-how-PWAs-can-compete-with-native.mp3 #}
 {# wf_podcast_duration: 00:12:21 #}

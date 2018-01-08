@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2017-11-27 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
@@ -14,7 +14,7 @@ description: The module guide for workbox-cli.
 
 The Workbox command line interface (contained in the the
 `workbox-cli` package) consists of a Node.js program called workbox that
-can be run from a Windows, MacOS, of UNIX-compatible command line
+can be run from a Windows, macOS, of UNIX-compatible command line
 environment. Under the hood, workbox-cli wraps the  workbox-build module,
 and provides an easy way of integrating Workbox into a command line build
 process, with flexible configurations.
