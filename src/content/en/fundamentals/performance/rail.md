@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2017-12-19 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -104,18 +104,19 @@ of their time waiting for sites to respond to their input, not waiting for the s
 * Though it may sound counterintuitive, it's not always the right call to respond to user
   input immediately. You can use this 100ms window to do other expensive work. But be
   careful not to block the user. If possible, do work in the background.
-* For actions that take longer than 500ms to complete, always provide feedback.
+* For actions that take longer than 50ms to complete, always provide feedback.
 
 ## Animation: produce a frame in 10ms {: #animation }
 
-**Goal**: Produce frames as fast as the user's hardware can display them. Users notice when
-animation frame rates vary.
-
-**Guidelines**:
+**Goals**: 
 
 * Produce each frame in an animation in 10ms or less. Technically, the maximum budget for
   each frame is 16ms (1000ms / 60 frames per second ≈ 16ms), but browsers need about 6ms to
   render each frame, hence the guideline of 10ms per frame.
+* Aim for visual smoothness. Users notice when frame rates vary.
+
+**Guidelines**:
+
 * In high pressure points like animations, the key is to do nothing where you
   can, and the absolute minimum where you can't. Whenever possible, make use of
   the 100ms response to pre-calculate expensive work so that you maximize your
@@ -156,10 +157,13 @@ See [The Need For Mobile Speed: How Mobile Latency Impacts Publisher Revenue][NE
 
 **Goals**: 
 
-* For first loads, load the page and be [interactive][tti] in 5 seconds or less on mid-range
-  mobile devices with slow 3G connections. See [Can You Afford It? Real-World Web Performance
-  Budgets][Budgets].
-* For subsequent loads, load the page in under 2 seconds.
+* Optimize for fast loading performance relative to the device and network capabilities that
+  your users use to access your site. Currently, a good target for first loads is to load the
+  page and be [interactive][tti] in 5 seconds or less on mid-range mobile devices with slow
+  3G connections. See [Can You Afford It? Real-World Web Performance Budgets][Budgets]. But be
+  aware that these targets may change over time.
+* For subsequent loads, a good target is to load the page in under 2 seconds. But this target
+  may also change over time.
 
 <figure>
   <img src="images/speed-metrics.png"
