@@ -5,219 +5,230 @@ landing_page:
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
-  custom_css_path: /web/styles/wf-root.css
+  custom_css_path: /web/styles/wf-landing.css
+
+  header:
+    custom_html: >
+        <div class="devsite-collapsible-section">
+          <div class="devsite-header-background">
+            <div class="wf-hero-flex">
+              <div class="wf-hero-flex-item wf-hero-webfu">
+                  <img src="/web/images/web-fundamentals-icon192x192.png">
+                  <h3>Web Fundamentals</h3>
+                  <p>
+                    Tutorials, guides, and best practices for building the next
+                    generation of web experiences.
+                  </p>
+                  <a class="button gc-analytics-event" data-category="webFu" data-label="fundamentals-landing" data-action="web-home" href="/web/fundamentals/">Get Started</a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="wf-hero-flex-item wf-hero-tools">
+                  <img src="/web/images/tool_icon.png">
+                  <h3>Tools</h3>
+                  <p>
+                    <a href="/web/tools/chrome-devtools/" class="gc-analytics-event" data-category="webFu" data-label="devtools-landing" data-action="web-home">Chrome DevTools</a>,
+                    <a href="/web/tools/lighthouse/" class="gc-analytics-event" data-category="webFu" data-label="lighthouse-landing" data-action="web-home">Lighthouse</a>,
+                    <a href="/web/tools/workbox/" class="gc-analytics-event" data-category="webFu" data-label="workbox-landing" data-action="web-home">Workbox</a>,
+                    and more tools to make your life easier and improve your
+                    development artistry.
+                  </p>
+                  <a class="button gc-analytics-event" href="/web/tools/" data-category="webFu" data-label="tools-landing" data-action="web-home">Learn More</a>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
   rows:
-
-  - heading: Learn How to Develop the Next Generation of Applications for the Web
-    classname: devsite-landing-row-67
+  - classname: wf-landing-row
     items:
-    - description: >
-        <p>
-          The average user visits more than 100 websites on their mobile
-          device every month, and expectations for speed and quality are higher
-          than ever. These resources can help you supercharge your new or
-          existing project with the next generation of web technologies in
-          order to deliver fast, secure, and performant content to any screen.
-         </p>
-      image_path: images/hero-2x.png
-
-  - classname: devsite-landing-row-no-image-background
-    items:
-    - heading: Web Fundamentals
+    - heading: Move to HTTPS
+      image_path: /web/images/content-https-2x.jpg
       description: >
-        The fundamental knowledge you need to build delightful, modern,
-        responsive web experiences. 
-      icon:
-        path: /web/images/web-fundamentals-icon192x192.png
-      path: /web/fundamentals/
+        HTTPS allows users to securely connecto to your website or app. Set up
+        HTTPS to protect the integrity and security of your users.
+      path: /web/fundamentals/security/
       path_attributes:
       - name: class
         value: gc-analytics-event
       - name: data-category
-        value: webHome
+        value: webFu
       - name: data-label
-        value: hero-webfu
-    - heading: Tools
-      description: >
-        Discover tools that can help you kickstart your development and 
-        improve your workflow.
-      icon:
-        icon_name: build
-      path: /web/tools/
-      path_attributes:
-      - name: class
-        value: gc-analytics-event
-      - name: data-category
-        value: webHome
-      - name: data-label
-        value: hero-tools
-    - heading: Updates
-      description: >
-        Stay up to date on new web platform features, changes to Chrome
-        and more.
-      icon:
-        icon_name: whatshot
-      path: /web/updates/
-      path_attributes:
-      - name: class
-        value: gc-analytics-event
-      - name: data-category
-        value: webHome
-      - name: data-label
-        value: hero-updates
+        value: fundamentals-https
+      - name: data-action
+        value: web-home
+      buttons:
+      - label: Get HTTPS
+        path: /web/fundamentals/instant-and-offline/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-https
+        - name: data-action
+          value: web-home
 
-
-
-  - heading: A solution for everyone
-    classname: devsite-landing-row-no-image-background
-    items:
     - heading: Progressive Web Apps
       description: >
-        <p>
-          Progressive Web Applications take advantage of new technologies to
-          bring the best of mobile sites and native applications to users.
-          They are:
-        </p>
-        <ul class="checkmarks">
-          <li>
-            <b>Reliable</b> - Load instantly and never show the downasaur,
-            even in uncertain network conditions.
-          </li>
-          <li>
-            <b>Fast</b> - Respond quickly to user interactions with silky
-            smooth animations and no janky scrolling.
-          </li>
-          <li>
-            <b>Engaging</b> - Feel like a natural app on the device, with an
-            immersive user experience.
-          </li>
-        </ul>
-      icon:
-        icon_name: devices_other
+        A new class of web app that is fast, integrated, reliable, and engaging.
+      image_path: /web/images/content-responsive-2x.jpg
       path: /web/progressive-web-apps/
       path_attributes:
       - name: class
         value: gc-analytics-event
       - name: data-category
-        value: webHome
+        value: webFu
       - name: data-label
-        value: solution-pwa
-    - heading: Accelerated Mobile Pages
+        value: pwa-landing
+      - name: data-action
+        value: web-home
+      buttons:
+      - label: Get Started
+        path: /web/fundamentals/instant-and-offline/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: pwa-landing
+        - name: data-action
+          value: web-home
+
+    - heading: Load Instantly
       description: >
-        <p>
-          The Accelerated Mobile Pages (AMP) project provides a new standard,
-          built on top of existing web technologies, to enable blazing-fast
-          page rendering and content delivery.
-        </p>
-        <ul class="checkmarks">
-          <li>
-            <b>Speed</b> - Pages load instantly which means more engagement.
-          </li>
-          <li>
-            <b>Openness</b> - It works everywhere, cross platform.
-          </li>
-          <li>
-            <b>Control</b> - It’s just HTML - you control how your content
-            looks and feels.
-          </li>
-        </ul>
-      icon:
-        icon_name: offline_bolt
-      path: /amp/
+        Users don't have the patience to wait for sites that can't deliver
+        content quickly.
+      image_path: /web/images/content-performance-2x.jpg
+      path: /web/fundamentals/instant-and-offline/
       path_attributes:
       - name: class
         value: gc-analytics-event
       - name: data-category
-        value: webHome
+        value: webFu
       - name: data-label
-        value: solution-amp
+        value: fundamentals-instant
+      - name: data-action
+        value: web-home
+      buttons:
+      - label: Get Fast
+        path: /web/fundamentals/instant-and-offline/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-instant
+        - name: data-action
+          value: web-home
 
 
-  - items:
-    - heading: Developer Feedback
+  - heading: Updates
+    classname: wf-updates-container
+    description: Stay up to date on new web platform features, changes to Chrome and more.
+    columns:
+    - description: >
+        {% include "web/_index-latest-show.html" %}
+
+    - description: >
+        {% include "web/_index-latest-updates.html" %}
+
+
+  - classname: wf-landing-row
+    items:
+    - heading: Get Involved
       description: >
-        <p>
-          Check the state of existing bugs through the Browser Bug Searcher and
-          learn how to give feedback for web platform features on all browsers
-          and platforms.
-        </p>
-      icon:
-        icon_name: bug_report
-      path: feedback/
+        Check the state of existing bugs and provide feedback for web platform features.
+      custom_image:
+        background: google-blue
+        icon_name: how_to_reg
+      path: /web/feedback/
       path_attributes:
       - name: class
         value: gc-analytics-event
       - name: data-category
-        value: webHome
+        value: webFu
       - name: data-label
-        value: solution-feedback
-    - heading: ''
-      description: ''
-
-  - heading: Latest updates for Web Developers
-    items:
-    - classname: devsite-landing-row-50
-      description: >
-        <div class="feed hfeed" data-limit="2">
-          <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
-          <article class="hentry">
-            <a class="link gc-analytics-event" data-category="webHome" data-label="whats-new"><header></header></a>
-            <article class="entry-content" data-truncate="50w"></article>
-            <div>
-              <a class="link gc-analytics-event" data-category="webHome" data-label="whats-new"><time class="updated published"></time></a>
-            </div>
-          </article>
-        </div>
-      youtube_id: 3tb-1MWg44Y
-
-  - heading: Follow best practices
-    classname: devsite-landing-row-no-image-background
-    items:
-    - heading: Move to HTTPS
-      description: >
-        HTTPS allows users to securely connect to your website or app. Set up
-        HTTPS to protect the integrity of your site, and the security of your
-        users.
-      image_path: images/content-https-2x.jpg
+        value: feedback-landing
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: /web/fundamentals/security/
-        classname: gc-analytics-event
+      - label: Get Involved
+        path: /web/feedback/
+        classname: button button-primary
         attributes:
+        - name: class
+          value: gc-analytics-event
         - name: data-category
-          value: webHome
+          value: webFu
         - name: data-label
-          value: bp-https
+          value: feedback-landing
+        - name: data-action
+          value: web-home
 
-    - heading: Optimize performance
+    - heading: Training
       description: >
-        Users don’t have the patience to wait for sites that can’t deliver
-        content quickly. Learn testing techniques and best practices to ensure
-        that your sites and apps are optimized and performant.
-      image_path: images/content-performance-2x.jpg
+        Level-up your skills with in-person and online training courses for web developers.
+      custom_image:
+        background: google-blue
+        icon_name: school
+      path: /web/ilt/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: training-landing
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: /web/fundamentals/performance/
-        classname: gc-analytics-event
+      - label: Start Learning
+        path: /web/ilt/
+        classname: button button-primary
         attributes:
+        - name: class
+          value: gc-analytics-event
         - name: data-category
-          value: webHome
+          value: webFu
         - name: data-label
-          value: bp-optimize
+          value: training-landing
+        - name: data-action
+          value: web-home
 
-    - heading: Make it responsive
+    - heading: Case Studies
       description: >
-        Modern users live on phones, tablets and laptops; your apps and
-        websites should do the same. Learn how to structure and code your
-        content to look great on screens of any size.
-      image_path: images/content-responsive-2x.jpg
+        Learn why and how other developers have used the web to create amazing
+        web experiences for their users.
+      custom_image:
+        background: google-blue
+        icon_name: trending_up
+      path: /web/showcase/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: showcase-landing
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: /web/fundamentals/design-and-ux/responsive/
-        classname: gc-analytics-event
+      - label: See More
+        path: /web/showcase/
+        classname: button button-primary
         attributes:
+        - name: class
+          value: gc-analytics-event
         - name: data-category
-          value: webHome
+          value: webFu
         - name: data-label
-          value: bp-responsive
+          value: showcase-landing
+        - name: data-action
+          value: web-home
