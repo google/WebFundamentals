@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-01-09 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -248,7 +248,7 @@ The following DevTools features are especially relevant:
 * [Analyze frames per second (FPS)][FPS] to measure whether your animations truly run smoothly.
 * [Monitor CPU usage, JS heap size, DOM nodes, layouts per second, and more][PM] in real-time
   with the **Performance Monitor**.
-* [Vizualize network requests][NW] that occurred while you were recording with the
+* [Visualize network requests][NW] that occurred while you were recording with the
   **Network** section.
 * [Capture screenshots while recording][screenshots] to play back exactly how the page looked
   while the page loaded, or an animation fired, and so on.
@@ -302,7 +302,7 @@ The following audits are especially relevant:
     * [Offscreen Images][OI]. Defer the loading of offscreen images until they're needed.
     * [Properly Size Images][PSImages]. Don't serve images that are significantly larger than
       the size that's rendered in the mobile viewport.
-    * [Critical Request Chains][CRC]. Vizualize your [Critical Rendering Path][CRP].
+    * [Critical Request Chains][CRC]. Visualize your [Critical Rendering Path][CRP].
     * [Uses HTTP/2][HTTP2].
     * [Optimize Images][OptI].
     * [Enable Text Compression][ETC].
