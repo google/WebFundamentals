@@ -176,7 +176,7 @@ an existing card will be selected for them.
 
 Note: To get access to all forms of payment available with Google, developers
 will need to implement the Pay with Google method. Refer to the
-[Google Payment API](/payments/web/paymentrequest/tutorial) docs for more information.
+[Google Pay API](/payments/web/paymentrequest/tutorial) docs for more information.
 
 <div class="attempt-center">
   <figure>

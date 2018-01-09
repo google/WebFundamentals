@@ -12,7 +12,7 @@ description: Android Pay enables simple and secure purchases online and eliminat
 
 Warning: Android Pay is now Pay with Google and provides access to payment
 tokens on the device and credit and debit cards from a user's Google account. To
-learn more about Pay with Google, read [Google Payment API](/payments/) docs.
+learn more about Pay with Google, read [Google Pay API](/payments/) docs.
 
 Android Pay enables simple and secure purchases online and eliminates the
 need for users to remember and manually enter their payment information.
