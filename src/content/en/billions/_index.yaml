@@ -8,12 +8,10 @@ landing_page:
 
   header:
     description: >
-      <h2 class="wf-header-title">Building for Billions</h2>
-      <p>
         The next billion people coming online will be diverse in every respect:
         their location, cultural experience, computer expertise,
         connectivity access, and the kinds of devices they use.
-      </p>
+
 
   rows:
 
