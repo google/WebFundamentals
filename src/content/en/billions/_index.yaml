@@ -1,5 +1,3 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 title: Building for Billions
@@ -8,12 +6,9 @@ landing_page:
 
   header:
     description: >
-      <h2 class="wf-header-title">Building for Billions</h2>
-      <p>
         The next billion people coming online will be diverse in every respect:
         their location, cultural experience, computer expertise,
         connectivity access, and the kinds of devices they use.
-      </p>
 
   rows:
 
@@ -32,8 +27,8 @@ landing_page:
         </p>
       youtube_id: 9Bz5TikmJ-A
 
-  # TWO
-  - classname: devsite-landing-row-no-image-background
+  # Row 1 - two cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Design for seamless connectivity
       description: >
@@ -82,8 +77,9 @@ landing_page:
         path: /web/fundamentals/performance/critical-rendering-path/
         classname: wf-small-link
 
-  # TWO
-  - classname: devsite-landing-row-no-image-background
+
+  # Row 2 - two cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Reduce battery consumption
       description: >
@@ -122,10 +118,8 @@ landing_page:
         path: /web/fundamentals/performance/
         classname: wf-small-link
 
-
-
-  # THREE
-  - classname: devsite-landing-row-no-image-background
+  # Row 3 - three cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Build multi-device content
       description: >
