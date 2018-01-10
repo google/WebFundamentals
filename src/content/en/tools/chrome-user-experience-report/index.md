@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2017-12-12 #}
+{# wf_updated_on: 2018-01-10 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -9,10 +9,8 @@ book_path: /web/tools/_book.yaml
 
 <img src="images/dataset.png" class="attempt-right" alt="">
 
-The Chrome User Experience Report is a
-[public dataset](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html)
-of key user experience metrics for popular origins on the web, as experienced 
-by Chrome users under real-world conditions.
+The Chrome User Experience Report provides user experience metrics for how 
+real-world Chrome users experience popular destinations on the web.
 
 ## Methodology {: #methodology }
 
@@ -20,9 +18,16 @@ The Chrome User Experience Report is powered by real user measurement of key
 user experience metrics across the public web, aggregated from users who have 
 opted-in to syncing their browsing history, have not set up a Sync passphrase, 
 and have [usage statistic reporting](https://www.google.com/chrome/browser/privacy/whitepaper.html#usagestats) 
-enabled. The resulting metrics are aggregated by origin, for all origins that
-are known by Google's web crawlers, and split across 
-multiple dimensions outlined below.
+enabled. The resulting data is made available via:
+
+1. [PageSpeed Insights](/speed/pagespeed/insights/),
+which provides URL-level user experience metrics for popular URLs that are 
+known by Google's web crawlers.
+2. [Public Google BigQuery dataset](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all), 
+which aggregates user experience metrics by origin, for all origins that are 
+known by Google's web crawlers, and split across multiple dimensions 
+outlined below.
+
 
 ### Metrics {: #metrics }
 
