@@ -1,8 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Mantieni bassi i costi di trasmissione di rete e di
-analisi/compilazione per JavaScript per garantire che le pagine diventino
-interattive rapidamente.
+description: Mantieni bassi i costi di trasmissione di rete e di analisi/compilazione per JavaScript per garantire che le pagine diventino interattive rapidamente.
 
 {# wf_updated_on: 2018-01-09 #}
 {# wf_published_on: 2017-11-30 #}
@@ -39,60 +37,58 @@ velocità 2G.
 
 Puoi **ridurre** il costo del trasferimento di rete di JavaScript attraverso:
 
-- **Invia solo il codice necessario ad un utente**.
-- Usa il [code-splitting](/web/updates/2017/06/supercharged-codesplit) per
-dividere il tuo JavaScript in ciò che è critico e in ciò che non lo è. I module
-bundlerscome [webpack](https://webpack.js.org) supportano il
+* **Invia solo il codice necessario ad un utente**.
+    * Usa il [code-splitting](/web/updates/2017/06/supercharged-codesplit) per
+    dividere il tuo JavaScript in ciò che è critico e in ciò che non lo è. I module bundlers come [webpack](https://webpack.js.org) supportano il
 [code-splitting](https://webpack.js.org/guides/code-splitting/).
-    - Usa il caricamento lazily per il codice non-critico.
-- **Minification**
-- Usa [UglifyJS](https://github.com/mishoo/UglifyJS) per [minimizzare
+    * Usa il caricamento lazily per il codice non-critico.
+* **Minification**
+    * Usa [UglifyJS](https://github.com/mishoo/UglifyJS) per [minimizzare
 il](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#minification_preprocessing_context-specific_optimizations)
-codice ES5.
-- Usa [babel-minify](https://github.com/babel/minify) o
+    codice ES5.
+    * Usa [babel-minify](https://github.com/babel/minify) o
 [uglify-es](https://www.npmjs.com/package/uglify-es) per minimizzare ES2015+.
-- **Compressione**
-- Come minimo, usa
-[gzip](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text_compression_with_gzip)
-per comprimere le risorse basate sul testo.
-- Valuta l'utilizzo di
-[Brotli](https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/)
-~[q11](https://twitter.com/paulcalvano/status/924660429846208514) . Brotli
-migliora il rapporto di compressione di gzip. Ha aiutato CertSimple a
-risparmiare il
-[17%](https://speakerdeck.com/addyosmani/the-browser-hackers-guide-to-instant-loading?slide=30)
-sulle dimensioni dei byte JS compressi e LinkedIn a risparmiare il
-[4%](https://engineering.linkedin.com/blog/2017/05/boosting-site-speed-using-brotli-compression)
-sui tempi di caricamento.
-- **Rimuovi il codice inutilizzato**.
-- Identifica il codice che può essere rimosso o caricato lazy con [ DevTools
-code coverage](/web/updates/2017/04/devtools-release-notes#coverage).
--
-Usa[babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)e
-browserlist per evitare la funzionalità di transpiling dei browser moderni.Gli
-sviluppatori avanzati possono trovare utile l'[analisi dei webpack
-bundle](https://github.com/webpack-contrib/webpack-bundle-analyzer) per
-identificare opportunità di eliminazione delle dipendenze non necessarie.
-- Per rimuovere il codice,
-vedere[tree-shaking](https://webpack.js.org/guides/tree-shaking/), per il
-[compilatore Closure](/closure/compiler/) ottimizzazioni avanzate e plug-in di
-ritaglio di libreria
-come[lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash) oper
-webpack[ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js)per
-librerie come Moment.js.
-- **Cache del codice per ridurre i tempi di rete.**
-- Usa [HTTP
-caching](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
-per garantire che i browser memorizzino le risposte in modo efficace.
-Determinare la durata ottimale degli script (max-age) e fornire i token di
-convalida (ETag) per evitare il trasferimento di byte invariati.
-- Il caching di Service Worker può rendere resiliente alla rete la tua app e
-darti accesso a funzionalità come [la cache del codice di
+* **Compressione**
+    * Come minimo, usa
+    [gzip](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text_compression_with_gzip)
+    per comprimere le risorse basate sul testo.
+    * Valuta l'utilizzo di
+    [Brotli](https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/)
+    ~[q11](https://twitter.com/paulcalvano/status/924660429846208514) . Brotli
+    migliora il rapporto di compressione di gzip. Ha aiutato CertSimple a
+    risparmiare il
+    [17%](https://speakerdeck.com/addyosmani/the-browser-hackers-guide-to-instant-loading?slide=30)
+    sulle dimensioni dei byte JS compressi e LinkedIn a risparmiare il
+    [4%](https://engineering.linkedin.com/blog/2017/05/boosting-site-speed-using-brotli-compression)
+    sui tempi di caricamento.
+* **Rimuovi il codice inutilizzato**.
+    * Identifica il codice che può essere rimosso o caricato lazy con [ DevTools
+    code coverage](/web/updates/2017/04/devtools-release-notes#coverage).
+    * Usa [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) e
+    browserlist per evitare la funzionalità di transpiling dei browser moderni.Gli
+    sviluppatori avanzati possono trovare utile l'[analisi dei webpack
+    bundle](https://github.com/webpack-contrib/webpack-bundle-analyzer) per
+    identificare opportunità di eliminazione delle dipendenze non necessarie.
+    * Per rimuovere il codice,
+    vedere [tree-shaking](https://webpack.js.org/guides/tree-shaking/), per il
+    [compilatore Closure](/closure/compiler/) ottimizzazioni avanzate e plug-in di
+    ritaglio di libreria
+    come[lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash)o per
+    webpack[ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js)per
+    librerie come Moment.js.
+* **Cache del codice per ridurre i tempi di rete.**
+    * Usa [HTTP
+    caching](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+    per garantire che i browser memorizzino le risposte in modo efficace.
+    Determinare la durata ottimale degli script (max-age) e fornire i token di
+    convalida (ETag) per evitare il trasferimento di byte invariati.
+    * Il caching di Service Worker può rendere resiliente alla rete la tua app e
+    darti accesso a funzionalità come [la cache del codice di
 V8](https://v8project.blogspot.com/2015/07/code-caching.html) .
-- Utilizzare la memorizzazione nella cache a lungo termine per evitare di
-dover recuperare nuovamente le risorse che non sono state modificate. Se si
-utilizza Webpack, consultare l'[hashing del nome del
-file](https://webpack.js.org/guides/caching/) .
+    * Utilizzare la memorizzazione nella cache a lungo termine per evitare di
+    dover recuperare nuovamente le risorse che non sono state modificate. Se si
+    utilizza Webpack, consultare [hashing del nome del
+    file](https://webpack.js.org/guides/caching/) .
 
 ## Parse / Compile
 
@@ -238,7 +234,7 @@ l'esecuzione di JS viene messa in pausa, quindi un browser che raccoglie spesso
 garbage può sospendere l'esecuzione più frequentemente di quanto vorremmo. Evita
 [perdite di memoria](/web/tools/chrome-devtools/memory-problems/) e frequenti
 pause gc per mantenere libere le pagine.
-- Durante il runtime, JavaScript di lunga durata può bloccare le pagine che
+- Durante il runtime, JavaScript di lunga esecuzione può bloccare le pagine che
 causano il thread principale che non rispondono. Ridurre il lavoro in pezzi più
 piccoli (utilizzando <code><a data-parent-segment-tag-id="1353935"
 data-md-type="raw_html"
@@ -251,7 +247,7 @@ per la pianificazione) può ridurre al minimo i problemi di reattività.
 
 Quando stai cercando di mantenere analisi/compilazione e i tempi di trasmissione
 di rete per JavaScript lenti, ci sono schemi che possono essere d'aiuto come lo
-chunking basato su route o [PRPL](/web/fundamentals/performance/prpl-pattern/) .
+chunking basato su route o [PRPL](/web/fundamentals/performance/prpl-pattern/).
 
 ### PRPL
 
@@ -340,7 +336,8 @@ Brotli](https://blog.cloudflare.com/results-experimenting-brotli/) per la
 compressione (si noti che il Brotli dinamico ad alta qualità può ritardare il
 rendering della pagina iniziale ed è quindi da valutare attentamente.
 Probabilmente invece preferisci comprimerla staticamente).
-- [Performance
-Futures](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5)
-- Sam SacconeTranslated by{% include "web/_shared/contributors/lucaberton.html"
-%}
+- [Performance Futures](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5)
+— Sam Saccone
+
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}
