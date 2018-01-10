@@ -52,12 +52,13 @@ function renderTemplate(templateFile, context, outputFile) {
  * Gets the full article to use in feeds
  *
  * @param {Array} articles List of files to get content.
+ * @param {number} maxItems Number of items to include in the feed.
  * @return {Array} list of articles
  */
-function getFullFeedEntries(articles) {
+function getFullFeedEntries(articles, maxItems) {
   let yamlCont = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
   let contributors = jsYaml.safeLoad(yamlCont);
-  articles = articles.slice(0, global.WF.maxArticlesInFeed);
+  articles = articles.slice(0, maxItems);
   articles.forEach(function(article) {
     let content = fs.readFileSync(article.filePath, 'utf8');
     content = content.replace(/{#.*#}/g, '');
@@ -95,10 +96,11 @@ function getFullFeedEntries(articles) {
  */
 function generateFeeds(files, options) {
   gutil.log(' ', 'Generating RSS and ATOM feeds...');
+  const maxItems = options.maxItems || global.WF.maxArticlesInFeed;
   let context = {
     title: options.title,
     description: options.description,
-    articles: getFullFeedEntries(files),
+    articles: getFullFeedEntries(files, maxItems),
     host: 'https://developers.google.com',
     baseUrl: 'https://developers.google.com/web/',
     analyticsQS: ANALYTICS_QS,
