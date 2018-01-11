@@ -1,0 +1,23 @@
+<footer class="devsite-footer-promos nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-promos-list">
+      {% for promo in footerPromos %}
+      <li class="devsite-footer-promo">
+        <a href="{{ promo.path }}" class="devsite-footer-promo-title">
+          {% if promo.icon %}
+          <img class="devsite-footer-promo-icon" src="{{ promo.icon }}">
+          {% else %}
+          <div class="devsite-footer-promo-icon material-icons">
+            {{ promo.icon_name }}
+          </div>
+          {% endif %}
+          {{ promo.label }}
+        </a>
+        <div class="devsite-footer-promo-description">
+          {{ promo.description }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</footer>

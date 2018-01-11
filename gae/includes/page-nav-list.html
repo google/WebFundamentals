@@ -1,0 +1,31 @@
+{% for item in sectionNav %}
+  {% if item.path %}
+    <li class="devsite-nav-item">
+      <a href="{{ item.path }}" class="devsite-nav-item-title">
+        <span>{{ item.title }}</span>
+      </a>
+    </li>
+  {% endif %}
+  {% if item.heading %}
+    <li class="devsite-nav-item devsite-nav-item-section-expandable devsite-nav-accordian">
+      <span class="devsite-nav-title devsite-nav-title-no-path">
+        <span>{{ item.heading }}</span>
+      </span>
+    </li>
+  {% endif %}
+  {% if item.section %}
+    <li class="devsite-nav-item devsite-nav-item-section-expandable devsite-nav-accordian">
+      <span class="devsite-nav-title devsite-nav-title-no-path">
+        <span>{{ item.title }}</span>
+      </span>
+      <a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons">
+        <ul class="devsite-nav-section devsite-nav-section-collapsed">
+          {% include "pete.html" %}
+        </ul>
+      </a>
+    </li>
+  {% endif %}
+
+{% endfor %}
+</ul>
+

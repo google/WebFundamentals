@@ -13,14 +13,6 @@ UNSUPPORTED_TAGS = [
 ]
 
 def parse(requestPath, fileLocation, content, lang='en'):
-  template = 'gae/article.tpl'
-
-  dateUpdated = re.search(r"{# wf_updated_on:[ ]?(.*)[ ]?#}", content)
-  if dateUpdated is None:
-    logging.warn('Missing wf_updated_on tag.')
-    dateUpdated = 'Unknown'
-  else:
-    dateUpdated = dateUpdated.group(1)
 
   ## Injects markdown includes into the markdown as appropriate
   includes = re.findall(r'^<<.+?\.md>>(?m)', content)
@@ -74,15 +66,52 @@ def parse(requestPath, fileLocation, content, lang='en'):
   content = md.convert(content)
 
   # Reads the book.yaml file and generate the lefthand nav
-  if 'book_path' in md.Meta and len(md.Meta['book_path']) == 1:
-    bookPath = md.Meta['book_path'][0]
-    bookYaml = devsiteHelper.parseBookYaml(bookPath, lang)
+  bookPath = md.Meta['book_path'][0]
+  bookYaml = devsiteHelper.parseBookYaml(bookPath, lang)
+  lowerTabs = devsiteHelper.getLowerTabs(bookYaml)
 
-  if 'project_path' in md.Meta and len(md.Meta['project_path']) == 1:
-    projectPath = md.Meta['project_path'][0]
+  projectPath = md.Meta['project_path'][0]
+  parentProjectYaml = None
+  projectYaml = yaml.load(devsiteHelper.readFile(projectPath, lang))
+  if 'parent_project_metadata_path' in projectYaml:
+    parentprojectPath = projectYaml['parent_project_metadata_path']
+    parentProjectYaml = yaml.load(devsiteHelper.readFile(parentprojectPath, lang))
 
+  # Get the logo row (TOP ROW) title
+  logoRowTitle = projectYaml['name']
+  if parentProjectYaml:
+    logoRowTitle = parentProjectYaml['name']
+
+  # Get the header title & page title
+  pageTitle = []
+  # Get the page title from the markup.
+  titleRO = re.search(r'<h1 class="page-title".*?>(.*?)<\/h1>', content)
+  if titleRO:
+    title = titleRO.group(1)
+    pageTitle.append(title)
+  else:
+    title = ''
+
+  # Get the header description
+  headerTitle = projectYaml['name']
+  headerDescription = projectYaml['description']
+  pageTitle.append(projectYaml['name'])
+  pageTitle.append('DevSite Staging')
+
+  # Get the footer path & read/parse the footer file.
+  footerPath = projectYaml['footer_path']
+  footerPromos = None
+  footerLinks = None
+  footers = yaml.load(devsiteHelper.readFile(footerPath, lang))['footer']
+  for item in footers:
+    if 'promos' in item:
+      footerPromos = item['promos']
+    elif 'linkboxes' in item:
+      footerLinks = item['linkboxes']
+
+  fullWidth = False
   if 'full_width' in md.Meta and len(md.Meta['full_width']) == 1:
-    template = 'gae/home.tpl'
+    fullWidth = True
 
   # Build the table of contents & transform so it fits within DevSite
   toc = md.toc
@@ -98,13 +127,6 @@ def parse(requestPath, fileLocation, content, lang='en'):
   # Replaces <pre> tags with prettyprint enabled tags
   content = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', content)
 
-  # Get the page title from the markup.
-  titleRO = re.search(r'<h1 class="page-title".*?>(.*?)<\/h1>', content)
-  if titleRO:
-    title = titleRO.group(1)
-  else:
-    title = ':('
-
   gitHubEditUrl = 'https://github.com/google/WebFundamentals/blob/'
   gitHubEditUrl += 'master/src/content/'
   gitHubEditUrl += fileLocation.replace(SOURCE_PATH, '')
@@ -114,19 +136,25 @@ def parse(requestPath, fileLocation, content, lang='en'):
   gitHubIssueUrl += lang + ']&body='
   gitHubIssueUrl += gitHubEditUrl
 
-  # Renders the content into the template
-  return render(template, {
-    'title': title,
-    'announcementBanner': devsiteHelper.getAnnouncementBanner(projectPath, lang),
-    'lowerTabs': devsiteHelper.getLowerTabs(bookYaml),
-    'gitHubIssueUrl': gitHubIssueUrl,
-    'gitHubEditUrl': gitHubEditUrl,
-    'requestPath': requestPath.replace('/index', ''),
-    'leftNav': devsiteHelper.getLeftNav(requestPath, bookYaml),
-    'content': content,
-    'toc': toc,
-    'dateUpdated': dateUpdated,
+
+  context = {
     'lang': lang,
-    'footerPromo': devsiteHelper.getFooterPromo(),
-    'footerLinks': devsiteHelper.getFooterLinkBox()
-    })
+    'requestPath': requestPath.replace('/index', ''),
+    'bodyClass': 'devsite-doc-age',
+    'fullWidth': fullWidth,
+    'logoRowTitle': logoRowTitle,
+    'bookYaml': devsiteHelper.expandBook(bookYaml),
+    'lowerTabs': lowerTabs,
+    'projectYaml': projectYaml,
+    'pageTitle': ' | '.join(pageTitle),
+    'headerDescription': headerDescription,
+    'headerTitle': headerTitle,
+    'footerPromos': footerPromos,
+    'footerLinks': footerLinks,
+    'content': content,
+    'renderedLeftNav': devsiteHelper.getLeftNav(requestPath, bookYaml),
+    'renderedTOC': toc,
+    'gitHubIssueUrl': gitHubIssueUrl,
+    'gitHubEditUrl': gitHubEditUrl
+  }
+  return render('gae/page-article.html', context)

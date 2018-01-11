@@ -1,0 +1,16 @@
+{% for row in rows %}
+<section class="devsite-landing-row {{ row.classname }} devsite-landing-row-{{ row.itemCount }}-up">
+  {% if row.heading %}
+  <header class="devsite-landing-row-header">
+    <div class="devsite-landing-row-header-text">
+      <h2 id="{{ row.heading|slugify }}">{{ row.heading }}</h2>
+    </div>
+  </header>
+  {% endif %}
+  <div class="devsite-landing-row-group">
+    {% for item in row.items %}
+      {% include "includes/landing-page-content-row.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

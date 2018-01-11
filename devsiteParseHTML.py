@@ -1,5 +1,6 @@
 import os
 import re
+import yaml
 import logging
 import devsiteHelper
 from google.appengine.ext.webapp.template import render
@@ -11,8 +12,6 @@ UNSUPPORTED_TAGS = [
 ]
 
 def parse(requestPath, fileLocation, content, lang='en'):
-  template = 'gae/article.tpl'
-
   ## Get the HTML tag
   htmlTag = re.search(r'<html.*?>', content)
   if htmlTag is None:
@@ -59,15 +58,6 @@ def parse(requestPath, fileLocation, content, lang='en'):
   # Render any DevSite specific tags
   body = devsiteHelper.renderDevSiteContent(body, lang)
 
-  # Read the page title
-  title = re.search('<title>(.*?)</title>', head)
-  if title is None:
-    title = '** UNKNOWN TITLE **'
-  else:
-    title = title.group(1)
-    if body.find('<h1>') == -1:
-      body = '<h1 class="page-title">' + title + '</h1>\n\n' + body
-
   # Read the book.yaml file and generate the left hand nav
   bookPath = re.search('name=\"book_path\" value=\"(.*?)\"', head)
   if bookPath is None:
@@ -88,6 +78,29 @@ def parse(requestPath, fileLocation, content, lang='en'):
     projectPath = projectPath.group(1)
     announcementBanner = devsiteHelper.getAnnouncementBanner(projectPath, lang)
 
+  parentProjectYaml = None
+  projectYaml = yaml.load(devsiteHelper.readFile(projectPath, lang))
+  if 'parent_project_metadata_path' in projectYaml:
+    parentprojectPath = projectYaml['parent_project_metadata_path']
+    parentProjectYaml = yaml.load(devsiteHelper.readFile(parentprojectPath, lang))
+
+  # Read the page title
+  pageTitle = []
+  title = re.search('<title>(.*?)</title>', head)
+  if title is None:
+    title = '** UNKNOWN TITLE **'
+  else:
+    title = title.group(1)
+    pageTitle.append(title)
+    if body.find('<h1>') == -1:
+      body = '<h1 class="page-title">' + title + '</h1>\n\n' + body
+  pageTitle.append(projectYaml['name'])
+  pageTitle.append('DevSite Staging')
+
+  # Get the header description
+  headerTitle = projectYaml['name']
+  headerDescription = projectYaml['description']
+
   # Replaces <pre> tags with prettyprint enabled tags
   body = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', body)
 
@@ -98,15 +111,22 @@ def parse(requestPath, fileLocation, content, lang='en'):
 
   # # Build the table of contents & transform so it fits within DevSite
   toc = '- TOC NYI - '
-  # toc = md.toc
-  # toc = toc.strip()
-  # # Strips the outer wrapper and the page title from the doc
-  # toc = re.sub(r'<div class="toc">(.*?<ul>){2}(?s)', '', toc)
-  # toc = re.sub(r'</ul>\s*</li>\s*</ul>\s*</div>(?s)', '', toc)
-  # # Add appropriate classes
-  # toc = re.sub(r'<ul>', '<ul class="devsite-page-nav-list">', toc)
-  # toc = re.sub(r'<a href', '<a class="devsite-nav-title" href', toc)
-  # toc = re.sub(r'<li>', '<li class="devsite-nav-item">', toc)
+
+  # Get the footer path & read/parse the footer file.
+  footerPath = projectYaml['footer_path']
+  footerPromos = None
+  footerLinks = None
+  footers = yaml.load(devsiteHelper.readFile(footerPath, lang))['footer']
+  for item in footers:
+    if 'promos' in item:
+      footerPromos = item['promos']
+    elif 'linkboxes' in item:
+      footerLinks = item['linkboxes']
+
+  # Get the logo row (TOP ROW) title
+  logoRowTitle = projectYaml['name']
+  if parentProjectYaml:
+    logoRowTitle = parentProjectYaml['name']
 
   gitHubEditUrl = 'https://github.com/google/WebFundamentals/blob/'
   gitHubEditUrl += 'master/src/content/'
@@ -117,20 +137,28 @@ def parse(requestPath, fileLocation, content, lang='en'):
   gitHubIssueUrl += lang + ']&body='
   gitHubIssueUrl += gitHubEditUrl
 
-  # Renders the content into the template
-  return render(template, {
-    'title': title,
-    'head': head,
-    'announcementBanner': announcementBanner,
-    'lowerTabs': lowerTabs,
-    'gitHubIssueUrl': gitHubIssueUrl,
-    'gitHubEditUrl': gitHubEditUrl,
-    'requestPath': requestPath.replace('/index', ''),
-    'leftNav': leftNav,
-    'content': body,
-    'toc': toc,
-    'dateUpdated': dateUpdated,
+
+
+  context = {
     'lang': lang,
-    'footerPromo': devsiteHelper.getFooterPromo(),
-    'footerLinks': devsiteHelper.getFooterLinkBox()
-    })
+    'requestPath': requestPath.replace('/index', ''),
+    'bodyClass': 'devsite-doc-age',
+    'fullWidth': fullWidth,
+    'logoRowTitle': logoRowTitle,
+    'bookYaml': devsiteHelper.expandBook(bookYaml),
+    'lowerTabs': lowerTabs,
+    'projectYaml': projectYaml,
+    'pageTitle': ' | '.join(pageTitle),
+    'headerDescription': headerDescription,
+    'headerTitle': headerTitle,
+    'footerPromos': footerPromos,
+    'footerLinks': footerLinks,
+    'content': content,
+    'renderedLeftNav': devsiteHelper.getLeftNav(requestPath, bookYaml),
+    'renderedTOC': toc,
+    'gitHubIssueUrl': gitHubIssueUrl,
+    'gitHubEditUrl': gitHubEditUrl
+  }
+
+  # Renders the content into the template
+  return render('gae/page-article.html', context)

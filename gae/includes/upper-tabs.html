@@ -1,0 +1,21 @@
+<div class="devsite-header-upper-tabs">
+  <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+    <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll" style="min-width: 448px; left: 0px;">
+      {% for tab in bookYaml.upper_tabs %}
+      <li class="devsite-doc-set-nav-tab-container">
+        <a href="{{ tab.lower_tabs.guides.0.path }}" class="devsite-doc-set-nav-tab">
+          {{ tab.name }}
+        </a>
+      </li>
+      {% endfor %}
+      <li class="devsite-doc-set-nav-tab-container" style="float:right;">
+        <a href="https://github.com/google/WebFundamentals" class="devsite-doc-set-nav-tab wf-stage-warning">
+          <span class="material-icons">warning</span>
+          STAGING
+          <span class="material-icons">warning</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
