@@ -861,7 +861,7 @@ MozJPEG (jpegtran, not cjpeg to avoid throwing away the work done by Guetzli)
 can lead to a further 10-15% decrease in filesize (55% overall) with only very
 minor decreases in SSIM. This is something I would caution requires
 experimentation and analysis but has also been tried by others in the field like
-[Ariya Hidayat](ariya.io/2017/03/squeezing-jpeg-images-with-guetzli) with
+[Ariya Hidayat](https://ariya.io/2017/03/squeezing-jpeg-images-with-guetzli) with
 promising results.
 
 MozJPEG is a beginner-friendly encoder for web assets that is relatively fast

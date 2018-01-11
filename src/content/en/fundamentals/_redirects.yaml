@@ -96,6 +96,9 @@ redirects:
 - from: /web/fundamentals/instant-and-offline/service-worker/registration
   to: /web/fundamentals/primers/service-workers/registration
 
+- from: /web/fundamentals/primers/service-worker/update-a-service-worker
+  to: /web/fundamentals/primers/service-workers/#update-a-service-worker
+
 - from: /web/fundamentals/media/mse/basics
   to: /web/fundamentals/media/mse/
 

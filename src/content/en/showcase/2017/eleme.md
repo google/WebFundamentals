@@ -12,18 +12,16 @@ book_path: /web/showcase/_book.yaml
 
 # Ele.me improves performance load times with a multi-page Progressive Web App {: .page-title }
 
-<img src="/web/showcase/2017/images/eleme/main.jpg" class="attempt-right">
-
-[Ele.me](https://ele.me) is the biggest food ordering and delivery company 
-in mainland China. It serves 260 million registered users from over 200 
+[Ele.me](https://ele.me) is the biggest food ordering and delivery company
+in mainland China. It serves 260 million registered users from over 200
 cities all around China, and has over 1.3 million restaurant listings.
 With 99% of its users ordering food on mobile, Ele.me set out to improve its
 mobile web experience, making it faster and more reliable in flaky connections,
-all while relying on the core technical model of a multi-page app to 
+all while relying on the core technical model of a multi-page app to
 accommodate their operational needs.
 
 * Loading time decreased by 11.6% across all pre-cached pages
-* Loading time decreased on average by 6.35% across all pages. 
+* Loading time decreased on average by 6.35% across all pages.
 * Time-to-consistently-interactive dropped to 4.93 seconds on a 3G network on
   first load
 
@@ -42,11 +40,11 @@ relevant to that route, and the UI is then constructed by Javascript code
 running on the client app.
 
 The explosive growth of Ele.me in recent years has led to the growth of
-distinct business units within the company, each in charge of running its 
+distinct business units within the company, each in charge of running its
 micro-service under the main [https://ele.me](https://ele.me) domain. The
 Ele.me team concluded that the decoupling of these individual services is
 best served by a multi-page app (MPA) model, with each team running and
-maintaining its own service. 
+maintaining its own service.
 
 ## Applying PRPL to a MPA
 
@@ -80,13 +78,13 @@ new page, and then loading in content to that page as the content becomes
 available; this is also the key to improving the perceived performance of
 the PWA. However, since each page in a MPA is its own initial route, each
 navigation requires redoing all the necessary loading, parsing, and evaluation
-work every single time. 
+work every single time.
 
 To work around this, Ele.me built the skeleton screen as an actual UI
 component, and then used Vue.js’ Server Side Rendering stack to build and
 then pre-render the Vue components to strings before injecting them into
 HTML templates. This allows them to render the skeleton screen directly and
-achieve a more fluid transition when navigating between pages. 
+achieve a more fluid transition when navigating between pages.
 
 <figure class="attempt-left">
   <img src="images/eleme/skeleton.png" alt="Skeleton screen during page transition">
@@ -120,4 +118,4 @@ across all pre-cached pages.
 ## Further reading
 
 * [Upgrading Ele.me to a Progressive Web App](https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509)
-* [Building a PWA at Ele.me](https://zhuanlan.zhihu.com/p/25800461) (Chinese) 
+* [Building a PWA at Ele.me](https://zhuanlan.zhihu.com/p/25800461) (Chinese)
