@@ -47,7 +47,7 @@ landing_page:
       description: >
         HTTPS allows users to securely connecto to your website or app. Set up
         HTTPS to protect the integrity and security of your users.
-      path: /web/fundamentals/security/
+      path: /web/fundamentals/security/encrypt-in-transit/why-https
       path_attributes:
       - name: class
         value: gc-analytics-event
@@ -59,7 +59,7 @@ landing_page:
         value: web-home
       buttons:
       - label: Get HTTPS
-        path: /web/fundamentals/instant-and-offline/
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
         classname: button button-primary
         attributes:
         - name: class
