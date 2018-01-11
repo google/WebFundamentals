@@ -87,7 +87,7 @@ landing_page:
         value: web-home
       buttons:
       - label: Get Started
-        path: /web/fundamentals/instant-and-offline/
+        path: /web/progressive-web-apps/
         classname: button button-primary
         attributes:
         - name: class
@@ -104,7 +104,7 @@ landing_page:
         Users don't have the patience to wait for sites that can't deliver
         content quickly.
       image_path: /web/images/content-performance-2x.jpg
-      path: /web/fundamentals/instant-and-offline/
+      path: /web/fundamentals/performance/
       path_attributes:
       - name: class
         value: gc-analytics-event
@@ -116,7 +116,7 @@ landing_page:
         value: web-home
       buttons:
       - label: Get Fast
-        path: /web/fundamentals/instant-and-offline/
+        path: /web/fundamentals/performance/
         classname: button button-primary
         attributes:
         - name: class
