@@ -4,6 +4,7 @@ description: It's important to understand what using your app or site feels like
 
 {# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-05-09 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Understanding Low Bandwidth and High Latency {: .page-title }
 
@@ -97,14 +98,13 @@ Lie-fi is likely to become a bigger problem as more people move to mobile and aw
 
 ### Use timeouts to handle intermittent connectivity
 
-In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but service worker enables more reliable methods to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
+In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but service worker enables more reliable methods to set network timeouts. This can be achieved using [Workbox](/web/tools/workbox/) with only a few lines of code:
 
-
-    toolbox.router.get(
+    workboxSW.router.registerRoute(
       '/path/to/image',
-      toolbox.networkFirst,
-      {networkTimeoutSeconds: 3}
+      workboxSW.strategies.networkFirst({networkTimeoutSeconds: 3})
     );
-    
 
-A [timeout option](https://github.com/whatwg/fetch/issues/20) is also planned for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch), and the [Streams API](https://www.w3.org/TR/streams-api/) should help by optimizing content delivery and avoiding monolithic requests. Jake Archibald gives more details about tackling lie-fi in [Supercharging page load](https://youtu.be/d5_6yHixpsQ?t=6m42s).
+You can learn more about Workbox in Jeff Posnick's Chrome Dev Summit talk, [Workbox: Flexible PWA Libraries](https://www.youtube.com/watch?v=DtuJ55tmjps).
+
+[Timeout functionality](/web/updates/2017/09/abortable-fetch) is also being developed for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch), and the [Streams API](https://www.w3.org/TR/streams-api/) should help by optimizing content delivery and avoiding monolithic requests. Jake Archibald gives more details about tackling lie-fi in [Supercharging page load](https://youtu.be/d5_6yHixpsQ?t=6m42s).
