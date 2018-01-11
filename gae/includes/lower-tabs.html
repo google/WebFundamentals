@@ -4,7 +4,7 @@
     <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
       {% for tab in lowerTabs %}
       <li class="devsite-doc-set-nav-tab-container">
-        <a href="{{ tab.path }}" class="devsite-doc-set-nav-tab">
+        <a href="{{ tab.path }}" class="devsite-doc-set-nav-tab {{ tab.classname }}">
           {{ tab.name }}
         </a>
       </li>

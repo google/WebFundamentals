@@ -106,7 +106,7 @@ function collapseBanner(scrollY) {
       .style.marginTop = `0px`;
     body.querySelector('.devsite-product-id-row')
       .style.visibility = 'visible';
-    const minMargin = isDocPage ? 0 : 40;
+    const minMargin = isDocPage ? 40 : 0;
     body.querySelector('.devsite-main-content')
       .style.marginTop = `${minMargin}px`;
     isBannerCollapsed = false;

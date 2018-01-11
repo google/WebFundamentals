@@ -3,7 +3,11 @@
     <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll" style="min-width: 448px; left: 0px;">
       {% for tab in bookYaml.upper_tabs %}
       <li class="devsite-doc-set-nav-tab-container">
+        {% if tab.lower_tabs.other.0.contents.0.path %}
+        <a href="{{ tab.lower_tabs.other.0.contents.0.path }}" class="devsite-doc-set-nav-tab devsite-doc-set-nav-active">
+        {% else %}
         <a href="{{ tab.lower_tabs.guides.0.path }}" class="devsite-doc-set-nav-tab">
+        {% endif %}
           {{ tab.name }}
         </a>
       </li>
