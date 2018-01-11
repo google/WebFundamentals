@@ -8,7 +8,7 @@ description: Learn how to use Puppeteer to automate and test apps in headless Ch
 
 # Puppeteer {: .page-title }
 
-{% includecode github_path="ebidel/testtest/blob/master/README.md" region_tag="badges" %}
+{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="badges" %}
 
 <style>
 .pptr-logo {
@@ -23,11 +23,9 @@ Puppeteer is a Node library which provides a high-level API to control [headless
 <img src="/web/tools/images/puppeteer.png"
      class="pptr-logo attempt-right" alt="Puppeteer Logo">
 
-{% includecode github_path="ebidel/testtest/blob/master/README.md" region_tag="usecases" %}
+{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="usecases" %}
 
-{% includecode github_path="ebidel/testtest/blob/master/README.md" region_tag="getstarted" %}
-
-<!--git_revision="refs/tags/v0.13.0" regexp="## Getting Started(.*)"-->
+{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="getstarted" %}
 
 ## Next steps {: #next-steps }
 
