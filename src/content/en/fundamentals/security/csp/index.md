@@ -478,7 +478,6 @@ Level 2 required you to change it to `child-src`. This is no longer necessary
 in CSP Level 3.
 
 * Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }
-
 has a number of implementation options. We recommend sticking with the
 `<iframe>` version as it's safely sandboxed from the rest of your site. It
 requires a `child-src https://facebook.com` directive to function properly. Note
