@@ -1,0 +1,30 @@
+toc:
+- heading: Get Started
+- title: Overview
+  path: /web/tools/puppeteer/
+- title: API Reference
+  path: /web/tools/puppeteer/api
+- title: Examples
+  path: /web/tools/puppeteer/examples
+- heading: Resources
+- title: Debugging tips
+  path: /web/tools/puppeteer/debugging
+- title: Troubleshooting Guide
+  path: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+- title: Try Puppeteer!
+  path: https://try-puppeteer.appspot.com/
+- title: DevTools Protocol APIs
+  path: https://chromedevtools.github.io/devtools-protocol/
+- heading: Project
+- title: NPM
+  path: https://www.npmjs.com/package/puppeteer
+- title: Github
+  path: https://github.com/GoogleChrome/puppeteer
+- title: Report an issue
+  path: https://github.com/GoogleChrome/puppeteer/issues/new
+- title: How to Contribute
+  path: https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md
+- title: Release Notes
+  path: https://github.com/GoogleChrome/puppeteer/releases 
+- title: FAQ
+  path: /web/tools/puppeteer/faq
