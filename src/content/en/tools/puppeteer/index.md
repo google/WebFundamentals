@@ -4,6 +4,7 @@ description: Learn how to use Puppeteer to automate and test apps in headless Ch
 
 {# wf_updated_on: 2018-01-10 #}
 {# wf_published_on: 2018-01-10 #}
+{# wf_blink_components: Internals>Headless #}
 
 # Puppeteer {: .page-title }
 
@@ -16,7 +17,7 @@ description: Learn how to use Puppeteer to automate and test apps in headless Ch
 }
 </style>
 
-Puppeteer is a Node library which provides a high-level API to control [headless](https://developers.google.com/web/updates/2017/04/headless-chrome) Chrome or Chromium over the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/). It can also be configured to use full (non-headless) Chrome or Chromium.
+Puppeteer is a Node library which provides a high-level API to control [headless](/web/updates/2017/04/headless-chrome) Chrome or Chromium over the [DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/). It can also be configured to use full (non-headless) Chrome or Chromium.
 {: .objective }
 
 <img src="/web/tools/images/puppeteer.png"

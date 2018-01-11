@@ -4,6 +4,7 @@ description: Helpful tips for debugging Puppeteer
 
 {# wf_updated_on: 2018-01-10 #}
 {# wf_published_on: 2018-01-10 #}
+{# wf_blink_components: Internals>Headless #}
 
 # Debugging {: .page-title }
 
