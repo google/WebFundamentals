@@ -6,10 +6,7 @@ landing_page:
 
   header:
     description: >
-      <h2 class="wf-header-title">Progressive Web Apps</h2>
-      <p>
         A new way to deliver amazing user experiences on the web.
-      </p>
     buttons:
       - label: PWA Checklist
         path: /web/progressive-web-apps/checklist

@@ -9,22 +9,32 @@ SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
 
 
 def parse(requestPath, fileLocation, rawYaml, lang='en'):
+  context = {
+    'lang': lang,
+    'requestPath': requestPath.replace('/index', ''),
+    'bodyClass': 'devsite-landing-page'
+  }
+
+  # Parse the Yaml
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
 
   # Get the project_path and read/parse the project file.
   projectPath = parsedYaml['project_path']
-  parentProjectYaml = None
   projectYaml = yaml.load(devsiteHelper.readFile(projectPath, lang))
+  context['projectYaml'] = projectYaml
+
+  # Read the parent project.yaml file if applicable
+  parentProjectYaml = None
   if 'parent_project_metadata_path' in projectYaml:
     parentprojectPath = projectYaml['parent_project_metadata_path']
     parentProjectYaml = yaml.load(devsiteHelper.readFile(parentprojectPath, lang))
 
-  # Get the book path and read/parse the book file.
+  # Get the book path and read/parse the book file, then add the lower tabs.
   bookPath = parsedYaml['book_path']
   bookYaml = devsiteHelper.parseBookYaml(bookPath, lang)
-  # parse the book file to get the lower tabs.
-  lowerTabs = devsiteHelper.getLowerTabs(bookYaml)
+  context['bookYaml'] = devsiteHelper.expandBook(bookYaml)
+  context['lowerTabs'] = devsiteHelper.getLowerTabs(bookYaml)
 
   # Get the row or column count for each row
   for row in page['rows']:
@@ -34,66 +44,60 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
     elif 'columns' in row:
       count = len(row['columns'])
       row['itemCount'] = count
-
-  # Get the logo row (TOP ROW) title
-  logoRowTitle = projectYaml['name']
-  if parentProjectYaml:
-    logoRowTitle = parentProjectYaml['name']
+    elif 'custom_html' in row:
+      row['itemCount'] = 1
+  context['rows'] = page['rows']
 
   # Get the custom CSS path
-  customCSSPath = None
   if 'custom_css_path' in page:
-    customCSSPath = page['custom_css_path']
+    context['customCSSPath'] = page['custom_css_path']
 
-  # Get the header title & page title
-  pageTitle = []
-  headerTitle = None
-  if 'title' in parsedYaml:
-    headerTitle = parsedYaml['title']
-    pageTitle.append(parsedYaml['title'])
-  if 'parent_project_metadata_path' in projectYaml:
-    headerTitle = projectYaml['name']
-  # Get the header description
-  headerDescription = None
-  if 'header' in page and 'description' in page['header']:
-    headerDescription = page['header']['description']
+  # Get the logo row (TOP ROW) icon
+  context['logoRowIcon'] = projectYaml['icon']['path']
+
+  # Get the logo row (TOP ROW) title
+  if 'header' in page and 'name' in page['header']:
+    context['logoRowTitle'] = page['header']['name']
+  elif parentProjectYaml:
+    context['logoRowTitle'] = parentProjectYaml['name']
   else:
-    headerDescription = projectYaml['description']
+    context['logoRowTitle'] = projectYaml['name']
+
+  # Get the header title
+  if 'parent_project_metadata_path' in projectYaml:
+    context['headerTitle'] = projectYaml['name']
+  elif 'title' in parsedYaml:
+    context['headerTitle'] = parsedYaml['title']
+  else:
+    context['headerTitle'] = projectYaml['name']
+
+  # Get the header description
+  if 'header' in page and 'description' in page['header']:
+    context['headerDescription'] = page['header']['description']
+  else:
+    context['headerDescription'] = projectYaml['description']
+
   # Get the header buttons
-  headerButtons = None
   if 'header' in page and 'buttons' in page['header']:
-    headerButtons = page['header']['buttons']
+    context['headerButtons'] = page['header']['buttons']
+
+  # Set the page title
+  pageTitle = []
+  if 'title' in parsedYaml:
+    pageTitle.append(parsedYaml['title'])
   pageTitle.append(projectYaml['name'])
-  pageTitle.append('Google Developers')
+  pageTitle.append('WebFu Staging')
+  context['pageTitle'] = ' | '.join(pageTitle)
 
   # Get the footer path & read/parse the footer file.
   footerPath = projectYaml['footer_path']
-  footerPromos = None
-  footerLinks = None
   footers = yaml.load(devsiteHelper.readFile(footerPath, lang))['footer']
   for item in footers:
     if 'promos' in item:
-      footerPromos = item['promos']
+      context['footerPromos'] = item['promos']
     elif 'linkboxes' in item:
-      footerLinks = item['linkboxes']
+      context['footerLinks'] = item['linkboxes']
 
-  context = {
-    'lang': lang,
-    'requestPath': requestPath,
-    'bodyClass': 'devsite-landing-page',
-    'logoRowTitle': logoRowTitle,
-    'bookYaml': devsiteHelper.expandBook(bookYaml),
-    'lowerTabs': lowerTabs,
-    'customCSSPath': customCSSPath,
-    'projectYaml': projectYaml,
-    'pageTitle': ' | '.join(pageTitle),
-    'headerButtons': headerButtons,
-    'headerDescription': headerDescription,
-    'headerTitle': headerTitle,
-    'rows': page['rows'],
-    'footerPromos': footerPromos,
-    'footerLinks': footerLinks
-  }
   return render('gae/page-landing.html', context)
 
 

@@ -1,16 +1,37 @@
 {% for row in rows %}
-<section class="devsite-landing-row {{ row.classname }} devsite-landing-row-{{ row.itemCount }}-up">
+<section class="devsite-landing-row
+                {{ row.classname }} devsite-landing-row-{{ row.itemCount }}-up
+                {% if row.background %}devsite-background devsite-background-{{ row.background }}{% endif %}">
   {% if row.heading %}
   <header class="devsite-landing-row-header">
     <div class="devsite-landing-row-header-text">
       <h2 id="{{ row.heading|slugify }}">{{ row.heading }}</h2>
+      {% if row.description %}
+      <p class="devsite-landing-row-description">
+        {{ row.description|safe }}
+      </p>
+      {% endif %}
     </div>
   </header>
   {% endif %}
+  {% if row.custom_html %}
+    {{ row.custom_html|safe }}
+  {% else %}
   <div class="devsite-landing-row-group">
-    {% for item in row.items %}
-      {% include "includes/landing-page-content-row.html" %}
-    {% endfor %}
+    {% if row.columns %}
+      {% for col in row.columns %}
+        <div class="devsite-landing-row-column">
+          {% for item in col.items %}
+            {% include "includes/landing-page-content-row.html" %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for item in row.items %}
+        {% include "includes/landing-page-content-row.html" %}
+      {% endfor %}
+    {% endif %}
   </div>
+  {% endif %}
 </section>
 {% endfor %}
