@@ -11,6 +11,8 @@ toc:
   path: /web/tools/chrome-devtools/shortcuts
 - title: UI Reference
   path: /web/tools/chrome-devtools/ui
+- title: Sources Panel Overview
+  path: /web/tools/chrome-devtools/sources
 - title: Inspect and Edit Pages
   section:
   - title: Overview
