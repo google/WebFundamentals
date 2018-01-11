@@ -670,16 +670,26 @@ function testMarkdown(filename, contents, options) {
 
     // Verify all {% includecode %} elements work properly
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_CODE, contents);
-    matched.forEach(function(match) {
+    matched.forEach((match) => {
       const msg = 'IncludeCode widget -';
       const widget = match[0];
       const position = {line: getLineNumber(contents, match.index)};
+
       const inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_CODE_PATH, widget);
-      if (inclFile.indexOf('web/') !== 0) {
-        logError(filename, position, `${msg} path must start with 'web/'`);
+      if (inclFile) {
+        if (inclFile.indexOf('web/') !== 0) {
+          logError(filename, position, `${msg} path must start with 'web/'`);
+        }
+        if (doesFileExist(inclFile) !== true) {
+          logError(filename, position, `${msg} file not found: '${inclFile}'`);
+        }
       }
-      if (doesFileExist(inclFile) !== true) {
-        logError(filename, position, `${msg} file not found: '${inclFile}'`);
+
+      const githubFile = wfRegEx.getMatch(
+          wfRegEx.RE_INCLUDE_CODE_GITHUB_PATH, widget);
+      if (githubFile && githubFile.includes('web/')) {
+        logError(filename, position,
+            `${msg} github_path must reference a file on github`);
       }
     });
 
