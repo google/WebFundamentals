@@ -12,11 +12,12 @@ description: Payment Request API per pagamenti veloci e facili sul web.
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/zkoch.html" %}
 
-Buying goods online is a convenient but often frustrating experience,
-particularly on mobile devices. Although mobile traffic continues to increase,
-mobile conversions account for only about a third of all completed purchases. In
-other words, users abandon mobile purchases twice as often as desktop purchases.
-Why?
+L'acquisto di beni online è un'esperienza comoda ma spesso frustrante, in
+particolare sui dispositivi mobili. Sebbene il traffico da dispositivi mobili
+continui ad aumentare, le conversioni da dispositivi mobili rappresentano solo
+circa un terzo di tutti gli acquisti completati. In altre parole, gli utenti
+abbandonano gli acquisti da cellulare due volte più spesso degli acquisti da
+desktop. Perché?
 
 ![](images/1_why_users_abandon.png)
 
@@ -56,9 +57,10 @@ si tratta di un nuovo metodo di pagamento, né si integra direttamente con i
 processori di pagamento; piuttosto, è un canale derivante dalle informazioni di
 pagamento e spedizione dell'utente ai commercianti, con i seguenti obiettivi:
 
-- Let the browser act as intermediary among merchants, users, and paymentmethods
+- Lascia che il browser funga da intermediario tra commercianti, utenti e metodi
+di pagamento
 - Standardizza il flusso di comunicazione di pagamento il più possibile
-- Seamlessly support different secure payment methods
+- Supporta perfettamente diversi metodi di pagamento sicuri
 - Lavora su qualsiasi browser, dispositivo o piattaforma - mobile o altro
 
 La Payment Request API è uno standard aperto e cross-browser che sostituisce i
@@ -67,9 +69,10 @@ accettare qualsiasi pagamento in una singola chiamata API. L'API consente alla
 pagina Web di scambiare informazioni con lo user agent mentre l'utente fornisce
 l'input, prima di approvare o rifiutare una richiesta di pagamento.
 
-Best of all, with the browser acting as an intermediary, all the information
-necessary for a fast checkout can be stored in the browser, so users can just
-confirm and pay, all with a single click.
+Meglio ancora, con il browser che funge da intermediario, tutte le informazioni
+necessarie per un checkout veloce possono essere memorizzate nel browser, in
+modo che gli utenti possano semplicemente confermare e pagare, tutto con un solo
+clic.
 
 ### Processo di transazione di pagamento {: #transaction-process }
 
@@ -78,14 +81,14 @@ semplice possibile sia per gli utenti che per i commercianti.
 
 ![](images/4_the_payment_transaction_process.png)
 
-*The payment transaction process*
+*Il processo di transazione di pagamento*
 
-The process begins when the merchant site creates a new `PaymentRequest` and
-passes to the browser all the information required to make the purchase: the
-amount to be charged, what currency they expect payment in, and what payment
-methods are accepted by the site. The browser determines compatibility between
-the accepted payment methods for the site and the methods the user has installed
-on the target device.
+Il processo inizia quando il sito commerciale crea una nuova `PaymentRequest` e
+passa al browser tutte le informazioni necessarie per effettuare l'acquisto:
+l'importo da addebitare, la valuta in cui si aspetta il pagamento e quali metodi
+di pagamento sono accettati dal sito. Il browser determina la compatibilità tra
+i metodi di pagamento accettati per il sito e i metodi che l'utente ha
+installato sul dispositivo di destinazione.
 
 Il browser presenta quindi l'interfaccia utente dei pagamenti all'utente, che
 seleziona un metodo di pagamento e autorizza la transazione. Un metodo di
