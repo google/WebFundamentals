@@ -3,7 +3,32 @@ toc:
 - title: Overview
   path: /web/tools/puppeteer/
 - title: API Reference
-  path: /web/tools/puppeteer/api
+  style: accordion
+  section:
+  - title: v1.0 (latest)
+    section:
+    - title: API Docs
+      path: https://github.com/GoogleChrome/puppeteer/blob/v1.0/docs/api.md
+      status: external
+    - title: Release Notes
+      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v1.0
+      status: external
+  - title: v0.13.0
+    section:
+    - title: API Docs
+      path: https://github.com/GoogleChrome/puppeteer/blob/v0.13.0/docs/api.md
+      status: external
+    - title: Release Notes
+      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v0.13.0
+      status: external
+  - title: v0.12.0
+    section:
+    - title: API Docs
+      path: https://github.com/GoogleChrome/puppeteer/blob/v0.12.0/docs/api.md
+      status: external
+    - title: Release Notes
+      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v0.12.0
+      status: external
 - title: Examples
   path: /web/tools/puppeteer/examples
 - heading: Resources
@@ -22,9 +47,9 @@ toc:
   path: https://github.com/GoogleChrome/puppeteer
 - title: Report an issue
   path: https://github.com/GoogleChrome/puppeteer/issues/new
+- title: Releases
+  path: https://github.com/GoogleChrome/puppeteer/releases
 - title: How to Contribute
   path: https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md
-- title: Release Notes
-  path: https://github.com/GoogleChrome/puppeteer/releases 
 - title: FAQ
   path: /web/tools/puppeteer/faq
