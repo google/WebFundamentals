@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
     <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
     <title>{{ title }}</title>
-    {% autoescape off %}{{ customcss }}{% endautoescape %}
+    {% if customCSS %}
+    {% autoescape off %}{{ customCSS }}{% endautoescape %}
+    {% endif %}
     <style>
       .wf-stage-warning {
         color: #4285f4 !important;
@@ -16,19 +18,11 @@
       }
       .wf-stage-warning .material-icons { vertical-align: middle; }
       .devsite-top-section-wrapper {
-        position: fixed;
+        position: relative;
         top: 0;
         width: 100%;
       }
-      .devsite-collapsible-section {
-        height: 48px;
-        margin-top: 48px;
-        position: relative;
-      }
-      .devsite-product-id-row {
-        padding-top: 0;
-      }
-      #gc-wrapper {
+      .devsite-wrapper {
         margin-top: 48px;
       }
     </style>
@@ -36,10 +30,10 @@
       {{ head }}
     {% endautoescape %}
   </head>
-  <body class="devsite-uhura devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
-    <div class="devsite-wrapper">
+  <body class="devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
+    <div class="devsite-wrapper" style="margin-top: 48px;">
       <div class="devsite-top-section-wrapper">
-        <header class="devsite-top-section nocontent" style="position: static;">
+        <header class="devsite-top-section nocontent">
           <div class="devsite-top-logo-row-wrapper-wrapper" style="position:fixed;">
             <div class="devsite-top-logo-row-wrapper">
               <div class="devsite-top-logo-row devsite-full-site-width">
@@ -85,25 +79,52 @@
               </div>
             </div>
           </div>
+          {% if customHeader %}
+            {% autoescape off %}{{ customHeader }}{% endautoescape %}
+          {% else %}
           <div class="devsite-collapsible-section">
             <div class="devsite-header-background devsite-full-site-width">
               <div class="devsite-product-id-row devsite-full-site-width">
-                <div class="devsite-doc-set-nav-row devsite-full-site-width">
-                  <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
-                    <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
-                      {% for tab in lowerTabs %}
-                        <li class="devsite-doc-set-nav-tab-container">
-                          <a href="{{tab.path}}" class="devsite-doc-set-nav-tab">
-                            {{tab.name}}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </nav>
+                <div class="devsite-product-description-row">
+                  {% if title %}
+                  <ul class="devsite-breadcrumb-list">
+                    <li class="devsite-breadcrumb-item">
+                      <a href="#" class="devsite-breadcrumb-link">{{ title }}</a>
+                    </li>
+                  </ul>
+                  {% endif %}
+                  {% if description %}
+                  <div class="devsite-product-description">
+                    {% autoescape off %}{{ description }}{% endautoescape %}
+                  </div>
+                  {% endif %}
                 </div>
+                {% if headerButtons %}
+                <div class="devsite-product-button-row">
+                  {% for button in headerButtons %}
+                    {% autoescape off %}{{ button }}{% endautoescape %}
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
+              {% if lowerTabs %}
+              <div class="devsite-doc-set-nav-row devsite-full-site-width">
+                <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                  <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+                    {% for tab in lowerTabs %}
+                      <li class="devsite-doc-set-nav-tab-container">
+                        <a href="{{tab.path}}" class="devsite-doc-set-nav-tab">
+                          {{tab.name}}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </nav>
+              </div>
+              {% endif %}
             </div>
           </div>
+          {% endif %}
         </header>
       </div>
       <div id="gc-wrapper">
@@ -154,7 +175,9 @@
                 <option value="pl">Polski</option>
                 <option value="pt-br">Português (Brasil)</option>
                 <option value="ru">Pусский</option>
+                <option value="th">ภาษาไทย</option>
                 <option value="tr">Türkçe</option>
+                <option value="vi">Tiếng Việt</option>
                 <option value="zh-cn">中文 (简体)</option>
                 <option value="zh-tw">中文（繁體）</option>
               </select>

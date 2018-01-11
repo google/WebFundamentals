@@ -7,6 +7,36 @@
       return value ? value.pop() : defaultValue;
   }
 
+  function showHeader(visible) {
+    if (bannerVisible === visible) {
+      return;
+    }
+    const body = document.querySelector('body.devsite-landing-page');
+    if (!body) {
+      return;
+    }
+    if (visible === true) {
+      body.querySelector('.devsite-wrapper')
+        .style.marginTop = navHeadHeight + 'px';
+      body.querySelector('header.devsite-top-section')
+        .classList.remove('devsite-top-section-pinned');
+      body.querySelector('.devsite-top-logo-row-wrapper-wrapper')
+        .style.position = 'fixed';
+      body.querySelector('.devsite-collapsible-section')
+        .style.marginTop = '0px';
+    } else {
+      body.querySelector('.devsite-wrapper')
+        .style.marginTop = (navHeadHeight + bannerHeight) + 'px';
+      body.querySelector('header.devsite-top-section')
+        .classList.add('devsite-top-section-pinned');
+      body.querySelector('.devsite-top-logo-row-wrapper-wrapper')
+        .style.position = 'relative';
+      body.querySelector('.devsite-collapsible-section')
+        .style.marginTop = '-190px';
+    }
+    bannerVisible = visible;
+  }
+
   function initNavToggles() {
     var elems = document
       .querySelectorAll('.devsite-section-nav .devsite-nav-item-section-expandable');
@@ -121,4 +151,15 @@
   initYouTubeVideos();
   initFeed();
   initLangSelector();
+  let bannerVisible = true;
+  const navHeadHeight = 48;
+  const bannerHeight = document.querySelector('header.devsite-top-section')
+    .clientHeight;
+  window.addEventListener('scroll', function(e) {
+    if (window.scrollY > bannerHeight) {
+      showHeader(false);
+    } else if (window.scrollY < bannerHeight) {
+      showHeader(true);
+    }
+});
 })();

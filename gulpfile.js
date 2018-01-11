@@ -113,6 +113,7 @@ gulp.task('clean', function() {
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
     'src/content/**/_files.json',
+    'src/content/*/_index-latest-*.html',
     'src/content/en/sitemap.xml',
     'src/content/*/fundamentals/glossary.md',
     'src/content/*/resources/contributors/*',

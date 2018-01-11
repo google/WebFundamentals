@@ -17,32 +17,35 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
   page = parsedYaml['landing_page']
   rows = page['rows']
   title = 'Web'
+  if 'title' in parsedYaml:
+    title = parsedYaml['title']
+  headerTitle = None
+  description = 'Description pulled from <code>_project.yaml</code>'
+  headerButtons = None
   banner = devsiteHelper.getAnnouncementBanner(projectPath, lang)
-  header = 'Generic Page Header Here'
-  customCss = ''
+  customHeader = None
+  customCSS = None
   lowerTabs = devsiteHelper.getLowerTabs(bookYaml)
+  if len(lowerTabs) <= 1:
+    lowerTabs = None
   if 'custom_css_path' in page:
-    customCss = '<link rel="stylesheet" href="'
-    customCss += page['custom_css_path']
-    customCss += '">'
+    customCSS = '<link rel="stylesheet" href="'
+    customCSS += page['custom_css_path']
+    customCSS += '">'
   if 'header' in page:
-    header = '<div class="devsite-collapsible-section">'
-    header += '<div class="devsite-header-background devsite-full-site-width">'
-    header += '<div class="devsite-product-id-row devsite-full-site-width">'
-    if 'description' in page['header']:
-      header += '<div class="devsite-product-description-row">'
-      header += '<div class="devsite-product-description">'
-      header += page['header']['description']
-      header += '</div></div>'
-    if 'buttons' in page['header']:
-      header += '<div class="devsite-product-button-row">'
-      for button in page['header']['buttons']:
-        header += '<a class="button" href="'
-        header += button['path'] + '">' + button['label'] + '</a>'
-      header += '</div>'
-    header += '</div></div></div>'
-    if 'name' in page['header']:
-      title = page['header']['name']
+    if 'custom_html' in page['header']:
+      customHeader = page['header']['custom_html']
+    else:
+      if 'name' in page['header']:
+        headerTitle = page['header']['name']
+      if 'description' in page['header']:
+        description = page['header']['description']
+      if 'buttons' in page['header']:
+        headerButtons = []
+        for button in page['header']['buttons']:
+          headerButton = '<a class="button" href="'
+          headerButton += button['path'] + '">' + button['label'] + '</a>'
+          headerButtons.append(headerButton)
   for row in rows:
     sectionClass = ['devsite-landing-row']
     section = '<section class="[[SECTION_CLASSES]]">'
@@ -59,28 +62,34 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
       section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">'
       section += row['heading'] + '</h2>'
     if 'description' in row:
-      section += row['description']
+      section += '<p class="devsite-landing-row-description">'
+      section += row['description'] + '</p>'
     if 'items' in row:
       section += '<div class="devsite-landing-row-group">'
       section += parseIndexYamlItems(row['items'])
       section += '</div>'
     if 'columns' in row:
+      section += '<div class="devsite-landing-row-group">'
       for column in row['columns']:
         section += '<div class="devsite-landing-row-column">'
-        if 'items' in column:
-          section += parseIndexYamlItems(column['items'])
+        # if 'items' in column:
+        section += parseIndexYamlItems([column])
         section += '</div>'
+      section += '</div>'
     section += '</section>'
     section = section.replace('[[SECTION_CLASSES]]', ' '.join(sectionClass))
     body += section
     body = devsiteHelper.renderDevSiteContent(body, lang)
   return render('gae/home.tpl', {
                 'title': title,
+                'headerTitle': title,
+                'description': description,
+                'headerButtons': headerButtons,
                 'announcementBanner': banner,
                 'requestPath': requestPath,
                 'lowerTabs': lowerTabs,
-                'customcss': customCss,
-                'header': header,
+                'customCSS': customCSS,
+                'customHeader': customHeader,
                 'content': body,
                 'lang': lang,
                 'footerPromo': devsiteHelper.getFooterPromo(),
@@ -115,8 +124,20 @@ def parseIndexYamlItems(yamlItems):
         descriptionClasses.append('devsite-landing-row-item-icon-description')
       if link:
         item += '</a>'
-
-    if 'image_path' in yamlItem:
+    elif 'custom_image' in yamlItem:
+      figClasses = 'devsite-landing-row-item-image '
+      figClasses += 'devsite-landing-row-item-custom-image '
+      figClasses += 'devsite-background '
+      figClasses += 'devsite-background-'
+      figClasses += yamlItem['custom_image']['background']
+      figDivClasses = 'devsite-landing-row-item-custom-image-icon '
+      figDivClasses += 'material-icons'
+      item += '<figure class="' + figClasses + '">'
+      item += link
+      item += '<div class="' + figDivClasses + '">'
+      item += yamlItem['custom_image']['icon_name']
+      item += '</div></a></figure>'
+    elif 'image_path' in yamlItem:
       imgClass = 'devsite-landing-row-item-image'
       if 'image_left' in yamlItem:
         imgClass += ' devsite-landing-row-item-image-left'
@@ -132,7 +153,6 @@ def parseIndexYamlItems(yamlItems):
           item += link
         item += '<h3 id="' + devsiteHelper.slugify(yamlItem['heading']) +'">'
         item += yamlItem['heading'] + '</h3>'
-        # item += '<h3>' + yamlItem['heading'] + '</h3>'
         if link:
           item += '</a>'
       item += yamlItem['description']

@@ -150,10 +150,34 @@ gulp.task('build:showcase', function() {
 
 /**
  * Builds index page and RSS & ATOM feeds for /web/shows/
- * @todo - Move this gulp task to wfYouTubeShows.js
  */
 gulp.task('build:shows', function(cb) {
-  wfYouTubeShows.buildFeeds(global.WF.options.buildType, cb);
+  return wfYouTubeShows.getVideos(global.WF.options.buildType)
+    .then((videos) => {
+      // build the RSS & ATOM feeds
+      wfYouTubeShows.buildFeeds(videos);
+
+      // build the shows index.md page
+      let context = {videos: videos};
+      let template = path.join(global.WF.src.templates, 'shows', 'index.md');
+      let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+      wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+      // build the latest show widget
+      context = {video: videos[0]};
+      template = path.join(global.WF.src.templates, 'shows', 'latest.html');
+      outputFile = path.join(
+        global.WF.src.content, '_shared', 'latest_show.html');
+      wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+      // build the latest show include for index
+      context = {video: videos[0]};
+      template = path.join(
+        global.WF.src.templates, 'landing-page', 'latest-show.html');
+      outputFile = path.join(
+        global.WF.src.content, '_index-latest-show.html');
+      wfTemplateHelper.renderTemplate(template, context, outputFile);
+    });
 });
 
 
@@ -270,6 +294,14 @@ gulp.task('build:updates', function() {
     articlesToShow: 4,
   },
   wfTemplateHelper.generateLatestWidget(files, options);
+
+  // Build updates widget for /web/index
+  const template = path.join(
+    global.WF.src.templates, 'landing-page', 'latest-updates.html');
+  const context = {articles: files.splice(0, 4)};
+  const outFile = path.join(
+    global.WF.src.content, '_index-latest-updates.html');
+  wfTemplateHelper.renderTemplate(template, context, outFile);
 });
 
 
