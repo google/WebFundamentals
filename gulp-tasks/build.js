@@ -258,8 +258,10 @@ gulp.task('build:updates', function() {
   Object.keys(filesByYear).forEach(function(year) {
     options.outputPath = path.join(baseOutputPath, year);
     options.year = year;
-    options.title = 'Web Updates (' + year + ')';
+    options.title = `Web Updates (${year})`;
     wfTemplateHelper.generateListPage(filesByYear[year], options);
+    wfTemplateHelper.generateFeeds(
+        filesByYear[year], Object.assign({maxItems: 100}, options));
     options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
