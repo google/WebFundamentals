@@ -296,15 +296,26 @@ def buildLeftNav(bookYaml, lang='en'):
       result += '</a>\n'
       result += '</li>\n'
     elif 'heading' in item:
-      result += '<li class="devsite-nav-item devsite-nav-item-heading">\n';
+      itemClass = 'devsite-nav-item devsite-nav-item-heading'
+      result += '<li class="' + itemClass + '">\n';
       result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n';
       result += '<span>' + cgi.escape(item['heading']) + '</span>\n';
       result += '</span>\n</li>\n';
     elif 'section' in item:
       # Sub-section
-      result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
+      itemClass = 'devsite-nav-item devsite-nav-item-section-expandable x'
+      if 'style' in item:
+        logging.info('yes')
+        itemClass += ' devsite-nav-accordion'
+      if 'status' in item:
+        itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
+      result += '<li class="' + itemClass + '">\n'
       result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n'
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
+      if 'status' in item:
+        result += '<span class="devsite-nav-icon-wrapper">'
+        result += '<span class="devsite-nav-icon material-icons"></span>'
+        result += '</span>'
       result += '</span>'
       result += '<a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons">\n'
       result += '</a>'
