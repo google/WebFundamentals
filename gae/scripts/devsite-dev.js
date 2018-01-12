@@ -2,7 +2,6 @@
 
 /* eslint browser:true */
 
-window.pete = this;
 const body = document.querySelector('body');
 const siteBannerHeight = body
   .querySelector('.devsite-top-logo-row-wrapper-wrapper').clientHeight;
@@ -93,7 +92,6 @@ function collapseBanner(scrollY) {
       .style.visibility = 'hidden';
     body.querySelector('.devsite-main-content')
       .style.marginTop = `${collapsibleSectionHeight + siteBannerHeight}px`;
-    console.log('a', collapsibleSectionHeight + siteBannerHeight)
     isBannerCollapsed = true;
   } else if (scrollY < prodIDRowHeight && isBannerCollapsed) {
     body.querySelector('div.devsite-wrapper')
