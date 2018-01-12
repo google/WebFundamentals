@@ -29,5 +29,22 @@ toc:
   - title: Try Puppeteer!
     path: 'https://try-puppeteer.appspot.com/'
     status: external
+
+  - heading: Project
+  - title: NPM
+    path: 'https://www.npmjs.com/package/puppeteer'
+    status: external
+  - title: Github
+    path: 'https://github.com/GoogleChrome/puppeteer'
+    status: external
+  - title: Report an issue
+    path: 'https://github.com/GoogleChrome/puppeteer/issues/new'
+    status: external
+  - title: Releases
+    path: 'https://github.com/GoogleChrome/puppeteer/releases'
+    status: external
+  - title: How to Contribute
+    path: 'https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md'
+    status: external
   - title: FAQ
     path: /web/tools/puppeteer/faq

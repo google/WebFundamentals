@@ -54,9 +54,6 @@ async function saveFile(outputFile, content) {
  * @param {!Array<string>} tags
  */
 async function generateTOC(tocYaml, tags) {
-  const yamlContent = await readFile(tocYaml, {encoding: 'utf-8'});
-  const yamlJSON = jsYaml.safeLoad(yamlContent);
-
   const items = tags.map((tag, i) => {
     const obj = {
       title: tag,
