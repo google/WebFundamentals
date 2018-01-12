@@ -45,7 +45,7 @@ landing_page:
     - heading: Move to HTTPS
       image_path: /web/images/content-https-2x.jpg
       description: >
-        HTTPS allows users to securely connecto to your website or app. Set up
+        HTTPS allows users to securely connect to your website or app. Set up
         HTTPS to protect the integrity and security of your users.
       path: /web/fundamentals/security/encrypt-in-transit/why-https
       path_attributes:
