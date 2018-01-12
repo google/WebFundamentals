@@ -188,6 +188,4 @@ function init() {
   });
 }
 
-
 init();
-
