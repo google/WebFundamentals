@@ -32,7 +32,6 @@ function highlightLowerTab() {
     if (currentURL.indexOf(tab.href) === 0) {
       bestMatch = tab;
     }
-    console.log('tab', currentURL, tab.href)
   });
   if (bestMatch) {
     bestMatch.classList.add('devsite-doc-set-nav-active');
