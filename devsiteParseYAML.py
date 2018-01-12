@@ -63,6 +63,10 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
   else:
     context['logoRowTitle'] = projectYaml['name']
 
+  # Get the custom_html for the header if appropriate
+  if 'header' in page and 'custom_html' in page['header']:
+    context['customHeader'] = page['header']['custom_html']
+
   # Get the header title
   if 'parent_project_metadata_path' in projectYaml:
     context['headerTitle'] = projectYaml['name']

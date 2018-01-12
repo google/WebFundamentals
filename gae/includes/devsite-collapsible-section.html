@@ -1,4 +1,7 @@
 <div class="devsite-collapsible-section" style="margin-top: 0px;">
+{% if customHeader %}
+  {{ customHeader|safe }}
+{% else %}
   <div class="devsite-header-background devsite-full-site-width">
     <div class="devsite-product-id-row devsite-full-site-width">
       <div class="devsite-product-description-row">
@@ -26,4 +29,5 @@
 
     {% include "includes/lower-tabs.html" %}
   </div>
+{% endif %}
 </div>

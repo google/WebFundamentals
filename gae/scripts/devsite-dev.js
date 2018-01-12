@@ -5,8 +5,9 @@
 const body = document.querySelector('body');
 const siteBannerHeight = body
   .querySelector('.devsite-top-logo-row-wrapper-wrapper').clientHeight;
-const prodIDRowHeight = body
-  .querySelector('.devsite-product-id-row').clientHeight;
+const collapsibleRow = body.querySelector('.devsite-product-id-row') ||
+    body.querySelector('.devsite-header-background');
+const prodIDRowHeight = collapsibleRow.clientHeight;
 const collapsibleSectionHeight = body
   .querySelector('.devsite-collapsible-section').clientHeight;
 let isBannerCollapsed = true;
@@ -102,8 +103,7 @@ function collapseBanner(scrollY) {
       .style.position = 'relative';
     body.querySelector('.devsite-collapsible-section')
       .style.marginTop = `-${prodIDRowHeight}px`;
-    body.querySelector('.devsite-product-id-row')
-      .style.visibility = 'hidden';
+    collapsibleRow.style.visibility = 'hidden';
     body.querySelector('.devsite-main-content')
       .style.marginTop = `${collapsibleSectionHeight + siteBannerHeight}px`;
     isBannerCollapsed = true;
@@ -116,8 +116,7 @@ function collapseBanner(scrollY) {
       .style.position = 'fixed';
     body.querySelector('.devsite-collapsible-section')
       .style.marginTop = `0px`;
-    body.querySelector('.devsite-product-id-row')
-      .style.visibility = 'visible';
+    collapsibleRow.style.visibility = 'visible';
     const minMargin = isDocPage ? 40 : 0;
     body.querySelector('.devsite-main-content')
       .style.marginTop = `${minMargin}px`;
