@@ -24,6 +24,21 @@ function initNavToggles() {
   });
 }
 
+function highlightLowerTab() {
+  const currentURL = window.location.href;
+  const lowerTabs = document.querySelectorAll('.devsite-doc-set-nav-row ul a');
+  let bestMatch;
+  lowerTabs.forEach((tab) => {
+    if (currentURL.indexOf(tab.href) === 0) {
+      bestMatch = tab;
+    }
+    console.log('tab', currentURL, tab.href)
+  });
+  if (bestMatch) {
+    bestMatch.classList.add('devsite-doc-set-nav-active');
+  }
+}
+
 /* Expand/Collapses the Primary Left Hand Nav */
 function toggleNav(event) {
   var srcElement = event.srcElement || event.target;
@@ -168,6 +183,7 @@ function init() {
   initYouTubeVideos();
   highlightActiveNavElement();
   initFeed();
+  highlightLowerTab();
   collapseBanner(window.scrollY);
   window.addEventListener('scroll', function(e) {
     collapseBanner(window.scrollY);

@@ -305,7 +305,6 @@ def buildLeftNav(bookYaml, lang='en'):
       # Sub-section
       itemClass = 'devsite-nav-item devsite-nav-item-section-expandable x'
       if 'style' in item:
-        logging.info('yes')
         itemClass += ' devsite-nav-accordion'
       if 'status' in item:
         itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
