@@ -17,6 +17,19 @@
     </div>
   {% endif %}
 
+  {% if item.custom_image %}
+    <figure class="devsite-landing-row-item-image
+                   devsite-landing-row-item-custom-image
+                   devsite-background devsite-background-{{ item.custom_image.background }}">
+      {% if item.path %}<a href="{{ item.path }}">{% endif %}
+        <div class="devsite-landing-row-item-custom-image-icon material-icons">
+          {{ item.custom_image.icon_name }}
+        </div>
+      {% if item.path %}</a>{% endif %}
+
+    </figure>
+  {% endif %}
+
   {% if item.icon %}
     {% if item.path %}
     <a href="{{ item.path }}">
