@@ -127,6 +127,7 @@ gulp.task('clean', function() {
     'src/content/*/shows/**/feed.xml',
     'src/content/*/shows/http203/podcast/index.md',
     'src/content/*/shows/designer-vs-developer/podcast/index.md',
+    'src/content/*/tools/puppeteer/_src/**/*',
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
     'src/content/*/updates/tags/*',

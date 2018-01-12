@@ -25,10 +25,10 @@ const ORG = 'GoogleChrome';
 const USER = 'puppeteer';
 const GITHUB_PROJECT_URL = `https://github.com/${ORG}/${USER}`;
 const GIT_URL = `${GITHUB_PROJECT_URL}.git`;
+const NUM_RELEASES_TO_INCLUDE = 3;
 
 const DOC_FILES = [
   'README.md',
-  // 'docs/api.md',
   'docs/troubleshooting.md',
   'examples/README.md',
 ];
@@ -57,21 +57,9 @@ async function generateTOC(tocYaml, tags) {
   const yamlContent = await readFile(tocYaml, {encoding: 'utf-8'});
   const yamlJSON = jsYaml.safeLoad(yamlContent);
 
-  // Update/add API Reference section to TOC.
-  let apiIdx = yamlJSON.toc.findIndex((item) => item.title === 'API Reference');
-  if (apiIdx === -1) {
-    apiIdx = yamlJSON.toc.findIndex((item) => item.title === 'Overview') + 1;
-    yamlJSON.toc.splice(apiIdx, 0, {
-      title: 'API Reference',
-      style: 'accordion',
-      section: [],
-    });
-  }
-
-  yamlJSON.toc[apiIdx].section = tags.map((tag, i) => {
-    const title = i === 0 ? `${tag} (latest}` : tag;
-    return {
-      title,
+  const items = tags.map((tag, i) => {
+    const obj = {
+      title: tag,
       section: [{
         title: 'Docs',
         path: `${GITHUB_PROJECT_URL}/blob/${tag}/docs/api.md`,
@@ -82,9 +70,21 @@ async function generateTOC(tocYaml, tags) {
         status: 'external',
       }],
     };
+    // Latest release.
+    if (i === 0) {
+      obj.status = 'new';
+    }
+    return obj;
   });
 
-  await writeFile(tocYaml, jsYaml.safeDump(yamlJSON));
+  items.push({
+    title: 'Old releases',
+    path: `${GITHUB_PROJECT_URL}/releases`,
+    status: 'external',
+  });
+
+  const filePath = path.join(PPTR_FOLDER_PATH, '_src', 'api_section.yaml');
+  await writeFile(filePath, jsYaml.safeDump({toc: items}));
 }
 
 /**
@@ -105,7 +105,7 @@ gulp.task('puppeteer:build', async () => {
       `git ls-remote --tags ${GITHUB_PROJECT_URL}`, '.');
   const refs = result.split('\n');
   const tags = refs.map((ref) => ref.split('refs/tags/')[1])
-      .sort(semver.rcompare);
+      .sort(semver.rcompare).slice(0, NUM_RELEASES_TO_INCLUDE);
   const latestTag = tags[0];
 
   const tmpDir = path.join(os.tmpdir(), Date.now().toString(), latestTag);
