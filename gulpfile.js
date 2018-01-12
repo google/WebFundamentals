@@ -13,6 +13,7 @@ const requireDir = require('require-dir');
 
 requireDir('./gulp-tasks');
 requireDir('./gulp-tasks/workbox');
+requireDir('./gulp-tasks/puppeteer');
 
 gutil.log('---------------------------------');
 gutil.log(`${chalk.dim('Web')}${chalk.bold('Fundamentals')} Gulp`);

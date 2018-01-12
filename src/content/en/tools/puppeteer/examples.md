@@ -6,6 +6,8 @@ description: Puppeteer examples
 {# wf_published_on: 2018-01-10 #}
 {# wf_blink_components: Internals>Headless #}
 
+{% include "web/tools/puppeteer/_shared/styles.html" %}
+
 # Examples {: .page-title }
 
-{% includecode github_path="GoogleChrome/puppeteer/blob/master/examples/README.md" %}
+<<_src/examples/README.md>>

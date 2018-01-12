@@ -6,6 +6,8 @@ description: Helpful tips for debugging Puppeteer
 {# wf_published_on: 2018-01-10 #}
 {# wf_blink_components: Internals>Headless #}
 
+{% include "web/tools/puppeteer/_shared/styles.html" %}
+
 # Debugging {: .page-title }
 
-{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="debugging" regexp="## Debugging tips(.*)" %}
+<<_src/_index/debugging.md>>

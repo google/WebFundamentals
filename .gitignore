@@ -36,6 +36,7 @@ src/content/*/showcase/_index.yaml
 src/content/*/showcase/*/_toc.yaml
 src/content/*/showcase/*/index.md
 src/content/*/showcase/tags/*
+src/content/*/tools/puppeteer/_src/*
 src/content/*/rss.xml
 src/content/*/atom.xml
 src/data/codelabs/*/img/*

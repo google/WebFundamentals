@@ -1,55 +1,104 @@
 toc:
-- heading: Get Started
-- title: Overview
-  path: /web/tools/puppeteer/
-- title: API Reference
-  style: accordion
-  section:
-  - title: v1.0 (latest)
+  - heading: Get Started
+  - title: Overview
+    path: /web/tools/puppeteer/
+  - title: Get Started
+    path: /web/tools/puppeteer/get-started
+  - title: API Reference
+    style: accordion
     section:
-    - title: API Docs
-      path: https://github.com/GoogleChrome/puppeteer/blob/v1.0/docs/api.md
-      status: external
-    - title: Release Notes
-      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v1.0
-      status: external
-  - title: v0.13.0
+      - title: 'v1.0.0 (latest}'
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v1.0.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v1.0.0'
+            status: external
+      - title: v0.13.0
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.13.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.13.0'
+            status: external
+      - title: v0.12.0
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.12.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.12.0'
+            status: external
+      - title: v0.11.0
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.11.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.11.0'
+            status: external
+      - title: v0.10.2
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.10.2/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.10.2'
+            status: external
+      - title: v0.10.1
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.10.1/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.10.1'
+            status: external
+      - title: v0.10.0
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.10.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.10.0'
+            status: external
+      - title: v0.9.0
+        section:
+          - title: Docs
+            path: 'https://github.com/GoogleChrome/puppeteer/blob/v0.9.0/docs/api.md'
+            status: external
+          - title: Release Notes
+            path: 'https://github.com/GoogleChrome/puppeteer/releases/tag/v0.9.0'
+            status: external
+  - title: Examples
+    path: /web/tools/puppeteer/examples
+  - heading: Resources
+  - title: Debugging tips
+    path: /web/tools/puppeteer/debugging
+  - title: Troubleshooting
+    path: /web/tools/puppeteer/troubleshooting
+  - title: Headless Chrome
+    style: accordian
     section:
-    - title: API Docs
-      path: https://github.com/GoogleChrome/puppeteer/blob/v0.13.0/docs/api.md
-      status: external
-    - title: Release Notes
-      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v0.13.0
-      status: external
-  - title: v0.12.0
-    section:
-    - title: API Docs
-      path: https://github.com/GoogleChrome/puppeteer/blob/v0.12.0/docs/api.md
-      status: external
-    - title: Release Notes
-      path: https://github.com/GoogleChrome/puppeteer/releases/tag/v0.12.0
-      status: external
-- title: Examples
-  path: /web/tools/puppeteer/examples
-- heading: Resources
-- title: Debugging tips
-  path: /web/tools/puppeteer/debugging
-- title: Troubleshooting Guide
-  path: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
-- title: Try Puppeteer!
-  path: https://try-puppeteer.appspot.com/
-- title: DevTools Protocol APIs
-  path: https://chromedevtools.github.io/devtools-protocol/
-- heading: Project
-- title: NPM
-  path: https://www.npmjs.com/package/puppeteer
-- title: Github
-  path: https://github.com/GoogleChrome/puppeteer
-- title: Report an issue
-  path: https://github.com/GoogleChrome/puppeteer/issues/new
-- title: Releases
-  path: https://github.com/GoogleChrome/puppeteer/releases
-- title: How to Contribute
-  path: https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md
-- title: FAQ
-  path: /web/tools/puppeteer/faq
+      - title: Getting Started with Headless Chrome
+        path: /web/updates/2017/04/headless-chrome
+      - title: Automated testing with Headless Chrome
+        path: /web/updates/2017/06/headless-karma-mocha-chai
+  - title: DevTools Protocol APIs
+    path: 'https://chromedevtools.github.io/devtools-protocol/'
+  - title: Try Puppeteer!
+    path: 'https://try-puppeteer.appspot.com/'
+  - heading: Project
+  - title: NPM
+    path: 'https://www.npmjs.com/package/puppeteer'
+  - title: Github
+    path: 'https://github.com/GoogleChrome/puppeteer'
+  - title: Report an issue
+    path: 'https://github.com/GoogleChrome/puppeteer/issues/new'
+  - title: Releases
+    path: 'https://github.com/GoogleChrome/puppeteer/releases'
+  - title: How to Contribute
+    path: 'https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md'
+  - title: FAQ
+    path: /web/tools/puppeteer/faq

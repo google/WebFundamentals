@@ -1,14 +1,14 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn how to use Puppeteer to automate and test apps in headless Chrome.
+description: Overview of Puppeteer
 
-{# wf_updated_on: 2018-01-10 #}
-{# wf_published_on: 2018-01-10 #}
+{# wf_updated_on: 2018-01-11 #}
+{# wf_published_on: 2018-01-11 #}
 {# wf_blink_components: Internals>Headless #}
 
 # Puppeteer {: .page-title }
 
-{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="badges" %}
+<<_src/_index/badges.md>>
 
 <style>
 .pptr-logo {
@@ -26,13 +26,10 @@ can also be configured to use full (non-headless) Chrome or Chromium.
 <img src="/web/tools/images/puppeteer.png"
      class="pptr-logo attempt-right" alt="Puppeteer Logo">
 
-{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="usecases" %}
-
-{% includecode github_path="GoogleChrome/puppeteer/blob/master/README.md" region_tag="getstarted" %}
+<<_src/_index/usecases.md>>
 
 ## Next steps {: #next-steps }
 
-* Learn more about the [API](./api)
-* Learn more about [headless Chrome](/web/updates/2017/04/headless-chrome)
-* Look over the [samples](./examples).
+* Install Puppeteer and [Get Started](./get-started)!
+* Look over the [examples](./examples).
 

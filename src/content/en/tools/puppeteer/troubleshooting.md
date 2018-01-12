@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: FAQ
+description: Troubleshooting Guide
 
 {# wf_updated_on: 2018-01-10 #}
 {# wf_published_on: 2018-01-10 #}
@@ -8,6 +8,6 @@ description: FAQ
 
 {% include "web/tools/puppeteer/_shared/styles.html" %}
 
-# FAQ {: .page-title }
+# Troubleshooting {: .page-title }
 
-<<_src/_index/faq.md>>
+<<_src/docs/troubleshooting.md>>
