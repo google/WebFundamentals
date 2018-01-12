@@ -1,5 +1,5 @@
 /**
- * @fileoverview Generate the latest CDN URL that can be included in docs.
+ * @fileoverview Generates the Puppeteer docs at /web/tools/puppeteer/
  *
  * @author Eric Bidelman <e.bidelman@google.com>
  */
