@@ -51,18 +51,20 @@ async function saveFile(outputFile, content) {
 /**
  * Updates _toc.yaml file with latest releases and saves file to disk.
  * @param {string} tocYaml Path to toc yaml file.
+ * @param {!Array<string>} tags
  */
 async function generateTOC(tocYaml, tags) {
-  const yamlJSON = jsYaml.safeLoad(await readFile(tocYaml, {encoding: 'utf-8'}));
+  const yamlContent = await readFile(tocYaml, {encoding: 'utf-8'});
+  const yamlJSON = jsYaml.safeLoad(yamlContent);
 
   // Update/add API Reference section to TOC.
-  let apiIdx = yamlJSON.toc.findIndex(item => item.title === 'API Reference');
+  let apiIdx = yamlJSON.toc.findIndex((item) => item.title === 'API Reference');
   if (apiIdx === -1) {
-    apiIdx = yamlJSON.toc.findIndex(item => item.title === 'Overview') + 1;
+    apiIdx = yamlJSON.toc.findIndex((item) => item.title === 'Overview') + 1;
     yamlJSON.toc.splice(apiIdx, 0, {
       title: 'API Reference',
       style: 'accordion',
-      section: []
+      section: [],
     });
   }
 
@@ -73,29 +75,37 @@ async function generateTOC(tocYaml, tags) {
       section: [{
         title: 'Docs',
         path: `${GITHUB_PROJECT_URL}/blob/${tag}/docs/api.md`,
-        status: 'external'
+        status: 'external',
       }, {
         title: 'Release Notes',
         path: `${GITHUB_PROJECT_URL}/releases/tag/${tag}`,
-        status: 'external'
-      }]
+        status: 'external',
+      }],
     };
   });
 
   await writeFile(tocYaml, jsYaml.safeDump(yamlJSON));
 }
 
-function extractRegion(content, regionName) {
+/**
+ * Extracts a devsite START/END region from file.
+ * @param {string} content
+ * @param {string} region Name of region to pull out.
+ * @return {string|null}
+ */
+function extractRegion(content, region) {
   const re = new RegExp(
-      `<!-- \\[START ${regionName}\\] -->(.*)<!-- \\[END ${regionName}\\] -->`, 's');
+      `<!-- \\[START ${region}\\] -->(.*)<!-- \\[END ${region}\\] -->`, 's');
   const m = content.match(re);
   return m && m[0] || null;
 }
 
 gulp.task('puppeteer:build', async () => {
-  const result = await wfHelper.promisedExec(`git ls-remote --tags ${GITHUB_PROJECT_URL}`, '.');
+  const result = await wfHelper.promisedExec(
+      `git ls-remote --tags ${GITHUB_PROJECT_URL}`, '.');
   const refs = result.split('\n');
-  const tags = refs.map(ref => ref.split('refs/tags/')[1]).sort(semver.rcompare);
+  const tags = refs.map((ref) => ref.split('refs/tags/')[1])
+      .sort(semver.rcompare);
   const latestTag = tags[0];
 
   const tmpDir = path.join(os.tmpdir(), Date.now().toString(), latestTag);
@@ -108,7 +118,8 @@ gulp.task('puppeteer:build', async () => {
   await saveFile('_index/usecases.md', extractRegion(content, 'usecases'));
   await saveFile('_index/getstarted.md', extractRegion(content, 'getstarted'));
   await saveFile('_index/debugging.md', extractRegion(content, 'debugging'));
-  await saveFile('_index/runtimesettings.md', extractRegion(content, 'runtimesettings'));
+  await saveFile(
+      '_index/runtimesettings.md', extractRegion(content, 'runtimesettings'));
   await saveFile('_index/faq.md', extractRegion(content, 'faq'));
 
   for (const iFile of DOC_FILES) {
