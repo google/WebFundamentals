@@ -14,7 +14,7 @@ const jsYaml = require('js-yaml');
 const {promisify} = require('util');
 const semver = require('semver');
 
-const checkoutSource = require('../reference-docs/get-source-code');
+const checkoutRepoAtTag = require('../reference-docs/get-source-code');
 const wfHelper = require('../wfHelper');
 
 const readFile = promisify(fs.readFile);
@@ -95,7 +95,7 @@ async function generateTOC(tocYaml, tags) {
  */
 function extractRegion(content, region) {
   const re = new RegExp(
-      `<!-- \\[START ${region}\\] -->(.*)<!-- \\[END ${region}\\] -->`, 's');
+      `<!-- \\[START ${region}\\] -->([\\s\\S]*)<!-- \\[END ${region}\\] -->`);
   const m = content.match(re);
   return m && m[0] || null;
 }
@@ -109,7 +109,7 @@ gulp.task('puppeteer:build', async () => {
   const latestTag = tags[0];
 
   const tmpDir = path.join(os.tmpdir(), Date.now().toString(), latestTag);
-  await checkoutSource(GIT_URL, latestTag, tmpDir);
+  await checkoutRepoAtTag(GIT_URL, latestTag, tmpDir);
 
   // Extract sections from README and create separate .md files for them.
   const readme = DOC_FILES.shift();
