@@ -34,13 +34,13 @@ coffee-shop Wi-Fi but connected to a cellular hotspot with 2G speeds.
 
 You can **reduce** the network transfer cost of JavaScript through:
 
-* **Only sending the code a user needs**. 
+* **Only sending the code a user needs**.
     * Use [code-splitting](/web/updates/2017/06/supercharged-codesplit) to break
       up your JavaScript into what is critical and what is not. Module bundlers
       like [webpack](https://webpack.js.org) support
       [code-splitting](https://webpack.js.org/guides/code-splitting/).
     * Lazily loading in code that is non-critical.
-* **Minification** 
+* **Minification**
     * Use [UglifyJS](https://github.com/mishoo/UglifyJS) for
       [minifying](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#minification_preprocessing_context-specific_optimizations)
       ES5 code.
@@ -58,7 +58,7 @@ You can **reduce** the network transfer cost of JavaScript through:
       on the size of compressed JS bytes and LinkedIn save
       [4%](https://engineering.linkedin.com/blog/2017/05/boosting-site-speed-using-brotli-compression)
       on their load times.
-* **Removing unused code**. 
+* **Removing unused code**.
     * Identify opportunities for code that can be removed or lazily loaded in
       with [DevTools code
       coverage](/web/updates/2017/04/devtools-release-notes#coverage).
@@ -75,16 +75,16 @@ You can **reduce** the network transfer cost of JavaScript through:
       [lodash-babel-plugin](https://github.com/lodash/babel-plugin-lodash) or
       webpack’s
       [ContextReplacementPlugin](https://iamakulov.com/notes/webpack-front-end-size-caching/#moment-js)
-      for libraries like Moment.js. 
-* **Caching code to minimize network trips.** 
+      for libraries like Moment.js.
+* **Caching code to minimize network trips.**
     * Use [HTTP
       caching](/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
       to ensure browsers cache responses effectively. Determine optimal
       lifetimes for scripts (max-age) and supply validation tokens (ETag) to avoid
-      transferring unchanged bytes. 
+      transferring unchanged bytes.
     * Service Worker caching can make your app network resilient and give you
       eager access to features like [V8’s code
-      cache](https://v8project.blogspot.com/2015/07/code-caching.html). 
+      cache](https://v8project.blogspot.com/2015/07/code-caching.html).
     * Use long-term caching to avoid having to re-fetch resources that haven't
       changed. If using Webpack, see [filename
       hashing](https://webpack.js.org/guides/caching/).
@@ -93,7 +93,7 @@ You can **reduce** the network transfer cost of JavaScript through:
 
 Once downloaded, one of JavaScript’s **heaviest** costs is the time for a JS
 engine to **parse/compile** this code. In [Chrome
-DevTools](web/tools/chrome-devtools/), parse and compile are part of the yellow
+DevTools](/web/tools/chrome-devtools/), parse and compile are part of the yellow
 "Scripting" time in the Performance panel.
 
 <img src="images/1__4gNDmBlXxOF2-KmsOrKkw.png"/>
@@ -104,8 +104,8 @@ The Bottom-Up and Call Tree tabs show you exact Parse/compile timings:
 DevTools Performance panel > Bottom-Up. With V8’s Runtime Call Stats enabled, we
 can see time spent in phases like Parse and Compile </figcaption> </figure>
 
-Note: Performance panel support for Runtime Call Stats is currently experimental. 
-To enable, go to chrome://flags/#enable-devtools-experiments -> restart Chrome -> 
+Note: Performance panel support for Runtime Call Stats is currently experimental.
+To enable, go to chrome://flags/#enable-devtools-experiments -> restart Chrome ->
 go to DevTools -> Settings -> Experiments -> hit shift 6 times -> check the option
 called `Timeline: V8 Runtime Call Stats on Timeline` and close then re-open DevTools.
 
@@ -221,7 +221,7 @@ JavaScript can impact page performance in other ways:
   <code><a
   href="/web/fundamentals/performance/rendering/optimize-javascript-execution#use_requestanimationframe_for_visual_changes">requestAnimationFrame()</a></code>
   or <code><a
-  href="web/updates/2015/08/using-requestidlecallback">requestIdleCallback()</a></code>
+  href="/web/updates/2015/08/using-requestidlecallback">requestIdleCallback()</a></code>
   for scheduling) can minimize responsiveness issues.
 
 ## Patterns for reducing JavaScript delivery cost
