@@ -156,8 +156,7 @@ code.
 ## Specify `NODE_ENV=production`
 
 Another way to decrease the front-end size is to set the `NODE_ENV`
-[environmental variable](https://superuser.com/questions/284342/what-are-path-
-and-other-environment-variables-and-how-can-i-set-or-use-them)
+[environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
 in your code to the value `production`.
 
 Libraries read the `NODE_ENV` variable to detect in which mode they should work – in the
@@ -281,8 +280,7 @@ Compiler plugin](https://github.com/roman01la/webpack-closure-compiler)).
 
 ### Further reading {: .hide-from-toc }
 
-* [What “environment variables” are](https://superuser.com/questions/284342/
-what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
+* [What “environment variables” are](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
 
 * Webpack docs about: [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/),
   [`EnvironmentPlugin`](https://webpack.js.org/plugins/environment-plugin/)
