@@ -18,6 +18,7 @@ install:
   - npm run clean
 script:
   - npm run build
+  - gulp puppeteer:build
   - npm run test
   - node ./tools/travis/addCommitComment.js
 after_success:

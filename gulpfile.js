@@ -13,6 +13,7 @@ const requireDir = require('require-dir');
 
 requireDir('./gulp-tasks');
 requireDir('./gulp-tasks/workbox');
+requireDir('./gulp-tasks/puppeteer');
 
 gutil.log('---------------------------------');
 gutil.log(`${chalk.dim('Web')}${chalk.bold('Fundamentals')} Gulp`);
@@ -126,6 +127,7 @@ gulp.task('clean', function() {
     'src/content/*/shows/**/feed.xml',
     'src/content/*/shows/http203/podcast/index.md',
     'src/content/*/shows/designer-vs-developer/podcast/index.md',
+    'src/content/*/tools/puppeteer/_src/**/*',
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
     'src/content/*/updates/tags/*',

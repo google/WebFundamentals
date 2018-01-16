@@ -10,6 +10,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_region: asia #}
 {# wf_vertical: retail #}
 {# wf_featured_date: 2017-09-27 #}
+{# wf_blink_components: N/A #}
 
 # Ele.me improves performance load times with a multi-page Progressive Web App {: .page-title }
 

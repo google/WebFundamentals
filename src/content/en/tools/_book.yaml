@@ -19,6 +19,9 @@ upper_tabs:
       - name: Lighthouse
         contents:
         - include: /web/tools/lighthouse/_toc.yaml
+      - name: Puppeteer
+        contents:
+        - include: /web/tools/puppeteer/_toc.yaml
       - name: Workbox
         contents:
         - include: /web/tools/workbox/_toc.yaml

@@ -108,7 +108,7 @@ def readFile(requestedFile, lang='en'):
     return None
 
 
-def fetchGithubFile(path):
+def fetchGithubFile(path, revision = None):
   """Fetchs a file in a repository hosted on github.com.
 
   Retrieves rows pertaining to the given keys from the Table instance
@@ -118,11 +118,15 @@ def fetchGithubFile(path):
   Args:
       path: The path to a file on Github in the form
           github-user/repository/path/to/file.
+      revision: Optional git revision string of the form
+          "refs/tags/v0.10.0". See https://goo.gl/DBLwBb for other options.
 
   Returns:
       A string from the HTTP response.
   """
   path = path.replace('/blob', '')
+  if revision:
+    path = path.replace('master', revision.replace('refs/tags/', ''))
   url = 'https://raw.githubusercontent.com/%s' % path
   try:
     response = urllib2.urlopen(url)
@@ -419,12 +423,14 @@ def getIncludeCode(include_tag, lang='en'):
   region_regex = re.search(r"region_tag=\"(.+?)\"", include_tag)
   dedent_regex = re.search(r"adjust_indentation=\"(.+?)\"", include_tag)
   github_regex = re.search(r"github_path=\"(.+?)\"", include_tag)
+  git_revision_regex = re.search(r"git_revision=\"(.+?)\"", include_tag)
+  file_content_regex = re.search(r"regexp=\"(.+?)\"", include_tag)
 
   # TODO: support these arguments
   as_downloadable_regex = re.search(r"as_downloadable=\"(.+?)\"", include_tag)
   github_link_regex = re.search(r"github_link=\"(.+?)\"", include_tag)
-  git_revision_regex = re.search(r"git_revision=\"(.+?)\"", include_tag)
-  if as_downloadable_regex or github_link_regex or git_revision_regex:
+
+  if as_downloadable_regex or github_link_regex:
     msg = 'Error: as_downloadable, github_link, and git_revision args are not supported'
     logging.error(' - ' + msg)
     return msg
@@ -441,9 +447,12 @@ def getIncludeCode(include_tag, lang='en'):
     if result is None:
       return 'Warning: Unable to find includecode <code>%s</code>' % file_name
   elif github_regex:
+    git_revision = None
+    if git_revision_regex:
+      git_revision = git_revision_regex.group(1)
 
     file_url = github_regex.group(1)
-    result = fetchGithubFile(file_url)
+    result = fetchGithubFile(file_url, git_revision)
     if result is None:
       return 'Warning: Unable to includecode from github_path="<code>%s</code>"' % file_url
 
@@ -455,6 +464,13 @@ def getIncludeCode(include_tag, lang='en'):
       end_at = result.find('[END %s]' % region_name)
       end_at = result.rfind('\n', start_at, end_at)
       result = result[start_at:end_at]
+
+  if file_content_regex:
+    print file_content_regex.groups()
+    r = re.compile(file_content_regex.group(1), re.DOTALL)
+    m = re.search(r, result)
+    if m:
+      result = m.group(1)
 
   if dedent_regex and dedent_regex.group(1) == 'auto':
     result = textwrap.dedent(result)
