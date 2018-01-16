@@ -41,11 +41,17 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
     if 'items' in row:
       count = len(row['items'])
       row['itemCount'] = count
+      for item in row['items']:
+        if 'custom_html' in item:
+          c = item['custom_html']
+          item['custom_html'] = devsiteHelper.renderDevSiteContent(c, lang)
     elif 'columns' in row:
       count = len(row['columns'])
       row['itemCount'] = count
     elif 'custom_html' in row:
       row['itemCount'] = 1
+      c = row['custom_html']
+      row['custom_html'] = devsiteHelper.renderDevSiteContent(c, lang)
   context['rows'] = page['rows']
 
   # Get the custom CSS path
