@@ -9,20 +9,24 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.CacheFirst
 - title: "CacheOnly"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.CacheOnly
+- title: "GenerateSW"
+  path: /web/tools/workbox/reference-docs/prerelease/module-workbox-webpack-plugin-GenerateSW
+- title: "InjectManifest"
+  path: /web/tools/workbox/reference-docs/prerelease/module-workbox-webpack-plugin-InjectManifest
 - title: "NavigationRoute"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.routing.NavigationRoute
 - title: "NetworkFirst"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies.NetworkOnly
-- title: "backgroundSync.Plugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Plugin
+- title: "broadcastUpdate.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.Plugin
 - title: "rangeRequests.Plugin"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.rangeRequests.Plugin
 - title: "cacheableResponse.Plugin"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.cacheableResponse.Plugin
-- title: "broadcastUpdate.Plugin"
-  path: /web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate.Plugin
+- title: "backgroundSync.Plugin"
+  path: /web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync.Plugin
 - title: "expiration.Plugin"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.expiration.Plugin
 - title: "PrecacheController"
@@ -59,7 +63,5 @@ toc:
   path: /web/tools/workbox/reference-docs/prerelease/workbox.routing
 - title: "workbox.strategies"
   path: /web/tools/workbox/reference-docs/prerelease/workbox.strategies
-- title: "WorkboxWebpackPlugin"
-  path: /web/tools/workbox/reference-docs/prerelease/module-workbox-webpack-plugin-WorkboxWebpackPlugin
 - title: "Index of all"
   path: /web/tools/workbox/reference-docs/prerelease/index-all

@@ -16,6 +16,7 @@ landing_page:
         }
 
         .workbox-heading__logo {
+          max-width: 640px;
           margin: 0 40px;
         }
       </style>

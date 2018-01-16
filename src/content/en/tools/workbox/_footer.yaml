@@ -4,7 +4,7 @@ footer:
     icon_name: star
     contents:
     - label: Guides
-      path: /web/tools/workbox/guides/
+      path: /web/tools/workbox/guides/get-started
     - label: Modules
       path: /web/tools/workbox/modules/
     - label: Reference Docs
