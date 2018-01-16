@@ -11,9 +11,9 @@ capacità di collegamento e la reperibilità del Web.
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-An **application shell** (or app shell) architecture is one way to build a
-Progressive Web App that reliably and instantly loads on your users' screens,
-similar to what you see in native applications.
+Un'architettura **shell** (o app shell) dell'applicazione è un modo per creare
+un'applicazione Web progressiva caricabile in modo affidabile e istantaneo sugli
+schermi degli utenti, simile a ciò che si vede nelle applicazioni native.
 
 L'app "shell" racchiude HTML minimale , CSS e JavaScript necessari per
 alimentare l'interfaccia utente e quando memorizzata in cache offline può
@@ -33,10 +33,10 @@ un HTML iniziale sullo schermo senza la rete.
 
 <img src="images/appshell.png" alt="Application Shell architecture">
 
-Put another way, the app shell is similar to the bundle of code that you’d
-publish to an app store when building a native app. It is the skeleton of your
-UI and the core components necessary to get your app off the ground, but likely
-does not contain the data.
+In altre parole, la shell dell'app è simile al pacchetto di codice che
+pubblicheresti in un app store durante la creazione di un'app nativa. È lo
+scheletro dell'interfaccia utente e i componenti principali necessari per far
+decollare la tua app, ma probabilmente non contiene i dati.
 
 Note: prova il codelab [First Progressive Web
 App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0) per
@@ -67,7 +67,7 @@ creare un PWA che precarizza il contenuto utilizzando un service worker, carica
 dinamicamente nuove pagine, transizioni garbate tra le visualizzazioni e
 riutilizza il contenuto dopo il primo caricamento.
 
-### Benefits {: #app-shell-benefits }
+### Vantaggi {: # app-shell-benefits}
 
 I vantaggi di un'architettura shell di app con un service worker includono:
 
@@ -94,11 +94,11 @@ costosi.
 
 Una app shell dovrebbe idealmente:
 
-- Load fast
-- Use as little data as possible
-- Use static assets from a local cache
-- Separate content from navigation
-- Retrieve and display page-specific content (HTML, JSON, etc.)
+- Caricare velocemente
+- Usa il minor numero di dati possibile
+- Usa risorse statiche da una cache locale
+- Separa il contenuto dalla navigazione
+- Recupera e visualizza il contenuto specifico della pagina (HTML, JSON, ecc.)
 - Opzionalmente, memorizza il contenuto dinamico nella cache
 
 L'app shell mantiene la tua interfaccia utente locale e carica il contenuto in
@@ -116,11 +116,11 @@ strumento.
 
 ## Costruisci la tua app shell {: #building-your-app-shell }
 
-Structure your app for a clear distinction between the page shell and the
-dynamic content. In general, your app should load the simplest shell possible
-but include enough meaningful page content with the initial download. Determine
-the right balance between speed and data freshness for each of your data
-sources.
+Struttura la tua app per una chiara distinzione tra la shell della pagina e il
+contenuto dinamico. In generale, la tua app dovrebbe caricare la shell più
+semplice possibile ma includere abbastanza contenuti di pagina significativi con
+il download iniziale. Determina il giusto equilibrio tra velocità e freschezza
+dei dati per ciascuna delle tue origini dati.
 
 <figure>
 <img src="images/wikipedia.jpg" alt="Offline Wikipedia app using an
@@ -146,15 +146,16 @@ localmente utilizzando un service worker in modo che nei carichi successivi
 vengano recuperati solo i dati nuovi o modificati, invece di dover caricare
 tutto.
 
-Your `index.html` file in your work directory should look something like the
-following code. This is a subset of the actual contents and is not a complete
-index file. Let's look at what it contains.
+Il tuo file `index.html` nella tua directory di lavoro dovrebbe assomigliare al
+seguente codice. Questo è un sottoinsieme dei contenuti effettivi e non è un
+file indice completo. Diamo un'occhiata a ciò che contiene.
 
-- HTML and CSS for the "skeleton" of your user interface complete with
-navigationand content placeholders.
-- An external JavaScript file (app.js) for handling navigation and UI logic
-aswell as the code to display posts retrieved from the server and store
-themlocally using a storage mechanism like IndexedDB.
+- HTML e CSS per lo "scheletro" dell'interfaccia utente completa di segnaposti
+di navigazione e contenuti.
+- Un file JavaScript esterno (app.js) per la gestione della navigazione e della
+logica dell'interfaccia utente, nonché il codice per visualizzare i post
+recuperati dal server e archiviarli localmente utilizzando un meccanismo di
+archiviazione come IndexedDB.
 - Un manifest di app web e un service worker per abilitare le funzionalità
 off-line.
 
@@ -272,8 +273,8 @@ precache ogni file HTML, JavaScript e CSS che costituisce app shell. Tutto
 funzionerà offline e si caricherà velocemente nelle visite successive senza
 alcuno sforzo aggiuntivo.
 
-Here us a basic example of using sw-precache as part of a
-[gulp](http://gulpjs.com) build process:
+Ecco un esempio di base dell'utilizzo di sw-precache come parte di un processo
+di generazione di [gulp](http://gulpjs.com) :
 
 ```
 gulp.task('generate-service-worker', function(callback) {
