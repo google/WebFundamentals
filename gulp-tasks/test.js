@@ -364,6 +364,7 @@ function getFiles() {
           globs.push(`${lang}/**/*`);
         });
       }
+      globs.push('!en/tools/puppeteer/_src/**/*');
       resolve(glob.find(globs, opts));
     });
   } else {
