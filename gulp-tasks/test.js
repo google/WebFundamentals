@@ -30,6 +30,8 @@ const JSONValidator = require('jsonschema').Validator;
 const MAX_DESCRIPTION_LENGTH = 485;
 const MAX_FILE_SIZE_WARN = 500; // Max file size (in kB) before warning
 const MAX_FILE_SIZE_ERROR = 2500; // Max file size (in kB) before error
+const MAX_FILES_CHANGED_WARNING = 500; // Max # of files changed before warning
+const MAX_FILES_CHANGED_ERROR = 1000; // Max # of files changed before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const EXTENSIONS_TO_SKIP = ['.css', '.vtt', '.xml'];
 const MEDIA_FILES = [
@@ -391,6 +393,13 @@ function getFiles() {
           `${chalk.cyan('--testAll')} or ${chalk.cyan('--testMaster')} ` +
           `to catch any unintended side effects!`;
         gutil.log(warn, msg);
+      }
+      const warnMsg = `More than ${MAX_FILES_CHANGED_WARNING} files changed.`;
+      if (files.length > MAX_FILES_CHANGED_ERROR) {
+        const msg = `Maxiumum number of changed files exceeeded.`;
+        logError('', null, `${msg} ${warnMsg}`);
+      } else if (files.length > MAX_FILES_CHANGED_WARNING) {
+        logWarning('', null, `${warnMsg}`);
       }
       return files;
     });
