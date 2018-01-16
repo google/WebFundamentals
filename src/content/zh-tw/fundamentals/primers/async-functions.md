@@ -30,7 +30,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 如果 Promise 執行，則會返回值。
 如果 Promise 拒絕，則會拋出拒絕的值。
 
-注：如果不熟悉 Promise，可以看一看[我們的 Promise 指南](/web/fundamentals/getting-started/primers/promises)。
+Note: 如果不熟悉 Promise，可以看一看[我們的 Promise 指南](/web/fundamentals/getting-started/primers/promises)。
 
 
 ## 示例：記錄獲取日誌
@@ -63,7 +63,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 代碼行數雖然相同，但去掉了所有回調。這可以提高代碼的可讀性，對不太熟悉 Promise 的人而言，幫助就更大了。
 
 
-注：您 `await` 的任何內容都通過 `Promise.resolve()` 傳遞，這樣您就可以安全地 `await` 非原生 Promise。
+Note: 您 `await` 的任何內容都通過 `Promise.resolve()` 傳遞，這樣您就可以安全地 `await` 非原生 Promise。
 
 
 ## 異步函數返回值
@@ -96,7 +96,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 異步函數在更復雜示例中更有用武之地。假設我們想在流式傳輸響應的同時記錄數據塊日誌，並返回數據塊最終大小。
 
 
-注：一看到“記錄數據塊日誌”這幾個字就讓我感到不舒服。
+Note: 一看到“記錄數據塊日誌”這幾個字就讓我感到不舒服。
 
 以下是使用 Promise 編寫的代碼：
 
@@ -148,7 +148,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 
 
 
-注：我有點偏愛卡片信息流。如果不熟悉流式傳輸，可以[看一看我的指南](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){: .external}。
+Note: 我有點偏愛卡片信息流。如果不熟悉流式傳輸，可以[看一看我的指南](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){: .external}。
 
 
 ## 其他異步函數語法
@@ -164,7 +164,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
       return response.json();
     });
 
-注：`array.map(func)` 不在乎我提供給它的是不是異步函數，只把它當作一個返回 Promise 的函數來看待。
+Note: `array.map(func)` 不在乎我提供給它的是不是異步函數，只把它當作一個返回 Promise 的函數來看待。
 它不會等到第一個函數執行完畢就會調用第二個函數。
 
 
@@ -195,7 +195,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-注：類構造函數以及 getter/settings 方法不能是異步的。
+Note: 類構造函數以及 getter/settings 方法不能是異步的。
 
 ## 注意！避免太過循序
 
@@ -298,7 +298,7 @@ Chrome 55 中默認情況下啓用異步函數，坦率地講，它們的作用�
 - 注意到轉譯的代碼有多相似了吧。這一轉換是 [Babel es2017 預設](http://babeljs.io/docs/plugins/preset-es2017/){: .external}的一部分。
 
 
-注：Babel REPL 說起來很有趣。試試就知道。
+Note: Babel REPL 說起來很有趣。試試就知道。
 
 我建議採用轉譯方法，因爲目標瀏覽器支持異步函數後，直接將其關閉即可，但如果*實在*不想使用轉譯器，可以親自試用一下 [Babel 的 polyfill](https://gist.github.com/jakearchibald/edbc78f73f7df4f7f3182b3c7e522d25){: .external}。
 
