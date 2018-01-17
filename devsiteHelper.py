@@ -285,30 +285,42 @@ def buildLeftNav(bookYaml, lang='en'):
   result = ''
   for item in bookYaml:
     if 'path' in item:
-      result += '<li class="devsite-nav-item">\n'
+      itemClass = 'devsite-nav-item'
+      if 'status' in item:
+        itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
+      result += '<li class="' + itemClass + '">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
+      result += '<span class="devsite-nav-text">'
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
+      result += '</span>'
+      if 'status' in item:
+        result += '<span class="devsite-nav-icon-wrapper">'
+        result += '<span class="devsite-nav-icon material-icons"></span>'
+        result += '</span>'
       result += '</a>\n'
       result += '</li>\n'
     elif 'heading' in item:
-      result += '<li class="devsite-nav-item devsite-nav-item-heading">\n';
-      result += '<span class="devsite-nav-title devsite-nav-title-no-path" ';
-      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" ';
-      result += 'track-metadata-position="0">\n';
+      itemClass = 'devsite-nav-item devsite-nav-item-heading'
+      result += '<li class="' + itemClass + '">\n';
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n';
       result += '<span>' + cgi.escape(item['heading']) + '</span>\n';
       result += '</span>\n</li>\n';
     elif 'section' in item:
       # Sub-section
-      result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
-      result += '<span class="devsite-nav-title devsite-nav-title-no-path" '
-      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" '
-      result += 'track-metadata-position="0">\n'
+      itemClass = 'devsite-nav-item devsite-nav-item-section-expandable x'
+      if 'style' in item:
+        itemClass += ' devsite-nav-accordion'
+      if 'status' in item:
+        itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
+      result += '<li class="' + itemClass + '">\n'
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n'
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
+      if 'status' in item:
+        result += '<span class="devsite-nav-icon-wrapper">'
+        result += '<span class="devsite-nav-icon material-icons"></span>'
+        result += '</span>'
       result += '</span>'
-      result += '<a '
-      result += 'class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" '
-      result += 'track-type="leftNav" track-name="expandNavSectionArrow" '
-      result += 'track-metadata-position="0">\n'
+      result += '<a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons">\n'
       result += '</a>'
       result += '<ul class="devsite-nav-section devsite-nav-section-collapsed">\n'
       result += buildLeftNav(item['section'])

@@ -45,9 +45,11 @@ gulp.task('build:announcement', function() {
   projectYamlFiles.forEach((file) => {
     let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
     if (showAnnouncement) {
-      projYaml['announcement'] = {
-        description: announcementYaml.description,
-      };
+      projYaml.announcement = {};
+      projYaml.announcement.description = announcementYaml.description;
+      if (announcementYaml.background) {
+        projYaml.announcement.background = announcementYaml.background;
+      }
     } else {
       delete projYaml['announcement'];
     }

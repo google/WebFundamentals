@@ -1,0 +1,26 @@
+{% extends "page-base.html" %}
+
+{% block content %}
+  {% if fullWidth %}
+    {% include "includes/ratings-container.html" %}
+    <div class="devsite-article-body clearfix">
+      {% autoescape off %}
+      {{ content }}
+      {% endautoescape %}
+    </div>
+  {% else %}
+    {% include "includes/section-nav.html" %}
+    {% include "includes/page-nav.html" %}
+    <article class="devsite-article">
+      <article class="devsite-article-inner">
+        {% include "includes/ratings-container.html" %}
+        <div class="devsite-article-body clearfix">
+          {% autoescape off %}
+          {{ content }}
+          {% endautoescape %}
+        </div>
+        {% include "includes/article-license.html" %}
+      </article>
+    </article>
+  {% endif %}
+{% endblock %}
