@@ -59,25 +59,6 @@ Console**, or use the keyboard shortcut
 
 ![evaluate in console](images/evaluate-in-console.png)
 
-## View local modifications
-
-<!-- TODO apply revision content doesn't really work... -->
-
-To view a diff of modifications you've made to a snippet, right-click in 
-the editor (while the snippet is displayed) and select **Local modifications**.
-
-![local modifications](images/local-modifications.png)
-
-A new tab named **History** pops up in the Console drawer.
-
-![snippet history](images/snippet-history.png)
-
-Each of the timestamps represent a modification. Expand the carat next to
-a timestamp to view a diff of the modifications at that point in time.
-The **revert** link removes the revision history. As of June 27, 2016 the
-**apply revision content** and **apply original content** links appear
-to not work as intended.
-
 ## Set breakpoints
 
 Just like other scripts, you can set breakpoints on snippets. See
