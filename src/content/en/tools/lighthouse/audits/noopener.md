@@ -14,7 +14,7 @@ When your page links to another page using `target="_blank"`, the new page
 runs on the same process as your page. If the new page is executing expensive
 JavaScript, your page's performance may also suffer.
 
-On top of this, [`target="_blank"` is also a security vulnerability](mths). The
+On top of this, [`target="_blank"` is also a security vulnerability][mths]. The
 new page has access to your `window` object via `window.opener`, and it can
 navigate your page to a different URL using `window.opener.location = newURL`.
 
