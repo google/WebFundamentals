@@ -199,20 +199,41 @@ navigateFallbackWhitelist: [/^\/pages/]</pre>
       <a href="/web/tools/workbox/reference-docs/prerelease/workbox.strategies#methods"><code>workbox.strategies</code></a>.
     </p>
     <p>
+      The <code>options</code> properties can be used to configure instances of the cache
+      expiration, cacheable response, and broadcast cache update plugins to apply to a given route.
+    </p>
+    <p>
       <strong>Example:</strong>
     </p>
     <pre class="prettyprint">runtimeCaching: [{
-  // Match same-origin requests for URLs ending in .jpg:
-  urlPattern: /.jpg$/,
-  handler: 'cacheFirst',
-  // Any options provided will be used when
-  // creating the caching strategy.
+  // Match any same-origin request that contains 'api'.
+  urlPattern: /api/,
+  // Apply a network-first strategy.
+  handler: 'networkFirst',
   options: {
-    cacheName: 'image-cache',
-    cacheExpiration: {
-      maxEntries: 10
-    }
-  }
+    // Fall back to the cache after 10 seconds.
+    networkTimeoutSeconds: 10,
+    // Use a custom cache name for this route.
+    cacheName: 'my-api-cache',
+    // Configure custom cache expiration.
+    expiration: {
+      maxEntries: 5,
+      maxAgeSeconds: 60,
+    },
+    // Configure which responses are considered cacheable.
+    cacheableResponse: {
+      statuses: [0, 200],
+      headers: {'x-test': 'true'},
+    },
+    // Configure the broadcast cache update plugin.
+    broadcastUpdate: {
+      channelName: 'my-update-channel',
+    },
+    // Add in any additional plugin logic you need.
+    plugins: [
+      {cacheDidUpdate: () => /* custom plugin code */}
+    ],
+  },
 }, {
   // To match cross-origin requests, use a RegExp that matches
   // the start of the origin:
