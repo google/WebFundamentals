@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2018-01-18 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -84,7 +84,7 @@ For example:
 {% include "web/tools/workbox/guides/_shared/webpack-generate-sw.html" %}
 {% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
     <tr>
-      <th colspan="2">These options configure behavior that is not tied to the webpack compilation.</th>
+      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
     </tr>
 {% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
@@ -116,7 +116,7 @@ For example:
 {% include "web/tools/workbox/guides/_shared/webpack-inject-manifest.html" %}
 {% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
     <tr>
-      <th colspan="2">These options configure behavior that is not tied to the webpack compilation.</th>
+      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
     </tr>
 {% include "web/tools/workbox/guides/_shared/get-manifest-schema.html" %}
 {% include "web/tools/workbox/guides/_shared/base-schema.html" %}
