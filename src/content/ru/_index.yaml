@@ -1,0 +1,211 @@
+---
+book_path: "/web/_book.yaml"
+landing_page:
+  custom_css_path: "/web/styles/wf-landing.css"
+  header:
+    custom_html: "<div class=\"\\\"devsite-collapsible-section\\\"\">\n  <div class=\"\\\"devsite-header-background\\\"\">\n
+      \   <div class=\"\\\"wf-hero-flex\\\"\">\n      <div class=\"\\\"wf-hero-flex-item\"
+      wf-hero-webfu=\"\">\n          <img src=\"\\\"/web/images/web-fundamentals-icon192x192.png\\\"\">\n
+      \         <h3>Основы Web</h3>\n          <p>\n            Учебники, руководства,
+      и самые лучшие подходы к построению web следующего поколения.\n          </p>\n
+      \         <a class=\"\\\"button\" gc-analytics-event=\"\" data-category=\"\\\"webFu\\\"\"
+      data-label=\"\\\"fundamentals-landing\\\"\" data-action=\"\\\"web-home\\\"\"
+      href=\"\\\"/web/fundamentals/\\\"\">Начать</a>\n          </div><div class=\"\\\"clearfix\\\"\">\n
+      \       </div>\n        <div class=\"\\\"wf-hero-flex-item\" wf-hero-tools=\"\">\n
+      \         <img src=\"\\\"/web/images/tool_icon.png\\\"\">\n          <h3>Инструменты</h3>\n
+      \         <p>\n            <a href=\"\\\"/web/tools/chrome-devtools/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
+      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"devtools-landing\\\"\" data-action=\"\\\"web-home\\\"\">Chrome
+      DevTools</a>,\n            <a href=\"\\\"/web/tools/lighthouse/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
+      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"lighthouse-landing\\\"\" data-action=\"\\\"web-home\\\"\">Lighthouse</a>,\n
+      \           <a href=\"\\\"/web/tools/workbox/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
+      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"workbox-landing\\\"\" data-action=\"\\\"web-home\\\"\">Workbox</a>,
+      \          \nи множество инструментов, которые делают вашу жизнь легче и помогают
+      развивать ваше искусство.\n          </p>\n          <a class=\"\\\"button\"
+      gc-analytics-event=\"\" href=\"\\\"/web/tools/\\\"\" data-category=\"\\\"webFu\\\"\"
+      data-label=\"\\\"tools-landing\\\"\" data-action=\"\\\"web-home\\\"\">Узнать
+      больше</a>\n          </div><div class=\"\\\"clearfix\\\"\">\n        </div>\n
+      \     </div>\n    </div>\n  </div>"
+  meta_tags:
+  - content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
+    name: google-site-verification
+  rows:
+  - classname: wf-landing-row
+    items:
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-https
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Перейти на HTTPS
+        path: "/web/fundamentals/security/encrypt-in-transit/why-https"
+      description: HTTPS позволяет пользователям безопасно соединяться с вашим веб-сайтом
+        или приложением. Установите HTTPS, чтобы обеспечить целостность и безопасность
+        ваших пользователей.
+      heading: Перейти на HTTPS
+      image_path: "/web/images/content-https-2x.jpg"
+      path: "/web/fundamentals/security/encrypt-in-transit/why-https"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: fundamentals-https
+      - name: data-action
+        value: web-home
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: pwa-landing
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Начать
+        path: "/web/progressive-web-apps/"
+      description: Новый класс быстрых, интегрированных, надёжных и привлекательных
+        веб-приложений.
+      heading: Прогрессивные веб-приложения
+      image_path: "/web/images/content-responsive-2x.jpg"
+      path: "/web/progressive-web-apps/"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: pwa-landing
+      - name: data-action
+        value: web-home
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-instant
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Сделать быстрым
+        path: "/web/fundamentals/performance/"
+      description: У пользователей нет терпения ждать сайтов, которые не могут доставить
+        контент быстро.
+      heading: Мгновенная загрузка
+      image_path: "/web/images/content-performance-2x.jpg"
+      path: "/web/fundamentals/performance/"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: fundamentals-instant
+      - name: data-action
+        value: web-home
+  - classname: wf-updates-container
+    columns:
+    - description: '{% include \"web/_index-latest-show.html\" %}'
+    - description: '{% include \"web/_index-latest-updates.html\" %}'
+    description: Оставайтесь осведомленными о новых функциях веб-платформы, изменениях
+      в Chrome и т.д.
+    heading: Обновления
+  - classname: wf-landing-row
+    items:
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: feedback-landing
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Участвовать
+        path: "/web/feedback/"
+      custom_image:
+        background: google-blue
+        icon_name: how_to_reg
+      description: Проверяйте статус существующих ошибок и предоставьте обратную связь
+        для функций веб-платформы.
+      heading: Участвовать
+      path: "/web/feedback/"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: feedback-landing
+      - name: data-action
+        value: web-home
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: training-landing
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Начать изучение
+        path: "/web/ilt/"
+      custom_image:
+        background: google-blue
+        icon_name: school
+      description: Повышайте свои навыки с помощью очных и онлайн-курсов для веб-разработчиков.
+      heading: Обучение
+      path: "/web/ilt/"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: training-landing
+      - name: data-action
+        value: web-home
+    - buttons:
+      - attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: showcase-landing
+        - name: data-action
+          value: web-home
+        classname: button button-primary
+        label: Узнать больше
+        path: "/web/showcase/"
+      custom_image:
+        background: google-blue
+        icon_name: trending_up
+      description: Узнайте как и зачем другие разработчики использовали web для создания
+        удивительных впечатлений своих пользователей.
+      heading: Примеры использования
+      path: "/web/showcase/"
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: showcase-landing
+      - name: data-action
+        value: web-home
+project_path: "/web/_project.yaml"
