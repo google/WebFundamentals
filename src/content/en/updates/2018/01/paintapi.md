@@ -4,9 +4,10 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 {# wf_updated_on: 2018-01-18 #}
 {# wf_published_on: 2018-01-18 #}
-{# wf_tags: css,style,houdini,image,javascript #}
+{# wf_tags: css,style,houdini,javascript #}
 {# wf_featured_image: /web/updates/images/2018/01/paintapi/houdinidiamond.png #}
 {# wf_featured_snippet: Houdini’s CSS Paint API allows you to programmatically draw CSS image resources. #}
+{# wf_blink_components: Blink>CSS #}
 
 
 # CSS Paint API {: .page-title }
@@ -166,9 +167,11 @@ until we find the right look.
 
 <div style="display: flex; justify-content: center">
   <video loop muted controls>
-    <source src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
+    <source
+      src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
-    <source src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_x264.mp4"
+    <source
+      src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_x264.mp4"
       type="video/mp4; codecs=h264">
   </video>
 </div>
