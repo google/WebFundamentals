@@ -311,7 +311,7 @@ Here’s how to do it.
 
 If you use the [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin) to generate an
 HTML file, the
-[InlineManifestWebpackPlugin](https://github.com/szrenwei/inline-manifest-webpack-plugin) is all you
+[InlineChunkWebpackPlugin](https://github.com/rohitlodha/html-webpack-inline-chunk-plugin) is all you
 need.
 
 ### If you generate HTML using a custom server logic
