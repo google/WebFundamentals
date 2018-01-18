@@ -183,9 +183,8 @@ self.addEventListener('fetch', event => {
 <li data-md-type="list_item" data-md-list-type="unordered">アップデートの取得時、Service Worker スクリプトのキャッシュ ヘッダーが（最大 24 時間）優先されます。
 このオプトイン動作を行うのは、ユーザーを逃がさないためです。
 Service Worker スクリプトでは、<code data-md-type="codespan">max-age</code> は 0 になります。</li>
-<li data-md-type="list_item" data-md-list-type="unordered">Your service worker is considered updated if it's byte-different to the one
-the browser already has. (We're extending this to include imported
-scripts/modules too.)</li>
+<li data-md-type="list_item" data-md-list-type="unordered">Service Worker がアップデート済みと見なされるのは、そのバイトレベルでブラウザに既にあるものと異なる場合です
+（これは、インポートされたスクリプトやモジュールも含むように拡張されています）。</li>
 <li data-md-type="list_item" data-md-list-type="unordered">アップデートされた Service Worker は、既存のものとともに起動され、<code data-md-type="codespan">install</code> イベントを取得します。</li>
 <li data-md-type="list_item" data-md-list-type="unordered">新しい Worker は、ステータス コードが正常でないか（たとえば 404）、解析に失敗するか、実行中にエラーをスローするか、インストール時に棄却される場合は破棄されますが、現行の Worker はアクティブなままです。</li>
 <li data-md-type="list_item" data-md-list-type="unordered">インストールに成功すると、アップデートされた Worker は、既存の Worker の制御しているクライアントがゼロになるまで <code data-md-type="codespan">wait</code> 状態になります
@@ -353,8 +352,7 @@ Service Worker をアップデートするために、Service Worker をアッ�
 <p data-md-type="paragraph">これにより、ライフサイクルはデベロッパーにとって使いやすくなります。各ナビゲーションにより次が行われます。</p>
 <ol data-md-type="list" data-md-list-type="ordered" data-md-list-tight="true">
 <li data-md-type="list_item" data-md-list-type="ordered">Service Worker を再取得します。</li>
-<li data-md-type="list_item" data-md-list-type="ordered">Install it as a new version even if it's byte-identical, meaning your <code data-md-type="codespan">install</code>
-event runs and your caches update.</li>
+<li data-md-type="list_item" data-md-list-type="ordered">バイトレベルで同じでも、それを新しいバージョンとしてインストールします。つまり、<code data-md-type="codespan">install</code> イベントが実行され、キャッシュがアップデートされます。</li>
 <li data-md-type="list_item" data-md-list-type="ordered">新しい Service Worker がアクティベートされるように、待機段階をスキップします。</li>
 <li data-md-type="list_item" data-md-list-type="ordered">ページをナビゲートします。</li>
 </ol>
