@@ -4,7 +4,7 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 {# wf_updated_on: 2018-01-18 #}
 {# wf_published_on: 2018-01-18 #}
-{# wf_tags: css,style,houdini,javascript #}
+{# wf_tags: css,style,houdini,javascript,chrome65 #}
 {# wf_featured_image: /web/updates/images/2018/01/paintapi/houdinidiamond.png #}
 {# wf_featured_snippet: Houdini’s CSS Paint API allows you to programmatically draw CSS images. #}
 {# wf_blink_components: Blink>CSS #}
@@ -32,15 +32,13 @@ To define a paint worklet called `myPainter`, we need to load a CSS paint
 worklet file using `CSS.paintWorklet.addModule('my-paint-worklet.js')`. In that
 file we can use the `registerPaint` function to register a paint worklet class:
 
-```js
-class MyPainter {
-  paint(ctx, geometry, properties) {
-    // ...
-  }
-}
+    class MyPainter {
+      paint(ctx, geometry, properties) {
+        // ...
+      }
+    }
 
-registerPaint('myPainter', MyPainter);
-```
+    registerPaint('myPainter', MyPainter);
 
 Inside the `paint()` callback, we can use `ctx` the same way we would a
 `CanvasRenderingContext2D` as we know it from `<canvas>`. If you know how to
@@ -56,42 +54,40 @@ As an introductory example, let’s write a checkerboard paint worklet and use i
 as a background image of a `<textarea>`. (I am using a textarea because it’s
 resizable by default.):
 
-```
-<!-- index.html -->
-<!doctype html>
-<style>
-  textarea {
-    background-image: paint(checkerboard);
-  }
-</style>
-<textarea></textarea>
-<script>
-  CSS.paintWorklet.addModule('checkerboard.js');
-</script>
-```
+    <!-- index.html -->
+    <!doctype html>
+    <style>
+      textarea {
+        background-image: paint(checkerboard);
+      }
+    </style>
+    <textarea></textarea>
+    <script>
+      CSS.paintWorklet.addModule('checkerboard.js');
+    </script>
 
-```
-// checkerboard.js
-class CheckerboardPainter {
-  paint(ctx, geom, properties) {
-    // Use `ctx` as if it was a normal canvas
-    const colors = ['red', 'green', 'blue'];
-    const size = 32;
-    for(let y = 0; y < geom.height/size; y++) {
-      for(let x = 0; x < geom.width/size; x++) {
-        const color = colors[(x + y) % colors.length];
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.rect(x * size, y * size, size, size);
-        ctx.fill();
+<div class="clearfix"></div>
+
+    // checkerboard.js
+    class CheckerboardPainter {
+      paint(ctx, geom, properties) {
+        // Use `ctx` as if it was a normal canvas
+        const colors = ['red', 'green', 'blue'];
+        const size = 32;
+        for(let y = 0; y < geom.height/size; y++) {
+          for(let x = 0; x < geom.width/size; x++) {
+            const color = colors[(x + y) % colors.length];
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.rect(x * size, y * size, size, size);
+            ctx.fill();
+          }
+        }
       }
     }
-  }
-}
 
-// Register our class under a specific name
-registerPaint('checkerboard', CheckerboardPainter);
-```
+    // Register our class under a specific name
+    registerPaint('checkerboard', CheckerboardPainter);
 
 If you’ve used `<canvas>` in the past, this code should look familiar. See
 the live
@@ -121,47 +117,47 @@ additional parameter `properties` comes into play. By giving the class a static
 including custom properties. The values will be given to you through the
 `properties` parameter.
 
-```
-<!-- index.html -->
-<!doctype html>
-<style>
-  textarea {
-    /* The paint worklet subscribes to changes of these custom properties. */
-    --checkerboard-spacing: 10;
-    --checkerboard-size: 32;
-    background-image: paint(checkerboard);
-  }
-</style>
-<textarea></textarea>
-<script>
-  CSS.paintWorklet.addModule('checkerboard.js');
-</script>
-```
+    <!-- index.html -->
+    <!doctype html>
+    <style>
+      textarea {
+        /* The paint worklet subscribes to changes of these custom properties. */
+        --checkerboard-spacing: 10;
+        --checkerboard-size: 32;
+        background-image: paint(checkerboard);
+      }
+    </style>
+    <textarea></textarea>
+    <script>
+      CSS.paintWorklet.addModule('checkerboard.js');
+    </script>
 
-```
-// checkerboard.js
-class CheckerboardPainter {
-  // inputProperties returns a list of CSS properties that this paint function gets access to
-  static get inputProperties() { return ['--checkerboard-spacing', '--checkerboard-size']; }
+<div class="clearfix"></div>
 
-  paint(ctx, geom, properties) {
-    // Paint worklet uses CSS Typed OM to model the input values. As of now, they are mostly wrappers around strings, but will be augmented to hold more accessible data over time.
-    const size = parseInt(properties.get('--checkerboard-size').toString());
-    const spacing = parseInt(properties.get('--checkerboard-spacing').toString());
-    const colors = ['red', 'green', 'blue'];
-    for(let y = 0; y < geom.height/size; y++) {
-      for(let x = 0; x < geom.width/size; x++) {
-        ctx.fillStyle = colors[(x + y) % colors.length];
-        ctx.beginPath();
-        ctx.rect(x*(size + spacing), y*(size + spacing), size, size);
-        ctx.fill();
+    // checkerboard.js
+    class CheckerboardPainter {
+      // inputProperties returns a list of CSS properties that this paint function gets access to
+      static get inputProperties() { return ['--checkerboard-spacing', '--checkerboard-size']; }
+
+      paint(ctx, geom, properties) {
+        // Paint worklet uses CSS Typed OM to model the input values.
+        // As of now, they are mostly wrappers around strings,
+        // but will be augmented to hold more accessible data over time.
+        const size = parseInt(properties.get('--checkerboard-size').toString());
+        const spacing = parseInt(properties.get('--checkerboard-spacing').toString());
+        const colors = ['red', 'green', 'blue'];
+        for(let y = 0; y < geom.height/size; y++) {
+          for(let x = 0; x < geom.width/size; x++) {
+            ctx.fillStyle = colors[(x + y) % colors.length];
+            ctx.beginPath();
+            ctx.rect(x*(size + spacing), y*(size + spacing), size, size);
+            ctx.fill();
+          }
+        }
       }
     }
-  }
-}
 
-registerPaint('checkerboard', CheckerboardPainter);
-```
+    registerPaint('checkerboard', CheckerboardPainter);
 
 Now we can use the same code for all different kind of checkerboards. But even
 better, we can now go into DevTools and [fiddle with the
