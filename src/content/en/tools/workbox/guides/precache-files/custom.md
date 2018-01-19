@@ -6,6 +6,8 @@ description: A guide on how to precache files with a custom precache list.
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
+# Create a Custom Precache Manifest {: .page-title }
+
 <p>If none of the Workbox tools are suitable for your use case, you can
 generate the list of files to precache yourself.</p>
 

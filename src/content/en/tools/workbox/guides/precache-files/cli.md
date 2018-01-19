@@ -18,7 +18,7 @@ webpack.</p>
 <a href="https://nodejs.org/en/download/">Node installed</a> to use the 
 Workbox CLI.</aside>
 
-<h3>CLI Installation</h3>
+### CLI Installation
 
 <p>To start, install the CLI from NPM.</p>
 
@@ -39,7 +39,7 @@ workbox --help
     ...
 </pre>
 
-<h3>Run the CLI Wizard</h3>
+### Run the CLI Wizard
 
 <p>The next step is to run the wizard so the CLI is setup for your project. The
 wizard will ask a set of questions about your project to determine which 
@@ -51,7 +51,7 @@ workbox wizard --injectManifest
 
 {% include "web/tools/workbox/guides/_shared/generate-precache/injection.html" %}
 
-<h3>Inject a Manifest with the CLI</h3>
+### Inject a Manifest with the CLI
 
 <p>The final step is to run the inject manifest command:</p>
 

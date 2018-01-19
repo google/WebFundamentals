@@ -6,7 +6,7 @@ description: A guide on how to precache files with workbox-build.
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
-# Precache Files with `workbox-build` {: .page-title }
+# Precache Files with workbox-build {: .page-title }
 
 <p>The workbox-build module can generate the list of files to precache and
 inject that list into your service worker.</p>
@@ -18,7 +18,7 @@ from a node script or are using a build process like Gulp.</p>
 <a href="https://nodejs.org/en/download/">Node installed</a> to use 
 workbox-build.</aside>
         
-<h3><code>workbox-build</code> Installation</h3>
+### <code>workbox-build</code> Installation
         
 <p>To start, install `workbox-build` from NPM.</p>
         
@@ -28,7 +28,7 @@ npm install workbox-build --save-dev
 
 {% include "web/tools/workbox/guides/_shared/generate-precache/injection.html" %}
         
-<h3>Call <code>injectManifest()</code></h3>
+### Call <code>injectManifest()</code>
         
 <p>The final step is to add workbox-build to your build process or script:</p>
         

@@ -6,9 +6,9 @@ description: A guide on how to precache files with the Workbox Webpack Plugin.
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
-# Precache Files with `workbox-webpack` {: .page-title }
+# Precache Files with workbox-webpack {: .page-title }
 
-<h3>Manifest Importing</h3>
+### Manifest Importing
 
 <p>You can use the Workbox webpack plugin to create a manifest of chunks and local files
 which are added to your service worker via an `importScript` and can be reference via
