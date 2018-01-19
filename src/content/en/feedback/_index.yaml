@@ -5,7 +5,7 @@ landing_page:
 
   header:
     buttons:
-    - label: Broswer Bug Searcher
+    - label: Browser Bug Searcher
       path: /web/feedback/browser-bug-searcher
 
   rows:
