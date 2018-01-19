@@ -1,3 +1,13 @@
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
+description: A guide on how to precache files with the Workbox Webpack Plugin.
+
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2017-12-01 #}
+{# wf_published_on: 2017-11-15 #}
+
+# Precache Files with `workbox-webpack` {: .page-title }
+
 <h3>Manifest Importing</h3>
 
 <p>You can use the Workbox webpack plugin to create a manifest of chunks and local files

@@ -1,3 +1,13 @@
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
+description: A guide on how to precache files with workbox-build.
+
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2017-12-01 #}
+{# wf_published_on: 2017-11-15 #}
+
+# Precache Files with `workbox-build` {: .page-title }
+
 <p>The workbox-build module can generate the list of files to precache and
 inject that list into your service worker.</p>
         
