@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 ## Further Reading
 
 The `workbox.precaching` API provides some options for configuration should
