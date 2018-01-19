@@ -66,6 +66,7 @@
     "clean": "gulp clean",
     "start": "./start-appengine.sh",
     "test": "gulp test",
+    "precommit": "gulp auto-update-on",
     "prepush": "npm test",
     "prestart": "gulp build",
     "postinstall": "gulp build"

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2017-11-27 #}
+{# wf_updated_on: 2018-01-19 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
