@@ -6,17 +6,6 @@ description: A guide on how to precache files with Workbox.
 {# wf_updated_on: 2017-12-01 #}
 {# wf_published_on: 2017-11-15 #}
 
-<style>
-/* These are used to make the tabs act more like documentation toggles */
-.ui-datasection-main {
-  border: none;
-}
-
-.ui-datasection-main > section {
-  padding: 0;
-}
-</style>
-
 # Precache Files {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
