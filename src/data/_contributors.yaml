@@ -265,6 +265,17 @@ samchen:
   description:
     en: Sam is a Front End Developer
 
+hongchanchoi:
+  name:
+    given: Hongchan
+    family: Choi
+  org:
+    name: Google
+  homepage: https://hoch.io
+  twitter: hochsays
+  description:
+    en: Software Engineer working on Web Audio in Chromium
+
 kenchris:
   name:
     given: Kenneth
