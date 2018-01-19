@@ -4,6 +4,10 @@ toc:
   path: /web/tools/workbox/guides/get-started
 - title: "Precache Files"
   path: /web/tools/workbox/guides/precache-files
+  style: accordion
+  section:
+  - title: "CLI"
+    path: /web/tools/workbox/guides/precache-files/cli
 - title: "Route Requests"
   path: /web/tools/workbox/guides/route-requests
 - title: "Configure Workbox"
