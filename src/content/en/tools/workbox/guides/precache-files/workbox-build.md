@@ -8,33 +8,41 @@ description: A guide on how to precache files with workbox-build.
 
 # Precache Files with workbox-build {: .page-title }
 
-<p>The workbox-build module can generate the list of files to precache and
-inject that list into your service worker.</p>
-        
-<p>This method is useful if you want to programmatically generate a service worker
-from a node script or are using a build process like Gulp.</p>
-        
-<aside class="note"><b>Note:</b> You'll need to have 
-<a href="https://nodejs.org/en/download/">Node installed</a> to use 
+This page explains how to use the workbox-build Node module to generate the
+list of files to precache and add it to your
+
+<aside class="note"><b>Note:</b> You'll need to have
+<a href="https://nodejs.org/en/download/">Node installed</a> to use
 workbox-build.</aside>
-        
-### <code>workbox-build</code> Installation
-        
-<p>To start, install `workbox-build` from NPM.</p>
-        
+
+## Install <code>workbox-build</code>
+
+Start by installing `workbox-build` from NPM.
+
 <pre class="devsite-terminal devsite-click-to-copy">
 npm install workbox-build --save-dev
 </pre>
 
-{% include "web/tools/workbox/guides/_shared/generate-precache/injection.html" %}
-        
-### Call <code>injectManifest()</code>
-        
-<p>The final step is to add workbox-build to your build process or script:</p>
-        
-<pre class="prettyprint lang-javascript">
+## Add an Injection Point
+
+Before the files can be "injected" into your service worker, you need to add
+this line of code to your service worker file:
+
+```javascript
+workbox.precaching.precacheAndRoute([]);
+```
+
+This piece of code will be replaced by workbox-build with the list of files (See
+the next section).
+
+## Call <code>injectManifest()</code>
+
+The final step is to add workbox-build to your build process or script:
+
+```javascript
 const workboxBuild = require('workbox-build');
 
+// NOTE: This should be run *AFTER* all your assets are built
 const buildSW = () => {
   // This will return a Promise
   return workboxBuild.injectManifest({
@@ -47,16 +55,13 @@ const buildSW = () => {
   });
 }
 
-// TODO: Build all of your sites assets before build SW.
-...
-
-// Finally, build SW
 buildSW();
-</pre>
-        
-<p>This command will read in your service worker, inject the manifest and output
-a new service worker file with the manifest, like so:</p>
-        
+```
+
+This command will create a list of files to precache, read in your service
+worker file, inject the manifest and output a new service worker file with
+the manifest. The result should look something like this:
+
 <pre class="prettyprint lang-javascript"><code>workbox.precaching.precacheAndRoute([
   {
     "url": "basic.html",
@@ -74,6 +79,32 @@ a new service worker file with the manifest, like so:</p>
   ...
 
 ]);</code></pre>
-        
-<p>Please ensure that you build the service worker after each file change to ensure
-your users get the latest files.</p>
+
+Please ensure that you build the service worker after a file change to
+ensure your users get the latest files.
+
+## Using with Gulp
+
+Using `workbox-build` with your Gulp process is simply a case of using the same
+code as above.
+
+```javascript
+const gulp = require('gulp');
+const workboxBuild = require('workbox-build');
+
+gulp.task('service-worker', () => {
+  return workboxBuild.injectManifest({
+    swSrc: 'src/sw.js',
+    swDest: 'build/sw.js',
+    globDirectory: 'build',
+    globPatthers: [
+      '**\/*.{js,css,html,png}',
+    ]
+  });
+});
+```
+
+After this you can simply run the task via `gulp service-worker` or add it
+to the end of another Gulp task.
+
+{% include web/tools/workbox/guides/_shared/precache-config.md %}

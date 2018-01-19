@@ -8,25 +8,23 @@ description: A guide on how to precache files with Workbox CLI.
 
 # Precache Files with Workbox CLI {: .page-title }
 
-<p>The Workbox Command Line Interface (a.k.a the Workbox CLI) can generate the
-list of files to precache and inject that list into your service worker.</p>
+This page explains how to use the Workbox Command Line Interface (a.k.a the
+Workbox CLI) to generate the list of files to precache and add it to your
+service worker.
 
-<p>This method is useful if you aren't too familiar with Node and aren't using
-webpack.</p>
-
-<aside class="note"><b>Note:</b> You'll need to have 
-<a href="https://nodejs.org/en/download/">Node installed</a> to use the 
+<aside class="note"><b>Note:</b> You'll need to have
+<a href="https://nodejs.org/en/download/">Node installed</a> to use the
 Workbox CLI.</aside>
 
-### CLI Installation
+## Install the CLI
 
-<p>To start, install the CLI from NPM.</p>
+To start, install the CLI from NPM.
 
 <pre class="devsite-terminal devsite-click-to-copy">
 npm install workbox-cli --global
 </pre>
 
-<p>You should be able to run the command `workbox --help` after it's installed.</p>
+You should be able to run the command `workbox --help` after it's installed.
 
 <pre class="devsite-terminal">
 workbox --help
@@ -39,28 +37,41 @@ workbox --help
     ...
 </pre>
 
-### Run the CLI Wizard
+## Run the Wizard
 
-<p>The next step is to run the wizard so the CLI is setup for your project. The
-wizard will ask a set of questions about your project to determine which 
-files should be precached.</p>
+The next step is to run the wizard. This will setup the CLi to work for your
+project. The wizard will ask a set of questions about your projects file
+structure which'll be used to determine the files that should be precached.
+
+Start the wizard like so:
 
 <pre class="devsite-terminal">
 workbox wizard --injectManifest
 </pre>
 
-{% include "web/tools/workbox/guides/_shared/generate-precache/injection.html" %}
+## Add an Injection Point
 
-### Inject a Manifest with the CLI
+Before the files can be "injected" into your service worker, you need to add
+this line of code to your service worker file:
 
-<p>The final step is to run the inject manifest command:</p>
+```javascript
+workbox.precaching.precacheAndRoute([]);
+```
+
+This piece of code will be replaced by the CLI with the list of files (See
+the next section).
+
+## Inject a Manifest with the CLI
+
+The final step is to run the inject manifest command:
 
 <pre class="devsite-terminal">
 workbox injectManifest
 </pre>
 
-<p>This command will read in your service worker, inject the manifest and output
-a new service worker file with the manifest, like so:</p>
+This command will create the list of files to precache, read your service
+worker file, inject the manifest and output a new service worker file
+with the manifest. The end result with look like this:
 
 <pre class="prettyprint lang-javascript"><code>workbox.precaching.precacheAndRoute([
   {
@@ -80,5 +91,7 @@ a new service worker file with the manifest, like so:</p>
 
 ]);</code></pre>
 
-<p>When you make a change to your project, run the inject manifest command
-and you'll have an up to date service worker with precache support.</p>
+When you make a change to your project, run the inject manifest command
+and you'll have an up to date service worker with precache support.
+
+{% include web/tools/workbox/guides/_shared/precache-config.md %}

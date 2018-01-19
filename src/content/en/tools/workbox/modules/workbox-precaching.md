@@ -122,6 +122,106 @@ workbox.precaching.precache([
 workbox.precaching.addRoute();
 ```
 
+## Incoming Requests to Precached Files
+
+One thing that `workbox.precaching` will do out of the box is manipulate
+the incoming network requests to try and match precached files. This
+accounts for common practices on the web.
+
+For example, a request for `/` can be responded to with the file at
+`/index.html`.
+
+Below is the list of manipulations that `workbox.precaching` does and how you
+can alter that behaviour.
+
+### Ignore URL Parameters
+
+Requests with search parameters can be altered to remove specific values or
+remove all values.
+
+By default, the `utm_` value is removed, changing a request like `/?utm_=123`
+to `/`.
+
+You can remove all search parameters or a specific set of parameters with the
+`ignoreUrlParametersMatching`.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    ignoreUrlParametersMatching: /.*/
+  }
+);
+```
+
+### Directory Index
+
+For requests ending in a `/` will have `index.html` appended to the end,
+meaning a  request like `/` will check the precache for `/index.html`.
+
+You can alter this to something else or disable it by changing the
+`directoryIndex` option.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    directoryIndex: null,
+  }
+);
+```
+
+### Clean URLs
+
+If a request fails to match the precache, we'll add `.html` to end to support
+"clean" URLs (a.k.a "pretty" URLs). This means a request like `/about` will
+match `/about.html`.
+
+You can disable this behavior with the `cleanUrls` option.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    cleanUrls: false,
+  }
+);
+```
+
+### Custom Manipulations
+
+If you want to define custom matches from incoming requests to precached assets,
+you can do so with the `urlManipulation` option. This should be a callback
+that returns an array of possible matches.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    urlManipulaion: ({url}) => {
+      ...
+      return [alteredUrlOption1, alteredUrlOption2, ...];
+    }
+  }
+);
+```
+
 ## Advanced Usage
 
 By default, workbox-precaching will set up the install and activate listeners
