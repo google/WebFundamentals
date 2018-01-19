@@ -10,3 +10,4 @@ curl https://developers.google.com/_static/js/jquery_ui-bundle.js > gae/scripts/
 curl https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js > gae/scripts/jquery-2.1.1.min.js
 curl https://developers.google.com/_static/js/prettify-bundle.js > gae/scripts/prettify-bundle.js
 curl https://developers.google.com/_static/js/script_foot_closure.js > gae/scripts/footer-closure.js
+curl -s https://blinkcomponents-b48b5.firebaseapp.com/blinkcomponents | awk '{gsub (/,/,",\n  "); print}' > src/data/blinkComponents.json
