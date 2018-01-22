@@ -46,7 +46,7 @@ in a queue name (which must be unique to your
 [origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
 
 ```js
-const queue = workbox.backgroundSync.Queue('myQueueName');
+const queue = new workbox.backgroundSync.Queue('myQueueName');
 ```
 
 The queue name is used as the tag name that gets
