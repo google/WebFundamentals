@@ -661,7 +661,7 @@ function testMarkdown(filename, contents, options) {
       const inclFile = include[2];
       const quoteL = include[1];
       const quoteR = include[3];
-      if (quoteL !== quoteR) {
+      if (quoteL !== quoteR || quoteL === '') {
         msg = '`{% include %}` tag is badly quoted';
         logError(filename, position, `${msg}: ${include[0]}`);
       }
