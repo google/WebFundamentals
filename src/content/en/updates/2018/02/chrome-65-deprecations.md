@@ -23,18 +23,26 @@ Platform. This article describes some of the deprecations and removals in Chrome
 ## Restrict framebusting ability
 
 
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xi8-y4ySjA4/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5851021045661696) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=640057)
 
 
 ## Disable touch event APIs on desktop by default
 
 
 
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/KV6kqDJpYiE/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/4764225348042752) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=392584)
+
+## Block cross-origin <a download>
+
+
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Iw3_SUcagGg/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4969697975992320) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=714373)
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
