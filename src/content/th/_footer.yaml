@@ -16,9 +16,11 @@ footer:
   - icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     label: วิดีโอ
     path: "/web/shows/"
+    description: ตามไปดู วิดิโอของเรา
   - icon_name: กิจกรรม
     label: กิจกรรม
     path: "/web/events/"
+    description: เข้าร่วมกิจกรรมนักพัฒนาแล้วมา hack กัน
 - linkboxes:
   - contents:
     - label: Building for Billions
