@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-19 #}
+{# wf_updated_on: 2018-01-22 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -54,7 +54,7 @@ list of files.
 
 <aside class="note"><strong>Note:</strong> If you're not sure what option
 is best for you, <a href="./cli">start with the CLI</a> as it's easy to setup
-and willl give you a better unsteranding of how the other tools work.</aside>
+and will give you a better understanding of how the other tools work.</aside>
 
 ###### Workbox Command Line Interface (CLI)
 
