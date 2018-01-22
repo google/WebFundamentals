@@ -56,4 +56,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
 This will precache any of the files from the Webpack plugin.
 
-{% include web/tools/workbox/guides/_shared/precache-config.md %}
+{% include "web/tools/workbox/guides/_shared/precache-config.md" %}

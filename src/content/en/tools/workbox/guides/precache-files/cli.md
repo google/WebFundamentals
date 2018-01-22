@@ -94,4 +94,4 @@ with the manifest. The end result with look like this:
 When you make a change to your project, run the inject manifest command
 and you'll have an up to date service worker with precache support.
 
-{% include web/tools/workbox/guides/_shared/precache-config.md %}
+{% include "web/tools/workbox/guides/_shared/precache-config.md" %}

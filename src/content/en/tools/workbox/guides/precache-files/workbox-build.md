@@ -107,4 +107,4 @@ gulp.task('service-worker', () => {
 After this you can simply run the task via `gulp service-worker` or add it
 to the end of another Gulp task.
 
-{% include web/tools/workbox/guides/_shared/precache-config.md %}
+{% include "web/tools/workbox/guides/_shared/precache-config.md" %}
