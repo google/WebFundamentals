@@ -3,6 +3,7 @@ book_path: /web/feedback/_book.yaml
 
 {# wf_updated_on: 2018-01-22 #}
 {# wf_published_on: 2016-10-24 #}
+{# wf_blink_components: N/A #}
 
 # How to File a Good Bug {: .page-title }
 
