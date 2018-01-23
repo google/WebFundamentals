@@ -35,7 +35,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..63.0.3239.84).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.TODO).
 
 ## `ResizeObserver` {: #resizeobserver }
 
