@@ -69,8 +69,15 @@ instead of Chrome opening with your PWA running.
 When you install a Progressive Web App, we look at your Web App Manifest and
 other meta-data and create an [APK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
 (Android Package Kit) that is installed on to the user's device, which may take
-a short moment. Whenever the Web App Manifest changes, the APK is being recreated,
-it is thus *not* a good idea to have frequently updating manifests.
+a short moment the first time any user installs your Web App.
+
+Note: Whenever the Web App Manifest changes we need to genearate a new APK, it
+is thus *not* a good idea to have frequently updating manifests. It is 
+especially important to ensure that you don't use user specific identifiers 
+in the manifest (such as a custom `start_url` per user) as this generate an
+unique APK which means that your install time will be a lot longer than you 
+expect.
+
 In that APK we define an [Android Intent
 Filter](https://developer.android.com/guide/components/intents-filters.html)
 that defines when your web application should be opened. For example, to open
