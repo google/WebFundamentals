@@ -67,8 +67,11 @@ contained within the scope of your Progressive Web App, your app will be opened
 instead of Chrome opening with your PWA running.
 
 When you install a Progressive Web App, we look at your Web App Manifest and
-other meta-data and create the APK that is installed on to the user's device. In
-that APK we define an [Android Intent
+other meta-data and create an [APK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
+(Android Package Kit) that is installed on to the user's device, which may take
+a short moment. Whenever the Web App Manifest changes, the APK is being recreated,
+it is thus *not* a good idea to have frequently updating manifests.
+In that APK we define an [Android Intent
 Filter](https://developer.android.com/guide/components/intents-filters.html)
 that defines when your web application should be opened. For example, to open
 the [https://airhorner.com](https://airhorner.com/) app whenever that link is
