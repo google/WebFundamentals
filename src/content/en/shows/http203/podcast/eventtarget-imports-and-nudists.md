@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Also 120hz screens, JSON vs HTML, and a fox.
 
-{# wf_updated_on: 2018-01-25 #}
-{# wf_published_on: 2018-01-25 #}
+{# wf_updated_on: 2018-01-24 #}
+{# wf_published_on: 2018-01-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-14.mp3 #}
 {# wf_podcast_duration: 00:50:14 #}
 {# wf_podcast_fileSize: 34211664 #}
