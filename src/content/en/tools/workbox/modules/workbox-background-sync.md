@@ -115,16 +115,16 @@ to the API will get retried when connectivity is restored:
 const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName');
 
 // Create a workbox strategy that uses the bg sync plugin.
-const networkFirstStrategy = new workbox.strategies.NetworkFirst({
+const networkOnlyStrategy = new workbox.strategies.NetworkOnly({
   plugins: [bgSyncPlugin],
 });
 
 // Create a route that handles requests with the above strategy.
-const route = new Route({
-  match: ({url}) => url.pathname === '/path/to/api',
-  handler: networkFirstStrategy,
-  method: 'POST',
-});
+const route = new workbox.routing.Route(
+  ({url}) => url.pathname === '/path/to/api',
+  networkOnlyStrategy,
+  'POST',
+);
 
 // Add the route to the default router.
 workbox.routing.registerRoute(route);
