@@ -71,7 +71,7 @@ of this new functionality. View it in a browser such as Chrome 50 that supports 
 interface. Be forewarned: the page will automatically play music when you visit it. (Unless, of
 course, it doesn’t!)
 
-## Relevant bugs {: #bugs }
+## Danger zone {: #danger-zone }
 
 ### `<source>` within `<video>` makes `play()` promise never rejects
 

@@ -169,7 +169,7 @@ your video to play later.
 At the time of writing, `HTMLMediaElement.play()` returns a promise in
 [Chrome], Firefox, Opera, and [Safari]. [Edge] is still working on it.
 
-## Relevant bugs {: #bugs }
+## Danger zone {: #danger-zone }
 
 ### `<source>` within `<video>` makes `play()` promise never rejects
 
