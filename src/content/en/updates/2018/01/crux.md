@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
 
-{# wf_updated_on: 2018-01-14 #}
-{# wf_published_on: 2017-01-14 #}
+{# wf_updated_on: 2018-01-24 #}
+{# wf_published_on: 2017-01-24 #}
 {# wf_tags: ux #}
 {# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
