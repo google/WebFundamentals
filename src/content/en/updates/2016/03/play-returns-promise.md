@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Say goodbye to automatic playback uncertainty! play() now returns a Promise.
 
-{# wf_updated_on: 2016-03-11 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2016-03-11 #}
 {# wf_tags: promises,play,video,audio,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -71,5 +71,15 @@ of this new functionality. View it in a browser such as Chrome 50 that supports 
 interface. Be forewarned: the page will automatically play music when you visit it. (Unless, of
 course, it doesn’t!)
 
+## Relevant bugs {: #bugs }
+
+### `<source>` within `<video>` makes `play()` promise never rejects
+
+For `<video src="not-existing-video.mp4"\>`, the `play()` promise rejects as
+expected as the video doesn't exist. For `<video><source
+src="not-existing-video.mp4" type='video/mp4'></video>`, the `play()` promise
+never rejects. It only happens if there are no valid sources.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=718647)
 
 {% include "comment-widget.html" %}
