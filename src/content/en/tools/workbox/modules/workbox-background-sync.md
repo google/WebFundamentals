@@ -121,7 +121,7 @@ const networkOnlyStrategy = new workbox.strategies.NetworkOnly({
 
 // Create a route that handles requests with the above strategy.
 const route = new workbox.routing.Route(
-  ({url}) => url.pathname === '/dreams',
+  ({url}) => url.pathname === '/path/to/api',
   networkOnlyStrategy,
   'POST',
 );
