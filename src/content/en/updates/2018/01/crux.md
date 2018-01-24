@@ -16,7 +16,7 @@ description: Announcing the release of a new country dimension in the Chrome Use
 <div class="clearfix"></div>
 
 The
-[Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/)
+[Chrome User Experience Report](/web/tools/chrome-user-experience-report/)
 (CrUX) is a public dataset of real user performance data. Since we 
 [announced](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html)
 the report, one of the most requested additions has been the ability to better 
@@ -43,7 +43,7 @@ The familiar `all` dataset is still there to capture the global aggregate
 performance data. Within each dataset there are monthly tables starting with 
 the most recent report, `201712`. For a detailed walkthrough on how to get 
 started, please refer to our updated 
-[CrUX documentation](https://developers.google.com/web/tools/chrome-user-experience-report/).
+[CrUX documentation](/web/tools/chrome-user-experience-report/).
 
 We’re excited to share this new data with you and hope to see you use it in 
 ways to improve the user experience on the web. To get help, ask questions, 
