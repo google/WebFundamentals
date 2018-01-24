@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2017-02-02 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Progressive Web Apps are becoming more integrated with your device. Learn how. #}
@@ -71,7 +72,7 @@ other meta-data and create an [APK](https://chromium.googlesource.com/chromium/s
 (Android Package Kit) that is installed on to the user's device, which may take
 a short moment the first time any user installs your Web App.
 
-Note: Whenever the Web App Manifest changes we need to genearate a new APK, it
+Note: Whenever the Web App Manifest changes we need to generate a new APK, it
 is thus *not* a good idea to have frequently updating manifests. It is 
 especially important to ensure that you don't use user specific identifiers 
 in the manifest (such as a custom `start_url` per user) as this generate an
