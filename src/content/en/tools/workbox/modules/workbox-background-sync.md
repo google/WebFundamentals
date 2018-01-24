@@ -120,7 +120,7 @@ const networkFirstStrategy = new workbox.strategies.NetworkFirst({
 });
 
 // Create a route that handles requests with the above strategy.
-const route = new Route({
+const route = new workbox.routing.Route({
   match: ({url}) => url.pathname === '/path/to/api',
   handler: networkFirstStrategy,
   method: 'POST',
