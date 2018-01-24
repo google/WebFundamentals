@@ -23,7 +23,7 @@ enabled. The resulting data is made available via:
 1. [PageSpeed Insights](/speed/pagespeed/insights/),
 which provides URL-level user experience metrics for popular URLs that are 
 known by Google's web crawlers.
-2. [Public Google BigQuery dataset](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all), 
+2. [Public Google BigQuery project](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all), 
 which aggregates user experience metrics by origin, for all origins that are 
 known by Google's web crawlers, and split across multiple dimensions 
 outlined below.
@@ -31,11 +31,12 @@ outlined below.
 
 ### Metrics {: #metrics }
 
-Metrics provided by the Chrome User Experience Report are powered by standard 
-web platform APIs exposed by modern browsers and aggregated to 
-origin-resolution. Site owners that want more detailed (URL level resolution) 
-analysis and insight into their site performance and can use the same APIs to 
-gather detailed real user measurement (RUM) data for their own origins.
+Metrics provided by the public Chrome User Experience Report hosted on 
+Google BigQuery are powered by standard web platform APIs exposed by modern 
+browsers and aggregated to origin-resolution. Site owners that want more 
+detailed (URL level resolution) analysis and insight into their site 
+performance and can use the same APIs to gather detailed real user measurement 
+(RUM) data for their own origins.
 
 Note: Currently the Chrome User Experience Report is focused on 
 loading performance. With time, we hope to add more metrics and dimensions, 
@@ -112,13 +113,24 @@ bandwidth values based on real user measurement observations.”
 Coarse device classification (“phone”, “tablet”, or “desktop”), as 
 [communicated via User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#Mobile_Tablet_or_Desktop).
 
+#### Country
+
+Geographic location of users at the country-level, inferred by their 
+IP address. Countries are identified by their respective 
+[ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements).
+
 ### Data format {: #data-format }
 
-The report is provided as a public 
-[Google BigQuery](https://cloud.google.com/bigquery/) dataset containing the 
-aggregated user experience metrics for a sample of origins on the web. 
-Each row in the dataset contains a nested record of user experience for a 
-particular origin, split by key dimensions.
+The report is provided via 
+[Google BigQuery](https://cloud.google.com/bigquery/) as a collection of 
+datasets containing user experience metrics aggregated to origin-resolution.
+Each dataset represents a single country, `country_rs` captures user 
+experience data for users in Serbia (`rs` is the 
+[ISO 31611-1](https://en.wikipedia.org/wiki/ISO_3166-1#Officially_assigned_code_elements) 
+code for Serbia). Additionally, there is a globally aggregated dataset (`all`) 
+that captures the world-wide experience. Each row in the dataset contains a 
+nested record of user experience for a particular origin, split by key 
+dimensions.
 
 <table class="green responsive">
   <tr>
@@ -164,11 +176,11 @@ are not exposed directly by the report.
 
 ## Getting started {: #getting-started }
 
-The Chrome User Experience Report is provided as a public dataset on 
-[Google BigQuery](https://cloud.google.com/bigquery/). To access the dataset, 
+The Chrome User Experience Report is provided as a public project on 
+[Google BigQuery](https://cloud.google.com/bigquery/). To access the project, 
 you’ll need a Google account and a Google Cloud Project: 
 [refer to our step by step guide](getting-started#access-dataset) and 
-[the guided tour of how to query the dataset](getting-started#example-queries).
+[the guided tour of how to query the project](getting-started#example-queries).
 
 ## Analysis tips & best practices {: #best-practices }
 
@@ -202,9 +214,10 @@ The Chrome User Experience Report aggregates data for each origin, with the
 key dimensions for a single origin.
 
 However, when aggregating data from multiple origins, for example within an 
-industry vertical, be careful with the types of conclusions being drawn: 
-adding up densities for the same metric across multiple origins does not 
-account for relative population differences across origins. 
+industry vertical or geographic regions, be careful with the types of 
+conclusions being drawn: adding up densities for the same metric across 
+multiple origins does not account for relative population differences across 
+origins. 
 
 For example, site A may have ten million visitors, while site B has ten 
 thousand. In both cases, the histogram densities for each origin sum to “1.0”, 

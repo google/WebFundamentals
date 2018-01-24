@@ -13,12 +13,12 @@ The Chrome User Experience Report is available to explore on
 [Google BigQuery](https://cloud.google.com/bigquery/), which is a part of the 
 Google Cloud Platform (GCP). To get started, you'll need a Google account 
 ([sign up](https://accounts.google.com/SignUp)), a Google Cloud project that 
-you will use to access the dataset, and basic knowledge of 
+you will use to access the project, and basic knowledge of 
 [SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#sql-syntax).
 
-### Access the dataset {: #access-dataset }
+### Access the project {: #access-dataset }
 
-The dataset is available at 
+The project is available at 
 <https://bigquery.cloud.google.com/dataset/chrome-ux-report:all>. 
 If you visit that page and get a prompt to create a project like the one below, 
 continue with the following steps to create a new GCP project. Otherwise, 
@@ -140,23 +140,19 @@ distribution of the histogram.
 ```sql
 #standardSQL
 SELECT
-  bin.start,
-  SUM(bin.density) AS density
-FROM (
-  SELECT
-    first_contentful_paint.histogram.bin AS bins
-  FROM
-    `chrome-ux-report.all.201710`
-  WHERE
-    origin = 'http://example.com')
-CROSS JOIN
-  UNNEST(bins) AS bin
+    bin.start,
+    SUM(bin.density) AS density
+FROM
+    `chrome-ux-report.all.201710`,
+    UNNEST(first_contentful_paint.histogram.bin) AS bin
+WHERE
+    origin = 'http://example.com'
 GROUP BY
-  bin.start
+    bin.start
 ORDER BY
-  bin.start
+    bin.start
 ```
-[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/920398604589:bb17f33fa95348318e5c685551cbd93d)
+[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/831449101759:6f90e138fdc14f38afc596de47377f3d)
 
 The query above produces the data for the histogram by using the 
 [`SUM`](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators#sum) 
@@ -226,18 +222,15 @@ towards the bins under 1000 ms, let’s compute the density sum for this range.
 ```sql
 #standardSQL
 SELECT
-  SUM((
-    SELECT
-      SUM(bin.density)
-    FROM
-      UNNEST(first_contentful_paint.histogram.bin) bin
-    WHERE
-      bin.start < 1000
-      AND origin = 'http://example.com')) AS density
+    SUM(bin.density) AS density
 FROM
-  `chrome-ux-report.all.201710`
+    `chrome-ux-report.chrome_ux_report.201710`,
+    UNNEST(first_contentful_paint.histogram.bin) AS bin
+WHERE
+    bin.start < 1000 AND
+    origin = 'http://example.com'
 ```
-[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/920398604589:ed83e19409254d809cc82686c2ab26e1)
+[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/831449101759:28abbd2c309e4053a24397a71448382a)
 
 In the example above we’re adding all of the density values in the 
 FCP histogram for “http://example.com” where the FCP bin’s start value is less 
@@ -252,33 +245,64 @@ how the above experience varies for users with different connection speeds.
 ```sql
 #standardSQL
 SELECT
-  effective_connection_type.name AS ect,
-  SUM((
-    SELECT
-      SUM(bin.density)
-    FROM
-      UNNEST(first_contentful_paint.histogram.bin) bin
-    WHERE
-      bin.end <= 1000
-      AND origin = 'http://example.com')) AS density
+    effective_connection_type.name AS ect,
+    SUM(bin.density) AS density
 FROM
-  `chrome-ux-report.all.201710`
+    `chrome-ux-report.chrome_ux_report.201710`,
+    UNNEST(first_contentful_paint.histogram.bin) AS bin
+WHERE
+    bin.end <= 1000 AND
+    origin = 'http://example.com'
 GROUP BY
-  ect
+    ect
 ORDER BY
-  density DESC
-
+    density DESC
 ```
-[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/226352634162:c5b7ee9ea0394728a821cf60f58737c2)
+[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/831449101759:ca03f93ed31e4548ba835bf61f861ceb)
 
 The result of this query shows the fraction of users that experience the FCP in 
-under one second, split by effective connection type. On first glance, users on 
+under one second, split by effective connection type. At first glance, users on 
 a 3G connection may have significantly worse performance, but it's important to 
 remember that the resulting value is relative to the overall population; the 
 reported value is also function of 3G population size, which may be lower — see 
 [analysis tips & best practices](/web/tools/chrome-user-experience-report/#analysis_tips_best_practices) 
 for more. If desired, we can normalize the value against the relative 
 population size of each effective connection type.
+
+Finally, we can slice the results above even further by making use of the 
+per-country datasets available for tables `201712` and newer.
+
+```sql
+#standardSQL
+WITH
+    countries AS (
+      SELECT *, 'All' AS country FROM `chrome-ux-report.all.201712`
+    UNION ALL
+      SELECT *, 'India' AS country FROM `chrome-ux-report.country_in.201712`
+    UNION ALL
+      SELECT *, 'US' AS country FROM `chrome-ux-report.country_us.201712`)
+    
+SELECT
+    country,
+    effective_connection_type.name AS ect,
+    SUM(bin.density) AS density
+FROM
+    countries,
+    UNNEST(first_contentful_paint.histogram.bin) AS bin
+WHERE
+    bin.end <= 1000 AND
+    origin = 'http://example.com'
+GROUP BY
+    country,
+    ect
+ORDER BY
+    density DESC
+```
+
+[Run it on BigQuery](https://bigquery.cloud.google.com/savedquery/920398604589:cb304c33f78b41b29b4d207bfef20aab)
+
+This query combines the All, India, and US tables together and queries their 
+union for each country and ECT combination.
 
 Using these queries as a foundation, you’re ready to start mining the 
 Chrome UX Report for insightful data. Should you need it, feel free to ask the 
