@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 <pre class="prettyprint html">
 &lt;script&gt;
 // Check that service workers are registered

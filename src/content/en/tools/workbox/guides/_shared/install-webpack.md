@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 ## Install `workbox-webpack-plugin`
 
 Start by installing `workbox-webpack-plugin` from NPM.

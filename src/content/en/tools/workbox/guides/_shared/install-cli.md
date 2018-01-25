@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 ## Install the CLI
 
 To start, install the CLI from NPM.

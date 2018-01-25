@@ -1,3 +1,5 @@
+{# wf_md_include #}
+
 ## Install <code>workbox-build</code>
 
 Start by installing `workbox-build` from NPM.
