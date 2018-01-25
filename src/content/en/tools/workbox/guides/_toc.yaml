@@ -22,8 +22,16 @@ toc:
   path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
-# - title: "Generate a Complete Service Worker"
-#  path: /web/tools/workbox/guides/generate-complete-sw
+- title: "Generate a Complete Service Worker"
+  path: /web/tools/workbox/guides/generate-service-worker
+  style: accordion
+  section:
+  - title: "CLI"
+    path: /web/tools/workbox/guides/generate-service-worker/cli
+  - title: "Gulp or Node"
+    path: /web/tools/workbox/guides/generate-service-worker/cli
+  - title: "Webpack"
+    path: /web/tools/workbox/guides/generate-service-workers/cli
 # - title: "Migrate from sw-<toolbox|precache>"
 #  path: /web/tools/workbox/guides/migrate
 # - title: "Use as ES2015 Imports"

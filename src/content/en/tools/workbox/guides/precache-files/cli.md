@@ -3,10 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-19 #}
+{# wf_updated_on: 2018-01-25 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Workbox CLI {: .page-title }
+
+{% include "web/tools/workbox/_shared/alpha.html" %}
 
 This page explains how to use the Workbox Command Line Interface (a.k.a the
 Workbox CLI) to generate the list of files to precache and add it to your
@@ -16,26 +18,7 @@ service worker.
 <a href="https://nodejs.org/en/download/">Node installed</a> to use the
 Workbox CLI.</aside>
 
-## Install the CLI
-
-To start, install the CLI from NPM.
-
-<pre class="devsite-terminal devsite-click-to-copy">
-npm install workbox-cli --global
-</pre>
-
-You should be able to run the command `workbox --help` after it's installed.
-
-<pre class="devsite-terminal">
-workbox --help
-
-    workbox-cli is the command line interface for Workbox.
-
-    Usage:
-    $ workbox <command> [options]
-
-    ...
-</pre>
+{% include "web/tools/workbox/guides/_shared/install-cli.md" %}
 
 ## Run the Wizard
 
