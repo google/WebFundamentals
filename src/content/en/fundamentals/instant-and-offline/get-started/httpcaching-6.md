@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2018-01-25 #}
+{# wf_published_on: 2018-01-25 #}
 
 # HTTP Caching {: .page-title }
 
@@ -15,26 +15,24 @@ retrieved by the browser for display or execution. You can give the browser choi
 where it can retrieve a resource from, and that can make a big difference in your page's 
 load speed.
 
-The first time a browser loads a batch of page components, it stores them locally in a 
-*browser cache*, a feature of modern browsers. The next time the browser hits that page, it 
-can look in the cache for any previously-stored components and retrieve them from the 
-cache faster than it can download them from the server. These conditions are called 
-*empty cache* and *full cache*, although "full" as used here really means that the cache 
-contains some or most -- but not necessarily all -- of the page components.
+The first time a browser loads a web page, it stores the page resources in the 
+[HTTP Cache](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching). 
+The next time the browser hits that page, it 
+can look in the cache for resources that were previously fetched and retrieve them from disk,  
+often faster than it can download them from the network. 
 
 While HTTP caching is standardized per the 
 [Internet Engineering Task Force (IETF) specifications](https://tools.ietf.org/html/rfc7234), 
 browsers may have multiple caches that differ in how they acquire, store, and retain content.
+You can read about how these caches vary in this excellent article, 
+[A Tale of Four Caches](https://calendar.perfplanet.com/2016/a-tale-of-four-caches/).
 
-Of course, every first-time visitor to your page arrives with an empty cache for that page. 
-However, even repeat visitors may have an empty cache; they might have manually cleared it, 
+Of course, every first-time visitor to your page arrives with nothing yet cached for that page. 
+Even repeat visitors may not have much in the HTTP cache; they might have manually cleared it, 
 or set their browser to do so automatically, or forced a fresh page load with a control-key 
-combination. Some of the techniques we've already covered, such as combining and compressing 
-resources, certainly benefit both empty- and full-cache users. 
-
-Still, a significant number of your users will revisit your site with at least some of its 
-components already cached, and that can make a huge difference in load time. Maximizing cache 
-usage is critical to speeding up return visits.
+combination. Still, a significant number of your users may revisit your site with at least some 
+of its components already cached, and that can make a huge difference in load time. Maximizing 
+cache usage is critical to speeding up return visits.
 
 ## Enabling Caching
 
@@ -49,7 +47,11 @@ as a proxy cache or a content delivery network (CDN) cache.
 
 ## Cache Headers
 
-Two main types of cache headers, *cache-control* and *expires*, define the caching 
+Two main types of cache headers, 
+[cache-control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) 
+and 
+[expires](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires), 
+define the caching 
 characteristics for your resources. Typically, cache-control is considered a more modern and 
 flexible approach than expires, but both headers can be used simultaneously.
 
@@ -62,7 +64,8 @@ caching options.
 ### Cache-control
 
 You can enable cache-control with a variety of options in a comma-delimited list. Here is an 
-example that sets caching for various image file types, as matched by an extension list, to 
+example of an Apache `.htaccess` configuration that sets caching for various image file types, 
+as matched by an extension list, to 
 one month and public access (some available options are discussed below).
 
 ```
@@ -86,32 +89,32 @@ explained below; you can find more information at the
 [Performance Optimization section](http://tinyurl.com/ljgcqp3) and at the 
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
 
-* **no-cache**: Somewhat of a misnomer, specifies that content can be cached but, if so, 
+- **no-cache**: Somewhat of a misnomer, specifies that content can be cached but, if so, 
 it must be re-validated on each request before being served to a client. This forces the 
 client to check for freshness but allows it to avoid downloading the resource again if it 
 has not changed. Mutually exclusive with **no-store**.
 
-* **no-store**: Indicates that the content actually cannot be cached in any way by any 
+- **no-store**: Indicates that the content actually cannot be cached in any way by any 
 primary or intermediate cache. This is a good option for resources that may contain sensitive 
 data, or for resources that will almost certainly change from visit to visit. Mutually 
 exclusive with **no-cache**.
 
-* **public**: Indicates that the content can be cached by the browser and by any intermediate 
+- **public**: Indicates that the content can be cached by the browser and by any intermediate 
 caches. Overrides the default **private** setting for requests that use HTTP authentication. 
 Mutually exclusive with **private**.
 
-* **private**: Designates content that may be stored by the user's browser, but may not be 
+- **private**: Designates content that may be stored by the user's browser, but may not be 
 cached by any intermediate caches. Often used for user-specific, but not particularly 
 sensitive, data. Mutually exclusive with **public**.
 
-* **max-age**: Defines the maximum time that the content may be cached before it must be 
+- **max-age**: Defines the maximum time that the content may be cached before it must be 
 revalidated or downloaded again from the original server. This option generally replaces the 
 expires header (see below) and takes a value in seconds, with a maximum valid age of one 
 year (31536000 seconds).
 
 ### Expires Caching
 
-You can also enable caching by specifying expiration, or *expiry*, times for certain types of 
+You can also enable caching by specifying expiration, or expiry, times for certain types of 
 files, which tell browsers how long to use a cached resource before requesting a fresh copy 
 from the server. The expires header just sets a time in the future when the content should 
 expire. After that point, requests for the content must go back to the original server. With 
@@ -156,3 +159,5 @@ types, but flexible enough to allow easy updates when your site's content change
 
 Be assertive with caching, but also be aware that if you later change a resource that has a 
 long retention period, you may inadvertently deprive some repeat visitors of newer content. 
+You can find a great discussion of caching patterns, options, and potential pitfalls in 
+[Caching Best Practices and Max-age Gotchas](https://jakearchibald.com/2016/caching-best-practices/).
