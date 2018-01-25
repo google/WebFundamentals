@@ -4,22 +4,31 @@ description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
 {# wf_updated_on: 2018-01-25 #}
 {# wf_published_on: 2018-01-25 #}
+{# wf_blink_components: N/A #}
 
 # Migrate from sw-precache or sw-toolbox {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-Developers who have previously used [`sw-precache`](https://github.com/GoogleChromeLabs/sw-precache) and/or [`sw-toolbox`](https://github.com/GoogleChromeLabs/sw-toolbox) have a straightforward upgrade path to the Workbox family of libraries. Upgrading to Workbox will provide a modern, extensible service worker experience with improved debugging and developer ergonomics.
+Developers who have previously used [`sw-precache`](https://github.com/GoogleChromeLabs/sw-precache)
+and/or [`sw-toolbox`](https://github.com/GoogleChromeLabs/sw-toolbox) have a straightforward upgrade
+path to the Workbox family of libraries. Upgrading to Workbox will provide a modern, extensible
+service worker experience with improved debugging and developer ergonomics.
 
 ## Modifications to your existing configuration
 
-Regardless of which specific build tools you're migrating from, keep in mind the following name changes and deprecations when putting together your equivalent Workbox configuration.
+Regardless of which specific build tools you're migrating from, keep in mind the following name
+changes and deprecations when putting together your equivalent Workbox configuration.
 
 ### Renamed options
 
-- The `runtimeCaching` config parameter has been [updated](https://github.com/GoogleChrome/workbox/issues/1096#issue-278581349) to take a more streamlined set of options, corresponding to the underlying Workbox caching plugins.
+- The `runtimeCaching` config parameter has been
+[updated](https://github.com/GoogleChrome/workbox/issues/1096#issue-278581349) to take a more
+streamlined set of options, corresponding to the underlying Workbox caching plugins.
 
-- Within `runtimeCaching`, the `fastest` handler name has been [renamed](https://github.com/GoogleChrome/workbox/issues/915) to `staleWhileRevalidate`, which provides equivalent functionality.
+- Within `runtimeCaching`, the `fastest` handler name has been
+[renamed](https://github.com/GoogleChrome/workbox/issues/915) to `staleWhileRevalidate`, which
+provides equivalent functionality.
 
 - The `dynamicUrlToDependencies` config parameter has been renamed `templatedUrls`.
 
@@ -27,17 +36,28 @@ Regardless of which specific build tools you're migrating from, keep in mind the
 
 ### Deprecated options
 
-- Express-style wildcard routes are [no longer supported](https://github.com/GoogleChrome/workbox/issues/1012). If you were using Express-style wildcard routes in either the `runtimeCaching` configuration or directly in `sw-toolbox`, please migrate to an equivalent regular expression route when using Workbox.
+- Express-style wildcard routes are [no longer
+supported](https://github.com/GoogleChrome/workbox/issues/1012). If you were using Express-style
+wildcard routes in either the `runtimeCaching` configuration or directly in `sw-toolbox`, please
+migrate to an equivalent regular expression route when using Workbox.
 
 ## sw-precache migrations
 
 ### From the sw-precache CLI to workbox-cli
 
-Developers using the `sw-precache` command line interface, either running the command manually or as part of an [`npm scripts`](https://docs.npmjs.com/misc/scripts)-based build process, will find using the the [`workbox-cli` module](http://npmjs.com/package/workbox-cli) to be the easiest way to migrate. Installing `workbox-cli` will give you access to a binary called `workbox`.
+Developers using the `sw-precache` command line interface, either running the command manually or as
+part of an [`npm scripts`](https://docs.npmjs.com/misc/scripts)-based build process, will find using
+the the [`workbox-cli` module](http://npmjs.com/package/workbox-cli) to be the easiest way to
+migrate. Installing `workbox-cli` will give you access to a binary called `workbox`.
 
-While the `sw-precache` CLI [supported](https://github.com/GoogleChromeLabs/sw-precache#command-line-interface) configuring via either command line flags or a configuration file, the `workbox` CLI requires that all configuration options be provided in a configuration file, using [CommonJS `module.exports`](https://nodejs.org/api/modules.html#modules_module_exports).
+While the `sw-precache` CLI
+[supported](https://github.com/GoogleChromeLabs/sw-precache#command-line-interface) configuring via
+either command line flags or a configuration file, the `workbox` CLI requires that all configuration
+options be provided in a configuration file, using [CommonJS
+`module.exports`](https://nodejs.org/api/modules.html#modules_module_exports).
 
-The `workbox` CLI supports a number of different modes (use `workbox --help` to see all of them), but the mode that most closely matches `sw-precache`'s functionality is `generateSW`. So a call to
+The `workbox` CLI supports a number of different modes (use `workbox --help` to see all of them),
+but the mode that most closely matches `sw-precache`'s functionality is `generateSW`. So a call to
 
 ```
 $ sw-precache --config='sw-precache-config.js'
@@ -51,9 +71,13 @@ $ workbox generateSW workbox-config.js
 
 ### From the sw-precache node module to the workbox-build node module
 
-Developers using the `node` API for `sw-precache`, either as part of a `gulp`/`Grunt` workflow or just within a custom `node` build script, can migrate by switching to the `workbox-build` `node` module.
+Developers using the `node` API for `sw-precache`, either as part of a `gulp`/`Grunt` workflow or
+just within a custom `node` build script, can migrate by switching to the `workbox-build` `node`
+module.
 
-`workbox-build`'s `generateSW()` function most closely matches the `sw-precache` `node` module's `write()` function. One key difference is that `generateSW()` always returns a Promise, while the old `write()` function supported both a callback and Promise-based interface.
+`workbox-build`'s `generateSW()` function most closely matches the `sw-precache` `node` module's
+`write()` function. One key difference is that `generateSW()` always returns a Promise, while the
+old `write()` function supported both a callback and Promise-based interface.
 
 `gulp` usage along the lines of
 
@@ -79,9 +103,15 @@ gulp.task('generate-service-worker', function() {
 
 ### From the sw-precache-webpack-plugin to the Workbox webpack plugin
 
-Developers using the [`sw-precache-webpack-plugin`](https://www.npmjs.com/package/sw-precache-webpack-plugin) as part of their [webpack](https://webpack.js.org/) build process can migrate by switching to the `GenerateSW` class within the `workbox-webpack-plugin` module.
+Developers using the
+[`sw-precache-webpack-plugin`](https://www.npmjs.com/package/sw-precache-webpack-plugin) as part of
+their [webpack](https://webpack.js.org/) build process can migrate by switching to the `GenerateSW`
+class within the `workbox-webpack-plugin` module.
 
-`workbox-webpack-plugin` integrates directly with the webpack build process and "knows" about all of the assets generated by the a given compilation. This means that, for many use cases, you can rely on the default behavior of `workbox-webpack-plugin` without additional configuration, and get an equivalent service worker to what `sw-precache-webpack-plugin` provides.
+`workbox-webpack-plugin` integrates directly with the webpack build process and "knows" about all of
+the assets generated by the a given compilation. This means that, for many use cases, you can rely
+on the default behavior of `workbox-webpack-plugin` without additional configuration, and get an
+equivalent service worker to what `sw-precache-webpack-plugin` provides.
 
 ```
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
@@ -114,7 +144,13 @@ const webpackConfig = {
 ## sw-toolbox migrations
 
 ### Migrate from hand-crafted sw-toolbox usage to workbox-sw
-If you were using `sw-toolbox` directly (rather than using it implicity via `sw-precache`'s `runtimeCaching` option), then the migration to Workbox requires some manual adjustments to get the equivalent behavior. Reading the documentation for the [`workbox-routing`](https://developers.google.com/web/tools/workbox/modules/workbox-routing) and [`workbox-strategies`](https://developers.google.com/web/tools/workbox/modules/workbox-strategies) modules can help provide more context. Here are a few equivalent code snippets to help guide the migration:
+
+If you were using `sw-toolbox` directly (rather than using it implicity via `sw-precache`'s
+`runtimeCaching` option), then the migration to Workbox requires some manual adjustments to get the
+equivalent behavior. Reading the documentation for the
+[`workbox-routing`](/web/tools/workbox/modules/workbox-routing) and
+[`workbox-strategies`](/web/tools/workbox/modules/workbox-strategies) modules can help provide more
+context. Here are a few equivalent code snippets to help guide the migration:
 
 ```
 // This sw-toolbox code:
@@ -183,4 +219,6 @@ workbox.router.setDefaultHandler(workbox.strategies.networkFirst());
 
 ## Getting help
 
-We anticipate most migrations to Workbox to be straightforward. If you run into issues not covered in this guide while migrating, please let us know by [opening an issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.
+We anticipate most migrations to Workbox to be straightforward. If you run into issues not covered
+in this guide while migrating, please let us know by [opening an
+issue](https://github.com/GoogleChrome/workbox/issues/new) on GitHub.
