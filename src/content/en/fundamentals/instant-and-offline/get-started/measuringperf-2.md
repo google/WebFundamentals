@@ -52,6 +52,19 @@ and links to more detailed explanations, many of which we'll cover shortly.
 
 ![PageSpeed Insights](images/image_201.png)
 
+## WebPageTest
+
+Similar to Pingdom, this site runs a series of tests on a URL and generates several reports. 
+It not only lets you choose from among 50+ test sites, using a dropdown or a spiffy map 
+interface, it also lets you specify a browser and even a mobile device so you can compare 
+page performance in a variety of environments.
+
+[https://www.webpagetest.org/](https://www.webpagetest.org/)
+
+To use it, give it a URL, select your preferred settings, and click `Start Test`.
+
+![WebPageTest](images/image_203.png)
+
 ## Pingdom
 
 This popular tool runs a full page test and returns a highly detailed, but quite readable, 
@@ -67,41 +80,23 @@ and requests by type and domain, and a spiffy file request timeline graph.
 
 ![Pingdom](images/image_202.png)
 
-## WebPageTest
-
-Similar to Pingdom, this site runs a series of tests on a URL and generates several reports. 
-It not only lets you choose from among 50+ test sites, using a dropdown or a spiffy map 
-interface, it also lets you specify a browser and even a mobile device so you can compare 
-page performance in a variety of environments.
-
-[https://www.webpagetest.org/](https://www.webpagetest.org/)
-
-To use it, give it a URL, select your preferred settings, and click `Start Test`.
-
-![WebPageTest](images/image_203.png)
-
-## GTmetrix
-
-GT.net's interesting tool analyzes page load speed using both Pingdom and YSlow, and reports 
-the results side by side, making comparative analysis easy for items like overall scores, 
-load time, page size, and server requests. 
-
-[https://gtmetrix.com/](https://gtmetrix.com/)
-
-To use it, enter a URL and click `Analyze`. The tabbed report includes Pingdom and YSlow 
-results; some data, such as the Waterfall graph and Timings chart, are only available to 
-registered users (although signup is free). The extensive recommendation list includes 
-dropdowns that offer specific component references, relative priority assignments, and 
-informative "What's this mean?" callouts.
-
-![GTmetrix](images/image_205.png)
-
 ## Summary
 
 These are but a few of the many tools available to help measure web page loading and 
 performance speed, but they are among the most popular and useful. You should try to test 
 your page with as many different tools as possible and compare the analyses for both common 
 factors and unique outliers.
+
+Also, the proper application of these tools is partially a reflection of where they fit in 
+your workflow. Consider these general recommendations.
+
+ - Lighthouse is primarily for your local iteration as you build your site.
+ - WebPageTest is excellent for testing on real mobile devices and envisioning a more 
+ real-world setup.
+ - PageSpeed Insights is great if you aren't sure where to start and want a useful overview  
+ of improvement opportunities. PageSpeed Insights recently started including data from the 
+ [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/) 
+ and might best capture how your real-world users will experience your site.
 
 As you might expect, the scores and recommendations for a single URL will vary among test 
 suites, because each uses its own rules and algorithms to analyze pages. But you will 
