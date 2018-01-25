@@ -1,17 +1,15 @@
-project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
-description: Leveraging the Performance Metrics that Most Affect User Experience.
+project_path: /web/fundamentals/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Performance Metrics that Most Affect User Experience.
 
-{# wf_updated_on: 2017-08-03 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
-{# wf_featured_image: /web/updates/images/2017/06/perf-metrics-histogram.png #}
-{# wf_featured_snippet: Leveraging the Performance Metrics that Most Affect User Experience. #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Leveraging the Performance Metrics that Most Affect User Experience {: .page-title }
+# Performance Metrics that Most Affect User Experience {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
@@ -24,7 +22,7 @@ context? And fast for whom?
 
 <aside>
   <strong>Note:</strong> If you'd rather watch a video than read an article,
-  I spoke on this topic a few weeks ago at Google I/O with my teammate
+  I spoke on this topic at Google I/O 2017 with my colleague
   <a href="https://twitter.com/shubhie">Shubhie Panicker</a>.
 </aside>
 
@@ -52,7 +50,7 @@ individual user, and the only way to fully represent that is with a distribution
 like in the histogram below:
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-histogram.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-histogram.png"
        alt="A histogram of load times for website visitors"/>
 </figure>
 
@@ -157,7 +155,7 @@ easy for web developers themselves to know what parts of their pages are going
 to be most useful to their users.
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-hero-elements.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-hero-elements.png"
        alt="Examples of hero elements on various websites"/>
 </figure>
 
@@ -181,7 +179,7 @@ In some cases, these tasks can take a long time to run, and if that happens, the
 main thread is blocked and all other tasks in the queue have to wait.
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-long-tasks.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-long-tasks.png"
        alt="Long tasks as seen in the Chrome developer tools"/>
 </figure>
 
@@ -241,7 +239,7 @@ And these screenshots of a load timeline should help you better visualize where
 the load metrics fit in the load experience:
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-load-timeline.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-load-timeline.png"
        alt="Screenshots of where these metrics occur in the load experience"/>
 </figure>
 
@@ -535,7 +533,7 @@ vs desktop. The following chart shows the distribution of TTI across desktop
 mobile was quite a bit longer than on desktop:
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-tti-mobile-v-desktop.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-tti-mobile-v-desktop.png"
        alt="TTI distribution across desktop and mobile"/>
 </figure>
 
@@ -751,7 +749,7 @@ To successfully prevent regressions you need to be testing performance in both
 the lab and the wild with every new feature releases.
 
 <figure>
-  <img src="/web/updates/images/2017/06/perf-metrics-test-cycle.png"
+  <img src="/web/fundamentals/performance/images/perf-metrics-test-cycle.png"
        alt="A flow chart RUM and lab testing in the release process"/>
 </figure>
 

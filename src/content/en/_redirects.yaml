@@ -25,3 +25,6 @@ redirects:
 
 - from: /web/fundamentals/media
   to: /web/fundamentals/media/video
+
+- from: /web/updates/2017/06/user-centric-performance-metrics
+  to: /web/fundamentals/performance/user-centric-performance-metrics
