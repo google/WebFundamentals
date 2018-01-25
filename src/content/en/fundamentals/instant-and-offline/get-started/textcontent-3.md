@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-27 #}
-{# wf_published_on: 2017-10-27 #}
+{# wf_updated_on: 2018-01-25 #}
+{# wf_published_on: 2018-01-25 #}
 
 # Text Content {: .page-title }
 
@@ -24,7 +24,7 @@ In a web page, every character of that content, structure, formatting, and behav
 fetched from the server and downloaded to the browser, a decidedly non-trivial task. In this 
 section we'll look at some effective methods for speeding up text content loading.
 
-##Separate Development from Deployment
+## Separate Development from Deployment
 
 As you reduce the size of text resources and take other actions that affect their readability, 
 it's important to remember that once you modify a 
@@ -45,7 +45,7 @@ or functionality. It doesn't sound that useful, but it is. For example, this lit
 function sortables_init() {
     // Find all tables with class sortable and make them sortable
     if (!document.getElementsByTagName) return;
-    tbls = document.getElementsByTagName("table");
+    var tbls = document.getElementsByTagName("table");
     for (ti=0;ti<tbls.length;ti++) {
    	 thisTbl = tbls[ti];
    	 if (((' '+thisTbl.className+' ').indexOf("sortable") != -1) && (thisTbl.id)) {
@@ -58,7 +58,7 @@ function sortables_init() {
 After minification, it looks like this, and only contains 257 characters. 
 
 ```
-function sortables_init(){if(!document.getElementsByTagName)return;tbls=document.
+function sortables_init(){if(!document.getElementsByTagName)return;var tbls=document.
 getElementsByTagName("table");for(ti=0;ti<tbls.length;ti++){thisTbl=tbls[ti];
 if(((''+thisTbl.className+'').indexOf("sortable")!=-1)&&(thisTbl.id)){ts_makeSortable(thisTbl)}}}
 ```
@@ -72,25 +72,22 @@ Looking at the bigger picture, the entire script block from which that snippet c
 HTML and CSS can be minified in the same way, so that you can achieve improved load times for 
 both formatting- and behavior-related code.
 
-Many online and desktop minification tools are available; here's an example.
-
-[Minifier](http://www.minifier.org/)
-is an online tool minifies JavaScript or CSS via copy and paste. Paste the code, choose the 
-type, and click `Minify`.
-
-![Minifier](images/image_300.png)
+Many (many!) online and desktop minification tools are available; one of the most popular 
+and highly recommended online tools, due to its longevity and stability, is
+[Kangax HTML Minifier](https://kangax.github.io/html-minifier/), which 
+offers a broad array of output customization options for the minified code.
 
 Other minification tools include:
 
+- [Minifier](http://www.minifier.org/):
+An online tool minifies JavaScript or CSS via copy and paste.
 - [HTML Minifier](http://www.willpeavy.com/minifier/):
 This online tool also handles HTML, and automatically identifies the code type(s).
-- [Kangax HTML Minifier](https://kangax.github.io/html-minifier/):
-This online tool offers a broad array of output customization options for the minified code.
-- [NPM for Grunt](https://www.npmjs.com/package/grunt-html-minify):
+- [Node module for Grunt](https://www.npmjs.com/package/grunt-html-minify):
 An NPM minification package that integrates into the Grunt workflow.
-- [NPM for Gulp](https://www.npmjs.com/package/gulp-html-minifier):
+- [Node module for Gulp](https://www.npmjs.com/package/gulp-html-minifier):
 An NPM minification package that integrates into the Gulp workflow. 
-- [NPM HTML Minifier](https://www.npmjs.com/package/html-minifier):
+- [Node module HTML Minifier](https://www.npmjs.com/package/html-minifier):
 An NPM package that includes a useful chart comparing its compression results with other methods.
 
 ### Frameworks
@@ -145,7 +142,7 @@ Unlike desktop or browser-based local compression, Gzip works at the server to i
 process certain file types that you specify. While all modern browsers support Gzip compression 
 for HTTP requests, you must properly configure your server to deliver the compressed resource 
 when it is requested. Different server types, of course, have different setup requirements. 
-You configure the Apache server, for example, via the .htaccess file, which would include 
+You configure the Apache server, for example, via the `.htaccess` file, which would include 
 something like this.
 
 ```
@@ -162,10 +159,9 @@ something like this.
 </IfModule>
 ```
 
-BetterExplained has a very good article on the subject, including background information, 
-examples, and caveats.
-
-[https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/)
+BetterExplained has a very good 
+[article on Gzip compression](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/), 
+including background information, examples, and caveats.
 
 So, having enabled GZip on your server, how do you know whether it's actually serving 
 compressed files? An easy way to find out is to check it at GIDNetwork's Gzip test site.
@@ -199,7 +195,7 @@ a div, like this.
 
 `<a href="javascript:void(0)" onclick="$('#more').slideToggle()">More...</a>`
 
-Yes, it works great and it's easy to code, but it's a lot of download overhead for one text 
+Yes, it works great and it's easy to code, but jQuery is a lot of download overhead for one text 
 effect. You might consider swapping out that huge library for a simpler -- and far smaller -- 
 single-purpose function, like this 
 (source: [W3Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp)).
@@ -208,9 +204,9 @@ single-purpose function, like this
 function myFunction() {
   var x = document.getElementById('myDIV');
   if (x.style.display === 'none') {
-  x.style.display = 'block';
+    x.style.display = 'block';
   } else {
-  x.style.display = 'none';
+    x.style.display = 'none';
   }
 }
 ```
@@ -255,10 +251,10 @@ The point is, if you don't need an entire 250k library, don't download it. Inste
 and use small, single-purpose routines that do only what you need. (And don't forget to 
 minify them!)
 
-Using local code instead of downloading an external library also has the added benefit of 
-eliminating a server round-trip. See 
-[HTTP Requests](/web/fundaentals/instant-and-offline/get-started/httprequests-5) 
-for more information.
+You can find an interesting and to-the-point take on alternatives to jQuery code at 
+[You Might Not Need jQuery](http://youmightnotneedjquery.com/), which explores how the 
+modern web has evolved to provide many of the same capabilities for which we might 
+have previously used jQuery.
 
 ## Prioritize Text Content
 
