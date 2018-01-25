@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
 
 {# wf_published_on: 2018-01-23 #}
-{# wf_updated_on: 2018-01-23 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome64,new-in-chrome,observers,ux,regex,media,modules,responsive #}
 {# wf_featured_snippet: Chrome 64 adds support for ResizeObservers, which will notify you when an element’s content rectangle has changed its size. Modules can now access to host specific metadata with import.metadata The pop-up blocker gets strong and plenty more. Let’s dive in and see what’s new for developers in Chrome 64! #}
@@ -58,11 +58,11 @@ an array of `ResizeOberverEntries` – one entry per observed element – which
 contain the new dimensions for the element.
 
 ```js
-var ro = new ResizeObserver( entries => {
-  for (let entry of entries) {
+const ro = new ResizeObserver( entries => {
+  for (const entry of entries) {
     const cr = entry.contentRect;
     console.log('Element:', entry.target);
-    console.log(`Element size: ${cr.width}px x ${cr.height}px`);
+    console.log(`Element size: ${cr.width}px × ${cr.height}px`);
     console.log(`Element padding: ${cr.top}px ; ${cr.left}px`);
   }
 });
@@ -89,9 +89,10 @@ if they want.
 
 ## `import.meta` {: #import-meta }
 
-When writing JavaScript modules, you often want access to host specific
+When writing JavaScript modules, you often want access to host-specific
 metadata about the current module. Chrome 64 now supports the `import.meta`
-property within modules and exposes the URL for the module `import.meta.url`.
+property within modules and exposes the URL for the module as
+`import.meta.url`.
 
 This is really helpful when you want to resolve resources relative to the
 module file as opposed to the current HTML document.
@@ -104,6 +105,8 @@ there’s plenty more.
 
 * Chrome now supports
   [named captures](/web/updates/2017/07/upcoming-regexp-features#named_captures)
+  and [Unicode property
+  escapes](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes)
   in regular expressions.
 * The default `preload` value for `<audio>` and `<video>` elements is now
   `metadata`. This brings Chrome in line with other browsers and helps to
