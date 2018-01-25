@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-27 #}
-{# wf_published_on: 2017-10-27 #}
+{# wf_updated_on: 2018-01-25 #}
+{# wf_published_on: 2018-01-25 #}
 
 # Reduce Performance Costs of Graphical Content {: .page-title }
 
@@ -14,7 +14,9 @@ content is a critical component in conveying information in a web page or app. A
 images, from charts and graphs to icons and arrows to mugshots and maps, provide instantaneous 
 data and improve reader comprehension and retention. But, unlike text, images require 
 considerable time and bandwidth to download and render. Graphical content can easily account 
-for 60%-85% of a typical website's total bandwidth (source: it depends on who you ask).
+for 60%-85% of a typical website's total bandwidth (source: it depends on who you ask). 
+[HTTPArchive](http://httparchive.org/interesting.php), for example, notes that images  
+account for approximately 50% of the average web site's content.
 
 Clearly, one of the major ways to get a significant performance boost is to reduce the amount 
 of time images take to load. Let's examine some ways to tackle this problem.
@@ -26,11 +28,17 @@ apparently isn't asked enough. Far too many sites of all kinds put large, and mo
 images "above the fold". This slows down the page load and makes readers scroll halfway 
 down the page before they get to meaningful content.
 
-Yes, images can genuinely support text content or can just lend visual interest, but if an 
-image doesn't add information or clarify meaning for the user, remove it. The fastest image 
-is one you don't have to download; every image you remove speeds up your page load time.
+Consider whether each image is really needed and, if so, whether it is needed right away. 
+Can it be loaded later, after more critical content? If not, can it be optimized so that it 
+has the least effect on the page load? Remember that the time required to download content 
+&mdash; particularly graphical content &mdash; should be time well spent in exchange for 
+information provided by the image.
 
-##Choose Appropriate Image Types
+Yes, images can genuinely support text content or can just lend visual interest, but if an 
+image doesn't add informational value or clarify meaning for the user, remove it. The fastest 
+image is one you don't have to download; every image you remove speeds up your page load time.
+
+## Choose Appropriate Image Types
 
 As a rule of thumb, use PNGs for clip art, line drawings, or wherever you need transparency, 
 JPGs for photographs, and GIFs when you need animation. When in doubt, do a simple but 
@@ -53,10 +61,10 @@ clear, the fur is distinct, and the shadows are smooth.
 But the PNG image is 232k, while the JPG is just 42k! That's an 81% improvement in download 
 time with no visible loss in quality. Verdict: JPG FTW.
 
-##Remove Image Metadata
+## Remove Image Metadata
 
-Metadata, or "data about data", exists in most images and may include (on a camera photo, for 
-example) data about the camera/phone model, a date and time stamp, photo app settings, 
+Metadata, or "data about data", exists in most images and may include (on a camera photo, 
+for example) data about the camera/phone model, a date and time stamp, photo app settings, 
 file format, height and width, geolocation coordinates, and more. An image editor might 
 include metadata in its saved files such as author name, resolution, color space, 
 copyright, and keywords. 
@@ -80,7 +88,7 @@ VerExif's online tool was used to upload the image and identify the metadata for
 *VerExif's upload dialog*
 
 This image had quite a bit (38k!) of metadata, as you can see in the table below. 
-(Note that the geolocation data is empty, probably because the US-based phone had no 
+(Note that the geolocation data is empty, possibly because the US-based phone had no 
 service at that location.)
 
 <table>
@@ -146,7 +154,7 @@ service at that location.)
   </tr> 
 </table> 
 
-VerExif easily removed the metadata and then saved the image. The size went down from 363k to 
+After the metadata was removed, the file size went down from 363k to 
 325k, a difference of 10.5%; certainly not as dramatic as physical size reduction or 
 compression, but ten percent is nothing to sneeze at, especially if you have multiple 
 photographs. 
@@ -156,9 +164,9 @@ of Exif removal at MakeUseOf.
 
 [http://www.makeuseof.com/tag/3-ways-to-remove-exif-metadata-from-photos-and-why-you-might-want-to/](http://www.makeuseof.com/tag/3-ways-to-remove-exif-metadata-from-photos-and-why-you-might-want-to/)
 
-##Resize Images
+## Resize Images
 
-###Size images based on their intended use
+### Size images based on their intended use
 
 Large images take longer to download than smaller ones. All your images should be appropriately 
 sized for their intended use and should not rely on the browser to resize them for rendering.
@@ -174,7 +182,7 @@ great, but if the user never actually hovers over the thumbnail, then 95% of the
 image took to download was wasted. You may be better off taking the time to make separate, 
 properly sized thumbnails, displaying the full sized images only if they're actually requested.
 
-###Crop images to show only what's important
+### Crop images to show only what's important
 
 One enormously effective technique to reduce file size for images of all kinds is simple 
 cropping: omitting parts of the image that aren't important to information delivery.
@@ -191,10 +199,10 @@ and the main part of the house.
 
 Here, we started with the already-resized version starting at 220k, then cropped it, 
 saving it to the version seen above at 115k. That's a 52% reduction, and the photo now 
-focuses on the important parts (yes, the doghouse is important) at half the file size. 
+focuses on the important parts (yes, the doghouse is important!) at half the file size. 
 All the required information is there, it's just more efficiently presented.
 
-###Reduce image quality
+### Reduce image quality
 
 Of course, we want our images to look as good as possible, within reason, so that means saving 
 JPGs at 100% quality, right? Not necessarily. In most (which is to say nearly all) cases, 
@@ -229,9 +237,18 @@ is it significant enough to warrant a larger file and thus a slower download?
 
 The takeaway is obvious: definitely experiment with lower-quality JPGs to see how low you can 
 go before seeing a difference, and then use the smallest one that retains the photo's clarity. 
+What is not so obvious is that file size can be a seductively simple fix that is not without 
+its downsides. Again, some experimentation is warranted before settling on quality reduction 
+as a catch-all solution. For more detailed information, see this excellent article, 
+[How to Compare Images Fairly](https://kornel.ski/en/faircomparison).
 
 Additional image manipulation tools:
 
+- [XNConvert](https://www.xnview.com/en/xnconvert/): This free, cross-platform tool can 
+handle batched images, and performs resizing, optimization, and other transforms.
+- [ImageOptim](https://imageoptim.com/mac): This free tool is available for Mac and 
+as an online service, and is specifically aimed at optimizing images for speed, including 
+metadata removal (discussed above).
 - [ResizeIt](https://itunes.apple.com/us/app/resizeit/id416280139?mt=12): A Mac-only 
 desktop product that lets you change the size of multiple images simultaneously, and can 
 convert file formats at the same time. 
@@ -246,7 +263,7 @@ image editors, although CrazyEgg has a comprehensive article here:
 
 [https://www.crazyegg.com/blog/image-editing-tools/](https://www.crazyegg.com/blog/image-editing-tools/)
 
-##Compress Images
+## Compress Images
 
 PNG and JPG images can be squashed down even more using a compression tool, which reduces file 
 size without affecting either image dimensions or visual quality. 
