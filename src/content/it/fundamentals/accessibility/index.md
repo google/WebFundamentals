@@ -5,7 +5,7 @@ description: Migliorare l'accessibilità delle pagine web
 {# wf_updated_on: 2017-07-19 #}
 {# wf_published_on: 2016-06-26 #}
 
-# Accessibility {: .page-title }
+# Accessibilità {: .page-title}
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
@@ -21,13 +21,14 @@ accessibilità, utilizzando come base il contenuto originale del corso.
 
 ### TL;DR {: .hide-from-toc }
 
-- Learn what accessibility means and how it applies to web development.
-- Learn how to make web sites accessible and usable for everyone.
-- Learn how to include basic accessibility with minimal development impact.
-- Learn what HTML features are available and how to use them to
-improveaccessibility.
-- Learn about advanced accessibility techniques for creating
-polishedaccessibility experiences.
+- Scopri cosa significa accessibilità e come si applica allo sviluppo web.
+- Scopri come rendere i siti web accessibili e utilizzabili da tutti.
+- Scopri come includere l'accessibilità di base con un impatto minimo sullo
+sviluppo.
+- Scopri quali sono le funzionalità HTML disponibili e come utilizzarle per
+migliorare l'accessibilità.
+- Scopri le tecniche di accessibilità avanzate per creare esperienze di
+accessibilità ottimizzate.
 
 Comprendere l'accessibilità, la sua portata e il suo impatto può renderti uno
 sviluppatore web migliore. Questa guida ha lo scopo di aiutarti a capire in che
@@ -40,9 +41,9 @@ puoi utilizzare ciò che è incorporato in HTML per creare interfacce più
 accessibili e robuste e come sfruttare alcune tecniche avanzate per creare
 esperienze accessibili raffinate.
 
-You'll also find that many of these techniques will help you create interfaces
-that are more pleasant and easy to use for *all* users, not just for those with
-disabilities.
+Scoprirai inoltre che molte di queste tecniche ti aiuteranno a creare interfacce
+più piacevoli e facili da usare per *tutti gli* utenti, non solo per le persone
+con disabilità.
 
 Naturalmente, molti sviluppatori hanno solo una vaga comprensione di cosa
 significhi accessibilità - qualcosa a che fare con contratti governativi, liste
@@ -51,11 +52,11 @@ ci girano intorno. Ad esempio, molti sviluppatori ritengono che affrontare
 l'accessibilità li costringerà a scegliere tra la creazione di un'esperienza
 piacevole e attraente, ed una goffa e brutta ma accessibile.
 
-That is, of course, not the case at all, so let's clear that up before we get
-into anything else. What do we mean by accessibility, and what are we here to
-learn about?
+Ovviamente, questo non è affatto il caso, quindi chiariamolo prima di entrare in
+qualsiasi altra cosa. Cosa intendiamo per accessibilità e cosa siamo qui per
+imparare?
 
-## What is accessibility?
+## Cos'è l'accessibilità?
 
 In generale, quando diciamo che un sito è accessibile, intendiamo che il
 contenuto del sito è disponibile e che la sua funzionalità può essere gestita da
@@ -66,18 +67,20 @@ tu. Ciò può portare a un'esperienza che funziona bene per alcune persone, ma
 crea problemi che vanno da semplici fastidi a veri e propri scogli per gli
 altri.
 
-Accessibility, then, refers to the experience of users who might be outside the
-narrow range of the "typical" user, who might access or interact with things
-differently than you expect. Specifically, it concerns users who are
-experiencing some type of impairment or disability — and bear in mind that
-that experience might be non-physical or temporary.
+L'accessibilità, quindi, si riferisce all'esperienza di utenti che potrebbero
+trovarsi al di fuori della ristretta fascia di utenti "tipici", che potrebbero
+accedere o interagire con le cose in modo diverso da quanto previsto.
+Specificamente, riguarda gli utenti che stanno vivendo un qualche tipo di
+menomazione o disabilità - e si ricorda che tale esperienza potrebbe essere non
+fisica o temporanea.
 
-For example, although we tend to center our discussion of accessibility on users
-with physical impairments, we can all relate to the experience of using an
-interface that is not accessible to us for other reasons. Have you ever had a
-problem using a desktop site on a mobile phone, or seen the message "This
-content is not available in your area", or been unable to find a familiar menu
-on a tablet? Those are all accessibility issues.
+Ad esempio, sebbene tendiamo a concentrare la nostra discussione
+sull'accessibilità agli utenti con menomazioni fisiche, possiamo tutti riferirci
+all'esperienza di utilizzo di un'interfaccia che non è accessibile a noi per
+altri motivi. Hai mai avuto problemi a utilizzare un sito desktop su un telefono
+cellulare o hai visualizzato il messaggio "Questo contenuto non è disponibile
+nella tua zona" oppure non è stato possibile trovare un menu familiare su un
+tablet? Questi sono tutti problemi di accessibilità.
 
 Man mano che imparerai di più, scoprirai che affrontare i problemi di
 accessibilità in un senso più ampio e più generale migliora quasi sempre
@@ -85,9 +88,9 @@ l'esperienza utente per tutti. Diamo un'occhiata ad un esempio:
 
 ![a form with poor accessibility](imgs/pooraccess.jpg)
 
-This form has several accessibility issues.
+Questo modulo ha diversi problemi di accessibilità.
 
-- The text is low contrast, which is hard for low-vision users to read.
+- Il testo è a basso contrasto, difficile da leggere per gli utenti ipovedenti.
 - Avere etichette a sinistra e campi a destra rende difficile l'associazione per
 molte persone e quasi impossibile per qualcuno che ha bisogno di zoomare
 l'utilizzo della pagina; immagina di guardarlo su un telefono e di dover fare
@@ -105,19 +108,21 @@ poterla attivare facendo clic anche sull'etichetta.
 
 ![a form with improved accessibility](imgs/betteraccess.jpg)
 
-Which would you rather use? If you said "the accessible version", you're on your
-way to understanding a main premise of this guide. Often, something that's a
-complete blocker for a few users is also a pain point for many others, so by
-fixing the accessibility issue you improve the experience for everyone.
+Quale preferisci usare? Se hai detto "la versione accessibile", sei sulla buona
+strada per capire una premessa principale di questa guida. Spesso, qualcosa che
+è un blocco completo per pochi utenti è anche un punto dolente per molti altri,
+quindi risolvendo il problema dell'accessibilità si migliora l'esperienza per
+tutti.
 
-## Web Content Accessibility Guidelines
+## Linee guida per l'accessibilità del contenuto Web
 
 In questa guida faremo riferimento a [Web Content Accessibility Guidelines
 (WCAG) 2.0](https://www.w3.org/TR/WCAG20/){: .external}, una serie di linee
 guida e migliori pratiche messe insieme dagli esperti di accessibilità per
 affrontare cosa significa "accessibilità" in modo metodico.
 
-WCAG is organized around four principles often called by the acronym *POUR*:
+WCAG è organizzato attorno a quattro principi spesso chiamati con l'acronimo
+*POUR* :
 
 - **Percepibile**: gli utenti possono percepire il contenuto? Questo ci aiuta a
 ricordare che solo perché qualcosa è percepibile con un senso, come la vista,
@@ -151,7 +156,7 @@ accessibilità ed essere sicuro che, finché il tuo progetto soddisfa i criteri
 delineati, i tuoi utenti avranno un'esperienza positiva nell'accedere ai tuoi
 contenuti.
 
-## Understanding users' diversity
+## Comprensione della diversità degli utenti
 
 Quando si impara l'accessibilità, aiuta avere una comprensione della vasta gamma
 di utenti nel mondo e dei tipi di argomenti di accessibilità che li riguardano.
@@ -172,12 +177,12 @@ All'interno di Google il mio compito è quello di contribuire a garantire che i
 nostri prodotti funzionino per tutti i nostri diversi utenti, indipendentemente
 dalla loro menomazione o capacità.
 
-> *What kinds of impairments do users have?*
+> *Quali tipi di menomazioni hanno gli utenti?*
 
-When we think about the kinds of impairments which would make it difficult for
-someone to access our content, many people will immediately picture a blind user
-like me. And it's true, this impairment can really make it frustrating or even
-impossible to use a lot of web sites.
+Quando pensiamo ai tipi di menomazioni che renderebbero difficile per qualcuno
+accedere ai nostri contenuti, molte persone immagineranno immediatamente un
+utente cieco come me. Ed è vero, questo deterioramento può davvero rendere
+frustrante o addirittura impossibile utilizzare molti siti web.
 
 Molte tecniche web moderne hanno lo sfortunato effetto collaterale di creare
 siti che non funzionano bene con gli strumenti utilizzati dagli utenti non
@@ -187,18 +192,19 @@ contenitori: visivo, motorio, uditivo e cognitivo.
 
 > *Analizziamole una alla volta. Puoi dare alcuni esempi di disabilità visive?*
 
-Visual impairments can be split into a few categories: Users with no vision,
-like me, might use a screen reader, braille, or combination of the two.
+Le disabilità visive possono essere suddivise in poche categorie: gli utenti
+senza vista, come me, potrebbero utilizzare uno screen reader, il braille o una
+combinazione dei due.
 
 <figure class="attempt-right">
   <img src="imgs/braille-reader.png" alt="A braille reader">	
-  <figcaption>A braille reader</figcaption>
+  <figcaption>Un lettore braille</figcaption>
 </figure>
 
-Now, it's actually pretty unusual to have literally no vision, but still,
-there's a good chance you know or have met at least one person who can't see at
-all. However there are also a much larger number of what we call low-vision
-users.
+Ora, in realtà è piuttosto insolito non avere letteralmente visione, ma
+comunque, ci sono buone probabilità che tu conosca o abbia incontrato almeno una
+persona che non può vedere affatto. Tuttavia, ci sono anche un numero molto più
+grande di quelli che chiamiamo utenti ipovedenti.
 
 Si tratta di una vasta gamma, da qualcuno come mia moglie, che non ha cornee -
 anche se riesce a vedere le cose che ha difficoltà a leggere le stampe ed è
@@ -219,7 +225,7 @@ un sito web.
 
 <figure class="attempt-right">
   <img src="imgs/high-contrast.png" alt="High-contrast mode">	
-  <figcaption>High-contrast mode</figcaption>
+  <figcaption>Modalità ad alto contrasto</figcaption>
 </figure>
 
 Molti utenti usano anche questa combinazione, come la mia amica Laura che usa
@@ -253,11 +259,12 @@ della loro corpo.
 
 <figure class="attempt-right">
   <img src="imgs/eye-tracking.png" alt="A person using an eye tracking device">	
-  <figcaption>An eye tracking device</figcaption>
+  <figcaption>Un dispositivo per localizzare gli occhi</figcaption>
 </figure>
 
-Motor impaired users may use a keyboard, switch device, voice control, or even
-an eye-tracking device to interact with their computer.
+Gli utenti con problemi motori possono utilizzare una tastiera, un dispositivo
+di commutazione, un comando vocale o persino un dispositivo di localizzazione
+degli occhi per interagire con il proprio computer.
 
 Simile alla menomazione della vista, la mobilità può anche essere un problema
 temporaneo o situazionale: potresti avere un polso rotto sulla mano del mouse.
@@ -267,7 +274,7 @@ un utente è impedita, ed assicurandoci di provvedere per questo miglioriamo
 l'esperienza complessiva, sia per chi ha una disabilità permanente, sia per chi
 trova temporaneamente che non può usare un puntatore basato su UI.
 
-> *Great, let's talk about hearing impairments.*
+> *Ottimo, parliamo di problemi all'udito.*
 
 Questo gruppo può spaziare dal profondamente sordo fino ai problemi di udito. E
 proprio come la vista, il nostro udito tende a degradare con l'età. Molti di noi
@@ -276,12 +283,13 @@ usano le convenienze comuni come gli apparecchi acustici per aiutarsi.
 <figure class="attempt-right">
 <img src="imgs/screen-captions.png" alt="A television with captions at the
 bottom">
-  <figcaption>Screen captions</figcaption>
+  <figcaption>Didascalie delle schermate</figcaption>
 </figure>
 
-For hearing-impaired users we need to make sure that we're not relying on
-sound, so making sure to use things like video captions and transcripts, and
-providing some kind of alternative, if sound is part of the interface.
+Per gli utenti con problemi di udito, dobbiamo assicurarci di non fare
+affidamento sull'audio, quindi assicurati di utilizzare elementi come
+sottotitoli e trascrizioni video e di fornire qualche tipo di alternativa, se il
+suono fa parte dell'interfaccia.
 
 E come abbiamo visto con la vista e le menomazioni motorie, è davvero facile
 immaginare una situazione in cui qualcuno a cui le orecchie funzionano bene può
@@ -290,7 +298,7 @@ quando i video hanno didascalie e trascrizioni perché significa che se sono in
 un ufficio open space e non portano le cuffie, possono comunque guardare il
 video!
 
-> *All right, can you tell us a bit about cognitive impairments?*
+> *Va bene, puoi dirci qualcosa sui problemi cognitivi?*
 
 C'è una serie di condizioni cognitive come ADD, dislessia e autismo, il che può
 significare che le persone vogliono o hanno bisogno di accedere alle cose in
@@ -301,12 +309,11 @@ concentrazione. Inoltre, questi utenti potrebbero scoprire che il design
 minimale funziona meglio perché riduce al minimo la distrazione ed il carico
 cognitivo.
 
-I think everyone can relate to the stress of cognitive overload, so it's
-obvious that if we create something that works well for someone with a cognitive
-impairment, we're going to be creating something which is going to be a pleasant
-experience for everyone.
+Penso che tutti possano relazionarsi allo stress del sovraccarico cognitivo,
+quindi è ovvio che se creiamo qualcosa che funzioni bene per qualcuno con un
+deficit cognitivo, creeremo qualcosa che sarà un'esperienza piacevole per tutti.
 
-> *So, how would you summarize how you think about accessibility?*
+> *Quindi, come riassumeresti il ​​tuo modo di pensare all'accessibilità?*
 
 Quando osservi l'ampia gamma di abilità e disabilità che le persone potrebbero
 avere, puoi vedere che progettare e costruire prodotti solo per le persone che
@@ -322,39 +329,39 @@ suddivise in quattro categorie: *visiva*, *motoria*, *uditiva* e *cognitiva*. Ha
 anche sottolineato che ogni tipo di menomazione potrebbe essere *situazionale*,
 *temporanea* o *permanente*.
 
-Let's take a look at some real-world examples of access impairments and see
-where they fall within those categories and types. Note that some impairments
-may fall into more than one category or type.
+Diamo un'occhiata ad alcuni esempi reali di problemi di accesso e vediamo dove
+rientrano in quelle categorie e tipi. Si noti che alcune menomazioni possono
+rientrare in più di una categoria o tipo.
 
 <table>
   <tr>
     <th></th>
-    <th>Situational</th>
+    <th>Situazionale</th>
     <th>Temporanea</th>
-    <th>Permanent</th>
+    <th>Permanente</th>
   </tr>
   <tr>
     <th>Visiva</th>
     <td></td>
-    <td>concussion</td>
-    <td>blindness</td>
+    <td>concussione</td>
+    <td>cecità</td>
   </tr>
   <tr>
     <th>Motoria</th>
-    <td>holding a baby</td>
+    <td>tenere un bambino</td>
     <td>braccio rotto, RSI*</td>
     <td>RSI*</td>
   </tr>
   <tr>
     <th>Uditiva</th>
-    <td>noisy office</td>
+    <td>ufficio rumoroso</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <th>Cognitiva</th>
     <td></td>
-    <td>concussion</td>
+    <td>concussione</td>
     <td></td>
   </tr>
 </table>
@@ -362,13 +369,13 @@ may fall into more than one category or type.
 * Lesioni da Sforzi Ripetitivo (RSI): ad es. Sindrome del tunnel carpale, gomito
 del tennista, dito del grilletto
 
-## Next steps
+## Prossimi passi
 
 Abbiamo già coperto un bel po' di argomenti! Abbiamo parlato di
 
-- what accessibility is and why it matters for everyone
-- the WCAG and the WebAIM accessibility checklist
-- different types of impairments you should consider
+- cos'è l'accessibilità e perché è importante per tutti
+- la checklist dell'accessibilità WCAG e WebAIM
+- diversi tipi di menomazioni che dovresti prendere in considerazione
 
 Nel resto della guida, approfondiremo gli aspetti pratici della creazione di
 siti Web accessibili. Organizzeremo questo sforzo attorno a tre aree principali:
