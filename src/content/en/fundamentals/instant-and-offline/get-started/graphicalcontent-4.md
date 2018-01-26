@@ -4,7 +4,7 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_updated_on: 2018-01-25 #}
 {# wf_published_on: 2018-01-25 #}
 
-# Reduce Performance Costs of Graphical Content {: .page-title }
+# Graphical Content {: .page-title }
 
 {% include "web/_shared/contributors/dgash.html" %}
 
