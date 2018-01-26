@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-26 #}
-{# wf_published_on: 2017-10-26 #}
+{# wf_updated_on: 2018-01-25 #}
+{# wf_published_on: 2018-01-25 #}
 
 # Wrap-up and Demo {: .page-title }
 
@@ -11,7 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 We've now explored various ways to improve page load time. These techniques are "low-hanging 
 fruit" -- simple efforts that produce big performance wins. But talk is cheap; we have not 
-yet seen the techniques in action, so let's do that now.
+yet actually seen the techniques in action, so finish up by doing that.
 
 To demonstrate the techniques' effectiveness, we will run various speed tests on different 
 versions of a web page, beginning with no optimization and progressing through some of 
@@ -49,11 +49,11 @@ There are many, many tools available to help determine a page's load speed, far 
 to list here. For this article, we will use three online services to help us see the results 
 of our improvement efforts.
 
-* [Google PageSpeed Insights](http://tinyurl.com/m65jex6)
+- [Google PageSpeed Insights](http://tinyurl.com/m65jex6)
 
-* [Pingdom](https://tools.pingdom.com/)
+- [WebPageTest](https://www.webpagetest.org/)
 
-* [WebPageTest](https://www.webpagetest.org/)
+- [Pingdom](https://tools.pingdom.com/)
 
 Why three tools? Because different testing services use different methods and algorithms 
 to test speed; they run their tests on different machines and browsers from different 
@@ -63,16 +63,16 @@ the reality of testing.
 
 Rather than perceiving this as a negative, think of it as simply a way to get more and 
 better data. No single testing tool gives you the whole story. Instead of relying on 
-one tool, use multiple tools to get the best information you can about specific focus 
-points of your page and adjust accordingly.
+one tool, use multiple tools and run the tests multiple times to get the best and most 
+information you can about specific focus points of your page, and then adjust accordingly.
 
 ## The Original Page
 
 Let's get a baseline by looking at various performance audits on the original page. 
 It is admittedly quite sloppy -- raw text, render blockers, large images, too many external 
-files -- but it loads and displays as it should. Our job is to use available tools to 
-identify some specific things we can improve based on what we've seen in the preceding 
-articles. Here's part of the page.
+files -- but it ultimately loads and displays as it should. Our job is to use available 
+tools to identify some specific things we can improve based on what we've seen in the 
+preceding articles. Here's part of the page.
 
 ![Apocalypse Today home page](images/image_700.png)
 *Apocalypse Today home page*
@@ -80,7 +80,7 @@ articles. Here's part of the page.
 Let's run it through the testing services. 
 
 **Note:** You may run this same page through the same services and get different results. 
-Again, that's the reality of testing.*
+Again, that's the reality of testing.
 
 **PageSpeed Insights** scores the page poorly, providing separate ratings at 48/100 for 
 mobile devices and 50/100 for desktop devices, but does not give us a raw load time. 
@@ -166,13 +166,20 @@ one-third.
 ![WebPageTest, text resources minified](images/image_708.png)
 *WebPageTest, text resources minified*
 
-Interestingly, despite the lack of an apparent raw speed increase, WebPageTest's report shows 
-that two of its internal algorithm results do indicate improvement. The page's Speed Index 
-went up from 1699 to 1797 (+5%), and its First Interactive time (a beta feature as of this 
-writing) went down from 1.266 seconds to 1.133 seconds (-10%). Why are those results 
-important? Because those measurements, while somewhat subjective, nevertheless affect how 
+Interestingly, despite the lack of an overall raw speed increase, WebPageTest's report shows 
+that two of its internal algorithm results go in different directions. The page's Speed Index 
+went up from 1699 to 1797 (about 5% slower), and its First Interactive time (a beta feature) 
+went down from 1.266 seconds to 1.133 seconds (about 10% faster). While those measurements
+are somewhat subjective, they nevertheless affect how 
 fast the user perceives the site to be. And always remember that *user perception* is the 
 ultimate arbiter of performance.
+
+**Update:** The "Time to First Interactive" metric is on the path to deprecation in favor 
+of the more accurate "Time to Consistently Interactive". We encourage you to use the 
+[WebPageTest Easy mode](https://webpagetest.org/easy) and select the Mobile checkbox,
+which will generate a Lighthouse report. Then click the *Lighthouse PWA Score* at the top 
+of the page to see the full Lighthouse Progressive Web App report, including the new 
+Consistently Interactive metric.
 
  Here is the text-minified version: 
  [https://page-load-speed-demo.firebaseapp.com/pageload1.html](https://page-load-speed-demo.firebaseapp.com/pageload1.html).
@@ -283,14 +290,16 @@ Here are the results of the improvements for each image.
 It's worthwhile here to report a few observations about the improvement process. 
 
 1. While some of the jpg images were slightly smaller when saved as gifs, their quality 
-was visibly compromised. Thus, the "best" file type turned out to be the original, even if 
-it was a bit larger than the smallest saved-as type. 
+was visibly compromised. Thus, in each case, the "best" file type turned out to be the 
+original file type, even if it was a bit larger than the smallest saved-as type. 
 
 2. Any size retention as a result of that visual inspection was completely compensated for 
-by the physical size (width/height) reduction and image compression. Interestingly, a 33% 
-reduction in width and height typically resulted in a 50% file size difference.
+by the physical size (width/height) reduction and image compression. The dimensions of the 
+hero images for the articles were reduced by one-third, from 900x500px to 600x333px. 
+Interestingly, that 33% reduction typically resulted in a 50% file size difference.
 
-3. Although compression on the large images delivered both surprisingly low (3%) and 
+3. Although compression on the large images at default settings (no special tweaking) 
+delivered both surprisingly low (3%) and 
 satisfyingly high (50%) results, the single biggest improvement factor across the board 
 was *reduction in jpg quality*. All jpgs were saved at 50% quality but still retained 
 their visual clarity, resulting in much smaller file sizes at no visual perception cost. 
@@ -433,11 +442,11 @@ Here is the reduced HTTP requests version:
 Now that we've seen some speed improvements resulting from individual techniques, let's see 
 what happens when we apply all the techniques in one version. For this test, we took these steps:
 
-* Optimized all the images as in test 2
+- Minified the HTML, CSS, and JavaScript files as in test 1
 
-* Combined the CSS and JavaScript files, and the quotes and hero images as in test 3
+- Optimized the images as in test 2
 
-* Minified the HTML, CSS, and JavaScript files as in test 1
+- Combined the CSS and JavaScript files, and the quotes and hero images as in test 3
 
 How did we do?
 
@@ -514,8 +523,8 @@ some basic numbers from the various test runs.
 </table>
 
 One obvious certainty is that different testing tools can score the same page very 
-differently. This implies that the more tools you use, the more data you have with 
-which to make informed optimization decisions.
+differently. This correctly implies that the more tools you use, the more data you 
+have with which to make informed optimization decisions.
 
 Another useful observation is that the technique that seems to have achieved the best 
 single speed boost is image optimization. This is not surprising, given that for our 
