@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2018-01-25 #}
+{# wf_published_on: 2018-01-25 #}
 
 # HTTP Requests {: .page-title }
 
@@ -10,12 +10,12 @@ book_path: /web/fundamentals/_book.yaml
 
 
 Everything a web page needs to be a web page -- text, graphics, styles, scripts, everything 
--- must be downloaded from a server via an HTTP request. As much as 80% of a page's display 
-time is spent downloading those components (source: 
-[Yahoo!](https://developer.yahoo.com/performance/rules.html#num_http)). So far, we've talked 
-about reducing the size of those downloads by compressing images, minifying CSS and 
-JavaScript, zipping the files, and so on. But there's a more fundamental approach: in 
-addition to just reducing download *size*, let's also consider reducing download *frequency*.
+-- must be downloaded from a server via an HTTP request. It's no stretch to say that the 
+vast majority of a page's total display time is spent in downloading its components, not in 
+actually displaying them. So far, we've talked about reducing the size of those downloads by 
+compressing images, minifying CSS and JavaScript, zipping the files, and so on. But there's 
+a more fundamental approach: in addition to just reducing download *size*, let's also 
+consider reducing download *frequency*.
 
 Reducing the number of components that a page requires proportionally reduces the number of 
 HTTP requests it has to make. This doesn't mean omitting content, it just means structuring 
@@ -73,95 +73,8 @@ You may run into similar situations when combining JavaScript files. Completely 
 functions might have the same names, or identically-named variables might have different 
 scopes and uses. These are not insurmountable obstacles if you actively look for them.
 
-Combining resources to reduce HTTP requests is certainly worth doing, but take care when 
-doing so.
-
-## JavaScript Position and Inline Push
-
-We're assuming so far that all CSS and JavaScript resources exist in external files, and 
-that's generally the best way to deliver them. There are, however, two positional factors 
-about JavaScript that are worth considering.
-
-### Script Location
-
-Common convention is to put script blocks in the page head. The problem with this positioning 
-is that, typically, little to none of the script is meant to execute until the page is 
-displayed, but it still blocks page rendering until the script file is loaded.
-
-A simple and effective solution is to reposition the deferred script block at the end of the 
-page. That is, put the script reference last, just before the closing body tag. This allows 
-the browser to load and render the page content, and then lets it download the script while 
-the user perceives the initial content. For example:
-
-```
-<html>
-
-  <head>
-
-  </head>
-
-  <body>
-
-    [Body content goes here.]
-
-  <script src="mainscript.js"></script>
-
-  </body>
-
-</html>
-```
-
-The exception to this is any script that manipulates the initial content or provides 
-required page functionality prior to or during rendering. Critical scripts such as these 
-can be put into a separate file and loaded in the page head as usual, and the rest can 
-still be placed last thing in the page for loading only after the page is rendered. 
-
-### Code Location
-
-Of course, the technique described above splits your JavaScript into two files on the 
-server and thus requires two HTTP requests instead of one, exactly the situation we're 
-trying to avoid. A better solution for relocating critical, pre-render scripts is simply 
-placing them in the page itself, referred to as an "inline push".
-
-Here, instead of putting the critical script in a separate file and referencing it in the 
-page head, simply add a `<script>...</script>` block, either in the head or in the body, 
-and insert the script itself (not a file reference, but the actual script code) at the point 
-at which it's needed. Assuming the script isn't too big, this method gets the script loaded 
-and executed immediately, and avoids the extra HTTP request overhead of putting it in the 
-page head. 
-
-For example, if a returning user's name is already available, you might want to display it 
-in the page as soon as possible rather than wait until all the content is loaded.
-
-`<p>Welcome back, <script>document.write(username)</script>!</p>`
-
-Or you might need an entire function to execute in place as the page loads, in order to 
-render certain content correctly.
-
-```
-<h1>Our Site</h1>
-
-<h2 id="greethead">, and welcome to Our Site!</h2>
-
-<script>
-//insert time of day greeting from computer time
-var hr = new Date().getHours();
-var greeting = "Good morning";
-if (hr > 11) {
-   	greeting = "Good afternoon";
-}
-if (hr > 17) {
-   	greeting = "Good evening";
-}
-h2 = document.getElementById("greethead");
-h2.innerHTML = greeting + h2.innerHTML;
-</script>
-
-<p>Blah blah blah</p>
-```
-
-This technique avoids a separate HTTP request to retrieve a small amount of code and 
-allows the code to run immediately at its appropriate place in the page.
+Combining text resources to reduce HTTP requests is worth doing, but take care when 
+doing so. See **A Caveat** below.
 
 ## Combine Graphical Resources
 
@@ -236,6 +149,113 @@ to the server.
 
 You can find a brief but excellent article about this technique, including working examples, 
 at [WellStyled](http://wellstyled.com/css-nopreload-rollovers.html).
+
+## A Caveat
+
+In our discussion of combining text and graphics, we should note that the 
+newer HTTP/2 protocol may change how you consider combining resources. For example, common and 
+valuable techniques like minification, server compression, and image optimization should be 
+continued on HTTP/2. However, physically combining files as discussed above might not achieve 
+the desired result on HTTP/2. 
+
+This is primarily because server requests are faster on HTTP/2, so combining files to 
+eliminate a request may not be substantially productive. Also, if you combine a fairly static 
+resource with a fairly dynamic one to save a request, you may adversely affect your caching 
+effectiveness by forcing the static portion of the resource to be reloaded just to fetch 
+the dynamic portion.
+
+The features and benefits of HTTP/2 are worth exploring in this context. A great place to 
+start is this Google Web Fundamentals article, 
+[Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/).
+
+## JavaScript Position and Inline Push
+
+We're assuming so far that all CSS and JavaScript resources exist in external files, and 
+that's generally the best way to deliver them. There are, however, two positional factors 
+about JavaScript that are worth considering.
+
+### Script Location
+
+Common convention is to put script blocks in the page head. The problem with this positioning 
+is that, typically, little to none of the script is really meant to execute until the page is 
+displayed, but it still blocks page rendering until the script file is loaded.
+
+A simple and effective solution is to reposition the deferred script block at the end of the 
+page. That is, put the script reference last, just before the closing body tag. This allows 
+the browser to load and render the page content, and then lets it download the script while 
+the user perceives the initial content. For example:
+
+```
+<html>
+
+  <head>
+
+  </head>
+
+  <body>
+
+    [Body content goes here.]
+
+  <script src="mainscript.js"></script>
+
+  </body>
+
+</html>
+```
+
+The exception to this is any script that manipulates the initial content or provides 
+required page functionality prior to or during rendering. Critical scripts such as these 
+can be put into a separate file and loaded in the page head as usual, and the rest can 
+still be placed last thing in the page for loading only after the page is rendered. 
+
+### Code Location
+
+Of course, the technique described above splits your JavaScript into two files on the 
+server and thus requires two HTTP requests instead of one, exactly the situation we're 
+trying to avoid. A better solution for relocating critical, pre-render scripts might be 
+to place them directly inside the page itself, referred to as an "inline push".
+
+Here, instead of putting the critical script in a separate file and referencing it in the 
+page head, add a `<script>...</script>` block, either in the head or in the body, 
+and insert the script itself (not a file reference, but the actual script code) at the point 
+at which it's needed. Assuming the script isn't too big, this method gets the script loaded 
+along with the HTML and executed immediately, and avoids the extra HTTP request overhead of 
+putting it in the page head. 
+
+For example, if a returning user's name is already available, you might want to display it 
+in the page as soon as possible by calling a JavaScript function, rather than wait until 
+after all the content is loaded.
+
+`<p>Welcome back, <script>insertText(username)</script>!</p>`
+
+Or you might need an entire function to execute in place as the page loads, in order to 
+render certain content correctly.
+
+```
+<h1>Our Site</h1>
+
+<h2 id="greethead">, and welcome to Our Site!</h2>
+
+<script>
+//insert time of day greeting from computer time
+var hr = new Date().getHours();
+var greeting = "Good morning";
+if (hr > 11) {
+   	greeting = "Good afternoon";
+}
+if (hr > 17) {
+   	greeting = "Good evening";
+}
+h2 = document.getElementById("greethead");
+h2.innerHTML = greeting + h2.innerHTML;
+</script>
+
+<p>Blah blah blah</p>
+```
+
+This simple technique avoids a separate HTTP request to retrieve a small amount of 
+code and allows the script to run immediately at its appropriate place in the page, 
+at the minor cost of a few dozen extra bytes in the HTML page.
 
 ## Summary
 
