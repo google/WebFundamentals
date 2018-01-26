@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Migliorare l'accessibilità delle pagine web
 
-{# wf_updated_on: 2017-07-19 #}
+{# wf_updated_on: 2018-01-26 #}
 {# wf_published_on: 2016-06-26 #}
 
 # Accessibilità {: .page-title}
