@@ -24,8 +24,8 @@ toc:
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 # - title: "Generate a Complete Service Worker"
 #  path: /web/tools/workbox/guides/generate-complete-sw
-# - title: "Migrate from sw-<toolbox|precache>"
-#  path: /web/tools/workbox/guides/migrate
+- title: "Migrate from sw-precache or sw-toolbox"
+  path: /web/tools/workbox/guides/migrate
 # - title: "Use as ES2015 Imports"
 #  path: /web/tools/workbox/guides/use-es2015-imports
 - title: "Service Worker Checklist"
