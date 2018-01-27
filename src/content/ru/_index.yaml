@@ -1,30 +1,37 @@
----
+project_path: "/web/_project.yaml"
 book_path: "/web/_book.yaml"
 landing_page:
   custom_css_path: "/web/styles/wf-landing.css"
   header:
-    custom_html: "<div class=\"\\\"devsite-collapsible-section\\\"\">\n  <div class=\"\\\"devsite-header-background\\\"\">\n
-      \   <div class=\"\\\"wf-hero-flex\\\"\">\n      <div class=\"\\\"wf-hero-flex-item\"
-      wf-hero-webfu=\"\">\n          <img src=\"\\\"/web/images/web-fundamentals-icon192x192.png\\\"\">\n
-      \         <h3>Основы Web</h3>\n          <p>\n            Учебники, руководства,
-      и самые лучшие подходы к построению web следующего поколения.\n          </p>\n
-      \         <a class=\"\\\"button\" gc-analytics-event=\"\" data-category=\"\\\"webFu\\\"\"
-      data-label=\"\\\"fundamentals-landing\\\"\" data-action=\"\\\"web-home\\\"\"
-      href=\"\\\"/web/fundamentals/\\\"\">Начать</a>\n          </div><div class=\"\\\"clearfix\\\"\">\n
-      \       </div>\n        <div class=\"\\\"wf-hero-flex-item\" wf-hero-tools=\"\">\n
-      \         <img src=\"\\\"/web/images/tool_icon.png\\\"\">\n          <h3>Инструменты</h3>\n
-      \         <p>\n            <a href=\"\\\"/web/tools/chrome-devtools/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
-      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"devtools-landing\\\"\" data-action=\"\\\"web-home\\\"\">Chrome
-      DevTools</a>,\n            <a href=\"\\\"/web/tools/lighthouse/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
-      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"lighthouse-landing\\\"\" data-action=\"\\\"web-home\\\"\">Lighthouse</a>,\n
-      \           <a href=\"\\\"/web/tools/workbox/\\\"\" class=\"\\\"gc-analytics-event\\\"\"
-      data-category=\"\\\"webFu\\\"\" data-label=\"\\\"workbox-landing\\\"\" data-action=\"\\\"web-home\\\"\">Workbox</a>,
-      \          \nи множество инструментов, которые делают вашу жизнь легче и помогают
-      развивать ваше искусство.\n          </p>\n          <a class=\"\\\"button\"
-      gc-analytics-event=\"\" href=\"\\\"/web/tools/\\\"\" data-category=\"\\\"webFu\\\"\"
-      data-label=\"\\\"tools-landing\\\"\" data-action=\"\\\"web-home\\\"\">Узнать
-      больше</a>\n          </div><div class=\"\\\"clearfix\\\"\">\n        </div>\n
-      \     </div>\n    </div>\n  </div>"
+    custom_html: >
+        <div class="devsite-collapsible-section">
+          <div class="devsite-header-background">
+            <div class="wf-hero-flex">
+              <div class="wf-hero-flex-item wf-hero-webfu">
+                  <img src="/web/images/web-fundamentals-icon192x192.png">
+                  <h3>Основы Web</h3>
+                  <p>
+                    Учебники, руководства, и самые лучшие подходы к построению web следующего поколения.
+                  </p>
+                  <a class="button gc-analytics-event" data-category="webFu" data-label="fundamentals-landing" data-action="web-home" href="/web/fundamentals/">Начать</a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="wf-hero-flex-item wf-hero-tools">
+                  <img src="/web/images/tool_icon.png">
+                  <h3>Инструменты</h3>
+                  <p>
+                    <a href="/web/tools/chrome-devtools/" class="gc-analytics-event" data-category="webFu" data-label="devtools-landing" data-action="web-home">Chrome DevTools</a>,
+                    <a href="/web/tools/lighthouse/" class="gc-analytics-event" data-category="webFu" data-label="lighthouse-landing" data-action="web-home">Lighthouse</a>,
+                    <a href="/web/tools/workbox/" class="gc-analytics-event" data-category="webFu" data-label="workbox-landing" data-action="web-home">Workbox</a>,
+                    and more tools to make your life easier and improve your
+                    development artistry.
+                  </p>
+                  <a class="button gc-analytics-event" href="/web/tools/" data-category="webFu" data-label="tools-landing" data-action="web-home">Узнатьбольше</a>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
   meta_tags:
   - content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
     name: google-site-verification
@@ -208,4 +215,3 @@ landing_page:
         value: showcase-landing
       - name: data-action
         value: web-home
-project_path: "/web/_project.yaml"
