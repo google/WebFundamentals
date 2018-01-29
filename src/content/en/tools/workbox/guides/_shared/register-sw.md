@@ -1,7 +1,7 @@
 {# wf_md_include #}
 
-<pre class="prettyprint html">
-&lt;script&gt;
+```html
+<script>
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant
@@ -9,4 +9,5 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   });
 }
-</pre>
+</script>
+```

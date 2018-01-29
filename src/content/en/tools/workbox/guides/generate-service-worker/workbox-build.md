@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with workbox-build {: .page-title }
@@ -38,8 +38,6 @@ const buildSW = () => {
     swDest: 'build/sw.js',
   });
 }
-
-buildSW();
 ```
 
 This command will output a service worker to `build/sw.js` which
