@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -31,6 +31,26 @@ also implements a fallback strategy for browsers that don't yet implement
 BackgroundSync.
 
 ## Basic Usage
+
+The easiest way to use Background Sync is to use the `Plugin` that will
+automatically Queue up failed requests and retry them for future `sync`
+events.
+
+```javascript
+const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
+  maxRetentionTime: 24 * 60 * 60 * 1000 // Retry for max of 24 Hours
+});
+
+workbox.routing.registerRoute(
+  /\/api\/.*\/*.json/,
+  workbox.strategies.networkOnly({
+    plugins: [bgSyncPlugin]
+  }),
+  'POST'
+);
+```
+
+## Advanced Usage
 
 Workbox Background Sync gives you a `Queue` class, which you can
 instantiate and then add failed requests to. The failed requests are stored
