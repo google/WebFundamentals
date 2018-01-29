@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Monitor, Console Sidebar, and Console groupings.
 
-{# wf_updated_on: 2018-01-18 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2017-11-28 #}
 {# wf_tags: chrome64,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -104,6 +104,16 @@ Click on a group to expand it and see each instance of the message.
 </figure>
 
 Uncheck the **Group Similar** checkbox to disable this feature.
+
+## Local Overrides {: #overrides }
+
+Whoops! We originally scheduled this feature to launch in Chrome 64, but pulled it close to
+the deadline in order to smooth out some rough edges.
+
+This feature is shipping in Chrome 65, which will land approximately 6 weeks after Chrome 64.
+Check out [Local Overrides][LO] to learn more.
+
+[LO]: /web/updates/2018/01/devtools#overrides
 
 ## Feedback {: #feedback }
 
