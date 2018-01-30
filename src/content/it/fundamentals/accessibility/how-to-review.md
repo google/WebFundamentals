@@ -295,8 +295,7 @@ equivale a un buon UX!
 
 - [Web Accessibility by Google](https://bit.ly/web-a11y)
 - [Accessibility Fundamentals](/web/fundamentals/accessibility/)
-- [A11ycasts
+- [A11ycasts](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
-    Translated by
-{% include "web/_shared/contributors/lucaberton.html"
-%}](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+Translated by
+{% include "web/_shared/contributors/lucaberton.html" %}
