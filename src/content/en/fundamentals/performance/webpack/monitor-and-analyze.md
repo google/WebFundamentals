@@ -232,7 +232,7 @@ Here’s what to look for in the report:
 
 - **Large dependencies.** Why are they so large? Are there smaller alternatives (e.g., Preact
 instead of React)? Do you use all the code it includes (e.g., Moment.js includes a lot of locales
-that are often not used and could be dropped TODO: link to the repo with Moment.js optimizations)?
+[that are often not used and could be dropped](https://github.com/GoogleChromeLabs/webpack-libs-optimizations#moment))?
 
 - **Duplicated dependencies.** Do you see the same library repeating in multiple files? (Use, e.g.,
 the `CommonsChunkPlugin` to move it into a common file.) Or does the bundle have multiple versions

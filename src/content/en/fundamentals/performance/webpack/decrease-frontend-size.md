@@ -491,7 +491,7 @@ you don’t use Moment.js with multiple languages, these files will bloat the bu
 purpose.
 
 All these dependencies can be easily optimized. We’ve collected optimization approaches in a GitHub
-repo – check it out! TODO: link
+repo – [check it out](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)!
 
 ## Enable module concatenation for ES modules (aka scope hoisting)
 

@@ -33,4 +33,4 @@ automated profiling tools like [Lighthouse](/web/tools/lighthouse/) to get impro
 Don’t forget to read [webpack docs](https://webpack.js.org/guides/) – they have plenty of other
 useful information.
 
-And make sure to play with the training app **TODO: link to apply these principles in practice!**
+And make sure to play [with the training app](https://github.com/GoogleChromeLabs/webpack-training-project)!

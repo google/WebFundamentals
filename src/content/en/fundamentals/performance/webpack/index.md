@@ -23,4 +23,4 @@ Let’s get started by looking at optimizing one of the costliest resources in a
 JavaScript.
 
 Note: We created a training app to play with optimizations described in this article. Try squeezing
-the most out of it to practice the tips **TODO: link**
+the most out of it to practice the tips: [`webpack-training-project`](https://github.com/GoogleChromeLabs/webpack-training-project)
