@@ -20,24 +20,23 @@ compito opprimente. Se ti stai avvicinando all'accessibilità per la prima volta
 la vastità dell'argomento può lasciarti chiedendo da dove iniziare - dopotutto,
 lavorando per adattare una vasta gamma di abilità significa che ci sono serie di
 problemi conseguentemente diversi.</div>
-<p data-md-type="paragraph">In this post, I'm going to break down these issues
-into a logical, step by step
-process for reviewing an existing site for accessibility.</p>
+<p data-md-type="paragraph">In questo post, analizzerò questi problemi in un
+processo logico, passo dopo passo, per la revisione di un sito esistente per
+l'accessibilità.</p>
 <div data-md-type="block_html"></div>
 
-## Start with the keyboard
+## Inizia con la tastiera
 
 
 <img src="imgs/ic_keyboard_black_24px.svg" class="attempt-right" alt=""
-width="120">
-For users who either cannot or choose not to use a mouse, keyboard navigation is
-their primary means of reaching everything on screen. This audience includes 
-users with motor impairments, such as Repetitive Stress Injury (RSI) or 
-paralysis, as well as screen reader users. For a good keyboarding experience 
-aim to have a logical tab order and easily discernable focus styles.
+width="120"> Per gli utenti che non possono o non scelgono di utilizzare un
+mouse, la navigazione tramite tastiera è il loro mezzo principale per
+raggiungere tutto sullo schermo. Questo pubblico include utenti con problemi
+motori, come Repetitive Stress Injury (RSI) o paralisi, nonché utenti di screen
+reader. Per una buona esperienza di tastiera, è necessario avere un ordine di
+tabulazione logico e stili di messa a fuoco facilmente distinguibili.
 
-
-### Key points
+### Punti chiave
 
 - Inizia eseguendo tabulazioni nel tuo sito. L'ordine in cui gli elementi sono
 focalizzati dovrebbe mirare a seguire l'ordine DOM. Se non sei sicuro di quali
@@ -53,18 +52,16 @@ pagina. Se è necessario differenziare tra mouse e tastiera per lo stile,
 prendere in considerazione l'aggiunta di una libreria come
 [what-input](https://github.com/ten1seven/what-input) .
 
-- Custom interactive controls should aim to be focusable. If you use JavaScript
-to turn a `<div>` into a fancy dropdown, it will not automatically be
-inserted
-    into the tab order. To make a custom control focusable, give it a
-    `tabindex=”0”`.
+- I controlli interattivi personalizzati dovrebbero mirare a essere
+focalizzabili. Se si utilizza JavaScript per trasformare un `<div>` in un menu a
+discesa di fantasia, non verrà automaticamente inserito nell'ordine di
+tabulazione. Per rendere focalizzabile un controllo personalizzato, assegnagli
+un `tabindex=”0”` .
 
-- Avoid controls with a `tabindex` > 0. These controls will jump ahead of
-everything else in the tab order, regardless of their position in the DOM.
-This
-can be confusing for screen reader users as they tend to navigate the DOM in
-a
-    linear fashion.
+- Evita i controlli con un `tabindex` > 0. Questi controlli superano tutti gli
+altri nell'ordine di tabulazione, indipendentemente dalla loro posizione nel
+DOM. Ciò può essere fonte di confusione per gli utenti di screen reader poiché
+tendono a navigare nel DOM in modo lineare.
 
 - I contenuti non interattivi (ad es. titoli) dovrebbero evitare di essere
 focalizzabili. A volte gli sviluppatori aggiungono un `tabindex` ai titoli
@@ -79,18 +76,17 @@ intervenire su di esso. Vedi [Gestione del Focus a livello di
 pagina](/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_at_the_page_level)
 per esempio.
 
-- Beware of completely trapping focus at any point. Watch out for autocomplete
-widgets, where keyboard focus may get stuck. Focus can be temporarily
-trapped in
-specific situations, such as displaying a modal, when you don't want the
-user
-    interacting with the rest of the page - but you should aim to provide a
-    keyboard-accessible method of escaping the modal as well. See the guide on
-    [Modals and Keyboard
-Traps](/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps)
-    for an example.
+- Fai attenzione a concentrare completamente l'attenzione in qualsiasi momento.
+Fai attenzione ai widget di completamento automatico, in cui la messa a fuoco
+della tastiera potrebbe bloccarsi. La messa a fuoco può essere temporaneamente
+intrappolata in situazioni specifiche, come la visualizzazione di una modale,
+quando non si desidera che l'utente interagisca con il resto della pagina, ma si
+dovrebbe mirare a fornire un metodo accessibile tramite tastiera anche per
+sfuggire al modale. Vedere la guida su [Modals and Keyboard
+Trap](/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps)
+per un esempio.
 
-### Just because something is focusable doesn’t mean it’s usable
+### Solo perché qualcosa è focalizzabile non significa che sia utilizzabile
 
 Se hai creato un controllo personalizzato, punta affinché un utente possa
 raggiungere *tutte le* funzionalità usando solo la tastiera. Consulta [Gestione
@@ -98,7 +94,7 @@ dei componenti di messa a
 fuoco](/web/fundamentals/accessibility/focus/using-tabindex#managing_focus_in_components)
 per le tecniche di miglioramento dell'accesso con tastiera.
 
-### Don’t forget offscreen content
+### Non dimenticare i contenuti fuori schermo
 
 Molti siti hanno contenuti fuori schermo che sono presenti nel DOM ma non sono
 visibili, ad esempio, i collegamenti all'interno di un menu cassetto responsive
@@ -110,7 +106,7 @@ contenuto fuori
 schermo](/web/fundamentals/accessibility/focus/dom-order-matters#offscreen_content)
 per suggerimenti su come gestire questi elementi.
 
-## Try it with a screen reader
+## Provalo con uno screen reader
 
 <img src="imgs/ic_speaker_notes_black_24px.svg" class="attempt-right" alt=""
 width="100">
@@ -123,7 +119,7 @@ tecnologia assistiva, consulta l'[Introduzione alla
 semantica](/web/fundamentals/accessibility/semantics-builtin/) per un
 aggiornamento.
 
-### Key points
+### Punti chiave
 
 - Controlla per tutte le immagini che il testo `alt` sia corretto. L'eccezione a
 questa pratica è quando le immagini sono principalmente a scopo di presentazione
@@ -145,37 +141,37 @@ casella di controllo personalizzata avrà bisogno di un `role=”checkbox”` e
 panoramica generale di come ARIA può fornire la semantica mancante per i
 controlli personalizzati.
 
-- The flow of information should make sense. Because screen readers navigate the
-page in DOM order, if you’ve used CSS to visually reposition elements, they
-may
-be announced in a nonsensical sequence. If you need something to appear
-earlier
-    in the page, try to physically move it earlier in the DOM.
+- Il flusso di informazioni dovrebbe avere senso. Poiché gli screen reader
+navigano la pagina in ordine DOM, se hai usato i CSS per riposizionare
+visivamente gli elementi, potrebbero essere annunciati in una sequenza priva di
+senso. Se hai bisogno che qualcosa appaia in precedenza nella pagina, prova a
+spostarlo fisicamente prima nel DOM.
 
 - Mira a supportare la navigazione di uno screen reader su tutto il contenuto
 della pagina. Evita che parti del sito vengano nascoste o bloccate in modo
 permanente dall'accesso con screen reader.
 
-- If content *should* be hidden from a screen reader, for instance, if it’s
-    offscreen or just presentational, make sure that content is set to
-    `aria-hidden=”true”`. Take a look at the guide on [Hiding
-content](/web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content#aria-hidden)
-    for further explanation.
+- Se il contenuto *deve* essere nascosto da uno screen reader, ad esempio, se è
+fuori dallo schermo o solo di presentazione, assicurati che il contenuto sia
+impostato su `aria-hidden=”true”` . Dai un'occhiata alla guida su come
+[nascondere i
+contenuti](/web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content#aria-hidden)
+per ulteriori spiegazioni.
 
-### Familiarity with even one screen reader goes a long way
+### La familiarità con anche un solo screen reader ha una lunga tradizione
 
 Sebbene possa sembrare scoraggiante imparare uno screen reader, in realtà sono
 piuttosto facile da usare. In generale, la maggior parte degli sviluppatori può
 cavarsela con pochi semplici comandi.
 
-If you’re on a Mac check out [this video on using
-VoiceOver](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=6),
-the screen reader that comes with Mac OS. If you’re on a PC check out [this
-video on using
-NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4),
-a donation supported, open source screen reader for Windows.
+Se sei su un Mac, guarda [questo video sull'uso di
+VoiceOver](https://www.youtube.com/watch?v=5R-6WvAihms&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=6)
+, lo screen reader fornito con Mac OS. Se sei su un PC, guarda [questo video
+sull'utilizzo di
+NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4)
+, uno screen reader open source supportato da donazioni per Windows.
 
-### aria-hidden does not prevent keyboard focus
+### aria-hidden non impedisce la messa a fuoco della tastiera
 
 È importante capire che ARIA può influenzare solo la *semantica* di un elemento;
 non ha alcun effetto sul *comportamento* dell'elemento. Mentre puoi rendere un
@@ -187,7 +183,7 @@ tastiera. L'[attributo inert](https://github.com/WICG/inert) proposto mira a
 semplificare questo problema combinando il comportamento di entrambi gli
 attributi.
 
-## Take advantage of headings and landmarks
+## Approfitta di titoli e punti di riferimento
 
 <img src="imgs/ic_map_black_24px.svg" class="attempt-right" alt="" width="100">
 
@@ -202,7 +198,7 @@ punti di riferimento importanti come `<main>` e `<nav>` . Per questi motivi è
 importante considerare come la struttura della pagina può essere utilizzata per
 guidare l'esperienza dell'utente.
 
-### Key points
+### Punti chiave
 
 - Fare un uso corretto della gerarchia `h1-h6`. Pensa ai titoli come strumenti
 per creare una struttura per la tua pagina. Non fare affidamento sullo stile
@@ -240,17 +236,17 @@ a questi video didattici sulle basi di
 e
 [NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4).
 
-## Automate the process
+## Automatizza il processo
 
 <img src="imgs/ic_build_black_24px.svg" class="attempt-right" alt=""
 width="100">
 
-Manually testing a site for accessibility can be tedious and error prone.
-Eventually you’ll want to automate the process as much as possible. This can be
-done through the use of browser extensions, and command line accessibility test
-suites.
+Testare manualmente un sito per l'accessibilità può essere noioso e soggetto a
+errori. Alla fine vorrai automatizzare il processo il più possibile. Questo può
+essere fatto attraverso l'uso di estensioni del browser e suite di test di
+accessibilità della riga di comando.
 
-### Key points
+### Punti chiave
 
 - La pagina supera tutti i test delle estensioni del browser
 [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
