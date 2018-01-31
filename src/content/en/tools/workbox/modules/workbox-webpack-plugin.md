@@ -2,48 +2,160 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2018-01-30 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
-# Workbox webpack Plugin  {: .page-title }
+# Workbox webpack Plugins  {: .page-title }
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-## What's the Workbox webpack Plugin?
+Workbox provides to [webpack](https://webpack.js.org/), one that will
+generate a complete service worker for you and one that will generate a list
+of assets to precache that is injected into a service worker file.
 
-This is a plugin for [webpack](https://webpack.js.org/) which generates a list of URLs to
-[precache](/web/tools/workbox/guides/precache-files) (known as a "precache manifest") based on the
-assets in a webpack compilation.
+There are two different plugins within the `workbox-webpack-plugin` module: `GenerateSW` and
+`InjectManifest`. The answers to the following questions can help you choose the right plugin and
+configuration to use.
 
-Guidance on using the plugin within the context of a larger webpack build can be found in the
-"[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section
-of the webpack documentation.
+## Which Plugin to Use
 
-## Considerations
+### GenerateSW Plugin
 
-There are a few decisions to make which will determine the right configuration for your use case.
-
-### Should the plugin create your service worker file?
-
-If you leave out the `swSrc` configuration option, the plugin will create a service worker file for
-you and automatically add it to the webpack asset pipeline. This is referred to as `generateSW`
-mode.
+The `GenerateSW` plugin will create a service worker file for you and
+add it to the webpack asset pipeline. This plugin is best suited for sites
+that are static or fairly simple. This main screnatio this isn't ideal is if
+you want finer control of your service worker and want to use additional
+features like push.
 
 {% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
 
-If you set `swSrc` to the path of an existing service worker file (which does not have to be
-otherwise configured as a webpack asset) then the plugin will generate a list of URLs to precache
-and add a reference to that precache manifest, along with a reference to the Workbox runtime code,
-to your file. It will otherwise leave the file as-is. This is referred to as `injectManifest` mode.
+### InjectManifest Plugin
+
+The `InjectManifest` plugin will generate a list of URLs to precache and
+add that precache manifest to an existing service worker
+file. It will otherwise leave the file as-is.
 
 {% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md" %}
 
-### Do you need to cache additional, non-webpack assets?
+## GenerateSW Plugin
 
-By default, the plugin will generate a precache manifest that contains URLs for all of the assets
-that come from the current webpack compilation. Any assets that webpack doesn't "know" about will
-not be picked up.
+You can add the `GenerateSW` plugin to your webpack config like so:
+
+```javascript
+// Inside of webpack.config.js:
+const {GenerateSW} = require('workbox-webpack-plugin');
+
+module.exports = {
+  // Other webpack config...
+  plugins: [
+    // Other plugins...
+    GenerateSW()
+  ]
+};
+```
+
+This will generate a service worker with precaching setup for all of your
+webpack assets.
+
+### Full GenerateSW Config
+
+If you want to use any of the configuration options for the `GenerateSW` Plugin,
+you'd just need to add an `Object` to the plugins constructor.
+
+For example:
+
+```javascript
+// Inside of webpack.config.js:
+const {GenerateSW} = require('workbox-webpack-plugin');
+
+module.exports = {
+  // Other webpack config...
+  plugins: [
+    // Other plugins...
+    GenerateSW({
+      option: 'value',
+    })
+  ]
+};
+```
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options apply to assets created by the webpack compilation.</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/webpack-generate-sw.html" %}
+{% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
+    <tr>
+      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+## InjectManifest Plugin
+
+You can add the `InjectManifest` plugin to your webpack config like so:
+
+```javascript
+// Inside of webpack.config.js:
+const {InjectManifest} = require('workbox-webpack-plugin');
+
+module.exports = {
+  // Other webpack config...
+  plugins: [
+    // Other plugins...
+    InjectManifest({
+      swSrc: './src/sw.js',
+    })
+  ]
+};
+```
+
+This will a precache manifest (a list of webpack assets) and inject it into
+your service worker file via `importScripts()`.
+
+### Full InjectManifest Config
+
+You can pass the appropriate configuration as properties of an `Object` to the plugin's constructor.
+
+For example:
+
+```javascript
+// Inside of webpack.config.js:
+const {InjectManifest} = require('workbox-webpack-plugin');
+
+module.exports = {
+  // Other webpack config...
+  plugins: [
+    // Other plugins...
+    InjectManifest({option: 'value'})
+  ]
+};
+```
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options apply to assets created by the webpack compilation.</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/webpack-inject-manifest.html" %}
+{% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
+    <tr>
+      <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
+    </tr>
+{% include "web/tools/workbox/guides/_shared/get-manifest-schema.html" %}
+{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+  </tbody>
+</table>
+
+## Cache additional, non-webpack assets
+
+By default, both plugins generate a precache manifest that contains URLs for assets created by the
+current webpack compilation. Any assets that webpack doesn't "know" about will not be picked up.
 
 If you need to precache additional assets that are managed outside of webpack, then you can
 use the `globDirectory` and `globPatterns` options to specify how to find those additional assets.
@@ -59,29 +171,8 @@ in-memory file system is used.
 `modifyUrlPrefix`, can also be used, but they'll apply **only** to the entries that are matched via
 `glob` patterns, and not to any assets that are picked up via the webpack compilation.
 
-## Configuration
+## Extra Info
 
-Once you've determined the answers to those considerations, you can pass the appropriate
-configuration as properties of an `Object` to the plugin's constructor. For example:
-
-    // Inside of webpack.config.js:
-    const WorkboxPlugin = require('workbox-webpack-plugin');
-
-    module.exports = {
-      // Other webpack config...
-      plugins: [
-        // Other plugins...
-        WorkboxPlugin({option: 'value'})
-      ]
-    };
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan="2">Supported Options</th>
-    </tr>
-{% include "web/tools/workbox/guides/_shared/webpack-specific.html" %}
-{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
-{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
-  </tbody>
-</table>
+Guidance on using the plugins within the context of a larger webpack build can
+be found in the "[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section of the
+webpack documentation.

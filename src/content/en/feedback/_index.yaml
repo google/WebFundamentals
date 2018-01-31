@@ -5,14 +5,14 @@ landing_page:
 
   header:
     buttons:
-    - label: Broswer Bug Searcher
+    - label: Browser Bug Searcher
       path: /web/feedback/browser-bug-searcher
 
   rows:
   - classname: devsite-landing-row-50
     items:
     - description: >
-        We want to make it easy to find and report bugs in any browser, 
+        We want to make it easy to find and report bugs in any browser,
         as well as help you find resources while you’re building your site.
         <br><br>
         Telling browser vendors about issues you find in their browser,
@@ -33,7 +33,7 @@ landing_page:
       buttons:
       - label: Browser Bug Searcher
         path: /web/feedback/browser-bug-searcher
-    
+
   - classname: devsite-landing-row-67
     items:
     - heading: How to file a good bug

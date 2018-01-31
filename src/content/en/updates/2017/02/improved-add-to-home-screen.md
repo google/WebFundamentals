@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Progressive Web Apps are becoming more integrated with your device. Learn how.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2017-02-02 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: addtohomescreen,progressive-web-apps,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Progressive Web Apps are becoming more integrated with your device. Learn how. #}
@@ -67,8 +68,18 @@ contained within the scope of your Progressive Web App, your app will be opened
 instead of Chrome opening with your PWA running.
 
 When you install a Progressive Web App, we look at your Web App Manifest and
-other meta-data and create the APK that is installed on to the user's device. In
-that APK we define an [Android Intent
+other meta-data and create an [APK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
+(Android Package Kit) that is installed on to the user's device, which may take
+a short moment the first time any user installs your Web App.
+
+Note: Whenever the Web App Manifest changes we need to generate a new APK, it
+is thus *not* a good idea to have frequently updating manifests. It is 
+especially important to ensure that you don't use user specific identifiers 
+in the manifest (such as a custom `start_url` per user) as this generate an
+unique APK which means that your install time will be a lot longer than you 
+expect.
+
+In that APK we define an [Android Intent
 Filter](https://developer.android.com/guide/components/intents-filters.html)
 that defines when your web application should be opened. For example, to open
 the [https://airhorner.com](https://airhorner.com/) app whenever that link is

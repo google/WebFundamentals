@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Monitor, Console Sidebar, and Console groupings.
 
-{# wf_updated_on: 2017-11-30 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2017-11-28 #}
 {# wf_tags: chrome64,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Performance Monitor, Console Sidebar, and Console groupings. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -24,6 +25,14 @@ Welcome back! New features coming to DevTools in Chrome 64 include:
   important to you.
 * [Group similar Console messages](#group-similar). The Console now groups similar messages
   together by default.
+
+Read on, or watch the video version of these release notes below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="90wNAn05Cf4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
@@ -95,6 +104,16 @@ Click on a group to expand it and see each instance of the message.
 </figure>
 
 Uncheck the **Group Similar** checkbox to disable this feature.
+
+## Local Overrides {: #overrides }
+
+Whoops! We originally scheduled this feature to launch in Chrome 64, but pulled it close to
+the deadline in order to smooth out some rough edges.
+
+This feature is shipping in Chrome 65, which will land approximately 6 weeks after Chrome 64.
+Check out [Local Overrides][LO] to learn more.
+
+[LO]: /web/updates/2018/01/devtools#overrides
 
 ## Feedback {: #feedback }
 

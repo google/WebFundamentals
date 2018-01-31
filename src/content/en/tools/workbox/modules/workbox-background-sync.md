@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -32,6 +32,26 @@ BackgroundSync.
 
 ## Basic Usage
 
+The easiest way to use Background Sync is to use the `Plugin` that will
+automatically Queue up failed requests and retry them for future `sync`
+events.
+
+```javascript
+const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
+  maxRetentionTime: 24 * 60 * 60 * 1000 // Retry for max of 24 Hours
+});
+
+workbox.routing.registerRoute(
+  /\/api\/.*\/*.json/,
+  workbox.strategies.networkOnly({
+    plugins: [bgSyncPlugin]
+  }),
+  'POST'
+);
+```
+
+## Advanced Usage
+
 Workbox Background Sync gives you a `Queue` class, which you can
 instantiate and then add failed requests to. The failed requests are stored
 in
@@ -46,7 +66,7 @@ in a queue name (which must be unique to your
 [origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
 
 ```js
-const queue = workbox.backgroundSync.Queue('myQueueName');
+const queue = new workbox.backgroundSync.Queue('myQueueName');
 ```
 
 The queue name is used as the tag name that gets
@@ -115,16 +135,16 @@ to the API will get retried when connectivity is restored:
 const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName');
 
 // Create a workbox strategy that uses the bg sync plugin.
-const networkFirstStrategy = new workbox.strategies.NetworkFirst({
+const networkOnlyStrategy = new workbox.strategies.NetworkOnly({
   plugins: [bgSyncPlugin],
 });
 
 // Create a route that handles requests with the above strategy.
-const route = new Route({
-  match: ({url}) => url.pathname === '/path/to/api',
-  handler: networkFirstStrategy,
-  method: 'POST',
-});
+const route = new workbox.routing.Route(
+  ({url}) => url.pathname === '/path/to/api',
+  networkOnlyStrategy,
+  'POST',
+);
 
 // Add the route to the default router.
 workbox.routing.registerRoute(route);
