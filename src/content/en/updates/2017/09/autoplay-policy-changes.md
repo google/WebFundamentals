@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018.
 
-{# wf_updated_on: 2017-12-05 #}
+{# wf_updated_on: 2018-01-31 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -92,15 +92,22 @@ permission, it can delegate that permission to cross-origin iframes with a new
 same-origin iframes.
 
 <pre class="prettyprint">
-&lt;iframe src="myvideo.html" allow="autoplay">
+&lt;!-- Autoplay is allowed. -->
+&lt;iframe src="https://cross-origin.com/myvideo.html" allow="autoplay">
+
+&lt;!-- Autoplay and Fullscreen are allowed. -->
+&lt;iframe src="https://cross-origin.com/myvideo.html" allow="autoplay; fullscreen">
 </pre>
 
 When the feature policy for autoplay is disabled, calls to `play()` without a
 user gesture will reject the promise with a `NotAllowedError` DOMException. And
 the autoplay attribute will also be ignored.
 
-Note: You can try out this feature policy by enabling the experimental flag
+You can try out this feature policy by enabling the experimental flag
 `chrome://flags/#enable-experimental-web-platform-features`.
+
+Warning: Contrary to what was announced previously, `<iframe gesture=media>` is
+not supported.
 
 ### Example scenarios
 
