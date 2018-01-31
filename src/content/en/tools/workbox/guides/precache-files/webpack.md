@@ -3,21 +3,17 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-19 #}
+{# wf_updated_on: 2018-01-25 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Webpack {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 This page explains how to use the `workbox-webpack-plugin` node module to
 generate the list of files to precache and add it to your service worker.
 
-## Install `workbox-webpack-plugin`
-
-Start by installing `workbox-webpack-plugin` from NPM.
-
-<pre class="devsite-terminal devsite-click-to-copy">
-npm install workbox-webpack-plugin --save-dev
-</pre>
+{% include "web/tools/workbox/guides/_shared/install-webpack.md" %}
 
 ## Setup your Webpack Config
 

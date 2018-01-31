@@ -3,25 +3,21 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-19 #}
+{# wf_updated_on: 2018-01-25 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with workbox-build {: .page-title }
 
+{% include "web/tools/workbox/_shared/alpha.html" %}
+
 This page explains how to use the workbox-build Node module to generate the
-list of files to precache and add it to your
+list of files to precache and add it to your service worker.
 
 <aside class="note"><b>Note:</b> You'll need to have
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
 workbox-build.</aside>
 
-## Install <code>workbox-build</code>
-
-Start by installing `workbox-build` from NPM.
-
-<pre class="devsite-terminal devsite-click-to-copy">
-npm install workbox-build --save-dev
-</pre>
+{% include "web/tools/workbox/guides/_shared/install-workbox-build.md" %}
 
 ## Add an Injection Point
 
