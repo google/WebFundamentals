@@ -166,3 +166,45 @@ Replace `<mode>` with `generateSW` or `injectManifest` (depending
 on your use case) and `<path/to/config.js>` with the path to
 your configuration options. Your configuration might have been created
 automatically by `workbox wizard` or tweaked manually.
+
+## Configuration
+
+### Options used by `generateSW`
+
+Below is a list of options used by **just** the `generateSW` command.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options only apply to `generateSW`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
+  </tbody>
+</table>
+
+### Options used by `injectManifest`
+
+Below is a list of options used by **just** the `injectManifest` command.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options only apply to `injectManifest`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/build-inject-schema.html" %}
+  </tbody>
+</table>
+
+### Options used by both
+
+The remaining options are used by both commands.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Used by both `generateSW` and `injectManifest`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
+  </tbody>
+</table>

@@ -83,16 +83,14 @@ module.exports = {
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">These options apply to assets created by the webpack compilation.</th>
+      <th colspan="2">These options apply to the webpack compilation.</th>
     </tr>
-{% include "web/tools/workbox/guides/_shared/webpack-generate-sw.html" %}
-{% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
+{% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
     <tr>
       <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
     </tr>
-{% include "web/tools/workbox/guides/_shared/generate-sw-string-schema.html" %}
-{% include "web/tools/workbox/guides/_shared/common-generate-schema.html" %}
-{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
 
@@ -140,15 +138,14 @@ module.exports = {
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">These options apply to assets created by the webpack compilation.</th>
+      <th colspan="2">These options are specificly for the webpack compilation.</th>
     </tr>
-{% include "web/tools/workbox/guides/_shared/webpack-inject-manifest.html" %}
-{% include "web/tools/workbox/guides/_shared/common-webpack.html" %}
+{% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
     <tr>
       <th colspan="2">These options configure behavior unrelated to the webpack compilation.</th>
     </tr>
-{% include "web/tools/workbox/guides/_shared/get-manifest-schema.html" %}
-{% include "web/tools/workbox/guides/_shared/base-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
 
