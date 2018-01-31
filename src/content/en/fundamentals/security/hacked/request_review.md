@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-01-31 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -103,7 +103,7 @@ Search Console:*
 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
 again in Search Console. The report may still show the warnings and
    sample infected URLs you saw before.
-2. Select **Request a review**. In order to submit a review, we ask that you
+2. Select **Request a review**. In order to submit a review, we ask you to
 provide more information on what you did to remove the policy violation from
 your site. For example, "I removed the page that was asking users to enter
 personal information").
