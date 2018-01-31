@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-01-29 #}
 {# wf_published_on: 2018-01-25 #}
 {# wf_blink_components: N/A #}
 
@@ -173,7 +173,7 @@ const webpackConfig = {
 
 ### Migrate from hand-crafted sw-toolbox to workbox-sw
 
-If you were using `sw-toolbox` directly (rather than using it implicity via `sw-precache`'s
+If you were using `sw-toolbox` directly (rather than using it implicitly via `sw-precache`'s
 `runtimeCaching` option), then the migration to Workbox requires some manual adjustments to get the
 equivalent behavior. For more context, read the documentation for the
 [`workbox-routing`](/web/tools/workbox/modules/workbox-routing) and
@@ -205,7 +205,7 @@ toolbox.router.get(
 );
 
 // Set a default network-first strategy to use when
-// there is no explcit matching route:
+// there is no explicit matching route:
 toolbox.router.default = toolbox.networkFirst;
 ```
 
@@ -241,7 +241,7 @@ workbox.router.registerRoute(
 ); 
 
 // Set a default network-first strategy to use when
-// there is no explcit matching route:
+// there is no explicit matching route:
 workbox.router.setDefaultHandler(workbox.strategies.networkFirst());
 ```
 
