@@ -125,8 +125,13 @@ The best approach to test your implementation is to do the following:
     `Chrome DevTools > Application > IndexedDB > workbox-background-sync > requests`
 1. Now turn on your network or web server.
 1. Force an early `sync` event by going to
-  `Chrome DevTools > Application > Service Workers` and clicking the 'Sync'
-  button. (Don't worry about the tag name, it can be anything).
+  `Chrome DevTools > Application > Service Workers`, enter the tag name of 
+  `workbox-background-sync:<your queue name>` where "<your queue name>" should be
+  the name of the queue you set and then clicking the 'Sync'
+  button.
+
+    ![Example of Sync button in Chrome DevTools](../images/modules/workbox-background-sync/devtools-sync.png)
+
 1. You should see network requests go through for the failed requests and
   the IndexedDB data should now be empty since the requests have been 
   successfully replayed.
