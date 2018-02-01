@@ -1,9 +1,9 @@
 project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
-description: A guide on how to generate a compolete service worker with Workbox.
+description: A guide on how to generate a complete service worker with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>

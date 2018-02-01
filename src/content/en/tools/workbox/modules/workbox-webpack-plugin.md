@@ -135,7 +135,7 @@ module.exports = {
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">These options are specificly for the webpack compilation.</th>
+      <th colspan="2">These options are specifically for the webpack compilation.</th>
     </tr>
 {% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
     <tr>
