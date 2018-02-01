@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-01-30 #}
+{# wf_updated_on: 2018-01-31 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -10,23 +10,20 @@ description: The module guide for workbox-webpack-plugin.
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-Workbox provides to [webpack](https://webpack.js.org/), one that will
+Workbox provides two [webpack](https://webpack.js.org/) plugins: one that will
 generate a complete service worker for you and one that will generate a list
 of assets to precache that is injected into a service worker file.
 
-There are two different plugins within the `workbox-webpack-plugin` module: `GenerateSW` and
-`InjectManifest`. The answers to the following questions can help you choose the right plugin and
-configuration to use.
+The plugins are implemented as two classes in the `workbox-webpack-plugin` module, named
+`GenerateSW` and `InjectManifest`. The answers to the following questions can help you choose the
+right plugin and configuration to use.
 
 ## Which Plugin to Use
 
 ### GenerateSW Plugin
 
 The `GenerateSW` plugin will create a service worker file for you and
-add it to the webpack asset pipeline. This plugin is best suited for sites
-that are static or fairly simple. This main screnatio this isn't ideal is if
-you want finer control of your service worker and want to use additional
-features like push.
+add it to the webpack asset pipeline.
 
 {% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
 
@@ -60,8 +57,8 @@ webpack assets.
 
 ### Full GenerateSW Config
 
-If you want to use any of the configuration options for the `GenerateSW` Plugin,
-you'd just need to add an `Object` to the plugins constructor.
+If you want to use any of the configuration options for the `GenerateSW` plugin,
+you'd just need to add an `Object` to the plugin's constructor.
 
 For example:
 
