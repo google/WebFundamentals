@@ -36,9 +36,13 @@ Platform. This article describes some of the deprecations and removals in Chrome
 [Chromestatus Tracker](https://www.chromestatus.com/features/4764225348042752) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=392584)
 
-## Block cross-origin <a download>
+## Block cross-origin &lt;a download>
 
-
+To avoid what is essentially a user-mediated cross-origin information leakage,
+Blink will now ignore the presence of the download attribute on anchor elements
+with cross origin attributes. Note that this applies to
+[HTMLAnchorElement.download](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download)
+as well as to the element itself.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Iw3_SUcagGg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4969697975992320) &#124;
