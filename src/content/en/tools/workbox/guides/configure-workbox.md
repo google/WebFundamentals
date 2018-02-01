@@ -2,12 +2,12 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Configure Workbox {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 Out of the box Workbox comes set up with some default values for cache
 names and log levels. This guide will cover how you can change these values

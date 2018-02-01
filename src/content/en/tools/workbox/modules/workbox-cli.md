@@ -8,7 +8,7 @@ description: The module guide for workbox-cli.
 
 # Workbox CLI  {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What's the Workbox CLI?
 

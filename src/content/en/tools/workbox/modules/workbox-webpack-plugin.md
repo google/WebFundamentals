@@ -8,7 +8,7 @@ description: The module guide for workbox-webpack-plugin.
 
 # Workbox webpack Plugins  {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
 generates a complete service worker for you and one that generates a list

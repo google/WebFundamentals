@@ -50,6 +50,12 @@ description: Service Worker Libraries.
   display: none;
 }
 
+.button.button-v3 {
+  text-decoration: none;
+  background-color: #fb8c00;
+  color: #ffffff;
+}
+
 @media (min-width: 780px) {
   .index__install-options {
     flex-direction: row;
@@ -67,6 +73,18 @@ description: Service Worker Libraries.
 </style>
 
 # Workbox {: .page-title }
+
+<aside class="dogfood">
+  <p><b>Try the Beta Release!</b></p>
+  <p>The next major relase of Workbox is nearly ready. The next version is:</p>
+  <ul>
+  <li>Smaller in file size</li>
+  <li>Easier to debug</li>
+  <li>Has improved docs</li>
+  <li>Better webpack support</li>
+  </ul>
+  <p>Interested? Checkout the <a href="/web/tools/workbox/guides/get-started">Getting Started Guide for V3</a>.</p>
+</aside>
 
 <figure class="attempt-right workbox-logo">
   <img src="/web/tools/workbox/thumb.png" alt="Workbox logo">

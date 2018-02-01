@@ -8,7 +8,7 @@ description: A guide on how to generate a complete service worker with Workbox.
 
 # Generate a Complete Service Worker {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 The Workbox tools can be used to generate a complete service worker with
 support for precaching and runtime caching. This is a great option for anyone

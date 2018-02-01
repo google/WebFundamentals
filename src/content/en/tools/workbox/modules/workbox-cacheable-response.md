@@ -2,12 +2,12 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cacheable Response  {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What's a Cacheable Response?
 

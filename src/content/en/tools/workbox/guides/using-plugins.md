@@ -2,13 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2017-12-17 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
 # Using Plugins {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 In a number of situations it’s beneficial being able to manipulate a request
 and response as it’s being fetched and cached as it allows you to add

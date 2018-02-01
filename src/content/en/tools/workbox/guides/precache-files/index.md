@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-22 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -14,7 +14,7 @@ description: A guide on how to precache files with Workbox.
 
 # Precache Files {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 If you want your web app to work offline or there are assets you know can be
 cached for a long time, precaching is the best approach.
