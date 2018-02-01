@@ -10,7 +10,8 @@ const path = require('path');
 
 const buildReferenceDocs = require('../reference-docs/build-reference-docs');
 
-// This will generate contributors, update the CDN and build the latest reference docs
+// This will generate contributors, update the CDN and build the
+// latest reference docs
 gulp.task('workbox', [
     'workbox-generate-contributors',
     'workbox-generate-cdn-include-v3',
