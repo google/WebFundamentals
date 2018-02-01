@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -135,7 +135,7 @@ module.exports = {
 <table class="responsive">
   <tbody>
     <tr>
-      <th colspan="2">These options are specificly for the webpack compilation.</th>
+      <th colspan="2">These options are specifically for the webpack compilation.</th>
     </tr>
 {% include "web/tools/workbox/_shared/config/groups/common-webpack.html" %}
     <tr>
