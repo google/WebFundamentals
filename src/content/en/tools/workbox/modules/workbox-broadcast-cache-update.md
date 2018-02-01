@@ -4,6 +4,7 @@ description: The module guide for workbox-background-sync.
 
 {# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-29 #}
+{# wf_blink_components: N/A #}
 
 # Workbox Broadcast Cache Update {: .page-title }
 

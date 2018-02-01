@@ -4,6 +4,7 @@ description: A guide on how to configure Workbox.
 
 {# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Configure Workbox {: .page-title }
 
