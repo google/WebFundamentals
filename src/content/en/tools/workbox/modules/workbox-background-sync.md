@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-29 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -25,7 +25,7 @@ Note that the sync event can be delivered *even if the user has left the
 application*, making it a much more effective than traditional method of
 retrying failed requests.
 
-Workbox Background Sync is design to make it easier to use the
+Workbox Background Sync is designed to make it easier to use the
 BackgroundSync API and integrate its usage with other Workbox modules. It
 also implements a fallback strategy for browsers that don't yet implement
 BackgroundSync.
@@ -33,12 +33,12 @@ BackgroundSync.
 ## Basic Usage
 
 The easiest way to use Background Sync is to use the `Plugin` that will
-automatically Queue up failed requests and retry them for future `sync`
-events.
+automatically Queue up failed requests and retry them when  future `sync`
+events are fired.
 
 ```javascript
 const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
-  maxRetentionTime: 24 * 60 * 60 * 1000 // Retry for max of 24 Hours
+  maxRetentionTime: 24 * 60 // Retry for max of 24 Hours
 });
 
 workbox.routing.registerRoute(
@@ -52,30 +52,31 @@ workbox.routing.registerRoute(
 
 ## Advanced Usage
 
-Workbox Background Sync gives you a `Queue` class, which you can
-instantiate and then add failed requests to. The failed requests are stored
-in
-[IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-and then retried when the browser thinks connectivity is restored (i.e.
+Workbox Background Sync also provides a `Queue` class, which you can
+instantiate and add failed requests to. The failed requests are stored
+in [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+and are retried when the browser thinks connectivity is restored (i.e.
 when it receives the sync event).
 
-### Creating a Workbox Background Sync Queue
+### Creating a Queue
 
-To create a Workbox Background Sync Queue, use the `new` operator and pass
-in a queue name (which must be unique to your
+To create a Workbox Background Sync Queue you need to construct it with
+ a queue name (which must be unique to your
 [origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
 
 ```js
 const queue = new workbox.backgroundSync.Queue('myQueueName');
 ```
 
-The queue name is used as the tag name that gets
+The queue name is used as part of the tag name that gets
 [`register()`](https://wicg.github.io/BackgroundSync/spec/#dom-syncmanager-register)-ed
 by the global
 [`SyncManager`](https://wicg.github.io/BackgroundSync/spec/#sync-manager-interface). It's
 also used as the
 [Object Store](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore) name for
-the IndexedDB database. Note, it's not important that you know these
+the IndexedDB database. 
+
+**Note**: it's not important that you know these
 details, but they're the reason the queue name has to be unique to your
 origin.
 
@@ -103,49 +104,29 @@ try {
 Once added to the queue, the request is automatically retried when the
 service worker receives the `sync` event (which happens when the browser
 thinks connectivity is restored). Browsers that don't support the
-BackgroundSync API will periodically retry the queue (though this requires
-the page controlling the service worker to be running, so it won't be quite
-as effective).
+BackgroundSync API will retry the queue every time the service worker is
+started up. This requires the page controlling the service worker to be 
+running, so it won't be quite as effective.
 
-## Using Workbox Background Sync with other Workbox Packages
+## Testing Workbox Background Sync
 
-In addition to the Queue class, Workbox Background Sync also provides a
-`Plugin` class, so it can easily integrate with Workbox strategy
-classes that takes plugins as options,
-as well as Workbox routes, which respond to requests using Workbox
-strategies.
+Sadly, testing BackgroundSync sync is somewhat unintuitive and difficult
+for a number of reasons.
 
-For example, if an app that lets users upload images to a server will
-likely use a
-[network-first](./workbox-strategies#network_first_network_falling_back_to_cache)
-strategy, which takes a
-plugin that can respond to failed fetches. By adding the `Plugin`
-class to the list of the `NetworkFirst` strategy's plugins, network
-requests that fail will automatically be added to a Workbox Background Sync
-queue:
+The best approach to test your implementation is to do the following:
 
-For example, the following code creates a `Plugin` instance, adds it to
-a workbox strategy that gets handled by a route, and then registers that
-route with the default router. The end result is all failed POST requests
-to the API will get retried when connectivity is restored:
-
-```js
-// Create a background sync plugin, which automatically adds
-// failed requests to a background sync queue.
-const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName');
-
-// Create a workbox strategy that uses the bg sync plugin.
-const networkOnlyStrategy = new workbox.strategies.NetworkOnly({
-  plugins: [bgSyncPlugin],
-});
-
-// Create a route that handles requests with the above strategy.
-const route = new workbox.routing.Route(
-  ({url}) => url.pathname === '/path/to/api',
-  networkOnlyStrategy,
-  'POST',
-);
-
-// Add the route to the default router.
-workbox.routing.registerRoute(route);
-```
+1. Load up a page and register your service worker.
+1. Turn off your computers network or turn off your web server.
+    - ⚠️ **DO NOT USE CHROME DEVTOOLS OFFLINE** ⚠️ The offline checkbox in 
+    DevTools only affects requests from the page. Service Worker requests
+    will continue to go through.
+1. Make network requests that should be queued with Workbox Background Sync.
+    - You can check the requests have been queued by looking in
+    `Chrome DevTools > Application > IndexedDB > workbox-background-sync > requests`
+1. Now turn on your network or web server.
+1. Force an early `sync` event by going to
+  `Chrome DevTools > Application > Service Workers` and clicking the 'Sync'
+  button. (Don't worry about the tag name, it can be anything).
+1. You should see network requests go through for the failed requests and
+  the IndexedDB data should now be empty since the requests have been 
+  successfully replayed.
