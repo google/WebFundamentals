@@ -2,13 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-build.
 
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2018-01-31 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Workbox Build {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 The `workbox-build` module integrates into a node-based build process and can generate an entire
 service worker, or just generate a list of assets to precache that could be used within an existing
@@ -23,14 +23,14 @@ the following questions can help you choose the right mode and configuration to 
 
 The `generateSW` mode creates a service worker file for you, and writes it out to disk.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
 
 ### injectManifest
 
 The injectManifest mode will generate a list of URLs to precache, and add that precache manifest to
 an existing service worker file. It will otherwise leave the file as-is.
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
 
 ## generateSW Mode
 

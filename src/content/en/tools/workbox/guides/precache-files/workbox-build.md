@@ -8,7 +8,7 @@ description: A guide on how to precache files with workbox-build.
 
 # Precache Files with workbox-build {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the workbox-build Node module to generate the
 list of files to precache and add it to your service worker.

@@ -8,7 +8,7 @@ description: A guide on how to precache files with Workbox CLI.
 
 # Precache Files with Workbox CLI {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the Workbox Command Line Interface (a.k.a the
 Workbox CLI) to generate the list of files to precache and add it to your
