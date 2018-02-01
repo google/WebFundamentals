@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with Webpack {: .page-title }
@@ -40,7 +40,7 @@ webpack build.
 
 In your webpage, you can register this service worker by adding:
 
-{% include "web/tools/workbox/guides/_shared/register-sw.md" %}
+{% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
 ## Adding Runtime Caching
 

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -31,7 +31,7 @@ console.log('Hello from sw.js');
 
 In your web page register your new service worker file like so:
 
-{% include "web/tools/workbox/guides/_shared/register-sw.md" %}
+{% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
 This tells the browser this is the service worker to use for site.
 
