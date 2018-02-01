@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
@@ -27,7 +27,7 @@ terminal.
 * {NPM}
 
     <pre class="devsite-terminal">
-    npm install --global workbox-cli
+    npm install workbox-cli@beta --global
     </pre>
 
 * {Yarn}
@@ -79,7 +79,7 @@ Developers who are happy with Workbox's built-in precaching and runtime caching
 capabilities, and don't need to customize their service worker's behavior
 are recommended to use `generateSW` mode.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
 
 ### `injectManifest`
 
@@ -100,7 +100,7 @@ You can use Workbox in this mode like so:
 workbox injectManifest path/to/config.js
 </pre>
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
 
 ### `copyLibraries`
 

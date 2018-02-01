@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with Workbox.
 
-{# wf_updated_on: 2017-12-17 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -33,7 +33,7 @@ To generate a complete service worker with the CLI, you'll first need to
 install the CLI.
 
 <pre class="devsite-terminal">
-npm install --global workbox-cli
+npm install workbox-cli@beta --global
 </pre>
 
 You'll need to create a configuration file. Run the `workbox wizard` in the
@@ -73,7 +73,7 @@ You'll need to install `workbox-build` to start generating a service worker
 in Node.
 
 <pre class="devsite-terminal">
-npm install --save-dev workbox-build
+npm install workbox-build@beta --save-dev
 </pre>
 
 To generate a service worker you need to require the module and call the
@@ -118,7 +118,7 @@ should be added to the end of your build process.
 To add Workbox to your webpack project, you
 
 <pre class="devsite-terminal">
-npm install --save-dev workbox-webpack-plugin
+npm install workbox-webpack-plugin@beta --save-dev
 </pre>
 
 With this you can require the plugin:

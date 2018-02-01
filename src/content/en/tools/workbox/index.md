@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2017-10-04 #}
-{# wf_updated_on: 2017-10-31 #}
+{# wf_updated_on: 2018-02-01 #}
 
 <style>
 .index__install-options {
@@ -104,7 +104,7 @@ rather than from the network.
 Install our command-line interface:
 
 ```
-$ npm install workbox-cli --global
+$ npm install workbox-cli@beta --global
 
 # Generate a service worker with some smart defaults
 $ workbox generate:sw
@@ -115,7 +115,7 @@ $ workbox generate:sw
 We support that too with workbox-sw.
 
 ```
-$ npm install --save workbox-sw
+$ npm install workbox-sw@beta --save
 ```
 
 Then reference the file from your service worker:

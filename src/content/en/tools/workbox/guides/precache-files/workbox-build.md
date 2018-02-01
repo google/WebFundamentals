@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with workbox-build {: .page-title }
@@ -17,7 +17,7 @@ list of files to precache and add it to your service worker.
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
 workbox-build.</aside>
 
-{% include "web/tools/workbox/guides/_shared/install-workbox-build.md" %}
+{% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
 ## Add an Injection Point
 
@@ -103,4 +103,4 @@ gulp.task('service-worker', () => {
 After this you can simply run the task via `gulp service-worker` or add it
 to the end of another Gulp task.
 
-{% include "web/tools/workbox/guides/_shared/precache-config.md" %}
+{% include "web/tools/workbox/guides/_shared/precache-config.html" %}
