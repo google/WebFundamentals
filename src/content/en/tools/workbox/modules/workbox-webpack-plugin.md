@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -10,8 +10,8 @@ description: The module guide for workbox-webpack-plugin.
 
 {% include "web/tools/workbox/_shared/alpha.html" %}
 
-Workbox provides two [webpack](https://webpack.js.org/) plugins: one that will
-generate a complete service worker for you and one that will generate a list
+Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
+generates a complete service worker for you and one that generates a list
 of assets to precache that is injected into a service worker file.
 
 The plugins are implemented as two classes in the `workbox-webpack-plugin` module, named
