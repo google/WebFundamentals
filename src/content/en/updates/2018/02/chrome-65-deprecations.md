@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version,
 
-{# wf_updated_on: 2018-02-01 #}
-{# wf_published_on: 2018-02-01 #}
+{# wf_updated_on: 2018-02-08 #}
+{# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
 {# wf_blink_components: Blink>Input #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,9 +17,11 @@ description: A round up of the deprecations and removals in Chrome 65 to help yo
 
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
-Platform. This article describes some of the deprecations and removals in Chrome
-65, which is in beta as of February 1.
+Platform. 
 
+This series, released with every version of Chrome describes its
+deprecations and removals. The list for Chrome 65, which is in beta as of
+February 8, is short.
 
 ## Block cross-origin &lt;a download>
 
