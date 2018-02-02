@@ -20,13 +20,6 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes some of the deprecations and removals in Chrome
 65, which is in beta as of February 1.
 
-## Restrict framebusting ability
-
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Xi8-y4ySjA4/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5851021045661696) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=640057)
-
 
 ## Disable touch event APIs on desktop by default
 
