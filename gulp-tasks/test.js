@@ -676,6 +676,10 @@ function testMarkdown(filename, contents, options) {
         msg = '`{% include %}` tag found, but couldn\'t find related include';
         logError(filename, position, `${msg}: ${inclFile}`);
       }
+      if (!inclFile.endsWith('.html') && !inclFile.endsWith('.js')) {
+        msg = '`{% include %}` tag found, file must be an HTML file';
+        logError(filename, position, `${msg}: ${inclFile}`);
+      }
     });
 
     // Verify all {% includecode %} elements work properly
