@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Performance Metrics that Most Affect User Experience.
+description: User-centric Performance Metrics
 
 {# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2017-06-01 #}
@@ -9,7 +9,7 @@ description: Performance Metrics that Most Affect User Experience.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Performance Metrics that Most Affect User Experience {: .page-title }
+# User-centric Performance Metrics {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
