@@ -71,7 +71,7 @@ Every time you make a change to your code, Glitch automatically
 re-builds and re-deploys your app. The tab running the live app automatically
 refreshes, too.
 
-## Step 3: Add Workbox to your NPM Script build process {: #npm-script }
+## Step 3: Add Workbox to your npm Script build process {: #npm-script }
 
 Workbox is installed, but you're not using it in your build process, yet.
 
@@ -90,7 +90,7 @@ Workbox is installed, but you're not using it in your build process, yet.
     };</pre>
 
 1. Open `package.json`.
-1. Update your NPM Script to call Workbox as the last step in your build process. The bold
+1. Update your npm Script to call Workbox as the last step in your build process. The bold
    code is what you need to add.
 
      <pre class="prettyprint">{

@@ -121,7 +121,7 @@ workbox.setConfig({ debug: true });
 workbox.setConfig({ debug: false });
 ```
 
-If you are using the modules directly (via CDN of from NPM modules), you can
+If you are using the modules directly (via CDN of from npm modules), you can
 switch between development and production builds by changing the file extension
 between `<module>.dev.js` and `<module>.prod.js`.
 

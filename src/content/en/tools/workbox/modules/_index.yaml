@@ -162,7 +162,7 @@ landing_page:
 
       - heading: workbox-build
         description: >
-          An NPM module that can generate a complete service worker, inject
+          An npm module that can generate a complete service worker, inject
           a precache manifest and copy the Workbox files.
         buttons:
         # - label: Learn more

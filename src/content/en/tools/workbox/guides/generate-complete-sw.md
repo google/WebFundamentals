@@ -55,7 +55,7 @@ workbox generateSW
 
 Whenever you make a change, you'll need to run this command, so it's best
 to make sure that this is called as part of your deployment. This could be
-as simple as creating an NPM run script in your `package.json` file:
+as simple as creating an npm run script in your `package.json` file:
 
 ```json
 {

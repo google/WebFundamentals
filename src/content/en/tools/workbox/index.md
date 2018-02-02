@@ -114,7 +114,7 @@ rather than from the network.
   </a>
 
   <a href="./get-started/npm-script.html" class="index__install-option index__install-npm">
-    <img src="images/third_party/npm-logo.svg" alt="Install Workbox to work with NPM Scripts">
+    <img src="images/third_party/npm-logo.svg" alt="Install Workbox to work with npm Scripts">
   </a>
 </div>
 

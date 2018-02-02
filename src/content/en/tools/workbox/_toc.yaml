@@ -7,7 +7,7 @@ toc:
     path: /web/tools/workbox/get-started/webpack
   - title: Gulp
     path: /web/tools/workbox/get-started/gulp
-  - title: NPM
+  - title: npm
     path: /web/tools/workbox/get-started/npm-script
 - title: Examples
   path: /web/tools/workbox/examples

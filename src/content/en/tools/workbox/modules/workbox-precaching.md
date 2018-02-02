@@ -86,7 +86,7 @@ This allows workbox-precaching to know when the file has changed and update it.
 Workbox comes with tools to help with generating this list:
 
 - workbox-build
-  - This is an NPM module that can be used in a gulp task or as an npm
+  - This is an npm module that can be used in a gulp task or as an npm
     run script.
 - workbox-webpack-plugin
   - Webpack users can use the Workbox webpack plugin.

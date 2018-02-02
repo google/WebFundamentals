@@ -24,7 +24,7 @@ process, with flexible configurations.
 Installing the CLI is simple, just run the following command in your
 terminal.
 
-* {NPM}
+* {npm}
 
     <pre class="devsite-terminal">
     npm install workbox-cli@beta --global
