@@ -21,14 +21,6 @@ Platform. This article describes some of the deprecations and removals in Chrome
 65, which is in beta as of February 1.
 
 
-## Disable touch event APIs on desktop by default
-
-
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/KV6kqDJpYiE/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/4764225348042752) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=392584)
-
 ## Block cross-origin &lt;a download>
 
 To avoid what is essentially a user-mediated cross-origin information leakage,
