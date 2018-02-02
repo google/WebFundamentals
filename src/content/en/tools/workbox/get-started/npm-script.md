@@ -1,12 +1,12 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn how to make an NPM-script-based app work offline by adding Workbox to it.
+description: Learn how to make an npm-script-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2017-12-27 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
-# Get Started With Workbox For NPM Script {: .page-title }
+# Get Started With Workbox For npm Script {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
