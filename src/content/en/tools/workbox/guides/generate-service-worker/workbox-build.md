@@ -8,7 +8,7 @@ description: A guide on how to generate a complete service worker with workbox-b
 
 # Generate a Service Worker with workbox-build {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the workbox-build Node module to generate a
 complete service worker with precaching and runtime caching.
@@ -17,7 +17,7 @@ complete service worker with precaching and runtime caching.
 <a href="https://nodejs.org/en/download/">Node installed</a> to use
 workbox-build.</aside>
 
-{% include "web/tools/workbox/guides/_shared/install-workbox-build.md" %}
+{% include "web/tools/workbox/guides/_shared/install-workbox-build.html" %}
 
 ## Call <code>generateSW()</code>
 

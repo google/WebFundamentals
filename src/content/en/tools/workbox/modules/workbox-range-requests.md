@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What are Range Requests?
 

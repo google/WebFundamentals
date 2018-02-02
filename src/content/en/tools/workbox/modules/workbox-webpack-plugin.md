@@ -8,7 +8,7 @@ description: The module guide for workbox-webpack-plugin.
 
 # Workbox webpack Plugins  {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
 generates a complete service worker for you and one that generates a list
@@ -25,7 +25,7 @@ right plugin and configuration to use.
 The `GenerateSW` plugin will create a service worker file for you and
 add it to the webpack asset pipeline.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
 
 ### InjectManifest Plugin
 
@@ -33,7 +33,7 @@ The `InjectManifest` plugin will generate a list of URLs to precache and
 add that precache manifest to an existing service worker
 file. It will otherwise leave the file as-is.
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
 
 ## GenerateSW Plugin
 

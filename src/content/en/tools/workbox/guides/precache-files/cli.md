@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Workbox CLI {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the Workbox Command Line Interface (a.k.a the
 Workbox CLI) to generate the list of files to precache and add it to your
@@ -18,7 +18,7 @@ service worker.
 <a href="https://nodejs.org/en/download/">Node installed</a> to use the
 Workbox CLI.</aside>
 
-{% include "web/tools/workbox/guides/_shared/install-cli.md" %}
+{% include "web/tools/workbox/guides/_shared/install-cli.html" %}
 
 ## Run the Wizard
 
@@ -77,4 +77,4 @@ with the manifest. The end result with look like this:
 When you make a change to your project, run the inject manifest command
 and you'll have an up to date service worker with precache support.
 
-{% include "web/tools/workbox/guides/_shared/precache-config.md" %}
+{% include "web/tools/workbox/guides/_shared/precache-config.html" %}

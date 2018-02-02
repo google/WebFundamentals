@@ -2,13 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
-{# wf_updated_on: 2018-01-29 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2018-01-25 #}
 {# wf_blink_components: N/A #}
 
 # Migrate from sw-precache or sw-toolbox {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 Developers who have previously used [`sw-precache`](https://github.com/GoogleChromeLabs/sw-precache)
 and/or [`sw-toolbox`](https://github.com/GoogleChromeLabs/sw-toolbox) have a straightforward upgrade

@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-19 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What is Precaching?
 
@@ -86,7 +86,7 @@ This allows workbox-precaching to know when the file has changed and update it.
 Workbox comes with tools to help with generating this list:
 
 - workbox-build
-  - This is an NPM module that can be used in a gulp task or as an npm
+  - This is an npm module that can be used in a gulp task or as an npm
     run script.
 - workbox-webpack-plugin
   - Webpack users can use the Workbox webpack plugin.

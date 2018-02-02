@@ -1,12 +1,12 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Learn how to make an NPM-script-based app work offline by adding Workbox to it.
+description: Learn how to make an npm-script-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2017-12-27 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
-# Get Started With Workbox For NPM Script {: .page-title }
+# Get Started With Workbox For npm Script {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -71,7 +71,7 @@ Every time you make a change to your code, Glitch automatically
 re-builds and re-deploys your app. The tab running the live app automatically
 refreshes, too.
 
-## Step 3: Add Workbox to your NPM Script build process {: #npm-script }
+## Step 3: Add Workbox to your npm Script build process {: #npm-script }
 
 Workbox is installed, but you're not using it in your build process, yet.
 
@@ -90,7 +90,7 @@ Workbox is installed, but you're not using it in your build process, yet.
     };</pre>
 
 1. Open `package.json`.
-1. Update your NPM Script to call Workbox as the last step in your build process. The bold
+1. Update your npm Script to call Workbox as the last step in your build process. The bold
    code is what you need to add.
 
      <pre class="prettyprint">{

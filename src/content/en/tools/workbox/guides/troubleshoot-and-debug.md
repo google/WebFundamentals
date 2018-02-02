@@ -2,12 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2017-11-15 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Troubleshoot and Debug {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 Working with service workers can be challenging, especially when
 starting out. This page will cover a few useful tips to help working

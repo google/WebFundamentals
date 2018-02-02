@@ -8,12 +8,12 @@ description: A guide on how to generate a complete service worker with the Workb
 
 # Generate a Service Worker with Webpack {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the `workbox-webpack-plugin` node module to
 generate a complete service worker with precaching and runtime caching.
 
-{% include "web/tools/workbox/guides/_shared/install-webpack.md" %}
+{% include "web/tools/workbox/guides/_shared/install-webpack.html" %}
 
 ## Setup your Webpack Config
 

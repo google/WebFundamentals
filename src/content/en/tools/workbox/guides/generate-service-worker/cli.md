@@ -8,7 +8,7 @@ description: A guide on how to generate a complete service worker with Workbox C
 
 # Generate a Complete Service Worker with Workbox CLI {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the Workbox Command Line Interface (a.k.a the
 Workbox CLI) to generate a complete service worker with support for precaching
@@ -18,7 +18,7 @@ files and setup runtime caching.
 <a href="https://nodejs.org/en/download/">Node installed</a> to use the
 Workbox CLI.</aside>
 
-{% include "web/tools/workbox/guides/_shared/install-cli.md" %}
+{% include "web/tools/workbox/guides/_shared/install-cli.html" %}
 
 ## Run the Wizard
 

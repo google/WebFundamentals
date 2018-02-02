@@ -8,7 +8,7 @@ description: The module guide for workbox-background-sync.
 
 # Workbox Background Sync {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What is Workbox Background Sync?
 
