@@ -76,7 +76,7 @@ description: Service Worker Libraries.
 
 <aside class="dogfood">
   <p><b>Try the Beta Release!</b></p>
-  <p>The next major relase of Workbox is nearly ready. The next version is:</p>
+  <p>The next major release of Workbox is nearly ready. The next version is:</p>
   <ul>
   <li>Smaller in file size</li>
   <li>Easier to debug</li>
