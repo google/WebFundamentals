@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-25 #}
-{# wf_published_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-05 #}
+{# wf_published_on: 2018-02-05 #}
 
 # HTTP Requests {: .page-title }
 
@@ -88,7 +88,9 @@ with small images such as icons, where extra HTTP requests to fetch multiple sma
 are particularly wasteful.
 
 The basic idea is to combine small images into one physical image file and then use CSS 
-background positioning to display the right part of the image at the right place on the 
+background positioning to display only the right part of the image -- commonly called a 
+[sprite](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS) 
+-- at the right place on the 
 page. The CSS repositioning is fast and seamless, works on an already-downloaded resource, 
 and makes an excellent tradeoff for the otherwise-required multiple HTTP requests and image 
 downloads.
@@ -100,8 +102,8 @@ might combine them into one image file, like this.
 ![socialmediaicons.png](images/image_500.png)
 
 Then, instead of using different images for the links, just retrieve the entire image once 
-and use CSS background positioning for each link to display the correct part of the image 
-for the link. 
+and use CSS background positioning ("spriting") for each link to display the correct part of 
+the image for the link. 
 
 Here's some sample CSS.
 
@@ -136,9 +138,9 @@ Here's some HTML to use with that CSS.
 
 ```
 <p>Find us on:</p>
-<p><a class="facebook" href="www.facebook.com"></a></p>
-<p><a class="twitter" href="www.twitter.com"></a></p>
-<p><a class="pinterest" href="www.pinterest.com"></a></p>
+<p><a class="facebook" href="https://facebook.com"></a></p>
+<p><a class="twitter" href="https://twitter.com"></a></p>
+<p><a class="pinterest" href="https://pinterest.com"></a></p>
 ```
 
 Instead of including separate images in the links themselves, just apply the CSS classes 
@@ -153,7 +155,9 @@ at [WellStyled](http://wellstyled.com/css-nopreload-rollovers.html).
 ## A Caveat
 
 In our discussion of combining text and graphics, we should note that the 
-newer HTTP/2 protocol may change how you consider combining resources. For example, common and 
+newer 
+[HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/) 
+protocol may change how you consider combining resources. For example, common and 
 valuable techniques like minification, server compression, and image optimization should be 
 continued on HTTP/2. However, physically combining files as discussed above might not achieve 
 the desired result on HTTP/2. 
@@ -164,21 +168,24 @@ resource with a fairly dynamic one to save a request, you may adversely affect y
 effectiveness by forcing the static portion of the resource to be reloaded just to fetch 
 the dynamic portion.
 
-The features and benefits of HTTP/2 are worth exploring in this context. A great place to 
-start is this Google Web Fundamentals article, 
-[Introduction to HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/).
+The features and benefits of HTTP/2 are worth exploring in this context.
 
 ## JavaScript Position and Inline Push
 
 We're assuming so far that all CSS and JavaScript resources exist in external files, and 
-that's generally the best way to deliver them. There are, however, two positional factors 
+that's generally the best way to deliver them. Bear in mind that script loading is a 
+large and complex issue -- see this great HTML5Rocks article, 
+[Deep Dive Into the Murky Waters of Script Loading](https://www.html5rocks.com/en/tutorials/speed/script-loading/), 
+for a full treatment. There are, however, two fairly straightforward positional factors 
 about JavaScript that are worth considering.
 
 ### Script Location
 
 Common convention is to put script blocks in the page head. The problem with this positioning 
 is that, typically, little to none of the script is really meant to execute until the page is 
-displayed, but it still blocks page rendering until the script file is loaded.
+displayed but, while it is loading, it unnecessarily blocks page rendering. Identifying 
+render-blocking script is one of the reporting rules of 
+[PageSpeed Insights](https://developers.google.com/speed/docs/insights/BlockingJS). 
 
 A simple and effective solution is to reposition the deferred script block at the end of the 
 page. That is, put the script reference last, just before the closing body tag. This allows 
@@ -187,26 +194,23 @@ the user perceives the initial content. For example:
 
 ```
 <html>
-
   <head>
-
   </head>
-
   <body>
-
     [Body content goes here.]
-
   <script src="mainscript.js"></script>
-
   </body>
-
 </html>
-```
+``` 
 
-The exception to this is any script that manipulates the initial content or provides 
-required page functionality prior to or during rendering. Critical scripts such as these 
-can be put into a separate file and loaded in the page head as usual, and the rest can 
-still be placed last thing in the page for loading only after the page is rendered. 
+An exception to this technique is any script that manipulates the initial content or DOM, 
+or provides required page functionality prior to or during rendering. Critical scripts 
+such as these can be put into a separate file and loaded in the page head as usual, and the 
+rest can still be placed last thing in the page for loading only after the page is rendered. 
+
+The order in which resources must be loaded for maximum efficiency is called the 
+*Critical Rendering Path*; you can find a thorough article about it at 
+[Bits of Code](https://bitsofco.de/understanding-the-critical-rendering-path/). 
 
 ### Code Location
 
