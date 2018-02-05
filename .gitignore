@@ -12,7 +12,7 @@ package-lock.json
 
 ## Files that are updated regularly from DevSite
 # These files will be updated by tools/update-resources.sh
-gae/styles/devsite-google-*.css
+gae/styles/devsite-*.css
 gae/scripts/footer-closure.js
 gae/scripts/framebox.js
 gae/scripts/jquery-2.1.1.min.js
