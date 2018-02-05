@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-18 #}
-{# wf_published_on: 2017-10-18 #}
+{# wf_updated_on: 2018-02-05 #}
+{# wf_published_on: 2018-02-05 #}
 
 # Overview {: .page-title }
 
@@ -30,14 +30,13 @@ abandon sites that take more than three seconds to load (source:
 [SOASTA Google study report](https://soasta.com/blog/google-mobile-web-performance-study/)).
 
 - Users visit more often, stay longer, search more, and buy more frequently on sites that load 
-quickly than on slower ones; a usage reduction of 0.5% (very significant at today's internet traffic 
-rates) can occur even when the slowdown is less than half a second (source: 
-[Google Research Blog](https://research.googleblog.com/2009/06/speed-matters.html)).
+quickly than on slower ones; one company found that a conversion increase of 7% resulted from a 
+speed improvement of as little as .85 seconds (source: [WPO Stats](https://wpostats.com/)).
 
 - Slow loading is detrimental for search engine optimization (SEO) because it can lower your site's 
-ranking, resulting in fewer visits, reads, and conversions; Google recently implemented site speed 
-as a ranking signal in its searches (source: 
-[Google Webmaster Central Blog](https://webmasters.googleblog.com/2010/04/using-site-speed-in-web-search-ranking.html)).
+ranking, resulting in fewer visits, reads, and conversions; in 2018, Google will implement site speed 
+as a ranking signal in its mobile searches (source: 
+[Search Engine Land](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
 
 Google has published extensive research on the impact of performance on user engagement, including 
 [Mobile Speed Matters](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/).
