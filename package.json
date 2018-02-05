@@ -70,6 +70,6 @@
     "precommit": "gulp update-updated_on",
     "prepush": "npm test",
     "prestart": "gulp build",
-    "postinstall": "gulp build"
+    "postinstall": "gulp post-install"
   }
 }
