@@ -69,7 +69,7 @@
     "test": "gulp test",
     "precommit": "gulp update-updated_on",
     "prepush": "npm test",
-    "prestart": "gulp build",
-    "postinstall": "gulp build"
+    "prestart": "tools/update-resources.sh && gulp build",
+    "postinstall": "tools/update-resources.sh && gulp build"
   }
 }

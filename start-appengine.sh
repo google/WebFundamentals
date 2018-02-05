@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-# echo "Building contributors files..."
-# node build-contributors.js
-
 port=$1
 if [ "$port" == "" ]; then
   port='8080'
