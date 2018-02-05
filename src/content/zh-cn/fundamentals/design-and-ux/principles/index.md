@@ -2,17 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:Google 和 AnswerLab 进行的一项研究对用户与各类移动网站的交互方式做了调查。其目标是回答一个问题，‘怎样才算出色的移动网站？’
 
-{# wf_published_on:2014-08-08 #}
-{# wf_updated_on:2015-09-17 #}
+{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # 怎样才算出色的移动网站？ {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)来回答这一问题。 
+Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)来回答这一问题。
 
 > 移动用户具有很强的目标导向。他们期望能够根据自身情况立即获得所需内容。
- 
+
 
 这项研究是通过与美国参与者进行长达 119 小时的亲自易用性实验来完成的。
 研究要求参与者在各类移动网站上执行关键任务。iOS 和 Android 用户都包括在内，用户在其自己的手机上测试网站。对于每个网站，研究都要求参与者在完成侧重于转化的任务（如购物或预订）时明确表达自己的想法。
@@ -208,7 +208,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 商务和转化
 
-成功：了解客户之旅，让用户根据自身情况进行转化。 
+成功：了解客户之旅，让用户根据自身情况进行转化。
 
 ### 让用户先探索、后表态
 
@@ -339,7 +339,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 例如，在检索收货和账单地址时，尝试使用 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)，或让用户能够将其收货地址复制到其账单地址（反之亦然）。
 
 
- 
+
 
 ## 易用性和机型
 
