@@ -165,8 +165,8 @@ landing_page:
           An npm module that can generate a complete service worker, inject
           a precache manifest and copy the Workbox files.
         buttons:
-        # - label: Learn more
-        #   path: ./workbox-build
+        - label: Learn more
+          path: ./workbox-build
         - label: Reference
           path: ../reference-docs/prerelease/module-workbox-build
 
