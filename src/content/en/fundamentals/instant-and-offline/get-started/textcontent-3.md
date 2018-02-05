@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-25 #}
-{# wf_published_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-05 #}
+{# wf_published_on: 2018-02-05 #}
 
 # Text Content {: .page-title }
 
@@ -87,7 +87,7 @@ This online tool also handles HTML, and automatically identifies the code type(s
 An NPM minification package that integrates into the Grunt workflow.
 - [Node module for Gulp](https://www.npmjs.com/package/gulp-html-minifier):
 An NPM minification package that integrates into the Gulp workflow. 
-- [Node module HTML Minifier](https://www.npmjs.com/package/html-minifier):
+- [Node module for HTML Minifier](https://www.npmjs.com/package/html-minifier):
 An NPM package that includes a useful chart comparing its compression results with other methods.
 
 ### Frameworks
@@ -190,83 +190,40 @@ If you need most of a given library's features, fine; but if you only need one o
 things, you can save a lot of download time by replacing those features with single-use 
 functions or CSS rules.
 
-For example, a website might use jQuery's handy `slideToggle` feature to expand and collapse 
-a div, like this.
+For example, a website might use jQuery's handy `toggleClass` feature to flip classes in order 
+to do something specific.
 
-`<a href="javascript:void(0)" onclick="$('#more').slideToggle()">More...</a>`
+`$(el).toggleClass(className);`
 
-Yes, it works great and it's easy to code, but jQuery is a lot of download overhead for one text 
-effect. You might consider swapping out that huge library for a simpler -- and far smaller -- 
-single-purpose function, like this 
-(source: [W3Schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp)).
-
-```
-function myFunction() {
-  var x = document.getElementById('myDIV');
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
-  }
-}
-```
-
-You could even go with pure CSS using a transition, like this nifty 475-character solution 
-(source: [CodePen/Paul O'Brien](https://codepen.io/paulobrien/pen/tpmAi)).
+Yes, it works great and it's easy to code, but jQuery is a lot of download overhead for one 
+effect. You might consider swapping out that huge library for a far smaller 
+single-purpose function 
+(source: [You Might Not Need jQuery](http://youmightnotneedjquery.com/#toggle_class)).
 
 ```
-label {
-    display:block;
-    margin:20px 0 0;
-    border-bottom:1px solid green;
+if (el.classList) {
+  el.classList.toggle(className);
+} else {
+  var classes = el.className.split(' ');
+  var existingIndex = classes.indexOf(className);
+
+  if (existingIndex >= 0)
+    classes.splice(existingIndex, 1);
+  else
+    classes.push(className);
+
+  el.className = classes.join(' ');
 }
-label:hover { text-decoration:underline }
-input {
-    position:absolute;
-    left:-999em
-}
-.hide {
-    width:50%;
-    border:1px solid #000;
-    background:red;
-    max-height:99em;
-    opacity:1;
-    height:auto;
-    overflow:hidden;
-    transition:opacity 1.5s linear, max-height 1.5s linear;
-}
-.hide p {
-    padding:10px;
-    margin:0
-}
-input[type=checkbox]:checked + div {
-    opacity:0;
-    max-height:0;
-    border:none;
-}
-.follow{border-top:1px solid blue;margin:0}
 ```
 
 The point is, if you don't need an entire 250k library, don't download it. Instead, find 
 and use small, single-purpose routines that do only what you need. (And don't forget to 
 minify them!)
 
-You can find an interesting and to-the-point take on alternatives to jQuery code at 
+You can find many interesting and to-the-point alternatives to jQuery code at 
 [You Might Not Need jQuery](http://youmightnotneedjquery.com/), which explores how the 
 modern web has evolved to provide many of the same capabilities for which we might 
 have previously used jQuery.
-
-## Prioritize Text Content
-
-Web pages aren't necessarily top-down. Physical sequence -- the order in which elements 
-originally appear in the DOM -- is frequently overridden by CSS positioning rules to place 
-elements in specific locations on the page. This is a valid technique, but overuse can slow 
-down page loading and rendering.
-
-When possible, prioritize content using "above the fold" strategy; place more important items 
-physically higher in the page to take advantage of the existing DOM order. This is particularly 
-preferable for large blocks of text, and also helps reduce positioning-related CSS, all of 
-which improves download time.
 
 ## Summary
 
