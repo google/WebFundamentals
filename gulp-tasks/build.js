@@ -306,6 +306,13 @@ gulp.task('build:updates', function() {
   wfTemplateHelper.renderTemplate(template, context, outFile);
 });
 
+/**
+ * Builds all the things!
+ */
+gulp.task('post-install', function(cb) {
+  runSequence('puppeteer:build', 'build', cb);
+});
+
 
 /**
  * Builds all the things!
