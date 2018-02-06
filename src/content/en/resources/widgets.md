@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2017-05-21 #}
+{# wf_updated_on: 2018-02-05 #}
 {# wf_published_on: 2016-09-13 #}
+{# wf_blink_components: N/A #}
 
 # Widgets {: .page-title }
 
@@ -50,6 +51,24 @@ interpolated.
 </pre>
 
 Note: Included files using this syntax must be HTML. Markdown will not be processed.
+
+## Article translation is out of date
+
+If you update an article that has a localized version, please add the
+`translation-out-of-date` widget. The widget has been translated into all
+languages we support and recommends that developers check the English version
+as the localized version may be out of date.
+
+The widget looks like:
+
+{% include "web/_shared/translation-out-of-date.html" %}
+
+
+To include it, use:
+
+<pre class="prettyprint">
+&#123;% include "web/_shared/translation-out-of-date.html" %}
+</pre>
 
 ## Including live JavaScript in pages (`framebox`)
 

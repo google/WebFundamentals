@@ -3,16 +3,16 @@ book_path: /web/fundamentals/_book.yaml
 description: Google y AnswerLab se sometieron a un estudio que evaluó cómo los usuarios interactúan con un diverso conjunto de sitios móviles. El objetivo fue responder la pregunta "¿Qué hace que un sitio móvil sea bueno?"
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # ¿Qué hace que un sitio para dispositivo móvil sea bueno? {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google y AnswerLab realizaron un [estudio de investigación](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) para responder esta pregunta. 
+Google y AnswerLab realizaron un [estudio de investigación](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) para responder esta pregunta.
 
 > Los usuarios de dispositivos móviles están orientados al objetivo. Esperan poder obtener lo que
-> necesitan, inmediatamente, y bajo sus propias condiciones. 
+> necesitan, inmediatamente, y bajo sus propias condiciones.
 
 El estudio se llevó a cabo durante sesiones de usabilidad en persona de 119 horas, con
 participantes en los EE. UU. Se les pidió a los participantes que realicen tareas claves en un
@@ -214,7 +214,7 @@ asegurarte de que los usuarios obtengan los resultados del segmento más relevan
 
 ## Comercio y conversión
 
-Success: Comprende los viajes de tu cliente y permíteles a los usuarios convertir bajo sus propias condiciones. 
+Success: Comprende los viajes de tu cliente y permíteles a los usuarios convertir bajo sus propias condiciones.
 
 ### Permíteles a los usuarios explorar antes de que se comprometan
 
@@ -349,7 +349,7 @@ para que los usuarios puedan completar fácilmente formularios con datos ingresa
 campos con información que ya conoces. Por ejemplo, cuando recuperes las direcciones de envío
 y facturación, intenta usar
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
-o habilita a los usuarios para que copien su dirección de envío a su dirección de facturación (o viceversa). 
+o habilita a los usuarios para que copien su dirección de envío a su dirección de facturación (o viceversa).
 
 ## Usabilidad y factor de formulario
 

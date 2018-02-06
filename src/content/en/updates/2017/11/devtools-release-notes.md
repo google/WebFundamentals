@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Monitor, Console Sidebar, and Console groupings.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-02-05 #}
 {# wf_published_on: 2017-11-28 #}
 {# wf_tags: chrome64,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -14,9 +14,6 @@ description: Performance Monitor, Console Sidebar, and Console groupings.
 # What's New In DevTools (Chrome 64) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-Note: The video version of these release notes will be published around
-late-January 2018.
 
 Welcome back! New features coming to DevTools in Chrome 64 include:
 

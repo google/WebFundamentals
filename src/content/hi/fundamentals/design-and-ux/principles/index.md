@@ -3,13 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2015-09-17 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # क्या है जो एक अच्छी मोबाइल साइट बनाता है {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-इस प्रश्न का उत्तर पाने के लिए एक [शोध अध्ययन](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals){: .external } किया. महत्वपूर्ण तथ्य: 
+इस प्रश्न का उत्तर पाने के लिए एक [शोध अध्ययन](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals){: .external } किया. महत्वपूर्ण तथ्य:
 
 
 <blockquote class="wf-blockquote">
@@ -20,7 +20,7 @@ description: Google and AnswerLab undertook a study examining how users interact
 यह अध्ययन ११९ घंटो तक अमेरिका में प्रतिभागियों के साथ में व्यक्ति प्रयोज्य सत्रों के माध्यम से आयोजित किया गया था । प्रतिभागियों को मोबाइल साइटों के विविध सेट में महत्वपूर्ण कार्य करने के लिए कहा गया।
  आईओएस और एंड्रॉयड उपयोगकर्ताओं को शामिल किया गया था, और उपयोगकर्ताओं को अपने खुद के फोन पर साइटों का परीक्षण किया। प्रत्येक साइट के लिए, प्रतिभागियों को जोर से अपने विचारों को आवाज देने के लिए कहा गया था जैसे ही उन्होंने रूपांतरण केंद्रित कार्यों जैसे की खरीदी करना या आरक्षण बुक करना,  को पूरा करते है.
 
-अध्ययन ने पांच श्रेणियों में बांटे हुए 25 मोबाइल साइट डिजाइन सिद्धांतों को उजागर किया। 
+अध्ययन ने पांच श्रेणियों में बांटे हुए 25 मोबाइल साइट डिजाइन सिद्धांतों को उजागर किया।
 
 ## Home page and site navigation
 
@@ -210,7 +210,7 @@ ensure that users get results from the most relevant segment.
 
 ## Commerce and conversion
 
-Success: Understand your customer journeys and let users convert on their own terms. 
+Success: Understand your customer journeys and let users convert on their own terms.
 
 ### Let users explore before they commit
 
@@ -345,7 +345,7 @@ so that users can easily complete forms with pre-populated data. Pre-fill
 fields with information you already know. For example, when retrieving shipping
 and billing addresses, try to use
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
-or enable users to copy their shipping address to their billing address (or vice versa). 
+or enable users to copy their shipping address to their billing address (or vice versa).
 
 ## Usability and form factor
 
@@ -360,7 +360,7 @@ harder to use than desktop-only sites.
 
 ### Don't make users pinch-to-zoom
 
-Users are comfortable with scrolling sites vertically, but not horizontally. 
+Users are comfortable with scrolling sites vertically, but not horizontally.
 Avoid large, fixed-width elements. Use
 [CSS media queries](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 to apply different stylings for different screens. Don’t create content that

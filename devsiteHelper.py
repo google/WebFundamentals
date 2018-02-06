@@ -179,8 +179,18 @@ def expandBook(book, lang='en'):
     results = []
     for item in book:
       if 'include' in item:
-        newItems = yaml.load(readFile(item['include'], lang))
-        results = results + expandBook(newItems['toc'], lang)
+        tocFileContents = readFile(item['include'], lang)
+        if tocFileContents is None:
+          logging.error('Error in expandBook, unable to read %s', item['include'])
+          items = [{
+            "title": '** ERROR: TOC not found. **',
+            "path": '#',
+            "status": 'deprecated'
+          }]
+          results = results + expandBook(items, lang)
+        else:
+          newItems = yaml.load(tocFileContents)
+          results = results + expandBook(newItems['toc'], lang)
       else:
         results.append(expandBook(item, lang))
     return results
