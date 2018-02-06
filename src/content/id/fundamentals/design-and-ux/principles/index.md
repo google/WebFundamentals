@@ -3,16 +3,16 @@ book_path: /web/fundamentals/_book.yaml
 description: Google dan AnswerLab melakukan penelitian mengenai cara pengguna berinteraksi dengan berbagai situs seluler. Tujuannya adalah untuk menjawab pertanyaan, 'Apa yang membuat sebuah situs seluler bagus?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2015-09-17 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # Apa yang Membuat Sebuah Situs Seluler Bagus? {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google dan AnswerLab melakukan [studi penelitian](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) untuk menjawab pertanyaan ini. 
+Google dan AnswerLab melakukan [studi penelitian](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) untuk menjawab pertanyaan ini.
 
 > Pengguna seluler sangat berorientasi pada tujuan. Mereka berharap bisa mendapatkan apa yang mereka
-> butuhkan, dengan segera, dan dengan cara mereka sendiri. 
+> butuhkan, dengan segera, dan dengan cara mereka sendiri.
 
 Penelitian ini dilakukan dengan sesi kegunaan per-orang selama 119 jam dengan
 partisipan dari AS. Para partisipan diminta untuk melakukan tugas-tugas kunci di
@@ -214,7 +214,7 @@ memastikan bahwa pengguna mendapatkan hasil dari segmen yang paling relevan.
 
 ## Niaga dan konversi
 
-Berhasil: Memahami perjalanan pelanggan Anda dan membiarkan pengguna melakukan konversi dengan cara mereka sendiri. 
+Berhasil: Memahami perjalanan pelanggan Anda dan membiarkan pengguna melakukan konversi dengan cara mereka sendiri.
 
 ### Biarkan pengguna menjelajahi sebelum mereka berkomitmen
 
@@ -349,7 +349,7 @@ sehingga pengguna bisa dengan mudah melengkapi formulir dengan data pra-isi. Pra
 bidang dengan informasi yang sudah Anda tahu. Misalnya, ketika mengambil alamat pengiriman
 dan penagihan, cobalah untuk menggunakan
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
-atau memperbolehkan pengguna menyalin alamat pengiriman ke alamat penagihan mereka (atau sebaliknya). 
+atau memperbolehkan pengguna menyalin alamat pengiriman ke alamat penagihan mereka (atau sebaliknya).
 
 ## Kegunaan dan faktor bentuk
 

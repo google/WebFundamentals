@@ -3,16 +3,19 @@ book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2015-09-17 #}
+{# wf_updated_on: 2018-02-05 #}
+{# wf_blink_components: N/A #}
 
 # What Makes a Good Mobile Site? {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google and AnswerLab conducted a [research study](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) to answer this question. 
+Google and AnswerLab conducted a
+[research study](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)
+to answer this question.
 
 > Mobile users are very goal-oriented. They expect to be able to get what they
-> need, immediately, and on their own terms. 
+> need, immediately, and on their own terms.
 
 The study was held through 119 hour-long, in-person usability sessions with
 participants in the US. Participants were asked to perform key tasks across a
@@ -45,7 +48,8 @@ or “below the fold” (the part of the webpage that can’t be seen without sc
   <figure id="fig1">
     <img src="images/hpnav-cta-bad.png">
     <figcaption class="warning">
-      <b>DON'T</b>: Waste precious above-the-fold space with vague calls-to-action like “learn more”.
+      <b>DON'T</b>: Waste precious above-the-fold space with vague
+      calls-to-action like “learn more”.
      </figcaption>
   </figure>
 </div>
@@ -96,7 +100,8 @@ may see a negative impact to their search rankings](https://webmasters.googleblo
   <figure id="fig1">
     <img src="images/hpnav-promo-good.png">
     <figcaption class="success">
-      <b>DO</b>: Promotions should be easily dismissable and not distract from the experience.
+      <b>DO</b>: Promotions should be easily dismissable and not distract from
+      the experience.
      </figcaption>
   </figure>
 </div>
@@ -104,7 +109,8 @@ may see a negative impact to their search rankings](https://webmasters.googleblo
   <figure id="fig1">
     <img src="images/hpnav-promo-bad.png">
     <figcaption class="warning">
-      <b>DON'T</b>: Interstitials (sometimes called door slams) often annoy users and make using the site a pain.
+      <b>DON'T</b>: Interstitials (sometimes called door slams) often annoy
+      users and make using the site a pain.
      </figcaption>
   </figure>
 </div>
@@ -145,7 +151,8 @@ box in a menu.
 Users don’t scan through multiple pages of results to find what they’re looking
 for. Make life easier on users by auto-completing queries, correcting
 misspellings, and suggesting related queries. Rather than reinventing the
-wheel, consider robust products like [Google Custom Search](https://cse.google.com/cse/){: .external }.
+wheel, consider robust products like
+[Google Custom Search](https://cse.google.com/cse/){: .external }.
 
 <div class="attempt-left">
   <figure id="fig1">
@@ -197,9 +204,11 @@ many results will be returned when a specific filter is applied.
 
 <div class="attempt-right">
   <figure id="fig1">
-    <img src="images/ss-guide-good.png" alt="Zappos guides users by asking them what they're looking for.">
+    <img src="images/ss-guide-good.png"
+         alt="Zappos guides users by asking them what they're looking for.">
     <figcaption class="success">
-      <b>DO</b>: Help users to find what they're looking for by guiding them in the right direction.
+      <b>DO</b>: Help users to find what they're looking for by guiding them
+      in the right direction.
      </figcaption>
   </figure>
 </div>
@@ -212,7 +221,7 @@ ensure that users get results from the most relevant segment.
 
 ## Commerce and conversion
 
-Success: Understand your customer journeys and let users convert on their own terms. 
+Success: Understand your customer journeys and let users convert on their own terms.
 
 ### Let users explore before they commit
 
@@ -347,7 +356,7 @@ so that users can easily complete forms with pre-populated data. Pre-fill
 fields with information you already know. For example, when retrieving shipping
 and billing addresses, try to use
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
-or enable users to copy their shipping address to their billing address (or vice versa). 
+or enable users to copy their shipping address to their billing address (or vice versa).
 
 ## Usability and form factor
 
@@ -362,7 +371,7 @@ harder to use than desktop-only sites.
 
 ### Don't make users pinch-to-zoom
 
-Users are comfortable with scrolling sites vertically, but not horizontally. 
+Users are comfortable with scrolling sites vertically, but not horizontally.
 Avoid large, fixed-width elements. Use
 [CSS media queries](/web/fundamentals/design-and-ux/responsive/#use-css-media-queries-for-responsiveness)
 to apply different stylings for different screens. Don’t create content that
@@ -457,7 +466,8 @@ populate them through a clear call-to-action like “Find Near Me”.
   <figure id="fig1">
     <img src="images/sw-navigation-bad.png">
     <figcaption class="warning">
-      <b>DON'T</b>: Asking for it immediately on the homepage as the site loads results in a poor user experience.
+      <b>DON'T</b>: Asking for it immediately on the homepage as the site
+      loads results in a poor user experience.
      </figcaption>
   </figure>
 </div>
