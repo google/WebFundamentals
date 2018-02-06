@@ -6,8 +6,14 @@ upper_tabs:
       other:
       - name: Guides
         contents:
-        - title: Overview
-          path: /web/fundamentals/
+        - title: Getting Started
+          style: accordion
+          section:
+          - title: Overview
+            path: /web/fundamentals/
+          - include: /web/fundamentals/_toc-base.yaml
+          - title: Glossary
+            path: /web/fundamentals/glossary
         - include: /web/fundamentals/architecture/_toc.yaml
         - include: /web/fundamentals/design-and-ux/_toc.yaml
         - include: /web/fundamentals/integration/_toc.yaml
@@ -18,10 +24,7 @@ upper_tabs:
           - include: /web/fundamentals/vr/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
-        - include: /web/fundamentals/_toc-base.yaml
         - break: True
-        - title: Glossary
-          path: /web/fundamentals/glossary
       - name: Code Labs
         contents:
         - include: /web/fundamentals/codelabs/_toc.yaml

@@ -1,12 +1,9 @@
 toc:
-- title: Base Technologies
-  style: accordion
+- title: Core Technologies
   section:
-  - title: HTML & DOM
-    section:
-    - include: /web/fundamentals/web-components/_toc.yaml
+  - include: /web/fundamentals/web-components/_toc.yaml
   - title: JavaScript
-    section:  
+    section:
     - title: Async Functions
       path: /web/fundamentals/primers/async-functions
     - title: Promises
