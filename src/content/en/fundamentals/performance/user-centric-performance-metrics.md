@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: User-centric Performance Metrics
 
-{# wf_updated_on: 2018-02-02 #}
+{# wf_updated_on: 2018-02-06 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -470,7 +470,7 @@ The attribution property will tell you what frame context was responsible for
 the long task, which is helpful in determining if third party iframe scripts are
 causing issues. Future versions of the spec are planning to add more granularity
 and expose script URL, line, and column number, which will be very helpful in
-determine if your own scripts are causing slowness.
+determining if your own scripts are causing slowness.
 
 ### Tracking input latency
 
@@ -599,8 +599,8 @@ If you're tracking goal completions or ecommerce conversions in analytics, you
 could create reports that explore any correlations between these and the app's
 performance metrics. For example:
 
-* Do users with faster interactive times buy more stuff? Do users who experience
-* more long tasks during the checkout flow drop off at higher rates?
+* Do users with faster interactive times buy more stuff?
+* Do users who experience more long tasks during the checkout flow drop off at higher rates?
 
 If correlations are found, it'll be substantially easier to make the business
 case that performance is important and should be prioritized.
