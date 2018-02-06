@@ -99,7 +99,7 @@ def readFile(requestedFile, lang='en'):
       result = result.decode('utf8')
       return result
     except Exception as e:
-      result = ' - Exception occured trying to read: ' + requestedFile
+      result = ' - Exception occurred trying to read: ' + requestedFile
       logging.exception(result)
       return None
   else:
@@ -283,10 +283,10 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     logging.exception(' - Unable to read or parse primary book.yaml')
     logging.exception(e)
     whoops = '<h2>Whoops!</h2>'
-    whoops += '<p>An error occured while trying to parse and build the'
+    whoops += '<p>An error occurred while trying to parse and build the'
     whoops += ' left hand navigation. Check the error logs.'
     whoops += '</p>'
-    whoops += '<p>Exception occured.</p>'
+    whoops += '<p>Exception occurred.</p>'
     return whoops
 
 
