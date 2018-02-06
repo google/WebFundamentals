@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Implications for Web Developers and Chrome’s mitigations.
 
-{# wf_updated_on: 2018-02-03 #}
-{# wf_published_on: 2018-02-03 #}
+{# wf_updated_on: 2018-02-06 #}
+{# wf_published_on: 2018-02-06 #}
 {# wf_tags: security #}
 {# wf_featured_image: /web/updates/images/generic/encryption.png #}
 {# wf_featured_snippet: Implications for Web Developers and Chrome’s mitigations. #}
