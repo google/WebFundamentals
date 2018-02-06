@@ -1,0 +1,14 @@
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<form>
+  <input id="target" type="text" size="20" placeholder="Message"/>
+</form>
+<aside id="response" class="success" style="display:none">Correct!</aside>
+<script>
+let target = document.getElementById('target'),
+    response = document.getElementById('response');
+target.addEventListener('keyup', (e) => {
+  response.style.display = target.value === 'coffee' ? 'block' : 'none';
+  devsite.framebox.AutoSizeClient.updateSize();
+});
+</script>
+{% endframebox %}
