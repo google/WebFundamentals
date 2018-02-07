@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Some Insecure Resources Can Be Upgraded To HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-06 #}
+{# wf_updated_on: 2018-02-07 #}
 {# wf_published_on: 2018-02-06 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -44,7 +44,7 @@ Rather than HTTP:
 
     http://example.com
 
-Even if you are not ready to fully upgrade your site to HTTPS yet, upgarding some URLS to
+Even if you are not ready to fully upgrade your site to HTTPS yet, upgrading some URLS to
 HTTPS can increase the security of your users and make it easier for you to avoid mixed
 content warnings when you do upgrade to HTTPS in the future. See [Uses HTTPS][https] for
 recommendations on how to upgrade your site to HTTPS.
