@@ -2,13 +2,13 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2017-12-17 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
 # Common Recipes {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page contains a set of example caching strategies you can use with Workbox.
 
@@ -20,7 +20,7 @@ device.
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('https://fonts.googleapis.com/(.*)'),
+  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
   workbox.strategies.cacheFirst({
     cacheName: 'googleapis',
     plugins: [

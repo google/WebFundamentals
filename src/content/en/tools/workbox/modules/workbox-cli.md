@@ -3,12 +3,12 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
 
-{% include "web/tools/workbox/_shared/alpha.html" %}
+{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What's the Workbox CLI?
 
@@ -24,10 +24,10 @@ process, with flexible configurations.
 Installing the CLI is simple, just run the following command in your
 terminal.
 
-* {NPM}
+* {npm}
 
     <pre class="devsite-terminal">
-    npm install --global workbox-cli
+    npm install workbox-cli@beta --global
     </pre>
 
 * {Yarn}
@@ -79,7 +79,7 @@ Developers who are happy with Workbox's built-in precaching and runtime caching
 capabilities, and don't need to customize their service worker's behavior
 are recommended to use `generateSW` mode.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
 
 ### `injectManifest`
 
@@ -100,7 +100,7 @@ You can use Workbox in this mode like so:
 workbox injectManifest path/to/config.js
 </pre>
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.md" %}
+{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
 
 ### `copyLibraries`
 
@@ -166,3 +166,45 @@ Replace `<mode>` with `generateSW` or `injectManifest` (depending
 on your use case) and `<path/to/config.js>` with the path to
 your configuration options. Your configuration might have been created
 automatically by `workbox wizard` or tweaked manually.
+
+## Configuration
+
+### Options used by `generateSW`
+
+Below is a list of options used by **just** the `generateSW` command.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options only apply to `generateSW`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
+  </tbody>
+</table>
+
+### Options used by `injectManifest`
+
+Below is a list of options used by **just** the `injectManifest` command.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">These options only apply to `injectManifest`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
+{% include "web/tools/workbox/_shared/config/groups/build-inject-schema.html" %}
+  </tbody>
+</table>
+
+### Options used by both
+
+The remaining options are used by both commands.
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan="2">Used by both `generateSW` and `injectManifest`.</th>
+    </tr>
+{% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
+  </tbody>
+</table>

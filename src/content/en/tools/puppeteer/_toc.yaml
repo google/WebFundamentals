@@ -1,0 +1,54 @@
+toc:
+- title: Get Started
+  style: accordion
+  section:
+  - title: Overview
+    path: /web/tools/puppeteer/
+  - title: Get Started
+    path: /web/tools/puppeteer/get-started
+  - title: API Reference
+    section:
+    - include: /web/tools/puppeteer/_src/api_section.yaml
+  - title: Examples
+    path: /web/tools/puppeteer/examples
+
+- title: Resources
+  style: accordion
+  section:
+  - title: Debugging tips
+    path: /web/tools/puppeteer/debugging
+  - title: Troubleshooting
+    path: /web/tools/puppeteer/troubleshooting
+  - title: Headless Chrome
+    section:
+    - title: Getting Started with Headless Chrome
+      path: /web/updates/2017/04/headless-chrome
+    - title: Automated testing with Headless Chrome
+      path: /web/updates/2017/06/headless-karma-mocha-chai
+  - title: DevTools Protocol APIs
+    path: 'https://chromedevtools.github.io/devtools-protocol/'
+    status: external
+  - title: Try Puppeteer!
+    path: 'https://try-puppeteer.appspot.com/'
+    status: external
+
+- title: Project
+  style: accordion
+  section:
+  - title: NPM
+    path: 'https://www.npmjs.com/package/puppeteer'
+    status: external
+  - title: Github
+    path: 'https://github.com/GoogleChrome/puppeteer'
+    status: external
+  - title: Report an issue
+    path: 'https://github.com/GoogleChrome/puppeteer/issues/new'
+    status: external
+  - title: Releases
+    path: 'https://github.com/GoogleChrome/puppeteer/releases'
+    status: external
+  - title: How to Contribute
+    path: 'https://github.com/GoogleChrome/puppeteer/blob/master/CONTRIBUTING.md'
+    status: external
+  - title: FAQ
+    path: /web/tools/puppeteer/faq

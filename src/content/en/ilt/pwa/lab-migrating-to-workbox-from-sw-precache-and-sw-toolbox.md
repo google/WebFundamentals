@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-12-06 #}
+{# wf_updated_on: 2018-01-18 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 [Workbox](https://workboxjs.org/) is the successor to  [`sw-precache`](https://github.com/GoogleChrome/sw-precache) and  [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox). It is a collection of libraries and tools used for generating a service worker, precaching, routing, and runtime-caching. Workbox also includes modules for easily integrating  [background sync](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-background-sync) and offline  [Google Analytics](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics) into your service worker. See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an explanation of each module contained in Workbox.
 
-This lab shows you how to take an existing PWA that uses `sw-precache` and `sw-toolbox` and migrate it to Workbox to create optimal service worker code. This lab may only be useful to you if you have an existing PWA that was written with sw-precache and sw-toolbox. If you want to learn how to use Workbox from scratch, see  [this lab](/web/ilt/pwa/lab-workbox).
+This lab shows you how to take an existing PWA that uses `sw-precache` and `sw-toolbox` and migrate it to Workbox to create optimal service worker code. If you want to learn how to write a PWA that uses Workbox, then use  [this lab](/web/ilt/pwa/lab-workbox) instead.
 
 #### What you will learn
 
@@ -90,6 +90,8 @@ gulp.task('service-worker', function(callback) {
 This lab shows you how to translate this code so that it uses `workbox-build`, which is the Workbox version of `sw-precache`.
 
 Let's look at the custom `sw-toolbox` script now. Open __app/js/toolbox-script.js__ and look at the code. The file contains a couple routes that use the `cacheFirst` strategy to handle requests for Google fonts and images, and puts them into caches named `googleapis` and `images`, respectively:
+
+#### app/js/toolbox-script.js
 
 ```
 toolbox.router.get('/(.*)', toolbox.cacheFirst, {

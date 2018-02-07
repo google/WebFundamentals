@@ -142,7 +142,7 @@ commands going across the wire, communicating with the browser.
 
 ### The Puppeteer API {: #puppeteer }
 
-[Puppeteer](https://github.com/GoogleChrome/puppeteer) is a Node library
+[Puppeteer](/web/tools/puppeteer/) is a Node library
 developed by the Chrome team. It provides a high-level API to control headless
 (or full) Chrome. It's similar to other automated testing libraries like Phantom
 and NightmareJS, but it only works with the latest versions of Chrome.
@@ -165,7 +165,7 @@ const puppeteer = require('puppeteer');
 (async() => {
   const browser = await puppeteer.launch();
   console.log(await browser.version());
-  browser.close();
+  await browser.close();
 })();
 ```
 
@@ -175,13 +175,12 @@ const puppeteer = require('puppeteer');
 const puppeteer = require('puppeteer');
 
 (async() => {
-
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
-await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle'});
+await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle2'});
 await page.pdf({path: 'page.pdf', format: 'A4'});
 
-browser.close();
+await browser.close();
 })();
 ```
 

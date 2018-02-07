@@ -1,0 +1,88 @@
+<div class="devsite-landing-row-item {{ item.classname }}
+            {% if item.icon %}devsite-landing-row-item-with-icon{% endif %}
+            {% if not item.code_block and not item.youtube_id and not item.video_path and not item.image_path and not item.custom_image and not item.custom_html %}
+              devsite-landing-row-item-no-image
+  {% endif %}">
+
+  {% if item.custom_html %}
+    {{ item.custom_html|safe }}
+  {% endif %}
+
+  {% if item.youtube_id %}
+    <div class="devsite-landing-row-item-media {% if item.image_left %}devsite-landing-row-item-image-left{% endif %}">
+      <div class="devsite-landing-row-item-youtube">
+        <iframe data-video-id="{{ item.youtube_id }}" data-autohide="1" frameborder="0"
+                data-showinfo="0" allowfullscreen="" class="devsite-embedded-youtube-video"></iframe>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if item.custom_image %}
+    <figure class="devsite-landing-row-item-image
+                   devsite-landing-row-item-custom-image
+                   devsite-background devsite-background-{{ item.custom_image.background }}">
+      {% if item.path %}<a href="{{ item.path }}">{% endif %}
+        <div class="devsite-landing-row-item-custom-image-icon material-icons">
+          {{ item.custom_image.icon_name }}
+        </div>
+      {% if item.path %}</a>{% endif %}
+
+    </figure>
+  {% endif %}
+
+  {% if item.icon %}
+    {% if item.path %}
+    <a href="{{ item.path }}">
+    {% endif %}
+    <div class="devsite-landing-row-item-icon-container">
+      {% if item.icon.icon_name %}
+      <div class="devsite-landing-row-item-icon material-icons">
+        {{ item.icon.icon_name }}
+      </div>
+      {% endif %}
+      {% if item.icon.path %}
+      <img class="devsite-landing-row-item-icon" src="{{ item.icon.path }}">
+      {% endif %}
+    </div>
+    {% if item.path %}
+    </a>
+    {% endif %}
+  {% endif %}
+
+
+  {% if item.image_path %}
+  <figure class="devsite-landing-row-item-image">
+    <img src="{{ item.image_path }}" {%if item.image_left %}devsite-landing-row-item-image-left{% endif %}">
+  </figure>
+  {% endif %}
+
+
+  {% if item.description %}
+  <div class="devsite-landing-row-item-description {% if item.icon %}devsite-landing-row-item-icon-description{% endif %}">
+    {% if item.heading %}
+      {% if item.path %}
+      <a href="{{ item.path }}">
+      {% endif %}
+        <h3 id="{{ item.heading|slugify }}">{{item.heading|safe}}</h3>
+      {% if item.path %}
+      </a>
+      {% endif %}
+    {% endif %}
+    <div class="devsite-landing-row-item-description-content">
+      {{ item.description|safe }}
+    </div>
+
+    {% if item.buttons %}
+      <div class="devsite-landing-row-item-buttons">
+      {% for button in item.buttons %}
+        <a href="{{ button.path }}"
+          class="{% if button.classname %}{{ button.classname }}{% else %}button button-white{% endif %}">
+          {{ button.label }}
+        </a>
+      {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+  {% endif %}
+</div>

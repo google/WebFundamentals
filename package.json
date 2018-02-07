@@ -24,7 +24,7 @@
     "husky": "^0.14.3",
     "inquirer": "^3.3.0",
     "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
-    "workbox-build": "^3.0.0-alpha.3"
+    "workbox-build": "^3.0.0-beta.0"
   },
   "private": true,
   "dependencies": {
@@ -53,6 +53,7 @@
     "remark-html": "^5.1.0",
     "remark-lint": "^5.4.0",
     "remote-git-tags": "^2.0.0",
+    "request": "^2.83.0",
     "require-dir": "^0.3.0",
     "rsync": "^0.5.0",
     "run-sequence": "^1.2.2",
@@ -66,8 +67,9 @@
     "clean": "gulp clean",
     "start": "./start-appengine.sh",
     "test": "gulp test",
+    "precommit": "gulp update-updated_on",
     "prepush": "npm test",
     "prestart": "gulp build",
-    "postinstall": "gulp build"
+    "postinstall": "tools/update-resources.sh && gulp post-install"
   }
 }

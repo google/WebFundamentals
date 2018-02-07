@@ -12,15 +12,17 @@ description: Reference documentation for the "Opens External Anchors Using rel="
 
 When your page links to another page using `target="_blank"`, the new page
 runs on the same process as your page. If the new page is executing expensive
-JavaScript, your page's performance may also suffer.
+JavaScript, your page's performance may also suffer. See [The Performance
+Benefits of `rel=noopener`][jake] for more information.
+
 
 On top of this, `target="_blank"` is also a security vulnerability. The new page
-has access to your window object via `window.opener`, and it can navigate your
-page to a different URL using `window.opener.location = newURL`.
-
-See [The Performance Benefits of rel=noopener][jake] for more information.
+has access to your `window` object via `window.opener`, and it can navigate your
+page to a different URL using `window.opener.location = newURL`. See [About
+`rel=noopener`][mths] for a demo and explanation of the vulnerability.
 
 [jake]: https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/
+[mths]: https://mathiasbynens.github.io/rel-noopener/
 
 ## Recommendations {: #recommendations }
 

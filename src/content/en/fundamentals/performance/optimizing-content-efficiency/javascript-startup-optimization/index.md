@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Keep your network transmission and parse/compile cost for JavaScript low to ensure pages get interactive quickly.
 
-{# wf_updated_on: 2018-01-03 #}
+{# wf_updated_on: 2018-01-12 #}
 {# wf_published_on: 2017-11-30 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -253,7 +253,7 @@ costs.
 
 ### Progressive Bootstrapping
 
-Many sites optimize content visibility as the expensive of interactivity. To get
+Many sites optimize content visibility at the expensive of interactivity. To get
 a fast first paint when you do have large JavaScript bundles, developers
 sometimes employ server-side rendering; then "upgrade" it to attach event
 handlers when the JavaScript finally gets fetched.

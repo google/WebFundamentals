@@ -30,6 +30,8 @@ const JSONValidator = require('jsonschema').Validator;
 const MAX_DESCRIPTION_LENGTH = 485;
 const MAX_FILE_SIZE_WARN = 500; // Max file size (in kB) before warning
 const MAX_FILE_SIZE_ERROR = 2500; // Max file size (in kB) before error
+const MAX_FILES_CHANGED_WARNING = 500; // Max # of files changed before warning
+const MAX_FILES_CHANGED_ERROR = 1000; // Max # of files changed before error
 const MD_FILES = ['.md', '.mdown', '.markdown'];
 const EXTENSIONS_TO_SKIP = ['.css', '.vtt', '.xml'];
 const MEDIA_FILES = [
@@ -362,6 +364,7 @@ function getFiles() {
           globs.push(`${lang}/**/*`);
         });
       }
+      globs.push('!en/tools/puppeteer/_src/**/*');
       resolve(glob.find(globs, opts));
     });
   } else {
@@ -391,6 +394,13 @@ function getFiles() {
           `${chalk.cyan('--testAll')} or ${chalk.cyan('--testMaster')} ` +
           `to catch any unintended side effects!`;
         gutil.log(warn, msg);
+      }
+      const warnMsg = `More than ${MAX_FILES_CHANGED_WARNING} files changed.`;
+      if (files.length > MAX_FILES_CHANGED_ERROR) {
+        const msg = `Maxiumum number of changed files exceeeded.`;
+        logError('', null, `${msg} ${warnMsg}`);
+      } else if (files.length > MAX_FILES_CHANGED_WARNING) {
+        logWarning('', null, `${warnMsg}`);
       }
       return files;
     });
@@ -651,7 +661,7 @@ function testMarkdown(filename, contents, options) {
       const inclFile = include[2];
       const quoteL = include[1];
       const quoteR = include[3];
-      if (quoteL !== quoteR) {
+      if (quoteL !== quoteR || quoteL === '') {
         msg = '`{% include %}` tag is badly quoted';
         logError(filename, position, `${msg}: ${include[0]}`);
       }
@@ -666,20 +676,34 @@ function testMarkdown(filename, contents, options) {
         msg = '`{% include %}` tag found, but couldn\'t find related include';
         logError(filename, position, `${msg}: ${inclFile}`);
       }
+      if (!inclFile.endsWith('.html') && !inclFile.endsWith('.js')) {
+        msg = '`{% include %}` tag found, file must be an HTML file';
+        logError(filename, position, `${msg}: ${inclFile}`);
+      }
     });
 
     // Verify all {% includecode %} elements work properly
     matched = wfRegEx.getMatches(wfRegEx.RE_INCLUDE_CODE, contents);
-    matched.forEach(function(match) {
+    matched.forEach((match) => {
       const msg = 'IncludeCode widget -';
       const widget = match[0];
       const position = {line: getLineNumber(contents, match.index)};
+
       const inclFile = wfRegEx.getMatch(wfRegEx.RE_INCLUDE_CODE_PATH, widget);
-      if (inclFile.indexOf('web/') !== 0) {
-        logError(filename, position, `${msg} path must start with 'web/'`);
+      if (inclFile) {
+        if (inclFile.indexOf('web/') !== 0) {
+          logError(filename, position, `${msg} path must start with 'web/'`);
+        }
+        if (doesFileExist(inclFile) !== true) {
+          logError(filename, position, `${msg} file not found: '${inclFile}'`);
+        }
       }
-      if (doesFileExist(inclFile) !== true) {
-        logError(filename, position, `${msg} file not found: '${inclFile}'`);
+
+      const githubFile = wfRegEx.getMatch(
+          wfRegEx.RE_INCLUDE_CODE_GITHUB_PATH, widget);
+      if (githubFile && githubFile.includes('web/')) {
+        logError(filename, position,
+            `${msg} github_path must reference a file on github`);
       }
     });
 

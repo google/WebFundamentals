@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What is really happening with "DOMException: The play() request was interrupted"?
 
-{# wf_updated_on: 2017-06-16 #}
+{# wf_updated_on: 2018-01-24 #}
 {# wf_published_on: 2017-06-14 #}
 {# wf_tags: media,devtools #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -168,6 +168,17 @@ your video to play later.
 
 At the time of writing, `HTMLMediaElement.play()` returns a promise in
 [Chrome], Firefox, Opera, and [Safari]. [Edge] is still working on it.
+
+## Danger zone {: #danger-zone }
+
+### `<source>` within `<video>` makes `play()` promise never rejects
+
+For `<video src="not-existing-video.mp4"\>`, the `play()` promise rejects as
+expected as the video doesn't exist. For `<video><source
+src="not-existing-video.mp4" type='video/mp4'></video>`, the `play()` promise
+never rejects. It only happens if there are no valid sources.
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=718647)
 
 {% include "comment-widget.html" %}
 

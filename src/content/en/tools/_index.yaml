@@ -21,12 +21,24 @@ landing_page:
     - heading: Lighthouse
       description: >
         Lighthouse is an open-source, automated tool for improving the quality
-        of your web apps. Run it as a Chrome Extension or from the command line.
+        of your web apps. It is integrated directly into the Chrome DevTools
+        Audits panel. You can also run Lighthouse from the command line or
+        install the Chrome Extension.
       image_path: images/lighthouse-16x9.png
       path: /web/tools/lighthouse/
       buttons:
       - label: Get Started
         path: /web/tools/lighthouse/
+    - heading: Puppeteer
+      description: >
+        Puppeteer is a Node library which provides a high-level API to control
+        headless Chrome over the DevTools Protocol. It can also be configured
+        to use full (non-headless) Chrome or Chromium.
+      image_path: images/puppeteer-16x9.png
+      path: /web/tools/puppeteer/
+      buttons:
+      - label: Learn more
+        path: /web/tools/puppeteer/
     - heading: Workbox
       description: >
         Workbox is a set of service worker libraries and tools that make it

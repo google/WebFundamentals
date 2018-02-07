@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-10 #}
+{# wf_updated_on: 2018-01-22 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -148,6 +148,8 @@ Next, add a line to include the workbox-build library at the top of __gulpfile.j
 const wbBuild = require('workbox-build');
 ```
 
+This line integrates the `workbox-build` module into your gulpfile, allowing you to use the module to generate a manifest of local files that workbox-sw should precache.
+
 Now copy and paste the following gulp task into the gulpfile:
 
 #### gulpfile.js
@@ -256,7 +258,7 @@ Save the file. Saving the file should trigger the gulp watch task which automati
 
 #### Explanation
 
-Here we add a few routes to the service worker using  [`registerRoute`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#registerRoute) method on the  [`router`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#main) class. `registerRoute` takes an Express-style or regular expression URL pattern, or a  [Route](https://workboxjs.org/reference-docs/latest/module-workbox-routing.Route.html#main) instance. The second argument is the handler that provides a response if the route matches. The handler argument is ignored if you pass in a Route object, otherwise it's required.
+Here we add a few routes to the service worker using  [`registerRoute`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#registerRoute) method on the  [`rout``er`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Router.html#main) class. `registerRoute` takes an Express-style or regular expression URL pattern, or a  [Route](https://workboxjs.org/reference-docs/latest/module-workbox-routing.Route.html#main) instance. The second argument is the handler that provides a response if the route matches. The handler argument is ignored if you pass in a Route object, otherwise it's required.
 
 Each route uses the  [`strategies`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#main) class to access the  [`cacheFirst`](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#cacheFirst) run-time caching strategy. The built-in caching strategies have several  [configuration options](https://workboxjs.org/reference-docs/latest/module-workbox-sw.Strategies.html#.StrategyOptions) for controlling how resources are cached.
 

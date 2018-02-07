@@ -45,9 +45,11 @@ gulp.task('build:announcement', function() {
   projectYamlFiles.forEach((file) => {
     let projYaml = jsYaml.safeLoad(fs.readFileSync(file, 'utf8'));
     if (showAnnouncement) {
-      projYaml['announcement'] = {
-        description: announcementYaml.description,
-      };
+      projYaml.announcement = {};
+      projYaml.announcement.description = announcementYaml.description;
+      if (announcementYaml.background) {
+        projYaml.announcement.background = announcementYaml.background;
+      }
     } else {
       delete projYaml['announcement'];
     }
@@ -302,6 +304,13 @@ gulp.task('build:updates', function() {
   const outFile = path.join(
     global.WF.src.content, '_index-latest-updates.html');
   wfTemplateHelper.renderTemplate(template, context, outFile);
+});
+
+/**
+ * Builds all the things!
+ */
+gulp.task('post-install', function(cb) {
+  runSequence('puppeteer:build', 'build', cb);
 });
 
 

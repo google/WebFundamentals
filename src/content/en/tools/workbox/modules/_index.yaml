@@ -92,8 +92,8 @@ landing_page:
           path: ./workbox-background-sync
         - label: Reference
           path: ../reference-docs/prerelease/workbox.backgroundSync
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
 
       - heading: workbox.googleAnalytics
         description: >
@@ -103,8 +103,8 @@ landing_page:
           path: ./workbox-google-analytics
         - label: Reference
           path: ../reference-docs/prerelease/workbox.googleAnalytics
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
 
     - items:
       - heading: workbox.cacheableResponse
@@ -136,12 +136,12 @@ landing_page:
           This modules provides support for responding to a request with a
           ranger header from a Cache.
         buttons:
-        # - label: Learn more
-        #   path: ./workbox-broadcast-cache-update
+        - label: Learn more
+          path: ./workbox-range-requests
         - label: Reference
           path: ../reference-docs/prerelease/workbox.rangeRequests
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
 
       # Force Devsite 4-up layout
       - heading: ""
@@ -162,11 +162,11 @@ landing_page:
 
       - heading: workbox-build
         description: >
-          An NPM module that can generate a complete service worker, inject
+          An npm module that can generate a complete service worker, inject
           a precache manifest and copy the Workbox files.
         buttons:
-        # - label: Learn more
-        #   path: ./workbox-build
+        - label: Learn more
+          path: ./workbox-build
         - label: Reference
           path: ../reference-docs/prerelease/module-workbox-build
 

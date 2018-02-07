@@ -3,7 +3,8 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2017-10-04 #}
-{# wf_updated_on: 2017-10-31 #}
+{# wf_updated_on: 2018-02-01 #}
+{# wf_blink_components: N/A #}
 
 <style>
 .index__install-options {
@@ -49,6 +50,12 @@ description: Service Worker Libraries.
   display: none;
 }
 
+.button.button-v3 {
+  text-decoration: none;
+  background-color: #fb8c00;
+  color: #ffffff;
+}
+
 @media (min-width: 780px) {
   .index__install-options {
     flex-direction: row;
@@ -66,6 +73,18 @@ description: Service Worker Libraries.
 </style>
 
 # Workbox {: .page-title }
+
+<aside class="dogfood">
+  <p><b>Try the Beta Release!</b></p>
+  <p>The next major release of Workbox is nearly ready. The next version is:</p>
+  <ul>
+  <li>Smaller in file size</li>
+  <li>Easier to debug</li>
+  <li>Has improved docs</li>
+  <li>Better webpack support</li>
+  </ul>
+  <p>Interested? Checkout the <a href="/web/tools/workbox/guides/get-started">Getting Started Guide for V3</a>.</p>
+</aside>
 
 <figure class="attempt-right workbox-logo">
   <img src="/web/tools/workbox/thumb.png" alt="Workbox logo">
@@ -95,7 +114,7 @@ rather than from the network.
   </a>
 
   <a href="./get-started/npm-script.html" class="index__install-option index__install-npm">
-    <img src="images/third_party/npm-logo.svg" alt="Install Workbox to work with NPM Scripts">
+    <img src="images/third_party/npm-logo.svg" alt="Install Workbox to work with npm Scripts">
   </a>
 </div>
 
@@ -104,7 +123,7 @@ rather than from the network.
 Install our command-line interface:
 
 ```
-$ npm install workbox-cli --global
+$ npm install workbox-cli@beta --global
 
 # Generate a service worker with some smart defaults
 $ workbox generate:sw
@@ -115,7 +134,7 @@ $ workbox generate:sw
 We support that too with workbox-sw.
 
 ```
-$ npm install --save workbox-sw
+$ npm install workbox-sw@beta --save
 ```
 
 Then reference the file from your service worker:
