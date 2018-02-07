@@ -1,19 +1,19 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018.
+description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2017-12-05 #}
+{# wf_updated_on: 2018-02-07 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018. #}
+{# wf_featured_snippet: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018. #}
 {# wf_blink_components: Blink>Media #}
 
 # Autoplay Policy Changes {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Chrome's autoplay policies will change in January of 2018 and I'm here to tell
+Chrome's autoplay policies will change in April of 2018 and I'm here to tell
 you why and how this is going to affect video playback with sound. Spoiler
 alert: users are going to love it!
 
@@ -127,6 +127,8 @@ autoplay.
 
 ## Best practises for web developers {: #best-practises }
 
+### Audio/Video elements
+
 Here's the one thing to remember: Don't ever assume a video will play, and
 don't show a pause button when the video is not actually playing. It is so
 important that I'm going to write it one more time below for those who simply
@@ -165,6 +167,46 @@ including Facebook, Instagram, Twitter, and YouTube.
       });
     </script>
 
+### WebAudio
+
+First, be reminded that it is good practise to wait for a user interaction
+before starting audio playback as user is aware of something happening. Think
+of a "play" button or "on/off" switch for instance. You can also simply add an
+"unmute" button depending on the flow of the app.
+
+Key Point: An <code>AudioContext</code> must be created or resumed after the
+document received a user gesture to enable audio playback.
+
+If you create your <code>AudioContext</code> on page load, you’ll
+have to call <code>resume()</code> later when user interacts with the page
+(e.g., user clicked a button).
+
+    // Existing code unchanged.
+    window.onload = function() {
+      var context = new AudioContext();
+      // Setup all nodes
+      ...
+    }
+
+    // One-liner to resume playback when user interacted with the page.
+    document.querySelector('button').addEventListener('click', function() {
+      context.resume().then(() => {
+        console.log('Playback resumed successfully');
+      });
+    });
+
+You may also create the <code>AudioContext</code> only when user interacts wit
+the page.
+
+    document.querySelector('button').addEventListener('click', function() {
+      var context = new AudioContext();
+      // Setup all nodes
+      ...
+    });
+
+For info, checkout the small [Pull Request] that fixes WebAudio playback due to
+these autoplay policy changes for [https://airhorner.com].
+
 ## Feedback
 
 At the time of writing, Chrome's autoplay policies aren't carved in stone.
@@ -181,4 +223,6 @@ thoughts.
 [feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
+[Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
+[https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
