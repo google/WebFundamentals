@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 65 to help yo
 {# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
-{# wf_blink_components: Blink>Input #}
+{# wf_blink_components: Blink,Blink>Bindings,Blink>Network #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and <code>document.all</code> is now read only.  #}
 
