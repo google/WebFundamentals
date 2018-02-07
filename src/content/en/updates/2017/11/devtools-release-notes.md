@@ -143,12 +143,14 @@ Related features:
 
 Whoops! We originally scheduled this feature to launch in Chrome 64, but pulled it close to
 the deadline in order to smooth out some rough edges. Apparently, the What's New UI didn't
-update in time.
+update in time. Sorry!
 
 This feature is shipping in Chrome 65, which will land approximately 6 weeks after Chrome 64.
-Check out [Local Overrides][LO] to learn more.
+Check out [Local Overrides][LO] to learn more. If you're on Windows or Mac, you can try
+Chrome 65 now by downloading [Chrome Canary][canary]{:.external}.
 
 [LO]: /web/updates/2018/01/devtools#overrides
+[canary]: https://www.google.com/chrome/browser/canary.html
 
 ## Feedback {: #feedback }
 
