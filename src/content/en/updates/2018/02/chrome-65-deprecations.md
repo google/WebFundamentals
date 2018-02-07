@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version,
+description: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and document.all is now read only.
 
 {# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
 {# wf_blink_components: Blink>Input #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version,  #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and <code>document.all</code> is now read only.  #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
@@ -17,11 +17,16 @@ description: A round up of the deprecations and removals in Chrome 65 to help yo
 
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
-Platform. 
+Platform. This article describes some of the deprecations and removals in Chrome
+65, which is in beta as of February 8.
 
-This series, released with every version of Chrome describes its
-deprecations and removals. The list for Chrome 65, which is in beta as of
-February 8, is short.
+## Chrome no longer trusting certain Symantec certificates
+
+As [previously announced](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html),
+Chrome 65 will not trust certificates issued from Symantec’s Legacy PKI after
+December 1st, 2017, and will result in interstitials. This will only affect site
+operators who explicitly opted-out of the transition from Symantec’s Legacy PKI
+to DigiCert’s new PKI.
 
 ## Block cross-origin &lt;a download>
 
@@ -34,6 +39,16 @@ as well as to the element itself.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Iw3_SUcagGg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4969697975992320) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=714373)
+
+## Document.all is no longer replaceable
+
+For a long time now, It's been possible for web developers to overwrite
+`document.all`. According to the current standard, this should not be so.
+Starting in version 65, Chrome complies with the standard.
+
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5072231356956672) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=794433)
+
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
