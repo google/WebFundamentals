@@ -116,6 +116,8 @@ toc:
   path: /web/tools/lighthouse/audits/http-200-when-offline
 - title: Serve Images As WebP
   path: /web/tools/lighthouse/audits/webp
+- title: Some Insecure Resources Can Be Upgraded To HTTPS
+  path: /web/tools/lighthouse/audits/mixed-content
 - title: Time to Interactive
   path: /web/tools/lighthouse/audits/time-to-interactive
 - title: Unoptimized Images
