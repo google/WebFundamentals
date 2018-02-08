@@ -193,7 +193,9 @@ language: node_js
 node_js:
   - "7"
 dist: trusty # needs Ubuntu Trusty
-sudo: false  # no need for virtualization.
+# Note: if yous witch to sudo: false, you'll need to launch chrome with --no-sandbox.
+# See https://github.com/travis-ci/travis-ci/issues/8836
+sudo: required
 addons:
   chrome: stable # have Travis install chrome stable.
 cache:
