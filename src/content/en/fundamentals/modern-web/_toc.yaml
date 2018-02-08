@@ -1,0 +1,13 @@
+toc:
+- title: Improve your website
+  section:
+  - title: Why optimize websites?
+    path: /web/fundamentals/modern-web/why-optimize-websites
+  - title: Perform audit
+    path: /web/fundamentals/modern-web/audit
+  - title: Simple optimizations
+    path: /web/fundamentals/modern-web/small-fixes
+  - title: Enhance your website
+    path: /web/fundamentals/modern-web/enhance
+  - title: Measure for success
+    path: /web/fundamentals/modern-web/measure
