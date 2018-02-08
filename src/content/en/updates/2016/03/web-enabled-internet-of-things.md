@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Internet of Things is really on everyone's lips these days, but what if you could create an IoT device which you accessed from your web browser? In this article we look at how you can do exactly that using Physical Web, Web Bluetooth as well as Node.js, running on an Intel&reg; Edison Arduino breakout board.
 
-{# wf_updated_on: 2016-04-04 #}
+{# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2016-03-19 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,edison #}
 {# wf_featured_image: /web/updates/images/2016/03/web-enabled-internet-of-things/board.jpg #}
+{# wf_blink_components: Blink>Bluetooth #}
 
 # Creating a Web-Enabled IoT Device with Intel Edison {: .page-title }
 
@@ -114,7 +115,7 @@ the sites need to be publicly accessible and use HTTPS.
 
 The Eddystone protocol has an
 [18 byte size limit](https://github.com/google/eddystone/blob/master/eddystone-url/docs/config-service-spec.md#34-uri-data) 
-on URLs. So to make the URL for my demo app work (<https://edison-webbt.appspot.com/>),
+on URLs. So to make the URL for my demo app work (<https://webbt-sensor-hub.appspot.com/>),
 I need to use a URL shortener.
 
 Broadcasting the URL is quite simple. All you need to do it import the
@@ -533,7 +534,7 @@ from time to time.
 
 ### Demo
 
-You can try the [client](https://edison-webbt.appspot.com) to get
+You can try the [client](https://webbt-sensor-hub.appspot.com/) to get
 inspired about how can you create your own web apps to connect to
 your custom Internet of Things devices.
 
