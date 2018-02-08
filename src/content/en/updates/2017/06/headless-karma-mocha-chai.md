@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Automated testing with Headless Chrome"
 
-{# wf_updated_on: 2017-06-13 #}
+{# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2017-06-13 #}
 
 {# wf_tags: headless,testing,karma,mocha,chai #}
