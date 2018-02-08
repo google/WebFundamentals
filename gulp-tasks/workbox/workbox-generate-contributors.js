@@ -67,7 +67,7 @@ gulp.task(`workbox-generate-contributors`, function() {
   })
   .catch((err) => {
     gutil.log(gutil.colors.red(
-      `An error occured when generating the Workbox ` +
+      `An error occurred when generating the Workbox ` +
       `collaborators.`
     ));
     gutil.log(err);
