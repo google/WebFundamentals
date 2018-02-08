@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Some Insecure Resources Can Be Upgraded To HTTPS" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-07 #}
+{# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2018-02-06 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -20,7 +20,7 @@ depends on these insecure resources, then your page might not work properly when
   <img src="images/insecure-content-blocked.png"
        alt="Google Chrome (version 66) blocking insecure content."/>
   <figcaption>
-    <b>Figure X</b>. Google Chrome (version 66) blocking insecure content
+    <b>Figure 1</b>. Google Chrome (version 66) blocking insecure content
   </figcaption>
 </figure>
 
@@ -30,9 +30,26 @@ Also, browsers may warn users that your page is not fully secure.
   <img src="images/not-fully-secure.png"
        alt="Google Chrome (version 66) reporting that page is not fully secure."/>
   <figcaption>
-    <b>Figure X</b>. Google Chrome (version 66) reporting that a page is not fully secure
+    <b>Figure 2</b>. Google Chrome (version 66) reporting that a page is not fully secure
   </figcaption>
 </figure>
+
+## How to use this audit {: #how-to-use }
+
+This audit is not run by default in Lighthouse, and currently requires that you
+have [Chrome Canary][CC] installed. To use it, you will need to run the
+Lighthouse command-line tool. You can install Lighthouse using [npm][NPM]:
+
+    npm install -g lighthouse
+
+To run the audit, you can use the included `--mixed-content` flag:
+
+    lighthouse --mixed-content http://www.example.com
+
+This will create a new HTML report file in your current working directory.
+
+[CC]: https://www.google.com/chrome/browser/canary.html
+[NPM]: https://www.npmjs.com/get-npm
 
 ## Recommendations {: #recommendations }
 

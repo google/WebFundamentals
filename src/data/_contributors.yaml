@@ -22,6 +22,17 @@
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
 
+iamakulov:
+  name:
+    given: Ivan
+    family: Akulov
+  homepage: https://iamakulov.com
+  twitter: iamakulov
+  github: iamakulov
+  description:
+    en: Contracting software engineer · Blogging, open source, performance, UX
+  email: mail@iamakulov.com
+
 jbnicolai:
   name:
     given: Joshua
