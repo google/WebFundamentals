@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2017-07-19 #}
+{# wf_updated_on: 2018-02-08 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
+{# wf_blink_components: Blink>Bluetooth #}
 
 # Interact with Bluetooth devices on the Web {: .page-title }
 
@@ -29,7 +30,7 @@ sense of how that would work.
 
 This article assumes you have some basic knowledge of how Bluetooth Low
 Energy (BLE) and the [Generic Attribute Profile
-(GATT)](https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx)
+(GATT)](https://www.bluetooth.com/specifications/gatt/generic-attributes-overview)
 work.
 
 Even though the [Web Bluetooth API
@@ -143,11 +144,10 @@ For instance, requesting Bluetooth devices advertising the [Bluetooth GATT Batte
     .catch(error => { console.log(error); });
     
 
-If your Bluetooth GATT Service is not on the list of [the standardized Bluetooth
-GATT
-services](https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx)
-though, you may provide either the full Bluetooth UUID or a short 16- or 32-bit
-form.
+If your Bluetooth GATT Service is not on the list of [the standardized
+Bluetooth GATT
+services](https://www.bluetooth.com/specifications/gatt/services) though, you
+may provide either the full Bluetooth UUID or a short 16- or 32-bit form.
 
 
     navigator.bluetooth.requestDevice({
@@ -278,7 +278,7 @@ Expended field to 0 on a heart rate monitor device.
 
 I promise there is no magic here. It's all explained in the [Heart Rate
 Control Point Characteristic
-page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_control_point.xml).
+page](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.heart_rate_control_point.xml).
 
 
     navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
