@@ -604,7 +604,7 @@ module...
 </pre>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ And look what it has
-did! `comments.js` now has ID 5 instead of 4
+done! `comments.js` now has ID 5 instead of 4
 
 <pre class="prettyprint">
    [5] ./comments.js 58 kB {0} [built]
