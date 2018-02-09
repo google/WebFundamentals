@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Internet of Things is really on everyone's lips these days, but what if you could create an IoT device which you accessed from your web browser? In this article we look at how you can do exactly that using Physical Web, Web Bluetooth as well as Node.js, running on an Intel&reg; Edison Arduino breakout board.
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-02-09 #}
 {# wf_published_on: 2016-03-19 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,edison #}
 {# wf_featured_image: /web/updates/images/2016/03/web-enabled-internet-of-things/board.jpg #}
@@ -170,7 +170,7 @@ as well as setting the initial LED color.
     
       // Johnny-Five's Thermometer class provides a built-in
       // controller definition for the TMP36 sensor. The controller
-      // handles computing a celsius (also fahrenheit & kelvin) from
+      // handles computing a Celsius (also Fahrenheit & Kelvin) from
       // a raw analog input value.
       // Reference: http://johnny-five.io/api/thermometer/
       var temp = new five.Thermometer({
@@ -191,7 +191,7 @@ as well as setting the initial LED color.
 You can ignore the above `*Characteristic` variables for now; these
 will be defined in the later section about interfacing with Bluetooth.
 
-As you might notice in the instantiation of the Themometer object, I talk to
+As you might notice in the instantiation of the Thermometer object, I talk to
 the TMP36 via the analog `A0` port. The voltage legs on the color
 LED cathode are connected to digital pins 3, 5 and 6, which happen
 to be the pulse-width modulation (PWM) pins on the Edison Arduino breakout
