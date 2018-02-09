@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-09 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -57,61 +57,70 @@ Please refer to the channels below.
 
 #### A. Hacked site
 
-*You received a hacked site notification in the [**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action) of the Search
-Console:*
+*You received a hacked site notification in the
+[**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action)
+of the Search Console:*
 
 1. Now that you have gone through the successive steps of the clean-up process,
-you can go in the
-[Manual Actions](https://www.google.com/webmasters/tools/manual-action) report
-again and find the issue either as a site-wide match, or as a partial match.
+  you can go in the [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+  report again and find the issue either as a site-wide match, or as a partial
+  match.
 2. Select **Request a review**.
-In order to submit a review, we ask that you provide more information on what
-you did to clean the site. For each category of hacked spam, you can write a
-sentence explaining how the site was cleaned (for example, "For Content
-injection hacked URLs, I removed the spammy content and corrected the
-vulnerability: updating an out-of-date plugin.").
+
+    In order to submit a review, we ask that you provide more information on what
+    you did to clean the site. For each category of hacked spam, you can write a
+    sentence explaining how the site was cleaned (for example, "For Content
+    injection hacked URLs, I removed the spammy content and corrected the
+    vulnerability: updating an out-of-date plugin.").
 
 
 #### B. Unwanted software (including malware)
 
-*You received a malware or unwanted software notification in the [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues) of the
-Search Console:*
+*You received a malware or unwanted software notification in the
+[**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
+of the Search Console:*
 
 1. Open the
+  [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
+  again in Search Console. The report may still show the warnings and sample
+  infected URLs you saw before.
+2. Select **Request a review**.
+
+    In order to submit a review, we ask that you provide more information on
+    what you did to remove the policy violation from your site. For example,
+    "I removed the 3rd-party code that was distributing malware on my
+    website and replaced it with a more modern version of the code".
+
+
+*You did not receive a malware or unwanted software notification in the
 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
-again in Search Console. The report may still show the warnings and
-   sample infected URLs you saw before.
-2. Select **Request a review**. In order to submit a review, we ask that you
-provide more information on what you did to remove the policy violation from
-your site. For example, "I removed the 3rd-party code that was distributing
-malware on my website and replaced it with a more modern version of the code".
+of the Search Console, but you received a notification in your AdWords account:*
 
-
-*You did not receive a malware or unwanted software notification in the [**Security
-Issues report**](https://www.google.com/webmasters/tools/security-issues)
-of the Search Console, but you received a notification in your AdWords account:
-
-1. Request a review through the [AdWords support center](https://support.google.com/adwords/contact/site_policy).
+1. Request a review through the
+  [AdWords support center](https://support.google.com/adwords/contact/site_policy).
 
 
 #### C. Phishing or Social Engineering
 
-*You received a phishing notification in the [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues) of the
-Search Console:*
+*You received a phishing notification in the
+[**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
+of the Search Console:*
 
 1. Open the
-[**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
-again in Search Console. The report may still show the warnings and
-   sample infected URLs you saw before.
-2. Select **Request a review**. In order to submit a review, we ask you to
-provide more information on what you did to remove the policy violation from
-your site. For example, "I removed the page that was asking users to enter
-personal information").
+  [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
+  again in Search Console. The report may still show the warnings and sample
+  infected URLs you saw before.
+2. Select **Request a review**.
+
+    In order to submit a review, we ask you to provide more information on
+    what you did to remove the policy violation from your site. For example,
+    "I removed the page that was asking users to enter personal information".
+
 3. You can also request the review at
-   [google.com/safebrowsing/report_error/](https://www.google.com/safebrowsing/report_error/).
-   On top of serving as a reporting tool for site owners who believe their page
-   was incorrectly flagged for phishing, this report will trigger a review of
-   phishing pages that have been cleaned to lift warnings.
+  [google.com/safebrowsing/report_error/](https://www.google.com/safebrowsing/report_error/).
+  On top of serving as a reporting tool for site owners who believe their page
+  was incorrectly flagged for phishing, this report will trigger a review of
+  phishing pages that have been cleaned to lift warnings.
 
 ### 4. Wait for the review to be processed
 
