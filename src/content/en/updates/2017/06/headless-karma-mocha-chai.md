@@ -193,7 +193,7 @@ language: node_js
 node_js:
   - "7"
 dist: trusty # needs Ubuntu Trusty
-# Note: if yous witch to sudo: false, you'll need to launch chrome with --no-sandbox.
+# Note: if you switch to sudo: false, you'll need to launch chrome with --no-sandbox.
 # See https://github.com/travis-ci/travis-ci/issues/8836
 sudo: required
 addons:
