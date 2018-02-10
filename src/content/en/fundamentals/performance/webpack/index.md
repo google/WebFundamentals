@@ -32,7 +32,8 @@ processing cost.
 <figure>
   <img src="./code-splitting.png" alt="Before and after applying JavaScript
   optimizations. Time-to-Interactive is improved">
-  <p>Inspired by <a href="http://www.susielu.com/data-viz/bundle-buddy">Code-splitting in Bundle Buddy</a> by Susie Lu</p>
+  <p>Inspired by <a href="http://www.susielu.com/data-viz/bundle-buddy">
+    Code-splitting in Bundle Buddy</a> by Susie Lu</p>
 </figure>
 
 Note: We created a training app to play with optimizations described in this
