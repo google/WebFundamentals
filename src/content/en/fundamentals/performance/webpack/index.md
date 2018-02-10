@@ -10,7 +10,7 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/addyosmani.html" %}
 
 Modern web applications often use a **bundling tool** to create a production
-“bundle” of files (scripts, stylesheets, etc.) that is
+"bundle" of files (scripts, stylesheets, etc.) that is
 [optimized](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization),
 [minified](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer)
 and can be downloaded in less time by your users. In **Web Performance
@@ -32,6 +32,7 @@ processing cost.
 <figure>
   <img src="./code-splitting.png" alt="Before and after applying JavaScript
   optimizations. Time-to-Interactive is improved">
+  <p>Inspired by <a href="http://www.susielu.com/data-viz/bundle-buddy">Code-splitting in Bundle Buddy</a> by Susie Lu</p>
 </figure>
 
 Note: We created a training app to play with optimizations described in this
