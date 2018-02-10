@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming January 2018.
 
-{# wf_updated_on: 2018-01-31 #}
+{# wf_updated_on: 2018-02-10 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -106,8 +106,8 @@ the autoplay attribute will also be ignored.
 You can try out this feature policy by enabling the experimental flag
 `chrome://flags/#enable-experimental-web-platform-features`.
 
-Warning: Contrary to what was announced previously, `<iframe gesture=media>` is
-not supported.
+Warning: Older articles incorrectly recommend using the attribute
+`gesture=media` which is not supported.
 
 ### Example scenarios
 
