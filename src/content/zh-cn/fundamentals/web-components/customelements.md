@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:自定义元素允许网络开发者定义新的 HTML 标记、扩展现有标记并创建可重用的网络组件。
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2016-06-28 #}
+{# wf_blink_components: Blink>DOM #}
 
 # 自定义元素 v1：可重用网络组件 {: .page-title }
 
