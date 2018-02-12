@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os elementos personalizados permitem que desenvolvedores da Web definam novas tags HTML, ampliem as já existentes e criem componentes da Web reutilizáveis.
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2016-06-28 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Custom Elements v1: Componentes de Web Reutilizáveis {: .page-title }
 
