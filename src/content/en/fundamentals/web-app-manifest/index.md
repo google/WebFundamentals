@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2016-02-11 #}
+{# wf_blink_components: Manifest #}
 
 # The Web App Manifest {: .page-title }
 
@@ -263,6 +264,17 @@ include checking that:
 * After being added, the app launches with a custom splash screen.
 * The color of the browser's address bar is customized.
 * The app is on HTTPS (a prerequisite for Add to Homescreen).
+
+### Always show the app install banner on mobile devices {: #bypass }
+
+When testing your app on real mobile devices, you may need to add and remove
+the app from your homescreen many times. Usually, Chrome requires a grace period
+to pass before showing the app install banner again. However, you can configure
+Chrome to always show the app install banner every time that you visit a page
+by doing the following:
+
+1. Open `chrome://flags/#bypass-app-banner-engagement-checks` on your mobile device.
+1. Enable the **Bypass user engagement checks** flag.
 
 ## More information
 
