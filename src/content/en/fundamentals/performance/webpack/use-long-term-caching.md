@@ -195,7 +195,7 @@ $ webpack
 Hash: ac01483e8fec1fa70676
 Version: webpack 3.8.1
 Time: 3816ms
-<strong>                           Asset   Size  Chunks             Chunk Names</strong>
+                           Asset   Size  Chunks             Chunk Names
   ./main.00bab6fd3100008a42b0.js  82 kB       0  [emitted]  main
 ./vendor.d9e134771799ecdf9483.js  47 kB       1  [emitted]  vendor
 </pre>
@@ -215,14 +215,14 @@ change something in the app code:
 you’ll notice that the `vendor` hash also changes:
 
 <pre class="prettyprint">
-<strong>                           Asset   Size  Chunks             Chunk Names</strong>
+                           Asset   Size  Chunks             Chunk Names
 ./vendor.d9e134771799ecdf9483.js  47 kB       1  [emitted]  vendor
 </pre>
 
 ↓
 
 <pre class="prettyprint">
-<strong>                            Asset   Size  Chunks             Chunk Names</strong>
+                            Asset   Size  Chunks             Chunk Names
 ./vendor.e6ea4504d61a1cc1c60b.js  47 kB       1  [emitted]  vendor
 </pre>
 
@@ -273,7 +273,7 @@ $ webpack
 Hash: ac01483e8fec1fa70676
 Version: webpack 3.8.1
 Time: 3816ms
-<strong>                            Asset     Size  Chunks             Chunk Names</strong>
+                            Asset     Size  Chunks             Chunk Names
    ./main.00bab6fd3100008a42b0.js    82 kB       0  [emitted]  main
  ./vendor.26886caf15818fa82dfa.js    46 kB       1  [emitted]  vendor
 ./runtime.79f17c27b335abc7aaf4.js  1.45 kB       3  [emitted]  runtime
@@ -412,7 +412,7 @@ $ webpack
 Hash: 39b2a53cb4e73f0dc5b2
 Version: webpack 3.8.1
 Time: 4273ms
-<strong>                            Asset     Size  Chunks             Chunk Names</strong>
+                            Asset     Size  Chunks             Chunk Names
       ./0.8ecaf182f5c85b7a8199.js  22.5 kB       0  [emitted]
    ./main.f7e53d8e13e9a2745d6d.js    60 kB       1  [emitted]  main
  ./vendor.4f14b6326a80f4752a98.js    46 kB       2  [emitted]  vendor
@@ -496,7 +496,7 @@ $ webpack
 Hash: 318d7b8490a7382bf23b
 Version: webpack 3.8.1
 Time: 4273ms
-<strong>                            Asset     Size  Chunks             Chunk Names</strong>
+                            Asset     Size  Chunks             Chunk Names
       ./0.8ecaf182f5c85b7a8199.js  22.5 kB       0  [emitted]
    ./home.91b9ed27366fe7e33d6a.js    18 kB       1  [emitted]  home
 ./article.87a128755b16ac3294fd.js    32 kB       2  [emitted]  article
@@ -558,7 +558,7 @@ $ webpack
 Hash: df3474e4f76528e3bbc9
 Version: webpack 3.8.1
 Time: 2150ms
-<strong>                           Asset      Size  Chunks             Chunk Names</strong>
+                           Asset      Size  Chunks             Chunk Names
       ./0.8ecaf182f5c85b7a8199.js  22.5 kB       0  [emitted]
    ./main.4e50a16675574df6a9e9.js    60 kB       1  [emitted]  main
  ./vendor.26886caf15818fa82dfa.js    46 kB       2  [emitted]  vendor
@@ -586,7 +586,7 @@ $ webpack
 Hash: df3474e4f76528e3bbc9
 Version: webpack 3.8.1
 Time: 2150ms
-<strong>                           Asset      Size  Chunks             Chunk Names</strong>
+                           Asset      Size  Chunks             Chunk Names
       ./0.5c82c0f337fcb22672b5.js    22 kB       0  [emitted]
    ./main.0c8b617dfc40c2827ae3.js    82 kB       1  [emitted]  main
  ./vendor.26886caf15818fa82dfa.js    46 kB       2  [emitted]  vendor
@@ -604,7 +604,7 @@ module...
 </pre>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ And look what it has
-did! `comments.js` now has ID 5 instead of 4
+done! `comments.js` now has ID 5 instead of 4
 
 <pre class="prettyprint">
    [5] ./comments.js 58 kB {0} [built]
@@ -632,7 +632,7 @@ $ webpack
 Hash: df3474e4f76528e3bbc9
 Version: webpack 3.8.1
 Time: 2150ms
-<strong>                           Asset      Size  Chunks             Chunk Names</strong>
+                           Asset      Size  Chunks             Chunk Names
       ./0.6168aaac8461862eab7a.js  22.5 kB       0  [emitted]
    ./main.a2e49a279552980e3b91.js    60 kB       1  [emitted]  main
  ./vendor.ff9f7ea865884e6a84c8.js    46 kB       2  [emitted]  vendor
