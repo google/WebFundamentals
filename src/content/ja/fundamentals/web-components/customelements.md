@@ -260,7 +260,7 @@ JavaScript でインスタンスを作成できます。
     console.assert(image.height === 200);
     
 
-注: 一部のブラウザは  <code>is=""</code> 構文の実装に反対しています。これは、ユーザー補助機能や進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、<a href='https://github.com/w3c/webcomponents/issues/509'>Github</a> にあなたの意見を投稿してください。
+注: 一部のブラウザは  <code>is=""</code> 構文の実装に反対しています。これは、ユーザー補助機能や進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、<a href='https://github.com/w3c/webcomponents/issues/662'>Github</a> にあなたの意見を投稿してください。
 
 ## カスタム要素応答 {: #reactions}
 
