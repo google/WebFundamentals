@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2016-02-11 #}
+{# wf_blink_components: Manifest #}
 
 # The Web App Manifest {: .page-title }
 
@@ -264,17 +265,16 @@ include checking that:
 * The color of the browser's address bar is customized.
 * The app is on HTTPS (a prerequisite for Add to Homescreen).
 
-### Testing installation banner
+### Always show the app install banner on mobile devices {: #bypass }
 
-The simpliest way to trigger installation banner is Add to Homesceen button
-in Chrome DevTools. You may wish to ensure it works in production environment,
-though, and just wait for the browser as it shows the banner to you, like it does
-to regular user of your website.
+When testing your app on real mobile devices, you may need to add and remove
+the app from your homescreen many times. Usually, Chrome requires a grace period
+to pass before showing the app install banner again. However, you can configure
+Chrome to always show the app install banner every time that you visit a page
+by doing the following:
 
-Once you install the app this way on your device and than remove it to repeat the test,
-the browser will not show you installation prompt again until some grace period pass.
-You're able to disable user activity checks by [turning on a flag](chrome://flags/#bypass-app-banner-engagement-checks) in your browser.
-After that banner will be triggered every time you open the page.
+1. Open `chrome://flags/#bypass-app-banner-engagement-checks` on your mobile device.
+1. Enable the **Bypass user engagement checks** flag.
 
 ## More information
 
