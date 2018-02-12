@@ -264,6 +264,18 @@ include checking that:
 * The color of the browser's address bar is customized.
 * The app is on HTTPS (a prerequisite for Add to Homescreen).
 
+### Testing installation banner
+
+The simpliest way to trigger installation banner is Add to Homesceen button
+in Chrome DevTools. You may wish to ensure it works in production environment,
+though, and just wait for the browser as it shows the banner to you, like it does
+to regular user of your website.
+
+Once you install the app this way on your device and than remove it to repeat the test,
+the browser will not show you installation prompt again until some grace period pass.
+You're able to disable user activity checks by [turning on a flag](chrome://flags/#bypass-app-banner-engagement-checks) in your browser.
+After that banner will be triggered every time you open the page.
+
 ## More information
 
 This article has given you a quick introduction to web app manifests, but
