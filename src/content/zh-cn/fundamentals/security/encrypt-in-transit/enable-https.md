@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:在服务器上启用 HTTPS 对于确保网页安全非常重要。 
+description:在服务器上启用 HTTPS 对于确保网页安全非常重要。
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # 在服务器上启用 HTTPS {: .page-title }
@@ -198,7 +198,7 @@ Note: 在 HTTP 页面中包括 HTTPS 资源完全没问题。
 
 
 当您的页面包括了使用 *http://* 架构的完全限定站内网址时，会出现这些问题。
- 
+
 
 <p><span class="compare-worse">不建议的做法</span> — 我们不建议使用完全限定站内网址。</p>
 
@@ -249,7 +249,7 @@ Note: 在 HTTP 页面中包括 HTTPS 资源完全没问题。
 
 
 * 对这些资源使用协议相对网址。如果该第三方不提供 HTTPS，请求他们提供。
-大多数已经提供，包括 jquery.com。 
+大多数已经提供，包括 jquery.com。
 * 从您控制的并且同时提供 HTTP 和 HTTPS 的服务器上提供资源。
 这通常是个好点子，因为您可以更好地控制网站的外观、性能和安全。
 此外，您不必信任第三方，尽管他们总是很不错。
@@ -266,7 +266,7 @@ Note: 请记住，您还需要更改样式表、JavaScript、重定向规则、`
 
 ## 打开严格传输安全和安全 Cookie
 
-此时，您已准备好“锁定”使用 HTTPS。 
+此时，您已准备好“锁定”使用 HTTPS。
 
 * 使用 HTTP 严格传输安全 (HSTS) 来避免 301 重定向产生的开销。
 * 始终在 Cookie 上设置安全标记。
@@ -314,7 +314,7 @@ Bing 也发布了[网站站长指南](http://www.bing.com/webmaster/help/webmast
 ### 性能
 
 当内容和应用层优化得当时（请参考 [Steve Souders 的论著](https://stevesouders.com/){: .external }以获取很好的建议），相对于应用的总体开销而言，其余的传输层安全协议 (TLS) 性能问题一般都是小问题。此外，您可以减少和分摊那些开销。
-（如需 TLS 优化建议和一般建议，请参考 IlyaGrigorik 撰写的[高性能浏览器网络](http://chimera.labs.oreilly.com/books/1230000000545)。）
+（如需 TLS 优化建议和一般建议，请参考 IlyaGrigorik 撰写的[高性能浏览器网络](https://hpbn.co/)。）
 另请参考 Ivan Ristic 的 [OpenSSL 手册](https://www.feistyduck.com/books/openssl-cookbook/)和 [SSL 和 TLS 的防弹衣](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)。
 
 在某些情况下，TLS 可以提高性能，主要是可以采用 HTTP/2 所带来的结果。

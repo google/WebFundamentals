@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: サーバーでの HTTPS の有効化は、ウェブページのセキュリティを保護するために不可欠です。 
+description: サーバーでの HTTPS の有効化は、ウェブページのセキュリティを保護するために不可欠です。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # サーバーでの HTTPS の有効化 {: .page-title }
@@ -199,7 +199,7 @@ HTTPS 経由で HTTP リソースを含むページを配信すると、[混合�
 
 
 *http://* スキームを使用する完全修飾のイントラサイト URL がページに含まれている場合、これらの問題が発生します。
- 
+
 
 <p><span class="compare-worse">非推奨</span>: 完全修飾のイントラサイト URL の使用はお勧めしません。</p>
 
@@ -250,7 +250,7 @@ HTTPS 経由で HTTP リソースを含むページを配信すると、[混合�
 
 
 * これらのリソースにはプロトコル相対 URL を使用します。サードパーティが HTTPS サービスを提供していない場合は、各社にお尋ねください。
-jquery.com など、ほとんどの会社はこのサービスを提供しています。 
+jquery.com など、ほとんどの会社はこのサービスを提供しています。
 * 自分で制御しており、HTTP と HTTPS の両方を提供するサーバーからリソースを提供します。
 これにより、サイトの外観、パフォーマンス、セキュリティをより適切に制御できるので、多くの場合は得策となります。
 また、サードパーティに頼る必要はありません。これは常によいことです。
@@ -267,7 +267,7 @@ jquery.com など、ほとんどの会社はこのサービスを提供してい
 
 ##  ストリクト トランスポート セキュリティとセキュア Cookie の有効化
 
-この時点で、HTTPS の使用を「ロックイン」する準備が整いました。 
+この時点で、HTTPS の使用を「ロックイン」する準備が整いました。
 
 * HTTP ストリクト トランスポート セキュリティ（HSTS）を使用して、301 リダイレクトのコストを回避する必要があります。
 * Cookie には常に secure フラグを設定します。
@@ -310,7 +310,7 @@ Bing も[ウェブマスター向けガイドライン](http://www.bing.com/webm
 
 コンテンツとアプリケーション層がよく調整されている場合（[Steve Souders の著作](https://stevesouders.com/){: .external }の素晴らしいアドバイスを参照）、残りの TLS のパフォーマンス問題は、一般的に、全体的なアプリケーションのコストを基準に考えると小さなものです。
 さらに、これらのコストを削減し、償却することができます
-（TLS の最適化に関する素晴らしいアドバイスと一般事項については、Ilya Grigorik による [High Performance BrowserNetworking](http://chimera.labs.oreilly.com/books/1230000000545) を参照してください）。
+（TLS の最適化に関する素晴らしいアドバイスと一般事項については、Ilya Grigorik による [High Performance BrowserNetworking](https://hpbn.co/) を参照してください）。
 Ivan Ristic の[『OpenSSL Cookbook』](https://www.feistyduck.com/books/openssl-cookbook/)および[『Bulletproof SSL And TLS』](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)も参照してください。
 
 場合によっては、主に HTTP/2 を可能にした結果として、TLS のパフォーマンスを向上できることがあります。
