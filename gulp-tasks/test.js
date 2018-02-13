@@ -21,6 +21,7 @@ const wfRegEx = require('./wfRegEx');
 const wfHelper = require('./wfHelper');
 const remarkLint = require('remark-lint');
 
+const testHelpers = require('./tests/helpers');
 const testProject = require('./tests/projectYaml');
 const testRedirects = require('./tests/redirectsYaml');
 const testGlossary = require('./tests/glossaryYaml');
@@ -247,14 +248,14 @@ function throwIfFailed() {
 /**
  * Gets the line number of the current string up to the index point
  *
+ * @todo Remove once testMarkdown is gone
+ *
  * @param {string} content The content of the string to check
  * @param {Number} idx Where in the string to stop
  * @return {Number} The line number the index ends on
  */
 function getLineNumber(content, idx) {
-  const subStr = content.substring(0, idx);
-  const lineNum = subStr.split(/\r\n|\r|\n/).length;
-  return lineNum;
+  return testHelpers.getLineNumber(content, idx);
 }
 
 /**
@@ -282,21 +283,13 @@ function readFile(filename) {
 /**
  * Checks if a file exists.
  *
+ * @todo Replace when testMarkdown is gone
+ *
  * @param {string} filename The WebFundamentals file path.
  * @return {Boolean} True if it exists, false if not.
  */
 function doesFileExist(filename) {
-  if (!filename) {
-    return false;
-  }
-  filename = filename.trim();
-  filename = filename.replace(/^\/?web\/(.*)/, 'src/content/en/$1');
-  try {
-    fs.accessSync(filename, fs.R_OK);
-    return true;
-  } catch (ex) {
-    return false;
-  }
+  return testHelpers.doesFileExist(filename);
 }
 
 /**

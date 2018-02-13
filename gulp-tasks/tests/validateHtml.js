@@ -6,19 +6,7 @@
 'use strict';
 
 const wfRegEx = require('../wfRegEx');
-
-/**
- * Gets the line number of the current string up to the index point
- *
- * @param {string} content The content of the string to check
- * @param {Number} idx Where in the string to stop
- * @return {Number} The line number the index ends on
- */
-function getLineNumber(content, idx) {
-  const subStr = content.substring(0, idx);
-  const lineNum = subStr.split(/\r\n|\r|\n/).length;
-  return lineNum;
-}
+const testHelpers = require('./helpers');
 
 const RE_HTML_DEVSITE = /<html\s.*?devsite.*?>/;
 const RE_HTML_TAG = /<html.*?>/;
@@ -57,7 +45,7 @@ function test(filename, contents) {
       level: 'ERROR',
       filename: filename,
       message: `Do not use hard coded 'developers.google.com'.`,
-      position: {line: getLineNumber(contents, match.index)},
+      position: {line: testHelpers.getLineNumber(contents, match.index)},
     };
     results.push(result);
   });
