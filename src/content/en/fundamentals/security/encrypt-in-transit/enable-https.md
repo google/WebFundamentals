@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -320,7 +320,7 @@ When the content and application layers are well-tuned (see
 remaining TLS performance concerns are generally small, relative to the
 overall cost of the application. Additionally, you can reduce and amortize
 those costs. (For great advice on TLS optimization and generally, see
-[High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) by Ilya Grigorik.) See also Ivan Ristic's [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) and [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/).
+[High Performance Browser Networking](https://hpbn.co/) by Ilya Grigorik.) See also Ivan Ristic's [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) and [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/).
 
 In some cases, TLS can _improve_ performance, mostly as a result of making
 HTTP/2 possible. Chris Palmer gave a talk on [HTTPS and HTTP/2 performance at Chrome Dev Summit 2014](/web/shows/cds/2014/tls-all-the-things).

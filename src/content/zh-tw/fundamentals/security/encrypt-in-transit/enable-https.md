@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 安全性是網頁保護使用者的重要一部分，而移轉為 TLS 支援將是未來使用令人興奮的新 API 之必要條件。
 
-{# wf_updated_on: 2015-03-26 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 以 HTTPS 提供安全性 {: .page-title }
@@ -16,7 +16,7 @@ description: 安全性是網頁保護使用者的重要一部分，而移轉為 
 {% endcomment %}
 
 
-## 產生金鑰和憑證簽署要求 
+## 產生金鑰和憑證簽署要求
 
 
 
@@ -113,7 +113,7 @@ www.example.com.csr
 
 ### 提交您的 CSR 給 CA
 
-視您想要使用的 CA 類型，傳送 CSR 給它們會有不同方法： 
+視您想要使用的 CA 類型，傳送 CSR 給它們會有不同方法：
 使用網站上的表單、傳送電子郵件或其他方式。
 一些 CA (或其轉售商) 可能甚至自動化處理部分或全部程序 (在某些案例中，
 也包括金鑰組與產生 CSR)。
@@ -125,7 +125,7 @@ www.example.com.csr
 而收取不同金額。
 
 也有一些選項，可將您的金鑰對應至 1 個以上的 DNS 名稱，
-包括數個獨特名稱 (例如，www.example、www.example.com、example.net 與 www.example.net 等所有網站) 
+包括數個獨特名稱 (例如，www.example、www.example.com、example.net 與 www.example.net 等所有網站)
 或「萬用字元」名稱，如 \*.example.com。
 
 舉例來說，一家 CA 目前提供以下價格：
@@ -147,7 +147,7 @@ Note: 請記住，在萬用字元憑證中，
 
 
 
-## 在您伺服器上啟用 HTTPS 
+## 在您伺服器上啟用 HTTPS
 
 
 
@@ -175,14 +175,14 @@ Note: 請記住，在萬用字元憑證中，
  (https://en.wikipedia.org/wiki/Server_Name_Indication) (SNI)，而 SNI 卻是 HTTPS 基於名稱之虛擬主機裝載的重要關鍵。
 
 
-總有一天 -- 希望很快 -- 
+總有一天 -- 希望很快 --
 不支援 SNI 的用戶端將會被最新軟體取代。 監控您的要求日誌中的使用者代理程式字串，
 以了解有多少使用者人口已遷移到最新軟體。 (您可以決定你的臨界值；或許是
  &lt;5%、&lt;1% 或諸如此類的數字。)
 
 如果您伺服器上尚未有 HTTPS 服務可供使用，請立即啟用它
  (不必將 HTTP 重新導向至 HTTPS；見下文)。 設定您的網頁伺服器，
-以使用您購買並安裝的憑證。 您可能會覺得 [Mozilla 方便的 
+以使用您購買並安裝的憑證。 您可能會覺得 [Mozilla 方便的
 Configuration
  Generator] (https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 很實用。
@@ -207,7 +207,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 
 
 
-## 保持內部網站的 URL 相對性 
+## 保持內部網站的 URL 相對性
 
 
 
@@ -275,7 +275,7 @@ Note: 請以指令碼為之，而非手動。 如果您的網站內容是在資�
 您應該將指令碼在資料庫的開發副本上測試。
  如果您的網站內容是在簡單的純檔案中，
 在這些檔案的開發副本上測試您的指令碼。 像平常一樣，只有在變更通過 QA 時，
-才將變更推送至生產線。 您可以使用 [Bram van Damme 
+才將變更推送至生產線。 您可以使用 [Bram van Damme
 的指令碼](https://github.com/bramus/mixed-content-scan){: .external} 或類似的東西，以偵測您網站中的混合內容。
 
 
@@ -306,7 +306,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 
 
 
-## Redirect HTTP to HTTPS 
+## Redirect HTTP to HTTPS
 
 
 
@@ -325,7 +325,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 
 
 
-## 開啟 Strict Transport Security 和安全 cookie 
+## 開啟 Strict Transport Security 和安全 cookie
 
 
 
@@ -336,7 +336,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 
 
 
-此時，您就可以「鎖定」使用 HTTPS。 首先，使用 
+此時，您就可以「鎖定」使用 HTTPS。 首先，使用
 [Strict Transport Security]
 (https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)，
 以告知客戶應該一律透過 HTTPS 連線您的伺服器，
@@ -378,7 +378,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 
 
 
-## 移轉考量 
+## 移轉考量
 
 
 
@@ -403,14 +403,14 @@ Google 也發行一份指南，教導
 相較於應用程式的整體成本，剩下的 TLS 效能考量一般而言並不大。
  此外，您還可以降低和攤還這些成本。 (要取得 TLS 最佳化和一般性的良好建議
 ，請見 _[高效能瀏覽器網路化]
-(http://chimera.labs.oreilly.com/books/1230000000545)_[作者為 IlyaGrigorik]
-(http://chimera.labs.oreilly.com/books/1230000000545)。)另請參閱 Ivan Ristic
+(https://hpbn.co/)_[作者為 IlyaGrigorik]
+(https://hpbn.co/)。)另請參閱 Ivan Ristic
  的 _[OpenSSL 食譜]
 (https://www.feistyduck.com/books/openssl-cookbook/)_ 和 _[防彈 SSL 和 TLS]
 (https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_。
 
 在某些情況下，TLS 可以 _改善_ 效能，
-這主要來自於它能實現 HTTP/2。 Chris Palmer [曾於 Chrome 開發者峰會 2014 討論了 HTTPS 和 HTTP/2 的效能] 
+這主要來自於它能實現 HTTP/2。 Chris Palmer [曾於 Chrome 開發者峰會 2014 討論了 HTTPS 和 HTTP/2 的效能]
 (/web/shows/cds/2014/tls-all-the-things)。
 
 ### 參照者標頭
@@ -423,7 +423,7 @@ Google 也發行一份指南，教導
 本指南很實用！ :)如果被參照者網站可以完成本指南的「在您伺服器上啟用 HTTPS」一節，
 您可以變更您網站的連結，從 http:// 變更為 https://，或使用通訊協定相對的連結。
 
-* 您可以使用新的 [參照者政策標準] 
+* 您可以使用新的 [參照者政策標準]
 (http://www.w3.org/TR/referrer-policy/#referrer-policy-delivery-meta)，
 以參照者標頭，權宜解決形形色色的問題。
 

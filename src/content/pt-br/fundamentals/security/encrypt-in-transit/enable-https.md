@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Usar HTTPS nos servidores é fundamental para proteger páginas da web. 
+description: Usar HTTPS nos servidores é fundamental para proteger páginas da web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Como usar o HTTPS nos servidores {: .page-title }
@@ -199,7 +199,7 @@ Além disso, quando você criar vínculos para outras páginas no site, os usuá
 sofrer downgrade de HTTPS para HTTP.
 
 Esses problemas acontecem quando as páginas contêm URLs internos do site totalmente qualificados
-que usam o esquema *http://*. 
+que usam o esquema *http://*.
 
 <p><span class="compare-worse">Não recomendado</span> — Não recomendamos usar URLs internos do site totalmente qualificados.</p>
 
@@ -237,7 +237,7 @@ Em outras palavras, torne os URLs internos do site os mais relativos possível: 
     site.</a></p>
 
 Faça isso com um script, não manualmente. Se o conteúdo do site está em um banco de dados,
-teste o script em uma cópia de desenvolvimento do banco de dados. 
+teste o script em uma cópia de desenvolvimento do banco de dados.
 Se o conteúdo do site só contém arquivos simples, teste o script em uma cópia de desenvolvimento dos arquivos. Implemente as alterações na produção somente depois de aprovadas em teste de controle de qualidade, como sempre. Você pode usar o [script do Bram van Damme](https://github.com/bramus/mixed-content-scan) ou algo parecido para detectar conteúdo misto no site.
 
 Ao oferecer links para outros sites (em vez de incluir os recursos deles),
@@ -250,7 +250,7 @@ Se o site depende de scripts, imagens ou outros recursos fornecidos por
 terceiros, como CDN, jquery.com, você tem duas opções:
 
 * Usar URLs relativos a protocolo para esses recursos. Se o terceiro não
-oferecer HTTPS, peça que o faça. A maioria faz isso, incluindo o jquery.com. 
+oferecer HTTPS, peça que o faça. A maioria faz isso, incluindo o jquery.com.
 * Fornecer os recursos a partir de um servidor que você controle e que oferece HTTP
 e HTTPS. Na maioria dos casos, essa é uma boa ideia, porque assim você tem maior
 controle sobre o visual, o desempenho e a segurança do seu site. Além disso,
@@ -267,7 +267,7 @@ ajuda os mecanismos de pesquisa a determinar a melhor forma de chegar ao seu sit
 
 ## Ativar a segurança de transporte estrita e cookies seguros
 
-Neste ponto, você está pronto para “bloquear" o uso do HTTPS. 
+Neste ponto, você está pronto para “bloquear" o uso do HTTPS.
 
 * Use a segurança de transporte estrita do HTTP (HSTS) para evitar o custo do redirecionamento 301.
 * Sempre ative o sinalizador Secure para os cookies.
@@ -276,7 +276,7 @@ Primeiro, use [StrictTransportSecurity](https://en.wikipedia.org/wiki/HTTP_Stric
 para informar os clientes de que eles devem sempre se conectar ao servidor via HTTPS, mesmo
 ao seguir uma referência `http://`. Isso evita ataques como
 [SSLStrip](http://www.thoughtcrime.org/software/sslstrip/){: .external } e também
-evita o custo de ida e volta do `301 redirect` que ativamos em 
+evita o custo de ida e volta do `301 redirect` que ativamos em
 [Redirecionar HTTP para HTTPS](#redirect-http-to-https).
 
 Observação: Os clientes que marcaram seu site como host HSTS conhecido provavelmente passarão por uma <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>falha grave</i> se o site tiver um erro na configuração do TLS</a> (como um certificado expirado). O HSTS foi desenvolvido explicitamente dessa forma para garantir que os invasores de rede não consigam enganar os clientes e fazê-los acessar o site sem HTTPS. Não ative o HSTS até ter certeza de que o funcionamento do site está suficientemente sólido para impedir a implantação de HTTPS com erros de validação de certificado.
@@ -318,8 +318,8 @@ Quando as camadas de conteúdo e aplicativo estão bem ajustadas (leia o
 [livro de Steve Souders](https://stevesouders.com/){: .external } para obter ótimas dicas), as
 demais preocupações com o desempenho do TLS geralmente são pequenas em relação
 ao custo geral do aplicativo. Além disso, você pode reduzir e aliviar
-esses custos (para ver ótimos conselhos sobre otimização do TLS e em termos globais, leia 
-[High performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545), de Ilya Grigorik). Leia também o [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) e [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/), de Ivan Ristic.
+esses custos (para ver ótimos conselhos sobre otimização do TLS e em termos globais, leia
+[High performance Browser Networking](https://hpbn.co/), de Ilya Grigorik). Leia também o [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) e [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/), de Ivan Ristic.
 
 Em alguns casos, o TLS pode _melhorar_ o desempenho, principalmente como resultado de possibilitar o
 HTTP/2. Chris Palmer deu uma palestra sobre o [desempenho do HTTPS e do HTTP/2 no Chrome Dev Summit 2014](/web/shows/cds/2014/tls-all-the-things).
@@ -346,7 +346,7 @@ os operadores do site não poderão migrar para HTTPS sem perder receita com an�
 site migrem para HTTPS, os anunciantes não terão muita motivação para publicar via HTTPS.
 
 Os anunciantes devem, no mínimo, oferecer serviço de anúncio via HTTPS (como na conclusão
-da seção "Usar HTTPS nos servidores" desta página. Muitos já fazem isso. Você 
+da seção "Usar HTTPS nos servidores" desta página. Muitos já fazem isso. Você
 deve pedir aos anunciantes que não fornecem HTTPS em nenhuma hipótese que, pelo menos comecem a fornecer.
 Talvez seja uma boa ideia adiar a conclusão da seção [Tornar relativos os URLs internos do site](#make-intrasite-urls-relative) deste guia até que haja anunciantes suficientes operando adequadamente entre si.
 
