@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -84,21 +84,21 @@ origin.
 
 Once you've created your Queue instance, you can add failed requests to it.
 You add failed request by invoking the `.addRequest()` method. For example,
-the following code attempts to make a POST request to an API. If the
-request fails, it's added to the queue:
+the following code catches any requests that fail and adds them to the queue:
 
 ```js
 const queue = new workbox.backgroundSync.Queue('myQueueName');
-const request = new Request('/path/to/api', {
-  method: 'POST',
-  body: someformData,
-});
 
-try {
-  await fetch(request);
-} catch (err) {
-  queue.addRequest(request);
-}
+self.addEventListener('fetch', (event) => {
+  // Clone the request to ensure it's save to read when
+  // adding to the Queue.
+  const promiseChain = fetch(event.request.clone())
+  .catch((err) => {
+      return queue.addRequest(event.request);  
+  });
+  
+  event.waitUntil(promiseChain);
+});
 ```
 
 Once added to the queue, the request is automatically retried when the
