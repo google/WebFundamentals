@@ -70,6 +70,8 @@ toc:
   path: /web/tools/lighthouse/audits/has-viewport-meta-tag
 - title: Includes Front-End JavaScript Libraries With Known Security Vulnerabilities
   path: /web/tools/lighthouse/audits/vulnerabilities
+- title: JavaScript Bootup Time Is Too High
+  path: /web/tools/lighthouse/audits/bootup
 - title: Keep Server Response Times Low
   path: /web/tools/lighthouse/audits/ttfb
 - title: Manifest Contains Icons at Least 192px
