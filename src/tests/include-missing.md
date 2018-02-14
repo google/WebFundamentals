@@ -10,7 +10,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget d
 
 # This Is The Page Title {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/i/was/here.html" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dapibus
 libero. Morbi ultricies varius accumsan. Mauris vel odio semper, ultricies
@@ -24,13 +24,14 @@ sagittis. Vestibulum ultrices mollis efficitur.
 
 ## This is a sub heading
 
+{% include "web/you/were/here.md" %}
+
 Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
 iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
 consectetur. Etiam eleifend eget nisi a faucibus. Aliquam erat volutpat. Ut
 pretium purus sed tellus iaculis fringilla. Vestibulum luctus vel felis sed
 imperdiet. Curabitur non felis quis lacus ullamcorper interdum.
 
-{% include "web/_shared/this-include-doesnt-exist.html" %}
 
 Sed porttitor ex eget dolor fringilla, eget rutrum odio tempus. Curabitur
 feugiat vitae ex eu tempor. Praesent fermentum leo quis tellus feugiat
