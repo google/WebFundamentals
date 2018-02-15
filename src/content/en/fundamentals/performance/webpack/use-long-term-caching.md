@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How webpack helps with asset caching
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-02-15 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_blink_components: N/A #}
 
@@ -68,8 +68,10 @@ module.exports = {
 </pre>
 
 Note: Webpack could generate a different hash even if the bundle stays the same
-– e.g. if you rename a file or compile the bundle under a different OS. [This is
-a bug.](https://github.com/webpack/webpack/issues/1479) <br><br> If you need the
+– e.g. if you rename a file or compile the bundle under a different OS. This is
+a bug, and there’s no clear solution yet. [See the discussion on GitHub](https://github.com/webpack/webpack/issues/1479)
+
+If you need the
 file name to send it to the client, use either the `HtmlWebpackPlugin` or the
 `WebpackManifestPlugin`.
 
@@ -670,7 +672,7 @@ To enable the plugin, add it to the `plugins` section of the config:
 
 ## Summing up
 
-* Cache the bundle and differentiate between them by changing their names
+* Cache the bundle and differentiate between versions by changing the bundle name
 * Split the bundle into app code, vendor code and runtime
 * Inline the runtime to save an HTTP request
 * Lazy-load non-critical code with <code>import</code>
