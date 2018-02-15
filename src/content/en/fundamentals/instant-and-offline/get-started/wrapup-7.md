@@ -21,7 +21,10 @@ graphics resource optimization, and HTTP request reduction.
 The original target is a simple, single HTML page with text, images, CSS, and JavaScript, 
 hosted on Firebase here: 
 [https://page-load-speed-demo.firebaseapp.com/pageload0.html](https://page-load-speed-demo.firebaseapp.com/pageload0.html).
-Have a quick look at that, and then we will start improving it.
+Have a quick look at that, and then we can start improving it.
+
+**Note:** The source code for all versions of the demo page referenced in this document can be 
+found in [this GitHub repository](https://github.com/GoogleChromeLabs/FastPageLoadDemo).
 
 One of the prime considerations in page speed is First Meaningful Paint (FMP), a measure 
 of how users perceive page performance. FMP refers to the time it takes for a page's primary 
