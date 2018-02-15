@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2017-12-18 #}
+{# wf_updated_on: 2018-02-15 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -13,7 +13,27 @@ description: How to use webpack to make your app as small as possible
 One of the first things to do when you’re optimizing an application is to make it as small as
 possible. Here’s how to do this with webpack.
 
-## Enable minification
+## Use the production mode (webpack 4 only) {: #use-the-production-mode }
+
+Webpack 4 introduced the new `mode` flag. You could set this flag to `'development'` or
+`'production'` to hint webpack that you’re building the application for a specific environment:
+
+    // webpack.config.js
+    module.exports = {
+      mode: 'production',
+    };
+
+Make sure to enable the `production` mode when you’re building your app for production.
+This will make webpack apply optimizations like minification, removal of development-only code
+in libraries, [and more](https://medium.com/webpack/webpack-4-mode-and-optimization-5423a6bc597a).
+
+### Further reading {: .hide-from-toc }
+
+* [What specific things the `mode` flag configures](https://medium.com/webpack/webpack-4-mode-and-optimization-5423a6bc597a)
+
+## Enable minification {: #enable-minification }
+
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
 
 Minification is when you compress the code by removing extra spaces, shortening variable names and
 so on. Like this:
@@ -35,11 +55,10 @@ so on. Like this:
     // Minified code
     function map(n,r){let t=-1;for(const a=null==n?0:n.length,l=Array(a);++t<a;)l[t]=r(n[t],t,n);return l}
 
-Webpack supports two ways to minify the code: _the UglifyJS plugin_ and _loader-specific options_.
-They should be used simultaneously.
+Webpack supports two ways to minify the code: _the bundle-level minification_ and
+_loader-specific options_. They should be used simultaneously.
 
-[The UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) works on the level
-of the bundle – it compresses the bundle after compilation. Here’s how it works:
+The bundle-level minification compresses the whole bundle after compilation. Here’s how it works:
 
 <ol>
 <li>
@@ -78,7 +97,7 @@ function render(data, target) {
 
 <li>
 
-The UglifyJS plugin minifies it into approximately the following:
+A minificator compresses it into approximately the following:
 
 <pre class="prettyprint">
 // minified bundle.js (part of)
@@ -89,7 +108,14 @@ Object.defineProperty(n,"__esModule",{value:!0}),n.render=t;var o=r(1);r.n(o)
 </li>
 </ol>
 
-The plugin comes bundled with webpack. To enable it, add it to the `plugins` section of the config:
+In webpack 4, the bundle-level minification is enabled automatically – both in the production mode
+and without one. It uses [the UglifyJS minifier](https://github.com/mishoo/UglifyJS2) under the hood.
+(If you ever need to disable minification, just use the development mode or pass `false`
+to the `optimization.minimize` option.)
+
+In webpack 3, you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin).
+The plugin comes bundled with webpack; to enable it, add it to the `plugins`
+section of the config:
 
     // webpack.config.js
     const webpack = require('webpack');
@@ -100,9 +126,17 @@ The plugin comes bundled with webpack. To enable it, add it to the `plugins` sec
       ],
     };
 
+Note: In webpack 3, the UglifyJS plugin can’t compile the ES2015+ (ES6+) code. This means
+that if your code uses classes, arrow functions or other new language features,
+and you don’t compile them into ES5, the plugin will throw an error. <br><br>
+If you need to compile the new syntax, use the
+[uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) package. This
+is the same plugin that’s bundled with webpack, but newer, and it’s able to compile the ES2015+
+code.
+
 The second way is loader-specific options ([what a loader
 is](https://webpack.js.org/concepts/loaders/)). With loader options, you can compress things that
-the UglifyJS plugin can’t minify. For example, when you import a CSS file with
+the minifier can’t minify. For example, when you import a CSS file with
 [`css-loader`](https://github.com/webpack-contrib/css-loader), the file is compiled into a string:
 
     /* comments.css */
@@ -118,7 +152,7 @@ exports=module.exports=__webpack_require__(1)(),
 exports.push([module.i,<strong>".comment {\r\n  color: black;\r\n}"</strong>,""]);
 </pre>
 
-UglifyJS can’t compress this code because it’s a string. To minify the file content, we need to
+The minifier can’t compress this code because it’s a string. To minify the file content, we need to
 configure the loader to do this:
 
 <pre class="prettyprint">
@@ -138,13 +172,6 @@ module.exports = {
 };
 </pre>
 
-Note: The UglifyJS plugin can’t compile the ES2015+ (ES6+) code. This means that if your code uses
-classes, arrow functions or other new language features, and you don’t compile them into ES5, the
-plugin will throw an error. <br><br> If you need to compile the new syntax, use the
-[uglifyjs-webpack-plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin) package. This
-is the same plugin that’s bundled with webpack, but newer, and it’s able to compile the ES2015+
-code.
-
 ### Further reading {: .hide-from-toc }
 
 * [The UglifyJsPlugin docs](https://github.com/webpack-contrib/uglifyjs-webpack-plugin)
@@ -154,6 +181,8 @@ code.
   Compiler](https://github.com/roman01la/webpack-closure-compiler)
 
 ## Specify `NODE_ENV=production`
+
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the `NODE_ENV=production` optimization is already enabled. Feel free to skip this section.
 
 Another way to decrease the front-end size is to set the `NODE_ENV`
 [environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
@@ -190,10 +219,20 @@ React works similarly – it loads a development build that includes the warning
     // …
 
 Such checks and warnings are usually unnecessary in production, but they remain in the code and
-increase the library size. Configure webpack to remove them with the
-[`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/):
+increase the library size. Configure webpack to remove them with either the `optimization.nodeEnv`
+option (in webpack 4):
 
-     // webpack.config.js
+    // webpack.config.js (for webpack 4)
+    module.exports = {
+      optimization: {
+        nodeEnv: 'production',
+        minimize: true,
+      },
+    };
+
+or the [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) (in webpack 3):
+
+    // webpack.config.js (for webpack 3)
     const webpack = require('webpack');
 
     module.exports = {
@@ -205,13 +244,13 @@ increase the library size. Configure webpack to remove them with the
       ],
     };
 
-The `DefinePlugin` replaces all occurrences of a specified variable with a specific value. With the
+Both the `optimization.nodeEnv` option and the `DefinePlugin` work the same way – the replace all occurrences of `process.env.NODE_ENV` with the specified value. With the
 config from above:
 
 <ol>
 <li>
 
-The <code>DefinePlugin</code> will replace all occurrences of <code>process.env.NODE_ENV</code> with
+Webpack will replace all occurrences of <code>process.env.NODE_ENV</code> with
 <code>"production"</code>:
 
 <pre class="prettyprint">
@@ -237,16 +276,9 @@ if (typeof val === 'string') {
 </pre>
 
 </li>
-</ol>
-
-Note: If you prefer to configure environment variables via CLI, take a look at the
-[EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/). It works like the
-`DefinePlugin`, but reads the environment and replaces `process.env.` expressions automatically.
-
-<ol start="2">
 <li>
 
-And then the <code>UglifyJsPlugin</code> will remove all such <code>if</code> branches – because
+And then <a href="#enable-minification">the minificator</a> will remove all such <code>if</code> branches – because
 <code>"production" !== 'production'</code> is always false, and the plugin understands that the code
 inside these branches will never execute:
 
@@ -272,11 +304,6 @@ if (typeof val === 'string') {
 
 </li>
 </ol>
-
-Note: You’re not required to use the `UglifyJsPlugin`. You can use any different minifier as soon as
-it supports dead code removal (e.g., the [Babel Minify
-plugin](https://github.com/webpack-contrib/babel-minify-webpack-plugin) or the [Google Closure
-Compiler plugin](https://github.com/roman01la/webpack-closure-compiler)).
 
 ### Further reading {: .hide-from-toc }
 
@@ -332,7 +359,7 @@ separate export point in the bundle:
 
 <li>
 
-The <code>UglifyJsPlugin</code> removes the unused variable:
+[The minifier](#enable-minification) removes the unused variable:
 
 <pre class="prettyprint">
 // bundle.js (part that corresponds to comments.js)
@@ -345,10 +372,10 @@ The <code>UglifyJsPlugin</code> removes the unused variable:
 This works even with libraries if they are written with ES modules.
 
 Note: In webpack, tree-shaking doesn’t work without a minifier. Webpack just removes export
-statements for exports that aren’t used; it’s the `UglifyJsPlugin` that removes unused code.
+statements for exports that aren’t used; it’s the minifier that removes unused code.
 Therefore, if you compile the bundle without the minifier, it won’t get smaller. <br><br>
-You aren’t required to use precisely this plugin though. Any minifier that supports
-dead code removal
+You aren’t required to use precisely webpack’s built-in minifier (`UglifyJsPlugin`) though.
+Any minifier that supports dead code removal
 (e.g. [Babel Minify plugin](https://github.com/webpack-contrib/babel-minify-webpack-plugin)
 or [Google Closure Compiler plugin](https://github.com/roman01la/webpack-closure-compiler))
 will do the trick.
@@ -496,6 +523,8 @@ repo – [check it out](https://github.com/GoogleChromeLabs/webpack-libs-optimiz
 
 ## Enable module concatenation for ES modules (aka scope hoisting)
 
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
+
 When you are building a bundle, webpack is wrapping each module into a function:
 
     // index.js
@@ -573,9 +602,18 @@ See the difference? In the plain bundle, module 0 was requiring `render` from mo
 `ModuleConcatenationPlugin`, `require` is simply replaced with required function, and module 1 is
 removed. The bundle has fewer modules – and less module overhead!
 
-To enable this behavior, add `ModuleConcatenationPlugin` into the list of plugins:
+To enable this behavior, either enable the `optimization.concatenateModules` option (in webpack 4; this option uses `ModuleConcatenationPlugin` under the hood):
 
-    // webpack.config.js
+    // webpack.config.js (for webpack 4)
+    module.exports = {
+      optimization: {
+        concatenateModules: true,
+      },
+    };
+
+or add `ModuleConcatenationPlugin` directly into the list of plugins (in webpack 3):
+
+    // webpack.config.js (for webpack 3)
     const webpack = require('webpack');
 
     module.exports = {
@@ -681,8 +719,9 @@ be excluded from the bundle. This is reasonable – webpack doesn’t know if `i
 
 ## Summing up
 
-* Minimize your code with the `UglifyJsPlugin` and loader options
-* Remove the development-only code with the `DefinePlugin`
+* Enable the production mode if you use webpack 4
+* Minimize your code with the bundle-level minifier and loader options
+* Remove the development-only code by replacing `NODE_ENV` with `production`
 * Use ES modules to enable tree shaking
 * Compress images
 * Apply dependency-specific optimizations
