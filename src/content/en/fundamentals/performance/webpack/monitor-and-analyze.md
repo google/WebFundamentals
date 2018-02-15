@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: What tools to use to keep track of and analyze the webpack bundle
 
-{# wf_updated_on: 2017-12-18 #}
+{# wf_updated_on: 2018-02-15 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -157,6 +157,7 @@ Add an npm script to run the check:
     "check-size": "bundlesize"
   }
 }
+</pre>
 </li>
 
 <li>Configure the CI to execute <code>npm run check-size</code> on each push. (And <a
@@ -209,7 +210,7 @@ add a plugin to the webpack config:
 
     // webpack.config.js
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-    
+
     module.exports = {
       plugins: [
         new BundleAnalyzerPlugin(),
@@ -242,8 +243,7 @@ of the same library?
 `moment` and `date-fns`, or `lodash` and `lodash-es`.) Try sticking with a single tool.
 
 Also, check out Sean Larkin’s [great analysis of webpack
-bundles](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab38
-9e5f318).
+bundles](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab389e5f318).
 
 ## Summing up
 
