@@ -109,9 +109,9 @@ On the other hand, raster images pose a much larger challenge because they encod
 </tbody>
 </table>
 
-When we double the resolution the physical screen the total number of pixels increases by a factor of four: double the number of horizontal pixels, times double the number of vertical pixels. Hence, a "2x" screen not just doubles, but quadruples the number of required pixels!
+When we double the resolution of the physical screen, the total number of pixels increases by a factor of four: double the number of horizontal pixels, times double the number of vertical pixels. Hence, a "2x" screen not just doubles, but quadruples the number of required pixels!
 
-So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each imagewith the help of [`srcset` and `picture`](/web/fundamentals/design-and-ux/responsive/images#images-in-markup).
+So, what does this mean in practice? High resolution screens enable us to deliver beautiful images, which can be a great product feature. However, high resolution screens also require high-resolution images: prefer vector images whenever possible as they are resolution independent and always deliver sharp results, and if a raster image is required, deliver and optimize multiple variants of each image with the help of [`srcset` and `picture`](/web/fundamentals/design-and-ux/responsive/images#images-in-markup).
 
 ## Optimizing vector images
 
@@ -198,7 +198,7 @@ Note: As an aside, regardless of the image format used to transfer the data from
 
 39KB for a 100x100 pixel image may not seem like a big deal, but the filesize quickly explodes for larger images and makes image assets both slow and expensive to download. Thankfully, what we've described so far is the "uncompressed" image format. What could we do to reduce the image file size?
 
-One simple strategy is to reduce the "bit-depth" of the image from 8 bits per channel to a smaller color palette: 8 bits per channel gives us 256 values per channel and 16,777,216 (2563) colors in total. What if we reduced the palette to 256 colors? Then we would only need 8 bits in total for the RGB channels and immediately save two bytes per pixel -- that's 50% compression savings over our original 4 bytes per pixel format!
+One simple strategy is to reduce the "bit-depth" of the image from 8 bits per channel to a smaller color palette: 8 bits per channel gives us 256 values per channel and 16,777,216 (256 ^ 3) colors in total. What if we reduced the palette to 256 colors? Then we would only need 8 bits in total for the RGB channels and immediately save two bytes per pixel -- that's 50% compression savings over our original 4 bytes per pixel format!
 
 <img src="images/artifacts.png"  alt="Compression artifacts">
 
@@ -405,7 +405,7 @@ The overhead of shipping unnecessary pixels, only to have the browser rescale th
   <td data-th="resolution">2x</td>
   <td data-th="natural">220 x 220</td>
   <td data-th="display">100 x 100</td>
-  <td data-th="overhead">210 x 210 - (2 x 100) x (2 x 100) = 8400</td>
+  <td data-th="overhead">220 x 220 - (2 x 100) x (2 x 100) = 8400</td>
 </tr>
 <tr>
   <td data-th="resolution">2x</td>
@@ -435,5 +435,5 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
 * **Pick best raster image format:** determine your functional requirements and select the one that suits each particular asset.
 * **Experiment with optimal quality settings for raster formats:** don't be afraid to dial down the "quality" settings, the results are often very good and byte savings are significant.
 * **Remove unnecessary image metadata:** many raster images contain unnecessary metadata about the asset: geo information, camera information, and so on. Use appropriate tools to strip this data.
-* **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size of the image. Pay close to attention to large images in particular, as they account for largest overhead when resized!
+* **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size of the image. Pay close attention to large images in particular, as they account for largest overhead when resized!
 * **Automate, automate, automate:** invest into automated tools and infrastructure that will ensure that all of your image assets are always optimized.
