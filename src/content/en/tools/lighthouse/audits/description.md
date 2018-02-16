@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document Does Not Have A Meta Description" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-14 #}
-{# wf_published_on: 2018-02-14 #}
+{# wf_updated_on: 2018-02-16 #}
+{# wf_published_on: 2018-02-16 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Document Does Not Have A Meta Description  {: .page-title }
@@ -17,7 +17,7 @@ can make your results more relevant to search users and can increase your search
 
 * Add a description tag to the `<head>` of each of your pages.
 
-    <pre>
+    <pre class="prettyprint">
     &lt;meta name="Description" content="Put your description here."&gt;
     </pre>
 
@@ -26,7 +26,7 @@ can make your results more relevant to search users and can increase your search
 * Include clearly-tagged facts in the descriptions. The descriptions don't have to be in
   sentence format. They can contain structured data.
 
-    <pre>
+    <pre class="prettyprint">
     &lt;meta name="Description" content="Author: A.N. Author, 
         Illustrator: P. Picture, Category: Books, Price: $17.99, 
         Length: 784 pages"&gt;
@@ -37,7 +37,7 @@ can make your results more relevant to search users and can increase your search
 
 See [Create good meta descriptions][help]{:.external} for more guidance.
 
-[help]: https://support.google.com/webmasters/answer/35624?hl=en#1
+[help]: https://support.google.com/webmasters/answer/35624#1
 
 ## More information {: #more-info }
 
