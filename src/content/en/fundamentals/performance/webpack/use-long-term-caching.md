@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How webpack helps with asset caching
 
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-02-16 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_blink_components: N/A #}
 
@@ -108,7 +108,7 @@ which file to work with:
 
 App dependencies tend to change less often than the actual app code. If you move
 them into a separate file, the browser will be able to cache them separately –
-and don’t re-download them each time the app code changes.
+and won’t re-download them each time the app code changes.
 
 Key Term: In webpack terminology, separate files with the app code are called
 _chunks_. We’ll use this name later.
@@ -154,20 +154,39 @@ module.exports = {
 };
 </pre>
 
-In this snippet, “main” is a name of a chunk. This name will be substituted in
-place of <code>[name]</code> from step 1.
+<p>In this snippet, “main” is a name of a chunk. This name will be substituted in
+place of <code>[name]</code> from step 1.</p>
 
-By now, if you build the app, this chunk will include the whole app code – just
-like we haven’t done these steps. But this will change in a sec.
+<p>By now, if you build the app, this chunk will include the whole app code – just
+like we haven’t done these steps. But this will change in a sec.</p>
 
 </li>
 
 <li>
-Add the <a
-href="https://webpack.js.org/plugins/commons-chunk-plugin/"><code>CommonsChunkPlugin</code></a>:
+<p><b>In webpack 4,</b> add the <code>optimization.splitChunks.chunks: 'all'</code> option
+into your webpack config:</p>
 
 <pre class="prettyprint">
-// webpack.config.js
+// webpack.config.js (for webpack 4)
+module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
+};
+</pre>
+
+<p>This option enables smart code splitting. With it, webpack would extract the vendor code if
+it gets larger than 30 kB (before minification and gzip). It would also extract the common code –
+this is useful if your build produces several bundles (e.g.
+<a href="#split-the-code-into-routes-and-pages">if you split your app into routes</a>).</p>
+
+<p><b>In webpack 3,</b> add the <a
+href="https://webpack.js.org/plugins/commons-chunk-plugin/"><code>CommonsChunkPlugin</code></a>:</p>
+
+<pre class="prettyprint">
+// webpack.config.js (for webpack 3)
 module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
@@ -183,14 +202,15 @@ module.exports = {
 };
 </pre>
 
-This plugin takes all modules which paths include <code>node_modules</code> and
-moves them into a separate file called <code>vendor.[chunkhash].js</code>.
+<p>This plugin takes all modules which paths include <code>node_modules</code> and
+moves them into a separate file called <code>vendor.[chunkhash].js</code>.</p>
 
 </li>
 </ol>
 
-After these steps, each build will generate two files instead of one. The
-browser would cache them separately – and redownload only code that changes:
+After these changes, each build will generate two files instead of one: `main.[chunkhash].js` and
+`vendor.[chunkhash].js` (`vendors~main.[chunkhash].js` for webpack 4). In case of webpack 4,
+the vendor bundle might not be generated if dependencies are small – and that’s fine:
 
 <pre class="prettyprint">
 $ webpack
@@ -201,6 +221,8 @@ Time: 3816ms
   ./main.00bab6fd3100008a42b0.js  82 kB       0  [emitted]  main
 ./vendor.d9e134771799ecdf9483.js  47 kB       1  [emitted]  vendor
 </pre>
+
+The browser would cache these files separately – and redownload only code that changes.
 
 ### Webpack runtime code
 
@@ -243,10 +265,19 @@ Webpack includes this runtime into the last generated chunk, which is `vendor`
 in our case. And every time any chunk changes, this piece of code changes too,
 causing the whole <code>vendor</code> chunk to change.
 
-To solve this, let’s move the runtime into a separate file by creating an extra
-empty chunk with the `CommonsChunkPlugin`:
+To solve this, let’s move the runtime into a separate file. **In webpack 4,** this is
+achieved by enabling the `optimization.runtimeChunk` option:
 
-    // webpack.config.js
+    // webpack.config.js (for webpack 4)
+    module.exports = {
+      optimization: {
+        runtimeChunk: true,
+      },
+    };
+
+**In webpack 3,** do this by creating an extra empty chunk with the `CommonsChunkPlugin`:
+
+    // webpack.config.js (for webpack 3)
     module.exports = {
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
@@ -298,6 +329,8 @@ Include them into `index.html` in the reverse order – and you’re done:
 * [“Getting the most out of the
   CommonsChunkPlugin”](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab389e5f318)
 
+* [How `optimization.splitChunks` and `optimization.runtimeChunk` work](https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693)
+
 ## Inline webpack runtime to save an extra HTTP request
 
 To make things even better, try inlining the webpack runtime into the HTML
@@ -329,13 +362,70 @@ is all you need.
 
 ### If you generate HTML using a custom server logic
 
+**With webpack 4:**
+
+<ol>
+<li>
+
+Add the
+<a href="https://github.com/danethurber/webpack-manifest-plugin"><code>WebpackManifestPlugin</code></a>
+to know the generated name of the runtume chunk:
+
+<pre class="prettyprint">
+// webpack.config.js (for webpack 4)
+const ManifestPlugin = require('webpack-manifest-plugin');
+
+module.exports = {
+  plugins: [
+    new ManifestPlugin(),
+  ],
+};
+</pre>
+
+A build with this plugin would create a file that looks like this:
+
+<pre class="prettyprint">
+// manifest.json
+{
+  "runtime~main.js": "runtime~main.8e0d62a03.js"
+}
+</pre>
+
+</li>
+
+<li>
+
+Inline the content of the runtime chunk in a convenient way. E.g. with
+Node.js and Express:
+
+<pre class="prettyprint">
+// server.js
+const fs = require('fs');
+const manifest = require('./manifest.json');
+
+const runtimeContent = fs.readFileSync(manifest['runtime~main.js'], 'utf-8');
+
+app.get('/', (req, res) => {
+  res.send(`
+    …
+    &lt;script>${runtimeContent}&lt;/script>
+    …
+  `);
+});
+</pre>
+
+</li>
+</ol>
+
+**Or with webpack 3:**
+
 <ol>
 <li>
 
 Make the runtime name static by specifying <code>filename</code>:
 
 <pre class="prettyprint">
-// webpack.config.js
+// webpack.config.js (for webpack 3)
 module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
@@ -440,7 +530,7 @@ plugin.
 * The JavaScript proposal [for implementing the `import()`
   syntax](https://github.com/tc39/proposal-dynamic-import)
 
-## Split the code into routes and pages
+## Split the code into routes and pages {: #split-the-code-into-routes-and-pages }
 
 If your app has multiple routes or pages, but there’s only a single JS file with
 the code (a single `main` chunk), it’s likely that you’re serving extra bytes on
@@ -513,11 +603,27 @@ visiting the home page.
 
 Separate dependency trees have their drawbacks though. If two entry points use
 Lodash, and you haven’t moved your dependencies into a vendor bundle, both entry
-points will include a copy of Lodash. To solve this, use the
-[`CommonsChunkPlugin`](https://webpack.js.org/plugins/commons-chunk-plugin/) –
-it will move common dependencies into a separate file:
+points will include a copy of Lodash. To solve this, **in webpack 4,** add the
+`optimization.splitChunks.chunks: 'all'` option into your webpack config:
 
-    // webpack.config.js
+<pre class="prettyprint">
+// webpack.config.js (for webpack 4)
+module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
+};
+</pre>
+
+This option enables smart code splitting. With this option, webpack would automatically
+look for common code and extract it into separate files.
+
+Or, **in webpack 3,** use the [`CommonsChunkPlugin`](https://webpack.js.org/plugins/commons-chunk-plugin/)
+– it will move common dependencies into a new specified file:
+
+    // webpack.config.js (for webpack 3)
     module.exports = {
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
@@ -548,6 +654,8 @@ inflating it too much.
 
 * [“Getting the most out of the
   CommonsChunkPlugin”](https://medium.com/webpack/webpack-bits-getting-the-most-out-of-the-commonschunkplugin-ab389e5f318)
+
+* [How `optimization.splitChunks` and `optimization.runtimeChunk` work](https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693)
 
 ## Make module ids more stable
 
