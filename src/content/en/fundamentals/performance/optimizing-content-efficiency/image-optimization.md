@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-02-16 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Image Optimization {: .page-title }
