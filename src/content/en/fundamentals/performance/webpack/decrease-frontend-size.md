@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-02-16 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -108,12 +108,12 @@ Object.defineProperty(n,"__esModule",{value:!0}),n.render=t;var o=r(1);r.n(o)
 </li>
 </ol>
 
-In webpack 4, the bundle-level minification is enabled automatically – both in the production mode
+**In webpack 4,** the bundle-level minification is enabled automatically – both in the production mode
 and without one. It uses [the UglifyJS minifier](https://github.com/mishoo/UglifyJS2) under the hood.
 (If you ever need to disable minification, just use the development mode or pass `false`
 to the `optimization.minimize` option.)
 
-In webpack 3, you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin).
+**In webpack 3,** you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin).
 The plugin comes bundled with webpack; to enable it, add it to the `plugins`
 section of the config:
 
@@ -219,8 +219,8 @@ React works similarly – it loads a development build that includes the warning
     // …
 
 Such checks and warnings are usually unnecessary in production, but they remain in the code and
-increase the library size. Configure webpack to remove them with either the `optimization.nodeEnv`
-option (in webpack 4):
+increase the library size. **In webpack 4,** remove them by adding
+the `optimization.nodeEnv: 'production'` option:
 
     // webpack.config.js (for webpack 4)
     module.exports = {
@@ -230,7 +230,7 @@ option (in webpack 4):
       },
     };
 
-or the [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) (in webpack 3):
+**In webpack 3,** use the [`DefinePlugin`](https://webpack.js.org/plugins/define-plugin/) instead:
 
     // webpack.config.js (for webpack 3)
     const webpack = require('webpack');
@@ -564,8 +564,8 @@ a size and performance overhead for each module.
 
 Webpack 2 introduced support for ES modules which, unlike CommonJS and AMD modules, can be bundled
 without wrapping each with a function. And webpack 3 made such bundling possible – with
-[`ModuleConcatenationPlugin`](https://webpack.js.org/plugins/module-concatenation-plugin/). Here’s
-what this plugin does:
+[module concatenation](https://webpack.js.org/plugins/module-concatenation-plugin/). Here’s
+what module concatenation does:
 
     // index.js
     import {render} from './comments.js';
@@ -599,10 +599,10 @@ what this plugin does:
     })
 
 See the difference? In the plain bundle, module 0 was requiring `render` from module 1. With
-`ModuleConcatenationPlugin`, `require` is simply replaced with required function, and module 1 is
+module concatenation, `require` is simply replaced with required function, and module 1 is
 removed. The bundle has fewer modules – and less module overhead!
 
-To enable this behavior, either enable the `optimization.concatenateModules` option (in webpack 4; this option uses `ModuleConcatenationPlugin` under the hood):
+To enable this behavior, **in webpack 4**, enable the `optimization.concatenateModules` option:
 
     // webpack.config.js (for webpack 4)
     module.exports = {
@@ -611,7 +611,7 @@ To enable this behavior, either enable the `optimization.concatenateModules` opt
       },
     };
 
-or add `ModuleConcatenationPlugin` directly into the list of plugins (in webpack 3):
+**In webpack 3,** use the `ModuleConcatenationPlugin`:
 
     // webpack.config.js (for webpack 3)
     const webpack = require('webpack');
