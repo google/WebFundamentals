@@ -33,7 +33,8 @@ in libraries, [and more](https://medium.com/webpack/webpack-4-mode-and-optimizat
 
 ## Enable minification {: #enable-minification }
 
-Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the
+bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
 
 Minification is when you compress the code by removing extra spaces, shortening variable names and
 so on. Like this:
@@ -108,10 +109,10 @@ Object.defineProperty(n,"__esModule",{value:!0}),n.render=t;var o=r(1);r.n(o)
 </li>
 </ol>
 
-**In webpack 4,** the bundle-level minification is enabled automatically – both in the production mode
-and without one. It uses [the UglifyJS minifier](https://github.com/mishoo/UglifyJS2) under the hood.
-(If you ever need to disable minification, just use the development mode or pass `false`
-to the `optimization.minimize` option.)
+**In webpack 4,** the bundle-level minification is enabled automatically – both in the production
+mode and without one. It uses [the UglifyJS minifier](https://github.com/mishoo/UglifyJS2)
+under the hood. (If you ever need to disable minification, just use the development mode
+or pass `false` to the `optimization.minimize` option.)
 
 **In webpack 3,** you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin).
 The plugin comes bundled with webpack; to enable it, add it to the `plugins`
@@ -182,7 +183,8 @@ module.exports = {
 
 ## Specify `NODE_ENV=production`
 
-Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the `NODE_ENV=production` optimization is already enabled. Feel free to skip this section.
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the
+`NODE_ENV=production` optimization is already enabled. Feel free to skip this section.
 
 Another way to decrease the front-end size is to set the `NODE_ENV`
 [environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
@@ -244,7 +246,8 @@ the `optimization.nodeEnv: 'production'` option:
       ],
     };
 
-Both the `optimization.nodeEnv` option and the `DefinePlugin` work the same way – the replace all occurrences of `process.env.NODE_ENV` with the specified value. With the
+Both the `optimization.nodeEnv` option and the `DefinePlugin` work the same way –
+they replace all occurrences of `process.env.NODE_ENV` with the specified value. With the
 config from above:
 
 <ol>
@@ -278,9 +281,9 @@ if (typeof val === 'string') {
 </li>
 <li>
 
-And then <a href="#enable-minification">the minificator</a> will remove all such <code>if</code> branches – because
-<code>"production" !== 'production'</code> is always false, and the plugin understands that the code
-inside these branches will never execute:
+And then <a href="#enable-minification">the minificator</a> will remove all such
+<code>if</code> branches – because <code>"production" !== 'production'</code> is always false,
+and the plugin understands that the code inside these branches will never execute:
 
 <pre class="prettyprint">
 // vue/dist/vue.runtime.esm.js
@@ -386,7 +389,8 @@ If you use Babel with `babel-preset-env` or `babel-preset-es2015`, check the set
 presets. By default, they transpile ES’ `import` and `export` to CommonJS’ `require` and
 `module.exports`. [Pass the `{ modules: false }`
 option](https://github.com/babel/babel/tree/master/experimental/babel-preset-env) to disable this.
-<br><br>The same with TypeScript: remember to set `{ "compilerOptions": { "module": "es2015" } }` in your `tsconfig.json`.
+<br><br>The same with TypeScript: remember to set `{ "compilerOptions": { "module": "es2015" } }`
+in your `tsconfig.json`.
 
 ### Further reading {: .hide-from-toc }
 
@@ -518,8 +522,8 @@ files](https://github.com/moment/moment/tree/4caa268356434f3ae9b5041985d62a0e8c2
 you don’t use Moment.js with multiple languages, these files will bloat the bundle without a
 purpose.
 
-All these dependencies can be easily optimized. We’ve collected optimization approaches in a GitHub
-repo – [check it out](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)!
+All these dependencies can be easily optimized. We’ve collected optimization approaches in
+a GitHub repo – [check it out](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)!
 
 ## Enable module concatenation for ES modules (aka scope hoisting)
 
