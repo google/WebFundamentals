@@ -46,6 +46,8 @@ toc:
   path: /web/tools/lighthouse/audits/critical-request-chains
 - title: Displays Images With Incorrect Aspect Ratio
   path: /web/tools/lighthouse/audits/aspect-ratio
+- title: Document Does Not Have A Meta Description
+  path: /web/tools/lighthouse/audits/description
 - title: Element aria-* Attributes Are Allowed For This Role
   path: /web/tools/lighthouse/audits/aria-allowed-attributes
 - title: Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent
