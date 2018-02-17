@@ -4,6 +4,7 @@ book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2018-02-16 #}
 {# wf_published_on: 2014-05-06 #}
+{# wf_blink_components: Blink>Image #}
 
 # Image Optimization {: .page-title }
 
