@@ -37,8 +37,8 @@ words, a typeface is what you see, and the font is what you use.
 </div>
 <div class="clearfix"></div>
 
-<div class="note"><strong>Note:</strong><span> Roboto Family designed by Christian Robertson.
-On the left, a specimen of Roboto. On the right different members of the Roboto family.</span></div>
+Note: Roboto Family designed by Christian Robertson. On the left, a 
+specimen of Roboto. On the right different members of the Roboto family.
 
 ### Challanges for the Designer and Developer
 
@@ -58,8 +58,9 @@ for web designers, and developers as a customized typography experience can come
 at a cost. This is even before we have dealt how the font renders and the
 patterns we are going to use (FOIT and FOUT).
 
-## Anatomy of a variable font A variable font is a collection of masters, with
-one Default master, (usually the Regular font), and multiple registered “Axes”,
+## Anatomy of a variable font
+A variable font is a collection of masters, with one Default master, 
+(usually the Regular font), and multiple registered “Axes”,
 such as the Weight axis, which would include the Regular and Black weights of
 the typeface. These individual styles along the axes are called instances.
 <strong>Width</strong>, <strong>Optical Size</strong> and <strong>Slant</strong>
@@ -83,11 +84,11 @@ that give the designer or developer an array of weights to choose from and
 explore.
 
 [Amstelvar](https://github.com/TypeNetwork/Amstelvar){: .external} also has
-[three masters for its Width axis, Regular, which is at the center of the axis
-[scale, and two masters, much more narrow and wider at the opposite ends of the
-[axis. These not only provide all the widths in between but also all the widths
-[and weights combined. So each axis adds styles like powers of 2, 3 and 4 do to
-[numbers.
+three masters for its Width axis, Regular, which is at the center of the axis
+scale, and two masters, much more narrow and wider at the opposite ends of the
+axis. These not only provide all the widths in between but also all the widths
+and weights combined. So each axis adds styles like powers of 2, 3 and 4 do to
+numbers.
 
 So among Amstelvar’s registered axes, width, weight and optical size, there are
 thousands of styles which may seem like massive overkill, and Amstelvar is only
@@ -97,7 +98,8 @@ experience can be remarkably enhanced by this diversity of type styles within a
 font. And, if it is without performance penalty, the user can use a few, or use
 many, it’s up to their design.
 
-### Italics are slightly different Type families like Helvetica or Roboto have
+### Italics are slightly different 
+Type families like Helvetica or Roboto have
 interpolation compatible contours, so their Roman and Italic works well when
 interpolating between different axes. So long as there are no other significant
 changes the slant axis can be used to get from Roman to Italic.
@@ -108,16 +110,15 @@ define an italic lowercase “n”  do not match the points used to define a Rom
 lowercase “n”.
 
 <figure>   <img src="images/Amstelvar-Ital-axis.png" alt="Example of the Weight
-Axes for the typeface Amstelvar">   <figcaption>Amstelvar's Regular "n", (12
+Axes for the typeface Amstelvar">
+<figcaption>Amstelvar's Regular "n", (12
 point, regular weight, normal width), and future 12 point, regular weight,
 normal width, italic l.c."n" contours.  </figcaption> </figure>
 
-<aside class="note">strong>Note:/strong>span> This is illustrating the
-<capability in variables to, instead of interpolating, substitute one contour
-<for another, here on the "ital" axis.
-
+Note: This is illustrating the capability in variables to, instead of interpolating
+substitute one contour for another, here on the "ital" axis. 
 Image: David Berlow, type designer and typographer at Font
-Bureau.</span></aside>
+Bureau.
 
 In variable fonts, this is solved by using the registered Italic axis. If the
 user selects it, this axis changes from Roman to the new Italic structure as if
@@ -239,13 +240,15 @@ The way we define or change an axis by using the property CSS font-variations;
 </pre> 
 
 <figure>
-  <img src="images/gingham-weight-e.gif" alt="Ginghams font's Weight and Width being changed on the fly.">
+  <img src="images/gingham-weight-e.gif" 
+  alt="Ginghams font's Weight and Width being changed on the fly.">
   <figcaption>In this example you can see the axes 
     being changed on the fly.  
 </figcaption>
 </figure>
 
-## Responsibility of the typesetter Changing the define five axes are down to
+## Responsibility of the typesetter 
+Changing the define five axes are down to
 personal taste and standard best practice. The danger with any new technology is
 its misuse and typographic terms that means that being overly artistic and
 exploratory could also mean illegibility of the actual text. For titles
@@ -262,11 +265,12 @@ here](https://codepen.io/mandymichael/pen/YYaWop){: .external}.
 <figure>   <img src="images/axis-praxis.gif" alt="Example of the typeface
 Zycon."> </figure> There is also a possibility to explore animating characters
 with variable fonts, in this example different axes being used with the typeface
-Zycon. [Example from Axis Praxis](https://www.axis-praxis.org/specimens/zycon){:
-.external}.
+Zycon. 
+[Example from Axis Praxis](https://www.axis-praxis.org/specimens/zycon){: .external}.
 
-## Variable fonts performance gains OpenType variable fonts allow us to store
-multiple variations of a type family into a single font file.
+## Variable fonts performance gains 
+OpenType variable fonts allow us to store multiple variations of a type 
+family into a single font file.
 [Monotype](http://www.monotype.com/blog/articles/part-2-from-truetype-gx-to-variable-fonts/){: .external} 
 ran an experiment by combinings 12 input fonts to
 generate eight weights, across three widths, across both the Italic and Roman
