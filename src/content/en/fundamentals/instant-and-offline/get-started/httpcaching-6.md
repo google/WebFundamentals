@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-25 #}
-{# wf_published_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-20 #}
+{# wf_published_on: 2018-02-20 #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
 # HTTP Caching {: .page-title }
 
@@ -16,7 +17,7 @@ where it can retrieve a resource from, and that can make a big difference in you
 load speed.
 
 The first time a browser loads a web page, it stores the page resources in the 
-[HTTP Cache](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching). 
+[HTTP Cache](web/fundamentals/performance/optimizing-content-efficiency/http-caching). 
 The next time the browser hits that page, it 
 can look in the cache for resources that were previously fetched and retrieve them from disk,  
 often faster than it can download them from the network. 
