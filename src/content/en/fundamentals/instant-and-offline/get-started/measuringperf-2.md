@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-25 #}
-{# wf_published_on: 2018-01-25 #}
+{# wf_updated_on: 2018-02-20 #}
+{# wf_published_on: 2018-02-20 #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
 # Measuring Performance {: .page-title }
 
@@ -44,7 +45,7 @@ provides one or more comprehensive reports that detail your page's performance c
 This Google tool performs a broad-spectrum page analysis and delivers both raw results and 
 improvement suggestions. It provides separate reports for mobile and desktop devices.
 
-[https://developers.google.com/speed/pagespeed/insights/](http://tinyurl.com/m65jex6)
+[Google Pagespeed Insights](http://tinyurl.com/m65jex6)
 
 To use it, enter a URL and click `Analyze`. The report's suggestions include brief 
 explanations such as "Leverage browser caching", a list of specific resources to look at, 
@@ -95,7 +96,7 @@ your workflow. Consider these general recommendations.
  real-world setup.
  - PageSpeed Insights is great if you aren't sure where to start and want a useful overview  
  of improvement opportunities. PageSpeed Insights recently started including data from the 
- [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report/) 
+ [Chrome User Experience Report](web/tools/chrome-user-experience-report/) 
  and might best capture how your real-world users will experience your site.
 
 As you might expect, the scores and recommendations for a single URL will vary among test 
