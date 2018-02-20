@@ -2,8 +2,10 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-02-19 #}
+{# wf_updated_on: 2018-02-20 #}
 {# wf_published_on: 2018-02-19 #}
+{# wf_blink_components: N/A #}
+
 
 # Introduction to variable fonts on the web {: .page-title }
 
