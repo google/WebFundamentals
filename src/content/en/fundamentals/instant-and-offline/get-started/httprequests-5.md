@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-05 #}
-{# wf_published_on: 2018-02-05 #}
+{# wf_updated_on: 2018-02-20 #}
+{# wf_published_on: 2018-02-20 #}
+{# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
 # HTTP Requests {: .page-title }
 
@@ -156,7 +157,7 @@ at [WellStyled](http://wellstyled.com/css-nopreload-rollovers.html).
 
 In our discussion of combining text and graphics, we should note that the 
 newer 
-[HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/) 
+[HTTP/2](web/fundamentals/performance/http2/) 
 protocol may change how you consider combining resources. For example, common and 
 valuable techniques like minification, server compression, and image optimization should be 
 continued on HTTP/2. However, physically combining files as discussed above might not achieve 
@@ -185,7 +186,7 @@ Common convention is to put script blocks in the page head. The problem with thi
 is that, typically, little to none of the script is really meant to execute until the page is 
 displayed but, while it is loading, it unnecessarily blocks page rendering. Identifying 
 render-blocking script is one of the reporting rules of 
-[PageSpeed Insights](https://developers.google.com/speed/docs/insights/BlockingJS). 
+[PageSpeed Insights](speed/docs/insights/BlockingJS). 
 
 A simple and effective solution is to reposition the deferred script block at the end of the 
 page. That is, put the script reference last, just before the closing body tag. This allows 
