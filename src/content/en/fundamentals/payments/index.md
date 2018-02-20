@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API is for fast, easy payments on the web.
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2017-12-27 #}
+{# wf_updated_on: 2018-02-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Introducing the Payment Request API {: .page-title }
@@ -92,7 +92,7 @@ the site.
 
 Note: Pay with Google is one of payment methods you can use to get cards from a
 user's Google account and payment tokens on the device. To learn more, read [the
-Google Pay API docs](/payments/web/paymentrequest/tutorial).
+Google Pay API docs](/pay/api/web/paymentrequest/tutorial).
 
 <div class="attempt-right">
   <figure>

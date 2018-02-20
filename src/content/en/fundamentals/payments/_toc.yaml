@@ -8,5 +8,5 @@ toc:
   - title: Payment Request UX considerations
     path: /web/fundamentals/payments/payment-request-ux-considerations
   - title: Set up Google Pay API
-    path: /payments/web/paymentrequest/tutorial
+    path: /pay/api/web/paymentrequest/tutorial
     status: external
