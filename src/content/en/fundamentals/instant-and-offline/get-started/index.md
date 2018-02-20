@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-05 #}
-{# wf_published_on: 2018-02-05 #}
+{# wf_updated_on: 2018-02-20 #}
+{# wf_published_on: 2018-02-20 #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
 # Overview {: .page-title }
 
@@ -54,7 +55,7 @@ so that users can access both content and behavior at the earliest possible mome
 
 If you're new to web performance metrics concepts and terms and would like to learn more, 
 please see the Google overview article 
-[Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics).
+[Leveraging the Performance Metrics that Most Affect User Experience](web/updates/2017/06/user-centric-performance-metrics).
 
 This document set contains explanations, examples, and recommendations that focus on low-effort, 
 high-return performance wins. The content is progressive, not cumulative; that is, you don't have 
