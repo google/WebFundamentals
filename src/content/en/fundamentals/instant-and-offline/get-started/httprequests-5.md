@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-20 #}
+{# wf_updated_on: 2018-02-21 #}
 {# wf_published_on: 2018-02-20 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -39,7 +39,7 @@ eliminate in this way removes one HTTP request and saves round-trip time. But th
 For Cascading Style Sheets, beware the "C". Cascade precedence allows later rules to override 
 earlier ones without warning -- literally. CSS doesn't throw an error when a previously-defined 
 property is reset by a more recent rule, so just tossing stylesheets together is asking for 
-trouble. Instead, look for conflicting rules and determine whether one should always supercede 
+trouble. Instead, look for conflicting rules and determine whether one should always supersede
 the other, or if one should use more specific selectors to be applied properly. For example, 
 consider these two simple rules, the first from a master stylesheet, the second imported from 
 a stylesheet provided by Marketing.
