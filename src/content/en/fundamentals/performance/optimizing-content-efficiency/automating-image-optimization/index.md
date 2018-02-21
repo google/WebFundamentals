@@ -1411,7 +1411,7 @@ an annual fee. This seems out of character for a genuinely open source solution.
 
 
 **ShortPixel** — Another option that can be used stand-alone or with Cache Enabler, also at a cost, is
-ShortPixel. In its stand alone use [ShortPixel](https://shortpixel.com) can add &lt;picture&gt; tag that usually can serve the right type of image depending on the browser. You can optimize up to 100 images a month for free.
+ShortPixel. In its stand alone use [ShortPixel](https://shortpixel.com) can add a &lt;picture&gt; tag that usually can serve the right type of image depending on the browser. You can optimize up to 100 images a month for free.
 
 **Compressing Animated GIFs and why `<video>` is better**
 
