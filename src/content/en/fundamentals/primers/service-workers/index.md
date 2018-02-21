@@ -22,7 +22,7 @@ separate from a web page, opening the door to features that don't need a web
 page or user interaction. Today, they already include features like
 [push notifications](/web/updates/2015/03/push-notifications-on-the-open-web)
 and [background sync](/web/updates/2015/12/background-sync). In the future,
-service workers will support other things like periodic sync or geofencing.
+service workers might support other things like periodic sync or geofencing.
 The core feature discussed in this tutorial is the ability to intercept and
 handle network requests, including programmatically managing a cache of
 responses.
