@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-02-20 #}
+{# wf_updated_on: 2018-02-22 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: N/A #}
 
@@ -164,6 +164,8 @@ weight and width.
 </figcaption>
 </figure>
 
+Note: You can view the working example and source code for the above sample <a href="https://variable-font-experiments.glitch.me/">here</a>
+
 The five reserved registered axes plus Grade can are defined like this;
 
 <table class="responsive">
@@ -247,6 +249,8 @@ The way we define or change an axis by using the property CSS font-variations;
 </figcaption>
 </figure>
 
+Note: You can view the working example and source code for the above sample <a href="https://variable-font-experiments.glitch.me/">here</a>
+
 ## Responsibility of the typesetter 
 Changing the define five axes are down to
 personal taste and standard best practice. The danger with any new technology is
@@ -271,7 +275,7 @@ Zycon.
 ## Variable fonts performance gains 
 OpenType variable fonts allow us to store multiple variations of a type 
 family into a single font file.
-[Monotype](http://www.monotype.com/blog/articles/part-2-from-truetype-gx-to-variable-fonts/){: .external} 
+[Monotype](https://goo.gl/9gonHT){: .external} 
 ran an experiment by combinings 12 input fonts to
 generate eight weights, across three widths, across both the Italic and Roman
 postures which lead to 48 individual typeface styles stored in a single font
