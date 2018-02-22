@@ -6,10 +6,10 @@ toc:
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
+      - title: Overview
+        path: /web/fundamentals/performance/get-started/
       - title: Get Started
         section:
-        - title: Overview
-          path: /web/fundamentals/performance/get-started/
         - title: Measuring Performance
           path: /web/fundamentals/performance/get-started/measuringperf-2
         - title: Text Content
