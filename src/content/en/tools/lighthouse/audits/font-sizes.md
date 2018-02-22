@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document Doesn't Use Legible Font Sizes" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-21 #}
+{# wf_updated_on: 2018-02-22 #}
 {# wf_published_on: 2018-02-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -30,15 +30,6 @@ If Lighthouse reports `Text is illegible because of a missing viewport config`, 
 your document. See [Has A Viewport Meta Tag With Width Or Intial-Scale][viewport].
 
 [viewport]: /web/tools/lighthouse/audits/has-viewport-meta-tag
-
-### Characters per line {: #characters }
-
-Although Lighthouse does not check characters per line, classic readability theory suggests
-that 70 or 80 characters per line provides maximum readability. See [How to choose
-breakpoints][breakpoints] for strategies on ensuring that your text is readable across different
-form factors.
-
-[breakpoints]: /web/fundamentals/design-and-ux/responsive/#how_to_choose_breakpoints
 
 ## More information {: #more-info }
 
