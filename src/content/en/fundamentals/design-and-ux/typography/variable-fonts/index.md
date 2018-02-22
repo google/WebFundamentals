@@ -164,7 +164,8 @@ weight and width.
 </figcaption>
 </figure>
 
-Note: You can view the working example and source code for the above sample <a href="https://variable-font-experiments.glitch.me/">here</a>
+Note: You can view the working example and source code for the above sample 
+<a href="https://variable-font-experiments.glitch.me/">here</a>
 
 The five reserved registered axes plus Grade can are defined like this;
 
@@ -249,7 +250,8 @@ The way we define or change an axis by using the property CSS font-variations;
 </figcaption>
 </figure>
 
-Note: You can view the working example and source code for the above sample <a href="https://variable-font-experiments.glitch.me/">here</a>
+Note: You can view the working example and source code for the above sample 
+<a href="https://variable-font-experiments.glitch.me/">here</a>
 
 ## Responsibility of the typesetter 
 Changing the define five axes are down to
