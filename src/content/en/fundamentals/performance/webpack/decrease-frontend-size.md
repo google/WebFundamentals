@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2018-02-16 #}
+{# wf_updated_on: 2018-02-22 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -98,7 +98,7 @@ function render(data, target) {
 
 <li>
 
-A minificator compresses it into approximately the following:
+A minifier compresses it into approximately the following:
 
 <pre class="prettyprint">
 // minified bundle.js (part of)
@@ -281,7 +281,7 @@ if (typeof val === 'string') {
 </li>
 <li>
 
-And then <a href="#enable-minification">the minificator</a> will remove all such
+And then <a href="#enable-minification">the minifier</a> will remove all such
 <code>if</code> branches – because <code>"production" !== 'production'</code> is always false,
 and the plugin understands that the code inside these branches will never execute:
 
