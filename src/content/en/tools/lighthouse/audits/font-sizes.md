@@ -27,7 +27,7 @@ When a page fails the audit, Lighthouse lists the results in a table with 4 colu
 
 If Lighthouse reports `Text is illegible because of a missing viewport config`, add a
 `<meta name="viewport" content="width=device-width, initial-scale=1">` tag to the `<head>` of
-your document. See [Has A Viewport Meta Tag With Width Or Intial-Scale][viewport].
+your document. See [Has A Viewport Meta Tag With Width Or Initial-Scale][viewport].
 
 [viewport]: /web/tools/lighthouse/audits/has-viewport-meta-tag
 
