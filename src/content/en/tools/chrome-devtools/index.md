@@ -4,6 +4,7 @@ description: Get started with Google Chrome's built-in web developer tools.
 
 {# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2016-03-28 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Chrome DevTools {: .page-title }
 
