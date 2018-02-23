@@ -22,6 +22,7 @@ upper_tabs:
           path: /web/showcase/region/
       - name: "All"
         contents:
+        - include: /web/showcase/2018/_toc.yaml
         - include: /web/showcase/2017/_toc.yaml
         - include: /web/showcase/2016/_toc.yaml
         - include: /web/showcase/2015/_toc.yaml
