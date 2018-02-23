@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-21 #}
-{# wf_published_on: 2018-02-20 #}
+{# wf_updated_on: 2018-02-22 #}
+{# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
 # HTTP Requests {: .page-title }

@@ -6,6 +6,22 @@ toc:
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
+      - title: Overview
+        path: /web/fundamentals/performance/get-started/
+      - title: Get Started
+        section:
+        - title: Measuring Performance
+          path: /web/fundamentals/performance/get-started/measuringperf-2
+        - title: Text Content
+          path: /web/fundamentals/performance/get-started/textcontent-3
+        - title: Graphical Content
+          path: /web/fundamentals/performance/get-started/graphicalcontent-4
+        - title: HTTP Requests
+          path: /web/fundamentals/performance/get-started/httprequests-5
+        - title: HTTP Caching
+          path: /web/fundamentals/performance/get-started/httpcaching-6
+        - title: Wrap-up and Demo
+          path: /web/fundamentals/performance/get-started/wrapup-7
       - title: User-centric Performance Metrics
         path: /web/fundamentals/performance/user-centric-performance-metrics
       - title: Understanding Low Bandwidth and High Latency
