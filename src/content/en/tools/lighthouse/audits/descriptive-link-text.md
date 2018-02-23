@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Links Do Not Have Descriptive Text" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: N/A #}
 
@@ -10,24 +10,36 @@ description: Reference documentation for the "Links Do Not Have Descriptive Text
 
 ## Overview {: #overview }
 
-Anchor descriptions, which are the clickable words in links, help users and search engines better
+Link descriptions, which are the clickable words in links, help users and search engines better
 understand your content.
 
 ## Recommendations {: #recommendations }
 
-Replace generic descriptions, such as `click here` in the example below:
+Replace generic descriptions, such as `click here` in the example below...
 
     <p>To see all of our basketball videos, <a href="videos.html">click here</a>.</p>
 
-With specific descriptions, such as `basketball videos` in the example below.
+...with specific descriptions, such as `basketball videos` in the example below.
 
     <p>Check out all of our <a href="videos.html">basketball videos</a>.</p>
 
 In general, the link text should clearly indicate to users what type of content they'll get if
-they click the link. Using the exact title of the document, or a description of the page, is
-usually good enough. Avoid using URLs as link descriptions.
+they click the link.
 
-[style]: https://developers.google.com/style/link-text
+More recommendations:
+
+* Stay on topic. Don't use text that has no relation to the page's content.
+* Don't use the page's URL as the link description, unless you have a good reason to do so,
+  such as referencing a site's new address.
+* Keep descriptions concise. Aim for a few words or a short phrase.
+* Format links so that they're easy to spot.
+* Pay attention to your internal links, too. Improving the quality of internal links can
+  help users and Google navigate your site easier.
+
+See [Use links wisely][support]{:.external} for more guidance. You'll need to scroll a bit,
+there's no anchor to the exact section.
+
+[support]: https://support.google.com/webmasters/answer/7451184#optimize
 
 ## More information {: #more-info }
 
