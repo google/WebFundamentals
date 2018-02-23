@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2017-12-15 #}
+{# wf_updated_on: 2018-02-23#}
 {# wf_published_on: 2017-11-16 #}
 {# wf_blink_components: Blink>Image,Internals>Images,Internals>Images>Codecs #}
 
@@ -1410,9 +1410,10 @@ Cache Enabler requires the use of a sister program called Optimizer, which has
 an annual fee. This seems out of character for a genuinely open source solution.
 
 
-**Short Pixel** — Another option for use with Cache Enabler, also at a cost, is
-Short Pixel. Short Pixel functions much like Optimizer, described above. You can
-optimize up to 100 images a month for free.
+**ShortPixel** — Another option that can be used stand-alone or with Cache
+Enabler, also at a cost, is ShortPixel. In its stand alone use [ShortPixel](https://shortpixel.com) 
+can add a `<picture>` tag that usually will serve the right type of image 
+depending on the browser. You can optimize up to 100 images a month for free.
 
 **Compressing Animated GIFs and why `<video>` is better**
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
@@ -22,7 +22,7 @@ separate from a web page, opening the door to features that don't need a web
 page or user interaction. Today, they already include features like
 [push notifications](/web/updates/2015/03/push-notifications-on-the-open-web)
 and [background sync](/web/updates/2015/12/background-sync). In the future,
-service workers will support other things like periodic sync or geofencing.
+service workers might support other things like periodic sync or geofencing.
 The core feature discussed in this tutorial is the ability to intercept and
 handle network requests, including programmatically managing a cache of
 responses.

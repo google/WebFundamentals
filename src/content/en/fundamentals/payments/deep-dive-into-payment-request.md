@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -176,7 +176,7 @@ an existing card will be selected for them.
 
 Note: To get access to all forms of payment available with Google, developers
 will need to implement the Pay with Google method. Refer to the
-[Google Pay API](/payments/web/paymentrequest/tutorial) docs for more information.
+[Google Pay API](/pay/api/web/paymentrequest/tutorial) docs for more information.
 
 <div class="attempt-center">
   <figure>
@@ -344,7 +344,7 @@ const payWithGooglePaymentMethod = {
 </div>
 
 We won't go into details of how to add Pay with Google in this article, [we have
-a dedicated document to that](/payments/web/paymentrequest/tutorial).
+a dedicated document to that](/pay/api/web/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
 
 
 #### Edge Cases
@@ -370,7 +370,7 @@ payment option. This has occurred because the example supports both Pay with
 Google and basic cards. If you define Pay with Google as your **only** payment
 method and the browser supports it, the browser can (and Chrome does, at the
 time of writing) skip the payment request UI altogether after the `show()`
-method is called. Users will be taken straight to the Pay with Google app to
+method is called. Users will be taken straight to Google Play services to
 complete the payment.
 
 ### Defining Payment Details
