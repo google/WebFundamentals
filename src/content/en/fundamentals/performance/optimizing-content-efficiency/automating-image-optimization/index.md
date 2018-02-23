@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2018-02-21#}
+{# wf_updated_on: 2018-02-23#}
 {# wf_published_on: 2017-11-16 #}
 {# wf_blink_components: Blink>Image,Internals>Images,Internals>Images>Codecs #}
 

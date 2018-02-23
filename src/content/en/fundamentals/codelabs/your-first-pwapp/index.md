@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2016-01-01 #}
 
 

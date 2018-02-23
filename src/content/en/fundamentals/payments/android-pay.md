@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Android Pay enables simple and secure purchases online and eliminates the need for users to remember and manually enter their payment information. Integrate Android Pay to reach millions of Android users, drive higher conversion, and give users a true one-touch checkout experience.
 
 {# wf_blink_components: Blink>Payments #}
-{# wf_updated_on: 2018-02-20 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2016-09-07 #}
 
 # Integrating Android Pay into Payment Request {: .page-title }

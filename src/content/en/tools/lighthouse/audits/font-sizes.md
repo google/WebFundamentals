@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document Doesn't Use Legible Font Sizes" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2018-02-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
