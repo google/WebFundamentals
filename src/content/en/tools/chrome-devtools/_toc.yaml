@@ -1,62 +1,13 @@
 toc:
 - title: Overview
   path: /web/tools/chrome-devtools/
-- title: Debug Progressive Web Apps
-  path: /web/tools/chrome-devtools/progressive-web-apps
-- title: Understand Security Issues
-  path: /web/tools/chrome-devtools/security
-- title: Run Snippets of Code From Any Page
-  path: /web/tools/chrome-devtools/snippets
-- title: Keyboard Shortcuts Reference
-  path: /web/tools/chrome-devtools/shortcuts
-- title: UI Reference
-  path: /web/tools/chrome-devtools/ui
-- title: Sources Panel Overview
-  path: /web/tools/chrome-devtools/sources
-- title: Inspect and Edit Pages
-  section:
-  - title: Overview
-    path: /web/tools/chrome-devtools/inspect-styles/
-  - title: Inspect Animations
-    path: /web/tools/chrome-devtools/inspect-styles/animations
-  - title: Edit the DOM
-    path: /web/tools/chrome-devtools/inspect-styles/edit-dom
-  - title: Edit Styles
-    path: /web/tools/chrome-devtools/inspect-styles/edit-styles
-    status: deprecated
 - title: View and Change CSS
   section:
   - title: Get Started with Viewing and Changing CSS
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
-- title: Inspect and Manage Storage, Caches, and Resources
-  section:
-  - title: Inspect and Manage Storage, Databases, and Caches
-    path: /web/tools/chrome-devtools/manage-data/local-storage
-  - title: Inspect and Delete Cookies
-    path: /web/tools/chrome-devtools/manage-data/cookies
-  - title: Inspect Resources
-    path: /web/tools/chrome-devtools/manage-data/page-resources
-- title: Simulate Mobile Devices with Device Mode
-  section:
-  - title: Overview
-    path: /web/tools/chrome-devtools/device-mode/
-  - title: Test Responsive and Device-Specific Viewports
-    path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
-  - title: Emulate Geolocation and Accelerometer Sensors
-    path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
-  - title: Emulate and Test Other Browsers
-    path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
-- title: Remote Debugging Android Devices
-  section:
-  - title: Get Started
-    path: /web/tools/chrome-devtools/remote-debugging/
-  - title: Access Local Servers
-    path: /web/tools/chrome-devtools/remote-debugging/local-server
-  - title: Remote Debugging WebViews
-    path: /web/tools/chrome-devtools/remote-debugging/webviews
-- title: Inspect and Debug JavaScript
+- title: View and Change JavaScript
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/javascript/
@@ -75,7 +26,33 @@ toc:
   - title: Watch Variables in Sources
     path: /web/tools/chrome-devtools/javascript/watch-variables
     status: deprecated
-- title: Using the Console
+- title: UI References and Overviews
+  section:
+  - title: UI Reference
+    path: /web/tools/chrome-devtools/ui
+  - title: Sources Panel Overview
+    path: /web/tools/chrome-devtools/sources
+  - title: Keyboard Shortcuts Reference
+    path: /web/tools/chrome-devtools/shortcuts
+- title: Simulate Mobile Devices with Device Mode
+  section:
+  - title: Overview
+    path: /web/tools/chrome-devtools/device-mode/
+  - title: Test Responsive and Device-Specific Viewports
+    path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+  - title: Emulate Geolocation and Accelerometer Sensors
+    path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+  - title: Emulate and Test Other Browsers
+    path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+- title: Remote-Debug Android Devices
+  section:
+  - title: Get Started
+    path: /web/tools/chrome-devtools/remote-debugging/
+  - title: Access Local Servers
+    path: /web/tools/chrome-devtools/remote-debugging/local-server
+  - title: Remote Debugging WebViews
+    path: /web/tools/chrome-devtools/remote-debugging/webviews
+- title: Log Messages and Execute JavaScript in the Console
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/console/
@@ -113,7 +90,7 @@ toc:
   - title: Diagnose Forced Synchronous Layouts
     path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
     status: deprecated
-- title: Measure Network Performance
+- title: Analyze Network Performance
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/network-performance/
@@ -124,7 +101,7 @@ toc:
   - title: Resource Loading
     path: /web/tools/chrome-devtools/network-performance/resource-loading
     status: deprecated
-- title: Fix Memory Problems
+- title: Analyze Memory Problems
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/memory-problems/
@@ -134,7 +111,32 @@ toc:
     path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
   - title: Use the Allocation Profiler
     path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
-- title: Extend the Chrome DevTools
+- title: Debug Progressive Web Apps
+  path: /web/tools/chrome-devtools/progressive-web-apps
+- title: Analyze Security Problems
+  path: /web/tools/chrome-devtools/security
+- title: Run Snippets of JavaScript From Any Page
+  path: /web/tools/chrome-devtools/snippets
+- title: View and Change HTML
+  section:
+  - title: Overview
+    path: /web/tools/chrome-devtools/inspect-styles/
+  - title: Inspect Animations
+    path: /web/tools/chrome-devtools/inspect-styles/animations
+  - title: Edit the DOM
+    path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+  - title: Edit Styles
+    path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+    status: deprecated
+- title: View and Change Storage and Resources
+  section:
+  - title: Inspect and Manage Storage, Databases, and Caches
+    path: /web/tools/chrome-devtools/manage-data/local-storage
+  - title: Inspect and Delete Cookies
+    path: /web/tools/chrome-devtools/manage-data/cookies
+  - title: Inspect Resources
+    path: /web/tools/chrome-devtools/manage-data/page-resources
+- title: Extend DevTools
   section:
   - title: Integrating with DevTools and Chrome
     path: https://developer.chrome.com/devtools/docs/integrating
@@ -145,3 +147,4 @@ toc:
   - title: Debugger Protocol
     path: https://developer.chrome.com/devtools/docs/debugger-protocol
     status: external
+
