@@ -78,6 +78,8 @@ toc:
   path: /web/tools/lighthouse/audits/bootup
 - title: Keep Server Response Times Low
   path: /web/tools/lighthouse/audits/ttfb
+- title: Links Do Not Have Descriptive Text
+  path: /web/tools/lighthouse/audits/descriptive-link-text
 - title: Manifest Contains Icons at Least 192px
   path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
 - title: Manifest Contains background_color
