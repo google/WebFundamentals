@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2017-12-18 #}
+{# wf_updated_on: 2018-02-24 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -12,6 +12,10 @@ description: How to use webpack to make your app as small as possible
 
 One of the first things to do when you’re optimizing an application is to make it as small as
 possible. Here’s how to do this with webpack.
+
+Note: This page covers optimization strategies for webpack 3. A few parts
+of it aren’t necessary or work slightly differently with webpack 4. We’re waiting
+for the webpack ecosystem to stabilize, and then we’ll update this guide.
 
 ## Enable minification
 
