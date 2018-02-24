@@ -253,7 +253,7 @@ that you configure as part of your build process. You can have it precache every
 HTML, JavaScript, and CSS file that makes up your app shell. Everything will
 both work offline, and load fast on subsequent visits without any extra effort.
 
-Here us a basic example of using sw-precache as part of a
+Here is a basic example of using sw-precache as part of a
 [gulp](http://gulpjs.com) build process:
 
     gulp.task('generate-service-worker', function(callback) {
