@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2018-02-26 #}
 {# wf_published_on: 2018-03-23 #}
 {# wf_tags: chrome66,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -24,6 +24,8 @@ New features and major changes coming to DevTools in Chrome 66 include:
 * [New performance audits](#audits)
 * [Previews of HTML content in the Preview tab](#previews)
 * [Local Overrides with styles inside of HTML](#overrides)
+* TODO auto-pretty-print
+* TODO breakpoint manager?
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
@@ -40,18 +42,58 @@ JavaScript code.
 Previously, if your framework wrapped network requests in a wrapper, the **Initiator** column
 wouldn't be that helpful. All network requests pointed to the same line of wrapper code.
 
+<figure>
+  <img src="/web/updates/images/2018/02/wrapper.png"
+       alt="The Initiator column shows that all of the requests were initiated by line 2
+            of requests.js."/>
+  <figcaption>
+    <b>Figure X</b>. The <b>Initiator</b> column shows that all of the requests were initiated
+    by line 2 of <code>requests.js</code>
+  </figcaption>
+</figure>
+
 What you really want in this scenario is to see the application code that causes the request.
-That's now possible.
+That's now possible:
 
+1. Hover over the **Initiator** column. The call stack that caused the request appears in a
+   pop-up.
+1. Right-click the call that you want to hide from the initiator results.
+1. Select **Blackbox script**. The **Initiator** column now hides any call from the script that
+   you blackboxed.
 
+<figure>
+  <img src="/web/updates/images/2018/02/blackbox.png"
+       alt="Blackboxing requests.js."/>
+  <figcaption>
+    <b>Figure X</b>. Blackboxing <code>requests.js</code>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2018/02/resolved.png"
+       alt="After blackboxing requests.js, the Initiator column now shows more
+            helpful results."/>
+  <figcaption>
+    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
+    <b>Initiator</b> column now shows more helpful results
+  </figcaption>
+</figure>
+
+Manage your blackboxed scripts from the **Blackboxing** tab in [Settings][settings].
+
+[settings]: /web/tools/chrome-devtools/ui#settings
+
+See [Ignore a script or pattern of scripts][blackboxing] to learn more about blackboxing.
+
+[blackboxing]: /web/tools/chrome-devtools/javascript/reference#blackbox
 
 ## Previews of HTML content in the Preview tab {: #previews }
 
-When you preview an HTML resource in the **Preview** tab of the **Network** panel, the tab
-now always does a basic rendering of the HTML. It's not intended to be a full browser, so you
-it may not display exactly as you expect. Previously, the tab showed the HTML code in certain
-situations while rendering a preview in others. If you want to see the HTML code, use the
-**Response** tab, or right-click a resource and select **Open in Sources panel**.
+Previously, the **Preview** tab in the **Network** panel showed the code of an HTML resource
+in certain situations, while rendering a preview of the HTML in others. The **Preview** tab
+now always does a basic rendering of the HTML. It's not intended to be a full browser, so it may
+not display HTML exactly as you expect. If you want to see the HTML code, click the **Response**
+tab, or right-click a resource and select **Open in Sources panel**.
 
 <figure>
   <img src="/web/updates/images/2018/02/preview.png"
@@ -66,13 +108,6 @@ situations while rendering a preview in others. If you want to see the HTML code
 When in [**Device Mode**][DM], open the **Zoom** dropdown and select **Auto-adjust zoom** to
 automatically resize the viewport whenever you change device orientation.
 
-[DM]: /web/tools/chrome-devtools/device-mode/
-
-The video below first shows the behavior when **Auto-adjust zoom** is turned off. When the
-viewport is displayed in landscape mode, the device hardware overlows the window. After
-turning on **Auto-adjust zoom**, the viewport always resizes so that it takes up the maximum
-amount of space without overflowing.
-
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="OCXQem0YaJM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
@@ -81,9 +116,14 @@ amount of space without overflowing.
 
 ## New performance audits {: #audits }
 
-## Local Overrides with styles inside of HTML {: #overrides }
+TODO check if 66 has a new version
 
-Back when DevTools launched **Local Overrides** in Chrome 65, one limitation was that
+## Local Overrides now works with some styles defined in HTML {: #overrides }
+
+TODO issues w/ https://spotless-drop.glitch.me/
+
+Back when DevTools launched **Local Overrides** in Chrome 65, one limitation was that it couldn't
+track changes to styles defined within HTML.
 
 
 ## Bonus tip: blackboxing + frameworks + event listener breakpoints
@@ -103,7 +143,7 @@ Canary, the DevTools team can address your feedback significantly faster.
 
 Note: Canary is the bleeding-edge version of Chrome. It's released as soon as its built, without
 testing. This means that Canary breaks from time-to-time, about once-a-month, and it's usually
-fixed within a day. You can go back to using Chrome Stable when Canary breaks.
+fixed within a day. You can go back to using Chrome Stable while Canary is broken.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
