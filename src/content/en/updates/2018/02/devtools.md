@@ -19,13 +19,11 @@ Note: The video version of these release notes will be published around mid-Apri
 
 New features and major changes coming to DevTools in Chrome 66 include:
 
-* [Blackboxing in the Network panel](#blackboxing)
-* [Auto-adjust zooming in Device Mode](#auto-adjust)
-* [New performance audits](#audits)
-* [Previews of HTML content in the Preview tab](#previews)
-* [Local Overrides with styles inside of HTML](#overrides)
-* TODO auto-pretty-print
-* TODO breakpoint manager?
+* [Blackboxing in the **Network** panel](#blackboxing)
+* [Auto-adjust zooming in **Device Mode**](#auto-adjust)
+* [Pretty-printing in the **Preview** and **Response** tabs](#pretty-printing)
+* [Previews of HTML content in the **Preview** tab](#previews)
+* [**Local Overrides** with styles inside of HTML](#overrides)
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
@@ -38,6 +36,8 @@ For example, if a `link` element is declared in some HTML, the **Initiator** col
 request for that `link` element shows you the line of HTML where the `link` element is
 declared. If JavaScript causes the request, the **Initiator** column shows you the line of
 JavaScript code.
+
+Note: You can hide or show columns in the **Network** panel by right-clicking the table header.
 
 Previously, if your framework wrapped network requests in a wrapper, the **Initiator** column
 wouldn't be that helpful. All network requests pointed to the same line of wrapper code.
@@ -87,6 +87,34 @@ See [Ignore a script or pattern of scripts][blackboxing] to learn more about bla
 
 [blackboxing]: /web/tools/chrome-devtools/javascript/reference#blackbox
 
+## Pretty-printing in the Preview and Response tabs {: #pretty-printing }
+
+The **Preview** tab in the **Network** panel now pretty-prints resources by default, when it
+detects that those resources have been minified.
+
+<figure>
+  <img src="/web/updates/images/2018/02/preview-prettyprint.png"
+       alt="After blackboxing requests.js, the Initiator column now shows more
+            helpful results."/>
+  <figcaption>
+    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
+    <b>Initiator</b> column now shows more helpful results
+  </figcaption>
+</figure>
+
+To view the unminified version of a resource, use the **Response** tab. You can also
+manually pretty-print resources from the **Response** tab, via the new **Format** button.
+
+<figure>
+  <img src="/web/updates/images/2018/02/response-prettyprint.png"
+       alt="After blackboxing requests.js, the Initiator column now shows more
+            helpful results."/>
+  <figcaption>
+    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
+    <b>Initiator</b> column now shows more helpful results
+  </figcaption>
+</figure>
+
 ## Previews of HTML content in the Preview tab {: #previews }
 
 Previously, the **Preview** tab in the **Network** panel showed the code of an HTML resource
@@ -108,32 +136,83 @@ tab, or right-click a resource and select **Open in Sources panel**.
 When in [**Device Mode**][DM], open the **Zoom** dropdown and select **Auto-adjust zoom** to
 automatically resize the viewport whenever you change device orientation.
 
+[DM]: /web/tools/chrome-devtools/device-mode/
+
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="OCXQem0YaJM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-## New performance audits {: #audits }
-
-TODO check if 66 has a new version
-
 ## Local Overrides now works with some styles defined in HTML {: #overrides }
 
-TODO issues w/ https://spotless-drop.glitch.me/
+Back when DevTools launched [**Local Overrides**][LO] in Chrome 65, one limitation was that it
+couldn't track changes to styles defined within HTML. For example, in **Figure X** there's a
+style rule in the `head` of the document that declares `font-weight: bold` for `h1` elements.
 
-Back when DevTools launched **Local Overrides** in Chrome 65, one limitation was that it couldn't
-track changes to styles defined within HTML.
+[LO]: /web/updates/2018/01/devtools#overrides
 
+<figure>
+  <img src="/web/updates/images/2018/02/overrides.png"
+       alt="TODO"/>
+  <figcaption>
+    <b>Figure X</b>. TODO
+  </figcaption>
+</figure>
 
-## Bonus tip: blackboxing + frameworks + event listener breakpoints
+In Chrome 65, if you changed the `font-weight` declaration via the DevTools **Style** pane,
+**Local Overrides** wouldn't track the change. In other words, on the next reload, the
+style would revert back to `font-weight: bold`. But in Chrome 66, changes like this now persist
+across page loads.
+
+Caution: **Local Overrides** can track changes like this *so long as the style is defined in
+the HTML document that was sent over the network*. If you have a script that dynamically adds
+styles to an HTML document, **Local Overrides** still won't be able to detect those changes.
+
+## Bonus tip: Blackbox framework scripts to make event listener breakpoints more useful {: #tip }
 
 Note: This section is not related to Chrome 66. It's just a bonus tip about an existing feature
 that you may find useful.
 
-Back when I wrote Get Started Debuggign JS, viewers commented that event listener breakpoints
-aren't useufl with frameworks, because they resolve to teh framework wrapper. If you blackbox
-the file containing the wrapper then devtools pauses where you want it to.
+Back when I created the [Get Started With Debugging JavaScript][JS]{:.external} video, some
+viewers commented that event listener breakpoints aren't useful for apps built on top of
+frameworks, because the event listeners are often wrapped in framework code. For example, in
+**Figure X** I've set up a `click` **Event Listener Breakpoint** in DevTools. When I click the
+button, DevTools automatically pauses in the first line of listener code. In this case, it
+pauses in Vue.js's wrapper code on line 1802, which is not that helpful.
+
+[JS]: https://youtu.be/H0XScE08hy8
+
+<figure>
+  <img src="/web/updates/images/2018/02/click-breakpoint.png"
+       alt="TODO"/>
+  <figcaption>
+    <b>Figure X</b>. TODO
+  </figcaption>
+</figure>
+
+Since the Vue.js script is in a separate file, I can blackbox that script in order to make this
+`click` breakpoint more useful.
+
+<figure>
+  <img src="/web/updates/images/2018/02/blackbox-framework.png"
+       alt="TODO"/>
+  <figcaption>
+    <b>Figure X</b>. TODO
+  </figcaption>
+</figure>
+
+The next time I click the button and trigger the `click` breakpoint, it executes the Vue.js
+code without pausing in it, and then pauses on the first line of code in my app's listener,
+which where I really wanted to pause all along.
+
+<figure>
+  <img src="/web/updates/images/2018/02/blackboxed-results.png"
+       alt="TODO"/>
+  <figcaption>
+    <b>Figure X</b>. TODO
+  </figcaption>
+</figure>
 
 ## A request from the DevTools team: consider Canary {: #canary }
 
