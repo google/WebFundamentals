@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How webpack helps with asset caching
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-02-24 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_blink_components: N/A #}
 
@@ -13,6 +13,10 @@ description: How webpack helps with asset caching
 The next thing (after [optimizing the app size](./decrease-frontend-size)) that
 improves the app loading time is caching. Use it to keep parts of the app on the
 client and avoid re-downloading them every time.
+
+Note: This page covers optimization strategies for webpack 3. A few parts
+of it aren’t necessary or work slightly differently with webpack 4. We’re waiting
+for the webpack ecosystem to stabilize, and then we’ll update this guide.
 
 ## Use bundle versioning and cache headers
 
