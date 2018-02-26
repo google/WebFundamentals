@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-02-26 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: N/A #}
 
 # The App Shell Model {: .page-title }
 
