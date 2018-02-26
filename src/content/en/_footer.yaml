@@ -34,6 +34,8 @@ footer:
       path: /web/feedback/
     - label: Progressive Web Apps
       path: /web/progressive-web-apps/
+    - label: Agencies
+      path: /web/agencies/
 
   - name: More Training
     icon_name: school
