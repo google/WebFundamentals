@@ -4,8 +4,9 @@ description: L'architettura shell dell'applicazione mantiene l'interfaccia
 utente locale e carica il contenuto in modo dinamico senza sacrificare la
 capacità di collegamento e la reperibilità del Web.
 
-{# wf_updated_on: 2018-01-16 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: N/A #}
 
 # Il Modello App Shell {: .page-title }
 
@@ -273,8 +274,8 @@ precache ogni file HTML, JavaScript e CSS che costituisce app shell. Tutto
 funzionerà offline e si caricherà velocemente nelle visite successive senza
 alcuno sforzo aggiuntivo.
 
-Ecco un esempio di base dell'utilizzo di sw-precache come parte di un processo
-di generazione di [gulp](http://gulpjs.com) :
+Ecco un esempio base dell'utilizzo di sw-precache come parte di un processo di
+generazione [gulp](http://gulpjs.com) :
 
 ```
 gulp.task('generate-service-worker', function(callback) {
