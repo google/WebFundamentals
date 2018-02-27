@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: Blink>Fonts #}
 
@@ -40,7 +40,7 @@ words, a typeface is what you see, and the font is what you use.
 Note: Roboto Family designed by Christian Robertson. On the left, a
 specimen of Roboto. On the right different members of the Roboto family.
 
-### Challanges for the Designer and Developer
+### Challenges for the Designer and Developer
 
 When a graphic designer prepares their work, they typically export the final
 artwork in a way that either embeds all of the fonts used, or they would provide
@@ -296,7 +296,7 @@ Zycon. [Example from Axis Praxis](https://www.axis-praxis.org/specimens/zycon){:
 ## Variable fonts performance gains
 OpenType variable fonts allow us to store multiple variations of a type
 family into a single font file. [Monotype](https://goo.gl/9gonHT){: .external}
-ran an experiment by combinings 12 input fonts to
+ran an experiment by combining 12 input fonts to
 generate eight weights, across three widths, across both the Italic and Roman
 postures which lead to 48 individual typeface styles stored in a single font
 file. They then compared the performance of loading individual font files and

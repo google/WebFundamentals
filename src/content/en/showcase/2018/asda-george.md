@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2018-02-23 #}
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/showcase/2018/images/asda-george/logo_.jpg #}
 {# wf_featured_snippet: George.com is a leading UK clothing brand, part of ASDA Walmart. After upgrading their site to a Progressive Web App (PWA), the brand saw a 31 percent increase in mobile conversion. #}
@@ -28,17 +28,17 @@ saw a 31 percent increase in mobile conversion.
 ## Challenge
 
 With consumer expectations around the mobile shopping experience at an all-time 
-high, Asda George realised they needed to revamp an outdated mobile solution and 
+high, Asda George realized they needed to revamp an outdated mobile solution and
 thereby improve the offer for customers. The team embraced a mobile-first approach, 
 placing focus on design, speed and functionality to drive mobile conversion.
 
 ## Solution
 
-The George.com team recognised that to meet this challenge the business had to 
+The George.com team recognized that to meet this challenge the business had to
 enhance the mobile experience by building a Progressive Web App. Working with 
 Isobar UK to assess the end to end customer journey, the team adopted a scrum 
 driven, agile approach to the workstream. By incrementally deploying the PWA, the 
-Asda George team were able to realise the benefits immediately.
+Asda George team were able to realize the benefits immediately.
 
 <figure class="attempt-left">
   <img src="images/asda-george/bottom_transition.png" alt="Skeleton screen during page transition">
