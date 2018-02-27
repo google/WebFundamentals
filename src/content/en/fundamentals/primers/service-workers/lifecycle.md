@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -77,9 +77,16 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -259,8 +266,8 @@ Here's its service worker, `sw.js`:
 
 It caches an image of a cat, and serves it whenever there's a request for
 `/dog.svg`. However, if you [run the above
-example](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, you'll see a dog the first time you load the page. Hit refresh, and
+example](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external },
+you'll see a dog the first time you load the page. Hit refresh, and
 you'll see the cat.
 
 Note: Cats are better than dogs. They just *are*.
@@ -313,14 +320,14 @@ events like `push` and `sync`, you'll get an `activate` event. But that doesn't
 mean the page that called `.register()` will be controlled.
 
 The first time you load [the
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, even though `dog.svg` is requested long after the service worker
+demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external },
+even though `dog.svg` is requested long after the service worker
 activates, it doesn't handle the request, and you still see the image of the
 dog. The default is *consistency*, if your page loads without a service worker,
 neither will its subresources. If you load [the
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external} a second time (in other words, refresh the page), it'll be controlled.
-Both the page and the image will go through `fetch` events, and you'll see a cat
+demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external } a second time
+(in other words, refresh the page), it'll be controlled. Both the page and the
+image will go through `fetch` events, and you'll see a cat
 instead.
 
 ### clients.claim
@@ -329,8 +336,8 @@ You can take control of uncontrolled clients by calling `clients.claim()` within
 your service worker once it's activated.
 
 Here's [a variation of the demo
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){:
-.external} which calls `clients.claim()` in its `activate` event. You *should* see
+above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){: .external } which calls
+`clients.claim()` in its `activate` event. You *should* see
 a cat the first time. I say "should", because this is timing sensitive. You'll only
 see a cat if the service worker activates and `clients.claim()` takes effect
 before the image tries to load.
@@ -375,9 +382,16 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -583,8 +597,8 @@ a horse rather than a cat:
 Note: I have no strong opinions on horses.
 
 [Check out a demo of the
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}. You should still see an image of a cat. Here's why…
+above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }.
+You should still see an image of a cat. Here's why…
 
 ### Install
 
@@ -604,10 +618,9 @@ is called "waiting", and it's how the browser ensures that only one version of
 your service worker is running at a time.
 
 If you ran [the updated
-demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, you should still see a picture of a cat, because the V2 worker
-hasn't yet activated. You can see the new service worker waiting in the
-"Application" tab of DevTools:
+demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, you should still see a picture of a cat,
+because the V2 worker hasn't yet activated. You can see the new service
+worker waiting in the "Application" tab of DevTools:
 
 <figure>
   <img src="images/waiting.png" class="browser-screenshot" alt="DevTools showing new service worker waiting">
@@ -622,8 +635,8 @@ is always controlling a client during a refresh.
 
 To get the update, close or navigate away from all tabs using the current service
 worker. Then, when you [navigate to the demo
-again](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, you should see the horse.
+again](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external },
+you should see the horse.
 
 This pattern is similar to how Chrome updates. Updates to Chrome download in the
 background, but don't apply until Chrome restarts. In the mean time, you can
@@ -679,8 +692,8 @@ But you may want to call it as a results of a `postMessage()` to the service
 worker. As in, you want to `skipWaiting()` following a user interaction.
 
 [Here's a demo that uses
-`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
-.external}. You should see a picture of a cow without having to navigate away.
+`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){: .external }.
+You should see a picture of a cow without having to navigate away.
 Like `clients.claim()` it's a race, so you'll only see the cow if the new service
 worker fetches, installs and activates before the page tries to load the image.
 
@@ -706,7 +719,7 @@ you may want to call `update()` on an interval (such as hourly).
 ### Avoid changing the URL of your service worker script
 
 If you've read [my post on caching best
-practices](https://jakearchibald.com/2016/caching-best-practices/){: .external},
+practices](https://jakearchibald.com/2016/caching-best-practices/){: .external },
 you may consider giving each version of your service worker a unique URL.
 **Don't do this!** This is usually bad practice for service workers, just update
 the script at its current location.
@@ -723,8 +736,8 @@ position where you need to update your service worker in order to update your
 service worker. Ew.
 
 However, for [the demo
-above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, I *have* changed the URL of the service worker. This is so, for the
+above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external },
+I *have* changed the URL of the service worker. This is so, for the
 sake of the demo, you can switch between the versions. It isn't something I'd do
 in production.
 
