@@ -251,7 +251,8 @@ mobile site speed, based on benchmark data from Google Analytics.</p>
 
 ## So you're a...
 
-![Icon of a book showing charts and graphs.](images/icon-business.svg){: .attempt-left .role }
+![Icon of a book showing
+charts and graphs.](images/icon-business.svg){: .attempt-right .role }
 
 **Marketer or developer trying to build a business case for improving user
 experience of your website. You speak dollars and cents and are looking for
@@ -271,7 +272,7 @@ visitor loss.
 <div class="clearfix"></div>
 
 ![Icon of a laptop with the Chrome logo behind and slightly above
-it.](images/icon-dev.svg){: .attempt-left .role }
+it.](images/icon-dev.svg){: .attempt-right .role }
 
 **Developer trying to understand current performance of your site, as
 experienced by real-world Chrome users, and looking for audit recommendations
@@ -283,7 +284,8 @@ opportunities.
 
 <div class="clearfix"></div>
 
-![Icon of a Lighthouse audit result page.](images/icon-audit.svg){: .attempt-left .role }
+![Icon of a Lighthouse audit
+result page.](images/icon-audit.svg){: .attempt-right .role }
 
 **Developer trying to understand and audit a website against modern web
 performance best practices.**
@@ -295,7 +297,8 @@ understand what you should do.
 
 <div class="clearfix"></div>
 
-![Icon of a magnifying glass over a bug.](images/icon-debug.svg){: .attempt-left .role }
+![Icon of a magnifying glass
+over a bug.](images/icon-debug.svg){: .attempt-right .role }
 
 **Developer looking for technical guidance on how to debug/deep-dive into the
 performance of your site.**
