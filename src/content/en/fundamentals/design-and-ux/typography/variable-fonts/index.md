@@ -317,7 +317,7 @@ for more details.
 It is possible to use @supports in you CSS to create a viable fallback:
 
 ```
-@supports (font-variations-setting: 'wdth' 200) {
+@supports (font-variations-settings: 'wdth' 200) {
   @font-face {
     /* https://github.com/TypeNetwork/Amstelvar */
     font-family: AmstelvarAlpha;
