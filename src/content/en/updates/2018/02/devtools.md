@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more.
 
 {# wf_updated_on: 2018-02-26 #}
 {# wf_published_on: 2018-03-23 #}
 {# wf_tags: chrome66,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -22,7 +22,7 @@ New features and major changes coming to DevTools in Chrome 66 include:
 * [Blackboxing in the **Network** panel](#blackboxing)
 * [Auto-adjust zooming in **Device Mode**](#auto-adjust)
 * [Pretty-printing in the **Preview** and **Response** tabs](#pretty-printing)
-* [Previews of HTML content in the **Preview** tab](#previews)
+* [Previewing HTML content in the **Preview** tab](#previews)
 * [**Local Overrides** with styles inside of HTML](#overrides)
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
@@ -32,10 +32,8 @@ may have changed. Chrome auto-updates to a new major version about every 6 weeks
 ## Blackboxing in the Network panel {: #blackboxing }
 
 The **Initiator** column in the **Network** panel tells you why a resource was requested.
-For example, if a `link` element is declared in some HTML, the **Initiator** column next to the
-request for that `link` element shows you the line of HTML where the `link` element is
-declared. If JavaScript causes the request, the **Initiator** column shows you the line of
-JavaScript code.
+For example, if JavaScript causes an image to be fetched, the **Initiator** column shows you the
+line of JavaScript code that caused the request.
 
 Note: You can hide or show columns in the **Network** panel by right-clicking the table header.
 
@@ -47,7 +45,7 @@ wouldn't be that helpful. All network requests pointed to the same line of wrapp
        alt="The Initiator column shows that all of the requests were initiated by line 2
             of requests.js."/>
   <figcaption>
-    <b>Figure X</b>. The <b>Initiator</b> column shows that all of the requests were initiated
+    <b>Figure 1</b>. The <b>Initiator</b> column shows that all of the requests were initiated
     by line 2 of <code>requests.js</code>
   </figcaption>
 </figure>
@@ -58,14 +56,14 @@ That's now possible:
 1. Hover over the **Initiator** column. The call stack that caused the request appears in a
    pop-up.
 1. Right-click the call that you want to hide from the initiator results.
-1. Select **Blackbox script**. The **Initiator** column now hides any call from the script that
+1. Select **Blackbox script**. The **Initiator** column now hides any calls from the script that
    you blackboxed.
 
 <figure>
   <img src="/web/updates/images/2018/02/blackbox.png"
        alt="Blackboxing requests.js."/>
   <figcaption>
-    <b>Figure X</b>. Blackboxing <code>requests.js</code>
+    <b>Figure 2</b>. Blackboxing <code>requests.js</code>
   </figcaption>
 </figure>
 
@@ -74,7 +72,7 @@ That's now possible:
        alt="After blackboxing requests.js, the Initiator column now shows more
             helpful results."/>
   <figcaption>
-    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
+    <b>Figure 3</b>. After blackboxing <code>requests.js</code>, the
     <b>Initiator</b> column now shows more helpful results
   </figcaption>
 </figure>
@@ -89,16 +87,15 @@ See [Ignore a script or pattern of scripts][blackboxing] to learn more about bla
 
 ## Pretty-printing in the Preview and Response tabs {: #pretty-printing }
 
-The **Preview** tab in the **Network** panel now pretty-prints resources by default, when it
+The **Preview** tab in the **Network** panel now pretty-prints resources by default when it
 detects that those resources have been minified.
 
 <figure>
   <img src="/web/updates/images/2018/02/preview-prettyprint.png"
-       alt="After blackboxing requests.js, the Initiator column now shows more
-            helpful results."/>
+       alt="The Preview tab pretty-printing the contents of analytics.js by default."/>
   <figcaption>
-    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
-    <b>Initiator</b> column now shows more helpful results
+    <b>Figure 4</b>. The <b>Preview</b> tab pretty-printing the contents of
+    <code>analytics.js</code> by default
   </figcaption>
 </figure>
 
@@ -107,15 +104,14 @@ manually pretty-print resources from the **Response** tab, via the new **Format*
 
 <figure>
   <img src="/web/updates/images/2018/02/response-prettyprint.png"
-       alt="After blackboxing requests.js, the Initiator column now shows more
-            helpful results."/>
+       alt="Manually pretty-printing the contents of analytics.js via the Format button."/>
   <figcaption>
-    <b>Figure X</b>. After blackboxing <code>requests.js</code>, the
-    <b>Initiator</b> column now shows more helpful results
+    <b>Figure 5</b>. Manually pretty-printing the contents of <code>analytics.js</code> via the
+    <b>Format</b> button
   </figcaption>
 </figure>
 
-## Previews of HTML content in the Preview tab {: #previews }
+## Previewing HTML content in the Preview tab {: #previews }
 
 Previously, the **Preview** tab in the **Network** panel showed the code of an HTML resource
 in certain situations, while rendering a preview of the HTML in others. The **Preview** tab
@@ -127,7 +123,7 @@ tab, or right-click a resource and select **Open in Sources panel**.
   <img src="/web/updates/images/2018/02/preview.png"
        alt="Previewing HTML in the Preview tab."/>
   <figcaption>
-    <b>Figure X</b>. Previewing HTML in the <b>Preview</b> tab
+    <b>Figure 6</b>. Previewing HTML in the <b>Preview</b> tab
   </figcaption>
 </figure>
 
@@ -147,16 +143,16 @@ automatically resize the viewport whenever you change device orientation.
 ## Local Overrides now works with some styles defined in HTML {: #overrides }
 
 Back when DevTools launched [**Local Overrides**][LO] in Chrome 65, one limitation was that it
-couldn't track changes to styles defined within HTML. For example, in **Figure X** there's a
+couldn't track changes to styles defined within HTML. For example, in **Figure 7** there's a
 style rule in the `head` of the document that declares `font-weight: bold` for `h1` elements.
 
 [LO]: /web/updates/2018/01/devtools#overrides
 
 <figure>
   <img src="/web/updates/images/2018/02/overrides.png"
-       alt="TODO"/>
+       alt="An example of styles defined within HTML"/>
   <figcaption>
-    <b>Figure X</b>. TODO
+    <b>Figure 7</b>. An example of styles defined within HTML
   </figcaption>
 </figure>
 
@@ -169,7 +165,7 @@ Caution: **Local Overrides** can track changes like this *so long as the style i
 the HTML document that was sent over the network*. If you have a script that dynamically adds
 styles to an HTML document, **Local Overrides** still won't be able to detect those changes.
 
-## Bonus tip: Blackbox framework scripts to make event listener breakpoints more useful {: #tip }
+## Bonus tip: Blackbox framework scripts to make Event Listener Breakpoints more useful {: #tip }
 
 Note: This section is not related to Chrome 66. It's just a bonus tip about an existing feature
 that you may find useful.
@@ -177,40 +173,40 @@ that you may find useful.
 Back when I created the [Get Started With Debugging JavaScript][JS]{:.external} video, some
 viewers commented that event listener breakpoints aren't useful for apps built on top of
 frameworks, because the event listeners are often wrapped in framework code. For example, in
-**Figure X** I've set up a `click` **Event Listener Breakpoint** in DevTools. When I click the
-button, DevTools automatically pauses in the first line of listener code. In this case, it
-pauses in Vue.js's wrapper code on line 1802, which is not that helpful.
+**Figure 8** I've set up a `click` breakpoint in DevTools. When I click the button in the demo,
+DevTools automatically pauses in the first line of listener code. In this case, it
+pauses in Vue.js's wrapper code on line 1802, which isn't that helpful.
 
 [JS]: https://youtu.be/H0XScE08hy8
 
 <figure>
   <img src="/web/updates/images/2018/02/click-breakpoint.png"
-       alt="TODO"/>
+       alt="The click breakpoint pauses in Vue.js' wrapper code."/>
   <figcaption>
-    <b>Figure X</b>. TODO
+    <b>Figure 8</b>. The <code>click</code> breakpoint pauses in Vue.js' wrapper code
   </figcaption>
 </figure>
 
-Since the Vue.js script is in a separate file, I can blackbox that script in order to make this
-`click` breakpoint more useful.
+Since the Vue.js script is in a separate file, I can blackbox that script from the **Call Stack**
+pane in order to make this `click` breakpoint more useful.
 
 <figure>
   <img src="/web/updates/images/2018/02/blackbox-framework.png"
-       alt="TODO"/>
+       alt="Blackboxing the Vue.js script from the Call Stack pane."/>
   <figcaption>
-    <b>Figure X</b>. TODO
+    <b>Figure 9</b>. Blackboxing the Vue.js script from the <b>Call Stack</b> pane
   </figcaption>
 </figure>
 
 The next time I click the button and trigger the `click` breakpoint, it executes the Vue.js
 code without pausing in it, and then pauses on the first line of code in my app's listener,
-which where I really wanted to pause all along.
+which is where I really wanted to pause all along.
 
 <figure>
   <img src="/web/updates/images/2018/02/blackboxed-results.png"
-       alt="TODO"/>
+       alt="The click breakpoint now pauses on the app's listener code."/>
   <figcaption>
-    <b>Figure X</b>. TODO
+    <b>Figure 10</b>. The <code>click</code> breakpoint now pauses on the app's listener code
   </figcaption>
 </figure>
 
