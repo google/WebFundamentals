@@ -16,7 +16,7 @@ landing_page:
     - heading: Web Apps Training for Agencies
       description: >
         An intense two-day course for web development agencies that covers the
-        <a href="https://developers.google.com/training/courses/progressive-web-apps">
+        <a href="/training/courses/progressive-web-apps">
         Developing Progressive Web Applications</a> syllabus and several
         hands-on codelabs. <br><br><b>Applications are reviewed based on:</b><br>
         <ul><li>Perceived impact of agency’s client list</li>
@@ -33,9 +33,9 @@ landing_page:
         - name: data-category
           value: Web Directory
         - name: data-label
-          value: Web Apps Training for Agencies, Register
+          value: training-register
         - name: data-action
-          value: button
+          value: click
       image_path: /web/agencies/images/hero-web-agencies.png
 
   # PWA
@@ -52,24 +52,24 @@ landing_page:
       buttons:
       - classname: gc-analytics-event button button-blue
         label: Learn more
-        path: https://developers.google.com/web/ilt/pwa/why-build-pwa
+        path: /web/ilt/pwa/why-build-pwa
         attributes:
         - name: data-category
-          value: Web Directory
+          value: webFu
         - name: data-label
-          value: Build your PWA, Learn more
+          value: pwa-learn-more
         - name: data-action
-          value: button
+          value: click
       - classname: gc-analytics-event button
         label: Case studies
-        path: https://developers.google.com/web/showcase/
+        path: /web/showcase/
         attributes:
         - name: data-category
-          value: Web Directory
+          value: webFu
         - name: data-label
-          value: Build your PWA, Case studies
+          value: pwa-case-studies
         - name: data-action
-          value: button
+          value: click
 
   # DIRECTORY
   - classname: devsite-landing-row-50 devsite-landing-row-large-headings
