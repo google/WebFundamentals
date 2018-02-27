@@ -219,7 +219,7 @@ When performance data is collected within a controlled environment with predefin
 - Might not capture real-world bottlenecks
 - Cannot correlate against real-world page KPIs
 
-Note: Tools like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [WebPageTest](https://www.webpagetest.org/) collect this.
+Note: Tools like [Lighthouse](/web/tools/lighthouse/) and [WebPageTest](https://www.webpagetest.org/) collect this.
 
 ### Field data
 
@@ -237,7 +237,7 @@ When you collect performance data from real page loads your users are experienci
 - Restricted set of metrics
 - Limited debugging capabilities
 
-Note: Tools like Speed Scorecard, [Chrome UX Report](https://developers.google.com/web/tools/chrome-user-experience-report/), and the Page Speed Insights speed score report this.
+Note: Tools like Speed Scorecard, [Chrome UX Report](/web/tools/chrome-user-experience-report/), and the Page Speed Insights speed score report this.
 
 ## What are the different performance tools?
 
