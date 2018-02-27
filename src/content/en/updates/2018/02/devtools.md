@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more.
 
-{# wf_updated_on: 2018-02-26 #}
-{# wf_published_on: 2018-03-23 #}
+{# wf_updated_on: 2018-02-27 #}
+{# wf_published_on: 2018-02-26 #}
 {# wf_tags: chrome66,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more. #}
