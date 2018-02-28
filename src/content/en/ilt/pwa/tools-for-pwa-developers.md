@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-28 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -100,7 +100,7 @@ To open the Web Console, either:
 * From the Firefox menu (or Tools menu if you display the menu bar or are on Mac OS X), select __Developer > Web Console. __
 *  [Open the __Toolbox__](#firefoxdevtools) and select the __Console__ panel.
 
-![Console in Firefox](img/5bb4aaabd00ed850.png)
+![Console in Firefox](img/f214108c1662394d.png)
 
 See  [Opening the Web Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console) for more information.
 
@@ -152,7 +152,7 @@ To open the __Console__, either:
 
 [Open the __Toolbox__](#firefoxdevtools) and select the __Network__ panel. See  [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor) for more information.
 
-![View Network Requests in Firefox](img/d5cfb7d13588d98d.png)
+![View Network Requests in Firefox](img/b02d7ec8d4d8ee51.png)
 
 <div id="operarequests"></div>
 
@@ -172,7 +172,7 @@ See  [View Network Requests in Chrome](#chromerequests).
 
 [Open the __Web Inspector__](#safaridevtools), and then open the __Network__ panel.
 
-![View Network Requests in Safari](img/8175f2de298b5ea8.png)
+![View Network Requests in Safari](img/29d876d61333f92c.png)
 
 <div id="offline"></div>
 
@@ -263,7 +263,7 @@ Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:2
 
 * Enter "about:debugging" in the Firefox URL bar and click __Workers__.
 
-![Firefox Service Worker](img/51beb3ba081e7d65.png)
+![Firefox Service Worker](img/574da956ee6c4880.png)
 
 <div id="unregister"></div>
 
@@ -412,7 +412,7 @@ See the MDN article on the  [Storage Inspector](https://developer.mozilla.org/en
 
 [Go to __Cache Storage__](#firefoxcache) in __DevTools__. In the __Storage__ panel, expand __Cache Storage__ and the appropriate domain. Right-click the cache name and then select __Delete All__.
 
-![Clear the Service Worker Cache in Firefox](img/3a9195c823964572.png)
+![Clear the Service Worker Cache in Firefox](img/f5cf17f8445690b1.png)
 
 <div id="indexeddb"></div>
 
@@ -436,7 +436,7 @@ In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You 
 
 Open the __Storage__ panel and expand the __IndexedDB__ node. Select a database, object store, or index to see its contents.
 
-![View IndexedDB in Firefox](img/22f05b596d20ec66.png)
+![View IndexedDB in Firefox](img/86995b70a765e9d0.png)
 
 <div id="clearindexeddb"></div>
 

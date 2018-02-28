@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -88,7 +88,7 @@ In the browser (on the __app__ page) click the Lighthouse icon and choose __Gene
 
 Lighthouse runs the report and generates an HTML page with the results. The report page should look similar to this:
 
-![starting-score](img/3048ecdad076a837.png)
+![starting-score](img/fe89035a861760b5.png)
 
 
 
@@ -309,7 +309,7 @@ Note: You may need to <a href="tools-for-pwa-developers#disablehttpcache">disabl
 
  The report should look something like this:
 
-![solution-score](img/73be590f426d2ad4.png)
+![solution-score](img/bf5139cbb5ea299.png)
 
 Now our score is much better (your score may not match exactly). 
 

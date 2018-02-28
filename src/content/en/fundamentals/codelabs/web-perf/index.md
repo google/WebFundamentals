@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-16 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -70,7 +70,7 @@ Clearly, users notice jank and almost invariably choose apps that perform better
 
 Let's begin by taking a look at the app that you'll be debugging in this codelab. It looks like this.
 
-![36d93b5f28eb60c5.png](img/36d93b5f28eb60c5.png)
+![17aaa204bd2ff067.png](img/17aaa204bd2ff067.png)
 
 This site uses the __Hacker News API__ to show recent stories and their scores. Right now the app's performance is very poor, especially on mobile, but there's no reason it shouldn't be hitting 60fps. By the end of this codelab, you'll have the skills, techniques, and -- most importantly -- the mindset needed to turn this janky app into an attractive and efficient 60fps experience.
 
@@ -97,11 +97,11 @@ Let's see what's really happening when we scroll the main screen, using the Time
 
 At the top of the recording, you see an FPS indicator in green. You should see a green bar with some occasional spikes, like in the screenshot below. The fact that the green bar is so low indicates that the screen was not hitting 60 FPS.
 
-![2e40b3134f26b0fa.png](img/2e40b3134f26b0fa.png)
+![3d74ba7552fa6aaf.png](img/3d74ba7552fa6aaf.png)
 
 Zoom in on your recording and you will see that after the scroll event is a function call, followed by many separate layout events, each with a red warning triangle. The layout events are the very skinny purple events at the bottom of the flame chart in the screenshot below. This is a sure sign that  *forced synchronous layout*  is occurring.
 
-![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
+![5c2a91c2a63b2c10.png](img/5c2a91c2a63b2c10.png)
 
 <aside markdown="1" class="key-point">
 <p><strong>Discussion: Forced synchronous layout</strong></p>
@@ -116,7 +116,7 @@ elem.style.width = newWidth;
 
 Hover to identify a layout event, and then click on it to view its details. 
 
-![fce56d36285bc1fc.png](img/fce56d36285bc1fc.png)
+![223fcf5a77de8ae3.png](img/223fcf5a77de8ae3.png)
 
 Look at the details of a layout event, and you can see that the forced synchronous layout warning is being produced by the `colorizeAndScaleStories` function in app.js.
 
@@ -234,7 +234,7 @@ As usual, begin by taking a Timeline recording of a story sliding in and out, an
 
 In general, whenever you see a purple event with a red triangle on it, you want to investigate by hovering over it and clicking on it to view its details. Right now, you're interested in the forced synchronous layout that occurred after a timer was fired. 
 
-![1bd8f7700f55a6c4.png](img/1bd8f7700f55a6c4.png)
+![43a288936220943e.png](img/43a288936220943e.png)
 
 The slide-in/out animation is firing a timer and there's a forced synchronous layout occurring. The details point to line 180 in the app.js file, which is a function called `animate`. Let's examine that function.
 
