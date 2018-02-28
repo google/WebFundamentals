@@ -12,7 +12,6 @@ description: Third-party scripts provide a wide range of useful functionality, m
 
 {% include "web/_shared/contributors/arthurevans.html" %}
 
-
 You've optimized all of your code, but your site still loads too slowly. Who's
 the culprit?
 
@@ -138,7 +137,8 @@ Insights](/speed/pagespeed/insights/) and
 information that can tell you *how many* third party scripts are loaded by your
 site and which take the most time to execute. 
 
-<img src="images/image_2.png"/>
+<img src="images/image_2.png" alt="waterfall view from webpagetest showing an
+actual website vs the amount of time spent loading tracking scripts"/>
 
 [WebPageTest](https://www.webpagetest.org/)’s waterfall view can highlight the
 impact of heavy third-party script use.
@@ -148,7 +148,8 @@ breakdown](https://www.google.com/url?q=https://www.webpagetest.org/result/18022
 can also be useful for visualizing how much content comes from third-party
 origins. It breaks this down by both total bytes and the number of requests:
 
-<img src="images/image_3.png"/>
+<img src="images/image_3.png" alt="content breakdown by domain (first view).
+Shows the percentage of requests and bytes for each third party"/>
 
 When you see a problematic script, figure out what the script does and ask
 yourself whether the script is really that necessary. Do an A/B test to balance
@@ -167,14 +168,16 @@ To show third party badges, navigate to any panel in the Chrome DevTools and hit
 CMD + Shift + P to bring up the Command Menu. Next enter in "Show third party
 badges". This will enable the feature:
 
-<img src="images/image_4.png"/>
+<img src="images/image_4.png" alt="enabling support for the third-party badges
+feature from the DevTools command menu"/>
 
 When you record a page load using the Network panel it will now include third
 party badges, like the "AOL Advertising" badges shown below in green. Hovering
 over a third-party badge in the Network panel will display more information
 about that script, helping you identify what it does. 
 
-<img src="images/image_5.png"/>
+<img src="images/image_5.png" alt="DevTools third-party badging in the network
+panel"/>
 
 ## How do I measure the impact of third-party script on my page? 
 
@@ -184,7 +187,8 @@ The [Lighthouse](/web/tools/lighthouse/) *JavaScript boot-up time* audit
 highlights scripts that have a costly script parse, compile or evaluation time.
 This can be useful for discovering CPU-intensive third party scripts.
 
-<img src="images/image_6.png"/>
+<img src="images/image_6.png" alt="Lighthouse showing support for script
+evaluating and parsing"/>
 
 ### Chrome DevTools Network Request Blocking
 
@@ -198,7 +202,8 @@ To enable request blocking, right click on any request in the Network panel and
 select "Block Request URL". A Request blocking tab will display in the DevTools
 drawer, letting you manage which requests have been blocked. 
 
-<img src="images/image_7.png"/>
+<img src="images/image_7.png" alt="Block request URLs from the DevTools network
+panel"/>
 
 ### Chrome DevTools Performance Panel
 
@@ -217,7 +222,8 @@ products were the most costly. The [Network
 panel](https://umaar.com/dev-tips/143-network-products/) also supports an option
 to highlight requests by product.
 
-<img src="images/image_8.png"/>
+<img src="images/image_8.png" alt="DevTools Performance panel showing the
+Bottom-uUp view grouped by (third-party) products"/>
 
 To learn more about how to analyze page load performance with the Chrome
 DevTools, see [Get started with analyzing runtime
@@ -254,7 +260,8 @@ third-party embeds) to measure their impact.
 Under "Advanced Settings" is a Block tab. This can be used to specify a list of
 domains to block, simulating what it would be like if they didn't load at all. 
 
-<img src="images/image_9.png"/>
+<img src="images/image_9.png" alt="WebPageTest advanced settings > Block.
+Displays a text area for specifying domains to block."/>
 
 A workflow for using this feature is to:
 
@@ -266,25 +273,26 @@ A workflow for using this feature is to:
   compared by selecting them from your [Test
   History](https://www.webpagetest.org/testlog/1/) and clicking ‘Compare’.
 
-<img src="images/image_10.png"/>
+<img src="images/image_10.png" alt="WebPageTest displaying the compare option
+allowing you to compare two reports"/>
 
 Below we can see the difference between filmstrips both with and without
 third-party resources blocked. It can be useful to try this out for individual
 third-party origins to determine which ones have the biggest impact on your
 page-load performance: 
 
-<img src="images/image_11.png"/>
+<img src="images/image_11.png" alt="WebPageTest filmstrip displaying the impact
+of loading a site with and without third-parties disabled"/>
 
 The impact of blocking third-party resources on a page using WPT’s "block
 requests" feature from “[Using WebPageTest To Measure The Impact Of Third-Party
-Tags](https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd-party-tags/
-)” by Andy Davies
+Tags](https://goo.gl/jwGg6X)” by Andy Davies
 
 Note: WebPageTest also supports two commands operating at the DNS level for
 blocking domains.
 [blockDomains](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting#TOC-blockDomains)
 - which takes a list of domains to block and
-[blockDomainsExcept](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting#TOC-blockDomainsExcept)
+  [blockDomainsExcept](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting#TOC-blockDomainsExcept)
 - takes a list of domains and blocks anything not on the list.
 
 WebPageTest also has a single-point of failure (SPOF) tab. This allows you to
@@ -295,7 +303,8 @@ can make it useful for testing network resilience of third-party content to
 determine how well your pages hold up when services are under heavy load or
 temporarily unavailable.
 
-<img src="images/image_12.png"/>
+<img src="images/image_12.png" alt="WebPageTest advanced settings > SPOF > hosts
+to fail"/>
 
 ### Detecting expensive iframes using Long Tasks
 
@@ -374,7 +383,9 @@ The async and defer attributes change this behavior.
 
 If that's too many words, here's a pretty picture:
 
-<img src="images/image_13.png"/>
+<img src="images/image_13.png" alt="A visualization comparing the impact of
+using script vs script async vs script defer. Defer is showing as executing
+after script fetch and HTML parsing is done."/>
 
 *Credit: Growing with the web*
 
@@ -518,7 +529,9 @@ only when a user scrolls down the page. Another pattern is lazy-loading content
 after the main page content loads but before a user might otherwise interact
 with the page. 
 
-<img src="images/image_15.png"/>
+<img src="images/image_15.png" alt="An illustration showing assets that are
+critical for the above the fold experience and those that are less critical and
+can be lazily loaded in."/>
 
 Note: [LazySizes](https://github.com/aFarkas/lazysizes) is a popular JavaScript
 library for lazy-loading images and[
@@ -582,7 +595,8 @@ The fix for document.write() is to simply not inject scripts using it. As of
 Chrome 53, Chrome DevTools will log warnings to the console for problematic use
 of document.write():
 
-<img src="images/image_16.png"/>
+<img src="images/image_16.png" alt="DevTools console warnings highlighting
+violations for a third-party embed using document.write()"/>
 
 To discover the use of document.write() at scale, you can check for [HTTP
 headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) sent to your
@@ -591,7 +605,8 @@ browser when this intervention for Chrome happens.
 [still using document.write()](/web/tools/lighthouse/audits/document-write) in
 the Lighthouse report:
 
-<img src="images/image_17.png"/>
+<img src="images/image_17.png" alt="Lighthouse Best Practices audit flagging use
+of document.write()"/>
 
 ### Use Tag Managers but use them wisely
 
