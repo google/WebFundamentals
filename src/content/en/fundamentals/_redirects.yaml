@@ -111,8 +111,11 @@ redirects:
 - from: /web/fundamentals/native-hardware/capturing-images/
   to: /web/fundamentals/media/capturing-images/
 
-- from: /web/fundamentals/primers/payment-request/
-  to: /web/fundamentals/payments/
+- from: /web/fundamentals/primers/payment-request/...
+  to: /web/fundamentals/payments/...
+
+- from: /web/fundamentals/payments/android-pay
+  to: /pay/api/web/paymentrequest/tutorial
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
