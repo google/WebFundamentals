@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -195,12 +195,7 @@ When designing a more complex app, content that isn't needed for the initial loa
 
 
 
-There are multiple ways to get started with any project, and we generally recommend using Web Starter Kit. But, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
-
-<aside markdown="1" class="key-point">
-<p><strong>Learn more</strong> about  <a href="/web/tools/starter-kit/">Web Starter Kit</a></p>
-</aside>
-
+There are multiple ways to get started with any project, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
 
 ### Create the HTML for the App Shell
 
