@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2018-01-09 #}
+{# wf_updated_on: 2018-03-02 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -93,13 +93,11 @@ users are generally more patient.
 
 ## Response: respond in under 50ms {: #response }
 
-**Goal**: Complete a transition initiated by user input within 100ms. Users spend the majority
-of their time waiting for sites to respond to their input, not waiting for the sites to load.
+**Goal**: Complete a transition initiated by user input within 100ms. Users spend a long time waiting for a page to be sufficiently loaded to accept user input
 
 **Guidelines**:
 
-* Respond to user input within 50ms, or else the connection between action and
-  reaction is broken. This applies to most inputs, such as clicking buttons, toggling form
+* Ensure event handlers and production of the next frame take place within 50ms. This applies to most inputs, such as clicking buttons, toggling form
   controls, or starting animations. This does not apply to touch drags or scrolls.
 * Though it may sound counterintuitive, it's not always the right call to respond to user
   input immediately. You can use this 100ms window to do other expensive work. But be
