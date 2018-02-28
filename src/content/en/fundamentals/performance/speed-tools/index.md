@@ -196,7 +196,7 @@ experiencing in the wild. Also called Real User Monitoring (or RUM).
 - Limited debugging capabilities
 
 Note: Tools like [Speed Scorecard](https://www.thinkwithgoogle.com/feature/mobile/), [Chrome UX
-Report](/web/tools/chrome-user-experience-report/), and the [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
+Report](/web/tools/chrome-user-experience-report/), and the [Page Speed Insights](/speed/pagespeed/insights/)
 speed score report this.
 
 ## What are the different performance tools?
@@ -233,7 +233,7 @@ Insights.</p>
     <h3>Speed Scorecard</h3>
     <p>Allows you to compare your mobile site speed against your peers in over 10
 countries. Mobile site speed is based on real-world data from the <a
-href="https://developers.google.com/web/tools/chrome-user-experience-report/">Chrome
+href="/web/tools/chrome-user-experience-report/">Chrome
 User Experience Report</a>.</p>
   </div>
   <div class="tool">
