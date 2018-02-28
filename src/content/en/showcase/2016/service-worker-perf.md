@@ -8,6 +8,7 @@ description: Measuring the Real-world Performance Impact of Service Workers
 {# wf_featured_image: /web/showcase/2016/images/service-worker-perf/desktop-all.png #}
 {# wf_featured_snippet: One of the most significant benefits of service workers (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this? #}
 {# wf_tags: progressive-web-apps,serviceworker,casestudy,performance,google-io #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>ServiceWorker #}
 
 <style>
 td[align="right"] {
