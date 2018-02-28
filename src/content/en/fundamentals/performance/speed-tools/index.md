@@ -129,10 +129,10 @@ conditions.](images/network-icons.svg){: .attempt-left .myth }
 
 **User experience can be captured with a single “representative user.”**<br>
 Real-world performance is highly variable due to differences in users’ devices,
-network performance, and other factors. Calibrate your lab and development
+network connections, and other factors. Calibrate your lab and development
 environment to test a variety of such different conditions. Use field data to
-inform selection of test parameters for device type (i.e. mobile vs desktop),
-network connections (i.e. 3G or 4G), and other key variables.
+inform selection of test parameters for device type (i.e., mobile vs. desktop),
+network connections (i.e., 3G or 4G), and other key variables.
 {: .myth }
 
 <div class="clearfix"></div>
@@ -145,7 +145,7 @@ kinds of users.](images/users.svg){: .attempt-left .myth }
 **My website loads fast for me, so it should load fast for my users.**<br>
 The devices and networks that developers test load performance on are often much
 faster than what your users actually experience. Use field data to understand
-what form factors and networks your users are on and appropriately mirror those
+what devices and networks your users are on and appropriately mirror those
 conditions when you test performance.
 {: .myth }
 
@@ -159,14 +159,14 @@ conditions when you test performance.
 a bunch of abstract technical concepts
 and icons.](images/tech.svg){: .attempt-right }
 
-When performance data is collected within a controlled environment with
+Lab data is performance data collected within a controlled environment with
 predefined device and network settings. This offers reproducible results and
 debugging capabilities to help identify, isolate, and fix performance issues.
 
 #### Strengths {: .compare-better }
 
 - Helpful for debugging performance issues
-- End-to-end and deep visibility into the user experience
+- End-to-end and deep visibility into the UX
 - Reproducible testing and debugging environment
 
 #### Limitations {: .compare-worse }
@@ -175,15 +175,16 @@ debugging capabilities to help identify, isolate, and fix performance issues.
 - Cannot correlate against real-world page KPIs
 
 Note: Tools like [Lighthouse](/web/tools/lighthouse/) and
-[WebPageTest](https://www.webpagetest.org/) collect this.
+[WebPageTest](https://www.webpagetest.org/) collect this type of data.
 
 ### Field data
 
 ![A depiction of people in a public setting using mobile
 devices.](images/on-the-street.svg){: .attempt-right }
 
-When you collect performance data from real page loads your users are
-experiencing in the wild. Also called Real User Monitoring (or RUM).
+(Also called Real User Monitoring or RUM)<br>
+Field data is performance data collected from real page loads your users are
+experiencing in the wild.
 
 #### Strengths {: .compare-better }
 
@@ -195,57 +196,64 @@ experiencing in the wild. Also called Real User Monitoring (or RUM).
 - Restricted set of metrics
 - Limited debugging capabilities
 
-Note: Tools like [Speed Scorecard](https://www.thinkwithgoogle.com/feature/mobile/), [Chrome UX
-Report](/web/tools/chrome-user-experience-report/), and the [Page Speed Insights](/speed/pagespeed/insights/)
-speed score report this.
+Note: Public data sets like [Chrome User Experience
+Report](/web/tools/chrome-user-experience-report/) and performance tools like
+[PageSpeed Insights](/speed/pagespeed/insights/) speed score report this type of
+data.
 
 ## What are the different performance tools?
 
 <div class="tools">
   <div class="tool">
-    <img src="images/tool-lighthouse.svg" alt="Lighthouse">
-    <h3>Lighthouse</h3>
+    <a href="/web/tools/lighthouse/"><img src="images/tool-lighthouse.svg" alt="Lighthouse"></a>
+    <h3><a href="/web/tools/lighthouse/">Lighthouse</a></h3>
     <p>Gives you personalized advice on how to improve your website across performance,
 accessibility, PWA, SEO, and other best practices.</p>
   </div>
   <div class="tool">
-    <img src="images/tool-webpagetest.svg" alt="WebPageTest">
-    <h3>WebPageTest</h3>
+    <a href="https://www.webpagetest.org/"><img src="images/tool-webpagetest.svg"
+alt="WebPageTest"></a>
+    <h3><a href="https://www.webpagetest.org/">WebPageTest</a></h3>
     <p>Allows you to compare performance of one or more pages in controlled lab
 environment, and deep dive into performance stats and test performance on a real
 device. You can also run Lighthouse on WebPageTest.</p>
   </div>
   <div class="tool">
-    <img src="images/tool-psi.svg" alt="PageSpeed Insights">
-    <h3>PageSpeed Insights</h3>
-    <p>Shows speed field data for your site, alongside suggestions for common
-optimizations to improve it.</p>
-  </div>
-  <div class="tool">
-    <img src="images/tool-testmysite.svg" alt="TestMySite">
-    <h3>TestMySite</h3>
-    <p>Allows you to diagnose a webpage’s performance across devices, and provides a
+    <a href="https://testmysite.thinkwithgoogle.com/"><img
+src="images/tool-testmysite.svg" alt="TestMySite"></a>
+    <h3><a href="https://testmysite.thinkwithgoogle.com/">TestMySite</a></h3>
+    <p>Allows you to diagnose webpage performance across devices and provides a
 list of fixes for improving the experience from Webpagetest and PageSpeed
 Insights.</p>
   </div>
   <div class="tool">
-    <img src="images/tool-speed-scorecard.svg" alt="Speed Scorecard">
-    <h3>Speed Scorecard</h3>
-    <p>Allows you to compare your mobile site speed against your peers in over 10
-countries. Mobile site speed is based on real-world data from the <a
-href="/web/tools/chrome-user-experience-report/">Chrome
-User Experience Report</a>.</p>
+    <a href="/speed/pagespeed/insights/"><img src="images/tool-psi.svg"
+alt="PageSpeed Insights"></a>
+    <h3><a href="/speed/pagespeed/insights/">PageSpeed Insights</a></h3>
+    <p>Shows speed field data for your site, alongside suggestions for common
+optimizations to improve it.</p>
   </div>
   <div class="tool">
-    <img src="images/tool-impact-calculator.svg" alt="Impact Calculator">
-    <h3>Impact Calculator</h3>
+    <a href="https://www.thinkwithgoogle.com/feature/mobile/"><img
+src="images/tool-speed-scorecard.svg" alt="Speed Scorecard"></a>
+    <h3><a href="https://www.thinkwithgoogle.com/feature/mobile/">Speed Scorecard</a></h3>
+    <p>Allows you to compare your mobile site speed against your peers in over 10
+countries. Mobile site speed is based on real-world data from the Chrome
+User Experience Report.</p>
+  </div>
+  <div class="tool">
+    <a href="https://www.thinkwithgoogle.com/feature/mobile/"><img
+src="images/tool-impact-calculator.svg" alt="Impact Calculator"></a>
+    <h3><a href="https://www.thinkwithgoogle.com/feature/mobile/">Impact Calculator</a></h3>
     <p>Allows you to estimate the potential revenue opportunity of improving your
 mobile site speed, based on benchmark data from Google Analytics.</p>
   </div>
   <div class="tool">
-    <img src="images/tool-devtools.svg" alt="Chrome Developer Tools">
-    <h3>Chrome Developer Tools</h3>
-    <p>Allows you to profile the runtime of a page, identify, and debug performance bottlenecks.</p>
+    <a href="/web/tools/chrome-devtools/"><img src="images/tool-devtools.svg"
+alt="Chrome Developer Tools"></a>
+    <h3><a href="/web/tools/chrome-devtools/">Chrome Developer Tools</a></h3>
+    <p>Allows you to profile the runtime of a page, as well as identify and debug
+performance bottlenecks.</p>
   </div>
 </div>
 
@@ -259,15 +267,17 @@ experience of your website. You speak dollars and cents and are looking for
 monetary figures that can help you quantify the opportunity cost and expected
 lift.**
 
-- Use the **Speed Scorecard** to see how your mobile site speed compares against
-your  peers in more than 10 countries. Scores are based on real world data from
-Chrome User Experience Report.
-- Use the **Impact Calculator** to estimate the potential revenue opportunity of
-improving your mobile site speed. Impact is driven by benchmark data from Google
-Analytics.
-- Use **TestMySite** to test your page’s mobile loading time alongside industry
-benchmarks and to learn how simple fixes can speed up your site and decrease
-visitor loss.
+- Use the **[Speed Scorecard](https://www.thinkwithgoogle.com/feature/mobile/)**
+to see how your mobile site speed compares against your  peers in more than 10
+countries. Scores are based on real-world data from Chrome User Experience
+Report.
+- Use the **[Impact Calculator](https://www.thinkwithgoogle.com/feature/mobile/)**
+to estimate the potential revenue opportunity of improving your mobile site
+speed. Impact is driven by benchmark data from Google Analytics.
+- Use **[TestMySite](https://testmysite.thinkwithgoogle.com/)** to test your
+page’s mobile loading time alongside industry benchmarks and to learn how simple
+fixes can speed up your site and decrease visitor loss; TestMySite is currently
+powered by WebPageTest and PageSpeed Insights.
 
 <div class="clearfix"></div>
 
@@ -278,9 +288,9 @@ it.](images/icon-dev.svg){: .attempt-right .role }
 experienced by real-world Chrome users, and looking for audit recommendations
 against top industry trends and guidelines.**
 
-**PageSpeed Insights** helps you understand the real-world performance of your
-site, as experienced by Chrome users, and recommends optimization
-opportunities.
+**[PageSpeed Insights](/speed/pagespeed/insights/)** helps you understand the
+real-world performance of your site, as experienced by Chrome users, and
+recommends optimization opportunities.
 
 <div class="clearfix"></div>
 
@@ -290,24 +300,25 @@ result page.](images/icon-audit.svg){: .attempt-right .role }
 **Developer trying to understand and audit a website against modern web
 performance best practices.**
 
-**Lighthouse** contains a comprehensive set of performance opportunities; it
-provides you with a list of performance opportunities missing from your page,
-and the time saved by implementing each optimization, which can help you
-understand what you should do.
+**[Lighthouse](/web/tools/lighthouse/)** contains a comprehensive set of
+performance opportunities; it provides you with a list of performance
+opportunities missing from your page and the time saved by implementing each
+optimization, which can help you understand what you should do.
 
 <div class="clearfix"></div>
 
 ![Icon of a magnifying glass
 over a bug.](images/icon-debug.svg){: .attempt-right .role }
 
-**Developer looking for technical guidance on how to debug/deep-dive into the
+**Developer looking for technical guidance on how to debug/deep dive into the
 performance of your site.**
 
-**Chrome Developer Tools** (CDT) contains a Performance Panel that allows you to
-drill-down into performance issues with your site by profiling your site with
-customized configurations, allowing you to track down performance bottlenecks.
-You can use CDT on either production or development versions of a website.
+**[Chrome Developer Tools](/web/tools/chrome-devtools/)** (CDT) contains a
+Performance Panel that allows you to drill down into performance issues with
+your site by profiling your site with customized configurations, allowing you
+to track down performance bottlenecks. You can use CDT on either production or
+development versions of a website.
 
-**WebPageTest** contains an advanced suite of metrics and trace viewers. It enables
-deep diving into the performance of your site on real mobile hardware with
-network conditions.
+**[WebPageTest](https://www.webpagetest.org/)** contains an advanced suite of
+metrics and trace viewers. It enables deep diving into the performance of your
+site on real mobile hardware with network conditions.
