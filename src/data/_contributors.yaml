@@ -22,6 +22,15 @@
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
 
+arthurevans:
+  name:
+    given: Arthur
+    family: Evans
+  twitter: devdocdude
+  github: arthurevans
+  description:
+    en: Arthur is a Tech Writer
+
 iamakulov:
   name:
     given: Ivan
@@ -1128,6 +1137,8 @@ addyosmani:
   google: +AddyOsmani
   twitter: addyosmani
   email: addyo@google.com
+  description:
+    en: 'Eng Manager, Web Developer Relations'
 
 chrispalmer:
   name:
