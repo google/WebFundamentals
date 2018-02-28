@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2018-02-26 #}
 {# wf_blink_components: N/A #}
 
@@ -101,7 +101,7 @@ book_path: /web/fundamentals/_book.yaml
 Google has put out a lot of guidance around performance data and performance
 tooling. The goal of this infographic is to consolidate this guidance for
 developers and marketers to help them understand how to think about performance
-and navigate all of Google's performance tool offerings
+and navigate all of Google's performance tool offerings.
 
 <a class="button download gc-analytics-event"
 href="pdf/Infographic_HowToThinkAboutSpeedTools.pdf" data-category="webFu"
@@ -195,8 +195,8 @@ experiencing in the wild. Also called Real User Monitoring (or RUM).
 - Restricted set of metrics
 - Limited debugging capabilities
 
-Note: Tools like Speed Scorecard, [Chrome UX
-Report](/web/tools/chrome-user-experience-report/), and the Page Speed Insights
+Note: Tools like [Speed Scorecard](https://www.thinkwithgoogle.com/feature/mobile/), [Chrome UX
+Report](/web/tools/chrome-user-experience-report/), and the [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/)
 speed score report this.
 
 ## What are the different performance tools?
@@ -303,11 +303,11 @@ over a bug.](images/icon-debug.svg){: .attempt-right .role }
 **Developer looking for technical guidance on how to debug/deep-dive into the
 performance of your site.**
 
-Chrome Developer Tools (CDT) contains a Performance Panel that allows you to
+**Chrome Developer Tools** (CDT) contains a Performance Panel that allows you to
 drill-down into performance issues with your site by profiling your site with
 customized configurations, allowing you to track down performance bottlenecks.
 You can use CDT on either production or development versions of a website.
 
-WebPageTest contains an advanced suite of metrics and trace viewers. It enables
+**WebPageTest** contains an advanced suite of metrics and trace viewers. It enables
 deep diving into the performance of your site on real mobile hardware with
 network conditions.
