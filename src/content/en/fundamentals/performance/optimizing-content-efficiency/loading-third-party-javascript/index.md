@@ -27,7 +27,7 @@ Why do you need to be [careful](https://css-tricks.com/potential-dangers-of-thir
 * They can be **unpredictable** and change without you knowing
 * They can have **unintended consequences** 
 
-Ideally, you’ll want to ensure third-party script is not impacting the [critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/). In this guide, we’ll walk through how to find and fix issues related to loading third-party JavaScript. 
+Ideally, you’ll want to ensure third-party script is not impacting the [critical rendering path](/web/fundamentals/performance/critical-rendering-path/). In this guide, we’ll walk through how to find and fix issues related to loading third-party JavaScript. 
 
 ## What do we mean by third-party scripts?
 
@@ -47,29 +47,36 @@ Examples of third-party scripts include:
 
 * Helper libraries (e.g date formatting, animation, functional libraries etc)
 
-<img src="images/image_0.png"/>
+<img src="images/image_0.png" alt="example of a youtube video embed"/>
 
-<img src="images/image_1.png"/>
+```html
+<iframe 
+  width="560" height="315" src="https://www.youtube.com/embed/mo8thg5XGV0"
+  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+```
 
 One example of this is the YouTube video player embed script that allows you to embed a video into your page.
 
-Unfortunately, embedding third-party scripts means we often rely on them to be fast in order to avoid slowing our pages down. Third-party scripts are a predominant cause of performance slowdowns and are often caused by resources outside of your control. These issues can include:
+Unfortunately, embedding third-party scripts means we often rely on them to be fast in order to avoid slowing our pages down. Third-party scripts are a predominant cause of performance slowdowns and are often caused by resources outside of your control. 
+
+These issues can include:
 
 * Firing too many network requests to multiple servers. The more requests a site has to make, the longer it can take to load.
 
-* Sending [too much JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/) that keeps the main thread busy. Too much JavaScript can block DOM construction, delaying how quickly pages can render. CPU-intensive script parsing and execution can delay user interaction and cause battery drain.
+* Sending [too much JavaScript](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/) that keeps the main thread busy. Too much JavaScript can block DOM construction, delaying how quickly pages can render. CPU-intensive script parsing and execution can delay user interaction and cause battery drain.
 
-* Sending large, [unoptimized image files](https://developers.google.com/web/tools/lighthouse/audits/unoptimized-images) or videos. This can consume data and cost users money.
+* Sending large, [unoptimized image files](/web/tools/lighthouse/audits/unoptimized-images) or videos. This can consume data and cost users money.
 
 * Third-party scripts loaded without care can be a [single-point of failure](http://blog.patrickmeenan.com/2011/10/testing-for-frontend-spof.html) (SPOF)
 
-* Insufficient [HTTP caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching), forcing resources to be fetched from the network often
+* Insufficient [HTTP caching](/web/fundamentals/performance/optimizing-content-efficiency/http-caching), forcing resources to be fetched from the network often
 
-* Lack of sufficient [server compression](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer) of resources
+* Lack of sufficient [server compression](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer) of resources
 
 * Blocking content display until they complete processing. This can also be true for async A/B testing scripts.
 
-* Use of legacy APIs (e.g [document.write()](https://developers.google.com/web/updates/2016/08/removing-document-write)) known to be [harmful](https://developers.google.com/web/tools/lighthouse/audits/document-write) to the user experience
+* Use of legacy APIs (e.g [document.write()](/web/updates/2016/08/removing-document-write)) known to be [harmful](/web/tools/lighthouse/audits/document-write) to the user experience
 
 * Excessive DOM elements or expensive CSS selectors.
 
@@ -81,7 +88,7 @@ Context is important and the solution to costly third-parties can depend on your
 
 ## How do you identify third-party script on a page?
 
-Unless you’re aware which third-party scripts are loaded by your site and what their performance impact is, it’s impossible to know how to optimize them. Many free web speed test tools can highlight costly third-parties including [Chrome DevTools](https://developer.chrome.com/devtools), [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and [WebPageTest](https://www.webpagetest.org/). These tools display rich diagnostic information that can tell you *how many* third party scripts are loaded by your site and which take the most time to execute. 
+Unless you’re aware which third-party scripts are loaded by your site and what their performance impact is, it’s impossible to know how to optimize them. Many free web speed test tools can highlight costly third-parties including [Chrome DevTools](https://developer.chrome.com/devtools), [PageSpeed Insights](/speed/pagespeed/insights/) and [WebPageTest](https://www.webpagetest.org/). These tools display rich diagnostic information that can tell you *how many* third party scripts are loaded by your site and which take the most time to execute. 
 
 <img src="images/image_2.png"/>
 
@@ -95,7 +102,7 @@ When you see a problematic script, figure out what the script does and ask yours
 
 ### Chrome DevTools Third-party Script Badging 
 
-[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/) has support for highlighting third-parties (by their product name) in the [Network panel](https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading). This allows you to get more insight into the third-parties making request on a page, logging to the console and executing expensive JavaScript on your page. 
+[Chrome DevTools](/web/tools/chrome-devtools/) has support for highlighting third-parties (by their product name) in the [Network panel](/web/tools/chrome-devtools/network-performance/resource-loading). This allows you to get more insight into the third-parties making request on a page, logging to the console and executing expensive JavaScript on your page. 
 
 To show third party badges, navigate to any panel in the Chrome DevTools and hit CMD + Shift + P to bring up the Command Menu. Next enter in "Show third party badges". This will enable the feature:
 
@@ -109,13 +116,13 @@ When you record a page load using the Network panel it will now include third pa
 
 ### Lighthouse Boot-up Time Audit
 
-The [Lighthouse](https://developers.google.com/web/tools/lighthouse/) *JavaScript boot-up time* audit highlights scripts that have a costly script parse, compile or evaluation time. This can be useful for discovering CPU-intensive third party scripts.
+The [Lighthouse](/web/tools/lighthouse/) *JavaScript boot-up time* audit highlights scripts that have a costly script parse, compile or evaluation time. This can be useful for discovering CPU-intensive third party scripts.
 
 <img src="images/image_6.png"/>
 
 ### Chrome DevTools Network Request Blocking
 
-Chrome DevTools allows you to see how your page behaves when a particular script, stylesheet or other resource isn’t available. This is done with [network request blocking](https://developers.google.com/web/updates/2017/04/devtools-release-notes#block-requests), a feature that can help measure the impact of blocking (dropping) specific third-party resources from your page.
+Chrome DevTools allows you to see how your page behaves when a particular script, stylesheet or other resource isn’t available. This is done with [network request blocking](/web/updates/2017/04/devtools-release-notes#block-requests), a feature that can help measure the impact of blocking (dropping) specific third-party resources from your page.
 
 To enable request blocking, right click on any request in the Network panel and select "Block Request URL". A Request blocking tab will display in the DevTools drawer, letting you manage which requests have been blocked. 
 
@@ -123,18 +130,18 @@ To enable request blocking, right click on any request in the Network panel and 
 
 ### Chrome DevTools Performance Panel
 
-The [Performance panel](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) in Chrome DevTools helps identify issues with your page’s web performance. Clicking the record button and loading your page presents you with a waterfall representing where your site is spending time. At the bottom of the Performance panel, you will see a drawer starting with "[Summary](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference#record-load)". Navigate to the “Bottom-up” tab. 
+The [Performance panel](/web/tools/chrome-devtools/evaluate-performance/reference) in Chrome DevTools helps identify issues with your page’s web performance. Clicking the record button and loading your page presents you with a waterfall representing where your site is spending time. At the bottom of the Performance panel, you will see a drawer starting with "[Summary](/web/tools/chrome-devtools/evaluate-performance/reference#record-load)". Navigate to the “Bottom-up” tab. 
 
 Here, you can use the "Group by product" option in the Bottom-Up tab to group third-parties by the time they spent. This helps identify which third party products were the most costly. The [Network panel](https://umaar.com/dev-tips/143-network-products/) also supports an option to highlight requests by product.
 
 <img src="images/image_8.png"/>
 
-To learn more about how to analyze page load performance with the Chrome DevTools, see [Get started with analyzing runtime performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/).
+To learn more about how to analyze page load performance with the Chrome DevTools, see [Get started with analyzing runtime performance](/web/tools/chrome-devtools/evaluate-performance/).
 
 A good **workflow** for measuring the impact of third-party scripts is:
 
 * Measure how long it takes to load your page using the Network panel. 
-    * To emulate real-world conditions, we recommend turning on [network throttling](https://developers.google.com/web/tools/chrome-devtools/network-performance/#emulate) and [CPU throttling](https://developers.google.com/web/updates/2017/07/devtools-release-notes#throttling). On faster connections and desktop hardware, the impact of expensive scripts may not be as representative as it would on a mobile phone.
+    * To emulate real-world conditions, we recommend turning on [network throttling](/web/tools/chrome-devtools/network-performance/#emulate) and [CPU throttling](/web/updates/2017/07/devtools-release-notes#throttling). On faster connections and desktop hardware, the impact of expensive scripts may not be as representative as it would on a mobile phone.
 * Block the URLs or domains responsible for third-party scripts you believe are an issue (see *Chrome DevTools Performance Panel* for identifying costly scripts).
 
 * Reload the page and re-measure how long the page takes without loading these blocked third-party scripts. You should hopefully see an improvement. 
@@ -177,35 +184,31 @@ The difference between "SPOF" and "Block" is that SPOF slowly times out. This ca
 
 When scripts in third-party iframes take a long time to run, they can block the main thread delaying other tasks from running. These long tasks can cause a negative user experience leading to sluggish event handlers or dropped frames.
 
-To detect long tasks for [Real User Monitoring](https://en.wikipedia.org/wiki/Real_user_monitoring) (RUM), we can use the JavaScript [PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) API and observe [longtask](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#long_tasks) entries. As these entries contain an attribution property, we can track down which frame context was responsible for the task. 
+To detect long tasks for [Real User Monitoring](https://en.wikipedia.org/wiki/Real_user_monitoring) (RUM), we can use the JavaScript [PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) API and observe [longtask](/web/fundamentals/performance/user-centric-performance-metrics#long_tasks) entries. As these entries contain an attribution property, we can track down which frame context was responsible for the task. 
 
 Below is an example that will long `longtask` entries to the console, including one for an "expensive" iframe:
 
 ```html
-   <script>
+<script>
+    const observer = new PerformanceObserver((list) => {
 
-       const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
 
-           for (const entry of list.getEntries()) {
+            // Attribution entry including "containerSrc":"https://example.com"
+            console.log(JSON.stringify(entry.attribution));
 
-               // Attribution entry including "containerSrc":"https://example.com"
+        }
 
-               console.log(JSON.stringify(entry.attribution));
+    });
 
-           }
+    observer.observe({ entryTypes: ['longtask'] });
+</script>
 
-       });
-
-       observer.observe({ entryTypes: ['longtask'] });
-
-   </script>
-
-   <!-- Imagine this is an iframe with expensive long tasks -->
-
-   <iframe src="[https://example.com](https://example.com)"></iframe>
+<!-- Imagine this is an iframe with expensive long tasks -->
+<iframe src="https://example.com"></iframe>
 ```
 
-To learn more about monitoring Long Tasks, read Phil Walton’s [User-centric Performance Metrics](https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#long_tasks).
+To learn more about monitoring Long Tasks, read Phil Walton’s [User-centric Performance Metrics](/web/fundamentals/performance/user-centric-performance-metrics#long_tasks).
 
 ## How do you load third-party script efficiently?
 
@@ -217,7 +220,7 @@ If a third-party script is slowing down your page load, you have several options
 
 * Consider removing the script if it doesn't add clear value to your site.
 
-* Consider [Resource Hints](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect) like `<link rel=preconnect>` or `<link rel=dns-prefetch>` to perform a DNS lookup for domains hosting third-party scripts. 
+* Consider [Resource Hints](/web/fundamentals/performance/resource-prioritization#preconnect) like `<link rel=preconnect>` or `<link rel=dns-prefetch>` to perform a DNS lookup for domains hosting third-party scripts. 
 
 ### Use async or defer
 
@@ -255,13 +258,13 @@ Note: `async` is not a silver bullet. If a marketing team wants to load a large 
 
 Establishing connections to third-party origins can take a significant amount of time - particularly on slow networks. Many steps can add up to delays including DNS lookups, redirects, and potentially several round trips to each third-party server to handle the request.
 
-You can use [Resource Hints](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect) like [<link rel=dns-prefetch>](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect) to perform a DNS lookup for domains hosting third-party scripts. When the request for them is finally made, time can be saved as the DNS lookup has already been carried out. 
+You can use [Resource Hints](/web/fundamentals/performance/resource-prioritization#preconnect) like [<link rel=dns-prefetch>](/web/fundamentals/performance/resource-prioritization#preconnect) to perform a DNS lookup for domains hosting third-party scripts. When the request for them is finally made, time can be saved as the DNS lookup has already been carried out. 
 
 ```
 <link rel="dns-prefetch" href="http://example.com">
 ```
 
-If the third-party domain you are referencing uses HTTPS, you may also consider [<link rel=preconnect>](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect) as this will both perform the DNS lookup *and* resolve TCP round-trips and handle TLS negotiations. These other steps can be very slow as they involve looking at SSL certificates for verification, so consider Resource Hints seriously if you find third-party setup time to be an issue.
+If the third-party domain you are referencing uses HTTPS, you may also consider [<link rel=preconnect>](/web/fundamentals/performance/resource-prioritization#preconnect) as this will both perform the DNS lookup *and* resolve TCP round-trips and handle TLS negotiations. These other steps can be very slow as they involve looking at SSL certificates for verification, so consider Resource Hints seriously if you find third-party setup time to be an issue.
 
 ```
 <link rel="preconnect" href="https://cdn.example.com">
@@ -269,7 +272,7 @@ If the third-party domain you are referencing uses HTTPS, you may also consider 
 
 ### "Sandbox" scripts with an iframe
 
-There are cases where third-party scripts can be loaded directly into an iframe. By restricting such scripts to iframes, they won’t block execution of the main page. This is the same approach that [AMP](https://www.ampproject.org/learn/about-how/) takes to keeping JavaScript out of the [critical path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/). Note that this approach will still block the `onload` event so try not to attach critical functionality to `onload`.
+There are cases where third-party scripts can be loaded directly into an iframe. By restricting such scripts to iframes, they won’t block execution of the main page. This is the same approach that [AMP](https://www.ampproject.org/learn/about-how/) takes to keeping JavaScript out of the [critical path](/web/fundamentals/performance/critical-rendering-path/). Note that this approach will still block the `onload` event so try not to attach critical functionality to `onload`.
 
 Note: Chrome is also exploring support for [Feature Policy](https://www.chromestatus.com/feature/5694225681219584) - a set of policies allowing a developer to selectively disable access to certain browser features. This can prevent third-party content introducing unwanted behaviors to a site.
 
@@ -283,15 +286,13 @@ Self-hosting can come with a number of big caveats:
 
 * Scripts that are self-hosted won’t get automatic updates due to an API change. One example: a publisher with 90% of their revenue from ads discovers that ads didn’t serve for half a day due to an API change that their self-hosted script didn’t account for, leading to loss in income. 
 
-An alternative to self-hosting scripts would be using [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/) to cache them. This can give you greater control over how often they are re-fetched from the network. This could also be used to create a loading strategy where requests for non-essential third parties are throttled until the page reaches a key user moment.
+An alternative to self-hosting scripts would be using [Service Workers](/web/fundamentals/primers/service-workers/) to cache them. This can give you greater control over how often they are re-fetched from the network. This could also be used to create a loading strategy where requests for non-essential third parties are throttled until the page reaches a key user moment.
 
 ### A/B Test smaller samples of users
 
 [A/B testing](https://www.optimizely.com/optimization-glossary/ab-testing/) (or split-testing) is a technique for experimenting with two versions of a page to determine which one performs best. This is done by enabling both variants (A and B) for different samples of your website traffic. The page that provides a better conversion rate wins.
 
 A/B testing is a very useful tool for analyzing user experience and behavior. 
-
-<img src="images/image_14.png"/>
 
 However, by design, A/B testing delays rendering to figure out which experiment needs to be active. JavaScript is often used to check if any of your users belong to an A/B test experiment and then enable the correct variant. This pattern can lead to 100% of your users being sent down large, costly script even if they don’t belong to the sample receiving the experiment.
 
@@ -311,7 +312,7 @@ DoubleClick have guidance on how to lazy-load ads in their [official documentati
 
 Historically, solutions for detecting if an element is visible in the viewport (in order to lazy-load its content) have been error-prone, often causing the browser to become sluggish. Solutions have often listened for [scroll](https://developer.mozilla.org/en-US/docs/Web/Events/scroll) or [resize](https://developer.mozilla.org/en-US/docs/Web/Events/resize) events, then used DOM APIs like [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) to calculate where elements are relative to the viewport. This works, but is not efficient. 
 
-[IntersectionObserver](https://developers.google.com/web/updates/2016/04/intersectionobserver) is a browser API that allows us to efficiently detect when an observed element enters or exits the browser's viewport. Learn more about how to use it for [lazy-loading resources](http://deanhume.com/home/blogpost/lazy-loading-images-using-intersection-observer/10163). LazySizes also has[ optional support](https://github.com/aFarkas/lazysizes/blob/097a9878817dd17be3366633e555f3929a7eaaf1/src/lazysizes-intersection.js) for IntersectionObserver.
+[IntersectionObserver](/web/updates/2016/04/intersectionobserver) is a browser API that allows us to efficiently detect when an observed element enters or exits the browser's viewport. Learn more about how to use it for [lazy-loading resources](http://deanhume.com/home/blogpost/lazy-loading-images-using-intersection-observer/10163). LazySizes also has[ optional support](https://github.com/aFarkas/lazysizes/blob/097a9878817dd17be3366633e555f3929a7eaaf1/src/lazysizes-intersection.js) for IntersectionObserver.
 
 ### Analytics can be complicated
 
@@ -329,7 +330,7 @@ The fix for document.write() is to simply not inject scripts using it. As of Chr
 
 <img src="images/image_16.png"/>
 
-To discover the use of document.write() at scale, you can check for [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) sent to your browser when this intervention for Chrome happens. [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can also highlight any third-party scripts [still using document.write()](https://developers.google.com/web/tools/lighthouse/audits/document-write) in the Lighthouse report:
+To discover the use of document.write() at scale, you can check for [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) sent to your browser when this intervention for Chrome happens. [Lighthouse](/web/tools/lighthouse/) can also highlight any third-party scripts [still using document.write()](/web/tools/lighthouse/audits/document-write) in the Lighthouse report:
 
 <img src="images/image_17.png"/>
 
@@ -351,7 +352,7 @@ Note: Even though individual tags can be asynchronously loaded, they still need 
 
 "Google Tag Manager is an asynchronous tag, meaning that when it executes, it does not block other elements from rendering on the page. It also causes the other tags that are deployed via Google Tag Manager to be deployed asynchronously, meaning that a slow loading tag won’t block other tracking tags."
 
-Tag managers may improve page load performance by reducing how many calls to external resources are needed - as long as you** are not** pulling in a large number of tags. They also allow tags a way to collect values in a single unique place. For GTM, this is the [Data Layer](https://developers.google.com/tag-manager/devguide). If multiple third parties wish to trigger conversion-tracking data, they can do this by pulling from the Data Layer.
+Tag managers may improve page load performance by reducing how many calls to external resources are needed - as long as you** are not** pulling in a large number of tags. They also allow tags a way to collect values in a single unique place. For GTM, this is the [Data Layer](/tag-manager/devguide). If multiple third parties wish to trigger conversion-tracking data, they can do this by pulling from the Data Layer.
 
 **Risks when using Tag managers**
 
@@ -359,7 +360,7 @@ When using a tag manager, great care needs to be taken to avoid slowing down how
 
 * Anyone with credentials and access can easily add not just more tags, but *any* JavaScript they want. Although tag managers can load tags asynchronously, this can still lead to an excess of costly HTTP requests being made and executed. This can be minimized by only allowing one user to publish versions.
 
-* Anyone can configure too many tag manager [auto-event listeners](https://support.google.com/analytics/answer/6164470?hl=en). Every auto-event listener needs to be executed & the more code and network requests there are, the longer it can take for a page to fully load. With our performance guidance encouraging that you [respond to events within 50ms](https://developers.google.com/web/fundamentals/performance/rail), every tag manager event listener added eats away at that goal.
+* Anyone can configure too many tag manager [auto-event listeners](https://support.google.com/analytics/answer/6164470?hl=en). Every auto-event listener needs to be executed & the more code and network requests there are, the longer it can take for a page to fully load. With our performance guidance encouraging that you [respond to events within 50ms](/web/fundamentals/performance/rail), every tag manager event listener added eats away at that goal.
 
 ### Avoid scripts that pollute the global scope
 
@@ -373,7 +374,7 @@ Be sure to conduct careful audits of the third-party scripts you load to ensure 
 
 Adding third-party scripts to a page implies a level of trust in the origin. There are some strategies you can take to minimize their impact on performance and security:
 
-* **[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https)** is a must. Sites working over HTTPS shouldn’t have third-parties working over HTTP. An HTTPS page that includes content fetched using HTTP is called a mixed content page and will run into [Mixed Content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content) warnings.
+* **[HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https)** is a must. Sites working over HTTPS shouldn’t have third-parties working over HTTP. An HTTPS page that includes content fetched using HTTP is called a mixed content page and will run into [Mixed Content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content) warnings.
 
 * Consider the **[sandbox attribute](https://developer.mozilla.org/en/docs/Web/HTML/Element/iframe)** on iframes. From a security perspective, this allows you to restrict the actions available from the iframe. Restrictions include `allow-scripts`controlling whether the context can run scripts.
 
@@ -407,13 +408,15 @@ Third-party script optimization should be followed by on-going real-time perform
 
 [Performance and Resilience: Stress-Testing Third Parties](https://csswizardry.com/2017/07/performance-and-resilience-stress-testing-third-parties/)
 
-[Adding interactivity with JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript)
+[Adding interactivity with JavaScript](/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript)
 
 [Potential dangers with Third-party Scripts](https://css-tricks.com/potential-dangers-of-third-party-javascript/)
 
 [How 3rd Party Scripts can be performant citizens on the web](https://www.twnsnd.com/posts/performant_third_party_scripts.html)
 
 [The JavaScript Supply Chain Paradox: SRI, CSP and Trust in Third Party Libraries](https://www.troyhunt.com/the-javascript-supply-chain-paradox-sri-csp-and-trust-in-third-party-libraries/)
+
+[Third-party CSS isn't safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
 
 *With thanks to Kenji Baheux, Jeremy Wagner, Philip Walton, Jeff Posnick and Cheney Tsai for their reviews.*
 
