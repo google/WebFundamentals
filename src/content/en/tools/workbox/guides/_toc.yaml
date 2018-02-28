@@ -44,3 +44,5 @@ toc:
   path: /web/tools/workbox/guides/service-worker-checklist
 - title: "Advanced Recipes"
   path: /web/tools/workbox/guides/advanced-recipes
+- title: "FAQ"
+  path: /web/tools/workbox/guides/faq
