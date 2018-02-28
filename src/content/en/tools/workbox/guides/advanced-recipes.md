@@ -183,8 +183,9 @@ On browsers which lack [Broadcast Channel API support](https://caniuse.com/#sear
 cached response was updated.
 
 As an alternative to using `workbox-broadcast-cache-update`, you can instead "roll your own" plugin
-which listens for the same cache update events, and uses the more widely supported `postMessage()`
-API for sending out notifications. In this custom plugin, you have control over what criteria are
+which listens for the same cache update events, and uses the more widely supported [`postMessage()`
+API](https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) for
+sending out notifications. In this custom plugin, you have control over what criteria are
 used to determine whether a cached response has been updated. You can use whatever message format
 inside of `postMessage()` that makes sense for your use case.
 
