@@ -149,8 +149,6 @@ what devices and networks your users are on and appropriately mirror those
 conditions when you test performance.
 {: .myth }
 
-<div class="clearfix"></div>
-
 ## Understanding lab vs. field data
 
 ### Lab data
