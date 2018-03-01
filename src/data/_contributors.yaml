@@ -429,6 +429,16 @@ samdutton:
   description:
     en: Sam is a Developer Advocate
 
+arthurevans:
+  name:
+    given: Arthur
+    family: Evans
+  twitter: devdocdude
+  github: arthurevans
+  description:
+    en: Arthur is a Tech Writer
+
+
 flackr:
   name:
     given: Robert
@@ -1128,6 +1138,8 @@ addyosmani:
   google: +AddyOsmani
   twitter: addyosmani
   email: addyo@google.com
+  description:
+    en: 'Eng Manager, Web Developer Relations'
 
 chrispalmer:
   name:

@@ -3,8 +3,9 @@ book_path: /web/fundamentals/_book.yaml
 description: Modifying the DOM order with tabindex
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: N/A #}
 
 # Using tabindex {: .page-title }
 
@@ -120,7 +121,8 @@ the keyboard could still interact with your control.
 
 Knowing which keyboard behaviors to implement can be difficult, but there is a
 helpful document you can refer to. The
-[Accessible Rich Internet Applications (ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external } 
+[Accessible Rich Internet Applications (ARIA) Authoring
+Practices](https://www.w3.org/TR/wai-aria-practices/){: .external }
 guide lists types of components and what kinds of keyboard actions they support.
 We will cover ARIA in more detail later, but for now let's use the guide to help
 us add keyboard support to a new component.
@@ -139,9 +141,11 @@ behavior.
     </radio-group>
 
 To determine what kind of keyboard support they need, you would check the
-[ARIA Authoring Practices guide](https://www.w3.org/TR/wai-aria-practices/){: .external }. 
+[ARIA Authoring Practices
+guide](https://www.w3.org/TR/wai-aria-practices/){: .external }.
 Section 2 contains a list of design patterns, and in that list is a
-[characteristics table for radio groups](https://www.w3.org/TR/wai-aria-practices/#radiobutton){: .external },
+[characteristics table for radio
+groups](https://www.w3.org/TR/wai-aria-practices/#radiobutton){: .external },
 the existing component that most closely matches your new element.
 
 As you can see in the table, one of the common keyboard behaviors that should be
@@ -232,7 +236,10 @@ DevTools to observe the tabindex moving from one radio to the next.
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"
+  integrity="sha384-X+sPgouWG/knuZdpE20Kl2dNDcdIvkx6iL3fcATubVaWW37Za9FeNqAFO14x1NB3"
+  crossorigin="anonymous">
+</script>
 
 <script>
   class RadioButton extends HTMLElement {
@@ -346,7 +353,8 @@ DevTools to observe the tabindex moving from one radio to the next.
 {% endframebox %}
 
 You can view
-[the complete source for this element](https://gist.github.com/robdodson/85deb2f821f9beb2ed1ce049f6a6ed47){: .external }
+[the complete source for this
+element](https://gist.github.com/robdodson/85deb2f821f9beb2ed1ce049f6a6ed47){: .external }
 over on GitHub.
 
 ## Modals and keyboard traps
@@ -356,7 +364,8 @@ out of. Consider an autocomplete widget that tries to manage focus and captures
 the tab behavior, but prevents the user from leaving it until it's complete.
 This is called a *keyboard trap*, and it can be very frustrating for the user.
 Section 2.1.2 of the Web AIM checklist addresses this issue, stating that
-[keyboard focus should never be locked or trapped at one particular page element](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
+[keyboard focus should never be locked or trapped at one particular page
+element](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }.
 The user should be able to navigate to and from all page elements using only the
 keyboard.
 
@@ -371,13 +380,15 @@ In instances like this you can implement a temporary keyboard trap to ensure
 that you trap focus only while the modal is displayed and then restore focus to
 the previously-focused item when the modal is closed.
 
->There are some proposals on how to make this easier for developers, including
-the `<dialog>` element, but they don't yet have widespread browser support.
+> There are some proposals on how to make this easier for developers,
+> including the `<dialog>` element, but they don't yet have widespread
+> browser support.
 >
->See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external }
-for more information on `<dialog>`, and this
-[modal example](https://github.com/gdkraus/accessible-modal-dialog){: .external } for
-more information on modal windows.
+> See this [MDN
+> article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external }
+> for more information on `<dialog>`, and this
+> [modal example](https://github.com/gdkraus/accessible-modal-dialog){: .external } for
+> more information on modal windows.
 
 Consider a modal dialog represented by a `div` that contains a few elements, and
 another `div` that represents a background overlay. Let's walk through the basic
@@ -405,7 +416,8 @@ steps needed to implement a temporary keyboard trap in this situation.
 This procedure gives you a usable, non-frustrating modal window that everyone
 can use effectively.
 
-For more details, you can examine this [sample code](https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution){: .external },
-and view a live example from a
-[completed page](http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html){: .external }.
+For more details, you can examine this [sample
+code](https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution){: .external },
+and view a live example from a [completed
+page](http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html){: .external }.
 

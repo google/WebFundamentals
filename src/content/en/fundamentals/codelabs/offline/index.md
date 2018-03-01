@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-11-09 #}
+{# wf_updated_on: 2018-02-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -17,7 +17,7 @@ description: Learn how to integrate a service worker into an existing applicatio
 
 
 
-![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
+![3ec8737c20a475df.png](img/3ec8737c20a475df.png)
 
 In this codelab, you learn how to integrate a service worker into an existing application to make the application work offline. The application is called  [Air Horner](https://airhorner.com). Click the horn and it makes a sound.
 
@@ -69,7 +69,7 @@ Run the site from a local web server.  You can use any web server, but for the r
 </aside>
 
 
-Open up the site in Chrome. You should see: ![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
+Open up the site in Chrome. You should see: ![3ec8737c20a475df.png](img/3ec8737c20a475df.png)
 
 
 ## Test the app
@@ -113,7 +113,7 @@ What do you expect to see? Well, because you're offline and because this version
 
 But what you actually see is... a fully-functional offline app!
 
-![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
+![3ec8737c20a475df.png](img/3ec8737c20a475df.png)
 
 What happened? Well, recall that when you began this codelab, you tried out the completed version of the app. When you ran that version, the app actually installed a service worker. That service worker is now automatically running every time that you run the app. Once a service worker is installed to a scope such as `localhost:3000` (you'll learn more about scope in the next section), that service worker automatically starts up every time that you access the scope, unless you programmatically or manually delete it. 
 
