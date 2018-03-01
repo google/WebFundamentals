@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -176,8 +176,6 @@ worbox.routing.registerRoute(new RegExp('/images/'), ({event}) => {
 
 ## Use postMessage() to notify of cache updates
 
-Not every browser which supports service workers also supports the
-[Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API).
 On browsers which lack [Broadcast Channel API support](https://caniuse.com/#search=broadcast), the
 `workbox-broadcast-cache-update` plugin will not send any messages letting clients know that a
 cached response was updated.
@@ -185,7 +183,7 @@ cached response was updated.
 As an alternative to using `workbox-broadcast-cache-update`, you can instead "roll your own" plugin
 which listens for the same cache update events, and uses the more widely supported [`postMessage()`
 API](https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) for
-sending out notifications. In this custom plugin, you have control over what criteria are
+sending out updates. In this custom plugin, you have control over what criteria are
 used to determine whether a cached response has been updated. You can use whatever message format
 inside of `postMessage()` that makes sense for your use case.
 
