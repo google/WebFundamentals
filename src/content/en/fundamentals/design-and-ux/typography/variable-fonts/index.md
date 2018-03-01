@@ -301,6 +301,10 @@ generate eight weights, across three widths, across both the Italic and Roman
 styles. Storing 48 individual fonts in a single variable font file meant a
 **88% reduction in file size**.
 
+On the flip side, if you are animating the font between settings, this may 
+cause the browser performance issues. Learn more about this on 
+[Surma's Supercharged](https://www.youtube.com/watch?v=B42rUMdcB7c).
+
 With variable fonts, app and website makers can offer really rich typography
 experiences that express each brand, without the previous bandwidth and latency
 costs. However, if you are using a single font such as Roboto Regular and
