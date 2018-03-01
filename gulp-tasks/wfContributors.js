@@ -81,22 +81,25 @@ function buildIndex(contributors) {
  */
 function buildIndividualPages(contributors) {
   gutil.log(' ', 'Building individual pages of all contributors...');
-  const files = wfHelper.getFileList(global.WF.src.content, ['**/*.md']);
-  const filesByAuthor = wfHelper.splitByAuthor(files);
-  const keys = Object.keys(contributors);
-  keys.forEach(function(key) {
-    if (!(key in filesByAuthor)) {
-      return;
-    }
-    const contributor = contributors[key];
-    filesByAuthor[key].sort(wfHelper.publishedComparator);
-    const context = {
-      id: key,
-      contributor: contributor,
-      articles: filesByAuthor[key],
-    };
-    const dest = DEST_ARTICLE_LIST.replace('{{key}}', key);
-    wfTemplateHelper.renderTemplate(TEMPLATE_ARTICLE_LIST, context, dest);
+  global.WF.langs.forEach(function(lang) {
+    const folder = global.WF.src.content.replace('/en', '/'.concat(lang));
+    const files = wfHelper.getFileList(folder, ['**/*.md']);
+    const filesByAuthor = wfHelper.splitByAuthor(files);
+    const keys = Object.keys(contributors);
+    keys.forEach(function(key) {
+      if (!(key in filesByAuthor)) {
+        return;
+      }
+      const contributor = contributors[key];
+      filesByAuthor[key].sort(wfHelper.publishedComparator);
+      const context = {
+        id: key,
+        contributor: contributor,
+        articles: filesByAuthor[key],
+      };
+      const dest = DEST_ARTICLE_LIST.replace('{{key}}', key);
+      wfTemplateHelper.renderTemplate(TEMPLATE_ARTICLE_LIST, context, dest);
+    });
   });
 }
 
