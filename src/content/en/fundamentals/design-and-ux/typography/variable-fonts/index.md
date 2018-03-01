@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: Blink>Fonts #}
 
@@ -300,6 +300,10 @@ ran an experiment by combining 12 input fonts to
 generate eight weights, across three widths, across both the Italic and Roman
 styles. Storing 48 individual fonts in a single variable font file meant a
 **88% reduction in file size**.
+
+On the flip side, if you are animating the font between settings, this may 
+cause the browser performance issues. Learn more about this on 
+[Surma's Supercharged](https://www.youtube.com/watch?v=B42rUMdcB7c).
 
 With variable fonts, app and website makers can offer really rich typography
 experiences that express each brand, without the previous bandwidth and latency
