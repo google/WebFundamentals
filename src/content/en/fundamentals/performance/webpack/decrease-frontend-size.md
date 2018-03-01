@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2018-02-24 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -114,8 +114,8 @@ mode and without one. It uses [the UglifyJS minifier](https://github.com/mishoo/
 under the hood. (If you ever need to disable minification, just use the development mode
 or pass `false` to the `optimization.minimize` option.)
 
-**In webpack 3,** you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin).
-The plugin comes bundled with webpack; to enable it, add it to the `plugins`
+**In webpack 3,** you need to use [the UglifyJS plugin](https://github.com/webpack-contrib/uglifyjs-webpack-plugin)
+directly. The plugin comes bundled with webpack; to enable it, add it to the `plugins`
 section of the config:
 
     // webpack.config.js
@@ -527,7 +527,8 @@ a GitHub repo – [check it out](https://github.com/GoogleChromeLabs/webpack-lib
 
 ## Enable module concatenation for ES modules (aka scope hoisting)
 
-Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
+Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode),
+module concatenation is already enabled. Feel free to skip this section.
 
 When you are building a bundle, webpack is wrapping each module into a function:
 
@@ -606,7 +607,7 @@ See the difference? In the plain bundle, module 0 was requiring `render` from mo
 module concatenation, `require` is simply replaced with required function, and module 1 is
 removed. The bundle has fewer modules – and less module overhead!
 
-To enable this behavior, **in webpack 4**, enable the `optimization.concatenateModules` option:
+To turn on this behavior, **in webpack 4**, enable the `optimization.concatenateModules` option:
 
     // webpack.config.js (for webpack 4)
     module.exports = {
