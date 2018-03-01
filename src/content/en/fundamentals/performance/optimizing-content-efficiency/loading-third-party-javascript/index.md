@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Third-party scripts provide a wide range of useful functionality, making the web more dynamic. Learn how to optimize the loading of third-party scripts to reduce their impact on performance.
 
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2018-02-28 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -223,7 +223,7 @@ panel](https://umaar.com/dev-tips/143-network-products/) also supports an option
 to highlight requests by product.
 
 <img src="images/image_8.png" alt="DevTools Performance panel showing the
-Bottom-uUp view grouped by (third-party) products"/>
+Bottom-up view grouped by (third-party) products"/>
 
 To learn more about how to analyze page load performance with the Chrome
 DevTools, see [Get started with analyzing runtime

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: Blink>Fonts #}
 
@@ -154,8 +154,8 @@ changing the widths, so line breaks does not change. By playing with a
 Grade axis, you can avoid being forced to fiddle with changes to Weight axis
 that effects the overall width, and then changes to the Width axis that effect
 the overall weight. This is possible because the Amstelvar default style has
-been deconstructed in the 4 fundemental aspects of form: black or positive
-shapes, white or negaive shapes, and the x and y dimensions. These 4 aspects
+been deconstructed in the 4 fundamental aspects of form: black or positive
+shapes, white or negative shapes, and the x and y dimensions. These 4 aspects
 can be mixed to form the other styles, such as Width and Weight, in the way
 that primary colors can be mixed to create any other color.
 
@@ -171,7 +171,7 @@ You can view the working example and source code for the above sample
 [here](https://variable-font-experiments.glitch.me){: .external}.
 
 The five registered axes plus Grade have 4-character tags that are used to
-set their vavlues in CSS:
+set their values in CSS:
 
 <table class="responsive">
   <tbody>
