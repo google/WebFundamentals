@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -59,10 +59,45 @@ working on your service worker files.
 There are a set of problems that are common for developers to hit when
 working with developers.
 
-**_Q:_** Why isn't my new service worker loading?
+**_Q:_** Why does my service worker load, but not get used?
+
+**_A:_** This can occur if the "scope" of your service worker doesn't
+match your page.
+
+You can check if this is the problem by following this steps:
+
+1. Open DevTools for your site and go to `Application > Service Workers`.
+1. Find your service worker and look for a `Clients` entry. If you don't see
+   it, like the image below, then scoping is likely to be an
+   issue.
+
+    ![DevTools screenshot where clients is missing from a service worker](../images/guides/troubleshoot-and-debug/scope-no-clients.png)
+
+    If the scoping is correct, your web page will show up as a client, as shown
+    below.
+
+    ![DevTools screenshot where clients are displayed for a service worker](../images/guides/troubleshoot-and-debug/scope-with-clients.png)
+
+This normally occurs because the location of the service worker is not
+at the root of the site (i.e. instead of `/sw.js` it's under a directory
+like `/scripts/sw.js`).
+
+The easiest solution is to move your service worker to the root or your domain.
+An alternative solution is to add a `Service-Worker-Allowed` header to the
+service worker response. You can then change the scope and register your service
+worker like so:
+
+```javascript
+// OK when ‘Service-Worker-Allowed’ header is set to ‘/’
+navigator.serviceWorker.register(‘/blog/sw.js’, {scope: ‘/’});
+```
+
+You can [learn more about service worker scope here]('/web/fundamentals/primers/service-workers/lifecycle#scope_and_control').
+
+**_Q:_** Why are changes to my service worker not shows?.
 
 **_A:_** The reason that you might find that your service worker isn't
-loading is because it's stuck in a pending state. This is normally caused
+updating is because it's stuck in a pending state. This is normally caused
 by having multiple tabs or windows open that are using the service worker.
 
 You can determine if this is the case by looking under your service worker
