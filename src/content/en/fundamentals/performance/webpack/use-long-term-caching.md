@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How webpack helps with asset caching
 
-{# wf_updated_on: 2018-02-24 #}
+{# wf_updated_on: 2018-03-01 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_blink_components: N/A #}
 
@@ -357,8 +357,24 @@ Here’s how to do it.
 If you use the
 [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin) to generate
 an HTML file, the
-[InlineChunkWebpackPlugin](https://github.com/rohitlodha/html-webpack-inline-chunk-plugin)
-is all you need.
+[InlineSourcePlugin](https://github.com/werk85/html-webpack-inline-source-plugin)
+is all you need:
+
+    // webpack.config.js
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    const InlineSourcePlugin = require('html-webpack-inline-source-plugin');
+    
+    module.exports = {
+      plugins: [
+        new HtmlWebpackPlugin({
+          // Inline all files which names start with “runtime~” and end with “.js”.
+          // That’s the default naming of runtime chunks
+          inlineSource: '^runtime~.+\\.js$',
+        }),
+        // This plugin enables the “inlineSource” option
+        new InlineSourcePlugin(),
+      ],
+    };
 
 ### If you generate HTML using a custom server logic
 
