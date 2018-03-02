@@ -62,8 +62,18 @@ class Framebox(webapp2.RequestHandler):
         self.response.out.write(response)
 
 
+class NewInChromeDevTools(webapp2.RequestHandler):
+    def get(self):
+
+        self.response.headers.add('x-frame-options', 'chrome-devtools://devtools')
+        response = render('gae/dev-tools-placeholder.tpl', {'requestPath': 'New in Chrome DevTools'})
+        self.response.out.write(response)
+
+
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
+
+        self.response.headers.add('x-frame-options', 'SAMEORIGIN')
 
         if path.endswith('.html') or path.endswith('.md'):
           redirectTo = '/web/' + os.path.splitext(path)[0]
@@ -100,7 +110,7 @@ class DevSitePages(webapp2.RequestHandler):
                 self.redirect(redirectTo, permanent=True)
                 return
               response = devsiteIndex.getPage(path, lang)
-              if (response is None) and (path.startswith('showcase') or 
+              if (response is None) and (path.startswith('showcase') or
                   path.startswith('shows') or path.startswith('updates')):
                 response = devsiteIndex.getDirIndex(path)
             else:
@@ -127,13 +137,14 @@ class DevSitePages(webapp2.RequestHandler):
             response = render('gae/500.tpl', context)
             logging.exception('500 ' + fullPath)
             self.response.set_status(500)
-        
+
         self.response.out.write(response)
 
 
 # The '/' entry is a redirect to /web/ - just a convenience thing
 app = webapp2.WSGIApplication([
     ('/flushMemCache', FlushMemCache),
+    ('/new-in-devtools', NewInChromeDevTools),
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
     ('/framebox/(.*)', Framebox),
