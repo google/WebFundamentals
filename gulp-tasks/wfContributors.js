@@ -82,11 +82,11 @@ function buildIndex(contributors) {
 function buildIndividualPages(contributors) {
   gutil.log(' ', 'Building individual pages of all contributors...');
   global.WF.langs.forEach(function(lang) {
-    const folder = global.WF.src.content.replace('/en', '/'.concat(lang));
+    const folder = global.WF.src.content.replace('/en', `/${lang}`);
     const files = wfHelper.getFileList(folder, ['**/*.md']);
     const filesByAuthor = wfHelper.splitByAuthor(files);
     const keys = Object.keys(contributors);
-    keys.forEach(function(key) {
+    keys.forEach((key) => {
       if (!(key in filesByAuthor)) {
         return;
       }
