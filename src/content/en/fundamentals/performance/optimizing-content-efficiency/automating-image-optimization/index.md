@@ -170,7 +170,7 @@ panel](/web/updates/2017/05/devtools-release-notes#lighthouse) in the Chrome
 DevTools:
 
 
-<img class="lazyload small" data-src="images/hbo.jpg" alt="Lighthouse audit for
+<img src="images/hbo.jpg" alt="Lighthouse audit for
         HBO.com, displaying image optimization recommendations" /> Lighthouse
         can audit for Web Performance, Best Practices and Progressive Web App
         features.
@@ -834,7 +834,7 @@ Butteraugli scores, before choosing something that fits the best balance of
 file- size and level.
 
 
-<img class="lazyload small" data-src="images/Modern-Image15.jpg"
+<img src="images/Modern-Image15.jpg"
         alt="butteraugli being run from the command line" /> All in all, it took
         me about 30m to setup Butteraugli locally after installing Bazel and
         getting a build of the C++ sources to correctly compile on my Mac. Using
