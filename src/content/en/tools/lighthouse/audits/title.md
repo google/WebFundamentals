@@ -15,7 +15,9 @@ Lighthouse report.
 
 ### Accessibility {: #accessibility }
 
-The document title gives screen readers users an overview of a page's purpose.
+The document title provides an overview of a page's purpose. The title is
+especially important for users who rely on screen readers, because they have
+less context about the page.
 
 See [Documents must have `<title>` element to aid in navigation][a11y]{:.external}
 for more discussion about the accessibility aspects of this audit.
@@ -51,17 +53,10 @@ Tips for creating great titles:
   mark the page as spam.
 * Avoid repeated or boilerplate titles.
 * It's OK to brand your titles, but do it concisely.
-* Be careful about disallowing search engines. Your page can still be indexed,
-  even if robots are blocked from crawling it. If a robot can't crawl it, then
-  a search engine will be forced to rely on off-page content, such as link
-  descriptions from other sites, in order to describe the page. See [Block
-  search indexing with 'noindex'][B]{:.external} to learn how to block a page
-  from appearing in search indexes.
 
 See [Create descriptive page titles][CDPT]{:.external} for more on these tips.
 
 [CDPT]: https://support.google.com/webmasters/answer/35624
-[B]: https://support.google.com/webmasters/answer/93710
 
 ## More information {: #more-info }
 
