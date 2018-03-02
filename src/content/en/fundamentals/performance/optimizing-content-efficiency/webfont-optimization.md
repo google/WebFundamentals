@@ -42,7 +42,7 @@ When picking a font, it's important to consider which character sets are support
 localize your page content to multiple languages, you should use a font that can deliver a
 consistent look and experience to your users. For example, [Google's Noto font
 family](https://www.google.com/get/noto/){: .external } aims to support all the world's languages.
-Note, however, that the total size of Noto, with all languages included, results in a 130MB+ ZIP
+Note, however, that the total size of Noto, with all languages included, results in a 1.1GB+ ZIP
 download.
 
 Clearly, using fonts on the web requires careful engineering to ensure that the typography doesn't
@@ -588,7 +588,7 @@ To work with the `font-display` property, add it your `@font-face` rules:
   font-family: 'Awesome Font';
   font-style: normal;
   font-weight: 400;
-  font-display: auto; /* or block, swap, fallback */
+  font-display: auto; /* or block, swap, fallback, optional */
   src: local('Awesome Font'),
        url('/fonts/awesome-l.woff2') format('woff2'), /* will be preloaded */ 
        url('/fonts/awesome-l.woff') format('woff'),
