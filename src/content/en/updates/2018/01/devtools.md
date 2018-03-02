@@ -15,8 +15,6 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: The video version of these release notes will be published around early-March 2018.
-
 New features coming to DevTools in Chrome 65 include:
 
 * [**Local Overrides**](#overrides)
@@ -25,6 +23,14 @@ New features coming to DevTools in Chrome 65 include:
 * [New SEO and performance audits](#audits)
 * [Multiple recordings in the **Performance** panel](#recordings)
 * [Reliable code stepping with workers and asynchronous code](#stepping)
+
+Read on, or watch the video version of these release notes, below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
