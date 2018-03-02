@@ -65,7 +65,7 @@ class Framebox(webapp2.RequestHandler):
 class NewInChromeDevTools(webapp2.RequestHandler):
     def get(self):
 
-        self.response.headers.add('x-frame-options', 'chrome-devtools://devtools')
+        self.response.headers.add('x-frame-options', 'ALLOW-FROM chrome-devtools://devtools')
         response = render('gae/dev-tools-placeholder.tpl', {'requestPath': 'New in Chrome DevTools'})
         self.response.out.write(response)
 
