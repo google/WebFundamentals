@@ -14,9 +14,6 @@ Search engines crawl your page in order to understand your content. If you don't
 give them permission to crawl your page, they can't know what your page
 contains, and therefore are less likely to list your pages in search results.
 
-<!-- Report UI: If you don't give search engines permission to crawl your pages,
-they are less likely to list your pages in search results. -->
-
 ## Recommendations {: #recommendations }
 
 If you want search engines to crawl your page, remove the HTTP headers or meta
