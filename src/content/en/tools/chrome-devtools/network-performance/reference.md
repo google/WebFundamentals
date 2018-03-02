@@ -4,6 +4,7 @@ description: A comprehensive reference of Chrome DevTools Network panel features
 
 {# wf_updated_on: 2018-03-02 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
