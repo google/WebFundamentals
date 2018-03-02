@@ -32,6 +32,7 @@ const validateMedia = require('./tests/validateMedia');
 const validateGeneric = require('./tests/validateGeneric');
 const validateFilename = require('./tests/validateFilename');
 const validateMarkdown = require('./tests/validateMarkdown');
+const validatePermissions = require('./tests/validatePermissions');
 
 /** ***************************************************************************
  * Constants & Remark Lint Options
@@ -508,6 +509,9 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('LAST_UPDATED') >= 0) {
       global.WF.options.ignoreLastUpdated = true;
     }
+    if (ciFlags.indexOf('NO_PERMS') >= 0) {
+      global.WF.options.ignorePermissions = true;
+    }
   });
 });
 
@@ -526,6 +530,7 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignoreMaxLen'), 'Skips line length checks');
     gutil.log(' ', chalk.cyan('--ignoreScript'), 'Skips <script> checks');
     gutil.log(' ', chalk.cyan('--ignoreFileSize'), 'Skips file size checks');
+    gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
     gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
   }
@@ -537,6 +542,7 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreMaxLen = true;
     global.WF.options.ignoreScript = true;
     global.WF.options.ignoreFileSize = true;
+    global.WF.options.ignorePermissions = true;
     global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreCommentWidget = true;
   }
@@ -599,6 +605,14 @@ gulp.task('test', ['test:travis-init'], function() {
     opts.ignoreFileSize = true;
   }
 
+  // Supress executable file check
+  opts.checkPermissions = true;
+  if (global.WF.options.ignorePermissions) {
+    const msg = `${chalk.cyan('--ignorePermissions')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.checkPermissions = false;
+  }
+
   // Supress missing comment widget warnings
   if (global.WF.options.ignoreCommentWidget) {
     let msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
@@ -622,6 +636,10 @@ gulp.task('test', ['test:travis-init'], function() {
         }
         if (!validateFilename.test(filename)) {
           logError(filename, null, `File contains illegal characters.`);
+        }
+        if (opts.checkPermissions && !validatePermissions.test(filename)) {
+          const msg = `File is executable, remove the 'x' attribute.`;
+          logError(filename, null, msg);
         }
         return testFile(filename, opts)
           .catch(printTestResults)
