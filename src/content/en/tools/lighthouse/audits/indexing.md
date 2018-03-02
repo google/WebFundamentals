@@ -34,14 +34,14 @@ The most common problematic meta tag is:
 
     <meta name="robots" content="noindex"/>
 
-Which prevents all search engine crawlers from accessing your page. You might
+This tag prevents all search engine crawlers from accessing your page. You might
 have meta tags that block specific crawlers, such as:
 
     <meta name="AdsBot-Google" content="noindex"/>
 
 The most common problematic HTTP response header is:
 
-    X-Robots: noindex
+    X-Robots-Tag: noindex
 
 You can inspect a page's response headers via [the **Headers** tab of Chrome
 DevTools][headers].
@@ -51,7 +51,7 @@ DevTools][headers].
 <figure>
   <img src="/web/tools/chrome-devtools/images/headers.svg"
        alt="The Headers tab."/>
-  <figcaption><b>Figure 1</b>. The <b>Headers</b> tab.</figcaption>
+  <figcaption><b>Figure 1</b>. The <b>Headers</b> tab</figcaption>
 </figure>
 
 
