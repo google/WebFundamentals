@@ -223,7 +223,7 @@ In other words, make intrasite URLs as relative as possible: either protocol-rel
     <img src="//img.example.com/logo.png"/>;
     <p>Read this nice <a href="//example.com/2014/12/24/">new
     post on cats!</a></p>
-    <p>Check out this <a href="http://foo.com/">other cool
+    <p>Check out this <a href="//foo.com/">other cool
     site.</a></p>
 
 <p><span class="compare-better">Recommended</span> — We recommend that you use relative intrasite URLs.</p>
@@ -234,7 +234,7 @@ In other words, make intrasite URLs as relative as possible: either protocol-rel
     <img src="//img.example.com/logo.png"/>;
     <p>Read this nice <a href="/2014/12/24/">new
     post on cats!</a></p>
-    <p>Check out this <a href="http://foo.com/">other cool
+    <p>Check out this <a href="//foo.com/">other cool
     site.</a></p>
 
 Do this with a script, not by hand. If your site’s content is in a database,
