@@ -503,14 +503,17 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('FILE_SIZE') >= 0) {
       global.WF.options.ignoreFileSize = true;
     }
-    if (ciFlags.indexOf('NO_ESLINT') >= 0) {
+    if (ciFlags.indexOf('ESLINT') >= 0) {
       global.WF.options.ignoreESLint = true;
     }
     if (ciFlags.indexOf('LAST_UPDATED') >= 0) {
       global.WF.options.ignoreLastUpdated = true;
     }
-    if (ciFlags.indexOf('NO_PERMS') >= 0) {
+    if (ciFlags.indexOf('PERM_CHECK') >= 0) {
       global.WF.options.ignorePermissions = true;
+    }
+    if (ciFlags.indexOf('FEED_WIDGET') >= 0) {
+      global.WF.options.ignoreMissingFeedWidget = true;
     }
   });
 });
@@ -533,6 +536,8 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
     gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
+    gutil.log(' ', chalk.cyan('--ignoreMissingFeedWidget'),
+      'Skips feed widget check on updates');
   }
 
   if ((global.WF.options.testMaster) ||
@@ -545,6 +550,7 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignorePermissions = true;
     global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreCommentWidget = true;
+    global.WF.options.ignoreMissingFeedWidget = true;
   }
 
   let opts = {
@@ -618,6 +624,13 @@ gulp.task('test', ['test:travis-init'], function() {
     let msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.ignoreMissingCommentWidget = true;
+  }
+
+  // Supress missing feed widget checks
+  if (global.WF.options.ignoreMissingFeedWidget) {
+    const msg = `${chalk.cyan('--ignoreMissingFeedWidget')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreMissingFeedWidget = true;
   }
 
   // Supress last updated warnings

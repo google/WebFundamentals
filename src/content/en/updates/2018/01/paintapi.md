@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
 
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-18 #}
 {# wf_tags: css,style,houdini,javascript,chrome65 #}
 {# wf_featured_image: /web/updates/images/2018/01/paintapi/houdinidiamond.png #}
@@ -270,5 +270,7 @@ collection](https://lab.iamvdo.me/houdini/).
 
 Note: Breakpoints are currently not supported in CSS Paint API, but will be
 enabled in a later release of Chrome.
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

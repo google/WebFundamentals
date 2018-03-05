@@ -475,6 +475,21 @@ function test(filename, contents, options) {
       }
     }
 
+    // Warn on missing comment widgets
+    if (!options.ignoreMissingFeedWidget) {
+      const reWidget =
+          /^{%\s?include "web\/_shared\/rss-widget-updates.html"\s?%}/m;
+      const reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
+      if (reUpdatesPath.test(filename)) {
+        if (!reWidget.test(contents)) {
+          const position = {line: getLineNumber(contents, contents.length - 1)};
+          const msg = `Updates post is missing RSS feed widget: ` +
+            `'{% include "web/_shared/rss-widget-updates.html" %}'`;
+          logWarning(msg, position);
+        }
+      }
+    }
+
     remarkLintOptions.firstHeadingLevel = 1;
     remarkLintOptions.wfHeadingsAtLeast = 1;
     if (isInclude || pageType === PAGE_TYPES.LANDING) {
