@@ -1,6 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD
+description: Thanks to mobile device and network proliferation, more people are
+using the web than ever before. As this user base grows, the performance of
+sites is more important than ever. Find out why performance matters, and what
+you can do to get started on improving the performance of sites.
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2015-06-07 #}
@@ -30,10 +33,10 @@ our products. If it's a social networking web app, we want visitors to write
 posts, upload photos, and interact with each other.
 
 If performance is indeed a foundational aspect of the user experience, it should
-be no surprise that it plays a significant role in the success of any online
-venture. High performing sites will engage users, and retain them. Here are some
-case studies of how high performance web sites have helped companies retain
-users and boost engagement.
+be no surprise it plays a significant role in the success of any online venture.
+High performing sites will engage and retain users. Here are some case studies
+of how high performance web sites have helped companies retain users and boost
+engagement.
 
 - [Pinterest rebuilt pages for performance, focusing on improving a custom metric
 called User Perceived Wait Time, which measured the time between the start of a
@@ -52,17 +55,17 @@ undermining your goals. Here are a couple case studies in which poorly
 performing sites impeded users, and in turn, conferred a negative impact on
 business goals:
 
-- [The BBC found that they lose an additional 10% of users for every additional
-second their site takes to
+- [The BBC found they lost an additional 10% of users for every additional second
+their site takes to
 load](https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale).
-- [DoubleClick by Google found that 53% of mobile site visits are abandoned if a
-page takes longer than 3 seconds to
+- [DoubleClick by Google found 53% of mobile site visits are abandoned if a page
+takes longer than 3 seconds to
 load](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/).
 
 Because we work in a highly competitive industry, we're continually focused on
 the progress of our competitors. [In the same DoubleClick by Google study cited
 above](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/), it
-was found that sites loading within 5 seconds had 70% longer sessions, 35% lower
+was found sites loading within 5 seconds had 70% longer sessions, 35% lower
 bounce rates, and 25% higher ad viewability than sites taking over three times
 longer at 19 seconds. To get an idea of how your site performance compares with
 the competition, [check out the Speed Scorecard
@@ -99,8 +102,8 @@ proved even more effective, **amounting to a 1.55% increase in session-based
 conversion**, which amounted to **an average annual revenue increase of nearly
 $530,000**.
 - Do you depend on ad revenue as a source of income? Then it might interest you to
-know that DoubleClick found that [publishers whose sites loaded within five
-seconds earned up to **twice as much ad revenue** than sites loading within 19
+know DoubleClick found [publishers whose sites loaded within five seconds earned
+up to **twice as much ad revenue** than sites loading within 19
 seconds](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/).
 - [When AutoAnything reduced page load time by half, **they saw a boost of 12-13%
 in
@@ -186,9 +189,9 @@ people who use them.
 
 [As mobile users continue to make up a significant portion of internet users
 worldwide](http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet),
-it's important to keep in mind that many of these users access the web through
-mobile LTE, 4G, 3G and even 2G networks. [As Ben Schwarz of Calibre points out
-in this study of real world
+it's important to keep in mind many of these users access the web through mobile
+LTE, 4G, 3G and even 2G networks. [As Ben Schwarz of Calibre points out in this
+study of real world
 performance](https://building.calibreapp.com/beyond-the-bubble-real-world-performance-9c991dcd5342),
 the cost of prepaid data plans is decreasing. This trend is making access to the
 internet more affordable in places where it once wasn't. Simply put, mobile
@@ -206,18 +209,18 @@ replenished. Replenishment may be altogether unaffordable for some.
 While fast and lightweight user experiences show economic consideration, they
 can also prove crucial for users in crisis. Public resources such as hospitals,
 clinics, and crisis centers have online resources which convey important and
-specific information that a person needs in the midst of an emergency. [While
-design is crucial in presenting important information efficiently in a
-crisis](https://aneventapart.com/news/post/eric-meyer-designing-for-crisis), the
-importance of delivering vital information expediently can't be understated.
+specific information a person needs in the midst of a crisis situation. [While
+design is crucial in presenting important information efficiently in such
+moments](https://aneventapart.com/news/post/eric-meyer-designing-for-crisis),
+the importance of delivering vital information expediently can't be understated.
 It's part of our job.
 
 ### Where to go from here
 
-Now that you know _why_ performance matters and what factors impact it, you
+Now you know _why_ performance matters and the factors impact it, but you
 might be wondering "where next?" To help out, we'll cover three pragmatic
 performance considerations, complete with some suggestions of what you can do to
-address each. While these lists may seem daunting, understand that you don't
+address each. While these lists may seem daunting, understand you don't
 need to do _all_ of these things to substantially improve the performance of
 your site. It's merely a list of potential starting points. Don't feel
 overwhelmed! _Anything_ you can do to improve performance will be helpful to
@@ -345,7 +348,7 @@ represents a uniquely large opportunity to boost performance.
 support](https://caniuse.com/#feat=webp), and can undercut established formats
 in file size while retaining reasonably good visual quality. [JPEG XR is another
 alternative format](https://jpeg.org/jpegxr/index.html) supported in IE and Edge
-that offers similar savings.
+offering similar savings.
 - [Use
 `srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset)
 and/or
@@ -366,13 +369,13 @@ images for a device using server-side code _and_ deliver less
 markup](/web/updates/2015/09/automating-resource-selection-with-client-hints).
 The `Save-Data` header can help you [deliver lighter application experiences for
 users who are specifically asking you to do so](/web/updates/2016/02/save-data).
-You can also [use the Device Memory API to build applications that are device
-memory-aware](/web/updates/2017/12/device-memory#using_the_client_hints_header).
+You can also [use the Device Memory API to build device memory-aware
+applications](/web/updates/2017/12/device-memory#using_the_client_hints_header).
 - The [`NetworkInformation`
-API](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) also
-exposes connection information about the current connection that you can also
-use (possibly in concert with client hints) to tailor the application experience
-for users based on their current network conditions.
+API](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation)
+exposes information regarding the user's current network connection. This
+information can be used to modify application experiences for users on slower
+networks.
 
 If you're excited to dive into the world of performance to learn more about
 making your applications faster, browse through our performance documentation.
