@@ -150,7 +150,7 @@ rely on C's standard library, an operating system, a file system and other
 things. Emscripten provides most of these features, although there are some
 [limitations](https://kripken.github.io/emscripten-site/docs/porting/guidelines/api_limitations.html).
 
-Let's go back to my original goal: Compile an encoder for WebP to Wasm. The
+Let's go back to my original goal: compiling an encoder for WebP to Wasm. The
 source for the WebP codec is written in C and available on
 [GitHub](https://github.com/webmproject/libwebp) as well as some extensive [API
 documentation](/speed/webp/docs/api). That's a
@@ -219,7 +219,7 @@ So v0.6.1 is encoded as 0x000601 = 1537.
 Getting the encoder's version number is great and all, but encoding an actual
 image would be more impressive, right? Let's do that, then.
 
-The first question we have to answer is: How to we get the image into Wasm land?
+The first question we have to answer is: How do we get the image into Wasm land?
 Looking at the [encoding API of
 libwebp](/speed/webp/docs/api#simple_encoding_api),
 it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API
