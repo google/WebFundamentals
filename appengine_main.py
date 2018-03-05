@@ -65,6 +65,8 @@ class Framebox(webapp2.RequestHandler):
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
 
+        self.response.headers.add('x-frame-options', 'SAMEORIGIN')
+
         if path.endswith('.html') or path.endswith('.md'):
           redirectTo = '/web/' + os.path.splitext(path)[0]
           self.redirect(redirectTo, permanent=True)
@@ -100,7 +102,7 @@ class DevSitePages(webapp2.RequestHandler):
                 self.redirect(redirectTo, permanent=True)
                 return
               response = devsiteIndex.getPage(path, lang)
-              if (response is None) and (path.startswith('showcase') or 
+              if (response is None) and (path.startswith('showcase') or
                   path.startswith('shows') or path.startswith('updates')):
                 response = devsiteIndex.getDirIndex(path)
             else:
@@ -127,7 +129,7 @@ class DevSitePages(webapp2.RequestHandler):
             response = render('gae/500.tpl', context)
             logging.exception('500 ' + fullPath)
             self.response.set_status(500)
-        
+
         self.response.out.write(response)
 
 
