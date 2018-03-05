@@ -35,7 +35,7 @@ way, the second you want to use C's standard library or even compile multiple
 files, you will probably run into problems. This led me to the major lesson I
 learned:
 
-While Emscripten _used_ to be a JavaScript-to-asm.js compiler, it has since
+While Emscripten _used_ to be a C-to-asm.js compiler, it has since
 matured to target Wasm and is [in the
 process](https://github.com/kripken/emscripten/issues/6168) of switching to the
 official LLVM backend internally. Emscripten also provides a Wasm-compatible
@@ -118,9 +118,11 @@ bigger, weighing in at 19KB (~5KB gzip'd).
 The easiest way to load and run your module is to use the generated JavaScript
 file. Once you load that file, you will have a [`Module`
 global](https://kripken.github.io/emscripten-site/docs/api_reference/module.html)
-at your disposal. Use `cwrap` to create a JavaScript native function that takes
-care of converting parameters to something C-friendly and invoking the wrapped
-function. `cwrap` takes the function name, return type and argument types as
+at your disposal. Use
+[`cwrap`](https://kripken.github.io/emscripten-site/docs/api_reference/preamble.js.html#cwrap)
+to create a JavaScript native function that takes care of converting parameters
+to something C-friendly and invoking the wrapped function. `cwrap` takes the
+function name, return type and argument types as
 arguments, in that order:
 
     <!doctype html>
@@ -143,7 +145,7 @@ More about that in their
 
 ## The holy grail: Compiling a C library
 
-Up until now, the C code we have written was written with Wasm in mind. The core
+Up until now, the C code we have written was written with Wasm in mind. A core
 use-case for WebAssembly, however, is to take the existing ecosystem of C
 libraries and allow developers to use them on the web. These libraries often
 rely on C's standard library, an operating system, a file system and other
@@ -224,7 +226,7 @@ Looking at the [encoding API of
 libwebp](/speed/webp/docs/api#simple_encoding_api),
 it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API
 has
-`[getImageData()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)`,
+[`getImageData()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData),
 that gives us an
 [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
 containing the image data in RGBA:
@@ -257,7 +259,7 @@ memory for the image inside Wasm land and one that frees it up again:
       free(p);
     }
 
-`create_buffer` allocates an buffer for the RGBA image — hence 4 bytes per
+`create_buffer` allocates a buffer for the RGBA image — hence 4 bytes per
 pixel. The pointer returned by `malloc()` is the address of the first memory
 cell of that buffer. When the pointer is returned to JavaScript land, it is
 treated as just a number. After exposing the function to JavaScript using
