@@ -62,14 +62,6 @@ class Framebox(webapp2.RequestHandler):
         self.response.out.write(response)
 
 
-class NewInChromeDevTools(webapp2.RequestHandler):
-    def get(self):
-
-        self.response.headers.add('x-frame-options', 'ALLOW-FROM chrome-devtools://devtools')
-        response = render('gae/dev-tools-placeholder.tpl', {'requestPath': 'New in Chrome DevTools'})
-        self.response.out.write(response)
-
-
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
 
@@ -144,7 +136,6 @@ class DevSitePages(webapp2.RequestHandler):
 # The '/' entry is a redirect to /web/ - just a convenience thing
 app = webapp2.WSGIApplication([
     ('/flushMemCache', FlushMemCache),
-    ('/new-in-devtools', NewInChromeDevTools),
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
     ('/framebox/(.*)', Framebox),
