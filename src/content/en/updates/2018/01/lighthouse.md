@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
 
-{# wf_updated_on: 2018-01-05 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
 {# wf_tags: lighthouse,accessibility,images #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -101,3 +101,5 @@ of other next-generation, high-performance image formats, like JPEG 2000 and JPE
     <b>Figure 3</b>. The new WebP audit
   </figcaption>
 </figure>
+
+{% include "web/_shared/rss-widget-updates.html" %}

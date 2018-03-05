@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
-{# wf_updated_on: 2018-01-22 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -35,7 +35,7 @@ viewport, even though DevTools never opens, as you can see in the video below.
 
     // Node.js version: 8.9.4
     const puppeteer = require('puppeteer'); // version 1.0.0
-    
+
     (async () => {
       // Prevent Puppeteer from showing the "Chrome is being controlled by automated test
       // software" prompt, but otherwise use Puppeteer's default args.
@@ -79,3 +79,5 @@ at [@ChromeDevTools][twitter]{:.external}.
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools
+
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
 
-{# wf_updated_on: 2018-03-02 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
 {# wf_tags: chrome65,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -242,7 +242,7 @@ Chrome 65 also ships with many new performance audits:
   started</a>.
 </aside>
 
-### Other updates {: #audits-other } 
+### Other updates {: #audits-other }
 
 * [New, manual accessibility audits](/web/updates/2018/01/lighthouse#a11y)
 * [Updates to the WebP audit][webp] to make it more inclusive of other next-generation image
@@ -409,3 +409,5 @@ See the [devtools-whatsnew][tag] tag for links to all previous DevTools
 release notes.
 
 [tag]: /web/updates/tags/devtools-whatsnew
+
+{% include "web/_shared/rss-widget-updates.html" %}

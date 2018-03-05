@@ -417,5 +417,6 @@ Since we don't do any dynamic memory management shenanigans in our little
 Fibonacci program, we can just use the entire memory as a stack, hence `STACKTOP
 = 0`.
 
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
