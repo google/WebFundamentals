@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TBD
 
-{# wf_updated_on: 2018-03-04 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -257,8 +257,8 @@ Event binding is easy with
 [`setAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute),
 and
 [`getAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
-offer easy ways of working with classes and element attributes. If you must a
-library, research for leaner alternatives. For example,
+offer easy ways of working with classes and element attributes. If you must use
+a library, research for leaner alternatives. For example,
 [Zepto](http://zeptojs.com/) is a very small implementation of jQuery, and
 [Preact](https://preactjs.com/) is a much smaller alternative to React.
 - Not all web experiences need to be single page applications (SPAs), as they
@@ -377,3 +377,11 @@ for users based on their current network conditions.
 If you're excited to dive into the world of performance to learn more about
 making your applications faster, browse through our performance documentation.
 Keep coming back, because we're adding new content all the time!
+
+_Special thanks to [Addy Osmani](/web/resources/contributors/addyosmani), [Jeff
+Posnick](/web/resources/contributors/jeffposnick), [Matt
+Gaunt](/web/resources/contributors/mattgaunt), [Philip
+Walton](/web/resources/contributors/philipwalton), [Vinamrata
+Singal](/web/resources/contributors/vinamratasingal), Daniel An, and [Pete
+LePage](/web/resources/contributors/petelepage) for their extensive feedback in
+improving and launching this resource!_
