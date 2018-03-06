@@ -1,8 +1,9 @@
-project_path：/web/fundamentals/_project.yaml book_path：/web/fundamentals/_book.yaml
+project_path：/web/fundamentals/_project.yaml
+book_path：/web/fundamentals/_book.yaml
 description：Payment Request API 是用於在網路上進行快速，簡單的付款。
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2018-02-20 #}
+{# wf_updated_on: 2018-03-03 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Request (付款要求) API 介紹 {: .page-title }
