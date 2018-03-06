@@ -1,6 +1,9 @@
-project_path：/web/fundamentals/_project.yaml
-book_path：/web/fundamentals/_book.yaml
+project_path: /web/_project.yaml
+
+book_path: /web/fundamentals/_book.yaml
+
 description：Payment Request API 是用於在網路上進行快速，簡單的付款。
+
 
 {# wf_published_on: 2016-07-25 #}
 {# wf_updated_on: 2018-03-03 #}
@@ -9,7 +12,9 @@ description：Payment Request API 是用於在網路上進行快速，簡單的�
 # Payment Request (付款要求) API 介紹 {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
+
 {% include "web/_shared/contributors/dgash.html" %}
+
 {% include "web/_shared/contributors/zkoch.html" %}
 
 在網路上購買商品是一種方便但經常令人沮喪的體驗，特別是在行動裝置上。雖然行動裝置流量繼續增加，但行動裝置轉化僅佔所有已完成購買的三分之一。換句話說，使用者在行動裝置上放棄購買的數量，是在桌機 (非行動裝置) 上放棄購買的兩倍 (前提：行動裝置跟桌機的使用者流量大約相同)。為什麼？
