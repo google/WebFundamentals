@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 65 for developers?
 
 {# wf_published_on: 2018-03-06 #}
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-03-06 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome65,new-in-chrome,css,layout,performance #}
 {# wf_featured_snippet: Chrome 65 adds support for the new CSS Paint API, which allows you to programmatically generate an image. You can use the Server Timing API to provide server performance timing information via HTTP headers, and the new CSS display: contents property can make boxes disappear! Let’s dive in and see what’s new for developers in Chrome 65! #}
@@ -35,7 +35,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/64.0.3282.140..65.0.3282.140).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/64.0.3282.140..65.0.3325.146).
 
 ## CSS Paint API {: #css-paint }
 
