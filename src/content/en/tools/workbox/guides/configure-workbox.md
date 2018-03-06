@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-02 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -92,6 +92,36 @@ workbox.routing.registerRoute(
 This will result in images being stored in a cache called `my-image-cache`.
 
 ![Using a Custom Cache Name in Workbox](../images/guides/configure-workbox/custom-cache-name.png)
+
+### Custom Fetch Options in Strategies
+
+When using a custom strategy for runtime caching, you might find the need to customize some aspects
+of the outgoing requests. For instance, a request might not include credentials (i.e. cookies) by
+default, but you happen to know that your use case requires credentials to be set.
+
+To handle this scenario, you can pass in a configuration value named `fetchOptions` to a strategy's
+constructor, corresponding to the
+[`init` options](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+used in the underlying Fetch API. These options will then be applied to all outgoing requests
+handled by that strategy.
+
+For instance, to ensure that all of your outgoing requests matching a given third-party URL end up
+using a credentials mode of 'include', you can set up the following route:
+
+```javascript
+workbox.routing.registerRoute(
+  new RegExp('https://third-party\.example\.com/'),
+  new workbox.strategies.NetworkFirst({
+    fetchOptions: {
+      credentials: 'include',
+    },
+  })
+);
+```
+
+Refer to the
+[Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+for a full list of possible configuration values.
 
 ### Configure Debug Builds vs Production Builds
 

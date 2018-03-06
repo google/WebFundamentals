@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to handle third party requests with Workbox.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -61,7 +61,7 @@ The user will be in a broken state.
 
 However, it’s not a bad thing to want to try and add some fault tolerance to
 these requests so Workbox will allow opaque responses to be cached with the
-`networkFirst` and `stalteWhileRevalidate` strategies. Since these strategies
+`networkFirst` and `staleWhileRevalidate` strategies. Since these strategies
 regularly update the cached response it’s much safer to cache them as
 hopefully a bad request will be short lived and used rarely.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf and SEO audits, perf as the first section in reports, and more.
 
-{# wf_updated_on: 2018-02-09 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-02-09 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -28,7 +28,7 @@ description: New perf and SEO audits, perf as the first section in reports, and 
 See the [2.8 release notes][RN]{:.external} for the full list of new features, changes, and bug
 fixes.
 
-[RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.8.0 
+[RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.8.0
 
 ## How to update to 2.8 {: #update }
 
@@ -122,3 +122,5 @@ Check out the [Release Guide For Maintainers][release]{:.external} for informati
 release timing, masters, naming conventions, and more.
 
 [release]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/releasing.md
+
+{% include "web/_shared/rss-widget-updates.html" %}

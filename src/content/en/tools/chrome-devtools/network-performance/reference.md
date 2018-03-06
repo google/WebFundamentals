@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-11-03 #}
+{# wf_updated_on: 2018-03-02 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -537,7 +538,7 @@ To view HTTP header data about a request:
 1. Click the **Headers** tab.
 
 <figure>
-  <img src="imgs/headers.svg"
+  <img src="/web/tools/chrome-devtools/images/headers.svg"
        alt="The Headers tab.">
   <figcaption>
     <b>Figure 23</b>. The Headers tab, outlined in blue

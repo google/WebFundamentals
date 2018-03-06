@@ -92,6 +92,8 @@ toc:
     path: /web/tools/lighthouse/audits/contrast-ratio
   - title: Buttons Have An Accessible Name
     path: /web/tools/lighthouse/audits/button-name
+  - title: Document Doesn't Have A Title Element
+    path: /web/tools/lighthouse/audits/title
   - title: Element aria-* Attributes Are Allowed For This Role
     path: /web/tools/lighthouse/audits/aria-allowed-attributes
   - title: Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent
@@ -150,6 +152,8 @@ toc:
   section:
   - title: Document Does Not Have A Meta Description
     path: /web/tools/lighthouse/audits/description
+  - title: Document Doesn't Have A Title Element
+    path: /web/tools/lighthouse/audits/title
   - title: Document Doesn't Use Legible Font Sizes
     path: /web/tools/lighthouse/audits/font-sizes
   - title: Links Do Not Have Descriptive Text
