@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Third-party scripts provide a wide range of useful functionality, making the web more dynamic. Learn how to optimize the loading of third-party scripts to reduce their impact on performance.
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-02-28 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -137,11 +137,13 @@ Insights](/speed/pagespeed/insights/) and
 information that can tell you *how many* third party scripts are loaded by your
 site and which take the most time to execute. 
 
+WebPageTest’s waterfall view can highlight the
+impact of heavy third-party script use. Below is an example of the requests
+required to load the main content for a site vs. the tracking and marketing
+scripts (credit: [Tags Gone Wild](https://nystudio107.com/blog/tags-gone-wild)).
+
 <img src="images/image_2.png" alt="waterfall view from webpagetest showing an
 actual website vs the amount of time spent loading tracking scripts"/>
-
-[WebPageTest](https://www.webpagetest.org/)’s waterfall view can highlight the
-impact of heavy third-party script use.
 
 WebPageTest’s [domain
 breakdown](https://www.google.com/url?q=https://www.webpagetest.org/result/180222_J4_8fee6855d6f45719e4f37d8d89ecbc20/1/domains/&sa=D&ust=1519325015196000&usg=AFQjCNGrRivilJS9yqqpombsUMQZQJx2nw)
@@ -183,12 +185,20 @@ panel"/>
 
 ### Lighthouse Boot-up Time Audit
 
-The [Lighthouse](/web/tools/lighthouse/) *JavaScript boot-up time* audit
+The Lighthouse [JavaScript boot-up time audit](/web/tools/lighthouse/audits/bootup)
 highlights scripts that have a costly script parse, compile or evaluation time.
 This can be useful for discovering CPU-intensive third party scripts.
 
 <img src="images/image_6.png" alt="Lighthouse showing support for script
 evaluating and parsing"/>
+
+### Lighthouse Network Payloads Audit
+
+The Lighthouse [Network Payloads audit](/web/tools/lighthouse/audits/network-payloads) identifies 
+network requests (including those from third-parties) that may slow down page load time. Avoiding these requests or highlighting their cost to ad-networks can save users money they would have spent on cellular data.
+
+<img src="images/image_18.png" alt="Lighthouse showing support for large
+network payloads"/>
 
 ### Chrome DevTools Network Request Blocking
 
@@ -761,12 +771,13 @@ Scripts](https://css-tricks.com/potential-dangers-of-third-party-javascript/)
 [How 3rd Party Scripts can be performant citizens on the
 web](https://www.twnsnd.com/posts/performant_third_party_scripts.html)
 
+[Why Fast Matters - CSS Wizardry](https://speakerdeck.com/csswizardry/why-fast-matters)
+
 [The JavaScript Supply Chain Paradox: SRI, CSP and Trust in Third Party
 Libraries](https://www.troyhunt.com/the-javascript-supply-chain-paradox-sri-csp-and-trust-in-third-party-libraries/)
 
 [Third-party CSS isn't
 safe](https://jakearchibald.com/2018/third-party-css-is-not-safe/)
 
-*With thanks to Kenji Baheux, Jeremy Wagner, Philip Walton, Jeff Posnick and
-Cheney Tsai for their reviews.*
+*With thanks to Kenji Baheux, Jeremy Wagner, Pat Meenan, Philip Walton, Jeff Posnick and Cheney Tsai for their reviews.*
 
