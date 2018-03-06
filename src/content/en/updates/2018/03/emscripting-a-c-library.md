@@ -224,7 +224,7 @@ Looking at the [encoding API of
 libwebp](/speed/webp/docs/api#simple_encoding_api),
 it expects an array of bytes in RGB, RGBA, BGR or BGRA. Luckily, the Canvas API
 has
-`[getImageData()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)`,
+[getImageData()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData),
 that gives us an
 [Uint8ClampedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
 containing the image data in RGBA:
