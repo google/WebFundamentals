@@ -43,6 +43,7 @@ Add a canonical link element to the `head` element of your HTML:
     <!doctype html>
     <html>
       <head>
+        ...
         <link rel="canonical" href="https://example.com"/>
         ...
 
@@ -66,7 +67,9 @@ More guidelines:
   depending on a user's language or country, make sure that the canonical URL points to the
   proper page for that respective language or country.
 * Don't point the canonical URL to a different domain. Yahoo and Bing don't allow this.
-* Don't point pages to the site's root page, unless their content is the same.
+* Don't point pages to the site's root page, unless their content is the same. This may be
+  valid in some cases, such as for AMP or mobile page variations, but nonetheless Lighthouse
+  treats this scenario as a failure.
 
 [Security]: /web/tools/chrome-devtools/security
 [hreflang]: https://support.google.com/webmasters/answer/189077
@@ -95,7 +98,17 @@ Note: Recommendations for other search engines are welcome. [Edit this page.][Ed
 
 ## More information {: #more-info }
 
-If Lighthouse finds no canonical links, it marks this audit as not applicable.
+If Lighthouse finds no canonical links, it marks the audit as not applicable.
+
+Lighthouse marks the audit as a fail if any of the following are true:
+
+* There is more than 1 canonical link.
+* The canonical link is not a valid URL.
+* The canonical link points to a page for a different region or language.
+* The canonical link points to a different domain.
+* The canonical link points to the site root. Note that this may be valid in some scenarios,
+  such as for AMP or mobile page variations, but nonetheless Lighthouse marks this scenario as
+  a failure.
 
 [Audit source][src]{:.external}
 
