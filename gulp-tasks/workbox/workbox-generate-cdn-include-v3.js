@@ -13,9 +13,13 @@ const fs = require('fs-extra');
 const wfHelper = require('../wfHelper');
 const getLatestTags = require('../reference-docs/get-latest-tags');
 
+/**
+ * We need to ensure workbox-build is up to date to get the latest
+ * CDN version.
+ *
+ * @return {Promise} Resolves once workbox has been updates
+ */
 function updateWorkboxBuild() {
-  // We need to ensure workbox-build is up to date to get the latest
-  // CDN version
   return wfHelper.promisedExec(`npm install --save-dev workbox-build`);
 }
 
