@@ -10,11 +10,19 @@ const gulp = require('gulp');
 const path = require('path');
 const fs = require('fs-extra');
 
+const wfHelper = require('../wfHelper');
 const getLatestTags = require('../reference-docs/get-latest-tags');
+
+function updateWorkboxBuild() {
+  // We need to ensure workbox-build is up to date to get the latest
+  // CDN version
+  return wfHelper.promisedExec(`npm install --save-dev workbox-build`);
+}
 
 gulp.task('workbox-generate-cdn-include-v3', () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
-  return getLatestTags.prerelease(gitUrl)
+  return updateWorkboxBuild()
+  .then(() => getLatestTags.prerelease(gitUrl))
   .then((latestTags) => {
     // TODO: Replace these three lines for Workbox-build when getModuleUrl()
     // will be exposed

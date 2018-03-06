@@ -24,7 +24,7 @@
     "husky": "^0.14.3",
     "inquirer": "^3.3.0",
     "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
-    "workbox-build": "^3.0.0-beta.0"
+    "workbox-build": "^3.0.0-beta.2"
   },
   "private": true,
   "dependencies": {
