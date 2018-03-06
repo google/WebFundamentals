@@ -24,8 +24,8 @@ The app is now all set to handle push notifications. Try it now:
 
 ### Optional: How service worker injection works {: #optional-injection }
 
-At the bottom of your custom service worker, you call `workbox.precache([])`. This is a
-placeholder. At build-time, the Workbox plugin replaces the empty array with the list
+At the bottom of your custom service worker, you call `workbox.precaching.precacheAndRoute([]);`.
+This is a placeholder. At build-time, the Workbox plugin replaces the empty array with the list
 of resources to precache. Your Workbox build configuration still determines what resources
 get precached.
 
