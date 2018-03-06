@@ -4,6 +4,7 @@ description: Learn how to make a gulp-based app work offline by adding Workbox t
 
 {# wf_updated_on: 2018-03-06 #}
 {# wf_published_on: 2017-11-17 #}
+{# wf_blink_components: N/A #}
 
 # Get Started With Workbox For Gulp {: .page-title }
 
