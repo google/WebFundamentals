@@ -4,6 +4,8 @@
  * @author Pete LePage <petele@google.com>
  */
 
+/* eslint no-console: 0 */
+
 'use strict';
 
 let chalk = require('chalk');
@@ -37,12 +39,12 @@ const REPO_NAME = REPO_SLUG[1];
 
 let github = new GitHubApi({
   debug: false,
-  Promise: Promise
+  Promise: Promise,
 });
 
 github.authenticate({
   type: 'oauth',
-  token: OAUTH_TOKEN
+  token: OAUTH_TOKEN,
 });
 
 /**
@@ -58,7 +60,7 @@ function promisedExec(cmd, cwd) {
     console.log(cmdLog);
     const execOptions = {
       cwd: cwd,
-      maxBuffer: 1024 * 1024
+      maxBuffer: 1024 * 1024,
     };
     exec(cmd, execOptions, function(err, stdOut, stdErr) {
       stdOut = stdOut.trim();
@@ -76,6 +78,12 @@ function promisedExec(cmd, cwd) {
   });
 }
 
+/**
+ * Parses the string of staged PRs and returns an array of PRs
+ *
+ * @param {string} stagedPRs The list of PRs as provided by AppEngine
+ * @return {Array} List of staged PRs
+ */
 function getListOfStagedPRs(stagedPRs) {
   let result = [];
   stagedPRs = stagedPRs.split('\n');
@@ -96,26 +104,26 @@ return promisedExec(GCLOUD + ' app versions list', '.')
     let opts = {
       owner: REPO_OWNER,
       repo: REPO_NAME,
-      number: parseInt(pr)
+      number: parseInt(pr),
     };
-    var p = new Promise(function(resolve, reject) {
+    const p = new Promise(function(resolve, reject) {
       github.pullRequests.get(opts)
       .then(function(prData) {
         if (prData.state === 'closed' || prData.merged === 'true') {
           let cmdLine = GCLOUD + ' app versions delete pr-' + prData.number;
           promisedExec(cmdLine, '.')
           .catch(function(peR) {
-            console.log(chalk.red('OOPS!'), 'Unable to delete pr-' + prData.number);
+            console.log(chalk.red('OOPS!'),
+              `Unable to delete pr-${prData.number}`);
             resolve();
           })
           .then(function(peR) {
             console.log(chalk.green('Deleted'), 'pr-' + prData.number);
             resolve();
-          })
-
+          });
         }
         resolve();
-      })
+      });
     });
     promises.push(p);
   });
