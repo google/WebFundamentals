@@ -1,91 +1,29 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 title: Find a qualified web dev agency to help you build optimized web apps
-description: >
-  These agencies have completed our advanced Web Apps Training for Agencies -
-  an intense course covering the Developing PWAs syllabus and hands-on codelabs.
 
 landing_page:
   body_class: web-landing-page web-landing-page--agencies
   custom_css_path: /web/agencies/css/web-agencies-styles.css
   rows:
-
-  # INTRO
-  - classname: web-hero devsite-landing-row-50 devsite-landing-row-large-headings devsite-landing-row-no-image-background
-    items:
-    - heading: Web Apps Training for Agencies
-      description: >
-        An intense two-day course for web development agencies that covers the
-        <a href="/training/courses/progressive-web-apps">
-        Developing Progressive Web Applications</a> syllabus and several
-        hands-on codelabs. <br><br><b>Applications are reviewed based on:</b><br>
-        <ul><li>Perceived impact of agency’s client list</li>
-        <li>Agency size</li>
-        <li>Agency location (UK, India, and Indonesia for now)</li>
-        <li>Previous participation in training (two attendees per company
-        total)</li></ul>
-        <small>If you’re accepted, we’ll contact you with course dates and details.</small>
-      buttons:
-      - classname: gc-analytics-event button button-blue
-        label: Register your interest
-        path: https://docs.google.com/forms/d/e/1FAIpQLSfEr8PU68QeL5LFidmyHCZX3aEA5KhEN4kfDrGKw_kR1EaHvQ/viewform
-        attributes:
-        - name: data-category
-          value: Web Directory
-        - name: data-label
-          value: training-register
-        - name: data-action
-          value: click
-      image_path: /web/agencies/images/hero-web-agencies.png
-
-  # PWA
-  - classname: devsite-landing-row-50 devsite-landing-row-large-headings devsite-landing-row-no-image-background
-    background: grey
-    items:
-    - heading: Build your Progressive Web App (PWA)
-      description: >
-        PWAs are mobile user experiences that have the reach of the web and
-        that are reliable, engaging, and fast. With more than half the views on
-        the Internet done through mobile, delivering a great experience there
-        is critical. In particular, PWAs make a significant impact on both
-        customer acquisition and retention.
-      buttons:
-      - classname: gc-analytics-event button button-blue
-        label: Learn more
-        path: /web/ilt/pwa/why-build-pwa
-        attributes:
-        - name: data-category
-          value: webFu
-        - name: data-label
-          value: pwa-learn-more
-        - name: data-action
-          value: click
-      - classname: gc-analytics-event button
-        label: Case studies
-        path: /web/showcase/
-        attributes:
-        - name: data-category
-          value: webFu
-        - name: data-label
-          value: pwa-case-studies
-        - name: data-action
-          value: click
-
   # DIRECTORY
   - classname: devsite-landing-row-50 devsite-landing-row-large-headings
     items:
-    - heading: Directory
+    - heading: Directory of Agencies Building Progressive Web Apps
       description: >
         Find a qualified web development agency to help you build optimized
-        and mobile friendly web apps. These agencies have completed our
-        advanced Web Apps Training for Agencies course.<br><br>
-        <p class='disclaimer'><small>Google Developers does not endorse, or
-        offer any warranty, regarding these certified agencies. Each agency
-        is fully responsible for their services, and is not affiliated with
-        Google Developers nor do they offer services on behalf of Google
-        Developers. Customers are fully responsible for their use of services,
-        if any. Google Developers will have no liability for any products or
-        services provided by an agency.
+        and mobile friendly web apps.<br><br>
+        Has your agency built Progressive Web Apps for your clients ? If yes,
+        please use
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRV9YHhGeofFw_PxLEVV50A-hxCygutjh7mw9U4ffqjVcxZA/viewform?usp=sf_link">
+        this application form</a> to be considered for being listed in this
+        directory.<br><br><p class='disclaimer'><small>Google Developers
+        does not endorse, or offer any warranty, regarding these certified
+        agencies. Each agency is fully responsible for their services, and is
+        not affiliated with Google Developers nor do they offer services on
+        behalf of Google Developers. Customers are fully responsible for their
+        use of services, if any. Google Developers will have no liability for
+        any products or services provided by an agency.
         </small></p>
 
   # DIRECTORY IFRAME
