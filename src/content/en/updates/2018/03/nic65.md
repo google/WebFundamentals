@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 65 for developers?
 
 {# wf_published_on: 2018-03-06 #}
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome65,new-in-chrome,css,layout,performance #}
 {# wf_featured_snippet: Chrome 65 adds support for the new CSS Paint API, which allows you to programmatically generate an image. You can use the Server Timing API to provide server performance timing information via HTTP headers, and the new CSS display: contents property can make boxes disappear! Let’s dive in and see what’s new for developers in Chrome 65! #}
@@ -177,7 +177,7 @@ there’s plenty more.
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.
 
-Be sure to check out [New in Chrome DevTools](/web/updates/01/devtools), to
+Be sure to check out [New in Chrome DevTools](/web/updates/2018/01/devtools), to
 learn what’s new in for DevTools in Chrome 65. And, if you’re interested in
 Progressive Web Apps, check out the new
 [PWA Roadshow video series](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt).
