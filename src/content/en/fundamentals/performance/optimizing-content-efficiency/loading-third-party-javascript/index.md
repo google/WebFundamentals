@@ -336,7 +336,7 @@ API and observe
 entries. As these entries contain an attribution property, we can track down
 which frame context was responsible for the task. 
 
-Below is an example that will long `longtask` entries to the console, including
+Below is an example that will log `longtask` entries to the console, including
 one for an "expensive" iframe:
 
 ```html
