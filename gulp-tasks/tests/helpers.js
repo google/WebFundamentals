@@ -6,6 +6,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const wfRegEx = require('../wfRegEx');
 
 /**
@@ -49,9 +50,17 @@ function doesFileExist(filename) {
  * @return {Boolean} True if it is, false if not.
  */
 function isInclude(filename, contents) {
-  const isInclude = wfRegEx.RE_IS_INCLUDE.test(contents) ||
-    wfRegEx.RE_IS_MD_INCLUDE.test(contents);
-  return isInclude;
+  if (wfRegEx.RE_IS_INCLUDE.test(contents)) {
+    return true;
+  }
+  if (wfRegEx.RE_IS_MD_INCLUDE.test(contents)) {
+    return true;
+  }
+
+  // Do any of the directories or files start with an underscore
+  return filename.split(path.sep).some((item) => {
+    return item.startsWith('_');
+  });
 }
 
 /**
