@@ -5,8 +5,10 @@
  */
 'use strict';
 
+const path = require('path');
 const wfRegEx = require('../wfRegEx');
 const testHelpers = require('./helpers');
+const validateContent = require('./validateContent');
 
 const RE_HTML_DEVSITE = /<html\s.*?devsite.*?>/;
 const RE_HTML_TAG = /<html.*?>/;
@@ -17,20 +19,32 @@ const RE_HTML_TAG = /<html.*?>/;
  *
  * @param {string} filename The name of the file to be tested
  * @param {string} contents The contents of the file to be tested
+ * @param {Object} options The options object
  * @return {Promise} A promise that resolves with TRUE if the file was tested
  *  or FALSE if the file was not tested.
  */
-function test(filename, contents) {
+function test(filename, contents, options) {
   if (filename.indexOf('/_code/') >= 0) {
     return Promise.resolve(true);
   }
+
+  const results = validateContent.test(filename, contents, options);
+
   const isPartialPage = !RE_HTML_TAG.test(contents);
   const hasDevSiteHTMLAttribute = RE_HTML_DEVSITE.test(contents);
-  const results = [];
+
+  // Verify extension on file is .html
+  if (path.extname(filename.toLowerCase()) !== '.html') {
+    results.push({
+      level: 'ERROR',
+      filename: filename,
+      message: `File extension must be '.html'`,
+    });
+  }
 
   // If it's a full page & it doesn't contain the devsite attribute in the
   // <html> tag, warn that there could be an issue.
-  if (!isPartialPage && !hasDevSiteHTMLAttribute ) {
+  if (!isPartialPage && !hasDevSiteHTMLAttribute) {
     results.push({
       level: 'WARNING',
       filename: filename,

@@ -415,7 +415,7 @@ function testFile(filename, opts) {
 
   // Check HTML files
   if (filenameObj.ext === '.html') {
-    return validateHtml.test(filename, contents);
+    return validateHtml.test(filename, contents, opts);
   }
 
   // Check YAML files
