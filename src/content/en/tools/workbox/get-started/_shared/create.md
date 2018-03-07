@@ -13,11 +13,6 @@ logic, you need to write custom service worker code, and then inject the Workbox
 the service worker at build-time.
 
 1. Re-focus the tab containing your project source code.
-1. Open `package.json`.
-1. Click **Add Package**, type `workbox-sw`, then click on the matching package to install
-   that library.
-1. Write down the version number of `workbox-sw` that gets installed. You'll
-   need it later.
 1. Add the following line of code to the `init()` function in `app.js`.
 
     <pre class="prettyprint">function init() {
@@ -44,8 +39,7 @@ the service worker at build-time.
 1. Click **New File**, enter `src/sw.js`, then press <kbd>Enter</kbd>.
 1. Add the following code to `src/sw.js`.
 
-    <pre class="prettyprint">// TODO: Replace Xs.
-    importScripts('https://storage.googleapis.com/workbox-cdn/releases/X.X.X/workbox-sw.js');
+    <pre class="prettyprint">importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
     
     // Note: Ignore the error that Glitch raises about workbox being undefined.
     workbox.skipWaiting();
@@ -69,6 +63,3 @@ the service worker at build-time.
     <aside class="important">**Important**: `workbox.precaching.precacheAndRoute([])` is a
     placeholder keyword. At build-time, Workbox injects the list of files to cache into the
     array.</aside>
-
-1. Replace each `X` in `importScripts('.../X.X.X/workbox-sw.js')` with
-   the version number of `workbox-sw` in `package.json` that you noted earlier.

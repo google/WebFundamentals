@@ -76,8 +76,8 @@ Your app now sort-of works offline. Try it now:
 
 The service worker code is generated based on your Workbox configuration.
 
-* `importScripts('.../X.X.X/workbox-sw.js')` imports Workbox's service
-  worker library. You can inspect this file from the **Sources** panel of
+* `importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');`
+  imports Workbox's service worker library. You can inspect this file from the **Sources** panel of
   DevTools.
 
     <figure>
