@@ -46,6 +46,7 @@ const RE_INCLUDE_CODE_GITHUB_PATH = /github_path=["']?(.*?)["' ]/;
 
 const RE_SINGLE_LINE_COMMENT = /^{%\s?comment\s?%}.*{%\s?endcomment\s?%}$/gm;
 
+const RE_IGNORE_FILE = /{#\s?wf_ignore_file.*?#}/;
 const RE_IS_INCLUDE = /{#\s?wf_include\s?#}/;
 const RE_IS_MD_INCLUDE = /{#\s?wf_md_include\s?#}/;
 const RE_USES_TEMPLATE = /{#\s?wf_uses_template\s?#}/;
@@ -126,3 +127,4 @@ exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;
 exports.RE_TRANSLATED_PATH = RE_TRANSLATED_PATH;
 exports.RE_LIGHTHOUSE_PATH = RE_LIGHTHOUSE_PATH;
 exports.RE_WORKBOX_PATH = RE_WORKBOX_PATH;
+exports.RE_IGNORE_FILE = RE_IGNORE_FILE;
