@@ -246,7 +246,7 @@ function test(filename, contents, options) {
       logError(`Page is missing page title eg: '# TITLE {: .page-title }'`);
     }
     if (matches && isInclude) {
-      const position = {line: getLineNumber(matches.index)};
+      const position = {line: getLineNumber(contents, matches.index)};
       logError(`Include file should not contain a page title!`, position);
     }
 
