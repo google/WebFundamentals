@@ -3,7 +3,7 @@
 .directory-framebox__wrapper {
   margin: 0 -20px;
   max-height: 1320px;
-  min-height: 1320px;
+  min-height: 400px;
   overflow-y: scroll;
   padding: 30px 20px 0;
 }
@@ -32,33 +32,23 @@
 
 /* SVG / Lighthouse score styles */
 
-.lighthouse-score {
+.agency__lighthouse-score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  max-width: 150px;
   position: relative;
 }
 
-.lighthouse-score svg {
+.agency__lighthouse-score svg {
+  height: 150px;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-}
-
-.agency__lighthouse-score {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0;
-  flex: 1 0;
-  max-width: 150px;
-  padding: 20px 0 0;
-}
-
-.agency__lighthouse-score svg {
   width: 150px;
-  height: 150px;
 }
 
 .agency__lighthouse-score:after {
@@ -167,7 +157,7 @@
   padding-right: 15px;
 }
 
-.agency__urls h4 {
+.agency__urls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +165,12 @@
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  margin: 10px 0 0;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.agency__urls a {
+  margin: 10px 0;
 }
 
 @media only screen and (max-width : 526px) {
@@ -222,6 +217,7 @@
 
 .agency__small-text {
   font-size: 12px;
+  margin-bottom: 16px;
 }
 
 .project {

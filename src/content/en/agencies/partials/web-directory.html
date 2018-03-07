@@ -17,54 +17,14 @@
       <span class="material-icons">arrow_right_alt</span>Highest Lighthouse Score
     </div>
   </div>
+
   <div class="directory-framebox__wrapper"></div>
   <script src="/web/agencies/js/directory.js" type="text/javascript"></script>
   <script>
-    // Markup for each card below
-    var markup = "<div class='agency__logo mobile-is-hidden'><% if (this.image_url.length) { %><img src='<% this.image_url %>' alt='<% this.agency_name %> logo'/><% } %></div>";
-    markup += "<div class='agency__info'><p class='agency__name'><% this.agency_name %></p>";
-    markup += "<div class='agency__urls'><h4>" +
-              "<a class='gc-analytics-event' href=" + "<% this.website %>" + " target='_parent' rel='noopener noreferrer'" +
-              "data-action='click' data-category='webFu' data-label='directory-agency-website'>" +
-              "<% this.website.split('//')[1].replace('www.', '') %></a>" +
-              "<a class='gc-analytics-event' href=mailto:" + "<% this.contact %>" + "target='_parent' rel='noopener noreferrer'" +
-              "data-action='click' data-category='webFu' data-label='directory-agency-contact'><% this.contact %></a></h4></div>";
-    markup += "<div class='agency__vertical agency__small-text'>Vertical(s): <% for(var index in this.vertical) { %>" +
-              "<span><% this.vertical[index] %>" +
-              "<% if (index != (this.vertical.length - 1)) { %>, <% } %>" +
-              "</span>" +
-              "<% } %></div>";
-    markup += "<div class='agency__lighthouse-score lighthouse-score desktop-is-hidden' data-percent='<% if (this.max_lighthouse_score != null) { %><% this.max_lighthouse_score %><% } else { %><% 'N/A' %><% } %>'>" +
-              "<svg viewBox='0 0 120 120'>" +
-              "<circle cx='60' cy='60' r='54' fill='none' stroke='#e6e6e6' stroke-width='7' />" +
-              "<circle id='progress' cx='60' cy='60' r='54' fill='none' stroke='#34a853' stroke-width='7' stroke-dasharray='339.292' stroke-dashoffset='<% Math.round(2 * Math.PI * 54 * (1 - (this.max_lighthouse_score * 0.01))) %>' />" +
-              "</svg></div>";
-    markup += "<div class='agency__description'><p><% this.description %></p></div>";
-    markup += "<div class='agency__locations'><% for(var countryIndex in this.locations_view) { %>" +
-              "<div class='agency__location'><p class='agency__header-title'><b><% this.locations_view[countryIndex].country_name %></b></p>" +
-              "<% for(var cityIndex in this.locations_view[countryIndex].cities) { %>" +
-              "<span><% this.locations_view[countryIndex].cities[cityIndex] %></span>" +
-              "<% if (cityIndex != (this.locations_view[countryIndex].cities.length - 1)) { %>, <% } %>" +
-              "<% } %></div>" +
-              "<% } %></div>";
-    markup += "<p class='agency__header-title'><b>Work examples</b></p>";
-    markup += "<div class='projects'>" +
-              "<% for(var index in this.projects) { %>";
-    markup += "<div class='project'>" +
-              "<a class='gc-analytics-event' href='<% this.projects[index].url %>' target='_parent' rel='noopener noreferrer'" +
-              "data-action='click' data-category='webFu' data-label='directory-project-website'><% this.projects[index].url.split('//')[1].replace('www.', '') %></a>" +
-              "<p>Lighthouse score: <span class='project__lighthouse-score'><% if (this.projects[index].lighthouse_score != null) { %><% this.projects[index].lighthouse_score %><% } else { %><% 'N/A' %><% } %></span></p>" +
-              "</div><% } %></div></div>";
-    markup += "<div class='agency__lighthouse-score lighthouse-score mobile-is-hidden' data-percent='<% if (this.max_lighthouse_score != null) { %><% this.max_lighthouse_score %><% } else { %><% 'N/A' %><% } %>'>" +
-              "<svg viewBox='0 0 120 120'>" +
-              "<circle cx='60' cy='60' r='54' fill='none' stroke='#e6e6e6' stroke-width='7' />" +
-              "<circle id='progress' cx='60' cy='60' r='54' fill='none' stroke='#34a853' stroke-width='7' stroke-dasharray='339.292' stroke-dashoffset='<% Math.round(2 * Math.PI * 54 * (1 - (this.max_lighthouse_score * 0.01))) %>' />" +
-              "</svg></div>";
-
     function init() {
       var dataUrl= '/web/agencies/data/agencies.json';
       var alphabeticalSortKey = 'agency_name';
-      initializeDirectory(markup, dataUrl, alphabeticalSortKey);
+      initializeDirectory(dataUrl, alphabeticalSortKey);
     }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHy4t079OXjq4uD-Hw65dl9Qnb2ousKXk&callback=init" async defer></script>
