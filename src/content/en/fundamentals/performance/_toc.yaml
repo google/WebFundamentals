@@ -3,6 +3,8 @@ toc:
     style: accordion
     section:
     - title: Overview
+      path: /web/fundamentals/performance/why-performance-matters/
+    - title: Measure Performance with the RAIL Model
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
