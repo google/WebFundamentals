@@ -15,3 +15,8 @@ tags:
   - web
 google_analytics_ids:
   - UA-52746336-1
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
