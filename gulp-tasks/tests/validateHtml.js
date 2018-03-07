@@ -10,7 +10,6 @@ const wfRegEx = require('../wfRegEx');
 const testHelpers = require('./helpers');
 const validateContent = require('./validateContent');
 
-const RE_HTML_DEVSITE = /<html\s.*?devsite.*?>/;
 const RE_HTML_TAG = /<html.*?>/;
 
 /**
@@ -31,7 +30,7 @@ function test(filename, contents, options) {
   const results = validateContent.test(filename, contents, options);
 
   const isPartialPage = !RE_HTML_TAG.test(contents);
-  const hasDevSiteHTMLAttribute = RE_HTML_DEVSITE.test(contents);
+  const isDevSiteHTMLPage = testHelpers.isDevSiteHTMLPage(filename, contents);
 
   // Verify extension on file is .html
   if (path.extname(filename.toLowerCase()) !== '.html') {
@@ -44,7 +43,7 @@ function test(filename, contents, options) {
 
   // If it's a full page & it doesn't contain the devsite attribute in the
   // <html> tag, warn that there could be an issue.
-  if (!isPartialPage && !hasDevSiteHTMLAttribute) {
+  if (!isPartialPage && !isDevSiteHTMLPage) {
     results.push({
       level: 'WARNING',
       filename: filename,

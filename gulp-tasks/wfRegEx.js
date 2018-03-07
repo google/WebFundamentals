@@ -46,10 +46,15 @@ const RE_INCLUDE_CODE_GITHUB_PATH = /github_path=["']?(.*?)["' ]/;
 
 const RE_SINGLE_LINE_COMMENT = /^{%\s?comment\s?%}.*{%\s?endcomment\s?%}$/gm;
 
-const RE_MD_INCLUDE = /^{#\s?wf_md_include\s?#}/m;
-const RE_AUTO_GENERATED = /^{#\s?wf_auto_generated\s?#}/m;
-const RE_DEVSITE_TRANSLATION = /^{# wf_devsite_translation #}/m;
+const RE_IS_INCLUDE = /{#\s?wf_include\s?#}/;
+const RE_IS_MD_INCLUDE = /{#\s?wf_md_include\s?#}/;
+const RE_USES_TEMPLATE = /{#\s?wf_uses_template\s?#}/;
+const RE_AUTO_GENERATED = /{#\s?wf_auto_generated\s?#}/;
+const RE_DEVSITE_TRANSLATION = /{#\s?wf_devsite_translation\s?#}/;
 
+const RE_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
+const RE_LIGHTHOUSE_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/lighthouse.*/;
+const RE_WORKBOX_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/workbox.*/;
 
 /**
  * Gets the first regEx match on a string
@@ -106,7 +111,6 @@ exports.RE_PODCAST = RE_PODCAST;
 exports.RE_PODCAST_DURATION = RE_PODCAST_DURATION;
 exports.RE_PODCAST_SUBTITLE = RE_PODCAST_SUBTITLE;
 exports.RE_PODCAST_SIZE = RE_PODCAST_SIZE;
-exports.RE_MD_INCLUDE = RE_MD_INCLUDE;
 exports.RE_INCLUDES = RE_INCLUDES;
 exports.RE_INCLUDE_MD = RE_INCLUDE_MD;
 exports.RE_INCLUDE_FILE = RE_INCLUDE_FILE;
@@ -114,5 +118,11 @@ exports.RE_INCLUDE_CODE = RE_INCLUDE_CODE;
 exports.RE_INCLUDE_CODE_PATH = RE_INCLUDE_CODE_PATH;
 exports.RE_INCLUDE_CODE_GITHUB_PATH = RE_INCLUDE_CODE_GITHUB_PATH;
 exports.RE_SINGLE_LINE_COMMENT = RE_SINGLE_LINE_COMMENT;
+exports.RE_IS_INCLUDE = RE_IS_INCLUDE;
+exports.RE_IS_MD_INCLUDE = RE_IS_MD_INCLUDE;
+exports.RE_USES_TEMPLATE = RE_USES_TEMPLATE;
 exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
 exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;
+exports.RE_TRANSLATED_PATH = RE_TRANSLATED_PATH;
+exports.RE_LIGHTHOUSE_PATH = RE_LIGHTHOUSE_PATH;
+exports.RE_WORKBOX_PATH = RE_WORKBOX_PATH;

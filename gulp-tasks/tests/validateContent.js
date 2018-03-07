@@ -8,10 +8,6 @@
 const wfRegEx = require('../wfRegEx');
 const testHelpers = require('./helpers');
 
-const RE_USES_TEMPLATE = /{#\s?wf_uses_template\s?#}/;
-const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
-const RE_LIGHTHOUSE_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/lighthouse.*/;
-const RE_WORKBOX_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/workbox.*/;
 const VALID_REGIONS = [
   'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america',
 ];
@@ -53,10 +49,10 @@ function test(filename, contents, options) {
   let matches;
   const results = [];
 
-  const isLighthouse = RE_LIGHTHOUSE_PATH.test(filename);
-  const isWorkbox = RE_WORKBOX_PATH.test(filename);
-  const isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
-  const isTranslation = RE_SRC_TRANSLATED_PATH.test(filename);
+  const isLighthouse = wfRegEx.RE_LIGHTHOUSE_PATH.test(filename);
+  const isWorkbox = wfRegEx.RE_WORKBOX_PATH.test(filename);
+  const isTranslation = testHelpers.isTranslation(filename, contents);
+  const isInclude = testHelpers.isInclude(filename, contents);
 
   /**
    * Simple wrapper that adds an error to the list
@@ -238,7 +234,7 @@ function test(filename, contents, options) {
   });
 
   // Warn on unescaped template tags
-  if (!RE_USES_TEMPLATE.test(contents)) {
+  if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
     matches = wfRegEx.getMatches(/\{\{/g, contents);
     matches.forEach(function(match) {
       const position = {line: getLineNumber(contents, match.index)};

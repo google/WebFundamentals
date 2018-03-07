@@ -16,7 +16,6 @@ const validateContent = require('./validateContent');
 
 
 const MAX_DESCRIPTION_LENGTH = 485;
-const RE_SRC_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
 const PAGE_TYPES = {
   LANDING: 'landing',
   ARTICLE: 'article',
@@ -138,8 +137,8 @@ function test(filename, contents, options) {
       });
     }
 
-    const isInclude = wfRegEx.RE_MD_INCLUDE.test(contents);
-    const isTranslation = RE_SRC_TRANSLATED_PATH.test(filename);
+    const isInclude = testHelpers.isInclude(filename, contents);
+    const isTranslation = testHelpers.isTranslation(filename, contents);
 
     let pageType = PAGE_TYPES.ARTICLE;
     if (/page_type: landing/.test(contents)) {

@@ -6,6 +6,7 @@
 'use strict';
 
 const fs = require('fs');
+const wfRegEx = require('../wfRegEx');
 
 /**
  * Gets the line number of the current string up to the index point
@@ -40,5 +41,45 @@ function doesFileExist(filename) {
   }
 }
 
+/**
+ * Checks if a file is an include file.
+ *
+ * @param {string} filename The WebFundamentals file path.
+ * @param {string} contents The contents of the file
+ * @return {Boolean} True if it is, false if not.
+ */
+function isInclude(filename, contents) {
+  const isInclude = wfRegEx.RE_IS_INCLUDE.test(contents) ||
+    wfRegEx.RE_IS_MD_INCLUDE.test(contents);
+  return isInclude;
+}
+
+/**
+ * Checks if a file is a translated file.
+ *
+ * @param {string} filename The WebFundamentals file path.
+ * @param {string} contents The contents of the file
+ * @return {Boolean} True if it is, false if not.
+ */
+function isTranslation(filename, contents) {
+  return wfRegEx.RE_TRANSLATED_PATH.test(filename);
+}
+
+/**
+ * Checks if a file is a DevSite HTML page.
+ *
+ * @param {string} filename The WebFundamentals file path.
+ * @param {string} contents The contents of the file
+ * @return {Boolean} True if it is, false if not.
+ */
+function isDevSiteHTMLPage(filename, contents) {
+  // const RE_HTML_TAG = /<html.*?>/;
+  const RE_HTML_DEVSITE = /<html\s.*?devsite.*?>/;
+  return RE_HTML_DEVSITE.test(contents);
+}
+
 exports.doesFileExist = doesFileExist;
 exports.getLineNumber = getLineNumber;
+exports.isInclude = isInclude;
+exports.isTranslation = isTranslation;
+exports.isDevSiteHTMLPage = isDevSiteHTMLPage;
