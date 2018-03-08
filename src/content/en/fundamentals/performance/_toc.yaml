@@ -52,7 +52,7 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
         - title: JavaScript Start-up Optimization
-          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
           step_group: perf-oce
         - title: Loading Third-Party JavaScript
           path: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/
