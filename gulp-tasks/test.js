@@ -357,6 +357,15 @@ function testFile(filename, opts) {
     return Promise.resolve(false);
   }
 
+  // Check if the file has the wf_ignore_file attribute, if so, skip tests.
+  if (wfRegEx.RE_IGNORE_FILE.test(contents)) {
+    if (!opts.hideIgnored) {
+      const msg = `Skipped (wf_ignore_file).`;
+      logWarning(filename, null, msg);
+    }
+    return Promise.resolve(false);
+  }
+
   // Check if the file is auto-generated, if it is, ignore it
   if (wfRegEx.RE_AUTO_GENERATED.test(contents)) {
     if (global.WF.options.verbose) {
@@ -415,7 +424,7 @@ function testFile(filename, opts) {
 
   // Check HTML files
   if (filenameObj.ext === '.html') {
-    return validateHtml.test(filename, contents);
+    return validateHtml.test(filename, contents, opts);
   }
 
   // Check YAML files
@@ -551,6 +560,7 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreCommentWidget = true;
     global.WF.options.ignoreMissingFeedWidget = true;
+    global.WF.options.hideIgnored = true;
   }
 
   let opts = {
@@ -638,6 +648,13 @@ gulp.task('test', ['test:travis-init'], function() {
     let msg = `${chalk.cyan('--ignoreLastUpdated')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.lastUpdateMaxDays = false;
+  }
+
+  // Hide ignored file warning
+  if (global.WF.options.hideIgnored) {
+    let msg = `${chalk.cyan('--hideIgnored')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.hideIgnored = true;
   }
 
   return getFiles()
