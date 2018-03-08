@@ -333,7 +333,7 @@ The **Performance** panel now lets you temporarily save up to 5 recordings. The 
 deleted when you close your DevTools window. See [Get Started with Analyzing Runtime
 Performance][runtime] to get comfortable with the **Performance** panel.
 
-[runtime]: /tools/chrome-devtools/evaluate-performance/
+[runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
 <figure>
   <img src="/web/updates/images/2018/01/recordings.png"
