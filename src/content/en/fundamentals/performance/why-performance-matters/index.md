@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-07 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -184,7 +184,7 @@ moments](https://aneventapart.com/news/post/eric-meyer-designing-for-crisis),
 the importance of delivering this information expediently can't be understated.
 It's part of our job.
 
-### Where to go from here
+## Where to go from here
 
 You know now _why_ performance matters, but you might be wondering "what next?"
 Next, we'll cover three pragmatic performance considerations, complete with
