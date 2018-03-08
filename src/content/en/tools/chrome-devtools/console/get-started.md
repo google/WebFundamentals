@@ -1,14 +1,14 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: Learn how to view messages and run JavaScript in the Console.
 
 {# wf_updated_on: 2018-03-08 #}
-{# wf_published_on: 2018-03-07 #}
+{# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Get Started with the Console {: .page-title }
+# Get Started With The Console {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -24,7 +24,7 @@ This tutorial teaches you how to use the **Console** in Chrome DevTools.
 <figure>
   <img src="/web/tools/chrome-devtools/images/panels/console.png"
        alt="The Console."
-  <figcaption><b>Figure X</b>. The <b>Console</b></figcaption>
+  <figcaption><b>Figure 1</b>. The <b>Console</b></figcaption>
 </figure>
 
 The **Console** has two main functions:
@@ -37,14 +37,14 @@ The **Console** has two main functions:
 
 [DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
-Most of the sections in this tutorial are interactive. You're going to open up DevTools on
+This tutorial is interactive. You're going to open up DevTools on
 this very page in order to get hands-on experience with the **Console**.
 
-## Step X: View messages {: #view }
+## Step 1: View messages {: #view }
 
 Messages in the **Console** come from either the page's JavaScript, or from the browser.
 
-### Part X: View messages from the page's JavaScript {: #page }
+### Part A: View messages from the page's JavaScript {: #page }
 
 The [**Console** API][API] lets you log messages from your JavaScript to the **Console**.
 
@@ -58,7 +58,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
        <img src="images/open.png"
             alt="The Console, opened alongside this very page."
        <figcaption>
-         <b>Figure X</b>. The <b>Console</b>, opened alongside this very page
+         <b>Figure 2</b>. The <b>Console</b>, opened alongside this very page
        </figcaption>
      </figure>
 
@@ -85,7 +85,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
        <img src="images/cause.png"
             alt="Highlighted in yellow is the line of code that caused the message to get logged."
        <figcaption>
-         <b>Figure X</b>. Highlighted in yellow is the line of code that caused the message to
+         <b>Figure 3</b>. Highlighted in yellow is the line of code that caused the message to
          get logged
        </figcaption>
      </figure>
@@ -153,7 +153,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
        <img src="images/error-stack.png"
             alt="The call stack leading up to console.error()."
        <figcaption>
-         <b>Figure X</b>. The call stack leading up to <code>console.error()</code>
+         <b>Figure 4</b>. The call stack leading up to <code>console.error()</code>
        </figcaption>
      </figure>
 
@@ -161,7 +161,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 [expand]: /web/tools/chrome-devtools/images/shared/expand.png
 [callstack]: https://developer.mozilla.org/en-US/docs/Glossary/Call_stack
 
-### Part X: View messages from the browser {: #browser }
+### Part B: View messages from the browser {: #browser }
 
 The browser can also log messages to the Console. This usually occurs when you write incorrect
 code.
@@ -197,7 +197,7 @@ code.
 
      The browser throws these errors when a page tries to request a file that doesn't exist.
 
-### Part X: Filter messages {: #filter }
+### Part C: Filter messages {: #filter }
 
 On big sites, you'll sometimes see the **Console** get flooded with messages. You can
 filter the **Console** to only show messages that you care about.
@@ -242,7 +242,7 @@ filter the **Console** to only show messages that you care about.
        <img src="images/sidebar-regex.png"
             alt="Filtering with the Sidebar and a regular expression, simultaneously."
        <figcaption>
-         <b>Figure X</b>. Filtering with the <b>Sidebar</b> and a regular expression,
+         <b>Figure 5</b>. Filtering with the <b>Sidebar</b> and a regular expression,
          simultaneously
        </figcaption>
      </figure>
@@ -251,7 +251,7 @@ filter the **Console** to only show messages that you care about.
 
 [regex]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-## Step X: Run JavaScript {: #javascript }
+## Step 2: Run JavaScript {: #javascript }
 
 The **Console** is also a [REPL][REPL]{:.external}, which stands for Read, Evaluate, Print, and
 Loop. In other words, you can run JavaScript statements in the **Console**, and the **Console**
@@ -259,7 +259,7 @@ prints out the results.
 
 [REPL]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 
-### View and change the page's JavaScript or DOM {: #page }
+### Part A: View and change the page's JavaScript or DOM {: #page }
 
 When building or debugging a page, it's often useful to run statements in the **Console**
 in order to change how the page looks or runs.
@@ -271,7 +271,7 @@ in order to change how the page looks or runs.
 [clear]: images/clear-console-button.png
 
 1. Type `document.getElementById('changeMyText').textContent = 'Hello'` in the **Console**
-   and then press <kbd>Enter</kbd> to attempt the change the text of the button below from
+   and then press <kbd>Enter</kbd> to attempt to change the text of the button below from
    `Change My Text` to `Hello`. It probably won't work. You'll find out why next.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
@@ -287,12 +287,12 @@ in order to change how the page looks or runs.
        <img src="images/change-fail.png"
             alt="Unsuccessfully attempting to change the button's text."
        <figcaption>
-         <b>Figure X</b>. Unsuccessfully attempting to change the button's text
+         <b>Figure 6</b>. Unsuccessfully attempting to change the button's text
        </figcaption>
      </figure>
 
 1. Notice the dropdown menu to the left of the **Filter** text box. It probably says **Top**.
-   This represents the execution context of your main page.
+   **Top** represents the execution context of your main page.
 1. Right-click **Change My Text** and select **Inspect**. DevTools jumps to the **Elements**
    panel and highlights the element in the **DOM Tree**.
 
@@ -300,21 +300,22 @@ in order to change how the page looks or runs.
        <img src="images/inspect-button.png"
             alt="Inspecting the button."
        <figcaption>
-         <b>Figure X</b>. Inspecting the button
+         <b>Figure 7</b>. Inspecting the button
        </figcaption>
      </figure>
 
 1. Press <kbd>Escape</kbd>. The **Console** opens up at the bottom of the **Elements** panel.
-   Note how the dropdown that used to say **Top** says something else now. This means that
-   the **Console** is now in a different execution context. You're in a different execution
-   context because the button is selected in the **DOM Tree**.
+   Note how the dropdown that used to say **Top** now says something else, and it's background
+   is colored red. This means that the **Console** is now in a different execution context.
+   You're in a different execution context because the **Change My Text** button is selected
+   in the **DOM Tree**, and that button is embedded in an `iframe`.
 
      <figure>
        <img src="images/iframe-context.png"
             alt="The Console opened at the bottom of the Elements panel, and in a different
                  execution context."
        <figcaption>
-         <b>Figure X</b>. The <b>Console</b> opened at the bottom of the <b>Elements</b> panel,
+         <b>Figure 8</b>. The <b>Console</b> opened at the bottom of the <b>Elements</b> panel,
          and in a different execution context
        </figcaption>
      </figure>
@@ -329,7 +330,7 @@ in order to change how the page looks or runs.
 Hopefully you get the idea that this workflow is completely open-ended. You can run any
 JavaScript here. This is a flexible way to debug pages and explore how they're built.
 
-### Run arbitrary JavaScript {: #arbitrary }
+### Part B: Run arbitrary JavaScript {: #arbitrary }
 
 Sometimes, you just want a code playground where you can test out JavaScript features that
 you're not familiar with. The **Console** is the perfect place to do this. For example,
@@ -364,6 +365,13 @@ to the **Console**.
 
 ### Run JavaScript to view and change a page
 
+DevTools lets you pause a script in the middle of its execution. While you're paused, you
+can use the **Console** to view and change the page at that moment in time. This makes for a
+powerful debugging workflow. See [Get Started With Debugging JavaScript][Debugging] for
+an interactive tutorial.
+
+[Debugging]: /web/tools/chrome-devtools/javascript/
+
 The **Console** also has a set of convenience functions that make it easier to interact
 with a page. For example:
 
@@ -386,3 +394,38 @@ See [Command Line API Reference][CLAPI] for the full reference.
 </aside>
 
 Was this tutorial helpful?
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Console / Get Started / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var feedback = {
+  "category": "DevTools",
+  "choices": [
+    {
+      "button": {
+        "text": "Yes"
+      },
+      "response": "Thank you for the feedback!",
+      "analytics": {
+        "label": label
+      }
+    },
+    {
+      "button": {
+        "text": "No"
+      },
+      "response": 'Sorry to hear that. Please <a href="' + url +
+          '" target="_blank">open a GitHub issue</a> and tell me how I can ' +
+          'make it better.',
+      "analytics": {
+        "label": label,
+        "value": 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
