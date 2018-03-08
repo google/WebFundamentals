@@ -16,10 +16,6 @@ footer:
     description: Check out our videos.
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     path: /web/shows/
-  - label: Events
-    description: Attend a developer event and get hacking.
-    icon_name: event
-    path: /web/events/
 
 
 - linkboxes:
