@@ -167,3 +167,6 @@ redirects:
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
+
+- from: /web/tools/workbox/guides/migrate
+  to: /web/tools/workbox/guides/migrations/migrate-from-sw

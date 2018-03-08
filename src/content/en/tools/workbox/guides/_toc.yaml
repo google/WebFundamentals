@@ -36,8 +36,14 @@ toc:
     path: /web/tools/workbox/guides/generate-service-worker/cli
   - title: "Webpack"
     path: /web/tools/workbox/guides/generate-service-workers/cli
-- title: "Migrate from sw-precache or sw-toolbox"
-  path: /web/tools/workbox/guides/migrate
+- title: "Migrating to Workbox v3"
+  style: accordion
+  path: /web/tools/workbox/guides/migrations
+  section:
+  - title: "From sw-precache or sw-toolbox"
+    path: /web/tools/workbox/guides/migrations/migrate-from-sw
+  - title: "From Workbox v2"
+    path: /web/tools/workbox/guides/migrations/migrate-from-v2
 # - title: "Use as ES2015 Imports"
 #  path: /web/tools/workbox/guides/use-es2015-imports
 - title: "Service Worker Checklist"
