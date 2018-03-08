@@ -5,10 +5,15 @@
  */
 'use strict';
 
+const testHelpers = require('./helpers');
+
 const JSONValidator = require('jsonschema').Validator;
 
 JSONValidator.prototype.customFormats.wfUAString = function(input) {
   return input === 'UA-52746336-1';
+};
+JSONValidator.prototype.customFormats.doesFileExist = function(input) {
+  return testHelpers.doesFileExist(input);
 };
 const SCHEMA_PROJECT = {
   id: '/Project',
@@ -53,6 +58,22 @@ const SCHEMA_PROJECT = {
       properties: {
         description: {type: 'string', required: true},
         background: {type: 'string', required: false},
+      },
+      additionalProperties: false,
+    },
+    social_media: {
+      type: 'object',
+      properties: {
+        image: {
+          type: 'object',
+          properties: {
+            path: {type: 'string', format: 'doesFileExist', required: true},
+            width: {type: 'number'},
+            height: {type: 'number'},
+          },
+          required: true,
+          additionalProperties: false,
+        },
       },
       additionalProperties: false,
     },
