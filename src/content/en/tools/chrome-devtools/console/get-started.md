@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-03-07 #}
-{# wf_published_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-08 #}
+{# wf_published_on: 2018-03-07 #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -53,6 +53,15 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS) to open the
    **Console**, right here on this very page.
+
+     <figure>
+       <img src="images/open.png"
+            alt="The Console, opened alongside this very page."
+       <figcaption>
+         <b>Figure X</b>. The <b>Console</b>, opened alongside this very page
+       </figcaption>
+     </figure>
+
 1. Click **Log A Message**. You should see the text `click listener executed` get logged to the
    **Console**. 
 
@@ -71,6 +80,15 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 
 1. To the right of the message there is a link. Click that link now. DevTools opens the
    **Sources** panel and shows you the line of code that caused the message to get logged.
+
+     <figure>
+       <img src="images/cause.png"
+            alt="Highlighted in yellow is the line of code that caused the message to get logged."
+       <figcaption>
+         <b>Figure X</b>. Highlighted in yellow is the line of code that caused the message to
+         get logged
+       </figcaption>
+     </figure>
 
 1. Click the **Console** tab to go back to the **Console**.
 
@@ -124,12 +142,20 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
          </script>
        {% endframebox %}
 
-     Use `console.warn()` to warn that something has happened that may cause problems.
-     Use `console.error()` to call out a critical error.
+     Use `console.warn()` to warn that something has happened in your code that may cause
+     problems. Use `console.error()` to call out a critical error.
 
 1. Click **Expand** ![The Expand icon][expand]{:.cdt-inl} next to `warn` and `error` to see
    the [call stack][callstack]{:.external} leading up to those messages. The function at the
    bottom of the stack called the one above it.
+
+     <figure>
+       <img src="images/error-stack.png"
+            alt="The call stack leading up to console.error()."
+       <figcaption>
+         <b>Figure X</b>. The call stack leading up to <code>console.error()</code>
+       </figcaption>
+     </figure>
 
 [events]: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
 [expand]: /web/tools/chrome-devtools/images/shared/expand.png
@@ -200,17 +226,156 @@ filter the **Console** to only show messages that you care about.
          </script>
        {% endframebox %}
 
-1. Type `prime` in the **Filter** text box to only show the prime nu
+1. Type `123` in the **Filter** text box. The **Console** only shows messages that contain
+   `123` in either the content of the message, or the filename that caused the message.
+1. Replace `123` with `-not`. The **Console** hides any message that contains `not`.
+   Using the pattern `-<text>` hides any message that includes `<text>`.
+1. Replace `-not` with `/1[0-9]1/`, which is a [regular expression][regex]{:.external}.
+   The **Console** only shows messages that include a 3-digit number that starts with `1` and
+   ends with `1`. Keep the filter enabled and continue to the next step.
+1. Click **Show Console Sidebar**. The **Sidebar** lets you further filter messages by type.
+1. Click **333 Warnings**. DevTools now only shows messages that were logged with
+   `console.warn()`. Remember that the `/1[0-9]1/` filter is still active, so you actually
+   are filtering along 2 dimensions right now.
+
+     <figure>
+       <img src="images/sidebar-regex.png"
+            alt="Filtering with the Sidebar and a regular expression, simultaneously."
+       <figcaption>
+         <b>Figure X</b>. Filtering with the <b>Sidebar</b> and a regular expression,
+         simultaneously
+       </figcaption>
+     </figure>
+
+1. Close the **Sidebar** and delete `/1[0-9]1/` from the **Filter** text box.
+
+[regex]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 ## Step X: Run JavaScript {: #javascript }
 
-### DOM
+The **Console** is also a [REPL][REPL]{:.external}, which stands for Read, Evaluate, Print, and
+Loop. In other words, you can run JavaScript statements in the **Console**, and the **Console**
+prints out the results.
 
-### Command-Line API
+[REPL]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
+
+### View and change the page's JavaScript or DOM {: #page }
+
+When building or debugging a page, it's often useful to run statements in the **Console**
+in order to change how the page looks or runs.
+
+1. Your **Console** is probably cluttered up from all the messages in the previous section.
+   Click **Clear Console** ![Clear Console][clear]{.cdt-inl}. Hover over the button to see
+   its keyboard shortcuts.
+
+[clear]: images/clear-console-button.png
+
+1. Type `document.getElementById('changeMyText').textContent = 'Hello'` in the **Console**
+   and then press <kbd>Enter</kbd> to attempt the change the text of the button below from
+   `Change My Text` to `Hello`. It probably won't work. You'll find out why next.
+
+       {% framebox width="auto" height="auto" enable_widgets="true" %}
+         <button id="changeMyText">Change My Text</button>
+       {% endframebox %}
+
+     This probably didn't work for you because the button is embedded in an
+     [`iframe`][iframe]{:.external}, which means it's in a different execution context. An
+     `iframe` element lets you embed a page within another page, without giving that sub-page
+     access to your main page. This is how most ads on the web are distributed.
+
+     <figure>
+       <img src="images/change-fail.png"
+            alt="Unsuccessfully attempting to change the button's text."
+       <figcaption>
+         <b>Figure X</b>. Unsuccessfully attempting to change the button's text
+       </figcaption>
+     </figure>
+
+1. Notice the dropdown menu to the left of the **Filter** text box. It probably says **Top**.
+   This represents the execution context of your main page.
+1. Right-click **Change My Text** and select **Inspect**. DevTools jumps to the **Elements**
+   panel and highlights the element in the **DOM Tree**.
+
+     <figure>
+       <img src="images/inspect-button.png"
+            alt="Inspecting the button."
+       <figcaption>
+         <b>Figure X</b>. Inspecting the button
+       </figcaption>
+     </figure>
+
+1. Press <kbd>Escape</kbd>. The **Console** opens up at the bottom of the **Elements** panel.
+   Note how the dropdown that used to say **Top** says something else now. This means that
+   the **Console** is now in a different execution context. You're in a different execution
+   context because the button is selected in the **DOM Tree**.
+
+     <figure>
+       <img src="images/iframe-context.png"
+            alt="The Console opened at the bottom of the Elements panel, and in a different
+                 execution context."
+       <figcaption>
+         <b>Figure X</b>. The <b>Console</b> opened at the bottom of the <b>Elements</b> panel,
+         and in a different execution context
+       </figcaption>
+     </figure>
+
+1. Try running `document.getElementById('changeMyText').textContent = 'Hello'` again. You don't
+   have to type it out or copy-paste it. Just focus the **Console** and press the <kbd>Up
+   Arrow</kbd> key. DevTools remembers your history. After running the statement, look at the
+   button's text again. This time, it should have successfully changed.
+
+[iframe]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+
+Hopefully you get the idea that this workflow is completely open-ended. You can run any
+JavaScript here. This is a flexible way to debug pages and explore how they're built.
+
+### Run arbitrary JavaScript {: #arbitrary }
+
+Sometimes, you just want a code playground where you can test out JavaScript features that
+you're not familiar with. The **Console** is the perfect place to do this. For example,
+ES6 introduced a nice feature where you can [define default values for function
+arguments][default]{:.external}. Try it now:
+
+[default]: http://es6-features.org/#DefaultParameterValues
+
+1. Type the following code into the **Console**. Try typing it, rather than copy-pasting it,
+   in order to to see how DevTools intelligently decides whether to continue to let you enter
+   input, or to evaluate the code.
+
+       function add(a, b=20) {
+         return a + b;
+       }
+
+1. Type the following code in the **Console** to call the function that you just defined.
+
+       add(25);
 
 ## Next steps {: #next-steps }
 
-Congrats, you now 
+Congrats, you're now familiar with the core uses of the **Console**. Below are more resources
+for learning how to use it more effectively.
+
+### View messages 
+
+See the [Console API Reference][CAPI] to learn all of the ways that you can print messages
+to the **Console**.
+
+[CAPI]: /web/tools/chrome-devtools/console/console-reference
+
+### Run JavaScript to view and change a page
+
+The **Console** also has a set of convenience functions that make it easier to interact
+with a page. For example:
+
+* Rather than typing `document.querySelector()` to select an element, you can type `$()`. This
+  syntax is inspired by jQuery, but it's not actually jQuery. It's just an alias for
+  `document.querySelector()`.
+* `debug(function)` effectively sets a breakpoint on the first line of that function.
+* `keys(object)` returns an array containing the keys of the specified object.
+
+See [Command Line API Reference][CLAPI] for the full reference.
+
+[CLAPI]: /web/tools/chrome-devtools/console/command-line-reference
 
 ## Feedback {: #feedback }
 
@@ -221,9 +386,3 @@ Congrats, you now
 </aside>
 
 Was this tutorial helpful?
-
-
-Did you learn anything new? Let me know in the text box below. The data is logged anonymously,
-to a Google spreadsheet.
-
-## Troubleshooting checklist {: #troubleshooting }
