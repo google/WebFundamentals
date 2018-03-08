@@ -3,6 +3,8 @@ toc:
     style: accordion
     section:
     - title: Overview
+      path: /web/fundamentals/performance/why-performance-matters/
+    - title: Measure Performance with the RAIL Model
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
@@ -50,7 +52,7 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
         - title: JavaScript Start-up Optimization
-          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
           step_group: perf-oce
         - title: Loading Third-Party JavaScript
           path: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/

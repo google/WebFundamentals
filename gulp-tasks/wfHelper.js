@@ -14,6 +14,7 @@ const moment = require('moment');
 const mkdirp = require('mkdirp');
 const gutil = require('gulp-util');
 const wfRegEx = require('./wfRegEx');
+const testHelper = require('./tests/helpers');
 const exec = require('child_process').exec;
 
 const NO_DATE = '1900-01-01';
@@ -208,7 +209,7 @@ function getRegEx(regEx, content, defaultResponse) {
  */
 function readMetadataForFile(file) {
   const content = fs.readFileSync(file, 'utf8');
-  if (content.match(wfRegEx.RE_MD_INCLUDE)) {
+  if (testHelper.isInclude(file, content)) {
     return null;
   }
   let description = wfRegEx.getMatch(wfRegEx.RE_SNIPPET, content);

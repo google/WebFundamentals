@@ -1577,6 +1577,20 @@ rviscomi:
     - author
   email: rviscomi@google.com
 
+jeremywagner:
+  name:
+    given: Jeremy
+    family: Wagner
+  org:
+    name: Tech Writer
+  country: USA
+  homepage: 'https://jeremywagner.me'
+  twitter: malchata
+  github: malchata
+  role:
+    - author
+  email: jeremy.l.wagner@gmail.com
+
 philipwalton:
   name:
     given: Philip

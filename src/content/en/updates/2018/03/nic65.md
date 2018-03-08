@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 65 for developers?
 
 {# wf_published_on: 2018-03-06 #}
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome65,new-in-chrome,css,layout,performance #}
 {# wf_featured_snippet: Chrome 65 adds support for the new CSS Paint API, which allows you to programmatically generate an image. You can use the Server Timing API to provide server performance timing information via HTTP headers, and the new CSS display: contents property can make boxes disappear! Let’s dive in and see what’s new for developers in Chrome 65! #}
@@ -71,7 +71,7 @@ in his [explainer](/web/updates/2018/01/paintapi).
 
 Hopefully you’re using the navigation and resource timing APIs to track the
 performance of your site for real users. Until now, there hasn’t been an easy
-way for the server to report it’s performance timing.
+way for the server to report its performance timing.
 
 The new [Server Timing API](https://w3c.github.io/server-timing/) allows your
 server to pass timing information to the browser; giving you a better picture
@@ -142,7 +142,7 @@ By default, the inner `div` is contained in the outer `div`.
 </div>
 
 Adding `display: contents` to the outer div, makes the outer `div` disappear
-and it’s constraints are no longer applied to the inner `div`. The inner
+and its constraints are no longer applied to the inner `div`. The inner
 `div` is now 100% width.
 
 <div class='disp-contents-outer disp-contents'>
@@ -155,7 +155,7 @@ There are plenty of cases where this might be helpful, but the most common one
 is with flexbox. With flexbox, only the immediate children of a flex container
 become flex items.
 
-But, once you apply `display: contents` to a child, it’s children become flex
+But, once you apply `display: contents` to a child, its children become flex
 items and are laid out using the same rules that would have been applied to
 their parent.
 
@@ -177,7 +177,7 @@ there’s plenty more.
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.
 
-Be sure to check out [New in Chrome DevTools](/web/updates/01/devtools), to
+Be sure to check out [New in Chrome DevTools](/web/updates/2018/01/devtools), to
 learn what’s new in for DevTools in Chrome 65. And, if you’re interested in
 Progressive Web Apps, check out the new
 [PWA Roadshow video series](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt).
@@ -189,5 +189,7 @@ you’ll get an email notification whenever we launch a new video, or add our
 
 I’m Pete LePage, and as soon as Chrome 66 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

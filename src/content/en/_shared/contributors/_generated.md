@@ -2,7 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 
 {# wf_published_on: 2016-09-06 #}
-{# wf_updated_on: 2016-09-06 #}
+{# wf_updated_on: 2018-03-07 #}
+
+{# wf_ignore_file #}
 
 # Whoops {: .page-title }
 
