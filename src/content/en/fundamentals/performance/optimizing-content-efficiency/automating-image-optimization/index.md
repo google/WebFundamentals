@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Image formats!
 
-{# wf_updated_on: 2018-02-21#}
+{# wf_updated_on: 2018-03-02#}
 {# wf_published_on: 2017-11-16 #}
 {# wf_blink_components: Blink>Image,Internals>Images,Internals>Images>Codecs #}
 
@@ -170,7 +170,7 @@ panel](/web/updates/2017/05/devtools-release-notes#lighthouse) in the Chrome
 DevTools:
 
 
-<img class="lazyload small" data-src="images/hbo.jpg" alt="Lighthouse audit for
+<img src="images/hbo.jpg" alt="Lighthouse audit for
         HBO.com, displaying image optimization recommendations" /> Lighthouse
         can audit for Web Performance, Best Practices and Progressive Web App
         features.
@@ -834,7 +834,7 @@ Butteraugli scores, before choosing something that fits the best balance of
 file- size and level.
 
 
-<img class="lazyload small" data-src="images/Modern-Image15.jpg"
+<img src="images/Modern-Image15.jpg"
         alt="butteraugli being run from the command line" /> All in all, it took
         me about 30m to setup Butteraugli locally after installing Bazel and
         getting a build of the C++ sources to correctly compile on my Mac. Using

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
 
 {# wf_published_on: 2018-01-23 #}
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome64,new-in-chrome,observers,ux,regex,media,modules,responsive #}
 {# wf_featured_snippet: Chrome 64 adds support for ResizeObservers, which will notify you when an element’s content rectangle has changed its size. Modules can now access to host specific metadata with import.metadata The pop-up blocker gets strong and plenty more. Let’s dive in and see what’s new for developers in Chrome 64! #}
@@ -136,5 +136,7 @@ you’ll get an email notification whenever we launch a new video, or add our
 
 I’m Pete LePage, and as soon as Chrome 65 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
