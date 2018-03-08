@@ -71,7 +71,7 @@ in his [explainer](/web/updates/2018/01/paintapi).
 
 Hopefully you’re using the navigation and resource timing APIs to track the
 performance of your site for real users. Until now, there hasn’t been an easy
-way for the server to report it’s performance timing.
+way for the server to report its performance timing.
 
 The new [Server Timing API](https://w3c.github.io/server-timing/) allows your
 server to pass timing information to the browser; giving you a better picture
@@ -142,7 +142,7 @@ By default, the inner `div` is contained in the outer `div`.
 </div>
 
 Adding `display: contents` to the outer div, makes the outer `div` disappear
-and it’s constraints are no longer applied to the inner `div`. The inner
+and its constraints are no longer applied to the inner `div`. The inner
 `div` is now 100% width.
 
 <div class='disp-contents-outer disp-contents'>
@@ -155,7 +155,7 @@ There are plenty of cases where this might be helpful, but the most common one
 is with flexbox. With flexbox, only the immediate children of a flex container
 become flex items.
 
-But, once you apply `display: contents` to a child, it’s children become flex
+But, once you apply `display: contents` to a child, its children become flex
 items and are laid out using the same rules that would have been applied to
 their parent.
 
