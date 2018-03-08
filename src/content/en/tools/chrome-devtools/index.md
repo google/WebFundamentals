@@ -2,21 +2,21 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2018-03-08 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Chrome DevTools {: .page-title }
+
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.
+DevTools can help you diagnose problems quickly, which ultimately helps you build better
+websites, faster.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="G_P6rpRSr4g"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-
-Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.
-DevTools can help you diagnose problems quickly, which ultimately helps you build better
-websites, faster.
 
 With DevTools you can view and change any page, even the Google homepage, as the video
 demonstrates.
@@ -39,6 +39,11 @@ can help you build websites faster:
   code one line at a time. While you're paused, you can inspect (and even change) the current
   values of variables at that point in time. You may find that this workflow helps you
   debug issues much faster than the `console.log()` method.
+* [Viewing messages and running JavaScript in the **Console**](console/get-started). The
+  **Console** provides a chronological log of messages that give you more information about
+  whether a page is running correctly. These messages come from the developers who built the
+  page, or from the browser. You can also run JavaScript from the **Console** in order to
+  inspect how a page is built, or experiment with changing how the page runs.
 * [Analyzing runtime performance](/web/tools/chrome-devtools/evaluate-performance/). If your
   page is slow or janky, you can use DevTools to record everything that happens on the page,
   and then analyze the results to learn how to optimize the page's performance.
@@ -89,6 +94,7 @@ Iterate on the layout and design of your site by freely manipulating the DOM and
 
 Log diagnostic information during development or interact with the JavaScript on the page.
 
+* [Get Started With The Console](/web/tools/chrome-devtools/console/get-started)
 * [Using the Console](/web/tools/chrome-devtools/console/)
 * [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
 * [Console API Reference](/web/tools/chrome-devtools/console/console-reference)

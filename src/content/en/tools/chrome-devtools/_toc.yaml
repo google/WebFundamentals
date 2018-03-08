@@ -52,10 +52,12 @@ toc:
     path: /web/tools/chrome-devtools/remote-debugging/local-server
   - title: Remote Debugging WebViews
     path: /web/tools/chrome-devtools/remote-debugging/webviews
-- title: Log Messages and Execute JavaScript in the Console
+- title: Log Messages and Run JavaScript in the Console
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/console/
+  - title: Get Started
+    path: /web/tools/chrome-devtools/console/get-started
   - title: Diagnose and Log to the Console
     path: /web/tools/chrome-devtools/console/console-write
   - title: Compare Similar Data Objects
