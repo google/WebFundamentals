@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-29 #}
+{# wf_updated_on: 2018-03-09 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Sign in Users {: .page-title }
@@ -44,7 +44,7 @@ so you can easily dismiss the process if the user:
 Before getting a credential,
 don’t forget to check if the user is already signed in:
 
-    if (navigator.credentials) {
+    if (window.PasswordCredential || FederatedCredential) {
      if (!user.isSignedIn()) {
        navigator.credentials.get({
          password: true,
@@ -126,7 +126,7 @@ but fail to authenticate the user, you should show an error message:
 
 ### Full code example
 
-    if (navigator.credentials) {
+    if (window.PasswordCredential || window.FederatedCredential) {
      if (!user.isSignedIn()) {
        navigator.credentials.get({
          password: true,
@@ -200,7 +200,7 @@ Example showing `mediation: 'optional'`:
 
     var signin = document.querySelector('#signin');
     signin.addEventListener('click', e => {
-     if (navigator.credentials) {
+     if (window.PasswordCredential || window.FederatedCredential) {
        navigator.credentials.get({
          password: true,
          federated: {
@@ -242,7 +242,7 @@ You should fallback to a sign-in form for any of these reasons:
 
     var signin = document.querySelector('#signin');
     signin.addEventListener('click', e => {
-     if (navigator.credentials) {
+     if (window.PasswordCredential || window.FederatedCredential) {
        navigator.credentials.get({
          password: true,
          federated: {
@@ -406,8 +406,8 @@ Call
 `navigator.credentials.preventSilentAccess()`:
 
     signoutUser();
-    if (navigator.credentials) {
-     navigator.credentials.preventSilentAccess();
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      navigator.credentials.preventSilentAccess();
     }
 
 This will ensure the auto sign-in won’t happen until next time the user enables auto sign-in.

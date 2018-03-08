@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-10 #}
+{# wf_updated_on: 2018-03-09 #}
 {# wf_published_on: 2016-11-08 #}
 
 # Save Credentials from Forms {: .page-title }
@@ -93,7 +93,7 @@ you can simply forward the profile information to the next step.
 
 Synchronous example:
 
-    if (navigator.credentials) {
+    if (window.PasswordCredential) {
        var c = new PasswordCredential(e.target);
        return navigator.credentials.store(c);
      } else {
@@ -102,7 +102,7 @@ Synchronous example:
 
 Asynchronous example:
 
-    if (navigator.credentials) {
+    if (window.PasswordCredential) {
        var c = await navigator.credentials.create({password: e.target});
        return navigator.credentials.store(c);
      } else {
@@ -161,7 +161,7 @@ or proceed to the personalized page.
       }).then(profile => {
 
         // Instantiate PasswordCredential with the form
-        if (navigator.credentials) {
+        if (window.PasswordCredential) {
           var c = new PasswordCredential(e.target);
           return navigator.credentials.store(c);
         } else {
