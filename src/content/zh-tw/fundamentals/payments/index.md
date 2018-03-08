@@ -6,7 +6,7 @@ description：Payment Request API 是用於在網路上進行快速，簡單的�
 
 
 {# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2018-03-03 #}
+{# wf_updated_on: 2018-03-08 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Request (付款要求) API 介紹 {: .page-title }
@@ -72,8 +72,5 @@ Payment Request 還可以擴展用來返回其他資訊，例如送貨地址和�
 新流程的美麗之處有三個層面：從使用者的角度來看，以前所有乏味的互動流程：付款要求、授權、進行付款和結果，現在都在一個步驟中進行；從網站的角度來看，它只需要呼叫一次 JavaScript API；從付款方式的角度來看，沒有任何流程改變。
 
 要開始熟悉API本身，請查看我們的[深入](/web/fundamentals/payments/deep-dive-into-payment-request)了解。
-
-Translated by
-{% include "web/_shared/contributors/lukechi.html" %}
 
 <div style="clear:both;"></div>
