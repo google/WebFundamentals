@@ -25,16 +25,41 @@ API](https://www.w3.org/TR/credential-management-1/) on Firefox and Edge.
 
 
 ### If you are currently doing this for feature detection:
-    if (navigator.credentials) {
-      // use CM API
+
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // use CM API
     }
 
-### Do this instead:
+### Do these instead:
+
     if (window.PasswordCredential || window.FederatedCredential) {
-      // use CM API with PasswordCredential/FederatedCredential
+      // Call navigator.credentials.get() to retrieve stored
+      // PasswordCredentials or FederatedCredentials.
     }
+
+    if (window.PasswordCredential) {
+      // Get/Store PasswordCredential
+    }
+
+    if (window.FederatedCredential) {
+      // Get/Store FederatedCredential
+    }
+
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // Call navigator.credentials.preventSilentAccess()
+    }
+
+See [changes](https://github.com/GoogleChromeLabs/credential-management-sample/pull/15/files
+) made to the sample code as an example.
 
 Read on to learn more.
+
+Note: If you are using Google identity as a primary way for your users to
+sign-in, consider using the [one tap sign-up and automatic
+sign-in](https://developers.google.com/identity/one-tap/web/) JavaScript library
+built on the Credential Management API. It combines Google sign-in and
+password-based sign-in into one API call, and adds support for one-tap account
+creation.
 
 ## What is the Credential Management API
 [The Credential Management API](https://www.w3.org/TR/credential-management-1/)
@@ -70,13 +95,15 @@ credentials to the CM API. For example, it gives websites a standardized way to
 implement second-factor authentication using [FIDO
 2.0](https://fidoalliance.org/) compliant authenticator devices.
 
-On a technical level, WebAuthn extends the CM API with the `PublicKeyCredential` interface.
+On a technical level, WebAuthn extends the CM API with the `PublicKeyCredential`
+interface.
 
 ## What is the problem?
-Previously we have been guiding developers to feature detect the CM API with following code:
+Previously we have been guiding developers to feature detect the CM API with
+following code:
 
-    if (navigator.credentials) {
-      // Use CM API
+    if (navigator.credentials && navigator.credentials.preventSilentAccess) {
+      // Use CM API
     }
 
 But as you can see from the descriptions above, the `navigator.credentials` is
@@ -95,10 +122,10 @@ the browser.
 <th>PublicKeyCredential</th>
 </tr><tr><th>Chrome
 </th><td>Available
-</td><td>Coming to 67
+</td><td>Aiming to ship on 67
 </td></tr><tr><th>Firefox
 </th><td>N/A
-</td><td>Coming to 60
+</td><td>Aiming to ship on 60
 </td></tr><tr><th>Edge
 </th><td>N/A
 </td><td>Implemented with <a href="https://blogs.windows.com/msedgedev/2016/04/12/a-world-without-passwords-windows-hello-in-microsoft-edge/">older API</a>. New API (navigator.credentials) coming soon.
@@ -108,31 +135,31 @@ the browser.
 You can avoid this by modifying feature detection code as follows to explicitly
 test for the credential type that you intend to use.
 
-Note: If you are using Google identity as a primary way for your users to
-sign-in, consider using the [one tap sign-up and automatic
-sign-in](https://developers.google.com/identity/one-tap/web/) JavaScript library
-built on the Credential Management API. It combines Google sign-in and
-password-based sign-in into one API call, and adds support for one-tap account
-creation.
+    if (window.PasswordCredential || window.FederatedCredential) {
+      // Call navigator.credentials.get() to retrieve stored
+      // PasswordCredentials or FederatedCredentials.
+    }
 
-### Detect `PasswordCredential` availability
     if (window.PasswordCredential) {
-      // use CM API with PasswordCredential
+      // Get/Store PasswordCredential
     }
 
-### Detect `FederatedCredential` availability
     if (window.FederatedCredential) {
-      // use CM API with FederatedCredential
+      // Get/Store FederatedCredential
     }
 
-### Detect `preventSilentAccess` availability
     if (navigator.credentials && navigator.credentials.preventSilentAccess) {
-      // use preventSilentAccess()
+      // Call navigator.credentials.preventSilentAccess()
     }
 
-### Detect `PublicKeyCredential` added in WebAuthn
+See [actual
+changes](https://github.com/GoogleChromeLabs/credential-management-sample/pull/15/files
+) made to the sample code as an example.
+
+For a reference, here's how to detect `PublicKeyCredential` added in WebAuthn:
+
     if (window.PublicKeyCredential) {
-      // use CM API with PublicKeyCredential added in the WebAuthn spec
+      // use CM API with PublicKeyCredential added in the WebAuthn spec
     }
 
 ## Timeline

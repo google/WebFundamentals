@@ -44,7 +44,7 @@ so you can easily dismiss the process if the user:
 Before getting a credential,
 don’t forget to check if the user is already signed in:
 
-    if (window.PasswordCredential || FederatedCredential) {
+    if (window.PasswordCredential || window.FederatedCredential) {
      if (!user.isSignedIn()) {
        navigator.credentials.get({
          password: true,
