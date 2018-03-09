@@ -7,6 +7,7 @@
 
 const wfRegEx = require('../wfRegEx');
 const testHelpers = require('./helpers');
+const commonTypos = require('./commonTypos');
 
 const VALID_REGIONS = [
   'africa', 'asia', 'europe', 'middle-east', 'north-america', 'south-america',
@@ -283,7 +284,10 @@ function test(filename, contents, options) {
     }
   }
 
-  return results;
+  // Check for common typos
+  const typos = commonTypos.test(filename, contents, options);
+
+  return results.concat(typos);
 }
 
 exports.test = test;
