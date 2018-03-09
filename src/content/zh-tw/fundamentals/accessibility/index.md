@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:改善網頁的無障礙功能
 
-{# wf_updated_on:2016-06-26 #}
+{# wf_updated_on:2018-03-09 #}
 {# wf_published_on:2016-06-26 #}
 
 # 無障礙功能 {: .page-title }
@@ -47,7 +47,7 @@ description:改善網頁的無障礙功能
 
 讓我們來看一個例子：
 
-![a form with poor accessibility](imgs/pooraccess.jpg)
+![一個無障礙功能不佳的表單](imgs/pooraccess.jpg)
 
 這個表單存在幾個無障礙功能問題。
 
@@ -57,7 +57,7 @@ description:改善網頁的無障礙功能
 
 現在讓我們揮一揮無障礙功能魔棒，看看解決上述問題後的表單。我們將要完成的工作是：將文本的顏色加深；修改設計，讓標籤靠近它們所標示的字段；以及修正標籤，使其與複選框關聯起來，以便點擊標籤同樣可以進行狀態切換。
 
-![a form with improved accessibility](imgs/betteraccess.jpg)
+![一個改善了無障礙功能的表單](imgs/betteraccess.jpg)
 
 您更願意使用哪一個？如果您說的是“無障礙版本”，就表明您正在試圖瞭解本指南的一個主要前提。
 給少數用戶構成徹底阻礙的問題往往也是許多其他用戶面臨的痛點，因此如果解決了無障礙功能問題，就能讓所有人的體驗得到改善。
