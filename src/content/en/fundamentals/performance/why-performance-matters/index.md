@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-03-07 #}
+{# wf_updated_on: 2018-03-09 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -33,7 +33,7 @@ ones. Here are some case studies of how performance has affected engagement and
 conversions for several websites.
 
 - [Pinterest rebuilt their pages for performance realizing a 40% reduction in
-perceived wait times, thus increasing both search engine traffic and signups by
+perceived wait times, thus increasing both search engine traffic and sign-ups by
 15%](https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7).
 - [By cutting average page load time by 850 milliseconds, COOK found they were
 able to increase conversions by 7%, decrease bounce rates by 7%, and increase
@@ -349,3 +349,4 @@ Walton](/web/resources/contributors/philipwalton), [Vinamrata
 Singal](/web/resources/contributors/vinamratasingal), Daniel An, and [Pete
 LePage](/web/resources/contributors/petelepage) for their extensive feedback in
 improving and launching this resource!_
+
