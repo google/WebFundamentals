@@ -53,15 +53,19 @@ function test(filename, contents, options) {
     if (!typo.caseSensitive) {
       flags += 'i';
     }
-    const reTypo = new RegExp(typo.typo, flags);
+    const reTypo = new RegExp(typo.typo.trim(), flags);
     const matches = wfRegEx.getMatches(reTypo, contents);
     matches.forEach((matchResult) => {
       const position = {line: getLineNumber(contents, matchResult.index)};
-      const match = matchResult[0];
+      const match = matchResult[0].replace(/\n/g, ' ').trim();
       const fix = match.replace(reTypo, typo.fix);
+      if (match.toLowerCase() === fix.toLowerCase()) {
+        return;
+      }
       let msg = `Common typo found: "${match}" -- should it be "${fix}"?`;
       if (typo.british) {
-        msg += ' Per our style guide, use standard American spellings.';
+        msg += ' Per our style guide, use standard American spellings.' +
+          ' See: https://developers.google.com/style/spelling';
       }
       if (typo.description) {
         msg += ' ' + typo.description;

@@ -4,6 +4,7 @@
 # - typo: thier (REQUIRED)
 #   fix: their (REQUIRED)
 #   caseSensitive: False (OPTIONAL)
+#   description: "There their they're, they're not all the same." (OPTIONAL)
 #
 # EXAMPLE with RegEx
 # - typo: errror(s|)
@@ -19,11 +20,11 @@
   fix: Android
   caseSensitive: True
 
-- typo: chrome
+- typo: chrome\s
   fix: Chrome
   caseSensitive: True
 
-- typo: (G|g)ithub
+- typo: (G|g)ithub\s
   fix: GitHub
   caseSensitive: True
 
@@ -47,7 +48,9 @@
   fix: StackOverflow
   caseSensitive: True
 
+
 ## British vs American spellings
+# https://developers.google.com/style/spelling
 
 - typo: analyse
   fix: analyze
@@ -137,6 +140,7 @@
   fix: utilize
   british: True
 
+
 ## Duplicate words
 
 - typo: \band\s+and\b
@@ -161,54 +165,66 @@
 - typo: \bwith\s+with\b
   fix: with
 
+
 ## DevSite Word List
 # See https://developers.google.com/style/word-list
 
-- typo: \b3-D\b
+- typo: 3-D
   fix: 3D
+  description: "See: https://developers.google.com/style/word-list#3d"
 
 - typo: admin
   fix: administrator
+  description: "See: https://developers.google.com/style/word-list#administrator"
 
 - typo: click\shere
   fix: AVOID
-  description: See https://developers.google.com/style/link-text
+  description: "See: https://developers.google.com/style/link-text"
 
-- typo: \bcode\slab\b
+- typo: code\slab
   fix: codelab
+  description: "See: https://developers.google.com/style/word-list#codelab"
 
 - typo: e-mail
   fix: email
-
-- typo: GAE
-  fix: App Engine
+  description: "See: https://developers.google.com/style/word-list#email"
 
 - typo: homescreen
   fix: home screen
+  description: "See: https://developers.google.com/style/word-list#home-screen"
 
 - typo: host\sname
   fix: hostname
+  description: "See: https://developers.google.com/style/word-list#hostname"
 
 - typo: life(\s|-)cycle
   fix: lifecycle
+  description: "See: https://developers.google.com/style/word-list#lifecycle"
 
 - typo: mark-up
   fix: markup
+  description: "See: https://developers.google.com/style/word-list#markup"
 
 - typo: omnibox
   fix: address bar
+  description: "See: https://developers.google.com/style/word-list#omnibox"
 
 - typo: sign(\s|-)on|log\sin|signin
   fix: sign-in
+  description: "See: https://developers.google.com/style/word-list#sign-on"
 
 - typo: sign(\s|-)off|log\soff|signoff
   fix: sign-out
+  description: "See: https://developers.google.com/style/word-list#sign-on"
 
-- typo: webpage
+- typo: \bwebpage\b
   fix: web page
+  description: "See: https://developers.google.com/style/word-list#web_page"
 
 - typo: web\ssite
   fix: website
+  description: "See: https://developers.google.com/style/word-list#website"
+
 
 ## Other common typos
 
@@ -233,25 +249,25 @@
 - typo: \b(flase|fales|fasle)\b
   fix: 'false'
 
-- typo: \b(more|less|greater|lesser|bigger|smaller)(\s+)then\b
+- typo: (more|less|greater|lesser|bigger|smaller)(\s+)then
   fix: $1$2than
 
 - typo: \b(ture|treu)\b
   fix: 'true'
 
-- typo: \b(uknown|unkown|unkwon|unkowon)\b
+- typo: (uknown|unkown|unkwon|unkowon)
   fix: unknown
 
-- typo: \b(un|)singed\b
+- typo: (un|)singed
   fix: $1signed
 
-- typo: \bandoid\b
-  fix: android
+- typo: andoid
+  fix: Android
 
-- typo: \bbalue\b
+- typo: balue
   fix: value
 
-- typo: \bfrist\b
+- typo: frist
   fix: first
 
 - typo: accpet
@@ -278,16 +294,16 @@
 - typo: asume
   fix: assume
 
-- typo: cosnt
+- typo: cosnt\s
   fix: const
 
 - typo: construtor
   fix: constructor
 
-- typo: chome
+- typo: chome\s
   fix: Chrome
 
-- typo: defau[lt](s|)
+- typo: defau[lt](s|)\b
   fix: default$1
 
 - typo: deafult(s|)
@@ -305,7 +321,7 @@
 - typo: doens't
   fix: doesn't
 
-- typo: empyt|emtpy|emtyp|epmty|mepty
+- typo: \b(empyt|emtpy|emtyp|epmty|mepty)\b
   fix: empty
 
 - typo: explcit
@@ -436,9 +452,6 @@
 
 - typo: recomend(ation|ations|s|ing|)
   fix: recommend$1
-
-- typo: referer(s|)
-  fix: referrer$1
 
 - typo: retrun
   fix: return
