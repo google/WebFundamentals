@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-03-08 #}
+{# wf_updated_on: 2018-03-09 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -210,7 +210,7 @@ serve cached entries. Now, `precache()` only modifies cache entries, and a new m
 has been exposed to register a route to serve those cached responses. Developers who want the
 previous, two-in-one functionality can switch to calling `precacheAndRoute()`.
 
-- Several options which used to be configured via the `WorkbxSW` constructor are now passed in as
+- Several options which used to be configured via the `WorkboxSW` constructor are now passed in as
 the `options` parameter in `workbox.precaching.precacheAndRoute([...], options)`. The defaults for
 those options, when not configured, are listed in the [reference
 docs](/web/tools/workbox/reference-docs/prerelease/workbox.precaching#.precacheAndRoute).
@@ -407,7 +407,7 @@ Instead, they have been changed to the methods
 [`workbox.skipWaiting()`](/web/tools/workbox/reference-docs/prerelease/workbox#.skipWaiting).
 
 - The `handleFetch` option that was previously supported in the v2 constructor is no longer
-supported in v3. Developers who need similar funcitonality to test their service worker without any
+supported in v3. Developers who need similar functionality to test their service worker without any
 fetch handlers being invoked can use the "[Bypass for
 network](/web/fundamentals/codelabs/debugging-service-workers/#inspecting_the_service_workers)"
 option available in Chrome's Developer Tools.
