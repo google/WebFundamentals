@@ -1,10 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Android Pay consente acquisti online semplici e sicuri ed elimina
-la necessità per gli utenti di ricordare e inserire manualmente i propri dati di
-pagamento. Integra Android Pay per raggiungere milioni di utenti Android,
-incrementare le conversioni e offrire agli utenti una vera esperienza di
-pagamento one-touch.
+description: Android Pay consente acquisti online semplici e sicuri ed elimina la necessità per gli utenti di ricordare e inserire manualmente i propri dati di pagamento. Integra Android Pay per raggiungere milioni di utenti Android, incrementare le conversioni e offrire agli utenti una vera esperienza di pagamento one-touch.
 
 {# wf_blink_components: Blink>Payments #}
 {# wf_updated_on: 2018-01-15 #}
