@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-03-11 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: credentials,chrome57,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -85,9 +85,11 @@ if (window.PasswordCredential || window.FederatedCredential) {
 ```
 
 Warning: Feature detection by checking `navigator.credentials` may break your
-website on browsers supporting 
-[WebAuthn(PublicKeyCredential)](https://www.w3.org/TR/webauthn/) but the
-Credential Management API. [Learn more](/web/updates/2018/03/webauthn-credential-management).
+website on browsers supporting
+[WebAuthn(PublicKeyCredential)](https://www.w3.org/TR/webauthn/) but not all
+credential types (`PasswordCredential` and `FederatedCredential`) defined by the
+Credential Management API. [Learn
+more](/web/updates/2018/03/webauthn-credential-management).
 
 ### `PasswordCredential` object now includes password {: #password}
 
@@ -144,10 +146,10 @@ You can use existing methods to deliver credential information to your server:
 
 ### Custom fetch will be deprecated soon {: #fetchdeprecation}
 
-Warning: Now that passwords are no longer returned in the `PasswordCredential`
-  object, the custom `fetch()` function will stop working in Chrome 64 (expected
-  [23 Jan 2018](https://www.chromestatus.com/features/schedule). Developers
-  **must** update their code.
+Warning: Now that passwords are returned in the `PasswordCredential` object, the
+  custom `fetch()` function will stop working in Chrome 64 (expected [23 Jan
+  2018](https://www.chromestatus.com/features/schedule). Developers **must**
+  update their code.
 
 To determine if you are using a custom `fetch()` function,
 check if it uses a `PasswordCredential` object or a `FederatedCredential` object

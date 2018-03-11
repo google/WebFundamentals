@@ -3,11 +3,11 @@ book_path: /web/updates/_book.yaml
 description: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API 
 
 {# wf_published_on: 2018-03-09 #}
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-03-11 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: credentials,webauthn,sign-in #}
 {# wf_featured_snippet: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
 # WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API {: .page-title }
 
@@ -15,14 +15,14 @@ description: WebAuthn may break your website on Firefox and Edge if you are usin
 
 <div class="clearfix"></div>
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 [WebAuthn](https://www.w3.org/TR/webauthn/) helps increase security by bringing
 public-key credential based authentication to the Web, and is soon to be
 supported in Chrome, Firefox and Edge ([with the updated
 spec](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authentication#differences-between-microsoft-edge-and-the-spec)).
-But this may break websites using [the Credential Management
-API](https://www.w3.org/TR/credential-management-1/) on Firefox and Edge.
-
+But this may break websites on Firefox and Edge if you are using [the Credential
+Management API](https://www.w3.org/TR/credential-management-1/) to access
+password-based and/or federated credentials.
 
 ### If you are currently doing this for feature detection:
 
@@ -56,7 +56,7 @@ Read on to learn more.
 
 Note: If you are using Google identity as a primary way for your users to
 sign-in, consider using the [one tap sign-up and automatic
-sign-in](https://developers.google.com/identity/one-tap/web/) JavaScript library
+sign-in](/identity/one-tap/web/) JavaScript library
 built on the Credential Management API. It combines Google sign-in and
 password-based sign-in into one API call, and adds support for one-tap account
 creation.

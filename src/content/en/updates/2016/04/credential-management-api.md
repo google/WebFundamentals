@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: To provide a sophisticated user experience, it's important to help users authenticate themselves to your website. But creating, remembering and typing passwords tends to be cumbersome for end users, especially on mobile
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-03-11 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: credentials,sign-in,chrome51 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
+{# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
 # Streamlining the Sign-in Flow Using Credential Management API {: .page-title }
 
