@@ -1,5 +1,12 @@
 ## A collection of common typos.
 #
+# The typo field is converted to a JavaScript Regular Expression and is then
+# used to search for matches. Suggested fixes are provided by the fix field,
+# and can also contain RegEx replace fields (eg: $1).
+#
+# NOTE: Typos here will apply to documentation, sample code and markup/down
+# used within the document.
+#
 # EXAMPLE
 # - typo: thier (REQUIRED)
 #   fix: their (REQUIRED)

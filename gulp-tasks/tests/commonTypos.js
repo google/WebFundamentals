@@ -62,9 +62,12 @@ function test(filename, contents, options) {
       if (match.toLowerCase() === fix.toLowerCase()) {
         return;
       }
-      let msg = `Common typo found: "${match}" -- should it be "${fix}"?`;
+      let msg = `Common typo found: (${match})`;
+      if (typo.fix) {
+        msg += ` Should it be '${fix}'?`;
+      }
       if (typo.british) {
-        msg += ' Per our style guide, use standard American spellings.' +
+        msg += ' Per our style guide, use American spellings.' +
           ' See: https://developers.google.com/style/spelling';
       }
       if (typo.description) {
