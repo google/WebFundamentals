@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-03-11 #}
 {# wf_published_on: 2018-02-26 #}
 {# wf_blink_components: N/A #}
 
@@ -104,7 +104,7 @@ developers and marketers to help them understand how to think about performance
 and navigate all of Google's performance tool offerings.
 
 <a class="button download gc-analytics-event"
-href="pdf/Infographic_HowToThinkAboutSpeedTools.pdf" data-category="webFu"
+href="pdf/Infographic-How_To_Think_About_Speed_Tools.pdf" data-category="webFu"
 data-label="speed-scorecard" target="_blank">Download the PDF version</a>
 
 ## Common myths about performance

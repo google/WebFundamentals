@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-03-09 #}
-{# wf_published_on: 2015-06-07 #}
+{# wf_updated_on: 2018-03-11 #}
+{# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
 # Why Performance Matters {: .page-title }
@@ -65,7 +65,7 @@ tool](https://www.thinkwithgoogle.com/feature/mobile/).
 src="images/speed-scorecard-1x.png" alt="A screenshot of the Speed Scorecard
 tool, comparing performance across four popular news outlets.">
   <figcaption><b>Figure 1</b>. Speed Scorecard comparing the performance of four
-competing sites using Chrome UX Report data from 3G network users in the United
+competing sites using Chrome UX Report data from 4G network users in the United
 States.</figcaption>
 </figure>
 
@@ -349,4 +349,3 @@ Walton](/web/resources/contributors/philipwalton), [Vinamrata
 Singal](/web/resources/contributors/vinamratasingal), Daniel An, and [Pete
 LePage](/web/resources/contributors/petelepage) for their extensive feedback in
 improving and launching this resource!_
-
