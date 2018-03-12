@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API 
 
 {# wf_published_on: 2018-03-09 #}
-{# wf_updated_on: 2018-03-11 #}
+{# wf_updated_on: 2018-03-12 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: credentials,webauthn,sign-in #}
 {# wf_featured_snippet: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API #}
@@ -20,9 +20,10 @@ description: WebAuthn may break your website on Firefox and Edge if you are usin
 public-key credential based authentication to the Web, and is soon to be
 supported in Chrome, Firefox and Edge ([with the updated
 spec](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authentication#differences-between-microsoft-edge-and-the-spec)).
-But this may break websites on Firefox and Edge if you are using [the Credential
-Management API](https://www.w3.org/TR/credential-management-1/) to access
-password-based and/or federated credentials.
+It adds a new kind of `Credential` object, which may break websites on Firefox
+and Edge if you are using [the Credential Management
+API](https://www.w3.org/TR/credential-management-1/) without feature-detecting
+the specific credential types they're interested in.
 
 ### If you are currently doing this for feature detection:
 
