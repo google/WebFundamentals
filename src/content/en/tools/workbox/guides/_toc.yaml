@@ -42,7 +42,7 @@ toc:
   - title: "From sw-precache or sw-toolbox"
     path: /web/tools/workbox/guides/migrations/migrate-from-sw
   - title: "From Workbox v2 to v3"
-    path: /web/tools/workbox/guides/migrations/migrate-from-v2-to-v3
+    path: /web/tools/workbox/guides/migrations/migrate-from-v2
 # - title: "Use as ES2015 Imports"
 #  path: /web/tools/workbox/guides/use-es2015-imports
 - title: "Service Worker Checklist"
