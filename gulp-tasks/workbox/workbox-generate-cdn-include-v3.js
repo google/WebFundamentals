@@ -23,10 +23,10 @@ function updateWorkboxBuild() {
   return wfHelper.promisedExec(`npm install --save-dev workbox-build`);
 }
 
-gulp.task('workbox-generate-cdn-include-v3', () => {
+gulp.task('workbox-generate-cdn-include', () => {
   const gitUrl = 'https://github.com/GoogleChrome/workbox.git';
   return updateWorkboxBuild()
-  .then(() => getLatestTags.prerelease(gitUrl))
+  .then(() => getLatestTags.stable(gitUrl))
   .then((latestTags) => {
     // TODO: Replace these three lines for Workbox-build when getModuleUrl()
     // will be exposed

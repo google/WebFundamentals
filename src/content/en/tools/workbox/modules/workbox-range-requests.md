@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What are Range Requests?
 
@@ -23,7 +21,7 @@ There may be scenarios where you want to serve a cached file
 but the browser has set a `range` header. Normally the header
 would be ignored.
 
-This module will read the cached response and return the 
+This module will read the cached response and return the
 specified range of data.
 
 ## Basic Usage

@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Workbox webpack Plugins  {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
 generates a complete service worker for you and one that generates a list

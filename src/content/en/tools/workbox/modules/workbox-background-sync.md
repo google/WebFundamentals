@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What is Workbox Background Sync?
 
@@ -74,7 +72,7 @@ by the global
 [`SyncManager`](https://wicg.github.io/BackgroundSync/spec/#sync-manager-interface). It's
 also used as the
 [Object Store](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore) name for
-the IndexedDB database. 
+the IndexedDB database.
 
 **Note**: it's not important that you know these
 details, but they're the reason the queue name has to be unique to your
@@ -94,9 +92,9 @@ self.addEventListener('fetch', (event) => {
   // adding to the Queue.
   const promiseChain = fetch(event.request.clone())
   .catch((err) => {
-      return queue.addRequest(event.request);  
+      return queue.addRequest(event.request);
   });
-  
+
   event.waitUntil(promiseChain);
 });
 ```
@@ -105,7 +103,7 @@ Once added to the queue, the request is automatically retried when the
 service worker receives the `sync` event (which happens when the browser
 thinks connectivity is restored). Browsers that don't support the
 BackgroundSync API will retry the queue every time the service worker is
-started up. This requires the page controlling the service worker to be 
+started up. This requires the page controlling the service worker to be
 running, so it won't be quite as effective.
 
 ## Testing Workbox Background Sync
@@ -117,7 +115,7 @@ The best approach to test your implementation is to do the following:
 
 1. Load up a page and register your service worker.
 1. Turn off your computers network or turn off your web server.
-    - ⚠️ **DO NOT USE CHROME DEVTOOLS OFFLINE** ⚠️ The offline checkbox in 
+    - ⚠️ **DO NOT USE CHROME DEVTOOLS OFFLINE** ⚠️ The offline checkbox in
     DevTools only affects requests from the page. Service Worker requests
     will continue to go through.
 1. Make network requests that should be queued with Workbox Background Sync.
@@ -125,7 +123,7 @@ The best approach to test your implementation is to do the following:
     `Chrome DevTools > Application > IndexedDB > workbox-background-sync > requests`
 1. Now turn on your network or web server.
 1. Force an early `sync` event by going to
-  `Chrome DevTools > Application > Service Workers`, enter the tag name of 
+  `Chrome DevTools > Application > Service Workers`, enter the tag name of
   `workbox-background-sync:<your queue name>` where "<your queue name>" should be
   the name of the queue you set and then clicking the 'Sync'
   button.
@@ -133,5 +131,5 @@ The best approach to test your implementation is to do the following:
     ![Example of Sync button in Chrome DevTools](../images/modules/workbox-background-sync/devtools-sync.png)
 
 1. You should see network requests go through for the failed requests and
-  the IndexedDB data should now be empty since the requests have been 
+  the IndexedDB data should now be empty since the requests have been
   successfully replayed.

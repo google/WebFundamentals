@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-build.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2018-01-31 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Workbox Build {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 The `workbox-build` module integrates into a node-based build process and can generate an entire
 service worker, or just generate a list of assets to precache that could be used within an existing
