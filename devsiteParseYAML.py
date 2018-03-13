@@ -6,13 +6,14 @@ import devsiteHelper
 from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
-
+SERVED_FROM_AE = not os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
 def parse(requestPath, fileLocation, rawYaml, lang='en'):
   context = {
     'lang': lang,
     'requestPath': requestPath.replace('/index', ''),
-    'bodyClass': 'devsite-landing-page'
+    'bodyClass': 'devsite-landing-page',
+    'servedFromAppEngine': SERVED_FROM_AE
   }
 
   # Parse the Yaml
