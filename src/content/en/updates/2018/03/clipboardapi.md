@@ -7,7 +7,7 @@ description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in
 {# wf_tags: cutandcopy,execcommand,input,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_featured_snippet: Async Clipboard API simplifies permissions-friendly copy & paste. #}
-{# wf_blink_components: Blink>Clipboard #}
+{# wf_blink_components: Blink>Input #}
 
 
 # Unblocking Clipboard Access {: .page-title }
@@ -106,7 +106,9 @@ For consistency, here's the equivalent async function:
 
 ### Handling Paste Events
 
-There are plans to introduce a new event for detecting clipboard changes, but for now it's best to use the "paste" event. It works nicely with the new asynchronous methods for reading clipboard text:
+There are plans to introduce a new event for detecting clipboard changes, but
+for now it's best to use the "paste" event. It works nicely with the new
+asynchronous methods for reading clipboard text:
 
     document.addEventListener('paste', event => {
       event.preventDefault();
@@ -121,8 +123,8 @@ There are plans to introduce a new event for detecting clipboard changes, but fo
 Clipboard access has always presented a security concern for browsers. Without
 proper permissions in place, a page could silently copy all manner of malicious
 content to a user's clipboard that would produce catastrophic results when
-pasted.  Imagine a web page that silently copies `rm -rf /` or a [decompression bomb image]
-to your clipboard.
+pasted.  Imagine a web page that silently copies `rm -rf /` or a [decompression
+bomb image] to your clipboard.
 
 Giving web pages unfettered read access to the clipboard is even more
 troublesome. Users routinely copy sensitive information like passwords and
@@ -135,9 +137,9 @@ a page is the active tab. Pages in active tabs can write to the clipboard
 without requesting permission, but reading from the clipboard always requires
 permission.
 
-To make things easier, two new permissions for copy & paste can be
-used with the [Permissions API]. There are separate permissions for read (paste)
-and write (copy):
+To make things easier, two new permissions for copy & paste can be used with the
+[Permissions API]. There are separate permissions for read (paste) and write
+(copy):
 
     { name: 'clipboard-read' }
     { name: 'clipboard-write' }
@@ -217,7 +219,9 @@ part of [asking permission responsibly] - no permissions prompt is shown.
 
 ## Detection and Fallback
 
-It's a good idea to use feature detection to take advantage of Async Clipboard while still supporting all browsers. You can detect support for the Async Clipboard API by checking for the existence of `navigator.clipboard`:
+It's a good idea to use feature detection to take advantage of Async Clipboard
+while still supporting all browsers. You can detect support for the Async
+Clipboard API by checking for the existence of `navigator.clipboard`:
 
     document.addEventListener('paste', async e => {
       let text;
