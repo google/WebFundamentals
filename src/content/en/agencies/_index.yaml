@@ -30,4 +30,4 @@ landing_page:
   - classname: devsite-landing-row-100 programs-directory-ctn
     items:
     - custom_html: >
-        {% include "web/agencies/partials/web-directory.html" %}
+        {% include "web/agencies/_partials/web-directory.html" %}
