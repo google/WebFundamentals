@@ -1,8 +1,8 @@
 upper_tabs:
   - include: /web/_upper_tabs-Fundamentals.yaml
-  - name: Tools
-    heading: "Workbox"
-    path: /web/tools/
+  - include: /web/_upper_tabs-Tools.yaml
+  - name: Workbox
+    path: /web/tools/workbox/
     lower_tabs:
       other:
       - name: Home

@@ -24,7 +24,8 @@ upper_tabs:
         - include: /web/tools/puppeteer/_toc.yaml
       - name: Workbox
         contents:
-        - include: /web/tools/workbox/_book.yaml
+        - title: Workbox
+          path: /web/tools/workbox/
       - name: Chrome User Experience Report
         contents:
         - include: /web/tools/chrome-user-experience-report/_toc.yaml
