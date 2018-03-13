@@ -186,7 +186,7 @@ redirects:
 - from: /web/tools/workbox/get-started/webpack
   to: /web/tools/workbox/guides/codelabs/webpack
 
-  - from: /web/tools/workbox/get-started/npm-script
+- from: /web/tools/workbox/get-started/npm-script
   to: /web/tools/workbox/guides/codelabs/npm-script
 
 - from: /web/tools/workbox/guides/migrate
