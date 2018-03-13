@@ -41,7 +41,7 @@
   fix: Firefox
   caseSensitive: True
 
-- typo: java\s*script|java\s*Script|Java\s*script
+- typo: [^`{3}](java\s*script|java\s*Script|Java\s*script)
   fix: JavaScript
   caseSensitive: True
 
