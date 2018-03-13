@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to make an npm-script-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-06 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
@@ -75,29 +75,28 @@ refreshes, too.
 
 Workbox is installed, but you're not using it in your build process, yet.
 
-1. Click **New File**, type `workbox-cli-config.js`, then press <kbd>Enter</kbd>. 
-1. Add the following code to `workbox-cli-config.js`.
+1. Click **New File**, type `workbox-config.js`, then press <kbd>Enter</kbd>.
+1. Add the following code to `workbox-config.js`.
 
     <pre class="prettyprint">module.exports = {
-      "globDirectory": "./dist/",
-      "globPatterns": [
-        "\*\*/\*.html",
-        "\*\*/\*.js"
+      globDirectory: './dist/',
+      globPatterns: [
+        '\*\*/\*.{html,js}'
       ],
-      "swDest": "dist/sw.js",
-      "clientsClaim": true,
-      "skipWaiting": true
+      swDest: './dist/sw.js',
+      clientsClaim: true,
+      skipWaiting: true
     };</pre>
 
 1. Open `package.json`.
-1. Update your npm Script to call Workbox as the last step in your build process. The bold
+1. Update your npm `scripts` to call Workbox as the last step in your build process. The bold
    code is what you need to add.
 
      <pre class="prettyprint">{
        ...
        "scripts": {
          ...
-         "build": "npm run clean && npm run copy <strong>&& workbox generate:sw</strong>"
+         "build": "npm run clean && npm run copy <strong>&& workbox generateSW</strong>"
        }
        ...
      }</pre>
@@ -105,13 +104,13 @@ Workbox is installed, but you're not using it in your build process, yet.
 ### Optional: How the config works {: #optional-config }
 
 The `build` script in `package.json` controls how the app is built. The build script calls
-Workbox (`workbox generate:sw`) as the last step.
+Workbox (`workbox generateSW`) as the last step.
 
-The `workbox generate:sw` command automatically searches for a Workbox config file called
-`workbox-cli-config.js` in the current working directory. If it finds one, it uses that config.
+The `workbox generateSW` command automatically searches for a Workbox config file called
+`workbox-config.js` in the current working directory. If it finds one, it uses that config.
 Otherwise, a CLI wizard prompts you to configure how Workbox runs.
 
-The object that you define in `workbox-cli-config.js` configures how Workbox runs.
+The object that you define in `workbox-config.js` configures how Workbox runs.
 
 <<_shared/config.md>>
 
@@ -127,7 +126,7 @@ while offline, they'll be able to see the content from the last time
 that they had an internet connection.
 
 1. Re-focus the tab that shows you the source code of your project.
-1. Open `workbox-cli-config.js` again.
+1. Open `workbox-config.js` again.
 1. Add a `runtimeCaching` property to your Workbox configuration.
    `urlPattern` is a regular expression pattern telling Workbox which
    URLs to store locally. `handler` defines the caching strategy that Workbox
@@ -136,12 +135,10 @@ that they had an internet connection.
 
     <pre class="prettyprint">module.exports = {
       ...
-      <strong>"runtimeCaching":  [
-        {
-          "urlPattern": new RegExp('https://hacker-news.firebaseio.com'),
-          "handler": "staleWhileRevalidate"
-        }
-      ]</strong>
+      <strong>runtimeCaching: [{
+        urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
+        handler: 'staleWhileRevalidate'
+      }]</strong>
     }</pre>
 
 
@@ -151,30 +148,29 @@ that they had an internet connection.
 
 <<_shared/create.md>>
 
-1. Open `workbox-cli-config.js`.
+1. Open `workbox-config.js`.
 1. Remove the `runtimeCaching`, `clientsClaim`, and `skipWaiting` properties.
    These are now handled in your service worker code.
 1. Add the `swSrc` property to instruct Workbox to inject its code into a custom service worker.
-   The complete `workbox-cli-config.js` file now looks like this:
+   The complete `workbox-config.js` file now looks like this:
 
     <pre class="prettyprint">module.exports = {
-      "globDirectory": "./dist/",
-      "globPatterns": [
-        "\*\*/\*.html",
-        "\*\*/\*.js"
+      globDirectory: './dist/',
+      globPatterns: [
+        '\*\*/\*.{html,js}'
       ],
-      "swDest": "dist/sw.js",
-      "swSrc": "src/sw.js"
+      swDest: './dist/sw.js',
+      swSrc: './src/sw.js'
     };</pre>
 
 1. Open `package.json`.
-1. In your build script, change `generate:sw` to `inject:manifest`.
+1. In your build script, change `generateSW` to `injectManifest`.
 
      <pre class="prettyprint">{
        ...
        "scripts": {
          ...
-         "build": "npm run clean && npm run copy && workbox <strong>inject:manifest</strong>"
+         "build": "npm run clean && npm run copy && workbox <strong>injectManifest</strong>"
        }
        ...
      }</pre>

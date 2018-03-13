@@ -76,8 +76,8 @@ Your app now sort-of works offline. Try it now:
 
 The service worker code is generated based on your Workbox configuration.
 
-* `importScripts('workbox-sw.prod.vX.X.X.js')` imports Workbox's service
-  worker library. You can inspect this file from the **Sources** panel of
+* `importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');`
+  imports Workbox's service worker library. You can inspect this file from the **Sources** panel of
   DevTools.
 
     <figure>
@@ -88,9 +88,8 @@ The service worker code is generated based on your Workbox configuration.
       </figcaption>
     </figure>
 
-* The `fileManifest` array lists all of the resources that Workbox is
-  precaching. This list is determined by the `globDirectory`
-  and `globPatterns` properties in your Workbox configuration.
+* The `self.__precacheManifest` array lists all of the resources that Workbox is
+  precaching.
 * Each resource has a `revision` property. This is how Workbox determines
   when to update a resource. Each time you build your app, Workbox generates
   a hash based on the contents of the resource. If the contents change, then

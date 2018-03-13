@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to make a webpack-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2017-11-16 #}
+{# wf_updated_on: 2018-03-06 #}
 {# wf_published_on: 2017-10-31 #}
+{# wf_blink_components: N/A #}
 
 # Get Started With Workbox For Webpack {: .page-title }
 
@@ -93,10 +94,8 @@ Workbox is installed, but you're not using it in your webpack build process, yet
         filename: 'index.html',
         title: 'Get Started With Workbox For Webpack'
       }),
-      <strong>new workboxPlugin({
-        globDirectory: dist,
-        globPatterns: ['\*\*/\*.{html,js}'],
-        swDest: path.join(dist, 'sw.js'),
+      <strong>new workboxPlugin.GenerateSW({
+        swDest: 'sw.js',
         clientsClaim: true,
         skipWaiting: true,
       })</strong>
@@ -108,14 +107,22 @@ Workbox is installed, but you're not using it in your webpack build process, yet
 
 * `cleanPlugin` deletes `dist`, which is the path to the output directory.
 * `htmlPlugin` re-generates the HTML output and places it back in `dist`.
-* `workboxPlugin` inspects the contents of `dist` and generates
-  service worker code for caching the output. Since Workbox revisions
+* `workboxPlugin.GenerateSW` knows about the assets bundled by webpack, and generates
+  service worker code for caching those files. Since Workbox revisions
   each file based on its contents, Workbox should always be the last
   plugin you call.
 
-The object that you pass to `workboxPlugin` configures how Workbox runs.
+The object that you pass to `workboxPlugin.GenerateSW` configures how Workbox runs.
 
-<<_shared/config.md>>
+* `swDest` is where Workbox outputs the service worker that it generates. The parent directory for
+  this file will be based on your `output.path` webpack configuration.
+* `clientsClaim` instructs the latest service worker to take control of all
+  clients as soon as it's activated. See [clients.claim][claim].
+* `skipWaiting` instructs the latest service worker to activate as soon as it enters
+  the waiting phase. See [Skip the waiting phase][skip].
+  
+[skip]: /web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase
+[claim]: /web/fundamentals/primers/service-workers/lifecycle#clientsclaim
 
 <<_shared/register.md>>
 
@@ -140,37 +147,92 @@ that they had an internet connection.
    uses for any matching URL. See [The Offline Cookbook][cookbook] for more
    on caching strategies.
 
-    <pre class="prettyprint">new workboxPlugin({
-      globDirectory: dist,
-      globPatterns: ['**/*.{html,js}'],
-      swDest: path.join(dist, 'sw.js'),
+    <pre class="prettyprint">new workboxPlugin.GenerateSW({
+      swDest: 'sw.js',
       clientsClaim: true,
       skipWaiting: true,
-      <strong>runtimeCaching: [
-        {
-          urlPattern: new RegExp('https://hacker-news\.firebaseio\.com'),
-          handler: 'staleWhileRevalidate'
-        }
-      ]</strong>
+      <strong>runtimeCaching: [{
+        urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
+        handler: 'staleWhileRevalidate'
+      }]</strong>
     })</pre>
 
 [cookbook]: /web/fundamentals/instant-and-offline/offline-cookbook/
 
 <<_shared/try-complete.md>>
 
-<<_shared/create.md>>
+## Step 6: Create your own service worker {: #inject }
+
+Up until now, you've been letting Workbox generate your entire service
+worker. If you've got a big project, or you want to customize how you cache
+certain resources, or do custom logic in your service worker,
+then you need to create a custom service worker that calls Workbox instead.
+Think of the service worker code you write as a template. You write your custom logic with
+placeholder keywords that instruct Workbox where to inject its code.
+
+In this section, you add push notification support in your service worker. Since this is custom
+logic, you need to write custom service worker code, and then inject the Workbox code into
+the service worker at build-time.
+
+1. Re-focus the tab containing your project source code.
+1. Add the following line of code to the `init()` function in `app.js`.
+
+    <pre class="prettyprint">function init() {
+      ...
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('SW registered: ', registration);
+            <strong>registration.pushManager.subscribe({userVisibleOnly: true});</strong>
+          }).catch(registrationError => {
+            ...
+          });
+        });
+      }
+    }</pre>
+
+    <aside class="warning">**Warning**: For simplicity, this demo asks for permission to
+    send push notifications as soon as the service worker is registered. Best practices
+    strongly recommend against out-of-context permission requests like this in real apps.
+    See [Permission UX][UX].</aside>
+
+[UX]: /web/fundamentals/push-notifications/permission-ux
+
+1. Click **New File**, enter `src/sw.js`, then press <kbd>Enter</kbd>.
+1. Add the following code to `src/sw.js`.
+
+    <pre class="prettyprint">workbox.skipWaiting();
+    workbox.clientsClaim();
+    
+    workbox.routing.registerRoute(
+      new RegExp('https://hacker-news.firebaseio.com'),
+      workbox.strategies.staleWhileRevalidate()
+    );
+
+    self.addEventListener('push', (event) => {
+      const title = 'Get Started With Workbox';
+      const options = {
+        body: event.data.text()
+      };
+      event.waitUntil(self.registration.showNotification(title, options));
+    });
+
+    workbox.precaching.precacheAndRoute(self.__precacheManifest);</pre>
+
+    <aside class="important">**Important**:
+    `workbox.precaching.precacheAndRoute(self.__precacheManifest)` reads a list of URLs to precache
+    from an externally defined variable, `self.__precacheManifest`. At build-time, Workbox injects
+    code needed set `self.__precacheManifest` to the correct list of URLs.</aside>
 
 1. Open `webpack.config.json`.
 1. Remove the `runtimeCaching`, `clientsClaim`, and `skipWaiting` properties from your Workbox
    plugin configuration. These are now handled in your service worker code.
-1. Add the `swSrc` property to your Workbox plugin configuration in `webpack.config.json`
-   to instruct Workbox to inject its code into a custom service worker. 
+1. Change the `GenerateSW` to `InjectManifest` and add the `swSrc` property to instruct Workbox to
+inject its code into a custom service worker.
 
-    <pre class="prettyprint">new workboxPlugin({
-      globDirectory: dist,
-      globPatterns: ['**/*.{html,js}'],
+    <pre class="prettyprint">new workboxPlugin.<strong>InjectManifest</strong>({
       <strong>swSrc: './src/sw.js',</strong>
-      swDest: path.join(dist, 'sw.js')
+      swDest: 'sw.js'
     })</pre>
 
 <<_shared/end.md>>

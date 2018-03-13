@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to make a gulp-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2017-11-17 #}
+{# wf_updated_on: 2018-03-06 #}
 {# wf_published_on: 2017-11-17 #}
+{# wf_blink_components: N/A #}
 
 # Get Started With Workbox For Gulp {: .page-title }
 
@@ -91,25 +92,32 @@ Workbox is installed, but you're not using it in your gulp build process, yet.
     <strong>gulp.task('generate-service-worker', () => {
       return workbox.generateSW({
         globDirectory: dist,
-        globPatterns: ['\*\*\/\*.{html,js}'],
+        globPatterns: [
+          '\*\*/\*.{html,js}'
+        ],
         swDest: \`${dist}/sw.js\`,
         clientsClaim: true,
         skipWaiting: true
-      }).then(() => {
+      }).then(({warnings}) => {
+        // In case there are any warnings from workbox-build, log them.
+        for (const warning of warnings) {
+          console.warn(warning);
+        }
         console.info('Service worker generation completed.');
       }).catch((error) => {
-        console.warn('Service worker generation failed: ' + error);
+        console.warn('Service worker generation failed:', error);
       });
     });</strong>
 
-    gulp.task('default', () => {
+    gulp.task('default', (callback) => {
       ...
     });</pre>
 
-1. Call the Workbox task as the last step in your build process.
+1. Call the Workbox task as the second-to-last task in your build process (just before the
+`callback`).
     
-    <pre class="prettyprint">gulp.task('default', function () {
-      runSequence('clean', 'build', <strong>'generate-service-worker'</strong>);
+    <pre class="prettyprint">gulp.task('default', (callback) => {
+      runSequence('clean', 'build', <strong>'generate-service-worker',</strong> callback);
     });</pre>
 
 ### Optional: How the config works {: #optional-config }
@@ -149,13 +157,11 @@ that they had an internet connection.
     <pre class="prettyprint">gulp.task('generate-service-worker', () => {
       return workbox.generateSW({
         ...
-        <strong>runtimeCaching: [
-          {
-            urlPattern: new RegExp('https://hacker-news\.firebaseio\.com'),
-            handler: 'staleWhileRevalidate'
-          }
-        ]</strong>
-      }).then(() => {
+        <strong>runtimeCaching: [{
+          urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
+          handler: 'staleWhileRevalidate'
+        }]</strong>
+      }).then(({warnings}) => {
         ...</pre>
 
 
@@ -173,10 +179,12 @@ that they had an internet connection.
     <pre class="prettyprint">gulp.task('generate-service-worker', () => {
       return workbox.generateSW({
         globDirectory: dist,
-        globPatterns: ['\*\*\/\*.{html,js}'],
+        globPatterns: [
+          '\*\*/\*.{html,js}'
+        ],
+        swDest: \`${dist}/sw.js\`,
         <strong>swSrc: \`${src}/sw.js\`,</strong>
-        swDest: \`${dist}/sw.js\`
-      }).then(() => {
+      }).then(({warnings}) => {
         ...</pre>
 
 1. Change `generateSW` to `injectManifest`.
