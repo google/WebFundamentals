@@ -1087,6 +1087,25 @@ josephmedley:
   description:
     en: Technical Writer
 
+developit:
+  name:
+    given: Jason
+    family: Miller
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+    - engineer
+  homepage: 'https://jasonformat.com'
+  google: +developit
+  twitter: _developit
+  github: developit
+  email: jasonjmiller@google.com
+  description:
+    en: Jason is a Chrome DevRel
+
 kuu:
   name:
     given: Kuu
