@@ -32,9 +32,9 @@ toc:
   - title: "CLI"
     path: /web/tools/workbox/guides/generate-service-worker/cli
   - title: "Gulp or Node"
-    path: /web/tools/workbox/guides/generate-service-worker/cli
+    path: /web/tools/workbox/guides/generate-service-worker/workbox-build
   - title: "Webpack"
-    path: /web/tools/workbox/guides/generate-service-workers/cli
+    path: /web/tools/workbox/guides/generate-service-workers/webpack
 - title: "Codelabs"
   style: accordion
   section:
