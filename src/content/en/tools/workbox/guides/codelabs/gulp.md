@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make a gulp-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-17 #}
 {# wf_blink_components: N/A #}
 
@@ -10,7 +10,7 @@ description: Learn how to make a gulp-based app work offline by adding Workbox t
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-In this tutorial, you use Workbox to make a simple web app work offline.
+In this codelab, you use Workbox to make a simple web app work offline.
 
 If you'd like a conceptual overview of Workbox before starting this tutorial,
 see the [Overview](/web/tools/workbox/overview).
@@ -66,7 +66,7 @@ experience.
      </figure>
 
 [devDependencies]: https://docs.npmjs.com/files/package.json#devdependencies
-   
+
 Every time you make a change to your code, Glitch automatically
 re-builds and re-deploys your app. The tab running the live app automatically
 refreshes, too.
@@ -115,7 +115,7 @@ Workbox is installed, but you're not using it in your gulp build process, yet.
 
 1. Call the Workbox task as the second-to-last task in your build process (just before the
 `callback`).
-    
+
     <pre class="prettyprint">gulp.task('default', (callback) => {
       runSequence('clean', 'build', <strong>'generate-service-worker',</strong> callback);
     });</pre>
@@ -174,7 +174,7 @@ that they had an internet connection.
 1. Open `gulpfile.js`.
 1. Remove the `runtimeCaching`, `clientsClaim`, and `skipWaiting` properties.
    These are now handled in your service worker code.
-1. Add the `swSrc` property to instruct Workbox to inject its code into a custom service worker. 
+1. Add the `swSrc` property to instruct Workbox to inject its code into a custom service worker.
 
     <pre class="prettyprint">gulp.task('generate-service-worker', () => {
       return workbox.generateSW({

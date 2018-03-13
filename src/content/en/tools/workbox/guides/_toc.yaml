@@ -35,6 +35,19 @@ toc:
     path: /web/tools/workbox/guides/generate-service-worker/cli
   - title: "Webpack"
     path: /web/tools/workbox/guides/generate-service-workers/cli
+- title: "Codelabs"
+  style: accordion
+  section:
+    - title: "Workbox For Webpack"
+      path: /web/tools/workbox/guides/codelabs/webpack
+    - title: "Workbox For Gulp"
+      path: /web/tools/workbox/guides/codelabs/gulp
+    - title: "Workbox For npm Script"
+      path: /web/tools/workbox/guides/codelabs/npm-script
+    # Needs updating to v3
+    # - title: "Build a PWA using Workbox"
+    #   path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
+    #   status: external
 - title: "Migrating to Workbox"
   style: accordion
   section:

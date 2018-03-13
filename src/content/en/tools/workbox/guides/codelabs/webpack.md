@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make a webpack-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-10-31 #}
 {# wf_blink_components: N/A #}
 
@@ -10,7 +10,7 @@ description: Learn how to make a webpack-based app work offline by adding Workbo
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-In this tutorial, you use Workbox to make a simple web app work offline.
+In this codelab, you use Workbox to make a simple web app work offline.
 
 If you'd like a conceptual overview of Workbox before starting this tutorial,
 see the [Overview](/web/tools/workbox/overview).
@@ -67,7 +67,7 @@ experience.
      </figure>
 
 [devDependencies]: https://docs.npmjs.com/files/package.json#devdependencies
-   
+
 Every time you make a change to your code, Glitch automatically
 re-builds and re-deploys your app. The tab running the live app automatically
 refreshes, too.
@@ -120,7 +120,7 @@ The object that you pass to `workboxPlugin.GenerateSW` configures how Workbox ru
   clients as soon as it's activated. See [clients.claim][claim].
 * `skipWaiting` instructs the latest service worker to activate as soon as it enters
   the waiting phase. See [Skip the waiting phase][skip].
-  
+
 [skip]: /web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase
 [claim]: /web/fundamentals/primers/service-workers/lifecycle#clientsclaim
 
@@ -139,9 +139,9 @@ that they had an internet connection.
 1. Open `webpack.config.js` again.
 1. Add a `runtimeCaching` property to your Workbox configuration.
    `urlPattern` is a regular expression pattern telling Workbox which
-   URLs to store locally. *(When your app makes a network request at 
-   runtime, Workbox caches any request that matches the regular 
-   expression in `handler`, regardless of its origin. This means that 
+   URLs to store locally. *(When your app makes a network request at
+   runtime, Workbox caches any request that matches the regular
+   expression in `handler`, regardless of its origin. This means that
    you can cache content from external sites as well, as this example
    demonstrates.)* `handler` defines the caching strategy that Workbox
    uses for any matching URL. See [The Offline Cookbook][cookbook] for more
@@ -203,7 +203,7 @@ the service worker at build-time.
 
     <pre class="prettyprint">workbox.skipWaiting();
     workbox.clientsClaim();
-    
+
     workbox.routing.registerRoute(
       new RegExp('https://hacker-news.firebaseio.com'),
       workbox.strategies.staleWhileRevalidate()

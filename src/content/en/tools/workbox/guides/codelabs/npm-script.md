@@ -1,8 +1,8 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make an npm-script-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-03-06 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
@@ -10,7 +10,7 @@ description: Learn how to make an npm-script-based app work offline by adding Wo
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-In this tutorial, you use Workbox to make a simple web app work offline.
+In this codelab, you use Workbox to make a simple web app work offline.
 
 If you'd like a conceptual overview of Workbox before starting this tutorial,
 see the [Overview](/web/tools/workbox/overview).
@@ -66,7 +66,7 @@ experience.
      </figure>
 
 [devDependencies]: https://docs.npmjs.com/files/package.json#devdependencies
-   
+
 Every time you make a change to your code, Glitch automatically
 re-builds and re-deploys your app. The tab running the live app automatically
 refreshes, too.
