@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with workbox-build {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the workbox-build Node module to generate a
 complete service worker with precaching and runtime caching.
@@ -44,7 +42,7 @@ This command will output a service worker to `build/sw.js` which
 will precache all the files in the `build/` directory that match
 any of the `globPatterns` defined.
 
-In your webpage, you can register this service worker by adding:
+In your web page, you can register this service worker by adding:
 
 {% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 

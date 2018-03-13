@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
 # Migrate from Workbox v2 to v3 {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 This guide is focused on breaking changes introduced in Workbox v3, with examples of what changes
 you'd need to make when upgrading from a Workbox v2 setup.

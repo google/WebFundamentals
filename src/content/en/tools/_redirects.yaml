@@ -168,5 +168,14 @@ redirects:
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
 
+- from: /web/tools/workbox/next/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/examples/
+  to: /web/tools/workbox/modules/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
 - from: /web/tools/workbox/guides/migrate
   to: /web/tools/workbox/guides/migrations/migrate-from-sw
