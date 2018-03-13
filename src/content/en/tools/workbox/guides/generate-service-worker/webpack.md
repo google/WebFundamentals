@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with Webpack {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 This page explains how to use the `workbox-webpack-plugin` node module to
 generate a complete service worker with precaching and runtime caching.
@@ -38,7 +36,7 @@ module.exports = {
 The generated service worker will be setup to precache all the files in your
 webpack build.
 
-In your webpage, you can register this service worker by adding:
+In your web page, you can register this service worker by adding:
 
 {% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 

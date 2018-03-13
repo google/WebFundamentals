@@ -1,5 +1,4 @@
 toc:
-
 - title: "Get Started"
   path: /web/tools/workbox/guides/get-started
 - title: "Precache Files"
@@ -33,9 +32,22 @@ toc:
   - title: "CLI"
     path: /web/tools/workbox/guides/generate-service-worker/cli
   - title: "Gulp or Node"
-    path: /web/tools/workbox/guides/generate-service-worker/cli
+    path: /web/tools/workbox/guides/generate-service-worker/workbox-build
   - title: "Webpack"
-    path: /web/tools/workbox/guides/generate-service-workers/cli
+    path: /web/tools/workbox/guides/generate-service-workers/webpack
+- title: "Codelabs"
+  style: accordion
+  section:
+    - title: "Workbox For Webpack"
+      path: /web/tools/workbox/guides/codelabs/webpack
+    - title: "Workbox For Gulp"
+      path: /web/tools/workbox/guides/codelabs/gulp
+    - title: "Workbox For npm Script"
+      path: /web/tools/workbox/guides/codelabs/npm-script
+    # Needs updating to v3
+    # - title: "Build a PWA using Workbox"
+    #   path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
+    #   status: external
 - title: "Migrating to Workbox"
   style: accordion
   section:

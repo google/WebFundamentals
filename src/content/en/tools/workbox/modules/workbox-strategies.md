@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What are Workbox Strategies?
 
@@ -126,7 +124,7 @@ All of the strategies allow you to configure:
 
 - The name of the cache to use in the strategy.
 - Cache expiration restrictions to use in the strategy.
-- An array of plugins that will have their life cycle methods called when
+- An array of plugins that will have their lifecycle methods called when
   fetching and caching a request.
 
 ### Changing the Cache Used by a Strategy

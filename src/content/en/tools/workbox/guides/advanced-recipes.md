@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
 # Advanced Recipes {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## Offer a page reload for users
 
