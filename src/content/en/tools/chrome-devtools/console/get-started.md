@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-03-08 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -11,13 +11,6 @@ description: Learn how to view messages and run JavaScript in the Console.
 # Get Started With The Console {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-{% framebox width="0" height="0" enable_widgets="true" %}
-  <script>
-    console.log('%cWelcome to the Console!', 'font-weight:bold;color:#317efb;font-style:italic',
-        'Read on to learn how messages like this get here.');
-  </script>
-{% endframebox %}
 
 This tutorial teaches you how to use the **Console** in Chrome DevTools.
 
@@ -66,9 +59,10 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
    **Console**. 
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button>Log a message</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.A.1 (Log)">Log a message</button>
          <script>
-           document.querySelector('button').addEventListener('click', () => {
+           document.querySelector('button').addEventListener('click', function () {
              console.log('click listener executed');
            });
          </script>
@@ -97,10 +91,11 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
    default settings, you won't see any thing.
 
      {% framebox width="auto" height="auto" enable_widgets="true" %}
-       <button>debug</button>
+       <button class="gc-analytics-event" data-category="DevTools"
+               data-label="Console / Get Started / 1.A.2 (Debug)">debug</button>
        <script>
          var button = document.querySelector('button');
-         button.addEventListener('click', () => {
+         button.addEventListener('click', function () {
            console.debug('debug');
          });
        </script>
@@ -120,9 +115,12 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
          <style>
            button { margin: 1em; }
          </style>
-         <button>info</button>
-         <button>warn</button>
-         <button>error</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.A.3 (Info)">info</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.A.4 (Warn)">warn</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.A.5 (Error)">error</button>
          <script>
            function exampleFunctionA() {
              console.warn('warn');
@@ -134,7 +132,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
              e.target.textContent === 'warn' ? exampleFunctionA() : exampleFunctionB();
            }
            var buttons = document.querySelectorAll('button');
-           buttons[0].addEventListener('click', () => {
+           buttons[0].addEventListener('click', function () {
              console.info('info');
            });
            buttons[1].addEventListener('click', exampleFunctionC);
@@ -169,10 +167,11 @@ code.
 1. Click **Throw Error**. The browser logs a `TypeError`. 
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button>Throw Error</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.B.1 (TypeError)">Throw Error</button>
          <script>
            const button = document.querySelector('button');
-           button.addEventListener('click', () => {
+           button.addEventListener('click', function () {
              const message = 'this declaration throws an error because there is no p element';
              document.querySelector('p').textContent = message;
            });
@@ -185,10 +184,11 @@ code.
 1. Click **Throw 404**. The browser logs a `404 (Not Found)` error, as well as others.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button>Throw 404</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.B.2 (404)">Throw 404</button>
          <script>
            const button = document.querySelector('button');
-           button.addEventListener('click', () => {
+           button.addEventListener('click', function () {
              const url = "not/a/real/file.png";
              fetch(url);
            });
@@ -208,10 +208,11 @@ filter the **Console** to only show messages that you care about.
    filtering.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button>Log Numbers</button>
+         <button class="gc-analytics-event" data-category="DevTools"
+                 data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
          <script>
            const button = document.querySelector('button');
-           button.addEventListener('click', () => {
+           button.addEventListener('click', function () {
              const isPrime = num => {
                for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
                  if (num % i === 0) return false;
@@ -276,6 +277,11 @@ in order to change how the page looks or runs.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
          <button id="changeMyText">Change My Text</button>
+         <script>
+           document.getElementById('changeMyText').addEventListener('click', function () {
+             console.log('Clicking this button doesn't do anything, but I appreciate your',
+                 'curiosity ;)');
+           });
        {% endframebox %}
 
      This probably didn't work for you because the button is embedded in an
@@ -343,13 +349,13 @@ arguments][default]{:.external}. Try it now:
    in order to to see how DevTools intelligently decides whether to continue to let you enter
    input, or to evaluate the code.
 
-       function add(a, b=20) {
-         return a + b;
-       }
+        function add(a, b=20) {
+          return a + b;
+        }
 
 1. Type the following code in the **Console** to call the function that you just defined.
 
-       add(25);
+        add(25);
 
 ## Next steps {: #next-steps }
 
@@ -428,4 +434,13 @@ var feedback = {
 };
 </script>
 {% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{# Runs on page load. Down here because it takes up space, even though it's not supposed to. #}
+
+{% framebox width="0" height="0" enable_widgets="true" %}
+  <script>
+    console.log('%cWelcome to the Console!', 'font-weight:bold;color:#317efb;font-style:italic',
+        'Read on to learn how messages like this get here.');
+  </script>
 {% endframebox %}
