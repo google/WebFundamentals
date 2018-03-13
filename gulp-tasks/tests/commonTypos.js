@@ -58,16 +58,19 @@ function test(filename, contents, options) {
     matches.forEach((matchResult) => {
       const position = {line: getLineNumber(contents, matchResult.index)};
       const match = matchResult[0].replace(/\n/g, ' ').trim();
-      const fix = match.replace(reTypo, typo.fix);
-      if (match.toLowerCase() === fix.toLowerCase()) {
-        return;
+      let fix = typo.fix;
+      if (!typo.caseSensitive) {
+        fix = match.replace(reTypo, typo.fix);
+        if (match.toLowerCase() === fix.toLowerCase()) {
+          return;
+        }
       }
-      let msg = `Common typo found: (${match})`;
+      let msg = `Common typo found: '${match}'`;
       if (typo.fix) {
         msg += ` Should it be '${fix}'?`;
       }
       if (typo.british) {
-        msg += ' Per our style guide, use American spellings.' +
+        msg += ' Please use American spellings.' +
           ' See: https://developers.google.com/style/spelling';
       }
       if (typo.description) {

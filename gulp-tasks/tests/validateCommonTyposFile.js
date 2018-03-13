@@ -17,7 +17,7 @@ const SCHEMA_TYPO_ITEM = {
   type: 'object',
   properties: {
     typo: {type: 'string', required: true},
-    fix: {type: 'string', required: true},
+    fix: {type: 'string'},
     description: {type: 'string'},
     caseSensitive: {type: 'boolean'},
     british: {type: 'boolean'},

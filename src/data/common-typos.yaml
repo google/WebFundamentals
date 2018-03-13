@@ -19,13 +19,15 @@
 
 ## Typos in company/product names
 
-- typo: Ajax
+- typo: (A|a)jax
   fix: AJAX
   caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#ajax"
 
 - typo: android
   fix: Android
   caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#android"
 
 - typo: chrome\s
   fix: Chrome
@@ -46,6 +48,7 @@
 - typo: MacOS
   fix: macOS
   caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#macos"
 
 - typo: noSQL
   fix: NoSQL
@@ -176,16 +179,15 @@
 ## DevSite Word List
 # See https://developers.google.com/style/word-list
 
-- typo: 3-D
+- typo: 3-D\b
   fix: 3D
   description: "See: https://developers.google.com/style/word-list#3d"
 
-- typo: admin
+- typo: admin\b
   fix: administrator
   description: "See: https://developers.google.com/style/word-list#administrator"
 
 - typo: click\shere
-  fix: AVOID
   description: "See: https://developers.google.com/style/link-text"
 
 - typo: code\slab
@@ -233,10 +235,7 @@
   description: "See: https://developers.google.com/style/word-list#website"
 
 
-## Other common typos
-
-- typo: (a|)syncho(r|ro|)(r|n)ous(ly|)
-  fix: $1synchronous$4
+## Spelling mistakes & typos in docs
 
 - typo: (con|de)(stuct|truct|cruct)
   fix: $1struct
@@ -253,14 +252,8 @@
 - typo: (not|mod)ifica(iton|toin)(s|)
   fix: $1ification$3
 
-- typo: \b(flase|fales|fasle)\b
-  fix: 'false'
-
 - typo: (more|less|greater|lesser|bigger|smaller)(\s+)then
   fix: $1$2than
-
-- typo: \b(ture|treu)\b
-  fix: 'true'
 
 - typo: (uknown|unkown|unkwon|unkowon)
   fix: unknown
@@ -270,9 +263,6 @@
 
 - typo: andoid
   fix: Android
-
-- typo: balue
-  fix: value
 
 - typo: frist
   fix: first
@@ -300,12 +290,6 @@
 
 - typo: asume
   fix: assume
-
-- typo: cosnt\s
-  fix: const
-
-- typo: construtor
-  fix: constructor
 
 - typo: chome\s
   fix: Chrome
@@ -460,9 +444,6 @@
 - typo: recomend(ation|ations|s|ing|)
   fix: recommend$1
 
-- typo: retrun
-  fix: return
-
 - typo: seperate
   fix: separate
 
@@ -487,8 +468,29 @@
 - typo: togglable
   fix: toggleable
 
+- typo: upgarding
+  fix: upgrading
+
+
+## Spelling mistakes & typos in code
+
+- typo: cosnt\s
+  fix: const
+
+- typo: construtor
+  fix: constructor
+
+- typo: \b(flase|fales|fasle)\b
+  fix: 'false'
+
+- typo: retrun
+  fix: return
+
+- typo: \b(ture|treu)\b
+  fix: 'true'
+
 - typo: undefiend
   fix: undefined
 
-- typo: upgarding
-  fix: upgrading
+- typo: balue
+  fix: value
