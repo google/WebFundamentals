@@ -1,0 +1,39 @@
+toc:
+
+- title: "Overview"
+  path: /web/tools/workbox/reference-docs/latest/index
+
+- heading: Service Worker Libraries
+- title: "workbox"
+  path: /web/tools/workbox/reference-docs/latest/workbox
+- title: "workbox.core"
+  path: /web/tools/workbox/reference-docs/latest/workbox.core
+- title: "workbox.precaching"
+  path: /web/tools/workbox/reference-docs/latest/workbox.precaching
+- title: "workbox.routing"
+  path: /web/tools/workbox/reference-docs/latest/workbox.routing
+- title: "workbox.strategies"
+  path: /web/tools/workbox/reference-docs/latest/workbox.strategies
+- title: "workbox.expiration"
+  path: /web/tools/workbox/reference-docs/latest/workbox.expiration
+- title: "workbox.backgroundSync"
+  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
+- title: "workbox.googleAnalytics"
+  path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
+- title: "workbox.cacheableResponse"
+  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse
+- title: "workbox.broadcastUpdate"
+  path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
+- title: "workbox.rangeRequests"
+  path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
+
+- heading: Node Modules
+- title: workbox-build
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-build
+- title: workbox-webpack-plugin
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin
+
+- title: "View Full API"
+  style: accordion
+  section:
+  - include: /web/tools/workbox/reference-docs/latest/_toc.yaml

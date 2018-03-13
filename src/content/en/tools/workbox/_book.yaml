@@ -8,7 +8,7 @@ upper_tabs:
       - name: Home
         contents:
         - title: Home
-          path: /web/tools/workbox/next/
+          path: /web/tools/workbox/
       - name: Guides
         contents:
         - include: /web/tools/workbox/guides/_toc.yaml
@@ -17,6 +17,6 @@ upper_tabs:
         - include: /web/tools/workbox/modules/_toc.yaml
       - name: Reference Docs
         contents:
-        - include: /web/tools/workbox/next/_reference-docs.yaml
+        - include: /web/tools/workbox/_reference-docs.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml

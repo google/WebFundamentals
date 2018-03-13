@@ -3,12 +3,10 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What is Cache Expiration?
 
