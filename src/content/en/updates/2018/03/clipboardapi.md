@@ -136,11 +136,9 @@ without requesting permission, but reading from the clipboard always requires
 permission.
 
 To make things easier, two new permissions for copy & paste have been added to
-the [Permissions API]. The Permissions API is available in Chrome under an
-experimental flag (`chrome://flags/#enable-experimental-web-platform-features`).
-The `clipboard-write` permission is granted automatically to pages when they are
-the active tab. The `clipboard-read` permission must be requested, which you can
-do by trying to read data from the clipboard.
+the [Permissions API]. The `clipboard-write` permission is granted automatically
+to pages when they are the active tab. The `clipboard-read` permission must be
+requested, which you can do by trying to read data from the clipboard.
 
     { name: 'clipboard-read' }
     { name: 'clipboard-write' }
