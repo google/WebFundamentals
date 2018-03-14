@@ -150,9 +150,8 @@ As with anything using the Permissions API, it's possible to check if your app
 has permission to interact with the clipboard:
 
     navigator.permissions.query({
-      name: 'clipboard-read',
-      allowWithoutGesture: false
-    }).then( permissionStatus => {
+      name: 'clipboard-read'
+    }).then(permissionStatus => {
       // Will be 'granted', 'denied' or 'prompt':
       console.log(permissionStatus.state);
 
