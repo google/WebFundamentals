@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in Chrome 66.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_published_on: 2018-03-13 #}
 {# wf_tags: cutandcopy,execcommand,input,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
@@ -135,9 +135,12 @@ a page is the active tab. Pages in active tabs can write to the clipboard
 without requesting permission, but reading from the clipboard always requires
 permission.
 
-To make things easier, two new permissions for copy & paste can be used with the
-[Permissions API]. There are separate permissions for read (paste) and write
-(copy):
+To make things easier, two new permissions for copy & paste have been added to
+the [Permissions API]. The Permissions API is available in Chrome under an
+experimental flag (`chrome://flags/#enable-experimental-web-platform-features`).
+The `clipboard-write` permission is granted automatically to pages when they are
+the active tab. The `clipboard-read` permission must be requested, which you can
+do by trying to read data from the clipboard.
 
     { name: 'clipboard-read' }
     { name: 'clipboard-write' }
