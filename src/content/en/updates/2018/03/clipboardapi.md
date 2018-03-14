@@ -7,7 +7,7 @@ description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in
 {# wf_tags: cutandcopy,execcommand,input,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_featured_snippet: Async Clipboard API simplifies permissions-friendly copy & paste. #}
-{# wf_blink_components: Blink>Input #}
+{# wf_blink_components: Blink>DataTransfer #}
 
 
 # Unblocking Clipboard Access {: .page-title }
