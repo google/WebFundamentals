@@ -414,7 +414,7 @@ function testFile(filename, opts) {
       .then((parsed) => testProject.test(filename, parsed));
   }
 
-  // Check book and toc.yaml files
+  // Check _book.yaml & _toc.yaml files
   if (filenameObj.base === '_book.yaml' || filenameObj.base === '_toc.yaml') {
     return validateYaml.test(filename, contents)
       .then((parsed) => testBook.test(filename, parsed));
@@ -444,7 +444,14 @@ function testFile(filename, opts) {
 
   // Check YAML files
   if (filenameObj.ext === '.yaml') {
-    return validateYaml.test(filename, contents);
+    return validateYaml.test(filename, contents)
+      .then((parsed) => {
+        // Not all _toc.yaml files will be named _toc.yaml, so if it has a
+        // toc element, treat it as a _toc.yaml file.
+        if (parsed.toc) {
+          return testBook.test(filename, parsed);
+        }
+      });
   }
 
   // Check JSON files
