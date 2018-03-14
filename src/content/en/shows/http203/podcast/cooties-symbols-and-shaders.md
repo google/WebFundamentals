@@ -32,7 +32,7 @@ In this episode:
 * [Shadertoy](https://www.shadertoy.com/).
 * [Martin & Una look at mix-blend-mode vs shaders](https://vimeo.com/254736788).
 * [Observables in the DOM](https://github.com/whatwg/dom/issues/544).
-* [Why not element queries?](https://www.xanthir.com/b4PR0).
+* [Why not element queries](https://www.xanthir.com/b4PR0)?
 * [Philip Walton on resize
   observers](https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/).
 
