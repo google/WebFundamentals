@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-11 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_published_on: 2016-11-08 #}
 {# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
@@ -42,7 +42,7 @@ or `FederatedCredential` is supported.
 
 Warning: Feature detection by checking `navigator.credentials` may break your
 website on browsers supporting
-[WebAuthn(PublicKeyCredential)](https://www.w3.org/TR/webauthn/) but not all
+[WebAuthn](https://www.w3.org/TR/webauthn/)(PublicKeyCredential) but not all
 credential types (`PasswordCredential` and `FederatedCredential`) defined by the
 Credential Management API. [Learn
 more](/web/updates/2018/03/webauthn-credential-management).

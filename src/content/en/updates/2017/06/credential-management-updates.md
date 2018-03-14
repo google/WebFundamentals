@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2018-03-11 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: credentials,chrome57,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -75,8 +75,9 @@ asynchronously creates credential objects.
 
 ### Feature detection needs attention
 
-To see if the Credential Management API is available, check if
-`window.PasswordCredential` or `window.FederatedCredential` is available.
+To see if the Credential Management API for accessing password-based and
+federated credentials is available, check if `window.PasswordCredential` or
+`window.FederatedCredential` is available.
 
 ```js
 if (window.PasswordCredential || window.FederatedCredential) {
@@ -86,7 +87,7 @@ if (window.PasswordCredential || window.FederatedCredential) {
 
 Warning: Feature detection by checking `navigator.credentials` may break your
 website on browsers supporting
-[WebAuthn(PublicKeyCredential)](https://www.w3.org/TR/webauthn/) but not all
+[WebAuthn](https://www.w3.org/TR/webauthn/)(PublicKeyCredential) but not all
 credential types (`PasswordCredential` and `FederatedCredential`) defined by the
 Credential Management API. [Learn
 more](/web/updates/2018/03/webauthn-credential-management).

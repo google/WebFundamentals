@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API 
+description: Credential Management API Feature Detection Check-up
 
-{# wf_published_on: 2018-03-09 #}
-{# wf_updated_on: 2018-03-12 #}
+{# wf_published_on: 2018-03-14 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_tags: credentials,webauthn,sign-in #}
-{# wf_featured_snippet: WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API #}
+{# wf_featured_snippet: Credential Management API Feature Detection Check-up #}
 {# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
-# WebAuthn may break your website on Firefox and Edge if you are using the Credential Management API {: .page-title }
+# Credential Management API Feature Detection Check-up {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
@@ -20,10 +20,10 @@ description: WebAuthn may break your website on Firefox and Edge if you are usin
 public-key credential based authentication to the Web, and is soon to be
 supported in Chrome, Firefox and Edge ([with the updated
 spec](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authentication#differences-between-microsoft-edge-and-the-spec)).
-It adds a new kind of `Credential` object, which may break websites on Firefox
-and Edge if you are using [the Credential Management
+It adds a new kind of `Credential` object, which, however, may break websites
+that use [the Credential Management
 API](https://www.w3.org/TR/credential-management-1/) without feature-detecting
-the specific credential types they're interested in.
+the specific credential types you're interested in.
 
 ### If you are currently doing this for feature detection:
 
@@ -123,7 +123,7 @@ the browser.
 <th>PublicKeyCredential</th>
 </tr><tr><th>Chrome
 </th><td>Available
-</td><td>Aiming to ship on 67
+</td><td>In development
 </td></tr><tr><th>Firefox
 </th><td>N/A
 </td><td>Aiming to ship on 60
