@@ -7,6 +7,8 @@ description: O Android Pay oferece segurança e simplicidade para as compras on-
 
 # Como integrar o Android Pay ao Payment Request {: .page-title }
 
+{% include "web/_shared/translation-out-of-date.html" %}
+
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/sieke.html" %}
 
