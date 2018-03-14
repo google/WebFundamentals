@@ -39,16 +39,14 @@ that has a well-defined permissions model and doesn't block the page.  This new
 API also Promises (see what I did there?) to simplify clipboard events and align
 them with the [Drag & Drop API].
 
-<div style="display: flex; justify-content: center">
-  <video loop muted controls>
-    <source
-      src="https://storage.googleapis.com/webfundamentals-assets/clipboardapi/async-clipboard-demo.webm"
-      type="video/webm; codecs=vp8">
-    <source
-      src="https://storage.googleapis.com/webfundamentals-assets/clipboardapi/async-clipboard-demo.mp4"
-      type="video/mp4; codecs=h264">
-  </video>
-</div>
+<video loop muted controls>
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/clipboardapi/async-clipboard-demo.webm"
+    type="video/webm; codecs=vp8">
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/clipboardapi/async-clipboard-demo.mp4"
+    type="video/mp4; codecs=h264">
+</video>
 
 
 ## Copy: Writing Text to the Clipboard
