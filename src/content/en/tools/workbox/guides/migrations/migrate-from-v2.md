@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -165,6 +165,29 @@ const cdnTransform = (manifestEntries) => {
   return {manifest, warnings: []};
 };
 ```
+
+- The `getFileManifestEntries()` function has been renamed to `getManifest()`, and the promise
+returned now [includes additional
+information](/web/tools/workbox/reference-docs/latest/module-workbox-build#.getManifest) about the
+URLs which are precached.
+
+This like the following in v2:
+
+```js
+const manifestEntries = await workboxBuild.getFileManifestEntries({...});
+```
+
+can be rewritten in v3 as:
+
+```js
+const {manifestEntries, count, size, warnings} = await workboxBuild.getManifest({...});
+
+// Use manifestEntries like before.
+// Optionally, log the new info returned in count, size, warnings.
+```
+
+- The `generateFileManifest()` function has been removed. Developers are encouraged to call
+`getManifest()` instead, and use its response to write data to disk in the appropriate format.
 
 ### workbox-cache-expiration
 
