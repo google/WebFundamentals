@@ -27,7 +27,7 @@ In this episode:
 * [The extensible web manifesto](https://extensiblewebmanifesto.org/).
 * [Async iterators](https://jakearchibald.com/2017/async-iterators-and-generators/).
 * Surma's [infinite scrolling
-  list](https://developers.google.com/web/updates/2016/07/infinite-scroller).
+  list](/web/updates/2016/07/infinite-scroller).
 * Fragment shaders.
 * [Shadertoy](https://www.shadertoy.com/).
 * [Martin & Una look at mix-blend-mode vs shaders](https://vimeo.com/254736788).
