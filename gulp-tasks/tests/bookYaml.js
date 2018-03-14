@@ -5,7 +5,7 @@
  */
 'use strict';
 
-const testHelpers = require('./helpers');
+// const testHelpers = require('./helpers');
 const JSONValidator = require('jsonschema').Validator;
 
 /**
