@@ -16,7 +16,7 @@ description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in
 
 
 Over the past few years, browsers have converged on using
-[document.execCommand] for clipboard interactions. It's great to have a single
+[`document.execCommand`] for clipboard interactions. It's great to have a single
 widely-supported way to integrate copy and paste into web apps, but this came at
 a cost: clipboard access is synchronous, and can only read & write to the DOM.
 
@@ -176,8 +176,9 @@ into DevTools, since DevTools itself is the active tab. There's a trick: we need
 to defer the clipboard access using setTimeout, then quickly click inside the
 page to focus it before the functions are called:
 
-    setTimeout( () => {
-      navigator.clipboard.writeText('Hello World!');
+    setTimeout(async () => {
+      const text = await navigator.clipboard.readText();
+      console.log(text);
     }, 2000);
 
 
@@ -192,14 +193,14 @@ to be copied is a string not present in the DOM, we have to inject and select
 it:
 
     button.addEventListener('click', e => {
-      let input = document.createElement('input');
+      const input = document.createElement('input');
       document.body.appendChild(input);
       input.value = text;
       input.focus();
       input.select();
-      let result = document.execCommand('copy');
-      if (result==='unsuccessful') {
-        console.error('Failed to copy text');
+      const result = document.execCommand('copy');
+      if (result === 'unsuccessful') {
+        console.error('Failed to copy text.');
       }
     })
 
@@ -207,7 +208,7 @@ Similarly, here's how you can handle pasted content in browsers that don't
 support the new Async Clipboard API:
 
     document.addEventListener('paste', e => {
-      let text = e.clipboardData.getData('text/plain');
+      const text = e.clipboardData.getData('text/plain');
       console.log('Got pasted text: ', text);
     })
 
