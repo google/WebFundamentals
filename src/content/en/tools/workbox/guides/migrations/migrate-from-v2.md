@@ -171,7 +171,7 @@ returned now [includes additional
 information](/web/tools/workbox/reference-docs/latest/module-workbox-build#.getManifest) about the
 URLs which are precached.
 
-This like the following in v2:
+Code like the following in v2:
 
 ```js
 const manifestEntries = await workboxBuild.getFileManifestEntries({...});
