@@ -237,9 +237,9 @@ Clipboard API by checking for the existence of `navigator.clipboard`:
 
 As you may have noticed, this post only covers the text part of
 `navigator.clipboard`. There are more generic `read()` and `write()` methods in
-the specification, but they're not as clear on permissions and come with
-additional security concerns (remember those image bombs?). For now, Chrome is
-rolling out the stable text API.
+the specification, but these come with additional implementation complexity and
+security concerns (remember those image bombs?). For now, Chrome is rolling out
+the simpler text parts of the API.
 
 
 ## More Information
