@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: To provide a sophisticated user experience, it's important to help users authenticate themselves to your website. But creating, remembering and typing passwords tends to be cumbersome for end users, especially on mobile
 
-{# wf_updated_on: 2018-01-12 #}
+{# wf_updated_on: 2018-03-11 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: credentials,sign-in,chrome51 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
+{# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
 # Streamlining the Sign-in Flow Using Credential Management API {: .page-title }
 
@@ -24,6 +25,11 @@ The latest version of Chrome (51) supports the **[Credential Management
 API](http://w3c.github.io/webappsec-credential-management/)**. It's a
 standards-track proposal at the W3C that gives developers programmatic access to
 a browser's credential manager and helps users sign in more easily.
+
+Warning: This API has been drastically updated and sample codes in this article
+won't work any longer. Checkout [the updated integration
+guide](/web/fundamentals/security/credential-management/) or [the update
+summary](/web/updates/2017/06/credential-management-updates).
 
 Note: The new [one tap sign-up and automatic sign-in API](/identity/one-tap/web/overview),
 built on the Credential Management API, combines Google sign-in and
