@@ -18,6 +18,7 @@ const wfRegEx = require('./wfRegEx');
 const wfHelper = require('./wfHelper');
 
 
+const testBook = require('./tests/bookYaml');
 const testProject = require('./tests/projectYaml');
 const testRedirects = require('./tests/redirectsYaml');
 const testGlossary = require('./tests/glossaryYaml');
@@ -411,6 +412,12 @@ function testFile(filename, opts) {
   if (filenameObj.base === '_project.yaml') {
     return validateYaml.test(filename, contents)
       .then((parsed) => testProject.test(filename, parsed));
+  }
+
+  // Check book and toc.yaml files
+  if (filenameObj.base === '_book.yaml' || filenameObj.base === '_toc.yaml') {
+    return validateYaml.test(filename, contents)
+      .then((parsed) => testBook.test(filename, parsed));
   }
 
   // Check the common tags file
