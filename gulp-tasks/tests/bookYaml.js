@@ -8,19 +8,21 @@
 // const testHelpers = require('./helpers');
 const JSONValidator = require('jsonschema').Validator;
 
-/**
- * Checks an enum
- *
- * @param {string} input
- * @param {Array} values
- * @return {boolean}
- */
-function checkEnum(input, values) {
-  if (!input || input.length === 0 || typeof input !== 'string') {
-    return true;
-  }
-  return values.includes(input.trim().toLowerCase());
-}
+const VALID_PLATFORM = ['android', 'cpp', 'ios', 'unity', 'unreal', 'web'];
+const VALID_STATUS =
+  ['alpha', 'beta', 'deprecated', 'experimental', 'external', 'new'];
+const VALID_STYLE = ['accordion', 'divider'];
+
+const TOC_OTHER = {
+  id: '/TOCOther',
+  type: 'object',
+  additionalProperties: false,
+  properties: {
+    name: {type: 'string'},
+    contents: {type: 'array', items: {$ref: '/TOCElement'}},
+    include: {type: 'string'},
+  },
+};
 
 const BOOK_ROOT = {
   id: '/BookRoot',
@@ -31,9 +33,25 @@ const BOOK_ROOT = {
     samples: {type: 'array', items: {$ref: '/TOCElement'}},
     support: {type: 'array', items: {$ref: '/TOCElement'}},
     reference: {type: 'array', items: {$ref: '/TOCElement'}},
-    other: {type: 'array', items: {$ref: '/TOCElement'}},
+    other: {type: 'array', items: {$ref: '/TOCOther'}},
     toc: {type: 'array', items: {$ref: '/TOCElement'}},
     upper_tabs: {type: 'array', items: {$ref: '/UpperTabs'}},
+  },
+  dependencies: {
+
+  },
+};
+
+const LOWER_TABS = {
+  id: '/LowerTabs',
+  type: 'object',
+  additionalProperties: false,
+  properties: {
+    guides: {type: 'array', items: {$ref: '/TOCElement'}},
+    samples: {type: 'array', items: {$ref: '/TOCElement'}},
+    support: {type: 'array', items: {$ref: '/TOCElement'}},
+    reference: {type: 'array', items: {$ref: '/TOCElement'}},
+    other: {type: 'array', items: {$ref: '/TOCOther'}},
   },
 };
 
@@ -42,47 +60,34 @@ const UPPER_TABS = {
   type: 'object',
   additionalProperties: false,
   properties: {
-    name: {type: 'string', required: true},
+    name: {type: 'string'},
     heading: {type: 'string'},
     is_default: {type: 'boolean'},
     path: {type: 'string'},
     buttons: {type: 'array', items: {$ref: '/Link'}},
     attributes: {type: 'array', items: {$ref: '/Attribute'}},
     custom_html: {type: 'string'},
-    lower_tabs: {type: 'object', items: {$ref: '/BookRoot'}, required: true},
+    lower_tabs: {type: 'object', items: {$ref: '/LowerTabs'}},
     include: {type: 'string'},
   },
 };
 
-JSONValidator.prototype.customFormats.platform = function(input) {
-  const validValues = ['android', 'cpp', 'ios', 'unity', 'unreal', 'web'];
-  return checkEnum(input, validValues);
-};
-JSONValidator.prototype.customFormats.status = function(input) {
-  const validValues =
-    ['alpha', 'beta', 'deprecated', 'experimental', 'external', 'new'];
-  return checkEnum(input, validValues);
-};
-JSONValidator.prototype.customFormats.styles = function(input) {
-  const validValues = ['accordion', 'divider'];
-  return checkEnum(input, validValues);
-};
 const TOC_ELEMENT = {
   id: '/TOCElement',
   type: 'object',
   additionalProperties: false,
   properties: {
-    alternate_paths: {type: 'Array'},
+    alternate_paths: {type: 'array'},
     break: {type: 'boolean'},
     heading: {type: 'string'},
     include: {type: 'string'},
     path: {type: 'string'},
     path_attributes: {type: 'array', items: {$ref: '/Attribute'}},
-    platform: {type: 'string', format: 'platform'},
+    platform: {enum: VALID_PLATFORM},
     section: {type: 'array', items: {$ref: '/TOCElement'}},
-    status: {type: 'string', format: 'status'},
+    status: {enum: VALID_STATUS},
     step_group: {type: 'string'},
-    style: {type: 'string', format: 'styles'},
+    style: {enum: VALID_STYLE},
     title: {type: 'string'},
     version_added: {type: 'string'},
     version_deprecated: {type: 'string'},
@@ -129,9 +134,11 @@ function test(filename, project) {
     const results = [];
     let validator = new JSONValidator();
     validator.addSchema(ATTRIBUTE, ATTRIBUTE.id);
-    validator.addSchema(LINK, LINK.id);
     validator.addSchema(TOC_ELEMENT, TOC_ELEMENT.id);
+    validator.addSchema(LINK, LINK.id);
+    validator.addSchema(LOWER_TABS, LOWER_TABS.id);
     validator.addSchema(UPPER_TABS, UPPER_TABS.id);
+    validator.addSchema(TOC_OTHER, TOC_OTHER.id);
     validator.validate(project, BOOK_ROOT).errors.forEach((err) => {
       let msg = `${err.stack || err.message}`;
       msg = msg.replace('{}', '(' + err.instance + ')');
