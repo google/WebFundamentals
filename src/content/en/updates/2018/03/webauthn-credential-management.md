@@ -23,7 +23,7 @@ spec](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/web-authe
 It adds a new kind of `Credential` object, which, however, may break websites
 that use [the Credential Management
 API](https://www.w3.org/TR/credential-management-1/) without feature-detecting
-the specific credential types you're interested in.
+the specific credential types they're using.
 
 ### If you are currently doing this for feature detection:
 
