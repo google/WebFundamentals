@@ -30,7 +30,7 @@ const buildSW = () => {
   // This will return a Promise
   return workboxBuild.generateSW({
     globDirectory: 'build',
-    globPatthers: [
+    globPatterns: [
       '**\/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',
@@ -70,7 +70,7 @@ const buildSW = () => {
   // This will return a Promise
   return workboxBuild.generateSW({
     globDirectory: 'build',
-    globPatthers: [
+    globPatterns: [
       '**\/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',
@@ -117,7 +117,7 @@ const workboxBuild = require('workbox-build');
 gulp.task('service-worker', () => {
   return workboxBuild.generateSW({
     globDirectory: 'build',
-    globPatthers: [
+    globPatterns: [
       '**\/*.{html,json,js,css}',
     ],
     swDest: 'build/sw.js',

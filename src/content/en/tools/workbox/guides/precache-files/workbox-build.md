@@ -43,7 +43,7 @@ const buildSW = () => {
     swSrc: 'src/sw.js',
     swDest: 'build/sw.js',
     globDirectory: 'build',
-    globPatthers: [
+    globPatterns: [
       '**\/*.{js,css,html,png}',
     ]
   });
@@ -91,7 +91,7 @@ gulp.task('service-worker', () => {
     swSrc: 'src/sw.js',
     swDest: 'build/sw.js',
     globDirectory: 'build',
-    globPatthers: [
+    globPatterns: [
       '**\/*.{js,css,html,png}',
     ]
   });
