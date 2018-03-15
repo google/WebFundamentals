@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-build.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-15 #}
 {# wf_published_on: 2018-01-31 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -54,6 +54,7 @@ configuration.
 
 <table class="responsive">
   <tbody>
+{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
 {% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
@@ -85,6 +86,7 @@ it into your existing service worker file.
 
 <table class="responsive">
   <tbody>
+{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
 {% include "web/tools/workbox/_shared/config/groups/common-inject-schema.html" %}
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
