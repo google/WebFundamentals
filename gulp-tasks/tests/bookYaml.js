@@ -9,20 +9,9 @@
 const JSONValidator = require('jsonschema').Validator;
 
 const VALID_PLATFORM = ['android', 'cpp', 'ios', 'unity', 'unreal', 'web'];
-const VALID_STATUS =
-  ['alpha', 'beta', 'deprecated', 'experimental', 'external', 'new'];
+const VALID_STATUS = ['alpha', 'beta', 'deprecated', 'experimental',
+                      'external', 'new'];
 const VALID_STYLE = ['accordion', 'divider'];
-
-const TOC_OTHER = {
-  id: '/TOCOther',
-  type: 'object',
-  additionalProperties: false,
-  properties: {
-    name: {type: 'string'},
-    contents: {type: 'array', items: {$ref: '/TOCElement'}},
-    include: {type: 'string'},
-  },
-};
 
 const BOOK_ROOT = {
   id: '/BookRoot',
@@ -42,19 +31,6 @@ const BOOK_ROOT = {
   },
 };
 
-const LOWER_TABS = {
-  id: '/LowerTabs',
-  type: 'object',
-  additionalProperties: false,
-  properties: {
-    guides: {type: 'array', items: {$ref: '/TOCElement'}},
-    samples: {type: 'array', items: {$ref: '/TOCElement'}},
-    support: {type: 'array', items: {$ref: '/TOCElement'}},
-    reference: {type: 'array', items: {$ref: '/TOCElement'}},
-    other: {type: 'array', items: {$ref: '/TOCOther'}},
-  },
-};
-
 const UPPER_TABS = {
   id: '/UpperTabs',
   type: 'object',
@@ -67,8 +43,21 @@ const UPPER_TABS = {
     buttons: {type: 'array', items: {$ref: '/Link'}},
     attributes: {type: 'array', items: {$ref: '/Attribute'}},
     custom_html: {type: 'string'},
-    lower_tabs: {type: 'object', items: {$ref: '/LowerTabs'}},
+    lower_tabs: {type: 'object', $ref: '/LowerTabs'},
     include: {type: 'string'},
+  },
+};
+
+const LOWER_TABS = {
+  id: '/LowerTabs',
+  type: 'object',
+  additionalProperties: false,
+  properties: {
+    guides: {type: 'array', items: {$ref: '/TOCElement'}},
+    samples: {type: 'array', items: {$ref: '/TOCElement'}},
+    support: {type: 'array', items: {$ref: '/TOCElement'}},
+    reference: {type: 'array', items: {$ref: '/TOCElement'}},
+    other: {type: 'array', items: {$ref: '/TOCOther'}},
   },
 };
 
@@ -93,6 +82,17 @@ const TOC_ELEMENT = {
     version_deprecated: {type: 'string'},
     versioning: {type: 'string'},
     whitelist: {type: 'string'},
+  },
+};
+
+const TOC_OTHER = {
+  id: '/TOCOther',
+  type: 'object',
+  additionalProperties: false,
+  properties: {
+    name: {type: 'string'},
+    contents: {type: 'array', items: {$ref: '/TOCElement'}},
+    include: {type: 'string'},
   },
 };
 
@@ -133,9 +133,9 @@ function test(filename, project) {
   return new Promise(function(resolve, reject) {
     const results = [];
     let validator = new JSONValidator();
+    validator.addSchema(LINK, LINK.id);
     validator.addSchema(ATTRIBUTE, ATTRIBUTE.id);
     validator.addSchema(TOC_ELEMENT, TOC_ELEMENT.id);
-    validator.addSchema(LINK, LINK.id);
     validator.addSchema(LOWER_TABS, LOWER_TABS.id);
     validator.addSchema(UPPER_TABS, UPPER_TABS.id);
     validator.addSchema(TOC_OTHER, TOC_OTHER.id);
