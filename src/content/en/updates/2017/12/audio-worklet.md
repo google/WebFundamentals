@@ -12,9 +12,7 @@ book_path: /web/updates/_book.yaml
 
 {% include "web/_shared/contributors/hongchanchoi.html" %}
 
-<aside class="note">
-  <p><b>Note:</b> AudioWorklet is enabled by default in Chrome 66.</p>
-</aside>
+Note: AudioWorklet is enabled by default in Chrome 66.
 
 Chrome 64 comes with a highly anticipated new feature in Web Audio API -
 [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet). This
