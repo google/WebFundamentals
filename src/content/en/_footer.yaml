@@ -35,7 +35,7 @@ footer:
     - label: Progressive Web Apps
       path: /web/progressive-web-apps/
 
-  - name: More Training
+  - name: Training and Partners
     icon_name: school
     contents:
     - label: Instructor Led Training
@@ -44,6 +44,8 @@ footer:
       path: /web/events/pwa-agency-training/
     - label: Web Courses at Udacity
       path: /web/shows/udacity/
+    - label: Agencies
+      path: /web/agencies/
 
   - name: Contribute
     icon_name: bug_report

@@ -1,0 +1,498 @@
+{
+  "initMap": true,
+  "filters_": {
+    "vertical": [
+      "Agency",
+      "Education",
+      "Games",
+      "Health/Fitness",
+      "Media",
+      "Other",
+      "Retail",
+      "Social"
+    ],
+    "region": [
+      "Africa",
+      "Asia",
+      "Europe",
+      "North America",
+      "South/Central America"
+    ]
+  },
+  "data": [
+    {
+      "agency_name": "Sidekick Digita Limited",
+      "region": [
+        "Europe"
+      ],
+      "description": "Sidekick Digital are passionate about creating digital products people actually want to use. They use critical strategic thinking to identify the right technology solutions for their customers.",
+      "website": "https://www.sidekickdigital.co.uk/",
+      "projects": [
+        {
+          "url": "https://www.progressivewebflap.com/",
+          "vertical": [
+            "Games"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@sidekickdigital.co.uk",
+      "image_url": "/web/agencies/images/sidekick_digita_limited.png",
+      "vertical": [
+        "Games"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "King's Lynn"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "King's Lynn",
+          "geo": {
+            "lat": 52.7516798,
+            "lng": 0.4022963000000001
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Enovate",
+      "region": [
+        "Europe"
+      ],
+      "description": "Enovate build original, dynamic and innovative websites and web applications.",
+      "website": "https://www.enovate.co.uk",
+      "projects": [
+        {
+          "url": "https://www.graphic-design-essex.co.uk/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@enovate.co.uk",
+      "image_url": "/web/agencies/images/enovate.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Chelmsford"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Chelmsford",
+          "geo": {
+            "lat": 51.7355868,
+            "lng": 0.4685497
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Remarkable.net",
+      "region": [
+        "Europe"
+      ],
+      "description": "Remarkable are a Nottingham based bespoke software agency who are leading eCommerce specialists. Experts in creative web design, agile software development and digital eCommerce marketing.",
+      "website": "https://remarkable.net",
+      "projects": [
+        {
+          "url": "https://www.moss.co.uk",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 91
+        },
+        {
+          "url": "https://www.romanoriginals.co.uk",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 91
+        }
+      ],
+      "max_lighthouse_score": 91,
+      "contact": "contact@remarkable.net",
+      "image_url": "/web/agencies/images/remarkable.net.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Nottingham"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Nottingham",
+          "geo": {
+            "lat": 52.95478319999999,
+            "lng": -1.1581086
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Selesti Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Strategies, technologies and campaigns for brands with ambition.\nSelesti believe that smart use of digital marketing and technology can help brands achieve extraordinary things.",
+      "website": "https://www.selesti.com",
+      "projects": [
+        {
+          "url": "https://www.selesti.com/",
+          "vertical": [
+            "Social"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@selesti.com",
+      "image_url": "/web/agencies/images/selesti_ltd.png",
+      "vertical": [
+        "Social"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "22feet Tribal Worldwide Pvt Ltd",
+      "region": [
+        "Asia"
+      ],
+      "description": "22Feet brings together a unique range of skill sets. With these skill sets they are able to innovate and take the digital space one step further. Tech is at the heart of their work, plays a crucial role in their solutions and is the driving force towards always being one step ahead of consumers. ",
+      "website": "http://22feettribalworldwide.com/",
+      "projects": [
+        {
+          "url": "http://m.pitchersapp.com",
+          "client_name": "",
+          "vertical": [
+            "Social"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hi@22feettribalww.com",
+      "image_url": "/web/agencies/images/22feet_tribal_worldwide_pvt_ltd.png",
+      "vertical": [
+        "Social"
+      ],
+      "locations_view": [
+        {
+          "country_name": "India",
+          "cities": [
+            "Bangalore"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Bangalore",
+          "geo": {
+            "lat": 12.9715987,
+            "lng": 77.5945627
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "PRODITECH Solutions",
+      "region": [
+        "Asia"
+      ],
+      "description": "Proditech Solutions is a digital agency established in 2009. They have delivered websites and Web Apps to corporates and Start Ups. They are now focusing on promising technology mix and Progressive Web Apps (PWA) to increase the reach of their clients products and services.",
+      "website": "https://www.proditech.in",
+      "projects": [
+        {
+          "url": "https://tse.support",
+          "vertical": [
+            "Education"
+          ],
+          "lighthouse_score": 91
+        }
+      ],
+      "max_lighthouse_score": 91,
+      "contact": "info@proditech.co.in",
+      "image_url": "/web/agencies/images/proditech_solutions.png",
+      "vertical": [
+        "Education"
+      ],
+      "locations_view": [
+        {
+          "country_name": "India",
+          "cities": [
+            "Mumbai"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Mumbai",
+          "geo": {
+            "lat": 19.0759837,
+            "lng": 72.8776559
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Positive Technology",
+      "region": [
+        "Europe"
+      ],
+      "description": "Positive Technology prides itself on maintaining collaborative relationships with clients, forming strategic partnerships which grow over time. They implement proven processes, from management through development to delivery, ensuring projects are delivered on time and on budget.",
+      "website": "https://www.positive.co.uk",
+      "projects": [
+        {
+          "url": "https://www.hubbub.london",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 73
+        }
+      ],
+      "max_lighthouse_score": 73,
+      "contact": "info@positive.co.uk",
+      "image_url": "/web/agencies/images/positive_technology.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Richmond-Upon-Thames"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Richmond-Upon-Thames",
+          "geo": {
+            "lat": 51.4613054,
+            "lng": -0.3037709
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "uatech",
+      "region": [
+        "Asia"
+      ],
+      "description": "Uatech build great web and mobile apps with love.",
+      "website": "https://uatech.co.id/",
+      "projects": [
+        {
+          "url": "https://cariharga.co.id",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "rizkiheryandi@uatech.co.id",
+      "image_url": "/web/agencies/images/uatech.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": [
+            "Tanggerang Selatan"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Tanggerang Selatan",
+          "geo": {
+            "lat": -6.2835218,
+            "lng": 106.7112933
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Featurist Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Featurist provides full stack, feature driven development teams. They build progressive mobile and web apps, transform legacy systems and contribute to the open-source community.",
+      "website": "https://www.featurist.co.uk/",
+      "projects": [
+        {
+          "url": "https://shippingreport.com/",
+          "client_name": "",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 82
+        },
+        {
+          "url": "https://www.featurist.co.uk/",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "enquiries@featurist.co.uk",
+      "image_url": "/web/agencies/images/featurist_ltd.png",
+      "vertical": [
+        "Other",
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Your Favourite Story",
+      "region": [
+        "Europe"
+      ],
+      "description": "Your Favourite Story is a specialist product launch marketing agency based in Spitalfields, London with their own product launch formula. Their team of 70 specialists fuse research, creativity and technology to develop launch and relaunch strategies that ensure success.",
+      "website": "https://www.yourfavouritestory.com/",
+      "projects": [
+        {
+          "url": "https://closecircle-dev.yfs.io",
+          "client_name": "",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 91
+        }
+      ],
+      "max_lighthouse_score": 91,
+      "contact": "hello@yourfavouritestory.com",
+      "image_url": "/web/agencies/images/your_favourite_story.png",
+      "vertical": [
+        "Other"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Hex Digital Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Hex are a full-service digital engagement agency, based in London.",
+      "website": "https://hexdigital.com",
+      "projects": [
+        {
+          "url": "https://new-hex.staging.tegu.hexdigital.com",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@hexdigital.com",
+      "image_url": "/web/agencies/images/hex_digital_ltd.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "London"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "London",
+          "geo": {
+            "lat": 51.5073509,
+            "lng": -0.1277583
+          }
+        }
+      ]
+    }
+  ]
+}

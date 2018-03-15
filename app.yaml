@@ -53,7 +53,7 @@ handlers:
   http_headers:
     x-frame-options: SAMEORIGIN
 
-- url: /web/(.*\.(js|css))
+- url: /web/(.*\.(js|css|json))
   static_files: src/content/en/\1
   expiration: 1d
   upload: src/content/en/(.*\.(js|css))

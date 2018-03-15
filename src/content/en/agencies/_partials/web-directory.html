@@ -1,0 +1,31 @@
+{% framebox class="directory-framebox" height="auto" enable_widgets="true" %}
+  <link rel="stylesheet" type="text/css" href="/web/agencies/css/directory.css">
+  <div class="filters">
+    <div class="filters__search">
+      <input class="filters__search__field" placeholder="Search for web agencies" type="text" name="agency-search" value="" autocomplete="off" aria-label="Search box">
+      <div class="devsite-search-image material-icons"></div>
+    </div>
+    <div class="filters__dropdowns"></div>
+  </div>
+  <div id="map"></div>
+  <div class="table__bar">
+    <div class="table__logo"></div>
+    <div class="table__info table__heading mobile-is-hidden" data-sort-key="agency_name" data-sort-by="alphabetically">
+      <span class="material-icons">arrow_right_alt</span>Agency name
+    </div>
+    <div class="table__lighthouse-score table__heading mobile-is-hidden" data-sort-key="max_lighthouse_score" data-sort-by="numerically" data-sort-ascending="false">
+      <span class="material-icons">arrow_right_alt</span>Highest Lighthouse Score
+    </div>
+  </div>
+
+  <div class="directory-framebox__wrapper"></div>
+  <script src="/web/agencies/js/directory.js" type="text/javascript"></script>
+  <script>
+    function init() {
+      var dataUrl= '/web/agencies/data/agencies.json';
+      var alphabeticalSortKey = 'agency_name';
+      initializeDirectory(dataUrl, alphabeticalSortKey);
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHy4t079OXjq4uD-Hw65dl9Qnb2ousKXk&callback=init" async defer></script>
+{% endframebox %}
