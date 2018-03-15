@@ -237,9 +237,7 @@ has a v3 equivalent of:
 
 ```js
 workbox.precaching.addPlugins([
-    new workbox.broadcastUpdate.Plugin({
-      channelName: 'precache-updates',
-    })
+    new workbox.broadcastUpdate.Plugin('precache-updates')
 ]);
 
 workbox.precaching.precacheAndRoute([...], {
