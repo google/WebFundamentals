@@ -129,7 +129,7 @@ troublesome. Users routinely copy sensitive information like passwords and
 personal details to the clipboard, which could then be read by any page without
 them ever knowing.
 
-As with many new APIs, [`navigator.clipboard`] is only supported for pages
+As with many new APIs, [`navigator.clipboard`][navigator.clipboard] is only supported for pages
 served over HTTPS. To help prevent abuse, clipboard access is only allowed when
 a page is the active tab. Pages in active tabs can write to the clipboard
 without requesting permission, but reading from the clipboard always requires
