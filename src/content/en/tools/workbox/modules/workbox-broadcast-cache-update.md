@@ -59,9 +59,7 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin({
-        channelName: 'api-updates',
-      })
+      new workbox.broadcastUpdate.Plugin('api-updates')
     ]
   })
 );
@@ -121,10 +119,10 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin({
-        channelName: 'api-updates',
+      new workbox.broadcastUpdate.Plugin(
+        'api-updates',
         headersToCheck: ['X-My-Custom-Header']
-      })
+      )
     ]
   })
 );
