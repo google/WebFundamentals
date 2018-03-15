@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in Chrome 66.
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2018-03-15 #}
 {# wf_published_on: 2018-03-13 #}
 {# wf_tags: cutandcopy,execcommand,input,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
@@ -16,7 +16,7 @@ description: Copycats rejoice! Async Clipboard API is unblocking copy & paste in
 
 
 Over the past few years, browsers have converged on using
-[`document.execCommand`] for clipboard interactions. It's great to have a single
+[`document.execCommand`][document.execCommand] for clipboard interactions. It's great to have a single
 widely-supported way to integrate copy and paste into web apps, but this came at
 a cost: clipboard access is synchronous, and can only read & write to the DOM.
 
@@ -129,7 +129,7 @@ troublesome. Users routinely copy sensitive information like passwords and
 personal details to the clipboard, which could then be read by any page without
 them ever knowing.
 
-As with many new APIs, [`navigator.clipboard`] is only supported for pages
+As with many new APIs, [`navigator.clipboard`][navigator.clipboard] is only supported for pages
 served over HTTPS. To help prevent abuse, clipboard access is only allowed when
 a page is the active tab. Pages in active tabs can write to the clipboard
 without requesting permission, but reading from the clipboard always requires
