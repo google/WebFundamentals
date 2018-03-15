@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
@@ -203,6 +203,7 @@ The remaining options are used by both commands.
     <tr>
       <th colspan="2">Used by both `generateSW` and `injectManifest`.</th>
     </tr>
+{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
