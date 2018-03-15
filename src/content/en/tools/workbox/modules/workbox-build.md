@@ -69,7 +69,7 @@ const {injectManifest} = require('workbox-build');
 
 const swSrc = 'src/sw.js';
 const swDest = 'build/sw.js';
-generateSW({
+injectManifest({
   swSrc,
   swDest,
   // Other configuration options...
