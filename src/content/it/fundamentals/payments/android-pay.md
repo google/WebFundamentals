@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Android Pay consente acquisti online semplici e sicuri ed elimina la necessità per gli utenti di ricordare e inserire manualmente i propri dati di pagamento. Integra Android Pay per raggiungere milioni di utenti Android, incrementare le conversioni e offrire agli utenti una vera esperienza di pagamento one-touch.
+description: Android Pay consente acquisti online semplici e sicuri ed elimina la necessità per gli utenti di ricordare e inserire manualmente i propri dati di pagamento. Integra Android Pay per raggiungere milioni di utenti Android, incrementare le conversioni e offrire agli utenti un'autentica esperienza di pagamento a singolo tocco.
 
 {# wf_blink_components: Blink>Payments #}
-{# wf_updated_on: 2018-01-15 #}
+{# wf_updated_on: 2018-03-29 #}
 {# wf_published_on: 2016-09-07 #}
 
 # Integrazione di Android Pay in Payment Request {: .page-title }
@@ -14,31 +14,31 @@ description: Android Pay consente acquisti online semplici e sicuri ed elimina l
 Warning: Android Pay è ora Pay with Google e consente l'accesso ai token di
 pagamento sul dispositivo e alle carte di credito e di debito dell'account
 Google di un utente. Per ulteriori informazioni su Pay with Google, leggi la
-documentazione di [Google Pay API](/payments/) .
+documentazione sull'[API Google Pay](/payments/) .
 
 Android Pay consente acquisti online semplici e sicuri ed elimina la necessità
 per gli utenti di ricordare e inserire manualmente i propri dati di pagamento.
 Integra Android Pay per raggiungere milioni di utenti Android, incrementare le
-conversioni e offrire agli utenti una vera esperienza di pagamento one-touch.
+conversioni e offrire agli utenti un'autentica esperienza di pagamento a singolo tocco.
 
-**Semplice:** accettare Android Pay è semplice e non richiede modifiche
+**Semplicità:** accettare Android Pay è semplice e non richiede modifiche
 all'elaborazione dei pagamenti. I principali [gateway di
 pagamento](/android-pay/) e piattaforme di elaborazione stanno giù aggiungendo
-il supporto per rendere ancora più semplice per gli sviluppatori abilitare
+il supporto per gli sviluppatori e consentire di semplificare l'abilitazione di
 Android Pay.
 
-**Sicuro:** Android Pay funziona memorizzando in modo sicuro un numero di
+**Sicurezza:** Android Pay funziona memorizzando in modo sicuro un numero di
 account virtuale associato all'account di pagamento di un utente. Ciò consente
-acquisti online senza che l'utente debba inviare il proprio numero reale di
+acquisti online senza che l'utente debba inviare il numero vero e proprio di
 carta di credito o di debito. Android Pay crittografa ogni transazione di
 pagamento, mantenendo al sicuro i dati dell'utente.
 
 **Supporto:** Android Pay è supportato in un numero crescente di paesi e dalla
-maggior parte delle principali circuiti di carte di credito e banche ed è
-disponibile su tutti i telefoni Android con KitKat e versioni successive. Fare
-riferimento a questa [pagina del centro
+maggior parte dei principali circuiti di carte di credito e banche ed è
+disponibile su tutti i telefoni Android con KitKat e versioni successive.
+Consulta questa [pagina del centro
 assistenza](https://support.google.com/androidpay/answer/6314169) per la
-documentazione completa sulla disponibilità per paese e tipo di carta.
+documentazione completa sulla disponibilità in base al paese e al tipo di carta.
 
 ## Come funziona
 
@@ -58,7 +58,7 @@ figure {
 <div class="figures">
   <figure>
     <img src="images/how_it_works_1.jpg">
-    <figcaption>1. Premere "Pagamento".</figcaption>
+    <figcaption>1. Premi "Pagamento".</figcaption>
   </figure>
   <figure>
     <img src="images/how_it_works_2.jpg">
@@ -66,13 +66,13 @@ figure {
   </figure>
   <figure>
     <img src="images/how_it_works_3.jpg">
-<figcaption>3. Scegli il metodo di pagamento, ecc. e premi
+<figcaption>3. Scegli il metodo di pagamento e premi
 "Paga".</figcaption>
   </figure>
   <figure>
     <img src="images/how_it_works_4.jpg">
-<figcaption>4. Quando viene visualizzata l'app Android Pay, fare clic per
-continuare (all'utente potrebbe essere richiesto di sbloccare il telefono /
+<figcaption>4. Quando viene visualizzata l'app Android Pay, fai clic per
+continuare (all'utente potrebbe essere richiesto di sbloccare il telefono/
 autenticarsi con le impronte digitali)</figcaption>
   </figure>
   <figure>
@@ -81,16 +81,16 @@ autenticarsi con le impronte digitali)</figcaption>
   </figure>
 </div>
 
-## Prepararsi
+## Come prepararsi
 
-### Conoscenza richiesta
+### Cosa bisogna sapere
 
 - Poiché Android Pay in Chrome utilizza PaymentRequest API, è essenziale
-familiarizzare con [PaymentRequest
-API](/web/fundamentals/payments/deep-dive-into-payment-request) prima di
+familiarizzare con l'[API PaymentRequest
+](/web/fundamentals/payments/deep-dive-into-payment-request) prima di
 continuare.
-- Anche se non sei uno sviluppatore Android, sarà utile conoscere le [Android
-Pay in-app API](/android-pay/android/tutorial). Poiché le risposte restituite da
+- Anche se non sei uno sviluppatore Android, sarà utile conoscere le [API Android
+Pay in-app](/android-pay/android/tutorial). Poiché le risposte restituite da
 Android Pay sono le stesse su Android e Chrome, le informazioni sulla gestione
 della risposta sono utili.
 - Esamina le [norme relative ai
@@ -101,64 +101,64 @@ servizi siano supportati.
 ### Impostazione dell'ambiente
 
 - Assicurati di avere l'app Android Pay installata sul tuo dispositivo. È
-necessario essere in uno dei paesi supportati per installarlo. Controlla su
+necessario essere in uno dei paesi supportati per installarla. Controlla su
 [android.com/pay](https://www.android.com/pay/) {: .external} per vedere se il
-tuo Paese è supportato.
-- Per i test, devi [aggiungere una carta di
+tuo Paese rientra nella lista.
+- Per il testing, devi [aggiungere una carta di
 credito](https://support.google.com/androidpay/answer/6289372) ad Android Pay
 sul tuo dispositivo.
 - Registrati per Android Pay 
--  Aggiungi la tua azienda, l'origine del sito e l'e-mail aziendale ecc.
-Utilizzando [questo modulo.](https://goo.gl/forms/dga1yH1MYcA6QR8x2)
-- Assicurarsi che [il gateway / processore di pagamento supporti token Android
-Pay](/android-pay/#processors) .
+-  Aggiungi la tua azienda, l'origine del sito, l'email aziendale ecc.
+utilizzando [questo modulo].(https://goo.gl/forms/dga1yH1MYcA6QR8x2)
+- Assicurati che [il gateway/processore di pagamento supporti i token Android
+Pay](/android-pay/#processors).
 - Acquisisci una coppia di chiavi utilizzata per crittografare la risposta da
 Android Pay se stai utilizzando l'[approccio token
-network](#integration-using-network-token) .
--  Google ti consiglia di lavorare con il tuo processore di pagamento per
+di rete](#integration-using-network-token).
+-  Google ti consiglia di utilizzare il tuo processore di pagamento per
 ottenere una chiave pubblica. Questo semplifica il processo in quanto il tuo
-processore sarà in grado di gestire la decrittazione del Payload Android Pay.
+processore sarà in grado di gestire la decrittografia del Payload Android Pay.
 Trova maggiori informazioni nella documentazione del tuo processore di
 pagamento.
--  Se si desidera gestire autonomamente la crittografia, fare riferimento a
-[Crittografia token di
+-  Se desideri gestire autonomamente la crittografia, fai riferimento a
+[Crittografia dei token di
 pagamento](/android-pay/integration/payment-token-cryptography) per generare una
-chiave di crittografia integrata Elliptic Curve codificata Base64.
+chiave Elliptic Curve Integrated Encryption codificata a base64.
 
 ## Integrazione di Android Pay in Payment Request
 
-Con Android Pay per Payment Request API, puoi richiedere uno dei due tipi di
-token di pagamento: gateway o network. Se utilizzi Braintree, Stripe o Vantiv
+Con Android Pay per l'API Payment Request, puoi richiedere uno dei due tipi di
+token di pagamento: gateway o rete. Se utilizzi Braintree, Stripe o Vantiv
 come gateway di pagamento, puoi richiedere un token gateway da Android Pay. In
-caso contrario, è possibile richiedere un pacchetto di token network
-crittografato. È possibile gestire il token network o lavorare con il processore
-per gestire la decodifica del pacchetto di token.
+caso contrario, puoi richiedere un bundle di token di rete
+crittografato. Puoi gestire il token di rete o lavorare con il processore
+per gestire la decodifica del bundle di token.
 
-### Approccio token gateway
+### Approccio token di gateway
 
-Android Pay non elabora il pagamento. Il commerciante deve comunque invocare
-gateway API per caricare/elaborare il token gateway restituito da Android Pay.
+Android Pay non elabora il pagamento. Il commerciante deve comunque richiamare
+le API gateway per caricare/elaborare il token gateway restituito da Android Pay.
 
 Lascia che Android Pay API restituisca un token gateway. Questo è il flusso
-consigliato se si utilizza Braintree, Stripe o Vantiv.
+consigliato se utilizzi Braintree, Stripe o Vantiv.
 
 <a href="images/gateway_token.png" target="_blank"><img
 src="images/gateway_token.png"></a>
 
-### Approccio token network
+### Approccio token di rete
 
-Lascia che Android Pay API restituisca un pacchetto token network crittografato.
+Lascia che l'API Android Pay restituisca un bundle di token di rete crittografato.
 È quindi possibile decodificare il token o sfruttare le API del processore per
 gestire la decodifica ed addebitare il token.
 
 <a href="images/network_token.png" target="_blank"><img
 src="images/network_token.png"></a>
 
-## Integrazione utilizzando il token gateway
+## Integrazione tramite i token di gateway
 
 L'esempio seguente illustra come richiedere un token direttamente dal gateway di
-pagamento. In questo esempio descriviamo come richiedere un token Stripe. Se si
-utilizzano altri gateway di pagamento come Braintree o Vantiv, contattare il
+pagamento. In questo esempio descriviamo come richiedere un token Stripe. Se
+utilizzi altri gateway di pagamento come Braintree o Vantiv, contatta il
 processore per i parametri specifici del gateway di pagamento.
 
 Nella richiesta di un token gateway, Android Pay effettua una chiamata al
@@ -197,24 +197,24 @@ var supportedInstruments = [
 ```
 
 Per utilizzare Android Pay con l'approccio token gateway, aggiungi un oggetto
-JSON che contenga i seguenti parametri per l'esempio precedente.
+JSON che contenga i seguenti parametri come nell'esempio precedente.
 
-- `supportedMethods: [ 'https://android.com/pay' ]`: indica che si tratta di un
+- `supportedMethods: [ 'https://android.com/pay' ]`: indica un
 metodo di pagamento che utilizza Android Pay.
-- `data` : si tratta di valori specifici per Android Pay che non sono ancora
+- `data`: indica valori specifici per Android Pay che non sono ancora
 standardizzati.
 -  `merchantId` : l'ID commerciante Android Pay che hai ottenuto
 [iscrivendoti ad Android Pay](https://goo.gl/forms/dga1yH1MYcA6QR8x2).
--  `environment:'TEST'` : aggiungi questo se esegui test con Android Pay. Il
+-  `environment:'TEST'` : aggiungi questo se esegui il testing con Android Pay. Il
 token del gateway generato non sarà valido.
--  `allowedCardNetworks` : fornisce una serie di circuiti di carte di
+-  `allowedCardNetworks` : fornisce una serie di reti di carte di
 credito che costituiscono una risposta Android Pay valida. Accetta "AMEX",
 "DISCOVER", "MASTERCARD" e "VISA".
     -  `paymentMethodTokenizationParameters` : 
 -  `tokenizationType` : 'GATEWAY_TOKEN': indica che stai adottando
 l'approccio token gateway.
--  `parameters` : `parameters` specifici del gateway di pagamento. Fare
-riferimento alla documentazione specifica del gateway di pagamento.
+-  `parameters` : `parameters` specifici del gateway di pagamento.
+Consulta la documentazione specifica sul gateway di pagamento.
 
 #### Gestione della risposta di Android Pay
 
@@ -238,19 +238,19 @@ payment.show().then(function(response) {
 
 La risposta da PaymentRequest conterrà le informazioni di spedizione e di
 contatto come negli esempi analizzati nell'[approfondimento a
-PaymentRequest](/web/fundamentals/payments/deep-dive-into-payment-request) , ma
-ora include una risposta aggiuntiva da Android Pay contenente
+PaymentRequest](/web/fundamentals/payments/deep-dive-into-payment-request) ma
+ora include anche un'altra risposta di Android Pay contenente le:
 
 - Informazioni sull'indirizzo di fatturazione
-- Informazioni sui contatti
+- Informazioni sul contatto
 - Informazioni sullo strumento di pagamento
-- Dettagli sul token di pagamento
+- Informazioni sul token di pagamento
 
 Il modo in cui gestisci un token gateway inviato dipende dal gateway di
-pagamento. Si prega di fare riferimento alla documentazione del gateway
-specifico per maggiori dettagli.
+pagamento. Consulta la specifica documentazione sui gateway
+per maggiori dettagli.
 
-#### Mettere tutto insieme
+#### Sintesi
 
 ```
 function onBuyClicked() {
@@ -400,7 +400,7 @@ function onBuyClicked() {
 document.querySelector('#start').addEventListener('click', onBuyClicked);
 ```
 
-### Integrazione tramite Network Token
+### Integrazione tramite i token di rete
 
 La richiesta di un token di rete richiede l'inserimento di due parti di
 informazioni nel PaymentRequest.
@@ -437,16 +437,16 @@ var supportedInstruments = [
 ];
 ```
 
-Per utilizzare Android Pay con l'approccio token network, aggiungi un oggetto
+Per utilizzare Android Pay con l'approccio token di rete, aggiungi un oggetto
 JSON che contenga i seguenti parametri per l'esempio precedente.
 
-- `supportedMethods: [ 'https://android.com/pay' ]` : indica che si tratta di un
+- `supportedMethods: [ 'https://android.com/pay' ]`: indica un
 metodo di pagamento che utilizza Android Pay.
 - `data` : 
--  `merchantId` : l'ID commerciante Android Pay che hai ottenuto
-[iscrivendoti ad Android Pay](https://androidpay.developers.google.com/signup) .
--  `environment:'TEST'` : aggiungi questo se esegui test con Android Pay. Il
-token generato non sarà valido. Per l'ambiente di produzione, rimuovere questa
+-  `merchantId`: l'ID commerciante Android Pay che hai ottenuto
+[iscrivendoti ad Android Pay](https://androidpay.developers.google.com/signup).
+-  `environment:'TEST'`:  aggiungilo se esegui il testing con Android Pay. Il
+token generato non sarà valido. Per l'ambiente di produzione, rimuovi questa
 riga.
 -  `allowedCardNetworks` : fornisce una serie di reti di carte di credito
 che costituiscono una risposta Android Pay valida.
@@ -458,9 +458,9 @@ rete. (Vedi [Come generare chiavi di
 crittografia](/android-pay/integration/gateway-processor-integration#retrieving-the-encrypted-payload)
 .)
 
-#### Gestione della risposte Android Pay
+#### Gestione della risposta Android Pay
 
-Dopo aver aggiunto l'oggetto Android Pay, Chrome può richiedere un token network
+Dopo aver aggiunto l'oggetto Android Pay, Chrome può richiedere un token di rete
 di pagamento.
 
 ```
@@ -479,24 +479,24 @@ payment.show().then(function(response) {
 ```
 
 La risposta crittografata da PaymentRequest conterrà le informazioni di
-spedizione e di contatto come negli esempi delineati dall'[approfondimento di
+spedizione e di contatto come negli esempi delineati nell'[approfondimento di
 PaymentRequest](/web/fundamentals/payments/deep-dive-into-payment-request), ma
-ora include una risposta aggiuntiva da Android Pay contenente
+ora include anche un'altra risposta di Android Pay contenente le:
 
-- Informazioni sulla carta di credito con token
+- Informazioni sulla carta di credito in formato token
 - Informazioni sull'indirizzo di fatturazione
 - Informazioni sullo strumento di pagamento
-- Dettagli sul token di pagamento
+- Informazioni sul token di pagamento
 
-Per una più semplice integrazione dei token network, si consiglia di trasferire
-il payload crittografato direttamente al gateway di pagamento e consentire loro
+Per una più semplice integrazione dei token di rete, trasferirisci
+il payload crittografato direttamente al gateway di pagamento per consentire loro
 di gestire la decodifica. Decifrare il payload da soli è più complesso e
-coinvolge la gestione delle chiavi private. Si prega di contattare il gateway di
+coinvolge la gestione delle chiavi private. Contatta il gateway di
 pagamento per vedere se questa funzionalità è disponibile.
 
-Il modo in cui gestisci un token network inviato dipende dal gateway di
-pagamento. Si prega di fare riferimento alla documentazione del gateway
-specifico per maggiori dettagli.
+Il modo in cui gestisci un token di rete inviato dipende dal gateway di
+pagamento. Fai riferimento alla documentazione dello
+specifico gateway per ulteriori dettagli.
 
 Qui viene omesso un esempio di codice, poiché non vi è alcuna differenza con
 l'approccio token gateway tranne che nella costruzione dell'oggetto
