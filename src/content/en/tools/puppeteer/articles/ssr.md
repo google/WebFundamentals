@@ -323,7 +323,7 @@ avoid re-adding posts again. 👍
   const container = document.querySelector('#container');
 
   // Posts markup is already in DOM if we're seeing a SSR'd.
-  // Don't re-hydrate the psots here on the client.
+  // Don't re-hydrate the posts here on the client.
   const PRE_RENDERED = container.querySelector('#posts');
   if (!PRE_RENDERED) {
     const posts = await fetch('/posts').then(resp => resp.json());
@@ -685,7 +685,7 @@ loads.
 
 ```
 page.on('request', req => {
-  // Don't load Google Analytics lib requests so pagviews aren't 2x.
+  // Don't load Google Analytics lib requests so pageviews aren't 2x.
   const blacklist = ['/gtag/js', 'ga.js', 'analytics.js'];
   if (blacklist.find(regex => req.url().match(regex))) {
     return req.abort();
