@@ -60,10 +60,14 @@ async function ssr(url) {
 }
 ```
 
+See this in action on [this app](https://devwebfeed.appspot.com/ssr)
+([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)).
+
+
 Note: I'll be using ES modules (`import`) in this article, which require Node
 8.5.0+ and running with the `--experimental-modules` flag. Feel free to use
 `require()` statements if they bother you.
-[Read more](https://nodejs.org/api/esm.html) about Node's ES Modules support.
+[Read more](https://nodejs.org/api/esm.html) about Node's ES Modules support
 
 ## Introduction
 
@@ -74,12 +78,13 @@ might be a <abbr title="Single Page Application">SPA</abbr>,
 something more complex like a library or framework. To be honest, your tech
 stack doesn't matter. What matters is that you spent a lot of time building
 Awesome Web Thing and users are unable to discover it. The other reason you
-might be here is because some article mentioned that server-side rendering is
-good for performance. You're here for quick win to reduce [JavaScript startup cost](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
+might be here is because some article out on The Webz mentioned that
+server-side rendering is good for performance. You're here for that quick win to
+reduce [JavaScript startup cost](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
 and improve
 [first meaningful paint](/web/tools/lighthouse/audits/first-meaningful-paint).
 
-Headless Chrome can solve both of these problems.
+Headless Chrome can help with both of these problems.
 
 ### Search engines fail the modern web {: #modern }
 
