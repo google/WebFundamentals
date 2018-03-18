@@ -726,7 +726,8 @@ client and everyone feels a moment of zen.
 
 In practice, I've found universal JS difficult to pull off. A personal story...
 
-> I recently started a [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
+> I recently started a
+[a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
 is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/) using JS
 template literals, then efficiently render those templates to
