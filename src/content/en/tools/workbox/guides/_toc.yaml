@@ -34,7 +34,7 @@ toc:
   - title: "Gulp or Node"
     path: /web/tools/workbox/guides/generate-service-worker/workbox-build
   - title: "Webpack"
-    path: /web/tools/workbox/guides/generate-service-workers/webpack
+    path: /web/tools/workbox/guides/generate-service-worker/webpack
 - title: "Codelabs"
   style: accordion
   section:
