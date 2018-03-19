@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Modifying the DOM order with tabindex
 
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -236,9 +236,7 @@ DevTools to observe the tabindex moving from one radio to the next.
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"
-  integrity="sha384-X+sPgouWG/knuZdpE20Kl2dNDcdIvkx6iL3fcATubVaWW37Za9FeNqAFO14x1NB3"
-  crossorigin="anonymous">
+<script src="https://www.gstatic.com/devrel-devsite/v9dcc115658e2b070ea1ae9baed63d566/developers/js/custom-elements.min.js">
 </script>
 
 <script>
