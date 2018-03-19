@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -443,6 +443,13 @@ updated API surface.
 
 - The API now exposes two classes, `GenerateSW` and `InjectManifest`. This makes the toggling
 between modes explicit, vs. the v2 behavior where behavior changed based on the presence of `swSrc`.
+
+- By default, assets in the webpack compilation pipeline will be precached, and it is no longer
+necessary to configure `globPatterns`. The only reason to continue using `globPatterns` is if you
+need to precache assets that are
+[not included](/web/tools/workbox/modules/workbox-webpack-plugin#cache_additional_non-webpack_assets)
+in your webpack build. In general, when migrating to the v3 plugin, you should start by removing all
+of your previous `glob`-based configuration, and only re-add it if you specifically need it.
 
 ## Getting help
 
