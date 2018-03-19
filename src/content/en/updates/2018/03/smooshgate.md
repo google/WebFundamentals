@@ -193,10 +193,10 @@ feedback came _after_ trying to ship it: the feature, in its current state,
 breaks the Web. Hard-to-predict issues like these are part of the reason why
 the TC39 process doesn’t just end once browsers ship a feature.
 
-TC39 operates on consensus, meaning that a single person can prevent a change
-from being made if they disagree with it. Even if `smoosh` had been a serious
-suggestion, it seems likely that a committee member would object to it in
-favor of a more common name like `compact` or `chain`.
+TC39 operates on consensus, meaning the committee has to agree on any new
+changes. Even if `smoosh` had been a serious suggestion, it seems likely that
+a committee member would object to it in favor of a more common name like
+`compact` or `chain`.
 
 The renaming from `flatten` to `smoosh` (even if it hadn’t been a joke) has
 never been discussed at a TC39 meeting. As such, the official TC39 stance on
