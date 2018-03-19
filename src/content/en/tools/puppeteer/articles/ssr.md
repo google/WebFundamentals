@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and SEO friendliness.
 
-{# wf_updated_on: 2018-03-17 #}
+{# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,seo #}
@@ -341,8 +341,8 @@ avoid re-adding posts again. 👍
 
 ## Prerendering for search crawlers {: #searchssr }
 
-Another option is to serve prerendered content just to the search
-crawlers and leave regular users to consume the client-side app.
+If server resources are a concern, consider prerendering content only
+for the search crawlers and keep regular users consuming the client-side app.
 
 Do this by checking the `User-Agent` for the search bot(s) you want to target:
 
@@ -680,13 +680,12 @@ before the rest of the page's JavaScript executes.
 ### Avoid inflating Analytics pageviews {: #analytics }
 
 Be careful if you're using Analytics on your site. Prerendering pages will
-likely result in inflated pageview numbers. Specifically, **you'll see 2x the
-number of hits**. One hit when headless Chrome renders the page and another
+may result in inflated pageviews. Specifically, **you'll see 2x the
+number of hits**, one hit when headless Chrome renders the page and another
 when the user's browser renders it.
 
-So what's the fix? Use network interception to abort any request(s) that tried
-to load the Analytics library. Page hits never get recorded if the code never
-loads.
+So what's the fix? Use network interception to abort any request(s) that tries
+to load the Analytics library.
 
 ```
 page.on('request', req => {
@@ -700,7 +699,11 @@ page.on('request', req => {
 });
 ```
 
-Boom 💥.
+Page hits never get recorded if the code never loads. Boom 💥.
+
+Alternatively, continue to load your Analytics libraries to gain insight
+into how many prerenders your server is performing.
+{: .objective }
 
 ## Conclusion
 
