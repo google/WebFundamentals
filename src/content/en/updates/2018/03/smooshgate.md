@@ -53,7 +53,7 @@ The same proposal includes `Array.prototype.flatMap`, which is like
 // → [2, 4, 3, 6, 4, 8]
 ```
 
-## What is MooTools doing wrong? {: #mootools }
+## What is MooTools doing that causes this problem? {: #mootools }
 
 MooTools defines their own non-standard version of `Array.prototype.flatten`:
 
