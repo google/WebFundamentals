@@ -11,7 +11,7 @@ The app is now all set to handle push notifications. Try it now:
    displays a push notification from the app.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/push.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/push.png"
          alt="Simulating a push notification from DevTools"/>
        <figcaption>
          <b>Figure 11</b>. Simulating a push notification from DevTools

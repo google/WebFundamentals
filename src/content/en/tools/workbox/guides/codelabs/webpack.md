@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make a webpack-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2017-10-31 #}
 {# wf_blink_components: N/A #}
 
@@ -13,7 +13,7 @@ description: Learn how to make a webpack-based app work offline by adding Workbo
 In this codelab, you use Workbox to make a simple web app work offline.
 
 If you'd like a conceptual overview of Workbox before starting this tutorial,
-see the [Overview](/web/tools/workbox/overview).
+see the [overview](/web/tools/workbox/).
 
 ## Step 1: Set up your project {: #setup }
 

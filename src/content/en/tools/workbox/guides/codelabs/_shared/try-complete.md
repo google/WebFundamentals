@@ -10,7 +10,7 @@ The app now provides a complete offline experience. Try it now:
    the page, and then try again.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/offline-complete.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/offline-complete.png"
          alt="The complete offline experience"/>
        <figcaption>
          <b>Figure 10</b>. The complete offline experience

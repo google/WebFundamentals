@@ -11,7 +11,7 @@ service workers](http://caniuse.com/#search=service%20workers).
 1. Click **Show**. The live app appears in a new tab.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/live.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/live.png"
          alt="The live app"/>
        <figcaption>
          <b>Figure 2</b>. The live app
@@ -29,7 +29,7 @@ service workers](http://caniuse.com/#search=service%20workers).
    Chrome now has no connection to the Internet in this tab.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/offline.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/offline.png"
          alt="The 'Go Offline' command"/>
        <figcaption>
          <b>Figure 3</b>. The <b>Go Offline</b> command
@@ -40,7 +40,7 @@ service workers](http://caniuse.com/#search=service%20workers).
    the app doesn't work at all when offline.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/no-internet.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/no-internet.png"
          alt="The initial app doesn't work at all when offline"/>
        <figcaption>
          <b>Figure 4</b>. The initial app doesn't work at all when offline
