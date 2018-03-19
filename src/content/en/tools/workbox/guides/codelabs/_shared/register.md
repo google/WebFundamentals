@@ -26,7 +26,7 @@ your app, yet.
 1. Click the **Service Workers** tab.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/sw-pane.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/sw-pane.png"
          alt="The Service Workers pane"/>
        <figcaption>
          <b>Figure 6</b>. The Service Workers pane
@@ -37,7 +37,7 @@ your app, yet.
    service worker code that Workbox generated. It should look close to this:
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/sources.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/sources.png"
          alt="The generated service worker code"/>
        <figcaption>
          <b>Figure 7</b>. The generated service worker code
@@ -63,7 +63,7 @@ Your app now sort-of works offline. Try it now:
    this resource, yet.
 
      <figure>
-       <img src="/web/tools/workbox/get-started/imgs/shared/offline-capable.png"
+       <img src="/web/tools/workbox/guides/codelabs/imgs/shared/offline-capable.png"
          alt="The incomplete offline experience"/>
        <figcaption>
          <b>Figure 8</b>. The incomplete offline experience
@@ -81,7 +81,7 @@ The service worker code is generated based on your Workbox configuration.
   DevTools.
 
     <figure>
-      <img src="/web/tools/workbox/get-started/imgs/shared/lib-src.png"
+      <img src="/web/tools/workbox/guides/codelabs/imgs/shared/lib-src.png"
         alt="The code for Workbox's service worker library"/>
       <figcaption>
         <b>Figure 9</b>. The code for Workbox's service worker library
