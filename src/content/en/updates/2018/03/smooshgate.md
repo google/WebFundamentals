@@ -199,7 +199,7 @@ suggestion, it seems likely that a committee member would object to it in
 favor of a more common name like `compact` or `chain`.
 
 The renaming from `flatten` to `smoosh` (even if it hadn’t been a joke) has
-never been discussed at a TC39 meeting. As such, the official TC39 stance no
+never been discussed at a TC39 meeting. As such, the official TC39 stance on
 this topic is currently unknown. No single individual can speak on behalf of
 all of TC39 until consensus is reached at the next meeting.
 
