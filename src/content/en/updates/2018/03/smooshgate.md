@@ -152,7 +152,7 @@ idea. However, it doesn’t solve the problem at hand. Even if MooTools were
 to release a patched version, all existing websites using it would have to
 update for the compatibility problem to go away.
 
-Can’t people just update their copy of MooTools? {: #update-mootools }
+## Can’t people just update their copy of MooTools? {: #update-mootools }
 
 In a perfect world, MooTools would release a patch, and every single website
 using MooTools would magically be updated the next day. Problem solved,
