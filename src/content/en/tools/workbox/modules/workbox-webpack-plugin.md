@@ -165,6 +165,6 @@ in-memory file system is used.
 
 ## Extra Info
 
-Guidance on using the plugins within the context of a larger webpack build can
-be found in the "[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section of the
-webpack documentation.
+Guidance on using the plugins within the context of a larger webpack build can be found in the
+"[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section
+of the webpack documentation.

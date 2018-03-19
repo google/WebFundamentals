@@ -447,7 +447,7 @@ between modes explicit, vs. the v2 behavior where behavior changed based on the 
 - By default, assets in the webpack compilation pipeline will be precached, and it is no longer
 necessary to configure `globPatterns`. The only reason to continue using `globPatterns` is if you
 need to precache assets that are
-[not included](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#cache_additional_non-webpack_assets)
+[not included](/web/tools/workbox/modules/workbox-webpack-plugin#cache_additional_non-webpack_assets)
 in your webpack build. In general, when migrating to the v3 plugin, you should start by removing all
 of your previous `glob`-based configuration, and only re-add it if you specifically need it.
 
