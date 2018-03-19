@@ -1,11 +1,11 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and SEO friendliness.
+description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better search indexability.
 
 {# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_blink_components: Internals>Headless #}
-{# wf_tags: puppeteer,headless,testing,ssr,prerender,seo #}
+{# wf_tags: puppeteer,headless,testing,ssr,prerender,search #}
 
 # Headless Chrome: an answer to server-side rendering JS sites {: .page-title }
 
@@ -86,7 +86,7 @@ and improve
 
 Headless Chrome can help with both of these problems.
 
-### Search engines fail the modern web {: #modern }
+### Search crawlers fail the modern web {: #modern }
 
 Search engines weren't built to understand client-side JS applications. They
 were built to crawl static HTML pages. Google Search,
@@ -108,11 +108,11 @@ that you should use it with caution. The reason is that GoogleBot (among other
 search engines) don't support these new goodies. If said feature plays a
 critical role in rendering your page, the search bot hits the app, gets JS
 errors, and can't render your busted page. That can have adverse effect on
-search indexing and SEO.
+search indexing.
 
 ## Prerendering pages using headless Chrome {: #headless }
 
-All search engines know HTML. What we need to "solve" the SEO problem is
+All search engines know HTML. What we need to "solve" the indexing problem is
 a tool that produces HTML from executing JS. 🤔 What if I told you there is
 such a tool?
 
@@ -709,8 +709,8 @@ into how many prerenders your server is performing.
 
 Puppeteer makes it easy to server-side render pages by running headless Chrome,
 as a companion, on your web server. My favorite "feature" this approach is that
-you can literally **improve loading performance** and gain **SEO benefits
-without making significant code changes** to your app!
+you can literally **improve loading performance and the indexability of
+your app** without significant code changes** to your app!
 
 Note: If you're curious to see a working app that uses the techniques described
 in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
