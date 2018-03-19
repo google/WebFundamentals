@@ -1704,3 +1704,16 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+  
+bcetienne:
+  name:
+    given: Etienne
+    family: Blanc-Coquand
+  twitter: bcetienne
+  github: bcetienne
+  role:
+    - translator
+  description:
+    en: ""
+  country: FR
+  email: etienne1296pro@gmail.com
