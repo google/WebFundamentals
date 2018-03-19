@@ -369,7 +369,7 @@ is all you need:
         new HtmlWebpackPlugin({
           // Inline all files which names start with “runtime~” and end with “.js”.
           // That’s the default naming of runtime chunks
-          inlineSource: '^runtime~.+\\.js$',
+          inlineSource: 'runtime~.+\\.js',
         }),
         // This plugin enables the “inlineSource” option
         new InlineSourcePlugin(),
