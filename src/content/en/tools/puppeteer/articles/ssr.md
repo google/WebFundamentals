@@ -40,7 +40,7 @@ crawlers**.
 {: .objective }
 
 The techniques in this article show how to use Puppeteer's APIs to add
-server-side rendering <abbr title="Server-Side Rendering">SSR</abbr>
+server-side rendering (<abbr title="Server-Side Rendering">SSR</abbr>)
 capabilities to an Express web server. The best part is **the app itself
 requires almost no code changes**. Headless does all the heavy lifting. In a
 couple of lines of code you can SSR any page and get its final markup.
@@ -86,7 +86,7 @@ and improve
 
 Headless Chrome can help with both of these problems.
 
-### Search crawlers fail the modern web {: #modern }
+### Search crawlers fail at the modern web {: #modern }
 
 Search engines weren't built to understand client-side JS applications. They
 were built to crawl static HTML pages. Google Search,
@@ -270,16 +270,16 @@ Example of the response sent back by this server:
 
 ### 4. Performance results {: #perfresults}
 
+Note: these numbers incorporate most of the performance
+[optimizations](#optimizations) I discuss later.
+
 What about performance numbers? On one of my
 [apps](https://devwebfeed.appspot.com/ssr)
-([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)),
-DevTools **3G Slow emulation** results in a
-[FCP](/web/fundamentals/performance/user-centric-performance-metrics) that is
-**8.37s faster**. That's huge! And we didn't make any code changes to the
-client-side app.
-
-Note: these numbers incorporate most of the performance
-[optimizations](#optimizations) I discuss below.
+([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
+Chrom takes about 1s to render the page on the server. Once the page is cached,
+DevTools **3G Slow emulation** puts
+[FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
+**8.37s faster** than the client-side version.
 
 <table>
   <tr><th></th><th>First Paint (FP)</th><th>First Contentful Paint (FCP)</th></tr>
@@ -287,8 +287,9 @@ Note: these numbers incorporate most of the performance
   <tr><td>SSR version</td><td>2.3s</td><td>~2.3s</td></tr>
 </table>
 
-With these results users see meaningful content much quicker. The server-side
-rendered app is **no longer reliant on JavaScript to load + shows posts**.
+These results are promising. Users see meaningful content much quicker because
+the server-side rendered page **no longer relies on JavaScript to load + shows
+posts**.
 
 ## Preventing re-hydration {: #rerender }
 
@@ -690,7 +691,7 @@ to load the Analytics library.
 ```
 page.on('request', req => {
   // Don't load Google Analytics lib requests so pageviews aren't 2x.
-  const blacklist = ['/gtag/js', 'ga.js', 'analytics.js'];
+  const blacklist = ['www.google-analytics.com', '/gtag/js', 'ga.js', 'analytics.js'];
   if (blacklist.find(regex => req.url().match(regex))) {
     return req.abort();
   }
@@ -708,8 +709,8 @@ into how many prerenders your server is performing.
 ## Conclusion
 
 Puppeteer makes it easy to server-side render pages by running headless Chrome,
-as a companion, on your web server. My favorite "feature" this approach is that
-you can literally **improve loading performance and the indexability of
+as a companion, on your web server. My favorite "feature" of this approach is
+that you can literally **improve loading performance and the indexability of
 your app** without significant code changes** to your app!
 
 Note: If you're curious to see a working app that uses the techniques described
