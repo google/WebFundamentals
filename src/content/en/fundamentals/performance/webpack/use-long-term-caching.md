@@ -357,7 +357,7 @@ Here’s how to do it.
 If you use the
 [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin) to generate
 an HTML file, the
-[InlineSourcePlugin](https://github.com/werk85/html-webpack-inline-source-plugin)
+[InlineSourcePlugin](https://github.com/DustinJackson/html-webpack-inline-source-plugin)
 is all you need:
 
     // webpack.config.js
