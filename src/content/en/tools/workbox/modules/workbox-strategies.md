@@ -45,7 +45,7 @@ is not vital to the application.
 ```javascript
 workbox.routing(
   new RegExp('/images/avatars/'),
-  workbox.strategies.staleWhileRevaliate()
+  workbox.strategies.staleWhileRevalidate()
 );
 ```
 
