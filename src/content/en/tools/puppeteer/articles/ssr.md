@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better search indexability.
 
-{# wf_updated_on: 2018-03-19 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search #}
@@ -705,6 +705,10 @@ Page hits never get recorded if the code never loads. Boom 💥.
 Alternatively, continue to load your Analytics libraries to gain insight
 into how many prerenders your server is performing.
 {: .objective }
+
+## Future worker {: #future }
+
+- Setup a cron to periodically crawl your site using Puppeteer and prerender all pages.
 
 ## Conclusion
 
