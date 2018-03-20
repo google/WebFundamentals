@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 63/64.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -213,7 +213,7 @@ example above needs to be updated based on your video encoding properties.
     Color depth is 48 bytes or more.
   </li>
   <li>
-    <span id="vp9"></span>
+    <span id="vp09.00.10.08"></span>
     Browser supports VP9 Profile 2, Level 1, 10-bit YUV content.
   </li>
 </ul>
@@ -245,7 +245,7 @@ the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 const config = [{
   sessionTypes: ['persistent-license'],
   videoCapabilities: [{
-    contentType: 'video/webm; codecs="vp9"',
+    contentType: 'video/webm; codecs="vp09.00.10.08"',
     robustness: 'SW_SECURE_DECODE' // Widevine L3
   }]
 }];
