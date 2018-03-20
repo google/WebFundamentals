@@ -127,10 +127,10 @@ working, that’s bad for *everyone*:
   of fiction”](https://www.webstandards.org/2009/05/13/interview-with-ian-hickson-editor-of-the-html-5-specification/#about-browsers)),
   which is bad for the standardization process.
 
-Sure, in retrospect MooTools did the wrong thing — but breaking the web
+Sure, in retrospect MooTools did the wrong thing — but breaking the Web
 doesn’t punish them, it punishes users. These users do not know what a moo
 tool is. Alternatively, we can find another solution, and users can continue
-to use the web. The choice is easy to make.
+to use the Web. The choice is easy to make.
 
 ## Does that mean bad APIs can never be removed from the Web Platform? {: #removing-apis }
 
