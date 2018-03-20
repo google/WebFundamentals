@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
