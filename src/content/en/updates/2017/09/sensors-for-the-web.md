@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Generic Sensor API is available for Origin Trials in Chrome 63.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-03-21 #}
 {# wf_published_on: 2017-09-18 #}
 {# wf_tags: sensors,origintrials,chrome63,news #}
 {# wf_blink_components: Blink>Sensor #}
@@ -68,6 +68,9 @@ number of advantages:
 - [Security and privacy](#privacy-and-security) aspects are the top priority
   for the Generic Sensor API and provide much better security level compared to
   older sensor APIs. There is integration with Permissions API.
+- Automatic [synchronization with screen coordinates](#synchronization-with-screen-coordinates) is
+  available for Accelerometer, Gyroscope, LinearAccelerationSensor, AbsoluteOrientationSensor,
+  RelativeOrientationSensor and Magnetometer.
 
 ## Generic Sensor APIs in Chrome {: #generic-sensor-api-in-chrome }
 
@@ -241,6 +244,50 @@ For more information about motion sensors, advanced use cases, and requirements,
 please check [motion sensors explainer](https://www.w3.org/TR/motion-sensors/)
 document.
 
+## Synchronization with screen coordinates {: #synchronization-with-screen-coordinates }
+
+By default, [spatial sensors'](https://w3c.github.io/sensors/#spatial-sensor) readings are resolved
+in a local coordinate system that is bound to the device and does not take screen orientation into
+account.
+
+<figure>
+  <img src="/web/updates/images/2017/09/sensors/device_coordinate_system.png"
+       alt="Device coordinate system">
+  <figcaption><b>Figure 4</b>: Device coordinate system</figcaption>
+</figure>
+
+However, many use cases like games or augmented and virtual reality require sensor readings to be
+resolved in a coordinate system that is instead bound to the screen orientation.
+
+<figure>
+  <img src="/web/updates/images/2017/09/sensors/screen_coordinate_system.png"
+       alt="Screen coordinate system">
+  <figcaption><b>Figure 5</b>: Screen coordinate system</figcaption>
+</figure>
+
+Previously, remapping of sensor readings to screen coordinates had to be implemented in JavaScript.
+This approach is inefficient and it also quite significantly increases the complexity of the web
+application code: the web application must watch screen orientation changes and perform coordinates
+transformations for sensor readings, which is not a trivial thing to do for Euler angles or
+quaternions.
+
+The Generic Sensor API provides much simpler and reliable solution! The local coordinate system is
+configurable for all defined spatial sensor classes: Accelerometer, Gyroscope,
+LinearAccelerationSensor, AbsoluteOrientationSensor, RelativeOrientationSensor and Magnetometer.
+By passing the `referenceFrame` option to the sensor object constructor the user defines whether the
+returned readings will be resolved in
+[device](https://w3c.github.io/accelerometer/#device-coordinate-system) or
+[screen](https://w3c.github.io/accelerometer/#screen-coordinate-system) coordinates.
+
+    // Sensor readings are resolved in the Device coordinate system by default.
+    // Alternatively, could be RelativeOrientationSensor({referenceFrame: "device"}).
+    const sensorRelDevice = new RelativeOrientationSensor();
+
+    // Sensor readings are resolved in the Screen coordinate system. No manual remapping is required!
+    const sensorRelScreen = new RelativeOrientationSensor({referenceFrame: "screen"});
+
+Note: The `referenceFrame` sensor option is supported in Chrome 66 or later.
+
 ## Let’s code! {: #lets-code }
 
 The Generic Sensor API is very simple and easy-to-use! The Sensor interface has
@@ -289,7 +336,7 @@ The device's orientation will be reflected in 3D `model` rotation within the Web
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/orientation_phone.png"
     alt="Sensor updates 3D model's orientation">
-  <figcaption><b>Figure 4</b>: Sensor updates orientation of a 3D model</figcaption>
+  <figcaption><b>Figure 6</b>: Sensor updates orientation of a 3D model</figcaption>
 </figure>
 
 ### Punchmeter
@@ -329,7 +376,7 @@ acceleration function.
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/punchmeter.png"
     alt="Demo web application for punch speed measurement">
-  <figcaption><b>Figure 5</b>: Measurement of a punch speed</figcaption>
+  <figcaption><b>Figure 7</b>: Measurement of a punch speed</figcaption>
 </figure>
 
 
@@ -416,5 +463,7 @@ for the Chrome implementation.
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5698781827825664](https://www.chromestatus.com/feature/5698781827825664)
 - Implementation Bugs: [http://crbug.com?q=component:Blink>Sensor](http://crbug.com?q=component:Blink>Sensor)
 - Sensors-dev Google group: [https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev](https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev)
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
