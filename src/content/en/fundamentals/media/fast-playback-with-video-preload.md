@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
 {# wf_published_on: 2017-08-17 #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_blink_components: Blink>Media #}
 
 # Fast Playback with Video Preload {: .page-title }
@@ -235,7 +235,7 @@ smaller files like "file_1.webm", "file_2.webm", "file_3.webm", etc.
 
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
-    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
 
     // If video is preloaded already, fetch will return immediately a response
     // from the browser cache (memory cache). Otherwise, it will perform a
@@ -296,7 +296,7 @@ Player], [JW Player], and [Video.js] are built to handle this for you.
 
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
-    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
 
     // Fetch beginning of the video by setting the Range HTTP request header.
     fetch('file.webm', { headers: { range: 'bytes=0-567139' } })
@@ -478,7 +478,7 @@ function onPlayButtonClick(videoFileUrl) {
     function sourceOpen() {
       URL.revokeObjectURL(video.src);
 
-      const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+      const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
       sourceBuffer.appendBuffer(data);
 
       video.play().then(_ => {

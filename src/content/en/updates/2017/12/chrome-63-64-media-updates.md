@@ -215,7 +215,7 @@ example above needs to be updated based on your video encoding properties.
     Color depth is 48 bytes or more.
   </li>
   <li>
-    <span id="vp9"></span>
+    <span id="vp09.00.10.08"></span>
     Browser supports VP9 Profile 2, Level 1, 10-bit YUV content.
   </li>
 </ul>
@@ -247,7 +247,7 @@ the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 const config = [{
   sessionTypes: ['persistent-license'],
   videoCapabilities: [{
-    contentType: 'video/webm; codecs="vp9"',
+    contentType: 'video/webm; codecs="vp09.00.10.08"',
     robustness: 'SW_SECURE_DECODE' // Widevine L3
   }]
 }];
