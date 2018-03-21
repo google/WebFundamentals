@@ -36,8 +36,6 @@ footer:
     contents:
     - label: Instructor Led Training
       path: /web/ilt/
-    - label: PWA Training for Agencies
-      path: /web/events/pwa-agency-training/
     - label: Web Courses at Udacity
       path: /web/shows/udacity/
     - label: Agencies
