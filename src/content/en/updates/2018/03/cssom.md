@@ -92,9 +92,10 @@ el.attributeStyleMap.clear(); // remove all styles.
 Note that in the second example, `opacity` is set to string (`'0.3'`) but a
 number comes back out when the property is read back later.
 
-Strings can go into Type OM, but numbers **always**  come out! The analogy
-between the old CSSOM and the new Typed OM is similar to how `.className` grew
-up and got its own data structure, `.classList`.
+If a CSS property supports numbers Typed OM will accept strings, but always
+return a number! The analogy between the old CSSOM and the new Typed OM is
+similar to how `.className` grew up and got its own data structure,
+`.classList`.
 {: .key-point }
 
 ## Benefits
@@ -106,23 +107,23 @@ far more verbose than the old object model. I would agree!
 Before you write off Typed OM, consider some of the key features it brings
 to the table:
 
-1. **Fewer bugs**. Values where are numerical are return as numbers, never strings.
+1. **Fewer bugs**. e.g. numerical values are always returned as numbers, not strings.
 
         el.style.opacity += 0.1;
         el.style.opacity === '0.30.1' // dragons!
 
 - **Value clamping & rounding**. Typed OM [rounds and/or clamps](#clamping)
 values so they're within the acceptable ranges for a property.
-- **Better performance**. In theory, the browser has to do less work serializing
-  and deserializing string values. Now, engine shares a imilar understanding of
-  CSS values across JS and CSS. Tab Akins has shown some [early perf benchmarks](https://github.com/w3c/css-houdini-drafts/issues/634#issuecomment-366358609)
+- **Better performance**. The browser has to do less work serializing
+  and deserializing string values. Now, the engine uses a similar understanding
+  of CSS values across JS and C++. Tab Akins has shown some [early perf benchmarks](https://github.com/w3c/css-houdini-drafts/issues/634#issuecomment-366358609)
   that put Typed OM at **~30% faster** in operations/sec when compared to using
   the old CSSOM and strings. This can be significant when doing rapid [CSS
   animations](#cube) using `requestionAnimationFrame()`. [crbug.com/808933](https://bugs.chromium.org/p/chromium/issues/detail?id=808933) tracks
   additional performance work in Blink.
-- Are CSS names camel-cased or **strings**? There's no more guessing if names
-are camel-cased or strings (e.g. `el.style.backgroundColor` vs
-`el.style['background-color']`). Names in Typed OM are always
+- "Should I use camel-cased CSS names or strings?" There's no more guessing if
+names are camel-cased or strings (e.g. `el.style.backgroundColor` vs
+`el.style['background-color']`). CSS property names in Typed OM are always
 strings, matching what you actually write in CSS :)
 - **Error handling**. New [parsing methods](#parsing) brings
 [error handling](#errors) in the world of CSS.
@@ -158,7 +159,7 @@ el.attributeStyleMap.set('margin-top', CSS.px(10));
 el.attributeStyleMap.get('margin-top').value  // 10
 el.attributeStyleMap.get('margin-top').unit // 'px'
 
-// Use CSSKeyWorldValue for plan text values:
+// Use CSSKeyWorldValue for plain text values:
 el.attributeStyleMap.set('display', new CSSKeywordValue('initial'));
 el.attributeStyleMap.get('display').value // 'initial'
 el.attributeStyleMap.get('display').unit // undefined
@@ -166,13 +167,14 @@ el.attributeStyleMap.get('display').unit // undefined
 
 ### Computed styles {: #computed }
 
-Computed styles has moved from an API on `window` to a new `computedStyleMap()`
-method on `HTMLElement`:
+[Computed styles](https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value)
+have moved from an API on `window` to a new method on `HTMLElement`,
+`computedStyleMap()`:
 
 **Old CSSOM**
 
 ```javascript
-el.opacity = 0.5;
+el.style.opacity = 0.5;
 window.getComputedStyle(el).opacity === "0.5" // Ugh, more strings!
 ```
 
@@ -182,6 +184,12 @@ window.getComputedStyle(el).opacity === "0.5" // Ugh, more strings!
 el.attributeStyleMap.set('opacity', 0.5);
 el.computedStyleMap().get('opacity').value // 0.5
 ```
+
+Note: One gotcha between `windowgetComputedStyle()` and
+`element.computedStyleMap()` is that the former returns resolved values whereas
+the latter returns computed values. For example, Typed OM will retain percentage
+values (`width: 50%`), whereas CSSOM resolves them to lengths
+(e.g. `width: 200px`).
 
 #### Value clamping / rounding {: #clamping }
 
@@ -214,7 +222,7 @@ mathematical expression (e.g. `"calc(56em + 10%)"`).
 
 #### Unit values {: #unitvals }
 
-Simple numerical values (`"50%"`) are represented the `CSSUnitValue` object.
+Simple numerical values (`"50%"`) are represented by `CSSUnitValue` objects.
 While you _could_ create these objects directly (`new CSSUnitValue(10, 'px')`)
 , most of the time you'll be using the `CSS.*` factory methods:
 
@@ -300,7 +308,7 @@ new CSSMathSum(
 ## CSS transform values {: #transforms }
 
 CSS transforms are created with a `CSSTransformValue` and passing an array of
-transform values (`CSSRotate`, `CSScale`, `CSSSkew`, `CSSSkewX`,
+transform values (e.g. `CSSRotate`, `CSScale`, `CSSSkew`, `CSSSkewX`,
 `CSSSkewY`). As an example, say you want to re-create this CSS:
 
 ```css
@@ -313,7 +321,7 @@ Translated into Typed OM:
 const transform =  new CSSTransformValue([
   new CSSRotate(CSS.deg(45)),
   new CSSScale(CSS.number(0.5), CSS.number(0.5)),
-  new CSSTranslate(CSS.px(10), CSS.px(10), CSS.px(10px))
+  new CSSTranslate(CSS.px(10), CSS.px(10), CSS.px(10))
 ]);
 ```
 
@@ -359,7 +367,7 @@ object**.
 ### Demo
 
 Below, you'll see a red cube if your browser supports Typed OM. The cube
-starts rotating when you mouse over it The animation is powered by CSS Typed
+starts rotating when you mouse over it. The animation is powered by CSS Typed
 OM! 🤘
 
 {% framebox height="150px" %}
@@ -446,7 +454,7 @@ If you want to get the value of a custom property, there's a bit of work to do:
 ```html
 <style>
   body {
-    --foo: 5px;
+    --foo: 10px;
   }
 </style>
 <script>
@@ -472,8 +480,9 @@ console.log(position.x.value, position.y.value);
 ## Parsing values {: #parsing}
 
 Typed OM introduces parsing methods to the web platform! This means you can
-finally  **parse CSS programmatically, _before_ trying to use it**! This new
-capability is a potential life saver for catching early bugs and malformed CSS.
+finally  **parse CSS values programmatically, _before_ trying to use it**! This
+new capability is a potential life saver for catching early bugs and malformed
+CSS.
 
 Parse a full style:
 
@@ -490,7 +499,7 @@ Parse values into [`CSSUnitValue`](#CSSUnitValue):
 CSSNumericValue.parse('42.0px') // {value: 42, unit: 'px'}
 
 // But it's easier to use the factory functions:
-CSS.px(42.0).toString(); // {value: 42, unit: 'px'}
+CSS.px(42.0) // '42px'
 ```
 
 ### Error handling {: #errors }
