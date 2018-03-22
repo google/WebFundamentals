@@ -26,6 +26,12 @@ Current thinking on setting device options is to use the [constrainable pattern]
 
 ## Service worker: disallow CORS responses for same-origin requests
 
+Previous versions of the service worker specification allowed a service worker to return a CORS response to a same-origin request. The thinking was that the service worker could read from a CORS response to create a completely synthetic response. In spite of this, the original request URL was maintained in the response. So `outerResponse.url` exactly equaled `url` and `innerResponse.url` exactly equaled `crossOriginURL`.
+
+A recent [change to the Fetch specification](https://github.com/whatwg/fetch/pull/146) requires that `Response.url` be exposed if it is present. A consequence of this is scenarios in which `self.location.href` returns a different origin than `self.origin`. To avoid this service workers are no longer allowed to return CORS responses for same origin requests.
+
+For a longer discussion on this change, see the [issue filed agains the Fetch specification](https://github.com/whatwg/fetch/issues/629) in November 2017.
+
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5694278818856960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=800234)
 
