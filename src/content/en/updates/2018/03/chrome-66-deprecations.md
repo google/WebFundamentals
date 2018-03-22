@@ -59,6 +59,8 @@ Recently specifications have required that new properties accepting position val
 
 ## Methods document.createTouch(), document.createTouchList() are deprecated
 
+The `TouchEvent()` constructor has been [supported in Chrome](https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent#Browser_compatibility) since version 48. To comply with the specification, `document.createTouch()` and `document.createTouchList()` are now deprecated.
+
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/GLbUpUUnQzc/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5668612064935936) &#124;
 [Chromium Bug](https://crbug.com/518868)
