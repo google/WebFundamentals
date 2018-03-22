@@ -38,6 +38,12 @@ For a longer discussion on this change, see the [issue filed agains the Fetch sp
 
 ## WebAudio: dezippering removed
 
+WebAudio originally shipped with dezippering support.  When an AudioParam value was set directly with the value setter, the value was not updated immediately.  Instead, an exponential smoother was applied with a time constant of about 10 ms so that the change was done smoothly, limiting glitches.  It was never specified which parameters had smoothing and what the time constant was.  It wasn’t even obvious if the actual time constant was the appropriate value.
+
+After [much discussion](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FWebAudio%2Fweb-audio-api%2Fissues%2F76&sa=D&sntz=1&usg=AFQjCNGdcDCW3wiMGghiBNln2AT5mjEqpg), the working group removed dezippering from the spec. Now, the value is changed immediately when set. In place of dezippering, it is recommended that developers use the existing `AudioParam.setTargetAtTime()` method to do the dezippering, giving you full control on when to apply it, how fast to change, and on which parameters should be smoothed.
+
+Removing this reduces developer confusion on what AudioParams have dezippering.
+
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YKYRrh0nWMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5287995770929152) &#124;
 [Chromium Bug](http://crbug.com/496282)
