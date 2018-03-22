@@ -18,21 +18,23 @@ description: A round up of the deprecations and removals in Chrome 66 to help yo
 
 ## ImageCapture.setOptions() removed
 
+Current thinking on setting device options is to use the [constrainable pattern](https://w3c.github.io/mediacapture-main/archives/20141205/getusermedia.html#constrainable-interface). Consequently this property was removed from the [ImageCapture specification](https://www.w3.org/TR/image-capture/#imagecaptureapi). Since this method appears to have little to no use on production websites, it is being removed. A replacement method is not available at this time.
+
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tPbZ0eaO-yw/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5552970657693696) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=771283)
-
-## WebAudio: dezippering removed
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YKYRrh0nWMo/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5287995770929152) &#124;
-[Chromium Bug](http://crbug.com/496282)
 
 ## Service worker: disallow CORS responses for same-origin requests
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5694278818856960) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=800234)
 
+
+## WebAudio: dezippering removed
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YKYRrh0nWMo/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5287995770929152) &#124;
+[Chromium Bug](http://crbug.com/496282)
 
 ## CSS position values with three parts deprecated
 
