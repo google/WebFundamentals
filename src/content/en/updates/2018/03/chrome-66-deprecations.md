@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 66 to help yo
 {# wf_updated_on: 2018-03-22 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: deprecations,removals,chrome66 #}
-{# wf_blink_components: Blink,Blink>Bindings,Blink>Network #}
+{# wf_blink_components: Blink>CSS,Blink>HTML,Blink>Input,Blink>WebAudio,Blink>ServiceWorker #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 66 to help you plan. In this version,   #}
 
