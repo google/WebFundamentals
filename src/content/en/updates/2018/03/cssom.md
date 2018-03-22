@@ -9,7 +9,7 @@ description: CSS Typed Object Model (Typed OM) brings types, methods, and a flex
 {# wf_featured_snippet: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66. #}
 {# wf_blink_components: Blink>CSS #}
 
-# Working with the CSS Typed Object Model {: .page-title }
+# Working with the new CSS Typed Object Model {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
