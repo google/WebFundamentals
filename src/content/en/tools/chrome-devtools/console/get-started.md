@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-22 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -213,7 +213,7 @@ filter the **Console** to only show messages that you care about.
          <script>
            const button = document.querySelector('button');
            button.addEventListener('click', function () {
-             const isPrime = num => {
+             function isPrime(num) {
                for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
                  if (num % i === 0) return false;
                }
@@ -279,9 +279,9 @@ in order to change how the page looks or runs.
          <button id="changeMyText">Change My Text</button>
          <script>
            document.getElementById('changeMyText').addEventListener('click', function () {
-             console.log('Clicking this button doesn't do anything, but I appreciate your',
-                 'curiosity ;)');
+             console.log('This button doesn\'t do anything :)');
            });
+         </script>
        {% endframebox %}
 
      This probably didn't work for you because the button is embedded in an
