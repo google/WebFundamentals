@@ -279,8 +279,9 @@ in order to change how the page looks or runs.
          <button id="changeMyText">Change My Text</button>
          <script>
            document.getElementById('changeMyText').addEventListener('click', function () {
-             console.log(`This button doesn't do anything, but your curiousity is appreciated`);
+             console.log('This button doesn\'t do anything :)');
            });
+         </script>
        {% endframebox %}
 
      This probably didn't work for you because the button is embedded in an
