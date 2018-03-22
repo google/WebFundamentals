@@ -9,7 +9,7 @@ description: CSS Typed Object Model (Typed OM) brings types, methods, and a flex
 {# wf_featured_snippet: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66. #}
 {# wf_blink_components: Blink>CSS #}
 
-# Working with CSS Typed Object Model {: .page-title }
+# Working with the CSS Typed Object Model {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -39,7 +39,7 @@ time you read/set `.style` in JavaScript you're using it:
 ```javascript
 // Element styles.
 el.style.opacity = 0.3;
-console.log(el.style.opacity === '0.3') // Ugh. Returns a string!?
+typeof el.style.opacity === 'string' // Ugh. A string!?
 
 // Stylesheet rules.
 document.styleSheets[0].cssRules[0].style.opacity = 0.3;
@@ -59,7 +59,7 @@ stylesheet rules. Both return `StylePropertyMap` object.
 ```javascript
 // Element styles.
 el.attributeStyleMap.set('opacity', 0.3);
-el.attributeStyleMap.get('opacity').value === 0.3 // Yay, a number!
+typeof el.attributeStyleMap.get('opacity').value === 'number' // Yay, a number!
 
 // Stylesheet rules.
 const stylesheet = document.styleSheets[0];
@@ -525,7 +525,7 @@ results in fewer bugs and more performant code down the line.
 {% include "comment-widget.html" %}
 
 [cssom-old]: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
-[spec]: https://drafts.csswg.org/cssom/
+[spec]: https://drafts.css-houdini.org/css-typed-om/
 [chromestatus]: https://www.chromestatus.com/feature/5682491075592192
 [houdini]: /web/updates/2016/05/houdini
 [edge-support]: https://lists.w3.org/Archives/Public/public-houdini/2015Oct/0011.html
