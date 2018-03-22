@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-02-10 #}
+{# wf_updated_on: 2018-03-22 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -210,6 +210,13 @@ the page.
       // Setup all nodes
       ...
     });
+
+To detect whether browser will require user interaction to play audio, you can
+also simply check the <code>state</code> of the <code>AudioContext</code> after
+you created it. It should immediately switch to <code>running</code> if you are
+allowed to play. Otherwise it will stay as <code>suspended</code>. If you
+listen to the <code>statechange</code> event, you can detect changes
+asynchronously.
 
 For info, checkout the small [Pull Request] that fixes WebAudio playback due to
 these autoplay policy changes for [https://airhorner.com].
