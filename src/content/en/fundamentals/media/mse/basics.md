@@ -14,7 +14,7 @@ description: Media Source Extensions (MSE) is a JavaScript API that lets you bui
 [Media Source Extensions (MSE)](https://www.w3.org/TR/media-source/)
 is a JavaScript API that lets you build streams for playback from segments of
 audio or video. Although not covered in this article, understanding MSE is
-needed if you want to embed videos in your site that does such things as:
+needed if you want to embed videos in your site that do things like:
 
 +  Adaptive streaming, which is another way of saying adapting to device
    capabilities and network conditions
