@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better search indexability.
 
-{# wf_updated_on: 2018-03-21 #}
+{# wf_updated_on: 2018-03-23 #}
 {# wf_published_on: 2018-03-21 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search #}
@@ -33,13 +33,14 @@ figure.flexbox > div {
 
 ### TL;DR {: #tldr .hide-from-toc}
 
-Headless Chrome can be a drop-in solution for turning dynamic JS sites into
-static HTML pages. Running it on a web server allows you to **prerender any
-modern JS features** so content **loads fast** and is **indexable by search
-crawlers**.
+[Headless Chrome][headless-chrome] can be a drop-in solution for turning dynamic
+JS sites into static HTML pages. Running it on a web server allows you to
+**prerender any modern JS features** so content **loads fast** and is
+**indexable by search crawlers**.
 {: .objective }
 
-The techniques in this article show how to use Puppeteer's APIs to add
+The techniques in this article show how to use
+[Puppeteer](/web/tools/puppeteer/)'s APIs to add
 server-side rendering (<abbr title="Server-Side Rendering">SSR</abbr>)
 capabilities to an Express web server. The best part is **the app itself
 requires almost no code changes**. Headless does all the heavy lifting. In a
@@ -60,10 +61,6 @@ async function ssr(url) {
 }
 ```
 
-See this in action on [this app](https://devwebfeed.appspot.com/ssr)
-([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)).
-
-
 Note: I'll be using ES modules (`import`) in this article, which require Node
 8.5.0+ and running with the `--experimental-modules` flag. Feel free to use
 `require()` statements if they bother you.
@@ -71,7 +68,8 @@ Note: I'll be using ES modules (`import`) in this article, which require Node
 
 ## Introduction
 
-If SEO has served me well, you landed on this article for one of two reasons.
+If [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) has served
+me well, you landed on this article for one of two reasons.
 First, you've built a web app and it's not being indexed by search! Your app
 might be a <abbr title="Single Page Application">SPA</abbr>,
 [PWA](/web/progressive-web-apps/), using vanilla JS, or built with
@@ -84,28 +82,36 @@ reduce [JavaScript startup cost](/web/fundamentals/performance/optimizing-conten
 and improve
 [first meaningful paint](/web/tools/lighthouse/audits/first-meaningful-paint).
 
-Headless Chrome can help with both of these problems.
+Some frameworks like Preact
+[ship with tools](https://github.com/developit/preact-render-to-string)
+that address server-side rendering. If your framework has a prendering
+solution, please stick with that. There's no reason to bring another tool
+(headless Chrome / Puppeteer) into the mix.
+{: .objective }
 
 ### Search crawlers fail at the modern web {: #modern }
 
 Search engines weren't built to understand client-side JS applications. They
-were built to crawl static HTML pages. Google Search,
-aka GoogleBot, is the one exception which
-[executes the JavaScript on a page](/search/docs/guides/rendering). However, its
-JS engine is based on a browser that was released three years ago (Chrome 41)!
-The web has changed a lot since that time. ES6 classes are here.
-[Modules](https://www.chromestatus.com/feature/5365692190687232) are a thing
-now. Arrow functions are super convenient. There tons of **awesome new features
-... great stuff that we can't use!**
+were built to crawl static HTML pages. Some search engines like Google Search
+do basic rendering by
+[executing the JavaScript on a page](/search/docs/guides/rendering), but it's
+not perfect. As an example, GoogleBot's JS engine is based on a browser that was
+released three years ago (Chrome 41)! The web has changed a lot since
+that time! ES6 classes are here. [Modules](https://www.chromestatus.com/feature/5365692190687232)
+are a thing now. Arrow functions are super convenient. There tons of
+**awesome new features...great stuff that we can't use!**  to update GoogleBot's
+rendering engine but that will take time.
 
-Due to the limitations of search crawlers, it is extremely
-challenging to build a modern web experience. We're forced to transpile,
+[Work is being done to
+modernize search crawlers](https://twitter.com/BermanHale/status/976041872744484864),
+but that work will take time. Due to their limitations, it is extremely
+challenging to build a modern web experience, today. We're forced to transpile,
 compile, and polyfill for the foreseeable future. -Eric
 {: .key-point }
 
 Even if a JS feature is well supported in modern browsers, the reality is
-that you should use it with caution. The reason is that GoogleBot (among other
-search engines) don't support these new goodies. If said feature plays a
+that you should use it with caution. The reason is that GoogleBot (as well as
+other web crawlers) doesn't support these new goodies. If said feature plays a
 critical role in rendering your page, the search bot hits the app, gets JS
 errors, and can't render your busted page. That can have adverse effect on
 search indexing.
@@ -179,7 +185,16 @@ Next, we'll take the `ssr()` function from earlier and beef it up a bit:
 ```javascript
 import puppeteer from 'puppeteer';
 
+// In-memory cache of rendered pages. Note: this will be cleared whenever the
+// server process stops. If you need true persistence, use something like
+// Google Cloud Storage (https://firebase.google.com/docs/storage/web/start).
+const RENDER_CACHE = new Map();
+
 async function ssr(url) {
+  if (RENDER_CACHE.has(url)) {
+    return {html: RENDER_CACHE.get(url), ttRenderMs: 0};
+  }
+
   const start = Date.now();
 
   const browser = await puppeteer.launch();
@@ -198,21 +213,28 @@ async function ssr(url) {
   const html = await page.content(); // serialized HTML of page DOM.
   await browser.close();
 
-  console.info(`Headless rendered page in: ${Date.now() - start}ms`);
+  const ttRenderMs = Date.now() - start;
+  console.info(`Headless rendered page in: ${ttRenderMs}ms`);
 
-  return html;
+  RENDER_CACHE.set(url, html); // cache rendered page.
+
+  return {html, ttRenderMs};
 }
 
 export {ssr as default};
 ```
 
-Here's the major changes:
+The major changes:
 
-1. Add basic error handling if loading the page times out.
-2. Add a call to `page.waitForSelector('#posts')`. This ensures that the posts
+1. Added caching. Caching the rendered HTML is the biggest win to speed up the
+response times. When the page gets re-requested, you avoid running headless Chrome
+altogether. I discuss other [optimizations](#optimizations) later on.
+-  Add basic error handling if loading the page times out.
+-  Add a call to `page.waitForSelector('#posts')`. This ensures that the posts
 exist in the DOM before we dump the serialized page.
-3. Add science. Log how long headless takes to render the page.
-4. Stick the code in a module named `ssr.mjs`.
+-  Add science. Log how long headless takes to render the page and return the
+rendering time along with the HTML.
+-  Stick the code in a module named `ssr.mjs`.
 
 ### 3. Example web server {: #webserver }
 
@@ -230,7 +252,9 @@ import ssr from './ssr.mjs';
 const app = express();
 
 app.get('/', async (req, res, next) => {
-  const html = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
+  const {html, ttRenderMs} = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
+  // Add Server-Timing! See https://w3c.github.io/server-timing/.
+  res.set('Server-Timing', `Prerender;dur=${ttRenderMs};desc="Headless render time (ms)"`);
   return res.status(200).send(html); // Serve prerendered page as response.
 });
 
@@ -268,7 +292,39 @@ Example of the response sent back by this server:
 </html>
 ```
 
-### 4. Performance results {: #perfresults}
+#### A perfect use case for the new Server-Timing API {: #servertiming }
+
+The [Server-Timing](https://w3c.github.io/server-timing/) API allows you to
+communicate server performance metrics (e.g. request/response times, db lookups)
+back to the browser. Client code can use this information to track overall
+performance of a werb app.
+
+A perfect use case for Server-Timing is to report how long it takes for headless
+Chrome to prerender a page! To do that, just add the `Server-Timing` header to
+the server response:
+
+```javascript
+res.set('Server-Timing', `Prerender;dur=1000;desc="Headless render time (ms)"`);
+```
+
+On the client, the [Performance Timeline API](https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline) and/or [PerformanceObserver](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver)
+can be used to access these metrics:
+
+```javascript
+const entry = performance.getEntriesByType('navigation').find(
+    e => e.name === location.href);
+console.log(entry.serverTiming[0].toJSON());
+```
+
+```
+{
+  "name": "Prerender",
+  "duration": 3808,
+  "description": "Headless render time (ms)"
+}
+```
+
+### Performance results {: #perfresults}
 
 Note: these numbers incorporate most of the performance
 [optimizations](#optimizations) I discuss later.
@@ -357,12 +413,16 @@ const app = express();
 
 // Only serve a prerendered page to search crawlers.
 app.get('/', async (req, res, next) => {
-  if (req.get('User-Agent').match(/googlebot|bingbot/i)) {
-    const html = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
-    return res.status(200).send(html);
+  try {
+    if (req.get('User-Agent').match(/googlebot|bingbot/i)) {
+      const {html} = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
+      return res.status(200).send(html);
+    }
+  } catch (err) {
+    return res.status(400).send(`Could not render page: ${err}`);
   }
-  // Not a crawler? We'll fallback to serving index.html as a static page.
-  next();
+
+  next(); // Not a crawler. Fallback to serving index.html as a static page.
 });
 
 app.use(express.static('public', {extensions: ['html', 'htm']}));
@@ -371,62 +431,37 @@ app.listen(8080, () => console.log('Server started. Press Ctrl+C to quit'));
 
 ## Optimizations
 
-There are lots of interesting optimizations to make to `ssr()`. Some are
-quick wins while others may be more speculative. The performance benefits
-you see may ultimately depend on the types of pages you prerender and the
-complexity of the app.
-
-### Cache rendered results {: #cacheresults }
-
-Duh! Caching the rendered HTML is the biggest win to speed up the response
-times. When the page gets re-requested, you avoid running headless Chrome
-altogether.
-
-**ssr.mjs**
-
-```javascript
-const RENDER_CACHE = new Map(); // cache of rendered pages.
-
-async function ssr(url, updateCache = false) {
-  if (RENDER_CACHE.has(url) && !updateCache) {
-    return RENDER_CACHE.get(url);
-  }
-
-  const start = Date.now();
-  const browser = await puppeteer.launch({headless: true});
-  const page = await browser.newPage();
-  await page.goto(url, {waitUntil: 'networkidle0'});
-  const html = await page.content(); // serialized HTML of page DOM.
-  await browser.close();
-  console.info(`Headless rendered page in: ${Date.now() - start}ms`);
-
-  RENDER_CACHE.set(url, html); // cache rendered page.
-
-  return html;
-}
-```
+Apart from caching the rendered results, there are plenty of interesting
+optimizations we can make to `ssr()`. Some are quick wins while others may be
+more speculative. The performance benefits you see may ultimately depend on the
+types of pages you prerender and the complexity of the app.
 
 ### Aborting non-essential requests {: #abort }
 
-Right now, the page is sent to headless Chrome as-is. The entire
-page and all of the resources it requests get loaded unconditionally.
-However, we're only interested in the rendered markup and the JS
-requests that produced it.
+Right now, the entire page (and all of the resources it requests) is loaded
+unconditionally into headless Chrome. However, we're only interested in two
+things:
 
-**Network requests that don't construct DOM are wasteful**. For example,
-resources like images, fonts, stylesheets, and media don't participate in
-building the HTML of a page. They style or supplement the structure of the page
-but they don't explicitly create it. We can tell the browser to ignore these
-resources! This can reduce the workload headless Chrome has to chew through,
-save bandwidth, and potentially speed up your rendering time for larger pages.
+1. The rendered markup.
+2. The JS requests that produced that markup.
+
+**Network requests that don't construct DOM are wasteful**. Resources like
+images, fonts, stylesheets, and media don't participate in building the HTML
+of a page. They style and supplement the structure of a page but they don't
+explicitly create it. We should tell the browser to ignore these
+resources! Doing so would reduce the workload headless Chrome has to chew
+through, **save bandwidth** and potentially **speed up prerendering time**
+for larger pages.
 
 The [Devtools Protocol](https://chromedevtools.github.io/devtools-protocol/)
 supports a powerful feature called [Network interception](https://chromedevtools.github.io/devtools-protocol/tot/Network#event-requestIntercepted)
 which can be used to **modify requests before they're issued by the browser**.
 Puppeteer supports network interception by turning on
 [`page.setRequestInterception(true)`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetrequestinterceptionvalue)
-and listening for the page's `request` event. That allows us to abort requests
-for certain resources and let others continue through.
+and listening for the
+[page's `request` event](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-request).
+That allows us to abort requests for certain resources and let others continue
+through.
 
 **ssr.mjs**
 
@@ -454,7 +489,7 @@ async function ssr(url) {
   const html = await page.content(); // serialized HTML of page DOM.
   await browser.close();
 
-  return html;
+  return {html};
 }
 ```
 
@@ -464,8 +499,7 @@ from aborting more resources than necessary.
 
 ### Inline critical resources {: #inline }
 
-Most of us use separate build tools like `gulp` and
-[critical](https://github.com/addyosmani/critical) to process an app and
+It's common to use separate build tools (e.g. `gulp`) go process an app and
 inline critical CSS/JS into the page at build-time. Doing so can speed
 up first meaningful paint because the browser makes fewer requests during
 initial page load.
@@ -480,8 +514,8 @@ and inline those resources into the page as `<style>` tags:
 **ssr.mjs**
 
 ```javascript
-import url from 'url';
-const URL = url.URL;
+import urlModule from 'url';
+const URL = urlModule.URL;
 
 async function ssr(url) {
   ...
@@ -517,15 +551,16 @@ async function ssr(url) {
   const html = await page.content();
   await browser.close();
 
-  return html;
+  return {html};
 }
 ```
 
 This code:
 
-1. Use a `page.on('response')` handler to listen for network responses.
+1. Use a [`page.on('response')`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-response) handler to listen for network responses.
 2. Stashes the responses of local stylesheets.
-3. Replaces `<link rel="stylesheet">` in the DOM with an equivalent `<style>`.
+3. Finds all `<link rel="stylesheet">` in the DOM and replaces them with an
+equivalent `<style>`. See [`page.$$eval`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevalselector-pagefunction-args) API docs.
 The `style.textContent` is set to the stylesheet response.
 
 ### Auto-minify resources {: #minify }
@@ -567,26 +602,8 @@ async function ssr(url) {
   const html = await page.content();
   await browser.close();
 
-  return html;
+  return {html};
 }
-```
-
-### Preload critical resources {: #preload }
-
-If you're not inlining resources, you can still take advantage of things like
-h2 server push and [preload](/web/updates/2016/03/link-rel-preload) small
-critical resources like CSS or JS.
-
-Just send the `Link rel=preload` header along with the page response:
-
-**server.mjs**
-
-```javascript
-app.get('/', async (req, res, next) => {
-  res.append('Link', `<${url}/styles.css>; rel=preload; as=style`);
-  const html = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
-  return res.status(200).send(html);
-});
 ```
 
 ### Reusing a single Chrome instance across renders {: #reuseinstance }
@@ -596,9 +613,9 @@ Instead, you may want to launch a single instance and reuse it for rendering
 multiple pages.
 
 Puppeteer can reconnect to an existing instance of Chrome by calling
-`puppeteer.connect()` and passing it the instance's remote debugging URL.
-The responsibility of launching the browser moves out of `ssr()` and into the
-server:
+[`puppeteer.connect()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerconnectoptions) and passing it the instance's remote debugging URL. To keep a long-running
+browser instance, we can move the code that launches Chrome from the `ssr()`
+function and into the Express server:
 
 **server.mjs**
 
@@ -617,7 +634,7 @@ app.get('/', async (req, res, next) => {
   }
 
   const url = `${req.protocol}://${req.get('host')}/index.html`;
-  const html = await ssr(url, browserWSEndpoint);
+  const {html} = await ssr(url, browserWSEndpoint);
 
   return res.status(200).send(html);
 });
@@ -628,37 +645,89 @@ app.get('/', async (req, res, next) => {
 ```javascript
 import puppeteer from 'puppeteer';
 
-async function ssr(url, browserWSEndpoint = null) {
+/**
+ * @param {string} url URL to prerender.
+ * @param {string} browserWSEndpoint Optional remote debugging URL. If
+ *     provided, Puppeteer's reconnects to the browser instance. Otherwise,
+ *     a new browser instance is launched.
+ */
+async function ssr(url, browserWSEndpoint) {
   ...
-  let browser;
-  if (browserWSEndpoint) {
-    console.info('Connecting to existing chrome instance.');
-    browser = await puppeteer.connect({browserWSEndpoint});
-  } else {
-    console.info('Launching new instance of chrome.');
-    browser = await puppeteer.launch();
-  }
+  console.info('Connecting to existing chrome instance.');
+  const browser = await puppeteer.connect({browserWSEndpoint});
 
   const page = await browser.newPage();
   ...
-  await page.close(); // Close the page we opened (not the browser).
+  await page.close(); // Close the page we opened here (not the browser).
 
-  return html;
+  return {html};
 }
+```
+
+#### Example: cron job to periodically prerender {: #cron }
+
+In my [App Engine dashboard app](https://devwebfeed.appspot.com/ssr), I setup a
+[cron handler](https://cloud.google.com/appengine/docs/flexible/nodejs/scheduling-jobs-with-cron-yaml)
+to periodically re-render the top pages on the site. This helps visitors
+always see fast, fresh content and avoid and helps them from seeing the
+"startup cost" of a new prerender. Spawning several instances of Chrome would be
+wasteful for this case. Instead, I'm using a shared browser instance to render
+several pages all at once:
+
+```javascript
+import puppeteer from 'puppeteer';
+import * as prerender from './ssr.mjs';
+import urlModule from 'url';
+const URL = urlModule.URL;
+
+app.get('/cron/update_cache', async (req, res) => {
+  if (!req.get('X-Appengine-Cron')) {
+    return res.status(403).send('Sorry, cron handler can only be run as admin.');
+  }
+
+  const browser = await puppeteer.launch();
+  const homepage = new URL(`${req.protocol}://${req.get('host')}`);
+
+  // Re-render main page and a few pages back.
+  prerender.clearCache();
+  await prerender.ssr(homepage.href, await browser.wsEndpoint());
+  await prerender.ssr(`${homepage}?year=2018`);
+  await prerender.ssr(`${homepage}?year=2017`);
+  await prerender.ssr(`${homepage}?year=2016`);
+  await browser.close();
+
+  res.status(200).send('Render cache updated!');
+});
+```
+
+I also added a `clearCache()` export to **ssr.js**:
+
+```javascript
+...
+function clearCache() {
+  RENDER_CACHE.clear();
+}
+
+export {ssr, clearCache};
 ```
 
 ## Other considerations {: #other }
 
-### Signal to the page: "You're being rendered in headless" {: #letitknow }
+### Create a signal for the page: "You're being rendered by headless" {: #letitknow }
 
-It may be helpful to let the page know it's being rendered by headless Chrome
-on the server. For example, you could adapt the page in some way, change a lazy
-loading strategy, or disable features when it's being run in headless. I found
-that adding a url parameter is a simple way to handle this case.
+When your page is being rendered by headless Chrome on the server, it may be
+helpful to let the client-side logic know that. For example, may want to adapt
+the page in some way, change a lazy loading strategy, or disable features when
+it's being server-side rendered.
+
+I found that adding a `?headless` parameter to the URL is trivial way to provide
+a signal to the page:
+
+**ssr.mjs**
 
 ```javascript
-import url from 'url';
-const URL = url.URL;
+import urlModule from 'url';
+const URL = urlModule.URL;
 
 async function ssr(url) {
   ...
@@ -669,8 +738,39 @@ async function ssr(url) {
   await page.goto(renderUrl, {waitUntil: 'networkidle0'});
   ...
 
-  return html;
+  return {html};
 }
+```
+
+And in the page, we can look for that parameter:
+
+**public/index.html**
+
+```
+<html>
+<body>
+  <div id="container">
+    <!-- Populated by the JS below. -->
+  </div>
+</body>
+<script>
+...
+
+(async() => {
+  const params = new URL(location.href).searchParams;
+
+  const RENDERING_IN_HEADLESS = params.has('headless');
+  if (RENDERING_IN_HEADLESS) {
+    // Being rendered by headless Chrome on the server. Possibly adapt page,
+    // such off features, don't load resources, etc.
+  }
+
+  const container = document.querySelector('#container');
+  const posts = await fetch('/posts').then(resp => resp.json());
+  renderPosts(posts, container);
+})();
+</script>
+</html>
 ```
 
 Tip: Another handy method to look at is [`Page.evaluateOnNewDocument()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevaluateonnewdocumentpagefunction-args)
@@ -706,16 +806,12 @@ Alternatively, continue to load your Analytics libraries to gain insight
 into how many prerenders your server is performing.
 {: .objective }
 
-## Future worker {: #future }
-
-- Setup a cron to periodically crawl your site using Puppeteer and prerender all pages.
-
 ## Conclusion
 
 Puppeteer makes it easy to server-side render pages by running headless Chrome,
 as a companion, on your web server. My favorite "feature" of this approach is
-that you can literally **improve loading performance and the indexability of
-your app** without significant code changes** to your app!
+that you **improve loading performance** and the **indexability** of
+your app **without significant code** changes!
 
 Note: If you're curious to see a working app that uses the techniques described
 in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
@@ -728,7 +824,8 @@ in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
 Server-side rendering client-side apps is hard. How had? Just look
 at how many [npm packages](https://www.npmjs.com/search?q=server%20side%20rendering)
 people have written which are dedicated to the topic. There are countless
-[patterns](https://en.wikipedia.org/wiki/Isomorphic_JavaScript), tools, and
+[patterns](https://en.wikipedia.org/wiki/Isomorphic_JavaScript),
+[tools](https://github.com/GoogleChrome/rendertron), and
 [services](https://prerender.io/) available to help with SSRing JS apps.
 
 ####  Isomorphic / Universal JavaScript {: #ujs }
@@ -809,3 +906,7 @@ above, rolling your own SSR solution with Puppeteer is an absolute breeze 💨.
 <br>
 
 {% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-tools.html" %}
+
+[headless-chrome]: /web/updates/2017/04/headless-chrome
