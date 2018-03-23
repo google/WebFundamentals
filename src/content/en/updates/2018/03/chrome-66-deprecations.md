@@ -81,7 +81,7 @@ values not support values with three parts. It's believed this approach makes
 processing shorthand syntax easier. The current version of the
 [CSS Values and Units Module](https://drafts.csswg.org/css-values-4) applies
 this requirement to all CSS position values. As of Chrome 66, three-part
-position values are deprecated. No removal date has been set.
+position values are deprecated. Removal is expected in Chrome 68, around July 2018.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/oBKMVCOX1sY/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5116559680864256) &#124;
