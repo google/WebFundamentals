@@ -55,7 +55,7 @@ Note: 你可以訪問 `chrome://help` 來查看當前使用的 Chrome 版本。
 
 - 青色代表那代碼已使用。
 - 紅色代表那代碼未使用。
-- A line of code that is both red and green, such as line 3 in **Figure 2**,means that only some code on that line executed. For example, a ternaryexpression like `var b = (a > 0) ? a : 0` is colored both red and green.
+- 一行紅色和綠色的代碼（就像圖2的第三行**Figure 2**），是代表只有部分的代碼已使用。 例如：三元表達式的代碼：`var b = (a > 0) ? a : 0 `是紅色和綠色。
 
 Note: 這代碼的顏色可能將在未來的Chrome更新做出改變。
 
