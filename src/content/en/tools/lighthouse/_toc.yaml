@@ -154,6 +154,8 @@ toc:
     path: /web/tools/lighthouse/audits/description
   - title: Document Doesn't Have A Title Element
     path: /web/tools/lighthouse/audits/title
+  - title: Document doesn't have a valid hreflang
+    path: /web/tools/lighthouse/audits/hreflang
   - title: Document doesn't have a valid rel=canonical
     path: /web/tools/lighthouse/audits/canonical
   - title: Document Doesn't Use Legible Font Sizes
