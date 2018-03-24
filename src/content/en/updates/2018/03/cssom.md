@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66.
 
-{# wf_updated_on: 2018-03-21 #}
-{# wf_published_on: 2018-03-21 #}
+{# wf_updated_on: 2018-03-23 #}
+{# wf_published_on: 2018-03-24 #}
 {# wf_tags: css,style,cssom,houdini,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66. #}
@@ -25,7 +25,7 @@ console.log(padding.value, padding.unit); // 42, 'px'
 
 The days of concatenating strings and subtle bugs are over!
 
-Heads up: Chrome 66 adds support for CSS Typed Object Model for a
+Heads up: Chrome 66 adds support for the CSS Typed Object Model for a
 [subset of CSS properties](https://chromium.googlesource.com/chromium/src/+/master/third_party/WebKit/Source/core/css/cssom/README.md).
 {: .dogfood }
 
@@ -49,12 +49,13 @@ document.styleSheets[0].cssRules[0].style.opacity = 0.3;
 
 The new [CSS Typed Object Model][spec] (Typed OM), part of the
 [Houdini][houdini] effort, expands this worldview by adding types, methods,
-and a <u>proper</u> object model to CSS values. Instead of strings, values are exposed
-as JavaScript objects to facilitate performant (and sane) manipulation of CSS.
+and a <u>proper</u> object model to CSS values. Instead of strings, values are
+exposed as JavaScript objects to facilitate performant (and sane) manipulation
+of CSS.
 
 Instead of using `element.style`, you'll be accessing styles through a new
-`.attributeStyleMap` property for elements and `.styleMap` property for
-stylesheet rules. Both return `StylePropertyMap` object.
+`.attributeStyleMap` property for elements and a `.styleMap` property for
+stylesheet rules. Both return a `StylePropertyMap` object.
 
 ```javascript
 // Element styles.
@@ -66,7 +67,7 @@ const stylesheet = document.styleSheets[0];
 stylesheet.cssRules[0].styleMap.set('background', 'blue');
 ```
 
-Because `StylePropertyMap` are Map-like objects, they support all the usual
+Because `StylePropertyMap`s are Map-like objects, they support all the usual
 suspects (get/set/keys/values/entries), making them flexible to work with:
 
 ```javascript
@@ -77,7 +78,7 @@ el.attributeStyleMap.set('opacity', CSS.number(0.3)); // see next section
 // el.attributeStyleMap.get('opacity').value === 0.3
 
 // StylePropertyMaps are iterable.
-for (const [prop, val] of el.attributeStyleMap.entries()) {
+for (const [prop, val] of el.attributeStyleMap) {
   console.log(prop, val.value);
 }
 // → opacity, 0.3
@@ -92,9 +93,9 @@ el.attributeStyleMap.clear(); // remove all styles.
 Note that in the second example, `opacity` is set to string (`'0.3'`) but a
 number comes back out when the property is read back later.
 
-If a CSS property supports numbers Typed OM will accept strings, but always
-return a number! The analogy between the old CSSOM and the new Typed OM is
-similar to how `.className` grew up and got its own data structure,
+If a given CSS property supports numbers, Typed OM will accept a strings as
+input, but always returns a number! The analogy between the old CSSOM and the
+new Typed OM is similar to how `.className` grew up and got its own API,
 `.classList`.
 {: .key-point }
 
@@ -112,21 +113,23 @@ to the table:
         el.style.opacity += 0.1;
         el.style.opacity === '0.30.1' // dragons!
 
+- **Arithmetic operations & unit conversion**. convert between absolute length
+units (e.g. `px` -> `cm`) and [do basic math](#arithmetic).
 - **Value clamping & rounding**. Typed OM [rounds and/or clamps](#clamping)
 values so they're within the acceptable ranges for a property.
 - **Better performance**. The browser has to do less work serializing
   and deserializing string values. Now, the engine uses a similar understanding
   of CSS values across JS and C++. Tab Akins has shown some [early perf benchmarks](https://github.com/w3c/css-houdini-drafts/issues/634#issuecomment-366358609)
   that put Typed OM at **~30% faster** in operations/sec when compared to using
-  the old CSSOM and strings. This can be significant when doing rapid [CSS
+  the old CSSOM and strings. This can be significant for rapid [CSS
   animations](#cube) using `requestionAnimationFrame()`. [crbug.com/808933](https://bugs.chromium.org/p/chromium/issues/detail?id=808933) tracks
   additional performance work in Blink.
+- **Error handling**. New [parsing methods](#parsing) brings
+[error handling](#errors) in the world of CSS.
 - "Should I use camel-cased CSS names or strings?" There's no more guessing if
 names are camel-cased or strings (e.g. `el.style.backgroundColor` vs
 `el.style['background-color']`). CSS property names in Typed OM are always
 strings, matching what you actually write in CSS :)
-- **Error handling**. New [parsing methods](#parsing) brings
-[error handling](#errors) in the world of CSS.
 
 ## Browser support & feature detection {: #support }
 
@@ -141,7 +144,7 @@ For feature detection, you can check if one of the `CSS.*` numeric factories
 is defined:
 
 ```javascript
-if (!!(CSS && CSS.number)) {
+if (window.CSS && CSS.number) {
   // Supports CSS Typed OM.
 }
 ```
@@ -185,18 +188,17 @@ el.attributeStyleMap.set('opacity', 0.5);
 el.computedStyleMap().get('opacity').value // 0.5
 ```
 
-Note: One gotcha between `windowgetComputedStyle()` and
+Note: One gotcha between `window.getComputedStyle()` and
 `element.computedStyleMap()` is that the former returns resolved values whereas
-the latter returns computed values. For example, Typed OM will retain percentage
-values (`width: 50%`), whereas CSSOM resolves them to lengths
-(e.g. `width: 200px`).
+the latter returns computed values. For example, Typed OM retains percentage
+values (`width: 50%`), while CSSOM resolves them to lengths (e.g. `width: 200px`).
 
 #### Value clamping / rounding {: #clamping }
 
 One of the nice features of the new object model is **automatic clamping and/or
 rounding of computed style values**. As an example, let's say you try to set
-`opacity` to a value outside of the acceptable range, [0, 1]. Typed OM will
-clamp the value to `1` when computing the style:
+`opacity` to a value outside of the acceptable range, [0, 1]. Typed OM clamps
+the value to `1` when computing the style:
 
 ```javascript
 el.attributeStyleMap.set('opacity', 3);
@@ -204,7 +206,8 @@ el.attributeStyleMap.get('opacity').value === 3  // val not clamped.
 el.computedStyleMap().get('opacity').value === 1 // computed style clamps value.
 ```
 
-Similarly, setting `z-index:15.4` rounds to `15` so the value remains an integer.
+Similarly, setting `z-index:15.4` rounds to `15` so the value remains an
+integer.
 
 ```javascript
 el.attributeStyleMap.set('z-index', CSS.number(15.4));
@@ -256,7 +259,8 @@ of `CSS.*` methods.
 
 `CSSMathValue` objects represent mathematical expressions and typically
 contain more than one value/unit. The common example is creating a CSS `calc()`
-expression, but there are methods for all the CSS functions: `calc()`, `min()`, `max()`.
+expression, but there are methods for all the CSS functions:
+`calc()`, `min()`, `max()`.
 
 ```javascript
 new CSSMathSum(CSS.vw(100), CSS.px(-10)).toString(); // "calc(100vw + -10px)"
@@ -303,6 +307,58 @@ new CSSMathSum(
   new CSSMathSum(CSS.px(1), CSS.px(2)),
   CSS.px(3)
 );
+```
+
+#### Arithmetic operations {: #arithmetic }
+
+One of the most useful features of The CSS Typed OM is that you can perform
+mathematical operations on `CSSUnitValue` objects.
+
+##### Basic operations
+
+Basic operations (`add`/`sub`/`mul`/`div`/`min`/`max`) are supported:
+
+```javascript
+CSS.deg(45).mul(2) // {value: 90, unit: "deg"}
+
+CSS.percent(50).max(CSS.vw(50)).toString() // "max(50%, 50vw)"
+
+// Can Pass CSSUnitValue:
+CSS.px(1).add(CSS.px(2)) // {value: 3, unit: "px"}
+
+// multiple values:
+CSS.s(1).sub(CSS.ms(200), CSS.ms(300)).toString() // "calc(1s + -200ms + -300ms)"
+
+// or pass a `CSSMathSum`:
+const sum = new CSSMathSum(CSS.percent(100), CSS.px(20)));
+CSS.vw(100).add(sum).toString() // "calc(100vw + (100% + 20px))"
+```
+
+##### Conversion
+
+[Absolute length units](https://developer.mozilla.org/en-US/docs/Web/CSS/length#Absolute_length_units)
+can be converted to other unit lengths:
+
+```javascript
+// Convert px to other absolute/physical lengths.
+el.attributeStyleMap.set('width', '500px');
+const width = el.attributeStyleMap.get('width');
+width.to('mm'); // CSSUnitValue {value: 132.29166666666669, unit: "mm"}
+width.to('cm'); // CSSUnitValue {value: 13.229166666666668, unit: "cm"}
+width.to('in'); // CSSUnitValue {value: 5.208333333333333, unit: "in"}
+
+CSS.deg(200).to('rad').value // "3.49066rad"
+CSS.s(2).to('ms').value // 2000
+```
+
+##### Equality
+
+```javascript
+const width = CSS.px(200);
+CSS.px(200).equals(width) // true
+
+const rads = CSS.deg(180).to('rad');
+CSS.deg(180).equals(rads.to('deg')) // true
 ```
 
 ## CSS transform values {: #transforms }
@@ -362,7 +418,7 @@ Notice that:
 2. Rather than touching the DOM or reading back a value on every frame (e.g.
 no <code>box.style.transform=\`rotate(0,0,1,${newAngle}deg)\`</code>), the
 animation is driven by **updating the underlying `CSSTransformValue` data
-object**.
+object, improving performance**.
 
 ### Demo
 
@@ -479,7 +535,7 @@ console.log(position.x.value, position.y.value);
 
 ## Parsing values {: #parsing}
 
-Typed OM introduces parsing methods to the web platform! This means you can
+The Typed OM introduces parsing methods to the web platform! This means you can
 finally  **parse CSS values programmatically, _before_ trying to use it**! This
 new capability is a potential life saver for catching early bugs and malformed
 CSS.
@@ -509,6 +565,7 @@ CSS.px(42.0) // '42px'
 ```javascript
 try {
   const css = CSSStyleValue.parse('transform', 'translate4d(bogus value)');
+  // use css
 } catch (err) {
   console.err(err);
 }
@@ -517,7 +574,7 @@ try {
 ## Conclusion
 
 It's nice to finally have an updated object model for CSS. Working with strings
-never felt right to me. the CSS Typed OM API is a bit verbose, but hopefully it
+never felt right to me. The CSS Typed OM API is a bit verbose, but hopefully it
 results in fewer bugs and more performant code down the line.
 
 {% include "web/_shared/rss-widget-updates.html" %}
