@@ -155,7 +155,7 @@ To see audit options:
 See [Using programmatically][programmatic] for an example of running Lighthouse
 programmatically, as a Node module.
 
-[programmatic]: https://github.com/GoogleChrome/lighthouse#using-programmatically
+[programmatic]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically
 
 ### Run Lighthouse as a Chrome Extension {: #extension }
 
