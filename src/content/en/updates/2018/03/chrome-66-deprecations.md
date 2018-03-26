@@ -41,7 +41,7 @@ exactly equaled `crossOriginURL`.
 A recent [change to the Fetch specification](https://github.com/whatwg/fetch/pull/146)
 requires that `Response.url` be exposed if it is present. A consequence of this
 is scenarios in which `self.location.href` returns a different origin than
-`self.origin`. To avoid this service workers are no longer allowed to return
+`self.origin`. To avoid this, service workers are no longer allowed to return
 CORS responses for same origin requests.
 
 For a longer discussion on this change, see the
@@ -54,7 +54,7 @@ in November 2017.
 
 ## WebAudio: dezippering removed
 
-WebAudio originally shipped with dezippering support.  When an AudioParam value
+Web audio originally shipped with dezippering support.  When an AudioParam value
 was set directly with the value setter, the value was not updated immediately.
 Instead, an exponential smoother was applied with a time constant of about 10 ms
 so that the change was done smoothly, limiting glitches.  It was never specified
@@ -68,7 +68,7 @@ use the existing `AudioParam.setTargetAtTime()` method to do the dezippering,
 giving you full control on when to apply it, how fast to change, and on which
 parameters should be smoothed.
 
-Removing this reduces developer confusion on what AudioParams have dezippering.
+Removing this reduces developer confusion which audio parameters support dezippering.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YKYRrh0nWMo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5287995770929152) &#124;
