@@ -158,7 +158,11 @@ toc:
     path: /web/tools/lighthouse/audits/canonical
   - title: Document Doesn't Use Legible Font Sizes
     path: /web/tools/lighthouse/audits/font-sizes
+  - title: Document uses plugins
+    path: /web/tools/lighthouse/audits/plugins
   - title: Links Do Not Have Descriptive Text
     path: /web/tools/lighthouse/audits/descriptive-link-text
   - title: Page has unsuccessful HTTP status code
     path: /web/tools/lighthouse/audits/successful-http-code
+  - title: Page is blocked from indexing
+    path: /web/tools/lighthouse/audits/indexing
