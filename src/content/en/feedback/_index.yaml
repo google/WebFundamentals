@@ -103,7 +103,7 @@ landing_page:
             </a>
           </li>
           <li>
-            <a href="https://chromiumdev-slack.herokuapp.com/?linkId=18742368" class="gc-analytics-event" data-category="webfundamentals" data-label="slack-chromiumdev">
+            <a href="https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE" class="gc-analytics-event" data-category="webfundamentals" data-label="slack-chromiumdev">
               ChromiumDev Slack Channel
             </a>
           </li>
