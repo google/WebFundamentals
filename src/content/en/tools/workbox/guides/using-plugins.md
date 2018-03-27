@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-03-26 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -23,14 +23,14 @@ you can implement your own plugins if you want to add custom logic.
 
 Workbox provides the following plugins:
 
-* [workbox.backgroundSync.Plugin](../reference-docs/prerelease/workbox.backgroundSync.Plugin)
+* [workbox.backgroundSync.Plugin](../reference-docs/latest/workbox.backgroundSync.Plugin)
     * If a network request ever fails, add it to a background sync queue
     and retry the request when the next sync event is triggered.
-* [workbox.broadcastUpdate.Plugin](../reference-docs/prerelease/workbox.broadcastUpdate.Plugin)
+* [workbox.broadcastUpdate.Plugin](../reference-docs/latest/workbox.broadcastUpdate.Plugin)
     * When ever a cache is updated dispatch a message on a Broadcast Channel.
-* [workbox.cacheableResponse.Plugin](../reference-docs/prerelease/workbox.cacheableResponse.Plugin)
+* [workbox.cacheableResponse.Plugin](../reference-docs/latest/workbox.cacheableResponse.Plugin)
     * Only cache cache requests that meet a certain criteria.
-* [workbox.expiration.Plugin](../reference-docs/prerelease/workbox.expiration.Plugin)
+* [workbox.expiration.Plugin](../reference-docs/latest/workbox.expiration.Plugin)
     * Manage the number of cached items or the age of items in the cache.
 
 You can use these plugins with a Workbox strategy by adding an instance to

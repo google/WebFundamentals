@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-20 #}
+{# wf_updated_on: 2018-03-26 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -186,4 +186,4 @@ self.addEventListener('fetch', (event) => {
 ```
 
 You can find the list of available classes in the
-[workbox-strategies reference docs](/web/tools/workbox/reference-docs/prerelease/workbox.strategies).
+[workbox-strategies reference docs](/web/tools/workbox/reference-docs/latest/workbox.strategies).
