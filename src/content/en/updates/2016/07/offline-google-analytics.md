@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The sw-offline-google-analytics library gives you everything you need.
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_published_on: 2016-07-20 #}
 {# wf_tags: serviceworker,analytics,offline,indexeddb #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -11,7 +11,9 @@ description: The sw-offline-google-analytics library gives you everything you ne
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
-
+Warning: The information in this post is out of date. Developers are encouraged to follow
+[these steps](https://developers.google.com/web/tools/workbox/guides/enable-offline-analytics) to
+use a solution based on the Workbox libraries.
 
 So you've got a [progressive web app](/web/progressive-web-apps/), complete with a [service worker](/web/fundamentals/getting-started/primers/service-workers) that allows it to work offline. Great! You've also got existing Google Analytics set up for your web app, and you don't want to miss out on any analytical insights coming from usage that occurs while offline. But if you try to send data to Google Analytics while offline, those requests will fail and the data will be lost.
 
