@@ -190,7 +190,7 @@ const sensorRelDevice = new RelativeOrientationSensor();
 const sensorRelScreen = new RelativeOrientationSensor({referenceFrame: "screen"});
 ```
 
-Note: The `referenceFrame` sensor option is supported in Chrome 66 or later.
+Note: 该`referenceFrame`选项支持在Chrome 66或更高版本。
 
 ## 开始编码! {: #lets-code }
 
@@ -202,7 +202,7 @@ Generic Sensor API非常容易上手！Sensor接口提供了[`start()`](https://
 
 当您的代码准备好后，将其部署在支持HTTPS的服务器上。[GitHub Pages](https://pages.github.com/)可以提供HTTPS服务，将是您分享Demo的好地方。
 
-Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome.
+Note: 不要忘记在Chrome中启用[Generic Sensor API](#generic-sensor-api-in-chrome)。
 
 ### 3D模型旋转
 
@@ -282,9 +282,7 @@ Generic Sensor API集成了[Feature Policy](https://w3c.github.io/sensors/#featu
 
 `<iframe src="https://third-party.com" allow="accelerometer"/>`
 
-Note: The Feature Policy integration for sensors is available in Chrome 65 or
-later. In the earlier versions of Chrome the `Sensor` objects can be created
-only within a main frame.
+Note: Feature Policy集成在Chrome 65或更高版本中。在早期版本的Chrome中，`Sensor`对象只能在主frame内创建。
 
 ### 传感器读数传送可以被暂停
 
