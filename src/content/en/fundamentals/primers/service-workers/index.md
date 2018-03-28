@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
@@ -110,7 +110,7 @@ man-in-the-middle might not. To avoid this, you can only register service
 workers on pages served over HTTPS, so we know the service worker the browser
 receives hasn't been tampered with during its journey through the network.
 
-[Github Pages](https://pages.github.com/){: .external } are served over HTTPS, so they're a
+[GitHub Pages](https://pages.github.com/){: .external } are served over HTTPS, so they're a
 great place to host demos.
 
 If you want to add HTTPS to your server then you'll need to get a TLS

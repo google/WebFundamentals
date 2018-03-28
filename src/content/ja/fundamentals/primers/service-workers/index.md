@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。
 
-{# wf_updated_on: 2016-08-16 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_published_on: 2014-12-01 #}
 
 # Service Worker の紹介 {: .page-title }
@@ -70,7 +70,7 @@ Service Worker は `localhost` では動作しますが、デプロイ時には�
 
 Service Worker を使うと接続へのハイジャック、改ざん、フィルタリングができてしまいます。とても強力です。良いことに使えばそれでよいのですが、中間者（man-in-the-middle）はそうではないかもしれません。これを防ぐため、Service Worker は HTTPS で提供されるページのみに登録できるようになっています。こうすることでブラウザが受け取る Service Worker は、ネットワークの旅の途中で改ざんされていないことを保証できます。
 
-[Github Pages](https://pages.github.com/) は HTTPS で提供されるので、デモをホストするには絶好の環境です。
+[GitHub Pages](https://pages.github.com/) は HTTPS で提供されるので、デモをホストするには絶好の環境です。
 
 サーバに HTTPS を設定したい場合は、TLS 証明書を取得しサーバにセットアップしなければなりません。セットアップ方法は環境によるので、サーバのドキュメントを読み、そして [Mozilla の SSL コンフィグジェネレータ](https://mozilla.github.io/server-side-tls/ssl-config-generator/)を使ってベストプラクティスを得てください。
 
