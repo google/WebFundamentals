@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
 
-{# wf_updated_on: 2018-03-23 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_published_on: 2018-04-04 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -10,7 +10,15 @@ description: If your site has a ton of images and video, but you don't want to c
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
-The portion of [images](http://beta.httparchive.org/reports/state-of-images?start=earliest&end=latest) and [video](http://beta.httparchive.org/reports/page-weight#bytesVideo) in per-page payloads of typical websites can be significant. Unfortunately, project stakeholders may be unwilling to cut any media resources from their existing applications. Such impasses are frustrating, especially when all parties involved want to improve site performance, but can't agree on how to get there. Fortunately, lazy loading is a solution that lowers initial page payload _and_ load time, but doesn't skimp on content.
+The portion of
+[images](http://beta.httparchive.org/reports/state-of-images?start=earliest&end=latest)
+and [video](http://beta.httparchive.org/reports/page-weight#bytesVideo) in the
+typical payload of a website can be significant. Unfortunately, project
+stakeholders may be unwilling to cut any media resources from their existing
+applications. Such impasses are frustrating, especially when all parties
+involved want to improve site performance, but can't agree on how to get there.
+Fortunately, lazy loading is a solution that lowers initial page payload _and_
+load time, but doesn't skimp on content.
 
 ## What is lazy loading?
 
@@ -96,13 +104,13 @@ If you've written lazy loading code before, you may have accomplished your task
 by using event handlers such as `scroll` or `resize`. While this approach is the
 most compatible across browsers, modern browsers offer a more performant and
 efficient way to do the work of checking element visibility via [the
-intersection observer
-API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+intersection observer API](/web/updates/2016/04/intersectionobserver).
 
 Note: Intersection observer is not supported in all browsers. If compatibility
-across browsers is crucial, be sure to read [the next section](#TODO), which
-shows you how to lazy load images using less performant (but more compatible!)
-scroll and resize event handlers.
+across browsers is crucial, be sure to read [the next
+section](#using_event_handlers_the_most_compatible_way), which shows you how to
+lazy load images using less performant (but more compatible!) scroll and resize
+event handlers.
 
 Intersection observer is easier to use and read than code relying on various
 event handlers, because developers only need to register an observer to watch
@@ -493,6 +501,10 @@ Unfortunately, it doesn't use intersection observer.
 - [yall.js](https://github.com/malchata/yall.js) is a library I wrote that uses
 IntersectionObserver and falls back to event handlers. It's compatible with IE11
 and major browsers.
+- If you're seeking a React-specific lazy loading library, you might consider
+[react-lazyload](https://github.com/jasonslyvia/react-lazyload). While it
+doesn't use intersection observer, it _does_ provide a familiar method of lazy
+loading images for those accustomed to developing applications with React.
 
 Each of these lazy loading libraries is well documented, with plenty of markup
 patterns for your various lazy loading endeavors. If you're not one to tinker,

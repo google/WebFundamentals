@@ -79,7 +79,7 @@ toc:
             path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
           path: /web/fundamentals/instant-and-offline/offline-ux
-      - title: Lazy Loading Guidance
+      - title: Lazy Loading Resources
         section:
           - title: Images and Video
             path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
