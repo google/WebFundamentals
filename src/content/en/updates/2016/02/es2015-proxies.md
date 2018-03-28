@@ -43,7 +43,7 @@ Let’s begin by taking a plain object and adding some interception middleware t
     
     var superhero = new Proxy(target, {
        get: function(target, name, receiver) {
-           console.log('get was called for: ', name);
+           console.log('get was called for:', name);
            return target[name];
        }
     });
@@ -54,7 +54,7 @@ Let’s begin by taking a plain object and adding some interception middleware t
 
 Running the above code in Chrome 49 we get the following:
 
-get was called for:  power
+get was called for: power  
 "Flight"
 
 As we can see in practice, performing our property get or property set on the proxy object correctly resulted in a meta-level call to the corresponding trap on the handler. Handler operations include property reads, property assignment, and function application, all of which get forwarded to the corresponding trap.
