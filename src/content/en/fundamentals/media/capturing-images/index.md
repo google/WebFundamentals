@@ -275,7 +275,7 @@ The process is as follows:
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
       player.srcObject = stream;
-    }
+    });
 &lt;/script>
 </pre>
 
