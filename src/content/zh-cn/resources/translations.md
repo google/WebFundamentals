@@ -27,7 +27,7 @@ description: "欢迎您将Web Fundamentals翻译去其他的语言。"
 如果您遇到任何问题或者有功能请求，您可以在[GitLocalize的issue tracker](https://github.com/gitlocalize/feedback/issues)提供建议。
 
 
-与其他翻译贡献者聊天，您可以[注册ChromiumDev的Slack](https://chromiumdev-slack.herokuapp.com/)并加入#l10n频道。
+与其他翻译贡献者聊天，您可以[注册ChromiumDev的Slack](https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE)并加入#l10n频道。
 
 Note: 让别人来审查你的翻译是非常重要的。[如果您翻译的语言没有版主](https://gitlocalize.com/repo/107/roles)，您可以在Slack的#l10n频道寻找可以帮助您审查文章的人。 如果您有兴趣当版主，您可以在#l10n找@agektmr。
 

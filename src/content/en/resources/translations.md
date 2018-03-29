@@ -31,7 +31,7 @@ If you find any issues or feature requests, please file them in
 [GitLocalize's issue tracker](https://github.com/gitlocalize/feedback/issues).
 
 To chat with other translation contributors, [register to the ChromiumDev
-Slack](https://chromiumdev-slack.herokuapp.com/) and join #l10n channel.
+Slack](https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE) and join #l10n channel.
 
 Note: It's important you find someone to review your translation. Try finding a
 reviewer in the Slack's #l10n channel if [no one is assigned as a language
