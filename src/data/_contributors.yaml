@@ -1002,6 +1002,22 @@ henrylim:
   description:
     en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
+wmlin:
+  name:
+    given: Wanming
+    family: Lin
+  org:
+    name: Intel
+    unit: Web team
+  country: CN
+  role:
+    - translator
+    - engineer
+  github: Honry
+  email: wanming.lin@intel.com
+  description:
+    en: Wanming is an Engineer at Intel
+
 wayouliu:
   name:
     given: Wayou
@@ -1704,19 +1720,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-wmlin:
-  name:
-    given: Wanming
-    family: Lin
-  org:
-    name: Intel
-    unit: Web team
-  country: China
-  role:
-    - translator
-    - Engineer
-  github: Honry
-  email: wanming.lin@intel.com
-  description:
-    en: Wanming is an Engineer at Intel
