@@ -212,10 +212,9 @@ the page.
     });
 
 To detect whether browser will require user interaction to play audio, you can
-also simply check the <code>state</code> of the <code>AudioContext</code> after
-you created it. It should immediately switch to <code>running</code> if you are
-allowed to play. Otherwise it will stay as <code>suspended</code>. If you
-listen to the <code>statechange</code> event, you can detect changes
+check the `state` of the `AudioContext` after you've created it. If you are
+allowed to play, it should immediately switch to `running`. Otherwise it will
+be `suspended`. If you listen to the `statechange` event, you can detect changes
 asynchronously.
 
 For info, checkout the small [Pull Request] that fixes WebAudio playback due to
