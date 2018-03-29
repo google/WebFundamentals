@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。
 
-{# wf_updated_on: 2016-08-16 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_published_on: 2014-12-01 #}
 
 # Service Worker の紹介 {: .page-title }
@@ -27,7 +27,7 @@ Service Worker について、知っておきたいことは次のとおりで�
 * Service Worker は JavaScript の Promises を多用します。Promises についてよく知らない方はこの記事を読むのをいったん止めて、[Jake Archibaldの記事](/web/fundamentals/primers/promises/)を読みましょう。
 
 
-## Service Worker のライフサイクル 
+## Service Worker のライフサイクル
 
 
 Service Worker は Web ページとはまったく異なるライフサイクルで動作します。
@@ -42,10 +42,10 @@ Service Worker を Web ページにインストールするには、ページの
 
 次の図は最初のインストール後の Service Worker のライフサイクルをおおまかに図示したものです。
 
-![service worker lifecydle](imgs/sw-lifecycle.png)
+![Service Worker のライフサイクル](images/sw-lifecycle.png)
 
 
-## はじめる前に 
+## はじめる前に
 
 
 はじめる前に、まずちゃんとした環境を整えているかを確かめましょう。
@@ -62,7 +62,7 @@ Service Worker をサポートするブラウザは増えています。現在�
 
 
     importScripts('serviceworker-cache-polyfill.js');
-    
+
 
 ### HTTPS が必要
 
@@ -70,12 +70,12 @@ Service Worker は `localhost` では動作しますが、デプロイ時には�
 
 Service Worker を使うと接続へのハイジャック、改ざん、フィルタリングができてしまいます。とても強力です。良いことに使えばそれでよいのですが、中間者（man-in-the-middle）はそうではないかもしれません。これを防ぐため、Service Worker は HTTPS で提供されるページのみに登録できるようになっています。こうすることでブラウザが受け取る Service Worker は、ネットワークの旅の途中で改ざんされていないことを保証できます。
 
-[Github Pages](https://pages.github.com/) は HTTPS で提供されるので、デモをホストするには絶好の環境です。
+[GitHub Pages](https://pages.github.com/) は HTTPS で提供されるので、デモをホストするには絶好の環境です。
 
 サーバに HTTPS を設定したい場合は、TLS 証明書を取得しサーバにセットアップしなければなりません。セットアップ方法は環境によるので、サーバのドキュメントを読み、そして [Mozilla の SSL コンフィグジェネレータ](https://mozilla.github.io/server-side-tls/ssl-config-generator/)を使ってベストプラクティスを得てください。
 
 
-## Service Worker の登録 
+## Service Worker の登録
 
 
 
@@ -91,7 +91,7 @@ Service Worker をインストールするには、ページから Service Worke
         console.log('ServiceWorker registration failed: ', err);
       });
     }
-    
+
 
 このコードはまず、Service Worker API が存在しているかをチェックし、あればさらに `/sw.js` にある Service Worker が登録されてるかをチェックします。
 
@@ -101,14 +101,14 @@ Service Worker をインストールするには、ページから Service Worke
 
 Service Worker が有効になっているかは、`chrome://inspect/#service-workers` にある自分のサイトからわかります。
 
-![Service Worker の調査](imgs/sw-chrome-inspect.png)
+![Service Worker の調査](images/sw-chrome-inspect.png)
 
 Service Worker が Chrome で実装された当初は、`chrome://serviceworker-internals` からその詳細を確認できました。これも Service Worker のライフサイクルを知りたいというだけの場合には有用かもしれません。ただもし今後 `chrome://inspect/#service-workers` に置き換わってもびっくりしないでくださいね。
 
 Service Worker のテストはシークレットウインドウで行うと便利です。というのもウインドウを閉じてまた新しいウインドウにすれば、古い Service Worker に影響されることがないからです。シークレットウインドウへの登録やキャッシュは、そのウインドウが閉じられたらすべて消去されます。
 
 
-## Service Worker のインストール 
+## Service Worker のインストール
 
 
 
@@ -120,7 +120,7 @@ Service Worker のテストはシークレットウインドウで行うと便�
     self.addEventListener('install', function(event) {
       // インストール処理
     });
-    
+
 
 セットしたコールバックでは以下を実行しています。
 
@@ -136,7 +136,7 @@ Service Worker のテストはシークレットウインドウで行うと便�
       '/styles/main.css',
       '/script/main.js'
     ];
-    
+
     self.addEventListener('install', function(event) {
       // インストール処理
       event.waitUntil(
@@ -156,7 +156,7 @@ Service Worker のテストはシークレットウインドウで行うと便�
 これはあくまで一例です。`install` イベントでは他の処理もできますし、`install` にイベントリスナを設定しなくてもいいのです。
 
 
-## リクエストをキャッシュして返す 
+## リクエストをキャッシュして返す
 
 
 
@@ -178,7 +178,7 @@ Service Worker がインストールされた状態で、他のページヘ移�
         )
       );
     });
-    
+
 
 ここでは `fetch` イベント内に `event.respondWith()` を定義しています。その中には `caches.match()` の Promise を渡しています。`caches.match()` はリクエストを見て、Service Worker が生成したキャッシュの中に該当するものがあるかを探します。
 
@@ -195,36 +195,36 @@ Service Worker がインストールされた状態で、他のページヘ移�
             if (response) {
               return response;
             }
-    
+
             // 重要：リクエストを clone する。リクエストは Stream なので
             // 一度しか処理できない。ここではキャッシュ用、fetch 用と2回
             // 必要なので、リクエストは clone しないといけない
             var fetchRequest = event.request.clone();
-    
+
             return fetch(fetchRequest).then(
               function(response) {
                 // レスポンスが正しいかをチェック
                 if(!response || response.status !== 200 || response.type !== 'basic') {
                   return response;
                 }
-    
+
                 // 重要：レスポンスを clone する。レスポンスは Stream で
                 // ブラウザ用とキャッシュ用の2回必要。なので clone して
                 // 2つの Stream があるようにする
                 var responseToCache = response.clone();
-    
+
                 caches.open(CACHE_NAME)
                   .then(function(cache) {
                     cache.put(event.request, responseToCache);
                   });
-    
+
                 return response;
               }
             );
           })
         );
     });
-    
+
 
 ここでは以下を実行しています。
 
@@ -256,9 +256,9 @@ Service Worker がインストールされた状態で、他のページヘ移�
 
 
     self.addEventListener('activate', function(event) {
-    
+
       var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
-    
+
       event.waitUntil(
         caches.keys().then(function(cacheNames) {
           return Promise.all(
@@ -271,10 +271,10 @@ Service Worker がインストールされた状態で、他のページヘ移�
         })
       );
     });
-    
 
 
-## つまづきポイント 
+
+## つまづきポイント
 
 
 
@@ -296,7 +296,7 @@ Worker が登録されても `chrome://inspect/#service-workers` や `chrome://s
     fetch(url, {
       credentials: 'include'
     })
-    
+
 
 この挙動は意図的で、XHR の「URL が同一 origin の場合にだけクレデンシャルを含める」という複雑な挙動よりも明らかに良いものです。Fetch の挙動は他の CORS リクエストに似ています。CORS リクエストはたとえば `<img crossorigin>` といったものです。この場合、`<img crossorigin="use-credentials">` とオプトインしなければ Cookie は送られません。
 
@@ -310,7 +310,7 @@ Worker が登録されても `chrome://inspect/#service-workers` や `chrome://s
     })).then(function() {
       console.log('All resources have been fetched and cached.');
     });
-    
+
 
 #### レスポンシブ・イメージの処理
 
@@ -337,19 +337,19 @@ Service Worker のインストール時に画像をキャッシュさせたい�
 
 
     <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x">
-    
+
 
 2x な画面では、ブラウザは `image-2x.png` をダウンロードするでしょう。オフラインであれば `catch()` し、キャッシュした `image-src.png` を返せます。しかしブラウザは 2x な画面での表示を想定しているので、画像は 400×400 CSS ピクセルではなく 200×200 CSS ピクセルで表示されます。これを回避するには、画像の幅と高さを明示します。
 
 
     <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x"
     style="width:400px; height: 400px;">
-    
+
 
 アート・ディレクションで `<picture>` 要素を使う場合、この方法はとても難しくなり、画像がどのように作られ使われるかにかなり依存します。しかし `srcset` と同じような方法は使えます。
 
 
-## もっと知るためのリンクとヘルプ 
+## もっと知るためのリンクとヘルプ
 
 
 
@@ -362,5 +362,5 @@ Service Worker についてのドキュメンテーションは [https://jakearc
 もしつまづいた場合、Stack Overflow に質問してみてください。また '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' タグを使ってください。また、お互いに助けあったりもしてくださいね。
 
 
-Translated By: 
+Translated By:
 {% include "web/_shared/contributors/myakura.html" %}
