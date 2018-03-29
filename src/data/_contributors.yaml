@@ -1704,3 +1704,19 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+wmlin:
+  name:
+    given: Wanming
+    family: Lin
+  org:
+    name: Intel
+    unit: Web team
+  country: China
+  role:
+    - translator
+    - Engineer
+  github: Honry
+  email: wanming.lin@intel.com
+  description:
+    en: Wanming is an Engineer at Intel
