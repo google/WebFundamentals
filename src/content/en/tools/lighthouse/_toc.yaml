@@ -46,6 +46,8 @@ toc:
     path: /web/tools/lighthouse/audits/user-timing
   - title: Uses An Excessive DOM Size
     path: /web/tools/lighthouse/audits/dom-size
+  - title: Uses inefficient cache policy on static assets
+    path: /web/tools/lighthouse/audits/cache-policy
 - title: Progressive Web App
   section:
   - title: Address Bar Matches Brand Colors
