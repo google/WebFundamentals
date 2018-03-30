@@ -1,11 +1,11 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better search indexability.
+description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
-{# wf_updated_on: 2018-03-23 #}
-{# wf_published_on: 2018-03-21 #}
+{# wf_updated_on: 2018-03-30 #}
+{# wf_published_on: 2018-04-01- #}
 {# wf_blink_components: Internals>Headless #}
-{# wf_tags: puppeteer,headless,testing,ssr,prerender,search #}
+{# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
 
 # Headless Chrome: an answer to server-side rendering JS sites {: .page-title }
 
@@ -27,7 +27,7 @@ figure.flexbox {
   justify-content: space-around;
 }
 figure.flexbox > div {
-  flex: 0 1 48%;
+  flex: 0 1 35%;
 }
 </style>
 
@@ -36,7 +36,7 @@ figure.flexbox > div {
 [Headless Chrome][headless-chrome] can be a drop-in solution for turning dynamic
 JS sites into static HTML pages. Running it on a web server allows you to
 **prerender any modern JS features** so content **loads fast** and is
-**indexable by search crawlers**.
+**indexable by crawlers**.
 {: .objective }
 
 The techniques in this article show how to use
@@ -70,8 +70,8 @@ Note: I'll be using ES modules (`import`) in this article, which require Node
 
 If [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) has served
 me well, you landed on this article for one of two reasons.
-First, you've built a web app and it's not being indexed by search! Your app
-might be a <abbr title="Single Page Application">SPA</abbr>,
+First, you've built a web app and it's not being indexed the search engines!
+Your app might be a <abbr title="Single Page Application">SPA</abbr>,
 [PWA](/web/progressive-web-apps/), using vanilla JS, or built with
 something more complex like a library or framework. To be honest, your tech
 stack doesn't matter. What matters is that you spent a lot of time building
@@ -89,36 +89,25 @@ solution, please stick with that. There's no reason to bring another tool
 (headless Chrome / Puppeteer) into the mix.
 {: .objective }
 
-### Search crawlers fail at the modern web {: #modern }
+### Crawling the modern web {: #modern }
 
-Search engines weren't built to understand client-side JS applications. They
-were built to crawl static HTML pages. Some search engines like Google Search
-do basic rendering by
-[executing the JavaScript on a page](/search/docs/guides/rendering), but it's
-not perfect. As an example, GoogleBot's JS engine is based on a browser that was
-released three years ago (Chrome 41)! The web has changed a lot since
-that time! ES6 classes are here. [Modules](https://www.chromestatus.com/feature/5365692190687232)
-are a thing now. Arrow functions are super convenient. There tons of
-**awesome new features...great stuff that we can't use!**  to update GoogleBot's
-rendering engine but that will take time.
+Search engine crawlers, social sharing platforms, [even browsers][lynx]
+have historically relied exclusively on static HTML markup to index the web
+and surface content. The modern web has evolved into something much
+different. JavaScript-based applications are here to stay, which means that in
+many cases, our content can be invisible to crawling tools.
 
-[Work is being done to
-modernize search crawlers](https://twitter.com/BermanHale/status/976041872744484864),
-but that work will take time. Due to their limitations, it is extremely
-challenging to build a modern web experience, today. We're forced to transpile,
-compile, and polyfill for the foreseeable future. -Eric
-{: .key-point }
-
-Even if a JS feature is well supported in modern browsers, the reality is
-that you should use it with caution. The reason is that GoogleBot (as well as
-other web crawlers) doesn't support these new goodies. If said feature plays a
-critical role in rendering your page, the search bot hits the app, gets JS
-errors, and can't render your busted page. That can have adverse effect on
-search indexing.
+Some crawlers like Google Search have gotten smarter! Google's crawler uses
+Chrome 41 to [execute JavaScript](/search/docs/guides/rendering) and render the
+final page, but that process is still new and not perfect. For example, pages
+that use newer features like ES6 classes, [Modules](https://www.chromestatus.com/feature/5365692190687232), and
+arrow functions will cause JS errors in this older browser and prevent the page
+from rendering correctly. As for other search engines,...who knows what
+they're doing!? ¯\\_(ツ)_/¯
 
 ## Prerendering pages using headless Chrome {: #headless }
 
-All search engines know HTML. What we need to "solve" the indexing problem is
+All crawlers under HTML. What we need to "solve" the indexing problem is
 a tool that produces HTML from executing JS. 🤔 What if I told you there is
 such a tool?
 
@@ -394,39 +383,6 @@ avoid re-adding posts again. 👍
 })();
 </script>
 </html>
-```
-
-## Prerendering for search crawlers {: #searchssr }
-
-If server resources are a concern, consider prerendering content only
-for the search crawlers and keep regular users consuming the client-side app.
-
-Do this by checking the `User-Agent` for the search bot(s) you want to target:
-
-**server.mjs**
-
-```javascript
-import express from 'express';
-import ssr from './ssr.mjs';
-
-const app = express();
-
-// Only serve a prerendered page to search crawlers.
-app.get('/', async (req, res, next) => {
-  try {
-    if (req.get('User-Agent').match(/googlebot|bingbot/i)) {
-      const {html} = await ssr(`${req.protocol}://${req.get('host')}/index.html`);
-      return res.status(200).send(html);
-    }
-  } catch (err) {
-    return res.status(400).send(`Could not render page: ${err}`);
-  }
-
-  next(); // Not a crawler. Fallback to serving index.html as a static page.
-});
-
-app.use(express.static('public', {extensions: ['html', 'htm']}));
-app.listen(8080, () => console.log('Server started. Press Ctrl+C to quit'));
 ```
 
 ## Optimizations
@@ -713,15 +669,17 @@ export {ssr, clearCache};
 
 ## Other considerations {: #other }
 
-### Create a signal for the page: "You're being rendered by headless" {: #letitknow }
+### Create a signal for the page: "You're being rendered in headless" {: #letitknow }
 
 When your page is being rendered by headless Chrome on the server, it may be
-helpful to let the client-side logic know that. For example, may want to adapt
-the page in some way, change a lazy loading strategy, or disable features when
-it's being server-side rendered.
+helpful for the page's client-side logic to know that. In my app, I used this
+hook to "turn off" portions of my page that don't play a part in rendering the
+posts markup. For example, I disabled code that lazy-loads
+[firebase-auth.js](https://firebase.google.com/docs/web/setup). There's no user
+to sign in!
 
-I found that adding a `?headless` parameter to the URL is trivial way to provide
-a signal to the page:
+Adding a `?headless` parameter to the render URL is a simple way
+to give the page a hook:
 
 **ssr.mjs**
 
@@ -761,8 +719,8 @@ And in the page, we can look for that parameter:
 
   const RENDERING_IN_HEADLESS = params.has('headless');
   if (RENDERING_IN_HEADLESS) {
-    // Being rendered by headless Chrome on the server. Possibly adapt page,
-    // such off features, don't load resources, etc.
+    // Being rendered by headless Chrome on the server.
+    // e.g. shut off features, don't lazy load non-essential resources, etc.
   }
 
   const container = document.querySelector('#container');
@@ -855,12 +813,10 @@ Headless Chrome enables "isomorphic JS" between server and client. It's a great
 option if your library doesn't work on the server (Node).
 {: .objective }
 
-#### Prerender.io {: #prerender }
+#### Prerender tools {: #prerender }
 
-The Node community has built tons of tools for
-dealing with SSR JS apps. No surprises there!
-
-Personally, I've found that
+The Node community has built tons of tools for dealing with SSR JS apps. No
+surprises there! Personally, I've found that
 <abbr title="Your mileage may vary">YMMV</abbr> with some of these tools, so
 definitely do your homework before committing to one. For example,
 some SSR tools are older and don't use headless Chrome (or any headless browser
@@ -879,29 +835,24 @@ server.use(prerender.blockResources());
 server.start();
 ```
 
-However, Prerender leaves out the details of downloading + installing Chrome
-on different platforms. Oftentimes, that's
-[tricky](/web/tools/puppeteer/troubleshooting#running_puppeteer_in_docker),
-which is why [Puppeteer does for you](/web/tools/puppeteer/faq#q_which_chromium_version_does_puppeteer_use).
-Other issues I've seen come up with the online service,
-[prerender.io](https://prerender.io/). Here's how chromestatus.com renders on
-prerender.io:
+It's worth noting that Prerender leaves out the details of downloading and
+installing Chrome on different platforms. Oftentimes, [that's fairly tricky](/web/tools/puppeteer/troubleshooting#running_puppeteer_in_docker) to get right,
+which is one of the reasons why [Puppeteer does for you](/web/tools/puppeteer/faq#q_which_chromium_version_does_puppeteer_use).
+I've also had issues with the [online service](https://prerender.io/)
+rendering some of my apps:
 
 <figure class="flexbox">
   <div>
     <img src="/web/tools/puppeteer/articles/images/chromestatus-normal.png"
          alt="chromestatus rendered in a browser" class="border">
-    <figcaption>Site rendered in a browser <span class="compare-better"></span></figcaption>
+    <figcaption>Site rendered in a browser</figcaption>
   </div>
   <div>
     <img src="/web/tools/puppeteer/articles/images/chromestatus-prerender.png"
          alt="chromestatus rendered by prerender" class="border">
-    <figcaption>Same site rendered by prerender.io <span class="compare-worse"></span></figcaption>
+    <figcaption>Same site rendered by prerender.io</figcaption>
   </div>
 </figure>
-
-Personally, I'd rather have full control over rendering pages. As I've shown
-above, rolling your own SSR solution with Puppeteer is an absolute breeze 💨.
 
 <br>
 
@@ -910,3 +861,4 @@ above, rolling your own SSR solution with Puppeteer is an absolute breeze 💨.
 {% include "web/_shared/rss-widget-tools.html" %}
 
 [headless-chrome]: /web/updates/2017/04/headless-chrome
+[lynx]: https://en.wikipedia.org/wiki/Lynx_(web_browser)
