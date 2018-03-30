@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
 {# wf_updated_on: 2018-03-30 #}
-{# wf_published_on: 2018-04-01- #}
+{# wf_published_on: 2018-04-01 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
 
