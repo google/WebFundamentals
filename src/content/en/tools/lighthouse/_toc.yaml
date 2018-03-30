@@ -24,6 +24,8 @@ toc:
     path: /web/tools/lighthouse/audits/bootup
   - title: Keep Server Response Times Low
     path: /web/tools/lighthouse/audits/ttfb
+  - title: Minify CSS
+    path: /web/tools/lighthouse/audits/minify-css
   - title: Offscreen Images
     path: /web/tools/lighthouse/audits/offscreen-images
   - title: Optimize Images
