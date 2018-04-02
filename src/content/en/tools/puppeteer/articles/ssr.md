@@ -107,7 +107,7 @@ they're doing!? ¯\\_(ツ)_/¯
 
 ## Prerendering pages using headless Chrome {: #headless }
 
-All crawlers under HTML. What we need to "solve" the indexing problem is
+All crawlers understand HTML. What we need to "solve" the indexing problem is
 a tool that produces HTML from executing JS. 🤔 What if I told you there is
 such a tool?
 
@@ -286,7 +286,7 @@ Example of the response sent back by this server:
 The [Server-Timing](https://w3c.github.io/server-timing/) API allows you to
 communicate server performance metrics (e.g. request/response times, db lookups)
 back to the browser. Client code can use this information to track overall
-performance of a werb app.
+performance of a web app.
 
 A perfect use case for Server-Timing is to report how long it takes for headless
 Chrome to prerender a page! To do that, just add the `Server-Timing` header to
@@ -321,7 +321,7 @@ Note: these numbers incorporate most of the performance
 What about performance numbers? On one of my
 [apps](https://devwebfeed.appspot.com/ssr)
 ([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
-Chrom takes about 1s to render the page on the server. Once the page is cached,
+Chrome takes about 1s to render the page on the server. Once the page is cached,
 DevTools **3G Slow emulation** puts
 [FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
 **8.37s faster** than the client-side version.
@@ -455,7 +455,7 @@ from aborting more resources than necessary.
 
 ### Inline critical resources {: #inline }
 
-It's common to use separate build tools (e.g. `gulp`) go process an app and
+It's common to use separate build tools (e.g. `gulp`) to process an app and
 inline critical CSS/JS into the page at build-time. Doing so can speed
 up first meaningful paint because the browser makes fewer requests during
 initial page load.
@@ -782,7 +782,7 @@ in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
 
 ### Discussion of prior art {: #art }
 
-Server-side rendering client-side apps is hard. How had? Just look
+Server-side rendering client-side apps is hard. How hard? Just look
 at how many [npm packages](https://www.npmjs.com/search?q=server%20side%20rendering)
 people have written which are dedicated to the topic. There are countless
 [patterns](https://en.wikipedia.org/wiki/Isomorphic_JavaScript),
