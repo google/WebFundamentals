@@ -27,7 +27,7 @@ module.exports = {
   plugins: [
     // Other plugins...
 
-    WorkboxPlugin.InjectManifest({
+    new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js',
     })
   ]
