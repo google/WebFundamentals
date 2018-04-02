@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
-{# wf_updated_on: 2018-03-30 #}
+{# wf_updated_on: 2018-04-02 #}
 {# wf_published_on: 2018-04-01 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
@@ -100,9 +100,9 @@ many cases, our content can be invisible to crawling tools.
 Some crawlers like Google Search have gotten smarter! Google's crawler uses
 Chrome 41 to [execute JavaScript](/search/docs/guides/rendering) and render the
 final page, but that process is still new and not perfect. For example, pages
-that use newer features like ES6 classes, [Modules](https://www.chromestatus.com/feature/5365692190687232), and
-arrow functions will cause JS errors in this older browser and prevent the page
-from rendering correctly. As for other search engines,...who knows what
+that use newer features like ES6 classes, [Modules](https://www.chromestatus.com/feature/5365692190687232),
+and arrow functions will cause JS errors in this older browser and prevent the
+page from rendering correctly. As for other search engines,...who knows what
 they're doing!? ¯\\_(ツ)_/¯
 
 ## Prerendering pages using headless Chrome {: #headless }
@@ -513,10 +513,12 @@ async function ssr(url) {
 
 This code:
 
-1. Use a [`page.on('response')`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-response) handler to listen for network responses.
+1. Use a [`page.on('response')`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-response)
+   handler to listen for network responses.
 2. Stashes the responses of local stylesheets.
 3. Finds all `<link rel="stylesheet">` in the DOM and replaces them with an
-equivalent `<style>`. See [`page.$$eval`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevalselector-pagefunction-args) API docs.
+equivalent `<style>`. See [`page.$$eval`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevalselector-pagefunction-args)
+API docs.
 The `style.textContent` is set to the stylesheet response.
 
 ### Auto-minify resources {: #minify }
@@ -569,7 +571,8 @@ Instead, you may want to launch a single instance and reuse it for rendering
 multiple pages.
 
 Puppeteer can reconnect to an existing instance of Chrome by calling
-[`puppeteer.connect()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerconnectoptions) and passing it the instance's remote debugging URL. To keep a long-running
+[`puppeteer.connect()`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerconnectoptions)
+and passing it the instance's remote debugging URL. To keep a long-running
 browser instance, we can move the code that launches Chrome from the `ssr()`
 function and into the Express server:
 
@@ -609,7 +612,7 @@ import puppeteer from 'puppeteer';
  */
 async function ssr(url, browserWSEndpoint) {
   ...
-  console.info('Connecting to existing chrome instance.');
+  console.info('Connecting to existing Chrome instance.');
   const browser = await puppeteer.connect({browserWSEndpoint});
 
   const page = await browser.newPage();
@@ -797,8 +800,8 @@ In practice, I've found universal JS difficult to pull off. A personal story...
 > I recently started a
 [a project](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)
 and wanted to give [lit-html](https://github.com/Polymer/lit-html) a try. Lit
-is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/) using JS
-template literals, then efficiently render those templates to
+is a great little library that lets you write [HTML &lt;template>s](https://www.html5rocks.com/en/tutorials/webcomponents/template/)
+using JS template literals, then efficiently render those templates to
 DOM. The problem is that its core feature (using the `<template>` element)
 doesn't work outside of the browser. That means it won't work in a Node server.
 My hopes of sharing code to SSR between Node and the frontend were thrown out
@@ -836,8 +839,10 @@ server.start();
 ```
 
 It's worth noting that Prerender leaves out the details of downloading and
-installing Chrome on different platforms. Oftentimes, [that's fairly tricky](/web/tools/puppeteer/troubleshooting#running_puppeteer_in_docker) to get right,
-which is one of the reasons why [Puppeteer does for you](/web/tools/puppeteer/faq#q_which_chromium_version_does_puppeteer_use).
+installing Chrome on different platforms. Oftentimes,
+[that's fairly tricky](/web/tools/puppeteer/troubleshooting#running_puppeteer_in_docker)
+to get right, which is one of the reasons why
+[Puppeteer does for you](/web/tools/puppeteer/faq#q_which_chromium_version_does_puppeteer_use).
 I've also had issues with the [online service](https://prerender.io/)
 rendering some of my apps:
 
