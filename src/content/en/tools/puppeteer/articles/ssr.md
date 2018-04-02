@@ -782,7 +782,7 @@ in this article, check out [this app](https://devwebfeed.appspot.com/ssr) and
 
 ### Discussion of prior art {: #art }
 
-Server-side rendering client-side apps is hard. How had? Just look
+Server-side rendering client-side apps is hard. How hard? Just look
 at how many [npm packages](https://www.npmjs.com/search?q=server%20side%20rendering)
 people have written which are dedicated to the topic. There are countless
 [patterns](https://en.wikipedia.org/wiki/Isomorphic_JavaScript),
