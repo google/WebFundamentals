@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-04-02 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -370,7 +370,7 @@ separate export point in the bundle:
 
 <li>
 
-[The minifier](#enable-minification) removes the unused variable:
+<a href="#enable-minification">The minifier</a> removes the unused variable:
 
 <pre class="prettyprint">
 // bundle.js (part that corresponds to comments.js)
