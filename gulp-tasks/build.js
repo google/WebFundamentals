@@ -20,6 +20,29 @@ const wfTemplateHelper = require('./wfTemplateHelper');
 
 
 /**
+ * Generates feeds for each year. The feed contains all content for that year
+ * with the <content> section stripped.
+ * @param {*} files
+ * @param {!Object} options
+ */
+function generateFeedsForEveryYear(files, options) {
+  const filesByYear = wfHelper.splitByYear(files);
+
+  Object.keys(filesByYear)
+    .filter((year) => year >= global.WF.minFeedDate)
+    .forEach((year) => {
+      const opts = Object.assign({}, options);
+      wfTemplateHelper.generateFeeds(filesByYear[year], Object.assign(opts, {
+        year,
+        outputPath: path.join(opts.outputPath, year),
+        title: `${options.title} (${year})`,
+        includeContent: false,
+        maxItems: 500,
+      }));
+    });
+}
+
+/**
  * Builds the contributors listing and individual pages
  * @todo - Move this gulp task to wfContributors.js
  */
@@ -85,8 +108,9 @@ gulp.task('build:fundamentals', function() {
   const files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
-});
 
+  generateFeedsForEveryYear(files, options);
+});
 
 /**
  * Builds all of the listing pages, including RSS & ATOM feeds
@@ -147,6 +171,8 @@ gulp.task('build:showcase', function() {
   // Generate the RSS & ATOM feeds
   options.outputPath = baseOutputPath;
   wfTemplateHelper.generateFeeds(files, options);
+
+  generateFeedsForEveryYear(files, options);
 });
 
 
@@ -254,6 +280,8 @@ gulp.task('build:tools', function() {
   let files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
+
+  generateFeedsForEveryYear(files, options);
 });
 
 
