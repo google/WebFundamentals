@@ -321,7 +321,7 @@ Note: these numbers incorporate most of the performance
 What about performance numbers? On one of my
 [apps](https://devwebfeed.appspot.com/ssr)
 ([code](https://github.com/ebidel/devwebfeed/blob/master/server.mjs)), headless
-Chrom takes about 1s to render the page on the server. Once the page is cached,
+Chrome takes about 1s to render the page on the server. Once the page is cached,
 DevTools **3G Slow emulation** puts
 [FCP](/web/fundamentals/performance/user-centric-performance-metrics) at
 **8.37s faster** than the client-side version.
