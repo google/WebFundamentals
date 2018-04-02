@@ -20,6 +20,8 @@ toc:
     path: /web/tools/lighthouse/audits/first-meaningful-paint
   - title: Has Enormous Network Payloads
     path: /web/tools/lighthouse/audits/network-payloads
+  - title: Has multiple page redirects
+    path: /web/tools/lighthouse/audits/redirects
   - title: JavaScript Bootup Time Is Too High
     path: /web/tools/lighthouse/audits/bootup
   - title: Keep Server Response Times Low
