@@ -107,7 +107,7 @@ they're doing!? ¯\\_(ツ)_/¯
 
 ## Prerendering pages using headless Chrome {: #headless }
 
-All crawlers under HTML. What we need to "solve" the indexing problem is
+All crawlers understand HTML. What we need to "solve" the indexing problem is
 a tool that produces HTML from executing JS. 🤔 What if I told you there is
 such a tool?
 
