@@ -286,7 +286,7 @@ Example of the response sent back by this server:
 The [Server-Timing](https://w3c.github.io/server-timing/) API allows you to
 communicate server performance metrics (e.g. request/response times, db lookups)
 back to the browser. Client code can use this information to track overall
-performance of a werb app.
+performance of a web app.
 
 A perfect use case for Server-Timing is to report how long it takes for headless
 Chrome to prerender a page! To do that, just add the `Server-Timing` header to
@@ -455,7 +455,7 @@ from aborting more resources than necessary.
 
 ### Inline critical resources {: #inline }
 
-It's common to use separate build tools (e.g. `gulp`) go process an app and
+It's common to use separate build tools (e.g. `gulp`) to process an app and
 inline critical CSS/JS into the page at build-time. Doing so can speed
 up first meaningful paint because the browser makes fewer requests during
 initial page load.
