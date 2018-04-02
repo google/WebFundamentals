@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-03-22 #}
+{# wf_updated_on: 2018-04-02 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -208,23 +208,29 @@ filter the **Console** to only show messages that you care about.
    filtering.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button class="gc-analytics-event" data-category="DevTools"
-                 data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
-         <script>
-           const button = document.querySelector('button');
-           button.addEventListener('click', function () {
-             function isPrime(num) {
-               for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-                 if (num % i === 0) return false;
+
+         {% verbatim %}
+
+           <button class="gc-analytics-event" data-category="DevTools"
+                   data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
+           <script>
+             const button = document.querySelector('button');
+             button.addEventListener('click', function () {
+               function isPrime(num) {
+                 for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+                   if (num % i === 0) return false;
+                 }
+                 return num !== 1;
+               };
+               for (let j = 1; j <= 1000; j++) {
+                 const label = isPrime(j) ? 'prime:' : 'not prime:';
+                 j % 3 === 0 ? console.warn(label, j) : console.log(label, j);
                }
-               return num !== 1;
-             };
-             for (let j = 1; j <= 1000; j++) {
-               const label = isPrime(j) ? 'prime:' : 'not prime:';
-               j % 3 === 0 ? console.warn(label, j) : console.log(label, j);
-             }
-           });
-         </script>
+             });
+           </script>
+
+         {% endverbatim %}
+
        {% endframebox %}
 
 1. Type `123` in the **Filter** text box. The **Console** only shows messages that contain
