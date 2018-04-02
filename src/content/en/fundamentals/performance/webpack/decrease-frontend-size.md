@@ -15,8 +15,9 @@ possible. Here’s how to do this with webpack.
 
 ## Use the production mode (webpack 4 only) {: #use-the-production-mode }
 
-Webpack 4 introduced the new `mode` flag. You could set this flag to `'development'` or
-`'production'` to hint webpack that you’re building the application for a specific environment:
+Webpack 4 introduced [the new `mode` flag](https://webpack.js.org/concepts/mode/). You could set
+this flag to `'development'` or `'production'` to hint webpack that you’re building
+the application for a specific environment:
 
     // webpack.config.js
     module.exports = {
