@@ -11,6 +11,10 @@ toc:
     - include: /web/tools/puppeteer/_src/api_section.yaml
   - title: Examples
     path: /web/tools/puppeteer/examples
+  - title: Articles
+    section:
+    - title: "Headless Chrome: an answer to server-side rendering JS sites"
+      path: /web/tools/puppeteer/articles/ssr
 
 - title: Resources
   style: accordion
