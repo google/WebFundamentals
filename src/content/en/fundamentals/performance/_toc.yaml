@@ -63,6 +63,9 @@ toc:
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
           step_group: perf-oce
+        - title: Delivering Fast and Light Applications with Save-Data
+          path: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+          step_group: perf-oce
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook

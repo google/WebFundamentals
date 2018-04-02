@@ -28,3 +28,6 @@ redirects:
 
 - from: /web/updates/2017/06/user-centric-performance-metrics
   to: /web/fundamentals/performance/user-centric-performance-metrics
+
+- from: /web/updates/2016/02/save-data
+  to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
