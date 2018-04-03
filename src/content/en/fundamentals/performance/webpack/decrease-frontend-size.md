@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How to use webpack to make your app as small as possible
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-04-02 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -15,8 +15,9 @@ possible. Here’s how to do this with webpack.
 
 ## Use the production mode (webpack 4 only) {: #use-the-production-mode }
 
-Webpack 4 introduced the new `mode` flag. You could set this flag to `'development'` or
-`'production'` to hint webpack that you’re building the application for a specific environment:
+Webpack 4 introduced [the new `mode` flag](https://webpack.js.org/concepts/mode/). You could set
+this flag to `'development'` or `'production'` to hint webpack that you’re building
+the application for a specific environment:
 
     // webpack.config.js
     module.exports = {
@@ -33,8 +34,10 @@ in libraries, [and more](https://medium.com/webpack/webpack-4-mode-and-optimizat
 
 ## Enable minification {: #enable-minification }
 
-Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the
-bundle-level minification is already enabled. You’ll only need to enable loader-specific options.
+Note: most of this is webpack 3 only. If you use
+[webpack 4 with the production mode](#enable-the-production-mode), the bundle-level minification
+is already enabled – you’ll only need to enable
+[loader-specific options](#loader-specific-options).
 
 Minification is when you compress the code by removing extra spaces, shortening variable names and
 so on. Like this:
@@ -58,6 +61,8 @@ so on. Like this:
 
 Webpack supports two ways to minify the code: _the bundle-level minification_ and
 _loader-specific options_. They should be used simultaneously.
+
+### Bundle-level minification {: #bundle-level-minification }
 
 The bundle-level minification compresses the whole bundle after compilation. Here’s how it works:
 
@@ -135,7 +140,9 @@ If you need to compile the new syntax, use the
 is the same plugin that’s bundled with webpack, but newer, and it’s able to compile the ES2015+
 code.
 
-The second way is loader-specific options ([what a loader
+### Loader-specific options {: #loader-specific-options }
+
+The second way to minify the code is loader-specific options ([what a loader
 is](https://webpack.js.org/concepts/loaders/)). With loader options, you can compress things that
 the minifier can’t minify. For example, when you import a CSS file with
 [`css-loader`](https://github.com/webpack-contrib/css-loader), the file is compiled into a string:
@@ -183,8 +190,9 @@ module.exports = {
 
 ## Specify `NODE_ENV=production`
 
-Note: if you’re using [webpack 4 with the production mode](#enable-the-production-mode), the
-`NODE_ENV=production` optimization is already enabled. Feel free to skip this section.
+Note: this is webpack 3 only. If you use
+[webpack 4 with the production mode](#enable-the-production-mode), the `NODE_ENV=production`
+optimization is already enabled – feel free to skip the section.
 
 Another way to decrease the front-end size is to set the `NODE_ENV`
 [environmental variable](https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them)
@@ -362,7 +370,7 @@ separate export point in the bundle:
 
 <li>
 
-[The minifier](#enable-minification) removes the unused variable:
+<a href="#enable-minification">The minifier</a> removes the unused variable:
 
 <pre class="prettyprint">
 // bundle.js (part that corresponds to comments.js)
