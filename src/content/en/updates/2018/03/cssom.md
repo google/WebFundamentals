@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66.
 
-{# wf_updated_on: 2018-03-03 #}
+{# wf_updated_on: 2018-04-03 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: css,style,cssom,houdini,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
