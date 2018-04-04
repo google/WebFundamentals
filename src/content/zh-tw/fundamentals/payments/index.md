@@ -56,7 +56,7 @@ Payment Request API 是一個開放的跨瀏覽器標準，目標是取代傳統
 
 然後瀏覽器會將付款 UI 顯示給使用者看，讓使用者選擇付款方式並授權交易。付款方式可以非常簡單例如使用瀏覽器已儲存的信用卡資料，也可以深奧複雜例如另外呼叫專門為處理網站付款而編寫的第三方應用程式。
 
-註：您可以用 "Pay with Google" 此付款方式從使用者的 Google 帳戶取得卡片資訊和取得設備上的付款 tokens 。要了解更多資訊，請閱讀 [Google Pay API 文件](/pay/api/web/paymentrequest/tutorial)。
+註：您可以用 "Google Pay" 此付款方式從使用者的 Google 帳戶取得卡片資訊和取得設備上的付款 tokens 。要了解更多資訊，請閱讀 [Google Pay API 文件](/pay/api/web/paymentrequest/tutorial)。
 
 <div class="attempt-right">
   <figure>
