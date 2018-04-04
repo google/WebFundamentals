@@ -347,7 +347,7 @@ width.to('mm'); // CSSUnitValue {value: 132.29166666666669, unit: "mm"}
 width.to('cm'); // CSSUnitValue {value: 13.229166666666668, unit: "cm"}
 width.to('in'); // CSSUnitValue {value: 5.208333333333333, unit: "in"}
 
-CSS.deg(200).to('rad').value // 3.49066
+CSS.deg(200).to('rad').value // 3.49066...
 CSS.s(2).to('ms').value // 2000
 ```
 
