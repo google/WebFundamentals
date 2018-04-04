@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
 
-{# wf_updated_on: 2018-03-28 #}
+{# wf_updated_on: 2018-05-28 #}
 {# wf_published_on: 2018-04-04 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -52,8 +52,8 @@ the viewport.
 
 <figure>
   <img srcset="images/lazy-loading-example-2x.jpg 2x,
-images/images/lazy-loading-example-1x.jpg 1x"
-src="images/images/lazy-loading-example-1x.jpg" alt="A screenshot of the website
+images/lazy-loading-example-1x.jpg 1x"
+src="images/lazy-loading-example-1x.jpg" alt="A screenshot of the website
 Medium in the browsing, demonstrating lazy loading in action. The blurry
 placeholder is on the left, and the loaded resource is on the right.">
   <figcaption><b>Figure 2</b>. An example of image lazy loading in action. A
