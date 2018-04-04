@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Save-Data client hint request header available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to 'data saving' mode in the browser.
 
-{# wf_updated_on: 2018-04-02 #}
+{# wf_updated_on: 2018-04-03 #}
 {# wf_published_on: 2016-02-18 #}
 {# wf_tags: savedata,clienthints,chrome49 #}
 {# wf_blink_components: Blink>Fonts,Blink>CSS,Blink>JavaScript #}
@@ -108,10 +108,12 @@ implemented in Chrome, Chrome for Android, and Samsung Internet browsers. From
 there, you only need to check if `navigator.connection.saveData` is equal to
 `true`, and you can implement any data saving operations in that condition.
 
-![Save-Data header in
-DevTools](/web/updates/images/2016/02/save-data/data-saver-chrome.png)
-
-*Enabling the Data Saver extension in Chrome desktop*
+<figure>
+  <img src="/web/updates/images/2016/02/save-data/data-saver-chrome.png" alt="The
+Save-Data header revealed in Chrome's Developer Tools pictured along with the
+Data Saver extension.">
+  <figcaption>Enabling the Data Saver extension in Chrome desktop.</figcaption>
+</figure>
 
 If your application [uses a service
 worker](/web/fundamentals/getting-started/push-notifications/step-03), it can
@@ -238,8 +240,8 @@ are  [examples of how to achieve
 this](https://css-tricks.com/help-users-save-data/#article-header-id-0) with
 relatively little configuration.
 
-You could also extend this concept to CSS `background-image`s by simply adding a
-class to the `<html>` element:
+You could also extend this concept to CSS `background-image` properties by
+simply adding a class to the `<html>` element:
 
 ```php
 <html class="<?php if ($saveData === true): ?>save-data<?php endif; ?>">
@@ -265,6 +267,19 @@ if ($saveData === false) {
   ?><img src="meme.jpg" alt="One does not simply consume data."><?php
 }
 ```
+
+This technique can certainly have a pronounced effect, as you can see in the
+figure below:
+
+<figure>
+  <img srcset="images/omitted-images-2x.png 2x, images/omitted-images-1x.png 1x"
+src="images/omitted-images-1x.png" alt="A comparison of non-critical imagery
+being loaded when Save-Data is absent, versus that same imagery being omitted
+when Save-Data is present.">
+  <figcaption>A comparison of non-critical imagery being loaded when Save-Data is
+absent, versus that same imagery being omitted when Save-Data is
+present.</figcaption>
+</figure>
 
 Of course, omitting images isn't the only possibility. You can also act on
 `Save-Data` to forego sending other non-critical resources, such as certain
