@@ -6,21 +6,17 @@ description:Get Started with Workbox.
 {# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
 
-# Get Started {: .page-title }
+# 使用入門{：.page-title}
 
-This guide will show you how to get up and running with Workbox to route
-common requests for a web page and demonstrate how to cache using a common
-strategy.
+本指南將向您展示如何使用工作箱啟動和運行網頁，並演示如何使用通用策略進行緩存。
 
-Since most websites contain CSS, JavaScript and images, let’s look at how we
-can cache and serve these files using a service worker and Workbox.
+由於大多數網站都包含CSS，JavaScript和圖像，我們來看看如何使用服務工作者和工作箱來緩存和提供這些文件。
 
 ## 創建並註冊Service Worker文件
 
 在我們使用工作箱之前，我們需要創建一個Service Worker文件並將其註冊到我們的網站。
 
-Start by creating a file called `sw.js` at the root of your site and add a
-console message to the file (This is so we can see it load).
+首先在站點的根目錄下創建一個名為`sw.js`的文件，然後向文件添加一個控制台消息（這樣我們就可以看到它加載了）。
 
 ```javascript
 console.log('Hello from sw.js');
@@ -36,18 +32,16 @@ console.log('Hello from sw.js');
 
 ![Console message from sw.js in DevTools](../images/guides/get-started/hello-console.png)
 
-Looking in the “Application” tab in Chrome DevTools you should see your service
-worker registered.
+查看Chrome DevTools中的“應用程序”選項卡，您應該看到您的服務人員已註冊。
 
 ![Application Tab displaying a registered service worker.](../images/guides/get-started/application-tab.png)
 
-Note: Click the “Update on reload” checkbox to make it easier to develop with
-your new service worker.
+注意：單擊“重新載入更新”複選框可以更輕鬆地與新的服務人員一起開發。
 
 現在我們已經註冊了一名service
 worker，讓我們來看看我們如何使用工作箱。
 
-## Importing Workbox
+## 導入工作箱
 
 要開始使用工作箱，只需要在service
 worker中導入工作`workbox-sw.js`文件。
@@ -72,15 +66,11 @@ worker中。
 
 現在我們可以開始使用workbox了。
 
-## Using Workbox
+## 使用工作箱
 
-One of Workbox’s primary features is it’s routing and caching strategy
-modules. It allows you to listen for requests from your web page and determine
-if and how that request should be cached and responded to.
+Workbox的主要功能之一是路由和緩存策略模塊。它允許您監聽來自網頁的請求，並確定是否以及如何緩存和響應該請求。
 
-Let’s add a cache fallback to our JavaScript files. The easiest way to do this
-is to register a route with Workbox that will match any “.js” files that are
-requested, which we can do with a regular expression:
+讓我們將緩存後備添加到我們的JavaScript文件。最簡單的方法是使用工作箱註冊路線，該路線將與請求的任何“.js”文件相匹配，我們可以使用正則表達式執行此操作：
 
 ```javascript
 workbox.routing.registerRoute(
@@ -89,14 +79,9 @@ workbox.routing.registerRoute(
 );
 ```
 
-This tells Workbox that when a request is made, it should see if the regular
-expression matches part of the URL, and if it does, do something with that
-request. For this guide, that “do something” is going to be passing the request
-through one of Workbox’s caching strategies.
+這告訴Workbox，當發出請求時，它應該看看正則表達式是否與URL的一部分匹配，如果是，則對該請求執行一些操作。對於本指南，“做某事”將通過工作箱的緩存策略之一傳遞請求。
 
-If we want our JavaScript files to come from the network whenever possible,
-but fallback to the cached version if the network fails, we can use the
-“network first” strategy to achieve this.
+如果我們希望我們的JavaScript文件盡可能來自網絡，但如果網絡出現故障，則回退到緩存版本，我們可以使用“網絡優先”策略來實現此目的。
 
 ```javascript
 workbox.routing.registerRoute(
@@ -114,10 +99,7 @@ Workbox已經發送了對任何“.js”文件的請求，並使用網絡優先�
 
 ![Example of a JavaScript file being cached.](../images/guides/get-started/cached-request.png)
 
-Workbox provides a few caching strategies that you can use. For example, your
-CSS could be served from the cache first and updated in the background or your
-images could be cached and used until it’s a week old, after which it’ll need
-updating.
+工作箱提供了一些您可以使用的緩存策略。例如，您的CSS可以先從緩存中提供並在後台進行更新，或者您的圖像可以緩存並使用，直到一周之後才能更新。
 
 ```javascript
 workbox.routing.registerRoute(
@@ -151,10 +133,8 @@ workbox.routing.registerRoute(
 
 ## Workbox還有可以做什麼工作？
 
-Routing and caching strategies are performed by the `routing` and
-`strategies` modules, but there are plenty of other modules, each offering
-specific behaviours that you can use in your service worker.
+路由和緩存策略由`routing`和`strategies`模塊執行，但還有很多其他模塊，每個模塊都提供可在服務人員中使用的特定行為。
 
 您會發現許多指南，其中涵蓋了Workbox的其他功能以及有關配置Workbox的更多信息。查找左側的完整列表，但下一步很自然的步驟是啟用預緩存，即在加載服務Service Worker時將文件添加到緩存的過程。
 
-<a href="./precache-files" class="button">Learn More About Precaching</a>
+<a href="./precache-files" class="button">了解更多關於Precaching的信息</a>
