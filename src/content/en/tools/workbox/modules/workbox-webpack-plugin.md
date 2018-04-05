@@ -108,7 +108,7 @@ module.exports = {
 };
 ```
 
-This will a precache manifest (a list of webpack assets) and inject it into
+This will create a precache manifest (a list of webpack assets) and inject it into
 your service worker file via `importScripts()`.
 
 ### Full InjectManifest Config
