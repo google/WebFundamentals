@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-11 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -26,7 +26,7 @@ This lab covers the basics of caching files with the service worker. The technol
 #### What you will learn
 
 * How to use the Cache API to access and manipulate data in the cache
-* How to cache the application shell and offline pages
+* How to cache the application shell and offline pages  
 * How to intercept network requests and respond with resources in the cache
 * How to remove unused caches on service worker activation
 
@@ -60,7 +60,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __cache-api-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
+If you have a text editor that lets you open a project, open the __cache-api-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
 
 This folder contains:
 
@@ -121,13 +121,13 @@ Open the first QUnit test page, __app/test/test1.html__, in another browser tab.
 
 Note: Be sure to open the test page using the localhost address so that it opens from the server and not directly from the file system.
 
-
+ 
 
 This page contains several tests for testing our app at each stage of the codelab. Passed tests are blue and failed tests are red. At this point, your app should pass the first two tests. These check that the cache exists and that it contains the app shell.
 
 
 
-__Caution:__ Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](introduction-to-service-worker#activation) text for an explanation.
+__Caution:__ Close the test page when you're finished with it, otherwise you won't be able to activate the updated service worker in the next sections. See the  [Introduction to service worker](introduction-to-service-worker#activation) text for an explanation. 
 
 
 
@@ -175,11 +175,11 @@ self.addEventListener('fetch', function(event) {
       return fetch(event.request)
 
       // TODO 4 - Add fetched files to the cache
-
+      
     }).catch(function(error) {
 
       // TODO 6 - Respond with custom offline page
-
+      
     })
   );
 });
@@ -231,7 +231,7 @@ Take the app back online and open __app/test/test1.html__ in a new tab. Your app
 
 #### Explanation
 
-Here we are taking the responses returned from the network requests and putting them into the cache.
+Here we are taking the responses returned from the network requests and putting them into the cache. 
 
 We need to pass a clone of the response to `cache.put`, because the response can only be read once. See Jake Archibald's <a href="https://jakearchibald.com/2014/reading-responses/">What happens when you read a response</a> article for an explanation.
 
@@ -281,7 +281,7 @@ The solution code can be found in the __05-404-page__ directory.
 
 
 
-Below TODO 6 in the `.catch` in <strong>service-worker.js</strong>, write the code to respond with the <strong>offline.html</strong> page from the cache. The catch will trigger if the fetch to the network fails.
+Below TODO 6 in the `.catch` in <strong>service-worker.js</strong>, write the code to respond with the <strong>offline.html</strong> page from the cache. The catch will trigger if the fetch to the network fails. 
 
 To test your code, save what you've written and then update the service worker in the browser. [Take the app offline](tools-for-pwa-developers#offline) and navigate to a page you haven't visited before to see the custom offline page.
 
@@ -327,7 +327,7 @@ self.addEventListener('activate', function(event) {
 });
 ```
 
-Try changing the name of the cache to "pages-cache-v2":
+Try changing the name of the cache to "pages-cache-v2": 
 
 #### service-worker.js
 
