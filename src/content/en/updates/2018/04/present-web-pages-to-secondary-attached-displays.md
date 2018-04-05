@@ -193,7 +193,7 @@ how it works. I’m sure you’ll enjoy this as much as I do.
 
 ## Samples and demos
 
-Check out [the official chrome sample] we've used for this article.
+Check out [the official Chrome sample] we've used for this article.
 
 I recommend [the interactive Photowall demo] as well. This web app allows
 multiple controllers to collaboratively present a photo slideshow on
