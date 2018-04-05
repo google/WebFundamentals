@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Paul has been playing with springy animations in the Safari Tech Preview, and Jake loves pubs that are also... windmills?
 
-{# wf_updated_on: 2016-07-03 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2016-07-03 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3 #}
 {# wf_podcast_duration: 00:59:56 #}
@@ -34,4 +34,4 @@ FYI: Jake's fault.
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3" controls preload="none">

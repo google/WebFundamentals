@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Mat talks imposter syndrome.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-08-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3 #}
 {# wf_podcast_duration: 00:13:00 #}
@@ -33,7 +33,7 @@ In this episode:
 * Cognitive Bias.
 * [Designing VR experiences](/web/fundamentals/vr/).
 
-<audio
+<audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E03-Improving-your-creative-confidence.mp3"
 controls preload="none">
 
