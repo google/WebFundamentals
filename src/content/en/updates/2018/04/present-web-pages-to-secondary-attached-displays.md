@@ -5,7 +5,7 @@ description: Chrome 66 allows web pages to use a secondary attached display thro
 {# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2018-04-05 #}
 {# wf_tags: news,media,presentation #}
-{# wf_featured_image: /web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/hero.jpg #}
+{# wf_featured_image: /web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/hero.jpg #}
 {# wf_featured_snippet: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API. #}
 {# wf_blink_components: Blink>PresentationAPI #}
 
@@ -18,14 +18,14 @@ Chrome 66 allows web pages to use a secondary attached display through the
 Receiver API].
 
 <figure>
-  <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/step1.jpg"
+  <img src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/step1.jpg"
     alt="Step 1"/>
   <figcaption style="text-align: center">
     1/2. User picks a secondary attached display
   </figcaption>
 </figure>
 <figure>
-  <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/step2.jpg"
+  <img src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/step2.jpg"
     alt="Step 2"/>
   <figcaption style="text-align: center">
     2/2. A web page is automatically presented to the display previously picked
@@ -109,7 +109,7 @@ The list presented to the user may also include remote endpoints such as
 Chromecast devices if you’re connected to a network advertising them.
 
 <figure>
-  <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/picker.png"
+  <img src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/picker.png"
     alt="Presentation Display Picker"/>
 </figure>
 
@@ -201,7 +201,7 @@ a presentation display. Code is available at
 [https://github.com/GoogleChromeLabs/presentation-api-samples].
 
 <figure>
-  <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/hero.jpg"
+  <img src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/hero.jpg"
     alt="Photowall demo screenshot"/>
   <figcaption>
     <a href="https://www.flickr.com/photos/24100730@N08/3775286387/">
@@ -229,7 +229,7 @@ the currently presented URL.
 
 <figure>
   <img
-    src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/inspect.png"
+    src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/inspect.png"
     alt="Inspect presentation receiver pages"/>
 </figure>
 
