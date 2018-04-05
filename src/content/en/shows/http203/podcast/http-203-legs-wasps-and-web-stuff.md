@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Paul's been booting frameworks, and unfortunately Jake connected his brain to Twitter
 
-{# wf_updated_on: 2017-01-17 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-01-17 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-6.mp3 #}
 {# wf_podcast_duration: 00:45:42 #}
@@ -26,7 +26,7 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-6.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/episode-6.mp3" controls preload="none">
 
 
 

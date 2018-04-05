@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Ewa Gasperowicz about UX and creativity.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-balancing-creativity-with-user-testing.mp3 #}
 {# wf_podcast_duration: 00:09:21 #}
@@ -34,7 +34,7 @@ In this episode:
 * Santa Tracker
 * How we can use sandwiches as a source of inspiration
 
-<audio 
+<audio style="width: 100%" 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVD-S01-E02-balancing-creativity-with-user-testing.mp3" 
 controls preload="none">
 

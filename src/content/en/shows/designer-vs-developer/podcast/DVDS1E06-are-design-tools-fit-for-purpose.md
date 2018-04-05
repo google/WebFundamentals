@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: This week we speak to Surma about design tools.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-05-30 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3 #}
 {# wf_podcast_duration: 00:10:34 #}
@@ -35,7 +35,7 @@ In this episode:
 href="https://github.com/GoogleChrome/howto-components">HowTo: Components</a>’)
 * Exploring the best practice and patterns of the web.
 
-<audio
+<audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3" controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
