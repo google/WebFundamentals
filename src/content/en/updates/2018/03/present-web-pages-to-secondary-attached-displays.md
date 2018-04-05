@@ -1,21 +1,21 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Present web pages that support the Presentation API to a secondary attached displays.
+description: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API.
 
-{# wf_updated_on: 2018-03-27 #}
-{# wf_published_on: 2018-03-27 #}
+{# wf_updated_on: 2018-04-05 #}
+{# wf_published_on: 2018-04-05 #}
 {# wf_tags: news,media,presentation #}
 {# wf_featured_image: /web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/hero.jpg #}
-{# wf_featured_snippet: Chrome 66 allows users to present web pages that support the Presentation API to a secondary attached display, and control the contents being shown from the controlling page on the main display with the Presentation Receiver API. #}
+{# wf_featured_snippet: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API. #}
 {# wf_blink_components: Blink>PresentationAPI #}
 
-# Present Web Pages to Secondary Attached Displays {: .page-title }
+# Present web pages to secondary attached displays {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Chrome 66 allows users to present web pages that support the [Presentation
-API] to a secondary attached display, and control the contents being shown from
-the controlling page on the main display with the [Presentation Receiver API].
+Chrome 66 allows web pages to use a secondary attached display through the
+[Presentation API] and to control its contents through the [Presentation
+Receiver API].
 
 <figure>
   <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/step1.jpg"
@@ -34,26 +34,26 @@ the controlling page on the main display with the [Presentation Receiver API].
 
 ## Background
 
-Until now, web developers could build experiences where user would see some
-local content in Chrome that is different from the content they’d see on a
-remote display, while still being able to control that experience locally.
-We’re talking managing a playback queue on youtube.com for instance while
-videos play on the TV, or seeing a slide reel with speaker notes on laptop
-while the fullscreen presentation is shown in a Hangout session.
+Until now, web developers could build experiences where a user would see local
+content in Chrome that is different from the content they’d see on a remote
+display while still being able to control that experience locally. Examples
+include managing a playback queue on youtube.com while videos play on the TV,
+or seeing a slide reel with speaker notes on a laptop while the fullscreen
+presentation is shown in a Hangout session.
 
 There are scenarios though where users may simply want to present content onto
-a second, attached display. For example, a user in a conference room outfitted
-with a projector, to which they are connected via an HDMI cable. 
+a second, attached display. For example, imagine a user in a conference room
+outfitted with a projector to which they are connected via an HDMI cable. 
 Rather than mirroring the presentation onto a remote endpoint, **the user
-really wants to present the slides full-screen on the projector** -- still
-leaving the laptop screen available for speaker notes and slide control. While
-the site author could support this in a very rudimentary way (e.g. popping up a
-new window, which the user has to then manually drag to the secondary display
-and maximize to fullscreen), it is cumbersome and provides an inconsistent
+really wants to present the slides full-screen on the projector**, leaving the
+laptop screen available for speaker notes and slide control. While the site
+author could support this in a very rudimentary way (e.g. popping up a new
+window, which the user has to then manually drag to the secondary display and
+maximize to fullscreen), it is cumbersome and provides an inconsistent
 experience between local and remote presentation.
 
 Key Point: This change is about enabling secondary, attached displays to be
-used as endpoints for presentations, in the same way as remote endpoints.
+used as endpoints for presentations in the same way as remote endpoints.
 
 ## Present a page
 
@@ -70,9 +70,9 @@ In this article, I won’t cover use cases where the parameter passed to
 `PresentationRequest` can be an array like `['cast://foo’, 'apple://foo',
 'https://example.com']` as this is not relevant there.
 
-We can now monitor presentation display availability and for instance toggle a
-"Present" button visibility based on presentation displays availability. Note
-that we can also decide to always show this button. 
+We can now monitor presentation display availability and toggle a "Present"
+button visibility based on presentation displays availability. Note that we can
+also decide to always show this button. 
 
 Caution: the browser may use more energy while the `availability` object is alive
 and actively listening for presentation display availability changes. Please
@@ -91,9 +91,9 @@ use it with caution in order to save energy on mobile.
     });
 
 Showing a presentation display prompt requires a user gesture such as a click
-on a button. So let’s call `presentationRequest.start()` on a button click for
-instance and wait for the promise to resolve once user has selected a
-presentation display (.e.g. a secondary attached display in our use case).
+on a button. So let’s call `presentationRequest.start()` on a button click and
+wait for the promise to resolve once the user has selected a presentation
+display (.e.g. a secondary attached display in our use case).
 
     function onPresentButtonClick() {
       presentationRequest.start()
@@ -105,8 +105,8 @@ presentation display (.e.g. a secondary attached display in our use case).
       });
     }
 
-List presented to the user may also include remote endpoints such as Chromecast
-devices if you’re connected to a network advertising some.
+The list presented to the user may also include remote endpoints such as
+Chromecast devices if you’re connected to a network advertising them.
 
 <figure>
   <img src="/web/updates/images/2018/03/present-web-pages-to-secondary-attached-displays/picker.png"
@@ -114,10 +114,10 @@ devices if you’re connected to a network advertising some.
 </figure>
 
 When promise resolves, the web page at the `PresentationRequest` object URL is
-presented to the attached display user has previously picked. And voila!
+presented to the chosen display. Et voilà!
 
-We can now go further and monitor "close" and "terminate" events quite easily
-as you can see below. Note that it is possible to reconnect to a "closed"
+We can now go further and monitor "close" and "terminate" events as shown
+below. Note that it is possible to reconnect to a "closed"
 `presentationConnection` with `presentationRequest.reconnect(presentationId)`
 where `presentationId` is the ID of the previous `presentationRequest` object.
 
@@ -142,9 +142,9 @@ where `presentationId` is the ID of the previous `presentationRequest` object.
 
 ## Communicate with the page
 
-That’s nice but how do I pass messages between my controller page (the one
-we’ve just created) and the receiver page (the one we’ve passed to the
-`PresentationRequest` object)?
+Now you're thinking, that’s nice but how do I pass messages between my
+controller page (the one we’ve just created) and the receiver page (the one
+we’ve passed to the `PresentationRequest` object)?
 
 First, let’s retrieve existing connections on the receiver page with
 `navigator.presentation.receiver.connectionList` and listen to incoming
@@ -172,10 +172,10 @@ connections as shown below.
       });
     }
 
-A connection receiving a message will fire a "message" event you can listen to.
-The message can be a simple string, a Blob, an ArrayBuffer, or an
-ArrayBufferView. Sending it is as simple as calling `connection.send(message)`
-from the controller page or the receiver page.
+A connection receiving a message fires a "message" event you can listen for.
+The message can be a string, a Blob, an ArrayBuffer, or an ArrayBufferView.
+Sending it is as simple as calling `connection.send(message)` from the
+controller page or the receiver page.
 
     // Controller page
     
@@ -191,16 +191,13 @@ Play with the sample at
 [https://googlechrome.github.io/samples/presentation-api/] to get a sense of
 how it works. I’m sure you’ll enjoy this as much as I do.
 
-## Samples and Demos
+## Samples and demos
 
-Check out the official Chrome sample at
-[https://googlechrome.github.io/samples/presentation-api/] we’ve used for this
-article. 
+Check out [the official chrome sample] we've used for this article.
 
-I would recommend the interactive Photowall demo as well at
-[https://googlechromelabs.github.io/presentation-api-samples/photowall]. This web
-app allows multiple controllers to collaboratively present a photo slideshow on
-a presentation display. Code source is available at
+I recommend [the interactive Photowall demo] as well. This web app allows
+multiple controllers to collaboratively present a photo slideshow on
+a presentation display. Code is available at
 [https://github.com/GoogleChromeLabs/presentation-api-samples].
 
 <figure>
@@ -214,22 +211,21 @@ a presentation display. Code source is available at
   </figcaption>
 </figure>
 
-## One moar thing
+## One more thing
 
-Chrome has a "Cast" browser menu user can invoke at any time while visiting a
-website. If you want to control which presentation will be picked by default
-when user hits this menu, you should assign
-`navigator.presentation.defaultRequest` to a custom `presentationRequest`
-object created earlier.
+Chrome has a "Cast" browser menu users can invoke at any time while visiting a
+website. If you want to control the default presentation for this menu, then
+assign `navigator.presentation.defaultRequest` to a custom
+`presentationRequest` object created earlier.
 
     // Make this presentation the default one when using the "Cast" browser menu.
     navigator.presentation.defaultRequest = presentationRequest;
 
-## Dev Tips
+## Dev tips
 
-Go to the internal `chrome://inspect` page, select “Other”, and click the
-“inspect” link next to the currently presented URL to inspect the receiver page
-and debug it.
+To inspect the receiver page and debug it, go to the internal
+`chrome://inspect` page, select “Other”, and click the “inspect” link next to
+the currently presented URL.
 
 <figure>
   <img
@@ -242,8 +238,8 @@ page for diving into the internal discovery/availability processes.
 
 ## What's next
 
-At the time of writing, Chrome OS, Linux, and Windows platforms are supported.
-Mac support will come [later].
+As of Chrome 66, Chrome OS, Linux, and Windows platforms are supported. Mac
+support will come [later].
 
 ## Resources
 
@@ -266,3 +262,5 @@ Mac support will come [later].
 [https://crbug.com/?q=component:Blink>PresentationAPI]: https://crbug.com/?q=component:Blink>PresentationAPI 
 [https://w3c.github.io/presentation-api/]: https://w3c.github.io/presentation-api/ 
 [https://github.com/w3c/presentation-api/issues]: https://github.com/w3c/presentation-api/issues
+[the official Chrome sample]: https://googlechrome.github.io/samples/presentation-api/
+[the interactive Photowall demo]: https://googlechromelabs.github.io/presentation-api-samples/photowall
