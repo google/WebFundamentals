@@ -166,7 +166,7 @@ use for your fallback, in the example below we'd need to cache the
 ```javascript
 const FALLBACK_IMAGE_URL = '/images/fallback.png';
 const imagesHandler = workbox.strategies.cacheFirst();
-worbox.routing.registerRoute(new RegExp('/images/'), ({event}) => {
+workbox.routing.registerRoute(new RegExp('/images/'), ({event}) => {
   return imagesHandler.handle({event})
     .catch(() => caches.match(FALLBACK_IMAGE_URL));
 });
@@ -203,7 +203,7 @@ const postMessagePlugin = {
 };
 
 // Later, use the plugin when creating a response strategy:
-worbox.routing.registerRoute(
+workbox.routing.registerRoute(
   new RegExp('/path/prefix'),
   workbox.strategies.staleWhileRevalidate({
     plugins: [postMessagePlugin],
