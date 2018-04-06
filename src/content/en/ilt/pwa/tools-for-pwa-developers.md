@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -23,7 +23,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 ### Chrome
 
-To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)") in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.  
+To access __Developer Tools__ ("[DevTools](/web/tools/chrome-devtools/)") in Chrome, open a web page or web app in Google Chrome. Click the __Chrome menu__ <img src="img/dc66ff026f4af280.png" style="width:20px;height:20px;" alt="Chrome Menu Icon">  icon, and then select __More Tools__ > __Developer Tools__.
 
 You can also use the keyboard shortcut <kbd>Control+Shift+I</kbd> on Windows and Linux, or <kbd>⌘+alt+I</kbd> on Mac (see the  [Keyboard and UI Shortcuts Reference](/web/tools/chrome-devtools/inspect-styles/shortcuts)). Alternatively, right-click anywhere on the page and select Inspect.
 
@@ -35,9 +35,9 @@ The __DevTools__ window opens in your Chrome browser.
 
 ### Firefox
 
-To open Developer Tools in Firefox, open a web page or web app in Firefox. Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar, and then click __Developer__ > __Toggle Tools__.  
+To open Developer Tools in Firefox, open a web page or web app in Firefox. Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar, and then click __Developer__ > __Toggle Tools__.
 
-You can also use the keyboard shortcut <kbd>Control+Shift+I</kbd> on Windows and Linux, or <kbd>⌘ + alt + I</kbd> on Mac (see the  [Keyboard Shortcuts Reference](https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts)). 
+You can also use the keyboard shortcut <kbd>Control+Shift+I</kbd> on Windows and Linux, or <kbd>⌘ + alt + I</kbd> on Mac (see the  [Keyboard Shortcuts Reference](https://developer.mozilla.org/en-US/docs/Tools/Keyboard_shortcuts)).
 
 On Mac, you can also select __View __> __Web Developer __> __Toggle Tools__ in the Firefox menu bar at the top of the screen.
 
@@ -84,7 +84,7 @@ The __Web Inspector__ window opens in your Safari browser.
 To open the dedicated __Console__ panel, either:
 
 * Press <kbd>Ctrl + Shift + J</kbd> (Windows / Linux) or <kbd>⌘ + ⌥ + J</kbd> (Mac).
-*  [Open __DevTools__](#chromedevtools) and select the __Console__ panel. 
+*  [Open __DevTools__](#chromedevtools) and select the __Console__ panel.
 
 ![Console in Chrome](img/37a8715708d445b7.png)
 
@@ -190,7 +190,7 @@ See  [View Network Requests in Chrome](#chromerequests).
 
 #### Firefox
 
-Click menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar. Then click __Developer__ > __Work Offline__. 
+Click menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar. Then click __Developer__ > __Work Offline__.
 
 ![Work Offline in Firefox](img/b2ebcf485e2cc2ed.png)
 
@@ -257,9 +257,9 @@ The __about:debugging__ page provides an interface for interacting with Service 
 There are several different ways to open __about:debugging__:
 
 * On Mac, in the __Tools__ > __Web Developer__ menu, click __Service Workers__.
-* Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar. 
+* Click the Menu icon <img src="img/7fe46717c086da27.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  in the browser toolbar.
 
-Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  and select __Service Workers__.  
+Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:20px;height:20px;" alt="Firefox Menu Icon">  and select __Service Workers__.
 
 * Enter "about:debugging" in the Firefox URL bar and click __Workers__.
 
@@ -295,7 +295,7 @@ Then click the Developer icon <img src="img/71072a17a8634436.png" style="width:2
 
 There are several ways to force-update the service worker in Chrome:
 
-1. Refresh your app in the browser so the new service worker is recognized. Then hold <kbd>Shift</kbd> and click the Reload icon <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> . 
+1. Refresh your app in the browser so the new service worker is recognized. Then hold <kbd>Shift</kbd> and click the Reload icon <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon"> .
 2.  [Open the Service Workers pane](#chromesw) in __DevTools__. Click __Update__. When the new service worker installs, click __skipWaiting__.
 
 ![Skip Waiting in Chrome](img/77b5eaa130252f7e.png)
@@ -328,7 +328,7 @@ Note that unregistering the service worker will change the subscription object i
 
 #### Chrome
 
-[Open the Service Workers pane](#chromesw) in __DevTools__. Click __Push__ to ping the service worker. 
+[Open the Service Workers pane](#chromesw) in __DevTools__. Click __Push__ to ping the service worker.
 
 ![Send Push from DevTools](img/5032f49fde7b0274.png)
 
@@ -352,7 +352,7 @@ Navigate to __about:debugging__ in Firefox and select __Workers__. Click __Push_
 
 ### Chrome
 
-Click the Information icon in the URL bar. Use the __Notifications__ dropdown menu to set the permission status for __Notifications__. 
+Click the Information icon in the URL bar. Use the __Notifications__ dropdown menu to set the permission status for __Notifications__.
 
 ![Access Site Permissions in Chrome](img/eae0f39fca38f6f2.png)
 
@@ -422,7 +422,7 @@ See the MDN article on the  [Storage Inspector](https://developer.mozilla.org/en
 
 #### Chrome
 
-In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You may need to click Reload <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon">  to update the contents. 
+In __DevTools__, navigate to the __Application__ tab. Select __IndexedDB__. You may need to click Reload <img src="img/879b00a99b4bcb97.png" style="width:20px;height:20px;" alt="Chrome Reload Icon">  to update the contents.
 
 ![View IndexedDB in Chrome](img/e9220dcc82da209e.png)
 
@@ -444,7 +444,7 @@ Open the __Storage__ panel and expand the __IndexedDB__ node. Select a database,
 
 In all browsers that support IndexedDB, you can delete a database by entering the following in the console:
 
-`indexedDB.deleteDatabase('database_name');` 
+`indexedDB.deleteDatabase('database_name');`
 
 Where `database_name` is the name of the database to delete.
 

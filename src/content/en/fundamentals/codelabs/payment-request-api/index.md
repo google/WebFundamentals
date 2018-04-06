@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Filling checkout forms is a pain especially on mobile devices. In this codelab, you'll learn how to improve a traditional e-commerce website using the Payment Request API.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-18 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -32,7 +32,7 @@ Welcome to "Frictionless payment with Payment Request API" codelab. In this code
 
 
 
-Clone the E-Commerce lab repository's "payment-request-api" branch with Git using the following command: 
+Clone the E-Commerce lab repository's "payment-request-api" branch with Git using the following command:
 
     $ git clone -b payment-request-api https://github.com/google-developer-training/pwa-ecommerce-demo.git
 
