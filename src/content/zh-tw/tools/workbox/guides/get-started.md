@@ -3,18 +3,18 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2017-11-15 #}
 
-# 使用入門{：.page-title}
+# 使用入門 {: .page-title }
 
-本指南將向您展示如何使用工作箱啟動和運行網頁，並演示如何使用通用策略進行緩存。
+本指南將向您展示如何使用Workbox啟動和運行網頁，並演示如何使用通用策略進行緩存。
 
-由於大多數網站都包含CSS，JavaScript和圖像，我們來看看如何使用服務工作者和工作箱來緩存和提供這些文件。
+由於大多數網站都包含CSS，JavaScript和圖像，我們來看看如何使用服務工作者和Workbox來緩存和提供這些文件。
 
 ## 創建並註冊Service Worker文件
 
-在我們使用工作箱之前，我們需要創建一個Service Worker文件並將其註冊到我們的網站。
+在我們使用Workbox之前，我們需要創建一個Service Worker文件並將其註冊到我們的網站。
 
 首先在站點的根目錄下創建一個名為`sw.js`的文件，然後向文件添加一個控制台消息（這樣我們就可以看到它加載了）。
 
@@ -36,14 +36,14 @@ console.log('Hello from sw.js');
 
 ![Application Tab displaying a registered service worker.](../images/guides/get-started/application-tab.png)
 
-注意：單擊“重新載入更新”複選框可以更輕鬆地與新的服務人員一起開發。
+Note:單擊“重新載入更新”複選框可以更輕鬆地與新的服務人員一起開發。
 
 現在我們已經註冊了一名service
-worker，讓我們來看看我們如何使用工作箱。
+worker，讓我們來看看我們如何使用Workbox。
 
-## 導入工作箱
+## 導入Workbox
 
-要開始使用工作箱，只需要在service
+要開始使用Workbox，只需要在service
 worker中導入工作`workbox-sw.js`文件。
 
 更改您的service
@@ -66,11 +66,11 @@ worker中。
 
 現在我們可以開始使用workbox了。
 
-## 使用工作箱
+## 使用Workbox
 
 Workbox的主要功能之一是路由和緩存策略模塊。它允許您監聽來自網頁的請求，並確定是否以及如何緩存和響應該請求。
 
-讓我們將緩存後備添加到我們的JavaScript文件。最簡單的方法是使用工作箱註冊路線，該路線將與請求的任何“.js”文件相匹配，我們可以使用正則表達式執行此操作：
+讓我們將緩存後備添加到我們的JavaScript文件。最簡單的方法是使用Workbox註冊路線，該路線將與請求的任何“.js”文件相匹配，我們可以使用正則表達式執行此操作：
 
 ```javascript
 workbox.routing.registerRoute(
@@ -79,7 +79,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-這告訴Workbox，當發出請求時，它應該看看正則表達式是否與URL的一部分匹配，如果是，則對該請求執行一些操作。對於本指南，“做某事”將通過工作箱的緩存策略之一傳遞請求。
+這告訴Workbox，當發出請求時，它應該看看正則表達式是否與URL的一部分匹配，如果是，則對該請求執行一些操作。對於本指南，“做某事”將通過Workbox的緩存策略之一傳遞請求。
 
 如果我們希望我們的JavaScript文件盡可能來自網絡，但如果網絡出現故障，則回退到緩存版本，我們可以使用“網絡優先”策略來實現此目的。
 
@@ -99,7 +99,7 @@ Workbox已經發送了對任何“.js”文件的請求，並使用網絡優先�
 
 ![Example of a JavaScript file being cached.](../images/guides/get-started/cached-request.png)
 
-工作箱提供了一些您可以使用的緩存策略。例如，您的CSS可以先從緩存中提供並在後台進行更新，或者您的圖像可以緩存並使用，直到一周之後才能更新。
+Workbox提供了一些您可以使用的緩存策略。例如，您的CSS可以先從緩存中提供並在後台進行更新，或者您的圖像可以緩存並使用，直到一周之後才能更新。
 
 ```javascript
 workbox.routing.registerRoute(
