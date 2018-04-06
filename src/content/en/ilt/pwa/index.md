@@ -3,6 +3,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
 
 # Progressive Web Apps Training {: .page-title }
 

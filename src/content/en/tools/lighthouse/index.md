@@ -169,7 +169,8 @@ To install the extension:
 1. Download [Google Chrome for Desktop][desktop].
 
 1. Install the <a class="gc-analytics-event" data-category="Lighthouse"
-   data-label="Home / Install Extension (Secondary CTA)" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+   data-label="Home / Install Extension (Secondary CTA)"
+   href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
    title="Install Lighthouse Chrome Extension" target="_blank">Lighthouse
    Chrome Extension</a> from the Chrome Webstore.
 
