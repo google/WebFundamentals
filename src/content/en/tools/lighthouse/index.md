@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -155,7 +155,7 @@ To see audit options:
 See [Using programmatically][programmatic] for an example of running Lighthouse
 programmatically, as a Node module.
 
-[programmatic]: https://github.com/GoogleChrome/lighthouse#using-programmatically
+[programmatic]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically
 
 ### Run Lighthouse as a Chrome Extension {: #extension }
 
