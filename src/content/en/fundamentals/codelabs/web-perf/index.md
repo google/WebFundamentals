@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -70,7 +70,7 @@ Clearly, users notice jank and almost invariably choose apps that perform better
 
 Let's begin by taking a look at the app that you'll be debugging in this codelab. It looks like this.
 
-![17aaa204bd2ff067.png](img/17aaa204bd2ff067.png)
+![8b4a7e006c2d0bd8.png](img/8b4a7e006c2d0bd8.png)
 
 This site uses the __Hacker News API__ to show recent stories and their scores. Right now the app's performance is very poor, especially on mobile, but there's no reason it shouldn't be hitting 60fps. By the end of this codelab, you'll have the skills, techniques, and -- most importantly -- the mindset needed to turn this janky app into an attractive and efficient 60fps experience.
 
@@ -97,11 +97,11 @@ Let's see what's really happening when we scroll the main screen, using the Time
 
 At the top of the recording, you see an FPS indicator in green. You should see a green bar with some occasional spikes, like in the screenshot below. The fact that the green bar is so low indicates that the screen was not hitting 60 FPS.
 
-![3d74ba7552fa6aaf.png](img/3d74ba7552fa6aaf.png)
+![6e324333967f6aee.png](img/6e324333967f6aee.png)
 
 Zoom in on your recording and you will see that after the scroll event is a function call, followed by many separate layout events, each with a red warning triangle. The layout events are the very skinny purple events at the bottom of the flame chart in the screenshot below. This is a sure sign that  *forced synchronous layout*  is occurring.
 
-![5c2a91c2a63b2c10.png](img/5c2a91c2a63b2c10.png)
+![dc923014d38b776e.png](img/dc923014d38b776e.png)
 
 <aside markdown="1" class="key-point">
 <p><strong>Discussion: Forced synchronous layout</strong></p>

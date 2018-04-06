@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -50,7 +50,7 @@ Run Lighthouse on your application by selecting the icon and choosing __Generate
 
 Lighthouse generates an HTML page with the results. An example page is shown below. 
 
-![Lighthouse report](img/bf5139cbb5ea299.png)
+![Lighthouse report](img/85ba5f21895251ff.png)
 
 
 
