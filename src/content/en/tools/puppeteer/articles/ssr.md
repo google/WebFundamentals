@@ -475,7 +475,7 @@ const URL = urlModule.URL;
 
 async function ssr(url) {
   ...
-  const stylesheetContent = {};
+  const stylesheetContents = {};
 
   // 1. Stash the responses of local stylesheets.
   page.on('response', async resp => {
@@ -483,7 +483,7 @@ async function ssr(url) {
     const sameOrigin = new URL(responseUrl).origin === new URL(url).origin;
     const isStylesheet = resp.request().resourceType() === 'stylesheet';
     if (sameOrigin && isStylesheet) {
-      stylesheetContent[responseUrl] = await resp.text();
+      stylesheetContents[responseUrl] = await resp.text();
     }
   });
 
