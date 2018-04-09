@@ -156,7 +156,7 @@ landing_page:
       <h3>Cache Images</h3>
       <p>Images carry most of the weight for a web page. Use this rule to
       serve them quickly from the cache, while making sure you don’t cache
-      them indefinitely, consuming your users' stoage.</p>
+      them indefinitely, consuming your users' storage.</p>
 
       <pre class="prettyprint lang-javascript">
       workbox.routing.registerRoute(
