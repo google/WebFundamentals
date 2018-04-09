@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-18 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -59,11 +59,11 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -646,7 +646,7 @@ You should be able to press the  *Enable Push Messaging*  /  *Disable Push Messa
 
 Congratulations on completing this codelab!
 
-This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/). 
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/).
 
 If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ Concepts:  [Introduction to Push Notifications](introduction-to-push-notificatio
 
 
 
-This lab shows you the basics of sending, receiving, and displaying push notifications. Notifications are messages that display on a user's device, outside of the context of the browser or app. Push notifications are notifications created in response to a message from a server, and work even when the user is not actively using your application. The notification system is built on top of the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), which receives push messages in the background and relays them to your application. 
+This lab shows you the basics of sending, receiving, and displaying push notifications. Notifications are messages that display on a user's device, outside of the context of the browser or app. Push notifications are notifications created in response to a message from a server, and work even when the user is not actively using your application. The notification system is built on top of the  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), which receives push messages in the background and relays them to your application.
 
 #### What you will learn
 
@@ -39,7 +39,7 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the Internet 
+* Connection to the Internet
 * A Google or Gmail account
 * A  [browser that supports web push](http://caniuse.com/#search=push)
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
@@ -68,7 +68,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-Open the __push-notification-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab. 
+Open the __push-notification-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -89,7 +89,7 @@ This folder contains:
 
 
 
-Push notifications are assembled using two APIs: the  [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) and the  [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API). The Notifications API lets us display system notifications to the user. 
+Push notifications are assembled using two APIs: the  [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) and the  [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API). The Notifications API lets us display system notifications to the user.
 
 ### 2.1 Check for support
 
@@ -125,7 +125,7 @@ Notification.requestPermission(function(status) {
 });
 ```
 
-Let's test this function in the browser. Save the code and refresh the page in the browser. A message box should appear at the top of the browser window prompting you to allow notifications. 
+Let's test this function in the browser. Save the code and refresh the page in the browser. A message box should appear at the top of the browser window prompting you to allow notifications.
 
 If the prompt does not appear, you can [set the permissions](tools-for-pwa-developers#permissions) manually by clicking the __Information__ icon in the URL bar. As an experiment, try rejecting permission and then check the console. Now reload the page and this time allow notifications. You should see a permission status of "granted" in the console.
 
@@ -201,7 +201,7 @@ Attaching data to the notification when you create it lets your app get that dat
 
 To create a notification with a set of custom actions, we can add an actions array inside our notification options object.
 
-Replace TODO 2.5 in the options object in __js/main.js__ with the following code: 
+Replace TODO 2.5 in the options object in __js/main.js__ with the following code:
 
 #### js/main.js
 
@@ -332,7 +332,7 @@ The Push API is an interface that lets your app subscribe to a push service and 
 
 ### 3.1 Handle the push event
 
-If a browser that supports push messages receives one, it registers a `push` event in the service worker. 
+If a browser that supports push messages receives one, it registers a `push` event in the service worker.
 
 Inside __sw.js__ replace TODO 3.1 with the code to handle push events:
 
@@ -551,9 +551,9 @@ Here we unsubscribe from the push service and then "update the server" with a `n
 
 *  [Unsubscribe method - MDN](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe)
 
-### 3.6 Optional: Send your first web push message using cURL 
+### 3.6 Optional: Send your first web push message using cURL
 
-Let's use cURL to test pushing a message to our app. 
+Let's use cURL to test pushing a message to our app.
 
 <aside markdown="1" class="key-point">
 <p>Note: Windows machines do not come with cURL preinstalled. If you are using Windows, you can skip this step.</p>
@@ -745,13 +745,13 @@ Now generate the public and private keys by entering the following command into 
 This generates a public/private key pair. The output should look like this:
 
     =======================================
-    
+
     Public Key:
     BAdXhdGDgXJeJadxabiFhmlTyF17HrCsfyIj3XEhg1j-RmT2wXU3lHiBqPSKSotvtfejZlAaPywJ9E-7AxXQBj4
-    
+
     Private Key:
     VCgMIYe2BnuNA4iCfR94hA6pLPT3u3ES1n1xOTrmyLw
-    
+
     =======================================
 
 Copy your keys and save them somewhere safe. Use these keys for all future messages you send.
@@ -918,13 +918,13 @@ Execute the command to run the node server in the command window at the __app__ 
 
     node node/main.js
 
-Send the message once with the app open, and once without. With the app open, the notification should not appear, and instead a message should display in the console. With the application closed, a notification should display normally. 
+Send the message once with the app open, and once without. With the app open, the notification should not appear, and instead a message should display in the console. With the application closed, a notification should display normally.
 
 #### Explanation
 
 The `clients` global in the service worker lists all of the active clients of the service worker on this machine. If there are no clients active, we create a notification.
 
-If there  *are*  active clients it means that the user has your site open in one or more windows. The best practice is usually to relay the message to each of those windows. 
+If there  *are*  active clients it means that the user has your site open in one or more windows. The best practice is usually to relay the message to each of those windows.
 
 #### Solution code
 
@@ -956,7 +956,7 @@ Comment out the `tag` attribute in the `displayNotification` function in __main.
 // tag: 'id1',
 ```
 
-Save the code, open the app again, and update the service worker. Click __Notify me!__ a few times to display multiple notifications. If you click "Close the notification" on one notification they should all disappear. 
+Save the code, open the app again, and update the service worker. Click __Notify me!__ a few times to display multiple notifications. If you click "Close the notification" on one notification they should all disappear.
 
 <aside markdown="1" class="key-point">
 <p>Note: If you don't want to clear out all of the notifications, you can filter based on the <code>tag</code> attribute by passing the tag into the <code>getNotifications</code> function. See the  <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/getNotifications">getNotifications reference on MDN</a> for more information.</p>
@@ -978,7 +978,7 @@ The solution code can be found in the __solution__ directory.
 
 ### 5.4 Notifications and tabs
 
-We can re-use existing pages rather than opening a new tab when the notification is clicked. 
+We can re-use existing pages rather than opening a new tab when the notification is clicked.
 
 Replace the code inside the `else` block in the `notificationclick` handler in __sw.js__ with the following code:
 
