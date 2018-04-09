@@ -108,6 +108,7 @@ importScripts('workbox-sw.prod.vX.Y.Z.js');
 
 const workboxSW = new WorkboxSW();
 workboxSW.precache([]);
+workboxSW.precaching.precacheAndRoute([]);
 ```
 
 Save the __service-worker.js __file. In the command line, run `gulp serve` to open the app in the browser (if you don't have gulp installed globally, install it with `npm install -g gulp`). Take a moment to look over the gulpfile and make sure you understand what it does. 
@@ -118,7 +119,7 @@ Save the __service-worker.js __file. In the command line, run `gulp serve` to op
 
 Here we import the `workbox-sw` library and create an instance of `WorkboxSW` so we can access  [the library methods](https://workboxjs.org/reference-docs/latest/module-workbox-sw.WorkboxSW.html#main) from this object.
 
-In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step. 
+In the next lines we call `workboxSW.precache([])` and `workboxSW.precaching.precacheAndRoute([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step. 
 
 The `precache` method takes care of precaching files, removing cached files no longer in the manifest, updating existing cached files, and it even sets up a fetch handler to respond to any requests for URLs in the manifest using a cache-first strategy. See  [this example](https://workboxjs.org/examples/workbox-sw/#explore-the-code) for a full explanation.
 
@@ -160,7 +161,7 @@ gulp.task('bundle-sw', () => {
     swSrc: 'app/service-worker.js',
     swDest: 'build/service-worker.js',
     globDirectory: 'app',
-    staticFileGlobs: [
+    globPatterns: [
       'index.html',
       'css/main.css'
     ]
@@ -206,7 +207,7 @@ When the app opens in the browser, make sure to close any other open instances o
 
 #### Explanation
 
-In this step, we installed the `workbox-build` module and wrote a gulp task that uses the module's  [`injectManifest`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html#.injectManifest) method. This method copies the source service worker file to the destination service worker file, searches the new service worker for an empty `precache()` call, like `.precache([])`, and populates the empty array with the assets defined in `staticFileGlobs`.
+In this step, we installed the `workbox-build` module and wrote a gulp task that uses the module's  [`injectManifest`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html#.injectManifest) method. This method copies the source service worker file to the destination service worker file, searches the new service worker for an empty `precache()` call, like `.precache([])`, and populates the empty array with the assets defined in `globPatterns`.
 
 <div id="5"></div>
 
