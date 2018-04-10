@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Generic Sensor API is available for Origin Trials in Chrome 63.
+description: Generic Sensor API is enabled by default in Chrome 67 or later.
 
-{# wf_updated_on: 2018-03-21 #}
+{# wf_updated_on: 2018-04-10 #}
 {# wf_published_on: 2017-09-18 #}
-{# wf_tags: sensors,origintrials,chrome63,news #}
+{# wf_tags: sensors,origintrials,chrome63,chrome67,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
-{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 63. #}
+{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is enabled by default in Chrome 67 or later. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -89,9 +89,13 @@ At the time of writing, Chrome supports several sensors that you can experiment 
 - AmbientLightSensor
 - Magnetometer
 
-You can enable Generic Sensor APIs for development purposes by turning on a
-feature flag. Go to [chrome://flags/#enable-generic-sensor](chrome://flags/#enable-generic-sensor)
-to enable motion sensors or
+The Generic Sensor-based motion sensor classes are enabled by default in Chrome
+starting from Chrome 67. Use the
+[chrome://flags/#enable-generic-sensor](chrome://flags/#enable-generic-sensor)
+feature flag to enable motion sensors on the previous Chrome versions.
+
+You can enable environmental sensors for development purposes by turning on a
+feature flag. Go to
 [chrome://flags/#enable-generic-sensor-extra-classes](chrome://flags/#enable-generic-sensor-extra-classes)
 to enable environmental sensors. Restart Chrome and you should be good to go.
 
@@ -103,13 +107,6 @@ to enable environmental sensors. Restart Chrome and you should be good to go.
 More information on browser implementation status can be found on
 [chromestatus.com](https://www.chromestatus.com/features/5698781827825664?embed)
 
-## Motion sensors are available as an origin trial {: #motion-sensors-origin-trials }
-
-In order to get your valuable feedback, the Generic Sensor API is planned to be
-available as an [origin trial](https://bit.ly/OriginTrials) in Chrome 63. You
-will need to [request a token](http://bit.ly/OriginTrialSignup), so that the
-feature would be automatically enabled for your origin, without the need to
-enable Chrome flag.
 
 ## What are all these sensors? How can I use them? {: #what-are-sensors-how-to-use-them }
 
@@ -308,7 +305,7 @@ When your code is ready, deploy it on a server that supports HTTPS.
 [GitHub Pages](https://pages.github.com/) are served over HTTPS, making it a great place to share
 your demos.
 
-Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome.
+Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome versions prior to Chrome 67.
 
 ### 3D model rotation
 
