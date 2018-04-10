@@ -38,7 +38,7 @@ all the things!][IATT] for more on this approach.
 If you do use an IntersectionObserver, make sure to include the
 [polyfill][polyfill], because native browser support is limited.
 
-[polyfill]: https://github.com/WICG/IntersectionObserver/tree/gh-pages/polyfill
+[polyfill]: https://github.com/w3c/IntersectionObserver/tree/master/polyfill
 
 ## More information {: #more-info }
 
