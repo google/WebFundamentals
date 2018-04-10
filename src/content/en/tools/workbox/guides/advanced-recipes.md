@@ -27,7 +27,7 @@ function showRefreshUI(registration) {
   button.style.position = 'absolute';
   button.style.bottom = '24px';
   button.style.left = '24px';
-  button.textContent = 'This site has updated. Please click here to see changes.';
+  button.textContent = 'This site has updated. Please click to see changes.';
 
   button.addEventListener('click', function() {
     if (!registration.waiting) {
@@ -215,9 +215,8 @@ worbox.routing.registerRoute(
 
 Most developers will use one of Workbox's
 [strategies](/web/tools/workbox/modules/workbox-strategies) as part of a
-[router](https://developers.google.com/web/tools/workbox/modules/workbox-routing) configuration.
-This setup makes it easy to automatically respond to specific `fetch` events with a response
-obtained from the strategy.
+[router](/web/tools/workbox/modules/workbox-routing) configuration. This setup makes it easy to
+automatically respond to specific `fetch` events with a response obtained from the strategy.
 
 However, there are situations where making a request using a strategy outside of the standard router
 setup could be useful. For instance, you might be implementing your own routing logic, or you might
