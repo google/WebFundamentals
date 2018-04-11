@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -110,7 +110,7 @@ Different browsers allow different amounts of offline storage. This table summar
 
 ### Storing data with IndexedDB
 
-IndexedDB is a noSQL database. IndexedDB data is stored as key-value pairs in __object stores__. The table below shows an example of an object store, in this case containing beverage items:
+IndexedDB is a NoSQL database. IndexedDB data is stored as key-value pairs in __object stores__. The table below shows an example of an object store, in this case containing beverage items:
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">

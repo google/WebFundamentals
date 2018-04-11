@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 66 to help you plan. In this version, improved service worker security, changes to CSS position values, and more.
 
-{# wf_updated_on: 2018-03-22 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: deprecations,removals,chrome66 #}
 {# wf_blink_components: Blink>CSS,Blink>HTML,Blink>Input,Blink>WebAudio,Blink>ServiceWorker #}
@@ -45,7 +45,7 @@ is scenarios in which `self.location.href` returns a different origin than
 CORS responses for same origin requests.
 
 For a longer discussion on this change, see the
-[issue filed agains the Fetch specification](https://github.com/whatwg/fetch/issues/629)
+[issue filed against the Fetch specification](https://github.com/whatwg/fetch/issues/629)
 in November 2017.
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5694278818856960) &#124;

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
@@ -262,7 +262,7 @@ promise is fulfilled with a `result` object containing a
 
 For those who are familiar with USB, all of this should look pretty familiar.
 
-### I want moar
+### I want more
 
 The WebUSB API lets you interact with the all USB transfer/endpoint types:
 
