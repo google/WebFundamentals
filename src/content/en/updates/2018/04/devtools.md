@@ -176,8 +176,11 @@ it wasn't running when **Stop Current JavaScript Call** ![Stop][Stop]{:.cdt-inl}
 
 ## User Timing measures in the Performance tabs {: #tabs }
 
-When viewing a Performance recording, click the **User Timing** section to view User Timing
-measures in the **Summary**, **Bottom-Up**, **Call Tree** and **Event Log** tabs.
+When viewing a Performance recording, click the **User Timing** section to view
+[User Timing][UT]{:.external} measures in the **Summary**, **Bottom-Up**, **Call Tree** and
+**Event Log** tabs.
+
+[UT]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 
 <figure>
   <img alt="Viewing User Timing measures in the Bottom-Up tab."
