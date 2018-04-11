@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Save-Data client hint request header available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to 'data saving' mode in the browser.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-04-10 #}
 {# wf_published_on: 2016-02-18 #}
 {# wf_tags: savedata,clienthints,chrome49 #}
 {# wf_blink_components: Blink>Fonts,Blink>CSS,Blink>JavaScript #}
@@ -67,14 +67,14 @@ content-specific optimizations such as image and text resource compression.
 
 ## Browser support
 
-- **Chrome 49+*- advertises `Save-Data` [when the user
+- **Chrome 49+** advertises `Save-Data` [when the user
 enables](https://support.google.com/chrome/answer/2392284) the "Data Saver"
 option on mobile, or the "Data Saver" extension on desktop browsers.
-- **Opera 35+*- advertises `Save-Data` when the user enables "[Opera
+- **Opera 35+** advertises `Save-Data` when the user enables "[Opera
 Turbo](http://www.opera.com/computer/features/fast-browser)" mode on desktop,
 or the "[Data savings](http://www.opera.com/help/mobile/android#turbo)" option
 on Android browsers.
-- **Yandex 16.2+*- advertises `Save-Data` when [Turbo
+- **Yandex 16.2+** advertises `Save-Data` when [Turbo
 mode](https://yandex.com/support/newbrowser/search-and-browse/turbo.xml) is
 enabled on desktop or [mobile
 browsers](https://yandex.com/support/browser-mobile-android-phone/navigation/turbo-mode.xml).
@@ -175,16 +175,15 @@ to enable `Save-Data` savings for your users._
 ## Recipes
 
 What you can achieve via `Save-Data` is limited only to what you can come up
-with. To give you an idea of what's possible, let's run through a couple of
-examples of what's possible with `Save-Data`. You may come up with other use
-cases of your own as you read this, so feel free to experiment and see what's
-possible!
+with. To give you an idea of what's possible, let's run through a couple of use
+cases. You may come up with other use cases of your own as you read this, so
+feel free to experiment and see what's possible!
 
 ### Checking for `Save-Data` in server side code
 
 While the `Save-Data` state is something you _can_ detect in JavaScript via the
 `navigator.connection.saveData` property, detecting it on the server side is
-preferable in some cases. JavaScript _can_ fail to execute in some cases. Plus,
+sometimes preferable. JavaScript _can_ fail to execute in some cases. Plus,
 server side detection is the only way to modify markup _before_ it's sent to the
 client, which is involved in some of `Save-Data`s most beneficial use cases.
 
@@ -198,9 +197,12 @@ checking the existence and value of the `$_SERVER["HTTP_SAVE_DATA"]` variable
 like so:
 
 ```php
+// false by default.
 $saveData = false;
 
+// Check if the `Save-Data` header exists and is set to a value of "on".
 if (isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
+  // `Save-Data` detected!
   $saveData = true;
 }
 ```
@@ -224,9 +226,11 @@ header is present, we simply modify the markup we send to the client:
 
 ```php
 if ($saveData === true) {
+  // Send a low-resolution version of the image for clients specifying `Save-Data`.
   ?><img src="butterfly-1x.jpg" alt="A butterfly perched on a flower."><?php
 }
 else {
+  // Send the usual assets for everyone else.
   ?><img src="butterfly-1x.jpg" srcset="butterfly-2x.jpg 2x, butterfly-1x.jpg 1x" alt="A butterfly perched on a flower."><?php
 }
 ```
@@ -264,6 +268,7 @@ non-essential image markup altogether:
 <p>This paragraph is essential content. The image below may be humorous, but it's not critical to the content.</p>
 <?php
 if ($saveData === false) {
+  // Only send this image if `Save-Data` hasn't been detected.
   ?><img src="meme.jpg" alt="One does not simply consume data."><?php
 }
 ```
@@ -310,11 +315,13 @@ present, we can write styles that invoke the non-essential typeface at first,
 but then opts out of it when the `Save-Data` header is present:
 
 ```css
+/* Opt into web fonts by default. */
 p,
 li {
   font-family: "Fira Sans", "Arial", sans-serif;
 }
 
+/* Opt out of web fonts if the `save-Data` class is present. */
 .save-data p,
 .save-data li {
   font-family: "Arial", sans-serif;
@@ -345,8 +352,8 @@ Many HTTP/2 implementations kick off a server push for a resource when a `Link`
 response header invoking [`rel=preload`](https://www.w3.org/TR/preload/) is set.
 This leads to some confusion as to whether `rel=preload` and server push are one
 and the same, but they're two distinct things. `rel=preload` is a resource hint,
-and server push is part of HTTP/2. It just so happens the `Link` header in a
-number of HTTP/2 implementations kicks off a server push.
+and server push is part of HTTP/2. It just so happens the `Link` header kicks
+off a server push in a number of HTTP/2 implementations.
 
 The specification for `rel=preload` [addresses this potential pain
 point](https://www.w3.org/TR/preload/#server-push-http-2) by offering a `nopush`
@@ -355,9 +362,11 @@ detection logic outlined earlier, you could append `nopush` if `Save-Data` is
 present:
 
 ```php
+// `preload` like usual...
 $preload = "</css/styles.css>; rel=preload; as=style";
 
 if($saveData === true) {
+  // ...but don't push anything if `Save-Data` is detected!
   $preload .= "; nopush";
 }
 
