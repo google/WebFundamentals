@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
 
 {# wf_updated_on: 2018-04-11 #}
-{# wf_published_on: 2018-04-10 #}
+{# wf_published_on: 2018-04-11 #}
 {# wf_tags: chrome67,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more. #}
@@ -44,7 +44,7 @@ DevTools searches the headers and bodies of all network requests for the query t
   <img alt="Searching for the text 'cache-control' with the new Network Search pane."
        src="/web/updates/images/2018/04/network-search.png"/>
   <figcaption>
-    <b>Figure X</b>. Searching for the text <code>cache-control</code> with the new Network
+    <b>Figure 1</b>. Searching for the text <code>cache-control</code> with the new Network
     Search pane
   </figcaption>
 </figure>
@@ -60,7 +60,7 @@ match the pattern you provide. You don't need to wrap your RegEx in forward slas
   <img alt="A regular expression query in the Network Search pane."
        src="/web/updates/images/2018/04/regex.png"/>
   <figcaption>
-    <b>Figure X</b>. A regular expression query in the Network Search pane.
+    <b>Figure 2</b>. A regular expression query in the Network Search pane.
   </figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ now also pretty-prints results to aid scannability.
   <img alt="The old and new UI."
        src="/web/updates/images/2018/04/search-ui.png"/>
   <figcaption>
-    <b>Figure X</b>. The old UI on the left, and the new UI on the right
+    <b>Figure 3</b>. The old UI on the left, and the new UI on the right
   </figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ Right-click a network request then select **Copy** > **Copy As Fetch** to copy t
   <img alt="Copying the fetch()-equivalent code for a request."
        src="/web/updates/images/2018/04/fetch.png"/>
   <figcaption>
-    <b>Figure X</b>. Copying the <code>fetch()</code>-equivalent code for a request
+    <b>Figure 4</b>. Copying the <code>fetch()</code>-equivalent code for a request
   </figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ You can now configure the **Audits** panel to:
   <img alt="New audit configuration options."
        src="/web/updates/images/2018/04/audit-config.png"/>
   <figcaption>
-    <b>Figure X</b>. New audit configuration options
+    <b>Figure 5</b>. New audit configuration options
   </figcaption>
 </figure>
 
@@ -146,7 +146,7 @@ is based off of in the **Performance** panel.
   <img alt="The View Trace button."
        src="/web/updates/images/2018/04/view-trace.png"/>
   <figcaption>
-    <b>Figure X</b>. The <b>View Trace</b> button
+    <b>Figure 6</b>. The <b>View Trace</b> button
   </figcaption>
 </figure>
 
@@ -175,9 +175,22 @@ In the video above, the clock is being updated via a `setInterval()` timer. Clic
 **Start Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because
 it wasn't running when **Stop Current JavaScript Call** ![Stop][Stop]{:.cdt-inl} was selected.
 
-## Performance tabs now list activity by thread {: #tabs }
+## User Timing measures in the Performance tabs {: #tabs }
 
-When viewing a Performance recording, click a section 
+When viewing a Performance recording, click the **User Timing** section to view User Timing
+measures in the **Summary**, **Bottom-Up**, **Call Tree** and **Event Log** tabs.
+
+<figure>
+  <img alt="Viewing User Timing measures in the Bottom-Up tab."
+       src="/web/updates/images/2018/04/bottom-up.png"/>
+  <figcaption>
+    <b>Figure 7</b>. Viewing User Timing measures in the <b>Bottom-Up</b> tab. The blue bar
+    to the left of the <b>User Timing</b> section indicates that it is selected.
+  </figcaption>
+</figure>
+
+In general, you can now select any of the sections (**Main Thread**, **User Timing**, **GPU**,
+**ScriptStreamer**, and so on) and view that section's activity in the tabs.
 
 ## Select JavaScript VM instances in the Memory panel {: #vm }
 
@@ -185,10 +198,10 @@ The **Memory** panel now clearly lists out all JavaScript VM instances associate
 rather than hiding them behind the **Target** dropdown menu as before.
 
 <figure>
-  <img alt="."
+  <img alt="TODO"
        src="/web/updates/images/2018/04/js-vm.png"/>
   <figcaption>
-    <b>Figure X</b>. In the old UI on the left, the JavaScript VM instances are hidden behind
+    <b>Figure 8</b>. In the old UI on the left, the JavaScript VM instances are hidden behind
     the <b>Target</b> dropdown menu, whereas in the new UI on the right they are shown in the
     <b>Select JavaScript VM Instance</b> table
   </figcaption>
@@ -208,7 +221,7 @@ On the **Sources** panel, the **Network** tab is now called the **Page** tab.
   <img alt="Two DevTools windows side-by-side, demonstrating the name change."
        src="/web/updates/images/2018/04/page.png"/>
   <figcaption>
-    <b>Figure X</b>. In the old UI on the left, the tab showing the page's resources is called
+    <b>Figure 9</b>. In the old UI on the left, the tab showing the page's resources is called
     <b>Network</b>, whereas in the new UI on the right it's called <b>Page</b>
   </figcaption>
 </figure>
@@ -222,7 +235,7 @@ the breakpoint icons and the current line of execution are now green.
   <img alt="A screenshot of the new breakpoint icon and current line of execution color scheme."
        src="/web/updates/images/2018/04/dark-theme.png"/>
   <figcaption>
-    <b>Figure X</b>. A screenshot of the new breakpoint icon and current line of execution
+    <b>Figure 10</b>. A screenshot of the new breakpoint icon and current line of execution
     color scheme
   </figcaption>
 </figure>
@@ -238,7 +251,7 @@ information.
   <img alt="Certificate transparency information in the Security panel."
        src="/web/updates/images/2018/04/certificate-transparency.png"/>
   <figcaption>
-    <b>Figure X</b>. Certification transparency information in the Security panel
+    <b>Figure 11</b>. Certification transparency information in the Security panel
   </figcaption>
 </figure>
 
@@ -251,7 +264,7 @@ a flame chart for each process so that you can see the total work that each proc
   <img alt="Per-process flame charts in a Performance recording."
        src="/web/updates/images/2018/04/perf-isolation.png"/>
   <figcaption>
-    <b>Figure X</b>. Per-process flame charts in a Performance recording
+    <b>Figure 12</b>. Per-process flame charts in a Performance recording
   </figcaption>
 </figure>
 
