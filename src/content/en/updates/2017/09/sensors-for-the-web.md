@@ -72,7 +72,7 @@ number of advantages:
   available for Accelerometer, Gyroscope, LinearAccelerationSensor, AbsoluteOrientationSensor,
   RelativeOrientationSensor and Magnetometer.
 
-## Generic Sensor APIs in Chrome {: #generic-sensor-api-in-Chrome }
+## Generic Sensor APIs in Chrome {: #generic-sensor-api-in-chrome }
 
 At the time of writing, Chrome supports several sensors that you can experiment with.
 
@@ -305,7 +305,7 @@ When your code is ready, deploy it on a server that supports HTTPS.
 [GitHub Pages](https://pages.github.com/) are served over HTTPS, making it a great place to share
 your demos.
 
-Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-Chrome) in Chrome versions
+Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome versions
 prior to Chrome 67.
 
 ### 3D model rotation
