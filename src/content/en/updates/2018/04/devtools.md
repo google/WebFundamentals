@@ -26,9 +26,8 @@ New features and major changes coming to DevTools in Chrome 67 include:
 * [JavaScript VM instances clearly listed in the **Memory** panel](#vm)
 * [The **Network** tab in the **Sources** panel has been renamed to the **Page** tab](#page)
 * [Dark theme updates](#dark)
-* [Total memory usage in the **Performance Monitor**](#monitor)
 * [Certificate transparency information in the **Security** panel](#security)
-* [Site isolation features in the **Performance** and **Memory** panels](#site-isolation)
+* [Site isolation features in the **Performance** panel](#site-isolation)
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
