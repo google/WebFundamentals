@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Generic Sensor API is enabled by default in Chrome 67 or later.
 
-{# wf_updated_on: 2018-04-10 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2017-09-18 #}
-{# wf_tags: sensors,origintrials,chrome63,chrome67,news #}
+{# wf_tags: sensors,chrome63,chrome67,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
 {# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is enabled by default in Chrome 67 or later. #}
@@ -305,7 +305,8 @@ When your code is ready, deploy it on a server that supports HTTPS.
 [GitHub Pages](https://pages.github.com/) are served over HTTPS, making it a great place to share
 your demos.
 
-Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome versions prior to Chrome 67.
+Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome versions
+prior to Chrome 67.
 
 ### 3D model rotation
 
@@ -440,12 +441,10 @@ need.
 
 ## You can help!
 
-The sensor specifications are in active development and we need your feedback to
-make sure that this development goes in the right direction. Try the APIs either
-by enabling runtime [flags](#generic-sensor-api-in-chrome) in Chrome or taking part
-in the [origin trial](#motion-sensors-origin-trials) when it starts and share your experience.
-Let us know what features would be great to add or if there is something you would like to
-modify in the current API.
+The sensor specifications reached [Candidate Recommendation](https://www.w3.org/Consortium/Process/Process-19991111/tr.html#RecsCR)
+maturity level, hence, the feedback from web and browser developers is highly appreciated. Let us
+know what features would be great to add or if there is something you would like to modify in the
+current API.
 
 Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform).
 Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
