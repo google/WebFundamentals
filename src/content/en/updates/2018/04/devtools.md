@@ -227,14 +227,6 @@ the breakpoint icons and the current line of execution are now green.
   </figcaption>
 </figure>
 
-## Memory usage in the Performance Monitor {: #monitor }
-
-The [**Performance Monitor**][PM] now shows memory usage across all JavaScript VM instances.
-Previously, it only showed main thread memory usage. So, if you use the **Performance Monitor**
-frequently on pages that use workers, you may notice a jump in your typical memory usage.
-
-[PM]: /web/updates/2017/11/devtools-release-notes#perf-monitor
-
 ## Certificate transparency in the Security panel {: #security }
 
 The **Security** panel now reports [certificate transparency][transparency]{:.external}
