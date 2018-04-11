@@ -20,6 +20,7 @@ Note: The video version of these release notes will be published around early Ju
 New features and major changes coming to DevTools in Chrome 67 include:
 
 * [Search across all network headers](#network-search)
+* [CSS variable value previews in the **Styles** pane](#vars)
 * [Copy as fetch](#fetch)
 * [New audits, desktop configuration options, and viewing traces](#audits)
 * [Stop infinite loops](#stop)
@@ -48,8 +49,8 @@ DevTools searches the headers and bodies of all network requests for the query t
   </figcaption>
 </figure>
 
-Click **Match Case** ![Match Case][Case]{.cdt-inl} to make your query case-sensitive. Click
-**Use Regular Expression** ![Use Regular Expression][RegEx]{.cdt-inl} to show any results that
+Click **Match Case** ![Match Case][Case]{:.cdt-inl} to make your query case-sensitive. Click
+**Use Regular Expression** ![Use Regular Expression][RegEx]{:.cdt-inl} to show any results that
 match the pattern you provide. You don't need to wrap your RegEx in forward slashes.
 
 [Case]: /web/updates/images/2018/04/match-case.png
@@ -81,6 +82,11 @@ Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>F</kbd> (Mac) or
 Search**. You can also open it via the [Command Menu][CM].
 
 [CM]: /web/tools/chrome-devtools/shortcuts#command-menu
+
+## CSS variable value previews in the **Styles** pane {: #vars }
+
+In the past, if you used a CSS variable as the value of a color property,
+DevTools would only show you 
 
 ## Copy as fetch {: #fetch }
 
