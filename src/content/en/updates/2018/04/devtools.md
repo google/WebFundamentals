@@ -24,6 +24,7 @@ New features and major changes coming to DevTools in Chrome 67 include:
 * [Copy as fetch](#fetch)
 * [New audits, desktop configuration options, and viewing traces](#audits)
 * [Stop infinite loops](#stop)
+* [User Timing in the **Performance** tabs](#tabs)
 * [JavaScript VM instances clearly listed in the **Memory** panel](#vm)
 * [The **Network** tab in the **Sources** panel has been renamed to the **Page** tab](#page)
 * [Dark theme updates](#dark)
@@ -85,8 +86,17 @@ Search**. You can also open it via the [Command Menu][CM].
 
 ## CSS variable value previews in the **Styles** pane {: #vars }
 
-In the past, if you used a CSS variable as the value of a color property,
-DevTools would only show you 
+When the value of a CSS color property, such as `background-color` or `color`, is set to
+a CSS variable, DevTools now shows a preview of that color.
+
+<figure>
+  <img alt="An example of CSS variable color values."
+       src="/web/updates/images/2018/04/vars.png"/>
+  <figcaption>
+    <b>Figure 4</b>. In the old UI on the left, there is no color preview next to
+    <code>color: var(--main-color)</code>, whereas in the new UI on the right, there is
+  </figcaption>
+</figure>
 
 ## Copy as fetch {: #fetch }
 
@@ -97,7 +107,7 @@ Right-click a network request then select **Copy** > **Copy As Fetch** to copy t
   <img alt="Copying the fetch()-equivalent code for a request."
        src="/web/updates/images/2018/04/fetch.png"/>
   <figcaption>
-    <b>Figure 4</b>. Copying the <code>fetch()</code>-equivalent code for a request
+    <b>Figure 5</b>. Copying the <code>fetch()</code>-equivalent code for a request
   </figcaption>
 </figure>
 
@@ -138,7 +148,7 @@ You can now configure the **Audits** panel to:
   <img alt="New audit configuration options."
        src="/web/updates/images/2018/04/audit-config.png"/>
   <figcaption>
-    <b>Figure 5</b>. New audit configuration options
+    <b>Figure 6</b>. New audit configuration options
   </figcaption>
 </figure>
 
@@ -151,7 +161,7 @@ is based off of in the **Performance** panel.
   <img alt="The View Trace button."
        src="/web/updates/images/2018/04/view-trace.png"/>
   <figcaption>
-    <b>Figure 6</b>. The <b>View Trace</b> button
+    <b>Figure 7</b>. The <b>View Trace</b> button
   </figcaption>
 </figure>
 
@@ -180,7 +190,7 @@ In the video above, the clock is being updated via a `setInterval()` timer. Clic
 **Start Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because
 it wasn't running when **Stop Current JavaScript Call** ![Stop][Stop]{:.cdt-inl} was selected.
 
-## User Timing measures in the Performance tabs {: #tabs }
+## User Timing in the Performance tabs {: #tabs }
 
 When viewing a Performance recording, click the **User Timing** section to view
 [User Timing][UT]{:.external} measures in the **Summary**, **Bottom-Up**, **Call Tree** and
@@ -192,7 +202,7 @@ When viewing a Performance recording, click the **User Timing** section to view
   <img alt="Viewing User Timing measures in the Bottom-Up tab."
        src="/web/updates/images/2018/04/bottom-up.png"/>
   <figcaption>
-    <b>Figure 7</b>. Viewing User Timing measures in the <b>Bottom-Up</b> tab. The blue bar
+    <b>Figure 8</b>. Viewing User Timing measures in the <b>Bottom-Up</b> tab. The blue bar
     to the left of the <b>User Timing</b> section indicates that it is selected.
   </figcaption>
 </figure>
@@ -206,10 +216,10 @@ The **Memory** panel now clearly lists out all JavaScript VM instances associate
 rather than hiding them behind the **Target** dropdown menu as before.
 
 <figure>
-  <img alt="TODO"
+  <img alt="Before and after screenshots of the Memory panel."
        src="/web/updates/images/2018/04/js-vm.png"/>
   <figcaption>
-    <b>Figure 8</b>. In the old UI on the left, the JavaScript VM instances are hidden behind
+    <b>Figure 9</b>. In the old UI on the left, the JavaScript VM instances are hidden behind
     the <b>Target</b> dropdown menu, whereas in the new UI on the right they are shown in the
     <b>Select JavaScript VM Instance</b> table
   </figcaption>
@@ -229,7 +239,7 @@ On the **Sources** panel, the **Network** tab is now called the **Page** tab.
   <img alt="Two DevTools windows side-by-side, demonstrating the name change."
        src="/web/updates/images/2018/04/page.png"/>
   <figcaption>
-    <b>Figure 9</b>. In the old UI on the left, the tab showing the page's resources is called
+    <b>Figure 10</b>. In the old UI on the left, the tab showing the page's resources is called
     <b>Network</b>, whereas in the new UI on the right it's called <b>Page</b>
   </figcaption>
 </figure>
@@ -243,7 +253,7 @@ the breakpoint icons and the current line of execution are now green.
   <img alt="A screenshot of the new breakpoint icon and current line of execution color scheme."
        src="/web/updates/images/2018/04/dark-theme.png"/>
   <figcaption>
-    <b>Figure 10</b>. A screenshot of the new breakpoint icon and current line of execution
+    <b>Figure 11</b>. A screenshot of the new breakpoint icon and current line of execution
     color scheme
   </figcaption>
 </figure>
@@ -259,7 +269,7 @@ information.
   <img alt="Certificate transparency information in the Security panel."
        src="/web/updates/images/2018/04/certificate-transparency.png"/>
   <figcaption>
-    <b>Figure 11</b>. Certification transparency information in the Security panel
+    <b>Figure 12</b>. Certification transparency information in the Security panel
   </figcaption>
 </figure>
 
@@ -272,7 +282,7 @@ a flame chart for each process so that you can see the total work that each proc
   <img alt="Per-process flame charts in a Performance recording."
        src="/web/updates/images/2018/04/perf-isolation.png"/>
   <figcaption>
-    <b>Figure 12</b>. Per-process flame charts in a Performance recording
+    <b>Figure 13</b>. Per-process flame charts in a Performance recording
   </figcaption>
 </figure>
 
