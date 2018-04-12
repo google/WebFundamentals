@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
