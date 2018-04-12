@@ -211,7 +211,7 @@ worbox.routing.registerRoute(
 );
 ```
 
-## Make standalone requests using a strategy {#make-requests}
+## Make standalone requests using a strategy {: #make-requests }
 
 Most developers will use one of Workbox's
 [strategies](/web/tools/workbox/modules/workbox-strategies) as part of a
