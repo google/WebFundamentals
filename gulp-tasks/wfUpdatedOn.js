@@ -44,6 +44,14 @@ gulp.task('update-updated_on', async () => {
       // File isn't a Markdown file, skip it.
       continue;
     }
+    if (changedFile.indexOf('src/content/en/ilt') > 0) {
+      // File is auto-generated, skip it
+      continue;
+    }
+    if (changedFile.indexOf('src/content/en/fundamentals/codelabs') > 0) {
+      // File is auto-generated, skip it
+      continue;
+    }
     try {
       await fse.access(changedFile);
     } catch (err) {
