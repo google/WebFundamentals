@@ -153,6 +153,9 @@ simplifying the code further:
 })();
 ```
 
+You can [play around with this code example online](https://webassembly.studio/?f=aakxyho2ho)
+using WebAssembly Studio.
+
 The optimizations we applied can be summarized as follows:
 
 - Use asynchronous APIs to avoid blocking the main thread
