@@ -125,8 +125,6 @@ to something C-friendly and invoking the wrapped function. `cwrap` takes the
 function name, return type and argument types as
 arguments, in that order:
 
-    <!doctype html>
-    <title>Demo</title>
     <script src="a.out.js"></script>
     <script>
       Module.onRuntimeInitialized = _ => {
@@ -194,9 +192,7 @@ documentation](https://kripken.github.io/emscripten-site/docs/compiling/Building
 
 Now we only need some HTML and JavaScript to load our shiny new module:
 
-    <!doctype html>
-    <title>Demo</title>
-    <script src='/a.out.js'></script>
+    <script src="/a.out.js"></script>
     <script>
       Module.onRuntimeInitialized = async _ => {
         const api = {
@@ -270,7 +266,7 @@ image data.
       version: Module.cwrap('version', 'number', []),
       create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
       destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
-    }
+    };
 
 <div class="clearfix"></div>
 
@@ -388,7 +384,7 @@ do the following:
             STACKTOP: 0,
           }
         };
-        const {instance} = await WebAssembly.instantiateStreaming(await fetch('/a.out.wasm'), imports);
+        const {instance} = await WebAssembly.instantiateStreaming(fetch('/a.out.wasm'), imports);
         console.log(instance.exports._fib(12));
       })();
     </script>
