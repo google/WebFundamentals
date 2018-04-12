@@ -110,7 +110,7 @@ asynchronous methods for reading clipboard text:
 
     document.addEventListener('paste', event => {
       event.preventDefault();
-      navigator.clipboard.getText().then(text => {
+      navigator.clipboard.readText().then(text => {
         console.log('Pasted text: ', text);
       });
     });

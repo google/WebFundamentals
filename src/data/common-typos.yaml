@@ -41,7 +41,7 @@
   fix: Firefox
   caseSensitive: True
 
-- typo: '[^`{3}](java\s*script|java\s*Script|Java\s*script)'
+- typo: '[^\S](java\s*script|java\s*Script|Java\s*script)[^\S]'
   fix: JavaScript
   caseSensitive: True
 
@@ -233,7 +233,6 @@
 - typo: web\ssite
   fix: website
   description: "See: https://developers.google.com/style/word-list#website"
-
 
 ## Spelling mistakes & typos in docs
 
@@ -494,3 +493,44 @@
 
 - typo: balue
   fix: value
+
+## Common issues in translations
+
+- typo: \uFF1A
+  fix: ':'
+  description: This is a unicode full-width colon, please use normal colons.
+
+# Call-outs
+
+- typo: '(注意|노트)[：:]'
+  fix: 'Note:'
+  description: Call-outs like 'Note:' should not be translated.
+
+- typo: '(警告|주의)[：:]'
+  fix: 'Caution:'
+  description: Call-outs like 'Caution:' should not be translated.
+
+- typo: '(警告|경고)[：:]'
+  fix: 'Warning:'
+  description: Call-outs like 'Warning:' should not be translated.
+
+- typo: '(成功|성공)[：:]'
+  fix: 'Success:'
+  description: Call-outs like 'Success:' should not be translated.
+
+- typo: '(关键|핵심)[：:]'
+  fix: 'Key Point:'
+  description: Call-outs like 'Key Point:' should not be translated.
+
+- typo: '(主要术语|주요 용어)[：:]'
+  fix: 'Key Term:'
+  description: Call-outs like 'Key Term:' should not be translated.
+
+- typo: '(目的|목표)[：:]'
+  fix: 'Objective:'
+  description: Call-outs like 'Objective:' should not be translated.
+
+- typo: '(狗粮|개밥)[：:]'
+  fix: 'Dogfood:'
+  description: Call-outs like 'Dogfood:' should not be translated.
+

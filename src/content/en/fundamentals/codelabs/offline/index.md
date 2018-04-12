@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -53,7 +53,7 @@ Or HTTPS:
 
 
 
-First, let's see what the finished sample app looks like (hint: it's amazing). 
+First, let's see what the finished sample app looks like (hint: it's amazing).
 
 Make sure you are on the correct (final) branch by checking out the `master` branch.
 
@@ -80,13 +80,13 @@ Click the horn. It should make a sound.
 
 Now, you're going to simulate going offline using Chrome DevTools.
 
-Open DevTools, go to the __Application__ panel, and enable the __Offline __checkbox. In the screenshot below the mouse is hovering over the checkbox. 
+Open DevTools, go to the __Application__ panel, and enable the __Offline __checkbox. In the screenshot below the mouse is hovering over the checkbox.
 
 ![479219dc5f6ea4eb.png](img/479219dc5f6ea4eb.png)
 
-After clicking the checkbox note the warning icon (yellow triangle with exclamation mark) next to the __Network __panel tab. This indicates that you're offline. 
+After clicking the checkbox note the warning icon (yellow triangle with exclamation mark) next to the __Network __panel tab. This indicates that you're offline.
 
-To prove that you're offline, go to  [https://google.com](https://google.com). You should see Chrome's "there is no Internet connection" error message. 
+To prove that you're offline, go to  [https://google.com](https://google.com). You should see Chrome's "there is no Internet connection" error message.
 
 Now, go back to your app. Although you're offline, the page should still fully reload. You should be able to use the horn still.
 
@@ -115,9 +115,9 @@ But what you actually see is... a fully-functional offline app!
 
 ![3ec8737c20a475df.png](img/3ec8737c20a475df.png)
 
-What happened? Well, recall that when you began this codelab, you tried out the completed version of the app. When you ran that version, the app actually installed a service worker. That service worker is now automatically running every time that you run the app. Once a service worker is installed to a scope such as `localhost:3000` (you'll learn more about scope in the next section), that service worker automatically starts up every time that you access the scope, unless you programmatically or manually delete it. 
+What happened? Well, recall that when you began this codelab, you tried out the completed version of the app. When you ran that version, the app actually installed a service worker. That service worker is now automatically running every time that you run the app. Once a service worker is installed to a scope such as `localhost:3000` (you'll learn more about scope in the next section), that service worker automatically starts up every time that you access the scope, unless you programmatically or manually delete it.
 
-To fix this, go to the __Application __panel of DevTools, click on the __Service Workers __tab, and then click the __Unregister __button. In the screenshot below the mouse is hovering over the button. 
+To fix this, go to the __Application __panel of DevTools, click on the __Service Workers __tab, and then click the __Unregister __button. In the screenshot below the mouse is hovering over the button.
 
 ![837b46360756810a.png](img/837b46360756810a.png)
 
@@ -135,7 +135,7 @@ Now it's time to add offline support back into the app. This consists of two ste
 1. Create a JavaScript file that will be the service worker.
 2. Tell the browser to register the JavaScript file as the "service worker".
 
-First, create a blank file called `sw.js` and place it in the `/app` folder. 
+First, create a blank file called `sw.js` and place it in the `/app` folder.
 
 <aside markdown="1" class="key-point">
 <p><strong>The location of the service worker is important! </strong>For security reasons, a service worker can only control the pages that are in its same directory or its subdirectories. This means that if you place the service worker file in a scripts directory it will only be able to interact with pages in the scripts directory or below.</p>
@@ -156,7 +156,7 @@ if('serviceWorker' in navigator) {
 
 The script checks if the browser supports service workers. If it does, then it registers our currently blank file `sw.js` as the service worker, and then logs to the Console.
 
-Before you run your site again, go back to DevTools and look at the __Service Workers __tab of the __Application __panel. It should currently be empty, meaning the site has no service workers installed. 
+Before you run your site again, go back to DevTools and look at the __Service Workers __tab of the __Application __panel. It should currently be empty, meaning the site has no service workers installed.
 
 ![37d374c4b51d273.png](img/37d374c4b51d273.png)
 
@@ -164,11 +164,11 @@ Make sure that the __Offline __checkbox in DevTools is disabled. Reload your pag
 
 ![b9af9805d4535bd3.png](img/b9af9805d4535bd3.png)
 
-Next to the __Source __label you can see a link to the source code of the registered service worker. 
+Next to the __Source __label you can see a link to the source code of the registered service worker.
 
 ![3519a5068bc773ea.png](img/3519a5068bc773ea.png)
 
-If you ever want to inspect the currently-installed service worker for a page, click on the link. This will show you the source code of the service worker in the __Sources __panel of DevTools. For example, click on the link now, and you should see an empty file. 
+If you ever want to inspect the currently-installed service worker for a page, click on the link. This will show you the source code of the service worker in the __Sources __panel of DevTools. For example, click on the link now, and you should see an empty file.
 
 ![dbc14cbb8ca35312.png](img/dbc14cbb8ca35312.png)
 
@@ -257,7 +257,7 @@ Add the following code to the bottom of your `sw.js` to log the requests made fr
 </tr></table>
 
 
-Let's test this out. __Heads up!__ You're about to see some more unexpected service worker behavior. 
+Let's test this out. __Heads up!__ You're about to see some more unexpected service worker behavior.
 
 Open DevTools and go to the __Application__ panel. The __Offline __checkbox should be disabled. Press the `Esc` key to open the __Console __drawer at the bottom of your DevTools window. Your DevTools window should look similar to the following screenshot:
 
@@ -267,7 +267,7 @@ Reload your page now and look at the DevTools window again. For one, we're expec
 
 ![c7cfb6099e79d5aa.png](img/c7cfb6099e79d5aa.png)
 
-In the __Status __there's a new service worker that's waiting to activate. That must be the new service worker that includes the changes that we just made. So, for some reason, the old service worker that we installed (which was just a blank file) is still controlling the page. If you click on the `sw.js` link next to __Source __you can verify that the old service worker is still running. 
+In the __Status __there's a new service worker that's waiting to activate. That must be the new service worker that includes the changes that we just made. So, for some reason, the old service worker that we installed (which was just a blank file) is still controlling the page. If you click on the `sw.js` link next to __Source __you can verify that the old service worker is still running.
 
 <aside markdown="1" class="key-point">
 <p>This behavior is by design. Check out  <a href="/web/fundamentals/primers/service-worker/update-a-service-worker?hl=en">Update a Service Worker</a> to learn more about the service worker lifecycle.</p>
@@ -322,7 +322,7 @@ Update your fetch event listener to match the code below.
 
 The `event.respondWith()` method tells the browser to evaluate the result of the event in the future. `caches.match(event.request)` takes the current web request that triggered the fetch event and looks in the cache for a resource that matches. The match is performed by looking at the URL string. The `match` method returns a promise that resolves even if the file is not found in the cache. This means that you get a choice about what you do. In your simple case, when the file is not found, you simply want to `fetch` it from the network and return it to the browser.
 
-This is the simplest case; there are many other caching scenarios. For example, you could incrementally cache all responses for previously uncached requests, so in the future they are all returned from the cache. 
+This is the simplest case; there are many other caching scenarios. For example, you could incrementally cache all responses for previously uncached requests, so in the future they are all returned from the cache.
 
 
 ## Congratulations!

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Sérgio Gomes about responsibilities in design.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-05-08 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E05-who-is-responsible-for-design.mp3 #}
 {# wf_podcast_duration: 00:06:21 #}
@@ -33,7 +33,7 @@ In this episode:
 * Material Design Components for web
 * Material Design system
 
-<audio 
+<audio style="width: 100%" 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E05-who-is-responsible-for-design.mp3" 
 controls preload="none">
 

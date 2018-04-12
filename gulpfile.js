@@ -30,6 +30,7 @@ global.WF = {
     templates: 'src/templates/',
   },
   maxArticlesInFeed: 10,
+  minFeedDate: 2010,
   langs: [
     'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
     'ko', 'nl', 'pl', 'pt-br', 'ru', 'th', 'tr', 'vi', 'zh-cn', 'zh-tw',

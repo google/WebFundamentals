@@ -32,7 +32,7 @@ the **#workbox** room on the
 [ChromiumDev Slack Channel](https://chromiumdev.slack.com/).
 
 If you're not already a member of the channel, you can
-[request access here](https://chromiumdev-slack.herokuapp.com/).
+[request access here](https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE).
 
 Times of when we'll be meeting are on the calendar below.
 

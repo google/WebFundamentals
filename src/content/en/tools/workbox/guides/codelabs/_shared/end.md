@@ -31,7 +31,7 @@ get precached.
 
 ## Next steps {: #next-steps }
 
-* Read the [Overview](/web/tools/workbox/overview) to learn more about the benefits that
+* Read the [Overview](/web/tools/workbox/) to learn more about the benefits that
   Workbox can provide to your project and how Workbox works.
 * If you plan on building a custom service worker, it's helpful to understand [the service
   worker lifecycle](/web/fundamentals/primers/service-workers/lifecycle). See [Service Workers:

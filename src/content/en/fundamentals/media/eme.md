@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -196,7 +196,7 @@ from a license server.
     var video = document.querySelector('video');
 
     var config = [{initDataTypes: ['webm'],
-      videoCapabilities: [{contentType: 'video/webm; codecs="vp9"'}]}];
+      videoCapabilities: [{contentType: 'video/webm; codecs="vp09.00.10.08"'}]}];
 
     if (!video.mediaKeys) {
       navigator.requestMediaKeySystemAccess('org.w3.clearkey',

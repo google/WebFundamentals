@@ -63,6 +63,9 @@ toc:
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
           step_group: perf-oce
+        - title: Delivering Fast and Light Applications with Save-Data
+          path: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+          step_group: perf-oce
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
@@ -79,6 +82,10 @@ toc:
             path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
           path: /web/fundamentals/instant-and-offline/offline-ux
+      - title: Lazy Loading Resources
+        section:
+          - title: Images and Video
+            path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
       - title: Order Loading Thoughtfully
         section:
         - title: Critical Rendering Path

@@ -20,10 +20,14 @@ toc:
     path: /web/tools/lighthouse/audits/first-meaningful-paint
   - title: Has Enormous Network Payloads
     path: /web/tools/lighthouse/audits/network-payloads
+  - title: Has multiple page redirects
+    path: /web/tools/lighthouse/audits/redirects
   - title: JavaScript Bootup Time Is Too High
     path: /web/tools/lighthouse/audits/bootup
   - title: Keep Server Response Times Low
     path: /web/tools/lighthouse/audits/ttfb
+  - title: Minify CSS
+    path: /web/tools/lighthouse/audits/minify-css
   - title: Offscreen Images
     path: /web/tools/lighthouse/audits/offscreen-images
   - title: Optimize Images
@@ -46,6 +50,8 @@ toc:
     path: /web/tools/lighthouse/audits/user-timing
   - title: Uses An Excessive DOM Size
     path: /web/tools/lighthouse/audits/dom-size
+  - title: Uses inefficient cache policy on static assets
+    path: /web/tools/lighthouse/audits/cache-policy
 - title: Progressive Web App
   section:
   - title: Address Bar Matches Brand Colors
@@ -154,11 +160,17 @@ toc:
     path: /web/tools/lighthouse/audits/description
   - title: Document Doesn't Have A Title Element
     path: /web/tools/lighthouse/audits/title
+  - title: Document doesn't have a valid hreflang
+    path: /web/tools/lighthouse/audits/hreflang
   - title: Document doesn't have a valid rel=canonical
     path: /web/tools/lighthouse/audits/canonical
   - title: Document Doesn't Use Legible Font Sizes
     path: /web/tools/lighthouse/audits/font-sizes
+  - title: Document uses plugins
+    path: /web/tools/lighthouse/audits/plugins
   - title: Links Do Not Have Descriptive Text
     path: /web/tools/lighthouse/audits/descriptive-link-text
   - title: Page has unsuccessful HTTP status code
     path: /web/tools/lighthouse/audits/successful-http-code
+  - title: Page is blocked from indexing
+    path: /web/tools/lighthouse/audits/indexing

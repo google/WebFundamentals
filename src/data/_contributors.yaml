@@ -142,11 +142,11 @@ lucaberton:
   role:
     - contributor
     - translator
-  homepage: 'http://mrevolution.eu'
+  homepage: 'https://lucaberton.it'
   google: +LucaBerton
   twitter: mrevolution85
   github: lucab85
-  email: mr.evolution85@gmail.com
+  email: luca@lucaberton.it
 
 ericbidelman:
   name:
@@ -550,8 +550,7 @@ jennygove:
     given: Jenny
     family: Gove
   description:
-    en: >
-      Jenny Gove is a UX Research Lead at Google, where she conducts research
+    en: Jenny Gove is a UX Research Lead at Google, where she conducts research
       on smartphone experiences. She obtained her PhD from the University of
       Southampton, UK.
 
@@ -1001,6 +1000,22 @@ henrylim:
   email: lets.email.henry@gmail.com
   description:
     en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
+
+wmlin:
+  name:
+    given: Wanming
+    family: Lin
+  org:
+    name: Intel
+    unit: Web team
+  country: CN
+  role:
+    - translator
+    - engineer
+  github: Honry
+  email: wanming.lin@intel.com
+  description:
+    en: Wanming is an Engineer at Intel
 
 wayouliu:
   name:

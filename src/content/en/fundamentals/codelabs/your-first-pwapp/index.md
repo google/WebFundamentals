@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -98,7 +98,7 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
@@ -107,7 +107,7 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 </aside>
 
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -129,7 +129,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-This app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
+This app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps.
 
 <aside markdown="1" class="key-point">
 <p>From this point forward, all testing/verification (e.g. the<strong> Test It Out</strong> sections in subsequent steps) should be performed using this web server setup.</p>
@@ -144,7 +144,7 @@ This app is not yet doing anything interesting - so far, it's just a minimal ske
 
 ### What is the app shell?
 
-The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times. 
+The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times.
 
 App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a  [service worker](/web/fundamentals/getting-started/primers/service-workers) so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.
 
@@ -158,7 +158,7 @@ Put another way, the app shell is similar to the bundle of code that you'd publi
 
 Using the app shell architecture allows you to focus on speed, giving your Progressive Web App similar properties to native apps: instant loading and regular updates, all without the need of an app store.
 
-### Design the App Shell 
+### Design the App Shell
 
 The first step is to break the design down into its core components.
 
@@ -485,7 +485,7 @@ Now, reload your page. The Service Worker pane should now look like this.
 
 When you see information like this, it means the page has a service worker running.
 
-OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener in your `service-worker.js` file. 
+OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener in your `service-worker.js` file.
 
 ```
 self.addEventListener('activate', function(e) {
@@ -734,7 +734,7 @@ self.addEventListener('fetch', function(e) {
 
 The code intercepts the request and checks if the URL starts with the address of the weather API. If it does we'll use  [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to make the request. Once the response is returned, our code opens the cache, clones the response, stores it in the cache, and finally returns the response to the original requestor.
 
-Our app won't work offline quite yet. We've implemented caching and retrieval for the app shell, but even though we're caching the data, the app doesn't yet check the cache to see if it has any weather data. 
+Our app won't work offline quite yet. We've implemented caching and retrieval for the app shell, but even though we're caching the data, the app doesn't yet check the cache to see if it has any weather data.
 
 ### Making the requests
 
@@ -743,7 +743,7 @@ As mentioned previously, the app needs to kick off two asynchronous requests, on
 To do this, we need to:
 
 1. Check if the `caches` object is available in the global `window` object.
-2. Request data from the cache. 
+2. Request data from the cache.
 
 * If the server request is still outstanding, update the app with the cached data.
 
@@ -797,7 +797,7 @@ Every time that a card is updated, the app stores the timestamp of the data on a
 
 ### Test it out
 
-The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. 
+The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page.
 
 Then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell and data cache listed on the left-hand side. Opening the data cache should should the data stored for each city.
 
@@ -871,7 +871,7 @@ An easy way to track how the app is launched is to add a query string to the `st
 
 #### Tell the browser about your manifest file
 
-Now add the following line to the bottom of the `<head>` element in your `index.html` file: 
+Now add the following line to the bottom of the `<head>` element in your `index.html` file:
 
 ```
 <link rel="manifest" href="/manifest.json">

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -41,7 +41,7 @@ See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an exp
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the internet 
+* Connection to the internet
 * A  [browser that supports service worker](https://jakearchibald.github.io/isserviceworkerready/)
 * A text editor
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
@@ -56,7 +56,7 @@ See the  [Workbox page](/web/tools/workbox/) on developers.google.com for an exp
 
 If you have not already downloaded the repository, follow the instructions in [Setting up the labs](setting-up-the-labs). You don't need to start the server for this lab.
 
-If you have a text editor that lets you open a project, open the __workbox-lab/project__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __project__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __workbox-lab/project__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __project__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -110,7 +110,7 @@ const workboxSW = new WorkboxSW();
 workboxSW.precache([]);
 ```
 
-Save the __service-worker.js __file. In the command line, run `gulp serve` to open the app in the browser (if you don't have gulp installed globally, install it with `npm install -g gulp`). Take a moment to look over the gulpfile and make sure you understand what it does. 
+Save the __service-worker.js __file. In the command line, run `gulp serve` to open the app in the browser (if you don't have gulp installed globally, install it with `npm install -g gulp`). Take a moment to look over the gulpfile and make sure you understand what it does.
 
 [Unregister](tools-for-pwa-developers#unregister) any existing service workers at localhost:8002. Refresh the page and check that the new service worker was created in your browser's [developer tools](tools-for-pwa-developers#accesssw). You should see a "Service Worker registration successful" message in the console.
 
@@ -118,7 +118,7 @@ Save the __service-worker.js __file. In the command line, run `gulp serve` to op
 
 Here we import the `workbox-sw` library and create an instance of `WorkboxSW` so we can access  [the library methods](https://workboxjs.org/reference-docs/latest/module-workbox-sw.WorkboxSW.html#main) from this object.
 
-In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step. 
+In the next line we call `workboxSW.precache([])`. This method takes a manifest of URLs to cache on service worker installation. It is recommended to use `workbox-build` or `workbox-cli` to generate the manifest for you (this is why the array is empty). These build tools will generate hashes of the files along with their URLs. We will do that in the next step.
 
 The `precache` method takes care of precaching files, removing cached files no longer in the manifest, updating existing cached files, and it even sets up a fetch handler to respond to any requests for URLs in the manifest using a cache-first strategy. See  [this example](https://workboxjs.org/examples/workbox-sw/#explore-the-code) for a full explanation.
 
@@ -130,7 +130,7 @@ The `precache` method takes care of precaching files, removing cached files no l
 
 
 
-This step uses gulp and `workbox-build` to build a service worker. 
+This step uses gulp and `workbox-build` to build a service worker.
 
 Start by installing the  [`workbox-build`](https://workboxjs.org/reference-docs/latest/module-workbox-build.html) module:
 
@@ -287,7 +287,7 @@ npm install -g webpack-dev-server
 
 This will install several packages:
 
-*  [Webpack](https://webpack.js.org/) - webpack is a tool for bundling your project's assets 
+*  [Webpack](https://webpack.js.org/) - webpack is a tool for bundling your project's assets
 *  [workbox-webpack-plugin](https://workboxjs.org/get-started/webpack.html) - generates a service worker or injects a manifest into an existing service worker as part of a webpack build process
 *  [webpack-dev-server](https://github.com/webpack/webpack-dev-server) - a webpack development server that provides live reloading
 
@@ -341,7 +341,7 @@ webpack-dev-server --open --hot
 
 Here we are adding the `workbox-webpack-plugin` to a very basic webpack configuration file. The plugin will inject the files matched in the glob patterns into the source service worker and copy the whole file to the destination service worker. The source service worker must contain an empty call to the `precache` method (`workboxSW.precache([]);`).
 
-This example is meant to demonstrate just the `workbox-webpack-plugin` and doesn't really use webpack the way it's meant to be used. If you'd like to learn more about webpack itself, checkout the  [introduction](https://webpack.js.org/concepts/) on webpack.js.org. 
+This example is meant to demonstrate just the `workbox-webpack-plugin` and doesn't really use webpack the way it's meant to be used. If you'd like to learn more about webpack itself, checkout the  [introduction](https://webpack.js.org/concepts/) on webpack.js.org.
 
 <div id="congrats"></div>
 

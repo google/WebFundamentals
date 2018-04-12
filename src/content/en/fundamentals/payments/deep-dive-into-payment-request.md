@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-02-20 #}
+{# wf_updated_on: 2018-03-26 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -133,7 +133,7 @@ constructor, starting with the supported payment methods.
 ### Defining Supported Payment Methods
 
 The Payment Request API is designed to support credit and debit card payments
-as well as third party payment methods (such as Pay with Google).
+as well as third party payment methods (such as Google Pay).
 
 You must supply an array of objects indicating your supported payment methods
 where each payment method must include a  `supportedMethods` parameter that
@@ -154,7 +154,7 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
 
 First we'll look at how to define support for credit and debit cards, followed
-by a brief look at supporting Pay with Google.
+by a brief look at supporting Google Pay.
 
 ### Payment Method: 'basic-card'
 
@@ -175,7 +175,7 @@ If the user has no cards set up they'll be prompted to add details, otherwise
 an existing card will be selected for them.
 
 Note: To get access to all forms of payment available with Google, developers
-will need to implement the Pay with Google method. Refer to the
+will need to implement the Google Pay method. Refer to the
 [Google Pay API](/pay/api/web/paymentrequest/tutorial) docs for more information.
 
 <div class="attempt-center">
@@ -308,10 +308,10 @@ If the browser can support the BobPay payment method it will offer it to the
 user alongside credit cards.
 
 An example of using a third party payment processor like this can be
-shown with "Pay with Google", which is supported on Chrome for Android.
+shown with "Google Pay", which is supported on Chrome for Android.
 
 ```
-const payWithGooglePaymentMethod = {
+const googlePayPaymentMethod = {
   supportedMethods: 'https://google.com/pay',
   data: {
     'environment': 'TEST',
@@ -336,14 +336,14 @@ const payWithGooglePaymentMethod = {
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Pay with Google example in the payment request UI.">
+    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Google Pay example in the payment request UI.">
     <figcaption>
-      Pay with Google example in payment request UI.
+      Google Pay example in payment request UI.
     </figcaption>
   </figure>
 </div>
 
-We won't go into details of how to add Pay with Google in this article, [we have
+We won't go into details of how to add Google Pay in this article, [we have
 a dedicated document to that](/pay/api/web/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
 
 
@@ -360,18 +360,18 @@ error:
 `DOMException: The payment method is not supported`
 
 This shouldn't be a problem if you include 'basic-card' as a supported payment
-method. If, however, you only support a third party payment method, like Pay
-with Google, there is a strong chance that it won't be supported by a browser
+method. If, however, you only support a third party payment method, like Google
+Pay, there is a strong chance that it won't be supported by a browser
 that supports the Payment Request API.
 
 **Third Party Payment Method Skipping the Payment Request UI**
-In the screenshot above you can see "Pay with Google" as the pre-selected
-payment option. This has occurred because the example supports both Pay with
-Google and basic cards. If you define Pay with Google as your **only** payment
-method and the browser supports it, the browser can (and Chrome does, at the
-time of writing) skip the payment request UI altogether after the `show()`
-method is called. Users will be taken straight to Google Play services to
-complete the payment.
+In the screenshot above you can see "Google Pay" as the pre-selected
+payment option. This has occurred because the example supports both Google Pay
+and basic cards. If you define Google Pay as your **only** payment
+method and the browser supports it, and no additional data is requested from
+`PaymentOptions`, the browser can (and Chrome does, at the time of writing)
+skip the payment request UI altogether after the `show()` method is called
+Users will be taken straight to Google Play services to complete the payment.
 
 ### Defining Payment Details
 
@@ -768,7 +768,7 @@ This will be one of the values passed into the `supportedMethods` objects ("basi
 </table>
 
 The details object is only standardized for the basic-card payment method. For
-third party payment methods, like Pay with Google, the details object's content
+third party payment methods, like Google Pay, the details object's content
 will be documented by the payment method.
 
 For 'basic-card' payments, the details object will contain the `billingAddress`,

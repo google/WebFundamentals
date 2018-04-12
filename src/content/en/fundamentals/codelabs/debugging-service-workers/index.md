@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-28 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -70,7 +70,7 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
@@ -79,7 +79,7 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 </aside>
 
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -101,7 +101,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 ![693305d127d9fe80.png](img/693305d127d9fe80.png)
 
-Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps. 
+Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps.
 
 <aside markdown="1" class="key-point">
 <p>From this point forward, all testing/verification should be performed using this web server setup. You'll usually be able to get away with simply refreshing your test browser tab.</p>
@@ -120,7 +120,7 @@ Building a Progressive Web Apps requires tying together a number of different co
 
 * Open the Chrome DevTools and click on the tab that says __Application__
 
-![8c59c74286a01362.png](img/8c59c74286a01362.png)
+![5d18df60c53a0420.png](img/5d18df60c53a0420.png)
 
 Look in the sidebar and notice __Manifest__ is currently highlighted. This view shows important information related to the `manifest.json` file such as its application name, start URL, icons, etc.
 
@@ -134,7 +134,7 @@ In the past, inspecting a Service Worker required poking around in Chrome intern
 
 * Click on the __Service Workers__ menu item below the currently selected __Manifest__ item
 
-![5f7ecd7d7f9c043a.png](img/5f7ecd7d7f9c043a.png)
+![d4eeba0a3c66a04.png](img/d4eeba0a3c66a04.png)
 
 The __Service Workers__ view provides information about Service Workers which are active in the current origin. Along the top row there are a series of checkboxes.
 
@@ -159,14 +159,14 @@ The code for the current Service Worker is quite simple, just a couple of consol
     self.addEventListener('install', function(event) {
       console.log('Service Worker installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Service Worker activating.');  
+      console.log('Service Worker activating.');
     });
 
 If you switch back to the DevTools and look in the Console you can see that both logs have been output successfully.
 
-![9377be2a4e29c16b.png](img/9377be2a4e29c16b.png)
+![a8c1d1bb2a14eb24.png](img/a8c1d1bb2a14eb24.png)
 
 Let's update the code for the `service-worker.js` to watch it go through a lifecycle change.
 
@@ -175,9 +175,9 @@ Let's update the code for the `service-worker.js` to watch it go through a lifec
     self.addEventListener('install', function(event) {
       console.log('A *new* Service Worker is installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Finally active. Ready to start serving content!');  
+      console.log('Finally active. Ready to start serving content!');
     });
 
 * Refresh the page and open the console in DevTools
@@ -188,7 +188,7 @@ The console logs `A *new* Service Worker is installing.` but doesn't show the 2n
 
 In the Application tab there are now two status indicators, each representing the state of our two Service Workers.
 
-![ad313b2b4e3105be.png](img/ad313b2b4e3105be.png)
+![67548710d5ca4936.png](img/67548710d5ca4936.png)
 
 Note the ID of the first Service Worker. It should match the original Service Worker ID. When you install a new Service Worker, the previous worker remains active until the next time the user visits the page.
 
@@ -252,11 +252,11 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 
 self.addEventListener('activate', function(event) {
-  console.log('Finally active. Ready to start serving content!');  
+  console.log('Finally active. Ready to start serving content!');
 });
 ```
 
@@ -272,7 +272,7 @@ Notice that the __Cache Storage__ menu item in the __Application__ panel now has
 
 * Click to expand the  __Cache Storage__ menu, then click on `my-site-cache-v1`
 
-![132f9c0cd308546f.png](img/132f9c0cd308546f.png)
+![7990023bd9e8fe7a.png](img/7990023bd9e8fe7a.png)
 
 Here you can see all of the files cached by the Service Worker. If you need to remove a file from the cache you can right-click on it and select the __delete__ option from the context menu. Similarly, you can delete the entire cache by right-clicking on `my-site-cache-v1` and choosing delete.
 
@@ -305,7 +305,7 @@ Because the Service Worker is able to make its own network requests, it can be u
 
 In the Network panel, you should see an initial set of request for files like `main.css`, followed by a second round of requests, prefixed with a gear icon, which seem to fetch the same assets.
 
-![ac3b3feec0554231.png](img/ac3b3feec0554231.png)
+![8daca914fe2d9dc7.png](img/8daca914fe2d9dc7.png)
 
 The gear icon signifies that these requests came from the Service Worker itself. Specifically, these are the requests being made by the Service Worker's `install` handler to populate the offline cache.
 
@@ -357,7 +357,7 @@ Notice the __Network__ panel now has a yellow warning sign to indicate that you'
 
 With your `fetch` handler in place, and your app set to __Offline__, now is the moment of truth. Refresh the page and if all goes well you should continue to see site content, even though nothing is coming from the network. You can switch to the __Network__ panel to verify that all of the resources are being served from Cache Storage. Notice in the __Size__ column it says these resources are coming `(from Service Worker)`. That's the signal that tells us the Service Worker intercepted the request, and served a response from the cache instead of hitting the network.
 
-![d6c0cc08665a2429.png](img/d6c0cc08665a2429.png)
+![96f2065b2f0adece.png](img/96f2065b2f0adece.png)
 
 You'll notice that there are failed requests (like for a new Service Worker or `manifest.json`). That's totally fine and expected.
 
@@ -370,7 +370,7 @@ To start, let's simulate how the application works on a slow network when the Se
 * From the __Application__ panel, uncheck __Offline__
 * Check __Bypass for network__
 
-![306ae05a5ccff37f.png](img/306ae05a5ccff37f.png)
+![d9ea0e24a6ef374e.png](img/d9ea0e24a6ef374e.png)
 
 The __Bypass for network__ option will tell the browser to skip our service worker when it needs to make a network request. This means nothing will be able to come from Cache Storage, it will be as if we have no Service Worker installed at all.
 
@@ -379,13 +379,13 @@ The __Bypass for network__ option will tell the browser to skip our service work
 
 The __Network Throttle__ dropdown is located in the top right of the __Network__ panel, right next to the __Network__ panel's own __Offline__ checkbox. By default it is set to `No throttling`.
 
-![830dc8e341890d23.png](img/830dc8e341890d23.png)
+![662a15b44afb6633.png](img/662a15b44afb6633.png)
 
 * With the speed set to `Regular 2G`, refresh the page
 
 Notice the response times jump way up! Now each asset takes several hundred milliseconds to download.
 
-![d2458f80800f4c2.png](img/d2458f80800f4c2.png)
+![9774a4c588a6604c.png](img/9774a4c588a6604c.png)
 
 Let's see how things differ with our Service Worker back in play.
 
@@ -396,7 +396,7 @@ Let's see how things differ with our Service Worker back in play.
 
 Now our response times jump down to a blazing fast few milliseconds per resource. For users on slower networks this is a night and day difference!
 
-![265d8ff469201930.png](img/265d8ff469201930.png)
+![44253f3de0e694b8.png](img/44253f3de0e694b8.png)
 
 <aside markdown="1" class="warning">
 <p>Before proceeding make sure you set the <strong>Network Throttle</strong> back to <code>No throttling</code></p>
@@ -430,7 +430,7 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 ```
 
@@ -518,18 +518,18 @@ The only remaining step is to add support for the `push` event to `service-worke
 * Open `service-worker.js` and add the following lines after the `fetch` handler
 
 ```
-self.addEventListener('push', function(event) {  
-  var title = 'Yay a message.';  
-  var body = 'We have received a push message.';  
-  var icon = '/images/smiley.svg';  
+self.addEventListener('push', function(event) {
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';
+  var icon = '/images/smiley.svg';
   var tag = 'simple-push-example-tag';
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
-    })  
-  );  
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
 });
 ```
 

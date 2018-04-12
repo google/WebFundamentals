@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -42,7 +42,7 @@ This lab shows you how to take an existing PWA that uses `sw-precache` and `sw-t
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the internet 
+* Connection to the internet
 * A  [browser that supports service worker](https://jakearchibald.github.io/isserviceworkerready/)
 * A text editor
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
@@ -57,7 +57,7 @@ This lab shows you how to take an existing PWA that uses `sw-precache` and `sw-t
 
 If you have not already downloaded the repository, follow the instructions in [Setting up the labs](setting-up-the-labs). You don't need to start the server for this lab.
 
-In __sw-precache-workbox-lab/__, open the __project__ folder in your preferred text editor. The __project__ folder is where you do the work in this lab. 
+In __sw-precache-workbox-lab/__, open the __project__ folder in your preferred text editor. The __project__ folder is where you do the work in this lab.
 
 <div id="2"></div>
 
@@ -110,7 +110,7 @@ toolbox.router.get(/\.(?:png|gif|jpg)$/, toolbox.cacheFirst, {
 });
 ```
 
-In the following steps, we'll replace these routes with Workbox routes using the `workbox-sw` library. 
+In the following steps, we'll replace these routes with Workbox routes using the `workbox-sw` library.
 
 <div id="3"></div>
 
@@ -136,7 +136,7 @@ gulp serve
 
 This copies all of the relevant files to a build directory, generates a service worker (__build/sw.js__), starts a server, and opens the app in the browser.
 
-After the app opens in the browser, open your browser's Developer Tools and  [verify that the service worker was installed](/web/ilt/pwa/tools-for-pwa-developers#interact_with_service_workers_in_the_browser). Then,  [open the cache](/web/ilt/pwa/tools-for-pwa-developers#inspect_cache_storage) and verify that the __index.html__ and __main.css__ files are cached. 
+After the app opens in the browser, open your browser's Developer Tools and  [verify that the service worker was installed](/web/ilt/pwa/tools-for-pwa-developers#interact_with_service_workers_in_the_browser). Then,  [open the cache](/web/ilt/pwa/tools-for-pwa-developers#inspect_cache_storage) and verify that the __index.html__ and __main.css__ files are cached.
 
 Refresh the page and then refresh the cache and verify that the `googleapis` and `images` caches were created and they contain the font and image assets. Now let's convert the app so that we get the same results using Workbox.
 
@@ -250,7 +250,7 @@ Note: If you have a newer `workbox-sw` version, remember to update the version n
 
 The `workbox-sw` module exposes a  [few methods](https://workboxjs.org/reference-docs/latest/module-workbox-sw.WorkboxSW.html#main) you can use to write the service worker.
 
-The `precache` method takes a file manifest and caches the assets on service worker install. Note that we've left the array empty: It is recommended that you populate this array using a Workbox build module, such as `workbox-build`. We'll look at how and why in step 7. 
+The `precache` method takes a file manifest and caches the assets on service worker install. Note that we've left the array empty: It is recommended that you populate this array using a Workbox build module, such as `workbox-build`. We'll look at how and why in step 7.
 
 See the  [documentation](https://workboxjs.org/) for full descriptions of the Workbox modules and methods.
 
@@ -334,9 +334,9 @@ gulp.task('service-worker', () => {
 });
 ```
 
-Save the file. 
+Save the file.
 
-Before testing your changes, make sure you've closed all open instances of the app in the browser. The service worker won't update if any of the pages it controls are still open. Then, start the server in the __project__ directory with `gulp serve`. 
+Before testing your changes, make sure you've closed all open instances of the app in the browser. The service worker won't update if any of the pages it controls are still open. Then, start the server in the __project__ directory with `gulp serve`.
 
 After the app opens in the browser, open Developer Tools and  [unregister the previous service worker](/web/ilt/pwa/tools-for-pwa-developers#unregister_the_service_worker) and  [clear the caches](/web/ilt/pwa/tools-for-pwa-developers#clear_the_service_worker_cache). Refresh the page a couple times so the new service worker can install and intercept some network requests. Check that the `workbox-precaching-revisioned` cache exists and contains __index.html__ and __css/main.css__. Check that the `googleapis` and `images` caches were created and contain the appropriate files. If everything is there you've successfully migrated the app to Workbox!
 
@@ -356,7 +356,7 @@ You have learned how to convert an app that uses `sw-precache` and `sw-toolbox` 
 
 ### What we've covered
 
-* Using `workbox-sw` to precache static assets 
+* Using `workbox-sw` to precache static assets
 * Using `workbox-sw` to create routes in your service worker
 * Using `workbox-build` to inject a list of files for your service worker to precache
 

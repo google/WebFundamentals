@@ -222,8 +222,11 @@ function readMetadataForFile(file) {
   updated = updated.utcOffset(0, true);
   let featured = wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, NO_DATE);
   featured = moment(featured).utcOffset(0, true);
-  let url = file.replace('src/content/en/', '/web/');
-  url = url.replace('.md', '');
+  const url = file
+    .replace('src/content/en/', '/web/')
+    .replace('.md', '')
+    .replace('.html', '')
+    .replace(/\/index$/, '/');
   let result = {
     filePath: file,
     url: url,

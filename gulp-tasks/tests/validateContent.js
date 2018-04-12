@@ -114,7 +114,9 @@ function test(filename, contents, options) {
     matches[1].split(',').forEach(function(tag) {
       tag = tag.trim();
       if (options.commonTags.indexOf(tag) === -1) {
-        logWarning(`Uncommon tag (\`${tag}\`) found.`, position);
+        const msg = `Unknown tag '${tag}' found, use an existing tag, or add ` +
+          `it to 'src/data/commonTags.json'.`;
+        logWarning(msg, position);
       }
     });
   }

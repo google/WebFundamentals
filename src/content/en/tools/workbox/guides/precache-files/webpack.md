@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-04-02 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with Webpack {: .page-title }
@@ -27,7 +27,7 @@ module.exports = {
   plugins: [
     // Other plugins...
 
-    WorkboxPlugin.InjectManifest({
+    new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js',
     })
   ]
