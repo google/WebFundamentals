@@ -44,11 +44,7 @@ gulp.task('update-updated_on', async () => {
       // File isn't a Markdown file, skip it.
       continue;
     }
-    if (changedFile.indexOf('src/content/en/ilt') > 0) {
-      // File is auto-generated, skip it
-      continue;
-    }
-    if (changedFile.indexOf('src/content/en/fundamentals/codelabs') > 0) {
+    if (changedFile.indexOf('src/content/en/ilt') >= 0) {
       // File is auto-generated, skip it
       continue;
     }
@@ -60,6 +56,10 @@ gulp.task('update-updated_on', async () => {
     }
 
     const fileContents = (await fse.readFile(changedFile)).toString();
+    if (wfRegEx.RE_AUTO_GENERATED.exec(fileContents)) {
+      // File is auto-generated, skip it.
+      continue;
+    }
     const matched = wfRegEx.RE_UPDATED_ON.exec(fileContents);
     if (!matched) {
       // Updated on not in the file - nothing to do.
