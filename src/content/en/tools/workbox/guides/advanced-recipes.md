@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-04-13 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -27,7 +27,7 @@ function showRefreshUI(registration) {
   button.style.position = 'absolute';
   button.style.bottom = '24px';
   button.style.left = '24px';
-  button.textContent = 'This site has updated. Please click here to see changes.';
+  button.textContent = 'This site has updated. Please click to see changes.';
 
   button.addEventListener('click', function() {
     if (!registration.waiting) {
@@ -209,4 +209,68 @@ worbox.routing.registerRoute(
     plugins: [postMessagePlugin],
   })
 );
+```
+
+## Make standalone requests using a strategy {: #make-requests }
+
+Most developers will use one of Workbox's
+[strategies](/web/tools/workbox/modules/workbox-strategies) as part of a
+[router](/web/tools/workbox/modules/workbox-routing) configuration. This setup makes it easy to
+automatically respond to specific `fetch` events with a response obtained from the strategy.
+
+There are situations where you may want to use a strategy in your own router setup, or instead of
+a plain `fetch()` request.
+
+To help with these sort of use cases, you can use any of the Workbox strategies in a "standalone"
+fashion via the `makeRequest()` method.
+
+```javascript
+// Inside your service worker code:
+const strategy = workbox.strategies.networkFirst({
+  networkTimeoutSeconds: 10,
+});
+const response = await strategy.makeRequest({
+  request: 'https://example.com/path/to/file',
+});
+// Do something with response.
+```
+
+The `request` parameter is required, and can either be a
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object or a string
+representing a URL.
+
+The `event` parameter is an optional
+[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent). If provided,
+it will be used to keep the service worker alive (via
+[`event.waitUntil()`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil))
+long enough to complete any "background" cache updates and cleanup.
+
+`makeRequest()` returns a promise for a
+[`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
+
+You can use it in a more complex example as follows:
+
+```javascript
+self.addEventListener('fetch', async (event) => {
+  if (event.request.url.endsWith('/complexRequest')) {
+    // Configure the strategy in advance.
+    const strategy = workbox.strategies.staleWhileRevalidate({cacheName: 'api-cache'});
+    
+    // Make two requests using the strategy.
+    // Because we're passing in event, event.waitUntil() will be called automatically.
+    const firstPromise = strategy.makeRequest({event, request: 'https://example.com/api1'});
+    const secondPromise = strategy.makeRequest({event, request: 'https://example.com/api2'});
+
+    const [firstResponse, secondResponse] = await Promise.all(firstPromise, secondPromise);
+    const [firstBody, secondBody] = await Promise.all(firstResponse.text(), secondResponse.text());
+    
+    // Assume that we just want to concatenate the first API response with the second to create the
+    // final response HTML.
+    const compositeResponse = new Response(firstBody + secondBody, {
+      headers: {'content-type': 'text/html'},
+    });
+
+    event.respondWith(compositeResponse);
+  }
+});
 ```
