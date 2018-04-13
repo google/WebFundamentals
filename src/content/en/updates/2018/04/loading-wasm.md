@@ -56,8 +56,10 @@ use `await WebAssembly.compile(buffer)` instead:
 second.
 
 Almost every operation in the modified snippet is now asynchronous, as the use of `await` makes
-clear. The only exception is `new WebAssembly.Instance(module)`. For consistency, we can use the
-asynchronous `WebAssembly.instantiate(module)`.
+clear. The only exception is `new WebAssembly.Instance(module)`, which has the same 4 KB buffer
+size restriction in Chrome. For consistency and for the sake of [keeping the main thread
+free](https://twitter.com/mathias/status/978549917332500480), we can use the asynchronous
+`WebAssembly.instantiate(module)`.
 
 ```js
 (async () => {
