@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-04-10 #}
+{# wf_updated_on: 2018-04-13 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -218,17 +218,26 @@ Most developers will use one of Workbox's
 [router](/web/tools/workbox/modules/workbox-routing) configuration. This setup makes it easy to
 automatically respond to specific `fetch` events with a response obtained from the strategy.
 
-However, there are situations where making a request using a strategy outside of the standard router
-setup could be useful. For instance, you might be implementing your own routing logic, or you might
-want to create a composite response that contains information from multiple smaller responses,
-stitched together. There are also situations where you'd normally call
-[`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)
-directly, but you'd like to take advantage of the
-[plugin integration](/web/tools/workbox/guides/using-plugins) offered by a strategy class.
+There are situations where you may want to use a strategy in your own router setup, or instead of
+a plain `fetch()` request.
 
-Regardless of the specific use case, Workbox offers the flexibility of using any
-[strategy](/web/tools/workbox/modules/workbox-strategies) in a "standalone" fashion via the
-`makeRequest({event, request})` method exposed in each class.
+To help with these sort of use cases, you can use any of the Workbox strategies in a "standalone"
+fashion via the `makeRequest()` method.
+
+```javascript
+// Inside your service worker code:
+const strategy = workbox.strategies.networkFirst({
+  networkTimeoutSeconds: 10,
+});
+const response = await strategy.makeRequest({
+  request: 'https://example.com/path/to/file',
+});
+// Do something with response.
+```
+
+The `request` parameter is required, and can either be a
+[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object or a string
+representing a URL.
 
 The `event` parameter is an optional
 [`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent). If provided,
@@ -236,14 +245,10 @@ it will be used to keep the service worker alive (via
 [`event.waitUntil()`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil))
 long enough to complete any "background" cache updates and cleanup.
 
-The `request` parameter is required, and can either be a
-[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object or a string
-representing a URL.
-
 `makeRequest()` returns a promise for a
 [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object.
 
-You can use it as follows:
+You can use it in a more complex example as follows:
 
 ```javascript
 self.addEventListener('fetch', async (event) => {
