@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version,
 
-{# wf_updated_on: 2018-04-11 #}
+{# wf_updated_on: 2018-04-13 #}
 {# wf_published_on: 2018-04-26 #}
 {# wf_tags: deprecations,removals,chrome67 #}
 {# wf_blink_components: Blink #}
