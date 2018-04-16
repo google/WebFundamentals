@@ -227,7 +227,6 @@ function readMetadataForFile(file) {
     .replace('.md', '')
     .replace('.html', '')
     .replace(/\/index$/, '/');
-  url = url.replace('.md', '');
   let lang = wfRegEx.getMatch(wfRegEx.RE_URLLANG, file);
   let result = {
     filePath: file,
