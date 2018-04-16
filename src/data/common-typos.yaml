@@ -1,0 +1,536 @@
+## A collection of common typos.
+#
+# The typo field is converted to a JavaScript Regular Expression and is then
+# used to search for matches. Suggested fixes are provided by the fix field,
+# and can also contain RegEx replace fields (eg: $1).
+#
+# NOTE: Typos here will apply to documentation, sample code and markup/down
+# used within the document.
+#
+# EXAMPLE
+# - typo: thier (REQUIRED)
+#   fix: their (REQUIRED)
+#   caseSensitive: False (OPTIONAL)
+#   description: "There their they're, they're not all the same." (OPTIONAL)
+#
+# EXAMPLE with RegEx
+# - typo: errror(s|)
+#   fix: error$1
+
+## Typos in company/product names
+
+- typo: (A|a)jax
+  fix: AJAX
+  caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#ajax"
+
+- typo: android
+  fix: Android
+  caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#android"
+
+- typo: chrome\s
+  fix: Chrome
+  caseSensitive: True
+
+- typo: (G|g)ithub\s
+  fix: GitHub
+  caseSensitive: True
+
+- typo: FireFox
+  fix: Firefox
+  caseSensitive: True
+
+- typo: '[^\S](java\s*script|java\s*Script|Java\s*script)[^\S]'
+  fix: JavaScript
+  caseSensitive: True
+
+- typo: MacOS
+  fix: macOS
+  caseSensitive: True
+  description: "See: https://developers.google.com/style/word-list#macos"
+
+- typo: noSQL
+  fix: NoSQL
+  caseSensitive: True
+
+- typo: Stackoverflow
+  fix: StackOverflow
+  caseSensitive: True
+
+
+## British vs American spellings
+# https://developers.google.com/style/spelling
+
+- typo: analyse
+  fix: analyze
+  british: True
+
+- typo: colour
+  fix: color
+  british: True
+
+- typo: customise(d|)
+  fix: customize$1
+  british: True
+
+- typo: customisable
+  fix: customizable
+  british: True
+
+- typo: initialise(d|)
+  fix: initialize$1
+  british: True
+
+- typo: initialisation
+  fix: initialization
+  british: True
+
+- typo: minimise
+  fix: minimize
+  british: True
+
+- typo: maximise
+  fix: maximize
+  british: True
+
+- typo: normalise
+  fix: normalize
+  british: True
+
+- typo: optimise
+  fix: optimize
+  british: True
+
+- typo: optimisation(s|)
+  fix: optimization$1
+  british: True
+
+- typo: organisation
+  fix: organization
+  british: True
+
+- typo: prioritise(d|)
+  fix: prioritize$1
+  british: True
+
+- typo: realise(d|)
+  fix: realize$1
+  british: True
+
+- typo: recognise(d|)
+  fix: recognize$1
+  british: True
+
+- typo: standardise(d|)
+  fix: standardize$1
+  british: True
+
+- typo: standardisation
+  fix: standardization
+  british: True
+
+- typo: synchronize(d|)
+  fix: synchronize$1
+  british: True
+
+- typo: synchronisation
+  fix: synchronization
+  british: True
+
+- typo: summarise
+  fix: summarize
+  british: True
+
+- typo: supercede
+  fix: supersede
+  british: True
+
+- typo: utilise
+  fix: utilize
+  british: True
+
+
+## Duplicate words
+
+- typo: \band\s+and\b
+  fix: and
+
+- typo: \bif\s+if\b
+  fix: if
+
+- typo: \bit\s+it\b
+  fix: it
+  description: "If this is intentional you can comma separate to 'it, it' for better clarity."
+
+- typo: \bof\s+of\b
+  fix: of
+
+- typo: \bthe\s+its\b
+  fix: its
+
+- typo: \bthe\s+the\b
+  fix: the
+
+- typo: \bwith\s+with\b
+  fix: with
+
+
+## DevSite Word List
+# See https://developers.google.com/style/word-list
+
+- typo: 3-D\b
+  fix: 3D
+  description: "See: https://developers.google.com/style/word-list#3d"
+
+- typo: admin\b
+  fix: administrator
+  description: "See: https://developers.google.com/style/word-list#administrator"
+
+- typo: click\shere
+  description: "See: https://developers.google.com/style/link-text"
+
+- typo: code\slab
+  fix: codelab
+  description: "See: https://developers.google.com/style/word-list#codelab"
+
+- typo: e-mail
+  fix: email
+  description: "See: https://developers.google.com/style/word-list#email"
+
+- typo: homescreen
+  fix: home screen
+  description: "See: https://developers.google.com/style/word-list#home-screen"
+
+- typo: host\sname
+  fix: hostname
+  description: "See: https://developers.google.com/style/word-list#hostname"
+
+- typo: life(\s|-)cycle
+  fix: lifecycle
+  description: "See: https://developers.google.com/style/word-list#lifecycle"
+
+- typo: mark-up
+  fix: markup
+  description: "See: https://developers.google.com/style/word-list#markup"
+
+- typo: omnibox
+  fix: address bar
+  description: "See: https://developers.google.com/style/word-list#omnibox"
+
+- typo: sign(\s|-)on|log\sin|signin
+  fix: sign-in
+  description: "See: https://developers.google.com/style/word-list#sign-on"
+
+- typo: sign(\s|-)off|log\soff|signoff
+  fix: sign-out
+  description: "See: https://developers.google.com/style/word-list#sign-on"
+
+- typo: \bwebpage\b
+  fix: web page
+  description: "See: https://developers.google.com/style/word-list#web_page"
+
+- typo: web\ssite
+  fix: website
+  description: "See: https://developers.google.com/style/word-list#website"
+
+## Spelling mistakes & typos in docs
+
+- typo: (con|de)(stuct|truct|cruct)
+  fix: $1struct
+
+- typo: (a|)syncho(r|ro|)(r|n)ous(ly|)
+  fix: $1synchronous$4
+
+- typo: (depricate|deperecate)(d|)
+  fix: deprecate$2
+
+- typo: (not|mod)(if|fi)cation(s|)
+  fix: $1ification$3
+
+- typo: (not|mod)ifica(iton|toin)(s|)
+  fix: $1ification$3
+
+- typo: (more|less|greater|lesser|bigger|smaller)(\s+)then
+  fix: $1$2than
+
+- typo: (uknown|unkown|unkwon|unkowon)
+  fix: unknown
+
+- typo: (un|)singed
+  fix: $1signed
+
+- typo: andoid
+  fix: Android
+
+- typo: frist
+  fix: first
+
+- typo: accpet
+  fix: accept
+
+- typo: accessibile
+  fix: accessible
+
+- typo: accomodat(e|ion)
+  fix: accommodat$1
+
+- typo: accross
+  fix: across
+
+- typo: acitiv(e|ity)
+  fix: activ$1
+
+- typo: activites
+  fix: activities
+
+- typo: acutally
+  fix: actually
+
+- typo: asume
+  fix: assume
+
+- typo: chome\s
+  fix: Chrome
+
+- typo: defau[lt](s|)\b
+  fix: default$1
+
+- typo: deafult(s|)
+  fix: default$1
+
+- typo: definately
+  fix: definitely
+
+- typo: defintion(s|)
+  fix: definition$1
+
+- typo: deubg
+  fix: debug
+
+- typo: doens't
+  fix: doesn't
+
+- typo: \b(empyt|emtpy|emtyp|epmty|mepty)\b
+  fix: empty
+
+- typo: explcit
+  fix: explicit
+
+- typo: flakey
+  fix: flaky
+
+- typo: format(tt|)(ing|ed)
+  fix: formatt$2
+
+- typo: func(iton|toin)(s|al|ed|ing|)
+  fix: function$2
+
+- typo: goole|googel|goolge
+  fix: google
+
+- typo: guaratee(d|)
+  fix: guarantee$1
+
+- typo: gurantee(d|)
+  fix: guarantee$1
+
+- typo: hanlder(s|)
+  fix: handler$1
+
+- typo: heigth
+  fix: height
+
+- typo: ignroe(d|s|)
+  fix: ignore$1
+
+- typo: immediatly
+  fix: immediately
+
+- typo: immeidate(ly|)
+  fix: immediate$1
+
+- typo: ingored
+  fix: ignored
+
+- typo: inhert
+  fix: inherit
+
+- typo: initialzing
+  fix: initializing
+
+- typo: initialzi(ed|er|ers|es|ation)
+  fix: initializ$1
+
+- typo: intial(ly|)
+  fix: initial$1
+
+- typo: intializ(e|ed|er|ers|ing|ation|)
+  fix: initializ$1
+
+- typo: implicity
+  fix: implicitly
+
+- typo: irregardless
+  fix: regardless
+
+- typo: (ack|)knowlege(ment|d|)(s|)
+  fix: $1knowledge$2$3
+
+- typo: aknowle(d|)ge(ment|d|)(s|)
+  fix: acknowledge$2$3
+
+- typo: minumum
+  fix: minimum
+
+- typo: maxumum
+  fix: maximum
+
+- typo: oc+ur+(a|e)nce
+  fix: occurrence
+
+- typo: occur(ed|ing)
+  fix: occurr$1
+
+- typo: \bfo\b
+  fix: of
+
+- typo: ove(r|)riden
+  fix: overridden
+
+- typo: overiding
+  fix: overriding
+
+- typo: overide
+  fix: override
+
+- typo: ove(r|)rite
+  fix: overwrite
+
+- typo: ove(r|)rites
+  fix: overwrites
+
+- typo: ove(r|)rit(t|)en
+  fix: overwritten
+
+- typo: postion
+  fix: position
+
+- typo: postive
+  fix: positive
+
+- typo: precace
+  fix: precache
+
+- typo: proably
+  fix: probably
+
+- typo: programatic(ally|)
+  fix: programmatic$1
+
+- typo: properites
+  fix: properties
+
+- typo: psuedo
+  fix: pseudo
+
+- typo: pubicly
+  fix: publicly
+
+- typo: publically
+  fix: publicly
+
+- typo: recomend(ation|ations|s|ing|)
+  fix: recommend$1
+
+- typo: seperate
+  fix: separate
+
+- typo: specificly
+  fix: specifically
+
+- typo: stirng
+  fix: string
+
+- typo: stroage
+  fix: storage
+
+- typo: su(cccess|ccesss)
+  fix: success
+
+- typo: thier
+  fix: their
+
+- typo: thumnail
+  fix: thumbnail
+
+- typo: togglable
+  fix: toggleable
+
+- typo: upgarding
+  fix: upgrading
+
+
+## Spelling mistakes & typos in code
+
+- typo: cosnt\s
+  fix: const
+
+- typo: construtor
+  fix: constructor
+
+- typo: \b(flase|fales|fasle)\b
+  fix: 'false'
+
+- typo: retrun
+  fix: return
+
+- typo: \b(ture|treu)\b
+  fix: 'true'
+
+- typo: undefiend
+  fix: undefined
+
+- typo: balue
+  fix: value
+
+## Common issues in translations
+
+- typo: \uFF1A
+  fix: ':'
+  description: This is a unicode full-width colon, please use normal colons.
+
+# Call-outs
+
+- typo: '(注意|노트)[：:]'
+  fix: 'Note:'
+  description: Call-outs like 'Note:' should not be translated.
+
+- typo: '(警告|주의)[：:]'
+  fix: 'Caution:'
+  description: Call-outs like 'Caution:' should not be translated.
+
+- typo: '(警告|경고)[：:]'
+  fix: 'Warning:'
+  description: Call-outs like 'Warning:' should not be translated.
+
+- typo: '(成功|성공)[：:]'
+  fix: 'Success:'
+  description: Call-outs like 'Success:' should not be translated.
+
+- typo: '(关键|핵심)[：:]'
+  fix: 'Key Point:'
+  description: Call-outs like 'Key Point:' should not be translated.
+
+- typo: '(主要术语|주요 용어)[：:]'
+  fix: 'Key Term:'
+  description: Call-outs like 'Key Term:' should not be translated.
+
+- typo: '(目的|목표)[：:]'
+  fix: 'Objective:'
+  description: Call-outs like 'Objective:' should not be translated.
+
+- typo: '(狗粮|개밥)[：:]'
+  fix: 'Dogfood:'
+  description: Call-outs like 'Dogfood:' should not be translated.
+

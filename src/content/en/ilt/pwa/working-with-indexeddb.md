@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-01-02 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -31,7 +31,7 @@ This text guides you through the basics of the  [IndexedDB API](https://develope
 
 
 
-IndexedDB is a large-scale, noSQL storage system. It lets you store just about anything in the user's browser. In addition to the usual search, get, and put actions, IndexedDB also supports transactions. Here is the definition of IndexedDB on MDN:
+IndexedDB is a large-scale, NoSQL storage system. It lets you store just about anything in the user's browser. In addition to the usual search, get, and put actions, IndexedDB also supports transactions. Here is the definition of IndexedDB on MDN:
 
 "IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high performance searches of this data. While DOM Storage is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution."
 
@@ -90,7 +90,7 @@ With IndexedDB you can create multiple databases with any names you choose. In g
 idb.open(name, version, upgradeCallback)
 ```
 
-This method returns a promise that resolves to a database object. When using `idb.open`, you provide a name, version number, and an optional callback to set up the database. 
+This method returns a promise that resolves to a database object. When using `idb.open`, you provide a name, version number, and an optional callback to set up the database.
 
 Here is an example of `idb.open` in context:
 
@@ -121,9 +121,9 @@ We place our check for IndexedDB support at the top of the anonymous function. T
 
 ### Creating object stores
 
-A database typically contains one or more object stores. Object stores can be thought of as similar to tables in SQL databases and should contain objects of the same "type" (not JavaScript data type). For example, for a site persisting user profiles and notes, we can imagine a "people" object store containing "person" objects, and a "notes" object store. A well structured IndexedDB database should have one object store for each type of data you need to persist. 
+A database typically contains one or more object stores. Object stores can be thought of as similar to tables in SQL databases and should contain objects of the same "type" (not JavaScript data type). For example, for a site persisting user profiles and notes, we can imagine a "people" object store containing "person" objects, and a "notes" object store. A well structured IndexedDB database should have one object store for each type of data you need to persist.
 
-To ensure database integrity, object stores can only be created and removed in the callback function in `idb.open`. The callback receives an instance of UpgradeDB, a special object in the IDB Promised library that is used to create object stores. Call the  [createObjectStore](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore) method on UpgradeDB to create the object store: 
+To ensure database integrity, object stores can only be created and removed in the callback function in `idb.open`. The callback receives an instance of UpgradeDB, a special object in the IDB Promised library that is used to create object stores. Call the  [createObjectStore](https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore) method on UpgradeDB to create the object store:
 
 ```
 upgradeDb.createObjectStore('storeName', options);
@@ -157,15 +157,15 @@ Again, we first check the browser for IndexedDB support. This time we include th
 
 ### Defining primary keys
 
-When you define object stores, you can define how data is uniquely identified in the store using the primary key. You can define a primary key by either defining a key path, or by using a key generator. 
+When you define object stores, you can define how data is uniquely identified in the store using the primary key. You can define a primary key by either defining a key path, or by using a key generator.
 
-A  *key path*  is a property that always exists and contains a unique value. For example, in the case of a "people" object store we could choose the email address as the key path. 
+A  *key path*  is a property that always exists and contains a unique value. For example, in the case of a "people" object store we could choose the email address as the key path.
 
 ```
 upgradeDb.createObjectStore('people', {keyPath: 'email'});
 ```
 
-This example creates an object store called "people" and assigns the "email" property as the primary key. 
+This example creates an object store called "people" and assigns the "email" property as the primary key.
 
 You could also use a key generator, such as `autoIncrement`. The key generator creates a unique value for every object added to the object store. By default, if we don't specify a key, IndexedDB creates a key and stores it separately from the data.
 
@@ -179,7 +179,7 @@ This example creates an object store called "notes" and sets the primary key to 
 upgradeDb.createObjectStore('logs', {keyPath: 'id', autoIncrement:true});
 ```
 
-This example is similar to the previous example, but this time the auto incrementing value is assigned to a property called "id". 
+This example is similar to the previous example, but this time the auto incrementing value is assigned to a property called "id".
 
 Choosing which method to use to define the key depends on your data. If your data has a property that is always unique, you can make it the keypath to enforce this uniqueness. Otherwise, using an auto incrementing value makes sense.
 
@@ -209,7 +209,7 @@ function() {
 })();
 ```
 
-This code creates three object stores demonstrating the various ways of defining primary keys in object stores. 
+This code creates three object stores demonstrating the various ways of defining primary keys in object stores.
 
 ### Defining indexes
 
@@ -288,7 +288,7 @@ To create data, call the  [add](https://developer.mozilla.org/en-US/docs/Web/API
 someObjectStore.add(data, optionalKey);
 ```
 
-The data parameter can be data of any type: a string, number, object, array, and so forth. The only restriction is if the object store has a defined keypath, the data must contain this property and the value must be unique. The add method returns a promise that resolves once the object has been added to the store. 
+The data parameter can be data of any type: a string, number, object, array, and so forth. The only restriction is if the object store has a defined keypath, the data must contain this property and the value must be unique. The add method returns a promise that resolves once the object has been added to the store.
 
 Add occurs within a transaction, so even if the promise resolves successfully it doesn't necessarily mean the operation worked. Remember, if one of the actions in the transaction fails, all of the operations in the transaction are rolled back. To be sure that the add operation was carried out, we need to check if the whole transaction has completed using the `transaction.complete` method. `transaction.complete` is a promise that resolves when the transaction completes and rejects if the transaction errors. Note that this method doesn't actually close the transaction. The transaction completes on its own. We must perform this check for all "write" operations, because it is our only way of knowing that the changes to the database have actually been carried out.
 
@@ -311,7 +311,7 @@ dbPromise.then(function(db) {
 });
 ```
 
-First, we get the database object. We call `.then` on `dbPromise`, which resolves to the database object, and pass this object to the callback function in `.then`. Because `dbPromise` (`idb.open`) is a promise, we can safely assume that when `.then` executes, the database is open and all object stores and indexes are ready for use. 
+First, we get the database object. We call `.then` on `dbPromise`, which resolves to the database object, and pass this object to the callback function in `.then`. Because `dbPromise` (`idb.open`) is a promise, we can safely assume that when `.then` executes, the database is open and all object stores and indexes are ready for use.
 
 The next step is to open a transaction by calling the `transaction` method on the database object. This method takes a list of object stores, which defines the scope of the transaction (if it is a single store name, we can pass it directly instead of passing an array of names, as we did in our example where we only want the "store" object store). The transaction method also has an optional second argument for the mode, which can be `readonly` or `readwrite`. This option is read-only by default.
 
@@ -339,7 +339,7 @@ dbPromise.then(function(db) {
 });
 ```
 
-Once again, we start the operation by getting the database object and creating a transaction. Note that this time it is a read-only transaction because we are not writing anything to the database inside the transaction (that is, using `put`, `add`, or `delete`). We then open the object store on the transaction and assign the resulting object store object to the `store` variable. Finally, we return the result of `store.get` and log this object to the console. 
+Once again, we start the operation by getting the database object and creating a transaction. Note that this time it is a read-only transaction because we are not writing anything to the database inside the transaction (that is, using `put`, `add`, or `delete`). We then open the object store on the transaction and assign the resulting object store object to the `store` variable. Finally, we return the result of `store.get` and log this object to the console.
 
 
 
@@ -355,7 +355,7 @@ To update data, call the  [`put`](https://developer.mozilla.org/en-US/docs/Web/A
 someObjectStore.put(data, optionalKey);
 ```
 
-Again, this method returns a promise and occurs inside a transaction. As with `add`, we need to be careful to check `transaction.complete` if we want to be sure that the operation was actually carried out. 
+Again, this method returns a promise and occurs inside a transaction. As with `add`, we need to be careful to check `transaction.complete` if we want to be sure that the operation was actually carried out.
 
 Here is an example using the `put` method:
 
@@ -409,7 +409,7 @@ The structure of the database interaction is the same as for the other operation
 
 
 
-So far we have only retrieved objects from the store one at a time. We can also retrieve all of the data (or subset) from an object store or index using either the `getAll` method or using cursors. 
+So far we have only retrieved objects from the store one at a time. We can also retrieve all of the data (or subset) from an object store or index using either the `getAll` method or using cursors.
 
 ### Using the getAll method
 
@@ -476,7 +476,7 @@ The cursor object contains a `key` property that represents the primary key for 
 
 We can get all the data in a couple of different ways, but what if we want only a subset of the data based on a particular property? This is where indexes come in. Indexes let us fetch the data in an object store by a property other than the primary key. We can create an index on any property (which becomes the keypath for the index), specify a range on that property, and get the data within the range using the `getAll` method or a cursor.
 
-We define the range using the `IDBKeyRange` object. This object has four methods that are used to define the limits of the range: `upperBound`, `lowerBound`, `bound` (which means both), and `only`. As expected, the `upperBound` and `lowerBound` methods specify the upper and lower limits of the range. 
+We define the range using the `IDBKeyRange` object. This object has four methods that are used to define the limits of the range: `upperBound`, `lowerBound`, `bound` (which means both), and `only`. As expected, the `upperBound` and `lowerBound` methods specify the upper and lower limits of the range.
 
 ```
 IDBKeyRange.lowerBound(indexKey);
@@ -541,7 +541,7 @@ The code first gets the values for the limits and checks if the limits exist. Th
 
 
 
-When we call `idb.open`, we can specify the database version number in the second parameter. If this version number is greater than the version of the existing database, the upgrade callback executes, allowing us to add object stores and indexes to the database. 
+When we call `idb.open`, we can specify the database version number in the second parameter. If this version number is greater than the version of the existing database, the upgrade callback executes, allowing us to add object stores and indexes to the database.
 
 
 
@@ -651,9 +651,9 @@ function addItem() {
     description: 'It is a purple banana!',
     created: new Date().getTime()
   };
- 
+
  var request = store.add(item);
- 
+
  request.onerror = function(e) {
     console.log('Error', e.target.error.name);
   };

@@ -15,3 +15,9 @@ tags:
   - mobile
   - performance
   - web
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: "Jake's discovered display: contents, while Paul is concerned about people microbenchmarking ES2015 features."
 
-{# wf_updated_on: 2016-02-24 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2016-02-24 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-4.mp3 #}
 {# wf_podcast_duration: 00:52:25 #}
@@ -29,4 +29,4 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" controls preload="none">

@@ -9,3 +9,9 @@ google_analytics_ids:
   - UA-52746336-1
 icon:
   path: /web/tools/workbox/images/workbox-icon192x192.png
+social_media:
+  image:
+    path: /web/tools/workbox/images/workbox-social.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq

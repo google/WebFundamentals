@@ -245,7 +245,7 @@ significant portion of where many of these sites spend their time:
 
 <img src="images/1_9BMRW5i_bS4By_JSESXX8A.png"/>
 
-[Wego](https://wego.com), a site that uses PRPL, manages to maintain a low parse
+[Wego](https://www.wego.com), a site that uses PRPL, manages to maintain a low parse
 time for their routes, getting interactive very quickly. Many of the other sites
 above adopted code-splitting and performance budgets to try lowering their JS
 costs.

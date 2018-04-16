@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
@@ -218,14 +218,7 @@ And here's the sketch that has been uploaded to the Arduino board.
     // Third-party WebUSB Arduino library
     #include <WebUSB.h>
     
-    const WebUSBURL URLS[] = {
-      { 1, "webusb.github.io/arduino/demos/" },
-      { 0, "localhost:8000" },
-    };
-    
-    const uint8_t ALLOWED_ORIGINS[] = { 1, 2 };
-    
-    WebUSB WebUSBSerial(URLS, 2, 1, ALLOWED_ORIGINS, 2);
+    WebUSB WebUSBSerial(1 /* https:// */, "webusb.github.io/arduino/demos");
     
     #define Serial WebUSBSerial
     
@@ -269,7 +262,7 @@ promise is fulfilled with a `result` object containing a
 
 For those who are familiar with USB, all of this should look pretty familiar.
 
-### I want moar
+### I want more
 
 The WebUSB API lets you interact with the all USB transfer/endpoint types:
 

@@ -4,10 +4,12 @@
  * @author Pete LePage <petele@google.com>
  */
 
+/* eslint no-console: 0 */
+
 'use strict';
 
-var chalk = require('chalk');
-let GitHubApi = require('github');
+const chalk = require('chalk');
+const GitHubApi = require('github');
 
 console.log('Git Build Status Updater');
 
@@ -25,20 +27,20 @@ if (!OAUTH_TOKEN) {
 
 let github = new GitHubApi({
   debug: false,
-  Promise: Promise
+  Promise: Promise,
 });
 
 github.authenticate({
   type: 'oauth',
-  token: OAUTH_TOKEN
+  token: OAUTH_TOKEN,
 });
 
 let opts = {
   owner: REPO_OWNER,
   repo: REPO_NAME,
   sha: PR_SHA,
-  context: 'wf/staging'
-}
+  context: 'wf/staging',
+};
 
 if (process.argv[2] === 'pending') {
   opts.state = 'pending';

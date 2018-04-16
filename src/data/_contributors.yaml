@@ -142,11 +142,11 @@ lucaberton:
   role:
     - contributor
     - translator
-  homepage: 'http://mrevolution.eu'
+  homepage: 'https://lucaberton.it'
   google: +LucaBerton
   twitter: mrevolution85
   github: lucab85
-  email: mr.evolution85@gmail.com
+  email: luca@lucaberton.it
 
 ericbidelman:
   name:
@@ -221,7 +221,7 @@ mathiasbynens:
   email: mths@google.com
   lanyrd: mathias
   description:
-    en: V8 developer advocate
+    en: V8 JavaScript whisperer
 
 owencm:
   name:
@@ -429,6 +429,16 @@ samdutton:
   description:
     en: Sam is a Developer Advocate
 
+arthurevans:
+  name:
+    given: Arthur
+    family: Evans
+  twitter: devdocdude
+  github: arthurevans
+  description:
+    en: Arthur is a Tech Writer
+
+
 flackr:
   name:
     given: Robert
@@ -540,8 +550,7 @@ jennygove:
     given: Jenny
     family: Gove
   description:
-    en: >
-      Jenny Gove is a UX Research Lead at Google, where she conducts research
+    en: Jenny Gove is a UX Research Lead at Google, where she conducts research
       on smartphone experiences. She obtained her PhD from the University of
       Southampton, UK.
 
@@ -992,6 +1001,22 @@ henrylim:
   description:
     en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
 
+wmlin:
+  name:
+    given: Wanming
+    family: Lin
+  org:
+    name: Intel
+    unit: Web team
+  country: CN
+  role:
+    - translator
+    - engineer
+  github: Honry
+  email: wanming.lin@intel.com
+  description:
+    en: Wanming is an Engineer at Intel
+
 wayouliu:
   name:
     given: Wayou
@@ -1077,6 +1102,25 @@ josephmedley:
   description:
     en: Technical Writer
 
+developit:
+  name:
+    given: Jason
+    family: Miller
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+    - engineer
+  homepage: 'https://jasonformat.com'
+  google: +developit
+  twitter: _developit
+  github: developit
+  email: jasonjmiller@google.com
+  description:
+    en: Jason is a Web DevRel
+
 kuu:
   name:
     given: Kuu
@@ -1128,6 +1172,8 @@ addyosmani:
   google: +AddyOsmani
   twitter: addyosmani
   email: addyo@google.com
+  description:
+    en: 'Eng Manager, Web Developer Relations'
 
 chrispalmer:
   name:
@@ -1564,6 +1610,20 @@ rviscomi:
   role:
     - author
   email: rviscomi@google.com
+
+jeremywagner:
+  name:
+    given: Jeremy
+    family: Wagner
+  org:
+    name: Tech Writer
+  country: USA
+  homepage: 'https://jeremywagner.me'
+  twitter: malchata
+  github: malchata
+  role:
+    - author
+  email: jeremy.l.wagner@gmail.com
 
 philipwalton:
   name:

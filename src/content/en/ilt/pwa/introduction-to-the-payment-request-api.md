@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -11,7 +11,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-The Payment Request API improves mobile web checkout (shopping cart) and accepts credit cards electronically (and eventually a number of other payment services and solutions in the wild). 
+The Payment Request API improves mobile web checkout (shopping cart) and accepts credit cards electronically (and eventually a number of other payment services and solutions in the wild).
 
 The Payment Request API allows merchants to easily collect payment information with minimal integration. The API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The API eliminates manual and tedious entry by storing the user's information securely in the browser. The browser passes addresses and credit card (or other payment) details directly to the website. And, because the browser is collecting payment information from the user, making a payment goes from " *n* " taps to one tap.
 
@@ -31,9 +31,9 @@ Note: The <a href="https://github.com/w3c/browser-payment-api">Payment Request A
 
 For mobile device users, making purchases on the web, particularly on mobile devices, can be a frustrating experience. Every web site has its own flow and its own validation rules, and most require us to manually type in the same set of information over and over again. Likewise, it is difficult and time consuming for developers to create good checkout flows that support various payment schemes.
 
-For businesses, checkout can be a complicated process to develop and complete. That's why it is worthwhile investing in capabilities such as the  [Payment Request API](https://github.com/w3c/browser-payment-api/) and enhanced autofill to assist your users with the task of accurately filling in forms. 
+For businesses, checkout can be a complicated process to develop and complete. That's why it is worthwhile investing in capabilities such as the  [Payment Request API](https://github.com/w3c/browser-payment-api/) and enhanced autofill to assist your users with the task of accurately filling in forms.
 
-Mobile users are likely to abandon online purchase forms that are user-intensive, difficult to use, slow to load and refresh, and require multiple steps to complete. This is because two primary components of online payments – security and convenience – often work at cross-purposes, where more of one typically means less of the other. 
+Mobile users are likely to abandon online purchase forms that are user-intensive, difficult to use, slow to load and refresh, and require multiple steps to complete. This is because two primary components of online payments – security and convenience – often work at cross-purposes, where more of one typically means less of the other.
 
 Any system that improves or solves one or more of those problems is a welcome change. We've found that forms and payments are completed 25% more when autofill is available, increasing odds for conversion. We started solving the problem already with  [Autofill](/web/updates/2015/06/checkout-faster-with-autofill), but now we're talking about a more comprehensive solution called the Payment Request API.
 
@@ -56,8 +56,8 @@ The Payment Request API is currently under development by the  [W3C Web Payments
 
 The Payment Request API's open-web approach is designed:
 
-* For developers to minimize the need to fill out checkout forms and improve user's payment experience from the ground up. This API follows the recommendations in the  [W3C Payment Request API specification](https://www.w3.org/TR/payment-request/) published by the  [Web Payments Working Group](https://www.w3.org/Payments/WG/). 
-* For users to check out, make a payment, or fill in forms with minimal use of the mobile device keyboard. 
+* For developers to minimize the need to fill out checkout forms and improve user's payment experience from the ground up. This API follows the recommendations in the  [W3C Payment Request API specification](https://www.w3.org/TR/payment-request/) published by the  [Web Payments Working Group](https://www.w3.org/Payments/WG/).
+* For users to check out, make a payment, or fill in forms with minimal use of the mobile device keyboard.
 
 The API uses securely cached data to facilitate payment interaction between the user and the merchant's site. The API also gets the data necessary to process transactions as quickly as possible.
 
@@ -71,7 +71,7 @@ The Payment Request API is a standards-based way to enable checkout on the web t
 
 ### Goals of the Payment Request API
 
-The Payment Request API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The API allows the web page to exchange information with the browser while the user is providing input, before approving or denying a payment request. 
+The Payment Request API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The API allows the web page to exchange information with the browser while the user is providing input, before approving or denying a payment request.
 
 It vastly improves user workflow during the purchase process, providing a more consistent user experience and enabling web merchants to easily leverage disparate payment methods. The Payment Request API is neither a new payment method, nor does it integrate directly with payment processors. Rather, it is a process layer whose goals are to:
 
@@ -90,7 +90,7 @@ Payment Request demos are available at these URLs:
 * Polymer Shop demo:  [https://polykart-credential-payment.appspot.com/](https://polykart-credential-payment.appspot.com/)
 * Simple demos and sample code:  [https://googlechrome.github.io/samples/paymentrequest/](https://googlechrome.github.io/samples/paymentrequest/)
 * Deep dive documentation:  [https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request](/web/fundamentals/discovery-and-monetization/payment-request/deep-dive-into-payment-request)
-* Samsung Internet demos: 
+* Samsung Internet demos:
 *  [https://samsunginter.net/examples/payment-request-demo-simple/](https://samsunginter.net/examples/payment-request-demo-simple/)
 *  [https://samsunginter.net/examples/payment-request-demo-options/](https://samsunginter.net/examples/payment-request-demo-options/)
 

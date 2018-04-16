@@ -70,7 +70,7 @@ Chrome Dev Summit in real-time:
   [Twitter](https://twitter.com/ChromiumDev) that include the
   [#ChromeDevSummit](https://twitter.com/search?q=%23ChromeDevSummit) hashtag
   or join our [Slack](https://chromiumdev.slack.com/) by signing up
-  [here](https://chromiumdev-slack.herokuapp.com/) and a team of onsite
+  [here](https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE) and a team of onsite
   Googlers will do their best to track down an answer in real time for you.
 
 We're looking forward to having you with us you for 2 days of web fun, soon!

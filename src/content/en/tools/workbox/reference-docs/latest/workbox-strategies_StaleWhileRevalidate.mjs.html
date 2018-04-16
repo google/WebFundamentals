@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-strategies/StaleWhileRevalidate.mjs</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-strategies/StaleWhileRevalidate.mjs</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+ Copyright 2018 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+import {cacheNames} from &#x27;workbox-core/_private/cacheNames.mjs&#x27;;
+import {cacheWrapper} from &#x27;workbox-core/_private/cacheWrapper.mjs&#x27;;
+import {fetchWrapper} from &#x27;workbox-core/_private/fetchWrapper.mjs&#x27;;
+import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
+import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
+
+import messages from &#x27;./utils/messages.mjs&#x27;;
+import cacheOkAndOpaquePlugin from &#x27;./plugins/cacheOkAndOpaquePlugin.mjs&#x27;;
+import &#x27;./_version.mjs&#x27;;
+
+/**
+ * An implementation of a
+ * [stale-while-revalidate]{@link /web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate}
+ * request strategy.
+ *
+ * Resources are requested from both the cache and the network in parallel.
+ * The strategy will respond with the cached version if available, otherwise
+ * wait for the network response. The cache is updated with the network response
+ * with each successful request.
+ *
+ * By default, this strategy will cache responses with a 200 status code as
+ * well as [opaque responses]{@link /web/tools/workbox/guides/handle-third-party-requests}.
+ * Opaque responses are are cross-origin requests where the response doesn&#x27;t
+ * support [CORS]{@link https://enable-cors.org/}.
+ *
+ * @memberof workbox.strategies
+ */
+class StaleWhileRevalidate {
+  /**
+   * @param {Object} options
+   * @param {string} options.cacheName Cache name to store and retrieve
+   * requests. Defaults to cache names provided by
+   * [workbox-core]{@link workbox.core.cacheNames}.
+   * @param {string} options.plugins [Plugins]{@link /web/tools/workbox/guides/using-plugins}
+   * to use in conjunction with this caching strategy.
+   * @param {Object} options.fetchOptions Values passed along to the
+   * [&#x60;init&#x60;](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+   * of all fetch() requests made by this strategy.
+   */
+  constructor(options &#x3D; {}) {
+    this._cacheName &#x3D; cacheNames.getRuntimeName(options.cacheName);
+    this._plugins &#x3D; options.plugins || [];
+
+    if (options.plugins) {
+      let isUsingCacheWillUpdate &#x3D;
+        options.plugins.some((plugin) &#x3D;&gt; !!plugin.cacheWillUpdate);
+      this._plugins &#x3D; isUsingCacheWillUpdate ?
+        options.plugins : [cacheOkAndOpaquePlugin, ...options.plugins];
+    } else {
+      // No plugins passed in, use the default plugin.
+      this._plugins &#x3D; [cacheOkAndOpaquePlugin];
+    }
+
+    this._fetchOptions &#x3D; options.fetchOptions || null;
+  }
+
+  /**
+   * This method will perform a request strategy and follows an API that
+   * will work with the
+   * [Workbox Router]{@link workbox.routing.Router}.
+   *
+   * @param {Object} input
+   * @param {FetchEvent} input.event The fetch event to run this strategy
+   * against.
+   * @return {Promise&amp;lt;Response&gt;}
+   */
+  async handle({event}) {
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      assert.isInstance(event, FetchEvent, {
+        moduleName: &#x27;workbox-strategies&#x27;,
+        className: &#x27;StaleWhileRevalidate&#x27;,
+        funcName: &#x27;handle&#x27;,
+        paramName: &#x27;event&#x27;,
+      });
+    }
+
+    return this.makeRequest({
+      event,
+      request: event.request,
+    });
+  }
+
+  /**
+   * This method can be used to perform a make a standalone request outside the
+   * context of the [Workbox Router]{@link workbox.routing.Router}.
+   *
+   * See &quot;[Advanced Recipes](/web/tools/workbox/guides/advanced-recipes#make-requests)&quot;
+   * for more usage information.
+   *
+   * @param {Object} input
+   * @param {Request|string} input.request Either a
+   * [&#x60;Request&#x60;]{@link https://developer.mozilla.org/en-US/docs/Web/API/Request}
+   * object, or a string URL, corresponding to the request to be made.
+   * @param {FetchEvent} [input.event] If provided, &#x60;event.waitUntil()&#x60; will be
+   * called automatically to extend the service worker&#x27;s lifetime.
+   * @return {Promise&amp;lt;Response&gt;}
+   */
+  async makeRequest({event, request}) {
+    const logs &#x3D; [];
+
+    if (typeof request &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {
+      request &#x3D; new Request(request);
+    }
+
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      assert.isInstance(request, Request, {
+        moduleName: &#x27;workbox-strategies&#x27;,
+        className: &#x27;StaleWhileRevalidate&#x27;,
+        funcName: &#x27;handle&#x27;,
+        paramName: &#x27;request&#x27;,
+      });
+    }
+
+    const fetchAndCachePromise &#x3D; this._getFromNetwork(request, event);
+
+    let response &#x3D; await cacheWrapper.match(
+      this._cacheName,
+      request,
+      null,
+      this._plugins
+    );
+
+    if (response) {
+      if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+        logs.push(&#x60;Found a cached response in the &#x27;${this._cacheName}&#x27;&#x60; +
+          &#x60; cache. Will update with the network response in the background.&#x60;);
+      }
+      event.waitUntil(fetchAndCachePromise);
+    } else {
+      if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+        logs.push(&#x60;No response found in the &#x27;${this._cacheName}&#x27; cache. &#x60; +
+          &#x60;Will wait for the network response.&#x60;);
+      }
+      response &#x3D; await fetchAndCachePromise;
+    }
+
+    if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
+      logger.groupCollapsed(
+        messages.strategyStart(&#x27;StaleWhileRevalidate&#x27;, request));
+      for (let log of logs) {
+        logger.log(log);
+      }
+      messages.printFinalResponse(response);
+      logger.groupEnd();
+    }
+
+    return response;
+  }
+
+  /**
+   * @param {Request} request
+   * @param {FetchEvent} [event]
+   * @return {Promise&amp;lt;Response&gt;}
+   *
+   * @private
+   */
+  async _getFromNetwork(request, event) {
+    const response &#x3D; await fetchWrapper.fetch(
+      request,
+      this._fetchOptions,
+      this._plugins
+    );
+
+    const cachePutPromise &#x3D; cacheWrapper.put(
+      this._cacheName,
+      request,
+      response.clone(),
+      this._plugins
+    );
+    if (event) {
+      event.waitUntil(cachePutPromise);
+    }
+
+    return response;
+  }
+}
+
+export {StaleWhileRevalidate};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

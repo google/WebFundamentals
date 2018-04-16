@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 62.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_published_on: 2017-09-12 #}
 {# wf_tags: news,chrome62,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -36,7 +36,7 @@ offline is now possible on Android as well.
     const config = [{
       sessionTypes: ['persistent-license'],
       videoCapabilities: [{
-        contentType: 'video/webm; codecs="vp9"',
+        contentType: 'video/webm; codecs="vp09.00.10.08"',
         robustness: 'SW_SECURE_DECODE' // Widevine L3
       }]
     }];
@@ -77,7 +77,7 @@ OS.
 
     const config = [{
       videoCapabilities: [{
-        contentType: 'video/webm; codecs="vp9"',
+        contentType: 'video/webm; codecs="vp09.00.10.08"',
         robustness: 'HW_SECURE_ALL' // Widevine L1
       }]
     }];

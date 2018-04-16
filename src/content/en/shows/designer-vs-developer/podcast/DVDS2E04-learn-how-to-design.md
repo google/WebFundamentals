@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Yasmine talks about learning to design.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-09-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3 #}
 {# wf_podcast_duration: 00:11:02 #}
@@ -36,7 +36,7 @@ to solutions too soon.
 * [Sketching](https://designsprintkit.withgoogle.com/methods/sketch/).
 
 
-<audio
+<audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3"
 controls preload="none">
 

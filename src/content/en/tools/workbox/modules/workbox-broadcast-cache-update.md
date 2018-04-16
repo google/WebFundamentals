@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Broadcast Cache Update {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 ## What is Broadcast Cache Update?
 
@@ -61,9 +59,7 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin({
-        channelName: 'api-updates',
-      })
+      new workbox.broadcastUpdate.Plugin('api-updates')
     ]
   })
 );
@@ -123,10 +119,10 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   workbox.strategies.staleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin({
-        channelName: 'api-updates',
+      new workbox.broadcastUpdate.Plugin(
+        'api-updates',
         headersToCheck: ['X-My-Custom-Header']
-      })
+      )
     ]
   })
 );

@@ -5,49 +5,29 @@
  */
 'use strict';
 
+const testHelpers = require('./helpers');
+
 const JSONValidator = require('jsonschema').Validator;
 
 JSONValidator.prototype.customFormats.wfUAString = function(input) {
   return input === 'UA-52746336-1';
 };
+JSONValidator.prototype.customFormats.doesFileExist = function(input) {
+  return testHelpers.doesFileExist(input);
+};
 const SCHEMA_PROJECT = {
   id: '/Project',
   type: 'object',
   properties: {
-    is_family_root: {type: 'boolean'},
-    parent_project_metadata_path: {
-      type: 'string',
-      pattern: /^\/web\/_project.yaml$/,
-    },
     name: {type: 'string', required: true},
     description: {type: 'string', required: true},
     home_url: {type: 'string', pattern: /^\/web\//i, required: true},
-    color: {
-      type: 'string',
-      pattern: /^google-blue|orange$/,
-      required: true,
-    },
     buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
     content_license: {
       type: 'string',
       pattern: /^cc3-apache2$/,
       required: true,
     },
-    footer_path: {type: 'string', required: true},
-    icon: {
-      type: 'object',
-      properties: {
-        path: {type: 'string', required: true},
-      },
-      additionalProperties: false,
-      required: true,
-    },
-    google_analytics_ids: {
-      type: 'array',
-      items: {type: 'string', format: 'wfUAString'},
-      required: true,
-    },
-    tags: {type: 'array'},
     announcement: {
       type: 'object',
       properties: {
@@ -56,6 +36,48 @@ const SCHEMA_PROJECT = {
       },
       additionalProperties: false,
     },
+    color: {
+      type: 'string',
+      pattern: /^google-blue|orange$/,
+      required: true,
+    },
+    footer_path: {type: 'string', required: true},
+    gcs_id: {type: 'string'},
+    google_analytics_ids: {
+      type: 'array',
+      items: {type: 'string', format: 'wfUAString'},
+      required: true,
+    },
+    icon: {
+      type: 'object',
+      properties: {
+        path: {type: 'string', required: true},
+      },
+      additionalProperties: false,
+      required: true,
+    },
+    is_family_root: {type: 'boolean'},
+    parent_project_metadata_path: {
+      type: 'string',
+      pattern: /^\/web\/_project.yaml$/,
+    },
+    social_media: {
+      type: 'object',
+      properties: {
+        image: {
+          type: 'object',
+          properties: {
+            path: {type: 'string', format: 'doesFileExist', required: true},
+            width: {type: 'number'},
+            height: {type: 'number'},
+          },
+          required: true,
+          additionalProperties: false,
+        },
+      },
+      additionalProperties: false,
+    },
+    tags: {type: 'array'},
   },
   additionalProperties: false,
 };

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-04-06 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -181,7 +181,7 @@ Run the following in the command line to clean out the old files in the __dist__
 
 Open your browser to localhost:8080. Unregister the service worker and refresh the page.
 
-If you have Chrome installed, you can test the Add to homescreen functionality from the browser.  [Open DevTools](tools-for-pwa-developers#opendevtools) and inspect the manifest by going to __Application__. Then click __Manifest__ in the navigation bar. Click __Add to homescreen__. You should see an "add this site to your shelf" message below the URL bar. This is the desktop equivalent of mobile's add to homescreen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices. Click __Add__ to install the app on your device. 
+If you have Chrome installed, you can test the Add to homescreen functionality from the browser.  [Open DevTools](tools-for-pwa-developers#opendevtools) and inspect the manifest by going to __Application__. Then click __Manifest__ in the navigation bar. Click __Add to homescreen__. You should see an "add this site to your shelf" message below the URL bar. This is the desktop equivalent of mobile's add to homescreen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices. Click __Add__ to install the app on your device.
 
 <div id="congrats"></div>
 

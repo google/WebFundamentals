@@ -7,6 +7,8 @@ description: A Payment Request API oferece pagamentos rápidos e fáceis na web.
 
 # Guia de integração da Payment Request API {: .page-title }
 
+{% include "web/_shared/translation-out-of-date.html" %}
+
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/zkoch.html" %}

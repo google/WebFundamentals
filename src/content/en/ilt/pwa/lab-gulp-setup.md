@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -37,7 +37,7 @@ This lab shows you how you can automate tasks with  [gulp](https://github.com/gu
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the internet 
+* Connection to the internet
 * A text editor
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
 
@@ -57,7 +57,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __gulp-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __gulp-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -73,7 +73,7 @@ This folder contains:
 
 
 
-[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) is available as a Node package. In this section we install the gulp command line tool on your system. 
+[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) is available as a Node package. In this section we install the gulp command line tool on your system.
 
 To install the gulp command line tool, run the following in the command line:
 
@@ -81,7 +81,7 @@ To install the gulp command line tool, run the following in the command line:
 
 #### Explanation
 
-This command installs the gulp command line tool (globally) using npm. We use the command line tool to actually execute gulp. 
+This command installs the gulp command line tool (globally) using npm. We use the command line tool to actually execute gulp.
 
 <div id="3"></div>
 
@@ -103,7 +103,7 @@ From the same directory, run the following in the command line:
 
     npm install gulp --save-dev
 
-Note that a __node_modules__ directory has been added to the project with various packages. Also note that __package.json__ now lists "gulp" as a dependency. 
+Note that a __node_modules__ directory has been added to the project with various packages. Also note that __package.json__ now lists "gulp" as a dependency.
 
 
 
@@ -119,7 +119,7 @@ In <strong>gulpfile.js</strong>, replace the TODO 3 comment with the following:
 var gulp = require('gulp');
 ```
 
-#### Explanation 
+#### Explanation
 
 We start by generating __package.json__ with `npm init` (the `-y` flag uses default configuration values for simplicity). This file is used to keep track of the packages that your project uses, including gulp and its dependencies.
 
@@ -135,7 +135,7 @@ Finally we add code to __gulpfile.js__ to include the gulp package. The __gulpfi
 
 
 
-This exercise implements a simple task to minify (also called "uglify" for JavaScript) the __app/js/main.js__ JavaScript file.  
+This exercise implements a simple task to minify (also called "uglify" for JavaScript) the __app/js/main.js__ JavaScript file.
 
 From __app/__, run the following in the command line:
 
@@ -169,7 +169,7 @@ Open __app/js/main.js__ and __app/build/main.js__. Note that the JavaScript from
 
 #### Explanation
 
-We start by installing the __gulp-uglify__ package (this also updates the __package.json__ dependencies). This enables minification functionality in our gulp process. 
+We start by installing the __gulp-uglify__ package (this also updates the __package.json__ dependencies). This enables minification functionality in our gulp process.
 
 Then we include this package in the __gulpfile.js__ file, and add code to create a `minify` task. This task gets the __app/js/main.js__ file, and pipes it to the `uglify` function (which is defined in the __gulp-uglify__ package). The `uglify` function minifies the file, pipes it to the `gulp.dest` function, and creates a __build__ folder containing the minified JavaScript.
 
@@ -181,7 +181,7 @@ Then we include this package in the __gulpfile.js__ file, and add code to create
 
 
 
-In this exercise, you add vendor prefixes to the __main.css__ file.  
+In this exercise, you add vendor prefixes to the __main.css__ file.
 
 Read the documentation for  [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer). Using section 4 of this lab as an example, complete the following tasks:
 
@@ -195,7 +195,7 @@ Test this task by running the following (from __app/__) in the command line:
 
 Open __app/styles/main.css__ and __app/build/main.css__. Does the `box-container` class have vendor prefixes for the `display: flex` property?
 
-__Optional__: Read the  [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) documentation and incorporate  [sourcemap](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) generation in the `processCSS` task (not in a new task). 
+__Optional__: Read the  [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) documentation and incorporate  [sourcemap](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) generation in the `processCSS` task (not in a new task).
 
 
 
@@ -213,7 +213,7 @@ __Hint:__ The <a href="https://www.npmjs.com/package/gulp-autoprefixer">gulp-aut
 
 ### 6.1 Define default tasks
 
-Usually we want to run multiple tasks each time we rebuild an application. Rather than running each task individually, they can be set as default tasks. 
+Usually we want to run multiple tasks each time we rebuild an application. Rather than running each task individually, they can be set as default tasks.
 
 Replace TODO 6.1 in <strong>gulpfile.js</strong> with the following:
 
@@ -231,7 +231,7 @@ Note that both the `minify` and `processCSS` tasks were run with that single com
 
 #### Explanation
 
-Default tasks are run anytime the `gulp` command is executed. 
+Default tasks are run anytime the `gulp` command is executed.
 
 ### 6.2 Set up gulp watch
 
@@ -253,7 +253,7 @@ Save the file. From __app/__, run the following in the command line:
 
 Add a comment to __app/styles/main.css__ and save the file. Open __app/build/main.css__ and note the real-time changes in the corresponding build file.
 
-TODO: Now update the <code>watch</code> task in <strong>gulpfile.js</strong> to watch <strong>app/js/main.js</strong> and run the <code>minify</code> task anytime the file changes. Test by editing the value of the variable <code>future</code> in <strong>app/js/main.js</strong> and noting the real-time change in <strong>app/build/main.js</strong>. Don't forget to save the file and rerun the <code>watch</code> task. 
+TODO: Now update the <code>watch</code> task in <strong>gulpfile.js</strong> to watch <strong>app/js/main.js</strong> and run the <code>minify</code> task anytime the file changes. Test by editing the value of the variable <code>future</code> in <strong>app/js/main.js</strong> and noting the real-time change in <strong>app/build/main.js</strong>. Don't forget to save the file and rerun the <code>watch</code> task.
 
 
 
@@ -281,7 +281,7 @@ Replace TODO 6.3a in <strong>gulpfile.js</strong> with the following:
 var browserSync = require('browser-sync');
 ```
 
-Now replace TODO 6.3b in <strong>gulpfile.js</strong> with the following: 
+Now replace TODO 6.3b in <strong>gulpfile.js</strong> with the following:
 
 #### gulpfile.js
 
@@ -323,7 +323,7 @@ gulp.task('serve', ['processCSS'], function() {
 });
 ```
 
-Close the app from the browser and delete __app/build/main.css__. From __app/__, run the following in the command line: 
+Close the app from the browser and delete __app/build/main.css__. From __app/__, run the following in the command line:
 
     gulp
 
@@ -331,7 +331,7 @@ Your browser should open __app/__ at __localhost:3000__ (if it doesn't, open the
 
 #### Explanation
 
-In this example we changed the default task to `serve` so that it runs when we execute the `gulp` command. The `serve` task has `processCSS` as a  *dependent task* . This means that the `serve` task will execute the `processCSS` task before executing itself. Additionally, this task sets a watch on CSS and HTML files. When CSS files are updated, the `processCSS` task is run again and the server reloads. Likewise, when HTML files are updated (like __index.html__), the browser page reloads automatically. 
+In this example we changed the default task to `serve` so that it runs when we execute the `gulp` command. The `serve` task has `processCSS` as a  *dependent task* . This means that the `serve` task will execute the `processCSS` task before executing itself. Additionally, this task sets a watch on CSS and HTML files. When CSS files are updated, the `processCSS` task is run again and the server reloads. Likewise, when HTML files are updated (like __index.html__), the browser page reloads automatically.
 
 __Optional__: In the `serve` task, add `minify` as a dependent task. Also in `serve`, add a watcher for __app/js/main.js__ that executes the `minify` task and reloads the page whenever the __app/js/main.js__ file changes. Test by deleting __app/build/main.js__ and re-executing the `gulp` command. Now __app/js/main.js__ should be minified into __app/build/main.js__ and it should update in real time. Confirm this by changing the console log message in __app/js/main.js__ and saving the file - the console should log your new message in the app.
 

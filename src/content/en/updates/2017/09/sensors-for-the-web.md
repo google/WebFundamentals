@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Generic Sensor API is available for Origin Trials in Chrome 63.
+description: Generic Sensor API is enabled by default in Chrome 67 or later.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-04-11 #}
 {# wf_published_on: 2017-09-18 #}
-{# wf_tags: sensors,origintrials,chrome63,news #}
+{# wf_tags: sensors,chrome63,chrome67,news #}
 {# wf_blink_components: Blink>Sensor #}
 {# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
-{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is available for Origin Trials in Chrome 63. #}
+{# wf_featured_snippet: Sensors are used in many native applications to enable advanced features. Wouldn't it be nice to bridge the gap between native and the web? You can do it with Generic Sensor API, which is enabled by default in Chrome 67 or later. #}
 
 # Sensors For The Web! {: .page-title }
 
@@ -68,6 +68,9 @@ number of advantages:
 - [Security and privacy](#privacy-and-security) aspects are the top priority
   for the Generic Sensor API and provide much better security level compared to
   older sensor APIs. There is integration with Permissions API.
+- Automatic [synchronization with screen coordinates](#synchronization-with-screen-coordinates) is
+  available for Accelerometer, Gyroscope, LinearAccelerationSensor, AbsoluteOrientationSensor,
+  RelativeOrientationSensor and Magnetometer.
 
 ## Generic Sensor APIs in Chrome {: #generic-sensor-api-in-chrome }
 
@@ -86,9 +89,13 @@ At the time of writing, Chrome supports several sensors that you can experiment 
 - AmbientLightSensor
 - Magnetometer
 
-You can enable Generic Sensor APIs for development purposes by turning on a
-feature flag. Go to [chrome://flags/#enable-generic-sensor](chrome://flags/#enable-generic-sensor)
-to enable motion sensors or
+The Generic Sensor-based motion sensor classes are enabled by default in Chrome
+starting from Chrome 67. Use the
+[chrome://flags/#enable-generic-sensor](chrome://flags/#enable-generic-sensor)
+feature flag to enable motion sensors on the previous Chrome versions.
+
+You can enable environmental sensors for development purposes by turning on a
+feature flag. Go to
 [chrome://flags/#enable-generic-sensor-extra-classes](chrome://flags/#enable-generic-sensor-extra-classes)
 to enable environmental sensors. Restart Chrome and you should be good to go.
 
@@ -100,13 +107,6 @@ to enable environmental sensors. Restart Chrome and you should be good to go.
 More information on browser implementation status can be found on
 [chromestatus.com](https://www.chromestatus.com/features/5698781827825664?embed)
 
-## Motion sensors are available as an origin trial {: #motion-sensors-origin-trials }
-
-In order to get your valuable feedback, the Generic Sensor API is planned to be
-available as an [origin trial](https://bit.ly/OriginTrials) in Chrome 63. You
-will need to [request a token](http://bit.ly/OriginTrialSignup), so that the
-feature would be automatically enabled for your origin, without the need to
-enable Chrome flag.
 
 ## What are all these sensors? How can I use them? {: #what-are-sensors-how-to-use-them }
 
@@ -241,6 +241,50 @@ For more information about motion sensors, advanced use cases, and requirements,
 please check [motion sensors explainer](https://www.w3.org/TR/motion-sensors/)
 document.
 
+## Synchronization with screen coordinates {: #synchronization-with-screen-coordinates }
+
+By default, [spatial sensors'](https://w3c.github.io/sensors/#spatial-sensor) readings are resolved
+in a local coordinate system that is bound to the device and does not take screen orientation into
+account.
+
+<figure>
+  <img src="/web/updates/images/2017/09/sensors/device_coordinate_system.png"
+       alt="Device coordinate system">
+  <figcaption><b>Figure 4</b>: Device coordinate system</figcaption>
+</figure>
+
+However, many use cases like games or augmented and virtual reality require sensor readings to be
+resolved in a coordinate system that is instead bound to the screen orientation.
+
+<figure>
+  <img src="/web/updates/images/2017/09/sensors/screen_coordinate_system.png"
+       alt="Screen coordinate system">
+  <figcaption><b>Figure 5</b>: Screen coordinate system</figcaption>
+</figure>
+
+Previously, remapping of sensor readings to screen coordinates had to be implemented in JavaScript.
+This approach is inefficient and it also quite significantly increases the complexity of the web
+application code: the web application must watch screen orientation changes and perform coordinates
+transformations for sensor readings, which is not a trivial thing to do for Euler angles or
+quaternions.
+
+The Generic Sensor API provides much simpler and reliable solution! The local coordinate system is
+configurable for all defined spatial sensor classes: Accelerometer, Gyroscope,
+LinearAccelerationSensor, AbsoluteOrientationSensor, RelativeOrientationSensor and Magnetometer.
+By passing the `referenceFrame` option to the sensor object constructor the user defines whether the
+returned readings will be resolved in
+[device](https://w3c.github.io/accelerometer/#device-coordinate-system) or
+[screen](https://w3c.github.io/accelerometer/#screen-coordinate-system) coordinates.
+
+    // Sensor readings are resolved in the Device coordinate system by default.
+    // Alternatively, could be RelativeOrientationSensor({referenceFrame: "device"}).
+    const sensorRelDevice = new RelativeOrientationSensor();
+
+    // Sensor readings are resolved in the Screen coordinate system. No manual remapping is required!
+    const sensorRelScreen = new RelativeOrientationSensor({referenceFrame: "screen"});
+
+Note: The `referenceFrame` sensor option is supported in Chrome 66 or later.
+
 ## Let’s code! {: #lets-code }
 
 The Generic Sensor API is very simple and easy-to-use! The Sensor interface has
@@ -261,7 +305,8 @@ When your code is ready, deploy it on a server that supports HTTPS.
 [GitHub Pages](https://pages.github.com/) are served over HTTPS, making it a great place to share
 your demos.
 
-Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome.
+Note: Don't forget to enable [Generic Sensor API](#generic-sensor-api-in-chrome) in Chrome versions
+prior to Chrome 67.
 
 ### 3D model rotation
 
@@ -289,7 +334,7 @@ The device's orientation will be reflected in 3D `model` rotation within the Web
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/orientation_phone.png"
     alt="Sensor updates 3D model's orientation">
-  <figcaption><b>Figure 4</b>: Sensor updates orientation of a 3D model</figcaption>
+  <figcaption><b>Figure 6</b>: Sensor updates orientation of a 3D model</figcaption>
 </figure>
 
 ### Punchmeter
@@ -329,7 +374,7 @@ acceleration function.
 <figure align="center">
   <img src="/web/updates/images/2017/09/sensors/punchmeter.png"
     alt="Demo web application for punch speed measurement">
-  <figcaption><b>Figure 5</b>: Measurement of a punch speed</figcaption>
+  <figcaption><b>Figure 7</b>: Measurement of a punch speed</figcaption>
 </figure>
 
 
@@ -396,12 +441,10 @@ need.
 
 ## You can help!
 
-The sensor specifications are in active development and we need your feedback to
-make sure that this development goes in the right direction. Try the APIs either
-by enabling runtime [flags](#generic-sensor-api-in-chrome) in Chrome or taking part
-in the [origin trial](#motion-sensors-origin-trials) when it starts and share your experience.
-Let us know what features would be great to add or if there is something you would like to
-modify in the current API.
+The sensor specifications reached [Candidate Recommendation](https://www.w3.org/Consortium/Process/Process-19991111/tr.html#RecsCR)
+maturity level, hence, the feedback from web and browser developers is highly appreciated. Let us
+know what features would be great to add or if there is something you would like to modify in the
+current API.
 
 Please fill the [survey](https://docs.google.com/forms/d/e/1FAIpQLSdGKPzubbOaDSgjpre9Pxw6Hr1xwYIwgZEsuUOmbs6JPwvcBQ/viewform).
 Also feel free to file [specification issues](https://github.com/w3c/sensors/issues/new)
@@ -416,5 +459,7 @@ for the Chrome implementation.
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5698781827825664](https://www.chromestatus.com/feature/5698781827825664)
 - Implementation Bugs: [http://crbug.com?q=component:Blink>Sensor](http://crbug.com?q=component:Blink>Sensor)
 - Sensors-dev Google group: [https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev](https://groups.google.com/a/chromium.org/forum/#!forum/sensors-dev)
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

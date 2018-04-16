@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2017-12-14 #}
-{# wf_updated_on: 2017-12-14 #}
+{# wf_updated_on: 2018-03-15 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
-{# wf_tags: chrome64,webaudio #}
+{# wf_tags: chrome64,chrome66,webaudio #}
 {# wf_featured_snippet: Chrome 64 comes with a highly anticipated new feature in Web Audio API - AudioWorklet. AudioWorklet nicely keeps the user-supplied JavaScript code all within the audio processing thread — that is, it doesn’t have to jump over to the main thread to process audio. #}
 {# wf_blink_components: Blink>WebAudio #}
 
@@ -12,35 +12,30 @@ book_path: /web/updates/_book.yaml
 
 {% include "web/_shared/contributors/hongchanchoi.html" %}
 
+Note: AudioWorklet is enabled by default in Chrome 66.
+
 Chrome 64 comes with a highly anticipated new feature in Web Audio API -
 [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet). This
 article introduces its concept and usage for those who are eager to create a
-custom audio processor with JavaScript code. Please take a look at the
-[live demos](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/)
-on GitHub or [the instruction](#experimental) on how to use this
-experimental feature in Chrome 64.
+custom audio processor with JavaScript code. Please take a look at the [live
+demos](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/) on
+GitHub or [the instruction](#experimental) on how to use this feature.
 
-<aside class="note">
-  <p>
-    <b>A little bit of background: <code>ScriptProcessorNode</code></b>
-    (and why you shouldn't use it)
-  </p>
-  <p>
-    Audio processing in Web Audio API runs in a separate thread from the main
-    UI thread, so it runs smoothly. To enable custom audio processing in
-    JavaScript, the Web Audio API proposed a ScriptProcessorNode which used
-    event handlers to invoke user script in the main UI thread.
-  </p>
-  <p>
-    There are two problems in this design: the event handling is asynchronous
-    by design, and the code execution happens on the main thread. The former
-    induces the latency, and the latter pressures the main thread that is
-    commonly crowded with various UI and DOM-related tasks causing either UI
-    to "jank" or audio to "glitch". Because of this fundamental design flaw,
-    <code>ScriptProcessorNode</code> is deprecated from the specification and
-    replaced with AudioWorklet.
-  </p>
-</aside>
+### Background: ScriptProcessorNode
+
+Audio processing in Web Audio API runs in a separate thread from the main
+UI thread, so it runs smoothly. To enable custom audio processing in
+JavaScript, the Web Audio API proposed a ScriptProcessorNode which used
+event handlers to invoke user script in the main UI thread.
+
+There are two problems in this design: the event handling is asynchronous
+by design, and the code execution happens on the main thread. The former
+induces the latency, and the latter pressures the main thread that is
+commonly crowded with various UI and DOM-related tasks causing either UI
+to "jank" or audio to "glitch". Because of this fundamental design flaw,
+<code>ScriptProcessorNode</code> is deprecated from the specification and
+replaced with AudioWorklet.
+
 
 ## Concepts
 
@@ -313,27 +308,22 @@ at [Chrome WebAudio team's GitHub
 repository](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/).
 
 
-## Experimental Usage and Origin Trials {: #experimental }
+## Feature Transition: Experimental to Stable {: #experimental }
 
-AudioWorklet is available on Chrome 64 (currently beta) behind the
-experimental flag. You can activate the feature with the following command
-line option:
+AudioWorklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
+the feature is behind the experimental flag. You can activate the feature with
+the following command line option:
 
 ```
---enable-blink-features=Worklet,AudioWorklet
+--enable-blink-features=AudioWorklet
 ```
 
-Alternatively, you can go to `chrome://flags` and enable "Experimental Web
-Platform Features" and relaunch the browser. Note that this will enable the
-entire set of experimental features in the browser. Along with the
-experimental release, we have added this feature in Chrome 64 as an Origin
-Trial for all platforms. With Origin Trials, You can deploy code using
-AudioWorklet to users running Chrome 64 and get feedback from them. To
-participate in this trial please use the
-[signup form](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform).
-
-
-
-
+Along with the experimental release, we have added this feature in Chrome 64
+and 65 as an Origin Trial for all platforms. With the Origin Trial, You can
+deploy code using AudioWorklet to users and get feedback from them. To
+participate in this trial please use the [signup
+form](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform). This experimental program is expired on
+4/10/2018 and the participating developers need to prepare the site for the
+stable launch of the AudioWorklet in Chrome 66.
 
 {% include "comment-widget.html" %}

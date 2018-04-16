@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Viewports and message ports.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-10.mp3 #}
 {# wf_podcast_duration: 01:02:02 #}
@@ -48,6 +48,6 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-10.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/episode-10.mp3" controls preload="none">
 
 

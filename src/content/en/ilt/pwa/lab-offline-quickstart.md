@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-11 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ Concepts:  [Offline Quickstart](offline-quickstart)
 
 
 
-This lab shows you how to add offline capabilities to an application using service workers. 
+This lab shows you how to add offline capabilities to an application using service workers.
 
 #### What you will learn
 
@@ -35,7 +35,7 @@ This lab shows you how to add offline capabilities to an application using servi
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the internet 
+* Connection to the internet
 * A browser that supports  [service workers](https://jakearchibald.github.io/isserviceworkerready/)
 * A text editor
 
@@ -74,7 +74,7 @@ This folder contains:
 
 
 
-Let's create a service worker to add offline functionality to the app. 
+Let's create a service worker to add offline functionality to the app.
 
 ### 2.1 Cache static assets on install
 
@@ -107,7 +107,7 @@ Save the file.
 
 This code starts by defining a cache name, and a list of URLs to be cached. An install event listener is then added to the service worker. When the service worker installs, it opens a cache and stores the app's static assets. Now these assets are available for quick loading from the cache, without a network request.
 
-Note that `.` is also cached. This represents the current directory, in this case, __app/__. We do this because the browser attempts to fetch __app/__ first before fetching __index.html__. When the app is offline, this results in a 404 error if we have not cached __app/__. They should both be cached to be safe.  
+Note that `.` is also cached. This represents the current directory, in this case, __app/__. We do this because the browser attempts to fetch __app/__ first before fetching __index.html__. When the app is offline, this results in a 404 error if we have not cached __app/__. They should both be cached to be safe.
 
 
 

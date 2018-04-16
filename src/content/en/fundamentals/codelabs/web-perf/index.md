@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-16 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -70,7 +70,7 @@ Clearly, users notice jank and almost invariably choose apps that perform better
 
 Let's begin by taking a look at the app that you'll be debugging in this codelab. It looks like this.
 
-![36d93b5f28eb60c5.png](img/36d93b5f28eb60c5.png)
+![8b4a7e006c2d0bd8.png](img/8b4a7e006c2d0bd8.png)
 
 This site uses the __Hacker News API__ to show recent stories and their scores. Right now the app's performance is very poor, especially on mobile, but there's no reason it shouldn't be hitting 60fps. By the end of this codelab, you'll have the skills, techniques, and -- most importantly -- the mindset needed to turn this janky app into an attractive and efficient 60fps experience.
 
@@ -93,15 +93,15 @@ First, get the original janky version of the app up and running. In Chrome, open
 
 During scrolling in the main screen, you'll notice that the story list judders. Also, you'll see that the individual story point indicators (the circled numbers) not only change values, but also change color. This exercise is about identifying these problems and deciding how to approach them.
 
-Let's see what's really happening when we scroll the main screen, using the Timeline. Make sure that the __JS Profile__ checkbox is enabled before you start your recording. Start a new recording, scroll down the list a bit, and then stop the recording. 
+Let's see what's really happening when we scroll the main screen, using the Timeline. Make sure that the __JS Profile__ checkbox is enabled before you start your recording. Start a new recording, scroll down the list a bit, and then stop the recording.
 
 At the top of the recording, you see an FPS indicator in green. You should see a green bar with some occasional spikes, like in the screenshot below. The fact that the green bar is so low indicates that the screen was not hitting 60 FPS.
 
-![2e40b3134f26b0fa.png](img/2e40b3134f26b0fa.png)
+![6e324333967f6aee.png](img/6e324333967f6aee.png)
 
 Zoom in on your recording and you will see that after the scroll event is a function call, followed by many separate layout events, each with a red warning triangle. The layout events are the very skinny purple events at the bottom of the flame chart in the screenshot below. This is a sure sign that  *forced synchronous layout*  is occurring.
 
-![d6fb17faaa99e6f.png](img/d6fb17faaa99e6f.png)
+![dc923014d38b776e.png](img/dc923014d38b776e.png)
 
 <aside markdown="1" class="key-point">
 <p><strong>Discussion: Forced synchronous layout</strong></p>
@@ -114,9 +114,9 @@ elem.style.width = newWidth;
 </aside>
 
 
-Hover to identify a layout event, and then click on it to view its details. 
+Hover to identify a layout event, and then click on it to view its details.
 
-![fce56d36285bc1fc.png](img/fce56d36285bc1fc.png)
+![223fcf5a77de8ae3.png](img/223fcf5a77de8ae3.png)
 
 Look at the details of a layout event, and you can see that the forced synchronous layout warning is being produced by the `colorizeAndScaleStories` function in app.js.
 
@@ -159,13 +159,13 @@ function colorizeAndScaleStories() {
 }
 ```
 
-Notice that `height`, `width`, and `line-height` are accessed, which cause layout to run. Opacity is also set and -- while an opacity change doesn't trigger layout -- this line of code applies a new style, which triggers recalculate and, again, layout. These two techniques used in the function's main loop are causing the forced synchronous layout problem. 
+Notice that `height`, `width`, and `line-height` are accessed, which cause layout to run. Opacity is also set and -- while an opacity change doesn't trigger layout -- this line of code applies a new style, which triggers recalculate and, again, layout. These two techniques used in the function's main loop are causing the forced synchronous layout problem.
 
 Next, consider the visual effect on the story point indicators, which doesn't add any informational value. We could achieve the effect with CSS properties instead of JavaScript, but we might be better off dropping the effect completely. The takeaway: sometimes the best code fix is code removal.
 
 Let's remove the calls to the `colorizeAndScaleStories` function. Commend out lines 88, 89, and 305 in app.js, as well as the entire function itself, lines 255-286. Don't delete the lines, because the line numbers that we reference later in this codelab won't match your app. Now the story points look the same all the time.
 
-Run the app again and take a Timeline recording of some scrolling activity, and then zoom in on a scroll event. This time, you'll see that there is only one style recalculation after the scroll, and that the FPS bar is much higher. 
+Run the app again and take a Timeline recording of some scrolling activity, and then zoom in on a scroll event. This time, you'll see that there is only one style recalculation after the scroll, and that the FPS bar is much higher.
 
 ![5e9d66cb007f9076.png](img/5e9d66cb007f9076.png)
 
@@ -232,9 +232,9 @@ As usual, begin by taking a Timeline recording of a story sliding in and out, an
 
 ![59865afca1e508ef.png](img/59865afca1e508ef.png)
 
-In general, whenever you see a purple event with a red triangle on it, you want to investigate by hovering over it and clicking on it to view its details. Right now, you're interested in the forced synchronous layout that occurred after a timer was fired. 
+In general, whenever you see a purple event with a red triangle on it, you want to investigate by hovering over it and clicking on it to view its details. Right now, you're interested in the forced synchronous layout that occurred after a timer was fired.
 
-![1bd8f7700f55a6c4.png](img/1bd8f7700f55a6c4.png)
+![43a288936220943e.png](img/43a288936220943e.png)
 
 The slide-in/out animation is firing a timer and there's a forced synchronous layout occurring. The details point to line 180 in the app.js file, which is a function called `animate`. Let's examine that function.
 
@@ -399,7 +399,7 @@ At first, that isn't necessarily a problem, but it becomes increasingly wasteful
 </aside>
 
 
-A better way to accomplish this feature is to create just one permanent `storyDetails` node earlier in the script to hold the current story and then use the trusty `innerHTML` property to reset its content each time instead of creating a new node. In other words, you would simply this code: 
+A better way to accomplish this feature is to create just one permanent `storyDetails` node earlier in the script to hold the current story and then use the trusty `innerHTML` property to reset its content each time instead of creating a new node. In other words, you would simply this code:
 
 ```
     storyDetails = document.createElement('section');
@@ -417,7 +417,7 @@ To this:
     storyDetails.innerHTML = storyDetailsHtml;
 ```
 
-That change will undoubtedly improve long term performance, but it doesn't do anything for us in the short term. 
+That change will undoubtedly improve long term performance, but it doesn't do anything for us in the short term.
 
 We still need to finish addressing the story slide-in/out issue.
 
@@ -433,7 +433,7 @@ Let's examine this process. In the Timeline, turn on the JavaScript profiler, an
 
 ![33ba193a24cb7303.png](img/33ba193a24cb7303.png)
 
-In that exercise, we put the `animate` function calls into a `requestAnimationFrame`; that surely helped, but it didn't eliminate the problem entirely. 
+In that exercise, we put the `animate` function calls into a `requestAnimationFrame`; that surely helped, but it didn't eliminate the problem entirely.
 
 Recall from our earlier discussion (and from your research at  [CSS Triggers](http://csstriggers.com/)) that using specific properties cause specific parts of the rendering pipeline to occur. Let's take another look at `animate`.
 
@@ -462,7 +462,7 @@ function animate () {
 }
 ```
 
-Near the end of the function, the `left` property is set; this causes the browser to run layout. Shortly thereafter, the `style` property is set; this causes the browser to run recalculate styles. As you know, if this happens more than once in a frame, it will cause a forced synchronous layout -- and it's happening multiple times in this function. 
+Near the end of the function, the `left` property is set; this causes the browser to run layout. Shortly thereafter, the `style` property is set; this causes the browser to run recalculate styles. As you know, if this happens more than once in a frame, it will cause a forced synchronous layout -- and it's happening multiple times in this function.
 
 The `animate` function is contained inside the `showStory` function and its sister function, `hideStory`, both of which update the same properties and cause a forced synchronous layout problem.
 
@@ -497,7 +497,7 @@ As we learned earlier in this codelab, sometimes the best code fix is code remov
 }
 ```
 
-The first thing to notice in the `.story-details` class is that we set the `left` property to 100%; regardless of the screen width, this pushes the entire story element to the right, completely off the visible page, effectively hiding it. 
+The first thing to notice in the `.story-details` class is that we set the `left` property to 100%; regardless of the screen width, this pushes the entire story element to the right, completely off the visible page, effectively hiding it.
 
 Next, in the `.story-details.visible` and `.story-details.hidden` classes, we set up a `transform` in each one to force the X (horizontal) position to -100vw ( *viewport width* ) and 0, respectively. Upon application, these classes will relocate the story content into view or back to its original off-screen position.
 
@@ -534,7 +534,7 @@ All of this should have significant positive benefits on our app's story slide-i
 
 ![5543cf34c10a914b.png](img/5543cf34c10a914b.png)
 
-The app should perform much better; all the frames are now well below the 60fps line, and the forced synchronous layout warnings are gone. Best of all, we no longer need to use JavaScript to perform the slide-in/out animation. 
+The app should perform much better; all the frames are now well below the 60fps line, and the forced synchronous layout warnings are gone. Best of all, we no longer need to use JavaScript to perform the slide-in/out animation.
 
 Our basic performance improvement work is done.
 

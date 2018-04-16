@@ -3,6 +3,8 @@ toc:
     style: accordion
     section:
     - title: Overview
+      path: /web/fundamentals/performance/why-performance-matters/
+    - title: Measure Performance with the RAIL Model
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
@@ -22,6 +24,8 @@ toc:
           path: /web/fundamentals/performance/get-started/httpcaching-6
         - title: Wrap-up and Demo
           path: /web/fundamentals/performance/get-started/wrapup-7
+      - title: How to Think About Speed Tools
+        path: /web/fundamentals/performance/speed-tools
       - title: User-centric Performance Metrics
         path: /web/fundamentals/performance/user-centric-performance-metrics
       - title: Understanding Low Bandwidth and High Latency
@@ -48,12 +52,19 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
         - title: JavaScript Start-up Optimization
-          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
+          step_group: perf-oce
+        - title: Loading Third-Party JavaScript
+          path: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/
+          step_group: perf-oce
         - title: Web Font Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
           step_group: perf-oce
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+          step_group: perf-oce
+        - title: Delivering Fast and Light Applications with Save-Data
+          path: /web/fundamentals/performance/optimizing-content-efficiency/save-data
           step_group: perf-oce
       - title: Never Load the Same Resource Twice
         section:
@@ -71,6 +82,10 @@ toc:
             path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
           path: /web/fundamentals/instant-and-offline/offline-ux
+      - title: Lazy Loading Resources
+        section:
+          - title: Images and Video
+            path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
       - title: Order Loading Thoughtfully
         section:
         - title: Critical Rendering Path

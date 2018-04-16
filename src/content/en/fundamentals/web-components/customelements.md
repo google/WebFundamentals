@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-10-29 #}
+{# wf_updated_on: 2018-04-13 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -781,10 +781,13 @@ There's no better way to write a [progressive web
 app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
 elements**.
 
-Warning: At time of writing, no browser has implemented customized built-in
-elements ([status](https://www.chromestatus.com/feature/4670146924773376)).
-This is unfortunate for accessibility and progressive enhancement. If you think
-extending native HTML elements is useful, voice your thoughts on <a href='https://github.com/w3c/webcomponents/issues/509'>509</a> and <a href='https://github.com/w3c/webcomponents/issues/662'>662</a> on Github.
+Note: Only Chrome 67 supports customized built-in elements 
+([status](https://www.chromestatus.com/feature/4670146924773376))
+right now. Edge and Firefox will implment it, but Safari
+has chosen not to implement it. This is unfortunate for accessibility and
+progressive enhancement. If you think extending native HTML elements is 
+useful, voice your thoughts on 
+<a href='https://github.com/w3c/webcomponents/issues/509'>509</a> and <a href='https://github.com/w3c/webcomponents/issues/662'>662</a> on Github.
 
 To extend an element, you'll need to create a class definition that inherits
 from the correct DOM interface. For example, a custom element that extends

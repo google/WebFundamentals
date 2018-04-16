@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and document.all is now read only.
 
-{# wf_updated_on: 2018-02-08 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
 {# wf_blink_components: Blink,Blink>Bindings,Blink>Network #}
@@ -51,5 +51,7 @@ Starting in version 65, Chrome complies with the standard.
 
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

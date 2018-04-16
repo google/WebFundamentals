@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
 
-{# wf_updated_on: 2018-02-05 #}
+{# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
 {# wf_tags: chrome65,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -15,8 +15,6 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: The video version of these release notes will be published around early-March 2018.
-
 New features coming to DevTools in Chrome 65 include:
 
 * [**Local Overrides**](#overrides)
@@ -25,6 +23,14 @@ New features coming to DevTools in Chrome 65 include:
 * [New SEO and performance audits](#audits)
 * [Multiple recordings in the **Performance** panel](#recordings)
 * [Reliable code stepping with workers and asynchronous code](#stepping)
+
+Read on, or watch the video version of these release notes, below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
@@ -236,7 +242,7 @@ Chrome 65 also ships with many new performance audits:
   started</a>.
 </aside>
 
-### Other updates {: #audits-other } 
+### Other updates {: #audits-other }
 
 * [New, manual accessibility audits](/web/updates/2018/01/lighthouse#a11y)
 * [Updates to the WebP audit][webp] to make it more inclusive of other next-generation image
@@ -327,7 +333,7 @@ The **Performance** panel now lets you temporarily save up to 5 recordings. The 
 deleted when you close your DevTools window. See [Get Started with Analyzing Runtime
 Performance][runtime] to get comfortable with the **Performance** panel.
 
-[runtime]: /tools/chrome-devtools/evaluate-performance/
+[runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
 <figure>
   <img src="/web/updates/images/2018/01/recordings.png"
@@ -403,3 +409,5 @@ See the [devtools-whatsnew][tag] tag for links to all previous DevTools
 release notes.
 
 [tag]: /web/updates/tags/devtools-whatsnew
+
+{% include "web/_shared/rss-widget-updates.html" %}

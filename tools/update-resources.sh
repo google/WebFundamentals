@@ -4,7 +4,7 @@ TEMP_FILE='tempFile.txt'
 
 getResource() {
   echo $1
-  curl --fail --progress-bar $1 > $TEMP_FILE
+  curl --compressed --fail --progress-bar $1 > $TEMP_FILE
   if [ $? -eq 0 ]; then
       mv $TEMP_FILE $2
   else

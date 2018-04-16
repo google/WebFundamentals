@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 63/64.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -124,14 +124,16 @@ if the media configuration type is `"file"`.
 
 ### Available for Origin Trials
 
-In order to get your valuable feedback, the Decoding Info API (part of Media
-Capabilities) is available as an [Origin Trial] in Chrome 64. You will need to
-[request a token], so that the feature would be automatically enabled for your
-origin for a limited period of time, without the need to enable the
-experimental “Web Platform Features” flag at
-`chrome://flags/#enable-experimental-web-platform-features`.
+In order to get as much feedback as possible from developers using the Decoding
+Info API (part of Media Capabilities) in the field, we've previously added this
+feature in Chrome 64 as an origin trial.
+
+The trial has successfully ended in April 2018.
+
+Note: The Decoding Info API is now enabled by default in Chrome 66.
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dsdTLv33r4w) &#124;
+[Intent to Ship](https://groups.google.com/a/chromium.org/d/msg/blink-dev/aXYvQ01tMhw/SqA09gD7AgAJ) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5869632707624960) &#124;
 [Chromium Bug](https://crbug.com/690380)
 
@@ -245,7 +247,7 @@ the device is offline is now possible in Chrome 64 on Windows and Mac as well.
 const config = [{
   sessionTypes: ['persistent-license'],
   videoCapabilities: [{
-    contentType: 'video/webm; codecs="vp9"',
+    contentType: 'video/webm; codecs="vp09.00.10.08"',
     robustness: 'SW_SECURE_DECODE' // Widevine L3
   }]
 }];
@@ -335,8 +337,6 @@ crazy fast now.
 {% include "comment-widget.html" %}
 
 [Media Capabilities]: https://wicg.github.io/media-capabilities/
-[Origin Trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
-[request a token]: http://bit.ly/MediaCapabilitiesOriginTrials
 [Windows 10 is in HDR mode]: https://support.microsoft.com/en-us/help/4040263/windows-10-hdr-advanced-color-settings
 [scRGB]: https://en.wikipedia.org/wiki/ScRGB
 [The World in HDR in 4K (ULTRA HD)]: https://www.youtube.com/watch?v=tO01J-M3g0U

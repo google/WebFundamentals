@@ -332,7 +332,7 @@ code-bloat.
 ## Async all the things!
 
 Once async functions land across all browsers, use them on every
-promise-returning function! Not only do they make your code tider, but it makes
+promise-returning function! Not only do they make your code tidier, but it makes
 sure that function will *always* return a promise.
 
 I got really excited about async functions [back in

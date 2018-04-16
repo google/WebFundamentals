@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-webpack-plugin.
 
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-19 #}
 {# wf_published_on: 2017-12-15 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Workbox webpack Plugins  {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
 generates a complete service worker for you and one that generates a list
@@ -47,7 +45,7 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    GenerateSW()
+    new GenerateSW()
   ]
 };
 ```
@@ -70,7 +68,7 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    GenerateSW({
+    new GenerateSW({
       option: 'value',
     })
   ]
@@ -103,14 +101,14 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    InjectManifest({
+    new InjectManifest({
       swSrc: './src/sw.js',
     })
   ]
 };
 ```
 
-This will a precache manifest (a list of webpack assets) and inject it into
+This will create a precache manifest (a list of webpack assets) and inject it into
 your service worker file via `importScripts()`.
 
 ### Full InjectManifest Config
@@ -127,7 +125,7 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    InjectManifest({option: 'value'})
+    new InjectManifest({option: 'value'})
   ]
 };
 ```
@@ -167,6 +165,6 @@ in-memory file system is used.
 
 ## Extra Info
 
-Guidance on using the plugins within the context of a larger webpack build can
-be found in the "[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section of the
-webpack documentation.
+Guidance on using the plugins within the context of a larger webpack build can be found in the
+"[Progressive Web Application](https://webpack.js.org/guides/progressive-web-application/)" section
+of the webpack documentation.

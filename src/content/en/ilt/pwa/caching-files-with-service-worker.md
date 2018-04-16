@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -61,7 +61,7 @@ Note: It is important to note that while this event is happening, any previous v
 
 
 
-[`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the lifetime of the `install` event until the passed promise resolves successfully. If the promise rejects, the installation is considered a failure and this service worker is abandoned (if an older version is running, it stays active). 
+[`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the lifetime of the `install` event until the passed promise resolves successfully. If the promise rejects, the installation is considered a failure and this service worker is abandoned (if an older version is running, it stays active).
 
 `cache.addAll` will reject if any of the resources fail to cache. This means the service worker will only install if all of the resources in `cache.addAll` have been cached.
 
@@ -126,11 +126,11 @@ Note: To allow for efficient memory usage, you can only read a response/request'
 
 ### Serving files from the cache
 
-To serve content from the cache and make your app available offline you need to intercept network requests and respond with files stored in the cache. There are several approaches to this: 
+To serve content from the cache and make your app available offline you need to intercept network requests and respond with files stored in the cache. There are several approaches to this:
 
 * cache only
-* network only 
-* cache falling back to network 
+* network only
+* cache falling back to network
 * network falling back to cache
 * cache then network
 
@@ -196,7 +196,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-Here we first send the request to the network using `fetch()`, and only if it fails do we look for a response in the cache. 
+Here we first send the request to the network using `fetch()`, and only if it fails do we look for a response in the cache.
 
 <div id="cachethen"></div>
 
@@ -255,7 +255,7 @@ self.addEventListener('fetch', function(event) {
 
 This caches the network responses as they are fetched.
 
-Sometimes you can replace the current data when new data arrives (for example, game leaderboard), but be careful not to hide or replace something the user may be interacting with. For example, if you load a page of blog posts from the cache and then add new posts to the top of the page as they are fetched from the network, you might consider adjusting the scroll position so the user is uninterrupted. This can be a good solution if your app layout is fairly linear. 
+Sometimes you can replace the current data when new data arrives (for example, game leaderboard), but be careful not to hide or replace something the user may be interacting with. For example, if you load a page of blog posts from the cache and then add new posts to the top of the page as they are fetched from the network, you might consider adjusting the scroll position so the user is uninterrupted. This can be a good solution if your app layout is fairly linear.
 
 <div id="generic-fallback"></div>
 
@@ -361,7 +361,7 @@ if ('caches' in window) {
 
 ### Creating the cache
 
-An origin can have multiple named Cache objects. To create a cache or open a connection to an existing cache we use the  [`caches.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) method. 
+An origin can have multiple named Cache objects. To create a cache or open a connection to an existing cache we use the  [`caches.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open) method.
 
 ```
 caches.open(cacheName)

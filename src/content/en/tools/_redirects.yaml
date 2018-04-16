@@ -167,3 +167,27 @@ redirects:
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
+
+- from: /web/tools/workbox/next/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/examples/
+  to: /web/tools/workbox/modules/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/get-started/gulp
+  to: /web/tools/workbox/guides/codelabs/gulp
+
+- from: /web/tools/workbox/get-started/webpack
+  to: /web/tools/workbox/guides/codelabs/webpack
+
+- from: /web/tools/workbox/get-started/npm-script
+  to: /web/tools/workbox/guides/codelabs/npm-script
+
+- from: /web/tools/workbox/guides/migrate
+  to: /web/tools/workbox/guides/migrations/migrate-from-sw

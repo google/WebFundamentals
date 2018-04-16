@@ -163,12 +163,17 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
     markdown = markdown.replace(match[0], String(htmlAside));
   });
 
+  // Convert HTML tables with markdown in them to full HTML
   re = /<table markdown="1">((.|\n)*?)<\/table>/gm;
   matches = wfRegEx.getMatches(re, markdown);
   matches.forEach(function(match) {
     let htmlTable = remark().use(remarkHtml).process(match[0]);
     markdown = markdown.replace(match[0], String(htmlTable));
   });
+
+  // Remove any spaces before newlines
+  re = /[ ]+\n/g;
+  markdown = markdown.replace(re, '\n');
 
   result.push(markdown);
   if (metadata.feedback) {

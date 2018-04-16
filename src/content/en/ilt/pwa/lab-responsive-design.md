@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -19,7 +19,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-This lab shows you how to style your content to make it responsive. 
+This lab shows you how to style your content to make it responsive.
 
 #### What you will learn
 
@@ -55,7 +55,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __responsive-design-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __responsive-design-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -73,7 +73,7 @@ This folder contains:
 
 Return to the app in the browser. Try shrinking the window width to below 500px and notice that the content doesn't respond well.
 
-Open developer tools and <a href="tools-for-pwa-developers#mobile">enable responsive design or device mode</a> in your browser. This mode simulates the behavior of your app on a mobile device. Notice that the page is zoomed out to fit the fixed-width content on the screen. This is not a good experience because the content will likely be too small for most users, forcing them to zoom and pan. 
+Open developer tools and <a href="tools-for-pwa-developers#mobile">enable responsive design or device mode</a> in your browser. This mode simulates the behavior of your app on a mobile device. Notice that the page is zoomed out to fit the fixed-width content on the screen. This is not a good experience because the content will likely be too small for most users, forcing them to zoom and pan.
 
 <div id="3"></div>
 
@@ -83,7 +83,7 @@ Open developer tools and <a href="tools-for-pwa-developers#mobile">enable respon
 
 
 
-Replace TODO 3 in <strong>index.html</strong> with the following tag: 
+Replace TODO 3 in <strong>index.html</strong> with the following tag:
 
 #### index.html
 
@@ -107,7 +107,7 @@ The initial-scale property controls the zoom level when the page is first loaded
 
 #### For more information
 
-*  [Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) - Responsive Web Design Basics 
+*  [Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) - Responsive Web Design Basics
 *  [Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) - MDN
 
 <div id="4"></div>
@@ -134,7 +134,7 @@ Save the file. Disable device mode in the browser and refresh the page. Try shri
 
 #### Explanation
 
-To make sure that the text is readable we use a media query when the browser's width becomes 48rem (768 pixels at browser's default font size or 48 times the default font size in the user's browser). See  [When to use Em vs Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984) for a good explanation of why rem is a good choice for relative units. When the media query is triggered we change the layout from three columns to one column by changing the `width` of each of the three `div`s to fill the page. 
+To make sure that the text is readable we use a media query when the browser's width becomes 48rem (768 pixels at browser's default font size or 48 times the default font size in the user's browser). See  [When to use Em vs Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984) for a good explanation of why rem is a good choice for relative units. When the media query is triggered we change the layout from three columns to one column by changing the `width` of each of the three `div`s to fill the page.
 
 <div id="5"></div>
 
@@ -144,7 +144,7 @@ To make sure that the text is readable we use a media query when the browser's w
 
 
 
-The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox) is a useful and easy-to-use tool for making your content responsive.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) lets us accomplish the same result as in the previous steps, but it takes care of any spacing calculations for us and provides a bunch of ready-to-use CSS properties for structuring content. 
+The  [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/) (Flexbox) is a useful and easy-to-use tool for making your content responsive.  [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) lets us accomplish the same result as in the previous steps, but it takes care of any spacing calculations for us and provides a bunch of ready-to-use CSS properties for structuring content.
 
 ### 5.1 Comment out existing rules in CSS
 
@@ -161,7 +161,7 @@ Replace TODO 5.2 in __styles/main.css__ with the following code:
   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  background: #eee;  
+  background: #eee;
   overflow: auto;
 }
 
@@ -333,7 +333,7 @@ You have learned to style your content to make it responsive. Using media querie
 
 #### Learn more about the basics of responsive design
 
-*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) 
+*  [Responsive Web Design Basics - Set the viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport)
 *  [A tale of two viewports](http://www.quirksmode.org/mobile/viewports2.html)
 
 #### Learn more about Flexbox as a progressive enhancement
@@ -351,6 +351,6 @@ You have learned to style your content to make it responsive. Using media querie
 
 #### Learn more about using media queries
 
-*  [Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) 
+*  [Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 

@@ -53,9 +53,11 @@ function renderTemplate(templateFile, context, outputFile) {
  *
  * @param {Array} articles List of files to get content.
  * @param {number} maxItems Number of items to include in the feed.
+ * @param {boolean=} includeContent Whether to include article body content in
+ *     the feed. True by default.
  * @return {Array} list of articles
  */
-function getFullFeedEntries(articles, maxItems) {
+function getFullFeedEntries(articles, maxItems, includeContent = true) {
   let yamlCont = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
   let contributors = jsYaml.safeLoad(yamlCont);
   articles = articles.slice(0, maxItems);
@@ -68,6 +70,9 @@ function getFullFeedEntries(articles, maxItems) {
     content = content.replace(wfRegEx.RE_DESCRIPTION, '');
     content = content.replace(/{:.*}/g, '');
     article.content = marked(content);
+    if (!includeContent) {
+      article.content = null;
+    }
     if (article.authors && article.authors[0]) {
       let author = contributors[article.authors[0]];
       if (author) {
@@ -100,7 +105,7 @@ function generateFeeds(files, options) {
   let context = {
     title: options.title,
     description: options.description,
-    articles: getFullFeedEntries(files, maxItems),
+    articles: getFullFeedEntries(files, maxItems, options.includeContent),
     host: 'https://developers.google.com',
     baseUrl: 'https://developers.google.com/web/',
     analyticsQS: ANALYTICS_QS,

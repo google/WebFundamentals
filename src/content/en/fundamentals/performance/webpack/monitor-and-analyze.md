@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: What tools to use to keep track of and analyze the webpack bundle
 
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-02-16 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -195,8 +195,8 @@ You might want to dig deeper into the bundle to see what modules take space in i
   <video src="./webpack-bundle-analyzer.mp4" alt="A screen recording of the webpack bundle analyzer
 page" autoplay controls loop></video>
   <figcaption>(Screen recording from <a
-href="https://github.com/webpack-contrib/webpack-bundle-analyzer">github.com/webpack-contrib/webpack
--bundle-analyzer</a>)</figcaption>
+href="https://github.com/webpack-contrib/webpack-bundle-analyzer">github.com/webpack-contrib/webpack-bundle-analyzer</a>)
+</figcaption>
 </figure>
 
 webpack-bundle-analyzer scans the bundle and builds a visualization of what’s inside it. Use this
@@ -236,7 +236,8 @@ instead of React)? Do you use all the code it includes (e.g., Moment.js includes
 [that are often not used and could be dropped](https://github.com/GoogleChromeLabs/webpack-libs-optimizations#moment))?
 
 - **Duplicated dependencies.** Do you see the same library repeating in multiple files? (Use, e.g.,
-the `CommonsChunkPlugin` to move it into a common file.) Or does the bundle have multiple versions
+the `optimization.splitChunks.chunks` option – in webpack 4 – or the `CommonsChunkPlugin` –
+in webpack 3 – to move it into a common file.) Or does the bundle have multiple versions
 of the same library?
 
 - **Similar dependencies.** Are there similar libraries that do approximately the same job? (E.g.

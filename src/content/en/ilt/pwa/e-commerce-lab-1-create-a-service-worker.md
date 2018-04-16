@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -49,7 +49,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-Clone the E-Commerce lab repository with Git using the following command: 
+Clone the E-Commerce lab repository with Git using the following command:
 
     git clone https://github.com/google-developer-training/pwa-ecommerce-demo.git
 
@@ -73,7 +73,7 @@ Then run the following:
 
     npm run serve
 
-This runs the default task in __gulpfile.babel.js__ which copies the project files to the appropriate folder and starts a server. Open your browser and navigate to `localhost:8080`. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page. 
+This runs the default task in __gulpfile.babel.js__ which copies the project files to the appropriate folder and starts a server. Open your browser and navigate to `localhost:8080`. The app is a mock furniture website, "Modern Furniture Store". Several furniture items should display on the front page.
 
 When the app opens, confirm that a service worker is not registered at local host by  [checking developer tools](tools-for-pwa-developers#accesssw). If there is a service worker at localhost,  [unregister it](tools-for-pwa-developers#unregister) so it doesn't interfere with the lab.
 
@@ -167,7 +167,7 @@ To complete TODO SW-5 in __app/service-worker.js__, write the code to delete unu
 
 Note: If you get stuck, you can use  [Lab: Caching files with Service Worker](lab-caching-files-with-service-worker) for clues.
 
- 
+
 
 <div id="6"></div>
 

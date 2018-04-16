@@ -32,5 +32,9 @@
     </script>
     <script async src="/wf-local/scripts/footer-closure.js" onload="devsite.kennedy.InitializeTabbars();">
     </script>
+    {% if servedFromAppEngine %}
+      {% include "includes/analytics.html" %}
+      {% include "includes/survey.html" %}
+    {% endif %}
   </body>
 </html>

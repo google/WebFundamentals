@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
 
 <style>
@@ -13,8 +13,6 @@ description: A guide on how to precache files with Workbox.
 </style>
 
 # Precache Files {: .page-title }
-
-{% include "web/tools/workbox/_shared/beta.html" %}
 
 If you want your web app to work offline or there are assets you know can be
 cached for a long time, precaching is the best approach.
@@ -31,7 +29,7 @@ redundant.
 Precaching files with Workbox can be done like so:
 
 ```javascript
-workbox.precaching.preacheAndRoute([
+workbox.precaching.precacheAndRoute([
     '/styles/index.0c9a31.css',
     '/scripts/main.0d5770.js',
     { url: '/index.html', revision: '383676' },

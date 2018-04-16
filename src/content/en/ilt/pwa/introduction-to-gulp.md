@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-13 #}
+{# wf_updated_on: 2018-04-12 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -41,7 +41,7 @@ Modern web development has many repetitive tasks like running a local server, mi
 
 
 
-Setting up gulp for the first time requires a few steps. 
+Setting up gulp for the first time requires a few steps.
 
 ### Node
 
@@ -65,7 +65,7 @@ This also installs Node's package manager,  [npm](https://www.npmjs.com/). You c
 
     npm -v
 
-If both commands return a version number, then the installations were successful. 
+If both commands return a version number, then the installations were successful.
 
 ### Gulp command line tool
 
@@ -97,13 +97,13 @@ This command begins the generation of a __package.json__ file, prompting you wit
 }
 ```
 
-Don't worry if you don't understand what all of these values represent, they are not critical to learning gulp. 
+Don't worry if you don't understand what all of these values represent, they are not critical to learning gulp.
 
 This file is used to track your project's packages. Tracking packages like this allows for quick reinstallation of all the packages and their dependencies in future builds (the `npm install` command will read __package.json__ and automatically install everything listed).
 
 
 
-Note: It is a best practice not to push packages to version control systems. It's better to use `npm install` and `package.json` to install project packages locally. 
+Note: It is a best practice not to push packages to version control systems. It's better to use `npm install` and `package.json` to install project packages locally.
 
 
 
@@ -115,7 +115,7 @@ Gulp and Node rely on plugins (packages) for the majority of their functionality
 
 This command uses the npm tool to install the `pluginName` plugin. Plugins and their dependencies are installed in a __node_modules__ directory inside the project's working directory.
 
-The `--save-dev` flag updates __package.json__ with the new package. 
+The `--save-dev` flag updates __package.json__ with the new package.
 
 The first plugin that you want to install is gulp itself. Do this by running the following command from the command line from within your project's working directory:
 
@@ -162,7 +162,7 @@ var gulp = require('gulp');
 
 
 
-Gulp tasks are defined in the __gulpfile.js__ file using  [`gulp.task`](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulptaskname--deps--fn). A simple task looks like this: 
+Gulp tasks are defined in the __gulpfile.js__ file using  [`gulp.task`](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulptaskname--deps--fn). A simple task looks like this:
 
 #### gulpfile.js
 
@@ -187,7 +187,7 @@ A common pattern for gulp tasks is the following:
           .pipe(gulpPluginFunction()) // 2
           .pipe(gulp.dest('destination')); // 3
         });
-        
+
 
 
 A complete gulpfile might look like this:
@@ -226,7 +226,7 @@ Where each installed plugin is included with `require()` and tasks are then defi
 
 
 
-Let's look at some examples. 
+Let's look at some examples.
 
 #### Uglify JavaScript
 
@@ -235,26 +235,26 @@ Uglifying (or minifying) JavaScript is a common developer chore. The following s
 1. Create a new project & __package.json__ by running the following in the command line (from the project's working directory):
 
         npm init
-        
+
 
 
 2. Install the gulp package by running the following in the command line:
 
         npm install gulp --save-dev
-        
+
 
 
 3. Install the  [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) package by running the following in the command line:
 
         npm install gulp-uglify --save-dev
-        
+
 
 
 4. Create a __gulpfile.js__ and add the following code to include gulp and gulp-uglify:
 
         var gulp = require('gulp');
         var uglify = require('gulp-uglify');
-        
+
 
 
 5. Define the `uglify` task by adding the following code to __gulpfile.js__:
@@ -264,13 +264,13 @@ Uglifying (or minifying) JavaScript is a common developer chore. The following s
           .pipe(uglify())
           .pipe(gulp.dest('build'));
         });
-        
+
 
 
 6. Run the task from the command line with the following:
 
         gulp uglify
-        
+
 
 
 The task reads all JavaScript files in the __js__ directory (relative to the __gulpfile.js__ file), executes the `uglify` function on them (uglifying/minifying the code), and then puts them in a __build__ directory (creating it if it doesn't exist).
@@ -285,7 +285,7 @@ Multiple plugins can be used in a single task. The following steps set up a gulp
         npm install gulp --save-dev
         npm install gulp-autoprefixer --save-dev
         npm install gulp-sourcemaps --save-dev
-        
+
 
 
 2. Include the installed plugins by adding the following code to a __gulpfile.js__ file:
@@ -293,7 +293,7 @@ Multiple plugins can be used in a single task. The following steps set up a gulp
         var gulp = require('gulp');
         var autoprefixer = require('gulp-autoprefixer');
         var sourcemaps = require('gulp-sourcemaps');
-        
+
 
 
 3. Create a task that prefixes CSS files, creates sourcemaps on the files, and writes the new files to the __build__ directory by adding the following code to __gulpfile.js__:
@@ -305,7 +305,7 @@ Multiple plugins can be used in a single task. The following steps set up a gulp
           .pipe(sourcemaps.write())
           .pipe(gulp.dest('build'));
         });
-        
+
 
 
 This task uses two plugins in the same task.
@@ -320,7 +320,7 @@ This task uses two plugins in the same task.
 
 ### Default tasks
 
-Usually, developers want to run multiple tasks each time an application is updated rather than running each task individually. Default tasks are helpful for this, executing anytime the `grunt` command is run from the command line. 
+Usually, developers want to run multiple tasks each time an application is updated rather than running each task individually. Default tasks are helpful for this, executing anytime the `grunt` command is run from the command line.
 
 Let's add the following code to __gulpfile.js__ to set `task1` and `task2` as default tasks:
 
@@ -364,13 +364,13 @@ Note: The watch task continues to execute once initiated. To stop the task, use 
 
 Using a build tool for the first time can be daunting with multiple tools to install and new files to create. Let's review what we've covered and how it all fits together.
 
-Because gulp and its plugins are node packages, gulp requires  [Node](https://nodejs.org/en/) and its package manager,  [npm](https://www.npmjs.com/). They are global tools so you only need to install them once on your machine, not each time you create a project. In this text, we used  [Node Version Manager](https://github.com/creationix/nvm) (nvm) to install Node and npm, but they could also have been installed directly. 
+Because gulp and its plugins are node packages, gulp requires  [Node](https://nodejs.org/en/) and its package manager,  [npm](https://www.npmjs.com/). They are global tools so you only need to install them once on your machine, not each time you create a project. In this text, we used  [Node Version Manager](https://github.com/creationix/nvm) (nvm) to install Node and npm, but they could also have been installed directly.
 
-Gulp runs from the command line, so it requires a command line tool to be installed. Like Node, it's a global tool, and only needs to be installed on your machine (not per project). 
+Gulp runs from the command line, so it requires a command line tool to be installed. Like Node, it's a global tool, and only needs to be installed on your machine (not per project).
 
-When you want to use gulp in a project, you start by initializing the project with `npm init`. This creates a file called __package.json__. The __package.json__ file tracks the Node packages that are installed for that project. Each time a new package is installed, such as the gulp-uglify plugin, __package.json__ is updated with the `--save-dev` flag. If the project is stored in version control or transferred without including all of the packages (a best practice), the packages can be quickly re-installed with `npm install`. This reads __package.json__ and installs all required packages. 
+When you want to use gulp in a project, you start by initializing the project with `npm init`. This creates a file called __package.json__. The __package.json__ file tracks the Node packages that are installed for that project. Each time a new package is installed, such as the gulp-uglify plugin, __package.json__ is updated with the `--save-dev` flag. If the project is stored in version control or transferred without including all of the packages (a best practice), the packages can be quickly re-installed with `npm install`. This reads __package.json__ and installs all required packages.
 
-Once plugins are installed, they need to be included in the __gulpfile.js__ file. This file is where all gulp code belongs. This file is also where gulp tasks are defined. Gulp tasks use JavaScript code and the imported functions from plugins to perform various tasks on files. 
+Once plugins are installed, they need to be included in the __gulpfile.js__ file. This file is where all gulp code belongs. This file is also where gulp tasks are defined. Gulp tasks use JavaScript code and the imported functions from plugins to perform various tasks on files.
 
 With everything installed and tasks defined, gulp tasks can be run by executing command line commands (such as `gulp uglify`).
 

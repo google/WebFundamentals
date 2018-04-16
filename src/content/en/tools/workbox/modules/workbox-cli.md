@@ -3,16 +3,14 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-02-01 #}
+{# wf_updated_on: 2018-03-15 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
 
-{% include "web/tools/workbox/_shared/beta.html" %}
-
 ## What's the Workbox CLI?
 
-The Workbox command line interface (contained in the the
+The Workbox command line interface (contained in the
 `workbox-cli` package) consists of a Node.js program called workbox that
 can be run from a Windows, macOS, of UNIX-compatible command line
 environment. Under the hood, workbox-cli wraps the  workbox-build module,
@@ -27,7 +25,7 @@ terminal.
 * {npm}
 
     <pre class="devsite-terminal">
-    npm install workbox-cli@beta --global
+    npm install workbox-cli --global
     </pre>
 
 * {Yarn}
@@ -205,6 +203,7 @@ The remaining options are used by both commands.
     <tr>
       <th colspan="2">Used by both `generateSW` and `injectManifest`.</th>
     </tr>
+{% include "web/tools/workbox/_shared/config/single/swDest.html" %}
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
