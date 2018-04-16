@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v2 to v3.
 
-{# wf_updated_on: 2018-03-19 #}
+{# wf_updated_on: 2018-04-03 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -66,7 +66,7 @@ than a number of milliseconds.
 - There is now a required string, representing the queue name, that must be passed in as the first
 parameter when constructing either the Plugin or standalone class. (It was previously passed in as a
 property of the options.) Consult the
-[documentation](/web/tools/workbox/reference-docs/prerelease/workbox.backgroundSync) for the updated
+[documentation](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync) for the updated
 API surface.
 
 ### workbox-broadcast-cache-update
@@ -92,7 +92,7 @@ new workbox.broadcastUpdate.Plugin(
 );
 ```
 
-Consult the [documentation](/web/tools/workbox/reference-docs/prerelease/workbox.broadcastUpdate)
+Consult the [documentation](/web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate)
 for the updated API surface.
 
 ### workbox-build
@@ -193,7 +193,7 @@ const {manifestEntries, count, size, warnings} = await workboxBuild.getManifest(
 
 - The plugin API has stayed the same, which is the mode that most developers will end up using.
 However there are significant API changes impacting developers who use it as a standalone class.
-Consult the [documentation](/web/tools/workbox/reference-docs/prerelease/workbox.expiration) for the
+Consult the [documentation](/web/tools/workbox/reference-docs/latest/workbox.expiration) for the
 updated API surface.
 
 ### workbox-cli
@@ -234,7 +234,7 @@ previous, two-in-one functionality can switch to calling `precacheAndRoute()`.
 - Several options which used to be configured via the `WorkboxSW` constructor are now passed in as
 the `options` parameter in `workbox.precaching.precacheAndRoute([...], options)`. The defaults for
 those options, when not configured, are listed in the [reference
-docs](/web/tools/workbox/reference-docs/prerelease/workbox.precaching#.precacheAndRoute).
+docs](/web/tools/workbox/reference-docs/latest/workbox.precaching#.precacheAndRoute).
 
 - By default, URLs that lack any file extension will automatically be checked for a match against a
 cache entry containing a `.html` extension. For instance, if a request is made for `/path/to/index`
@@ -422,8 +422,8 @@ workbox.routing.registerRoute(...);
 
 - `skipWaiting` and `clientsClaim` are no longer options passed to the `WorkboxSW` constructor.
 Instead, they have been changed to the methods
-[`workbox.clientsClaim()`](/web/tools/workbox/reference-docs/prerelease/workbox#.clientsClaim) and
-[`workbox.skipWaiting()`](/web/tools/workbox/reference-docs/prerelease/workbox#.skipWaiting).
+[`workbox.clientsClaim()`](/web/tools/workbox/reference-docs/latest/workbox#.clientsClaim) and
+[`workbox.skipWaiting()`](/web/tools/workbox/reference-docs/latest/workbox#.skipWaiting).
 
 - The `handleFetch` option that was previously supported in the v2 constructor is no longer
 supported in v3. Developers who need similar functionality to test their service worker without any
@@ -438,7 +438,7 @@ option available in Chrome's Developer Tools.
 
 The plugin has been substantially rewritten, and in many cases, can be used in a
 "zero-configuration" mode. Consult the
-[documentation](/web/tools/workbox/reference-docs/prerelease/module-workbox-webpack-plugin) for the
+[documentation](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin) for the
 updated API surface.
 
 - The API now exposes two classes, `GenerateSW` and `InjectManifest`. This makes the toggling

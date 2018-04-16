@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-04-03 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
@@ -37,7 +37,7 @@ workbox.routing.registerRoute(
 ```
 
 With this, the
-[Plugin](/web/tools/workbox/reference-docs/prerelease/workbox.expiration.Plugin)
+[Plugin](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
 will be added to this route. After a cached response is used or a new request
 is added to the cache the plugin will look at the configured cache and ensure
 that the number of cached entries doesn’t exceed the limit. If it does,
@@ -77,7 +77,7 @@ as it doesn’t require an IndexedDB lookup..
 
 If you’d like to use the expiration logic separate from any other Workbox
 modules you can do so with the
-[CacheExpiration](/web/tools/workbox/reference-docs/prerelease/workbox.expiration.CacheExpiration)
+[CacheExpiration](/web/tools/workbox/reference-docs/latest/workbox.expiration.CacheExpiration)
 class.
 
 To apply restrictions to a cache, you’d create an instance of `CacheExpiration`
