@@ -221,8 +221,9 @@ function readMetadataForFile(file) {
   updated = updated.utcOffset(0, true);
   let featured = wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, NO_DATE);
   featured = moment(featured).utcOffset(0, true);
-  let url = file.replace('src/content/en/', '/web/');
+  let url = file.replace(wfRegEx.RE_URLLANG, '/web/');
   url = url.replace('.md', '');
+  let lang = wfRegEx.getMatch(wfRegEx.RE_URLLANG, file);
   let result = {
     filePath: file,
     url: url,
@@ -246,6 +247,8 @@ function readMetadataForFile(file) {
     dateFeaturedMoment: featured,
     dateFeaturedMonth: featured.format('MM'),
     dateFeaturedYear: featured.format('YYYY'),
+
+    lang: lang,
   };
   const authorList = content.match(wfRegEx.RE_AUTHOR_LIST);
   if (authorList) {

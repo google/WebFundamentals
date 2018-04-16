@@ -43,7 +43,7 @@ book_path: /web/resources/_book.yaml
 
 {{#each articles}}
 
-## [{{ title }}]({{url}})
+## [{{ title }}]({{url}}?hl={{lang}})
 {{#if image}}
 <div class="attempt-right">
   <a href="{{url}}">

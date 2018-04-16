@@ -31,6 +31,8 @@ const RE_TITLE_CLASS = /{:\s?\.page-title\s?}/gm;
 const RE_AUTHOR_LIST = /^{%\s?include "web\/_shared\/contributors\/(.*?)\.html"\s?%}\s?\n/gm;
 const RE_AUTHOR_KEY = /\/contributors\/(.*)\.html"/;
 
+const RE_URLLANG = /^src\/content\/(.*?)\//;
+
 const RE_PODCAST = /^{#\s?wf_podcast_audio: (.*?) #}\s?\n/m;
 const RE_PODCAST_DURATION = /^{#\s?wf_podcast_duration: (.*?)\s?#}\s?\n/m;
 const RE_PODCAST_SUBTITLE = /^{#\s?wf_podcast_subtitle: (.*?)\s?#}\s?\n/m;
@@ -116,3 +118,4 @@ exports.RE_INCLUDE_CODE_GITHUB_PATH = RE_INCLUDE_CODE_GITHUB_PATH;
 exports.RE_SINGLE_LINE_COMMENT = RE_SINGLE_LINE_COMMENT;
 exports.RE_AUTO_GENERATED = RE_AUTO_GENERATED;
 exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;
+exports.RE_URLLANG = RE_URLLANG;
