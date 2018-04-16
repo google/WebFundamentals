@@ -18,7 +18,7 @@ Today the API is available in:
 
 * Under the `#webxr` flag in Chrome 66 and later.
 * As an [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 in Chrome 67 and later.
 
 Follow it's progress below:
@@ -38,7 +38,7 @@ Today the WebVR 1.1 API is available in:
 * Firefox Nightly.
 * Samsung Internet for Android and for Gear VR.
 * A Chrome [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 that ran from version 56 beta to June of 2017.
 
 It's supported on:

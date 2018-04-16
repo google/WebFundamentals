@@ -30,7 +30,7 @@ but you can try it out with:
 
 * The `#webxr` flag in Chrome 66 and later.
 * As an [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 in Chrome 67 and later.
 
 
