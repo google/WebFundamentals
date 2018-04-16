@@ -8,7 +8,7 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 
 # WebVR Status and Considerations {: .page-title }
 
-Warning: WebVR is still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 ## WebVR Implementation Status
 

@@ -2,15 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2017-10-18 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Getting Started with WebVR {: .page-title }
 
-Note: This article is written for [WebVR 1.1](../status#version_1_1), not
-[WebVR 2.0](../status#version_2_0), which is still under development. WebVR is
-still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 In this guide we will be exploring the WebVR APIs, and using them to enhance a simple WebGL scene built with [Three.js](https://threejs.org/). For production work, however, you may want to starting with existing solutions, like [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). If you’re totally new to Three.js, you can use this [handy starting guide](https://aerotwist.com/tutorials/getting-started-with-three-js/). The community is also extremely supportive, so if you get stuck, definitely give them a shout.
 

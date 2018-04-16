@@ -2,13 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-10-17 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # WebVR {: .page-title }
 
-Warning: WebVR is still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="jT2mR9WzJ7Y"

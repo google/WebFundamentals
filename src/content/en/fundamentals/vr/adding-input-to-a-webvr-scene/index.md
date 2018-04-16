@@ -2,15 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Discover how to use the Ray Input library to add input to your WebVR scene.
 
-{# wf_updated_on: 2016-10-17 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Adding Input to a WebVR Scene {: .page-title }
 
-Note: This article is written for [WebVR 1.1](../status#version_1_1), not
-[WebVR 2.0](../status#version_2_0), which is still under development. WebVR is
-still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 In the [Getting Started with WebVR section](../getting-started-with-webvr/) we looked at how to take a WebGL scene and add WebVR functionality to it. While that works, and you can look around the scene in VR, there’s so much more fun to be had when you can interact with entities in the scene.
 
