@@ -2,16 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: With Chrome 52, we’re introducing the ability to make storage persistent.  Storage for web applications is a complex topic, and persistence for data on the frequently - ephemeral web doubly so!
 
-{# wf_updated_on: 2016-10-20 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-06-23 #}
 {# wf_tags: chrome52,chrome55,storage,persistentstorage,localstorage,indexeddb,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
+{# wf_blink_components: Blink #}
 
 # Persistent Storage {: .page-title }
 
 {% include "web/_shared/contributors/chriswilson.html" %}
 
-With Chrome 52, we introduced the ability to make storage 
+With Chrome 52, we introduced the ability to make storage
 [persistent](https://storage.spec.whatwg.org/#persistence).  Storage for web
 applications is a complex topic, and persistence for data on the
 frequently-ephemeral web doubly so, so I should explain.
@@ -48,21 +49,21 @@ explicitly:
         else
           alert("Storage may be cleared by the UA under storage pressure.");
       });
-    
 
-This feature was initially still somewhat experimental. So in order to 
-keep from prematurely baking this design in before it was fully specified 
+
+This feature was initially still somewhat experimental. So in order to
+keep from prematurely baking this design in before it was fully specified
 and agreed upon, we initially implemented this feature in Chrome 52 as an
-[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).  To use this API in Chrome 52, you needed to
-[request a token](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin)
+[Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).  To use this API in Chrome 52, you needed to
+[request a token](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin)
 and insert it in your application.
 
-The trial ended in Chrome 55, when we shipped on-by-default support for this 
+The trial ended in Chrome 55, when we shipped on-by-default support for this
 feature.
 
 Initially, the permission was automatically granted to any sites that the user
-has bookmarked, and automatically denied otherwise.  Beginning with Chrome 55, 
-Chrome will automatically grant the persistence permission if any of the 
+has bookmarked, and automatically denied otherwise.  Beginning with Chrome 55,
+Chrome will automatically grant the persistence permission if any of the
 following are true:
 
 - The site is bookmarked (and the user has 5 or less bookmarks)
@@ -70,25 +71,25 @@ following are true:
 - The site has been added to home screen
 - The site has push notifications enabled
 
-The permission is automatically denied in all other cases. The goal is to 
-ensure that users can rely on their favorite web apps and not find they have 
+The permission is automatically denied in all other cases. The goal is to
+ensure that users can rely on their favorite web apps and not find they have
 suddenly been cleared.
 
 You can also use the JavaScript API to tell if persistence has been granted
 already:
 
 
-    if (navigator.storage && navigator.storage.persist) 
+    if (navigator.storage && navigator.storage.persist)
       navigator.storage.persisted().then(persistent=>{
         if (persistent)
           console.log("Storage will not be cleared except by explicit user action");
         else
           console.log("Storage may be cleared by the UA under storage pressure.");
       });
-    
 
-You probably want to request permission, but then use the `.persisted` API to 
-decide whether to display offline UI (like enabling a checkbox for "make 
+
+You probably want to request permission, but then use the `.persisted` API to
+decide whether to display offline UI (like enabling a checkbox for "make
 available offline"), confirming to the user they can be confident it will be
 available offline (even under storage pressure).  This will give a graceful
 degradation if the user won’t get an offline experience.

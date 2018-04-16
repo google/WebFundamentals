@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Third-party services can start deploying their own network request handlers.
 
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-09-12 #}
 {# wf_tags: chrome54,origintrials,serviceworker,cors,fetch #}
 {# wf_featured_image: /web/updates/images/2016/09/foreign-fetch/show-all-service-workers.png #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Cross-origin Service Workers: Experimenting with Foreign Fetch {: .page-title }
 
@@ -34,11 +35,11 @@ Imagine, for instance, that you're an analytics provider. By deploying a foreign
 
 ### Origin Trial token
 
-Foreign fetch is still considered experimental. In order to keep from [prematurely](https://infrequently.org/2015/08/doing-science-on-the-web/) baking this design in before it’s fully specified and agreed upon by browser vendors, it's been implemented in Chrome 54 as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md). As long as foreign fetch remains experimental, to use this new feature with the service you host, you’ll need to [request a token](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin) that's scoped to your service's specific origin. The token should be included as an HTTP response header in all cross-origin requests for resources that you want to handle via foreign fetch, as well as in the response for your service worker JavaScript resource:
+Foreign fetch is still considered experimental. In order to keep from [prematurely](https://infrequently.org/2015/08/doing-science-on-the-web/) baking this design in before it’s fully specified and agreed upon by browser vendors, it's been implemented in Chrome 54 as an [Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md). As long as foreign fetch remains experimental, to use this new feature with the service you host, you’ll need to [request a token](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin) that's scoped to your service's specific origin. The token should be included as an HTTP response header in all cross-origin requests for resources that you want to handle via foreign fetch, as well as in the response for your service worker JavaScript resource:
 
 
     Origin-Trial: token_obtained_from_signup
-    
+
 
 The trial will end in March 2017. By that point, we expect to have figured out any changes necessary to stabilize the feature, and (hopefully) enable it by default. If foreign fetch is not enabled by default by that time, the functionality tied to existing Origin Trial tokens will stop working.
 
@@ -61,7 +62,7 @@ The first challenge that you're likely to bump into is how to register your serv
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
     }
-    
+
 
 This JavaScript code for a first-party service worker registration makes sense in the context of a web app, triggered by a user navigating to a URL you control. But it's not a viable approach to registering a third-party service worker, when the only interaction browser will have with your server is requesting a specific subresource, not a full navigation. If the browser requests, say, an image from a CDN server that you maintain, you can't prepend that snippet of JavaScript to your response and expect that it will be run. A different method of service worker registration, outside the normal JavaScript execution context, is required.
 
@@ -69,7 +70,7 @@ The solution comes in the form of an [HTTP header](https://w3c.github.io/Service
 
 
     Link: </service-worker.js>; rel="serviceworker"; scope="/"
-    
+
 
 Let's break down that example header into its components, each of which is separated by a `;` character.
 
@@ -79,12 +80,12 @@ Let's break down that example header into its components, each of which is separ
 
 Just like with a "traditional" service worker registration, using the <code>Link</code> header will install a service worker that will be used for the <em>next</em> request made against the registered scope. The body of the response that includes the special header will be used as-is, and is available to the page immediately, without waiting for the foreign service worker to finish installation.
 
-Remember that foreign fetch is currently implemented as an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md), so alongside your Link response header, you'll need to include a valid `Origin-Trial` header as well. The minimum set of response headers to add in order to register your foreign fetch service worker is
+Remember that foreign fetch is currently implemented as an [Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), so alongside your Link response header, you'll need to include a valid `Origin-Trial` header as well. The minimum set of response headers to add in order to register your foreign fetch service worker is
 
 
     Link: </service-worker.js>; rel="serviceworker"
     Origin-Trial: token_obtained_from_signup
-    
+
 
 **Note:** Astute readers of the service worker specification may have [noticed](https://w3c.github.io/ServiceWorker/spec/service_worker/index.html#example-00a7acb9) another means of performing service worker registration, via a `<link rel="serviceworker">` DOM element. Support for `<link>`-based registration in Chrome is currently controlled by the same Origin Trial as the `Link` header, so it is not yet enabled by default. `<link>`-based registration has the same limitations as JavaScript-based registration when it comes to foreign fetch registration, so for the purposes of this article, the `Link` header is what you should be using.
 
@@ -117,7 +118,7 @@ Beyond normal `install` event caching activities, there's an additional step tha
         origins: ['*'] // or ['https://example.com']
       });
     });
-    
+
 
 There are two configuration options, both required:
 
@@ -150,13 +151,13 @@ In a traditional, first-party service worker, each request would trigger a [`fet
         })
       );
     });
-    
+
 
 Despite the conceptual similarities, there are a few differences in practice when calling `respondWith()` on a `ForeignFetchEvent`. Instead of just providing a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) (or [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with a <code>Response</code>) to <code>respondWith()</code>, like you [do with a `FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith), you need to pass a <code>Promise</code> that resolves with an Object with specific properties to the <code>ForeignFetchEvent</code>'s <code>respondWith()</code>:
 
 *   `response` is required, and must be set to the `Response` object that will be returned to the client that made the request. If you provide anything other than a valid `Response`, the client's request will be terminated with a network error. Unlike when calling [`respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) inside a <code>fetch</code> event handler, you <strong>must</strong> provide a <code>Response</code> here, not a <code>Promise</code> which resolves with a <code>Response</code>! You can construct your response via a promise chain, and pass that chain as the parameter to <code>foreignfetch</code>'s <code>respondWith()</code>, but the chain must resolve with an Object that contains the <code>response</code> property set to a <code>Response</code> object. You can see a demonstration of this in the code sample above.
 *   <code>origin</code> is optional, and it's used to determine whether or not the response that's returned is [opaque](http://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses). If you leave this out, the response will be opaque, and the client will have limited access to the response's body and headers. If the request was made with [`mode: 'cors'`](https://fetch.spec.whatwg.org/#concept-request-mode), then returning an opaque response will be treated as an error. However, if you specify a string value equal to the origin of the remote client (which can be obtained via <code>event.origin</code>), you're explicitly opting in to provides a CORS-enabled response to the client.
-*   <code>headers</code> is also optional, and is only useful if you're also specifying <code>origin</code> and returning a CORS response. By default, only headers in the [CORS-safelisted response header list](https://fetch.spec.whatwg.org/#cors-safelisted-response-header-name) will be included in your response. If you need to further filter what's returned, headers takes a list of one or more header names, and it will use that as a whitelist of which headers to expose in the response. This allows you to opt-in to CORS while still preventing potentially sensitive response headers from being exposed directly to the remote client. 
+*   <code>headers</code> is also optional, and is only useful if you're also specifying <code>origin</code> and returning a CORS response. By default, only headers in the [CORS-safelisted response header list](https://fetch.spec.whatwg.org/#cors-safelisted-response-header-name) will be included in your response. If you need to further filter what's returned, headers takes a list of one or more header names, and it will use that as a whitelist of which headers to expose in the response. This allows you to opt-in to CORS while still preventing potentially sensitive response headers from being exposed directly to the remote client.
 
 It's important to note that when the <code>foreignfetch</code> handler is run, <strong>it has access to all the credentials and [ambient authority](https://tools.ietf.org/html/rfc6454#section-8.3) of the origin hosting the service worker</strong>. As a developer deploying a foreign fetch-enabled service worker, it's your responsibility to ensure that you do not leak any privileged response data that would not otherwise be available by virtue of those credentials. Requiring an opt-in for CORS responses is one step to limit inadvertent exposure, but as a developer you can explicitly make <code>fetch()</code> requests inside your <code>foreignfetch</code> handler that [do not use the implied credentials](https://fetch.spec.whatwg.org/#concept-request-credentials-mode) via:
 
@@ -171,7 +172,7 @@ It's important to note that when the <code>foreignfetch</code> handler is run, <
           .then(response => ({response}))
       );
     });
-    
+
 
 ## Client considerations
 
@@ -192,7 +193,7 @@ Inside a first-party service worker, using `fetch()` to retrieve cross-origin re
       // scope, this will trigger your foreignfetch handler.
       event.respondWith(fetch(event.request));
     });
-    
+
 
 Similarly, if there are first-party fetch handlers, but they don't call `event.respondWith()` when handling requests for your cross-origin resource, the request will automatically "fall through" to your `foreignfetch` handler:
 
@@ -202,12 +203,12 @@ Similarly, if there are first-party fetch handlers, but they don't call `event.r
       if (event.request.mode === 'same-origin') {
         event.respondWith(localRequestLogic(event.request));
       }
-    
+
       // Since event.respondWith() isn't called for cross-origin requests,
       // any foreignfetch handlers scoped to the request will get a chance
       // to provide a response.
     });
-    
+
 
 If a first-party `fetch` handler calls `event.respondWith()` but does *not* use `fetch()` to request a resource under your foreign fetch scope, then your foreign fetch service worker will not get a chance to handle the request.
 

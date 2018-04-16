@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2018-04-11 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
@@ -59,7 +59,7 @@ Chrome 61.
 
 In order to get as much feedback as possible from developers using the WebUSB
 API in the field, we've previously added this feature in Chrome 54 and Chrome
-57 as an [origin trial](https://github.com/jpchase/OriginTrials).
+57 as an [origin trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 
 The latest trial has successfully ended in September 2017.
 
@@ -174,7 +174,7 @@ your Arduino device as shown below.
         console.log(device.manufacturerName); // "Arduino LLC"
       });
     })
-    
+
 ### Talk to an Arduino USB board
 
 Okay, now let's see how easy it is to communicate from a WebUSB compatible
@@ -186,7 +186,7 @@ Don't worry, I'll cover all the WebUSB device methods mentioned below later in
 this article.
 
     var device;
-    
+
     navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
     .then(selectedDevice => {
        device = selectedDevice;
@@ -217,11 +217,11 @@ And here's the sketch that has been uploaded to the Arduino board.
 
     // Third-party WebUSB Arduino library
     #include <WebUSB.h>
-    
+
     WebUSB WebUSBSerial(1 /* https:// */, "webusb.github.io/arduino/demos");
-    
+
     #define Serial WebUSBSerial
-    
+
     void setup() {
       Serial.begin(9600);
       while (!Serial) {
@@ -230,7 +230,7 @@ And here's the sketch that has been uploaded to the Arduino board.
       Serial.write("WebUSB FTW!");
       Serial.flush();
     }
-    
+
     void loop() {
       // Nothing here for now.
     }

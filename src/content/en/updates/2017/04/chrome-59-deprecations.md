@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 59 to help you plan.
 
 {# wf_blink_components: Blink>WebVR,Blink>FileAPI,Blink>MediaStream>*,Blink>SVG,Blink>DOM #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2017-05-01 #}
 {# wf_tags: deprecations,removals,chrome59 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -21,7 +21,7 @@ which is in beta as of April 27. This list is subject to change at any time.
 ### Temporarily disable navigator.sendBeacon() for some blobs
 
 The `navigator.sendBeacon()` function has been available
-[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608). 
+[since Chrome 39](https://www.chromestatus.com/feature/5517433905348608).
 As originally implemented, the function's `data` argument could contain any
 arbitrary blob whose type is not CORS-safelisted. We believe this is a potential
 security threat, though no one has yet tried to exploit it. Because we do NOT
@@ -38,7 +38,7 @@ back to Chrome 59.
 The current implementation of WebVR, originally implemented in Chrome 52,
 contained several methods and properties that will not be in the final spec.
 Deprecation messages were added for these features for the
-[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md)
+[Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 that started in Chrome 56. These features and are now being removed. They include:
 
 - `VRDisplay.getPose()`
