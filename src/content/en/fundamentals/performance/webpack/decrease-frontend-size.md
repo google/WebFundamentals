@@ -396,7 +396,7 @@ Warning: Don’t accidentally compile ES modules into CommonJS ones. <br><br>
 If you use Babel with `babel-preset-env` or `babel-preset-es2015`, check the settings of these
 presets. By default, they transpile ES’ `import` and `export` to CommonJS’ `require` and
 `module.exports`. [Pass the `{ modules: false }`
-option](https://github.com/babel/babel/tree/master/experimental/babel-preset-env) to disable this.
+option](https://github.com/babel/babel/tree/master/packages/babel-preset-env) to disable this.
 <br><br>The same with TypeScript: remember to set `{ "compilerOptions": { "module": "es2015" } }`
 in your `tsconfig.json`.
 
