@@ -46,6 +46,9 @@ It's supported on:
  * Daydream View since M56
  * Google Cardboard since M57
 
+It's also available through the [WebXR
+Polyfill](https://github.com/immersive-web/webxr-polyfill).
+
 <iframe width="100%" height="320"
   src="https://www.chromestatus.com/feature/4532810371039232?embed"
   style="border: 1px solid #CCC" allowfullscreen>
