@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Everyone loves animated GIFs. The only problem is that they can be massive, often weighing in at several megabytes. In this guide, you'll learn how to curb the bloat caused by animated GIFs by replacing them with MPEG-4 and WebM video sources!
 
-{# wf_updated_on: 2018-04-13 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2018-04-17 #}
 {# wf_tags: html5,video,gif,images #}
 {# wf_blink_components: Blink>Image,Blink>HTML #}
@@ -353,3 +353,16 @@ performance is more important than ever, yet many performance improvement
 strategies require a significant investment of time, transitioning your GIFs to
 video is a proportionally small effort when compared to the massive improvement
 it can have on loading performance.
+
+## Further Reading
+
+We aren't the first to advocate for using videos instead of GIFs, and we won't
+be the last. For case studies or other perspectives on this topic, check out the
+following articles:
+
+- [Imgur Revamps GIFs for Faster Speeds and Higher Quality with
+GIFV](https://lifehacker.com/imgur-revamps-gifs-for-faster-speeds-and-higher-quality-1644494212)
+- [Introducing GIFV](https://blog.imgur.com/2014/10/09/introducing-gifv/)
+- [GIF Revolution](https://telegram.org/blog/gif-revolution)
+- [Those GIFs on Twitter Aren't Actually
+GIFs](https://mashable.com/2014/06/20/twitter-gifs-mp4/#Mtz26DX1BZqG)
