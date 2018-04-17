@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2018-02-26 #}
 {# wf_tags: chrome66,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -15,8 +15,6 @@ description: Blackboxing in the Network panel, auto-adjust zooming in Device Mod
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: The video version of these release notes will be published around mid-April 2018.
-
 New features and major changes coming to DevTools in Chrome 66 include:
 
 * [Blackboxing in the **Network** panel](#blackboxing)
@@ -28,6 +26,14 @@ New features and major changes coming to DevTools in Chrome 66 include:
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
 may have changed. Chrome auto-updates to a new major version about every 6 weeks.
+
+Read on, or watch the video version of the release notes below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="eaYXFTJVewA"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Blackboxing in the Network panel {: #blackboxing }
 
