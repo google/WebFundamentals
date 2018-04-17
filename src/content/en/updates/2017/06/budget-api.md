@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_blink_components: Blink>PushAPI #}
@@ -14,7 +14,7 @@ The Push Messaging API enables us to send notifications to a user even when the
 browser is closed. Many developers want to be able to use this messaging to
 update and synchronize content without the browser being open, but the API has
 one important restriction: you must always display a notification for every
-single push message recieved.
+single push message received.
 
 Being able to send a push message to synchronize data on a user's device or hide
 a notification you had previously shown can be extremely useful for users and
