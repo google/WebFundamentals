@@ -3,10 +3,11 @@ book_path: /web/updates/_book.yaml
 description: Is your native app already installed? getInstalledRelatedApps is your friend.
 
 {# wf_published_on: 2017-04-28 #}
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_tags: progressive-web-apps,chrome59 #}
 {# wf_featured_snippet: Is your native app already installed? getInstalledRelatedApps is your friend. #}
+{# wf_blink_components: Mobile>WebAPKs #}
 
 # Detect if your Native app is installed from your web site {: .page-title }
 
@@ -27,12 +28,12 @@ the web as well.
 In Chrome 59 we are introducing a new API called `getInstalledRelatedApps()`.
 This new API lets you determine if your native app is installed on a device.
 
-Note: This API is behind an [Origin 
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/explainer.md), 
-this means that we are in an experimental mode and are actively looking for 
-feedback. You have to [opt your 
-site](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) 
-into this trial because it is not available broadly on the web. You can now 
+Note: This API is behind an [Origin
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md),
+this means that we are in an experimental mode and are actively looking for
+feedback. You have to [opt your
+site](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+into this trial because it is not available broadly on the web. You can now
 [sign up for the trial](https://goo.gl/xxjW3L).
 
 This is an incredibly powerful API because it gives you access to information
@@ -234,14 +235,14 @@ is installed. Please note that this is experimental.
 
 ### Not Working?
 
-File a bug [right here against the Chrome 
+File a bug [right here against the Chrome
 implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink&blocking=587623&cc=mgiuca%40chromium.org,owencm%40chromium.org).
 The correct people will be notified (I've sneakily put this in, so I am sure
 they will be grateful).
 
 We are keen to keep getting [feedback on the
 spec](https://github.com/WICG/get-installed-related-apps/) and if you have any
-issues or suggestions, [file an issue against the 
+issues or suggestions, [file an issue against the
 spec](https://github.com/WICG/get-installed-related-apps/issues)
 
 {% include "comment-widget.html" %}

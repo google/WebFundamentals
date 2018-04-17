@@ -3,10 +3,11 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 55 for developers? Async and Await, Pointer Events and Persistent Storage.
 
 {# wf_published_on: 2016-11-30 #}
-{# wf_updated_on: 2016-11-30 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,new-in-chrome,pointerevents,async,await,persistentstorage #}
 {# wf_featured_snippet: With Chrome 55, you can write promise-based code as if it were synchronous, using <code>async</code> and <code>await</code>. <b>PointerEvents</b> provide a unified way of handling all input events. And <b>persistent storage</b> graduates from it’s origin trial. #}
+{# wf_blink_components: Blink #}
 
 # New In Chrome 55 {: .page-title }
 
@@ -30,15 +31,15 @@ description: What's new in Chrome 55 for developers? Async and Await, Pointer Ev
 
 And there’s plenty more.
 
-I’m Pete LePage, here’s what’s new for developers in Chrome 55! 
+I’m Pete LePage, here’s what’s new for developers in Chrome 55!
 
 ## Pointer Events {: #pointer-events }
 
 Pointing at things on the web used to be simple. You had a mouse, you moved
 it around, sometimes you pushed buttons, and that was it. But this, doesn’t
-work so well on here. 
+work so well on here.
 
-Touch events are good, but to support 
+Touch events are good, but to support
 [touch](https://www.w3.org/TR/touch-events/) and
 [mouse](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent), you had
 to support two event models:
@@ -47,7 +48,7 @@ to support two event models:
     elem.addEventListener('touchmove', touchMoveEvent);
 
 Chrome now enables unified input handling by dispatching
-[PointerEvents](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent): 
+[PointerEvents](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent):
 
     elem.addEventListener('pointermove', pointerMoveEvent);
 
@@ -94,7 +95,7 @@ Re-writing it with `promises` helps avoid the nesting problem:
     }
 
 But, Promise-based code can still be difficult to read when there are long
-chains of asynchronous dependencies. 
+chains of asynchronous dependencies.
 
 Chrome now supports the `async` and `await` JavaScript keywords, allowing you
 to write Promise-based JavaScript that can be as structured and
@@ -112,7 +113,7 @@ Instead, our asynchronous function can be simplified to this:
       }
     }
 
-Jake has a great post: 
+Jake has a great post:
 [Async Functions - making promises friendly](/web/fundamentals/getting-started/primers/async-functions)
 with all the details.
 
@@ -143,14 +144,14 @@ post for full details and how you can request persistent storage for your site.
 
 [CSS automatic hyphenation](/web/updates/2016/10/css-hyphens), one of Chrome’s
 most frequently requested [layout features](https://googlechrome.github.io/samples/css-hyphens/)
-is now supported on Android and Mac. 
+is now supported on Android and Mac.
 
 ## Web Share API
 
 And finally, it’s now easier to invoke native sharing capabilities with the
 new [Web Share API](https://github.com/mgiuca/web-share/blob/master/docs/interface.md),
 which is available as an
-[origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+[origin trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 Paul (Mr. Web Intents) Kinlan has all the details in his
 [Navigator Share](/web/updates/2016/10/navigator-share) post.
 
@@ -159,7 +160,7 @@ Paul (Mr. Web Intents) Kinlan has all the details in his
 These are just a few of the changes in Chrome 55 for developers.  
 
 If you want to stay up to date with Chrome and know what’s coming, be sure to
-[subscribe](https://goo.gl/6FP1a5), and be sure to check out the 
+[subscribe](https://goo.gl/6FP1a5), and be sure to check out the
 [videos from the Chrome Dev Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj)
 for a deeper dive into some of the awesome things the Chrome team is working on.
 
@@ -167,7 +168,7 @@ I’m Pete LePage, and as soon as Chrome 56 is released, I’ll be right here
 to tell you what’s new in Chrome!
 
 ## Subscribe to Chrome Developers on YouTube {: .hide-from-toc }
-Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our 
+Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our
 [RSS feed](/web/shows/rss.xml)
 
 <link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="/web/shows/rss.xml">
