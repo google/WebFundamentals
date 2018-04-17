@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: TODO
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2018-04-10 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -18,12 +18,12 @@ description: TODO
 </aside>
 
 <aside class="caution">
-  <b>Prerequisites</b>: You should have a basic of understanding of how:
+  <b>Prerequisites</b>: You should have a basic of understanding of:
   <ul>
-    <li>To use HTML, CSS, and JavaScript to build a web page.</li>
-    <li>To open DevTools and make basic changes to CSS.</li>
+    <li>How to use HTML, CSS, and JavaScript to build a web page.</li>
+    <li>How to open DevTools and make basic changes to CSS.</li>
     <li>
-      Navigating to a URL eventually results in a web page getting displayed in the
+      How navigating to a URL eventually results in a web page getting displayed in the
       browser.
     </li>
   </ul>
@@ -39,13 +39,13 @@ be saved to the local source code on your desktop.
 
 ## Unsupported frameworks {: #limitations }
 
-If you're using any of the following frameworks:
+In general, Workspaces doesn't work with any framework that automatically reloads a live preview
+of a page when you make a change to its source code. Create React App is one notable example.
+But, if you're feeling adventurous, please give it a try anyways and [let us know whether it
+worked][WF]{:.external}. If you got it working but had to make adjustments, please describe what
+you had to change. We'll update this doc to include your research and give you credit for the work.
 
-* React
-
-You should stop here because, unfortunately, **Workspaces** doesn't work with these frameworks.
-See [Appendix: Why Workspaces don't work with all frameworks](#appendix) for an explanation of
-the problem.
+[WF]: https://github.com/google/webfundamentals/issues/new
 
 ## Related feature: Local Overrides {: #overrides }
 
@@ -54,7 +54,7 @@ Overrides** when... TODO
 
 [LO]: /web/updates/2018/01/devtools#overrides
 
-## Step 1: Set up Workspaces {: #set-up }
+## Step 1: Set up {: #set-up }
 
 ### Set up the demo {: #demo }
 
@@ -63,8 +63,7 @@ Overrides** when... TODO
 1. Click the randomly-generated project name. For example, in **Figure X** you would click
    `TODO`.
 1. Select **Advanced Options** > **Download Project**.
-1  Unzip the source code and move the unzipped directory on your desktop. The name of the
-   unzipped directory is `app`.
+1. Unzip the source code and move the unzipped `app` directory to your desktop.
 1. Back in the editor, click **Show**. The live demo opens in a new tab.
 1. Close the editor tab, if you want. You won't be using it in this tutorial.
 
@@ -96,18 +95,44 @@ network resources of the page, and the files on your desktop.
 1. Open the local copy of `styles.css` in your `app` directory. The `color` property is now
    set to your favorite color.
 
-## Appendix: Why Workspaces doesn't work with all frameworks {: #appendix }
+## Step X: Save an HTML change to disk {: #html }
 
-1. Most frameworks use build tools like Gulp and Webpack to transform code from a structure that
-   is easy for developers to maintain to a structure that is efficient for consumption on the web.
-   For example, frameworks often minify files to remove unnecessary white space or comments,
-   resulting in less bytes sent over the network, which means faster load times.
-2. When DevTools saves a change, it saves it to the code that was packaged for the web, which is
-   often different from the code that the developers authored.
-3. Therefore, DevTools needs a way to map the published code to the developer's code. This is
-   done via [source maps][maps]{:.external}.
-4. The issue is that source maps are not a formal specification, so each framework does it
-   differently. DevTools simply can't support all of the variations in source maps between
-   frameworks.
+### Try changing HTML from the Elements panel {: #elements }
 
-[maps]: https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/
+The workflow that you're about to try doesn't work. You're learning it now, so that you don't
+spend hours later trying to figure out why DevTools isn't working as you expect it to.
+
+1. Click the **Elements** tab.
+1. Double click the text content of the `h1` element, which says `Workspaces Demo`, and replace
+   it with `New Title`.
+1. Open the local copy of `index.html` on your desktop. The change that you just made isn't there.
+1. Reload the page. The page reverts to its original title.
+
+#### Optional: Why changes in the DOM Tree of the Elements panel aren't saved {: #why }
+
+Note: This section describes why the workflow in the last section doesn't work. You can skip it
+if this information isn't important to you.
+
+This workflow doesn't work because the tree of nodes that you see on the **Elements** panel
+represents the page's [DOM][DOM]{:.external}. To display a page, a browser fetches HTML over
+the network, parses the HTML, and then converts it into a tree of DOM nodes. If the page has
+any JavaScript, that JavaScript may add, delete, or change DOM nodes. The browser eventually uses
+the DOM to determine what content it should present to browser users. So, the final state of the
+page that users see may be very different from the HTML that the browser fetched. This makes
+it difficult for DevTools to resolve where a change made in the **Elements** panel should be
+saved, because the DOM is affected by both HTML and JavaScript.
+
+[DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+### Change HTML from the Sources panel {: #sources }
+
+If you want to save a change to the page's HTML, do it via the **Sources** panel.
+
+## Step 3: Save a JavaScript change to disk {: #js }
+
+1. Click the **Sources** tab.
+1. Click the **Page** tab.
+1. Click **script.js**. The file opens.
+1. Add the following code to the bottom of **script.js**:
+
+       document.querySelector('a').style = 'font-style:italic';
