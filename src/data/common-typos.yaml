@@ -440,6 +440,9 @@
 - typo: publically
   fix: publicly
 
+- typo: recieve(d|)
+  fix: receive(d|)
+
 - typo: recomend(ation|ations|s|ing|)
   fix: recommend$1
 
