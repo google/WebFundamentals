@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 65 for developers?
 
 {# wf_published_on: 2018-04-17 #}
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-04-18 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome66,new-in-chrome,cssom #}
 {# wf_featured_snippet: Chrome 66 makes CSS manipulation easier with the new CSS Typed Model Object, access to the clipboard is now asynchronous, and there’s a new rendering context for canvas elements. Let’s dive in and see what’s new for developers in Chrome 66! #}
@@ -144,7 +144,7 @@ Check out Jason’s post and demos in the
 He’s also got examples use `async` functions.
 
 
-## CSS Paint API {: #css-paint-api }
+##  New Canvas Context `BitmapRenderer` {: #css-paint-api }
 
 The `canvas` element lets you manipulate graphics at the pixel level, you
 can draw graphs, manipulate photos, or even do real time video processing.
@@ -172,7 +172,7 @@ duplication.
 To use it:
 
 1. Call `createImageBitmap` and hand it an image blob, to create the image.
-2. Grab the `bitmapprerenderer` context from the `canvas`.
+2. Grab the `bitmaprenderer` context from the `canvas`.
 3. Then transfer the image in.
 
 ```javascript
