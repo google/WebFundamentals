@@ -51,6 +51,9 @@ toc:
         - title: Automating Image Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
           step_group: perf-oce
+        - title: Replace Animated GIFs with Video
+          path: /web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video
+          step_group: perf-oce
         - title: JavaScript Start-up Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
           step_group: perf-oce
