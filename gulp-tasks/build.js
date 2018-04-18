@@ -230,7 +230,7 @@ gulp.task('build:http203Podcast', function() {
     baseUrl: 'https://developers.google.com/web/shows/http203/podcast/',
   };
   let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
-  files.sort(wfHelper.updatedComparator);
+  files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
@@ -258,7 +258,7 @@ gulp.task('build:DVDPodcast', function() {
     baseUrl: baseUrl,
   };
   let files = wfHelper.getFileList(baseOutputPath, ['*.md', '!index.md']);
-  files.sort(wfHelper.updatedComparator);
+  files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateListPage(files, options);
   wfTemplateHelper.generatePodcastFeed(files, options);
 });
