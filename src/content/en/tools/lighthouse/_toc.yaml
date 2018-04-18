@@ -1,8 +1,12 @@
 toc:
 - title: Overview
   path: /web/tools/lighthouse/
-- title: Scoring Guide
-  path: /web/tools/lighthouse/scoring
+- title: Scoring Guides
+  section:
+  - title: Lighthouse v2 Scoring Guide
+    path: /web/tools/lighthouse/scoring
+  - title: Lighthouse v3 Scoring Guide
+    path: /web/tools/lighthouse/v3/scoring
 - heading: Audit References
 - title: Performance
   section:
