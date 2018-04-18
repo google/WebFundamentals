@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2018-04-13 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -783,7 +783,7 @@ elements**.
 
 Note: Only Chrome 67 supports customized built-in elements 
 ([status](https://www.chromestatus.com/feature/4670146924773376))
-right now. Edge and Firefox will implment it, but Safari
+right now. Edge and Firefox will implement it, but Safari
 has chosen not to implement it. This is unfortunate for accessibility and
 progressive enhancement. If you think extending native HTML elements is 
 useful, voice your thoughts on 
