@@ -186,7 +186,7 @@ Done, I’ve rendered the image!
 ## AudioWorklet {: #audio-worklet }
 
 Worklets are in! PaintWorklet shipped in Chrome 65, and now we’re enabling
-[AudioWorklet](https://developers.google.com/web/updates/2017/12/audio-worklet)
+[AudioWorklet](/web/updates/2017/12/audio-worklet)
 by default in Chrome 66. This new type of Worklet can be used to process
 audio in the dedicated audio thread, replacing the legacy ScriptProcessorNode
 which ran on the main thread.  Each AudioWorklet runs in its own global scope,
