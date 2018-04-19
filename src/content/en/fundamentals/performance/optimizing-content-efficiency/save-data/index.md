@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
+project_path: /web/fundamentals/_project.yaml
+book_path: /web/fundamentals/_book.yaml
 description: The Save-Data client hint request header available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to 'data saving' mode in the browser.
 
-{# wf_updated_on: 2018-04-10 #}
+{# wf_updated_on: 2018-04-19 #}
 {# wf_published_on: 2016-02-18 #}
 {# wf_tags: savedata,clienthints,chrome49 #}
 {# wf_blink_components: Blink>Fonts,Blink>CSS,Blink>JavaScript #}
