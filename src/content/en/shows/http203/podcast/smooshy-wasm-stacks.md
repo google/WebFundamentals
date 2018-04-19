@@ -28,7 +28,7 @@ In this episode:
 * [Tinder for bananas](https://tinderforbananas.com/).
 * Screen readers on phones.
 * [Fixing HTML headings and sections](https://github.com/whatwg/html/pull/3499).
-* [Porting image codecs to WASM](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library).
+* [Porting image codecs to WASM](/web/updates/2018/03/emscripting-a-c-library).
 
 <a href="http://feeds.feedburner.com/Http203Podcast">
   <span class="material-icons">rss_feed</span>
