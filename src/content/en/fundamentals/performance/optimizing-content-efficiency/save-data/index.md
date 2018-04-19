@@ -401,5 +401,3 @@ our content to improve the user experience for data- and cost-constrained users.
 
 For more detail on `Save-Data` and excellent practical examples, see [Help Your
 Users `Save Data`](https://css-tricks.com/help-users-save-data/).
-
-{% include "comment-widget.html" %}
