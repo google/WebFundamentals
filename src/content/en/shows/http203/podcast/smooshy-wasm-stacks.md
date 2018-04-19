@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Also quizzes, privilege, and screen readers.
 
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-04-19 #}
 {# wf_published_on: 2018-04-17 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-16.mp3 #}
 {# wf_podcast_duration: 00:52:43 #}
@@ -20,7 +20,7 @@ In this episode:
 * Memory vs imagination.
 * Desperate attempts to create work-life balance.
 * Jake narrowly avoids being arrested for terrorism.
-* [Smoosh! The real story behind the MooTools mess.](https://developers.google.com/web/updates/2018/03/smooshgate)
+* [Smoosh! The real story behind the MooTools mess.](/web/updates/2018/03/smooshgate)
 * Conversations in conversations in conversations.
 * [`document.all` is falsey](https://stackoverflow.com/a/10394873/123395).
 * Ugh it's range requests again.
