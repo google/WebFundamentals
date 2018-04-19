@@ -144,7 +144,7 @@ Check out Jason’s post and demos in the
 He’s also got examples that use `async` functions.
 
 
-## CSS Paint API {: #css-paint-api }
+##  New Canvas Context `BitmapRenderer` {: #css-paint-api }
 
 The `canvas` element lets you manipulate graphics at the pixel level, you
 can draw graphs, manipulate photos, or even do real time video processing.
@@ -172,7 +172,7 @@ duplication.
 To use it:
 
 1. Call `createImageBitmap` and hand it an image blob, to create the image.
-2. Grab the `bitmapprerenderer` context from the `canvas`.
+2. Grab the `bitmaprenderer` context from the `canvas`.
 3. Then transfer the image in.
 
 ```javascript
