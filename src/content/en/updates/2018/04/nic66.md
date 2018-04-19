@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: What's new in Chrome 65 for developers?
+description: What's new in Chrome 66 for developers?
 
 {# wf_published_on: 2018-04-17 #}
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-04-18 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome66,new-in-chrome,cssom #}
-{# wf_featured_snippet: Chrome 66 makes CSS manipulation easier with the new CSS Typed Model Object, access to the clipboard is now asynchronous, and there’s a new rendering context for canvas elements. Let’s dive in and see what’s new for developers in Chrome 66! #}
+{# wf_featured_snippet: Chrome 66 makes CSS manipulation easier with the new CSS Typed Model Object, access to the clipboard is now asynchronous, there’s a new rendering context for canvas elements, and a better way to process Audio using JavaScript. Let’s dive in and see what’s new for developers in Chrome 66! #}
 {# wf_blink_components: N/A #}
 
 # New in Chrome 66 {: .page-title }
@@ -141,7 +141,7 @@ navigator.clipboard.getText()
 
 Check out Jason’s post and demos in the
 [explainer](/web/updates/2018/03/clipboardapi).
-He’s also got examples use `async` functions.
+He’s also got examples that use `async` functions.
 
 
 ## CSS Paint API {: #css-paint-api }
@@ -182,6 +182,18 @@ context.transferFromImageBitmap(image);
 ```
 
 Done, I’ve rendered the image!
+
+## AudioWorklet {: #audio-worklet }
+
+Worklets are in! PaintWorklet shipped in Chrome 65, and now we’re enabling
+[AudioWorklet](/web/updates/2017/12/audio-worklet)
+by default in Chrome 66. This new type of Worklet can be used to process
+audio in the dedicated audio thread, replacing the legacy ScriptProcessorNode
+which ran on the main thread.  Each AudioWorklet runs in its own global scope,
+reducing latency and increasing throughput stability.
+
+There are some interesting examples of AudioWorklet over on
+[Google Chrome Labs](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/).
 
 ## And more! {: #more }
 
