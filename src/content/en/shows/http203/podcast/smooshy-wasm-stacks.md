@@ -20,7 +20,7 @@ In this episode:
 * Memory vs imagination.
 * Desperate attempts to create work-life balance.
 * Jake narrowly avoids being arrested for terrorism.
-* Smoosh! The real story behind the MooTools mess.
+* [Smoosh! The real story behind the MooTools mess.](https://developers.google.com/web/updates/2018/03/smooshgate)
 * Conversations in conversations in conversations.
 * [`document.all` is falsey](https://stackoverflow.com/a/10394873/123395).
 * Ugh it's range requests again.
