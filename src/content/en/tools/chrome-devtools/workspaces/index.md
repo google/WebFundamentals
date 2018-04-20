@@ -50,7 +50,7 @@ on your computer. For example, suppose:
   site's CSS.
 
 With Workspaces enabled, the CSS changes that you make within DevTools are saved to the
-source code on your desktop. Does that make sense?
+source code on your desktop. Does this all make sense?
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
@@ -123,8 +123,9 @@ code.
 
 ### Set up the demo {: #demo }
 
-1. [Open the demo](https://glitch.com/edit/#!/remix/workspaces){:.external}. In the top-left
-   of the editor, there is a randomly-generated project name.
+1. <a href="https://glitch.com/edit/#!/remix/workspaces" class="external gc-analytics-event"
+   data-category="DevTools" data-label="Workspaces / Opened Demo" data-value="1">Open the
+   demo</a>. In the top-left of the editor, there is a randomly-generated project name.
 
      <figure>
        <img src="imgs/glitch.png"
@@ -411,9 +412,46 @@ question on Stack Overflow][SO]{:.external}.
 
 ## Feedback {: #feedback }
 
-Hello, this is [Kayce][Kayce]{:.external}, the technical writer for DevTools. I wrote this
+Hello, this is [Kayce][Kayce]{:.external}. I wrote this
 tutorial. I hope you enjoyed your cake. Please take a moment to provide feedback.
 I really do pay attention to the data, and it helps me create better tutorials for
 you.
 
 [Kayce]: https://twitter.com/kaycebasques
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Workspaces / Helpful';
+var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
+      label + ']';
+var no = `Sorry to hear that. Please <a href="${url}" target="_blank" rel="noopener">open a
+  GitHub issue</a> and tell me how I can make it better.`;
+var feedback = {
+  category: "DevTools",
+  question: "Was this tutorial helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: "Great! Thanks for the feedback.",
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: no,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
