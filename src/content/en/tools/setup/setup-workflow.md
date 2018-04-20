@@ -4,6 +4,7 @@ description: Set up persistent authoring in Chrome DevTools so you can both see 
 
 {# wf_updated_on: 2018-04-20 #}
 {# wf_published_on: 2015-07-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Set Up Persistence with DevTools Workspaces {: .page-title }
 
