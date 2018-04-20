@@ -21,8 +21,6 @@ description: TODO
   same files on disk.
 </aside>
 
-{% setvar server "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server" %}
-
 <aside class="caution">
   <b>Prerequisites</b>: Before beginning this tutorial, you should know how to:
   <ul>
@@ -35,7 +33,8 @@ description: TODO
       to CSS</a>.
     </li>
     <li>
-      <a href="{{server}}" class="external">Run a local HTTP web server</a>. For example, you
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server"
+         class="external">Run a local HTTP web server</a>. For example, you
       should be familiar with a command like <code>python -m SimpleHTTPServer 8080</code>.
     </li>
   </ul>
