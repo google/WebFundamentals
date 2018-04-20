@@ -113,6 +113,8 @@ toc:
     path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
   - title: Use the Allocation Profiler
     path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+- title: Save Changes To Disk With Workspaces
+  path: /web/tools/chrome-devtools/workspaces/
 - title: Debug Progressive Web Apps
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Analyze Security Problems
