@@ -19,7 +19,7 @@ def parse(requestPath, fileLocation, content, lang='en'):
   ## Get the HTML tag
   htmlTag = re.search(r'<html.*?>', content)
   if htmlTag is None:
-    log.warning('Does not contain <html> root element')
+    logging.warning('Does not contain <html> root element')
   else:
     htmlTag = htmlTag.group(0)
     # Check the HTML tag contains the devsite
