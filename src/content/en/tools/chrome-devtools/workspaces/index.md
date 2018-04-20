@@ -1,24 +1,24 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: Learn how to save changes made within DevTools to disk.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-04-19 #}
+{# wf_updated_on: 2018-04-20 #}
 {# wf_published_on: 2018-04-10 #}
 
-{# put links that are used multiple times here #}
-[WF]: https://github.com/google/webfundamentals/issues/new
+{# Links #}
 
-{% include "web/tools/chrome-devtools/_shared/styles.html" %}
+[ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
+[SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools 
 
 # Save Changes To Disk With Workspaces {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 <aside class="objective">
-  <b>Goal</b>: This tutorial teaches you how to set up and use the Workspaces feature in Chrome
-  DevTools so that you can save changes that you make within DevTools to local copies of the
-  same files on disk.
+  <b>Goal</b>: This tutorial provides hands-on practice in setting up and using Workspaces so
+  that you can use Workspaces in your own projects. Workspaces enable you to save changes that
+  you make within DevTools to source code that's stored on your computer.
 </aside>
 
 <aside class="caution">
@@ -34,13 +34,14 @@ description: TODO
     </li>
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server"
-         class="external">Run a local HTTP web server</a>. For example, you
-      should be familiar with a command like <code>python -m SimpleHTTPServer 8080</code>.
+         class="external">Run a local HTTP web server</a>.
     </li>
   </ul>
 </aside>
 
-Workspaces enable you to save changes that you make in Devtools to a local copy of the same files
+## Overview {: #overview }
+
+Workspaces enable you to save a change that you make in Devtools to a local copy of the same file
 on your computer. For example, suppose:
 
 * You have the source code for your site on your desktop.
@@ -50,70 +51,30 @@ on your computer. For example, suppose:
   site's CSS.
 
 With Workspaces enabled, the CSS changes that you make within DevTools are saved to the
-source code on your desktop. Does this all make sense?
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Workspaces / Concept Makes Sense';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var no = `Sorry to hear that. Please <a href="${url}" target="_blank" rel="noopener">open a
-  GitHub issue</a> and tell me what's confusing.`;
-var feedback = {
-  category: "DevTools",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: "Great!",
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: no,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
-Here's the recommended path for using this doc:
-
-1. Read the [Unsupported frameworks](#limitations) section to make sure that Workspaces will work
-   in your development environment.
-1. Read the [Related feature: Local Overrides](#overrides) section. Local Overrides may be a
-   better option for you, depending on your needs.
-1. After you're sure that Workspaces is right for you, head to [Step 1: Setup](#setup) to
-   get hands-on practice setting up Workspaces on a demo site. If you complete the tutorial,
-   there may be a cake prize at the end.
+source code on your desktop.
 
 ## Limitations {: #limitations }
 
-Warning: If the description below applies to your development environment, Workspaces probably
-won't work for you.
+If you're using a modern framework, it probably transforms your source code from a format
+that's easy for you to maintain into a format that's optimized to run as quickly as possible.
+Workspaces is usually able to map the optimized code back to your original source code with
+the help of [source maps][maps]{:.external}. But there's a lot of variation between frameworks
+over how they use source maps. Devtools simply can't support all the variations.
 
-In general, Workspaces doesn't work with any framework that automatically reloads a live preview
-of a page when you make a change to its source code. Create React App is a notable example.
-But, if you're feeling adventurous, please give it a try anyways and [let us know whether it
-worked][WF]{:.external}. If you got it working but had to make adjustments, please describe what
-you had to change. We'll update this doc to include your research and give you credit for the work.
+Workspaces is known to not work with these frameworks:
 
+* Create React App
+
+[maps]: http://blog.teamtreehouse.com/introduction-source-maps
+
+If you run into issues, or you get it working after some configuration, please [start a thread
+in the mailing list][ML]{:.external} or [ask a question on Stack Overflow][SO]{:.external} to
+share your knowledge with the rest of the DevTools community.
 
 ## Related feature: Local Overrides {: #overrides }
 
-[Local Overrides][LO] is another DevTools feature that is similar to Workspaces. Use **Local
-Overrides** when you want to experiment with changes to a page, and you need to see those
+[Local Overrides][LO] is another DevTools feature that is similar to Workspaces. Use Local
+Overrides when you want to experiment with changes to a page, and you need to see those
 changes across page loads, but you don't care about mapping your changes to the page's source
 code.
 
@@ -121,36 +82,39 @@ code.
 
 ## Step 1: Setup {: #setup }
 
+Complete this tutorial to get hands-on experience with Workspaces.
+
 ### Set up the demo {: #demo }
 
 1. <a href="https://glitch.com/edit/#!/remix/workspaces" class="external gc-analytics-event"
    data-category="DevTools" data-label="Workspaces / Opened Demo" data-value="1">Open the
-   demo</a>. In the top-left of the editor, there is a randomly-generated project name.
+   demo</a>. In the top-left of the editor, there's a randomly-generated project name.
 
      <figure>
        <img src="imgs/glitch.png"
             alt="A Glitch project with a randomly-generated name."/>
        <figcaption>
-         <b>Figure X</b>. A Glitch project with a randomly-generated name
+         <b>Figure 1</b>. A Glitch project with a randomly-generated name
        </figcaption>
      </figure>
 
-1. Click the randomly-generated project name. For example, in **Figure X** you would click
-   `TODO`.
+1. Click the randomly-generated project name. For example, in **Figure 1** you would click
+   **desert-cycle**.
 1. Select **Advanced Options** > **Download Project**.
 
      <figure>
        <img src="imgs/download.png"
             alt="The Download Project button."/>
        <figcaption>
-         <b>Figure X</b>. The <b>Download Project</b> button, highlighted in blue
+         <b>Figure 2</b>. The <b>Download Project</b> button, highlighted in blue
        </figcaption>
      </figure>
 
 1. Close the tab.
-1. Unzip the source code and move the unzipped `app` directory to your desktop.
-1. Start a local web server in the `app` directory. Below is some sample code for starting
-   up `SimpleHTTPServer`, but you can use whatever you prefer.
+1. Unzip the source code and move the unzipped `app` directory to your desktop. For the rest
+   of this tutorial this directory will be referred to as `~/Desktop/app`.
+1. Start a local web server in `~/Desktop/app`. Below is some sample code for starting
+   up `SimpleHTTPServer`, but you can use whatever server you prefer.
 
     <pre class="prettyprint">
     <code class="devsite-terminal">cd ~/Desktop/app</code>
@@ -165,7 +129,7 @@ code.
        <img src="imgs/demo.png"
             alt="The demo."/>
        <figcaption>
-         <b>Figure X</b>. The demo
+         <b>Figure 3</b>. The demo
        </figcaption>
      </figure>
 
@@ -181,7 +145,7 @@ code.
        <img src="imgs/console.png"
             alt="The Console panel."/>
        <figcaption>
-         <b>Figure X</b>. The <b>Console</b> panel
+         <b>Figure 4</b>. The <b>Console</b> panel
        </figcaption>
      </figure>
 
@@ -192,16 +156,16 @@ code.
        <img src="imgs/filesystem.png"
             alt="The Filesystem tab."/>
        <figcaption>
-         <b>Figure X</b>. The <b>Filesystem</b> tab
+         <b>Figure 5</b>. The <b>Filesystem</b> tab
        </figcaption>
      </figure>
 
 1. Click **Add Folder To Workspace**.
-1. Select `~/Desktop/app`, which means the `app` directory on your desktop.
+1. Select `~/Desktop/app`.
 1. Click **Allow** to give DevTools permission to read and write to the directory.
    In the **Filesystem** tab, there is now a green dot next to `index.html`, `script.js`, and
    `styles.css`. These green dots mean that DevTools has established a mapping between the
-   network resources of the page, and the files on your desktop.
+   network resources of the page, and the files in `~/Desktop/app`.
 
 
      <figure>
@@ -209,7 +173,7 @@ code.
             alt="The Filesystem tab now shows a mapping between the local files and the network
                  ones."/>
        <figcaption>
-         <b>Figure X</b>. The <b>Filesystem</b> tab now shows a mapping between the local files
+         <b>Figure 6</b>. The <b>Filesystem</b> tab now shows a mapping between the local files
          and the network ones
        </figcaption>
      </figure>
@@ -223,7 +187,7 @@ code.
        <img src="imgs/fuchsia.png"
             alt="Viewing styles.css in a text editor."/>
        <figcaption>
-         <b>Figure X</b>. Viewing <code>styles.css</code> in a text editor
+         <b>Figure 7</b>. Viewing <code>styles.css</code> in a text editor
        </figcaption>
      </figure>
 
@@ -232,13 +196,13 @@ code.
 1. Change the value of the `color` property of the `<h1>` element to your favorite color.
    Remember that you need to click the `<h1>` element in the **DOM Tree** in order to see the
    CSS rules applied to it in the **Styles** pane. The green dot next to `styles.css:1` means
-   that any change you make will get mapped to the copy of `styles.css` that's on your desktop.
+   that any change you make will get mapped to `~/Desktop/app/styles.css`.
 
      <figure>
        <img src="imgs/green.png"
             alt="Setting the color property of the h1 element to green."/>
        <figcaption>
-         <b>Figure X</b>. Setting the <code>color</code> property of the <code>h1</code> element
+         <b>Figure 8</b>. Setting the <code>color</code> property of the <code>h1</code> element
          to <code>green</code>
        </figcaption>
      </figure>
@@ -249,7 +213,7 @@ code.
    works because when you made the change, DevTools saved the change to disk. And then, when you
    reloaded the page, your local server served the modified copy of the file from disk.
 
-## Step X: Save an HTML change to disk {: #html }
+## Step 3: Save an HTML change to disk {: #html }
 
 ### Try changing HTML from the Elements panel {: #elements }
 
@@ -264,7 +228,7 @@ you don't waste time later trying to figure out why it's not working.
        <img src="imgs/cake.png"
             alt="Attempting to change HTML from the DOM Tree of the Elements panel"/>
        <figcaption>
-         <b>Figure X</b>. Attempting to change HTML from the <b>DOM Tree</b> of the <b>Elements</b>
+         <b>Figure 9</b>. Attempting to change HTML from the <b>DOM Tree</b> of the <b>Elements</b>
          panel
        </figcaption>
      </figure>
@@ -303,7 +267,7 @@ If you want to save a change to the page's HTML, do it via the **Sources** panel
 1. Click the **Sources** tab.
 1. Click the **Page** tab.
 1. Click **(index)**. The HTML for the page opens.
-1. Replace `<h1>Workspaces Demo</h1>` with `<h1>I ❤️  Cake</h1>`. See <b>Figure X</b>.
+1. Replace `<h1>Workspaces Demo</h1>` with `<h1>I ❤️  Cake</h1>`. See <b>Figure 11</b>.
 1. Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux, Chrome OS) to save the change.
 1. Reload the page. The `<h1>` element is still displaying the new text.
@@ -312,13 +276,13 @@ If you want to save a change to the page's HTML, do it via the **Sources** panel
        <img src="imgs/cakehtml.png"
             alt="Changing HTML from the Sources panel."/>
        <figcaption>
-         <b>Figure X</b>. Line 12 has been set to <code>I ❤️  Cake</code>
+         <b>Figure 11</b>. Line 12 has been set to <code>I ❤️  Cake</code>
        </figcaption>
      </figure>
 
 1. Open `~/Desktop/app/index.html`. The `<h1>` element contains the new text.
 
-## Step 3: Save a JavaScript change to disk {: #js }
+## Step 4: Save a JavaScript change to disk {: #js }
 
 The **Sources** panel is also the place to make changes to JavaScript. But sometimes you need
 to access other panels, such as the **Elements** panel or the **Console** panel, while making
@@ -328,32 +292,30 @@ changes to your site. There's a way to have the **Sources** panel open alongside
 1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS). The **Command
    Menu** opens.
-1. Type `QS`, then select **Show Quick Sources**.
+1. Type `QS`, then select **Show Quick Source**.
 
      <figure>
        <img src="imgs/commandmenu.png"
             alt="Opening the Quick Source tab via Command Menu."/>
        <figcaption>
-         <b>Figure X</b>. Opening the <b>Quick Source</b> tab via the <b>Command Menu</b>
+         <b>Figure 12</b>. Opening the <b>Quick Source</b> tab via the <b>Command Menu</b>
        </figcaption>
      </figure>
 
 1. Press <kbd>Command</kbd>+<kbd>P</kbd> (Mac) or <kbd>Control</kbd>+<kbd>P</kbd> (Windows, Linux,
    Chrome OS) to open the **Open File** dialog.
-1. Type `script`, then select **app/script.js**. The network copy of the file opens. The other
-   copy that you see is the local copy on your desktop. In other words, what your seeing
-   is the file that your local web server sent back when the browser requested `script.js`.
+1. Type `script`, then select **app/script.js**.
 
      <figure>
        <img src="imgs/open.png"
             alt="Opening script.js via the Open File dialog."/>
        <figcaption>
-         <b>Figure X</b>. Opening <code>script.js</code> via the <b>Open File</b> dialog
+         <b>Figure 13</b>. Opening <code>script.js</code> via the <b>Open File</b> dialog
        </figcaption>
      </figure>
 
 1. Notice the `Save Changes To Disk With Workspaces` link in the demo. It's styled regularly.
-1. Add the following code to the bottom of **script.js** via the **Quick Sources** tab.
+1. Add the following code to the bottom of **script.js** via the **Quick Source** tab.
 
     <pre class="prettyprint">
     console.log('greetings from script.js');
@@ -368,14 +330,14 @@ changes to your site. There's a way to have the **Sources** panel open alongside
        <img src="imgs/italic.png"
             alt="The link on the page is now italic."/>
        <figcaption>
-         <b>Figure X</b>. The link on the page is now italic
+         <b>Figure 14</b>. The link on the page is now italic
        </figcaption>
      </figure>
 
 ## Next steps {: #next-steps }
 
 Congratulations, you have completed the tutorial. Click the button below to receive your
-cake prize.
+prize.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <style>
@@ -390,7 +352,7 @@ var feedback = {
   "choices": [
     {
       "button": {
-        "text": "Dispense Cake"
+        "text": "Dispense Prize"
       },
       "response": "🍰",
       "analytics": {
@@ -404,11 +366,9 @@ var feedback = {
 {% endframebox %}
 
 Use what you have learned in this tutorial to set up Workspaces in your own project. If you run
-into any issues, please [start a thread in the mailing list][ML]{:.external} or [ask a
-question on Stack Overflow][SO]{:.external}.
-
-[ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
-[SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools 
+into any issues or are able to get it working after some custom configuration, please [start a
+thread in the mailing list][ML]{:.external} or [ask a question on Stack Overflow][SO]{:.external}
+to share your knowledge with the rest of the DevTools community.
 
 ## Feedback {: #feedback }
 
@@ -445,6 +405,41 @@ var feedback = {
         text: "No"
       },
       response: no,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Workspaces / Have Used Before';
+var response = "Thanks for the feedback. This helps me understand what type of user is " +
+  "visiting the doc.";
+var feedback = {
+  category: "DevTools",
+  question: "Have you used Workspaces before?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
       analytics: {
         label: label,
         value: 0
