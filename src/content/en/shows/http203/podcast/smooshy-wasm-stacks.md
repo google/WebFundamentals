@@ -20,7 +20,7 @@ In this episode:
 * Memory vs imagination.
 * Desperate attempts to create work-life balance.
 * Jake narrowly avoids being arrested for terrorism.
-* [Smoosh! The real story behind the MooTools mess.](/web/updates/2018/03/smooshgate)
+* [Smoosh! The real story behind the MooTools mess](/web/updates/2018/03/smooshgate).
 * Conversations in conversations in conversations.
 * [`document.all` is falsey](https://stackoverflow.com/a/10394873/123395).
 * Ugh it's range requests again.
@@ -28,7 +28,7 @@ In this episode:
 * [Tinder for bananas](https://tinderforbananas.com/).
 * Screen readers on phones.
 * [Fixing HTML headings and sections](https://github.com/whatwg/html/pull/3499).
-* Porting image codecs to WASM.
+* [Porting image codecs to WASM](/web/updates/2018/03/emscripting-a-c-library).
 
 <a href="http://feeds.feedburner.com/Http203Podcast">
   <span class="material-icons">rss_feed</span>
