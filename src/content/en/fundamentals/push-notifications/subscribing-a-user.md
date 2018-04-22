@@ -18,7 +18,7 @@ through the logic flow.
 
 ## Feature Detection
 
-First we need check if the current browser actually supports push messaging. We can check if
+First we need to check if the current browser actually supports push messaging. We can check if
 push is supported with two simple checks.
 
 1. Check for *serviceWorker* on *navigator*.
