@@ -67,9 +67,10 @@ Workspaces is known to not work with these frameworks:
 
 [maps]: http://blog.teamtreehouse.com/introduction-source-maps
 
-If you run into issues, or you get it working after some configuration, please [start a thread
-in the mailing list][ML]{:.external} or [ask a question on Stack Overflow][SO]{:.external} to
-share your knowledge with the rest of the DevTools community.
+If you run into issues while using Workspaces with your framework of choice, or you get it working
+after some custom configuration, please [start a thread in the mailing list][ML]{:.external} or
+[ask a question on Stack Overflow][SO]{:.external} to share your knowledge with the rest of the
+DevTools community.
 
 ## Related feature: Local Overrides {: #overrides }
 
@@ -292,7 +293,10 @@ changes to your site. There's a way to have the **Sources** panel open alongside
 1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS). The **Command
    Menu** opens.
-1. Type `QS`, then select **Show Quick Source**.
+1. Type `QS`, then select **Show Quick Source**. At the bottom of your DevTools window there is
+   now a **Quick Source** tab. The tab is displaying the contents of `index.html`, which is the
+   last file you edited in the **Sources** panel. The **Quick Source** tab gives you the editor
+   from the **Sources** panel, so that you can edit files while having other panels open.
 
      <figure>
        <img src="imgs/commandmenu.png"
@@ -303,7 +307,7 @@ changes to your site. There's a way to have the **Sources** panel open alongside
      </figure>
 
 1. Press <kbd>Command</kbd>+<kbd>P</kbd> (Mac) or <kbd>Control</kbd>+<kbd>P</kbd> (Windows, Linux,
-   Chrome OS) to open the **Open File** dialog.
+   Chrome OS) to open the **Open File** dialog. See **Figure 13**.
 1. Type `script`, then select **app/script.js**.
 
      <figure>
@@ -375,7 +379,9 @@ to share your knowledge with the rest of the DevTools community.
 Hello, this is [Kayce][Kayce]{:.external}. I wrote this
 tutorial. I hope you enjoyed your cake. Please take a moment to provide feedback.
 I really do pay attention to the data, and it helps me create better tutorials for
-you.
+you. If you'd like to give me more feedback on these topics, or anything else
+related to DevTools, please send me a message using any of the community channels
+listed at the bottom of this section.
 
 [Kayce]: https://twitter.com/kaycebasques
 
@@ -405,6 +411,74 @@ var feedback = {
         text: "No"
       },
       response: no,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Workspaces / Confusing';
+var response = "Got it. If most people say it's too long, I'll edit it down.";
+var feedback = {
+  category: "DevTools",
+  question: "Did you have trouble completing any part of the tutorial?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = 'Workspaces / Too Long';
+var response = "Got it. If most people say it's too long, I'll edit it down.";
+var feedback = {
+  category: "DevTools",
+  question: "Was the tutorial too long?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
       analytics: {
         label: label,
         value: 0
@@ -449,3 +523,9 @@ var feedback = {
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
+
+If you'd like to give more feedback on these topics or anything else, please use any of the
+channels below:
+
+* [Mailing List][ML]{:.external}
+* [Twitter](https://twitter.com/chromedevtools){:.external}
