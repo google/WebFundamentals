@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-03-11 #}
+{# wf_updated_on: 2018-04-23 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -318,6 +318,7 @@ to an `<img>` element to specify an array of images the browser can choose from.
 On the more complex side of things, you can use `<picture>` to help the browser
 choose the most optimal format (e.g., WebP over JPEG or PNG), or serve
 altogether different treatments of images for different screen sizes.
+- [Use video instead of animated GIFs](/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/). Animated GIFs are _massive_, but videos of similar quality are _far_ smaller, often by 80% or so. If your site makes heavy use of animated GIFs, this is probably the most impactful thing you can do to improve loading performance.
 - [Client hints](http://httpwg.org/http-extensions/client-hints.html) can be used
 to tailor resource delivery based on current network conditions and device
 characteristics. The `DPR`, `Width` and `Viewport-Width` headers can help you
