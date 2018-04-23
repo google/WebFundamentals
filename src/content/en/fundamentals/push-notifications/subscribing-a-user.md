@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-04-23 #}
 {# wf_published_on: 2016-06-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # Subscribing a User {: .page-title }
 
@@ -23,17 +24,17 @@ push is supported with two simple checks.
 
 1. Check for *serviceWorker* on *navigator*.
 1. Check for *PushManager* on *window*.
+```
+if (!('serviceWorker' in navigator)) {
+  // Service Worker isn't supported on this browser, disable or hide UI.
+  return;
+}
 
-    if (!('serviceWorker' in navigator)) {
-      // Service Worker isn't supported on this browser, disable or hide UI.
-      return;
-    }
-
-    if (!('PushManager' in window)) {
-      // Push isn't supported on this browser, disable or hide UI.
-      return;
-    }
-
+if (!('PushManager' in window)) {
+  // Push isn't supported on this browser, disable or hide UI.
+  return;
+}
+```
 While browser support is growing quickly for both service worker and
 push messaging support, it's always a good idea to feature detect for both and
 [progressively enhance](https://en.wikipedia.org/wiki/Progressive_enhancement).
