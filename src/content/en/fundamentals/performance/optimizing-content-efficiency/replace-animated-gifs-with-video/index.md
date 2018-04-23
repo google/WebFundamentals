@@ -287,8 +287,8 @@ GIF | 2,668 ms
 MPEG-4 | 1,994 ms
 WebM | 2,330 ms
 
-These figures were gathered in Chrome's tracing utility
-(record your own Chrome traces at `chrome://tracing`) over a period of ~6.5 seconds for each format. As
+These figures were gathered in Chrome's tracing utility (record your own Chrome
+traces at `chrome://tracing`) over a period of ~6.5 seconds for each format. As
 you can see, GIF takes the most CPU time, and less CPU time occurs for both
 videos, particularly MPEG-4. This is good stuff! It means that videos generally
 use less CPU time than animated GIF, which is a welcome performance enhancement
