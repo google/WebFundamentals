@@ -318,7 +318,11 @@ to an `<img>` element to specify an array of images the browser can choose from.
 On the more complex side of things, you can use `<picture>` to help the browser
 choose the most optimal format (e.g., WebP over JPEG or PNG), or serve
 altogether different treatments of images for different screen sizes.
-- [Use video instead of animated GIFs](/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/). Animated GIFs are _massive_, but videos of similar quality are _far_ smaller, often by 80% or so. If your site makes heavy use of animated GIFs, this is probably the most impactful thing you can do to improve loading performance.
+- [Use video instead of animated
+GIFs](/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/).
+Animated GIFs are _massive_, but videos of similar quality are _far_ smaller,
+often by 80% or so. If your site makes heavy use of animated GIFs, this is
+probably the most impactful thing you can do to improve loading performance.
 - [Client hints](http://httpwg.org/http-extensions/client-hints.html) can be used
 to tailor resource delivery based on current network conditions and device
 characteristics. The `DPR`, `Width` and `Viewport-Width` headers can help you
