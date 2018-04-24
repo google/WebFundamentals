@@ -4,6 +4,7 @@ description: Use the Application panel to inspect, modify, and debug web app man
 
 {# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2016-07-25 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Debug Progressive Web Apps {: .page-title }
 

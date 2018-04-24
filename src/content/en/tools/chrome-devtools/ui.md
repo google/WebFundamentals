@@ -4,6 +4,7 @@ description: A reference on how to access and use common parts of the DevTools U
 
 {# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2017-01-25 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 .devtools-inline {

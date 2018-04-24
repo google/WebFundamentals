@@ -4,6 +4,7 @@ description: Learn how to use Chrome DevTools to view and change a page's CSS.
 
 {# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2017-06-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Get Started With Viewing And Changing CSS {: .page-title }
 

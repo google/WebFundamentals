@@ -4,6 +4,7 @@ description: Snippets are small scripts that you can author and execute within t
 
 {# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2015-10-12 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Run Snippets Of Code From Any Page {: .page-title }
 
