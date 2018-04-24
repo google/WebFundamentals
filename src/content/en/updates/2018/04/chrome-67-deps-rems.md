@@ -17,9 +17,16 @@ description: A round up of the deprecations and removals in Chrome 67 to help yo
 
 ## Deprecate HTTP-Based Public Key Pinning
 
-HTTP-Based Public Key Pinning (HPKP) was intended to allow websites to send an HTTP header that pins one or more of the public keys present in the site's certificate chain. It has very low adoption, and although it provides security against certificate mis-issuance, it also creates risks of denial of service and hostile pinning. 
+HTTP-Based Public Key Pinning (HPKP) was intended to allow websites to send an
+HTTP header that pins one or more of the public keys present in the site's
+certificate chain. It has very low adoption, and although it provides security
+against certificate mis-issuance, it also creates risks of denial of service and
+hostile pinning.
 
-To defend against certificate misissuance, web developers should use the Expect-CT header, including its reporting function. Expect-CT is safer than HPKP due to the flexibility it gives site operators to recover from any configuration errors, and due to the built-in support offered by a number of CAs.
+To defend against certificate misissuance, web developers should use the
+Expect-CT header, including its reporting function. Expect-CT is safer than HPKP
+due to the flexibility it gives site operators to recover from any configuration
+errors, and due to the built-in support offered by a number of CAs.
 
 We expect to remove this in Chrome 69.
 
