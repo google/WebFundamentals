@@ -37,15 +37,10 @@ We expect to remove this in Chrome 69.
 
 ## Remove AppCache from Non-secure Contexts
 
-AppCache is a powerful feature that allows offline and persistent access to an
-origin. Allowing AppCache to be used over non-secure contexts makes it an attack
-vector for cross-site scripting hacks.
-
-Per https://w3c.github.io/webappsec-secure-contexts/, we are deprecating and
-then removing AppCache from insecure contexts. AppCache is a powerful feature
-that allows offline and persistent access to an origin, which is a powerful
-privilege escalation for an XSS. This will remove that attack vector by only
-allowing it over HTTPS.
+AppCache will now only be allowed over HTTPS. AppCache is a powerful feature
+that allows offline and persistent access to an origin. Allowing AppCache to be
+used over non-secure contexts makes it an attack vector for cross-site scripting
+hacks. 
 
 Firefox is also
 [planning to remove](https://groups.google.com/forum/#!msg/mozilla.dev.platform/qLTTpdzcDkw/WKJeq-4HAQAJ)
