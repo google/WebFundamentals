@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version,
 
-{# wf_updated_on: 2018-04-20 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2018-04-26 #}
 {# wf_tags: deprecations,removals,chrome67 #}
 {# wf_blink_components: Blink #}
@@ -14,26 +14,6 @@ description: A round up of the deprecations and removals in Chrome 67 to help yo
 # Deprecations and removals in Chrome 67 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
-
-## Heading
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker]() &#124;
-[Chromium Bug]()
-
-## Change how New Formatting Contexts are Sized and Positioned off a Shape Area
-
-The shape-outside property allows web developers to wrap text around a float
-with a non-rectangular area. In our implementation this also currently affects
-how new formatting contexts are sized and positioned.
-
-We want to change how they are sized and positioned, similar to how floats are
-positioned (based off the bounding area instead).
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pfDg-VAeKWs/discussion)
-&#124;
-[ChromeStatus](https://www.chromestatus.com/feature/5226946044624896) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=820520)
 
 ## Deprecate HTTP-Based Public Key Pinning
 
