@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2016-07-25 #}
 
 # Debug Progressive Web Apps {: .page-title }
@@ -199,3 +199,7 @@ Related Guides:
 * [Inspect page resources](/web/tools/chrome-devtools/iterate/manage-data/page-resources)
 * [Inspect and manage local storage and
   caches](/web/tools/chrome-devtools/iterate/manage-data/local-storage)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

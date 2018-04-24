@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to view and change a page's CSS.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2017-06-08 #}
 
 # Get Started With Viewing And Changing CSS {: .page-title }
@@ -252,3 +252,7 @@ before doing this one.
     <b>Figure 7</b>. Changing the element's left-margin
   </figcaption>
 </figure>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

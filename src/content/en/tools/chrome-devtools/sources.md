@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-01-09 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -159,3 +159,7 @@ your file system. Essentially, this lets you use DevTools as your code editor.
 See [Set Up Persistence With DevTools Workspaces][WS] to get started.
 
 [WS]: /web/tools/setup/setup-workflow
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

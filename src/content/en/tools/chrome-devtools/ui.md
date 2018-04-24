@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on how to access and use common parts of the DevTools UI, and change the UI's appearance.
 
-{# wf_updated_on: 2017-01-25 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2017-01-25 #}
 
 <style>
@@ -164,3 +164,7 @@ The next time you open DevTools, there's a new page called **Experiments**
 in [Settings](#settings).
 
 [experiments]: chrome://flags/#enable-devtools-experiments
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
