@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-03-22 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -71,6 +71,10 @@ events per origin:
 From that, Chrome calculates a media engagement score which is highest on sites
 where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
+
+Note: You can enable MEI by [running Chrome with] the
+`MediaEngagementBypassAutoplayPolicies` and `PreloadMediaEngagementData`
+switches.
 
 User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
@@ -236,6 +240,7 @@ thoughts.
 [feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
+[running Chrome with]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
