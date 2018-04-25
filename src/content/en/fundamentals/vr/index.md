@@ -2,13 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-10-17 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # WebVR {: .page-title }
 
-Warning: WebVR is still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="jT2mR9WzJ7Y"
@@ -24,20 +24,22 @@ and Pixel phone — to create fully immersive 3D experiences in your browser.
 
 ## Support and Availability
 
-Today the WebVR 2.0 API is
+Today the WebXR Device API is
 [under development](https://www.chromestatus.com/features/5680169905815552),
-but you can try out the WebVR 1.1 API in:
+but you can try it out with:
 
-* Chrome Beta (M56+), via an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-* Firefox Nightly.
-* Samsung Internet for Android and for Gear VR.
+* The `#webxr` flag in Chrome 66 and later.
+* As an [Origin
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+in Chrome 67 and later.
 
-For browsers that don’t support WebVR, or perhaps have older versions of the
-APIs, you can fall back to the [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill).
-Bear in mind, however, that VR is *extremely performance-sensitive* and
+
+It's also available through the [WebXR
+Polyfill](https://github.com/immersive-web/webxr-polyfill).
+Bear in mind, that VR is *extremely performance-sensitive* and
 polyfills typically have a relatively large performance cost, so it may be worth
 considering whether or not you wish to use the polyfill for a user who doesn’t
-have native support for WebVR.
+have native support for the WebXR Device API.
 
 When in doubt, avoid giving people motion sickness through poorly-performing
 experiences!
