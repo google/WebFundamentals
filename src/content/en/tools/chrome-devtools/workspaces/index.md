@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Learn how to save changes made within DevTools to disk.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-04-23 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2018-04-10 #}
 
 {# Links #}
@@ -385,42 +385,7 @@ listed at the bottom of this section.
 
 [Kayce]: https://twitter.com/kaycebasques
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Workspaces / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var no = 'Sorry to hear that. Please <a href="' + url + '" target="_blank" rel="noopener">open a' +
-  'GitHub issue</a> and tell me how I can make the tutorial better.';
-var feedback = {
-  category: "DevTools",
-  question: "Was this tutorial helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: "Great! Thanks for the feedback.",
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: no,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>

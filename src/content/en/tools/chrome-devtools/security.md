@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Security Panel to ensure that all resources on your  site are protected with HTTPS.
 
-{# wf_updated_on: 2016-03-09 #}
+{# wf_updated_on: 2018-04-24 #}
 {# wf_published_on: 2015-12-21 #}
 {# wf_blink_components: Security #}
 
@@ -83,3 +83,7 @@ served over HTTP.
 [mixed-content]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [same-origin-policy]: https://en.wikipedia.org/wiki/Same-origin_policy
 [why-https]: /web/fundamentals/security/encrypt-in-transit/why-https
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
