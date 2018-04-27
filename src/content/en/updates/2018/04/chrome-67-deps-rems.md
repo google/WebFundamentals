@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 67 to help yo
 {# wf_updated_on: 2018-04-27 #}
 {# wf_published_on: 2018-04-27 #}
 {# wf_tags: deprecations,removals,chrome67 #}
-{# wf_blink_components: Blink,Blink>Layout,Security, #}
+{# wf_blink_components: Blink,Blink>Layout,Blink>SecurityFeature, #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals.   #}
 
