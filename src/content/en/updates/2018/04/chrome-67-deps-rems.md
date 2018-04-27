@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version,
+description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals. 
 
-{# wf_updated_on: 2018-04-24 #}
-{# wf_published_on: 2018-04-26 #}
+{# wf_updated_on: 2018-04-27 #}
+{# wf_published_on: 2018-04-27 #}
 {# wf_tags: deprecations,removals,chrome67 #}
-{# wf_blink_components: Blink #}
+{# wf_blink_components: Blink,Blink>Layout,Security, #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version,   #}
+{# wf_featured_snippet: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals.   #}
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
@@ -24,9 +24,9 @@ against certificate mis-issuance, it also creates risks of denial of service and
 hostile pinning.
 
 To defend against certificate misissuance, web developers should use the
-Expect-CT header, including its reporting function. Expect-CT is safer than HPKP
-due to the flexibility it gives site operators to recover from any configuration
-errors, and due to the built-in support offered by a number of CAs.
+`Expect-CT` header, including its reporting function. `Expect-CT` is safer than HPKP
+due to the flexibility it gives site operators to recover from configuration
+errors, and due to the built-in support offered by a number of certificate authorities.
 
 We expect to remove this in Chrome 69.
 
@@ -37,7 +37,7 @@ We expect to remove this in Chrome 69.
 
 ## Remove AppCache from Non-secure Contexts
 
-AppCache will now only be allowed over HTTPS. AppCache is a powerful feature
+AppCache is now only allowed over HTTPS. AppCache is a powerful feature
 that allows offline and persistent access to an origin. Allowing AppCache to be
 used over non-secure contexts makes it an attack vector for cross-site scripting
 hacks. 
