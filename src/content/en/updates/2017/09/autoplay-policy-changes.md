@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-04-25 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -140,8 +140,8 @@ policies for use cases such as kiosks or unattended systems. Check out the
 autoplay related enterprise policies:
 
 - The ["AutoplayAllowed"] policy controls whether autoplay is allowed or not.
-- The ["AutoplayWhitelist"] policy controls the whitelist of URL patterns that
-  autoplay will always be enabled on.
+- The ["AutoplayWhitelist"] policy allows you to specify a whitelist of URL
+  patterns where autoplay will always be enabled.
 
 ## Best practices for web developers {: #best-practices }
 
