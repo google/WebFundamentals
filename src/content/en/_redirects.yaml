@@ -31,3 +31,9 @@ redirects:
 
 - from: /web/updates/2016/02/save-data
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+
+- from: /web/g-co/dpwa
+  to: /web/progressive-web-apps/#desktop
+
+- from: /web/g-co/twa
+  to: /web/updates/2017/10/using-twa

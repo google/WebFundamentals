@@ -72,6 +72,10 @@ From that, Chrome calculates a media engagement score which is highest on sites
 where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
 
+Note: You can [enable MEI] by running Chrome with the
+`MediaEngagementBypassAutoplayPolicies` and `PreloadMediaEngagementData`
+switches.
+
 User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 <figure>
@@ -250,6 +254,7 @@ thoughts.
 [feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
+[enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev

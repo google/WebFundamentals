@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-04-02 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -405,42 +405,7 @@ See [Command Line API Reference][CLAPI] for the full reference.
   you.
 </aside>
 
-Was this tutorial helpful?
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Console / Get Started / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "DevTools",
-  "choices": [
-    {
-      "button": {
-        "text": "Yes"
-      },
-      "response": "Thank you for the feedback!",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "No"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell me how I can ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
 
 {# Runs on page load. Down here because it takes up space, even though it's not supposed to. #}
 
@@ -450,3 +415,4 @@ var feedback = {
         'Read on to learn how messages like this get here.');
   </script>
 {% endframebox %}
+

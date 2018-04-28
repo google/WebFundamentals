@@ -2,15 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2017-10-18 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Getting Started with WebVR {: .page-title }
 
-Note: This article is written for [WebVR 1.1](../status#version_1_1), not
-[WebVR 2.0](../status#version_2_0), which is still under development. WebVR is
-still experimental and subject to change.
+{% include "web/_shared/webxr-status.html" %}
 
 In this guide we will be exploring the WebVR APIs, and using them to enhance a simple WebGL scene built with [Three.js](https://threejs.org/). For production work, however, you may want to starting with existing solutions, like [WebVR Boilerplate](https://github.com/borismus/webvr-boilerplate). If you’re totally new to Three.js, you can use this [handy starting guide](https://aerotwist.com/tutorials/getting-started-with-three-js/). The community is also extremely supportive, so if you get stuck, definitely give them a shout.
 
@@ -20,7 +18,7 @@ Let’s start with [a scene that puts a box inside a wireframe room](https://goo
 
 ### A small note on support
 
-WebVR is available in Chrome 56+ behind a runtime flag. Enabling the flag (head to `chrome://flags` and search for "WebVR") will allow you to build and test your VR work locally. If you want to support WebVR for your visitors, you can opt into an [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md), which will allow you to have WebVR enabled for your origin.
+WebVR is available in Chrome 56+ behind a runtime flag. Enabling the flag (head to `chrome://flags` and search for "WebVR") will allow you to build and test your VR work locally. If you want to support WebVR for your visitors, you can opt into an [Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), which will allow you to have WebVR enabled for your origin.
 
 You can also use the [Web VR polyfill](https://github.com/googlevr/webvr-polyfill), but bear in mind that there are significant performance penalties when using polyfills. You should definitely test on your target devices, and avoid shipping anything that does not keep up with the device’s refresh rate. A poor or variable frame rate can result in significant discomfort for the people using your experience!
 
