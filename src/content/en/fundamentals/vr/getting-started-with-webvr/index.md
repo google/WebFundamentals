@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2018-04-30 #}
+{# wf_updated_on: 2018-05-02 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -22,13 +22,24 @@ Let’s start with [a scene that puts a box inside a wireframe room](https://goo
 
 For more information, take a look at [the WebVR Status](../status/) page.
 
+## Install a WebVR Emulation Chrome DevTools Extension
+
+Perhaps you find yourself not having a VR-capable device to test against. If that’s the case, help is at hand. Jaume Elias has created a [Chrome DevTools Extension which emulates a VR device](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil).
+
+![Emulating WebVR with Jaume Elias's Chrome Extension](./img/webvr-emulation.jpg)
+
+While it’s always preferable to test on real devices (especially for performance testing) this extension can help you quickly debug your apps.
+
 ## Get access to VR Displays
 
 So with a WebGL scene, what do we need to do get it working with WebVR? Well, first we need to query the browser to discover if there are any VR devices available, which we can do with `navigator.xr.requestDevice()`.
 
     navigator.xr.requestDevice()
     .then(xrDevice => {
-      xrDevice.supportsSession({exclusive: true})
+      xrDevice.supportsSession({
+        exclusive: true,
+        outputContext: xrPresentationContext
+      })
       .then(() => {
         entryButton.addEventListener('click', onButtonClick);
         entryButton.innerHTML = 'Enter XR';
@@ -49,19 +60,48 @@ So with a WebGL scene, what do we need to do get it working with WebVR? Well, fi
 
 There are a few things to notice in this code.
 
-1. **Not every device can "present" to a Head Mounted Display.** There are devices which allow for — say — accelerometer usage, or a pseudo-VR experience, but do not make use of a head mounted display. To check for that, call `supportsSession()` on the device.
+1. **`requestDevice()` is part of `navigator.xr`, which though not shown can also be used for feature detection.
 
-2. **There may be no VR devices available.** You should aim to create experiences that work  fine for non-VR settings, and treat the availability of VR as Progressive Enhancement.
+1. **There may be no VR devices available.** You should aim to create experiences that work for non-VR settings, and treat the availability of VR as Progressive Enhancement. This is in part what `supportsSession()` helps with. More about that in the next section.
 
-3. **The user agent returns whatever device it choses.** If more than one device is available, the spec allows the user agent to use any criteria it wishes to select which device is returned. 
+1. **The user agent returns whatever device it choses.** If more than one device is available, the spec allows the user agent to use any criteria it wishes to select which device is returned.
 
-## Install a WebVR Emulation Chrome DevTools Extension
+## Requesting a session
 
-Perhaps you find yourself not having a VR-capable device to test against. If that’s the case, help is at hand! Jaume Elias has created a [Chrome DevTools Extension which emulates a VR device](https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil).
+Not every device can "present" as a Head Mounted Display. There are devices which allow for — say — accelerometer usage, or a pseudo-VR experience, but do not make use of a head mounted display. To check for that, call `supportsSession()` on the device. The process is a little more complicated than was suggested by the previous example.
 
-![Emulating WebVR with Jaume Elias's Chrome Extension](./img/webvr-emulation.jpg)
+First, to request a session you need to know where to present. The WebXR Device API adds a new value for the `HTMLCanvasElement.getContext()`: `xrpresent`.
 
-While it’s always preferable to test on real devices (especially for performance testing!) having this extension to hand can help you quickly debug during your builds.
+You also have to tell the API what kind of session you want, exclusive or non-exclusive. The code below requests non-exclusive by setting `sessionOptions.exclusive` to `false`. This will give you a 'magic window', wherein the scene is rendered monoscopically and the image responds to device movement.
+
+    xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
+    let sessionOptions = {
+      exclusive: false,  // Default value.
+      outputContext: xrPresentationContext
+    }
+    xrDevice.requestSession(sessionOptions)
+    .then(xrSession => {
+      //Start showing immersive content.
+    });
+
+This example enters the non-exclusive session automatically. But you can't do that for an exclusive session. Entering an exclusive session requires a user gesture. The `supportsSession()` is provided to help with this.
+
+    xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
+    xrDevice.supportsSession({exclusive: true, outputContext: xrPresentationContext})
+    .then(() => {
+      // Make an 'Enter VR' button visible if exclusive sessions are supported.
+      myButton.style.display = "block";
+    })
+
+Then inside the button's click event:
+
+    myButton.addEventListener('click', (event) => {
+      xrDevice.requestSession(sessionOptions)
+      .then(xrSession => {
+        // Initialize the render loop.
+        // Add 'select' event handlers to process input.
+      });
+    })
 
 ## Request presentation from the device
 
