@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-04-30 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -18,40 +18,42 @@ Let’s start with [a scene that puts a box inside a wireframe room](https://goo
 
 ### A small note on support
 
-WebVR is available in Chrome 56+ behind a runtime flag. Enabling the flag (head to `chrome://flags` and search for "WebVR") will allow you to build and test your VR work locally. If you want to support WebVR for your visitors, you can opt into an [Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), which will allow you to have WebVR enabled for your origin.
-
-You can also use the [Web VR polyfill](https://github.com/googlevr/webvr-polyfill), but bear in mind that there are significant performance penalties when using polyfills. You should definitely test on your target devices, and avoid shipping anything that does not keep up with the device’s refresh rate. A poor or variable frame rate can result in significant discomfort for the people using your experience!
+[TODO: Update for WebXR]
 
 For more information, take a look at [the WebVR Status](../status/) page.
 
 ## Get access to VR Displays
 
-So with a WebGL scene, what do we need to do get it working with WebVR? Well, firstly we need to query the browser to discover if there are any VR displays available, which we can do with `navigator.getVRDisplays()`.
+So with a WebGL scene, what do we need to do get it working with WebVR? Well, first we need to query the browser to discover if there are any VR devices available, which we can do with `navigator.xr.requestDevice()`.
 
-    navigator.getVRDisplays().then(displays => {
-      // Filter down to devices that can present.
-      displays = displays.filter(display => display.capabilities.canPresent);
-
-      // If there are no devices available, quit out.
-      if (displays.length === 0) {
-        console.warn('No devices available able to present.');
-        return;
+    navigator.xr.requestDevice()
+    .then(xrDevice => {
+      xrDevice.supportsSession({exclusive: true})
+      .then(() => {
+        entryButton.addEventListener('click', onButtonClick);
+        entryButton.innerHTML = 'Enter XR';
+        entryButton.disabled = false;
+      })
+      // TODO: What happens when the session isn't supported?
+    })
+    .catch(err => {
+      if (err.name === 'NotFoundError') {
+        console.error('No XR devices available:', err);
+      } else if (err.name === 'NotAllowedError') {
+        // Permissions have not been granted.
+        // Trigger permission flow.
+      } else {
+        console.log('Something else went wrong.', err);
       }
-
-      // Store the first display we find. A more production-ready version should
-      // allow the user to choose from their available displays.
-      this._vr.display = displays[0];
-      this._vr.display.depthNear = DemoVR.CAMERA_SETTINGS.near;
-      this._vr.display.depthFar = DemoVR.CAMERA_SETTINGS.far;
     });
 
 There are a few things to notice in this code.
 
-1. **Not every device can "present" to a Head Mounted Display.** There are devices which allow for — say — accelerometer usage, or a pseudo-VR experience, but do not make use of an HMD. For those devices the canPresent boolean will be false, and it’s something to be checked.
+1. **Not every device can "present" to a Head Mounted Display.** There are devices which allow for — say — accelerometer usage, or a pseudo-VR experience, but do not make use of a head mounted display. To check for that, call `supportsSession()` on the device.
 
-2. **There may be no VR devices available.** We should aim to create experiences that work just fine for non-VR settings, and treat the availability of VR as Progressive Enhancement.
+2. **There may be no VR devices available.** You should aim to create experiences that work  fine for non-VR settings, and treat the availability of VR as Progressive Enhancement.
 
-3. **There may be several VR devices available. **Equally it’s perfectly possible that someone will have multiple VR devices available, and we should allow for that if at all possible, letting them choose the most appropriate.
+3. **The user agent returns whatever device it choses.** If more than one device is available, the spec allows the user agent to use any criteria it wishes to select which device is returned. 
 
 ## Install a WebVR Emulation Chrome DevTools Extension
 
