@@ -77,7 +77,6 @@ const SCHEMA_PROJECT = {
       },
       additionalProperties: false,
     },
-    tags: {type: 'array'},
   },
   additionalProperties: false,
 };
