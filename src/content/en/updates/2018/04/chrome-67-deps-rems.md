@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals. 
 
-{# wf_updated_on: 2018-04-27 #}
+{# wf_updated_on: 2018-04-30 #}
 {# wf_published_on: 2018-04-27 #}
 {# wf_tags: deprecations,removals,chrome67 #}
 {# wf_blink_components: Blink>Layout,Blink>SecurityFeature,Blink>SecurityFeature>SecureContexts #}
@@ -35,16 +35,13 @@ We expect to remove this in Chrome 69.
 [ChromeStatus](https://www.chromestatus.com/feature/5903385005916160) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=779166)
 
-## Remove AppCache from Non-secure Contexts
+## Deprecate AppCache on Non-secure Contexts
 
-AppCache is now only allowed over HTTPS. AppCache is a powerful feature
-that allows offline and persistent access to an origin. Allowing AppCache to be
-used over non-secure contexts makes it an attack vector for cross-site scripting
-hacks. 
+AppCache over HTTPS is deprecated. AppCache is a powerful feature that allows offline and
+persistent access to an origin. Allowing AppCache to be used over non-secure contexts
+makes it an attack vector for cross-site scripting hacks.  
 
-Firefox is also
-[planning to remove](https://groups.google.com/forum/#!msg/mozilla.dev.platform/qLTTpdzcDkw/WKJeq-4HAQAJ)
-this feature.
+Removal is expected in Chrome 69.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/ANnafFBhReY/discussion) &#124;
 [ChromeStatus](https://www.chromestatus.com/feature/5714236168732672) &#124;
