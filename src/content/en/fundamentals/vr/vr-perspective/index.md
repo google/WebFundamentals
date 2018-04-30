@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Find out more about how creating content for WebVR is different from creating regular web content.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2017-06-05 #}
 {# wf_blink_components: Blink>WebVR #}
 

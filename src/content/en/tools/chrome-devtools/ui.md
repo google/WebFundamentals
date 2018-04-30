@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on how to access and use common parts of the DevTools UI, and change the UI's appearance.
 
-{# wf_updated_on: 2018-04-24 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2017-01-25 #}
 {# wf_blink_components: Platform>DevTools #}
 

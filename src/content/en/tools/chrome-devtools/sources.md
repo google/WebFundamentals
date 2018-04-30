@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-04-24 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}

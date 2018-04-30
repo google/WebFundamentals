@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Snippets are small scripts that you can author and execute within the Sources panel of Chrome DevTools. You can access and run them from any page. When you run a snippet, it executes from the context of the currently open page.
 
-{# wf_updated_on: 2018-04-24 #}
+{# wf_updated_on: 2018-04-28 #}
 {# wf_published_on: 2015-10-12 #}
 {# wf_blink_components: Platform>DevTools #}
 
