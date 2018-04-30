@@ -52,18 +52,16 @@ this feature.
 
 ## Layout
 
-Several Webkit-prefixed CSS properties will be removed in this release.
+Several `-webkit-` prefixed CSS properties will be removed in this release:
 
-**-webkit-box-flex-group**: This property has virtually zero usage based on the
-UseCounter in stable.   
-
-**Percent (%) values for -webkit-line-clamp**: There is interest in finding a
-standards-based solution to the number values use case, but we haven't seen
-demand for the %-based values.  
-
-**-webkit-box-lines**: This property was never fully implemented. It was
-originally intended such that a "vertical"/"horizontal" `-webkit-box` could have
-multiple rows/columns.
+* **`-webkit-box-flex-group`**: This property has virtually zero usage based on
+  the UseCounter in stable.
+* **Percent (%) values for `-webkit-line-clamp`**: There is interest in finding
+  a standards-based solution to the number values use case, but we haven't seen
+  demand for the %-based values.
+* **`-webkit-box-lines`**: This property was never fully implemented. It was
+  originally intended such that a "vertical"/"horizontal" `-webkit-box` could
+  have multiple rows/columns.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/-e92az54B4I/discussion) &#124;
 [ChromeStatus](https://www.chromestatus.com/feature/5393405823680512) &#124;
