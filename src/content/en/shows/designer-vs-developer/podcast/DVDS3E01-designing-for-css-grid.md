@@ -29,12 +29,12 @@ class="attempt-right">
 In this episode:
 
 * Layout and the web.
-* [CSS Grid](https://muss.me/2HGeMuE).
-* [Wes Bos' CSS Grid Mozilla Course](https://muss.me/2vZIrJR).
-* [Variable Fonts](https://muss.me/2jkN6N1).
+* [CSS Grid](https://muss.me/2HGeMuE){: .external}.
+* [Wes Bos' CSS Grid Mozilla Course](https://muss.me/2vZIrJR){: .external}.
+* [Variable Fonts](https://muss.me/2jkN6N1){: .external}.
 * Considerations to building tools.
-* [Web VR](https://muss.me/2JE2wr1).
-* [Progressive Web Apps](https://muss.me/2vZIrJR).
+* [Web VR](https://muss.me/2JE2wr1){: .external}.
+* [Progressive Web Apps](https://muss.me/2vZIrJR){: .external}.
 
 <audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3"
