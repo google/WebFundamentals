@@ -37,7 +37,8 @@ In this episode:
 * [Progressive Web Apps](https://muss.me/2vZIrJR){: .external}.
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
