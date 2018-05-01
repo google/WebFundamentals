@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2018-05-01 #}
 {# wf_published_on: 2016-06-30 #}
-
+{# wf_blink_components: Blink>PushAPI #}
 # Sending Messages with Web Push Libraries {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
@@ -26,7 +26,7 @@ the issue. This is improving with time and wider browser support but it's far fr
 this reason, I strongly recommend using a library to handle the encryption, formatting and
 triggering of your push message.
 
-If you really want to learn about what the libraries, we'll cover it
+If you really want to learn about what the libraries are doing, we'll cover it
 in the next section. For now, we are going to look at managing subscriptions and using an
 existing web push library to make the push requests.
 
