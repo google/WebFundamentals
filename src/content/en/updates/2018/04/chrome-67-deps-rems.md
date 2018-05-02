@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals. 
 
-{# wf_updated_on: 2018-04-30 #}
+{# wf_updated_on: 2018-05-02 #}
 {# wf_published_on: 2018-04-27 #}
 {# wf_tags: deprecations,removals,chrome67 #}
 {# wf_blink_components: Blink>Layout,Blink>SecurityFeature,Blink>SecurityFeature>SecureContexts #}
@@ -37,7 +37,7 @@ We expect to remove this in Chrome 69.
 
 ## Deprecate AppCache on Non-secure Contexts
 
-AppCache over HTTPS is deprecated. AppCache is a powerful feature that allows offline and
+AppCache over HTTP is deprecated. AppCache is a powerful feature that allows offline and
 persistent access to an origin. Allowing AppCache to be used over non-secure contexts
 makes it an attack vector for cross-site scripting hacks.  
 
