@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-01-24 #}
+{# wf_updated_on: 2018-05-02 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -234,8 +234,8 @@ aggregated from Chrome users who have opted-in to syncing their browsing
 history, have not set up a Sync passphrase, and have usage statistic reporting 
 enabled. This population may not be representative of the broader user base 
 for a particular origin and many origins may have population differences among 
-each other. Further, this data does not account for users with different 
-browsers. 
+each other. Further, this data does not account for users with different
+browsers and differences in browser adoption in different geographic regions.
 
 As a result, be careful with the types of conclusions being drawn when looking 
 at a cross-section of origins, and when comparing individual origins: avoid 
