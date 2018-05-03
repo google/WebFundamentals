@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to view and change a page's CSS.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -256,4 +256,39 @@ before doing this one.
 
 ## Feedback {: #feedback }
 
-{% include "web/_shared/helpful.html" %}
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/css/';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
