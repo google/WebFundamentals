@@ -63,5 +63,7 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.routing
 - title: "workbox.strategies"
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies
+- title: "workbox.streams"
+  path: /web/tools/workbox/reference-docs/latest/workbox.streams
 - title: "Index of all"
   path: /web/tools/workbox/reference-docs/latest/index-all

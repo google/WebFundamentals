@@ -133,8 +133,8 @@ landing_page:
 
       - heading: workbox.rangeRequest
         description: >
-          This modules provides support for responding to a request with a
-          ranger header from a Cache.
+          This modules provides support for responding to a <code>Range:</code>
+          request using a slice of previously cached data.
         buttons:
         - label: Learn more
           path: ./workbox-range-requests
@@ -143,8 +143,15 @@ landing_page:
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
 
-      # Force Devsite 4-up layout
-      - heading: ""
+      - heading: workbox.streams
+        description: >
+          This modules provides support for composing a response from a series
+          of streaming sources.
+        buttons:
+        - label: Reference
+          path: ../reference-docs/latest/workbox.streams
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
 
     - heading: Node Modules
       description: >
