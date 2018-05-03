@@ -1,8 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
+experiments_path: /web/updates/2018/04/_experiments.yaml
 
-{# wf_updated_on: 2018-05-02 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2018-04-11 #}
 {# wf_tags: chrome67,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -290,7 +291,7 @@ a flame chart for each process so that you can see the total work that each proc
 
 ## Feedback {: #feedback }
 
-<meta name="experiments_path" value="/web/updates/2018/04/_experiments.yaml"/>
+That's all for Chrome 67!
 
 {% dynamic if experiments.inline_feedback.generic_prompt %}
   {% framebox width="auto" height="auto" enable_widgets="true" %}
@@ -329,11 +330,11 @@ a flame chart for each process so that you can see the total work that each proc
 {% dynamic elif experiments.inline_feedback.specific_prompt %}
   {% framebox width="auto" height="auto" enable_widgets="true" %}
     <script>
-      var label = '/web/updates/2018/04/devtools (generic)';
+      var label = '/web/updates/2018/04/devtools (specific)';
       var response = "Thank your for the feedback!";
       var feedback = {
         category: "Helpful",
-        question: "That's all for Chrome 67. How are we doing with these release notes? Did you find this post helpful?",
+        question: "How are we doing with these release notes? Did you find this post helpful?",
         choices: [
           {
             button: {
@@ -362,11 +363,13 @@ a flame chart for each process so that you can see the total work that each proc
   {% endframebox %}
 {% dynamic endif %}
 
+To discuss the new features and changes in this post, or anything else related to DevTools:
+
 * File bug reports at [Chromium Bugs](https://crbug.com){:.external}.
-* Discuss features and changes on the [Mailing List][ML]{:.external}. Please don't use this
-  channel for support questions. Use Stack Overflow, instead.
+* Discuss features and changes on the [Mailing List][ML]{:.external}. Please don't use the mailing
+  list for support questions. Use Stack Overflow, instead.
 * Get help on how to use DevTools on [Stack Overflow][SO]{:.external}. Please don't file bugs
-  here. Use Chromium Bugs, instead.
+  on Stack Overflow. Use Chromium Bugs, instead.
 * Tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools).
 * File bugs on this doc in the [Web Fundamentals][WF]{:.external} repository.
 
