@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description:
+description: It's
 
 {# wf_updated_on: 2018-05-02 #}
 {# wf_published_on: 2018-05-07 #}
@@ -12,3 +12,9 @@ description:
 # Welcome to the immersive web {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
+{% include "comment-widget.html" %}
