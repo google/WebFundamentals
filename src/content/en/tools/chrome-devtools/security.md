@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Security Panel to ensure that all resources on your  site are protected with HTTPS.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2015-12-21 #}
 {# wf_blink_components: Security #}
 
@@ -86,4 +86,39 @@ served over HTTP.
 
 ## Feedback {: #feedback }
 
-{% include "web/_shared/helpful.html" %}
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/security';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
