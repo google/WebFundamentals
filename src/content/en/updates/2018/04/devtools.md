@@ -297,7 +297,7 @@ That's all for Chrome 67!
   {% framebox width="auto" height="auto" enable_widgets="true" %}
     <script>
       var label = '/web/updates/2018/04/devtools (generic)';
-      var response = "Thank your for the feedback!";
+      var response = "Thank you for the feedback!";
       var feedback = {
         category: "Helpful",
         question: "Was this page helpful?",
@@ -331,7 +331,7 @@ That's all for Chrome 67!
   {% framebox width="auto" height="auto" enable_widgets="true" %}
     <script>
       var label = '/web/updates/2018/04/devtools (specific)';
-      var response = "Thank your for the feedback!";
+      var response = "Thank you for the feedback!";
       var feedback = {
         category: "Helpful",
         question: "How are we doing with these release notes? Did you find this post helpful?",
