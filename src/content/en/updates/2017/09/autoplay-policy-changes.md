@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -53,9 +53,6 @@ Chrome's autoplay policies are simple:
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
-Note: You can try out these new policies by setting the experimental flag
-`chrome://flags/#autoplay-policy` to "Document user activation is required." in
-Chrome 64.
 
 ### Media Engagement Index (MEI) {: #mei }
 
@@ -72,10 +69,6 @@ From that, Chrome calculates a media engagement score which is highest on sites
 where media is played on a regular basis. When it is high enough, media playback
 is allowed to autoplay on desktop only.
 
-Note: You can [enable MEI] by running Chrome with the
-`MediaEngagementBypassAutoplayPolicies` and `PreloadMediaEngagementData`
-switches.
-
 User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 <figure>
@@ -86,6 +79,30 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
     Screenshot of the <i>chrome://media-engagement</i> internal page
   </figcaption>
 </figure>
+
+### Developer switches {: #developer-switches }
+
+As a developer, you may want to change Chrome autoplay policy behaviour locally
+to test your website. So here's an exhaustive list of media switches you can
+play with and [how to] use them:
+
+- `MediaEngagementBypassAutoplayPolicies`: Toggles use of MEI to allow autoplay.
+- `UnifiedAutoplay`: Toggles autoplay policy (if enabled, requires user gesture to autoplay).
+- `PreloadMediaEngagementData`: Toggles whether sites with the highest overall MEI get autoplay by default for new users.
+
+<b>Example 1:</b> Entirely disable all autoplay, including MEI and default list
+of enabled sites
+```
+chrome.exe
+--disable-features=MediaEngagementBypassAutoplayPolicies,PreloadMediaEngagementData
+--enable-features=UnifiedAutoplay
+```
+
+<b>Example 2:</b> Enable autoplay always
+```
+chrome.exe
+--disable-features=UnifiedAutoplay
+```
 
 ### Iframe delegation {: #iframe }
 
@@ -106,9 +123,6 @@ same-origin iframes.
 When the feature policy for autoplay is disabled, calls to `play()` without a
 user gesture will reject the promise with a `NotAllowedError` DOMException. And
 the autoplay attribute will also be ignored.
-
-You can try out this feature policy by enabling the experimental flag
-`chrome://flags/#enable-experimental-web-platform-features`.
 
 Warning: Older articles incorrectly recommend using the attribute
 `gesture=media` which is not supported.
@@ -255,6 +269,7 @@ thoughts.
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[how to]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
