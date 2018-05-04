@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-05-04 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -83,26 +83,20 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 ### Developer switches {: #developer-switches }
 
 As a developer, you may want to change Chrome autoplay policy behaviour locally
-to test your website. So here's an exhaustive list of media switches you can
-play with and [how to] use them:
+to test your website depending on user engagement.
 
-- `MediaEngagementBypassAutoplayPolicies`: Toggles use of MEI to allow autoplay.
-- `UnifiedAutoplay`: Toggles autoplay policy (if enabled, requires user gesture to autoplay).
-- `PreloadMediaEngagementData`: Toggles whether sites with the highest overall MEI get autoplay by default for new users.
+- You can decide to disable entirely the autoplay policy by setting the Chrome
+  flag "Autoplay Policy" to "No user gesture is required" at
+  `chrome://flags/#autoplay-policy`. This allows you to test your website as if
+  user were strongly engaged with your site and playback autoplay would be
+  always allowed.
 
-<b>Example 1:</b> Entirely disable all autoplay, including MEI and default list
-of enabled sites
-```
-chrome.exe
---disable-features=MediaEngagementBypassAutoplayPolicies,PreloadMediaEngagementData
---enable-features=UnifiedAutoplay
-```
-
-<b>Example 2:</b> Enable autoplay always
-```
-chrome.exe
---disable-features=UnifiedAutoplay
-```
+- You can also decide to make sure playback autoplay is never allowed by
+  disabling use of MEI and whether sites with the highest overall MEI get
+  playback autoplay by default for new users. This can be done with two
+  [internal switches] with `chrome.exe
+  --disable-features=PreloadMediaEngagementData,
+  MediaEngagementBypassAutoplayPolicies`.
 
 ### Iframe delegation {: #iframe }
 
@@ -269,7 +263,7 @@ thoughts.
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
-[how to]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[internal switches]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
