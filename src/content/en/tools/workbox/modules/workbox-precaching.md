@@ -212,7 +212,7 @@ workbox.precaching.precacheAndRoute(
     { url: '/index.html', revision: '383676' },
   ],
   {
-    urlManipulaion: ({url}) => {
+    urlManipulation: ({url}) => {
       ...
       return [alteredUrlOption1, alteredUrlOption2, ...];
     }
