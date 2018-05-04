@@ -7,6 +7,8 @@ toc:
     path: /web/tools/lighthouse/scoring
   - title: Lighthouse v3 Scoring Guide
     path: /web/tools/lighthouse/v3/scoring
+- title: Lighthouse v3 Migration Guide
+  path: /web/tools/lighthouse/v3/migration
 - heading: Audit References
 - title: Performance
   section:
