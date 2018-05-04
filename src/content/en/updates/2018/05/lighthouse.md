@@ -234,6 +234,21 @@ loading performance by converting their GIFs to video. Additionally, if your
 site is on a hosting plan with metered bandwidth, the potential cost savings
 alone should be enough to persuade you!
 
+## Give Lighthouse a try!
+
+If you're excited about these new audits, update Lighthouse and give them a try!
+
+* For Node users: Run `npm update lighthouse`, or `npm update lighthouse -g` if
+you installed Lighthouse globally.
+* For Chrome users:
+  * The Lighthouse extension should automatically update, but you can manually
+update it via `chrome://extensions`.
+  * In DevTools, The Audits panel will be shipping with `[version]` in Chrome
+`[version]`. You can check your version of Chrome via `chrome://version`. Chrome
+updates to a new version about every 6 weeks. You can run the latest Chrome code
+by downloading [Chrome
+Canary](https://www.google.com/chrome/browser/canary.html).
+
 {% include "comment-widget.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
