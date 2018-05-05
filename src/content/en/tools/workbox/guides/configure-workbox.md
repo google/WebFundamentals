@@ -81,7 +81,7 @@ If you wanted to use a cache for images, you might configure a route like this:
 ```javascript
 workbox.routing.registerRoute(
   /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-  new workbox.strategies.CacheFirst({
+  workbox.strategies.CacheFirst({
     cacheName: 'my-image-cache',
   })
 );
@@ -109,7 +109,7 @@ using a credentials mode of 'include', you can set up the following route:
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('https://third-party\.example\.com/'),
-  new workbox.strategies.NetworkFirst({
+  workbox.strategies.NetworkFirst({
     fetchOptions: {
       credentials: 'include',
     },
