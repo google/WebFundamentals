@@ -271,7 +271,7 @@ to something more like:
     function doAmazingThings() {
       alert('YOU AM AMAZING!');
     }
-    document.addEventListener('DOMContentReady', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('amazing')
         .addEventListener('click', doAmazingThings);
     });
