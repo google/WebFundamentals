@@ -1,23 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: It's
+description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
 {# wf_updated_on: 2018-05-07 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: webxr #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
-{# wf_featured_snippet:  #}
+{# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
+{# wf_featured_snippet: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets. #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Welcome to the immersive web {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-The immersive web describes virtual world experiences hosted through the
-browser - entire virtual reality (VR) experiences surfaced in the browser or in
-VR enabled headsets like Google's Daydream, Oculus Rift, Samsung Gear VR, HTC
-Vive, and Windows Mixed Reality Headsets, as well as augmented reality
-experiences developed for AR-enabled mobile devices.
+The immersive web means virtual world experiences hosted through the
+browser. This covers entire virtual reality (VR) experiences surfaced in the
+browser or in VR enabled headsets like Google's Daydream, Oculus Rift, Samsung
+Gear VR, HTC Vive, and Windows Mixed Reality Headsets, as well as augmented
+reality experiences developed for AR-enabled mobile devices.
 
 <figure>
   <img alt="Welcome to the immersive web."
@@ -32,10 +32,12 @@ thought of as a spectrum from complete reality to a completely immersive VR
 environment, with various levels of AR in between.
 
 <figure>
-  <img alt="The immersive web is a specturum from complete reality to completely immersive, with various levels in between."
+  <img alt="The immersive web is a specturum from complete reality to
+  completely immersive, with various levels in between."
        src="/web/updates/images/2018/05/immersive-spectrum.png">
   <figcaption>
-    The immersive web is a specturum from complete reality to completely immersive, with various levels in between.
+    The immersive web is a specturum from complete reality to completely
+    immersive, with various levels in between.
   </figcaption>
 </figure>
 
@@ -119,7 +121,7 @@ Drawing is done using WebGL APIs. You can do that if you're really ambitious.
 Though, we recommend using a framework. The immersive web samples use one
 created just for the demos called
 [Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail).
-THREE.js will support WebXR in early May. There is no official work yet on
+THREE.js will support WebXR in early May. There is no official word yet on
 A-Frame.
 
 ## Starting and running an app
@@ -169,13 +171,13 @@ latter is sometimes called a 'magic window'.
       console.log("This browser does not support the WebXR API.");
     }
 
-    <figure>
-      <img alt="A user gesture in a magic window."
-           src="/web/updates/images/2018/05/user-gesture.png">
-      <figcaption>
-        A user gesture in a magic window.
-      </figcaption>
-    </figure>
+<figure>
+  <img alt="A user gesture in a magic window."
+       src="/web/updates/images/2018/05/user-gesture.png">
+  <figcaption>
+    A user gesture in a magic window.
+  </figcaption>
+</figure>
 
 ### Request an XR session
 
@@ -228,15 +230,15 @@ the view stay the same when the user moves or does it shift as it would in real
 life?)
 
 The second type of frame is the _presentation frame_, represented by an
-XRPresentationFrame object. This object contains the information needed to
+`XRPresentationFrame` object. This object contains the information needed to
 render a single frame of an AR/VR scene to the device. This is a bit confusing
 because a presentation frame is retrieved by calling `requestAnimationFrame()`.
-This makes it compatible with window.requestAnimationFrame() which comes in
+This makes it compatible with `window.requestAnimationFrame()` which comes in
 useful when ending an XR session. More about that later.
 
 Before I give you any more to digest, I'll offer some code. The sample below
 shows how the render loop is started and maintained. Notice the dual use of the
-word frame. And notice the recursive call to requestAnimationFrame(). This
+word frame. And notice the recursive call to `requestAnimationFrame()`. This
 function will be called 60 times a second.
 
     xrSession.requestFrameOfReference('eyeLevel')
@@ -254,9 +256,9 @@ Before drawing anything to the screen, you need to know where the display
 device is pointing and you need access to the screen. In general, the position
 and orientation of a thing in AR/VR is called a pose. Both viewers and input
 devices have a pose. (I cover input devices later.) Both viewer and input
-device poses are defined as a 4 by 4 matrix stored in a Float32Array in column
+device poses are defined as a 4 by 4 matrix stored in a `Float32Array` in column
 major order. You get the viewer's pose by calling
-XRPresentationFrame.getDevicePose() on the current animation frame object.
+`XRPresentationFrame.getDevicePose()` on the current animation frame object.
 Always test to see if you got a pose back. If something went wrong you don't
 want to draw to the screen.
 
@@ -268,8 +270,8 @@ want to draw to the screen.
 #### Views
 
 After checking the pose, it's time to draw something. The object you draw to is
-called a view (XRView). This is where the session type becomes important. Views
-are retrieved from the XRPresentationFrame object as an array. If you're in a
+called a view (`XRView`). This is where the session type becomes important. Views
+are retrieved from the `XRPresentationFrame` object as an array. If you're in a
 non-exclusive session the array has one view. If you're in an exclusive
 session, the array has two, one for each eye.
 
@@ -304,9 +306,9 @@ the input devices, which I'll cover in a later section.
 ### End the XR session
 
 An XR session may end for several reasons, including ending by your own code
-through a call to XRSession.end(). Other causes include the headset being
+through a call to `XRSession.end()`. Other causes include the headset being
 disconnected or another application taking control of it. This is why a
-well-behaved application should monitor the end event and when it occurs
+well-behaved application should monitor the end event and when it occurs,
 discard the session and renderer objects. An XR session once ended cannot be
 resumed.
 
@@ -379,11 +381,11 @@ be run as part of the render loop.
 
 Merely pointing at things in AR/VR is pretty useless. To do anything useful,
 users need the ability to select things. The WebXR Device API provides three
-events for responding to user interactions: select, selectStart, and selectEnd.
-They have a quirk I didn't expect: they only tell you that an input device was
-clicked. They don't tell you what item in the environment was clicked. Event
-handlers are added to the XRSession object and should be added as soon as its
-available.
+events for responding to user interactions: `select`, `selectStart`, and
+`selectEnd`. They have a quirk I didn't expect: they only tell you that an
+input device was clicked. They don't tell you what item in the environment was
+clicked. Event handlers are added to the `XRSession` object and should be added
+as soon as its available.
 
     xrDevice.requestSession(sessionOptions)
     .then(xrSession => {
@@ -414,9 +416,9 @@ is in the Input Selection example.
 
 ## Conclusion: looking ahead
 
-As I said earlier, you'll need to wait for at least Chrome 68 to try out
-augmented reality. Nevertheless, I encourage you try what we've got so far. We
-need feedback to make it better.
+As I said earlier, augmented reality requires Chrome 68 (Canary as of May 2018)
+Nevertheless, I encourage you try what we've got so far. We need feedback to
+make it better.
 
 If you wondered why detecting clicks is rudimentary, it's because the [Hit Test
 spec](https://www.chromestatus.com/features/4755348300759040) is still under
