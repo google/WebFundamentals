@@ -19,11 +19,25 @@ VR enabled headsets like Google's Daydream, Oculus Rift, Samsung Gear VR, HTC
 Vive, and Windows Mixed Reality Headsets, as well as augmented reality
 experiences developed for AR-enabled mobile devices.
 
+<figure>
+  <img alt="Welcome to the immersive web."
+       src="/web/updates/images/2018/05/welcome-to-vr.png">
+  <figcaption>
+    Welcome to the immersive web.
+  </figcaption>
+</figure>
+
 Though we use two terms to describe immersive experiences, they should be
 thought of as a spectrum from complete reality to a completely immersive VR
 environment, with various levels of AR in between.
 
-[Use John's diagram here, if he lets me use it.]
+<figure>
+  <img alt="The immersive web is a specturum from complete reality to completely immersive, with various levels in between."
+       src="/web/updates/images/2018/05/immersive-spectrum.png">
+  <figcaption>
+    The immersive web is a specturum from complete reality to completely immersive, with various levels in between.
+  </figcaption>
+</figure>
 
 Examples of immersive experiences include:
 
@@ -155,6 +169,14 @@ latter is sometimes called a 'magic window'.
       console.log("This browser does not support the WebXR API.");
     }
 
+    <figure>
+      <img alt="A user gesture in a magic window."
+           src="/web/updates/images/2018/05/user-gesture.png">
+      <figcaption>
+        A user gesture in a magic window.
+      </figcaption>
+    </figure>
+
 ### Request an XR session
 
 Now that we have our device and our user gesture, it's time to get a session.
@@ -180,6 +202,14 @@ The code for this step takes a bit of untangling. To untangle it, I'm about to
 throw a bunch of words at you. If you want a peek at the final code, [jump
 ahead](#the_whole_render_loop) to have a quick look then come back for the full
 explanation. There's quite a bit that you may not be able to infer.
+
+<figure>
+  <img alt="An immersive image as rendered to each eye."
+       src="/web/updates/images/2018/05/rendered-vr.png">
+  <figcaption>
+    An immersive image as rendered to each eye.
+  </figcaption>
+</figure>
 
 The basic process for a render loop is this:
 
@@ -308,6 +338,14 @@ Your app draws the pointer ray and shows where it's pointed. When the user
 clicks the input device, events are fired&mdash;`select`, `selectStart`, and
 `selectEnd`, specifically. Your app determines what was clicked and responds
 appropriately.
+
+<figure>
+  <img alt="Selecting in VR."
+       src="/web/updates/images/2018/05/selecting-in-vr.png">
+  <figcaption>
+    Selecting in VR.
+  </figcaption>
+</figure>
 
 ### The input device and the pointer ray
 
