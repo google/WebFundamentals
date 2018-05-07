@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Faster audits, less variance, a new report UI, new audits, and more.
 
-{# wf_updated_on: 2018-05-04 #}
+{# wf_updated_on: 2018-05-07 #}
 {# wf_published_on: 2018-05-02 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -71,7 +71,7 @@ audits also changes in v3.
     <th>v3 Weight</th>
   </tr>
   <tr>
-    <td>First Contentful Paint (New to v3)</td>
+    <td>First Contentful Paint (New in v3)</td>
     <td>N/A</td>
     <td>3</td>
   </tr>
@@ -86,7 +86,7 @@ audits also changes in v3.
     <td>3</td>
   </tr>
   <tr>
-    <td>Time To Interactive</td>
+    <td>Time To Interactive (Consistently Interactive in v2)</td>
     <td>5</td>
     <td>5</td>
   </tr>
