@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf audits for preload, preconnect, GIFs, and more.
 
-{# wf_updated_on: 2018-05-04 #}
-{# wf_published_on: 2018-05-05 #}
+{# wf_updated_on: 2018-05-07 #}
+{# wf_published_on: 2018-05-08 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
 {# wf_featured_snippet: New perf audits for preload, preconnect, GIFs, and more. #}
