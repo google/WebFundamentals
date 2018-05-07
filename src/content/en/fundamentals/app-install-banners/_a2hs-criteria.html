@@ -1,0 +1,37 @@
+Chrome will automatically show the Add to Home Screen prompt to the user when
+the following criteria are met:
+
+<ul>
+  <li>The web app is not already installed</li>
+  <li>
+    Meets a user engagement heuristic (currently, the user has interacted
+    with the domain for at least 30 seconds)
+  </li>
+  <li>
+    Meets the Progressive Web App criteria:
+    <ul>
+      <li>
+        Includes a <a href="/web/fundamentals/web-app-manifest">Web App Manifest</a>
+        that includes:
+        <ul>
+          <li><code>short_name</code> or <code>name</code></li>
+          <li><code>icons</code> including a 192px and a 512px version</li>
+          <li><code>start_url</code></li>
+        </ul>
+      </li>
+      <li>Served over <b>HTTPS</b> (required for service workers)</li>
+      <li>
+        Has registered a <a href="/web/fundamentals/getting-started/primers/service-workers">
+        service worker</a> with a <code>fetch</code> event handler
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<aside class="caution">
+  <b>Caution:</b> Beginning in Chrome 68 (May 2018), Chrome will <b>not</b>
+  automatically show the Add to Home Screen prompt, instead, you <b>must</b>
+  trigger it by using the
+  <a href="/web/fundamentals/app-install-banners/#trigger-m68">
+  <code>beforeinstallprompt</code></a> event.
+</aside>
