@@ -59,7 +59,7 @@ separate registration for the WebXR Origin Trial
 We learned a lot from WebVR 1.1, but over time, it became clear that some major
 changes were needed to support the types of applications developers want to
 build. The full list of lessons learned is too long to go into here, but
-includes issues like the API being explicitly tied to the main javascript
+includes issues like the API being explicitly tied to the main javaScript
 thread, too many opportunities  for developers to set up obviously wrong
 configurations, and common uses like magic window being a side effect rather
 than an intentional feature. (Magic window is a technique for viewing immersive
