@@ -121,7 +121,7 @@ Drawing is done using WebGL APIs. You can do that if you're really ambitious.
 Though, we recommend using a framework. The immersive web samples use one
 created just for the demos called
 [Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail).
-THREE.js will support WebXR in early May. There is no official word yet on
+Three.js will support WebXR in early May. There is no official word yet on
 A-Frame.
 
 ## Starting and running an app
