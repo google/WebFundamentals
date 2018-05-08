@@ -43,10 +43,10 @@ Lighthouse 3.0 features a brand-new report UI, thanks to a collaboration between
 and Chrome UX (Research & Design) teams.
 
 <figure>
-  <img src="https://via.placeholder.com/500x300"
-       alt="TODO"/>
+  <img src="/web/updates/images/2018/05/lighthouse3.png"
+       alt="Lighthouse 3 Report run on GMail"/>
   <figcaption>
-    <b>Figure X</b>. TODO
+    <b>Figure 1</b>. Lighthouse v3 report run on GMail's about page
   </figcaption>
 </figure>
 
