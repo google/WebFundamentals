@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Faster audits, less variance, a new report UI, new audits, and more.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2018-05-02 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -15,7 +15,8 @@ description: Faster audits, less variance, a new report UI, new audits, and more
      style="height:auto;width:50%;"
      class="lighthouse-logo attempt-right" alt="Lighthouse Logo">
 
-Lighthouse 3.0 is out! 3.0 features faster audits, less variance, a new report UI, new audits, and more.
+Lighthouse 3.0 is out! 3.0 features faster audits, less variance, a new report UI, new audits, and
+more.
 
 ## How to update to 3.0 {: #update }
 
@@ -30,9 +31,9 @@ Lighthouse 3.0 completes your audits faster, with less variance between runs, th
 few changes:
 
 * **Simulated throttling**. Previously Lighthouse actually throttled your page before running
-  audits. Now, Lighthouse uses a new internal auditing engine, condenamed Lantern, that runs your audits
-  under your normal network and CPU settings, and then estimates how long the page would take to load under
-  mobile conditions.
+  audits. Now, Lighthouse uses a new internal auditing engine, condenamed Lantern, that runs your
+  audits under your normal network and CPU settings, and then estimates how long the page would
+  take to load under mobile conditions.
 * **Smaller waiting periods**. To determine that a page has finished loading, Lighthouse
   needs to wait for the network and CPU to have no activity. This waiting period is smaller in v3.
 
@@ -52,8 +53,8 @@ and Chrome UX (Research & Design) teams.
 ## Invocation changes {: #invocation }
 
 The Node version of Lighthouse now supports the same configuration options as the CLI version.
-This could be a breaking change, depending on how you configured your Node Lighthouse module in v2. See
-[Invocation changes](/web/tools/lighthouse/v3/migration#invocation) for more information.
+This could be a breaking change, depending on how you configured your Node Lighthouse module in
+v2. See [Invocation changes](/web/tools/lighthouse/v3/migration#invocation) for more information.
 
 ## Scoring changes {: #scoring }
 
@@ -170,14 +171,18 @@ See [Preconnect](/web/fundamentals/performance/resource-prioritization#preconnec
 
 ### First Interactive ➡ First CPU Idle {: #first-cpu-idle }
 
-The **First Interactive** audit has been renamed to **First CPU Idle** to better describe how it works.
-The general purpose of the audit is the same. Use this audit to measure when users are first able to
-interact with your page.
+The **First Interactive** audit has been renamed to **First CPU Idle** to better describe how it
+works. The general purpose of the audit is the same. Use this audit to measure when users are
+first able to interact with your page.
 
 ### Perceptual Speed Index ➡ Speed Index {: #speedindex }
 
-In Lighthouse 3.0 the **Perceptual Speed Index** audit is now **Speed Index**. This change aligns Lighthouse with
-how [WebPageTest][WPT]{:.external} measures this metric. The purpose of the audit is the same, but the underyling
-metric is slightly different.
+In Lighthouse 3.0 the **Perceptual Speed Index** audit is now **Speed Index**. This change aligns
+Lighthouse with how [WebPageTest][WPT]{:.external} measures this metric. The purpose of the audit
+is the same, but the underyling metric is slightly different.
 
 [WPT]: https://webpagetest.org/easy
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
+{% include "comment-widget.html" %}

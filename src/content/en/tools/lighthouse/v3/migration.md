@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How to migrate from Lighthouse v2 to v3.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
@@ -19,7 +19,8 @@ features and changes.
 
 ## Invocation changes {: #invocation }
 
-Lighthouse now computes simulated performance by default and throttling settings have been heavily changed.
+Lighthouse now computes simulated performance by default and throttling settings have been heavily
+changed.
 
 ### CLI Flags
 
@@ -81,17 +82,19 @@ async function run() {
 
 The JSON object that Lighthouse v3 returns now contains 3 top-level properties:
 
-* `lhr`. The results of the audits. Short for "Lighthouse Results". This was essentially the top-level
-  object in v2, but v3 introduces breaking changes to the shape of this object, too. See [Changes to the
-  results object](#lhr).
-* `artifacts`. The data collected from Chrome while auditing. This was previously intermingled with the properties of the LHR.
+* `lhr`. The results of the audits. Short for "Lighthouse Results". This was essentially the
+  top-level object in v2, but v3 introduces breaking changes to the shape of this object, too. See
+  [Changes to the results object](#lhr).
+* `artifacts`. The data collected from Chrome while auditing. This was previously intermingled
+  with the properties of the LHR.
 * `report`. The formatted report HTML/JSON/CSV as a string.
 
 ### Changes to the results object {: #lhr }
 
 As mentioned in [New, top-level format in JSON output](#json), the results of audits are now
-available via the `lhr` property. In v2, the contents of this object were essentially the top-level JSON
-output. However, the shape of this object itself has changed in v3. The table below lists all the changes.
+available via the `lhr` property. In v2, the contents of this object were essentially the
+top-level JSON output. However, the shape of this object itself has changed in v3. The table below
+lists all the changes.
 
 * If a row has a value in both **v2** and **v3** columns, it means
   that you should replace any reference to the v2 property in your code with the v3-equivalent.
@@ -148,12 +151,19 @@ output. However, the shape of this object itself has changed in v3. The table be
   <tr>
     <td><code>audits.<var>ID</var>.scoringMode</code></td>
     <td><code>audits.<var>ID</var>.scoreDisplayMode</code></td>
-    <td>Possible values have been expanded to <code>numeric|binary|manual|informative|not-applicable|error</code>.</td>
+    <td>
+      Possible values have been expanded to
+      <code>numeric|binary|manual|informative|not-applicable|error</code>.
+    </td>
   </tr>
   <tr>
     <td><code>audits.<var>ID</var>.score</code></td>
     <td><code>audits.<var>ID</var>.score</code></td>
-    <td>Scores are always a number between 0 and 1 (not 0-100) when <code>scoreDisplayMode</code> is numeric or binary. Scores are always <code>null</code> for other display modes as there is no notion of pass/fail.</td>
+    <td>
+      Scores are always a number between 0 and 1 (not 0-100) when <code>scoreDisplayMode</code> is
+      numeric or binary. Scores are always <code>null</code> for other display modes as there is no
+      notion of pass/fail.
+    </td>
   </tr>
   <tr>
     <td><code>audits.<var>ID</var>.displayValue</code></td>
@@ -167,12 +177,18 @@ output. However, the shape of this object itself has changed in v3. The table be
       <code>audits.<var>ID</var>.errorMessage</code>
       <code>audits.<var>ID</var>.warnings</code>
     </td>
-    <td><code>debugString</code> values have been converted to one of the three properties above depending on their intent.</td>
+    <td>
+      <code>debugString</code> values have been converted to one of the three properties above
+      depending on their intent.
+    </td>
   </tr>
   <tr>
     <td><code>audits.<var>ID</var>.details</code></td>
     <td><code>audits.<var>ID</var>.details</code></td>
-    <td>Structure of details has shifted to be more consumable. Each entry in <code>.items</code> is an object with reliable keys instead of <code>any[]</code>.</td>
+    <td>
+      Structure of details has shifted to be more consumable. Each entry in <code>.items</code>
+      is an object with reliable keys instead of <code>any[]</code>.
+    </td>
   </tr>
   <tr>
     <td><code>audits.<var>ID</var>.error</code></td>
