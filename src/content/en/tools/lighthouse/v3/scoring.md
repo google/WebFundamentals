@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How scoring works in Lighthouse v3.
 
-{# wf_updated_on: 2018-05-04 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
@@ -15,7 +15,7 @@ The scores that you see at the top of your Lighthouse report represent the page'
 that particular category. This guide explains how Lighthouse calculates those scores.
 
 <figure>
-  <img src="https://via.placeholder.com/500x300" alt="The scores that you see next to Progressive
+  <img src="imgs/ui.png" alt="The scores that you see next to Progressive
             Web App, Performance, Accessibility, Best Practices, and SEO at the top of your
             Lighthouse report represent your score for that category."/>
   <figcaption>
