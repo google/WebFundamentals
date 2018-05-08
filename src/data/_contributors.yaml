@@ -1719,3 +1719,17 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+cbrand:
+  name:
+    given: Christiaan
+    family: Brand
+  org:
+    name: Google
+  country: USA
+  role:
+    - author
+  twitter: christiaanbrand
+  github: christiaanbrand
+  description:
+    en: Identity Product Manager
