@@ -1,26 +1,21 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: A guide on how scoring works in Lighthouse v2.
+description: How scoring works in Lighthouse v3.
 
-{# wf_updated_on: 2018-05-08 #}
-{# wf_published_on: 2017-12-27 #}
+{# wf_updated_on: 2018-05-04 #}
+{# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
-[details]: https://docs.google.com/spreadsheets/d/1dXH-bXX3gxqqpD1f7rp6ImSOhobsT1gn_GQ2fGZp8UU/edit?ts=59fb61d2#gid=0
+[details]: https://docs.google.com/spreadsheets/d/1Cxzhy5ecqJCucdf1M0iOzM8mIxNc7mmx107o5nj38Eo/edit#gid=0
 [WikiHow]: https://www.wikihow.com/Calculate-Weighted-Average#Weighted_Averages_without_Percentages_sub
 
-# Lighthouse v2 Scoring Guide {: .page-title }
-
-Note: This guide covers how scoring works in Lighthouse v2. See [Lighthouse v3 Scoring Guide][v3]
-if you're using v3.
-
-[v3]: /web/tools/lighthouse/v3/scoring
+# Lighthouse v3 Scoring Guide {: .page-title }
 
 The scores that you see at the top of your Lighthouse report represent the page's score for
 that particular category. This guide explains how Lighthouse calculates those scores.
 
 <figure>
-  <img src="images/category-scores.png" alt="The scores that you see next to Progressive
+  <img src="https://via.placeholder.com/500x300" alt="The scores that you see next to Progressive
             Web App, Performance, Accessibility, Best Practices, and SEO at the top of your
             Lighthouse report represent your score for that category."/>
   <figcaption>
@@ -34,8 +29,9 @@ that particular category. This guide explains how Lighthouse calculates those sc
 
 Lighthouse returns a Performance score between 0 and 100. 0 is the lowest possible score. A 0
 score usually indicates an error in Lighthouse. If you see a 0 score repeatedly, please
-[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. Typically
-a score above 90 represents the top 5 percent of top-performing pages.
+[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. A 100 score
+represents the 98th percentile of top-performing sites, which is the point of diminishing returns. A
+score of 50 represents the 75th percentile.
 
 [bug]: https://github.com/GoogleChrome/lighthouse/issues/new
 
@@ -56,7 +52,9 @@ The audits under Diagnostics and Opportunities do not contribute to your Perform
 Each Performance audit that contributes to your score has its own scoring methodology.
 Lighthouse maps each raw score to a number between 0 and 100. The scoring distribution is
 a log normal distribution derived from the performance metrics of real website performance
-data.
+data. A score of 50 typically maps to the 75th percentile for that audit. A score of 75 maps
+to the 90th percentile. In other words, if you get a score of 75, it means that your page
+performs better in that audit than 90% of pages on the web.
 
 For example, the First Meaningful Paint (FMP) audit measures when a user perceives that the
 primary content of a page is visible. The raw score for FMP represents the time duration between
