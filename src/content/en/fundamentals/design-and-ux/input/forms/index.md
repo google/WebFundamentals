@@ -4,6 +4,7 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 
 {# wf_updated_on: 2017-11-20 #}
 {# wf_published_on: 2014-04-30 #}
+{# wf_blink_components: N/A #}
 
 # Create Amazing Forms {: .page-title }
 
@@ -26,7 +27,7 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
 
 
 ### TL;DR {: .hide-from-toc }
-- Use existing data to pre-populate fields and be sure to enable auto-fill.
+- Use existing data to pre-populate fields and be sure to enable autofill.
 - Use clearly-labeled progress bars to help users get through multi-part forms.
 - Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.
 
@@ -42,7 +43,7 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
 
 Make sure your forms have no repeated actions, only as many fields as 
 necessary, and take advantage of 
-[autofill](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
+[autofill](#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
 Look for opportunities to pre-fill information you already know, or may 
@@ -476,6 +477,70 @@ navigation.
     <input type="text" autofocus ...>
     
 
+## Avoid common patterns that break Chrome Autofill 
+
+Chrome Autofill makes filling out forms easier by automatically entering information they've saved to their Google account,
+Chrome browser, or mobile device. As a developer, you want to ensure that Autofill works well on your website so you can
+create a better experience for your users. This is especially important for checkout forms; users who successfully use Chrome
+Autofill to enter their information go through checkout an average of 30% faster than those who don't. 
+
+If you haven't already, make sure you have read the previous sections on 
+[developing good forms](#design-efficient-forms) and using 
+[autocomplete attributes](#use-metadata-to-enable-auto-complete) 
+(part of the WHATWG HTML standard) on your site. This section covers some of the common mistakes developers make when building
+forms. Avoiding these pitfalls helps ensure that your users can effectively use Autofill, and could help increase conversions.
+
+### Field validation pitfalls 
+
+Some developers use client-side validation, which triggers input change or key events. For example, a site might truncate
+fields with Javascript instead of using the fields' "maxlength" attribute. Because Autofill does not recognize client-side
+validation, this truncation may cause the data to become invalid.
+
+This often happens with phone fields when the maximum length is enforced using Javascript. Without the use of autocomplete
+attributes, Autofill may infer that it needs to fill a full phone number including the country code (e.g., in the US, eleven
+digits, such as "15552125555"). If the website truncates the value to ten digits using Javascript, the field value incorrectly
+becomes "1555212555". The correct way to support Autofill is to include `autocomplete="tel-national"` on the field, as pointed
+out in the 
+[WHATWG HTML standard](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
+
+While client-side validation may provide some benefits to users typing in their data, it usually ends up removing values 
+that are pasted or autofilled.
+
+### Use standard input fields
+
+Don't create your own form controls, especially custom dropdowns that replace `<select>` elements. This works poorly with
+accessibility frameworks as well as with Chrome Autofill. Instead, use standard dropdowns and other elements that can be
+easily modified through modern CSS.
+
+### Don't use fake placeholders in input fields
+
+Some websites use "fake placeholders" in input fields instead of using the placeholder attribute. This is done by setting the
+placeholder text as the value of the field (e.g., `value="First Name"`) and using JavaScript to remove the value when the
+field gains focus. Autofill interprets such values as user-entered and doesn't replace the placeholder text with actual
+values, resulting in a poor Autofill experience. Instead, use floating field labels or `placeholder="First Name"` to guide
+users.
+
+### Don't copy the shipping address into the billing address section 
+
+Another common pitfall is when a user wants to use a billing address that differs from the shipping address. Often, the site
+automatically copies the shipping address values into the billing address section. This potentially creates additional work
+for the user, because Autofill has to be conservative about replacing the contents of pre-populated fields and is thus unable
+to assist in clearing the form and filling in the desired address.
+
+### Ensure that autocomplete attributes are correct
+
+[Autocomplete attributes](#use_metadata_to_enable_auto-complete) 
+as defined in the WHATWG HTML standard help your website tell Chrome Autofill explicitly what the fields are supposed to be,
+removing guesswork. However, these attributes are often misspelled or otherwise incorrect. When this happens, Autofill won't
+recognize the attribute and the unknown field type will not be autofilled.
+
+For example, the correct attribute for the Credit Card CVC is "cc-csc". Many sites mistakenly use "cc-cvc", and because
+Autofill does not recognize this attribute, this field won't get autofillled. 
+
+The best practice for these attributes is to use this format: `autocomplete="<section> <fieldtype>"`, for example:
+`autocomplete="shipping address-line1"`. For a complete list of all the accepted values, please see the 
+[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill). 
+
 
 ## Provide real-time validation
 
@@ -644,8 +709,6 @@ reason that an element is invalid:
   </tbody>
 </table>
 
-
-
 ### Set custom validation messages
 
 If a field fails validation, use `setCustomValidity()` to mark the field invalid
@@ -730,5 +793,4 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 
 Success: You should show the user all of the issues on the form at once, rather than showing them one at a time.
-
 
