@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
