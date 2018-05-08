@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf audits for preload, preconnect, GIFs, and more.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -241,16 +241,17 @@ persuade you!
 
 If you're excited about these new audits, update Lighthouse and give them a try!
 
-* For Node users: Run `npm update lighthouse`, or `npm update lighthouse -g` if
-you installed Lighthouse globally.
-* For Chrome users:
-  * The Lighthouse extension should automatically update, but you can manually
-update it via `chrome://extensions`.
-  * In DevTools, you can run Lighthouse in the audits panel. Chrome updates to a new
+* [The Lighthouse Chrome
+extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
+should automatically update, but you can manually update it via
+`chrome://extensions`.
+* In DevTools, you can run Lighthouse in the audits panel. Chrome updates to a new
 version about every 6 weeks, so some newer audits may not be available. If
 you're antsy to use the latest audits available, you can run the latest Chrome
 code by downloading [Chrome
 Canary](https://www.google.com/chrome/browser/canary.html).
+* For Node users: Run `npm update lighthouse`, or `npm update lighthouse -g` if
+you installed Lighthouse globally.
 
 {% include "comment-widget.html" %}
 
