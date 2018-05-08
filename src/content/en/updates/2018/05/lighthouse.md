@@ -242,7 +242,7 @@ persuade you!
 If you're excited about these new audits, update Lighthouse and give them a try!
 
 * [The Lighthouse Chrome
-extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en)
+extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
 should automatically update, but you can manually update it via
 `chrome://extensions`.
 * In DevTools, you can run Lighthouse in the audits panel. Chrome updates to a new
