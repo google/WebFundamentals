@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're fast. Feel integrated because they launched in the same way as other apps, and run in an app window, without an address bar or tabs. They're reliable because service workers can cache all of the assets they need to run. And they create an engaging experience for users.
 
-{# wf_updated_on: 2018-05-08 #}
+{# wf_updated_on: 2018-05-09 #}
 {# wf_published_on: 2018-05-08 #}
-{# wf_tags: progressive-web-apps,desktop,responsive,chrome68 #}
+{# wf_tags: progressive-web-apps,desktop,responsive,chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_featured_snippet: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're <b>fast</b>. Feel <b>integrated</b> because they launched in the same way as other apps, and run in an <b>app window</b>, without an address bar or tabs. They're <b>reliable</b> because service workers can cache all of the assets they need to run. And they create an <b>engaging</b> experience for users. #}
 {# wf_blink_components: N/A #}
@@ -12,6 +12,12 @@ description: Desktop progressive web apps can be 'installed' on the users device
 # Progressive Web Apps on the Desktop {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
+
+<div class="clearfix"></div>
+
+Dogfood: Support for Desktop Progressive Web Apps is supported on Chrome OS
+67, which is currently the beta branch. Work is already under way to support
+Mac and Windows.
 
 <div class="clearfix"></div>
 
@@ -23,8 +29,15 @@ the same way as other apps, and run in an app window, without an address bar
 or tabs. They're **reliable** because service workers can cache all of the
 assets they need to run. And they create an **engaging** experience for users.
 
-Dogfood: Support for Chrome OS will be available starting in m68, and work is
-well under way to support Linux, Mac and Chrome.
+<div class="clearfix"></div>
+
+<aside class="note">
+  Check out my Google I/O talk <a href="https://youtu.be/NITk4kXMQDw">
+  PWAs: building bridges to mobile, desktop, and native</a>, for more about
+  what's new with Progressive Web Apps and some important best practices you
+  should be following, or jump right to the section on
+  <a href="https://youtu.be/NITk4kXMQDw?t=1678">desktop PWAs</a>
+</aside>
 
 <div class="clearfix"></div>
 
@@ -49,8 +62,8 @@ like other apps on the desktop.
 
 ## Getting started {: #getting-started }
 
-Dogfood: Desktop Progressive Web App support is available on Chrome OS m68
-(currently beta), but work is underway to support Linux, Mac and Windows. To
+Dogfood: Desktop Progressive Web App support is available on Chrome OS 67
+(currently beta), but work is underway to support Mac and Windows. To
 experiment with desktop progressive web apps in Chrome on on other operating
 systems, enable the `#enable-desktop-pwas` flag.
 
@@ -159,7 +172,7 @@ not, and works nicely with virtual keyboards.
 
 ## What's next?
 
-We’re already working on support for Linux, Mac and Windows. For all of these
+We’re already working on support for Mac and Windows. For all of these
 platforms, we’re looking at:
 
 * Adding support for keyboard shortcuts, so you can provide your own
@@ -169,6 +182,19 @@ platforms, we’re looking at:
 * And link capturing - opening the installed PWA when the user clicks on a
   link handled by that app.
 
+### Learn more
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NITk4kXMQDw?t=1678"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+Check out my Google I/O talk, **PWAs: building bridges to mobile, desktop,
+and native**, it covers everything from Desktop PWAs to, upcoming changes to
+add to home screen prompts, and more.
+
+<div class="clearfix"></div>
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
