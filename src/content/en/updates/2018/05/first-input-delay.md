@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: First Input Delay (FID) is a new performance metric for measuring page responsiveness for real users in the wild.
 
 
-{# wf_updated_on: 2018-05-08 #}
+{# wf_updated_on: 2018-05-09 #}
 {# wf_published_on: 2018-05-09 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -64,7 +64,7 @@ do something else.
 Consider the following timeline of a typical web page load:
 
 <img src="/web/updates/images/2018/05/first-input-delay-base.svg"
-  alt="Page oad trace">
+  alt="Page load trace">
 
 The above chart shows a page that's making a couple of network requests for
 resources (most likely CSS and JS files), and, after those resources are
@@ -80,7 +80,7 @@ which you've probably seen in tools like [Lighthouse](/web/tools/lighthouse/) or
 [WebPageTest](https://www.webpagetest.org/):
 
 <img src="/web/updates/images/2018/05/first-input-delay-fcp-tti.svg"
-  alt="Page oad trace with FCP and TTI">
+  alt="Page load trace with FCP and TTI">
 
 As you can see, FCP measures the time from Navigation Start until the browser
 paints content to the screen (in this case not until after the stylesheets are
@@ -99,7 +99,7 @@ main thread is able to respond.
 Let's add FID to the chart, so you can see what that might look like:
 
 <img src="/web/updates/images/2018/05/first-input-delay-full.svg"
-  alt="Page oad trace with FCP, TTI, and FID">
+  alt="Page load trace with FCP, TTI, and FID">
 
 Here, the browser receives the input when the main thread is busy, so it has to
 wait until it's not busy to respond to the input. The time it must wait is the
