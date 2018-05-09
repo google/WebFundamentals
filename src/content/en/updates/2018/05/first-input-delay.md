@@ -57,9 +57,9 @@ happened.
 In general, input delay (or input latency) happens because the browser's main
 thread is busy doing something else, so it can't (yet) respond to the user. One
 common reason this might happen is the browser is busy parsing and executing a
-really large JavaScript file your app told it to download. While it's doing
-that, it can't run your event listener because the JavaScript it's parsing and
-executing might tell it to do something else.
+large JavaScript file loaded by your app. While it's doing that, it can't run
+any event listeners because the JavaScript it's loading might tell it to
+do something else.
 
 Consider the following timeline of a typical web page load:
 
@@ -84,7 +84,7 @@ which you've probably seen in tools like [Lighthouse](/web/tools/lighthouse/) or
 
 As you can see, FCP measures the time from Navigation Start until the browser
 paints content to the screen (in this case not until after the stylesheets are
-downloaded an processed). And TTI measures the time from Navigation Start until
+downloaded and processed). And TTI measures the time from Navigation Start until
 the page's resources are loaded and the main thread is idle (for at least 5
 seconds).
 
@@ -172,7 +172,7 @@ load. Therefore, we believe initially focusing on improving site's _first_ user
 interaction will have the greatest impact on improving the overall interactivity
 of the web.
 3. The recommended solutions for how sites should fix high first input delays
-(code splitting, loading less JavaScript up front, etc.) are not necessarily the
+(code splitting, loading less JavaScript upfront, etc.) are not necessarily the
 same solutions for fixing slow input delays after page load. By separating out
 these metrics we'll be able to provide more specific performance guidelines to
 web developers.
@@ -195,9 +195,8 @@ should be evaluated separately.
 ### What if a user never interacts with your site?
 
 Not all users will interact with your site every time they visit. And not all
-interactions are relevant to FID (as mentioned in the previous section).
-
-In addition, some user's first interactions will be at bad times (when the main
+interactions are relevant to FID (as mentioned in the previous section). In
+addition, some user's first interactions will be at bad times (when the main
 thread is busy for an extended period of time), and some user's first
 interactions will be at good times (when the main thread is completely idle).
 
@@ -259,10 +258,9 @@ the FID value you care about most on mobile should be the 99th percentile of
 mobile users.
 
 Unfortunately, many analytics tools do not support reporting on data at specific
-quantiles without custom configuration and manually processing/analyzing the
-data yourself.
+quantiles without custom configuration and manual data processing/analysis.
 
-For example, it's possible to report on specific quantities in Google Analytics,
+For example, it's possible to report on specific quantiles in Google Analytics,
 but it takes a little extra work. In my article [The Google Analytics Setup I
 Use on Every Site I Build](
 https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/),
@@ -281,7 +279,7 @@ types of sites that I think could particularly benefit from knowing what kinds
 of first input delays their users are actually experiencing:
 
 
-### Server-side rendered JavaScript apps
+### Server-side rendered (SSR) JavaScript apps
 
 Sites that send a server-rendered version of their page to the client along with
 a lot of JavaScript that needs to get loaded, parsed, and executed before the
@@ -311,16 +309,16 @@ during your release process.
 
 First Input Delay is a brand new metric we're experimenting with on the Chrome
 team. It's particularly exciting to me because it's the first metric we've
-introduced that directly corresponds to the pain users experienced with
+introduced that directly corresponds to the pain users experience with
 real-life interactions on the web.
 
 Going forward we hope to standardize this metric within the [W3C WebPerf Working
 Group](https://www.w3.org/webperf/), so it can be more easily accessed by
 asynchronously loaded JavaScript and third-party analytics tools (since right
-now it requires developers to add synchronous code to the head of their page).
+now it requires developers to add synchronous code to the head of their pages).
 
 If you have feedback on the metric or the current implementation, we'd love to
-hear it! Please file issues or pull requests on
+hear it! Please file issues or submit pull requests on
 [GitHub](https://github.com/GoogleChromeLabs/first-input-delay).
 
 {% include "web/_shared/rss-widget-updates.html" %}
