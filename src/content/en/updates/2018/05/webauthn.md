@@ -9,7 +9,7 @@ description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, wh
 {# wf_featured_snippet: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, which allows browsers to interact with and manage public-key based credentials. This enables strong authentication using removable security keys and built-in platform authenticators such as fingerprint scanners. #}
 {# wf_blink_components: Blink>WebAuthentication #}
 
-# Enabling strong authentication with WebAuthn {: .page-title }
+# Enabling Strong Authentication with WebAuthn {: .page-title }
 
 {% include "web/_shared/contributors/cbrand.html" %}
 {% include "web/_shared/contributors/agektmr.html" %}
@@ -44,7 +44,7 @@ significantly reduce phishing.
 
 WebAuthn extends the [Credential Management 
 API](https://w3c.github.io/webappsec-credential-management/) and adds a new 
-credential type called "PublicKeyCredential". WebAuthn abstracts the 
+credential type called `PublicKeyCredential`. WebAuthn abstracts the 
 communication between the browser and an authenticator and allows a user to:
 
 1. Create and register a public key credential for a website
@@ -61,6 +61,7 @@ the platform (such as fingerprint scanners on smartphones) or attached through
 USB, Bluetooth Low Energy (BLE), or Near-Field Communication (NFC). 
 
 ## How it works
+
 ### Creating a key pair and registering a user
 
 When a user wants to register a credential to a website (referred to by WebAuthn 
@@ -92,8 +93,8 @@ let credential = await navigator.credentials.create({ publicKey: {
 ```
 
 Warning: Attestation provides a way for a relying party to determine the
-provenance of an authenticator. *Google strongly recommends that relying parties
-not attempt to maintain whitelists of authenticators.*
+provenance of an authenticator. **Google strongly recommends that relying parties
+not attempt to maintain whitelists of authenticators.**
 
 ### Authenticating a user
 
@@ -148,13 +149,12 @@ and [Firefox will be supporting WebAuthn as of Firefox
 
 We are working on more detailed documentation:
 
-* [Webauthndemo](https://github.com/google/webauthndemo) example relying party 
+* [WebAuthnDemo](https://github.com/google/webauthndemo) relying party example 
   implementation
-* [Analysis of 
-  WebAuthn](https://www.google.com/url?q=https://www.imperialviolet.org/2018/03/27/webauthn.html&sa=D&ust=1525153217190000&usg=AFQjCNHsW4zhH1sRAiNjj3TIA5x7v2lQqg) 
+* [Analysis of WebAuthn](https://www.imperialviolet.org/2018/03/27/webauthn.html)
   article by Adam Langley
 
-The session[ "What's new with sign-up and sign-in on the 
+The session ["What's new with sign-up and sign-in on the 
 web"](https://events.google.com/io/schedule/?section=may-10&sid=09d71b68-0542-4f32-8c99-f3e82874bde4) 
 at Google I/O 2018 will cover WebAuthn. Come by the Web Sandbox to talk to the 
 experts.
