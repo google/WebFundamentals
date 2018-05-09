@@ -485,8 +485,8 @@ create a better experience for your users. This is especially important for chec
 Autofill to enter their information go through checkout an average of 30% faster than those who don't. 
 
 If you haven't already, make sure you have read the previous sections on 
-[developing good forms](#design-efficient-forms) and using 
-[autocomplete attributes](#use-metadata-to-enable-auto-complete) 
+[developing good forms](#design_efficient_forms) and using 
+[autocomplete attributes](#use_metadata_to_enable_auto-complete)
 (part of the WHATWG HTML standard) on your site. This section covers some of the common mistakes developers make when building
 forms. Avoiding these pitfalls helps ensure that your users can effectively use Autofill, and could help increase conversions.
 
