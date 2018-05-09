@@ -32,9 +32,8 @@ While measuring how much users like a site's design is hard to do with web APIs,
 measuring its speed and responsiveness is not!
 
 The first impression users have of how fast your site loads can be measured with
-metrics exposed by the [Paint Timing API](https://www.w3.org/TR/paint-timing/),
-which has [First Paint (FP)](/web/fundamentals/performance/user-centric-performance-metrics)
-and [First Contentful Paint(FCP)](/web/fundamentals/performance/user-centric-performance-metrics).
+metrics like [First Paint (FP)](/web/fundamentals/performance/user-centric-performance-metrics)
+and [First Contentful Paint (FCP)](/web/fundamentals/performance/user-centric-performance-metrics).
 But how fast your site can paint pixels to the screen is just part of the story.
 Equally important is how responsive your site is when users try to interact with
 those pixels!
@@ -44,15 +43,15 @@ responsiveness, we're introducing a new metric called First Input Delay.
 
 ## What is first input delay?
 
-First Input Delay (FID) measures the time from when the user first interacts
+First Input Delay (FID) measures the time from when a user first interacts
 with your site (i.e. when they click a link, tap on a button, or use a custom,
-JavaScript-powered control) to the time when the browser is actually able to run
-any JavaScript code for that interaction.
+JavaScript-powered control) to the time when the browser is actually able to
+respond to that that interaction.
 
 As developers who write code that responds to events, we often assume our code
 is going to be run immediately&mdash;as soon as the event happens. But as users,
-we've all frequently experienced the opposite&mdash;we've loaded a web page on our
-phone, tried to interact with it, and then been frustrated when nothing
+we've all frequently experienced the opposite&mdash;we've loaded a web page on
+our phone, tried to interact with it, and then been frustrated when nothing
 happened.
 
 In general, input delay (or input latency) happens because the browser's main
@@ -73,8 +72,7 @@ finished downloading, they're being processed on the main thread. This results
 in periods where the main thread is momentarily busy (which is indicated by the
 red color on the chart).
 
-Now let's add two other metrics you may have used before,
-[First Contentful Paint (FCP)](
+Now let's add two other metrics: [First Contentful Paint (FCP)](
 /web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint),
 which I mentioned above, and [Time to Interactive (TTI)](
 /web/fundamentals/performance/user-centric-performance-metrics#time_to_interactive),
@@ -85,9 +83,10 @@ which you've probably seen in tools like [Lighthouse](/web/tools/lighthouse/) or
   alt="Page oad trace with FCP and TTI">
 
 As you can see, FCP measures the time from Navigation Start until the browser
-paints content to the screen (in this case, after the stylesheets are downloaded
-an processed). And TTI measures the time from Navigation Start until the page's
-resources are loaded and the main thread is idle (for at least 5 seconds).
+paints content to the screen (in this case not until after the stylesheets are
+downloaded an processed). And TTI measures the time from Navigation Start until
+the page's resources are loaded and the main thread is idle (for at least 5
+seconds).
 
 But you might have noticed that there's a fair amount of time between when
 content first paints to the screen and when the browser's main thread is
@@ -110,10 +109,10 @@ FID value for this user on this page.
   <strong>Note:</strong> in this example the user just happened to interact
   with the page at the beginning of the main thread's most busy period. If the
   user had interacted with the page just a moment earlier (during the idle
-  period) the browser could have responded right away. This natural variation in
-  input delays underscores the importance of looking at the distribution of FID
-  values when reporting on the metric. You can read more about this in the
-  section below on <a href="#analyzing-and-reporting-on-fid-data">analyzing and
+  period) the browser could have responded right away. This variance in input
+  delays underscores the importance of looking at the distribution of FID values
+  when reporting on the metric. You can read more about this in the section
+  below on <a href="#analyzing-and-reporting-on-fid-data">analyzing and
   reporting on FID data</a>.
 </aside>
 
@@ -139,12 +138,12 @@ often leave.
 For these reasons we recommend both metrics, but we recommend you measure TTI in
 lab and you measure FID in the wild, with your analytics tool.
 
-And we plan to do the same with our performance tooling here at Google. Our lab
-tools like Lighthouse and WebPageTest already report TTI and we're exploring
+In fact, we plan to do the same with our performance tooling here at Google. Our
+lab tools like Lighthouse and WebPageTest already report TTI and we're exploring
 adding FID to our Real User Monitoring (RUM) tools like the [Chrome User
 Experience Report](/web/tools/chrome-user-experience-report/) (CrUX).
 
-Also, while these are different metrics, our research has found that they
+Also, while these _are_ different metrics, our research has found that they
 correlate well with each other, meaning any work you do to improve your TTI will
 likely improve your FID as well.
 
@@ -206,19 +205,20 @@ This means some users will have no FID values, some users will have low FID
 values, and some users will probably have high FID values.
 
 How you track, report on, and analyze FID will probably be quite a bit different
-from other metrics you may be used to. The next explains how best to do this.
+from other metrics you may be used to. The next section explains how best to do
+this.
 
 ## Tracking FID in JavaScript
 
-FID can be measured in JavaScript in all browsers today. We've even created a
-JavaScript library, [GoogleChromeLabs/first-input-
-delay](https://github.com/GoogleChromeLabs/first-input-delay), that tracks and
-calculates it for you.
+FID can be measured in JavaScript in all browsers today. To make it easy, we've
+even created a JavaScript library that tracks and calculates it for you:
+[GoogleChromeLabs/first-input-delay](
+https://github.com/GoogleChromeLabs/first-input-delay).
 
 Refer to the library's README for full usage and installation instructions, but
 the gist is you:
 
-1. Include a minified snippet of code in the <head> of your document that adds
+1. Include a minified snippet of code in the `<head>` of your document that adds
 the relevant event listeners (this code must be added as early as possible or
 you may miss events).
 2. In your application code, register a callback that will get invoked with the
@@ -248,7 +248,6 @@ perfMetrics.onFirstInputDelay(function(delay, evt) {
 
 Due to the expected variance in FID values, it's critical that when reporting on
 FID you look at the distribution of values and focus on the higher percentiles.
-
 In fact, we recommend specifically focusing on the 99th percentile, as that will
 correspond to the particularly bad first experiences users are having with your
 site. And it will show you the areas that need the most improvement.
@@ -270,8 +269,8 @@ https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site
 I have a section on [setting hit-level dimensions](
 https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/#hit-id-time-and-type).
 When you do this you unlock the ability to filter and segment by individual
-event values as well as create distributions, so you can calculate the 99%
-percentile. If you're wanting to track FID with Google Analytics, I'd definitely
+event values as well as create distributions, so you can calculate the 99th
+percentile. If you want to track FID with Google Analytics, I'd definitely
 recommend this approach.
 
 
@@ -301,8 +300,7 @@ interactivity. This is where tracking FID can be particularly eye-opening!
 
 Third-party ads and social widgets have a history of not being particularly
 considerate of their host pages. They tend to run expensive DOM operations on
-the host page's main thread without consideration for how it will affect the
-user.
+the host page's main thread with no regard for how it will affect the user.
 
 Also, third-party iframes can change their code at any time, so regressions can
 happen even if your application code doesn't change. Tracking FID on your
@@ -313,8 +311,8 @@ during your release process.
 
 First Input Delay is a brand new metric we're experimenting with on the Chrome
 team. It's particularly exciting to me because it's the first metric we've
-introduced that directly corresponds to the pain users experienced with real-
-life interactions on the web.
+introduced that directly corresponds to the pain users experienced with
+real-life interactions on the web.
 
 Going forward we hope to standardize this metric within the [W3C WebPerf Working
 Group](https://www.w3.org/webperf/), so it can be more easily accessed by
