@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, which allows browsers to interact with and manage public-key based credentials. This enables strong authentication using removable security keys and built-in platform authenticators such as fingerprint scanners.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-09 #}
 {# wf_published_on: 2018-05-10 #}
 {# wf_tags: webauthn, credentials, sign-in, chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -73,7 +73,7 @@ as the "relying party"):
    (with biometrics, etc).
 1. After the authenticator obtains user consent, the authenticator generates a
    key pair and returns the public key, optional signed attestation, and
-   transport information to the web site.
+   transport information to the website.
 1. The web app forwards the public key to the server.
 1. The server stores the public key, coupled with the user identity, to remember 
    the credential for future authentications.
