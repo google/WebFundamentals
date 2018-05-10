@@ -193,8 +193,8 @@ To create a session, the browser needs a canvas on which to draw.
     }
     xrDevice.requestSession(sessionOptions)
     .then(xrSession => {
-      // Create a graphics layer
-      xrSession.baseLayer = new XRWebGLLayer(session, graphicsLayer);
+      // Use a WebGL context as a base layer.
+      xrSession.baseLayer = new XRWebGLLayer(session, gl);
       // Start the render loop
     })
 
@@ -314,7 +314,7 @@ resumed.
 
     xrDevice.requestSession(sessionOptions)
     .then(xrSession => {
-      // Create a graphics layer and initialize the render loop.
+      // Create a WebGL layer and initialize the render loop.
       xrSession.addEventListener('end', onSessionEnd);
     });
 
@@ -389,7 +389,7 @@ as soon as its available.
 
     xrDevice.requestSession(sessionOptions)
     .then(xrSession => {
-      // Create a graphics layer and initialize the render loop.
+      // Create a WebGL layer and initialize the render loop.
       xrSession.addEventListener('selectstart', onSelectStart);
       xrSession.addEventListener('selectend', onSelectEnd);
       xrSession.addEventListener('select', onSelect);
