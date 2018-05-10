@@ -132,7 +132,7 @@ Try WebAuthn yourself at
 
 Chrome 67 beta ships with support for `navigator.credentials.get({publicKey: 
 ...})` and `navigator.credentials.create({publicKey:... })` and enables using 
-U2F/CTAP1 authenticators over USB transport on desktop.
+U2F/CTAP 1 authenticators over USB transport on desktop.
 
 Upcoming releases will add support for more transports such as BLE and NFC and 
 the newer CTAP 2 wire protocol. We are also working on more advanced flows 
