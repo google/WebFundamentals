@@ -113,6 +113,45 @@ they accepted the prompt, you can listen for the `appinstalled` event.
       app.logEvent('a2hs', 'installed');
     });
 
+## Detecting if you app is launched from the home screen {: #detect-mode }
+
+### `display-mode` media query
+
+The `display-mode` media query makes it possible to apply styles depending
+on how the app was launched, or determine how it was launched with JavaScript.
+
+To apply a different background color for the app above when being launched
+from the home screen with `"display": "standalone"`, use conditional CSS:
+
+    @media all and (display-mode: standalone) {
+      body {
+        background-color: yellow;
+      }
+    }
+
+It's also possible to detect if the `display-mode` is standalone from
+JavaScript:
+
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      console.log('display-mode is standalone');
+    }
+
+### Safari
+
+To determine if the app was launched in `standalone` mode in Safari, you can
+use JavaScript to check:
+
+    if (window.navigator.standalone === true) {
+      console.log('display-mode is standalone');
+    }
+
+
+## Updating your app's icon and name
+
+If you change any of the properties in your manifest, those changes will be
+reflected to the user after they've run your app again.
+
+
 ## Test your add to home screen experience {: #test }
 
 ### Will `beforeinstallprompt` be fired?
