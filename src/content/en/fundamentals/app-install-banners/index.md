@@ -2,11 +2,11 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-10 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
-# Add to Home Screen (aka Web App Install Banners) {: .page-title }
+# Add to Home Screen {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -25,6 +25,14 @@ and home screen. Chrome handles most of the heavy lifting for you.
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
 ## Show the add to home screen prompt {: #trigger }
+
+In order to show the Add to Home Screen prompt, you need to:
+
+1. Listen for the `beforeinstallprompt` event
+1. Notify the user your app can be installed with a button or other element
+   that will generate a user gesture event.
+1. Show the prompt by calling `prompt()` on the saved `beforeinstallprompt`
+   event.
 
 ### Listen for `beforeinstallprompt`
 
