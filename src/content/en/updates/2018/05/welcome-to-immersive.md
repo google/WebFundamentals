@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-05-08 #}
+{# wf_updated_on: 2018-05-10 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -101,7 +101,7 @@ spectrum of immersive experiences. It's available in the previously mentioned
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
 **Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities
-have just landed in Chrome 68 (Canary) and I hope to tell you about them in six
+will land in Chrome 68 (Canary) soon and I hope to tell you about them in six
 weeks or so.
 
 There's more to this new API than I can go to in an article like this. I want
@@ -416,13 +416,15 @@ is in the Input Selection example.
 
 ## Conclusion: looking ahead
 
-As I said earlier, augmented reality requires Chrome 68 (Canary as of May 2018)
-Nevertheless, I encourage you try what we've got so far. We need feedback to
-make it better.
+As I said earlier, augmented reality should land in Chrome 68 (Canary as of May
+2018) any day now. Nevertheless, I encourage you try what we've got so far. We
+need feedback to make it better. Follow it's progress by watching
+ChromeStatus.com for [WebXR Hit
+Test](https://www.chromestatus.com/features/4755348300759040). You can also
+follow [WebXR Anchors](https://www.chromestatus.com/features/5129925015109632)
+which will improve pose tracking.
 
-If you wondered why detecting clicks is rudimentary, it's because the [Hit Test
-spec](https://www.chromestatus.com/features/4755348300759040) is still under
-discussion. But you can follow its progress through the provided link.  
+
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
