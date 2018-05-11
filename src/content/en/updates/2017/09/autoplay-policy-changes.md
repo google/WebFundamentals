@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-04 #}
+{# wf_updated_on: 2018-05-08 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -243,6 +243,19 @@ asynchronously.
 For info, checkout the small [Pull Request] that fixes WebAudio playback due to
 these autoplay policy changes for [https://airhorner.com].
 
+## MediaStream (WebRTC)
+
+Autoplay policy does NOT apply to audio/video elements provided with a
+[MediaStream] for now. Note that it may change in the future.
+
+    <video id="video" autoplay playsinline>
+
+    <script>
+      const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: true});
+      video.srcObject = stream;
+      // Video will autoplay.
+    </script>
+
 ## Feedback
 
 At the time of writing, Chrome's autoplay policies aren't carved in stone.
@@ -267,3 +280,4 @@ thoughts.
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
 [ChromiumDev on Twitter]: https://twitter.com/chromiumdev
+[MediaStream]: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream
