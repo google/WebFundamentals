@@ -31,7 +31,7 @@ Lighthouse 3.0 completes your audits faster, with less variance between runs, th
 few changes:
 
 * **Simulated throttling**. Previously Lighthouse actually throttled your page before running
-  audits. Now, Lighthouse uses a new internal auditing engine, condenamed Lantern, that runs your
+  audits. Now, Lighthouse uses a new internal auditing engine, codenamed Lantern, that runs your
   audits under your normal network and CPU settings, and then estimates how long the page would
   take to load under mobile conditions.
 * **Smaller waiting periods**. To determine that a page has finished loading, Lighthouse
@@ -179,7 +179,7 @@ first able to interact with your page.
 
 In Lighthouse 3.0 the **Perceptual Speed Index** audit is now **Speed Index**. This change aligns
 Lighthouse with how [WebPageTest][WPT]{:.external} measures this metric. The purpose of the audit
-is the same, but the underyling metric is slightly different.
+is the same, but the underlying metric is slightly different.
 
 [WPT]: https://webpagetest.org/easy
 
