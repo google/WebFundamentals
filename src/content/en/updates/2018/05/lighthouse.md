@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf audits for preload, preconnect, GIFs, and more.
 
-{# wf_updated_on: 2018-05-08 #}
+{# wf_updated_on: 2018-05-10 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -28,8 +28,8 @@ performance, such as [enabling text
 compression](/web/tools/lighthouse/audits/text-compression) or [reducing
 render-blocking scripts](/web/tools/lighthouse/audits/blocking-resources). The
 Lighthouse team continues to ship new audits to give you even more useful advice
-for making your sites faster. This post is a roundup of newer performance audits
-that you may not be aware of, including:
+for making your sites faster. This post is a roundup of useful performance
+audits that you may not be aware of, such as:
 
 * [Main Thread Work Breakdown](#main_thread_work_breakdown)
 * [Preload Key Requests](#preload_key_requests)
@@ -39,6 +39,9 @@ that you may not be aware of, including:
 * [Uses Inefficient Cache Policy on Static Assets](#uses_inefficient_cache_policy_on_static_assets)
 * [Avoid Costly Multiple Round-Trips to Any Origin](#avoid_costly_multiple_round-trips_to_any_origin)
 * [Use Video Formats for Animated Content](#use_video_formats_for_animated_content)
+* [All text remains visible during webfont loads](#all_text_remains_visible_during_web_font_loads)
+* [Unminified CSS & JavaScript](#unminified_css_javascript)
+* [Unused CSS Rules](#unused_css_rules)
 
 ## Main Thread Work Breakdown
 
@@ -165,8 +168,8 @@ unused JavaScript on a page.</figcaption>
 With this audit, you can identify dead code in your applications and remove it
 to improve loading performance and reduce system resource usage. Pro tip: You
 can also use [the code coverage
-panel](/web/updates/2017/04/devtools-release-notes#coverage) in Chrome's dev
-tools to find this information!
+panel](/web/updates/2017/04/devtools-release-notes#coverage) in Chrome's
+DevTools to find this information!
 
 Note: This audit is off by default! It can be enabled in the Node CLI by using
 the `lighthouse:full` configuration profile.
@@ -236,6 +239,75 @@ embed them. Sites like Imgur have significantly improved loading performance by
 converting their GIFs to video. Additionally, if your site is on a hosting plan
 with metered bandwidth, the potential cost savings alone should be enough to
 persuade you!
+
+## All Text Remains Visible During Web Font Loads
+
+When we load web fonts for pages, browsers often render invisible text until the
+font loads. This phenomenon, known as the [Flash of Invisible Text
+(FOIT)](https://www.zachleat.com/web/webfont-glossary/#foit)), may be preferable
+to you from a design standpoint, but it's actually a problem. Text that's
+blocked from rendering can't be read until it renders and becomes visible. On
+high latency and/or high bandwidth connections, this means a core part of your
+user experience is missing. It can also be a sort of perceptual performance
+issue in that the page is not rendering meaningful content as quickly as it
+otherwise could. Thankfully, the **All Text Remains Visible During Web Font
+Loads** audit helps you to find opportunities to fix this on your site!
+
+<figure>
+  <img src="images/fig-10-1x.png" srcset="images/fig-10-2x.png 2x,
+images/fig-10-2x.png 1x" alt="Lighthouse giving recommendations for improving
+font rendering.">
+  <figcaption><strong>Figure 10</strong>. Lighthouse giving recommendations for
+improving font rendering.</figcaption>
+</figure>
+
+If Lighthouse finds web fonts in your application that are delaying text
+rendering, there's a few potential remedies. You can control text rendering with
+the [`font-display` CSS property](https://css-tricks.com/font-display-masses/),
+and/or [the Font Loading
+API](/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#the_font_loading_api).
+If you want to dig deeper, consider reading [_A Comprehensive Guide to Font
+Loading Strategies_](https://www.zachleat.com/web/comprehensive-webfonts/), an
+excellent guide by [Zach Leatherman](https://www.zachleat.com/web/) which is an
+excellent resource for optimal font loading.
+
+## Unminified CSS & JavaScript
+
+[Minification](/web/fundamentals/performance/webpack/decrease-frontend-size#enable-minification)
+has been a suggested technique since web performance has been a thing, and for
+good reason. It significantly reduces the size of text-based resources, which in
+turn is good for loading performance. However, it's easy to overlook this
+optimization, especially if build processes don't take care of it for you. The
+[**Minify CSS**](/web/tools/lighthouse/audits/minify-css) and **Minify
+JavaScript** audits will compile a list of unminified resources it finds on the
+current page. From there, you can take action by minifying those files manually,
+or augmenting your build system to do it for you.
+
+## Unused CSS Rules
+
+As a site gets a bit long in the tooth, it's inevitable that the cruft left over
+from refactoring begins to build up. One such source of cruft comes in the form
+of unused CSS rules which are no longer necessary for the site to function, yet
+still consume bandwidth. For your convenience, the **Unused CSS Rules** audit
+reveals which CSS resources on the page contain unused CSS.
+
+<figure>
+  <img src="images/fig-11-1x.png" srcset="images/fig-11-2x.png 2x,
+images/fig-11-2x.png 1x" alt="Lighthouse showing a list of CSS resources
+containing unused CSS rules.">
+  <figcaption><strong>Figure 11</strong>. Lighthouse showing a list of CSS
+resources containing unused CSS rules.</figcaption>
+</figure>
+
+If Lighthouse finds unused CSS on the page, there are ways to get rid of it.
+[UnCSS](https://github.com/uncss/uncss) is one such utility that does this for
+you automatically (although it must be used with care). A more manual method
+involves using [the code coverage
+panel](/web/updates/2017/04/devtools-release-notes#coverage) in DevTools. Just
+remember, though, that unused CSS on one page could be necessary on another.
+Another approach may be to split your CSS into template-specific files that are
+only loaded where necessary. Whatever you decide to do, Lighthouse will be there
+to let you know if your CSS cruft is getting to be a bit much.
 
 ## Give Lighthouse a try!
 
