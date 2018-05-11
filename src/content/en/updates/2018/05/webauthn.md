@@ -161,7 +161,7 @@ We are working on more detailed documentation:
   article by Adam Langley
 
 The session ["What's new with sign-up and sign-in on the 
-web"](https://www.youtube.com/watch?v=kGGMgEfSzMw) 
+web"](https://youtu.be/kGGMgEfSzMw?t=15m21s) 
 at Google I/O 2018 covered WebAuthn.
 
 {% include "web/_shared/rss-widget-updates.html" %}
