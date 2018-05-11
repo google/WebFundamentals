@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Overview of Puppeteer
 
-{# wf_updated_on: 2018-01-11 #}
+{# wf_updated_on: 2018-05-10 #}
 {# wf_published_on: 2018-01-11 #}
 {# wf_blink_components: Internals>Headless #}
 
@@ -27,6 +27,12 @@ can also be configured to use full (non-headless) Chrome or Chromium.
      class="pptr-logo attempt-right" alt="Puppeteer Logo">
 
 <<_src/_index/usecases.md>>
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lhZOFUY1weo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Next steps {: #next-steps }
 
