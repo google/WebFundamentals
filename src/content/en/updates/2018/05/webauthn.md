@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, which allows browsers to interact with and manage public-key based credentials. This enables strong authentication using removable security keys and built-in platform authenticators such as fingerprint scanners.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-11 #}
 {# wf_published_on: 2018-05-10 #}
 {# wf_tags: webauthn, credentials, sign-in, chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -13,6 +13,12 @@ description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, wh
 
 {% include "web/_shared/contributors/cbrand.html" %}
 {% include "web/_shared/contributors/agektmr.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="kGGMgEfSzMw"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## The problem
 
@@ -155,9 +161,8 @@ We are working on more detailed documentation:
   article by Adam Langley
 
 The session ["What's new with sign-up and sign-in on the 
-web"](https://events.google.com/io/schedule/?section=may-10&sid=09d71b68-0542-4f32-8c99-f3e82874bde4) 
-at Google I/O 2018 will cover WebAuthn. Come by the Web Sandbox to talk to the 
-experts.
+web"](https://youtu.be/kGGMgEfSzMw?t=15m21s) 
+at Google I/O 2018 covered WebAuthn.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
