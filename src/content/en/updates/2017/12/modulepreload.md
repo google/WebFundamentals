@@ -144,5 +144,6 @@ consider bundling your application into several chunks in the meantime. There's 
 ongoing module work happening in Chrome, though, so we're getting closer to giving
 bundlers their well-earned rest!
 
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
