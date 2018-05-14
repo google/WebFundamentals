@@ -96,10 +96,10 @@ defaults just work.
 
 ```html
 <head>
-  <link rel="modulepreload" href="super-critical-stuff.js">
+  <link rel="modulepreload" href="super-critical-stuff.mjs">
 </head>
 [...]
-<script type="module" src="super-critical-stuff.js">
+<script type="module" src="super-critical-stuff.mjs">
 ```
 And since Chrome now knows that what you're preloading is a module, it can be smart
 and parse and compile the module as soon as it's done fetching, instead of waiting
@@ -107,7 +107,7 @@ until it tries to run.
 
 ## But what about modules' dependencies?
 
-Funny you should ask! There is indeed something we haven't talked about: recursively.
+Funny you should ask! There is indeed something we haven't talked about: recursion.
 
 The `<link rel="modulepreload">` spec actually allows for optionally loading not just
 the requested module, but all of its dependency tree as well. Browsers don't have to
@@ -123,11 +123,11 @@ of its dependencies, and trust the browser not to fetch the same module twice.
 ```html
 <head>
   <!-- dog.js imports dog-head.js, which in turn imports
-       dog-head-mouth.js, and so on.  -->
-  <link rel="modulepreload" href="dog.js">
-  <link rel="modulepreload" href="dog-head.js">
-  <link rel="modulepreload" href="dog-head-mouth.js">
-  <link rel="modulepreload" href="dog-head-mouth-tongue.js">
+       dog-head-mouth.js, which imports dog-head-mouth-tongue.js. -->
+  <link rel="modulepreload" href="dog-head-mouth-tongue.mjs">
+  <link rel="modulepreload" href="dog-head-mouth.mjs">
+  <link rel="modulepreload" href="dog-head.mjs">
+  <link rel="modulepreload" href="dog.mjs">
 </head>
 ```
 
