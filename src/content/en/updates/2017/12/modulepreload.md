@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Module preload offers a way of declaratively loading JavaScript modules ahead of time.
 
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-05-14 #}
 {# wf_published_on: 2017-12-14 #}
 {# wf_tags: performance, modules #}
 {# wf_blink_components: Blink>Loader #}
