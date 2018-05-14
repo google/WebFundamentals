@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf audits for preload, preconnect, GIFs, and more.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-14 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -14,6 +14,12 @@ description: New perf audits for preload, preconnect, GIFs, and more.
 # Using Lighthouse To Improve Page Load Performance {: .page-title }
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Mv-l3-tJgGk"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 [Lighthouse](/web/tools/lighthouse/) is an automated tool for improving the
 quality of your site. You give it a URL, and it provides a list of
