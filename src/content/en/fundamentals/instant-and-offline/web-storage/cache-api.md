@@ -59,7 +59,7 @@ You can set the MIME type of a `Response` by setting the appropriate header.
 
 ## Working with Response objects
 
-If you have retrieved a `Response` and wish to access it's body, there are several helper methods
+If you have retrieved a `Response` and wish to access its body, there are several helper methods
 you can use. Each returns a `Promise` that resolves with a value of a different type.
 
 <table>
