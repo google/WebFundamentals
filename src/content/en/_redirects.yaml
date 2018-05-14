@@ -26,11 +26,32 @@ redirects:
 - from: /web/fundamentals/media
   to: /web/fundamentals/media/video
 
-- from: /web/updates/2017/06/user-centric-performance-metrics
-  to: /web/fundamentals/performance/user-centric-performance-metrics
+- from: /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
+  to: /web/fundamentals/web-app-manifest/
+
+- from: /web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android
+  to: /web/fundamentals/app-install-banners/
+
+- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
+  to: /web/fundamentals/web-app-manifest/
+
+- from: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
+  to: /web/fundamentals/web-app-manifest/
+
+- from: /web/updates/2015/10/splashscreen
+  to: /web/fundamentals/web-app-manifest/
+
+- from: /web/updates/2015/10/display-mode
+  to: /web/fundamentals/app-install-banners/#detect-mode
 
 - from: /web/updates/2016/02/save-data
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
+
+- from: /web/updates/2017/02/improved-add-to-home-screen
+  to: /web/fundamentals/app-install-banners/webapk
+
+- from: /web/updates/2017/06/user-centric-performance-metrics
+  to: /web/fundamentals/performance/user-centric-performance-metrics
 
 - from: /web/g-co/dpwa
   to: /web/updates/2018/05/dpwa

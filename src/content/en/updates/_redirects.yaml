@@ -263,9 +263,6 @@ redirects:
 - from: /web/updates/2015/09/tab-discarding-in-chrome-46
   to: /web/updates/2015/09/tab-discarding
 
-- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
-  to: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
-
 - from: /web/updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen
   to: /web/updates/2015/08/using-web-app-manifest-to-set-solid-color-loading-screen
 
