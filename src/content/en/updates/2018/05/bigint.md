@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: BigInts are a new numeric primitive in JavaScript that can represent integers with arbitrary precision. This article walks through some use cases and explains the new functionality in Chrome 67 by comparing BigInts to Numbers in JavaScript.
 
-{# wf_updated_on: 2018-04-30 #}
+{# wf_updated_on: 2018-05-12 #}
 {# wf_published_on: 2018-05-01 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -48,7 +48,7 @@ improvements.
 	         libraries."
        src="/web/updates/images/2018/05/bigint-perf.png">
   <figcaption>
-    The native BigInt implementation in Chrome performs better than popular userland libraries.
+    The native `BigInt` implementation in Chrome performs better than popular userland libraries.
   </figcaption>
 </figure>
 
@@ -252,7 +252,7 @@ BigInt.asIntN(64, max);
 → 9223372036854775807n
 BigInt.asIntN(64, max + 1n);
 // → -9223372036854775808n
-//    ^ negative because of overflow
+//   ^ negative because of overflow
 ```
 
 Note how overflow occurs as soon as we pass a `BigInt` value exceeding the 64-bit integer range
@@ -286,10 +286,14 @@ view[0];
 view[0] = max + 1n;
 view[0];
 // → -9_223_372_036_854_775_808n
-//    ^ negative because of overflow
+//   ^ negative because of overflow
 ```
 
 The `BigUint64Array` flavor does the same using the unsigned 64-bit limit instead.
+
+If you’re interested in how `BigInt`s work behind the scenes (e.g. how they are represented in
+memory, and how operations on them are performed), [read our V8 blog post with implementation
+details](https://v8project.blogspot.com/2018/05/bigint.html).
 
 Have fun with `BigInt`s!
 
