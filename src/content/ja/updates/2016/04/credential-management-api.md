@@ -2,15 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: 洗練されたユーザ体験を提供するために、あなたのウェブサイトでユーザの認証を手助けすることは重要なことです。しかし、特にモバイル環境においては、パスワードの作成、記憶、そして打ち込みは、エンドユーザにとって面倒に感じる傾向があります。
 
-{# wf_updated_on: 2016-05-07 #}
+{# wf_updated_on: 2016-11-08 #}
 {# wf_published_on: 2016-05-07 #}
 
 # Credential Management API を使ったサインインフローの効率化 {: .page-title }
 
+{%include "web/_shared/contributors/agektmr.html" %}
 
-Translated By: 
-{% include "web/_shared/contributors/yoichiro.html" %}
-
+Warning: 本翻訳記事公開後仕様が大幅に変更されています。変更点は[こちらから](/web/updates/2017/06/credential-management-updates)ご確認ください。
 
 洗練されたユーザ体験を提供するために、ウェブサイト上でユーザ認証を手助けすることは非常に重要なことです。
 認証されたユーザは、専用のプロフィール、デバイス間やオフライン状態で処理された情報の同期など
@@ -104,8 +103,8 @@ _アカウントチューザー UI は、サインインするためのアカウ
     }).then(function(cred) {
       // continuation
       ...
-    
-    
+
+
 
 ### サインインのためのパスワードクレデンシャルの利用
 
@@ -119,14 +118,14 @@ _アカウントチューザー UI は、サインインするためのアカウ
         if (cred.type == 'password') {
           // Construct FormData object
           var form = new FormData();
-    
+
           // Append CSRF Token
           var csrf_token = document.querySelector('csrf_token').value;
           form.append('csrf_token', csrf_token);
-    
+
           // You can append additional credential data to `.additionalData`
           cred.additionalData = form;
-    
+
           // `POST` the credential object as `credentials`.
           // id, password and the additional data will be encoded and
           // sent to the url as the HTTP body.
@@ -138,8 +137,8 @@ _アカウントチューザー UI は、サインインするためのアカウ
           });
         } else if (cred.type == 'federated') {
           // continuation
-    
-    
+
+
 
 ### サインインのためのフェデレーションクレデンシャルの利用
 
@@ -162,7 +161,7 @@ _複数のアカウントがパスワードマネージャに登録されてい�
     }).then(function(cred) {
       // continuation
       ...
-    
+
 
 
 `PasswordCredential `(`type == 'password'`) または `FederatedCredential` (`type == 'federrated'`)
@@ -179,7 +178,7 @@ _複数のアカウントがパスワードマネージャに登録されてい�
             case 'https://accounts.google.com':
               // Federated login using Google Sign-In
               var auth2 = gapi.auth2.getAuthInstance();
-    
+
               // In Google Sign-In library, you can specify an account.
               // Attempt to sign in with by using `login_hint`.
               return auth2.signIn({
@@ -188,12 +187,12 @@ _複数のアカウントがパスワードマネージャに登録されてい�
                 // continuation
               });
               break;
-    
+
             case 'https://www.facebook.com':
               // Federated login using Facebook Login
               // continuation
               break;
-    
+
             default:
               // show form
               break;
@@ -202,7 +201,7 @@ _複数のアカウントがパスワードマネージャに登録されてい�
       // if the credential is `undefined`
       } else {
         // show form
-    
+
 
 <img src="/web/updates/images/2016/04/credential-management-api/image02.png" />
 
@@ -234,9 +233,9 @@ HTML
       <input type="hidden" name="csrf_token" value="******" />
     </form>
 
-    
+
 JavaScript
-    
+
     var form = document.querySelector('\#form');
     var cred = new PasswordCredential(form);
     // Store it
@@ -244,7 +243,7 @@ JavaScript
     .then(function() {
       // continuation
     });
-    
+
 
 
 
@@ -264,7 +263,7 @@ JavaScript
     .then(function() {
       // continuation
     });
-    
+
 
 <img src="/web/updates/images/2016/04/credential-management-api/image04.png" />
 
@@ -299,7 +298,7 @@ _ユーザが自動的にサインインする際に、通知がポップアッ�
         ...
       }
     });
-    
+
 
 コードは、"サインイン時にアカウントチューザーを表示する"セクションの時に見たものと似ているはずです。
 違いは、`unmediated: true` がセットされていることのみです。
@@ -330,7 +329,7 @@ mediation モードを有効にすることができます。
 
 
     navigator.credentials.requireUserMediation();
-    
+
 
 <img src="/web/updates/images/2016/04/credential-management-api/image07.png" />
 
@@ -351,3 +350,19 @@ mediation モードを有効にすることができます。
 **Credential Management API を使って、自分のパスワード管理 Chrome 拡張機能を統合することができますか？**
 `navigator.credentials` をオーバーライドして、クレデンシャルの `get()` または `store()` をするために、
 それをあなたの Chrome 拡張機能にフックすることはできるかもしれません。
+
+## リソース
+より深く Credential Management API を学ぶには、[Integration Guide](/web/fundamentals/security/credential-management/) をご覧下さい。
+
+* [API 仕様](https://www.w3.org/TR/credential-management/)
+* [仕様のディスカッションとフィードバック](https://github.com/w3c/webappsec-credential-management)
+* [MDN API リファレンス](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+* [Credential Management API インテグレーションガイド](/web/fundamentals/security/credential-management/)
+* [デモ](https://credential-management-sample.appspot.com)
+* [デモのソースコード](https://github.com/GoogleChrome/credential-management-sample)
+* [コードラボ "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
+
+Translated By:
+{% include "web/_shared/contributors/yoichiro.html" %}
+
+{% include "comment-widget.html" %}

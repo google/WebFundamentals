@@ -1,88 +1,108 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
+title: Tools
 
 landing_page:
   custom_css_path: /web/styles/wf-root.css
 
-  header:
-    description: >
-      Discover our tools that can help you kickstart your development.
-
   rows:
-
-  - heading: Chrome DevTools
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+  - classname: devsite-landing-row-cards
     items:
-    - description: >
+    - heading: Chrome DevTools
+      description: >
         The Chrome DevTools are a set of web authoring and debugging tools
         built into Google Chrome. Use the DevTools to iterate, debug and
         profile your site.
-      image_path: images/chrome-devtools.png
+      image_path: images/chrome-devtools-16x9.png
+      path: /web/tools/chrome-devtools/
       buttons:
       - label: Get Started
         path: /web/tools/chrome-devtools/
-        classname: button button-primary
-
-  - heading: Libraries
-    items:
-    - heading: Service Worker Libraries
+    - heading: Lighthouse
       description: >
-        Our Service Worker Libraries are provided to help simplify your
-        development experience, that free your app from the network, without
-        having to write any boilerplate service worker code!
+        Lighthouse is an open-source, automated tool for improving the quality
+        of your web apps. It is integrated directly into the Chrome DevTools
+        Audits panel. You can also run Lighthouse from the command line or
+        install the Chrome Extension.
+      image_path: images/lighthouse-16x9.png
+      path: /web/tools/lighthouse/
       buttons:
-      - label: Service Worker Toolbox
-        path: service-worker-libraries/#service-worker-toolbox
-      - label: Service Worker Precache
-        path: service-worker-libraries/#service-worker-precache
-    - heading: Material Design Lite
+      - label: Get Started
+        path: /web/tools/lighthouse/
+    - heading: Puppeteer
       description: >
-        Material Design Lite lets you add a Material Design look and feel to
-        your websites. It doesn’t rely on any JavaScript frameworks and aims
-        to optimize for cross-device use, gracefully degrade in older browsers,
-        and offer an experience that is immediately accessible.
+        Puppeteer is a Node library which provides a high-level API to control
+        headless Chrome over the DevTools Protocol. It can also be configured
+        to use full (non-headless) Chrome or Chromium.
+      image_path: images/puppeteer-16x9.png
+      path: /web/tools/puppeteer/
       buttons:
       - label: Learn more
-        path: https://getmdl.io/
+        path: /web/tools/puppeteer/
+    - heading: Workbox
+      description: >
+        Workbox is a set of service worker libraries and tools that make it
+        easy to build an offline PWA and take advantage of the service worker
+        APIs.
+      image_path: images/workbox-16x9.png
+      path: /web/tools/workbox/
+      buttons:
+      - label: Get Started
+        path: /web/tools/workbox/
 
-  - heading: Frameworks
-    classname: devsite-landing-row-no-image-background wf-small-logos
+  - classname: devsite-landing-row-cards
     items:
-    - description: >
+    - heading: Polymer
+      description: >
         The Polymer Project helps you deliver amazing user experiences by
         unlocking the full potential of the web platform. Polymer makes the
         most of Web Components, a powerful new platform feature for extending
         HTML and componentizing your apps, allowing you to build cutting-edge
         Progressive Web Apps that load quickly, respond instantly and work
         from anywhere.
-      image_path: images/polymer.svg
+      image_path: images/polymer-16x9.png
+      path: https://www.polymer-project.org/
       buttons:
-      - label: Learn more
+      - label: Learn More
         path: https://www.polymer-project.org/
-    - description: >
+
+    - heading: Angular
+      description: >
         Angular is a development platform for building applications across web,
         mobile, and desktop. With simple, declarative templates, reusable
         components, and support for all parts of the development experience,
         Angular makes it easy to write, test, and deploy high performing
         applications at any scale.
-      image_path: images/angular.png
+      image_path: images/angular-16x9.png
+      path: https://angular.io/
       buttons:
-      - label: Learn more
-        path: https://angularjs.org/
+      - label: Learn More
+        path: https://angular.io/
 
-  - heading: Other Tools
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
-    items:
     - heading: PageSpeed Module
       description: >
         The PageSpeed modules are open-source server modules that optimize
         your site automatically.
-      image_path: images/pagespeed.png
+      image_path: images/pagespeed-16x9.png
+      path: /speed/pagespeed/module/
       buttons:
-      - label: Learn more
-        path: https://developers.google.com/speed/pagespeed/module/
-    
+      - label: Learn More
+        path: /speed/pagespeed/module/
 
-
+  - heading: More
+    classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Polymer Starter Kit
+      description: >
+        The Polymer Starter Kit is a starting point for building apps using a
+        drawer-based layout. The layout is provided by app-layout elements.
+      icon:
+        path: images/polymer-logo-1x1.png
+      path: https://www.polymer-project.org/2.0/start/toolbox/set-up
+    - heading: Setting Up Your Dev Environment
+      description: >
+        Set up your workspace to include a good editor, debugging, and build
+        tools for the multi-device web.
+      icon:
+        path: images/pagespeed.svg
+      path: /web/tools/setup/

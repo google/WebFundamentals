@@ -1,9 +1,9 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Introduction to ARIA and non-native HTML semantics
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to ARIA {: .page-title }
@@ -93,33 +93,35 @@ panel. Often, ARIA lets us create widget-type elements that wouldn't be possible
 with plain HTML.
 
  - For example, ARIA can add extra label and description text that is only
-   exposed to assistive technology APIs.
+   exposed to assistive technology APIs.<br>
 
-```
-<button aria-label="screen reader only label"></button>
-```
-    
+<div class="clearfix"></div>
+      
+    <button aria-label="screen reader only label"></button>
+
 
  - ARIA can express semantic relationships between elements that extend the
    standard parent/child connection, such as a custom scrollbar that controls a
    specific region.
 
-```
-<div role="scrollbar" aria-controls="main"></div>
-<div id="main">
-. . .
-</div>
-```
+<div class="clearfix"></div>
+
+    <div role="scrollbar" aria-controls="main"></div>
+    <div id="main">
+    . . .
+    </div>
+
     
 
  - And ARIA can make parts of the page "live", so they immediately inform
    assistive technology when they change.
 
-```
-<div aria-live="true">
-  <span>GOOG: $400</span>
-</div>
-```
+<div class="clearfix"></div>
+
+    <div aria-live="true">
+      <span>GOOG: $400</span>
+    </div>
+
     
 One of the core aspects of the ARIA system is its collection of *roles*. A role
 in accessibility terms amounts to a shorthand indicator for a particular UI
@@ -145,7 +147,7 @@ source of definitive information about how the ARIA roles and attributes work
 together and how they can be used in a way that is supported by browsers and
 assistive technologies.
 
-![a list of all the availabe ARIA roles](imgs/aria-roles.jpg)
+![a list of all the available ARIA roles](imgs/aria-roles.jpg)
 
 However, the spec is very dense; a more approachable place to start is the [ARIA
 Authoring Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/){: .external }

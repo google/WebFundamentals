@@ -1,0 +1,34 @@
+{
+  "environment": "web",
+  "source": "1rpHleSSeY-MJZ8JvncvYA8CFqlnlcrW8-a4uEaqizPY",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-04-08T09:12:17Z",
+  "id": "your-first-pwapp",
+  "duration": 0,
+  "title": "Your First Progressive Web App",
+  "author": "petele",
+  "summary": "In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "typtwd17",
+    "web"
+  ],
+  "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",
+  "url": "your-first-pwapp"
+}

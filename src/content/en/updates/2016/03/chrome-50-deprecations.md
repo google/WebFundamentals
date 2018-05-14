@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and API removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-03-14 #}
+{# wf_blink_components: Blink>Storage>AppCache,Blink>WebRTC,Internals>Media>Encrypted,Blink>SVG #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: deprecations,removals,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -19,34 +20,7 @@ improvements to the product, its performance, and also capabilities of the web
 platform.
 
 
-## Deprecation policy
-
-To keep the platform healthy we sometimes remove APIs from the Web Platform which
-have run their course.  There can be many reasons why we would remove an API, such
-as: they are superseded by newer APIs, are updated to reflect changes to
-specifications, to bring alignment and consistency with other browsers, or they are
-early experiments that never came to fruition in other browsers and thus
-can increase the burden of support for web developers.
-
-Some of these changes might have an effect on a very small number of sites and
-to mitigate issues ahead of time we try to give developers advanced notice so
-that if needed they can make the required changes to keep their sites running.
-
-Chrome currently has a
-[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation)
-and the TL;DR is:
-
-* Announce on blink-dev
-* Set warnings and give time scales in the developer console of the browser when
-  usage is detected on a page
-* Wait, monitor and then remove feature as usage drops
-
-You can find a list of all deprecated features in
-[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated)
-and removed features by applying the
-[removed filter](https://www.chromestatus.com/features#removed). We will also
-try to summarize some of the changes, reasoning, and migration paths in
-these posts.
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 In Chrome 50 (Estimated beta date: March 10 to 17) there are a number of changes to Chrome.
 This list is subject to change at any time.
@@ -63,7 +37,7 @@ content over HTTPS.
 
 AppCache is a feature that allows offline and persistent access to an origin,
 which is a powerful privilege escalation for an cross-site scripting attack. As
-part of a larger effort to [remove powerful features on insecure origins](ttps://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
+part of a larger effort to [remove powerful features on insecure origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins).
 
 Chrome is removing this attack vector by only allowing it over HTTPS. We're
 deprecating HTTP support in Chrome 50 and expect to remove it entirely in Chrome

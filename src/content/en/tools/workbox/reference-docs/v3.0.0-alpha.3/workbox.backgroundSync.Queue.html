@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Class: Queue</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small><a href="workbox.html">workbox</a>.<wbr><a href="workbox.backgroundSync.html">backgroundSync</a>.<wbr></small><span class="symbol-name">Queue</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0-alpha.3</small></span>
+            </div>
+            <p>A class to manage storing failed requests in IndexedDB and retrying them later. All parts of the storing and replaying process are observable via callbacks.
+            </p>
+          </header>
+          <section>
+            <h2>Constructor</h2>
+            <section>
+              <h3 id="Queue" class="symbol-name">Queue</h3>
+              <p class="type-signature"> new Queue(name, options)</p>
+              <p>Creates an instance of Queue with the given options</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>name</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>The unique name for this queue. This name must be unique as it's used to register sync events and store requests in IndexedDB specific to this instance. An error will be thrown if a duplicate name is detected.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>options</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>callbacks</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">Object</p>
+                                <p>Callbacks to observe the lifecycle of queued requests. Use these to respond to or modify the requests during the replay process.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>callbacks.requestWillEnqueue</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">function(StorableRequest)</p>
+                                <p>Invoked immediately before the request is stored to IndexedDB. Use this callback to modify request data at store time.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>callbacks.requestWillReplay</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">function(StorableRequest)</p>
+                                <p>Invoked immediately before the request is re-fetched. Use this callback to modify request data at fetch time.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>callbacks.queueDidReplay</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">function(Array of StorableRequest)</p>
+                                <p>Invoked after all requests in the queue have successfully replayed.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>maxRetentionTime</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">number</p>
+                                <p>The amount of time (in ms) a request may be retried. After this amount of time has passed, the request will be deleted from the queue.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+          <section>
+            <h2>Property</h2>
+            <section>
+              <h3 id="name" class="symbol-name">name</h3>
+              <p class="type-signature"></p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>string</code>&nbsp;</p>
+                </dd>
+              </dl>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id="addRequest" class="symbol-name">addRequest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> addRequest(request)</p>
+              <p>Stores the passed request into IndexedDB. The database used is
+                <code>workbox-background-sync</code> and the object store name is the same as the name this instance was created with (to guarantee it's unique).</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>request</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Request</p>
+                        <p>The request object to store.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="replayRequests" class="symbol-name">replayRequests</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> replayRequests()</p>
+              <p>Retrieves all stored requests in IndexedDB and retries them. If the queue contained requests that were successfully replayed, the
+                <code>queueDidReplay</code> callback is invoked (which implies the queue is now empty). If any of the requests fail, a new sync registration is created to retry again later.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

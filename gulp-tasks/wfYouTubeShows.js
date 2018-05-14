@@ -1,105 +1,153 @@
-'use strict';
-
-/*
-    wfYouTubeShows.js
-    TODO
+/**
+ * @fileoverview Generates the list of latest shows from YouTube
+ *
+ * @author Pete LePage <petele@google.com>
  */
 
-var fs = require('fs');
-var path = require('path');
-var gutil = require('gulp-util');
-var google = require('googleapis');
-var moment = require('moment');
-var wfTemplateHelper = require('./wfTemplateHelper');
+'use strict';
 
-function buildFeeds(buildType, callback) {
-  var apiKey;
+const fs = require('fs');
+const path = require('path');
+const chalk = require('chalk');
+const gutil = require('gulp-util');
+const google = require('googleapis');
+const moment = require('moment');
+const wfHelper = require('./wfHelper');
+const wfTemplateHelper = require('./wfTemplateHelper');
+
+const SINGLE_VIDEO_PLACEHOLDER = {
+  snippet: {
+    title: 'Lorem Ipsum - placeholder title',
+    description: 'more text goes here, this is the description.',
+    resourceId: {videoId: 'dQw4w9WgXcQ'},
+    thumbnails: {default: {url: 'https://via.placeholder.com/120x90'}},
+  },
+};
+const VIDEO_COLLECTION_PLACEHOLDER = [
+  SINGLE_VIDEO_PLACEHOLDER,
+  SINGLE_VIDEO_PLACEHOLDER,
+  SINGLE_VIDEO_PLACEHOLDER,
+  SINGLE_VIDEO_PLACEHOLDER,
+];
+
+/**
+ * Gets the YouTube API key.
+ *
+ * @return {string} YouTubeAPI key, or null.
+ */
+function getYouTubeAPIKey() {
   try {
-    apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    let apiKey = process.env.YOUTUBE_API_KEY;
+    if (!apiKey) {
+      apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+    }
+    return apiKey;
   } catch (ex) {
-    gutil.log(' ', 'YouTube feed build skipped, youtubeAPIKey.txt not found.');
-    if (buildType === 'production') {
-      return callback('youtubeAPIKey.txt not found.');
-    }
-    var videoPlaceholder = {snippet: 
-      {title: 'Lorem Ipsum - placeholder title', resourceId: {videoId: 'dQw4w9WgXcQ'}}
-    };
-    var context = {
-      videos: [videoPlaceholder, videoPlaceholder, videoPlaceholder, videoPlaceholder]
-    };
-    var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.md');
-    var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'index.md');
-    wfTemplateHelper.renderTemplate(template, context, outputFile);
-    callback();
-    return;
+    gutil.log(' ', 'youtubeAPIKey not found.');
   }
-  var youtube = google.youtube({version: 'v3', auth: apiKey});
-  var opts = {
-    maxResults: 25,
-    part: 'id,snippet',
-    playlistId: 'UUnUYZLuoy1rq1aVMwx4aTzw',
-  };
-  youtube.playlistItems.list(opts, function(err, response) {
-    if (err) {
-      gutil.log(' ', 'Error, unable to retreive playlist', err);
-      callback(err);
-    } else {
-      var articles = [];
-      response.items.forEach(function(video) {
-        var iframe = '<iframe width="560" height="315" ';
-        iframe += 'src="https://www.youtube.com/embed/';
-        iframe += video.snippet.resourceId.videoId + '" frameborder="0" ';
-        iframe += 'allowfullscreen></iframe>\n<br>\n<br>';
-        var content = video.snippet.description.replace(/\n/g, '<br>\n');
-        content = iframe + content;
-        var result = {
-          url: video.snippet.resourceId.videoId,
-          title: video.snippet.title,
-          description: video.snippet.description,
-          image: video.snippet.thumbnails.default,
-          datePublished: video.snippet.publishedAt,
-          dateUpdated: video.snippet.publishedAt,
-          tags: [],
-          analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
-          content: content,
-          atomAuthor: 'Google Developers',
-          rssPubDate: moment(video.snippet.publishedAt).format('DD MMM YYYY HH:mm:ss [GMT]')
-        };
-        articles.push(result);
-        var shortDesc = video.snippet.description.replace(/\n/g, '<br>');
-        // shortDesc = shortDesc.
-        if (shortDesc.length > 256) {
-          shortDesc = shortDesc.substring(0, 254) + '...';
-        }
-        video.shortDesc = shortDesc;
-      });
-      var context = {
-        videos: response.items
-      };
-      var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.md');
-      var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'index.md');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
+  return null;
+}
 
-      context = {
-        title: 'Web Shows - Google Developers',
-        description: 'YouTube videos from the Google Chrome Developers team',
-        feedRoot: 'https://developers.google.com/web/shows/',
-        host: 'https://youtu.be/',
-        baseUrl: 'https://youtube.com/user/ChromeDevelopers/',
-        analyticsQS: '',
-        atomPubDate: moment().format('YYYY-MM-DDTHH:mm:ss[Z]'),
-        articles: articles
-      };
-      template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
-      outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'atom.xml');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
+/**
+ * Renders the RSS or ATOM template based on the context.
+ *
+ * @param {string} file File to generate.
+ * @param {Object} context Context to use when rendering.
+ */
+function generateFeed(file, context) {
+  const template = path.join(global.WF.src.templates, file);
+  const outputFile = path.join(global.WF.src.content, 'shows', file);
+  wfTemplateHelper.renderTemplate(template, context, outputFile);
+}
 
-      template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
-      outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'rss.xml');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
-      callback();
+/**
+ * Gets the Data feed from YouTube.
+ *
+ * @param {string} buildType If build type is production, and it can read the
+ *                           API key, the function will fail.
+ * @return {Promise<Array>} Array of videos.
+ */
+function getVideos(buildType) {
+  return new Promise((resolve, reject) => {
+    const apiKey = getYouTubeAPIKey();
+    if (!apiKey) {
+      const msg = `${chalk.cyan('getVideos')} failed,`;
+      // If the build type is production, abort with critical failure.
+      if (buildType === 'production') {
+        gutil.log(' ', chalk.red('ERROR:'), msg, 'required for production.');
+        reject('youtubeAPIKey not found.');
+        return;
+      }
+      gutil.log(' ', chalk.yellow('Oops:'), msg, 'using placeholder videos.');
+      resolve(VIDEO_COLLECTION_PLACEHOLDER);
+      return;
     }
+    const youtube = google.youtube({version: 'v3', auth: apiKey});
+    const opts = {
+      maxResults: 25,
+      part: 'id,snippet',
+      playlistId: 'UUnUYZLuoy1rq1aVMwx4aTzw',
+    };
+    youtube.playlistItems.list(opts, (err, response) => {
+      if (err) {
+        gutil.log(' ', 'Error, unable to retreive playlist', err);
+        reject(err);
+        return;
+      }
+      resolve(response.items);
+      return;
+    });
   });
 }
 
+/**
+ * Builds the RSS & ATOM feeds from a YouTube video feed.
+ *
+ * @param {Array} videos Array of videos from YouTube.
+ */
+function buildFeeds(videos) {
+  const articles = [];
+  videos.forEach((video) => {
+    let iframe = '<iframe width="560" height="315" ';
+    iframe += 'src="https://www.youtube.com/embed/';
+    iframe += video.snippet.resourceId.videoId + '" frameborder="0" ';
+    iframe += 'allowfullscreen></iframe>\n<br>\n<br>';
+    const description = video.snippet.description.replace(/\n/g, '<br>\n');
+    const content = iframe + description;
+    const publishedAtMoment = moment(video.snippet.publishedAt);
+    let result = {
+      url: video.snippet.resourceId.videoId,
+      title: video.snippet.title,
+      description: video.snippet.description,
+      image: video.snippet.thumbnails.default,
+      datePublishedMoment: publishedAtMoment,
+      dateUpdatedMoment: publishedAtMoment,
+      tags: [],
+      analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
+      content: content,
+      atomAuthor: 'Google Developers',
+    };
+    articles.push(result);
+  });
+
+  // Note - use last updated instead of now to prevent feeds from being
+  // generated every single time. This will only generate if the feeds are
+  // actually updated.
+  const lastUpdated = articles[0].datePublishedMoment;
+  const context = {
+    title: 'Web Shows - Google Developers',
+    description: 'YouTube videos from the Google Chrome Developers team',
+    feedRoot: 'https://developers.google.com/web/shows/',
+    host: 'https://youtu.be/',
+    baseUrl: 'https://youtube.com/user/ChromeDevelopers/',
+    analyticsQS: '',
+    atomPubDate: wfHelper.dateFormatAtom(lastUpdated),
+    rssPubDate: wfHelper.dateFormatRSS(lastUpdated),
+    articles: articles,
+  };
+  generateFeed('atom.xml', context);
+  generateFeed('rss.xml', context);
+}
+
+exports.getVideos = getVideos;
 exports.buildFeeds = buildFeeds;

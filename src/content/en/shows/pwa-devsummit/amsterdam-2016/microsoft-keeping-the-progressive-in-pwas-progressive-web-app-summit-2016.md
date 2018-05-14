@@ -21,4 +21,4 @@ Patrick is a web developer, hacker, and dad from Seattle. As a passionate propon
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

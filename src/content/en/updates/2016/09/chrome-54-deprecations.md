@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-09-14 #}
+{# wf_blink_components: Internals>Network>HTTP2,IO>Keyboard,Blink>MediaStream>*,Blink>SVG #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-09-14 #}
 {# wf_tags: deprecations,removals,chrome54 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -12,34 +13,7 @@ description: An round up of the deprecations and removals in Chrome to help you 
 {% include "web/_shared/contributors/josephmedley.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-
-
-In nearly every version of Chrome, we see a significant number of updates and improvements to the product, its performance, and also capabilities of the Web Platform. This article describes the deprecations and removals in Chrome 54, which is in beta as of Setempber 15. This list is subject to change at any time.
-
-
-## Deprecation policy
-
-To keep the platform healthy, we sometimes remove APIs from the Web Platform which have run their course. There can be many reasons why we would remove an API, such as: they are superseded by newer APIs, they are updated to reflect changes to specifications to bring alignment and consistency with other browsers, or they are early experiments that never came to fruition in other browsers and thus can increase the burden of support for web developers.
-
-Some of these changes will have an effect on a very small number of sites. To mitigate issues ahead of time, we try to give developers advanced notice so that if needed, they can make the required changes to keep their sites running.
-
-
-Chrome currently has a
-[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation)
-and the TL;DR is:
-
-* Announce on the [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev) mailing list.
-* Set warnings and give time scales in the Chrome DevTools Console when usage is detected on a page.
-* Wait, monitor, and then remove feature as usage drops.
-
-
-You can find a list of all deprecated features in
-[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated)
-and removed features by applying the
-[removed filter](https://www.chromestatus.com/features#removed). We will also 
-try to summarize some of the changes, reasoning, and migration paths in 
-these posts. We will also try to summarize some of the changes, reasoning, and migration paths in these posts.
-
+In nearly every version of Chrome, we see a significant number of updates and improvements to the product, its performance, and also capabilities of the Web Platform. This article describes the deprecations and removals in Chrome 54, which is in beta as of September 15. This list is subject to change at any time.
 
 ## Disable navigations in the unload handler
 
@@ -81,7 +55,7 @@ spec compliance and will be removed altogether in Chrome 54.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5730982598541312) &#124;
-[CRBug Issue](https://code.google.com/p/chromium/issues/detail?id=522100)
+[Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=522100)
 
 For a long time developers have been able to create synthetic touch events in Chrome
 using the `initTouchEvent` API. These are frequently used to simulate Touch Events
@@ -224,6 +198,6 @@ The `SVGZoomEvent`  is not part of the SVG2.0 specification and does not functio
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5760883808534528) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=367890)
 
-
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

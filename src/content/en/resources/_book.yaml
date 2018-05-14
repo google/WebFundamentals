@@ -13,18 +13,23 @@ upper_tabs:
         contents:
         - title: Overview
           path: /web/resources/
-        - title: Writing an Article
+        - title: Writing an article
           path: /web/resources/writing-an-article
-        - title: Writing an Update or Case Study
+        - title: Writing an update or case study
           path: /web/resources/writing-an-update
-        - title: Style Guide
-          path: /web/resources/style-guide
+        - title: YAML Front Matter & Attribute Reference
+          path: /web/resources/yaml-and-attr-reference
+        - title: Writing style guide
+          path: /style/
+          status: external
+        - title: Markdown syntax
+          path: /web/resources/markdown-syntax
         - title: Widgets
           path: /web/resources/widgets
-        - title: Including Videos
+        - title: Including videos
           path: /web/resources/including-videos
         - title: Contributors
           path: /web/resources/contributors
-        - title: Translation Guideance
+        - title: Translation guidance
           path: /web/resources/translations
 

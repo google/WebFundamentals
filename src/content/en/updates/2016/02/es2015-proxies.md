@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ES2015 Proxies (in Chrome 49 and later) provide JavaScript with an intercession API, enabling us to trap or intercept all of the operations on a target object and modify how this target operates.
 
-{# wf_updated_on: 2016-02-29 #}
+{# wf_updated_on: 2018-03-30 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: javascript,es2015,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/02/es2015-proxies/featured.png #}
+{# wf_blink_components: N/A #}
 
 # Introducing ES2015 Proxies {: .page-title }
 
@@ -43,7 +44,7 @@ Let’s begin by taking a plain object and adding some interception middleware t
     
     var superhero = new Proxy(target, {
        get: function(target, name, receiver) {
-           console.log('get was called for: ', name);
+           console.log('get was called for:', name);
            return target[name];
        }
     });
@@ -54,8 +55,10 @@ Let’s begin by taking a plain object and adding some interception middleware t
 
 Running the above code in Chrome 49 we get the following:
 
-get was called for:  power
+<pre>
+get was called for: power  
 "Flight"
+</pre>
 
 As we can see in practice, performing our property get or property set on the proxy object correctly resulted in a meta-level call to the corresponding trap on the handler. Handler operations include property reads, property assignment, and function application, all of which get forwarded to the corresponding trap.
 
@@ -199,7 +202,7 @@ Access control is another good use case for Proxies. Rather than passing a targe
 
 ## Using reflection with proxies
 
-[Reflect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect) is a new built-in object that provides methods for interceptable JavaScript operations, very much useful for working with Proxies. In fact, Reflect methods are the the same as those of [proxy handlers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
+[Reflect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect) is a new built-in object that provides methods for interceptable JavaScript operations, very much useful for working with Proxies. In fact, Reflect methods are the same as those of [proxy handlers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
 
 Statically typed languages like Python or C# have long offered a reflection API, but JavaScript hasn’t really needed one being a dynamic language. One can argue ES5 already has quite a few reflection features, such as `Array.isArray()` or `Object.getOwnPropertyDescriptor()` which would be considered reflection in other languages. ES2015 introduces a Reflection API which will house future methods for this category, making them easier to reason about. This makes sense as Object is meant to be a base prototype rather than a bucket for reflection methods.
 
@@ -297,10 +300,11 @@ Google has released a [limited polyfill for Proxy](https://github.com/GoogleChro
 * [ES6 Proxies and Reflect on TagTree](http://tagtree.tv/es6-proxies)
 * [MDN: The Reflect Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
 * [ES6 Reflection in depth](https://ponyfoo.com/articles/es6-reflection-in-depth)
-* [Proxies: Design Principles for Robust Object-oriented Intercession APIs](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36574.pdf)
+* [Proxies: Design Principles for Robust Object-oriented Intercession APIs](https://research.google.com/pubs/pub36574.html)
 * [2ality: Metaprogramming with ES6](http://www.2ality.com/2014/12/es6-proxies.html)
 * [Metaprogramming in ES6 using Reflect](http://blog.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/)
 * [ES6 everyday Reflect](http://www.loganfranken.com/blog/902/es6-everyday-reflect/)
 
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

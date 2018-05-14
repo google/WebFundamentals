@@ -1,0 +1,168 @@
+<html devsite><head>
+  <title>Gzilenmiş anahtar kelimeler ve bağlantılar saldırısını düzeltme</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoLMiYpjArW9nlDUh5Fd/tj3ANwnrHrtJgc3J1GP4EyxKrz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Bu rehber, anlamsız kelimeler saldırısı adını verdiğimiz ve sitenize anahtar kelime ağırlıklı anlamsız sayfalar ekleyen belirli bir tür saldırı hakkında bilgi vermek için hazırlandı. <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Popüler İçerik Yönetim Sistemleri</a> (CMS) kullanıcıları için tasarlanan bu rehberi, CMS kullanmasanız bile faydalı bulacağınızı düşünüyoruz.</p>
+
+<p><strong>Not:</strong> Sitenizin saldırıya uğramış olup olmadığından emin değil misiniz? İlk olarak, <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">sitenizin saldırıya uğramış olup olmadığını kontrol etme</a> rehberimizi okuyun.</p>
+
+
+
+<aside class="note">Bu rehberin size gerçekten yardımcı olduğuna emin olmak istiyoruz. İyileştirmemize yardımcı olmak için lütfen <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">geri bildirim bırakın</a>!</aside>
+
+<h2>İçindekiler</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">1. Adım: Bu tür saldırıları belirleme</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">2. Adım: Sorunu düzeltme</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">3. Adım: Ek kaynaklar</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Saldırıya Uğramış Siteler için SSS</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>Bu tür saldırıları belirleme</h2>
+
+<p>Gizlenmiş anahtar kelimeler ve bağlantı saldırısı, anlamlı olmayan metin, bağlantı ve resimlerin olduğu çok sayıda sayfayı otomatik olarak oluşturur. Bu sayfalar bazen orijinal sitedeki temel şablon öğelerini içerir. Bu nedenle içerik okununcaya kadar sayfalar ilk bakışta sitenizin normal bölümleri gibi görünebilir.</p>
+
+<p>Saldırıya uğramış sayfalar, Google'ın sıralama faktörlerini değiştirmek amacıyla oluşturulur. Bilgisayar korsanları sıklıkla, saldırıya uğramış sayfalardaki bağlantıları farklı üçüncü taraflara satarak para kazanmaya çalışırlar. Saldırıya uğramış sayfalar çoğu kez ziyaretçileri, bilgisayar korsanlarının para kazanabileceği pornografi içerikli site gibi alakasız bir sayfaya yönlendirir.</p>
+
+<p>Böyle bir sorunun olup olmadığını kontrol etmek için ilk olarak <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>'daki <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Güvenlik Sorunları</a> aracını kullanın. Bu araç, Google'ın sitenizde bu tür saldırıya uğramış sayfa bulup bulmadığını gösterir. Bazen, bir Google Arama penceresi açıp <code class="notranslate l10n-notranslate">site:[your site]</code> yazarak da bunun gibi sayfalar olup olmadığını görebilirsiniz. Bu şekilde arama yaptığınızda, saldırıya uğramış sayfalar da dahil olmak üzere Google'ın siteniz için dizine eklediği sayfalar gösterilir. Normal olmayan URL'ler olup olmadığını görmek için arama sonuçlarının birkaç sayfasına göz atın. Google Arama'da saldırıya uğramış bir içerik görmüyorsanız, aynı arama terimlerini farklı bir arama motoruyla deneyin. Diğer arama motorları, Google'ın dizinden kaldırdığı saldırıya uğramış içeriği gösterebilir.
+  Bunun nasıl görüneceğine ilişkin bir örnek aşağıda verilmiştir.</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Not:</strong> <em>Buradaki arama sonuçlarının, site sahibi tarafından oluşturulmayan birçok sayfa içerdiğine dikkat edin. İkinci ve üçüncü arama sonuçlarının açıklamalarını yakından incelerseniz, bu saldırının oluşturduğu anlamsız metin örnekleri görürsünüz.</em></p>
+
+<p>Saldırıya uğramış bir sayfayı ziyaret ettiğinizde, sayfanın mevcut olmadığını gösteren bir mesaj (404 hatası gibi) görebilirsiniz. Aldanmayın! Bilgisayar korsanları, saldırıya uğramış sayfaların kaldırıldığına veya düzeltildiğine inanmanızı sağlayarak, sitenizin düzelmiş olduğunu düşünmeniz için sizi kandırmaya çalışacaklardır. Bunu, sayfadaki içeriği <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">gizleyerek</a> yaparlar. <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Google Gibi Getir</a> aracına sitenizin URL'lerini girerek, gizleme olup olmadığını kontrol edebilirsiniz. Google Gibi Getir aracı sayfadaki gizli içeriği görebilmenize olanak sağlar.
+  Saldırıya uğramış sayfaların neye benzediğine ilişkin bir örneği aşağıda bulabilirsiniz.</p>
+
+<img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
+
+
+<a name="fixing"></a>
+<h2>Sorunu düzeltme</h2>
+
+<p>Başlamadan önce, dosyaları kaldırmadan çevrimdışı kopyalarını alın. Daha sonra bunları geri yüklemeniz gerekebilir. Daha da iyisi, temizlik işlemine başlamadan önce sitenin tamamını yedekleyin. Bunun için sunucunuzdaki tüm dosyaları sunucu dışındaki bir konuma kaydedebilir veya kullandığınız CMS'nin en iyi yedekleme seçenekleri için arama yapabilirsiniz.</p>
+
+<h3>.htaccess dosyanızı kontrol edin (3 adım)</h3>
+
+<p>Gizli anahtar kelimeler ve bağlantı saldırısı sitenizde otomatik olarak gizli sayfalar oluşturmak için .htaccess dosyanızı kullanır. Resmi Apache sitesindeki <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">.htaccess ile ilgili temel bilgiler</a> konusunda bilgi edinirseniz, saldırının sitenizi nasıl etkilediğini daha iyi anlayabilirsiniz, ama bu zorunlu değildir. </p>
+
+<p><b>1. Adım</b></p>
+<p>Sitenizde .htaccess dosyanızı bulun. Dosyanın yerinden emin değilseniz ve WordPress, Joomla veya Drupal gibi bir CMS kullanıyorsanız, bir arama motorunda CMS'nizin adıyla birlikte ".htaccess dosyasının konumu" araması yapın. Sitenize bağlı olarak birden fazla .htaccess dosyası görebilirsiniz. Tüm .htaccess dosya konumlarının bir listesini yapın.
+</p>
+
+<p><strong>Not:</strong> .htaccess genellikle "gizli bir dosyadır". Arama yaparken gizli dosyaları gösterme seçeneğini etkinleştirdiğinizden emin olun.</p>
+
+
+<p><b>2. adım</b></p>
+<p>Dosyadaki içeriği görüntülemek için .htaccess dosyasını açın. Dosyada, aşağıdakine benzer bir kod satırı görmelisiniz:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteRule (.*cj2fa.*|^tobeornottobe$) /injected_file.php?q=$1 [L]
+</pre>
+
+<p>Bu satırdaki değişkenler değişebilir. Hem "cj2fa" hem de "tobeornottobe" karışık harfler veya kelimelerden oluşan herhangi bir dize olabilir. Önemli olan bu satırda başvuruda bulunulan .php dosyasını belirleyebilmektir.</p>
+
+<p>.htaccess dosyasında bahsedilen .php dosyasının yazın. Örnekteki .php dosyasının adı "injected_file.php" olarak belirtilmiştir, ancak gerçekte .php dosyasının böyle açıkça belli bir adı olmayacaktır. Genellikle "horsekeys.php", "potatolake.php" gibi zararsız kelimelerden oluşur. Bu büyük olasılıkla izlememiz ve daha sonra kaldırmamız gereken kötü amaçlı .php dosyasıdır.</p>
+
+<div class="alert">.htaccess dosyanızda RewriteRule ve .php olan satırların hepsi kötü amaçlı değildir.
+  Bir kod satırının işlevinden emin değilseniz, <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">Web Yöneticisi Yardım Forumlarında</a> deneyimli yöneticilerden yardım alabilirsiniz.</div>
+
+<p><b>3. adım</b></p>
+<p>Tüm .htaccess dosyalarını .htaccess dosyasının temiz veya varsayılan sürümü ile değiştirin. Genellikle .htaccess dosyasının varsayılan bir sürümünü "varsayılan .htaccess dosyası" ve CMS'nizin adını arayarak bulabilirsiniz. Birden fazla .htaccess dosyasına sahip sitelerde her birinin temiz sürümünü bulun ve değiştirin.</p>
+
+<p>Varsayılan .htaccess yoksa ve daha önce sitenizde hiç .htaccess dosyası yapılandırmadıysanız, sitenizde bulacağınız .htaccess dosyası muhtemelen kötü amaçlıdır. Gerekli olması ihtimaline karşın .htaccess dosyalarının kopyasını çevrimdışı olarak kaydedin ve sitenizdeki .htaccess dosyasını silin.</p>
+
+<h3>Diğer kötü amaçlı dosyaları bulma ve kaldırma (5 adım)</h3>
+
+<p>Kötü amaçlı dosyaların belirlenmesi zor olabilir ve birkaç saat sürebilir. Dosyalarınızı kontrol etmek için zaman ayırın. Henüz yapmadıysanız sitenizdeki dosyaları yedeklemek için bu iyi bir zamandır. Sitenizi nasıl yedekleyeceğinizle ilgili talimatları öğrenmek için Google'da "site yedekleme" ve CMS'nizin adını arayın.</p>
+
+<p><b>1. adım</b></p>
+<p>CMS kullanıyorsanız, varsayılan dağıtımla birlikte gelen çekirdek (varsayılan) dosyaların tamamını ve sonradan eklediğiniz (temalar, modüller, eklentiler gibi) her şeyi yeniden yükleyin. Bu şekilde dosyaların saldırıya uğrayan içerik barındırmadığından emin olabilirsiniz. Yeniden yükleme işlemiyle ilgili talimatları bulmak için Google'da "yeniden yükleme" ve CMS adınızı aratabilirsiniz. Eklenti, modül, uzantı veya temalarınız varsa, bunları da yeniden yüklediğinizden emin olun.</p>
+
+<div class="alert">Çekirdek dosyalarınızı yeniden yüklemek, yaptığınız tüm özelleştirmeleri kaybetmenize neden olabilir. Yeniden yüklemeden önce veritabanınızı ve tüm dosyalarınızı yedeklediğinizden emin olun.</div>
+
+<p><b>2. adım</b></p>
+<p>Daha önce .htaccess dosyasında tanımladığınız .php dosyasını arayarak başlayın. Sunucunuzdaki dosyalara erişme yönteminize bağlı olarak, bir şekilde arama işlevinizin olması gerekir. Kötü amaçlı dosyanın adını arayın. Bulursanız, önce yedek bir kopyasını oluşturun ve daha sonra geri yüklemenizin gerekmesi ihtimaline karşın başka bir yerde saklayın, ardından dosyayı siteden silin.</p>
+
+<p><b>3. adım</b></p>
+<p>Kötü amaçlı veya güvenliği ihlal edilmiş başka dosyalar olup olmadığına bakın. Önceki iki adımda tüm kötü amaçlı dosyaları kaldırmış olabilirsiniz, ancak sitenizde güvenliği ihlal edilmiş başka dosyalar kalmış olması ihtimaline karşın sonraki birkaç adımı uygulamanız en iyisidir.</p>
+
+<p>Her PHP dosyasını açıp incelemeniz gerekeceğini düşünerek endişelenmeyin. Araştırmak istediğiniz şüpheli PHP dosyalarının bir listesini oluşturarak başlayın. Şüpheli PHP dosyalarını belirlemenin birkaç yolu vardır:</p><p>
+
+</p><ul>
+<li>CMS dosyalarınızı yeniden yüklediyseniz, yalnızca varsayılan CMS dosyalarınızın veya klasörlerinizin parçası olmayan dosyalara bakın. Bu şekilde çok sayıda PHP dosyasını elerseniz ve bakmanız gereken az sayıda dosya kalır.</li>
+<li>Sitenizdeki dosyaları en son değiştirilme tarihine göre sıralayın. Sitenizin saldırıya uğradığınızı ilk keşfettiğiniz tarihten önceki birkaç ay içinde değiştirilmiş dosyaları arayın.</li>
+<li>Sitenizdeki dosyaları boyuta göre sıralayın. Normaldan büyük dosyaları arayın.</li>
+</ul>
+
+<p><b>4. Adım</b></p>
+<p>Şüpheli PHP dosyalarının bir listesini hazırladıktan sonra bu dosyaların normal veya kötü amaçlı olup olmadıklarını kontrol edin.
+  PHP'ye aşina değilseniz bu işlem uzun sürebilir. Bu nedenle bazı <a href="https://php.net/docs.php">PHP dokümanlarına</a> göz atmak isteyebilirsiniz.
+  Ancak kodlama konusunda tamamen yeni olsanız bile, kötü amaçlı dosyaları belirlemek için bakabileceğiniz bazı temel kalıplar vardır.</p>
+
+<p>Öncelikle, halihazırda belirlediğiniz şüpheli dosyalara göz atarak karışık harflerden ve rakamlardan oluşan büyük metin blokları olup olmadığına bakın. Büyük metin bloğunun öncesinde genellikle, base64_decode, rot13, eval, strrev, gzinflate gibi PHP işlevleri olur. Örnek bir kod bloğunu burada görebilirsiniz. Bazen tüm bu kod uzun bir metin satırına yerleştirilir ve bu şekilde gerçekte olduğundan daha küçük görünür.</p>
+
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks of texts.
+Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0Vn
+ZgknbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2c
+hVmcnBydvJGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2b
+lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah
+1GIvRHIzlGa0BSZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch
+1GIlR2bjBCZlRXYjNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+<p>Bazen kod karıştırılmaz ve normal yazı gibi görünür. Kodun kötü olup olmadığından emin değilseniz dosyalara bakmanıza yardımcı olabilecek deneyimli web yöneticilerini bulacağınız <a href="https://productforums.google.com/forum/#!forum/webmasters">Web Yöneticisi Yardım Forumlarımıza</a> uğrayın.</p>
+
+<p><b>5. Adım</b></p>
+<p>Artık şüpheli dosyaların hangileri olduğunu bildiğinize göre, kötü amaçlı olmamaları ihtimaline karşın bunları bilgisayarınıza kaydederek yedekleyin veya yerel bir kopyasını oluşturun ve sonra şüpheli dosyaları silin.</p>
+
+<h3>Sitenizin temiz olup olmadığını kontrol etme</h3>
+
+<p>Saldırıya uğrayan dosyalardan kurtulduğunuzda tüm bu çabalarınızın işe yarayıp yaramadığını kontrol edin. Daha önce belirlediğiniz, anlamsız kelimelerin olduğu sayfaları hatırlıyor musunuz? Bu sayfaların hâlâ olup olmadıklarını görmek için bu sayfalarda Google Gibi Getir aracını tekrar kullanın. Google Gibi Getir'de "Bulunamadı" yanıtını döndürürlerse, durumunuz oldukça iyi demektir ve sitenizdeki güvenlik açıklarını düzeltmeye devam edebilirsiniz.</p>
+
+<div class="tip">Sitenizde hâlâ saldırıya uğramış içerik olup olmadığını kontrol etmek için <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Saldırıya Uğramış Siteler İçin Sorun Giderici</a>'deki adımları da uygulayabilirsiniz.</div>
+
+<h2>Yeniden saldırıya uğramayı nasıl önleyebilirim?</h2>
+
+<p>Sitenizdeki güvenlik açıklarını düzeltmek, sitenizi düzeltme işleminin son adımıdır ve çok önemlidir. Yakın zamanda gerçekleştirilen bir araştırma, saldırıya uğrayan sitelerin %20'sinin 1 gün içinde tekrar saldırıya uğradığını gösteriyor. Sitenizin tam olarak nasıl saldırıya uğradığını bilmek yararlı olacaktır. Araştırmaya başlamak üzere <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">spam yapanların web sitelerine saldırmak için en çok kullandığı yöntemler</a> rehberimizi okuyun. Ancak sitenizin ne şekilde saldırıya uğradığını bulamıyorsanız, sitenizdeki güvenlik açıklarını azaltmak için yapabileceklerinizin bir listesi aşağıda verilmiştir.</p>
+
+<ul>
+<li>CMS, eklentiler, uzantılar ve modüllerinizi düzenli olarak güncelleyin: Bu adımı zaten uyguladığınızı umarız. Çoğu site, çalıştırdıkları eski yazılımlar nedeniyle saldırıya uğramaktadır. Bazı CMS'ler otomatik güncellemeyi desteklemektedir.</li>
+<li>Bilgisayarınızı düzenli aralıklarla tarayın: Virüsleri veya güvenlik açıklarını kontrol etmek için bilinen virüs tarayıcılarından birini kullanın.</li>
+<li>Şifrelerinizi düzenli olarak değiştirin: Barındırma sağlayıcı, FTP ve CMS gibi tüm web sitesi hesaplarınızın şifrelerini düzenli olarak değiştirmek, sitenize yetkisiz erişimi önleyebilir.
+  Her hesap için güçlü ve benzersiz bir şifre oluşturmanız önemlidir.</li>
+<li><a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">İki Faktörlü Kimlik Doğrulama (2FA) kullanın</a>: Oturum açmanızı gerektiren herhangi bir hizmette 2FA'yı etkinleştirmeyi düşünün. 2FA, bilgisayar korsanlarının şifreleri başarıyla çalsalar dahi giriş yapmalarını zorlaştırır.</li>
+<li>Sitenizi izlemek için bir güvenlik hizmetine abone olmayı düşünün: Sitenizi küçük bir ücret karşılığında izlemenize yardımcı olabilecek birçok etkili hizmet bulunmaktadır. Sitenizi güvende tutmak için bu tür bir hizmete kaydolabilirsiniz.</li>
+</ul>
+
+<a name="resources"></a>
+<h2>Ek kaynaklar</h2>
+<p>Sitenizi düzeltme konusunda sorun yaşamaya devam ederseniz, size yardımcı olabilecek başka kaynaklar da mevcuttur.</p>
+
+<p>Bu araçlar sitenizi tarar ve sorunlu içerikleri bulabilir. VirusTotal dışındaki araçları Google çalıştırmaz veya desteklemez.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Bunlar, sitenizdeki sorunlu içeriği tarayabilecek araçlardır. Bu tarayıcıların, her türlü sorunlu içeriği bulmayı garanti edemediklerini unutmayın.</p>
+
+<p>Google'ın sunduğu, size yardımcı olabilecek ek kaynaklarından bazıları:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google Web Yöneticisi Yardım Forumu</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Saldırıya Uğramış Siteler için Google Web Yöneticisi Yardımı</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google Güvenli Tarama</a></li>
+</ul>
+
+<div class="alert">Yararlı olabileceğini düşündüğünüz bir araç burada yok mu? <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">Geri bildirim bırakın</a> ve bize bildirin.</div>
+
+
+</body></html>

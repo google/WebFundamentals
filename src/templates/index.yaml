@@ -1,6 +1,8 @@
+# {# wf_auto_generated #}
 # ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
+{{#if title}}title: {{title}}{{/if}}
 landing_page:
 
   header:
@@ -8,11 +10,12 @@ landing_page:
 
   rows:
 
-  - heading: "{{articles.0.title}}"
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+  - classname: devsite-landing-row-67 devsite-landing-row-no-image-background
     items:
-    - description: "{{{replace articles.0.description '"' '\"'}}}"
+    - heading: "{{articles.0.title}}"
+      description: "{{{replace articles.0.description '"' '\"'}}}"
       {{#if articles.0.image }}image_path: {{articles.0.image}}{{/if}}
+      path: {{articles.0.url}}
       buttons:
       - label: Read more
         path: {{articles.0.url}}
@@ -22,18 +25,21 @@ landing_page:
     - heading: "{{articles.1.title}}"
       description: "{{{replace articles.1.description '"' '\"'}}}"
       {{#if articles.1.image }}image_path: {{articles.1.image}}{{/if}}
+      path: {{articles.1.url}}
       buttons:
       - label: Read more
         path: {{articles.1.url}}
     - heading: "{{articles.2.title}}"
       description: "{{{replace articles.2.description '"' '\"'}}}"
       {{#if articles.2.image }}image_path: {{articles.2.image}}{{/if}}
+      path: {{articles.2.url}}
       buttons:
       - label: Read more
         path: {{articles.2.url}}
     - heading: "{{articles.3.title}}"
       description: "{{{replace articles.3.description '"' '\"'}}}"
       {{#if articles.3.image }}image_path: {{articles.3.image}}{{/if}}
+      path: {{articles.3.url}}
       buttons:
       - label: Read more
         path: {{articles.3.url}}
@@ -46,18 +52,21 @@ landing_page:
     - heading: "{{articles.4.title}}"
       description: "{{{replace articles.4.description '"' '\"'}}}"
       {{#if articles.4.image }}image_path: {{articles.4.image}}{{/if}}
+      path: {{articles.4.url}}
       buttons:
       - label: Read more
         path: {{articles.4.url}}
     - heading: "{{articles.5.title}}"
       description: "{{{replace articles.5.description '"' '\"'}}}"
       {{#if articles.5.image }}image_path: {{articles.5.image}}{{/if}}
+      path: {{articles.5.url}}
       buttons:
       - label: Read more
         path: {{articles.5.url}}
     - heading: "{{articles.6.title}}"
       description: "{{{replace articles.6.description '"' '\"'}}}"
       {{#if articles.6.image }}image_path: {{articles.6.image}}{{/if}}
+      path: {{articles.6.url}}
       buttons:
       - label: Read more
         path: {{articles.6.url}}
@@ -69,18 +78,21 @@ landing_page:
     - heading: "{{articles.7.title}}"
       description: "{{{replace articles.7.description '"' '\"'}}}"
       {{#if articles.7.image }}image_path: {{articles.7.image}}{{/if}}
+      path: {{articles.7.url}}
       buttons:
       - label: Read more
         path: {{articles.7.url}}
     - heading: "{{articles.8.title}}"
       description: "{{{replace articles.8.description '"' '\"'}}}"
       {{#if articles.8.image }}image_path: {{articles.8.image}}{{/if}}
+      path: {{articles.8.url}}
       buttons:
       - label: Read more
         path: {{articles.8.url}}
     - heading: "{{articles.9.title}}"
       description: "{{{replace articles.9.description '"' '\"'}}}"
       {{#if articles.9.image }}image_path: {{articles.9.image}}{{/if}}
+      path: {{articles.9.url}}
       buttons:
       - label: Read more
         path: {{articles.9.url}}
@@ -97,7 +109,7 @@ landing_page:
         <h4>{{articles.12.title}}</h4>
         <p>{{{articles.12.description}}} <a href="{{articles.12.url}}">Read more</a></p>
         <h4>Even more</h4>
-        <p>See more from the <a href="/web/{{section}}/{{articles.12.yearPublished}}/">archives</a>
+        <p>See more from the <a href="/web/{{section}}/{{articles.12.datePublishedYear}}/">archives</a>
         and stay up to date with the latest updates by <a href="https://developers.google.com/web/{{section}}/rss.xml">subscribing</a> to our RSS feed.</p>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/web/{{section}}/rss.xml">
         <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/web/{{section}}/atom.xml">

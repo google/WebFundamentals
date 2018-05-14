@@ -1,18 +1,20 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Speed Index" Lighthouse audit.
+description: Reference documentation for the "Perceptual Speed Index" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: N/A #}
 
-# Speed Index  {: .page-title }
+# Perceptual Speed Index  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
-Speed Index is a page load performance metric that shows you how quickly
-the contents of a page are visibly populated. The lower the score, the better.
+Perceptual Speed Index is a page load performance metric that shows you how
+quickly the contents of a page are visibly populated. The lower the score,
+the better.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To lower your Speed Index score, you need to optimize your page to visually
 load faster. Two good starting places are:
@@ -20,12 +22,9 @@ load faster. Two good starting places are:
 * [Optimizing Content Efficiency](/web/fundamentals/performance/optimizing-content-efficiency/).
 * [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/).
 
-## What the audit tests for {: #what }
+## More information {: #more-info }
 
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
-
-Lighthouse uses a node module called 
+Lighthouse uses a node module called
 [Speedline](https://github.com/pmdartus/speedline)
 to generate the Speed Index score.
 
@@ -36,3 +35,6 @@ The target score is computed by a cumulative distribution function of a
 log-normal distribution. Check out the comments in the
 [source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
 of the audit if you need to know more.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/speed-index.html" %}

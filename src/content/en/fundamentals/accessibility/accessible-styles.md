@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
@@ -185,13 +185,9 @@ Going over all of responsive design is outside the scope of this guide, but
 here are a few important takeaways that will benefit your responsive experience
 and give your users better access to your content.
 
- - First, make sure you always use the proper `viewport` meta tag.
-
-   ```
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   ```
-   
-   Setting `width=device-width`
+ - First, make sure you always use the proper `viewport` meta tag.<br>
+   `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+   <br>Setting `width=device-width`
    will match the screen's width in device-independent pixels, and setting
    `initial-scale=1` establishes a 1:1 relationship between CSS pixels and
    device-independent pixels. Doing this instructs the browser to fit your

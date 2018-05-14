@@ -12,7 +12,10 @@ description: Here's the first in a series of reports from Chrome Dev Summit. The
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 
-The [Chrome Dev Summit](http://developer.chrome.com/devsummit‎) finished a couple of weeks ago, and here's the first in a series of reports from the event. There was a strong emphasis on Mobile and Cross-device development, so we'll kick off with that!
+The [Chrome Dev Summit](http://developer.chrome.com/devsummit) finished a
+couple of weeks ago, and here's the first in a series of reports from the
+event. There was a strong emphasis on Mobile and Cross-device development,
+so we'll kick off with that!
 
 ## Best UX patterns for mobile web apps by Paul Kinlan
 
@@ -62,7 +65,7 @@ Users will be accessing your sites and services from a multitude of devices with
 
 We all know the problems that developers have had in the past building for WebView:  Limited HTML5 features, no debugging tools, no build tools.  With the introduction of a [Chromium powered WebView](/chrome/mobile/docs/webview/overview) in Android 4.4 (KitKat) developers now have a huge range of new tools at their disposal to build great native apps using the WebView.
 
-The WebView supports full [remote debugging](/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from Javascript.
+The WebView supports full [remote debugging](/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from JavaScript.
 
 [Slides: Build Mobile Apps using the Chrome WebView](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/chrome-webview/)
 

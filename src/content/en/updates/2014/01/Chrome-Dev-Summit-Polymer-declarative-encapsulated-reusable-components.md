@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2017-01-30 #}
 {# wf_published_on: 2014-01-06 #}
 {# wf_tags: news,mobile,polymer,webcomponents #}
 
@@ -16,7 +16,7 @@ description: Polymer is a gateway into the amazing future of Web Components.  Le
   </iframe>
 </div> 
 
-[Polymer](http://www.polymer-project.org/) is one gateway into the amazing future of Web Components. We want to make it easy to consume and build custom elements. For the past year, the team has been working hard on a set of polyfills for the evolving specifications. On top of that, we've created a convenient sugaring library to make building web components easier. Lastly, we're crafting a set of UI and utility elements to reuse in your apps. At the 2013 Chrome Dev Summit, I dove into the different parts of Polymer and the philosophy behind our "Everything is an element" mantra.
+[Polymer](https://www.polymer-project.org/) is one gateway into the amazing future of Web Components. We want to make it easy to consume and build custom elements. For the past year, the team has been working hard on a set of polyfills for the evolving specifications. On top of that, we've created a convenient sugaring library to make building web components easier. Lastly, we're crafting a set of UI and utility elements to reuse in your apps. At the 2013 Chrome Dev Summit, I dove into the different parts of Polymer and the philosophy behind our "Everything is an element" mantra.
 
 
 **Slides**: [http://html5-demos.appspot.com/static/cds2013/index.html](http://html5-demos.appspot.com/static/cds2013/index.html)
@@ -78,12 +78,12 @@ I would be remissed if I didn't give a shout out to the standards behind Web Com
 
 We're on the cusp of a very exciting time in web development. Unlike other new features being added to the web platform, the APIs that make up [Web Components](http://www.w3.org/TR/components-intro/) are not shiny or user-facing. They're purely for **developer productivity**. Each of the four main APIs is useful by itself, but together magical things happen!
 
-1. [Shadow DOM](http://www.polymer-project.org/platform/shadow-dom.html) - style and DOM encapsulation
-- [Custom Elements](http://www.polymer-project.org/platform/custom-elements.html) - define new HTML elements. Give them an API with properties and methods.
-- [HTML Imports](http://www.polymer-project.org/platform/html-imports.html) is the distribution model for a package of CSS, JS, and HTML.
-- [Templates](http://www.polymer-project.org/platform/template.html) - proper DOM templating for defining inert chunks of markup to be stamped out later
+1. [Shadow DOM](/web/fundamentals/web-components/shadowdom) - style and DOM encapsulation
+- [Custom Elements](/web/fundamentals/getting-started/primers/customelements) - define new HTML elements. Give them an API with properties and methods.
+- [HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/) is the distribution model for a package of CSS, JS, and HTML.
+- [Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/) - proper DOM templating for defining inert chunks of markup to be stamped out later
 
-If you want to learn more about the fundamentals of the APIs, check out [ebidel.github.com/webcomponents](//ebidel.github.com/webcomponents).
+If you want to learn more about the fundamentals of the APIs, check out webcomponents.org.
 
 
 {% include "comment-widget.html" %}

@@ -1,0 +1,91 @@
+<html devsite><head>
+  <title>Utiliser la Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Si vous avez déjà <a href="https://www.support.google.com/webmasters/answer/35179">confirmé que vous êtes le propriétaire</a> de votre site, vous pouvez ignorer la première action décrite ci-dessous et passer directement à la vérification des données relatives à votre site dans la Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Vous aurez besoin :</h3>
+
+<ul>
+  <li>de <a href="https://www.support.google.com/webmasters/answer/35179">confirmer que vous êtes le propriétaire</a> de votre site. Pour ce faire, vous devez par exemple être en mesure d'ajouter un fichier dans le répertoire racine, de créer des <a href="https://www.support.google.com/webmasters/answer/79812">balises Meta</a>, ou vous devez être propriétaire d'un compte administrateur Google Analytics pour le site.</li>
+</ul>
+
+<div class="action">
+  <h3>Ce que vous allez devoir faire :</h3>
+
+  <p>Dans cette section, vous allez effectuer les actions suivantes :</p>
+
+  <ol>
+    <li><a href="#verify">Valider la propriété de votre site dans la Search Console</a></li>
+    <li><a href="#check">Vérifier si le pirate informatique n'a pas déjà confirmé qu'il était le propriétaire de votre site dans la Search Console et procédé à des modifications indésirables des paramètres</a></li>
+    <li><a href="#determine">Déterminer la nature de l'attaque</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Valider la propriété de votre site dans la Search Console</h4>
+
+<ol>
+  <li>Ouvrez un navigateur et accédez au centre pour les webmasters à l'adresse <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Cliquez sur <strong>Search Console</strong>.</li>
+  <li>Connectez-vous à la Search Console à l'aide d'un <a href="https://www.google.com/accounts">compte Google</a>.
+    Si vous ne possédez pas de compte Google, cliquez sur <strong>Créer un compte</strong>. Créer un compte Google n'entraîne pas la perte du compte de messagerie que vous possédez éventuellement déjà chez une autre société.
+    <a href="https://accounts.google.com/SignUp">En savoir plus sur les comptes</a></li>
+  <li>Cliquez sur <strong>Ajouter un site</strong>. Saisissez l'URL de votre site dans le champ, puis cliquez sur <strong>Continuer</strong>.</li>
+  <li>Sélectionnez la méthode de validation qui vous convient le mieux. La méthode que nous considérons comme la plus adaptée s'affiche dans l'onglet <strong>Méthode recommandée</strong> de la page de validation. D'autres méthodes sont proposées dans l'onglet <strong>Autres méthodes</strong>.
+    <a href="https://goo.gl/kQnHQ">En savoir plus sur la validation</a></li>
+  <li>Remettez votre site en ligne si vous avez sélectionné une méthode de validation qui exige d'avoir accès à celui-ci, telle qu'une balise Meta en HTML ou un fichier HTML.</li>
+  <li>Cliquez sur <strong>Valider</strong> pour confirmer que vous êtes bien propriétaire de votre site à l'aide de la méthode sélectionnée. Si la validation fonctionne, un écran de félicitation s'affiche et confirme que vous êtes bien le propriétaire de votre site.
+    Vous pouvez à nouveau retirer votre site du Web, mais sachez qu'il devra être en ligne lors de certaines des étapes suivantes.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Une fois le site validé, vérifiez si le pirate informatique n'a pas déjà confirmé qu'il était le propriétaire de votre site dans la Search Console et procédé à des modifications indésirables des paramètres.</h4>
+
+<ol>
+  <li>Accédez à la page d'accueil principale de la Search Console en cliquant sur le logo de cette dernière.</li>
+  <li>Cliquez sur l'option <strong>Gérer le site</strong> correspondant à votre site.</li>
+  <li>Cliquez sur <strong>Ajouter ou supprimer des comptes utilisateur</strong>.</li>
+  <li>Assurez-vous que tous les <a href="https://www.support.google.com/webmasters/answer/44227">utilisateurs et propriétaires</a> affichés sont autorisés.</li>
+  <li>Notez l'adresse e-mail des éventuels utilisateurs non autorisés (cela pourrait vous être utile plus tard), puis supprimez-les de votre site. Pour les propriétaires non autorisés, vous devez à la fois supprimer le propriétaire et tous les éventuels jetons de validation, tels qu'une balise Meta de validation sur votre page d'accueil ou un fichier HTML sur votre serveur. <a href="https://www.support.google.com/webmasters/answer/2454036">En savoir plus</a></li>
+  <li>Vérifiez que des modifications indésirables des paramètres n'ont pas été effectuées dans la Search Console. Cliquez sur l'icône des paramètres<span class="material-icons"></span>, puis sur <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Paramètres du site</strong></a> pour savoir si le pirate informatique les a modifiés, par exemple en réduisant la <a href="https://www.support.google.com/webmasters/answer/48620">vitesse d'exploration</a>, peut-être dans le but d'éviter les robots des moteurs de recherche. Vérifiez également que rien d'inhabituel ne s'affiche dans la section <strong>Index Google</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">URL à supprimer</a> ni dans l'outil <span class="material-icons">Changement d'adresse</span>, accessible en cliquant sur les <a href="https://www.support.google.com/webmasters/answer/83106">paramètres</a>.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Déterminer la nature de l'attaque</h4>
+
+<p>Les informations affichées dans le centre de messagerie et la section "Problèmes de sécurité" de la Search Console peuvent vous aider à déterminer si votre site a été piraté de l'une des manières suivantes :</p>
+
+<ul>
+  <li>Par un contenu de type spam qui pourrait réduire la qualité et la pertinence des résultats de recherche</li>
+  <li>À des fins d'hameçonnage</li>
+  <li>Pour distribuer des logiciels malveillants</li>
+</ul>
+
+<p>Pour détecter un éventuel piratage ou la présence de logiciels malveillants sur votre site à l'aide de la Search Console, procédez de la façon suivante :</p>
+
+<ol>
+  <li>Accédez à la page d'accueil de la Search Console en cliquant sur le logo Search Console situé dans l'angle supérieur.</li>
+  <li>Cliquez sur <strong>Messages</strong>.</li>
+  <li>Vérifiez qu'aucun message important de notre part ne s'affiche indiquant que votre site 1) comporte des pages, du texte ou des liens de type spam, 2) a recours à des techniques d'hameçonnage, 3) est utilisé pour distribuer des logiciels malveillants. Si vous avez reçu une notification pour cause d'hameçonnage, veuillez ne pas supprimer ce message tant que vous n'avez pas effectué la totalité du processus de récupération.</li>
+  <li>Accédez à la page <strong>Problèmes de sécurité</strong> dans la Search Console.
+    <ul>
+      <li>Un en-tête "Logiciels malveillants" de premier niveau, ainsi que des catégories de logiciels malveillants, telles que "Configuration du serveur modifiée" ou "Injection de modèle d'erreur" s'affichent sur les sites affectés par des logiciels malveillants. Cela signifie qu'il est possible que le pirate informatique utilise votre site pour infecter les visiteurs avec des logiciels conçus pour accéder à des informations confidentielles ou endommager leur ordinateur. Pour savoir comment résoudre ce problème, veuillez vous reporter à l'étape <a href="hacked_with_malware">Évaluer les dommages (Piratage de type spam)</a>.
+      </li>
+      <li>Un en-tête "Piraté" de premier niveau ainsi que des catégories de piratage, comme "Injection de contenu", s'affichent sur les sites qui ont été piratés pour diffuser du spam. Il est probable que le pirate informatique a intégré des pages, du texte ou des liens contenant du spam dans votre site. Pour savoir comment résoudre ce problème, veuillez vous reporter à l'étape <a href="hacked_with_spam">Évaluer les dommages (Piratage de type spam)</a>.</li>
+      <li>En cas de notification pour cause d'hameçonnage dans le centre de messagerie de la Search Console, il est possible qu'aucune information sur les sites concernés ne s'affiche dans la section "Problèmes de sécurité". La création de pages d'hameçonnage sur votre site permet au pirate de l'utiliser pour obtenir l'identifiant, le mot de passe ou les détails financiers des internautes, souvent en modifiant l'apparence de ces pages de sorte que les visiteurs pensent qu'il s'agit d'un site fiable. Étant donné que les solutions pour résoudre les problèmes d'hameçonnage et de spam sont similaires, veuillez vous reporter à l'étape <a href="hacked_with_spam">Évaluer les dommages (Piratage de type spam)</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Étape suivante</h2>
+
+<p>L'étape suivante du processus consiste à <a href="hacked_with_spam">Évaluer les dommages (Piratage de type spam)</a> ou à <a href="hacked_with_malware">Évaluer les dommages (Piratage de type logiciel malveillant)</a>.</p>
+
+</body></html>

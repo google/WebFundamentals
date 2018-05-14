@@ -17,7 +17,8 @@ book_path: /web/shows/_book.yaml
 
 Users expect Progressive Web Apps interfaces to be responsive and intuitive. In this session we dissect some UI components, and see how we can build them in a performant way that delights our users. 
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

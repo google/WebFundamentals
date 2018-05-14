@@ -2,240 +2,233 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  custom_css_path: /web/styles/wf-root.css
+  meta_tags:
+  - name: google-site-verification
+    content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
+  custom_css_path: /web/styles/wf-landing.css
+
+  header:
+    custom_html: >
+        <div class="devsite-collapsible-section">
+          <div class="devsite-header-background">
+            <div class="wf-hero-flex">
+              <div class="wf-hero-flex-item wf-hero-webfu">
+                  <img src="/web/images/web-fundamentals-icon192x192.png">
+                  <h3>Web Fundamentals</h3>
+                  <p>
+                    Tutorials, guides, and best practices for building the next
+                    generation of web experiences.
+                  </p>
+                  <a class="button gc-analytics-event" data-category="webFu" data-label="fundamentals-landing" data-action="web-home" href="/web/fundamentals/">Get Started</a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="wf-hero-flex-item wf-hero-tools">
+                  <img src="/web/images/tool_icon.png">
+                  <h3>Tools</h3>
+                  <p>
+                    <a href="/web/tools/chrome-devtools/" class="gc-analytics-event" data-category="webFu" data-label="devtools-landing" data-action="web-home">Chrome DevTools</a>,
+                    <a href="/web/tools/lighthouse/" class="gc-analytics-event" data-category="webFu" data-label="lighthouse-landing" data-action="web-home">Lighthouse</a>,
+                    <a href="/web/tools/workbox/" class="gc-analytics-event" data-category="webFu" data-label="workbox-landing" data-action="web-home">Workbox</a>,
+                    and more tools to make your life easier and improve your
+                    development artistry.
+                  </p>
+                  <a class="button gc-analytics-event" href="/web/tools/" data-category="webFu" data-label="tools-landing" data-action="web-home">Learn More</a>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
   rows:
-
-  - heading: Learn How to Develop the Next Generation of Applications for the Web
-    classname: devsite-landing-row-67
-    items:
-    - description: >
-        <p>
-          The average user visits more than 100 websites on their mobile
-          device every month, and expectations for speed and quality higher
-          than ever. These resources can help you supercharge your new or
-          existing project with the next generation of web technologies in
-          order to deliver fast, secure, and performant content to any screen.
-         </p>
-         <h3>Get started with...</h3>
-      image_path: images/hero-2x.png
-      buttons:
-      - label: Best Practices
-        path: "#follow-best-practices"
-        classname: button button-primary
-      - label: Progressive Web Apps
-        path: "#progressive-web-apps"
-        classname: button button-primary
-      - label: Accelerated Mobile Pages
-        path: "#accelerated-mobile-pages"
-        classname: button button-primary
-
-  - items:
-    - custom_html: <hr>
-
-  - heading: Follow best practices
-    classname: devsite-landing-row-no-image-background
+  - classname: wf-landing-row
     items:
     - heading: Move to HTTPS
+      image_path: /web/images/content-https-2x.jpg
       description: >
         HTTPS allows users to securely connect to your website or app. Set up
-        HTTPS to protect the integrity of your site, and the security of your
-        users.
-      image_path: images/content-https-2x.jpg
+        HTTPS to protect the integrity and security of your users.
+      path: /web/fundamentals/security/encrypt-in-transit/why-https
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: fundamentals-https
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: /web/fundamentals/security/
-      - label: Why HTTPS
+      - label: Get HTTPS
         path: /web/fundamentals/security/encrypt-in-transit/why-https
-        classname: wf-small-link
-      - label: Content Security Policy
-        path: /web/fundamentals/security/csp/
-        classname: wf-small-link
-      - label: Prevent Mixed Content
-        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
-        classname: wf-small-link
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-https
+        - name: data-action
+          value: web-home
 
-    - heading: Optimize performance
+    - heading: Progressive Web Apps
       description: >
-        Users don’t have the patience to wait for sites that can’t deliver
-        content quickly. Learn testing techniques and best practices to ensure
-        that your sites and apps are optimized and performant.
-      image_path: images/content-performance-2x.jpg
-      buttons:
-      - label: Learn more
-        path: /web/fundamentals/performance/
-      - label: Optimizing Content Efficiency
-        path: /web/fundamentals/performance/optimizing-content-efficiency/
-        classname: wf-small-link
-      - label: Optimize the Critical Rendering Path
-        path: /web/fundamentals/performance/critical-rendering-path/
-        classname: wf-small-link
-      - label: Rendering Performance
-        path: /web/fundamentals/performance/rendering/
-        classname: wf-small-link
-      - label: Performance Code Lab
-        path: /web/fundamentals/getting-started/codelabs/web-perf/
-        classname: wf-small-link
-
-    - heading: Make it responsive
-      description: >
-        Modern users live on phones, tablets and laptops; your apps and
-        websites should do the same. Learn how to structure and code your
-        content to look great on screens of any size.
-      image_path: images/content-responsive-2x.jpg
-      buttons:
-      - label: Learn more
-        path: /web/fundamentals/design-and-ui/responsive/
-
-
-  - items:
-    - custom_html: <hr>
-
-  - heading: Progressive Web Apps
-    classname: devsite-landing-row-67
-    items:
-    - description: >
-        <p>
-          Progressive Web Applications take advantage of new technologies to
-          bring the best of mobile sites and native applications to users.
-        </p>
-        <p>Progressive Web Apps are:</p>
-        <ul class="checkmarks">
-          <li>
-            <b>Reliable</b> -
-            <a href="/web/fundamentals/getting-started/codelabs/offline/">
-            Service workers</a> allow for offline caching and instant loading.
-          </li>
-          <li>
-            <b>Fast</b> -
-            <a href="/web/fundamentals/performance/rendering/">
-            Smooth animations, scrolling and navigations</a> keep the
-            experience silky smooth.
-          </li>
-          <li>
-            <b>Engaging</b> -
-            <a href="/web/fundamentals/engage-and-retain/push-notifications/">
-            Push notifications</a> and
-            <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
-            add to homescreen</a> help users re-engage.
-          </li>
-          <li>
-            <b>Secure</b> -
-            <a href="/web/fundamentals/security/encrypt-in-transit/why-https">
-            HTTPS</a> secures the connection between you and your users.
-          </li>
-        </ul>
-      image_path: /web/images/pwa-gif-flipkart-250.gif
-      image_left: true
+        A new class of web app that is fast, integrated, reliable, and engaging.
+      image_path: /web/images/content-responsive-2x.jpg
+      path: /web/progressive-web-apps/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: pwa-landing
+      - name: data-action
+        value: web-home
       buttons:
       - label: Get Started
         path: /web/progressive-web-apps/
         classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: pwa-landing
+        - name: data-action
+          value: web-home
 
-  - items:
-    - heading: Flipkart triples time-on-site with Progressive Web App
+    - heading: Load Instantly
       description: >
-        <p>
-          Flipkart, India’s largest e-commerce site, decided to combine their
-          web presence and native app into a Progressive Web Application that
-          has resulted in a 70% increase in conversions.
-        </p>
-        <blockquote>
-          We know that everyone needs to build mobile-first experiences. With
-          Flipkart Lite, we’ve developed a powerful, technically-advanced web
-          app that performs as well as our native app. We now feel we have the
-          best of both worlds.
-          <br>
-          - Amar Nagaram, an Engineering Director at Flipkart.
-        </blockquote>
+        Users don't have the patience to wait for sites that can't deliver
+        content quickly.
+      image_path: /web/images/content-performance-2x.jpg
+      path: /web/fundamentals/performance/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: fundamentals-instant
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: showcase/2016/flipkart
-    - heading: AliExpress increases conversion by 104% with Progressive Web App
-      description: >
-        <p>
-          AliExpress, part of the Alibaba Group was looking for a way to provide
-          their web users with the benefits of their app, such as performance,
-          the ability to work offline and re-engage users. Their solution,
-          a Progressive Web App.
-        </p>
-        <p>
-          After implementing their Progressive Web App, AliExpress saw their
-          conversion rate rise by 45%. For new users, the increase was even
-          higher, 104%. The new strategy delivered a much better experience.
-          Users now visit twice as many pages per session, and time spent
-          per session increased by 74%.
-        </p>
-      buttons:
-      - label: Learn more
-        path: /web/showcase/2016/aliexpress
-
-  - items:
-    - custom_html: <hr>
-
-  - heading: Accelerated Mobile Pages
-    classname: devsite-landing-row-67
-    items:
-    - description: >
-        <p>
-          The Accelerated Mobile Pages project provides a new standard, built
-          on top of existing web technologies, to enable blazing-fast page 
-          rendering and content delivery.
-        </a>
-        <p>AMP pages are all about:</p>
-        <ul class="checkmarks">
-          <li>
-            <b>Speed</b> - Pages load instantly which means more engagement.
-          </li>
-          <li>
-            <b>Openness</b> - It works everywhere, cross platform.
-          </li>
-          <li>
-            <b>Control</b> - It’s just HTML - you control how your content
-            looks and feels.
-          </li>
-        </ul>
-      image_path: images/AMP-GIF-2x.gif
-      buttons:
-      - label: Get Started
-        path: https://www.ampproject.org/docs/get_started/create
+      - label: Get Fast
+        path: /web/fundamentals/performance/
         classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: fundamentals-instant
+        - name: data-action
+          value: web-home
 
-  - items:
-    - heading: AMP helps the Washington Post
+
+  - heading: Updates
+    classname: wf-updates-container
+    description: Stay up to date on new web platform features, changes to Chrome and more.
+    columns:
+    - description: >
+        {% include "web/_index-latest-show.html" %}
+
+    - description: >
+        {% include "web/_index-latest-updates.html" %}
+
+
+  - classname: wf-landing-row
+    items:
+    - heading: Get Involved
       description: >
-        <p>
-          AMP helps the Washington Post increase returning users from mobile
-          search by 23%. The Post is focused on making their mobile content
-          load as quickly as possible, because data shows that people abandon
-          websites after just three seconds if the content doesn’t load quickly.
-        </p>
-        <blockquote>
-          We are committed to improving speed across the board. If our site
-          takes a long time to load, it doesn’t matter how great our journalism
-          is, some people will leave the page before they see what’s there
-          <br>
-          - David Merrell, Senior Product Manager, The Washington Post
-        </blockquote>
+        Check the state of existing bugs and provide feedback for web platform features.
+      custom_image:
+        background: google-blue
+        icon_name: how_to_reg
+      path: /web/feedback/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: feedback-landing
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: /web/showcase/2016/wapo
-    - heading: Pinterest loads 4x faster and uses 8x less data with AMP
+      - label: Get Involved
+        path: /web/feedback/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: feedback-landing
+        - name: data-action
+          value: web-home
+
+    - heading: Training
       description: >
-        <p>
-          Pinterest works best when content is relevant, fast and easy to
-          access. With more than 80 percent of Pinners using Pinterest on mobile
-          devices, they're servering a speedier version of their mobile web
-          pages using Accelerated Mobile Pages (AMP).
-        </p>
-        <blockquote>
-          In early tests, we found that AMP pages load four times faster and
-          use eight times less data than traditional mobile-optimized pages.
-          A better, faster mobile web is better for everyone, including users,
-          platforms like Pinterest and publishers.
-          <br>
-          - Jon Parise, software engineer, Pinterest
-        </blockquote>
+        Level-up your skills with in-person and online training courses for web developers.
+      custom_image:
+        background: google-blue
+        icon_name: school
+      path: /web/ilt/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: training-landing
+      - name: data-action
+        value: web-home
       buttons:
-      - label: Learn more
-        path: https://amphtml.wordpress.com/2015/12/14/building-a-faster-mobile-web-experience-with-amp/
+      - label: Start Learning
+        path: /web/ilt/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: training-landing
+        - name: data-action
+          value: web-home
+
+    - heading: Case Studies
+      description: >
+        Learn why and how other developers have used the web to create amazing
+        web experiences for their users.
+      custom_image:
+        background: google-blue
+        icon_name: trending_up
+      path: /web/showcase/
+      path_attributes:
+      - name: class
+        value: gc-analytics-event
+      - name: data-category
+        value: webFu
+      - name: data-label
+        value: showcase-landing
+      - name: data-action
+        value: web-home
+      buttons:
+      - label: See More
+        path: /web/showcase/
+        classname: button button-primary
+        attributes:
+        - name: class
+          value: gc-analytics-event
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: showcase-landing
+        - name: data-action
+          value: web-home

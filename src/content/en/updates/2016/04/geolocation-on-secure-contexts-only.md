@@ -18,7 +18,7 @@ to deprecate powerful features like geolocation on non-secure origins, and we
 hope that others will follow.
 
 Starting with Chrome 50, Chrome no longer supports [obtaining the user's 
-location](/web/fundamentals/native-hardware/user-location/obtain-location) 
+location](/web/fundamentals/native-hardware/user-location/) 
 using [the HTML5 Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 from pages delivered by non-secure connections. This means that the page that's 
@@ -43,8 +43,8 @@ There have been a number of public announcements that describe the rationale
    (Feb 2015)
 * [Intent to deprecate Geolocation API over HTTP](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ylz0Zoph76A) 
   (Nov 2015)
-* [Chrome Dev Summit](https://www.youtube.com/watch?v=9WuP4KcDBpI&t=31m0s) (Nov 
-  2015)
+* [Chrome Dev Summit](https://www.youtube.com/watch?v=iP75a1Y9saY) (Nov 
+  2016)
 * [Chrome Beta Channel](http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html) 
   release blog (March 17, 2016)
 * [Chrome Status](https://www.chromestatus.com/feature/5636088701911040) website

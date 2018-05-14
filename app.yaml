@@ -5,38 +5,63 @@ threadsafe: true
 # version: wf-devsite
 
 handlers:
+- url: /test-results.json
+  static_files: test-results.json
+  upload: test-results.json
+  http_headers:
+    x-frame-options: SAMEORIGIN
+
 - url: /robots.txt
   static_files: gae/robots.txt
   upload: gae/robots.txt
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
 - url: /wf-local/scripts/
   static_dir: gae/scripts/
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
 - url: /wf-local/styles/
   static_dir: gae/styles/
+  http_headers:
+    x-frame-options: SAMEORIGIN
+
+- url: /wf-local/images/
+  static_dir: gae/images/
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
 - url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
   static_files: src/content/en/\1
   expiration: 1d
   upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
 - url: /(.*\.ico)
   static_files: src/content/en/images/\1
   expiration: 7d
   upload: src/content/en/images/(.*\.ico)
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
 - url: /web/manifest.json
   static_files: src/content/en/manifest.json
   expiration: 1d
   upload: src/content/en/manifest.json
+  http_headers:
+    x-frame-options: SAMEORIGIN
 
-- url: /web/(.*\.(js|css))
+- url: /web/(.*\.(js|css|json))
   static_files: src/content/en/\1
   expiration: 1d
   upload: src/content/en/(.*\.(js|css))
   http_headers:
+    x-frame-options: SAMEORIGIN
     Access-Control-Allow-Origin: https://developers.google.com
   application_readable: true
+
 
 - url: /web/(.*\.(woff|eot|ttf))
   static_files: \1
@@ -44,6 +69,7 @@ handlers:
   upload: (.*\.(woff|eot|ttf))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
+    x-frame-options: SAMEORIGIN
 
 # This is simply a redirect from index to /web
 - url: /(.*)
@@ -51,12 +77,19 @@ handlers:
   secure: always
 
 skip_files:
+- ^CONTRIBUTING\.md$
+- ^README\.md$
+- ^TRANSLATION\.md$
+- ^gcloud-client-secret\.json.*
+- ^gulpfile\.js$
+- ^package\.json$
 - ^gulp-tasks/.*
 - ^node_modules/.*
 - ^scratch/.*
-- ^tools/.*
 - ^src/data/.*
 - ^src/templates/.*
+- ^src/tests/.*
+- ^tools/.*
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.DS_Store$

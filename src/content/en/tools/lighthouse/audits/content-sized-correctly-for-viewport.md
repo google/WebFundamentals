@@ -1,24 +1,25 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Content Sized Correctly for Viewport" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: N/A #}
 
 # Content Sized Correctly for Viewport  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 This audit checks that the width of the content on your page is equal
 to the width of the viewport. When content width is smaller or larger than
 viewport width, that's often a cue that the page is not optimized for
 mobile screens.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 This audit is a roundabout way of determining if your page is optimized for
 mobile devices. If your site is not optimized and you want it to be, then see
-[Responsive Web Design Basics](/web/fundamentals/design-and-ui/responsive/)
+[Responsive Web Design Basics](/web/fundamentals/design-and-ux/responsive/)
 to get started.
 
 You can ignore this audit if:
@@ -27,9 +28,9 @@ You can ignore this audit if:
 * The content width of your page is intentionally smaller or larger than the
   viewport width.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 The audit passes if `window.innerWidth === window.outerWidth`.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/content-sized-correctly-for-viewport.html" %}

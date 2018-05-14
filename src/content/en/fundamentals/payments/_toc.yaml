@@ -1,0 +1,12 @@
+toc:
+- title: Web Payments
+  section:
+  - title: Intro to the Payment Request API
+    path: /web/fundamentals/payments/
+  - title: Deep Dive into the Payment Request API
+    path: /web/fundamentals/payments/deep-dive-into-payment-request
+  - title: Payment Request UX considerations
+    path: /web/fundamentals/payments/payment-request-ux-considerations
+  - title: Set up Google Pay API
+    path: /pay/api/web/paymentrequest/tutorial
+    status: external

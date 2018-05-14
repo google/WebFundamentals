@@ -1,0 +1,49 @@
+<section>
+  {{#block 'symbol-content-classes'}}
+    {{#withOnly items=members.classes headingKey='classes'}}
+      {{#embed 'classes-links'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-interfaces'}}
+    {{#withOnly items=members.interfaces headingKey='interfaces'}}
+      {{#embed 'members-links'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-namespaces'}}
+    {{#withOnly items=members.namespaces headingKey='namespaces'}}
+      {{#embed 'members-links'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-enums'}}
+    {{#withOnly items=(where members.properties isEnum=true) headingKey='enums'}}
+      {{#embed 'members-details'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-properties'}}
+    {{#withOnly items=(where members.properties isEnum=undefined) headingKey='properties'}}
+      {{#embed 'members-details'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-methods'}}
+    {{#withOnly items=members.functions headingKey='functions'}}
+      {{#embed 'members-details'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-typedefs'}}
+    {{#withOnly items=members.typedefs headingKey='typedefs'}}
+      {{#embed 'members-details'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+
+  {{#block 'symbol-content-events'}}
+    {{#withOnly items=members.events headingKey='events'}}
+      {{#embed 'members-details'}}{{/embed}}
+    {{/withOnly}}
+  {{/block}}
+</section>

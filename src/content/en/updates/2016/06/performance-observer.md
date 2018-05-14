@@ -4,6 +4,7 @@ description: New in Chrome 52, the Performance Observer interface provides more 
 
 {# wf_updated_on: 2016-06-08 #}
 {# wf_published_on: 2016-06-08 #}
+{# wf_blink_components: N/A #}
 {# wf_tags: performance,events,chrome52,javascript #}
 {# wf_featured_snippet: The W3C Performance Timeline specification defines an interface for browsers to provide programmatic access to low level timing data. This opens the door to some interesting use cases like custom performance analysis, third party tools and more. #}
 {# wf_featured_image: /web/updates/images/generic/timer.png #}
@@ -101,7 +102,7 @@ In the body of the page, we define a button, assign our click handler to
 the `onclick` event, and we’re ready to go.
 
 Now, if we load the page and open the Chrome DevTools
-panel to watch the Javascript console, every time we click the button a
+panel to watch the JavaScript console, every time we click the button a
 performance measurement is taken. *And because we’ve registered to observe
 such measurements, they are forwarded to our event handler, asynchronously
 without the need to poll the timeline*, which displays the measurements
@@ -121,7 +122,7 @@ As you can see, this API is quite simple and it offers the ability to gather
 filtered, high resolution, real time performance data without polling, which
 should open the door to more efficient performance tooling for web apps.
 
-[PWAs]: https://developers.google.com/web/progressive-web-apps/
+[PWAs]: /web/progressive-web-apps/
 [spec]: http://w3c.github.io/performance-timeline/#bib-NAVIGATION-TIMING-2
 [navigation]: http://caniuse.com/#search=navigation%20timing
 [resource]: http://caniuse.com/#search=resource%20timing

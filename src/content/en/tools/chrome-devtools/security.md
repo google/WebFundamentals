@@ -1,11 +1,12 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Security Panel to ensure that all resources on your  site are protected with HTTPS.
 
-{# wf_updated_on: 2016-03-09 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2015-12-21 #}
+{# wf_blink_components: Security #}
 
-# Understand security issues {: .page-title }
+# Understand Security Issues {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -57,8 +58,6 @@ Click **View request in Network Panel** to open up a filtered view of the
 Network Panel and see exactly which requests were served over HTTP. This shows 
 all unprotected requests from all origins. 
 
-![network panel, non-secure resources, all origins](images/network-all.png)
-
 ## Inspect origins
 
 Use the left panel to inspect an individual secure or non-secure origin. 
@@ -81,6 +80,45 @@ served over HTTP.
 
 
 
-[mixed-content]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[mixed-content]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [same-origin-policy]: https://en.wikipedia.org/wiki/Same-origin_policy
-[why-https]: https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+[why-https]: /web/fundamentals/security/encrypt-in-transit/why-https
+
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/security';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}

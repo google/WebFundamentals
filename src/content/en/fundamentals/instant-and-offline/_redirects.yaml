@@ -1,4 +1,4 @@
 redirects:
+
 - from: /web/fundamentals/instant-and-offline/
-  to: /web/fundamentals/instant-and-offline/offline-cookbook/
-  temporary: true
+  to: /web/fundamentals/

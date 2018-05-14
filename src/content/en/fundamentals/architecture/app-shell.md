@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml 
+project_path: /web/fundamentals/_project.yaml 
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2018-04-13 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: N/A #}
 
 # The App Shell Model {: .page-title }
 
@@ -17,7 +18,7 @@ The app "shell" is the minimal HTML, CSS and JavaScript required to power the
 user interface and when cached offline can ensure **instant, reliably good
 performance** to users on repeat visits. This means the application shell is
 not loaded from the network every time the user visits. Only the necessary
-content is needed from the networi.
+content is needed from the network.
 
 For [single-page
 applications](https://en.wikipedia.org/wiki/Single-page_application) with
@@ -104,7 +105,7 @@ There is no need to download new versions before using it.
 Note: The [Lighthouse](https://github.com/googlechrome/lighthouse) auditing
 extension can be used to verify if your PWA using an app shell hits a high-bar
 for performance. [To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E)
-is a talk that walks through optimising a PWA using this tool.
+is a talk that walks through optimizing a PWA using this tool.
 
 ## Building your app shell {: #building-your-app-shell }
 
@@ -154,7 +155,6 @@ index file. Let's look at what it contains.
       <link rel="manifest" href="/manifest.json">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>App Shell</title>
       <link rel="stylesheet" type="text/css" href="styles/inline.css">
     </head>
 
@@ -253,7 +253,7 @@ that you configure as part of your build process. You can have it precache every
 HTML, JavaScript, and CSS file that makes up your app shell. Everything will
 both work offline, and load fast on subsequent visits without any extra effort.
 
-Here us a basic example of using sw-precache as part of a
+Here is a basic example of using sw-precache as part of a
 [gulp](http://gulpjs.com) build process:
 
     gulp.task('generate-service-worker', function(callback) {

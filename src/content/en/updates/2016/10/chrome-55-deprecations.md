@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-10-20 #}
+{# wf_blink_components: Blink>SVG #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-10-20 #}
 {# wf_tags: deprecations,removals,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -53,33 +54,6 @@ deprecated in Chrome 54 and has now been removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5686865248124928){: .external} &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=395838){: .external}
 
-## Deprecation policy
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
-To keep the platform healthy, we sometimes remove APIs from the Web Platform
-which have run their course. There can be many reasons why we would remove an
-API, such as: they are superseded by newer APIs, they are updated to reflect
-changes to specifications to bring alignment and consistency with other
-browsers, or they are early experiments that never came to fruition in other
-browsers and thus can increase the burden of support for web developers.
-
-Some of these changes will have an effect on a very small number of sites. To
-mitigate issues ahead of time, we try to give developers advanced notice so that
-if needed, they can make the required changes to keep their sites running.
-
-Chrome currently has a
-[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation){:.external}
-and the TL;DR is:
-
-* Announce on the
-  [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev){: .external}
-  mailing list.
-* Set warnings and give time scales in the Chrome DevTools Console when usage
-  is detected on a page.
-* Wait, monitor, and then remove feature as usage drops.
-
-You can find a list of all deprecated features in
-[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated){: .external}
-and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed){: .external}.
-We will also  try to summarize some of the changes, reasoning, and migration
-paths in these posts. We will also try to summarize some of the changes,
-reasoning, and migration paths in these posts.
+{% include "comment-widget.html" %}

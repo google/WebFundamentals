@@ -1,0 +1,17 @@
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - include: /web/_upper_tabs-Tools.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
+  - name: Feedback
+    path: /web/feedback/
+    lower_tabs:
+      other:
+      - name: Feedback
+        contents:
+        - title: Home
+          path: /web/feedback/
+        - title: How to File a Good Bug
+          path: /web/feedback/file-a-bug
+        - title: Browser Bug Searcher
+          path: /web/feedback/browser-bug-searcher

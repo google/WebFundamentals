@@ -11,20 +11,20 @@
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
-    <published>{{ datePublished }}</published>
-    <updated>{{ dateUpdated }}</updated>
+    <published>{{ formatDateAtom datePublishedMoment }}</published>
+    <updated>{{ formatDateAtom dateUpdatedMoment }}</updated>
     <link rel="alternate" type="text/html" href="{{ ../host }}{{ url }}{{{ ../analyticsQS }}}" />
     <id>{{ ../host }}{{ url }}</id>
     <content type="html">
       <![CDATA[
         <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=atom&pixel">
-        
+
         {{{ content }}}
       ]]>
     </content>
     {{#each tags}}<category term="{{this}}" label="{{this}}"/> {{/each}}
     <author>
-      <name>{{ atomAuthor }}</name>
+      <name>{{#if feedAuthor }}{{ feedAuthor }}{{else}}Google Developers{{/if}}</name>
     </author>
   </entry>
   {{/each}}

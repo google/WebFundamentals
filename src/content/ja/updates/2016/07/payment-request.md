@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Payment Request は決済フローを簡単・高速で一貫性のあるものにする、オープン Web 向けの新しい API です。
 
-{# wf_updated_on: 2016-07-30 #}
+{# wf_updated_on: 2016-12-06 #}
 {# wf_published_on: 2016-07-30 #}
 
 # Payment Request API で簡単・高速な決済を実現する {: .page-title }
@@ -46,15 +46,18 @@ Payment Request API がどのように動作するのか、コードを追いな
         location.href = '/checkout';
         return;
       }
-    
+
       // Supported payment methods
       var supportedInstruments = [{
-        supportedMethods: [
-          'visa', 'mastercard', 'amex', 'discover',
-          'diners', 'jcb', 'unionpay'
-        ]
+          supportedMethods: ['basic-card']
+          data: {
+            supportedNetworks: [
+              'visa', 'mastercard', 'amex', 'discover',
+              'diners', 'jcb', 'unionpay'
+            ]
+          }
       }];
-    
+
       // Checkout details
       var details = {
         displayItems: [{
@@ -69,21 +72,17 @@ Payment Request API がどのように動作するのか、コードを追いな
           amount: { currency: 'USD', value : '55.00' }
         }
       };
-    
+
       // 1. Create a `PaymentRequest` instance
       // 1. `PaymentRequest` インスタンスを生成する
       var request = new PaymentRequest(supportedInstruments, details);
-    
+
       // 2. Show the native UI with `.show()`
       // 2. `.show()` を呼び出して、ネイティブ UI を表示する
       request.show()
       // 3. Process the payment
       // 3. 決済処理をおこなう
       .then(result => {
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details;
-    
         // POST the payment information to the server
         return fetch('/pay', {
           method: 'POST',
@@ -91,9 +90,10 @@ Payment Request API がどのように動作するのか、コードを追いな
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
-          // Examine server response
+          // 4. Display payment results
+          // 4. 決済結果を表示する
           if (response.status === 200) {
             // Payment successful
             return result.complete('success');
@@ -106,9 +106,9 @@ Payment Request API がどのように動作するのか、コードを追いな
         });
       });
     }
-    
+
     document.querySelector('#start').addEventListener('click', onBuyClicked);
-    
+
 
 ![](/web/updates/images/2016/07/payment-request/1.png)
 
@@ -117,7 +117,7 @@ Payment Request API がどのように動作するのか、コードを追いな
 
 
     var request = new PaymentRequest(supportedInstruments, details);
-    
+
 
 ### 2. .show() を呼び出して、ネイティブ UI を表示する
 `show()` でネイティブの決済 UI を表示します。
@@ -128,7 +128,7 @@ Payment Request API がどのように動作するのか、コードを追いな
       .then(payment => {
         // pressed "Pay"
       });
-    
+
 
  <img src="/web/updates/images/2016/07/payment-request/2.png" style="max-width:340px">
  <img src="/web/updates/images/2016/07/payment-request/3.png" style="max-width:340px">
@@ -140,10 +140,6 @@ Payment Request API がどのように動作するのか、コードを追いな
 
       request.show()
       .then(result => {
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details;
-    
         // POST the payment information to the server
         return fetch('/pay', {
           method: 'POST',
@@ -151,7 +147,7 @@ Payment Request API がどのように動作するのか、コードを追いな
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(result.toJSON())
         }).then(response => {
           // Examine server response
           if (response.status === 200) {
@@ -165,7 +161,7 @@ Payment Request API がどのように動作するのか、コードを追いな
           return result.complete('fail');
         });
       });
-    
+
 
  <img src="/web/updates/images/2016/07/payment-request/4.png" style="max-width:340px">
  <img src="/web/updates/images/2016/07/payment-request/5.png" style="max-width:340px">
@@ -185,7 +181,7 @@ Payment Request API はもちろんこのようなケースをサポートして
 ### 決済ソリューションの追加
 Payment Request API がサポートする支払い手段はクレジットカードだけではありません。
 世の中には他にも多くの決済サービスやソリューションがあり、 Payment Request API はこれらのできる限り多くをサポートできるように設計されています。
-Google では、 Chrome で Android Pay を利用できるようにしようとしています。
+Google では、 [Chrome で Android Pay](/web/fundamentals/discovery-and-monetization/payment-request/android-pay) を利用できるようにしようとしています。
 他のサードパーティソリューションも近い将来サポートされる予定ですので、アップデートをお待ち下さい。
 
 ## FAQ
@@ -207,6 +203,10 @@ Payment Method Identifier は分散型拡張性をサポートしています。
 ### この API は、 iframe でも使えますか ?
 現在のところ iframe での Payment Request API の使用は許可されていませんが、将来できるようになる予定です。
 
+Chrome 57 から `iframe` 内で Payment Request API を使うことができます。`allowpaymentrequest` を `iframe` することで、`src` で指定された URL 内の Payment Request が有効になります。
+
+    <iframe src="URL_INCLUDING_PAYMENT_REQUEST_CALL" allowpaymentrequest></iframe>
+
 ### Payment Request API に対応していないブラウザ向けの polyfill はありますか ?
 現在のところ、ありません。
 
@@ -224,5 +224,7 @@ Payment Request API についてさらに知るために、いくつかのドキ
 * [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)
 
 
-Translated By: 
+Translated By:
 {% include "web/_shared/contributors/kazukikanamori.html" %}
+
+{% include "comment-widget.html" %}

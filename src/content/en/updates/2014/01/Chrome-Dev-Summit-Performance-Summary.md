@@ -28,7 +28,7 @@ Knowing your way around your development tools is key to becoming a performance 
 + Avoid painting; it’s super expensive.
 + Avoid memory churn and executing code during critical times in your app.
 
-<h2>#perfmatters: Optimizing network performance</h2>
+## #perfmatters: Optimizing network performance
 
 Network and latency typically accounts for 70% of a site’s total page load time. That’s a large percentage, but it also means that any improvements you make there will reap huge benefits for your users. In this talk Ilya stepped through recent changes in Chrome that will improve loading time, as well as a few changes you can make in your environment to help keep network load to an absolute minimum.
 
@@ -47,7 +47,7 @@ Network and latency typically accounts for 70% of a site’s total page load tim
 + QUIC is a new and experimental protocol built on top of UDP; it’s early days but however it works out users will win.
 
 
-<h2>#perfmatters: 60fps layout and rendering</h2>
+## #perfmatters: 60fps layout and rendering
 
 Hitting 60fps in your projects directly correlates to user engagement and is crucial to its success. In this talk Nat and Tom talked about Chrome’s rendering pipeline, some common causes of dropped frames and how to avoid them.
 
@@ -64,7 +64,7 @@ Hitting 60fps in your projects directly correlates to user engagement and is cru
 + Layers are used to cache painted elements.
 + Input handlers (touch and mousewheel listeners) can kill responsiveness; avoid them if you can. Where you can’t keep them to a minimum.
 
-<h2>#perfmatters: Instant mobile web apps</h2>
+## #perfmatters: Instant mobile web apps
 
 The Critical Rendering Path refers to anything (JavaScript, HTML, CSS, images) that the browser requires before it is able to begin painting the page. Prioritizing the delivery of assets on the critical rendering path is a must, particularly for users on network-constrained devices such as smartphones on cellular networks. Bryan talked through how the team at Google went through the process of identifying and prioritizing the assets for the PageSpeed Insights website, taking it from a 20 second load time to just over 1 second!
 

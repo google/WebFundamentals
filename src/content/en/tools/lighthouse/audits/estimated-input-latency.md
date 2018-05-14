@@ -1,24 +1,24 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-05 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-05 #}
+{# wf_blink_components: N/A #}
 
 # Estimated Input Latency  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Input responsiveness is a key factor in how users perceive the performance
 of your app. Apps have 100ms to respond to user input. Any longer than that,
 and the user perceives the app as laggy. See [Measure Performance with the RAIL
 Model](/web/fundamentals/performance/rail) for more information.
 
-See the [What the audit tests for](#what) section of this doc for an
-explanation of why this audit tests for a target score of 50ms (rather than
-100ms, which is what the RAIL model recommends).
+See [More information](#more-info) for an explanation of why this audit tests
+for a target score of 50ms (rather than 100ms, which is what the RAIL model recommends).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To make your app respond to user input faster, you need to optimize how
 your code runs in the browser. Check out the series of techniques outlined
@@ -43,13 +43,10 @@ to ensure that all stages of [the pixel
 pipeline](/web/fundamentals/performance/rendering/#the_pixel_pipeline) are
 complete within 50ms.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 The RAIL performance model recommends that apps respond to user input within
-100ms, whereas Lighthouse's target score is 50ms. Why? 
+100ms, whereas Lighthouse's target score is 50ms. Why?
 
 The reason is that Lighthouse uses a proxy metric to measure how well your
 app responds to user input: availability of the main thread. Lighthouse
@@ -57,3 +54,15 @@ assumes that your app needs 50ms to completely respond to the user's input
 (from performing any JavaScript executions to physically painting the new
 pixels to the screen). If your main thread is unavailable for 50ms or more,
 that does not leave enough time for your app to complete the response.
+
+There is a 90% probability a user would encounter input latency of the
+amount that Lighthouse reports, or less. 10% of users can expect additional
+latency.
+
+The timing of this audit is from First Meaningful Paint to the end of the [trace][trace],
+which is roughly 5 seconds after the time to [Consistently Interactive][CI].
+
+[trace]: https://www.chromium.org/developers/how-tos/trace-event-profiling-tool
+[CI]: /web/tools/lighthouse/audits/consistently-interactive
+
+{% include "web/tools/lighthouse/audits/_feedback/estimated-input-latency.html" %}

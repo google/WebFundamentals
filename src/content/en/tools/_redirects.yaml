@@ -1,5 +1,50 @@
 redirects:
 
+- from: /web/tools/polymer-starter-kit/...
+  to: https://www.polymer-project.org/2.0/start/toolbox/set-up
+
+- from: /web/tools/lighthouse/audits/theme-color
+  to: /web/tools/lighthouse/audits/address-bar
+
+- from: /web/tools/lighthouse/audits/manifest-contains-theme_color
+  to: /web/tools/lighthouse/audits/address-bar
+
+- from: /web/tools/chrome-devtools/javascript/add-breakpoints
+  to: /web/tools/chrome-devtools/javascript/breakpoints
+
+- from: /web/tools/chrome-devtools/settings
+  to: /web/tools/chrome-devtools/ui
+
+- from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
+  to: /web/tools/lighthouse/audits/has-viewport-meta-tag
+
+- from: /web/tools/chrome-devtools/javascript/What%20do%20the%20colors%20mean%20in%20Chrome%20Developer%20Tools%20Scope%20panel
+  to: /web/tools/chrome-devtools/javascript
+
+- from: /web/tools/lighthouse/audits/blocking-links
+  to: /web/tools/lighthouse/audits/blocking-resources
+
+- from: /web/tools/lighthouse/audits/app-cache
+  to: /web/tools/lighthouse/audits/appcache
+
+- from: /web/tools/chrome-devtools/memory-problems/memory-diagnosis
+  to: /web/tools/chrome-devtools/memory-problems/
+
+- from: /web/tools/chrome-devtools/javascript/console/console-ui
+  to: /web/tools/chrome-devtools/console/
+
+- from: /web/tools/chrome-devtools/javascript/command-line/command-line-reference
+  to: /web/tools/chrome-devtools/console/command-line-reference
+
+- from: /web/tools/chrome-devtools/javascript/breakpoints/...
+  to: /web/tools/chrome-devtools/javascript/
+
+- from: /web/tools/chrome-devtools/inspect-styles/basics
+  to: /web/tools/chrome-devtools/inspect-styles/
+
+- from: /web/tools/chrome-devtools/inspect-styles/shortcuts
+  to: /web/tools/chrome-devtools/shortcuts
+
 - from: /web/tools/chrome-devtools/remote-debugging/remote-debugging
   to: /web/tools/chrome-devtools/remote-debugging/
 
@@ -16,7 +61,7 @@ redirects:
   to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
 
 - from: /web/tools/chrome-devtools/javascript/
-  to: /web/tools/chrome-devtools/javascript/add-breakpoints
+  to: /web/tools/chrome-devtools/javascript/overview
 
 - from: /web/tools/chrome-devtools/manage-data/
   to: /web/tools/chrome-devtools/manage-data/local-storage
@@ -88,7 +133,10 @@ redirects:
   to: /web/tools/chrome-devtools/remote-debugging/
 
 - from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/javascript/snippets
+  to: /web/tools/chrome-devtools/snippets
+
+- from: /web/tools/chrome-devtools/javascript/snippets
+  to: /web/tools/chrome-devtools/snippets
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables
@@ -110,3 +158,36 @@ redirects:
 
 - from: /web/tools/chrome-devtools/profile/...
   to: /web/tools/chrome-devtools/...
+
+- from: /web/tools/chrome-devtools/evaluate-performance/...
+  to: /web/tools/chrome-devtools/...
+
+- from: /web/tools/chrome-devtools/javascript/console/...
+  to: /web/tools/chrome-devtools/console/...
+
+- from: /web/tools/service-worker-libraries/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/next/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/examples/
+  to: /web/tools/workbox/modules/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/get-started/gulp
+  to: /web/tools/workbox/guides/codelabs/gulp
+
+- from: /web/tools/workbox/get-started/webpack
+  to: /web/tools/workbox/guides/codelabs/webpack
+
+- from: /web/tools/workbox/get-started/npm-script
+  to: /web/tools/workbox/guides/codelabs/npm-script
+
+- from: /web/tools/workbox/guides/migrate
+  to: /web/tools/workbox/guides/migrations/migrate-from-sw

@@ -6,6 +6,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/airhorner/card.jpg #}
 {# wf_featured_snippet: AirHorner is a simple but powerful Progressive Web App that shows the power of Service Workers and the Web Audio API to give you your very own air horn. Use it to annoy your friends or co-workers, no matter whether you're online, offline or on a flaky 2G network. #}
+{# wf_tags: spotlight,serviceworker,offline,addtohomescreen #}
 
 # AirHorner.com {: .page-title }
 
@@ -43,7 +44,7 @@ conncetivity.
 ### If you could have any API to improve your app, what would it be?
 
 **Web Intents** but everyone knows that.  Actually, Web Intents wouldn't have
-been useful for this app.  One areathat I would love to see expanded is
+been useful for this app.  One area that I would love to see expanded is
 Payments, I could quite easily see that having a quick way to buy new sounds
 etc would be quite nice.
 

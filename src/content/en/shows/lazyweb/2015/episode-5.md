@@ -4,6 +4,7 @@ description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TC
 
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-05-11 #}
+{# wf_blink_components: N/A #}
 {# wf_youtube_id: ZY_zpMlpqLM #}
 
 # How is TCP like the 7th grade? {: .page-title }
@@ -49,7 +50,7 @@ description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TC
 
 [http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1](http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1)
 
-[https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
+[/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
 
 ### CUTTING IN LINE
 
@@ -80,4 +81,4 @@ Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.
 
 HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

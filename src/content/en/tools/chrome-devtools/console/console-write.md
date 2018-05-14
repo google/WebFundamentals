@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: n/a #}
 
 # Diagnose and Log to Console {: .page-title }
 
@@ -14,10 +15,10 @@ Console logging is a powerful way to inspect what your page or application does.
 
 
 ### TL;DR {: .hide-from-toc }
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-''>console.log()</a> for basic logging
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-''>console.error()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-''>console.warn()</a> for eye-catching stuff
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-''>console.group()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend''>console.groupEnd()</a> to group related messages and avoid clutter
-- Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleassertexpression-object''>console.assert()</a> to show conditional error messages
+- Use <a href="/web/tools/chrome-devtools/console/console-reference#log">console.log()</a> for basic logging
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#error">console.error()</a> and <a href="/web/tools/chrome-devtools/debug/console/console-reference#warn">console.warn()</a> for eye-catching stuff
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#group">console.group()</a> and <a href="/web/tools/chrome-devtools/debug/console/console-reference#groupend">console.groupEnd()</a> to group related messages and avoid clutter
+- Use <a href="/web/tools/chrome-devtools/debug/console/console-reference#assert">console.assert()</a> to show conditional error messages
 
 
 ## Writing to the console
@@ -150,7 +151,7 @@ The [`console.assert()`](./console-reference#consoleassertexpression-object) met
 The following code will cause an error message in the console only if the number of child nodes belonging to the `list` element is greater than 500.
 
 
-    console.assert(list.childNodes.length < 500, "Node count is > 500");
+    console.assert(list.childNodes.length <= 500, "Node count is > 500");
     
 
 How an assertion failure displays in the console:
@@ -184,7 +185,7 @@ The code:
     
 
 The output of the previous code sample:
-![Example subsitution output](images/console-write-log-multiple.png)
+![Example substitution output](images/console-write-log-multiple.png)
 
 ### Styling console output with CSS
 
@@ -203,7 +204,7 @@ Try this code:
 
 ### Formatting DOM elements as JavaScript objects
 
-By default, DOM elements are logged into the console as representation of their HTML, but sometimes you want to access the DOM element as JavaScript object and inspect its properties. You can use the `%o` string specifier to do that (see above), or use `console.dir` to achieve the same: 
+By default, DOM elements are logged into the console as representation of their HTML, but sometimes you want to access the DOM element as JavaScript object and inspect its properties. You can use the `%O` string specifier to do that (see above), or use `console.dir` to achieve the same: 
 
 ![Logging an element using dir()](images/dir-element.png)
 

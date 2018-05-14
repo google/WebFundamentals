@@ -1,0 +1,40 @@
+<script>
+function disableButtons() {
+  var buttons = document.querySelectorAll('button');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+}
+function makeButtonAndResponse(choice, responseContainer) {
+  var b = document.createElement('button'),
+      response = document.createElement('aside'),
+      classes = 'button gc-analytics-event' + (choice.button.primary ? ' button-primary' : '');
+  response.className = 'note';
+  response.style.display = 'none';
+  response.innerHTML = choice.response;
+  b.textContent = choice.button.text;
+  b.type = 'button';
+  b.className = classes;
+  b.dataset.value = choice.analytics.hasOwnProperty('value') ?
+      choice.analytics.value : 1;
+  b.dataset.label = choice.analytics.label;
+  b.dataset.category = feedback.category;
+  b.addEventListener('click', function(e) {
+    response.style.display = 'block';
+    disableButtons();
+  });
+  document.body.appendChild(b);
+  responseContainer.appendChild(response);
+}
+var responseContainer = document.createElement('div');
+if (feedback.hasOwnProperty('question')) {
+  var question = document.createElement('p');
+  question.textContent = feedback.question;
+  document.body.appendChild(question);
+}
+for (var i = 0; i < feedback.choices.length; i++) {
+  var choice = feedback.choices[i];
+  makeButtonAndResponse(choice, responseContainer);
+}
+document.body.appendChild(responseContainer);
+</script>

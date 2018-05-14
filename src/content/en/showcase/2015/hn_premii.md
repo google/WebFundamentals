@@ -5,6 +5,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2015-04-01 #}
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/hn_premii/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Hacker News Reader {: .page-title }
 
@@ -55,7 +56,7 @@ allowed me to support different platforms.
 
 I was surprised how well all latest browsers support major HTML5 features.
 I started my web app as a prototype to see what I can build using Open Web
-(HTML5, CSS, Javascript). I only tested my app on iOS Safari and Android
+(HTML5, CSS, JavaScript). I only tested my app on iOS Safari and Android
 browser during development, and it worked on Firefox and with little changes,
 I was able to support IE mobile.
 

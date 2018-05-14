@@ -17,4 +17,4 @@ book_path: /web/shows/_book.yaml
 
 Progressive Web Apps are really about providing an enhanced experience to users.  What's next for the platform?  In this talk, we'll cover a few APIs that are just starting to ship - like Credential Management and Web Payments -that will further enhance building engaging web apps, and take a glimpse at the future of Progressive Web Apps.
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

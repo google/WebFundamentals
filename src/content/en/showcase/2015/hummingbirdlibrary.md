@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2015-08-14 #}
-{# wf_updated_on: 2015-08-14 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/hummingbirdlibrary/card.jpg #}
+{# wf_tags: spotlight #}
 
 # Hummingbird Library {: .page-title }
 
@@ -25,8 +26,8 @@ is the by far best-looking of them all.
 Yet, [Hummingbird Library](http://hummingbirdlibrary.com/){: .external }, which sits on top
 of the existing Hummingbird API, goes one step further, built from scratch
 with Angular and Material Design.
-[Theme color](/web/fundamentals/design-and-ui/browser-customization/)
-and [manifest](/web/fundamentals/engage-and-retain/app-install-banners/) make
+[Theme color](/web/fundamentals/design-and-ux/browser-customization/)
+and [manifest](/web/fundamentals/app-install-banners) make
 it look super integrated and installable on the home screen, and the whole
 experience feels very snappy, focussing on the core functionality of the main
 site.
@@ -49,7 +50,7 @@ tighter version of the tiles would work much better on mobile devices.
 Developing for the web allows you to reach virtually every platform with a
 single codebase, which is a huge advantage when you're the sole developer. And
 thanks to great features like
-[Add to Homescreen](/web/fundamentals/engage-and-retain/app-install-banners/),
+[Add to Homescreen](/web/fundamentals/app-install-banners),
 it's easy to give users an experience that is nearly identical to what they
 would get in a native application.
 

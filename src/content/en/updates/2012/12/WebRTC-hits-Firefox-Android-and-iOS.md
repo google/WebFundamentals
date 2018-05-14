@@ -14,9 +14,9 @@ book_path: /web/updates/_book.yaml
 
 <p>In particular, we're really excited to see WebRTC arriving on multiple browsers and platforms.</p>
 
-<p><code>getUserMedia</code> is available now in Chrome with no flags, as well as Opera, and Firefox Nightly/Aurora (though for Firefox you'll need to <a href="https://hacks.mozilla.org/2012/11/progress-update-on-webrtc-for-firefox-on-desktop/comment-page-1/#comment-1851192" title="Progress update on WebRTC for Firefox on desktop">set preferences</a>). Take a look at the cross-browser demo of <code>getUserMedia</code> at <a href="http://www.simpl.info/gum" title="Simple cross-platform getUserMedia demo">simpl.info/gum</a>&mdash;and check out Chris Wilson's <a href="http://webaudiodemos.appspot.com/" title="">amazing examples</a> of using <code>getUserMedia</code> as input for Web Audio.</p>
+<p><code>getUserMedia</code> is available now in Chrome with no flags, as well as Opera, and Firefox Nightly/Aurora (though for Firefox you'll need to <a href="https://hacks.mozilla.org/2012/11/progress-update-on-webrtc-for-firefox-on-desktop/comment-page-1/#comment-1851192" title="Progress update on WebRTC for Firefox on desktop">set preferences</a>). Take a look at the cross-browser demo of <code>getUserMedia</code> at <a href="https://simpl.info/gum" title="Simple cross-platform getUserMedia demo">simpl.info/gum</a>&mdash;and check out Chris Wilson's <a href="http://webaudiodemos.appspot.com/" title="">amazing examples</a> of using <code>getUserMedia</code> as input for Web Audio.</p>
 
-<p><code>webkitRTCPeerConnection</code> is now in Chrome stable and it's flagless. TURN server support is available in Chrome 24 and above. There's an ultra-simple demo of Chrome's RTCPeerConnection implementation at <a href="http://www.simpl.info/peerconnection" title="Simple cross-platform getUserMedia demo">simpl.info/pc</a> and a great video chat application at <a href="//apprtc.appspot.com" title="Video chat demo">apprtc.appspot.com</a>. (A word of explanation about the name: after several iterations, it's currently known as <code>webkitRTCPeerConnection</code>. Other names and implementations have been deprecated. When the standards process has stabilised, the <code>webkit</code> prefix will be removed.)</p>
+<p><code>webkitRTCPeerConnection</code> is now in Chrome stable and it's flagless. TURN server support is available in Chrome 24 and above. There's an ultra-simple demo of Chrome's RTCPeerConnection implementation at <a href="https://simpl.info/rtcpeerconnection" title="Simple cross-platform getUserMedia demo">simpl.info/pc</a> and a great video chat application at <a href="//apprtc.appspot.com" title="Video chat demo">apprtc.appspot.com</a>. (A word of explanation about the name: after several iterations, it's currently known as <code>webkitRTCPeerConnection</code>. Other names and implementations have been deprecated. When the standards process has stabilised, the <code>webkit</code> prefix will be removed.)</p>
 
 <p>WebRTC has also now been implemented for desktop in Firefox Nightly and Aurora, and for iOS and Android via the <a href="https://labs.ericsson.com/apps/bowser" title="Ericsson Bowser browser">Ericsson Bowser browser</a>.</p>
 
@@ -43,7 +43,7 @@ book_path: /web/updates/_book.yaml
       channel = dc1;
       channel.binaryType = "blob";
       log("pc1 new binarytype = " + dc1.binaryType);
-    
+
       // Since we create the datachannel, don't wait for onDataChannel!
       channel.onmessage = function(evt) {
         if (evt.data instanceof Blob) {
@@ -62,7 +62,7 @@ book_path: /web/updates/_book.yaml
       };
       log("pc1 state:" + channel.readyState);
           }
-    
+
 
 <p>More information and demos for the Firefox implementation are available from the <a href="https://hacks.mozilla.org/2012/11/progress-update-on-webrtc-for-firefox-on-desktop/comment-page-1/#comment-1851192" title="Progress update on WebRTC for Firefox on desktop">hacks.mozilla.org blog</a>. Basic WebRTC support is due for release in Firefox 18 at the beginning of 2013, and support is planned for additional features including <code>getUserMedia</code> and createOffer/Answer constraints, as well as TURN (to allow communication between browsers behind firewalls).</p>
 
@@ -72,13 +72,13 @@ book_path: /web/updates/_book.yaml
 
 <p><a href="http://tools.ietf.org/html/draft-alvestrand-constraints-resolution-00#page-4" title="IETF Resolution Constraints draft specification">Constraints</a> have been implemented in Chrome 24 and above. These can be used to set values for video resolution for <code>getUserMedia()</code> and RTCPeerConnection <code>addStream()</code> calls.</p>
 
-<p>There's an example at <a href="http://simpl.info/getusermedia/constraints/index.html" title="Resolution Constraints example on simpl.info">simpl.info/getusermedia/constraints</a>. Play around with different constraints by setting a breakpoint and tweaking values.</p>
+<p>There's an example at <a href="https://simpl.info/getusermedia/constraints/index.html" title="Resolution Constraints example on simpl.info">simpl.info/getusermedia/constraints</a>. Play around with different constraints by setting a breakpoint and tweaking values.</p>
 
 <p>A couple of gotchas... <code>getUserMedia</code> constraints set in one browser tab affect constraints for all tabs opened subsequently. Setting a disallowed value for constraints gives a rather cryptic error message:<br />
 
 
     navigator.getUserMedia error:  NavigatorUserMediaError {code: 1, PERMISSION_DENIED: 1}
-    
+
 
 <p>Likewise the error if you try to use <code>getUserMedia</code> from the local file system, not on a server!</p>
 

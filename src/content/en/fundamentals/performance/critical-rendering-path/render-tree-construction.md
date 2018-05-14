@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TODO
 
@@ -46,7 +46,7 @@ Note: As a brief aside, note that `visibility: hidden` is different from `displa
 
 The final output is a render that contains both the content and style information of all the visible content on the screen.  **With the render tree in place, we can proceed to the "layout" stage.**
 
-Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the [viewport](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport) of the device---that's the "layout" stage, also known as "reflow."
+Up to this point we've calculated which nodes should be visible and their computed styles, but we have not calculated their exact position and size within the [viewport](/web/fundamentals/design-and-ux/responsive/#set-the-viewport) of the device---that's the "layout" stage, also known as "reflow."
 
 To figure out the exact size and position of each object on the page, the browser begins at the root of the render tree and traverses it. Let's consider a simple, hands-on example:
 
@@ -88,4 +88,3 @@ Here's a quick recap of the browser's steps:
 Our demo page may look simple, but it requires quite a bit of work. If either the DOM or CSSOM were modified, you would have to repeat the process in order to figure out which pixels would need to be re-rendered on the screen.
 
 **_Optimizing the critical rendering path_ is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.** Doing so renders content to the screen as quickly as possible and also reduces the amount of time between screen updates after the initial render; that is, achieve higher refresh rates for interactive content.
-

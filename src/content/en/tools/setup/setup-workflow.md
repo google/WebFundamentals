@@ -1,17 +1,23 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk.
+description: Set up persistent authoring in Chrome DevTools so you can both see your changes immediately and save those changes to disk.
 
-{# wf_updated_on: 2015-07-30 #}
+{# wf_updated_on: 2018-04-20 #}
 {# wf_published_on: 2015-07-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Set Up Persistence with DevTools Workspaces {: .page-title }
+
+Warning: This version of Workspaces is only available in Chrome 62 or lower. Check what
+version of Chrome you're running at `chrome://version`. See [Save Changes To Disk With
+Workspaces](/web/tools/chrome-devtools/workspaces/) to learn how to use the version of Workspaces
+that's available in Chrome 63 and later.
 
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk.
+Set up persistent authoring in Chrome DevTools so you can both see your changes immediately and save those changes to disk.
 
 Chrome DevTools lets you change elements and styles
 on a web page and see your changes immediately.

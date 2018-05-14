@@ -19,8 +19,8 @@ Pete LePage on Deep user engagement with web push notifications
 
 Push notifications are an incredibly effective way to build deeper user engagement with your application, and are now available on the web. In this session, we'll take a look at how they work and deep-dive into how to implement push notifications in web applications, from beginning to end.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

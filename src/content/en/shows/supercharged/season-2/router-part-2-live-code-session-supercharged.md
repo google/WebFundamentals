@@ -23,4 +23,4 @@ Check out the highlights from Router Part 1: https://goo.gl/xGfYHY
 
 Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

@@ -1,0 +1,18 @@
+parent_project_metadata_path: /web/_project.yaml
+name: Developer Feedback Program
+description: 'Committed to helping you make your site work across platforms and browsers, so you can be successful. '
+home_url: /web/feedback/
+buganizer_id: 180451
+color: google-blue
+content_license: cc3-apache2
+footer_path: /web/_footer.yaml
+icon:
+  path: /web/images/web-fundamentals-icon192x192.png
+google_analytics_ids:
+  - UA-52746336-1
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq

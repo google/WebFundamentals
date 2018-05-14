@@ -29,5 +29,5 @@ CSS Custom properties are incredibly powerful. Check out how you can use them to
 - [Polymer Slack](http://bit.ly/polymerslack)
 - [Polymer G+ community](https://plus.google.com/communities/115626364525706131031)
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
 

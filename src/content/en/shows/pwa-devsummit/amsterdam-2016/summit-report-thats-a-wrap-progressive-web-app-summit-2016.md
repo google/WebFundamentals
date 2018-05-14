@@ -21,7 +21,8 @@ Watch Rob’s Progressive Web App Summit 2016 talk here https://goo.gl/rUQjVZ
 
 Join the Udacity Senior Web Developer program to learn how to build Progressive Web Apps https://www.udacity.com/course/senior-web-developer-nanodegree--nd802
 
-And take a look at some of the Showcase PWAs that have already been built over at https://developers.google.com/web/showcase
+And take a look at some of the Showcase PWAs that have already been built over
+at [https://developers.google.com/web/showcase](/web/showcase/)
 
 Watch all the talks from the summit here: https://goo.gl/aVUpyk
 
@@ -33,6 +34,6 @@ Google Plus: Follow GoogleChromeDevelopers
 
 Download the PWA codelabs here: https://goo.gl/qKJKIa
 
-And don't forget to subscribe! http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Class: PrecacheController</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small><a href="workbox.html">workbox</a>.<wbr><a href="workbox.precaching.html">precaching</a>.<wbr></small><span class="symbol-name">PrecacheController</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0-alpha.5</small></span>
+            </div>
+            <p>Performs efficient precaching of assets.</p>
+          </header>
+          <section>
+            <h2>Constructor</h2>
+            <section>
+              <h3 id="PrecacheController" class="symbol-name">PrecacheController</h3>
+              <p class="type-signature"> new PrecacheController(cacheName)
+              </p>
+              <p>Create a new PrecacheController.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>cacheName</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+          <section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id="addToCacheList" class="symbol-name">addToCacheList</h3>
+              <p class="type-signature"> addToCacheList(entries)</p>
+              <p>This method will add items to the precache list, removing duplicates and ensuring the information is valid.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>entries</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Array of (module:workbox-precaching.PrecacheController.PrecacheEntry or string)</p>
+                        <p>Array of entries to precache.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="cleanup" class="symbol-name">cleanup</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> cleanup()&nbsp;returns&nbsp;Promise containing module:workbox-precaching.PrecacheController.CleanupResult</p>
+              <p>Compare the URLs and determines which assets are no longer required in the cache.</p>
+              <p>This should be called in the service worker activate event.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing module:workbox-precaching.PrecacheController.CleanupResult</code>&nbsp;Resolves with an object containing details of the deleted cache requests and precache revision details.</p>
+                </dd>
+              </dl>
+              <h3 id="getCachedUrls" class="symbol-name">getCachedUrls</h3>
+              <p class="type-signature"> getCachedUrls()&nbsp;returns&nbsp;Array of string</p>
+              <p>Returns an array of fully qualified URL's that will be precached.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Array of string</code>&nbsp;An array of URLs.</p>
+                </dd>
+              </dl>
+              <h3 id="install" class="symbol-name">install</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
+              <p class="type-signature"> install(options)&nbsp;returns&nbsp;Promise containing module:workbox-precaching.PrecacheController.InstallResult</p>
+              <p>Call this method from a service work install event to start precaching assets.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>options</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>suppressWarnings</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">boolean</p>
+                                <p>Suppress warning messages.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>plugins</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Array of Object</p>
+                                <p>Plugins to be used for fetching and caching during install.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing module:workbox-precaching.PrecacheController.InstallResult</code>&nbsp;</p>
+                </dd>
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

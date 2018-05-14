@@ -1,5 +1,4 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
 redirects:
 
-- from: /web/fundamentals/performance/performance-codelab/...
-  to: /web/fundamentals/getting-started/codelabs/web-perf/
+- from: /web/fundamentals/performance/
+  to: /web/fundamentals/performance/why-performance-matters

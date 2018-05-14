@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2016-09-13 #}
+{# wf_updated_on: 2017-12-06 #}
 {# wf_published_on: 2016-09-13 #}
+{# wf_blink_components: N/A #}
 
 # Writing an Article {: .page-title }
 
@@ -24,7 +25,8 @@ to the `_project.yaml`, and one to the `_book.yaml`.
     project_path: /web/_project.yaml
     book_path: /web/section/_book.yaml
 
-Note: If the path to the project or book cannot be found, the page will not include the left nav and the upper tabs will not be properly highlighted.
+Note: If the path to the project or book cannot be found, the page will not
+include the left nav and the upper tabs will not be properly highlighted.
 
 ### Description (optional)
 
@@ -38,28 +40,8 @@ Caution: Do not</span> include &lt;code&gt; blocks (or `) in the description fie
 
 ### Other YAML Attributes
 
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2>Other Attributes</th>
-    </tr>
-    <tr>
-      <td><code>full_width: true</code></td>
-      <td>
-        Relinquishes control over the layout for the area below the site
-        header and project bar and above the site footer. Not supported in
-        the development environment.
-      </td>
-    </tr>
-    <tr>
-      <td><code>hide_last_updated: true</code></td>
-      <td>
-        Hides the automatically generated last updated field at the bottom of
-        the page. Not supported in the development environment.
-      </td>
-    </tr>
-  </tbody>
-</table>
+See [YAML Front Matter and Attribute Reference](/web/resources/yaml-and-attr-reference)
+for all of the YAML Front Matter and other attributes you can or should use.
 
 
 ## Page Title (required)
@@ -67,7 +49,9 @@ Caution: Do not</span> include &lt;code&gt; blocks (or `) in the description fie
 The page title is defined by the first H1-like tag with the `.page-title` class.
 For example:
 
-    # Writing an Article {: .page-title }
+<pre class="prettyprint">
+&num; Writing an Article &#123;: .page-title }
+</pre>
 
 Caution: Page titles should not include any markdown or HTML tags.
 
@@ -82,15 +66,15 @@ To include an author or translator attribution, use:
 
 ## Write Your Content
 
-Next, it's time to add your content. Refer to the [style guide](style-guide)
-for full details on the styles you can use and how to go about making stuff
-look pretty.
+Next, it's time to add your content. Refer to the [writing style guide](/style/)
+and [markdown syntax](markdown-syntax) guide for full details on the
+styles you can use and how to go about making stuff look pretty.
 
 ## Add Article to the Book
 
 To get your article to appear in the appropriate navigation, you need to update
 the `_book.yaml` or `_toc.yaml` file. Each section (updates, shows, fundamentals),
-has it's own `_book.yaml` and which links to individual `_toc.yaml` files. 
+has it's own `_book.yaml` and which links to individual `_toc.yaml` files.
 You most likely want to add your article to one of the `_toc.yaml` files.
 
 ## Test and Submit Your PR

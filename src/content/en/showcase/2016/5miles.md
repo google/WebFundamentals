@@ -1,10 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-05-17T18:00:00.000Z #}
-{# wf_updated_on: 2016-05-17T18:00:00.000Z #}
+{# wf_published_on: 2016-05-12 #}
+{# wf_updated_on: 2016-05-12 #}
 {# wf_featured_image: /web/showcase/2016/images/5miles/featured.png #}
 {# wf_featured_snippet: "With a new user growth rate of 100%, quarter-on-quarter, the mobile web is at the heart of our success...It’s a major venue for low-cost and highly effective customer acquisition and engagement."<br><b>Lucas Lu</b>, 5miles CEO #}
+{# wf_tags: mobile,addtohomescreen,progressive-web-apps,serviceworker,casestudy #}
+{# wf_region: north-america #}
+{# wf_vertical: retail #}
 
 # 5miles {: .page-title }
 

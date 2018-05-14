@@ -12,7 +12,7 @@ description: Learn all about the new Security Panel in Chrome DevTools.
 {% include "web/_shared/contributors/pbakaus.html" %}
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="9WuP4KcDBpI"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="iP75a1Y9saY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>

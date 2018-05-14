@@ -56,7 +56,7 @@ Check to see if your site is mobile friendly. A recent article on the Google Web
 
 [http://googlewebmastercentral.blogspot.com/2014/11/helping-users-find-mobile-friendly-pages.html](http://googlewebmastercentral.blogspot.com/2014/11/helping-users-find-mobile-friendly-pages.html)
 
-[https://www.google.com/webmasters/tools/mobile-friendly/](https://www.google.com/webmasters/tools/mobile-friendly/)
+[https://search.google.com/test/mobile-friendly](https://search.google.com/test/mobile-friendly)
 
 ### GITTING UP TO SPEED
 
@@ -68,7 +68,7 @@ Learning git can be tough. A look at StackOverflow reveals over 53000 git relate
 
 60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and master DevTools all while learning the secrets to a faster web app.
 
-[https://www.udacity.com/course/ud860](https://www.udacity.com/course/ud860)
+[https://www.udacity.com/course/browser-rendering-optimization--ud860](https://www.udacity.com/course/browser-rendering-optimization--ud860)
 
 ### ScreenSavers With JavaScript by Yash Bhardwaj
 [http://codepen.io/yashbhardwaj/full/hHgtE/](http://codepen.io/yashbhardwaj/full/hHgtE/){: .external }

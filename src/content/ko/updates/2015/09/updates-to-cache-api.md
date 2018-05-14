@@ -126,3 +126,5 @@ Firefox 는 이미 이들을 지원합니다. [Ben Kelly](https://twitter.com/wa
 
 Translated By:
 {% include "web/_shared/contributors/captainpangyo.html" %}
+
+{% include "comment-widget.html" %}

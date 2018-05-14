@@ -2,16 +2,19 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The sw-offline-google-analytics library gives you everything you need.
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2018-03-28 #}
 {# wf_published_on: 2016-07-20 #}
 {# wf_tags: serviceworker,analytics,offline,indexeddb #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
+{# wf_blink_components: N/A #}
 
 # Offline Google Analytics Made Easy {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
-
+Warning: The information in this post is out of date. Developers are encouraged to follow
+[these steps](/web/tools/workbox/guides/enable-offline-analytics) to
+use a solution based on the Workbox libraries.
 
 So you've got a [progressive web app](/web/progressive-web-apps/), complete with a [service worker](/web/fundamentals/getting-started/primers/service-workers) that allows it to work offline. Great! You've also got existing Google Analytics set up for your web app, and you don't want to miss out on any analytical insights coming from usage that occurs while offline. But if you try to send data to Google Analytics while offline, those requests will fail and the data will be lost.
 
@@ -31,7 +34,7 @@ From within your existing service worker code, add the following:
     importScripts('path/to/offline-google-analytics-import.js');
     
     // Then, call goog.offlineGoogleAnalytics.initialize():
-    // See https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics#googofflinegoogleanalyticsinitialize
+    // See https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics
     goog.offlineGoogleAnalytics.initialize();
     
     // At this point, implement any other service worker caching strategies
@@ -47,7 +50,7 @@ That's all there is to it!
 If the [network request fails](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/offline-google-analytics-import.js#L76), the library will [automatically store](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/enqueue-request.js#L37) information about the request to `IndexedDB`, along with a [timestamp](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/enqueue-request.js#L46) indicating when the request was initially made. Each time your service worker [starts up](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/offline-google-analytics-import.js#L98), the library will [check for queued requests](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L39) and [attempt to resend them](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L62), along with some additional Google Analytics parameters:
 
 - A [`qt` parameter](/analytics/devguides/collection/protocol/v1/parameters#qt), set to the amount of time that has passed since the request was initially attempted, to ensure that the original time is properly attributed.
-- Any [additional parameters](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L53) and values supplied in the `parameterOverrides` property of the configuration object passed to [`goog.offlineGoogleAnalytics.initialize()`](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics#googofflinegoogleanalyticsinitialize). For example, you could include a [custom dimension](https://support.google.com/analytics/answer/2709828) to distinguish requests that were resent from the service worker from those that were sent immediately.
+- Any [additional parameters](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L53) and values supplied in the `parameterOverrides` property of the configuration object passed to [`goog.offlineGoogleAnalytics.initialize()`](https://github.com/GoogleChrome/workbox/tree/master/packages/workbox-google-analytics). For example, you could include a [custom dimension](https://support.google.com/analytics/answer/2709828) to distinguish requests that were resent from the service worker from those that were sent immediately.
 
 If resending the request succeeds, then great! The request is removed from IndexedDB. If the retry fails, and the initial request was made less than 24 hours ago, it will be kept in `IndexedDB` to be retried the next time the service worker starts. You should note that Google Analytics hits older than [four hours](/analytics/devguides/collection/protocol/v1/parameters#qt) are not guaranteed to be processed, but resending somewhat older hits "just in case" shouldn't hurt.
 

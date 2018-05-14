@@ -1,0 +1,200 @@
+<html devsite><head>
+  <title>Website bereinigen und instand halten</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Sie benötigen Folgendes:</h3>
+
+<ul>
+  <li>Shell-/Terminal-Administratorzugriff auf die Server, das Web, die Datenbank und Dateien Ihres Webservers</li>
+  <li>Kenntnisse der Shell-/Terminal-Befehle</li>
+  <li>Codekenntnisse (z. B. PHP oder JavaScript)</li>
+  <li>Speicherplatz zur Erstellung von Backups Ihrer Website (einschließlich Dateien, Datenbank, Bilder usw.)</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Nächste Aktionen:</h3>
+
+<p>Wir decken in diesem Schritt mehrere Aktionen ab: </p>
+
+<ul>
+  <li>Auffinden zusätzlicher Ressourcen, falls Sie der Meinung sind, der Hacker habe versucht, an personenbezogene Daten von Nutzern wie bei Phishing-Seiten zu gelangen</li>
+  <li>Option zur Verwendung von <a href="https://www.google.com/webmasters/tools/removals">URLs entfernen</a> in der Search Console, die dazu dient, völlig neue, unerwünschte und für Nutzer sichtbare URLs beschleunigt zu entfernen, die durch den Hacker erstellt wurden und die nicht in den Google-Suchergebnissen erscheinen sollen</li>
+  <li>Option zur Verwendung von <a href="https://www.support.google.com/webmasters/answer/1352276">Abruf wie durch Google</a> in der Search Console, um die Verarbeitung sauberer Seiten zu beschleunigen, also Seiten, die entweder neu sind oder kürzlich aktualisiert wurden und die in Google-Suchergebnissen angezeigt werden sollen</li>
+  <li>Installation der neuesten und sichersten Version der Software</li>
+  <li>Entfernung unnötiger oder ungenutzter Anwendungen oder Plug-ins, die Ihre Website künftig anfälliger machen könnten</li>
+  <li>Wiederherstellung fehlerfreier Inhalte und Löschen der Inhalte des Hackers</li>
+  <li>Behebung der ursächlichen Sicherheitslücke, die der Hacker ausgenutzt hat</li>
+  <li>Ändern aller Passwörter</li>
+  <li>Planungsschritte, um die Sicherheit Ihrer Website zu erhalten</li>
+</ul>
+
+<h4>1. Support-Ressourcen für den Umgang mit dem Verlust von vertraulichen Informationen z.  B. durch Phishing-Seiten</h4>
+
+<p>Wenn vertrauliche Nutzerinformationen von Ihrer Website missbraucht wurden, etwa im Rahmen eines Phishing-Angriffs, sollten Sie unternehmerische, regulatorische oder gesetzliche Pflichten prüfen, bevor Sie mit der Bereinigung Ihrer Website oder mit dem Löschen von Dateien beginnen. In Fällen von Phishing finden Sie auf <a href="https://antiphishing.org">antiphishing.org</a> nützliche Ressourcen, darunter das Dokument zum Thema <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">Was tun, wenn Ihre Website durch Phisher gehackt wurde</a> (auf Englisch).</p>
+
+<h4>2. Neue, vom Hacker erstellte URLs zügig entfernen</h4>
+
+<p>Wenn der Hacker gänzlich neue, für den Nutzer sichtbare URLs erstellt hat, können Sie diese Seiten mithilfe der Funktion <a href="https://www.google.com/webmasters/tools/removals">URLs entfernen</a> in der Search Console schneller aus den Google-Suchergebnissen entfernen. Dies ist ein völlig optionaler Schritt. Wenn Sie die Seiten einfach löschen und anschließend den Server so konfigurieren, dass er den <a href="https://www.support.google.com/webmasters/answer/40132">Status-Code 404</a> ausgibt, werden die Seiten im Laufe der Zeit nicht mehr im Google-Index angezeigt.</p>
+
+<ul>
+  <li>Die Entscheidung, die Funktion "URLs entfernen" zu verwenden, wird vermutlich von der Anzahl der neu erstellten unerwünschten Seiten abhängen, da es möglicherweise zu umständlich ist, zu viele Seiten über diese Funktion zu entfernen. Ein weiterer wichtiger Faktor ist der potenzielle Schaden, den diese Seiten beim Nutzer anrichten könnten. Stellen Sie sicher, dass für Ihre ungewollten/entfernten URLs die Antwort "404 File not Found" konfiguriert wurde, damit die über "URLs entfernen" eingereichten Seiten nicht in den Suchergebnissen erscheinen.</li>
+  <li>Verwenden Sie dieses Tool nicht zur Entfernung von zuvor intakten Seiten, die lediglich durch den Hacker beschädigt wurden, damit diese nach der Bereinigung auch wieder in den Suchergebnissen angezeigt werden.
+    <em>Das Entfernen von URLs dient ausschließlich zur Entfernung von Seiten, die niemals in den Suchergebnissen angezeigt werden sollen.</em></li>
+</ul>
+
+<h4>3. Bearbeitung Ihrer gültigen Seiten durch Google beschleunigen</h4>
+
+<p>Sollten Sie über neue oder aktualisierte gültige Seiten verfügen, können Sie die Funktion <a href="https://www.support.google.com/webmasters/answer/1352276">Abruf wie durch Google</a> in der Search Console verwenden, um diese Seiten dem Google-Index hinzuzufügen. Dies ist völlig optional. Sollten Sie diesen Schritt überspringen, werden Ihre neuen oder veränderten Seiten trotzdem im Laufe der Zeit erfasst und bearbeitet.</p>
+
+<h4>4. Bereinigung Ihres Servers bzw. Ihrer Server starten</h4>
+
+<p>Es ist nun an der Zeit, die Bereinigung Ihrer Website auf Grundlage der Notizen durchzuführen, die Sie im Rahmen der Schritte <a href="hacked_with_spam">Schadensbeurteilung</a> und <a href="vulnerability">Sicherheitslücken ermitteln</a> angefertigt haben. Die weitere Vorgehensweise hängt davon ab, welche Art von Sicherung Ihnen zur Verfügung steht:</p>
+
+<ul>
+  <li>Saubere und aktuelle Sicherung</li>
+  <li>Saubere, aber veraltete Sicherung</li>
+  <li>Keine Sicherung   </li>
+</ul>
+
+<p>Vergewissern Sie sich zuerst, dass die Sicherung erstellt wurde, <strong>bevor</strong> Ihre Website gehackt wurde.</p>
+
+<ul>
+  <li><strong>Saubere und aktuelle Sicherung</strong>
+
+    <ol>
+      <li>Stellen Sie Ihre Sicherung wieder her.</li>
+      <li>Installieren Sie alle verfügbaren Software-Upgrades, -Updates oder -Patches. Sollten Sie die Kontrolle über den Server haben, gilt dies für Betriebssystemsoftware sowie alle Anwendungen wie z. B. Content-Management-Systeme, E-Commerce-Plattformen, Plug-ins, Vorlagen usw.</li>
+      <li>Außerdem empfiehlt es sich, nicht mehr von Ihrer Website verwendete Software, z. B. Widgets, Plug-ins oder Anwendungen, von Ihrem Server zu löschen.</li>
+      <li>Beseitigen Sie die Sicherheitslücken.</li>
+      <li>Stellen Sie sicher, dass alle im Schritt <a href="hacked_with_spam">Schadensbeurteilung</a> identifizierten Probleme behoben wurden.</li>
+      <li>Ändern Sie nochmals alle Kennwörter der zur Website gehörigen Konten, wie z. B. Anmeldungen für den FTP-Zugang, Datenbankzugriff, Systemadministrator- und CMS-Konten. Für Unix-basierte Systeme:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Saubere, aber veraltete Sicherung</strong>
+    <ol>
+      <li>Erstellen Sie ein Speicherabbild Ihrer aktuellen Website, auch wenn diese immer noch infiziert ist. Diese Kopie ist nur zur Sicherheit. Markieren Sie die Kopie als infiziert, um sie von den anderen zu unterscheiden. Auf einem Unix-basierten System können Sie folgendermaßen ein Speicherabbild erstellen:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Erstellen Sie eine Sicherung der Kopie des Dateisystems Ihres Servers, inklusive Bildern und Mediendateien. Auch eine vorhandene Datenbank sollte gesichert werden.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Stellen Sie die saubere, aber veraltete Sicherung auf Ihrem Server wieder her.</li>
+      <li>Außerdem empfiehlt es sich, nicht mehr von Ihrer Website verwendete Software, z. B. Widgets, Plug-ins oder Anwendungen, von Ihrem Server zu löschen.</li>
+      <li>Sollten Sie die Kontrolle über den Server haben, aktualisieren Sie die gesamte Software, einschließlich des Betriebssystems und aller Anwendungen wie z. B. Content-Management-Systeme, E-Commerce-Plattformen, Plug-ins und Vorlagen. Installieren Sie verfügbare Sicherheitsupdates und -patches.</li>
+      <li>Beseitigen Sie die Sicherheitslücken.</li>
+      <li>Führen Sie eine manuelle oder automatische Website-<code>diff</code> durch. Verwenden Sie hierzu die saubere Sicherung und die aktuelle infizierte Kopie.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Anschließend können Sie beliebige saubere Inhalte, die Sie behalten möchten, von der infizierten Kopie auf den aktualisierten Server hochladen.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Überprüfen Sie, ob jede unter <a href="hacked_with_spam">Schadensbeurteilung</a> aufgeführte URL korrigiert wurde.</li>
+      <li>Ändern Sie nochmals alle Passwörter der zur Website gehörigen Konten, wie z. B. Log-ins für FTP- und Datenbankzugriff sowie für Systemadministrator- und CMS-Konten. Für Unix-basierte Systeme:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Keine Sicherung verfügbar</strong>
+    <ol>
+      <li>Erstellen Sie zwei Sicherungen Ihrer Website, auch wenn diese noch infiziert ist. Eine zweite Sicherung hilft beim Wiederherstellen von versehentlich gelöschten Inhalten und ermöglicht Ihnen, im Falle von Problemen alles rückgängig zu machen und noch einmal von vorne zu beginnen. Beschriften Sie jede Sicherung mit dem Hinweis "infiziert".
+        <ul>
+          <li>Eine Ihrer Sicherungen besteht, nach den vorausgegangen Schritten, aus einem Speicherabbild, d.­ h. einer "Klonversion" Ihrer Website. Dieses Format macht das Wiederherstellen von Inhalten noch einfacher. Sie können das Speicherabbild für Notfälle aufbewahren. Auf einem Unix-basierten System können Sie folgendermaßen ein Speicherabbild erstellen:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>Die zweite Sicherung besteht aus einer Kopie des Dateisystems Ihres Servers, einschließlich Bildern und Mediendateien. Sollten Sie eine Datenbank verwenden, erstellen Sie ebenfalls eine Sicherung Ihrer Datenbank.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Sollten Sie nicht über ein Speicherabbild verfügen, erstellen Sie jeweils zwei Sicherungen der Datenbank und des Dateisystems.</li>
+        </ul>
+      </li>
+      <li>Bereinigen Sie den Inhalt der Website auf der neu erstellten Kopie des Dateisystems und nicht auf dem Server selbst.
+        <ol>
+          <li>Sollten die Dateizugriffsrechte Ihres vorigen Dateisystems zu schwach eingestellt gewesen sein, korrigieren Sie dies. Nehmen Sie diese Korrekturen in der Sicherungskopie und nicht auf dem Server vor.</li>
+          <li>Bereinigen Sie ebenfalls die Sicherungskopie der unter <a href="hacked_with_spam">Schadensbeurteilung</a> als manipuliert eingestuften URLs. Dies können Konfigurationsdateien des Servers, JavaScript, HTML oder PHP sein.</li>
+          <li>Entfernen Sie auch neue vom Hacker erstellte Dateien, d. h., richten Sie eine Fehlermeldung 404 ein. Diese Dateien haben Sie möglicherweise bereits mit dem Tool zum Entfernen von URLs in der Search Console übermittelt.</li>
+          <li>Wenn Ihr Code betroffen ist oder Ihre Passwörter geknackt wurden, beseitigen Sie die entsprechenden Sicherheitslücken. Eingabevalidierungsbibliotheken oder Sicherheitsaudits können hierbei hilfreich sein.</li>
+          <li>Beginnen Sie mit dem Bereinigen von durch Hacker geänderten Einträgen in Ihren Datenbanken, wenn Ihre Website über solche verfügt.
+            Kurz vor der Fertigstellung sollten Sie eine Plausibilitätsprüfung weiterer Einträge vornehmen, um sicherzugehen, dass alles bereinigt ist.</li>
+          <li>Ändern Sie nochmals alle Passwörter der zur Website gehörigen Konten, wie z. B. Anmeldedaten für FTP- und Datenbankzugriff sowie für Systemadministrator- und CMS-Konten. Für Unix-basierte Systeme:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>An dieser Stelle müsste die ehemals infizierte Sicherungskopie Ihrer Website ausschließlich bereinigte Daten enthalten. Halten Sie die bereinigte Kopie griffbereit und fahren Sie mit Schritt 5 fort.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Unnötige Software löschen</h4>
+
+<p>Es empfiehlt sich, die nicht mehr von Ihrer Website verwendete Software, wie z. B. Widgets, Plug-ins oder Anwendungen, von Ihrem Server zu löschen. Dies kann die Sicherheit erhöhen und die künftige Wartung vereinfachen.</p>
+
+<h4>6. Alle Server bereinigen</h4>
+
+<ol>
+  <li>Führen Sie eine saubere Installation durch, nicht nur ein Upgrade. Bei Upgrades können Dateien einer früheren Version zurückbleiben. Wenn eine infizierte Datei auf dem Server verbleibt, ist ein weiterer Hackerangriff wahrscheinlicher.
+    <ul>
+      <li>Haben Sie die Kontrolle über den Server, sollte die Neuinstallation die gesamte Software umfassen, einschließlich des Betriebssystems und aller Anwendungen, wie z. B. Content-Management-Systeme, E-Commerce-Plattformen, Plug-ins und Vorlagen. Installieren Sie verfügbare Sicherheitsupdates und -patches.</li>
+    </ul>
+  </li>
+  <li>Übertragen Sie saubere Inhalte von der bereinigten Sicherungskopie auf den oder die neu installierten Server.
+    Verwenden Sie beim Hochladen bzw. Wiederherstellen ausschließlich Dateien bzw. Datenbanken, die zweifelsfrei sauber sind. Achten Sie darauf, die entsprechenden Dateiberechtigungen zu erhalten und nicht die frisch installierten Systemdateien zu überschreiben.</li>
+  <li>Ändern Sie ein letztes Mal alle Passwörter der zur Website gehörigen Konten, wie z. B. Anmeldedaten für FTP- und Datenbankzugriff sowie für Systemadministrator- und CMS-Konten. Für Unix-basierte Systeme:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Langfristigen Wartungsplan erstellen</h4>
+
+<p>Im Web finden Sie viele informative Ressourcen für die wirksame Wartung einer Website, z. B. <a href="https://www.stopbadware.org/prevent-badware-basics">Badware verhindern: Grundlagen</a> von StopBadware (auf Englisch). Wir empfehlen Ihnen außerdem dringend, Folgendes zu tun:</p>
+
+<ul>
+  <li>Erstellen Sie regelmäßige, automatisierte Sicherungen Ihrer Website.</li>
+  <li>Achten Sie darauf, Software auf dem neuesten Stand zu halten.</li>
+  <li>Machen Sie sich mit den Sicherheitsrichtlinien aller Anwendungen, Plug-ins, Software von Drittanbietern usw. vertraut, bevor Sie diese auf dem Server installieren. Eine Sicherheitslücke in einer Softwareanwendung kann sich auf die Sicherheit Ihrer gesamten Website auswirken.</li>
+  <li>Erstellen Sie starke Passwörter.</li>
+  <li>Sorgen Sie für den sicheren Zustand aller am System angemeldeten Geräte (halten Sie Ihr Betriebssystem und Ihren Browser aktuell).</li>
+</ul>
+
+<h4>8. Nochmals überprüfen, ob die Bereinigung abgeschlossen ist</h4>
+
+<p>Stellen Sie sicher, dass Sie auf die folgenden Fragen mit "Ja" antworten können:</p>
+
+<ul>
+  <li>Habe ich die richtigen Schritte unternommen, falls die personenbezogenen Daten der Nutzer in die Hände des Hackers gelangt sind? </li>
+  <li>Läuft auf meiner Website die neueste und sicherste Softwareversion? </li>
+  <li>Habe ich alle unnötigen oder ungenutzten Anwendungen oder Plug-ins entfernt, die Hackern eine Angriffsfläche bieten könnten? </li>
+  <li>Habe ich meine Inhalte wiederhergestellt und die Inhalte des Hackers beseitigt? </li>
+  <li>Habe ich die Grundursache der Sicherheitslücke beseitigt, durch die meine Website gehackt werden konnte? </li>
+  <li>Habe ich einen Plan, um meine Website auf Dauer abzusichern?</li>
+</ul>
+
+<h4>9. Website wieder online stellen</h4>
+<h2>Nächster Schritt</h2>
+<p>Jetzt haben Sie es fast geschafft. Der letzte Schritt im Verfahren ist: <a href="request_review">Überprüfung anfordern</a>.</p>
+
+</body></html>

@@ -30,7 +30,7 @@ Native support for this method - and its player object - became widely available
 It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera, and is under [active development](https://birtles.github.io/areweanimatedyet/){: .external } for Firefox.
 This is a powerful primitive that deserves a place in your toolbox.
 
-> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](/web/fundamentals/look-and-feel/animations).
+> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](/web/fundamentals/design-and-ux/animations/).
 
 ## Codelabs
 
@@ -62,7 +62,7 @@ For a comparison between the two polyfills, please [see the homepage](https://gi
 
 To use either polyfill in your code, you have a few options.
 
-1. Use a CDN, such as [cdnjs](https://cdnjs.com/libraries/web-animations), [jsDelivr](http://www.jsdelivr.com/projects/web-animations), or target a specific release via [rawgit.com](https://rawgit.com)
+1. Use a CDN, such as [cdnjs](https://cdnjs.com/libraries/web-animations), [jsDelivr](https://www.jsdelivr.com/projects/web-animations), or target a specific release via [rawgit.com](https://rawgit.com)
 
 1. Install via NPM or Bower
 

@@ -21,8 +21,8 @@ My favorite part of my job is when I get to work on accessibility. I see this as
 
 This session aims to clear up some of the confusion that makes getting started with accessibility tricky, while showing off new tools to make the process easier, and highlighting ways that we can work with and extend the platform so our apps are accessible to everyone.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

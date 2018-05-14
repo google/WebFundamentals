@@ -1,0 +1,20 @@
+{{#extend 'layout'}}
+  {{#content 'title'}}
+    <title>Overview</title>
+  {{/content}}
+  {{#content 'body-main-content'}}
+    {{!--
+      This is a custom handlebars template to add version information to the
+      output.
+    --}}
+    {{~#embed 'symbol-version'}}{{/embed~}}
+
+    {{#if readme}}
+      {{{ readme }}}
+    {{else}}
+      {{#block 'body-symbol-index'}}
+        {{#embed 'symbol-index'}}{{/embed}}
+      {{/block}}
+    {{/if}}
+  {{/content}}
+{{/extend}}

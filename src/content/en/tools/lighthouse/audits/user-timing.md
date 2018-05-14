@@ -1,13 +1,14 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Timing Marks and Measures" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-06 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-06 #}
+{# wf_blink_components: N/A #}
 
 # User Timing Marks and Measures  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The User Timing API enables you to measure your app's JavaScript performance.
 The basic idea is that you decide which parts of your scripts you want to
@@ -16,7 +17,7 @@ Timing API. From there, you can access the results from JavaScript using the
 API, or view them on your [Chrome DevTools Timeline
 Recordings](/web/tools/chrome-devtools/evaluate-performance/timeline-tool).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 This audit is not structured as a "pass" or "fail" test. It's just an
 opportunity to discover a useful API that can aid you in measuring your app's
@@ -30,9 +31,9 @@ Check out [User Timing API](https://www.html5rocks.com/en/tutorials/webperforman
 for an introduction on using the User Timing API to measure your app's
 JavaScript performance.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 Lighthouse extracts User Timing data from Chrome's Trace Event Profiling Tool.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/user-timing.html" %}

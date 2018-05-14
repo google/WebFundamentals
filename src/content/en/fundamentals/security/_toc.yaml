@@ -1,5 +1,6 @@
 toc:
-  - title: Security and Identity
+  - title: Security
+    style: accordion
     section:
     - title: Overview
       path: /web/fundamentals/security/
@@ -9,13 +10,19 @@ toc:
       section:
       - title: Why HTTPS
         path: /web/fundamentals/security/encrypt-in-transit/why-https
+        step_group: security-https
       - title: Important Security Terminology
         path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+        step_group: security-https
       - title: Enabling HTTPS on Your Servers
         path: /web/fundamentals/security/encrypt-in-transit/enable-https
+        step_group: security-https
     - title: Preventing Mixed Content
       section:
-      - title: What is Mixed Content?
+      - title: What Is Mixed Content?
         path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+        step_group: security-mixed-content
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+        step_group: security-mixed-content
+    - include: /web/fundamentals/security/hacked/_toc.yaml

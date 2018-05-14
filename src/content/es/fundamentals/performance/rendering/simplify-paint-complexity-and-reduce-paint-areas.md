@@ -2,98 +2,126 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible.
 
-{# wf_updated_on: 2015-03-19 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on: 2017-07-12 #}
+{# wf_published_on: 2015-03-20 #}
 
-# Simplificación de la complejidad de la pintura y reducción de las áreas de pintura {: .page-title }
+# Simplifica la complejidad de la pintura y reduce las áreas de pintura {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
+La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las
+ pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se 
+ejecuta, y la que se debe evitar siempre que sea posible.
 
-La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible.
+### TL;DR {: .hide-from-toc } 
 
-### TL;DR {: .hide-from-toc }
-- Si se cambia alguna propiedad que no sea transforms u opacity, siempre se desencadena la función de pintura.
-- La pintura es, generalmente, la parte más costosa de la canalización de píxeles; evítela siempre que sea posible.
-- Reduzca las áreas de pintura mediante la promoción de las capas y la orquestación de las animaciones.
-- Utilice el generador de perfiles de pintura de DevTools de Chrome para evaluar la complejidad y el costo de la pintura; reduzca su uso siempre que sea posible.
+* Si se cambia alguna propiedad que no sea transforms u opacity, siempre se desencadena la función de pintura.
+* La pintura es, generalmente, la parte más costosa de la canalización de píxeles; evítala siempre que sea posible.
+* Reduce las áreas de pintura mediante la promoción de las capas y la orquestación de las animaciones.
+* Utiliza el generador de perfiles de pintura de Chrome DevTools para evaluar la complejidad y el costo de la pintura; reduce su uso siempre que sea posible.
+
+## Activación de diseño y pintura
+
+Si activas un diseño, _siempre activarás la pintura_, ya que si se modifica la geometría de un elemento sus píxeles deberán corregirse.
+
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg"  alt="Canalización de píxeles completa.">
+
+También puedes activar la pintura si modificas las propiedades no geométricas, como los fondos, el color del texto o las sombras. En esos casos, el diseño no será necesario y la canalización tendrá el siguiente aspecto:
+
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg"  alt="Canalización de píxeles sin diseño.">
+
+## Usa Chrome DevTools para identificar rápidamente los cuellos de botella de pintura
+
+<div class="attempt-right">
+  <figure>
+    <img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg" alt="Opción “Show paint rectangles” en DevTools.">
+  </figure>
+</div>
+
+Puedes usar Chrome DevTools para identificar rápidamente las áreas que se pintan. Ingresa a DevTools y presiona la tecla Escape del teclado. Accede a la pestaña Rendering, en el panel que aparece, y selecciona “Show paint rectangles”.
+
+<div style="clear:both;"></div>
+
+Con esta opción activada, en Chrome la pantalla parpadeará con color verde cada vez que se aplique pintura. Si ves que toda la pantalla parpadea con color verde o que esto sucede en algunas áreas de la pantalla que según tu parecer no deberían pintarse, te recomendamos investigar un poco más sobre el tema.
+
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg"  alt="Página parpadeando con color verde cada vez que se aplica pintura.">
 
 
-Si desencadena un diseño, _siempre desencadenará la pintura_, ya que, si se modifica la geometría de un elemento, sus píxeles deberán arreglarse.
+<div class="attempt-right">
+  <figure>
+    <img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg" alt="Activación y desactivación de la generación de perfiles de pintura en Chrome DevTools.">
+  </figure>
+</div>
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg"  alt="The full pixel pipeline.">
+Existe una opción en Timeline de Chrome DevTools con la que podrás obtener más información: un generador de perfiles de pintura. Para habilitarlo, accede a Timeline y marca la casilla “Paint” que aparece en la parte superior. Es importante que _solo esta función esté activada cuando se intenta crear un perfil relacionado con la pintura_, ya que esta función posee una sobrecarga y esto distorsionará la creación de perfiles de rendimiento. Esta función se puede aprovechar mejor si deseas obtener más información sobre lo que se está pintando exactamente.
 
-También puede desencadenar la pintura si modifica las propiedades no geométricas, como los fondos, el color del texto o las sombras. En esos casos, el diseño no será necesario y la canalización se verá de la siguiente manera:
+<div style="clear:both;"></div>
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg"  alt="The pixel pipeline without layout.">
+<div class="attempt-right">
+  <figure>
+    <img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg" alt="Botón para iniciar el generador de perfiles de pintura." class="screenshot">
+  </figure>
+</div>
 
-## Uso de DevTools de Chrome para identificar rápidamente los cuellos de botella de pintura
+Desde aquí, ahora podrás ejecutar una grabación de Timeline, y los registros de pintura serán más detallados. Si haces clic en el registro de pintura de un fotograma, podrás tener acceso al generador de perfiles de pintura de dicho fotograma:
 
-Puede utilizar DevTools de Chrome para identificar rápidamente las áreas que se están pintando. Vaya a DevTools y presione la tecla Escape del teclado. Acceda a la pestaña Rendering, en el panel que aparece, y seleccione “Show paint rectangles”:
+<div style="clear:both;"></div>
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg"  alt="The show paint rectangles option in DevTools.">
+Si haces clic en el generador de perfiles de pintura, aparecerá una vista en la que podrás ver lo que se pintó, el tiempo que esto llevó y las llamadas de pintura individuales que se necesitaron:
 
-Con esta opción activada, en Chrome, la pantalla parpadeará en color verde cada vez que se aplique pintura. Si ve que toda la pantalla parpadea en color verde o que esto sucede en algunas áreas de la pantalla que considera que no se deberían pintar, le recomendamos que investigue un poco más sobre el tema.
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg"  alt="Paint Profiler de Chrome DevTools.">
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg"  alt="The page flashing green whenever painting occurs.">
+Este generador de perfiles te permite conocer tanto el área como la complejidad (que es, en realidad, el tiempo que tarda en aplicarse la pintura). Puedes consultar estos dos aspectos para solucionar el problema si no puedes evitar la pintura.
 
-Existe una opción en la escala de tiempo de DevTools de Chrome en la que podrá obtener más información: un generador de perfiles de pintura. Para habilitarlo, acceda a Timeline y marque la casilla “Paint” que aparece en la parte superior. Es importante que _solo esta función esté activada cuando se intenta crear un perfil relacionado con la pintura_, ya que esta función posee una sobrecarga y esto distorsionará la creación de perfiles de rendimiento. Esta función se puede aprovechar mejor si desea obtener más información sobre qué se está pintando exactamente.
+## Promueve elementos que se muevan o se atenúen
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg"  alt="The toggle to enable paint profiling in Chrome DevTools.">
+La pintura no siempre se realiza en una sola imagen de la memoria. De hecho, es posible que el navegador aplique pintura en varias imágenes, o capas del compositor, si es necesario.
 
-Desde aquí, ahora podrá ejecutar una grabación de la escala de tiempo, y los registros de pintura serán más detallados. Si hace clic en el registro de pintura de un marco, ahora podrá tener acceso al Paint Profiler de dicho marco:
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg"  alt="Representación de las capas del compositor.">
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg"  alt="The button to bring up the paint profiler.">
+El beneficio de este enfoque es que los elementos que se vuelven a pintar regularmente o se mueven en la pantalla mediante transforms pueden manipularse sin afectar a los demás elementos. Lo mismo sucede con los paquetes de edición, como Sketch, GIMP o Photoshop, en los cuales cada capa se puede manipular y componer sobre el resto de las capas para crear la imagen final.
 
-Si hace clic en Paint Profiler, aparecerá una vista en la que podrá ver qué se pintó, cuánto tiempo se demoró en hacerlo y las llamadas de pintura individuales que se necesitaron:
-
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg"  alt="Chrome DevTools Paint Profiler.">
-
-Este generador de perfiles le permite conocer tanto el área como la complejidad (que es, en realidad, el tiempo que se demora en pintar). Puede consultar estas dos áreas para solucionar el problema si no puede evitar la pintura.
-
-## Promoción de elementos que se mueven o se atenúan
-
-La pintura no siempre se realiza en una sola imagen de la memoria. De hecho, es posible que el navegador realice pinturas en varias imágenes o capas del compositor, si fuera necesario.
-
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg"  alt="A representation of compositor layers.">
-
-El beneficio de este enfoque es que los elementos que se vuelven a pintar regularmente o que se mueven en la pantalla mediante transforms se pueden manipular sin afectar a los otros elementos. Lo mismo ocurre con los paquetes de arte, como Sketch, GIMP o Photoshop, en los que cada una de las capas se puede manipular y componer sobre el resto de las capas para crear la imagen final.
-
-La mejor forma de crear una capa nueva es mediante el uso de la propiedad `will-change` de CSS. Esto funcionará en Chrome, Opera y Firefox, y, con un valor de `transform`, se creará una capa nueva del compositor:
+La mejor forma de crear una capa nueva es a través de la propiedad `will-change` de CSS. Esto funciona en Chrome, Opera y Firefox y, con un valor de `transform`, se creará una capa nueva del compositor:
 
 
     .moving-element {
       will-change: transform;
     }
-    
 
-En el caso de los navegadores que no son compatibles con `will-change`, pero que se benefician de la creación de capas, como Safari y Mobile Safari, debe utilizar correcta o incorrectamente una transformación 3D para crear, de forma forzada, una capa nueva:
+
+En el caso de los navegadores que no son compatibles con `will-change`, pero se benefician con la creación de capas, como Safari y Mobile Safari, debes usar correcta o incorrectamente una transformación 3D para crear, de manera forzosa, una capa nueva:
 
 
     .moving-element {
       transform: translateZ(0);
     }
-    
 
-Sin embargo, se debe tener la precaución de no crear demasiadas capas, ya que cada capa requiere memoria y administración. Podrá encontrar más información en la sección [Limítese solo a las propiedades del compositor y administre el recuento de capas](stick-to-compositor-only-properties-and-manage-layer-count).
 
-Si promovió un elemento a una capa nueva, utilice DevTools para confirmar que, al hacerlo, obtuvo un beneficio de rendimiento. **No promueva elementos sin generar perfiles.**
+Sin embargo, debes tener suficiente precaución para no crear demasiadas capas, ya que para cada una se requiere memoria y administración. Podrás encontrar más información en la sección [Limítate solo a las propiedades del compositor y administra el recuento de capas](stick-to-compositor-only-properties-and-manage-layer-count).
 
-## Reducción de las áreas de pintura
+Si promoviste un elemento a una capa nueva, usa DevTools para confirmar que al hacerlo obtuviste un beneficio de rendimiento. **No promuevas elementos sin generar perfiles.**
 
-En algunos casos, no obstante, aunque se promuevan los elementos, aún es necesario realizar trabajos de pintura. Un gran desafío en relación con la pintura es que los navegadores unen dos áreas que necesitan pintura, y el resultado de esto podría ser que se vuelva a pintar toda la pantalla. Entonces, por ejemplo, si posee un encabezado fijo en la parte superior de la página y un elemento que se está pintando en la parte inferior de la pantalla, es posible que se termine pintando nuevamente toda la pantalla.
+## Reduce las áreas de pintura
 
-Note: Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos  de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente.
+En algunos casos, no obstante, aunque se promuevan los elementos será necesario realizar trabajos de pintura de todos modos. Un gran desafío, en términos de problemas relacionados con la pintura, es que los navegadores unen dos áreas que necesitan pintura; esto puede hacer que se vuelva a pintar toda la pantalla. Entonces, por ejemplo, si tienes un encabezado fijo en la parte superior de la página y un elemento que se está pintando en la parte inferior de la pantalla, es posible que se pinte nuevamente toda la pantalla.
 
-Reducir las áreas de pintura suele consistir en orquestrar sus animaciones y transiciones para que no se superpongan demasiado, o en una forma de encontrar estrategias para evitar animar ciertas partes de la página.
+Note: Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente.
+
+Reducir las áreas de pintura suele implicar orquestar tus animaciones y transiciones para que no se superpongan demasiado, o encontrar estrategias para evitar animar ciertas partes de la página.
 
 ## Simplificación de la complejidad de la pintura
-Cuando se trata de la pintura, algunas tareas son más costosas que otras. Por ejemplo, todo lo que incluye un desenfoque (como una sombra, por ejemplo) demorará más en pintarse que, supongamos, dibujar un cuadro rojo. Sin embargo, en cuanto a las CSS, esto no siempre es obvio: `background: red;` y `box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);` no necesariamente se ven como si tuvieran características de rendimiento muy diferentes, pero de hecho las tienen.
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg"  alt="The time taken to paint part of the screen.">
+<div class="attempt-right">
+  <figure>
+    <img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg" alt="Tiempo que tarda en pintarse parte de la pantalla.">
+  </figure>
+</div>
 
-El generador de perfiles de pintura mencionado anteriormente le permite determinar si necesita buscar otras formas de lograr los efectos. Pregúntese si es posible utilizar un conjunto de estilos más económicos o medios alternativos para lograr el resultado final.
+Cuando se trata de la pintura, algunas tareas son más costosas que otras. Por ejemplo, todo elemento que incluya un desenfoque (como una sombra, por ejemplo) tardará más en pintarse que, por ejemplo, un cuadro rojo en dibujarse. Sin embargo, en términos de CSS, esto no siempre es evidente: `background: red;` y `box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);` no necesariamente se ven como si tuvieran características de rendimiento muy diferentes, pero de hecho las tienen.
 
-Siempre que sea posible, evite aplicar pintura durante las animaciones especialmente, ya que los **10 ms** que tiene por marco no  suelen ser una cantidad de tiempo suficiente como para finalizar el trabajo de pintura, en particular en los dispositivos móviles.
+El generador de perfiles de pintura mencionado anteriormente te permite determinar si necesitas buscar otras formas de lograr los efectos. Pregúntate si es posible usar un conjunto de estilos menos exigente o medios alternativos para lograr el resultado final.
+
+Siempre que sea posible, evita aplicar pintura durante las animaciones en particular, ya que los **10 ms** que tienes por fotograma no suelen bastar para finalizar el trabajo de pintura, en particular en los dispositivos móviles.
 
 
+{# wf_devsite_translation #}

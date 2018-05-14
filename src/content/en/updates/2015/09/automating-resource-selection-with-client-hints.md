@@ -17,7 +17,7 @@ Building for the web gives you unparalleled reach. Your web application is a
 click away and available on most every connected device&mdash;smartphone, tablet, 
 laptop and desktop, TV, and more&mdash;regardless of the brand or the platform. To 
 deliver the best experience you've built a 
-[responsive site](/web/fundamentals/design-and-ui/responsive) that 
+[responsive site](/web/fundamentals/design-and-ux/responsive) that 
 adapts the presentation and functionality for each form-factor, and now you're 
 running down your performance checklist to ensure that the application loads as 
 quickly as possible: you've optimized your 

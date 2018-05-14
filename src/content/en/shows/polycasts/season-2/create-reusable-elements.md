@@ -31,4 +31,4 @@ Creating reusable components doesn't have to be so tricky! Use the polyserve too
 
 Join the Polymer G+ community at [https://plus.google.com/communities/115626364525706131031](https://plus.google.com/communities/115626364525706131031)
 
-Subscribe to the Google Developers channel at [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+Subscribe to the Google Developers channel at [https://goo.gl/mQyv5L](//goo.gl/mQyv5L)

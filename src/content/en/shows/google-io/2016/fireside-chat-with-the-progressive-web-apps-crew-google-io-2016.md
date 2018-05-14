@@ -17,8 +17,8 @@ book_path: /web/shows/_book.yaml
 
 Come meet some of the team building the Progressive Web App platform in the Chrome team.  We'll take your questions and talk about where we see the future taking us.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

@@ -1,64 +1,66 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: JavaScript nos permite modificar casi cualquier aspecto de la página: el contenido, el estilo y su comportamiento según las interacciones del usuario. Sin embargo, JavaScript también puede bloquear la creación de DOM y retrasar la visualización de la página. Para ofrecer un rendimiento óptimo, define que JavaScript sea asíncrono y elimina todo el contenido JavaScript innecesario de la ruta de publicación importante.
+description: JavaScript nos permite modificar prácticamente todos los aspectos de la página, el contenido, el estilo y su respuesta ante la interacción del usuario. No obstante, JavaScript también puede bloquear la construcción del DOM y demorar la presentación de la página. Para obtener un rendimiento óptimo, haz que tu JavaScript sea asincrónico y elimina todo JavaScript innecesario desde la ruta de acceso de representación crítica.
 
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
-# Añadir interactividad con JavaScript {: .page-title }
+# Agregar interactividad con JavaScript {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-
-JavaScript nos permite modificar casi cualquier aspecto de la página: el contenido, el estilo y su comportamiento según las interacciones del usuario. Sin embargo, JavaScript también puede bloquear la creación de DOM y retrasar la visualización de la página. Para ofrecer un rendimiento óptimo, define que JavaScript sea asíncrono y elimina todo el contenido JavaScript innecesario de la ruta de publicación importante.
-
-
+JavaScript nos permite modificar prácticamente todos los aspectos de la página: contenido,
+estilo y su respuesta ante la interacción del usuario. No obstante, JavaScript también puede
+bloquear la construcción del DOM y demorar la presentación de la página. Para obtener un
+rendimiento óptimo, haz que tu JavaScript sea asincrónico y elimina todo JavaScript innecesario
+desde la ruta de acceso de representación crítica.
 
 ### TL;DR {: .hide-from-toc }
-- JavaScript puede enviar consultas a DOM y CSSOM y modificarlos.
-- La ejecución de JavaScript crea bloqueos en CSSOM.
-- JavaScript bloquea la creación de DOM a no ser que se declare expresamente como asíncrono.
+- JavaScript puede consultar y modificar el DOM y el CSSOM.
+- La ejecución de JavaScript bloquea el CSSOM.
+- JavaScript bloquea la construcción del DOM, a menos que se declare explícitamente como asincrónico.
 
 
-JavaScript es un lenguaje dinámico que se ejecuta en el navegador y nos permite modificar casi cualquier aspecto del comportamiento de la página: podemos añadir o suprimir elementos del árbol DOM para modificar el contenido de la página, podemos modificar las propiedades CSSOM de cada elemento, podemos gestionar la información introducida del usuario y mucho más. Para ilustrar esta acción, vamos a ampliar nuestro ejemplo anterior de `Hola, mundo` con una secuencia de comandos integrada sencilla:
+JavaScript es un lenguaje dinámico que se ejecuta en un navegador y nos permite modificar prácticamente todos los aspectos del comportamiento de la página: podemos modificar contenido de la página agregando o eliminando elementos del árbol del DOM. También podemos modificar las propiedades del CSSOM de cada elemento y controlar las entradas del usuario, entre otras muchas opciones más. Para ilustrar esto, ampliemos nuestro ejemplo anterior "Hello World" con una sencilla secuencia de comandos integrada:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-* JavaScript nos permite echar mano de DOM y obtener la referencia al nodo de alcance oculto. Puede que el nodo no se muestre en el árbol de publicación, pero aun así sabemos que se encuentra en DOM. Después, una vez obtenida la referencia, podemos cambiar el texto (con `.textContent`) e incluso anular la propiedad de estilo de visualización calculada de `none` (ninguna) a `inline` (integrada). Una vez finalizada esta modificación, en nuestra página se mostrará el texto `**Hello interactive students!`.**
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/script.html){: target="_blank" .external }
 
-* JavaScript también nos permite crear, aplicar estilo, y añadir y suprimir elementos nuevos a DOM. De hecho, técnicamente, toda nuestra página podría limitarse a un archivo JavaScript grande que cree elementos y les aplique estilo de uno en uno. Esto funcionaría, pero en la práctica es mucho más fácil trabajar con HTML y CSS. En la segunda parte de nuestra función JavaScript podemos crear un elemento `div` nuevo, definir su contenido de texto, aplicarle estilo y añadirlo al cuerpo.
+* JavaScript nos permite explorar el DOM y obtener la referencia a un nodo de intervalo oculto. Es posible que el nodo no esté visible en el árbol de representación, pero aún se encuentra en el DOM. Luego, una vez que tengamos la referencia, podemos cambiar su texto (mediante .textContent) e incluso anular su propiedad de estilo de visualización calculada pasando de "none" a "inline". Ahora nuestra página presenta "**Hello interactive students!**".
 
-<img src="images/device-js-small.png" class="center" alt="vista previa de la página">
+* JavaScript también nos permite crear nuevos elementos, aplicarles ajustes de estilo, también agregarlos al DOM y eliminarlos de él. Técnicamente, toda nuestra página podría ser un solo archivo JavaScript grande que nos permita crear los elementos y darles estilo uno por uno. Pese a que esto puede funcionar, en la práctica, es mucho más fácil usar HTML y CSS. En la segunda parte de nuestra función JavaScript, crearemos un nuevo elemento div, configuraremos su contenido de texto y lo adjuntaremos al cuerpo.
 
-Así, hemos modificado el contenido y el estilo CSS de un nodo DOM existente. Además, hemos añadido un nodo completamente nuevo al documento. Puede que no ganemos ningún premio de diseño con la página, pero ilustra la capacidad y la flexibilidad que JavaScript nos ofrece.
+<img src="images/device-js-small.png"  alt="vista previa de la página">
 
-Sin embargo, hay una gran advertencia de rendimiento subyacente. JavaScript nos proporciona muchas opciones, pero también crea muchas limitaciones adicionales sobre cómo y cuándo se muestra la página.
+Con esto, modificamos el contenido y el estilo de CSS de un nodo del DOM existente y agregamos un nodo completamente nuevo al documento. Nuestra página no ganará ningún premio de diseño, pero en ella se ilustrarán la capacidad y flexibilidad que JavaScript nos ofrece.
 
-En primer lugar, podemos ver en el ejemplo anterior que nuestra secuencia de comandos integrada se encuentra cerca del final de la página. ¿La razón? Puedes intentarlo personalmente, pero, si colocamos la secuencia de comandos antes del elemento _span_, verás que la secuencia de comandos falla e indica que no encuentra ninguna referencia a elementos _span_ en el documento, es decir, _getElementsByTagName('span')_ ofrece _null_ como resultado. Esto muestra una propiedad importante: nuestra secuencia de comandos se ejecuta en el punto exacto en el que se inserta en el documento. Cuando el analizador HTML se topa con una etiqueta de secuencia de comandos, pone en pausa el proceso de creación de DOM y transfiere el control al motor de JavaScript; una vez se acabe de ejecutar el motor de JavaScript, el navegador retoma la actividad donde la dejó y reactiva la creación de DOM.
+Sin embargo, si bien JavaScript nos brinda mucha capacidad, genera muchas limitaciones adicionales respecto de cómo y cuándo se representa la página.
 
-Dicho de otro modo, nuestro bloque de secuencia de comandos no encuentra ningún elemento más adelante en la página porque aún no se han procesado. O, expresado con ciertas diferencias: **al ejecutar nuestra secuencia de comandos integrada se bloquea la creación de DOM, que también retrasa la publicación inicial.**
+Primero, ten en cuenta que en el ejemplo anterior nuestra secuencia de comandos integrada se encuentra cerca de la parte inferior de la página. ¿Por qué? Deberías probarlo tú mismo, pero si movemos la secuencia de comandos por encima del elemento _span_, verás que se producirá un error en esta y se te advertirá de que no puedes encontrar una referencia a ningún elemento _span_ en el documento; es decir, para _getElementsByTagName(‘span')_ se mostrará _null_. Esto demuestra una propiedad importante: nuestra secuencia de comandos se ejecuta en el punto exacto donde se inserta en el documento. Cuando el analizador de HTML encuentra una etiqueta de secuencia de comandos, pausa su proceso de construcción del DOM y delega el control al motor JavaScript. Una vez que este último termina de ejecutarse, el navegador reanuda el proceso y reanuda la construcción del DOM.
 
-Otra propiedad sutil de introducir secuencias de comandos en la página es que no solo pueden leer y modificar DOM, sino también las propiedades de CSSOM. De hecho, eso es exactamente lo que hacemos en el ejemplo al cambiar la propiedad de visualización del elemento `span` de `none` a `inline`. ¿Cuál es el resultado final? Hemos obtenido una condición de carrera.
+En otras palabras, nuestro bloque de secuencia de comandos no podrá encontrar elementos más adelante en la página, ya que aún no estarán procesados. Dicho de otro modo: **la ejecución de nuestra secuencia de comandos integrada bloquea la construcción del DOM, lo cual también demora la representación inicial.**
 
-¿Qué pasa si el navegador no ha acabado de descargar y crear CSSOM cuando queremos ejecutar nuestra secuencia de comandos? La respuesta es sencilla y no muy favorable para el rendimiento: **el navegador retrasa la ejecución de la secuencia de comandos hasta que acaba de descargar y crear CSSOM, y, mientras esperamos, la creación de DOM también está bloqueada.**
+Otra propiedad discreta de la introducción de secuencias de comandos en nuestra página es que pueden leer y modificar no solo el DOM, sino también las propiedades de CSSOM. De hecho, eso es exactamente lo que estamos haciendo en nuestro ejemplo cuando cambiamos la propiedad de visualización del elemento span de none a inline. ¿El resultado final? Ahora nos hallamos ante una situación de competencia.
 
-En resumen, JavaScript introduce muchas dependencias nuevas entre la ejecución de DOM, CSSOM y JavaScript y puede provocar retrasos importantes en la velocidad con la que el navegador procesa y presenta nuestra página en pantalla:
+¿Qué ocurriría si el navegador no ha terminado de descargar y compilar el CSSOM cuando queramos ejecutar nuestra secuencia de comandos? La respuesta es simple y no muy buena para el rendimiento: **el navegador demora la ejecución de la secuencia de comandos y la construcción del DOM hasta haber terminado de descargar y construir el CSSOM.**
 
-1. La ubicación de la secuencia de comandos en el documento es importante.
-2. La creación de DOM se pone en pausa al topar con una etiqueta de secuencia de comandos y hasta que la secuencia de comandos se haya acabado de ejecutar.
-3. JavaScript puede enviar consultas a DOM y CSSOM y modificarlos.
-4. La ejecución de JavaScript se retrasa hasta que CSSOM esté a punto.
+En resumen, JavaScript introduce muchas dependencias nuevas entre la ejecución del DOM, el CSSOM y JavaScript. Esto puede tener efectos adversos importantes en la velocidad con que el navegador procese y represente la página en la pantalla:
 
-Cuando hablamos de `optimizar la ruta de publicación importante`, en gran medida hablamos de entender y optimizar el gráfico de dependencia entre HTML, CSS y JavaScript.
+* La ubicación de la secuencia de comandos en el documento es importante.
+* Cuando el navegador encuentra una etiqueta de secuencia de comandos, se pausa la construcción del DOM hasta que la secuencia de comandos termina de ejecutarse.
+* JavaScript puede consultar y modificar el DOM y el CSSOM.
+* La ejecución de JavaScript se pausa hasta que el CSSOM esté listo.
 
+Cuando hablamos de "optimizar la ruta de acceso de representación crítica", en gran medida nos referimos a la comprensión y optimización del gráfico de dependencias entre HTML, CSS y JavaScript.
 
-## Bloqueo del analizador frente a JavaScript asíncrono
+## Bloquear el analizador en comparación con JavaScript asincrónico
 
-De forma predeterminada, la ejecución de JavaScript supone un `bloqueo del analizador`: cuando el navegador se topa con una secuencia de comandos en el documento, tiene que poner en pausa la creación de DOM, transferir el control al tiempo de ejecución de JavaScript y dejar que la secuencia de comandos se ejecute antes de continuar con la creación de DOM. Ya hemos visto esta situación en acción con una secuencia de comandos integrada en el ejemplo anterior. De hecho, las secuencias de comandos integradas siempre bloquean el analizador, a no ser que tengas especial cuidado en escribir código adicional para posponer su ejecución.
+De forma predeterminada, la ejecución de JavaScript "bloquea el analizador": cuando el navegador encuentra una secuencia de comandos en el documento, debe pausar la construcción del DOM, delegar el control al tiempo de ejecución de JavaScript y permitir que la secuencia de comandos se ejecute antes de continuar con la construcción del DOM. Ya vimos esto en acción en un ejemplo anterior con una secuencia de comandos integrada. De hecho, las secuencias de comandos integradas siempre bloquean el analizador, a menos que tomes precauciones especiales y escribas código adicional para diferir su ejecución.
 
-¿Qué pasa con las secuencias de comandos incluidas mediante una etiqueta de secuencia de comandos? Vamos a echar mano del ejemplo anterior para extraer el código y copiarlo en un archivo diferente:
+¿Qué ocurre con las secuencias de comandos que se incluyen mediante una etiqueta script? Volvamos a nuestro ejemplo anterior y extraigamos el código en un archivo independiente:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
@@ -67,20 +69,35 @@ De forma predeterminada, la ejecución de JavaScript supone un `bloqueo del anal
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-¿Es previsible que el orden de ejecución sea diferente cuando usamos una etiqueta `<script>` en vez de un fragmento JavaScript integrado? Por supuesto que no, ya que son idénticos y deberían tener el mismo comportamiento. En ambos casos el navegador se tendrá que detener y ejecutar la secuencia de comandos antes de poder procesar el resto del documento. Sin embargo, **en caso de que usemos un archivo JavaScript externo, el navegador también tendrá que detenerse y esperar a que se obtenga la secuencia de comandos del disco, de la memoria caché o de un servidor remoto, de modo que el retraso puede suponer decenas de milisegundos más en la ruta de publicación importante.**
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/split_script.html){: target="_blank" .external }
 
-De todas formas, tenemos una escotilla de emergencia. De forma predeterminada, todo JavaScript bloquea el analizador y el navegador no conoce el plan de acción de la secuencia de comandos en la página, de modo que se pone en la peor situación y por eso bloquea el analizador. Sin embargo, ¿qué pasaría si pudiéramos avisar al navegador de que la secuencia de comandos no se tiene que ejecutar en el preciso momento en el que se le hace referencia en el documento? Si le avisamos, el navegador podrá seguir creando DOM y dejará que la secuencia de comandos se ejecute una vez preparada, es decir, una vez el archivo se haya obtenido de la memoria caché o de un servidor remoto.
+Ya sea que usemos una etiqueta de &lt;secuencia de comandos&gt; o un fragmento de JavaScript integrado, deberías
+prever que ambos se comportarán de la misma manera. En ambos casos, el navegador pausa y
+ejecuta la secuencia de comandos antes de poder procesar el resto del documento.
+Sin embargo, **en caso de un archivo JavaScript externo, el navegador debe pausarse para
+esperar que se obtenga la secuencia de comandos del disco, la caché o un servidor remoto, lo que
+puede sumar cientos de milisegundos de demora a la ruta de acceso de
+representación crítica.**
 
-Entonces, ¿cómo llevamos a cabo este truco? Es muy sencillo: hay que marcar la secuencia de comandos como asíncrona (`_async_:`).
+De forma predeterminada, JavaScript bloquea a los analizadores. Dado que el navegador no sabe qué es lo que planea hacer la secuencia de comandos en la página, supone el peor de los escenarios y bloquea el analizador. Una señal enviada al navegador de que "la secuencia de comandos no necesita ejecutarse en el punto exacto donde se hace referencia" permite que el navegador continúe construyendo el DOM y permite que la secuencia de comandos se ejecute cuando esté lista. Por ejemplo, luego de que el archivo se obtiene de la caché o un servidor remoto.  
+
+Para lograrlo, marcamos nuestra secuencia de comandos como _async_:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-Si añadimos la palabra clave `async` a la etiqueta de secuencia de comandos, se informa al navegador de que no bloquee la creación de DOM mientras espera a que la secuencia de comandos esté disponible. El rendimiento se mejora en gran medida.
+[Pruébalo](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/split_script_async.html){: target="_blank" .external }
+
+Agregar la palabra clave async a la etiqueta de secuencia de comandos indica al navegador que no bloquee la construcción del DOM mientras espera que la secuencia de comandos esté disponible, lo que puede mejorar el rendimiento de manera significativa.
+
+<a href="measure-crp" class="gc-analytics-event" data-category="CRP"
+    data-label="Next / Measuring CRP">
+  <button>A continuación: Medición de la ruta de representación crítica</button>
+</a>
 
 
-
+{# wf_devsite_translation #}

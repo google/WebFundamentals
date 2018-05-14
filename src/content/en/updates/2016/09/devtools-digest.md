@@ -33,7 +33,7 @@ Some notes about CPU throttling:
 * This feature is for general awareness of how your site would probably perform on a resource-constrained device. It's impossible for DevTools to truly emulate the performance characteristics of a mobile system on chip.
 * Throttling is relative to your development machine. In other words, 5x throttling on a top-of-the-line desktop will yield different results than 5x throttling on a five-year-old budget laptop.
 
-With that said, combine CPU Throttling with [Network Throttling](/web/tools/chrome-devtools/network-performance/network-conditions) and [Device Mode](/web/tools/chrome-devtools/device-mode/), and you start to get a much better picture about how your site will look and perform on mobile devices, right from the convenience of your development machine browser.
+With that said, combine CPU Throttling with [Network Throttling](/web/tools/chrome-devtools/network-performance/reference#throttling) and [Device Mode](/web/tools/chrome-devtools/device-mode/), and you start to get a much better picture about how your site will look and perform on mobile devices, right from the convenience of your development machine browser.
 
 ## Network view in timeline recordings
 

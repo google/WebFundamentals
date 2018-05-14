@@ -51,7 +51,7 @@ Lastly, a couple of bugs we see most commonly:
 + **Insecure cookies:** sent in the clear via an HTTP connection.  Avoid this by setting the secure attribute on cookie headers. You can also use a new "Strict Transport Security" header to require SSL
 Transport Security (HSTS).
 
-#Takeaways
+## Takeaways
 
 + If you care about the privacy and integrity of your users' data, you need to be using SSL. It's faster, easier, and cheaper than ever.
 + Avoid common implementation gotchas, like mixed content bugs or not setting the right HTTP header bits.

@@ -1,0 +1,19 @@
+{
+  "environment": "web",
+  "source": "https://docs.google.com/document/d/15gTwKdL7XZNmw1AQlBSRnmA1Xju_mhMcUU0jM5bwhUw",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2017-11-09T18:35:31Z",
+  "id": "lab-scripting-the-service-worker",
+  "duration": 0,
+  "title": "Lab: Scripting the Service Worker",
+  "summary": "",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [
+    "3-day"
+  ],
+  "url": "lab-scripting-the-service-worker"
+}

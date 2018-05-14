@@ -25,8 +25,8 @@ Until now, however, these approaches for accelerating the mobile web have appear
 
 Come learn about how to make AMP-based PWAs and hear about how this architecture is working for real-world publishers today.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

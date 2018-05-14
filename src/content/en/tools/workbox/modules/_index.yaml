@@ -1,0 +1,191 @@
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
+
+landing_page:
+  header:
+    description: <!-- No Description -->
+  rows:
+    - heading: Service Worker Libraries
+      description: >
+        Below is the list of service worker libraries that Workbox provides.
+        Each library serves a specific need and can be used together or on it's
+        own.
+      items:
+      - heading: workbox
+        description: >
+          Manages loading modules as needed & provides helper methods.
+        buttons:
+        - label: Learn more
+          path: ./workbox-sw
+        - label: Reference
+          path: ../reference-docs/latest/workbox
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
+
+      - heading: workbox.core
+        description: >
+          Alter log levels and change cache names via <code>workbox.core</code>.
+          Contains shared code used by all Workbox libraries.
+        buttons:
+        - label: Learn more
+          path: ./workbox-core
+        - label: Reference
+          path: ../reference-docs/latest/workbox.core
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
+
+      - heading: workbox.precaching
+        description: >
+          Easily precache a set of files and efficiently manage updates to
+          files.
+        buttons:
+        - label: Learn more
+          path: ./workbox-precaching
+        - label: Reference
+          path: ../reference-docs/latest/workbox.precaching
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
+
+      - heading: workbox.routing
+        description: >
+          Routes requests in your service worker to specific caching strategies
+          or callback functions.
+        buttons:
+        - label: Learn more
+          path: ./workbox-routing
+        - label: Reference
+          path: ../reference-docs/latest/workbox.routing
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
+
+    - items:
+      - heading: workbox.strategies
+        description: >
+          A set of runtime caching strategies that will handle responding to a
+          request, normally used with <code>workbox.routing</code>.
+        buttons:
+        - label: Learn more
+          path: ./workbox-strategies
+        - label: Reference
+          path: ../reference-docs/latest/workbox.strategies
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
+
+      - heading: workbox.expiration
+        description: >
+          Removed cached requests based on the number of items in a cache or
+          the age of the cached request.
+        buttons:
+        - label: Learn more
+          path: ./workbox-cache-expiration
+        - label: Reference
+          path: ../reference-docs/latest/workbox.expiration
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
+
+      - heading: workbox.backgroundSync
+        description: >
+          Use background sync to reliably make a network request even if the
+          user if offline.
+        buttons:
+        - label: Learn more
+          path: ./workbox-background-sync
+        - label: Reference
+          path: ../reference-docs/latest/workbox.backgroundSync
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
+
+      - heading: workbox.googleAnalytics
+        description: >
+          See how users are interacting with your site when they are offline.
+        buttons:
+        - label: Learn more
+          path: ./workbox-google-analytics
+        - label: Reference
+          path: ../reference-docs/latest/workbox.googleAnalytics
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
+
+    - items:
+      - heading: workbox.cacheableResponse
+        description: >
+          Restrict which requests are cached based on a response's status code
+          or headers.
+        buttons:
+        - label: Learn more
+          path: ./workbox-cacheable-response
+        - label: Reference
+          path: ../reference-docs/latest/workbox.cacheableResponse
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
+
+      - heading: workbox.broadcastUpdate
+        description: >
+          Send messages to pages (via Broadcast Channels) when a cache is
+          updated with a new response.
+        buttons:
+        - label: Learn more
+          path: ./workbox-broadcast-cache-update
+        - label: Reference
+          path: ../reference-docs/latest/workbox.broadcastUpdate
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
+
+      - heading: workbox.rangeRequest
+        description: >
+          This modules provides support for responding to a <code>Range:</code>
+          request using a slice of previously cached data.
+        buttons:
+        - label: Learn more
+          path: ./workbox-range-requests
+        - label: Reference
+          path: ../reference-docs/latest/workbox.rangeRequests
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
+
+      - heading: workbox.streams
+        description: >
+          This modules provides support for composing a response from a series
+          of streaming sources.
+        buttons:
+        - label: Reference
+          path: ../reference-docs/latest/workbox.streams
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
+
+    - heading: Node Modules
+      description: >
+        Workbox provides a set of Node modules that make it easy to generate
+        a list of files to precache in your service worker or create a complete
+        service worker that you can use without writing any code.
+      items:
+      - heading: Workbox CLI
+        description: >
+          Generate a complete service worker, inject a precache manifest
+          or copy the Workbox files from the command line.
+        buttons:
+        - label: Learn more
+          path: ./workbox-cli
+
+      - heading: workbox-build
+        description: >
+          An npm module that can generate a complete service worker, inject
+          a precache manifest and copy the Workbox files.
+        buttons:
+        - label: Learn more
+          path: ./workbox-build
+        - label: Reference
+          path: ../reference-docs/latest/module-workbox-build
+
+      - heading: workbox-webpack-plugin
+        description: >
+          As part of your Webpack build process add Workbox and precache
+          assets.
+        buttons:
+        - label: Learn more
+          path: ./workbox-webpack-plugin
+        - label: Reference
+          path: ../reference-docs/latest/module-workbox-webpack-plugin
+
+      # Force Devsite 4-up layout
+      - heading: ""

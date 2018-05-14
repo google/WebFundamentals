@@ -1,211 +1,240 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 端末モーションと画面の向きのイベントによって、モバイルデバイスに組み込まれた加速度計、ジャイロスコープ、およびコンパスへアクセスすることができます。
+description: 端末のモーション イベントおよび画面の向きのイベントによって、モバイル端末に組み込まれた加速度計、ジャイロスコープ、およびコンパスの機能を利用することができます。
 
+{# wf_updated_on: 2017-07-12 #}
+{# wf_published_on: 2014-06-17 #}
 
-{# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2000-01-01 #}
-
-# 端末画面の向き {: .page-title }
+# 端末画面の向きと端末のモーション {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-端末モーションと画面の向きのイベントによって、モバイルデバイスに組み込まれた加速度計、ジャイロスコープ、およびコンパスへアクセスすることができます。
-
-これらのイベントは多くの目的のために使用することができます。
-たとえばゲームでは、キャラクターの向きを制御したり、キャラクターがジャンプする高さを
-決定するために使用します。 GeoLocation と共に使用する際には、より正確なターンバイターンのナビゲーションシステム
-を作成したり、店の場所に関する情報を提供することができます。
-
-Note: device motion イベントまたは device orientation イベントの使用を決定する際には、<b>最大限に</b>注意を払ってください。  残念ながら、すべてのブラウザが同じ座標系を 使用するとは限りません。また、同じような状況の下で別の値が 報告されることがあります。
-
-## どちらの端が上か?
-
-device orientation イベントや motion イベントによって返されたデータを使用するためには、
-提供される値を理解することが重要です。  
-
-### 地球の座標フレーム
-
-地球の座標フレームは `X`、`Y`、および `Z` の値によって記述され、
-重力と標準磁気の向きに基づいて配列されます。
-
-<ul>
-  <li>
-    <b>X:</b> は東西方向を表します (東が正)。
-  </li>
-    <li>
-    <b>Y:</b> は南北方向を表します (北が正)。
-  </li>
-    <li>
-    <b>Z:</b> 地面に対して垂直上下方向を表します
-    (上が正)。
-  </li>
-</ul>
-
-### 端末の座標フレーム
-
-端末の座標フレームは `x`、`y`、および `z` の値によって記述され、
-端末の中心に基づいて配列されます。
-
-<img src="images/axes.png" alt=" 端末の座標フレームの図">
-<!-- Sheppy の(https://developer.mozilla.org/en-US/profiles/Sheppy) 
-  パブリックドメインへの画像投稿に感謝します。 -->
-
-<ul>
-  <li>
-    <b>x:</b> 画面の平面、右方向が正。
-  </li>
-    <li>
-    <b>y:</b> 画面の平面、上方向が正。
-  </li>
-    <li>
-    <b>z:</b> 画面またはキーボードに対して垂直、延びている方向が
-    正。
-  </li>
-</ul>
-
-携帯電話やタブレットで、端末の向きは画面の典型的な向き
-に準じています。  携帯電話やタブレットで、縦表示の端末
-に準じています。 デスクトップまたはラップトップ コンピュータの場合は、画面の向きはキーボードとの関連性で
-考慮されます。
-
-### 回転データ
-
-回転データは [Euler angle](http://en.wikipedia.org/wiki/Euler_angles) として返されます。
-これは、端末の座標フレームと地球は座標フレーム間の
-f差異度の数を表します。
-
-<figure>
-  <img src="images/alpha.png">
-  <figcaption>
-    <b>アルファ:</b> Z 軸周りの回転は、端末上部が
-    真北に向いている場合 0 &deg;です。  端末が反時計回りに回転するにつれて
-    `alpha` 値が増加します。
-  </figcaption>
-</figure>
-<figure>
-  <img src="images/beta.png">
-  <figcaption>
-    <b>ベータ:</b> X 軸周りの回転は、端末の上部と底部が地球の
-    表面から等距離にある場合 0 &deg;です。 端末の上部が
-    地球の表面に向かって傾斜するにつれて、値が増加します。
-  </figcaption>
-</figure>
-<figure>
-  <img src="images/gamma.png"><br>
-  <figcaption>
-    <b>ガンマ:</b> Y 軸周りの回転は、端末の左端と右端が地球の
-    表面から等距離にある場合 0 &deg;です。  端末の右端が
-    地球の表面に向かって傾斜するにつれて、値が増加します。 
-  </figcaption>
-</figure>
-
-<div class="clearfix"></div>
+端末のモーション イベントおよび画面の向きのイベントによって、モバイル端末に組み込まれた加速度計、ジャイロスコープ、およびコンパスの機能を利用することができます。
 
 
-## 端末画面の向き 
+これらのイベントにはさまざまな用途があり、ゲームでキャラクターの向きやアクションを制御することもできます。
+位置情報とあわせて使用すると、より正確なターンバイターンのナビゲーションの作成や、特定の場所に関する情報提供が可能になります。
 
 
 
+Warning: ブラウザによって使用する座標系は異なり、同じ状況下でも別の値が返される場合があります。この問題は徐々に改善されていますが、自身の状況で必ずテストを実施してください。
 
-端末画面の向きのイベントは回転データを返しますが、それには端末が前面から背面への傾斜、 両側面への傾斜、携帯電話やノート パソコンのコンパスの有無、端末画面の向きなどの情報が含まれています。
+##TL;DR
 
-
-### TL;DR {: .hide-from-toc }
-- 慎重に使用してください。
-- サポートをテストしてください。
-- すべての orientation イベントで UI をアップデートしないでください。代わりに、<code>requestAnimationFrame</code> に同期します。
+* 端末の上端を検出し、端末の回転状態を特定します。
+* 端末のモーション イベントおよび画面の向きのイベントに応答するタイミングと方法について説明します。
 
 
-### device orientation イベントの用途
+##  どちらの端が上か？
 
-device orientation イベントにはいくつかの用途があります。  次に例を示します。
+端末のモーション イベントおよび画面の向きのイベントによって返されるデータを使用するためには、その値の意味を理解する必要があります。
+  
 
-* ユーザーの移動に伴いマップをアップデートします。
-* 視差効果の追加など、UI の微妙な調整を行います
-* GeoLocation と組み合わせて、ターンバイターン ナビゲーションに使用します。
+###  地球の座標フレーム
 
-
-### サポートを確認して、イベントをリッスンする
-
-`DeviceOrientationEvent` をリッスンするには、先ず最初に、イベントがブラウザでサポートされている
-ことを確認します。  次に、`deviceorientation` イベントを受け取る `window` 
-オブジェクトにイベント リスナーを添付します。 
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" adjust_indentation="auto" %}
-</pre>
-
-### device orientation イベントの扱い
-
-device orientation イベントは、端末が移動したり、向きが
-変わったときに起動します。  このイベントは、<a href="#earth-coordinate-frame"> に関連して、
-現在の位置にある端末との間の差分データを返します。
-地球の座標フレーム</a>。
-
-このイベントは通常 3 つのプロパティを返します。 
-<a href="#rotation-data">`alpha`</a>、
-<a href="#rotation-data">`beta`</a>、および 
-<a href="#rotation-data">`gamma`</a>です。  Mobile Safari では、
-別のパラメータ<a href="https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">`webkitCompassHeading`</a> がコンパスの
-ヘッダーとともに返されます。
+地球座標フレームでは、重力と標準的な磁北方向を基準とした軸を用いて、`X`、`Y`、および `Z` の値で座標を記述します。
 
 
+<table class="responsive">
+<tr><th colspan="2">座標系</th></tr>
+<tr>
+  <td><code>X</code></td>
+  <td>東西方向を表します（東が正）。</td>
+</tr>
+<tr>
+  <td><code>Y</code></td>
+  <td>南北方向を表します（北が正）。</td>
+</tr>
+<tr>
+  <td><code>Z</code></td>
+  <td>地面に対して垂直な上下方向を表します（上が正）。</td>
 
 
-## 端末のモーション 
+</tr>
+</table>
+
+###  端末の座標フレーム
+
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/axes.png" alt="端末の座標フレームの図">
+    <figcaption>
+      端末の座標フレームの図</figcaption>
+
+  </figure>
+</div>
+
+<!-- Special thanks to Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy)
+  for his images which are in the public domain. -->
+
+端末の座標フレームでは、端末の中心を基準とした軸を用いて、`x`、`y`、および `z` の値で座標を記述します。
+
+
+<table class="responsive">
+<tr><th colspan="2">座標系</th></tr>
+<tr>
+  <td><code>X</code></td>
+  <td>画面の水平面において右方向が正。</td>
+</tr>
+<tr>
+  <td><code>Y</code></td>
+  <td>画面の水平面において上方向が正。</td>
+</tr>
+<tr>
+  <td><code>Z</code></td>
+  <td>画面またはキーボードに直交して遠ざかる方向が正。</td>
+
+
+</tr>
+</table>
+
+携帯電話やタブレットでは、端末の向きは画面の典型的な向きを基準とします。
+携帯電話やタブレットの場合、端末が縦表示になっている状態を基準とします。
+デスクトップまたはラップトップ コンピュータの場合は、画面の向きはキーボードに対する向きとして考えられます。
+
+
+###  回転データ
+
+回転データは[オイラー角](https://en.wikipedia.org/wiki/Euler_angles)で返されます。これは、端末の座標フレームと地球の座標フレーム間の角度の差を表します。
+
+
+
+#### alpha
+
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/alpha.png" alt="端末の座標フレームの図">
+    <figcaption>
+      端末の座標フレームにおける alpha の図</figcaption>
+
+  </figure>
+</div>
+
+回転軸は Z 軸です。端末の上部が真北を向いている場合、`alpha` の値は 0&deg; です。
+端末が反時計回りに回転するにつれて `alpha` の値は増加します。
+
+
+<div style="clear:both;"></div>
+
+####  beta
+
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/beta.png" alt="端末の座標フレームの図">
+    <figcaption>
+      端末の座標フレームにおける beta の図</figcaption>
+
+  </figure>
+</div>
+
+回転軸は X 軸です。端末の上部と下部が地表から等距離にある場合、`beta` の値は 0&deg; です。
+端末の上部が地表に近づくように傾くにつれて、値が増加します。
+
+
+<div style="clear:both;"></div>
+
+####  gamma
+
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/gamma.png" alt="端末の座標フレームの図">
+    <figcaption>
+      端末の座標フレームの gamma の図</figcaption>
+
+  </figure>
+</div>
+
+回転軸は Y 軸です。端末の左端と右端が地表から等距離にある場合、`gamma` の値は 0&deg; です。
+端末の右端が地表に近づくように傾くにつれて、値が増加します。
+
+
+<div style="clear:both;"></div>
+
+##  端末画面の向き
+
+端末画面の向きのイベントは回転データを返します。このデータには、端末の前後および左右への傾き具合、スマートフォンやノートパソコンにおけるコンパスの有無、端末画面の方向など、さまざまな情報が含まれます。
+
+
+
+端末画面の向きのイベントは慎重に使用し、利用するにあたってテストを実施してください。また、このイベントが発生するたびに UI を更新することは避けて、代わりに `requestAnimationFrame` に同期するようにしてください。
+
+
+
+###  端末画面の向きのイベントの扱い
+
+端末画面の向きのイベントにはいくつかの用途があります。以下に例を挙げます。
+
+* ユーザーの移動に伴いマップを更新します。
+* 視差効果の追加など、UI の細かい調整を行います。
+* 位置情報と組み合わせると、ターンバイターンのナビゲーションに使用できます。
+
+###  サポート状況を確認して、イベントをリッスンする
+
+`DeviceOrientationEvent` をリッスンするには、まずこのイベントがブラウザでサポートされていることを確認します。次に、`deviceorientation` イベントを受け取る `window` オブジェクトにイベント リスナーを登録します。 
+
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+      document.getElementById("doeSupported").innerText = "Supported!";
+    }
+
+###  端末画面の向きのイベントを処理する
+
+端末画面の向きのイベントは、端末の位置や向きが変化したときに発生します。
+このイベントは、[地球の座標フレーム](#earth-coordinate-frame)を基準として、端末の現在位置の変化量を返します。
+
+
+
+このイベントは通常、[`alpha`](#alpha)、[`beta`](#beta)、および [`gamma`](#gamma) の3 つのプロパティを返します。
+Mobile Safari では、追加のパラメータ [`webkitCompassHeading`](https://developer.apple.com/library/ios/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/){: .external } がコンパス方位とともに返されます。
+
+
+
+##  端末のモーション 
+
+端末画面の向きのイベントは回転データを返します。このデータには、端末の前後および左右への傾き具合、スマートフォンやノートパソコンにおけるコンパスの有無、端末画面の方向など、さまざまな情報が含まれます。
+
+
+
+一方、端末の現在の動きを知りたい場合は、端末のモーション イベントを使用します。`rotationRate` は &deg;/sec 単位で、`acceleration` と `accelerationWithGravity` は m/sec<sup>2</sup> 単位で提供されます。ブラウザによって実装に差異があるので注意してください。
 
 
 
 
-端末モーションは、特定の瞬間にデバイスに適用された アクセラレーション の力に関する情報と、回転速度の情報を提供します。
+###  端末モーション イベントの用途
+
+端末モーション イベントにはいくつかの用途があります。以下に例を挙げます。
+
+* データを更新するためのシェイク操作。
+* ゲームでキャラクターをジャンプさせたり動かしたりする。
+* 健康およびフィットネス用のアプリに使用する。
 
 
-### TL;DR {: .hide-from-toc }
-- 端末の現在の動作が必要な場合に、端末モーションを使用します。
-- <code>rotationRate</code> が &deg;/sec で提供されます。
-- <code>acceleration</code> および <code>accelerationWithGravity</code> は m/sec<sup>2</sup> で提供されます。
-- ブラウザの実装の違いに注意してください。
+###  サポート状況を確認して、イベントをリッスンする
+
+`DeviceMotionEvent` をリッスンするには、まずこのイベントがブラウザでサポートされていることを確認します。
+次に、`devicemotion` イベントをリッスンする `window` オブジェクトにイベント リスナーを登録します。
+ 
+
+    if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', deviceMotionHandler);
+      setTimeout(stopJump, 3*1000);
+    }
+
+###  端末モーション イベントの扱い
+
+端末のモーション イベントは一定間隔で発生し、その時点での端末の回転（&deg;/sec）および加速度（m/sec<sup>2</sup>）のデータを返します。一部の端末では、重力の影響を除外するためのハードウェアを備えていません。
 
 
-### 端末モーション イベントの用途
-
-端末モーション イベントにはいくつかの用途があります。  次に例を示します。
-
-* データをリフレッシュためのシェイク操作。
-* ゲームでキャラクターをジャンプさせたり動かす。
-* 健康およびフィットネス用アプリ
+このイベントは、[`accelerationIncludingGravity`](#device-coordinate-frame)、[`acceleration`](#device-coordinate-frame)（重力の影響を排除）、[`rotationRate`](#rotation-data)、および `interval` の 4 つのプロパティを返します。
 
 
-### サポートを確認して、イベントをリッスンする
 
-`DeviceMotionEvent` をリッスンするには、先ず最初に、イベントがブラウザでサポートされている
-ことを確認します。  次に、`devicemotion` イベントを受け取る `window` 
-オブジェクトにイベント リスナーを添付します。 
 
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
-</pre>
+たとえば、平らなテーブルの上に、画面が上を向くように置かれているスマートフォンでは、以下の値になります。
 
-### 端末モーション イベントの扱い
-
-端末モーション イベントは定期的に起動し、端末の
-回転 (&deg;/秒) およびアクセラレーション (m/秒<sup>2</sup>) 
-のデータを瞬時に返します。  一部の端末では、重力の影響を除外するための
-ハードウェアを備えていません。
-
-イベントは 4 つのプロパティを返します。 
-<a href="#device-frame-coordinate">`accelerationIncludingGravity`</a>、 
-<a href="#device-frame-coordinate">`acceleration`</a>、 
-重力の影響を排除、 
-<a href="index.html#rotation-data">`rotationRate`</a> および `interval` です。
-
-たとえば、平らなテーブルの上に画面を上にして置かれている
-携帯電話で見てみましょう。
 
 <table>
-    <thead>
+  <thead>
     <tr>
       <th data-th="State">状態</th>
       <th data-th="Rotation">回転</th>
@@ -221,19 +250,19 @@ device orientation イベントは、端末が移動したり、向きが
       <td data-th="Acceleration with gravity">[0, 0, 9.8]</td>
     </tr>
     <tr>
-      <td data-th="State">空に向かって移動</td>
+      <td data-th="State">空に向かって上方向に移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[0, 0, 5]</td>
       <td data-th="Acceleration with gravity">[0, 0, 14.81]</td>
     </tr>
     <tr>
-      <td data-th="State">右方向へのみ移動 </td>
+      <td data-th="State">右方向へのみ移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[3, 0, 0]</td>
       <td data-th="Acceleration with gravity">[3, 0, 9.81]</td>
     </tr>
     <tr>
-      <td data-th="State">右上方向へ &amp; 移動</td>
+      <td data-th="State">上方向と右方向に移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[5, 0, 5]</td>
       <td data-th="Acceleration with gravity">[5, 0, 14.81]</td>
@@ -241,11 +270,11 @@ device orientation イベントは、端末が移動したり、向きが
   </tbody>
 </table>
 
-逆に、携帯電話の画面が地面に対して垂直になるよう
-に保持し、直接画面を視ることができる場合:
+以下は、携帯電話の画面が地面に対して垂直になるように保持し、ユーザーに直接画面が見える向きにした場合の値です。
+
 
 <table>
-    <thead>
+  <thead>
     <tr>
       <th data-th="State">状態</th>
       <th data-th="Rotation">回転</th>
@@ -261,19 +290,19 @@ device orientation イベントは、端末が移動したり、向きが
       <td data-th="Acceleration with gravity">[0, 9.81, 0]</td>
     </tr>
     <tr>
-      <td data-th="State">空に向かって移動</td>
+      <td data-th="State">空に向かって上方向に移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[0, 5, 0]</td>
       <td data-th="Acceleration with gravity">[0, 14.81, 0]</td>
     </tr>
     <tr>
-      <td data-th="State">右方向へのみ移動 </td>
+      <td data-th="State">右方向へのみ移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[3, 0, 0]</td>
       <td data-th="Acceleration with gravity">[3, 9.81, 0]</td>
     </tr>
     <tr>
-      <td data-th="State">右上方向へ &amp; 移動</td>
+      <td data-th="State">上方向と右方向に移動</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[5, 5, 0]</td>
       <td data-th="Acceleration with gravity">[5, 14.81, 0]</td>
@@ -281,17 +310,26 @@ device orientation イベントは、端末が移動したり、向きが
   </tbody>
 </table>
 
-#### サンプル:オブジェクトの最大加速度の計算
+###  サンプル: オブジェクトの最大加速度の計算
 
-端末モーション イベントの 1 つの用途として、オブジェクトの最大加速度を
-計算することができます。  たとえば、人がジャンプする際の
-最大加速度です。
+端末モーション イベントの 1 つの用途として、オブジェクトの最大加速度を計算することができます。
+たとえば、人がジャンプする際の最大加速度を求めることも可能です。
 
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
-</pre>
 
-[Go!] ボタンをタップした後、ユーザーにジャンプを指示します。この間、
-ページは最大 (および最小) 加速度値を記憶します。そしてジャンプの後、
-ユーザーに最大加速度を報告します。
+    if (evt.acceleration.x > jumpMax.x) {
+      jumpMax.x = evt.acceleration.x;
+    }
+    if (evt.acceleration.y > jumpMax.y) {
+      jumpMax.y = evt.acceleration.y;
+    }
+    if (evt.acceleration.z > jumpMax.z) {
+      jumpMax.z = evt.acceleration.z;
+    }
 
+
+[Go!] ボタンをタップした後、ユーザーにジャンプするよう指示します。この間、ページは最大（および最小）加速度値を記憶します。そしてジャンプの後、ユーザーに最大加速度を表示します。
+
+
+
+
+{# wf_devsite_translation #}

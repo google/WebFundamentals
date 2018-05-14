@@ -1,0 +1,10 @@
+{{#any (filterProperties properties)}}
+  <section>
+    {{#unless isEnum}}
+      <h>{{translateHeading 'properties' properties}}</h>
+    {{/unless}}
+    {{#withOnly values=(reparentItems this 'properties') isEnum=isEnum}}
+      {{#embed 'details-table'}}{{/embed}}
+    {{/withOnly}}
+  </section>
+{{/any}}

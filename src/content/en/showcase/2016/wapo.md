@@ -1,10 +1,14 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-07-20T18:00:00.000Z #}
-{# wf_updated_on: 2016-07-20T18:00:00.000Z #}
+{# wf_published_on: 2016-07-20 #}
+{# wf_updated_on: 2016-07-20 #}
 {# wf_featured_image: /web/showcase/2016/images/wapo/wapo-featured.gif #}
 {# wf_featured_snippet: AMP helps the Washington Post increase returning users from mobile search by 23%! <br><br>"We are committed to improving speed across the board. If our site takes a long time to load, it doesn’t matter how great our journalism is, some people will leave the page before they see what’s there"<br><b>David Merrell</b>, Senior Product Manager, The Washington Post #}
+{# wf_tags: progressive-web-apps,serviceworker,casestudy #}
+{# wf_region: north-america #}
+{# wf_featured_date: 2017-04-17 #}
+{# wf_vertical: media #}
 
 # The Washington Post {: .page-title }
 

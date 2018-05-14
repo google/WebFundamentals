@@ -34,7 +34,7 @@ Here's a simple example of how to set up an observer on an object:
         // do something
     }
     Object.observe(beingWatched, somethingChanged);
-    
+
 
 
 When the object 'beingWatched' is modified, it will trigger the callback function 'somethingChanged' which receives an array of changes that were applied to the object.
@@ -54,7 +54,7 @@ You can iterate through each change quite easily, by doing something like the fo
     function somethingChanged(changes) {
         changes.forEach(whatHappened);
     }
-    
+
 
 
 The *type* property identifies what happened to the object. Some examples of properties being set and the associated *type* can be seen in the code below.
@@ -64,7 +64,7 @@ The *type* property identifies what happened to the object. Some examples of pro
     beingWatched.a = "bar"; // updated
     beingWatched.a = "bar"; // no change
     beingWatched.b = "amazing"; // new
-    
+
 
 
 The great thing about this technique is that all the monitoring smarts are inside the JavaScript engine which allows the browser to optimize it well and free your JavaScript up to implement functionality taking advantage of this feature.
@@ -73,7 +73,7 @@ Another really great feature for development is the ability to use Object.observ
 
 
     Object.observe(beingWatched, function(){ debugger; });
-    
+
 
 
 Here's a [great video introduction](https://www.youtube.com/watch?feature=player_embedded&v=VO--VXFJnmE) about Object.observe() that explains it in detail.
@@ -84,7 +84,7 @@ Here's a [great video introduction](https://www.youtube.com/watch?feature=player
   </iframe>
 </div>
 
-There's also a [nice descriptive write-up available](http://weblog.bocoup.com/JavaScript-object-observe/) and a [working example here](http://simpl.info/observe/){: .external }.
+There's also a [nice descriptive write-up available](http://weblog.bocoup.com/JavaScript-object-observe/) and a [working example here](https://simpl.info/observe/){: .external }.
 
 The TC39 standards body is seeking feedback on this feature, so go ahead and try it and let us know what you think.
 

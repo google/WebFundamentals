@@ -8,8 +8,23 @@ upper_tabs:
     path: /web/showcase/
     lower_tabs:
       other:
-      - name: "Case Studies"
+      - name: "Featured"
         contents:
+        - title: featured
+          path: /web/showcase/
+      - name: "By Vertical"
+        contents:
+        - title: vertical
+          path: /web/showcase/vertical/
+      - name: "By Region"
+        contents:
+        - title: region
+          path: /web/showcase/region/
+      - name: "All"
+        contents:
+        - include: /web/showcase/2018/_toc.yaml
+        - include: /web/showcase/2017/_toc.yaml
         - include: /web/showcase/2016/_toc.yaml
         - include: /web/showcase/2015/_toc.yaml
+        - include: /web/showcase/tags/_toc.yaml
 

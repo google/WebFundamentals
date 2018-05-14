@@ -17,6 +17,6 @@ book_path: /web/shows/_book.yaml
 
 ServiceWorker give you a variety of levers over the loading performance of your app. But HTTP already allowed you to speed up the loading of your app – and these two technologies stack, so you should know what you have at your disposal. With HTTP/2, things only get better. This talk will summarize, the past, the present and the future of protocol-level optimizations.
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

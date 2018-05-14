@@ -47,7 +47,7 @@ The API also allows you to get a list of voice the engine supports:
 
 
     speechSynthesis.getVoices().forEach(function(voice) {
-      console.log(voice.name, voice.default ? '(default)' :'');
+      console.log(voice.name, voice.default ? voice.default :'');
     });
     
 

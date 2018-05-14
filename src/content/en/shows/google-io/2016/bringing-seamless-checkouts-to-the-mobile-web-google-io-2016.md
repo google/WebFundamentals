@@ -17,8 +17,8 @@ book_path: /web/shows/_book.yaml
 
 In recent years we've seen incredible growth in the number of users shopping on the mobile web. Checkout flows, however, haven't changed and remain stuck in the past. This session will encourage you to "think outside the app" to explore how you can bring a seamless, one-tap checkout experience to your mobile website.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

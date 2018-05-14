@@ -38,5 +38,5 @@ https://www.youtube.com/watch?v=YrlmieL3Z0k&index=1&list=PLOU2XLYxmsII5c3Mgw6fNY
 ###More information
 - Polymer Slack: <http://bit.ly/polymerslack>
 - Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
-- Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+- [Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
 

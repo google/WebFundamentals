@@ -1,0 +1,36 @@
+language: node_js
+node_js: '8'
+dist: trusty
+sudo: false
+git:
+  depth: 1
+env:
+  global:
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - CLOUDSDK_PYTHON_SITEPACKAGES=1
+cache:
+  directories:
+  - node_modules
+  - "$HOME/google-cloud-sdk/"
+install:
+  - travis_wait ./tools/travis/install-gc-sdk.sh
+  - npm install
+  - npm run clean
+script:
+  - npm run build
+  - gulp puppeteer:build
+  - npm run test
+  - node ./tools/travis/addCommitComment.js
+after_success:
+  - ./tools/travis/deploy-master.sh
+  - ./tools/travis/deploy-pr.sh
+  - node ./tools/travis/removeStagedPRs.js
+branches:
+  only:
+    - master
+notifications:
+  email:
+    recipients:
+      - petele@google.com
+    on_success: never
+    on_failure: always

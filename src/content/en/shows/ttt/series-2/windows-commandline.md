@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Windows Tooling: If you develop for the web on Windows, this is the tooling video for you. Addy looks at the web front end tooling landscape for Windows covering the tools he uses.
 
-{# wf_updated_on: 2015-11-10 #}
+{# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-11-10 #}
 {# wf_youtube_id: msCUKTdBzg4 #}
 
@@ -52,7 +52,7 @@ If you're interested in trivia, here's an answer to why MS created PowerShell fr
 
 * Significantly improves the console editing experience
 * Syntax highlighting whenever you start typing commands. Clearly indicates syntax errors with a red ">" character.
-* Highly customizable key bindings
+* Highly customisable key bindings
 * Bash-style autocompletion
 * Bash/zsh interactive history search (Ctrl + R). Powerful command history traversal too. Easily view previous multi-line commands using arrow keys rather than just the last line of the command.
 * Proper support for copy/paste/cut (Ctrl+C/X/V should all work just fine) 
@@ -61,14 +61,14 @@ If you're interested in trivia, here's an answer to why MS created PowerShell fr
 
 ![](images/window-commandline/psreadline.jpg)
 
-Alternatively, you can use [Clink](http://mridgers.github.io/clink/){: .external }, which has a similiar set of features but wasn't strictly written for PowerShell.
+Alternatively, you can use [Clink](http://mridgers.github.io/clink/){: .external }, which has a similar set of features but wasn't strictly written for PowerShell.
 
 
 ## [ConEmu](https://conemu.github.io/){: .external } (console host)
 
 * An advanced console emulator where you can run your shell of choice.
 * Supports opening multiple terminals in different tabs. Makes it trivial to launch terminals as different users.
-* Extremely customizable - everything from shortcuts to text selection and status bar colors can be changed.
+* Extremely customisable - everything from shortcuts to text selection and status bar colors can be changed.
 * Supports a split-screen view
 * Simple GUI apps can be run in tabs
 * Support for Windows 7+ Jump Lists 

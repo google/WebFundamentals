@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Identify expensive functions using the Chrome DevTools  CPU Profiler.
 
-{# wf_updated_on: 2016-03-30 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Speed Up JavaScript Execution {: .page-title }
@@ -18,7 +18,7 @@ Profiler.
 
 ### TL;DR {: .hide-from-toc }
 - Record exactly which functions were called and how long each took with the CPU Profiler.
-- Vizualize your profiles as a flame chart.
+- Visualize your profiles as a flame chart.
 
 
 ## Record a CPU profile {:#record-profile}
@@ -131,7 +131,7 @@ information is provided:
    including any functions that it called.
 *  **Total time**. The time it took to complete the current invocation of 
    this function and any functions that it called.
-*  **URL**. The location of the function defintion in the form of 
+*  **URL**. The location of the function definition in the form of 
    `file.js:100` where `file.js` is the name of the file where the function
    is defined and `100` is the line number of the definition.
 *  **Aggregated self time**. Aggregate time for all invocations of the 

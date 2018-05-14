@@ -1,0 +1,142 @@
+<html devsite><head>
+  <title>Các cách phổ biến nhất mà trang web bị người gửi spam tấn công</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+
+<body>
+<p>Việc hiểu cách trang web của bạn bị xâm phạm là một phần quan trọng trong việc
+  bảo vệ trang web khỏi các cuộc tấn công. Trong bài này, chúng tôi sẽ giới thiệu một số lỗ hổng
+  có thể khiến trang web của bạn bị xâm phạm.</p>
+
+    <h2>Mật khẩu bị xâm phạm</h2>
+<p>Kẻ tấn công có thể sử dụng các kỹ thuật đoán mật khẩu bằng cách thử các
+  mật khẩu khác nhau cho đến khi chúng đoán đúng. Các cuộc tấn công đoán mật khẩu có thể được
+  thực hiện thông qua các phương pháp khác nhau như thử các mật khẩu thông thường
+  hoặc quét qua các tổ hợp chữ cái và số ngẫu nhiên cho đến khi tìm được mật khẩu.
+   Để ngăn chặn
+  điều này, hãy tạo một mật khẩu mạnh và khó đoán.
+   Bạn có thể tìm các <a href="https://support.google.com/accounts/answer/32040">mẹo tạo mật khẩu mạnh</a>
+  trong bài viết trên trung tâm trợ giúp của Google.</p>
+
+<p>Có hai điểm quan trọng cần nhớ. Thứ nhất, điều quan trọng là tránh sử dụng lại
+  mật khẩu trong các dịch vụ khác nhau. Khi kẻ tấn công có thể xác định đúng kết hợp tên người dùng
+  và mật khẩu, chúng sẽ cố gắng sử dụng kết hợp tên người dùng và mật khẩu
+  đó trên nhiều dịch vụ hết mức có thể.
+  Do đó, việc sử dụng các mật khẩu khác nhau trên các
+  dịch vụ khác nhau có thể khiến ngăn các tài khoản khác trên các
+  dịch vụ khác không bị xâm phạm.</p>
+
+<p>Thứ hai, tận dụng xác thực hai yếu tố (2FA) như
+  <a href="https://www.google.com/landing/2step/">Xác minh 2 bước của
+  Google</a> nếu có tùy chọn này. 2FA cho phép một
+  lớp thông tin đăng nhập thứ 2, thường là thông qua mã
+  tin nhắn văn bản hoặc mã pin được tạo động khác. Tính năng này làm
+  giảm khả năng truy cập tài khoản chỉ bằng mật khẩu bị đánh cắp của kẻ tấn công. Một số nhà
+  cung cấp CMS có hướng dẫn về cách định cấu hình 2FA: xem tài liệu
+  hướng dẫn cho
+  <a href="https://docs.joomla.org/J3.x:Two_Factor_Authentication">Joomla!</a>
+  , <a href="https://codex.wordpress.org/Two_Step_Authentication">WordPress</a>
+  hoặc <a href="https://www.drupal.org/project/tfa">Drupal</a>.</p>
+
+    <h2>Thiếu bản cập nhật bảo mật</h2>
+<p>Các phiên bản phần mềm cũ hơn có thể bị ảnh hưởng bởi các lỗ hổng
+  bảo mật có nguy cơ cao cho phép kẻ tấn công xâm nhập toàn bộ
+  trang web. Kẻ tấn công tích cực tìm kiếm phần mềm cũ có
+  lỗ hổng. Việc bỏ qua một lỗ hổng trên trang web của bạn
+  sẽ làm tăng khả năng trang web của bạn bị tấn công.</p>
+
+<p><b>Lưu ý:</b> Cần kiểm tra định kỳ các bản cập nhật phần mềm
+  cho trang web của bạn để vá lỗ hổng.
+  Tốt hơn là hãy thiết lập cập nhật tự động cho phần mềm
+  của bạn nếu có thể và đăng ký danh sách thông báo bảo mật cho bất kỳ
+  phần mềm đang hoạt động nào của bạn.</p>
+
+<p>Một số ví dụ về phần mềm bạn cần cập nhật bao gồm:</p>
+<ul>
+  <li>Phần mềm máy chủ web, nếu bạn chạy các máy chủ của riêng mình</li>
+  <li>Hệ thống quản lý nội dung. Ví dụ: bản phát hành bảo mật từ
+    <a href="https://wordpress.org/news/category/security/">Wordpress</a>,
+    <a href="https://www.drupal.org/security">Drupal</a> và
+    <a href="https://developer.joomla.org/security-centre.html">Joomla!</a>.</li>
+  <li>Tất cả plugin và tiện ích mà bạn sử dụng trên trang web của mình</li>
+</ul>
+
+  <h2>Chủ đề và plugin không an toàn</h2>
+<p>Plugin và chủ đề trên một CMS bổ sung thêm tính năng nâng cao và có giá trị.
+  Tuy nhiên, các chủ đề và plugin
+  đã lỗi thời hoặc chưa được sửa lỗi là một nguồn gây lỗ hổng chính
+  trên các trang web. Nếu bạn sử dụng chủ đề hoặc
+  plugin trên trang web của mình, hãy đảm bảo cập nhật các plugin và chủ đề đó. Xóa
+  các chủ đề hoặc plugin không còn được nhà phát triển duy trì.</p>
+
+<p>Hãy cẩn thận với các plugin hoặc chủ đề miễn phí từ các trang web không đáng tin cậy.
+  Đây là một thủ thuật phổ biến để
+  những kẻ tấn công thêm mã độc vào các phiên bản
+  miễn phí của các plugin hay phần mềm trả tiền. Khi gỡ bỏ plugin, hãy đảm bảo xóa
+  tất cả các tệp khỏi máy chủ của bạn chứ không chỉ là vô hiệu hóa plugin đó.</p>
+
+    <h2>Kỹ nghệ xã hội</h2>
+<p><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">Kỹ nghệ
+  xã hội</a> nhằm mục đích khai thác bản chất con người
+  để vượt qua cơ sở hạ tầng an ninh tinh vi. Những kiểu tấn công này lừa người dùng được ủy quyền
+  cung cấp thông tin mật như mật khẩu. Ví dụ: một hình thức phổ biến của kỹ nghệ xã hội là
+  lừa đảo. Trong một vụ lừa đảo, kẻ tấn công sẽ gửi một email giả mạo một tổ chức
+  hợp pháp và yêu cầu thông tin mật.</p>
+
+<p><b>Lưu ý:</b> Theo một
+  <a href="http://research.google.com/pubs/pub43469.html">nghiên cứu của Google về
+  kỹ nghệ xã hội</a>, một số chiến dịch lừa đảo hiệu quả nhất
+  có tỷ lệ thành công 45%!</p>
+
+<p>Hãy nhớ đừng bao giờ cung cấp bất kỳ thông tin nhạy cảm nào (ví dụ: mật khẩu,
+  số thẻ tín dụng, thông tin ngân hàng hoặc thậm chí ngày sinh) trừ khi
+  bạn chắc chắn về danh tính của người yêu cầu. Nếu trang web của bạn được
+  quản lý bởi nhiều người, hãy cân nhắc việc cung cấp đào tạo để nâng cao
+  nhận thức về bảo mật trước các cuộc tấn công kỹ nghệ xã hội. Bạn có thể tham khảo
+  Trung tâm trợ giúp của Gmail để biết các
+  <a href="https://support.google.com/mail/answer/8253">mẹo chống
+  lừa đảo cơ bản.</a></p>
+
+    <h2>Lỗ hổng chính sách bảo mật</h2>
+<p>Nếu bạn là quản trị viên hệ thống hoặc điều hành trang web của riêng mình,
+  hãy nhớ rằng chính sách bảo mật kém có thể cho phép kẻ tấn công xâm nhập
+  trang web của bạn. Một số ví dụ bao gồm:</p>
+  <ul>
+    <li>Cho phép người dùng tạo mật khẩu yếu</li>
+    <li>Cấp quyền truy cập quản trị cho người dùng không yêu cầu</li>
+    <li>Không bật HTTPS trên trang web của bạn và cho phép người dùng
+    đăng nhập bằng HTTP</li>
+    <li>Cho phép tệp tải lên từ người dùng chưa được xác thực hoặc không
+    kiểm tra loại tệp trước</li>
+  </ul>
+
+<p>Một vài mẹo cơ bản để bảo vệ trang web của bạn:</p>
+  <ul>
+    <li>Đảm bảo rằng trang web của bạn được định cấu hình với kiểm soát bảo mật
+      cao bằng cách tắt các dịch vụ không cần thiết</li>
+    <li>Kiểm tra kiểm soát truy cập và đặc quyền người dùng</li>
+    <li>Sử dụng mã hóa cho các trang xử lý thông tin nhạy cảm,
+    như các trang đăng nhập</li>
+    <li>Thường xuyên kiểm tra nhật ký của bạn để tìm bất kỳ hoạt động đáng ngờ nào.</li>
+  </ul>
+
+    <h2>Rò rỉ dữ liệu</h2>
+<p>Rò rỉ dữ liệu có thể xảy ra khi dữ liệu mật được tải lên và
+  định cấu hình sai khiến thông tin mật được
+  công bố công khai. Ví dụ: quá trình xử lý lỗi và nhắn tin trong một
+  ứng dụng web có thể rò rỉ thông tin cấu hình
+  trong một thông báo lỗi không được xử lý. Khi sử dụng một phương pháp được gọi là
+  <a href="https://en.wikipedia.org/wiki/Google_hacking">"dorking"</a>,
+  các tác nhân độc hại có thể khai thác chức năng của công cụ tìm kiếm
+  để tìm ra dữ liệu này.</p>
+
+<p>Hãy đảm bảo rằng trang web của bạn không tiết lộ thông tin nhạy cảm cho người dùng
+  trái phép bằng cách kiểm tra định kỳ và chỉ cung cấp dữ liệu mật cho các
+  pháp nhân đáng tin cậy thông qua chính sách bảo mật. Nếu phát hiện bất kỳ
+  thông tin nhạy cảm nào được hiển thị trên trang web của mình
+  và cần được xóa ngay khỏi kết quả Google Tìm kiếm, thì bạn có thể
+  sử dụng <a href="https://www.google.com/webmasters/tools/removals">công cụ xóa URL</a> để xóa từng URL khỏi
+  Google Tìm kiếm.</p>
+
+</body></html>

@@ -1,26 +1,18 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-name: "Web"
-description: "Build next generation web experiences."
+name: Web
+description: Build the next generation of web experiences.
 home_url: /web/
-buganizer_id: 60575
-
+buganizer_id: 180451
+is_family_root: true
 color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
-
 icon:
   path: /web/images/web-fundamentals-icon192x192.png
-
-tags:
-- html5
-- mobile
-- performance
-- web
-
 google_analytics_ids:
-- UA-52746336-1
-
-announcement:
-  description: Don't miss out on the action at this year's <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit</a>, happening on Nov 10th & 11th. <a href="https://services.google.com/fb/forms/cds2016/">Register for livestream updates</a>.
-  start: '2016-10-09T08:00:00Z'
-  end: '2016-11-11T08:00:00Z'
+  - UA-52746336-1
+social_media:
+  image:
+    path: /web/images/social-webfu-16x9.png
+    width: 1200
+    height: 675
+gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq

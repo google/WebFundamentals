@@ -1,21 +1,21 @@
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2016-08-26 #}
 
 # Resources {: .page-title }
 
-Want to get involved in [/web](/web/)? We'd love our
+Want to get involved in [/web](/web/)? We **love** our
 [contributors](contributors). By submitting bug reports, pull requests and
 helping to [translate](translations) content into more than 15 different
-languages, they've helped to make [/web](/web/) and the web better!
+languages, **you've** helped to make [/web](/web/) and the web better!
 
 ## Found an issue or something need to be updated?
 
 You can [file an issue](https://github.com/Google/WebFundamentals/issues) on
 our [GitHub repository](https://github.com/Google/WebFundamentals/){: .external } and
-someone will take a look, or you can fix it yourself by submiting a
+someone will take a look, or you can fix it yourself by submitting a
 [pull request](#submitting-a-pull-request)!
 
 ## Want to help translate content?
@@ -54,7 +54,8 @@ the CLA.
 
 ### Article Styles
 
-Looking for the [sample article](writing-an-article) and [style guide](style-guide), this is it.
+Looking for the [sample article](writing-an-article) and
+[markdown syntax guide](markdown-syntax), this is it.
 
 ### Code Styles
 

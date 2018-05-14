@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and API removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-07-28 #}
+{# wf_blink_components: Internals>WebRTC #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: deprecations,removals,chrome49 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -16,34 +17,7 @@ improvements to the product, its performance, and also capabilities of the web
 platform.
 
 
-## Deprecation policy
-
-To keep the platform healthy we sometimes remove APIs from the Web Platform which
-have run their course.  There can be many reasons why we would remove an API, such
-as: they are superseded by newer APIs, are updated to reflect changes to
-specifications, to bring alignment and consistency with other browsers, or are
-early experimentations that never came to fruition in other browsers and thus 
-can increase the burden of support for web developers.
-
-Some of these changes might have an effect on a very small number of sites and
-to mitigate issues ahead of time we try to give developers advanced notice so
-that if needed they can make the required changes to keep their sites running.
-
-Chrome currently has a
-[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation)
-and the TL;DR is:
-
-* Announce on blink-dev
-* Set warnings and give time scales in the developer console of the browser when
-  usage is detected on a page
-* Wait, monitor and then remove feature as usage drops
-
-You can find a list of all deprecated features in
-[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated)
-and removed features by applying the
-[removed filter](https://www.chromestatus.com/features#removed). We will also 
-try to summarize some of the changes, reasoning, and migration paths in 
-these posts.
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 In Chrome 49 (Beta Feb 2nd, 2016. Estimated stable date: March 2016) there are a
 number of changes to Chrome

@@ -1,13 +1,14 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Page contains some content when its scripts are not available" Lighthouse audit.
+description: Reference documentation for the "Contains Some Content When JavaScript Is Not Available" Lighthouse audit.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-09-20 #}
+{# wf_blink_components: N/A #}
 
-# Page Contains Some Content When Its Scripts Are Not Available  {: .page-title }
+# Contains Some Content When JavaScript Is Not Available  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
 is a web development strategy that ensures that your site is accessible to the
@@ -21,7 +22,7 @@ styling using CSS, or interactivity using JavaScript, can be layered on top for
 the browsers that support those technologies. But basic content and page
 functionality should not rely on CSS or JavaScript.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Progressive enhancement is a large and contentious topic. One camp says that,
 in order to adhere to the strategy of progressive enhancement, pages should
@@ -32,7 +33,7 @@ for an example of this approach.
 Another camp believes that this strict approach is unfeasible or unnecessary
 for many modern, large-scale web applications and suggests using inline
 critical path CSS in the document `<head>` for absolutely critical page styles.
-See [Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/) for more on this approach. 
+See [Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/) for more on this approach.
 
 Given these considerations, this Lighthouse audit performs a simple check to
 ensure that your page isn't blank when JavaScript is disabled. How strictly your
@@ -52,11 +53,11 @@ To see how your site looks and performs when JavaScript is disabled, use
 Chrome DevTools' [Disable
 JavaScript](/web/tools/chrome-devtools/settings#disable-js) feature.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 Lighthouse disables JavaScript on the page and then inspects the page's HTML. If
 the HTML is empty then the audit fails. If the HTML is not empty then the audit
 passes.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/no-js.html" %}

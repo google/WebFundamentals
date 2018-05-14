@@ -1,0 +1,28 @@
+{
+  "environment": "web",
+  "source": "1ycGsmKJyGwEQ-cO3c2Dq_MeL5APaitL920m54hQaeH4",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2017-10-16T20:48:20Z",
+  "id": "web-perf",
+  "duration": 0,
+  "title": "Find and Fix Web App Performance Issues",
+  "author": "kaycebasque",
+  "summary": "This codelab will help you learn to identify and fix web app performance bottlenecks.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "chrome-dev-summit",
+    "io2016",
+    "kiosk",
+    "pwa-dev-summit",
+    "web"
+  ],
+  "url": "web-perf"
+}

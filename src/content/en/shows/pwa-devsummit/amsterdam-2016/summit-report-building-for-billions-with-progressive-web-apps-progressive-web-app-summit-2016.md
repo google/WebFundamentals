@@ -21,4 +21,4 @@ Learn more about building for billions: https://goo.gl/kTTRVo
 
 Watch Tal's Progressive Web App Summit 2016 talk here https://goo.gl/CYM34j
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

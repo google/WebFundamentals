@@ -1,14 +1,15 @@
+# {# wf_auto_generated #}
 # ATTENTION - This file is auto-generated, changes must be made to the template!
 toc:
-- title: '{{title}}'
+- title: "{{{title}}}"
   section:
   - title: "All Articles"
     path: /web/{{section}}/{{year}}/
 {{#each months}}
-  - title: "{{title}}"
+  - title: "{{{title}}}"
     section:
     {{#each articles}}
-    - title: "{{title}}"
+    - title: "{{{title}}}"
       path: {{url}}
     {{/each}}
 {{/each}}

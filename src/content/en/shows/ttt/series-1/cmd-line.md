@@ -19,4 +19,4 @@ description: In this episode of #TotallyToolingTips Matt and Addy enjoy the 'say
 In this episode of #TotallyToolingTips Matt and Addy enjoy the 'say' command a
 little too much and look at their command line setups.
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

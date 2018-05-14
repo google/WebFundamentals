@@ -21,4 +21,4 @@ Watch Andrew's Progressive Web App Summit 2016 talk here https://goo.gl/7Ugr30
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

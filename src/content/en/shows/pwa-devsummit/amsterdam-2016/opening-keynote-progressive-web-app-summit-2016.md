@@ -17,6 +17,6 @@ book_path: /web/shows/_book.yaml
 
 It's now possible to build fast, engaging, reliable mobile web experiences that are great for users and good for businesses. We'll kick off the two day summit with an overview of Progressive Web Apps as well as strategies for how you can integrate these new technologies into your own site.
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

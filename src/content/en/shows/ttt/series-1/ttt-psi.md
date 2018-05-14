@@ -4,6 +4,7 @@ description: A quick tip looking at Page Speed Insights and how it can improve y
 
 {# wf_updated_on: 2015-07-07 #}
 {# wf_published_on: 2015-07-07 #}
+{# wf_blink_components: N/A #}
 {# wf_youtube_id: bDUDuQy3R7Y #}
 
 # Totally Tooling Mini Tip: Page Speed Insights {: .page-title }
@@ -16,8 +17,10 @@ description: A quick tip looking at Page Speed Insights and how it can improve y
 </div>
 
 
-A quick tip looking at Page Speed Insights and how it can improve your site's performance. Check it out at: https://developers.google.com/speed/pagespeed/insights/
+A quick tip looking at Page Speed Insights and how it can improve your site's
+performance. Check it out at:
+[/speed/pagespeed/insights/](/speed/pagespeed/insights/)
 
 Matt made a video on improving your page speed score last year which is worth checking out as well: https://www.youtube.com/watch?v=pNKnhBIVj4w
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2016-03-21 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-03-21 #}
+{# wf_blink_components: N/A #}
 
 # Console API Reference {: .page-title }
 
@@ -47,7 +48,7 @@ See [Clearing the console](index#clearing) for more information.
 
 ## console.count(label) {:#count}
 
-Writes the the number of times that `count()` has been invoked at the same 
+Writes the number of times that `count()` has been invoked at the same 
 line and with the same label.
 
 
@@ -95,7 +96,7 @@ on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 
 ![console.dirxml() example](images/dirxml.png)
 
-## console.error(object [, object, ...]) {:#error}
+## console.error(object [, object, ...]) {: #error }
 
 Prints a message similar to [`console.log()`](#log), styles the 
 message like an error, and includes a stack trace from where the method was 
@@ -107,7 +108,7 @@ called.
 
 ![console.error() example](images/error.png)
 
-## console.group(object[, object, ...])
+## console.group(object[, object, ...]) {: #group }
 
 Starts a new logging group with an optional title. All console output that
 occurs after `console.group()` and before `console.groupEnd()` is visually
@@ -161,7 +162,7 @@ Creates a new logging group that is initially collapsed instead of open.
     console.groupEnd();
     
 
-## console.groupEnd() {:#groupend}
+## console.groupEnd() {: #groupend }
 
 Closes a logging group. See [`console.group`](#group) for an example.
 
@@ -210,31 +211,59 @@ prints the report to the **Profiles** panel.
 
 See [`console.profile()`](#profile) for an example.
 
-## console.time(label) {:#time}
+## console.table(array) {: #table }
 
-Starts a new timer with an associated label. When `console.timeEnd()` is 
-called with the same label, the timer is stopped and the elapsed time is
-displayed in the console. Timer values are accurate to the sub-millisecond.
-The strings passed to `time()` and `timeEnd()` must match or else the timer 
-will not finish.
+Logs an array of objects as a table.
 
+    let data = [
+      { name: "Yusuf", age: 26 },
+      { age: 34, name: "Chen" }
+    ];
 
-    console.time("Array initialize");
-    var array = new Array(1000000);
-    for (var i = array.length - 1; i >= 0; i--) {
-      array[i] = new Object();
+    console.table(data);
+
+![an example of console.table()](images/table2.png)
+
+## console.time([label]) {: #time }
+
+Starts a new timer. Call [`console.timeEnd()`](#timeend) to stop the timer and
+print the elapsed time to the Console.
+
+    console.time();
+    var arr = new Array(10000);
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = new Object();
     }
-    console.timeEnd("Array initialize");
-    
+    console.timeEnd();
+    // default: 3.696044921875ms
 
-![console.time() example](images/time.png)
+Pass an optional label to change the output text that precedes the elapsed
+time. Call `console.timeEnd()` with the same label to stop the timer.
 
-## console.timeEnd(label) {:#timeend}
+    console.time('total');
+    var arr = new Array(10000);
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = new Object();
+    }
+    console.timeEnd('total');
+    // total: 3.696044921875ms
 
-Stops the current timer if one is in progress and prints the timer label 
-followed by the elapsed time to the Console. 
+Use labels to run multiple timers at the same time.
 
-See [`console.time()`](#time) for an example. 
+    console.time('total');
+    console.time('init arr');
+    var arr = new Array(10000);
+    console.timeEnd('init arr');
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = new Object();
+    }
+    console.timeEnd('total');
+    // init arr: 0.0546875ms
+    // total: 2.5419921875ms
+
+## console.timeEnd([label]) {: #timeend }
+
+Stops a timer. See [`console.time()`](#time) for examples.
 
 ## console.timeStamp([label]) {:#timestamp}
 
@@ -259,7 +288,7 @@ Prints a stack trace from the point where the method was called.
 
 ![console.trace() example](images/trace.png)
 
-## console.warn(object [, object, ...]) {:#warn}
+## console.warn(object [, object, ...]) {: #warn }
 
 Prints a message like [`console.log()`](#log), but also displays a yellow 
 warning icon next to the logged message.

@@ -5,6 +5,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2015-03-24 #}
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/svgomg/card.jpg #}
+{# wf_tags: spotlight,svg,serviceworker,offline,progressive-web-apps #}
 
 # SVGOMG {: .page-title }
 

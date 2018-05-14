@@ -58,7 +58,7 @@ continues, and we hope to implement support for VP9 and an initial version of H.
 * RTP data channel support has been removed. Any remaining applications still
   using RTP data channels should use the standard data channels instead.
 
-As with all releases, we encourage developers to try Chrome on the Canary, Dev, and Beta channels and report any issues found. The help we receive is invaluable. For pointers on how to file a good bug report, please take a look at the [WebRTC bug page](http://www.webrtc.org/report-bug).
+As with all releases, we encourage developers to try Chrome on the Canary, Dev, and Beta channels and report any issues found. The help we receive is invaluable. For pointers on how to file a good bug report, please take a look at the [WebRTC bug page](https://webrtc.org/bugs/).
 
 ### Demos
 
@@ -68,7 +68,7 @@ As with all releases, we encourage developers to try Chrome on the Canary, Dev, 
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
       selection](https://webrtc.github.io/samples/src/content/devices/multi/){: .external }
-* [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
+* [MediaDevices shim](https://github.com/webrtc/adapter)
 
 ### Find out more
 

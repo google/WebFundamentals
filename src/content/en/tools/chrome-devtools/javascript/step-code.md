@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening.
 
-{# wf_updated_on: 2015-09-01 #}
+{# wf_updated_on: 2017-07-24 #}
 {# wf_published_on: 2015-04-13 #}
 
 # How to step through your code {: .page-title }
@@ -11,11 +11,14 @@ description: By executing code one line or one function at a time, you can obser
 {% include "web/_shared/contributors/pbakaus.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
+Warning: This page is deprecated. At the top of each section, there's a
+link to an up-to-date page where you can find similar information.
+
 By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening. You can also modify data values used by the script, and you can even modify the script itself.
 
 *Why is this variable value 20 instead of 30? Why doesn't that line of code seem to have any effect? Why is this flag true when it should be false?* Every developer faces these questions, and steps through code to find out.
 
-After [setting breakpoints](add-breakpoints), return to the page and use it normally until a breakpoint is reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
+After [setting breakpoints](breakpoints), return to the page and use it normally until a breakpoint is reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -27,6 +30,9 @@ After [setting breakpoints](add-breakpoints), return to the page and use it norm
 
 
 ## Stepping in action
+
+Warning: This page is deprecated. See [Step through code](reference#stepping)
+for up-to-date information.
 
 All step options are represented through clickable icons ![Breakpoints button bar](imgs/image_7.png){:.inline} in the sidebar, but can also be triggered via shortcut. Here's the rundown:
 
@@ -79,9 +85,12 @@ All step options are represented through clickable icons ![Breakpoints button ba
 
 Use **step into** as your typical "one line at a time" action, as it ensures that only one statement gets executed, no matter what functions you step in and out of.
 
-Use [Pause on exceptions](add-breakpoints#break-on-uncaught-exception) when you suspect an uncaught exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs.
+Use [Pause on exceptions](breakpoints#exceptions) when you suspect an uncaught exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs.
 
 ## View properties by scope {: #scope }
+
+Warning: This page is deprecated. See [View and edit local, closure, and
+global properties](reference#scope) for up-to-date information.
 
 When you pause a script, the **Scope** pane shows you all of the
 currently-defined properties at that moment in time.
@@ -107,9 +116,12 @@ is dimmer than the `confirm` property in the screenshot below.
 The darker properties are enumerable. The lighter, dimmed down properties are
 not. See the following Stack Overflow thread for more information:
 [What do the colors mean in Chrome Developer Tools Scope
-panel?](What do the colors mean in Chrome Developer Tools Scope panel?)
+panel?](http://stackoverflow.com/a/36545767/1669860)
 
 ## The call stack
+
+Warning: This page is deprecated. See [View the current call
+stack](reference#call-stack) for up-to-date information.
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
 
@@ -117,7 +129,7 @@ Near the top of the sidebar is the **Call Stack** section. When the code is paus
 
 <img src="imgs/image_15.png" alt="Call stack" class="attempt-left">
 
-An initial onclick event at line 50 in the `index.html` file called the 
+An initial onclick event at line 50 in the `index.html` file called the
 `setone()` function at line 18 in the `dgjs.js` JavaScript file, which then
 called the `setall()` function at line 4 in the same file, where execution is
 paused at the current breakpoint.
@@ -126,18 +138,18 @@ paused at the current breakpoint.
 
 ### Enable the async call stack
 
-Enable the async call stack feature to gain more visibiliy into the execution
+Enable the async call stack feature to gain more visibility into the execution
 of your asynchronous function calls.
 
 1. Open the **Sources** panel of DevTools.
 2. On the **Call Stack** pane, enable the **Async** checkbox.
 
-The video below contains a simple script to demonstrate the async call 
+The video below contains a simple script to demonstrate the async call
 stack feature. In the script, a third-party library is used to select a
-DOM element. A function called `onClick` is registered as the 
+DOM element. A function called `onClick` is registered as the
 `onclick` event handler for the element. Whenever `onClick` is called,
-it in turn calls a function named `f`, which just forces the script to 
-pause via the `debugger` keyword. 
+it in turn calls a function named `f`, which just forces the script to
+pause via the `debugger` keyword.
 
 <video src="animations/async-call-stack-demo.mp4"
        autoplay muted loop controls></video>
@@ -145,11 +157,11 @@ pause via the `debugger` keyword.
 In the video, a breakpoint is triggered, and the call stack is expanded.
 There is only one call in the stack: `f`. The async call stack feature is then
 enabled, the script resumes, the breakpoint is triggered again, and then the
-call stack is expanded a second time. This time, the call stack contains 
+call stack is expanded a second time. This time, the call stack contains
 all of the calls leading up to `f`, including third-party library calls, and
-the call to `onClick`. The first time that the script was called, there 
+the call to `onClick`. The first time that the script was called, there
 was only one call in the call stack. The second time, there were four. In
-short, the async call stack feature provides increased visibility into 
+short, the async call stack feature provides increased visibility into
 the full call stack of asynchronous functions.
 
 ### Tip: name functions to improve call stack readability
@@ -174,13 +186,16 @@ Call stack with anonymous functions:
 
 ![Call stack with hard-to-read anonymous functions](imgs/anon.png)
 
-Call stack with named functions: 
+Call stack with named functions:
 
 ![Call stack with easier-to-read named function](imgs/named.png)
 
 <!-- blackbox OR disable third-party code??? -->
 
 ### Blackbox third-party code
+
+Warning: This page is deprecated. See [Ignore a script or pattern of
+scripts](reference#blackbox) for up-to-date information.
 
 Blackbox script files to omit third-party files from your call stacks.
 
@@ -204,9 +219,9 @@ To blackbox a file:
 
 3. Click **Add pattern**.
 
-4. In the **Pattern** textfield enter the filename pattern that you wish to 
-   exclude from your call stack. DevTools excludes any scripts that match the 
-   pattern. 
+4. In the **Pattern** textfield enter the filename pattern that you wish to
+   exclude from your call stack. DevTools excludes any scripts that match the
+   pattern.
 
    ![Adding blackbox pattern](imgs/add-pattern.png)
 
@@ -241,9 +256,12 @@ change it to 3 before resuming execution.
 
 ## Live editing
 
+Warning: This page is deprecated. See [Edit a script](reference#edit) for
+up-to-date information.
+
 Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need to reload.
 
-To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then commit the change with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> on Mac). At this point, the entire JS file will be patched into the VM and all function definitions will be updated. 
+To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then commit the change with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> on Mac). At this point, the entire JS file will be patched into the VM and all function definitions will be updated.
 
 Now, you can resume execution; your modified script will execute in place of the original, and you can observe the effects of your changes.
 
@@ -252,13 +270,16 @@ Now, you can resume execution; your modified script will execute in place of the
 ![Live editing](imgs/image_18.png)
 
 We suspect that the parameter `dow` is, in every case, off by +1 when it is
-passed to the function `setone()` – that is, the value of `dow<`, as 
-received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly 
+passed to the function `setone()` – that is, the value of `dow<`, as
+received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly
 test whether decrementing the passed value confirms that this is the problem,
-we add line 17 at the beginning of the function, commit with 
+we add line 17 at the beginning of the function, commit with
 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>  and resume.
 
 ## Managing thread execution {: #threads }
+
+Warning: This page is deprecated. See [Change thread context](reference#threads)
+for up-to-date information.
 
 Use the **Threads** pane on the Sources panel to pause, step into, and
 inspect other threads, such as service worker or web worker threads.
@@ -296,15 +317,15 @@ Modifying the first number on the app's UI triggers both of the breakpoints.
 ![Main and worker script breakpoints triggered](imgs/breakpoints-triggered.png)
 
 In the Threads pane the blue arrow indicates which thread is currently
-selected. For example, in the screenshot above the **Main** thread is selcted. 
+selected. For example, in the screenshot above the **Main** thread is selected.
 
 All of the
-DevTools controls for stepping through code (resume or pause script exection,
+DevTools controls for stepping through code (resume or pause script execution,
 step over next function call, step into next function call, etc.) pertain
 to that thread. In other words, if you pressed the **Resume script execution**
-button while your DevTools looked like the screenshot above, the Main 
+button while your DevTools looked like the screenshot above, the Main
 thread would resume executing, but the web worker thread
-would still be paused. The **Call Stack** and **Scope** sections are only 
+would still be paused. The **Call Stack** and **Scope** sections are only
 displaying information for the Main thread, too.
 
 When you want to step through the code for the web worker thread, or see its

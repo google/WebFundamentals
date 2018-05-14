@@ -11,7 +11,7 @@ description: The MediaDevices interface gives access to input and output devices
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-Modern browsers make it possible to select input and output devices including cameras, microphones and speakers. 
+Modern browsers make it possible to select input and output devices including cameras, microphones and speakers.
 
 For example:
 
@@ -33,7 +33,7 @@ Returns a Promise giving access to an array of `MediaDeviceInfo` objects for
 available devices.
 
 The method is similar to
-[`MediaStreamTrack.getSources()`](http://simpl.info/sources) but unlike that
+[`MediaStreamTrack.getSources()`](https://simpl.info/getusermedia/sources) but unlike that
 method (which was only ever implemented in Chrome) it's standards compliant and
 includes audio output devices. You can try this out with the demos below.
 
@@ -156,7 +156,7 @@ stream. There is also a `MediaDevices` extension proposal for
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
       selection](https://webrtc.github.io/samples/src/content/devices/multi/){: .external }
-* [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
+* [MediaDevices shim](https://github.com/webrtc/adapter)
 
 ### Find out more
 

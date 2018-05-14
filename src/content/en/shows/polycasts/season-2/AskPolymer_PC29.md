@@ -44,4 +44,4 @@ It might seem crazy, but using an element for AJAX is actually pretty great! In 
 
 - Polymer Slack: <http://bit.ly/polymerslack>
 - Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
-- Subscribe to the Chrome Developers channel at <http://goo.gl/LLLNvf>
+- [Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" class="checkov">
+  <head>
+    {% include "includes/page-head.html" %}
+  </head>
+  <body class="{% spaceless %}{{ bodyClass }}
+               {% if fullWidth %}devsite-full-width-page{% endif %}
+               {% if lowerTabs|length < 2 or not lowerTabs %}devsite-header-no-lower-tabs{% endif %}
+               {% endspaceless %}"
+        id="top_of_page">
+    <div class="devsite-wrapper">
+      <div class="devsite-top-section-wrapper">
+        <header class="devsite-top-section nocontent">
+          {% include "includes/devsite-top-logo-row-wrapper-wrapper.html" %}
+          {% include "includes/devsite-collapsible-section.html" %}
+        </header>
+      </div>
+      <div id="gc-wrapper">
+        <div class="devsite-main-content clearfix" style="margin-top: 0px;">
+          {% include "includes/announcement-banner.html" %}
+          {% block content %}
+          {% endblock %}
+        </div>
+        {% include "includes/devsite-footer-promos.html" %}
+        {% include "includes/devsite-footer-linkboxes.html" %}
+        {% include "includes/devsite-footer-utility.html" %}
+      </div>
+    </div>
+    <script src="/wf-local/scripts/devsite-dev.js"></script>
+    <!-- loads the code prettifier -->
+    <script async src="/wf-local/scripts/prettify-bundle.js" onload="prettyPrint();">
+    </script>
+    <script async src="/wf-local/scripts/footer-closure.js" onload="devsite.kennedy.InitializeTabbars();">
+    </script>
+    {% if servedFromAppEngine %}
+      {% include "includes/analytics.html" %}
+      {% include "includes/survey.html" %}
+    {% endif %}
+  </body>
+</html>

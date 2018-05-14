@@ -1,15 +1,16 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2016-09-28 #}
 {# wf_published_on: 2016-09-28 #}
+{# wf_blink_components: Blink>Network,Blink>Loader #}
 
 # The PRPL Pattern {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Dogfood: PRPL is a new pattern we feel has great potential. At this stage, 
-we welcome experimentation with it while we iterate on the ideas in the 
+Dogfood: PRPL is a new pattern we feel has great potential. At this stage,
+we welcome experimentation with it while we iterate on the ideas in the
 pattern and collect more data on where it offers the greatest benefits.
 
 The mobile web is too slow. Over the years the web has evolved from a
@@ -67,7 +68,7 @@ first-class example of an application using PRPL to granularly serve resources.
 It achieves interactivity for each route incredibly quickly on real-world mobile
 devices:
 
-![The Polymer Shop demo is interactive in 1.75s](images/app-build-prpl-shop.png)
+![The Polymer Shop demo is interactive in 1.75s](images/app-build-prpl-shop.jpg)
 
 For most real-world projects, it’s frankly too early to realize the PRPL vision
 in its purest, most complete form – but it’s definitely not too early to adopt
@@ -109,8 +110,8 @@ using [Web Components](http://webcomponents.org/):
 dependencies](images/app-build-components.png)
 
 Note: although HTML Imports are Polymer's preferred bundling strategy, you can
-use code-splitting and route-based chunking to get a similar setup achieved with
-modern JavaScript module bundlers
+use code-splitting and route-based chunking to achieve a similar setup with
+modern JavaScript module bundlers.
 
 In this diagram, the solid lines represent _static dependencies_: external
 resources identified in the files using `<link>` and `<script>` tags. Dotted
@@ -119,7 +120,7 @@ needed by the shell.
 
 The build process builds a graph of all of these dependencies, and the server
 uses this information to serve the files efficiently. It also builds a set of
-vulcanized bundles, for browsers that don't support HTTP2 push.
+vulcanized bundles, for browsers that don't support HTTP/2.
 
 ### App entrypoint
 
@@ -151,8 +152,9 @@ Although it isn't a hard requirement for using PRPL, your build process could
 produce two builds:
 
 -   An unbundled build designed for server/browser combinations that support
-    HTTP/2 and HTTP/2 server push to deliver the resources the browser needs for
-    a fast first paint while optimizing caching.
+    HTTP/2 to deliver the resources the browser needs for a fast first paint
+    while optimizing caching. The delivery of these resources can be triggered
+    efficiently using [`<link rel="preload">`][Resource hints] or [HTTP/2 Push].
 
 -   A bundled build designed to minimize the number of round-trips required to
     get the application running on server/browser combinations that don't support
@@ -162,7 +164,7 @@ Your server logic should deliver the appropriate build for each browser.
 
 ### Bundled build
 
-For browsers that don't handle HTTP2 Push, the build process could produce a set
+For browsers that don't handle HTTP/2, the build process could produce a set
 of different bundles: one bundle for the shell, and one bundle for each
 fragment. The diagram below shows how a simple app would be bundled, again using
 Web Components:
@@ -183,10 +185,10 @@ the most efficient way.
 
 ## Background: HTTP/2 and HTTP/2 server push
 
-[HTTP/2](/web/fundamentals/performance/http2/) allows _multiplexed_ downloads over a single
+[HTTP/2] allows _multiplexed_ downloads over a single
 connection, so that multiple small files can be downloaded more efficiently.
 
-[HTTP/2 server push](/web/fundamentals/performance/http2/#server-push) allows the server
+[HTTP/2 server push][HTTP/2 Push] allows the server
 to preemptively send resources to the browser.
 
 For an example of how HTTP/2 server push speeds up downloads, consider how the
@@ -221,6 +223,12 @@ The combination of HTTP/2 and HTTP/2 server push provides the _benefits_ of
 bundling (reduced latency) without actual bundling. Keeping resources separate
 means they can be cached efficiently and be shared between pages.
 
+HTTP/2 Push needs to be utilized with care, as it forces data to the browser,
+even if the file is already in the browser’s local cache or bandwidth is
+already saturated. If done wrong, performance can suffer.
+[`<link rel="preload">`][Resource hints] might be a good alternative to allow
+the browser to make smart decisions about the prioritization of these requests.
+
 ## Conclusion
 
 Loading the code for routes more granularly and allowing browsers to schedule
@@ -239,3 +247,6 @@ should work but does not.
 PRPL can help deliver the minimal functional code needed to make the route your
 users land on interactive, addressing this challenge.
 
+[HTTP/2]: /web/fundamentals/performance/http2/
+[Resource hints]: /web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push

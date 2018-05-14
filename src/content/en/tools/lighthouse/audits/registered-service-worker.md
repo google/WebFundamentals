@@ -1,13 +1,14 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Has a registered service worker" Lighthouse audit.
+description: Reference documentation for the "Registers A Service Worker" Lighthouse audit.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-07-25 #}
+{# wf_blink_components: N/A #}
 
-# Has a Registered Service Worker {: .page-title }
+# Registers A Service Worker {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Registering a service worker is the first step towards enabling the following
 progressive web app features:
@@ -16,7 +17,9 @@ progressive web app features:
 * Push notifications
 * Add to homescreen
 
-## How to pass the audit {: #how }
+See [Service Workers: an Introduction](/web/fundamentals/getting-started/primers/service-workers) to learn more.
+
+## Recommendations {: #recommendations }
 
 Registering a service worker involves only a few lines of code, but the only
 reason you'd use a service worker is to implement one of the progressive
@@ -25,7 +28,7 @@ work.
 
 For more help on caching files for offline use, see the "How to pass the
 audit" section of the following Lighthouse doc: [URL responds with a 200 when
-offline](http-200-when-offline#how).
+offline](http-200-when-offline#recommendations).
 
 For enabling push notifications or "add to homescreen", complete the
 following step-by-step tutorials and then use what you learn to implement
@@ -36,9 +39,9 @@ the features in your own app:
 * [Add your web app to a user's home
   screen](https://codelabs.developers.google.com/codelabs/add-to-home-screen).
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 Checks if the Chrome Debugger returns a service worker version.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/registered-service-worker.html" %}

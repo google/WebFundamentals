@@ -2,15 +2,20 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2016-09-29 #}
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-10-09 #}
 {# wf_featured_image: /web/showcase/2016/images/ali-express-smart-lock/card.png #}
-{# wf_featured_snippet: Most Indian users reach the Internet via 2G and 3G networks, so a fast user experience is essential. To decrease load times, Housing.com added Service Workers and streamlined their site to help consumers quickly find what they’re looking for. Users can continue browsing properties and reviewing previous searches, all while offline. #}
+{# wf_featured_snippet: With Smart Lock, AliExpress was able to improve the user experience in their app and websites: it’s faster for users to login and start the shopping journey, users do not need to constantly remember their passwords, and users can be automatically signed in when moving between platforms like Android and Chrome web. #}
+{# wf_tags: smart-lock,casestudy #}
+{# wf_region: asia #}
+{# wf_vertical: retail #}
 
 # Smart Lock for AliExpress {: .page-title }
 
 <img src="images/ali-express-smart-lock/featured.png" class="attempt-right">
 
 ### Results
+
+<span class="compare-yes"></span> 11% increase in conversion rate
 
 <span class="compare-yes"></span> 50% of all new users signed up with the hint
 selector dialog
@@ -22,8 +27,6 @@ Smart Lock for seamless return next time
 
 <span class="compare-yes"></span> 60% decrease in time spent signing in to
 website
-
-
 
 <a class="button button-primary" href="pdfs/aliexpress-smartlock-casestudy.pdf">
   Download PDF Case study

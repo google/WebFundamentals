@@ -1,0 +1,91 @@
+<html devsite><head>
+  <title>Usar o Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Se você já <a href="https://www.support.google.com/webmasters/answer/35179">tiver verificado a propriedade</a> do seu site, pule a primeira ação abaixo e comece analisando as informações do site no Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Será necessário:</h3>
+
+<ul>
+  <li><a href="https://www.support.google.com/webmasters/answer/35179">Verificar a propriedade</a> do seu site usando técnicas como adicionar um arquivo ao diretório raiz, criar <a href="https://www.support.google.com/webmasters/answer/79812">metatags</a>, ter uma conta administrativa do Google Analytics para o site etc.</li>
+</ul>
+
+<div class="action">
+  <h3>O que você fará:</h3>
+
+  <p>Nesta seção, você realizará as seguintes ações:</p>
+
+  <ol>
+    <li><a href="#verify">Verificar a propriedade do site no Search Console.</a></li>
+    <li><a href="#check">Conferir se o hacker já verificou a propriedade no Search Console e fez alterações indesejadas nas configurações.</a></li>
+    <li><a href="#determine">Determinar a natureza do ataque.</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Verificar a propriedade do site no Search Console</h4>
+
+<ol>
+  <li>Abra um navegador e acesse a Central do webmaster: <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Clique em <strong>Search Console</strong>.</li>
+  <li>Entre no Search Console usando uma <a href="https://www.google.com/accounts">Conta do Google</a>.
+    Se você não tiver uma Conta do Google, clique em <strong>Criar uma conta</strong>. Criar uma nova Conta do Google não significa que você perderá sua conta de e-mail de outra empresa.
+    <a href="https://accounts.google.com/SignUp">Saiba mais sobre contas</a>.</li>
+  <li>Clique em <strong>Adicionar um site</strong>. Digite o URL do site na caixa e clique em <strong>Continuar</strong>.</li>
+  <li>Escolha o método de verificação mais conveniente para você. A guia <strong>Método recomendado</strong> na página de verificação mostra o método indicado pelo Google como mais eficaz. Veja outras opções na guia <strong>Métodos alternativos</strong>.
+    <a href="https://goo.gl/kQnHQ">Saiba mais sobre a verificação</a>.</li>
+  <li>Disponibilize o site on-line novamente se você selecionar um método de verificação que requer acesso ao site, como uma metatag HTML ou um arquivo HTML.</li>
+  <li>Clique em <strong>Verificar</strong> para confirmar a propriedade usando o método selecionado. Se a verificação for concluída, uma mensagem na tela confirmará que você é o proprietário verificado.
+    Nesse momento, você poderá deixar o site off-line outra vez, mas ainda será preciso que ele esteja on-line em algumas das próximas etapas.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Depois da verificação, confira se o hacker verificou a propriedade no Search Console e fez alterações indesejadas na configuração.</h4>
+
+<ol>
+  <li>Acesse a página inicial do Search Console clicando no logotipo do Search Console.</li>
+  <li>Encontre seu site e clique em <strong>Gerenciar site</strong>.</li>
+  <li>Clique em <strong>Adicionar ou remover usuários</strong>.</li>
+  <li>Certifique-se de que todos os <a href="https://www.support.google.com/webmasters/answer/44227">usuários e proprietários</a> listados têm autorização.</li>
+  <li>Anote e guarde para referência o endereço de e-mail de usuários não autorizados e exclua-os do site. Se houver proprietários não autorizados, será preciso excluir esses proprietários e os tokens de verificação relacionados, como metatags de verificação da página inicial ou arquivos HTML do servidor. <a href="https://www.support.google.com/webmasters/answer/2454036">Acesse este link para mais informações</a>.</li>
+  <li>Investigue se foram feitas alterações não desejadas nas configurações do Search Console. Clique no ícone <span class="material-icons">Configurações</span> e em <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Configurações do site</strong></a> para verificar se o hacker fez alterações indesejadas. Por exemplo, ele pode ter reduzido a <a href="https://www.support.google.com/webmasters/answer/48620">taxa de rastreamento</a> com a intenção de evitar indexadores de mecanismos de pesquisa. Além disso, verifique se algum item fora do comum foi listado na seção <strong>Índice do Google</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">Remover URLs</a> ou <span class="material-icons">Configurações</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">Alteração de endereço</a>.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Determinar a natureza do ataque</h4>
+
+<p>As informações disponíveis nas seções "Central de mensagens" e "Problemas de segurança do Search Console" podem ajudar a determinar se o site foi comprometido em uma das seguintes formas:</p>
+
+<ul>
+  <li>O site recebeu conteúdo com spam que pode reduzir a qualidade e a relevância dos resultados da pesquisa.</li>
+  <li>Para fins de phishing.</li>
+  <li>O site foi alterado com a intenção de distribuir malware.</li>
+</ul>
+
+<p>Para investigar a presença de hackers ou malware usando o Search Console, execute as seguintes etapas:</p>
+
+<ol>
+  <li>Acesse a página inicial do Search Console clicando no logotipo no canto superior.</li>
+  <li>Clique em <strong>Mensagens</strong>.</li>
+  <li>Procure por mensagens importantes do Google afirmando que seu site foi usado para veicular páginas, texto ou links com spam, fazer ataques de phishing ou distribuir malware. Se você receber uma notificação de phishing, não exclua a mensagem até concluir todo o processo de recuperação.</li>
+  <li>Acesse <strong>Problemas de segurança</strong> nas ferramentas para webmasters.
+    <ul>
+      <li>Os sites afetados por malware serão exibidos com um título de "Malware" no nível superior e categorias de tipos de malware, como "Configuração do servidor modificada" ou "Injeção de modelo de erro". Nesses casos, o hacker pode estar usando seu site para infectar os visitantes com softwares que acessam informações confidenciais ou danificam computadores. Para saber como corrigir isso, consulte a seção sobre <a href="hacked_with_malware">avaliar danos de malware</a>.
+      </li>
+      <li>Sites que foram invadidos para veicular spam podem exibir um título de nível superior "Invadido" e os tipos de invasões em categorias, como "Injeção de conteúdo". É provável que o hacker tenha colocado páginas, texto ou links com spam no seu site. Para saber como corrigir isso, consulte a seção sobre <a href="hacked_with_spam">avaliar danos de spam</a>.</li>
+      <li>É possível que sites com notificações de phishing na Central de mensagens do Search Console não apareçam na seção "Problemas de segurança". Com a criação de páginas de phishing, o hacker usa seu site para apropriar-se do login, da senha ou de detalhes financeiros dos usuários, muitas vezes disfarçado como um site confiável. Como a limpeza de phishing é semelhante à de spam, veja a seção <a href="hacked_with_spam">avaliar danos de spam</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Próxima etapa</h2>
+
+<p>A próxima etapa no processo é <a href="hacked_with_spam">avaliar danos de spam (invasão por spam)</a> ou <a href="hacked_with_malware">avaliar danos de malware (invasão por malware)</a>.</p>
+
+</body></html>

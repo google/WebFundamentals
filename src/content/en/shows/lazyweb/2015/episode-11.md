@@ -61,4 +61,4 @@ For more news on the Web, check out these resources:
 - [Open Web Platform Daily](http://webplatformdaily.org/){: .external }
 - [HTML5 Weekly](http://html5weekly.com/){: .external }
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

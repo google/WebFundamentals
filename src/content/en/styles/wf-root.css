@@ -1,5 +1,5 @@
-.devsite-collapsible-section {
-  background:url(/web/scratch/images/background-1x.png) 100%/600px repeat-x;
+.devsite-landing-page .devsite-product-description-row {
+  max-width: 100%;
 }
 
 ul.checkmarks {
@@ -8,36 +8,22 @@ ul.checkmarks {
 }
 
 ul.checkmarks li {
-  background-image:url("/maps/images/lhimages/compare-yes.svg");
+  background-image:url("//developers.google.com/maps/images/lhimages/compare-yes.svg");
   background-repeat:no-repeat;
   background-position:0 1px;
   padding-left:30px;
-}
-
-a.wf-learn-more{
-  margin-left:-8px;
-}
-
-a.wf-small-link {
-  display:block;
-  margin:0 4px;
-  padding:2px 8px;
 }
 
 h2.wf-header-title {
   margin-top:0;
 }
 
-.wf-pwa-in-action img{
-  margin-bottom:0;
+article.hentry:first-of-type {
+  margin-top: 0;
 }
 
-.wf-pwa-in-action .devsite-landing-row-item {
-  text-align:center;
-}
-
-.wf-small-logos img {
-  max-width: 300px;
-  margin-left:auto;
-  margin-right:auto;
+a.wf-small-link {
+ display:block;
+ margin:0 4px;
+ padding:2px 8px;
 }

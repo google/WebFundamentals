@@ -1,0 +1,111 @@
+project_path: /web/feedback/_project.yaml
+book_path: /web/feedback/_book.yaml
+title: Developer Feedback Program
+landing_page:
+
+  header:
+    buttons:
+    - label: Browser Bug Searcher
+      path: /web/feedback/browser-bug-searcher
+
+  rows:
+  - classname: devsite-landing-row-50
+    items:
+    - description: >
+        We want to make it easy to find and report bugs in any browser,
+        as well as help you find resources while you’re building your site.
+        <br><br>
+        Telling browser vendors about issues you find in their browser,
+        on a specific device or platform is an integral part of making
+        the web platform better!
+        <br><br>
+        Adding your support to existing bugs helps developers to
+        prioritize which issues are effecting users.
+      image_path: images/hero-2x.png
+
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Look for existing bugs
+      description: >
+        Here you can search through all major browser bug trackers to find a
+        bug you're looking for.
+      image_path: images/content-search-for-bugs-responsive-2x.png
+      buttons:
+      - label: Browser Bug Searcher
+        path: /web/feedback/browser-bug-searcher
+
+  - classname: devsite-landing-row-67
+    items:
+    - heading: How to file a good bug
+      description: >
+        Does it happen in other browsers? Is it a regression? Do you have
+        a reduced test case? The more information you can provide, the better
+        chance your bug can be fixed!
+      image_path: images/content-file-responsive-2x.png
+      buttons:
+      - label: Learn how to file a good bug
+        path: /web/feedback/file-a-bug
+
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Report a bug
+      description: >
+        To ensure your bug is fixed promptly, it's important to tell the right
+        people about it. All of the major browser vendors provide a way to
+        report bugs.
+      image_path: images/content-node-responsive-2x.png
+      buttons:
+      - label: Chromium
+        path: https://crbug.com
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: cr-bug
+      - label: Edge
+        path: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: edge-bug
+      - label: Mozilla
+        path: https://bugzilla.mozilla.org/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: moz-bug
+      - label: WebKit
+        path: https://bugs.webkit.org/
+        classname: gc-analytics-event button button-white
+        attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: webkit-bug
+
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Discussing solutions
+      description: >
+        <p>
+          Discussing challenges you are facing with other developers is a
+          great way for both learning and share best practices.
+        </p>
+        <ul>
+          <li>
+            <a href="https://stackoverflow.com/questions/tagged/google-chrome" class="gc-analytics-event" data-category="webfundamentals" data-label="so-gchrome">
+              <code>google-chrome</code> tag on Stack Overflow
+            </a>
+          </li>
+          <li>
+            <a href="https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE" class="gc-analytics-event" data-category="webfundamentals" data-label="slack-chromiumdev">
+              ChromiumDev Slack Channel
+            </a>
+          </li>
+        </ul>
+      image_path: images/content-developer-discussions-responsive-2x.png

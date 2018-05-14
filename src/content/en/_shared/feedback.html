@@ -1,0 +1,43 @@
+{# wf_uses_template #}
+{% comment %}
+  See https://web-central.appspot.com/web/resources/widgets#inline-feedback for
+  usage.
+{% endcomment %}
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<style>
+  .wf-feedback--hidden {
+    display: none;
+  }
+</style>
+{% if question %}
+<p>{{ question }}<p>
+{% endif %}
+<button type="button" class="button button-primary gc-analytics-event"
+    data-category="{{ category }}" data-label="{{ label }}" data-value="1">
+  {{ success_button }}
+</button>
+<button type="button" class="button gc-analytics-event"
+    data-category="{{ category }}" data-label="{{ label }}" data-value="0">
+  {{ fail_button }}
+</button>
+<aside class="success wf-feedback--hidden">{{ success_response }}</aside>
+<aside class="caution wf-feedback--hidden">{{ fail_response }}</aside>
+<script>
+  function disableButtons() {
+    successButton.disabled = true;
+    failButton.disabled = true;
+  }
+  var successResponse = document.querySelector('.success'),
+      failResponse = document.querySelector('.caution'),
+      successButton = document.querySelector('.button-primary'),
+      failButton = document.querySelector('.button:not(.button-primary)');
+  successButton.addEventListener('click', function() {
+    successResponse.classList.remove('wf-feedback--hidden');
+    disableButtons();
+  });
+  failButton.addEventListener('click', function() {
+    failResponse.classList.remove('wf-feedback--hidden');
+    disableButtons();
+  });
+</script>
+{% endframebox %}

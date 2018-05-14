@@ -1,0 +1,18 @@
+<div class="feed hfeed rendered">
+<style>article.hentry:first-of-type { margin-top: 0; }</style>
+  {{#each articles}}
+  <article class="hentry">
+    <a href="{{ url }}">
+      <header>{{title}}</header>
+    </a>
+    <article>
+      {{{ description }}}
+    </article>
+    <div>
+      <a href="{{ url }}">
+        <time class="updated published">{{ formatDatePretty datePublishedMoment }}</time>
+      </a>
+    </div>
+  </article>
+  {{/each}}
+</div>

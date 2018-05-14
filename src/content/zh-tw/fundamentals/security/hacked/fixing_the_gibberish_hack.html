@@ -1,0 +1,181 @@
+<html devsite><head>
+  <title>修正胡言亂語內容入侵問題</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>本指南旨在協助您處理所謂的亂字植入問題。顧名思義，遭到入侵的網站會出現充斥無意義關鍵字的網頁。<a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">各大內容管理系統</a> (CMS) 的使用者皆可參考本指南。不過，即使您並未使用 CMS，本指南仍提供了十分實用的資訊。</p>
+
+<p><strong>注意：</strong>不確定您的網站是否遭到入侵嗎？首先請詳閱我們的<a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">如何檢查網站是否遭到入侵</a>指南。</p>
+
+<aside class="note">我們希望確定本指南確實對您有所幫助。歡迎<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">提供意見</a>，協助我們讓指南內容更臻完善！</aside>
+
+<h2>目錄</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">步驟 1：判別這類入侵行為</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">步驟 2：修正入侵問題</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">步驟 3：其他資源</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">網站遭到入侵的常見問題</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>判別這類入侵行為</h2>
+
+<p>亂字植入攻擊會在您的網站上自動產生許多包含無意義字句，且充滿關鍵字的網頁。這些網頁不是由您建立，但有來自您網站的網址，很可能吸引使用者點選。駭客可藉由這種做法讓遭到入侵的網頁出現在 Google 搜尋結果中。當使用者嘗試造訪這類網頁，就會被重新導向至不相關的網頁，例如色情網站。只要使用者造訪了這些不相關的網頁，駭客就能賺取收益。網站遭到亂字植入攻擊時，可能會出現以下這些類型的檔案：</p>
+
+  <ul>
+    <li>www.example.com/cheap-hair-styles-cool.html</li>
+    <li>www.example.com/free-pictures-fun.html</li>
+    <li>www.example.com/nice-song-download-file.php</li>
+   </ul>
+
+<p>有時這些檔案會藏在資料夾中，資料夾名稱則是由其他語言的字元隨機組成：</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/cheap-hair-styles-cool.html</li>
+   <li>www.example.com/jfwoea/free-pictures-fun.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>首先請在 Search Console 中查看<a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">安全性問題工具</a>，看看 Google 是否在您的網站上找到任何這類遭到入侵的網頁。開啟 Google 搜尋視窗並輸入 <code class="notranslate l10n-notranslate">site:<i>your site url</i></code>  以及您網站的根層級網址，有時也能找出這類網頁。您網站上已經由 Google 建立索引的網頁都會顯示，包括遭到入侵的網頁。請瀏覽搜尋結果中的一些網頁，看看有無任何不尋常的網址。如果 Google 搜尋未顯示任何遭到入侵的內容，請使用其他搜尋引擎搜尋相同的字詞。這類搜尋結果看起來通常是下面這樣子的：</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">請注意，這裡的搜尋結果包含許多不是由網站擁有者建立的網頁。如果您仔細觀察說明，就會看到這類入侵行為所建立的無意義文字。</div>
+
+<p>一般來說，當您點選遭入侵網頁的連結時，會被重新導向至其他網站，或是看到充斥胡言亂語內容的網頁。不過，您也可能會看到表示網頁不存在的訊息 (例如 404 錯誤訊息)。請別上當！駭客會讓您以為遭到入侵的網頁已移除或已修正，但實際上網站仍被入侵。這種做法稱為<a href="https://support.google.com/webmasters/answer/66355">偽裝</a>內容。請在 <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Google 模擬器</a>工具中輸入您網站的網址，查看有無偽裝內容。Google 模擬器工具可讓您查看基本的隱藏內容。</p>
+
+<p>如果發現這類問題，表示您的網站很可能受到這類攻擊所影響。</p>
+
+<a name="fixing"></a>
+<h2>修正入侵問題</h2>
+
+<p>首先，請為所有要移除的檔案建立離線複本，再移除檔案，以免日後需要還原檔案。您甚至可以先備份整個網站，再開始執行清理程序。如要這麼做，請離線儲存位於您伺服器上的所有檔案，或是搜尋您的內容管理系統 (CMS) 專用的最佳備份做法。</p>
+
+<h3>檢查 .htaccess 檔案 (2 個步驟)</h3>
+
+<p>亂字植入攻擊會使用 .htaccess 檔案將您網站的訪客重新導向。</p>
+
+<p><b>步驟 1</b></p>
+<p>在您的網站上找出 .htaccess 檔案。如果您不確定所在位置，且您使用的是 WordPress、Joomla 或 Drupal 這類 CMS，請在搜尋引擎中使用「.htaccess 檔案位置」搭配您的 CMS 名稱進行搜尋。.htaccess 檔案數量可能不只一個 (因網站而異)。請以清單記錄所有 .htaccess 檔案位置。</p>
+
+<p><strong>注意：</strong>.htaccess 經常是「隱藏的檔案」。搜尋時請務必讓系統顯示所有隱藏的檔案。</p>
+
+<p><b>步驟 2</b></p>
+<p>使用沒有惡意內容或預設版本的 .htaccess 檔案取代所有 .htaccess 檔案。一般來說，如要尋找預設版本的 .htaccess 檔案，您可以使用「預設 .htaccess 檔案」搭配您的 CMS 名稱進行搜尋。如果您的網站有多個 .htaccess 檔案，請針對各個檔案 找出沒有惡意內容的版本，再執行取代作業。</p>
+
+<p>如果沒有預設的 .htaccess，且您未曾在網站上設定過 .htaccess 檔案，那麼您在網站上找到的 .htaccess 可能是惡意檔案。保險起見，請離線儲存 .htaccess 檔案複本，然後將 .htaccess 檔案從您的網站上刪除。</p>
+
+<h3>找出其他惡意檔案並予以移除 (5 個步驟)</h3>
+
+<p>判別惡意檔案不太容易，可能需要數小時。請耐心檢查檔案。如果您尚未備份網站上的檔案，這時可以順便進行備份。請透過 Google 搜尋「備份網站」和您的 CMS 名稱，尋找相關的操作說明。</p>
+
+<p><b>步驟 1</b></p>
+<p>如果您使用 CMS，請重新安裝預設 CMS 版本內含的所有核心 (預設) 檔案，以及您可新增過的任何項目 (例如主題、模組、外掛程式)，以確保這些檔案完全沒有遭到入侵的內容。您可以透過 Google 搜尋「重新安裝」和您的 CMS 名稱，尋找重新安裝程序的相關操作說明。如果您有任何外掛程式、模組、擴充功能或主題，別忘了一併重新安裝這些項目。</p>
+
+<p>重新安裝核心檔案會使您失去所有調整過的自訂設定。請務必先為資料庫和所有檔案建立備份，再重新安裝。</p>
+
+<p><b>步驟 2</b></p>
+<p>現在您必須尋找有無遺留任何其他惡意檔案或遭到入侵的檔案。這是最困難也最耗時的部分，不過完成後就接近大功告成了！</p>
+
+<p>這類入侵通常會留下兩種類型的檔案：.txt 檔案和 .php 檔案。.txt 檔案會提供範本檔案，.php 檔案則決定在您網站上載入的無意義內容類型。請先尋找 .txt 檔案。建議您根據您網站的連線方式查看一些檔案的搜尋功能類型。搜尋「.txt」可找出所有副檔名為 .txt 的檔案。其中大多數是合法的文字檔，例如授權協議、讀我檔案等等。您要尋找的是特定的一系列 .txt 檔案，內含用於建立垃圾內容範本的 HTML 程式碼。以下是您可能在這些惡意 .txt 檔案中找到的不同程式碼片段。</p><p>
+
+</p><p>駭客會使用取代關鍵字的方式建立垃圾內容網頁。您很可能會看到某些類型的一般字詞常在遭入侵的檔案中被取代。</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>此外，大多數這類檔案都含有某些特定類型的程式碼，會將垃圾內容連結和文字放在您看不到的網頁。</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>請移除這些 .txt 檔案。如果這些檔案全部位於同一個資料夾，您可以移除整個資料夾。</p>
+
+<p><b>步驟 3</b></p>
+<p>惡意 PHP 檔案比較難以追蹤。您的網站上可能存在惡意的 PHP 檔案。這些檔案可能全部位於同一個子目錄，也可能散佈在網站各處。</p>
+
+<p>請別誤以為您必須開啟每個 PHP 檔案並詳加檢視。首先請建立可疑的 PHP 檔案清單，列出您要調查的檔案。判別可疑的 PHP 檔案時，可以採用以下這些方法：</p>
+
+<ul>
+<li>由於您已重新載入 CMS 檔案，因此只需檢視不屬於預設 CMS 檔案或資料夾的檔案。這樣可以排除大多數的 PHP 檔案，只剩一些檔案需要檢視。</li>
+<li>依上次修改日期排序您網站上的檔案，找出修改時間與您首次發現網站遭到入侵的時間相差不到幾個月的檔案。</li>
+<li>依大小排序您網站上的檔案，找出所有特別大的檔案。</li>
+</ul>
+
+<p><b>步驟 4</b></p>
+<p>建立可疑的 PHP 檔案清單後，即可檢查是正常檔案或惡意檔案。如果您對 PHP 不熟悉，可能需要花費更多時間，不妨先溫習一些 <a href="https://php.net/docs.php"></a>PHP 說明文件/0}。不過，即使您是編寫程式碼的新手，仍可尋找一些有助於判別
+惡意檔案的基本模式。</p>
+
+<p>首先，請掃描您已找出的惡意檔案，找出像是雜亂的字母和數字組合的大段文字。這類大段文字前面通常有 PHP 函式組合，例如 base64_decode、 rot13、eval、strrev、gzinflate。這類程式碼區塊可能的外觀如下。有時這類程式碼會全部包進一長串文字，看起來比實際上更小。</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks
+of texts. Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>有時這類程式碼並不雜亂，看起來就像普通程式碼。如果您不確定是否屬於惡意程式碼，請前往<a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">網站管理員說明論壇</a>求助，請經驗豐富的網站管理員們協助您檢查檔案。</p>
+
+<p><b>步驟 5</b></p>
+<p>您現已瞭解哪些檔案屬於惡意檔案，請先建立備份或本機複本，將這些檔案儲存在電腦上 (以免後續發現並非惡意檔案)，再刪除所有惡意檔案。</p>
+
+<h3>檢查網站是否沒有惡意內容</h3>
+
+<p>清理完遭到入侵的檔案後，請檢查您的一番苦心是否奏效。還記得您稍早找到了一些充斥胡言亂語的網頁嗎？請再次使用 Google 模擬器檢查這些網頁，看看是否仍然存在。如果 Google 模擬器傳回「找不到」回應，表示您的網站應該沒問題了！</p>
+
+<p>您也可以按照<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">網站遭入侵疑難排解工具</a>中的步驟檢查您的網站上是否仍有遭到入侵的內容。</p>
+
+<h3>如何避免再次遭到入侵？</h3>
+
+<p>修正網站的安全性漏洞是修正網站問題的最後一步，也是重要的一步。最近的研究發現曾遭入侵的網站中有 20% 會在 1 天內再次遭到入侵。因此，確切瞭解網站遭到入侵的方式實在很有幫助。請詳閱<a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">垃圾內容發佈者入侵網站的常見方式</a>指南，針對安全性漏洞展開調查。不過，如果您無法找出網站遭到入侵的方式，請參考以下檢查清單，瞭解可有效減少網站安全性漏洞的一些做法：</p>
+
+<ul>
+  <li><strong>定期掃描電腦：</strong>任選各大病毒掃描工具，檢查有無病毒或安全性漏洞。</li>
+<li><strong>定期變更關鍵字：</strong>定期變更您所有網站帳戶 (例如代管服務供應商、FTP 和 CMS) 的密碼可防止他人在未經授權的情況下存取您的網站。請務必為每個帳戶建立非重複的高強度密碼。</li>
+<li><strong>使用<a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">雙重驗證 (2FA)</a>：</strong>建議您為所有要求您登入的服務啟用 2FA。這樣一來，即使駭客成功竊取您的密碼，仍然不易冒用您的身分登入。</li>
+<li><strong>定期更新 CMS、外掛程式、擴充功能和模組：</strong>希望您已經完成這個步驟。許多網站正是因為執行的軟體版本過舊而遭到入侵。部分 CMS 支援自動更新功能。</li>
+<li><strong>考慮訂閱安全性服務，協助您監控網站：</strong>有許多優質服務可協助您監控網站，且費用不高。建議您註冊這類服務，確保您的網站安全無虞。</li>
+</ul>
+
+<a name="resources"></a>
+<h2>其他資源</h2>
+<p>如果您仍然無法順利修正網站問題，還有另一些資源可能對您有所幫助。</p>
+
+<p>這些工具會掃描您的網站，並可能發現有問題的內容。除了 VirusTotal 以外，Google 並未針對這些工具提供支援。</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>、<a href="https://aw-snap.info/">Aw-snap.info</a>、<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>、<a href="https://www.quttera.com/">Quttera</a>：這些工具都能為您掃描網站，協助找出問題內容。提醒您，這些掃描工具不一定能判別所有類型的問題內容。</p>
+
+<p>Google 另外提供了以下資源，可能對您有所幫助：</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google 網站管理員說明論壇</a></li>
+<li><a href="/web/fundamentals/security/hacked/">網站遭到入侵時適用的 Google 網站管理員說明</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google 安全瀏覽</a></li>
+</ul>
+
+<div class="alert">還有其他您認為可能實用的工具嗎？請<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">提供意見</a>，讓我們瞭解您的想法。</div>
+
+
+
+</body></html>

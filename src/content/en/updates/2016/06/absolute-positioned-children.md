@@ -4,7 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2016-06-16 #}
 {# wf_published_on: 2016-06-16 #}
 {# wf_tags: css,flexbox,chrome52,absolute-positioned #}
-{# wf_featured_snippet: A previous version of the CSS Flexible Box Layout specification set the static position of absolute-positioned children as though they were a 0x0 flex item. The latest version of the spec takes them fully out of flow and sets the static position based on align and justify properties. #}
+{# wf_featured_snippet: A previous version of the CSS Flexible Box Layout specification set the static position of absolute-positioned children as though they were a flex item whose size is 0px by 0px. The latest version of the spec takes them fully out of flow and sets the static position based on align and justify properties. #}
 {# wf_featured_image: /web/updates/images/generic/quilt.png #}
 
 # Flexbox Gets New Behavior for absolute-positioned Children {: .page-title }
@@ -16,7 +16,8 @@ book_path: /web/updates/_book.yaml
 A previous version of the 
 [CSS Flexible Box](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications) 
 Layout specification set the static position of absolute-positioned children as 
-though they were a 0x0 flex item. The [latest version of the spec](https://drafts.csswg.org/css-flexbox/#abspos-items)
+though they were a flex item whose size is 0px by 0px. The
+[latest version of the spec](https://drafts.csswg.org/css-flexbox/#abspos-items)
 takes them fully out  of flow and sets the static position based on align and
 justify properties. At  the time of this writing, Edge and Opera 39 for desktop
 and Android already  support this.
@@ -54,5 +55,8 @@ top center of the red box.
 
 <img src="/web/updates/images/2016/06/absolute-positioned-children/legacy-behavior.png"/>
 
+If you want to try this for yourself in Chrome or any other browser,
+[download our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/css-flexbox-abspos)
+or visit the [live demo](https://googlechrome.github.io/samples/css-flexbox-abspos/index.html).
 
 {% include "comment-widget.html" %}

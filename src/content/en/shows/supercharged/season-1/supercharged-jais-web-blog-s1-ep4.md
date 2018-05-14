@@ -19,4 +19,4 @@ Supercharged: Jai is a UI engineer at FlipKart, and his site has a neat sidenav,
 
 Don't forget you can submit your own site here: https://services.google.com/fb/forms/web
 
-Subscribe to the Google Chrome Developers Channel! http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

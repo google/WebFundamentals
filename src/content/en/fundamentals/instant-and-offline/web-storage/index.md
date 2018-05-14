@@ -1,18 +1,19 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-28 #}
+{# wf_updated_on: 2017-10-04 #}
 {# wf_published_on: 2016-09-28 #}
+{# wf_blink_components: Blink>Storage #}
 
 # Web Storage Overview {: .page-title }
 
 {% include "web/_shared/contributors/mco.html" %}
 
 It’s important to choose the right storage mechanisms, both for local device
-storage and for cloud based server storage.  A good storage engine makes sure
+storage and for cloud based server storage. A good storage engine makes sure
 your information is saved reliably, reduces bandwidth, and improves
 responsiveness. The right storage caching strategy is a core building block for
-enabling offline mobile web experiences. 
+enabling offline mobile web experiences.
 
 This article provides a brief foundation for evaluating storage APIs and
 services, after which we’ll provide a comparison table and some general
@@ -29,13 +30,13 @@ the many storage options available to web developers.
 
 The model for storing units of data determines how data is organized internally,
 which impacts ease of use, cost and performance of storage and retrieval
-requests. 
+requests.
 
-* **Structured: **Data stored in tables with predefined fields, as is typical
+* **Structured:** Data stored in tables with predefined fields, as is typical
 of SQL based database management systems, lends itself well to flexible and
 dynamic queries, where the full range of query types may not be be known a
-priori. A prominent example of a structured datastore is IndexedDB in the
-browser.
+priori. A prominent example of a structured datastore in the
+browser is IndexedDB.
 
 * **Key/Value:** Key/Value datastores, and related NoSQL databases, offer the
 ability to store and retrieve unstructured data indexed by a unique key.
@@ -54,7 +55,7 @@ file systems and cloud storage services.
 Storage methods for web apps can be analyzed according to the scope over which
 data is made persistent.
 
-* **Session Persistence: **Data in this category is retained only as long as a
+* **Session Persistence:** Data in this category is retained only as long as a
 single web session or browser tab remains active. An example of a storage
 mechanism with session persistence is the Session Storage API.
 
@@ -68,9 +69,9 @@ a storage mechanism with global persistence is Google Cloud Storage.
 
 ### Browser Support
 
-Developers should choose an API best suited to their problem domain, however,
+Developers should choose an API best suited to their problem domain; however,
 they should also take into account the fact that standardized and well
-established APIs are preferable over custom or proprietary interfaces, because
+established APIs are preferable to custom or proprietary interfaces, because
 they tend to be longer lived and more widely supported. They may also enjoy a
 broader knowledge base and a richer developer ecosystem.
 
@@ -98,7 +99,7 @@ and compare them across the dimensions described above.
 <table>
   <thead>
     <th>API</th>
-    <th>Data 
+    <th>Data
 Model</th>
     <th>Persistence</th>
     <th>Browser
@@ -116,7 +117,11 @@ Support</th>
       <td>Async</td>
     </tr>
     <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a></td>
+      <td>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">
+          Local Storage
+        </a>
+      </td>
       <td>key/value</td>
       <td>device</td>
       <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
@@ -124,7 +129,11 @@ Support</th>
       <td>Sync</td>
     </tr>
     <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Session Storage</a></td>
+      <td>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">
+          Session Storage
+        </a>
+      </td>
       <td>key/value</td>
       <td>session</td>
       <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
@@ -148,7 +157,9 @@ Support</th>
       <td>Async</td>
     </tr>
     <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">Cache</a></td>
+      <td>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">Cache</a>
+      </td>
       <td>key/value</td>
       <td>device</td>
       <td><a href="http://caniuse.com/#feat=serviceworkers">60%</a></td>
@@ -156,7 +167,9 @@ Support</th>
       <td>Async</td>
     </tr>
     <tr>
-      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></td>
+      <td>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>
+      </td>
       <td>hybrid</td>
       <td>device</td>
       <td><a href="http://caniuse.com/#feat=indexeddb">83%</a></td>
@@ -179,15 +192,17 @@ many browsers as possible and which offer asynchronous call models, to maximize
 interoperability with the UI. These criteria lead naturally to the following
 technology choices:
 
-* For device local key/value storage use the Cache API.
+* For offline storage, use the [Cache API](cache-api). This API is available in any browser that
+supports [Service Worker technology](https://jakearchibald.github.io/isserviceworkerready/)
+necessary for creating offline apps. The Cache API is ideal for storing resources associated with a
+known URL.
 
-* For device local structured storage: use IndexedDB.
+* For storing application state and user-generated content, use IndexedDB. This enables users to
+  work offline in more browsers than just those that support the Cache API.
 
 * For global byte stream storage: use a Cloud Storage service.
 
 This combination satisfies the basic storage needs for many mobile web apps.
-Look for a coming article in which we’ll cover how to address common storage
-patterns in detail, with accompanying code examples.
 
 ## Debugging storage in Chrome DevTools {: #devtools }
 
@@ -203,7 +218,7 @@ here are either not supported in DevTools or are not applicable.
 * [IndexedDB](/web/tools/chrome-devtools/manage-data/local-storage#indexeddb)
 
 If you're using multiple storage APIs, check out the Clear Storage feature of
-DevTools. This feature lets you clear multiple storages with a single button
+DevTools. This feature lets you clear multiple stores with a single button
 click. See [Clear service workers, storage, databases, and
 caches](/web/tools/chrome-devtools/manage-data/local-storage#clear-storage) for
 more information.
@@ -216,13 +231,4 @@ we'll be adding more content soon to dive more deeply into one or more topics
 of interest:
 
 * [Offline Storage Recommendations for Progressive Web Apps](offline-for-pwa)
-
-* Common Storage Patterns (coming soon)
-
-* Recommended Back End Storage Methods (coming soon)
-
-* Deep Dive: IndexedDB (coming soon)
-
-* Deep Dive: Cache API (coming soon)
-
-* Analysis of Popular Storage Frameworks (coming soon)
+* [Deep Dive: Cache API](cache-api)

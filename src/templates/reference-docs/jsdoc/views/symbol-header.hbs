@@ -1,0 +1,48 @@
+<header {{~cssClass '!page-header'}}>
+  {{#block 'symbol-header-heading'}}
+      <h>
+        {{~#isnt longname memberof}}<small>{{ancestors longname}}</small>{{/isnt~}}
+        <span {{~cssClass '!symbol-name'}}>{{name}}</span></h>
+  {{~/block}}
+  {{~#withOnly symbol=this~}}
+    {{~#embed 'symbol-labels'}}{{/embed~}}
+  {{/withOnly~}}
+
+  {{!--
+    This is a custom handlebars template to add version information to the
+    output.
+  --}}
+  {{~#embed 'symbol-version'}}{{/embed~}}
+
+  {{#block 'symbol-header-classdesc'}}
+    {{#if classdesc}}
+      {{#markdown}}{{resolveLinks classdesc}}{{/markdown}}
+    {{/if}}
+  {{/block}}
+  {{#block 'symbol-header-description'}}
+    {{!--
+      We don't put a description here for classes, or for namespaces that are
+      also functions.
+    --}}
+    {{#isnt kind 'class'}}
+      {{#is kind 'namespace'}}
+        {{#unless (needsSignature this)}}
+          {{#embed 'description'}}{{/embed}}
+        {{/unless}}
+      {{else}}
+        {{#embed 'description'}}{{/embed}}
+      {{/is}}
+    {{/isnt}}
+  {{/block}}
+  {{#block 'symbol-header-class-details'}}
+    {{!--
+      For classes where we're not displaying the constructor, we show the
+      details here.
+    --}}
+    {{#if hideconstructor}}
+      <dl {{~cssClass '!dl-compact'}}>
+        {{#embed 'details'}}{{/embed}}
+      </dl>
+    {{/if}}
+  {{/block}}
+</header>

@@ -47,7 +47,7 @@ Only specify a `READ_WRITE` transaction mode when necessary. You can concurrentl
 
 Other sources:
 
-* The update on <a href="http://goo.gl/LSuLF">chromium.org<a/>
+* The update on <a href="//goo.gl/LSuLF">chromium.org<a/>
 * More details on <a href="https://developer.mozilla.org/en/IndexedDB">IndexedDB at MDN</a>
 * A full example on <a href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/">how to use indexedDB in a simple ToDo list web app</a>
 

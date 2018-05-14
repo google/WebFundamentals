@@ -1,21 +1,26 @@
 <style>
 .wf-byline {display: inline-flex; margin: 16px 32px 16px 0;}
 .wf-byline .attempt-left {margin: 0 16px 0 0;}
-.wf-byline img {border-radius: 100%; width: 64px; height: 64px;}
-.wf-byline .wf-byline-desc {font-size: smaller;}
+.wf-byline img {border-radius: 100%; min-width: 64px; height: 64px;}
+.wf-byline .wf-byline-desc {font-size: smaller; word-break: break-word;}
 .wf-byline .wf-byline-social {font-size: smaller;}
 </style>
 
-<section class="wf-byline" itemscope itemtype="http://schema.org/Person">
+<section class="wf-byline" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <div class="attempt-left">
     <figure>
       <img itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
     </figure>
   </div>
   <section class="wf-byline-meta">
-    <div class="wf-byline-name" itemprop="name">
+    <div class="wf-byline-name">
       <strong>By</strong>
-      <a href="/web/resources/contributors#{{id}}"><span itemprop="givenName">{{name.given}}</span> <span itemprop="familyName">{{name.family}}</span></a>
+      <span itemprop="name">
+        <a href="/web/resources/contributors/{{id}}">
+          <span itemprop="givenName">{{name.given}}</span>
+          <span itemprop="familyName">{{name.family}}</span>
+        </a>
+      </span>
     </div>
     <div class="wf-byline-desc">
       {{#if description.en}}

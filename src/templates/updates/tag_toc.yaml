@@ -1,9 +1,0 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
-
-toc:
-- title: Tags
-  path: /web/updates/tags/
-  alternate_paths:
-{{#each tags}}
-  - /web/updates/tags/{{this}}
-{{/each}}

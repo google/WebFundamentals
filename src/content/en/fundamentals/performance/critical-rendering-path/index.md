@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action.
 
@@ -29,6 +29,5 @@ By optimizing the critical rendering path we can significantly improve the
 time to first render of our pages. Further, understanding the critical
 rendering path also serves as a foundation for building well-performing
 interactive applications. The interactive updates process is the same, just done in a continuous loop and ideally at 60 frames per second! But first, an overview of how the browser displays a simple page.
-
 
 {% include "web/_shared/udacity/ud884.html" %}

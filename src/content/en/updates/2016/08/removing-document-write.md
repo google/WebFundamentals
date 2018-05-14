@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is blocking some scripts that are added using document.write()
 
-{# wf_updated_on: 2016-09-05 #}
+{# wf_updated_on: 2016-12-02 #}
 {# wf_published_on: 2016-08-29 #}
-{# wf_tags: interventions,chrome53 #}
+{# wf_tags: interventions,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Chrome is blocking some scripts that are added using <code>document.write()</code>. #}
 
@@ -46,23 +46,27 @@ load than other pages on 2G.
 
 We collected data from a 28 day field trial on 1% of Chrome 
 stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads 
-on 2G included at least one cross-origin, parser-blocking script that was 
+on 2G included at least one cross-site, parser-blocking script that was 
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
 
-* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231)(a visual confirmation for the user that the page is effectively loading), **25%** more page 
-  loads reaching the fully parsed state, and **10%** fewer reloads 
+* **10%** more page loads reaching
+  [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231)
+  (a visual confirmation for the user that the page is effectively loading),
+  **25%** more page loads reaching the fully parsed state, and **10%** fewer reloads 
   suggesting a decrease in user frustration.
-* **21%** decrease of the mean time (over one second faster) until the [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
+* **21%** decrease of the mean time (over one second faster) until the
+  [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
 * **38%** reduction to the mean time it takes to parse a page, representing an 
   improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
 
-With this data in mind, the Chrome team have recently announced an intention to 
-[intervene](https://github.com/WICG/interventions/issues/17) on behalf of all 
+With this data in mind, Chrome, starting with version 55, 
+[intervenes](https://github.com/WICG/interventions/issues/17) on behalf of all 
 users when we detect this known-bad pattern by changing how `document.write()` is 
-handled in Chrome (See [Chrome Status](https://www.chromestatus.com/feature/5718547946799104)). Specifically 
-Chrome will not execute the `<script>` elements injected via `document.write()` when **all** of the following conditions are met:
+handled in Chrome (See [Chrome Status](https://www.chromestatus.com/feature/5718547946799104)).
+Specifically Chrome will not execute the `<script>` elements injected via 
+`document.write()` when **all** of the following conditions are met:
 
 1. The user is on a slow connection, specifically when the user is on 2G. (In 
    the future, the change might be extended to other users on slow connections, 
@@ -70,35 +74,43 @@ Chrome will not execute the `<script>` elements injected via `document.write()` 
 2. The `document.write()` is in a top level document. The intervention does not 
    apply to document.written scripts within iframes as they don't block the 
    rendering of the main page.
-3. The script in the `document.write()` is parser-blocking. Scripts with the '[`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
-   or '[`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)' attributes will still execute.
-4. The script is not already in the browser HTTP cache. Scripts in the cache 
+3. The script in the `document.write()` is parser-blocking. Scripts with 
+   the '[`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
+   or '[`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)'
+   attributes will still execute.
+4. The script is not hosted on the same site. In other words, Chrome will
+   not intervene for scripts with a matching eTLD+1 (e.g. a script hosted on
+   js.example.org inserted on www.example.org).
+5. The script is not already in the browser HTTP cache. Scripts in the cache 
    will not incur a network delay and will still execute. 
-5. The request for the page is not a reload. Chrome will not intervene if the user triggered 
-   a reload and will execute the page as normal.
+6. The request for the page is not a reload. Chrome will not intervene if the 
+   user triggered a reload and will execute the page as normal.
 
 Third party snippets sometimes use `document.write()` to load scripts. 
-Fortunately, most third parties provide [asynchronous loading 
-alternatives](/speed/docs/insights/UseAsync), which 
+Fortunately, most third parties provide
+[asynchronous loading alternatives](/speed/docs/insights/UseAsync), which 
 allow third party scripts to load without blocking the display of the rest of 
 the content on the page.
 
 ## How do I fix this?
 
 This simple answer is don't inject scripts using `document.write()`. We are 
-[maintaining a set of known services that provide asynchronous loader support](/speed/docs/insights/UseAsync) that we 
-encourage you to keep checking.
+[maintaining a set of known services that provide asynchronous loader support](/speed/docs/insights/UseAsync)
+that we encourage you to keep checking.
 
 If your provider is not on the list and does support asynchronous script loading 
 then please [let us know and we can update the page to help all users](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform).
 
 If your provider does not support the ability to asynchronously load scripts 
-into your page then we encourage you to contact them and [let us](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform) and them know how they 
-will be affected.
+into your page then we encourage you to contact them and
+[let us](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform)
+and them know how they will be affected.
 
 If your provider gives you a snippet that includes the `document.write()`, it 
 might be possible for you to add an `async` attribute to the script element, or 
-for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics does](/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
+for you to add the script elements with DOM API's like `document.appendChild()`
+or `parentNode.insertBefore()` much like
+[Google Analytics does](/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
 ## How to detect when your site is affected
 
@@ -109,8 +121,9 @@ so how do you know if you are affected?
 
 To understand the potential impact of this change you first need to understand 
 how many of your users will be on 2G. You can detect the user's current network type
-and speed by using the [Network Information API](https://wicg.github.io/netinfo/){: .external } that is available in Chrome and then
-send a heads-up to your analytic or Real User Metrics (RUM) systems.
+and speed by using the[Network Information API](https://wicg.github.io/netinfo/) that
+is available in Chrome and then send a heads-up to your analytic or Real User Metrics
+(RUM) systems.
 
     if(navigator.connection &&
        navigator.connection.type === 'cellular' &&
@@ -164,8 +177,9 @@ September 2016.)
 
 We will intervene to block injected scripts for 2G users tentatively starting in 
 Chrome 54, which is estimated to be in a stable release for all users in 
-mid-October 2016. Check out the [Chrome Status entry for more 
-updates](https://www.chromestatus.com/features/5718547946799104).
+mid-October 2016. Check out the
+[Chrome Status entry](https://www.chromestatus.com/features/5718547946799104)
+for more updates.
 
 Over time, we're looking to intervene when any user has a slow connection (i.e, 
 slow 3G or WiFi). Follow this [Chrome Status entry](https://www.chromestatus.com/feature/5652436521844736).

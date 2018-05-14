@@ -6,6 +6,7 @@ description: The Google I/O 2015 Web App
 {# wf_updated_on: 2015-10-01 #}
 {# wf_author: jeffreyposnick #}
 {# wf_featured_image: /web/showcase/2015/images/service-workers-iowa/card.jpg #}
+{# wf_tags: casestudy,serviceworker,offline #}
 
 # Service Workers in Production {: .page-title }
 

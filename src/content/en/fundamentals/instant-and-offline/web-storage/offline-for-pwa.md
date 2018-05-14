@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to store data locally for improved response time and offline support.
 
-{# wf_updated_on: 2016-09-29 #}
+{# wf_updated_on: 2017-10-03 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>Storage #}
 
 # Offline Storage for Progressive Web Apps {: .page-title }
 
@@ -35,10 +36,10 @@ experience offline.
 Let’s get right to the point with a general recommendation for storing data
 offline:
 
-* For URL addressable resources, use the [**Cache API**](https://davidwalsh.name/cache)
+* For the network resources necessary to load your app while offline, use the [**Cache API**](cache-api)
   (part of [service workers](/web/fundamentals/primers/service-worker/)).
 * For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-  (with a [Promises](/web/fundamentals/getting-started/primers/promises) wrapper).
+  (with a [promises wrapper](https://www.npmjs.com/package/idb)).
 
 Here’s the rationale:
 
@@ -90,11 +91,45 @@ sufficiently mature or standardized to encourage widespread adoption yet.
 
 ## How much can I store?
 
+<table>
+  <thead>
+    <th>Browser</th>
+    <th>Limit</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>&lt;6% of free space</td>
+    </tr>
+    <tr>
+      <td>Firefox</td>
+      <td>&lt;10% of free space</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td>&lt;50MB</td>
+    </tr>
+    <tr>
+      <td>IE10</td>
+      <td>&lt;250MB</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>
+        <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/dev-guide/storage/IndexedDB/">
+          Dependent on volume size
+        </a>
+      </td>
+    </tr>
+  <tbody>
+</table>
+
 In Chrome and Opera, your storage is per origin (rather than per API). Both
 storage mechanisms will store data until the browser
 [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is
 reached. Apps can check how much quota they’re using with the [Quota Management
-API](https://www.w3.org/TR/quota-api/). In Chrome, apps can use up to 6% of free
+API](https://developer.mozilla.org/en-US/docs/Web/API/StorageQuota). In Chrome,
+apps can use up to 6% of free
 disk space. In Firefox, apps can use up to 10% of free disk space, but will
 prompt the user for further storage requests after 50MB data stored. In mobile
 Safari, apps can use up to 50MB max, whereas desktop Safari allows unlimited
@@ -112,6 +147,31 @@ even easier to discover how much quota an origin is using with support for
 Promises.
 
 ## How does cache eviction work?
+
+<table>
+  <thead>
+    <th>Browser</th>
+    <th>Eviction Policy</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>LRU once Chrome runs out of space</td>
+    </tr>
+    <tr>
+      <td>Firefox</td>
+      <td>LRU if the whole disk gets full</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td>No eviction</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>No eviction</td>
+    </tr>
+  <tbody>
+</table>
 
 An origin is given an amount of space to do with as it pleases. This free space
 is shared across all forms of origin storage (IndexedDB, Cache API,
@@ -226,10 +286,16 @@ precaching for static assets/application shells)
 
 ### IndexedDB libraries worth checking out
 
-* [localForage](https://mozilla.github.io/localForage/)(~8KB, Promises, good
-legacy browser support)
+* [localForage](https://github.com/localForage/localForage) (~8KB, promises,
+good legacy browser support)
 
-* [Dexie](http://dexie.org/) (~16KB, Promises, complex queries, secondary
+* [IDB-keyval](https://www.npmjs.com/package/idb-keyval) (500 byte alternative
+to localForage, for modern browsers)
+
+* [IDB-promised](https://www.npmjs.com/package/idb) (~2k, same IndexedDB API,
+but with promises)
+
+* [Dexie](http://dexie.org/) (~16KB, promises, complex queries, secondary
 indices)
 
 * [PouchDB](https://pouchdb.com/) (~45KB (supports [custom

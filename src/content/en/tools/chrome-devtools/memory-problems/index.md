@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome and DevTools to find memory issues that affect page performance, including memory leaks, memory bloat, and frequent garbage collections.
 
 {# wf_updated_on: 2015-08-03 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Blink>MemoryAllocator #}
 
 # Fix Memory Problems {: .page-title }
 
@@ -150,7 +151,7 @@ than it began (the "beginning" here being the point after the forced
 garbage collection). In the real world, if you saw this pattern of increasing
 JS heap size or node size, it would potentially mean a memory leak.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 
@@ -177,7 +178,7 @@ Here's a simple example of detached DOM nodes.
         var li = document.createElement('li');
         ul.appendChild(li);
       }
-      detachedTree = ul;
+      detachedNodes = ul;
     }
     
     document.getElementById('create').addEventListener('click', create);
@@ -219,7 +220,7 @@ Click on a yellow node to investigate it further. In the **Objects** pane
 you can see more information about the code that's referencing it. For example,
 in the screenshot below you can see that the `detachedTree` variable is
 referencing the node. To fix this particular memory leak, you would study 
-the code that uses `detachedTree` and ensure that it removes it's reference to
+the code that uses `detachedTree` and ensure that it removes its reference to
 the node when it's no longer needed.
 
 ![investigating a yellow node][yn]

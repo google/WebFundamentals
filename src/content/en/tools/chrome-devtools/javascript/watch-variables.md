@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools allows you to easily see multiple variables throughout your application.
 
@@ -8,6 +8,12 @@ description: Chrome DevTools allows you to easily see multiple variables through
 # Watch variables in Sources {: .page-title }
 
 {% include "web/_shared/contributors/jonathangarbee.html" %}
+
+<aside class="warning">
+  <b>Warning:</b> This page is deprecated. See following section for up-to-date
+  information: <a href="reference#watch">Watch the values of custom JavaScript
+  expressions</a>
+</aside>
 
 Chrome DevTools allows you to easily see multiple variables throughout your application.
 Watching variables within Sources keeps you out of the console and focused on improving your code.
@@ -35,7 +41,7 @@ If the variable is not set or can't be found it will show <samp>&lt;Not Availabl
 
 Variable values may change as an application continues to operate.
 The watch list is not a live view of the variables unless you are stepping through execution.
-When you are stepping through execution using [breakpoints](add-breakpoints), the watched values will update automatically.
+When you are stepping through execution using [breakpoints](breakpoints), the watched values will update automatically.
 To manually recheck the variables in the list press the refresh button to the right of the section heading.
 
 ![Refresh watch variables button](imgs/refresh-variables-being-watched.png)
@@ -47,7 +53,7 @@ Every watched item will be updated with the current values.
 
 ## Removing variables
 
-To keep what your are looking at minimal for faster work you may need to remove variables from the watch list.
+To keep what you are looking at minimal for faster work you may need to remove variables from the watch list.
 This can be done by hovering the variable and then clicking the removal icon that appears to the right.
 
 ![Hover variable to remove from watch list](imgs/hover-to-delete-watched-variable.png)

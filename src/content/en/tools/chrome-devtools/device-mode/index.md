@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use virtual devices in Chrome's Device Mode to build mobile-first websites.
 
@@ -21,7 +21,7 @@ characteristics of mobile devices, for example.
 
 * Emulate your site across [different screen sizes and resolutions](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports), including Retina displays.
 * Responsively design by visualizing and [inspecting CSS media queries](/web/tools/chrome-devtools/iterate/device-mode/media-queries).
-* Evaluate your site's performance using the [network emulator](/web/tools/chrome-devtools/network-performance/network-conditions), without affecting traffic to other tabs.
+* Evaluate your site's load performance with the [Network Conditions drawer](emulate-mobile-viewports#network), without affecting traffic to other tabs.
 * Accurately [simulate device input](/web/tools/chrome-devtools/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
 ## Toggle Device Mode {: #toggle }

@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Transform your JavaScript into a more readable form by clicking  the Pretty-Print icon in Chrome DevTools.
 
@@ -10,8 +10,11 @@ description: Transform your JavaScript into a more readable form by clicking  th
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
+Warning: This page is deprecated. See [Make a minified file
+readable](reference#format) for up-to-date information.
+
 When viewing a script in the **Sources** panel, click the **Pretty-Print**
-![the pretty-print icon](imgs/prettyprint-icon.png){:.inline} 
+![the pretty-print icon](imgs/prettyprint-icon.png){:.inline}
 icon to transform a minified script into a more human-readable form.
 
 Here is how a minified script might look in the **Sources** panel:

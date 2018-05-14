@@ -1,13 +1,14 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Critical Request Chains" Lighthouse audit.
 
-{# wf_updated_on: 2016-10-06 #}
+{# wf_updated_on: 2017-12-11 #}
 {# wf_published_on: 2016-10-06 #}
+{# wf_blink_components: N/A #}
 
 # Critical Request Chains  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 The Critical Request Chain is a concept from the Critical Rendering Path (CRP)
 optimization strategy. CRP enables the browser to load a page as quickly as
@@ -18,7 +19,7 @@ Check out the [Critical Rendering
 Path](/web/fundamentals/performance/critical-rendering-path/) docs to learn
 more.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 This audit is currently not structured as something to "pass" or "fail". The
 information that this audit provides gives you an opportunity to improve
@@ -27,7 +28,7 @@ the page load performance of your app.
 In the Chrome Extension version of Lighthouse, your report generates a diagram
 like the following:
 
-```
+<pre>
 Initial navigation
 |---lighthouse/ (developers.google.com)
     |---/css (fonts.googleapis.com) - 1058.34ms, 72.80KB
@@ -37,7 +38,7 @@ Initial navigation
     |---2.2.0/jquery.min.js (ajax.googleapis.com) - 2699.55ms, 99.92KB
     |---contributors/kaycebasques.jpg (developers.google.com) - 2841.54ms, 84.74KB
     |---MC30SXJEli4/photo.jpg (lh3.googleusercontent.com) - 3200.39ms, 73.59KB
-```
+</pre>
 
 This diagram represents the page's critical request chains. The path from
 `lighthouse/` to `/css` is one chain. The path from `lighthouse/` to
@@ -60,10 +61,7 @@ You can use this diagram to improve your CRP by:
 
 Optimizing any of these factors results in a faster page load.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+## More information {: #more-info }
 
 Lighthouse uses network priority as a proxy for identifying render-blocking
 critical resources. See [Chrome Resource Priorities and
@@ -72,3 +70,6 @@ for more information on how Chrome defines these priorities.
 
 Data on critical request chains, resource sizes, and time spent downloading
 resources is extracted from the Chrome Debugger Protocol.
+
+
+{% include "web/tools/lighthouse/audits/_feedback/critical-request-chains.html" %}

@@ -21,4 +21,4 @@ Samsung have a strong commitment to progressive web apps stemming from their lea
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

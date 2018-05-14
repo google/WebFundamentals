@@ -1,4 +1,4 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Keep your client-side code readable and debuggable even after you've combined, minified or compiled it.
 

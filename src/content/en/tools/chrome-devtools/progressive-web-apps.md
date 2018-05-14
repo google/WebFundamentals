@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2016-07-25 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Debug Progressive Web Apps {: .page-title }
 
@@ -23,10 +24,10 @@ guides](#other).
 
 
 ### TL;DR {: .hide-from-toc }
-- Use the <strong>App Manifest</strong> pane to inspect your web app manifest and trigger Add to Homescreen events.
-- Use the <strong>Service Worker</strong> pane for a whole range of service-worker-related tasks, like unregistering or updating a service, emulating push events, going offline, or stopping a service worker.
+- Use the <strong>Manifest</strong> pane to inspect your web app manifest and trigger Add to Homescreen events.
+- Use the <strong>Service Workers</strong> pane for a whole range of service-worker-related tasks, like unregistering or updating a service, emulating push events, going offline, or stopping a service worker.
 - View your service worker cache from the <strong>Cache Storage</strong> pane.
-- Unregister a service worker and clear all storage and caches with a single button click from the <strong>Clear Storage</strong> pane.
+- Unregister a service worker and clear all storage and caches with a single button click from the <strong>Clear storage</strong> pane.
 
 
 ## Web app manifest {:#manifest}
@@ -39,9 +40,9 @@ the app looks like on launch.
 Related Guides:
 
 * [Improve user experiences with a Web App
-  Manifest](/web/fundamentals/engage-and-retain/web-app-manifest)
+  Manifest](/web/fundamentals/web-app-manifest)
 * [Using App Install
-  Banners](/web/fundamentals/engage-and-retain/app-install-banners)
+  Banners](/web/fundamentals/app-install-banners)
 
 Once you've got your manifest set up, you can use the **Manifest** pane of the
 **Application** panel to inspect it.
@@ -103,7 +104,7 @@ Related Guides:
 
 * [Intro to Service Workers](/web/fundamentals/primers/service-worker)
 * [Push Notifications: Timely, Relevant, and
-  Precise](/web/fundamentals/engage-and-retain/push-notifications)
+  Precise](/web/fundamentals/push-notifications)
 
 The **Service Workers** pane in the **Application** panel is the main place in
 DevTools to inspect and debug service workers.
@@ -154,8 +155,8 @@ up.
 ![service worker with errors][errors]
 
 [sw]: images/sw.png
-[cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[cm]: /web/tools/chrome-devtools/ui#command-menu
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ## Service worker caches {:#caches}
@@ -199,3 +200,42 @@ Related Guides:
 * [Inspect page resources](/web/tools/chrome-devtools/iterate/manage-data/page-resources)
 * [Inspect and manage local storage and
   caches](/web/tools/chrome-devtools/iterate/manage-data/local-storage)
+
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/progressive-web-apps';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}

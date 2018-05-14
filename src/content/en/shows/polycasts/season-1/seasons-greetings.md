@@ -20,6 +20,6 @@ Hey there Polycasters! We wanted to take a moment to wish you all very happy hol
 
 ## Read More
 
-- [Easy composition and reuse with Web Components](http://goo.gl/Jq2b3l)
-- [Polymer: State of the Union](http://goo.gl/ZnsHMO)
-- [Let's build some apps with Polymer!](http://goo.gl/Uf0DfQ)
+- [Easy composition and reuse with Web Components](//goo.gl/Jq2b3l)
+- [Polymer: State of the Union](//goo.gl/ZnsHMO)
+- [Let's build some apps with Polymer!](//goo.gl/Uf0DfQ)
