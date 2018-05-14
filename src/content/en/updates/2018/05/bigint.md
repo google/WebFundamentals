@@ -48,7 +48,8 @@ improvements.
 	         libraries."
        src="/web/updates/images/2018/05/bigint-perf.png">
   <figcaption>
-    The native `BigInt` implementation in Chrome performs better than popular userland libraries.
+    The native <code>BigInt</code> implementation in Chrome performs better than popular userland
+    libraries.
   </figcaption>
 </figure>
 
