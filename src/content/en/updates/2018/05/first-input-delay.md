@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: First Input Delay (FID) is a new performance metric for measuring page responsiveness for real users in the wild.
 
 
-{# wf_updated_on: 2018-05-09 #}
+{# wf_updated_on: 2018-05-15 #}
 {# wf_published_on: 2018-05-09 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -46,7 +46,7 @@ responsiveness, we're introducing a new metric called First Input Delay.
 First Input Delay (FID) measures the time from when a user first interacts
 with your site (i.e. when they click a link, tap on a button, or use a custom,
 JavaScript-powered control) to the time when the browser is actually able to
-respond to that that interaction.
+respond to that interaction.
 
 As developers who write code that responds to events, we often assume our code
 is going to be run immediately&mdash;as soon as the event happens. But as users,
