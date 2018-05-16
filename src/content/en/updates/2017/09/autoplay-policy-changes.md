@@ -217,7 +217,7 @@ of a "play" button or "on/off" switch for instance. You can also simply add an
 
 Key Point: If an <code>AudioContext</code> is created prior to the document
 receiving a user gesture, it will be created in the "suspended" state, and you
-will need to call <code>resume()</code> after a user gesture is received."
+will need to call <code>resume()</code> after a user gesture is received.
 
 If you create your <code>AudioContext</code> on page load, you’ll have to call
 <code>resume()</code> at some time after the user interacted with the page
