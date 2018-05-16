@@ -215,11 +215,12 @@ before starting audio playback as user is aware of something happening. Think
 of a "play" button or "on/off" switch for instance. You can also simply add an
 "unmute" button depending on the flow of the app.
 
-Key Point: An <code>AudioContext</code> must be created or resumed after the
-document received a user gesture to enable audio playback.
+Key Point: If an <code>AudioContext</code> is created prior to the document
+receiving a user gesture, it will be created in the "suspended" state, and you
+will need to call <code>resume()</code> after a user gesture is received."
 
-If you create your <code>AudioContext</code> on page load, you’ll
-have to call <code>resume()</code> later after user interacted with the page
+If you create your <code>AudioContext</code> on page load, you’ll have to call
+<code>resume()</code> at some time after the user interacted with the page
 (e.g., user clicked a button).
 
     // Existing code unchanged.
