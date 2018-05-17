@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-05-17 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -97,11 +97,12 @@ const myPlugin = {
     // Return `request` or a different Request
     return request;
   },
-  fetchDidFail: ({originalRequest, request}) => {
+  fetchDidFail: ({originalRequest, request, error}) => {
     // No return expected.
-    // NOTE: original request is the browser request, request is the
+    // NOTE: `originalRequest` is the browser's request, `request` is the
     // request after being passed through plugins with
-    // `requestWillFetch` callbacks.
+    // `requestWillFetch` callbacks, and `error` is the exception that caused
+    // the underlying `fetch()` to fail.
   }
 };
 ```
