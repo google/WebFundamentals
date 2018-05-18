@@ -200,13 +200,17 @@ To set a DOM change breakpoint:
 
 * **Node Removal**: Triggered when the currently-selected node is removed.
 
-## XHR breakpoints {: #xhr }
+## XHR/Fetch breakpoints {: #xhr }
 
 Use an XHR breakpoint when you want to break when the request URL of an XHR
 contains a specified string. DevTools pauses on the line of code where the
 XHR calls `send()`.
 
 Note: This feature also works with [Fetch][Fetch] requests.
+
+One example of when this is helpful is when you see that your
+page is requesting an incorrect URL, and you want to quickly find the AJAX or
+Fetch source code that is causing the incorrect request.
 
 To set an XHR breakpoint:
 
