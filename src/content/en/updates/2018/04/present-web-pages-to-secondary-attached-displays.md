@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API.
 
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-05-18 #}
 {# wf_published_on: 2018-04-05 #}
 {# wf_tags: news,media,presentation #}
 {# wf_featured_image: /web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/hero.jpg #}
@@ -106,7 +106,8 @@ display (.e.g. a secondary attached display in our use case).
     }
 
 The list presented to the user may also include remote endpoints such as
-Chromecast devices if you’re connected to a network advertising them.
+Chromecast devices if you’re connected to a network advertising them. Note that
+mirrored displays are not in the list. See [http://crbug.com/840466].
 
 <figure>
   <img src="/web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/picker.png"
@@ -264,3 +265,4 @@ support will come [later].
 [https://github.com/w3c/presentation-api/issues]: https://github.com/w3c/presentation-api/issues
 [the official Chrome sample]: https://googlechrome.github.io/samples/presentation-api/
 [the interactive Photowall demo]: https://googlechromelabs.github.io/presentation-api-samples/photowall
+[http://crbug.com/840466]: http://crbug.com/840466
