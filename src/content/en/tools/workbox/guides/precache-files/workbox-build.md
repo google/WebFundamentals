@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to precache files with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-05-18 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Precache Files with workbox-build {: .page-title }
@@ -46,6 +46,10 @@ const buildSW = () => {
     globPatterns: [
       '**\/*.{js,css,html,png}',
     ]
+  }).then(({count, size, warnings}) => {
+    // Optionally, log any warnings and details.
+    warnings.forEach(console.warn);
+    console.log(`${count} files will be precached, totaling ${size} bytes.`);
   });
 }
 
@@ -94,6 +98,10 @@ gulp.task('service-worker', () => {
     globPatterns: [
       '**\/*.{js,css,html,png}',
     ]
+  }).then(({count, size, warnings}) => {
+    // Optionally, log any warnings and details.
+    warnings.forEach(console.warn);
+    console.log(`${count} files will be precached, totaling ${size} bytes.`);
   });
 });
 ```
