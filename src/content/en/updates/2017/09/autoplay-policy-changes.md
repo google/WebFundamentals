@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-16 #}
+{# wf_updated_on: 2018-05-19 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -11,7 +11,7 @@ description: Learn best practices for good user experiences with the new autopla
 
 # Autoplay Policy Changes {: .page-title }
 
-Caution: The Autoplay Policy launched in M66 Stable for audio and video
+Note: The Autoplay Policy launched in M66 Stable for audio and video
 elements and is effectively blocking roughly half of unwanted media autoplays
 in Chrome. For the Web Audio API, the autoplay policy will launch in M70. This
 affects web games, some WebRTC applications, and other web pages using audio
@@ -207,8 +207,8 @@ including Facebook, Instagram, Twitter, and YouTube.
 
 ### Web Audio {: #webaudio }
 
-Caution: The Web Audio API will be included in the Chrome autoplay policy with
-M70 (October 2018).
+Note: The Web Audio API will be included in the Chrome autoplay policy with M70
+(October 2018).
 
 First, be reminded that it is good practice to wait for a user interaction
 before starting audio playback as user is aware of something happening. Think
