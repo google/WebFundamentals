@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Designing for standards and using Styleable components'
+        path: /web/shows/designer-vs-developer/podcast/DVDS3E02-designing-for-standards.md
       - title: 'Designing for CSS Grid, layout and Variable fonts'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E01-designing-for-css-grid
       - title: 'How The Web Can Compete With Native'
