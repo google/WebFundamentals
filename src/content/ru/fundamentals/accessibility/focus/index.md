@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Overview of screen focus in accessibility
+description: Обзор экранной фокусировки в доступности
 
 {# wf_updated_on: 2016-10-04 #}
 {# wf_published_on: 2016-10-04 #}
@@ -11,121 +11,135 @@ description: Overview of screen focus in accessibility
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
 
-In this lesson we'll talk about *focus* and how you can manage it in your
-application. Focus refers to which control on the screen (an input item such as
-a field, checkbox, button, or link) currently receives input from the keyboard,
-and from the clipboard when you paste content.
+В этом уроке мы поговорим о *фокусе* и том, как вы можете управлять им в своем
+приложении. Фокус говорит о том, какой элемент управления на экране (элемент
+ввода, такой как поле, флажок, кнопка или ссылка) в текущий момент получает ввод
+с клавиатуры и из буфера обмена, когда вы вставляете контент.
 
-This is a great place to start learning about accessibility because we all know
-how to use a keyboard, it's easy to relate to and test, and it benefits
-virtually all users.
+Это отличное место, чтобы начать узнавать о доступности, потому что все мы знаем
+как использовать клавиатуру, это легко понять и протестировать, и это приносит
+пользу практически всем пользователям.
 
-Users with motor impairments, which could be anything from permanent paralysis
-to a sprained wrist, may rely on a keyboard or switch device to navigate your
-page, so a good focus strategy is critical to providing a good experience for
-them.
+Пользователи с моторными нарушениями, которые могут быть любыми начиная с
+постоянного паралича на растянутом запястье, могут полагаться на клавиатуру или
+переключающее устройство, чтобы перемещаться по вашей странице, поэтому хорошая
+стратегия фокуса имеет решающее значение для обеспечения хорошего опыта для них.
 
-And for the power users who know every keyboard shortcut on their machine, being
-able to quickly navigate your site with the keyboard alone will certainly make
-them more productive.
+А для опытных пользователей, которые знают все горячие клавиши на своем
+компьютере, возможность быстро перемещаться по сайту, безусловно, сделает их
+более продуктивными.
 
-Thus, a well implemented focus strategy ensures that everyone using your
-application has a better experience. We'll see in the upcoming lessons that the
-effort you put into focus is an important basis for supporting assistive
-technology users and, indeed, all users.
+Таким образом, хорошо реализованная стратегия фокуса гарантирует, что все, кто
+использует ваше приложение, получат лучший опыт. На следующих уроках мы увидим,
+что усилия, которые вы вкладываете в фокус, являются важной основой для
+поддержки пользователей, использующих вспомогательных технологий и,
+действительно, всех пользователей.
 
-## What is focus?
+## Что такое фокус?
 
-Focus determines where keyboard events go in the page at any given moment. For
-instance, if you focus a text input field and begin typing, the input field
-receives the keyboard events and displays the characters you type. While it has
-focus, it will also receive pasted input from the clipboard.
+Фокус определяет в какое место страницы попадут события клавиатуры в каждый
+момент времени. Например, если вы сфокусируете текстовое поле ввода и начнете
+печатать, то текстовое поле получит события клавиатуры и отобразит введенные
+вами символы. Пока оно сфокусировано, оно также будет получать вставленные
+входные данные из буфера обмена.
 
 ![keyboard focus in a text field](imgs/keyboard-focus.png)
 
-The currently focused item is often indicated by a *focus ring*, the style of
-which depends on both the browser and on any styling the page author has
-applied. Chrome, for instance, typically highlights focused elements with a blue
-border, whereas Firefox uses a dashed border.
+Объект, сфокусированный в данный момент, часто обозначается  *кольцом фокуса
+(focus ring)*, стиль которого зависит как от браузера, так и от стилей,
+применяемых автором страницы. Например, Chrome, как правило, выделяет
+сфокусированные элементы синей рамкой, тогда как Firefox использует пунктирную
+границу.
 
 ![sign up button](imgs/sign-up.png)
 
-Some users operate their computer almost entirely with the keyboard or other
-input device. For those users, focus is critical; it's their primary means of
-reaching everything on the screen. For that reason, the Web AIM checklist states
-in section 2.1.1 that [all page functionality should be available using the
-keyboard](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
-unless it's something you cannot do with a keyboard, such as freehand drawing.
+Некоторые пользователи работают со своим компьютером почти полностью управляя им
+с клавиатуры или другого устройства ввода. Для таких пользователей фокус - это
+важно; это их основное средство достижения всего на экране. По этой причине
+контрольный список Web AIM указывает в разделе 2.1.1, что [все функциональные
+возможности страницы должны быть доступны с помощью
+клавиатуры](http://webaim.org/standards/wcag/checklist#sc2.1.1){: .external },
+кроме случаев, когда это то, что не может быть сделано с помощью клавиатуры,
+например, рисование от руки.
 
-As a user, you can control which element is currently focused using `Tab`,
-`Shift+Tab`, or the arrow keys. On Mac OSX this works a little differently:
-while Chrome always lets you navigate with `Tab`, you need to press `Option+Tab`
-to change focus in other browsers like Safari. (You can change this setting in
-the Keyboard section of System Preferences.)
+Как пользователь вы можете контролировать какой элемент в настоящее время
+сфокусирован используя `Tab`,  `Shift+Tab` или клавиши со стрелками. В Mac OSX
+это работает несколько иначе: в то время как Chrome всегда позволяет вам
+перемещаться с помощью `Tab`, в других браузерах, таких как Safari, вам нужно
+нажать `Option+Tab` чтобы изменить фокус. (Вы можете изменить этот параметр в
+разделе «Клавиатура» в системных настройках.)
 
 ![keyboard preferences dialog](imgs/system-prefs2.png)
 
-The order in which focus proceeds forward and backward through interactive
-elements via `Tab` is called, not surprisingly, the *tab order*. Ensuring that
-you design your page with a logical tab order is an important step that we'll
-cover later.
+Порядок, в котором фокус двигается вперед и назад через интерактивные элементы с
+использованием `Tab` называется, что не удивительно, *порядок табуляции (tab
+order)*. Уверенность в том, что вы проектируете страницу с логичным порядком
+табуляции, является важным шагом, который мы рассмотрим позже.
 
-## What is focusable?
+## Что можно сфокусировать?
 
-Built-in interactive HTML elements like text fields, buttons, and select lists
-are *implicitly focusable*, meaning they are automatically inserted into the tab
-order and have built-in keyboard event handling without developer intervention.
+Встроенные интерактивные HTML элементы, такие как текстовые поля, кнопки и
+списки для выбора являются *неявно фокусируемыми*, что означает, что они
+автоматически вставляются в порядок табуляции и имеют встроенную обработку
+событий клавиатуры без вмешательства разработчика.
 
 ![implicitly focusable fields](imgs/implicitly-focused.png)
 
-But not all elements are focusable; paragraphs, divs, and various other page
-elements are not focused as you tab through the page, and that's by design.
-There's generally no need to focus something if the user can't interact with it.
+Но не все элементы являются фокусируемыми; paragraph, div и различные другие
+элементы страницы не фокусируемы, когда вы просматриваете страницу, и это
+преднамеренно. Как правило, нет необходимости что-то фокусировать, если
+пользователь не может взаимодействовать с этим.
 
 ![not all elements are focusable](imgs/not-all-elements.png)
 
-## Experiencing focus
+## Испытание фокуса
 
-Let's try some of the focus techniques we just discussed. Using Chrome, go to
-this [airline site mockup
+Давайте попробуем некоторые из методов фокусировки, которые мы только что
+обсудили. Используя Chrome, перейдите сюда [airline site mockup
 page](http://udacity.github.io/ud891/lesson2-focus/01-basic-form/){: .external }
-and search for a specific ticket **using only keyboard input**. The page doesn't
-accept mouse input, so you can't fudge the exercise (not that we don't trust you
-;-).
+и найдите конкретный билет **используя только клавиатуру**. Эта страница не
+принимает ввод мыши, поэтому вы не сможете сделать упражнение кое-как (не потому
+что мы вам не доверяем ;-).
 
 ![airline site mockup](imgs/airlinesite2.png)
 
-The ticket parameters you should specify are:
+Параметры билета, которые вы должны указать:
 
-- one way
-- to Melbourne
-- leaving on 12 October 2017 (10/12/2017)
-- returning on 23 October 2017 (10/23/2017)
-- window seat
-- do not want to receive promotional offers
+- в одну сторону (One Way)
+- в Melbourne (Arrival)
+- отправляющийся (Depart Date) 12 октября 2017 (10/12/2017)
+- прибывающий (Return Date) 23 октября 2017 (10/23/2017)
+- место у окна (Window seat)
+- не получать рекламные предложения (Receive promotional offers?)
 
-When you successfully complete the form with no input errors and activate the
-Search button, the form will simply clear and reset. Go ahead and complete the
-form, then come back.
+Когда вы успешно заполните форму без ошибок ввода и активируете кнопку поиска,
+форма просто очистится и перезагрузится. Идите и заполните форму, а затем
+возвращайтесь назад.
 
-Let's examine how the form uses your keyboard input. Starting with your first
-few `Tab` presses, the browser highlights the navigation items for Flights,
-Hotels, and Rental Cars. As you continue to press `Tab` you proceed to the
-radiobutton group where you can choose from Round Trip, One Way, or Multi City
-using the arrow keys.
+Давайте рассмотрим, как форма использует ваш ввод с клавиатуры. Начиная с ваших
+первых нажатий `Tab`, браузер подсвечивает элементы навигации для рейсов
+(Flights), отелей (Hotels) и проката автомобилей (Rental Cars). По мере того,
+как вы продолжите нажимать `Tab` вы перейдете к группе переключателей, где вы
+сможете выбрать из поездки в обе стороны (Round Trip), в одну сторону (One Way)
+или многогородней поездки (Multi City) используя кнопки со стрелками.
 
-Continue through the name and address fields, filling in the required
-information. When you arrive at the destination select element, you can use the
-arrow keys to choose a city, or you can start typing to autocomplete the field.
-Similarly, in the date fields, you can use the arrow keys or just type a date.
+Продолжайте пройдя через поля имени и адреса, заполнив необходимую информацию.
+Когда вы придете к элементу выбора пункта назначения, вы сможете использовать
+клавиши со стрелками, чтобы выбрать город, или вы можете начать вводить текст
+для автозаполнения поля. Аналогично, в полях даты вы можете использовать клавиши
+со стрелками или просто ввести дату.
 
 Selecting a seat type also relies on the arrow keys, or you can type "w", "a",
 or "n" to jump to a seat option. Then you can disable the promotional offers
 default by pressing the spacebar while the checkbox is focused. Finally, focus
 the Search button and press `Enter` to submit the form.
 
-It's very handy to interact with a form using just the keyboard and to not have
-to switch to the mouse and back to complete a task. Because all of the elements
-used in the form are native HTML tags with implicit focus, the form works fine
-with the keyboard, and you don't have to write any code to add or manage focus
-behavior.
+Это очень удобно взаимодействовать с формой, используя только клавиатуру, и не
+нужно переключаться на мышь и обратно, чтобы выполнить задачу. Поскольку все
+элементы, используемые в форме, являются собственными тегами HTML с неявным
+фокусом, форма отлично работает с клавиатурой, и вам не нужно писать какой-либо
+код для добавления или управления фокусом.
+
+
+Translated by
+{% include "web/_shared/contributors/ann40a.html" %}
