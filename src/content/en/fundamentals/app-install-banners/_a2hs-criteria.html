@@ -1,7 +1,8 @@
 <div id="pwa-criteria" class="clearfix"></div>
 
-Chrome will automatically show the Add to Home Screen prompt to the user when
-the following criteria are met:
+When the following criteria are met, Chrome will fire the
+<a href="/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt">
+<code>beforeinstallprompt</code></a> event, then show the prompt to the user.
 
 <ul>
   <li>The web app is not already installed</li>
@@ -36,7 +37,10 @@ the following criteria are met:
           </li>
         </ul>
       </li>
-      <li>Served over <b>HTTPS</b> (required for service workers)</li>
+      <li>
+        Served over <a href="/web/tools/lighthouse/audits/https"><b>HTTPS</b></a>
+        (required for service workers)
+      </li>
       <li>
         Has registered a <a href="/web/fundamentals/getting-started/primers/service-workers">
         service worker</a> with a <code>fetch</code> event handler
@@ -44,11 +48,6 @@ the following criteria are met:
     </ul>
   </li>
 </ul>
-
-If the web app manifest includes <code>related_applications</code> and
-has <code>"prefer_related_applications": true</code>, the
-<a href="/web/fundamentals/app-install-banners/native">native app install
-prompt</a> will be shown instead.
 
 <aside class="caution">
   <b>Caution:</b> Beginning in Chrome 68 (May 2018), Chrome will <b>not</b>

@@ -24,6 +24,11 @@ and home screen. Chrome handles most of the heavy lifting for you.
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
+If the web app manifest includes <code>related_applications</code> and
+has <code>"prefer_related_applications": true</code>, the
+<a href="/web/fundamentals/app-install-banners/native">native app install
+prompt</a> will be shown instead.
+
 ## Show the add to home screen prompt {: #trigger }
 
 In order to show the Add to Home Screen prompt, you need to:
