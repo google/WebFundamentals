@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-04 #}
+{# wf_updated_on: 2018-05-19 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -10,6 +10,14 @@ description: Learn best practices for good user experiences with the new autopla
 {# wf_blink_components: Blink>Media #}
 
 # Autoplay Policy Changes {: .page-title }
+
+Note: The Autoplay Policy launched in M66 Stable for audio and video
+elements and is effectively blocking roughly half of unwanted media autoplays
+in Chrome. For the Web Audio API, the autoplay policy will launch in M70. This
+affects web games, some WebRTC applications, and other web pages using audio
+features.  Developers will need to update their code to take advantage of the
+policy. More details can be found in the <a href="#webaudio">Web Audio API
+section</a> below.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -197,18 +205,22 @@ including Facebook, Instagram, Twitter, and YouTube.
       });
     </script>
 
-### WebAudio
+### Web Audio {: #webaudio }
+
+Note: The Web Audio API will be included in the Chrome autoplay policy with M70
+(October 2018).
 
 First, be reminded that it is good practice to wait for a user interaction
 before starting audio playback as user is aware of something happening. Think
 of a "play" button or "on/off" switch for instance. You can also simply add an
 "unmute" button depending on the flow of the app.
 
-Key Point: An <code>AudioContext</code> must be created or resumed after the
-document received a user gesture to enable audio playback.
+Key Point: If an <code>AudioContext</code> is created prior to the document
+receiving a user gesture, it will be created in the "suspended" state, and you
+will need to call <code>resume()</code> after a user gesture is received.
 
-If you create your <code>AudioContext</code> on page load, you’ll
-have to call <code>resume()</code> later when user interacts with the page
+If you create your <code>AudioContext</code> on page load, you’ll have to call
+<code>resume()</code> at some time after the user interacted with the page
 (e.g., user clicked a button).
 
     // Existing code unchanged.
@@ -240,14 +252,10 @@ allowed to play, it should immediately switch to `running`. Otherwise it will
 be `suspended`. If you listen to the `statechange` event, you can detect changes
 asynchronously.
 
-For info, checkout the small [Pull Request] that fixes WebAudio playback due to
+For info, checkout the small [Pull Request] that fixes Web Audio playback due to
 these autoplay policy changes for [https://airhorner.com].
 
-## Feedback
-
-At the time of writing, Chrome's autoplay policies aren't carved in stone.
-Please reach out to the Chrome team, [ChromiumDev on Twitter] to share your
-thoughts.
+Note: Web Audio FAQs can be found [here].
 
 {% include "comment-widget.html" %}
 
@@ -266,4 +274,4 @@ thoughts.
 [internal switches]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [Pull Request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [https://airhorner.com]: https://airhorner.com
-[ChromiumDev on Twitter]: https://twitter.com/chromiumdev
+[here]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
