@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2018-01-18 #}
 {# wf_tags: css,style,houdini,javascript,chrome65 #}
 {# wf_featured_image: /web/updates/images/2018/01/paintapi/houdinidiamond.png #}
@@ -215,6 +215,12 @@ In browsers _with_ support for paint worklet, the second declaration of
 `background-image` will overwrite the first one. In browsers _without_ support
 for paint worklet, the second declaration is invalid and will be discarded,
 leaving the first declaration in effect.
+
+### CSS Paint Polyfill
+
+For many uses, it's also possible to use the
+[CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill),
+which adds CSS Custom Paint and Paint Worklets support to modern browsers.
 
 ## Use cases
 There are many use cases for paint worklets, some of them more obvious than
