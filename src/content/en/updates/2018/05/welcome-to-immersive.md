@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -32,11 +32,11 @@ thought of as a spectrum from complete reality to a completely immersive VR
 environment, with various levels of AR in between.
 
 <figure>
-  <img alt="The immersive web is a specturum from complete reality to
+  <img alt="The immersive web is a spectrum from complete reality to
   completely immersive, with various levels in between."
        src="/web/updates/images/2018/05/immersive-spectrum.png">
   <figcaption>
-    The immersive web is a specturum from complete reality to completely
+    The immersive web is a spectrum from complete reality to completely
     immersive, with various levels in between.
   </figcaption>
 </figure>
@@ -87,7 +87,7 @@ improvements. At the same time, AR and other use cases were emerging and it
 became important that the API be extensible to support those in the future.
 
 The WebXR Device API was designed and named with these expanded use cases in
-mind and provides a better path forward. Implementers of WebVR have committed
+mind and provides a better path forward. Implementors of WebVR have committed
 to migrating to the WebXR Device API.
 
 ## What is the WebXR Device API?

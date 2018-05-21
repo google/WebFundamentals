@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2017-11-20 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2014-04-30 #}
 {# wf_blink_components: N/A #}
 
@@ -535,7 +535,7 @@ removing guesswork. However, these attributes are often misspelled or otherwise 
 recognize the attribute and the unknown field type will not be autofilled.
 
 For example, the correct attribute for the Credit Card CVC is "cc-csc". Many sites mistakenly use "cc-cvc", and because
-Autofill does not recognize this attribute, this field won't get autofillled. 
+Autofill does not recognize this attribute, this field won't get autofilled. 
 
 The best practice for these attributes is to use this format: `autocomplete="<section> <fieldtype>"`, for example:
 `autocomplete="shipping address-line1"`. For a complete list of all the accepted values, please see the 
