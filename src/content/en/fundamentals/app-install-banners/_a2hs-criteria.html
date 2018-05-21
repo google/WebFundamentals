@@ -1,3 +1,5 @@
+{# wf_updated_on: 2018-05-21 #}
+
 Chrome will automatically show the Add to Home Screen prompt to the user when
 the following criteria are met:
 
@@ -14,9 +16,24 @@ the following criteria are met:
         Includes a <a href="/web/fundamentals/web-app-manifest/">
         web app manifest</a> that includes:
         <ul>
-          <li><code>short_name</code> or <code>name</code></li>
-          <li><code>icons</code> including a 192px and a 512px version</li>
-          <li><code>start_url</code></li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#name"><code>short_name</code>
+            or <code>name</code></a>
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#icons"><code>icons</code></a>
+            must include a 192px and a 512px sized icons
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#start-url"><code>start_url</code></a>
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#display"><code>display</code></a>
+            must be one of:
+            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>fullscreen</code></a>,
+            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>standalone</code></a>,
+            or <a href="/web/fundamentals/web-app-manifest/#display-params"><code>minimal-ui</code></a>
+          </li>
         </ul>
       </li>
       <li>Served over <b>HTTPS</b> (required for service workers)</li>

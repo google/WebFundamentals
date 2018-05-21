@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -167,7 +167,12 @@ You can manually trigger the `beforeinstallprompt` event with Chrome DevTools.
 This makes it possible to see the user experience, understand how the flow
 works or debug the flow.
 
-Caution: If the PWA criteria aren't met, Chrome will throw an exception in
+Caution: To properly test the mobile flow, you <b>must</b> use
+<a href="/web/tools/chrome-devtools/remote-debugging/">remote debugging.</a>
+Testing the mobile install experience on the desktop will result in the
+desktop PWA install flow which may be different.
+
+If the PWA criteria aren't met, Chrome will throw an exception in
 the console, and the event will not be fired.
 
 Fire the `beforeinstallprompt` event from DevTools:
