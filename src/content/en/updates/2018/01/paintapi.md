@@ -216,6 +216,12 @@ In browsers _with_ support for paint worklet, the second declaration of
 for paint worklet, the second declaration is invalid and will be discarded,
 leaving the first declaration in effect.
 
+### CSS Paint Polyfill
+
+For many uses, it's also possible to use the
+[CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill),
+which adds CSS Custom Paint and Paint Worklets support to modern browsers.
+
 ## Use cases
 There are many use cases for paint worklets, some of them more obvious than
 others. One of the more obvious ones is using paint worklet to reduce the size
