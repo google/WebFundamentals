@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -64,7 +64,7 @@ encompass your web app:
 ## Key manifest properties
 
 
-### `short_name` and/or `name`
+### `short_name` and/or `name` {: #name }
 
 You must provide at least the `short_name` or `name` property. If both are
 provided, `short_name` is used on the user's home screen, launcher, or other
@@ -75,7 +75,7 @@ places where space may be limited. `name` is used on the
     "name": "Google Maps"
 
 
-### `icons`
+### `icons` {: #icons }
 
 When a user adds your site to their home screen, you can define a set of
 icons for the browser to use. These icons are used in places like the home
@@ -102,7 +102,7 @@ automatically scale the icon for the device. If you'd prefer to scale your
 own icons and adjust them for pixel-perfection, provide icons in increments
 of 48dp.
 
-### `start_url`
+### `start_url` {: #start-url }
 
 The `start_url` tells the browser where your application should start when it
 is launched, and prevents the app from starting on whatever page the user was
@@ -117,12 +117,12 @@ they open your app, and place them there.
 Success: add a query string to the end of the `start_url` to track how often
 your app is launched.
 
-### `background_color`
+### `background_color` {: #background-color }
 
 The `background_color` property is used on the [splash screen](#splash-screen)
 when the application is first launched.
 
-### `display`
+### `display` {: #display }
 
 You can customize what browser UI is shown when your app is launched. For
 example, you can hide the address bar and browser chrome. Or games may want
@@ -130,7 +130,7 @@ to go completely full screen.
 
     "display": "standalone"
 
-<table class="responsive">
+<table id="display-params" class="responsive">
   <tbody>
     <tr>
       <th colspan=2>Parameters</th>
@@ -138,7 +138,7 @@ to go completely full screen.
     <tr>
       <td><code>value</code></td><td><code>Description</code></td>
     </tr>
-    <tr>
+    <tr id="display-fullscreen">
       <td><code>fullscreen</code></td>
       <td>
         Opens the web application without any browser UI and takes
@@ -172,7 +172,7 @@ Success: In order to show the
 [Add to Home Screen Prompt](/web/fundamentals/app-install-banners/), `display`
 must be set to standalone.
 
-### `orientation`
+### `orientation` {: #orientation }
 
 You can enforce a specific orientation, which is advantageous for apps
 that work in only one orientation, such as games. Use this selectively.
@@ -180,7 +180,7 @@ Users prefer selecting the orientation.
 
     "orientation": "landscape"
 
-### `scope`
+### `scope` {: #scope }
 
 The `scope` defines the set of URLs that the browser considers within your app,
 and is used to decide when you’ve left your app, and should be bounced
@@ -201,7 +201,7 @@ A few other tips:
 * The `start_url` is relative to the path defined in the `scope` attribute.
 * A `start_url` starting with `/` will always be the root of the origin.
 
-### `theme_color`
+### `theme_color` {: #theme-color }
 
 The `theme_color` sets the color of the tool bar, and in the task switcher.
 

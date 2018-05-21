@@ -1,3 +1,5 @@
+<div id="pwa-criteria" class="clearfix"></div>
+
 When the following criteria are met, Chrome will fire the
 <a href="/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt">
 <code>beforeinstallprompt</code></a> event, then show the prompt to the user.
@@ -15,9 +17,24 @@ When the following criteria are met, Chrome will fire the
         Includes a <a href="/web/fundamentals/web-app-manifest/">
         web app manifest</a> that includes:
         <ul>
-          <li><code>short_name</code> or <code>name</code></li>
-          <li><code>icons</code> including a 192px and a 512px version</li>
-          <li><code>start_url</code></li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#name"><code>short_name</code>
+            or <code>name</code></a>
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#icons"><code>icons</code></a>
+            must include a 192px and a 512px sized icons
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#start-url"><code>start_url</code></a>
+          </li>
+          <li>
+            <a href="/web/fundamentals/web-app-manifest/#display"><code>display</code></a>
+            must be one of:
+            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>fullscreen</code></a>,
+            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>standalone</code></a>,
+            or <a href="/web/fundamentals/web-app-manifest/#display-params"><code>minimal-ui</code></a>
+          </li>
         </ul>
       </li>
       <li>
