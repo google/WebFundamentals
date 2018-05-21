@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -23,6 +23,11 @@ and home screen. Chrome handles most of the heavy lifting for you.
 ## What is the criteria? {: #criteria }
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
+
+If the web app manifest includes <code>related_applications</code> and
+has <code>"prefer_related_applications": true</code>, the
+<a href="/web/fundamentals/app-install-banners/native">native app install
+prompt</a> will be shown instead.
 
 ## Show the add to home screen prompt {: #trigger }
 
