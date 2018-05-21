@@ -24,5 +24,7 @@ toc:
       path: /web/fundamentals/design-and-ux/input/touch/
   - include: /web/fundamentals/payments/_toc.yaml
   - include: /web/fundamentals/push-notifications/_toc.yaml
+  - title: WebAPKs on Android
+    path: /web/fundamentals/integration/webapks
   - title: Web App Manifest
     path: /web/fundamentals/web-app-manifest/

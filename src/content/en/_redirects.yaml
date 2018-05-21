@@ -48,7 +48,7 @@ redirects:
   to: /web/fundamentals/performance/optimizing-content-efficiency/save-data
 
 - from: /web/updates/2017/02/improved-add-to-home-screen
-  to: /web/fundamentals/app-install-banners/webapk
+  to: /web/fundamentals/integration/webapks
 
 - from: /web/updates/2017/06/user-centric-performance-metrics
   to: /web/fundamentals/performance/user-centric-performance-metrics
