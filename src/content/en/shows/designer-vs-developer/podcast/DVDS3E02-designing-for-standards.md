@@ -38,7 +38,8 @@ In this episode:
 
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E02-Designing-for-standards-with-Bruce-Lawson.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E02-Designing-for-standards-with-Bruce-Lawson.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
