@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-10 #}
+{# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -154,32 +154,41 @@ reflected to the user after they've run your app again.
 
 ## Test your add to home screen experience {: #test }
 
+You can manually trigger the `beforeinstallprompt` event with Chrome DevTools.
+This makes it possible to see the user experience, understand how the flow
+works or debug the flow. If the [PWA criteria](#pwa-criteria) aren't met,
+Chrome will throw an exception in the console, and the event will not be fired.
+
+Caution: Chrome has a slightly different install flow for desktop and mobile.
+Although the instructions are similar, testing on mobile <b>requires</b> remote
+debugging, without it, it will use the desktop install flow.
+
+
+### Chrome for Android
+
+1. Open a [remote debugging](/web/tools/chrome-devtools/remote-debugging/)
+   session to your phone or tablet.
+2. Go to the **Application** panel.
+3. Go to the **Manifest** tab.
+4. Click **Add to home screen**
+
+
+### Chrome OS
+
+Dogfood: <a href="/web/updates/2018/05/dpwa">Desktop Progressive Web App</a>
+requires Chrome OS 67 or later. For Mac or Windows, you'll
+need to <a href="/web/updates/2018/05/dpwa#getting-started">enable the
+<code>#enable-desktop-pwas</code> flag.</a>
+
+1. Open Chrome DevTools
+2. Go to the **Application** panel.
+3. Go to the **Manifest** tab.
+4. Click **Add to home screen**
+
+
 ### Will `beforeinstallprompt` be fired?
 
 The easiest way to test if the `beforeinstallprompt` event will be fired, is
-to use Lighthouse to audit your app, and check the results of the
-[User Can Be Prompted To Install The Web App](/web/tools/lighthouse/audits/install-prompt)
+to use [Lighthouse](/web/tools/lighthouse/) to audit your app, and check the
+results of the [User Can Be Prompted To Install The Web App](/web/tools/lighthouse/audits/install-prompt)
 test.
-
-### Manually triggering the `beforeinstallprompt` event
-
-You can manually trigger the `beforeinstallprompt` event with Chrome DevTools.
-This makes it possible to see the user experience, understand how the flow
-works or debug the flow.
-
-Caution: If the PWA criteria aren't met, Chrome will throw an exception in
-the console, and the event will not be fired.
-
-Fire the `beforeinstallprompt` event from DevTools:
-
-1. Open Chrome DevTools.
-2. Go to the **Application** panel.
-3. Go to the **Manifest** tab.
-4. Click **Add to home screen**, highlighted in red in the screenshot below.
-
-![Add to home screen button on DevTools](images/devtools-a2hs.png)
-
-Note: See <a href="/web/tools/chrome-devtools/progressive-web-apps#add-to-homescreen">
-Simulate Add to Home Screen events</a> for more help.
-
-
