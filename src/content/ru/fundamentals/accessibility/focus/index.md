@@ -129,10 +129,11 @@ page](http://udacity.github.io/ud891/lesson2-focus/01-basic-form/){: .external }
 для автозаполнения поля. Аналогично, в полях даты вы можете использовать клавиши
 со стрелками или просто ввести дату.
 
-Selecting a seat type also relies on the arrow keys, or you can type "w", "a",
-or "n" to jump to a seat option. Then you can disable the promotional offers
-default by pressing the spacebar while the checkbox is focused. Finally, focus
-the Search button and press `Enter` to submit the form.
+Выбор типа посадки также зависит от клавиш со стрелками, либо вы можете ввести
+«w», «a» или «n», чтобы перейти к конкретной опции посадки. Затем вы можете
+отключить рассылку рекламных предложений по умолчанию, нажав пробел когда флажок
+сфокусирован. Наконец, сфокусируйте кнопку «Поиск» (Search) и нажмите `Enter`,
+чтобы отправить форму.
 
 Это очень удобно взаимодействовать с формой, используя только клавиатуру, и не
 нужно переключаться на мышь и обратно, чтобы выполнить задачу. Поскольку все
