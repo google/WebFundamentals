@@ -115,7 +115,7 @@ redirects:
   to: /web/fundamentals/payments/...
 
 - from: /web/fundamentals/payments/android-pay
-  to: /pay/api/web/paymentrequest/tutorial
+  to: /pay/api/web/guides/paymentrequest/tutorial
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
