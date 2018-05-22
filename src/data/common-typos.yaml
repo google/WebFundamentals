@@ -24,7 +24,7 @@
   caseSensitive: True
   description: "See: https://developers.google.com/style/word-list#ajax"
 
-- typo: android
+- typo: android\s
   fix: Android
   caseSensitive: True
   description: "See: https://developers.google.com/style/word-list#android"
@@ -218,7 +218,7 @@
   fix: address bar
   description: "See: https://developers.google.com/style/word-list#omnibox"
 
-- typo: sign(\s|-)on|log\sin|signin
+- typo: sign(\s|-)on|log\sin|signin\s
   fix: sign-in
   description: "See: https://developers.google.com/style/word-list#sign-on"
 

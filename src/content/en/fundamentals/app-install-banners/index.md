@@ -18,7 +18,9 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 
 **Add to Home Screen**, sometimes referred to as the web app install prompt
 makes it easy for users to add your Progressive Web App to their app launcher
-and home screen. Chrome handles most of the heavy lifting for you.
+and home screen. Chrome handles most of the heavy lifting for you, and on
+Android, Chrome will generate a [WebAPK](/web/fundamentals/integration/webapks)
+creating an even more integrated experience for your users.
 
 ## What is the criteria? {: #criteria }
 
