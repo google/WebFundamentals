@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-05-22 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
