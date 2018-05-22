@@ -168,5 +168,5 @@ first custom metric, the parameter name would be "cm1":
 ## Testing Workbox Google Analytics
 
 As Workbox Google Analytics uses Background Sync to replay events, it can
-be unintuitive to test. Read more at [Testing Workbox Background Sync]
-(/web/tools/workbox/modules/workbox-background-sync#testing_workbox_background_sync).
+be unintuitive to test. Read more at
+[Testing Workbox Background Sync](/web/tools/workbox/modules/workbox-background-sync#testing_workbox_background_sync).
