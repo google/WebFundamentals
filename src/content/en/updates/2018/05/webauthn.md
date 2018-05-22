@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, which allows browsers to interact with and manage public-key based credentials. This enables strong authentication using removable security keys and built-in platform authenticators such as fingerprint scanners.
 
-{# wf_updated_on: 2018-05-11 #}
+{# wf_updated_on: 2018-05-22 #}
 {# wf_published_on: 2018-05-10 #}
 {# wf_tags: webauthn, credentials, sign-in, chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -22,12 +22,12 @@ description: Chrome 67 beta introduces the Web Authentication (WebAuthn) API, wh
 
 ## The problem
 
-Phishing is the \#1 security problem on the web: 81% of account breaches last 
-year were because of weak or stolen passwords. The industry's collective 
-response to this problem has been multi-factor authentication, but 
-implementations are fragmented and most still don't adequately address phishing. 
-We have been working with the [FIDO Alliance](https://fidoalliance.org/) since 
-2013 and, more recently, with the W3C to implement a standardized 
+Phishing is the \#1 security problem on the web: 81% of hacking-related account
+breaches last year leveraged weak or stolen passwords. The industry's collective
+response to this problem has been multi-factor authentication, but
+implementations are fragmented and most still don't adequately address phishing.
+We have been working with the [FIDO Alliance](https://fidoalliance.org/) since
+2013 and, more recently, with the W3C to implement a standardized
 phishing-resistant protocol that can be used by any Web application.
 
 ## What is WebAuthn?
