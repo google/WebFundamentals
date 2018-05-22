@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-05-22 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -164,3 +164,9 @@ first custom metric, the parameter name would be "cm1":
       },
     });
     </pre>
+
+## Testing Workbox Google Analytics
+
+As Workbox Google Analytics uses Background Sync to replay events, it can
+be unintuitive to test. Read more at
+[Testing Workbox Background Sync](/web/tools/workbox/modules/workbox-background-sync#testing_workbox_background_sync).
