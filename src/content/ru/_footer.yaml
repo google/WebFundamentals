@@ -24,9 +24,11 @@ footer:
     - label: Документация по Сhrome Extension
       path: https://developers.chrome.com/extensions/api_index
     - path: "/web/feedback/"
+      label: Программа отзывов для разработчиков
     - label: Прогрессивные Web приложения
       path: "/web/progressive-web-apps/"
     icon_name: звезда
+    name: Ключевые темы
   - contents:
     - label: Обучение с преподавателем
       path: "/web/ilt/"
