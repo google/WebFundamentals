@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-19 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -100,10 +100,10 @@ to test your website depending on user engagement.
   always allowed.
 
 - You can also decide to make sure playback autoplay is never allowed by
-  disabling use of MEI and whether sites with the highest overall MEI get
-  playback autoplay by default for new users. This can be done with two
-  [internal switches] with `chrome.exe
-  --disable-features=PreloadMediaEngagementData,
+  disabling use of MEI, applying autoplay policy to Web Audio, and whether
+  sites with the highest overall MEI get playback autoplay by default for new
+  users. This can be done with three [internal switches] with `chrome.exe
+  --disable-features=PreloadMediaEngagementData,AutoplayIgnoreWebAudio,
   MediaEngagementBypassAutoplayPolicies`.
 
 ### Iframe delegation {: #iframe }
