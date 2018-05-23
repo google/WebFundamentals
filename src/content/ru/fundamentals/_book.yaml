@@ -1,0 +1,34 @@
+---
+upper_tabs:
+- heading: Основы Web
+  lower_tabs:
+    other:
+    - contents:
+      - path: "/web/fundamentals/"
+        title: Обзор
+      - include: "/web/fundamentals/architecture/_toc.yaml"
+      - include: "/web/fundamentals/design-and-ux/_toc.yaml"
+      - include: "/web/fundamentals/integration/_toc.yaml"
+      - section:
+        - include: "/web/fundamentals/media/_toc.yaml"
+        - include: "/web/fundamentals/vr/_toc.yaml"
+        style: accordion
+      - include: "/web/fundamentals/performance/_toc.yaml"
+      - include: "/web/fundamentals/security/_toc.yaml"
+      - include: "/web/fundamentals/_toc-base.yaml"
+      - break: true
+      - path: "/web/fundamentals/glossary"
+        title: Глоссарий
+      name: Руководства
+    - contents:
+      - include: "/web/fundamentals/codelabs/_toc.yaml"
+      name: Лабораторные
+    - contents:
+      - path: https://www.chromestatus.com/samples
+        title: Примеры
+      name: Примеры
+  name: Основы
+  path: "/web/fundamentals/"
+- include: "/web/_upper_tabs-Tools.yaml"
+- include: "/web/_upper_tabs-Updates.yaml"
+- include: "/web/_upper_tabs-Showcase.yaml"
