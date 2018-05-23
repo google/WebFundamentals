@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:使用合适的样式化提升可访问性
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 可访问的样式 {: .page-title }
@@ -194,11 +194,9 @@ Warning: 使用视口元标记时，切忌设置 maximum-scale=1 或设置 user-
 
 ![显示一对 48 像素触摸目标的图片](imgs/touch-target.jpg)
 
-不同触摸目标之间在水平和垂直方向上还应留出大约 32 像素的间隔，以便用户手指按下一个点按目标不会意外触摸另一个点按目标。
+不同触摸目标之间在水平和垂直方向上还应留出大约 8 像素的间隔，以便用户手指按下一个点按目标不会意外触摸另一个点按目标。
 
 
-
-![显示触摸对象周围存在 32 像素空间的图片](imgs/touch-target2.jpg)
 
 ## 颜色和对比度
 
