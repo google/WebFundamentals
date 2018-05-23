@@ -4,7 +4,7 @@ description: Building a Progressive Web App doesn't mean building a single page 
 
 {# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2018-05-23 #}
-{# wf_tags: pwa, spa, mpa, streams, workbox #}
+{# wf_tags: streams, progressive-web-apps, serviceworker, app-shell #}
 {# wf_featured_image: /web/tools/workbox/images/pwa.svg #}
 {# wf_featured_snippet: Building a Progressive Web App doesn't mean building a single page app! Read about alternative architectures for content-focused PWAs, and help you make the right decision for your specific use case. #}
 {# wf_blink_components: Blink>ServiceWorker #}
@@ -313,8 +313,11 @@ that I add to each link, `data-cache-url`, set to the Stack Exchange API URL
 that I need in order to display the corresponding question. Keep that in
 mind. I'll revisit it later.
 
-Jumping back to my [route handler](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/server.mjs), once templating is complete, I stream the final portion of my page's HTML to the browser, and end the stream.
-This is the cue to the browser that the progressive rendering is complete.
+Jumping back to my [route
+handler](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/server.mjs),
+once templating is complete, I stream the final portion of my page's HTML to the
+browser, and end the stream. This is the cue to the browser that the progressive
+rendering is complete.
 
 ```js
 app.get(routes.get('index'), async (req, res) => {
@@ -366,7 +369,9 @@ logic.
 Just as with my server-side code, my service worker needs to know how to match
 an incoming request with the appropriate response logic.
 
-My approach was to [translate](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/route-matchers.mjs) each Express route into a corresponding [regular
+My approach was to
+[translate](https://github.com/GoogleChromeLabs/so-pwa/blob/master/src/lib/route-matchers.mjs)
+each Express route into a corresponding [regular
 expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions),
 making use of a helpful library called
 [`regexparam`](https://github.com/lukeed/regexparam). Once that translation is
@@ -758,3 +763,7 @@ data.
 - [SO PWA GitHub project](https://github.com/GoogleChromeLabs/so-pwa)
 - [Workbox](/web/tools/workbox/)
 - [Streams API specification](https://streams.spec.whatwg.org/)
+
+{% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
