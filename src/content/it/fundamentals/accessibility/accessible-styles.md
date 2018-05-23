@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Utilizzare stili appropriati per migliorare l'accessibilità
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Stili accessibili {: .page-title}
@@ -246,12 +246,9 @@ a 9 mm, ossia circa alle dimensioni dell'area del dito di una persona.
 
 ![un diagramma che mostra un paio di target di tocco a 48 pixel](imgs/touch-target.jpg)
 
-I target di tocco devono essere distanziati di circa 32 pixel tra loro, sia
+I target di tocco devono essere distanziati di circa 8 pixel tra loro, sia
 orizzontalmente che verticalmente, in modo che il dito dell'utente che li preme,
 non tocchi inavvertitamente un altro target.
-
-![un diagramma che mostra 32 pixel di spazio attorno a un target di
-tocco](imgs/touch-target2.jpg)
 
 ## Colore e contrasto
 

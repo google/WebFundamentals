@@ -3,8 +3,9 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Accessible Styles {: .page-title }
 
@@ -227,11 +228,9 @@ which is about the size of a person's finger pad area.
 
 ![a diagram showing a couple of 48 pixel touch targets](imgs/touch-target.jpg)
 
-Touch targets should also be spaced about 32 pixels
+Touch targets should also be spaced about 8 pixels
 apart, both horizontally and vertically, so that a user's finger pressing on one
 tap target does not inadvertently touch another tap target.
-
-![a diagram showing 32 pixels of space around a touch target](imgs/touch-target2.jpg)
 
 ## Color and contrast
 
