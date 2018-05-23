@@ -18,11 +18,9 @@ padding-left: 0}
   <p>В основе восхитительного веб-опыта...</p>
   <img src="/web/images/hero-2x.png" class="attempt-right">
   <ul>
-    <li>
-<span class="compare-yes"> <b><a href="#fast">Fast</a></b> - It respond quickly
-to user
-      interactions with silky smooth animations and no janky scrolling.</span>
-</li>
+<li><span class="compare-yes"><b><a href="#fast">Скорость</a></b> -
+мгновенно реагирует на действия пользователя с шелковистой плавной анимацией и
+без прокрутки.</span></li>
     <li>
 <span class="compare-yes"> <b><a href="#integrated">Интегрированность</a></b> -
 Пользователю ненужно открывать браузер. Приложение использует все возможности
