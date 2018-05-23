@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-03-26 #}
+{# wf_updated_on: 2018-05-22 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -176,7 +176,7 @@ an existing card will be selected for them.
 
 Note: To get access to all forms of payment available with Google, developers
 will need to implement the Google Pay method. Refer to the
-[Google Pay API](/pay/api/web/paymentrequest/tutorial) docs for more information.
+[Google Pay API](/pay/api/web/guides/paymentrequest/tutorial) docs for more information.
 
 <div class="attempt-center">
   <figure>
@@ -344,7 +344,7 @@ const googlePayPaymentMethod = {
 </div>
 
 We won't go into details of how to add Google Pay in this article, [we have
-a dedicated document to that](/pay/api/web/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
+a dedicated document to that](/pay/api/web/guides/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
 
 
 #### Edge Cases
