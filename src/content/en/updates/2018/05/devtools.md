@@ -200,12 +200,17 @@ The **Show timestamps** checkbox previously in **Console Settings**
 ## Feedback {: #feedback }
 
 <style>
+  .wndt-feedback {
+    display: inline;
+    margin: 1em;
+  }
   #quickstart-feedback-question {
     margin: 1em 0;
     position: relative;
   }
   #quickstart-feedback-question section.expandable {
     position: static;
+    display: inline;
   }
 </style>
 
@@ -214,18 +219,20 @@ Was this page helpful?
 {% dynamic if experiments.feedback.red %}
   <div id="quickstart-feedback-question">
     <section class="expandable">
-      <button class="button button-red button-primary expand-control gc-analytics-event"
+      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+              style="background-color: #f44336"
               data-category="Helpful"
               data-label="{% dynamic print request.path %}" data-value="1">
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what's working, or
-        how we can improve.
+        Great! Thank you for the feedback. Please use the feedback channels below to tell us what we're
+        doing well, or how we can improve.
       </aside>
     </section>
     <section class="expandable">
-      <button class="button button-red button-primary expand-control gc-analytics-event"
+      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+              style="background-color: #f44336"
               data-category="Helpful" data-action="Feedback"
               data-label="{% dynamic print request.path %}" data-value="0">
         No
@@ -238,18 +245,18 @@ Was this page helpful?
 {% dynamic elif experiments.feedback.white %}
   <div id="quickstart-feedback-question">
     <section class="expandable">
-      <button class="button button-white button-primary expand-control gc-analytics-event"
+      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
               data-category="Helpful"
               data-label="{% dynamic print request.path %}" data-value="1">
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what's working, or
-        how we can improve.
+        Great! Thank you for the feedback. Please use the feedback channels below to tell us what we're
+        doing well, or how we can improve.
       </aside>
     </section>
     <section class="expandable">
-      <button class="button button-white button-primary expand-control gc-analytics-event"
+      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
               data-category="Helpful" data-action="Feedback"
               data-label="{% dynamic print request.path %}" data-value="0">
         No
