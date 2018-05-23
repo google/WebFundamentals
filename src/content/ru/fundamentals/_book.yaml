@@ -13,6 +13,7 @@ upper_tabs:
         - include: "/web/fundamentals/media/_toc.yaml"
         - include: "/web/fundamentals/vr/_toc.yaml"
         style: accordion
+        title: Media &amp; VR
       - include: "/web/fundamentals/performance/_toc.yaml"
       - include: "/web/fundamentals/security/_toc.yaml"
       - include: "/web/fundamentals/_toc-base.yaml"
