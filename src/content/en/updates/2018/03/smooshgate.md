@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What can #SmooshGate teach us about standards development and the Web Platform? This write-up gives an overview.
 
-{# wf_updated_on: 2018-03-19 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -31,19 +31,24 @@ decided, and things escalated quickly.
 
 ## What does `Array.prototype.flatten` do? {: #flatten }
 
-`Array.prototype.flatten` flattens arrays recursively up to the specified
-`depth`, which defaults to `1`.
+`Array.prototype.flat`, originally proposed as `Array.prototype.flatten`,
+flattens arrays recursively up to the specified `depth`, which defaults
+to `1`.
 
 ```js
 // Flatten one level:
 const array = [1, [2, [3]]];
-array.flatten();
+array.flat();
 // → [1, 2, [3]]
 
 // Flatten recursively until the array contains no more nested arrays:
-array.flatten(Infinity);
+array.flat(Infinity);
 // → [1, 2, 3]
 ```
+
+Note: Since the publication of this article, `flatten` has been renamed to
+`flat` to resolve #SmooshGate. The above example has been updated accordingly,
+but keep in mind that the original name was `flatten`.
 
 The same proposal includes `Array.prototype.flatMap`, which is like
 `Array.prototype.map` except it flattens the result into a new array.
@@ -86,7 +91,7 @@ and here’s the kicker — if you overwrite a non-enumerable property, e.g.
 
 Currently, `Array.prototype.flatten = mooToolsFlattenImplementation` creates
 an enumerable `flatten` property, so it’s later copied to `Elements`. But if
-we ship a native version of `flatten`, it becomes non-enumerable, and
+browsers ship a native version of `flatten`, it becomes non-enumerable, and
 _isn’t_ copied to `Elements`. **Any code relying on MooTools’
 `Elements.prototype.flatten` is now broken.**
 
@@ -208,12 +213,11 @@ backgrounds: some have years of programming language design experience,
 others work on a browser or JavaScript engine, and an increasing number of
 attendants are there to represent the JavaScript developer community.
 
-## What happens next? {: #next }
+## How was SmooshGate resolved, eventually? {: #resolution }
 
-The next TC39 meeting takes place this week. There’s an item on [the
-agenda](https://github.com/tc39/agendas/blob/master/2018/03.md) to discuss
-`flatten` and its web compatibility issues. Hopefully, we’ll know more about
-next steps after the meeting.
+During [the May 2018 TC39
+meeting](https://github.com/tc39/agendas/blob/master/2018/05.md), #SmooshGate
+was officially resolved by renaming `flatten` to `flat`.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 {% include "comment-widget.html" %}
