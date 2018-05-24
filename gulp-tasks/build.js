@@ -179,35 +179,44 @@ gulp.task('build:showcase', function() {
 /**
  * Builds index page and RSS & ATOM feeds for /web/shows/
  */
-gulp.task('build:shows', function(cb) {
-  return wfYouTubeShows.getVideos(global.WF.options.buildType)
-    .then((videos) => {
-      // build the RSS & ATOM feeds
-      wfYouTubeShows.buildFeeds(videos);
+gulp.task('build:shows', async function(cb) {
+  // Build RSS feed per year.
+  await wfYouTubeShows.getAllVideosByYear().then((videosByYear) => {
+    Object.keys(videosByYear)
+      .filter((year) => year >= global.WF.minFeedDate)
+      .forEach((year) => {
+        console.log(path.join(global.WF.src.content, 'shows', year))
+        wfYouTubeShows.buildFeeds(videosByYear[year], {
+          outputPath: path.join(global.WF.src.content, 'shows', year),
+        });
+      });
+  });
 
-      // build the shows index.md page
-      let context = {videos: videos};
-      let template = path.join(global.WF.src.templates, 'shows', 'index.md');
-      let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
+  await wfYouTubeShows.getVideos(global.WF.options.buildType).then((videos) => {
+    // build the RSS & ATOM feeds
+    wfYouTubeShows.buildFeeds(videos);
 
-      // build the latest show widget
-      context = {video: videos[0]};
-      template = path.join(global.WF.src.templates, 'shows', 'latest.html');
-      outputFile = path.join(
-        global.WF.src.content, '_shared', 'latest_show.html');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
+    // build the shows index.md page
+    let context = {videos};
+    let template = path.join(global.WF.src.templates, 'shows', 'index.md');
+    let outputFile = path.join(global.WF.src.content, 'shows', 'index.md');
+    wfTemplateHelper.renderTemplate(template, context, outputFile);
 
-      // build the latest show include for index
-      context = {video: videos[0]};
-      template = path.join(
-        global.WF.src.templates, 'landing-page', 'latest-show.html');
-      outputFile = path.join(
-        global.WF.src.content, '_index-latest-show.html');
-      wfTemplateHelper.renderTemplate(template, context, outputFile);
-    });
+    // build the latest show widget
+    context = {video: videos[0]};
+    template = path.join(global.WF.src.templates, 'shows', 'latest.html');
+    outputFile = path.join(
+      global.WF.src.content, '_shared', 'latest_show.html');
+    wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+    // build the latest show include for index
+    context = {video: videos[0]};
+    template = path.join(
+      global.WF.src.templates, 'landing-page', 'latest-show.html');
+    outputFile = path.join(global.WF.src.content, '_index-latest-show.html');
+    wfTemplateHelper.renderTemplate(template, context, outputFile);
+  });
 });
-
 
 /**
  * Builds RSS & ATOM feeds for the HTTP203 Podcast
