@@ -189,8 +189,6 @@ While paused on a breakpoint, right-click a property in the Scope pane and selec
   </figcaption>
 </figure>
 
-Thanks to PhistucK for the contribution.
-
 ## "Show timestamps" moved to settings {: #timestamps }
 
 The **Show timestamps** checkbox previously in **Console Settings**
