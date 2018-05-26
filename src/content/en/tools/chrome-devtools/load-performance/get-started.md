@@ -49,27 +49,74 @@ it gives you actionable tips on what changes will have the most impact.
 
 ### Set up {: #setup }
 
-### Establish a baseline {: #baseline }
-
-1. <a href="https://before.glitch.me">Open the site</a>.
+1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was
+   created with Chrome 68. If you're using an earlier or later version, the DevTools UI may look
+   different, or some features may not be available. You should still be able to get through most
+   of the tutorial. Please [send feedback](#feedback) if you can't.
+1. <a class="gc-analytics-event" href="https://before.glitch.me" target="_blank" rel="noopener"
+   data-category="CTA" data-label="{% dynamic print request.path %}">Open the site</a>.
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac)
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> to open Chrome DevTools.
+
+<figure>
+  <img src="imgs/devtools.png" alt="DevTools."/>
+  <figcaption>
+    <b>Figure X</b>. DevTools
+  </figcaption>
+</figure>
+
+Tip: You can dock DevTools to the left, right, of bottom of your page. You can also undock it
+into a separate window. See [Change DevTools placement](/web/tools/chrome-devtools/ui#placement).
+
+### Establish a baseline {: #baseline }
+
 1. Click the **Audits** tab. It may be hidden behind the **More Panels**
-   ![TODO](TODO){:.inline-icon} button.
-1. Click **Perform an audit**.
-1. Keep the **Performance** checkbox enabled, but disable all the other ones.
+   ![More Panels](imgs/more-panels.png){:.inline-icon} button.
+
+     <figure>
+       <img src="imgs/audits.png" alt="The Audits panel."/>
+       <figcaption>
+         <b>Figure X</b>. The Audits panel
+       </figcaption>
+     </figure>
+
+1. In the **Audits** section, keep the **Performance** checkbox enabled, but disable all the
+   other ones. Leave the settings in the other sections as is.
+
+     <figure>
+       <img src="imgs/config.png" alt="Audit settings."/>
+       <figcaption>
+         <b>Figure X</b>. Audit settings
+       </figcaption>
+     </figure>
+
+1. Click **Run audits**.
 1. Click **Run audit**. DevTools simulates a mobile user's experience by
    throttling the network and CPU. Mobile devices often access the web with
    slower network connections, and less powerful CPUs.
-1. Wait for the audit to finish. DevTools shows a report of the page's
-   performance.
 
-### Understand your report {: #report }
+DevTools eventually shows you a report for the page's performance. As suspected, it performs
+very poorly. This report is your baseline.
 
-The report seems useful, but what all does it mean exactly?
+### Explore your report {: #report }
 
-## Step X: Share the report
+The report gives you a lot of information. Here's how to make sense of it all.
 
+1. The number within the circle represents your overall performance score.
+
+1. **Metrics** represent different measurements of what your users experience when they load
+   your page. There is no single metric that encompasses the whole experience.
+1. Hover over the **First Contentful Paint** metric. DevTools gives you more information about
+   what the metric measures. Click **Learn more**. Chrome opens up a new tab containing
+   documentation about that metric.
+
+     TODO hovering over metric screenshot
+
+1. Below **Metrics** is a timeline of screenshots representing how the page looks during the
+   course of the load.
+1. **Opportunies** provides specific tips on how to improve the page. Working on these tips
+   should improve the **Metrics** scores.
+1. **Diagnostics** 
 
 ## Next steps {: #next-steps }
 
