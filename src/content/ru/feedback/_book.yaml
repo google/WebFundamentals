@@ -10,7 +10,7 @@ upper_tabs:
       - path: "/web/feedback/"
         title: Главная
       - path: "/web/feedback/file-a-bug"
-        title: Как разместить Хороший Баг
+        title: Как разместить Хорошую Ошибку
       - path: "/web/feedback/browser-bug-searcher"
         title: Поиск ошибок браузера
       name: Обратная связь
