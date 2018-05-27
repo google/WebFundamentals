@@ -274,7 +274,8 @@ href="https://blinkcomponents-b48b5.firebaseapp.com/">Blink компоненто
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>обновлениях</b> и <b>примерах</b>
+<td>Только к markdown страницам в <b>обновлениях</b> and
+<b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -305,7 +306,8 @@ href="https://blinkcomponents-b48b5.firebaseapp.com/">Blink компоненто
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>обновлениях</b> и <b>примерах</b>
+<td>Только к markdown страницам в <b>обновлениях</b> and
+<b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -345,7 +347,8 @@ href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updat
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>обновлениях</b> и <b>примерах</b>
+<td>Только к markdown страницам в <b>обновлениях</b> and
+<b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -535,7 +538,7 @@ href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updat
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>примерах</b>
+    <td>Только к markdown страницам в <b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -575,7 +578,8 @@ href="https://github.com/google/WebFundamentals/tree/master/src/content/en/updat
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>обновлениях</b> и <b>примерах</b>
+<td>Только к markdown страницам в <b>обновлениях</b> and
+<b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -641,7 +645,7 @@ href="https://github.com/google/WebFundamentals/blob/master/src/data/commonTags.
   </tr>
   <tr>
     <td>Применяется</td>
-    <td>Только к markdown страницам в <b>примерах</b>
+    <td>Только к markdown страницам в <b>демонстрациях</b>
 </td>
   </tr>
   <tr>
@@ -765,7 +769,3 @@ Translated by:
     <td>Информация о переводчике должна располагаться в конце страницы.</td>
   </tr>
 </table>
-
-
-Translated by
-{% include "web/_shared/contributors/dmitryskripunov.html" %}
