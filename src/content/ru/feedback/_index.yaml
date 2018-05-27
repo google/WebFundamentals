@@ -1,0 +1,86 @@
+---
+book_path: "/web/feedback/_book.yaml"
+landing_page:
+  header:
+    buttons:
+    - label: Поиск ошибок браузера
+      path: "/web/feedback/browser-bug-searcher"
+  rows:
+  - classname: devsite-landing-row-50
+    items:
+    - description: Мы хотим сделать проще поиск и сообщение о багах в любом браузере,
+        а так же помочь вам искать ресурсы, в то время как вы создаете ваш сайт. Сообщая
+        производителям браузеров об ошибках, которые вы нашли в их браузере, на определенном
+        устройстве или платформе - это неотъемлемая часть процесса улучшения веб-платформы!  Дополнительная
+        поддержка существующих багов поможет разработчикам определить проблемы, максимально
+        влияющие на пользователей.
+      image_path: images/hero-2x.png
+  - classname: devsite-landing-row-67
+    items:
+    - buttons:
+      - label: Поиск ошибок браузера
+        path: "/web/feedback/browser-bug-searcher"
+      description: Здесь вы можете провести поиск по трекерам ошибок всех основных
+        браузеров, чтобы попытаться найти интересующий вас баг.
+      heading: Поиск существующих ошибок
+      image_path: images/content-search-for-bugs-responsive-2x.png
+  - classname: devsite-landing-row-67
+    items:
+    - buttons:
+      - label: Узнайте как подать хорошую ошибку
+        path: "/web/feedback/file-a-bug"
+      description: Проблема встречается в других браузерах? Это регрессия? У вас есть
+        тестовый случай? Чем больше информации вы можете предоставить, тем выше шанс,
+        что ваш баг будет исправлен!
+      heading: Как подать хорошую ошибку
+      image_path: images/content-file-responsive-2x.png
+  - classname: devsite-landing-row-67
+    items:
+    - buttons:
+      - attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: cr-bug
+        classname: gc-analytics-event button button-white
+        label: Chromium
+        path: https://crbug.com
+      - attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: edge-bug
+        classname: gc-analytics-event button button-white
+        label: Edge
+        path: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/
+      - attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: moz-bug
+        classname: gc-analytics-event button button-white
+        label: Mozilla
+        path: https://bugzilla.mozilla.org/
+      - attributes:
+        - name: data-category
+          value: webfundamentals
+        - name: data-label
+          value: webkit-bug
+        classname: gc-analytics-event button button-white
+        label: WebKit
+        path: https://bugs.webkit.org/
+      description: Чтобы быть уверенным, что ваш баг будет быстро исправлен, важно
+        рассказать о нем правильным людям. Все основные производители браузеров обеспечивают
+        возможность сообщить о багах.
+      heading: Сообщить о баге
+      image_path: images/content-node-responsive-2x.png
+  - classname: devsite-landing-row-67
+    items:
+    - description: "\n Обсуждение проблем, с которыми вы сталкиваетесь, с другими
+        разработчиками, - отличный способ как обучения, так и обмена лучшими практиками.\n
+        \n  \n    \n      google-chrome тэг на Stack Overflow\n    \n  \n  \n    \n
+        \     ChromiumDev Slack Канал\n    \n  \n"
+      heading: Обсуждение решений
+      image_path: images/content-developer-discussions-responsive-2x.png
+project_path: "/web/feedback/_project.yaml"
+title: Программа обратной связи для разработчиков
