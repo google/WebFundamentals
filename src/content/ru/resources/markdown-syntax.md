@@ -401,14 +401,14 @@ class="alt">`,
     <tr>
       <td><code>value</code></td>
 <td>
-<code>String</code><br>выбранное значение, которое респондент видит как  метку,
-когда просматривает форму</td>
+<code>String</code><br>выбор значения, которое респонденты увидят в процессе
+просмотра формы.</td>
     </tr>
     <tr>
       <td><code>navigationType</code></td>
 <td>
-<code><a href="#">PageNavigationType</a></code><br>the choice's navigation
-type</td>
+<code><a data-parent-segment-tag-id="1399163"
+href="#">PageNavigationType</a></code><br>выбор типа навигации</td>
     </tr>
   </tbody>
 </table>
@@ -615,8 +615,3 @@ Time travel is fun.
 I do it literally all the time.
 {% endcomment %}
 </pre>
-
-
-
-Translated by
-{% include "web/_shared/contributors/dmitryskripunov.html" %}
