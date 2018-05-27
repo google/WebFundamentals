@@ -1,0 +1,18 @@
+---
+upper_tabs:
+- include: "/web/_upper_tabs-Fundamentals.yaml"
+- include: "/web/_upper_tabs-Tools.yaml"
+- include: "/web/_upper_tabs-Updates.yaml"
+- include: "/web/_upper_tabs-Showcase.yaml"
+- lower_tabs:
+    other:
+    - contents:
+      - path: "/web/feedback/"
+        title: Главная
+      - path: "/web/feedback/file-a-bug"
+        title: Как разместить Хороший Баг
+      - path: "/web/feedback/browser-bug-searcher"
+        title: Поиск ошибок браузера
+      name: Обратная связь
+  name: Обратная связь
+  path: "/web/feedback/"
