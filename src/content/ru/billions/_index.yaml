@@ -1,0 +1,149 @@
+---
+book_path: "/web/_book.yaml"
+landing_page:
+  custom_css_path: "/web/styles/wf-root.css"
+  header:
+    description: 'Следующий миллиард людей, пришедших в онлайн, будет разнообразным
+      во всех отношениях: локация, культура, уровень компьютерной грамотности, доступ
+      к сетям, и виды устройств, которые они используют.'
+  rows:
+  - classname: devsite-landing-row-50
+    items:
+    - description: "Следующий миллиард пользователей будет практически весь на мобильных
+        устройствах \nЭто предоставляет уникальные вызовы для веб-разработчиков, которые
+        должны отказаться от ограничений подхода \\\"mobile first\\\" в пользу полноценной
+        мобильной стратегии.\n \n Вы можете решить эти проблемы, сосредоточив внимание
+        на нескольких ключевых областях, перечисленных ниже.\n"
+      youtube_id: 9Bz5TikmJ-A
+  - classname: devsite-landing-row-cards
+    items:
+    - buttons:
+      - classname: wf-small-link
+        label: Тестируйте на симуляции низкой пропускной способности и высокой задержки
+        path: "/web/fundamentals/performance/poor-connectivity/#testing"
+      - classname: wf-small-link
+        label: Обрабатывайте нестабильные подключения и \"lie-fi\"
+        path: "/web/fundamentals/performance/poor-connectivity/#lie-fi"
+      - classname: wf-small-link
+        label: Проектируйте для оффлайн
+        path: "/web/fundamentals/codelabs/offline/"
+      - classname: wf-small-link
+        label: Уменьшите число запросов ресурсов
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads"
+      - classname: wf-small-link
+        label: Сделайте установки и обновления настолько маленькими и быстрыми, насколько
+          это возможно
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer"
+      description: |-
+        Низкая пропускная способность и неустойчивое соединение это норма для многих людей, имеющих доступ к вебу.
+        Большинство людей онлайн все еще имеют соединение 2G или \"3G\" которое деградирует до 2G. Даже к 2020, больше чем 10% пользователей все еще будут на 2G. Множество смартфонов используются оффлайн и пользователи регулярно включают режим \"в самолете\", чтобы избежать потребление данных.
+      heading: Проектируйте для превосходного соединения
+      image_path: images/connectivity.png
+    - buttons:
+      - classname: wf-small-link
+        label: Поймите стоимость загрузки страницы и компонентов приложения
+        path: "/web/fundamentals/design-and-ux/responsive/content#weight"
+      - classname: wf-small-link
+        label: Сократите объем данных, необходимых для взаимодействия
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/"
+      - classname: wf-small-link
+        label: 'Оптимизируйте навигацию: помогите пользователям получить то, что они
+          хотят'
+        path: "/web/fundamentals/design-and-ux/principles/#home-page-and-site-navigation"
+      - classname: wf-small-link
+        label: Приоритезируйте отображение содержимого
+        path: "/web/fundamentals/performance/critical-rendering-path/"
+      description: 'Высокая стоимость данных это часто большее препятствие к доступу,
+        чем плохое соединение. Мобильные пользователи экономны; даже \"безлимитные\"
+        планы могут стать дорогими в роуминге или если будут применены неожиданные
+        сборы. Множество мобильных пользователей экстремально экономны, по понятной
+        причине: например 500MB план в Индии стоит как 17 часов работы с минимальной
+        оплатой.'
+      heading: Экономия использования данных
+      image_path: images/cost.png
+  - classname: devsite-landing-row-cards
+    items:
+    - buttons:
+      - classname: wf-small-link
+        label: Избегайте перерисовок, отражений и переориентаций
+        path: "/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts"
+      - classname: wf-small-link
+        label: Избегайте ресурсоёмких UI анимаций
+        path: "/web/fundamentals/design-and-ux/animations/#avoid-animating-expensive-properties/"
+      - classname: wf-small-link
+        label: 'Избегайте использования радио: устраняйте ненужные загрузки'
+        path: "/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads"
+      - classname: wf-small-link
+        label: Уменьшите количество действий пользователя для получения контента
+        path: "/web/fundamentals/design-and-ux/principles/"
+      - classname: wf-small-link
+        label: Избегайте дорогостоящих анимации
+        path: "/web/fundamentals/design-and-ux/animations/animations-and-performance"
+      description: Множество людей, даже в городах, не имеет доступа к надежному и
+        доступному источнику питания. Это делает энергосбережение решающим фактором
+        в проектировании приложений и контента.
+      heading: Сократите расход батареи
+      image_path: images/consumption.png
+    - buttons:
+      - classname: wf-small-link
+        label: Учитывайте широкий диапазон экранов и устройств
+        path: "/web/fundamentals/codelabs/your-first-multi-screen-site/"
+      - classname: wf-small-link
+        label: 'Проектируйте для ограниченной памяти и CPU: сокращайте и оптимизируйте'
+        path: "/web/fundamentals/performance/"
+      description: 'Слабые характеристики это норма. Глобально, у большинства новых
+        интернет-пользователей дешевые устройства с базовым железом: одноядерные процессоры,
+        4\" экраны, ограниченная оперативная память, и ограниченный накопитель.'
+      heading: Оптимизируйте под возможности устройства
+      image_path: images/capability.png
+  - classname: devsite-landing-row-cards
+    items:
+    - buttons:
+      - classname: wf-small-link
+        label: Проектируйте содержимое для хорошей работы на различных размерах экранов
+        path: "/web/fundamentals/design-and-ux/responsive/content#viewport"
+      - classname: wf-small-link
+        label: Устраните избыточное содержимое
+        path: "/web/fundamentals/design-and-ux/responsive/content#redundant"
+      - classname: wf-small-link
+        label: Пишите для мобильного
+        path: "/web/fundamentals/design-and-ux/responsive/content#write"
+      - classname: wf-small-link
+        label: Рассмотрите AMP HTML
+        path: https://www.ampproject.org/
+      description: Большая раскладка, содержимое с тяжелой графикой расстраивают пользователей
+        и отталкивают их от использования вашего приложения или сайта. Слишком широкий
+        или высокий контент игнорируется некоторыми пользователями и сознательно избегается
+        другими — а лишний контент добавляет вес страницы и стоимость данных.
+      heading: Создание контента для нескольких устройств
+      image_path: images/content.png
+    - buttons:
+      - classname: wf-small-link
+        label: Оптимизация транзакций
+        path: "/web/fundamentals/design-and-ux/principles/#commerce-and-conversion"
+      - classname: wf-small-link
+        label: Оптимизация форм
+        path: "/web/fundamentals/design-and-ux/input/forms/"
+      - classname: wf-small-link
+        label: Проектируйте дружественные к ориентации макеты для небольших экранов
+        path: "/web/fundamentals/design-and-ux/principles/#usability-and-form-factor"
+      description: "Платежные системы недоступны для многих людей в вебе. У многих
+        людей в мире нет счетов в банке и они не пользуются кредитными картами, включая
+        \ 8% семей в США. Много платежных систем не работают хорошо на маленьких экранах
+        \n и нестабильном соединении."
+      heading: 'Транзакции и монетизация: думайте глобально'
+      image_path: images/monetization.png
+    - buttons:
+      - classname: wf-small-link
+        label: Проектируйте ваш сайт с учетом добавления локализаций
+        path: https://support.google.com/webmasters/answer/182192/
+      description: Локализация может помочь вам получить доступ к новым рынкам. Множество
+        веб-сайтов опубликованы только на английском языке, но английский не родной
+        язык для большинства людей в сети. Только 5.52% населения нативные носители
+        английского языка и культурные конвенции США или Европы могут быть с ним не
+        знакомы или интуитивно непонятны. Краткие и компактные инструкции или подсказки
+        на английском могут быть многословны и назойливы в других языках.
+      heading: План локализации
+      image_path: images/localization.png
+project_path: "/web/_project.yaml"
+title: Создание для Миллиардов
