@@ -23,7 +23,7 @@ dev-rels. We cover:
 * The [default
   stylesheet](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css?q=html.css&sq=package:chromium&g=0&l=1).
 * The [Accessibility Object Model](https://github.com/WICG/aom/blob/gh-pages/explainer.md).
-* [Accessibility devtools](https://developers.google.com/web/updates/2018/01/devtools#a11y).
+* [Accessibility devtools](/web/updates/2018/01/devtools#a11y).
 * The [original original original Google
   logo](https://en.wikipedia.org/wiki/Google_logo#/media/File:First-google-logo.gif).
 
