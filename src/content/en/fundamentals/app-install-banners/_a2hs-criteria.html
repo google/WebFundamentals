@@ -1,8 +1,21 @@
 <div id="pwa-criteria" class="clearfix"></div>
 
-When the following criteria are met, Chrome will fire the
-<a href="/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt">
-<code>beforeinstallprompt</code></a> event, then show the prompt to the user.
+<aside class="caution">
+  <b>Attention:</b> Beginning in Chrome 68 (beta in early June 2018),
+  Chrome will <b>not</b> automatically show the Add to Home Screen banner,
+  instead, you <b>must</b> trigger it by using the
+  <a href="/web/fundamentals/app-install-banners/#trigger-m68">
+  <code>beforeinstallprompt</code></a> event.
+</aside>
+
+
+<p>
+  To trigger the
+  <a href="/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt">
+    <code>beforeinstallprompt</code>
+  </a> event and show the add to home screen banner, the following criteria
+  must be met:
+</p>
 
 <ul>
   <li>The web app is not already installed</li>
@@ -49,10 +62,13 @@ When the following criteria are met, Chrome will fire the
   </li>
 </ul>
 
-<aside class="caution">
-  <b>Caution:</b> Beginning in Chrome 68 (May 2018), Chrome will <b>not</b>
-  automatically show the Add to Home Screen prompt, instead, you <b>must</b>
-  trigger it by using the
-  <a href="/web/fundamentals/app-install-banners/#trigger-m68">
-  <code>beforeinstallprompt</code></a> event.
+
+
+<aside class="note">
+  <b>Note:</b> Other browsers may have different criteria, check their
+  respective sites for full details:
+  <a href="https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps#requirements">Edge</a>,
+  <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Add_to_home_screen#How_do_you_make_an_app_A2HS-ready">Firefox</a>,
+  <a href="https://dev.opera.com/articles/installable-web-apps/">Opera</a>, and
+  <a href="https://samsunginter.net/docs/ambient-badging">Samsung Internet</a>.
 </aside>
