@@ -185,7 +185,6 @@ gulp.task('build:shows', async function(cb) {
     Object.keys(videosByYear)
       .filter((year) => year >= global.WF.minFeedDate)
       .forEach((year) => {
-        console.log(path.join(global.WF.src.content, 'shows', year))
         wfYouTubeShows.buildFeeds(videosByYear[year], {
           outputPath: path.join(global.WF.src.content, 'shows', year),
         });
