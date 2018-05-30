@@ -1,8 +1,18 @@
 <div id="pwa-criteria" class="clearfix"></div>
 
-When the following criteria are met, Chrome will fire the
-<a href="/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt">
-<code>beforeinstallprompt</code></a> event, then show the prompt to the user.
+<aside class="caution">
+  <b>Attention:</b> Beginning in Chrome 68 (beta in early June 2018),
+  Chrome will <b>not</b> automatically show the Add to Home Screen banner,
+  instead, you <b>must</b> show it by calling <code>prompt()</code> on the
+  <a href="/web/fundamentals/app-install-banners/#trigger-m68">
+  <code>beforeinstallprompt</code></a> event.
+</aside>
+
+
+<p>
+  Chrome will fire the <code>beforeinstallprompt</code> event only when the
+  following criteria are met:
+</p>
 
 <ul>
   <li>The web app is not already installed</li>
@@ -11,48 +21,47 @@ When the following criteria are met, Chrome will fire the
     with the domain for at least 30 seconds)
   </li>
   <li>
-    Meets the Progressive Web App criteria:
+    Includes a <a href="/web/fundamentals/web-app-manifest/">
+    web app manifest</a> that includes:
     <ul>
       <li>
-        Includes a <a href="/web/fundamentals/web-app-manifest/">
-        web app manifest</a> that includes:
-        <ul>
-          <li>
-            <a href="/web/fundamentals/web-app-manifest/#name"><code>short_name</code>
-            or <code>name</code></a>
-          </li>
-          <li>
-            <a href="/web/fundamentals/web-app-manifest/#icons"><code>icons</code></a>
-            must include a 192px and a 512px sized icons
-          </li>
-          <li>
-            <a href="/web/fundamentals/web-app-manifest/#start-url"><code>start_url</code></a>
-          </li>
-          <li>
-            <a href="/web/fundamentals/web-app-manifest/#display"><code>display</code></a>
-            must be one of:
-            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>fullscreen</code></a>,
-            <a href="/web/fundamentals/web-app-manifest/#display-params"><code>standalone</code></a>,
-            or <a href="/web/fundamentals/web-app-manifest/#display-params"><code>minimal-ui</code></a>
-          </li>
-        </ul>
+        <a href="/web/fundamentals/web-app-manifest/#name"><code>short_name</code>
+        or <code>name</code></a>
       </li>
       <li>
-        Served over <a href="/web/tools/lighthouse/audits/https"><b>HTTPS</b></a>
-        (required for service workers)
+        <a href="/web/fundamentals/web-app-manifest/#icons"><code>icons</code></a>
+        must include a 192px and a 512px sized icons
       </li>
       <li>
-        Has registered a <a href="/web/fundamentals/getting-started/primers/service-workers">
-        service worker</a> with a <code>fetch</code> event handler
+        <a href="/web/fundamentals/web-app-manifest/#start-url"><code>start_url</code></a>
+      </li>
+      <li>
+        <a href="/web/fundamentals/web-app-manifest/#display"><code>display</code></a>
+        must be one of:
+        <a href="/web/fundamentals/web-app-manifest/#display-params"><code>fullscreen</code></a>,
+        <a href="/web/fundamentals/web-app-manifest/#display-params"><code>standalone</code></a>,
+        or <a href="/web/fundamentals/web-app-manifest/#display-params"><code>minimal-ui</code></a>
       </li>
     </ul>
   </li>
+  <li>
+    Served over <a href="/web/tools/lighthouse/audits/https"><b>HTTPS</b></a>
+    (required for service workers)
+  </li>
+  <li>
+    Has registered a <a href="/web/fundamentals/getting-started/primers/service-workers">
+    service worker</a> with a <code>fetch</code> event handler
+  </li>
 </ul>
 
-<aside class="caution">
-  <b>Caution:</b> Beginning in Chrome 68 (May 2018), Chrome will <b>not</b>
-  automatically show the Add to Home Screen prompt, instead, you <b>must</b>
-  trigger it by using the
-  <a href="/web/fundamentals/app-install-banners/#trigger-m68">
-  <code>beforeinstallprompt</code></a> event.
+
+
+<aside class="note">
+  <b>Note:</b> Other browsers may have different criteria to trigger the
+  <code>beforeinstallprompt</code> event, check their respective sites for
+  full details:
+  <a href="https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps#requirements">Edge</a>,
+  <a href="https://developer.mozilla.org/en-US/Apps/Progressive/Add_to_home_screen#How_do_you_make_an_app_A2HS-ready">Firefox</a>,
+  <a href="https://dev.opera.com/articles/installable-web-apps/">Opera</a>, and
+  <a href="https://samsunginter.net/docs/ambient-badging">Samsung Internet</a>.
 </aside>
