@@ -1,0 +1,24 @@
+---
+toc:
+- section:
+  - section:
+    - include: "/web/fundamentals/web-components/_toc.yaml"
+    title: HTML &amp; DOM
+  - section:
+    - path: "/web/fundamentals/primers/async-functions"
+      title: Асинхронные функции
+    - path: "/web/fundamentals/primers/promises"
+      title: Promises
+    - section:
+      - path: "/web/fundamentals/primers/service-workers/"
+        title: Обзор
+      - path: "/web/fundamentals/primers/service-workers/lifecycle"
+        title: Жизненный цикл
+      - path: "/web/fundamentals/primers/service-workers/registration"
+        title: Регистрация
+      - path: "/web/fundamentals/primers/service-workers/high-performance-loading"
+        title: Высокоэффективная загрузка
+      title: Сервис-воркеры
+    title: JavaScript
+  style: accordion
+  title: Базовые технологии
