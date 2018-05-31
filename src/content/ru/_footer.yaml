@@ -1,0 +1,51 @@
+---
+footer:
+- promos:
+  - description: Новости Chromium блога.
+    icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
+    label: Chromium Блог
+    path: https://blog.chromium.org
+  - description: Fork наших шаблонов и других open-source проектов.
+    icon: "/site-assets/logo-github.svg"
+    label: GitHub
+    path: https://github.com/googlechrome
+  - description: Присоединяйтесь к @ChromiumDev в Twitter.
+    icon: "/site-assets/logo-twitter.svg"
+    label: Twitter
+    path: https://twitter.com/chromiumdev
+  - description: Посмотрите наши видео.
+    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
+    label: Видео
+    path: "/web/shows/"
+- linkboxes:
+  - contents:
+    - label: Building for Billions
+      path: "/web/billions/"
+    - label: Документация по Сhrome Extension
+      path: https://developers.chrome.com/extensions/api_index
+    - path: "/web/feedback/"
+      label: Программа отзывов для разработчиков
+    - label: Прогрессивные Web приложения
+      path: "/web/progressive-web-apps/"
+    icon_name: звезда
+    name: Ключевые темы
+  - contents:
+    - label: Обучение с преподавателем
+      path: "/web/ilt/"
+    - label: Web курсы на Udacity
+      path: "/web/shows/udacity/"
+    - label: Агенства
+      path: "/web/agencies/"
+    icon_name: школа
+    name: Обучение и Партнеры
+  - contents:
+    - label: File an Issue
+      path: https://github.com/google/WebFundamentals/issues
+    - label: Посмотреть код страницы
+      path: https://github.com/google/WebFundamentals
+    - label: Ресурсы
+      path: "/web/resources/"
+    - label: Перевод
+      path: "/web/resources/translations"
+    icon_name: bug_report
+    name: Участие
