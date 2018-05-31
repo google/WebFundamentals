@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-05-31 #}
 {# wf_published_on: 2017-10-24 #}
-{# wf_tags: trusted-web-activity #}
+{# wf_tags: trusted-web-activity,chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs. #}
 {# wf_blink_components: N/A #}
@@ -13,13 +13,21 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 
 _Last updated: May 7th, 2018_
 
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="TCgT8dzSiU8"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 **Trusted Web Activities** are a new way to integrate _your_ web-app content
 such as _your_ PWA with _your_ Android app using a protocol based on Custom
 Tabs.
 
 Note: Trusted Web Activities are currently only available in
 <a href="https://play.google.com/store/apps/details?id=com.chrome.dev">Chrome
-Dev (m68) on Android</a>, and should be available in stable in Summer 2018.
+68 on Android</a> (Beta in June 2018), and should be available in stable
+in Summer 2018.
+
 
 _Looking for the code?_
 
@@ -28,6 +36,8 @@ _Looking for the code?_
 * [Sample using
   TrustedWebUtils](https://github.com/GoogleChrome/custom-tabs-client/tree/master/svgomg)
 
+
+<div class="clearfix"></div>
 
 There are a few things that make Trusted Web Activities different from other
 ways to integrate web content with your app:
