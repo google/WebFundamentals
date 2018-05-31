@@ -415,7 +415,7 @@ is in the Input Selection example.
 
 ## Conclusion: looking ahead
 
-As I said earlier, augmented reality expected in Chrome 69 (Canary some time
+As I said earlier, augmented reality is expected in Chrome 69 (Canary some time
 in June 2018). Nevertheless, I encourage you try what we've got so far. We
 need feedback to make it better. Follow it's progress by watching
 ChromeStatus.com for [WebXR Hit
