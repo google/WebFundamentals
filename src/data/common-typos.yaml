@@ -24,6 +24,10 @@
   caseSensitive: True
   description: "See: https://developers.google.com/style/word-list#ajax"
 
+- typo: AppEngine
+  fix: App Engine
+  caseSensitive: True
+
 - typo: android\s
   fix: Android
   caseSensitive: True
@@ -32,6 +36,9 @@
 - typo: chrome\s
   fix: Chrome
   caseSensitive: True
+
+- typo: Dev Tools
+  fix: DevTools
 
 - typo: (G|g)ithub\s
   fix: GitHub
@@ -45,25 +52,50 @@
   fix: JavaScript
   caseSensitive: True
 
+- typo: node(\.js|)
+  fix: Node
+  caseSensitive: True
+
+- typo: m[\d]{2,}
+  fix: $1
+  description: "Do not use 'M' or 'milestone'"
+  caseSensitive: True
+
 - typo: MacOS
   fix: macOS
   caseSensitive: True
   description: "See: https://developers.google.com/style/word-list#macos"
 
+- typo: Material Design
+  fix: material design
+  caseSensitive: True
+
 - typo: noSQL
   fix: NoSQL
   caseSensitive: True
+
+- typo: Service\s?Worker
+  fix: service worker
+  caseSensitive: True
+  description: "Capitalize Service if it's the first word in the sentence."
 
 - typo: Stackoverflow
   fix: StackOverflow
   caseSensitive: True
 
+- typo: web components
+  fix: Web Components
+  caseSensitive: True
 
 ## British vs American spellings
 # https://developers.google.com/style/spelling
 
 - typo: analyse
   fix: analyze
+  british: True
+
+- typo: behaviour(s|)
+  fix: behavior$1
   british: True
 
 - typo: colour
@@ -260,6 +292,9 @@
 - typo: (un|)singed
   fix: $1signed
 
+- typo: appshell
+  fix: app shell
+
 - typo: andoid
   fix: Android
 
@@ -325,6 +360,9 @@
 
 - typo: func(iton|toin)(s|al|ed|ing|)
   fix: function$2
+
+- typo: geo(\s|-)location
+  fix: geolocation
 
 - typo: goole|googel|goolge
   fix: google
@@ -472,6 +510,9 @@
 
 - typo: upgarding
   fix: upgrading
+
+- typo: usecase
+  fix: use case
 
 
 ## Spelling mistakes & typos in code

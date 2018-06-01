@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-05-02 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -247,3 +247,8 @@ the sections above.
 We would love to hear your feedback, questions, and suggestions to help us 
 improve the Chrome User Experience Report. Please join the conversation on our 
 [public Google Group](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report).
+
+## License
+
+"Chrome User Experience Report" datasets by Google are licensed under a 
+[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

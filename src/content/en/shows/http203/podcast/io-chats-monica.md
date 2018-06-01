@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Informative mouth-words.
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2018-05-23 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-monica.mp3 #}
 {# wf_podcast_duration: 00:15:33 #}
@@ -13,7 +13,7 @@ description: Informative mouth-words.
 
 # I/O chat with Monica Dinculescu {: .page-title }
 
-<img src="/web/shows/http203/podcast/images/surma-and-jake-2.jpg" class="attempt-right">
+<img src="/web/shows/http203/podcast/images/io.jpg" class="attempt-right">
 
 In this episode we chat to [Monica Dinculescu](https://twitter.com/notwaldorf?), who works on
 Chrome. We cover:

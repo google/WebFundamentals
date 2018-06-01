@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.
 experiments_path: /web/updates/2018/05/_experiments.yaml
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_tags: chrome68,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -188,8 +188,6 @@ While paused on a breakpoint, right-click a property in the Scope pane and selec
     <b>Figure 7</b>. An example of <b>Add property path to watch</b>
   </figcaption>
 </figure>
-
-Thanks to PhistucK for the contribution.
 
 ## "Show timestamps" moved to settings {: #timestamps }
 
