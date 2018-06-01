@@ -94,6 +94,10 @@
   fix: analyze
   british: True
 
+- typo: behaviour(s|)
+  fix: behavior$1
+  british: True
+
 - typo: colour
   fix: color
   british: True
