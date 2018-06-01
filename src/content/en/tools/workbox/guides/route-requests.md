@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 ```
 
 The only thing to be wary of is that this would only match for requests
-on your origin. If there was a separate site what had the URL
+on your origin. If there was a separate site that had the URL
 "https://some-other-origin.com/logo.png", this route wouldn’t match, because
 in most cases, that’s not what was intended. Instead you’d need to define
 the entire URL to match.
