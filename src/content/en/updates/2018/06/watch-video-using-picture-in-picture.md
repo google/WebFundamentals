@@ -26,6 +26,8 @@ With the new [Picture-in-Picture Web API], you can initiate and control
 Picture-in-Picture for &lt;video> elements on your website. Try it out on our
 official [Picture-in-Picture sample].
 
+Dogfood: The Picture-in-Picture Web API requires enabling `chrome://flags/#enable-experimental-web-platform-features` and `chrome://flags/#enable-surfaces-for-videos` experimental flags in Chrome 68 for desktop.
+
 ## Background {: #background }
 
 In September 2016, Safari added Picture-in-Picture support through a [WebKit API]
