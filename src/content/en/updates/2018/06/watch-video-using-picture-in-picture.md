@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for &lt;video> elements on your website.
 
-{# wf_updated_on: 2018-05-31 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/06/watch-video-using-picture-in-picture/hero.png #}
@@ -25,9 +25,6 @@ watching while interacting with other sites, or applications.
 With the new [Picture-in-Picture Web API], you can initiate and control
 Picture-in-Picture for &lt;video> elements on your website. Try it out on our
 official [Picture-in-Picture sample].
-
-Note: The Picture-in-Picture Web API is [available for origin trials] in Chrome
-68 for desktop only (beta in June 2018, stable in July 2018).
 
 ## Background {: #background }
 
@@ -220,25 +217,6 @@ Web API.
 
 Demos and codelabs will follow.
 
-## Available for origin trials {: #available-for-origin-trials }
-
-To get as much feedback as possible we're adding this feature in Chrome 68 as
-an [origin trial] for Chrome OS, Linux, Mac, and Windows.
-
-Origin trials allow you to temporarily enable the feature for users of your
-website, so you can test its real-world impact. To do this, you need to
-[request a token for your origin] and [insert it in your application].
-
-To avoid the problems we saw with vendor prefixes, origin trials are globally
-shut off if usage exceeds 0.5% of all Chrome page loads. We recommend that
-large websites only use origin trials for A/B testing and experimentations that
-do not affect all their users. During the origin trial, the API may still
-change in backward-incompatible ways before we freeze it into the web platform.
-
-The Picture-in-Picture Web API origin trial will end in September 2018. By that
-point, we expect to have figured out any changes necessary to stabilize the
-feature and move it out from origin trials.
-
 ## What’s next {: #next }
 
 First, check out the [implementation status page] to know which parts of the
@@ -277,7 +255,6 @@ involved in the [standardization effort].
 
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
 [Picture-in-Picture sample]: https://googlechrome.github.io/samples/picture-in-picture/
-[available for origin trials]: #available-for-origin-trials
 [WebKit API]: https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html
 [native Android API]: https://developer.android.com/about/versions/oreo/android-8.0#opip
 [announced our intent]: https://developers.google.com/web/updates/2017/09/picture-in-picture
@@ -289,9 +266,6 @@ involved in the [standardization effort].
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
 [disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md#picture-in-picture
-[origin trial]: https://groups.google.com/a/chromium.org/d/msg/blink-dev/xQiDYZEnwaA/MNGbYJnaBwAJ
-[request a token for your origin]: http://bit.ly/PipOriginTrials
-[insert it in your application]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [implementation status page]: https://github.com/WICG/picture-in-picture/blob/master/implementation-status.md
 [add custom Picture-in-Picture controls]: https://github.com/WICG/picture-in-picture/pull/69
 [https://www.chromestatus.com/feature/5729206566649856]: https://www.chromestatus.com/feature/5729206566649856
