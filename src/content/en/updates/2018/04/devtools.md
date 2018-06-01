@@ -16,8 +16,6 @@ experiments_path: /web/updates/2018/04/_experiments.yaml
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: The video version of these release notes will be published around early June 2018.
-
 New features and major changes coming to DevTools in Chrome 67 include:
 
 * [Search across all network headers](#network-search)
@@ -31,6 +29,14 @@ New features and major changes coming to DevTools in Chrome 67 include:
 * [Dark theme updates](#dark)
 * [Certificate transparency information in the **Security** panel](#security)
 * [Site isolation features in the **Performance** panel](#site-isolation)
+
+[Video version of the release notes](https://youtu.be/4EdPq9Nw6uI):
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="4EdPq9Nw6uI"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
