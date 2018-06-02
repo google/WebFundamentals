@@ -192,7 +192,7 @@ While paused on a breakpoint, right-click a property in the Scope pane and selec
 ## "Show timestamps" moved to settings {: #timestamps }
 
 The **Show timestamps** checkbox previously in **Console Settings**
-![Console Settings][settings]{:.inline-icon} has moved
+![Console Settings][settings]{:.inline-icon} has moved to
 [Settings](/web/tools/chrome-devtools/ui#settings).
 
 ## Feedback {: #feedback }
