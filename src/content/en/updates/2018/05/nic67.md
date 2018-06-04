@@ -24,7 +24,7 @@ description: What's new in Chrome 67 for developers?
 * Progressive Web Apps are coming to the [desktop](#desktop-pwas)
 * The [generic sensor API](#generic-sensor-api) makes it way easier to get
   access to device sensors like the accelerometer, gyroscope and more.
-* And [`BigInt`'s](#bigint) make dealing with big integers way easier.
+* And [`BigInt`s](#bigint) make dealing with big integers way easier.
 
 And there’s [plenty more](#more)!
 
@@ -119,13 +119,14 @@ post from September with everything you need to know.
 
 
 
-##  `BigInt`'s {: #bigint }
+##  `BigInt`s {: #bigint }
 
 
-`BigInt`'s are a new numeric primitive in JavaScript that can represent integers
+`BigInt`s are a new numeric primitive in JavaScript that can represent integers
 with arbitrary precision. Large integer IDs and high-accuracy timestamps
 can’t be safely represented as `Numbers` in JavaScript, which often leads
-to real-world bugs because we end up representing them as strings instead.
+to real-world bugs (because of which we often end up representing such
+numbers as strings instead).
 
 ```javascript
 let max = Number.MAX_SAFE_INTEGER;
@@ -136,7 +137,7 @@ max = max + 1;
 // → 9_007_199_254_740_992 - Uh, no?
 ```
 
-With [`BigInt`'s](/web/updates/2018/05/bigint), we can safely store and
+With [`BigInt`s](/web/updates/2018/05/bigint), we can safely store and
 perform integer arithmetic without overflowing. Today, dealing with large
 integers typically means we have to resort to a library that would emulate
 `BigInt`-like functionality.
