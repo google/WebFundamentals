@@ -4,7 +4,7 @@ description: Starting in Chrome 68, HTTP requests that check for updates to the 
 
 {# wf_updated_on: 2018-06-04 #}
 {# wf_published_on: 2018-06-04 #}
-{# wf_tags: progressive-web-apps, serviceworker #}
+{# wf_tags: progressive-web-apps, serviceworker, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 {# wf_featured_snippet: Starting in Chrome 68, HTTP requests that check for updates to the service worker script will no longer be fulfilled by the <a href="/web/fundamentals/performance/optimizing-content-efficiency/http-caching">HTTP cache</a> by default. This works around a <a href="/web/tools/workbox/guides/service-worker-checklist#cache-control_of_your_service_worker_file">common developer pain point</a>, in which setting an inadvertent <code>Cache-Control:</code> header on your service worker script could lead to delayed updates. #}
 {# wf_blink_components: Blink>ServiceWorker #}
@@ -35,7 +35,6 @@ will, in parallel, request the JavaScript resource that was originally passed in
 For the purposes of this article, let's assume its URL is `/service-worker.js` and that it
 contains a single call to [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts),
 which loads additional code that's run inside the service worker:
-
 
 ```js
 // Inside our /service-worker.js file:
