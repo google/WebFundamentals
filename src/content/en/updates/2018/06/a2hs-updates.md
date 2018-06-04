@@ -104,7 +104,9 @@ within a user gesture, Chrome will show a modal add to home screen dialog.
 ## The mini-infobar
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/2018/06/a2hs-infobar-cropped.png">
+  <img
+      class="screenshot"
+      src="/web/updates/images/2018/06/a2hs-infobar-cropped.png">
   <figcaption>
     The mini-infobar
   </figcaption>
@@ -122,9 +124,11 @@ or not.
 <div class="clearfix"></div>
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/2018/06/a2hs-omnibox-cropped.png" >
+  <img
+      class="screenshot"
+      src="/web/updates/images/2018/06/a2hs-omnibox-cropped.png" >
   <figcaption>
-    Concept of the install button in the omnibox
+    Early concept of the install button in the omnibox
   </figcaption>
 </figure>
 The mini-infobar is an interim experience for Chrome on Android as we work
@@ -137,7 +141,7 @@ an install button into the omnibox.
 ## Triggering the add to home screen dialog {: #trigger }
 
 <figure class="attempt-left" style="max-width: 200px">
-  <img src="/web/updates/images/2018/06/a2hs-spotify.png" >
+  <img class="screenshot" src="/web/updates/images/2018/06/a2hs-spotify.png" >
   <figcaption>
     Install button on a Desktop Progressive Web App
   </figcaption>
@@ -190,7 +194,9 @@ again be fired on each page navigation.
 ### Showing the dialog with `prompt()` {: #showing-the-prompt }
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/2018/06/a2hs-dialog-cropped.png" >
+  <img
+      class="screenshot"
+      src="/web/updates/images/2018/06/a2hs-dialog-cropped.png">
   <figcaption>
     Add to home screen dialog
   </figcaption>
@@ -212,16 +218,15 @@ btnInstall.addEventListener('click', () => {
   // Show the modal add to home screen dialog
   installPromptEvent.prompt();
   // Wait for the user to respond to the prompt
-  installPromptEvent.userChoice
-    .then((choiceResult) => {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the A2HS prompt');
-      } else {
-        console.log('User dismissed the A2HS prompt');
-      }
-      // Clear the saved prompt since it can't be used again
-      installPromptEvent = null;
-    });
+  installPromptEvent.userChoice.then((choice) => {
+    if (choice.outcome === 'accepted') {
+      console.log('User accepted the A2HS prompt');
+    } else {
+      console.log('User dismissed the A2HS prompt');
+    }
+    // Clear the saved prompt since it can't be used again
+    installPromptEvent = null;
+  });
 });
 ```
 
