@@ -9,7 +9,7 @@ description: Starting in Chrome 68 on Android, the Add to Home Screen behavior i
 {# wf_featured_snippet: Starting in Chrome 68 on Android, the Add to Home Screen behavior is changing to give you more control over when and how to prompt the user. If your site meets the add to home screen criteria, Chrome will no longer automatically show the add to home screen banner. Instead, you'll need to call <code>prompt()</code> on the saved <code>beforeinstallprompt</code> event to show the add to home screen dialog prompt to your users #}
 {# wf_blink_components: UI>Browser>WebAppInstalls #}
 
-# Updates to Add to Home Screen Behavior {: .page-title }
+# Changes to Add to Home Screen Behavior {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
