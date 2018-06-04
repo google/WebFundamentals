@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Starting in Chrome 68 on Android, the Add to Home Screen behavior is changing to give you more control over when and how to prompt the user. If your site meets the add to home screen criteria, Chrome will no longer automatically show the add to home screen banner. Instead, you'll need to call prompt() on the saved beforeinstallprompt event to show the add to home screen dialog prompt to your users.
 
-{# wf_updated_on: 2018-06-01 #}
-{# wf_published_on: 2018-06-05 #}
+{# wf_updated_on: 2018-06-04 #}
+{# wf_published_on: 2018-06-04 #}
 {# wf_tags: progressive-web-apps,desktop,chrome68,addtohomescreen #}
 {# wf_featured_image: /web/updates/images/2018/06/a2hs-dialog-cropped.png #}
 {# wf_featured_snippet: Starting in Chrome 68 on Android, the Add to Home Screen behavior is changing to give you more control over when and how to prompt the user. If your site meets the add to home screen criteria, Chrome will no longer automatically show the add to home screen banner. Instead, you'll need to call <code>prompt()</code> on the saved <code>beforeinstallprompt</code> event to show the add to home screen dialog prompt to your users #}
@@ -139,14 +139,14 @@ an install button into the omnibox.
 <figure class="attempt-left" style="max-width: 200px">
   <img src="/web/updates/images/2018/06/a2hs-spotify.png" >
   <figcaption>
-    Install button on Spotify's Desktop Progressive Web App
+    Install button on a Desktop Progressive Web App
   </figcaption>
 </figure>
 
 Instead of prompting the user on page load (an
 [anti-pattern for permission requests](/web/fundamentals/native-hardware/user-location/#ask_permission_responsibly)),
 you can indicate your app can be installed with some UI, which will then show
-the modal install prompt. For example Spotify’s desktop PWA adds an
+the modal install prompt. For example this desktop PWA adds an
 ‘Install App’ button just above the user's profile name.
 
 Prompting to install your app on a user gesture feels less spammy to the user
@@ -244,6 +244,6 @@ for more information, including:
 * Tracking if the app has been installed
 * Determining if your app is running as an installed app
 
-{% include "web/_shared/rss-widget-updates.html" %}
-
 {% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
