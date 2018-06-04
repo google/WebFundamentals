@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-04 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -120,7 +120,7 @@ Drawing is done using WebGL APIs. You can do that if you're really ambitious.
 Though, we recommend using a framework. The immersive web samples use one
 created just for the demos called
 [Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail).
-Three.js will support WebXR in early May. There is no official word yet on
+Three.js has supported WebXR since May. I've heard nothing about 
 A-Frame.
 
 ## Starting and running an app
