@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Third-party services can start deploying their own network request handlers.
 
-{# wf_updated_on: 2018-05-31 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2016-09-12 #}
 {# wf_tags: chrome54,origintrials,serviceworker,cors,fetch #}
 {# wf_featured_image: /web/updates/images/2016/09/foreign-fetch/show-all-service-workers.png #}

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 67 for developers?
 
 {# wf_published_on: 2018-05-29 #}
-{# wf_updated_on: 2018-05-29 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome67,new-in-chrome #}
 {# wf_featured_snippet: Chrome 67 brings Progressive Web Apps to the desktop. Adds support for the generic sensor API, which makes it way easier to get access to device sensors like the accelerometer, gyroscope and more. And adds support for BigInts making dealing with big integers way easier. Let’s dive in and see what’s new for developers in Chrome 67! #}

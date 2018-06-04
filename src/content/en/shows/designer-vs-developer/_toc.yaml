@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Getting a headstart in the industry'
+        path: /web/shows/designer-vs-developer/podcast/DVDS3E03-getting-a-start-in-industry
       - title: 'Designing for standards and using Styleable components'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E02-designing-for-standards
       - title: 'Designing for CSS Grid, layout and Variable fonts'

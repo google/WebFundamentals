@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Informative mouth-words.
 
-{# wf_updated_on: 2018-05-29 #}
+{# wf_updated_on: 2018-06-01 #}
 {# wf_published_on: 2018-05-23 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-monica.mp3 #}
 {# wf_podcast_duration: 00:15:33 #}
