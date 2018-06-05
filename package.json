@@ -34,7 +34,7 @@
     "github": "^8.1.1",
     "glob": "^7.1.2",
     "globule": "^1.0.0",
-    "googleapis": "^12.4.0",
+    "googleapis": "^31.0.2",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
