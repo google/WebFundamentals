@@ -21,7 +21,7 @@ to learn.
 
 You will, however, leave this tutorial with an easy-to-understand, yet detailed and
 quantitative, workflow for measuring load performance. And you will know how to
-*prove* that any changes you make to your code actually do improve load performance.
+*prove* that any changes you make to your code actually are improving load performance.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ know anything about load performance.
 
 ## Introduction {: #intro }
 
-This is Tony.
+This is Tony. 
 
 <figure>
   <img src="imgs/tony.jpg" alt="Tony the cat."/>
@@ -42,18 +42,16 @@ This is Tony.
   </figcaption>
 </figure>
 
-Tony has built a website to help his other cat friends understand all the things that you can
-do with DevTools. His friends love it, but Tony has heard many of them complain that it
-loads very slowly. Tony has asked you to help him make the site load faster.
+Tony is very famous in cat society. He has built a website so that his fans can
+learn what his favorite foods are. Tony keeps hearing complaints that the site loads slowly,
+and has asked you to help him speed it up.
 
 ## Step 1: Audit the page {: #audit }
 
-Whenever you begin to improve a page's load performance **always start with an audit**.
+Whenever you set out to improve a site's load performance, **always start with an audit**.
 The audit has 2 important functions:
 
-* It creates a baseline for you to measure subsequent changes against. Rather than just making a change
-  and assuming that it'll make the page load faster, the before and after audits give you quantitative proof
-  that the change is working as intended.
+* It creates a baseline for you to measure subsequent changes against.
 * It gives you actionable tips on what changes will have the most impact.
 
 ### Set up {: #setup }
@@ -155,8 +153,20 @@ resizing images. But nonetheless, it's good to see the potential savings, so
 
 ### Compress text {: #compress }
 
-
+    const compresion = require('compression');
     app.use(compression());
+
+### Reduce JS activity {: #js }
+
+### Reduce render-blocking scripts and stylesheets {: #crp }
+
+Use Request Blocking to experiment with changes.
+
+Code coverage to identify
+
+### Ship less JS code {: #splitting }
+
+
 
 ## Summary {: #summary}
 
