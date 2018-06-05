@@ -45,7 +45,7 @@ function getYouTubeAPIKey() {
     if (!apiKey) {
       apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
     }
-    return apiKey;
+    return apiKey.trim();
   } catch (ex) {
     gutil.log(' ', 'youtubeAPIKey not found.');
   }
@@ -156,6 +156,9 @@ async function getAllVideosByYear(buildType) {
  * @param {!Object=} options Options used to generate the feed
  */
 function buildFeeds(videos, options) {
+  if (!global.WF.options.buildRSS) {
+    return;
+  }
   const articles = [];
 
   videos.forEach((video) => {

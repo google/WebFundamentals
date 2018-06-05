@@ -11,6 +11,7 @@ const gulp = require('gulp');
 const path = require('path');
 const glob = require('globule');
 const jsYaml = require('js-yaml');
+const gutil = require('gulp-util');
 const wfHelper = require('./wfHelper');
 const wfGlossary = require('./wfGlossary');
 const runSequence = require('run-sequence');
@@ -169,6 +170,7 @@ gulp.task('build:showcase', function() {
   });
 
   // Generate the RSS & ATOM feeds
+  options.title = 'Show Cases';
   options.outputPath = baseOutputPath;
   wfTemplateHelper.generateFeeds(files, options);
 
@@ -179,18 +181,8 @@ gulp.task('build:showcase', function() {
 /**
  * Builds index page and RSS & ATOM feeds for /web/shows/
  */
-gulp.task('build:shows', async function(cb) {
-  // Build RSS feed per year.
-  await wfYouTubeShows.getAllVideosByYear().then((videosByYear) => {
-    Object.keys(videosByYear)
-      .filter((year) => year >= global.WF.minFeedDate)
-      .forEach((year) => {
-        wfYouTubeShows.buildFeeds(videosByYear[year], {
-          outputPath: path.join(global.WF.src.content, 'shows', year),
-        });
-      });
-  });
-
+gulp.task('build:shows', async function() {
+  gutil.log(' ', 'Generating recent videos...');
   await wfYouTubeShows.getVideos(global.WF.options.buildType).then((videos) => {
     // build the RSS & ATOM feeds
     wfYouTubeShows.buildFeeds(videos);
@@ -214,6 +206,26 @@ gulp.task('build:shows', async function(cb) {
       global.WF.src.templates, 'landing-page', 'latest-show.html');
     outputFile = path.join(global.WF.src.content, '_index-latest-show.html');
     wfTemplateHelper.renderTemplate(template, context, outputFile);
+  });
+
+  // Build RSS feed per year.
+  //  Check if we will build the full RSS feeds.
+  //  `wfYouTubeShows.buildFeeds()` will return immediately if
+  //  buildRSS === false, but getting all of the videos is expensive, so
+  //  if we don't plan to use them, skip.
+  if (!global.WF.options.buildRSS) {
+    return;
+  }
+  gutil.log(' ', 'Generating historial RSS/ATOM video feed...');
+  await wfYouTubeShows.getAllVideosByYear().then((videosByYear) => {
+    Object.keys(videosByYear)
+      .filter((year) => year >= global.WF.minFeedDate)
+      .forEach((year) => {
+        wfYouTubeShows.buildFeeds(videosByYear[year], {
+          outputPath: path.join(global.WF.src.content, 'shows', year),
+          title: `Web Shows (${year}) - Google Developers`,
+        });
+      });
   });
 });
 
@@ -361,11 +373,11 @@ gulp.task('build', function(cb) {
       'build:glossary',
       'build:fundamentals',
       'build:showcase',
-      'build:shows',
       'build:http203Podcast',
       'build:DVDPodcast',
       'build:tools',
       'build:updates',
+      'build:shows',
     ],
     cb);
 });
