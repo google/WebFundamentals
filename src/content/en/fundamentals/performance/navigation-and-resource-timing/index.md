@@ -4,7 +4,8 @@ description: When we measure loading performance, we often do so using testing t
 
 {# wf_updated_on: 2018-06-05 #}
 {# wf_published_on: 2018-06-08 #}
-{# wf_blink_components: Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
+{# wf_blink_components:
+Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
 # Assessing Loading Performance in Real Life with Navigation and Resource Timing {: .page-title }
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
@@ -40,13 +41,14 @@ data they provide.
 
 ## Easy APIs to help you understand network requests in the browser
 
-Navigation and Resource Timing are two APIs that measure different things, but they also significantly overlap with one another:
+Navigation and Resource Timing are two APIs that measure different things, but
+they also significantly overlap with one another:
 
 - [**Navigation Timing**](https://w3c.github.io/navigation-timing/) collects
 performance metrics for HTML documents.
-- [**Resource Timing**](https://w3c.github.io/resource-timing/) collects performance metrics for document-dependent
-resources. Stuff like style sheets, scripts, images, video, web fonts, and other
-resources.
+- [**Resource Timing**](https://w3c.github.io/resource-timing/) collects
+performance metrics for document-dependent resources. Stuff like style sheets,
+scripts, images, video, web fonts, and other resources.
 
 If you don't know anything about either API, you might be tempted to brush them
 off as too complex or unnecessary. The truth is, it's easy to _get_ data from
@@ -55,7 +57,15 @@ actual users. The _hard_ part is making sense of the data they provide, but
 we'll cover all that soon enough. For now, let's experiment a little in the
 console.
 
-Navigation and Resource Timing (as well as other related APIs) store _performance entries_ in a _performance entry buffer_. In simpler terms, that just means they store performance metrics for pages and resources into a list accessible through JavaScript. Those methods exist in the `window.performance` namespace, and they help us query this list in different ways. For now, though, let's keep it simple and stick with the [`getEntriesByType` method](https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByType). To start, load any page in your browser, open the console, and enter either (or both) of these commands:
+Navigation and Resource Timing (as well as other related APIs) store
+_performance entries_ in a _performance entry buffer_. In simpler terms, that
+just means they store performance metrics for pages and resources into a list
+accessible through JavaScript. Those methods exist in the `window.performance`
+namespace, and they help us query this list in different ways. For now, though,
+let's keep it simple and stick with the [`getEntriesByType`
+method](https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByType).
+To start, load any page in your browser, open the console, and enter either (or
+both) of these commands:
 
 ```javascript
 // Get Navigation Timing entries:
@@ -123,7 +133,10 @@ Waterfall bookmarklet created by Andy Davies.">
 page and its resources.</figcaption>
 </figure>
 
-Simply put, Navigation and Resource Timing are APIs designed to help you to measure how long stuff takes to load. Because these APIs are a part of JavaScript, you can use them to gather vital performance statistics from users when they visit your page. That's powerful stuff!
+Simply put, Navigation and Resource Timing are APIs designed to help you to
+measure how long stuff takes to load. Because these APIs are a part of
+JavaScript, you can use them to gather vital performance statistics from users
+when they visit your page. That's powerful stuff!
 
 ## The life and timings of a network request
 
@@ -249,8 +262,9 @@ the current page.
 - `**responseStart**` is when the first byte of the response arrives.
 - `**responseEnd**` is when the last byte of the response arrives.
 
-You can use these metrics to discover various aspects of loading performance. You _could_ measure resource download time while keeping cache seek
-times in mind:
+You can use these metrics to discover various aspects of loading performance.
+You _could_ measure resource download time while keeping cache seek times in
+mind:
 
 ```javascript
 // Cache seek plus response time
@@ -354,7 +368,8 @@ Timing._
 
 #### Document and resource size
 
-The _size_ of a document or resource is undoubtedly influential on loading performance. Fortunately, both APIs expose properties for quantifying payloads:
+The _size_ of a document or resource is undoubtedly influential on loading
+performance. Fortunately, both APIs expose properties for quantifying payloads:
 
 - `**transferSize**` is the _total size_ of the resource including HTTP headers.
 - `**encodedBodySize**` is the _compressed size_ of the resource _excluding_ HTTP
@@ -400,7 +415,9 @@ is the URL for the document or resource:
 var heroImageTime = performance.getEntriesByName("https://somesite.com/images/hero-image.jpg");
 ```
 
-This is _super_ useful if you need to get a performance entry for a single, yet vital, resource. It's also a better performing alternative to filtering out an array in a loop or with a reduction function.
+This is _super_ useful if you need to get a performance entry for a single, yet
+vital, resource. It's also a better performing alternative to filtering out an
+array in a loop or with a reduction function.
 
 #### getEntries
 
@@ -443,10 +460,10 @@ problematic:
 Periodically polling the performance entry buffer via a timer is expensive, and
 competes with the renderer which causes jank.
 
-[`PerformanceObserver`](https://developers.google.com/web/updates/2016/06/performance-observer)
-was created to address such annoyances. Using an observer pattern similar to
-Mutation or Intersection Observer, you can assign a callback that runs whenever
-new performance entries are recorded:
+[`PerformanceObserver`](/web/updates/2016/06/performance-observer) was created
+to address such annoyances. Using an observer pattern similar to Mutation or
+Intersection Observer, you can assign a callback that runs whenever new
+performance entries are recorded:
 
 ```javascript
 // Instantiate the performance observer
