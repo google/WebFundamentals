@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2018-02-27 #}
+{# wf_updated_on: 2018-06-06 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -360,10 +360,11 @@ In brief:
     * On functional events such as `push` and `sync`, unless there's been an
       update check within the previous 24 hours.
     * On calling `.register()` *only if* the service worker URL has changed.
-* The caching headers on the service worker script are respected (up to 24
-  hours) when fetching updates. We're going to make this opt-in behaviour, as it
-  catches people out. You probably want a `max-age` of 0 on your service worker
-  script.
+* <strike>The caching headers on the service worker script are respected (up to 24 hours) when
+  fetching updates. We're going to make this opt-in behavior, as it catches people out. You
+  probably want a `max-age` of 0 on your service worker script.</strike>  
+Note: Most browsers, including Chrome 68 and later, now default to [ignoring caching
+headers](/web/updates/2018/06/fresher-sw) when making update checks.
 * Your service worker is considered updated if it's byte-different to the one
   the browser already has. (We're extending this to include imported
   scripts/modules too.)
