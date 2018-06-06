@@ -2,10 +2,10 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When we measure loading performance, we often do so using testing tools that only describe performance from the perspective of the tester. If we want to measure loading performance from the user's perspective, we must rely on the Navigation and Resource Timing APIs.
 
-{# wf_updated_on: 2018-06-05 #}
+{# wf_updated_on: 2018-06-06 #}
 {# wf_published_on: 2018-06-08 #}
-{# wf_blink_components:
-Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
+{# wf_blink_components: Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
+
 # Assessing Loading Performance in Real Life with Navigation and Resource Timing {: .page-title }
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
@@ -160,11 +160,11 @@ important (and not so important) bits in Navigation and Resource Timing, and
 demonstrate which properties and metrics can help you measure activity vital to
 application performance! Let's dig in!
 
-_Note: This guide is a bit opinionated on which metrics are most important. If
+Note: This guide is a bit opinionated on which metrics are most important. If
 you want an unopinionated bird's eye view of both APIs and the exact order
 metrics appear in, [this Timing processing model
 diagram](https://www.w3.org/TR/navigation-timing-2/#processing-model) is super
-helpful._
+helpful.
 
 ### DNS lookup
 
@@ -192,7 +192,8 @@ both `domainLookupStart` and `domainLookupEnd` (and others) can be `0` for a
 resource served by a third party if that host doesn't set a proper
 [`Timing-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin)
 response header. We won't get into the weeds on this right now, but [it's
-covered later on](#anchor). Let's move on for now.
+covered later on](#cross-origins_and_the_timing-allow-origin_header). Let's move
+on for now.
 
 ### Connection negotiation
 
@@ -314,7 +315,7 @@ and
 [`unloadEventEnd`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventEnd)
 metrics.
 
-_Note: Unload metrics are exclusive to Navigation Timing._
+Note: Unload metrics are exclusive to Navigation Timing.
 
 #### Redirects
 
@@ -348,7 +349,7 @@ interested in document processing metrics, they're
 and
 [`domComplete`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domComplete).
 
-_Note: Document processing metrics are exclusive to Navigation Timing._
+Note: Document processing metrics are exclusive to Navigation Timing.
 
 #### Loading
 
@@ -361,10 +362,15 @@ has taken place to prioritize perceptual metrics (e.g., [Speed
 Index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index))
 over load time.
 
-Still, measuring load time may be helpful to you. [`loadEventStart`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart) and [`loadEventEnd`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd) can help you with that when it comes to documents, but it's probably easiest to just use the `duration` property.
+Still, measuring load time may be helpful to you.
+[`loadEventStart`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart)
+and
+[`loadEventEnd`](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd)
+can help you with that when it comes to documents, but it's probably easiest to
+just use the `duration` property.
 
-_Note: `loadEventStart` and `loadEventEnd` metrics are exclusive to Navigation
-Timing._
+Note: `loadEventStart` and `loadEventEnd` metrics are exclusive to Navigation
+Timing.
 
 #### Document and resource size
 
@@ -445,9 +451,9 @@ var allTheTimings = performance.getEntries({
 });
 ```
 
-If `initiatorType` looks new to you, that's because I didn't cover it. You can
-find out more about it in [this MDN
-doc](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType).
+If `initiatorType` looks new to you, that's because I didn't cover it here.
+[Find out more about `initiatorType` at
+MDN](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType).
 
 ### Listen for performance entries using PerformanceObserver
 
@@ -527,8 +533,8 @@ of the Resource Timing spec.
 On the flip side, if you run an application on multiple domains or serve public
 assets as a third party, you should set an appropriate `Timing-Allow-Origin`
 header so developers can capture timings for resources hosted on them. Check out
-[this MDN
-resource](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin)
+[the MDN documentation for
+`Timing-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin)
 to learn more.
 
 #### Persistent connections affect timings
@@ -617,9 +623,9 @@ On the other end would be some back end logic that looks at the POST form data
 and decides what to do with it from there. How you do this depends on your
 application back end.
 
-_Note: `navigator.sendBeacon` only _queues_ the request when called, and may not
+Note: `navigator.sendBeacon` only _queues_ the request when called, and may not
 fulfill it immediately. Additionally, user agents pose restrictions on how much
-data may be sent, and may reject the request if that limit is exceeded._
+data may be sent, and may reject the request if that limit is exceeded.
 
 ### When navigator.sendBeacon is unavailable
 
