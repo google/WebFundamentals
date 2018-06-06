@@ -6,8 +6,16 @@ upper_tabs:
       other:
       - name: Guides
         contents:
-        - title: Overview
-          path: /web/fundamentals/
+        - title: Building for modern Web
+          style: accordion
+          section:
+          - title: Overview
+            path: /web/fundamentals/
+          - title: Getting started with web development
+            path: /web/fundamentals/getting-started
+          - include: /web/fundamentals/modern-web/_toc.yaml
+          - title: Next steps
+            path: /web/fundamentals/next-steps
         - include: /web/fundamentals/architecture/_toc.yaml
         - include: /web/fundamentals/design-and-ux/_toc.yaml
         - include: /web/fundamentals/integration/_toc.yaml
@@ -18,10 +26,13 @@ upper_tabs:
           - include: /web/fundamentals/vr/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
-        - include: /web/fundamentals/_toc-base.yaml
+        - title: Reference
+          style: accordion
+          section:
+          - include: /web/fundamentals/_toc-base.yaml
+          - title: Glossary
+            path: /web/fundamentals/glossary
         - break: True
-        - title: Glossary
-          path: /web/fundamentals/glossary
       - name: Code Labs
         contents:
         - include: /web/fundamentals/codelabs/_toc.yaml

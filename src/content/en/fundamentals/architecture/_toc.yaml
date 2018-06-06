@@ -4,3 +4,4 @@ toc:
   section:
   - title: App Shell Model
     path: /web/fundamentals/architecture/app-shell
+  - include: /web/fundamentals/web-components/_toc.yaml
