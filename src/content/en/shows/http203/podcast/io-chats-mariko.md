@@ -20,7 +20,8 @@ Chrome dev-rels. We cover:
 
 * Turns out we've been pronouncing "Surma" and "Mariko" all wrong.
 * The woes of color spaces.
-* [Getting image compressors working on the web using WASM](https://developers.google.com/web/updates/2018/03/emscripting-a-c-library).
+* [Getting image compressors working on the web using
+  WASM](/web/updates/2018/03/emscripting-a-c-library).
 * How we got started, and why we chose the web.
 * Creating awful HTML in Microsoft Word.
 * AIM vs Microsoft Comic Chat.
