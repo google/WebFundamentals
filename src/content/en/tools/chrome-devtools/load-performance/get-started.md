@@ -2,11 +2,11 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-06-05 #}
+{# wf_updated_on: 2018-06-07 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# Get Started With Improving Load Performance {: .page-title }
+# Improve Load Performance With Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -14,14 +14,6 @@ description: TODO
 
 This tutorial teaches you how to use Chrome DevTools to find ways to make your web pages
 load faster.
-
-At the end of this tutorial, you still may not understand all of the theories behind load
-performance optimization, *and that is totally OK*. It's a complicated field, and it takes time
-to learn.
-
-You will, however, leave this tutorial with an easy-to-understand, yet detailed and
-quantitative, workflow for measuring load performance. And you will know how to
-*prove* that any changes you make to your code actually are improving load performance.
 
 ## Prerequisites
 
@@ -33,7 +25,9 @@ know anything about load performance.
 
 ## Introduction {: #intro }
 
-This is Tony. 
+This is Tony. Tony is very famous in cat society. He has built a website so that his fans can
+learn what his favorite foods are. His fans love the site, but Tony keeps hearing complaints
+that the site loads slowly. He has asked you to help him speed it up.
 
 <figure>
   <img src="imgs/tony.jpg" alt="Tony the cat."/>
@@ -42,9 +36,6 @@ This is Tony.
   </figcaption>
 </figure>
 
-Tony is very famous in cat society. He has built a website so that his fans can
-learn what his favorite foods are. Tony keeps hearing complaints that the site loads slowly,
-and has asked you to help him speed it up.
 
 ## Step 1: Audit the page {: #audit }
 
@@ -56,16 +47,20 @@ The audit has 2 important functions:
 
 ### Set up {: #setup }
 
-1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was
-   created with Chrome 68. If you're using an earlier or later version, the DevTools UI may look
-   different, or some features may not be available. You should still be able to get through most
-   of the tutorial. Please [send feedback](#feedback) if you can't and we'll update this tutorial.
-1. <a class="gc-analytics-event" href="https://before.glitch.me" target="_blank" rel="noopener"
-   data-category="CTA" data-label="{% dynamic print request.path %}">Open the site</a>.
+1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made with
+   Chrome 68. If you're using an earlier or later version, some features may look different or not be available.
+   You should be able to complete most of the tutorial. Just keep in mind that the UI may look different
+   than what you see in this tutorial's screenshots.
+1. <a class="gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank" rel="noopener"
+   data-category="CTA" data-label="{% dynamic print request.path %}">Open the source code for the site</a>.
+   This tab is called the "editor tab".
 1. Click **tony**. A menu appears.
-1. Click **Remix This**.
+1. Click **Remix This**. The name of the project changes from **tony** to some randomly-generated name. You now
+   have your own editable copy of the code.
+1. Click **Show Live**. The demo opens in a new tab. This tab is called the "demo tab".
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac)
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> to open Chrome DevTools.
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS). Chrome DevTools opens up alongside
+   the demo.
 
 <figure>
   <img src="imgs/devtools.png" alt="DevTools."/>
@@ -81,7 +76,7 @@ into a separate window. See [Change DevTools placement](/web/tools/chrome-devtoo
 
 1. Click the **Audits** tab. It may be hidden behind the **More Panels**
    ![More Panels](imgs/more-panels.png){:.inline-icon} button. There's a Lighthouse on this
-   page because the project that powers the Audits panel is called Lighthouse.
+   page because the project that powers the Audits panel is called [Lighthouse](/web/tools/lighthouse).
 
      <figure>
        <img src="imgs/audits.png" alt="The Audits panel."/>
@@ -90,47 +85,81 @@ into a separate window. See [Change DevTools placement](/web/tools/chrome-devtoo
        </figcaption>
      </figure>
 
-1. In the **Audits** section, keep the **Performance** checkbox enabled, but disable all the
-   other ones. Leave the settings in the other sections as is.
+1. Match your audit configuration settings to those in **Figure X**.
+1. Click **Run Audits**.
 
-     <figure>
-       <img src="imgs/config.png" alt="Audit settings."/>
-       <figcaption>
-         <b>Figure X</b>. Audit settings
-       </figcaption>
-     </figure>
+### Understand your report {: #report }
 
-1. Click **Run audits**.
+The number at the top of your report is the overall performance score for the page. Later, as you make
+changes to the code, you should see this number rise. A higher score means better performance.
 
-### Master the report UI {: #report }
+The **Metrics** section provides quantitative measurements of the page's performance. Each metric provides
+insight into a different aspect of the page's performance. For example, **First Contentful Paint** tells you
+when content is first painted to the screen, which is an important milestone in the user's perception of the
+page load, whereas **First CPU Idle** marks when the main thread is quiet enough to handle user input, which
+is essentially a proxy for when the user can interact with the page.
 
-TODO mention how each page will highlight different areas of improvement, because each page is coded diffferently.
+Hover over a metric to see a description of it, and click **Learn More** to read documentation about it.
 
-The report gives you a lot of information. Here's how to make sense of it all.
+Below **Metrics** is a collection of screenshots that show you how the page looked as it loaded.
 
-1. The number within the circle represents your overall performance score.
+The **Opportunities** section provides specific tips on how to improve this particular page's load performance.
 
-1. **Metrics** represent different measurements of what your users experience when they load
-   your page. There is no single metric that encompasses the whole experience.
-1. Hover over the **First Contentful Paint** metric. DevTools gives you more information about
-   what the metric measures. Click **Learn more**. Chrome opens up a new tab containing
-   documentation about that metric.
+The **Diagnostics** section provides more information about factors that contribute to the page's load time.
 
-     TODO hovering over metric screenshot
-
-1. Below **Metrics** is a timeline of screenshots representing how the page looks during the
-   course of the load.
-1. **Opportunies** provides specific tips on how to improve the page. Working on these tips
-   should improve the **Metrics** scores.
-1. **Diagnostics** 
+The **Passed Audits** section shows you what the page is doing correctly.
 
 ## Step 2: Experiment {: #experiment }
 
-Now that you've got a baseline and a list of tips on how to improve the site's load performance,
-it's time to experiment.
+When you attempt to optimize a page, it's best to make a single change at a time, and then
+run an audit after each change, so that you can be sure that this isolated change is actually
+the cause of change in load performance.
 
-When you attempt to optimize your code, it's best to make a single change at a time, and then run
-an audit after each change, so that you can be sure that your change is actually speeding up the page.
+### Eliminate render-blocking resources {: #crp }
+
+The Audits panel report says that the greatest opportunity to speed up the page's load performance
+is to reduce render-blocking resources.
+
+What are render-blocking resources? When a page references external JavaScript or CSS files, the browser
+must download, parse, and execute those files before it can finish loading, or rendering, the page.
+
+1. Click **Eliminate render-blocking resources** to see which resources are blocking first paint.
+
+First, you need to see if the render-blocking resources are needed for the page load. If the page
+needs these resources in order to display the page, then it's necessary for these resources to
+be render-blocking. The Coverage tab can help with this analysis.
+
+1. The jQuery file includes comments. You can reduce the file size by minifying this file.
+1. ... All of those `webpack://` URLs seem to indicate that the site is using the development mode of
+   webpack. You'll revisit this later.
+
+It's unclear whether the resources are needed to load the page. The Request Blocking tab can show you
+what happens when the resources aren't available. If the page still loads when the resources aren't
+available, then there's no reason to block rendering while waiting for these resources.
+
+1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the Command Menu.
+1. Start typing `blocking` and then select **Show Request Blocking**. This UI lets you block resources.
+   You're going to block the network requests for the 2 render-blocking resources, and then see if the
+   site still loads correctly. If it does, then there's no reason for these resources to block 
+1. Click **Add Pattern**, type `/libs/*`, and then press <kbd>Enter</kbd> to confirm.
+1. Click **Remove all patterns** to remove the request blocks.
+
+Another tool that can help you determine if a file is needed during page load is the Coverage tab. While
+a page loads, the Coverage tab records what code from each file is executed.
+
+In this particular case, it seems like the scripts aren't used whatsoever, so you can remove them
+completely from the code.
+
+1. ...
+
+In your own code, you might discover resources that aren't required for page load, but are
+needed later for page interactions. In these cases, you can mark the scripts with the `async`
+property.
+
+### Enable text compression {: #compression }
+
+
 
 ### Resize images
 
