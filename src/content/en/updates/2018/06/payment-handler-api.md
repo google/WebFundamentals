@@ -1,61 +1,65 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Chrome beta 68 ships with the Payment Handler API -- the new, open, and standard way for a website to provide a payment method through a browser's native interface. With this Chrome version, merchant websites can accept flexible payment options through the Payment Request API.
+description: Chrome beta 68 ships with the Payment Handler API -- the new, open, and standard way for web-based payment applications to be offered as a payment option during checkout. It enables merchants to accept a wide variety of payment options within a native-browser experience.
 
-{# wf_updated_on: 2018-06-06 #}
+{# wf_updated_on: 2018-06-08 #}
 {# wf_published_on: 2018-06-07 #}
 {# wf_tags: javascript, payment, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/credit_card.png #}
-{# wf_featured_snippet: Chrome beta 68 ships with the Payment Handler API -- the new, open, and standard way for a website to provide a payment method through a browser's native interface. With this Chrome version, merchant websites can accept flexible payment options through the Payment Request API. #}
+{# wf_featured_snippet: Chrome beta 68 ships with the Payment Handler API -- the new, open, and standard way for web-based payment applications to be offered as a payment option during checkout. It enables merchants to accept a wide variety of payment options within a native-browser experience. #}
 {# wf_blink_components: Blink>Payments #}
 
-# Be a part of Web Payment ecosystem using the Payment Handler API {: .page-title }
+# Bring your payment method to the web with the Payment Handler API {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
 ## What is the Payment Handler API?
 
-The Payment Request API introduced to the world an open standard way to accept 
-payments in a browser. It can collect a payment credential as well as a shipping 
-address and contact information for the payer through a dedicated user 
-interface.
+The [Payment Request API](https://www.w3.org/TR/payment-request/) introduced an 
+open, standards-based way to accept payments in a browser. It can collect 
+payment credentials as well as shipping and contact information from the payer 
+through a quick and easy user interface.
 
-It's provided as a user-friendly way to accept payments with prefilled credit 
-card numbers (basic-card) and platform-specific payment apps (Google Pay, 
-Samsung Pay, Apple Pay, etc.).
-
-The Payment Handler API opens up a whole new ecosystem to the world. It allows a 
-website to act as a payment method and to be integrated into merchant websites 
-through the standard Payment Request API.
+The [Payment Handler API](https://www.w3.org/TR/payment-handler/) opens up a 
+whole new ecosystem to payment providers. It allows a web-based payment 
+application (using an installed service worker) to act as a payment method and 
+to be integrated into merchant websites through the standard Payment Request 
+API.
 
 ## User experience
 
-From the end user's point of view, the user experience would look like this:
+From a user's point of view, the user experience looks like this:
 
-<img src="/web/updates/images/2018/06/payment-handler-api.gif" style="float:right"/>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="IK_SlT6zm4I"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
-1. The user selects an item to purchase and presses a checkout button.
-1. The Payment Request UI opens.
-1. The user chooses a payment method. A URL in the selection option indicates a 
-   web-based payment app which is built with the Payment Handler API.
-1. The associated payment app page opens in a separate window.
-1. In that window, the user authenticates and authorizes the payment.
-1. The payment app window closes and the payment is processed.
-1. The payment is complete and the Payment Request UI is closed.
-1. The purchase completes.
+1. A user decides to purchase an item and presses the "Buy Now" button on the 
+   product detail page.
+1. The Payment Request sheet opens.
+1. The user chooses a payment method (Payment Handlers have a URL listed below 
+   the payment method name).
+1. The payment app opens in a separate window where the user authenticates and 
+   authorizes the payment.
+1. Payment app window closes and the payment is processed.
+1. Payment is complete and the Payment Request sheet is closed.
+1. The website can display an order confirmation at this point. 
+
+Try it yourself [here](https://madmath.github.io/samples/paymentrequest/bobpay/) 
+using Chrome 68 beta.
 
 Notice there are three parties involved: an end user, a merchant website, and a 
 payment handler provider.
 
-<div style="clear:right"></div>
-
 ## Merchants' developer experience
 
-For a merchant website, integrating an existing payment app is as easy as adding
-a `supportedMethods` (payment method identifier) and optionally an accompanying
-`data` to the first argument of the Payment Request API. For example, to add a
-payment app called [BobPay](https://bobpay.xyz/) with the payment method
-identifier of `https://bobpay.xyz/pay`, the code would be:
+For a merchant website, integrating an existing payment app is as easy as adding 
+an entry to `supportedMethods` (payment method identifier) and optionally an 
+accompanying `data` to the first argument of the Payment Request API. For example, 
+to add a payment app called [BobPay](https://bobpay.xyz/) with the payment 
+method identifier of `https://bobpay.xyz/pay`, the code would be:
 
 ```
 const request = new PaymentRequest([{
@@ -68,17 +72,20 @@ const request = new PaymentRequest([{
 });
 ```
 
-As long as a user has the payment app installed (has a service worker installed 
-for the payment app), it will show up in the Payment Request UI and the user can 
-proceed to payment by selecting it as a payment method.
+If a service worker that can handle the BobPay payment method is installed, the 
+app will show up in the Payment Request UI and the user can pay by selecting it. 
+In some cases, Chrome will skip ahead to the Payment Handler, providing a swift 
+payment experience!
 
-To make it easier for users to use their favorite payment methods, Chrome 
-supports a non-standard feature we call just-in-time (JIT) installation. This 
-allows a payment hander to be installed on the fly, as long as the user chooses 
-it within the Payment Request UI. Thus, installing the payment app is not 
-necessarily a prerequisite for its use.
+Chrome also supports a non-standard feature we call just-in-time (JIT) 
+installation. In our example, this would allow BobPay's trusted  Payment Handler 
+to be installed on the fly without the user having visited BobPay's website in 
+advance. Note that the installation only happens after the user explicitly 
+selects BobPay as their payment method within the Payment Request UI.  Also note 
+that a payment method (BobPay) can only specify a maximum of one trusted Payment 
+Handler that can be installed just-in-time.
 
-## How a web based payment app work
+## How to build a Payment Handler
 
 To build a payment handler, you'll need to do a little more than just 
 implementing the Payment Handler API.
@@ -92,17 +99,13 @@ website, register a service worker and add payment instruments through
 ```
 if ('serviceWorker' in navigator) {
   // Register a service worker
-  await navigator.serviceWorker.register(
+  const registratoin = await navigator.serviceWorker.register(
     // A service worker JS file is separate
     'service-worker.js'
   );
-  // The website must wait for the service worker to be ready
-  // before starting interactions.
-  const registration = await navigator.serviceWorker.ready;
   // Check if Payment Handler is available
   if (!registration.paymentManager) return;
 
-  registration.paymentManager.userHint = 'payment-handler user hint';
   registration.paymentManager.instruments.set(
     // Payment instrument key can be any string.
     "https://bobpay.xyz",
@@ -115,11 +118,11 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-### Receive `paymentrequest` events and get user consent for payment
+### Listen to `paymentrequest` events and get user consent for payment
 
-To handle actual payment requests, wait for `paymentrequest` events in the service 
-worker to open a window (Chrome Custom Tab) and return a payment credential 
-after getting the user's authorization for a payment.
+To handle actual payment requests, listen to `paymentrequest` events in the 
+service worker. When one is received, open a separate window and return a 
+payment credential after getting the user's authorization for a payment.
 
 ```
 const origin = 'https://bobpay.xyz';
@@ -159,6 +162,8 @@ self.addEventListener('message', e => {
   }
 });
 
+// Get the user's authorization
+
 const sendPaymentRequest = () => {
   if (!payment_request_event) return;
   clients.matchAll({
@@ -187,10 +192,11 @@ materials.
    describes a website that hosts a service worker that handles payment 
    requests.
 
-[To learn more about how to implement a payment app, read this 
-document.](https://docs.google.com/document/d/1wM9b3szNH4-w0tpIefjLYSGNtyjLr31Q4ARNTB52bJ0/edit?pli=1#)
+To learn more about how to implement a payment app, see [Quick guide to
+  implementing a payment app with the Payment Handler
+  API](https://docs.google.com/document/d/1wM9b3szNH4-w0tpIefjLYSGNtyjLr31Q4ARNTB52bJ0/edit?pli=1#).
 
-## Use cases
+## Example payment methods
 
 Because the Payment Handler API is designed to be flexible enough to accept any 
 kind of payment method, supported methods can include:
@@ -202,10 +208,16 @@ kind of payment method, supported methods can include:
 * Merchant's point system
 * Cash on delivery (Merchant's self-served)
 
-## link to
+## Resources
 
-* demo (bobpay)
-* [document](https://docs.google.com/document/d/1wM9b3szNH4-w0tpIefjLYSGNtyjLr31Q4ARNTB52bJ0/edit#)
+* [Introducing the Payment Request 
+  API](/web/fundamentals/payments/)
+* [Deep Dive into the Payment Request 
+  API](/web/fundamentals/payments/deep-dive-into-payment-request)
+* [Payment Handler API](https://w3c.github.io/payment-handler/)
+* [Quick guide to implementing a payment app with the Payment Handler 
+  API](https://docs.google.com/document/d/1wM9b3szNH4-w0tpIefjLYSGNtyjLr31Q4ARNTB52bJ0/edit?pli=1#)
+* [Example payment app - BobPay](https://bobpay.xyz/)
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
