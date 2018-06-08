@@ -3,10 +3,10 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 67 for developers?
 
 {# wf_published_on: 2018-05-29 #}
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-08 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome67,new-in-chrome #}
-{# wf_featured_snippet: Chrome 67 brings Progressive Web Apps to the desktop. Adds support for the generic sensor API, which makes it way easier to get access to device sensors like the accelerometer, gyroscope and more. And adds support for BigInts making dealing with big integers way easier. Let’s dive in and see what’s new for developers in Chrome 67! #}
+{# wf_featured_snippet: Chrome 67 brings Progressive Web Apps to the desktop. And adds support for BigInts making dealing with big integers way easier. Let’s dive in and see what’s new for developers in Chrome 67! #}
 {# wf_blink_components: N/A #}
 
 # New in Chrome 67 {: .page-title }
@@ -21,10 +21,10 @@ description: What's new in Chrome 67 for developers?
   </iframe>
 </div>
 
-* Progressive Web Apps are coming to the [desktop](#desktop-pwas)
-* The [generic sensor API](#generic-sensor-api) makes it way easier to get
-  access to device sensors like the accelerometer, gyroscope and more.
+* Progressive Web Apps are coming to the [desktop](#desktop-pwas).
 * And [`BigInt`s](#bigint) make dealing with big integers way easier.
+
+**Note:** Generic Sensors were accidentally included in the original version of this post, but are not yet generally available. They are still discussed in the video. 
 
 And there’s [plenty more](#more)!
 
@@ -81,43 +81,6 @@ details on how to enable support with a flag.
 
 
 <div class="clearfix"></div>
-
-## Generic Sensor API {: #generic-sensor-api }
-
-
-Sensor data is used in many apps to enable experiences like immersive gaming,
-fitness tracking, and augmented or virtual reality. This data is now
-available to web app using the
-[Generic Sensor API](https://www.w3.org/TR/generic-sensor/).
-
-The API consists of a base Sensor interface with a set of concrete sensor
-classes built on top. Having a base interface simplifies the implementation
-and specification process for the concrete sensor classes. For example,
-the Gyroscope class is super tiny!
-
-```javascript
-const sensor = new Gyroscope({frequency: 500});
-sensor.start();
-
-sensor.onreading = () => {
-    console.log("X-axis " + sensor.x);
-    console.log("Y-axis " + sensor.y);
-    console.log("Z-axis " + sensor.z);
-};
-```
-
-The core functionality is specified by the base interface, and Gyroscope
-merely extends it with three attributes representing angular velocity. Chrome
-67 supports the accelerometer, gyroscope, orientation sensor, and motion
-sensor.
-
-Intel has put together several
-[demos of the generic sensors API](https://intel.github.io/generic-sensor-demos/)
-and [sample code](https://github.com/intel/generic-sensor-demos), and they’ve
-also updated the [Sensors for the Web!](/web/updates/2017/09/sensors-for-the-web)
-post from September with everything you need to know.
-
-
 
 ##  `BigInt`s {: #bigint }
 
