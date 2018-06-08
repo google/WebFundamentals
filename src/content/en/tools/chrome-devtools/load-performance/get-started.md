@@ -188,6 +188,9 @@ Use Network panel to view transmitted / uncompressed
 // TODO build a little image resizer on tony.glitch.me, and then use that API to serve resized images...
 // this might work https://www.npmjs.com/package/resize-img
 
+// Update the resizer is just too dang slow... go back to using the full size images, and then change the
+// base path to use the smaller images instead
+
 For this particular app, there didn't seem to be a straightforward way to automate the process of
 resizing images. But nonetheless, it's good to see the potential savings, so 
 
