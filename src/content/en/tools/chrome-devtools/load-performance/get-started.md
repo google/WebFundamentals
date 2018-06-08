@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-06-07 #}
+{# wf_updated_on: 2018-06-08 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -53,11 +53,27 @@ The audit has 2 important functions:
    than what you see in this tutorial's screenshots.
 1. <a class="gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank" rel="noopener"
    data-category="CTA" data-label="{% dynamic print request.path %}">Open the source code for the site</a>.
-   This tab is called the "editor tab".
+   This tab will be referred to as the **editor tab**.
+
+     <figure>
+       <img src="imgs/editor.png" alt="The editor tab."/>
+       <figcaption>
+         <b>Figure X</b>. The editor tab
+       </figcaption>
+     </figure>
+
 1. Click **tony**. A menu appears.
 1. Click **Remix This**. The name of the project changes from **tony** to some randomly-generated name. You now
    have your own editable copy of the code.
-1. Click **Show Live**. The demo opens in a new tab. This tab is called the "demo tab".
+1. Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the **demo tab**.
+
+     <figure>
+       <img src="imgs/demo.png" alt="The demo tab."/>
+       <figcaption>
+         <b>Figure X</b>. The demo tab
+       </figcaption>
+     </figure>
+
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac)
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS). Chrome DevTools opens up alongside
    the demo.
@@ -69,10 +85,9 @@ The audit has 2 important functions:
   </figcaption>
 </figure>
 
-Tip: You can dock DevTools to the left, right, of bottom of your page. You can also undock it
-into a separate window. See [Change DevTools placement](/web/tools/chrome-devtools/ui#placement).
-
 ### Establish a baseline {: #baseline }
+
+The baseline is a record of how the site performed before you made any performance improvements.
 
 1. Click the **Audits** tab. It may be hidden behind the **More Panels**
    ![More Panels](imgs/more-panels.png){:.inline-icon} button. There's a Lighthouse on this
@@ -123,6 +138,8 @@ is to reduce render-blocking resources.
 What are render-blocking resources? When a page references external JavaScript or CSS files, the browser
 must download, parse, and execute those files before it can finish loading, or rendering, the page.
 
+#### View unused code {: #coverage }
+
 1. Click **Eliminate render-blocking resources** to see which resources are blocking first paint.
 
 First, you need to see if the render-blocking resources are needed for the page load. If the page
@@ -132,6 +149,8 @@ be render-blocking. The Coverage tab can help with this analysis.
 1. The jQuery file includes comments. You can reduce the file size by minifying this file.
 1. ... All of those `webpack://` URLs seem to indicate that the site is using the development mode of
    webpack. You'll revisit this later.
+
+#### Block requests {: #block }
 
 It's unclear whether the resources are needed to load the page. The Request Blocking tab can show you
 what happens when the resources aren't available. If the page still loads when the resources aren't
@@ -159,7 +178,10 @@ property.
 
 ### Enable text compression {: #compression }
 
+Use Network panel to view transmitted / uncompressed
 
+    const compresion = require('compression');
+    app.use(compression());
 
 ### Resize images
 
@@ -171,19 +193,6 @@ resizing images. But nonetheless, it's good to see the potential savings, so
 
 1. Open `src/model.js'.
 1. Replace each instance of `../imgs/` with `../imgs/small/`.
-
-<aside class="note">
-  <b>Note from Kayce</b>: Obviously, in a real app, this approach wouldn't cut it. If you're working
-  with thousands of images, you'd need an automated solution.
-  For this particular app, there didn't seem to be a straightforward
-  way to automate the process of resizing images. But it's really worth looking into, because
-  it can save your users a huge amount of network data.
-</aside>
-
-### Compress text {: #compress }
-
-    const compresion = require('compression');
-    app.use(compression());
 
 ### Reduce JS activity {: #js }
 
