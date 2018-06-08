@@ -5,6 +5,7 @@ description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortu
 {# wf_updated_on: 2018-06-08 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
+{# wf_blink_components: Blink>WindowDialog,Blink>JavaScript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
@@ -87,3 +88,4 @@ that you move to using the earlier-mentioned alternatives so that this will not
 affect you.
 
 {% include "comment-widget.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}
