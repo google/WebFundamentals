@@ -1,14 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Olu Niyi-Awosusi talks about getting a head start in the industry via a boot camp, gatekeeping and WildcardJS.
+description: Brendan Kearns talks about creative ways to prototype and how using scenario based design 
+can help you sculpt great user experiences.
 {# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-06-11 #}
-{# wf_published_on: 2018-06-01 #}
-{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3 #}
-{# wf_podcast_duration: 00:13:37 #}
-{# wf_podcast_fileSize: 19709128 #}
-{# wf_podcast_subtitle: description: Olu Niyi-Awosusi talks about getting a head start in the industry via a boot camp, gatekeeping and WildcardJS. #}
-{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e03-cover-large.jpg #}
+{# wf_published_on: 2018-06-11 #}
+{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3 #}
+{# wf_podcast_duration: 00:12:04 #}
+{# wf_podcast_fileSize: 17484030 #}
+{# wf_podcast_subtitle: description: Brendan Kearns talks about creative ways to prototype and how using scenario based design can help you sculpt great user experiences. #}
+{# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e04-cover-large.jpg #}
 
 
 # Brendan Kearns on creative ways of prototyping & scenario based design {: .page-title }
@@ -18,27 +19,26 @@ challenges faced in the industry by opening a conversation between
 the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
-Mustafa speaks to Olu Niyi-Awosusi, a software engineer at BBC news, 
-about getting a head start in the industry via a boot camp, 
-gatekeeping and WildcardJS. 
+Mustafa speaks to Brendan Kearns, a Sr. Interaction Designer at Google, 
+about creative ways to prototype and how using scenario based design 
+can help you sculpt great user experiences.
 
 <img
-src="/web/shows/designer-vs-developer/podcast/images/dvd-s03-e03-cover.jpg"
+src="/web/shows/designer-vs-developer/podcast/images/dvd-s03-e04-cover.jpg"
 class="attempt-right">
 
 In this episode:
 
-* Getting a head start in the industry.
-* Starting out in philosophy and moving on to code.
-* Code camps.
-* Gate keeping in the industry.
-* [A Sample WordPress-based Progressive Web App](http://bit.ly/2Jl2nMK){: .external}.
-* [The cost of JavaScript](http://bit.ly/2soxo8O){: .external}.
-* [WildcardJS](http://bit.ly/2snT84r){: .external}.
-
+* The difference in prototyping schools of thought, showing intent vs 
+informing a developer
+* Red lining
+* Scenario based design
+* [AirBnB - Painting with Code](http://bit.ly/2l0iVM5){: .external}.
+* [User Journey Mapping](http://bit.ly/2LIamAZ){: .external}.
+ 
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
