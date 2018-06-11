@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Everyone loves animated GIFs. The only problem is that they can be massive, often weighing in at several megabytes. In this guide, you'll learn how to curb the bloat caused by animated GIFs by replacing them with MPEG-4 and WebM video sources!
 
-{# wf_updated_on: 2018-04-19 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-04-19 #}
 {# wf_tags: html5,video,gif,images #}
 {# wf_blink_components: Blink>Image,Blink>HTML #}
@@ -12,18 +12,18 @@ description: Everyone loves animated GIFs. The only problem is that they can be 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
 Have you ever seen an animated GIF on a service like Imgur or Gfycat and
-inspected it in your dev tools, only to find out that GIF was really a video?
-There's a good reason for that. Animated GIFs can be downright _huge_. It's not
-uncommon for GIFs to tip the scales at several megabytes, depending on quality,
-frame rate, and length. If you're trying to improve loading performance for your
-site and help users reduce data usage, animated GIF just isn't compatible with
-that goal.
+inspected it in DevTools, only to find out that GIF was really a video? There's
+a good reason for that. Animated GIFs can be downright _huge_. It's not uncommon
+for GIFs to tip the scales at several megabytes, depending on quality, frame
+rate, and length. If you're trying to improve loading performance for your site
+and help users reduce data usage, animated GIF just isn't compatible with that
+goal.
 
 <figure>
   <img src="images/gif-in-dev-tools-1x.png" srcset="images/gif-in-dev-tools-2x.png
-2x, images/gif-in-dev-tools-1x.png 1x" alt="Chrome dev tools showing a network
+2x, images/gif-in-dev-tools-1x.png 1x" alt="Chrome DevTools showing a network
 resource entry for a 13.7 MB GIF.">
-  <figcaption><strong>Figure 1</strong>. Chrome dev tools showing a 13.7 MB GIF.
+  <figcaption><strong>Figure 1</strong>. Chrome DevTools showing a 13.7 MB GIF.
 That's bigger than even most websites!</figcaption>
 </figure>
 
@@ -366,3 +366,11 @@ GIFV](https://lifehacker.com/imgur-revamps-gifs-for-faster-speeds-and-higher-qua
 - [GIF Revolution](https://telegram.org/blog/gif-revolution)
 - [Those GIFs on Twitter Aren't Actually
 GIFs](https://mashable.com/2014/06/20/twitter-gifs-mp4/#Mtz26DX1BZqG)
+
+_Special thanks to [François
+Beaufort](/web/resources/contributors/beaufortfrancois), [Patrick
+Hulce](/web/resources/contributors/patrickhulce), Dean Hume, [Paul
+Irish](/web/resources/contributors/paulirish), [Addy
+Osmani](/web/resources/contributors/addyosmani), and [Jeff
+Posnick](/web/resources/contributors/jeffposnick) for their valuable feedback,
+which significantly improved the quality of this article._
