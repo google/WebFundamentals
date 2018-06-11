@@ -100,7 +100,10 @@ function getFullFeedEntries(articles, maxItems, includeContent = true) {
  * @param {Object} options Options used to generate the feed
  */
 function generateFeeds(files, options) {
-  gutil.log(' ', 'Generating RSS and ATOM feeds...');
+  if (!global.WF.options.buildRSS) {
+    return;
+  }
+  gutil.log(' ', `Generating '${options.title}' RSS & ATOM feeds...`);
   const maxItems = options.maxItems || global.WF.maxArticlesInFeed;
   let context = {
     title: options.title,
