@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Yasmine talks about learning to design.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-09-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E04-learn-how-to-design.mp3 #}
 {# wf_podcast_duration: 00:11:02 #}
@@ -11,7 +11,7 @@ description: Yasmine talks about learning to design.
 {# wf_podcast_subtitle: Yasmine talks learning to design. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e04-cover-large.jpg #}
 
-# Learn How To Design {: .page-title }
+# Yasmine Evjen on Learning How To Design {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
