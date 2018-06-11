@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2018-05-31 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 

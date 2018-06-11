@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 67 to help you plan. In this version, deprecation of public key pinning, removal of AppCache on unsecure contexts, and more prefix removals. 
 
-{# wf_updated_on: 2018-05-07 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-04-27 #}
 {# wf_tags: deprecations,removals,chrome67 #}
 {# wf_blink_components: Blink>Layout,Blink>SecurityFeature,Blink>SecurityFeature>SecureContexts #}

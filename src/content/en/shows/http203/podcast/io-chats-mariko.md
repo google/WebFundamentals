@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: How we got started on the web.
 
-{# wf_updated_on: 2018-06-06 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-06-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-mariko.mp3 #}
 {# wf_podcast_duration: 00:22:13 #}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome beta 68 ships with the Payment Handler API -- the new, open, and standard way for web-based payment applications to be offered as a payment option during checkout. It enables merchants to accept a wide variety of payment options within a native-browser experience.
 
-{# wf_updated_on: 2018-06-08 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-06-07 #}
 {# wf_tags: javascript, payment, chrome68 #}
 {# wf_featured_image: /web/updates/images/generic/credit_card.png #}
