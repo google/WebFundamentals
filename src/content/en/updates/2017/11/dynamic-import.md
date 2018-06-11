@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Dynamic import() introduces a new function-like form of import that unlocks new capabilities compared to static import. This article compares the two and gives an overview of what's new.
 
-{# wf_updated_on: 2017-11-21 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-11-21 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -22,7 +22,7 @@ article compares the two and gives an overview of what's new.
 
 ## Static `import` (recap) {: #static }
 
-Back in September, Chrome 61 shipped with support for the ES2015 `import` statement within
+Chrome 61 shipped with support for the ES2015 `import` statement within
 [modules](https://jakearchibald.com/2017/es-modules-in-browsers/).
 
 Consider the following module, located at `./utils.mjs`:
@@ -96,6 +96,23 @@ Here's how to dynamically import and use the `./utils.mjs` module:
     });
 </script>
 ```
+
+Since `import()` returns a promise, it's possible to use `async`/`await` instead
+of the `then`-based callback style:
+
+```html
+<script type="module">
+  (async () => {
+    const moduleSpecifier = './utils.mjs';
+    const module = await import(moduleSpecifier)
+    module.default();
+    // → logs 'Hi from the default export!'
+    module.doStuff();
+    // → logs 'Doing stuff…'
+  })();
+</script>
+```
+
 
 Note: Although `import()` _looks_ like a function call, it is specified as *syntax* that just
 happens to use parentheses (similar to
