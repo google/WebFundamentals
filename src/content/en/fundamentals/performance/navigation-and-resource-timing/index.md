@@ -658,7 +658,8 @@ primarily because it's flexible. If you store the original metrics, you can
 always make corrections later in case of a measurement error.
 
 Finally, you don't need to store _every_ metric these APIs provide. For example,
-if you know you don't need specific metrics, don't store them.
+if you know for a fact you don't need to measure DOM processing time, don't feel
+like you _have_ to store those metrics.
 
 Of course, this guide isn't meant to be an exhaustive resource on these APIs,
 but rather to help you start using them with some confidence. If you want
@@ -682,3 +683,8 @@ With these APIs at your command, you'll be better equipped to understand how
 loading performance is experienced by real users. This means you'll be better
 equipped to diagnose and address performance issues in the wild, and that
 knowledge is truly powerful.
+
+_Special thanks to [Paul Irish](/web/resources/contributors/paulirish), Gray
+Norton, [Addy Osmani](/web/resources/contributors/addyosmani), and [Philip
+Walton](/web/resources/contributors/philipwalton) for their valuable feedback,
+which significantly improved the quality of this article._
