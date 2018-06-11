@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-06-08 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Complete Service Worker with Workbox CLI {: .page-title }
@@ -73,22 +73,23 @@ module.exports = {
   swDest: 'build/sw.js',
 
   // Define runtime caching rules.
-  runtimeCaching: [
-    {
-      // Match any request ends with .png, .jpg, .jpeg or .svg.
-      urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+  runtimeCaching: [{
+    // Use a custom cache name.
+    cacheName: 'images',
 
-      // Apply a cache-first strategy.
-      handler: 'cacheFirst',
+    // Match any request ends with .png, .jpg, .jpeg or .svg.
+    urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
-      options: {
-        // Only cache 10 images.
-        expiration: {
-          maxEntries: 10,
-        },
+    // Apply a cache-first strategy.
+    handler: 'cacheFirst',
+
+    options: {
+      // Only cache 10 images.
+      expiration: {
+        maxEntries: 10,
       },
     },
-  ],
+  }],
 };
 ```
 
