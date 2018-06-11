@@ -32,6 +32,7 @@ In this episode:
 * The difference in prototyping schools of thought, showing intent vs 
 informing a developer.
 * Red lining.
+* Throwing things over the fence. 
 * Scenario based design.
 * [AirBnB - Painting with Code](http://bit.ly/2l0iVM5){: .external}.
 * [User Journey Mapping](http://bit.ly/2LIamAZ){: .external}.
