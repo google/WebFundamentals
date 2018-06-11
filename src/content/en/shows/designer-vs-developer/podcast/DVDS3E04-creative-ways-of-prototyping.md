@@ -30,9 +30,9 @@ class="attempt-right">
 In this episode:
 
 * The difference in prototyping schools of thought, showing intent vs 
-informing a developer
-* Red lining
-* Scenario based design
+informing a developer.
+* Red lining.
+* Scenario based design.
 * [AirBnB - Painting with Code](http://bit.ly/2l0iVM5){: .external}.
 * [User Journey Mapping](http://bit.ly/2LIamAZ){: .external}.
  
