@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-06-08 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -49,11 +49,9 @@ The audit has 2 important functions:
 
 1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made with
    Chrome 68. If you're using an earlier or later version, some features may look different or not be available.
-   You should be able to complete most of the tutorial. Just keep in mind that the UI may look different
-   than what you see in this tutorial's screenshots.
 1. <a class="gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank" rel="noopener"
    data-category="CTA" data-label="{% dynamic print request.path %}">Open the source code for the site</a>.
-   This tab will be referred to as the **editor tab**.
+   This tab will be referred to as the *editor tab*.
 
      <figure>
        <img src="imgs/editor.png" alt="The editor tab."/>
@@ -65,7 +63,7 @@ The audit has 2 important functions:
 1. Click **tony**. A menu appears.
 1. Click **Remix This**. The name of the project changes from **tony** to some randomly-generated name. You now
    have your own editable copy of the code.
-1. Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the **demo tab**.
+1. Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the *demo tab*.
 
      <figure>
        <img src="imgs/demo.png" alt="The demo tab."/>
@@ -126,17 +124,114 @@ The **Passed Audits** section shows you what the page is doing correctly.
 
 ## Step 2: Experiment {: #experiment }
 
-When you attempt to optimize a page, it's best to make a single change at a time, and then
-run an audit after each change, so that you can be sure that this isolated change is actually
-the cause of change in load performance.
+The **Opportunites** section of your audit report gives you tips on how to improve the
+page's performance. In this section, you implement each change to the codebase, and then
+run an audit to measure how each isolated change affects load performance.
+
+### Enable text compression {: #compression }
+
+Your report says that enabling text compression is one of the top opportunities for
+improving the page's performance.
+
+Before you enable compression, here are a couple of ways you can manually check whether
+text resources are compressed.
+
+1. Click the **Network** tab.
+1. Click **Use Large Request Rows**.
+1. If you don't see the **Size** column, click the table header and then select **Size**.
+1. Each **Size** cell shows two values. The top value is the size of the transferred resource.
+   The bottom value is the size of the uncompressed resource. If the two values are the same,
+   then the resource is not being compressed when it's sent over the network.
+
+You can also check for compression by inspecting a resource's headers:
+
+1. Click **bundle.js**.
+1. Search the **Response Headers** section for a `content-encoding` header. When a
+   resource is compressed, this header is usually set to `gzip`, `deflate`, or `br`.
+   See [Directives][Directives]{:.external} for an explanation of these values.
+
+[Directives]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding#Directives
+
+Now, enable text compression by adding a couple of lines of code:
+
+1. In the editor tab, click **server.js**.
+1. Add the following code:
+
+     <pre>
+       ...
+       const fs = require('fs');
+       <strong>const compresion = require('compression'); // This lib has already been installed for you.
+
+       // Order matters.
+       app.use(compression());</strong>
+       app.use(express.static('build'));
+       ...
+     </pre>
+
+1. Wait for Glitch to rebuild the site. The change is ready when you see **Show Live**
+   again.
+
+Use the workflows that you learned earlier to manually check that the compression is working:
+
+1. Go back to the demo tab and reload the page. The **Size** column should show 2 different
+   values for each text resource now.
+1. Click **bundle.js**. The **Response Headers** section should now include a `content-encoding: gzip`
+   header.
+
+Audit the page again to measure what kind of impact text compression has on the page's load performance:
+
+1. Click the **Audits** tab.
+1. Click **Perform an audit**.
+1. Click **Run audit**.
+
+Woohoo! That looks like progress. Your overall performance score should have improved from roughly 0 to
+11.
+
+### Resize images {: #images }
+
+Your new report says that properly sizing images is another big opportunity.
+
+1. In your report, click **Properly size images** to see what images should be
+   resized.
+
+   It looks like all 4 are bigger than necessary.
+1. Assume that you've already done a one-off resize of the images images. All that's left is to update the code
+   to use the smaller versions of the images.
+1. Open `src/model.js'.
+1. Replace `const dir = 'big';` with `const dir = 'small';`. The new code has been deployed once you
+   see **Show Live** again.
+1. Audit the page again to see how this change improves load performance.
+
+Looks like the change only has a minor affect on the overall performance score. However, one thing that the
+score doesn't show is how much network data you're saving your users. The total size of the old photos was
+around 5.3 megabytes, whereas now it's only about 0.18 megabytes for the new ones. Although users may not notice
+much of a change in perceived load performance, they'll definitely notice the savings in their cell phone bill!
+
+#### Resizing images in the real world
+
+For a small app, doing a one-off resize of the images like this may be good enough. For a large
+app, some more scalable solutions include:
+
+* Resize images during the build process.
+* Use `srcset` and create multiple sizes of each image during the build proces. At runtime, the browser
+  takes care of choosing what size is best for the device it's running on. 
+* Use an image CDN that lets you dynamically resize an image every time that you
+  request it.
 
 ### Eliminate render-blocking resources {: #crp }
 
-The Audits panel report says that the greatest opportunity to speed up the page's load performance
-is to reduce render-blocking resources.
+Your latest report now says that eliminating render-blocking resources is the biggest opportunity.
 
-What are render-blocking resources? When a page references external JavaScript or CSS files, the browser
-must download, parse, and execute those files before it can finish loading, or rendering, the page.
+What is a render-blocking resource? It's an external JavaScript or CSS file that the browser must download,
+parse, and execute before it can show the page to the user.
+
+Sometimes this is unavoidable. For example, your app probably has some core JavaScript and CSS code that it
+must run before it can display the page. But often, the page is blocked unnecessarily. For example, if you
+have some JavaScript code that only runs on your contact page, then there's no reason to block the homepage's
+load on that code.
+
+The first goal of this section, therefore, is to determine whether the render-blocking resources for this
+app are needed for the page load.
 
 #### View unused code {: #coverage }
 
@@ -176,50 +271,13 @@ In your own code, you might discover resources that aren't required for page loa
 needed later for page interactions. In these cases, you can mark the scripts with the `async`
 property.
 
-### Enable text compression {: #compression }
+### Ship less JavaScript code {: #splitting }
 
-Use Network panel to view transmitted / uncompressed
-
-    const compresion = require('compression');
-    app.use(compression());
-
-### Resize images
-
-// TODO build a little image resizer on tony.glitch.me, and then use that API to serve resized images...
-// this might work https://www.npmjs.com/package/resize-img
-
-// Update the resizer is just too dang slow... go back to using the full size images, and then change the
-// base path to use the smaller images instead
-
-For this particular app, there didn't seem to be a straightforward way to automate the process of
-resizing images. But nonetheless, it's good to see the potential savings, so 
-
-1. Open `src/model.js'.
-1. Replace each instance of `../imgs/` with `../imgs/small/`.
-
-### Reduce JS activity {: #js }
-
-### Reduce render-blocking scripts and stylesheets {: #crp }
-
-Use Request Blocking to experiment with changes.
-
-Code coverage to identify
-
-### Ship less JS code {: #splitting }
-
-
+### Do less JavaScript work {: #js }
 
 ## Summary {: #summary}
 
-1. Run an audit to measure your baseline performance.
-1. 
-
-
 ## Next steps {: #next-steps }
-
-### Convince your company to invest in load performance
-
-### Get help from the DevTools community
 
 ## Feedback {: #feedback }
 
