@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Sam talks about designing for the next billion users
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-09-25 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3 #}
 {# wf_podcast_duration: 00:09:23 #}
@@ -11,7 +11,7 @@ description: Sam talks about designing for the next billion users
 {# wf_podcast_subtitle: Sam talks about designing for the next billion users #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e05-cover-large.jpg #}
 
-# Designing For The Next Billion Users {: .page-title }
+# Sam Dutton On Designing For The Next Billion Users {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between

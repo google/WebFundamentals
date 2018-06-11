@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Matt talks about PWA's competing with native
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E06-how-PWAs-can-compete-with-native.mp3 #}
 {# wf_podcast_duration: 00:12:21 #}
@@ -11,7 +11,7 @@ description: Matt talks about PWA's competing with native
 {# wf_podcast_subtitle: Matt talks about PWA's competing with native #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e06-cover-large.jpg #}
 
-# How The Web Can Compete With Native {: .page-title }
+# Matt Gaunt On How The Web Can Compete With Native {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
