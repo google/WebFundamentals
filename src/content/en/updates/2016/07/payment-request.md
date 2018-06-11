@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent.
 
-{# wf_updated_on: 2017-02-20 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2016-07-30 #}
 {# wf_tags: javascript,payment #}
 {# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
+{# wf_blink_components: Blink>Payments #}
 
 # Bringing Easy and Fast Checkout with Payment Request API {: .page-title }
 

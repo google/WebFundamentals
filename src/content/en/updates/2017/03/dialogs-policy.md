@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
-{# wf_updated_on: 2017-12-03 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
+{# wf_blink_components: Blink>WindowDialog,Blink>JavaScript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
@@ -77,8 +78,14 @@ and the user will see the dialog when they switch to the tab. This behavior chan
 is seen
 [starting in Chrome 64](https://www.chromestatus.com/feature/6477774290157568).
 
+`confirm()` dialogs do not activate their tab. If `confirm()` is called from a
+background tab, the call returns immediately and no dialog is shown.
+This behavior change is seen
+[starting in Chrome 69](https://www.chromestatus.com/feature/5140698722467840).
+
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not
 affect you.
 
 {% include "comment-widget.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Brendan Kearns talks about creative ways to prototype and how using scenario based design 
-can help you sculpt great user experiences.
+description: Brendan Kearns talks about creative ways to prototype and how using scenario based design can help you sculpt great user experiences.
 {# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2018-06-11 #}
@@ -33,10 +32,10 @@ In this episode:
 informing a developer.
 * Red lining.
 * Throwing things over the fence. 
-* Scenario based design.
 * [AirBnB - Painting with Code](http://bit.ly/2l0iVM5){: .external}.
+* Scenario based design.
 * [User Journey Mapping](http://bit.ly/2LIamAZ){: .external}.
- 
+
 
 <audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3"
