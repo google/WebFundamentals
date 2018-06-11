@@ -31,7 +31,7 @@ In this episode:
 * Technical skills can hinder the process if you jump
 to solutions too soon.
 * Types of designers.
-* Design languages and [Material Design](http://material.io).
+* Design languages and [material design](http://material.io).
 * [Design Spints](https://designsprintkit.withgoogle.com/).
 * [Sketching](https://designsprintkit.withgoogle.com/methods/sketch/).
 
