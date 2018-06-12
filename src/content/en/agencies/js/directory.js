@@ -828,8 +828,13 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
       if (company.image_url) {
         var imageCtn = div.cloneNode(false);
         imageCtn.classList.add('devsite-info-window-logo');
-        img.src = company.image_url;
-        imageCtn.appendChild(img);
+        var logoImg = img.cloneNode(false);
+        var logoImgAttrs = {
+         'alt': company.agency_name + ' logo',
+         'src': company.image_url,
+        };
+        setAttributes(logoImg, logoImgAttrs);
+        imageCtn.appendChild(logoImg);
         ctn.appendChild(imageCtn);
       }
 
