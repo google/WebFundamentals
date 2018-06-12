@@ -71,6 +71,10 @@ toc:
         - title: Delivering Fast and Light Applications with Save-Data
           path: /web/fundamentals/performance/optimizing-content-efficiency/save-data/
           step_group: perf-oce
+      - title: Optimizing JavaScript
+        section:
+        - title: Reduce JavaScript Payloads with Tree Shaking
+          path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
