@@ -174,15 +174,55 @@ Below **Metrics** is a collection of screenshots that show you how the page look
 
 The **Opportunities** section provides specific tips on how to improve this particular page's load performance.
 
+<figure>
+  <img src="imgs/opportunities.png" alt="The Opportunities section."/>
+  <figcaption>
+    <b>Figure X</b>. The Opportunities section
+  </figcaption>
+</figure>
+
+Click an opportunity to learn more about it.
+
+<figure>
+  <img src="imgs/compression.png" alt="More information about the text compression opportunity."/>
+  <figcaption>
+    <b>Figure X</b>. More information about the text compression opportunity
+  </figcaption>
+</figure>
+
+Click **Learn More** to see documentation about why an opportunity is important, and specific recommendations
+on how to fix it.
+
+<figure>
+  <img src="imgs/reference.png" alt="Documentation for the text compression opportunity."/>
+  <figcaption>
+    <b>Figure X</b>. Documentation for the text compression opportunity
+  </figcaption>
+</figure>
+
 The **Diagnostics** section provides more information about factors that contribute to the page's load time.
 
-The **Passed Audits** section shows you what the page is doing correctly.
+<figure>
+  <img src="imgs/diagnostics.png" alt="The Diagnostics section"/>
+  <figcaption>
+    <b>Figure X</b>. The Diagnostics section
+  </figcaption>
+</figure>
+
+The **Passed Audits** section shows you what the site is doing correctly. Click to expand the section.
+
+<figure>
+  <img src="imgs/passed.png" alt="The Passed Audits section."/>
+  <figcaption>
+    <b>Figure X</b>. The Passed Audits section
+  </figcaption>
+</figure>
 
 ## Step 2: Experiment {: #experiment }
 
 The **Opportunites** section of your audit report gives you tips on how to improve the
-page's performance. In this section, you implement each change to the codebase, and then
-run an audit to measure how each isolated change affects load performance.
+page's performance. In this section, you implement the recommended changes to the codebase, auditing
+the site after each change to measure how it affects site speed.
 
 ### Enable text compression {: #compression }
 
@@ -193,8 +233,28 @@ Before you enable compression, here are a couple of ways you can manually check 
 text resources are compressed.
 
 1. Click the **Network** tab.
-1. Click **Use Large Request Rows**.
-1. If you don't see the **Size** column, click the table header and then select **Size**.
+
+     <figure>
+       <img src="imgs/network.png" alt="The Network panel."/>
+       <figcaption>
+         <b>Figure X</b>. The Network panel
+       </figcaption>
+     </figure>
+
+1. Click **Use Large Request Rows** ![Use Large Request Rows][large]{: .inline-icon }. The
+   height of the rows in the table of network requests increases.
+
+     <figure>
+       <img src="imgs/largerows.png" alt="Large rows in the network requests table."/>
+       <figcaption>
+         <b>Figure X</b>. Large rows in the network requests table
+       </figcaption>
+     </figure>
+
+[large]: /web/tools/chrome-devtools/network-performance/imgs/large-resource-rows-button.png
+
+1. If you don't see the **Size** column in the table of network requests, click the table
+   header and then select **Size**.
 1. Each **Size** cell shows two values. The top value is the size of the transferred resource.
    The bottom value is the size of the uncompressed resource. If the two values are the same,
    then the resource is not being compressed when it's sent over the network.
@@ -202,46 +262,96 @@ text resources are compressed.
 You can also check for compression by inspecting a resource's headers:
 
 1. Click **bundle.js**.
-1. Search the **Response Headers** section for a `content-encoding` header. When a
-   resource is compressed, this header is usually set to `gzip`, `deflate`, or `br`.
-   See [Directives][Directives]{:.external} for an explanation of these values.
+1. Click the **Headers** tab.
+
+     <figure>
+       <img src="imgs/headers.png" alt="The Headers tab."/>
+       <figcaption>
+         <b>Figure X</b>. The Headers tab
+       </figcaption>
+     </figure>
+
+1. Search the **Response Headers** section for a `content-encoding` header. You shouldn't see one,
+   meaning that `bundle.js` was not compressed. When a resource *is* compressed, this header is
+   usually set to `gzip`, `deflate`, or `br`. See [Directives][Directives]{:.external} for an
+   explanation of these values.
 
 [Directives]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding#Directives
 
-Now, enable text compression by adding a couple of lines of code:
+Enough with the explanations. Time to make some changes!
+Enable text compression by adding a couple of lines of code:
 
 1. In the editor tab, click **server.js**.
-1. Add the following code:
+1. Add the following code to **server.js**. Make sure to put `app.use(compression())` before
+   `app.use(express.static('build'))`.
 
      <pre>
        ...
        const fs = require('fs');
-       <strong>const compresion = require('compression'); // This lib has already been installed for you.
+       <strong>const compresion = require('compression');</strong>
 
-       // Order matters.
-       app.use(compression());</strong>
+       <strong>app.use(compression());</strong>
        app.use(express.static('build'));
        ...
      </pre>
 
-1. Wait for Glitch to rebuild the site. The change is ready when you see **Show Live**
-   again.
+     <aside class="note">
+       <b>Note</b>: Usually, you'd have to install the <code>compression</code> package via
+       something like <code>npm i -S compression</code>, but this has already been done for you.
+     </aside>
+
+1. Wait for Glitch to rebuild the site. The fancy animation that you see next to **Logs** and **Show**
+   means that the site is getting rebuilt and redeployed.
+
+     <figure>
+       <img src="imgs/building.png" alt="The animation that indicates that the site is getting built."/>
+       <figcaption>
+         <b>Figure X</b>. The animation that indicates that the site is getting built
+       </figcaption>
+     </figure>
+
+   The change is ready when you see **Show Live** again.
 
 Use the workflows that you learned earlier to manually check that the compression is working:
 
-1. Go back to the demo tab and reload the page. The **Size** column should show 2 different
-   values for each text resource now.
-1. Click **bundle.js**. The **Response Headers** section should now include a `content-encoding: gzip`
+1. Go back to the demo tab and reload the page. The **Size** column should now show 2 different values for
+   text resources like `bundle.js`. In **Figure X** the top value of `264 KB` for `bundle.js` is the
+   size of the file that was sent over the network, and the bottom value of `1.4 MB` is the uncompressed file size.
+
+     <figure>
+       <img src="imgs/requests.png" alt="The Size column now shows 2 different values for text resources."/>
+       <figcaption>
+         <b>Figure X</b>. The Size column now shows 2 different values for text resources
+       </figcaption>
+     </figure>
+
+1. The **Response Headers** section for `bundle.js` should now include a `content-encoding: gzip`
    header.
+
+     <figure>
+       <img src="imgs/gzip.png" alt="The Response Headers section now contains a content-encoding header."/>
+       <figcaption>
+         <b>Figure X</b>. The Response Headers section now contains a <code>content-encoding</code> header
+       </figcaption>
+     </figure>
+
 
 Audit the page again to measure what kind of impact text compression has on the page's load performance:
 
 1. Click the **Audits** tab.
-1. Click **Perform an audit**.
+1. Click **Perform an audit** ![Perform an audit](imgs/perform.png){: .inline-icon }.
+1. Leave the settings the same as before.
 1. Click **Run audit**.
+  
+     <figure>
+       <img src="imgs/compressionreport.png" alt="The audit report after enabling text compression."/>
+       <figcaption>
+         <b>Figure X</b>. The audit report after enabling text compression
+       </figcaption>
+     </figure>
 
-Woohoo! That looks like progress. Your overall performance score should have improved from roughly 0 to
-11.
+Woohoo! That looks like progress. Your overall performance score should have increased, meaning that the
+site is getting faster.
 
 ### Resize images {: #images }
 
@@ -265,8 +375,8 @@ much of a change in perceived load performance, they'll definitely notice the sa
 
 #### Resizing images in the real world
 
-For a small app, doing a one-off resize of the images like this may be good enough. For a large
-app, some more scalable solutions include:
+For a small app, doing a one-off resize of the images like this may be good enough. But for a large app,
+a one-off resize like you did in the last section obviously isn't scalable.
 
 * Resize images during the build process.
 * Use `srcset` and create multiple sizes of each image during the build proces. At runtime, the browser
