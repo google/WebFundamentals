@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
+description: Knowing where to begin optimizing your application's JavaScript can be daunting. If you're taking advantage of modern tooling such as webpack, however, tree shaking might be a good place to start!
 
 {# wf_updated_on: 2018-06-12 #}
 {# wf_published_on: 2018-06-14 #}
@@ -415,3 +415,9 @@ by configuring your build system to take advantage of this optimization in
 production builds and selectively importing only what your application needs,
 you'll be proactively keeping your applications as thin as possible. That's good
 for performance, and by extension, your users.
+
+_Special thanks to Kristofer Baxter, Jason Miller, [Addy
+Osmani](/web/resources/contributors/addyosmani), [Jeff
+Posnick](/web/resources/contributors/jeffposnick), Sam Saccone, and [Philip
+Walton](/web/resources/contributors/philipwalton) for their valuable feedback,
+which significantly improved the quality of this article._
