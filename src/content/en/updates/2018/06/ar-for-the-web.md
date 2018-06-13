@@ -33,7 +33,8 @@ make sure it's both robust and right for developers.
 Aside from Chrome Canary, you'll also need:
 
 -  A
-   [compatible smartphone](../../../../ar/discover/supported-devices).
+   [compatible smartphone](../../../../ar/discover/supported-devices) running
+   Android O or later.
 -  Two Chrome flags (chrome://flags): WebXRDevice API (#webxr) and WebXR Hit
    Test (#webxr-hit-test)
 
