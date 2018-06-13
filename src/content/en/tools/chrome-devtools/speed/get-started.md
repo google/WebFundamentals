@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2018-06-12 #}
+{# wf_updated_on: 2018-06-13 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -47,11 +47,12 @@ The audit has 2 important functions:
 
 ### Set up {: #setup }
 
-1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made with
-   Chrome 68. If you're using an earlier or later version, some features may look different or not be available.
-1. <a class="external gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank" rel="noopener"
-   data-category="CTA" data-label="{% dynamic print request.path %}">Open the source code for the site</a>.
-   This tab will be referred to as the *editor tab*.
+1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made
+   with Chrome 68. If you're using an earlier or later version, some features may look different
+   or not be available.
+1. <a class="external gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank"
+   rel="noopener" data-category="CTA" data-label="{% dynamic print request.path %}">Open the
+   source code for the site</a>. This tab will be referred to as the *editor tab*.
 
      <figure>
        <img src="imgs/editor.png" alt="The editor tab."/>
@@ -69,9 +70,11 @@ The audit has 2 important functions:
        </figcaption>
      </figure>
 
-1. Click **Remix This**. The name of the project changes from **tony** to some randomly-generated name. You now
-   have your own editable copy of the code. Later on, you'll make changes to this code.
-1. Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the *demo tab*.
+1. Click **Remix This**. The name of the project changes from **tony** to some randomly-generated
+   name. You now have your own editable copy of the code. Later on, you'll make changes to this
+   code.
+1. Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the *demo
+   tab*.
 
      <figure>
        <img src="imgs/demo.png" alt="The demo tab."/>
@@ -81,8 +84,8 @@ The audit has 2 important functions:
      </figure>
 
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac)
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS). Chrome DevTools opens up alongside
-   the demo.
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS). Chrome DevTools
+   opens up alongside the demo.
 
      <figure>
        <img src="imgs/devtools.png" alt="DevTools and the demo."/>
@@ -93,8 +96,8 @@ The audit has 2 important functions:
 
 For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
 can do this by pressing <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the Command Menu,
-typing `Undock`, and then selecting **Undock into seperate window**.
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the Command
+Menu, typing `Undock`, and then selecting **Undock into seperate window**.
 
 <figure>
   <img src="imgs/undocked.png" alt="Undocked DevTools."/>
@@ -109,7 +112,8 @@ The baseline is a record of how the site performed before you made any performan
 
 1. Click the **Audits** tab. It may be hidden behind the **More Panels**
    ![More Panels](imgs/more-panels.png){:.inline-icon} button. There's a Lighthouse on this
-   panel because the project that powers the Audits panel is called [Lighthouse](/web/tools/lighthouse).
+   panel because the project that powers the Audits panel is called
+   [Lighthouse](/web/tools/lighthouse).
 
      <figure>
        <img src="imgs/audits.png" alt="The Audits panel."/>
@@ -131,8 +135,8 @@ The baseline is a record of how the site performed before you made any performan
 
 ### Understand your report {: #report }
 
-The number at the top of your report is the overall performance score for the site. Later, as you make
-changes to the code, you should see this number rise. A higher score means better performance.
+The number at the top of your report is the overall performance score for the site. Later, as you
+make changes to the code, you should see this number rise. A higher score means better performance.
 
 <figure>
   <img src="imgs/overall.png" alt="The overall performance score."/>
@@ -141,11 +145,12 @@ changes to the code, you should see this number rise. A higher score means bette
   </figcaption>
 </figure>
 
-The **Metrics** section provides quantitative measurements of the site's performance. Each metric provides
-insight into a different aspect of the performance. For example, **First Contentful Paint** tells you
-when content is first painted to the screen, which is an important milestone in the user's perception of the
-page load, whereas **First CPU Idle** marks when the main thread is quiet enough to handle user input, which
-is essentially a proxy for when the user can first interact with the page.
+The **Metrics** section provides quantitative measurements of the site's performance. Each metric
+provides insight into a different aspect of the performance. For example, **First Contentful Paint**
+tells you when content is first painted to the screen, which is an important milestone in the user's
+perception of the page load, whereas **First CPU Idle** marks when the main thread is quiet enough
+to handle user input, which is essentially a proxy for when the user can first interact with the
+page.
 
 <figure>
   <img src="imgs/metrics.png" alt="The Metrics section."/>
@@ -154,7 +159,8 @@ is essentially a proxy for when the user can first interact with the page.
   </figcaption>
 </figure>
 
-Hover over a metric to see a description of it, and click **Learn More** to read documentation about it.
+Hover over a metric to see a description of it, and click **Learn More** to read documentation
+about it.
  
 <figure>
   <img src="imgs/fmp.png" alt="Hovering over the First Meaningful Paint metric."/>
@@ -172,7 +178,8 @@ Below **Metrics** is a collection of screenshots that show you how the page look
   </figcaption>
 </figure>
 
-The **Opportunities** section provides specific tips on how to improve this particular page's load performance.
+The **Opportunities** section provides specific tips on how to improve this particular page's
+load performance.
 
 <figure>
   <img src="imgs/opportunities.png" alt="The Opportunities section."/>
@@ -190,8 +197,8 @@ Click an opportunity to learn more about it.
   </figcaption>
 </figure>
 
-Click **Learn More** to see documentation about why an opportunity is important, and specific recommendations
-on how to fix it.
+Click **Learn More** to see documentation about why an opportunity is important, and specific
+recommendations on how to fix it.
 
 <figure>
   <img src="imgs/reference.png" alt="Documentation for the text compression opportunity."/>
@@ -200,7 +207,8 @@ on how to fix it.
   </figcaption>
 </figure>
 
-The **Diagnostics** section provides more information about factors that contribute to the page's load time.
+The **Diagnostics** section provides more information about factors that contribute to the page's
+load time.
 
 <figure>
   <img src="imgs/diagnostics.png" alt="The Diagnostics section"/>
@@ -209,7 +217,8 @@ The **Diagnostics** section provides more information about factors that contrib
   </figcaption>
 </figure>
 
-The **Passed Audits** section shows you what the site is doing correctly. Click to expand the section.
+The **Passed Audits** section shows you what the site is doing correctly. Click to expand the
+section.
 
 <figure>
   <img src="imgs/passed.png" alt="The Passed Audits section."/>
@@ -221,8 +230,8 @@ The **Passed Audits** section shows you what the site is doing correctly. Click 
 ## Step 2: Experiment {: #experiment }
 
 The **Opportunites** section of your audit report gives you tips on how to improve the
-page's performance. In this section, you implement the recommended changes to the codebase, auditing
-the site after each change to measure how it affects site speed.
+page's performance. In this section, you implement the recommended changes to the codebase,
+auditing the site after each change to measure how it affects site speed.
 
 ### Enable text compression {: #compression }
 
@@ -300,11 +309,12 @@ Enable text compression by adding a couple of lines of code:
        something like <code>npm i -S compression</code>, but this has already been done for you.
      </aside>
 
-1. Wait for Glitch to rebuild the site. The fancy animation that you see next to **Logs** and **Show**
-   means that the site is getting rebuilt and redeployed.
+1. Wait for Glitch to rebuild the site. The fancy animation that you see next to **Logs** and
+   **Show** means that the site is getting rebuilt and redeployed.
 
      <figure>
-       <img src="imgs/building.png" alt="The animation that indicates that the site is getting built."/>
+       <img src="imgs/building.png" 
+            alt="The animation that indicates that the site is getting built."/>
        <figcaption>
          <b>Figure X</b>. The animation that indicates that the site is getting built
        </figcaption>
@@ -314,12 +324,14 @@ Enable text compression by adding a couple of lines of code:
 
 Use the workflows that you learned earlier to manually check that the compression is working:
 
-1. Go back to the demo tab and reload the page. The **Size** column should now show 2 different values for
-   text resources like `bundle.js`. In **Figure X** the top value of `264 KB` for `bundle.js` is the
-   size of the file that was sent over the network, and the bottom value of `1.4 MB` is the uncompressed file size.
+1. Go back to the demo tab and reload the page. The **Size** column should now show 2 different
+   values for text resources like `bundle.js`. In **Figure X** the top value of `264 KB` for
+   `bundle.js` is the size of the file that was sent over the network, and the bottom value of
+   `1.4 MB` is the uncompressed file size.
 
      <figure>
-       <img src="imgs/requests.png" alt="The Size column now shows 2 different values for text resources."/>
+       <img src="imgs/requests.png" 
+            alt="The Size column now shows 2 different values for text resources."/>
        <figcaption>
          <b>Figure X</b>. The Size column now shows 2 different values for text resources
        </figcaption>
@@ -329,14 +341,17 @@ Use the workflows that you learned earlier to manually check that the compressio
    header.
 
      <figure>
-       <img src="imgs/gzip.png" alt="The Response Headers section now contains a content-encoding header."/>
+       <img src="imgs/gzip.png" 
+            alt="The Response Headers section now contains a content-encoding header."/>
        <figcaption>
-         <b>Figure X</b>. The Response Headers section now contains a <code>content-encoding</code> header
+         <b>Figure X</b>. The Response Headers section now contains a 
+         <code>content-encoding</code> header
        </figcaption>
      </figure>
 
 
-Audit the page again to measure what kind of impact text compression has on the page's load performance:
+Audit the page again to measure what kind of impact text compression has on the page's load
+performance:
 
 1. Click the **Audits** tab.
 1. Click **Perform an audit** ![Perform an audit](imgs/perform.png){: .inline-icon }.
@@ -344,89 +359,121 @@ Audit the page again to measure what kind of impact text compression has on the 
 1. Click **Run audit**.
   
      <figure>
-       <img src="imgs/compressionreport.png" alt="The audit report after enabling text compression."/>
+       <img src="imgs/compressionreport.png" 
+            alt="The audit report after enabling text compression."/>
        <figcaption>
          <b>Figure X</b>. The audit report after enabling text compression
        </figcaption>
      </figure>
 
-Woohoo! That looks like progress. Your overall performance score should have increased, meaning that the
-site is getting faster.
+Woohoo! That looks like progress. Your overall performance score should have increased,
+meaning that the site is getting faster.
 
 ### Resize images {: #images }
 
 Your new report says that properly sizing images is another big opportunity.
 
 1. In your report, click **Properly size images** to see what images should be
-   resized.
+   resized. It looks like all 4 images are bigger than necessary.
 
-   It looks like all 4 are bigger than necessary.
-1. Assume that you've already done a one-off resize of the images images. All that's left is to update the code
-   to use the smaller versions of the images.
-1. Open `src/model.js'.
-1. Replace `const dir = 'big';` with `const dir = 'small';`. The new code has been deployed once you
-   see **Show Live** again.
-1. Audit the page again to see how this change improves load performance.
+     <figure>
+       <img src="imgs/resize.png" 
+            alt="Details about the 'properly size images' opportunity."/>
+       <figcaption>
+         <b>Figure X</b>. Details about the <i>Properly size images</i> opportunity
+       </figcaption>
+     </figure>
 
-Looks like the change only has a minor affect on the overall performance score. However, one thing that the
-score doesn't show is how much network data you're saving your users. The total size of the old photos was
-around 5.3 megabytes, whereas now it's only about 0.18 megabytes for the new ones. Although users may not notice
-much of a change in perceived load performance, they'll definitely notice the savings in their cell phone bill!
+1. Back in the editor tab, open `src/model.js`.
+1. Replace `const dir = 'big'` with `const dir = 'small'`. **Figure X** highlights the
+   line that you should replace.
 
-#### Resizing images in the real world
+     <figure>
+       <img src="imgs/model.png" 
+            alt="Editing model.js."/>
+       <figcaption>
+         <b>Figure X</b>. Editing <code>model.js</code>
+       </figcaption>
+     </figure>
 
-For a small app, doing a one-off resize of the images like this may be good enough. But for a large app,
-a one-off resize like you did in the last section obviously isn't scalable.
+1. Audit the page again to see how this change affects load performance.
+
+     <figure>
+       <img src="imgs/resizereport.png" 
+            alt="The audit report after resizing images."/>
+       <figcaption>
+         <b>Figure X</b>. The audit report after resizing images</code>
+       </figcaption>
+     </figure>
+
+Looks like the change only has a minor affect on the overall performance score. However, one thing
+that the score doesn't show clearly is how much network data you're saving your users. The total
+size of the old photos was around 5.3 megabytes, whereas now it's only about 0.18 megabytes.
+
+#### Resizing images in the real world {: #strategies }
+
+For a small app, doing a one-off resize like this may be good enough. But for a
+large app, this obviously isn't scalable. Here are some strategies for managing images in
+large apps:
 
 * Resize images during the build process.
-* Use `srcset` and create multiple sizes of each image during the build proces. At runtime, the browser
-  takes care of choosing what size is best for the device it's running on. 
-* Use an image CDN that lets you dynamically resize an image every time that you
-  request it.
+* Create multiple sizes of each image during the build process and then use `srcset` in your code.
+  At runtime, the browser takes care of choosing what size is best for the device it's running on. 
+* Use an image CDN that lets you dynamically resize an image when you request it.
 
-### Eliminate render-blocking resources {: #crp }
+See [Essential Image Optimization][addy]{: .external target="_blank" rel="noopener" } by Addy
+for more tips.
 
-Your latest report now says that eliminating render-blocking resources is the biggest opportunity.
+[addy]: https://images.guide/
 
-What is a render-blocking resource? It's an external JavaScript or CSS file that the browser must download,
-parse, and execute before it can show the page to the user.
+### Eliminate render-blocking resources {: #render }
 
-Sometimes this is unavoidable. For example, your app probably has some core JavaScript and CSS code that it
-must run before it can display the page. But often, the page is blocked unnecessarily. For example, if you
-have some JavaScript code that only runs on your contact page, then there's no reason to block the homepage's
-load on that code.
+Your latest report says that eliminating render-blocking resources is now the biggest opportunity.
 
-The first goal of this section, therefore, is to determine whether the render-blocking resources for this
-app are needed for the page load.
+A render-blocking resource is an external JavaScript or CSS file that the browser must
+download, parse, and execute before it can show the page. The goal is to only run the core
+CSS and JavaScript code that is required to display the page properly.
 
-#### View unused code {: #coverage }
+The first task, then, is to find code that doesn't need to be executed on page load.
 
 1. Click **Eliminate render-blocking resources** to see which resources are blocking first paint.
+   The opportunity says that you should focus on `lodash.js` and `jquery.js`.
 
-First, you need to see if the render-blocking resources are needed for the page load. If the page
-needs these resources in order to display the page, then it's necessary for these resources to
-be render-blocking. The Coverage tab can help with this analysis.
+     <figure>
+       <img src="imgs/render.png" 
+            alt="More information about the 'reduce render-blocking resources' opportunity."/>
+       <figcaption>
+         <b>Figure X</b>. More information about the <i>Reduce render-blocking resources</i>
+         opportunity
+       </figcaption>
+     </figure>
 
-1. The jQuery file includes comments. You can reduce the file size by minifying this file.
-1. ... All of those `webpack://` URLs seem to indicate that the site is using the development mode of
-   webpack. You'll revisit this later.
-
-#### Block requests {: #block }
-
-It's unclear whether the resources are needed to load the page. The Request Blocking tab can show you
-what happens when the resources aren't available. If the page still loads when the resources aren't
-available, then there's no reason to block rendering while waiting for these resources.
 
 1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the Command Menu.
-1. Start typing `blocking` and then select **Show Request Blocking**. This UI lets you block resources.
-   You're going to block the network requests for the 2 render-blocking resources, and then see if the
-   site still loads correctly. If it does, then there's no reason for these resources to block 
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open
+   the Command Menu, start typing `Coverage`, and then select **Show Coverage**.
+1. Click **Reload** ![Reload](imgs/reload.png){: .inline-icon }.
+1. The jQuery file includes comments. You can reduce the file size by minifying this file.
+1. ... All of those `webpack://` URLs seem to indicate that the site is using the development
+   mode of webpack. You'll revisit this later.
+
+It's unclear whether the resources are needed to load the page. The Request Blocking tab can
+show you what happens when the resources aren't available. If the page still loads when the
+resources aren't available, then there's no reason to block rendering while waiting for these
+resources.
+
+1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
+  Command Menu.
+1. Start typing `blocking` and then select **Show Request Blocking**. This UI lets you block
+   resources. You're going to block the network requests for the 2 render-blocking resources, and
+   then see if the site still loads correctly. If it does, then there's no reason for these
+   resources to block 
 1. Click **Add Pattern**, type `/libs/*`, and then press <kbd>Enter</kbd> to confirm.
 1. Click **Remove all patterns** to remove the request blocks.
 
-Another tool that can help you determine if a file is needed during page load is the Coverage tab. While
-a page loads, the Coverage tab records what code from each file is executed.
+Another tool that can help you determine if a file is needed during page load is the Coverage tab.
+While a page loads, the Coverage tab records what code from each file is executed.
 
 In this particular case, it seems like the scripts aren't used whatsoever, so you can remove them
 completely from the code.
