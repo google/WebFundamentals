@@ -14,7 +14,7 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 When preparing for Google I/O, we wanted to highlight the exciting possibilities
 of augmented reality (AR) on the web. Chacmool is an educational web experience
 demo we built to show how easily web based AR can help users engage with AR
-experiences. The web makes AR extremely convenient and accessible everywhere.
+experiences. The web makes AR convenient and accessible everywhere.
 
 ![The Chacmool demo in action](/web/updates/images/2018/06/webar-chacmool.jpg)
 
