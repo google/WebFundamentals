@@ -6,7 +6,7 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
-# WebVR Status and Considerations {: .page-title }
+# WebVR Status {: .page-title }
 
 {% include "web/_shared/webxr-status.html" %}
 
@@ -16,6 +16,8 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 
 Today the API is available in:
 
+| Feature | Chrome version | Details |
+| ------- | -------------- | ------- |
 | AR hit test support | Chrome Canary for the immediate future. | Enable the &num;webxr and &num;webxr-hit-test flags under chrome://flags |
 | VR use cases | Chrome 66 and later | Enable the chrome://flags/#webxr flag. (The URL must be entered manually.) |
 | VR use cases | Chrome 67 origin trial | Enable the chrome://flags/#webxr flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)). |
