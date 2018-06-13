@@ -14,7 +14,7 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 When preparing for Google I/O, we wanted to highlight the exciting possibilities
 of augmented reality (AR) on the web. Chacmool is an educational web experience
 demo we built to show how easily web based AR can help users engage with AR
-experiences. The web makes AR extremely convenient and accessible everywhere.
+experiences. The web makes AR convenient and accessible everywhere.
 
 ![The Chacmool demo in action](/web/updates/images/2018/06/webar-chacmool.jpg)
 
@@ -26,7 +26,7 @@ on
 [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)),
 so it is under a flag and intended to stay in Canary as we test and refine the
 new API proposal with other members of the Immersive Web Community Group. In
-fact, to access the demo you'll need to enable two flags in `chrome://flags:``
+fact, to access the demo you'll need to enable two flags in `chrome://flags:`
 `&num;webxr` and `&num;webxr-hit-test`.  Once you have these both enabled and have restarted
 Canary, you can check out the [Chacmool](https://web-education-ar-demo.appspot.com/) demo.  
 
