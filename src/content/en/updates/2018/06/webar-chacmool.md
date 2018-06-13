@@ -9,9 +9,7 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 {# wf_featured_snippet: Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience. #}
 {# wf_blink_components: Blink>WebVR #}
 
-# WebAR-Chacmool: Ancient artifacts at Your Fingertips {: .page-title }
-
-{% include "web/_shared/contributors/chriswilson.html" %}
+# WebAR-Chacmool: Ancient artifacts at your fingertips {: .page-title }
 
 When preparing for Google I/O, we wanted to highlight the exciting possibilities
 of augmented reality (AR) on the web. Chacmool is an educational web experience
@@ -69,7 +67,7 @@ to help inspect the experience creates a great fast iteration cycle between code
 changes, and there are amazing developer tools in Chrome for debugging and
 checking performance.
 
-**Best Practices for AR/VR experiences**
+## Best practices for AR/VR experiences
 
 Most design and engineering guidelines for designing for native AR experiences
 apply for making web based AR experiences. If you'd like to learn more about
@@ -105,7 +103,7 @@ means also designing for non-AR-capable devices (i.e. show a 3D model viewer on
 non-AR devices). 	
 
 If you are interested in developing your own web-based AR experiences, we have a
-[companion post](ar-for-the-web.md)  that will give more details about how to get started
+companion post here that will give more details about how to get started
 building AR on the Web yourself. (You can also check out the source to the
 Chacmool demo.) The WebXR Device API is actively in development and we'd love
 feedback so we can ensure it enables all types of applications and use cases, so
