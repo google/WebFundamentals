@@ -95,5 +95,6 @@ book_path: /web/updates/_book.yaml
 <li>For comments on Chrome’s implementation of this spec: <a href="mailto:chromium-html5@chromium.org?subject=Web%20Speech%20API">email</a>, <a href="https://groups.google.com/a/chromium.org/forum/?fromgroups#!forum/chromium-html5">mailing archive</a></li>
 </ul>
 
+<p>Please refer to the <a href="https://www.google.com/chrome/privacy/whitepaper.html#speech">Chrome Privacy Whitepaper<a/> to learn how Google is handling voice data from this API.</p>
 
 {% include "comment-widget.html" %}
