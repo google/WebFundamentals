@@ -26,7 +26,7 @@ on
 [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)),
 so it is under a flag and intended to stay in Canary as we test and refine the
 new API proposal with other members of the Immersive Web Community Group. In
-fact, to access the demo you'll need to enable two flags in `chrome://flags:``
+fact, to access the demo you'll need to enable two flags in `chrome://flags:`
 `&num;webxr` and `&num;webxr-hit-test`.  Once you have these both enabled and have restarted
 Canary, you can check out the [Chacmool](https://io-ar-web.appspot.com) demo.  
 
