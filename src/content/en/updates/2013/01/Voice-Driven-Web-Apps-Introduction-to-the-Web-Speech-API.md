@@ -4,6 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2013-01-13 #}
 {# wf_published_on: 2013-01-13 #}
 {# wf_tags: news,voice,multimedia,webspeech #}
+{# wf_blink_components: N/A #}
 
 # Voice Driven Web Apps: Introduction to the Web Speech API {: .page-title }
 
