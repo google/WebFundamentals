@@ -11,6 +11,8 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 
 # WebAR-Chacmool: Ancient artifacts at Your Fingertips {: .page-title }
 
+{% include "web/_shared/contributors/chriswilson.html" %}
+
 When preparing for Google I/O, we wanted to highlight the exciting possibilities
 of augmented reality (AR) on the web. Chacmool is an educational web experience
 demo we built to show how easily web based AR can help users engage with AR
@@ -103,7 +105,7 @@ means also designing for non-AR-capable devices (i.e. show a 3D model viewer on
 non-AR devices). 	
 
 If you are interested in developing your own web-based AR experiences, we have a
-companion post here that will give more details about how to get started
+[companion post](ar-for-the-web.md)  that will give more details about how to get started
 building AR on the Web yourself. (You can also check out the source to the
 Chacmool demo.) The WebXR Device API is actively in development and we'd love
 feedback so we can ensure it enables all types of applications and use cases, so
