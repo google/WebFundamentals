@@ -28,9 +28,9 @@ so it is under a flag and intended to stay in Canary as we test and refine the
 new API proposal with other members of the Immersive Web Community Group. In
 fact, to access the demo you'll need to enable two flags in `chrome://flags:``
 `&num;webxr` and `&num;webxr-hit-test`.  Once you have these both enabled and have restarted
-Canary, you can check out the [Chacmool](https://io-ar-web.appspot.com) demo.  
+Canary, you can check out the [Chacmool](https://web-education-ar-demo.appspot.com/) demo.  
 
-The [Chacmool AR experience](https://io-ar-web.appspot.com/) is centered around
+The [Chacmool AR experience](https://web-education-ar-demo.appspot.com/) is centered around
 education, leveraging AR's immersive and interactive nature to help users learn
 about ancient Chacmool sculptures. Users can place a life size statue in their
 reality and move around to see the sculpture from various different angles and
