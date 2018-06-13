@@ -44,7 +44,7 @@ With these, you can dive into the demos or try out our codelab.
 specfically the ones using magic windows, do not work with the WebXR Hit Test
 turned on. Please excuse our construction debris.
 
--  [Chacmool](https://io-ar-web.appspot.com/)
+-  [Chacmool](https://web-education-ar-demo.appspot.com/)
 -  [Immersive Web](https://immersive-web.github.io/webxr-samples/proposals/phone-ar-hit-test.html)
    Sample
 -  [Codelab](https://immersive-web.github.io/webxr-samples/phone-ar-hit-test.html)
