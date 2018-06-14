@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
-{# wf_updated_on: 2018-06-13 #}
-{# wf_published_on: 2018-06-13 #}
+{# wf_updated_on: 2018-06-14 #}
+{# wf_published_on: 2018-06-14 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
 {# wf_featured_image: /web/updates/images/2018/06/sunflowers.png #}
@@ -14,7 +14,7 @@ description: Augmented reality allows placement and tracking of virtual objects 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 In Chrome 67,
-[we announced](../05/welcome-to-immersive)
+[we announced](/web/updates/2018/05/welcome-to-immersive)
 the WebXR Device API for both augmented reality (AR) and virtual reality (VR),
 though only the VR features were enabled. VR is an experience based purely on
 what's in a computing device. AR on the other hand allows you to render virtual
@@ -24,7 +24,11 @@ just added the
 to Chrome Canary, a new method that helps immersive web code place objects in
 the real world.
 
-![Virtual sunflowers in a real room](/web/updates/images/2018/06/sunflowers.png)
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="GDhujHhUEKc"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Where can I get it? {: #where }
 
@@ -57,7 +61,7 @@ turned on. Please excuse our construction debris.
 At Google IO this year, we demonstrated augmented reality with an early build of
 Chrome. I said something repeatedly to developers and non-developers alike
 during those three days that I wish I had known to put in my
-[immersive web article](..//05/welcome-to-immersive):
+[immersive web article](/web/updates/2018/05/welcome-to-immersive):
 "It's just the web."
 
 "What Chrome extension do I need to install?" "There's no extension. It's just
@@ -85,27 +89,33 @@ it. This gives viewers a deeper understanding of the object than is possible
 with a two dimensional image.
 
 If you're not sure what I mean by all of that, it will become clear when you use
-the demos. If you don't have a device that can run the demo, check out this
-video from I/O, which shows a sample educational website teaching about
-Chacmool statues using augmented reality. The video is our Chacmool
-("Chawk-mole") demo from IO. It's a little more complicated than the demo I'm
-using for this article, but it demonstrates AR's ability to show a life-size
-representation more clearly. Read more about the Chacmool demo in the [companion
-article]() to this piece.
+the demos. If you don't have a [device that can run the
+demo](/ar/discover/supported-devices), check out the video link at the top of
+this article.
 
-![image](insert_image_url_here)
+One thing that demo and vide doesn't show is how AR can convey the size of a
+real object. The video here shows an educational demo that we built called
+[Chacmool](https://web-education-ar-demo.appspot.com/).
+A [companion article](/web/updates/2018/06/webar-chacmool)
+describes this demo in detail. The important thing for this discussion is that when you place the Chacmool statue in augmented reality, you're seeing its size as though it were actually in the room with you.
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Zu6MXyfi-Ts"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 The Chacmool example is educational but it could just as easily be commercial.
-Imagine a furniture shopping site that lets me place a couch in my living room.
-The AR application will tell me whether the couch fits my space and how it will
-look next to my other furniture.
+Imagine a furniture shopping site that lets you place a couch in your living
+room. The AR application tells you whether the couch fits your space and how it
+will look next to your other furniture.
 
 ## Ray casts, hit tests, and reticles
 
 A key problem to solve when implementing augmented reality is how to place
 objects in a real-world view. The method for doing this is called _ray casting_.
 Ray casting means calculating the intersection between the
-[pointer ray](../05/welcome-to-immersive#the_input_device_and_the_pointer_ray)
+[pointer ray](/web/updates/2018/05/welcome-to-immersive#the_input_device_and_the_pointer_ray)
 and a surface in the real world. That intersection is called a _hit_ and
 determining whether a hit has occurred is a _hit test_.
 
@@ -145,10 +155,10 @@ helping you understand what's going on.
 
 The basics of entering an AR session and running a render loop are the same for
 AR as they are for VR. You can read
-[my previous article](../05/welcome-to-immersive)
+[my previous article](/web/updates/2018/05/welcome-to-immersive)
 if you're unfamiliar. To be more specific, entering and running an AR session
 looks almost exactly like
-[entering a VR magic window session](../05/welcome-to-immersive#starting_and_running_an_app).
+[entering a VR magic window session](/web/updates/2018/05/welcome-to-immersive#starting_and_running_an_app).
 As with a magic window, the session type must be non-exclusive and the frame of
 reference type must be `'eye-level'`.
 
@@ -221,7 +231,7 @@ function onXRFrame(t, frame) {
 ```
 
 Though not as obvious in the hit test sample, you still need to
-[loop through the views](../05/welcome-to-immersive#views)
+[loop through the views](/web/updates/2018/05/welcome-to-immersive#views)
 to draw the scene. Drawing is done using WebGL APIs. You can do that if you're
 really ambitious. Though, we recommend using a framework. The immersive web
 samples use one created just for the demos called
