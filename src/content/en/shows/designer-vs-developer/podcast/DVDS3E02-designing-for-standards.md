@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Bruce Lawson talks about designing for standards, and not just one browser. We also cover Styleable, a CSS preprocessor that he is working on at Wix.
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E02-Designing-for-standards-with-Bruce-Lawson.mp3 #}
 {# wf_podcast_duration: 00:18:00 #}
@@ -11,16 +11,16 @@ description: Bruce Lawson talks about designing for standards, and not just one 
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e02-cover-large.jpg #}
 
 
-# Bruce Lawson on designing for standards & using Styleable components {: .page-title }
+# Bruce Lawson on designing for standards & using styleable components {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
 the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
-Mustafa speaks to Bruce Lawson, web standards lovegod and fashion 
-consultant, about Browser standards, developer workflows and the 
-pitfalls in designing for one browser. 
+Mustafa speaks to Bruce Lawson, web standards lovegod and fashion
+consultant, about Browser standards, developer workflows and the
+pitfalls in designing for one browser.
 
 <img
 src="/web/shows/designer-vs-developer/podcast/images/dvd-s03-e02-cover.jpg"
