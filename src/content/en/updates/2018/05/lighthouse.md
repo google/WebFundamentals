@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New perf audits for preload, preconnect, GIFs, and more.
 
-{# wf_updated_on: 2018-05-14 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: lighthouse #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -330,6 +330,12 @@ code by downloading [Chrome
 Canary](https://www.google.com/chrome/browser/canary.html).
 * For Node users: Run `npm update lighthouse`, or `npm update lighthouse -g` if
 you installed Lighthouse globally.
+
+_Special thanks to [Kayce Basques](/web/resources/contributors/kaycebasques),
+[Patrick Hulce](/web/resources/contributors/patrickhulce), [Addy
+Osmani](/web/resources/contributors/addyosmani), and [Vinamrata
+Singal](/web/resources/contributors/vinamratasingal) for their valuable
+feedback, which significantly improved the quality of this article._
 
 {% include "comment-widget.html" %}
 

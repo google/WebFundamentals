@@ -2,9 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: If your site has a ton of images and video, but you don't want to cut down on any of it, lazy loading might be just the technique you need to improve initial page load time and lower per-page payload.
 
-{# wf_updated_on: 2018-04-04 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-04-04 #}
-{# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
+{# wf_blink_components: Blink>Image,Blink>HTML,Blink>JavaScript #}
 
 # Lazy Loading Images and Video {: .page-title }
 
@@ -709,3 +709,11 @@ As far as performance improvement techniques go, lazy loading is reasonably
 uncontroversial. If you have a lot of inline imagery in your site, it's a
 perfectly fine way to cut down on unnecessary downloads. Your site's users and
 project stakeholders will appreciate it!
+
+_Special thanks to [François
+Beaufort](/web/resources/contributors/beaufortfrancois), Dean Hume, [Ilya
+Grigork](/web/resources/contributors/ilyagrigorik), [Paul
+Irish](/web/resources/contributors/paulirish), [Addy
+Osmani](/web/resources/contributors/addyosmani), [Jeff
+Posnick](/web/resources/contributors/jeffposnick), and Martin Schierle for their
+valuable feedback, which significantly improved the quality of this article._
