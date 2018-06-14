@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Knowing where to begin optimizing your application's JavaScript can be daunting. If you're taking advantage of modern tooling such as webpack, however, tree shaking might be a good place to start!
 
-{# wf_updated_on: 2018-06-12 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-06-14 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -11,10 +11,9 @@ description: Knowing where to begin optimizing your application's JavaScript can
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
 Today's web applications can get pretty big, especially the JavaScript part of
-them. [As of
-mid-2018](https://httparchive.org/reports/state-of-javascript#bytesJs), HTTP
-Archive puts the median transfer size of JavaScript on mobile devices at
-approximately 350 KB. And this is just transfer size! JavaScript is often
+them. As of mid-2018, HTTP Archive puts the [median transfer size of JavaScript
+on mobile devices](https://httparchive.org/reports/state-of-javascript#bytesJs)
+at approximately 350 KB. And this is just transfer size! JavaScript is often
 compressed when sent over the network, meaning that the _actual_ amount of
 JavaScript is quite a bit more after the browser decompresses it. That's
 important to point out, because as far as resource _processing_ is concerned,
