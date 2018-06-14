@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Creative ways of prototyping & scenario based design'
+        path: /web/shows/designer-vs-developer/podcast/DVDS3E04-creative-ways-of-prototyping
       - title: 'Getting a headstart in the industry'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E03-getting-a-start-in-industry
       - title: 'Designing for standards and using Styleable components'
@@ -16,11 +18,11 @@ toc:
       - title: 'Learn How to Design'
         path: /web/shows/designer-vs-developer/podcast/DVDS2E04-learn-how-to-design
       - title: 'Improving Your Creative Confidence'
-        path: /web/shows/designer-vs-developer/podcast/DVDS2E03-improving-your-creative-confidence  
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E03-improving-your-creative-confidence
       - title: 'Designing for Great Performance'
-        path: /web/shows/designer-vs-developer/podcast/DVDS2E02-designing-a-great-performance  
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E02-designing-a-great-performance
       - title: 'Becoming A Creative Coder'
-        path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder   
+        path: /web/shows/designer-vs-developer/podcast/DVDS2E01-becoming-a-creative-coder
       - title: 'Are Existing Design Tools Fit for Purpose?'
         path: /web/shows/designer-vs-developer/podcast/DVDS1E06-are-design-tools-fit-for-purpose
       - title: 'Who Is Responsible for Design?'

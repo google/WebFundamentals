@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Addy talks about designing performance.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2017-08-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E02-designing-a-great-performance.mp3 #}
 {# wf_podcast_duration: 00:13:34 #}
@@ -11,7 +11,7 @@ description: Addy talks about designing performance.
 {# wf_podcast_subtitle: Addy talks about designing performance. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e02-cover-large.jpg #}
 
-# Designing for great performance {: .page-title }
+# Addy Osmani on designing for great performance {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
