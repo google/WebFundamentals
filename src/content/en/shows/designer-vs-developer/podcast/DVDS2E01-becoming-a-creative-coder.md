@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Mariko explains creative coding.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-07-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E01-becoming-a-creative-coder.mp3 #}
 {# wf_podcast_duration: 00:11:20 #}
@@ -11,7 +11,7 @@ description: Mariko explains creative coding.
 {# wf_podcast_subtitle: Mariko explains creative coding. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s02-e01-cover-large.jpg #}
 
-# Becoming a creative coder {: .page-title }
+# Mariko Kosaka on becoming a creative coder {: .page-title }
 
 Welcome to Designer Vs Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
-{# wf_updated_on: 2018-06-08 #}
+{# wf_updated_on: 2018-06-11 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
 {# wf_blink_components: Blink>WindowDialog,Blink>JavaScript #}

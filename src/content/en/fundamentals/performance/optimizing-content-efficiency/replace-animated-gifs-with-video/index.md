@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Everyone loves animated GIFs. The only problem is that they can be massive, often weighing in at several megabytes. In this guide, you'll learn how to curb the bloat caused by animated GIFs by replacing them with MPEG-4 and WebM video sources!
 
-{# wf_updated_on: 2018-06-11 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-04-19 #}
 {# wf_tags: html5,video,gif,images #}
 {# wf_blink_components: Blink>Image,Blink>HTML #}
