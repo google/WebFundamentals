@@ -8,8 +8,6 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 
 # WebVR Status {: .page-title }
 
-{% include "web/_shared/webxr-status.html" %}
-
 ## WebVR Implementation Status
 
 ### WebXR Device API {:#xrdevice}
@@ -19,6 +17,8 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 running Android O or later.
 * The WebXR device API is available on other browsers with a
 [polyfill](https://github.com/immersive-web/webxr-polyfill).
+* Documentation is available from the [Immersive Web Early Adopters
+Guide](https://immersive-web.github.io/webxr-reference/).
 
 Today the API is available in:
 
@@ -31,6 +31,9 @@ Today the API is available in:
 Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
 
 ### Version 1.1 {:#version_1_1}
+
+**Note:** This API is deprecated and its origin trial is scheduled to end in
+July.
 
 Today the WebVR 1.1 API is available in:
 
