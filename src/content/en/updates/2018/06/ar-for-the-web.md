@@ -75,6 +75,16 @@ This may be obvious to you since you're reading this on a website devoted to
 the web. If you build demonstrations with this new API, prepare for this
 question. You'll get it a lot.
 
+Speaking of IO, if you want to hear more about the immersive web in general,
+where it is, where it's going check
+[this video](https://www.youtube.com/watch?v=1t1gBVykneA&feature=youtu.be).
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="1t1gBVykneA"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## What's it useful for?
 
 Augmented reality will be a valuable addition to a lot of existing web pages.
