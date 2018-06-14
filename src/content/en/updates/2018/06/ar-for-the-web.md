@@ -97,7 +97,9 @@ One thing that demo and vide doesn't show is how AR can convey the size of a
 real object. The video here shows an educational demo that we built called
 [Chacmool](https://web-education-ar-demo.appspot.com/).
 A [companion article](/web/updates/2018/06/webar-chacmool)
-describes this demo in detail. The important thing for this discussion is that when you place the Chacmool statue in augmented reality, you're seeing its size as though it were actually in the room with you.
+describes this demo in detail. The important thing for this discussion is that
+when you place the Chacmool statue in augmented reality, you're seeing its size
+as though it were actually in the room with you.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Zu6MXyfi-Ts"
