@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Brendan Kearns talks about creative ways to prototype and how using scenario based design can help you sculpt great user experiences.
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-11 #}
+{# wf_updated_on: 2018-06-14 #}
 {# wf_published_on: 2018-06-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3 #}
 {# wf_podcast_duration: 00:12:04 #}
@@ -18,8 +18,8 @@ challenges faced in the industry by opening a conversation between
 the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
-Mustafa speaks to Brendan Kearns, a Sr. Interaction Designer at Google, 
-about creative ways to prototype and how using scenario based design 
+Mustafa speaks to Brendan Kearns, a Senior Interaction Designer at Google, 
+about creative ways to prototype and how using scenario-based design 
 can help you sculpt great user experiences.
 
 <img
