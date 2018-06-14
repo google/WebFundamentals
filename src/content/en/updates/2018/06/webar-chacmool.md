@@ -11,6 +11,7 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 
 # WebAR-Chacmool: Ancient artifacts at your fingertips {: .page-title }
 
+{% include "web/_shared/contributors/rezaali.html" %}
 {% include "web/_shared/contributors/chriswilson.html" %}
 
 When preparing for Google I/O, we wanted to highlight the exciting possibilities
