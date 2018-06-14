@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-04-17 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,7 +47,7 @@ If you have a text editor that lets you open a project, then open the __project_
 
 
 
-If you have completed the previous e-commerce E-Commerce lab, your app is already set up and you can skip to step 2.
+If you have completed the previous E-Commerce lab, your app is already set up and you can skip to step 2.
 
 
 

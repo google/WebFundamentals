@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-05-15 #}
 {# wf_published_on: 2016-01-01 #}
 
 
