@@ -6,7 +6,7 @@ description: Augmented reality allows placement and tracking of virtual objects 
 {# wf_published_on: 2018-06-13 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
-{# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
+{# wf_featured_image: /web/updates/images/2018/06/sunflowers.png #}
 {# wf_featured_snippet: Augmented reality allows placement and tracking of virtual objects in a real-world view. #}
 
 # Augmented reality for the web {: .page-title }
@@ -20,9 +20,11 @@ though only the VR features were enabled. VR is an experience based purely on
 what's in a computing device. AR on the other hand allows you to render virtual
 objects in the real world. To allow placement and tracking of those objects, we
 just added the
-[WebXR Hit Test API](https://www.google.com/url?q=https://github.com/immersive-web/hit-test/blob/master/explainer.md&sa=D&ust=1527790501658000&usg=AFQjCNG55uxCK6plgHQVK2ue-ZEX9p8-Zw)
+[WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)
 to Chrome Canary, a new method that helps immersive web code place objects in
 the real world.
+
+![Virtual sunflowers in a real room](/web/updates/images/2018/06/sunflowers.png)
 
 ## Where can I get it? {: #where }
 
@@ -33,7 +35,7 @@ make sure it's both robust and right for developers.
 Aside from Chrome Canary, you'll also need:
 
 -  A
-   [compatible smartphone](../../../../ar/discover/supported-devices) running
+   [compatible smartphone](/ar/discover/supported-devices) running
    Android O or later.
 -  Two Chrome flags (chrome://flags): WebXRDevice API (#webxr) and WebXR Hit
    Test (#webxr-hit-test)
