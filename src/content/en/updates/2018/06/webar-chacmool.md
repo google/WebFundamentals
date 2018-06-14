@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience.
 
-{# wf_updated_on: 2018-06-13 #}
-{# wf_published_on: 2018-06-13 #}
+{# wf_updated_on: 2018-06-14 #}
+{# wf_published_on: 2018-06-14 #}
 {# wf_tags: immersive-web,webar,webxr #}
 {# wf_featured_image: /web/updates/images/2018/06/webar-chacmool.jpg #}
 {# wf_featured_snippet: Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience. #}
@@ -16,7 +16,11 @@ of augmented reality (AR) on the web. Chacmool is an educational web experience
 demo we built to show how easily web based AR can help users engage with AR
 experiences. The web makes AR convenient and accessible everywhere.
 
-![The Chacmool demo in action](/web/updates/images/2018/06/webar-chacmool.jpg)
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Zu6MXyfi-Ts"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 We have now enabled this demo on
 [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary)
