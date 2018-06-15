@@ -82,7 +82,7 @@ the web. If you build demonstrations with this new API, prepare for this
 question. You'll get it a lot.
 
 Speaking of IO, if you want to hear more about the immersive web in general,
-where it is, where it's going check
+where it is, where it's going check out
 [this video](https://www.youtube.com/watch?v=1t1gBVykneA&feature=youtu.be).
 
 ## What's it useful for?
@@ -140,7 +140,7 @@ Notice a few things. First, the speed meter which you may recognize from the
 other immersive samples shows 30 frame per second instead of 60. This is the
 rate at which the web page receives images from the camera.
 
-![AR runs at 30 frames per second](30-frames.png)
+![AR runs at 30 frames per second](sunflowers.png)
 
 _The AR Hit Test demo_
 
