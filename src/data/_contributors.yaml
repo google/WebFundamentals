@@ -33,6 +33,13 @@ iamakulov:
     en: Contracting software engineer · Blogging, open source, performance, UX
   email: mail@iamakulov.com
 
+rezaali:
+  name:
+    given: Reza
+    family: Ali
+  description:
+    en: Reza is a software developer.
+
 jbnicolai:
   name:
     given: Joshua
