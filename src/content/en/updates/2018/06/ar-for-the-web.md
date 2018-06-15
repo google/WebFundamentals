@@ -247,7 +247,7 @@ Though not as obvious in the hit test sample, you still need to
 to draw the scene. Drawing is done using WebGL APIs. You can do that if you're
 really ambitious. Though, we recommend using a framework. The immersive web
 samples use one created just for the demos called
-[Cottontail,](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail)
+[Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail),
 and [Three.js](http://threejs.org) has supported WebXR since May.
 
 ### Placing an object
@@ -257,9 +257,7 @@ An object is placed in AR when the user taps the screen. For that you use the
 Since the moving reticle gives you a constant source of hit tests, the simplest
 way to place an object is to draw it at the location of the reticle at the last
 hit test. If you need to, say you have a legitimate reason not to show a
-reticle, you can call `requestHitTest()` in the select event. The immersive web
-sample
-[shows this](https://github.com/immersive-web/webxr-samples/blob/master/proposals/phone-ar-hit-test.html#L187).
+reticle, you can call `requestHitTest()` in the select event [as shown in the sample](https://github.com/immersive-web/webxr-samples/blob/master/proposals/phone-ar-hit-test.html#L187).
 
 ## Conclusion
 
