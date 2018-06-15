@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
-{# wf_updated_on: 2018-06-14 #}
+{# wf_updated_on: 2018-06-15 #}
 {# wf_published_on: 2018-06-14 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
@@ -46,7 +46,7 @@ Aside from Chrome Canary, you'll also need:
 
 With these, you can dive into the demos or try out our codelab.
 
-**Note:** Some of the Immersive Web Community Group's
+Note: Some of the Immersive Web Community Group's
 [existing demos](https://immersive-web.github.io/webxr-samples/),
 specfically the ones using magic windows, do not work with the WebXR Hit Test
 turned on. Please excuse our construction debris.
