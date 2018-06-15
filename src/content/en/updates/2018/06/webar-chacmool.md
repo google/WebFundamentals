@@ -9,7 +9,7 @@ description: Chacmool, an educational web demo, shows how easily web based AR ca
 {# wf_featured_snippet: Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience. #}
 {# wf_blink_components: Blink>WebVR #}
 
-# WebAR-Chacmool: Ancient artifacts at your fingertips {: .page-title }
+# Chacmool: Augmented reality in Chrome Canary {: .page-title }
 
 {% include "web/_shared/contributors/rezaali.html" %}
 {% include "web/_shared/contributors/chriswilson.html" %}
