@@ -41,7 +41,7 @@ Aside from Chrome Canary, you'll also need:
 -  A
    [compatible smartphone](/ar/discover/supported-devices) running
    Android O or later.
--  To [install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign)
+-  To [install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign).
 -  Two Chrome flags (chrome://flags): WebXRDevice API (#webxr) and WebXR Hit
    Test (#webxr-hit-test)
 
