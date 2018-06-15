@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chacmool, an educational web demo, shows how easily web based AR can build an engaging experience.
 
-{# wf_updated_on: 2018-06-14 #}
+{# wf_updated_on: 2018-06-15 #}
 {# wf_published_on: 2018-06-14 #}
 {# wf_tags: immersive-web,webar,webxr #}
 {# wf_featured_image: /web/updates/images/2018/06/webar-chacmool.jpg #}
@@ -60,7 +60,8 @@ page, and the 3D model was provided by Google Arts & Culture's partner,
 [CyArk](https://artsandculture.google.com/partner/cyark).  To get the 3D model
 ready for the web, a combination of Meshlab, and Mesh Mixer was used to repair
 the model and decimate its mesh to decrease its file size. Then
-[Draco, a library for compressing and decompressing 3D geometric meshes and point clouds](https://github.com/google/draco)
+[Draco](https://github.com/google/draco), a library for compressing and
+decompressing 3D geometric meshes and point clouds
 was used to reduce the model's file size from 44.3 megabytes to a mere 225
 kilobytes. Finally, a web worker is used to load the model on a background
 thread so the page remains interactive while the model is loaded and
