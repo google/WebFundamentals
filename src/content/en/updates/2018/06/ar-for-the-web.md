@@ -104,7 +104,7 @@ the demos. If you don't have a [device that can run the
 demo](/ar/discover/supported-devices), check out the video link at the top of
 this article.
 
-One thing that demo and vide doesn't show is how AR can convey the size of a
+One thing that demo and video doesn't show is how AR can convey the size of a
 real object. The video here shows an educational demo that we built called
 [Chacmool](https://web-education-ar-demo.appspot.com/).
 A [companion article](/web/updates/2018/06/webar-chacmool)
