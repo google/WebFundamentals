@@ -29,7 +29,7 @@ We have now enabled this demo on
 [Chrome Canary](https://play.google.com/store/apps/details?id=com.chrome.canary)
 on
 [ARCore-compatible Android devices](/ar/discover/supported-devices) with Android O or later. You'll also need to
-[install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign)
+[install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign).
  This work relies on a new WebXR proposal (the
 [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)),
 so it is under a flag and intended to stay in Canary as we test and refine the
