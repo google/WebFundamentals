@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
 {# wf_updated_on: 2018-06-15 #}
-{# wf_published_on: 2018-06-14 #}
+{# wf_published_on: 2018-06-15 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
 {# wf_featured_image: /web/updates/images/2018/06/sunflowers.jpg #}
@@ -41,6 +41,7 @@ Aside from Chrome Canary, you'll also need:
 -  A
    [compatible smartphone](/ar/discover/supported-devices) running
    Android O or later.
+-  To [install ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign)
 -  Two Chrome flags (chrome://flags): WebXRDevice API (#webxr) and WebXR Hit
    Test (#webxr-hit-test)
 
