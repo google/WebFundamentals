@@ -2,36 +2,38 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-06-15 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
-# WebVR Status and Considerations {: .page-title }
-
-{% include "web/_shared/webxr-status.html" %}
+# WebVR Status {: .page-title }
 
 ## WebVR Implementation Status
 
-### WebXR Device API (formerly WebVR 2.0) {:#xrdevice}
+### WebXR Device API {:#xrdevice}
+
+* Using the WebXR device API requires a
+[compatible device](/ar/discover/supported-devices)
+running Android O or later.
+* The WebXR device API is available on other browsers with a
+[polyfill](https://github.com/immersive-web/webxr-polyfill).
+* Documentation is available from the [Immersive Web Early Adopters
+Guide](https://immersive-web.github.io/webxr-reference/).
 
 Today the API is available in:
 
-* Under the `#webxr` flag in Chrome 66 and later.
-* As an [Origin
-Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-in Chrome 67 and later.
+| Feature | Chrome version | Details |
+| ------- | -------------- | ------- |
+| AR hit test support | Chrome Canary for the immediate future. | Enable the &num;webxr and &num;webxr-hit-test flags under chrome://flags |
+| VR use cases | Chrome 66 and later | Enable the chrome://flags/#webxr flag. (The URL must be entered manually.) |
+| VR use cases | Chrome 67 origin trial | Enable the chrome://flags/#webxr flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)). |
 
-Follow it's progress below:
-
-<iframe width="100%" height="320"
-  src="https://www.chromestatus.com/feature/5680169905815552?embed"
-  style="border: 1px solid #CCC" allowfullscreen>
-</iframe>
-
-Find more information on browser implementation status on
-[chromestatus.com](https://www.chromestatus.com/features/5680169905815552).
+Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
 
 ### Version 1.1 {:#version_1_1}
+
+Note: This API is deprecated and its origin trial is scheduled to end in
+July.
 
 Today the WebVR 1.1 API is available in:
 
