@@ -140,7 +140,7 @@ Notice a few things. First, the speed meter which you may recognize from the
 other immersive samples shows 30 frame per second instead of 60. This is the
 rate at which the web page receives images from the camera.
 
-![AR runs at 30 frames per second](sunflowers.jpg)
+![AR runs at 30 frames per second](/web/updates/images/2018/06/sunflowers.jpg)
 
 _The AR Hit Test demo_
 
