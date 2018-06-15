@@ -6,7 +6,7 @@ description: Augmented reality allows placement and tracking of virtual objects 
 {# wf_published_on: 2018-06-14 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
-{# wf_featured_image: /web/updates/images/2018/06/sunflowers.png #}
+{# wf_featured_image: /web/updates/images/2018/06/sunflowers.jpg #}
 {# wf_featured_snippet: Augmented reality allows placement and tracking of virtual objects in a real-world view. #}
 
 # Augmented reality for the web {: .page-title }
@@ -140,7 +140,7 @@ Notice a few things. First, the speed meter which you may recognize from the
 other immersive samples shows 30 frame per second instead of 60. This is the
 rate at which the web page receives images from the camera.
 
-![AR runs at 30 frames per second](sunflowers.png)
+![AR runs at 30 frames per second](sunflowers.jpg)
 
 _The AR Hit Test demo_
 
