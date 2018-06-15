@@ -140,7 +140,7 @@ Notice a few things. First, the speed meter which you may recognize from the
 other immersive samples shows 30 frame per second instead of 60. This is the
 rate at which the web page receives images from the camera.
 
-![image](insert_image_url_here)
+![AR runs at 30 frames per second](30-frames.png)
 
 _The AR Hit Test demo_
 
@@ -217,7 +217,7 @@ function onXRFrame(t, frame) {
 Once you have the session and the pose, determine where the ray is casting. The
 [sample code uses](https://github.com/immersive-web/webxr-samples/blob/master/proposals/phone-ar-hit-test.html#L228)
 the
-[gl-matrix math library](https://www.google.com/url?q=https://github.com/toji/gl-matrix&sa=D&ust=1528822355331000&usg=AFQjCNH3Zq_kFrDLMdurQIeryUTWsel27w).
+[gl-matrix math library](https://github.com/toji/gl-matrix).
 But gl-matrix is not a requirement. The important thing is knowing what you're
 calculating with it and that it is based on the position of the device. Retrieve
 the device position from `XRPose.poseModalMatrix`. With your ray cast in hand,
