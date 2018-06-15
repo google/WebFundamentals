@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2018-06-14 #}
+{# wf_updated_on: 2018-06-15 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -13,7 +13,7 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 ### WebXR Device API {:#xrdevice}
 
 * Using the WebXR device API requires a
-[compatible device](https://pr-6258-dot-web-central.appspot.com/ar/discover/supported-devices)
+[compatible device](/ar/discover/supported-devices)
 running Android O or later.
 * The WebXR device API is available on other browsers with a
 [polyfill](https://github.com/immersive-web/webxr-polyfill).
@@ -32,7 +32,7 @@ Learn more about the immersive web at the [Immersive Web Community Group](https:
 
 ### Version 1.1 {:#version_1_1}
 
-**Note:** This API is deprecated and its origin trial is scheduled to end in
+Note: This API is deprecated and its origin trial is scheduled to end in
 July.
 
 Today the WebVR 1.1 API is available in:
