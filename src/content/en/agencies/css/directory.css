@@ -54,7 +54,10 @@
 .agency__lighthouse-score:after {
   color: #34a853;
   content: attr(data-percent);
-  margin-top: 60px;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
   font-size: 2rem;
   position: absolute;
   text-align: center;
@@ -486,6 +489,7 @@
 
   .filters__input-wrapper {
     top: 25px;
+    left: 0;
   }
 
   .filters__filter-title {
