@@ -29,9 +29,9 @@ that particular category. This guide explains how Lighthouse calculates those sc
 
 Lighthouse returns a Performance score between 0 and 100. 0 is the lowest possible score. A 0
 score usually indicates an error in Lighthouse. If you see a 0 score repeatedly, please
-[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score. A 100 score
-represents the 98th percentile of top-performing sites, which is the point of diminishing returns. A
-score of 50 represents the 75th percentile.
+[file a bug on the Lighthouse repo][bug]{:.external}. 100 is the best possible score which
+represents the 98th percentile, a top-performing site. A score of 50 represents the 75th 
+percentile.
 
 [bug]: https://github.com/GoogleChrome/lighthouse/issues/new
 
@@ -52,9 +52,9 @@ The audits under Diagnostics and Opportunities do not contribute to your Perform
 Each Performance audit that contributes to your score has its own scoring methodology.
 Lighthouse maps each raw score to a number between 0 and 100. The scoring distribution is
 a log normal distribution derived from the performance metrics of real website performance
-data. A score of 50 typically maps to the 75th percentile for that audit. A score of 75 maps
-to the 90th percentile. In other words, if you get a score of 75, it means that your page
-performs better in that audit than 90% of pages on the web.
+data on HTTPArchive. A score of 100 typically maps to the 98th percentile for that audit. 
+A score of 50 maps to the 75th percentile. In other words, if you get a score of 100, it 
+means that your page performs better in that audit than 98% of pages on the web.
 
 For example, the First Meaningful Paint (FMP) audit measures when a user perceives that the
 primary content of a page is visible. The raw score for FMP represents the time duration between
