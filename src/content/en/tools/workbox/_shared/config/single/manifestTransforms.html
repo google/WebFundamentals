@@ -21,7 +21,13 @@
     </p>
     <pre class="prettyprint">manifestTransforms: [
   // Basic transformation to remove a certain URL:
-  (entries) => entries.filter((entry) => entry.url !== 'ignored.html')
+  (originalManifest) => {
+    const manifest = originalManifest.filter(
+      (entry) => entry.url !== 'ignored.html');
+    // Optionally, set warning messages.
+    const warnings = []; 
+    return {manifest, warnings};
+  }
 ]</pre>
   </td>
 </tr>
