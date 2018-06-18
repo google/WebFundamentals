@@ -229,7 +229,7 @@ function onXRFrame(t, frame) {
   let xrSession = frame.session;
   // The frame of reference, which was set elsewhere, is 'eye-level'.
   // See onSessionStarted() ins the sample code for details.
-  let pose = frame.getDevicePose(xrFrameOfRef);
+  let xrPose = frame.getDevicePose(xrFrameOfRef);
   if (xrPose && xrPose.poseModelMatrix) {
     // Calculate the origin and direction for the raycast.
     xrSession.requestHitTest(rayOrigin, rayDirection, xrFrameOfRef)
