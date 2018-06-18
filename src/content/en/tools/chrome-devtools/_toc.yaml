@@ -34,6 +34,8 @@ toc:
     path: /web/tools/chrome-devtools/sources
   - title: Keyboard Shortcuts Reference
     path: /web/tools/chrome-devtools/shortcuts
+- title: Optimize Website Speed
+  path: /web/tools/chrome-devtools/speed/get-started
 - title: Simulate Mobile Devices with Device Mode
   section:
   - title: Overview
