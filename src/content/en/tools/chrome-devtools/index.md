@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-03-08 #}
+{# wf_updated_on: 2018-06-18 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -31,10 +31,9 @@ can help you build websites faster:
   aren't being applied. Or, they look way different than you expect. This tutorial shows you how
   to use DevTools to see how the browser is actually applying styles to HTML elements. It also
   shows you how to change styles from DevTools, which applies the changes immediately without
-  needing to reload the page.
+  needing to reload your page.
 * [Debugging JavaScript](/web/tools/chrome-devtools/javascript/). The first way that most
-  developers learn how to debug is to sprinkle `console.log()` commands throughout their code,
-  in order to infer where the code is going wrong. This tutorial shows you how to set breakpoints
+  developers learn how to debug is `console.log()`. This tutorial shows you how to set breakpoints
   in DevTools, which lets you pause in the middle of a page's execution and step through the
   code one line at a time. While you're paused, you can inspect (and even change) the current
   values of variables at that point in time. You may find that this workflow helps you
@@ -44,9 +43,8 @@ can help you build websites faster:
   whether a page is running correctly. These messages come from the developers who built the
   page, or from the browser. You can also run JavaScript from the **Console** in order to
   inspect how a page is built, or experiment with changing how the page runs.
-* [Analyzing runtime performance](/web/tools/chrome-devtools/evaluate-performance/). If your
-  page is slow or janky, you can use DevTools to record everything that happens on the page,
-  and then analyze the results to learn how to optimize the page's performance.
+* [Optimizing website speed](/web/tools/chrome-devtools/speed/get-started). The Audits panel
+  provides quantitative reports of your site speed, as well as concrete tips on how to improve it.
 
 Browse the DevTools docs to learn about all the other things that DevTools can do for you.
 The docs are organized by common tasks.
