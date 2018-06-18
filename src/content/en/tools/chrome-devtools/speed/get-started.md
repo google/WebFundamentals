@@ -46,6 +46,8 @@ The audit has 2 important functions:
 
 ### Set up {: #setup }
 
+But first, you need to set up the site so that you can make changes to it later:
+
 1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made
    with Chrome 68. If you're using an earlier or later version, some features may look different
    or not be available. You should be able to complete the tutorial still, just keep in mind that
@@ -684,7 +686,7 @@ Investigate the trace to find ways to do less JavaScript work:
    upper activity is caused by the framework, which is usually out of your control. The activity
    caused by your app is usually at the bottom. In this app, it seems like a function called
    `App` is causing a lot of calls to a `mineBitcoin` function. It sounds like Tony might be using
-   the devices of his fans in order to mine cryptocurrency...
+   the devices of his fans to mine cryptocurrency...
 
      <figure>
        <img src="imgs/mine.png" 
@@ -762,15 +764,12 @@ Note: This section provided a rather brief introduction to the Performance panel
 
 #### Doing less main thread work in the real world {: #real-world-main-thread }
 
-The [User Timing][UT] API is an effective way to see how long certain phases of your app lifecycle
-take. 
+In general, the Performance panel is the most common way to understand what activity your
+site does as it loads, and find ways to remove unnecessary activity.
 
-Although the calls that your framework makes are usually out of your control,
-sometimes you may structure your app in a way that causes the framework to run inefficiently.
-Restructuring your app to use the framework efficiently can be a way to do less main
-thread work. However, this requires a deep understanding of how your framework works, and
-what kind of changes you can make in your own code in order to use the framework more
-efficiently.
+If you'd prefer an approach that feels more like `console.log()`, the [User Timing][UT] API lets
+you arbitrarily mark up certain phases of your app lifecycle, in order to track how long each of
+those phases takes.
 
 ## A special thank you from Tony {: #thanks }
 
@@ -863,7 +862,7 @@ var response = "Thanks for the feedback. Please use the channels below if you've
   "on how we can improve.";
 var feedback = {
   category: "Length",
-  question: "Was the tutorial too long?",
+  question: "Was it too long?",
   choices: [
     {
       button: {
