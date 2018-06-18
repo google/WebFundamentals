@@ -805,7 +805,42 @@ var response = "Thanks for the feedback. Please use the channels below if you've
   "on how we can improve.";
 var feedback = {
   category: "Helpful",
-  question: "Was this page helpful?",
+  question: "Was the tutorial helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/speed/';
+var response = "Thanks for the feedback. Please use the channels below if you've got any ideas " +
+  "on how we can improve.";
+var feedback = {
+  category: "Length",
+  question: "Was the tutorial too long?",
   choices: [
     {
       button: {
@@ -834,11 +869,11 @@ var feedback = {
 {% endframebox %}
 
 * File bugs on this doc in the [Web Fundamentals][WF]{:.external} repository.
-* File bug reports at [Chromium Bugs](https://crbug.com){:.external}.
+* File bug reports on DevTools at [Chromium Bugs](https://crbug.com){:.external}.
 * Discuss features and changes on the [Mailing List][ML]{:.external}. Please don't use the mailing
   list for support questions. Use Stack Overflow, instead.
-* Get help on how to use DevTools on [Stack Overflow][SO]{:.external}. Please don't file bugs
-  on Stack Overflow. Use Chromium Bugs, instead.
+* Get general help on how to use DevTools on [Stack Overflow][SO]{:.external}. Please don't file
+  bugs on Stack Overflow. Use Chromium Bugs, instead.
 * Tweet us at [@ChromeDevTools](https://twitter.com/chromedevtools).
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
