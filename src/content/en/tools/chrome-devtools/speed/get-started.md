@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
 {# wf_updated_on: 2018-06-18 #}
 {# wf_published_on: 2018-06-01 #}
@@ -32,10 +32,9 @@ that the site loads slowly. Tony has asked you to help him speed the site up.
 <figure>
   <img src="imgs/tony.jpg" alt="Tony the cat."/>
   <figcaption>
-    <b>Figure X</b>. Tony the cat
+    <b>Figure 1</b>. Tony the cat
   </figcaption>
 </figure>
-
 
 ## Step 1: Audit the site {: #audit }
 
@@ -58,7 +57,7 @@ The audit has 2 important functions:
      <figure>
        <img src="imgs/editor.png" alt="The editor tab."/>
        <figcaption>
-         <b>Figure X</b>. The editor tab
+         <b>Figure 2</b>. The editor tab
        </figcaption>
      </figure>
 
@@ -67,7 +66,7 @@ The audit has 2 important functions:
      <figure>
        <img src="imgs/menu.png" alt="The menu that appears after clicking 'tony'."/>
        <figcaption>
-         <b>Figure X</b>. The menu that appears after clicking <b>tony</b>
+         <b>Figure 3</b>. The menu that appears after clicking <b>tony</b>
        </figcaption>
      </figure>
 
@@ -80,7 +79,7 @@ The audit has 2 important functions:
      <figure>
        <img src="imgs/demo.png" alt="The demo tab."/>
        <figcaption>
-         <b>Figure X</b>. The demo tab
+         <b>Figure 4</b>. The demo tab
        </figcaption>
      </figure>
 
@@ -91,19 +90,19 @@ The audit has 2 important functions:
      <figure>
        <img src="imgs/devtools.png" alt="DevTools and the demo."/>
        <figcaption>
-         <b>Figure X</b>. DevTools and the demo
+         <b>Figure 5</b>. DevTools and the demo
        </figcaption>
      </figure>
 
 For the rest of the screenshots in this tutorial, DevTools will be shown as a separate window. You
 can do this by pressing <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
 <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the Command
-Menu, typing `Undock`, and then selecting **Undock into seperate window**.
+Menu, typing `Undock`, and then selecting **Undock into separate window**.
 
 <figure>
   <img src="imgs/undocked.png" alt="Undocked DevTools."/>
   <figcaption>
-    <b>Figure X</b>. Undocked DevTools
+    <b>Figure 6</b>. Undocked DevTools
   </figcaption>
 </figure>
 
@@ -119,18 +118,18 @@ The baseline is a record of how the site performed before you made any performan
      <figure>
        <img src="imgs/audits.png" alt="The Audits panel."/>
        <figcaption>
-         <b>Figure X</b>. The Audits panel
+         <b>Figure 7</b>. The Audits panel
        </figcaption>
      </figure>
 
-1. Match your audit configuration settings to those in **Figure X**.
+1. Match your audit configuration settings to those in **Figure 8**.
 1. Click **Run Audits**. After 10 to 30 seconds, the Audits panel shows you a report of the site's
    performance.
 
      <figure>
        <img src="imgs/report.png" alt="An Audits panel report of the site's performance."/>
        <figcaption>
-         <b>Figure X</b>. The Audits panel's report of the site's performance
+         <b>Figure 8</b>. The Audits panel's report of the site's performance
        </figcaption>
      </figure>
 
@@ -142,7 +141,7 @@ If you ever get an error in your Audits panel report, try running the demo tab f
 <figure>
   <img src="imgs/error.png" alt="A report that errored."/>
   <figcaption>
-    <b>Figure X</b>. A report that errored
+    <b>Figure 9</b>. A report that errored
   </figcaption>
 </figure>
 
@@ -156,7 +155,7 @@ make changes to the code, you should see this number rise. A higher score means 
 <figure>
   <img src="imgs/overall.png" alt="The overall performance score."/>
   <figcaption>
-    <b>Figure X</b>. The overall performance score
+    <b>Figure 10</b>. The overall performance score
   </figcaption>
 </figure>
 
@@ -170,7 +169,7 @@ page.
 <figure>
   <img src="imgs/metrics.png" alt="The Metrics section."/>
   <figcaption>
-    <b>Figure X</b>. The Metrics section
+    <b>Figure 11</b>. The Metrics section
   </figcaption>
 </figure>
 
@@ -180,7 +179,7 @@ about it.
 <figure>
   <img src="imgs/fmp.png" alt="Hovering over the First Meaningful Paint metric."/>
   <figcaption>
-    <b>Figure X</b>. Hovering over the First Meaningful Paint metric
+    <b>Figure 12</b>. Hovering over the First Meaningful Paint metric
   </figcaption>
 </figure>
 
@@ -189,7 +188,7 @@ Below Metrics is a collection of screenshots that show you how the page looked a
 <figure>
   <img src="imgs/screenshots.png" alt="Screenshots of how the page looked while loading."/>
   <figcaption>
-    <b>Figure X</b>. Screenshots of how the page looked while loading
+    <b>Figure 13</b>. Screenshots of how the page looked while loading
   </figcaption>
 </figure>
 
@@ -199,7 +198,7 @@ load performance.
 <figure>
   <img src="imgs/opportunities.png" alt="The Opportunities section."/>
   <figcaption>
-    <b>Figure X</b>. The Opportunities section
+    <b>Figure 14</b>. The Opportunities section
   </figcaption>
 </figure>
 
@@ -208,7 +207,7 @@ Click an opportunity to learn more about it.
 <figure>
   <img src="imgs/compression.png" alt="More information about the text compression opportunity."/>
   <figcaption>
-    <b>Figure X</b>. More information about the text compression opportunity
+    <b>Figure 15</b>. More information about the text compression opportunity
   </figcaption>
 </figure>
 
@@ -218,7 +217,7 @@ recommendations on how to fix it.
 <figure>
   <img src="imgs/reference.png" alt="Documentation for the text compression opportunity."/>
   <figcaption>
-    <b>Figure X</b>. Documentation for the text compression opportunity
+    <b>Figure 16</b>. Documentation for the text compression opportunity
   </figcaption>
 </figure>
 
@@ -228,7 +227,7 @@ load time.
 <figure>
   <img src="imgs/diagnostics.png" alt="The Diagnostics section"/>
   <figcaption>
-    <b>Figure X</b>. The Diagnostics section
+    <b>Figure 17</b>. The Diagnostics section
   </figcaption>
 </figure>
 
@@ -238,7 +237,7 @@ section.
 <figure>
   <img src="imgs/passed.png" alt="The Passed Audits section."/>
   <figcaption>
-    <b>Figure X</b>. The Passed Audits section
+    <b>Figure 18</b>. The Passed Audits section
   </figcaption>
 </figure>
 
@@ -264,7 +263,7 @@ text resources are compressed.
      <figure>
        <img src="imgs/network.png" alt="The Network panel."/>
        <figcaption>
-         <b>Figure X</b>. The Network panel
+         <b>Figure 19</b>. The Network panel
        </figcaption>
      </figure>
 
@@ -274,7 +273,7 @@ text resources are compressed.
      <figure>
        <img src="imgs/largerows.png" alt="Large rows in the network requests table."/>
        <figcaption>
-         <b>Figure X</b>. Large rows in the network requests table
+         <b>Figure 20</b>. Large rows in the network requests table
        </figcaption>
      </figure>
 
@@ -286,7 +285,7 @@ text resources are compressed.
 Each **Size** cell shows two values. The top value is the size of the downloaded resource.
 The bottom value is the size of the uncompressed resource. If the two values are the same,
 then the resource is not being compressed when it's sent over the network. For example, in
-**Figure X** the top and bottom values for `bundle.js` are both `1.4 MB`.
+**Figure 20** the top and bottom values for `bundle.js` are both `1.4 MB`.
 
 You can also check for compression by inspecting a resource's HTTP headers:
 
@@ -296,7 +295,7 @@ You can also check for compression by inspecting a resource's HTTP headers:
      <figure>
        <img src="imgs/headers.png" alt="The Headers tab."/>
        <figcaption>
-         <b>Figure X</b>. The Headers tab
+         <b>Figure 21</b>. The Headers tab
        </figcaption>
      </figure>
 
@@ -315,7 +314,7 @@ Enable text compression by adding a couple of lines of code:
      <figure>
        <img src="imgs/server.png" alt="Editing server.js."/>
        <figcaption>
-         <b>Figure X</b>. Editing <code>server.js</code>
+         <b>Figure 22</b>. Editing <code>server.js</code>
        </figcaption>
      </figure>
 
@@ -345,7 +344,7 @@ Enable text compression by adding a couple of lines of code:
        <img src="imgs/building.png" 
             alt="The animation that indicates that the site is getting built."/>
        <figcaption>
-         <b>Figure X</b>. The animation that indicates that the site is getting built
+         <b>Figure 23</b>. The animation that indicates that the site is getting built
        </figcaption>
      </figure>
 
@@ -353,7 +352,7 @@ Enable text compression by adding a couple of lines of code:
 Use the workflows that you learned earlier to manually check that the compression is working:
 
 1. Go back to the demo tab and reload the page. The **Size** column should now show 2 different
-   values for text resources like `bundle.js`. In **Figure X** the top value of `261 KB` for
+   values for text resources like `bundle.js`. In **Figure 24** the top value of `261 KB` for
    `bundle.js` is the size of the file that was sent over the network, and the bottom value of
    `1.4 MB` is the uncompressed file size.
 
@@ -361,7 +360,7 @@ Use the workflows that you learned earlier to manually check that the compressio
        <img src="imgs/requests.png" 
             alt="The Size column now shows 2 different values for text resources."/>
        <figcaption>
-         <b>Figure X</b>. The Size column now shows 2 different values for text resources
+         <b>Figure 24</b>. The Size column now shows 2 different values for text resources
        </figcaption>
      </figure>
 
@@ -372,7 +371,7 @@ Use the workflows that you learned earlier to manually check that the compressio
        <img src="imgs/gzip.png" 
             alt="The Response Headers section now contains a content-encoding header."/>
        <figcaption>
-         <b>Figure X</b>. The Response Headers section now contains a 
+         <b>Figure 25</b>. The Response Headers section now contains a 
          <code>content-encoding</code> header
        </figcaption>
      </figure>
@@ -390,7 +389,7 @@ performance:
        <img src="imgs/report2.png" 
             alt="An Audits report after enabling text compression."/>
        <figcaption>
-         <b>Figure X</b>. An Audits report after enabling text compression
+         <b>Figure 26</b>. An Audits report after enabling text compression
        </figcaption>
      </figure>
 
@@ -418,7 +417,7 @@ at most.
        <img src="imgs/resize.png" 
             alt="Details about the 'properly size images' opportunity."/>
        <figcaption>
-         <b>Figure X</b>. Details about the <i>Properly size images</i> opportunity
+         <b>Figure 27</b>. Details about the <i>Properly size images</i> opportunity
        </figcaption>
      </figure>
 
@@ -430,7 +429,7 @@ at most.
        <img src="imgs/report3.png" 
             alt="An Audits report after resizing images."/>
        <figcaption>
-         <b>Figure X</b>. An Audits report after resizing images</code>
+         <b>Figure 28</b>. An Audits report after resizing images</code>
        </figcaption>
      </figure>
 
@@ -477,7 +476,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
        <img src="imgs/render.png" 
             alt="More information about the 'reduce render-blocking resources' opportunity."/>
        <figcaption>
-         <b>Figure X</b>. More information about the <i>Reduce render-blocking resources</i>
+         <b>Figure 29</b>. More information about the <i>Reduce render-blocking resources</i>
          opportunity
        </figcaption>
      </figure>
@@ -491,7 +490,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
        <img src="imgs/commandmenu.png" 
             alt="Opening the Command Menu from the Coverage tab."/>
        <figcaption>
-         <b>Figure X</b>. Opening the Command Menu from the Coverage tab
+         <b>Figure 30</b>. Opening the Command Menu from the Coverage tab
        </figcaption>
      </figure>
 
@@ -499,7 +498,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
        <img src="imgs/coverage.png" 
             alt="The Coverage tab."/>
        <figcaption>
-         <b>Figure X</b>. The Coverage tab
+         <b>Figure 31</b>. The Coverage tab
        </figcaption>
      </figure>
 
@@ -511,7 +510,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
        <img src="imgs/coveragereport.png" 
             alt="The Coverage report."/>
        <figcaption>
-         <b>Figure X</b>. The Coverage report
+         <b>Figure 32</b>. The Coverage report
        </figcaption>
      </figure>
 
@@ -523,7 +522,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
        <img src="imgs/jquery.png" 
             alt="Viewing the jQuery file in the Sources panel."/>
        <figcaption>
-         <b>Figure X</b>. Viewing the jQuery file in the Sources panel
+         <b>Figure 33</b>. Viewing the jQuery file in the Sources panel
        </figcaption>
      </figure>
 
@@ -547,18 +546,18 @@ tab can show you what happens when resources aren't available.
        <img src="imgs/blocking.png" 
             alt="The Request Blocking tab."/>
        <figcaption>
-         <b>Figure X</b>. The Request Blocking tab
+         <b>Figure 34</b>. The Request Blocking tab
        </figcaption>
      </figure>
 
-1. Click **Add Pattern** ![Add Pattern](imgs/addpattern.png){:.inline-icon}, type `/libs/*`, and then
-   press <kbd>Enter</kbd> to confirm.
+1. Click **Add Pattern** ![Add Pattern](imgs/addpattern.png){:.inline-icon}, type `/libs/*`, and
+   then press <kbd>Enter</kbd> to confirm.
 
      <figure>
        <img src="imgs/libs.png" 
             alt="Adding a pattern to block any request to the 'libs' directory."/>
        <figcaption>
-         <b>Figure X</b>. Adding a pattern to block any request to the <code>libs</code> directory
+         <b>Figure 35</b>. Adding a pattern to block any request to the <code>libs</code> directory
        </figcaption>
      </figure>
 
@@ -569,7 +568,7 @@ tab can show you what happens when resources aren't available.
        <img src="imgs/blockedlibs.png" 
             alt="The Network panel shows that the requests have been blocked."/>
        <figcaption>
-         <b>Figure X</b>. The Network panel shows that the requests have been blocked
+         <b>Figure 36</b>. The Network panel shows that the requests have been blocked
        </figcaption>
      </figure>
 
@@ -587,7 +586,7 @@ Now, remove the references to these files from the code and audit the page again
        <img src="imgs/report4.png" 
             alt="An Audits report after removing the render-blocking resources."/>
        <figcaption>
-         <b>Figure X</b>. An Audits report after removing the render-blocking resources
+         <b>Figure 37</b>. An Audits report after removing the render-blocking resources
        </figcaption>
      </figure>
 
@@ -633,13 +632,13 @@ page loads, and find ways to defer unnecessary work.
        <img src="imgs/performance.png" 
             alt="The Performance panel's trace of the page load."/>
        <figcaption>
-         <b>Figure X</b>. The Performance panel's trace of the page load
+         <b>Figure 38</b>. The Performance panel's trace of the page load
        </figcaption>
      </figure>
 
 The trace shows activity chronologically, from left to right. The FPS, CPU, and NET charts
 at the top give you an overview of frames per second, CPU activity, and network activity.
-The wall of yellow that you see in **Figure X** means that the CPU was completely busy with
+The wall of yellow that you see in **Figure 39** means that the CPU was completely busy with
 scripting activity. This is a clue that you may be able to speed up page load by doing less
 JavaScript work.
 
@@ -647,7 +646,7 @@ JavaScript work.
   <img src="imgs/overview.png" 
       alt="The Overview section of the trace."/>
   <figcaption>
-    <b>Figure X</b>. The Overview section of the trace
+    <b>Figure 39</b>. The Overview section of the trace
   </figcaption>
 </figure>
 
@@ -662,14 +661,14 @@ Investigate the trace to find ways to do less JavaScript work:
        <img src="imgs/usertiming.png" 
             alt="The User Timing section."/>
        <figcaption>
-         <b>Figure X</b>. The User Timing section
+         <b>Figure 40</b>. The User Timing section
        </figcaption>
      </figure>
 
 1. Click **User Timing** again to collapse that section.
 1. Browse the **Main** section. This section shows a chronological log of main thread activity,
    from left to right. The y-axis (top to bottom) shows why events occurred. For example, in
-   **Figure X**, the `Evaluate Script` event caused the `(anonymous)` function to execute,
+   **Figure 41**, the `Evaluate Script` event caused the `(anonymous)` function to execute,
    which caused `../rbd/pnpm-volume/...` to execute, which caused `__webpack__require__` to
    execute, and so on.
 
@@ -677,7 +676,7 @@ Investigate the trace to find ways to do less JavaScript work:
        <img src="imgs/main.png" 
             alt="The Main section"/>
        <figcaption>
-         <b>Figure X</b>. The Main section
+         <b>Figure 41</b>. The Main section
        </figcaption>
      </figure>
 
@@ -691,7 +690,7 @@ Investigate the trace to find ways to do less JavaScript work:
        <img src="imgs/mine.png" 
             alt="Hovering over the mineBitcoin activity."/>
        <figcaption>
-         <b>Figure X</b>. Hovering over the <code>mineBitcoin</code> activity
+         <b>Figure 42</b>. Hovering over the <code>mineBitcoin</code> activity
        </figcaption>
      </figure>
 
@@ -716,7 +715,7 @@ Investigate the trace to find ways to do less JavaScript work:
        <img src="imgs/bottomup.png" 
             alt="The Bottom-Up tab."/>
        <figcaption>
-         <b>Figure X</b>. The Bottom-Up tab
+         <b>Figure 43</b>. The Bottom-Up tab
        </figcaption>
      </figure>
 
@@ -735,7 +734,7 @@ load. Start with production mode:
        <img src="imgs/report5.png" 
             alt="An Audits report after configuring webpack to use production mode."/>
        <figcaption>
-         <b>Figure X</b>. An Audits report after configuring webpack to use production mode
+         <b>Figure 44</b>. An Audits report after configuring webpack to use production mode
        </figcaption>
      </figure>
 
@@ -750,7 +749,7 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
        <img src="imgs/report6.png" 
             alt="An Audits report after removing unnecessary JavaScript work."/>
        <figcaption>
-         <b>Figure X</b>. An Audits report after removing unnecessary JavaScript work
+         <b>Figure 45</b>. An Audits report after removing unnecessary JavaScript work
        </figcaption>
      </figure>
 
