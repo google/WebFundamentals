@@ -49,7 +49,8 @@ The audit has 2 important functions:
 
 1. Go to `chrome://version` to check what version of Chrome you're using. This tutorial was made
    with Chrome 68. If you're using an earlier or later version, some features may look different
-   or not be available.
+   or not be available. You should be able to complete the tutorial still, just keep in mind that
+   your UI may look different than the screenshots.
 1. <a class="external gc-analytics-event" href="https://glitch.com/edit/#!/tony" target="_blank"
    rel="noopener" data-category="CTA" data-label="{% dynamic print request.path %}">Open the
    source code for the site</a>. This tab will be referred to as the *editor tab*.
@@ -252,6 +253,9 @@ auditing the site after each change to measure how it affects site speed.
 Your report says that enabling text compression is one of the top opportunities for
 improving the page's performance.
 
+Text compression is when you reduce, or compress, the size of a text file before sending it over
+the network. Kind of like how you might zip a folder before emailing it to reduce its size.
+
 Before you enable compression, here are a couple of ways you can manually check whether
 text resources are compressed.
 
@@ -402,6 +406,11 @@ on how to configure whatever server you use to compress text.
 
 Your new report says that properly sizing images is another big opportunity.
 
+Resizing images helps speed up load time by reducing the file size of images. When you think about
+it, if your user is viewing your images on a mobile device screen that's 500-pixels-wide, there's
+really no point in sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wided image,
+at most.
+
 1. In your report, click **Properly size images** to see what images should be
    resized. It looks like all 4 images are bigger than necessary.
 
@@ -443,9 +452,11 @@ large apps:
 [relative]: /web/fundamentals/design-and-ux/responsive/images#relative_sized_images
 
 * Use an image CDN that lets you dynamically resize an image when you request it.
-
-See [Essential Image Optimization][addy]{: .external target="_blank" rel="noopener" } by Addy
-for more tips.
+* At the very least, optimize each image. This can often create huge savings. In fact, the
+  "small" images that your app is using now aren't even resized, they're just optimized. 
+  Optimization is when you run an image through a special program that reduces the size of the
+  image file, without resizing it. See [Essential Image
+  Optimization][addy]{: .external target="_blank" rel="noopener" } for more tips.
 
 [addy]: https://images.guide/
 
@@ -591,6 +602,11 @@ and then lazy-loading everything else.
 * It's unlikely that you'll find scripts that you can remove outright, but you will often
   find that many scripts don't need to be requested during the page load, and can instead be
   requested asynchronously. See [Using async or defer][async].
+* If you're using a framework, check if it has a production mode. This mode may use a feature
+  such as [tree shaking][ts]{:.external target="_blank" rel="noopener"} in order to
+  eliminate unnecessary code that is blocking the critical render.
+
+[ts]: https://webpack.js.org/guides/tree-shaking/
 
 [async]: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/#use_async_or_defer
 
@@ -659,16 +675,17 @@ Investigate the trace to find ways to do less JavaScript work:
 
      <figure>
        <img src="imgs/main.png" 
-            alt="TODO"/>
+            alt="The Main section"/>
        <figcaption>
-         <b>Figure X</b>. TODO
+         <b>Figure X</b>. The Main section
        </figcaption>
      </figure>
 
 1. Scroll down to the bottom of the **Main** section. When you use a framework, most of the
    upper activity is caused by the framework, which is usually out of your control. The activity
    caused by your app is usually at the bottom. In this app, it seems like a function called
-   `App` is causing a lot of calls to a `mineBitcoin` function.
+   `App` is causing a lot of calls to a `mineBitcoin` function. It sounds like Tony might be using
+   the devices of his fans in order to mine cryptocurrency...
 
      <figure>
        <img src="imgs/mine.png" 
@@ -679,7 +696,7 @@ Investigate the trace to find ways to do less JavaScript work:
      </figure>
 
      <aside class="note">
-       <b>Note</b> Although the calls that your framework makes are usually out of your control,
+       <b>Note:</b> Although the calls that your framework makes are usually out of your control,
        sometimes you may structure your app in a way that causes the framework to run inefficiently.
        Restructuring your app to use the framework efficiently can be a way to do less main
        thread work. However, this requires a deep understanding of how your framework works, and
@@ -690,21 +707,21 @@ Investigate the trace to find ways to do less JavaScript work:
 [UT]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
 
 1. Expand the **Bottom-Up** section. This tab breaks down what activities took up the most time.
-1. If you don't see anything in the Botton-Up section, click the label for **Main** section.
+   If you don't see anything in the Botton-Up section, click the label for **Main** section.
    The Bottom-Up section only shows information for whatever activity, or group of activity, you
    have currently selected. For example, if you clicked on one of the `mineBitcoin` activities,
    the Bottom-Up section is only going to show information for that one activity.
 
+     <figure>
+       <img src="imgs/bottomup.png" 
+            alt="The Bottom-Up tab."/>
+       <figcaption>
+         <b>Figure X</b>. The Bottom-Up tab
+       </figcaption>
+     </figure>
+
 The **Self Time** column shows you how much time was spent directly in each activity. This
 column seems to confirm that the `mineBitcoin` function is taking up a lot of time.
-
-<figure>
-  <img src="imgs/bottomup.png" 
-      alt="The Bottom-Up tab."/>
-  <figcaption>
-    <b>Figure X</b>. The Bottom-Up tab
-  </figcaption>
-</figure>
 
 Time to see whether using production mode and reducing JavaScript activity speed up the page
 load. Start with production mode:
@@ -730,7 +747,7 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 1. Audit the page again.
 
      <figure>
-       <img src="imgs/report5.png" 
+       <img src="imgs/report6.png" 
             alt="An Audits report after removing unnecessary JavaScript work."/>
        <figcaption>
          <b>Figure X</b>. An Audits report after removing unnecessary JavaScript work
@@ -739,18 +756,26 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 
 Looks like that last change caused a massive jump in performance!
 
-#### Doing less main thread work in the real world {: #TODO }
+Note: This section provided a rather brief introduction to the Performance panel. See
+[Performance Analysis Reference][reference] to learn about what else it can show you.
+
+[reference]: /web/tools/chrome-devtools/evaluate-performance/reference
+
+#### Doing less main thread work in the real world {: #real-world-main-thread }
+
+The [User Timing][UT] API is an effective way to see how long certain phases of your app lifecycle
+take. 
 
 Although the calls that your framework makes are usually out of your control,
-       sometimes you may structure your app in a way that causes the framework to run inefficiently.
-       Restructuring your app to use the framework efficiently can be a way to do less main
-       thread work. However, this requires a deep understanding of how your framework works, and
-       what kind of changes you can make in your own code in order to use the framework more
-       efficiently.
+sometimes you may structure your app in a way that causes the framework to run inefficiently.
+Restructuring your app to use the framework efficiently can be a way to do less main
+thread work. However, this requires a deep understanding of how your framework works, and
+what kind of changes you can make in your own code in order to use the framework more
+efficiently.
 
 ## A special thank you from Tony {: #thanks }
 
-Tony's fans love how fast the site feels now, and he is very thankful for your help.
+Tony's fans love how fast the site feels now, and Tony is very thankful for your help.
 Click **Receive Gift** below to receive a special gift from Tony.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
@@ -760,9 +785,9 @@ Click **Receive Gift** below to receive a special gift from Tony.
 }
 </style>
 <script>
-var label = 'Speed / Get Started / Gift Dispensed';
+var label = '/web/tools/chrome-devtools/speed/get-started';
 var feedback = {
-  "category": "DevTools",
+  "category": "Gift",
   "choices": [
     {
       "button": {
@@ -788,19 +813,18 @@ var feedback = {
 
 ## Next steps {: #next-steps }
 
-* Learn more about the theories of load performance.
-* Check out the rest of the audits. When you configured the Audits panel, you disabled the
-  audits for best practices, progressive web apps, SEO, and accessibility. Re-enable these
-  categories and then run an audit on your own site to learn how to improve these aspects
-  of your site.
-* Leave feedback. Please take a moment to leave feedback in the next section. I really do
-  use the data to make better tutorials for you.
+* Run audits on your own site! If you need help interpreting your report, or finding ways to
+  improve your load performance, check out [Feedback](#feedback) for ways to get help from the
+  DevTools community. Stack Overflow, the mailing list, or Twitter are probably best for these
+  types of questions.
+* Please leave [feedback](#feedback) on this tutorial. I really do use the data to make better
+  tutorials for you.
 
 ## Feedback {: #feedback }
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var label = '/web/tools/chrome-devtools/speed/';
+var label = '/web/tools/chrome-devtools/speed/get-started';
 var response = "Thanks for the feedback. Please use the channels below if you've got any ideas " +
   "on how we can improve.";
 var feedback = {
@@ -835,7 +859,7 @@ var feedback = {
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
 <script>
-var label = '/web/tools/chrome-devtools/speed/';
+var label = '/web/tools/chrome-devtools/speed/get-started';
 var response = "Thanks for the feedback. Please use the channels below if you've got any ideas " +
   "on how we can improve.";
 var feedback = {
@@ -867,6 +891,9 @@ var feedback = {
 </script>
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
+
+If there's anything else we should know, please send a message through the appropriate channel
+below:
 
 * File bugs on this doc in the [Web Fundamentals][WF]{:.external} repository.
 * File bug reports on DevTools at [Chromium Bugs](https://crbug.com){:.external}.
