@@ -4,6 +4,7 @@ description: Get started analyzing network performance.
 
 {# wf_updated_on: 2018-06-18 #}
 {# wf_published_on: 2017-01-17 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 .devtools-inline {

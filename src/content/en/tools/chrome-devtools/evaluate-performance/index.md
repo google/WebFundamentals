@@ -4,6 +4,7 @@ description: Learn how to evaluate runtime performance in Chrome DevTools.
 
 {# wf_updated_on: 2018-06-18 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
