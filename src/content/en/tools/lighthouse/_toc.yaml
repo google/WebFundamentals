@@ -42,6 +42,8 @@ toc:
     path: /web/tools/lighthouse/audits/oversized-images
   - title: Perceptual Speed Index
     path: /web/tools/lighthouse/audits/speed-index
+  - title: Preload key requests
+    path: /web/tools/lighthouse/audits/preload
   - title: Reduce Render-Blocking Scripts
     path: /web/tools/lighthouse/audits/blocking-resources
   - title: Reduce Render-Blocking Stylesheets
