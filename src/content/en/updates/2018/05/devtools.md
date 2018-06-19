@@ -220,7 +220,7 @@ Was this page helpful?
       <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
               style="background-color: #f44336"
               data-category="Helpful"
-              data-label="{% dynamic print request.path %}" data-value="1">
+              data-label="{% dynamic print request.path %} (red)" data-value="1">
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
@@ -232,7 +232,7 @@ Was this page helpful?
       <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
               style="background-color: #f44336"
               data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %}" data-value="0">
+              data-label="{% dynamic print request.path %} (red)" data-value="0">
         No
       </button>
       <aside id="quickstart-feedback-failure" class="warning">
@@ -245,7 +245,7 @@ Was this page helpful?
     <section class="expandable">
       <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
               data-category="Helpful"
-              data-label="{% dynamic print request.path %}" data-value="1">
+              data-label="{% dynamic print request.path %} (white)" data-value="1">
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
@@ -256,7 +256,7 @@ Was this page helpful?
     <section class="expandable">
       <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
               data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %}" data-value="0">
+              data-label="{% dynamic print request.path %} (white)" data-value="0">
         No
       </button>
       <aside id="quickstart-feedback-failure" class="warning">
