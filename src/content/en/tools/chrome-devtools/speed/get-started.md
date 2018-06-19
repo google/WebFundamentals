@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-06-18 #}
-{# wf_published_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-19 #}
+{# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Optimize Website Speed With Chrome DevTools {: .page-title }
@@ -326,8 +326,7 @@ Enable text compression by adding a couple of lines of code:
      <pre>
        ...
        const fs = require('fs');
-       <strong>const compresion = require('compression');</strong>
-
+       <strong>const compression = require('compression');</strong>
        <strong>app.use(compression());</strong>
        app.use(express.static('build'));
        ...
@@ -407,8 +406,8 @@ on how to configure whatever server you use to compress text.
 
 Your new report says that properly sizing images is another big opportunity.
 
-Resizing images helps speed up load time by reducing the file size of images. When you think about
-it, if your user is viewing your images on a mobile device screen that's 500-pixels-wide, there's
+Resizing images helps speed up load time by reducing the file size of images.
+If your user is viewing your images on a mobile device screen that's 500-pixels-wide, there's
 really no point in sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wided image,
 at most.
 
@@ -424,7 +423,8 @@ at most.
      </figure>
 
 1. Back in the editor tab, open `src/model.js`.
-1. Replace `const dir = 'big'` with `const dir = 'small'`.
+1. Replace `const dir = 'big'` with `const dir = 'small'`. This directory contains
+   copies of the same images which have been resized.
 1. Audit the page again to see how this change affects load performance.
 
      <figure>
@@ -453,10 +453,9 @@ large apps:
 [relative]: /web/fundamentals/design-and-ux/responsive/images#relative_sized_images
 
 * Use an image CDN that lets you dynamically resize an image when you request it.
-* At the very least, optimize each image. This can often create huge savings. In fact, the
-  "small" images that your app is using now aren't even resized, they're just optimized. 
+* At the very least, optimize each image. This can often create huge savings. 
   Optimization is when you run an image through a special program that reduces the size of the
-  image file, without resizing it. See [Essential Image
+  image file. See [Essential Image
   Optimization][addy]{: .external target="_blank" rel="noopener" } for more tips.
 
 [addy]: https://images.guide/
@@ -506,7 +505,8 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
 1. Click **Reload** ![Reload](imgs/reload.png){: .inline-icon }. The Coverage tab provides an
    overview of how much of the code in `bundle.js`, `jquery.js`, and `lodash.js` is being
-   executed while the page loads.
+   executed while the page loads. **Figure 32** says that about 76% and 30% of the jQuery and
+   Lodash files aren't used, respectively.
 
      <figure>
        <img src="imgs/coveragereport.png" 
@@ -563,8 +563,9 @@ tab can show you what happens when resources aren't available.
        </figcaption>
      </figure>
 
-1. Reload the page. The page still loads and is interactive, so it looks like these 
-   resources aren't needed whatsoever!
+1. Reload the page. The jQuery and Lodash requests are red, meaning that they were blocked.
+   The page still loads and is interactive, so it looks like these resources aren't needed
+   whatsoever!
 
      <figure>
        <img src="imgs/blockedlibs.png" 
@@ -576,12 +577,16 @@ tab can show you what happens when resources aren't available.
 
 1. Click **Remove all patterns** ![Remove all patterns](imgs/remove.png){: .inline-icon }
    to delete the `/libs/*` blocking pattern.
+   
+In general, the Request Blocking tab is useful for simulating how your page behaves when
+any given resource isn't available.
 
 Now, remove the references to these files from the code and audit the page again:
 
 1. Back in the editor tab, open `template.html`.
 1. Delete `<script src="/libs/lodash.js">` and 
    `<script src="/libs/jquery.js"></script>`.
+1. Wait for the site to re-build and re-deploy.
 1. Audit the page again from the **Audits** panel. Your overall score should have improved again.
 
      <figure>
@@ -615,11 +620,13 @@ and then lazy-loading everything else.
 
 Your latest report shows some minor potential savings in the Opportunities section, but if
 you look down in the Diagnostics section, it looks like the biggest bottleneck is too much
-main thread activity. The main thread is where the browser does most of the work needed to
+main thread activity.
+
+The main thread is where the browser does most of the work needed to
 display a page, such as parsing and executing HTML, CSS, and JavaScript.
 
 The goal is to use the Performance panel to analyze what work the main thread is doing while the
-page loads, and find ways to defer unnecessary work.
+page loads, and find ways to defer or remove unnecessary work.
 
 1. Click the **Performance** tab.
 1. Click **Capture Settings** ![Capture Settings](imgs/capture.png){:.inline-icon}.
@@ -627,8 +634,8 @@ page loads, and find ways to defer unnecessary work.
    more hardware constraints than laptops or desktops, so these settings let you experience the
    page load as if you were using a less powerful device.
 1. Click **Reload** ![Reload](imgs/reload.png){:.inline-icon}. DevTools reloads the page and
-   then produces a visualization of all the work that the browser must do in order to display
-   the page. This visualization will be referred to as the *trace*.
+   then produces a visualization of all the it had to do in order to load the page.
+   This visualization will be referred to as the *trace*.
 
      <figure>
        <img src="imgs/performance.png" 
@@ -721,11 +728,12 @@ Investigate the trace to find ways to do less JavaScript work:
        </figcaption>
      </figure>
 
-The **Self Time** column shows you how much time was spent directly in each activity. This
-column seems to confirm that the `mineBitcoin` function is taking up a lot of time.
+The **Self Time** column shows you how much time was spent directly in each activity. 
+For example, **Figure 43** shows that about 57% of main thread time was spent on the
+`mineBitcoin` function.
 
-Time to see whether using production mode and reducing JavaScript activity speed up the page
-load. Start with production mode:
+Time to see whether using production mode and reducing JavaScript activity will speed
+up the page load. Start with production mode:
 
 1. In the editor tab, open `webpack.config.js`.
 1. Change `"mode":"development"` to `"mode":"production"`.
@@ -758,7 +766,8 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 Looks like that last change caused a massive jump in performance!
 
 Note: This section provided a rather brief introduction to the Performance panel. See
-[Performance Analysis Reference][reference] to learn about what else it can show you.
+[Performance Analysis Reference][reference] to learn more about how you can use it to
+analyze page performance.
 
 [reference]: /web/tools/chrome-devtools/evaluate-performance/reference
 
@@ -890,8 +899,7 @@ var feedback = {
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
-If there's anything else we should know, please send a message through the appropriate channel
-below:
+If there's anything else we should know, please send a message through the appropriate channel:
 
 * File bugs on this doc in the [Web Fundamentals][WF]{:.external} repository.
 * File bug reports on DevTools at [Chromium Bugs](https://crbug.com){:.external}.
