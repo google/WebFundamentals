@@ -148,7 +148,7 @@ workbox.precaching.precacheAndRoute(
     { url: '/index.html', revision: '383676' },
   ],
   {
-    ignoreUrlParametersMatching: /.*/
+    ignoreUrlParametersMatching: [/.*/]
   }
 );
 ```
