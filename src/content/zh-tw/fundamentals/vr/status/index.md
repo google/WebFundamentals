@@ -1,6 +1,6 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體驗時需要注意的事項。
+description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
 {# wf_updated_on: 2018-06-15 #}
 {# wf_published_on: 2016-12-12 #}
@@ -12,7 +12,7 @@ description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體
 
 ### WebXR設備API {：#xrdevice}
 
-- Using the WebXR device API requires a[compatible device](/ar/discover/supported-devices)running Android O or later.
+- 使用WebXR設備API需要Android O或更高版本的[兼容設備](/ar/discover/supported-devices) 。
 - 該WebXR設備API在與其他瀏覽器[填充工具](https://github.com/immersive-web/webxr-polyfill) 。
 - 文檔可從[Immersive Web Early Adopters指南獲得](https://immersive-web.github.io/webxr-reference/) 。
 
@@ -20,11 +20,11 @@ description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體
 
 Feature | Chrome version | Details
 --- | --- | ---
-AR擊中測試支持 | Chrome Canary for the immediate future. | Enable the #webxr and #webxr-hit-test flags under chrome://flags
-VR使用案例 | Chrome 66及更高版本 | Enable the chrome://flags/#webxr flag. (The URL must be entered manually.)
-VR使用案例 | Chrome 67原始試用版 | Enable the chrome://flags/#webxr flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)).
+AR擊中測試支持 | Chrome Canary 不久的將來。 | 在chrome://flags 下啟用#webxr 和 #webxr-hit-test 標誌
+VR使用案例 | Chrome 66及更高版本 | 啟用chrome://flags/#webxr 標誌{em0}並{/em0}註冊原始試用版（ {a1}解釋器{/a1} ， {a2}註冊表單{/a2} ）。
+VR使用案例 | Chrome 67原始試用版 | 啟用chrome://flags/#webxr 標誌*並*註冊原始試用版（ [解釋器](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md) ， [註冊表單](http://bit.ly/OriginTrialSignup) ）。
 
-Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
+在[Immersive Web Community Group中](https://github.com/immersive-web)了解更多關於immersive web。
 
 ### Version 1.1 {:#version_1_1}
 
@@ -34,13 +34,12 @@ Learn more about the immersive web at the [Immersive Web Community Group](https:
 
 - Firefox Nightly.
 - Samsung Internet for Android and for Gear VR.
-- A Chrome [Origin
-    Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)that ran from version 56 beta to June of 2017.
+- Chrome [原始版試用](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)版從第56版測試版到2017年6月。
 
-It's supported on:
+支持：
 
-- Daydream View since M56
-- Google Cardboard since M57
+- Daydream View 自M56
+- Google Cardboard 自 M57
 
 它也可以通過[WebXR Polyfill獲得](https://github.com/immersive-web/webxr-polyfill) 。
 
