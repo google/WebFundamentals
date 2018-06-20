@@ -388,6 +388,11 @@ high-performance audio processing on the web. For large-scale audio applications
 written in C or C++, using the AudioWorklet with SharedArrayBuffer and Worker
 can be an attractive option to explore.
 
+## Credits
+
+Special thanks to Chris Wilson, Jason Miller, Joshua Bell and Raymond Toy for
+reviewing a draft of this article and giving insightful feedback.
+
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
