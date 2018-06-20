@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-18 #}
+{# wf_updated_on: 2018-06-20 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -229,11 +229,10 @@ the view stay the same when the user moves or does it shift as it would in real
 life?)
 
 The second type of frame is the _presentation frame_, represented by an
-`XRPresentationFrame` object. This object contains the information needed to
+`XRFrame` object. This object contains the information needed to
 render a single frame of an AR/VR scene to the device. This is a bit confusing
 because a presentation frame is retrieved by calling `requestAnimationFrame()`.
-This makes it compatible with `window.requestAnimationFrame()` which comes in
-useful when ending an XR session. More about that later.
+This makes it compatible with `window.requestAnimationFrame()`.
 
 Before I give you any more to digest, I'll offer some code. The sample below
 shows how the render loop is started and maintained. Notice the dual use of the
@@ -242,10 +241,10 @@ function will be called 60 times a second.
 
     xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
         // Process the frame.
-        xrPresFrame.session.requestAnimationFrame(onFrame);
+        xrFrame.session.requestAnimationFrame(onFrame);
       }
     });
 
@@ -257,11 +256,11 @@ and orientation of a thing in AR/VR is called a pose. Both viewers and input
 devices have a pose. (I cover input devices later.) Both viewer and input
 device poses are defined as a 4 by 4 matrix stored in a `Float32Array` in column
 major order. You get the viewer's pose by calling
-`XRPresentationFrame.getDevicePose()` on the current animation frame object.
+`XRFrame.getDevicePose()` on the current animation frame object.
 Always test to see if you got a pose back. If something went wrong you don't
 want to draw to the screen.
 
-    let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+    let pose = xrFrame.getDevicePose(xrFrameOfRef);
     if (pose) {
       // Draw something to the screen.
     }
@@ -270,11 +269,11 @@ want to draw to the screen.
 
 After checking the pose, it's time to draw something. The object you draw to is
 called a view (`XRView`). This is where the session type becomes important. Views
-are retrieved from the `XRPresentationFrame` object as an array. If you're in a
+are retrieved from the `XRFrame` object as an array. If you're in a
 non-exclusive session the array has one view. If you're in an exclusive
 session, the array has two, one for each eye.
 
-    for (let view of xrPresFrame.views) {
+    for (let view of xrFrame.views) {
       // Draw something to the screen.
     }
 
@@ -289,11 +288,11 @@ the input devices, which I'll cover in a later section.
 
     xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
-        let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+        let pose = xrFrame.getDevicePose(xrFrameOfRef);
         if (pose) {
-          for (let view of xrPresFrame.views) {
+          for (let view of xrFrame.views) {
             // Draw something to the screen.
           }
         }
