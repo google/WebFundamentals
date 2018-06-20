@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-04 #}
+{# wf_updated_on: 2018-06-18 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -120,7 +120,7 @@ Drawing is done using WebGL APIs. You can do that if you're really ambitious.
 Though, we recommend using a framework. The immersive web samples use one
 created just for the demos called
 [Cottontail](https://github.com/immersive-web/webxr-samples/tree/master/js/cottontail).
-Three.js has supported WebXR since May. I've heard nothing about 
+Three.js has supported WebXR since May. I've heard nothing about
 A-Frame.
 
 ## Starting and running an app
@@ -240,7 +240,7 @@ shows how the render loop is started and maintained. Notice the dual use of the
 word frame. And notice the recursive call to `requestAnimationFrame()`. This
 function will be called 60 times a second.
 
-    xrSession.requestFrameOfReference('eyeLevel')
+    xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
       xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
         // The time argument is for future use and not implemented at this time.
@@ -287,7 +287,7 @@ to have a single rendering path for a variety of devices.
 If I put all this together, I get the code below. I've left a placeholder for
 the input devices, which I'll cover in a later section.
 
-    xrSession.requestFrameOfReference('eyeLevel')
+    xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
       xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
         // The time argument is for future use and not implemented at this time.
