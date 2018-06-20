@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-05-22 #}
+{# wf_updated_on: 2018-06-20 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -20,10 +20,13 @@ device.
 workbox.routing.registerRoute(
   new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
   workbox.strategies.cacheFirst({
-    cacheName: 'googleapis',
+    cacheName: 'google-fonts',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 30,
+      }),
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200]
       }),
     ],
   }),
