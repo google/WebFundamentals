@@ -2,36 +2,57 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體驗時需要注意的事項。
 
-{# wf_updated_on:2016-12-12 #}
-{# wf_published_on:2016-12-12 #}
+{# wf_updated_on: 2018-06-15 #}
+{# wf_published_on: 2016-12-12 #}
+{# wf_blink_components: Blink>WebVR #}
 
-# WebVR 狀態和注意事項 {: .page-title }
-
-Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
+# WebVR狀態{：.page-title}
 
 ## WebVR 實現狀態
 
-目前，WebVR API 可用於以下瀏覽器：
+### WebXR設備API {：#xrdevice}
 
-* Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
-* Firefox Nightly。
-* Samsung Internet Browser for Gear VR。（請注意：此瀏覽器目前支持一個較早版本的 WebVR 規範）。
+- Using the WebXR device API requires a[compatible device](/ar/discover/supported-devices)running Android O or later.
+- 該WebXR設備API在與其他瀏覽器[填充工具](https://github.com/immersive-web/webxr-polyfill) 。
+- 文檔可從[Immersive Web Early Adopters指南獲得](https://immersive-web.github.io/webxr-reference/) 。
+
+今天，API可用於：
+
+Feature | Chrome version | Details
+--- | --- | ---
+AR擊中測試支持 | Chrome Canary for the immediate future. | Enable the #webxr and #webxr-hit-test flags under chrome://flags
+VR使用案例 | Chrome 66及更高版本 | Enable the chrome://flags/#webxr flag. (The URL must be entered manually.)
+VR使用案例 | Chrome 67原始試用版 | Enable the chrome://flags/#webxr flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)).
+
+Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
+
+### Version 1.1 {:#version_1_1}
+
+注意：此API已棄用，其原始試用計劃於7月結束。
+
+今天，WebVR 1.1 API可用於：
+
+- Firefox Nightly.
+- Samsung Internet for Android and for Gear VR.
+- A Chrome [Origin
+    Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)that ran from version 56 beta to June of 2017.
+
+It's supported on:
+
+- Daydream View since M56
+- Google Cardboard since M57
+
+它也可以通過[WebXR Polyfill獲得](https://github.com/immersive-web/webxr-polyfill) 。
 
 <iframe width="100%" height="320" src="https://www.chromestatus.com/feature/4532810371039232?embed" style="border: 1px solid #CCC" allowfullscreen>
 </iframe>
 
-如需瞭解有關瀏覽器實現狀態的更多信息，請訪問 [chromestatus.com](https://www.chromestatus.com/features/4532810371039232?embed)。
+在[chromestatus.com](https://www.chromestatus.com/features/4532810371039232)上查找有關瀏覽器實施狀態的更多信息。
 
 ## 注意事項
 
-以下是目前構建 WebVR 體驗時需要注意的事項。
+以下是今天構建WebVR體驗時要記住的事情。
 
-* **您必須通過 HTTPS 提供您的 WebVR 內容。** 如果不這麼做，您的用戶將收到來自瀏覽器的警告。
-    * 請參閱[在服務器上啓用 HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)，尋求更多指導。
-* **Chrome 目前僅在 Android 上支持原生 WebVR。** 您必須使用一個 Daydream 耳機和一部 Pixel 手機。
-* **[WebVR Polyfill](https://github.com/googlevr/webvr-polyfill) 可能不會始終與規範的原生實現一一對應。** 如果您計劃使用 Polyfill，請務必在 VR 設備和非 VR 設備上都進行檢查。
-* **在您的代碼提供 VR 功能前，用戶必須先點擊一個 VR 控制器按鈕**。在代碼中必須考慮到這一點，一般情況下，通過向用戶顯示一條消息，請求他們在開始虛擬實境體驗時按一個控制器按鈕。
-* **在本地運行時，您必須在 Chrome 56 中啓用 Gamepad pose information**。在本地主機上運行時，遊戲手柄信息不包含姿勢（或位置）信息，除非您在 Chrome 56 中啓用 Gamepad Extensions runtime flag。如果您當前在運行來源測試版，則通過 WebVR API 啓用 Gamepad Extensions。
-
-
-{# wf_devsite_translation #}
+- **您必須通過HTTPS提供您的WebVR內容。**如果您的用戶不會從瀏覽器收到警告。有關更多指導，請參閱[在服務器上啟用HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https) 。
+- **[WebXR Polyfill](https://github.com/immersive-web/webxr-polyfill)可能並不總是與本規範本地實現的1：1匹配。**如果您打算使用Polyfill，請務必檢查支持VR的設備和非VR設備。
+- **對於某些類型的會話，用戶必須在AR或VR可用於代碼之前單擊按鈕** 。有關更多信息，請參閱[Immersive Web Early Adopters指南](https://immersive-web.github.io/webxr-reference/) 。
