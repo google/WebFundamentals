@@ -743,6 +743,9 @@ requests aren't counted.
   </figcaption>
 </figure>
 
+See [View the uncompressed size of a resouce](#uncompressed) to see how large
+resources are after the browser uncompresses them.
+
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
 When a JavaScript statement causes a resource to be requested, hover over the **Initiator**
@@ -755,6 +758,14 @@ column to view the stack trace leading up to the request.
     <b>Figure 32</b>. The stack trace leading up to a resource request
   </figcaption>
 </figure>
+
+### View the uncompressed size of a resouce {: #uncompressed }
+
+Click **Use Large Request Rows** ![Use Large Request
+Rows](imgs/use-large-request-rows.png){:.inline-icon} and then look at the
+bottom value of the **Size** column.
+
+
 
 ## Export requests data
 
@@ -813,8 +824,9 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 ### Use large request rows {: #request-rows }
 
 Use large rows when you want more whitespace in your network
-requests table, or if you need to see the uncompressed and compressed
-sizes of a file.
+requests table. Some columns also provide a little more information
+when using large rows. For example, the bottom value of the **Size**
+is the uncompressed size of a request.
 
 <figure>
   <img src="imgs/large-request-rows.png"
@@ -827,22 +839,12 @@ sizes of a file.
 Click **Use large request rows** ![Use large request
 rows][large]{:.devtools-inline} to enable large rows.
 
+[large]: imgs/large-resource-rows-button.png
+
 <figure>
   <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
   <figcaption>
     <b>Figure 37</b>. Large Request Rows, outlined in blue
-  </figcaption>
-</figure>
-
-[large]: imgs/large-resource-rows-button.png
-
-By default, DevTools uses small rows in the [Requests pane](#requests).
-
-<figure>
-  <img src="imgs/small-request-rows.png"
-       alt="An example of small request rows in the Requests pane.">
-  <figcaption>
-    <b>Figure 38</b>. An example of small request rows in the Requests pane
   </figcaption>
 </figure>
 
@@ -854,7 +856,7 @@ Click **Hide overview** ![Hide overview][hide]{:.devtools-inline} to hide it.
 <figure>
   <img src="imgs/hide-overview.svg" alt="The Hide Overview button">
   <figcaption>
-    <b>Figure 39</b>. Hide Overview, outlined in blue
+    <b>Figure 38</b>. Hide Overview, outlined in blue
   </figcaption>
 </figure>
 
