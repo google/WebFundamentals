@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2018-03-02 #}
+{# wf_updated_on: 2018-06-21 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -812,34 +812,39 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 
 ### Use large request rows {: #request-rows }
 
-By default, DevTools uses small rows in the [Requests pane](#requests).
-Click **Use large request rows** ![Use large request
-rows][large]{:.devtools-inline} to use large rows, instead.
-
-<figure>
-  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
-  <figcaption>
-    <b>Figure 36</b>. Large Request Rows, outlined in blue
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="imgs/small-request-rows.png"
-       alt="An example of small request rows in the Requests pane.">
-  <figcaption>
-    <b>Figure 37</b>. An example of small request rows in the Requests pane
-  </figcaption>
-</figure>
+Use large rows when you want more whitespace in your network
+requests table, or if you need to see the uncompressed and compressed
+sizes of a file.
 
 <figure>
   <img src="imgs/large-request-rows.png"
        alt="An example of large request rows in the Requests pane.">
   <figcaption>
-    <b>Figure 38</b>. An example of large request rows in the Requests pane
+    <b>Figure 36</b>. An example of large request rows in the Requests pane
+  </figcaption>
+</figure>
+
+Click **Use large request rows** ![Use large request
+rows][large]{:.devtools-inline} to enable large rows.
+
+<figure>
+  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
+  <figcaption>
+    <b>Figure 37</b>. Large Request Rows, outlined in blue
   </figcaption>
 </figure>
 
 [large]: imgs/large-resource-rows-button.png
+
+By default, DevTools uses small rows in the [Requests pane](#requests).
+
+<figure>
+  <img src="imgs/small-request-rows.png"
+       alt="An example of small request rows in the Requests pane.">
+  <figcaption>
+    <b>Figure 38</b>. An example of small request rows in the Requests pane
+  </figcaption>
+</figure>
 
 ### Hide the Overview pane {: #hide-overview }
 
