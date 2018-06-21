@@ -42,13 +42,12 @@ Chrome's software echo canceller will. Without specifying the constraint, Chrome
 will never chose one of the two experimental echo cancellers that are part of
 this trial.
 
-As `echoCancellationType` works like any other constraint, it's possible to, for
-example, provide a list of `ideal` values for it and have Chrome select the
-first value that it can actually use. This way, you can ask to use the `system`
-echo canceller if it's available, and automatically fall back to the `browser`
-one, if it isn't. To figure out which echo canceller was picked, you can call
-`getSettings()` on a getUserMedia audio track and check the value of the
-`echoCancellationType` field.
+As `echoCancellationType` works like any other constraint, it's possible to
+specify `system` as an ideal value and have Chrome use it if it's available, or
+fall back to the `browser` one otherwise. The `browser` echoCancellationType is
+always available in Chrome. To figure out which echo canceller was picked, you
+can call `getSettings()` on the getUserMedia audio track and check the value of
+the `echoCancellationType` field.
 
 Finally, you can check what echo cancellers are available for a
 `MediaStreamTrack` by calling `getCapabilities()` on it. However,
@@ -97,7 +96,7 @@ constraint, you can then test the native echo cancellers in your app, as
 described above. This is the same command line flag as in the previous trial; on
 Chrome M68 it will enable the new functionality. Enabling the new origin trial
 will only activate the new functionality &ndash; it will not trigger the previous
-trial in older version of Chrome.
+trial in older versions of Chrome.
 
 ### Filing feedback
 
