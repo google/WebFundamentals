@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Using the native macOS echo canceller in Chrome
 
-{# wf_updated_on: 2018-03-23 #}
+{# wf_updated_on: 2018-06-21 #}
 {# wf_published_on: 2018-03-23 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: chrome66,webrtc,getusermedia #}
@@ -12,6 +12,10 @@ description: Using the native macOS echo canceller in Chrome
 # macOS native echo cancellation {: .page-title }
 
 {% include "web/_shared/contributors/ossu.html" %}
+
+Caution: This information applies to Chrome M66 and M67. In M68 and later, the
+ functionality has changed but the command line flag remains the same; see [this
+ post](/web/updates/2018/06/more-native-echo-cancellation).
 
 Since version 10.12 (Sierra), macOS includes a native echo canceller. Usage of
 it can be experimentally enabled in Chrome M66 by opting in to an [Origin
@@ -70,5 +74,7 @@ If possible, include what hardware was used (macOS version, hardware model,
 microphone / headset / etc.). If doing more large-scale experiments, links to
 comparative statistics on audio call quality are appreciated; whether objective
 or subjective.
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
