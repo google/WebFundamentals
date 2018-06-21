@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for &lt;video> elements on your website.
 
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-21 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/06/watch-video-using-picture-in-picture/hero.png #}
@@ -26,7 +26,7 @@ With the new [Picture-in-Picture Web API], you can initiate and control
 Picture-in-Picture for &lt;video> elements on your website. Try it out on our
 official [Picture-in-Picture sample].
 
-Dogfood: The Picture-in-Picture Web API requires enabling `chrome://flags/#enable-experimental-web-platform-features` and `chrome://flags/#enable-surfaces-for-videos` experimental flags in Chrome 68 for desktop.
+Dogfood: The Picture-in-Picture Web API requires enabling `chrome://flags/#enable-surfaces-for-videos` experimental flag in Chrome 69 for desktop.
 
 ## Background {: #background }
 
