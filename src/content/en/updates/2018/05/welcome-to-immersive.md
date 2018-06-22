@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-20 #}
+{# wf_updated_on: 2018-06-22 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -129,7 +129,7 @@ The basic process is this:
 
 1. Request an XR device.
 1. If it's available, request an XR session. If you want the user to put their
-phone in a headset, it's called an exclusive session and requires a user
+phone in a headset, it's called an immersive session and requires a user
 gesture to enter.
 1. Use the session to run a render loop which provides 60 image frames per
 second. Draw appropriate content to the screen in each frame.
@@ -145,9 +145,9 @@ give a sense of it.
 Here, you'll recognize the standard feature detection code. You could wrap this
 in a function called something like `checkForXR()`.
 
-If you're not using an exclusive session you can skip advertising the
+If you're not using an immersive session you can skip advertising the
 functionality and getting a user gesture and go straight to requesting a
-session. An exclusive session is one that requires a headset. A non-exclusive
+session. An immersive session is one that requires a headset. A non-immersive
 session simply shows content on the device screen. The former is what most
 people think of when you refer to virtual reality or augmented reality. The
 latter is sometimes called a 'magic window'.
@@ -185,9 +185,9 @@ To create a session, the browser needs a canvas on which to draw.
 
     xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
     let sessionOptions = {
-      // The exclusive option is optional for non-exclusive sessions; the value
+      // The immersive option is optional for non-immersive sessions; the value
       //   defaults to false.
-      exclusive: false,
+      immersive: false,
       outputContext: xrPresentationContext
     }
     xrDevice.requestSession(sessionOptions)
@@ -270,7 +270,7 @@ want to draw to the screen.
 After checking the pose, it's time to draw something. The object you draw to is
 called a view (`XRView`). This is where the session type becomes important. Views
 are retrieved from the `XRFrame` object as an array. If you're in a
-non-exclusive session the array has one view. If you're in an exclusive
+non-immersive session the array has one view. If you're in an immersive
 session, the array has two, one for each eye.
 
     for (let view of xrFrame.views) {
@@ -316,7 +316,7 @@ resumed.
       xrSession.addEventListener('end', onSessionEnd);
     });
 
-    // Restore the page to normal after exclusive access has been released.
+    // Restore the page to normal after immersive access has been released.
     function onSessionEnd() {
       xrSession = null;
 
