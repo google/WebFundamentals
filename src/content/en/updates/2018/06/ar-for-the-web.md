@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-06-15 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
@@ -172,7 +172,7 @@ AR as they are for VR. You can read
 if you're unfamiliar. To be more specific, entering and running an AR session
 looks almost exactly like
 [entering a VR magic window session](/web/updates/2018/05/welcome-to-immersive#starting_and_running_an_app).
-As with a magic window, the session type must be non-exclusive and the frame of
+As with a magic window, the session type must be non-immersive and the frame of
 reference type must be `'eye-level'`.
 
 ## The new API
