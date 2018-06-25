@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-06-22 #}
-{# wf_published_on: 2018-06-22 #}
+{# wf_updated_on: 2018-06-25 #}
+{# wf_published_on: 2018-06-25 #}
 {# wf_tags: ux,feature,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
 {# wf_featured_snippet: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60. #}
@@ -26,7 +26,7 @@ figcaption {
 
 [Feature Policy][spec] allows web developers to selectively enable, disable, and
 modify the behavior of certain APIs and web features in the browser. __It's like
-[CSP](/web/fundamentals/security/csp/) but instead of controlling security, it's
+[CSP](/web/fundamentals/security/csp/) but instead of controlling security, it
 controls features!__
 
 The feature policies themselves are little opt-in aggreements between developer
@@ -40,21 +40,20 @@ web app that nails performance and uses all the latest best practices. It's even
 harder to keep that experience great over time. As your project evolves,
 developers come on board, new features land, and the codebase grows. That
 Great Experience &trade; you once achieved may begin to deteriorate and UX
-starts to suffer! Feature Policy is designed to keep us on track.
+starts to suffer! Feature Policy is designed to keep you on track.
 
 With Feature Policy, you **opt-in to a set of "policies"** for the browser to
-enforce on specific features used throughout your site. These policies can
-restrict what APIs the site can access or modify the browser's default
-behavior for certain features.
+enforce on specific features used throughout your site. These policies restrict
+what APIs the site can access or modify the browser's default behavior for
+certain features.
 
-Here are a few examples of the types of things you can do with Feature Policy:
+Here are examples of things you can do with Feature Policy:
 
-1. Change the default behavior of `autoplay` on mobile and 3rd party videos.
-2. Ensure a site doesn't inadvertently use sensitive APIs like `camera` or
-`microphone`.
-3. Allow iframes to use the `fullscreen` API.
-4. Block the use of outdated APIs like synchronous XHR and `document.write`.
-5. Ensure images are sized properly (e.g. prevent layout thrashing) and are not
+- Change the default behavior of `autoplay` on mobile and third party videos.
+- Restrict a site from using sensitive APIs like `camera` or `microphone`.
+- Allow iframes to use the `fullscreen` API.
+- Block the use of outdated APIs like synchronous XHR and `document.write`.
+- Ensure images are sized properly (e.g. prevent layout thrashing) and are not
 too big for the viewport (e.g. waste user's bandwidth).
 
 **Policies are a contract between developer and browser**. They inform the
@@ -67,20 +66,20 @@ altogether.
 
 Feature Policy provides two ways to control features:
 
-1. Through the `FeaturePolicy` HTTP header.
+1. Through the `Feature-Policy` HTTP header.
 2. With the `allow` attribute on iframes.
 
-### The `FeaturePolicy` HTTP header {: #header }
+### The `Feature-Policy` HTTP header {: #header }
 
-The easiest way to use Feature Policy is by sending the `FeaturePolicy` HTTP
+The easiest way to use Feature Policy is by sending the `Feature-Policy` HTTP
 header with the response of a page. It's value is the policy or set of
 policies that you want the browser to respect for a given origin:
 
 ```
-FeaturePolicy: <feature> <allow list origin(s)>
+Feature-Policy: <feature> <allow list origin(s)>
 ```
 
-The allow list can take on several different values:
+The allow list can take several different values:
 
 - `*`: The feature is allowed in top-level browsing contexts and in nested
 browsing contexts (iframes).
@@ -98,7 +97,7 @@ the Geolocation API across your site. You can do that by sending a strict
 allowlist of `'none'` for the `geolocation` feature:
 
 ```
-FeaturePolicy: geolocation 'none'
+Feature-Policy: geolocation 'none'
 ```
 
 If a piece of code or iframe tries to use the Geolocation API, the browser
@@ -112,19 +111,19 @@ permission to share their location**.
   <figcaption>Violating the set geolocation policy.</figcaption>
 </figure>
 
-In other cases, it might make since to relax this policy a bit. We can allow
+In other cases, it might make sense to relax this policy a bit. We can allow
 our own origin to use the Geolocation API but prevent third-party content from
 accessing it by setting `'self'` in the allow list:
 
 ```
-FeaturePolicy: geolocation 'self'
+Feature-Policy: geolocation 'self'
 ```
 
 
 ### The iframe `allow` attribute {: #iframe }
 
 The second way to use Feature Policy is for controlling content within
-an `iframe`. USe the `allow` attribute to specify a policy list for
+an `iframe`. Use the `allow` attribute to specify a policy list for
 embedded content:
 
 ```html
@@ -172,15 +171,15 @@ Several features can be controlled at the same time by sending the HTTP header
 with a `;` separated list of policies:
 
 ```
-FeaturePolicy: unsized-media 'none'; geolocation 'self', https://example.com; camera *;
+Feature-Policy: unsized-media 'none'; geolocation 'self', https://example.com; camera *;
 ```
 
 or by sending a separate header for each policy:
 
 ```
-FeaturePolicy: unsized-media 'none'
-FeaturePolicy: geolocation 'self', https://example.com
-FeaturePolicy: camera *;
+Feature-Policy: unsized-media 'none'
+Feature-Policy: geolocation 'self' https://example.com
+Feature-Policy: camera *;
 ```
 
 This example would do the following:
@@ -198,11 +197,10 @@ page's own origin and `https://example.com`.
 <iframe allow="camera 'none'; microphone 'none'">
 ```
 
-
 ## JavaScript API {: #js }
 
-Heads up: While Chrome 60 added support for the `FeaturePolicy` HTTP header
-and the `allow` attribute on iframes. The [JavaScript API][jsapi] is still
+Heads up: While Chrome 60 added support for the `Feature-Policy` HTTP header
+and the `allow` attribute on iframes, the [JavaScript API][jsapi] is still
 being fleshed out and is likely to change as it goes through the standardization
 process. You can enable the API using the
 `--enable-experimental-web-platform-features` flag in `chrome:flags`.
@@ -214,8 +212,9 @@ its goodies under `document.policy` for the main document or `frame.policy` for
 iframes.
 
 ### Example {: #jsexample }
-The example below illustrates the results of sending a policy of `FeaturePolicy: geolocation 'self'`
-on the site `https://example.com`:
+
+The example below illustrates the results of sending a policy of
+`Feature-Policy: geolocation 'self'` on the site `https://example.com`:
 
 ```js
 /* @return {Array<string>} List of feature policies allowed by the page. */
@@ -238,7 +237,7 @@ document.policy.getAllowlistForFeature('geolocation');
 
 ## List of policies {: #list }
 
-So what features can be controlled through Feature Policy? Good question!
+So what features can be controlled through Feature Policy?
 
 Right now, there's a lack of documentation on what policies are implemented
 and how to use them. The list will also grow over time as different browsers
@@ -247,25 +246,27 @@ target and good reference docs will definitely be needed.
 
 For now, there are a couple of ways to see what features are controllable.
 
-1. Check out our [Feature Policy Kitchen Sink][sink] of demos. It has examples
+- Check out our [Feature Policy Kitchen Sink][sink] of demos. It has examples
 of each policy that's been implemented in Blink.
 -  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?g=0&l=138) for the list of feature names.
--  If you have the `--enable-experimental-web-platform-features` flag on in `chrome:flags`, query `document.policy.allowedFeatures()` find the list:
+-  If you have the `--enable-experimental-web-platform-features` flag turned on
+in `chrome:flags`, query `document.policy.allowedFeatures()` to find the list:
 
-        geolocation
-        midi
-        camera
-        usb
-        magnetometer
-        fullscreen
-        animations
-        payment
-        picture-in-picture
-        accelerometer
-        vr
+        ["geolocation",
+         "midi",
+         "camera",
+         "usb",
+         "magnetometer",
+         "fullscreen",
+         "animations",
+         "payment",
+         "picture-in-picture",
+         "accelerometer",
+         "vr",
         ...
 
-- Check [chromestatus.com][chromestatusfilter] for the policies that have been implemented or being considered in Blink.
+- Check [chromestatus.com][chromestatusfilter] for the policies that have been
+implemented or are being considered in Blink.
 
 To determine _how_ to use some of these policies, check out the
 [spec's Github repo](https://github.com/WICG/feature-policy/tree/master/policies).
@@ -293,7 +294,7 @@ Turning policies on during development can help you start off on the right
 track. It'll help you catch any unexpected regressions before they happen.
 
 Keeping policies on for production gives your users a guarantee that the UX
-won't change from under them.
+won't change under them.
 
 #### What are the inheritance rules for iframe content? {: #inheritancerules }
 
@@ -308,7 +309,7 @@ See [the `allow` attribute on iframes](#iframe).
 #### What browsers support Feature Policy? {: #support }
 
 As of now, Chrome is the only browser to support feature policy. However,
-since the entire API surface is opt-in or feature dectable, **Feature Policy
+since the entire API surface is opt-in or feature detectable, **Feature Policy
 lends itself nicely to progressive enhancement**.
 
 ## Conclusion
