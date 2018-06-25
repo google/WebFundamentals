@@ -55,7 +55,7 @@ turned on. Please excuse our construction debris.
 -  [Chacmool](https://web-education-ar-demo.appspot.com/)
 -  [Immersive Web](https://immersive-web.github.io/webxr-samples/proposals/phone-ar-hit-test.html)
    Sample
--  [Codelab](https://immersive-web.github.io/webxr-samples/phone-ar-hit-test.html)
+-  [Codelab](https://codelabs.developers.google.com/codelabs/webvr/index.html#0)
 
 ## It's just the web
 
