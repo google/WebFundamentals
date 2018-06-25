@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-06-19 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -245,7 +245,7 @@ section.
 
 ## Step 2: Experiment {: #experiment }
 
-The Opportunites section of your audit report gives you tips on how to improve the
+The Opportunities section of your audit report gives you tips on how to improve the
 page's performance. In this section, you implement the recommended changes to the codebase,
 auditing the site after each change to measure how it affects site speed.
 
