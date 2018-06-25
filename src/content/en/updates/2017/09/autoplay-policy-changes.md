@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-24 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -156,7 +156,7 @@ autoplay.
 
 It is possible to change this new autoplay behaviour with Chrome enterprise
 policies for use cases such as kiosks or unattended systems. Check out the
-[Configure policies and settings] help page to learn how to set these new
+[Set user-level Chrome policies] help page to learn how to set these new
 autoplay related enterprise policies:
 
 - The ["AutoplayAllowed"] policy controls whether autoplay is allowed or not.
@@ -263,7 +263,7 @@ Note: Web Audio FAQs can be found [here].
 
 {% include "comment-widget.html" %}
 
-[Configure policies and settings]: https://support.google.com/chrome/a/topic/4386995
+[Set user-level Chrome policies]: https://support.google.com/chrome/a/answer/2657289
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
