@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2018-06-15 #}
+{# wf_updated_on: 2018-06-20 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -14,7 +14,8 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 
 * Using the WebXR device API requires a
 [compatible device](/ar/discover/supported-devices)
-running Android O or later.
+running Android O or later, [ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign)
+, and of course, Chrome.
 * The WebXR device API is available on other browsers with a
 [polyfill](https://github.com/immersive-web/webxr-polyfill).
 * Documentation is available from the [Immersive Web Early Adopters
@@ -24,9 +25,9 @@ Today the API is available in:
 
 | Feature | Chrome version | Details |
 | ------- | -------------- | ------- |
-| AR hit test support | Chrome Canary for the immediate future. | Enable the &num;webxr and &num;webxr-hit-test flags under chrome://flags |
-| VR use cases | Chrome 66 and later | Enable the chrome://flags/#webxr flag. (The URL must be entered manually.) |
-| VR use cases | Chrome 67 origin trial | Enable the chrome://flags/#webxr flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)). |
+| AR hit test support | Chrome Canary for the immediate future. | Enable the `#webxr` and `#webxr-hit-test` flags under chrome://flags. Note that VR magic windows do not work when the `#webxr-hit-test` flag is turned on. Please excuse our construction debri. |
+| VR use cases | Chrome 66 and later | Enable the `chrome://flags/#webxr` flag. (The URL must be entered manually.). |
+| VR use cases | Chrome 67 origin trial | Enable the `chrome://flags/#webxr` flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)). |
 
 Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
 
