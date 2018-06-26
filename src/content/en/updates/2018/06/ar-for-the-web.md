@@ -49,7 +49,7 @@ With these, you can dive into the demos or try out our codelab.
 
 Note: Some of the Immersive Web Community Group's
 [existing demos](https://immersive-web.github.io/webxr-samples/),
-specfically the ones using magic windows, do not work with the WebXR Hit Test
+specifically the ones using magic windows, do not work with the WebXR Hit Test
 turned on. Please excuse our construction debris.
 
 -  [Chacmool](https://web-education-ar-demo.appspot.com/)
