@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-06-25 #}
-{# wf_published_on: 2018-06-25 #}
+{# wf_updated_on: 2018-06-26 #}
+{# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,feature,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
 {# wf_featured_snippet: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60. #}
@@ -29,7 +29,7 @@ modify the behavior of certain APIs and web features in the browser. __It's like
 [CSP](/web/fundamentals/security/csp/) but instead of controlling security, it
 controls features!__
 
-The feature policies themselves are little opt-in aggreements between developer
+The feature policies themselves are little opt-in agreements between developer
 and browser that can help foster our goals of building (and maintaining) high
 quality web apps.
 
@@ -49,10 +49,11 @@ certain features.
 
 Here are examples of things you can do with Feature Policy:
 
-- Change the default behavior of `autoplay` on mobile and third party videos.
+- Change the [default behavior](/web/updates/2017/09/autoplay-policy-changes#iframe)
+of `autoplay` on mobile and third party videos.
 - Restrict a site from using sensitive APIs like `camera` or `microphone`.
 - Allow iframes to use the `fullscreen` API.
-- Block the use of outdated APIs like synchronous XHR and `document.write`.
+- Block the use of outdated APIs like synchronous XHR and `document.write()`.
 - Ensure images are sized properly (e.g. prevent layout thrashing) and are not
 too big for the viewport (e.g. waste user's bandwidth).
 
@@ -69,11 +70,18 @@ Feature Policy provides two ways to control features:
 1. Through the `Feature-Policy` HTTP header.
 2. With the `allow` attribute on iframes.
 
+The biggest difference between the HTTP header and the `allow` attribute is
+that the `allow` attribute only controls features within an frame. The header
+can control features in the main response + any iframe'd content within
+the page. This is because [iframes inherit the polices of their parent
+page](#inheritancerules).
+{: .key-point }
+
 ### The `Feature-Policy` HTTP header {: #header }
 
 The easiest way to use Feature Policy is by sending the `Feature-Policy` HTTP
-header with the response of a page. It's value is the policy or set of
-policies that you want the browser to respect for a given origin:
+header with the response of a page. The value of this header is a policy or set
+of policies that you want the browser to respect for a given origin:
 
 ```
 Feature-Policy: <feature> <allow list origin(s)>
@@ -127,7 +135,7 @@ an `iframe`. Use the `allow` attribute to specify a policy list for
 embedded content:
 
 ```html
-<!-- Allow all browsing contexts within this iframe to use full screen. -->
+<!-- Allow all browsing contexts within this iframe to use fullscreen. -->
 <iframe src="https://example.com..." allow="fullscreen"></iframe>
 
 <!-- Equivalent to: -->
@@ -139,14 +147,14 @@ embedded content:
 ```
 
 Note: Frames inherit the policy settings of their parent page. If the page
-and iframe both specify a policy list, the more restrictive allow list will
-be used. See [Inheritance rules](#inheritancerules).
+and iframe both specify a policy list, the more restrictive allow list is
+used. See [Inheritance rules](#inheritancerules).
 
 #### What about the existing iframe attributes? {: #legacy }
 
 Some of the [features controlled by Feature Policy](#list) have an existing
  attribute to control their behavior. For example, `<iframe allowfullscreen>`
-is an attribute that allows the iframe's content to use the
+is an attribute that allows iframe content to use the
 `HTMLElement.requestFullscreen()` API. There's also the `allowpaymentrequest` and
 `allowusermedia` attributes for allowing the
 [Payment Request API](/web/fundamentals/payments/) and `getUserMedia()`,
@@ -157,11 +165,11 @@ attributes** where possible. For cases where you need to support backwards
 compatibility using the `allow` attribute with an equivalent legacy attribute
 is perfectly fine (e.g. `<iframe allowfullscreen allow="fullscreen">`).
 Just note that the more restrictive policy wins. For example, the following
-iframe would not be allowed to enter full screen because
+iframe would not be allowed to enter fullscreen because
 `allow="fullscreen 'none'"` is more restrictive than `allowfullscreen`:
 
 ```html
-<!-- Blocks full screen access if the browser supports feature policy. -->
+<!-- Blocks fullscreen access if the browser supports feature policy. -->
 <iframe allowfullscreen allow="fullscreen 'none'" src="...">
 ```
 
@@ -248,9 +256,10 @@ For now, there are a couple of ways to see what features are controllable.
 
 - Check out our [Feature Policy Kitchen Sink][sink] of demos. It has examples
 of each policy that's been implemented in Blink.
--  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?g=0&l=138) for the list of feature names.
+-  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?l=138&rcl=ab90b51c5b60de15054a32b0bd18e4839536a1c9) for the list of feature names.
 -  If you have the `--enable-experimental-web-platform-features` flag turned on
-in `chrome:flags`, query `document.policy.allowedFeatures()` to find the list:
+in `chrome:flags`, query `document.policy.allowedFeatures()` on `about:blank`
+to find the list:
 
         ["geolocation",
          "midi",
@@ -269,47 +278,66 @@ in `chrome:flags`, query `document.policy.allowedFeatures()` to find the list:
 implemented or are being considered in Blink.
 
 To determine _how_ to use some of these policies, check out the
-[spec's Github repo](https://github.com/WICG/feature-policy/tree/master/policies).
+[spec's GitHub repo](https://github.com/WICG/feature-policy/tree/master/policies).
 It contains a few explainers on some of the policies.
 
 ## FAQ
 
 #### When do I use Feature Policy? {: #whentouse }
 
-Since all policies are opt-in, use enable policies when/where they makes sense.
-For example, if your app is an image gallery, it would be logical to use
-the `maximum-downscaling-image` policy to make sure you're not pushing
-down images that are far too big on mobile.
+All policies are opt-in, so use Feature Policy when/where it makes sense. For
+example, if your app is an image gallery, the `maximum-downscaling-image`
+policy would help you avoid sending gigantic images to mobile viewports.
 
-Other policies like `document-write` and `sync-xhr` are generally good policies
-to always enable. Since these APIs are considered harmful to web performance,
-you can use Feature Policy as a gut check that your app never uses them!
+Other policies like `document-write` and `sync-xhr` should be used with more
+care. Turning them on could break third-party content like ads. On the
+other hand, **Feature Policy can be a gut check** to make sure your pages
+never uses these terrible APIs!
+
+**Pro tip**: Enable Feature Policy on your own content before enabling it on
+third-party content.
+{: .note }
 
 #### Do I use Feature Policy in development or production?  {: #devorprod }
 
-Both. We recommend turning policies on during development keeping the policies
-active while in production.
+Both. We recommend turning policies on during development and keeping the
+policies active while in production. Turning policies on during development can
+help you start off on the right track. It'll help you catch any unexpected
+regressions before they happen. Keep policies turned on in production
+to guarantee a certain UX for users.
 
-Turning policies on during development can help you start off on the right
-track. It'll help you catch any unexpected regressions before they happen.
+#### Is there a way to report policy violations to my server? {: #report }
 
-Keeping policies on for production gives your users a guarantee that the UX
-won't change under them.
+A [Reporting API](https://github.com/WICG/feature-policy/blob/master/reporting.md)
+is in the works! Similar to how sites can opt-in to receiving reports about
+[CSP violations](https://www.chromestatus.com/feature/5826576096690176) or
+[deprecations](https://www.chromestatus.com/feature/4691191559880704), you'll
+be able to receive reports about feature policy violations in the wild.
 
 #### What are the inheritance rules for iframe content? {: #inheritancerules }
 
-- All feature policies are opt-in. You control what features to
-enable/modify/disable in your app.
-- Scripts (either first or third-party) inherit the policy of their browsing
-context. That means that top-level scripts inherit the main document's policy.
-- `iframe` content inherits the more strict policy between the embedding page
-and the `allow` list on the frame itself.
-See [the `allow` attribute on iframes](#iframe).
+Scripts (either first or third-party) inherit the policy of their browsing
+context. That means that top-level scripts inherit the main document's policies.
+
+`iframe`s inherit the policies of their parent page. If the `iframe` has an
+`allow` attribute, the stricter policy between the parent page and the `allow`
+list, wins. For more information on `iframe` usage, see the
+[`allow` attribute on iframes](#iframe).
+
+Disabling a feature policy is a one-way toggle. Once a policy is disabled, it
+cannot be re-enabled by any frame or descendant.
+{: .caution }
+
+#### If I apply a policy, does it last across page navigations? {: #navigations }
+
+No. The lifetime of a policy is for a single page navigation response. If
+the user navigates to a new page, the `Feature-Policy` header must be explicitly
+sent in the new response for the policy to apply.
 
 #### What browsers support Feature Policy? {: #support }
 
 As of now, Chrome is the only browser to support feature policy. However,
-since the entire API surface is opt-in or feature detectable, **Feature Policy
+since the entire API surface is opt-in or feature-detectable, **Feature Policy
 lends itself nicely to progressive enhancement**.
 
 ## Conclusion
