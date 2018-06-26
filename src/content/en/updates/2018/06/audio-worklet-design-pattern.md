@@ -82,8 +82,8 @@ must optimize the code for faster processing, but also minimize the amount of JS
 garbage being generated. Using WebAssembly can be a solution that addresses both
 problems at the same time: it is faster and generates no garbage from the code.
 
-The next section describes how WebAssembly can be used with AudioWorklet and the
-accompanied code example can be found
+The next section describes how WebAssembly can be used with an AudioWorklet and
+the accompanied code example can be found
 [here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
 Emscripten glue code), please take a look at
