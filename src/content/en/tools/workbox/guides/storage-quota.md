@@ -8,14 +8,15 @@ description: A guide on configuring Workbox to avoid storage quota issues.
 
 # Understanding Storage Quota {: .page-title }
 
-All browsers impose an upper limit on the amount of storage that your web app's [origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) is allowed to
+All browsers impose an upper limit on the amount of storage that your web app's
+[origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) is allowed to
 use. You can configure Workbox to automatically clean up the data it caches at runtime in order to
 avoid running into storage quota limitations.
 
 ## What configuration options are supported?
 
 When setting up a route and runtime caching strategy, you can add in an instance of the
-[`workbox.expiration.Plugin`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
+[`workbox.expiration.Plugin`](/web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin)
 configured with settings that make the most sense for the type of assets you're caching.
 
 For instance, the following configuration might be use for caching images at runtime, with both
@@ -43,7 +44,8 @@ workbox.routing.registerRoute(
 );
 ```
 
-You need to set `maxEntries`, `maxAgeSeconds`, or both when using `workbox.expiration.Plugin`. `purgeOnQuotaError` is optional.
+You need to set `maxEntries`, `maxAgeSeconds`, or both when using `workbox.expiration.Plugin`.
+`purgeOnQuotaError` is optional.
 
 ### maxEntries
 
