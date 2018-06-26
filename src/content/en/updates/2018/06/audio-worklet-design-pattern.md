@@ -18,12 +18,12 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/hongchanchoi.html" %}
 
 The [previous article](/web/updates/2017/12/audio-worklet)
-on the AudioWorklet detailed the basic concepts and its usage. Since its launch
+on AudioWorklets detailed the basic concepts and usage. Since its launch
 in Chrome 66 there have been many requests for more examples of how it can be
 used in actual applications. The AudioWorklet unlocks the full potential of
 WebAudio, but taking advantage of it can be challenging because it requires
 understanding concurrent programming wrapped with several JS APIs. Even for
-developers who are familiar with the WebAudio, integrating the AudioWorklet
+developers who are familiar with WebAudio, integrating the AudioWorklet
 with other APIs (e.g. WebAssembly) can be difficult.
 
 This article will give the reader a better understanding of how to use the
@@ -35,16 +35,16 @@ as well!
 ## Recap: AudioWorklet
 
 Before diving in, let's quickly recap terms and facts around the AudioWorklet
-system which is previously introduced in
+system which was previously introduced in
 [this post](/web/updates/2017/12/audio-worklet).
 
   - [BaseAudioContext](https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext):
     Web Audio API's primary object.
   - [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet): A
     special script file loader for the AudioWorklet operation. Belongs to
-    BaseAudioContext. A BaseAudioContext can have one AW. The loaded script file
-    is evaluated in the AudioWorkletGlobalScope and is used to create the
-    AudioWorkletProcessor instances.
+    BaseAudioContext. A BaseAudioContext can have one AudioWorklet. The loaded
+    script file is evaluated in the AudioWorkletGlobalScope and is used to
+    create the AudioWorkletProcessor instances.
   - [AudioWorkletGlobalScope](https://webaudio.github.io/web-audio-api/#audioworkletglobalscope)
     : A special JS global scope for the AudioWorklet operation. Runs on a
     dedicated rendering thread for the WebAudio. A BaseAudioContext can have one
@@ -394,15 +394,15 @@ class.
 ## Conclusion
 
 The ultimate goal of the AudioWorklet is to make the Web Audio API truly
-"extensible". The multi-year effort went to its design to make it possible to
+"extensible". A multi-year effort went into its design to make it possible to
 implement the rest of Web Audio API with the AudioWorklet. In turn, now we have
-the higher complexity in its design and it can be a unexpected challenge.
+higher complexity in its design and this can be an unexpected challenge.
 
 Fortunately, the reason for such complexity is purely to empower developers.
 Being able to run WebAssembly on AudioWorkletGlobalScope unlocks huge potential
 for high-performance audio processing on the web. For large-scale audio
-applications written in C or C++, using the AudioWorklet with SharedArrayBuffer
-and Worker can be an attractive option to explore.
+applications written in C or C++, using an AudioWorklet with SharedArrayBuffers
+and Workers can be an attractive option to explore.
 
 ## Credits
 
