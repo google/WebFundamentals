@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2018-06-26 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -47,7 +47,7 @@ or the last five JavaScript heap objects selected in the Profiles panel.
 `$1` returns the second most recently selected one, and so on.
 
 In the following example,
-an element with the class `medium` is selected in the Elements panel.
+an `img` element is selected in the Elements panel.
 In the Console drawer, `$0` has been evaluated
 and displays the same element:
 
@@ -85,7 +85,9 @@ This function also supports a second parameter, startNode, that specifies an ele
 
 The following example returns a reference to the first element after the currently selected Node and displays its src properly:
 
+
 ![Example of $('img', div).src](images/selector-img-div-src.png)
+
 
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
 will be overwritten, and <code>$</code> will correspond to that library's implementation.
@@ -144,7 +146,8 @@ that contain `<a>` elements:
 
 Similar to the other selector functions, `$x(path)` has an optional second parameter, startNode,that specifies an element or Node from which to search for elements. 
 
-![Example of using an XPath selector with startNode]()
+
+![Example of using an XPath selector with startNode](images/xpath-p-node-example.png)
 
 ## clear()
 
