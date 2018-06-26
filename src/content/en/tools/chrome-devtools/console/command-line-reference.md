@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2017-04-07 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Command Line API Reference {: .page-title }
 
@@ -80,6 +81,12 @@ property:
 
 ![Example of $('img').src](images/selector-img-src.png)
 
+This function also supports a second parameter, startNode, that specifies an element or Node from which to search for elements. The default value of this parameter is `document`. 
+
+The following example returns a reference to the first element after the currently selected Node and displays its src properly:
+
+![Example of $('img', div).src](images/selector-img-div-src)
+
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
 will be overwritten, and <code>$</code> will correspond to that library's implementation.
 
@@ -102,6 +109,17 @@ displays the value of each element's `src` property:
 ![Example of using $$() to select all images in the document and display their
 sources.](images/all-selector.png)
 
+This function also supports a second parameter, startNode, that specifies an element or Node from which to search for elements. The default value of this parameter is `document`. 
+
+This modified version of the previous example uses `$$()` to create an array of all `<img>` elements that appear in the current document after the selected Node:
+
+    var images = $$('img', document.querySelector('.devsite-header-background'));
+       for (each in images) {
+           console.log(images[each].src);
+       }
+
+![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](images/all-selector-div)
+
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start
 a new line without executing the script.
 
@@ -123,6 +141,10 @@ that contain `<a>` elements:
 		$x("//p[a]")
 
 ![Example of using a more complicated XPath selector](images/xpath-p-a-example.png)
+
+Similar to the other selector functions, `$x(path)` has an optional second parameter, startNode,that specifies an element or Node from which to search for elements. 
+
+![Example of using an XPath selector with startNode]()
 
 ## clear()
 
