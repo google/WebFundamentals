@@ -118,7 +118,7 @@ This modified version of the previous example uses `$$()` to create an array of 
            console.log(images[each].src);
        }
 
-![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](images/all-selector-div)
+![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](images/all-selector-div.png)
 
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start
 a new line without executing the script.
