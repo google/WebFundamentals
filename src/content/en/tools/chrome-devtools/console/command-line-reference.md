@@ -85,7 +85,9 @@ This function also supports a second parameter, startNode, that specifies an ele
 
 The following example returns a reference to the first element after the currently selected Node and displays its src properly:
 
-![Example of $('img', div).src](WebFundamentals/src/content/en/tools/chrome-devtools/console/images/selector-img-div-src.png)
+
+![Example of $('img', div).src](images/selector-img-div-src.png)
+
 
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
 will be overwritten, and <code>$</code> will correspond to that library's implementation.
@@ -118,7 +120,7 @@ This modified version of the previous example uses `$$()` to create an array of 
            console.log(images[each].src);
        }
 
-![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](images/all-selector-div)
+![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](images/all-selector-div.png)
 
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start
 a new line without executing the script.

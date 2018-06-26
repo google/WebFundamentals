@@ -764,6 +764,15 @@ To move the diagram:
 * Click **Reset Transform** ![Reset
   Transform](imgs/reset-transform.png){:.cdt-inl} to reset the diagram to its
   original position.
+  
+See layer analysis in action:
+
+  <div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="6je49J67TQk"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 
 ### View paint profiler {: #paint-profiler }
 
