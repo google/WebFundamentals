@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2018-06-18 #}
-{# wf_updated_on: 2018-06-20 #}
+{# wf_updated_on: 2018-06-26 #}
 {# wf_featured_image: /web/updates/images/generic/webaudio.png #}
 {# wf_tags: chrome68,webaudio,worklet #}
 {# wf_featured_snippet:  #}
@@ -34,7 +34,7 @@ as well!
 
 ## Recap: AudioWorklet
 
-Before diving in, let us quickly recap terms and facts around the AudioWorklet
+Before diving in, let's quickly recap terms and facts around the AudioWorklet
 system which is previously introduced in
 [this post](/web/updates/2017/12/audio-worklet).
 
@@ -65,7 +65,7 @@ system which is previously introduced in
 
 [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) is a perfect
 companion for AudioWorkletProcessor. The combination of these two features
-brings a variety of advantages to the audio processing on the web, but the two
+brings a variety of advantages to audio processing on the web, but the two
 biggest benefits are: a) bringing existing C/C++ audio processing code into the
 WebAudio ecosystem and b) avoiding the overhead of JS JIT compilation and
 garbage collection in the audio processing code.
@@ -79,8 +79,8 @@ must optimize the code for faster processing, but also minimize the amount of JS
 garbage being generated. Using WebAssembly can be a solution that addresses both
 problems at the same time: it is faster and generates no garbage from the code.
 
-The next section describes how WebAssembly can be used with the AudioWorklet and
-the accompanied code example can be found
+The next section describes how WebAssembly can be used with AudioWorklet and the
+accompanied code example can be found
 [here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
 WASM glue code), please take a look at
@@ -88,7 +88,7 @@ WASM glue code), please take a look at
 
 #### Setting Up
 
-It all sounds great, but it needs a bit of structure to set them up properly.
+It all sounds great, but we need a bit of structure to set things up properly.
 The first design question to ask is how and where to instantiate a WASM module.
 After fetching the WASM glue code, there are two paths for the module
 instantiation:
@@ -111,8 +111,8 @@ processing kernel within an AWP instance.
   </figcaption>
 </figure>
 
-For the pattern A to work correctly, Emscripten needs a couple of options when
-creating a WASM glue code patched with a correct configuration:
+For pattern A to work correctly, Emscripten needs a couple of options to
+generate the correct WASM glue code for our configuration:
 
 ```bash
 -s BINARYEN_ASYNC_COMPILATION=0 -s SINGLE_FILE=1 --post-js mycode.js
@@ -125,7 +125,7 @@ compilation is that the promise resolution of `audioWorklet.addModule()` does
 not wait for the resolution of promises in the AWGS. The synchronous loading or
 compilation in the main thread is not generally recommended because it blocks
 the other tasks in the same thread, but here we can bypass the rule because the
-compilation happens on the AWGS, which runs on the non-main thread. (See
+compilation happens on the AWGS, which runs off of the main thread. (See
 [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
 for the more info.)
 
@@ -139,7 +139,7 @@ for the more info.)
   </figcaption>
 </figure>
 
-The pattern B can be useful if the asynchronous heavy-lifting is required. It
+The pattern B can be useful if asynchronous heavy-lifting is required. It
 utilizes the main thread for fetching the glue code from the server and
 compiling the module. Then it will transfer the WASM module via the constructor
 of AWN. This pattern makes even more sense when you have to load the module
@@ -147,7 +147,7 @@ dynamically after the AWGS starts rendering the audio stream. Depending on the
 size of the module, compiling it in the middle of the rendering can cause
 glitches in the stream.
 
-Currently, the pattern B is only supported behind the experimental flag because
+Currently, the pattern B is only supported behind an experimental flag because
 it requires WebAssembly structured cloning.
 (`chrome://flags/#enable-webassembly`)
 If a WASM module should be a part of your AWN design, passing it through AWN
@@ -170,10 +170,10 @@ class in the example code handles this operation nicely.
   </figcaption>
 </figure>
 
-There is an early proposal under discussion to integrate the WASM heap directly
-into the AudioWorklet system. Getting rid of this redundant data cloning between
-the JS memory and the WASM heap seems natural, but the specific details need to
-be worked out.
+There is an [early proposal](https://github.com/WebAudio/web-audio-api/issues/1384)
+under discussion to integrate the WASM heap directly into the AudioWorklet
+system. Getting rid of this redundant data cloning between the JS memory and the
+WASM heap seems natural, but the specific details need to be worked out.
 
 ### Handling Buffer Size Mismatch
 
