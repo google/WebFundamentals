@@ -34,37 +34,37 @@ Web Payments and the Payment Request UI is flexible and can display a variety of
   <tr>
    <td>It can show the list of items the user wants to buy, and a list of payment methods to choose from.
    </td>
-   <td><img src="images/1-image1.png" width="1127" height="1999">
+   <td><img src="images/1-image1.png">
    </td>
   </tr>
   <tr>
    <td>It can display available payment methods, called <em>payment apps</em>, from third parties. Google Pay, for example, is a payment app.
    </td>
-   <td><img src="images/1-image2.png" width="1127" height="1999">
+   <td><img src="images/1-image2.png">
    </td>
   </tr>
   <tr>
    <td>It can request a shipping address; if the user has previously-stored addresses as autofill information, the choices are shown and entered with a single tap.
    </td>
-   <td><img src="images/1-image3.png" width="1127" height="1999">
+   <td><img src="images/1-image3.png">
    </td>
   </tr>
   <tr>
    <td>It can display shipping options; for example, a user might choose between free shipping that takes a few days and faster shipping that incurs a fee.
    </td>
-   <td><img src="images/1-image4.png" width="1127" height="1999">
+   <td><img src="images/1-image4.png">
    </td>
   </tr>
   <tr>
    <td>It can request the payer's contact information, such as name, email address, and phone number -- all of which may also be available from autofill.
    </td>
-   <td><img src="images/1-image5.png" width="1127" height="1999">
+   <td><img src="images/1-image5.png">
    </td>
   </tr>
   <tr>
    <td>Finally, it can ask the user to authorize payment, depending on the payment method, and complete the purchase.
    </td>
-   <td><img src="images/1-image6.png" width="1127" height="1999">
+   <td><img src="images/1-image6.png">
    </td>
   </tr>
 </table>
