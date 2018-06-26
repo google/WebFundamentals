@@ -336,6 +336,9 @@ sent in the new response for the policy to apply.
 
 #### What browsers support Feature Policy? {: #support }
 
+[See caniuse.com](https://caniuse.com/#feat=feature-policy) for the latest
+details on browser support.
+
 As of now, Chrome is the only browser to support feature policy. However,
 since the entire API surface is opt-in or feature-detectable, **Feature Policy
 lends itself nicely to progressive enhancement**.
