@@ -85,7 +85,7 @@ This function also supports a second parameter, startNode, that specifies an ele
 
 The following example returns a reference to the first element after the currently selected Node and displays its src properly:
 
-![Example of $('img', div).src](images/selector-img-div-src)
+![Example of $('img', div).src](WebFundamentals/src/content/en/tools/chrome-devtools/console/images/selector-img-div-src.png)
 
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
 will be overwritten, and <code>$</code> will correspond to that library's implementation.
