@@ -54,7 +54,7 @@ system which is previously introduced in
     BaseAudioContext. A BaseAudioContext can have multiple AudioWorkletNodes
     similarly to the native AudioNodes.
   - [AudioWorkletProcessor](https://webaudio.github.io/web-audio-api/#audioworkletprocessor)
-    : A counterpart of the `AudioWorkletNode`. The actual guts of the
+    : A counterpart of the AudioWorkletNode. The actual guts of the
     AudioWorkletNode processing the audio stream by the user-supplied code. It
     is instantiated in the AudioWorkletGlobalScope when a AudioWorkletNode is
     constructed. An AudioWorkletNode can have one matching
@@ -124,14 +124,15 @@ generate the correct WebAssembly glue code for our configuration:
 ```
 
 These options ensure the synchronous compilation of a WebAssembly module in the
-AudioWorkletGlobalScope. It also appends the AudioWorkletProcessor's class definition in
-`mycode.js` so it can be loaded after the module is initialized. The primary
-reason to use the synchronous compilation is that the promise resolution of
-`audioWorklet.addModule()` does not wait for the resolution of promises in the
-AudioWorkletGlobalScope. The synchronous loading or compilation in the main
-thread is not generally recommended because it blocks the other tasks in the
-same thread, but here we can bypass the rule because the compilation happens on
-the AudioWorkletGlobalScope, which runs off of the main thread. (See
+AudioWorkletGlobalScope. It also appends the AudioWorkletProcessor's class
+definition in `mycode.js` so it can be loaded after the module is initialized.
+The primary reason to use the synchronous compilation is that the promise
+resolution of `audioWorklet.addModule()` does not wait for the resolution of
+promises in the AudioWorkletGlobalScope. The synchronous loading or compilation
+in the main thread is not generally recommended because it blocks the other
+tasks in the same thread, but here we can bypass the rule because the
+compilation happens on the AudioWorkletGlobalScope, which runs off of the main
+thread. (See
 [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance)
 for the more info.)
 
@@ -149,9 +150,9 @@ The pattern B can be useful if asynchronous heavy-lifting is required. It
 utilizes the main thread for fetching the glue code from the server and
 compiling the module. Then it will transfer the WASM module via the constructor
 of AudioWorkletNode. This pattern makes even more sense when you have to load
-the module dynamically after the AudioWorkletGlobalScope starts rendering the audio stream.
-Depending on the size of the module, compiling it in the middle of the rendering
-can cause glitches in the stream.
+the module dynamically after the AudioWorkletGlobalScope starts rendering the
+audio stream. Depending on the size of the module, compiling it in the middle of
+the rendering can cause glitches in the stream.
 
 Currently, the pattern B is only supported behind an experimental flag because
 it requires WebAssembly structured cloning.
@@ -206,7 +207,7 @@ here is arbitrarily picked.)
       class="diagram"
       src="/web/updates/images/2018/06/aw-design-pattern-4.png">
   <figcaption>
-    Using RingBuffer inside of AudioWorkletProcessor's process() method
+    Using RingBuffer inside of AudioWorkletProcessor's `process()` method
   </figcaption>
 </figure>
 
