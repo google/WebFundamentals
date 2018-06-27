@@ -1,4 +1,4 @@
-## Web Payments / How the Payment Ecosystem Works
+## Web Payments / The Payment Ecosystem
 
 _The goal of this document is to provide a common context of how the payment system works and a high-level picture of the ecosystem. The target audience is developers working on merchants, payment gateways, and related payment industries._
 
