@@ -12,7 +12,7 @@ _This is an entry page to the entire Web Payments doc set. It gives an overview 
 Payments is and gets viewers interested enough to research it further. We tried to make this 
 as high-level as possible to attract decision makers and non-developers._
 
-[ Video embed? ]
+( Video embed? )
 
 ## Introduction
 
