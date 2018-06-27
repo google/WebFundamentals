@@ -1,4 +1,4 @@
-## Web Payments / How it Works
+## Web Payments / How the API Works
 
 _The goal of this document is to provide a high-level overview of the Payment Request API, as it's not necessarily required to implement by a developer (they might use PG's SDK instead). The target audience is developers working on merchants, payment gateways, and related payment industries._
 
