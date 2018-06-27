@@ -25,9 +25,9 @@ information such as shipping preference. This customer request is accomplished v
 Much 
 [basic](https://docs.google.com/document/d/1Afo0lsqksPNPSdkiSTuSDMm68x5XfMM4UPf7mbYwrgU/edit), 
 [detailed](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API), 
-[deep dive](https://developers.google.com/web/fundamentals/payments/deep-dive-into-payment-request), 
+[deep dive](web/fundamentals/payments/deep-dive-into-payment-request), 
 and even 
-[UX](https://developers.google.com/web/fundamentals/payments/payment-request-ux-considerations) 
+[UX](web/fundamentals/payments/payment-request-ux-considerations) 
 information has been written about the PR API, which we won't repeat here. The goal of this 
 document is to show you, the merchant website owner, how to implement the PR API in general 
 terms, without getting bogged down in minutia.
