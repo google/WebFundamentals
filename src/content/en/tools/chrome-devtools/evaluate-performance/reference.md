@@ -4,6 +4,7 @@ description: A reference on all the ways to record and analyze performance in Ch
 
 {# wf_updated_on: 2018-06-27 #}
 {# wf_published_on: 2017-05-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
