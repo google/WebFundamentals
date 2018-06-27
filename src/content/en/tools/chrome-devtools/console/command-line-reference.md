@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-06-26 #}
+{# wf_updated_on: 2018-06-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -241,8 +241,8 @@ registered on the document object:
 If more than one listener is registered on the specified object,
 then the array contains a member for each listener.
 In the following example,
-there are two event listeners registered on the #scrollingList element
-for the "mousedown" event:
+there are two event listeners registered on the document element
+for the "click" event:
 
 ![Multiple listeners](images/scrolling-list.png)
 
