@@ -119,7 +119,7 @@ to learn more about them, such as their `data` property details, each method has
 specification available. Their landing pages are linked below.
 
 
-- [Google Pay](https://developers.google.com/pay/api/web/)
+- [Google Pay](pay/api/web/)
 - [Apple Pay](https://developer.apple.com/documentation/apple_pay_on_the_web)
 - [Samsung Pay](https://developer.samsung.com/internet/android/web-payments-guide)
 
