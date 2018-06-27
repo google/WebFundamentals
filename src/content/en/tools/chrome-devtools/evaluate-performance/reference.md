@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on all the ways to record and analyze performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-11-02 #}
+{# wf_updated_on: 2018-06-27 #}
 {# wf_published_on: 2017-05-08 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -767,7 +767,7 @@ To move the diagram:
   
 See layer analysis in action:
 
-  <div class="video-wrapper-full-width">
+<div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="6je49J67TQk"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
