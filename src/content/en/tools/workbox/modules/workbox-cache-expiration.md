@@ -89,7 +89,7 @@ const expirationManager = new workbox.expiration.CacheExpiration(
   cacheName,
   {
     maxAgeSeconds: 24 * 60 * 60,
-    maxEntries 20,
+    maxEntries: 20,
   }
 );
 ```
