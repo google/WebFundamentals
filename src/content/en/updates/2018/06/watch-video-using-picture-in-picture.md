@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for &lt;video> elements on your website.
 
-{# wf_updated_on: 2018-06-21 #}
+{# wf_updated_on: 2018-06-28 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/06/watch-video-using-picture-in-picture/hero.png #}
@@ -81,7 +81,7 @@ following reasons:
 - Video file is audio-only.
 - The new disablePictureInPicture attribute is present on the &lt;video>
   element.
-- User hasn't interacted with the page yet (e.g. a button click)
+- The call was not made in a user gesture event handler (e.g. a button click).
 
 The [Feature support] section below shows how to enable/disable a button based on
 these restrictions.
