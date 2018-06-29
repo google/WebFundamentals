@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Jake Archibald about communication.
 
-{# wf_updated_on: 2018-04-05 #}
+{# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2017-03-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
 {# wf_podcast_duration: 00:13:28 #}
@@ -10,7 +10,7 @@ description: This week we speak to Jake Archibald about communication.
 {# wf_podcast_subtitle: This week we speak to Jake Archibald about communication. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-series-cover-large.jpg #}
 
-# Creating a collaborative environment {: .page-title }
+# Jake Archibald on creating a collaborative environment {: .page-title }
 
 Welcome to Designer Vs Developer, a show that tries to solve the challenges
 faced in industry by having an open conversation between the two, providing 
