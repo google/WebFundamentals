@@ -3,6 +3,7 @@ book_path: /web/shows/_book.yaml
 description: This week we speak to Surma about design tools.
 
 {# wf_blink_components: N/A #}
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2017-05-30 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3 #}

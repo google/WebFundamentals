@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Jake Archibald about communication.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2017-03-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
