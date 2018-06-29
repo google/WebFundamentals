@@ -4,7 +4,7 @@ description: Sven Laqua talks about designing motion, HCI, eye tracking and the 
 {# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2018-06-28 #}
-{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3 #}
+{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E05-using-gestalt-principles.mp3 #}
 {# wf_podcast_duration: 00:18:40 #}
 {# wf_podcast_fileSize: 26993340 #}
 {# wf_podcast_subtitle: Sven Laqua talks about designing motion, HCI, eye tracking and the Gestalt principles. #}
@@ -37,7 +37,8 @@ In this episode:
 * [Universal Principles of Design](http://bit.ly/2IGUJrG){: .external}.
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E05-using-gestalt-principles.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
