@@ -50,16 +50,17 @@ certain features.
 Here are examples of things you can do with Feature Policy:
 
 - Change the [default behavior](/web/updates/2017/09/autoplay-policy-changes#iframe)
-of `autoplay` on mobile and third party videos.
+  of `autoplay` on mobile and third party videos.
 - Restrict a site from using sensitive APIs like `camera` or `microphone`.
 - Allow iframes to use the `fullscreen` API.
 - Block the use of outdated APIs like synchronous XHR and `document.write()`.
 - Ensure images are sized properly (e.g. prevent layout thrashing) and are not
-too big for the viewport (e.g. waste user's bandwidth).
+  too big for the viewport (e.g. waste user's bandwidth).
 
 **Policies are a contract between developer and browser**. They inform the
 browser about what the developer's intent is and thus, help keep us honest when
-our app tries to go off the rails and do something bad. If the site or embedded third-party content attempts to violate any of the developer's preselected
+our app tries to go off the rails and do something bad. If the site or embedded
+third-party content attempts to violate any of the developer's preselected
 rules, the browser overrides the behavior with better UX or blocks the API
 altogether.
 
@@ -90,12 +91,12 @@ Feature-Policy: <feature> <allow list origin(s)>
 The allow list can take several different values:
 
 - `*`: The feature is allowed in top-level browsing contexts and in nested
-browsing contexts (iframes).
+  browsing contexts (iframes).
 - `'self'`: The feature is allowed in top-level browsing contexts and
-same-origin nested browsing contexts. It is disallowed in cross-origin
-documents in nested browsing contexts.
+  same-origin nested browsing contexts. It is disallowed in cross-origin
+  documents in nested browsing contexts.
 - `'none'`: The feature is disallowed in top-level browsing contexts and
-disallowed in nested browsing contexts.
+  disallowed in nested browsing contexts.
 - `<url>`: a specific origin to enable the policy for (e.g. `https://example.com`).
 
 **Example**
@@ -109,7 +110,7 @@ Feature-Policy: geolocation 'none'
 ```
 
 If a piece of code or iframe tries to use the Geolocation API, the browser
- blocks it. **This is true even if the user has previously given
+blocks it. **This is true even if the user has previously given
 permission to share their location**.
 
 <figure>
@@ -153,7 +154,7 @@ used. See [Inheritance rules](#inheritancerules).
 #### What about the existing iframe attributes? {: #legacy }
 
 Some of the [features controlled by Feature Policy](#list) have an existing
- attribute to control their behavior. For example, `<iframe allowfullscreen>`
+attribute to control their behavior. For example, `<iframe allowfullscreen>`
 is an attribute that allows iframe content to use the
 `HTMLElement.requestFullscreen()` API. There's also the `allowpaymentrequest` and
 `allowusermedia` attributes for allowing the
@@ -194,7 +195,7 @@ This example would do the following:
 
 - Disallows the use of `unsized-media` for all browsing contexts.
 - Disallows the use of `geolocation` for all browsing contexts except for the
-page's own origin and `https://example.com`.
+  page's own origin and `https://example.com`.
 - Allows `camera` access for all browsing contexts.
 
 **Example** - setting multiple policies on an iframe
@@ -255,11 +256,12 @@ target and good reference docs will definitely be needed.
 For now, there are a couple of ways to see what features are controllable.
 
 - Check out our [Feature Policy Kitchen Sink][sink] of demos. It has examples
-of each policy that's been implemented in Blink.
--  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?l=138&rcl=ab90b51c5b60de15054a32b0bd18e4839536a1c9) for the list of feature names.
--  If you have the `--enable-experimental-web-platform-features` flag turned on
-in `chrome:flags`, query `document.policy.allowedFeatures()` on `about:blank`
-to find the list:
+  of each policy that's been implemented in Blink.
+-  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?l=138&rcl=ab90b51c5b60de15054a32b0bd18e4839536a1c9)
+  for the list of feature names.
+- If you have the `--enable-experimental-web-platform-features` flag turned on
+  in `chrome:flags`, query `document.policy.allowedFeatures()` on `about:blank`
+  to find the list:
 
         ["geolocation",
          "midi",
@@ -275,7 +277,7 @@ to find the list:
         ...
 
 - Check [chromestatus.com][chromestatusfilter] for the policies that have been
-implemented or are being considered in Blink.
+  implemented or are being considered in Blink.
 
 To determine _how_ to use some of these policies, check out the
 [spec's GitHub repo](https://github.com/WICG/feature-policy/tree/master/policies).
