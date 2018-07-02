@@ -118,9 +118,13 @@ displays the value of each element's `src` property:
 ![Example of using $$() to select all images in the document and display their
 sources.](images/all-selector.png)
 
-This function also supports a second parameter, startNode, that specifies an element or Node from which to search for elements. The default value of this parameter is `document`. 
+This function also supports a second parameter, startNode, that specifies an 
+element or Node from which to search for elements. The default value of this 
+parameter is `document`. 
 
-This modified version of the previous example uses `$$()` to create an array of all `<img>` elements that appear in the current document after the selected Node:
+This modified version of the previous example uses `$$()` to create an array of 
+all `<img>` elements that appear in the current document after the selected 
+Node:
 
     var images = $$('img', document.querySelector('.devsite-header-background'));
        for (each in images) {
@@ -151,7 +155,9 @@ that contain `<a>` elements:
 
 ![Example of using a more complicated XPath selector](images/xpath-p-a-example.png)
 
-Similar to the other selector functions, `$x(path)` has an optional second parameter, `startNode`, that specifies an element or Node from which to search for elements. 
+Similar to the other selector functions, `$x(path)` has an optional second 
+parameter, `startNode`, that specifies an element or Node from which to search 
+for elements. 
 
 
 ![Example of using an XPath selector with startNode](images/xpath-p-node-example.png)
