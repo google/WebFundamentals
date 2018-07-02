@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_blink_components: Blink>PushAPI #}
@@ -38,7 +38,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR **The Budget API allows to you to reserve budget, use budget, get a list
+**TL;DR** The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
@@ -72,20 +72,18 @@ self.addEventListener('push', event => {
 ```
 
 In Chrome 60, 'silent-push' is the only operation type that is
-available, but you can find a [full list of operation types in the spec
-](https://wicg.github.io/budget-api/#enumdef-operationtype). There is also no
-easy way to increase your budget for testing or debugging purposes once it's
-used, but as a temporary workaround you can create a new profile in Chrome.
-Sadly you can't use
-incognito for this either as the Budget API will return a budget of zero in
-Incognito (although there is a [bug that results in an
-error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079) during
-my testing).
+available, but you can find a 
+[full list of operation types in the spec](https://wicg.github.io/budget-api/#enumdef-operationtype).
+There is also no easy way to increase your budget for testing or debugging 
+purposes once it's used, but as a temporary workaround you can create a new 
+profile in Chrome. Sadly you can't use incognito for this either as the Budget
+API will return a budget of zero in Incognito (although there is a 
+[bug that results in an error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079)
+during my testing).
 
 You should only call `reserve()` when you intend to perform the operation you are
 reserving at some point in the future. Note that if you called reserve in the
-above example but still showed a
-notification, the budget will still be used.
+above example but still showed a notification, the budget will still be used.
 
 One common use case that isn't enabled by `reserve()` alone, is the ability to
 schedule a silent push from a backend. The Budget API does have API's to enable

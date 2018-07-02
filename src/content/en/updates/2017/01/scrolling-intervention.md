@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default.
 
-{# wf_updated_on: 2017-01-10 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-01-10 #}
 {# wf_tags: interventions,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -34,7 +34,7 @@ impact on sites.
 In rare cases this change can result in unintended scrolling. This is usually 
 easily addressed by applying a 
 [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 
-none** **style to the element where scrolling shouldn't occur. Read on for 
+**none** style to the element where scrolling shouldn't occur. Read on for 
 details, how to know if you are impacted, and what you can do about it.
 
 ## Background: Cancelable Events slow your page down

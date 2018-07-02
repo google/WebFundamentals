@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2017-10-17 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -192,7 +192,9 @@ Usage in JavaScript:
     }
 
 <p>For info, this screen currently supports approximately:</p>
+
 {% framebox height="100%" %}
+
 <style>
   ul {
     padding: 0;
@@ -215,6 +217,7 @@ Usage in JavaScript:
     the gamut specified by the ITU-R Recommendation BT.2020 Color Space or more.
   </li>
 </ul>
+
 <script>
   document.querySelector('#srgb').innerHTML = 
       (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
@@ -223,6 +226,7 @@ Usage in JavaScript:
   document.querySelector('#rec2020').innerHTML =
       (window.matchMedia("(color-gamut: rec2020)").matches) ? '&#x2714;' : '&#x274C;';
 </script>
+
 {% endframebox %}
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/36CcloDrB3E/1wMSNMl9BQAJ) &#124;
