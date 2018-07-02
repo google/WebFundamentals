@@ -3,15 +3,10 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API page for the Web Payments doc set.
 
 {# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_blink_components: Blink>Payments #}
 
-# Web Payments / How the API Works {: .page-title }
-
-_The goal of this document is to provide a high-level overview of the Payment Request API, 
-as it's not necessarily required to implement by a developer (they might use PG's SDK 
-instead). The target audience is developers working on merchants, payment gateways, and 
-related payment industries._
+# How Payment Request API Works {: .page-title }
 
 ( Video embed? )
 

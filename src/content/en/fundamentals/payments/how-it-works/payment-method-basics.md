@@ -3,14 +3,10 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Methods page for the Web Payments doc set.
 
 {# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_blink_components: Blink>Payments #}
 
-# Web Payments / Payment Methods {: .page-title }
-
-_The goal of this document is to provide a high-level overview of payment methods used 
-in Payment Request. The target audience is developers working on merchants, payment 
-gateways, and related payment industries._
+# Payment Method Basics {: .page-title }
 
 ## Payment Method Basics
 
@@ -29,7 +25,7 @@ Payment Request API, via `https://bobpay.xyz`.
 ```javascript
 var methodData = [{ 
  supportedMethods: 'basic-card', 
- data: { \
+ data: {
    supportedNetworks: ['visa', 'master', 'jcb'] 
  } 
 }, { 
@@ -37,11 +33,11 @@ var methodData = [{
 }];
 ```
 
-A merchant can provide these as acceptable payment methods, so when a customer uses the 
+A merchant can provide these as acceptable payment methods, so when a customer usesggjggj the 
 site they see only the cards and apps that are available to them and can select one to 
 use for payment, as shown here. 
 
-<img src="images/4-image1.png" width="473" height="371">
+<img src="../images/4-image1.png" width="473" height="371">
 
 ## Standardized vs. URL-based Payment Methods
 

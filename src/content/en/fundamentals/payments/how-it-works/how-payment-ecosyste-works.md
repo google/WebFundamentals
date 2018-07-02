@@ -3,14 +3,10 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_blink_components: Blink>Payments #}
 
-# Web Payments / The Payment Ecosystem {: .page-title }
-
-_The goal of this document is to provide a common context of how the payment system works 
-and a high-level picture of the ecosystem. The target audience is developers working on 
-merchants, payment gateways, and related payment industries._
+# How the payment ecosystem works {: .page-title }
 
 ( Video embed? )
 
@@ -32,7 +28,7 @@ payment information required to complete the transaction
 The typical sequence of events for those players as they create and process a web payment 
 might look like this.
 
-<img src="images/2-image1.png" width="261" height="271">
+<img src="../images/2-image1.png" width="261" height="271">
 
 1. A customer visits a merchant's website, finds one or more items they would like to buy, 
 and commits to a purchase.

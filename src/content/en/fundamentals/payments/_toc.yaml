@@ -1,12 +1,28 @@
 toc:
 - title: Web Payments
   section:
-  - title: Intro to the Payment Request API
+  - title: Overview
     path: /web/fundamentals/payments/
-  - title: Deep Dive into the Payment Request API
-    path: /web/fundamentals/payments/deep-dive-into-payment-request
-  - title: Payment Request UX considerations
-    path: /web/fundamentals/payments/payment-request-ux-considerations
-  - title: Set up Google Pay API
-    path: /pay/api/web/guides/paymentrequest/tutorial
-    status: external
+  - title: How it works
+    section:
+    - title: How payment ecosystem works
+      path: /web/fundamentals/payments/how-it-works/how-payment-ecosyste-works
+    - title: How payment request api works
+      path: /web/fundamentals/payments/how-it-works/how-payment-request-api-works
+    - title: Payment method basics
+      path: /web/fundamentals/payments/how-it-works/payment-method-basics
+  - title: Merchant Guide
+    section:
+    - title: Deep Dive into the Payment Request API
+      path: /web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request
+    - title: Payment Request UX considerations
+      path: /web/fundamentals/payments/merchant-guide/payment-request-ux-considerations
+    - title: Set up Google Pay API
+      path: /pay/api/web/guides/paymentrequest/tutorial
+      status: external
+  - title: Payment Apps Developer Guide
+    section:
+    - title: Anroid payment apps developer guide
+      path: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps
+    - title: Web based payment apps developer guide
+      path: /web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps
