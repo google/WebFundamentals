@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -17,6 +17,10 @@ starting the profiler, and monitoring DOM events.
 
 Note: This API is only available from within the console itself. You cannot access the Command
 Line API from scripts on the page.
+
+Note: If you are looking for functions that write to the console 
+(functions that start with `console.*`), please consult the ![Console API] 
+(/web/tools/chrome-devtools/debug/console/console-reference) instead. 
 
 
 ## $_
@@ -59,7 +63,7 @@ while `$1` returns the previously selected one:
 
 ![Example of $1](images/element-1.png)
 
-## $(selector) {: #queryselector }
+## $(selector, [startNode]) {: #queryselector }
 
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
@@ -81,9 +85,12 @@ property:
 
 ![Example of $('img').src](images/selector-img-src.png)
 
-This function also supports a second parameter, startNode, that specifies an element or Node from which to search for elements. The default value of this parameter is `document`. 
+This function also supports a second parameter, startNode, 
+that specifies an 'element' or Node from which to search for elements. 
+The default value of this parameter is `document`. 
 
-The following example returns a reference to the first element after the currently selected Node and displays its src properly:
+The following example returns a reference to the first element 
+after the currently selected Node and displays its src properly:
 
 
 ![Example of $('img', div).src](images/selector-img-div-src.png)
@@ -92,7 +99,7 @@ The following example returns a reference to the first element after the current
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality
 will be overwritten, and <code>$</code> will correspond to that library's implementation.
 
-## $$(selector) {: #queryselectorall }
+## $$(selector, [startNode]) {: #queryselectorall }
 
 `$$(selector)` returns an array of elements
 that match the given CSS selector.
@@ -125,7 +132,7 @@ This modified version of the previous example uses `$$()` to create an array of 
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start
 a new line without executing the script.
 
-## $x(path) {: #xpath }
+##  $x(path, [startNode]) {: #xpath }
 
 `$x(path)` returns an array of DOM elements
 that match the given XPath expression.
@@ -144,7 +151,7 @@ that contain `<a>` elements:
 
 ![Example of using a more complicated XPath selector](images/xpath-p-a-example.png)
 
-Similar to the other selector functions, `$x(path)` has an optional second parameter, startNode,that specifies an element or Node from which to search for elements. 
+Similar to the other selector functions, `$x(path)` has an optional second parameter, `startNode`, that specifies an element or Node from which to search for elements. 
 
 
 ![Example of using an XPath selector with startNode](images/xpath-p-node-example.png)
@@ -227,7 +234,7 @@ in the Sources panel for you to inspect.
 `getEventListeners(object)` returns the event listeners registered
 on the specified object.
 The return value is an object that contains an array
-for each registered event type ("click" or "keydown", for example).
+for each registered event type (`click` or `keydown`, for example).
 The members of each array are objects
 that describe the listener registered for each type.
 For example,
@@ -242,7 +249,7 @@ If more than one listener is registered on the specified object,
 then the array contains a member for each listener.
 In the following example,
 there are two event listeners registered on the document element
-for the "click" event:
+for the `click` event:
 
 ![Multiple listeners](images/scrolling-list.png)
 
