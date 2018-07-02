@@ -263,7 +263,7 @@ Note: Web Audio FAQs can be found [here].
 
 {% include "comment-widget.html" %}
 
-[Policy List]: http://dev.chromium.org/administrators/policy-list-3
+[Policy List]: https://dev.chromium.org/administrators/policy-list-3
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
