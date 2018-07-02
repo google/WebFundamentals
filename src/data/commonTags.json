@@ -97,6 +97,7 @@
   "events",
   "execcommand",
   "experiment",
+  "feature-policy",
   "fetch",
   "file",
   "filesystem",
