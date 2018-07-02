@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Using the native macOS echo canceller in Chrome
 
-{# wf_updated_on: 2018-06-21 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2018-03-23 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: chrome66,webrtc,getusermedia #}
@@ -14,8 +14,9 @@ description: Using the native macOS echo canceller in Chrome
 {% include "web/_shared/contributors/ossu.html" %}
 
 Caution: This information applies to Chrome M66 and M67. In M68 and later, the
- functionality has changed but the command line flag remains the same; see [this
- post](/web/updates/2018/06/more-native-echo-cancellation).
+functionality has changed but the command line flag remains the same; see the
+[More Native Echo Cancellation](/web/updates/2018/06/more-native-echo-cancellation)
+post.
 
 Since version 10.12 (Sierra), macOS includes a native echo canceller. Usage of
 it can be experimentally enabled in Chrome M66 by opting in to an [Origin
