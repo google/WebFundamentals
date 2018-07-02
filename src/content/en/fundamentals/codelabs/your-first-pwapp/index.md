@@ -646,7 +646,7 @@ Our app uses a cache-first strategy, which results in a copy of any cached conte
 
 #### How do I avoid these edge cases?
 
-So how do we avoid these edge cases? Use a library like  [sw-precache](https://github.com/GoogleChrome/sw-precache), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
+So how do we avoid these edge cases? Use a library like [Workbox](https://workboxjs.org), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
 
 ### Tips for testing live service workers
 
