@@ -18,8 +18,8 @@ starting the profiler, and monitoring DOM events.
 Note: This API is only available from within the console itself. You cannot access the Command
 Line API from scripts on the page.
 
-Note: If you are looking for functions that write to the console 
-(functions that start with `console.*`), please consult the ![Console API] 
+Note: If you are looking for functions that write to the Console 
+(functions that start with `console.*`), consult the ![Console API] 
 (/web/tools/chrome-devtools/debug/console/console-reference) instead. 
 
 
