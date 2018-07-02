@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-04 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -106,8 +106,10 @@ by using steppers.
   <figure>
     <img src="images/graceful-stepper.png"
     alt="This is an example of steppers">
-    <figcaption>This stepper shows the progress from Cart to Address
-    	& Payment to Confirm.</figcaption>
+    <figcaption>
+      This stepper shows the progress from Cart to Address
+      & Payment to Confirm.
+    </figcaption>
   </figure>
 </div>
 
@@ -134,30 +136,22 @@ on brand recognition.
   </figure>
 </div>
 
-1. The icon is taken from the favicon. Favicon is hi-res and
-	recognizable for the store. For best practice, provide multiple
-	icons at different sizes to allow the browser to pick the most
-	appropriate size. You can [learn more here](/web/fundamentals/payments/deep-dive-into-payment-request).
-
-
-2. This is taken from the <code>&#60;title&#62;</code> tag.
-	This is your strongest chance to provide a human-readable
-	indication of what the user is buying and who they're
-	buying from.
-
+1. The icon is taken from the favicon. Favicon is hi-res and recognizable for 
+   the store. For best practice, provide multiple icons at different sizes to 
+   allow the browser to pick the most appropriate size. You can 
+   [learn more here](/web/fundamentals/payments/deep-dive-into-payment-request).
+2. This is taken from the <code>&#60;title&#62;</code> tag. This is your
+   strongest chance to provide a human-readable indication of what the user 
+   is buying and who they're buying from.
 3. This is the domain/URL.
-
-4. This text label can be modified via the Payments
-	Request API.
-
+4. This text label can be modified via the Payments Request API.
 5. The price and currency is taken from the total.
-
-6. You can select a heading from a preset list: Shipping,
-	Pickup OR Delivery.
+6. You can select a heading from a preset list: Shipping, Pickup OR Delivery.
 
 
 
 <div class="clearfix"></div>
+
 ## General UX advice
 
 ### Eliminate user steps
@@ -181,13 +175,14 @@ thereby making your checkout a success.
     <img src="images/general-ux-buy-now.png"
     alt="This is an example of 'buy now' buttons">
     <figcaption>
-    	Add <em>‘Buy now’</em> buttons where possible to
-    	create quick checkout experience
-	</figcaption>
+      Add <em>‘Buy now’</em> buttons where possible to
+      create quick checkout experience
+    </figcaption>
   </figure>
 </div>
 
 ### UI affordance
+
 Users in the real world often wrap up their mobile
 devices with sleeves or bumpers. Think of ergonomics
 and considerations - bumpers can prevent users from
@@ -198,6 +193,7 @@ the illusion that the site and app is slower than
 it actually is.
 
 #### Touch targets
+
 Make sure the touch targets extend beyond the visual
 bounds of an element. For example, a `24 x 24` pixel
 icon should have a `48 x 48` pixel touch target. .
@@ -215,9 +211,9 @@ with motor disability skills.
     <img src="images/affordance-touch-targets.png"
     alt="This is an example of desired touch targets">
     <figcaption>
-    	By giving a minimum of 48px touch target you
-    	can help users tap or click smaller UI elements.
-	</figcaption>
+      By giving a minimum of 48px touch target you
+      can help users tap or click smaller UI elements.
+    </figcaption>
   </figure>
 </div>
 
@@ -235,12 +231,11 @@ screen for long enough for the user to read,
 roughly 3 seconds for five word sentence.
 
 <video class="attempt-left" controls autoplay loop muted
-poster="images/basic-intro-poster.png">
-  <source src="videos/components_snackbar.webm"
-  type="video/webm; codecs=vp8">
-  <source src="videos/components_snackbar.mp4"
-  type="video/mp4; codecs=h264">
+    poster="images/basic-intro-poster.png">
+  <source src="videos/components_snackbar.webm" type="video/webm; codecs=vp8">
+  <source src="videos/components_snackbar.mp4" type="video/mp4; codecs=h264">
 </video>
+
 <div class="clearfix"></div>
 
 ### Performance
@@ -301,10 +296,10 @@ item to their cart, and is directed to checkout.
     alt="This is an illustrative example
     of the above, different paths a user
     takes when checking out">
-  <figcaption>
-	This is an illustrative example of the above,
-	different paths a user takes when checking out
-  </figcaption>
+    <figcaption>
+      This is an illustrative example of the above,
+      different paths a user takes when checking out
+    </figcaption>
   </figure>
 </div>
 
@@ -331,9 +326,9 @@ API which is followed by a confirmation page.
     <img src="images/general-ux-buy-now.png"
     alt="This is an example of 'buy now' buttons">
     <figcaption>
-    	Add <em>"Buy now"</em> buttons where possible to
-    	create quick checkout experience
-	</figcaption>
+      Add <em>"Buy now"</em> buttons where possible to
+      create quick checkout experience
+  </figcaption>
   </figure>
 </div>
 
@@ -366,9 +361,9 @@ will be delivered.
     <img src="images/delivery-options-with-dates.png"
     alt="This is an example of delivery options with dates">
     <figcaption>
-    	Give dates to help a user plan and customize
-    	their experience.
-	</figcaption>
+      Give dates to help a user plan and customize
+      their experience.
+  </figcaption>
   </figure>
 </div>
 
@@ -415,13 +410,13 @@ Below is an example of this.
     <img src="images/wooCommerce.png"
     alt="This is an example of WooCommerce">
     <figcaption>
-    	In this example <a href="https://woocommerce.paymentrequest.show/">
-    	WooCommerce</a> the user adds any coupon code before they
-    	complete the transaction. (The <a
-    	href="https://woocommerce.paymentrequest.show/">
-    	demo website</a> works only with a fake credit
-    	card number "4242 4242 4242 4242.")
-	</figcaption>
+      In this example <a href="https://woocommerce.paymentrequest.show/">
+      WooCommerce</a> the user adds any coupon code before they
+      complete the transaction. (The <a
+      href="https://woocommerce.paymentrequest.show/">
+      demo website</a> works only with a fake credit
+      card number "4242 4242 4242 4242.")
+  </figcaption>
   </figure>
 </div>
 
@@ -458,7 +453,7 @@ You can learn more about this [technique here](/web/fundamentals/payments/deep-d
 <div>
   <figure>
     <img src="images/show-to-promise.png"
-    alt="This is an example of the different flow you can take after firing a 'show()'' function">
+    alt="This is an example of the different flow you can take after firing a 'show()' function">
   </figure>
 </div>
 
@@ -480,22 +475,22 @@ if the payment has been successful.
 
 Code example:
 
-	request.show()
-	.then(function(paymentResponse) {
-	    // Process payment here.
-	    // Close the UI:
-	    paymentResponse.complete('success').then(function() {
-	        // Request additional shipping address details.
-	        const additionalDetailsContainer = document.getElementById('additional-details-container');
-	        additionalDetailsContainer.style.display = 'block';
-	        additionalDetailsContainer.focus();
-	    }).catch(function(error) {
-	        // Handle error.
-	    });
-	})
-	.catch(function(error) {
-	    // Handle error.
-	});
+    request.show()
+    .then(function(paymentResponse) {
+        // Process payment here.
+        // Close the UI:
+        paymentResponse.complete('success').then(function() {
+            // Request additional shipping address details.
+            const additionalDetailsContainer = document.getElementById('additional-details-container');
+            additionalDetailsContainer.style.display = 'block';
+            additionalDetailsContainer.focus();
+        }).catch(function(error) {
+            // Handle error.
+        });
+    })
+    .catch(function(error) {
+        // Handle error.
+    });
 
 You can find code for more unique use cases
 [here](https://github.com/w3c/payment-request-info/wiki/CodeExamples#show-additional-user-interface-after-successful-payment).

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Typed Object Model (Typed OM) brings types, methods, and a flexible object model to working with CSS values. Shipped in Chrome 66.
 
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_tags: css,style,cssom,houdini,chrome66 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -108,15 +108,15 @@ far more verbose than the old object model. I would agree!
 Before you write off Typed OM, consider some of the key features it brings
 to the table:
 
-1. **Fewer bugs**. e.g. numerical values are always returned as numbers, not strings.
+- **Fewer bugs**. e.g. numerical values are always returned as numbers, not strings.
 
         el.style.opacity += 0.1;
         el.style.opacity === '0.30.1' // dragons!
 
 - **Arithmetic operations & unit conversion**. convert between absolute length
-units (e.g. `px` -> `cm`) and [do basic math](#arithmetic).
+  units (e.g. `px` -> `cm`) and [do basic math](#arithmetic).
 - **Value clamping & rounding**. Typed OM [rounds and/or clamps](#clamping)
-values so they're within the acceptable ranges for a property.
+  values so they're within the acceptable ranges for a property.
 - **Better performance**. The browser has to do less work serializing
   and deserializing string values. Now, the engine uses a similar understanding
   of CSS values across JS and C++. Tab Akins has shown some [early perf benchmarks](https://github.com/w3c/css-houdini-drafts/issues/634#issuecomment-366358609)

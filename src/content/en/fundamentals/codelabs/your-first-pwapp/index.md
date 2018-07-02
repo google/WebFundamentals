@@ -96,7 +96,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
@@ -473,7 +473,7 @@ First, we need to open the cache with `caches.open()` and provide a cache name. 
 
 Once the cache is open, we can then call `cache.addAll()`, which takes a list of URLs, then fetches them from the server and adds the response to the cache. Unfortunately, `cache.addAll()` is atomic, if any of the files fail, the entire cache step fails!
 
-Alright, let's start getting familiar with how you can use DevTools to understand and debug service workers. Before reloading your page, open up DevTools, go the __Service Worker __pane on the __Application __panel. It should look like this.
+Alright, let's start getting familiar with how you can use DevTools to understand and debug service workers. Before reloading your page, open up DevTools, go the __Service Worker__ pane on the __Application__ panel. It should look like this.
 
 ![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
 
@@ -499,9 +499,9 @@ Open up the DevTools Console and reload the page, switch to the Service Worker p
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
-Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you  *could * close and re-open the page or press the __skipWaiting __button, but a longer-term solution is to just enable the __Update on Reload __checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
+Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you __could__ close and re-open the page or press the __skipWaiting__ button, but a longer-term solution is to just enable the __Update on Reload__ checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
 
-Enable the __update on reload __checkbox now and reload the page to confirm that the new service worker gets activated.
+Enable the __Update on Reload__ checkbox now and reload the page to confirm that the new service worker gets activated.
 
 Note: You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
 
@@ -819,7 +819,7 @@ Web app install banners give you the ability to let your users quickly and seaml
 
 Chrome then uses a set of criteria including the use of a service worker, SSL status and visit frequency heuristics to determine when to show the banner. In addition a user can manually add it via the "Add to Home Screen" menu button in Chrome.
 
-#### Declare an app manifest with a `manifest.json`__ file__
+#### Declare an app manifest with a `manifest.json` file
 
 The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
 
@@ -913,9 +913,9 @@ In your `index.html`, add the following to the bottom of the `<head>` element:
 
 In this section we'll show you a couple of ways to test your web app manifest.
 
-The first way is DevTools. Open up the __Manifest __pane on the __Application __panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
+The first way is DevTools. Open up the __Manifest__ pane on the __Application__ panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
 
-You can also test the add to homescreen feature from this pane. Click on the __Add to homescreen __button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
+You can also test the add to homescreen feature from this pane. Click on the __Add to homescreen__ button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
 
 ![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
 

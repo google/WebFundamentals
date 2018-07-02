@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Third-party scripts provide a wide range of useful functionality, making the web more dynamic. Learn how to optimize the loading of third-party scripts to reduce their impact on performance.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2018-02-28 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -23,7 +23,7 @@ Third-party scripts provide a wide range of useful functionality, making the web
 more dynamic, interactive, and interconnected. These scripts may be crucial to
 your website's functionality or revenue stream. But third-party scripts also
 come with **many risks** that should be taken into consideration to **minimize
-their impact** while still providing value.** **
+their impact** while still providing value.
 
 Why do you need to be
 [careful](https://css-tricks.com/potential-dangers-of-third-party-javascript/)
@@ -275,7 +275,7 @@ third-party embeds) to measure their impact.
 Under "Advanced Settings" is a Block tab. This can be used to specify a list of
 domains to block, simulating what it would be like if they didn't load at all. 
 
-<img src="images/image_9.png" alt="WebPageTest advanced settings > Block.
+<img src="images/image_9.png" alt="WebPageTest advanced settings &lt; Block.
 Displays a text area for specifying domains to block."/>
 
 A workflow for using this feature is to:
