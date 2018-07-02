@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-06-06 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -646,7 +646,7 @@ Our app uses a cache-first strategy, which results in a copy of any cached conte
 
 #### How do I avoid these edge cases?
 
-So how do we avoid these edge cases? Use a library like  [sw-precache](https://github.com/GoogleChrome/sw-precache), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
+So how do we avoid these edge cases? Use a library like  [Workbox](https://workboxjs.org/), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
 
 ### Tips for testing live service workers
 
