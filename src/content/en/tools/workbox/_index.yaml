@@ -137,8 +137,15 @@ landing_page:
 
       <pre class="prettyprint lang-javascript">
       workbox.routing.registerRoute(
-        new RegExp('^https://fonts.(?:googleapis|gstatic).com/(.*)'),
-        workbox.strategies.cacheFirst(),
+        new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+        workbox.strategies.cacheFirst({
+          cacheName: 'google-fonts',
+          plugins: [
+            new workbox.cacheableResponse.Plugin({
+              statuses: [0, 200],
+            }),
+          ],
+        }),
       );
       </pre>
 
