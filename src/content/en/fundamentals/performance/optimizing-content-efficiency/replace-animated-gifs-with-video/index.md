@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Everyone loves animated GIFs. The only problem is that they can be massive, often weighing in at several megabytes. In this guide, you'll learn how to curb the bloat caused by animated GIFs by replacing them with MPEG-4 and WebM video sources!
 
-{# wf_updated_on: 2018-06-11 #}
+{# wf_updated_on: 2018-07-04 #}
 {# wf_published_on: 2018-04-19 #}
 {# wf_tags: html5,video,gif,images #}
 {# wf_blink_components: Blink>Image,Blink>HTML #}
@@ -342,6 +342,22 @@ as [Cloudinary](https://cloudinary.com/), which does the work for you. Check out
 [this resource from Cloudinary's
 blog](https://cloudinary.com/blog/reduce_size_of_animated_gifs_automatically_convert_to_webm_and_mp4),
 which explains how their service can transcode GIF to video for you.
+
+### Data saver mode
+
+On Chrome for Android, autoplaying video can be disallowed when [Data
+Saver](https://support.google.com/chrome/answer/2392284) is enabled, even if you
+follow this guide's instructions to the letter. If you're a web developer, and
+you're struggling to figure out why videos aren't autoplaying on your Android
+device, disable Data Saver to see if that fixes the issue for you.
+
+To cover edge cases such as these, you should consider setting the `poster`
+attribute so the `<video>` element's space is populated with some meaningful
+content in the event Data Saver is on (or really any possible scenario where
+autoplay could be disallowed). Another possible approach could be to set the
+`controls` attribute conditionally based on the presence of the [`Save-Data`
+header](/web/fundamentals/performance/optimizing-content-efficiency/save-data/),
+which is a header Data Saver sends when it's active.
 
 ## Conclusion
 
