@@ -3,38 +3,69 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-06 #}
 {# wf_published_on: 2018-06-29 #}
 
-# Accessibility Reference {: .page-title }
+# Reference of Accessibility Features in Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-## Goal of this document
-
 This page is a comprehensive reference of accessibility features in Chrome DevTools.
+It is intended for web developers who:
 
-If you don't know anything about accessibility, the best place to start is the Audits
-panel. The Audits panel performs automated tests on *any* web page, and gives you a report
-on that page's accessibility problems.
+* Have a basic understanding of DevTools, such as how to open it.
+* Are familiar with [accessibility principles and best practices][a11y].
 
-## Prerequisities and intended audience
+[a11y]: /web/fundamentals/accessibility/
 
-This reference assumes that you know how to open DevTools.
+The purpose of this reference is to help you discover all of the tools available in
+DevTools that can help you examine a page's accessibility.
 
-This reference is intended for people who have a basic understanding of accessibility
-principles and who want to learn 
+## Overview of accessibility features in Chrome DevTools {: #overview }
 
-See [Accessibility](/web/fundamentals/accessibility/) to learn about accessibility
-principles and best practices.
+This section explains how DevTools fits into your overall accessibility toolkit.
 
-## Perform automated accessibility tests on any webpage {: #audits }
+When determining whether a page is accessible, you need to have 2 general questions in mind:
 
-The Audits panel can generate an accessibility report for any page on the web. This is the
-best starting point for learning how to improve the accessibility of your pages.
+1. Can I navigate the page with a keyboard or [screen reader][reader]?
+1. Are the page's elements properly marked up for screen readers?
+
+[reader]: /web/fundamentals/accessibility/semantics-builtin/#screen_readers
+
+In general, DevTools can help you fix errors related to question #2, because these errors are
+easy to detect in an automated fashion. Question #1 is just as important, but unfortunately DevTools
+can't help you there. The only way to find errors related to question #1 is to try using a page
+with a keyboard or screen reader yourself. See [How To Do An Accessibility Review][review]
+to learn more.
+
+[review]: /web/fundamentals/accessibility/how-to-review
+
+## Audit a page's accessibility {: #audits }
+
+Use the Audits panel to determine if:
+
+* A page is properly marked up for screen readers.
+* The text elements on the page have sufficient contrast ratios.
+
+To audit a page:
 
 1. Go to the URL that you want to audit.
 1. In DevTools, click the **Audits** tab. DevTools shows you various configuration options.
+
+     <figure>
+       <img src="imgs/config.png"
+            alt="Configuring audits."/>
+       <figcaption>
+         <b>Figure X</b>. Configuring audits
+       </figcaption>
+     </figure>
+
+     <aside class="note">
+       <b>Note</b>: The screenshots in this section were taken with version 69 of Chrome. You can check what
+       version you're running at <code>chrome://version</code>. The Audits panel UI looks different in earlier
+       versions of Chrome, but the general workflow is the same.
+     </aside>
+
 1. For **Device**, select **Mobile** if you want to simulate a mobile device. This option changes
    your user agent string and resizes the viewport. If the mobile version of the page displays differently
    than the desktop version, this option could have a significant effect on your accessibility audit.
@@ -46,13 +77,90 @@ best starting point for learning how to improve the accessibility of your pages.
 1. The **Clear Storage** checkbox lets you clear all storage before loading the page, or preserve
    storage between page loads. This option is also probably irrelevant to your accessibility score, so you
    can use whatever you prefer.
-1. Click **Run Audits**.
-1. Your report gives you various tips on how to improve the page's accessibility.
-1. Click an audit to read its description.
+1. Click **Run Audits**. After 10 to 30 seconds, DevTools provides a report.
+   Your report gives you various tips on how to improve the page's accessibility.
+
+     <figure>
+       <img src="imgs/report.png"
+            alt="A report."/>
+       <figcaption>
+         <b>Figure X</b>. A report
+       </figcaption>
+     </figure>
+
+1. Click an audit to learn more about it.
+
+     <figure>
+       <img src="imgs/attributes.png"
+            alt="More information about an audit."/>
+       <figcaption>
+         <b>Figure X</b>. More information about an audit
+       </figcaption>
+     </figure>
+
 1. Click **Learn More** to view that audit's documentation.
 
-## Accessibility Pane
+     <figure>
+       <img src="imgs/documentation.png"
+            alt="Viewing an audit's documentation."/>
+       <figcaption>
+         <b>Figure X</b>. Viewing an audit's documentation
+       </figcaption>
+     </figure>
 
-## Contrast Ratio in the Color Picker {: #contrast }
+### See also: aXe extension {: #axe }
 
+You may prefer to use the [aXe extension][aXe]{:.external} rather than the Audits panel.
+They generally provide the same information, since aXe is the underlying engine that powers the
+Audits panel. The aXe extension has a different UI and describes audits slightly differently.
+One advantage that the aXe extension has over the Audits panel is that it lets you inspect and
+highlight failing nodes.
 
+[aXe]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US
+
+<figure>
+  <img src="imgs/aXe.png"
+       alt="The aXe extension."/>
+  <figcaption>
+    <b>Figure X</b>. The aXe extension
+  </figcaption>
+</figure>
+
+## The Accessibility pane {: #pane }
+
+The Accessibility pane is where you can view the accessibility tree, ARIA attributes, and
+computed accessibility properties. It shows you the accessibility of one particular DOM
+node at a time.
+
+To inspect the accessibility of an element:
+
+1. Click the **Elements** tab.
+1. Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs** button.
+
+### View an element's position in the accessibility tree {: #tree }
+
+[The accessibility tree][tree] is a subset of the DOM tree. It only contains elements from
+the DOM tree that are relevant and useful for displaying the page's content in a screen reader.
+
+[tree]: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+
+TODO image
+
+Use [the Accessbility pane](#pane) to inspect an element's position in the accessibility tree.
+
+### View an element's ARIA attributes {: #aria }
+
+TODO image
+
+Use [the Accessbility pane](#pane) to inspect an element's ARIA attributes.
+
+### View an element's computed accessibility properties {: #computed }
+
+TODO image
+
+Use [the Accessbility pane](#pane) to inspect an element's computed accessibility properties.
+
+## View the contrast ratio of a text element in the Color Picker {: #contrast }
+
+Use the contrast ratio information in the Color Picker to ensure that your text meets WCAG 2
+AA contrast ratio thresholds.
