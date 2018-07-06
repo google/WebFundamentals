@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-04 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -72,9 +72,9 @@ Feature Policy provides two ways to control features:
 2. With the `allow` attribute on iframes.
 
 The biggest difference between the HTTP header and the `allow` attribute is
-that the `allow` attribute only controls features within an frame. The header
+that the `allow` attribute only controls features within an iframe. The header
 can control features in the main response + any iframe'd content within
-the page. This is because [iframes inherit the polices of their parent
+the page. This is because [iframes inherit the policies of their parent
 page](#inheritancerules).
 {: .key-point }
 
@@ -88,7 +88,7 @@ of policies that you want the browser to respect for a given origin:
 Feature-Policy: <feature> <allow list origin(s)>
 ```
 
-The allow list can take several different values:
+The origin allow list can take several different values:
 
 - `*`: The feature is allowed in top-level browsing contexts and in nested
   browsing contexts (iframes).
@@ -96,8 +96,8 @@ The allow list can take several different values:
   same-origin nested browsing contexts. It is disallowed in cross-origin
   documents in nested browsing contexts.
 - `'none'`: The feature is disallowed in top-level browsing contexts and
-  disallowed in nested browsing contexts.
-- `<url>`: a specific origin to enable the policy for (e.g. `https://example.com`).
+disallowed in nested browsing contexts.
+- `<origin(s)>`: specific origins to enable the policy for (e.g. `https://example.com`).
 
 **Example**
 
