@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-06 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -20,7 +20,7 @@ Line API from scripts on the page.
 
 Note: If you are looking for functions that write to the Console 
 (functions that start with `console.*`), consult the ![Console API] 
-(/web/tools/chrome-devtools/debug/console/console-reference) instead. 
+(https://developers.google.com/web/tools/chrome-devtools/console/console-reference) instead. 
 
 
 ## $_
