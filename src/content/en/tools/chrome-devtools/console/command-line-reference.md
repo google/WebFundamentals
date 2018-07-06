@@ -19,8 +19,7 @@ Note: This API is only available from within the console itself. You cannot acce
 Line API from scripts on the page.
 
 Note: If you are looking for functions that write to the Console 
-(functions that start with `console.*`), consult the ![Console API] 
-(https://developers.google.com/web/tools/chrome-devtools/console/console-reference) instead. 
+(functions that start with `console.*`), consult the Console API Reference instead. 
 
 
 ## $_
