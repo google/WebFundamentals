@@ -2,13 +2,11 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The immersive web: augmented and virtual reality.
 
-{# wf_updated_on: 2018-06-22 #}
+{# wf_updated_on: 2018-07-09 #}
 {# wf_published_on: 2018-06-29 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # The immersive web {: .page-title }
-
-{% include "web/_shared/webxr-status.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="1t1gBVykneA"
@@ -18,17 +16,19 @@ description: The immersive web: augmented and virtual reality.
 
 The immersive web is using JavaScript APIs with a VR headset or a VR-capable device such as a [Daydream headset](/ar/discover/supported-devices) to create a range of 3D experiences in your browser.
 
-The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of AR in between.
+The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of augmented reality in between.
 
 ![The immersive web spectrum](/web/fundamentals/immersive/images/immersive-spectrum.png)
 
 <div class="clearfix"></div>
 
-## Support and Availability
+## Support and availability
 
-Visit the [status page](/web/fundamentals/status.md) for details on support and availability.
+Visit the [status and requirements page](/web/fundamentals/status-requirements) for details on support and availability.
 
-## Creating WebVR Content
+## One API for the spectrum
+
+## Creating immersive content
 
 To make WebVR content, you'll need to use new APIs, with existing technologies like [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial)
 and [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API),
@@ -41,7 +41,7 @@ as well as accounting for different input types and headsets.
   </a>
   <p>
     Make a flying start with WebVR by taking a WebGL scene and adding VR APIs.<br>
-    <a href="./getting-started-with-webvr/">Learn More</a>
+    <a href="./getting-started">Learn More</a>
   </p>
 </div>
 <div class="attempt-right">
@@ -51,7 +51,7 @@ as well as accounting for different input types and headsets.
   </a>
   <p>
     Interaction is a crucial part of providing an engaging and immersive experience.<br>
-    <a href="./adding-input-to-a-webvr-scene">Get Started</a>
+    <a href="./adding-input">Get Started</a>
   </p>
 </div>
 
@@ -69,7 +69,7 @@ There are some excellent WebVR resources beginning to appear around the web.
 
 TBD
 
-## Embrace Progressive Enhancement
+## Embrace progressive enhancement
 
 <img src="images/touch-input.png" class="attempt-right"
   alt="Use Progressive Enhancement to maximize reach" />

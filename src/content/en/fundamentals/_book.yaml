@@ -11,6 +11,7 @@ upper_tabs:
         - include: /web/fundamentals/architecture/_toc.yaml
         - include: /web/fundamentals/design-and-ux/_toc.yaml
         - include: /web/fundamentals/integration/_toc.yaml
+        - include: /web/fundamentals/immersive/_toc.yaml
         - title: Media & VR
           style: accordion
           section:

@@ -2,27 +2,30 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2018-06-22 #}
+{# wf_updated_on: 2018-07-09 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
-# WebVR Status {: .page-title }
+# Immersive web requirements and status {: .page-title }
 
-## WebVR Implementation Status
+## Requirements
 
-### WebXR Device API {:#xrdevice}
+Using the WebXR Device API requires:
 
-* Using the WebXR device API requires a
-[compatible device](/ar/discover/supported-devices)
-running Android O or later, [ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign)
-, and of course, Chrome.
-* The WebXR device API is available on other browsers with a
-[polyfill](https://github.com/immersive-web/webxr-polyfill). Bear in mind, that VR is *extremely performance-sensitive* and
+* A [compatible device](/ar/discover/supported-devices).
+* Android O or later.
+* [ARCore](https://play.google.com/store/apps/details?id=com.google.ar.core&e=-EnableAppDetailsPageRedesign).
+* A supporting version of Chrome (see the next section) or the [WebXR polyfill](https://github.com/immersive-web/webxr-polyfill).
+
+Note: Immersive experiences are *extremely performance-sensitive* and
 polyfills typically have a relatively large performance cost, so it may be worth
 considering whether or not you wish to use the polyfill for a user who doesn’t
-have native support for the WebXR Device API. When in doubt, avoid giving people motion sickness through poorly-performing
-experiences!
-* Documentation is available from the [Immersive Web Early Adopters
+have native support for the WebXR Device API. When in doubt, avoid giving
+people motion sickness through poorly-performing experiences!
+
+## API status
+
+Documentation is available from the [Immersive Web Early Adopters
 Guide](https://immersive-web.github.io/webxr-reference/).
 
 Today the API is available in:
@@ -34,35 +37,6 @@ Today the API is available in:
 | VR use cases | Chrome 67 origin trial | Enable the `chrome://flags/#webxr` flag *and* sign up for the origin trial ([explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md), [sign-up form](http://bit.ly/OriginTrialSignup)). |
 
 Learn more about the immersive web at the [Immersive Web Community Group](https://github.com/immersive-web).
-
-### Version 1.1 {:#version_1_1}
-
-Note: This API is deprecated and its origin trial is scheduled to end in
-July.
-
-Today the WebVR 1.1 API is available in:
-
-* Firefox Nightly.
-* Samsung Internet for Android and for Gear VR.
-* A Chrome [Origin
-Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-that ran from version 56 beta to June of 2017.
-
-It's supported on:
-
- * Daydream View since M56
- * Google Cardboard since M57
-
-It's also available through the [WebXR
-Polyfill](https://github.com/immersive-web/webxr-polyfill).
-
-<iframe width="100%" height="320"
-  src="https://www.chromestatus.com/feature/4532810371039232?embed"
-  style="border: 1px solid #CCC" allowfullscreen>
-</iframe>
-
-Find more information on browser implementation status on
-[chromestatus.com](https://www.chromestatus.com/features/4532810371039232).
 
 ## Considerations
 
