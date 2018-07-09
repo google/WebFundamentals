@@ -3,10 +3,10 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-06 #}
+{# wf_updated_on: 2018-07-09 #}
 {# wf_published_on: 2018-06-29 #}
 
-# Reference of Accessibility Features in Chrome DevTools {: .page-title }
+# Accessibility Reference {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -68,9 +68,10 @@ To audit a page:
 
 1. For **Device**, select **Mobile** if you want to simulate a mobile device. This option changes
    your user agent string and resizes the viewport. If the mobile version of the page displays differently
-   than the desktop version, this option could have a significant effect on your accessibility audit.
+   than the desktop version, this option could have a significant effect on the results of your audit.
 1. In the **Audits** section, make sure that **Accessibility** is enabled. Disable the other
-   categories if you want to exclude them from your report.
+   categories if you want to exclude them from your report. Leave them enabled if you want to discover other
+   ways to improve the quality of your page.
 1. The **Throttling** section lets you throttle the network and CPU, which is useful when analyzing
    load performance. This option should be irrelevant to your accessibility score, so you can use
    whatever you prefer.
@@ -129,38 +130,48 @@ highlight failing nodes.
 ## The Accessibility pane {: #pane }
 
 The Accessibility pane is where you can view the accessibility tree, ARIA attributes, and
-computed accessibility properties. It shows you the accessibility of one particular DOM
-node at a time.
+computed accessibility properties of DOM nodes.
 
-To inspect the accessibility of an element:
+To open the Accessibility pane:
 
 1. Click the **Elements** tab.
+1. In the **DOM Tree**, select the element which you want to inspect.
 1. Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs** button.
 
 ### View an element's position in the accessibility tree {: #tree }
 
 [The accessibility tree][tree] is a subset of the DOM tree. It only contains elements from
-the DOM tree that are relevant and useful for displaying the page's content in a screen reader.
+the DOM tree that are relevant and useful for displaying the page's contents in a screen reader.
 
 [tree]: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
 
-TODO image
-
-Use [the Accessbility pane](#pane) to inspect an element's position in the accessibility tree.
-
 ### View an element's ARIA attributes {: #aria }
 
-TODO image
-
-Use [the Accessbility pane](#pane) to inspect an element's ARIA attributes.
+ARIA attributes ensure that screen readers have all of the information that they need in order
+to properly represent a page's contents.
 
 ### View an element's computed accessibility properties {: #computed }
 
-TODO image
-
-Use [the Accessbility pane](#pane) to inspect an element's computed accessibility properties.
+Some accessibility properties are dynamically calculated by the browser. These properties
+can be viewed in the **Computed Properties** section of the **Accessibility** pane.
 
 ## View the contrast ratio of a text element in the Color Picker {: #contrast }
 
-Use the contrast ratio information in the Color Picker to ensure that your text meets WCAG 2
-AA contrast ratio thresholds.
+Some people with low vision don't see areas as very bright or very dark. Everything tends to
+appear at about the same brightness, which makes it hard to distinguish outlines and edges.
+Contrast ratio measures the difference in brightness between the foreground and background
+of text. If your text has a low contrast ratio, then these low vision users may literally
+experience your site as a blank screen.
+
+The Color Picker can help you make sure that your text meets recommended contrast ratio
+levels:
+
+1. Click the **Elements** tab.
+1. In the **DOM Tree**, select the text element that you want to inspect.
+1. In the **Styles** pane, click the color square next to the element's `color` value.
+   The Color Picker appears. One checkmark in the **Contrast Ratio** section means that
+   the element meets the [minimum recommendation][minimum]{:.external}.
+   Two checkmarks means that it meets the [enhanced recommendation][enhanced]{:.external}.
+
+[minimum]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
+[enhanced]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
