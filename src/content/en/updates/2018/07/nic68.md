@@ -6,7 +6,7 @@ description: What's new in Chrome 68 for developers?
 {# wf_updated_on: 2018-07-10 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome68,new-in-chrome #}
-{# wf_featured_snippet: Chrome 68 brings changes to the Add to Home Screen behaviour on Android, giving you more control. The page lifecycle API tells you when your tab has been suspended or restored. And the Payment Handler API makes it possible for web-based payment apps to support the Payment Request experience. Let’s dive in and see what’s new for developers in Chrome 68! #}
+{# wf_featured_snippet: Chrome 68 brings changes to the Add to Home Screen behavior on Android, giving you more control. The page lifecycle API tells you when your tab has been suspended or restored. And the Payment Handler API makes it possible for web-based payment apps to support the Payment Request experience. Let’s dive in and see what’s new for developers in Chrome 68! #}
 {# wf_blink_components: N/A #}
 
 # New in Chrome 68 {: .page-title }
@@ -35,11 +35,10 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..67.0.3396.62).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..68.0.3396.62).
 
 
 ## Add to Home Screen changes {: #a2hs }
-
 
 If your site meets the
 [add to home screen criteria](/web/fundamentals/app-install-banners/#criteria),
@@ -63,8 +62,12 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 ```
 
-When the user clicks the install button, call prompt on the saved
+<img src="/web/updates/images/2018/06/a2hs-dialog-g.png" class="attempt-right">
+
+When the user clicks the install button, call `prompt()` on the saved
 `beforeinstallprompt` event, Chrome then shows the add to home screen dialog.
+
+<div class="clearfix"></div>
 
 ```javascript
 btnInstall.addEventListener('click', () => {
@@ -77,11 +80,13 @@ btnInstall.addEventListener('click', () => {
 });
 ```
 
+<img src="/web/updates/images/2018/06/a2hs-infobar-g.png" class="attempt-right">
+
 To give you time to update your site Chrome will show a mini-infobar the first
 time a user visits a site that meets the add to home screen criteria. Once
 dismissed, the mini-infobar will not be shown again for a while.
 
-[Changes to Add to Home Screen Behavior](/web/updates/2018/06/a2hs-updates)
+[**Changes to Add to Home Screen Behavior**](/web/updates/2018/06/a2hs-updates)
 has the full details, including code samples you can use and more.
 
 
@@ -89,12 +94,13 @@ has the full details, including code samples you can use and more.
 
 ## Page Lifecycle API {: #page-lifecycle }
 
+<a href="/web/updates/images/2018/07/lifecycle-states.png">
+  <img src="/web/updates/images/2018/07/lifecycle-states.png" class="attempt-right">
+</a>
 
 When a user has a large number of tabs running, critical resources such as
-memory, CPU battery and the network can be oversubscribed, leading to a
+memory, CPU, battery and the network can be oversubscribed, leading to a
 bad user experience. 
-
-IMAGE
 
 If your site is running in the background, the system may suspend the it to
 conserve resources. With the new Page Lifecycle API, you can now listen for,
@@ -104,6 +110,8 @@ For example, if a tab needs to be discarded to conserve memory, the browser
 will fire the `frozen` event, where you can store any necessary state. Then,
 when the user refocuses the tab, the `resume` event is fired, making it
 possible to restore the previous state.
+
+<div class="clearfix"></div>
 
 ```javascript
 const prepareForFreeze = () => {
@@ -131,9 +139,8 @@ details.
 
 
 The [Payment Request API](https://www.w3.org/TR/payment-request/) is an open,
-standards-based way to accept payments.
-
-The [Payment Handler API](https://www.w3.org/TR/payment-handler/) extends the
+standards-based way to accept payments. The
+[Payment Handler API](https://www.w3.org/TR/payment-handler/) extends the
 reach of Payment Request by enabling web-based payment apps to facilitate
 payments directly within the Payment Request experience.
 
@@ -159,20 +166,24 @@ Eiji has a [great post](/web/updates/2018/06/payment-handler-api) that shows
 how to implement this for merchant sites, and for payment handlers.
 
 
-
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 68 for developers, of course,
 there’s plenty more.
 
 
-* Content embedded in an `iframe` requires a user gesture to navigate the
-  top-level browsing context to a different origin.
-* Since Chrome 1, the CSS `cursor` values for `grab` and `grabbing` have been
-  prefixed, we now support the standard, un-prefixed values. **Finally.**
-* And - this is a big one! The HTTP cache is now ignored when requesting
-  updates to a service worker, bringing Chrome inline with the spec and other
-  browsers. 
+* Content embedded in an `iframe`
+  [requires a user gesture to navigate](https://www.chromestatus.com/feature/5629582019395584)
+  the top-level browsing context to a different origin.
+* Since Chrome 1, the CSS 
+  [`cursor` values for `grab` and `grabbing`](https://www.chromestatus.com/feature/5575087101050880)
+  have been  prefixed, we now support the standard, un-prefixed values.
+  **Finally.**
+* And - this is a big one! The HTTP [cache is now ignored when requesting
+  updates to a service worker](/web/updates/2018/06/fresher-sw), bringing
+  Chrome inline with the spec and other browsers. 
+
+
 
 
 ### New in DevTools
