@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-09 #}
+{# wf_updated_on: 2018-07-10 #}
 {# wf_published_on: 2018-06-29 #}
 
 # Accessibility Reference {: .page-title }
@@ -156,6 +156,8 @@ Some accessibility properties are dynamically calculated by the browser. These p
 can be viewed in the **Computed Properties** section of the **Accessibility** pane.
 
 ## View the contrast ratio of a text element in the Color Picker {: #contrast }
+
+https://developers.google.com/web/updates/2018/01/devtools#contrast
 
 Some people with low vision don't see areas as very bright or very dark. Everything tends to
 appear at about the same brightness, which makes it hard to distinguish outlines and edges.
