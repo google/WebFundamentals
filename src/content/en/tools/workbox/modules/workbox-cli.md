@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cli.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-15 #}
+{# wf_updated_on: 2018-07-09 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox CLI  {: .page-title }
@@ -171,6 +171,7 @@ automatically by `workbox wizard` or tweaked manually.
 
 Below is a list of options used by **just** the `generateSW` command.
 
+{% with anchor_prefix="generateSW-" %}
 <table class="responsive">
   <tbody>
     <tr>
@@ -179,11 +180,13 @@ Below is a list of options used by **just** the `generateSW` command.
 {% include "web/tools/workbox/_shared/config/groups/common-generate-schema.html" %}
   </tbody>
 </table>
+{% endwith %}
 
 ### Options used by `injectManifest`
 
 Below is a list of options used by **just** the `injectManifest` command.
 
+{% with anchor_prefix="injectManifest-" %}
 <table class="responsive">
   <tbody>
     <tr>
@@ -193,11 +196,13 @@ Below is a list of options used by **just** the `injectManifest` command.
 {% include "web/tools/workbox/_shared/config/groups/build-inject-schema.html" %}
   </tbody>
 </table>
+{% endwith %}
 
 ### Options used by both
 
 The remaining options are used by both commands.
 
+{% with anchor_prefix="common-" %}
 <table class="responsive">
   <tbody>
     <tr>
@@ -207,3 +212,4 @@ The remaining options are used by both commands.
 {% include "web/tools/workbox/_shared/config/groups/base-schema.html" %}
   </tbody>
 </table>
+{% endwith %}
