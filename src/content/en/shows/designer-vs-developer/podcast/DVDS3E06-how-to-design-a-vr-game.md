@@ -21,7 +21,7 @@ discussions on everyday struggles.
 
 Mustafa speaks to Ada Rose Cannon, Developer Advocate for the 
 Samsung Internet Web Browser, about her passion about Virtual 
-Reality in the Web, new Web Standards and stitching various 
+Reality on the Web, new Web Standards and stitching various 
 technologies on the web to build a VR game on anxiety and 
 mental health. 
 
@@ -33,12 +33,12 @@ class="attempt-right">
 In this episode:
 
 * Virtual Reality
-* [Twinery](http://bit.ly/2ubLoUj){: .external}.
-* [A-Frame](http://bit.ly/2L3HUfW){: .external}., a web framework for building VR experiences 
-* [Archilogic tool kit](http://bit.ly/2KOGGpB){: .external}.
-* [How I built a game in a week](http://bit.ly/2N2Vlub){: .external}. 
-* [Glitch creative community](http://bit.ly/2ueEQnG){: .external}.{: .external}.
-* [Google Poly](http://bit.ly/2Jdo6lr){: .external}.
+* [Twinery](http://bit.ly/2ubLoUj){: .external}
+* [A-Frame](http://bit.ly/2L3HUfW){: .external}, a web framework for building VR experiences 
+* [Archilogic tool kit](http://bit.ly/2KOGGpB){: .external}
+* [How I built a game in a week](http://bit.ly/2N2Vlub){: .external}
+* [Glitch creative community](http://bit.ly/2ueEQnG){: .external}
+* [Google Poly](http://bit.ly/2Jdo6lr){: .external}
 * Accessibility in VR
 
 <audio style="width: 100%"
