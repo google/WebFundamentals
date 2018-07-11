@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
 
 {# wf_auto_generated #}
+{# wf_template: src/templates/article-list.md #}
 {# wf_updated_on: 1900-01-01 #}
 {# wf_published_on: 1900-01-01 #}
 
@@ -10,6 +11,7 @@ book_path: /web/{{section}}/_book.yaml
 {{#each articles}}
 
 ## {{ title }}
+
 <div class="attempt-right">
   {{#if image}}
     <img src="{{image}}">
@@ -17,6 +19,7 @@ book_path: /web/{{section}}/_book.yaml
     <img src="/web/updates/images/generic/star.png">
   {{/if}}
 </div>
+
 {{{description}}}
 
 [Read more]({{url}})

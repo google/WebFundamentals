@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -715,7 +715,7 @@ Investigate the trace to find ways to do less JavaScript work:
 [UT]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
 
 1. Expand the **Bottom-Up** section. This tab breaks down what activities took up the most time.
-   If you don't see anything in the Botton-Up section, click the label for **Main** section.
+   If you don't see anything in the Bottom-Up section, click the label for **Main** section.
    The Bottom-Up section only shows information for whatever activity, or group of activity, you
    have currently selected. For example, if you clicked on one of the `mineBitcoin` activities,
    the Bottom-Up section is only going to show information for that one activity.

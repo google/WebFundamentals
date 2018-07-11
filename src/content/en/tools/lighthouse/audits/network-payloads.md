@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Enormous Network Payloads" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-21 #}
 {# wf_blink_components: N/A #}
 
@@ -72,6 +72,7 @@ The 0 to 100 score is calculated from a lognormal distribution.
 ## Feedback {: #feedback }
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'Network Payloads / Helpful';
 var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
@@ -103,5 +104,6 @@ var feedback = {
   ]
 };
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}

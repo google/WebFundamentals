@@ -3,6 +3,7 @@ book_path: /web/{{section}}/_book.yaml
 full_width: true
 
 {# wf_auto_generated #}
+{# wf_template: src/templates/showcase/vertical.md #}
 {# wf_updated_on: 1900-01-01 #}
 {# wf_published_on: 1900-01-01 #}
 

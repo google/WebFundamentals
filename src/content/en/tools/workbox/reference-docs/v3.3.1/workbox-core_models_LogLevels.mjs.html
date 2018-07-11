@@ -5,7 +5,7 @@
   <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
   <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
-  <title>Source: workbox-strategies/_types.mjs</title>
+  <title>Source: workbox-core/models/LogLevels.mjs</title>
   <link href="jsdoc.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
         </div>
         <div id="jsdoc-main" role="main">
           <header class="page-header">
-            <h1>Source: workbox-strategies/_types.mjs</h1>
+            <h1>Source: workbox-core/models/LogLevels.mjs</h1>
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
@@ -36,20 +36,29 @@
   limitations under the License.
 */
 
-import &#x27;./_version.mjs&#x27;;
+import &#x27;../_version.mjs&#x27;;
 
 /**
- * @typedef {Object} StrategyOptions
- * @property {String} cacheName Name of cache to use
- * for caching (both lookup and updating).
- * @property {Object} cacheExpiration Defining this
- * object will add a cache expiration plugins to this strategy.
- * @property {Number} cacheExpiration.maxEntries
- * The maximum number of entries to store in a cache.
- * @property {Number} cacheExpiration.maxAgeSeconds
- * The maximum lifetime of a request to stay in the cache before it&#x27;s removed.
- * @memberof workbox.strategies
+ * The available log levels in Workbox: debug, log, warn, error and silent.
+ *
+ * @property {int} debug Prints all logs from Workbox. Useful for debugging.
+ * @property {int} log Prints console log, warn, error and groups. Default for
+ * debug builds.
+ * @property {int} warn Prints console warn, error and groups. Default for
+ * non-debug builds.
+ * @property {int} error Print console error and groups.
+ * @property {int} silent Force no logging from Workbox.
+ *
+ * @alias workbox.core.LOG_LEVELS
  */
+
+export default {
+  debug: 0,
+  log: 1,
+  warn: 2,
+  error: 3,
+  silent: 4,
+};
 </code></pre>
           </article>
         </div>

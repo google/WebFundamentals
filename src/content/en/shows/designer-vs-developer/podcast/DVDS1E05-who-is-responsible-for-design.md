@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week we speak to Sérgio Gomes about responsibilities in design.
-
-{# wf_updated_on: 2018-04-05 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2017-05-08 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E05-who-is-responsible-for-design.mp3 #}
 {# wf_podcast_duration: 00:06:21 #}
@@ -10,7 +10,7 @@ description: This week we speak to Sérgio Gomes about responsibilities in desig
 {# wf_podcast_subtitle: This week we speak to Sérgio Gomes about responsibilities in design. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s01-e05-cover-large.jpg #}
 
-# Who is responsible for design? {: .page-title }
+# Sérgio Gomes on who is responsible for design {: .page-title }
 
 Welcome to _Designer Vs Developer_, a show that tries to solve the challenges
 faced in the industry by opening a conversation between the two, providing
@@ -30,8 +30,8 @@ In this episode:
 
 * We ask who is responsible for design? 
 * If our focus is the starting point or end point of what we do
-* Material Design Components for web
-* Material Design system
+* Material design components for web
+* Material design system
 
 <audio style="width: 100%" 
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E05-who-is-responsible-for-design.mp3" 

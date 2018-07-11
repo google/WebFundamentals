@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-01-02 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -490,7 +490,7 @@ This step is for you to complete on your own. In the `addOrders` function in __m
 
 
 
-__Hint: __This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
+__Hint:__ This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
 
 
 

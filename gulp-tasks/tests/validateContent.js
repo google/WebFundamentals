@@ -236,14 +236,16 @@ function test(filename, contents, options) {
     logError(msg, position);
   });
 
-  // Warn on unescaped template tags
-  if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
-    matches = wfRegEx.getMatches(/\{\{/g, contents);
-    matches.forEach(function(match) {
-      const position = {line: getLineNumber(contents, match.index)};
-      const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
-      logError(msg, position);
-    });
+  // Error on unescaped template tags
+  if (!options.ignoreTemplateTags) {
+    if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
+      matches = wfRegEx.getMatches(/\{\{/g, contents);
+      matches.forEach(function(match) {
+        const position = {line: getLineNumber(contents, match.index)};
+        const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
+        logError(msg, position);
+      });
+    }
   }
 
   // Error on script blocks in markdown

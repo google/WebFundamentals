@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 58.
 
-{# wf_updated_on: 2017-04-26 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-03-06 #}
 {# wf_tags: chrome58,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -165,7 +165,7 @@ easily accessible.
 ### WebGL event listener breakpoints have moved {: #webgl }
 
 The WebGL [event listener breakpoints][event-listener-breakpoint]
-have moved from the **WebGL **category to the **Canvas **category. The
+have moved from the **WebGL** category to the **Canvas** category. The
 **WebGL** category has been removed.
 
 {% include "comment-widget.html" %}

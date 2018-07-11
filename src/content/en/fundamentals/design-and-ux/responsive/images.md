@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2017-09-29 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -332,15 +332,15 @@ images, resulting in increased page weight.
 There are two fundamentally different ways to create and store images&mdash;and
 this affects how you deploy images responsively.
 
-**Raster images&mdash;such as photographs and other images&mdash;are represented
-**as a grid of individual dots of color. Raster images might come from a camera
-**or scanner, or be created with the HTML canvas element. Formats like PNG,
-**JPEG, and WebP are used to store raster images.
+**Raster images** &mdash; such as photographs and other images, are 
+represented as a grid of individual dots of color. Raster images might come
+from a camera or scanner, or be created with the HTML canvas element. Formats 
+like PNG, JPEG, and WebP are used to store raster images.
 
-**Vector images&mdash;such as logos and line art&mdash;are defined as a set of
-**curves, lines, shapes, fill colors and gradients. Vector images can be created
-**with programs like Adobe Illustrator or Inkscape, or handwritten in code using
-**a vector format such as SVG.
+**Vector images** such as logos and line art are defined as a set of
+curves, lines, shapes, fill colors and gradients. Vector images can be created
+with programs like Adobe Illustrator or Inkscape, or handwritten in code using
+a vector format such as SVG.
 
 ##### SVG
 
