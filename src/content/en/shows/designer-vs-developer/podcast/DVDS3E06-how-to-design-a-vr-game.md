@@ -32,12 +32,13 @@ class="attempt-right">
 In this episode:
 
 * Virtual Reality
-* [Twinery](https://twinery.org/){: .external}.
-* [A-Frame](https://aframe.io/docs/0.8.0/introduction/ ){: .external}., a web framework for building VR experiences 
-* [Archilogic tool kit](https://spaces.archilogic.com/explore){: .external}.
-* [How I built a game in a week](https://medium.com/samsung-internet-dev/how-i-built-a-game-in-a-week-5810b1197686){: .external}. 
-* [Glitch creative community](https://glitch.com/){: .external}.{: .external}.
-* [Google Poly](https://poly.google.com/){: .external}.
+* [Twinery](http://bit.ly/2ubLoUj){: .external}.
+* [A-Frame](http://bit.ly/2L3HUfW){: .external}., a web framework for building VR experiences 
+* [Archilogic tool kit](http://bit.ly/2KOGGpB){: .external}.
+* [How I built a game in a week](http://bit.ly/2N2Vlub){: .external}. 
+* [Glitch creative community](http://bit.ly/2ueEQnG){: .external}.{: .external}.
+* [Google Poly](http://bit.ly/2Jdo6lr){: .external}.
+* Accessibility in VR
 
 <audio style="width: 100%"
 src="https://storage.googleapis.com/designer-vs-developer-podcast/
