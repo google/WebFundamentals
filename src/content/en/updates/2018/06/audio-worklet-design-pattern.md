@@ -64,7 +64,7 @@ system which was previously introduced in
 
 ### Using AudioWorklet with WebAssembly
 
-  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn/)
+  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/)
 
 [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) is a perfect
 companion for AudioWorkletProcessor. The combination of these two features
@@ -84,7 +84,7 @@ problems at the same time: it is faster and generates no garbage from the code.
 
 The next section describes how WebAssembly can be used with an AudioWorklet and
 the accompanied code example can be found
-[here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn/).
+[here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
 Emscripten glue code), please take a look at
 [this article](/web/updates/2018/03/emscripting-a-c-library).
@@ -165,7 +165,7 @@ through AudioWorkletNode constructor can definitely be useful.
 WebAssembly code only works on the memory allocated within a dedicated WASM
 heap. In order to take advantage of it, the audio data needs to be cloned back
 and forth between the WASM heap and the audio data arrays. The
-[HeapAudioBuffer](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wa2.js#L34)
+[HeapAudioBuffer](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wasm-audio-helper.js#L37)
 class in the example code handles this operation nicely.
 
 <figure>
@@ -184,7 +184,7 @@ WASM heap seems natural, but the specific details need to be worked out.
 
 ### Handling Buffer Size Mismatch
 
-  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn-ring-buffer/)
+  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm-ring-buffer/)
 
 An AudioWorkletNode and AudioWorkletProcessor pair is designed to work like a
 regular AudioNode; AudioWorkletNode handles the interaction with other codes
@@ -250,14 +250,14 @@ memory management slightly easier.
 to reduce redundant data cloning will be discussed in the future.
 
 The RingBuffer class can be found
-[here](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wa2.js#L166).
+[here](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wasm-audio-helper.js#L170).
 
 ### WebAudio Powerhouse: AudioWorklet and SharedArrayBuffer
 
 Note: SharedArrayBuffer is disabled by default at the time of writing. Go to
 `chrome://flags` and enable _SharedArrayBuffer_ to play with this feature.
 
-  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/awn-shared-buffer/)
+  - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/shared-buffer/)
 
 The last design pattern in this article is to put several cutting edge APIs into
 one place; AudioWorklet,
@@ -388,7 +388,7 @@ experimental flag must be enabled for this demo to work. The code was written
 with pure JS code for simplicity, but it can be replaced with WebAssembly code
 if needed. Such case should be handled with extra care by wrapping memory
 management with
-[HeapAudioBuffer](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wa2.js#L34)
+[HeapAudioBuffer](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wasm-audio-helper.js#L37)
 class.
 
 ## Conclusion
