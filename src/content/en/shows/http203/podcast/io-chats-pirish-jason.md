@@ -19,7 +19,7 @@ In this episode we chat to [Jason Miller](https://twitter.com/_developit) and th
 Irish (I'm not linking to his Twitter account. He has too many followers, and let's face it, you
 already follow him). We cover new DevTools stuff like:
 
-* Editing resources in dev tools in a way that survives reloading.
+* Editing resources in DevTools in a way that survives reloading.
 * Getting a diff of changes you've made.
 * Async debugging - step into `postMessage` and `setTimeout`.
 * Eager evaluation - giving you the results of side-effect-free code in advance.
