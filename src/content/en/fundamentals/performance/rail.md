@@ -106,9 +106,9 @@ of their time waiting for sites to respond to their input, not waiting for the s
   careful not to block the user. If possible, do work in the background.
 * For actions that take longer than 50ms to complete, always provide feedback.
 
-### 50ms or 100ms?
+**50ms or 100ms?:**
 
-If the goal is respond to input in under 100ms, why is our budget only 50ms?
+The goal is respond to input in under 100ms, so why is our budget only 50ms?
 This is because there is generally other work being done in addition to input
 handling, and that work takes up part of the time available for acceptible input
 repsonse. If an application is performing work in the recommended 50ms chunks
@@ -120,7 +120,8 @@ task is queued, reducing the available processing time:
 
 <figure>
   <img src="images/rail-response-details.png"
-    alt="Diagram showing how input received during an idle task is queued, reducing available input processing time to 50ms."/>
+    alt="Diagram showing how input received during an idle task is queued,
+         reducing available input processing time to 50ms."/>
   <figcaption>
     <b>Figure 2</b>. How idle tasks affect input response budget.
   </figcaption>
