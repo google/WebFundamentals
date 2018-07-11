@@ -995,8 +995,9 @@ To feature detect custom elements, check for the existence of
 
 Until browser support is widely available, there's a
 [standalone polyfill](https://github.com/webcomponents/custom-elements/)
-available for Custom Elements v1. However, we recommend using the webcomponents.js
-loader to optimally load the web components polyfills. The loader
+available for Custom Elements v1. However, we recommend using the [webcomponents.js
+loader](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
+to optimally load the web components polyfills. The loader
 uses feature detection to asynchronously load only the necessary pollyfills
 required by the browser.
 
