@@ -187,7 +187,7 @@ a same-origin navigation), the `unload` handlers of the old document and its sub
 an arbitrarily long time before allowing the new navigation to commit.
 
 ```js
-addEventListener(’unload’, () => {
+addEventListener('unload', () => {
   doSomethingThatMightTakeALongTime();
 });
 ```
