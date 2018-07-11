@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Ada Rose Cannon on designing a VR game in a week.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-07-11 #}
 {# wf_published_on: 2018-07-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3 #}
