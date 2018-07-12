@@ -4,23 +4,49 @@ footer:
   - description: Chromium blogundaki en son haberler.
     label: Chromium Blog
     path: https://blog.chromium.org
+    icon: 'https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
+
+'
   - label: GitHub
+    description: Kod örneklerimizi ve diğer açık kaynaklı projeleri fork\'layın.
+    icon: "/site-assets/logo-github.svg"
+    path: https://github.com/googlechrome
   - description: Twitter\'da @ChromiumDev ile iletişime geçin.
     label: Twitter
     path: https://twitter.com/chromiumdev
+    icon: "/site-assets/logo-twitter.svg"
   - description: Videolarımıza göz atın.
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
     label: Videolar
+    path: "/web/shows/"
 - linkboxes:
   - contents:
-    - 
+    - label: Building for Billions
+      path: "/web/billions/"
     - label: Chrome Uzantı Dökümanları
+      path: https://developers.chrome.com/extensions/api_index
     - label: Geliştirici Geri Bildirim Programı
+      path: "/web/feedback/"
+    - label: Progressive Web Apps
+      path: "/web/progressive-web-apps/"
     name: Temel Konular
+    icon_name: star
   - contents:
     - path: "/web/ilt/"
+      label: Eğitmen Liderliğinde Eğitim
+    icon_name: school
   - contents:
-    - 
+    - label: Bir Sorun Bildirin
+      path: 'https://github.com/google/WebFundamentals/issues
+
+'
     - label: Sayfa Kaynağını Görüntüle
+      path: https://github.com/google/WebFundamentals
     - label: Kaynaklar
+      path: "/web/resources/"
+    - label: Çevirmenlik
+      path: "/web/resources/translations"
     name: Katkıda Bulun
+    icon_name: 'bug_report
+
+'
