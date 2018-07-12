@@ -1740,3 +1740,20 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+meko:
+  name:
+    given: Berkay
+    family: Toptan
+  org:
+    name: Google
+    unit: Top Contributors
+  country: TR
+  role:
+    - contributor
+    - translator
+  homepage: 'https://berkay.co'
+  google: +mekotr
+  twitter: mekotr
+  github: meko
+  email: t@berkay.co
