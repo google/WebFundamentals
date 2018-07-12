@@ -34,7 +34,12 @@ footer:
   - contents:
     - path: "/web/ilt/"
       label: Eğitmen Liderliğinde Eğitim
+    - label: Udacity\'deki İnternet Kursları
+      path: "/web/shows/udacity/"
+    - label: Ajans
+      path: "/web/agencies/"
     icon_name: school
+    name: Antrenman ve Ortaklar
   - contents:
     - label: Bir Sorun Bildirin
       path: 'https://github.com/google/WebFundamentals/issues
