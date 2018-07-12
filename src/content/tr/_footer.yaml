@@ -1,0 +1,26 @@
+---
+footer:
+- promos:
+  - description: Chromium blogundaki en son haberler.
+    label: Chromium Blog
+    path: https://blog.chromium.org
+  - label: GitHub
+  - description: Twitter\'da @ChromiumDev ile iletişime geçin.
+    label: Twitter
+    path: https://twitter.com/chromiumdev
+  - description: Videolarımıza göz atın.
+    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
+    label: Videolar
+- linkboxes:
+  - contents:
+    - 
+    - label: Chrome Uzantı Dökümanları
+    - label: Geliştirici Geri Bildirim Programı
+    name: Temel Konular
+  - contents:
+    - path: "/web/ilt/"
+  - contents:
+    - 
+    - label: Sayfa Kaynağını Görüntüle
+    - label: Kaynaklar
+    name: Katkıda Bulun
