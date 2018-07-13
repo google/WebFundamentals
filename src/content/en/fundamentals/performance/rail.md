@@ -91,16 +91,17 @@ fast Wi-Fi connection, so users have grown accustomed to a 1000ms loading experi
 mobile devices over slow 3G connections, loading in 5000ms is a more realistic goal, so mobile
 users are generally more patient.
 
-## Response: respond in under 50ms {: #response }
+## Response: process events in under 50ms {: #response }
 
 **Goal**: Complete a transition initiated by user input within 100ms. Users spend the majority
 of their time waiting for sites to respond to their input, not waiting for the sites to load.
 
 **Guidelines**:
 
-* Respond to user input within 50ms, or else the connection between action and
-  reaction is broken. This applies to most inputs, such as clicking buttons, toggling form
-  controls, or starting animations. This does not apply to touch drags or scrolls.
+* Process user input events within 50ms to ensure a visible response within 100ms,
+  otherwise the connection between action and reaction is broken. This applies to most
+  inputs, such as clicking buttons, toggling form controls, or starting animations.
+  This does not apply to touch drags or scrolls.
 * Though it may sound counterintuitive, it's not always the right call to respond to user
   input immediately. You can use this 100ms window to do other expensive work. But be
   careful not to block the user. If possible, do work in the background.
