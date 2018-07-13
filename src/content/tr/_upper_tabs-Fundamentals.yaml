@@ -9,4 +9,5 @@ toc:
   lower_tabs:
     guides:
     - title: Ana
+      path: "/web/fundamentals/"
   name: Temeller
