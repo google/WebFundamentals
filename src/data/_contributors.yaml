@@ -1729,6 +1729,23 @@ myakura:
   description:
     en: Masataka is a Web Google Developers Expert
 
+meko:
+  name:
+    given: Berkay
+    family: Toptan
+  org:
+    name: Google
+    unit: Top Contributors
+  country: TR
+  role:
+    - contributor
+    - translator
+  homepage: 'https://berkay.co'
+  google: +mekotr
+  twitter: mekotr
+  github: meko
+  email: slajermeko@gmail.com  
+
 maciejzasada:
   name:
     given: Maciej
