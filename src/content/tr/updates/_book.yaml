@@ -1,0 +1,27 @@
+---
+upper_tabs:
+- include: "/web/_upper_tabs-Fundamentals.yaml"
+- include: "/web/_upper_tabs-Tools.yaml"
+- heading: Güncellemeler
+  lower_tabs:
+    other:
+    - contents:
+      - path: "/web/updates/"
+        title: Öne çıkan
+      name: Öne çıkan
+    - contents:
+      - include: "/web/updates/2018/_toc.yaml"
+      - include: "/web/updates/2017/_toc.yaml"
+      - include: "/web/updates/2016/_toc.yaml"
+      - include: "/web/updates/2015/_toc.yaml"
+      - include: "/web/updates/2014/_toc.yaml"
+      - include: "/web/updates/2013/_toc.yaml"
+      - include: "/web/updates/2012/_toc.yaml"
+      - include: "/web/updates/2011/_toc.yaml"
+      name: Yıla göre
+    - contents:
+      - include: "/web/updates/tags/_toc.yaml"
+      name: Etikete göre
+  name: Güncellemeler
+  path: "/web/updates/"
+- include: "/web/_upper_tabs-Showcase.yaml"
