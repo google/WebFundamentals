@@ -3,8 +3,8 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-10 #}
-{# wf_published_on: 2018-06-29 #}
+{# wf_updated_on: 2018-07-13 #}
+{# wf_published_on: 2018-07-13 #}
 
 # Accessibility Reference {: .page-title }
 
@@ -42,10 +42,11 @@ to learn more.
 
 ## Audit a page's accessibility {: #audits }
 
-Use the Audits panel to determine if:
+In general, use the Audits panel to determine if:
 
 * A page is properly marked up for screen readers.
-* The text elements on the page have sufficient contrast ratios.
+* The text elements on a page have sufficient contrast ratios. See also [View the
+  contrast ratio of a text element in the Color Picker](#contrast).
 
 To audit a page:
 
@@ -56,7 +57,7 @@ To audit a page:
        <img src="imgs/config.png"
             alt="Configuring audits."/>
        <figcaption>
-         <b>Figure X</b>. Configuring audits
+         <b>Figure 1</b>. Configuring audits
        </figcaption>
      </figure>
 
@@ -85,7 +86,7 @@ To audit a page:
        <img src="imgs/report.png"
             alt="A report."/>
        <figcaption>
-         <b>Figure X</b>. A report
+         <b>Figure 2</b>. A report
        </figcaption>
      </figure>
 
@@ -95,7 +96,7 @@ To audit a page:
        <img src="imgs/attributes.png"
             alt="More information about an audit."/>
        <figcaption>
-         <b>Figure X</b>. More information about an audit
+         <b>Figure 3</b>. More information about an audit
        </figcaption>
      </figure>
 
@@ -105,7 +106,7 @@ To audit a page:
        <img src="imgs/documentation.png"
             alt="Viewing an audit's documentation."/>
        <figcaption>
-         <b>Figure X</b>. Viewing an audit's documentation
+         <b>Figure 4</b>. Viewing an audit's documentation
        </figcaption>
      </figure>
 
@@ -123,7 +124,7 @@ highlight failing nodes.
   <img src="imgs/aXe.png"
        alt="The aXe extension."/>
   <figcaption>
-    <b>Figure X</b>. The aXe extension
+    <b>Figure 5</b>. The aXe extension
   </figcaption>
 </figure>
 
@@ -136,12 +137,32 @@ To open the Accessibility pane:
 
 1. Click the **Elements** tab.
 1. In the **DOM Tree**, select the element which you want to inspect.
-1. Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs** button.
+1. Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs**
+   ![More Tabs](/web/tools/chrome-devtools/images/shared/more-tabs.png){: .inline-icon }
+   button.
+
+<figure>
+  <img src="imgs/a11y-pane.png"
+       alt="Inspecting the h1 element of the DevTools homepage in the Accessibility pane."/>
+  <figcaption>
+    <b>Figure 6</b>. Inspecting the <code>h1</code> element of the DevTools homepage in the Accessibility pane
+  </figcaption>
+</figure>
 
 ### View an element's position in the accessibility tree {: #tree }
 
 [The accessibility tree][tree] is a subset of the DOM tree. It only contains elements from
 the DOM tree that are relevant and useful for displaying the page's contents in a screen reader.
+
+Inspect an element's position in the accessibility tree from [the Accessibility pane](#pane).
+
+<figure>
+  <img src="imgs/a11y-tree.png"
+       alt="The Accessibility Tree section"/>
+  <figcaption>
+    <b>Figure 7</b>. The Accessibility Tree section
+  </figcaption>
+</figure>
 
 [tree]: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
 
@@ -150,14 +171,36 @@ the DOM tree that are relevant and useful for displaying the page's contents in 
 ARIA attributes ensure that screen readers have all of the information that they need in order
 to properly represent a page's contents.
 
+View an element's ARIA attributes in [the Accessibility pane](#pane).
+
+<figure>
+  <img src="imgs/aria.png"
+       alt="The ARIA Attributes section"/>
+  <figcaption>
+    <b>Figure 8</b>. The ARIA Attributes section
+  </figcaption>
+</figure>
+
 ### View an element's computed accessibility properties {: #computed }
+
+Note: If you're looking for computed CSS properties, see [the Computed tab][CSS].
+
+[CSS]: /web/tools/chrome-devtools/css/reference#computed
 
 Some accessibility properties are dynamically calculated by the browser. These properties
 can be viewed in the **Computed Properties** section of the **Accessibility** pane.
 
-## View the contrast ratio of a text element in the Color Picker {: #contrast }
+View an element's computed accessibility properties in [the Accessibility pane](#pane).
 
-https://developers.google.com/web/updates/2018/01/devtools#contrast
+<figure>
+  <img src="imgs/computed-a11y.png"
+       alt="The Computed (Accessibility) Properties section."/>
+  <figcaption>
+    <b>Figure 9</b>. The Computed (Accessibility) Properties section
+  </figcaption>
+</figure>
+
+## View the contrast ratio of a text element in the Color Picker {: #contrast }
 
 Some people with low vision don't see areas as very bright or very dark. Everything tends to
 appear at about the same brightness, which makes it hard to distinguish outlines and edges.
@@ -170,10 +213,50 @@ levels:
 
 1. Click the **Elements** tab.
 1. In the **DOM Tree**, select the text element that you want to inspect.
+
+     <figure>
+       <img src="imgs/inspect.png"
+            alt="Inspecting a paragraph in the DOM Tree."/>
+       <figcaption>
+         <b>Figure 10</b>. Inspecting a paragraph in the DOM Tree
+       </figcaption>
+     </figure>
+
 1. In the **Styles** pane, click the color square next to the element's `color` value.
-   The Color Picker appears. One checkmark in the **Contrast Ratio** section means that
+
+     <figure>
+       <img src="imgs/color.png"
+            alt="The color property of the element."/>
+       <figcaption>
+         <b>Figure 11</b>. The <code>color</code> property of the element
+       </figcaption>
+     </figure>
+
+1. Check the **Contrast Ratio** section of the Color Picker. One checkmark means that
    the element meets the [minimum recommendation][minimum]{:.external}.
    Two checkmarks means that it meets the [enhanced recommendation][enhanced]{:.external}.
+
+     <figure>
+       <img src="imgs/color-picker.png"
+            alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of 16.10."/>
+       <figcaption>
+         <b>Figure 12</b>. The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value
+         of <code>16.10</code>
+       </figcaption>
+     </figure>
+
+1. Click the **Contrast Ratio** section to see more information. A line appears in the visual picker at the
+   top of the Color Picker. If the current color meets recommendations, then anything on the same side of the
+   line also meets recommendations. If the current color does not meet recommendations, then anything on the
+   same side also does not meet recommendations.
+
+     <figure>
+       <img src="imgs/contrast-ratio-line.png"
+            alt="The Contrast Ratio Line in the visual picker."/>
+       <figcaption>
+         <b>Figure 13</b>. The Contrast Ratio Line in the visual picker
+       </figcaption>
+     </figure>
 
 [minimum]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [enhanced]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
