@@ -1,5 +1,5 @@
-project_path: /web/feedback/_project.yaml
-book_path: /web/feedback/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
 
 {# wf_updated_on: 2017-04-26 #}
 {# wf_published_on: 2016-10-24 #}
