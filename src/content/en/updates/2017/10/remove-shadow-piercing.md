@@ -66,3 +66,6 @@ relies on native shadow DOM v0.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
 {% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
