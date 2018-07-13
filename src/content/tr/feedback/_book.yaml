@@ -10,6 +10,7 @@ upper_tabs:
       - path: "/web/feedback/"
         title: Ana Sayfa
       - path: "/web/feedback/file-a-bug"
+        title: İyi bir hata nasıl dosyalanır
       - path: "/web/feedback/browser-bug-searcher"
         title: Tarayıcı Hata Arama Aracı
       name: Geri bildirim
