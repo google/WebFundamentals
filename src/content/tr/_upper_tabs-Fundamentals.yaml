@@ -1,0 +1,12 @@
+---
+toc:
+- attributes:
+  - name: veri-kategori
+    value: webTemelleri
+  - name: veri-etiket
+    value: üst-webTemelleri
+  heading: Web Temelleri
+  lower_tabs:
+    guides:
+    - title: Ana
+  name: Temeller
