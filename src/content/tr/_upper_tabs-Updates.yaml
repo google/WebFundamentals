@@ -1,0 +1,11 @@
+---
+toc:
+- attributes:
+  - name: veri-kategori
+    value: webFu
+  - name: veri-etiket
+    value: üst-güncellemeler
+  lower_tabs:
+    guides:
+    - title: Ana
+  name: Güncellemeler
