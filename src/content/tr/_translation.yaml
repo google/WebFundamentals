@@ -1,0 +1,14 @@
+---
+ignore_paths:
+- "/_translation.yaml"
+- "/_common-links.md"
+- "/manifest.json"
+- "/_shared/sample.html"
+- "/resources/..."
+- "/showcase/..."
+- "/shows/..."
+- "/updates/..."
+- "/fundamentals/atom.xml"
+- "/fundamentals/rss.xml"
+- "/tools/atom.xml"
+- "/tools/rss.xml"
