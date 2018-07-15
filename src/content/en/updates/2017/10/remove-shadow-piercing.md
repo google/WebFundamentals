@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Say goodbye to shadow-piercing CSS selectors.
 
-{# wf_updated_on: 2017-12-14 #}
+{# wf_updated_on: 2018-07-12 #}
 {# wf_published_on: 2017-10-24 #}
-{# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals #}
+{# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals,chrome63 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
 {# wf_blink_components: Blink>DOM #}
@@ -66,3 +66,6 @@ relies on native shadow DOM v0.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
 {% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
