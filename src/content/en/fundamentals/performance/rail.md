@@ -11,6 +11,7 @@ description: RAIL is a user-centric performance model. Every web app has these f
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/developit.html" %}
 
 **RAIL** is a **user-centric** performance model that breaks down the user's
 experience into key actions. RAIL's [**goals** and **guidelines**](#goals-and-guidelines) aim to
