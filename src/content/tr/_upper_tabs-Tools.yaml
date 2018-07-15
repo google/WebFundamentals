@@ -1,0 +1,12 @@
+---
+toc:
+- attributes:
+  - name: veri-kategori
+    value: webFu
+  - name: veri-etiket
+    value: üst-araçlar
+  lower_tabs:
+    guides:
+    - title: Ana
+      path: "/web/tools/"
+  name: Araçlar
