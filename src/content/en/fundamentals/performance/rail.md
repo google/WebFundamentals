@@ -112,7 +112,7 @@ of their time waiting for sites to respond to their input, not waiting for the s
 The goal is respond to input in under 100ms, so why is our budget only 50ms?
 This is because there is generally other work being done in addition to input
 handling, and that work takes up part of the time available for acceptible input
-repsonse. If an application is performing work in the recommended 50ms chunks
+response. If an application is performing work in the recommended 50ms chunks
 during idle time, that means input can be queued for up to 50ms if it occurs
 during one of those chunks of work. Accounting for this, it's safe to assume
 only the remaining 50ms is available for actual input handling. This effect is
