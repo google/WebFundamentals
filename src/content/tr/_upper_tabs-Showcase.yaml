@@ -1,0 +1,12 @@
+---
+toc:
+- attributes:
+  - name: veri-kategori
+    value: webTemelleri
+  - name: veri-etiket
+    value: üst-vitrin
+  lower_tabs:
+    guides:
+    - title: Ana
+      path: "/web/showcase/"
+  name: Durum Çalışmaları
