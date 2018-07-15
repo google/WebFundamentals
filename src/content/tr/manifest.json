@@ -1,0 +1,26 @@
+---
+background_color: "#3F51B5"
+display: browser
+icons:
+- sizes: 36x36
+  src: "/web/images/web-fundamentals-icon36x36.png"
+  type: image/png
+- sizes: 48x48
+  src: "/web/images/web-fundamentals-icon48x48.png"
+  type: image/png
+- sizes: 72x72
+  src: "/web/images/web-fundamentals-icon72x72.png"
+  type: image/png
+- sizes: 96x96
+  src: "/web/images/web-fundamentals-icon96x96.png"
+  type: image/png
+- sizes: 144x144
+  src: "/web/images/web-fundamentals-icon144x144.png"
+  type: image/png
+- sizes: 192x192
+  src: "/web/images/web-fundamentals-icon192x192.png"
+  type: image/png
+name: Google geliştiricileri \'nde Web
+short_name: Web @ GoogleDev
+start_url: "/web/fundamentals?homescreen=1"
+theme_color: "#3F51B5"
