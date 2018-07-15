@@ -21,14 +21,14 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies.NetworkOnly
 - title: "broadcastUpdate.Plugin"
   path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate.Plugin
-- title: "rangeRequests.Plugin"
-  path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests.Plugin
-- title: "cacheableResponse.Plugin"
-  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse.Plugin
-- title: "backgroundSync.Plugin"
-  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Plugin
 - title: "expiration.Plugin"
   path: /web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin
+- title: "cacheableResponse.Plugin"
+  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse.Plugin
+- title: "rangeRequests.Plugin"
+  path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests.Plugin
+- title: "backgroundSync.Plugin"
+  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Plugin
 - title: "PrecacheController"
   path: /web/tools/workbox/reference-docs/latest/workbox.precaching.PrecacheController
 - title: "Queue"
@@ -55,6 +55,8 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.expiration
 - title: "workbox.googleAnalytics"
   path: /web/tools/workbox/reference-docs/latest/workbox.googleAnalytics
+- title: "workbox.navigationPreload"
+  path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
 - title: "workbox.precaching"
   path: /web/tools/workbox/reference-docs/latest/workbox.precaching
 - title: "workbox.rangeRequests"
