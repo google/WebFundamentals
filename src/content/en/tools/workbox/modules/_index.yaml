@@ -153,6 +153,22 @@ landing_page:
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
 
+    - items:
+      - heading: workbox.navigationPreload
+        description: >
+          Enable navigation preload, to get a network response for navigation
+          requests faster.
+        buttons:
+        - label: Learn more
+          path: ./workbox-navigation-preload
+        - label: Reference
+          path: ../reference-docs/latest/workbox.navigationPreload
+
+      # Force Devsite 4-up layout
+      - heading: ""
+      - heading: ""
+      - heading: ""
+
     - heading: Node Modules
       description: >
         Workbox provides a set of Node modules that make it easy to generate
