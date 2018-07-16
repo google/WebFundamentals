@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-03 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -103,7 +103,7 @@ Check out the "broken" version of the app that does not have the service worker 
 
     $ git checkout code-lab
 
-Go back to the __Application__ panel of DevTools and disable the Offline checkbox, so that you're back online.
+Go back to the __Application__ panel of DevTools and disable the __Offline__ checkbox, so that you're back online.
 
 Run the page. The app should work as expected.
 
@@ -251,7 +251,7 @@ Reload your page now and look at the DevTools window again. For one, we're expec
 In the __Status__ there's a new service worker that's waiting to activate. That must be the new service worker that includes the changes that we just made. So, for some reason, the old service worker that we installed (which was just a blank file) is still controlling the page. If you click on the `sw.js` link next to __Source__ you can verify that the old service worker is still running.
 
 <aside markdown="1" class="key-point">
-<p>This behavior is by design. Check out  <a href="/web/fundamentals/primers/service-worker/update-a-service-worker?hl=en">Update a Service Worker</a> to learn more about the service worker lifecycle.</p>
+<p>This behavior is by design. Check out  <a href="/web/fundamentals/primers/service-worker/update-a-service-worker">Update a Service Worker</a> to learn more about the service worker lifecycle.</p>
 </aside>
 
 
@@ -307,7 +307,7 @@ You now have offline support. Reload your page while still online to update your
 
 #### Learn More
 
-*  [Introduction to service worker](/web/fundamentals/primers/service-worker/?hl=en)
+*  [Introduction to service worker](/web/fundamentals/primers/service-worker/)
 
 
 
