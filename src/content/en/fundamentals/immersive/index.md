@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The immersive web: augmented and virtual reality.
 
-{# wf_updated_on: 2018-07-09 #}
+{# wf_updated_on: 2018-07-16 #}
 {# wf_published_on: 2018-06-29 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -13,45 +13,63 @@ description: The immersive web: augmented and virtual reality.
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+<p>The immersive web means using JavaScript APIs with an <a href="https://developers.google.com/ar/discover/supported-devices">ARCore compatible device</a> to create a range of 3D experiences in your browser.</p>
 
-The immersive web is using JavaScript APIs with a VR headset or a VR-capable device such as a [Daydream headset](/ar/discover/supported-devices) to create a range of 3D experiences in your browser.
+<p>The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of augmented reality in between.</p>
 
-The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of augmented reality in between.
+<p>
+  <img src="images/immersive-spectrum.png" alt="The immersive web spectrum">
+</p>
 
-![The immersive web spectrum](/web/fundamentals/immersive/images/immersive-spectrum.png)
+<p>A few preliminaries:</p>
+
+<ul>
+  <li><b><a href="status-requirments">Is the immersive web ready?</a></b> - Visit our status page for the latest cross-browser information about support and requirements for the immersive web.</li>
+  <li><b><a href="one-api">One API</a></b> - Learn how a single API and a single code path covers the entire spectrum immersive experiences.</li>
+  <li><b><a href="related-technologies">Related technologies</a></b> - To create immersive content, you'll need to use new APIs with existing technologies like WebGL and Web Audio.</li>
+</ul>
 
 <div class="clearfix"></div>
 
-## Support and availability
-
-Visit the [status and requirements page](/web/fundamentals/status-requirements) for details on support and availability.
-
-## One API for the spectrum
-
-## Creating immersive content
-
-To make WebVR content, you'll need to use new APIs, with existing technologies like [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial)
-and [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API),
-as well as accounting for different input types and headsets.
-
 <div class="attempt-left">
   <h3>Get Started with WebVR</h3>
-  <a href="getting-started-with-webvr">
-    <img src="./images/getting-started-with-webvr.jpg" alt="Get started with WebVR" />
+  <a href="get-started-with-webvr">
+    <img src="./images/getting-started-with-webvr.jpg" alt="Get started with the immersive web" />
   </a>
   <p>
-    Make a flying start with WebVR by taking a WebGL scene and adding VR APIs.<br>
-    <a href="./getting-started">Learn More</a>
+    Make a flying start with the immersive web by taking a WebGL scene and adding WebXR APIs.<br>
+    <a href="getting-started">Learn More</a>
   </p>
 </div>
 <div class="attempt-right">
   <h3>Add Input to a WebVR Scene</h3>
-  <a href="adding-input-to-a-webvr-scene">
-    <img src="./images/adding-input-to-a-webvr-scene.jpg" alt="Add input to a WebVR scene" />
+  <a href="add-input-to-a-webvr-scene">
+    <img src="./images/adding-input-to-a-webvr-scene.jpg" alt="Add input to an immersive scene" />
   </a>
   <p>
-    Interaction is a crucial part of providing an engaging and immersive experience.<br>
-    <a href="./adding-input">Get Started</a>
+    The immersive web should be engaging as well as immersive.<br>
+    <a href="add-input">Get Started</a>
+  </p>
+</div>
+
+<div class="attempt-left">
+  <h3>Keep track of performance</h3>
+  <a href="keep-track-of-performance">
+    <img src="images/oce.png" alt="Keep track of AR and VR performance" />
+  </a>
+  <p>
+    Bad performance means users won't return to your site. Worse yet, it can even make them sick.<br>
+    <a href="keep-track-of-performance">Learn More</a>
+  </p>
+</div>
+<div class="attempt-right">
+  <h3>Embrace progressive enhancement</h3>
+  <a href="embrace-progressive-enhancement">
+    <img src="http://via.placeholder.com/200x99" alt="Ensure all users can access your site" />
+  </a>
+  <p>
+    Without progressive enhancement users with older devices can't user your site.<br>
+    <a href="embrace-progressive-enhancement">Get Started</a>
   </p>
 </div>
 
@@ -61,31 +79,4 @@ as well as accounting for different input types and headsets.
 
 There are some excellent WebVR resources beginning to appear around the web.
 
-* TBD
-
-## Keep track of your performance
-
-<img src="images/oce.png" class="attempt-right" alt="WebVR Performance" />
-
 TBD
-
-## Embrace progressive enhancement
-
-<img src="images/touch-input.png" class="attempt-right"
-  alt="Use Progressive Enhancement to maximize reach" />
-
-What if your users don’t have a Head Mounted Display (‘HMD’) or a
-VR-capable device? The answer is progressive enhancement.
-
-1. Assume the user is using traditional input, such as a keyboard, mouse, or
-touchscreen with no access to a VR headset.
-2. Adapt to changes in input and headset availability at runtime.
-
-Thankfully the [WebVR API](https://immersive-web.github.io/webxr-reference/)
-makes it possible to detect changes in the VR environment and adapt to changes in the inputs and viewing options in the user’s device.
-
-By assuming a non-VR environment first you can maximize the reach of your
-experiences, and ensure that you’re providing the best possible experience no
-matter what setup your users have.
-
-For more, read our guide on [adding input to a WebVR scene](./adding-input-to-a-webvr-scene).
