@@ -1001,7 +1001,7 @@ to optimally load the web components polyfills. The loader
 uses feature detection to asynchronously load only the necessary pollyfills
 required by the browser.
 
-**Note** If your project transpiles to or uses ES5, be sure to see
+Note: If your project transpiles to or uses ES5, be sure to see
 the notes on including [custom-elements-es5-adapter.js](https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs) in addition to the polyfills.
 
 Install it:
@@ -1039,7 +1039,7 @@ Usage:
       });
     </script>
 
-**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+Note: the `:defined` CSS pseudo-class cannot be polyfilled.
 
 ## Conclusion
 
