@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What is really happening with "DOMException: The play() request was interrupted"?
 
-{# wf_updated_on: 2018-01-24 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-14 #}
 {# wf_tags: media,devtools #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -33,6 +33,7 @@ Here's some JavaScript code below that reproduces the "Uncaught (in promise)"
 error you're seeing:
 
 <span class="compare-worse">DON'T</span>
+
 ```html
 <video id="video" preload="none" src="https://example.com/file.mp4"></video>
 
@@ -80,6 +81,7 @@ started, meaning the code inside the `then()` will not execute until the media
 is playing.
 
 <span class="compare-better">Example: Autoplay</span>
+
 ```html
 <video id="video" preload="none" src="https://example.com/file.mp4"></video>
 
@@ -130,6 +132,7 @@ I'll tell you a secret. You don't have to use `video.play()`, you can use
 `video.load()` and here's how:
 
 <span class="compare-better">Example: Fetch & Play</span>
+
 ```html
 <video id="video"></video>
 <button id="button"></button>

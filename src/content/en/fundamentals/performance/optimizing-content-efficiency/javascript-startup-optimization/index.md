@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Keep your network transmission and parse/compile cost for JavaScript low to ensure pages get interactive quickly.
 
-{# wf_updated_on: 2018-01-12 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-11-30 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -118,7 +118,7 @@ can interact with your site. The more JavaScript you send, the longer it will
 take to parse and compile it before your site is interactive.
 
 > Byte-for-byte, **JavaScript is more expensive for the browser to process than
-> the equivalently sized image or Web Font **— Tom Dale
+> the equivalently sized image or Web Font** — Tom Dale
 
 Compared to JavaScript, there are numerous costs involved in processing
 equivalently sized images (they still have to be decoded!) but on average mobile

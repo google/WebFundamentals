@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2015-02-23 #}
-{# wf_published_on: 2015-02-23 #}
+{# wf_template: src/templates/shows/index.md #}
+{# wf_updated_on: 1900-01-01 #}
+{# wf_published_on: 1900-01-01 #}
 
 # Shows for Web Developers {: .page-title }
 
@@ -28,6 +29,7 @@ insights, and techniques to help you level up your web development skill!
 
 
 ### Want more? {: .hide-from-toc }
+
 <div class="attempt-right">
   <div class="g-ytsubscribe" data-channel="ChromeDevelopers" data-layout="full" data-count="default"></div>
 </div>
@@ -41,6 +43,7 @@ or our [RSS](/web/shows/rss.xml) or [ATOM](/web/shows/atom.xml) feeds.
 <div class="clearfix"></div>
 
 ## New In Chrome
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m" 
@@ -58,6 +61,7 @@ to go for more information.
 <div class="clearfix"></div>
 
 ## Totally Tooling Tips
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIB3ci6nwNyLYNU6RDOU3YyL" 
@@ -77,6 +81,7 @@ Totally Tooling Tears.
 <div class="clearfix"></div>
 
 ## A11ycasts with Rob Dodson
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g" 
@@ -100,6 +105,7 @@ accessibility problems and solutions to fix them.
 <div class="clearfix"></div>
 
 ## HTTP 203
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9" 
@@ -118,6 +124,7 @@ and be sure to check out the [Podcast](/web/shows/http203/podcast/)
 <div class="clearfix"></div>
 
 ## Supercharged
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr" 
@@ -137,6 +144,7 @@ workflow.
 <div class="clearfix"></div>
 
 ## Developer Diary with Paul Lewis
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J" 
@@ -154,6 +162,7 @@ as he builds the Chrome Dev Summit site.
 <div class="clearfix"></div>
 
 ## Polycasts
+
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video"
           src="//www.youtube.com/embed/videoseries?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo" 

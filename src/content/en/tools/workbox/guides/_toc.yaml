@@ -25,6 +25,8 @@ toc:
   path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
+- title: "Understanding Storage Quota"
+  path: /web/tools/workbox/guides/storage-quota
 - title: "Generate a Complete Service Worker"
   path: /web/tools/workbox/guides/generate-service-worker
   style: accordion
@@ -44,10 +46,9 @@ toc:
       path: /web/tools/workbox/guides/codelabs/gulp
     - title: "Workbox For npm Script"
       path: /web/tools/workbox/guides/codelabs/npm-script
-    # Needs updating to v3
-    # - title: "Build a PWA using Workbox"
-    #   path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
-    #   status: external
+    - title: "Build a PWA using Workbox"
+      path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
+      status: external
 - title: "Migrating to Workbox"
   style: accordion
   section:

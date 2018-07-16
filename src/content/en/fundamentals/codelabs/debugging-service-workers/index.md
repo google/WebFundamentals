@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-05-15 #}
+{# wf_updated_on: 2018-07-03 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -46,7 +46,7 @@ Because this code lab is focused on teaching you tools, feel free to stop at var
 * A text editor
 * Basic knowledge of HTML, CSS and JavaScript
 
-This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](/web/fundamentals/primers/service-worker/?hl=en) before proceeding.
+This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](/web/fundamentals/primers/service-worker/) before proceeding.
 
 
 ## Getting set up
@@ -68,7 +68,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
@@ -138,7 +138,7 @@ In the past, inspecting a Service Worker required poking around in Chrome intern
 
 The __Service Workers__ view provides information about Service Workers which are active in the current origin. Along the top row there are a series of checkboxes.
 
-* __Offline __- Will simulate being disconnected from the network. This can be useful to quickly verify that your Service Worker fetch handlers are working properly.
+* __Offline__ - Will simulate being disconnected from the network. This can be useful to quickly verify that your Service Worker fetch handlers are working properly.
 * __Update on reload__ - Will force the current Service Worker to be replaced by a new Service Worker (if the developer has made updates to their `service-worker.js`). Normally the browser will wait until a user closes all tabs that contain the current site before updating to a new Service Worker.
 * __Bypass for network__ - Will force the browser to ignore any active Service Worker and fetch resources from the network. This is extremely useful for situations where you want to work on CSS or JavaScript and not have to worry about the Service Worker accidentally caching and returning old files.
 * __Show all__ - Will show a list of all active Service Workers regardless of the origin.
@@ -441,7 +441,7 @@ The application will pause execution and switch panels over to __Sources__ where
 ![2f20258491acfaa8.png](img/2f20258491acfaa8.png)
 
 <aside markdown="1" class="key-point">
-<p><strong>Learn More</strong>: A full explanation of the <strong>Sources</strong> panel is outside the scope of this codelab but you can  <a href="/web/tools/chrome-devtools/debug/?hl=en">learn more about the debugging capabilities of the DevTools</a> on the Google Developers site.</p>
+<p><strong>Learn More</strong>: A full explanation of the <strong>Sources</strong> panel is outside the scope of this codelab but you can  <a href="/web/tools/chrome-devtools/debug/">learn more about the debugging capabilities of the DevTools</a> on the Google Developers site.</p>
 </aside>
 
 

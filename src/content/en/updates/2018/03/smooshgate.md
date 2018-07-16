@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What can #SmooshGate teach us about standards development and the Web Platform? This write-up gives an overview.
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -188,7 +188,7 @@ GitHub comment.
 TC39 operates on [a clear staging
 process](https://tc39.github.io/process-document/) for feature proposals.
 ECMAScript proposals and any major changes to them (including method
-renamings) are discussed during TC39 meetings, and need to be approved by the
+renaming) are discussed during TC39 meetings, and need to be approved by the
 entire committee before they become official. In the case of
 `Array.prototype.flatten`, the proposal has already gone through several
 stages of agreement, all the way up to Stage 3, indicating the feature is

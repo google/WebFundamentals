@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Enable Text Compression" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_blink_components: N/A #}
 
@@ -97,6 +97,7 @@ Lighthouse does not flag that response in the results.
 ## Feedback {: #feedback }
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var label = 'Text Compression / Helpful';
 var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
@@ -128,5 +129,6 @@ var feedback = {
   ]
 };
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}

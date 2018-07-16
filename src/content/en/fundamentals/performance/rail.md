@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2018-01-09 #}
+{# wf_updated_on: 2018-07-10 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 
@@ -11,6 +11,7 @@ description: RAIL is a user-centric performance model. Every web app has these f
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/developit.html" %}
 
 **RAIL** is a **user-centric** performance model that breaks down the user's
 experience into key actions. RAIL's [**goals** and **guidelines**](#goals-and-guidelines) aim to
@@ -91,20 +92,43 @@ fast Wi-Fi connection, so users have grown accustomed to a 1000ms loading experi
 mobile devices over slow 3G connections, loading in 5000ms is a more realistic goal, so mobile
 users are generally more patient.
 
-## Response: respond in under 50ms {: #response }
+## Response: process events in under 50ms {: #response }
 
 **Goal**: Complete a transition initiated by user input within 100ms. Users spend the majority
 of their time waiting for sites to respond to their input, not waiting for the sites to load.
 
 **Guidelines**:
 
-* Respond to user input within 50ms, or else the connection between action and
-  reaction is broken. This applies to most inputs, such as clicking buttons, toggling form
-  controls, or starting animations. This does not apply to touch drags or scrolls.
+* Process user input events within 50ms to ensure a visible response within 100ms,
+  otherwise the connection between action and reaction is broken. This applies to most
+  inputs, such as clicking buttons, toggling form controls, or starting animations.
+  This does not apply to touch drags or scrolls.
 * Though it may sound counterintuitive, it's not always the right call to respond to user
   input immediately. You can use this 100ms window to do other expensive work. But be
   careful not to block the user. If possible, do work in the background.
 * For actions that take longer than 50ms to complete, always provide feedback.
+
+**50ms or 100ms?:**
+
+The goal is respond to input in under 100ms, so why is our budget only 50ms?
+This is because there is generally other work being done in addition to input
+handling, and that work takes up part of the time available for acceptible input
+response. If an application is performing work in the recommended 50ms chunks
+during idle time, that means input can be queued for up to 50ms if it occurs
+during one of those chunks of work. Accounting for this, it's safe to assume
+only the remaining 50ms is available for actual input handling. This effect is
+visualized in the diagram below which shows how input received during an idle
+task is queued, reducing the available processing time:
+
+<figure>
+  <img src="images/rail-response-details.png"
+    alt="Diagram showing how input received during an idle task is queued,
+         reducing available input processing time to 50ms."/>
+  <figcaption>
+    <b>Figure 2</b>. How idle tasks affect input response budget.
+  </figcaption>
+</figure>
+
 
 ## Animation: produce a frame in 10ms {: #animation }
 
@@ -171,7 +195,7 @@ See [The Need For Mobile Speed: How Mobile Latency Impacts Publisher Revenue][NE
          To Interactive) represents a different phase of the user's perception of the loading
          experience"/>
   <figcaption>
-    <b>Figure 2</b>. Each loading metric represents a different phase of the user's perception of
+    <b>Figure 3</b>. Each loading metric represents a different phase of the user's perception of
     the loading experience
   </figcaption>
 </figure>
@@ -279,7 +303,7 @@ See [Get started](/web/tools/lighthouse/#get-started) to learn how to set up and
   <img src="images/lighthouse-performance.png"
     alt="An example Lighthouse report"/>
   <figcaption>
-    <b>Figure 3</b>. An example Lighthouse report
+    <b>Figure 4</b>. An example Lighthouse report
   </figcaption>
 </figure>
 
@@ -337,7 +361,7 @@ page loads on a real mid-range Android device with a slow 3G connection.
   <img src="images/wpt-report.png"
     alt="An example WebPageTest report"/>
   <figcaption>
-    <b>Figure 4</b>. An example WebPageTest report
+    <b>Figure 5</b>. An example WebPageTest report
   </figcaption>
 </figure>
 

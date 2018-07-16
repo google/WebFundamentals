@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2017-06-30 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
@@ -240,12 +240,14 @@ Not all steps are possible with Shaka Packager, so I'll use ffmpeg when I need t
 
     The `-key` and `-key_id` flags are copied from the `media.key` file.
 
-    ```packager \```<br/>
-    ```  input=myvideo.webm,stream=video,output=myvideo_video.webm \```<br/>
-    ```  input=myvideo.webm,stream=audio,output=myvideo_audio.webm \```<br/>
-    ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
-    ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
-    ```  --mpd_output myvideo_vod.mpd```
+    ```
+    packager \
+      input=myvideo.webm,stream=video,output=myvideo_video.webm \
+      input=myvideo.webm,stream=audio,output=myvideo_audio.webm \
+      --enable_fixed_key_encryption --enable_fixed_key_decryption \
+      -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \
+      --mpd_output myvideo_vod.mpd
+    ```
 
 ### DASH/mp4 with Shaka Packager
 

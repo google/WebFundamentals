@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2017-10-24 #}
 {# wf_tags: trusted-web-activity,chrome69 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -230,7 +230,7 @@ enable a button.)
 
 Opening the Trusted Web activity is implemented in the `openTwa` method. The API
 allows us to pass our own `CustomTabsIntent` so we can change start and exit
-animations. Customising animations is mostly relevant for applications opening
+animations. Customizing animations is mostly relevant for applications opening
 Trusted Web activities from an existing activity.
 
 ```

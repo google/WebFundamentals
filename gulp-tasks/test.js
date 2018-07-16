@@ -549,6 +549,9 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('SKIP_TYPOS') >= 0) {
       global.WF.options.skipTypos = true;
     }
+    if (ciFlags.indexOf('TEMPLATE_TAGS') >= 0) {
+      global.WF.options.ignoreTemplateTags = true;
+    }
   });
 });
 
@@ -570,6 +573,8 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
     gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
+    gutil.log(' ', chalk.cyan('--ignoreTemplateTags'),
+      'Skips template tag check ({{)');
     gutil.log(' ', chalk.cyan('--ignoreMissingFeedWidget'),
       'Skips feed widget check on updates');
     gutil.log(' ', chalk.cyan('--skipTypos'), 'Skips common typo checks');
@@ -584,6 +589,7 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreFileSize = true;
     global.WF.options.ignorePermissions = true;
     global.WF.options.ignoreLastUpdated = true;
+    global.WF.options.ignoreTemplateTags = true;
     global.WF.options.ignoreCommentWidget = true;
     global.WF.options.ignoreMissingFeedWidget = true;
     global.WF.options.hideIgnored = true;
@@ -598,6 +604,12 @@ gulp.task('test', ['test:travis-init'], function() {
     commonTypos: parseYAML(COMMON_TYPOS_FILE, readFile(COMMON_TYPOS_FILE)),
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
   };
+
+  // Test master
+  if (global.WF.options.testMaster) {
+    let msg = `${chalk.cyan('--testMaster')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+  }
 
   // Test all files
   if (global.WF.options.testAll) {
@@ -676,6 +688,13 @@ gulp.task('test', ['test:travis-init'], function() {
     let msg = `${chalk.cyan('--ignoreLastUpdated')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.lastUpdateMaxDays = false;
+  }
+
+  // Supress template tag ({{}}) checks
+  if (global.WF.options.ignoreTemplateTags) {
+    let msg = `${chalk.cyan('--ignoreTemplateTags')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreTemplateTags = true;
   }
 
   // Hide ignored file warning

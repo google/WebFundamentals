@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2018-04-17 #}
+{# wf_updated_on: 2018-07-11 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -994,37 +994,52 @@ To feature detect custom elements, check for the existence of
 #### Polyfill {: #polyfill}
 
 Until browser support is widely available, there's a
-[polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)
-available.
+[standalone polyfill](https://github.com/webcomponents/custom-elements/)
+available for Custom Elements v1. However, we recommend using the [webcomponents.js
+loader](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
+to optimally load the web components polyfills. The loader
+uses feature detection to asynchronously load only the necessary pollyfills
+required by the browser.
 
-**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+Note: If your project transpiles to or uses ES5, be sure to see
+the notes on including [custom-elements-es5-adapter.js](https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs) in addition to the polyfills.
 
 Install it:
 
-    bower install --save webcomponents/custom-elements
+    npm install --save @webcomponents/webcomponentsjs
 
 Usage:
 
+    <!-- Use the custom element on the page. -->
+    <my-element></my-element>
 
-    function loadScript(src) {
-     return new Promise(function(resolve, reject) {
-       const script = document.createElement('script');
-       script.src = src;
-       script.onload = resolve;
-       script.onerror = reject;
-       document.head.appendChild(script);
-     });
-    }
+    <!-- Load polyfills; note that "loader" will load these async -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
 
-    // Lazy load the polyfill if necessary.
-    if (!supportsCustomElementsV1) {
-      loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
-        // Polyfill loaded.
+    <!-- Load a custom element definitions in `waitFor` and return a promise -->
+    <script type="module"> 
+      function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+    
+      WebComponents.waitFor(() => {
+        // At this point we are guaranteed that all required polyfills have
+        // loaded, and can use web components APIs.
+        // Next, load element definitions that call `customElements.define`.
+        // Note: returning a promise causes the custom elements
+        // polyfill to wait until all definitions are loaded and then upgrade
+        // the document in one batch, for better performance.
+        return loadScript('my-element.js');
       });
-    } else {
-      // Native support. Good to go.
-    }
+    </script>
 
+Note: the `:defined` CSS pseudo-class cannot be polyfilled.
 
 ## Conclusion
 

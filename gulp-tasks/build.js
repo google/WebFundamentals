@@ -27,13 +27,21 @@ const wfTemplateHelper = require('./wfTemplateHelper');
  * @param {!Object} options
  */
 function generateFeedsForEveryYear(files, options) {
+  // Build RSS feed per year.
+  //  Check if we will build the full RSS feeds.
+  if (!global.WF.options.buildRSS) {
+    return;
+  }
+
   const filesByYear = wfHelper.splitByYear(files);
 
   Object.keys(filesByYear)
     .filter((year) => year >= global.WF.minFeedDate)
     .forEach((year) => {
       const opts = Object.assign({}, options);
-      wfTemplateHelper.generateFeeds(filesByYear[year], Object.assign(opts, {
+      // Sort items by date published, reduce churn in annual feeds
+      const filesForYear = filesByYear[year].sort(wfHelper.publishedComparator);
+      wfTemplateHelper.generateFeeds(filesForYear, Object.assign(opts, {
         year,
         outputPath: path.join(opts.outputPath, year),
         title: `${options.title} (${year})`,
@@ -334,9 +342,6 @@ gulp.task('build:updates', function() {
     options.year = year;
     options.title = `Web Updates (${year})`;
     wfTemplateHelper.generateListPage(filesByYear[year], options);
-    wfTemplateHelper.generateFeeds(
-        filesByYear[year], Object.assign({maxItems: 100}, options));
-    options.title = year;
     wfTemplateHelper.generateTOCbyMonth(filesByYear[year], options);
   });
   options = {
@@ -352,6 +357,14 @@ gulp.task('build:updates', function() {
   const outFile = path.join(
     global.WF.src.content, '_index-latest-updates.html');
   wfTemplateHelper.renderTemplate(template, context, outFile);
+
+  options = {
+    title: 'Updates',
+    description: description,
+    section: section,
+    outputPath: baseOutputPath,
+  };
+  generateFeedsForEveryYear(files, options);
 });
 
 /**

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
-{# wf_updated_on: 2018-06-22 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2018-06-15 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
@@ -49,13 +49,13 @@ With these, you can dive into the demos or try out our codelab.
 
 Note: Some of the Immersive Web Community Group's
 [existing demos](https://immersive-web.github.io/webxr-samples/),
-specfically the ones using magic windows, do not work with the WebXR Hit Test
+specifically the ones using magic windows, do not work with the WebXR Hit Test
 turned on. Please excuse our construction debris.
 
 -  [Chacmool](https://web-education-ar-demo.appspot.com/)
 -  [Immersive Web](https://immersive-web.github.io/webxr-samples/proposals/phone-ar-hit-test.html)
    Sample
--  [Codelab](https://immersive-web.github.io/webxr-samples/phone-ar-hit-test.html)
+-  [Codelab](https://codelabs.developers.google.com/codelabs/ar-with-webxr/#0)
 
 ## It's just the web
 

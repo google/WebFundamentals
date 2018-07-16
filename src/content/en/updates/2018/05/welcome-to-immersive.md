@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-22 #}
+{# wf_updated_on: 2018-06-25 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -101,7 +101,7 @@ spectrum of immersive experiences. It's available in the previously mentioned
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
 **Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities are
-expected in Chorme 69 so I hope to tell you about them soon.
+expected in Chrome 69 so I hope to tell you about them soon.
 
 There's more to this new API than I can go to in an article like this. I want
 to give you enough to start making sense of the [WebXR

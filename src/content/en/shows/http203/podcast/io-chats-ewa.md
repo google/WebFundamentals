@@ -1,17 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: How Chrome began.
+description: Getting performance right.
 
-{# wf_updated_on: 2018-06-19 #}
+{# wf_updated_on: 2018-06-29 #}
 {# wf_published_on: 2018-06-19 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-ewa.mp3 #}
 {# wf_podcast_duration: 00:15:46 #}
 {# wf_podcast_fileSize: 10325312 #}
-{# wf_podcast_subtitle: How Chrome began. #}
+{# wf_podcast_subtitle: Getting performance right. #}
 {# wf_featured_image: /web/shows/http203/podcast/images/io.jpg #}
 {# wf_blink_components: Blink>DOM #}
 
-# I/O chat with Darin Fisher {: .page-title }
+# I/O chat with Ewa Gasperowicz {: .page-title }
 
 <img src="/web/shows/http203/podcast/images/io.jpg" class="attempt-right">
 
