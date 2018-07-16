@@ -13,19 +13,20 @@ description: The immersive web: augmented and virtual reality.
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-<p>The immersive web means using JavaScript APIs with an <a href="https://developers.google.com/ar/discover/supported-devices">ARCore compatible device</a> to create a range of 3D experiences in your browser.</p>
+The immersive web means using JavaScript APIs with an <a href="https://developers.google.com/ar/discover/supported-devices">ARCore compatible device</a> to create a range of 3D experiences in your browser.
 
-<p>The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of augmented reality in between.</p>
+The immersive web includes a spectrum of experiences from complete reality to completely immersive, with various levels of augmented reality in between. To support this spectrum the [WebXR Device API](https://immersive-web.github.io/webxr-reference/webxr-device-api/) is designed such that a single code path is used regardless of the degree of immersion you want to create.
 
 <p>
   <img src="images/immersive-spectrum.png" alt="The immersive web spectrum">
 </p>
 
+
+
 <p>A few preliminaries:</p>
 
 <ul>
   <li><b><a href="status-requirments">Is the immersive web ready?</a></b> - Visit our status page for the latest cross-browser information about support and requirements for the immersive web.</li>
-  <li><b><a href="one-api">One API</a></b> - Learn how a single API and a single code path covers the entire spectrum immersive experiences.</li>
   <li><b><a href="related-technologies">Related technologies</a></b> - To create immersive content, you'll need to use new APIs with existing technologies like WebGL and Web Audio.</li>
 </ul>
 

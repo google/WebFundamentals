@@ -8,4 +8,4 @@ description: Get the latest info on WebVR and AR's status, as well as things to 
 
 # Is the immersive web ready? {: .page-title }
 
-TBD - This will be a radically different version of [this page](https://developers.google.com/web/fundamentals/vr/status/) which is being worked on in another project.
+TBD - This will be a radically different version of [this page](/web/fundamentals/vr/status/) which is being worked on in another project.
