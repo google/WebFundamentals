@@ -167,6 +167,16 @@ sure it’s truly removed from the keyboard flow. The proposed [inert
 attribute](https://github.com/WICG/inert) aims to make this easier by combining
 the behavior of both attributes.
 
+## Interactive elements like links and buttons should indicate their purpose and state
+
+Providing visual hints about what an element does helps people operate and navigate a site or app. In user experience this is called affordance. Providing affordance makes it possible for people to use a site on a wide variety of devices.
+
+###Key points
+
+- Interactive elements, like links and buttons, should be distinguishable from non-interactive elements. It is difficult for users to navigate a site or app when they cannot tell if an element is clickable. There are many valid methods to accomplish this goal. One common practice is underlying links to differentiate them from their surrounding text.
+
+- Similar to the focus requirement, interactive elements like links and buttons require a hover state for mouse users so they know if they are hovering over something clickable.  However, the interactive element still must be distinguishable on its own. Relying on a hover state alone to indicate clickable elements does not help touch screen devices.
+
 ## Take advantage of headings and landmarks
 <img src="imgs/ic_map_black_24px.svg" class="attempt-right" alt="" width="100"/>
 
