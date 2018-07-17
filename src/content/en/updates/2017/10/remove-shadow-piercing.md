@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Say goodbye to shadow-piercing CSS selectors.
 
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2017-10-24 #}
 {# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals,chrome63 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}

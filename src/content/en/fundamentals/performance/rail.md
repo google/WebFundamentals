@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in different ways: Response, Animation, Idle, Load.
 
-{# wf_updated_on: 2018-07-10 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2015-06-07 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime,Blink>Input #}
 

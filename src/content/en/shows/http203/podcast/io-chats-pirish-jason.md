@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: What's new in DevTools.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-07-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-pirish-jason.mp3 #}
 {# wf_podcast_duration: 00:19:13 #}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 67 on desktop has a new feature called Site Isolation* enabled by default. This article explains what Site Isolation is all about, why it’s necessary, and why web developers should be aware of it.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-07-11 #}
 {# wf_tags: security #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}

@@ -2,7 +2,9 @@ toc:
   - title: Designer Vs Developer
     section:
     - title: 'Podcast'
-      section:
+      section:        
+      - title: 'Designing a VR game in a week'
+        path: /web/shows/designer-vs-developer/podcast/DVDS3E06-how-to-design-a-vr-game        
       - title: 'Using the Gestalt principles to improve your designs'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E05-using-the-gestalt-principles
       - title: 'Creative ways of prototyping & scenario based design'

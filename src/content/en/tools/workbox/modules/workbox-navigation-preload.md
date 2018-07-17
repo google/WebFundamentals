@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-navigation-preload.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-07-12 #}
 
 # Workbox Navigation Preload {: .page-title }

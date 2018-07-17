@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2018-06-18 #}
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_featured_image: /web/updates/images/generic/webaudio.png #}
 {# wf_tags: chrome68,webaudio,worklet #}
 {# wf_featured_snippet: Advanced design patterns to unlock AudioWorklet's fullest power with WebAssembly and SharedArrayBuffer. #}

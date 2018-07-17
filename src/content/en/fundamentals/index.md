@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 page_type: landing
 
-{# wf_updated_on: 2017-09-10 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2016-09-27 #}
 
 <style>
