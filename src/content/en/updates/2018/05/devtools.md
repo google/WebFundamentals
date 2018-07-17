@@ -23,7 +23,7 @@ New to DevTools in Chrome 68:
 * [Argument hints](#hints). As you type functions, the Console shows you the expected arguments
   for that function.
 * [Function autocompletion](#autocomplete). After typing a function call such as
-  `document.querySelector('p')`, the Console shows you the the functions and properties that
+  `document.querySelector('p')`, the Console shows you the functions and properties that
   the return value supports.
 * [ES2017 keywords in the Console](#keywords). Keywords such as `await` are now available in the
   Console's autocomplete UI.
@@ -230,8 +230,8 @@ Was this page helpful?
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what we're
-        doing well, or how we can improve.
+        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
+        we're doing well, or how we can improve.
       </aside>
     </section>
     <section class="expandable">
@@ -255,8 +255,8 @@ Was this page helpful?
         Yes
       </button>
       <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what we're
-        doing well, or how we can improve.
+        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
+        we're doing well, or how we can improve.
       </aside>
     </section>
     <section class="expandable">
