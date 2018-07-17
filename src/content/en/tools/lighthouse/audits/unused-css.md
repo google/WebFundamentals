@@ -23,9 +23,26 @@ Using a [`<link>`][link]{: .external } tag is a common way to add styles to a pa
 The `main.css` file that the browser downloads is known as an *external stylesheet*, because it's
 stored separately from the HTML that uses it.
 
-Since CSS affects the style and layout of DOM nodes, the browser must download, parse, and
-process all CSS that a page uses before it can show any content on a user's screen. Displaying
-content is also known as *rendering*.
+Since CSS affects the style and layout of [DOM][DOM]{: .external } nodes, the browser must
+download, parse, and process all CSS that a page uses before it can show any content on a
+user's screen. Displaying content is usually called *rendering*.
+
+[DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+Suppose `main.css` is a huge file, but your HTML page only uses one
+[ruleset][ruleset]{: .external } from the file. Unfortunately, the browser doesn't know
+that your page only needs one ruleset from the file. Instead, it downloads the entire huge file,
+parses all of its rulesets, and checks if any of those rulesets apply to the HTML
+nodes on your page.
+
+[ruleset]: https://css-tricks.com/css-ruleset-terminology/
+
+Downloading, parsing, and processing CSS rulesets all slow down your page load time. You can
+speed up your page load time by *only* shipping the CSS that you need in order to load the page.
+This CSS is sometimes called the *critical CSS*. Other CSS that *might* be used later, as
+the user interacts with the page, should be deferred.
+
+TODO add "does this make sense?" feedback here
 
 ## Recommendations {: #recommendations }
 
