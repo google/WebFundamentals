@@ -11,7 +11,7 @@ description: En hizli ve en iyi optimize edilmiş kaynak, gönderilmemiş kaynak
 
 
 
-En hizli ve en iyi optimize edilmiş kaynak, gönderilmemiş kaynaktır. Kaynaklarınızı yakın zamanda denetlediniz mi? Denetlemelisiniz ve bunu, her bir kaynağın daha iyi bir kullanici deneyimi saglamaya yardimci oldugundan emin olmak için periyodik bir şekilde yapmalisiniz.
+En hızlı ve en iyi optimize edilmiş kaynak, gönderilmemiş kaynaktır. Kaynaklarınızı yakın zamanda denetlediniz mi? Denetlemelisiniz ve bunu, her bir kaynağın daha iyi bir kullanıcı deneyimi sağlamaya yardımcı olduğundan emin olmak için periyodik bir şekilde yapmalısınız.
 
 
 ### TL;DR {: .hide-from-toc }
