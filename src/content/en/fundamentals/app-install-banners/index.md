@@ -120,7 +120,7 @@ they accepted the prompt, you can listen for the `appinstalled` event.
       app.logEvent('a2hs', 'installed');
     });
 
-## Detecting if you app is launched from the home screen {: #detect-mode }
+## Detecting if your app is launched from the home screen {: #detect-mode }
 
 ### `display-mode` media query
 
