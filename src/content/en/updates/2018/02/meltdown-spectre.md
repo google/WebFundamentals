@@ -2,19 +2,19 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Implications for Web Developers and Chrome’s mitigations.
 
-{# wf_updated_on: 2018-02-06 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-02-06 #}
 {# wf_tags: security #}
 {# wf_featured_image: /web/updates/images/generic/encryption.png #}
 {# wf_featured_snippet: Implications for Web Developers and Chrome’s mitigations. #}
 {# wf_blink_components: Blink #}
 
-
 # Meltdown/Spectre {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
 ## Overview
+
 On January 3rd [Project Zero
 revealed](https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html)
 vulnerabilities in modern CPUs that a process can use to read (at worst)
@@ -24,6 +24,7 @@ and [Meltdown](https://meltdownattack.com/meltdown.pdf). What is Chrome doing to
 help keep the web secure, and what should web developers do for their own sites?
 
 ## TL; DR
+
 As a **user browsing the web**, you should make sure you keep your operating
 system and your browser updated. In addition, Chrome users can consider enabling
 [Site Isolation](https://support.google.com/chrome/answer/7623121).
@@ -32,12 +33,13 @@ If you are a **web developer**, the [Chrome team
 advises](https://www.chromium.org/Home/chromium-security/ssca):
 
 * Where possible, prevent cookies from entering the renderer process' memory by
-  using the SameSite and HTTPOnly cookie attributes, and by avoiding reading
-  from document.cookie.
+  using the `SameSite` and `HTTPOnly` cookie attributes, and by avoiding reading
+  from `document.cookie`.
 * Make sure your MIME types are correct and specify an `X-Content-Type-Options:
   nosniff` header for any URLs with user-specific or sensitive content, to get
-  the most out of cross-site document blocking for users who have Site Isolation
-  enabled.
+  the most out of [Cross-Origin Read
+  Blocking](/web/updates/2018/07/site-isolation#corb) for users who have Site
+  Isolation enabled.
 * Enable [Site
   Isolation](https://www.chromium.org/Home/chromium-security/site-isolation) and
   [let the Chrome team know](http://crbug.com/new) if it causes problems for
@@ -46,6 +48,7 @@ advises](https://www.chromium.org/Home/chromium-security/ssca):
 If you are wondering _why_ these steps help, read on!
 
 ## The risk
+
 There have been a wide variety of explanations of these vulnerabilities, so I am
 not going to add yet another one. If you are interested in how these
 vulnerabilities can be exploited, I recommend taking a look at the [blog
@@ -61,9 +64,11 @@ use these new vulnerabilities to read that user data.
 
 
 ## Mitigations
+
 There are multiple efforts the Chrome and V8 engineering team is deploying to mitigate this threat.
 
 ### Site Isolation
+
 The impact of successfully exploiting Spectre can be greatly reduced by
 preventing sensitive data from ever sharing a process with attacker-controlled
 code. The Chrome team has been working on a feature to achieve this called
@@ -88,7 +93,13 @@ remains functional. If you’d like to opt-in now, enable
 please help us by [filing a bug](https://crbug.com/new) and mention that you
 have Site Isolation enabled.
 
-### Cross-site document blocking
+### Cross-Site Document Blocking
+
+Note: After the publication of this document, Cross-Site Document Blocking was
+renamed to [Cross-Origin Read
+Blocking](/web/updates/2018/07/site-isolation#corb). These two terms refer to
+the same concept.
+
 Even when all cross-site pages are put into separate processes, pages can still
 legitimately request some cross-site subresources, such as images and
 JavaScript. To help prevent sensitive information from leaking this information,
@@ -98,7 +109,7 @@ feature that limits which network responses are delivered to the renderer
 process.
 
 A website can request two types of data from a server: “documents” and
-“resources”. Here, documents are HTML, XML, JSON and TXT files. A website is
+“resources”. Here, documents are HTML, XML, JSON, and text files. A website is
 able to receive documents from its own domain or from other domains with
 permissive CORS headers. Resources include things like images, JavaScript, CSS
 and fonts. Resources can be included from any site.
@@ -107,7 +118,7 @@ The cross-site document blocking policy prevents a process from receiving
 “documents” from other origins if:
 
 1. They have an HTML, XML, JSON, or text/plain MIME type, and
-1. They have either a "X-Content-Type-Options: nosniff" HTTP response header, or
+1. They have either a `X-Content-Type-Options: nosniff` HTTP response header, or
    a quick content analysis (“[sniffing](https://mimesniff.spec.whatwg.org/)”)
    confirms that the type is correct
 1. CORS doesn’t explicitly allow access to the document
@@ -137,6 +148,7 @@ If you want to try cross-site document blocking, opt-in to Site Isolation as
 described above.
 
 ### `SameSite` cookies
+
 Let’s go back to the example above: `<img
 src="https://yourbank.com/balance.json">`. This only works if yourbank.com has
 stored a cookie that automatically logs the user in. Cookies typically get sent
@@ -148,6 +160,7 @@ and Firefox 58+ support this
 attribute](https://caniuse.com/#feat=same-site-cookie-attribute).
 
 ### `HTTPOnly` and `document.cookie`
+
 If your site's cookies are only used server-side, not by client JavaScript,
 there are ways you can stop the cookie's data from entering the renderer
 process. You can set the [`HTTPOnly`](https://www.owasp.org/index.php/HttpOnly)
@@ -158,6 +171,7 @@ data to the rendered process by not reading `document.cookie` unless absolutely
 necessary.
 
 ### Open External Links Using `rel="noopener"`
+
 When you link to another page using `target="_blank"`, the opened page [has
 access to your `window` object](https://mathiasbynens.github.io/rel-noopener/),
 can navigate your page to a different URL, and without Site Isolation will be in
@@ -166,6 +180,7 @@ pages that open in a new window should always [specify
 `rel="noopener"`](/web/tools/lighthouse/audits/noopener).
 
 ### High-resolution timers
+
 To exploit Meltdown or Spectre, an attacker needs to measure how long it takes
 to read a certain value from memory. For this, a reliable and accurate timer is
 needed.
@@ -183,13 +198,17 @@ reads this counter and uses that as a timer. For the time being browsers have
 decided to disable SharedArrayBuffer until other mitigations are in place.
 
 ### V8
+
 To exploit Spectre, a specifically crafted sequence of CPU instructions is
-needed. The V8 team has implemented mitigations for known attack proofs of
-concept, and is working on changes in TurboFan, their optimizing compiler, that
-make its generated code safe even when these attacks are triggered. However,
-these code generation changes may come at a performance penalty.
+needed. [The V8 team has implemented
+mitigations](https://github.com/v8/v8/wiki/Untrusted-code-mitigations) for
+known attack proofs of concept, and is working on changes in TurboFan, their
+optimizing compiler, that make its generated code safe even when these attacks
+are triggered. However, these code generation changes may come at a performance
+penalty.
 
 ## Keeping the web safe
+
 There has been a lot of uncertainty around the discovery of Spectre and Meltdown
 and their implications. I hope this article shed some light on what the Chrome
 and V8 teams are doing to keep the web platform safe, and how web developers can

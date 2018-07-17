@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -120,7 +120,7 @@ they accepted the prompt, you can listen for the `appinstalled` event.
       app.logEvent('a2hs', 'installed');
     });
 
-## Detecting if you app is launched from the home screen {: #detect-mode }
+## Detecting if your app is launched from the home screen {: #detect-mode }
 
 ### `display-mode` media query
 

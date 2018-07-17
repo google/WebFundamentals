@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -41,8 +41,8 @@ that the site loads slowly. Tony has asked you to help him speed the site up.
 Whenever you set out to improve a site's load performance, **always start with an audit**.
 The audit has 2 important functions:
 
-* It creates a baseline for you to measure subsequent changes against.
-* It gives you actionable tips on what changes will have the most impact.
+* It creates a **baseline** for you to measure subsequent changes against.
+* It gives you **actionable tips** on what changes will have the most impact.
 
 ### Set up {: #setup }
 
@@ -124,7 +124,24 @@ The baseline is a record of how the site performed before you made any performan
        </figcaption>
      </figure>
 
-1. Match your audit configuration settings to those in **Figure 8**.
+1. Match your audit configuration settings to those in **Figure 7**. Here's an explanation of
+   the different options:
+
+     * **Device**. Setting to **Mobile** changes the user agent string and simulates a mobile viewport.
+       Setting to **Desktop** pretty much just disables the **Mobile** changes.
+     * **Audits**. Disabling a category prevents the Audits panel from running those audits, and
+       excludes those audits from your report. You can leave the other categories enabled, if you want
+       to see the types of recommendations they provide. Disabling categories slightly speeds up the
+       auditing process.
+     * **Throttling**. Setting to **Simulated Fast 3G, 4x CPU Slowdown** simulates the typical conditions
+       of browsing on a mobile device. It's called "simulated" because the Audits panel doesn't actually
+       throttle during the auditing process. Instead, it just extrapolates how long the page would take
+       to load under mobile conditions. The **Applied...** setting, on the other hand, actually throttles your
+       CPU and network, with the tradeoff of a longer auditing process.
+     * **Clear Storage**. Enabling this checkbox clears all storage associated with the page before every audit.
+       Leave this setting on if you want to audit how first-time visitors experience your site. Disable this
+       setting when you want the repeat-visit experience.
+
 1. Click **Run Audits**. After 10 to 30 seconds, the Audits panel shows you a report of the site's
    performance.
 
@@ -138,7 +155,9 @@ The baseline is a record of how the site performed before you made any performan
 #### Handling report errors {: #errors }
 
 If you ever get an error in your Audits panel report, try running the demo tab from an
-[incognito window][incognito]{:.external} with no other tabs open.
+[incognito window][incognito]{:.external} with no other tabs open. This ensures that
+you're running Chrome from a clean state. Chrome Extensions in particular often interfere
+with the auditing process.
 
 <figure>
   <img src="imgs/error.png" alt="A report that errored."/>
@@ -164,9 +183,8 @@ make changes to the code, you should see this number rise. A higher score means 
 The **Metrics** section provides quantitative measurements of the site's performance. Each metric
 provides insight into a different aspect of the performance. For example, **First Contentful Paint**
 tells you when content is first painted to the screen, which is an important milestone in the user's
-perception of the page load, whereas **First CPU Idle** marks when the main thread is quiet enough
-to handle user input, which is essentially a proxy for when the user can first interact with the
-page.
+perception of the page load, whereas **Time To Interactive** marks the point at which the page
+appears ready enough to handle user interactions.
 
 <figure>
   <img src="imgs/metrics.png" alt="The Metrics section."/>
@@ -489,9 +507,9 @@ The first task, then, is to find code that doesn't need to be executed on page l
 
      <figure>
        <img src="imgs/commandmenu.png" 
-            alt="Opening the Command Menu from the Coverage tab."/>
+            alt="Opening the Command Menu from the Audits panel."/>
        <figcaption>
-         <b>Figure 30</b>. Opening the Command Menu from the Coverage tab
+         <b>Figure 30</b>. Opening the Command Menu from the Audits panel
        </figcaption>
      </figure>
 
