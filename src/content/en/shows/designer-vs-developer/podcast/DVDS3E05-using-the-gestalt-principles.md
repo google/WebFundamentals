@@ -18,8 +18,8 @@ challenges faced in the industry by opening a conversation between
 the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
-Mustafa speaks to Sven Laqua, Head of UX at Digital Science, about 
-designing motion, HCI, eye tracking and the Gestalt principles. 
+Mustafa speaks to Sven Laqua, Head of UX at Digital Science, about
+designing motion, HCI, eye tracking and the Gestalt principles.
 
 <img
 src="/web/shows/designer-vs-developer/podcast/images/dvd-s03-e05-cover.jpg"
@@ -37,8 +37,7 @@ In this episode:
 * [Universal Principles of Design](http://bit.ly/2IGUJrG){: .external}.
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS3E05-using-gestalt-principles.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E05-using-gestalt-principles.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
