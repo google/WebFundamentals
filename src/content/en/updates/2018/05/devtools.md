@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.
 experiments_path: /web/updates/2018/05/_experiments.yaml
 
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_tags: chrome68,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -15,8 +15,6 @@ experiments_path: /web/updates/2018/05/_experiments.yaml
 # What's New In DevTools (Chrome 68) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-Note: The video version of these release notes will be published around late July 2018.
 
 New to DevTools in Chrome 68:
 
@@ -40,6 +38,14 @@ New to DevTools in Chrome 68:
 Note: Check what version of Chrome you're running at `chrome://version`. If you're running
 an earlier version, these features won't exist. If you're running a later version, these features
 may have changed. Chrome auto-updates to a new major version about every 6 weeks.
+
+Read on, or watch the video version of the release notes, below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="br4JZ5qz_20"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Assistive Console {: #console }
 
