@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Soledad Penadés talks about CSS Grid and tools
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-14 #}
+{# wf_updated_on: 2018-07-18 #}
 {# wf_published_on: 2018-05-01 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3 #}
 {# wf_podcast_duration: 00:18:32 #}
@@ -37,8 +37,7 @@ In this episode:
 * [Progressive Web Apps](https://muss.me/2vZIrJR){: .external}.
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E01-Designing-for-CSS-Grid-with-Soledad-Penade%CC%81s.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
