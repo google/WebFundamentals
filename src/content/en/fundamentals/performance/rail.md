@@ -300,7 +300,7 @@ The following DevTools features are especially relevant:
 See [Get started](/web/tools/lighthouse/#get-started) to learn how to set up and run Lighthouse.
 
 <figure>
-  <img src="images/lighthouse-performance.png"
+  <img src="images/lighthouse-performance.jpg"
     alt="An example Lighthouse report"/>
   <figcaption>
     <b>Figure 4</b>. An example Lighthouse report
@@ -318,9 +318,8 @@ The following audits are especially relevant:
       device, reducing time spent fetching resources over the network.
     * [Page Load Is Fast Enough On 3G][3G].
     * [First Meaningful Paint][FMP]. Measures when the page appears meaningfully complete.
-    * [First Interactive][FI]. Measures when a user can first interact with some page elements.
-    * [Consistently Interactive][CI]. Measures when a user can consistently interact with all
-      page elements.
+    * [First CPU Idle][FCI]. Marks the first time at which the page's main thread is quiet enough to handle input.
+    * [Time To Interactive][TTI]. Measures when a user can consistently interact with all page elements.
     * [Perceptual Speed Index][PSI].
     * [Reduce Render-Blocking Resources][RB].
     * [Offscreen Images][OI]. Defer the loading of offscreen images until they're needed.
@@ -339,8 +338,8 @@ The following audits are especially relevant:
 [SW]: /web/tools/lighthouse/audits/registered-service-worker
 [3G]: /web/tools/lighthouse/audits/fast-3g
 [FMP]: /web/tools/lighthouse/audits/first-meaningful-paint
-[FI]: /web/tools/lighthouse/audits/first-interactive
-[CI]: /web/tools/lighthouse/audits/consistently-interactive
+[FCI]: /web/tools/lighthouse/audits/first-interactive
+[TTI]: /web/tools/lighthouse/audits/consistently-interactive
 [PSI]: /web/tools/lighthouse/audits/speed-index
 [RB]: /web/tools/lighthouse/audits/blocking-resources
 [OI]: /web/tools/lighthouse/audits/offscreen-images
