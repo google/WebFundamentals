@@ -169,7 +169,7 @@ the behavior of both attributes.
 
 ## Interactive elements like links and buttons should indicate their purpose and state
 
-Providing visual hints about what an element does helps people operate and navigate a site or app. In user experience this is called affordance. Providing affordance makes it possible for people to use a site on a wide variety of devices.
+Providing visual hints about what a control will do helps people operate and navigate your site. These hints are called affordances. Providing affordances makes it possible for people to your site on a wide variety of devices.
 
 ###Key points
 
