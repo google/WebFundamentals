@@ -319,7 +319,7 @@ The following audits are especially relevant:
     * [Page Load Is Fast Enough On 3G][3G].
     * [First Meaningful Paint][FMP]. Measures when the page appears meaningfully complete.
     * [First CPU Idle][FCI]. Marks the first time at which the page's main thread is quiet enough to handle input.
-    * [Time To Interactive][TTI]. Measures when a user can consistently interact with all page elements.
+    * [Time To Interactive][TTImetric]. Measures when a user can consistently interact with all page elements.
     * [Perceptual Speed Index][PSI].
     * [Reduce Render-Blocking Resources][RB].
     * [Offscreen Images][OI]. Defer the loading of offscreen images until they're needed.
@@ -339,7 +339,7 @@ The following audits are especially relevant:
 [3G]: /web/tools/lighthouse/audits/fast-3g
 [FMP]: /web/tools/lighthouse/audits/first-meaningful-paint
 [FCI]: /web/tools/lighthouse/audits/first-interactive
-[TTI]: /web/tools/lighthouse/audits/consistently-interactive
+[TTImetric]: /web/tools/lighthouse/audits/consistently-interactive
 [PSI]: /web/tools/lighthouse/audits/speed-index
 [RB]: /web/tools/lighthouse/audits/blocking-resources
 [OI]: /web/tools/lighthouse/audits/offscreen-images
