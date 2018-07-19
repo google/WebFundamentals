@@ -34,12 +34,12 @@ hacked pages to different 3rd parties. Often the hacked pages will also
 redirect visitors to an unrelated page, like a porn site where hackers can
 earn money.
 
-<img src="/webmasters/images/CloakedKeywordHackExampleSearch.png" class="attempt-right">
+<img src="images/CloakedKeywordHackExampleSearch.png" class="attempt-right">
 
 <<_fixing-identify.md>>
 
 
-<img src="/webmasters/images/CloakedKeywordHackExamplePage.png">
+<img src="images/CloakedKeywordHackExamplePage.png">
 
 
 ## Fixing the hack

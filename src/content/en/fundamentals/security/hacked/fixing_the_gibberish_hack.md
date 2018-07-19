@@ -43,7 +43,7 @@ use different languages:
 * www.example.com/jfwoea/www-ki-motn-dudh-photo.php
 * www.example.com/jfwoea/foto-cewe-zaman-sekarang.php
 
-<img src="/webmasters/images/GibberishKeywordHackExampleSearch.png" class="attempt-right">
+<img src="images/GibberishKeywordHackExampleSearch.png" class="attempt-right">
 
 <<_fixing-identify.md>>
 
