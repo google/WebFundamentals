@@ -4,6 +4,7 @@ description: Discover new workflows for viewing and changing CSS in Chrome DevTo
 
 {# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2017-06-09 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 

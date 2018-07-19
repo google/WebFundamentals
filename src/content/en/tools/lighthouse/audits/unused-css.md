@@ -121,8 +121,6 @@ Grunt:
 This is a list of up-to-date tools that can automate the process of deferring uncritical CSS.
 You are welcome to [add your own tool to this list][doc]{:.external}.
 
-[doc]: https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/lighthouse/audits/unused-css.md
-
 Caution: None of these tools have been vetted. Make sure to do your own due diligence.
 
 * [loadCSS](https://github.com/filamentgroup/loadCSS){: .external }
