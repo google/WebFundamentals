@@ -28,7 +28,9 @@ process for reviewing an existing site for accessibility.
 </div>
 
 ## Start with the keyboard
+
 <img src="imgs/ic_keyboard_black_24px.svg" class="attempt-right" alt="" width="120"/>
+
 For users who either cannot or choose not to use a mouse, keyboard navigation is 
 their primary means of reaching everything on screen. This audience includes 
 users with motor impairments, such as Repetitive Stress Injury (RSI) or 
@@ -100,6 +102,7 @@ Content](/web/fundamentals/accessibility/focus/dom-order-matters#offscreen_conte
 for tips on how to deal with these elements.
 
 ## Try it with a screen reader
+
 <img src="imgs/ic_speaker_notes_black_24px.svg" class="attempt-right" alt="" width="100"/>
 
 Improving general keyboard support lays some groundwork for the next step, which
@@ -157,7 +160,7 @@ video on using
 NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4),
 a donation supported, open source screen reader for Windows.
 
-### aria-hidden does not prevent keyboard focus
+### `aria-hidden` does not prevent keyboard focus
 
 It’s important to understand that ARIA can only affect the _semantics_ of an
 element; it has no effect on the _behavior_ of the element. While you can make
@@ -170,15 +173,25 @@ the behavior of both attributes.
 
 ## Interactive elements like links and buttons should indicate their purpose and state
 
-Providing visual hints about what a control will do helps people operate and navigate your site. These hints are called affordances. Providing affordances makes it possible for people to your site on a wide variety of devices.
+Providing visual hints about what a control will do helps people operate and navigate
+your site. These hints are called affordances. Providing affordances makes it possible
+for people to use your site on a wide variety of devices.
 
-###Key points
+### Key points
 
-- Interactive elements, like links and buttons, should be distinguishable from non-interactive elements. It is difficult for users to navigate a site or app when they cannot tell if an element is clickable. There are many valid methods to accomplish this goal. One common practice is underlying links to differentiate them from their surrounding text.
+- Interactive elements, like links and buttons, should be distinguishable from
+  non-interactive elements. It is difficult for users to navigate a site or app
+  when they cannot tell if an element is clickable. There are many valid methods to
+  accomplish this goal. One common practice is underlying links to differentiate them
+  from their surrounding text.
 
-- Similar to the focus requirement, interactive elements like links and buttons require a hover state for mouse users so they know if they are hovering over something clickable.  However, the interactive element still must be distinguishable on its own. Relying on a hover state alone to indicate clickable elements does not help touch screen devices.
+- Similar to the focus requirement, interactive elements like links and buttons require
+  a hover state for mouse users so they know if they are hovering over something clickable.
+  However, the interactive element still must be distinguishable on its own. Relying on a
+  hover state alone to indicate clickable elements does not help touch screen devices.
 
 ## Take advantage of headings and landmarks
+
 <img src="imgs/ic_map_black_24px.svg" class="attempt-right" alt="" width="100"/>
 
 Headings and landmark elements imbue your page with semantic structure, and
@@ -225,6 +238,7 @@ and
 [NVDA](https://www.youtube.com/watch?v=Jao3s_CwdRU&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g&index=4).
 
 ## Automate the process
+
 <img src="imgs/ic_build_black_24px.svg" class="attempt-right" alt="" width="100"/>
 
 Manually testing a site for accessibility can be tedious and error prone.
@@ -259,6 +273,7 @@ Polymer and Web Components. Take advantage of available tools whenever possible
 to avoid reinventing the wheel.
 
 ### If you’re building a Progressive Web App consider giving Lighthouse a shot
+
 <img src="imgs/lighthouse.png" class="attempt-right" alt="" />
 
 Lighthouse is a tool to help measure the performance of your progressive web
