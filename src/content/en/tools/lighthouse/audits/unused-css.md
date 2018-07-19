@@ -42,7 +42,7 @@ need to spend calculating the styles for each node.
 ## Recommendations {: #recommendations }
 
 The CSS that is needed in order to load a page is called the *critical CSS*. In general, a page
-load should only be blocked on critical CSS. See [Detecting critical CSS](#critical).
+load should only be blocked on critical CSS. See [Detecting critical CSS](#detecting).
 
 Theoretically, the most optimal approach is to inline critical CSS into the `<head>` of the HTML.
 Once the HTML is downloaded, a browser has everything that it needs in order to display the page.
@@ -59,6 +59,7 @@ It doesn't need to make any more network requests. See [Inlining CSS](#inlining)
 *Uncritical CSS* is CSS that the page might need later. For example, suppose clicking a button
 causes a modal to appear. The modal only appears after clicking the button. The modal's style
 rules are uncritical, because the modal will never be displayed when the page is first loaded.
+See [Deferring uncritical CSS](#deferring).
 
 ### Detecting critical CSS {: #detecting }
 
@@ -136,3 +137,42 @@ Sources:
 * [Render-Tree Construction, Layout, and Paint](/web/fundamentals/performance/critical-rendering-path/render-tree-construction)
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unused-css-rules.js
+
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/lighthouse/audits/unused-css';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
