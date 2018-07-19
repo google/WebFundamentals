@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-13 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2018-07-13 #}
 
 # Accessibility Reference {: .page-title }
@@ -260,3 +260,42 @@ levels:
 
 [minimum]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [enhanced]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
+
+## Feedback {: #feedback }
+
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var label = '/web/tools/chrome-devtools/accessibility/reference';
+var title = '[feedback] ' + label;
+var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
+var link = '<a href="' + url + '">open an issue</a>';
+var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
+var feedback = {
+  category: "Helpful",
+  question: "Was this page helpful?",
+  choices: [
+    {
+      button: {
+        text: "Yes"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 1
+      }
+    },
+    {
+      button: {
+        text: "No"
+      },
+      response: response,
+      analytics: {
+        label: label,
+        value: 0
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
