@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -10,17 +10,15 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-<!-- <div class="attempt-right">
-  <figure>
-    <img src="images/add-to-home-screen.gif" alt="Web app install banner">
-  </figure>
-</div> -->
 
 **Add to Home Screen**, sometimes referred to as the web app install prompt
-makes it easy for users to add your Progressive Web App to their app launcher
-and home screen. Chrome handles most of the heavy lifting for you, and on
-Android, Chrome will generate a [WebAPK](/web/fundamentals/integration/webapks)
-creating an even more integrated experience for your users.
+makes it easy for users to install your Progressive Web App on their mobile
+or desktop device. When installed, it adds your PWA to to their launcher,
+and runs it like any other installed app.
+
+Chrome handles most of the heavy lifting for you, and on Android, Chrome will
+generate a [WebAPK](/web/fundamentals/integration/webapks) creating an even
+more integrated experience for your users.
 
 ## What is the criteria? {: #criteria }
 
@@ -31,15 +29,25 @@ has <code>"prefer_related_applications": true</code>, the
 <a href="/web/fundamentals/app-install-banners/native">native app install
 prompt</a> will be shown instead.
 
-## Show the add to home screen prompt {: #trigger }
+## Show the add to home screen dialog {: #trigger }
 
-In order to show the Add to Home Screen prompt, you need to:
+<figure class="attempt-right">
+  <img src="images/a2hs-dialog-g.png" alt="Add to Home Screen dialog on Android">
+  <figcaption>Add to Home Screen dialog on Android</figcaption>
+</figure>
+
+In order to show the Add to Home Screen dialog, you need to:
 
 1. Listen for the `beforeinstallprompt` event
 1. Notify the user your app can be installed with a button or other element
    that will generate a user gesture event.
 1. Show the prompt by calling `prompt()` on the saved `beforeinstallprompt`
    event.
+
+<div class="clearfix"></div>
+
+Note: Chrome 67 and earlier showed an add to home screen banner, the banner
+was removed in Chrome 68.
 
 ### Listen for `beforeinstallprompt`
 
@@ -63,19 +71,21 @@ to their home screen.
 ### Notify the user your app can be installed
 
 The best way to notify the user your app can be installed is by adding a button
-or other element to your user interface. Don't show a full page interstitial
-or other elements that may be annoying or distracting.
+or other element to your user interface. **Don't show a full page interstitial
+or other elements that may be annoying or distracting.**
 
 <pre class="prettyprint">
 window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
+  // Stash the event so it can be triggered later.
   deferredPrompt = e;
   <strong>// Update UI notify the user they can add to home screen
   btnAdd.style.display = 'block';</strong>
 });
 </pre>
 
-In some cases, you may want to wait before showing the prompt to the user,
+Success: you may want to wait before showing the prompt to the user,
 so you don't distract them from what they're doing. For example, if the user
 is in a check-out flow, or creating their account, let them complete that
 before interrupting them with the prompt.
@@ -110,6 +120,29 @@ shown and the user has responded to it.
 You can only call `prompt()` on the deferred event once, if the user dismissed
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
+
+## The mini-info bar
+
+<figure class="attempt-right">
+  <img
+      class="screenshot"
+      src="/web/updates/images/2018/06/a2hs-infobar-cropped.png">
+  <figcaption>
+    The mini-infobar
+  </figcaption>
+</figure>
+
+The mini-infobar is an interim experience for Chrome on Android as we work
+towards creating a consistent experience across all platforms that includes
+an install button into the omnibox.
+
+The mini-infobar is a Chrome UI component and is not controllable by the site,
+but can be easily dismissed by the user. Once dismissed by the user, it will
+not appear again until a sufficient amount of time has passed
+(currently 3 months). The mini-infobar will appear when the site meets the
+[add to home screen criteria](/web/fundamentals/app-install-banners/#criteria),
+regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
+or not.
 
 ## Determine if the app was successfully installed {: #appinstalled }
 
@@ -182,15 +215,15 @@ debugging, without it, it will use the desktop install flow.
 
 ### Chrome OS
 
-Dogfood: <a href="/web/updates/2018/05/dpwa">Desktop Progressive Web App</a>
-requires Chrome OS 67 or later. For Mac or Windows, you'll
-need to <a href="/web/updates/2018/05/dpwa#getting-started">enable the
-<code>#enable-desktop-pwas</code> flag.</a>
-
 1. Open Chrome DevTools
 2. Go to the **Application** panel.
 3. Go to the **Manifest** tab.
 4. Click **Add to home screen**
+
+
+Dogfood: To test the install flow for Desktop Progressive Web Apps on Mac or
+Windows, you'll need to <a href="/web/updates/2018/05/dpwa#getting-started">
+enable the <code>#enable-desktop-pwas</code> flag.</a>
 
 
 ### Will `beforeinstallprompt` be fired?

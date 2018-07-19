@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Starting in Chrome 68 on Android, the Add to Home Screen behavior is changing to give you more control over when and how to prompt the user. If your site meets the add to home screen criteria, Chrome will no longer automatically show the add to home screen banner. Instead, you'll need to call prompt() on the saved beforeinstallprompt event to show the add to home screen dialog prompt to your users.
 
-{# wf_updated_on: 2018-06-04 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2018-06-04 #}
 {# wf_tags: progressive-web-apps,desktop,chrome68,addtohomescreen #}
 {# wf_featured_image: /web/updates/images/2018/06/a2hs-dialog-cropped.png #}
@@ -13,15 +13,21 @@ description: Starting in Chrome 68 on Android, the Add to Home Screen behavior i
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+
 Since we first launched the add to home screen banner, we’ve been working
 to label Progressive Web Apps more clearly and simplify the way users can
 install them. Our eventual goal is to provide an install button in the
 omnibox across all platforms, and in Chrome 68 we are making changes towards
 that goal.
 
+Note: Chrome 68 is out of beta. See the
+[Add to Home Screen](/web/fundamentals/app-install-banners/) docs for the
+current behavior.
+
+
 ## What’s changing?
 
-Starting in Chrome 68 on Android (Beta in June 2018), Chrome will no longer
+Starting in Chrome 68 on Android (Stable in July 2018), Chrome will no longer
 show the add to home screen banner. If the site meets the
 [add to home screen criteria](/web/fundamentals/app-install-banners/#criteria),
 Chrome will show the mini-infobar. Then, if the user clicks on the
