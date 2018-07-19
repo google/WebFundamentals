@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Defer unused CSS" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-17 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2018-07-17 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -23,33 +23,84 @@ Using a [`<link>`][link]{: .external } tag is a common way to add styles to a pa
 The `main.css` file that the browser downloads is known as an *external stylesheet*, because it's
 stored separately from the HTML that uses it.
 
-Since CSS affects the style and layout of [DOM][DOM]{: .external } nodes, the browser must
-download, parse, and process all CSS that a page uses before it can show any content on a
-user's screen. Displaying content is usually called *rendering*.
+By default, a browser must download, parse, and process all external stylesheets that it
+encounters before it can display, or *render*, any content to a user's screen. It wouldn't make
+sense for a browser to attempt to display content before the stylesheets have been processed, because
+the stylesheets may contain rules that affect the styling of the page.
 
-[DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+Each external stylesheet must be downloaded from the network. These extra network trips can
+significantly increase the time that users must wait before they see any content on their screens.
 
-Suppose `main.css` is a huge file, but your HTML page only uses one
-[ruleset][ruleset]{: .external } from the file. Unfortunately, the browser doesn't know
-that your page only needs one ruleset from the file. Instead, it downloads the entire huge file,
-parses all of its rulesets, and checks if any of those rulesets apply to the HTML
-nodes on your page.
+Unused CSS also slows down a browser's construction of the [render tree][render]. The render
+tree is like the DOM tree, except that it also includes the styles for each node.
+To construct the render tree, a browser must walk the entire DOM tree, and check which CSS rules
+apply to each node. The more unused CSS there is, the more time that a browser might potentially
+need to spend calculating the styles for each node.
 
-[ruleset]: https://css-tricks.com/css-ruleset-terminology/
-
-Downloading, parsing, and processing CSS rulesets all slow down your page load time. You can
-speed up your page load time by *only* shipping the CSS that you need in order to load the page.
-This CSS is sometimes called the *critical CSS*. Other CSS that *might* be used later, as
-the user interacts with the page, should be deferred.
-
-TODO add "does this make sense?" feedback here
+[render]: /web/fundamentals/performance/critical-rendering-path/render-tree-construction
 
 ## Recommendations {: #recommendations }
 
-Strategies:
+The CSS that is needed in order to load a page is called the *critical CSS*. In general, a page
+load should only be blocked on critical CSS. See [Detecting critical CSS](#critical).
 
-* Manual curation.
-* Automated inlining.
+Theoretically, the most optimal approach is to inline critical CSS into the `<head>` of the HTML.
+Once the HTML is downloaded, a browser has everything that it needs in order to display the page.
+It doesn't need to make any more network requests. See [Inlining CSS](#inlining).
+
+    <!doctype html>
+    <html>
+      <head>
+        <style>
+          /* Critical CSS here. */
+        </style>
+        ...
+
+*Uncritical CSS* is CSS that the page might need later. For example, suppose clicking a button
+causes a modal to appear. The modal only appears after clicking the button. The modal's style
+rules are uncritical, because the modal will never be displayed when the page is first loaded.
+
+### Detecting critical CSS {: #critical }
+
+### Inlining critical CSS {: #inlining }
+
+This is a list of tools that can automate the process of inlining critical CSS.
+You are welcome to [add your tool to this list][doc]{:.external}. The only general
+requirement for inclusion on this list is that your tool must appear maintained.
+
+Caution: None of these tools have been vetted. Make sure to do your own due diligence before
+using any of these tools.
+
+[doc]: https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/lighthouse/audits/unused-css.md
+
+Node:
+
+* [penthouse](https://github.com/pocketjoso/penthouse){: .external }
+* [critical](https://github.com/addyosmani/critical){: .external }
+* [inline-critical](https://github.com/bezoerb/inline-critical){: .external }
+
+Apache:
+
+* [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod)
+
+Nginx:
+
+* [ngx_pagespeed](https://github.com/pagespeed/ngx_pagespeed){: .external }
+
+Webpack:
+
+* [isomorphic-style-loader](https://github.com/kriasoft/isomorphic-style-loader/){: .external }
+
+Gulp:
+
+* [gulp-inline-source](https://github.com/fmal/gulp-inline-source){: .external }
+
+Grunt:
+
+* [grunt-penthouse](https://github.com/fatso83/grunt-penthouse){: .external }
+* [grunt-critical](https://github.com/bezoerb/grunt-critical){: .external }
+
+* [](){: .external }
 
 ## More information {: #more-info }
 
