@@ -27,7 +27,7 @@ support by enabling the `#enable-desktop-pwas` flag.
 
 ![Spotify's desktop progressive web app](/web/updates/images/2018/05/spotify-screenshot.jpg){: .attempt-right }
 
-Desktop progressive web apps can be 'installed' on the users device much like
+Desktop progressive web apps can be 'installed' on the user's device much like
 native apps. They're **fast**. Feel **integrated** because they launched in
 the same way as other apps, and run in an app window, without an address bar
 or tabs. They're **reliable** because service workers can cache all of the
