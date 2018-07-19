@@ -16,6 +16,8 @@ toc:
     path: /web/tools/lighthouse/audits/consistently-interactive
   - title: Critical Request Chains
     path: /web/tools/lighthouse/audits/critical-request-chains
+  - title: Defer unused CSS
+    path: /web/tools/lighthouse/audits/unused-css
   - title: Enable Text Compression
     path: /web/tools/lighthouse/audits/text-compression
   - title: Estimated Input Latency
