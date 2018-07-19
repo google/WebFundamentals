@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -356,6 +356,7 @@ since it can help avoid potential footguns before they sneak into your codebase.
 - [Feature Policy Explainer][explainer]
 - [Feature Policy spec][spec]
 - [Kitchen Sink Demos][sink]
+- [Feature Policy DevTools Extension](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop) - Tester for trying out feature policies on a page.
 - [chromestatus.com entries][chromestatusfilter]
 
 {% include "web/_shared/rss-widget-updates.html" %}
