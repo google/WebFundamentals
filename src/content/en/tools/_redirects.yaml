@@ -177,7 +177,7 @@ redirects:
 - from: /web/tools/workbox/examples/
   to: /web/tools/workbox/modules/
 
-- from: /web/tools/workbox/overview/
+- from: /web/tools/workbox/overview
   to: /web/tools/workbox/
 
 - from: /web/tools/workbox/overview/
