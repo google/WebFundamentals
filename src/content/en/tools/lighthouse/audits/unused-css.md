@@ -60,18 +60,34 @@ It doesn't need to make any more network requests. See [Inlining CSS](#inlining)
 causes a modal to appear. The modal only appears after clicking the button. The modal's style
 rules are uncritical, because the modal will never be displayed when the page is first loaded.
 
-### Detecting critical CSS {: #critical }
+### Detecting critical CSS {: #detecting }
+
+The Coverage tab of Chrome DevTools can help you discover critical and uncritical CSS. See
+[View used and unused CSS with the Coverage tab][coverage].
+
+[coverage]: /web/tools/chrome-devtools/css/reference#coverage
+
+<figure>
+  <img src="/web/tools/chrome-devtools/css/imgs/coverage-detail.png"
+       alt="The Coverage tab."/>
+  <figcaption>
+    <b>Figure 1</b>. The Coverage tab
+  </figcaption>
+</figure>
+
+You can also extract this information from Puppeteer.
+See [`page.coverage`][puppeteer]{: .external }.
+
+[puppeteer]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagecoverage
 
 ### Inlining critical CSS {: #inlining }
 
-This is a list of tools that can automate the process of inlining critical CSS.
-You are welcome to [add your tool to this list][doc]{:.external}. The only general
-requirement for inclusion on this list is that your tool must appear maintained.
-
-Caution: None of these tools have been vetted. Make sure to do your own due diligence before
-using any of these tools.
+This is a list of up-to-date tools that can automate the process of inlining critical CSS.
+You are welcome to [add your own tool to this list][doc]{:.external}.
 
 [doc]: https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/lighthouse/audits/unused-css.md
+
+Caution: None of these tools have been vetted. Make sure to do your own due diligence.
 
 Node:
 
@@ -81,7 +97,7 @@ Node:
 
 Apache:
 
-* [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod)
+* [mod_pagespeed](https://github.com/apache/incubator-pagespeed-mod){: .external }
 
 Nginx:
 
@@ -100,12 +116,25 @@ Grunt:
 * [grunt-penthouse](https://github.com/fatso83/grunt-penthouse){: .external }
 * [grunt-critical](https://github.com/bezoerb/grunt-critical){: .external }
 
-* [](){: .external }
+### Deferring uncritical CSS {: #deferring }
+
+This is a list of up-to-date tools that can automate the process of deferring uncritical CSS.
+You are welcome to [add your own tool to this list][doc]{:.external}.
+
+[doc]: https://github.com/google/WebFundamentals/blob/master/src/content/en/tools/lighthouse/audits/unused-css.md
+
+Caution: None of these tools have been vetted. Make sure to do your own due diligence.
+
+* [loadCSS](https://github.com/filamentgroup/loadCSS){: .external }
 
 ## More information {: #more-info }
 
+Lighthouse ignores any file with less than 2 kilobytes of potential savings.
+
 Sources:
 
-* [Audit source][src]{:.external}
+* [Audit source][src]{: .external }
+* [Optimize CSS Delivery](/speed/docs/insights/OptimizeCSSDelivery)
+* [Render-Tree Construction, Layout, and Paint](/web/fundamentals/performance/critical-rendering-path/render-tree-construction)
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unused-css-rules.js

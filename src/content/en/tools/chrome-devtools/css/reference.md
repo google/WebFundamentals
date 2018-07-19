@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2017-08-01 #}
+{# wf_updated_on: 2018-07-19 #}
 {# wf_published_on: 2017-06-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -186,6 +186,55 @@ To view a page in print mode:
 1. Start typing `Rendering` and select `Show Rendering`.
 1. For the **Emulate CSS Media** dropdown, select **print**.
 
+### View used and unused CSS with the Coverage tab {: #coverage }
+
+The Coverage tab shows you what CSS a page actually uses.
+
+1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS)
+   while DevTools is in focus to open the Command Menu.
+1. Start typing `coverage` and select **Show Coverage**. The Coverage tab appears.
+
+     <figure>
+       <img src="imgs/command-menu.png"
+            alt="Opening the Coverage tab from the Command Menu."/>
+       <figcaption>
+         <b>Figure 8</b>. Opening the Coverage tab from the Command Menu
+       </figcaption>
+     </figure>
+
+     <figure>
+       <img src="imgs/coverage-empty.png"
+            alt="The Coverage tab."/>
+       <figcaption>
+         <b>Figure 9</b>. The Coverage tab 
+       </figcaption>
+     </figure>
+
+1. Click **Start Instrumenting Coverage And Reload Page** ![Start Instrumenting Coverage
+   And Reload Page](imgs/reload.png){: .inline-icon }. The page reloads and the Coverage
+   tab provides an overview of how much CSS (and JavaScript) is used from each file that the
+   browser loads. Green represents used CSS. Red represents unused CSS.
+
+     <figure>
+       <img src="imgs/coverage-overview.png"
+            alt="An overview of how much CSS (and JavaScript) is used and unused."/>
+       <figcaption>
+         <b>Figure 10</b>. An overview of how much CSS (and JavaScript) is used and unused
+       </figcaption>
+     </figure>
+
+1. Click a CSS file to see a line-by-line breakdown of what CSS it uses.
+
+     <figure>
+       <img src="imgs/coverage-detail.png"
+            alt="A line-by-line breakdown of used and unused CSS."/>
+       <figcaption>
+         <b>Figure 11</b>. Lines 55 to 57 and 65 to 67 of <code>devsite-google-blue.css</code>
+         are unused, whereas lines 59 to 63 are used
+       </figcaption>
+     </figure>
+
 ## Change CSS {: #change }
 
 <!-- todo s/CSS declaration/declaration/ -->
@@ -226,7 +275,7 @@ To add an inline declaration:
 <figure>
   <img src="imgs/inline-declaration.png" alt="Adding inline declarations"/>
   <figcaption>
-    <b>Figure 8</b>. The <code>margin-top</code> and
+    <b>Figure 12</b>. The <code>margin-top</code> and
     <code>background-color</code> properties have been applied to the
     selected element. In the <b>DOM Tree</b> you can see the declarations
     reflected in the element's <code>style</code> attribute
@@ -248,7 +297,7 @@ To add a declaration to an existing style rule:
   <img src="imgs/add-declaration-existing-rule.png"
        alt="Adding a declaration to a style rule"/>
   <figcaption>
-    <b>Figure 9</b>. Adding the <code>border-bottom-style:groove</code>
+    <b>Figure 13</b>. Adding the <code>border-bottom-style:groove</code>
     declaration to a style rule
   </figcaption>
 </figure>
@@ -264,7 +313,7 @@ for shortcuts for quickly incrementing or decrementing a value by 0.1,
   <img src="imgs/add-declaration-existing-rule.png"
        alt="Changing the value of a declaration"/>
   <figcaption>
-    <b>Figure 10</b>. Changing the value of the <code>border-bottom-style</code>
+    <b>Figure 14</b>. Changing the value of the <code>border-bottom-style</code>
     declaration
   </figcaption>
 </figure>
@@ -298,7 +347,7 @@ To add a class to an element:
 <figure>
   <img src="imgs/element-classes.svg" alt="The Element Classes pane"/>
   <figcaption>
-    <b>Figure 11</b>. The <b>Element Classes</b> pane
+    <b>Figure 14</b>. The <b>Element Classes</b> pane
   </figcaption>
 </figure>
 
@@ -325,7 +374,7 @@ To add a new style rule:
 <figure>
   <img src="imgs/style-rule.png" alt="Adding a new style rule"/>
   <figcaption>
-    <b>Figure 12</b>. DevTools adds the <code>h1.devsite-page-title</code>
+    <b>Figure 15</b>. DevTools adds the <code>h1.devsite-page-title</code>
     style rule after clicking <b>New Style Rule</b>
   </figcaption>
 </figure>
@@ -339,7 +388,7 @@ add the style rule to.
 <figure>
   <img src="imgs/choose-stylesheet.png" alt="Choosing a stylesheet"/>
   <figcaption>
-    <b>Figure 13</b>. Choosing a stylesheet
+    <b>Figure 16</b>. Choosing a stylesheet
   </figcaption>
 </figure>
 
@@ -358,7 +407,7 @@ To add a style rule to a specific location in the **Styles** tab:
 <figure>
   <img src="imgs/insert-style-rule-below.png" alt="Insert Style Rule Below"/>
   <figcaption>
-    <b>Figure 14</b>. <b>Insert Style Rule Below</b>
+    <b>Figure 17</b>. <b>Insert Style Rule Below</b>
   </figcaption>
 </figure>
 
@@ -379,7 +428,7 @@ To reveal the **More Actions** toolbar:
      <figure>
        <img src="imgs/reveal-more.png" alt="Revealing \"More\" Actions"/>
        <figcaption>
-         <b>Figure 15</b>. After hovering over the <code>.devsite-article
+         <b>Figure 18</b>. After hovering over the <code>.devsite-article
          h1:first-of-type</code> style rule, <b>More Actions</b> is revealed
          in the bottom-right of the style rule's section
        </figcaption>
@@ -392,7 +441,7 @@ To reveal the **More Actions** toolbar:
        <img src="imgs/insert-style-rule-below.png"
             alt="The \"More Actions \" toolbar"/>
        <figcaption>
-         <b>Figure 16</b>. The <b>Insert Style Rule Below</b> action is
+         <b>Figure 19</b>. The <b>Insert Style Rule Below</b> action is
          revealed after hovering over <b>More Actions</b>
        </figcaption>
      </figure>
@@ -411,7 +460,7 @@ To toggle a single declaration on or off:
 <figure>
   <img src="imgs/toggle-declaration.png" alt="Toggling a declaration"/>
   <figcaption>
-    <b>Figure 17</b>. The <code>color</code> property for the
+    <b>Figure 20</b>. The <code>color</code> property for the
     currently-selected element has been toggled off
   </figcaption>
 </figure>
@@ -430,7 +479,7 @@ To add a `background-color` declaration to an element:
 <figure>
   <img src="imgs/add-background-color.png" alt="Add Background Color"/>
   <figcaption>
-    <b>Figure 18</b>. <b>Add Background Color</b>
+    <b>Figure 21</b>. <b>Add Background Color</b>
   </figcaption>
 </figure>
 
@@ -448,7 +497,7 @@ To add a `color` declaration to an element:
 <figure>
   <img src="imgs/add-color.png" alt="Add Color"/>
   <figcaption>
-    <b>Figure 19</b>. <b>Add Color</b>
+    <b>Figure 22</b>. <b>Add Color</b>
   </figcaption>
 </figure>
 
@@ -466,7 +515,7 @@ To add a `box-shadow` declaration to an element:
 <figure>
   <img src="imgs/add-box-shadow.png" alt="Add Box Shadow"/>
   <figcaption>
-    <b>Figure 20</b>. <b>Add Box Shadow</b>
+    <b>Figure 22</b>. <b>Add Box Shadow</b>
   </figcaption>
 </figure>
 
@@ -484,7 +533,7 @@ To add a `text-shadow` declaration to an element:
 <figure>
   <img src="imgs/add-text-shadow.png" alt="Add Text Shadow"/>
   <figcaption>
-    <b>Figure 21</b>. <b>Add Text Shadow</b>
+    <b>Figure 23</b>. <b>Add Text Shadow</b>
   </figcaption>
 </figure>
 
@@ -503,7 +552,7 @@ To open the **Color Picker**:
      <figure>
        <img src="imgs/color-preview.png" alt="Color preview"/>
        <figcaption>
-         <b>Figure 22</b>. The small blue square to the left of
+         <b>Figure 24</b>. The small blue square to the left of
          <code>rgb(123, 170, 247)</code> is a preview of that color
        </figcaption>
      </figure>
@@ -513,7 +562,7 @@ To open the **Color Picker**:
      <figure>
        <img src="imgs/color-picker.png" alt="The Color Picker"/>
        <figcaption>
-         <b>Figure 23</b>. The <b>Color Picker</b>
+         <b>Figure 25</b>. The <b>Color Picker</b>
        </figcaption>
      </figure>
 
@@ -523,7 +572,7 @@ Here's a description of each of the UI elements of the **Color Picker**:
   <img src="imgs/color-picker-annotated.svg"
        alt="The Color Picker, annotated"/>
   <figcaption>
-    <b>Figure 24</b>. The <b>Color Picker</b>, annotated
+    <b>Figure 26</b>. The <b>Color Picker</b>, annotated
   </figcaption>
 </figure>
 
@@ -559,7 +608,7 @@ change the selected color to some other color on the page:
      <figure>
        <img src="imgs/eyedropper.png" alt="Using the Eyedropper"/>
        <figcaption>
-         <b>Figure 25</b>. The <b>Color Picker</b> shows a current color
+         <b>Figure 27</b>. The <b>Color Picker</b> shows a current color
          value of <code>#212121</code>, which is close to black. This
          color would change to the blue that's currently highlighted in
          the viewport once the blue was clicked
