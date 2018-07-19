@@ -62,23 +62,24 @@ To audit a page:
      </figure>
 
      <aside class="note">
-       <b>Note</b>: The screenshots in this section were taken with version 69 of Chrome. You can check what
-       version you're running at <code>chrome://version</code>. The Audits panel UI looks different in earlier
-       versions of Chrome, but the general workflow is the same.
+       <b>Note</b>: The screenshots in this section were taken with version 69 of Chrome. You can
+       check what version you're running at <code>chrome://version</code>. The Audits panel UI looks
+       different in earlier versions of Chrome, but the general workflow is the same.
      </aside>
 
 1. For **Device**, select **Mobile** if you want to simulate a mobile device. This option changes
-   your user agent string and resizes the viewport. If the mobile version of the page displays differently
-   than the desktop version, this option could have a significant effect on the results of your audit.
+   differently your user agent string and resizes the viewport. If the mobile version of the page
+   displays differently than the desktop version, this option could have a significant effect on
+   the results of your audit.
 1. In the **Audits** section, make sure that **Accessibility** is enabled. Disable the other
-   categories if you want to exclude them from your report. Leave them enabled if you want to discover other
-   ways to improve the quality of your page.
+   categories if you want to exclude them from your report. Leave them enabled if you want to
+   discover other ways to improve the quality of your page.
 1. The **Throttling** section lets you throttle the network and CPU, which is useful when analyzing
    load performance. This option should be irrelevant to your accessibility score, so you can use
    whatever you prefer.
 1. The **Clear Storage** checkbox lets you clear all storage before loading the page, or preserve
-   storage between page loads. This option is also probably irrelevant to your accessibility score, so you
-   can use whatever you prefer.
+   storage between page loads. This option is also probably irrelevant to your accessibility score,
+   so you can use whatever you prefer.
 1. Click **Run Audits**. After 10 to 30 seconds, DevTools provides a report.
    Your report gives you various tips on how to improve the page's accessibility.
 
@@ -145,7 +146,8 @@ To open the Accessibility pane:
   <img src="imgs/a11y-pane.png"
        alt="Inspecting the h1 element of the DevTools homepage in the Accessibility pane."/>
   <figcaption>
-    <b>Figure 6</b>. Inspecting the <code>h1</code> element of the DevTools homepage in the Accessibility pane
+    <b>Figure 6</b>. Inspecting the <code>h1</code> element of the DevTools homepage in the
+    Accessibility pane
   </figcaption>
 </figure>
 
@@ -238,17 +240,18 @@ levels:
 
      <figure>
        <img src="imgs/color-picker.png"
-            alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of 16.10."/>
+            alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a
+                 value of 16.10."/>
        <figcaption>
-         <b>Figure 12</b>. The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value
-         of <code>16.10</code>
+         <b>Figure 12</b>. The Contrast Ratio section of the Color Picker shows 2 checkmarks
+         and a value of <code>16.10</code>
        </figcaption>
      </figure>
 
-1. Click the **Contrast Ratio** section to see more information. A line appears in the visual picker at the
-   top of the Color Picker. If the current color meets recommendations, then anything on the same side of the
-   line also meets recommendations. If the current color does not meet recommendations, then anything on the
-   same side also does not meet recommendations.
+1. Click the **Contrast Ratio** section to see more information. A line appears in the visual
+   picker at the top of the Color Picker. If the current color meets recommendations, then
+   anything on the same side of the line also meets recommendations. If the current color does
+   not meet recommendations, then anything on the same side also does not meet recommendations.
 
      <figure>
        <img src="imgs/contrast-ratio-line.png"
