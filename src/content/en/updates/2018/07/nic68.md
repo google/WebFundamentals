@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 68 for developers?
 
-{# wf_published_on: 2018-07-19 #}
+{# wf_published_on: 2018-07-24 #}
 {# wf_updated_on: 2018-07-20 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome68,new-in-chrome #}
@@ -16,7 +16,7 @@ description: What's new in Chrome 68 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jlbLRsAmKtw"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
