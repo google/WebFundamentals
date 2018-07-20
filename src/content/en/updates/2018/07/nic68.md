@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 68 for developers?
 
 {# wf_published_on: 2018-07-19 #}
-{# wf_updated_on: 2018-07-10 #}
+{# wf_updated_on: 2018-07-20 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome68,new-in-chrome #}
 {# wf_featured_snippet: Chrome 68 brings changes to the Add to Home Screen behavior on Android, giving you more control. The page lifecycle API tells you when your tab has been suspended or restored. And the Payment Handler API makes it possible for web-based payment apps to support the Payment Request experience. Let’s dive in and see what’s new for developers in Chrome 68! #}
@@ -100,7 +100,7 @@ has the full details, including code samples you can use and more.
 
 When a user has a large number of tabs running, critical resources such as
 memory, CPU, battery and the network can be oversubscribed, leading to a
-bad user experience. 
+bad user experience.
 
 If your site is running in the background, the system may suspend the it to
 conserve resources. With the new Page Lifecycle API, you can now listen for,
@@ -128,9 +128,10 @@ document.addEventListener('freeze', prepareForFreeze);
 document.addEventListener('resume', reInitializeApp);
 ```
 
-The [spec](https://wicg.github.io/page-lifecycle/spec.html) and an 
-[explainer doc](https://github.com/WICG/page-lifecycle) are on GitHub for more
-details.
+Check out Phil's [Page Lifecycle API](/web/updates/2018/07/page-lifecycle-api)
+post for **lots** more detail, including code samples, tips and more.
+You can find the [spec](https://wicg.github.io/page-lifecycle/spec.html) and an
+[explainer doc](https://github.com/WICG/page-lifecycle) on GitHub.
 
 <div class="clearfix"></div>
 
@@ -145,7 +146,7 @@ reach of Payment Request by enabling web-based payment apps to facilitate
 payments directly within the Payment Request experience.
 
 As a seller, adding an existing web-based payment app is as easy as adding an
-entry to the `supportedMethods` property. 
+entry to the `supportedMethods` property.
 
 ```javascript
 const request = new PaymentRequest([{
@@ -175,13 +176,13 @@ there’s plenty more.
 * Content embedded in an `iframe`
   [requires a user gesture to navigate](https://www.chromestatus.com/feature/5629582019395584)
   the top-level browsing context to a different origin.
-* Since Chrome 1, the CSS 
+* Since Chrome 1, the CSS
   [`cursor` values for `grab` and `grabbing`](https://www.chromestatus.com/feature/5575087101050880)
   have been  prefixed, we now support the standard, un-prefixed values.
   **Finally.**
 * And - this is a big one! The HTTP [cache is now ignored when requesting
   updates to a service worker](/web/updates/2018/06/fresher-sw), bringing
-  Chrome inline with the spec and other browsers. 
+  Chrome inline with the spec and other browsers.
 
 
 
