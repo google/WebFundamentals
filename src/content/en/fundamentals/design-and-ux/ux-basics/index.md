@@ -4,6 +4,7 @@ description: A step-by-step guide to the basics of UX design.
 
 {# wf_updated_on: 2018-07-21 #}
 {# wf_published_on: 2016-10-01 #}
+{# wf_blink_components: N/A #}
 
 # Basics of UX {: .page-title }
 
