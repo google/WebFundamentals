@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2018-02-05 #}
+{# wf_updated_on: 2018-07-22 #}
 {# wf_blink_components: N/A #}
 
 # What Makes a Good Mobile Site? {: .page-title }
@@ -324,7 +324,7 @@ to provide suggested values for a field.
   <figure id="fig1">
     <img src="images/forms-calendar-good.png">
     <figcaption class="success">
-      <b>DO</b>: use calendar widgets when possible.
+      <b>DO</b>: Use calendar widgets when possible.
      </figcaption>
   </figure>
 </div>
@@ -340,7 +340,7 @@ check a calendar app just to schedule a date.
   <figure id="fig1">
     <img src="images/forms-multipart-good.png">
     <figcaption class="success">
-      <b>DO</b>: Prepopulate content where possible.
+      <b>DO</b>: Label inputs clearly.
      </figcaption>
   </figure>
 </div>
@@ -387,7 +387,7 @@ which may negatively impact their search rankings.
   <figure id="fig1">
     <img src="images/sw-make-images-expandable-good.png">
     <figcaption class="success">
-      <b>DO</b>: Make product images expandable and easy to see detail.
+      <b>DO</b>: Make product images expandable and easy to see in detail.
      </figcaption>
   </figure>
 </div>
@@ -466,8 +466,8 @@ populate them through a clear call-to-action like “Find Near Me”.
   <figure id="fig1">
     <img src="images/sw-navigation-bad.png">
     <figcaption class="warning">
-      <b>DON'T</b>: Asking for it immediately on the homepage as the site
-      loads results in a poor user experience.
+      <b>DON'T</b>: Request immediately access to location on the
+      homepage, as this results in a poor user experience.
      </figcaption>
   </figure>
 </div>
