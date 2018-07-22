@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use the PWACompat library to bring your Web App Manifest to all browsers.
 
-{# wf_updated_on: 2018-07-17 #}
+{# wf_updated_on: 2018-07-20 #}
 {# wf_published_on: 2018-07-17 #}
 {# wf_tags: manifest,mobile #}
 {# wf_featured_image: /web/updates/images/2018/07/pwacompat.png #}
@@ -19,10 +19,10 @@ description: Use the PWACompat library to bring your Web App Manifest to all bro
   }
 </style>
 
-You've designed a webapp, built its code and service worker, and finally added the
+You've designed a web app, wrote its code and service worker, and finally added the
 [Web App Manifest](/web/fundamentals/web-app-manifest/) to describe how it should behave when
 'installed' on a user's device. This includes things like high-resolution icons to use for e.g. a
-mobile phone's launcher or app switcher, or how your webapp should start when opened from the
+mobile phone's launcher or app switcher, or how your web app should start when opened from the
 user's home screen.
 
 And while many browsers will respect the Web App Manifest, not every browser will load or respect
@@ -32,14 +32,14 @@ for icons of different sizes, the favicon, startup mode, colors etc.
 
 <figure class="figure-center">
   <img src="/web/updates/images/2018/07/webmanifest.png"
-       alt="PWACompat takes a Web App Manifest and adds non-standard meta, link etc tags" />
+       alt="PWACompat takes a Web App Manifest and adds standard and non-standard meta, link, etc. tags" />
   <figcaption>
-    PWACompat takes a Web App Manifest and adds non-standard meta, link etc tags.
+    PWACompat takes a Web App Manifest and adds standard and non-standard meta, link, etc. tags.
   </figcaption>
 </figure>
 
-This means you no longer have to add innumerable, non-standard tags (like `<link rel="icon" ... />`
-or `<meta name="orientation" ... />`) your pages. And for iOS home screen applications, PWACompat
+This means you no longer have to add innumerable, standard and non-standard tags (like `<link rel="icon" ... />`
+or `<meta name="orientation" ... />`) to your pages. And for iOS home screen applications, PWACompat
 will even dynamically create splash screens so you don't have to generate one for every different
 screen size.
 
@@ -68,7 +68,7 @@ async loaded bundle:
     crossorigin="anonymous"></script>
 ```
 
-PWACompat will fetch your manifest file and do work needed for your user's browser, regardless of
+PWACompat will fetch your manifest file and do the work needed for your user's browser, regardless of
 whether they're on a mobile device or desktop.
 
 ## More details
@@ -76,9 +76,9 @@ whether they're on a mobile device or desktop.
 For supported browsers, what does PWACompat actually do? As of July 2018, PWACompat will load your
 Web App Manifest and:
 
-* Create meta icon tags for all icons in the manifest (e.g., for a favicon, older browsers)
-* Create fallback meta tags for various browsers (e.g., iOS, WebKit/Chromium forks etc) describing
-  how a webapp should open
+* Create meta icon tags for all icons in the manifest (e.g. for a favicon, older browsers)
+* Create fallback meta tags for various browsers (e.g. iOS, WebKit/Chromium forks, etc.) describing
+  how a web app should open
 * Sets [the theme color][theme-color] based on the manifest
 
 [theme-color]: /web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
