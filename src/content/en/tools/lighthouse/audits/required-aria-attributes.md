@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Elements With ARIA Roles Have The Required aria-* Attributes" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-01-17 #}
 {# wf_blink_components: N/A #}
 
@@ -43,4 +43,6 @@ attributes must be provided][axe] for more information.
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-required-attr
 
 
-{% include "web/tools/lighthouse/audits/_feedback/required-aria-attributes.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

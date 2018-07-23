@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document doesn't have a valid rel=canonical" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -113,3 +113,7 @@ Lighthouse marks the audit as a fail if any of the following are true:
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/canonical.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Cache contains start_url from manifest" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-09-15 #}
 {# wf_blink_components: N/A #}
 
@@ -52,5 +52,6 @@ produce a false positive result if your cache contains a resource that
 matches `start_url`, but your service worker redirects the request to
 a non-existent resource.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/cache-contains-start_url.html" %}
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Serve Images in Next-Gen Formats" Lighthouse audit.
 
-{# wf_updated_on: 2018-01-03 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-20 #}
 {# wf_blink_components: N/A #}
 
@@ -48,3 +48,7 @@ savings are less than 8KB.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/uses-webp-images.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

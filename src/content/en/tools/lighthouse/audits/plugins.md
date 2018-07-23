@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document uses plugins" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-26 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-26 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -54,3 +54,7 @@ Or if the tag points to a URL with a file format that is known to represent plug
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/plugins.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
