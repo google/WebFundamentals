@@ -38,7 +38,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
         array[i] = new Object();
     };
     console.timeEnd("Array initialize");
-    
+
 
 將在控制檯中輸出下列結果：
 ![經過的時間](images/track-executions-time-duration.png)
@@ -53,7 +53,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
 
 ### 標記 Timeline
 
-*注：`timeStamp()` 方法只能在某個 Timeline 記錄正在進行時發揮作用。*
+*Note: `timeStamp()` 方法只能在某個 Timeline 記錄正在進行時發揮作用。*
 
 [Timeline 面板](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)可以提供引擎時間消耗的完整概覽。您可以使用 [`timeStamp()`](./console-reference#consoletimestamplabel) 從控制檯向 Timeline 添加一個標記。
 這是一種將您應用中的事件與其他事件進行關聯的簡單方式。
@@ -72,7 +72,7 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
         var results = document.getElementById("results");
         results.innerHTML += (text + "<br>");
     }
-    
+
 
 將生成下面的 Timeline 時間戳：
 
@@ -88,19 +88,19 @@ description:利用 Console API 測量執行時間和對語句執行進行計數�
     function login(user) {
         console.count("Login called for user " + user);
     }
-    
+
     users = [ // by last name since we have too many Pauls.
         'Irish',
         'Bakaus',
         'Kinlan'
     ];
-    
+
     users.forEach(function(element, index, array) {
         login(element);
     });
-    
+
     login(users[0]);
-    
+
 
 代碼示例的輸出：
 

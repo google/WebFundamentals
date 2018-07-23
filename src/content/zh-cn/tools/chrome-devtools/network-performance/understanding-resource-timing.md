@@ -22,7 +22,7 @@ description:了解通过网络收集资源的阶段至关重要。这是解决�
 
 
 
-请注意：当使用具有跨源资源的 Resource Timing API 时，确保所有资源具有 CORS 标头。
+请Note: 当使用具有跨源资源的 Resource Timing API 时，确保所有资源具有 CORS 标头。
 
 
 Resource Timing API 提供了与接收各个资源的时间有关的大量详细信息。请求生命周期的主要阶段包括：
