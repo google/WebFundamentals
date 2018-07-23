@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:代碼編輯器是您的主要開發工具；可以使用代碼編輯器編寫和保存代碼行。瞭解代碼編輯器的快捷鍵並安裝主要插件可以更快地編寫出更好的代碼。
 
-{# wf_updated_on:2015-04-13 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-05-28 #}
 
 # 設置您的編輯器 {: .page-title }
@@ -27,7 +27,7 @@ description:代碼編輯器是您的主要開發工具；可以使用代碼編�
 
 Sublime Text 當前有兩種下載選項，[版本 2](http://www.sublimetext.com/2) 或[版本 3](http://www.sublimetext.com/3)。版本 3 非常穩定，讓您可以訪問 Sublime Text 2 不支持的軟件包，不過您可能會發現版本 2 更加可靠。
 
-注：Rob Dodson 有關如何瞭解和愛上 Sublime 的<a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>博文</a>是充分利用編輯器一個非常好的參考。這些概念與所有文本編輯器相關，而不僅僅與 Sublime 相關。
+Note: Rob Dodson 有關如何瞭解和愛上 Sublime 的<a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>博文</a>是充分利用編輯器一個非常好的參考。這些概念與所有文本編輯器相關，而不僅僅與 Sublime 相關。
 
 ## 爲什麼要使用軟件包管理器？
 
@@ -106,7 +106,7 @@ Linting（檢查代碼潛在問題）- 有一個插件可以執行這項任務�
 
 ### Gutter Color
 
-注：僅適用於 Sublime Text 3
+Note: 僅適用於 Sublime Text 3
 
 Gutter Color 可以在 CSS 旁爲您顯示小色樣。
 

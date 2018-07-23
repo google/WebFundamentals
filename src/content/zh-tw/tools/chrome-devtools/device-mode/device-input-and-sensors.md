@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:由於大多數桌面設備都沒有觸摸屏、GPS 芯片和加速度計，所以測試它們比較困難。Chrome DevTools 傳感器模擬器可以通過模擬常見的移動設備傳感器來降低測試的開銷。
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 模擬傳感器：地理定位與加速度計 {: .page-title }
@@ -33,7 +33,7 @@ description:由於大多數桌面設備都沒有觸摸屏、GPS 芯片和加速�
   </div>
 </div>
 
-注：如果您的應用檢測到使用 JavaScript（如 Modernizr）的傳感器加載，請確保在啓用傳感器模擬器之後重新加載頁面。
+Note: 如果您的應用檢測到使用 JavaScript（如 Modernizr）的傳感器加載，請確保在啓用傳感器模擬器之後重新加載頁面。
 
 ## 替換地理定位數據
 

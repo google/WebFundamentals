@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用分配分析器工具可以查找未正确执行垃圾回收的对象，并继续保留内存。
 
-{# wf_updated_on:2015-07-08 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2015-04-13 #}
 
 # 如何使用分配分析器工具 {: .page-title }
@@ -24,7 +24,7 @@ description:使用分配分析器工具可以查找未正确执行垃圾回收�
 
 ![分配分析器](imgs/object-tracker.png)
 
-注：@ 后面的数字是存在于拍摄的多个快照之间的对象 ID。使用此 ID 可以精确比较堆状态。显示对象的地址毫无意义，因为对象在垃圾回收过程中会被移动。
+Note: @ 后面的数字是存在于拍摄的多个快照之间的对象 ID。使用此 ID 可以精确比较堆状态。显示对象的地址毫无意义，因为对象在垃圾回收过程中会被移动。
 
 ## 启用分配分析器
 

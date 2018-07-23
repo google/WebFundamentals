@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體驗時需要注意的事項。
 
-{# wf_updated_on:2016-12-12 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-12-12 #}
 
 # WebVR 狀態和注意事項 {: .page-title }
@@ -15,7 +15,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 * Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
 * Firefox Nightly。
-* Samsung Internet Browser for Gear VR。（請注意：此瀏覽器目前支持一個較早版本的 WebVR 規範）。
+* Samsung Internet Browser for Gear VR。（請Note: 此瀏覽器目前支持一個較早版本的 WebVR 規範）。
 
 <iframe width="100%" height="320" src="https://www.chromestatus.com/feature/4532810371039232?embed" style="border: 1px solid #CCC" allowfullscreen>
 </iframe>

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上的实时内容。
 
-{# wf_updated_on:2016-12-09 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2015-04-13 #}
 
 <style>
@@ -56,7 +56,7 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
 1. [打开 DevTools](/web/tools/chrome-devtools/#open)。
 
 1. 在 DevTools 中，点击 **Main Menu** ![主菜单][main]{:.devtools-inline}，然后选择 **More tools** > **Remote devices**。
- 
+
 
      ![打开远程设备抽屉式导航栏][open]
 
@@ -86,7 +86,7 @@ description:从 Windows、Mac 或 Linux 计算机远程调试 Android 设备上�
 绿色圆圈和 **Connected** 文本表示您已大功告成，可以从开发计算机远程调试您的 Android 设备。
 
 
-注：如果您在发现流程中遇到任何问题，您可以通过在 Android 设备上选择 **Settings** > **Developer Options** > **Revoke USB Debugging Authorizations** 重启该流程。
+Note: 如果您在发现流程中遇到任何问题，您可以通过在 Android 设备上选择 **Settings** > **Developer Options** > **Revoke USB Debugging Authorizations** 重启该流程。
 
 
 
@@ -144,9 +144,9 @@ Element][select]{:.devtools-inline}，然后在您的 Android 设备屏幕上点
 
 您可以通过多种方式与抓屏互动：
 
-* 将点击转变为点按，在设备上触发适当的触摸事件。 
-* 将计算机上的按键发送至设备。 
-* 要模拟双指张合手势，请按住 <kbd>Shift</kbd> 拖动。 
+* 将点击转变为点按，在设备上触发适当的触摸事件。
+* 将计算机上的按键发送至设备。
+* 要模拟双指张合手势，请按住 <kbd>Shift</kbd> 拖动。
 * 要滚动，请使用您的触控板或鼠标滚轮，或者使用您的鼠标指针抛式滚动。
 
 

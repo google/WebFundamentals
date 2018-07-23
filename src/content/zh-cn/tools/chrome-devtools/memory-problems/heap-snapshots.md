@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何使用 Chrome DevTools 的堆分析器记录堆快照以及如何查找内存泄漏。
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-06-08 #}
 
 # 如何记录堆快照 {: .page-title }
@@ -33,7 +33,7 @@ Chrome DevTools 的堆分析器可以按页面的 JavaScript 对象和相关 DOM
 
 ![可到达对象的总大小](imgs/total-size.png)
 
-注：只有可到达对象才会包含到快照中。此外，拍摄快照始终从垃圾回收开始。
+Note: 只有可到达对象才会包含到快照中。此外，拍摄快照始终从垃圾回收开始。
 
 ## 清除快照
 
@@ -65,7 +65,7 @@ Chrome DevTools 的堆分析器可以按页面的 JavaScript 对象和相关 DOM
 
 ![切换视图选择器](imgs/switch-views.png)
 
-注：并不是所有属性都存储在 JavaScript 堆上。不会捕捉使用执行原生代码的 getter 实现的属性。另外，也不会捕捉数字等非字符串值。
+Note: 并不是所有属性都存储在 JavaScript 堆上。不会捕捉使用执行原生代码的 getter 实现的属性。另外，也不会捕捉数字等非字符串值。
 
 ### Summary 视图
 
@@ -142,28 +142,28 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
 
     function createLargeClosure() {
       var largeStr = new Array(1000000).join('x');
-    
+
       var lC = function() { // this is NOT a named function
         return largeStr;
       };
-    
+
       return lC;
     }
-    
+
 
 而下面的示例则使用了已命名的函数：
 
 
     function createLargeClosure() {
       var largeStr = new Array(1000000).join('x');
-    
+
       var lC = function lC() { // this IS a named function
         return largeStr;
       };
-    
+
       return lC;
     }
-    
+
 
 ![为函数命名以区分闭包](imgs/domleaks.png)
 
@@ -181,7 +181,7 @@ Containment 视图基本上是您应用的对象结构的“俯瞰视图”。�
 
 
 
-<p class="note"><strong>注：</strong>在 Chrome Canary 中，可以通过转到 Settings > Show advanced heap snapshot properties 然后重启 DevTools 的方式启用 Dominators 视图。</p>
+<p class="note"><strong>Note: </strong>在 Chrome Canary 中，可以通过转到 Settings > Show advanced heap snapshot properties 然后重启 DevTools 的方式启用 Dominators 视图。</p>
 
 ![Dominators 视图](imgs/dominators-view.png)
 
@@ -221,18 +221,18 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什么时候发�
       var treeRef = select("#tree");
       var leafRef = select("#leaf");
       var body = select("body");
-    
+
       body.removeChild(treeRef);
-    
+
       //#tree can't be GC yet due to treeRef
       treeRef = null;
-    
+
       //#tree can't be GC yet due to indirect
       //reference from leafRef
-    
+
       leafRef = null;
       //#NOW can be #tree GC
-    
+
 
 `#leaf` 可以维持对其父级 (parentNode) 的引用，并以递归方式返回 `#tree`，因此，只有 leafRef 被作废后，`#tree` 下的整个树才会成为 GC 的候选。
 

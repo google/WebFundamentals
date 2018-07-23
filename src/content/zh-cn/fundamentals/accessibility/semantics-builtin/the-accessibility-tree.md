@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:无障碍树简介
 
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-10-04 #}
 
 # 无障碍树 {: .page-title }
@@ -93,7 +93,7 @@ description:无障碍树简介
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 当我们不使用实际按钮元素时，屏幕阅读器无从知晓其读取的内容。
 此外，我们还需要额外完成[添加 tabindex](/web/fundamentals/accessibility/focus/using-tabindex) 的工作，以便只使用键盘的用户能够使用它，因为按照现有编码，它只能使用鼠标操作。
@@ -162,7 +162,7 @@ description:无障碍树简介
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 正确标示复选框后，屏幕阅读器便可报告元素角色为 checkbox，处于 checked 状态，名称为“Receive promotional offers?”。
 
@@ -170,7 +170,7 @@ description:无障碍树简介
 
 ![VoiceOver 产生的显示复选框朗读标签的屏幕文本输出](imgs/promo-offers.png)
 
-成功：您实际上可以使用屏幕阅读器，通过按 Tab 键在页面上循环跳转并验证朗读的角色、状态和名称来找到关联不正确的标签。
+Success: 您实际上可以使用屏幕阅读器，通过按 Tab 键在页面上循环跳转并验证朗读的角色、状态和名称来找到关联不正确的标签。
 
 
 

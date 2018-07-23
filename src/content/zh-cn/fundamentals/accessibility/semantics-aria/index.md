@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:ARIA 和非原生 HTML 语义简介
 
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-10-04 #}
 
 # ARIA 简介 {: .page-title }
@@ -33,7 +33,7 @@ description:ARIA 和非原生 HTML 语义简介
     <li tabindex="0" class="checkbox" checked>
       Receive promotional offers
     </li>
-    
+
 
 尽管这适合视力正常的用户，屏幕阅读器却不会给予任何指示来说明该元素旨在作为复选框使用，因此弱视用户可能会完全错过该元素。
 
@@ -47,9 +47,9 @@ description:ARIA 和非原生 HTML 语义简介
     <li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
       Receive promotional offers
     </li>
-    
 
-注：我们将[稍后](#what-can-aria-do)介绍 ARIA 属性列表以及它们的使用时机。
+
+Note: 我们将[稍后](#what-can-aria-do)介绍 ARIA 属性列表以及它们的使用时机。
 
 ARIA 通过更改和补充标准 DOM 无障碍树来发挥作用。
 
@@ -86,7 +86,7 @@ ARIA 允许我们创建的小部件型元素通常无法通过普通 HTML 实现
 
 
 <div class="clearfix"></div>
-      
+
     <button aria-label="screen reader only label"></button>
 
 
@@ -101,7 +101,7 @@ ARIA 允许我们创建的小部件型元素通常无法通过普通 HTML 实现
     . . .
     </div>
 
-    
+
 
  - 并且 ARIA 可以使页面的某些部分具有“实时性”，让它们在发生变化时立即通知辅助技术。
 
@@ -112,7 +112,7 @@ ARIA 允许我们创建的小部件型元素通常无法通过普通 HTML 实现
       <span>GOOG: $400</span>
     </div>
 
-    
+
 ARIA 系统的其中一个核心层面是其*角色*集。在无障碍术语中，角色是指特定 UI 模式的简略指示器。我们可以通过任意 HTML 元素上的 `role` 属性使用 ARIA 提供的模式词汇表。
 
 

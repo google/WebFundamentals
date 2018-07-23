@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:如果初始 HTML 内容通过安全的 HTTPS 连接加载，但其他资源通过不安全的 HTTP 连接加载，则会出现混合内容。
 
-{# wf_updated_on:2018-02-12 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2015-09-25 #}
 
 # 什么是混合内容？ {: .page-title }
@@ -252,7 +252,7 @@ HTTPS 是 HTTP Secure 的缩写，即超文本传输安全协议。此处的 **s
 如果您对特定浏览器的行为方式感兴趣，请直接查看供应商发布的信息。
 
 
-注：您的用户在访问您的网站时指望您保护他们。修复混合内容问题以保护<b>所有</b>访问者（包括使用较旧浏览器的访问者）很重要。
+Note: 您的用户在访问您的网站时指望您保护他们。修复混合内容问题以保护<b>所有</b>访问者（包括使用较旧浏览器的访问者）很重要。
 
 
 

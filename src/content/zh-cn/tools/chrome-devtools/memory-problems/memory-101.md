@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:本部分将介绍内存分析中的常用术语，适用于不同语言的各种内存分析工具。
 
-{# wf_updated_on:2015-05-18 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2015-05-18 #}
 
 # 内存术语 {: .page-title }
@@ -60,7 +60,7 @@ description:本部分将介绍内存分析中的常用术语，适用于不同�
 
 任何无法从根到达的对象都会被 GC 回收。
 
-注：浅层大小和保留大小列均以字节为单位表示数据。
+Note: 浅层大小和保留大小列均以字节为单位表示数据。
 
 ## 对象保留树
 

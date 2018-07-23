@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on:2014-12-09 #}
 
 # 离线指南 {: .page-title }
@@ -294,7 +294,7 @@ ServiceWorker 为您提供一个 `install` 事件。您可以使用该事件做�
 
 <img src="images/cm-on-bg-sync.png">
 
-Dogfood：后台同步在 Chrome stable 中尚不稳定。
+Dogfood: 后台同步在 Chrome stable 中尚不稳定。
 
 [后台同步](/web/updates/2015/12/background-sync)是基于 ServiceWorker 构建的另一个功能。它允许您一次性或按（非常具有启发性的）间隔请求后台数据同步。
 即使用户没有为您的网站打开标签，也会如此，仅唤醒 ServiceWorker。您从页面请求执行此操作的权限，用户将收到提示。
@@ -539,7 +539,7 @@ Twitter 在旧内容上添加新内容，并调整滚动位置，以便用户不
       );
     });
 
-注：上述代码在 Chrome 中还不可用，我们还没有向页面公开 `fetch` 和 `caches`（[ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770)、[ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)）。
+Note: 上述代码在 Chrome 中还不可用，我们还没有向页面公开 `fetch` 和 `caches`（[ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770)、[ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)）。
 
 在 [trained-to-thrill][ttt] 中，我解决了此问题，方法是使用 [XHR 而不是获取](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3)，滥用 Accept 标头以通知 ServiceWorker 在哪里获取来自（[页面代码](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70)、[ServiceWorker 代码](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)）的结果。
 

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与元素关联的 CSS 样式。
 
-{# wf_updated_on: 2016-02-25 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 编辑样式 {: .page-title }
@@ -64,12 +64,12 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 在 **Styles** 窗格中将鼠标悬停在 CSS 选择器上可以查看受该选择器影响的所有元素。
 例如，在下面的屏幕截图中，鼠标悬停在选择器 `.wf-tools-guide__section-link a` 上。在实时页面中，您可以看到受选择器影响的所有 `<a>` 元素。
- 
+
 
 ![查看受选择器影响的元素](imgs/selector-hover.png)
 
 **注**：此功能仅突出显示视口中的元素；视口以外的其他元素也可能受选择器影响。
- 
+
 
 ## 添加、启用和停用 CSS 类 {:#classes}
 
@@ -77,7 +77,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 从这里，您可以执行以下操作：
 
 * 启用或停用当前与元素关联的类。
-* 向元素添加新类。 
+* 向元素添加新类。
 
 ![classes 窗格](imgs/classes.png)
 
@@ -95,7 +95,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 * 使用 <kbd>Shift</kbd>+<kbd>向上键</kbd>能够以 10 为增量增大值；使用 <kbd>Shift</kbd>+<kbd>向下键</kbd>能够以 10 为增量减小值。
 * 使用 <kbd>Shift</kbd>+<kbd>Page Up</kbd>（Windows、Linux）或 <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>向上键</kbd> (Mac) 能够以 100 为增量增大值。使用 <kbd>Shift</kbd>+<kbd>Page Down</kbd>（Windows、Linux）或 <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>向下键</kbd> (Mac) 能够以 100 为增量减小值。
 
- 
+
 
 ## 添加新属性声明
 
@@ -103,26 +103,26 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 键入，或者将 CSS 粘贴到 **Styles** 窗格中。属性及其值将解析并输入到正确的字段中。
 
 
-注：要启用或停用样式声明，请选中或取消选中旁边的复选框。
+Note: 要启用或停用样式声明，请选中或取消选中旁边的复选框。
 
 ## 添加样式规则
 
 点击 **New Style Rule** (![New Style Rule 按钮](imgs/new-style-rule.png){:.inline}) 按钮可以添加一个新的 CSS 规则。
 
- 
 
-点击并按住按钮可以选择要向哪一个样式表添加规则。 
+
+点击并按住按钮可以选择要向哪一个样式表添加规则。
 
 ## 添加或移除动态样式（伪类）{:#pseudo-classes}
 
 您可以在元素上手动设置动态伪类选择器（例如 `:active`、`:focus`、`:hover` 和 `:visited`）。
- 
+
 
 可以通过两种方式在元素上设置动态状态：
 
 * 在 **Elements** 面板内右键点击某个元素，然后从菜单中选择目标伪类，将其启用或停用。
 ![右键点击元素以启用伪类选择器](imgs/pseudoclass-rightclick.png)
-  
+
 
 
 
@@ -143,7 +143,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 ![规则集中的三点图标](imgs/rule-set-three-dots-icon.png)
 
 将鼠标悬停到此图标上可以调出用于添加 `color` 声明 (![添加 color 声明](imgs/add-color.png){:.inline}) 或 `background-color` 声明 (![添加 background-color 声明](imgs/add-background-color.png){:.inline}) 的按钮。点击这些按钮之一可以将声明添加到样式规则中。
- 
+
 
 ## 使用 Color Picker 修改颜色 {:#color-picker}
 
@@ -186,7 +186,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 * **Page Colors**。一组从页面的 CSS 自动生成的颜色。
 * **Material Design**。一组符合 [Material Design 规范][md]的颜色。
 * **Custom**。您选择的任意一组颜色。DevTools 可以保存您的自定义调色板（甚至在不同的页面间），直至您将其删除。
- 
+
 
 #### 修改自定义调色板 {:#custom-color-palette}
 
@@ -202,7 +202,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 您可以查看和编辑定义或使用 [CSS 自定义属性][intro]（之前称为 CSS 变量）的声明，就像查看和编辑任何其他声明一样。
 
- 
+
 
 自定义属性通常在 `:root` 选择器中[定义][def]。
 要查看在 `:root` 中定义的自定义属性，请检查 `html` 元素。
@@ -215,7 +215,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 
 您可以查看和编辑使用自定义属性的声明值，就像查看和编辑任何其他声明值一样。
- 
+
 
 如果您看到一个像 `var(--main-color)` 一样的声明值（如下面的屏幕截图所示），则表示声明正在使用自定义属性。
 可以像编辑任何其他声明值一样编辑这些值。
@@ -231,7 +231,7 @@ description:使用 Chrome DevTools 中的 Styles 窗格可以检查和修改与�
 
 如果您在使用 Sass、Less、Stylus 或任何其他 CSS 预处理器，则在 Styles 编辑器中编辑生成的 CSS 输出文件不会有任何作用，因为它们不会映射到您的源代码。
 
-借助 CSS 源映射，DevTools 可以将生成的文件自动映射到源代码文件，这样，您可以在 Sources 面板中实时编辑这些文件并查看结果，而不用离开 DevTools 或刷新页面。 
+借助 CSS 源映射，DevTools 可以将生成的文件自动映射到源代码文件，这样，您可以在 Sources 面板中实时编辑这些文件并查看结果，而不用离开 DevTools 或刷新页面。
 
 ### 预处理器工作流
 

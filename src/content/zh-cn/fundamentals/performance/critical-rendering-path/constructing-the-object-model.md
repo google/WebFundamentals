@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:了解浏览器如何构建 DOM 和 CSSOM 树。
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2014-03-31 #}
 
 # 构建对象模型 {: .page-title }
@@ -44,7 +44,7 @@ description:了解浏览器如何构建 DOM 和 CSSOM 树。
 
 <img src="images/dom-timeline.png"  alt="在 DevTools 中追踪 DOM 构建">
 
-注：我们假定您对 Chrome DevTools 有着基础程度的熟悉，即您知道如何捕获网络瀑布，或记录时间线。如果您需要快速温习相关内容，请查看 <a href='/web/tools/chrome-devtools/'>Chrome DevTools 文档</a>；如果您未接触过 DevTools，我们建议您学习 Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> 课程。
+Note: 我们假定您对 Chrome DevTools 有着基础程度的熟悉，即您知道如何捕获网络瀑布，或记录时间线。如果您需要快速温习相关内容，请查看 <a href='/web/tools/chrome-devtools/'>Chrome DevTools 文档</a>；如果您未接触过 DevTools，我们建议您学习 Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> 课程。
 
 如果您打开 Chrome DevTools 并在页面加载时记录时间线，就可以看到执行该步骤实际花费的时间。在上例中，将一堆 HTML 字节转换成 DOM 树大约需要 5 毫秒。对于较大的页面，这一过程需要的时间可能会显著增加。创建流畅动画时，如果浏览器需要处理大量 HTML，这很容易成为瓶颈。
 

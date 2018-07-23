@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:大多数浏览器和设备都可访问用户的地理位置。了解如何在您的网站和应用中使用用户的位置。
 
-{# wf_updated_on:2016-08-22 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-01-01 #}
 
 # 用户位置 {: .page-title }
@@ -17,12 +17,12 @@ Geolocation API 还能让您了解用户位置并密切注意他们的动向，�
 
 使用 Geolocation API 时有许多需要注意的事项，本指南将指引您了解常见的用例和解决方案。
 
-注：从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上工作](/web/updates/2016/04/geolocation-on-secure-contexts-only)。如果网站托管在一个不安全的来源（如 `HTTP`）上，获取用户位置的请求将**无法再**正常工作。
+Note: 从 Chrome 50 开始，[Geolocation API 只能在安全环境 (HTTPS) 上工作](/web/updates/2016/04/geolocation-on-secure-contexts-only)。如果网站托管在一个不安全的来源（如 `HTTP`）上，获取用户位置的请求将**无法再**正常工作。
 
 ### TL;DR {: .hide-from-toc }
 
 * 对用户有利时使用地理定位。
-* 通过请求权限来明确响应用户手势。 
+* 通过请求权限来明确响应用户手势。
 * 使用功能检测以防用户的浏览器不支持地理定位。
 * 不要只是学习如何实现地理定位；还要学习地理定位的最佳使用方式。
 * 测试网站的地理定位功能。
@@ -136,7 +136,7 @@ Geolocation API 还能让您了解用户位置并密切注意他们的动向，�
 如果您需要用户完成操作，最好“取悦”他们，让其心甘情愿地完成操作。
 
 
-我们建议： 
+我们建议：
 
 1.  设置一个在短时间后触发的计时器 - 5 秒是个不错的值。
 2.  如果收到错误消息，则向用户显示消息。
@@ -166,7 +166,7 @@ Geolocation API 还能让您了解用户位置并密切注意他们的动向，�
       var geoSuccess = function(position) {
         hideNudgeBanner();
         // We have the location, don't display banner
-        clearTimeout(nudgeTimeoutId); 
+        clearTimeout(nudgeTimeoutId);
 
         // Do magic with location
         startPos = position;
@@ -229,7 +229,7 @@ Geolocation API 提供一种简单的“一次性”方法来获取用户的位�
 ## 监测用户的位置
 
 Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用户的位置（经用户同意）。
-  
+
 
 如果希望持续监测用户的位置，可以使用 Geolocation API 的 `watchPosition()` 方法。
 其运行方式与 `getCurrentPosition()` 类似，但它会在定位软件出现以下情况时多次触发：
@@ -238,7 +238,7 @@ Geolocation API 使您通过单次调用 `getCurrentPosition()` 即可获取用�
 
 1.  更准确地锁定用户。
 2.  确定用户的位置发生了变化。
- 
+
 
     var watchId = navigator.geolocation.watchPosition(function(position) {
       document.getElementById('currentLat').innerHTML = position.coords.latitude;

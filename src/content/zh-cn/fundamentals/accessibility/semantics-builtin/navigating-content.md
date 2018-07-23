@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:语义在网页导航中的作用
 
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-10-04 #}
 
 # 语义和内容导航 {: .page-title }
@@ -69,13 +69,13 @@ description:语义在网页导航中的作用
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-注：WebAIM 网站在[这篇有关屏幕外内容的文章](http://webaim.org/techniques/css/invisiblecontent/)中对此方法做了详细阐述。
+Note: WebAIM 网站在[这篇有关屏幕外内容的文章](http://webaim.org/techniques/css/invisiblecontent/)中对此方法做了详细阐述。
 
 
 对于复杂应用，如果视觉设计不需要或没有空间容纳可见标题，可能适合采用此方法来容纳标题。
 
 
-注意：采用此方法时切忌过火。别忘了，辅助技术用户或许自己也能看到屏幕，因此如果在创建“屏幕阅读器专用”内容这条道路上走得太远，实际上可能会令某些用户的体验水平下降。并且还会给后期维护造成困难。
+Note: 采用此方法时切忌过火。别忘了，辅助技术用户或许自己也能看到屏幕，因此如果在创建“屏幕阅读器专用”内容这条道路上走得太远，实际上可能会令某些用户的体验水平下降。并且还会给后期维护造成困难。
 
 
 ## 其他导航方案
