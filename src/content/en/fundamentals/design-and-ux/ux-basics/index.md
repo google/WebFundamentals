@@ -172,7 +172,7 @@ helps you update your challenge statement?
 </figure>
 
 This is where you observe the user in the field, in context while doing
-something, something like how they do their shopping, how they travel to work,
+something like how they do their shopping, how they travel to work,
 how they send SMS messages etc.. The reason is in some cases people will tell
 you what they think you want to hear. But if you watch users perform actions and
 tasks on their own it can be insightful. Basically you are observing without
@@ -256,8 +256,8 @@ give both votes to a single idea if they really like it.
 
 
 <figure  class="attempt-left">
-  <img src="images/crazy-8s.jpg" alt="Crazy 8s are a great way to get all of your ideas out onto one page".>
-  <figcaption>Crazy 8s are a great way to get all of your ideas out onto one page.</figcaption>
+  <img src="images/crazy-8s.jpg" alt="Crazy 8s are a great way to get all of your ideas onto one page".>
+  <figcaption>Crazy 8s are a great way to get all of your ideas onto one page.</figcaption>
 </figure>
 
 <figure class="attempt-right">
