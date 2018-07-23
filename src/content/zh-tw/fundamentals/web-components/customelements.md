@@ -93,7 +93,7 @@ description:自定義元素允許網絡開發者定義新的 HTML 標記、擴�
     
       // Can define function Object() { [native code] } arguments if you wish.
       function Object() { [native code] }() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
     
@@ -141,7 +141,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 
     class FancyDrawer extends AppDrawer {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
     
@@ -180,7 +180,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
     
@@ -255,7 +255,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
     
@@ -311,7 +311,7 @@ Custom Elements API 對創建新的 HTML 元素很有用，但它也可用於擴
 
     class AppDrawer extends HTMLElement {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -586,7 +586,7 @@ Shadow DOM 提供了一種方法，可讓元素以獨立於頁面其餘部分的
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -636,7 +636,7 @@ const supportsCustomElementsV1 = 'customElements' in window;
 if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     function Object() { [native code] }() {
-      super(); // always call super() first in the ctor.
+      super(); // always call super() first in the constructor.
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <b>I'm in shadow dom!</b>
@@ -668,7 +668,7 @@ if (supportsCustomElementsV1) {
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         function Object() { [native code] }() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);
