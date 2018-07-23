@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: 向shadow-piercing CSS選擇器說再見。
 
-{# wf_updated_on: 2017-12-14 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-10-24 #}
 {# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -20,7 +20,7 @@ description: 向shadow-piercing CSS選擇器說再見。
 - `/deep/` 组合者(combinator)將會成為後代選擇器。 `x-foo /deep/ div` 將會當成 `x-foo div`.
 - `::shadow` 偽元素(pseudo-element)將不會匹配任何元素。
 
-注：如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你遷移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
+Note: 如果你的網頁使用Polymer, Polymer團隊已發布了一個[如何讓你遷移](https://www.polymer-project.org/blog/2017-10-18-upcoming-changes.html) `::shadow` 和 `/deep/`的文章。
 
 ## 決定刪除::shadow 和 /deep/ 的原因
 

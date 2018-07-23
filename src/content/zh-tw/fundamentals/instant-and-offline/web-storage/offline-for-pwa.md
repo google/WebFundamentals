@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:瞭解如何在本地存儲數據以縮短響應時間和改進離線支持。
 
-{# wf_updated_on:2016-09-29 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-09-29 #}
 
 # Progressive Web App 的離線存儲 {: .page-title }
@@ -44,7 +44,7 @@ IndexedDB 在[每個位置](http://caniuse.com/#feat=indexeddb)都可用。
 
 
 
-Safari 10 在其最新的技術預覽版中[修復了許多長期存在的 IndexedDB 錯誤](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26)。注：一些用戶發現 Safari 10 的 IndexedDB 和 PouchDB 存在穩定性問題，並發現其速度有些慢。在對此問題進行更多研究之前，您的情況可能有所不同。請進行測試並提交瀏覽器錯誤，以便 @webkit 工作任意和相關的 OSS 庫作者可以查看。默認情況下，LocalForage、PouchDB、YDN 和 Lovefield 在 Safari 中使用 WebSQL（因爲缺少有效的方法對損壞的 IndexedDB 進行功能測試）。這意味着這些庫無需任何額外操作即可在 Safari 10 中使用（只是不直接使用 IndexedDB）。
+Safari 10 在其最新的技術預覽版中[修復了許多長期存在的 IndexedDB 錯誤](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26)。Note: 一些用戶發現 Safari 10 的 IndexedDB 和 PouchDB 存在穩定性問題，並發現其速度有些慢。在對此問題進行更多研究之前，您的情況可能有所不同。請進行測試並提交瀏覽器錯誤，以便 @webkit 工作任意和相關的 OSS 庫作者可以查看。默認情況下，LocalForage、PouchDB、YDN 和 Lovefield 在 Safari 中使用 WebSQL（因爲缺少有效的方法對損壞的 IndexedDB 進行功能測試）。這意味着這些庫無需任何額外操作即可在 Safari 10 中使用（只是不直接使用 IndexedDB）。
 
 
 對於 PWA，您可以緩存靜態資源，從而使用 Cache API 編寫您的應用 Application Shell（JS/CSS/HTML 文件），並從 IndexedDB 填充離線頁面數據。

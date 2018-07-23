@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何设置 Lighthouse 以审查网络应用。
 
-{# wf_updated_on:2016-09-27 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-09-27 #}
 
 # 使用 Lighthouse 审查网络应用 {: .page-title }
@@ -14,7 +14,7 @@ description:了解如何设置 Lighthouse 以审查网络应用。
 从此处，您可以失败的测试为指示器，看看可以采取哪些措施来改进您的应用。
 
 
-注：Lighthouse 目前非常关注 Progressive Web App 功能，如“添加到主屏幕”和离线支持。不过，此项目的首要目标是针对网络应用质量的各个方面提供端到端审查。
+Note: Lighthouse 目前非常关注 Progressive Web App 功能，如“添加到主屏幕”和离线支持。不过，此项目的首要目标是针对网络应用质量的各个方面提供端到端审查。
 
 ## 使用入门
 

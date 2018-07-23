@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“网站不使用延迟首次绘制的链接标记”与“网站在标头中不使用延迟首次绘制的脚本标记”Lighthouse 审查的参考文档。
 
-{# wf_updated_on: 2016-12-01 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-12-01 #}
 
 # 网站不使用延迟首次绘制的资源 {: .page-title }
@@ -22,7 +22,7 @@ description:“网站不使用延迟首次绘制的链接标记”与“网站�
 
 正如[如何实现审查](#implementation)中所述，Lighthouse 标记三种类型的阻塞渲染的链接：脚本、样式表和 HTML 导入。如何进行优化取决于您正在使用的资源类型。
 
-注：如果某个资源称为“关键资源”，则意味着首次绘制需要该资源或该资源对页面的核心功能至关重要。
+Note: 如果某个资源称为“关键资源”，则意味着首次绘制需要该资源或该资源对页面的核心功能至关重要。
 
 
 

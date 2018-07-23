@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:设备动作和方向事件可访问移动设备上的内置加速度计、陀螺仪和罗盘。
 
-{# wf_updated_on:2016-08-22 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-06-17 #}
 
 # 设备屏幕方向与运动 {: .page-title }
@@ -17,7 +17,7 @@ description:设备动作和方向事件可访问移动设备上的内置加速�
 
 
 
-注意：并非所有浏览器都使用相同的坐标系，因此它们可能在完全相同的情况下报告不同的值。这种情况已逐渐得到改善，但务必要根据具体情况进行测试。
+Note: 并非所有浏览器都使用相同的坐标系，因此它们可能在完全相同的情况下报告不同的值。这种情况已逐渐得到改善，但务必要根据具体情况进行测试。
 
 ##TL;DR
 
@@ -28,7 +28,7 @@ description:设备动作和方向事件可访问移动设备上的内置加速�
 ## 哪边是向上？
 
 要使用设备方向和动作事件返回的数据，必须理解所提供的值。
-  
+
 
 ### 地球坐标系
 
@@ -170,7 +170,7 @@ description:设备动作和方向事件可访问移动设备上的内置加速�
 
 ### 检查支持情况和侦听事件
 
-要侦听 `DeviceOrientationEvent`，首先检查浏览器是否支持这些事件。然后，将一个事件侦听器附加到 `window` 对象，以侦听 `deviceorientation` 事件。 
+要侦听 `DeviceOrientationEvent`，首先检查浏览器是否支持这些事件。然后，将一个事件侦听器附加到 `window` 对象，以侦听 `deviceorientation` 事件。
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', deviceOrientationHandler, false);
@@ -189,7 +189,7 @@ description:设备动作和方向事件可访问移动设备上的内置加速�
 
 
 
-## 设备动作 
+## 设备动作
 
 设备方向事件返回旋转数据，包括设备前后倾斜度、两侧倾斜度，如果手机或笔记本电脑有罗盘，则还包括设备正在朝向的方向。
 
@@ -213,7 +213,7 @@ description:设备动作和方向事件可访问移动设备上的内置加速�
 
 要侦听 `DeviceMotionEvent`，首先检查浏览器是否支持这些事件。
 然后，将一个事件侦听器附加到 `window` 对象，以侦听 `devicemotion` 事件。
- 
+
 
     if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', deviceMotionHandler);

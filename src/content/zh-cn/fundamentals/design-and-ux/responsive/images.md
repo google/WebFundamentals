@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:一图胜千言，图像也是每个页面不可或缺的组成部分。但是，图像通常也占了下载字节的多数。有了自适应网页设计，不仅我们的布局能根据设备特性而变化，图像也可以。
+description: 一图胜千言，图像也是每个页面不可或缺的组成部分。但是，图像通常也占了下载字节的多数。有了自适应网页设计，不仅我们的布局能根据设备特性而变化，图像也可以。
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 图像 {: .page-title }
@@ -80,7 +80,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 请务必借助 `img` 元素的 `alt` 属性提供有意义的描述；这些描述有助于提高您的网站的可访问性，因为它们能提供语境给屏幕阅读器及其他辅助性技术。
 
@@ -107,7 +107,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 在不支持 `srcset` 的浏览器上，浏览器只需使用 `src` 属性指定的默认图像文件。
 正因如此，无论设备能力如何，一定要始终包含一个在任何设备上都能显示的 1x 图像。如果 `srcset` 受支持，则会在进行任何请求之前对逗号分隔的图像/条件列表进行解析，并且只会下载和显示最合适的图像。
@@ -133,7 +133,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 <div style="clear:both;"></div>
 
-Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是每个浏览器都支持，但我们推荐使用它，因为它具备出色的向后兼容性，还可以使用 [Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external }。如需了解更多详细信息，请参阅 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 网站。
+Dogfood: `picture` 元素刚开始在浏览器上实现。虽然目前还不是每个浏览器都支持，但我们推荐使用它，因为它具备出色的向后兼容性，还可以使用 [Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external }。如需了解更多详细信息，请参阅 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 网站。
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -283,7 +283,7 @@ J. Crew 网站提供了一个很好的可点按、可展开图像的例子。一
 
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/compressive.html){: target="_blank" .external }
 
-注意：请慎用压缩技术，因为它需要增加内存和解码成本。在内存和处理能力有限的低端设备上，调整大图像以适应较小屏幕的开销非常大，并且费时费力。
+Note: 请慎用压缩技术，因为它需要增加内存和解码成本。在内存和处理能力有限的低端设备上，调整大图像以适应较小屏幕的开销非常大，并且费时费力。
 
 #### JavaScript 图像替换
 
@@ -383,14 +383,14 @@ SVG 在移动设备和桌面设备上能够得到[很好的支持](http://canius
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 上述 HTML5 徽标的代码开头类似于下面所示：
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 （完整版本长度超过 5000 字符！）
 
@@ -463,7 +463,7 @@ CSS 中的 `image-set()` 函数增强了 `background` 属性的行为，使它�
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 除了加载合适的图像外，浏览器也会相应地调整其大小。
 换句话说，浏览器假设 2x 图像是 1x 图像的两倍大，因此会将 2x 图像缩小一半，最后图像在页面上看上去就一样大。
@@ -496,7 +496,7 @@ CSS 中的 `image-set()` 函数增强了 `background` 属性的行为，使它�
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome、Firefox 和 Opera 都支持标准的 `(min-resolution: 2dppx)`，Safari 和 Android 浏览器则均需要不带 `dppx` 单位的旧版供应商前缀语法。请谨记，这些样式只有在设备与媒体查询匹配时才被加载，且必须为基础案例指定样式。
 这样也能够确保当浏览器不支持分辨率特有的媒体查询时，一些内容仍可以得到渲染。
@@ -520,10 +520,10 @@ Chrome、Firefox 和 Opera 都支持标准的 `(min-resolution: 2dppx)`，Safari
         background-image: url(bg.png);
       }
     }
-    
 
 
-## 为图标使用 SVG 
+
+## 为图标使用 SVG
 
 为页面添加图标时，尽可能使用 SVG 图标，某些情况下，请使用 unicode 字符。
 
@@ -549,7 +549,7 @@ Chrome、Firefox 和 Opera 都支持标准的 `(min-resolution: 2dppx)`，Safari
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
@@ -592,7 +592,7 @@ SVG 的优势比光栅图像多很多：
 * 要实现像素完美定位效果很难，具体取决于行高、字符间距等。
 * 它们没有语义，可能很难与屏幕阅读器及其他辅助性技术结合使用。
 * 除非正确设置了作用域，否则它们可能造成文件很大，却只使用了一小部分可用图标的情况。
- 
+
 
 <div style="clear:both;"></div>
 
@@ -753,7 +753,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 请注意，使用这些技巧需要呈现周期性，这一点在移动设备上非常显著。
 如果过度使用，您会失去您可能已经获得的好处，而且可能会降低页面性能。

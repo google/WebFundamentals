@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:服务工作线程生命周期的深度教程。
 
-{# wf_updated_on:2016-09-29 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-09-29 #}
 
 # 服务工作线程生命周期 {: .page-title }
@@ -17,7 +17,7 @@ description:服务工作线程生命周期的深度教程。
 
 ## 目的
 
-服务工作线程生命周期的目的：
+服务工作线程生命周期的Objective:
 
 * 实现离线优先。
 * 允许新服务工作线程自行做好运行准备，无需中断当前的服务工作线程。
@@ -31,7 +31,7 @@ description:服务工作线程生命周期的深度教程。
 有时候这样做没什么问题，但如果您正在处理存储，那么，出现两个标签很容易会让您的操作中断，因为它们的共享的存储空间管理机制大相径庭。这可能会导致错误，更糟糕的情况是导致数据丢失。
 
 
-注意：用户非常讨厌数据丢失。这会让他们非常沮丧。
+Note: 用户非常讨厌数据丢失。这会让他们非常沮丧。
 
 ## 第一个服务工作线程
 
@@ -258,7 +258,7 @@ description:服务工作线程生命周期的深度教程。
 按 refresh，您将看到小猫。
 
 
-注：猫比狗好。确实*如此*。
+Note: 猫比狗好。确实*如此*。
 
 ### 作用域和控制
 
@@ -329,7 +329,7 @@ Chrome 的 DevTools 在控制台和应用标签的服务工作线程部分中显
 
 
 
-注：我看到很多人添加 `clients.claim()` 作为样板文件，但我自己很少这么做。
+Note: 我看到很多人添加 `clients.claim()` 作为样板文件，但我自己很少这么做。
 该事件只是在首次加载时非常重要，由于渐进式增强，即使没有服务工作线程，页面也能顺利运行。
 
 
@@ -570,7 +570,7 @@ Chrome 的 DevTools 在控制台和应用标签的服务工作线程部分中显
       }
     });
 
-注：我对马没有什么强烈的看法。
+Note: 我对马没有什么强烈的看法。
 
 [查看上面的演示](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
 .external}。
@@ -627,13 +627,13 @@ Chrome 的 DevTools 在控制台和应用标签的服务工作线程部分中显
 
 
 
-注意：不要更新以前的版本。它可能是许多旧版本的服务工作线程。
+Note: 不要更新以前的版本。它可能是许多旧版本的服务工作线程。
 
 如果您将一个 promise 传递到 `event.waitUntil()`，它将缓冲功能事件（`fetch`、`push`、`sync` 等），直到 promise 进行解析。
 因此，当您的 `fetch` 事件触发时，激活已全部完成。
 
 
-注意：Cache storage API 属于“源存储”（如 localStorage 和 IndexedDB）。
+Note: Cache storage API 属于“源存储”（如 localStorage 和 IndexedDB）。
 如果您在同源上运行许多网站（例如，`yourname.github.io/myapp`），请注意，不要删除其他网站的缓存。为避免此问题，可以为您的缓存名称提供一个在当前网站上具有唯一性的前缀（例如，`myapp-static-v1`），并且不要删除缓存，除非它们以 `myapp-` 开头。
 
 
@@ -665,7 +665,7 @@ Chrome 的 DevTools 在控制台和应用标签的服务工作线程部分中显
 
 
 
-注意：`skipWaiting()` 意味着新服务工作线程可能会控制使用较旧工作线程加载的页面。
+Note: `skipWaiting()` 意味着新服务工作线程可能会控制使用较旧工作线程加载的页面。
 这意味着页面获取的部分数据将由旧服务工作线程处理，而新服务工作线程处理后来获取的数据。如果这会导致问题，则不要使用 `skipWaiting()`
 
 
@@ -777,7 +777,7 @@ Chrome 的 DevTools 在控制台和应用标签的服务工作线程部分中显
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
       // changes, eg a new worker has as skipped waiting and become
-      // the new active worker. 
+      // the new active worker.
     });
 
 ## 您成功了！

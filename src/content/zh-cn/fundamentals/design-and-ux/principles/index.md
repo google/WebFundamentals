@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:Google 和 AnswerLab 进行的一项研究对用户与各类移动网站的交互方式做了调查。其目标是回答一个问题，‘怎样才算出色的移动网站？’
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2018-02-05 #}
+{# wf_updated_on: 2018-07-23 #}
 
 # 怎样才算出色的移动网站？ {: .page-title }
 
@@ -24,7 +24,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 首页和网站导航
 
-成功：让您的移动首页侧重于将用户与他们要寻找的内容联系起来。
+Success: 让您的移动首页侧重于将用户与他们要寻找的内容联系起来。
 
 ### 让吸引注意力的元素前置居中
 
@@ -111,7 +111,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 网站搜索
 
-成功：帮助移动用户找到其正在急切寻找的内容。
+Success: 帮助移动用户找到其正在急切寻找的内容。
 
 ### 让网站搜索可见
 
@@ -208,7 +208,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 商务和转化
 
-成功：了解客户之旅，让用户根据自身情况进行转化。
+Success: 了解客户之旅，让用户根据自身情况进行转化。
 
 ### 让用户先探索、后表态
 
@@ -286,7 +286,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 表单输入
 
-成功：通过易用型表单提供顺畅的无缝式转化体验。
+Success: 通过易用型表单提供顺畅的无缝式转化体验。
 
 
 ### 精简信息输入
@@ -343,7 +343,7 @@ Google 和 AnswerLab 执行了一项[调查研究](https://www.google.com/think/
 
 ## 易用性和机型
 
-成功：通过可增强移动用户使用体验的微小改进来取悦他们。
+Success: 通过可增强移动用户使用体验的微小改进来取悦他们。
 
 ### 对您的整个网站进行移动优化
 

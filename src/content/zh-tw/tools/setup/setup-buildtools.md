@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:從頭開始構建您的多設備網站。瞭解如何使用一套構建流程工具加快開發速度和創建快速加載的網站。
 
-{# wf_updated_on:2015-04-13 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-09-24 #}
 
 # 設置構建工具 {: .page-title }
@@ -198,7 +198,7 @@ description:從頭開始構建您的多設備網站。瞭解如何使用一套�
   </tbody>
 </table>
 
-**注**  
+**注**
 如果您喜歡，您可以添加 [Sublime 軟件包來執行前綴自動補全工作](/web/tools/setup/setup-editor#autoprefixer)。
 
 
@@ -223,7 +223,7 @@ Web Starter Kit 使用 browser-sync 提供實時重新加載支持。
   </tbody>
 </table>
 
-注：如果您喜歡實時重新加載這一想法，但不想有構建流程，請參閱 [Addy Osmani 撰寫的有關 HTML5Rocks 的文章](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)，其中介紹了各種替代方案（有些是免費的，有些是商業的）。
+Note: 如果您喜歡實時重新加載這一想法，但不想有構建流程，請參閱 [Addy Osmani 撰寫的有關 HTML5Rocks 的文章](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)，其中介紹了各種替代方案（有些是免費的，有些是商業的）。
 
 
 {# wf_devsite_translation #}

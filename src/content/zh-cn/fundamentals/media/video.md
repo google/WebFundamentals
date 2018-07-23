@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:了解如何以最简便的方式为您的网站添加视频，并确保用户在任何设备上均可获得最佳体验。
 
-{# wf_updated_on:2014-04-28 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-04-15 #}
 
 # 视频 {: .page-title }
@@ -23,7 +23,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 
-## 添加视频 
+## 添加视频
 
 ### TL;DR {: .hide-from-toc }
 - 使用 `video` 元素在网站上加载、解码以及播放视频。
@@ -46,7 +46,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
     <video src="chrome.webm" type="video/webm">
         <p>您的浏览器不支持 video 元素。</p>
     </video>
-    
+
 
 ### 指定多个文件格式
 
@@ -107,14 +107,14 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
     <source src="video/chrome.webm#t=5,10" type="video/webm">
-    
+
 
 您还可以使用 Media Fragments API 提供有关同一个视频的多个视图，就如 DVD 中的记忆点一样，而无需编码和提供多个文件。
 
 
 
 
-注意：除 iOS 之外的大多数平台都支持 Media Fragments API。此外，确保服务器支持 Range Requests。默认情况下，多数服务器中的 Range Requests 处于启用状态，不过，有些托管服务可能会将其停用。
+Note: 除 iOS 之外的大多数平台都支持 Media Fragments API。此外，确保服务器支持 Range Requests。默认情况下，多数服务器中的 Range Requests 处于启用状态，不过，有些托管服务可能会将其停用。
 
 使用浏览器开发者工具检查响应标头中的 `Accept-Ranges: bytes`：
 
@@ -131,7 +131,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
     <video poster="poster.jpg" ...>
       ...
     </video>
-    
+
 
 如果视频 `src` 损坏或提供的视频格式均不受支持，那么海报也可用作后备资源。
 海报图像唯一的缺点是它需要一个额外的文件请求，这不仅会占用一些带宽，还需要进行渲染。如需了解详细信息，请参阅[图像优化](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)。
@@ -158,7 +158,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 <div style="clear:both;"></div>
 
 
-## 为旧版平台提供替代方案 
+## 为旧版平台提供替代方案
 
 并非所有的视频格式都可以受到所有平台的支持。查看各大平台支持哪些格式，并确保您的视频能以所有这些格式运行。
 
@@ -252,7 +252,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 
-## 正确调整视频大小 
+## 正确调整视频大小
 
 谈到如何让用户始终感到满意，文件大小很重要。
 
@@ -310,7 +310,7 @@ description:了解如何以最简便的方式为您的网站添加视频，并�
 
 
 
-注意：请勿强制调整元素尺寸，否则会使宽高比异于原始视频。挤压或拉伸都会造成较差的视觉效果。
+Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频。挤压或拉伸都会造成较差的视觉效果。
 
 **CSS**：
 
@@ -402,22 +402,22 @@ iPad 版 Safari 以内联模式播放视频：
 以全屏模式显示某元素，如视频：
 
     elem.requestFullScreen();
-    
+
 
 以全屏模式显示整个文档：
 
     document.body.requestFullScreen();
-    
+
 
 您还可以侦听全屏状态变化：
 
     video.addEventListener("fullscreenchange", handler);
-    
+
 
 或者，查看元素当前是否处于全屏模式：
 
     console.log("In full screen mode: ", video.displayingFullscreen);
-    
+
 
 您也可以使用 CSS `:fullscreen` 伪类来更改全屏模式下元素的显示方式。
 
@@ -433,7 +433,7 @@ iPad 版 Safari 以内联模式播放视频：
 
 要了解此操作实例，请观看[演示](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/media/fullscreen.html){: target="_blank" .external }。
 
-Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需要额外代码才能实现全面的跨浏览器兼容性。
+Dogfood: `requestFullScreen()` 可能添加了供应商前缀，并且可能需要额外代码才能实现全面的跨浏览器兼容性。
 
 <div style="clear:both;"></div>
 
@@ -481,7 +481,7 @@ Dogfood：`requestFullScreen()` 可能添加了供应商前缀，并且可能需
 
     ...
 
-Dogfood：Chrome（Android 版）、iOS Safari 以及当前的所有桌面版浏览器（Firefox 除外）均支持 track 元素（请参阅 [caniuse.com/track](http://caniuse.com/track)）。此外，还有一些 polyfill。我们建议使用 [Captionator](http://captionatorjs.com/){: .external }。
+Dogfood: Chrome（Android 版）、iOS Safari 以及当前的所有桌面版浏览器（Firefox 除外）均支持 track 元素（请参阅 [caniuse.com/track](http://caniuse.com/track)）。此外，还有一些 polyfill。我们建议使用 [Captionator](http://captionatorjs.com/){: .external }。
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在移动设备上填写表单很困难。输入操作最少的表单就是最好的表单。
 
-{# wf_updated_on:2014-10-21 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-04-30 #}
 
 # 创建出色的表单 {: .page-title }
@@ -65,7 +65,7 @@ description:在移动设备上填写表单很困难。输入操作最少的表�
 
 
 如果在早期步骤中设置了异常复杂的表单，用户更可能放弃您的网站，而不会完成整个流程。
- 
+
 
 <div style="clear:both;"></div>
 
@@ -81,7 +81,7 @@ description:在移动设备上填写表单很困难。输入操作最少的表�
 用户在安排约会和旅行日期时往往需要更多上下文，如要使操作更容易，并防止他们离开您的网站去查看其日历应用，就应提供一个可视化日历，设置清楚的标签以便选择开始和结束日期。
 
 
- 
+
 
 <div style="clear:both;"></div>
 
@@ -294,7 +294,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
 
-注：Chrome 需要将 `input` 元素包含在 `<form>` 标记中才能启用自动完成。
+Note: Chrome 需要将 `input` 元素包含在 `<form>` 标记中才能启用自动完成。
 如果它们不包含在 `form` 标签中，Chrome 将提供建议值，但是**不会**完成表单。
 
 
@@ -442,7 +442,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 </table>
 
 
-注：仅在您的地址格式需要时，才需要使用  <code>street-address</code> 或者  <code>address-line1</code> 和  <code>address-line2</code>  <code>address-level1</code> 和  <code>address-level2</code>。
+Note: 仅在您的地址格式需要时，才需要使用  <code>street-address</code> 或者  <code>address-line1</code> 和  <code>address-line2</code>  <code>address-level1</code> 和  <code>address-level2</code>。
 
 
 ###  `autofocus` 属性
@@ -458,7 +458,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ## 提供实时验证
@@ -476,14 +476,14 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 ####  `pattern` 属性
 
-`pattern` 属性指定一个用于验证输入字段的[正则表达式](https://en.wikipedia.org/wiki/Regular_expression)。 
+`pattern` 属性指定一个用于验证输入字段的[正则表达式](https://en.wikipedia.org/wiki/Regular_expression)。
 例如，要验证美国邮编（5 位数，有时后面有一个破折号和另外 4 位数），我们将 `pattern` 设置如下：
 
 
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### 常用的正则表达式模式
 
@@ -537,7 +537,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ####  `min`、`max` 和 `step` 属性
 
@@ -547,7 +547,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 ####  `maxlength` 属性
 
@@ -556,7 +556,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 ####  `minlength` 属性
 
@@ -565,7 +565,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 ####  `novalidate` 属性
 
@@ -579,10 +579,10 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
 
 
-成功：即使客户端有输入验证，也务必在服务器上验证数据，以确保数据的一致性和安全性。
+
+Success: 即使客户端有输入验证，也务必在服务器上验证数据，以确保数据的一致性和安全性。
 
 ###  使用 JavaScript 实现更复杂的实时验证
 
@@ -701,7 +701,7 @@ Note: 当用户开始输入元素时，占位符立即消失，因此它们不�
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/input/forms/order.html){: target="_blank" .external }
 
 
-成功：应一次性向用户显示表单上的所有问题，而不是一次显示一个问题。
+Success: 应一次性向用户显示表单上的所有问题，而不是一次显示一个问题。
 
 
 

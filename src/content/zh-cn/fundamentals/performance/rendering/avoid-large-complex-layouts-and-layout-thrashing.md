@@ -4,7 +4,7 @@ description:布局是浏览器计算各元素几何信息的过程：元素的�
 
 # 避免大型、复杂的布局和布局抖动 {: .page-title }
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-03-20 #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
@@ -54,7 +54,7 @@ description:布局是浏览器计算各元素几何信息的过程：元素的�
 
 在仔细研究上例中的框架时，我们看到超过 20 毫秒用在布局上，当我们在动画中设置 16 毫秒来获取屏幕上的框架时，此布局时间太长。您还可以看到，DevTools 将说明树的大小（本例中为 1618 个元素）以及需要布局的节点数。
 
-注：想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确切列表？请查看 [CSS 触发器](https://csstriggers.com)。
+Note: 想要一个有关哪些 CSS 属性会触发布局、绘制或合成的确切列表？请查看 [CSS 触发器](https://csstriggers.com)。
 
 ## 使用 flexbox 而不是较早的布局模型
 

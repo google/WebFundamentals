@@ -57,7 +57,7 @@
   caseSensitive: True
 
 - typo: m[\d]{2,}
-  fix: $1
+  fix: Chrome xx
   description: "Do not use 'M' or 'milestone'"
   caseSensitive: True
 
@@ -540,13 +540,13 @@
 
 ## Common issues in translations
 
-- typo: \uFF1A
-  fix: ':'
-  description: This is a unicode full-width colon, please use normal colons.
+# - typo: \uFF1A
+#   fix: ':'
+#   description: This is a unicode full-width colon, please use normal colons.
 
 # Call-outs
 
-- typo: '(注意|노트)[：:]'
+- typo: '(注意|노트|注)[：:]'
   fix: 'Note:'
   description: Call-outs like 'Note:' should not be translated.
 

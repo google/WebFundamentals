@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:代码编辑器是您的主要开发工具；可以使用代码编辑器编写和保存代码行。了解代码编辑器的快捷键并安装主要插件可以更快地编写出更好的代码。
 
-{# wf_updated_on:2015-04-13 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-05-28 #}
 
 # 设置您的编辑器 {: .page-title }
@@ -27,7 +27,7 @@ description:代码编辑器是您的主要开发工具；可以使用代码编�
 
 Sublime Text 当前有两种下载选项，[版本 2](http://www.sublimetext.com/2) 或[版本 3](http://www.sublimetext.com/3)。版本 3 非常稳定，让您可以访问 Sublime Text 2 不支持的软件包，不过您可能会发现版本 2 更加可靠。
 
-注：Rob Dodson 有关如何了解和爱上 Sublime 的<a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>博文</a>是充分利用编辑器一个非常好的参考。这些概念与所有文本编辑器相关，而不仅仅与 Sublime 相关。
+Note: Rob Dodson 有关如何了解和爱上 Sublime 的<a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>博文</a>是充分利用编辑器一个非常好的参考。这些概念与所有文本编辑器相关，而不仅仅与 Sublime 相关。
 
 ## 为什么要使用软件包管理器？
 
@@ -106,7 +106,7 @@ Linting（检查代码潜在问题）- 有一个插件可以执行这项任务�
 
 ### Gutter Color
 
-注：仅适用于 Sublime Text 3
+Note: 仅适用于 Sublime Text 3
 
 Gutter Color 可以在 CSS 旁为您显示小色样。
 

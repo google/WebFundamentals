@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:Chrome DevTools 的 Elements 面板中的 DOM 樹視圖可以顯示當前網頁的 DOM 結構。通過 DOM 更新實時修改頁面的內容和結構。
 
-{# wf_updated_on: 2015-04-29 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-04-29 #}
 
 # 編輯 DOM {: .page-title }
@@ -38,7 +38,7 @@ Chrome DevTools 的 Elements 面板中的 DOM 樹視圖可以顯示當前網頁�
 + <kbd class="kbd">C</kbd> (Windows) 或 <kbd class="kbd">Cmd</kbd>
 + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd> (Mac)，在 Inspect Element 模式下打開 DevTools，然後將鼠標懸停到某個元素上。
 DevTools 會在 **Elements** 面板中自動突出顯示您懸停的元素。點擊元素可以退出檢查模式，同時保持元素在 **Elements** 面板中處於突出顯示狀態。
- 
+
 
 點擊 **Inspect Element** 按鈕 ![Inspect 圖標](/web/tools/chrome-devtools/inspect-styles/imgs/inspect-icon.png){:.inline} 轉到 Inspect Element 模式，然後點擊元素。
 
@@ -73,7 +73,7 @@ DevTools 會在 **Elements** 面板中自動突出顯示您懸停的元素。點
 
 ### 麪包屑導航記錄導航
 
-Elements 面板的底部是麪包屑導航記錄。 
+Elements 面板的底部是麪包屑導航記錄。
 
 ![麪包屑導航記錄](imgs/breadcrumb-body.png)
 
@@ -112,7 +112,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 
 要以 HTML 形式編輯 DOM 節點及其子級，請執行以下操作：
 
-* 打開 [more actions 菜單](#more-actions)並選擇 **Edit as HTML**。 
+* 打開 [more actions 菜單](#more-actions)並選擇 **Edit as HTML**。
 * 按 <kbd>F2</kbd> (Windows / Linux) 或 <kbd>Fn</kbd>+<kbd>F2</kbd> (Mac)。
 * 按 <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Windows / Linux) 或 <kbd>Cmd</kbd>+<kbd>Enter</kbd> (Mac) 保存更改。
 * 按 <kbd>Esc</kbd> 可以退出編輯器而不保存。
@@ -133,7 +133,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 * 打開 [more actions 菜單](#more-actions)並選擇 **Delete Node**。
 * 選擇節點並按 <kbd>Delete</kbd> 鍵。
 
-注：如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd>（Mac 上爲 <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd>）可以撤消您的上一步操作。
+Note: 如果您意外刪除了節點，按 <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd>（Mac 上爲 <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd>）可以撤消您的上一步操作。
 
 ## 顯示 more actions 菜單 {: #more-actions }
 
@@ -169,7 +169,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
     //modify the element's subtree.
     var mySpan = document.createElement('span');
     element.appendChild( mySpan );
-    
+
 
 ### 屬性修改
 
@@ -179,7 +179,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
     var element = document.getElementById('main-content');
     // class attribute of element has been modified.
     element.className = 'active';
-    
+
 
 ### 節點移除
 
@@ -188,7 +188,7 @@ DevTools 會在記錄中顯示儘可能多的項目。如果狀態欄無法顯�
 
 
     document.getElementById('main-content').remove();
-    
+
 
 ## 與 DOM 斷點交互
 
@@ -214,7 +214,7 @@ Elements 和 Sources 面板均包含一個用於管理 DOM 斷點的窗格。
 ## 查看元素事件偵聽器
 
 在 **Event Listeners** 窗格中查看與 DOM 節點關聯的 JavaScript 事件偵聽器。
- 
+
 
 ![Event Listeners 面板](imgs/event-listeners-pane.png)
 
@@ -245,7 +245,7 @@ Event Listeners 窗格中的頂級項目將顯示具有已註冊偵聽器的事�
   </tbody>
 </table>
 
-注：許多 Chrome 擴展程序都會將其自己的事件偵聽器添加到 DOM 上。如果您看到一些不是由您的代碼設置的事件偵聽器，您可能希望在[隱身窗口](https://support.google.com/chrome/answer/95464)中重新打開頁面。默認情況下，隱身窗口會阻止擴展程序運行。
+Note: 許多 Chrome 擴展程序都會將其自己的事件偵聽器添加到 DOM 上。如果您看到一些不是由您的代碼設置的事件偵聽器，您可能希望在[隱身窗口](https://support.google.com/chrome/answer/95464)中重新打開頁面。默認情況下，隱身窗口會阻止擴展程序運行。
 
 ### 查看祖先實體事件偵聽器
 
@@ -307,7 +307,7 @@ code for screenshot
 ![框架偵聽器已啓用](imgs/framework-listeners-enabled.png)
 
 如果停用 **Framework listeners** 複選框，事件偵聽器代碼很可能會在框架或內容庫代碼的其他地方解析。
- 
+
 
 ![框架偵聽器已停用](imgs/framework-listeners-disabled.png)
 

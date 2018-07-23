@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:网站的访问者不只有人类，还有搜索引擎网络抓取工具。了解如何改善您的网站的搜索精度和排名。
 
-{# wf_updated_on:2015-10-05 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2014-08-30 #}
 
 # 搜索优化 {: .page-title }
@@ -45,7 +45,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 例如，桌面和移动版本网址：http://www.example.com/
 
 尽管许多网站采用了其他方法，但最佳方法是使用**自适应网页设计**。
- 
+
 确定哪一种网址结构适合您的网页。然后，试着按照相应的最佳做法对其进行搜索引擎优化。
 
 
@@ -60,7 +60,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 * 单一搜索结果网址。
 
 <div style="clear:both;"></div>
-  
+
 可通过[自适应网页设计基础知识](/web/fundamentals/design-and-ux/responsive/)了解如何构建采用自适应网页设计的网站。
 
 ### 提供独立网址时使用 `link[rel=canonical]` 和 `link[rel=alternate]`
@@ -85,7 +85,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
     <title>...</title>
     <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/">
-    
+
 
 #### 为移动版本使用 canonical
 
@@ -97,8 +97,8 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
     <title>...</title>
     <link rel="canonical" href="http://www.example.com/">
-    
-  
+
+
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x, imgs/different_url-2x.png 2x" >
 
 ### 使用 Vary HTTP 标头
@@ -127,7 +127,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
     Content-Type: text/html
     Vary: User-Agent
     Content-Length: 5710
-    
+
 
 <img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x, imgs/same_url-2x.png 2x" >
 
@@ -153,13 +153,13 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
 ### “抓取”与“索引”之间的区别
 
-在了解如何控制搜索结果之前，您需要先了解搜索引擎如何与您的网页进行交互。从网站的视角来看，搜索引擎对网站执行的操作主要有两项：抓取和索引。  
+在了解如何控制搜索结果之前，您需要先了解搜索引擎如何与您的网页进行交互。从网站的视角来看，搜索引擎对网站执行的操作主要有两项：抓取和索引。
 
-**抓取**是指搜索引擎自动程序获取网页以分析其内容。内容存储在搜索引擎的数据库中，可用于填充搜索结果详情、为网页排名以及通过逐层深入链接发现新的网页。  
+**抓取**是指搜索引擎自动程序获取网页以分析其内容。内容存储在搜索引擎的数据库中，可用于填充搜索结果详情、为网页排名以及通过逐层深入链接发现新的网页。
 
-**索引**是指搜索引擎将网站的网址以及任何关联信息存储在其数据库内，以便随时充当搜索结果。 
+**索引**是指搜索引擎将网站的网址以及任何关联信息存储在其数据库内，以便随时充当搜索结果。
 
-注：许多人混淆了抓取和索引。禁止抓取并不意味着网页不会出现在搜索结果中。例如，如果某个第三方网站具有您的某个网页的链接，即使禁止了抓取，也仍可对其进行索引。在此情况下，搜索结果将缺少详细说明。
+Note: 许多人混淆了抓取和索引。禁止抓取并不意味着网页不会出现在搜索结果中。例如，如果某个第三方网站具有您的某个网页的链接，即使禁止了抓取，也仍可对其进行索引。在此情况下，搜索结果将缺少详细说明。
 
 ### 使用 robots.txt 控制抓取
 
@@ -172,13 +172,13 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
 
 
-以下是一个简短的示例：  
+以下是一个简短的示例：
 
 **http://pages.example.com/robots.txt**
 
     User-agent: *
     Disallow: /
-    
+
 
 这表示您想禁止所有自动程序抓取您的整个网站。
 
@@ -189,11 +189,11 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
     User-agent:Googlebot
     Disallow: /nogooglebot/
-    
+
 
 您可以通过指示 User Agent 名称来指定每个自动程序 (User Agent) 的行为。
 在上例中，您禁止名为 `Googlebot` 的 User Agent 抓取 `/nogooglebot/` 以及该目录下的所有内容。
-  
+
 
 可通过各搜索引擎自动程序的帮助页面了解更多相关信息：
 
@@ -202,7 +202,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
 
-注：**仅当**您想控制网站的抓取方式时，才需要使用 `robots.txt`。请勿为网址 `/robots.txt` 返回响应代码 500。这会终止对整个主机的所有后续抓取，导致搜索结果详情不包含任何内容。
+Note: **仅当**您想控制网站的抓取方式时，才需要使用 `robots.txt`。请勿为网址 `/robots.txt` 返回响应代码 500。这会终止对整个主机的所有后续抓取，导致搜索结果详情不包含任何内容。
 
 #### 测试 robots.txt
 
@@ -214,7 +214,7 @@ description:网站的访问者不只有人类，还有搜索引擎网络抓取�
 
 <img src="imgs/robots-txt-validator.png" srcset="imgs/robots-txt-validator-2x.png 2x, imgs/robots-txt-validator.png 1x">
 
-Yandex 也提供了[类似的工具](https://webmaster.yandex.com/tools/robotstxt/)。  
+Yandex 也提供了[类似的工具](https://webmaster.yandex.com/tools/robotstxt/)。
 
 ### 使用元标记控制搜索索引
 
@@ -222,23 +222,23 @@ Yandex 也提供了[类似的工具](https://webmaster.yandex.com/tools/robotstx
 您需要允许抓取这些网页，并明确指示您不希望对它们进行索引。
 有以下两个解决方案：
 
-要表示您不希望索引某个 HTML 网页，请使用特定类型的 `<meta>` 标记，并将其属性设置为 `name="robots"` 和 `content="noindex"`。  
+要表示您不希望索引某个 HTML 网页，请使用特定类型的 `<meta>` 标记，并将其属性设置为 `name="robots"` 和 `content="noindex"`。
 
 
     <!DOCTYPE html>
     <html><head>
     <meta name="robots" content="noindex" />
-    
 
-您可以通过将 `name` 属性的值更改为特定 User Agent 名称来缩小范围。例如，`name="googlebot"`（不区分大小写）表示您不希望 Googlebot 索引该网页。  
+
+您可以通过将 `name` 属性的值更改为特定 User Agent 名称来缩小范围。例如，`name="googlebot"`（不区分大小写）表示您不希望 Googlebot 索引该网页。
 
 
     <!DOCTYPE html>
     <html><head>
     <meta name="googlebot" content="noindex" />
-    
 
-robots 元标记的其他选项包括：  
+
+robots 元标记的其他选项包括：
 
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)
@@ -253,22 +253,22 @@ robots 元标记的其他选项包括：
     HTTP/1.1 200 OK
     X-Robots-Tag: noindex
     Content-Type: text/html; charset=UTF-8
-    
 
-如果您想把范围缩小到特定 User Agent，请在 `noindex` 前插入 User Agent 名称。  
+
+如果您想把范围缩小到特定 User Agent，请在 `noindex` 前插入 User Agent 名称。
 
 
     HTTP/1.1 200 OK
     X-Robots-Tag: googlebot: noindex
     Content-Type: text/html; charset=UTF-8
-    
 
-如需了解有关 X-Robots-Tag 的更多信息：  
+
+如需了解有关 X-Robots-Tag 的更多信息：
 
 * [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-注：如果您利用 `robots.txt` 禁止抓取，由于并不知晓您不希望索引这些网页，搜索自动程序可能仍会对它们进行索引。之所以可能发生这种情况，是因为：<ul><li>搜索自动程序可能是循着其他网站上的链接找到您的网页。</li><li>无法抓取的搜索引擎检测不到  <code>noindex</code>。</li></ul>
+Note: 如果您利用 `robots.txt` 禁止抓取，由于并不知晓您不希望索引这些网页，搜索自动程序可能仍会对它们进行索引。之所以可能发生这种情况，是因为：<ul><li>搜索自动程序可能是循着其他网站上的链接找到您的网页。</li><li>无法抓取的搜索引擎检测不到  <code>noindex</code>。</li></ul>
 
 别指望 `robots.txt` 能够控制搜索索引。
 
@@ -278,34 +278,34 @@ robots 元标记的其他选项包括：
 
 #### 可供任何人全面访问和搜索的网页
 
-网络上的大多数网页均属这一类型。  
+网络上的大多数网页均属这一类型。
 
 * 无需使用 `robots.txt`。
 * 无需使用 robots 元标记。
 
 #### 仅限知晓网址的人员访问
 
-示例包括：  
+示例包括：
 
 * 博客管理员控制台的登录页面。
 * 通过传递面向初级互联网用户的网址分享的私有内容。
 
-在此情况下，您不希望搜索引擎索引这些网页。  
+在此情况下，您不希望搜索引擎索引这些网页。
 
 * 无需使用 `robots.txt`。
 * 为 HTML 网页使用 `noindex` 元标记。
 * 为非 HTML 资源（图像、PDF 等）使用 `X-Robots-Tag: noindex`。
 
-注：想知道您是否应禁止抓取 JavaScript 和样式表文件？<a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google 会尽最大努力理解它们</a>，以便能找到通过 AJAX 等现代化技术提供的内容。您当然应该允许抓取工具抓取 JavaScript。
+Note: 想知道您是否应禁止抓取 JavaScript 和样式表文件？<a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google 会尽最大努力理解它们</a>，以便能找到通过 AJAX 等现代化技术提供的内容。您当然应该允许抓取工具抓取 JavaScript。
 
 #### 仅限获得授权的人员访问
 
-在此情况下，即使有人找到了网址，如果没有有效凭据，服务器也会拒绝提供结果。例如：  
+在此情况下，即使有人找到了网址，如果没有有效凭据，服务器也会拒绝提供结果。例如：
 
 * 社交网络上私人分享的内容。
 * 企业支出系统。
 
-对于这些类型的网页，搜索引擎应该既不抓取也不索引它们。  
+对于这些类型的网页，搜索引擎应该既不抓取也不索引它们。
 
 * 为凭据无效的访问返回响应代码 401“未经授权”（或将用户重定向至登录页面）。
 * 请勿使用 `robots.txt` 禁止抓取这些网页。否则将检测不到 401。
@@ -316,13 +316,13 @@ robots 元标记的其他选项包括：
 
 ### 请求从搜索引擎中移除网页
 
-在下列情况下，您可能希望移除某个搜索结果：  
+在下列情况下，您可能希望移除某个搜索结果：
 
 * 页面不再存在。
 * 某个被意外索引的网页包含机密信息。
 
 
-主流搜索引擎均提供了通过发送请求来移除此类网页的途径。移除过程通常包含下列步骤：  
+主流搜索引擎均提供了通过发送请求来移除此类网页的途径。移除过程通常包含下列步骤：
 
 1. 确保您想移除的网页：
     * 已从服务器删除，并返回 404
@@ -333,7 +333,7 @@ robots 元标记的其他选项包括：
 
 <img src="imgs/remove-urls.png" srcset="imgs/remove-urls-2x.png 2x, imgs/remove-urls.png 1x">
 
-可在各搜索引擎的帮助页面查看具体步骤：  
+可在各搜索引擎的帮助页面查看具体步骤：
 
 * [Google](https://support.google.com/webmasters/answer/1663419)
 * [Bing](http://www.bing.com/webmaster/help/bing-content-removal-tool-cb6c294d)

@@ -1,7 +1,7 @@
 project_path: /web/feedback/_project.yaml
 book_path: /web/feedback/_book.yaml
 
-{# wf_updated_on: 2016-10-24 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-24 #}
 
 # 如何提交一個好的漏洞 {: .page-title }
@@ -26,7 +26,7 @@ book_path: /web/feedback/_book.yaml
 
 在不同瀏覽器上面的行為不同通常被視為互通性的優先問題。試著在最新版的 Chrome、Firefox、Safari 和 Edge 上面測試，可以考慮使用 [BrowserStack](https://www.browserstack.com/) 之類的工具輔助測試。
 
-如果可能的話，檢查頁面是否刻意透過用戶代理嗅探產生不同的行為。試著在 Dev Tools > Menu > More Tools > Network conditions 把用戶代理的字串修改成其他的瀏覽器。注意：不要忘了把用戶代理設定回 Select automatically。
+如果可能的話，檢查頁面是否刻意透過用戶代理嗅探產生不同的行為。試著在 Dev Tools > Menu > More Tools > Network conditions 把用戶代理的字串修改成其他的瀏覽器。Note: 不要忘了把用戶代理設定回 Select automatically。
 
 
 ### 這是個退步嗎？

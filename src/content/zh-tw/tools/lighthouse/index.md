@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:瞭解如何設置 Lighthouse 以審查網絡應用。
 
-{# wf_updated_on:2016-09-27 #}
+{# wf_updated_on:2018-07-23 #}
 {# wf_published_on:2016-09-27 #}
 
 # 使用 Lighthouse 審查網絡應用 {: .page-title }
@@ -14,7 +14,7 @@ description:瞭解如何設置 Lighthouse 以審查網絡應用。
 從此處，您可以失敗的測試爲指示器，看看可以採取哪些措施來改進您的應用。
 
 
-注：Lighthouse 目前非常關注 Progressive Web App 功能，如“添加到主屏幕”和離線支持。不過，此項目的首要目標是針對網絡應用質量的各個方面提供端到端審查。
+Note: Lighthouse 目前非常關注 Progressive Web App 功能，如“添加到主屏幕”和離線支持。不過，此項目的首要目標是針對網絡應用質量的各個方面提供端到端審查。
 
 ## 使用入門
 

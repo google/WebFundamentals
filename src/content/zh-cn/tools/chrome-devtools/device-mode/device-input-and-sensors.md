@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速度计，所以测试它们比较困难。Chrome DevTools 传感器模拟器可以通过模拟常见的移动设备传感器来降低测试的开销。
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 模拟传感器：地理定位与加速度计 {: .page-title }
@@ -33,7 +33,7 @@ description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速�
   </div>
 </div>
 
-注：如果您的应用检测到使用 JavaScript（如 Modernizr）的传感器加载，请确保在启用传感器模拟器之后重新加载页面。
+Note: 如果您的应用检测到使用 JavaScript（如 Modernizr）的传感器加载，请确保在启用传感器模拟器之后重新加载页面。
 
 ## 替换地理定位数据
 

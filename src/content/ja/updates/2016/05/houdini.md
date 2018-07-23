@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini は CSS エンジンの内部を開発者に公開する API の総称です。
 
-{# wf_updated_on: 2016-09-22 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-05-19 #}
 
 # Houdini – CSS の秘密を解き明かすもの {: .page-title }
@@ -11,7 +11,7 @@ description: Houdini は CSS エンジンの内部を開発者に公開する AP
 
 
 
-Dogfood：この記事の各セクションに、そこで紹介する仕様の現状を追記しました。
+Dogfood: この記事の各セクションに、そこで紹介する仕様の現状を追記しました。
 
 CSS の作業にどれくらいかけているか、想像したことがありますか？属性をひとつ変えるだけで、Web サイト全体のレイアウトが変わってしまうなんてことは少なくありません。そういう点で、CSS は**マジック**です。（勘のいい方はなんでこんなことを言うのか分かっちゃうでしょうか。）さて、私たち、Web 開発者コミュニティはこれまで、このマジックをただ観賞し、その証人になることしかできませんでした。しかし、もし、私たちもマジックを披露できたら？**マジシャンになれたら**？それが Houdini なんです！
 
@@ -23,7 +23,7 @@ Houdini タスクフォースは、CSS エンジンの一部を Web 開発者に
   </iframe>
 </div>
 
-**注意**：これからHoudini のドラフトを紹介し、どんな問題を解決しようとしているのかを紹介したいと思っています。現在はドラフト段階ですが、コード例も紹介しようと思います。ですので、すべての仕様が「ドラフト」であり、変わりやすいことを念頭においてください。紹介したサンプルコードが将来も動く保証はありませんし、ましてやドラフトが標準になる保証さえありません。
+Note: これからHoudini のドラフトを紹介し、どんな問題を解決しようとしているのかを紹介したいと思っています。現在はドラフト段階ですが、コード例も紹介しようと思います。ですので、すべての仕様が「ドラフト」であり、変わりやすいことを念頭においてください。紹介したサンプルコードが将来も動く保証はありませんし、ましてやドラフトが標準になる保証さえありません。
 
 ## Houdini の仕様たち
 
@@ -107,7 +107,7 @@ Paint Worklet の話に戻りましょう。フラグメントごとにコード
         };
       }
     };
-    
+
 
 以下は Paint Worklet API で[実装][Paint Worklet source]されたリップル（[デモ][Paint Worklet demo]）のビデオです。
 
@@ -147,13 +147,13 @@ Compositor Worklet の仕様は WICG に移され、もう少し検討が必要�
         t.m42 = -0.1 * self.scroller.scrollTop;
         self.parallax.transform = t;
       }
-    
+
       onmessage(e) {
         self.scroller = e.data[0];
         self.parallax = e.data[1];
       };
     });
-    
+
 
 Compositor Worklet は、同僚の Robert Flack が [polyfill][CompWorklet polyfill] を書いているので、どんなものか試せます。ただし、パフォーマンスはよくないでしょう。
 
@@ -184,7 +184,7 @@ Compositor Worklet は、同僚の Robert Flack が [polyfill][CompWorklet polyf
                 childFragment.x = x;
                 childFragment.y = y;
             }
-    
+
             return {
                 minContent: 0,
                 maxContent: 0,
@@ -196,7 +196,7 @@ Compositor Worklet は、同僚の Robert Flack が [polyfill][CompWorklet polyf
             };
         }
     });
-    
+
 
 ### Typed CSSOM ([仕様][Typed CSSOM spec])
 
@@ -206,11 +206,11 @@ Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇�
 
 
     $('#someDiv').style.height = getRandomInt() + 'px';
-    
+
 
 ここでは、計算をしたのち、単位をつけるために数値を文字列に変換しています。その理由はただ、文字列にすることで CSS エンジンがそれを数値として解釈してくれるからです。[JavaScript で `transform` の値をいじる][Aerotwist FLIP]と、もっとひどいことになります。しかしそれも終わりです！CSS にちょっとだけ型が導入されるんです！
 
-この仕様は他のとくらべだいぶ成熟しており、[polyfill][Typed CSSOM polyfill] も進んでいます。（注：この polyfill には、**いまよりももっと大きな**オーバーヘッドがあります。この polyfill の目的は、API の便利さを確かめてもらうことにあります。）
+この仕様は他のとくらべだいぶ成熟しており、[polyfill][Typed CSSOM polyfill] も進んでいます。（Note: この polyfill には、**いまよりももっと大きな**オーバーヘッドがあります。この polyfill の目的は、API の便利さを確かめてもらうことにあります。）
 
 文字列の代わりに、要素の `StylePropertyMap` をさわります。これは各 CSS の属性と対応する値型を key-value としたマップです。たとえば `width` は `LengthValue` という値型を持ちます。`LengthValue` は `em`、`rem`、`px`、`percent` といった CSS の単位すべてを含むディクショナリです。たとえば `height calc(5px + 5%)` を指定すると、`LengthValue{px: 5, percent: 5}` となります。`box-sizing` などのプロパティはいくつかのキーワードを受けとるだけなので、値型は `keywordValue` を持ちます。こういった属性のバリデーションは、実行時に行われるでしょう。
 
@@ -219,7 +219,7 @@ Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇�
     <div style="width: 300px;" id="div2"></div>
     <div id="div3"></div>
     <div style="margin-left: calc(5em + 50%);" id="div4"></div>
-    
+
 
     var w1 = $('#div1').styleMap.get('width');
     var w2 = $('#div2').styleMap.get('width');
@@ -227,7 +227,7 @@ Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇�
       [new SimpleLength(200, 'px'), w1.add(w2)])
     $('#div4')).styleMap.get('margin-left')
       // => {em: 5, percent: 50}
-    
+
 
 ### Properties and Values ([仕様][Properties and Values spec])
 
@@ -244,7 +244,7 @@ Typed CSSOM（CSS オブジェクトモデル）は、たぶん誰もが遭遇�
         initialValue: "1"
       });
     });
-    
+
 
 ### Font Metrics
 
@@ -285,7 +285,7 @@ Houdini のドラフトのリストには、まだ多くの仕様があります
 [Paint Worklet source]: https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet/ripple
 
 
-Translated By: 
+Translated By:
 {% include "web/_shared/contributors/myakura.html" %}
 
 {% include "comment-widget.html" %}

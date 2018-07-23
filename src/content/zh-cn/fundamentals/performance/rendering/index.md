@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:如果网站和应用运行不佳，用户就会注意到，因此优化渲染性能非常重要！
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2015-03-20 #}
 
 # 渲染性能 {: .page-title }
@@ -89,7 +89,7 @@ description:如果网站和应用运行不佳，用户就会注意到，因此�
 这个最后的版本开销最小，最适合于应用生命周期中的高压力点，例如动画或滚动。
 
 
-注：如果想知道更改任何指定 CSS 属性将触发上述三个版本中的哪一个，请查看 [CSS 触发器](https://csstriggers.com)。如果要快速了解高性能动画，请阅读[更改仅合成器的属性](stick-to-compositor-only-properties-and-manage-layer-count)部分。
+Note: 如果想知道更改任何指定 CSS 属性将触发上述三个版本中的哪一个，请查看 [CSS 触发器](https://csstriggers.com)。如果要快速了解高性能动画，请阅读[更改仅合成器的属性](stick-to-compositor-only-properties-and-manage-layer-count)部分。
 
 性能是一种避免执行工作的艺术，并且使您执行的任何操作尽可能高效。
 许多情况下，这需要与浏览器配合，而不是跟它对着干。

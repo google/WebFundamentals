@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ヘッドレス Chrome とはなにか、そしてその使い方を紹介します。
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -27,7 +27,7 @@ figure {
 
 ヘッドレスブラウザは、GUI を持つ必要のない自動テスト環境やサーバー環境にとてもよいツールです。例としては、実際のウェブページに対してなにかテストを実行する、そのページの PDF を生成する、またはただ、そのページがどう表示されるかを検証するなどが挙げられるでしょうか。
 
-注：ヘッドレスモードは Chrome 59 から、Mac と Linux で提供されます。[Windows のサポート](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)はもうちょっとです！現在使っている Chrome のバージョンを調べるには、`chrome://version` を開きます。
+Note: ヘッドレスモードは Chrome 59 から、Mac と Linux で提供されます。[Windows のサポート](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)はもうちょっとです！現在使っている Chrome のバージョンを調べるには、`chrome://version` を開きます。
 
 ## ヘッドレス Chrome を立ち上げる (CLI) {: #cli }
 
@@ -39,7 +39,7 @@ figure {
       --remote-debugging-port=9222 \
       https://www.chromestatus.com   # 開きたい URL（デフォルトは about:blank）
 
-注：現在は、`--disable-gpu` を含めなければいけません。このフラグはそのうち不要になります。
+Note: 現在は、`--disable-gpu` を含めなければいけません。このフラグはそのうち不要になります。
 
 ここで `chrome` はインストールされた Chrome のパスを指します。正確なインストール先はプラットフォームによって異なります。わたしは Mac を使っているのですが、以下のようなエイリアスを作っています。
 
@@ -123,7 +123,7 @@ launchHeadlessChrome('https://www.chromestatus.com', (err, stdout, stderr) => {
 
 [Lighthouse](/web/tools/lighthouse/) ウェブアプリのクオリティをテストする素晴らしいツールです。ご存じないかもしれませんが、Lighthouse には Chrome を操作するとても便利なヘルパーモジュールが搭載されています。そのモジュールのひとつが `ChromeLauncher` です。`ChromeLauncher` は Chrome がどこにインストールされているかを探したり、デバッグ用のインスタンスをセットアップしたり、Chrome を起動したり、プログラムが終了したときに Chrome も終了したりと、いろんなことをしてくれます。なによりも嬉しいのが、Node のお陰でクロスプラットフォームなことです！
 
-注：Lighthouse チームはよりよい API を搭載した `ChromeLauncher` のスタンドアロン版を検討しています。気になることがあれば、ぜひ[フィードバックを](https://github.com/GoogleChrome/lighthouse/issues/2092)お願いします。
+Note: Lighthouse チームはよりよい API を搭載した `ChromeLauncher` のスタンドアロン版を検討しています。気になることがあれば、ぜひ[フィードバックを](https://github.com/GoogleChrome/lighthouse/issues/2092)お願いします。
 
 デフォルトでは、**`ChromeLauncher` は Chrome Canary を起動しようとします**（インストールされていれば）。もちろんどの Chrome を利用するかは決められます。`ChromeLauncher` を使うには、まず Lighthouse をインストールします。
 
@@ -172,7 +172,7 @@ launchChrome(true).then(launcher => {
 
 [chrome-remote-interface](https://www.npmjs.com/package/chrome-remote-interface) は [DevTools Protocol][dtviewer] 上に構築された、ハイレベルな API を提供するとてもいい Node のパッケージです。これを使うとヘッドレス Chrome を操作し、ページを移動し、そしてページに関する情報を取得できます。
 
-要注意：DevTools プロトコルでほんとに色んなことができるので、最初はすこしウッとなるかと思います。まずは [DevTools Protocol Viewer][dtviewer] を眺めましょう。そのあと `chrome-remote-interface` の API ドキュメンテーションを読み、生プロトコルをどうラップしているのか確認するとといでしょう。
+要Note: DevTools プロトコルでほんとに色んなことができるので、最初はすこしウッとなるかと思います。まずは [DevTools Protocol Viewer][dtviewer] を眺めましょう。そのあと `chrome-remote-interface` の API ドキュメンテーションを読み、生プロトコルをどうラップしているのか確認するとといでしょう。
 
 では、ライブラリをインストールしましょう。
 
@@ -323,7 +323,7 @@ Xvfb がわからない？Xvfb は Unix ライクなシステム向けに提供�
 
 Selenium でヘッドレス Chrome を試したいという方は、[Running Selenium with Headless Chrome](https://intoli.com/blog/running-selenium-with-headless-chrome/) を読んでセットアップしてみましょう。
 
-注：[ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver) でバグに出会ったかもしれません。執筆時点での最新版（2.29）は Chrome 58 のみをサポートしています。ヘッドレス Chrome は Chrome 59 以降が必要です。
+Note: [ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver) でバグに出会ったかもしれません。執筆時点での最新版（2.29）は Chrome 58 のみをサポートしています。ヘッドレス Chrome は Chrome 59 以降が必要です。
 
 **バグの報告先はどこですか？**
 

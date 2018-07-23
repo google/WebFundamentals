@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 安全性是網頁保護使用者的重要一部分，而移轉為 TLS 支援將是未來使用令人興奮的新 API 之必要條件。
 
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 以 HTTPS 提供安全性 {: .page-title }
@@ -228,7 +228,7 @@ Note: 您最終應該將 HTTP 要求重新導向至 HTTPS，
 瀏覽器通常完全不會載入或執行內容 -- 導致斷裂頁面。
 
 
-**注意：** 在 HTTP 頁中包含 HTTPS 資源，則完全無問題。
+**Note: ** 在 HTTP 頁中包含 HTTPS 資源，則完全無問題。
 
 此外，當在您網站中連結到其他頁面時，
 使用者可能會從 HTTPS 降級為 HTTP。
@@ -344,7 +344,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 (http://www.thoughtcrime.org/software/sslstrip/){: .external } [SSL Stripping] 的攻擊，
 也避免我們在「重新導向 HTTP 至 HTTPS」時啟用的 301 重新導向之來回成本。
 
-**注意：**
+**Note: **
  [如果您的](https://tools.ietf.org/html/rfc6797#section-12.1)[網站的 TLS 組態曾有過錯誤]
 (https://tools.ietf.org/html/rfc6797#section-12.1) (如過期的憑證)，將您網站標記為已知 HSTS 主機的用戶端，
 有可能會 _[硬失敗](https://tools.ietf.org/html/rfc6797#section-12.1)_。
@@ -361,7 +361,7 @@ Note: 我推薦使用通訊協定相對的 URL，
 
 大多數網頁伺服器提供了類似能力，以新增自訂標頭。
 
-**注意：** max-age 是以秒為單位來度量。 您可以從較低值開始，
+**Note: ** max-age 是以秒為單位來度量。 您可以從較低值開始，
 當您可以更輕鬆營運純 HTTPS 網站時，再逐步增加 max-age。
 
 
