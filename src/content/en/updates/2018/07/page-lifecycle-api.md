@@ -34,9 +34,9 @@ resources such as memory, CPU, battery, and network can be oversubscribed,
 leading to a bad end-user experience.
 
 While the web platform has long had events that related to lifecycle states
-&mdash; like [load](https://developer.mozilla.org/en-US/docs/Web/Events/load),
-[unload](https://developer.mozilla.org/en-US/docs/Web/Events/unload), and
-[visibilitychange](https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange)
+&mdash; like [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load),
+[`unload`](https://developer.mozilla.org/en-US/docs/Web/Events/unload), and
+[`visibilitychange`](https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange)
 &mdash; these events only allow developers
 to respond to user-initiated lifecycle state changes. For the web to work
 reliably on low-powered devices (and be more resource conscious in general on
@@ -45,9 +45,8 @@ resources.
 
 In fact, browsers today already do [take active measures to conserve
 resources](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API#Policies_in_place_to_aid_background_page_performance)
-for pages in hidden or
-background tabs, and many browsers (especially Chrome) would like to do a lot
-more of this &mdash; to lessen their overall resource footprint.
+for pages in background tabs, and many browsers (especially Chrome) would like
+to do a lot more of this &mdash; to lessen their overall resource footprint.
 
 The problem is developers currently have no way to prepare for these types of
 system-initiated interventions or even know that they're happening. This means
@@ -89,74 +88,74 @@ the events that signal transitions between them &mdash; is with a diagram:
 ### States {: #states}
 
 The following table explains each state in detail. It also lists the possible
-states that can come before and after the current state as well as the events
-that developers can use to observe those state changes.
+states that can come before and after as well as the events developers can
+use to observe changes.
 
-<table>
+<table class="cyan">
   <tr>
     <th>State</th>
     <th>Description</th>
   </tr>
   <tr>
-    <td><strong>Active</strong></td>
+    <td><strong><code id="state-active">Active</code></strong></td>
     <td>
       <p>A page is in the <em>active</em> state if it is visible and has
       input focus.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a> (via the
-        <a href="#event-focus">focus</a> event)<br>
+        <a href="#state-passive">passive</a>
+          <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
       </p>
       <p>
         <strong>Possible next states:</strong><br>
-        <a href="#state-passive">passive</a> (via the
-        <a href="#event-blur">blur</a> event)
+        <a href="#state-passive">passive</a>
+          <em>(via the<a href="#event-blur"><code>blur</code></a> event)</em>
       </p>
     </td>
   </tr>
   <tr>
-    <td><strong>Passive</strong></td>
+    <td><strong><code id="state-passive">Passive</code></strong></td>
     <td>
       <p>A page is in the <em>passive</em> state if it is visible and does
       not have input focus.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-active">active</a> (via the
-        <a href="#event-blur">blur</a> event)<br>
-        <a href="#state-hidden">hidden</a> (via the
-        <a href="#event-visibilitychange">visibilitychange</a> event)<br>
+        <a href="#state-active">active</a>
+          <em>(via the <a href="#event-blur"><code>blur</code></a> event)</em><br>
+        <a href="#state-hidden">hidden</a>
+          <em>(via the <a href="#event-visibilitychange"><code>visibilitychange</code></a> event)</em>
       <p>
         <strong>Possible next states:</strong><br>
-        <a href="#state-active">active</a> (via the
-        <a href="#event-focus">focus</a> event)<br>
-        <a href="#state-hidden">hidden</a> (via the
-        <a href="#event-visibilitychange">visibilitychange</a> event)<br>
+        <a href="#state-active">active</a>
+          <em>(via the <a href="#event-focus"><code>focus</code></a> event)</em><br>
+        <a href="#state-hidden">hidden</a>
+          <em>(via the <a href="#event-visibilitychange"><code>visibilitychange</code></a> event)</em>
       </p>
     </td>
   </tr>
   <tr>
-    <td><strong>Hidden</strong></td>
+    <td><strong><code id="state-hidden">Hidden</code></strong></td>
     <td>
       <p>A page is in the <em>hidden</em> state if it is not visible and has not
       been frozen.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-passive">passive</a> (via the
-        <a href="#event-visibilitychange">visibilitychange</a> event)<br>
+        <a href="#state-passive">passive</a>
+          <em>(via the <a href="#event-visibilitychange"><code>visibilitychange</code></a> event)</em><br>
       </p>
       <p>
         <strong>Possible next states:</strong><br>
-        <a href="#state-passive">passive</a> (via the
-        <a href="#event-visibilitychange">visibilitychange</a> event)<br>
-        <a href="#state-frozen">frozen</a> (via the
-        <a href="#event-freeze">freeze</a> event)
-        <a href="#state-terminated">terminated</a> (via the
-        <a href="#event-pagehide">pagehide</a> event)
+        <a href="#state-passive">passive</a>
+          <em>(via the <a href="#event-visibilitychange"><code>visibilitychange</code></a> event)</em><br>
+        <a href="#state-frozen">frozen</a>
+          <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)</em><br>
+        <a href="#state-terminated">terminated</a>
+          <em>(via the <a href="#event-pagehide"><code>pagehide</code></a> event)
       </p>
     </td>
   </tr>
   <tr>
-    <td><strong>Frozen</strong></td>
+    <td><strong><code id="state-frozen">Frozen</code></strong></td>
     <td>
       <p>In the <em>frozen</em> state the browser suspends execution of
       <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
@@ -176,24 +175,24 @@ that developers can use to observe those state changes.
       reload.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a> (via the
-        <a href="#event-freeze">freeze</a> event)
+        <a href="#state-hidden">hidden</a>
+          <em>(via the <a href="#event-freeze"><code>freeze</code></a> event)
       </p>
       <p>
         <strong>Possible next states:</strong><br>
-        <a href="#state-active">active</a> (via the
-        <a href="#event-resume">resume</a> event, then the
-        <a href="#event-pageshow">pageshow</a> event)<br>
-        <a href="#state-passive">passive</a> (via the
-        <a href="#event-resume">resume</a> event, then the
-        <a href="#event-pageshow">pageshow</a> event)<br>
-        <a href="#state-hidden">hidden</a> (via the
-        <a href="#event-resume">resume</a> event)
+        <a href="#state-active">active</a>
+          <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+          <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
+        <a href="#state-passive">passive</a>
+          <em>(via the <a href="#event-resume"><code>resume</code></a> event, then the
+          <a href="#event-pageshow"><code>pageshow</code></a> event)</em><br>
+        <a href="#state-hidden">hidden</a>
+          <em>(via the <a href="#event-resume"><code>resume</code></a> event)</em>
       </p>
     </td>
   </tr>
   <tr>
-    <td><strong>Terminated</strong></td>
+    <td><strong><code id="state-terminated">Terminated</code></strong></td>
     <td>
       <p>A page is in the <em>terminated</em> state once it has started being
       unloaded and cleared from memory by the browser. No
@@ -202,8 +201,8 @@ that developers can use to observe those state changes.
       killed if they run too long.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-hidden">hidden</a> (via the
-        <a href="#event-pagehide">pagehide</a> event)
+        <a href="#state-hidden">hidden</a>
+          <em>(via the <a href="#event-pagehide"><code>pagehide</code></a> event)</em>
       </p>
       <p>
         <strong>Possible next states:</strong><br>
@@ -212,19 +211,20 @@ that developers can use to observe those state changes.
     </td>
   </tr>
   <tr>
-    <td><strong>Discarded</strong></td>
+    <td><strong><code id="state-discarded">Discarded</code></strong></td>
     <td>
       <p>A page is in the <em>discarded</em> state when it is unloaded by the
       browser in order to conserve resources. No tasks, event callbacks, or
       JavaScript of any kind can run in this state, as discards typically
       occur under resource constraints, where starting new processes is
       impossible.</p>
-      <p>In the discarded state the tab itself (
-      <a href="#prevent-freeze-discard">include the tab title and favicon</a>)
+      <p>In the discarded state the tab itself
+      (<a href="#prevent-freeze-discard">include the tab title and favicon</a>)
       is usually visible to the user even though the page is gone.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-frozen">frozen</a> <em>(no events fired)</em>
+        <a href="#state-frozen">frozen</a>
+          <em>(no events fired)</em>
       </p>
       <p>
         <strong>Possible next states:</strong><br>
@@ -240,21 +240,25 @@ Browsers dispatch a lot of events, but only a small portion of them signal a
 possible change in Page Lifecycle state. The table below outlines all events
 that pertain to lifecycle and lists what states they may transition to and from.
 
-<table>
+<table class="blue">
   <tr>
     <th>Name</th>
     <th>Details</th>
   </tr>
   <tr>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/focus">
-    focus</a></strong></td>
+    <td>
+      <a id="event-focus"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/focus">
+        <code>focus</code>
+      </a>
+    </td>
     <td>
       <p>A DOM element has received focus.</p>
-      <aside>
+      <aside class="key-point">
         <strong>Note:</strong>
-        a focus event does not necessarily imply a state change. In many cases a
-        focus event means a user is switching focus from one form element to
-        another.
+        a <code>focus</code> event does not necessarily imply a state change.
+        In many cases a <code>focus</code> event means a user is switching
+        focus from one form element to another.
       </aside>
       <p>
         <strong>Possible previous states:</strong><br>
@@ -267,14 +271,19 @@ that pertain to lifecycle and lists what states they may transition to and from.
     </td>
   </tr>
   <tr>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/blur">blur</a></td>
+    <td>
+      <a id="event-blur"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/blur">
+        <code>blur</code>
+      </a>
+    </td>
     <td>
       <p>A DOM element has lost focus.</p>
-      <aside>
+      <aside class="key-point">
         <strong>Note:</strong>
-        a blur event does not necessarily imply a state change. In many cases a
-        blur event means a user is switching focus from one form element to
-        another.
+        a <code>blur</code> event does not necessarily imply a state change.
+        In many cases a <code>blur</code> event means a user is switching focus
+        from one form element to another.
       </aside>
       <p>
         <strong>Possible previous states:</strong><br>
@@ -287,27 +296,36 @@ that pertain to lifecycle and lists what states they may transition to and from.
     </td>
   </tr>
   <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange">
-   visibilitychange</a></td>
-   <td>
-      <p>The document's visibilityState value has changed. This can happen when a
-      user navigates to a new page, switches tabs, closes a tab, minimizes or
-      closes the browser, or switches apps on mobile operating systems.</p>
+    <td>
+      <a id="event-visibilitychange"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/visibilitychange">
+        <code>visibilitychange</code>
+      </a>
+    </td>
+    <td>
+      <p>The document's <code>visibilityState</code> value has changed. This can
+      happen when a user navigates to a new page, switches tabs, closes a tab,
+      minimizes or closes the browser, or switches apps on mobile operating
+      systems.</p>
       <p>
         <strong>Possible previous states:</strong><br>
         <a href="#state-passive">passive</a><br>
         <a href="#state-hidden">hidden</a>
       </p>
       <p>
-        <strong>Possible current states:</strong>
+        <strong>Possible current states:</strong><br>
         <a href="#state-passive">passive</a><br>
         <a href="#state-hidden">hidden</a>
       </p>
     </td>
   </tr>
   <tr>
-    <td><a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">freeze</a>
-      <span style="color:red">*</td>
+    <td>
+      <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
+        <code>freeze</code>
+      </a>
+      <strong style="color:red">*</strong>
+    </td>
     <td>
       <p>The page has just been frozen. Any
       <a href="https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn">
@@ -323,8 +341,12 @@ that pertain to lifecycle and lists what states they may transition to and from.
     </td>
   </tr>
   <tr>
-    <td><a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
-    resume</a> <span style="color:red">*</td>
+    <td>
+      <a href="https://wicg.github.io/page-lifecycle/spec.html#sec-api">
+        <code>resume</code>
+      </a>
+      <strong style="color:red">*</strong>
+    </td>
     <td>
       <p>The browser has resumed a frozen page.</p>
       <p>
@@ -333,27 +355,36 @@ that pertain to lifecycle and lists what states they may transition to and from.
       </p>
       <p>
         <strong>Possible current states:</strong><br>
-        <a href="#state-active">active</a> (if followed by the
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">
-        pageshow</a> event)<br>
-        <a href="#state-passive">passive</a> (if followed by the
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">
-        pageshow</a> event)<br>
+        <a href="#state-active">active</a>
+          <em>(if followed by the
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">
+          <code>pageshow</code></a> event)</em><br>
+        <a href="#state-passive">passive</a>
+          <em>(if followed by the
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">
+          <code>pageshow</code></a> event)</em><br>
         <a href="#state-hidden">hidden</a>
       </p>
     </td>
   </tr>
   <tr>
-    <td> <a href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">pageshow</a></td>
+    <td>
+      <a id="event-pageshow"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/pageshow">
+        <code>pageshow</code>
+      </a>
+    </td>
     <td>
       <p>A session history entry is being traversed to.</p>
       <p>This could be either a brand new page load or a page taken from the
       page navigation cache. If the page was taken from the page navigation
-      cache, the event's <code>persisted</code> property is true, otherwise it is false.</p>
+      cache, the event's <code>persisted</code> property is <code>true</code>,
+      otherwise it is <code>false</code>.</p>
       <p>
         <strong>Possible previous states:</strong><br>
-        <a href="#state-frozen">frozen</a> (a
-        <a href="#event-resume">resume</a> event would have also fired)
+        <a href="#state-frozen">frozen</a>
+          <em>(a <a href="#event-resume"><code>resume</code></a>
+          event would have also fired)</em>
       </p>
       <p>
         <strong>Possible current states:</strong><br>
@@ -364,62 +395,80 @@ that pertain to lifecycle and lists what states they may transition to and from.
    </td>
   </tr>
   <tr>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/pagehide">
-    pagehide</a></td>
+    <td>
+      <a id="event-pagehide"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/pagehide">
+        <code>pagehide</code>
+      </a>
+    </td>
     <td>
       <p>A session history entry is being traversed from.</p>
       <p>If the user is navigating to another page and the browser is able to add
       the current page to the page navigation cache to be reused later, the
-      event's <code>persisted</code> property is true. When true, the page is entering the
-      frozen state, otherwise it is entering the terminated state.</p>
+      event's <code>persisted</code> property is <code>true</code>.
+      When <code>true</code>, the page is entering the frozen state, otherwise
+      it is entering the terminated state.</p>
       <p>
         <strong>Possible previous states:</strong><br>
         <a href="#state-hidden">hidden</a>
       </p>
       <p>
-        <strong>Possible current states:</strong>
-        <a href="#state-frozen">frozen</a> (event.persisted is true,
-        <a href="#event-freeze">freeze</a> eventfollows)<br>
-        <a href="#state-terminated">terminated</a> (event.persisted is false,
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Events/unload">
-        unload</a> event follows)
+        <strong>Possible current states:</strong><br>
+        <a href="#state-frozen">frozen</a>
+          <em>(<code>event.persisted</code> is true, <a href="#event-freeze">
+          <code>freeze</code></a> event follows)</em><br>
+        <a href="#state-terminated">terminated</a>
+          <em>(<code>event.persisted</code> is false,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Events/unload">
+          <code>unload</code></a> event follows)</em>
       </p>
     </td>
   </tr>
   <tr>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload">
-    beforeunload</a></td>
+    <td>
+      <a id="event-beforeunload"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload">
+        <code>beforeunload</code>
+      </a>
+    </td>
     <td>
       <p>The window, the document and its resources are about to be unloaded.
       The document is still visible and the event is still cancelable at this
       point.</p>
       <aside class="warning">
         <strong>Warning:</strong>
-        the beforeunload event should only be used to alert the user of unsaved
-        work. It should not be added unconditionally to the page, as doing so
-        can hurt performance in some cases. See the legacy APIs section for
-        more details.
+        the <code>beforeunload</code> event should only be used to alert the
+        user of unsaved changes. Once those changes are saved, the event should
+        be removed. It should never be added unconditionally to the
+        page, as doing so can hurt performance in some cases. See the
+        <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
+        for more details.
       </aside>
       <p>
         <strong>Possible previous states:</strong><br>
         <a href="#state-hidden">hidden</a>
       </p>
       <p>
-        <strong>Possible current states:</strong>
+        <strong>Possible current states:</strong><br>
         <a href="#state-terminated">terminated</a><br>
       </p>
    </td>
   </tr>
   <tr>
-    <td><a href="https://developer.mozilla.org/en-US/docs/Web/Events/unload">
-    unload</a></td>
+    <td>
+      <a id="event-unload"
+         href="https://developer.mozilla.org/en-US/docs/Web/Events/unload">
+        <code>unload</code>
+      </a>
+    </td>
     <td>
       <p>The page is being unloaded.</p>
       <aside class="warning">
         <strong>Warning:</strong>
-        using the unload event is not recommended because it's unreliable And
-        can hurt performance in some cases. See the legacy APIs section for
-        more details.
+        using the <code>unload</code> event is never recommended because it's
+        unreliable and can hurt performance in some cases. See the
+        <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
+        for more details.
       </aside>
       <p>
         <strong>Possible previous states:</strong><br>
@@ -433,13 +482,13 @@ that pertain to lifecycle and lists what states they may transition to and from.
   </tr>
 </table>
 
-<p><i><span style="color:red">*</span>
+<p><i><strong style="color:red">*</strong>
   Indicates a new event defined by the Page Lifecycle API</i></p>
 
 ### New features added in Chrome 68 {: #new-features-added-in-chrome-68}
 
-The chart above shows two states that are system-initiated rather than user-
-initiated. Those states are [frozen](#state-frozen) and [discarded](#state-discarded).
+The chart above shows two states that are system-initiated rather than
+user-initiated. Those states are [frozen](#state-frozen) and [discarded](#state-discarded).
 As mentioned above, browsers today already do occasionally freeze and discard
 hidden tabs (at their discretion), but developers have no way of knowing when
 this is happening.
@@ -460,8 +509,9 @@ document.addEventListener('resume', (event) => {
 
 In Chrome 68 the `document` object also now includes a
 [`wasDiscarded`](https://wicg.github.io/page-lifecycle/spec.html#sec-api)
-property. To determine whether a page was previously discarded while in a hidden
-tab, you can inspect the value of this property at page load time:
+property. To determine whether a page was discarded while in a hidden
+tab, you can inspect the value of this property at page load time (note:
+discarded pages must be reloaded to use again).
 
 ```
 if (document.wasDiscarded) {
@@ -495,8 +545,8 @@ const getState = () => {
 ```
 
 The [frozen](#state-frozen) and [terminated](#state-terminated) states, on the
-other hand, the state can only be detected in their respective event listener
-([freeze](#event-freeze) and [pagehide](#event-pagehide)) as the state is
+other hand, the state can only be detected in their respective event listeners
+([`freeze`](#event-freeze) and [`pagehide`](#event-pagehide)) as the state is
 changing.
 
 
@@ -535,7 +585,7 @@ window.addEventListener('freeze', () => {
 window.addEventListener('pagehide', (event) => {
   if (event.persisted) {
     // If the event's persisted property is `true` the page is about
-    // to enter the Page Cache, which is also in the frozen state.
+    // to enter the page navigation cache, which is also in the frozen state.
     logStateChange('frozen');
   } else {
     // If the event's persisted property is not `true` the page is
@@ -545,14 +595,6 @@ window.addEventListener('pagehide', (event) => {
 }, {capture: true});
 ```
 
-<aside class="warning">
-  <strong>Warning!</strong>
-  This code yields different results in different browsers, as the order
-  (and reliability) of events has not been consistently implemented. To learn
-  how best to handle these inconsistencies see managing cross-browsers
-  differences.
-</aside>
-
 The above code does three primary things:
 
 1. It sets the initial state using the `getState()` function.
@@ -560,6 +602,15 @@ The above code does three primary things:
    logs the state changes to the console.
 3. It adds capturing events listeners for all necessary lifecycle events, which
    in turn call `logStateChange()`, passing in the next state.
+
+<aside class="warning">
+  <strong>Warning!</strong>
+  This code yields different results in different browsers, as the order
+  (and reliability) of events has not been consistently implemented. To learn
+  how best to handle these inconsistencies see
+  <a href="#managing-cross-browsers-differences">managing cross-browsers
+  differences</a>.
+</aside>
 
 One thing to note about the above code is that all the event listeners are added
 to `window` and they all pass
@@ -574,7 +625,7 @@ There are three reasons for this:
    non-capturing event listeners to a common ancestor element and observe all
    of them.
 3. The capture phase executes before the target or bubble phases, so adding
-   listeners there helps ensures they run before other code can cancel them.
+   listeners there helps ensure they run before other code can cancel them.
 
 ### Managing cross-browsers differences {: #managing-cross-browsers-differences}
 
@@ -605,8 +656,8 @@ implemented consistently. For example:
    to the page being unloaded.
 
 To make it easier for developers to deal with these cross-browsers
-inconsistencies and focus solely on following [lifecycle best practices
-](#developer-recommendations-for-each-state), we've released
+inconsistencies and focus solely on following the [lifecycle state recommendations
+and best practices](#developer-recommendations-for-each-state), we've released
 [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle), a
 JavaScript library for observing Page Lifecycle API state changes.
 
@@ -618,22 +669,22 @@ JavaScript library for observing Page Lifecycle API state changes.
 
 ## Developer recommendations for each state {: #developer-recommendations-for-each-state}
 
-As developers, it's important to both understand Page Lifecycle states &mdash;
-as well as know how to observe them in code &mdash; because the type of work you
-should (and should not) be doing depends largely on what state your page is in.
+As developers, it's important to both understand Page Lifecycle states *and*
+know how to observe them in code because the type of work you should (and should
+not) be doing depends largely on what state your page is in.
 
-For example, it clearly doesn't make sense to be updating the inline styles of
-DOM elements if your page is in the hidden state. While this example is pretty
+For example, it clearly doesn't make sense to display a transient notification
+to the user if the page is in the hidden state. While this example is pretty
 obvious, there are other recommendations that aren't so obvious that are worth
 enumerating.
 
-<table>
+<table class="pink">
   <tr>
     <th>State</th>
     <th>Developer recommendations</th>
   </tr>
   <tr>
-    <td><strong>Active</strong></td>
+    <td><strong><code id="advice-active">Active</code></strong></td>
     <td>
       <p>The active state is the most critical time for the user and thus the
       most important time for your page to be
@@ -647,7 +698,7 @@ enumerating.
     </td>
   </tr>
   <tr>
-    <td><strong>Passive</strong></td>
+    <td><strong><code id="advice-passive">Passive</code></strong></td>
     <td>
       <p>In the passive state the user is not interacting with the page, but
       they can still see it. This means UI updates and animations should still
@@ -657,14 +708,15 @@ enumerating.
     </td>
   </tr>
   <tr>
-    <td><strong>Hidden</strong></td>
+    <td><strong><code id="advice-hidden">Hidden</code></strong></td>
     <td>
       <p>When the page changes from <em>passive</em> to <em>hidden</em>, it's
       possible the user will not interact with it again until it's reloaded.</p>
       <p>The transition to <em>hidden</em> is also often the last state change
       that's reliably observable by developers (this is especially true on
       mobile, as users can close tabs or the browser app itself, and the
-      pagehide and unload events are not fired in those cases).</p>
+      <code>beforeunload</code>, <code>pagehide</code>, and <code>unload</code>
+      events are not fired in those cases).</p>
       <p>This means you should treat the hidden state as the likely end to the
       user's session &mdash; including persisting any unsaved application state,
       and sending any unsent analytics data.</p>
@@ -674,18 +726,21 @@ enumerating.
     </td>
   </tr>
   <tr>
-    <td><strong>Frozen</strong></td>
+    <td><strong><code id="advice-frozen">Frozen</code></strong></td>
     <td>
-      <p>In the frozen state, tasks in the task queue are suspended until the
-      page is unfrozen &mdash; which may never happen (e.g. if the page is
-      discarded).</td>
+      <p>In the frozen state,
+      <a href="https://html.spec.whatwg.org/multipage/webappapis.html#queue-a-task">
+      freezable tasks</a> in the
+      <a href="https://html.spec.whatwg.org/multipage/webappapis.html#task-queue">
+      task queues</a> are suspended until the page is unfrozen &mdash; which may
+      never happen (e.g. if the page is discarded).</p>
       <p>This means when the page changes from <em>hidden</em> to <em>frozen</em>
       it's essential that you stop any timers or tear down any connections that,
       if frozen, could affect other open tabs in the same origin, or affect the
       browser's ability to put the page in the
       <a href="https://webkit.org/blog/427/webkit-page-cache-i-the-basics/">
       page navigation cache</a>.<p>
-      <p>It's particularly important that you:</p>
+      <p>In particular, it's important that you:</p>
       <ul>
         <li>Close all open
           <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">
@@ -702,24 +757,26 @@ enumerating.
           Web Locks</a>.</li>
       </ul>
       <p>You should also persist any dynamic view state (e.g. scroll position
-      in an infinite list view) to sessionStorage (or
+      in an infinite list view) to
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">
+      <code>sessionStorage</code></a> (or
       <a href="#save-data-to-indexeddb-before-freezing">IndexedDB via
-      <code>commit()</code></a>) that you'd want restored if the page was
+      <code>commit()</code></a>) that you'd want restored if the page were
       discarded and then reloaded later.</p>
       <p>If the page then transitions from <em>frozen</em> back to
       <em>hidden</em>, you can restore any connections or restart any polling
-      your stopped when the page was initially frozen.</p>
-   </td>
+      you stopped when the page was initially frozen.</p>
+    </td>
   </tr>
   <tr>
-    <td><strong>Terminated</strong></td>
+    <td><strong><code id="advice-terminated">Terminated</code></strong></td>
     <td>
       <p>You generally do not need to take any action when a page transitions
       to the <em>terminated</em> state.</p>
       <p>Since pages being unloaded as a result of user action always go
       through the <em>hidden</em> state before entering the <em>terminated</em>
-      state, the <em>hidden</em> state is where session-ending logic,
-      application state persisting, and reporting to analytics should be
+      state, the <em>hidden</em> state is where session-ending logic (e.g.
+      persisting application state and reporting to analytics) should be
       performed.</p>
       <p>Also (as mentioned in the <a href="#advice-hidden">recommendations for
       the hidden state</a>), it's very important for developers to realize that
@@ -730,7 +787,7 @@ enumerating.
    </td>
   </tr>
   <tr>
-    <td><strong>Discarded</strong></td>
+    <td><strong><code id="advice-discarded">Discarded</code></strong></td>
     <td>
       <p>The <em>discarded</em> state is not observable by developers at the
       time a page is being discarded. This is because pages are typically
@@ -749,9 +806,9 @@ enumerating.
 
 ### The unload event {: #the-unload-event}
 
-<aside>
-  <strong>Advice summary:</strong>
-  never use the <code>unload</code> event on modern browsers
+<aside class="key-point">
+  <strong>Key point:</strong>
+  never use the <code>unload</code> event on modern browsers.
 </aside>
 
 Many developers treat the `unload` event as a guaranteed callback and use it as
@@ -761,14 +818,14 @@ fire in many typical unload situations, including closing a tab from the tab
 switcher on mobile or closing the browser app from the app switcher.
 
 For this reason, it's always better to rely on the
-[visibilitychange](#event-visibilitychange) event to determine session ends, and
+[`visibilitychange`](#event-visibilitychange) event to determine session ends, and
 consider the hidden state the
 [last reliable time to save app and user data](#advice-hidden).
 
 Furthermore, the mere presence of a registered `unload` event handler (via
-either `onunload` or `addEventListener()` can prevent browsers from being able
-to cache these pages for faster loads via the browser's back and forward
-buttons.
+either `onunload` or `addEventListener()`) can [prevent browsers from being able
+to cache these pages](https://webkit.org/blog/427/webkit-page-cache-i-the-basics/)
+for faster loads via the browser's back and forward buttons.
 
 In all modern browsers (including IE11), it's recommended to always use the
 [`pagehide`](#event-pagehide) event to detect possible page unloads (a.k.a the
@@ -793,8 +850,8 @@ For more information on page navigation caches, and why the unload event harms t
 
 ### The beforeunload event {: #the-beforeunload-event}
 
-<aside>
-  <strong>Advice summary:</strong>
+<aside class="key-point">
+  <strong>Key point:</strong>
   never add a <code>beforeunload</code> listener unconditionally or use it as an
   end-of-session signal. Only add it when a user has unsaved work, and remove
   it as soon as that work has been saved.
@@ -846,27 +903,32 @@ onPageHasUnsavedChanges(() => {
 });
 ```
 <aside>
-  <p><strong>Note:</strong> The PageLifecycle.js library provides the
-  convenience methods <code>addUnsavedChanges()</code> and
-  <code>removeUnsavedChanges()</code>, that follow all the best practices
+  <p><strong>Note:</strong> The
+  <a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js
+  </a> library provides the convenience methods <code>addUnsavedChanges()</code>
+  and <code>removeUnsavedChanges()</code>, that follow all the best practices
   outlined above. They're based on an early proposal to officially replace the
   <code>beforeunload</code> event with a declarative API that can be less easily
   abused and more reliable on mobile platforms.</p>
   <p>If you want to use the <code>beforeunload</code> event properly and in a
-  way that works cross-browser, the PageLifecycle.js library is our recommended
-  solution.</p>
+  way that works cross-browser, the
+  <a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a>
+  library is our recommended solution.</p>
 </aside>
 
 ## FAQs {: #faqs}
 
-### My page does important work when it's hidden, how can I stop it from being frozen or discarded? {: #prevent-freeze-discard}
+<h3 id="prevent-freeze-discard" class="hide-from-toc">
+  My page does important work when it's hidden,
+  how can I stop it from being frozen or discarded?
+</h3>
 
 There are lots of legitimate reasons web pages shouldn't be frozen while running
 in the hidden state. The most obvious example here is an app that plays music.
 
 There are also situations where it would be risky for Chrome to discard a page,
 like if it contains a form with unsubmitted user input, or if it has a
-beforeunload handler that warns when the page is unloading.
+`beforeunload` handler that warns when the page is unloading.
 
 For the moment, Chrome is going to be conservative when discarding pages and
 only do so when it's confident it won't affect users. For example, pages that
@@ -879,45 +941,57 @@ be discarded unless under extreme resource constraints:
 * Showing alerts
 * Sending push notifications
 
-In the case of pages that update the title or favicon to alert users of unread
-notifications, we currently have a [proposal to enable these kinds of updates
-from service worker](https://github.com/WICG/page-lifecycle/issues/24), which
-would allow Chrome to freeze or discard the page but still show changes to the
-tab title or favicon.
+<aside>
+  <strong>Note:</strong>
+  In the case of pages that update the title or favicon to alert users of unread
+  notifications, we currently have a
+  <a href="https://github.com/WICG/page-lifecycle/issues/24">proposal to enable
+  these kinds of updates from service worker</a>, which would allow Chrome to
+  freeze or discard the page but still show changes to the tab title or favicon.
+</aside>
 
-### Why aren't the load or DOMContentLoaded events mentioned? {: #why-no-load-or-domcontentloaded}
+<h3 id="why-no-load-or-domcontentloaded" class="hide-from-toc">
+  Why aren't the load or DOMContentLoaded events mentioned?
+</h3>
 
 The Page Lifecycle API defines states to be distinct and mutually exclusive.
 Since a page can be loaded in either the active, passive, or hidden state, a
-distinct loading state does not make sense, and since the load and
-DOMContentLoaded events don't signal a lifecycle state change, they're not
+distinct loading state does not make sense, and since the `load` and
+`DOMContentLoaded` events don't signal a lifecycle state change, they're not
 relevant to this discussion.
 
-### If I can't run async APIs in the frozen or terminated states, how can I save data to IndexedDB? {: #save-data-to-indexeddb-before-freezing}
+<h3 id="save-data-to-indexeddb-before-freezing" class="hide-from-toc">
+  If I can't run async APIs in the frozen or terminated states,
+  how can I save data to IndexedDB?
+</h3>
 
-In frozen and terminated states, tasks queues are suspended, which means async
-and callback-based APIs such as IndexedDB cannot be reliably used.
+In frozen and terminated states,
+[freezable tasks](https://wicg.github.io/page-lifecycle/spec.html#html-task-source-dfn)
+in a page's [task queues](https://html.spec.whatwg.org/multipage/webappapis.html#task-queue)
+are suspended, which means async and callback-based APIs such as IndexedDB
+cannot be reliably used.
 
 In the future, we will [add a `commit()` method to
 `IDBTransaction`](https://github.com/w3c/IndexedDB/pull/242) objects, which will
 give developers a way to perform what are effectively write-only transactions
 that don't require callbacks. In other words, if the developer is just writing
 data to IndexedDB and not performing a complex transaction consisting of reads
-and writes, the `commit()` method will be able to finish before tasks queues are
+and writes, the `commit()` method will be able to finish before task queues are
 suspended (assuming the IndexedDB database is already open).
 
 For code that needs to work today, however, developers have two options:
 
-1. **Use Session Storage**: Session Storage is synchronous and is persisted
-across page discards.
+1. **Use Session Storage**: [Session Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
+   is synchronous and is persisted across page discards.
 2. **Use IndexedDB via service worker:** service worker can store data in
 IndexedDB after the page has been terminated or discarded. In the `freeze` or
-`pagehide` event listener you can send data to a service worker via postMessage,
+`pagehide` event listener you can send data to a service worker via
+[`postMessage()`](https://googlechrome.github.io/samples/service-worker/post-message/),
 and the service worker can handle saving the data.
 
 <aside>
   <strong>Note:</strong>
-  While option 2 above will work, it's not ideal in situations where the device
+  While option #2 above will work, it's not ideal in situations where the device
   is freezing or discarding the page due to memory pressure since the browser
   may have to wake up the service worker process, which will put more strain on
   the system.
@@ -955,7 +1029,7 @@ Lastly, developers who want to implement the
 article but don't want to memorize all the possible state and event transitions
 paths can use
 [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle) to easily
-observe lifecycle state changes consistently across all browsers.
+observe lifecycle state changes consistently in all browsers.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
