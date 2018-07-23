@@ -41,19 +41,19 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 * 将 TTF 变体提供给旧 Android（4.4 版以下）浏览器。
 * 将 EOT 变体提供给旧 IE（IE9 版以下）浏览器。
 
-注：从技术上讲，还有另一种容器格式，即 <a href='http://caniuse.com/svg-fonts'>SVG 字体容器</a>，但 IE 或 Firefox 从不支持它，并且现在 Chrome 也放弃了对它的支持。因此，它的用途很有限，本指南中有意将其忽略。
+Note: 从技术上讲，还有另一种容器格式，即 <a href='http://caniuse.com/svg-fonts'>SVG 字体容器</a>，但 IE 或 Firefox 从不支持它，并且现在 Chrome 也放弃了对它的支持。因此，它的用途很有限，本指南中有意将其忽略。
 
 ### 通过压缩减小字体大小
 
-字体是字形的集合，其中的每个字形都是一组描述字母形状的路径。各个字形不同，但它们仍然包含大量相似信息，这些信息可通过 GZIP 或兼容的压缩工具进行压缩： 
+字体是字形的集合，其中的每个字形都是一组描述字母形状的路径。各个字形不同，但它们仍然包含大量相似信息，这些信息可通过 GZIP 或兼容的压缩工具进行压缩：
 
 * EOT 和 TTF 格式默认情况下不进行压缩。提供这些格式时，确保您的服务器配置为应用 [GZIP 压缩](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip)。
-* WOFF 具有内建压缩。确保您的 WOFF 压缩工具使用了最佳压缩设置。 
+* WOFF 具有内建压缩。确保您的 WOFF 压缩工具使用了最佳压缩设置。
 * WOFF2 采用自定义预处理和压缩算法，提供的文件大小压缩率比其他格式高大约 30%。如需了解详细信息，请参阅 [WOFF 2.0 评估报告](http://www.w3.org/TR/WOFF20ER/){: .external }。
 
 最后，值得注意的是，某些字体格式包含附加的元数据，如[字体提示](https://en.wikipedia.org/wiki/Font_hinting)和[字距调整](https://en.wikipedia.org/wiki/Kerning)信息，这些信息在某些平台上可能并非必要信息，这样便可进一步优化文件大小。查询您的字体压缩工具是否提供了优化选项，如果您这样做，请确保您有适合的基础架构来测试这些优化过的字体并将它们提供给每个特定浏览器。例如，Google Fonts 为每一种字体维护有 30 多种优化过的变体，并自动检测和提供适合每一个平台和浏览器的最佳变体。
 
-注：考虑使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 压缩</a>处理 EOT、TTF 和 WOFF 格式。Zopfli 是一种兼容 zlib 的压缩工具，提供的文件大小压缩率比 gzip 高大约 5%。
+Note: 考虑使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 压缩</a>处理 EOT、TTF 和 WOFF 格式。Zopfli 是一种兼容 zlib 的压缩工具，提供的文件大小压缩率比 gzip 高大约 5%。
 
 ## 通过 @font-face 定义字体系列
 
@@ -75,7 +75,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
       font-style: normal;
       font-weight: 400;
       src: local('Awesome Font'),
-           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff2') format('woff2'),
            url('/fonts/awesome.woff') format('woff'),
            url('/fonts/awesome.ttf') format('truetype'),
            url('/fonts/awesome.eot') format('embedded-opentype');
@@ -86,7 +86,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
       font-style: italic;
       font-weight: 400;
       src: local('Awesome Font Italic'),
-           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff2') format('woff2'),
            url('/fonts/awesome-i.woff') format('woff'),
            url('/fonts/awesome-i.ttf') format('truetype'),
            url('/fonts/awesome-i.eot') format('embedded-opentype');
@@ -94,13 +94,13 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 
 首先，请注意以上示例使用两种样式（normal 和 italic）来定义单个 Awesome Font 系列，其中的每个样式均指向一个不同的字体资源集。每个 `src` 描述符则又包含一个用逗号分隔的资源变体优先级列表：
- 
+
 
 * `local()` 指令用于引用、加载和使用安装在本地的字体。
 * `url()` 指令用于加载外部字体，它可以包含可选的 `format()` 提示，指示由提供的网址引用的字体格式。
 
 
-注：除非您引用的是其中一种默认系统字体，在实践中，用户很少将其安装在本地，特别是在移动设备上，在移动设备上‘安装’附加字体实际上根本无法实现。因此，您应该始终提供一个外部字体位置列表。
+Note: 除非您引用的是其中一种默认系统字体，在实践中，用户很少将其安装在本地，特别是在移动设备上，在移动设备上‘安装’附加字体实际上根本无法实现。因此，您应该始终提供一个外部字体位置列表。
 
 当浏览器确定需要字体时，它会按指定顺序循环访问提供的资源列表，并尝试加载相应的资源。例如，接着上面的示例：
 
@@ -112,7 +112,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 您可以将本地和外部指令与相应的格式提示相结合来指定所有可用字体格式，其余工作交由浏览器进行处理。浏览器确定需要哪些资源，并选择最佳格式。
 
-注：字体变体的指定顺序很重要。浏览器将选取其支持的第一种格式。因此，如果您希望较新的浏览器使用 WOFF2，则应将 WOFF2 声明置于 WOFF 之上，依此类推。
+Note: 字体变体的指定顺序很重要。浏览器将选取其支持的第一种格式。因此，如果您希望较新的浏览器使用 WOFF2，则应将 WOFF2 声明置于 WOFF 之上，依此类推。
 
 ### Unicode-range 子集内嵌
 
@@ -128,7 +128,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 * 通配符范围（例如 U+4??）：“?”字符表示任何十六进制数字
 
 例如，您可以将 Awesome Font 系列拆分成拉丁文和日文子集，其中的每个子集将由浏览器根据需要下载：
- 
+
 
 
     @font-face {
@@ -136,34 +136,34 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
       font-style: normal;
       font-weight: 400;
       src: local('Awesome Font'),
-           url('/fonts/awesome-l.woff2') format('woff2'), 
+           url('/fonts/awesome-l.woff2') format('woff2'),
            url('/fonts/awesome-l.woff') format('woff'),
            url('/fonts/awesome-l.ttf') format('truetype'),
            url('/fonts/awesome-l.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
-    
+
     @font-face {
       font-family: 'Awesome Font';
       font-style: normal;
       font-weight: 400;
       src: local('Awesome Font'),
-           url('/fonts/awesome-jp.woff2') format('woff2'), 
+           url('/fonts/awesome-jp.woff2') format('woff2'),
            url('/fonts/awesome-jp.woff') format('woff'),
            url('/fonts/awesome-jp.ttf') format('truetype'),
            url('/fonts/awesome-jp.eot') format('embedded-opentype');
       unicode-range: U+3000-9FFF, U+ff??; /* Japanese glyphs */
     }
-    
 
-注：Unicode-range 子集内嵌对亚洲语言特别重要，因为在亚洲语言中，字形数量比西方语言多得多，标准的“完整”字体常常以兆字节而非千字节计量。
+
+Note: Unicode-range 子集内嵌对亚洲语言特别重要，因为在亚洲语言中，字形数量比西方语言多得多，标准的“完整”字体常常以兆字节而非千字节计量。
 
 您可以通过使用 Unicode range 子集，以及为字体的每个样式变体使用单独的文件，定义一个下载起来更快速并且更高效的复合字体系列。访问者将只下载其需要的变体和子集，并且不会强制他们下载可能永远不会在网页上看到或使用的子集。 不过，unicode-range 也有一个小缺陷：[并非所有浏览器都支持它](http://caniuse.com/#feat=font-unicode-range)。
 某些浏览器会简单地忽略 unicode-range 提示并下载所有变体，另一些浏览器则可能根本不会处理 @font-face 声明。
 
-要解决此问题，对于较旧的浏览器，您需要回退到“手动子集内嵌”。由于旧浏览器因不够智能而无法只选择必要的子集，也无法构建复合字体，因此您必须回退以提供包含所有必要子集的单一字体资源，并向浏览器隐藏其余子集。例如，如果网页只使用拉丁文字符，那么您可以去除其他字形，并将该特定子集作为一个独立资源提供。 
+要解决此问题，对于较旧的浏览器，您需要回退到“手动子集内嵌”。由于旧浏览器因不够智能而无法只选择必要的子集，也无法构建复合字体，因此您必须回退以提供包含所有必要子集的单一字体资源，并向浏览器隐藏其余子集。例如，如果网页只使用拉丁文字符，那么您可以去除其他字形，并将该特定子集作为一个独立资源提供。
 
-1. **您如何确定需要哪些子集？** 
+1. **您如何确定需要哪些子集？**
     * 如果浏览器支持 unicode-range 子集内嵌，则它会自动选择正确的子集。网页只需提供子集文件并在 @font-face 规则中指定相应的 unicode-range。
     * 如果浏览器不支持 unicode-range 子集内嵌，则网页需要隐藏所有多余的子集，即开发者必须指定需要的子集。
 1. **您如何生成字体子集？**
@@ -173,14 +173,14 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 ### 字体选择和合成
 
-每个字体系列都由多个样式变体（常规、加粗、倾斜）和适用于每个样式的多个粗细组成，其中的每个粗细又可能包含迥异的字形形状 - 例如不同的间距、大小调整或完全不同的形状。 
+每个字体系列都由多个样式变体（常规、加粗、倾斜）和适用于每个样式的多个粗细组成，其中的每个粗细又可能包含迥异的字形形状 - 例如不同的间距、大小调整或完全不同的形状。
 
 <img src="images/font-weights.png"  alt="字体粗细">
 
 例如，上图以图解方式说明了一个提供三种不同加粗粗细的字体系列：
 400（常规）、700（加粗）和 900（特粗）。浏览器会将所有其他中间变体（以灰色表示）自动映射到最接近的变体。
 
- 
+
 
 
 
@@ -191,7 +191,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 倾斜变体也适用类似的逻辑。字体设计者控制其将产生哪些变体，而您控制将在网页上使用哪些变体。由于每个变体都会单独下载，因此最好将变体数量保持在较低水平。
 例如，您可以为 Awesome Font 系列定义两种加粗变体：
- 
+
 
 
     @font-face {
@@ -199,31 +199,31 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
       font-style: normal;
       font-weight: 400;
       src: local('Awesome Font'),
-           url('/fonts/awesome-l.woff2') format('woff2'), 
+           url('/fonts/awesome-l.woff2') format('woff2'),
            url('/fonts/awesome-l.woff') format('woff'),
            url('/fonts/awesome-l.ttf') format('truetype'),
            url('/fonts/awesome-l.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
-    
+
     @font-face {
       font-family: 'Awesome Font';
       font-style: normal;
       font-weight: 700;
       src: local('Awesome Font'),
-           url('/fonts/awesome-l-700.woff2') format('woff2'), 
+           url('/fonts/awesome-l-700.woff2') format('woff2'),
            url('/fonts/awesome-l-700.woff') format('woff'),
            url('/fonts/awesome-l-700.ttf') format('truetype'),
            url('/fonts/awesome-l-700.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
-    
+
 
 上例声明的 Awesome Font 系列由两项资源组成，它们涵盖同一拉丁文字形集 (U+000-5FF)，但提供两种不同的“粗细”：常规 (400) 和加粗 (700)。不过，如果您的其中一个 CSS 规则指定了一种不同的字体粗细，或者将 font-style 属性设置为 italic，那会怎么样？
 
 
 * 如果未找到精确字体匹配项，浏览器将以最接近的匹配项替代。
-* 如果未找到样式匹配项（例如，在上例中未声明任何倾斜变体），则浏览器将合成其自己的字体变体。 
+* 如果未找到样式匹配项（例如，在上例中未声明任何倾斜变体），则浏览器将合成其自己的字体变体。
 
 <img src="images/font-synthesis.png"  alt="字体合成">
 
@@ -234,7 +234,7 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 上例以图解方式说明了 Open-Sans 的实际字体与合成字体结果之间的差异。所有合成变体都是依据单个 400 粗细的字体生成的。您可以看出，结果存在显著差异。其中并未详细说明如何生成加粗和倾斜变体。因此，结果将因浏览器的不同而发生变化，并且与字体的相关度极高。
 
-注：为获得最好的一致性和视觉效果，您不应该依赖字体合成，而应最大限度减少使用的字体变体的数量并指定其位置，这样一来，只有在网页使用它们时，浏览器才会进行下载。不过，在某些情况下，合成的变体<a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>或许是可行的选择</a>，不过请谨慎使用。
+Note: 为获得最好的一致性和视觉效果，您不应该依赖字体合成，而应最大限度减少使用的字体变体的数量并指定其位置，这样一来，只有在网页使用它们时，浏览器才会进行下载。不过，在某些情况下，合成的变体<a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>或许是可行的选择</a>，不过请谨慎使用。
 
 ## 优化加载和渲染
 
@@ -243,9 +243,9 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 * 您可以通过 Font Loading API 实现自定义字体加载和渲染策略，以替换默认延迟加载字体加载。
 * 您可以通过字体内联替换较旧浏览器中的默认延迟加载字体加载。
 
-一个“完整”网页字体包括您可能不需要的所有样式变体，加上可能不会使用的所有字形，很容易就会产生几兆字节的下载。为解决此问题，专门设计了 @font-face CSS 规则，您可以利用该规则将字体系列拆分成一个由 unicode 子集、不同样式变体等资源组成的资源集合。 
+一个“完整”网页字体包括您可能不需要的所有样式变体，加上可能不会使用的所有字形，很容易就会产生几兆字节的下载。为解决此问题，专门设计了 @font-face CSS 规则，您可以利用该规则将字体系列拆分成一个由 unicode 子集、不同样式变体等资源组成的资源集合。
 
-鉴于这些声明，浏览器会确定需要的子集和变体，并下载渲染文本所需的最小集，非常方便。但如果您不小心，它也可能会在关键渲染路径中形成性能瓶颈并延迟文本渲染。 
+鉴于这些声明，浏览器会确定需要的子集和变体，并下载渲染文本所需的最小集，非常方便。但如果您不小心，它也可能会在关键渲染路径中形成性能瓶颈并延迟文本渲染。
 
 ### 网页字体和关键渲染路径
 
@@ -282,33 +282,33 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
     -var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {
       style: 'normal', unicodeRange:'U+000-5FF', weight:'400'
     });
-    
+
     font.load(); // don't wait for the render tree, initiate an immediate fetch!
-    
+
     font.ready().then(function() {
       // apply the font (which may re-render text and cause a page reflow)
       // after the font has finished downloading
       document.fonts.add(font);
       document.body.style.fontFamily = "Awesome Font, serif";
-    
-      // OR... by default the content is hidden, 
+
+      // OR... by default the content is hidden,
       // and it's rendered after the font is available
       var content = document.getElementById("content");
       content.style.visibility = "visible";
-    
-      // OR... apply your own render strategy here... 
-    });
-    
 
-并且，由于您可以检查字体状态（通过 [check()](http://dev.w3.org/csswg/css-font-loading/#font-face-set-check) 方法）并追踪其下载进度，因此您还可以为在网页上渲染文本定义一种自定义策略： 
+      // OR... apply your own render strategy here...
+    });
+
+
+并且，由于您可以检查字体状态（通过 [check()](http://dev.w3.org/csswg/css-font-loading/#font-face-set-check) 方法）并追踪其下载进度，因此您还可以为在网页上渲染文本定义一种自定义策略：
 
 * 您可以在获得字体前暂停所有文本渲染。
 * 您可以为每种字体实现自定义超时。
 * 您可以利用后备字体解除渲染阻止，并在获得字体后注入使用所需字体的新样式。
 
-最重要的是，您还可以混用和匹配上述策略来适应网页上的不同内容。例如，在获得字体前延迟某些部分的文本渲染；使用后备字体，然后在字体下载完成后进行重新渲染；指定不同的超时，等等。 
+最重要的是，您还可以混用和匹配上述策略来适应网页上的不同内容。例如，在获得字体前延迟某些部分的文本渲染；使用后备字体，然后在字体下载完成后进行重新渲染；指定不同的超时，等等。
 
-注：在某些浏览器上，Font Loading API 仍<a href='http://caniuse.com/#feat=font-loading'>处于开发阶段</a>。可以考虑使用 <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> 或 <a href='https://github.com/typekit/webfontloader'>webfontloader 内容库</a>来提供类似功能，尽管附加的 JavaScript 依赖关系会产生开销。
+Note: 在某些浏览器上，Font Loading API 仍<a href='http://caniuse.com/#feat=font-loading'>处于开发阶段</a>。可以考虑使用 <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> 或 <a href='https://github.com/typekit/webfontloader'>webfontloader 内容库</a>来提供类似功能，尽管附加的 JavaScript 依赖关系会产生开销。
 
 ### 通过内联优化字体渲染
 
@@ -317,14 +317,14 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 * 浏览器会使用高优先级自动下载具有匹配媒体查询的 CSS 样式表，因为需要使用它们来构建 CSSOM。
 * 将字体数据内联到 CSS 样式表中会强制浏览器使用高优先级下载字体，而不等待渲染树。即它起到的是手动替换默认延迟加载行为的作用。
 
-内联策略不那么灵活，不允许您为不同的内容定义自定义超时或渲染策略，但不失为是一种适用于所有浏览器并且简单而又可靠的解决方案。为获得最佳效果，请将内联字体分成独立的样式表，并为它们提供较长的 max-age。这样一来，在您更新 CSS 时，就不会强制访问者重新下载字体。 
+内联策略不那么灵活，不允许您为不同的内容定义自定义超时或渲染策略，但不失为是一种适用于所有浏览器并且简单而又可靠的解决方案。为获得最佳效果，请将内联字体分成独立的样式表，并为它们提供较长的 max-age。这样一来，在您更新 CSS 时，就不会强制访问者重新下载字体。
 
-注：有选择地使用内联。回想一下，@font-face 使用延迟加载行为来避免下载多余的字体变体和子集的原因。此外，通过主动式内联增加 CSS 的大小将对您的<a href='/web/fundamentals/performance/critical-rendering-path/'>关键渲染路径</a>产生不良影响。浏览器必须下载所有 CSS，然后才能构造 CSSOM，构建渲染树，以及将页面内容渲染到屏幕上。
+Note: 有选择地使用内联。回想一下，@font-face 使用延迟加载行为来避免下载多余的字体变体和子集的原因。此外，通过主动式内联增加 CSS 的大小将对您的<a href='/web/fundamentals/performance/critical-rendering-path/'>关键渲染路径</a>产生不良影响。浏览器必须下载所有 CSS，然后才能构造 CSSOM，构建渲染树，以及将页面内容渲染到屏幕上。
 
 ### 通过 HTTP 缓存优化字体重复使用
 
 字体资源通常是不会频繁更新的静态资源。因此，它们非常适合较长的 max-age 到期 - 确保您为所有字体资源同时指定了[条件 ETag 标头](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#validating-cached-responses-with-etags)和[最佳 Cache-Control 策略](/web/fundamentals/performance/optimizing-content-efficiency/http-caching#cache-control)。
-    
+
 您无需在 localStorage 中或通过其他机制存储字体，其中的每一种机制都有各自的性能缺陷。
 浏览器的 HTTP 缓存与 Font Loading API 或 webfontloader 内容库相结合，实现了最佳并且最可靠的机制来向浏览器提供字体资源。
 
@@ -333,9 +333,9 @@ description:字体是实现良好的设计、品牌推广、可读性和无障�
 
 ## 优化检查清单
 
-与普遍的观点相反，使用网页字体不需要延迟网页渲染，也不会对其他性能指标产生不良影响。在充分优化的情况下使用字体可大幅提升总体用户体验：出色的品牌推广，改进的可读性、易用性和可搜索性，并一直提供可扩展的多分辨率解决方案，能够出色地适应各种屏幕格式和分辨率。不要害怕使用网页字体！ 
+与普遍的观点相反，使用网页字体不需要延迟网页渲染，也不会对其他性能指标产生不良影响。在充分优化的情况下使用字体可大幅提升总体用户体验：出色的品牌推广，改进的可读性、易用性和可搜索性，并一直提供可扩展的多分辨率解决方案，能够出色地适应各种屏幕格式和分辨率。不要害怕使用网页字体！
 
-不过，直接实现可能招致下载内容庞大和不必要的延迟。您需要通过对字体资产本身及其在网页上的获取和使用方式进行优化来为浏览器提供协助的环节。 
+不过，直接实现可能招致下载内容庞大和不必要的延迟。您需要通过对字体资产本身及其在网页上的获取和使用方式进行优化来为浏览器提供协助的环节。
 
 * **审核并监控您的字体使用**：不要在网页上使用过多字体，并且对于每一种字体，最大限度减少使用的变体数量。这将有助于为您的用户带来更加一致且更加快速的体验。
 * **对您的字体资源进行子集内嵌**：许多字体都可进行子集内嵌，或者拆分成多个 unicode-range 以仅提供特定网页需要的字形。这样就减小了文件大小，并提高了资源的下载速度。不过，在定义子集时要注意针对字体重复使用进行优化。例如，您一定不希望在每个网页上都下载不同但重叠的字符集。最好根据文字系统（例如拉丁文、西里尔文等）进行子集内嵌。

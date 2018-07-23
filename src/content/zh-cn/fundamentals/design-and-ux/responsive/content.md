@@ -167,7 +167,7 @@ description:在针对各类用户和设备进行构建时，要考虑内容以�
 
 ### 测试内容
 
-成功：不管做什么，**一定要测试**！
+Success: 不管做什么，**一定要测试**！
 
 * 使用 Chrome DevTools 和其他[模拟工具](/web/fundamentals/performance/poor-connectivity/)检查较小视口的可读性。
 * [在低带宽和长延迟时间下测试您的内容](/web/fundamentals/performance/poor-connectivity/)；在各种连接场景中试用内容。

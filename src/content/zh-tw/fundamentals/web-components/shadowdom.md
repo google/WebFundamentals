@@ -22,7 +22,7 @@ Shadow DOM 解決了構建網絡應用的脆弱性問題。脆弱性是由 HTML�
 
 ## 簡介{: #intro}
 
-注：**已經很熟悉 Shadow DOM？**本文章介紹新版 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 規範</a>。如果您有 Shadow DOM 的使用經驗，則應該瞭解 <a href="https://www.chromestatus.com/features/4507242028072960">Chrome 35 中隨附的 v0 版本</a>以及 webcomponents.js polyfill。這些概念是相同的，只不過 v1 規範的 API 存在一些重要差異。此外，所有主要瀏覽器已確定將實現該版本，其中 Safari Tech Preview 和 Chrome Canary 已實現。請繼續閱讀，瞭解新的內容。或者參閱<a href="#historysupport">歷史記錄和瀏覽器支持</a>，瞭解詳細信息。
+Note: **已經很熟悉 Shadow DOM？**本文章介紹新版 <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 規範</a>。如果您有 Shadow DOM 的使用經驗，則應該瞭解 <a href="https://www.chromestatus.com/features/4507242028072960">Chrome 35 中隨附的 v0 版本</a>以及 webcomponents.js polyfill。這些概念是相同的，只不過 v1 規範的 API 存在一些重要差異。此外，所有主要瀏覽器已確定將實現該版本，其中 Safari Tech Preview 和 Chrome Canary 已實現。請繼續閱讀，瞭解新的內容。或者參閱<a href="#historysupport">歷史記錄和瀏覽器支持</a>，瞭解詳細信息。
 
 
 
@@ -45,7 +45,7 @@ Shadow DOM 這款工具旨在構建基於組件的應用。因此，可爲網絡
 - **效率** - 將應用看成是多個 DOM 塊，而不是一個大的（全局性）頁面。
 
 
-注：儘管您可以在網絡組件之外利用 shadow DOM API 及其優勢，這裏我只列出一些基於自定義元素的示例。我將在所有示例中使用自定義元素 v1 API。
+Note: 儘管您可以在網絡組件之外利用 shadow DOM API 及其優勢，這裏我只列出一些基於自定義元素的示例。我將在所有示例中使用自定義元素 v1 API。
 
 
 
@@ -54,7 +54,7 @@ Shadow DOM 這款工具旨在構建基於組件的應用。因此，可爲網絡
 
 在整篇文章中，我將引用演示組件 (`<fancy-tabs>`) 以及其中的代碼段。
 如果您的瀏覽器支持 API，您可以看到下面的實時演示。
-否則，請查看 
+否則，請查看
 
 
 <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">Github 上的完整源代碼</a>。
@@ -91,7 +91,7 @@ DOM 很酷的一點在於它能夠生動地展示您的頁面。
     h1.textContent = 'Hello world!';
     header.appendChild(h1);
     document.body.appendChild(header);
-    
+
 
 生成以下 HTML 標記：
 
@@ -101,7 +101,7 @@ DOM 很酷的一點在於它能夠生動地展示您的頁面。
         <h1>Hello DOM</h1>
       </header>
     </body>
-    
+
 
 一切都還不錯。那麼，[究竟什麼是 _shadow DOM_](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)？
 
@@ -125,10 +125,10 @@ Shadow DOM 與普通 DOM 相同，但有兩點區別：1) 創建/使用的方式
     const header = document.createElement('header');
     const shadowRoot = header.attachShadow({mode: 'open'});
     shadowRoot.innerHTML = '<h1>Hello Shadow DOM</h1>'; // Could also use appendChild().
-    
+
     // header.shadowRoot === shadowRoot
     // shadowRoot.host === header
-    
+
 
 我現在使用 `.innerHTML` 來填充影子根，不過您也可使用其他 DOM API 來實現。
 這就是網絡。我們可自主選擇。
@@ -146,7 +146,7 @@ Shadow DOM 與普通 DOM 相同，但有兩點區別：1) 創建/使用的方式
 
     document.createElement('input').attachShadow({mode: 'open'});
     // Error. `<input>` cannot host shadow dom.
-    
+
 
 ###  爲自定義元素創建 shadow DOM {: #elements}
 
@@ -178,7 +178,7 @@ Shadow DOM 與普通 DOM 相同，但有兩點區別：1) 創建/使用的方式
 這裏有幾個有趣的事情。首先，`<fancy-tabs>` 實例創建後，自定義元素**創建其自身的 shadow DOM**。這在 `function Object() { [native code] }()` 中完成。其次，因爲我們要創建一個影子根，因此 `<style>` 中的 CSS 規則將作用域僅限於 `<fancy-tabs>`。
 
 
-注：嘗試運行該示例時，您可能會注意到沒有任何渲染。
+Note: 嘗試運行該示例時，您可能會注意到沒有任何渲染。
 用戶的標記似乎消失了！這是因爲**元素的 shadow DOM 代替其子項被渲染**。
 如果想要顯示子項，您需要告訴瀏覽器在哪裏進行渲染，具體做法是在您的 shadow DOM 中添加 [`<slot>` 元素](#slots)。
 
@@ -218,7 +218,7 @@ Shadow DOM 組合引入了大量與網絡開發相關的新的基礎知識。
       <img src="gear.svg" slot="icon">
       <span>Settings</span>
     </button>
-    
+
 
 **Shadow DOM**
 
@@ -232,7 +232,7 @@ Shadow DOM 組合引入了大量與網絡開發相關的新的基礎知識。
       <span id="wrapper">
         <slot>Button</slot>
       </span>
-    
+
 
 **扁平的 DOM 樹**
 
@@ -251,7 +251,7 @@ Shadow DOM 組合引入了大量與網絡開發相關的新的基礎知識。
           <span>Settings</span>
         </slot>
     </button>
-    
+
 
 ###  &lt;slot&gt; 元素{: #slots}
 
@@ -261,7 +261,7 @@ Shadow DOM 使用 `<slot>` 元素將不同的 DOM 樹組合在一起。**Slot �
 這相當於您在說“在此處渲染用戶的標記”。
 
 
-注：Slot 是爲網絡組件創建“聲明性 API”的一種方法。它們混入到用戶的 DOM 中，幫助對整個組件進行渲染，從而**將不同的 DOM 樹組合在一起**。
+Note: Slot 是爲網絡組件創建“聲明性 API”的一種方法。它們混入到用戶的 DOM 中，幫助對整個組件進行渲染，從而**將不同的 DOM 樹組合在一起**。
 
 
 
@@ -278,14 +278,14 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
 
     <!-- Default slot. If there's more than one default slot, the first is used. -->
     <slot></slot>
-    
+
     <slot>Fancy button</slot> <!-- default slot with fallback content -->
-    
+
     <slot> <!-- default slot entire DOM tree as fallback -->
       <h2>Title</h2>
       <summary>Description text</summary>
     </slot>
-    
+
 
 您還可以創建**已命名 slot**。已命名 slot 是 shadow DOM 中用戶可通過名稱引用的特定槽。
 
@@ -300,7 +300,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       <div id="panels">
         <slot id="panelsSlot"></slot>
       </div>
-    
+
 
 組件用戶對 `<fancy-tabs>` 的聲明類似於：
 
@@ -313,7 +313,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       <section>content panel 2</section>
       <section>content panel 3</section>
     </fancy-tabs>
-    
+
     <!-- Using <h2>'s and changing the ordering would also work! -->
     <fancy-tabs>
       <h2 slot="title">Title</h2>
@@ -323,7 +323,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       <h2 slot="title">Title 3</h2>
       <section>content panel 3</section>
     </fancy-tabs>
-    
+
 
 而且如果您很好奇，您會發現扁平樹看起來類似於：
 
@@ -345,7 +345,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
           </slot>
         </div>
     </fancy-tabs>
-    
+
 
 注意，我們的組件可處理不同的配置，但是扁平的 DOM 樹保持不變。
 我們還可以從 `<button>` 切換到 `<h2>`。
@@ -391,7 +391,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       <div id="panels">
         ...
       </div>
-    
+
 
 樣式表的作用域也僅限於影子樹：
 
@@ -406,7 +406,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       <div id="panels">
         ...
       </div>
-    
+
 
 您可能想知道在您添加 `multiple` 屬性時，`<select>` 元素是如何渲染多選小部件（而不是下拉工具）的：
 
@@ -432,7 +432,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       contain: content; /* CSS containment FTW. */
     }
     </style>
-    
+
 
 使用 `:host` 的一個問題是，父頁面中的規則較之在元素中定義的 `:host` 規則具有更高的特異性。
 也就是說，外部樣式優先。這可讓用戶從外部替換您的頂級樣式。
@@ -467,7 +467,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       color: pink; /* color internal #tabs node when host has class="pink". */
     }
     </style>
-    
+
 
 ###  基於情境設定樣式{: #contextstyling}
 
@@ -482,7 +482,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
         ...
       </fancy-tabs>
     </body>
-    
+
 
 如果 `:host-context(.darktheme)` 爲 `.darktheme` 的子級，它將對 `<fancy-tabs>` 進行樣式化：
 
@@ -492,7 +492,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       color: white;
       background: black;
     }
-    
+
 
 `:host-context()` 對於主題化很有用，但更好的方法是[使用 CSS 自定義屬性創建樣式鉤子](#stylehooks)。
 
@@ -511,7 +511,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
         Digital Jedi, <span class="company">Google</span>
       </span>
     </name-badge>
-    
+
 
 組件的 shadow DOM 可爲用戶的 `<h2>` 和 `.title` 設定樣式：
 
@@ -533,7 +533,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
     */
     </style>
     <slot></slot>
-    
+
 
 如果您還記得前面的內容，就知道 `<slot>` 不會移動用戶的 light DOM。節點分佈於 `<slot>` 中後，`<slot>` 會對其 DOM 進行渲染，但節點實際上留在原處。**分佈之前已應用的樣式在分佈後仍繼續應用**。
 但是，light DOM 分佈後，它_可以_採用其他樣式（通過 shadow DOM 定義的樣式）。
@@ -579,7 +579,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
         <slot id="panelsSlot"></slot>
       </div>
     `;
-    
+
 
 在該示例中，有兩個 slot：用於標籤標題的命名 slot，以及用於標籤內容的命名 slot。
 用戶選擇一個標籤後，我們會對其選擇進行加粗並在面板上顯示。
@@ -600,7 +600,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
     fancy-tabs:hover {
       box-shadow: 0 3px 3px #ccc;
     }
-    
+
 
 **外部樣式總是優先於在 shadow DOM 中定義的樣式**。例如，如果用戶編寫選擇器 `fancy-tabs { width: 500px; }`，它將優先於組件的規則：`:host { width: 650px;}`。
 
@@ -627,7 +627,7 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       }
     </style>
     <fancy-tabs background>...</fancy-tabs>
-    
+
 
 在其 shadow DOM 內部：
 
@@ -637,12 +637,12 @@ Slot 實際上並不移動 DOM；它們在 shadow DOM 內部的其他位置進�
       border-radius: 10px;
       padding: 10px;
     }
-    
+
 
 在本例中，該組件將使用 `black` 作爲背景值，因爲用戶指定了該值。
 否則，背景顏色將採用默認值 `#9E9E9E`。
 
-注：作爲組件的作者，您負責讓開發者瞭解他們所能使用的 CSS 自定義屬性。
+Note: 作爲組件的作者，您負責讓開發者瞭解他們所能使用的 CSS 自定義屬性。
 將其看成是組件公共接口的一部分。
 確保將樣式鉤子記錄下來！
 
@@ -662,7 +662,7 @@ shadow DOM 的另一情況稱爲“閉合”模式。創建閉合影子樹後，
     const shadowRoot = div.attachShadow({mode: 'closed'}); // close shadow tree
     // div.shadowRoot === null
     // shadowRoot.host === div
-    
+
 
 其他 API 也會受到閉合模式的影響：
 
@@ -670,7 +670,7 @@ shadow DOM 的另一情況稱爲“閉合”模式。創建閉合影子樹後，
 - `Event.composedPath()`，用於與 shadow DOM 內部元素關聯的事件，返回 []
 
 
-注：閉合的影子樹不是非常有用。有些開發者將閉合模式視爲一項人工安全功能。
+Note: 閉合的影子樹不是非常有用。有些開發者將閉合模式視爲一項人工安全功能。
 但是讓我們澄清一點，它並**不是**一項安全功能。
 閉合模式只是簡單地阻止外部 JS 深入到元素的內部 DOM。
 
@@ -720,8 +720,8 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
     slot.addEventListener('slotchange', e => {
       console.log('light dom children changed!');
     });
-    
-注：當組件的實例首次初始化時，`slotchange` 不觸發。
+
+Note: 當組件的實例首次初始化時，`slotchange` 不觸發。
 
 
 如要監控 light DOM 其他類型的變化，您可以在元素的構造函數中設置 [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)。
@@ -797,7 +797,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
       const tabs = this.shadowRoot.querySelector('#tabs');
       tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
     }
-    
+
 
 如果是 `composed: false`（默認值），用戶無法偵聽到影子根之外的事件。
 
@@ -810,7 +810,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
         // won't fire if `tab-select` wasn't created with `composed: true`.
       });
     </script>
-    
+
 
 ### 處理焦點{: #focus}
 
@@ -822,7 +822,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
     <x-focus>
       #shadow-root
         <input type="text" placeholder="Input inside shadow dom">
-    
+
 
 `focus` 事件看起來來自 `<x-focus>`，而不是 `<input>`。
 與此類似，`document.activeElement` 將是 `<x-focus>`。如果影子根使用 `mode:'open'` 創建（請參閱[閉合模式](#closed)），您還可以訪問獲得焦點的外部節點：
@@ -843,7 +843,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
       }
       return a;
     }
-    
+
 
 焦點的另一個選項是 `delegatesFocus: true` 選項，它可以將元素的焦點行爲拓展到影子樹內：
 
@@ -860,14 +860,14 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
         outline: 2px solid red;
       }
     </style>
-    
+
     <x-focus></x-focus>
-    
+
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       function Object() { [native code] }() {
         super(); // always call super() first in the constructor.
-    
+
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `
           <style>
@@ -882,7 +882,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
           </style>
           <div>Clickable Shadow DOM text</div>
           <input type="text" placeholder="Input inside shadow dom">`;
-    
+
         // Know the focused element inside shadow DOM:
         this.addEventListener('focus', function(e) {
           console.log('Active element (inside shadow dom):',
@@ -891,7 +891,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
       }
     });
     </script>
-    
+
 
 **結果**
 
@@ -945,7 +945,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
       contain: content; /* Boom. CSS containment FTW. */
     }
     </style>
-    
+
 
 ###  重置可繼承樣式{: #reset}
 
@@ -964,13 +964,13 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
         color: white;
       }
     </style>
-    
+
     <div>
       <p>I'm outside the element (big/white)</p>
       <my-element>Light DOM content is also affected.</my-element>
       <p>I'm outside the element (big/white)</p>
     </div>
-    
+
     <script>
     const el = document.querySelector('my-element');
     el.attachShadow({mode: 'open'}).innerHTML = `
@@ -1040,13 +1040,13 @@ if (supportsShadowDOM()) {
 
 
     const allCustomElements = [];
-    
+
     function isCustomElement(el) {
       const isAttr = el.getAttribute('is');
       // Check for <super-button> and <button is="super-button">.
       return el.localName.includes('-') || isAttr && isAttr.includes('-');
     }
-    
+
     function findAllCustomElements(nodes) {
       for (let i = 0, el; el = nodes[i]; ++i) {
         if (isCustomElement(el)) {
@@ -1058,9 +1058,9 @@ if (supportsShadowDOM()) {
         }
       }
     }
-    
+
     findAllCustomElements(document.querySelectorAll('*'));
-    
+
 
 {% comment %}
 Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
@@ -1070,7 +1070,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
       const isAttr = el.getAttribute('is');
       return el.localName.includes('-') || isAttr && isAttr.includes('-');
     });
-    
+
 
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
@@ -1112,9 +1112,9 @@ Edge 在考慮中，但[優先級很高](https://developer.microsoft.com/en-us/m
 
 
     const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
-    
 
-    
+
+
 #### Polyfill {: #polyfill}
 
 在瀏覽器提供廣泛支持前，[shadydom](https://github.com/webcomponents/shadydom) 和 [shadycss](https://github.com/webcomponents/shadycss) polyfill 可以爲您提供 v1 功能。Shady DOM 可以模擬 Shadow DOM 的 DOM 作用域，而 shadycss polyfill 則可以模擬原生 API 提供的 CSS 自定義屬性和樣式作用域。

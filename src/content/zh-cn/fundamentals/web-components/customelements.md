@@ -16,7 +16,7 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
 
 ## 简介{: #intro}
 
-注：本文说明新的<a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">自定义元素 v1 规范</a>。如果您有自定义元素的使用经验，则应该了解<a href="https://www.chromestatus.com/features/4642138092470272">随 Chrome 33 提供的 v0 版</a>。这些概念是相同的，只不过 v1 规范的 API 存在一些重要差异。请继续阅读，了解新的内容。或者参阅<a href="#historysupport">历史记录和浏览器支持</a>，了解详细信息。
+Note: 本文说明新的<a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">自定义元素 v1 规范</a>。如果您有自定义元素的使用经验，则应该了解<a href="https://www.chromestatus.com/features/4642138092470272">随 Chrome 33 提供的 v0 版</a>。这些概念是相同的，只不过 v1 规范的 API 存在一些重要差异。请继续阅读，了解新的内容。或者参阅<a href="#historysupport">历史记录和浏览器支持</a>，了解详细信息。
 
 浏览器提供了一个用于实现结构化网络应用的良好工具。该工具称为 HTML。
 您可能已经对它有所了解！它是一种声明式、可移植、受广泛支持且易于使用的工具。HTML 虽然很伟大，但其词汇和可扩展性却相当有限。[HTML 现行标准](https://html.spec.whatwg.org/multipage/){: .external }缺乏自动关联 JS 行为和标记的方法，直到今天，情况才有所改观。
@@ -38,16 +38,16 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
 
     class AppDrawer extends HTMLElement {...}
     window.customElements.define('app-drawer', AppDrawer);
-    
+
     // Or use an anonymous class if you don't want a named constructor in current scope.
     window.customElements.define('app-drawer', class extends HTMLElement {...});
-    
+
 
 示例用法：
 
 
     <app-drawer></app-drawer>
-    
+
 
 需要记住的是，自定义元素与 `<div>` 或任何其他元素的使用没有区别。可以在页面上声明 JavaScript 动态创建的实例，可添加事件侦听器，诸如此类。继续阅读，查看更多示例。
 
@@ -62,12 +62,12 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
 
 
     class AppDrawer extends HTMLElement {
-    
+
       // A getter/setter for an open property.
       get open() {
         return this.hasAttribute('open');
       }
-    
+
       set open(val) {
         // Reflect the value of the open property as an HTML attribute.
         if (val) {
@@ -77,12 +77,12 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
         }
         this.toggleDrawer();
       }
-    
+
       // A getter/setter for a disabled property.
       get disabled() {
         return this.hasAttribute('disabled');
       }
-    
+
       set disabled(val) {
         // Reflect the value of the disabled property as an HTML attribute.
         if (val) {
@@ -91,13 +91,13 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
           this.removeAttribute('disabled');
         }
       }
-    
+
       // Can define constructor arguments if you wish.
       constructor() {
         // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
-    
+
         // Setup a click listener on <app-drawer> itself.
         this.addEventListener('click', e => {
           // Don't toggle the drawer if it's disabled.
@@ -107,14 +107,14 @@ description:自定义元素允许网络开发者定义新的 HTML 标记、扩�
           this.toggleDrawer();
         });
       }
-    
+
       toggleDrawer() {
         ...
       }
     }
-    
+
     customElements.define('app-drawer', AppDrawer);
-    
+
 
 在本例中，我们创建了一个具有`open` 属性、`disabled` 属性和`toggleDrawer()` 方法的抽屉式导航栏。
 它还[以 HTML 属性来反映属性](#reflectattr)。
@@ -145,20 +145,20 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
         super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
-    
+
       toggleDrawer() {
         // Possibly different toggle implementation?
         // Use ES2015 if you need to call the parent method.
         // super.toggleDrawer()
       }
-    
+
       anotherMethod() {
         ...
       }
     }
-    
+
     customElements.define('fancy-app-drawer', FancyDrawer);
-    
+
 
 ### 扩展原生 HTML 元素{: #extendhtml}
 
@@ -184,7 +184,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
         super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
-    
+
       // Material design ripple animation.
       drawRipple(x, y) {
         let div = document.createElement('div');
@@ -197,14 +197,14 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
         div.addEventListener('transitionend', e => div.remove());
       }
     }
-    
+
     customElements.define('fancy-button', FancyButton, {extends: 'button'});
-    
+
 
 扩展原生元素时，对 `define()` 的调用会稍有不同。所需的第三个参数告知浏览器要扩展的标记。这很有必要，因为许多 HTML 标记均使用同一 DOM 接口。例如，`<section>`、`<address>` 和 `<em>`（以及其他）都使用 `HTMLElement`；`<q>` 和 `<blockquote>` 则使用 `HTMLQuoteElement`；等等。指定 `{extends: 'blockquote'}` 可让浏览器知道您创建的是增强的 `<blockquote>` 而不是 `<q>`。有关 HTML DOM 接口的完整列表，请参阅 [HTML 规范](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)。
 
 
-注：扩展 `HTMLButtonElement` 可让我们的花式按钮获得 `<button>` 的所有 DOM 属性/方法。这样，我们无需自己实现即可获得诸多功能：`disabled` 属性、`click()` 方法、`keydown` 侦听器、`tabindex` 管理等。但是，我们可以使用自定义功能（即 `drawRipple()` 方法）来逐渐增补 `<button>`。代码更少，可重用性更高！
+Note: 扩展 `HTMLButtonElement` 可让我们的花式按钮获得 `<button>` 的所有 DOM 属性/方法。这样，我们无需自己实现即可获得诸多功能：`disabled` 属性、`click()` 方法、`keydown` 侦听器、`tabindex` 管理等。但是，我们可以使用自定义功能（即 `drawRipple()` 方法）来逐渐增补 `<button>`。代码更少，可重用性更高！
 
 自定义内置元素的用户有多种方法来使用该元素。他们可以通过在原生标记上添加 `is=""` 属性来声明：
 
@@ -212,7 +212,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
 
     <!-- This <button> is a fancy button. -->
     <button is="fancy-button" disabled>Fancy button!</button>
-    
+
 
 在 JavaScript 中创建实例：
 
@@ -222,7 +222,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
     button.textContent = 'Fancy button!';
     button.disabled = true;
     document.body.appendChild(button);
-    
+
 
 或者使用 `new` 运算符：
 
@@ -230,7 +230,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
     let button = new FancyButton();
     button.textContent = 'Fancy button!';
     button.disabled = true;
-    
+
 
 此处为扩展 `<img>` 的另一个例子。
 
@@ -243,14 +243,14 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
         super(width * 10, height * 10);
       }
     }, {extends: 'img'});
-    
+
 
 用户声明此组件为：
 
 
     <!-- This <img> is a bigger img. -->
     <img is="bigger-img" width="15" height="20">
-    
+
 
 或者在 JavaScript 中创建实例：
 
@@ -259,9 +259,9 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
     const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
-    
 
-注：某些浏览器不推荐使用  <code>is=""</code> 语法。这对可访问性和渐进式增强都不是好消息。如果您认为扩展原生 HTML 元素很有用，请<a href='https://github.com/w3c/webcomponents/issues/662'>在 Github 上</a>发表您的观点。
+
+Note: 某些浏览器不推荐使用  <code>is=""</code> 语法。这对可访问性和渐进式增强都不是好消息。如果您认为扩展原生 HTML 元素很有用，请<a href='https://github.com/w3c/webcomponents/issues/662'>在 Github 上</a>发表您的观点。
 
 ## 自定义元素响应{: #reactions}
 
@@ -290,7 +290,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
     </tr>
     <tr>
       <td><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
-      <td>属性添加、移除、更新或替换。解析器创建元素时，或者<a href="#upgrades">升级</a>时，也会调用它来获取初始值。<b>注：</b>仅  <code>observedAttributes</code> 属性中列出的特性才会收到此回调。</td>
+      <td>属性添加、移除、更新或替换。解析器创建元素时，或者<a href="#upgrades">升级</a>时，也会调用它来获取初始值。<b>Note: </b>仅  <code>observedAttributes</code> 属性中列出的特性才会收到此回调。</td>
     </tr>
     <tr>
       <td><code>adoptedCallback()</code></td>
@@ -325,7 +325,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
         ...
       }
     }
-    
+
 
 必要时应定义响应。如果您的元素足够复杂，并在 `connectedCallback()` 中打开 IndexedDB 的连接，请在 `disconnectedCallback()` 中执行所需清理工作。但必须小心！您不能认为您的元素任何时候都能从 DOM 中正常移除。例如，如果用户关闭了标签，`disconnectedCallback()` 将无法调用。
 
@@ -343,7 +343,7 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
       });
       return p;
     }
-    
+
     // 1. Create two iframes, w1 and w2.
     Promise.all([createWindow(), createWindow()])
       .then(([w1, w2]) => {
@@ -354,11 +354,11 @@ Custom Elements API 对创建新的 HTML 元素很有用，但它也可用于扩
           }
         });
         let a = w1.document.createElement('x-adopt');
-    
+
         // 3. Adopts the custom element into w2 and invokes its adoptedCallback().
         w2.document.body.appendChild(a);
       });
-    
+
 
 ##  属性和特性
 
@@ -370,13 +370,13 @@ HTML 属性通常会将其值以 HTML 特性的形式映射回 DOM。例如，�
 
     div.id = 'my-id';
     div.hidden = true;
-    
+
 
 值将以特性的形式应用于活动 DOM：
 
 
     <div id="my-id" hidden>
-    
+
 
 这称为“[将属性映射为特性](https://html.spec.whatwg.org/multipage/infrastructure.html#reflecting-content-attributes-in-idl-attributes)”。几乎所有的 HTML 属性都会如此。为何？特性也可用于以声明方式配置元素，且无障碍功能和 CSS 选择器等某些 API 依赖于特性工作。
 
@@ -393,7 +393,7 @@ HTML 属性通常会将其值以 HTML 特性的形式映射回 DOM。例如，�
       opacity: 0.5;
       pointer-events: none;
     }
-    
+
 
 `disabled` 属性在 JS 中发生变更时，我们希望该特性能添加到 DOM，以便用户选择器能匹配。
 元素可通过将值映射到具有同一名称的特性上来提供该行为：
@@ -401,11 +401,11 @@ HTML 属性通常会将其值以 HTML 特性的形式映射回 DOM。例如，�
 
 
     ...
-    
+
     get disabled() {
       return this.hasAttribute('disabled');
     }
-    
+
     set disabled(val) {
       // Reflect the value of `disabled` as an attribute.
       if (val) {
@@ -415,7 +415,7 @@ HTML 属性通常会将其值以 HTML 特性的形式映射回 DOM。例如，�
       }
       this.toggleDrawer();
     }
-    
+
 
 ### 保留对属性的更改 {: #attrchanges}
 
@@ -423,7 +423,7 @@ HTML 属性可方便地让用户声明初始状态：
 
 
     <app-drawer open disabled></app-drawer>
-    
+
 
 元素可通过定义 `attributeChangedCallback` 来对属性的更改作出响应。对于 `observedAttributes` 数组中列出的每一属性更改，浏览器都将调用此方法。
 
@@ -431,15 +431,15 @@ HTML 属性可方便地让用户声明初始状态：
 
     class AppDrawer extends HTMLElement {
       ...
-    
+
       static get observedAttributes() {
         return ['disabled', 'open'];
       }
-    
+
       get disabled() {
         return this.hasAttribute('disabled');
       }
-    
+
       set disabled(val) {
         if (val) {
           this.setAttribute('disabled', '');
@@ -447,7 +447,7 @@ HTML 属性可方便地让用户声明初始状态：
           this.removeAttribute('disabled');
         }
       }
-    
+
       // Only called for the disabled and open attributes due to observedAttributes
       attributeChangedCallback(name, oldValue, newValue) {
         // When the drawer is disabled, update keyboard/screen reader behavior.
@@ -461,7 +461,7 @@ HTML 属性可方便地让用户声明初始状态：
         // TODO: also react to the open attribute changing.
       }
     }
-    
+
 
 在示例中，我们在 `<app-drawer>` 属性发生变化时对 `disabled` 设置额外的属性。
 虽然我们这里没有这样做，您也可以**使用 `attributeChangedCallback` 来让 JS 属性与其属性同步**。
@@ -485,7 +485,7 @@ HTML 属性可方便地让用户声明初始状态：
     customElements.whenDefined('app-drawer').then(() => {
       console.log('app-drawer defined');
     });
-    
+
 
 **示例** - 推迟生效时间，直至一组子元素升级
 
@@ -495,23 +495,23 @@ HTML 属性可方便地让用户声明初始状态：
       <social-button type="fb"><a href="...">Facebook</a></social-button>
       <social-button type="plus"><a href="...">G+</a></social-button>
     </share-buttons>
-    
+
 
 
     // Fetch all the children of <share-buttons> that are not defined yet.
     let undefinedButtons = buttons.querySelectorAll(':not(:defined)');
-    
+
     let promises = [...undefinedButtons].map(socialButton => {
       return customElements.whenDefined(socialButton.localName);
     ));
-    
+
     // Wait for all the social-buttons to be upgraded.
     Promise.all(promises).then(() => {
       // All social-button children are ready.
     });
-    
 
-注：我将未定义的自定义元素视为处于中间过渡状态。[规范](https://dom.spec.whatwg.org/#concept-element-custom-element-state)将元素的状态划分为“未定义”、“未自定义”或“自定义”。类似于 `<div>` 的内置元素的状态始终为“已定义”。
+
+Note: 我将未定义的自定义元素视为处于中间过渡状态。[规范](https://dom.spec.whatwg.org/#concept-element-custom-element-state)将元素的状态划分为“未定义”、“未自定义”或“自定义”。类似于 `<div>` 的内置元素的状态始终为“已定义”。
 
 ##  元素定义的内容{: #addingmarkup}
 
@@ -525,7 +525,7 @@ HTML 属性可方便地让用户声明初始状态：
       }
       ...
     });
-    
+
 Declaring this tag will produce:
 
     <x-foo-with-markup>
@@ -565,11 +565,11 @@ if (supportsCustomElementsV1) {
 </script>
 {% endframebox %}
 
-注：以新内容覆盖元素的子项并非一种好的做法，因为这样做会不符合设想。用户会因为标记被舍弃而感到意外。添加元素定义内容的更好做法是使用 shadow DOM，我们接下来将讨论这一主题。
+Note: 以新内容覆盖元素的子项并非一种好的做法，因为这样做会不符合设想。用户会因为标记被舍弃而感到意外。添加元素定义内容的更好做法是使用 shadow DOM，我们接下来将讨论这一主题。
 
 ### 创建使用 Shadow DOM 的元素{: #shadowdom}
 
-注：我不会在本文中说明 [Shadow DOM][sd_spec] 的具体功能，但它的确是一种强大的 API，可与自定义元素结合使用。
+Note: 我不会在本文中说明 [Shadow DOM][sd_spec] 的具体功能，但它的确是一种强大的 API，可与自定义元素结合使用。
 Shadow DOM 本身是一种组合工具。
 它在与自定义元素结合使用时，可产生神奇的效果。
 
@@ -581,7 +581,7 @@ Shadow DOM 提供了一种方法，可让元素以独立于页面其余部分的
 
     <!-- chat-app's implementation details are hidden away in Shadow DOM. -->
     <chat-app></chat-app>
-    
+
 
 要在自定义元素中使用 Shadow DOM，可在 `constructor` 内调用 `this.attachShadow`。
 
@@ -605,7 +605,7 @@ Shadow DOM 提供了一种方法，可让元素以独立于页面其余部分的
     <x-foo-shadowdom>
       <p><b>User's</b> custom text</p>
     </x-foo-shadowdom>
-    
+
     <!-- renders as -->
     <x-foo-shadowdom>
       <b>I'm in shadow dom!</b>
@@ -665,7 +665,7 @@ if (supportsCustomElementsV1) {
       </style>
       <p>I'm in Shadow DOM.My markup was stamped from a &lt;template&gt;.</p>
     </template>
-    
+
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
@@ -678,7 +678,7 @@ if (supportsCustomElementsV1) {
         ...
       });
     </script>
-    
+
 
 这几行代码实现了丰富的功能。让我们了解一些主要方面：
 
@@ -758,13 +758,13 @@ if (supportsCustomElementsV1) {
         margin: 0 7px;
       }
     </style>
-    
+
     <app-drawer>
       <panel-item>Do</panel-item>
       <panel-item>Re</panel-item>
       <panel-item>Mi</panel-item>
     </app-drawer>
-    
+
 
 您可能会问自己，如果元素在 Shadow DOM 中定义了样式，CSS 特异性如何起作用。
 在特异性方面，用户样式优先。它们始终优先于元素定义的样式。
@@ -787,7 +787,7 @@ if (supportsCustomElementsV1) {
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
-    
+
 
 在 `<app-drawer>` 获得定义后，选择器 (`app-drawer:not(:defined)`) 不再匹配。
 
@@ -804,10 +804,10 @@ HTML 使用起来非常宽松和灵活。例如，在页面上声明 `<randomtag
 
     // "tabs" is not a valid custom element name
     document.createElement('tabs') instanceof HTMLUnknownElement === true
-    
+
     // "x-tabs" is a valid custom element name
     document.createElement('x-tabs') instanceof HTMLElement === true
-    
+
 
 ## API 参考
 
@@ -823,7 +823,7 @@ HTML 使用起来非常宽松和灵活。例如，在页面上声明 `<randomtag
     customElements.define('my-app', class extends HTMLElement { ... });
     customElements.define(
       'fancy-button', class extends HTMLButtonElement { ... }, {extends: 'button'});
-    
+
 
 **`get(tagName)`**
 
@@ -835,7 +835,7 @@ HTML 使用起来非常宽松和灵活。例如，在页面上声明 `<randomtag
 
     let Drawer = customElements.get('app-drawer');
     let drawer = new Drawer();
-    
+
 
 **`whenDefined(tagName)`**
 
@@ -849,7 +849,7 @@ HTML 使用起来非常宽松和灵活。例如，在页面上声明 `<randomtag
     customElements.whenDefined('app-drawer').then(() => {
       console.log('ready!');
     });
-    
+
 
 ## 历史记录和浏览器支持 {: #historysupport}
 
@@ -865,11 +865,11 @@ Chrome 54（[状态](https://www.chromestatus.com/features/4696261944934400)）�
 
 
     const supportsCustomElementsV1 = 'customElements' in window;
-    
+
 
 #### Polyfill {: #polyfill}
 
-在浏览器提供广泛支持前，可以暂时使用 [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)。 
+在浏览器提供广泛支持前，可以暂时使用 [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)。
 
 **注**：无法对 `:defined` CSS 伪类执行 polyfill。
 
@@ -889,7 +889,7 @@ Chrome 54（[状态](https://www.chromestatus.com/features/4696261944934400)）�
        document.head.appendChild(script);
      });
     }
-    
+
     // Lazy load the polyfill if necessary.
     if (!supportsCustomElementsV1) {
       loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
@@ -898,7 +898,7 @@ Chrome 54（[状态](https://www.chromestatus.com/features/4696261944934400)）�
     } else {
       // Native support.Good to go.
     }
-    
+
 
 ##  结论
 
