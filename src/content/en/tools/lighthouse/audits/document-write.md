@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids document.write()" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-12-01 #}
 {# wf_blink_components: N/A #}
 
@@ -36,5 +36,6 @@ Note that Chrome's intervention against `document.write()` only applies to
 render-blocking, dynamically-injected scripts. Other uses of `document.write()`
 may be acceptable.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/document-write.html" %}
+{% include "web/_shared/helpful.html" %}

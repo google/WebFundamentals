@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Every Image Element Has An alt Attribute" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-01-23 #}
 {# wf_blink_components: N/A #}
 
@@ -49,5 +49,6 @@ alternate text][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/image-alt
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/alt-attribute.html" %}
+{% include "web/_shared/helpful.html" %}

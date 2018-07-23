@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Browser Errors Were Logged To The Console" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-12-21 #}
 {# wf_blink_components: N/A #}
 
@@ -62,3 +62,7 @@ gracefully.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/errors-in-console.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

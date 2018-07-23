@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Old CSS Flexbox" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_blink_components: N/A #}
 
@@ -54,4 +54,6 @@ them uses `display: box`. Lighthouse does not check if the stylesheets use any
 other deprecated properties.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/old-flexbox.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

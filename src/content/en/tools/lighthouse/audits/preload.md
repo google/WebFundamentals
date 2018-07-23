@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Preload key requests" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-29 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -93,3 +93,7 @@ Sources:
 [Addy]: https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
 [Yoav]: https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preload.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

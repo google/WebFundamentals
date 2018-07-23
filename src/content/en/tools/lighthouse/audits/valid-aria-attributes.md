@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-01-18 #}
 {# wf_blink_components: N/A #}
 
@@ -45,4 +45,6 @@ must conform to valid names][axe] for more information.
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-valid-attr
 
 
-{% include "web/tools/lighthouse/audits/_feedback/valid-aria-attributes.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
