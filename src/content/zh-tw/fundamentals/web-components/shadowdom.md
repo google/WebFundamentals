@@ -162,7 +162,7 @@ Shadow DOM 與普通 DOM 相同，但有兩點區別：1) 創建/使用的方式
     // using an ES6 class. Every instance of <fancy-tab> will have this same prototype.
     customElements.define('fancy-tabs', class extends HTMLElement {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to <fancy-tabs>.
         const shadowRoot = this.attachShadow({mode: 'open'});
@@ -689,7 +689,7 @@ shadow DOM 的另一情況稱爲“閉合”模式。創建閉合影子樹後，
 
         customElements.define('x-element', class extends HTMLElement {
           function Object() { [native code] }() {
-            super(); // always call super() first in the ctor.
+            super(); // always call super() first in the constructor.
             this._shadowRoot = this.attachShadow({mode: 'closed'});
             this._shadowRoot.innerHTML = '<div class="wrapper"></div>';
           }
@@ -866,7 +866,7 @@ shadow DOM API 提供了使用 slot 和分佈式節點的實用程序。
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       function Object() { [native code] }() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
     
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `

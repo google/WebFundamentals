@@ -191,7 +191,7 @@ encapsulando seu DOM/CSS:
     // using an ES6 class. Every instance of <fancy-tab> will have this same prototype.
     customElements.define('fancy-tabs', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to <fancy-tabs>.
         const shadowRoot = this.attachShadow({mode: 'open'});
@@ -728,7 +728,7 @@ totalmente o propósito original do modo fechado.
 
         customElements.define('x-element', class extends HTMLElement {
           constructor() {
-            super(); // always call super() first in the ctor.
+            super(); // always call super() first in the constructor.
             this._shadowRoot = this.attachShadow({mode: 'closed'});
             this._shadowRoot.innerHTML = '<div class="wrapper"></div>';
           }
@@ -911,7 +911,7 @@ além do elemento focado.
     <script>
     customElements.define('x-focus', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
     
         const root = this.attachShadow({mode: 'open', delegatesFocus: true});
         root.innerHTML = `
