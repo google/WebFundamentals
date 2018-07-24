@@ -3,6 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
+{# wf_blink_components: N/A #}
 
 # The Offline Cookbook {: .page-title }
 
@@ -14,8 +15,8 @@ you won the AppCache lottery (the jackpot remains unclaimed), but the rest of
 us were left huddled in a corner
 [rocking back & forth](http://alistapart.com/article/application-cache-is-a-douchebag).
 
-With [ServiceWorker][sw_primer] we gave up trying to solve offline, and 
-gave developers the moving parts to go solve it themselves. It gives you 
+With [ServiceWorker][sw_primer] we gave up trying to solve offline, and
+gave developers the moving parts to go solve it themselves. It gives you
 control over caching and how requests are handled. That means you get to
 create your own patterns. Let's take a look at a few possible patterns in
 isolation, but in practice you'll likely use many of them in tandem
@@ -24,8 +25,8 @@ depending on URL & context.
 All code examples work today in Chrome & Firefox, unless otherwise noted.
 For full details on service worker support, see ["Is Service Worker Ready?"][is_sw_ready].
 
-For a working demo of some of these patterns, see [Trained-to-thrill][ttt], 
-and [this video](https://www.youtube.com/watch?v=px-J9Ghvcx4) 
+For a working demo of some of these patterns, see [Trained-to-thrill][ttt],
+and [this video](https://www.youtube.com/watch?v=px-J9Ghvcx4)
 showing the performance impact.
 
 ## The cache machine - when to store resources
@@ -64,10 +65,10 @@ initial download.
       );
     });
 
-`event.waitUntil` takes a promise to define the length & success of the 
+`event.waitUntil` takes a promise to define the length & success of the
 install. If the promise rejects, the installation is considered a failure
 and this ServiceWorker will be abandoned (if an older version is
-running, it'll be left intact). `caches.open` and `cache.addAll` return 
+running, it'll be left intact). `caches.open` and `cache.addAll` return
 promises. If any of the resources fail to fetch, the `cache.addAll` call
 rejects.
 
@@ -98,8 +99,8 @@ assets for later levels of a game.
       );
     });
 
-We're not passing the `cache.addAll` promise for levels 11-20 back to 
-`event.waitUntil`, so even if it fails, the game will still be available 
+We're not passing the `cache.addAll` promise for levels 11-20 back to
+`event.waitUntil`, so even if it fails, the game will still be available
 offline. Of course, you'll have to cater for the possible absence of those
 levels & reattempt caching them if they're missing.
 
@@ -140,7 +141,7 @@ long activation could potentially block page loads. Keep your activation
 as lean as possible, only use it for things you _couldn't_ do while the old
 version was active.
 
-On [trained-to-thrill][ttt] I use this to 
+On [trained-to-thrill][ttt] I use this to
 [remove old caches](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L17).
 
 ### On user interaction {: #on-user-interaction }
@@ -204,7 +205,7 @@ get rid of items in the cache you don't need any more.
     });
 
 To allow for efficient memory usage, you can only read a response/request's
-body once. In the code above, 
+body once. In the code above,
 [`.clone()`](https://fetch.spec.whatwg.org/#dom-request-clone) is used to
 create additional copies that can be read separately.
 
@@ -409,7 +410,7 @@ pings, non-GET requests.
       // will result in default browser behaviour
     });
 
-…although you don't often need to handle this case specifically, 
+…although you don't often need to handle this case specifically,
 [Cache, falling back to network](#cache-falling-back-to-network) covers it.
 
 ### Cache, falling back to network {: #cache-falling-back-to-network }
@@ -565,7 +566,7 @@ Note: The above doesn't work in Chrome yet, as we've yet to expose `fetch` and `
 
 In [trained-to-thrill][ttt] I worked around this by
 using [XHR instead of fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3),
-and abusing the Accept header to tell the ServiceWorker where to get the 
+and abusing the Accept header to tell the ServiceWorker where to get the
 result from ([page code](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70),
 [ServiceWorker code](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)).
 
@@ -697,6 +698,11 @@ Just look at the request and decide what to do:
 
 …you get the picture.
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 ### Credits {: hide-from-toc }
 …for the lovely icons:

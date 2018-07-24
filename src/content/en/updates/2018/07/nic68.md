@@ -203,6 +203,12 @@ you’ll get an email notification whenever we launch a new video, or add our
 I’m Pete LePage, and as soon as Chrome 69 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}

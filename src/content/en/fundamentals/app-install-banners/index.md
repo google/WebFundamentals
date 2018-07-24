@@ -144,6 +144,12 @@ not appear again until a sufficient amount of time has passed
 regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
 or not.
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 ## Determine if the app was successfully installed {: #appinstalled }
 
 To determine if the app was successfully added to the users home screen _after_

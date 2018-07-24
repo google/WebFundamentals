@@ -245,6 +245,12 @@ but you can provide additional icons as necessary.
 
 <div class="clearfix"></div>
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 ## Test your manifest {: #test }
 
 <figure class="attempt-right">

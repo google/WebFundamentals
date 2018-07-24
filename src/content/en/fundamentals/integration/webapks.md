@@ -137,6 +137,11 @@ worker is installed and ready to go.
 Though, this can be an issue if the user clears their Chrome profile, or chooses
 to delete site data.
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 ## Frequently asked questions
 

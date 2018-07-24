@@ -553,6 +553,12 @@ following HTML is progressively enhanced as desired:
 </virtual-scroller>
 ```
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 ## Credits {: #credits }
 
 Thanks to
