@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
 
 {# wf_updated_on: 2018-07-24 #}
-{# wf_published_on: 2018-07-23 #}
+{# wf_published_on: 2018-07-24 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
