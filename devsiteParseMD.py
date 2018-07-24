@@ -60,7 +60,9 @@ def parse(requestPath, fileLocation, content, lang='en'):
   content = md.convert(content)
 
   # Replaces <pre> tags with prettyprint enabled tags
-  content = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint">', content)
+  content = re.sub(r'^<pre>(?m)', r'<pre class="prettyprint devsite-code-highlight">', content)
+  # Adds code highlighting support, which requires devsite-code-highlight
+  content = re.sub(r'^<pre class="prettyprint">(?m)', r'<pre class="prettyprint devsite-code-highlight">', content)
 
   # Save the content
   context['content'] = content
