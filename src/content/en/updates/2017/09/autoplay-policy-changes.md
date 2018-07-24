@@ -261,6 +261,12 @@ To enable the autoplay policy for Web Audio, launch Chrome with the following
 
 Note: Web Audio FAQs can be found [here].
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 {% include "comment-widget.html" %}
 
 [Policy List]: https://dev.chromium.org/administrators/policy-list-3
