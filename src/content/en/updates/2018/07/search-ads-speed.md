@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Speed is now a landing page factor for Google Search and Ads.
 
-{# wf_updated_on: 2018-07-25 #}
+{# wf_updated_on: 2018-07-24 #}
 {# wf_published_on: 2018-07-25 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -86,7 +86,7 @@ frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 <figcaption class="clearfix align-center">
 <i>
 Watch the keynote to learn about Google's latest ads, analytics, and platforms
-announcements. Speed announcement at [34:30](https://youtu.be/MmfaZV96x7A?t=2055).
+announcements. Speed announcement at 34:30.
 </i>
 </figcaption>
 </figure>
