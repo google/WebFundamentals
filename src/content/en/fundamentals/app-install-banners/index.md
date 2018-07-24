@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2018-07-24 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -196,6 +196,11 @@ use JavaScript to check:
 
 If you change any of the properties in your manifest, those changes will be
 reflected to the user after they've run your app again.
+
+<aside class="note">
+  <b>Tip:</b> Icons may be cached, so it may be helpful to change the
+  filenames when updating icons or other graphics.
+</aside>
 
 
 ## Test your add to home screen experience {: #test }
