@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 68 for developers?
 
 {# wf_published_on: 2018-07-24 #}
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-07-24 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome68,new-in-chrome #}
 {# wf_featured_snippet: Chrome 68 brings changes to the Add to Home Screen behavior on Android, giving you more control. The page lifecycle API tells you when your tab has been suspended or restored. And the Payment Handler API makes it possible for web-based payment apps to support the Payment Request experience. Let’s dive in and see what’s new for developers in Chrome 68! #}
@@ -94,22 +94,24 @@ has the full details, including code samples you can use and more.
 
 ## Page Lifecycle API {: #page-lifecycle }
 
-<a href="/web/updates/images/2018/07/lifecycle-states.png">
-  <img src="/web/updates/images/2018/07/lifecycle-states.png" class="attempt-right">
+<a href="/web/updates/images/2018/07/page-lifecycle-api-state-event-flow.png">
+  <img src="/web/updates/images/2018/07/page-lifecycle-api-state-event-flow.png" class="attempt-right">
 </a>
 
 When a user has a large number of tabs running, critical resources such as
 memory, CPU, battery and the network can be oversubscribed, leading to a
 bad user experience.
 
-If your site is running in the background, the system may suspend the it to
+If your site is running in the background, the system may suspend it to
 conserve resources. With the new Page Lifecycle API, you can now listen for,
 and respond to these events.
 
-For example, if a tab needs to be discarded to conserve memory, the browser
-will fire the `frozen` event, where you can store any necessary state. Then,
-when the user refocuses the tab, the `resume` event is fired, making it
-possible to restore the previous state.
+For example, if a user's had a tab in the background for a while, the browser
+may choose to suspend script execution on that page to conserve resources.
+Before doing so, it will fire the `freeze` event, allowing you to close open
+IndexedDB or network connections or save any unsaved view state. Then, when
+the user refocuses the tab, the `resume` event is fired, where you can
+reinitialize anything that was torn down.
 
 <div class="clearfix"></div>
 
