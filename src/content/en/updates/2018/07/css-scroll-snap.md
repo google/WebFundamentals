@@ -346,10 +346,11 @@ snapping.
 
 <aside>
   <strong>Note:</strong>
-  There is an upcoming proposal to change various scrolling APIs to return a
-  promise. This promise is resolved when user agent either completes or aborts
-  that scrolling operation. Once this is standardized and implemented, it provides
-  an ergonomic and efficient way for following up a user script initiated scroll
+  There is an <a href="https://github.com/w3c/csswg-drafts/issues/1562#issuecomment-389586317">
+  upcoming proposal</a> to change various scrolling APIs to return a promise.
+  This promise is resolved when user agent either completes or aborts that
+  scrolling operation. Once this is standardized and implemented, it provides an
+  ergonomic and efficient way for following up a user script initiated scroll
   with other actions.
 </aside>
 
