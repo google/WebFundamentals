@@ -41,7 +41,8 @@ observer.observe();
 Use the callback to send reports to a backend or analytics provider
 for further analysis.
 
-Caution: `ReportingObserver` shipped in Chrome 69. It is being considered by other browsers.
+`ReportingObserver` has only shipped in Chrome 69. It is being considered by other browsers.
+{: .dogfood }
 
 ## Introduction {: #intro }
 
