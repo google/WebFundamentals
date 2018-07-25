@@ -5,7 +5,7 @@ description: ReportingObserver gives developers insight into what their code is 
 {# wf_updated_on: 2018-07-25 #}
 {# wf_published_on: 2018-07-25 #}
 {# wf_tags: chrome69,reporting-observer,analytics,reports #}
-{# wf_featured_image: /web/updates/images/generic/checklist.png #}
+{# wf_featured_image: /web/updates/images/generic/send.png #}
 {# wf_featured_snippet: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues likes deprecations, interventions, and crashes, messages that were previously only available in the DevTools console. #}
 {# wf_blink_components: Blink>ReportingObserver #}
 
@@ -46,15 +46,16 @@ Caution: `ReportingObserver` shipped in Chrome 69. It is being considered by oth
 ## Introduction {: #intro }
 
 A while back, I wrote a blog post ("[Observing your web app](https://ericbidelman.tumblr.com/post/149032341876/observing-your-web-app)")
-because I found it fascinating how many APIs we have for monitoring stuff
-that happens in a web app. For example, there APIs like `ResizeObserver`,
-`IntersectionObserver`, and `MutationObserver` which can observe information
-about the DOM. `PerformanceObserver` captures performance measurements. Other
+because I found it fascinating how many APIs there are for monitoring the
+"stuff" that happens in a web app. For example, there APIs that can observe
+information about the DOM: `ResizeObserver`,
+`IntersectionObserver`, `MutationObserver`. There are APIs for capturing
+performance measurements: `PerformanceObserver`. Other
 APIs like `window.onerror` and `window.onunhandledrejection` even let us know
-when something has gone wrong.
+when something goes wrong.
 
-However, there are other types of warnings not captured by these existing
-APIs. When your site crashes, uses a deprecated API, or runs up
+However, there are other types of warnings which are not captured by these
+existing APIs. When your site crashes, uses a deprecated API, or runs up
 against a [browser intervention](https://www.chromestatus.com/features#intervention),
 DevTools is first to tell you about them:
 
