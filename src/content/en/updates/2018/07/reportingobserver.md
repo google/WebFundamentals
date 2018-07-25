@@ -24,7 +24,7 @@ figcaption {
 
 #### TL;DR {: #tldr .hide-from-toc }
 
-`ReportingObserver` is a new API that lets you know when a site uses a
+There's a new observer in town! `ReportingObserver` is a new API that lets you know when a site uses a
 deprecated API or runs into a browser intervention. Previously, these messages
 were only available in the DevTools console.
 
