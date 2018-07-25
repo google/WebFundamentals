@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 68 for developers?
 
 {# wf_published_on: 2018-07-24 #}
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-07-25 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome68,new-in-chrome #}
 {# wf_featured_snippet: Chrome 68 brings changes to the Add to Home Screen behavior on Android, giving you more control. The page lifecycle API tells you when your tab has been suspended or restored. And the Payment Handler API makes it possible for web-based payment apps to support the Payment Request experience. Let’s dive in and see what’s new for developers in Chrome 68! #}
@@ -35,7 +35,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..68.0.3440.74).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..68.0.3440.70).
 
 
 ## Add to Home Screen changes {: #a2hs }
