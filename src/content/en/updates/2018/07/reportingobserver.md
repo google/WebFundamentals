@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues likes deprecations, interventions, and crashes, messages that were previously only available in the DevTools console.
+description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 
-{# wf_updated_on: 2018-07-25 #}
-{# wf_published_on: 2018-07-25 #}
+{# wf_updated_on: 2018-07-26 #}
+{# wf_published_on: 2018-07-26 #}
 {# wf_tags: chrome69,reporting-observer,analytics,reports #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
-{# wf_featured_snippet: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues likes deprecations, interventions, and crashes, messages that were previously only available in the DevTools console. #}
+{# wf_featured_snippet: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console. #}
 {# wf_blink_components: Blink>ReportingObserver #}
 
 # ReportingObserver: know your code health {: .page-title }
@@ -24,9 +24,9 @@ figcaption {
 
 #### TL;DR {: #tldr .hide-from-toc }
 
-There's a new observer in town! `ReportingObserver` is a new API that lets you know when a site uses a
-deprecated API or runs into a browser intervention. Previously, these messages
-were only available in the DevTools console.
+There's a new observer in town! `ReportingObserver` is a new API that lets you
+know when your site uses a deprecated API or runs into a
+[browser intervention][interventions]:
 
 ```js
 const observer = new ReportingObserver((reports, observer) => {
@@ -38,17 +38,26 @@ const observer = new ReportingObserver((reports, observer) => {
 observer.observe();
 ```
 
-Use the callback to send reports to a backend or analytics provider
+The callback can be used to send reports to a backend or analytics provider
 for further analysis.
 
-`ReportingObserver` has only shipped in Chrome 69. It is being considered by other browsers.
+Why is that useful? Until now, deprecation and
+intervention warnings were only available in the DevTools as console messages.
+Interventions in particular are only triggered by various real-world constraints
+like device and network conditions. Thus, you may never even see these messages
+when developing/testing a site locally. `ReportingObserver` provides
+the solution to this problem. When users experience potential issues in the wild,
+we can be notified about them.
+
+`ReportingObserver` has only shipped in Chrome 69. It is being considered by
+other browsers.
 {: .dogfood }
 
 ## Introduction {: #intro }
 
 A while back, I wrote a blog post ("[Observing your web app](https://ericbidelman.tumblr.com/post/149032341876/observing-your-web-app)")
 because I found it fascinating how many APIs there are for monitoring the
-"stuff" that happens in a web app. For example, there APIs that can observe
+"stuff" that happens in a web app. For example, there are APIs that can observe
 information about the DOM: `ResizeObserver`,
 `IntersectionObserver`, `MutationObserver`. There are APIs for capturing
 performance measurements: `PerformanceObserver`. Other
@@ -56,9 +65,9 @@ APIs like `window.onerror` and `window.onunhandledrejection` even let us know
 when something goes wrong.
 
 However, there are other types of warnings which are not captured by these
-existing APIs. When your site crashes, uses a deprecated API, or runs up
-against a [browser intervention](https://www.chromestatus.com/features#intervention),
-DevTools is first to tell you about them:
+existing APIs. When your site uses a deprecated API or runs up
+against a [browser intervention][interventions], DevTools is first to tell you
+about them:
 
 <figure>
   <img src="/web/updates/images/2018/07/reporting/consolewarnings.png"
@@ -186,8 +195,7 @@ In the future, my hope is that `ReportingObserver` becomes the de-facto API
 for catching all types of issues in JS. Imagine one API to catch everything
 that goes wrong in your app:
 
-- Browser interventions
-- Browser crashes
+- [Browser interventions][interventions]
 - Deprecations
 - CSP policy violations (currently serviced by the `securitypolicyviolation` event)
 - [Feature Policy][featurepolicy] violations
@@ -226,3 +234,4 @@ for its well structured deprecation reports and additional metadata like
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
 [chromestatus]: https://www.chromestatus.com/feature/4691191559880704
 [featurepolicy]: /web/updates/2018/06/feature-policy
+[interventions]: https://www.chromestatus.com/features#intervention
