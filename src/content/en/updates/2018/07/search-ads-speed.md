@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Speed is now a landing page factor for Google Search and Ads.
 
-{# wf_updated_on: 2018-07-25 #}
+{# wf_updated_on: 2018-07-26 #}
 {# wf_published_on: 2018-07-25 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -131,7 +131,11 @@ hands-on overview.
 Tools infographic">
 </a>
 
-...or try [AMP](https://www.ampproject.org/).
+Looking for tools and tips on which tools and metrics to use, or how to
+evaluate and make a business case for performance? Check out our
+[How to Think about Speed Tools](/web/fundamentals/performance/speed-tools/)
+guide for a hands-on overview. Or, if you're looking for a fast-by-default
+framework for you pages, take a look at [AMP](https://www.ampproject.org/).
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
