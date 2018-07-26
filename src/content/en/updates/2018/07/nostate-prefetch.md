@@ -15,8 +15,8 @@ description: Chrome 63 shipped with NoState Prefetch. NoState Prefetch is a mech
 
 ## Intro {: #intro }
 
-NoState Prefetch is a new mechanism in Chrome that is an alternative to the deprecated 
-prerendering process. Like prerendering, it fetches resources in advance; but unlike prerendering 
+NoState Prefetch is a new mechanism in Chrome that is an alternative to the [deprecated 
+prerendering process](https://groups.google.com/a/chromium.org/forum/m/#!msg/Blink-dev/0nSxuuv9bBw/l0pN2tUjCQAJ), used to power features like `<link rel="prerender">`. Like prerendering, it fetches resources in advance; but unlike prerendering 
 it does not execute JavaScript or render any part of the page in advance. The goal of NoState 
 Prefetch is to use less memory than prerendering, while still reducing page load times.
 
@@ -24,7 +24,7 @@ NoState Prefetch is not an API but rather a mechanism used by Chrome to implemen
 and features. The [Resource Hints API](https://www.w3.org/TR/resource-hints/), as well as the 
 prefetching of pages by the Chrome address bar, are both 
 implemented using NoState Prefetch. If you’re using Chrome 63 or later, your browser is already 
-using NoState Prefetch.
+using NoState Prefetch for features like `<link rel="prerender">`.
 
 This article explains how NoStatePrefetch works, the motivations for introducing it, and 
 instructions for using Chrome's histograms to view stats about its usage.
