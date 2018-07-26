@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Speed is now a landing page factor for Google Search and Ads.
 
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-07-25 #}
 {# wf_published_on: 2018-07-25 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -130,6 +130,8 @@ hands-on overview.
 <img src="/web/updates/images/2018/07/infographic-speed-tools.jpg" alt="Speed
 Tools infographic">
 </a>
+
+...or try [AMP](https://www.ampproject.org/).
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
