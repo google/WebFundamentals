@@ -54,7 +54,7 @@ function test(filename, contents, options) {
    * Simple wrapper that adds an error to the list
    *
    * @param {string} message The message to add.
-   * @param {object} position The line number the error occured on.
+   * @param {object} position The line number the error occurred on.
    */
   function logError(message, position) {
     results.push({
