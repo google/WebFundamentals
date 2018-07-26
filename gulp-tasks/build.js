@@ -353,11 +353,17 @@ gulp.task('build:updates', function() {
   // Build updates widget for /web/index
   const template = path.join(
     global.WF.src.templates, 'landing-page', 'latest-updates.html');
-  const context = {articles: files.splice(0, 4)};
+  // Create a new array so we don't mutate the existing array;
+  const articles = [];
+  for (let i = 0; i < 4; i++) {
+    articles.push(files[i]);
+  }
+  const context = {articles};
   const outFile = path.join(
     global.WF.src.content, '_index-latest-updates.html');
   wfTemplateHelper.renderTemplate(template, context, outFile);
 
+  // Generate the RSS/ATOM feeds for each year
   options = {
     title: 'Updates',
     description: description,
