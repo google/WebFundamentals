@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 
-{# wf_updated_on: 2018-07-26 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-07-26 #}
 {# wf_tags: chrome69,reporting-observer,analytics,reports #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
@@ -82,9 +82,10 @@ generated directly by the user agent itself. It fires for runtime errors
 (JS exceptions and syntax errors) caused by executing your code.
 
 `ReportingObserver` picks up the slack. It provides a programmatic way to be
-notified about browser-issued warnings such as deprecations and interventions.
-You can use it as a reporting tool—lose less sleep wondering if users are
-hitting unexpected issues on your site.
+notified about browser-issued warnings such as [deprecations][deprecations]
+and [interventions][interventions]. You can use it as a reporting tool and
+lose less sleep wondering if users are hitting unexpected issues on your live
+site.
 
 `ReportingObserver` is part of a larger spec, the [Reporting API][spec],
 which provides a common way to send these different reports to a backend.
@@ -235,3 +236,4 @@ for its well structured deprecation reports and additional metadata like
 [chromestatus]: https://www.chromestatus.com/feature/4691191559880704
 [featurepolicy]: /web/updates/2018/06/feature-policy
 [interventions]: https://www.chromestatus.com/features#intervention
+[deprecations]: https://www.chromestatus.com/features#intervention
