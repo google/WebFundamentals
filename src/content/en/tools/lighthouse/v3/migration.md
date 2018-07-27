@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How to migrate from Lighthouse v2 to v3.
 
-{# wf_updated_on: 2018-05-08 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
@@ -218,3 +218,7 @@ lists all the changes.
     </td>
   </tr>
 </table>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

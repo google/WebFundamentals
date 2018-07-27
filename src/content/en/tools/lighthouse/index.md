@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -278,3 +278,7 @@ The issues tracker is also a good place to discuss audit metrics, ideas for
 new audits, or anything else related to Lighthouse.
 
 [example]: https://github.com/justinribeiro/lighthouse-mocha-example/blob/master/test/lighthouse-tests.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
