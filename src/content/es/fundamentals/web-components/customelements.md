@@ -97,7 +97,7 @@ Básicamente, usa la clase a fin de crear una **JavaScript API pública** para t
     
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
     
@@ -145,7 +145,7 @@ La extensión de otro elemento personalizado se realiza mediante la extensión d
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
     
@@ -184,7 +184,7 @@ elemento que extiende `<img>` debe extender `HTMLImageElement`.
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
     
@@ -259,7 +259,7 @@ También pueden crear una instancia en JavaScript:
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
     
@@ -317,7 +317,7 @@ del DOM (p. ej., el usuario llama a `el.remove()`).
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -592,7 +592,7 @@ Para usar Shadow DOM en un elemento personalizado, llama a `this.attachShadow` d
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -642,7 +642,7 @@ const supportsCustomElementsV1 = 'customElements' in window;
 if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     constructor() {
-      super(); // always call super() first in the ctor.
+      super(); // always call super() first in the constructor.
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <b>I'm in shadow dom!</b>
@@ -674,7 +674,7 @@ Para aquellos que no lo conozcan, el [elemento `<template>`](https://html.spec.w
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);

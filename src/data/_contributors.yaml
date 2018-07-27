@@ -709,6 +709,19 @@ ilmariheikkinen:
   role:
     - author
 
+katiehempenius:
+  name:
+    given: Katie
+    family: Hempenius
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  twitter: katiehempenius
+  email: khempenius@google.com
+
 patrickhulce:
   name:
     given: Patrick

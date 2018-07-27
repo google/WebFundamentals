@@ -156,8 +156,8 @@ autoplay.
 
 It is possible to change this new autoplay behaviour with Chrome enterprise
 policies for use cases such as kiosks or unattended systems. Check out the
-[Configure policies and settings] help page to learn how to set these new
-autoplay related enterprise policies:
+[Policy List] help page to learn how to set these new autoplay related
+enterprise policies:
 
 - The ["AutoplayAllowed"] policy controls whether autoplay is allowed or not.
 - The ["AutoplayWhitelist"] policy allows you to specify a whitelist of URL
@@ -261,9 +261,15 @@ To enable the autoplay policy for Web Audio, launch Chrome with the following
 
 Note: Web Audio FAQs can be found [here].
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 {% include "comment-widget.html" %}
 
-[Configure policies and settings]: https://support.google.com/chrome/a/topic/4386995
+[Policy List]: https://dev.chromium.org/administrators/policy-list-3
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/

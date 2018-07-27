@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Application Cache" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-01-04 #}
 {# wf_blink_components: N/A #}
 
@@ -35,5 +35,6 @@ offline.
 
 The audit passes if no AppCache manifest is detected.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/appcache.html" %}
+{% include "web/_shared/helpful.html" %}

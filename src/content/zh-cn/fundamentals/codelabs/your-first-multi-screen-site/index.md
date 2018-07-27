@@ -7,7 +7,7 @@ description:人们使用从小屏手机到大屏电视的各类设备访问网�
 
 # 您的第一个多设备网站 {: .page-title }
 
-注意：本文已有一段时间未更新，可能无法体现真实性。请参阅 Udacity 上免费的[自适应网页设计](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)课程。
+Note: 本文已有一段时间未更新，可能无法体现真实性。请参阅 Udacity 上免费的[自适应网页设计](https://www.udacity.com/course/responsive-web-design-fundamentals--ud893)课程。
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -87,7 +87,7 @@ description:人们使用从小屏手机到大屏电视的各类设备访问网�
 
 网站的基本结构已经完整。我们也清楚所需部分、需要在这些部分显示的内容以及这些部分在整体信息架构中的定位。现在我们可以开始扩建网站了。
 
-注：我们会稍后添加样式
+Note: 我们会稍后添加样式
 
 ### 创建标题和表单
 
@@ -330,7 +330,7 @@ Chris Wilson、Peter Lubbers 和 Sean Bennet。
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 我们选择了一幅模糊的简单背景图片，这样内容就不至于被喧宾夺主，并且我们将它设置为 `cover` 整个元素；这样一来，它就能在拉伸时始终保持正确的纵横比。
 
@@ -354,13 +354,13 @@ Chris Wilson、Peter Lubbers 和 Sean Bennet。
 600px 看起来适合创建我们的第一个断点，因为它可以为我们提供作用域来调整元素位置，使它们更好地适应屏幕。我们可以利用一项称作[媒体查询](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)的技术来实现这一点。
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 更大的屏幕具有更多的空间，内容的显示方式也就更灵活。
 
 
-注：您不必一次性移动所有元素，可以根据需要做微小调整。
+Note: 您不必一次性移动所有元素，可以根据需要做微小调整。
 
 就我们的产品页面而言，我们需要做的似乎是：
 
@@ -503,7 +503,7 @@ Chris Wilson、Peter Lubbers 和 Sean Bennet。
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 #### 表格
 
@@ -545,7 +545,7 @@ Chris Wilson、Peter Lubbers 和 Sean Bennet。
 
 ## 总结
 
-成功：在您读到这里时，您已经创建了自己的第一个简单的产品着陆页，这个页面能够在各类设备、机型和屏幕尺寸上正常工作。
+Success: 在您读到这里时，您已经创建了自己的第一个简单的产品着陆页，这个页面能够在各类设备、机型和屏幕尺寸上正常工作。
 
 
 

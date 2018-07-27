@@ -59,7 +59,7 @@ function test(filename, contents, options) {
    * Simple wrapper that adds an error to the list
    *
    * @param {string} message The message to add.
-   * @param {object} position The line number the error occured on.
+   * @param {object} position The line number the error occurred on.
    */
   function logError(message, position) {
     results.push({
@@ -236,14 +236,16 @@ function test(filename, contents, options) {
     logError(msg, position);
   });
 
-  // Warn on unescaped template tags
-  if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
-    matches = wfRegEx.getMatches(/\{\{/g, contents);
-    matches.forEach(function(match) {
-      const position = {line: getLineNumber(contents, match.index)};
-      const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
-      logError(msg, position);
-    });
+  // Error on unescaped template tags
+  if (!options.ignoreTemplateTags) {
+    if (!wfRegEx.RE_USES_TEMPLATE.test(contents)) {
+      matches = wfRegEx.getMatches(/\{\{/g, contents);
+      matches.forEach(function(match) {
+        const position = {line: getLineNumber(contents, match.index)};
+        const msg = `Template tags ('{{'') should be escaped to '&#123;&#123;'`;
+        logError(msg, position);
+      });
+    }
   }
 
   // Error on script blocks in markdown

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-18 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -101,7 +101,7 @@ spectrum of immersive experiences. It's available in the previously mentioned
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
 **Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities are
-expected in Chorme 69 so I hope to tell you about them soon.
+expected in Chrome 69 so I hope to tell you about them soon.
 
 There's more to this new API than I can go to in an article like this. I want
 to give you enough to start making sense of the [WebXR
@@ -129,7 +129,7 @@ The basic process is this:
 
 1. Request an XR device.
 1. If it's available, request an XR session. If you want the user to put their
-phone in a headset, it's called an exclusive session and requires a user
+phone in a headset, it's called an immersive session and requires a user
 gesture to enter.
 1. Use the session to run a render loop which provides 60 image frames per
 second. Draw appropriate content to the screen in each frame.
@@ -145,9 +145,9 @@ give a sense of it.
 Here, you'll recognize the standard feature detection code. You could wrap this
 in a function called something like `checkForXR()`.
 
-If you're not using an exclusive session you can skip advertising the
+If you're not using an immersive session you can skip advertising the
 functionality and getting a user gesture and go straight to requesting a
-session. An exclusive session is one that requires a headset. A non-exclusive
+session. An immersive session is one that requires a headset. A non-immersive
 session simply shows content on the device screen. The former is what most
 people think of when you refer to virtual reality or augmented reality. The
 latter is sometimes called a 'magic window'.
@@ -185,9 +185,9 @@ To create a session, the browser needs a canvas on which to draw.
 
     xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
     let sessionOptions = {
-      // The exclusive option is optional for non-exclusive sessions; the value
+      // The immersive option is optional for non-immersive sessions; the value
       //   defaults to false.
-      exclusive: false,
+      immersive: false,
       outputContext: xrPresentationContext
     }
     xrDevice.requestSession(sessionOptions)
@@ -229,11 +229,10 @@ the view stay the same when the user moves or does it shift as it would in real
 life?)
 
 The second type of frame is the _presentation frame_, represented by an
-`XRPresentationFrame` object. This object contains the information needed to
+`XRFrame` object. This object contains the information needed to
 render a single frame of an AR/VR scene to the device. This is a bit confusing
 because a presentation frame is retrieved by calling `requestAnimationFrame()`.
-This makes it compatible with `window.requestAnimationFrame()` which comes in
-useful when ending an XR session. More about that later.
+This makes it compatible with `window.requestAnimationFrame()`.
 
 Before I give you any more to digest, I'll offer some code. The sample below
 shows how the render loop is started and maintained. Notice the dual use of the
@@ -242,10 +241,10 @@ function will be called 60 times a second.
 
     xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
         // Process the frame.
-        xrPresFrame.session.requestAnimationFrame(onFrame);
+        xrFrame.session.requestAnimationFrame(onFrame);
       }
     });
 
@@ -257,11 +256,11 @@ and orientation of a thing in AR/VR is called a pose. Both viewers and input
 devices have a pose. (I cover input devices later.) Both viewer and input
 device poses are defined as a 4 by 4 matrix stored in a `Float32Array` in column
 major order. You get the viewer's pose by calling
-`XRPresentationFrame.getDevicePose()` on the current animation frame object.
+`XRFrame.getDevicePose()` on the current animation frame object.
 Always test to see if you got a pose back. If something went wrong you don't
 want to draw to the screen.
 
-    let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+    let pose = xrFrame.getDevicePose(xrFrameOfRef);
     if (pose) {
       // Draw something to the screen.
     }
@@ -270,11 +269,11 @@ want to draw to the screen.
 
 After checking the pose, it's time to draw something. The object you draw to is
 called a view (`XRView`). This is where the session type becomes important. Views
-are retrieved from the `XRPresentationFrame` object as an array. If you're in a
-non-exclusive session the array has one view. If you're in an exclusive
+are retrieved from the `XRFrame` object as an array. If you're in a
+non-immersive session the array has one view. If you're in an immersive
 session, the array has two, one for each eye.
 
-    for (let view of xrPresFrame.views) {
+    for (let view of xrFrame.views) {
       // Draw something to the screen.
     }
 
@@ -289,11 +288,11 @@ the input devices, which I'll cover in a later section.
 
     xrSession.requestFrameOfReference('eye-level')
     .then(xrFrameOfRef => {
-      xrSession.requestAnimationFrame(onFrame(time, xrPresFrame) {
+      xrSession.requestAnimationFrame(onFrame(time, xrFrame) {
         // The time argument is for future use and not implemented at this time.
-        let pose = xrPresFrame.getDevicePose(xrFrameOfRef);
+        let pose = xrFrame.getDevicePose(xrFrameOfRef);
         if (pose) {
-          for (let view of xrPresFrame.views) {
+          for (let view of xrFrame.views) {
             // Draw something to the screen.
           }
         }
@@ -317,7 +316,7 @@ resumed.
       xrSession.addEventListener('end', onSessionEnd);
     });
 
-    // Restore the page to normal after exclusive access has been released.
+    // Restore the page to normal after immersive access has been released.
     function onSessionEnd() {
       xrSession = null;
 

@@ -57,7 +57,7 @@
   caseSensitive: True
 
 - typo: m[\d]{2,}
-  fix: $1
+  fix: Chrome XX
   description: "Do not use 'M' or 'milestone'"
   caseSensitive: True
 
@@ -546,7 +546,7 @@
 
 # Call-outs
 
-- typo: '(注意|노트)[：:]'
+- typo: '(注|注意|노트)[：:]'
   fix: 'Note:'
   description: Call-outs like 'Note:' should not be translated.
 
@@ -554,7 +554,7 @@
   fix: 'Caution:'
   description: Call-outs like 'Caution:' should not be translated.
 
-- typo: '(警告|경고)[：:]'
+- typo: '(경고)[：:]'
   fix: 'Warning:'
   description: Call-outs like 'Warning:' should not be translated.
 

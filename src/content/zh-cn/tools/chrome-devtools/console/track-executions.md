@@ -38,7 +38,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
         array[i] = new Object();
     };
     console.timeEnd("Array initialize");
-    
+
 
 将在控制台中输出下列结果：
 ![经过的时间](images/track-executions-time-duration.png)
@@ -53,12 +53,12 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
 
 ### 标记 Timeline
 
-*注：`timeStamp()` 方法只能在某个 Timeline 记录正在进行时发挥作用。*
+*Note: `timeStamp()` 方法只能在某个 Timeline 记录正在进行时发挥作用。*
 
 [Timeline 面板](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)可以提供引擎时间消耗的完整概览。您可以使用 [`timeStamp()`](./console-reference#consoletimestamplabel) 从控制台向 Timeline 添加一个标记。
 这是一种将您应用中的事件与其他事件进行关联的简单方式。
 
-`timeStamp()` 会在以下地方对 Timeline 进行标注：
+`timeStamp()` 会在以下地方对 Timeline 进行标Note:
 
 - Timeline 汇总和详细信息视图中的黄色垂直线。
 - 会向事件列表添加一条记录。
@@ -72,7 +72,7 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
         var results = document.getElementById("results");
         results.innerHTML += (text + "<br>");
     }
-    
+
 
 将生成下面的 Timeline 时间戳：
 
@@ -88,19 +88,19 @@ description:利用 Console API 测量执行时间和对语句执行进行计数�
     function login(user) {
         console.count("Login called for user " + user);
     }
-    
+
     users = [ // by last name since we have too many Pauls.
         'Irish',
         'Bakaus',
         'Kinlan'
     ];
-    
+
     users.forEach(function(element, index, array) {
         login(element);
     });
-    
+
     login(users[0]);
-    
+
 
 代码示例的输出：
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-05-22 #}
+{# wf_updated_on: 2018-07-24 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -863,7 +863,7 @@ an error dialog to the user if you call with `complete('fail')` .
 ### Edge Cases
 
 **Completing with a Diff String**
-One possible gotcha with the `complete()`` method is that if you pass in a string
+One possible gotcha with the `complete()` method is that if you pass in a string
 that is not defined by the spec (i.e., the string is not 'unknown', 'success,'
 or 'fail'), the promise returned by complete() will reject and the
 payment request UI **will not close** ([this behavior will hopefully change
@@ -1664,7 +1664,7 @@ const paymentRequest = new PaymentRequest(
 const canMakePaymentPromise = Promise.resolve(true);
 
 // Feature detect canMakePayment()
-if (request.canMakePayment) {
+if (paymentRequest.canMakePayment) {
   canMakePaymentPromise = paymentRequest.canMakePayment();
 }
 

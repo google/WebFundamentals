@@ -142,28 +142,28 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
 
     function createLargeClosure() {
       var largeStr = new Array(1000000).join('x');
-    
+
       var lC = function() { // this is NOT a named function
         return largeStr;
       };
-    
+
       return lC;
     }
-    
+
 
 而下面的示例則使用了已命名的函數：
 
 
     function createLargeClosure() {
       var largeStr = new Array(1000000).join('x');
-    
+
       var lC = function lC() { // this IS a named function
         return largeStr;
       };
-    
+
       return lC;
     }
-    
+
 
 ![爲函數命名以區分閉包](imgs/domleaks.png)
 
@@ -181,7 +181,7 @@ Containment 視圖基本上是您應用的對象結構的“俯瞰視圖”。�
 
 
 
-<p class="note"><strong>注：</strong>在 Chrome Canary 中，可以通過轉到 Settings > Show advanced heap snapshot properties 然後重啓 DevTools 的方式啓用 Dominators 視圖。</p>
+<p class="note"><strong>Note: </strong>在 Chrome Canary 中，可以通過轉到 Settings > Show advanced heap snapshot properties 然後重啓 DevTools 的方式啓用 Dominators 視圖。</p>
 
 ![Dominators 視圖](imgs/dominators-view.png)
 
@@ -221,18 +221,18 @@ DOM 泄漏可能比您想象的要大。思考下面的示例 - 什麼時候發�
       var treeRef = select("#tree");
       var leafRef = select("#leaf");
       var body = select("body");
-    
+
       body.removeChild(treeRef);
-    
+
       //#tree can't be GC yet due to treeRef
       treeRef = null;
-    
+
       //#tree can't be GC yet due to indirect
       //reference from leafRef
-    
+
       leafRef = null;
       //#NOW can be #tree GC
-    
+
 
 `#leaf` 可以維持對其父級 (parentNode) 的引用，並以遞歸方式返回 `#tree`，因此，只有 leafRef 被作廢後，`#tree` 下的整個樹纔會成爲 GC 的候選。
 

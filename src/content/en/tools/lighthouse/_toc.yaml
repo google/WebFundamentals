@@ -16,6 +16,8 @@ toc:
     path: /web/tools/lighthouse/audits/consistently-interactive
   - title: Critical Request Chains
     path: /web/tools/lighthouse/audits/critical-request-chains
+  - title: Defer unused CSS
+    path: /web/tools/lighthouse/audits/unused-css
   - title: Enable Text Compression
     path: /web/tools/lighthouse/audits/text-compression
   - title: Estimated Input Latency
@@ -102,8 +104,6 @@ toc:
     path: /web/tools/lighthouse/audits/https
 - title: Accessibility
   section:
-  - title: Background and Foreground Colors Have Sufficient Contrast Ratio
-    path: /web/tools/lighthouse/audits/contrast-ratio
   - title: Buttons Have An Accessible Name
     path: /web/tools/lighthouse/audits/button-name
   - title: Document Doesn't Have A Title Element

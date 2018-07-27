@@ -15,7 +15,7 @@ Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 * Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
 * Firefox Nightly。
-* Samsung Internet Browser for Gear VR。（請注意：此瀏覽器目前支持一個較早版本的 WebVR 規範）。
+* Samsung Internet Browser for Gear VR。（請Note: 此瀏覽器目前支持一個較早版本的 WebVR 規範）。
 
 <iframe width="100%" height="320" src="https://www.chromestatus.com/feature/4532810371039232?embed" style="border: 1px solid #CCC" allowfullscreen>
 </iframe>

@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-06-27 #}
 {# wf_published_on: 2017-10-23 #}
 {# wf_blink_components: N/A #}
 
@@ -111,7 +111,7 @@ bandwidth values based on real user measurement observations.”
 #### Device Type {: #device-type }
 
 Coarse device classification (“phone”, “tablet”, or “desktop”), as 
-[communicated via User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#Mobile_Tablet_or_Desktop).
+[communicated via User-Agent](https://developer.chrome.com/multidevice/user-agent).
 
 #### Country
 

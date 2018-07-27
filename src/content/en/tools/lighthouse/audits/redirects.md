@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Has multiple page redirects" Lighthouse audit.
 
-{# wf_updated_on: 2018-04-02 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-04-02 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -49,3 +49,7 @@ Sources:
 
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/redirects.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

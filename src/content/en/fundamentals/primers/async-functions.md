@@ -338,3 +338,9 @@ sure that function will *always* return a promise.
 I got really excited about async functions [back in
 2014](https://jakearchibald.com/2014/es7-async-functions/){: .external}, and
 it's great to see them land, for real, in browsers. Whoop!
+
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>

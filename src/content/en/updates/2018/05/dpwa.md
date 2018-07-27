@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're fast. Feel integrated because they launched in the same way as other apps, and run in an app window, without an address bar or tabs. They're reliable because service workers can cache all of the assets they need to run. And they create an engaging experience for users.
 
-{# wf_updated_on: 2018-05-09 #}
+{# wf_updated_on: 2018-07-17 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: progressive-web-apps,desktop,responsive,chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -15,15 +15,19 @@ description: Desktop progressive web apps can be 'installed' on the users device
 
 <div class="clearfix"></div>
 
-Dogfood: Support for Desktop Progressive Web Apps is supported on Chrome OS
-67, which is currently the beta branch. Work is already under way to support
-Mac and Windows.
+Success: Support for Desktop Progressive Web Apps is supported on Chrome OS
+67, which was released in May, 2018.
+
+<div class="clearfix"></div>
+
+Dogfood: Work is currently under way to support Mac and Windows. You can test
+support by enabling the `#enable-desktop-pwas` flag.
 
 <div class="clearfix"></div>
 
 ![Spotify's desktop progressive web app](/web/updates/images/2018/05/spotify-screenshot.jpg){: .attempt-right }
 
-Desktop progressive web apps can be 'installed' on the users device much like
+Desktop progressive web apps can be 'installed' on the user's device much like
 native apps. They're **fast**. Feel **integrated** because they launched in
 the same way as other apps, and run in an app window, without an address bar
 or tabs. They're **reliable** because service workers can cache all of the
@@ -61,11 +65,6 @@ like other apps on the desktop.
 <div class="clearfix"></div>
 
 ## Getting started {: #getting-started }
-
-Dogfood: Desktop Progressive Web App support is available on Chrome OS 67
-(currently beta), but work is underway to support Mac and Windows. To
-experiment with desktop progressive web apps in Chrome on on other operating
-systems, enable the `#enable-desktop-pwas` flag.
 
 Getting started isn't any different than what you're already doing today;
 it's not like this is a whole new class of apps. All of the work you've done

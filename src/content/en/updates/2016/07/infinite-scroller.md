@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Infinite scrollers are a common UI pattern. Here we explore how to implement this pattern in a memory conservative way that performs at 60fps.
 
-{# wf_updated_on: 2017-11-07 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2016-07-01 #}
 {# wf_blink_components: Blink>Scroll #}
 {# wf_tags: javascript,css #}
@@ -325,8 +325,8 @@ data. However, IntersectionObservers are specified to be high latency (as if
 using `requestIdleCallback`), so we might actually *feel* less responsive with
 IntersectionObservers than without. Even our current implementation using the
 `scroll` event suffers from this problem, as scroll events are dispatched on a
-“best effort” basis. Eventually, [Houdini’s Compositor Worklet][Compositor
-Worklet] would be the high fidelity solution to this problem.
+“best effort” basis. Eventually, [Houdini’s Compositor Worklet][Compositor Worklet]
+would be the high fidelity solution to this problem.
 
 ## It’s still not perfect
 

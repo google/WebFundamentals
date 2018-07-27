@@ -4,6 +4,7 @@
     "vertical": [
       "Agency",
       "Education",
+      "News",
       "Other",
       "Social"
     ],
@@ -352,6 +353,48 @@
           "geo": {
             "lat": 19.0759837,
             "lng": 72.8776559
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Mediology Software (Readwhere CMS)",
+      "region": [
+        "Asia"
+      ],
+      "description": "Readwhere CMS aim to be a Complete Mobile Solution, powering the enterprise needs of publishers by delivering PWA, AMP and Native Apps, through one platform. Our mobile first CMS will increase user engagement and enhance monetisation on Mobile.",
+      "website": "http://mobi.readwhere.com/",
+      "projects": [
+        {
+          "url": "https://mobi.uttamhindu.com/",
+          "client_name": "",
+          "vertical": [
+            "News"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "mobile@readwhere.com",
+      "image_url": "/web/agencies/images/mediology_software_readwhere_cms.png",
+      "vertical": [
+        "News"
+      ],
+      "locations_view": [
+        {
+          "country_name": "India",
+          "cities": [
+            "Delhi"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Delhi",
+          "geo": {
+            "lat": 28.7040592,
+            "lng": 77.10249019999999
           }
         }
       ]

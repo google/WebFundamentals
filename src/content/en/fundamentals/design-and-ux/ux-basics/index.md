@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A step-by-step guide to the basics of UX design.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-21 #}
 {# wf_published_on: 2016-10-01 #}
+{# wf_blink_components: N/A #}
 
 # Basics of UX {: .page-title }
 
@@ -25,7 +26,7 @@ This flow work is based on what we in UX circles call the double diamond, made
 popular by the [British Design Council](https://www.designcouncil.org.uk/ "British Design Council"){:target="_blank" .external},
 where your team diverges to understand an idea through research and then
 converges to define the challenge, diverges to sketch it individually, share the
-ideas, decide on what the best way forward, test and validate.
+ideas, decide on what the best way forward is, test and validate.
 
 <figure>
   <img src="images/double-diamond.png" alt="Phases of a project include; Understand, Define, Diverge, Decide, Prototype and Validate">
@@ -44,7 +45,7 @@ or a completely new product altogether. Whatever your task may be, simply adjust
 the language to fit the goal you are trying to achieve. A statement should be
 tied to your team goals, focused on your audience, inspiring and concise.
 
-These are some real life examples of products that I have worked with in the
+These are some real life examples of products that I have worked on in the
 past;
 
 * Design a system to manage the treatment and follow-up care of patients with
@@ -53,21 +54,21 @@ past;
 * Create an app that simplifies complex financial systems and pare them down to
   the essentials.
 
-* Design consistent mobile app across different platforms without sacrificing
+* Design a consistent mobile app across different platforms without sacrificing
   the brand.
 
 ### Updating your challenge statement
 
 Once you have written several variations of the goal, present it to your team to
 get a consensus. You may want to include a deadline as this will help the team
-focus on the problem. So with the added an adjustments to the list above could
+focus on the problem. So with the added adjustments, the list above could
 be:
 
 * Design a system to manage the treatment and follow-up care of children under
   the age of 2 with clubfoot for launch in Q1 this year.
 * Create a simple financial app that allows you to buy and sell shares at the tap
   of a button without prior knowledge of the financial world, with initial launch
-  July 2017.
+  on July 2017.
 * Produce a design guide that is flexible across multiple platforms and positions
   the company's brand effectively on each platform by the end of this year.
 
@@ -171,12 +172,12 @@ helps you update your challenge statement?
 </figure>
 
 This is where you observe the user in the field, in context while doing
-something something like how they do their shopping, how they travel to work,
+something like how they do their shopping, how they travel to work,
 how they send SMS messages etc.. The reason is in some cases people will tell
 you what they think you want to hear. But if you watch users perform actions and
 tasks on their own it can be insightful. Basically you are observing without
-interfering, noting things which they find easy or difficult and things may have
-they have missed. The goal is to immerse yourself in the user's environment to
+interfering, noting things which they find easy or difficult and things they 
+may have missed. The goal is to immerse yourself in the user's environment to
 better empathize with their pain points.
 
 This technique usually involves some work done over a longer period of time and
@@ -255,8 +256,8 @@ give both votes to a single idea if they really like it.
 
 
 <figure  class="attempt-left">
-  <img src="images/crazy-8s.jpg" alt="Crazy 8s are a great way to get all of your ideas out onto page".>
-  <figcaption>Crazy 8s are a great way to get all of your ideas out onto page.</figcaption>
+  <img src="images/crazy-8s.jpg" alt="Crazy 8s are a great way to get all of your ideas onto one page".>
+  <figcaption>Crazy 8s are a great way to get all of your ideas onto one page.</figcaption>
 </figure>
 
 <figure class="attempt-right">

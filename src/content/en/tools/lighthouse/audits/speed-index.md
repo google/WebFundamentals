@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Perceptual Speed Index" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -37,4 +37,6 @@ log-normal distribution. Check out the comments in the
 of the audit if you need to know more.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/speed-index.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

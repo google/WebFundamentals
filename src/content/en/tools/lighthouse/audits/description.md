@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document Does Not Have A Meta Description" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-16 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-02-16 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -47,3 +47,7 @@ description is empty. Lighthouse doesn't evaluate the quality of your descriptio
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/meta-description.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

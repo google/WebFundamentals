@@ -36,6 +36,8 @@ toc:
     path: /web/tools/chrome-devtools/shortcuts
 - title: Optimize Website Speed
   path: /web/tools/chrome-devtools/speed/get-started
+- title: Accessibility Reference
+  path: /web/tools/chrome-devtools/accessibility/reference
 - title: Simulate Mobile Devices with Device Mode
   section:
   - title: Overview

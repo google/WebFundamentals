@@ -18,6 +18,9 @@ redirects:
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
   to: /web/tools/lighthouse/audits/has-viewport-meta-tag
 
+- from: /web/tools/lighthouse/audits/contrast-ratio
+  to: https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse
+
 - from: /web/tools/chrome-devtools/javascript/What%20do%20the%20colors%20mean%20in%20Chrome%20Developer%20Tools%20Scope%20panel
   to: /web/tools/chrome-devtools/javascript
 
@@ -174,7 +177,7 @@ redirects:
 - from: /web/tools/workbox/examples/
   to: /web/tools/workbox/modules/
 
-- from: /web/tools/workbox/overview/
+- from: /web/tools/workbox/overview
   to: /web/tools/workbox/
 
 - from: /web/tools/workbox/overview/

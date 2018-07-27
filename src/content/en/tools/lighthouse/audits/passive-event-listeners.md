@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses Passive Event Listeners to Improve Scrolling Performance" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-11-30 #}
 {# wf_blink_components: N/A #}
 
@@ -61,4 +61,6 @@ may be third-party scripts that are harming your page's scroll performance,
 but these aren't listed in your Lighthouse report.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/passive-event-listeners.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

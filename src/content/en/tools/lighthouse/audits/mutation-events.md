@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Avoids Mutation Events In Its Own Scripts" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -36,4 +36,6 @@ See [`MutationObserver`][mdn] on MDN for more help.
 Lighthouse collects all of the event listeners on the page, and flags
 any listener that uses one of the types listed above.
 
-{% include "web/tools/lighthouse/audits/_feedback/mutation-events.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

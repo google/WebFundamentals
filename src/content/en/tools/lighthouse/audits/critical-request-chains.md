@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Critical Request Chains" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-06 #}
 {# wf_blink_components: N/A #}
 
@@ -71,5 +71,6 @@ for more information on how Chrome defines these priorities.
 Data on critical request chains, resource sizes, and time spent downloading
 resources is extracted from the Chrome Debugger Protocol.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/critical-request-chains.html" %}
+{% include "web/_shared/helpful.html" %}

@@ -198,7 +198,7 @@ description:从头开始构建您的多设备网站。了解如何使用一套�
   </tbody>
 </table>
 
-**注**  
+**注**
 如果您喜欢，您可以添加 [Sublime 软件包来执行前缀自动补全工作](/web/tools/setup/setup-editor#autoprefixer)。
 
 
@@ -223,7 +223,7 @@ Web Starter Kit 使用 browser-sync 提供实时重新加载支持。
   </tbody>
 </table>
 
-注：如果您喜欢实时重新加载这一想法，但不想有构建流程，请参阅 [Addy Osmani 撰写的有关 HTML5Rocks 的文章](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)，其中介绍了各种替代方案（有些是免费的，有些是商业的）。
+Note: 如果您喜欢实时重新加载这一想法，但不想有构建流程，请参阅 [Addy Osmani 撰写的有关 HTML5Rocks 的文章](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)，其中介绍了各种替代方案（有些是免费的，有些是商业的）。
 
 
 {# wf_devsite_translation #}

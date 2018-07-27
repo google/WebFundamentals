@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
 {# wf_auto_generated #}
+{# wf_template: src/templates/contributors/article-list.md #}
 {# wf_updated_on: 1900-01-01 #}
 {# wf_published_on: 1900-01-01 #}
 
@@ -45,12 +46,15 @@ book_path: /web/resources/_book.yaml
 
 ## [{{ title }}]({{url}})
 {{#if image}}
+
 <div class="attempt-right">
   <a href="{{url}}">
     <img src="{{image}}">
   </a>
 </div>
+
 {{/if}}
+
 {{{description}}}
 
 <div style="clear:both"></div>
