@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69.
 
 {# wf_updated_on: 2018-07-27 #}
-{# wf_published_on: 2017-07-27 #}
+{# wf_published_on: 2018-07-27 #}
 {# wf_tags: news,chrome69,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: Picture-in-Picture, AV1, and HDCP policy check are here! #}
