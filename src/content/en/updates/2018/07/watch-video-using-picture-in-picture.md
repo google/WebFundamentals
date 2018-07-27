@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Control Picture-in-Picture for &lt;video> elements on your website.
+description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-06-28 #}
-{# wf_published_on: 2018-06-01 #}
+{# wf_updated_on: 2018-07-27 #}
+{# wf_published_on: 2018-07-27 #}
 {# wf_tags: news,media #}
-{# wf_featured_image: /web/updates/images/2018/06/watch-video-using-picture-in-picture/hero.png #}
-{# wf_featured_snippet: Control Picture-in-Picture for &lt;video> elements on your website. #}
+{# wf_featured_image: /web/updates/images/2018/07/watch-video-using-picture-in-picture/hero.png #}
+{# wf_featured_snippet: Control Picture-in-Picture for video elements on your website. #}
 {# wf_blink_components: Blink>Media>PictureInPicture #}
 
 # Watch video using Picture-in-Picture {: .page-title }
@@ -23,7 +23,7 @@ Picture-in-Picture (PiP) allows users to watch videos in a floating window
 watching while interacting with other sites, or applications.
 
 With the new [Picture-in-Picture Web API], you can initiate and control
-Picture-in-Picture for &lt;video> elements on your website. Try it out on our
+Picture-in-Picture for video elements on your website. Try it out on our
 official [Picture-in-Picture sample].
 
 Dogfood: The Picture-in-Picture Web API requires enabling `chrome://flags/#enable-surfaces-for-videos` experimental flag in Chrome 69 for desktop.
@@ -42,8 +42,8 @@ And here we are!
 
 ### Enter Picture-in-Picture {: enter-pip }
 
-Let’s start simply with a &lt;video> element and a way for the user to interact
-with it, such as a &lt;button> element.
+Let’s start simply with a video element and a way for the user to interact
+with it, such as a button element.
 
     <video id="videoElement" src="https://example.com/file.mp4"></video>
     <button id="pipButtonElement"></button>
@@ -54,8 +54,8 @@ patterns such as `videoElement.play().then(_ =>
 videoElement.requestPictureInPicture())` won’t work in a button click event
 listener.
 
-In this example, we call `requestPictureInPicture()` on the &lt;video> element
-to enter Picture-in-Picture when the user clicks the &lt;button> element. This
+In this example, we call `requestPictureInPicture()` on the video element
+to enter Picture-in-Picture when the user clicks the button element. This
 method returns a [promise]. It is your responsibility to handle what happens if
 user clicks the button twice.
 
@@ -79,8 +79,7 @@ following reasons:
   [feature policy].
 - Video metadata have not been loaded yet.
 - Video file is audio-only.
-- The new disablePictureInPicture attribute is present on the &lt;video>
-  element.
+- The new disablePictureInPicture attribute is present on the video element.
 - The call was not made in a user gesture event handler (e.g. a button click).
 
 The [Feature support] section below shows how to enable/disable a button based on
@@ -105,7 +104,7 @@ pipButtonElement.addEventListener('click', async function() {
 })
 </pre>
 
-The &lt;video> element behaves the same whether it is in Picture-in-Picture or
+The video element behaves the same whether it is in Picture-in-Picture or
 not: events are fired and calling methods work. It reflects change of states in
 the Picture-in-Picture window (such as play, pause, seek, etc.) and it is also
 possible to change state programmatically in JavaScript.
@@ -114,7 +113,7 @@ possible to change state programmatically in JavaScript.
 
 But why stop there? Let's make our button toggle entering and exiting
 Picture-in-Picture. We first have to check if the read-only object
-`document.pictureInPictureElement` is our &lt;video> element. If it isn’t, we
+`document.pictureInPictureElement` is our video element. If it isn’t, we
 send a request to enter Picture-in-Picture as above. Otherwise, we ask to leave
 by calling `document.exitPictureInPicture()`, which means the video will appear
 back in the original tab. Note that this method also returns a promise.
@@ -193,8 +192,8 @@ feature policy]. Luckily, you can use the new boolean
       console.log('The Picture-in-Picture Web API is disabled.');
     }
 
-Applied to a specific &lt;button> element for a video, this is how you may want
-to handle your Picture-in-Picture button visibility.
+Applied to a specific button element for a video, this is how you may want to
+handle your Picture-in-Picture button visibility.
 
     if ('pictureInPictureEnabled' in document) {
       // Set button ability depending on whether Picture-in-Picture can be used.
