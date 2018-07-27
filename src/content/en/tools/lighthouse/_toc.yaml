@@ -182,3 +182,5 @@ toc:
     path: /web/tools/lighthouse/audits/successful-http-code
   - title: Page is blocked from indexing
     path: /web/tools/lighthouse/audits/indexing
+  - title: robots.txt is not valid
+    path: /web/tools/lighthouse/audits/robots
