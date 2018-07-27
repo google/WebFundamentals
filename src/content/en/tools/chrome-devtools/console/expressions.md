@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explore the state of any item on your page from the DevTools console.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Evaluate Expressions {: .page-title }
@@ -96,3 +96,7 @@ Use $0 - 4,
 to access these elements from within the console.
 Remember computers begin counting from 0;
 this means the latest item is $0 and the oldest item is $4.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

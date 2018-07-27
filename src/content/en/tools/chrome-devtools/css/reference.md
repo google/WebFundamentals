@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-06-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -615,3 +615,7 @@ change the selected color to some other color on the page:
          the viewport once the blue was clicked
        </figcaption>
      </figure>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

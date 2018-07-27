@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and delete cookies from the Application panel.
 
-{# wf_updated_on: 2016-07-28 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Inspect and Delete Cookies {: .page-title }
@@ -97,3 +97,7 @@ There are a few ways you can delete cookies:
 
 [delete]: imgs/delete.png
 [cos]: imgs/clear-object-store.png
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Your job doesn't end with ensuring your site runs great across Chrome and Android. Even though Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other browsers solutions for emulation.
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Emulate and Test Other Browsers {: .page-title }
@@ -119,4 +119,6 @@ If you can’t use the emulators and don't have access to real devices, then clo
 use emulators but real devices which you can control remotely. This is very useful in the event where you need to reproduce a problem on a specific device and can't see the bug on any of the options in the previous guides.
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

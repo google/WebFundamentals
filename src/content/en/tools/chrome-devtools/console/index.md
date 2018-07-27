@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to navigate the Chrome DevTools JavaScript Console.
 
-{# wf_updated_on: 2016-02-01 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-05-10 #}
 
 # Using the Console {: .page-title }
@@ -206,3 +206,7 @@ the **Console** section for further Console settings.
   </tr>
   </tbody>
 </table>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

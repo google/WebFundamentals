@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2018-06-21 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -869,3 +869,7 @@ Click **Hide overview** ![Hide overview][hide]{:.devtools-inline} to hide it.
 </figure>
 
 [hide]: imgs/hide-overview.png
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

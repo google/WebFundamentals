@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Chrome DevTools Timeline panel to record and analyze  all the activity in your application as it runs. It's the best place to start  investigating perceived performance issues in your application.
 
-{# wf_updated_on: 2017-05-08 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-06-08 #}
 
 # How to Use the Timeline Tool {: .page-title }
@@ -270,3 +270,7 @@ You can save and open recordings by right-clicking inside the
 ![save and open recordings](imgs/save-open.png)
 
 You can also share saved recordings using [timeline-viewer](https://chromedevtools.github.io/timeline-viewer/).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

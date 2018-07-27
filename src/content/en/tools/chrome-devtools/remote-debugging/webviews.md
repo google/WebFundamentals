@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Debug WebViews in your native Android apps using Chrome Developer Tools.
 
-{# wf_updated_on: 2015-07-29 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Remote Debugging WebViews {: .page-title }
@@ -58,3 +58,7 @@ Can't see your WebViews on the **chrome://inspect page**?
 
 * Verify that WebView debugging is enabled for your app.
 * On your device, open the app with the WebView you want to debug. Then, refresh the **chrome://inspect** page.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

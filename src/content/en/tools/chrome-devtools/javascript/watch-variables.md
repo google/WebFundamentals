@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Chrome DevTools allows you to easily see multiple variables throughout your application.
 
 {# wf_published_on: 2016-02-11 #}
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2018-07-27 #}
 
 # Watch variables in Sources {: .page-title }
 
@@ -57,3 +57,7 @@ To keep what you are looking at minimal for faster work you may need to remove v
 This can be done by hovering the variable and then clicking the removal icon that appears to the right.
 
 ![Hover variable to remove from watch list](imgs/hover-to-delete-watched-variable.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

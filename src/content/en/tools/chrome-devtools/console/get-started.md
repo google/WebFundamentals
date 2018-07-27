@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -399,48 +399,7 @@ See [Command Line API Reference][CLAPI] for the full reference.
 
 ## Feedback {: #feedback }
 
-<aside class="note">
-  <b>Help me help you!</b> Hi, I'm Kayce. I wrote this tutorial. Please take a moment to
-  provide feedback. I really do monitor this data, and it helps me create better tutorials for
-  you.
-</aside>
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/console/get-started';
-var title = '[feedback] ' + label;
-var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
-var link = '<a href="' + url + '">open an issue</a>';
-var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
-var feedback = {
-  category: "Helpful",
-  question: "Was this page helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
 
 {# Runs on page load. Down here because it takes up space, even though it's not supposed to. #}
 

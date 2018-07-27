@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-06-18 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -230,3 +230,7 @@ consistently.
 <a class="button button-primary gc-analytics-event"
    href="https://chromiumdev.slack.com/messages/devtools/"
    data-category="DevTools" data-label="Home / Slack">Slack</a>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

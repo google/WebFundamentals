@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Identify expensive functions using the Chrome DevTools  CPU Profiler.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Speed Up JavaScript Execution {: .page-title }
@@ -143,3 +143,7 @@ information is provided:
    for the function it lists it here.
 
 ![viewing functions details in flame chart](imgs/details.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Timeline Event Reference {: .page-title }
@@ -121,4 +121,6 @@ This section lists events that belong to Painting category and their properties.
 |Location|For Paint events, the x and y coordinates of the paint rectangle.|
 |Dimensions|For Paint events, the height and width of the painted region.|
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

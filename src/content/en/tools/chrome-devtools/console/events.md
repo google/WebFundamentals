@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners
 
-{# wf_updated_on: 2015-08-02 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Monitor Events {: .page-title }
@@ -89,3 +89,6 @@ the page has two event listeners attached via jQuery:
 
 ![Expanded view of the event listeners](images/events-eventlisteners_panel_details.png)
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

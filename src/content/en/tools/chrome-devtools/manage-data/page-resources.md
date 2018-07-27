@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Organize resources by frame, domain, type, or other criteria.
 
-{# wf_updated_on: 2016-07-28 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Inspect Resources {: .page-title }
@@ -69,3 +69,7 @@ Use the **Network** panel to filter resources by name, type, and a whole range
 of other criteria. Check out the guide below to learn more.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.filter #}
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and edit the HTML and CSS of your pages.
 
-{# wf_updated_on: 2016-01-28 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Inspect and Edit Pages and Styles {: .page-title }
@@ -116,3 +116,7 @@ Assuming you've set up persistent authoring, to undo changes:
   panel and select **revert** next to the filename.
 
 [inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

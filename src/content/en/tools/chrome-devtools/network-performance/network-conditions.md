@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: It’s easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate different network conditions. Fix any load time issues and your users will thank you.
 
-{# wf_updated_on: 2016-12-28 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Optimize Performance Under Varying Network Conditions {: .page-title }
@@ -92,3 +92,7 @@ Access the drawer from the DevTools main menu (**Main Menu** > **More Tools** >
 **Network Conditions**).
 
 ![opening the network conditions drawer](imgs/open-network-drawer.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

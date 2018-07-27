@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages.
 
-{# wf_updated_on: 2015-05-18 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-05-18 #}
 
 # Memory Terminology {: .page-title }
@@ -145,3 +145,7 @@ Each native objects group is made up of objects that hold mutual references to e
 
 Each wrapper object holds a reference to the corresponding native object, for redirecting commands to it. In its own turn, an object group holds wrapper objects. However, this doesn't create an uncollectable cycle, as GC is smart enough to release object groups whose wrappers are no longer referenced. But forgetting to release a single wrapper will hold the whole group and associated wrappers.
 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Emulate Sensors: Geolocation and Accelerometer {: .page-title }
@@ -76,4 +76,6 @@ You can also click and drag the model accelerometer to the desired orientation.
 
 Try out the accelerometer emulator using this [device orientation demo](http://googlesamples.github.io/web-fundamentals/fundamentals/native-hardware/device-orientation/dev-orientation.html).
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}
