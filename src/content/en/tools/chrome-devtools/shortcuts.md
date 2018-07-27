@@ -4,6 +4,7 @@ description: A reference of all of the keyboard shortcuts in Chrome DevTools.
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-29 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Keyboard Shortcuts Reference {: .page-title }
 
