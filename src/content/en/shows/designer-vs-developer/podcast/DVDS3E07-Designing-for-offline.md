@@ -20,7 +20,7 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
 Mustafa speaks to Rowan Merewood, Developer Advocate for Chrome 
-Developer Relations team, about Payments on the web, Progessive 
+Developer Relations team, about Payments on the web, Progressive 
 web apps and how to think about designing for offline states.
 
 
