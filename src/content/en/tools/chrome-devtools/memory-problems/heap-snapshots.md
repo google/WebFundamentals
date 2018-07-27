@@ -4,6 +4,7 @@ description: Learn how to record heap snapshots with the Chrome DevTools heap pr
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-06-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # How to Record Heap Snapshots {: .page-title }
 

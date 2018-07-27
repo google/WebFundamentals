@@ -4,6 +4,7 @@ description: Learn how to detect network issues in the Network panel of Chrome D
 
 {# wf_published_on: 2016-12-28 #}
 {# wf_updated_on: 2018-07-27 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 figcaption {

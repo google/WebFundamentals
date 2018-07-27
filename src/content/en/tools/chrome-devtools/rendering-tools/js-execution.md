@@ -4,6 +4,7 @@ description: Identify expensive functions using the Chrome DevTools  CPU Profile
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Speed Up JavaScript Execution {: .page-title }
 

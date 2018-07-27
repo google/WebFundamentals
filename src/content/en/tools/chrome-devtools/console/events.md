@@ -4,6 +4,7 @@ description: The Chrome DevTools Command Line API offers various ways to observe
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Monitor Events {: .page-title }
 

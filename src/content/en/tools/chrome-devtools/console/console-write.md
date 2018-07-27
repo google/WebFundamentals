@@ -4,7 +4,7 @@ description: Console logging is a powerful way to inspect what your page or appl
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
-{# wf_blink_components: n/a #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Diagnose and Log to Console {: .page-title }
 

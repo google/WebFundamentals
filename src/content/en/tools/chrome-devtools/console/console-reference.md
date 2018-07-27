@@ -4,7 +4,7 @@ description: Use the Console API to write information to the console,  create Ja
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-03-21 #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Console API Reference {: .page-title }
 

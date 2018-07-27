@@ -4,6 +4,7 @@ description: Use the Chrome DevTools Timeline panel to record and analyze  all t
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-06-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # How to Use the Timeline Tool {: .page-title }
 

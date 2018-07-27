@@ -4,6 +4,7 @@ description: Follow along with this interactive guide to learn how to use  DevTo
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Diagnose Forced Synchronous Layouts {: .page-title }
 

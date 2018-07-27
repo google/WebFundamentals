@@ -4,6 +4,7 @@ description: Users expect pages to be interactive and smooth. Each stage in  the
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Analyze Runtime Performance {: .page-title }
 

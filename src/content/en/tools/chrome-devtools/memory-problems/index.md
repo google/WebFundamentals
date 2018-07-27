@@ -4,7 +4,7 @@ description: Learn how to use Chrome and DevTools to find memory issues that aff
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
-{# wf_blink_components: Blink>MemoryAllocator #}
+{# wf_blink_components: Blink>MemoryAllocator,Platform>DevTools #}
 
 # Fix Memory Problems {: .page-title }
 

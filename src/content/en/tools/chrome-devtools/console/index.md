@@ -4,6 +4,7 @@ description: Learn how to navigate the Chrome DevTools JavaScript Console.
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-05-10 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Using the Console {: .page-title }
 

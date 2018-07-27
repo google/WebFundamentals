@@ -4,6 +4,7 @@ description: Keep your client-side code readable and debuggable even after you'v
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Map Preprocessed Code to Source Code {: .page-title }
 

@@ -4,6 +4,7 @@ description: The DOM tree view in the Chrome DevTools Elements panel displays th
 
 {# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-29 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Edit the DOM {: .page-title }
 
