@@ -198,7 +198,6 @@ that goes wrong in your app:
 
 - [Browser interventions][interventions]
 - Deprecations
-- CSP policy violations (currently serviced by the `securitypolicyviolation` event)
 - [Feature Policy][featurepolicy] violations
 - JS exceptions and errors (currently serviced by `window.onerror`).
 - Unhandled JS promise rejections (currently serviced by `window.onunhandledrejection`)
