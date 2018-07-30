@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-07-17 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -61,7 +61,7 @@ polyfill for Safari.
 
 But it's time to move on.
 
-The origin trial is ending on July 24, 2018, and the spec has been superseded
+The origin trial ended on July 24, 2018, and the spec has been superseded
 by the [WebXR Device API](https://www.chromestatus.com/features/5680169905815552)
 and a new origin trial.
 
@@ -100,8 +100,10 @@ spectrum of immersive experiences. It's available in the previously mentioned
 [origin trial](https://github.com/GoogleChrome/OriginTrials) as well as through
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
-**Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities are
-expected in Chrome 69 so I hope to tell you about them soon.
+When this article was originally published during the Chrome 67 beta period,
+only VR capabilities were enabled. Augmented reality arrived in Chrome 69. Read
+about it in [Augmented reality for the
+web](/web/updates/2018/06/ar-for-the-web).
 
 There's more to this new API than I can go to in an article like this. I want
 to give you enough to start making sense of the [WebXR
@@ -111,7 +113,13 @@ explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md) and
 our [Immersive Web Early Adopters
 Guide](https://immersive-web.github.io/webxr-reference/). I'll be expanding the
 latter as the origin trial progresses. Feel free to open issues or submit pull
-requests. For this article, I'm going to discuss starting, stopping and running
+requests.
+
+Note: The Early Adopters Guide is updated when spec changes land in Chrome. To
+be notified of those updates watch [its repo on
+GitHub](https://github.com/immersive-web/webxr-reference).
+
+For this article, I'm going to discuss starting, stopping and running
 an XR session, plus a few basics about processing input.
 
 What I'm not going to cover is how to draw AR/VR content to the screen. The
