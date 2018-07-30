@@ -3,11 +3,11 @@ book_path: /web/updates/_book.yaml
 description: Introduction to CSS Scroll Snap.
 
 
-{# wf_updated_on: 2018-07-25 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: chrome69,css,snap,scroll #}
 {# wf_blink_components: Blink>CSS #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
+{# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: CSS Scroll Snap allows web developers to create well-controlled scroll experiences by declaring scroll snapping positions. This enables common UX scroll patterns without the need for JavaScript. #}
 
 # Well-Controlled Scrolling with CSS Scroll Snap {: .page-title }
@@ -27,7 +27,7 @@ figcaption {
 </style>
 
 
-## TL;DR {: #tldr .hide-from-toc}
+### TL;DR {: #tldr .hide-from-toc}
 
 [CSS Scroll Snap](https://drafts.csswg.org/css-scroll-snap/) feature allows web
 developers to create well-controlled scroll experiences by declaring scroll
@@ -54,8 +54,8 @@ or itemized content with meaningful boundaries when the scroll finishes at the
 middle of the page or image leaving it partially visible. These use cases
 benefit from a well-controlled scrolling experience.
 
-Web developers have long relied on Javascript based solutions for controlling
-the scroll to help address this shortcoming. However, Javascript based solutions
+Web developers have long relied on JavaScript based solutions for controlling
+the scroll to help address this shortcoming. However, JavaScript based solutions
 fall short of providing a full fidelity solution due to lack of scroll
 customization primitives or access to composited scrolling. CSS Scroll Snap
 ensures there is a fast, high fidelity and easy to use solution that works
@@ -67,7 +67,7 @@ appropriate end position depending on the particulars of the scroll operation,
 scroll container's layout and visibility, and details of the snap positions,
 then smoothly animate to it. Going back to our earlier example, as the user
 finishes scrolling the carousel, its visible image snaps into place. No scroll
-adjustments needed by Javascript.
+adjustments needed by JavaScript.
 
 
 <figure>
@@ -159,8 +159,8 @@ The following examples illustrate how these concepts can be used in practice.
 
 A common use case for scroll snapping is an  image carousel. For example, to
 create a horizontal image carousel that snaps to each image as you scroll, we
-can specify the scroll container to have a mandatory ``scroll-snap-type`` on the
-horizontal axis.  set each image to ``scroll-snap-align: center`` to ensure that
+can specify the scroll container to have a mandatory `scroll-snap-type` on the
+horizontal axis.  set each image to `scroll-snap-align: center` to ensure that
 the snapping centers the image within the carousel.
 
 
@@ -213,7 +213,7 @@ around within that image only snapping at its edges.
 
 Another common case that can benefit from scroll snapping are pages with
 multiple logical sections that are vertically scrolled through, e.g., a typical
-product page. ``scroll-snap-type: y proximity;` is a `more natural fit for cases
+product page. `scroll-snap-type: y proximity;` is a `more natural fit for cases
 like this. It does not interfere when user scrolls to the middle of a particular
 section but also snaps and brings attention to a new section when they scroll
 close enough to it.
@@ -310,10 +310,9 @@ scrolling, they can be used together and complement each other.
 
 ### Overscroll Behavior {#overscroll-behavior}
 
-[Overscroll behavior
-API](https://developers.google.com/web/updates/2017/11/overscroll-behavior)
-controls how scroll is chained across multiple elements and it is not affected
-by scroll snap.
+[Overscroll behavior API](/web/updates/2017/11/overscroll-behavior) controls how
+scroll is chained across multiple elements and it is not affected by scroll
+snap.
 
 
 ## Caveats and best practices
@@ -344,15 +343,13 @@ interrupted for other reasons but it is especially the case with scroll
 snapping.
 
 
-<aside>
-  <strong>Note:</strong>
-  There is an <a href="https://github.com/w3c/csswg-drafts/issues/1562#issuecomment-389586317">
-  upcoming proposal</a> to change various scrolling APIs to return a promise.
-  This promise is resolved when user agent either completes or aborts that
-  scrolling operation. Once this is standardized and implemented, it provides an
-  ergonomic and efficient way for following up a user script initiated scroll
-  with other actions.
-</aside>
+Note: There is an <a href="https://github.com/w3c/csswg-drafts/issues/1562#issuecomment-389586317">
+upcoming proposal</a> to change various scrolling APIs to return a promise.
+This promise is resolved when user agent either completes or aborts that
+scrolling operation. Once this is standardized and implemented, it provides an
+ergonomic and efficient way for following up a user script initiated scroll
+with other actions.
+
 
 
 ## Future work
@@ -363,3 +360,6 @@ fragment navigations which at the moment are not supported by any other
 implementations. Chrome will continue improving this feature over time
 particularly focusing on missing features, improving snap selection algorithm,
 animation smoothness, and devtools facilities.
+
+{% include "web/_shared/rss-widget-updates.html" %}
+{% include "comment-widget.html" %}
