@@ -2,9 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome and DevTools to find memory issues that affect page performance, including memory leaks, memory bloat, and frequent garbage collections.
 
-{# wf_updated_on: 2015-08-03 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
-{# wf_blink_components: Blink>MemoryAllocator #}
+{# wf_blink_components: Blink>MemoryAllocator,Platform>DevTools #}
 
 # Fix Memory Problems {: .page-title }
 
@@ -319,3 +319,7 @@ JS heap or node count graphs indicate frequent garbage collections.
 Once you've identified the problem, you can use an Allocation Timeline
 recording to find out where memory is being allocated and which functions are
 causing the allocations. 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,9 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-03-21 #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Console API Reference {: .page-title }
 
@@ -296,3 +296,7 @@ warning icon next to the logged message.
     console.warn('user limit reached!');
 
 ![console.warn() example](images/warn.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

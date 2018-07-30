@@ -2,9 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
-{# wf_blink_components: n/a #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Diagnose and Log to Console {: .page-title }
 
@@ -208,4 +208,6 @@ By default, DOM elements are logged into the console as representation of their 
 
 ![Logging an element using dir()](images/dir-element.png)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

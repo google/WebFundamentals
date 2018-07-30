@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use virtual devices in Chrome's Device Mode to build mobile-first websites.
 
-{# wf_updated_on: 2016-03-07 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Simulate Mobile Devices with Device Mode {: .page-title }
 
@@ -46,4 +47,6 @@ If it's focused on your viewport, you'll trigger [Chrome's switch user
 shortcut](https://support.google.com/chrome/answer/157179).
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

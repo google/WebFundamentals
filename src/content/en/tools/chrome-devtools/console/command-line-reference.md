@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -446,3 +446,6 @@ of all properties belonging to the specified object.
 		values(object);
 
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

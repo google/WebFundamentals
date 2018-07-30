@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-07-10 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -847,75 +847,7 @@ var feedback = {
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/speed/get-started';
-var response = "Thanks for the feedback. Please use the channels below if you've got any ideas " +
-  "on how we can improve.";
-var feedback = {
-  category: "Helpful",
-  question: "Was the tutorial helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/speed/get-started';
-var response = "Thanks for the feedback. Please use the channels below if you've got any ideas " +
-  "on how we can improve.";
-var feedback = {
-  category: "Length",
-  question: "Was it too long?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
 
 If there's anything else we should know, please send a message through the appropriate channel:
 
@@ -930,3 +862,5 @@ If there's anything else we should know, please send a message through the appro
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [WF]: https://github.com/google/webfundamentals/issues/new
 [SO]: https://stackoverflow.com/questions/tagged/google-chrome-devtools
+
+

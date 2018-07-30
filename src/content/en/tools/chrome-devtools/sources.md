@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -162,39 +162,4 @@ See [Set Up Persistence With DevTools Workspaces][WS] to get started.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/sources';
-var title = '[feedback] ' + label;
-var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
-var link = '<a href="' + url + '">open an issue</a>';
-var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
-var feedback = {
-  category: "Helpful",
-  question: "Was this page helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
