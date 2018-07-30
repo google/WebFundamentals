@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-06-20 #}
+{# wf_updated_on: 2018-07-29 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -130,13 +130,13 @@ from the network, but could benefit by being served by the cache if the
 network request is taking too long.
 
 For this, you can use a `NetworkFirst` strategy with the
-`networkTimetoutSeconds` option configured.
+`networkTimeoutSeconds` option configured.
 
 ```javascript
 workbox.routing.registerRoute(
     'https://hacker-news.firebaseio.com/v0/*',
     workbox.strategies.networkFirst({
-        networkTimetoutSeconds: 3,
+        networkTimeoutSeconds: 3,
         cacheName: 'stories',
         plugins: [
           new workbox.expiration.Plugin({
