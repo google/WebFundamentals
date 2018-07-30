@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-07-26 #}
 {# wf_tags: chrome69,reporting-observer,analytics,reports #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
@@ -198,7 +198,7 @@ that goes wrong in your app:
 
 - [Browser interventions][interventions]
 - Deprecations
-- [Feature Policy][featurepolicy] violations
+- [Feature Policy][featurepolicy] violations. See [crbug.com/867471](https://bugs.chromium.org/p/chromium/issues/detail?id=867471).
 - JS exceptions and errors (currently serviced by `window.onerror`).
 - Unhandled JS promise rejections (currently serviced by `window.onunhandledrejection`)
 
