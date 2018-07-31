@@ -263,7 +263,7 @@ supports the following values:
 ## Pointer capture
 
 Ever spent a frustrating hour debugging a broken `mouseup`
-event, until you realised that it’s because the user is letting go of the button
+event, until you realized that it’s because the user is letting go of the button
 outside your click target? No? Okay, maybe it’s just me, then.
 
 Still, until now there wasn’t a really good way of tackling this problem. Sure,
