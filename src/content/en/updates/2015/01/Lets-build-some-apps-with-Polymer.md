@@ -5,6 +5,7 @@ description: Building apps, the Polymer way.
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,webcomponents,polymer,chromedevsummit #}
+{# wf_blink_components: Blink>DOM>ShadowDOM #}
 
 # Chrome Dev Summit 2014: Let's build some apps with Polymer! {: .page-title }
 

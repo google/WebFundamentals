@@ -4,6 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2012-03-05 #}
 {# wf_tags: news,css,dom #}
+{# wf_blink_components: None #}
 
 # A New Experimental Feature: scoped stylesheets {: .page-title }
 

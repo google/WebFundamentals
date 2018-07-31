@@ -4,6 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2012-07-22 #}
 {# wf_tags: news,dnd,filesystem #}
+{# wf_blink_components: Blink>DataTransfer #}
 
 # Drag and drop a folder onto Chrome now available  {: .page-title }
 
