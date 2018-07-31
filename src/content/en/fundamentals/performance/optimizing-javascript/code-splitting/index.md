@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: TBD
 
 {# wf_updated_on: 2018-07-30 #}
-{# wf_published_on: 2018-06-14 #}
+{# wf_published_on: 2018-08-03 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Reduce JavaScript Payloads with Code Splitting {: .page-title }
