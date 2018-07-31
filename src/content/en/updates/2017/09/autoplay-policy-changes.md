@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-05-24 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -90,7 +90,7 @@ User's MEI is available at the <i>chrome://media-engagement</i> internal page.
 
 ### Developer switches {: #developer-switches }
 
-As a developer, you may want to change Chrome autoplay policy behaviour locally
+As a developer, you may want to change Chrome autoplay policy behavior locally
 to test your website depending on user engagement.
 
 - You can decide to disable entirely the autoplay policy by setting the Chrome
@@ -154,7 +154,7 @@ autoplay.
 
 ### Chrome enterprise policies
 
-It is possible to change this new autoplay behaviour with Chrome enterprise
+It is possible to change this new autoplay behavior with Chrome enterprise
 policies for use cases such as kiosks or unattended systems. Check out the
 [Policy List] help page to learn how to set these new autoplay related
 enterprise policies:

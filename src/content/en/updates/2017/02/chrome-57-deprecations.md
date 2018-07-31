@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
 {# wf_blink_components: Blink>Bluetooth,Blink>ServiceWorker,Blink>Storage>IndexedDB,Blink>WebAudio,Blink>FileAPI,Blink>WebRTC>PeerConnection #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -32,7 +32,7 @@ line with the current specification. You can retrieve all allowed GATT services 
 
 ## Remove key generation element
 
-Since Chrome 49, `<keygen>`'s default behaviour has been to return the empty
+Since Chrome 49, `<keygen>`'s default behavior has been to return the empty
 string, unless a permission was granted to this page. IE/Edge do not support
 `<keygen>` and have not indicated public signals to support `<keygen>`.
 Firefox already gates `<keygen>` behind a user gesture, but is publicly

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 63/64.
 
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_tags: news,chrome63,chrome64,media,audio,video,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -274,7 +274,7 @@ and following these steps:
 
 Matching other browsers' implementations, Chrome desktop now sets the default
 preload value for `<video>` and `<audio>` elements to "metadata" in order to
-reduce bandwidth and resource usage. This new behaviour only applies in Chrome
+reduce bandwidth and resource usage. This new behavior only applies in Chrome
 64 to cases where no preload value is set. Note that the preload attribute's
 hint is discarded when a `MediaSource` is attached to the media element as the
 web site handles its own preload.

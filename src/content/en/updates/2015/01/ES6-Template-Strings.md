@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Template String literals with embedded expressions. We've been waiting for this for ages. Literally
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,es6,javascript,ecmascript #}
+{# wf_blink_components: N/A #}
 
 # Getting Literal With ES6 Template Strings {: .page-title }
 
@@ -84,7 +85,7 @@ Multiline strings in JavaScript have required hacky workarounds for some time. C
     var greeting = "Yo \
     World";
 
-Whilst this should work fine in most modern JavaScript engines, the behaviour itself is still a bit of a hack. One can also use string concatenation to fake multiline support, but this equally leaves something to be desired:
+Whilst this should work fine in most modern JavaScript engines, the behavior itself is still a bit of a hack. One can also use string concatenation to fake multiline support, but this equally leaves something to be desired:
 
     var greeting = "Yo " +
     "World";

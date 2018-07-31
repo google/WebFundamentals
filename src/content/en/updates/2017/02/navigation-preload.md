@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome59,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -284,7 +284,7 @@ const parts = [
 
 Note: `Promise.resolve(event.preloadResponse)` means we get a promise for
 undefined if `event.preloadResponse` is undefined. It's a good way to normalize
-behaviour with browsers that don't support `event.preloadResponse`.
+behavior with browsers that don't support `event.preloadResponse`.
 
 ## Changing the header
 
