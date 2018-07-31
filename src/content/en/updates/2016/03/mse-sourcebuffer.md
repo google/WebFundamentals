@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use SourceBuffer sequence mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them.
 
-{# wf_updated_on: 2016-03-14 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: audio,chrome50,media,mse,recording,video,webrtc,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg #}
@@ -76,7 +76,7 @@ Use the `mode` attribute to specify playback order for media segments. It has on
 
 If the media segments have timestamps parsed from byte stream data when they are appended to the `SourceBuffer`, the `SourceBuffer`'s `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.  Note that timestamps are not optional: they _must_ be there for most stream types, and _cannot_ be there for others: inband timestamps are innate to stream types that contain them.
 
-Setting the `mode` attribute is optional. For streams that don't contain timestamps (audio/mpeg and audio/aac) `mode` can only be changed from _segments_ to _sequence_: an error will be thrown if you try to change `mode` from _sequence_ to _segments_. For streams that have timestamps, it is possible to switch between _segments_ and _sequence_, though in practice that would probably produce behaviour that was undesirable, hard to understand or difficult to predict.
+Setting the `mode` attribute is optional. For streams that don't contain timestamps (audio/mpeg and audio/aac) `mode` can only be changed from _segments_ to _sequence_: an error will be thrown if you try to change `mode` from _sequence_ to _segments_. For streams that have timestamps, it is possible to switch between _segments_ and _sequence_, though in practice that would probably produce behavior that was undesirable, hard to understand or difficult to predict.
 
 For all stream types, you can change the value from _segments_ to _sequence_. This means segments will be played back in the order they were appended, and new timestamps generated accordingly:
 

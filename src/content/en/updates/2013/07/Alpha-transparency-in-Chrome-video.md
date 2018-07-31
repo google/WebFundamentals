@@ -5,6 +5,7 @@ description: WebM just added alpha transparency, and support for it has landed i
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
+{# wf_blink_components: N/A #}
 
 # Alpha transparency in Chrome video {: .page-title }
 

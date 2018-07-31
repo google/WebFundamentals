@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Another text entry frustration for users is being removed.
 
-{# wf_updated_on: 2015-04-15 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_tags: news,autocapitalize,mobile #}
+{# wf_blink_components: N/A #}
 
 # Autocapitalize for mobile {: .page-title }
 
@@ -24,7 +25,7 @@ capitalize the first letter of every new sentence.
 
 From Chrome 43, Chrome will support the _autocapitalize_ attribute on both
 `HTMLInputElement` and `HTMLTextAreaElement`, which will allow you to control
-the autocapitalization behaviour of the virtual keyboard and bring it inline
+the autocapitalization behavior of the virtual keyboard and bring it inline
 with Safari on iOS.
 
 _autocapitalize_ will only apply to `HTMLInputElement`s that have
@@ -87,7 +88,7 @@ For `HTMLInputElement`, the invalid value default is _Sentences Capitalization_ 
 *  `<input>` would be a text field with _No Capitalization_.
 
 For `HTMLTextAreaElement`, the invalid value default is _Sentences
-Capitalization_. This is a change from the default behaviour.
+Capitalization_. This is a change from the default behavior.
 
 *  `<textarea autocapitalize="terry"></textarea>` would be a text area with _Sentences Capitalization_  
 *  `<textarea></textarea>` would be a text area with _Sentence Capitalization_.

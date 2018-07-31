@@ -6,6 +6,7 @@ description: Learn about which colors match to which resource type to easy ident
 {# wf_published_on: 2015-07-07 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/2015-07-08-use-network-colour-groups-to-easily-identify-a-resource-type/network-colour-group.gif #}
+{# wf_blink_components: N/A #}
 
 # Network color groups {: .page-title }
 

@@ -6,6 +6,7 @@ description: Learn how to effectively navigate the Styles Pane with a few useful
 {# wf_published_on: 2015-08-23 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/2015-08-21-simple-keyboard-tricks-to-use-in-the-styles-pane/styles-pane-keyboard-tricks.gif #}
+{# wf_blink_components: N/A #}
 
 # Simple keyboard tricks to use in the Styles Pane {: .page-title }
 

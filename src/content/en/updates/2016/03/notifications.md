@@ -6,6 +6,7 @@ description: There are lots of great new features in Chrome 50 for Notifications
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
+{# wf_blink_components: N/A #}
 
 # Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps {: .page-title }
 
@@ -127,7 +128,7 @@ existing one, it would run a vibration pattern or play an audible alert and this
 could cause frustration for your users.  Now In Chrome 50, [you now have
 control](https://bugs.chromium.org/p/chromium/issues/detail?id=442133) over what
 happens during the renotification via a simple boolean flag called 'renotify'.
-The new default behaviour when using the same 'tag' for subsequent notifications
+The new default behavior when using the same 'tag' for subsequent notifications
 is to be silent and as the developer you must opt in to "re-notifying" the user
 by setting the flag to "true".
 

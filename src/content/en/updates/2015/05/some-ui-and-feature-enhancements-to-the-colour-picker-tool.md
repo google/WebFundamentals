@@ -5,6 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2015-05-18 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/2015-05-19-some-ui-and-feature-enhancements-to-the-colour-picker-tool/colour-picker-upgrade.gif #}
+{# wf_blink_components: N/A #}
 
 # Some UI and feature enhancements to the Color Picker tool {: .page-title }
 

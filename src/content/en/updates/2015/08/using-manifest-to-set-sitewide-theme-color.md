@@ -5,6 +5,7 @@ description: Set a theme-color in the manifest and have it available to all page
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-28 #}
 {# wf_tags: news,webapp,manifest #}
+{# wf_blink_components: N/A #}
 
 # Using the web app manifest to specify a site wide theme color {: .page-title }
 

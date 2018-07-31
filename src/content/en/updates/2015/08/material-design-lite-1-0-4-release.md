@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There is a new release of Material Design Lite, bringing a host of bug fixes and improvements to the build process.
 
-{# wf_updated_on: 2015-08-20 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-20 #}
 {# wf_tags: news,mdl,release #}
+{# wf_blink_components: N/A #}
 
 # New Release of Material Design Lite - 1.0.4 {: .page-title }
 
@@ -22,7 +23,7 @@ description: There is a new release of Material Design Lite, bringing a host of 
 - \#1285. Fix radio button positioning.
 - \#1309 and \#1365. Add IIFE wrapping and documentation to component classes.
 - \#1373. Remove documentation styling that was accidentally included in MDL.
-- \#1406. Fix menu behaviour after hiding.
+- \#1406. Fix menu behavior after hiding.
 - Fixes to hamburger menu and drawer for certain layout combinations.
 - Many improvements and fixes to documentation.
 - Several improvements and fixes to library build process.

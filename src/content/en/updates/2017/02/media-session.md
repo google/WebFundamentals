@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Customize web media notifications and respond to media related events with the new Media Session API.
 
-{# wf_updated_on: 2017-09-01 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-02-06 #}
 {# wf_tags: news,chrome57,media,notifications,play #}
 {# wf_featured_image: /web/updates/images/2017/02/tldr.png #}
@@ -213,7 +213,7 @@ Track" and "Next Track" icons.
 
 Note that media action handlers will persist. This is very similar to the event
 listener pattern except that handling an event means that the browser stops
-doing any default behaviour and uses this as a signal that your web app
+doing any default behavior and uses this as a signal that your web app
 supports the media action. Hence, media action controls won't be shown unless
 you set the proper action handler.
 
@@ -240,7 +240,7 @@ media notification icons if you want to control the amount of time skipped.
 
 The "Play/Pause" icon is always shown in the media notification and the related
 events are handled automatically by the browser. If for some reason the default
-behaviour doesn't work out, you can still handle "Play" and "Pause" media events.
+behavior doesn't work out, you can still handle "Play" and "Pause" media events.
 
     navigator.mediaSession.setActionHandler('play', function() {
       // User clicked "Play" media notification icon.
@@ -253,7 +253,7 @@ behaviour doesn't work out, you can still handle "Play" and "Pause" media events
     });
 
 Note: The browser may consider that the web app is not playing media when files
-are seeking or loading. You can override this behaviour by setting
+are seeking or loading. You can override this behavior by setting
 [`navigator.mediaSession.playbackState`](https://wicg.github.io/mediasession/#example-set-playbackState)
 to `"playing"` or `"paused"`. This comes in handy when you want to make sure
 your web app UI stays in sync with the media notification controls.

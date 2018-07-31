@@ -3,10 +3,11 @@ book_path: /web/updates/_book.yaml
 description: Pointer events unify the pointer input model for the browser, bringing touch, pens, and mice together into a single set of events. 
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2016-10-20 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_featured_image: /web/updates/images/generic/mouse.png #}
 {# wf_tags: chrome55,input #}
 {# wf_featured_snippet: Pointer events unify the pointer input model for the browser, bringing touch, pens, and mice together into a single set of events. #}
+{# wf_blink_components: N/A #}
 
 # Pointing the Way Forward {: .page-title }
 
@@ -129,7 +130,7 @@ you’re familiar with mouse events:
 
 Note: Pointer events are confusingly unrelated to the [`pointer-events CSS
 property`](https://developer.mozilla.org/en/docs/Web/CSS/pointer-events).
-Even worse, the two can be used together! The behaviour of
+Even worse, the two can be used together! The behavior of
 `pointer-events` (the CSS property) with pointer events (the event
 model) is no different than with mouse events or touch events, so if
 you’ve used that CSS property before, you know what to expect.
