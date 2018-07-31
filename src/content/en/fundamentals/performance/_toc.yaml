@@ -172,7 +172,7 @@ toc:
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
         step_group: perf-rendering
-    - title: Audit your site
+    - title: Audit your site or app
       section:
       - title: Overview
         path: /web/fundamentals/performance/audit/

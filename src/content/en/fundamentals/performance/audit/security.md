@@ -11,25 +11,21 @@ description: You won't be able to build a PWA without HTTPS. Serving your site o
 {% include "web/_shared/contributors/samdutton.html" %}
 
 
-### TL;DR {: .hide-from-toc }
+You won't be able to build a PWA without HTTPS.
 
-* Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
-* Move long-running JavaScript off the main thread to Web Workers.
-* Use micro-tasks to make DOM changes over several frames.
-* Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
+Serving your site over HTTPS is fundamental for security, and many APIs won't work without it. If you need to justify implementation costs, find out [why HTTPS matters](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https).
 
-## Second level head
+HTTPS should be implemented for all pages and assets — not just, for example, on login or checkout pages. This is easy to [check with Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/security) Security panel. Keep a record of any problems. In the following example, the site is not secure since one asset is being served over HTTP.
 
+<figure>
+  <img src="images/devtools-security-1000.png" srcset="images/devtools-security-500.png 500w, images/devtools-security-1000.png 1000w" alt="Chrome DevTools Security panel">
+  <figcaption><em>Chrome DevTools Security panel</em></figcaption>
+</figure>
 
-    /**
-     * Some
-     * code.
-     */
-    function func(arg) {
-      // Blah
-    }
+If a site is not secure, users will be warned in the URL bar. Chrome displays a warning like this:
 
-    foo(bar);
+<figure>
+  <img src="images/not-secure.png" alt="Chrome 'not secure' warning">
+  <figcaption><em>From Chrome 68, the omnibox warns if not all assets use HTTPS</em></figcaption>
+</figure>
 
-
-<img src="images/optimize-javascript-execution/settimeout.jpg" alt="An image">
