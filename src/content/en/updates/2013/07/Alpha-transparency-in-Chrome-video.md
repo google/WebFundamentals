@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: WebM just added alpha transparency, and support for it has landed in Chrome Canary.
 
-{# wf_updated_on: 2013-07-25 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
 
@@ -32,7 +32,7 @@ There's a demo at
 
 The method we describe uses the open source tools Blender and ffmpeg:
 
-1. Film your subject in front of a single colour background such as a bright
+1. Film your subject in front of a single color background such as a bright
    green curtain.
 2. Process the video to build an array of PNG still images with transparency
    data.
@@ -48,7 +48,7 @@ simpler.
 First of all, you need to film your subject in a way that everything in the
 background can be 'removed' (made transparent) by subsequent processing.
 
-The easiest way to do this is to film in front of a single colour background,
+The easiest way to do this is to film in front of a single color background,
 such as a screen or curtain. Green or blue are the colors most often used, mostly because of their difference from skin tones.
 
 There are [several](http://www.youtube.com/watch?v=M_WdLkaOUic) [guides](https://en.wikipedia.org/wiki/Chroma_key#Process) [online](http://www.youtube.com/watch?v=q3PZO_lCBkw) to filming green screen video (also known as

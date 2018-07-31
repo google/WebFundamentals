@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There are lots of great new features in Chrome 50 for Notifications, here is a rundown.
 
-{# wf_updated_on: 2017-10-11 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
@@ -57,7 +57,7 @@ you can now specify an image on the action button:
 
 The action icon's appearance differs by platform. For example, on Android the
 icon will have a dark grey filter applied in Lollipop and above, and a white
-filter pre-Lollipop, while on desktop it will be full colour. (Note: there is
+filter pre-Lollipop, while on desktop it will be full color. (Note: there is
 [discussion about the future of this on desktop](https://bugs.chromium.org/p/chromium/issues/detail?id=589837).) Some
 platforms might not even be able to display action icons, so ensure that you are
 using the icons to provide context to the action and not as the sole indicator

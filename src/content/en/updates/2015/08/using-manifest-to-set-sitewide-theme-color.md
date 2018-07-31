@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Set a theme-color in the manifest and have it available to all pages on your site when launched from the home screen.
 
-{# wf_updated_on: 2015-08-28 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-28 #}
 {# wf_tags: news,webapp,manifest #}
 
-# Using the web app manifest to specify a site wide theme colour {: .page-title }
+# Using the web app manifest to specify a site wide theme color {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
