@@ -99,7 +99,7 @@ def readFile(requestedFile, lang='en'):
       result = result.decode('utf8')
       return result
     except Exception as e:
-      result = ' - Exception occured trying to read: ' + requestedFile
+      result = ' - Exception occurred trying to read: ' + requestedFile
       logging.exception(result)
       return None
   else:
@@ -108,7 +108,7 @@ def readFile(requestedFile, lang='en'):
     return None
 
 
-def fetchGithubFile(path):
+def fetchGithubFile(path, revision = None):
   """Fetchs a file in a repository hosted on github.com.
 
   Retrieves rows pertaining to the given keys from the Table instance
@@ -118,11 +118,15 @@ def fetchGithubFile(path):
   Args:
       path: The path to a file on Github in the form
           github-user/repository/path/to/file.
+      revision: Optional git revision string of the form
+          "refs/tags/v0.10.0". See https://goo.gl/DBLwBb for other options.
 
   Returns:
       A string from the HTTP response.
   """
   path = path.replace('/blob', '')
+  if revision:
+    path = path.replace('master', revision.replace('refs/tags/', ''))
   url = 'https://raw.githubusercontent.com/%s' % path
   try:
     response = urllib2.urlopen(url)
@@ -175,8 +179,18 @@ def expandBook(book, lang='en'):
     results = []
     for item in book:
       if 'include' in item:
-        newItems = yaml.load(readFile(item['include'], lang))
-        results = results + expandBook(newItems['toc'], lang)
+        tocFileContents = readFile(item['include'], lang)
+        if tocFileContents is None:
+          logging.error('Error in expandBook, unable to read %s', item['include'])
+          items = [{
+            "title": '** ERROR: TOC not found. **',
+            "path": '#',
+            "status": 'deprecated'
+          }]
+          results = results + expandBook(items, lang)
+        else:
+          newItems = yaml.load(tocFileContents)
+          results = results + expandBook(newItems['toc'], lang)
       else:
         results.append(expandBook(item, lang))
     return results
@@ -269,10 +283,10 @@ def getLeftNav(requestPath, bookYaml, lang='en'):
     logging.exception(' - Unable to read or parse primary book.yaml')
     logging.exception(e)
     whoops = '<h2>Whoops!</h2>'
-    whoops += '<p>An error occured while trying to parse and build the'
+    whoops += '<p>An error occurred while trying to parse and build the'
     whoops += ' left hand navigation. Check the error logs.'
     whoops += '</p>'
-    whoops += '<p>Exception occured.</p>'
+    whoops += '<p>Exception occurred.</p>'
     return whoops
 
 
@@ -281,30 +295,42 @@ def buildLeftNav(bookYaml, lang='en'):
   result = ''
   for item in bookYaml:
     if 'path' in item:
-      result += '<li class="devsite-nav-item">\n'
+      itemClass = 'devsite-nav-item'
+      if 'status' in item:
+        itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
+      result += '<li class="' + itemClass + '">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
+      result += '<span class="devsite-nav-text">'
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
+      result += '</span>'
+      if 'status' in item:
+        result += '<span class="devsite-nav-icon-wrapper">'
+        result += '<span class="devsite-nav-icon material-icons"></span>'
+        result += '</span>'
       result += '</a>\n'
       result += '</li>\n'
     elif 'heading' in item:
-      result += '<li class="devsite-nav-item devsite-nav-item-heading">\n';
-      result += '<span class="devsite-nav-title devsite-nav-title-no-path" ';
-      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" ';
-      result += 'track-metadata-position="0">\n';
+      itemClass = 'devsite-nav-item devsite-nav-item-heading'
+      result += '<li class="' + itemClass + '">\n';
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n';
       result += '<span>' + cgi.escape(item['heading']) + '</span>\n';
       result += '</span>\n</li>\n';
     elif 'section' in item:
       # Sub-section
-      result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
-      result += '<span class="devsite-nav-title devsite-nav-title-no-path" '
-      result += 'track-type="leftNav" track-name="expandNavSectionNoLink" '
-      result += 'track-metadata-position="0">\n'
+      itemClass = 'devsite-nav-item devsite-nav-item-section-expandable x'
+      if 'style' in item:
+        itemClass += ' devsite-nav-accordion'
+      if 'status' in item:
+        itemClass += ' devsite-nav-has-status devsite-nav-' + item['status']
+      result += '<li class="' + itemClass + '">\n'
+      result += '<span class="devsite-nav-title devsite-nav-title-no-path">\n'
       result += '<span>' + cgi.escape(item['title']) + '</span>\n'
+      if 'status' in item:
+        result += '<span class="devsite-nav-icon-wrapper">'
+        result += '<span class="devsite-nav-icon material-icons"></span>'
+        result += '</span>'
       result += '</span>'
-      result += '<a '
-      result += 'class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" '
-      result += 'track-type="leftNav" track-name="expandNavSectionArrow" '
-      result += 'track-metadata-position="0">\n'
+      result += '<a class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons">\n'
       result += '</a>'
       result += '<ul class="devsite-nav-section devsite-nav-section-collapsed">\n'
       result += buildLeftNav(item['section'])
@@ -419,12 +445,14 @@ def getIncludeCode(include_tag, lang='en'):
   region_regex = re.search(r"region_tag=\"(.+?)\"", include_tag)
   dedent_regex = re.search(r"adjust_indentation=\"(.+?)\"", include_tag)
   github_regex = re.search(r"github_path=\"(.+?)\"", include_tag)
+  git_revision_regex = re.search(r"git_revision=\"(.+?)\"", include_tag)
+  file_content_regex = re.search(r"regexp=\"(.+?)\"", include_tag)
 
   # TODO: support these arguments
   as_downloadable_regex = re.search(r"as_downloadable=\"(.+?)\"", include_tag)
   github_link_regex = re.search(r"github_link=\"(.+?)\"", include_tag)
-  git_revision_regex = re.search(r"git_revision=\"(.+?)\"", include_tag)
-  if as_downloadable_regex or github_link_regex or git_revision_regex:
+
+  if as_downloadable_regex or github_link_regex:
     msg = 'Error: as_downloadable, github_link, and git_revision args are not supported'
     logging.error(' - ' + msg)
     return msg
@@ -441,9 +469,12 @@ def getIncludeCode(include_tag, lang='en'):
     if result is None:
       return 'Warning: Unable to find includecode <code>%s</code>' % file_name
   elif github_regex:
+    git_revision = None
+    if git_revision_regex:
+      git_revision = git_revision_regex.group(1)
 
     file_url = github_regex.group(1)
-    result = fetchGithubFile(file_url)
+    result = fetchGithubFile(file_url, git_revision)
     if result is None:
       return 'Warning: Unable to includecode from github_path="<code>%s</code>"' % file_url
 
@@ -455,6 +486,13 @@ def getIncludeCode(include_tag, lang='en'):
       end_at = result.find('[END %s]' % region_name)
       end_at = result.rfind('\n', start_at, end_at)
       result = result[start_at:end_at]
+
+  if file_content_regex:
+    print file_content_regex.groups()
+    r = re.compile(file_content_regex.group(1), re.DOTALL)
+    m = re.search(r, result)
+    if m:
+      result = m.group(1)
 
   if dedent_regex and dedent_regex.group(1) == 'auto':
     result = textwrap.dedent(result)

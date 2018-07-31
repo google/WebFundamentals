@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Latest Updates to the Credential Management API
 
-{# wf_updated_on: 2017-10-12 #}
+{# wf_updated_on: 2018-03-14 #}
 {# wf_published_on: 2017-06-12 #}
 {# wf_tags: credentials,chrome57,chrome60 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Latest updates coming to the Credential Management API in Chrome 60. Also includes an update landed in Chrome 57. #}
-{# wf_blink_components: Blink #}
+{# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
 # Latest Updates to the Credential Management API {: .page-title }
 
@@ -75,23 +75,22 @@ asynchronously creates credential objects.
 
 ### Feature detection needs attention
 
-<aside class="warning">
-  <strong>Warning:</strong>
-Because updates to the Credential Management API landed on Chrome 60 contains
-backward incompatible changes, it's important that your implementation won't be
-triggered on older versions. (If you intentionally want to do so, checkout
-<a href="https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit">this
-migration guide doc.</a>
-</aside>
-
-To check if the new Credential Management API is available, check if
-`preventSilentAccess` exists.
+To see if the Credential Management API for accessing password-based and
+federated credentials is available, check if `window.PasswordCredential` or
+`window.FederatedCredential` is available.
 
 ```js
-if (navigator.credentials && navigator.credentials.preventSilentAccess) {
-  // The new Credential Management API is available
+if (window.PasswordCredential || window.FederatedCredential) {
+  // The Credential Management API is available
 }
 ```
+
+Warning: Feature detection by checking `navigator.credentials` may break your
+website on browsers supporting
+[WebAuthn](https://www.w3.org/TR/webauthn/)(PublicKeyCredential) but not all
+credential types (`PasswordCredential` and `FederatedCredential`) defined by the
+Credential Management API. [Learn
+more](/web/updates/2018/03/webauthn-credential-management).
 
 ### `PasswordCredential` object now includes password {: #password}
 
@@ -148,12 +147,10 @@ You can use existing methods to deliver credential information to your server:
 
 ### Custom fetch will be deprecated soon {: #fetchdeprecation}
 
-<aside class="warning">
-  <strong>Warning:</strong>
-  Now that passwords are no longer returned in the <code>PasswordCredential</code> object,
-  the custom <code>fetch()</code> function will stop working in Chrome 64 (expected [23 Jan 2018](https://www.chromestatus.com/features/schedule)).
-  Developers <strong>must</strong> update their code.
-</aside>
+Warning: Now that passwords are returned in the `PasswordCredential` object, the
+  custom `fetch()` function will stop working in Chrome 64 (expected [23 Jan
+  2018](https://www.chromestatus.com/features/schedule). Developers **must**
+  update their code.
 
 To determine if you are using a custom `fetch()` function,
 check if it uses a `PasswordCredential` object or a `FederatedCredential` object

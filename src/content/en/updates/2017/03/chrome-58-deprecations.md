@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 58 to help you plan.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_blink_components: UI>Shell>TouchView,Internals>Media>Encrypted,Blink>Storage>IndexedDB #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-03-17 #}
 {# wf_tags: deprecations,removals,chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -276,6 +277,6 @@ This feature is removed in Chrome 60.
 &#124; [Chromestatus Tracker](https://www.chromestatus.com/feature/5725741740195840) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=696010)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

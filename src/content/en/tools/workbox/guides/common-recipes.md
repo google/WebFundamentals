@@ -2,13 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2017-12-17 #}
+{# wf_updated_on: 2018-07-29 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
 # Common Recipes {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
 
 This page contains a set of example caching strategies you can use with Workbox.
 
@@ -20,12 +18,15 @@ device.
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('https://fonts.googleapis.com/(.*)'),
+  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
   workbox.strategies.cacheFirst({
-    cacheName: 'googleapis',
+    cacheName: 'google-fonts',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 30,
+      }),
+      new workbox.cacheableResponse.Plugin({
+        statuses: [0, 200]
       }),
     ],
   }),
@@ -129,21 +130,18 @@ from the network, but could benefit by being served by the cache if the
 network request is taking too long.
 
 For this, you can use a `NetworkFirst` strategy with the
-`networkTimetoutSeconds` option configured.
+`networkTimeoutSeconds` option configured.
 
 ```javascript
 workbox.routing.registerRoute(
     'https://hacker-news.firebaseio.com/v0/*',
     workbox.strategies.networkFirst({
-        networkTimetoutSeconds: 3,
+        networkTimeoutSeconds: 3,
         cacheName: 'stories',
         plugins: [
           new workbox.expiration.Plugin({
             maxEntries: 50,
             maxAgeSeconds: 5 * 60, // 5 minutes
-          }),
-          new workbox.cacheableResponse.Plugin({
-            statuses: [0, 200],
           }),
         ],
     }),
@@ -160,5 +158,47 @@ we could use the regular expression `new RegExp('/static/.*/')`, like so:
 workbox.routing.registerRoute(
   new RegExp('/static/(.*)'),
   workbox.strategies.staleWhileRevalidate(),
+);
+```
+
+## Access Caches from Your Web App's Code
+
+The [Cache Storage
+API](/web/fundamentals/instant-and-offline/web-storage/cache-api) is available
+for use in both service worker and in the context of `window` clients. If you
+want to make changes to caches—add or remove entries, or get a list of cached
+URLs—from the context of your web app, you can do so directly, without having to
+communicate with the service worker via `postMessage()`.
+
+For instance, if you wanted to add a URL to the a given cache in response to a
+user action in your web app, you can use code like the following:
+
+```javascript
+// Inside app.js:
+
+async function addToCache(urls) {
+  const myCache = await window.caches.open('my-cache');
+  await myCache.addAll(urls);
+}
+
+// Call addToCache whenever you'd like. E.g. to add to cache after a page load:
+window.addEventListener('load', () => {
+  // ...determine the list of related URLs for the current page...
+  addToCache(['/static/relatedUrl1', '/static/relatedUrl2']);
+});
+```
+
+The cache name, `'my-cache'`, can then be referred to when setting up a route in
+your service worker, and that route can take advantage of any cache entries
+that were added by the web page itself:
+
+```javascript
+// Inside service-worker.js:
+
+workbox.routing.registerRoute(
+  new RegExp('^/static/'),
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'my-cache', // Use the same cache name as before.
+  })
 );
 ```

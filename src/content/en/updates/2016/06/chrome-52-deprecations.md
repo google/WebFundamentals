@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-06-09 #}
+{# wf_blink_components: Blink>MediaStream>* #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-06-09 #}
 {# wf_tags: deprecations,removals,chrome52 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -18,7 +19,7 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the changes in Chrome 52, which is in beta as 
 of June 9. This list is subject to change at any time.
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 ## Deprecate MediaStream ended event and attribute and onended attribute
 

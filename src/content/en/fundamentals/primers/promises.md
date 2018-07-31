@@ -1154,7 +1154,11 @@ opposite of `Promise.all` that only rejects if all items reject.
 </tr>
 </table>
 
+## Feedback {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp,
 Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made

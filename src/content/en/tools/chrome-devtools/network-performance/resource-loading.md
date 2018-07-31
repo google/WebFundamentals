@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Measure the network performance of your web application using the Chrome DevTools Network panel.
 
-{# wf_updated_on: 2016-12-28 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Measure Resource Loading Times {: .page-title }
 
@@ -631,3 +632,7 @@ To learn more optimizing the network performance of your application, see the fo
   Practices](/speed/docs/best-practices/rules_intro)
   provides additional tips for optimizing the network performance of your web
   page or application.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

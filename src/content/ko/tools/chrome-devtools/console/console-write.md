@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 콘솔 로깅은 페이지 또는 애플리케이션이 수행하는 작업을 검사하는 강력한 방법입니다. console.log()로 시작하고 다른 고급 용도를 탐구해 봅시다.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 진단 및 콘솔에 로그 {: .page-title }
@@ -203,7 +203,7 @@ CSS 서식 지정자를 사용하여 콘솔 표시를 사용자설정할 수 있
 
 ### DOM 요소를 자바스크립트 객체로 서식 지정
 
-기본적으로 DOM 요소는 HTML 표현으로 콘솔에 로그되지만 DOM 요소를 자바스크립트 객체로 액세스하여 해당 속성을 검사하길 원할 수 있습니다. 이 경우 `%o` 문자열 지정자를 사용하거나(위 참조) `console.dir`을 사용할 수 있습니다. 
+기본적으로 DOM 요소는 HTML 표현으로 콘솔에 로그되지만 DOM 요소를 자바스크립트 객체로 액세스하여 해당 속성을 검사하길 원할 수 있습니다. 이 경우 `%O` 문자열 지정자를 사용하거나(위 참조) `console.dir`을 사용할 수 있습니다. 
 
 ![dir()을 사용하여 요소 로깅](images/dir-element.png)
 

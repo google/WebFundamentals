@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-10 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -60,7 +60,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __indexed-db-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __indexed-db-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -100,7 +100,7 @@ if (!('indexedDB' in window)) {
 
 ### 3.1 Open a database
 
-Create the database for your app. 
+Create the database for your app.
 
 In __js/main.js__, replace `var dbPromise;` with the following code:
 
@@ -124,7 +124,7 @@ The IndexedDB UI in DevTools doesn't always accurately reflect what's in the dat
 
 
 
-Note: If at any point in the codelab your database gets into a bad state, you can delete it in Chrome DevTools by going to the __Application__ tab, clicking on the database name under IndexedDB, and clicking the __Delete database__ button. Alternatively, you can click __Clear storage__ (in the Application tab) and then click the __Clear site data__ button. In all browsers you can also delete the database from the console with the following command: `indexedDB.deleteDatabase('couches-n-things');`. 
+Note: If at any point in the codelab your database gets into a bad state, you can delete it in Chrome DevTools by going to the __Application__ tab, clicking on the database name under IndexedDB, and clicking the __Delete database__ button. Alternatively, you can click __Clear storage__ (in the Application tab) and then click the __Clear site data__ button. In all browsers you can also delete the database from the console with the following command: `indexedDB.deleteDatabase('couches-n-things');`.
 
 
 
@@ -140,7 +140,7 @@ Replace `var dbPromise = idb.open('couches-n-things', 1);` in __main.js __with t
 var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
   switch (upgradeDb.oldVersion) {
     case 0:
-      // a placeholder case so that the switch block will 
+      // a placeholder case so that the switch block will
       // execute when the database is first created
       // (oldVersion is 0)
     case 1:
@@ -182,7 +182,7 @@ Note: We are deliberately not including `break` statements in the switch block t
 
 ### 3.3 Add objects to the object store
 
-Add some sample furniture items to the object store. 
+Add some sample furniture items to the object store.
 
 Replace TODO 3.3 in __main.js__ with the following code:
 
@@ -263,7 +263,7 @@ dbPromise.then(function(db) {
 
 Save the file and reload the page in the browser. Click __Add Products__ and refresh the page. Confirm that the objects display in the `products` object store under `couches-n-things` in the developer tools. Remember you may need to refresh IndexedDB to see the changes by right clicking __IndexedDB__ and clicking __Refresh IndexedDB__. If that doesn't work, then try collapsing IndexedDB and closing and re-opening DevTools.
 
-Reload the test page. The app should now pass the next test that checks whether the objects have been added to the `products` object store. 
+Reload the test page. The app should now pass the next test that checks whether the objects have been added to the `products` object store.
 
 #### Explanation
 
@@ -315,7 +315,7 @@ Change the version number to 3 in the call to `idb.open`. The full `idb.open` me
 var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
   switch (upgradeDb.oldVersion) {
     case 0:
-      // a placeholder case so that the switch block will 
+      // a placeholder case so that the switch block will
       // execute when the database is first created
       // (oldVersion is 0)
     case 1:
@@ -446,7 +446,7 @@ dbPromise.then(function(db) {
 });
 ```
 
-Save the code and refresh the page in the browser. Enter some prices into the 'price' text boxes (without a currency symbol; try 200 and 500) and click __Search__. Items should appear on the page ordered by price. 
+Save the code and refresh the page in the browser. Enter some prices into the 'price' text boxes (without a currency symbol; try 200 and 500) and click __Search__. Items should appear on the page ordered by price.
 
 __Optional__: On your own time, replace TODO 4.4b in the `getByDesc()` function with the code to get the items by their descriptions. The first part is done for you. The function uses the `only` method on `IDBKeyrange` to match all items with exactly the provided description. To test your code, try putting "A light, high-stool" into the __By Description__ input and clicking __Search__.
 
@@ -490,7 +490,7 @@ This step is for you to complete on your own. In the `addOrders` function in __m
 
 
 
-__Hint: __This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
+__Hint:__ This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
 
 
 
@@ -639,7 +639,7 @@ The solution code can be found in the __solution__ directory.
 
 
 
-You have learned the basics of working with IndexedDB. 
+You have learned the basics of working with IndexedDB.
 
 #### What we've covered
 

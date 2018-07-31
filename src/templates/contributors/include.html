@@ -1,3 +1,5 @@
+<!-- wf_template: src/templates/contributors/include.html -->
+
 <style>
 .wf-byline {display: inline-flex; margin: 16px 32px 16px 0;}
 .wf-byline .attempt-left {margin: 0 16px 0 0;}
@@ -6,7 +8,7 @@
 .wf-byline .wf-byline-social {font-size: smaller;}
 </style>
 
-<section class="wf-byline" itemscope itemtype="http://schema.org/Person">
+<section class="wf-byline" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <div class="attempt-left">
     <figure>
       <img itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
@@ -16,7 +18,7 @@
     <div class="wf-byline-name">
       <strong>By</strong>
       <span itemprop="name">
-        <a href="/web/resources/contributors#{{id}}">
+        <a href="/web/resources/contributors/{{id}}">
           <span itemprop="givenName">{{name.given}}</span>
           <span itemprop="familyName">{{name.family}}</span>
         </a>

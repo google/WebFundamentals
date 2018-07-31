@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses HTTP/2 For Its Own Resources" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_blink_components: N/A #}
 
@@ -39,4 +39,6 @@ Lighthouse excludes resources from other hosts from this audit, because it
 assumes that you have no control over how these resources are served.
 
 
-{% include "web/tools/lighthouse/audits/_feedback/http2.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

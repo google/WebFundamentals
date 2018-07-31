@@ -1,0 +1,38 @@
+<style>
+  .helpful--container {
+    margin: 1em 0;
+    position: relative;
+  }
+  .helpful--section {
+    position: static;
+  }
+</style>
+
+<p>Was this page helpful?</p>
+
+<div class="helpful--container">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="1"
+            data-label="{% dynamic print request.path %}"
+            style="background-color:#f44336;">
+      Yes
+    </button>
+    <aside class="success">
+      Great! Thank you for the feedback.
+    </aside>
+  </section>
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="0"
+            data-label="{% dynamic print request.path %}"
+            style="position:absolute;top:0;left:70px;background-color:#f44336;">
+      No
+    </button>
+    <aside class="warning">
+      Sorry to hear that. Please <a
+      href="https://github.com/google/WebFundamentals/issues/new">open an
+      issue</a> and tell us how we can improve.
+    </aside>
+  </section>
+</div>

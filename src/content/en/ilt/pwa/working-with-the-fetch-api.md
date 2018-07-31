@@ -21,7 +21,7 @@ Codelab:  [Fetch API](lab-fetch-api)
 
 
 
-The  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is a simple interface for fetching resources. Fetch makes it easier to make web requests and handle responses than with the older  [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), which often requires additional logic (for example, for handling redirects). 
+The  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is a simple interface for fetching resources. Fetch makes it easier to make web requests and handle responses than with the older  [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), which often requires additional logic (for example, for handling redirects).
 
 
 
@@ -41,9 +41,9 @@ if (!('fetch' in window)) {
 // We can safely use fetch from now on
 ```
 
-There is a  [polyfill](https://github.com/github/fetch) for  [browsers that are not currently supported](http://caniuse.com/#feat=fetch) (but see the readme for important caveats.). 
+There is a  [polyfill](https://github.com/github/fetch) for  [browsers that are not currently supported](http://caniuse.com/#feat=fetch) (but see the readme for important caveats.).
 
-The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) takes the path to a resource as input. The method returns a  [promise](http://www.html5rocks.com/en/tutorials/es6/promises/) that resolves to the  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) of that request. 
+The  [fetch() method](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) takes the path to a resource as input. The method returns a  [promise](http://www.html5rocks.com/en/tutorials/es6/promises/) that resolves to the  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) of that request.
 
 <div id="makerequest"></div>
 
@@ -67,11 +67,11 @@ fetch('examples/example.json')
 });
 ```
 
-We pass the path for the resource we want to retrieve as a parameter to fetch. In this case this is __examples/example.json__. The fetch call returns a promise that resolves to a response object. 
+We pass the path for the resource we want to retrieve as a parameter to fetch. In this case this is __examples/example.json__. The fetch call returns a promise that resolves to a response object.
 
 When the promise resolves, the response is passed to `.then`. This is where the response could be used. If the request does not complete, `.catch` takes over and is passed the corresponding error.
 
-Response objects represent the response to a request. They contain the requested resource and useful properties and methods. For example, `response.ok`, `response.status`, and `response.statusText` can all be used to evaluate the status of the response. 
+Response objects represent the response to a request. They contain the requested resource and useful properties and methods. For example, `response.ok`, `response.status`, and `response.statusText` can all be used to evaluate the status of the response.
 
 Evaluating the success of responses is particularly important when using fetch because bad responses (like 404s) still resolve. The only time a fetch promise will reject is if the request was unable to complete. The previous code segment would only fall back to .`catch` if there was no network connection, but not if the response was bad (like a 404). If the previous code were updated to validate responses it would look like:
 
@@ -113,7 +113,7 @@ fetch('examples/example.json')
   // Read the response as json.
   return response.json();
 })
-.then(function(responseAsJson) { 
+.then(function(responseAsJson) {
   // Do stuff with the JSON
   console.log(responseAsJson);
 })
@@ -173,7 +173,7 @@ Note: You can also handle any network status code using the `status` property of
 
 Step 3. `readResponseAsJSON` reads the body of the response using the  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) method. This method returns a promise that resolves to JSON. Once this promise resolves, the JSON data is passed to `logResult`. (Can you think of what would happen if the promise from `response.json()` rejects?)
 
-Step 4. Finally, the JSON data from the original request to __examples/example.json__ is logged by `logResult`. 
+Step 4. Finally, the JSON data from the original request to __examples/example.json__ is logged by `logResult`.
 
 #### For more information
 
@@ -183,7 +183,7 @@ Step 4. Finally, the JSON data from the original request to __examples/example.j
 
 ### Example: fetching images
 
-Let's look at an example of fetching an image and appending it to a web page. 
+Let's look at an example of fetching an image and appending it to a web page.
 
 #### main.js
 
@@ -228,7 +228,7 @@ Note: The <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL">URL obj
 
 ### Example: fetching text
 
-Let's look at another example, this time fetching some text and inserting it into the page. 
+Let's look at another example, this time fetching some text and inserting it into the page.
 
 #### main.js
 
@@ -268,7 +268,7 @@ Note: It may be tempting to fetch HTML and append that using the <code>innerHTML
 
 
 
-Note: For completeness, the methods we have used are actually methods of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body">Body</a>, a Fetch API <a href="https://developer.mozilla.org/en-US/docs/Glossary/mixin">mixin</a> that is implemented in the Response object.  
+Note: For completeness, the methods we have used are actually methods of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Body">Body</a>, a Fetch API <a href="https://developer.mozilla.org/en-US/docs/Glossary/mixin">mixin</a> that is implemented in the Response object.
 
 
 
@@ -300,7 +300,7 @@ fetch('examples/words.txt', {
 })
 ```
 
-This will make a HEAD request for __examples/words.txt__. 
+This will make a HEAD request for __examples/words.txt__.
 
 You could use a HEAD request to check the size of a resource. For example:
 
@@ -377,7 +377,7 @@ fetch('/someurl', {
 });
 ```
 
-Here we are creating a Headers object where the `Content-Type` header has the value of `text/plain` and a custom `X-Custom-Header` header has the value of `hello world`. 
+Here we are creating a Headers object where the `Content-Type` header has the value of `text/plain` and a custom `X-Custom-Header` header has the value of `hello world`.
 
 
 
@@ -385,7 +385,7 @@ Note: Only some headers, like <code>Content-Type</code> can be modified. Others,
 
 
 
-Custom headers on [cross-origin](#cors) requests must be supported by the server from which the resource is requested. The server in this example would need to be configured to accept the `X-Custom-Header` header in order for the fetch to succeed. When a custom header is set, the browser performs a  [preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) check. This means that the browser first sends an `OPTIONS` request to the server to determine what HTTP methods and headers are allowed by the server. If the server is configured to accept the method and headers of the original request, then it is sent. Otherwise, an error is thrown. 
+Custom headers on [cross-origin](#cors) requests must be supported by the server from which the resource is requested. The server in this example would need to be configured to accept the `X-Custom-Header` header in order for the fetch to succeed. When a custom header is set, the browser performs a  [preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) check. This means that the browser first sends an `OPTIONS` request to the server to determine what HTTP methods and headers are allowed by the server. If the server is configured to accept the method and headers of the original request, then it is sent. Otherwise, an error is thrown.
 
 #### For more information
 
@@ -406,7 +406,7 @@ Fetch (and XMLHttpRequest) follow the  [same-origin policy](https://developer.mo
 
 ```
 // From http://foo.com/
-fetch('http://bar.com/data.json') 
+fetch('http://bar.com/data.json')
 .then(function(response) {
   // Do something with response
 });
@@ -420,7 +420,7 @@ Note: Cross-origin request restrictions are often a point of confusion. Many res
 
 There have been attempts to work around the same-origin policy (such as  [JSONP](http://stackoverflow.com/questions/2067472/what-is-jsonp-all-about)). The  [Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) (CORS) mechanism has enabled a standardized means of retrieving cross-origin resources. The CORS mechanism lets you specify in a request that you want to retrieve a cross-origin resource (in fetch this is enabled by default). The browser adds an `Origin` header to the request, and then requests the appropriate resource. The browser only returns the response if the server returns an `Access-Control-Allow-Origin` header specifying that the origin has permission to request the resource. In practice, servers that expect a variety of parties to request their resources (such as 3rd party APIs) set a wildcard value for the `Access-Control-Allow-Origin` header, allowing anyone to access that resource.
 
-If the server you are requesting from doesn't support CORS, you should get an error in the console indicating that the cross-origin request is blocked due to the CORS `Access-Control-Allow-Origin` header being missing. 
+If the server you are requesting from doesn't support CORS, you should get an error in the console indicating that the cross-origin request is blocked due to the CORS `Access-Control-Allow-Origin` header being missing.
 
 You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode to request opaque resources.  [Opaque responses](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque) can't be accessed with JavaScript but the response can still be served or cached by a service worker. Using `no-cors` mode with fetch is relatively simple. To update the above example with `no-cors`, we pass in the `init` object with `mode` set to `no-cors`:
 
@@ -430,7 +430,7 @@ You can use  [`no-cors`](https://developer.mozilla.org/en-US/docs/Web/API/Global
   // From http://foo.com/
 fetch('http://bar.com/data.json', {
   mode: 'no-cors' // 'cors' by default
-}) 
+})
 .then(function(response) {
   // Do something with response
 });

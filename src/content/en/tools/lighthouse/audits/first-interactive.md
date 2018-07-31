@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "First Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-23 #}
 {# wf_blink_components: N/A #}
 
@@ -45,37 +45,4 @@ Consistently Interactive][FIACI] for definitions.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'First Interactive / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

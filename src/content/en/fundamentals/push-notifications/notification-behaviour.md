@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2018-07-26 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Notification Behaviour {: .page-title }
@@ -13,7 +13,7 @@ book_path: /web/fundamentals/_book.yaml
 So far we've looked at the options that alter the visual appearance of a notification. There
 are also options that alter the behaviour of notifications.
 
-Be default, calling `showNotification()` with just visual options will have
+By default, calling `showNotification()` with just visual options will have
 the following behaviours:
 
 - Clicking on the notification does nothing.

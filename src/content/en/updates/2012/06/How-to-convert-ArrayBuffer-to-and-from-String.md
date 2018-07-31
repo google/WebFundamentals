@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How to convert ArrayBuffer to and from String
 
-{# wf_updated_on: 2017-08-07 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2012-06-14 #}
 {# wf_tags: news,performance,arraybuffer #}
 
@@ -26,7 +27,7 @@ including
 [WebWorkers](//www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the
 JavaScript world, sometimes they are misinterpreted or misused.
 
-Semantically, an [ArrayBuffer](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBuffer) 
+Semantically, an [ArrayBuffer](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBuffer)
 is simply an array of bytes viewed through a specific mask.
 This mask, an instance of
 [ArrayBufferView](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBufferView),
@@ -46,7 +47,7 @@ using the brackets syntax as if the `Uint16Array` was an integer array:
     bufView[0] = 255;    // buf now contains the bytes [0xFF, 0x00, 0x03, 0x07]
     bufView[0] = 0xff05; // buf now contains the bytes [0x05, 0xFF, 0x03, 0x07]
     bufView[1] = 0x0210; // buf now contains the bytes [0x05, 0xFF, 0x10, 0x02]
-    
+
 
 One common practical question about ArrayBuffer is how to convert a `String` to
 an `ArrayBuffer` and vice-versa. Since an ArrayBuffer is, in fact, a byte array,
@@ -68,7 +69,7 @@ have agreed on the UTF-16 encoding, the conversion code could be something like:
       }
       return buf;
     }
-    
+
 
 Note the use of `Uint16Array`. This is an ArrayBuffer view that aligns bytes of
 the ArrayBuffers as 16-bit elements. It doesn't handle the character encoding
@@ -92,9 +93,9 @@ String into it. Although this method works, it has poor readability and I
 suspect it is slow. Since unfounded suspicions have driven many mistakes in the
 history of humanity, let's take a more scientific approach here. I have
 [jsperf'ed the two methods](http://jsperf.com/arraybuffer-string-conversion/4)
-and the result confirms my suspicion and you <a href="http://www.html5rocks.com/
-en/tutorials/canvas/performance/embed.html?id=agt1YS1wcm9maWxlcnINCxIEVGVzdBixrY
-IRDA">check out the demo here</a>.
+and the result confirms my suspicion and you
+<a href="http://www.html5rocks.com/en/tutorials/canvas/performance/embed.html?id=agt1YS1wcm9maWxlcnINCxIEVGVzdBixrYIRDA">
+check out the demo here</a>.
 
 In Chrome 20, it is almost 27 times faster to use the direct `ArrayBuffer` manipulation code on this article than it is to use the `FileReader`/`Blob` method.
 

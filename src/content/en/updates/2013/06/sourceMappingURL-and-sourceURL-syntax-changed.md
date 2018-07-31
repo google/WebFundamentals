@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2013-06-12 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2013-06-12 #}
 {# wf_tags: news,devtools #}
 
@@ -23,7 +23,7 @@ compilation in the IE JScript engine. A legacy version of the HTML5 Shiv is one
 particular offender here.
 
 ### Spec Change
-The `//@ sourceMappingURL` syntax is defined in the [Sourcemap V3 spec] (https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit#heading=h.lmz475t4mvbx)
+The `//@ sourceMappingURL` syntax is defined in the [Sourcemap V3 spec](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit#heading=h.lmz475t4mvbx)
 It was changed there to use `//#` syntax instead.
 
 ###sourceURL

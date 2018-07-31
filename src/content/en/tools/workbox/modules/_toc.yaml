@@ -24,11 +24,13 @@ toc:
   path: /web/tools/workbox/modules/workbox-cacheable-response
 - title: workbox.broadcastUpdate
   path: /web/tools/workbox/modules/workbox-broadcast-cache-update
+- title: workbox.navigationPreload
+  path: /web/tools/workbox/modules/workbox-navigation-preload
 
 - heading: Node Modules
 - title: Workbox CLI
   path: /web/tools/workbox/modules/workbox-cli
-# - title: workbox-build
-#  path: /web/tools/workbox/modules/workbox-build
+- title: workbox-build
+  path: /web/tools/workbox/modules/workbox-build
 - title: workbox-webpack-plugin
   path: /web/tools/workbox/modules/workbox-webpack-plugin

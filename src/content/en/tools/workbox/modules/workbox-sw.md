@@ -2,14 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-05-03 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
-
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-sw/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox)
 
 ## What is Workbox SW?
 
@@ -54,13 +51,12 @@ offline use.
 If you don’t want to use the CDN, it’s easy enough to switch to Workbox files
 hosted on your own domain.
 
-The simplest approach is to get the files via [workbox-build#getFiles()]() or
-from a [Github Release](https://github.com/GoogleChrome/workbox/releases) and
-then tell `workbox-sw` where to find these files via the `modulePathPrefix`
-config option.
+The simplest approach is to get the files via [`workbox-cli`'s `copyLibraries`
+command](/web/tools/workbox/modules/workbox-cli#copylibraries) or from a [GitHub
+Release](https://github.com/GoogleChrome/workbox/releases), and then tell
+`workbox-sw` where to find these files via the `modulePathPrefix` config option.
 
-Let’s say you put the files under `/third_party/workbox/`, you would use them
-like so:
+If you put the files under `/third_party/workbox/`, you would use them like so:
 
 ```javascript
 importScripts('/third_party/workbox/workbox-sw.js');

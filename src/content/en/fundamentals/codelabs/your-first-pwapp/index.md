@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-10-29 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -96,9 +96,9 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
@@ -107,7 +107,7 @@ After installing the Web Server for Chrome app, click on the Apps shortcut on th
 </aside>
 
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -129,7 +129,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-This app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
+This app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps.
 
 <aside markdown="1" class="key-point">
 <p>From this point forward, all testing/verification (e.g. the<strong> Test It Out</strong> sections in subsequent steps) should be performed using this web server setup.</p>
@@ -144,7 +144,7 @@ This app is not yet doing anything interesting - so far, it's just a minimal ske
 
 ### What is the app shell?
 
-The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times. 
+The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times.
 
 App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a  [service worker](/web/fundamentals/getting-started/primers/service-workers) so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.
 
@@ -158,7 +158,7 @@ Put another way, the app shell is similar to the bundle of code that you'd publi
 
 Using the app shell architecture allows you to focus on speed, giving your Progressive Web App similar properties to native apps: instant loading and regular updates, all without the need of an app store.
 
-### Design the App Shell 
+### Design the App Shell
 
 The first step is to break the design down into its core components.
 
@@ -195,12 +195,7 @@ When designing a more complex app, content that isn't needed for the initial loa
 
 
 
-There are multiple ways to get started with any project, and we generally recommend using Web Starter Kit. But, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
-
-<aside markdown="1" class="key-point">
-<p><strong>Learn more</strong> about  <a href="/web/tools/starter-kit/">Web Starter Kit</a></p>
-</aside>
-
+There are multiple ways to get started with any project, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
 
 ### Create the HTML for the App Shell
 
@@ -478,7 +473,7 @@ First, we need to open the cache with `caches.open()` and provide a cache name. 
 
 Once the cache is open, we can then call `cache.addAll()`, which takes a list of URLs, then fetches them from the server and adds the response to the cache. Unfortunately, `cache.addAll()` is atomic, if any of the files fail, the entire cache step fails!
 
-Alright, let's start getting familiar with how you can use DevTools to understand and debug service workers. Before reloading your page, open up DevTools, go the __Service Worker __pane on the __Application __panel. It should look like this.
+Alright, let's start getting familiar with how you can use DevTools to understand and debug service workers. Before reloading your page, open up DevTools, go the __Service Worker__ pane on the __Application__ panel. It should look like this.
 
 ![ed4633f91ec1389f.png](img/ed4633f91ec1389f.png)
 
@@ -490,7 +485,7 @@ Now, reload your page. The Service Worker pane should now look like this.
 
 When you see information like this, it means the page has a service worker running.
 
-OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener in your `service-worker.js` file. 
+OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener in your `service-worker.js` file.
 
 ```
 self.addEventListener('activate', function(e) {
@@ -504,9 +499,9 @@ Open up the DevTools Console and reload the page, switch to the Service Worker p
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
-Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you  *could * close and re-open the page or press the __skipWaiting __button, but a longer-term solution is to just enable the __Update on Reload __checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
+Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you __could__ close and re-open the page or press the __skipWaiting__ button, but a longer-term solution is to just enable the __Update on Reload__ checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
 
-Enable the __update on reload __checkbox now and reload the page to confirm that the new service worker gets activated.
+Enable the __Update on Reload__ checkbox now and reload the page to confirm that the new service worker gets activated.
 
 Note: You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
 
@@ -651,7 +646,7 @@ Our app uses a cache-first strategy, which results in a copy of any cached conte
 
 #### How do I avoid these edge cases?
 
-So how do we avoid these edge cases? Use a library like  [sw-precache](https://github.com/GoogleChrome/sw-precache), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
+So how do we avoid these edge cases? Use a library like  [Workbox](https://workboxjs.org/), which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.
 
 ### Tips for testing live service workers
 
@@ -739,7 +734,7 @@ self.addEventListener('fetch', function(e) {
 
 The code intercepts the request and checks if the URL starts with the address of the weather API. If it does we'll use  [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to make the request. Once the response is returned, our code opens the cache, clones the response, stores it in the cache, and finally returns the response to the original requestor.
 
-Our app won't work offline quite yet. We've implemented caching and retrieval for the app shell, but even though we're caching the data, the app doesn't yet check the cache to see if it has any weather data. 
+Our app won't work offline quite yet. We've implemented caching and retrieval for the app shell, but even though we're caching the data, the app doesn't yet check the cache to see if it has any weather data.
 
 ### Making the requests
 
@@ -748,7 +743,7 @@ As mentioned previously, the app needs to kick off two asynchronous requests, on
 To do this, we need to:
 
 1. Check if the `caches` object is available in the global `window` object.
-2. Request data from the cache. 
+2. Request data from the cache.
 
 * If the server request is still outstanding, update the app with the cached data.
 
@@ -802,7 +797,7 @@ Every time that a card is updated, the app stores the timestamp of the data on a
 
 ### Test it out
 
-The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. 
+The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page.
 
 Then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell and data cache listed on the left-hand side. Opening the data cache should should the data stored for each city.
 
@@ -824,7 +819,7 @@ Web app install banners give you the ability to let your users quickly and seaml
 
 Chrome then uses a set of criteria including the use of a service worker, SSL status and visit frequency heuristics to determine when to show the banner. In addition a user can manually add it via the "Add to Home Screen" menu button in Chrome.
 
-#### Declare an app manifest with a `manifest.json`__ file__
+#### Declare an app manifest with a `manifest.json` file
 
 The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
 
@@ -876,7 +871,7 @@ An easy way to track how the app is launched is to add a query string to the `st
 
 #### Tell the browser about your manifest file
 
-Now add the following line to the bottom of the `<head>` element in your `index.html` file: 
+Now add the following line to the bottom of the `<head>` element in your `index.html` file:
 
 ```
 <link rel="manifest" href="/manifest.json">
@@ -918,9 +913,9 @@ In your `index.html`, add the following to the bottom of the `<head>` element:
 
 In this section we'll show you a couple of ways to test your web app manifest.
 
-The first way is DevTools. Open up the __Manifest __pane on the __Application __panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
+The first way is DevTools. Open up the __Manifest__ pane on the __Application__ panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
 
-You can also test the add to homescreen feature from this pane. Click on the __Add to homescreen __button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
+You can also test the add to homescreen feature from this pane. Click on the __Add to homescreen__ button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
 
 ![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
 

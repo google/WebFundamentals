@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:控制台日志是一种可以检查您的页面或应用所进行操作的强大方式。我们将先了解 console.log()，然后再探索其他高级用途。
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2015-04-13 #}
 
 # 诊断并记录到控制台中 {: .page-title }
@@ -201,7 +201,7 @@ groupCollapsed() 输出：
 
 ### 将 DOM 元素格式化为 JavaScript 对象
 
-默认情况下，DOM 元素将以其 HTML 的表示的形式记录到控制台中，不过有时，您希望以 JavaScript 对象的形式访问 DOM 元素并检查其属性。为此，您可以使用 `%o` 字符串说明符（参见上文），也可以使用 `console.dir` 达到同样的效果： 
+默认情况下，DOM 元素将以其 HTML 的表示的形式记录到控制台中，不过有时，您希望以 JavaScript 对象的形式访问 DOM 元素并检查其属性。为此，您可以使用 `%O` 字符串说明符（参见上文），也可以使用 `console.dir` 达到同样的效果： 
 
 ![使用 dir() 记录元素](images/dir-element.png)
 

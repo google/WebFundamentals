@@ -7,6 +7,6 @@ toc:
     path: /web/fundamentals/payments/deep-dive-into-payment-request
   - title: Payment Request UX considerations
     path: /web/fundamentals/payments/payment-request-ux-considerations
-  - title: Set up Google Payment API
-    path: /payments/mobile-web-setup
+  - title: Set up Google Pay API
+    path: /pay/api/web/guides/paymentrequest/tutorial
     status: external

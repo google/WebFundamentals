@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Experimentally disabling hardware noise suppression in Chrome 64.
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-12-21 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: chrome64,webrtc,getusermedia #}
@@ -16,12 +16,12 @@ description: Experimentally disabling hardware noise suppression in Chrome 64.
 In Chrome 64 we're trying a new behavior for getUserMedia audio streams that
 have the `echoCancellation` constraint enabled. What's new is that such streams
 will temporarily disable hardware noise suppression for the duration of the
-stream. We anticipate this will make the echo canceller perform better. As this
-is functionality is experimental, it needs to be explicitly turned on; [see
+stream. We anticipate this will make the echo canceller perform better. As this 
+functionality is experimental, it needs to be explicitly turned on; [see
 below](#heading-experiment).
 
 At this point, this behavior is only supported for certain input devices and
-only on macOS. Support is limited to devices which have togglable “ambient noise
+only on macOS. Support is limited to devices which have toggleable “ambient noise
 reduction” in the _Sound_ panel of _System Preferences_.
 
 ## Background

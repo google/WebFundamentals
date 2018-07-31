@@ -2,12 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
 
 This guide will show you how to get up and running with Workbox to route
 common requests for a web page and demonstrate how to cache using a common
@@ -19,7 +18,7 @@ can cache and serve these files using a service worker and Workbox.
 ## Create and Register a Service Worker File
 
 Before we can use Workbox, we need to create a service worker file and
-register it to our web site.
+register it to our website.
 
 Start by creating a file called `sw.js` at the root of your site and add a
 console message to the file (This is so we can see it load).
@@ -30,16 +29,7 @@ console.log('Hello from sw.js');
 
 In your web page register your new service worker file like so:
 
-<pre class="prettyprint html">
-&lt;script&gt;
-// Check that service workers are registered
-if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js');
-  });
-}
-</pre>
+{% include "web/tools/workbox/guides/_shared/register-sw.html" %}
 
 This tells the browser this is the service worker to use for site.
 
@@ -84,7 +74,7 @@ Now we can start using Workbox.
 
 ## Using Workbox
 
-One of Workbox’s primary features is it’s routing and and caching strategy
+One of Workbox’s primary features is it’s routing and caching strategy
 modules. It allows you to listen for requests from your web page and determine
 if and how that request should be cached and responded to.
 
@@ -149,12 +139,14 @@ workbox.routing.registerRoute(
   workbox.strategies.cacheFirst({
     // Use a custom cache name
     cacheName: 'image-cache',
-    cacheExpiration: {
-      // Cache only 20 images
-      maxEntries: 20,
-      // Cache for a maximum of a week
-      maxAgeSeconds: 7 * 24 * 60 * 60,
-    }
+    plugins: [
+      new workbox.expiration.Plugin({
+        // Cache only 20 images
+        maxEntries: 20,
+        // Cache for a maximum of a week
+        maxAgeSeconds: 7 * 24 * 60 * 60,
+      })
+    ],
   })
 );
 ```

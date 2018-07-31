@@ -8,3 +8,9 @@ redirects:
 
 - from: /web/fundamentals/security/prevent-mixed-content/
   to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+
+- from: /web/fundamentals/security/hacked/docs/...
+  to: /web/fundamentals/security/hacked/...
+
+- from: /web/fundamentals/security/credential-management/store-credentials
+  to: /web/fundamentals/security/credential-management/save-forms#store_the_credential

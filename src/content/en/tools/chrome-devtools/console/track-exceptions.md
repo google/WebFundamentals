@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript.
 
-{# wf_updated_on: 2015-05-12 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Exception and Error Handling {: .page-title }
 
@@ -126,4 +127,6 @@ Example of using `window.onerror`:
 
 ![Example of window.onerror handler](images/runtime-exceptions-window-onerror.jpg)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

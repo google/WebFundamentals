@@ -79,7 +79,7 @@ pattern.
 
 First show a fake permission prompt that your website controls, consisting
 of buttons to allow or ignore the permission request. If the user clicks
-allows, request permission, triggering the real browser permission prompt.
+allow, request permission, triggering the real browser permission prompt.
 
 With this approach you display a custom permission prompt in your web app
 which asks the user to enable notifications. By doing this the user can

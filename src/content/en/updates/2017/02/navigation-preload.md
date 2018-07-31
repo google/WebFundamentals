@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2017-09-07 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome59,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Navigation preload lets you overcome service worker startup time by making requests in parallel. #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Speed up Service Worker with Navigation Preloads {: .page-title }
 
@@ -25,7 +26,7 @@ description: Navigation preload lets you overcome service worker startup time by
 * It'll remain behind a flag in Chrome 59 stable (likely to be released in
   March), but you can [apply for an origin trial](#origin-trial) to test it with
   real users.
-  
+
 Note: An earlier version of this article stated that navigation preload was in
 Chrome 57; however, the feature was delayed to Chrome 59.
 
@@ -148,7 +149,7 @@ Here's a video of it in action, where the service worker is given a deliberate
 itself](https://jakearchibald.github.io/isserviceworkerready/demos/nav-preload/).
 To get the benefits of navigation preload, you'll need [Chrome 59
 or later](https://www.google.com/chrome/browser/canary.html) with
-`chrome://flags/#enable-service-worker-navigation-preload` enabled. 
+`chrome://flags/#enable-service-worker-navigation-preload` enabled.
 
 ## Activating navigation preload
 
@@ -184,7 +185,7 @@ addEventListener('fetch', event => {
     <strong>// Else, use the preloaded response, if it's there
     const response = await event.preloadResponse;
     if (response) return response;</strong>
-    
+
     // Else try the network.
     return fetch(event.request);
   }());
@@ -314,11 +315,11 @@ You can look up the state of navigation preload using `getState`:
 
 We're still experimenting with this feature, but we're looking for real-world
 feedback. To get feedback, we're making it available as an [origin
-trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
+trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 starting in Chrome 59. Origin trials allow you to temporarily enable the feature
 for users of your website, so you can test its real-world impact. To do this,
 you'll need to [request a token for your
-origin](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin),
+origin](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin),
 and include the token as a header on your pages and service worker:
 
     Origin-Trial: token_obtained_from_signup

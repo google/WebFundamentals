@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-11-03 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -537,7 +538,7 @@ To view HTTP header data about a request:
 1. Click the **Headers** tab.
 
 <figure>
-  <img src="imgs/headers.svg"
+  <img src="/web/tools/chrome-devtools/images/headers.svg"
        alt="The Headers tab.">
   <figcaption>
     <b>Figure 23</b>. The Headers tab, outlined in blue
@@ -742,6 +743,9 @@ requests aren't counted.
   </figcaption>
 </figure>
 
+See [View the uncompressed size of a resouce](#uncompressed) to see how large
+resources are after the browser uncompresses them.
+
 ### View the stack trace that caused a request {: #initiator-stack-trace }
 
 When a JavaScript statement causes a resource to be requested, hover over the **Initiator**
@@ -752,6 +756,22 @@ column to view the stack trace leading up to the request.
        alt="The stack trace leading up to a resource request">
   <figcaption>
     <b>Figure 32</b>. The stack trace leading up to a resource request
+  </figcaption>
+</figure>
+
+### View the uncompressed size of a resouce {: #uncompressed }
+
+Click **Use Large Request Rows** ![Use Large Request
+Rows](imgs/large-resource-rows-button.png){:.inline-icon} and then look at the
+bottom value of the **Size** column.
+
+<figure>
+  <img src="imgs/large-request-rows.png"
+       alt="An example of uncompressed resources.">
+  <figcaption>
+    <b>Figure 33</b>. The compressed size of the <code>jquery-bundle.js</code> file
+    that was sent over the network was <code>30.9 KB</code>, whereas the uncompressed size was
+    <code>86.3 KB</code>
   </figcaption>
 </figure>
 
@@ -768,7 +788,7 @@ To save a request in the HAR format with content:
   <img src="imgs/save-as-har.png"
        alt="Selecting Save As HAR With Content.">
   <figcaption>
-    <b>Figure 33</b>. Selecting Save As HAR With Content
+    <b>Figure 34</b>. Selecting Save As HAR With Content
   </figcaption>
 </figure>
 
@@ -786,7 +806,7 @@ hover over **Copy**, and select one of the following options:
 <figure>
   <img src="imgs/copy.png" alt="Selecting Copy Response.">
   <figcaption>
-    <b>Figure 34</b>. Selecting Copy Response
+    <b>Figure 35</b>. Selecting Copy Response
   </figcaption>
 </figure>
 
@@ -803,7 +823,7 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 <figure>
   <img src="imgs/hide-filters.svg" alt="The Hide Filters button">
   <figcaption>
-    <b>Figure 35</b>. Hide Filters, outlined in blue
+    <b>Figure 36</b>. Hide Filters, outlined in blue
   </figcaption>
 </figure>
 
@@ -811,34 +831,30 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 
 ### Use large request rows {: #request-rows }
 
-By default, DevTools uses small rows in the [Requests pane](#requests).
-Click **Use large request rows** ![Use large request
-rows][large]{:.devtools-inline} to use large rows, instead.
-
-<figure>
-  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
-  <figcaption>
-    <b>Figure 36</b>. Large Request Rows, outlined in blue
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="imgs/small-request-rows.png"
-       alt="An example of small request rows in the Requests pane.">
-  <figcaption>
-    <b>Figure 37</b>. An example of small request rows in the Requests pane
-  </figcaption>
-</figure>
+Use large rows when you want more whitespace in your network
+requests table. Some columns also provide a little more information
+when using large rows. For example, the bottom value of the **Size**
+column is the uncompressed size of a request.
 
 <figure>
   <img src="imgs/large-request-rows.png"
        alt="An example of large request rows in the Requests pane.">
   <figcaption>
-    <b>Figure 38</b>. An example of large request rows in the Requests pane
+    <b>Figure 37</b>. An example of large request rows in the Requests pane
   </figcaption>
 </figure>
 
+Click **Use large request rows** ![Use large request
+rows][large]{:.devtools-inline} to enable large rows.
+
 [large]: imgs/large-resource-rows-button.png
+
+<figure>
+  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
+  <figcaption>
+    <b>Figure 38</b>. Large Request Rows, outlined in blue
+  </figcaption>
+</figure>
 
 ### Hide the Overview pane {: #hide-overview }
 
@@ -853,3 +869,7 @@ Click **Hide overview** ![Hide overview][hide]{:.devtools-inline} to hide it.
 </figure>
 
 [hide]: imgs/hide-overview.png
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

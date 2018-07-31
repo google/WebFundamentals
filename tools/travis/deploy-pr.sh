@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ev
 
 #
 # Auto-Deploy Pull Request
@@ -31,17 +30,19 @@ VERSION=pr-$TRAVIS_PULL_REQUEST
 
 # Show the final staged URL
 STAGED_URL=https://$VERSION-dot-$AE_APP_ID.appspot.com
-echo Pull Request: $TRAVIS_PULL_REQUEST will be staged at $STAGED_URL
+echo "Pull Request: $TRAVIS_PULL_REQUEST will be staged at $STAGED_URL"
 
 # Deploy to AppEngine
+echo "Deploying to AppEngine ($VERSION)..."
 $HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version $VERSION
 
 if [ $? -eq 0 ]; then
+  # Set git build status to Success
   node tools/travis/updateGitStatus.js success $STAGED_URL
-
   # Flush the MemCache
+  echo "Flushing MemCache... ($STAGED_URL)"
   curl $STAGED_URL/flushMemCache
-
 else
+  # Set git build status to Failed
   node tools/travis/updateGitStatus.js failure
 fi

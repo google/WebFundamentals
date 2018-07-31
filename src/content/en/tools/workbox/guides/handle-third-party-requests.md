@@ -2,12 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to handle third party requests with Workbox.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-04-18 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Handle Third Party Requests {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
 
 A lot of websites will use files from a different origin. For example, if you
 use Google Fonts, you’ll be importing the styles and fonts from
@@ -38,6 +37,33 @@ of this Workbox treats opaque responses differently.
 You can learn more from this
 [Stackoverflow Q&A](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
 
+### Remember to Opt-in to CORS Mode
+
+If you're loading assets from a third party web server that *does* support CORS,
+but you're unexpectedly getting back opaque responses, it could be due to how
+your web app makes those cross-origin requests.
+
+For example, the following HTML will trigger
+[`no-cors` requests](https://fetch.spec.whatwg.org/#concept-request-mode) that
+lead to opaque responses, even if the `example.com` server supports CORS:
+
+```html
+<link rel="stylesheet" href="https://example.com/path/to/style.css">
+<img src="https://example.com/path/to/image.png">
+```
+
+In order to explicitly trigger a
+[`cors` request](https://fetch.spec.whatwg.org/#concept-request-mode), and get
+back a non-opaque response, you need to explicitly opt-in to CORS mode by adding
+the
+[`crossorigin` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)
+to your HTML:
+
+<pre class="prettyprint">
+&lt;link <b>crossorigin="anonymous"</b> rel="stylesheet" href="https://example.com/path/to/style.css"&gt;
+&lt;img <b>crossorigin="anonymous"</b> src="https://example.com/path/to/image.png"&gt;
+</pre>
+
 ## Workbox Caches Opaque Response Sometimes
 
 In general, Workbox will not cache opaque responses.
@@ -60,7 +86,7 @@ The user will be in a broken state.
 
 However, it’s not a bad thing to want to try and add some fault tolerance to
 these requests so Workbox will allow opaque responses to be cached with the
-`networkFirst` and `stalteWhileRevalidate` strategies. Since these strategies
+`networkFirst` and `staleWhileRevalidate` strategies. Since these strategies
 regularly update the cached response it’s much safer to cache them as
 hopefully a bad request will be short lived and used rarely.
 

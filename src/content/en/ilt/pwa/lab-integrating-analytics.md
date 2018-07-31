@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-29 #}
+{# wf_updated_on: 2018-02-15 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -43,7 +43,7 @@ This lab shows you how to integrate Google Analytics into your web apps.
 #### What you will need
 
 * Computer with terminal/shell access
-* Connection to the internet 
+* Connection to the internet
 * A  [browser that supports push](http://caniuse.com/#search=push)
 * A text editor
 *  [Node](https://nodejs.org/en/) installed
@@ -85,7 +85,7 @@ In the browser, you should be prompted to allow notifications. If the prompt doe
 
 You should also see that a service worker registration is logged to the console.
 
-The app for this lab is a simple web page that has some  [push notification](/web/fundamentals/engage-and-retain/push-notifications/) code. 
+The app for this lab is a simple web page that has some  [push notification](/web/fundamentals/engage-and-retain/push-notifications/) code.
 
 __main.js__ requests notification permission and registers a service worker, __sw.js__. The service worker has listeners for push events and notification events.
 
@@ -129,7 +129,7 @@ In a separate tab or window, navigate to  [analytics.google.com](https://analyti
 
 #### If you already have a Google Analytics account:
 
-Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts. 
+Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts.
 
 ![Adding an account](img/76e8d691850a2b7c.png)
 
@@ -141,9 +141,9 @@ The account creation screen should look like this:
 
 ![Creating an account](img/e5475081784bd614.png)
 
-#### What would you like to track? 
+#### What would you like to track?
 
-Choose __Website__. 
+Choose __Website__.
 
 
 
@@ -159,25 +159,25 @@ Note: All the names we use for the account and website are arbitrary. They are o
 
 #### Setting up your account
 
-Enter an account name (for example "PWA Training"). 
+Enter an account name (for example "PWA Training").
 
 #### Setting up your property
 
-The property must be associated with a site. We will use a mock  [GitHub Pages](https://pages.github.com/) site. 
+The property must be associated with a site. We will use a mock  [GitHub Pages](https://pages.github.com/) site.
 
-1. Set the website name to whatever you want, for example "GA Code Lab Site".   
-2. Set the website URL to __USERNAME.github.io/google-analytics-lab/__, where __USERNAME__ is your  [GitHub](https://github.com/) username (or just your name if you don't have a GitHub account). Set the protocol to __https://__. 
-
-
-
-Note: For this lab, the site is just a placeholder, you do not need to set up a GitHub Pages site or be familiar with GitHub Pages or even GitHub. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
+1. Set the website name to whatever you want, for example "GA Code Lab Site".
+2. Set the website URL to __USERNAME.github.io/google-analytics-lab/__, where __USERNAME__ is your  [GitHub](https://github.com/) username (or just your name if you don't have a GitHub account). Set the protocol to __https://__.
 
 
 
-3. Select any industry or category. 
-4. Select your timezone. 
+Note: For this lab, the site is just a placeholder, you do not need to set up a GitHub Pages site or be familiar with GitHub Pages or even GitHub. The site URL that you use to create your Google Analytics account is only used for things like automated testing.
+
+
+
+3. Select any industry or category.
+4. Select your timezone.
 5. Unselect any data sharing settings.
-6. Then choose __Get Tracking ID__ and agree to the terms and conditions. 
+6. Then choose __Get Tracking ID__ and agree to the terms and conditions.
 
 #### Explanation
 
@@ -203,10 +203,10 @@ You should now see your property's tracking ID and tracking code snippet.
 
 If you lost your place:
 
-1. Select the __Admin__ tab. 
-2. Under __account__, select your account (for example "PWA Training") from the drop down list. 
-3. Then under __property__, select your property (for example "GA Code Lab Site") from the down list. 
-4. Now choose __Tracking Info__, followed by __Tracking Code__. 
+1. Select the __Admin__ tab.
+2. Under __account__, select your account (for example "PWA Training") from the drop down list.
+3. Then under __property__, select your property (for example "GA Code Lab Site") from the down list.
+4. Now choose __Tracking Info__, followed by __Tracking Code__.
 
 ![Finding the snippet](img/dc1b90e9a8dd54c9.png)
 
@@ -216,7 +216,7 @@ Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks
 
 ```
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]) \ 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]) \
 .push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0]; \
 a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', \
 'https://www.google-analytics.com/analytics.js','ga');
@@ -227,7 +227,7 @@ a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', \
 </script>
 ```
 
-Copy this script (from the Google Analytics page) and paste it in TODO 3 in <strong>index.html</strong> and <strong>pages/other.html</strong>. Save the scripts and refresh the <strong>app</strong> page (you can close the <strong>page-push-notification.html</strong> page that was opened from the notification click). 
+Copy this script (from the Google Analytics page) and paste it in TODO 3 in <strong>index.html</strong> and <strong>pages/other.html</strong>. Save the scripts and refresh the <strong>app</strong> page (you can close the <strong>page-push-notification.html</strong> page that was opened from the notification click).
 
 Now return to the Google Analytics site. Examine the real time data by selecting __Real-Time__ and then __Overview__:
 
@@ -249,8 +249,8 @@ The __Active Page__ indicates which page is being viewed. Back in the app, click
 
 When a page loads, the tracking snippet script is executed. The  [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (IIFE) in the script does two things:
 
-1. Creates another `script` tag that starts asynchronously downloading __analytics.js__, the library that does all of the analytics work. 
-2. Initializes a global `ga` function, called the command queue. This function allows "commands" to be scheduled and run once the __analytics.js__ library has loaded. 
+1. Creates another `script` tag that starts asynchronously downloading __analytics.js__, the library that does all of the analytics work.
+2. Initializes a global `ga` function, called the command queue. This function allows "commands" to be scheduled and run once the __analytics.js__ library has loaded.
 
 The next lines add two commands to the queue. The first creates a new  [tracker object](/analytics/devguides/collection/analyticsjs/tracker-object-reference). Tracker objects track and store data. When the new tracker is created, the analytics library gets the user's IP address, user agent, and other page information, and stores it in the tracker. From this info Google Analytics can extract:
 
@@ -268,7 +268,7 @@ You can read this  [documentation](/analytics/devguides/collection/analyticsjs/h
 
 The code so far provides the basic functionality of Google Analytics. A tracker is created and a  pageview hit is sent every time the page is visited. In addition to the data gathered by tracker creation, the pageview event allows Google Analytics to infer:
 
-* The total time the user spends on the site 
+* The total time the user spends on the site
 * The time spent on each page and the order in which the pages are visited
 * Which internal links are clicked (based on the URL of the next pageview)
 
@@ -291,7 +291,7 @@ The code so far provides the basic functionality of Google Analytics. A tracker 
 
 
 
-We are using the real-time viewing mode because we have just created the app. Normally, records of past data would also be available. You can view this by selecting __Audience__ and then __Overview__. 
+We are using the real-time viewing mode because we have just created the app. Normally, records of past data would also be available. You can view this by selecting __Audience__ and then __Overview__.
 
 
 
@@ -329,11 +329,11 @@ Note: Don't use <strong>analytics_debug.js</strong> in production. It is much la
 
 
 
-Save the scripts and refresh the page. You should see the browser console logging details of the "create" and "send" commands. 
+Save the scripts and refresh the page. You should see the browser console logging details of the "create" and "send" commands.
 
 
 
-Note: There is also a <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a> that can be used alternatively. 
+Note: There is also a <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a> that can be used alternatively.
 
 
 
@@ -352,7 +352,7 @@ Navigate back to __app/index.html__ using the __Back__ link. Check the console l
 
 
 
-Google Analytics supports custom events that allow fine grain analysis of user behavior. 
+Google Analytics supports custom events that allow fine grain analysis of user behavior.
 
 In <strong>main.js</strong>, replace TODO 6 with the following:
 
@@ -367,7 +367,7 @@ ga('send', {
 });
 ```
 
-Save the script and refresh the page. Click __BUY NOW!!!__. Check the console log, do you see the custom event? 
+Save the script and refresh the page. Click __BUY NOW!!!__. Check the console log, do you see the custom event?
 
 Now return to the __Real-Time__ reporting section of the Google Analytics dashboard. Instead of selecting __Overview__, select __Events__. Do you see the custom event? (If not, try clicking __BUY NOW!!!__ again.)
 
@@ -379,7 +379,7 @@ When using the send command in the `ga` command queue, the hit type can be set t
 
 
 
-Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures. 
+Note: Many of the <code>ga</code> commands are flexible and can use multiple signatures.
 
 You can see all method signatures in the <a href="/analytics/devguides/collection/analyticsjs/command-queue-reference">command queue reference</a>.
 
@@ -459,7 +459,7 @@ Replace TODO 7.2b with the following code
 ga('send', 'event', 'push', 'unsubscribe', 'success');
 ```
 
-Save the script and refresh the app. Now test the subscribe and unsubscribe buttons. Confirm that you see the custom events logged in the browser console, and that they are also shown on the Google Analytics dashboard. 
+Save the script and refresh the app. Now test the subscribe and unsubscribe buttons. Confirm that you see the custom events logged in the browser console, and that they are also shown on the Google Analytics dashboard.
 
 Note that this time we used the alternative  [send command signature](/analytics/devguides/collection/analyticsjs/command-queue-reference#send), which is more concise.
 
@@ -577,9 +577,9 @@ Save the script.
 
 #### Explanation
 
-Because the service worker does not have access to the analytics command queue, `ga`, we need to use the Google Analytics  [Measurement Protocol](/analytics/devguides/collection/protocol/v1/) interface. This interface lets us make HTTP requests to send hits, regardless of the execution context. 
+Because the service worker does not have access to the analytics command queue, `ga`, we need to use the Google Analytics  [Measurement Protocol](/analytics/devguides/collection/protocol/v1/) interface. This interface lets us make HTTP requests to send hits, regardless of the execution context.
 
-We start by creating a variable with your tracking ID. This will be used to ensure that hits are sent to your account and property, just like in the analytics snippet. 
+We start by creating a variable with your tracking ID. This will be used to ensure that hits are sent to your account and property, just like in the analytics snippet.
 
 The `sendAnalyticsEvent` helper function starts by checking that the tracking ID is set and that the function is being called with the correct parameters. After checking that the client is subscribed to push, the hit data is created in the `payloadData` variable:
 
@@ -683,12 +683,12 @@ Replace TODO 8.2d in <strong>sw.js</strong> with the following code:
 sendAnalyticsEvent('received', 'push')
 ```
 
-Save the script. Refresh the page to install the new service worker. Then close and reopen the app to activate the new service worker (remember to close all tabs and windows running the app). 
+Save the script. Refresh the page to install the new service worker. Then close and reopen the app to activate the new service worker (remember to close all tabs and windows running the app).
 
 Now try these experiments and check the console and Google Analytics dashboard for each:
 
-1. [Trigger a push notification](tools-for-pwa-developers#push). 
-2. Click the notification, and note what happens. 
+1. [Trigger a push notification](tools-for-pwa-developers#push).
+2. Click the notification, and note what happens.
 3. Trigger another notification and then close it (with the x in the upper right corner).
 
 Do you see console logs for each event? Do you see events on Google Analytics?
@@ -701,7 +701,7 @@ Note: Because these events use the Measurement Protocol interface instead of <st
 
 #### Explanation
 
-We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the __analytics-helper.js__ file with our `sendAnalyticsEvent` helper function. Then we use this function to send custom events at appropriate places (such as when push events are received, or notifications are interacted with). We pass in the `eventAction` and `eventCategory` that we want to associate with the event as parameters. 
+We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the __analytics-helper.js__ file with our `sendAnalyticsEvent` helper function. Then we use this function to send custom events at appropriate places (such as when push events are received, or notifications are interacted with). We pass in the `eventAction` and `eventCategory` that we want to associate with the event as parameters.
 
 
 
@@ -739,13 +739,13 @@ importScripts('path/to/offline-google-analytics-import.js');
 goog.offlineGoogleAnalytics.initialize();
 ```
 
-Where `path/to/offline-google-analytics-import.js` is the path to the __offline-google-analytics-import.js__ file in the __node_module__ folder. 
+Where `path/to/offline-google-analytics-import.js` is the path to the __offline-google-analytics-import.js__ file in the __node_module__ folder.
 
 Now save the script. Update the service worker by refreshing the page and closing and reopening the app (remember to close all tabs and windows running the app).
 
 Now [simulate offline behavior](tools-for-pwa-developers#offline).
 
-Click __BUY NOW!!!__ to fire our first custom analytics event. 
+Click __BUY NOW!!!__ to fire our first custom analytics event.
 
 You will see an error in the console because we are offline and can't make requests to Google Analytics servers. You can confirm by checking the real-time section of Google Analytics dashboard and noting that the event is not shown.
 
@@ -806,7 +806,7 @@ Note: Notification actions may not be available in Firefox.
 
 
 
-How can you send analytics hits for an action that takes the user away from your page, such as clicking a link to an external vendor or submitting a form (many browsers stop executing JavaScript once the current page starts unloading, preventing send commands from being executed)? 
+How can you send analytics hits for an action that takes the user away from your page, such as clicking a link to an external vendor or submitting a form (many browsers stop executing JavaScript once the current page starts unloading, preventing send commands from being executed)?
 
 Research the  [hitCallback](/analytics/devguides/collection/analyticsjs/sending-hits) functionality. Use a hitCallback to send an analytics event whenever a user clicks the __Special offers__ external link. Make sure to use a timeout so that if the analytics library fails, the user's desired action will still complete!
 

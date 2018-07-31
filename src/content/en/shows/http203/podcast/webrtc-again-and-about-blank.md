@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: WebRTC again, and about:blank weirdness.
 
-{# wf_updated_on: 2017-12-08 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2017-12-08 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-12.mp3 #}
 {# wf_podcast_duration: 00:16:43 #}
@@ -30,4 +30,4 @@ In this mini-episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-12.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/episode-12.mp3" controls preload="none">

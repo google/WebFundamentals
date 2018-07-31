@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 57 to help you plan.
 
-{# wf_updated_on: 2017-10-23 #}
+{# wf_blink_components: Blink>Bluetooth,Blink>ServiceWorker,Blink>Storage>IndexedDB,Blink>WebAudio,Blink>FileAPI,Blink>WebRTC>PeerConnection #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2017-02-01 #}
 {# wf_tags: deprecations,removals,chrome57 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -205,6 +206,6 @@ instead on cookies and other session management mechanisms.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=435547)
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

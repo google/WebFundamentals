@@ -10,7 +10,7 @@ description:瞭解如何在 Three.js 中選取 WebGL 場景並添加 WebVR 功�
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/mscales.html" %}
 
-警告：WebVR 仍處於實驗階段，並且隨時可能更改。
+Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 在本指南中，我們將探討 WebVR API，並利用它們增強一個使用 [Three.js](https://threejs.org/) 構建的簡單 WebGL 場景。不過，在執行過程中，您可能需要從現有的解決方案（如 [WebVR 樣板文件](https://github.com/borismus/webvr-boilerplate)）着手。如果您是初次使用 Three.js，那麼，您可以使用這個[便捷的入門指南](https://aerotwist.com/tutorials/getting-started-with-three-js/)。這是一個非常樂於提供支持的社區，因此，如果您遇到問題，可以向他們尋求幫助。
 

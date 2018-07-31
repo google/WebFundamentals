@@ -18,7 +18,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-sw
         - label: Reference
-          path: ../reference-docs/prerelease/workbox
+          path: ../reference-docs/latest/workbox
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
 
@@ -30,7 +30,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-core
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.core
+          path: ../reference-docs/latest/workbox.core
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-core/
 
@@ -42,7 +42,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-precaching
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.precaching
+          path: ../reference-docs/latest/workbox.precaching
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-precaching/
 
@@ -54,7 +54,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-routing
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.routing
+          path: ../reference-docs/latest/workbox.routing
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
 
@@ -67,7 +67,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-strategies
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.strategies
+          path: ../reference-docs/latest/workbox.strategies
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-strategies/
 
@@ -79,7 +79,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-cache-expiration
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.expiration
+          path: ../reference-docs/latest/workbox.expiration
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cache-expiration/
 
@@ -91,9 +91,9 @@ landing_page:
         - label: Learn more
           path: ./workbox-background-sync
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.backgroundSync
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
+          path: ../reference-docs/latest/workbox.backgroundSync
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-background-sync/
 
       - heading: workbox.googleAnalytics
         description: >
@@ -102,9 +102,9 @@ landing_page:
         - label: Learn more
           path: ./workbox-google-analytics
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.googleAnalytics
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
+          path: ../reference-docs/latest/workbox.googleAnalytics
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-google-analytics/
 
     - items:
       - heading: workbox.cacheableResponse
@@ -115,7 +115,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-cacheable-response
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.cacheableResponse
+          path: ../reference-docs/latest/workbox.cacheableResponse
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-cacheable-response/
 
@@ -127,23 +127,46 @@ landing_page:
         - label: Learn more
           path: ./workbox-broadcast-cache-update
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.broadcastUpdate
+          path: ../reference-docs/latest/workbox.broadcastUpdate
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
 
       - heading: workbox.rangeRequest
         description: >
-          This modules provides support for responding to a request with a
-          ranger header from a Cache.
+          This modules provides support for responding to a <code>Range:</code>
+          request using a slice of previously cached data.
         buttons:
-        # - label: Learn more
-        #   path: ./workbox-broadcast-cache-update
+        - label: Learn more
+          path: ./workbox-range-requests
         - label: Reference
-          path: ../reference-docs/prerelease/workbox.rangeRequests
-        # - label: Demo
-        #   path: https://workbox-demos.firebaseapp.com/demo/workbox-broadcast-cache-update/
+          path: ../reference-docs/latest/workbox.rangeRequests
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-range-requests/
+
+      - heading: workbox.streams
+        description: >
+          This modules provides support for composing a response from a series
+          of streaming sources.
+        buttons:
+        - label: Reference
+          path: ../reference-docs/latest/workbox.streams
+        - label: Demo
+          path: https://workbox-demos.firebaseapp.com/demo/workbox-streams/
+
+    - items:
+      - heading: workbox.navigationPreload
+        description: >
+          Enable navigation preload, to get a network response for navigation
+          requests faster.
+        buttons:
+        - label: Learn more
+          path: ./workbox-navigation-preload
+        - label: Reference
+          path: ../reference-docs/latest/workbox.navigationPreload
 
       # Force Devsite 4-up layout
+      - heading: ""
+      - heading: ""
       - heading: ""
 
     - heading: Node Modules
@@ -162,13 +185,13 @@ landing_page:
 
       - heading: workbox-build
         description: >
-          An NPM module that can generate a complete service worker, inject
+          An npm module that can generate a complete service worker, inject
           a precache manifest and copy the Workbox files.
         buttons:
-        # - label: Learn more
-        #   path: ./workbox-build
+        - label: Learn more
+          path: ./workbox-build
         - label: Reference
-          path: ../reference-docs/prerelease/module-workbox-build
+          path: ../reference-docs/latest/module-workbox-build
 
       - heading: workbox-webpack-plugin
         description: >
@@ -178,7 +201,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-webpack-plugin
         - label: Reference
-          path: ../reference-docs/prerelease/module-workbox-webpack-plugin
+          path: ../reference-docs/latest/module-workbox-webpack-plugin
 
       # Force Devsite 4-up layout
       - heading: ""

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2017-10-29 #}
+{# wf_updated_on: 2018-07-11 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -118,7 +118,7 @@ create a **public JavaScript API** for your tag.
 
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
 
@@ -244,7 +244,7 @@ removed from the DOM (e.g. the user calls `el.remove()`).
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -520,7 +520,7 @@ To use Shadow DOM in a custom element, call `this.attachShadow` inside your
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -577,7 +577,7 @@ Example usage:
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.appendChild(tmpl.content.cloneNode(true));
       }
@@ -616,7 +616,7 @@ structure of a custom element**.
 
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           shadowRoot.appendChild(tmpl.content.cloneNode(true));
         }
@@ -750,7 +750,7 @@ Extending another custom element is done by extending its class definition.
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
 
@@ -781,11 +781,13 @@ There's no better way to write a [progressive web
 app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
 elements**.
 
-Warning: At time of writing, no browser has implemented customized built-in
-elements ([status](https://www.chromestatus.com/feature/4670146924773376)).
-This is unfortunate for accessibility and progressive enhancement. If you think
-extending native HTML elements is useful, voice your thoughts <a
-href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>.
+Note: Only Chrome 67 supports customized built-in elements 
+([status](https://www.chromestatus.com/feature/4670146924773376))
+right now. Edge and Firefox will implement it, but Safari
+has chosen not to implement it. This is unfortunate for accessibility and
+progressive enhancement. If you think extending native HTML elements is 
+useful, voice your thoughts on 
+<a href='https://github.com/w3c/webcomponents/issues/509'>509</a> and <a href='https://github.com/w3c/webcomponents/issues/662'>662</a> on Github.
 
 To extend an element, you'll need to create a class definition that inherits
 from the correct DOM interface. For example, a custom element that extends
@@ -799,7 +801,7 @@ Similarly, an element that extends `<img>` needs to extend `HTMLImageElement`.
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
 
@@ -886,7 +888,7 @@ or create an instance in JavaScript:
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
 
@@ -992,37 +994,52 @@ To feature detect custom elements, check for the existence of
 #### Polyfill {: #polyfill}
 
 Until browser support is widely available, there's a
-[polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js)
-available.
+[standalone polyfill](https://github.com/webcomponents/custom-elements/)
+available for Custom Elements v1. However, we recommend using the [webcomponents.js
+loader](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
+to optimally load the web components polyfills. The loader
+uses feature detection to asynchronously load only the necessary pollyfills
+required by the browser.
 
-**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+Note: If your project transpiles to or uses ES5, be sure to see
+the notes on including [custom-elements-es5-adapter.js](https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs) in addition to the polyfills.
 
 Install it:
 
-    bower install --save webcomponents/custom-elements
+    npm install --save @webcomponents/webcomponentsjs
 
 Usage:
 
+    <!-- Use the custom element on the page. -->
+    <my-element></my-element>
 
-    function loadScript(src) {
-     return new Promise(function(resolve, reject) {
-       const script = document.createElement('script');
-       script.src = src;
-       script.onload = resolve;
-       script.onerror = reject;
-       document.head.appendChild(script);
-     });
-    }
+    <!-- Load polyfills; note that "loader" will load these async -->
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
 
-    // Lazy load the polyfill if necessary.
-    if (!supportsCustomElementsV1) {
-      loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
-        // Polyfill loaded.
+    <!-- Load a custom element definitions in `waitFor` and return a promise -->
+    <script type="module"> 
+      function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+    
+      WebComponents.waitFor(() => {
+        // At this point we are guaranteed that all required polyfills have
+        // loaded, and can use web components APIs.
+        // Next, load element definitions that call `customElements.define`.
+        // Note: returning a promise causes the custom elements
+        // polyfill to wait until all definitions are loaded and then upgrade
+        // the document in one batch, for better performance.
+        return loadScript('my-element.js');
       });
-    } else {
-      // Native support. Good to go.
-    }
+    </script>
 
+Note: the `:defined` CSS pseudo-class cannot be polyfilled.
 
 ## Conclusion
 

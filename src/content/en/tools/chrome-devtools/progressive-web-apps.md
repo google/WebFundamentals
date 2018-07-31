@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2016-07-25 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-07-25 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Debug Progressive Web Apps {: .page-title }
 
@@ -23,10 +24,10 @@ guides](#other).
 
 
 ### TL;DR {: .hide-from-toc }
-- Use the <strong>App Manifest</strong> pane to inspect your web app manifest and trigger Add to Homescreen events.
-- Use the <strong>Service Worker</strong> pane for a whole range of service-worker-related tasks, like unregistering or updating a service, emulating push events, going offline, or stopping a service worker.
+- Use the <strong>Manifest</strong> pane to inspect your web app manifest and trigger Add to Homescreen events.
+- Use the <strong>Service Workers</strong> pane for a whole range of service-worker-related tasks, like unregistering or updating a service, emulating push events, going offline, or stopping a service worker.
 - View your service worker cache from the <strong>Cache Storage</strong> pane.
-- Unregister a service worker and clear all storage and caches with a single button click from the <strong>Clear Storage</strong> pane.
+- Unregister a service worker and clear all storage and caches with a single button click from the <strong>Clear storage</strong> pane.
 
 
 ## Web app manifest {:#manifest}
@@ -199,3 +200,7 @@ Related Guides:
 * [Inspect page resources](/web/tools/chrome-devtools/iterate/manage-data/page-resources)
 * [Inspect and manage local storage and
   caches](/web/tools/chrome-devtools/iterate/manage-data/local-storage)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

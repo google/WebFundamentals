@@ -14,6 +14,7 @@ const moment = require('moment');
 const mkdirp = require('mkdirp');
 const gutil = require('gulp-util');
 const wfRegEx = require('./wfRegEx');
+const testHelper = require('./tests/helpers');
 const exec = require('child_process').exec;
 
 const NO_DATE = '1900-01-01';
@@ -208,7 +209,7 @@ function getRegEx(regEx, content, defaultResponse) {
  */
 function readMetadataForFile(file) {
   const content = fs.readFileSync(file, 'utf8');
-  if (content.match(wfRegEx.RE_MD_INCLUDE)) {
+  if (testHelper.isInclude(file, content)) {
     return null;
   }
   let description = wfRegEx.getMatch(wfRegEx.RE_SNIPPET, content);
@@ -221,8 +222,11 @@ function readMetadataForFile(file) {
   updated = updated.utcOffset(0, true);
   let featured = wfRegEx.getMatch(wfRegEx.RE_FEATURED_DATE, content, NO_DATE);
   featured = moment(featured).utcOffset(0, true);
-  let url = file.replace('src/content/en/', '/web/');
-  url = url.replace('.md', '');
+  const url = file
+    .replace('src/content/en/', '/web/')
+    .replace('.md', '')
+    .replace('.html', '')
+    .replace(/\/index$/, '/');
   let result = {
     filePath: file,
     url: url,

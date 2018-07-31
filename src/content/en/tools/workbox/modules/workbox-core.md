@@ -2,14 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Core {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
-
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-core/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.core)
 
 ## What is Workbox Core?
 

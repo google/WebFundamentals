@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
 {# wf_published_on: 2017-08-17 #}
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_blink_components: Blink>Media #}
 
 # Fast Playback with Video Preload {: .page-title }
@@ -116,7 +116,9 @@ has actually been fetched.
 
 Setting the `preload` attribute to `metadata` indicates that the user is not
 expected to need the video, but that fetching its metadata (dimensions, track
-list, duration, and so on) is desirable.
+list, duration, and so on) is desirable. Note that starting in [Chrome 64], the
+default value for `preload` is `metadata`. (It was `auto` previously).
+
 
 ```
 <video id="video" preload="metadata" src="file.mp4" controls></video>
@@ -233,7 +235,7 @@ smaller files like "file_1.webm", "file_2.webm", "file_3.webm", etc.
 
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
-    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
 
     // If video is preloaded already, fetch will return immediately a response
     // from the browser cache (memory cache). Otherwise, it will perform a
@@ -294,7 +296,7 @@ Player], [JW Player], and [Video.js] are built to handle this for you.
 
   function sourceOpen() {
     URL.revokeObjectURL(video.src);
-    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+    const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
 
     // Fetch beginning of the video by setting the Range HTTP request header.
     fetch('file.webm', { headers: { range: 'bytes=0-567139' } })
@@ -476,7 +478,7 @@ function onPlayButtonClick(videoFileUrl) {
     function sourceOpen() {
       URL.revokeObjectURL(video.src);
 
-      const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp9"');
+      const sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp09.00.10.08"');
       sourceBuffer.appendBuffer(data);
 
       video.play().then(_ => {
@@ -569,6 +571,7 @@ requests.
 
 [how much information or content to preload]: /web/fundamentals/media/video#preload
 [video preload attribute]: /web/fundamentals/media/video#preload
+[Chrome 64]: /web/updates/2017/12/chrome-63-64-media-updates#media-preload-defaults-metadata
 [Data Saver]: https://support.google.com/chrome/answer/2392284
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [covered]: /web/updates/2016/03/link-rel-preload

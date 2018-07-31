@@ -36,7 +36,7 @@ description:学习发现和解决关键渲染路径性能瓶颈。
 
 <img src="images/waterfall-dom.png" alt=""  alt="CRP">
 
-注：尽管本文档使用 DevTools 说明 CRP 概念，DevTools 当前并不非常适合 CRP 分析。
+Note: 尽管本文档使用 DevTools 说明 CRP 概念，DevTools 当前并不非常适合 CRP 分析。
 如需了解详细信息，请参阅 [DevTools 如何？](measure-crp#devtools)。
 
 

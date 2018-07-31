@@ -1,0 +1,12 @@
+experiments:
+- name: feedback
+  description: Determine if red buttons elicit more feedback responses than white ones.
+  analytics_id: UA-52746336-1
+  analytics_custom_dimension_index: 1
+  variants:
+  - name: red
+    description: Red buttons.
+    percent: 50
+  - name: white
+    description: White buttons.
+    percent: 50

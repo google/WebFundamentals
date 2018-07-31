@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Diagnose and Log to Console {: .page-title }
 
@@ -203,8 +204,10 @@ Try this code:
 
 ### Formatting DOM elements as JavaScript objects
 
-By default, DOM elements are logged into the console as representation of their HTML, but sometimes you want to access the DOM element as JavaScript object and inspect its properties. You can use the `%o` string specifier to do that (see above), or use `console.dir` to achieve the same: 
+By default, DOM elements are logged into the console as representation of their HTML, but sometimes you want to access the DOM element as JavaScript object and inspect its properties. You can use the `%O` string specifier to do that (see above), or use `console.dir` to achieve the same: 
 
 ![Logging an element using dir()](images/dir-element.png)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

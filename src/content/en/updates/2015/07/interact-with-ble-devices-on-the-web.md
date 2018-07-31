@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2017-07-19 #}
+{# wf_updated_on: 2018-04-16 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
+{# wf_blink_components: Blink>Bluetooth #}
 
 # Interact with Bluetooth devices on the Web {: .page-title }
 
@@ -29,7 +30,7 @@ sense of how that would work.
 
 This article assumes you have some basic knowledge of how Bluetooth Low
 Energy (BLE) and the [Generic Attribute Profile
-(GATT)](https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx)
+(GATT)](https://www.bluetooth.com/specifications/gatt/generic-attributes-overview)
 work.
 
 Even though the [Web Bluetooth API
@@ -56,7 +57,7 @@ highlighted flag, and restart Chrome for now.
 
 In order to get as much feedback as possible from developers using the Web
 Bluetooth API in the field, we've previously added this feature in Chrome 53 as
-an [origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
+an [origin trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
 OS, Android M, and Mac.
 
 The trial has successfully ended in January 2017.
@@ -141,13 +142,12 @@ For instance, requesting Bluetooth devices advertising the [Bluetooth GATT Batte
     navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
     .then(device => { /* ... */ })
     .catch(error => { console.log(error); });
-    
 
-If your Bluetooth GATT Service is not on the list of [the standardized Bluetooth
-GATT
-services](https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx)
-though, you may provide either the full Bluetooth UUID or a short 16- or 32-bit
-form.
+
+If your Bluetooth GATT Service is not on the list of [the standardized
+Bluetooth GATT
+services](https://www.bluetooth.com/specifications/gatt/services) though, you
+may provide either the full Bluetooth UUID or a short 16- or 32-bit form.
 
 
     navigator.bluetooth.requestDevice({
@@ -157,7 +157,7 @@ form.
     })
     .then(device => { /* ... */ })
     .catch(error => { console.log(error); });
-    
+
 
 You can also request Bluetooth devices based on the device name being
 advertised with the `name` filters key, or even a prefix of this name with the
@@ -205,13 +205,13 @@ remote GATT Server which holds the service and characteristic definitions.
     .then(device => {
       // Human-readable name of the device.
       console.log(device.name);
-    
+
       // Attempts to connect to remote GATT Server.
       return device.gatt.connect();
     })
     .then(server => { /* ... */ })
     .catch(error => { console.log(error); });
-    
+
 
 ### Read a Bluetooth Characteristic
 
@@ -243,13 +243,13 @@ Characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/Chara
       console.log('Battery percentage is ' + value.getUint8(0));
     })
     .catch(error => { console.log(error); });
-    
+
 
 If you use a custom Bluetooth GATT characteristic, you may provide either the
 full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`.
 
 Note that you can also add a `characteristicvaluechanged` event listener on a
-characteristic to handle reading its value. Check out [Read Characteristic Value Changed Sample](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) 
+characteristic to handle reading its value. Check out [Read Characteristic Value Changed Sample](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html)
 to see how to optionally handle upcoming GATT notifications as well.
 
 
@@ -262,12 +262,12 @@ to see how to optionally handle upcoming GATT notifications as well.
       return characteristic.readValue();
     })
     .catch(error => { console.log(error); });
-    
+
     function handleBatteryLevelChanged(event) {
       let batteryLevel = event.target.value.getUint8(0);
       console.log('Battery percentage is ' + batteryLevel);
     }
-    
+
 
 
 ### Write to a Bluetooth Characteristic
@@ -278,7 +278,7 @@ Expended field to 0 on a heart rate monitor device.
 
 I promise there is no magic here. It's all explained in the [Heart Rate
 Control Point Characteristic
-page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_control_point.xml).
+page](https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.heart_rate_control_point.xml).
 
 
     navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
@@ -294,7 +294,7 @@ page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicV
       console.log('Energy expended has been reset.');
     })
     .catch(error => { console.log(error); });
-    
+
 
 ### Receive GATT Notifications
 
@@ -313,14 +313,14 @@ characteristic changes on the device:
       console.log('Notifications have been started.');
     })
     .catch(error => { console.log(error); });
-    
+
     function handleCharacteristicValueChanged(event) {
       var value = event.target.value;
       console.log('Received ' + value);
       // TODO: Parse Heart Rate Measurement value.
       // See https://github.com/WebBluetoothCG/demos/blob/gh-pages/heart-rate-sensor/heartRateSensor.js
     }
-    
+
 
 The [Notifications Sample](https://googlechrome.github.io/samples/web-bluetooth/notifications.html)
 will show you to how to stop notifications with `stopNotifications()` and
@@ -336,18 +336,18 @@ the `BluetoothDevice` gets disconnected to invite the user to reconnect.
     .then(device => {
       // Set up event listener for when device gets disconnected.
       device.addEventListener('gattserverdisconnected', onDisconnected);
-    
+
       // Attempts to connect to remote GATT Server.
       return device.gatt.connect();
     })
     .then(server => { /* ... */ })
     .catch(error => { console.log(error); });
-    
+
     function onDisconnected(event) {
       let device = event.target;
       console.log('Device ' + device.name + ' is disconnected.');
     }
-    
+
 
 You can also call `device.gatt.disconnect()` to disconnect your web app from
 the Bluetooth device. This will trigger existing `gattserverdisconnected` event
@@ -459,7 +459,7 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
     var bluetoothDevice = document.querySelector('platinum-bluetooth-device');
     var batteryLevel = document.querySelector('platinum-bluetooth-characteristic');
-    
+
     bluetoothDevice.request()
     .then(_ => batteryLevel.read())
     .then(value => {

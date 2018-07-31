@@ -19,9 +19,13 @@ upper_tabs:
       - name: Lighthouse
         contents:
         - include: /web/tools/lighthouse/_toc.yaml
+      - name: Puppeteer
+        contents:
+        - include: /web/tools/puppeteer/_toc.yaml
       - name: Workbox
         contents:
-        - include: /web/tools/workbox/_toc.yaml
+        - title: Workbox
+          path: /web/tools/workbox/
       - name: Chrome User Experience Report
         contents:
         - include: /web/tools/chrome-user-experience-report/_toc.yaml

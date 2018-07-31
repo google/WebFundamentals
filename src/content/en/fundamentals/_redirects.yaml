@@ -96,6 +96,9 @@ redirects:
 - from: /web/fundamentals/instant-and-offline/service-worker/registration
   to: /web/fundamentals/primers/service-workers/registration
 
+- from: /web/fundamentals/primers/service-worker/update-a-service-worker
+  to: /web/fundamentals/primers/service-workers/#update-a-service-worker
+
 - from: /web/fundamentals/media/mse/basics
   to: /web/fundamentals/media/mse/
 
@@ -108,8 +111,40 @@ redirects:
 - from: /web/fundamentals/native-hardware/capturing-images/
   to: /web/fundamentals/media/capturing-images/
 
-- from: /web/fundamentals/primers/payment-request/
-  to: /web/fundamentals/payments/
+- from: /web/fundamentals/primers/payment-request/...
+  to: /web/fundamentals/payments/...
+
+- from: /web/fundamentals/payments/android-pay
+  to: /pay/api/web/guides/paymentrequest/tutorial
 
 - from: /web/fundamentals/feed.xml
   to: /web/fundamentals/rss.xml
+
+
+# From list of 404s
+- from: /web/fundamentals/primers/push-notifications/
+  to: /web/fundamentals/push-notifications/
+
+- from: /web/fundamentals/push-notifications/good-notification
+  to: /web/fundamentals/push-notifications/common-notification-patterns
+
+- from: /web/fundamentals/principles/...
+  to: /web/fundamentals/design-and-ux/principles/
+
+- from: /web/fundamentals/discovery-and-distribution/avoid-mixed-content/...
+  to: /web/fundamentals/security/prevent-mixed-content/...
+
+- from: /web/fundamentals/design-and-ux/browser-customization/theme-color
+  to: /web/fundamentals/design-and-ux/browser-customization/#color_browser_elements
+
+- from: /web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries
+  to: /web/fundamentals/design-and-ux/responsive/#css-media-queries
+
+- from: /web/fundamentals/user-input/form-input/
+  to: /web/fundamentals/design-and-ux/input/forms/
+
+- from: /web/fundamentals/discovery-and-distribution/security-with-https/
+  to: /web/fundamentals/security/encrypt-in-transit/why-https
+
+- from: /web/fundamentals/design-and-ux/input/
+  to: /web/fundamentals/design-and-ux/input/forms/

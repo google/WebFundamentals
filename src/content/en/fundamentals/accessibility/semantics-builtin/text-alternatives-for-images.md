@@ -3,8 +3,9 @@ book_path: /web/fundamentals/_book.yaml
 description: Using the alt attribute to provide text alternatives for images
 
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-10-04 #}
+{# wf_blink_components: N/A #}
 
 # Text Alternatives for Images {: .page-title }
 
@@ -30,7 +31,7 @@ Take a look at this image.
 </article>
 
 In the page we have a picture of a cat, illustrating an article on cats'
-well-known judgmental behavior. A screen reader will announces this image using
+well-known judgmental behavior. A screen reader will announce this image using
 its literal name, `"/160204193356-01-cat-500.jpg"`. That's accurate, but not at
 all useful.
 

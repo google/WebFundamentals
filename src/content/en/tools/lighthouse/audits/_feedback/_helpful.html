@@ -1,9 +1,0 @@
-{% setvar category "Lighthouse" %}
-{% setvar question "Was this page helpful?" %}
-{% setvar url %}https://github.com/google/webfundamentals/issues/new?title=[{{ category }} / {{ label }}] {% endsetvar %}
-{% setvar success_button "Yes" %}
-{% setvar success_response "Thanks for the feedback." %}
-{% setvar fail_button "No" %}
-{% setvar fail_response %}Thanks for the feedback. You can help us make this page better by <a href="{{url}}" target="_blank">opening an issue</a> and telling us more.{% endsetvar %}
-<h2>Feedback</h2>
-{% include "web/_shared/feedback.html" %}

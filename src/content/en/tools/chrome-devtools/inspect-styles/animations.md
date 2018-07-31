@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and modify animations with the Chrome DevTools  Animation Inspector.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-05-02 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Inspect animations {: .page-title }
 
@@ -155,3 +156,7 @@ To add a delay to an animation, click and drag it anywhere except the
 circles. 
 
 ![modified delay](imgs/modify-delay.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

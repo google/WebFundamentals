@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Budget API allows developers to perform background actions without notifying users, enabling use cases like silent push.
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-07 #}
 {# wf_tags: javascript,origintrials #}
 {# wf_blink_components: Blink>PushAPI #}
@@ -14,7 +14,7 @@ The Push Messaging API enables us to send notifications to a user even when the
 browser is closed. Many developers want to be able to use this messaging to
 update and synchronize content without the browser being open, but the API has
 one important restriction: you must always display a notification for every
-single push message recieved.
+single push message received.
 
 Being able to send a push message to synchronize data on a user's device or hide
 a notification you had previously shown can be extremely useful for users and
@@ -23,14 +23,14 @@ knowing is open to abuse.
 
 The [Budget
 ](https://wicg.github.io/budget-api/)[API](https://wicg.github.io/budget-api/),
-is a new API designed to allow developers to perform limited background work 
-without notifying the user, such as silent push or performing a background 
+is a new API designed to allow developers to perform limited background work
+without notifying the user, such as silent push or performing a background
 fetch. In Chrome 60 and above you'll be able to start using this API and the
 Chrome team is eager to get feedback from developers.
 
 To allow developers to consume a user's resources in the background, the web
 platform is introducing the concept of a budget using the new Budget API. Each
-site will be awarded an amount of resource based on user engagement that they 
+site will be awarded an amount of resource based on user engagement that they
 can consume for background actions,
 such as a silent push, where each operation will deplete the budget. When the
 budget is spent, background actions can no longer be performed without user
@@ -38,7 +38,7 @@ visibility. The user agent will be responsible for determining budget
 assigned to a web app based on it's heuristics, for example budget allowance
 could be linked to user engagement. Each browser can decide it's own heuristic.
 
-**TL;DR **The Budget API allows to you to reserve budget, use budget, get a list
+**TL;DR** The Budget API allows to you to reserve budget, use budget, get a list
 of remaining budget and understand the cost of background operations
 
 ## Reserving Budget
@@ -52,7 +52,7 @@ the budget was reserved, there is no need to notify the user of your background
 work.
 
 In the example of push notifications, you can attempt to reserve budget for a
-"silent-push" operation and if `reserve()` resolves with true, the operation is 
+"silent-push" operation and if `reserve()` resolves with true, the operation is
 allowed. Otherwise it'll return false and you'll need to show a notification
 
 ```javascript
@@ -72,26 +72,24 @@ self.addEventListener('push', event => {
 ```
 
 In Chrome 60, 'silent-push' is the only operation type that is
-available, but you can find a [full list of operation types in the spec
-](https://wicg.github.io/budget-api/#enumdef-operationtype). There is also no
-easy way to increase your budget for testing or debugging purposes once it's 
-used, but as a temporary workaround you can create a new profile in Chrome. 
-Sadly you can't use
-incognito for this either as the Budget API will return a budget of zero in
-Incognito (although there is a [bug that results in an
-error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079) during
-my testing).
+available, but you can find a 
+[full list of operation types in the spec](https://wicg.github.io/budget-api/#enumdef-operationtype).
+There is also no easy way to increase your budget for testing or debugging 
+purposes once it's used, but as a temporary workaround you can create a new 
+profile in Chrome. Sadly you can't use incognito for this either as the Budget
+API will return a budget of zero in Incognito (although there is a 
+[bug that results in an error](https://bugs.chromium.org/p/chromium/issues/detail?id=730079)
+during my testing).
 
 You should only call `reserve()` when you intend to perform the operation you are
-reserving at some point in the future. Note that if you called reserve in the 
-above example but still showed a
-notification, the budget will still be used.
+reserving at some point in the future. Note that if you called reserve in the
+above example but still showed a notification, the budget will still be used.
 
 One common use case that isn't enabled by `reserve()` alone, is the ability to
 schedule a silent push from a backend. The Budget API does have API's to enable
 this use case but they are still being worked on in Chrome and are currently
 only available behind flags and / or an [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 
 ## Budget API and Origin Trials
 
@@ -99,8 +97,8 @@ There are two methods, `getBudget()` and `getCost()`, that can be used by a web 
 to plan the usage of their budget.
 
 In Chrome 60, both of these methods are available if you sign up for the [origin
-trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)
-but otherwise for testing you can use them locally by enabling the 
+trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+but otherwise for testing you can use them locally by enabling the
 Experimental Web Platform features
 flag (Open chrome://flags/\#enable-experimental-web-platform-features in
 Chrome).
@@ -109,9 +107,9 @@ Let's look how to use these APIs.
 
 ### Get your Budget
 
-You can find your available budget with the `getBudget()` method. Some browsers 
-(like Chrome) will have budget 'decay' over time, so to give you full 
-visibility this returns an array of `BudgetStates`, indicating what your budget 
+You can find your available budget with the `getBudget()` method. Some browsers
+(like Chrome) will have budget 'decay' over time, so to give you full
+visibility this returns an array of `BudgetStates`, indicating what your budget
 will be at various times in the future.
 
 To list the budget entries we can run:
@@ -126,7 +124,7 @@ navigator.budget.getBudget()
 });
 ```
 
-The first entry will be your current budget and additional values will show 
+The first entry will be your current budget and additional values will show
 what your budget will be at various points in the future.
 
 ```

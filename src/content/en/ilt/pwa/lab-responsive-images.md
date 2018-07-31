@@ -54,7 +54,7 @@ Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service w
 
 
 
-If you have a text editor that lets you open a project, open the __responsive-images-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab. 
+If you have a text editor that lets you open a project, open the __responsive-images-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
 This folder contains:
 
@@ -70,7 +70,7 @@ This folder contains:
 
 
 
-Before making the images responsive, let's make sure they won't overflow the screen.  
+Before making the images responsive, let's make sure they won't overflow the screen.
 
 Replace TODO 2 in <strong>styles/main.css</strong> with the following code:
 
@@ -118,11 +118,11 @@ Save the code and refresh the page in the browser. Open your browser's Developer
 
 #### Explanation
 
-In the __images__ folder there are several versions of the SFO image, each at different resolutions. We list these in the `srcset` attribute to give the browser the option to choose which file to use. However, the browser has no way of determining the file sizes before it loads them, so it always chooses the first image in the list. 
+In the __images__ folder there are several versions of the SFO image, each at different resolutions. We list these in the `srcset` attribute to give the browser the option to choose which file to use. However, the browser has no way of determining the file sizes before it loads them, so it always chooses the first image in the list.
 
 ### 3.2 Add width descriptors to the srcset
 
-To load the correct image size based on the viewport width we need to tell the browser how big each file is before it fetches them. 
+To load the correct image size based on the viewport width we need to tell the browser how big each file is before it fetches them.
 
 To complete TODO 3.2 in <strong>index.html</strong>, add width descriptors to the SFO <code>&lt;img&gt;</code> element:
 
@@ -254,7 +254,7 @@ To complete TODO 5.2 in <strong>index.html</strong>, update the <code>sizes</cod
 sizes="(max-width: 700px) 90vw, 50vw"
 ```
 
-Save the code and refresh the page in the browser. Resize the browser window so that it is 600px wide. On a 1x display, the browser should fetch __sfo-800_medium.jpg__. 
+Save the code and refresh the page in the browser. Resize the browser window so that it is 600px wide. On a 1x display, the browser should fetch __sfo-800_medium.jpg__.
 
 <div id="6"></div>
 
@@ -288,7 +288,7 @@ Save the code and refresh the page in the browser. Try resizing the browser wind
 
 #### Explanation
 
-The <code>&lt;picture&gt;</code> element lets us define multiple source files using the <code>&lt;source&gt;</code> tag. This is different than simply using an <code>&lt;img&gt;</code> tag with the `srcset` attribute because the source tag lets us add things like media queries to each set of sources. Instead of giving the browser the image sizes and letting it decide which files to use, we can define the images to use at each window size. 
+The <code>&lt;picture&gt;</code> element lets us define multiple source files using the <code>&lt;source&gt;</code> tag. This is different than simply using an <code>&lt;img&gt;</code> tag with the `srcset` attribute because the source tag lets us add things like media queries to each set of sources. Instead of giving the browser the image sizes and letting it decide which files to use, we can define the images to use at each window size.
 
 We have included several versions of the sample image, each at different resolutions and cropped to make the focus of the image visible at smaller sizes. In the code above, at larger than 750px, the browser fetches either __horses-1600_large_2x.jpg__ (if the device has a 2x display) or __horses-800_large_1x.jpg__. If the window's width is less than 750px but greater than 500px, the browser fetches __horses_medium.jpg__. At less than 500px the browser fetches the fallback image, __horses_small.jpg__.
 
@@ -330,6 +330,6 @@ You have learned how to make images on your web page look good on all devices!
 
 #### Learn more about art direction
 
-*  [Use Cases and Requirements for Standardizing Responsive Images](http://usecases.responsiveimages.org/#art-direction) 
+*  [Use Cases and Requirements for Standardizing Responsive Images](http://usecases.responsiveimages.org/#art-direction)
 
 

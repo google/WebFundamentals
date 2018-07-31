@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-08-08 #}
+{# wf_blink_components: Blink>SecurityFeature,Blink>FileAPI,UI>Browser>Search #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-08-08 #}
 {# wf_tags: deprecations,removals,chrome53 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,7 +18,7 @@ Platform. This article describes the changes in Chrome 52, which is in beta as
 of June 9. This list is subject to change at any time.
 
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 
 ## DHE-based ciphers being phased out

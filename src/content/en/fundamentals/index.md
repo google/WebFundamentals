@@ -17,7 +17,7 @@ page_type: landing
   <p>The core foundations of a delightful web experience are...</p>
   <img src="/web/images/hero-2x.png" class="attempt-right">
   <ul>
-    <li><span class="compare-yes"></span> <b><a href="#fast">Fast</a></b> - It respond quickly to user
+    <li><span class="compare-yes"></span> <b><a href="#fast">Fast</a></b> - It responds quickly to user
       interactions with silky smooth animations and no janky scrolling.</li>
     <li><span class="compare-yes"></span> <b><a href="#integrated">Integrated</a></b> - The user doesn’t have to
       reach through the browser, it uses the full capabilities of the device

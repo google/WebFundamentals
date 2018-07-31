@@ -1,7 +1,7 @@
 {
   "extends": ["eslint:recommended", "google"],
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 2017
   },
   "env": {
     "node": true,

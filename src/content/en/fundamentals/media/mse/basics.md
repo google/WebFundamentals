@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Media Source Extensions (MSE) is a JavaScript API that lets you build streams for playback from segments of audio or video.
 
 {# wf_published_on: 2017-02-08 #}
-{# wf_updated_on: 2017-07-14 #}
+{# wf_updated_on: 2018-03-20 #}
 {# wf_blink_components: Internals>Media #}
 
 # Media Source Extensions {: .page-title }
@@ -14,7 +14,7 @@ description: Media Source Extensions (MSE) is a JavaScript API that lets you bui
 [Media Source Extensions (MSE)](https://www.w3.org/TR/media-source/)
 is a JavaScript API that lets you build streams for playback from segments of
 audio or video. Although not covered in this article, understanding MSE is
-needed if you want to embed videos in your site that does such things as:
+needed if you want to embed videos in your site that do things like:
 
 +  Adaptive streaming, which is another way of saying adapting to device
    capabilities and network conditions
@@ -52,7 +52,7 @@ In practice, the chain looks like this:
     
     function sourceOpen(e) {
       URL.revokeObjectURL(vidElement.src);
-      var mime = 'video/webm; codecs="opus, vp9"';
+      var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
       var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var videoUrl = 'droid.webm';
@@ -230,7 +230,7 @@ if (window.MediaSource) {
 
 function sourceOpen(e) {
   URL.revokeObjectURL(vidElement.src);
-  <strong>var mime = 'video/webm; codecs="opus, vp9"';
+  <strong>var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
   // e.target refers to the mediaSource instance.
   // Store it in a variable so it can be used in a closure.
   var mediaSource = e.target;
@@ -254,7 +254,7 @@ to show part of the example we're building. If you want to see it in context,
 <pre class="prettyprint">
 function sourceOpen(e) {
   URL.revokeObjectURL(vidElement.src);
-  var mime = 'video/webm; codecs="opus, vp9"';  
+  var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
   var mediaSource = e.target;  
   var sourceBuffer = mediaSource.addSourceBuffer(mime);  
   var videoUrl = 'droid.webm'; 
@@ -290,7 +290,7 @@ clause where I append it to the `SourceBuffer`.
 <pre class="prettyprint">
 function sourceOpen(e) {
   URL.revokeObjectURL(vidElement.src);
-  var mime = 'video/webm; codecs="opus, vp9"';
+  var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
@@ -312,7 +312,7 @@ After all `ArrayBuffers` are appended, and no further media data is expected, ca
 <pre class="prettyprint">
 function sourceOpen(e) {
   URL.revokeObjectURL(vidElement.src);
-  var mime = 'video/webm; codecs="opus, vp9"';
+  var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
   var mediaSource = e.target;
   var sourceBuffer = mediaSource.addSourceBuffer(mime);
   var videoUrl = 'droid.webm';
@@ -348,7 +348,7 @@ Source Extensions.
     
     function sourceOpen(e) {
       URL.revokeObjectURL(vidElement.src);
-      var mime = 'video/webm; codecs="opus, vp9"';
+      var mime = 'video/webm; codecs="opus, vp09.00.10.08"';
       var mediaSource = e.target;
       var sourceBuffer = mediaSource.addSourceBuffer(mime);
       var videoUrl = 'droid.webm';

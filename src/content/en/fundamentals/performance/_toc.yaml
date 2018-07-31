@@ -3,9 +3,33 @@ toc:
     style: accordion
     section:
     - title: Overview
+      path: /web/fundamentals/performance/why-performance-matters/
+    - title: Measure Performance with the RAIL Model
       path: /web/fundamentals/performance/rail
     - title: Loading Performance
       section:
+      - title: Overview
+        path: /web/fundamentals/performance/get-started/
+      - title: Get Started
+        section:
+        - title: Measuring Performance
+          path: /web/fundamentals/performance/get-started/measuringperf-2
+        - title: Text Content
+          path: /web/fundamentals/performance/get-started/textcontent-3
+        - title: Graphical Content
+          path: /web/fundamentals/performance/get-started/graphicalcontent-4
+        - title: HTTP Requests
+          path: /web/fundamentals/performance/get-started/httprequests-5
+        - title: HTTP Caching
+          path: /web/fundamentals/performance/get-started/httpcaching-6
+        - title: Wrap-up and Demo
+          path: /web/fundamentals/performance/get-started/wrapup-7
+      - title: How to Think About Speed Tools
+        path: /web/fundamentals/performance/speed-tools
+      - title: Assessing Loading Performance in Real Life with Navigation and Resource Timing
+        path: /web/fundamentals/performance/navigation-and-resource-timing/
+      - title: User-centric Performance Metrics
+        path: /web/fundamentals/performance/user-centric-performance-metrics
       - title: Understanding Low Bandwidth and High Latency
         path: /web/fundamentals/performance/poor-connectivity/
       # - title: Overview
@@ -27,7 +51,16 @@ toc:
           path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
           step_group: perf-oce
         - title: Automating Image Optimization
-          path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/automating-image-optimization/
+          step_group: perf-oce
+        - title: Replace Animated GIFs with Video
+          path: /web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/
+          step_group: perf-oce
+        - title: JavaScript Start-up Optimization
+          path: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
+          step_group: perf-oce
+        - title: Loading Third-Party JavaScript
+          path: /web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript/
           step_group: perf-oce
         - title: Web Font Optimization
           path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
@@ -35,6 +68,13 @@ toc:
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
           step_group: perf-oce
+        - title: Delivering Fast and Light Applications with Save-Data
+          path: /web/fundamentals/performance/optimizing-content-efficiency/save-data/
+          step_group: perf-oce
+      - title: Optimizing JavaScript
+        section:
+        - title: Reduce JavaScript Payloads with Tree Shaking
+          path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
@@ -51,6 +91,10 @@ toc:
             path: /web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices
         - title: Offline UX Considerations
           path: /web/fundamentals/instant-and-offline/offline-ux
+      - title: Lazy Loading Resources
+        section:
+          - title: Images and Video
+            path: /web/fundamentals/performance/lazy-loading-guidance/images-and-video
       - title: Order Loading Thoughtfully
         section:
         - title: Critical Rendering Path
@@ -88,6 +132,23 @@ toc:
         path: /web/fundamentals/performance/prpl-pattern/
       - title: Resource Prioritization
         path: /web/fundamentals/performance/resource-prioritization
+      - title: Web Performance Optimization with webpack
+        section:
+          - title: Introduction
+            path: /web/fundamentals/performance/webpack/
+            step_group: perf-webpack
+          - title: Decrease Front-end Size
+            path: /web/fundamentals/performance/webpack/decrease-frontend-size
+            step_group: perf-webpack
+          - title: Make Use of Long-term Caching
+            path: /web/fundamentals/performance/webpack/use-long-term-caching
+            step_group: perf-webpack
+          - title: Monitor and analyze the app
+            path: /web/fundamentals/performance/webpack/monitor-and-analyze
+            step_group: perf-webpack
+          - title: Conclusion
+            path: /web/fundamentals/performance/webpack/conclusion
+            step_group: perf-webpack
     - title: Rendering Performance
       section:
       - title: Overview

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-02-22 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -25,7 +25,7 @@ Increasingly, the growth in internet traffic comes from mobile-first and (in som
 
 As application developers, we want to ensure a good user experience, preventing network shortcomings from affecting applications. With  [service workers](/web/fundamentals/getting-started/primers/service-workers) we now have a way to build offline support. Service workers provide an in-browser, programmable network proxy, so that users can always get to something on your website.
 
-Service workers provide many new features to web applications, including programmatic file caching, intercepting network request, and receiving push messages. The service worker runs independently of the web app and can even be called when the app isn't running (for example to wake it up and deliver a message).  
+Service workers provide many new features to web applications, including programmatic file caching, intercepting network request, and receiving push messages. The service worker runs independently of the web app and can even be called when the app isn't running (for example to wake it up and deliver a message).
 
 Some benefits of implementing service workers include:
 
@@ -37,9 +37,9 @@ Some benefits of implementing service workers include:
 
 Service workers can use the  [Cache ](https://developer.mozilla.org/en-US/docs/Web/API/Cache)interface to cache an application's assets. A service worker script can implement a number of  [caching strategies](/web/fundamentals/instant-and-offline/offline-cookbook/), allowing fine tuning of an app's offline and low-connectivity performance.
 
-The Cache interface's storage is controlled programmatically and __is independent__ of the browser's HTTP cache. Unlike the browser's HTTP cache, the Cache interface's storage is available offline. The service worker can use this to enable offline support in browsers. 
+The Cache interface's storage is controlled programmatically and __is independent__ of the browser's HTTP cache. Unlike the browser's HTTP cache, the Cache interface's storage is available offline. The service worker can use this to enable offline support in browsers.
 
-Service workers can also use  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to store data locally. This enables new features such as capturing user actions while offline and delivering them once connectivity returns. 
+Service workers can also use  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to store data locally. This enables new features such as capturing user actions while offline and delivering them once connectivity returns.
 
 
 
@@ -51,11 +51,11 @@ For an example of working with AppCache and the challenges developers face, see 
 
 ### Improved performance
 
-Caching data locally results in speed and cost benefits for mobile users (many of whom are charged based on their data usage). The service worker can cache content in the user's browser and retrieve data from the cache without going to the network. This provides a faster (and probably cheaper) experience for all users, even those with strong connectivity. 
+Caching data locally results in speed and cost benefits for mobile users (many of whom are charged based on their data usage). The service worker can cache content in the user's browser and retrieve data from the cache without going to the network. This provides a faster (and probably cheaper) experience for all users, even those with strong connectivity.
 
 ### Access to browser independent features
 
-Service workers are the foundation for browser independent features for web applications. Because a service worker's lifecycle is independent of the web app's lifecycle, the service worker can take actions even when the web app isn't running (for example, receiving push notifications, syncing data in the background, and geofencing). Combined with progressive enhancement, these features can be safely added to your app without breaking it in unsupported browsers. To see if a target browser supports a given service worker feature, check  [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
+Service workers are the foundation for browser independent features for web applications. Because a service worker's lifecycle is independent of the web app's lifecycle, the service worker can take actions even when the web app isn't running (for example, receiving push notifications or syncing data in the background). Combined with progressive enhancement, these features can be safely added to your app without breaking it in unsupported browsers. To see if a target browser supports a given service worker feature, check  [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
 
 <div id="how"></div>
 
@@ -123,7 +123,7 @@ This code starts by defining a cache name and a list of URLs to be cached (the s
 
 
 
-Note: The `.` represents the current directory (for example, __app/__). If the user navigates to __app/__, the browser generally shows __app/index.html__. However, __app/__ and __app/index.html__ are separate URLs, so a 404 can still occur if the user navigates to __app/__ and only __app/index.html__ is available. We cache `.` as well as `index.html` to avoid this potential error.  
+Note: The `.` represents the current directory (for example, __app/__). If the user navigates to __app/__, the browser generally shows __app/index.html__. However, __app/__ and __app/index.html__ are separate URLs, so a 404 can still occur if the user navigates to __app/__ and only __app/index.html__ is available. We cache `.` as well as `index.html` to avoid this potential error.
 
 
 
@@ -188,7 +188,7 @@ We <code>clone</code> the response because the request is a stream that can only
 
 ### What have we done?
 
-When the app opens for the first time, the service worker is registered, installed, and activated. During installation, the app caches static assets (the main HTML and CSS). On future loads, each time a resource is requested the service worker intercepts the request, and checks the cache for the resource before going to the network. If the resource isn't cached, the service worker fetches it from the network and caches a copy of the response. 
+When the app opens for the first time, the service worker is registered, installed, and activated. During installation, the app caches static assets (the main HTML and CSS). On future loads, each time a resource is requested the service worker intercepts the request, and checks the cache for the resource before going to the network. If the resource isn't cached, the service worker fetches it from the network and caches a copy of the response.
 
 After the first user visit, the app will open even when offline!
 

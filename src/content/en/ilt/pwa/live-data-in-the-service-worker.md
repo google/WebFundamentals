@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-06-14 #}
+{# wf_updated_on: 2018-06-07 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -29,19 +29,19 @@ Offline support and reliable performance are key features of Progressive Web App
 
 
 
-A general guideline for data storage is that URL addressable resources should be stored with the  [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) interface, and other data should be stored with  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). For example HTML, CSS, and JS files should be stored in the cache, while JSON data should be stored in IndexedDB. Note that this is only a guideline, not a firm rule. 
+A general guideline for data storage is that URL addressable resources should be stored with the  [Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache) interface, and other data should be stored with  [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). For example HTML, CSS, and JS files should be stored in the cache, while JSON data should be stored in IndexedDB. Note that this is only a guideline, not a firm rule.
 
 ### Why IndexedDB and the Cache interface?
 
 There are a  [variety of reasons](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) to use IndexedDB and the Cache interface. Both are asynchronous and accessible in service workers, web workers, and the window interface. IndexedDB is  [widely supported](http://caniuse.com/#feat=indexeddb), and the Cache interface  [is supported](https://jakearchibald.github.io/isserviceworkerready/) in Chrome, Firefox, Opera, and Samsung Internet.
 
-In this text we use Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB. There are also  [other IndexedDB libraries](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) that can be used to abstract some of the less convenient aspects of the API. 
+In this text we use Jake Archibald's  [IndexedDB Promised](https://github.com/jakearchibald/indexeddb-promised) library, which enables promise syntax for IndexedDB. There are also  [other IndexedDB libraries](https://medium.com/dev-channel/offline-storage-for-progressive-web-apps-70d52695513c#.lm82vlyt8) that can be used to abstract some of the less convenient aspects of the API.
 
 Debugging support for IndexedDB is available in Chrome, Opera, Firefox and Safari. Debugging support for Cache Storage is available in Chrome, Opera, and Firefox. These are covered in [Tools for PWA Developers](tools-for-pwa-developers).
 
 
 
-Note: Some developers have run into issues with Safari 10's IndexedDB implementation. Test your app to make sure it works on your target browser. File browser bugs with your browser's vendor so that browser implementors and library maintainers can investigate. 
+Note: Some developers have run into issues with Safari 10's IndexedDB implementation. Test your app to make sure it works on your target browser. File browser bugs with your browser's vendor so that browser implementors and library maintainers can investigate.
 
 
 
@@ -110,7 +110,7 @@ Different browsers allow different amounts of offline storage. This table summar
 
 ### Storing data with IndexedDB
 
-IndexedDB is a noSQL database. IndexedDB data is stored as key-value pairs in __object stores__. The table below shows an example of an object store, in this case containing beverage items:
+IndexedDB is a NoSQL database. IndexedDB data is stored as key-value pairs in __object stores__. The table below shows an example of an object store, in this case containing beverage items:
 
 <table markdown="1">
 <tr><td colspan="1" rowspan="1">
@@ -176,7 +176,7 @@ Here we create a  'products' database, version 1. Inside the 'products' database
 
 
 
-Note: If you're familiar with IndexedDB, you may be asking why we didn't use a transaction when creating and populating the database. In IndexedDB, a transaction is built into the database creation operation. 
+Note: If you're familiar with IndexedDB, you may be asking why we didn't use a transaction when creating and populating the database. In IndexedDB, a transaction is built into the database creation operation.
 
 
 
@@ -272,7 +272,7 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
-This code adds a `fetch` listener on the service worker that attempts to get resources from the cache before going to the network. If the resource isn't found in the cache, a regular network request is still made. 
+This code adds a `fetch` listener on the service worker that attempts to get resources from the cache before going to the network. If the resource isn't found in the cache, a regular network request is still made.
 
 <div id="resources"></div>
 

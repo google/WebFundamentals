@@ -2,12 +2,12 @@ toc:
 - title: Integration & Engagement
   style: accordion
   section:
-  - title: Add to Home Screen
+  - title: App Install Prompt
     section:
-    - title: App Install Banners
+    - title: Add to Home Screen (Web)
       path: /web/fundamentals/app-install-banners/
-    - title: Web App Manifest
-      path: /web/fundamentals/web-app-manifest/
+    - title: App Install Prompt (Native)
+      path: /web/fundamentals/app-install-banners/native
     - title: Additional Colors and Icons
       path: /web/fundamentals/design-and-ux/browser-customization/
   - include: /web/fundamentals/native-hardware/_toc.yaml
@@ -24,3 +24,7 @@ toc:
       path: /web/fundamentals/design-and-ux/input/touch/
   - include: /web/fundamentals/payments/_toc.yaml
   - include: /web/fundamentals/push-notifications/_toc.yaml
+  - title: WebAPKs on Android
+    path: /web/fundamentals/integration/webapks
+  - title: Web App Manifest
+    path: /web/fundamentals/web-app-manifest/

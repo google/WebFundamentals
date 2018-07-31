@@ -2,12 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Say goodbye to shadow-piercing CSS selectors.
 
-{# wf_updated_on: 2017-10-24 #}
+{# wf_updated_on: 2018-07-12 #}
 {# wf_published_on: 2017-10-24 #}
-{# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals #}
+{# wf_tags: webcomponents,shadowdom,style,css,deprecations,removals,chrome63 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: Say goodbye to shadow-piercing CSS selectors. #}
 {# wf_blink_components: Blink>DOM #}
+
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
 
 # Removing ::shadow and /deep/ in Chrome 63 {: .page-title }
 
@@ -57,4 +59,13 @@ remove usage of these selectors, consider switching from native shadow DOM over
 to the shady DOM polyfill. You should only need to make this change if your site
 relies on native shadow DOM v0.
 
+## More information
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HX5Y8Ykr5Ns/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6750456638341120) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
+
 {% include "comment-widget.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
+

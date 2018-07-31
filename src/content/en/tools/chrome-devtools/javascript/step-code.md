@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # How to step through your code {: .page-title }
 
@@ -337,3 +338,7 @@ script execution, step over next function call, etc.), that action would only
 pertain to the worker thread. The Main thread is not affected.
 
 ![worker thread in focus](imgs/worker-thread.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

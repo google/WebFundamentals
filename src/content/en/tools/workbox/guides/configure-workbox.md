@@ -2,12 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Configure Workbox {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
 
 Out of the box Workbox comes set up with some default values for cache
 names and log levels. This guide will cover how you can change these values
@@ -82,7 +81,7 @@ If you wanted to use a cache for images, you might configure a route like this:
 ```javascript
 workbox.routing.registerRoute(
   /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-  new workbox.strategies.CacheFirst({
+  workbox.strategies.CacheFirst({
     cacheName: 'my-image-cache',
   })
 );
@@ -91,6 +90,36 @@ workbox.routing.registerRoute(
 This will result in images being stored in a cache called `my-image-cache`.
 
 ![Using a Custom Cache Name in Workbox](../images/guides/configure-workbox/custom-cache-name.png)
+
+### Custom Fetch Options in Strategies
+
+When using a custom strategy for runtime caching, you might find the need to customize some aspects
+of the outgoing requests. For instance, a request might not include credentials (i.e. cookies) by
+default, but you happen to know that your use case requires credentials to be set.
+
+To handle this scenario, you can pass in a configuration value named `fetchOptions` to a strategy's
+constructor, corresponding to the
+[`init` options](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+used in the underlying Fetch API. These options will then be applied to all outgoing requests
+handled by that strategy.
+
+For instance, to ensure that all of your outgoing requests matching a given third-party URL end up
+using a credentials mode of 'include', you can set up the following route:
+
+```javascript
+workbox.routing.registerRoute(
+  new RegExp('https://third-party\.example\.com/'),
+  workbox.strategies.NetworkFirst({
+    fetchOptions: {
+      credentials: 'include',
+    },
+  })
+);
+```
+
+Refer to the
+[Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+for a full list of possible configuration values.
 
 ### Configure Debug Builds vs Production Builds
 
@@ -120,7 +149,7 @@ workbox.setConfig({ debug: true });
 workbox.setConfig({ debug: false });
 ```
 
-If you are using the modules directly (via CDN of from NPM modules), you can
+If you are using the modules directly (via CDN of from npm modules), you can
 switch between development and production builds by changing the file extension
 between `<module>.dev.js` and `<module>.prod.js`.
 

@@ -53,14 +53,14 @@ between revisions and undo their work. Or if you're developing an offline media
 playback experience, saving audio or video files locally would be a critical
 feature. Every web app that can be personalized ends up needing to save some
 sort of [state
-information](/web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices-app-state).
+information](/web/fundamentals/instant-and-offline/web-storage/indexeddb-best-practices).
 How do you know how much space is available for this type of runtime storage,
 and what happens when you run out of room?
 
 ## The past: window.webkitStorageInfo and navigator.webkitTemporaryStorage {: #the-past }
 
 Browsers have historically supported this type of introspection via prefixed
-interfaces, like the very old (and deprecated) 
+interfaces, like the very old (and deprecated)
 <code>[window.webkitStorageInfo](https://github.com/Modernizr/Modernizr/issues/866)</code>,
 and the not-quite-as-old, but still non-standard
 [`navigator.webkitTemporaryStorage`](https://developer.chrome.com/apps/offline_storage#query).
@@ -122,7 +122,7 @@ async function storeDataAndUpdateUI(dataUrl) {
   // See https://googlechrome.github.io/samples/service-worker/window-caches/
   const cache = await caches.open('data-cache');
   await cache.add(dataUrl);
-  
+
   if ('storage' in navigator && 'estimate' in navigator.storage) {
     const {usage, quota} = await navigator.storage.estimate();
     const percentUsed = Math.round(usage / quota * 100);

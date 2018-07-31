@@ -13,6 +13,7 @@ const requireDir = require('require-dir');
 
 requireDir('./gulp-tasks');
 requireDir('./gulp-tasks/workbox');
+requireDir('./gulp-tasks/puppeteer');
 
 gutil.log('---------------------------------');
 gutil.log(`${chalk.dim('Web')}${chalk.bold('Fundamentals')} Gulp`);
@@ -29,6 +30,7 @@ global.WF = {
     templates: 'src/templates/',
   },
   maxArticlesInFeed: 10,
+  minFeedDate: 2010,
   langs: [
     'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
     'ko', 'nl', 'pl', 'pt-br', 'ru', 'th', 'tr', 'vi', 'zh-cn', 'zh-tw',
@@ -39,10 +41,12 @@ global.WF = {
  * Default options
  *****************************************************************************/
 const defaultOptions = {
-  string: ['lang', 'verbose', 'testAll', 'testTests', 'testWarnOnly'],
+  boolean: ['buildRSS', 'verbose', 'testAll', 'testTests', 'testWarnOnly'],
+  string: ['lang', 'buildType'],
   default: {
     lang: null,
     verbose: false,
+    buildRSS: false,
     buildType: 'dev',
     testAll: false,
     testTests: false,
@@ -67,33 +71,32 @@ if (global.WF.options.lang) {
     }
   });
   global.WF.options.lang = langs;
+  gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
 } else {
   global.WF.options.lang = global.WF.langs;
 }
-gutil.log('Language: ', gutil.colors.cyan(global.WF.options.lang));
+
+// Build RSS
+gutil.log('Build RSS Files:', gutil.colors.cyan(global.WF.options.buildRSS));
 
 // Show verbose output
-if (global.WF.options.verbose !== false) {
-  global.WF.options.verbose = true;
+if (global.WF.options.verbose) {
+  gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 }
-gutil.log('Verbose: ', gutil.colors.cyan(global.WF.options.verbose));
 
 // Test all files
-if (global.WF.options.testAll !== false) {
+if (global.WF.options.testAll) {
   gutil.log('testAll:', chalk.cyan('true'));
-  global.WF.options.testAll = true;
 }
 
 // Test test files
-if (global.WF.options.testTests !== false) {
+if (global.WF.options.testTests) {
   gutil.log('testTests:', chalk.cyan('true'));
-  global.WF.options.testTests = true;
 }
 
 // Warn only, no errors
-if (global.WF.options.testWarnOnly !== false) {
+if (global.WF.options.testWarnOnly) {
   gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
-  global.WF.options.testWarnOnly = true;
 }
 
 gutil.log('');
@@ -109,9 +112,11 @@ gulp.task('clean', function() {
   const filesToDelete = [
     'test-results.json',
     'src/content/en/_shared/contributors/*',
+    'src/content/en/_shared/latest_*.html',
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
     'src/content/**/_files.json',
+    'src/content/*/_index-latest-*.html',
     'src/content/en/sitemap.xml',
     'src/content/*/fundamentals/glossary.md',
     'src/content/*/resources/contributors/*',
@@ -124,6 +129,7 @@ gulp.task('clean', function() {
     'src/content/*/shows/**/feed.xml',
     'src/content/*/shows/http203/podcast/index.md',
     'src/content/*/shows/designer-vs-developer/podcast/index.md',
+    'src/content/*/tools/puppeteer/_src/**/*',
     'src/content/*/updates/_index.yaml',
     'src/content/*/updates/*/index.md',
     'src/content/*/updates/tags/*',
@@ -152,6 +158,7 @@ gulp.task('default', function(cb) {
   const langDesc = 'Comma separated list of languages to use';
   const langExamp = chalk.gray('eg: --lang=en,fr');
   gutil.log('  ', chalk.cyan('--lang'), langDesc, langExamp);
+  gutil.log('  ', chalk.cyan('--buildRSS'), 'Build RSS/ATOM files');
   gutil.log('  ', chalk.cyan('--verbose'), 'Log with verbose output');
   gutil.log('  ', chalk.cyan('--testAll'), 'Test all files, not just open');
   gutil.log('  ', chalk.cyan('--testTests'), 'Test the test files');

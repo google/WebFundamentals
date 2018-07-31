@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Compare similar data objects using the table() method.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Compare Similar Data Objects {: .page-title }
 
@@ -51,4 +52,6 @@ This will output the following:
 
 ![console output with table objects](images/table-people-objects.png)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

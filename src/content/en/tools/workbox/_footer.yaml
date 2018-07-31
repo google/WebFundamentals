@@ -4,11 +4,11 @@ footer:
     icon_name: star
     contents:
     - label: Guides
-      path: /web/tools/workbox/guides/
+      path: /web/tools/workbox/guides/get-started
     - label: Modules
       path: /web/tools/workbox/modules/
     - label: Reference Docs
-      path: /web/tools/workbox/reference-docs/next/
+      path: /web/tools/workbox/reference-docs/latest/
 
   - name: Get in Touch
     icon_name: star

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-11 #}
+{# wf_updated_on: 2018-02-15 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -21,7 +21,7 @@ Concepts:  [Lighthouse PWA Analysis Tool](lighthouse-pwa-analysis-tool)
 
 
 
-This lab shows you how you can use  [Lighthouse](/web/tools/lighthouse/), an  [open-source](https://github.com/GoogleChrome/lighthouse) tool from Google, to audit a web app for PWA features. Lighthouse provides a set of metrics to help guide you in building a PWA with a full application-like experience for your users. 
+This lab shows you how you can use  [Lighthouse](/web/tools/lighthouse/), an  [open-source](https://github.com/GoogleChrome/lighthouse) tool from Google, to audit a web app for PWA features. Lighthouse provides a set of metrics to help guide you in building a PWA with a full application-like experience for your users.
 
 #### What you will learn
 
@@ -33,7 +33,7 @@ This lab shows you how you can use  [Lighthouse](/web/tools/lighthouse/), an  [o
 
 #### What you need before you begin
 
-* Connection to the internet 
+* Connection to the internet
 *  [Chrome](https://www.google.com/chrome/browser/desktop/) 52+ browser
 * Node v6+
 * A text editor
@@ -72,9 +72,9 @@ This folder contains:
 
 
 
-Lighthouse is available as a Chrome extension for  [Chrome](https://www.google.com/chrome/browser/desktop/index.html) 52 and later. 
+Lighthouse is available as a Chrome extension for  [Chrome](https://www.google.com/chrome/browser/desktop/index.html) 52 and later.
 
-Download the Lighthouse Chrome extension from the  [Chrome Web Store](http://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk). When installed it places an <img src="img/91e97511ef44e440.png" style="width:20px;height:20px;" alt="Lighthouse Icon ">  icon in your taskbar.  
+Download the Lighthouse Chrome extension from the  [Chrome Web Store](http://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk). When installed it places an <img src="img/91e97511ef44e440.png" style="width:20px;height:20px;" alt="Lighthouse Icon ">  icon in your taskbar.
 
 <div id="3"></div>
 
@@ -88,7 +88,7 @@ In the browser (on the __app__ page) click the Lighthouse icon and choose __Gene
 
 Lighthouse runs the report and generates an HTML page with the results. The report page should look similar to this:
 
-![starting-score](img/3048ecdad076a837.png)
+![starting-score](img/c5cedae05b382b50.png)
 
 
 
@@ -106,11 +106,11 @@ Looks like we have a pretty low score (your score may not match exactly). Take a
 
 
 
-The report indicates that we need a manifest file. 
+The report indicates that we need a manifest file.
 
 ### 4.1 Create the manifest file
 
-Create an empty file called __manifest.json__ in the __app__ directory. 
+Create an empty file called __manifest.json__ in the __app__ directory.
 
 Replace TODO 4.1 in __index.html__ with the following:
 
@@ -190,9 +190,9 @@ Replace TODO 4.3 in <strong>index.html</strong> with the following:
 We have created a manifest file and "add to homescreen" tags. Don't worry about the details of the manifest and these tags. Here is how they work:
 
 1. Chrome uses __manifest.json__ to know how to style and format some of the progressive parts of your app, such as the "add to homescreen" icon and splash screen.
-2. Other browsers don't (currently) use the __manifest.json__ file to do this, and instead rely on HTML tags for this information. While Lighthouse doesn't require these tags, we've added them because they are important for supporting as many browsers as possible. 
+2. Other browsers don't (currently) use the __manifest.json__ file to do this, and instead rely on HTML tags for this information. While Lighthouse doesn't require these tags, we've added them because they are important for supporting as many browsers as possible.
 
-This lets us satisfy the manifest related requirements of Lighthouse (and a PWA). 
+This lets us satisfy the manifest related requirements of Lighthouse (and a PWA).
 
 #### For more information
 
@@ -207,11 +207,11 @@ This lets us satisfy the manifest related requirements of Lighthouse (and a PWA)
 
 
 
-We can see from the report that having a service worker is necessary. 
+We can see from the report that having a service worker is necessary.
 
-### 5.1 Register a service worker 
+### 5.1 Register a service worker
 
-Create an empty JavaScript file in the root directory (__app__) and name it __service-worker.js__. This is going to be our service worker file. 
+Create an empty JavaScript file in the root directory (__app__) and name it __service-worker.js__. This is going to be our service worker file.
 
 Now replace TODO 5.1 in <strong>index.html</strong> with the following and save the file:
 
@@ -237,7 +237,7 @@ Now replace TODO 5.1 in <strong>index.html</strong> with the following and save 
 
 ### 5.2 Caching offline & start pages
 
-The report also indicates that our app must respond with a 200 when offline and must have our starting URL ("start_url") cached. 
+The report also indicates that our app must respond with a 200 when offline and must have our starting URL ("start_url") cached.
 
 Add the following code to the empty __service-worker.js__ file (which should be at __app/service-worker.js__):
 
@@ -252,7 +252,7 @@ self.addEventListener('install', function(event) {
         '.',
         'index.html',
         'css/main.css',
-        'http://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
+        'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
         'images/still_life-1600_large_2x.jpg',
         'images/still_life-800_large_1x.jpg',
         'images/still_life_medium.jpg',
@@ -281,7 +281,7 @@ Save the file and refresh the page (for the app, not the Lighthouse page). Check
 We have created a service worker for our app and registered it. Here is what it does:
 
 1. The first block (`install` event listener) caches the files our app's files, so that they are saved locally. This lets us access them even when offline, which is what the next block does.
-2. The second block (`fetch` event listener) intercepts requests for resources and checks first if they are cached locally. If they are, the browser gets them from the cache without needing to make a network request. This lets us respond with a 200 even when offline. 
+2. The second block (`fetch` event listener) intercepts requests for resources and checks first if they are cached locally. If they are, the browser gets them from the cache without needing to make a network request. This lets us respond with a 200 even when offline.
 
 Once we have loaded the app initially, all the files needed to run the app are saved in the cache. If the page is loaded again, the browser grabs the files from the cache regardless of network conditions. This also lets us satisfy the requirement of having our starting URL (__index.html__) cached.
 
@@ -309,11 +309,11 @@ Note: You may need to <a href="tools-for-pwa-developers#disablehttpcache">disabl
 
  The report should look something like this:
 
-![solution-score](img/73be590f426d2ad4.png)
+![solution-score](img/85ba5f21895251ff.png)
 
-Now our score is much better (your score may not match exactly). 
+Now our score is much better (your score may not match exactly).
 
-You can see that we are still missing the HTTPS requirements, since we are using a local server. In production, service workers require HTTPS, so you'll need to use that. 
+You can see that we are still missing the HTTPS requirements, since we are using a local server. In production, service workers require HTTPS, so you'll need to use that.
 
 <div id="7"></div>
 
@@ -323,7 +323,7 @@ You can see that we are still missing the HTTPS requirements, since we are using
 
 
 
-If you want to run Lighthouse from the command line (for example, to integrate it with a build process) it is available as a Node module that you can install from the terminal. 
+If you want to run Lighthouse from the command line (for example, to integrate it with a build process) it is available as a Node module that you can install from the terminal.
 
 If you haven't already,  [download Node](https://nodejs.org/en/) and select the Long Term Support (LTS) version that best suits your environment and operating system (Lighthouse requires Node v6 or greater).
 
@@ -355,6 +355,6 @@ The lighthouse command line tool will generate an HTML (the same as the Chrome e
 
 
 
-You have learned how to use the Lighthouse tool to audit your progressive web apps. 
+You have learned how to use the Lighthouse tool to audit your progressive web apps.
 
 

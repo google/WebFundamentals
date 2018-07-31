@@ -28,7 +28,7 @@ Codelab:  [Promises](lab-promises)
 *  [WinJS](http://msdn.microsoft.com/en-us/library/windows/apps/br211867.aspx)
 *  [RSVP.js](https://github.com/tildeio/rsvp.js)
 
-The promise libraries listed above and promises that are part of the ES2015 JavaScript specification (also referred to as ES6) are all   [Promises/A+](https://github.com/promises-aplus/promises-spec) compatible. 
+The promise libraries listed above and promises that are part of the ES2015 JavaScript specification (also referred to as ES6) are all   [Promises/A+](https://github.com/promises-aplus/promises-spec) compatible.
 
 See  [Can I Use](http://caniuse.com/#feat=promises) for an up-to-date list of browsers that support promises.
 
@@ -70,9 +70,9 @@ function isUserTooYoung(id, callback) {
 }
 ```
 
-The callback approach has two problems: 
+The callback approach has two problems:
 
-* The more callbacks that you use in a callback chain, the harder it is to read and analyze its behavior. 
+* The more callbacks that you use in a callback chain, the harder it is to read and analyze its behavior.
 * Error handling becomes problematic. For example, what happens if a function receives an illegal value and/or throws an exception?
 
 ### Using promises
@@ -193,7 +193,7 @@ promise.then(function(response) {
 })
 ```
 
-The difference is subtle, but extremely useful. Promise rejections skip forward to the next `then()` with a rejection callback (or `catch()`, since they're equivalent). With `then(func1, func2)`, `func1` or `func2` will be called, never both. But with `then(func1).catch(func2)`, both will be called if `func1` rejects, as they're separate steps in the chain. 
+The difference is subtle, but extremely useful. Promise rejections skip forward to the next `then()` with a rejection callback (or `catch()`, since they're equivalent). With `then(func1, func2)`, `func1` or `func2` will be called, never both. But with `then(func1).catch(func2)`, both will be called if `func1` rejects, as they're separate steps in the chain.
 
 <div id="chaining"></div>
 
@@ -222,11 +222,11 @@ Calling `.then()` gets the returned value from the previous promise. It returns 
 
 #### Catch
 
-Promises also provide a mechanism to simplify error handling. When a promise rejects (or throws an exception), it jumps to the first `.catch()` call following the error and passes control to its function. 
+Promises also provide a mechanism to simplify error handling. When a promise rejects (or throws an exception), it jumps to the first `.catch()` call following the error and passes control to its function.
 
 Think of the part of the chain preceding `catch` as being wrapped in an implicit `try { }` block.
 
-In the following example, we load an image using `loadImage()` and apply a series of conversions using `then()`. If at any point we get an error (if either the original promise or any of the subsequent steps rejects) we jump to the `catch()` statement. 
+In the following example, we load an image using `loadImage()` and apply a series of conversions using `then()`. If at any point we get an error (if either the original promise or any of the subsequent steps rejects) we jump to the `catch()` statement.
 
 Only the last `then()` statement will attach the image to the DOM. Until then, we `return` the same image so that the image will be passed to the next `then()`.
 
@@ -287,11 +287,11 @@ Note: The promise chain continues executing after a `catch()` until it reaches t
 
 
 
-### Synchronous operations 
+### Synchronous operations
 
 Not all promise-related functions have to return a promise. If the functions in a promise chain are synchronous, they don't need to return a promise.
 
-The `scaleToFit` function is part of the image processing chain and doesn't return a promise: 
+The `scaleToFit` function is part of the image processing chain and doesn't return a promise:
 
 ```
 function scaleToFit(width, height, image) {
@@ -302,11 +302,11 @@ function scaleToFit(width, height, image) {
 }
 ```
 
-However, this function does need to return the image passed into it so that it can be passed to the next function in the chain. 
+However, this function does need to return the image passed into it so that it can be passed to the next function in the chain.
 
 ### Promise.all
 
-Often we want to take action only after a collection of asynchronous operations have completed successfully.  [__Promise.all__](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) returns a promise that resolves if all of the promises passed into it resolve. If any of the passed-in promises reject, then `Promise.all` rejects with the reason of the first promise that rejected. This is very useful for ensuring that a group of asynchronous actions complete before proceeding to another step. 
+Often we want to take action only after a collection of asynchronous operations have completed successfully.  [__Promise.all__](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) returns a promise that resolves if all of the promises passed into it resolve. If any of the passed-in promises reject, then `Promise.all` rejects with the reason of the first promise that rejected. This is very useful for ensuring that a group of asynchronous actions complete before proceeding to another step.
 
 In the example below, `promise1` and `promise2` return promises. We want both of them to load before proceeding. Both promises are passing into `Promise.all`. If either request rejects, then `Promise.all` rejects with the value of the rejected promise. If both requests fulfill, `Promise.all` resolves with the values of both promises (as a list).
 
@@ -333,7 +333,7 @@ Note: Even if an input promise rejects, causing <code>Promise.all</code> to reje
 
 ### Promise.race
 
-Another promise method that you may see referenced is  [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race). `Promise.race` takes a list of promises and settles as soon as the first promise in the list settles. If the first promise resolves, `Promise.race` resolves with the corresponding value, if the first promise rejects, `Promise.race` rejects with the corresponding reason. The following code shows example usage of `Promise.race`:  
+Another promise method that you may see referenced is  [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race). `Promise.race` takes a list of promises and settles as soon as the first promise in the list settles. If the first promise resolves, `Promise.race` resolves with the corresponding value, if the first promise rejects, `Promise.race` rejects with the corresponding reason. The following code shows example usage of `Promise.race`:
 
 ```
 Promise.race([promise1, promise2])

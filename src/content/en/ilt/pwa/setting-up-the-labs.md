@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-08-10 #}
+{# wf_updated_on: 2018-02-13 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -20,7 +20,7 @@ Use these instructions to install the lab repository on your computer prior to s
 
 ### Prerequisites
 
-* These labs are intended to be used on systems running Windows 7 and later, macOS, and Linux. 
+* These labs are intended to be used on systems running Windows 7 and later, macOS, and Linux.
 * Multiple browsers - although individual labs may require a specific level of support for progressive web apps, we recommend trying out the labs on multiple browsers (where feasible) so that you get a sense of how different users might experience the app.
 * A programming editor - for example,  [Atom](https://atom.io/),  [Sublime Text](https://www.sublimetext.com/), or  [Notepad++](https://notepad-plus-plus.org/) (for Windows only).
 
@@ -38,7 +38,7 @@ Note: Although not a hard requirement, for general development it can be useful 
 
 Install  [Node](https://nodejs.org/en/) and run a local Node server (you may need administrator privileges to do this).
 
-We recommend installing the latest __long term support (LTS)__ version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features (the current version may be unstable). 
+We recommend installing the latest __long term support (LTS)__ version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features (the current version may be unstable).
 
 ### Using NVM
 
@@ -62,7 +62,7 @@ For the Windows version you can specify whether to install the 32-bit or 64-bit 
 
 If you did not install NVM, download and install Node from the  [Node.js](https://nodejs.org/en/) website.
 
-This also installs Node's package manager,  [`npm`](https://www.npmjs.com/). 
+This also installs Node's package manager,  [`npm`](https://www.npmjs.com/).
 
 ### Check Node and NPM versions
 
@@ -71,7 +71,7 @@ Check that Node and `npm` are both installed by running the following commands f
     node -v
     npm -v
 
-If both commands return a version number, then the installations were successful. 
+If both commands return a version number, then the installations were successful.
 
 
 ## Install a simple Node HTTP server
@@ -89,12 +89,12 @@ Install a simple Node server with the following command:
 
 
 
-Clone the course repository with Git using the following command: 
+Clone the course repository with Git using the following command:
 
     git clone https://github.com/google-developer-training/pwa-training-labs.git
     cd pwa-training-labs
 
-Some projects in the download contain folders that correspond to checkpoints in the lab (in case you get stuck during the labs, you can refer back to the checkpoints to get back on track). 
+Some projects in the download contain folders that correspond to checkpoints in the lab (in case you get stuck during the labs, you can refer back to the checkpoints to get back on track).
 
 
 

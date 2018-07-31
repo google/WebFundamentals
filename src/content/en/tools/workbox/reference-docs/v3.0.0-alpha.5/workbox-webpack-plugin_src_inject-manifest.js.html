@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-webpack-plugin/src/inject-manifest.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-webpack-plugin/src/inject-manifest.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2017 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+const assert &#x3D; require(&#x27;assert&#x27;);
+const path &#x3D; require(&#x27;path&#x27;);
+const {getManifest} &#x3D; require(&#x27;workbox-build&#x27;);
+
+const convertStringToAsset &#x3D; require(&#x27;./lib/convert-string-to-asset&#x27;);
+const getAssetHash &#x3D; require(&#x27;./lib/get-asset-hash&#x27;);
+const getManifestEntriesFromCompilation &#x3D;
+  require(&#x27;./lib/get-manifest-entries-from-compilation&#x27;);
+const getWorkboxSWImports &#x3D; require(&#x27;./lib/get-workbox-sw-imports&#x27;);
+const readFileWrapper &#x3D; require(&#x27;./lib/read-file-wrapper&#x27;);
+const sanitizeConfig &#x3D; require(&#x27;./lib/sanitize-config&#x27;);
+const stringifyManifest &#x3D; require(&#x27;./lib/stringify-manifest&#x27;);
+
+/**
+ * This class supports taking an existing service worker file which already
+ * uses Workbox, and injecting a reference to a [precache manifest]() into it,
+ * allowing it to efficiently precache the assets created by a webpack build.
+ *
+ * Use an instance of &#x60;InjectManifest&#x60; in the
+ * [&#x60;plugins&#x60; array](https://webpack.js.org/concepts/plugins/#usage) of a
+ * webpack config.
+ *
+ * @module workbox-webpack-plugin
+ */
+class InjectManifest {
+  /**
+   * Creates an instance of InjectManifest.
+   *
+   * @param {Object} [config] See the
+   * [configuration guide](/web/tools/workbox/modules/workbox-webpack-plugin#configuration)
+   * for all supported options and defaults.
+   */
+  constructor(config &#x3D; {}) {
+    assert(typeof config.swSrc &#x3D;&#x3D;&#x3D; &#x27;string&#x27;, &#x60;swSrc must be set to the path &#x60; +
+      &#x60;to an existing service worker file.&#x60;);
+
+    this.config &#x3D; Object.assign({}, {
+      chunks: [],
+      exclude: [
+        // Exclude source maps.
+        /\.map$/,
+        // Exclude anything starting with manifest and ending .js or .json.
+        /^manifest.*\.js(?:on)?$/,
+      ],
+      excludeChunks: [],
+      importScripts: [],
+      importWorkboxFrom: &#x27;cdn&#x27;,
+      swDest: path.basename(config.swSrc),
+    }, config);
+  }
+
+  /**
+   * @param {Object} compilation The webpack compilation.
+   * @param {Function} readFile The function to use when reading files,
+   * derived from compiler.inputFileSystem.
+   * @private
+   */
+  async handleEmit(compilation, readFile) {
+    if (this.config.importWorkboxFrom &#x3D;&#x3D;&#x3D; &#x27;local&#x27;) {
+      throw new Error(&#x60;importWorkboxFrom can not be set to &#x27;local&#x27; when using&#x60; +
+        &#x60; InjectManifest. Please use &#x27;cdn&#x27; or a chunk name instead.&#x60;);
+    }
+
+    const workboxSWImports &#x3D; await getWorkboxSWImports(
+      compilation, this.config);
+    let entries &#x3D; getManifestEntriesFromCompilation(compilation, this.config);
+
+    const sanitizedConfig &#x3D; sanitizeConfig.forGetManifest(this.config);
+    // If there are any &quot;extra&quot; config options remaining after we remove the
+    // ones that are used natively by the plugin, then assume that they should
+    // be passed on to workbox-build.getManifest() to generate extra entries.
+    if (Object.keys(sanitizedConfig).length &gt; 0) {
+      // If globPatterns isn&#x27;t explicitly set, then default to [], instead of
+      // the workbox-build.getManifest() default.
+      sanitizedConfig.globPatterns &#x3D; sanitizedConfig.globPatterns || [];
+      const {manifestEntries} &#x3D; await getManifest(sanitizedConfig);
+      entries &#x3D; entries.concat(manifestEntries);
+    }
+
+    const manifestString &#x3D; stringifyManifest(entries);
+    const manifestAsset &#x3D; convertStringToAsset(manifestString);
+    const manifestHash &#x3D; getAssetHash(manifestAsset);
+    const manifestFilename &#x3D; &#x60;precache-manifest.${manifestHash}.js&#x60;;
+    compilation.assets[manifestFilename] &#x3D; manifestAsset;
+    this.config.importScripts.push(manifestFilename);
+
+    // workboxSWImports might be null if importWorkboxFrom is &#x27;disabled&#x27;.
+    if (workboxSWImports) {
+      // workboxSWImport is an array, so use concat() rather than push().
+      this.config.importScripts &#x3D; this.config.importScripts.concat(
+        workboxSWImports);
+    }
+
+    const originalSWString &#x3D; await readFileWrapper(readFile, this.config.swSrc);
+
+    const importScriptsString &#x3D; this.config.importScripts
+      .map(JSON.stringify)
+      .join(&#x27;, &#x27;);
+
+    const postInjectionSWString &#x3D; &#x60;importScripts(${importScriptsString});
+
+${originalSWString}
+&#x60;;
+
+    compilation.assets[this.config.swDest] &#x3D;
+      convertStringToAsset(postInjectionSWString);
+  }
+
+  /**
+   * @param {Object} [compiler] default compiler object passed from webpack
+   *
+   * @private
+   */
+  apply(compiler) {
+    compiler.plugin(&#x27;emit&#x27;, (compilation, callback) &#x3D;&gt; {
+      this.handleEmit(compilation, compiler.inputFileSystem._readFile)
+        .then(callback)
+        .catch(callback);
+    });
+  }
+}
+
+module.exports &#x3D; InjectManifest;
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

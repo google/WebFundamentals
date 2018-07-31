@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of all of the keyboard shortcuts in Chrome DevTools.
 
-{# wf_updated_on: 2017-11-02 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-29 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Keyboard Shortcuts Reference {: .page-title }
 
@@ -38,6 +39,11 @@ on the browser viewport:
       <td>Open the <b>Console</b> panel</td>
       <td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></td>
       <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></td>
+    </tr>
+    <tr>
+      <td>Open the <b>Elements</b> panel</td>
+      <td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd></td>
+      <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
     </tr>
   </tbody>
 </table>
@@ -474,3 +480,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     </tr>
   </tbody>
 </table>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

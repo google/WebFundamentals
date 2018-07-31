@@ -21,7 +21,7 @@ Codelab:  [Integrating Analytics](lab-integrating-analytics)
 
 
 
-Google Analytics is a service that collects, processes, and reports data about an application's use patterns and performance. Adding Google Analytics to a web application enables the collection of data like visitor traffic, user agent, user's location, and so forth. This data is sent to Google Analytics servers where it is processed. The processed data is then reported to the developer and/or application owner. This information is accessible from the Google Analytics web interface (dashboard) and through the  [reporting API](/analytics/devguides/reporting/core/v4/). 
+Google Analytics is a service that collects, processes, and reports data about an application's use patterns and performance. Adding Google Analytics to a web application enables the collection of data like visitor traffic, user agent, user's location, and so forth. This data is sent to Google Analytics servers where it is processed. The processed data is then reported to the developer and/or application owner. This information is accessible from the Google Analytics web interface (dashboard) and through the  [reporting API](/analytics/devguides/reporting/core/v4/).
 
 #### Why use it?
 
@@ -31,7 +31,7 @@ Using analytics tools gives developers valuable information about their applicat
 * How long users spend on pages, how often they visit pages, and the order in which pages are viewed
 * What times users are visiting the site and from where they arrived at the site
 
-Google Analytics is free, relatively simple to integrate, and customizable. 
+Google Analytics is free, relatively simple to integrate, and customizable.
 
 <div id="account"></div>
 
@@ -41,13 +41,13 @@ Google Analytics is free, relatively simple to integrate, and customizable.
 
 
 
-Google Analytics requires creating a Google Analytics account. An account has  [properties](https://support.google.com/analytics/answer/2649554) that represent individual collections of data. These properties have tracking IDs (also called property IDs) that identify them to Google Analytics. For example, an account might represent a company. One property in that account might represent the company's web site, while another property might represent the company's iOS app. 
+Google Analytics requires creating a Google Analytics account. An account has  [properties](https://support.google.com/analytics/answer/2649554) that represent individual collections of data. These properties have tracking IDs (also called property IDs) that identify them to Google Analytics. For example, an account might represent a company. One property in that account might represent the company's web site, while another property might represent the company's iOS app.
 
 ![Accounts and Properties](img/766f9ab38e16446b.png)
 
-If you only have one app, the simplest scenario is to create a single Google Analytics account, and add a single property to that account. That property can represent your app. 
+If you only have one app, the simplest scenario is to create a single Google Analytics account, and add a single property to that account. That property can represent your app.
 
-A Google Analytics account can be created from  [analytics.google.com](https://analytics.google.com/). 
+A Google Analytics account can be created from  [analytics.google.com](https://analytics.google.com/).
 
 
 
@@ -57,7 +57,7 @@ Note: The Google Analytics UI is subject to updates and may not look exactly lik
 
 #### If you already have a Google Analytics account
 
-Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts. 
+Create another one. Select the __Admin__ tab. Under __account__, select your current Google Analytics account and choose __create new account__. A single Gmail account can have multiple (currently 100) Google Analytics accounts.
 
 ![Adding an account](img/76e8d691850a2b7c.png)
 
@@ -67,13 +67,13 @@ Select __Sign up__ to begin creating your account. The account creation screen s
 
 ![Creating an account](img/e5475081784bd614.png)
 
-#### What would you like to track? 
+#### What would you like to track?
 
 Websites and mobile apps implement Google Analytics differently. This document assumes a web app is being used. For mobile apps, see  [analytics for mobile applications](https://support.google.com/analytics/answer/2587086?ref_topic=2587085&rd=1).
 
 #### Setting up your account
 
-This is where you can set the name for your account, for example "PWA Training" or "Company X". 
+This is where you can set the name for your account, for example "PWA Training" or "Company X".
 
 #### Setting up your property
 
@@ -81,7 +81,7 @@ A property must be associated with a website (for web apps). The website name ca
 
 
 
-Note: Analytics will still work even if this URL does not match your site. The only thing that ties analytics data to your account is the value of your __tracking / property ID__. The site URL that you use to create your Google Analytics account is only used for things like automated testing. 
+Note: Analytics will still work even if this URL does not match your site. The only thing that ties analytics data to your account is the value of your __tracking / property ID__. The site URL that you use to create your Google Analytics account is only used for things like automated testing.
 
 
 
@@ -99,10 +99,10 @@ Once you have filled in your information, choose __Get Tracking ID__ and agree t
 
 Once you have created an account, you need to add the tracking snippet to your app. You can find the tracking snippet with the following steps:
 
-1. Select the __Admin__ tab. 
-2. Under __account__, select your account (for example "PWA Training") from the dropdown list. 
-3. Then under __property__, select your property (for example "GA Code Lab Site") from the dropdown list. 
-4. Now choose __Tracking Info__, and then __Tracking Code__. 
+1. Select the __Admin__ tab.
+2. Under __account__, select your account (for example "PWA Training") from the dropdown list.
+3. Then under __property__, select your property (for example "GA Code Lab Site") from the dropdown list.
+4. Now choose __Tracking Info__, and then __Tracking Code__.
 
 ![Finding the snippet](img/dc1b90e9a8dd54c9.png)
 
@@ -123,16 +123,16 @@ a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script', \
 </script>
 ```
 
-Your tracking ID is embedded into your tracking snippet. This snippet needs to be embedded into every page that you want to track. 
+Your tracking ID is embedded into your tracking snippet. This snippet needs to be embedded into every page that you want to track.
 
 When a page with the snippet loads, the tracking snippet script is executed. The IIFE ( [Immediately Invoked Function Expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)) in the script does two things:
 
-* Creates another `script` tag that starts asynchronously downloading __analytics.js__, the library that does all of the analytics work. 
-* Initializes a global `ga` function, called the command queue. 
+* Creates another `script` tag that starts asynchronously downloading __analytics.js__, the library that does all of the analytics work.
+* Initializes a global `ga` function, called the command queue.
 
-The `ga` command queue is the main interface for using __analytics.js__. The command queue stores commands (in order) until __analytics.js__ has loaded. Once __analytics.js__ has loaded, the commands are executed sequentially. This functionality ensures that analytics can begin independent of the loading time of __analytics.js__. 
+The `ga` command queue is the main interface for using __analytics.js__. The command queue stores commands (in order) until __analytics.js__ has loaded. Once __analytics.js__ has loaded, the commands are executed sequentially. This functionality ensures that analytics can begin independent of the loading time of __analytics.js__.
 
-Commands are added by calling `ga()`. The first argument passed is the command itself, which is a method of the __analytics.js__ library. The remaining arguments are parameters for that method. 
+Commands are added by calling `ga()`. The first argument passed is the command itself, which is a method of the __analytics.js__ library. The remaining arguments are parameters for that method.
 
 The next lines add two commands to the queue. The first creates a new  [tracker object](/analytics/devguides/collection/analyticsjs/tracker-object-reference). Tracker objects track and store data. When the new tracker is created, the analytics library gets the user's IP address, user agent, and other page information, and stores it in the tracker. From this info Google Analytics can extract:
 
@@ -164,13 +164,13 @@ Google Analytics offers the __analytics.js__ library with a debug mode: __analyt
 
 
 
-Note: The debug version should not be used in production as it is a much larger file. 
+Note: The debug version should not be used in production as it is a much larger file.
 
 
 
 
 
-Note: You can also use the <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a>. 
+Note: You can also use the <a href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna">Chrome debugger extension</a>.
 
 
 
@@ -210,7 +210,7 @@ If you are visiting your app in another tab or window, you should see yourself b
 
 ![Real-time screen](img/6293fe6be6811ccd.png)
 
-These are only the basic aspects of the Google Analytics dashboard. There is an extensive set of features and functionality. 
+These are only the basic aspects of the Google Analytics dashboard. There is an extensive set of features and functionality.
 
 #### For more information
 
@@ -224,7 +224,7 @@ These are only the basic aspects of the Google Analytics dashboard. There is an 
 
 
 
-Google Analytics supports custom events that allow for fine-grain analysis of user behavior. 
+Google Analytics supports custom events that allow for fine-grain analysis of user behavior.
 
 For example, the following code will send a custom event:
 
@@ -359,7 +359,7 @@ function sendAnalyticsEvent(eventAction, eventCategory) {
 }
 ```
 
-The script starts by creating a variable with your tracking ID (replace `UA-XXXXXXXX-Y` with your actual tracking ID). This ensures that hits are sent to your account and property, just like in the analytics snippet. 
+The script starts by creating a variable with your tracking ID (replace `UA-XXXXXXXX-Y` with your actual tracking ID). This ensures that hits are sent to your account and property, just like in the analytics snippet.
 
 The `sendAnalyticsEvent` helper function starts by checking that the tracking ID is set and that the function is being called with the correct parameters. After checking that the client is subscribed to push, the hit data is created in the `payloadData` variable:
 

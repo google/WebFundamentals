@@ -2,14 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
-{# wf_updated_on: 2017-11-27 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
-
-[Demo](https://workbox-demos.firebaseapp.com/demo/workbox-precaching/) | [Reference Docs](http://localhost:8080/web/tools/workbox/reference-docs/latest/workbox.precaching)
 
 ## What is Precaching?
 
@@ -28,11 +25,10 @@ the API and ensuring assets are downloaded efficiently.
 
 ## How workbox-precaching Works
 
-When a web app is loaded for the first time workbox-precaching will
-
-look at all the assets you want to download, remove any duplicates and hook
-up the relevant service worker events to download and store the assets,
-saving information about the revision of the asset in indexedDB.
+When a web app is loaded for the first time workbox-precaching will look at all 
+the assets you want to download, remove any duplicates and hook up the relevant 
+service worker events to download and store the assets, saving information about 
+the revision of the asset in indexedDB.
 
 ![Workbox precaching list to precached assets](../images/modules/workbox-precaching/precaching-step-1.png)
 
@@ -87,13 +83,11 @@ This allows workbox-precaching to know when the file has changed and update it.
 Workbox comes with tools to help with generating this list:
 
 - workbox-build
-  - This is an NPM module that can be used in a gulp task or as an npm
-    run script.
+    - This is an npm module that can be used in a gulp task or as an npm run script.
 - workbox-webpack-plugin
-  - Webpack users can use the Workbox webpack plugin.
+    - Webpack users can use the Workbox webpack plugin.
 - workbox-cli
-  - Our CLI can also be used to generate the list of assets and add them
-    to your service worker.
+    - Our CLI can also be used to generate the list of assets and add them to your service worker.
 
 These tools make it easy to generate and use the list of assets for your site
 but you can generate the list yourself, just make sure you include unique
@@ -121,6 +115,106 @@ workbox.precaching.precache([
 
 // Add Precache Route
 workbox.precaching.addRoute();
+```
+
+## Incoming Requests to Precached Files
+
+One thing that `workbox.precaching` will do out of the box is manipulate
+the incoming network requests to try and match precached files. This
+accounts for common practices on the web.
+
+For example, a request for `/` can be responded to with the file at
+`/index.html`.
+
+Below is the list of manipulations that `workbox.precaching` does and how you
+can alter that behavior.
+
+### Ignore URL Parameters
+
+Requests with search parameters can be altered to remove specific values or
+remove all values.
+
+By default, the `utm_` value is removed, changing a request like `/?utm_=123`
+to `/`.
+
+You can remove all search parameters or a specific set of parameters with the
+`ignoreUrlParametersMatching`.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    ignoreUrlParametersMatching: [/.*/]
+  }
+);
+```
+
+### Directory Index
+
+For requests ending in a `/` will have `index.html` appended to the end,
+meaning a  request like `/` will check the precache for `/index.html`.
+
+You can alter this to something else or disable it by changing the
+`directoryIndex` option.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    directoryIndex: null,
+  }
+);
+```
+
+### Clean URLs
+
+If a request fails to match the precache, we'll add `.html` to end to support
+"clean" URLs (a.k.a "pretty" URLs). This means a request like `/about` will
+match `/about.html`.
+
+You can disable this behavior with the `cleanUrls` option.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    cleanUrls: false,
+  }
+);
+```
+
+### Custom Manipulations
+
+If you want to define custom matches from incoming requests to precached assets,
+you can do so with the `urlManipulation` option. This should be a callback
+that returns an array of possible matches.
+
+```javascript
+workbox.precaching.precacheAndRoute(
+  [
+    '/styles/index.0c9a31.css',
+    '/scripts/main.0d5770.js',
+    { url: '/index.html', revision: '383676' },
+  ],
+  {
+    urlManipulation: ({url}) => {
+      ...
+      return [alteredUrlOption1, alteredUrlOption2, ...];
+    }
+  }
+);
 ```
 
 ## Advanced Usage

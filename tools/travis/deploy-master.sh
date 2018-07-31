@@ -1,5 +1,4 @@
 #!/bin/bash
-set -ev
 
 #
 # Auto-Deploy MASTER
@@ -30,7 +29,9 @@ if [ "${TRAVIS_TEST_RESULT}" = "1" ]; then
 fi
 
 # Deploy to AppEngine
+echo "Deploying to AppEngine (master)..."
 $HOME/google-cloud-sdk/bin/gcloud app deploy app.yaml -q --no-promote --version master
 
 # Flush the MemCache
+echo "Flushing MemCache..."
 curl https://$AE_APP_ID.appspot.com/flushMemCache

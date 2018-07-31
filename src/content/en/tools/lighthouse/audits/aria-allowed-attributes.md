@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Are Allowed For This Role" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-01-13 #}
 {# wf_blink_components: N/A #}
 
@@ -47,5 +47,6 @@ use allowed ARIA attributes][axe] for more information.
 
 [axe]: https://dequeuniversity.com/rules/axe/1.1/aria-allowed-attr
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/aria-allowed-attributes.html" %}
+{% include "web/_shared/helpful.html" %}

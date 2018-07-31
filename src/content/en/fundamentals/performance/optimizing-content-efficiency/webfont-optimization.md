@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution.
 
-{# wf_updated_on: 2017-11-20 #}
+{# wf_updated_on: 2018-03-02 #}
 {# wf_published_on: 2014-09-19 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -42,7 +42,7 @@ When picking a font, it's important to consider which character sets are support
 localize your page content to multiple languages, you should use a font that can deliver a
 consistent look and experience to your users. For example, [Google's Noto font
 family](https://www.google.com/get/noto/){: .external } aims to support all the world's languages.
-Note, however, that the total size of Noto, with all languages included, results in a 130MB+ ZIP
+Note, however, that the total size of Noto, with all languages included, results in a 1.1GB+ ZIP
 download.
 
 Clearly, using fonts on the web requires careful engineering to ensure that the typography doesn't
@@ -588,7 +588,7 @@ To work with the `font-display` property, add it your `@font-face` rules:
   font-family: 'Awesome Font';
   font-style: normal;
   font-weight: 400;
-  font-display: auto; /* or block, swap, fallback */
+  font-display: auto; /* or block, swap, fallback, optional */
   src: local('Awesome Font'),
        url('/fonts/awesome-l.woff2') format('woff2'), /* will be preloaded */ 
        url('/fonts/awesome-l.woff') format('woff'),

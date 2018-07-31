@@ -2,12 +2,11 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2017-12-01 #}
+{# wf_updated_on: 2018-03-13 #}
 {# wf_published_on: 2017-11-15 #}
+{# wf_blink_components: N/A #}
 
 # Route Requests {: .page-title }
-
-{% include "web/tools/workbox/_shared/alpha.html" %}
 
 Routing in Workbox is the process of a Router *matching* a request to a
 route and the route then *handling* that request (i.e. providing a response).
@@ -39,8 +38,8 @@ workbox.routing.registerRoute(
 );
 ```
 
-The only thing to be weary of is that this would only match for requests
-on your origin. If there was a separate site what had the URL
+The only thing to be wary of is that this would only match for requests
+on your origin. If there was a separate site that had the URL
 "https://some-other-origin.com/logo.png", this route wouldn’t match, because
 in most cases, that’s not what was intended. Instead you’d need to define
 the entire URL to match.

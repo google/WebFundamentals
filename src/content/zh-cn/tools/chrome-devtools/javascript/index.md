@@ -96,7 +96,7 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 
 
 
-注：这不过是 DevTools 提供的众多断点类型中的一种。应使用的断点类型取决于您要调试的问题类型。
+Note: 这不过是 DevTools 提供的众多断点类型中的一种。应使用的断点类型取决于您要调试的问题类型。
 
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
@@ -108,7 +108,7 @@ DevTools 让您可以暂停执行中的代码，并对暂停时刻的*所有*变
 
 1. 在 DevTools 的 **Sources** 面板上，点击 **Step into next function call** ![单步执行到下一个函数调用中][into]{:.devtools-inline}，一次一行地单步调试 `onClick()` 函数的执行。DevTools 突出显示下面这行代码：
 
-       `if (inputsAreEmpty()) {` 
+       `if (inputsAreEmpty()) {`
 
 1. 点击 **Step over next function call** ![单步执行时越过下一个函数调用][over]{:.devtools-inline}。
 DevTools 执行 `inputsAreEmpty()` 但不进入它。

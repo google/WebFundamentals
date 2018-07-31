@@ -10,6 +10,8 @@ description: The non-standard chrome.loadTimes() API will be deprecated in Chrom
 {# wf_featured_snippet: The non-standard chrome.loadTimes() API will be deprecated in Chrome 64 now that standards-based equivalents exist for all of its useful features. #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
 
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
+
 # Chrome 64 to deprecate the chrome.loadTimes() API {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
@@ -21,12 +23,11 @@ site's performance in the real world.
 Since this API was implemented in 2009, all of the useful information it reports can be
 found in standardized APIs such as:
 
-* [Navigation Timing 2](https://www.w3.org/TR
-/navigation-timing-2/)
+* [Navigation Timing 2](https://www.w3.org/TR/navigation-timing-2/)
 * [Paint Timing](https://www.w3.org/TR/paint-timing/)
-* The [`nextHopProtocol`](https://www.w3.org/TR/resource-timing-2/#dom-
-performanceresourcetiming-nexthopprotocol) addition to Navigation Timing 2 and
-[Resource Timing 2](https://www.w3.org/TR/resource-timing-2/).
+* The [`nextHopProtocol`](https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-nexthopprotocol)
+  addition to Navigation Timing 2 and
+  [Resource Timing 2](https://www.w3.org/TR/resource-timing-2/).
 
 These standardized APIs are being implemented by multiple browser vendors. As a
 result, `chrome.loadTimes()` is being deprecated in Chrome 64.
@@ -174,9 +175,9 @@ The code examples below return equivalent values to those returned by
 `chrome.loadTimes()`. However, for new code these code examples are not
 recommended. The reason is `chrome.loadTimes()` gives times values in [epoch
 time](https://en.wikipedia.org/wiki/Unix_time) in seconds whereas new performance APIs
-typically report values in milliseconds relative to a page's [time origin](https://www.w3.org/TR
-/hr-time-2/#time-origin), which tends to be more useful for performance
-analysis.
+typically report values in milliseconds relative to a page's
+[time origin](https://www.w3.org/TR/hr-time-2/#time-origin), which tends to
+be more useful for performance analysis.
 
 Several of the examples also favor [Performance Timeline
 2](https://www.w3.org/TR/performance-timeline-2/) APIs (e.g.

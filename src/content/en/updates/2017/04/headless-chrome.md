@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Getting started with Headless Chrome
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-02-23 #}
 {# wf_published_on: 2017-04-27 #}
 
 {# wf_tags: chrome59,headless,testing #}
@@ -34,10 +34,9 @@ A headless browser is a great tool for automated testing and server environments
 don't need a visible UI shell. For example, you may want to run some tests against
 a real web page, create a PDF of it, or just inspect how the browser renders an URL.
 
-Caution: Headless mode is available on Mac and Linux in **Chrome 59**.
+Note: Headless mode has been available on Mac and Linux since **Chrome 59**.
 [Windows support](https://bugs.chromium.org/p/chromium/issues/detail?id=686608)
-is coming in Chrome 60. To check what version of Chrome you have, open
-`chrome://version`.
+came in Chrome 60.
 
 ## Starting Headless (CLI) {: #cli }
 
@@ -46,12 +45,12 @@ from the command line. If you've got Chrome 59+ installed, start Chrome with the
 
     chrome \
       --headless \                   # Runs Chrome in headless mode.
-      --disable-gpu \                # Temporarily needed for now.
+      --disable-gpu \                # Temporarily needed if running on Windows.
       --remote-debugging-port=9222 \
       https://www.chromestatus.com   # URL to open. Defaults to about:blank.
 
-Note: Right now, you'll also want to include the `--disable-gpu` flag.
-That will eventually go away.
+Note: Right now, you'll also want to include the `--disable-gpu` flag if you're running
+on Windows. See [crbug.com/737678](https://bugs.chromium.org/p/chromium/issues/detail?id=737678).
 
 `chrome` should point to your installation of Chrome. The exact location will
 vary from platform to platform. Since I'm on Mac, I created convenient aliases
@@ -108,12 +107,14 @@ post from David Schnurr that has you covered. Check out
 The `--repl` flag runs Headless in a mode where you can evaluate JS expressions
 in the browser, right from the command line:
 
-    $ chrome --headless --disable-gpu --repl https://www.chromestatus.com/
+    $ chrome --headless --disable-gpu --repl --crash-dumps-dir=./tmp https://www.chromestatus.com/
     [0608/112805.245285:INFO:headless_shell.cc(278)] Type a Javascript expression to evaluate or "quit" to exit.
     >>> location.href
     {"result":{"type":"string","value":"https://www.chromestatus.com/features"}}
     >>> quit
     $
+
+Note: the addition of the --crash-dumps-dir flag when using repl mode. 
 
 ## Debugging Chrome without a browser UI? {: #frontend }
 
@@ -140,9 +141,9 @@ commands going across the wire, communicating with the browser.
 
 ## Using programmatically (Node) {: #node }
 
-### The Puppeteer API {: #puppeteer }
+### Puppeteer {: #puppeteer }
 
-[Puppeteer](https://github.com/GoogleChrome/puppeteer) is a Node library
+[Puppeteer](/web/tools/puppeteer/) is a Node library
 developed by the Chrome team. It provides a high-level API to control headless
 (or full) Chrome. It's similar to other automated testing libraries like Phantom
 and NightmareJS, but it only works with the latest versions of Chrome.
@@ -155,7 +156,7 @@ debug instance of Chrome.
 
 Install it:
 
-    yarn add puppeteer
+    npm i --save puppeteer
 
 **Example** - print the user agent
 
@@ -165,7 +166,7 @@ const puppeteer = require('puppeteer');
 (async() => {
   const browser = await puppeteer.launch();
   console.log(await browser.version());
-  browser.close();
+  await browser.close();
 })();
 ```
 
@@ -175,13 +176,12 @@ const puppeteer = require('puppeteer');
 const puppeteer = require('puppeteer');
 
 (async() => {
-
 const browser = await puppeteer.launch();
 const page = await browser.newPage();
-await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle'});
+await page.goto('https://www.chromestatus.com', {waitUntil: 'networkidle2'});
 await page.pdf({path: 'page.pdf', format: 'A4'});
 
-browser.close();
+await browser.close();
 })();
 ```
 
@@ -237,7 +237,7 @@ By default, **`chrome-launcher` will try to launch Chrome Canary** (if it's
 installed), but you can change that to manually select which Chrome to use. To
 use it, first install from npm:
 
-    yarn add chrome-launcher
+    npm i --save chrome-launcher
 
 **Example** - using `chrome-launcher` to launch Headless
 
@@ -245,7 +245,7 @@ use it, first install from npm:
 const chromeLauncher = require('chrome-launcher');
 
 // Optional: set logging level of launcher to see its output.
-// Install it using: yarn add lighthouse-logger
+// Install it using: npm i --save lighthouse-logger
 // const log = require('lighthouse-logger');
 // log.setLevel('info');
 
@@ -288,7 +288,7 @@ daunting at first. I recommend spending a bit of time browsing the
 
 Let's install the library:
 
-    yarn add chrome-remote-interface
+    npm i --save chrome-remote-interface
 
 ##### Examples
 
@@ -396,7 +396,7 @@ uses Chrome 61 and works well with headless Chrome.
 Install:
 
 ```
-yarn add selenium-webdriver chromedriver
+npm i --save-dev selenium-webdriver chromedriver
 ```
 
 Example:
@@ -435,7 +435,7 @@ driver.quit();
 Install:
 
 ```
-yarn add webdriverio chromedriver
+npm i --save-dev webdriverio chromedriver
 ```
 
 Example: filter CSS features on chromestatus.com
@@ -515,8 +515,10 @@ post on using Headless with api.ai.
 
 **Do I need the `--disable-gpu` flag?**
 
-Yes, for now.  The `--disable-gpu` flag is a temporary requirement to work around a few bugs.
-You won't need this flag in future versions of Chrome. See [https://crbug.com/546953#c152](https://bugs.chromium.org/p/chromium/issues/detail?id=546953#c152) and [https://crbug.com/695212](https://bugs.chromium.org/p/chromium/issues/detail?id=695212) for more information.
+Only on Windows. Other platforms no longer require it. The `--disable-gpu` flag is a
+temporary work around for a few bugs. You won't need this flag in future versions of
+Chrome. See [crbug.com/737678](https://bugs.chromium.org/p/chromium/issues/detail?id=737678)
+for more information.
 
 **So I still need Xvfb?**
 
@@ -530,9 +532,14 @@ Many people use Xvfb to run earlier versions of Chrome to do "headless" testing.
 **How do I create a Docker container that runs Headless Chrome?**
 
 Check out [lighthouse-ci](https://github.com/ebidel/lighthouse-ci). It has an
-[example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile.headless)
-that uses Ubuntu as a base image, and installs + runs Lighthouse in an App Engine
-Flexible container.
+[example Dockerfile](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile)
+that uses `node:8-slim` as a base image, installs +
+[runs Lighthouse](https://github.com/ebidel/lighthouse-ci/blob/master/builder/entrypoint.sh)
+on App Engine Flex.
+
+Note: `--no-sandbox` is not needed if you
+[properly setup a user](https://github.com/ebidel/lighthouse-ci/blob/master/builder/Dockerfile#L35-L40)
+in the container. 
 
 **Can I use this with Selenium / WebDriver / ChromeDriver**?
 

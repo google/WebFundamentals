@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Can Be Prompted To Install The Web App" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-16 #}
 {# wf_blink_components: N/A #}
 
@@ -23,25 +23,13 @@ Twitter's case study.
 
 ## Recommendations {: #recommendations }
 
-Google Chrome automatically displays the install prompt once it detects that
-a site qualifies as a Progressive Web App. These are Chrome's criteria:
+{% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
-* The site is served over HTTPS. HTTPS is required for
-  registering a service worker. See [Uses HTTPS][HTTPS].
-* A service worker is registered.
-* The scope of the service worker includes the page you audited and the
-  page specified in the `start_url` property of the web app manifest.
-* A web app manifest exists and meets the following criteria:
-    * Has a valid `name` property.
-    * Has a valid `short_name` property.
-    * Has a valid `start_url` property.
-    * Has a valid `display` property and the value is `standalone`,
-      `fullscreen`, or `minimal-ui`.
-    * Specifies an icon that is at least 192px by 192px.
 
-See [Web App Install Banners][WAIB] to learn more.
+In addition, the scope of the service worker includes the page you audited
+and the page specified in the `start_url` property of the web app manifest. See
+[add to home screen][WAIB] to learn more.
 
-[HTTPS]: /web/tools/lighthouse/audits/https
 [WAIB]: /web/fundamentals/app-install-banners
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
@@ -73,3 +61,7 @@ var feedback = {
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/webapp-install-banner.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

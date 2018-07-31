@@ -97,7 +97,7 @@ Pada dasarnya, gunakan kelas untuk membuat **JavaScript API publik** bagi tag An
     
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
     
@@ -145,7 +145,7 @@ Memperluas elemen khusus lain dilakukan dengan memperluas definisi kelasnya.
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
     
@@ -184,7 +184,7 @@ elemen yang memperluas `<img>` perlu memperluas `HTMLImageElement`.
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
     
@@ -259,12 +259,12 @@ atau membuat instance di JavaScript:
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
     
 
-Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/509'>di Github</a>.
+Note: Sebagian browser menyatakan keengganan untuk mengimplementasikan sintaks <code>is=""</code>. Hal ini tidak menguntungkan untuk aksesibilitas dan penyempurnaan progresif. Jika menurut Anda memperluas elemen HTML native berguna, sampaikan pendapat Anda <a href='https://github.com/w3c/webcomponents/issues/662'>di Github</a>.
 
 ## Reaksi elemen khusus {: #reactions}
 
@@ -317,7 +317,7 @@ DOM (mis. pengguna memanggil `el.remove()`).
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -592,7 +592,7 @@ Untuk menggunakan Shadow DOM di elemen khusus, panggil `this.attachShadow` di da
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -642,7 +642,7 @@ const supportsCustomElementsV1 = 'customElements' in window;
 if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     constructor() {
-      super(); // always call super() first in the ctor.
+      super(); // always call super() first in the constructor.
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <b>I'm in shadow dom!</b>
@@ -674,7 +674,7 @@ Bagi mereka yang belum familier, [elemen `<template>`](https://html.spec.whatwg.
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);

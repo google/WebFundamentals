@@ -1,0 +1,33 @@
+<div class="devsite-collapsible-section" style="margin-top: 0px;">
+{% if customHeader %}
+  {{ customHeader|safe }}
+{% else %}
+  <div class="devsite-header-background devsite-full-site-width">
+    <div class="devsite-product-id-row devsite-full-site-width">
+      <div class="devsite-product-description-row">
+        {% if headerTitle %}
+        <ul class="devsite-breadcrumb-list">
+          <li class="devsite-breadcrumb-item">
+            {{ headerTitle }}
+          </li>
+        </ul>
+        {% endif %}
+        {% if headerDescription %}
+        <div class="devsite-product-description">
+          {% autoescape off %}{{ headerDescription }}{% endautoescape %}
+        </div>
+        {% endif %}
+      </div>
+      {% if headerButtons %}
+      <div class="devsite-product-button-row">
+        {% for button in headerButtons %}
+        <a href="{{ button.path }}" class="button {{ button.classname }}">{{ button.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% include "includes/lower-tabs.html" %}
+  </div>
+{% endif %}
+</div>

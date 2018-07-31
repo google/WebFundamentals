@@ -38,7 +38,7 @@ is set to true or the `disabled` attribute is applied, the checkbox sets
 to the document if the checkbox is the current `activeElement`.
 
 The checkbox is paired with a `howto-label` element to ensure it has an
-[accessible name](http://localhost:8080/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree#semantics_in_native_html).
+[accessible name](/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree#semantics_in_native_html).
 
 Warning: Just because you _can_ build a custom element checkbox, doesn't
 necessarily mean that you _should_. As this example shows, you will need to add
@@ -92,7 +92,7 @@ type="checkbox">` instead.
 
 ## Code {: #code }
 <ul class="literate code" id="howto-checkbox_impl">
-  
+
 <li class="blockcomment ">
 <div class="literate-text empty"></div>
 <pre class="prettyprint"><code class="literate-code ">(function() {</code></pre>

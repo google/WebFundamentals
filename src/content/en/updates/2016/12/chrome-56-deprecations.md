@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 56 to help you plan.
 
-{# wf_updated_on: 2017-03-02 #}
+{# wf_blink_components: Security,UI>Shell>GestureNav,Blink>JavaScript>Language,Blink>MediaStream>*,Blink>Payments,Blink>SVG #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-12-08 #}
 {# wf_tags: deprecations,removals,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -86,7 +87,7 @@ navigate to sites with a lot of custom script tags that are post-processed (like
 The use case of using invalid scripts to ping servers is adequately covered by
 the [sendBeacon API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
 
-This change aligns Chrome with Safari, though FireFox still requests scripts
+This change aligns Chrome with Safari, though Firefox still requests scripts
 regardless of type or language.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/eu57SCNltls/discussion) &#124;
@@ -206,6 +207,6 @@ deprecated in Chrome 54 and has now been removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5665473114931200) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=633908)
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 
 {% include "comment-widget.html" %}

@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-08-01 #}
+{# wf_blink_components: Internals>Network>HTTP2,UI>Browser>Search #}
+{# wf_updated_on: 2018-01-08 #}
 {# wf_published_on: 2016-04-19 #}
 {# wf_tags: deprecations,removals,chrome51 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -17,7 +18,7 @@ In nearly every version of Chrome we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the web
 platform.
 
-<<../../_deprecation-policy.md>>
+{% include "web/updates/_shared/deprecations-policy.html" %}
 In Chrome 51 (April, 2016) there are a number of changes to Chrome.
 
 

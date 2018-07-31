@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Automated testing with Headless Chrome"
 
-{# wf_updated_on: 2017-06-13 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-06-13 #}
 
 {# wf_tags: headless,testing,karma,mocha,chai #}
@@ -15,6 +15,7 @@ description: "Automated testing with Headless Chrome"
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+
 <script>
 var response = 'Thanks for the feedback!';
 var feedback = {
@@ -51,6 +52,7 @@ var feedback = {
   ]
 };
 </script>
+
 {% include "web/_shared/multichoice.html" %}
 {% endframebox %}
 
@@ -193,7 +195,9 @@ language: node_js
 node_js:
   - "7"
 dist: trusty # needs Ubuntu Trusty
-sudo: false  # no need for virtualization.
+# Note: if you switch to sudo: false, you'll need to launch chrome with --no-sandbox.
+# See https://github.com/travis-ci/travis-ci/issues/8836
+sudo: required
 addons:
   chrome: stable # have Travis install chrome stable.
 cache:

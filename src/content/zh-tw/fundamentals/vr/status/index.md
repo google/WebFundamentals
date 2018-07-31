@@ -7,7 +7,7 @@ description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體
 
 # WebVR 狀態和注意事項 {: .page-title }
 
-警告：WebVR 仍處於實驗階段，並且隨時可能更改。
+Warning: WebVR 仍處於實驗階段，並且隨時可能更改。
 
 ## WebVR 實現狀態
 
@@ -15,7 +15,7 @@ description:獲取有關 WebVR 狀態的最新信息，以及在構建 WebVR 體
 
 * Chrome Beta (M56+)，通過一個[來源試用版](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md)實現。
 * Firefox Nightly。
-* Samsung Internet Browser for Gear VR。（請注意：此瀏覽器目前支持一個較早版本的 WebVR 規範）。
+* Samsung Internet Browser for Gear VR。（請Note: 此瀏覽器目前支持一個較早版本的 WebVR 規範）。
 
 <iframe width="100%" height="320" src="https://www.chromestatus.com/feature/4532810371039232?embed" style="border: 1px solid #CCC" allowfullscreen>
 </iframe>

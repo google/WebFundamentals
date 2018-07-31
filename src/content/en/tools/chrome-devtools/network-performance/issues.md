@@ -3,7 +3,8 @@ book_path: /web/tools/_book.yaml
 description: Learn how to detect network issues in the Network panel of Chrome DevTools.
 
 {# wf_published_on: 2016-12-28 #}
-{# wf_updated_on: 2016-12-28 #}
+{# wf_updated_on: 2018-07-27 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 figcaption {
@@ -121,3 +122,7 @@ Got a network issue that should be added to this guide?
 
 [tweet]: https://twitter.com/intent/tweet?text=@ChromeDevTools%20[Network%20Issues%20Guide%20Suggestion]
 [issue]: https://github.com/google/WebFundamentals/issues/new?title=[DevTools%20Network%20Issues%20Guide%20Suggestion]
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
