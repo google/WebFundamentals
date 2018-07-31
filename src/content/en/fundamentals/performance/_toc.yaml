@@ -75,6 +75,8 @@ toc:
         section:
         - title: Reduce JavaScript Payloads with Tree Shaking
           path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
+        - title: Reduce JavaScript Payloads with Code Splitting
+          path: /web/fundamentals/performance/optimizing-javascript/code-splitting/
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
