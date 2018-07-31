@@ -172,3 +172,24 @@ toc:
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
         step_group: perf-rendering
+    - title: Audit your site
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/audit/
+        step_group: perf-audit
+      - title: Check site security
+        path: /web/fundamentals/performance/audit/security
+        step_group: perf-audit
+      - title: Use tools to measure performance
+        path: /web/fundamentals/performance/audit/tools
+        step_group: perf-audit
+      - title: Manual checks
+        path: /web/fundamentals/performance/audit/manual
+        step_group: perf-audit
+      - title: Share the results
+        path: /web/fundamentals/performance/audit/share
+        step_group: perf-audit
+      - title: Next steps
+        path: /web/fundamentals/performance/audit/next
+        step_group: perf-audit
+
