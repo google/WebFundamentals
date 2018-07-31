@@ -5,7 +5,7 @@ description: There is a new release of Material Design Lite, bringing a host of 
 {# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-20 #}
 {# wf_tags: news,mdl,release #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Blink>CSS #}
 
 # New Release of Material Design Lite - 1.0.4 {: .page-title }
 
@@ -46,7 +46,7 @@ After you’ve reviewed the changelog, update your CDN paths to the following:
 
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons”>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
 
 **Built with MDL**
