@@ -2,28 +2,42 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2018-07-27 #}
 {# wf_tags: news,chrome69,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: Picture-in-Picture, AV1, and HDCP policy check are here! #}
+{# wf_featured_snippet: AV1, Picture-in-Picture, and HDCP policy check are here! #}
 {# wf_blink_components: Blink>Media #}
 
 # Audio/Video Updates in Chrome 69 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
+- Chrome supports [AV1 video decoding](#av1).
 - Web developers can now control [Picture-in-Picture](#picture_in_picture) for
   video elements.
 - Querying [which encryption schemes are supported](#encryption_scheme) through
   EME is now available.
 - Web developers can experiment with [querying whether a certain HDCP policy
   can be enforced](#hdcp).
-- [AV1 decoder](#av1): TODO
 - Media Source Extensions now use [PTS for buffered ranges and duration
   values](#pts).
 - Android Go users can [open downloaded audio, video and images in Chrome](#media_intent_handler).
 - [Stalled events](#stalled) for media elements using MSE are removed.
+
+## AV1 video decoder {: #av1 }
+
+AV1 is a next generation codec developed by the [Alliance for Open Media] which
+[improves compression efficiency by 30%] over the current state-of-the-art
+video codec, VP9.
+
+Chrome 69 adds an AV1 decoder into Chrome Desktop (Windows, Mac, Linux,
+ChromeOS) based on the [official bitstream specification]. At this time, support
+is limited to "Main" [profile 0] and does not include encoding capabilities. The
+supported container is [ISO-BMFF (MP4)]. See [From raw video to web ready] for
+a brief explanation of containers.
+
+[Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480)
 
 ## Watch video using Picture-in-Picture {: #picture_in_picture }
 
@@ -48,7 +62,7 @@ Some platforms or key systems only support CENC mode, while others only support
 CBCS mode. Still others are able to support both. These two encryption schemes
 are incompatible, so web developers must be able to make intelligent choices
 about what content to serve.
- 
+
 To avoid having to determine which platform they’re on to check for “known”
 encryption schemes support, a new `encryptionScheme` key is [added] in
 `MediaKeySystemMediaCapability` to allow websites to specify which encryption
@@ -157,17 +171,17 @@ to try out all versions of HDCP.
         robustness: 'SW_SECURE_DECODE' // Widevine L3
       }]
     }];
-    
+
     navigator.requestMediaKeySystemAccess('com.widevine.alpha', config)
     .then(mediaKeySystemAccess => mediaKeySystemAccess.createMediaKeys())
     .then(mediaKeys => {
-    
+
       // Get status for HDCP 2.2
       return mediaKeys.getStatusForPolicy({ minHdcpVersion: 'hdcp-2.2' })
       .then(status => {
         if (status !== 'usable')
           return Promise.reject(status);
-    
+
         console.log('HDCP 2.2 can be enforced.');
         // TODO: Fetch high resolution protected content...
       });
@@ -189,12 +203,6 @@ need to enable the experimental "Web Platform Features" flag at
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5652917147140096) &#124;
 [Chromium Bug](https://crbug.com/709348)
 
-## AV1 decoder {: #av1 }
-
-TODO
-
-[Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480)
-
 ## MSE PTS/DTS compliance {: #pts }
 
 Buffered ranges and duration values are now reported by Presentation Time Stamp
@@ -207,7 +215,7 @@ PTS and DTS. And it was working fine… until ISO BMFF (aka MP4) was added. This
 frequently contains out-of-order presentation versus decode time streams (eg,
 for codecs like H.264) causing DTS and PTS to differ. That caused Chrome to
 report (usually just slightly) different buffered ranges and duration values
-than expected. But here it is: this new behaviour will roll out gradually in
+than expected. But here it is: this new behavior will roll out gradually in
 Chrome 69 and makes its MSE implementation compliant with the [MSE
 specification].
 
@@ -228,6 +236,7 @@ If you’re not sure which method is used to report buffered ranges and duration
 values, you can go to the internal `chrome://media-internals` page and search for
 "ChunkDemuxer: buffering by PTS" or  "ChunkDemuxer: buffering by DTS" in logs.
 
+[Intent to Implement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/I6oGJLym-Tk/Z46le9l4CQAJ) &#124;
 [Chromium Bug](https://crbug.com/718641)
 
 ## Handling of media view intents on Android Go {: #media_intent_handler }
@@ -272,6 +281,8 @@ continue to raise "stalled" events as they do today.
 [Intent to Deprate and Remove](https://groups.google.com/a/chromium.org/d/msg/blink-dev/x54XtrTyOP8/4-5QZlZzDAAJ) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=836951)
 
+{% include "web/_shared/rss-widget-updates.html" %}
+
 {% include "comment-widget.html" %}
 
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
@@ -286,6 +297,12 @@ continue to raise "stalled" events as they do today.
 [official sample]: https://googlechrome.github.io/samples/hdcp-detection/
 [Origin Trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [request a token]: http://bit.ly/HdcpPolicyCheckOriginTrials
+[Alliance for Open Media]: http://aomedia.org/
+[improves compression efficiency by 30%]: https://code.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
+[official bitstream specification]: https://aomedia.org/av1-bitstream-and-decoding-process-specification/
+[profile 0]: https://aomediacodec.github.io/av1-spec/#profiles
+[ISO-BMFF (MP4)]: https://aomediacodec.github.io/av1-isobmff
+[From raw video to web ready]: /web/fundamentals/media/manipulating/files#how_are_media_files_put_together
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [MSE specification]: https://w3c.github.io/media-source/
 [Android Go]: https://www.android.com/versions/oreo-8-0/go-edition/
