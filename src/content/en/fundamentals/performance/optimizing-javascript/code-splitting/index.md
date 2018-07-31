@@ -553,7 +553,10 @@ module.exports = {
 };
 ```
 
-With this configuration, Workbox generates a service worker that precaches _all_ JavaScript in your app. This is probably fine for small apps, but for large ones you'll want put limits on what's precached. This can be done using the plugin's chunks option to whitelist chunks:
+With this configuration, Workbox generates a service worker that precaches _all_
+JavaScript in your app. This is probably fine for small apps, but for large ones
+you'll want put limits on what's precached. This can be done using the plugin's
+chunks option to whitelist chunks:
 
 ```javascript
 module.exports = {
