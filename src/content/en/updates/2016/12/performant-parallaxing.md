@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: With a little mathematical wriggling, it's possible to have parallax effects that play nicely with browser architectures!
 
-{# wf_updated_on: 2017-11-07 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-12-02 #}
 {# wf_tags: performance,parallax,css,3d,style #}
 {# wf_featured_image: /web/updates/images/2016/12/performant-parallaxing/featured-image.jpg #}
 {# wf_featured_snippet: When used judiciously paralaxing can add of depth and subtlety to a web app. #}
+{# wf_blink_components: Blink>CSS>3D #}
 
 
 # Performant Parallaxing {: .page-title }
@@ -105,8 +106,8 @@ The CSS for this approach looks like so:
 
 Which assumes a snippet of HTML like this:
 
-    <div class="container”>
-      <div class="parallax-child”></div>
+    <div class="container">
+      <div class="parallax-child"></div>
     </div>
 
 ### Adjusting scale for perspective
@@ -154,9 +155,9 @@ the preservation of 3D effects to child elements. If there are elements in the
 hierarchy between the element with a perspective and its parallaxing children,
 the 3D perspective is "flattened", meaning the effect is lost.
 
-    <div class="container”>
-      <div class="parallax-container”>
-        <div class="parallax-child”></div>
+    <div class="container">
+      <div class="parallax-container">
+        <div class="parallax-child"></div>
       </div>
     </div>
 
@@ -211,9 +212,9 @@ ancestor with a scrolling box, which in this case is `.container`. Then,
 similarly to before, the `.parallax-container` applies a `perspective` value,
 which changes the calculated scroll offset and creates a parallax effect.
 
-    <div class="container”>
-      <div class="parallax-container”>
-        <div class="parallax-child”></div>
+    <div class="container">
+      <div class="parallax-container">
+        <div class="parallax-child"></div>
       </div>
     </div>
 
@@ -289,7 +290,7 @@ smoothed over:
   `perspective` has been applied. It is possible to work around this issue by
   scaling elements from the bottom right corner (with `transform-origin: bottom
   right`), which works because it will cause oversized elements to grow into the
-  “negative region” (typically the top left) of the scrollable area; scrollable
+  "negative region" (typically the top left) of the scrollable area; scrollable
   regions never let you see or scroll to content in the negative region.
 
 ## Conclusion
