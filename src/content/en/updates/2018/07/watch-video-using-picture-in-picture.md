@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2018-07-27 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/07/watch-video-using-picture-in-picture/hero.png #}
@@ -25,8 +25,6 @@ watching while interacting with other sites, or applications.
 With the new [Picture-in-Picture Web API], you can initiate and control
 Picture-in-Picture for video elements on your website. Try it out on our
 official [Picture-in-Picture sample].
-
-Dogfood: The Picture-in-Picture Web API requires enabling `chrome://flags/#enable-surfaces-for-videos` experimental flag in Chrome 69 for desktop.
 
 ## Background {: #background }
 
@@ -263,7 +261,7 @@ involved in the [standardization effort].
 [promise]: https://developers.google.com/web/fundamentals/primers/promises
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
 [Feature support]: #feature-support
-[feature policy]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md#picture-in-picture
+[feature policy]: /web/updates/2018/06/feature-policy
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
 [disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md#picture-in-picture
