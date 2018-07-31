@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-03-05 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2012-03-05 #}
 {# wf_tags: news,css,dom #}
 
@@ -79,7 +79,7 @@ Possibly one of the most compelling use cases is for the [web component](http://
 The most natural way is to include the parent element so that the `<style scoped>` rules could, for example, set a common background color for the entire scope. It also allows scoped style sheets to be written “defensively” for browsers that don’t yet support `<style scoped>`, by prefixing rules with an ID or class selector as a fallback:
 
 
-    <div id=”menu”>
+    <div id="menu">
       <style scoped>
         #menu .main { … }
         #menu .sub { … }
@@ -92,7 +92,7 @@ This mimics the effect of using styles when  ‘scoped’ is implemented but wit
 
 Given that the implementation of scoped style sheets is still new, they are currently hidden behind a run-time flag in Chrome. To enable them you need to get a version of Chrome that has a version number of 19 or higher (Chrome Canary right now), then locate the ‘Enable `<style scoped>`’ entry in chrome://flags (towards the end), click ‘Enable’ and then restart the browser.
 
-There are currently no known bugs, but `@global` and scoped versions of `@keyframes` and `@-webkit-region` and are stil in the process of being implemented. Also, `@font-face` is ignored for the time being since there is a good chance that the spec will change.
+There are currently no known bugs, but `@global` and scoped versions of `@keyframes` and `@-webkit-region` and are still in the process of being implemented. Also, `@font-face` is ignored for the time being since there is a good chance that the spec will change.
 
 
 We would like to encourage everyone interested in the feature to try it out and let us know about your experiences: the good, the bad and (maybe) the buggy.

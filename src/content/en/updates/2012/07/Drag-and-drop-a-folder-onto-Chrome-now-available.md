@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-07-22 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2012-07-22 #}
 {# wf_tags: news,dnd,filesystem #}
 
@@ -17,7 +17,7 @@ As web apps evolve, you might have found it handy to let users drag and drop fil
 Let’s look at a code sample of existing drag and drop.
 
 
-    <div id=”dropzone”></div>
+    <div id="dropzone"></div>
     
 
     var dropzone = document.getElementById('dropzone');
@@ -37,7 +37,7 @@ In this example, you can actually drag and drop a file or files from the desktop
 Chrome 21 allows you to drop a folder or multiple folders into the browser window. To handle these, you need to change the way you handle dropped objects.
 
 
-    <div id=”dropzone”></div>
+    <div id="dropzone"></div>
     
 
     var dropzone = document.getElementById('dropzone');

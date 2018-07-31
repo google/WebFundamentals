@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Building apps, the Polymer way.
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,webcomponents,polymer,chromedevsummit #}
 
@@ -101,7 +101,7 @@ There's no reason to incur all that cost if the platform already has full suppor
         // HTML Imports are supported
       } else {
         document.write(
-          '<script src=“bower_components/webcomponentsjs/HTMLImports.min.js"><\/script>'
+          '<script src="bower_components/webcomponentsjs/HTMLImports.min.js"><\/script>'
         );
       }
     </script>
