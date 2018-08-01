@@ -15,6 +15,7 @@ description: There are several core objectives for building a performant, resili
 There are several core objectives for building a performant, resilient site with low data cost.
 
 For each objective, you need an audit.
+<br><br>
 
 <table>
 <thead>
@@ -77,17 +78,29 @@ There is a wide range of tools and techniques for auditing websites:
 
 Below you'll learn which approach is relevant for each type of audit.
 
+<div class="note">
+
+  <p><strong>Images constitute by far the <a href="http://httparchive.org/interesting.php#bytesperpage">most weight</a> and <a href="http://httparchive.org/trends.php#bytesImg&reqImg">most requests</a> for most web pages.</strong></p>
+
+  <p><a href="https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">Latency gets worse as connectivity gets worse</a> so excessive image file requests are an increasing problem as the web goes mobile. Images also consume power: more image requests, more radio usage, more flat batteries. <a href="http://httparchive.org/trends.php#bytesImg&reqImg">Even just to render images takes power</a> – and this is proportional to the size and quantity of images.</p>
+
+  <p>Likewise for memory: small increases in pixel dimensions result in big increases in memory usage. With images on mobile — especially on low-spec devices — <a href="https://timkadlec.com/2013/11/why-we-need-responsive-images-part-deux/">memory can become the new bottleneck</a>. Bloated images are also problematic for users on capped data plans.</p>
+
+  <p><a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/content#viewport">Remove redundant images</a>! If you can't get rid of them, optimize: increase compression as much as possible, reduce pixel dimensions, and use the format that gives you the smallest file sizes. Optimizing 'hero images' such as banners and backgrounds is an easy, one-off win.</p>
+
+</div>
+
 ## Record resource requests: number, size, type and timing
 
 A good place to start when auditing a site is to check pages with your browser's network tools. If you're not sure how to do this, work through the Chrome DevTools network panel [Get Started Guide](https://developers.google.com/web/tools/chrome-devtools/network-performance/). Similar tools are available for [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Instruments/Instruments.html#//apple_ref/doc/uid/TP40007874-CH4-SW1), [Internet Explorer](https://msdn.microsoft.com/en-us/library/gg130952(v=vs.85).aspx) and [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/network).
 
-Remember to keep a record of results before you make changes. For network requests, that can be as simple as a screenshot — you can also [save profile data](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool#save_and_load_recordings) as a JSON file.
+Remember to keep a record of results before you make changes. For network requests, that can be as simple as a screenshot — you can also [save profile data](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool#save_and_load_recordings) as a JSON file. There's more information below about [how to save and share test results](#save_the_results).
 
-Before you start auditing network usage, make sure to [disable the browser cache](https://developers.google.com/web/tools/chrome-devtools/network-performance/#emulate) (and, if you already have caching via a service worker, [clear Cache API storage](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)) to ensure you get accurate statistics for first-load performance. You may want to use an Incognito (Private) window, so that you don't have to worry about disabling the browser cache or removing previously cached entries.
+Before you begin auditing network usage, make sure to [disable the browser cache](https://developers.google.com/web/tools/chrome-devtools/network-performance/#emulate) to ensure you get accurate statistics for first-load performance. If you already do caching via a service worker, [clear Cache API storage](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps). You may want to use an Incognito (Private) window, so that you don't have to worry about disabling the browser cache or removing previously cached entries.
 
 Here are some core features and metrics you should check with browser tools:
 
-* Load performance: Lighthouse (available from the [Chrome DevTools Audit panel](https://developers.google.com/web/tools/lighthouse/#devtools)) provides a summary of load metrics. Addy Osmani has written a great summary of [key user moments](https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-2-page-load-performance-33b932d97cf2) for page load.
+* Load performance: [Lighthouse](https://developers.google.com/web/tools/lighthouse/#devtools) provides a summary of load metrics. Addy Osmani has written a great summary of [key user moments](https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-2-page-load-performance-33b932d97cf2) for page load.
 * [Timeline events](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool) for loading and parsing resources, and memory usage. If you want to go deeper, run memory and JavaScript [profiling](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool#profile-js).
 * Total page weight and number of files.
 * Number and weight of JavaScript files.
@@ -96,29 +109,28 @@ Here are some core features and metrics you should check with browser tools:
 * Total number and weight of image files.
 * Any particularly large individual image files.
 * Image formats: are there [PNGs that could be JPEGs or SVGs](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)? Is WebP used with fallbacks?
-* Are responsive image techniques (such as [srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)) used?
+* Whether responsive image techniques (such as [srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)) are used.
 * HTML file size.
 * Total number and weight of CSS files.
 * Unused CSS. (In Chrome, use the [coverage panel](https://umaar.com/dev-tips/121-css-coverage/).)
-* Check for problematic use of other files, such as Web Fonts (including icon fonts).
+* Check for problematic usage of other assets such as Web Fonts (including icon fonts).
 * Check the DevTools timeline for anything that blocks page load.
 
-If you're working from fast wifi or a fast cellular connection, test with [low bandwidth and high latency emulation](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions). Remember to test on mobile as well as desktop — your site may deliver different assets and layouts for different devices. You may also need to test on actual hardware using [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/), not just with device simulation.
+If you're working from fast wifi or a fast cellular connection, test with [low bandwidth and high latency emulation](https://developers.google.com/web/tools/chrome-devtools/network-performance/network-conditions). Remember to test on mobile as well as desktop — some sites use UA sniffing to deliver different assets and layouts for different devices. You may need to test on actual hardware using [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/), not just with device simulation.
 
 <div class="note">
 
   <p><strong>You can often use browser tools to spot problems simply by checking network responses and ordering by size.</strong></p>
 
-  <p>For example: the 349KB PNG here looks like it could be a problem:</p>
+  <p>For example: the 349KB PNG here looked like it could be a problem:</p>
 
   <figure>
     <img src="images/devtools-349KB.png" alt="Chrome DevTools Network panel showing a large file">
-    <figcaption><em>Chrome DevTools Security panel — order by size</em></figcaption>
   </figure>
 
-  <p>Sure enough, it turns out the image is 1600px wide, whereas the maximum display width is only 400px. The decompressed size is over 4MB: this is how much memory the image requires, which is a lot on a mobile phone.</p>
+  <p>Sure enough, it turned out the image was 1600px wide, whereas the maximum display width of the element was only 400px. Decompressed, the image needed over 4MB of memory, which is a lot on a mobile phone.</p>
 
-  <p>Resaving the image as an 800px wide JPEG (to cope with 400px display width on 2x screens) and optimizing with <a href="https://imageoptim.com/">ImageOptim</a> results in a 17KB file: compare the <a href="https://drive.google.com/open?id=0B9xlQg9Xpugsb0VpQldsN3YwSEE">original PNG</a> with the <a href="https://drive.google.com/open?id=0B9xlQg9XpugsTlBVNlQ1bUdQa0U">optimized JPEG</a>.</p>
+  <p>Resaving the image as an 800px wide JPEG (to cope with 400px display width on 2x screens) and optimizing with <a href="https://imageoptim.com/">ImageOptim</a> resulted in a 17KB file: compare the <a href="https://drive.google.com/open?id=0B9xlQg9Xpugsb0VpQldsN3YwSEE">original PNG</a> with the <a href="https://drive.google.com/open?id=0B9xlQg9XpugsTlBVNlQ1bUdQa0U">optimized JPEG</a>.</p>
 
   <p>That's a 95% improvement!</p>
 
@@ -126,14 +138,14 @@ If you're working from fast wifi or a fast cellular connection, test with [low b
 
 ## Check memory and CPU load
 
-In Chrome you can access the task manager from the Window menu. This is a simple way to check a web page's memory and CPU requirements.
+Before you make changes, keep a record of memory and CPU usage.
+
+In Chrome you can access the Task Manager from the Window menu. This is a simple way to check a web page's requirements.
 
 <figure>
   <img src="images/task-manager.png" alt="Chrome Task Manager showing memory and CPU usage for the four open browser tabs">
   <figcaption><em>Chrome's Task Manager — watch out for memory and CPU hogs!</em></figcaption>
 </figure>
-
-Before you make changes, keep a record of memory and CPU usage.
 
 ## Test first and subsequent load performance
 
@@ -149,7 +161,7 @@ Before you make changes, keep a record of memory and CPU usage.
 
 </div>
 
-### Save the results
+## Save the results
 
 * **WebPagetest**: [test results each have their own URL](https://www.webpagetest.org/result/170428_NW_cc5afd75a2041f7e09984f33e4a4ae14/).
 * **Pagespeed Insights**: the [online](https://developers.google.com/speed/pagespeed/insights) Pagespeed Insights tool [now includes Chrome User Experience report data](https://webmasters.googleblog.com/2018/01/real-world-data-in-pagespeed-insights.html?m=1) highlighting real-world performance stats.
@@ -157,19 +169,6 @@ Before you make changes, keep a record of memory and CPU usage.
 <figure>
   <img src="images/lighthouse-download-1000.png" srcset="images/lighthouse-download-500.png 500w, images/lighthouse-download-1000.png 1000w" alt="Chrome Lighthouse button for downloading reports">
 </figure>
-
-### What else?
-
-If relevant, get a [Web Bloat Score](http://www.webbloatscore.com/). This is a fun test, but it can also be a compelling way to demonstrate code bloat — or to show you've made improvements.
-
-[What Does My Site Cost?](https://whatdoesmysitecost.com/test/170427_KK_6aecf8c8a21c22e9f59b2b65e8371569#gniCost), shown below, gives a rough guide to the financial cost of loading your site in different regions.
-
-<figure>
-  <img src="images/site-cost.png" srcset="images/site-cost-500.png 500w, images/site-cost-1000.png 1000w" alt="Screenshot from whatdoesmysitecost.com">
-  <figcaption><em>How much does your site cost to load?</em></figcaption>
-</figure>
-
-There are many other standalone and online tools available: take a look at [perf.rocks/tools](perf.rocks/tools/).
 
 ## Test for core Progressive Web App requirements
 
@@ -186,19 +185,18 @@ You can download a Lighthouse report as JSON or, if you're using the [Lighthouse
 
 ## Use analytics, event tracking and business metrics to track real-world performance
 
-If you can, keep a record of analytics data before you implement changes: bounce rates, time on page, exit pages — whatever's relevant to your business requirements — or ask colleagues to do this.
+If you can, keep a record of analytics data before you implement changes: bounce rates, time on page, exit pages: whatever's relevant to your business requirements.
 
-If possible, record business and technical metrics that might be affected, so you can compare results after making changes. For example: an e-commerce site might track orders per minute or record stats for stress and endurance testing. Back-end storage costs, CPU requirements, serving costs and resilience are likely to improve if you cut page weight and resource requests.
+If possible, record business and technical metrics that might be affected, so you can compare results after making changes. For example: an e-commerce site might track orders-per-minute or record stats for stress and endurance testing. Back-end storage costs, CPU requirements, serving costs and resilience are likely to improve if you cut page weight and resource requests.
 
 If analytics aren't implemented, now is the time! Business metrics and analytics are the final arbiter of whether or not your site is working. If appropriate, incorporate [event tracking](https://developers.google.com/analytics/devguides/collection/analyticsjs/events) for user actions such as button clicks and video plays. You may also want to implement [goal flow analysis](https://support.google.com/analytics/answer/2520139?hl=en&ref_topic=1649581): the paths by which your users navigate towards 'conversions'.
 
 You can keep an eye on Google Analytics [Site Speed](https://support.google.com/analytics/answer/1205784?hl=en) to check how performance metrics correlate with business metrics. For example: 'how fast did the homepage load?' compared to 'did entry via the home page result in a sale?'
-
+<br><br>
 <figure>
   <img src="images/site-speed.png" srcset="images/site-speed-500.png 500w, images/site-speed-1000.png 1000w" alt="Screenshot showing Google Analytics Site Spped">
-  <figcaption><em>Google Analytics Site Speed report</em></figcaption>
 </figure>
-
+<br>
 Google Analytics uses data from the [Navigation Timing API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API).
 
 You may want to record data using one of the [JavaScript performance APIs](https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver) or your own metrics, for example:
@@ -220,22 +218,27 @@ You may want to record data using one of the [JavaScript performance APIs](https
      }
     });
 
-You may also want to use ReportingObserver, one of [many APIs for getting real-world, live measurements from actual users](https://developers.google.com/web/updates/2018/07/reportingobserver).
+You can also use ReportingObserver to check for browser deprecation and intervention warnings. This is one of [many APIs for getting real-world, live measurements from actual users](https://developers.google.com/web/updates/2018/07/reportingobserver).
 
 ## Real-world experience: screen and video recording
 
-Make a video recording of page load on mobile and desktop. This works even better at high frame rates and if you add a timer display. You may also want to save screencasts. There are many screencast recording apps for Android, iOS, and desktop platforms (and [scripts to do the same](https://paul.kinlan.me/android-screen-recording/)).
+Make a video recording of page load on mobile and desktop. This works even better at high frame rates and if you add a timer display.
+
+You may also want to save screencasts. There are many screencast recording apps for Android, iOS, and desktop platforms (and [scripts to do the same](https://paul.kinlan.me/android-screen-recording/)).
 
 Video-recording page load works much like the [filmstrip view](http://www.webpagetest.org/video/compare.php?tests=170427_61_14ZR-r:1-c:0) in WebPagetest or [Capture Screenshots](https://developers.google.com/web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling) in Chrome DevTools. You get a real-world record of page component load speed: what's fast and what's slow. Save video recordings and screencasts to compare against later improvements.
 
-<div class="note">
+A side-by-side before-and-after comparison can be a great way to demonstrate improvements!
 
-  <p><strong>Images constitute by far the <a href="http://httparchive.org/interesting.php#bytesperpage">most weight</a> and <a href="http://httparchive.org/trends.php#bytesImg&reqImg">most requests</a> for most web pages.</strong></p>
 
-  <p><a href="https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">Latency gets worse as connectivity gets worse</a> so excessive image file requests are an increasing problem as the web goes mobile. Images also consume power: more image requests, more radio usage, more flat batteries. <a href="http://httparchive.org/trends.php#bytesImg&reqImg">Even just to render images takes power</a> – and this is proportional to the size and quantity of images.</p>
+## What else?
 
-  <p>Likewise for memory: small increases in pixel dimensions result in big increases in memory usage. With images on mobile — especially on low-spec devices — <a href="https://timkadlec.com/2013/11/why-we-need-responsive-images-part-deux/">memory can become the new bottleneck</a>. Bloated images are also problematic for users on capped data plans.</p>
+If relevant, get a [Web Bloat Score](http://www.webbloatscore.com/). This is a fun test, but it can also be a compelling way to demonstrate code bloat — or to show you've made improvements.
 
-  <p><a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/content#viewport">Remove redundant images</a>! If you can't get rid of them, optimize: increase compression as much as possible, reduce pixel dimensions, and use the format that gives you the smallest file sizes. Optimizing 'hero images' such as banners and backgrounds is an easy, one-off win.</p>
+[What Does My Site Cost?](https://whatdoesmysitecost.com/test/170427_KK_6aecf8c8a21c22e9f59b2b65e8371569#gniCost), shown below, gives a rough guide to the financial cost of loading your site in different regions.
 
-</div>
+<figure>
+  <img src="images/site-cost.png" srcset="images/site-cost-500.png 500w, images/site-cost-1000.png 1000w" alt="Screenshot from whatdoesmysitecost.com">
+</figure>
+
+Many other standalone and online tools are available: take a look at [perf.rocks/tools](perf.rocks/tools/).
