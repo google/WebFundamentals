@@ -1,35 +1,24 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: You won't be able to build a PWA without HTTPS. Serving your site over HTTPS is fundamental for security, and many APIs won't work without it. If you need to justify implementation costs, find out why HTTPS matters.
+description: Having completed a site audit, you should have accurate review data in a form that makes it easy for developers and other stakeholders to prioritize and justify changes.
 
 {# wf_updated_on: 2017-07-25 #}
 {# wf_published_on: 2015-03-20 #}
 {# wf_blink_components: Blink>JavaScript #}
 
-# Check site security {: .page-title }
+# Next steps {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
 
-### TL;DR {: .hide-from-toc }
+Having completed a site audit, you should have accurate review data in a form that makes it easy for developers and other stakeholders to prioritize and justify changes.
 
-* Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
-* Move long-running JavaScript off the main thread to Web Workers.
-* Use micro-tasks to make DOM changes over several frames.
-* Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
+Next, you may want to take a look at our guide: [Big improvements with simple changes](https://docs.google.com/document/d/1Pk9W5uitZySdhfRZq5Yjrr24B5eW-XzXzcIv9ZHIsfk/edit#).
 
-## Second level head
+## Find out more
 
-
-    /**
-     * Some
-     * code.
-     */
-    function func(arg) {
-      // Blah
-    }
-
-    foo(bar);
-
-
-<img src="images/optimize-javascript-execution/settimeout.jpg" alt="An image">
++ [perf.rocks](http://perf.rocks/articles/`): resources to help you build fast sites
++ [Web Fundamentals Performance guide](https://developers.google.com/web/fundamentals/performance): why performance matters and how to improve it
++ [How To Think About Speed Tools](https://developers.google.com/web/fundamentals/performance/speed-tools/): overview of guidance and tools for developers and marketers from Google
++ [High Performance Web Sites](http://stevesouders.com/hpws/) by Steve Souders: more than 10 years old, but still valuable
++ [High Performance Browser Networking](https://hpbn.co/) by Ilya Grigorik: comprehensive reference including introductory guides to TCP, UDP, TLS and other topics

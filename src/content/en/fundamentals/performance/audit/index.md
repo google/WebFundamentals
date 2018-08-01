@@ -11,11 +11,11 @@ description: Auditing your site or app will help you build a resilient, performa
 
 ## Why and what?
 
-You've probably heard good things about Progressive Web App techniques. You might feel tempted to jump straight in and add PWA features. That's possible, but you'll be much better off if you get your site or app 'PWA-ready' first.
+You've probably heard about all the good things that Progressive Web App techniques can do for your site. You might feel tempted to jump straight in and add PWA features. That's possible, but you'll be much better off if you get 'PWA-ready' first.
 
 No amount of PWA magic will fix problems such as blocking JavaScript or bloated images. PWAs need a solid foundation.
 
-So how do you check the health of your website? The first step is to do a site audit: an objective review of what works well and what doesn't.
+So how do you check the health of your website? The first step is to do a site audit: an objective review of what works well and where (and how) there could be improvement.
 
 Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors? You get metrics to prioritize effort, and concrete evidence to brag about once you've made improvements.
 
@@ -34,10 +34,11 @@ Run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) on your ho
 *   [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/): load performance, data cost and resource usage, including Chrome User Experience report data highlighting real-world performance statistics.
 *   [Speed Scorecard and Impact Calculator](https://www.thinkwithgoogle.com/feature/mobile/): compare site speed against peers and estimate the potential revenue opportunity of improving site speed.
 
-Nothing beats real world testing — audit your site from the kind of devices and connectivity your users have.
+Nothing beats real world testing — try out your site with the same devices and connectivity as your users and keep a record of your subjective experience.
+<br><br>
 
 <div class="note">
-  <strong>If you find the range of tools bewildering, take a look at our guide: <a href="https://developers.google.com/web/fundamentals/performance/speed-tools/">How To Think About Speed Tools</a>.</strong><br>
+  <strong>If the range of tools is bewildering, take a look at our guide: <a href="https://developers.google.com/web/fundamentals/performance/speed-tools/">How To Think About Speed Tools</a>.</strong><br>
   <br>
   If nothing else, use <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> to check for:<br>
   <ul>
@@ -52,7 +53,7 @@ Nothing beats real world testing — audit your site from the kind of devices an
   </ul>
 </div>
 
-## Prework
+## Audience, stakeholders, context
 
 Priorities for refactoring depend on your audience, content and functionality. Who visits your site? Why and how do they use it? What's your [performance budget](http://www.performancebudget.io/)? If you're not sure of the answer to these questions, try the requirements gathering exercises from our PWA training resources: [Your audience, your content](https://docs.google.com/presentation/d/1-UjSS-kRZgE0q77zPBkgjg2-huXF2GobzhSqwI0AdU8/edit#slide=id.g16e897f04a_0_14) and [Design for all your users](https://docs.google.com/presentation/d/14CaiTF3f-OFoWs84lXeurE95_LJIFJwC-xhMky62dAg/edit#slide=id.g16ea125a27_0_6).
 
@@ -60,8 +61,8 @@ Who are your stakeholders, and what are their priorities? This will affect the w
 
 If you can't audit your whole site, check page analytics to get an idea of where to focus. High bounce rates, low time-on-page and unexpected exit pages can be a good indicator of where to begin. Likewise business metrics such as hosting costs, ad clicks and conversions. Get an overview from stakeholders of what data matters to them.
 
-## Review and test
+## Test, record, fix, repeat
 
-Record the state of your site <strong>before</strong> making any changes, to uncover problems and set a starting point to check for improvements or regressions. You can also use data to justify and reward development effort.
+Record the state of your site <strong>before</strong> making any changes, to uncover problems and set a starting point for improvements or regressions. That gives you data to justify and reward development effort.
 
 Make sure to test multiple page types within your site — not just the home page. For single page apps, test different components, routes and UX flows, and not just the first load experience.

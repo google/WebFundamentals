@@ -177,14 +177,14 @@ toc:
       - title: Overview
         path: /web/fundamentals/performance/audit/
         step_group: perf-audit
+      - title: Prework
+        path: /web/fundamentals/performance/audit/prework
       - title: Check site security
         path: /web/fundamentals/performance/audit/security
         step_group: perf-audit
-      - title: Use tools to measure performance
+      - title: Measure performance
         path: /web/fundamentals/performance/audit/tools
         step_group: perf-audit
-      - title: Manual checks
-        path: /web/fundamentals/performance/audit/manual
         step_group: perf-audit
       - title: Share the results
         path: /web/fundamentals/performance/audit/share
