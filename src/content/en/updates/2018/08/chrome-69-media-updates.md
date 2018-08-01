@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69.
 
-{# wf_updated_on: 2018-07-31 #}
-{# wf_published_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-01 #}
+{# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,chrome69,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: AV1, Picture-in-Picture, and HDCP policy check are here! #}
@@ -48,7 +48,7 @@ watching while interacting with other sites, or applications. With the new
 for video elements on your website. Read our [article] to learn all about it.
 
 <figure>
-  <img src="/web/updates/images/2018/07/picture-in-picture.png"
+  <img src="/web/updates/images/2018/08/picture-in-picture.png"
        alt="Picture-in-Picture window">
   <figcaption>
     <b>Figure 1.</b>
@@ -220,7 +220,7 @@ Chrome 69 and makes its MSE implementation compliant with the [MSE
 specification].
 
 <figure>
-  <img src="/web/updates/images/2018/07/pts-dts.png"
+  <img src="/web/updates/images/2018/08/pts-dts.png"
        alt="PTS/DTS">
   <figcaption>
     <b>Figure 2.</b>
@@ -250,7 +250,7 @@ To fix this, Chrome 69 on Android Go now listens for media-viewing intents so
 users can view downloaded audio, videos and images.
 
 <figure>
-  <img src="/web/updates/images/2018/07/media-intent-handler.png"
+  <img src="/web/updates/images/2018/08/media-intent-handler.png"
        alt="Media intent handler">
   <figcaption>
     <b>Figure 3.</b>
@@ -286,7 +286,7 @@ continue to raise "stalled" events as they do today.
 {% include "comment-widget.html" %}
 
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
-[article]: /web/updates/2018/07/watch-video-using-picture-in-picture
+[article]: /web/updates/2018/08/watch-video-using-picture-in-picture
 [added]: https://github.com/WICG/encrypted-media-encryption-scheme/blob/master/explainer.md
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
 [Clear Key]: https://www.w3.org/TR/encrypted-media/#clear-key
