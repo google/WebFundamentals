@@ -46,16 +46,11 @@ with it, such as a button element.
     <video id="videoElement" src="https://example.com/file.mp4"></video>
     <button id="pipButtonElement"></button>
 
-Caution: Never programmatically request Picture-in-Picture except in response
-to a user’s request. Since promises do NOT propagate user gestures [yet],
-patterns such as `videoElement.play().then(_ =>
-videoElement.requestPictureInPicture())` won’t work in a button click event
-listener.
-
-In this example, we call `requestPictureInPicture()` on the video element
-to enter Picture-in-Picture when the user clicks the button element. This
-method returns a [promise]. It is your responsibility to handle what happens if
-user clicks the button twice.
+Only request Picture-in-Picture in response to a user gesture, and never in the
+[promise] returned by `videoElement.play()`. This is because promises do not
+[yet] propagate user gestures. Instead, call `requestPictureInPicture()` in a
+click handler on `pipButtonElement` as shown below. It is your responsibility
+to handle what happens if a users clicks twice.
 
     pipButtonElement.addEventListener('click', async function() {
       pipButtonElement.disabled = true;
@@ -66,18 +61,18 @@ user clicks the button twice.
     });
 
 When the promise resolves, Chrome shrinks the video into a small window that
-user can move around and position over other windows. You’re done. Great job!
-You can stop reading and go take your well-deserved vacation.
+the user can move around and position over other windows.
 
-Sadly, that is not always the case. The promise [may reject] for any of the
-following reasons:
+You’re done. Great job! You can stop reading and go take your well-deserved
+vacation. Sadly, that is not always the case. The promise [may reject] for any
+of the following reasons:
 
 - Picture-in-Picture is not supported by the system.
 - Document is not allowed to use Picture-in-Picture due to a restrictive
   [feature policy].
-- Video metadata have not been loaded yet.
+- Video metadata have not been loaded yet (`videoElement.readyState === 0`).
 - Video file is audio-only.
-- The new disablePictureInPicture attribute is present on the video element.
+- The new `disablePictureInPicture` attribute is present on the video element.
 - The call was not made in a user gesture event handler (e.g. a button click).
 
 The [Feature support] section below shows how to enable/disable a button based on
@@ -103,18 +98,18 @@ pipButtonElement.addEventListener('click', async function() {
 </pre>
 
 The video element behaves the same whether it is in Picture-in-Picture or
-not: events are fired and calling methods work. It reflects change of states in
+not: events are fired and calling methods work. It reflects changes of state in
 the Picture-in-Picture window (such as play, pause, seek, etc.) and it is also
 possible to change state programmatically in JavaScript.
 
 ### Exit Picture-in-Picture {: #exit-pip }
 
-But why stop there? Let's make our button toggle entering and exiting
-Picture-in-Picture. We first have to check if the read-only object
-`document.pictureInPictureElement` is our video element. If it isn’t, we
-send a request to enter Picture-in-Picture as above. Otherwise, we ask to leave
-by calling `document.exitPictureInPicture()`, which means the video will appear
-back in the original tab. Note that this method also returns a promise.
+Now, let's make our button toggle entering and exiting Picture-in-Picture. We
+first have to check if the read-only object `document.pictureInPictureElement`
+is our video element. If it isn’t, we send a request to enter
+Picture-in-Picture as above. Otherwise, we ask to leave by calling
+`document.exitPictureInPicture()`, which means the video will appear back in
+the original tab. Note that this method also returns a promise.
 
     ...
     try {
@@ -146,7 +141,7 @@ catalog of videos, to surfacing a livestream chat.
       // User may have played a Picture-in-Picture video from a different page.
     });
 
-### Get Picture-in-Picture window size
+### Get the Picture-in-Picture window size
 
 If you want to adjust the video quality when the video enters and leaves
 Picture-in-Picture, you need to know the Picture-in-Picture window size and be
@@ -169,19 +164,19 @@ Picture-in-Picture window when it is created or resized.
       // TODO: Change video quality based on Picture-in-Picture window size.
     }
 
-I’d suggest you don’t hook directly to the resize event as each small change
-made to the Picture-in-Picture window size will fire a separate event that may
-cause performance issues if you’re doing an expensive operation at each resize.
-I’d recommend using common techniques such as [throttling and debouncing] to
-address this problem.
+I’d suggest not hooking directly to the resize event as each small change made
+to the Picture-in-Picture window size will fire a separate event that may cause
+performance issues if you’re doing an expensive operation at each resize. In
+other words, the resize operation will fire the events over and over again very
+rapidly. I’d recommend using common techniques such as [throttling and
+debouncing] to address this problem.
 
 ### Feature support {: #feature-support }
 
 The Picture-in-Picture Web API may not be supported, so you have to detect this
-to provide a progressive enhancement to all your users visiting your website.
-Even when it is supported, it may be turned off by the user or [disabled by a
-feature policy]. Luckily, you can use the new boolean
-`document.pictureInPictureEnabled` to determine this.
+to provide progressive enhancement. Even when it is supported, it may be
+turned off by the user or [disabled by a feature policy]. Luckily, you can use
+the new boolean `document.pictureInPictureEnabled` to determine this.
 
     if (!('pictureInPictureEnabled' in document)) {
       console.log('The Picture-in-Picture Web API is not available.');
@@ -209,7 +204,7 @@ handle your Picture-in-Picture button visibility.
                                   videoElement.disablePictureInPicture;
     }
 
-## Samples / demos / codelabs {: #samples-demos-codelabs }
+## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
 Web API.
@@ -221,10 +216,11 @@ Demos and codelabs will follow.
 First, check out the [implementation status page] to know which parts of the
 API are currently implemented in Chrome and other browsers.
 
-Here's what you can expect to see in a near future:
+Here's what you can expect to see in the near future:
 
 - Picture-in-Picture will be supported on Android O.
-- MediaStreams (WebRTC) will work with Picture-in-Picture.
+- MediaStreams from `MediaDevices.getUserMedia()` will work with
+  Picture-in-Picture.
 - Web developers will be able to [add custom Picture-in-Picture controls].
 
 ## Resources {: #resources }
