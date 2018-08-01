@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD
+description: Modern sites often contain a lot of JavaScript. These scripts are often sent down in large, monolithic bundles which can take a long time to download and process. Code-splitting encourages breaking up these scripts so you only send what a user needs when they need it.
 
-{# wf_updated_on: 2018-07-30 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-01 #}
+{# wf_published_on: 2018-08-06 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Reduce JavaScript Payloads with Code Splitting {: .page-title }
@@ -13,7 +13,7 @@ description: TBD
 
 **TL;DR:**
 
-- Modern apps often combine all of their JavaScript into a single, large bundle.
+- Modern sites often combine all of their JavaScript into a single, large bundle.
 When JavaScript is served this way, download and processing times can be
 significant on mobile devices and networks.
 - An alternative to large bundles is code-splitting, which is where JavaScript is
@@ -26,18 +26,18 @@ panel](/web/updates/2017/04/devtools-release-notes#coverage) in DevTools to
 measure the impact of your app's scripts on performance and how many scripts are
 unused.
 - Code-splitting can be done in the following ways:
-    - Vendor splitting separates vendor code (e.g., React or lodash) away from your
-app's code. This allows you to keep application and vendor code separate. This
-isolates the negative performance impacts of cache invalidation for returning
-users when either your vendor or app code changes. This should be done in
-_every_ app.
-    - Entry point splitting separates code by entry point(s) in your app, which are
-the scripts where tools like webpack and Parcel start when they build a
-dependency tree of your app. This is best for pages or apps where client side
+    - **Vendor splitting** separates vendor code (e.g., React or lodash) away
+from your app's code. This allows you to keep application and vendor code
+separate. This isolates the negative performance impacts of cache invalidation
+for returning users when either your vendor or app code changes. This should be
+done in _every_ app.
+    - **Entry point splitting** separates code by entry point(s) in your app,
+which are the scripts where tools like webpack and Parcel start when they build
+a dependency tree of your app. This is best for pages or apps where client side
 routing is not used, or a blended app where some parts use server side routing
 and others are part of a single page application.
-    - Dynamic splitting separates code where dynamic `import()` statements are used.
-This type of splitting is often best for single page applications.
+    - **Dynamic splitting** separates code where dynamic `import()` statements
+are used. This type of splitting is often best for single page applications.
 - Choose tools that split code for you ([Preact
 CLI](https://github.com/developit/preact-cli/),
 [Gatsby](https://www.gatsbyjs.org/), [PWA Starter
@@ -730,10 +730,10 @@ split code in your specific app will take time for you to suss out. If you're
 curious to know more about code splitting, or want to read some different takes
 on the subject, check out this list of articles:
 
-- [Official Parcel.js code splitting
-docs.](https://parceljs.org/code_splitting.html)
 - [Official webpack code splitting
 docs.](https://webpack.js.org/guides/code-splitting/)
+- [Official Parcel.js code splitting
+docs.](https://parceljs.org/code_splitting.html)
 - [Official React code splitting
 docs.](https://reactjs.org/docs/code-splitting.html)
 - [Official Vue code splitting
@@ -745,3 +745,8 @@ Fundamentals.](/web/updates/2017/11/dynamic-import)
 
 Rest assured, though, that improving performance for your app will reap rewards,
 as users will find your app more enjoyable to use. Good luck!
+
+_Special thanks to Patrick Meenan, Jason Miller, [Jeff
+Posnick](/web/resources/contributors/jeffposnick), Sam Saccone, [Philip
+Walton](/web/resources/contributors/philipwalton), for their valuable feedback,
+which significantly improved the quality of this article._
