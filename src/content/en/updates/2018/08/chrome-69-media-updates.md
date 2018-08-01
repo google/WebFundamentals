@@ -271,6 +271,8 @@ O and onwards with 1 GB of RAM or less.
 
 ## Removal of “stalled” events for media elements using MSE {: #stalled }
 
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
+
 A "stalled" event is raised on a media element if downloading media data has
 failed to progress for about 3 seconds. When using [Media Source Extensions
 (MSE)], the web app manages the download and the media element is not aware of
