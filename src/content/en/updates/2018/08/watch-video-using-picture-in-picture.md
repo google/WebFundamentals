@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-07-31 #}
-{# wf_published_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-01 #}
+{# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,media #}
-{# wf_featured_image: /web/updates/images/2018/07/watch-video-using-picture-in-picture/hero.png #}
+{# wf_featured_image: /web/updates/images/2018/08/watch-video-using-picture-in-picture/hero.png #}
 {# wf_featured_snippet: Control Picture-in-Picture for video elements on your website. #}
 {# wf_blink_components: Blink>Media>PictureInPicture #}
 
