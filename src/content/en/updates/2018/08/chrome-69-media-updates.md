@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the audio/video updates in Chrome 69.
+description: A round up of the audio/video updates in Chrome 69: AV1, Picture-in-Picture, and HDCP policy check.
 
 {# wf_updated_on: 2018-08-01 #}
 {# wf_published_on: 2018-08-01 #}
-{# wf_tags: news,chrome69,media #}
+{# wf_tags: news,chrome69,media,removals #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: AV1, Picture-in-Picture, and HDCP policy check are here! #}
+{# wf_featured_snippet: A round up of the audio/video updates in Chrome 69: AV1, Picture-in-Picture, and HDCP policy check. #}
 {# wf_blink_components: Blink>Media #}
 
 # Audio/Video Updates in Chrome 69 {: .page-title }
@@ -31,21 +31,22 @@ AV1 is a next generation codec developed by the [Alliance for Open Media] which
 [improves compression efficiency by 30%] over the current state-of-the-art
 video codec, VP9.
 
-Chrome 69 adds an AV1 decoder into Chrome Desktop (Windows, Mac, Linux,
-ChromeOS) based on the [official bitstream specification]. At this time, support
-is limited to "Main" [profile 0] and does not include encoding capabilities. The
+Chrome 69 adds an AV1 decoder to Chrome Desktop (Windows, Mac, Linux, ChromeOS)
+based on the [official bitstream specification]. At this time, support is
+limited to "Main" [profile 0] and does not include encoding capabilities. The
 supported container is [ISO-BMFF (MP4)]. See [From raw video to web ready] for
 a brief explanation of containers.
 
-[Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480)
+[Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=838380)
 
 ## Watch video using Picture-in-Picture {: #picture_in_picture }
 
 Picture-in-Picture (PiP) allows users to watch videos in a floating window
 (always on top of other windows) so they can keep an eye on what they’re
-watching while interacting with other sites, or applications. With the new
+watching while interacting with other sites or applications. With the new
 [Picture-in-Picture Web API], you can initiate and control Picture-in-Picture
-for video elements on your website. Read our [article] to learn all about it.
+for video elements on your website. Read our [article] to learn more.
 
 <figure>
   <img src="/web/updates/images/2018/08/picture-in-picture.png"
@@ -56,19 +57,23 @@ for video elements on your website. Read our [article] to learn all about it.
   </figcaption>
 </figure>
 
-## EME: Querying Encryption Scheme Support {: #encryption_scheme }
+[Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ibVPbqBQapU) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5729206566649856) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=806249)
 
-Some platforms or key systems only support CENC mode, while others only support
-CBCS mode. Still others are able to support both. These two encryption schemes
+## EME: Querying encryption scheme support {: #encryption_scheme }
+
+Some platforms or key systems only support [CENC mode], while others only support
+[CBCS mode]. Still others are able to support both. These two encryption schemes
 are incompatible, so web developers must be able to make intelligent choices
 about what content to serve.
 
 To avoid having to determine which platform they’re on to check for “known”
-encryption schemes support, a new `encryptionScheme` key is [added] in
-`MediaKeySystemMediaCapability` to allow websites to specify which encryption
-schemes could be used in [Encrypted Media Extensions (EME)].
+encryption scheme support, a new `encryptionScheme` key is [added] in
+`MediaKeySystemMediaCapability` [dictionnary] to allow websites to specify
+which encryption scheme could be used in [Encrypted Media Extensions (EME)].
 
-The new `encryptionScheme` key can be of two values:
+The new `encryptionScheme` key can be one of two values:
 
 - `'cenc'` AES-CTR mode full sample and video NAL subsample encryption.
 - `'cbcs'` AES-CBC mode partial video NAL pattern encryption.
@@ -76,7 +81,7 @@ The new `encryptionScheme` key can be of two values:
 If not specified, it indicates that any encryption scheme is acceptable. Note
 that [Clear Key] always supports the `'cenc'` scheme.
 
-Snippet below shows you how to query two configurations with different
+The example below shows how to query two configurations with different
 encryption schemes. In this case, only one will be chosen.
 
     await navigator.requestMediaKeySystemAccess('org.w3.clearkey', [
@@ -106,7 +111,7 @@ encryption schemes. In this case, only one will be chosen.
         },
       ]);
 
-In the snippet below, only one configuration with two different encryption
+In the example below, only one configuration with two different encryption
 schemes is queried. In that case, Chrome will discard any capabilities object
 it cannot support, so the accumulated configuration may contain one encryption
 scheme or both.
@@ -139,10 +144,10 @@ scheme or both.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5184416120832000) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=838416)
 
-## EME: HDCP Policy Check {: #hdcp}
+## EME: HDCP policy check {: #hdcp}
 
 Nowadays [HDCP] is a common policy requirement for streaming high resolutions
-of [protected content]. And web developers who want to enforce a HDCP policy
+of [protected content]. And web developers who want to enforce an HDCP policy
 must either wait for the license exchange to complete or start streaming
 content at a low resolution. This, is a sad situation that the [HDCP Policy
 Check API] aims to solve.
@@ -192,14 +197,14 @@ to try out all versions of HDCP.
 
 ### Available for Origin Trials
 
-In order to get feedback from web developers, the HDCP Policy Check API is
-available as an [Origin Trial] in Chrome 69 for Desktop (Chrome OS, Linux, Mac,
-and Windows). You will need to [request a token], so that the feature would be
+To get feedback from web developers, the HDCP Policy Check API is available as
+an [Origin Trial] in Chrome 69 for Desktop (Chrome OS, Linux, Mac, and
+Windows). You will need to [request a token], so that the feature is
 automatically enabled for your origin for a limited period of time, without the
 need to enable the experimental "Web Platform Features" flag at
 `chrome://flags/#enable-experimental-web-platform-features`.
 
-[Intent to Experiment](https://www.google.com/url?q=https://groups.google.com/a/chromium.org/forum/%23!topic/blink-dev/ITzZ_yx4bF8&sa=D&ust=1530528558634000&usg=AFQjCNFc5O4gFlE5rBSytmc73mGgqCyNgA) &#124;
+[Intent to Experiment](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ITzZ_yx4bF8) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5652917147140096) &#124;
 [Chromium Bug](https://crbug.com/709348)
 
@@ -209,15 +214,14 @@ Buffered ranges and duration values are now reported by Presentation Time Stamp
 (PTS) intervals, rather than by Decode Time Stamp (DTS) intervals in [Media
 Source Extensions (MSE)].
 
-At the very beginnings of MSE, Chrome’s implementation was tested against WebM
-and MP3, some media stream formats where there was no such distinction between
-PTS and DTS. And it was working fine… until ISO BMFF (aka MP4) was added. This
-frequently contains out-of-order presentation versus decode time streams (eg,
-for codecs like H.264) causing DTS and PTS to differ. That caused Chrome to
-report (usually just slightly) different buffered ranges and duration values
-than expected. But here it is: this new behavior will roll out gradually in
-Chrome 69 and makes its MSE implementation compliant with the [MSE
-specification].
+When MSE was new, Chrome’s implementation was tested against WebM and MP3, some
+media stream formats where there was no distinction between PTS and DTS. And
+it was working fine until ISO BMFF (aka MP4) was added. This container
+frequently contains out-of-order presentation versus decode time streams (for
+codecs like H.264 for example) causing DTS and PTS to differ. That caused
+Chrome to report (usually just slightly) different buffered ranges and duration
+values than expected. This new behavior will roll out gradually in Chrome 69
+and make its MSE implementation compliant with the [MSE specification].
 
 <figure>
   <img src="/web/updates/images/2018/08/pts-dts.png"
@@ -234,7 +238,8 @@ This change affects `MediaSource.duration` (and consequently
 
 If you’re not sure which method is used to report buffered ranges and duration
 values, you can go to the internal `chrome://media-internals` page and search for
-"ChunkDemuxer: buffering by PTS" or  "ChunkDemuxer: buffering by DTS" in logs.
+"ChunkDemuxer: buffering by PTS" or  "ChunkDemuxer: buffering by DTS" in the
+logs.
 
 [Intent to Implement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/I6oGJLym-Tk/Z46le9l4CQAJ) &#124;
 [Chromium Bug](https://crbug.com/718641)
@@ -247,7 +252,8 @@ applications, so if a user tries to open a downloaded video for instance, they
 won’t have any applications to handle that intent.
 
 To fix this, Chrome 69 on Android Go now listens for media-viewing intents so
-users can view downloaded audio, videos and images.
+users can view downloaded audio, videos, and images. In other words, it takes
+the place of the missing viewing applications.
 
 <figure>
   <img src="/web/updates/images/2018/08/media-intent-handler.png"
@@ -279,6 +285,7 @@ with the MSE specification. Note that media elements that don't use MSE will
 continue to raise "stalled" events as they do today.
 
 [Intent to Deprate and Remove](https://groups.google.com/a/chromium.org/d/msg/blink-dev/x54XtrTyOP8/4-5QZlZzDAAJ) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/6338037575319552) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=836951)
 
 {% include "web/_shared/rss-widget-updates.html" %}
@@ -287,7 +294,10 @@ continue to raise "stalled" events as they do today.
 
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
 [article]: /web/updates/2018/08/watch-video-using-picture-in-picture
+[CENC mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-2:v1:en
+[CBCS mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-3:v1:en
 [added]: https://github.com/WICG/encrypted-media-encryption-scheme/blob/master/explainer.md
+[dictionnary]: https://w3c.github.io/encrypted-media/#idl-def-mediakeysystemmediacapability
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
 [Clear Key]: https://www.w3.org/TR/encrypted-media/#clear-key
 [HDCP]: https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection
