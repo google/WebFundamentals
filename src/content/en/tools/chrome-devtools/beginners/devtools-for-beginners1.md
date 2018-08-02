@@ -45,11 +45,12 @@ it.
 3. Click **Remix**. Glitch creates a copy of the project that you can \
 edit. Note that the name of the new project will be randomly generated
 and not dfb-1.
-The content is the same, but the name in the top-left has changed.
+The content is the same, but the name on the top-left has changed.
 4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
-![An image of the two tabs](2tabs.png)
+<figure> <img src="2tabs.png" alt="An image of the two open tabs" width="auto" height="auto"></figure>
+
 Now, you have two tabs open: the code
 (which will be called the editing tab) 
 and the preview of your website (which will be called the viewing tab). 
@@ -133,13 +134,12 @@ Enter DevTools.
  <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>. You should see 
  something like this: 
 
-![Elements Panel Opened](elpanel.png)
- 
+ <figure> <img src="elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto"></figure>
 
 2. Right click on the `<About>` div, then click `Edit as HTML`. 
 The following screen will appear:
 
-![Editing as HTML](editashtml.png)
+<figure> <img src="editashtml.png" alt="Editing as HTML" width="auto" height="auto"></figure>
 
 Now you have a live view of your changes! 
 
@@ -168,7 +168,7 @@ If you know what you want to edit, then there’s an even simpler workflow:
 3. Right click and choose Inspect. 
 4. Double click on either the content or tag of the element to edit it.
 
-![Inspect Element](inspectel.png)
+<figure> <img src="inspectel.png" alt="Inspect Element" width="auto" height="auto"></figure>
 
 You can inspect any element using this method on any web page, 
 but note that like before, 
@@ -196,7 +196,7 @@ workflows, take a look at ![Inspect Styles]
 
 
 ## Next Steps {: #next-steps}
-![Prepare for the next steps](endgame.png)
+<figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto"></figure>
 
 Now that you have a grasp on how DevTools interacts with HTML, you’ll be
 looking at using DevTools with CSS to style and customize your website 
