@@ -1,10 +1,9 @@
-project_path: /web/tools/_project.yaml
-book_path: /web/tools/_book.yaml
-description: Part one of a tutorial for newer developers to become  
-acquainted with Chrome DevTools. 
-Users will learn how to use DevTools to interact with HTML.
+project_path: /web/tools/_project.yaml book_path: /web/tools/_book.yaml
+description: Part one of a tutorial for newer developers to become   acquainted
+with Chrome DevTools.  Users will learn how to use DevTools to interact with
+HTML.
 
-{# wf_updated_on: 2018-08-01 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -41,9 +40,11 @@ There’s a bit of setup involved for this tutorial:
 index.html. The HTML is mostly empty. You'll be adding your own code to 
 it.
 2. Click dfb-1. A menu pops up.
-3. Click Remix. Glitch creates a copy of the project that you can edit. 
+3. Click **Remix**. Glitch creates a copy of the project that you can \
+edit. Note that the name of the new project will be randomly generated
+and not dfb-1.
 The content is the same, but the name in the top left has changed.
-4. Click Show Live. Another tab opens  with a preview of what your site 
+4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
 ![An image of the two tabs](2tabs.png)
@@ -68,29 +69,27 @@ have something about yourself in there. Many personal websites have an
 ‘About Me’ section, and yours will as well. Here’s how you’ll do it:
 
 1. Go to line 19 and press enter/return. 
-2. You want a title or heading for this section, 
-so type something like `<h1>About Me</h1>`. 
+2. You want a heading for this section, 
+so type `<h1>About Me</h1>`. 
 This formats the text as a heading. 
 3. To see the changes, go to the viewing tab.
 4. Go back to the editing tab.
 5. You’ll want to put in text, too, so insert a `<p>` element, 
 like `<p> I am learning HTML.</p>` under the line where you put 
-the heading. Note that although the `<p>` element is called a paragraph 
-element, you can put as much (or as little) text as you need in it.
-6. You’ll want to make sure the text is properly formatted, 
-so go to the viewing tab and refresh the page.
+the heading. 
+6. Go to the viewing tab.
 7. Go back to the editing tab.
 8. Add a list under the `<p>` element on line 21 that 
 details your accomplishments, like so: 
 	
-	<ul>
-		<li>Developer</li>
-		<li>Tools</li>
-		<li>Search Engine</li>
-	</ul>
+  <ul>
+    <li>Developer</li>
+	<li>Tools</li>
+	<li>Search Engine</li>
+  </ul>
 	
 9. Again, 
-go to the viewing tab and refresh the page to see the new content.
+go to the viewing tab to see the new content.
 
 ## Improving Workflow With DevTools {: #improving-workflow}
 
@@ -110,9 +109,13 @@ Enter DevTools.
  DOM is an interface that represents HTML elements in your browser, 
  and while the DOM Tree you see in the Elements Panel looks quite 
  similar to your HTML document now, 
- there are ways you can edit it so that it is not. In fact, 
- if you look at your website in the viewing tab, 
- you’ll see a `<div>` element that doesn’t exist in the editing tab. 
+ there are ways you can edit it so that it is not. 
+
+1. Navigate to the viewing tab of your website.
+2. Open DevTools with <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
+3. Directly under the `<script>` tag, you will see a new `<div>` element
+ that doesn't exist in your HTML document in the editing tab.
+ 
  Using JavaScript, you can add nodes to the DOM Tree without HTML. 
  This will play a bigger role when you learn about the Console 
  panel and JavaScript, but for now, you’ll be editing a few DOM nodes 
@@ -123,19 +126,21 @@ Enter DevTools.
  to view changes you make to the DOM in real time.
  You can try it out by seeing what it 
  would look like to add some more content to your page! 
- Open devtools using Command-Shift-I. 
- You should see something like this: 
+ 
+ 1. Open devtools using 
+ <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>. You should see 
+ something like this: 
 
 ![Elements Panel Opened](elpanel.png)
  
-This time, you’ll be talking about your website. 
-Right click on the `<About>` node, then click `Edit as HTML`.
 
+2. Right click on the `<About>` node, then click `Edit as HTML`. 
 The following screen will appear:
 
 ![Editing as HTML](editashtml.png)
 
 Now you have a live view of your changes! 
+
 Try adding information to the About node:
 
 1. Add a paragraph element like: 
@@ -177,12 +182,12 @@ To move it to the top:
 
 1. If you aren't already in the Elements Panel in DevTools,
 navigate to it.
-2. Scroll down the DOM Tree until you reach the `<nav>` node.
-3. Click and hold down on the `<nav>` node, 
+2. Scroll down the DOM Tree until you reach the `<nav>` `<div>`.
+3. Click and hold down on the `<nav>` `<div>`, 
 then drag it to the area you want it to be in. 
 
-*You’ve successfully learned how to add and edit content 
-on your site with DevTools!* If you want more information on these 
+**You’ve successfully learned how to add and edit content 
+on your site with DevTools!** If you want more information on these 
 workflows, take a look at ![Inspect Styles]
 (https://developers.google.com/web/tools/chrome-devtools/inspect-styles/)
 .
