@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: A round up of the audio/video updates in Chrome 69: AV1, Picture-in-Picture, and HDCP policy check.
+description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP policy check.
 
-{# wf_updated_on: 2018-08-01 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,chrome69,media,removals #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: A round up of the audio/video updates in Chrome 69: AV1, Picture-in-Picture, and HDCP policy check. #}
+{# wf_featured_snippet: A round up of the audio/video updates in Chrome 69: AV1 and HDCP policy check. #}
 {# wf_blink_components: Blink>Media #}
 
 # Audio/Video Updates in Chrome 69 {: .page-title }
@@ -14,8 +14,6 @@ description: A round up of the audio/video updates in Chrome 69: AV1, Picture-in
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 - Chrome supports [AV1 video decoding](#av1).
-- Web developers can now control [Picture-in-Picture](#picture_in_picture) for
-  video elements.
 - Querying [which encryption schemes are supported](#encryption_scheme) through
   EME is now available.
 - Web developers can experiment with [querying whether a certain HDCP policy
@@ -39,27 +37,6 @@ a brief explanation of containers.
 
 [Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=838380)
-
-## Watch video using Picture-in-Picture {: #picture_in_picture }
-
-Picture-in-Picture (PiP) allows users to watch videos in a floating window
-(always on top of other windows) so they can keep an eye on what they’re
-watching while interacting with other sites or applications. With the new
-[Picture-in-Picture Web API], you can initiate and control Picture-in-Picture
-for video elements on your website. Read our [article] to learn more.
-
-<figure>
-  <img src="/web/updates/images/2018/08/picture-in-picture.png"
-       alt="Picture-in-Picture window">
-  <figcaption>
-    <b>Figure 1.</b>
-    Picture-in-Picture window
-  </figcaption>
-</figure>
-
-[Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ibVPbqBQapU) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/features/5729206566649856) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=806249)
 
 ## EME: Querying encryption scheme support {: #encryption_scheme }
 
@@ -294,8 +271,6 @@ continue to raise "stalled" events as they do today.
 
 {% include "comment-widget.html" %}
 
-[Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
-[article]: /web/updates/2018/08/watch-video-using-picture-in-picture
 [CENC mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-2:v1:en
 [CBCS mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-3:v1:en
 [added]: https://github.com/WICG/encrypted-media-encryption-scheme/blob/master/explainer.md
