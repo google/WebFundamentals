@@ -20,9 +20,8 @@ and are interested in seeing how it can improve your productivity.
 - You’ve heard of the terms “HTML” and “CSS” before, 
 but you haven’t gotten the chance to make a website yet, 
 and you want to be sure you are doing it in the most efficient manner. 
-(If you haven’t heard these terms before, ![here’s a helpful reference]
-(https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
-).)
+(If you haven’t heard these terms before, [here’s a helpful reference]:https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+.)
 - You have made a website before, but you want a more polished site.
 
 ## Goal {: #goal}
@@ -32,24 +31,39 @@ These tutorials walk you through basic web fundamentals
 as well as how to improve your design productivity with DevTools. 
 You will be constructing a personal website from scratch,
 and the end product will look something like 
-![this](https://dfb5.glitch.me/). 
+[this]: https://dfb5.glitch.me/. 
 
 ## Setup {: #setup}
 
-There’s a bit of setup involved for this tutorial:
+In order to start creating your site, you need to set up your code:
 
 1. Open the source code. A code editor called Glitch shows a page called 
 index.html. The HTML is mostly empty. You'll be adding your own code to 
 it.
-2. Click dfb-1. A menu pops up.
-3. Click **Remix**. Glitch creates a copy of the project that you can \
+<figure> <img src="init.png" alt="Initial Source Code Window" width="auto" height="auto">
+<figcaption>
+    <b>Figure 1</b>. The initial window you will see.
+  </figcaption>
+</figure>
+2. Click **dfb-1**. A menu pops up.
+<figure> <img src="menu.png" alt="Glitch Remix Menu" width="auto" height="auto">
+<figcaption>
+    <b>Figure 2</b>. The Glitch menu that will appear.
+  </figcaption>
+</figure>
+
+3. Click **Remix**. Glitch creates a copy of the project that you can 
 edit. Note that the name of the new project will be randomly generated
 and not dfb-1.
 The content is the same, but the name on the top-left has changed.
 4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
-<figure> <img src="2tabs.png" alt="An image of the two open tabs" width="auto" height="auto"></figure>
+<figure> <img src="2tabs.png" alt="An image of the two open tabs" width="auto" height="auto">
+<figcaption>
+    <b>Figure 3</b>. The viewing and editing tabs.
+  </figcaption>
+</figure>
 
 Now, you have two tabs open: the code
 (which will be called the editing tab) 
@@ -71,7 +85,7 @@ section. Since this is a personal website, you’ll definitely want to
 have something about yourself in there. Many personal websites have an
 ‘About Me’ section, and yours will as well. Here’s how you’ll do it:
 
-1. Go to line 19 and press enter/return. 
+1. Go to line 19 and press <kbd>Enter</kbd>
 2. You want a heading for this section, 
 so type `<h1>About Me</h1>`. 
 This formats the text as a heading. 
@@ -134,12 +148,20 @@ Enter DevTools.
  <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>. You should see 
  something like this: 
 
- <figure> <img src="elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto"></figure>
+ <figure> <img src="elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto">
+<figcaption>
+    <b>Figure 4</b>. The elements panel.
+  </figcaption>
+ </figure>
 
 2. Right click on the `<About>` div, then click `Edit as HTML`. 
 The following screen will appear:
 
-<figure> <img src="editashtml.png" alt="Editing as HTML" width="auto" height="auto"></figure>
+<figure> <img src="editashtml.png" alt="Editing as HTML" width="auto" height="auto">
+<figcaption>
+    <b>Figure 5</b>. Editing an object as HTML.
+  </figcaption>
+</figure>
 
 Now you have a live view of your changes! 
 
@@ -165,10 +187,14 @@ If you know what you want to edit, then there’s an even simpler workflow:
 
 1. Open the viewing tab.
 2. Highlight a section of your website (like an image or line of text).
-3. Right click and choose Inspect. 
+3. Right click and choose **Inspect**. 
 4. Double click on either the content or tag of the element to edit it.
 
-<figure> <img src="inspectel.png" alt="Inspect Element" width="auto" height="auto"></figure>
+<figure> <img src="inspectel.png" alt="Inspect Element" width="auto" height="auto">
+<figcaption>
+    <b>Figure 6</b>. Clicking Inspect Element.
+  </figcaption>
+</figure>
 
 You can inspect any element using this method on any web page, 
 but note that like before, 
@@ -190,13 +216,17 @@ then drag it to the area you want it to be in.
 
 **You’ve successfully learned how to add and edit content 
 on your site with DevTools!** If you want more information on these 
-workflows, take a look at ![Inspect Styles]
-(https://developers.google.com/web/tools/chrome-devtools/inspect-styles/)
+workflows, take a look at [Inspect Styles]:
+https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
 .
 
 
 ## Next Steps {: #next-steps}
-<figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto"></figure>
+<figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto">
+<figcaption>
+    <b>Figure 7</b>. An example of what the finished HTML of your site might look like.
+  </figcaption>
+</figure>
 
 Now that you have a grasp on how DevTools interacts with HTML, you’ll be
 looking at using DevTools with CSS to style and customize your website 
@@ -205,7 +235,7 @@ Edit your site until it has all of the HTML content you want.
 An example of what that would look like is shown above.
 
 If you still have lingering questions on HTML, 
-![take a look at this reference guide]
-(https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
-). Otherwise, you can move on to the next tutorial.
+[take a look at this reference guide]:
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+. Otherwise, you can move on to the next tutorial.
 
