@@ -1,4 +1,4 @@
-pproject_path: /web/tools/_project.yaml
+project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Part one of a tutorial for newer developers to become   acquainted
 with Chrome DevTools.  Users will learn how to use DevTools to interact with
