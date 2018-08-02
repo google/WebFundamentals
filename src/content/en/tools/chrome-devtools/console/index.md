@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to navigate the Chrome DevTools JavaScript Console.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2015-05-10 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -12,6 +13,9 @@ description: Learn how to navigate the Chrome DevTools JavaScript Console.
 {% include "web/_shared/contributors/andismith.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
+
+
+Warning: This page is deprecated.
 
 Learn how to: open the DevTools Console, stack redundant 
 messages or display them on their own lines, clear or persist 
