@@ -134,7 +134,7 @@ Enter DevTools.
 ![Elements Panel Opened](elpanel.png)
  
 
-2. Right click on the `<About>` node, then click `Edit as HTML`. 
+2. Right click on the `<About>` div, then click `Edit as HTML`. 
 The following screen will appear:
 
 ![Editing as HTML](editashtml.png)
