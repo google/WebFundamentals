@@ -20,7 +20,7 @@ and are interested in seeing how it can improve your productivity.
 - You’ve heard of the terms “HTML” and “CSS” before, 
 but you haven’t gotten the chance to make a website yet, 
 and you want to be sure you are doing it in the most efficient manner. 
-(If you haven’t heard these terms before, [here’s a helpful reference]:https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+(If you haven’t heard these terms before, [here’s a helpful reference](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
 .)
 - You have made a website before, but you want a more polished site.
 
@@ -31,7 +31,7 @@ These tutorials walk you through basic web fundamentals
 as well as how to improve your design productivity with DevTools. 
 You will be constructing a personal website from scratch,
 and the end product will look something like 
-[this]: https://dfb5.glitch.me/. 
+[this](https://dfb5.glitch.me/). 
 
 ## Setup {: #setup}
 
@@ -216,8 +216,7 @@ then drag it to the area you want it to be in.
 
 **You’ve successfully learned how to add and edit content 
 on your site with DevTools!** If you want more information on these 
-workflows, take a look at [Inspect Styles]:
-https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
+workflows, take a look at [Inspect Styles](src/content/en/tools/chrome-devtools/inspect-styles/edit-styles.md)
 .
 
 
@@ -235,7 +234,6 @@ Edit your site until it has all of the HTML content you want.
 An example of what that would look like is shown above.
 
 If you still have lingering questions on HTML, 
-[take a look at this reference guide]:
-https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
+[take a look at this reference guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
 . Otherwise, you can move on to the next tutorial.
 
