@@ -23,7 +23,7 @@ description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP po
 - Android Go users can [open downloaded audio, video and images in Chrome](#media_intent_handler).
 - [Stalled events](#stalled) for media elements using MSE are removed.
 
-## AV1 video decoder {: #av1 }
+## AV1 video decoder behind a flag {: #av1 }
 
 AV1 is a next generation codec developed by the [Alliance for Open Media] which
 [improves compression efficiency by 30%] over the current state-of-the-art
@@ -33,7 +33,8 @@ Chrome 69 adds an AV1 decoder to Chrome Desktop (Windows, Mac, Linux, ChromeOS)
 based on the [official bitstream specification]. At this time, support is
 limited to "Main" [profile 0] and does not include encoding capabilities. The
 supported container is [ISO-BMFF (MP4)]. See [From raw video to web ready] for
-a brief explanation of containers.
+a brief explanation of containers. To enable this feature use the
+#enable-av1-decoder flag. 
 
 [Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=838380)
