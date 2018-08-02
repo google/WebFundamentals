@@ -1,7 +1,9 @@
-project_path: /web/tools/_project.yaml book_path: /web/tools/_book.yaml
+pproject_path: /web/tools/_project.yaml
+book_path: /web/tools/_book.yaml
 description: Part one of a tutorial for newer developers to become   acquainted
 with Chrome DevTools.  Users will learn how to use DevTools to interact with
 HTML.
+
 
 {# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2018-07-30 #}
@@ -43,7 +45,7 @@ it.
 3. Click **Remix**. Glitch creates a copy of the project that you can \
 edit. Note that the name of the new project will be randomly generated
 and not dfb-1.
-The content is the same, but the name in the top left has changed.
+The content is the same, but the name in the top-left has changed.
 4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
