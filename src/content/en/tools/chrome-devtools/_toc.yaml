@@ -62,22 +62,28 @@ toc:
     path: /web/tools/chrome-devtools/console/
   - title: Get Started
     path: /web/tools/chrome-devtools/console/get-started
-  - title: Diagnose and Log to the Console
-    path: /web/tools/chrome-devtools/console/console-write
-  - title: Compare Similar Data Objects
-    path: /web/tools/chrome-devtools/console/structured-data
-  - title: Measure and Count Executions
-    path: /web/tools/chrome-devtools/console/track-executions
-  - title: Handle Exceptions and Errors
-    path: /web/tools/chrome-devtools/console/track-exceptions
   - title: Console API Reference
     path: /web/tools/chrome-devtools/console/console-reference
-  - title: Evaluate Expressions
-    path: /web/tools/chrome-devtools/console/expressions
-  - title: Monitor Events
-    path: /web/tools/chrome-devtools/console/events
   - title: Command Line Reference
     path: /web/tools/chrome-devtools/console/command-line-reference
+  - title: Diagnose and Log to the Console
+    path: /web/tools/chrome-devtools/console/console-write
+    status: deprecated
+  - title: Compare Similar Data Objects
+    path: /web/tools/chrome-devtools/console/structured-data
+    status: deprecated
+  - title: Measure and Count Executions
+    path: /web/tools/chrome-devtools/console/track-executions
+    status: deprecated
+  - title: Handle Exceptions and Errors
+    path: /web/tools/chrome-devtools/console/track-exceptions
+    status: deprecated
+  - title: Evaluate Expressions
+    path: /web/tools/chrome-devtools/console/expressions
+    status: deprecated
+  - title: Monitor Events
+    path: /web/tools/chrome-devtools/console/events
+    status: deprecated
 - title: Analyze Runtime Performance
   section:
   - title: Get Started
