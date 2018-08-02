@@ -185,7 +185,6 @@ toc:
       - title: Measure performance
         path: /web/fundamentals/performance/audit/tools
         step_group: perf-audit
-        step_group: perf-audit
       - title: Share the results
         path: /web/fundamentals/performance/audit/share
         step_group: perf-audit

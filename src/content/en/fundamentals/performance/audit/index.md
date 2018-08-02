@@ -1,9 +1,10 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors?  You get metrics to prioritise effort, and concrete evidence to brag about once you've made improvements.
+description: Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors?  You get metrics to prioritize effort, and concrete evidence to brag about once you've made improvements.
 
-{# wf_updated_on: 2018-07-31 #}
-{# wf_published_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-03 #}
+{# wf_published_on: 2018-08-03 #}
+{# wf_blink_components: N/A #}
 
 # Auditing Performance {: .page-title }
 
@@ -29,20 +30,19 @@ made improvements.
 
 ## If you only have 5 minutes...
 
-Run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) on your homepage and [save the
-report data](https://developers.google.com/web/tools/lighthouse#gists). You get a quantified
+Run [Lighthouse](/web/tools/lighthouse/) on your homepage and [save the
+report data](/web/tools/lighthouse#gists). You get a quantified
 baseline and a todo list for improvements to performance, accessibility, security and SEO.
 
 ## If you only have 30 minutes...
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is probably still the best place
+[Lighthouse](/web/tools/lighthouse/) is probably still the best place
 [to start, but with a little more time you can also record results from other tools. Make sure to
 [load your site as a first-time user would see it, by using an Incognito (Private) Window:
 
-* [Chrome DevTools Security panel](https://developers.google.com/web/tools/chrome-
-devtools/security): HTTPS usage.
+* [Chrome DevTools Security panel](/web/tools/chrome-devtools/security): HTTPS usage.
 * [Chrome DevTools Network
-Panel](https://developers.google.com/web/tools/chrome-devtools/network-performance/): load timings;
+Panel](/web/tools/chrome-devtools/network-performance/): load timings;
 resource sizes and number of requests for HTML, CSS, JavaScript, images, fonts and other files.
 * Chrome Task Manager: if your site constantly uses significant CPU or more memory than other apps
 then you may need to fix memory leaks, task running or resource loading problems. Make sure to test
@@ -50,7 +50,7 @@ your site on devices representative of your users.
 * [WebPagetest](https://www.webpagetest.org/easy){: .external}: performance for different locations
 and connection types, caching, time to first byte, CDN usage.
 * [Pagespeed
-Insights](https://developers.google.com/speed/pagespeed/insights/): load performance, data cost and
+Insights](/speed/pagespeed/insights/): load performance, data cost and
 resource usage, including Chrome User Experience report data highlighting real-world performance
 statistics.
 * [Speed Scorecard and Impact
@@ -68,10 +68,14 @@ users and keep a record of your subjective experience. <br><br>
   If nothing else, use <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>
   to check for:<br>
   <ul>
-    <li>HTTPS: <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">every site should deliver all assets over HTTPS</a>.</li>
+    <li>HTTPS:
+      <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">every
+      site should deliver all assets over HTTPS</a>.</li>
     <li>Server settings: your web server or CDN should
-      <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer">use compression correctly</a>, <a href="https://developers.google.com/web/fundamentals/performance/http2/">use HTTP/2</a>,
-      and <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">include appropriate headers</a> to enable your browser to cache resources.</li>
+      <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer">use
+      compression correctly</a>, <a href="https://developers.google.com/web/fundamentals/performance/http2/">use HTTP/2</a>,
+      and <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">include
+      appropriate headers</a> to enable your browser to cache resources.</li>
     <li>Script elements that can be moved to the bottom of the page and/or given an <a href="http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/">async or defer</a> attribute.</li>
     <li>JavaScript and libraries that can be removed.</li>
     <li><a href="https://umaar.com/dev-tips/121-css-coverage/">Unused CSS</a> and
@@ -88,8 +92,7 @@ Priorities for refactoring depend on your audience, content and functionality. W
 Why and how do they use it? What's your
 [performance budget](http://www.performancebudget.io/){:.external}? If you're not sure of the answer
 to these questions, try the requirements gathering exercises from our PWA training resources:
-[Your audience, your content](https://docs.google.com/presentation/d/1-UjSS-kRZgE0q77zPBkgjg2-huXF2GobzhSqwI0AdU8/edit#slide=id.g16e897f04a_0_14){: .external} and [Design for all your users](https://docs.google.com/presentation/d/14CaiTF3f-OFoWs84lXeurE95_LJIFJwC-
-xhMky62dAg/edit#slide=id.g16ea125a27_0_6){: .external}.
+[Your audience, your content](https://docs.google.com/presentation/d/1-UjSS-kRZgE0q77zPBkgjg2-huXF2GobzhSqwI0AdU8/edit#slide=id.g16e897f04a_0_14){: .external} and [Design for all your users](https://docs.google.com/presentation/d/14CaiTF3f-OFoWs84lXeurE95_LJIFJwC-xhMky62dAg/edit#slide=id.g16ea125a27_0_6){: .external}.
 
 Who are your stakeholders, and what are their priorities? This will affect the way you structure,
 present and share your audit data.

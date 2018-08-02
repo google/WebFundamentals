@@ -2,9 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Once you've audited a site, make sure to package the results in a digestible form. Be sensitive to the people on the receiving end of your audit, structure your report carefully and present your data in terms of opportunities and solutions.
 
-{# wf_updated_on: 2017-07-25 #}
-{# wf_published_on: 2015-03-20 #}
-{# wf_blink_components: Blink>JavaScript #}
+{# wf_updated_on: 2018-08-03 #}
+{# wf_published_on: 2018-08-03 #}
+{# wf_blink_components: N/A #}
 
 # Share the results {: .page-title }
 
@@ -47,7 +47,7 @@ There is a comprehensive list of business reasons for improving performance on
 [neotys.com](http://www.neotys.com/blog/how-to-talk-about-performance-testing-with-ceos-and-business-managers/){: .external}.
 More information about how to improve site performance is available from
 [perf.rocks](http://perf.rocks/articles){: .external} and
-[Web Fundamentals](https://developers.google.com/web/fundamentals/performance/), along with case
+[Web Fundamentals](/web/fundamentals/performance/), along with case
 studies and success stories.
 
 ## Demonstrate potential
