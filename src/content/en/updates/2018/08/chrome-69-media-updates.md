@@ -33,8 +33,8 @@ Chrome 69 adds an AV1 decoder to Chrome Desktop (Windows, Mac, Linux, ChromeOS)
 based on the [official bitstream specification]. At this time, support is
 limited to "Main" [profile 0] and does not include encoding capabilities. The
 supported container is [ISO-BMFF (MP4)]. See [From raw video to web ready] for
-a brief explanation of containers. To enable this feature use the
-&num;enable-av1-decoder flag. 
+a brief explanation of containers. To enable this feature use the 
+`chrome://flags/#enable-av1-decoder` flag.
 
 [Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=838380)
