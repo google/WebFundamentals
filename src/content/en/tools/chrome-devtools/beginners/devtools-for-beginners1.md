@@ -41,7 +41,7 @@ var feedback = {
       },
       "response": designerResponse,
       "analytics": {
-        "label": "Beg. DevTools 1 / Audience / Beginner"
+        "label": "CSS Tutorial / Audience / Beginner"
       }
     },
     {
@@ -50,7 +50,7 @@ var feedback = {
       },
       "response": developerResponse,
       "analytics": {
-        "label": "Beg. DevTools 1 / Audience / Experienced"
+        "label": "CSS Tutorial / Audience / Experienced"
       }
     },
     {
@@ -59,7 +59,7 @@ var feedback = {
       },
       "response": otherResponse,
       "analytics": {
-        "label": "Beg. DevTools 1 / Audience / Other"
+        "label": "CSS Tutorial / Audience / Other"
       }
     }
   ]
