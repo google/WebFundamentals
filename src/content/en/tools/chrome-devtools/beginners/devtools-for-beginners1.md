@@ -275,7 +275,7 @@ then drag it to the area you want it to be in.
 
 **You’ve successfully learned how to add and edit content 
 on your site with DevTools!** If you want more information on these 
-workflows, take a look at [Inspect Styles](https://github.com/google/WebFundamentals/src/content/en/tools/chrome-devtools/inspect-styles/edit-dom.md)
+workflows, take a look at [Inspect Styles](https://github.com/google/WebFundamentals/src/content/en/tools/chrome-devtools/inspect-styles/edit-dom)
 .
 
 <figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto">
