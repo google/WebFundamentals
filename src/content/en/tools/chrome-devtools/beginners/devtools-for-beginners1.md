@@ -20,6 +20,11 @@ and you want to be sure you are doing it in the most efficient manner.
 .)
 - You have made a website before, but you want a more polished site.
 
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+
+<script> var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' + 'open a GitHub issue ' + 'or send ' + 'us an email or tweet us.'; var beginnerResponse = "Great! The tutorials should be easy to complete, even if you don't " + "have much developer experience. " + genericFeedback; var developerResponse = "Great, thanks for sharing. This tutorial will give you a quick introduction to DevTools workflows." + genericFeedback; var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " + "we can better tailor the doc to your needs."; var feedback = { "category": "DevTools", "question": "Do you identify as a beginning developer, experienced developer, or something else?", "choices": [ { "button": { "text": "Beginner" }, "response": beginnerResponse, "analytics": { "label": "Beg. DevTools 1 / Audience /Beginner" } }, { "button": { "text": "Experienced" }, "response": developerResponse, "analytics": { "label": "Beg. DevTools 1 / Audience / Experienced" } }, { "button": { "text": "Something Else" }, "response": otherResponse, "analytics": { "label": "CSS Tutorial / Audience / Other" } } ] }; </script>
+{% include "web/_shared/multichoice.html" %} {% endframebox %}
+
 ## Goal {: #goal}
 
 This is the first of three DevTools For Beginners tutorials. 
