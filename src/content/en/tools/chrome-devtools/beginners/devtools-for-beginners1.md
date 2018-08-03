@@ -1,9 +1,5 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Part one of a tutorial for newer developers to become   acquainted
-with Chrome DevTools.  Users will learn how to use DevTools to interact with
-HTML.
-
 
 {# wf_updated_on: 2018-08-03 #}
 {# wf_published_on: 2018-07-30 #}
@@ -37,7 +33,7 @@ and the end product will look something like
 
 In order to start creating your site, you need to set up your code:
 
-1. Open the source code. A code editor called Glitch shows a page called 
+1. Open the [source code](https://dfb1.glitch.me/). A code editor called Glitch shows a page called 
 index.html. The HTML is mostly empty. You'll be adding your own code to 
 it.
 <figure> <img src="init.png" alt="Initial Source Code Window" width="auto" height="auto">
@@ -59,7 +55,7 @@ The content is the same, but the name on the top-left has changed.
 4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
-<figure> <img src="2tabs.png" alt="An image of the two open tabs" width="auto" height="auto">
+<figure> <img src="siteview.png" alt="An image of the two open tabs" width="auto" height="auto">
 <figcaption>
     <b>Figure 3</b>. The viewing and editing tabs.
   </figcaption>
@@ -69,23 +65,27 @@ Now, you have two tabs open: the code
 (which will be called the editing tab) 
 and the preview of your website (which will be called the viewing tab). 
 
-## Adding Content {: #adding-content}
+## Add content {: #add-content}
 
 Since your website is pretty empty, let’s add some content to it! 
 In the editing tab, you’ll see two sections in your HTML document: 
 the head (the text between `<head>` and `</head>`) and the body 
 (the text between `<body>` and `</body>`). 
+
 The head contains the metadata of your site, which is invisible 
 data your web browser parses to understand the content of your site. 
 This helps search engines find your pages, among other things. 
 The body contains the actual content of your page, like text or images.
+
 You won’t be adding much in the `<head>` section in this part of the 
 tutorial, so for now, let’s move on to the fun part, the `<body>` 
 section. Since this is a personal website, you’ll definitely want to 
-have something about yourself in there. Many personal websites have an
+have something about yourself in there.
+
+ Many personal websites have an
 ‘About Me’ section, and yours will as well. Here’s how you’ll do it:
 
-1. Go to line 19 and press <kbd>Enter</kbd>
+1. Go to line 19 and press <kbd>Enter</kbd>.
 2. You want a heading for this section, 
 so type `<h1>About Me</h1>`. 
 This formats the text as a heading. 
@@ -98,17 +98,22 @@ the heading.
 7. Go back to the editing tab.
 8. Add a list under the `<p>` element on line 21 that 
 details your accomplishments, like so: 
-	
+```	
   <ul>
     <li>Developer</li>
 	<li>Tools</li>
 	<li>Search Engine</li>
   </ul>
-	
+```	
 9. Again, 
 go to the viewing tab to see the new content.
+<figure> <img src="list.png" alt="An image of the two open tabs" width="auto" height="auto">
+<figcaption>
+    <b>Figure 4</b>. The new list on the your site.
+  </figcaption>
+</figure>
 
-## Improving Workflow With DevTools {: #improving-workflow}
+## Improve workflow with DevTools {: #improve-workflow}
 
 At this point, 
 you may have noticed that the process of changing the HTML on your site
@@ -117,7 +122,7 @@ to do this?
 
 Enter DevTools.
 
-### A Note on Nodes {: #Nodes}
+### A note on nodes {: #Nodes}
 
  When you open the Elements Panel in DevTools, 
  you’ll see a screen that looks quite similar to the HTML document
@@ -150,7 +155,7 @@ Enter DevTools.
 
  <figure> <img src="elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto">
 <figcaption>
-    <b>Figure 4</b>. The elements panel.
+    <b>Figure 5</b>. The elements panel.
   </figcaption>
  </figure>
 
@@ -159,7 +164,7 @@ The following screen will appear:
 
 <figure> <img src="editashtml.png" alt="Editing as HTML" width="auto" height="auto">
 <figcaption>
-    <b>Figure 5</b>. Editing an object as HTML.
+    <b>Figure 6</b>. Editing an object as HTML.
   </figcaption>
 </figure>
 
@@ -183,16 +188,19 @@ imagine what would happen if you could permanently change
 the HTML and text of any website! So,
 make sure to copy any changes you make to your site in DevTools.
 
-If you know what you want to edit, then there’s an even simpler workflow:
+If you know what you want to edit, then there’s an even simpler workflow, *Inspect Element*. For example, to change your website's heading: 
 
 1. Open the viewing tab.
-2. Highlight a section of your website (like an image or line of text).
+2. Highlight the heading of your website (the text "About Me").
 3. Right click and choose **Inspect**. 
-4. Double click on either the content or tag of the element to edit it.
+4. Double click on "About Me" and replace it with "I'm Super Cool!".
+5. Double click on `<h1>` and replace it with `<h2>`
+
+You've now changed your website heading!
 
 <figure> <img src="inspectel.png" alt="Inspect Element" width="auto" height="auto">
 <figcaption>
-    <b>Figure 6</b>. Clicking Inspect Element.
+    <b>Figure 7</b>. What You Should See After Clicking Inspect Element.
   </figcaption>
 </figure>
 
@@ -216,24 +224,21 @@ then drag it to the area you want it to be in.
 
 **You’ve successfully learned how to add and edit content 
 on your site with DevTools!** If you want more information on these 
-workflows, take a look at [Inspect Styles](src/content/en/tools/chrome-devtools/inspect-styles/edit-styles.md)
+workflows, take a look at [Inspect Styles](https://github.com/google/WebFundamentals/src/content/en/tools/chrome-devtools/inspect-styles/edit-dom.md)
 .
 
-
-## Next Steps {: #next-steps}
 <figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto">
 <figcaption>
-    <b>Figure 7</b>. An example of what the finished HTML of your site might look like.
+    <b>Figure 8</b>. An example of what the finished HTML of your site might look like.
   </figcaption>
 </figure>
 
-Now that you have a grasp on how DevTools interacts with HTML, you’ll be
-looking at using DevTools with CSS to style and customize your website 
-to make it look a bit nicer. 
+## Next steps {: #next-steps}
 Edit your site until it has all of the HTML content you want. 
 An example of what that would look like is shown above.
 
 If you still have lingering questions on HTML, 
 [take a look at this reference guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
-. Otherwise, you can move on to the next tutorial.
+. Soon, there will be a tutorial looking at using DevTools with CSS to 
+style and customize your website to make it look a bit nicer. 
 
