@@ -293,6 +293,6 @@ If you still have lingering questions on HTML,
 . Soon, there will be a tutorial looking at using DevTools with CSS to 
 style and customize your website to make it look a bit nicer. 
 
-# Feedback {: #feedback }
+## Feedback {: #feedback }
 {% include "web/_shared/helpful.html" %}
 
