@@ -26,31 +26,31 @@ var genericFeedback = 'If there\'s any way we can make this tutorial more helpfu
     '<a href="https://github.com/google/webfundamentals/issues/new">open a GitHub issue</a> ' +
     'or <a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">send ' +
     'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
-var designerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
+var beginnerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
     "have much developer experience. " + genericFeedback;
-var developerResponse = "Great, thanks for sharing. " + genericFeedback;
+var experiencedResponse = "Great, thanks for sharing. " + genericFeedback;
 var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
     "we can better tailor the doc to your needs.";
 var feedback = {
   "category": "DevTools",
-  "question": "Do you identify as a designer, developer, or something else?",
+  "question": "Do you identify as a beginning developer, experienced developer, or something else?",
   "choices": [
     {
       "button": {
-        "text": "Designer"
+        "text": "Beginner"
       },
       "response": designerResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Designer"
+        "label": "Beg. DevTools 1 / Audience / Beginner"
       }
     },
     {
       "button": {
-        "text": "Developer"
+        "text": "Experienced"
       },
       "response": developerResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Developer"
+        "label": "Beg. DevTools 1 / Audience / Experienced"
       }
     },
     {
@@ -59,7 +59,7 @@ var feedback = {
       },
       "response": otherResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Other"
+        "label": "Beg. DevTools 1 / Audience / Other"
       }
     }
   ]
