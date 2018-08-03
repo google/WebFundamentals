@@ -5,7 +5,7 @@ with Chrome DevTools.  Users will learn how to use DevTools to interact with
 HTML.
 
 
-{# wf_updated_on: 2018-08-02 #}
+{# wf_updated_on: 2018-08-03 #}
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -117,12 +117,12 @@ to do this?
 
 Enter DevTools.
 
-### A Note on Nodes {: #nodes}
+### A Note on Nodes {: #Nodes}
 
  When you open the Elements Panel in DevTools, 
  you’ll see a screen that looks quite similar to the HTML document
  you’ve been working on in the editing tab. 
- However, these are not HTML elements, but are actually DOM nodes.
+ However, these are not HTML elements, but are actually DOM Nodes.
  DOM is an interface that represents HTML elements in your browser, 
  and while the DOM Tree you see in the Elements Panel looks quite 
  similar to your HTML document now, 
@@ -130,12 +130,12 @@ Enter DevTools.
 
 1. Navigate to the viewing tab of your website.
 2. Open DevTools with <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
-3. Directly under the `<script>` tag, you will see a new `<div>` element
+3. Directly under the script tag, you will see a new `<div>` element
  that doesn't exist in your HTML document in the editing tab.
  
- Using JavaScript, you can add nodes to the DOM Tree without HTML. 
+ Using JavaScript, you can add Nodes to the DOM Tree without HTML. 
  This will play a bigger role when you learn about the Console 
- panel and JavaScript, but for now, you’ll be editing a few DOM nodes 
+ panel and JavaScript, but for now, you’ll be editing a few DOM Nodes 
  yourself.
  
 ### Edit DOM Nodes as HTML {: #edit-as-html}
@@ -165,7 +165,7 @@ The following screen will appear:
 
 Now you have a live view of your changes! 
 
-Try adding information to the About node:
+Try adding information to the About `<div.`:
 
 1. Add a paragraph element like: 
 `<p> My website is all about sharing my  achievements! </p>`. 
