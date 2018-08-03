@@ -28,7 +28,7 @@ var genericFeedback = 'If there\'s any way we can make this tutorial more helpfu
     'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
 var beginnerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
     "have much developer experience. " + genericFeedback;
-var experiencedResponse = "Great, thanks for sharing. " + genericFeedback;
+var experiencedResponse = "Great, this tutorial will teach you some basic DevTools workflows. " + genericFeedback;
 var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
     "we can better tailor the doc to your needs.";
 var feedback = {
@@ -41,7 +41,7 @@ var feedback = {
       },
       "response": beginnerResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Beginner"
+        "label": "DevTools For Beginners / DOM / Beginner"
       }
     },
     {
@@ -50,7 +50,7 @@ var feedback = {
       },
       "response": experiencedResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Experienced"
+        "label": "DevTools For Beginners / DOM / Experienced"
       }
     },
     {
@@ -59,7 +59,7 @@ var feedback = {
       },
       "response": otherResponse,
       "analytics": {
-        "label": "CSS Tutorial / Audience / Other"
+        "label": "DevTools For Beginners / DOM / Other"
       }
     }
   ]
@@ -292,4 +292,7 @@ If you still have lingering questions on HTML,
 [take a look at this reference guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
 . Soon, there will be a tutorial looking at using DevTools with CSS to 
 style and customize your website to make it look a bit nicer. 
+
+Feedback {: #feedback }
+{% include "web/_shared/helpful.html" %}
 
