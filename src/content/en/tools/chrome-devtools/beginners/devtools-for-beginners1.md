@@ -21,9 +21,53 @@ and you want to be sure you are doing it in the most efficient manner.
 - You have made a website before, but you want a more polished site.
 
 {% framebox width="auto" height="auto" enable_widgets="true" %}
+<script>
+var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' +
+    '<a href="https://github.com/google/webfundamentals/issues/new">open a GitHub issue</a> ' +
+    'or <a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">send ' +
+    'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
+var designerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
+    "have much developer experience. " + genericFeedback;
+var developerResponse = "Great, thanks for sharing. " + genericFeedback;
+var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
+    "we can better tailor the doc to your needs.";
+var feedback = {
+  "category": "DevTools",
+  "question": "Do you identify as a designer, developer, or something else?",
+  "choices": [
+    {
+      "button": {
+        "text": "Designer"
+      },
+      "response": designerResponse,
+      "analytics": {
+        "label": "CSS Tutorial / Audience / Designer"
+      }
+    },
+    {
+      "button": {
+        "text": "Developer"
+      },
+      "response": developerResponse,
+      "analytics": {
+        "label": "CSS Tutorial / Audience / Developer"
+      }
+    },
+    {
+      "button": {
+        "text": "Something Else"
+      },
+      "response": otherResponse,
+      "analytics": {
+        "label": "CSS Tutorial / Audience / Other"
+      }
+    }
+  ]
+};
+</script>
+{% include "web/_shared/multichoice.html" %}
+{% endframebox %}
 
-<script> var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' + 'open a GitHub issue ' + 'or send ' + 'us an email or tweet us.'; var designerResponse = "Great! The tutorials should be easy to complete, even if you don't " + "have much developer experience. " + genericFeedback; var developerResponse = "Great, thanks for sharing. " + genericFeedback; var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " + "we can better tailor the doc to your needs."; var feedback = { "category": "DevTools", "question": "Do you identify as a designer, developer, or something else?", "choices": [ { "button": { "text": "Designer" }, "response": designerResponse, "analytics": { "label": "CSS Tutorial / Audience / Designer" } }, { "button": { "text": "Developer" }, "response": developerResponse, "analytics": { "label": "CSS Tutorial / Audience / Developer" } }, { "button": { "text": "Something Else" }, "response": otherResponse, "analytics": { "label": "CSS Tutorial / Audience / Other" } } ] }; </script>
-{% include "web/_shared/multichoice.html" %} {% endframebox %}
 
 
 
