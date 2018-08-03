@@ -39,7 +39,7 @@ var feedback = {
       "button": {
         "text": "Beginner"
       },
-      "response": designerResponse,
+      "response": beginnerResponse,
       "analytics": {
         "label": "CSS Tutorial / Audience / Beginner"
       }
@@ -48,7 +48,7 @@ var feedback = {
       "button": {
         "text": "Experienced"
       },
-      "response": developerResponse,
+      "response": experiencedResponse,
       "analytics": {
         "label": "CSS Tutorial / Audience / Experienced"
       }
