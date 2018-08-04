@@ -292,7 +292,7 @@ as PageDown and PageUp and also when calculating scroll amount for
 
 ## Interaction with other scrolling APIs
 
-### DOM Scrolling API {#dom-scrolling-api}
+### DOM Scrolling API
 
 Scroll snapping happens **after** all scroll operations including those
 initiated by script. When you are using APIs like `Element.scrollTo`, the
@@ -301,14 +301,14 @@ appropriate snapping logic to find the final snapped location. Thus,  there is
 no need for user script to do any manual calculations for snapping.
 
 
-### Smooth Scrolling  {#smooth-scrolling}
+### Smooth Scrolling
 
 Smooth scrolling controls the behavior of a programmatic scroll operation while
 scroll snap determines its destination. Since they control orthogonal aspects of
 scrolling, they can be used together and complement each other.
 
 
-### Overscroll Behavior {#overscroll-behavior}
+### Overscroll Behavior
 
 [Overscroll behavior API](/web/updates/2017/11/overscroll-behavior) controls how
 scroll is chained across multiple elements and it is not affected by scroll
