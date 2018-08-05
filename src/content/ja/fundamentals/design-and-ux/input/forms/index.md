@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: モバイルでのフォーム入力は大変な作業です。最高のフォームとは、入力内容を最小限にしたフォームです。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 
 # 最適なフォームの作成 {: .page-title }
@@ -65,7 +65,7 @@ description: モバイルでのフォーム入力は大変な作業です。最�
 
 
 前のステップで不相応に複雑なフォームを配置した場合、ユーザーは全体のプロセスを終える前に、サイトを離れる可能性が高くなります。
- 
+
 
 <div style="clear:both;"></div>
 
@@ -81,7 +81,7 @@ description: モバイルでのフォーム入力は大変な作業です。最�
 ユーザーは旅行の予定や日程をスケジュールするときに、より多くのコンテキストを必要とする傾向があります。ユーザーがカレンダーをチェックするためにサイトを離れることを防止し、操作を容易にするために、開始日と終了日を選択するための明確なラベルがついたカレンダーを表示します。
 
 
- 
+
 
 <div style="clear:both;"></div>
 
@@ -465,7 +465,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ##  リアルタイム検証のサポート
@@ -490,7 +490,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #####  一般的な正規表現パターン
 
@@ -544,7 +544,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ####  `min`、`max` および `step` 属性
 
@@ -554,7 +554,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 ####  `maxlength` 属性
 
@@ -563,7 +563,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 ####  `minlength` 属性
 
@@ -572,7 +572,7 @@ Google のホームページなどのフォームで、ユーザーが特定の�
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 ####  `novalidate` 属性
 
@@ -586,14 +586,14 @@ Google のホームページなどのフォームで、ユーザーが特定の�
       <label for="inpEmail">メールアドレス</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 ポイント: データの一貫性とセキュリティを確保するために、クライアント側の入力検証においても、必ずサーバ側でデータを検証を行うことが重要です。
 
 ###  JavaScript を使用した複雑なリアルタイム検証
 
-組み込みの検証機能と正規表現で十分でない場合は、[Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation) を使用できます。これは独自の検証を制御するための強力なツールです。この API を使用すると、独自のエラーの設定や、要素が有効かどうかのチェックなどの処理を実行でき、要素が無効である理由を判定できます。
+組み込みの検証機能と正規表現で十分でない場合は、[Constraint Validation API](http://w3c.github.io/html/sec-forms.html#constraints) を使用できます。これは独自の検証を制御するための強力なツールです。この API を使用すると、独自のエラーの設定や、要素が有効かどうかのチェックなどの処理を実行でき、要素が無効である理由を判定できます。
 
 
 

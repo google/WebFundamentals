@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crea formularios asombrosos {: .page-title }
@@ -40,14 +40,14 @@ Para diseñar formularios eficaces, evita las acciones repetidas, solicita solo 
   </figcaption>
 </figure>
 
-Asegúrate de que sus formularios no contengan acciones repetidas; solo incluye tantos campos como sea 
-necesario y aprovecha la función 
+Asegúrate de que sus formularios no contengan acciones repetidas; solo incluye tantos campos como sea
+necesario y aprovecha la función
 [autocompletar](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 de modo que los usuarios puedan completar fácilmente los formularios con los datos completados previamente.
 
-Completa previamente la información que ya conozcas, o que se pueda 
-anticipar, para que el usuario no tenga que ingresarla.  Por ejemplo, 
-completa previamente la dirección de envío con la última dirección de envío proporcionada por el 
+Completa previamente la información que ya conozcas, o que se pueda
+anticipar, para que el usuario no tenga que ingresarla.  Por ejemplo,
+completa previamente la dirección de envío con la última dirección de envío proporcionada por el
 usuario.
 
 <div style="clear:both;"></div>
@@ -61,11 +61,11 @@ usuario.
   </figcaption>
 </figure>
 
-En las barras de progreso y los menús, se debe indicar precisamente el progreso general de 
+En las barras de progreso y los menús, se debe indicar precisamente el progreso general de
 los formularios y procesos de varios pasos.
 
-Si colocas un formulario de complejidad desproporcionada en uno de los primeros pasos, es más probable 
-que los usuarios abandonen el sitio antes de completar el proceso. 
+Si colocas un formulario de complejidad desproporcionada en uno de los primeros pasos, es más probable
+que los usuarios abandonen el sitio antes de completar el proceso.
 
 <div style="clear:both;"></div>
 
@@ -78,10 +78,10 @@ que los usuarios abandonen el sitio antes de completar el proceso.
   </figcaption>
 </figure>
 
-A menudo, los usuarios necesitan más contexto cuando deben programar citas y fechas de viajes. 
-Para facilitar esta tarea y evitar que abandonen tu sitio y consulten sus apps 
-de calendario, proporciona un calendario visual con etiquetas claras para que puedan seleccionar las fechas de 
-inicio y finalización. 
+A menudo, los usuarios necesitan más contexto cuando deben programar citas y fechas de viajes.
+Para facilitar esta tarea y evitar que abandonen tu sitio y consulten sus apps
+de calendario, proporciona un calendario visual con etiquetas claras para que puedan seleccionar las fechas de
+inicio y finalización.
 
 <div style="clear:both;"></div>
 
@@ -473,7 +473,7 @@ navegación.
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ## Proporciona validación en tiempo real
@@ -498,7 +498,7 @@ configurar el `pattern` de la siguiente manera:
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### Patrones de expresión regulares comunes
 
@@ -552,7 +552,7 @@ simplemente agregamos el atributo requerido:
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #### Los atributos `min`, `max` y `step`
 
@@ -564,7 +564,7 @@ entrada de tamaño de calzado establecería un tamaño mínimo de 1 y un tamaño
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 #### El atributo `maxlength`
 
@@ -575,7 +575,7 @@ puedes usar lo siguiente.
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 #### El atributo `minlength`
 
@@ -586,7 +586,7 @@ el usuario. Por ejemplo, si deseas especificar que el nombre de un archivo debe 
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 #### El atributo `novalidate`
 
@@ -600,7 +600,7 @@ las JavaScript API también podrás verificar si el formulario se valida.
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 Success: Aun con la validación de entrada del lado del cliente, siempre es importante validar los datos en el servidor para garantizar la uniformidad y la seguridad de tus datos.
@@ -608,7 +608,7 @@ Success: Aun con la validación de entrada del lado del cliente, siempre es impo
 ### Uso de JavaScript para validación más compleja en tiempo real
 
 Cuando la validación integrada y las expresiones regulares no son suficientes, puedes usar la
-[API de validación de restricciones](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+[API de validación de restricciones](http://w3c.github.io/html/sec-forms.html#constraints),
 una herramienta eficiente para ejecutar la validación personalizada.  La API le permite llevar a cabo acciones como
 configurar un error personalizado, verificar si un elemento es válido y determinar el
 motivo por el que un elemento no es válido:

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在移动设备上填写表单很困难。输入操作最少的表单就是最好的表单。
 
-{# wf_updated_on:2014-10-21 #}
+{# wf_updated_on:2018-08-05 #}
 {# wf_published_on:2014-04-30 #}
 
 # 创建出色的表单 {: .page-title }
@@ -586,7 +586,7 @@ Success: 即使客户端有输入验证，也务必在服务器上验证数据�
 
 ###  使用 JavaScript 实现更复杂的实时验证
 
-当内置验证加上正则表达式还不够时，可以使用 [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)，这是一个用于处理自定义验证的强大工具。此 API 使您能够进行各种验证，例如设置自定义错误，检查一个元素是否有效，并确定元素无效的原因：
+当内置验证加上正则表达式还不够时，可以使用 [Constraint Validation API](http://w3c.github.io/html/sec-forms.html#constraints)，这是一个用于处理自定义验证的强大工具。此 API 使您能够进行各种验证，例如设置自定义错误，检查一个元素是否有效，并确定元素无效的原因：
 
 
 
