@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crie formulários incríveis {: .page-title }
@@ -40,14 +40,14 @@ Crie formulários eficientes evitando ações repetidas, perguntando apenas o ne
   </figcaption>
 </figure>
 
-Certifique-se de que seus formulários não tenham ações repetidas e apenas a quantidade necessária de campos 
-e tire proveito do 
+Certifique-se de que seus formulários não tenham ações repetidas e apenas a quantidade necessária de campos
+e tire proveito do
 [preenchimento automático](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 para que o usuário possa facilmente preencher os formulários com dados sugeridos.
 
-Busque oportunidades de sugerir informações já conhecidas ou que podem 
-ser antecipadas para evitar que o usuário precise fornecê-las.  Por exemplo, 
-pré-preencha o endereço de envio com o último endereço de envio fornecido pelo 
+Busque oportunidades de sugerir informações já conhecidas ou que podem
+ser antecipadas para evitar que o usuário precise fornecê-las.  Por exemplo,
+pré-preencha o endereço de envio com o último endereço de envio fornecido pelo
 usuário.
 
 <div style="clear:both;"></div>
@@ -61,11 +61,11 @@ usuário.
   </figcaption>
 </figure>
 
-As barras de progresso e menus devem transmitir precisamente o progresso geral em 
+As barras de progresso e menus devem transmitir precisamente o progresso geral em
 formulários e processos de várias etapas.
 
-Se você inserir um formulário complexo demais em uma etapa inicial, o usuário 
-provavelmente sairá de seu site antes de terminar o processo. 
+Se você inserir um formulário complexo demais em uma etapa inicial, o usuário
+provavelmente sairá de seu site antes de terminar o processo.
 
 <div style="clear:both;"></div>
 
@@ -78,10 +78,10 @@ provavelmente sairá de seu site antes de terminar o processo.
   </figcaption>
 </figure>
 
-O usuário frequentemente precisa de mais contexto ao agendar compromissos e datas de viagem. 
-Para facilitar o processo e evitar que o usuário saia do seu site para consultar o 
-aplicativo de calendário, forneça um calendário visual com indicação clara para selecionar 
-datas de início e término. 
+O usuário frequentemente precisa de mais contexto ao agendar compromissos e datas de viagem.
+Para facilitar o processo e evitar que o usuário saia do seu site para consultar o
+aplicativo de calendário, forneça um calendário visual com indicação clara para selecionar
+datas de início e término.
 
 <div style="clear:both;"></div>
 
@@ -199,7 +199,7 @@ entrada.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>week</code><br>Para inserir uma semana (apenas) sem fuso 
+        <code>week</code><br>Para inserir uma semana (apenas) sem fuso
         horário.
       </td>
       <td data-th="Typical keyboard">
@@ -208,7 +208,7 @@ entrada.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>month</code><br>Para inserir um mês (apenas) sem fuso 
+        <code>month</code><br>Para inserir um mês (apenas) sem fuso
         horário.
       </td>
       <td data-th="Typical keyboard">
@@ -304,7 +304,7 @@ pequenos dispositivos.
 Os navegadores podem usar heurística para determinar quais campos podem
 [preencher automaticamente](https://support.google.com/chrome/answer/142893)
  [com base nos dados especificados anteriormente pelo usuário](https://support.google.com/chrome/answer/142893)
- e você pode dar dicas para o navegador com os atributos `name` e 
+ e você pode dar dicas para o navegador com os atributos `name` e
 `autocomplete` em cada elemento de entrada.
 
 Observação: O Chrome exige que elementos `input` sejam inseridos em uma tag `<form>` para ativar o
@@ -473,7 +473,7 @@ navegação.
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ## Forneça validação em tempo real
@@ -498,7 +498,7 @@ o `pattern` da seguinte forma:
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### Padrões de expressão regular comuns
 
@@ -552,7 +552,7 @@ adicionamos o atributo necessário:
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #### Os atributos `min`, `max` e `step`
 
@@ -564,7 +564,7 @@ de 0,5
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 #### O atributo `maxlength`
 
@@ -575,18 +575,18 @@ usuário pode fornecer. Por exemplo, se deseja limitar um nome de arquivo a 12 c
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 #### O atributo `minlength`
 
 O atributo `minlength` pode ser usado para especificar o tamanho mínimo de uma entrada ou
 caixa de texto e é útil para se especificar o tamanho mínimo que o usuário deve
-fornecer. Por exemplo, se deseja especificar que um nome de arquivo deve ter pelo menos 
+fornecer. Por exemplo, se deseja especificar que um nome de arquivo deve ter pelo menos
 8 caracteres, é possível usar o seguinte.
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 #### O atributo `novalidate`
 
@@ -600,7 +600,7 @@ JavaScript APIs ainda permitirão que você verifique se o formulário é válid
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 Success: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
@@ -608,7 +608,7 @@ Success: Mesmo com validação de entrada do lado do cliente, é importante vali
 ### Use JavaScript para validações em tempo real mais complexas
 
 Quando a validação integrada e as expressões regulares não são suficientes, você pode usar
-a [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+a [Constraint Validation API](http://w3c.github.io/html/sec-forms.html#constraints),
 uma excelente ferramenta para lidar com validação personalizada.  A API permite que você faça coisas
 como definir um erro personalizado, verificar se um elemento é válido e determinar o
 motivo pelo qual um elemento é inválido:
