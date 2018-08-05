@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Formulir sulit diisi pada perangkat seluler. Formulir terbaik adalah formulir dengan masukan paling sedikit.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Membuat Formulir yang Mengagumkan {: .page-title }
@@ -40,14 +40,14 @@ Mendesain formulir efisien dengan menghindari tindakan yang berulang, hanya memi
   </figcaption>
 </figure>
 
-Pastikan formulir Anda tidak memiliki tindakan berulang, memiliki bidang yang 
-diperlukan saja, dan memanfaatkan dari 
+Pastikan formulir Anda tidak memiliki tindakan berulang, memiliki bidang yang
+diperlukan saja, dan memanfaatkan dari
 [isiotomatis](/web/fundamentals/design-and-ux/input/forms/#use-metadata-to-enable-auto-complete),
 sehingga pengguna bisa dengan mudah melengkapi formulir dengan data yang sudah diisi.
 
 Cari kesempatan untuk mengisi informasi yang Anda sudah tahu, atau mungkin
-mengantisipasinya supaya pengguna tidak harus mengisinya sendiri.  Misalnya, 
-alamat pengiriman sudah diisi dengan alamat pengiriman terakhir yang diberikan oleh 
+mengantisipasinya supaya pengguna tidak harus mengisinya sendiri.  Misalnya,
+alamat pengiriman sudah diisi dengan alamat pengiriman terakhir yang diberikan oleh
 pengguna.
 
 <div style="clear:both;"></div>
@@ -61,11 +61,11 @@ pengguna.
   </figcaption>
 </figure>
 
-Bilah kemajuan dan menu harus secara akurat menampilkan kemajuan secara keseluruhan melalui 
+Bilah kemajuan dan menu harus secara akurat menampilkan kemajuan secara keseluruhan melalui
 formulir dan proses multi-langkah.
 
 Jika Anda menempatkan formulir kompleks secara tidak proporsional dalam langkah sebelumnya, pengguna kemungkinan
-besar akan meninggalkan situs sebelum mereka melewati seluruh proses. 
+besar akan meninggalkan situs sebelum mereka melewati seluruh proses.
 
 <div style="clear:both;"></div>
 
@@ -78,10 +78,10 @@ besar akan meninggalkan situs sebelum mereka melewati seluruh proses.
   </figcaption>
 </figure>
 
-Pengguna sering kali membutuhkan lebih banyak konteks saat menjadwalkan janji pertemuan dan tanggal perjalanan, 
-untuk membuat segalanya lebih mudah dan mencegah pengguna meninggalkan situs Anda untuk memeriksa 
-aplikasi kalender mereka, sediakan kalender visual dengan label yang jelas untuk memilih 
-tanggal mulai dan selesai. 
+Pengguna sering kali membutuhkan lebih banyak konteks saat menjadwalkan janji pertemuan dan tanggal perjalanan,
+untuk membuat segalanya lebih mudah dan mencegah pengguna meninggalkan situs Anda untuk memeriksa
+aplikasi kalender mereka, sediakan kalender visual dengan label yang jelas untuk memilih
+tanggal mulai dan selesai.
 
 <div style="clear:both;"></div>
 
@@ -304,7 +304,7 @@ perangkat kecil.
 Browser menggunakan banyak heuristik untuk menentukan bidang mana yang bisa mereka
 [isi-otomatis](https://support.google.com/chrome/answer/142893)
 [berdasarkan data yang ditetapkan sebelumnya oleh pengguna](https://support.google.com/chrome/answer/142893),
-dan Anda dapat memberikan petunjuk ke browser dengan menyediakan atribut `name` dan 
+dan Anda dapat memberikan petunjuk ke browser dengan menyediakan atribut `name` dan
 atribut `autocomplete` pada setiap elemen masukan.
 
 Note: Chrome mengharuskan elemen `input` dibungkus dalam tag `<form>` untuk mengaktifkan
@@ -473,7 +473,7 @@ navigasi.
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ## Menyediakan validasi real-time
@@ -498,7 +498,7 @@ menyetel `pattern` seperti ini:
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### Pola ekspresi reguler umum
 
@@ -552,7 +552,7 @@ cukup menambahkan atribut yang dibutuhkan:
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #### Atribut `min`, `max` dan `step`
 
@@ -564,7 +564,7 @@ ukuran sepatu akan menyetel ukuran minimal 1 dan ukuran maksimal 13, dengan kena
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 #### Atribut `maxlength`
 
@@ -575,7 +575,7 @@ Anda bisa menggunakan atribut berikut.
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 #### Atribut `minlength`
 
@@ -586,7 +586,7 @@ pengguna. Misalnya, jika Anda ingin menetapkan bahwa nama file memerlukan setida
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 #### Atribut `novalidate`
 
@@ -600,7 +600,7 @@ JavaScript API tetap akan memperbolehkan Anda untuk memeriksa apakah formulir di
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 Berhasil: Bahkan dengan validasi masukan sisi-klien, validasi data pada server tetap penting untuk memastikan konsistensi dan keamanan data Anda.
@@ -608,7 +608,7 @@ Berhasil: Bahkan dengan validasi masukan sisi-klien, validasi data pada server t
 ### Gunakan JavaScript untuk validasi real-time yang lebih kompleks
 
 Ketika validasi bawaan ditambah ekspresi reguler tidak mencukupi, Anda bisa menggunakan
-[Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+[Constraint Validation API](https://w3c.github.io/html/sec-forms.html#constraints),
 alat yang efektif untuk menangani validasi khusus.  API memungkinkan Anda untuk melakukan hal-hal
 seperti menyetel kesalahan khusus, memeriksa apakah suatu elemen valid, dan menentukan
 alasan sehingga sebuah elemen tidak valid:

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋은 양식은 가장 적게 입력하는 양식입니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 
 # 멋진 양식 만들기 {: .page-title }
@@ -65,7 +65,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 
 
 너무 복잡한 양식을 초기 단계에 배치하면, 사용자가 전체 과정을 진행하기 전에 사이트를 벗어날 가능성이 높습니다.
- 
+
 
 <div style="clear:both;"></div>
 
@@ -81,7 +81,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 사용자가 약속 및 여행 날짜를 잡을 때 사이트를 벗어나 달력 앱을 확인하지 않고 쉽게 처리할 수 있도록 하려면, 시작 및 종료 날짜를 선택하는 레이블이 명확하게 지정된 시각적 달력을 제공하세요.
 
 
- 
+
 
 <div style="clear:both;"></div>
 
@@ -473,7 +473,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="text" autofocus ...>
-    
+
 
 
 ## 실시간 유효성 검사 제공
@@ -498,7 +498,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### 일반적인 정규식 패턴
 
@@ -552,7 +552,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #### `min`, `max` 및 `step` 속성
 
@@ -564,7 +564,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 #### `maxlength` 속성
 
@@ -575,7 +575,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 #### `minlength` 속성
 
@@ -586,7 +586,7 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 #### `novalidate` 속성
 
@@ -600,14 +600,14 @@ autofocus 속성은 키보드 포커스를 가로채서 잠재적으로 백스�
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 Success: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관성과 보안을 보장하기 위해 서버 데이터 유효성을 검사하는 것은 항상 중요합니다.
 
 ### 더욱 복잡한 실시간 유효성 검사에 자바스크립트 사용
 
-기본 제공되는 유효성 검사와 정규식만으로 충분하지 않은 경우, 사용자설정 유효성 검사를 처리하는 강력한 도구인 [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)를 사용할 수 있습니다.
+기본 제공되는 유효성 검사와 정규식만으로 충분하지 않은 경우, 사용자설정 유효성 검사를 처리하는 강력한 도구인 [Constraint Validation API](https://w3c.github.io/html/sec-forms.html#constraints)를 사용할 수 있습니다.
 
   이 API를 사용하여 사용자설정 오류 설정, 요소의 유효성 확인, 요소가 유효하지 않은 이유 확인 등과 같은 작업을 수행할 수 있습니다.
 
