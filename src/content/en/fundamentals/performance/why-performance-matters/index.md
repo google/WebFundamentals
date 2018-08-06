@@ -128,7 +128,7 @@ finally _does_ start in such conditions, users may be plagued by further
 problems as CSS, JavaScript, and other page resources slowly trickle in, each
 presenting their own unique performance problems.
 
-Consequently, it could be argued that performance is a foundational aspect of
+Consequently, it could be argued that performance is a fundational aspect of
 good user experiences. When sites ship tons of code, poor performance persists
 as browsers chew through megabytes of it on slow networks. Devices with limited
 processing power and memory can have trouble coping with what we might consider
