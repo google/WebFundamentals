@@ -113,7 +113,7 @@ When you type JavaScript expressions in the Console, you're using the Console as
 
 ### Argument hints {: #hints }
 
-https://developers.google.com/web/updates/2018/05/devtools#hints
+/web/updates/2018/05/devtools#hints
 
 ### Autocomplete commands {: #autocomplete }
 
@@ -137,7 +137,7 @@ autocomplete suggestions from history](#history).
 
 #### Autocomplete after function execution
 
-https://developers.google.com/web/updates/2018/05/devtools#autocomplete
+/web/updates/2018/05/devtools#autocomplete
 
 ### Preview the results of expressions with Eager Evaluation {: #eager-evaluation }
 
