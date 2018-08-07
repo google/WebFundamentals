@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: WebM just added alpha transparency, and support for it has landed in Chrome Canary.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
 {# wf_blink_components: N/A #}
@@ -133,7 +133,7 @@ alpha playback also works with
 ### How did they do it?
 
 We talked to Google engineer Vignesh Venkatasubramanian about his work on the
-project. He summarised the key challenges involved:
+project. He summarized the key challenges involved:
 
 * The VP8 bitstream had no support for alpha channel. So we had to incorporate
   alpha without breaking the VP8 bitstream and without breaking existing
