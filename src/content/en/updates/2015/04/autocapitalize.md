@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Another text entry frustration for users is being removed.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_tags: news,autocapitalize,mobile #}
 {# wf_blink_components: N/A #}
@@ -14,7 +14,7 @@ description: Another text entry frustration for users is being removed.
 This may look like the most unimpressive feature in existence, but I think it is important because everyone dislikes typing on mobile: You hate it, I loathe it. In Chrome for Android (prior to Chrome 43 -  Beta as of April 2015) a developer has little control over how the browser can  help the user enter text. If you are typing on a device today, it might look  like:
 
 
-Notice everything is in lowercase apart from some values that Android recognised was a name.
+Notice everything is in lowercase apart from some values that Android recognized was a name.
 
 Apple introduced an attribute on `HTMLInputElement` and
 `HTMLTextAreaElement` called [autocapitalize](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize) [in iOS 5](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize)
@@ -131,7 +131,7 @@ there are a number of places where helping the user enter text provides great va
 
 ## Other interesting links
 
-* [Original implmentation proposal by Mounir Lamouri](https://github.com/mounirlamouri/html-autocapitalize/blob/master/proposal.md)
+* [Original implementation proposal by Mounir Lamouri](https://github.com/mounirlamouri/html-autocapitalize/blob/master/proposal.md)
 
 
 {% include "comment-widget.html" %}

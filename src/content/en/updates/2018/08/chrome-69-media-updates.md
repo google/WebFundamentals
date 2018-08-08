@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP policy check.
 
-{# wf_updated_on: 2018-08-02 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,chrome69,media,removals #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -48,7 +48,7 @@ about what content to serve.
 
 To avoid having to determine which platform they’re on to check for “known”
 encryption scheme support, a new `encryptionScheme` key is [added] in
-`MediaKeySystemMediaCapability` [dictionnary] to allow websites to specify
+`MediaKeySystemMediaCapability` [dictionary] to allow websites to specify
 which encryption scheme could be used in [Encrypted Media Extensions (EME)].
 
 The new `encryptionScheme` key can be one of two values:
@@ -264,7 +264,7 @@ media elements using MSE clears up confusion and brings Chrome more in line
 with the MSE specification. Note that media elements that don't use MSE will
 continue to raise "stalled" events as they do today.
 
-[Intent to Deprate and Remove](https://groups.google.com/a/chromium.org/d/msg/blink-dev/x54XtrTyOP8/4-5QZlZzDAAJ) &#124;
+[Intent to Deprecate and Remove](https://groups.google.com/a/chromium.org/d/msg/blink-dev/x54XtrTyOP8/4-5QZlZzDAAJ) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/6338037575319552) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=836951)
 
@@ -275,7 +275,7 @@ continue to raise "stalled" events as they do today.
 [CENC mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-2:v1:en
 [CBCS mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-3:v1:en
 [added]: https://github.com/WICG/encrypted-media-encryption-scheme/blob/master/explainer.md
-[dictionnary]: https://w3c.github.io/encrypted-media/#idl-def-mediakeysystemmediacapability
+[dictionary]: https://w3c.github.io/encrypted-media/#idl-def-mediakeysystemmediacapability
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
 [Clear Key]: https://www.w3.org/TR/encrypted-media/#clear-key
 [HDCP]: https://en.wikipedia.org/wiki/High-bandwidth_Digital_Content_Protection
