@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: TODO
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-08-06 #}
+{# wf_updated_on: 2018-08-08 #}
 {# wf_published_on: 2018-08-02 #}
 
 # Console UI Reference {: .page-title }
@@ -14,15 +14,15 @@ description: TODO
 
 This reference comprehensively lists every way that you can interact with the Chrome DevTools Console UI.
 
-To learn the basics of logging messages to and running JavaScript from the Console, see
+To learn the basics of logging messages to and executing JavaScript from the Console, see
 [Get Started with the Console](get-started).
 
 ## Console basics {: #basics }
 
-The Console is helpful for 2 general tasks:
+The Console has 2 main uses:
 
-* Running JavaScript expressions.
-* Reading logs.
+* [Executing JavaScript](#executing).
+* [Logging messages](#logging).
 
 ### Open the Console panel {: #panel }
 
@@ -98,10 +98,11 @@ To open Console Preferences:
 
 You can also access **some** of these options from [Console Settings](#settings).
 
-## REPL-related features {: #repl }
+## Executing JavaScript {: #executing }
 
-Might change title to "Execute JavaScript". We never use the term REPL. You can
-mention it here, though.
+Executing JavaScript is one of the main uses of the Console. The other is [logging
+messages](#logging).
+
 
 A [REPL][REPL]{: .external } is an interactive programming environment that takes user
 input, evaluates that input, and then prints the result of the evaluation to the user.
@@ -109,7 +110,7 @@ When you type JavaScript expressions in the Console, you're using the Console as
 
 [REPL]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 
-### REPL basics 
+### Executing JavaScript basics
 
 ### Argument hints {: #hints }
 
@@ -192,9 +193,14 @@ to force the Console to insert a new line.
   </figcaption>
 </figure>
 
-## Logging-related features
+## Logging messages {: #logging }
 
-### Logging basics 
+Logging messages is one of the main uses of the Console. The other is
+[executing JavaScript](#executing).
+
+One of the main uses of the Console is logging messages.
+
+### Logging basics {: #logging-basics }
 
 ### Filter messages
 
