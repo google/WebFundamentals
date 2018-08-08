@@ -781,6 +781,18 @@ kazukikanamori:
   description:
     en: Digital Marketing Engineer
 
+mkazi:
+  name:
+    given: Minhaz
+    family: Kazi
+  role:
+    - author
+  org:
+    name: Google
+    unit: Developer Relations
+  twitter: _mkazi_
+  github: minhaz
+
 megginkearney:
   name:
     given: Meggin
@@ -1638,7 +1650,6 @@ rviscomi:
     name: Google
     unit: Developer Relations
   country: USA
-  homepage: 'https://twitter.com/rick_viscomi'
   twitter: rick_viscomi
   github: rviscomi
   role:

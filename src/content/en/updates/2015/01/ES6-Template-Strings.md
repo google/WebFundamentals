@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Template String literals with embedded expressions. We've been waiting for this for ages. Literally
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,es6,javascript,ecmascript #}
 {# wf_blink_components: N/A #}
@@ -19,7 +19,7 @@ Strings in JavaScript have been historically limited, lacking the capabilities o
 * Embedded expressions
 * Multiline strings without hacks
 * String formatting
-* String tagging for safe HTML escaping, localisation and more.
+* String tagging for safe HTML escaping, localization and more.
 
 Rather than stuffing yet another feature into Strings as we know them today, Template Strings introduce a completely different way of solving these problems.
 
@@ -182,7 +182,7 @@ Our tagged template solution could thus be written as follows:
     //=> <b>Domenic Denicola says</b>: "&amp; is a fun tag"
 
 
-Other possible uses include auto-escaping, formatting, localisation and in general, more complex substitutions:
+Other possible uses include auto-escaping, formatting, localization and in general, more complex substitutions:
 
     // Contextual auto-escaping
     qsa`.${className}`;

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -743,7 +743,7 @@ requests aren't counted.
   </figcaption>
 </figure>
 
-See [View the uncompressed size of a resouce](#uncompressed) to see how large
+See [View the uncompressed size of a resource](#uncompressed) to see how large
 resources are after the browser uncompresses them.
 
 ### View the stack trace that caused a request {: #initiator-stack-trace }
@@ -759,7 +759,7 @@ column to view the stack trace leading up to the request.
   </figcaption>
 </figure>
 
-### View the uncompressed size of a resouce {: #uncompressed }
+### View the uncompressed size of a resource {: #uncompressed }
 
 Click **Use Large Request Rows** ![Use Large Request
 Rows](imgs/large-resource-rows-button.png){:.inline-icon} and then look at the

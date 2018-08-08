@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "First Meaningful Paint" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2016-10-05 #}
 {# wf_blink_components: N/A #}
 
@@ -29,7 +29,7 @@ is particularly helpful towards achieving a faster First Meaningful Paint.
 First Meaningful Paint is essentially the paint after which the biggest
 above-the-fold layout change has happened, and web fonts have loaded. See the
 spec to learn more:
-[First Meaningful Paint: A Layout-Based Aproach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view).
+[First Meaningful Paint: A Layout-Based Approach](https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view).
 
 
 ## Feedback {: #feedback }
