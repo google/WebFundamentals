@@ -519,7 +519,7 @@ To view the response body to a request:
 
 1. Click the URL of the request, under the **Name** column of the Requests
    table.
-1. Click the **Headers** tab.
+1. Click the **Response** tab.
 
 <figure>
   <img src="imgs/response.svg"
