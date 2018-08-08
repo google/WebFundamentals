@@ -24,7 +24,7 @@ In this episode:
 * [Jake's euroramen](https://twitter.com/jaffathecake/status/963287863268904964).
 * [Cross origin read
   blocking](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md).
-* [Site isolation](https://developers.google.com/web/updates/2018/07/site-isolation).
+* [Site isolation](/web/updates/2018/07/site-isolation).
 * [OOPIFs](https://www.chromium.org/developers/design-documents/oop-iframes).
 * The [no-sniff
   header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options).
