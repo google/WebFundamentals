@@ -5,7 +5,7 @@ book_path: /web/tools/_book.yaml
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# DevTools For Beginners {: .page-title }
+# DevTools for Beginners: HTML and the DOM {: .page-title }
 
 ## Audience {: #audience}
 

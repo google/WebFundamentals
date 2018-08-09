@@ -1,6 +1,10 @@
 toc:
 - title: Overview
   path: /web/tools/chrome-devtools/
+- title: DevTools for Beginners
+  section:
+  - title: HTML and the DOM
+    path: /web/tools/chrome-devtools/beginners/html
 - title: View and Change CSS
   section:
   - title: Get Started with Viewing and Changing CSS
