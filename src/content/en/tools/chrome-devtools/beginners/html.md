@@ -87,13 +87,13 @@ In order to start creating your site, you need to set up your code:
 1. Open the [source code](https://dfb1.glitch.me/). A code editor called Glitch shows a page called 
 index.html. The HTML is mostly empty. You'll be adding your own code to 
 it.
-<figure> <img src="init.png" alt="Initial Source Code Window" width="auto" height="auto">
+<figure> <img src="imgs/init.png" alt="Initial Source Code Window" width="auto" height="auto">
 <figcaption>
     <b>Figure 1</b>. The initial window you will see.
   </figcaption>
 </figure>
 2. Click **dfb-1**. A menu pops up.
-<figure> <img src="menu.png" alt="Glitch Remix Menu" width="auto" height="auto">
+<figure> <img src="imgs/menu.png" alt="Glitch Remix Menu" width="auto" height="auto">
 <figcaption>
     <b>Figure 2</b>. The Glitch menu that will appear.
   </figcaption>
@@ -106,7 +106,7 @@ The content is the same, but the name on the top-left has changed.
 4. Click Show Live. Another tab opens with view of what your site 
 currently looks like.
 
-<figure> <img src="siteview.png" alt="An image of the two open tabs" width="auto" height="auto">
+<figure> <img src="imgs/siteview.png" alt="An image of the two open tabs" width="auto" height="auto">
 <figcaption>
     <b>Figure 3</b>. The viewing and editing tabs.
   </figcaption>
@@ -158,7 +158,7 @@ details your accomplishments, like so:
 ```	
 9. Again, 
 go to the viewing tab to see the new content.
-<figure> <img src="list.png" alt="An image of the two open tabs" width="auto" height="auto">
+<figure> <img src="imgs/list.png" alt="An image of the two open tabs" width="auto" height="auto">
 <figcaption>
     <b>Figure 4</b>. The new list on the your site.
   </figcaption>
@@ -204,7 +204,7 @@ Enter DevTools.
  <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>. You should see 
  something like this: 
 
- <figure> <img src="elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto">
+ <figure> <img src="imgs/elpanel.png" alt=" The Elements Panel Opened" width="auto" height="auto">
 <figcaption>
     <b>Figure 5</b>. The elements panel.
   </figcaption>
@@ -213,7 +213,7 @@ Enter DevTools.
 2. Right click on the `<About>` div, then click `Edit as HTML`. 
 The following screen will appear:
 
-<figure> <img src="editashtml.png" alt="Editing as HTML" width="auto" height="auto">
+<figure> <img src="imgs/editashtml.png" alt="Editing as HTML" width="auto" height="auto">
 <figcaption>
     <b>Figure 6</b>. Editing an object as HTML.
   </figcaption>
@@ -249,7 +249,7 @@ If you know what you want to edit, then there’s an even simpler workflow, *Ins
 
 You've now changed your website heading!
 
-<figure> <img src="inspectel.png" alt="Inspect Element" width="auto" height="auto">
+<figure> <img src="imgs/inspectel.png" alt="Inspect Element" width="auto" height="auto">
 <figcaption>
     <b>Figure 7</b>. What You Should See After Clicking Inspect Element.
   </figcaption>
@@ -278,7 +278,7 @@ on your site with DevTools!** If you want more information on these
 workflows, take a look at [Inspect Styles](/web/tools/chrome-devtools/inspect-styles/edit-dom)
 .
 
-<figure> <img src="endgame.png" alt="Prepare for the next steps" width="auto" height="auto">
+<figure> <img src="imgs/endgame.png" alt="Prepare for the next steps" width="auto" height="auto">
 <figcaption>
     <b>Figure 8</b>. An example of what the finished HTML of your site might look like.
   </figcaption>
