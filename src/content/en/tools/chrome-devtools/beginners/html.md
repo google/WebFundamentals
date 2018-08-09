@@ -7,6 +7,8 @@ book_path: /web/tools/_book.yaml
 
 # DevTools for Beginners: HTML and the DOM {: .page-title }
 
+{% include "web/_shared/contributors/katjackson.html" %}
+
 ## Audience {: #audience}
 
 This tutorial is for you if any of the following apply:

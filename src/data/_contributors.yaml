@@ -121,7 +121,7 @@ kaycebasques:
   role:
     - author
   description:
-    en: Technical Writer for Chrome DevTools
+    en: Technical Writer, Chrome DevTools & Lighthouse
 
 beaufortfrancois:
   name:
@@ -751,6 +751,19 @@ paulirish:
   google: +PaulIrish
   twitter: paul_irish
   email: paulirish@google.com
+
+katjackson:
+  name:
+    given: Katherine
+    family: Jackson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  description:
+    en: Technical Writer Intern, Chrome DevTools
 
 captainpangyo:
   name:
