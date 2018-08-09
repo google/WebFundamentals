@@ -5,13 +5,18 @@ book_path: /web/tools/_book.yaml
 {# wf_published_on: 2018-08-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# DevTools for Beginners: HTML and the DOM {: .page-title }
+# DevTools for Beginners: Get Started with HTML and the DOM {: .page-title }
 
 {% include "web/_shared/contributors/katjackson.html" %}
 
 This is the first in a series of tutorials that teach you the basics of web
 development. You are going to learn web development by actually building your own
 website.
+
+In this particular tutorial, you learn about HTML and the DOM. HTML is one of the core
+technologies of web development. It is the language that controls the structure and content
+of webpages. The DOM is also related to the structure and content of webpages, but you'll
+learn more about that later.
 
 By the time you complete all of the tutorials in the *DevTools for Beginners* series,
 your finished site will look like **Figure X**.
