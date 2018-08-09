@@ -354,7 +354,7 @@ JS (and therefore `ReportingObserver`) for security reasons.
 
 ## Example server
 
-HTTP examples are great. Actual code is better.
+HTTP examples are great. Actual code is even better.
 
 To see all this stuff in context, below is an example Node server
 that uses Express and brings together all the pieces discussed in this article.
