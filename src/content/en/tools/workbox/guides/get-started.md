@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-08-10 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -71,6 +71,15 @@ officially loaded in our service worker.
 ![DevTools screenshot of Workbox loading in a service worker.](../images/guides/get-started/yay-loaded.png)
 
 Now we can start using Workbox.
+
+Warning: Importing `workbox-sw.js` will create a
+[`workbox` object](/web/tools/workbox/modules/workbox-sw) inside of your service worker, and that
+instance is responsible for importing other helper libraries, based on the features you use. Due to
+restrictions in the
+[service worker specification](https://www.chromestatus.com/feature/5748516353736704),
+these imports need to happen either inside of an `install` event handler, or synchronously in the
+top-level code for your service worker. More details, along with workarounds, can be found in the
+[`workbox-sw` documentation](/web/tools/workbox/modules/workbox-sw#avoid_async_imports).
 
 ## Using Workbox
 
@@ -155,7 +164,7 @@ workbox.routing.registerRoute(
 
 Routing and caching strategies are performed by the `routing` and
 `strategies` modules, but there are plenty of other modules, each offering
-specific behaviours that you can use in your service worker.
+specific behaviors that you can use in your service worker.
 
 You'll find a number of guides that cover other features of Workbox as well
 as more information on configuring Workbox. Find a full list on the left, but

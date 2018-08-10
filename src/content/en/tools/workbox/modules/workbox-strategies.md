@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-08-10 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -34,7 +34,7 @@ the caching strategies directly without `workbox-routing`.
 
 ![Stale While Revalidate Diagram](../images/modules/workbox-strategies/stale-while-revalidate.png)
 
-The [stale-while-revalidate ](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
+The [stale-while-revalidate](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond the request as quickly as possible with a
 cached response if available, falling back to the network request if it’s
 not cached. The network request is then used to update the cache.
@@ -43,7 +43,7 @@ This is a fairly common strategy where having the most up-to-date resource
 is not vital to the application.
 
 ```javascript
-workbox.routing(
+workbox.routing.registerRoute(
   new RegExp('/images/avatars/'),
   workbox.strategies.staleWhileRevalidate()
 );
@@ -53,7 +53,7 @@ workbox.routing(
 
 ![Cache First Diagram](../images/modules/workbox-strategies/cache-first.png)
 
-Offline webapps will rely heavily on the cache, but for assets that are
+Offline web apps will rely heavily on the cache, but for assets that are
 non-critical and can be gradually cached, a
 [cache first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
 is the best option.
@@ -64,7 +64,7 @@ response, the Request will be fulfilled by a a network request and the response
 will be cached so that the next request is served directly from the cache.
 
 ```javascript
-workbox.routing(
+workbox.routing.registerRoute(
   new RegExp('/styles/'),
   workbox.strategies.cacheFirst()
 );
@@ -82,7 +82,7 @@ in the cache. If the network fails to return a response, the caches response
 will be used.
 
 ```javascript
-workbox.routing(
+workbox.routing.registerRoute(
   new RegExp('/social-timeline/'),
   workbox.strategies.networkFirst()
 );
@@ -97,7 +97,7 @@ If you require specific requests to be fulfilled from the network, the
 is the strategy to use.
 
 ```javascript
-workbox.routing(
+workbox.routing.registerRoute(
   new RegExp('/admin/'),
   workbox.strategies.networkOnly()
 );
@@ -112,7 +112,7 @@ strategy ensures that requests are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 
 ```javascript
-workbox.routing(
+workbox.routing.registerRoute(
   new RegExp('/app/v2/'),
   workbox.strategies.cacheOnly()
 );
@@ -135,8 +135,8 @@ useful if you want to separate out your assets to help with debugging.
 workbox.routing.registerRoute(
   new RegExp('/images/'),
   workbox.strategies.cacheFirst({
-    cacheName: 'image-cache'
-  }
+    cacheName: 'image-cache',
+  })
 );
 ```
 
@@ -152,7 +152,7 @@ To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.
 
 ```javascript
-workbox.registerRoute(
+workbox.routing.registerRoute(
   new RegExp('/images/'),
   workbox.strategies.cacheFirst({
     cacheName: 'image-cache',
@@ -164,7 +164,7 @@ workbox.registerRoute(
         maxEntries: 10,
       }),
     ]
-  }
+  })
 );
 ```
 
