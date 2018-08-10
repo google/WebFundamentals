@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2018-08-10 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -136,7 +136,7 @@ workbox.routing.registerRoute(
   new RegExp('/images/'),
   workbox.strategies.cacheFirst({
     cacheName: 'image-cache'
-  }
+  })
 );
 ```
 
@@ -164,7 +164,7 @@ workbox.registerRoute(
         maxEntries: 10,
       }),
     ]
-  }
+  })
 );
 ```
 
