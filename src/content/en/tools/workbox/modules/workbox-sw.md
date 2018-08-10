@@ -74,7 +74,7 @@ Under the hood, loading new modules for the first time involves calling
 [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
 with the path to the corresponding JavaScript file (either hosted on the CDN, or via a local URL).
 In either case, an important restriction applies: the implicit calls to `importScripts()` can only
-happen inside of a service worker's `install` handler, *or* during the synchronous,
+happen inside of a service worker's `install` handler *or* during the synchronous,
 [initial execution](https://stackoverflow.com/questions/38835273) of the service worker script.
 
 In order to avoid violating this restriction, a best practice is to reference the various
@@ -115,8 +115,7 @@ trigger the `importScripts()` call outside of the event handler, using the
 ```js
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
-// This will trigger the importScripts() needed for workbox.core and workbox.strategies
-workbox.loadModule('workbox-core');
+// This will trigger the importScripts() for workbox.strategies and its dependencies:
 workbox.loadModule('workbox-strategies');
 
 self.addEventListener('fetch', (event) => {
