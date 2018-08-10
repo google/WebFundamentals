@@ -109,7 +109,7 @@ self.addEventListener('fetch', (event) => {
 ```
 
 If you need to write code that would otherwise run afoul of this restriction, you can explicitly
-trigger the `importScripts()` call outside of the event handler, using the
+trigger the `importScripts()` call outside of the event handler by using the
 [`workbox.loadModule()`](/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
 ```js
@@ -122,6 +122,24 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png') {
     // Referencing workbox.strategies will now work as expected.
     const cacheFirst = workbox.strategies.cacheFirst();
+    event.respondWith(cacheFirst.makeRequest({request: event.request}));
+  }
+});
+```
+
+Alternatively, you can create a reference to the relevant namespaces outside of your event handlers,
+and then use that reference later on:
+
+```js
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+
+// This will trigger the importScripts() for workbox.strategies and its dependencies:
+const {strategies} = workbox;
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.url.endsWith('.png') {
+    // Using the previously-initialized strategies will work as expected.
+    const cacheFirst = strategies.cacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
