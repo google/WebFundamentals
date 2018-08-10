@@ -99,7 +99,7 @@ service worker:
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.endsWith('.png') {
+  if (event.request.url.endsWith('.png')) {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
     const cacheFirst = workbox.strategies.cacheFirst();
@@ -119,7 +119,7 @@ importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}
 workbox.loadModule('workbox-strategies');
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.endsWith('.png') {
+  if (event.request.url.endsWith('.png')) {
     // Referencing workbox.strategies will now work as expected.
     const cacheFirst = workbox.strategies.cacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
@@ -137,7 +137,7 @@ importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}
 const {strategies} = workbox;
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.endsWith('.png') {
+  if (event.request.url.endsWith('.png')) {
     // Using the previously-initialized strategies will work as expected.
     const cacheFirst = strategies.cacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
