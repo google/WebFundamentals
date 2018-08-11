@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Overview page to the Web Payments doc set.
 
-{# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_published_on: 2018-08-11 #}
+{# wf_updated_on: 2018-08-11 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Overview {: .page-title }
@@ -12,94 +12,76 @@ description: Overview page to the Web Payments doc set.
 
 ## Introduction
 
-Web Payments is a set of emerging web standards that defines features dedicated to transferring 
-money on the web. It is meant to be implemented by _merchants_ -- website owners who want to sell 
-goods through a browser-based web application -- and invoked by _customers_ -- users who want to 
-purchase goods through the app.
+Web Payments is an emerging web standard being developed by the W3C to simplify online payments and enable a broader set of players to participate easily in the payments ecosystem on the web. The standards are flexible; they work with various types of payment systems and are not tied to any specific browser, payment method, or payment service provider. This flexibility enables development simplicity, deployment consistency, and future compatibility with emerging payment technologies.
 
-The Web Payments standard is quite flexible; it works with various payment systems and is not 
-tied to any specific browser, payment method, or payment gateway. This flexibility enables 
-development simplicity, deployment consistency, and future compatibility.
+**For consumers**, they simplify checkout flow, by making it a few taps instead of typing small characters many times on a virtual keyboard.
 
-## Key Benefits
+**For merchants**, they make it easier to implement with a variety of payment options already filtered for the customer.
 
-Before learning how Web Payments works, let's summarize its primary benefits. As you work with 
-Web Payments, keep in mind that it is: 
+**For payment handlers**, they allow bringing any type of payment methods to the web with relatively easy integration.
 
-- **Standard and Open:** Web Payments is a set of payment standards for the web platform for 
-the first time in its history. Anyone can access and use its features.
-- **Simple and Structured:** Web Payments brings an easy and intuitive UX to your customers. It 
-takes just a few taps to complete a checkout.
-- **Secure and Flexible:** Web Payments provides industry-leading secure payment technology to 
-the web. It is flexible enough to accept new payment methods.
+**For payment service providers**, they bring new payment methods and enhance the ability of businesses to serve more customers with a better developer experience and more secure solutions.
 
-## Why Use Web Payments?
+Web Payments is:
 
-With existing payment systems on the web, customers must use a form to enter their payment 
-information -- name, card number, address, shipping details, etc. -- and usually must do so at 
-every site they buy from. This is a tap-intensive and frustrating process, especially on mobile 
-devices, and many users give up and abandon the site before completing their purchase. 
-
-But with the [Payment Request API](https://www.w3.org/TR/payment-request/), which is one of the 
-Web Payments specifications, users can successfully shop and purchase with just a few taps. This 
-reduces the friction of going through a lengthy and difficult purchase flow and can result in 
-higher conversion rates for merchants. 
-
-Web Payments smooths out the process by simplifying both the front-end user interface and the 
-back-end payment data manipulation. 
+*   **Standard and Open:** Web Payments is an open source payment standard for the web platform for the first time in history. It is available for any players to implement.
+*   **Easy and Consistent**: Web Payments make checkout easy for the user, by reusing stored payments and address information and removing the need for the user to fill in checkout forms. Since the UI is implemented by the browser natively, users see a familiar and consistent checkout experience on any website that implements the standard.
+*   **Secure and Flexible:** Web Payments provide industry-leading payment technology to the web, and can easily integrate a secure payment solution.
 
 ## A Closer Look
 
-Web Payments and the Payment Request UI is flexible and can display a variety of appropriate 
-elements.
+The Payment Request UI on Chrome is flexible and can display a variety of appropriate elements, such as the following.
 
 <table>
   <tr>
-   <td>It can show the list of items the user wants to buy, and a list of payment methods to 
-     choose from.
+   <td>It can display the list of items in the user's shopping cart, shipping addresses, payment methods and contact info.
    </td>
-   <td><img src="images/1-image1.png">
-   </td>
-  </tr>
-  <tr>
-   <td>It can display available payment methods, called <em>payment apps</em>, from third parties. 
-     Google Pay, for example, is a payment app.
-   </td>
-   <td><img src="images/1-image2.png">
+   <td>
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>  GDC alert: inline image link here (to images/1-Web0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>> </span></p>
+
+<img src="images/1-Web0.png" width="" alt="alt_text" title="image_tooltip">
+
    </td>
   </tr>
   <tr>
-   <td>It can request a shipping address; if the user has previously-stored addresses as autofill 
-     information, the choices are shown and entered with a single tap.
+   <td>It can display available payment methods (called <em>payment apps)</em> from third parties. Google Pay, for example, is a payment app.
    </td>
-   <td><img src="images/1-image3.png">
-   </td>
-  </tr>
-  <tr>
-   <td>It can display shipping options; for example, a user might choose between free shipping 
-     that takes a few days and faster shipping that incurs a fee.
-   </td>
-   <td><img src="images/1-image4.png">
+   <td>
    </td>
   </tr>
   <tr>
-   <td>It can request the payer's contact information, such as name, email address, and phone 
-     number -- all of which may also be available from autofill.
+   <td>It can request a shipping address; if the user has previously stored addresses in Autofill, they are displayed and the user can choose one  with a single tap.
    </td>
-   <td><img src="images/1-image5.png">
+   <td>
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>  GDC alert: inline image link here (to images/1-Web1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>> </span></p>
+
+<img src="images/1-Web1.png" width="" alt="alt_text" title="image_tooltip">
+
    </td>
   </tr>
   <tr>
-   <td>Finally, it can ask the user to authorize payment, depending on the payment method, 
-     and complete the purchase.
+   <td>It can display shipping options; for example, a user might choose between free shipping that takes a few days and faster shipping that incurs a fee.
    </td>
-   <td><img src="images/1-image6.png">
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>It can request the payer's contact information, such as name, email address, and phone number -- all of which may also be available from Autofill.
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Finally, it can ask the user to authorize payment in the payment method-specific UI and complete the purchase, as in this basic-card example.
+   </td>
+   <td>
    </td>
   </tr>
 </table>
 
 ## Next Up
 
-Learn about the basics of Web Payments, including how the web payment ecosystem works and 
-the anatomy of payment apps in 
-[How the Payment Ecosystem Works](https://drive.google.com/a/google.com/open?id=1PwPi_TD3G-kQyz31nW-1A4A5kvoCy7UCz6grk1TMaE8).
+Learn about the basics of Web Payments, including how the web payment ecosystem works and the anatomy of payment apps in [How the Payment Ecosystem Works](https://drive.google.com/a/google.com/open?id=1PwPi_TD3G-kQyz31nW-1A4A5kvoCy7UCz6grk1TMaE8).
+
