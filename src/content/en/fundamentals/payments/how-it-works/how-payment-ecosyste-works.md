@@ -85,7 +85,7 @@ The typical sequence of events in processing a credit card payment on the web lo
 1.  The PSP processes the payment, securely requesting a funds transfer from the customer's bank or credit card issuer to the merchant, and then returns a success or failure result to the merchant website.
 1.  The merchant website notifies the customer of the success or failure of the transaction and displays next steps, e.g., shipping the purchased item.
 
-<img src="../images/2-image1.png" width="261" height="271" />
+<img src="../images/2-image1.png" />
 
 ## PSP Reliance
 
