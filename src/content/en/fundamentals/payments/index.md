@@ -36,7 +36,7 @@ The Payment Request UI on Chrome is flexible and can display a variety of approp
   <tr>
    <td>It can display the list of items in the user's shopping cart, shipping addresses, payment methods and contact info.
    </td>
-   <td><img src="../images/1-image1.png" width="" alt="" title="">
+   <td><img src="images/1-image1.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ The Payment Request UI on Chrome is flexible and can display a variety of approp
   <tr>
    <td>It can request a shipping address; if the user has previously stored addresses in Autofill, they are displayed and the user can choose one  with a single tap.
    </td>
-   <td><img src="../images/1-image2.png" width="" alt="" title="">
+   <td><img src="images/1-image2.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
