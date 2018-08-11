@@ -42,31 +42,31 @@ The Payment Request UI on Chrome is flexible and can display a variety of approp
   <tr>
    <td>It can display available payment methods (called <em>payment apps)</em> from third parties. Google Pay, for example, is a payment app.
    </td>
-   <td>
+   <td><img src="images/1-image2.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
    <td>It can request a shipping address; if the user has previously stored addresses in Autofill, they are displayed and the user can choose one  with a single tap.
    </td>
-   <td><img src="images/1-image2.png" width="" alt="" title="">
+   <td><img src="images/1-image3.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
    <td>It can display shipping options; for example, a user might choose between free shipping that takes a few days and faster shipping that incurs a fee.
    </td>
-   <td>
+   <td><img src="images/1-image4.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
    <td>It can request the payer's contact information, such as name, email address, and phone number -- all of which may also be available from Autofill.
    </td>
-   <td>
+   <td><img src="images/1-image5.png" width="" alt="" title="">
    </td>
   </tr>
   <tr>
    <td>Finally, it can ask the user to authorize payment in the payment method-specific UI and complete the purchase, as in this basic-card example.
    </td>
-   <td>
+   <td><img src="images/1-image6.png" width="" alt="" title="">
    </td>
   </tr>
 </table>
