@@ -36,12 +36,7 @@ The Payment Request UI on Chrome is flexible and can display a variety of approp
   <tr>
    <td>It can display the list of items in the user's shopping cart, shipping addresses, payment methods and contact info.
    </td>
-   <td>
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>  GDC alert: inline image link here (to images/1-Web0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>> </span></p>
-
-<img src="images/1-Web0.png" width="" alt="alt_text" title="image_tooltip">
-
+   <td>![](images/1-Web0.png)
    </td>
   </tr>
   <tr>
