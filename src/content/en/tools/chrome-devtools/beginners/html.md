@@ -2,85 +2,54 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
 {# wf_updated_on: 2018-08-09 #}
-{# wf_published_on: 2018-07-30 #}
+{# wf_published_on: 2018-08-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# DevTools for Beginners: HTML and the DOM {: .page-title }
+# DevTools for Beginners: Get Started with HTML and the DOM {: .page-title }
 
 {% include "web/_shared/contributors/katjackson.html" %}
 
-## Audience {: #audience}
+This is the first in a series of tutorials that teach you the basics of web
+development. You are going to learn web development by actually building your own
+website.
 
-This tutorial is for you if any of the following apply:
+In this particular tutorial, you learn about HTML and the DOM. HTML is one of the core
+technologies of web development. It is the language that controls the structure and content
+of webpages. The DOM is also related to the structure and content of webpages, but you'll
+learn more about that later.
 
-- You’ve never used DevTools before, 
-and are interested in seeing how it can improve your productivity.
-- You’ve heard of the terms “HTML” and “CSS” before, 
-but you haven’t gotten the chance to make a website yet, 
-and you want to be sure you are doing it in the most efficient manner. 
-(If you haven’t heard these terms before, [here’s a helpful reference](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
-.)
-- You have made a website before, but you want a more polished site.
+By the time you complete all of the tutorials in the *DevTools for Beginners* series,
+your finished site will look like **Figure X**.
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var genericFeedback = 'If there\'s any way we can make this tutorial more helpful for you, please ' +
-    '<a href="https://github.com/google/webfundamentals/issues/new">open a GitHub issue</a> ' +
-    'or <a href="https://groups.google.com/forum/#!forum/google-chrome-developer-tools">send ' +
-    'us an email</a> or <a href="https://twitter.com/chromedevtools">tweet us</a>.';
-var beginnerResponse = "Great! The tutorials should be easy to complete, even if you don't " +
-    "have much developer experience. " + genericFeedback;
-var experiencedResponse = "Great, this tutorial will teach you some basic DevTools workflows. " + genericFeedback;
-var otherResponse = genericFeedback + " And let us know what type of role you identify with so that " +
-    "we can better tailor the doc to your needs.";
-var feedback = {
-  "category": "DevTools",
-  "question": "Do you identify as a beginning developer, experienced developer, or something else?",
-  "choices": [
-    {
-      "button": {
-        "text": "Beginner"
-      },
-      "response": beginnerResponse,
-      "analytics": {
-        "label": "DevTools For Beginners / DOM / Beginner"
-      }
-    },
-    {
-      "button": {
-        "text": "Experienced"
-      },
-      "response": experiencedResponse,
-      "analytics": {
-        "label": "DevTools For Beginners / DOM / Experienced"
-      }
-    },
-    {
-      "button": {
-        "text": "Something Else"
-      },
-      "response": otherResponse,
-      "analytics": {
-        "label": "DevTools For Beginners / DOM / Other"
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+<figure>
+  <img src="imgs/finished.png"
+       alt="The finished site."/>
+  <figcaption>
+    <b>Figure X</b>. The finished site
+  </figcaption>
+</figure>
 
+## Goals {: #goals }
 
+By the end of this tutorial, you will understand:
 
+* How HTML and the DOM create the content that you see on webpages.
+* How Chrome DevTools can help you when you're working with HTML and the DOM.
+* The difference between HTML and the DOM.
 
-## Goal {: #goal}
+You'll also have a real website!
 
-This is the first of three DevTools For Beginners tutorials. 
-These tutorials walk you through basic web fundamentals 
-as well as how to improve your design productivity with DevTools. 
-You will be constructing a personal website from scratch,
-and the end product will look something like 
-[this](https://dfb5.glitch.me/). 
+## Prerequisites {: #prerequisites }
+
+Before attempting this tutorial, complete the following prerequisites:
+
+* If you're unfamiliar with HTML, read [Getting Started with
+  HTML][MDN]{: .external }.
+* Download the [Google Chrome][chrome]{: .external } web browser. This tutorial uses a set
+  of web development tools, called Chrome DevTools, that are built into Google Chrome.
+
+[MDN]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
+[chrome]: https://www.google.com/chrome/
 
 ## Setup {: #setup}
 
