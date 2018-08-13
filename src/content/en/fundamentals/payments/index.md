@@ -3,12 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the Web Payments doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-11 #}
+{# wf_updated_on: 2018-08-13 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Overview {: .page-title }
 
-( Video embed? )
+{% include "web/_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
 
 ## Introduction
 

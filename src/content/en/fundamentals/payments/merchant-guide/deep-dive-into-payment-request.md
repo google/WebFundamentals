@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-08-13 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -21,7 +21,7 @@ description: How to implement and take full advantage of the Payment Request API
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-top.png" alt="Payment request UI on desktop and mobile Chrome.">
+    <img src="../images/deep-dive/pr-top.png" alt="Payment request UI on desktop and mobile Chrome.">
     <figcaption>
       Payment request UI on desktop and mobile Chrome.
     </figcaption>
@@ -180,7 +180,7 @@ will need to implement the Google Pay method. Refer to the
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
+    <img src="../images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
     <figcaption>
       Example of basic-card support in the Payment Request API.
     </figcaption>
@@ -210,7 +210,7 @@ prevented from selecting other cards:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-basic-card-visa-mastercard-amex.png" alt="Example of reduced the list of supported cards in the Payment Request API.">
+    <img src="../images/deep-dive/pr-demo-basic-card-visa-mastercard-amex.png" alt="Example of reduced the list of supported cards in the Payment Request API.">
     <figcaption>
       Example of reduced the list of supported cards in the Payment Request API.
     </figcaption>
@@ -226,7 +226,7 @@ UI would start with a suitable card already selected:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-pre-selected-visa-short-blackout.png" alt="Cards will be preselected if available.">
+    <img src="../images/deep-dive/pr-demo-pre-selected-visa-short-blackout.png" alt="Cards will be preselected if available.">
     <figcaption>
       Cards will be preselected if available.
     </figcaption>
@@ -336,7 +336,7 @@ const googlePayPaymentMethod = {
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Google Pay example in the payment request UI.">
+    <img src="../images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Google Pay example in the payment request UI.">
     <figcaption>
       Google Pay example in payment request UI.
     </figcaption>
@@ -402,7 +402,7 @@ This controls the "order summary" section of the UI:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-order-summary.png" alt="How the total parameter affects the UI.">
+    <img src="../images/deep-dive/pr-demo-order-summary.png" alt="How the total parameter affects the UI.">
     <figcaption>
       How the total parameter affects the UI.
     </figcaption>
@@ -435,7 +435,7 @@ This produces the following order summary:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-order-summary-example-short.png" alt="Another example of how the total parameter affects the UI.">
+    <img src="../images/deep-dive/pr-demo-order-summary-example-short.png" alt="Another example of how the total parameter affects the UI.">
     <figcaption>
       Another example of how the total parameter affects the UI.
     </figcaption>
@@ -489,7 +489,7 @@ If we provided the above example, we'd get the following UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/display-items.png" alt="Displaying the items from the payment details object.">
+    <img src="../images/deep-dive/display-items.png" alt="Displaying the items from the payment details object.">
     <figcaption>
       Displaying the items from the payment details object.
     </figcaption>
@@ -543,7 +543,7 @@ Which will be given a slightly different text color in Chrome as a result:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/display-items-pending.png" alt="Demonstration of a display item being marked as pending.">
+    <img src="../images/deep-dive/display-items-pending.png" alt="Demonstration of a display item being marked as pending.">
     <figcaption>
       Demonstration of a display item being marked as pending.
     </figcaption>
@@ -562,7 +562,7 @@ truncate the total label at all, but does truncate display item labels.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-long-labels.png" alt="Long labels may result in a bad UI for users.">
+    <img src="../images/deep-dive/pr-demo-long-labels.png" alt="Long labels may result in a bad UI for users.">
     <figcaption>
       Long labels may result in a bad UI for users.
     </figcaption>
@@ -618,7 +618,7 @@ the currency code is shown. Compare the screenshots below for 'USD' and 'XBT'.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the payment request UI.">
+    <img src="../images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the payment request UI.">
     <figcaption>
       Comparison of USD and XBT currencies on the payment request UI.
     </figcaption>
@@ -676,7 +676,7 @@ will result in an extra step in the UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-require-info-short.png" alt="Payment request UI requesting additional information from the user.">
+    <img src="../images/deep-dive/pr-demo-require-info-short.png" alt="Payment request UI requesting additional information from the user.">
     <figcaption>
       Payment request UI requesting additional information from the user.
     </figcaption>
@@ -688,7 +688,7 @@ pre-populated.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-info-preselected-short.png" alt="Pre-populated user information.">
+    <img src="../images/deep-dive/payer-info-preselected-short.png" alt="Pre-populated user information.">
     <figcaption>
       Pre-populated user information.
     </figcaption>
@@ -787,7 +787,7 @@ payment details in your own UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/show-to-promise.png" alt="Possible flows after the show() promise has resolved.">
+    <img src="../images/deep-dive/show-to-promise.png" alt="Possible flows after the show() promise has resolved.">
     <figcaption>
       Possible flows after the show() promise has resolved.
     </figcaption>
@@ -853,7 +853,7 @@ an error dialog to the user if you call with `complete('fail')` .
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-complete-fail.png" alt="Example of the error dialog shown when calling complete with fail input.">
+    <img src="../images/deep-dive/pr-demo-complete-fail.png" alt="Example of the error dialog shown when calling complete with fail input.">
     <figcaption>
       Example of the error dialog shown when calling complete with fail input.
     </figcaption>
@@ -901,7 +901,7 @@ This will ask the user for their shipping address:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-require-shipping-short.png" alt="Request shipping information from the user.">
+    <img src="../images/deep-dive/payer-require-shipping-short.png" alt="Request shipping information from the user.">
     <figcaption>
       Request shipping information from the user.
     </figcaption>
@@ -923,7 +923,7 @@ or "pickup" to change the UI's title to "Shipping", "Delivery" and "Pickup".
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-require-shipping-types-short.png" alt="Examples of delivery and pickup shipping labels.">
+    <img src="../images/deep-dive/payer-require-shipping-types-short.png" alt="Examples of delivery and pickup shipping labels.">
     <figcaption>
       Examples of delivery and pickup shipping labels.
     </figcaption>
@@ -939,7 +939,7 @@ shipping address.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-addr-change.png" alt="Lifecycle of shipping address selection.">
+    <img src="../images/deep-dive/shipping-addr-change.png" alt="Lifecycle of shipping address selection.">
     <figcaption>
       Lifecycle of shipping address selection.
     </figcaption>
@@ -1023,7 +1023,7 @@ In the console we'd see this:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/devtools-shipping-addr-output.png" alt="The details we can retrieve from the shipping address parameter.">
+    <img src="../images/deep-dive/devtools-shipping-addr-output.png" alt="The details we can retrieve from the shipping address parameter.">
     <figcaption>
       The details we can retrieve from the shipping address parameter.
     </figcaption>
@@ -1132,7 +1132,7 @@ will display an error to the user:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/no-shipping-opts.png" alt="Returning no shipping options displays an error to users.">
+    <img src="../images/deep-dive/no-shipping-opts.png" alt="Returning no shipping options displays an error to users.">
     <figcaption>
       Returning no shipping options displays an error to users.
     </figcaption>
@@ -1172,7 +1172,7 @@ Which will display to the user as:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-custom-error-short.png" alt="Example of a custom error when returning no shipping options.">
+    <img src="../images/deep-dive/pr-demo-custom-error-short.png" alt="Example of a custom error when returning no shipping options.">
     <figcaption>
       Example of a custom error when returning no shipping options.
     </figcaption>
@@ -1231,7 +1231,7 @@ title.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-shipping-opts-blackedout.png" alt="How shipping options are displayed to the user.">
+    <img src="../images/deep-dive/pr-demo-shipping-opts-blackedout.png" alt="How shipping options are displayed to the user.">
     <figcaption>
       How shipping options are displayed to the user.
     </figcaption>
@@ -1284,7 +1284,7 @@ While the network request is being made, the user will see a spinner:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-shipping-addr-spinner.png" alt="A spinner is shown if you return a Promise to event.updateWith().">
+    <img src="../images/deep-dive/pr-demo-shipping-addr-spinner.png" alt="A spinner is shown if you return a Promise to event.updateWith().">
     <figcaption>
       A spinner is shown if you return a Promise to event.updateWith().
     </figcaption>
@@ -1410,7 +1410,7 @@ until it resolves.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-option-lifecycle.png" alt="The lifecycle of shipping option selection.">
+    <img src="../images/deep-dive/shipping-option-lifecycle.png" alt="The lifecycle of shipping option selection.">
     <figcaption>
       The lifecycle of shipping option selection.
     </figcaption>
@@ -1511,7 +1511,7 @@ The user will be presented with a UI where an address and shipping has been sele
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-preset.png" alt="An example of preselecting a shipping option in the PaymentRequest constructor.">
+    <img src="../images/deep-dive/shipping-preset.png" alt="An example of preselecting a shipping option in the PaymentRequest constructor.">
     <figcaption>
       An example of preselecting a shipping option in the PaymentRequest constructor.
     </figcaption>
@@ -1624,7 +1624,7 @@ payment request UI is constructed?
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/top-ui-short.png" alt="The generated piece of the payment request UI.">
+    <img src="../images/deep-dive/top-ui-short.png" alt="The generated piece of the payment request UI.">
     <figcaption>
       The generated piece of the payment request UI.
     </figcaption>
