@@ -7,8 +7,8 @@ book_path: /web/tools/_book.yaml
 
 # DevTools For Beginners: Getting Started with CSS {: .page-title }
 
-This is the second in a series of tutorials that teach you the basics of web
-development. 
+This is the second in a series of tutorials that teaches you the basics 
+of web development. 
 You are going to learn web development by actually building your own website.
 In this particular tutorial, you learn about CSS, another of the core
 technologies of web development. CSS controls the style of of webpages. 
