@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-13 #}
+{# wf_updated_on: 2018-08-14 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -180,102 +180,117 @@ content to it!
 
 ## Experiment with content changes in Chrome DevTools {: #experiment }
 
-You may have found the back-and-forth between the editor tab and the live tab to be
-somewhat tedious. This is actually a common workflow for many web developers. In this section
-you learn how to use **Chrome DevTools** to experiment with content changes, without ever leaving
-the live tab.
+You may have found going back-and-forth between the editor tab and the live tab to be
+somewhat tedious. Chrome DevTools can help you experiment with content changes without
+ever leaving the live tab.
 
-### A note on nodes {: #Nodes}
+### Learn the difference between HTML and the DOM {: #DOM }
 
- When you open the Elements Panel in DevTools, 
- you’ll see a screen that looks quite similar to the HTML document
- you’ve been working on in the editing tab. 
- However, these are not HTML elements, but are actually DOM Nodes.
- DOM is an interface that represents HTML elements in your browser, 
- and while the DOM Tree you see in the Elements Panel looks quite 
- similar to your HTML document now, 
- there are ways you can edit it so that it is not. 
+Before you start editing your content from Chrome DevTools, it's helpful to understand
+the difference between HTML and the DOM. The best way to learn is by example:
 
-1. Navigate to the live tab of your website.
-2. Open DevTools with <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
-3. Directly under the script tag, you will see a new `<div>` element
- that doesn't exist in your HTML document in the editing tab.
+1. Go to the **live tab**. At the bottom of your page you see the text `A new element!?!`.
 
+     <figure>
+       <img src="imgs/new1.png"
+            alt="The mystery text."/>
+       <figcaption>
+         <b>Figure X</b>. The mystery text
+       </figcaption>
+     </figure>
 
-TODO note Chrome version and how DevTools changes.
+1. Go back to the **editor tab** and try to find this text in `index.html`. It's not there!
 
- 
- Using JavaScript, you can add Nodes to the DOM Tree without HTML. 
- This will play a bigger role when you learn about the Console 
- panel and JavaScript, but for now, you’ll be editing a few DOM Nodes 
- yourself.
- 
-### Edit DOM Nodes as HTML {: #edit-as-html}
- The DevTools ‘Inspect Element’ and ‘Edit as HTML’ functions allow you 
- to view changes you make to the DOM in real time.
- You can try it out by seeing what it 
- would look like to add some more content to your page! 
- 
- 1. Open devtools using 
- <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>. You should see 
- something like this: 
+     <figure>
+       <img src="imgs/new2.png"
+            alt="The mystery text is nowhere to be found in the HTML."/>
+       <figcaption>
+         <b>Figure X</b>. The mystery text is nowhere to be found in the HTML
+       </figcaption>
+     </figure>
 
- <figure> <img src="imgs/elpanel.png" alt=" The Elements Panel Opened">
-<figcaption>
-    <b>Figure 5</b>. The elements panel.
-  </figcaption>
- </figure>
+1. Go back to the **live tab**, right-click `A new element!?!`, and select **Inspect**.
 
-2. Right click on the `<About>` div, then click `Edit as HTML`. 
-The following screen will appear:
+     <figure>
+       <img src="imgs/inspect.png"
+            alt="Inspecting some text."/>
+       <figcaption>
+         <b>Figure X</b>. Inspecting some text
+       </figcaption>
+     </figure>
 
-<figure> <img src="imgs/editashtml.png" alt="Editing as HTML">
-<figcaption>
-    <b>Figure 6</b>. Editing an object as HTML.
-  </figcaption>
-</figure>
+    DevTools opens up alongside your page. `<div>A new element!?!</div>` is highlighted blue.
+    Although this structure in DevTools looks like your HTML, it is actually the **DOM Tree**.
 
-Now you have a live view of your changes! 
+     <figure>
+       <img src="imgs/inspect2.png"
+            alt="DevTools is open alongside the page."/>
+       <figcaption>
+         <b>Figure X</b>. DevTools is open alongside the page
+       </figcaption>
+     </figure>
 
-Try adding information to the About `<div.`:
+When your page loads, the browser takes your HTML to create the *initial* content of the page. The
+DOM represents the *current* content of the page, which can change over time.
+This is what you're seeing in the DOM Tree of DevTools. The mysterious `<div>A new element!?!</div`
+content is added to your page because of the `<script src="new.js"></script>` tag at the bottom
+of your HTML. This tag causes some JavaScript code to run. The JavaScript code adds
+`<div>A new element!?!</div>` to your page. That is why this mystery text is visible on your live page,
+but not in your HTML.
 
-1. Add a paragraph element like: 
-`<p> My website is all about sharing my  achievements! </p>`. 
-You can do this by clicking under `<div class= “About”>` 
-and typing in your code.
-2. Add a header element like `<h4>Here’s my resume.</h4>` 
-under the paragraph element.
-3. Add a button under the header element with 
-`<button>Download it!</button>`
-4. Copy your code and paste it under line 13 inside the “About” `<div>`.
+### Edit the DOM {: #edit }
 
-Note: If you refresh the page or close the tab, 
-your edits will be gone forever. After all, 
-imagine what would happen if you could permanently change 
-the HTML and text of any website! So,
-make sure to copy any changes you make to your site in DevTools.
+If you want to quickly experiment with content changes without ever leaving the live tab,
+try DevTools.
 
-If you know what you want to edit, then there’s an even simpler workflow, *Inspect Element*. For example, to change your website's heading: 
+1. In DevTools, right-click `Your site!` and select **Edit as HTML**.
 
-1. Open the live tab.
-2. Highlight the heading of your website (the text "About Me").
-3. Right click and choose **Inspect**. 
-4. Double click on "About Me" and replace it with "I'm Super Cool!".
-5. Double click on `<h1>` and replace it with `<h2>`
+     <figure>
+       <img src="imgs/edit1.png"
+            alt="Editing the node as HTML."/>
+       <figcaption>
+         <b>Figure X</b>. Editing the node as HTML
+       </figcaption>
+     </figure>
 
-You've now changed your website heading!
+1. Replace `<p>Your site!</p>` with the code below.
 
-<figure> <img src="imgs/inspectel.png" alt="Inspect Element">
-<figcaption>
-    <b>Figure 7</b>. What You Should See After Clicking Inspect Element.
-  </figcaption>
-</figure>
+    <pre class="prettyprint lang-html">{% htmlescape %}
+    <p><b>Welcome to my site!</b></p>
+    <button>Download my resume</button>
+    {% endhtmlescape %}</pre>
 
-You can inspect any element using this method on any web page, 
-but note that like before, 
-your changes are not automatically saved when you edit through DevTools.
+     <figure>
+       <img src="imgs/edit2.png"
+            alt="Editing the node as HTML."/>
+       <figcaption>
+         <b>Figure X</b>. Editing the node as HTML
+       </figcaption>
+     </figure>
 
-## Reordering the DOM Tree {: #dom-tree}
+1. Press <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Enter</kbd>
+   (Windows, Linux, Chrome OS) to save your changes. Your changes automatically show up
+   in the live view of your page. The text `Your site!` has been replaced with the new content.
+
+     <figure>
+       <img src="imgs/edit3.png"
+            alt="Editing the node as HTML."/>
+       <figcaption>
+         <b>Figure X</b>. Editing the node as HTML
+       </figcaption>
+     </figure>
+
+This workflow is only good for experimenting with content changes. If you reload the page or close the
+tab, your changes will be gone forever. If you're using this workflow and you want to save your changes,
+you need to manually copy those changes over to your HTML.
+
+The next couple of sections show you some more ways that you can change content from the DOM Tree.
+
+### Delete a node {: #delete }
+
+TODO
+
+## Reorder nodes {: #reorder }
 
 Another workflow for editing the arrangement 
 of your site is to rearrange the 
