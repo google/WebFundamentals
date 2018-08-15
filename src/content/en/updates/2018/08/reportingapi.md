@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Reporting API brings a common infrastructure for the browser to send reports for various issues: CSP violations, deprecations, browser interventions, network errors, and feature policy violations.
 
-{# wf_updated_on: 2018-08-09 #}
-{# wf_published_on: 2018-08-09  #}
-{# wf_tags: CSP,interventions,deprecations,feature-policy,reporting,reporting-observer,analytics,reports #}
+{# wf_updated_on: 2018-08-15 #}
+{# wf_published_on: 2018-08-15  #}
+{# wf_tags: CSP,interventions,deprecations,removals,feature-policy,reporting,reporting-observer,analytics,reports #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
 {# wf_featured_snippet: Reporting API brings a common infrastructure for the browser to send reports for various issues: CSP violations, deprecations, browser interventions, network errors, and feature policy violations. #}
 {# wf_blink_components: Blink>ReportingObserver #}
@@ -27,8 +27,9 @@ figcaption {
 The [Reporting API][spec] defines a new HTTP header, `Report-To`, that gives
 web developers a way to **specify server endpoints** for the browser
 to send warnings and errors to. Browser-generated warnings like
-CSP violations, Feature Policy violations, deprecations, browser interventions,
-and network errors are some of the things that can be collected using the
+[CSP violations][cspviolations], Feature Policy violations, deprecations,
+browser interventions, and network errors are
+[some of the things](#reportypes) that can be collected using the
 Reporting API.
 
 <figure>
@@ -37,12 +38,6 @@ Reporting API.
        title="DevTools console warnings for deprecations and interventions.">
   <figcaption>Browser-generated warnings in the DevTools console.</figcaption>
 </figure>
-
-Warnings that get logged in the DevTools console are local to the user's browser.
-That's not very helpful to you as the author of the site because you can't see
-the issues users are hitting. The Reporting API fixes this. It's a tool
-to propagate browser warnings to a backend. Use it to catch errors before they
-happen and fix future bugs (e.g. deprecations) across your site.
 
 ## Introduction {: #intro }
 
@@ -56,28 +51,69 @@ critical scripts. New users from different parts of the world will eventually
 find your site, but they're probably on much slower connections
 than you tested with. Unbeknownst to you, your site starts breaking
 for them because of Chrome's [browser intervention](https://www.chromestatus.com/features#intervention)
-for [Blocking document.write() on 2G networks](https://www.chromestatus.com/features/5718547946799104).
+for [blocking document.write() on 2G networks](https://www.chromestatus.com/features/5718547946799104).
 Yikes! Without the Reporting API there's no way to know
 this is happening to your precious users.
 
 The Reporting API helps catch potential (even future) errors across
-your site. Setting it up gives you a "peace of mind" that nothing terrible is
+your site. Setting it up gives you "peace of mind" that nothing terrible is
 happening when real users visit your site. If/when they _do_ experience
 unforeseen errors, you'll be in the know. 👍
 
 ## The Report-To Header {: #header }
 
-Note: Right now, the Reporting API needs to be enabled using a
+Right now, the API needs to be enabled using a
 runtime command line flag: `--enable-features=Reporting`.
+{: .caution }
+
+The Reporting API introduces a new HTTP response header, `Report-To`. Its
+value is an object which describes an endpoint group for the browser
+to report errors to:
+
+```
+Report-To: {
+             "max_age": 10886400,
+             "endpoints": [{
+               "url": "https://analytics.provider.com/browser-errors"
+             }]
+           }
+```
+
+Note: If your endpoint URL lives on a different origin than your site, the
+endpoint should support CORs preflight requests. (e.g. `Access-Control-Allow-Origin: *;
+Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS; Access-Control-Allow-Headers: Content-Type, Authorization, Content-Length, X-Requested-With`
+
+In the example, sending this response header with your main page
+configures the browser to report browser-generated warnings
+to the endpoint `https://example.com/browser-errors` for `max_age` seconds.
+It's important to note that all subsequent HTTP requests made by the page
+(for images, scripts, etc.) are ignored. Configuration is setup during
+the response of the main page.
+
+### Configuring multiple endpoints {: #multi }
+
+A single response can configure several endpoints at once by sending
+multiple `Report-To` headers:
 
 
-The Reporting API centers around a new HTTP response header, `Report-To`.
-It's value is an array of objects, each describing an endpoint group.
-Sending the response header with your main page instructs the browser to
-report different types of errors to the endpoints. It does this for
-`max_age` seconds.
+```
+Report-To: {
+             "group": "default",
+             "max_age": 10886400,
+             "endpoints": [{
+               "url": "https://example.com/browser-reports"
+             }]
+           }
+Report-To: {
+             "group": "csp-endpoint",
+             "max_age": 10886400,
+             "endpoints": [{
+               "url": "https://example.com/csp-reports"
+             }]
+           }
+```
 
-Here's an example that defines multiple endpoint groups:
+or by combining them into a single HTTP header:
 
 ```
 Report-To: {
@@ -97,23 +133,20 @@ Report-To: {
            {
              "max_age": 10886400,
              "endpoints": [{
-               "url": "https://example.com/browser-errors",
-               "url": "https://analytics.provider.com/errors"
+               "url": "https://example.com/browser-errors"
              }]
            }
 ```
 
-Note: The header value is basically a JSON array without the surrounding "[ ]".
-
 Once you've sent the `Report-To` header, the browser caches the endpoints
-according to your `max_age` values, and sends all of those nasty console
-warnings to your URLs. Boom!
+according to their `max_age` values, and sends all of those nasty console
+warnings/errors to your URLs. Boom!
 
 <figure>
   <img src="/web/updates/images/2018/07/reporting/consolewarnings.png"
        class="screenshot" alt="DevTools console warnings for deprecations and interventions."
        title="DevTools console warnings for deprecations and interventions.">
-  <figcaption>DevTools warnings that can be sent using the Reporting API.</figcaption>
+  <figcaption>DevTools warnings and errors that can be sent using the Reporting API.</figcaption>
 </figure>
 
 ### Explanation of header fields {: #fields }
@@ -122,41 +155,44 @@ Each endpoint configuration contains a `group` name, `max_age`, and `endpoints`
 array. You can also choose whether to consider subdomains when reporting
 errors by using the `include_subdomains` field.
 
-| Field | Type | Required? | Description |
+| Field | Type | Description |
 |---|---|---|---|---|
-| `group` | string | N | If a `group` name is not specified, the endpoint is given a name of "default". |
-| `max_age` | number | Y | A non-negative integer that defines the lifetime of the endpoint in seconds. A value of "0" will cause the endpoint group to be removed from the user agent’s reporting cache.|
-| `endpoints` | Array&lt;Object> | Y | An array of JSON objects that specify the actual URL of your reporting server(s). This object can also take an optional `priority` and `weight`. See [the spec](https://w3c.github.io/reporting/#header) for more details. |
-| `include_subdomains` | boolean | N | A boolean that enables the endpoint group for all subdomains of the current origin's host. If omitted or anything than "true", the subdomains are not reported to the endpoint. |
+| `group` | string | Optional. If a `group` name is not specified, the endpoint is given a name of "default". |
+| `max_age` | number | **Required**. A non-negative integer that defines the lifetime of the endpoint in seconds. A value of "0" will cause the endpoint group to be removed from the user agent’s reporting cache.|
+| `endpoints` | Array&lt;Object> | **Required**. An array of JSON objects that specify the actual URL of your report collector. |
+| `include_subdomains` | boolean | Optional. A boolean that enables the endpoint group for all subdomains of the current origin's host. If omitted or anything other than "true", the subdomains are not reported to the endpoint. |
 
-The `group` name is a unique name used to associate a string with a
-an endpoint. You use this name in other places that integrate
-with the Reporting API to refer to a specific endpoint.
+The `group` name is a unique name used to associate a string with
+an endpoint. Use this name in other places that integrate
+with the Reporting API to refer to a specific endpoint group.
 
 The `max-age` field is also required and specifies how
 long the browser should use the endpoint and report errors to it.
 
-The `endpoints` field is an array so it's possible to **send reports to
-several different backends at once**. This is useful if you want to send
-reports to an analytics provider in addition to your own server.
-
+The `endpoints` field is an array to provide failover and load balancing
+features. See the section on [Failover and load balancing](#load). It's
+important to note that the **browser will select only one endpoint**, even
+if the group lists several collectors in `endpoints`. If you want to send a
+report to several servers at once, your backend will need to forward the
+reports.
 
 ## How the browser sends a report {: #sending }
 
 **Reports are delivered out-of-band from your app**, meaning the browser
-controls when reports are sent to your servers. The browser attempts to
-deliver queued errors as soon as they're ready (in order to maximum feedback
-to the developer) but it can also delay delivery if it's busy processing
-higher priority work or the user is on a slow and/or congested network at
-the time. The browser may also prioritize sending reports to a particular
-origin first if the user visits that origin often.
+controls when reports are sent to your server(s). The browser attempts to
+deliver queued reports as soon as they're ready (in order to provide
+timely feedback to the developer) but it can also delay delivery if it's
+busy processing higher priority work or the user is on a slow and/or
+congested network at the time. The browser may also prioritize sending
+reports about a particular origin first, if the user is a frequent visitor.
 
-The browser periodically batches reports and sends them to the endpoint(s)
-you configure. To send reports, the browser issues a `POST` request with
+The browser periodically batches reports and sends them to the reporting
+endpoints that you configure. To send reports, the browser issues a `POST`
+request with
 `Content-Type: application/reports+json` and a body containing the array of
 warnings/errors which were captured.
 
-Example - browser issues a `POST` request to your CSP errors endpoint:
+**Example** - browser issues a `POST` request to your CSP errors endpoint:
 
 ```
 POST /csp-reports HTTP/1.1
@@ -179,11 +215,11 @@ Content-Type: application/reports+json
   ...
 }]
 ```
-[Other report types](#reportypes) discusses how to set up CSP reporting.
+[Report types](#reportypes) discusses how to set up CSP reporting.
 {: .note }
 
 The Reporting API was designed to be out of band from your web app.
-The browser captures, queues + batches, and sends reports automatically
+The browser captures, queues and batches, then sends reports automatically
 at the most opportune time. Reports are
 sent internally by the browser, so there's little to no performance concern
 (e.g. network contention with your app) when using the Reporting API. There's
@@ -203,30 +239,25 @@ out properly.
   <figcaption>Reporting section in chrome://net-internals/#reporting</figcaption>
 </figure>
 
-## Other report types {: #reportypes }
+## Report types {: #reportypes }
 
 The Reporting API can be used for more than just browser
 `intervention` and `deprecation` messages. In fact, it can be configured to
 send many other types of interesting warnings/issues that happen throughout
 your site:
 
-- [CSP violations](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP#Enabling_reporting)
+- [CSP violations](#csp)
 - [Deprecations](https://www.chromestatus.com/features#deprecate)
 - [Browser interventions](https://www.chromestatus.com/features#intervention)
-- [Feature Policy][featurepolicy] violations (soon)
-- Network Error Logging (`NEL` header)
-- Crash reports
-
-A primary "feature" of the Reporting API is that it provides a unified
-tool to collect different types of warning/errors and report that information
-to a backend.
-{: .objective }
+- [Feature Policy][featurepolicy] violations (in development)
+- [Network Error Logging](#nel) (NEL)
+- [Crash reports](#crashreports)
 
 ### CSP reports {: #csp }
 
 A long time ago, the web elders realized that sending client-side CSP
 violations to a backend would be pretty handy. If your site breaks
-because of some new powerful feature (CSP), you probably want to be notified!
+because of some new powerful feature (i.e. CSP), you probably want to be notified!
 Thus, we've had a reporting mechanism for CSP from day one.
 
 When a site violates a CSP rule, it can (optionally) tell the browser
@@ -267,15 +298,13 @@ Browsers that support `report-to` will use it instead of the former.
 
 ### Network errors {: #nel }
 
-[Network Error Logging][nel] (NEL) is a new spec that defines a mechanism for
-collecting client-side network errors on a page using the `NEL` HTTP
-response header. To be able to report those errors to a server, it
-integrates with the Reporting API. To send a page's network errors, you need
-to setup the `Report-To` header and then tell the browser which pages to
-report errors for.
+The [Network Error Logging][nel] (NEL) spec defines a **mechanism for
+collecting client-side network errors from an origin**. It uses the new `NEL` HTTP
+response header to setup to tell the browser collect network errors,
+then integrates with the Reporting API to report the errors to a server.
 
-First, add another named group in the
-`Report-To` header which specifies an endpoint for receiving the reports:
+To use NEL, first setup the `Report-To` header with a
+collector that uses a named group:
 
 ```
 Report-To: {
@@ -284,15 +313,20 @@ Report-To: {
     "group": "network-errors",
     "max_age": 2592000,
     "endpoints": [{
-      "url": "https://example.com/reports"
+      "url": "https://analytics.provider.com/networkerrors"
     }]
   }
 ```
 
-Next, send the `NEL` response header on pages that you want errors from.
-The header value is a "JSON" object that takes multiple values. One
-of those values--one of those being a `report_to` field to reference the
-group name of your network errors endpoint.
+Next, send the `NEL` response header to start collecting errors. Since NEL
+is opt-in for an origin*, you only need to send the header once. Both `NEL` and
+`Report-To` will apply to future requests to the same origin and will continue
+to collect errors according to the `max_age` value that was used to set up
+the collector.
+
+The header value should be a JSON object that contains a `max_age` and
+`report_to` field. Use the latter to reference the group name of your
+network errors collector:
 
 ```
 GET /index.html HTTP/1.1
@@ -302,55 +336,55 @@ NEL: {"report_to": "network-errors", "max_age": 2592000}
 The `Report-To` header uses a hyphen. Here, `report_to` uses an underscore.
 {: .caution }
 
-### Feature Policy reports {: #fpreports }
+#### Sub-resources {: #sub }
+
+NEL works across navigations and subresources fetches. But for subresources,
+there's an important point to highlight: the containing page has no visibility
+into the NEL reports about cross-origin requests that it makes. This means
+that if `example.com` loads `foobar.com/cat.gif` and that resource fails
+to load, `foobar.com`'s NEL collector is notified, not `example.com`'s. The
+rule of thumb is that NEL is reproducing server-side logs, just generated on
+the client. Since `example.com` has no visibility into `foobar.com`'s server
+logs, it also has no visibility into its NEL reports.
+
+### Feature Policy violations {: #fpreports }
 
 Currently, [Feature Policy violations][featurepolicy] are not captured with
 the Reporting API. However, [the plan](https://crbug.com/867471) is to
-integrate Feature Policy into the API.
+[integrate Feature Policy into the Reporting API][reportingintegration].
 
-<!--
-### Enable CORS
+### Crash reports {: #crashreports }
 
-Report requests are subject to CORs preflight requests. You may need to enable
-them on your server. One way to do that is enable CORs requests for all
-endpoints:
+Browser crash reports are also still in development but will eventually
+be capturable via the Reporting API.
 
-```js
-app.options('*', function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-  res.send(200);
-});
+## Failover and load balancing {: #load }
+
+Most of the time you'll be configuring one URL collector per group. However,
+since reporting can generate a good deal of traffic, the spec includes failover
+and load-balancing features inspired by the DNS
+[SRV record](https://tools.ietf.org/html/rfc2782#).
+
+The browser will do its best to deliver a report to **at most one** endpoint
+in a group. Endpoints can be assigned a `weight` to distribute load, with each
+endpoint receiving a specified fraction of reporting traffic. Endpoints can
+also be assigned a `priority` to set up fallback collectors.
+
+**Example** - creating a fallback collector at https://backup.com/reports.
+
 ```
--->
-
-## Difference between ReportingObserver {: #which }
-
-[ReportingObserver][reportingobserver] is a subset of the Reporting API!
-
-The `ReportingObserver` is a JavaScript API that can only observe deprecation or
-intervention warnings. Inside the callback, you can do whatever
-you want: inspect a report, send it to a server, load polyfill/fallback scripts,
-report the information to an analytics provider, etc.
-
-```js
-const observer = new ReportingObserver((reports, observer) => {
-  for (const report of reports) {
-    console.log(report.type, report.url, report.body);
-  }
-}, {buffered: true});
-
-observer.observe();
+Report-To: {
+             "group": "endpoint-1",
+             "max_age": 10886400,
+             "endpoints": [
+               {"url": "https://example.com/reports", "priority": 1},
+               {"url": "https://backup.com/reports", "priority": 2}
+             ]
+           }
 ```
 
-The Reporting API is different in a couple of ways. The first difference is
-that it doesn't have a JavaScript API. The API surface of the Reporting API
-is entirely through the `Report-To` HTTP header and usage with other
-headers like `NEL` and `Content-Security-Policy`. Secondly, the Reporting
-API can capture more powerful types of issues like CSP violations,
-network errors, and browser crashes. This information is not exposed to
-JS (and therefore `ReportingObserver`) for security reasons.
+Fallback collectors are only tried when uploads to primary collectors fail.
+{: .key-point }
 
 ## Example server
 
@@ -377,8 +411,8 @@ app.get('/', (request, response) => {
    // Note: report_to and not report-to for NEL.
   response.set('NEL', `{"report_to": "network-errors", "max_age": 2592000}`);
 
-  // The Report-To header is used to tell the browser where to send
-  // CSP, browser interventions, deprecations, and nertwork errors.
+  // The Report-To header tells the browser where to send
+  // CSP violations, browser interventions, deprecations, and network errors.
   // The default group (first example below) captures interventions and
   // deprecation reports. Other groups are referenced by their "group" name.
   response.set('Report-To', `{
@@ -432,12 +466,47 @@ const listener = app.listen(process.env.PORT, () => {
 });
 ```
 
+## What about ReportingObserver? {: #ro }
+
+Although both are part of the same [Reporting API spec][spec],
+[ReportingObserver][reportingobserver] and the `Report-To` header have overlap
+with each other but enable slightly different uses cases.
+
+`ReportingObserver` is a JavaScript API that can observe simple
+client-side warnings like deprecation and intervention. Reports
+are not automatically sent to a server (unless you choose to do so in the callback):
+
+```js
+const observer = new ReportingObserver((reports, observer) => {
+  for (const report of reports) {
+    // Send report somewhere.
+  }
+}, {buffered: true});
+
+observer.observe();
+```
+
+More sensitive types of errors like CSP violations and network errors
+cannot be observed by a `ReportingObserver`. Enter `Report-To`.
+
+The `Report-To` header is more powerful in that it can capture
+[more types](#reportypes) of error reports (network, CSP, browser crashes)
+in addition to the ones supported in `ReportingObserver`. Use it when you
+want to automatically report errors to a server or capture errors
+that are otherwise impossible to see in JavaScript (network errors).
+
 ## Conclusion
 
-The Reporting API is a useful tool to get more diagnostics about your app
-when real users visit your site.  It provides a unified way to collect
-different types of browser warnings/errors and report that useful information
-to a backend.
+Although the Reporting API is a ways out from shipping in all browsers, it's
+a promising tool for diagnosing issues across your site.
+
+Warnings that get logged to the DevTools console are super helpful
+but have limited value to you as the site author. That's because they're
+local to the user's browser! The Reporting API changes this. Use it to
+configure, detect, and report to a server even errors even when your own
+code cannot. Propagate browser warnings to a backend, catch issues across
+your site before they grow out of control, and prevent future bugs before they
+happen (e.g. know about deprecated APIs ahead of their removal).
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
@@ -448,3 +517,5 @@ to a backend.
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md
 [featurepolicy]: /web/updates/2018/06/feature-policy
 [nel]: https://www.chromestatus.com/features/5391249376804864
+[reportingintegration]: https://github.com/WICG/feature-policy/blob/master/reporting.md
+[cspviolations]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP#Enabling_reportin
