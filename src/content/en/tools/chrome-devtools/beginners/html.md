@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-14 #}
+{# wf_updated_on: 2018-08-15 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -286,44 +286,129 @@ you need to manually copy those changes over to your HTML.
 
 The next couple of sections show you some more ways that you can change content from the DOM Tree.
 
-### Delete a node {: #delete }
-
-TODO
-
 ## Reorder nodes {: #reorder }
 
-Another workflow for editing the arrangement 
-of your site is to rearrange the 
-DOM Tree of your document. For example, on your site, 
-you'll see that the navigation menu is on the bottom of the site. 
-To move it to the top:
+You can also change the order of DOM nodes. For example, on your webpage the navigation menu is near the
+bottom. To move it to the top:
 
-1. If you aren't already in the Elements Panel in DevTools,
-navigate to it.
-2. Scroll down the DOM Tree until you reach the `<nav>` `<div>`.
-3. Click and hold down on the `<nav>` `<div>`, 
-then drag it to the area you want it to be in. 
+1. Find the `<nav>` node in the **DOM Tree** of DevTools.
 
-**You’ve successfully learned how to add and edit content 
-on your site with DevTools!** If you want more information on these 
-workflows, take a look at [Inspect Styles](/web/tools/chrome-devtools/inspect-styles/edit-dom)
-.
+     <figure>
+       <img src="imgs/nav1.png"
+            alt="The nav node is highlighted blue in DevTools."/>
+       <figcaption>
+         <b>Figure X</b>. The nav node is highlighted blue in DevTools
+       </figcaption>
+     </figure>
 
-<figure> <img src="imgs/endgame.png" alt="Prepare for the next steps">
-<figcaption>
-    <b>Figure 8</b>. An example of what the finished HTML of your site might look like.
-  </figcaption>
-</figure>
+1. Drag the `<nav>` node to the top, so that it's the first child of the `<body>` node.
+
+     <figure>
+       <img src="imgs/nav2.png"
+            alt="Dragging the nav node to the top."/>
+       <figcaption>
+         <b>Figure X</b>. Dragging the nav node to the top
+       </figcaption>
+     </figure>
+
+    The `<nav>` node is now displaying at the top of your page.
+
+     <figure>
+       <img src="imgs/nav3.png"
+            alt="The nav node is at the top of the page."/>
+       <figcaption>
+         <b>Figure X</b>. The nav node is at the top of the page
+       </figcaption>
+     </figure>
+
+### Delete a node {: #delete }
+
+You can also remove nodes from the DOM Tree.
+
+1. In the **DOM Tree**, click `<div>A new element!?!</div>`. DevTools highlights the node blue.
+
+     <figure>
+       <img src="imgs/delete1.png"
+            alt="Selecting the node to be deleted."/>
+       <figcaption>
+         <b>Figure X</b>. Selecting the node to be deleted
+       </figcaption>
+     </figure>
+
+1. Press the <kbd>Delete</kbd> key.
+
+     <figure>
+       <img src="imgs/delete2.png"
+            alt="The node has been deleted."/>
+       <figcaption>
+         <b>Figure X</b>. The node has been deleted
+       </figcaption>
+     </figure>
+
+## Wrap up {: #wrapup }
+
+You're almost done. You've made a few changes to your page in DevTools, but they're not yet saved to your
+code.
+
+1. Copy the code below.
+
+     <pre class="prettyprint lang-html">
+       {% htmlescape %}
+       <!DOCTYPE html>
+       <!-- This is an HTML comment. Comments don't show up in the page. They're just for developers
+            to leave notes to each other about the page's code. Below is a (mostly) blank HTML document.
+            You'll be filling it in as you go. -->
+       <html lang="en">
+         <head>
+           <!-- Meta tags provide metadata about the page that help browsers understand
+                how the page should be represented. -->
+           <meta charset="utf-8">
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+         </head>
+         <body>
+           <nav>
+             <ul>
+               <li>Home</li>
+               <li>Contact</li>
+             </ul>
+           </nav>
+           <!-- div elements represent a section of the document. -->
+           <div class="About">
+             <h1>About Me</h1>
+             <p>I am learning web development. Recent accomplishments:</p>
+             <ul>
+               <li>Learned how to set up my code in Glitch.</li>
+               <li>Added content to my HTML.</li>
+               <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
+               <li>Learned the difference between HTML and the DOM.</li>
+             </ul>
+           </div>
+           <div class="stand-out"></div>
+           <div class="Author" id="Author">
+             <!-- You'll add your own information later. -->
+           </div>
+           <nav>
+             <ul>
+               <li>Home</li>
+               <li>Contact</li>
+             </ul>
+           </nav>
+         </body>
+       </html>
+       {% endhtmlescape %}
+     </pre>
 
 ## Next steps {: #next-steps}
-Edit your site until it has all of the HTML content you want. 
-An example of what that would look like is shown above.
 
-If you still have lingering questions on HTML, 
-[take a look at this reference guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
-. Soon, there will be a tutorial looking at using DevTools with CSS to 
-style and customize your website to make it look a bit nicer. 
+* Read [Introduction to the DOM][DOM]{: .external } to strengthen your conceptual understanding of the
+  DOM.
+* Stay tuned for the next tutorial in this series! In the next tutorial you will learn how to style your
+  page using CSS, and how to change styles on the fly through DevTools.
+
+[DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
 ## Feedback {: #feedback }
+
 {% include "web/_shared/helpful.html" %}
 
