@@ -158,7 +158,7 @@ your file system. Essentially, this lets you use DevTools as your code editor.
 
 See [Set Up Persistence With DevTools Workspaces][WS] to get started.
 
-[WS]: /web/tools/setup/setup-workflow
+[WS]: /web/tools/chrome-devtools/workspaces/
 
 ## Feedback {: #feedback }
 
