@@ -1,34 +1,60 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Time to Interactive" Lighthouse audit.
+description: Reference documentation for the "Consistently Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
-{# wf_published_on: 2016-10-05 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2017-06-23 #}
 {# wf_blink_components: N/A #}
 
-# Time to Interactive  {: .page-title }
+# Consistently Interactive {: .page-title }
 
 ## Overview {: #overview }
 
-Page load is a key aspect of how a user perceives the performance of your
-page. See [Measure Performance with the RAIL Method](/web/fundamentals/performance/rail) for more information.
+The Consistently Interactive metric measures when a page is *fully* interactive:
 
-This audit identifies the time at which a page appears to be ready enough that
-a user can interact with it.
+* The page strictly meets the [Idle guideline of the RAIL performance model][I]:
+  the page yields control back to the main thread at least once every 50ms.
+* The network is idle. Specifically, there are only two open network requests
+  remaining.
+
+[I]: /web/fundamentals/performance/rail#idle
+
+Note: Maximizing idle time also indirectly improves [Response][R] time.
+The more idle time there is, the more likely that the page will be able
+to respond to user input in the target time of 100ms or less.
+
+[R]: /web/fundamentals/performance/rail#response
+
+See also [First Interactive](first-interactive).
 
 ## Recommendations {: #recommendations }
 
-See [Speed Index](speed-index#recommendations) for more help on improving page load performance.
-The lower your Time to Interactive score, the better.
+To improve your Consistently Interactive score:
+
+* Minimize the number of required or "critical" resources that must be
+  downloaded or executed before the page can load. See [Critical Rendering
+  Path][CRP].
+* Minimize the size of each critical resource. See [Optimizing Content
+  Efficiency][OCE].
+* Maximize idle time so that your JavaScript spends no more than 50ms at
+  a time executing tasks in the main thread. See [Optimizing JavaScript
+  Execution][OJE].
+
+[CRP]: /web/fundamentals/performance/critical-rendering-path
+[OCE]: /web/fundamentals/performance/optimizing-content-efficiency
+[OJE]: /web/fundamentals/performance/rendering/optimize-javascript-execution
 
 ## More information {: #more-info }
 
-Time to Interactive is defined as the point at which layout has stabilized,
-key webfonts are visible, and the main thread is available enough to handle
-user input.
+The score is a lognormal distribution of some complicated calculations based on
+the definition of the Consistently Interactive metric. See [First Interactive
+And Consistently Interactive][FIACI] for definitions.
 
-Note that this metric is in early phases and is subject to change.
+[FIACI]: https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c
 
+[Audit source][src]{:.external}
+
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/consistently-interactive.js
 
 ## Feedback {: #feedback }
 
