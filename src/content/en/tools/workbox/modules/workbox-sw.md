@@ -22,18 +22,18 @@ on your own server.
 The easiest way to start using this module is via the CDN. You just need to
 add the following to your service worker:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
-```
+</pre>
 
 With this you’ll have the `workbox` namespace in your service worker that will
 provide access to all of the Workbox modules.
 
-```javascript
+<pre class="prettyprint js">
 workbox.precaching.*
 workbox.routing.*
 etc
-```
+</pre>
 
 There is some magic that happens as you  start to use the additional modules.
 
@@ -58,13 +58,13 @@ Release](https://github.com/GoogleChrome/workbox/releases), and then tell
 
 If you put the files under `/third_party/workbox/`, you would use them like so:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('/third_party/workbox/workbox-sw.js');
 
 workbox.setConfig({
   modulePathPrefix: '/third_party/workbox/'
 });
-```
+</pre>
 
 With this, you’ll use only the local Workbox files.
 
@@ -82,7 +82,7 @@ In order to avoid violating this restriction, a best practice is to reference th
 
 For example, the following top-level service worker code is fine:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will work!
@@ -90,12 +90,12 @@ workbox.routing.registerRoute(
   new RegExp('\.png$'),
   workbox.strategies.cacheFirst()
 );
-```
+</pre>
 
 But this code could be a problem if you have not referenced `workbox.strategies` elsewhere in your
 service worker:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 self.addEventListener('fetch', (event) => {
@@ -106,13 +106,13 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
-```
+</pre>
 
 If you need to write code that would otherwise run afoul of this restriction, you can explicitly
 trigger the `importScripts()` call outside of the event handler by using the
 [`workbox.loadModule()`](/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
@@ -125,12 +125,12 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
-```
+</pre>
 
 Alternatively, you can create a reference to the relevant namespaces outside of your event handlers,
 and then use that reference later on:
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
@@ -143,7 +143,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
-```
+</pre>
 
 Note: Some versions of Chrome do not honor this restriction, and asynchronous calls to
 `importScripts()` don't trigger the expected failure. Developers are advised *not* to rely on this
@@ -162,11 +162,11 @@ but for any other origin it’ll use the production build.
 If you want to force debug or production builds you set the `debug` config
 option.
 
-```javascript
+<pre class="prettyprint js">
 workbox.setConfig({
   debug: <true or false>
 });
-```
+</pre>
 
 ## Skip Waiting and Clients Claim
 
@@ -177,10 +177,10 @@ update and control a web page as soon as possible, skipping the default
 If you find yourself wanting this behavior, `workbox-sw` provides some helper
 methods to make this easy:
 
-```javascript
+<pre class="prettyprint js">
 workbox.skipWaiting();
 workbox.clientsClaim();
-```
+</pre>
 
 Note: If your web app lazy-loads resources that are uniquely versioned with, e.g., hashes in their
 URLs, it's recommended that you avoid using skip waiting. Enabling it could
