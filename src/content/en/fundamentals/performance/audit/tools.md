@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are several core objectives for building a performant, resilient site with low data cost. For each objective, you need an audit.
 
-{# wf_updated_on: 2018-08-03 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Use tools to measure performance {: .page-title }
@@ -358,4 +358,4 @@ shown below, gives a rough guide to the financial cost of loading your site in d
 </figure>
 
 Many other standalone and online tools are available: take a look at
-[perf.rocks/tools](perf.rocks/tools/){: .external}.
+[perf.rocks/tools](http://perf.rocks/tools){: .external}.

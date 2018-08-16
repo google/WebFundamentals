@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors?  You get metrics to prioritize effort, and concrete evidence to brag about once you've made improvements.
 
-{# wf_updated_on: 2018-08-03 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
 # Auditing Performance {: .page-title }
@@ -75,15 +75,15 @@ users and keep a record of your subjective experience.
 
 ## If you find the range of tools bewildering...
 
-Take a look at our guide: [How To Think About Speed Tools](https://developers.google.com/web/fundamentals/performance/speed-tools/).
+Take a look at our guide: [How To Think About Speed Tools](/web/fundamentals/performance/speed-tools/).
 
-If nothing else, simply use [Lighthouse](https://developers.google.com/web/tools/lighthouse/) to check for:
+If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
 
-  * HTTPS: [every site should deliver all assets over HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https).
-  * Server settings: your web server or CDN should [use compression correctly](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), [use HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/), and [include appropriate headers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your browser to cache resources.
+  * HTTPS: [every site should deliver all assets over HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https).
+  * Server settings: your web server or CDN should [use compression correctly](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your browser to cache resources.
   * Script elements that can be moved to the bottom of the page and/or given an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/) attribute.
   * JavaScript and libraries that can be removed.
-  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/) and [unused JavaScript](https://developers.google.com/web/updates/2017/04/devtools-release-notes).
+  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/) and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
   * Images that can be saved with higher compression or smaller pixel dimensions.
   * Image files that would be smaller saved using a different format, for example photos saved as PNGs.
 

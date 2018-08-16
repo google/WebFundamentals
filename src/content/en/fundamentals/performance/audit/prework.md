@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Before gathering performance metrics for a site audit, there are several checks you can do to identify easy fixes and areas for focus. Some of these checks are relatively subjective, but can identify problems that affect perceived performance.
 
-{# wf_updated_on: 2018-08-03 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
 # Prework {: .page-title }

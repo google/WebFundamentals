@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Having completed a site audit, you should have accurate review data in a form that makes it easy for developers and other stakeholders to prioritize and justify changes.
 
-{# wf_updated_on: 2018-08-03 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
 # Next steps {: .page-title }

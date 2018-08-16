@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Once you've audited a site, make sure to package the results in a digestible form. Be sensitive to the people on the receiving end of your audit, structure your report carefully and present your data in terms of opportunities and solutions.
 
-{# wf_updated_on: 2018-08-03 #}
-{# wf_published_on: 2018-08-03 #}
+{# wf_updated_on: 2018-08-16 #}
+{# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
 # Share the results {: .page-title }
