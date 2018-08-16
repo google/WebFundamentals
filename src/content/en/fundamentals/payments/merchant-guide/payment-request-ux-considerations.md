@@ -118,7 +118,7 @@ by using steppers.
 
 ## What is customizable
 Some of the UI is customizable with some exceptions such as the
-colour of button and their respective text labels.
+color of buttons and their respective text labels.
 
 Note: This example is for the Chrome browser. Other browsers
 may contain different UI elements as well, or even labels for
@@ -527,5 +527,5 @@ on [caniuse.com](https://caniuse.com/#search=payments).
 ## Stickersheet
 
 To create your own flows, you can download the Payment Request API 
-sticker sheet from [our Github Repo](https://goo.gl/daxhRa).
+sticker sheet from [our GitHub Repo](https://goo.gl/daxhRa).
 
