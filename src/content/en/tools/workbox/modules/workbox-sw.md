@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-08-10 #}
+{# wf_updated_on: 2018-08-16 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -82,7 +82,7 @@ In order to avoid violating this restriction, a best practice is to reference th
 
 For example, the following top-level service worker code is fine:
 
-```js
+```javascript
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will work!
@@ -95,7 +95,7 @@ workbox.routing.registerRoute(
 But this code could be a problem if you have not referenced `workbox.strategies` elsewhere in your
 service worker:
 
-```js
+```javascript
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 self.addEventListener('fetch', (event) => {
@@ -112,7 +112,7 @@ If you need to write code that would otherwise run afoul of this restriction, yo
 trigger the `importScripts()` call outside of the event handler by using the
 [`workbox.loadModule()`](/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
-```js
+```javascript
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
@@ -130,7 +130,7 @@ self.addEventListener('fetch', (event) => {
 Alternatively, you can create a reference to the relevant namespaces outside of your event handlers,
 and then use that reference later on:
 
-```js
+```javascript
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
