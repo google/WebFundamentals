@@ -11,11 +11,12 @@ description: Having completed a site audit, you should have accurate review data
 {% include "web/_shared/contributors/samdutton.html" %}
 
 
-Having completed a site audit, you should have accurate review data in a form that makes it easy for
+Having completed a site audit, you will have accurate review data in a form that makes it easy for
 developers and other stakeholders to prioritize and justify changes.
 
-Next, you may want to take a look at our guide:
-[Big improvements with simple changes](https://docs.google.com/document/d/1Pk9W5uitZySdhfRZq5Yjrr24B5eW-XzXzcIv9ZHIsfk/edit#).
+Next, you may want to revisit the sections on this site that provide in-depth advice on how to
+improve [load performance](http://localhost:8080/web/fundamentals/performance/get-started/) and
+[rendering performance](http://localhost:8080/web/fundamentals/performance/rendering/).
 
 ## Find out more
 
@@ -28,3 +29,4 @@ overview of guidance and tools for developers and marketers from Google
 than 10 years old, but still valuable
 * [High Performance Browser Networking](https://hpbn.co/){: .external} by Ilya Grigorik:
 comprehensive reference including introductory guides to TCP, UDP, TLS and other topics
+* [Can You Afford It?: Real-world Web Performance Budgets](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets)

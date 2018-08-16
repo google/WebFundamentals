@@ -37,10 +37,7 @@ baseline and a todo list for improvements to performance, accessibility, securit
 ## If you only have 30 minutes...
 
 [Lighthouse](/web/tools/lighthouse/) is probably still the best place to start, but with a little
-more time you can also record results from other tools. Make sure to test your website as a
-first-time user sees it. Open the site an Incognito (Private) Window, or use browser tools to
-disable caching and clear storage. That ensures every asset is retrieved from the network and not
-from a local cache, so you get an accurate picture of first-load performance.
+more time you can also record results from other tools:
 
 * [Chrome DevTools Security panel](/web/tools/chrome-devtools/security): HTTPS usage.
 * [Chrome DevTools Network
@@ -59,40 +56,43 @@ statistics.
 Calculator](https://www.thinkwithgoogle.com/feature/mobile/){: .external}: compare site speed
 against peers and estimate the potential revenue opportunity of improving site speed.
 
-Nothing beats real world testing — try out your site with the same devices and connectivity as your
-users and keep a record of your subjective experience. <br><br>
+Make sure to test your website as a
+first-time user sees it. Open the site an Incognito (Private) Window, or use browser tools to
+disable caching and clear storage. This ensures that every asset is retrieved from the network and not
+from a local cache, so you get an accurate picture of first-load performance.
 
-<div class="note">
-  <strong>If the range of tools is bewildering, take a look at our guide:
-    <a href="https://developers.google.com/web/fundamentals/performance/speed-tools/">How To Think
-    About Speed Tools</a>.</strong><br>
-  <br>
-  If nothing else, use <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>
-  to check for:<br>
+<div class="note"><a href="(https://www.webpagetest.org">WebPagetest</a> is a free service that runs performance tests from multiple locations globally using real browsers with real connections, to provide detailed metrics and optimization advice.
   <ul>
-    <li>HTTPS:
-      <a href="https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https">every
-      site should deliver all assets over HTTPS</a>.</li>
-    <li>Server settings: your web server or CDN should
-      <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer">use
-      compression correctly</a>, <a href="https://developers.google.com/web/fundamentals/performance/http2/">use HTTP/2</a>,
-      and <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching">include
-      appropriate headers</a> to enable your browser to cache resources.</li>
-    <li>Script elements that can be moved to the bottom of the page and/or given an <a href="http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/">async or defer</a> attribute.</li>
-    <li>JavaScript and libraries that can be removed.</li>
-    <li><a href="https://umaar.com/dev-tips/121-css-coverage/">Unused CSS</a> and
-      <a href="https://developers.google.com/web/updates/2017/04/devtools-release-notes">unused JavaScript</a>.</li>
-    <li>Images that can be saved with higher compression or smaller pixel dimensions.</li>
-    <li>Image files that would be smaller saved using a different format.<br>
-    </li>
+    <li>Leverage <a href="(https://www.webpagetest.org/easy">webpagetest.org/easy</a> to quickly simulate differences between network connection types on mobile</li>
+    <li>Generate a Lighthouse audit and report with every WebPagetest trace.</li>
+    <li> Measure site on first visit as well as for repeat views — for example: to see how much service worker caching helps.</li>
+    <li>Visually compare multiple sites and get filmstrip and waterfall comparisons.</li>
   </ul>
 </div>
+
+Nothing beats real world testing — try out your site with the same devices and connectivity as your
+users and keep a record of your subjective experience.
+
+## If you find the range of tools bewildering...
+
+Take a look at our guide: [How To Think About Speed Tools](https://developers.google.com/web/fundamentals/performance/speed-tools/).
+
+If nothing else, simply use [Lighthouse](https://developers.google.com/web/tools/lighthouse/) to check for:
+
+  * HTTPS: [every site should deliver all assets over HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https).
+  * Server settings: your web server or CDN should [use compression correctly](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), [use HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/), and [include appropriate headers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your browser to cache resources.
+  * Script elements that can be moved to the bottom of the page and/or given an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/) attribute.
+  * JavaScript and libraries that can be removed.
+  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/) and [unused JavaScript](https://developers.google.com/web/updates/2017/04/devtools-release-notes).
+  * Images that can be saved with higher compression or smaller pixel dimensions.
+  * Image files that would be smaller saved using a different format, for example photos saved as PNGs.
+
 
 ## Audience, stakeholders, context
 
 Priorities for refactoring depend on your audience, content and functionality. Who visits your site?
 Why and how do they use it? What's your
-[performance budget](http://www.performancebudget.io/){:.external}? If you're not sure of the answer
+[performance budget](https://www.performancebudget.io/){:.external}? If you're not sure of the answer
 to these questions, try the requirements gathering exercises from our PWA training resources:
 [Your audience, your content](https://docs.google.com/presentation/d/1-UjSS-kRZgE0q77zPBkgjg2-huXF2GobzhSqwI0AdU8/edit#slide=id.g16e897f04a_0_14){: .external} and [Design for all your users](https://docs.google.com/presentation/d/14CaiTF3f-OFoWs84lXeurE95_LJIFJwC-xhMky62dAg/edit#slide=id.g16ea125a27_0_6){: .external}.
 

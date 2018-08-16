@@ -50,6 +50,9 @@ More information about how to improve site performance is available from
 [Web Fundamentals](/web/fundamentals/performance/), along with case
 studies and success stories.
 
+If you don't have a [performance budget](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets), now is the time! [Calculate
+a budget](https://www.performancebudget.io/) and show how your site weighs up.
+
 ## Demonstrate potential
 
 Chrome DevTools [Local Overrides](https://t.co/0a56PgKlPv){: .external} allow you to override
