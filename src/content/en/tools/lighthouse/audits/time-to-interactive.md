@@ -1,60 +1,70 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Consistently Interactive" Lighthouse audit.
+description: Reference documentation for the "Time to Interactive" Lighthouse audit.
 
 {# wf_updated_on: 2018-08-16 #}
-{# wf_published_on: 2017-06-23 #}
-{# wf_blink_components: N/A #}
+{# wf_published_on: 2018-08-16 #}
+{# wf_blink_components: Platform>DevTools #}
 
-# Consistently Interactive {: .page-title }
+# Time to Interactive {: .page-title }
 
 ## Overview {: #overview }
 
-The Consistently Interactive metric measures when a page is *fully* interactive:
+<blockquote>
+  <p>
+    Load is not a single moment in time — it’s an experience that no one metric can fully capture.
+    There are multiple moments during the load experience that can affect whether a user perceives
+    it as "fast" or "slow".
+  </p>
+  <p>--- <a class="external" href="https://w3c.github.io/paint-timing/">Paint Timing spec</a></p>
+</blockquote>
 
-* The page strictly meets the [Idle guideline of the RAIL performance model][I]:
-  the page yields control back to the main thread at least once every 50ms.
-* The network is idle. Specifically, there are only two open network requests
-  remaining.
+The Time to Interactive (TTI) metric measures how long it takes a page to become interactive.
+"Interactive" is defined as the point where:
 
-[I]: /web/fundamentals/performance/rail#idle
+* The page has displayed useful content, which is measured with [First Meaningful Paint][FMP].
+* Event handlers are registered for most visible page elements.
+* The page responds to user interactions within 50 milliseconds.
 
-Note: Maximizing idle time also indirectly improves [Response][R] time.
-The more idle time there is, the more likely that the page will be able
-to respond to user input in the target time of 100ms or less.
+[FMP]: /web/tools/lighthouse/audits/first-meaningful-paint
 
-[R]: /web/fundamentals/performance/rail#response
-
-See also [First Interactive](first-interactive).
+Some sites optimize content visibility at the expense of interactivity. This can create a frustrating
+user experience. The site appears to be ready, but when the user tries to interact with it, nothing happens.
 
 ## Recommendations {: #recommendations }
 
-To improve your Consistently Interactive score:
+To improve your TTI score, defer or remove unnecessary JavaScript work that occurs during page load.
+See [Optimize JavaScript Bootup][bootup] and [Reduce JavaScript Payloads with Tree Shaking][tree shaking],
+and [Reduce JavaScript Payloads with Code Splitting][code splitting].
 
-* Minimize the number of required or "critical" resources that must be
-  downloaded or executed before the page can load. See [Critical Rendering
-  Path][CRP].
-* Minimize the size of each critical resource. See [Optimizing Content
-  Efficiency][OCE].
-* Maximize idle time so that your JavaScript spends no more than 50ms at
-  a time executing tasks in the main thread. See [Optimizing JavaScript
-  Execution][OJE].
+[bootup]: /web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/
+[tree shaking]: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
+[code splitting]: /web/fundamentals/performance/optimizing-javascript/code-splitting/
 
-[CRP]: /web/fundamentals/performance/critical-rendering-path
-[OCE]: /web/fundamentals/performance/optimizing-content-efficiency
-[OJE]: /web/fundamentals/performance/rendering/optimize-javascript-execution
+### Tracking TTI in the real world {: #RUM }
+
+To measure when TTI actually occurs on your users' devices, see [Tracking TTI][RUM].
+The code snippet describes how to programmatically access TTI data and submit it to
+Google Analytics.
+
+[RUM]: /web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
 
 ## More information {: #more-info }
 
-The score is a lognormal distribution of some complicated calculations based on
-the definition of the Consistently Interactive metric. See [First Interactive
-And Consistently Interactive][FIACI] for definitions.
+See [Definition](https://github.com/WICG/time-to-interactive#definition){: .external } for more
+details on how exactly TTI is calculated.
 
-[FIACI]: https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c
+This metric was previously called Consistently Interactive.
 
-[Audit source][src]{:.external}
+Sources: 
 
-[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/consistently-interactive.js
+* [Audit source][src]{:.external}
+* [Time to Interactive Explainer][explainer]{: .external }
+* [First Interactive and Consistently Interactive][CI]{: .external }
+
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/interactive.js
+[explainer]: https://github.com/WICG/time-to-interactive
+[CI]: https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c
 
 ## Feedback {: #feedback }
 
