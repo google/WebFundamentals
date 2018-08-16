@@ -36,9 +36,11 @@ baseline and a todo list for improvements to performance, accessibility, securit
 
 ## If you only have 30 minutes...
 
-[Lighthouse](/web/tools/lighthouse/) is probably still the best place
-[to start, but with a little more time you can also record results from other tools. Make sure to
-[load your site as a first-time user would see it, by using an Incognito (Private) Window:
+[Lighthouse](/web/tools/lighthouse/) is probably still the best place to start, but with a little
+more time you can also record results from other tools. Make sure to test your website as a
+first-time user sees it. Open the site an Incognito (Private) Window, or use browser tools to
+disable caching and clear storage. That ensures every asset is retrieved from the network and not
+from a local cache, so you get an accurate picture of first-load performance.
 
 * [Chrome DevTools Security panel](/web/tools/chrome-devtools/security): HTTPS usage.
 * [Chrome DevTools Network

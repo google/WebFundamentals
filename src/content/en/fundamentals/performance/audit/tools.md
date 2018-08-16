@@ -123,7 +123,7 @@ If you're not sure how to do this, work through the Chrome DevTools network pane
 [Get Started Guide](/web/tools/chrome-devtools/network-performance/).
 Similar tools are available for
 [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor){: .external},
-[Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Instruments/Instruments.html#//apple_ref/doc/uid/TP40007874-CH4-SW1) {: .external},
+[Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Instruments/Instruments.html#//apple_ref/doc/uid/TP40007874-CH4-SW1){: .external},
 [Internet Explorer](https://msdn.microsoft.com/en-us/library/gg130952(v=vs.85).aspx){: .external} and
 [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/network){: .external}.
 
@@ -213,9 +213,8 @@ web page's requirements.
 
 [Lighthouse](/web/tools/lighthouse/),
 [WebPagetest](https://www.webpagetest.org/easy){: .external} and
-[Pagespeed Insights](/speed/pagespeed/insights/) are useful for
-analyzing speed, data cost and resource usage. WebPagetest will also check static-content caching,
-time to first byte, and if your site makes effective use of CDNs.
+[Pagespeed Insights](/speed/pagespeed/insights/) are useful for analyzing speed, data cost and resource usage. WebPagetest will also check static-content
+caching, time to first byte, and if your site makes effective use of CDNs.
 
 <div class="note">
 
