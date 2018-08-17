@@ -115,7 +115,7 @@ Die einfachste Seite besteht lediglich aus dem HTML-Markup: weder CSS noch JavaS
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-<img src="images/analysis-dom.png" alt=""Hallo Welt" - kritischer Rendering-Pfad" class="center">
+<img src="images/analysis-dom.png" alt="'Hallo Welt' - kritischer Rendering-Pfad" class="center">
 
 **Die Zeit zwischen T<sub>0</sub> und T<sub>1</sub> erfasst die Verarbeitungsdauer von Netzwerk und Server.** Bestenfalls (wenn die HTML-Datei klein ist), benötigen wir nur einen Netzwerkumlauf zum Abrufen des gesamten Dokuments. Aufgrund der Funktionsweise der TCP-Transportprotokolle sind bei größeren Dateien möglicherweise mehr Umläufe nötig. Darauf kommen wir später noch einmal zurück. **Folglich lässt sich sagen, dass der (minimale) kritische Rendering-Pfad der oben stehenden Seite bestenfalls aus einem Umlauf besteht.**
 
@@ -129,7 +129,7 @@ Sehen wir uns einmal die gleiche Seite mit einer externen CSS-Datei an:
 
 Wieder benötigen wir einen Netzwerkumlauf, um das HTML-Dokument abzurufen, und das abgerufene Markup verrät uns, dass wir auch die CSS-Datei benötigen. Das bedeutet: Der Browser muss die CSS vom Server abrufen, bevor er die Seite auf dem Bildschirm rendern kann. **Infolgedessen muss diese Seite mindestens zwei Umläufe durchführen, bevor die Seite angezeigt werden kann**. Noch einmal zur Erinnerung: Im Falle der CSS-Datei sind unter Umständen mehrere Umläufe nötig, daher die Betonung auf `mindestens`.
 
-Klären wir die Begriffe, mit denen wir den kritischen Rendering-Pfad beschreiben: 
+Klären wir die Begriffe, mit denen wir den kritischen Rendering-Pfad beschreiben:
 
 * **Kritische Ressource:** die Ressource, die unter Umständen das erste Rendern der Seite blockiert.
 * **Länge des kritischen Pfads:** die zum Abrufen alle kritischen Ressourcen erforderliche Anzahl an Umläufen oder die erforderliche Dauer.
@@ -176,7 +176,7 @@ Ein asynchrones Skript bietet mehrere Vorteile:
 
 * Das Skript blockiert den Parser nicht mehr und ist kein Bestandteil des kritischen Rendering-Pfads.
 * Da keine anderen kritischen Skripts vorhanden sind, muss das CSS auch nicht das domContentLoaded-Ereignis blockieren.
-* Je eher das domContentLoaded-Ereignis ausgelöst wird, desto eher können andere Anwendungslogiken ausgeführt werden. 
+* Je eher das domContentLoaded-Ereignis ausgelöst wird, desto eher können andere Anwendungslogiken ausgeführt werden.
 
 Infolgedessen ist unsere optimierte Seite wieder bei zwei kritischen Ressourcen (HTML und CSS) mit einer minimalen Länge des kritischen Pfads von zwei Umläufen und insgesamt 9 KB kritischen Bytes.
 
@@ -189,6 +189,3 @@ Nehmen wir zuletzt an, das CSS-Stylesheet wurde nur zum Drucken benötigt. Wie w
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, CSS ohne Blockierungsfunktion, asynchrones JavaScript - kritischer Rendering-Pfad" class="center">
 
 Da die Ressource `style.css` nur zum Drucken verwendet wird, muss der Browser diese zum Rendern der Seite nicht blockieren. Somit verfügt der Browser nach Abschluss der DOM-Erstellung über ausreichend Informationen zum Rendern der Seite! Das bedeutet, dass die Seite lediglich eine kritische Ressource (das HTML-Dokument) aufweist und die minimale Länge des kritischen Rendering-Pfads einem Umlauf entspricht.
-
-
-
