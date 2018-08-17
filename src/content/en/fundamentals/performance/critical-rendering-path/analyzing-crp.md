@@ -9,10 +9,7 @@ description: Learn to identify and resolve critical rendering path performance b
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Identifying and resolving critical rendering path performance bottlenecks 
-requires good knowledge of the common pitfalls. Let's take a hands-on tour 
-and extract common performance patterns that will help you optimize your 
-pages.
+Identifying and resolving critical rendering path performance bottlenecks requires good knowledge of the common pitfalls. Let's take a hands-on tour and extract common performance patterns that will help you optimize your pages.
 
 
 Optimizing the critical rendering path allows the browser to paint the page as quickly as possible: faster pages translate into higher engagement, more pages viewed, and [improved conversion](https://www.google.com/think/multiscreen/success.html). To minimize the amount of time a visitor spends viewing a blank screen, we need to optimize which resources are loaded and in which order.
@@ -34,7 +31,7 @@ So far we've focused exclusively on what happens in the browser after the resour
 
 We'll start with basic HTML markup and a single image; no CSS or JavaScript. Let's open up our Network timeline in Chrome DevTools and inspect the resulting resource waterfall:
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 Note: Although this doc uses DevTools to illustrate CRP concepts, DevTools is
 currently not well-suited for CRP analysis. See [What about

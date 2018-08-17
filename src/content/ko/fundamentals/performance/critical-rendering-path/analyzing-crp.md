@@ -9,9 +9,9 @@ description: 주요 렌더링 경로 성능 병목 현상을 식별하고 해결
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-주요 렌더링 경로 성능 병목 현상을 식별하고 해결하려면 
-흔히 있는 함정들에 대해 잘 파악하고 있어야 합니다. 실습 과정을 통해 
-페이지를 최적화하는 데 도움이 되는 일반적인 성능 패턴을 
+주요 렌더링 경로 성능 병목 현상을 식별하고 해결하려면
+흔히 있는 함정들에 대해 잘 파악하고 있어야 합니다. 실습 과정을 통해
+페이지를 최적화하는 데 도움이 되는 일반적인 성능 패턴을
 알아보도록 하겠습니다.
 
 
@@ -34,7 +34,7 @@ description: 주요 렌더링 경로 성능 병목 현상을 식별하고 해결
 
 기본적인 HTML 마크업과 하나의 이미지로 시작해 보겠습니다. CSS 또는 자바스크립트는 포함하지 않습니다. Chrome DevTools에서 네트워크 타임라인을 열고 결과로 나타나는 리소스 워터폴(waterfall)을 검토합니다.
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 참고: 이 문서에서는 CRP 개념을 설명하기 위해 DevTools를 사용하지만
 현재는 DevTools가 CRP 분석에 잘 맞지 않습니다. 자세한 내용은 [DevTools

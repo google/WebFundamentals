@@ -34,7 +34,7 @@ description: クリティカル レンダリング パスにおけるパフォ�
 
 まずは CSS と JavaScript は使わずに、基本的な HTML マークアップと 1 つの画像から始めましょう。Chrome DevTools でネットワーク タイムラインを開き、リソース ウォーターフォールを確認します。
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 注: このドキュメントでは DevTools を使用して CRP のコンセプトを説明しますが、現在のところ、DevTools は CRP 分析にあまり適してはいません。
 詳細については、[DevTools に関するドキュメント](measure-crp#devtools)をご覧ください。
