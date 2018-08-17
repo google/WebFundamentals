@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -232,3 +232,7 @@ While physically large items like images tend to get a lot of speed-improvement 
 text resources -- undoubtedly the primary content of most websites -- are often overlooked. 
 Don't ignore text-based components, both visible and behind-the-scenes, as you look for 
 ways to speed up your pages.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

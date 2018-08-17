@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-08-01 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -355,3 +355,7 @@ Singal](/web/resources/contributors/vinamratasingal), [Daniel
 An](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/),
 and [Pete LePage](/web/resources/contributors/petelepage) for their extensive
 feedback in improving and launching this resource!_
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

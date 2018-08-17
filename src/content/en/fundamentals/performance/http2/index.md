@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing streams and frame control to the web.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -578,3 +578,7 @@ let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jD
     – Presentation by Ilya Grigorik from Velocity 2015
 * [“Rules of Thumb for HTTP/2 Push”](https://docs.google.com/document/d/1K0NykTXBbbbTlv60t5MyJvXjqKGsCVNYHyLEXIxYMv0/edit)
     – An analysis by Tom Bergan, Simon Pelchat and Michael Buettner on when and how to use push.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

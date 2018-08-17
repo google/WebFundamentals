@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
@@ -162,3 +162,7 @@ Be assertive with caching, but also be aware that if you later change a resource
 long retention period, you may inadvertently deprive some repeat visitors of newer content.
 You can find a great discussion of caching patterns, options, and potential pitfalls in
 [Caching Best Practices and Max-age Gotchas](https://jakearchibald.com/2016/caching-best-practices/).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

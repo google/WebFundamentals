@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>JavaScript>Runtime #}
 
@@ -543,3 +543,7 @@ the techniques at once.
 It's clear from these tests that the more improvement techniques you can bring to bear 
 on a slow-loading page, the faster you can make it, and the better your users' experience 
 will be.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
