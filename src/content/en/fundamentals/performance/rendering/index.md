@@ -4,6 +4,7 @@ description: Users notice if sites and apps don't run well, so optimizing render
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Paint #}
 
 # Rendering Performance {: .page-title }
 

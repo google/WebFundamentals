@@ -5,6 +5,7 @@ description: The amount of data downloaded by apps continues to increase over ti
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # Optimizing Content Efficiency {: .page-title }
 

@@ -4,6 +4,7 @@ description: JavaScript allows us to modify just about every aspect of the page:
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2013-12-31 #}
+{# wf_blink_components: Blink>JavaScript>Runtime #}
 
 # Adding Interactivity with JavaScript {: .page-title }
 

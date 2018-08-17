@@ -4,6 +4,7 @@ description: Optimizing the critical rendering path refers to prioritizing the d
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: N/A #}
 
 # Critical Rendering Path {: .page-title }
 

@@ -4,6 +4,7 @@ description: TODO
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Layout,Blink>Paint #}
 
 # Render-tree Construction, Layout, and Paint {: .page-title }
 

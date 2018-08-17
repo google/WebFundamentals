@@ -4,6 +4,7 @@ description: Learn to measure the critical rendering path.
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>PerformanceAPIs>NavigationTiming #}
 
 # Measuring the Critical Rendering Path {: .page-title }
 

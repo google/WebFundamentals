@@ -6,6 +6,7 @@ description: Layout is where the browser figures out the geometric information f
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Layout #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

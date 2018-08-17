@@ -4,6 +4,7 @@ description: Compositing is where the painted parts of the page are put together
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Compositing #}
 
 # Stick to Compositor-Only Properties and Manage Layer Count {: .page-title }
 

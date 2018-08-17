@@ -4,6 +4,7 @@ description: By default CSS is treated as a render blocking resource. Learn how 
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Render Blocking CSS {: .page-title }
 

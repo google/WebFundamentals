@@ -4,6 +4,7 @@ description: JavaScript is often the trigger for visual changes. Sometimes that'
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Reduce the Scope and Complexity of Style Calculations {: .page-title }
 

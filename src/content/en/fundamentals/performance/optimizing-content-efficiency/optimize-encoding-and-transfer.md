@@ -4,6 +4,7 @@ description: Next to eliminating unnecessary resource downloads, the best thing 
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # Optimizing Encoding and Transfer Size of Text-Based Assets {: .page-title }
 

@@ -4,6 +4,7 @@ description: Learn to identify and resolve critical rendering path performance b
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: N/A #}
 
 # Analyzing Critical Rendering Path Performance {: .page-title }
 

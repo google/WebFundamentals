@@ -4,6 +4,7 @@ description: This guide examines PageSpeed Insights rules in context: what to pa
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>JavaScript,Blink>CSS #}
 
 # PageSpeed Rules and Recommendations {: .page-title }
 

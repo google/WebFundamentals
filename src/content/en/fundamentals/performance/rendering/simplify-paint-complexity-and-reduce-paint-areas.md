@@ -4,6 +4,7 @@ description: Paint is the process of filling in pixels that eventually get compo
 
 {# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Paint #}
 
 # Simplify Paint Complexity and Reduce Paint Areas {: .page-title }
 
