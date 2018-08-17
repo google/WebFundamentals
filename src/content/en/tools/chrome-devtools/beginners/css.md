@@ -1,14 +1,15 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-14 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
+TODO 
 # DevTools For Beginners: Getting Started with CSS {: .page-title }
 
-This is the second in a series of tutorials that teaches you the basics 
-of web development. 
+This is the second in a series of tutorials that teach you the basics of web
+development. 
 You are going to learn web development by actually building your own website.
 In this particular tutorial, you learn about CSS, another of the core
 technologies of web development. CSS controls the style of of webpages. 
@@ -89,15 +90,19 @@ Inline stylesheets are used to define styles for a singular element.
 For example, if you had several images on a web page, 
 but you wanted one to have special formatting, 
 like a border or a different shape, you could use an internal stylesheet. 
-Insert an internal stylesheet into the `img` tag of the picture on the demo
-site:
+For example, to insert a formatted image into your site:
 
-1. Copy the following code `style="border-radius: 50%"`.
-2. In the editing tab, navigate to line ______.
-3. Click on the end of the `<img>` tag, before the ending `>`, 
-and press <kbd>Space</kbd>.
-4. Paste the code into the `<img>` tag.
-5. Go to the viewing tab to see what's changed.
+
+1. Using the menu on the left-hand side, navigate to the **assets** tab.
+  `(TODO: A screenshot showing the left hand menu with the assets tab highlighted.)`
+2. Click on the image. A menu should appear.
+  `(TODO: A screenshot showing the menu.)`
+3. Click **Copy Url**.
+4. Using the menu on the left-hand side, navigate to `index.html`
+5. In the editing tab, navigate to line ______.
+6. Type in the following code `<img src = [Your Link] style="border-radius: 50%">`. 
+`(TODO: A screenshot showing the code in index.html.)`
+7. Go to the viewing tab to see what's changed. 
 
 `(TODO: A screenshot of the results of the CSS)`
 
@@ -127,7 +132,8 @@ the left-hand side of the screen.
 `(TODO: A screenshot showing the menu.)`
 
 4. In the `<head>` of the `contact.html` document, 
-on line ___ , paste in the code you copied.
+above the `</head>` tag, paste in the code you copied.
+  `(TODO: A screenshot showing the code.)`
 5. Go to the viewing tab. 
 There should be no changes on the main page (`index.html`).
 6. Click on the "Contact" link to take you to the contact page. 
@@ -146,7 +152,7 @@ First, create the stylesheet:
 
 1. Copy this code:
 ```
-.content {
+body {
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
   word-wrap: break-word;
@@ -176,6 +182,7 @@ li a {
 ```
 2. Go to the editing tab.
 3. In the menu on the left-hand side, click **Create A File**.
+`(TODO: A screenshot showing the create a file popup.)`
 4. Name the file `style.css`.
 5. Click **Add File**
 6. Paste the code you copied into `style.css`
@@ -187,9 +194,15 @@ the stylesheet you made:
 
 1. Copy this code: `<link rel="stylesheet" type="text/css" href="style.css">`
 2. Go to the editing tab.
-3. On line ____ of the `contact.html`document, press enter.
+3. Before the `</head>` tag of the `contact.html`document, press enter.
 4. Paste in the code.
+
+`(TODO: A screenshot showing the code in contact.html.)`
+
 5. Repeat steps 3 and 4 for `index.html`.
+
+`(TODO: A screenshot showing the code in index.html.)`
+
 6. Go to the viewing tab. Both of your webpages should have the same 
 formatting.
 
@@ -210,7 +223,7 @@ For example, you can easily create a sidebar on your site with CSS:
 
 1. Copy this code:
 ```
-.right{
+main {
   display:block;
   background-color: lightgrey;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -221,7 +234,8 @@ For example, you can easily create a sidebar on your site with CSS:
 ```
 2. Go to the editing tab.
 3. Navigate to `style.css` using the menu on the left.
-4. On line ___ , paste in the code.
+`(TODO: A screenshot showing someone doing that action.)`
+4. Paste in the code under the `body` section.
 5. Navigate to the viewing tab to see your new sidebar.
 
 `(TODO: A screenshot showing the new sidebar.)`
@@ -231,8 +245,13 @@ To remedy that:
 
 1. Go to the editing tab.
 2. Navigate to `style.css` using the menu on the left.
-3. On line ___ , under the `content` section, press enter and type `display: flex`. This will align all `<divs>` inside the content `<div>` horizontally.
+3. Under the `body` section, press enter and type `display: flex`. This will align all `<divs>` in the body of your site horizontally.
+
+  `(TODO: A screenshot showing the code.)`
+
 4. Navigate to the viewing tab to see the changes.
+
+`(TODO: A screenshot showing the new(er) sidebar.)`
 
 You can also use CSS to format tables, graphs, and other objects.
 
@@ -269,8 +288,8 @@ While this might seem complicated,
 a quick example will help you understand this CSS fundamental.
 
 Note: Before you start this example, 
-make sure you are viewing the CSS for the "right" `<div>`. 
-The `<div>`name should be highlighed.
+make sure you are viewing the CSS for `main`. 
+It should be highlighed.
 
 1. Double click on the first 5 in the padding box and replace the 5 with 50. 
 You should see a change in the space around the content inside the sidebar.
@@ -278,23 +297,29 @@ You should see a change in the space around the content inside the sidebar.
 `(TODO: A screenshot showing someone doing that action.)`
 
 2. Repeat this for the other 5s in the padding box.
+
+`(TODO: A screenshot showing the finished padding box.)`
+
 3. Double click on the first dash in the margin box. Type in the number 10. 
 You should see a change in the space around the sidebar.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
 4. Repeat this for the other spaces in the margin box.
-5. Double click on the #_ in the blue box and change it to __ . 
+
+`(TODO: A screenshot showing the finished margin box.)`
+
+5. Double click on the #_ in the blue box and change it to 800. 
 The size of the sidebar will change.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
 6. You may have noticed that an inline stylesheet 
-was added to the "right" `<div>`. Copy every CSS declaration after `style="`.
+was added to `main`. Copy every CSS declaration after `style="`.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
-7. Paste the CSS on line ___  of `style.css`.
+7. Paste the CSS in the `main` section of `style.css`.
 
 The box model diagram is useful for editing the size and spacing of your HTML elements.
 
@@ -313,39 +338,42 @@ Since your website is mostly white and grey,
 it would be nice to add a pop of color to the top of the website:
 
 1. Go to the viewing tab. 
-2. In the Elements Panel, click on the "top" `<div>` to highlight it.
+2. In the Elements Panel, click on `<header>` to highlight it.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
-3. In the part of the Styles Pane that says **.top{}**, 
+3. In the part of the Styles Pane that says **header{}**, 
 type `background-color: #c0d8e5`. 
 
 `(TODO: A screenshot showing someone doing that action.)`
 
-4. Copy the new .top CSS and paste it into style.css.
+4. Copy the new `<header>` CSS and paste it into style.css.
 
-The color is now changed. 
+`(TODO: A screenshot showing the result.)`
+
+The color is now changed!
+
 You can also change the color of an existing style definition 
 by doing the following:
 
 1. Click on the arrow next to the nav `<div>` to reveal the elements in it.
 
-	`(TODO: A screenshot showing someone doing that action.)`
+  `(TODO: A screenshot showing someone doing that action.)`
 
 2. Click on the `<ul>` tag to highlight it.
 
-	`(TODO: A screenshot showing someone doing that action.)`
+  `(TODO: A screenshot showing someone doing that action.)`
 
 3. Click on the gray square before the `background-color` code.
 4. A menu pops up with several options to change the color.
 
-	`(TODO: A screenshot showing the menu.)`
+  `(TODO: A screenshot showing the menu.)`
 
-For now, click on the box color code and replace the current code with ____.
+For now, click on the box color code and replace the current code with #c0d8e5.
 
-5. Copy the code from the Styles Pane and paste it after line __ in style.css.
+5. Copy the code from the Styles Pane and paste it in the `ul{}` section in style.css.
 
-
+`(TODO: A screenshot showing the result.)`
 
 ### Change Behavior (sort of) {: #behavior}
 
@@ -359,7 +387,7 @@ Changing a element's pseudostate is just as easy a changing an element's color:
 
 1. Click on the first `<li>` tag inside the nav `<div>`. 
 
-	`(TODO: A screenshot showing someone doing that action.)`
+  `(TODO: A screenshot showing someone doing that action.)`
 
 2. In the Styles Pane, click the gray plus in the center of the pane.
 
@@ -374,11 +402,15 @@ Changing a element's pseudostate is just as easy a changing an element's color:
 `(TODO: A screenshot showing someone doing that action.)`
 
 5. Hover over the Home and Contact links to see the changes.
-6. Copy the code from the Styles Pane and paste it after line __ in style.css.
+
+`(TODO: A screenshot showing the result.)`
+
+6. Copy the code from the Styles Pane and paste it at the end 
+  of the `li a` section in style.css.
 
 Note: This behavior is *not* the same as having an event occur
 when you click on a button. 
-For that, you will need to utilize JavaScript, a different framework.
+For that, you will need to utilize JavaScript, a different language.
 
 You've successfully made yourself a much more polished website!
 
