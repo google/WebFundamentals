@@ -12,8 +12,6 @@ toc:
 - heading: Audit References
 - title: Performance
   section:
-  - title: Consistently Interactive
-    path: /web/tools/lighthouse/audits/consistently-interactive
   - title: Critical Request Chains
     path: /web/tools/lighthouse/audits/critical-request-chains
   - title: Defer unused CSS
