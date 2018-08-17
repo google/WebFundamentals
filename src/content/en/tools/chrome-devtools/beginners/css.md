@@ -99,7 +99,7 @@ For example, to insert a formatted image into your site:
   `(TODO: A screenshot showing the menu.)`
 3. Click **Copy Url**.
 4. Using the menu on the left-hand side, navigate to `index.html`
-5. In the editing tab, navigate to line ______.
+5. In the editing tab, navigate to the line below `<h1> About Me </h1>` and press <kbd>Enter</kbd>.
 6. Type in the following code `<img src = [Your Link] style="border-radius: 50%">`. 
 `(TODO: A screenshot showing the code in index.html.)`
 7. Go to the viewing tab to see what's changed. 
@@ -107,7 +107,7 @@ For example, to insert a formatted image into your site:
 `(TODO: A screenshot of the results of the CSS)`
 
 All HTML elements have a `style` parameter, 
-so you can use this workflow on any element.
+so you can use internal spreadsheets with any element.
 
 #### Internal Stylesheets {: #internal}
 
@@ -195,7 +195,7 @@ the stylesheet you made:
 1. Copy this code: `<link rel="stylesheet" type="text/css" href="style.css">`
 2. Go to the editing tab.
 3. Before the `</head>` tag of the `contact.html`document, press enter.
-4. Paste in the code.
+4. Paste in the code. The page is now linked to the spreadsheet.
 
 `(TODO: A screenshot showing the code in contact.html.)`
 
@@ -210,7 +210,7 @@ formatting.
 
 Note: You may have noticed that the external stylesheet 
 overwrote the previous formatting for `contact.html`. 
-This is because the browser considers the definitions from the latest 
+This is because the browser only considers style definitions from the last
 stylesheet it sees. 
 
 Now that you've linked your external spreadsheet, 
@@ -219,24 +219,49 @@ you will continue to use it for the rest of this tutorial.
 ### Align Objects {: #align}
 
 One of the most important things CSS can do is object alignment. 
-For example, you can easily create a sidebar on your site with CSS:
+For example, you can easily create a sidebar on your site with CSS.
+
+First, you'll need to do a bit of setup for the sidebar to display properly:
+
+1. Copy this code: 
+
+```
+<div> <p> Here's some info about my site. </p><div>
+```
+This code creates a section that will eventually be displayed on the left side of your page.
+
+2. Go to the editing tab.
+3. Paste the code directly under the `<main>` tag.
+
+  `(TODO: A screenshot showing someone doing that action.)`
+
+4. Directly above the `<h1>About Me</h1>` line, type `<div id = right>`.
+
+  `(TODO: A screenshot showing someone doing that action.)`
+
+5. Directly above the `</main>` tag, type `</div>`. Now you have a container for your sidebar.
+
+Next, you'll need to add formatting to make the `<div>` we just created look like a sidebar: 
 
 1. Copy this code:
 ```
-main {
-  display:block;
+.right{
+  display:block; /*Makes the element display as a box*/
   background-color: lightgrey;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 5px;
+  /* Creates a rectangular shadow around the element */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
   height:100%;
   width: 100%;
 }
 ```
-2. Go to the editing tab.
-3. Navigate to `style.css` using the menu on the left.
+
+2. Navigate to `style.css` using the menu on the left.
+
 `(TODO: A screenshot showing someone doing that action.)`
-4. Paste in the code under the `body` section.
-5. Navigate to the viewing tab to see your new sidebar.
+
+3. Paste in the code under the `body` section.
+
+4. Navigate to the viewing tab to see your new sidebar.
 
 `(TODO: A screenshot showing the new sidebar.)`
 
@@ -245,7 +270,7 @@ To remedy that:
 
 1. Go to the editing tab.
 2. Navigate to `style.css` using the menu on the left.
-3. Under the `body` section, press enter and type `display: flex`. This will align all `<divs>` in the body of your site horizontally.
+3. Inside the `main` section, press enter and type `display: flex`. This will align all `<divs>` in `<main>` horizontally.
 
   `(TODO: A screenshot showing the code.)`
 
@@ -281,6 +306,8 @@ a readout of the selected element's CSS, and a Box Model Diagram.
 
 `(TODO: A screenshot showing the styles pane and the BMD.)`
 
+Note: You may need to scroll down to see the Box Model Diagram depending on the size and position of your DevTools screen.
+
 The box model states that a browser renders each HTML element as a box whose 
 properties can be edited by CSS declarations. 
 Each box has four elements: content, padding, border, and margin. 
@@ -288,11 +315,14 @@ While this might seem complicated,
 a quick example will help you understand this CSS fundamental.
 
 Note: Before you start this example, 
-make sure you are viewing the CSS for `main`. 
-It should be highlighed.
+make sure you are viewing the CSS for the `right <div>`. 
+The `<div>` should be highlighed.
 
-1. Double click on the first 5 in the padding box and replace the 5 with 50. 
-You should see a change in the space around the content inside the sidebar.
+1. Double click on the left most space in the padding box. Currently, there is a `-`, which means there is no padding around the object.
+
+`(TODO: A screenshot showing someone doing that action.)`
+
+2. Type in a `5` and press enter. You should see a change in the space around the content inside the sidebar.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
@@ -300,26 +330,12 @@ You should see a change in the space around the content inside the sidebar.
 
 `(TODO: A screenshot showing the finished padding box.)`
 
-3. Double click on the first dash in the margin box. Type in the number 10. 
-You should see a change in the space around the sidebar.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-4. Repeat this for the other spaces in the margin box.
-
-`(TODO: A screenshot showing the finished margin box.)`
-
-5. Double click on the #_ in the blue box and change it to 800. 
-The size of the sidebar will change.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-6. You may have noticed that an inline stylesheet 
+3. You may have noticed that an inline stylesheet 
 was added to `main`. Copy every CSS declaration after `style="`.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
-7. Paste the CSS in the `main` section of `style.css`.
+4. Paste the CSS inside the `.right` section of `style.css`.
 
 The box model diagram is useful for editing the size and spacing of your HTML elements.
 
