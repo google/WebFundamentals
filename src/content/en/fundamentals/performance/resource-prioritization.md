@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-11-06 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -349,3 +349,7 @@ and delaying JavaScript fetch, compile and execute with
 [async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async){: .external}
 and
 [defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer){: .external}.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

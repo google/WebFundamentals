@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can.
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Reduce the Scope and Complexity of Style Calculations {: .page-title }
 
@@ -108,3 +109,7 @@ If you don’t like BEM, there are other ways to approach your CSS, but the perf
 
 * [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
 * [BEM (Block, Element, Modifier)](https://bem.info/){: .external }
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

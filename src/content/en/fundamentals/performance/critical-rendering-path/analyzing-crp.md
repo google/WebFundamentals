@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to identify and resolve critical rendering path performance bottlenecks.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: N/A #}
 
 # Analyzing Critical Rendering Path Performance {: .page-title }
 
@@ -214,3 +215,8 @@ Finally, if the CSS stylesheet were only needed for print, how would that look?
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 
 Because the style.css resource is only used for print, the browser doesn't need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page. As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.
+
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

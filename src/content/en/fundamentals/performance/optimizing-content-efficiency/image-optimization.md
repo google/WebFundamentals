@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 
-{# wf_updated_on: 2018-02-16 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-05-06 #}
 {# wf_blink_components: Blink>Image #}
 
@@ -438,3 +438,7 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
 * **Remove unnecessary image metadata:** many raster images contain unnecessary metadata about the asset: geo information, camera information, and so on. Use appropriate tools to strip this data.
 * **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size of the image. Pay close attention to large images in particular, as they account for largest overhead when resized!
 * **Automate, automate, automate:** invest into automated tools and infrastructure that will ensure that all of your image assets are always optimized.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

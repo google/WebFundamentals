@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>JavaScript,Blink>CSS #}
 
 # PageSpeed Rules and Recommendations {: .page-title }
 
@@ -106,3 +107,7 @@ The CSS import (`@import`) directive enables one stylesheet to import rules from
 
 For best performance, you may want to consider inlining the critical CSS directly into the HTML document. This eliminates additional roundtrips in the critical path and if done correctly can deliver a "one roundtrip" critical path length where only the HTML is a blocking resource.
 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

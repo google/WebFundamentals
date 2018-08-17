@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
-{# wf_updated_on: 2018-08-08 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -171,3 +171,7 @@ that case everything helps.
 
 In short, you should be very wary of micro-optimizations because they won’t typically map to the
 kind of application you’re building.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

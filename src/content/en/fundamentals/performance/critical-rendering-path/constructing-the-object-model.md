@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how the browser constructs the DOM and CSSOM trees.
 
-{# wf_updated_on: 2014-09-11 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>DOM #}
 
 # Constructing the Object Model {: .page-title }
 
@@ -79,3 +80,7 @@ To find out how long the CSS processing takes you can record a timeline in DevTo
 <img src="images/cssom-timeline.png"  alt="Tracing CSSOM construction in DevTools">
 
 Our trivial stylesheet takes ~0.6ms to process and affects eight elements on the page&mdash;not much, but once again, not free. However, where did the eight elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the [render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction) that links the DOM and CSSOM together.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
