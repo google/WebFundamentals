@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Time to Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -22,11 +22,11 @@ description: Reference documentation for the "Time to Interactive" Lighthouse au
 The Time to Interactive (TTI) metric measures how long it takes a page to become interactive.
 "Interactive" is defined as the point where:
 
-* The page has displayed useful content, which is measured with [First Meaningful Paint][FMP].
+* The page has displayed useful content, which is measured with [First Contentful Paint][FCP].
 * Event handlers are registered for most visible page elements.
 * The page responds to user interactions within 50 milliseconds.
 
-[FMP]: /web/tools/lighthouse/audits/first-meaningful-paint
+[FMP]: /web/tools/lighthouse/audits/first-contentful-paint
 
 Some sites optimize content visibility at the expense of interactivity. This can create a frustrating
 user experience. The site appears to be ready, but when the user tries to interact with it, nothing happens.
@@ -47,7 +47,11 @@ To measure when TTI actually occurs on your users' devices, see [Tracking TTI][R
 The code snippet describes how to programmatically access TTI data and submit it to
 Google Analytics.
 
+TTI can be difficult to track in the wild. You may prefer to track [First Input Delay][FID],
+instead.
+
 [RUM]: /web/fundamentals/performance/user-centric-performance-metrics#tracking_tti
+[FID]: /web/updates/2018/05/first-input-delay
 
 ## More information {: #more-info }
 
