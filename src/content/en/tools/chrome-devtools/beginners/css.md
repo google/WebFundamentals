@@ -12,7 +12,7 @@ This is the second in a series of tutorials that teach you the basics of web
 development. 
 You are going to learn web development by actually building your own website.
 In this particular tutorial, you learn about CSS, another of the core
-technologies of web development. CSS controls the style of of webpages. 
+technologies of web development. CSS controls the style of webpages. 
 
 Currently your site looks like this: 
 
@@ -38,7 +38,8 @@ You'll also have a real website!
 Before attempting this tutorial, complete the following prerequisites:
 
 * Complete the previous tutorial on HTML and DOM or complete *Setup* below.
-* Download the [Google Chrome][chrome]{: .external } web browser. This tutorial uses a set of web development tools, 
+* Download the [Google Chrome][chrome]{: .external } web browser. 
+This tutorial uses a set of web development tools, 
 called Chrome DevTools, that are built into Google Chrome. 
 [chrome]: https://www.google.com/chrome/
 
@@ -99,7 +100,8 @@ For example, to insert a formatted image into your site:
   `(TODO: A screenshot showing the menu.)`
 3. Click **Copy Url**.
 4. Using the menu on the left-hand side, navigate to `index.html`
-5. In the editing tab, navigate to the line below `<h1> About Me </h1>` and press <kbd>Enter</kbd>.
+5. In the editing tab, navigate to the line below `<h1> About Me </h1>` and 
+press <kbd>Enter</kbd>.
 6. Type in the following code `<img src = [Your Link] style="border-radius: 50%">`. 
 `(TODO: A screenshot showing the code in index.html.)`
 7. Go to the viewing tab to see what's changed. 
@@ -270,7 +272,8 @@ To remedy that:
 
 1. Go to the editing tab.
 2. Navigate to `style.css` using the menu on the left.
-3. Inside the `main` section, press enter and type `display: flex`. This will align all `<divs>` in `<main>` horizontally.
+3. Inside the `main` section, press enter and type `display: flex`. 
+This will align all `<divs>` in `<main>` horizontally.
 
   `(TODO: A screenshot showing the code.)`
 
@@ -306,7 +309,8 @@ a readout of the selected element's CSS, and a Box Model Diagram.
 
 `(TODO: A screenshot showing the styles pane and the BMD.)`
 
-Note: You may need to scroll down to see the Box Model Diagram depending on the size and position of your DevTools screen.
+Note: You may need to scroll down to see the Box Model Diagram 
+depending on the size and position of your DevTools screen.
 
 The box model states that a browser renders each HTML element as a box whose 
 properties can be edited by CSS declarations. 
@@ -318,11 +322,13 @@ Note: Before you start this example,
 make sure you are viewing the CSS for the `right <div>`. 
 The `<div>` should be highlighed.
 
-1. Double click on the left most space in the padding box. Currently, there is a `-`, which means there is no padding around the object.
+1. Double click on the left most space in the padding box. 
+Currently, there is a `-`, which means there is no padding around the object.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
-2. Type in a `5` and press enter. You should see a change in the space around the content inside the sidebar.
+2. Type in a `5` and press enter. 
+You should see a change in the space around the content inside the sidebar.
 
 `(TODO: A screenshot showing someone doing that action.)`
 
@@ -348,7 +354,9 @@ the colors of elements on your web page.
 Note: CSS colors come in several forms, including RGB, Hex, 
 and HTML Safe Color codes. 
 For the following examples, you will be using hex colors. 
-See [this resource](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) for more information.
+
+See [this resource](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+for more information.
 
 Since your website is mostly white and grey, 
 it would be nice to add a pop of color to the top of the website:
@@ -453,7 +461,8 @@ in your `<head>` section.
   </tr>
   <tr>
     <td>Helps you save time</td>
-    <td>You may have to rewrite your HTML if your project didn't start with the framework.</td>
+    <td>You may have to rewrite your HTML if your project didn't start in the framework.
+    </td>
   </tr>
   <tr>
     <td>Helps you maintain CSS best practices</td>
