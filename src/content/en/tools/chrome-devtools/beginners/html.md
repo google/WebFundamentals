@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-15 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -10,15 +10,18 @@ book_path: /web/tools/_book.yaml
 {% include "web/_shared/contributors/katjackson.html" %}
 
 This is the first in a series of tutorials that teach you the basics of web
-development. You are going to learn web development by actually building your own
-website.
+development. You will also learn about a set of web developer tools called Chrome
+DevTools that can increase your productivity.
 
 In this particular tutorial, you learn about HTML and the DOM. HTML is one of the core
 technologies of web development. It is the language that controls the structure and content
 of webpages. The DOM is also related to the structure and content of webpages, but you'll
 learn more about that later.
 
-By the time you complete all of the tutorials in the *DevTools for Beginners* series,
+## Goals {: #goals }
+
+You are going to learn web development by actually building your own
+website. By the time you complete all of the tutorials in the *DevTools for Beginners* series,
 your finished site will look like **Figure X**.
 
 <figure>
@@ -29,12 +32,10 @@ your finished site will look like **Figure X**.
   </figcaption>
 </figure>
 
-## Goals {: #goals }
-
 By the end of this tutorial, you will understand:
 
 * How HTML and the DOM create the content that you see on webpages.
-* How Chrome DevTools can help you when you're working with HTML and the DOM.
+* How Chrome DevTools can help you experiment with HTML and DOM changes.
 * The difference between HTML and the DOM.
 
 You'll also have a real website!
@@ -61,18 +62,18 @@ You're going to build your site in an online code editor called Glitch.
    This tab will be called the **editor tab** throughout this tutorial.
 
      <figure>
-       <img src="imgs/editor.png" alt="The editor tab.">
+       <img src="imgs/setup1.png" alt="The editor tab.">
        <figcaption>
-         <b>Figure 1</b>. The editor tab
+         <b>Figure X</b>. The editor tab
        </figcaption>
      </figure>
 
 2. Click **dfb1**. The Project Options menu opens in the top-left corner.
 
      <figure>
-       <img src="imgs/menu.png" alt="The Project Options menu.">
+       <img src="imgs/setup2.png" alt="The Project Options menu.">
        <figcaption>
-         <b>Figure 2</b>. The Project Options menu
+         <b>Figure X</b>. The Project Options menu
        </figcaption>
      </figure>
 
@@ -80,17 +81,20 @@ You're going to build your site in an online code editor called Glitch.
    edit and randomly generates a new name for the project. The content is
    the same as before.
 
-     TODO add screenshot
+     <figure>
+       <img src="imgs/setup2.png" alt="The remixed project.">
+       <figcaption>
+         <b>Figure X</b>. The remixed project
+       </figcaption>
+     </figure>
 
 4. Click **Show Live**. A new tab opens, showing you the live page.
-   Whenever you make edits in the editor tab, the live page automatically
-   updates. No need to manually reload the page. This tab will be called the
-   **live tab** throughout this tutorial.
+   This tab will be called the **live tab** throughout this tutorial.
 
      <figure>
-       <img src="imgs/live.png" alt="The live tab.">
+       <img src="imgs/setup3.png" alt="The live tab.">
        <figcaption>
-         <b>Figure 3</b>. The live tab
+         <b>Figure X</b>. The live tab
        </figcaption>
      </figure>
 
@@ -103,13 +107,15 @@ content to it!
    with `<h1>About Me</h1>`.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
-      <div class="About">{% endhtmlescape %}<strong>
+    <body>
+      <p>Your site!</p>
+      <main>{% endhtmlescape %}<strong>
       {% htmlescape %}  <h1>About Me</h1>{% endhtmlescape %}
-      </strong>{% htmlescape %}</div>
-    ...{% endhtmlescape %}</pre>
+      </strong>{% htmlescape %}</main>
+      ...{% endhtmlescape %}</pre>
 
      <figure>
-       <img src="imgs/aboutme.png"
+       <img src="imgs/add1.png"
             alt="The new code is highlighted in the editor tab."/>
        <figcaption>
          <b>Figure X</b>. The new code is highlighted in the editor tab
@@ -122,25 +128,27 @@ content to it!
    font sizes.
 
      <figure>
-       <img src="imgs/aboutme2.png"
+       <img src="imgs/add2.png"
             alt="The new heading is visible in the live tab."/>
        <figcaption>
          <b>Figure X</b>. The new heading is visible in the live tab
        </figcaption>
      </figure>
 
-1. Back in the **editor tab**, add `<p>I am learning HTML.</p>` on the line below
+1. Back in the **editor tab**, insert `<p>I am learning HTML.</p>` on the line below
    where you just put `<h1>About Me</h1>`.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
-      <div class="About">
+    <body>
+      <p>Your site!</p>
+      <main>
         <h1>About Me</h1>{% endhtmlescape %}<strong>
-      {% htmlescape %}  <p>I am learning web development. Here are some of my recent accomplishments:</p>{% endhtmlescape %}
-      </strong>{% htmlescape %}</div>
-    ...{% endhtmlescape %}</pre>
+      {% htmlescape %}  <p>I am learning web development. Recent accomplishments:</p>{% endhtmlescape %}
+      </strong>{% htmlescape %}</main>
+      ...{% endhtmlescape %}</pre>
 
      <figure>
-       <img src="imgs/aboutme3.png"
+       <img src="imgs/add3.png"
             alt="The new code is highlighted in the editor tab."/>
        <figcaption>
          <b>Figure X</b>. The new code is highlighted in the editor tab
@@ -161,7 +169,7 @@ content to it!
     ...{% endhtmlescape %}</pre>
 
      <figure>
-       <img src="imgs/accomplishments1.png"
+       <img src="imgs/add4.png"
             alt="The new code is highlighted in the editor tab.">
        <figcaption>
          <b>Figure 4</b>. The new code is highlighted in the editor tab
@@ -171,7 +179,7 @@ content to it!
 1. Again, go back to the **live tab** to make sure that the new content is displaying correctly.
 
      <figure>
-       <img src="imgs/accomplishments2.png"
+       <img src="imgs/add5.png"
             alt="The new list is visible in the live tab.">
        <figcaption>
          <b>Figure 4</b>. The new list is visible in the live tab
@@ -180,8 +188,9 @@ content to it!
 
 ## Experiment with content changes in Chrome DevTools {: #experiment }
 
-You may have found going back-and-forth between the editor tab and the live tab to be
-somewhat tedious. Chrome DevTools can help you experiment with content changes without
+If you were developing a big page with a lot of HTML, you can imagine that it would become
+somewhat tedious to go back-and-forth between the editor tab and the live tab hundreds of times
+in order to see your changes. Chrome DevTools can help you experiment with content changes without
 ever leaving the live tab.
 
 ### Learn the difference between HTML and the DOM {: #DOM }
@@ -232,11 +241,10 @@ the difference between HTML and the DOM. The best way to learn is by example:
 
 When your page loads, the browser takes your HTML to create the *initial* content of the page. The
 DOM represents the *current* content of the page, which can change over time.
-This is what you're seeing in the DOM Tree of DevTools. The mysterious `<div>A new element!?!</div`
-content is added to your page because of the `<script src="new.js"></script>` tag at the bottom
-of your HTML. This tag causes some JavaScript code to run. The JavaScript code adds
-`<div>A new element!?!</div>` to your page. That is why this mystery text is visible on your live page,
-but not in your HTML.
+The mysterious `<div>A new element!?!</div` content is added to your page because of the
+`<script src="new.js"></script>` tag at the bottom of your HTML. This tag causes some JavaScript
+code to run. The JavaScript code adds `<div>A new element!?!</div>` to your page. That is why
+this mystery text is visible on your live page, but not in your HTML.
 
 ### Edit the DOM {: #edit }
 
@@ -269,8 +277,9 @@ try DevTools.
      </figure>
 
 1. Press <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Enter</kbd>
-   (Windows, Linux, Chrome OS) to save your changes. Your changes automatically show up
-   in the live view of your page. The text `Your site!` has been replaced with the new content.
+   (Windows, Linux, Chrome OS) to save your changes, or click outside of the box.
+   Your changes automatically show up in the live view of your page. The text `Your site!`
+   has been replaced with the new content.
 
      <figure>
        <img src="imgs/edit3.png"
@@ -301,7 +310,7 @@ bottom. To move it to the top:
        </figcaption>
      </figure>
 
-1. Drag the `<nav>` node to the top, so that it's the first child of the `<body>` node.
+1. Drag the `<nav>` node to the top, so that it's the first child below the `<body>` node.
 
      <figure>
        <img src="imgs/nav2.png"
@@ -335,7 +344,7 @@ You can also remove nodes from the DOM Tree.
        </figcaption>
      </figure>
 
-1. Press the <kbd>Delete</kbd> key.
+1. Press the <kbd>Delete</kbd> key on your keyboard.
 
      <figure>
        <img src="imgs/delete2.png"
@@ -352,59 +361,59 @@ code.
 
 1. Copy the code below.
 
-     <pre class="prettyprint lang-html">
-       {% htmlescape %}
-       <!DOCTYPE html>
-       <!-- This is an HTML comment. Comments don't show up in the page. They're just for developers
-            to leave notes to each other about the page's code. Below is a (mostly) blank HTML document.
-            You'll be filling it in as you go. -->
-       <html lang="en">
-         <head>
-           <!-- Meta tags provide metadata about the page that help browsers understand
-                how the page should be represented. -->
-           <meta charset="utf-8">
-           <meta http-equiv="X-UA-Compatible" content="IE=edge">
-           <meta name="viewport" content="width=device-width, initial-scale=1">
-         </head>
-         <body>
-           <nav>
-             <ul>
-               <li>Home</li>
-               <li>Contact</li>
-             </ul>
-           </nav>
-           <!-- div elements represent a section of the document. -->
-           <div class="About">
-             <h1>About Me</h1>
-             <p>I am learning web development. Recent accomplishments:</p>
-             <ul>
-               <li>Learned how to set up my code in Glitch.</li>
-               <li>Added content to my HTML.</li>
-               <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
-               <li>Learned the difference between HTML and the DOM.</li>
-             </ul>
-           </div>
-           <div class="stand-out"></div>
-           <div class="Author" id="Author">
-             <!-- You'll add your own information later. -->
-           </div>
-           <nav>
-             <ul>
-               <li>Home</li>
-               <li>Contact</li>
-             </ul>
-           </nav>
-         </body>
-       </html>
-       {% endhtmlescape %}
-     </pre>
+```html
+<!DOCTYPE html>
+<!-- This is an HTML comment. Comments don't show up in the page. They're just for developers
+     to leave notes to each other about the page's code. Below is a (mostly) blank HTML document.
+     You'll be filling it in as you go. -->
+<html lang="en">
+  <head>
+    <!-- Meta tags provide metadata about the page that help browsers understand
+         how the page should be represented. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <!-- div elements represent a section of the document. -->
+    <div class="About">
+      <h1>About Me</h1>
+      <p>I am learning web development. Recent accomplishments:</p>
+      <ul>
+        <li>Learned how to set up my code in Glitch.</li>
+        <li>Added content to my HTML.</li>
+        <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
+        <li>Learned the difference between HTML and the DOM.</li>
+      </ul>
+    </div>
+    <div class="stand-out"></div>
+    <div class="Author" id="Author">
+      <!-- You'll add your own information later. -->
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </body>
+</html>
+```
+
+2. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
+   you've copied.
 
 ## Next steps {: #next-steps}
 
-* Read [Introduction to the DOM][DOM]{: .external } to strengthen your conceptual understanding of the
-  DOM.
-* Stay tuned for the next tutorial in this series! In the next tutorial you will learn how to style your
-  page using CSS, and how to change styles on the fly through DevTools.
+* Read [Introduction to the DOM][DOM]{: .external } to learn more about the DOM.
+* Stay tuned for the next tutorial in this series, in which you'll learn how to style
+  your page using CSS, and experiment with CSS changes in DevTools.
 
 [DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
