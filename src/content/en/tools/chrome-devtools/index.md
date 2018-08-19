@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-19 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -25,6 +25,7 @@ demonstrates.
 
 Here are the recommended starting points for some of the most common ways that DevTools
 can help you build websites faster:
+Note: Opening DevTools on Windows/Linux: `Ctrl + Shift + I`. On a Mac: `Cmd + Opt + I`.
 
 * [Viewing and changing a page's styles](/web/tools/chrome-devtools/css/). Every developer goes
   through this experience: you code some CSS, and then you view your page and... the styles
@@ -55,7 +56,7 @@ docs or the DevTools product itself, the DevTools team would love to hear your f
 
 ## Discover DevTools {: #discover-devtools }
 
-The DevTools UI can be a little overwhelming... there's so many tabs! But, if you take some
+The DevTools UI can be a little overwhelming... there are so many tabs! But, if you take some
 time to get familiar with each tab to understand what's possible, you may discover that DevTools
 can seriously boost your productivity.
 
