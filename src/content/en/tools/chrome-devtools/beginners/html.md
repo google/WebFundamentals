@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2018-08-20 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -82,7 +82,7 @@ You're going to build your site in an online code editor called Glitch.
    the same as before.
 
      <figure>
-       <img src="imgs/setup2.png" alt="The remixed project.">
+       <img src="imgs/setup3.png" alt="The remixed project.">
        <figcaption>
          <b>Figure X</b>. The remixed project
        </figcaption>
@@ -92,7 +92,7 @@ You're going to build your site in an online code editor called Glitch.
    This tab will be called the **live tab** throughout this tutorial.
 
      <figure>
-       <img src="imgs/setup3.png" alt="The live tab.">
+       <img src="imgs/setup4.png" alt="The live tab.">
        <figcaption>
          <b>Figure X</b>. The live tab
        </figcaption>
@@ -135,7 +135,7 @@ content to it!
        </figcaption>
      </figure>
 
-1. Back in the **editor tab**, insert `<p>I am learning HTML.</p>` on the line below
+1. Back in the **editor tab**, insert `<p>I am learning HTML. Recent accomplishments:</p>` on the line below
    where you just put `<h1>About Me</h1>`.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
@@ -188,10 +188,10 @@ content to it!
 
 ## Experiment with content changes in Chrome DevTools {: #experiment }
 
-If you were developing a big page with a lot of HTML, you can imagine that it would become
+If you were developing a big page with a lot of HTML, you can imagine that it might be
 somewhat tedious to go back-and-forth between the editor tab and the live tab hundreds of times
-in order to see your changes. Chrome DevTools can help you experiment with content changes without
-ever leaving the live tab.
+in order to see your changes, especially if you weren't sure what exactly to put on the page.
+Chrome DevTools can help you experiment with content changes without ever leaving the live tab.
 
 ### Learn the difference between HTML and the DOM {: #DOM }
 
@@ -201,27 +201,29 @@ the difference between HTML and the DOM. The best way to learn is by example:
 1. Go to the **live tab**. At the bottom of your page you see the text `A new element!?!`.
 
      <figure>
-       <img src="imgs/new1.png"
-            alt="The mystery text."/>
+       <img src="imgs/dom1.png"
+            alt="At the bottom of the page the text 'A new element!?!' can be seen."/>
        <figcaption>
-         <b>Figure X</b>. The mystery text
+         <b>Figure X</b>. At the bottom of the page the text <code>A new element!?!</code> can
+         be seen
        </figcaption>
      </figure>
 
 1. Go back to the **editor tab** and try to find this text in `index.html`. It's not there!
 
      <figure>
-       <img src="imgs/new2.png"
-            alt="The mystery text is nowhere to be found in the HTML."/>
+       <img src="imgs/dom2.png"
+            alt="The mystery text is nowhere to be found in index.html."/>
        <figcaption>
-         <b>Figure X</b>. The mystery text is nowhere to be found in the HTML
+         <b>Figure X</b>. The mystery text <code>A new element!?!</code> is nowhere to
+         be found in <code>index.html</code>
        </figcaption>
      </figure>
 
 1. Go back to the **live tab**, right-click `A new element!?!`, and select **Inspect**.
 
      <figure>
-       <img src="imgs/inspect.png"
+       <img src="imgs/dom3.png"
             alt="Inspecting some text."/>
        <figcaption>
          <b>Figure X</b>. Inspecting some text
@@ -232,7 +234,7 @@ the difference between HTML and the DOM. The best way to learn is by example:
     Although this structure in DevTools looks like your HTML, it is actually the **DOM Tree**.
 
      <figure>
-       <img src="imgs/inspect2.png"
+       <img src="imgs/dom4.png"
             alt="DevTools is open alongside the page."/>
        <figcaption>
          <b>Figure X</b>. DevTools is open alongside the page
@@ -283,9 +285,9 @@ try DevTools.
 
      <figure>
        <img src="imgs/edit3.png"
-            alt="Editing the node as HTML."/>
+            alt="The new content shows up immediately on the page."/>
        <figcaption>
-         <b>Figure X</b>. Editing the node as HTML
+         <b>Figure X</b>. The new content shows up immediately on the page
        </figcaption>
      </figure>
 
@@ -303,7 +305,7 @@ bottom. To move it to the top:
 1. Find the `<nav>` node in the **DOM Tree** of DevTools.
 
      <figure>
-       <img src="imgs/nav1.png"
+       <img src="imgs/reorder1.png"
             alt="The nav node is highlighted blue in DevTools."/>
        <figcaption>
          <b>Figure X</b>. The nav node is highlighted blue in DevTools
@@ -313,7 +315,7 @@ bottom. To move it to the top:
 1. Drag the `<nav>` node to the top, so that it's the first child below the `<body>` node.
 
      <figure>
-       <img src="imgs/nav2.png"
+       <img src="imgs/reorder2.png"
             alt="Dragging the nav node to the top."/>
        <figcaption>
          <b>Figure X</b>. Dragging the nav node to the top
@@ -323,7 +325,7 @@ bottom. To move it to the top:
     The `<nav>` node is now displaying at the top of your page.
 
      <figure>
-       <img src="imgs/nav3.png"
+       <img src="imgs/reorder3.png"
             alt="The nav node is at the top of the page."/>
        <figcaption>
          <b>Figure X</b>. The nav node is at the top of the page
@@ -344,7 +346,8 @@ You can also remove nodes from the DOM Tree.
        </figcaption>
      </figure>
 
-1. Press the <kbd>Delete</kbd> key on your keyboard.
+1. Press the <kbd>Delete</kbd> key on your keyboard. The `<div>A new element!?!</div>` node is removed
+   from your DOM Tree.
 
      <figure>
        <img src="imgs/delete2.png"
@@ -354,60 +357,32 @@ You can also remove nodes from the DOM Tree.
        </figcaption>
      </figure>
 
-## Wrap up {: #wrapup }
+## Copy your changes {: #copy }
 
 You're almost done. You've made a few changes to your page in DevTools, but they're not yet saved to your
-code.
+source code.
+
+1. Reload your **live tab**. The changes that you made disappear.
+
+     <figure>
+       <img src="imgs/copy1.png"
+            alt="TODO."/>
+       <figcaption>
+         <b>Figure X</b>. TODO
+       </figcaption>
+     </figure>
 
 1. Copy the code below.
-
-```html
-<!DOCTYPE html>
-<!-- This is an HTML comment. Comments don't show up in the page. They're just for developers
-     to leave notes to each other about the page's code. Below is a (mostly) blank HTML document.
-     You'll be filling it in as you go. -->
-<html lang="en">
-  <head>
-    <!-- Meta tags provide metadata about the page that help browsers understand
-         how the page should be represented. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-    <!-- div elements represent a section of the document. -->
-    <div class="About">
-      <h1>About Me</h1>
-      <p>I am learning web development. Recent accomplishments:</p>
-      <ul>
-        <li>Learned how to set up my code in Glitch.</li>
-        <li>Added content to my HTML.</li>
-        <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
-        <li>Learned the difference between HTML and the DOM.</li>
-      </ul>
-    </div>
-    <div class="stand-out"></div>
-    <div class="Author" id="Author">
-      <!-- You'll add your own information later. -->
-    </div>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  </body>
-</html>
-```
-
-2. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
+1. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
    you've copied.
+
+     <figure>
+       <img src="imgs/copy2.png"
+            alt="TODO."/>
+       <figcaption>
+         <b>Figure X</b>. TODO
+       </figcaption>
+     </figure>
 
 ## Next steps {: #next-steps}
 
