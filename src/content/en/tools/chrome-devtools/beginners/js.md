@@ -5,7 +5,7 @@ book_path: /web/tools/_book.yaml
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# DevTools For Beginners: Getting Started with JavaScript{: .page-title}
+# DevTools For Beginners: Getting Started with JavaScript {: .page-title}
 
 This is the second in a series of tutorials that teach you the basics of web
 development. 
