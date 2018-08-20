@@ -22,13 +22,13 @@ learn more about that later.
 
 You are going to learn web development by actually building your own
 website. By the time you complete all of the tutorials in the *DevTools for Beginners* series,
-your finished site will look like **Figure X**.
+your finished site will look like **Figure 1**.
 
 <figure>
   <img src="imgs/finished.png"
        alt="The finished site."/>
   <figcaption>
-    <b>Figure X</b>. The finished site
+    <b>Figure 1</b>. The finished site
   </figcaption>
 </figure>
 
@@ -38,7 +38,7 @@ By the end of this tutorial, you will understand:
 * How Chrome DevTools can help you experiment with HTML and DOM changes.
 * The difference between HTML and the DOM.
 
-You'll also have a real website!
+You'll also have a real website! You can use this site to host your resume or blog.
 
 ## Prerequisites {: #prerequisites }
 
@@ -64,7 +64,7 @@ You're going to build your site in an online code editor called Glitch.
      <figure>
        <img src="imgs/setup1.png" alt="The editor tab.">
        <figcaption>
-         <b>Figure X</b>. The editor tab
+         <b>Figure 2</b>. The editor tab
        </figcaption>
      </figure>
 
@@ -73,7 +73,7 @@ You're going to build your site in an online code editor called Glitch.
      <figure>
        <img src="imgs/setup2.png" alt="The Project Options menu.">
        <figcaption>
-         <b>Figure X</b>. The Project Options menu
+         <b>Figure 3</b>. The Project Options menu
        </figcaption>
      </figure>
 
@@ -84,7 +84,7 @@ You're going to build your site in an online code editor called Glitch.
      <figure>
        <img src="imgs/setup3.png" alt="The remixed project.">
        <figcaption>
-         <b>Figure X</b>. The remixed project
+         <b>Figure 4</b>. The remixed project
        </figcaption>
      </figure>
 
@@ -94,7 +94,7 @@ You're going to build your site in an online code editor called Glitch.
      <figure>
        <img src="imgs/setup4.png" alt="The live tab.">
        <figcaption>
-         <b>Figure X</b>. The live tab
+         <b>Figure 5</b>. The live tab
        </figcaption>
      </figure>
 
@@ -118,7 +118,7 @@ content to it!
        <img src="imgs/add1.png"
             alt="The new code is highlighted in the editor tab."/>
        <figcaption>
-         <b>Figure X</b>. The new code is highlighted in the editor tab
+         <b>Figure 6</b>. The new code is highlighted in the editor tab
        </figcaption>
      </figure>
 
@@ -131,7 +131,7 @@ content to it!
        <img src="imgs/add2.png"
             alt="The new heading is visible in the live tab."/>
        <figcaption>
-         <b>Figure X</b>. The new heading is visible in the live tab
+         <b>Figure 7</b>. The new heading is visible in the live tab
        </figcaption>
      </figure>
 
@@ -151,7 +151,7 @@ content to it!
        <img src="imgs/add3.png"
             alt="The new code is highlighted in the editor tab."/>
        <figcaption>
-         <b>Figure X</b>. The new code is highlighted in the editor tab
+         <b>Figure 8</b>. The new code is highlighted in the editor tab
        </figcaption>
      </figure>
 
@@ -204,7 +204,7 @@ the difference between HTML and the DOM. The best way to learn is by example:
        <img src="imgs/dom1.png"
             alt="At the bottom of the page the text 'A new element!?!' can be seen."/>
        <figcaption>
-         <b>Figure X</b>. At the bottom of the page the text <code>A new element!?!</code> can
+         <b>Figure 9</b>. At the bottom of the page the text <code>A new element!?!</code> can
          be seen
        </figcaption>
      </figure>
@@ -215,7 +215,7 @@ the difference between HTML and the DOM. The best way to learn is by example:
        <img src="imgs/dom2.png"
             alt="The mystery text is nowhere to be found in index.html."/>
        <figcaption>
-         <b>Figure X</b>. The mystery text <code>A new element!?!</code> is nowhere to
+         <b>Figure 10</b>. The mystery text <code>A new element!?!</code> is nowhere to
          be found in <code>index.html</code>
        </figcaption>
      </figure>
@@ -226,7 +226,7 @@ the difference between HTML and the DOM. The best way to learn is by example:
        <img src="imgs/dom3.png"
             alt="Inspecting some text."/>
        <figcaption>
-         <b>Figure X</b>. Inspecting some text
+         <b>Figure 11</b>. Inspecting some text
        </figcaption>
      </figure>
 
@@ -237,7 +237,7 @@ the difference between HTML and the DOM. The best way to learn is by example:
        <img src="imgs/dom4.png"
             alt="DevTools is open alongside the page."/>
        <figcaption>
-         <b>Figure X</b>. DevTools is open alongside the page
+         <b>Figure 12</b>. DevTools is open alongside the page
        </figcaption>
      </figure>
 
@@ -245,8 +245,10 @@ When your page loads, the browser takes your HTML to create the *initial* conten
 DOM represents the *current* content of the page, which can change over time.
 The mysterious `<div>A new element!?!</div` content is added to your page because of the
 `<script src="new.js"></script>` tag at the bottom of your HTML. This tag causes some JavaScript
-code to run. The JavaScript code adds `<div>A new element!?!</div>` to your page. That is why
-this mystery text is visible on your live page, but not in your HTML.
+code to run. You'll learn more about JavaScript in a later tutorial, but for now think of it as a
+programming language that can change the content of your page. In this particular case, JavaScript
+code adds `<div>A new element!?!</div>` to your page. That is why this mystery text is visible on
+your live page, but not in your HTML.
 
 ### Edit the DOM {: #edit }
 
@@ -259,22 +261,24 @@ try DevTools.
        <img src="imgs/edit1.png"
             alt="Editing the node as HTML."/>
        <figcaption>
-         <b>Figure X</b>. Editing the node as HTML
+         <b>Figure 13</b>. Editing the node as HTML
        </figcaption>
      </figure>
 
 1. Replace `<p>Your site!</p>` with the code below.
 
     <pre class="prettyprint lang-html">{% htmlescape %}
-    <p><b>Welcome to my site!</b></p>
-    <button>Download my resume</button>
+    <header>
+      <p><b>Welcome to my site!</b></p>
+      <button>Download my resume</button>
+    </header>
     {% endhtmlescape %}</pre>
 
      <figure>
        <img src="imgs/edit2.png"
             alt="Editing the node as HTML."/>
        <figcaption>
-         <b>Figure X</b>. Editing the node as HTML
+         <b>Figure 14</b>. Editing the node as HTML
        </figcaption>
      </figure>
 
@@ -287,7 +291,7 @@ try DevTools.
        <img src="imgs/edit3.png"
             alt="The new content shows up immediately on the page."/>
        <figcaption>
-         <b>Figure X</b>. The new content shows up immediately on the page
+         <b>Figure 15</b>. The new content shows up immediately on the page
        </figcaption>
      </figure>
 
@@ -308,7 +312,7 @@ bottom. To move it to the top:
        <img src="imgs/reorder1.png"
             alt="The nav node is highlighted blue in DevTools."/>
        <figcaption>
-         <b>Figure X</b>. The nav node is highlighted blue in DevTools
+         <b>Figure 16</b>. The nav node is highlighted blue in DevTools
        </figcaption>
      </figure>
 
@@ -318,7 +322,7 @@ bottom. To move it to the top:
        <img src="imgs/reorder2.png"
             alt="Dragging the nav node to the top."/>
        <figcaption>
-         <b>Figure X</b>. Dragging the nav node to the top
+         <b>Figure 17</b>. Dragging the nav node to the top
        </figcaption>
      </figure>
 
@@ -328,7 +332,7 @@ bottom. To move it to the top:
        <img src="imgs/reorder3.png"
             alt="The nav node is at the top of the page."/>
        <figcaption>
-         <b>Figure X</b>. The nav node is at the top of the page
+         <b>Figure 18</b>. The nav node is at the top of the page
        </figcaption>
      </figure>
 
@@ -342,7 +346,7 @@ You can also remove nodes from the DOM Tree.
        <img src="imgs/delete1.png"
             alt="Selecting the node to be deleted."/>
        <figcaption>
-         <b>Figure X</b>. Selecting the node to be deleted
+         <b>Figure 19</b>. Selecting the node to be deleted
        </figcaption>
      </figure>
 
@@ -353,7 +357,7 @@ You can also remove nodes from the DOM Tree.
        <img src="imgs/delete2.png"
             alt="The node has been deleted."/>
        <figcaption>
-         <b>Figure X</b>. The node has been deleted
+         <b>Figure 20</b>. The node has been deleted
        </figcaption>
      </figure>
 
@@ -362,35 +366,74 @@ You can also remove nodes from the DOM Tree.
 You're almost done. You've made a few changes to your page in DevTools, but they're not yet saved to your
 source code.
 
-1. Reload your **live tab**. The changes that you made disappear.
+1. Reload your **live tab**. The changes that you made in the DOM Tree disappear. In particular,
+   the text `Your site!` returns to the top of the page, and the text `A new element!?!` returns to the
+   bottom.
 
      <figure>
        <img src="imgs/copy1.png"
-            alt="TODO."/>
+            alt="The changes that you've made are gone."/>
        <figcaption>
-         <b>Figure X</b>. TODO
+         <b>Figure 21</b>. The changes that you've made are gone
        </figcaption>
      </figure>
 
 1. Copy the code below.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <header>
+      <p><b>Welcome to my site!</b></p>
+      <button>Download my resume</button>
+    </header>
+    <main>
+      <h1>About Me</h1>
+      <p>I am learning web development. Recent accomplishments:</p>
+      <ul>
+        <li>Learned how to set up my code in Glitch.</li>
+        <li>Added content to my HTML.</li>
+        <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
+        <li>Learned the difference between HTML and the DOM.</li>
+      </ul>
+    </main>
+  </body>
+</html>
+```
+
 1. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
-   you've copied.
+   you just copied.
 
      <figure>
        <img src="imgs/copy2.png"
-            alt="TODO."/>
+            alt="How your index.html file should work."/>
        <figcaption>
-         <b>Figure X</b>. TODO
+         <b>Figure 22</b>. How your <code>index.html</code> file should look
        </figcaption>
      </figure>
 
 ## Next steps {: #next-steps}
 
 * Read [Introduction to the DOM][DOM]{: .external } to learn more about the DOM.
+* Check out a course like [Introduction to Web Development][Intro]{: .external } to get
+  more hands-on web development experience.
 * Stay tuned for the next tutorial in this series, in which you'll learn how to style
   your page using CSS, and experiment with CSS changes in DevTools.
 
 [DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[Intro]: https://www.coursera.org/learn/web-development
 
 ## Feedback {: #feedback }
 
