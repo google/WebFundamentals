@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: At Google IO 2018, we presented a roundup of tools, libraries and optimisation techniques that make improving web performance easier. Here we explain them using The Oodles Theater app. We also  talk about our experiments with predictive loading and the new Guess.js initiative.
+description: At Google IO 2018, we presented a roundup of tools, libraries and optimization techniques that make improving web performance easier. Here we explain them using The Oodles Theater app. We also  talk about our experiments with predictive loading and the new Guess.js initiative.
 
 {# wf_updated_on: 2018-08-20 #}
 {# wf_published_on: 2018-08-17 #}
 {# wf_tags: ux,performance,lighthouse #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/updates/images/generic/star.png #}
-{# wf_featured_snippet: Learn the current tools, libraries and optimisation techniques that make improving web performance easier, by following the Oodles Theater project. #}
+{# wf_featured_snippet: Learn the current tools, libraries and optimization techniques that make improving web performance easier, by following the Oodles Theater project. #}
 
 # Web Performance Made Easy: Google I/O 2018 edition {: .page-title }
 
@@ -16,7 +16,7 @@ description: At Google IO 2018, we presented a roundup of tools, libraries and o
 
 We've been pretty busy over the past year trying to figure out how to make the Web faster and
 more performant. This led to new tools, approaches and libraries that we’d like share with you
-in this article. In the first part, we’ll show you some optimisation techniques we used in practice
+in this article. In the first part, we’ll show you some optimization techniques we used in practice
 when developing [The Oodles Theater app](https://github.com/google/oodle-demo). In the second part,
 we’ll talk about our experiments with predictive loading and the new
 [Guess.js](https://github.com/guess-js/guess) initiative.
@@ -57,11 +57,11 @@ where to start optimizing. Fortunately, there are tools that can help you on the
 
 ## Lighthouse - a base for performance workflow
 
-[Lighthouse](https://developers.google.com/web/tools/lighthouse/) is a part of Chrome DevTools
+[Lighthouse](/web/tools/lighthouse/) is a part of Chrome DevTools
 that allows you to make an audit of your website, and gives you hints on how to make it better.
 
 We recently launched a bunch of
-[new performance audits](https://developers.google.com/web/updates/2018/05/lighthouse)
+[new performance audits](/web/updates/2018/05/lighthouse)
 that are really useful in everyday development workflow.
 
 <figure style="text-align: center;">
@@ -97,7 +97,7 @@ The page weighted about **3.4MB** - we desperately needed to cut some fat.
 This started our first performance challenge: find things that we can easily remove without
 affecting the overall experience.
 
-## Performance optimisation opportunities
+## Performance optimization opportunities
 
 ### Remove unnecessary resources
 
@@ -111,7 +111,8 @@ There are some obvious things that can be safely removed:  whitespace and commen
   </figcaption>
 </figure>
 
-Lighthouse highlights this opportunity in the **Unminified CSS & JavaScript audit**. We were using webpack for our build process, so in order to get minification we simply used the
+Lighthouse highlights this opportunity in the **Unminified CSS & JavaScript audit**. We were using
+webpack for our build process, so in order to get minification we simply used the
 [Uglify JS plugin](https://webpack.js.org/plugins/uglifyjs-webpack-plugin/).
 
 Minification is a common task, so you should be able to find a ready-made solution for whichever
@@ -207,11 +208,11 @@ guard against potential visual regressions.
 
 ### Avoid enormous network payloads
 
-We know that large resources can slow down webpage loads. They can cost our users money and
+We know that large resources can slow down web page loads. They can cost our users money and
 they can have a big impact on their data plans, so it's really important to be mindful of this.
 
 Lighthouse was able to detect that we had an issue with some of our network payloads using the
-[Enormous network payload](https://developers.google.com/web/tools/lighthouse/audits/network-payloads)
+[Enormous network payload](/web/tools/lighthouse/audits/network-payloads)
 audit.
 
 <figure style="text-align: center;">
@@ -246,10 +247,12 @@ the JavaScript community has a rich set of JavaScript bundle auditing tools.
   </figcaption>
 </figure>
 
-We started off with webpack bundle analyser, which informed us that we were including a
+We started off with webpack bundle analyzer, which informed us that we were including a
 dependency called unicode which was 1.6mb of parsed JavaScript, so quite a lot.
 
-We then went over to our editor and using the [Import Cost Plugin for Visual code](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) we were able to
+We then went over to our editor and using the
+[Import Cost Plugin for Visual code](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+we were able to
 visualize the cost of every module that we were importing. This allowed us to discover which
 component was including code that was referencing this module.
 
@@ -268,12 +271,14 @@ So, in general, try to eliminate unnecessary downloads in your sites and apps.
 Make an inventory of your assets and measure their performance impact can make a really big
 difference, so make sure that you're auditing your assets fairly regularly.
 
-### Lower Javascript boot-up time with code splitting
+### Lower JavaScript boot-up time with code splitting
 
 Although large network payloads can have a big impact on our app, there's another thing that can
 have a really big impact, and that is JavaScript.
 
-JavaScript is your [most expensive asset](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e). On mobile, if you're sending
+JavaScript is your
+[most expensive asset](https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e).
+On mobile, if you're sending
 down large bundles of JavaScript, it can delay how soon your users are able to interact with your
 user interface components. That means they can be tapping on UI without anything meaningful
 actually happening. So it's important for us to understand why JavaScript costs so much.
@@ -296,7 +301,8 @@ a desktop machine or a laptop, maybe even a high-end phone. But on a median mobi
 process can take anywhere between five and ten times longer. This is what delays interactivity,
 so it's important for us to try trimming this down.
 
-To help you discover these issues with your app, we introduced a new [JavaScript boot-up time audit](https://developers.google.com/web/tools/lighthouse/audits/bootup) to Lighthouse.
+To help you discover these issues with your app, we introduced a new
+[JavaScript boot-up time audit](/web/tools/lighthouse/audits/bootup) to Lighthouse.
 
 <figure style="text-align: center;">
   <img alt="JavaScript boot up time"
@@ -306,7 +312,9 @@ To help you discover these issues with your app, we introduced a new [JavaScript
   </figcaption>
 </figure>
 
-And in the case of the Oodle app, it told us that we had 1.8 seconds of time spent in JavaScript boot-up. What was happening was that we were statically importing in all of our routes and components into one monolithic JavaScript bundle.
+And in the case of the Oodle app, it told us that we had 1.8 seconds of time spent in JavaScript
+boot-up. What was happening was that we were statically importing in all of our routes and
+components into one monolithic JavaScript bundle.
 
 One technique for working around this is using code splitting.
 
@@ -321,7 +329,8 @@ what if you only gave them one slice at a time as they needed it?
 Code splitting can be applied at a route level or a component level. It works great with React and
 React Loadable, Vue.js, Angular, Polymer, Preact, and multiple other libraries.
 
-We incorporated code splitting into our application, we switched over from static imports to dynamic imports, allowing us to asynchronously lazy load code in as we needed it.
+We incorporated code splitting into our application, we switched over from static imports to
+dynamic imports, allowing us to asynchronously lazy load code in as we needed it.
 
 <figure style="text-align: center;">
   <img alt="Code splitting with dynamic imports"
@@ -337,7 +346,8 @@ JavaScript boot up time. It took it down to 0.78 seconds, making the app 56% fas
 In general, if you're building a JavaScript-heavy experience, be sure to only send code to
 the user that they need.
 
-Take advantage of concepts like code splitting, explore ideas like tree shaking, and check out [webpack-libs-optimizations](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)
+Take advantage of concepts like code splitting, explore ideas like tree shaking, and check out
+[webpack-libs-optimizations](https://github.com/GoogleChromeLabs/webpack-libs-optimizations)
 repo for a few ideas on how you can trim down your library size if you happen to be using webpack.
 
 ### Optimize images
@@ -375,7 +385,8 @@ Some CDNs, for example [Akamai](https://www.akamai.com) or third-party solutions
 image optimization solutions. so you can also simply host your images on those services.
 
 If you don't want to do that because of the cost, or latency issues, projects like
-[Thumbor](http://thumbor.org/) or [Imageflow](https://github.com/imazen/imageflow) offer self-hosted alternatives.
+[Thumbor](http://thumbor.org/) or [Imageflow](https://github.com/imazen/imageflow) offer
+self-hosted alternatives.
 
 <figure style="text-align: center;">
   <img alt="Before and after optimization"
@@ -385,14 +396,17 @@ If you don't want to do that because of the cost, or latency issues, projects li
   </figcaption>
 </figure>
 
-Our background PNG was flagged in webpack as big, and rightly so. After sizing it correctly to the viewport and running it through ImageOptim, we went down to 100kb, which is acceptable.
+Our background PNG was flagged in webpack as big, and rightly so. After sizing it correctly to
+the viewport and running it through ImageOptim, we went down to 100kb, which is acceptable.
 
-Repeating this for multiple images on our site allowed us to bring down the overall page weight significantly.
+Repeating this for multiple images on our site allowed us to bring down the overall page weight
+significantly.
 
 ### Use the right format for animated content
 
 GIFs can get really expensive. Surprisingly, the GIF format was never intended as an animation
-platform in the first place. Therefore, switching to a more suitable video format offers you large savings in terms of file size.
+platform in the first place. Therefore, switching to a more suitable video format offers you large
+savings in terms of file size.
 
 In Oodle app, we were using a GIF as an intro sequence on the home page. According to Lighthouse,
 we could be saving over 7mb by switching to a more efficient video format. Our clip weighted about
@@ -434,8 +448,8 @@ connection.
 Carousels, sliders, or really long pages often load images, even though the user cannot see them
 on the page straight away.
 
-Lighthouse will flag this behaviour in the off-screen images audit, and you can also see it
-for yourself in the network panel of dev tools. If you see a lot of images incoming while only
+Lighthouse will flag this behavior in the off-screen images audit, and you can also see it
+for yourself in the network panel of DevTools. If you see a lot of images incoming while only
 a few are visible on the page, it means that maybe you could consider lazy loading them instead.
 
 Lazy loading is not yet supported natively in the browser, so we have to use JavaScript to add this
@@ -462,7 +476,8 @@ also proactively prefetches elements that are near the view for the optimal user
 It also offers an optional integration of the `IntersectionObserver`, which gives you very
 efficient visibility lookups.
 
-After this change our images are being fetched on-demand. If you want to dig deeper into that topic, check out [images.guide](https://images.guide/) - a very handy and comprehensive resource.
+After this change our images are being fetched on-demand. If you want to dig deeper into that
+topic, check out [images.guide](https://images.guide/) - a very handy and comprehensive resource.
 
 ### Help browser deliver critical resources early
 
@@ -546,10 +561,12 @@ there is one gotcha.
 
 The Google Font URLs that we specify on our font faces in our stylesheets happened to be something
 that the fonts team update fairly regularly. These URLs can expire, or get updated on a regular
-frequency, and so what we would suggest to do if you want complete control over your font loading experience is to self-host your web fonts. This can be great because it gives you access
+frequency, and so what we would suggest to do if you want complete control over your font loading
+experience is to self-host your web fonts. This can be great because it gives you access
 to things like link rel preload.
 
-In our case we found the tool [Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts)
+In our case we found the tool
+[Google Web Fonts Helper](https://google-webfonts-helper.herokuapp.com/fonts)
 really useful in helping us offline some of those web fonts and set them up locally, so check that
 tool out.
 
@@ -677,7 +694,8 @@ resources are loading, the user cannot really see any content.
   </figcaption>
 </figure>
 
-Downloading and processing external stylesheets is blocking our rendering process from making any progress.
+Downloading and processing external stylesheets is blocking our rendering process from making
+any progress.
 
 We can try to optimize our critical rendering path by delivering some of the styles a bit earlier.
 
@@ -691,8 +709,9 @@ to inline our critical content in index.html during a build step.
 While this module did most of the heavy lifting for us, it was still a little bit tricky to get
 this working smoothly across different routes.
 
-If you are not careful or your site structure is really complex, it might be really difficult to introduce this type of pattern if you did not plan for
-[app shell architecture](https://developers.google.com/web/fundamentals/architecture/app-shell)
+If you are not careful or your site structure is really complex, it might be really difficult to
+introduce this type of pattern if you did not plan for
+[app shell architecture](/web/fundamentals/architecture/app-shell)
 from the beginning.
 
 This is why it's so important to take performance considerations early on. If you don't design for
@@ -703,10 +722,12 @@ earlier, improving our first meaningful paint time significantly.
 
 ## The outcome
 
-That was a long list of performance optimizations we applied to our site. Let's take a look at the outcome. This is how our app loaded on a medium mobile device on a 3G network, before and after the optimization.
+That was a long list of performance optimizations we applied to our site. Let's take a look at the
+outcome. This is how our app loaded on a medium mobile device on a 3G network, before and after
+the optimization.
 
 <figure style="text-align: center;">
-  <img alt="Page load before and after optimisations"
+  <img alt="Page load before and after optimizations"
        src="/web/updates/2018/08/images/web-performance-made-easy/outcome.png">
   <figcaption>
     <strong>Fig. 25.</strong> Page load before and after optimizations
@@ -730,13 +751,16 @@ what is worth being prefetched, or preloaded, or pre-cached. If we guess right w
 prioritize a small amount of resources, but it's really hard to scale it to the whole website.
 
 We actually have data available to better inform our optimizations today.
-Using the [Google Analytics reporting API](https://developers.google.com/analytics/devguides/reporting/core/v4/)
+Using the [Google Analytics reporting API](/analytics/devguides/reporting/core/v4/)
 we can take a look at the next top page and exit
-percentages for any URL on our site and therefore drive conclusions on which resources we should prioritize.
+percentages for any URL on our site and therefore drive conclusions on which resources we should
+prioritize.
 
 If we combine this with a good probability model, we avoid wasting our user’s data by aggressively
 over-prefetching content. We can take advantage of that Google
-Analytics data, and use machine learning and models like [Markov chains](https://en.wikipedia.org/wiki/Markov_chain) or [neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) in order
+Analytics data, and use machine learning and models like
+[Markov chains](https://en.wikipedia.org/wiki/Markov_chain) or
+[neural network](https://en.wikipedia.org/wiki/Artificial_neural_network) in order
 to implement such models.
 
 <figure style="text-align: center;">
@@ -760,7 +784,7 @@ In order to facilitate this experiments, we're happy to announce a new initiativ
 
 Guess.js is a project focused on data-driven user experiences for the web. We hope that it's going
 to inspire exploration of using data to improve web performance and go beyond that. It's all
-open source and available on Github today. This was built in collaboration with the open source
+open source and available on GitHub today. This was built in collaboration with the open source
 community by Minko Gechev, Kyle Matthews from Gatsby, Katie Hempenius, and a number of others.
 
 Check out Guess.js, let us know what you think.
@@ -774,10 +798,11 @@ We've all experienced slow page loads on the go, but we now have an opportunity 
 users more delightful experiences that load really quickly.
 
 Improving performance is a journey. Lots of small changes can lead to big gains. By using the
-right optimisation tools and keeping an eye on the Lighthouse reports, you can provide better
+right optimization tools and keeping an eye on the Lighthouse reports, you can provide better
 and more inclusive experience to your users.
 
-With special thanks to: Ward Peeters, Minko Gechev, Kyle Mathews, Katie Hempenius, Dom Farolino, Yoav Weiss, Susie Lu, Yusuke Utsunomiya, Tom Ankers, Lighthouse & Google Doodles.
+With special thanks to: Ward Peeters, Minko Gechev, Kyle Mathews, Katie Hempenius, Dom Farolino,
+Yoav Weiss, Susie Lu, Yusuke Utsunomiya, Tom Ankers, Lighthouse & Google Doodles.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
