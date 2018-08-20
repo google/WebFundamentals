@@ -32,7 +32,7 @@ up too much storage on the user's device).
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'google-fonts',
+    cacheName: 'google-fonts-stylesheets',
   }),
 );
 
@@ -40,7 +40,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
   workbox.strategies.cacheFirst({
-    cacheName: 'google-fonts',
+    cacheName: 'google-fonts-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
