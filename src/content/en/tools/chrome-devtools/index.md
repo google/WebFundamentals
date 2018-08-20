@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-20 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -21,10 +21,18 @@ websites, faster.
 With DevTools you can view and change any page, even the Google homepage, as the video
 demonstrates.
 
+## DevTools for Beginners {: #beginners }
+
+DevTools for Beginners is a new series of tutorials for new web developers that teach you the basics
+of web development and DevTools.
+
+* [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html). In this first tutorial,
+  you set up your code, add content to your page, and use DevTools to experiment with content changes.
+
 ## Get started {: #get-started }
 
-Here are the recommended starting points for some of the most common ways that DevTools
-can help you build websites faster:
+If you're a more experienced web developer, here are the recommended starting points for learning how
+DevTools can improve your productivity:
 
 * [Viewing and changing a page's styles](/web/tools/chrome-devtools/css/). Every developer goes
   through this experience: you code some CSS, and then you view your page and... the styles
