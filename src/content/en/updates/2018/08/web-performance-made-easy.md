@@ -726,7 +726,7 @@ That was a long list of performance optimizations we applied to our site. Let's 
 outcome. This is how our app loaded on a medium mobile device on a 3G network, before and after
 the optimization.
 
- <iframe src="https://www.webpagetest.org/video/view.php?id=180430_818bd880a9b71419951d80ca5acd69a844b2bc1c&embed=1&width=816&height=592" width="818" height="596"></iframe>
+<iframe src="https://www.webpagetest.org/video/view.php?id=180430_818bd880a9b71419951d80ca5acd69a844b2bc1c&embed=1&width=816&height=592" width="818" height="596"></iframe>
 
 The Lighthouse performance score went up from 23 to 91. That's pretty nice progress in terms
 of speed. All of the changes were fueled by us continuously checking and following the Lighthouse
