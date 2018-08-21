@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Overview page to the Web Payments doc set.
+description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-14 #}
-{# wf_updated_on: 2018-08-14 #}
+{# wf_updated_on: 2018-08-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Overview {: .page-title }
@@ -13,12 +13,14 @@ description: Overview page to the Web Payments doc set.
 
 ## Introduction
 
-Web Payments is an emerging web standard being developed by the W3C to simplify online payments 
+W3C Payment APIs is an emerging web standard being developed by the W3C to simplify online payments 
 and enable a broader set of players to participate easily in the payments ecosystem on the web. 
 The standards are flexible; they work with various types of payment systems and are not tied to 
 any specific browser, payment method, or payment service provider. This flexibility enables 
 development simplicity, deployment consistency, and future compatibility with emerging payment 
 technologies.
+
+Benefits of W3C Payment APIs:
 
 **For consumers**, they simplify checkout flow, by making it a few taps instead of typing small 
 characters many times on a virtual keyboard.
@@ -32,16 +34,16 @@ relatively easy integration.
 **For payment service providers**, they bring new payment methods and enhance the ability of 
 businesses to serve more customers with a better developer experience and more secure solutions.
 
-Web Payments is:
+W3C Payment APIs is:
 
-*   **Standard and Open:** Web Payments is an open source payment standard for the web platform 
-for the first time in history. It is available for any players to implement.
-*   **Easy and Consistent**: Web Payments make checkout easy for the user, by reusing stored 
+*   **Standard and Open:** W3C Payment APIs are an open source payment standard for the web 
+platform for the first time in history. They are available for any players to implement.
+*   **Easy and Consistent**: W3C Payment APIs make checkout easy for the user, by reusing stored 
 payments and address information and removing the need for the user to fill in checkout forms. 
 Since the UI is implemented by the browser natively, users see a familiar and consistent checkout 
 experience on any website that implements the standard.
-*   **Secure and Flexible:** Web Payments provide industry-leading payment technology to the web, 
-and can easily integrate a secure payment solution.
+*   **Secure and Flexible:** W3C Payment APIs provide industry-leading payment technology to the 
+web, and can easily integrate a secure payment solution.
 
 ## A Closer Look
 
@@ -95,7 +97,7 @@ such as the following.
 
 ## Next Up
 
-Learn about the basics of Web Payments, including how the web payment ecosystem works and the 
-anatomy of payment apps in 
+Learn about the basics of W3C Payment APIs, including how the W3C Payment APIs ecosystem works 
+and the anatomy of payment apps, in 
 [How the Payment Ecosystem Works](https://drive.google.com/a/google.com/open?id=1PwPi_TD3G-kQyz31nW-1A4A5kvoCy7UCz6grk1TMaE8).
 
