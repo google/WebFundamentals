@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: At Google IO 2018, we presented a roundup of tools, libraries and optimization techniques that make improving web performance easier. Here we explain them using The Oodles Theater app. We also  talk about our experiments with predictive loading and the new Guess.js initiative.
 
-{# wf_updated_on: 2018-08-20 #}
-{# wf_published_on: 2018-08-17 #}
+{# wf_updated_on: 2018-08-21 #}
+{# wf_published_on: 2018-08-21 #}
 {# wf_tags: ux,performance,lighthouse #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/updates/images/generic/star.png #}
@@ -726,13 +726,7 @@ That was a long list of performance optimizations we applied to our site. Let's 
 outcome. This is how our app loaded on a medium mobile device on a 3G network, before and after
 the optimization.
 
-<figure style="text-align: center;">
-  <img alt="Page load before and after optimizations"
-       src="/web/updates/2018/08/images/web-performance-made-easy/outcome.png">
-  <figcaption>
-    <strong>Fig. 25.</strong> Page load before and after optimizations
-  </figcaption>
-</figure>
+ <iframe src="https://www.webpagetest.org/video/view.php?id=180430_818bd880a9b71419951d80ca5acd69a844b2bc1c&embed=1&width=816&height=592" width="818" height="596"></iframe>
 
 The Lighthouse performance score went up from 23 to 91. That's pretty nice progress in terms
 of speed. All of the changes were fueled by us continuously checking and following the Lighthouse
