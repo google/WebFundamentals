@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Payment Methods page for the Web Payments doc set.
+description: Payment Methods page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-13 #}
+{# wf_updated_on: 2018-08-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -25,7 +25,7 @@ identifier and an optional detail parameter.
 
 In the following example we declare two payment methods: one that can process
 Visa, Mastercard, and JCB cards via basic-card; and an Android app called BobPay
-built to integrate with the Payment Request API, via the URL
+built to integrate with the Payment Request API via the URL
 https://bobpay.xyz/pay.
 
 ```javascript
@@ -102,8 +102,8 @@ data: {
 
 URL-based payment methods are those that anyone can define independently,
 without reliance on W3C standardization. Proprietary payment methods such as
-Google Pay, Apple Pay, Samsung Pay are good examples. These payment methods are
-specified using a unique URL identifier such as https://google.com/pay or
+Google Pay, Apple Pay, Samsung Pay are good examples. These payment methods 
+are specified using a unique URL identifier such as https://google.com/pay or
 https://www.alipay.com/webpay. 
 
 The URLs represent a payment method and are usually associated with a particular
@@ -116,8 +116,8 @@ as well as a specific https://bobpay.xyz method.
 
 Unlike standardized payment methods, URL-based payment methods have no registry.
 Anyone can develop and provide their own payment apps that support a payment
-method. This allows the Web Payments concept to inherently scale into quite a
-large payment ecosystem. 
+method. This allows the W3C Payment APIs concept to inherently scale into quite 
+a large payment ecosystem. 
 
 In the example below, Google Pay is invoked via its URL; any information to be
 passed to the payment method can be supplied in the optional `data` value.
