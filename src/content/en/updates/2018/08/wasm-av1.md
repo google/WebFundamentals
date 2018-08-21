@@ -7,6 +7,7 @@ description: WebAssembly lets us extend the browser with new features. This arti
 {# wf_tags: webassembly,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: WebAssembly lets us extend the browser with new features. This article shows how to port the AV1 video decoder and play AV1 video in any modern browser. #}
+{# wf_blink_components: Blink #}
 
 # Extending the browser with WebAssembly {: .page-title }
 
