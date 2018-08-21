@@ -86,7 +86,7 @@ cmake path/to/aom \
 ```
 
 
-The parameter **<code>path/to/aom</code>** should be set to the full path of the location of the AV1 library source files. The bolded parameter needs to be set to the path for the Emscripten.cmake toolchain description file.
+The parameter **<code>path/to/aom</code>** should be set to the full path of the location of the AV1 library source files. The **<code>path/to/emsdk-portable/.../Emscripten.cmake</code>** parameter needs to be set to the path for the Emscripten.cmake toolchain description file.
 
 For convenience we use a shell script to locate that file:
 
