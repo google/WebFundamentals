@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-13 #}
+{# wf_updated_on: 2018-08-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -15,8 +15,8 @@ Let's see how the new payment ecosystem looks from the developer's point of view
 
 ## The APIs
 
-Web Payments comprises multiple emerging web standards. The Payment Request API
-and the Payment Handler API are the most important APIs.
+W3C Payment APIs comprises multiple emerging web standards. The Payment Request 
+API and the Payment Handler API are the most important APIs.
 
 *   **Payment Request API:** With the [Payment Request
     API](https://www.w3.org/TR/payment-request/), users can check out with just
@@ -28,8 +28,8 @@ and the Payment Handler API are the most important APIs.
     API](https://w3c.github.io/payment-handler/) opens up the ecosystem to
     payment providers by allowing their web-based payment applications to act as
     payment methods on merchant websites through the standard Payment Request
-    API. In addition, there are several related specifications that make up Web
-    Payments.
+    API. In addition, there are several related specifications that make up 
+    W3C Payment APIs.
 *   [Payment Method Identifiers](https://w3c.github.io/payment-method-id/)
     *   [Payment Method: Basic
         Card](https://w3c.github.io/payment-method-basic-card/)
@@ -106,12 +106,12 @@ looks like this:
     starts the checkout flow.
 1.  The Merchant needs the customer's payment credentials to process the
     transaction. They present a payment request UI to the customer using **the
-    Payment Request API**. The UI lists various methods of payment including
+    Payment Request API**. The UI lists various methods of payment, including
     credit card numbers saved in Autofill, third party payment apps like Google
     Pay, Samsung Pay, etc. The Merchant can optionally request the customer's
     shipping address and contact information.
 1.  If the customer chooses an installed payment app like Google Pay, Chrome
-    launches the app which might allow the customer to choose a card to pay with
+    launches the app which allows the customer to choose a card to pay with
     using **the Payment Handler API**. This step is completely up to the payment
     handler's implementation. In this example, if the customer authorizes the
     payment, Google Pay returns a token (payment credential) to the Payment
@@ -130,8 +130,8 @@ looks like this:
 ## PSP Reliance
 
 If you are a merchant and want to accept credit card payments, PSPs are an
-important link in the payment processing chain. Implementing Web Payments does
-not obviate the need for a PSP.
+important link in the payment processing chain. Implementing W3C Payment APIs 
+does not obviate the need for a PSP.
 
 Merchants usually rely on a third-party PSP to perform payment processing for
 convenience and expense reasons. This is primarily because most PSPs maintain
