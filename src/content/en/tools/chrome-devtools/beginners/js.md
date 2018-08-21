@@ -150,7 +150,7 @@ There are some terms you should know:
 For example, if you wanted to store a message, you'd type something like 
 `var message= "This is a message";`
 - A function is a resuable piece of code that can be called anywhere within your script.
-Javascript has many of these functions built in. 
+JavaScript has many of these functions built in. 
 For example, if you wanted a pop-up alert to say a message, 
 you'd type something like `alert(message);`
 
@@ -206,7 +206,7 @@ You've created your first JavaScript script! But there's still something missing
 Most contact forms use the information given to them by the user to output a message. 
 Luckily, it's easy to do this by using the DOM and CSS knowledge you've gained previously.
 
-Javascript has a function called `document.getElementById`. 
+JavaScript has a function called `document.getElementById`. 
 This allows you to find any HTML element in the DOM, using CSS selector, id, tag, 
 or class of the element. So, if you wanted to find the element with the id `message`, 
 you'd type `document.getElementById('message')`. 
@@ -330,7 +330,7 @@ Now that you're in the Sources Panel, you'll see three panes:
 
 `(TODO: A labelled screenshot of the panel)`
 
-1. The **File Navigator**, which contains all the files on your webpage.
+1. The **File Navigator**, which contains all the files on your web page.
 2. The **Code Editor**, which allows you to edit code. 
 Since you haven't selected a file yet, it's empty.
 3. The **JavaScript Debugger**, which helps you debug JavaScript.
@@ -421,7 +421,8 @@ The proper way to write this function would be:
 
 Or, in plain English, the first character of the String. 
 
-Note: In a majority of programming languages, counting starts at 0, not 1. So, the first character of a word is the 0th character.
+Note: In a majority of programming languages, counting starts at 0, not 1. 
+So, the first character of a word is the 0th character.
 
 Some eagle-eyed readers may have noticed that there's also a bug in the second variable 
 as well. This code `second = second.substring(1, 5);` only works for words shorter than 
@@ -452,6 +453,12 @@ Other frameworks, like [Angular][angular] aim to make web development easier for
 
 There are pros and cons to using code frameworks (see [here](TODO) for a list), 
 but it's a good idea to at least be a bit knowledgable about how they work.
+
+Here are the top three JavaScript frameworks according to [Stack Overflow][stack]: [stack]:https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/
+
+1. [React.js](TODO)
+2. [Angular](TODO)
+3. [Vue](TODO)
 
 
 ## Wrapping Up
