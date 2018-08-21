@@ -68,12 +68,10 @@ The Emscripten toolchain can generate output in two formats, one is called **<co
   # Force generation of Wasm instead of asm.js
   append_link_flag_to_target("inspect" "-s WASM=1")
   append_compiler_flag("-s WASM=1")
-
-
-```
-Note: It's important to create a build directory that's separate from the source code tree, and run all the commands below inside that build directory.
 ```
 
+
+**Note:** It's important to create a build directory that's separate from the source code tree, and run all the commands below inside that build directory.
 
 Building with **<code>cmake</code>** means first generating some <strong><code>Makefiles</code></strong> by running <strong><code>cmake</code></strong> itself, followed by running the command <strong><code>make</code></strong> which will perform the compilation step. Note, that since we are using <em>Emscripten</em> we need to use the <em>Emscripten</em> compiler toolchain rather than the default host compiler. That's achieved by using <strong><code>Emscripten.cmake</code></strong> which is part of the <em>[Emscripten SDK](https://github.com/juj/emsdk)</em> and passing it's path as a parameter to <strong><code>cmake</code></strong> itself. The command line below is what we use to generate the Makefiles:
 
