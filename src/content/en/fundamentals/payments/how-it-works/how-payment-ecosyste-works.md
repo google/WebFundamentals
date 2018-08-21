@@ -1,6 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: About the Ecosystem page for the Web Payments doc set.
+description: About the Ecosystem page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
 {# wf_updated_on: 2018-08-21 #}
