@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Payment Request API page for the Web Payments doc set.
+description: Payment Request API page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-13 #}
+{# wf_updated_on: 2018-08-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How Payment Request API Works {: .page-title }
