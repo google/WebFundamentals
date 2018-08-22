@@ -462,4 +462,6 @@ on the web already today.
 Thanks to Jeff Posnick, Eric Bidelman and Thomas Steiner for providing
 valuable review and feedback.
 
+{% include "web/_shared/rss-widget-updates.html" %}
+
 {% include "comment-widget.html" %}
