@@ -77,8 +77,6 @@ upper_tabs:
             path: /web/ilt/pwa/live-data-in-the-service-worker
         - title: Using Workbox
           section:
-          - title: Slides
-            path: /web/ilt/pwa/workbox-slides
           - title: Lab
             path: /web/ilt/pwa/lab-workbox
         - title: Migrating to Workbox
