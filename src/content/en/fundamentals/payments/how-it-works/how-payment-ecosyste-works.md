@@ -22,9 +22,9 @@ W3C Payment APIs comprise multiple web standards.
 mediates payments on the web with browser native UI. It can remove the need for 
 users to enter information such as shipping address and credit card numbers. 
 Learn how it works at high level at [How payment request api 
-works](http://developers.google.com/web/fundamentals/payments/how-it-works/how-payment-request-api-works) 
+works](payments/how-it-works/how-payment-request-api-works) 
 or in detail at [Deep Dive into the Payment Request 
-API](http://developers.google.com/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request).
+API](payments/merchant-guide/deep-dive-into-payment-request).
 *   **Payment Handler API:** The 
 [Payment Handler API](https://w3c.github.io/payment-handler/) 
 opens up the ecosystem to payment providers by allowing their web-based payment 
@@ -36,7 +36,7 @@ defines how strings (`basic-card`, `https://google.com/pay`, etc.) can identify
 a payment method. Along with standardized payment method identifiers, anyone 
 can define their own payment method with URL-based payment method identifiers. 
 Learn more at [Payment method 
-basics](https://developers.google.com/web/fundamentals/payments/how-it-works/payment-method-basics).
+basics](payments/how-it-works/payment-method-basics).
 *   **Payment Method Manifest:** The 
 [Payment Method Manifest](https://w3c.github.io/payment-method-manifest/) 
 defines the machine-readable manifest file, known as a payment method manifest, 
