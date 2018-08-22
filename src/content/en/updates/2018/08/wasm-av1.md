@@ -26,7 +26,7 @@ This article will walk through an example of how to take the existing AV1
 video codec source code, build a wrapper for it, and try it out inside your
 browser and tips to help with building a test harness to debug the wrapper.
 Full source code for the example here is available at
-https://github.com/GoogleChromeLabs/wasm-av1 for reference.
+[github.com/GoogleChromeLabs/wasm-av1](https://github.com/GoogleChromeLabs/wasm-av1) for reference.
 
 
 ## Choosing an interesting code-base
