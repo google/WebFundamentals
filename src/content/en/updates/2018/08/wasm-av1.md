@@ -49,6 +49,10 @@ decompressor are [open source](https://aomedia.googlesource.com/aom/), which
 makes that an ideal candidate for trying to compile it into WebAssembly so
 we can experiment with it in the browser.
 
+<img src="https://aomedia.org/wp-content/uploads/2018/02/av1-logo.png"
+     alt="AV1 logo"></image>
+<img src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217"
+     alt="Bunny movie image" width="360" height="240"></image>
 
 ## Adapting for use in the browser
 
