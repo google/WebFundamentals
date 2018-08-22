@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2018-06-12 #}
+{# wf_updated_on: 2018-08-22 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -91,6 +91,10 @@ const myPlugin = {
   },
   cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse}) => {
     // No return expected
+    // Note: `newResponse.bodyUsed` is `true` when this is called,
+    // meaning the body has already been read. If you need access to
+    // the body of the fresh response, use a technique like:
+    // const freshResponse = await caches.match(request, {cacheName});
   },
   cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse}) => {
     // Return `cachedResponse`, a different Response object or null
