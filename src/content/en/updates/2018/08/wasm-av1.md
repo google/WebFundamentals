@@ -28,6 +28,10 @@ browser and tips to help with building a test harness to debug the wrapper.
 Full source code for the example here is available at
 [github.com/GoogleChromeLabs/wasm-av1](https://github.com/GoogleChromeLabs/wasm-av1) for reference.
 
+TL;DR: Download one of these two 24fps test 
+[video](http://alex-wasm.appspot.com/av1/video/big_buck_bunny_360p24.ivf)
+[files](http://alex-wasm.appspot.com/av1/video/elephants_dream_360p24.ivf)
+and try them on our built [demo](http://alex-wasm.appspot.com/av1/index.html).
 
 ## Choosing an interesting code-base
 
