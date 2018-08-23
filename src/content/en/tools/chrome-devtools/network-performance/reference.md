@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2018-08-07 #}
+{# wf_updated_on: 2018-08-23 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -775,20 +775,28 @@ bottom value of the **Size** column.
   </figcaption>
 </figure>
 
-## Export requests data
+## Export requests data {: #export }
 
-### Save a request as HAR with content {: #save-as-har }
+### Save all network requests to a HAR file {: #save-as-har }
 
-To save a request in the HAR format with content:
+To save all network requests to a HAR file:
 
-1. Right-click the row containing the request in the Requests table.
-1. Select **Save as HAR with Content**.
+1. Right-click any request in the Requests table.
+1. Select **Save as HAR with Content**. DevTools saves all requests that have occurred since you
+   opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
+   request.
+
+Once you've got a HAR file, you can import it back into DevTools for analysis. Just
+drag-and-drop the HAR file into the Requests table. See also [HAR Analyzer][HAR
+Analyzer]{: .external }.
+
+[HAR Analyzer]: https://toolbox.googleapps.com/apps/har_analyzer/
 
 <figure>
   <img src="imgs/save-as-har.png"
-       alt="Selecting Save As HAR With Content.">
+       alt="Selecting Save as HAR with Content.">
   <figcaption>
-    <b>Figure 34</b>. Selecting Save As HAR With Content
+    <b>Figure 34</b>. Selecting <b>Save as HAR with Content</b>
   </figcaption>
 </figure>
 
