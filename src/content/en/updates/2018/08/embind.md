@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emscripten’s embind
 
-{# wf_updated_on: 2018-08-20 #}
+{# wf_updated_on: 2018-08-24 #}
 {# wf_published_on: 2018-08-20 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2018/08/embind/code.png #}
@@ -27,7 +27,7 @@ To refresh your mind, this is the code snippet I am talking about:
     };
 
 Here we declare the names of the functions that we marked with
-`EMSCRIPTEN_KEEPALIVE`, what their return type is, and what the types of their
+`EMSCRIPTEN_KEEPALIVE`, what their return types are, and what the types of their
 arguments are. Afterwards we can use the functions on the `api` object to invoke
 these functions. However, using wasm this way doesn't support strings and
 requires you to manually move chunks of memory around which makes many library
@@ -81,7 +81,7 @@ simple with some plain functions:
 
 Compared to my previous article, we are not including `emscripten.h` anymore, as
 we don't have to annotate our functions with `EMSCRIPTEN_KEEPALIVE` anymore.
-Instead we have a `EMSCRIPTEN_BINDINGS` section in which we list the names under
+Instead we have an `EMSCRIPTEN_BINDINGS` section in which we list the names under
 which we want to expose our functions to JavaScript.
 
 Note: The parameter for the `EMSCRIPTEN_BINDINGS` macro is mostly used to avoid
@@ -89,12 +89,12 @@ name conflicts in bigger projects.
 
 To compile this file, we can use the same setup (or, if you want, the same
 Docker image) as in the [previous
-article](/web/updates/2018/03/emscripting-a-c-library). To make use of embind,
-we just have to make sure we use the `--bind` flag:
+article](/web/updates/2018/03/emscripting-a-c-library). To use embind,
+we add the `--bind` flag:
 
     $ emcc --bind -O3 add.cpp
 
-Now all that's left to do is whipping up an HTML file that loads our freshly
+Now all that's left is whipping up an HTML file that loads our freshly
 created wasm module:
 
     <script src="/a.out.js"></script>
@@ -105,12 +105,12 @@ created wasm module:
     };
     </script>
 
-Note: If you are curious, I wrote up the same C++ module _without_ embind to
-give you a feel for how much work it is doing for you. [Take a look at the
-gist](https://gist.github.com/surma/d04cd0fd896610575126d30de36d7eb6).
+Note: If you are curious, [I wrote up the
+same](https://gist.github.com/surma/d04cd0fd896610575126d30de36d7eb6) C++ module
+_without_ embind to give you a feel for how much work it is doing for you.
 
-As you can see, we aren't using `cwrap()` anymore — this just works straight out
-of the box. But more importantly: We don't have to worry about manually copying
+As you can see, we aren't using `cwrap()` anymore. This just works straight out
+of the box. But more importantly, we don't have to worry about manually copying
 chunks of memory to make strings work! embind gives you that for free, along
 with type checks:
 
@@ -119,15 +119,15 @@ or the arguments have the wrong
 type](/web/updates/images/2018/08/embind/error.png)
 
 This is pretty great as we can catch some errors early instead of dealing with
-the — occasionally quite unwieldy — wasm errors.
+the occasionally quite unwieldy wasm errors.
 
 ### Objects
 
-A pattern that a lot of JavaScript APIs use is options objects. It's a nice
+Many JavaScript constructors and functions use is options objects. It's a nice
 pattern in JavaScript, but extremely tedious to realize in wasm manually. embind
 can help here, too!
 
-I came up with this _incredibly_ useful C++ function that processes your
+For example, I came up with this _incredibly_ useful C++ function that processes my
 strings, and I urgently want to use it on the web. Here is how I did that:
 
     #include <emscripten/bind.h>
@@ -165,12 +165,12 @@ strings, and I urgently want to use it on the web. Here is how I did that:
       function("processMessage", &processMessage);
     }
 
-I am defining a struct for the options of my `processMessage` function. In the
+I am defining a struct for the options of my `processMessage()` function. In the
 `EMSCRIPTEN_BINDINGS` block, I can use `value_object` to make JavaScript see
 this C++ value as an object. I could also use `value_array` if I preferred to
-use this C++ value as an array. I also bind the `processMessage` function, and
-the rest is embind _magic_. I can now call the `processMessage` function from
-JavaScript without any preluding code:
+use this C++ value as an array. I also bind the `processMessage()` function, and
+the rest is embind _magic_. I can now call the `processMessage()` function from
+JavaScript without any boilerplate code:
 
     console.log(Module.processMessage(
       "hello world",
@@ -242,8 +242,8 @@ augment the CLI flags for `emcc` as follows:
 ## Conclusion
 
 embind gives you great improvements in the developer experience when working
-with wasm and C/C++. This article does not cover all the options embind offers,
-so if you are interested, I recommend continuing with [embind's
+with wasm and C/C++. This article does not cover all the options embind offers.
+If you are interested, I recommend continuing with [embind's
 documentation](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/embind.html).
 Keep in mind that using embind can make both your wasm module and your
 JavaScript glue code bigger by up to 11k when gzip'd — most notably on small
