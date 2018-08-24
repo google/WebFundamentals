@@ -3,10 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-08-24 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Quick Guide to Implementing the Payment Handler API {: .page-title }
+
+{% include "web/_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
 
 ## What is the Payment Handler API?
 
