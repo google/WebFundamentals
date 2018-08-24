@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-22 #}
+{# wf_updated_on: 2018-08-24 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -15,12 +15,13 @@ Let's see how the new payment ecosystem works with W3C Payment APIs.
 
 ## The anatomy of W3C Payment APIs
 
-W3C Payment APIs comprise multiple web standards.
+_W3C Payment APIs_ comprises multiple web standards.
 
 *   **Payment Request API:** The 
 [Payment Request API](https://www.w3.org/TR/payment-request/) 
-mediates payments on the web with browser native UI. It can remove the need for 
-users to enter information such as shipping address and credit card numbers. 
+enables fast and easy checkouts through a native browser UI.
+It provides a consistent checkout flow while reducing the need for users 
+to enter their shipping and payment information on every checkout. 
 Learn how it works at high level at [How payment request api 
 works](payments/how-it-works/how-payment-request-api-works) 
 or in detail at [Deep Dive into the Payment Request 
@@ -31,10 +32,10 @@ opens up the ecosystem to payment providers by allowing their web-based payment
 applications to act as payment methods on merchant websites through the 
 standard Payment Request API.
 *   **Payment Method Identifiers:** The 
-[Payment Method Identifiers](https://w3c.github.io/payment-method-id/) 
-defines how strings (`basic-card`, `https://google.com/pay`, etc.) can identify 
-a payment method. Along with standardized payment method identifiers, anyone 
-can define their own payment method with URL-based payment method identifiers. 
+[Payment Method Identifiers](https://w3c.github.io/payment-method-id/) defines 
+how strings (`basic-card`, `https://google.com/pay`, etc.) can be used to identify 
+a payment method. Along with standardized payment method identifiers, it allows 
+anyone to define their own payment method with URL-based payment method identifiers. 
 Learn more at [Payment method 
 basics](payments/how-it-works/payment-method-basics).
 *   **Payment Method Manifest:** The 
@@ -79,7 +80,7 @@ There are typically four participants in an online transaction.
    which involves charging customers and crediting merchants. 
    Alternatively called payment gateways or payment processors.
    </td>
-   <td>(Payment Request API)
+   <td>Payment Request API
    </td>
   </tr>
   <tr>
@@ -105,7 +106,7 @@ and starts the checkout flow.
 transaction. They present a payment request UI to the customer using 
 **the Payment Request API**. The UI lists various methods of payment specified 
 by **the Payment Method Identifiers**. The payment methods can include credit 
-card numbers saved to the browser or third party payment apps like Google Pay, 
+card numbers saved to the browser, or third party payment apps like Google Pay, 
 Samsung Pay, etc. The Merchant can optionally request the customer's shipping 
 address and contact information.
 1.  If the customer chooses a payment method like Google Pay, Chrome launches 
