@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Emscripten’s embind
 
-{# wf_updated_on: 2018-08-24 #}
-{# wf_published_on: 2018-08-20 #}
+{# wf_updated_on: 2018-08-26 #}
+{# wf_published_on: 2018-08-27 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2018/08/embind/code.png #}
 {# wf_featured_snippet: Generate JavaScript bindings for your C/C++ code. #}
