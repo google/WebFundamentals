@@ -84,7 +84,7 @@ OffscreenCanvas will be rendered on the source canvas automatically.
     worker.postMessage({ canvas: offscreen }, [offscreen]);
 
 <div class="key-point">
-OffscreenCanvas is [transferable](https://developer.mozilla.org/en-US/docs/Web/API/Transferable).
+OffscreenCanvas is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Transferable">transferable</a>.
 Apart from specifying it as a field in the message, you need to also pass it as a second argument
 in postMessage (a transfer) so that it can be used in the worker context.
 </div>
