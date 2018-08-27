@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-24 #}
+{# wf_updated_on: 2018-08-27 #}
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -72,8 +72,8 @@ In order to start creating your site, you need to set up your code:
 
 ## Add CSS {: #add-css }
 
-CSS is a langauge that determines the style of your web site's content which 
-is controlled by HTML. Here is a paragraph with a border:
+CSS is a language that determines the layout and visual elements of your web site's content 
+(which is controlled by HTML). Here is a paragraph with a border:
 
 <p style="border:1px dashed red; padding:5px">This has been styled with CSS.</p> 
 
@@ -91,8 +91,9 @@ The code that you haven't seen before is `style="border:1px dashed red; padding:
 The rest should look familiar. If not, complete 
 [Get Started with HTML and the DOM](html) before attempting this tutorial.
 
+
 ### Add inline styles {: #inline }
-TODO: DevTools workflow at end of this section
+TODO: DevTools workflow at end of this section. Box model?
 
 Inline styles are used to define styles for a single element. 
 For example, to add a background color to your page's navigational menu:
@@ -167,8 +168,8 @@ The browser changed the font of the **Home** and **Contact** links because they 
 <li><a href="/contact.html">Contact</a></li>
 ```
 
-`font-family: 'Courier New', Courier, monospace;` is a CSS **declaration**. A declaration is made of two parts: a property and a value. In the example above, `font-family` is a property that has a value of `'Courier New', Courier, monospace`. If Courier New isn't availible, the broswer will choose Courier, and if Courier isn't availible, the browswer will choose monospace. So, in plain English, the code above reads: 
-"Change the font of any list item that contains a link to Courier New, and if Courier New isn't availible use Courier, and if Courier isn't availible, use monospace". 
+`font-family: 'Courier New', Courier, monospace;` is a CSS **declaration**. A declaration is made of two parts: a property and a value. In the example above, `font-family` is a property that has a value of `'Courier New', Courier, monospace`. If Courier New isn't available, the browser will choose Courier, and if Courier isn't available, the browser will choose monospace. So, in plain English, the code above reads: 
+"Change the font of any list item that contains a link to Courier New, and if Courier New isn't available use Courier, and if Courier isn't available, use monospace". A CSS selector combined with a declaration is called a **ruleset**. 
 
 CSS selectors are also flexible, meaning that multiple CSS selectors can be 
 assigned to a style definition. For example, to add the same font to the `<h1>`
@@ -192,6 +193,22 @@ elements on your contact page:
 1. Go to the **live tab**. 
 1. Click the **Contact** link to go back to the contact page. 
    Now, **Contact Me** has the same font as the navigation links.
+
+Now that you understand internal stylesheets, you can use DevTools to add new styles:
+
+1. Right-click the **Home** link.
+1. Select **Inspect Element**. This opens up DevTools' **Elements Panel** with the **Home** link highlighted.
+1. On the bottom left, there is a panel called the **Styles Pane**. In that pane, you can see the internal stylesheet you made. Under ` font-family: 'Courier New', Courier, monospace;`, type `color:gray` This tells the browser to change the font color to gray.
+1. Press <kbd>Enter</kbd>. All of the text on the contact page is now gray.
+
+You can also directly edit existing styles:
+
+1. Copy this number: `#28a78c` This is a **Hexadecimal Color Code**, a different way of representing colors.
+1. Click on the gray square next to `gray`. A color picker pops up.
+1. In the box that says **Hex**, paste in the number you copied. The color of the font on the contact page will change.
+
+You can use DevTools to preview CSS changes you make in real time, much like you did with HTML and the DOM.
+
 
 
 ### Re-use styles with external stylesheets {: #external}
@@ -244,19 +261,18 @@ nav {
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
 
-#### Use CSS Frameworks
+TODO: DevTools CSS exploration/ Pseudo-state selector 
 
-CSS Frameworks are pre-built external stylesheets that 
-automatically apply styles to your site. In this tutorial, 
-you'll be using a CSS framework called Bootstrap so you can get a sense of how 
-frameworks work:
+#### Use CSS frameworks {: #frameworks}
+
+CSS frameworks are collections of styles built by other developers that make it easier to create attractive web sites. Instead of defining styles yourself, a framework gives you consistent fonts, spacing, and so on for your elements. This probably doesn't make complete sense yet, but it will after you complete this section and the next. Complete the steps below to begin to understand how frameworks work:
+
 
 1. Copy the following code: 
    `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">` 
-   This code tells the browser that you want to use Bootstrap's stylesheet.
+   This code tells the browser to import a framework called Bootstrap.
 1. In the `contact.html` file, paste the code directly under the `</style>` tag. 
    Make sure the link is under the the internal spreadsheet. 
-   Now, you have told the browser to link Bootstrap's stylesheet to your content.
 1. Go to `index.html`.
 1. Paste the code you copied above the `</head>` tag.
 1. Go to the **live tab**. While the background color of the `<nav>` 
@@ -272,10 +288,19 @@ overwritten. However, Bootstrap *doesn't* have any rulesets for `li a` or `nav` 
 so those rulesets carried over. 
 Cascading applies to all types of stylesheets, as well as inline styles.
 
+**TODO** Use DevTools to explain how cascading works.
 
-### Use Bootstrap CSS
+### Use Bootstrap CSS {: #bootstrap }
 
-When you use CSS frameworks, you may come across CSS components that are different than basic CSS rulesets. For example, Bootstrap relies on HTML **classes** to apply rulesets to elements:
+In the last section, you added Bootstrap to your web pages, which changed the fonts of some of the elements on your site. CSS frameworks can help you make major changes to your page with very little code. For example, you are going to take your header from this: 
+
+TODO: Screenshot
+
+To this:
+
+TODO: Screenshot
+
+With a single line of code.  
 
 1. Copy this code: `class="jumbotron jumbotron-fluid"`
 1. Go to **the editor tab**.
@@ -285,6 +310,8 @@ When you use CSS frameworks, you may come across CSS components that are differe
 1.  In `contact.html`, paste the code you copied into the `<header>` tag. Now, the `contact.html` page has the same formatting as `index.html`.
 1. Go back to the **live tab**.
 1. Click the **Contact** link to go to the contact page. The contact page has the same formatting as the home page.
+
+TODO: Paragraph on classes. Define concept generally, boils down to rulesets, copy some of jumbotron's code.
 
 You can also align content with Bootstrap classes:
 
@@ -299,175 +326,39 @@ You can also align content with Bootstrap classes:
 1. Repeat the previous steps for `contact.html`.
 
 
-HTML classes are another pattern you can use as a CSS selector for rulesets. However, if you used the `jumbotron` class in a file that didn't link to Bootstrap, nothing would happen unless you defined a ruleset for the class in a style or stylesheet.
-
----
-
-
-## CSS with Devtools {: #css-dev }
-
-
-
-### Inspect element review {: #inspect }
-
-The **Inspect Element** feature allows for easy access to the Elements Panel, 
-where the DevTools CSS tools lie. Here's a quick refresher on how to do that: 
-
-1. Right click on the sidebar you created in the *Use Bootstrap CSS* section.
-
-`(TODO: A screenshot showing someone right clicking on the sidebar.)`
-
-2. Choose the **Inspect** option. The Elements Panel appears.
-
-`(TODO: A screenshot showing the Elements Panel.)`
-
-
-
-
-### The Styles Pane and the Box Model {: #styles-pane }
-
-In the last tutorial, you looked at the DOM Tree in the Elements Panel. 
-However, now you'll be focusing on the styles pane, 
-located on the bottom of the Elements Panel. 
-In this pane, you'll see two things: 
-a readout of the selected element's CSS, and a Box Model Diagram.
-
-`(TODO: A screenshot showing the styles pane and the BMD.)`
-
-
-
-The box model states that a browser renders each HTML element as a box whose 
-properties can be edited by CSS rulesets. 
-Each box has four elements: content, padding, border, and margin. 
-While this might seem complicated, 
-a quick example will help you understand this CSS fundamental.
-
-Note: Before you start this example, 
-make sure you are viewing the CSS for `main`. 
-It should be highlighed.
-
-1. Double click on the first 5 in the padding box and replace the 5 with 50. 
-You should see a change in the space around the content inside the sidebar.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-2. Repeat this for the other 5s in the padding box.
-
-`(TODO: A screenshot showing the finished padding box.)`
-
-3. Double click on the first dash in the margin box. Type in the number 10. 
-You should see a change in the space around the sidebar.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-4. Repeat this for the other spaces in the margin box.
-
-`(TODO: A screenshot showing the finished margin box.)`
-
-5. Double click on the #_ in the blue box and change it to 800. 
-The size of the sidebar will change.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-6. You may have noticed that an inline stylesheet 
-was added to `main`. Copy every CSS declaration after `style="`.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-7. Paste the CSS in the `main` section of `style.css`.
-
-The box model diagram is useful for editing the size and spacing of your HTML elements.
-
-
-### Change Colors {: #colors }
-
-The Styles Pane in DevTools can also be used to change 
-the colors of elements on your web page. 
-
-Note: CSS colors come in several forms, including RGB, Hex, 
-and HTML Safe Color codes. 
-For the following examples, you will be using hex colors. 
-See [this resource](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) for more information.
-
-Since your website is mostly white and gray, 
-it would be nice to add a pop of color to the top of the website:
-
-1. Go to the viewing tab. 
-2. In the Elements Panel, click on `<header>` to highlight it.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-3. In the part of the Styles Pane that says **header{}**, 
-type `background-color: #c0d8e5`. 
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-4. Copy the new `<header>` CSS and paste it into style.css.
-
-`(TODO: A screenshot showing the result.)`
-
-The color is now changed!
-
-You can also change the color of an existing style definition 
-by doing the following:
-
-1. Click on the arrow next to the nav `<div>` to reveal the elements in it.
-
-	`(TODO: A screenshot showing someone doing that action.)`
-
-2. Click on the `<ul>` tag to highlight it.
-
-	`(TODO: A screenshot showing someone doing that action.)`
-
-3. Click on the gray square before the `background-color` code.
-4. A menu pops up with several options to change the color.
-
-	`(TODO: A screenshot showing the menu.)`
-
-For now, click on the box color code and replace the current code with #c0d8e5.
-
-5. Copy the code from the Styles Pane and paste it in the `ul{}` section in style.css.
-
-`(TODO: A screenshot showing the result.)`
-
-### Change Behavior (sort of) {: #behavior }
-
-One thing you might notice about many websites 
-is that links and buttons will change colors 
-when you hover over them with your mouse. 
-This is a CSS property called a pseudostate, 
-which defines a special state of an element.
-
-Changing a element's pseudostate is just as easy a changing an element's color:
-
-1. Click on the first `<li>` tag inside the nav `<div>`. 
-
-	`(TODO: A screenshot showing someone doing that action.)`
-
-2. In the Styles Pane, click the gray plus in the center of the pane.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-3. Type `:hover` after li in the newly created style.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-4. In the new `li:hover{}` section, type `background-color: gray;`.
-
-`(TODO: A screenshot showing someone doing that action.)`
-
-5. Hover over the Home and Contact links to see the changes.
-
-`(TODO: A screenshot showing the result.)`
-
-6. Copy the code from the Styles Pane and paste it at the end 
-  of the `li a` section in style.css.
-
-Note: This behavior is *not* the same as having an event occur
-when you click on a button. 
-For that, you will need to utilize JavaScript, a different language.
-
-You've successfully made yourself a much more polished website!
+Bootstrap's default CSS has given you a more polished site, but there are still some issues you'll need to fix. The spacing of the content both inside and outside of the `<nav>` section and the jumbotron section looks off. DevTools can help change that:
+
+1. Go to the **live tab**. 
+1. Right click on the jumbotron (the big gray box) and click **Inspect**.
+
+Next to the **Styles Pane**, there is a diagram called the **Box Model Diagram**. The **Box Model** is a set of properties that control the positioning of elements. 
+Each box has four elements: content, padding, border, and margin:
+
+1. Click on the left `-` in the **padding** box.   
+2. Type `25`. 
+3. Press <kbd>Enter</kbd>. 
+This moves the text in the jumbotron to the right so that it isn't so close to the edge.
+
+Do the same thing to the `<nav>` section:
+
+1. Right-click the `<nav>` section (the blue box) and click **Inspect**. The `<nav>` node should be highlighted.
+1. Click the top `-` in the **padding box**. 
+1. Type `10`.
+1. Press <kbd>Enter</kbd>. This changes the padding on the top of the `<nav>` section from `0` pixels to `10` pixels.
+
+Put these changes in the external stylesheet you made earlier to save them:
+
+1. Copy `padding-top:10px` from the **element.style{}** ruleset. 
+1. Go to the **editor tab**.
+1. Go to `style.css`.
+1. Paste the code you copied into the **nav{}** ruleset.
+1. Go back to the **live tab**.
+1. Right click on the jumbotron (the big gray box) and click **Inspect**.
+1. Copy everything in the **element.style{}** ruleset.
+1. Paste the element.style{} ruleset into `style.css`
+1. Replace element.style{} with `.jumbotron jumbotron-fluid`.
+
+The **Box Model Diagram** can be used to edit other properties related to spacing and layout. It can also change the size of an element, the element's **margins** (the space around the element), and the element's **border** (the space around an element's padding and content).
 
 ## Next Steps {: #next-steps }
 
