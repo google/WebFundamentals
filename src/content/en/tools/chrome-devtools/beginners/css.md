@@ -130,14 +130,14 @@ a background color to your page's navigation menu:
 
      style="background-color: aliceblue"
 
-1. Add the code that you just copied to your `<nav>`.
+1. In `index.html`, add the code that you just copied to your `<nav>`.
 
        TODO add code here
 
 1. Go to the **live tab** to see the changes! The background of the `<nav>` section is now blue.
 
 As mentioned above, inline styles only apply to a single element,
-so only your `<nav>` section is affected. 
+so only the `<nav>` section of `index.html` changes. 
 In the next section, you learn about how to add styling to multiple elements.
 
 
@@ -151,7 +151,7 @@ Earlier, you used inline styles to apply a style to a `<p>` tag like this:
 </p>
 ```
 
-But what if you wanted all of the `<p>` elements on your webpage to be styled the same? 
+But what if you wanted all of the `<p>` elements on your webpage to be styled the same way? 
 You'd have to copy and paste the code into every single `<p>` tag on your site. 
 That's a lot of time and effort, and if you need to make an edit, 
 you'll have to change every tag again. **Internal stylesheets** allow you to write your CSS once so that applies to multiple elements. Try it now:
@@ -330,24 +330,24 @@ the browser will choose to display the ruleset with the most **specific** select
 For example, the Bootstrap style sheet has a ruleset for `li` elements, 
 but the stylesheet you made has a ruleset for `li a` elements. 
 Since "all list items containing a link" is more specific than "all list items", 
-the ruleset from your external stylesheet is used.
+the browser uses the ruleset from your external stylesheet.
 
 However, if there are two rulesets with the same specificity, 
-the last ruleset assigned is applied to the element. 
+the browser applies that last ruleset assigned to the element. 
 Both your stylesheet and the Bootstrap stylesheet have rulesets for `h1` elements, 
-but because Bootstrap's stylesheet was the last to be added, 
-the Bootstrap ruleset was applied.
+but because you added Bootstrap's stylesheet last, 
+the browser applied the Bootstrap ruleset.
 
-This concept is a bit complicated, but DevTools provides a way to visualize cascading:
+This concept is a bit complicated, but DevTools provides a way to visualize **cascading**:
 
 1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open DevTools. 
 1. In the **Styles Pane**, click **Computed** to go to the **Computed Values Pane**. 
-   This pane allows you to see which rulesets are being applied.
+   This pane allows you to see which rulesets have been applied by the browser.
 1. Right-click on **Contact** and select **Inspect**. 
    Now you are looking at the CSS values for the contact link element.
 1. Expand the **font-family** menu with the gray arrow. 
    In the menu you see that two items are crossed out. 
-   These are the default fonts for Bootstrap that were overwritten by your stylesheet.
+   These are the default fonts for Bootstrap that your stylesheet overwrote.
 1. Click on the link that says **_reboot.scss:58**. This will take you to the place in the  
    Bootstrap stylesheet where the font declaration was made.
 1. Click on the Elements tab to go back to the **Computed Values Pane**.
@@ -380,10 +380,9 @@ With a single line of code.
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
 
-You've just used your first **HTML class**. A class is an HTML attribute that can be used as 
-a **CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are are 
+You've just used your first **HTML class**. A class is an HTML attribute that defines a 
+**CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are are 
 patterns that may apply to one or more HTML elements. 
-These selectors are then used to apply CSS **declarations** to elements. 
 
 For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
 
@@ -419,7 +418,7 @@ In this case, this would translate to "Remove the bullet points from any unorder
 1. On `index.html`, in the *first* `<ul>` tag, paste the code you copied.
 1. Go to the **live tab**. There are no longer bullet point in the `<nav>` section, but there are still bullet points in the `About` section.
 
-While the **class** attribute can be used in any HTML element, 
+While any HTML element can have a **class** attribute, 
 a class like `jumbotron` will not format 
 in the way you see on your site unless you have Bootstrap linked to your web page.
 
@@ -454,7 +453,8 @@ This moves the text in the jumbotron to the right so that it isn't so close to t
 
 Do the same thing to the `<nav>` section:
 
-1. Right-click the `<nav>` section (the blue box) and click **Inspect**. The `<nav>` node should be highlighted.
+1. Right-click the `<nav>` section (the blue box) and click **Inspect**. The `<nav>` node is
+ highlighted.
 1. Click the top `-` in the **padding box**. 
 1. Type `10`.
 1. Press <kbd>Enter</kbd>. This changes the padding on the top of the `<nav>` section from `0` pixels to `10` pixels.
@@ -471,7 +471,7 @@ Put these changes in the external stylesheet you made earlier to save them:
 1. Paste the element.style{} ruleset into `style.css`
 1. Replace element.style{} with `.jumbotron jumbotron-fluid`.
 
-The **Box Model Diagram** can be used to edit other properties related to spacing and layout. It can also change the size of an element, the element's **margins** (the space around the element), and the element's **border** (the space around an element's padding and content).
+The **Box Model Diagram** can edit other properties related to spacing and layout. It can also change the size of an element, the element's **margins** (the space around the element), and the element's **border** (the space around an element's padding and content).
 
 ## Next steps {: #next-steps }
 
