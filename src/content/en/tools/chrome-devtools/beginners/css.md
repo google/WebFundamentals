@@ -2,34 +2,50 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
 {# wf_updated_on: 2018-08-28 #}
-{# wf_published_on: 2018-07-30 #}
+{# wf_published_on: 2018-08-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
+[HTML]: /web/tools/chrome-devtools/beginners/html
 
 # DevTools For Beginners: Getting Started with CSS {: .page-title }
 
-This is the second in a series of tutorials that teach you the basics of web
-development. 
-You are going to learn web development by actually building your own website.
-In this particular tutorial, you learn about CSS, another of the core
-technologies of web development. CSS controls the style of of webpages. 
+In this tutorial, you learn how to use CSS to style a web page. You also learn how to
+use Chrome DevTools to experiment with CSS changes.
+
+This is the second tutorial in a series of tutorials that teaches you the basics of web
+development and Chrome DevTools. You gain hands-on experience by actually building your own
+website. 
+
+Note: You don't have to complete the first tutorial before doing this one. You can start with this
+tutorial. [Set up your code](#setup) will show you how to get set up.
 
 Currently your site looks like this: 
 
-`(TODO: A screenshot of the basic HTML site)`
+<figure>
+  <img src="imgs/css/intro1.png"
+       alt="What your site currently looks like."/>
+  <figcaption>
+    <b>Figure X</b>. What your site currently looks like
+  </figcaption>
+</figure>
 
 After completing the tutorial, it will look like this: 
 
-`(TODO: A screenshot of the basic CSS site)`
-
+<figure>
+  <img src="imgs/css/intro2.png"
+       alt="What your site will look like at the end of the tutorial."/>
+  <figcaption>
+    <b>Figure X</b>. What your site will look like at the end of the tutorial
+  </figcaption>
+</figure>
 
 ## Goals {: #goals }
 
 By the end of this tutorial, you will understand:
 
-* How CSS can be used to style webpages.
-* How Chrome DevTools can help you when you're working CSS.
-* The difference between CSS and CSS Frameworks.
+* How to use CSS to style a web page.
+* How to use Chrome DevTools to experiment with CSS.
+* The difference between CSS and CSS frameworks.
 
 You'll also have a real website!
 
@@ -37,14 +53,14 @@ You'll also have a real website!
 
 Before attempting this tutorial, complete the following prerequisites:
 
-* Complete the previous tutorial on HTML and DOM or complete *Setup* below.
-* Download the [Google Chrome][chrome]{: .external } web browser. This tutorial uses a set of web development tools, 
-called Chrome DevTools, that are built into Google Chrome. 
+* Comlete [Get Started with HTML and the DOM][HTML] or make sure that you have an understanding
+  of HTML and the DOM similar to what's taught in that tutorial.
+* Download the [Google Chrome][chrome]{: .external } web browser. This tutorial uses a set of
+  web development tools, called Chrome DevTools, that are built into Google Chrome. 
+
 [chrome]: https://www.google.com/chrome/
 
 ## Set up your code {: #setup }
-
- 
 
 In order to start creating your site, you need to set up your code:
 
@@ -52,32 +68,48 @@ In order to start creating your site, you need to set up your code:
    Continue using your code from the last tutorial, 
    [Getting Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html).**
 2. Open the [source code](https://glitch.com/edit/#!/dfb2). A code editor called 
-   Glitch shows a page called `index.html`. This will be called the editing tab.
+   Glitch shows a page called `index.html`. This tab of your browser will be called the
+   **editing tab**.
 
-`(TODO: A screenshot showing the action.)`
+     <figure>
+       <img src="imgs/css/setup1.png"
+            alt="The source code."/>
+       <figcaption>
+         <b>Figure X</b>. The source code
+       </figcaption>
+     </figure>
 
 2. Click **dfb2**. A menu pops up.
 
-`(TODO: A screenshot showing the menu)`
+     <figure>
+       <img src="imgs/css/setup2.png"
+            alt="The editor tab."/>
+       <figcaption>
+         <b>Figure X</b>. The editor tab
+       </figcaption>
+     </figure>
 
 3. Click **Remix This**. Glitch creates a copy of the project that you can 
-   edit. Note that the name of the new project will be randomly generated
-   and not dfb2. The content is the same, but the name on the top-left has changed.
-4. Click **Show Live**. Another tab opens with view of what your site 
-   currently looks like. This will be called the **live tab**.
+   edit. Note that the name of the new project will be randomly generated.
+4. Click **Show Live**. Another tab opens with a live view of your site.
+   This tab of your browser will be called the **live tab**.
 
-`(TODO: A screenshot showing the result.)`
+     <figure>
+       <img src="imgs/css/setup3.png"
+            alt="The live tab."/>
+       <figcaption>
+         <b>Figure X</b>. The live tab
+       </figcaption>
+     </figure>
 
+## Add CSS {: #add }
 
-
-## Add CSS {: #add-css }
-
-CSS is a language that determines the layout and visual elements of your web site's content 
-(which is controlled by HTML). Here is a paragraph with a border:
+CSS is a computer language that determines the layout and styling of web pages. For
+example, here is a paragraph with a border:
 
 <p style="border:1px dashed red; padding:5px">This has been styled with CSS.</p> 
 
-And here is the HTML and CSS code used to create that paragraph:
+Here is the HTML and CSS code used to create that paragraph:
 
 ```
 <p style="border:1px dashed red; padding:5px">
@@ -86,14 +118,13 @@ And here is the HTML and CSS code used to create that paragraph:
 ```
 
 The code that you haven't seen before is `style="border:1px dashed red; padding:5px"`. 
-The rest should look familiar. If not, complete 
-[Get Started with HTML and the DOM](html) before attempting this tutorial.
-
+The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
+before attempting this tutorial.
 
 ### Add inline styles {: #inline }
 
-Inline styles are used to define styles for a single element. 
-For example, to add a background color to your page's navigational menu:
+Use **inline styles** when you want to apply styles to a single element. Try it now by adding
+a background color to your page's navigation menu:
 
 1. Copy the following code: 
 
