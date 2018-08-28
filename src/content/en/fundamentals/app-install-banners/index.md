@@ -46,7 +46,7 @@ In order to show the Add to Home Screen dialog, you need to:
 
 <div class="clearfix"></div>
 
-Note: Chrome 67 and earlier showed an add to home screen banner, the banner
+Note: Chrome 67 and earlier showed an "Add to home screen" banner. It
 was removed in Chrome 68.
 
 ### Listen for `beforeinstallprompt`
@@ -152,7 +152,7 @@ or not.
 
 ## Determine if the app was successfully installed {: #appinstalled }
 
-To determine if the app was successfully added to the users home screen _after_
+To determine if the app was successfully added to the user's home screen _after_
 they accepted the prompt, you can listen for the `appinstalled` event.
 
     window.addEventListener('appinstalled', (evt) => {
@@ -212,7 +212,7 @@ Chrome will throw an exception in the console, and the event will not be fired.
 
 Caution: Chrome has a slightly different install flow for desktop and mobile.
 Although the instructions are similar, testing on mobile <b>requires</b> remote
-debugging, without it, it will use the desktop install flow.
+debugging; without it, Chrome will use the desktop install flow.
 
 
 ### Chrome for Android
