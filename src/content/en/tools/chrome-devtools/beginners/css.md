@@ -53,7 +53,7 @@ You'll also have a real website!
 
 Before attempting this tutorial, complete the following prerequisites:
 
-* Comlete [Get Started with HTML and the DOM][HTML] or make sure that you have an understanding
+* Complete [Get Started with HTML and the DOM][HTML] or make sure that you have an understanding
   of HTML and the DOM similar to what's taught in that tutorial.
 * Download the [Google Chrome][chrome]{: .external } web browser. This tutorial uses a set of
   web development tools, called Chrome DevTools, that are built into Google Chrome. 
@@ -233,6 +233,13 @@ You can also directly edit existing styles:
 1. Click on the gray square next to `gray`. A color picker pops up.
 1. In the box that says **Hex**, paste in the number you copied. The color of the font on the contact page will change.
 
+Finally, you can add new rulesets:
+
+1. Click on the gray plus to **Add a new style rule**. A ruleset will appear with the `a` selector.
+1. Replace `a` with `a:hover`. `hover` is a **pseudo-state selector**, which defines a special state of an element. In this case, `a:hover` translates to, "any link that is being hovered over". 
+1. Inside the brackets in the ruleset, type `background-color: cornsilk`. Now you have a ruleset that translates to "change the background color of any link that is being hovered over to cornsilk".
+1. Move your cursor over the home link. The link's background color will change.
+
 You can use DevTools to preview CSS changes you make in real time, much like you did with HTML and the DOM.
 
 
@@ -260,11 +267,14 @@ li a, h1 {
    font-family: 'Courier New', Courier, monospace;
 }
 
+a:hover {
+  background-color:cornsilk;
+}
 nav {
   background-color: aliceblue;
 }
 ```
- You've seen the first ruleset already. 
+ You've seen the first two rulesets already. 
  The second ruleset represents the **inline style** you applied to the `<nav>` in the 
  *[Add inline styles](#inline)* section. It turns the background color of the `<nav>` section blue.
 
