@@ -121,8 +121,6 @@ The code that you haven't seen before is `style="border:1px dashed red; padding:
 The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
 before attempting this tutorial.
 
-[HTML]: /web/tools/chrome-devtools/beginners/html
-
 ### Add inline styles {: #inline }
 
 Use **inline styles** when you want to apply styles to a single element. Try it now by adding
