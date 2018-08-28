@@ -270,13 +270,20 @@ li a, h1 {
 a:hover {
   background-color:cornsilk;
 }
+
 nav {
   background-color: aliceblue;
 }
+
+ul.nobullets{
+    list-style-type: none;
+}
+
 ```
  You've seen the first two rulesets already. 
- The second ruleset represents the **inline style** you applied to the `<nav>` in the 
- *[Add inline styles](#inline)* section. It turns the background color of the `<nav>` section blue.
+ The third ruleset represents the **inline style** you applied to the `<nav>` in the 
+ *[Add inline styles](#inline)* section. It turns the background color of the `<nav>` section blue. You'll learn about the fourth ruleset in the 
+ *[Use Bootstrap CSS](#bootstrap)* section.
 
 1. Go to the **editor tab**.
 1. In `contact.html`, delete everything between `<style>` and `</style>`, 
@@ -395,7 +402,22 @@ For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
 ```
 
 In this case, the selector `.jumbotron` means "
-all HTML elements with the class `jumbotron`". 
+all HTML elements with the class `jumbotron`". The declarations in the ruleset are a bit complicated, so look to the stylesheet you made. One of the rulesets you added was:
+
+```
+ul.nobullets{
+    list-style-type: none;
+}
+```
+
+In this case, this would translate to "Remove the bullet points from any unordered list with the class `nobullets`". Of course, because there's no elements with the class `nobullets`, nothing has happened. To see the style:
+
+1. Copy this code: `class="nobullets"`
+1. Go to the **editor tab**.
+1. On `contact.html`, inside the `<ul>` tag, paste the code you copied.
+1. Go to `index.html`.
+1. On `index.html`, in the *first* `<ul>` tag, paste the code you copied.
+1. Go to the **live tab**. There are no longer bullet point in the `<nav>` section, but there are still bullet points in the `About` section.
 
 While the **class** attribute can be used in any HTML element, 
 a class like `jumbotron` will not format 
@@ -413,7 +435,7 @@ Bootstrap also has classes that align elements:
 1. Go to the **live tab**. The `<nav>` section should be a sidebar on the left side of the screen. Note that on some mobile devices, the placement of your content may not reflect your changes, as your site is not mobile optimized.
 1. Repeat the previous steps for `contact.html`.
 
-
+## Polish your site {: #polish}
 Bootstrap's default CSS has given you a more polished site, 
 but there are still some issues you'll need to fix. 
 The spacing of the content both inside and outside 
@@ -451,7 +473,7 @@ Put these changes in the external stylesheet you made earlier to save them:
 
 The **Box Model Diagram** can be used to edit other properties related to spacing and layout. It can also change the size of an element, the element's **margins** (the space around the element), and the element's **border** (the space around an element's padding and content).
 
-## Next Steps {: #next-steps }
+## Next steps {: #next-steps }
 
 Now that you've got HTML and CSS down, there's one more language you'll need
 to put in your web development toolkit: JavaScript. Soon, there will be a
