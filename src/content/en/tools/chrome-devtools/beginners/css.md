@@ -270,19 +270,41 @@ CSS frameworks are collections of styles built by other developers that make it 
 1. Go to `index.html`.
 1. Paste the code you copied above the `</head>` tag.
 1. Go to the **live tab**. While the background color of the `<nav>` 
-  and the font of the `li a` elements are the same, the font of the other elements has changed.
+   and the font of the `li a` elements are the same, 
+   the font of the other elements has changed.
 1. Click the `Contact` link to go to the contact page. 
    The same changes are present. 
   
-This is a CSS property called 
-**cascading**. If you have multiple rulesets for an element, 
-the browser will choose to display the ruleset from the newest stylesheet. 
-The Bootstrap style sheet has a ruleset for `<h1>` elements, so your original ruleset was 
-overwritten. However, Bootstrap *doesn't* have any rulesets for `li a` or `nav` elements,
-so those rulesets carried over. 
-Cascading applies to all types of stylesheets, as well as inline styles.
 
-**TODO** Use DevTools to explain how cascading works.
+Why did some of the elements change, but not others? This is because of a CSS property
+called **cascading**. One of the properties of cascading is that if you have multiple rulesets for an element, 
+the browser will choose to display the ruleset with the most **specific** selector. 
+For example, the Bootstrap style sheet has a ruleset for `li` elements, 
+but the stylesheet you made has a ruleset for `li a` elements. 
+Since "all list items containing a link" is more specific than "all list items", 
+the ruleset from your external stylesheet is used.
+
+However, if there are two rulesets with the same specificity, 
+the last ruleset assigned is applied to the element. 
+Both your stylesheet and the Bootstrap stylesheet have rulesets for `h1` elements, 
+but because Bootstrap's stylesheet was the last to be added, 
+the Bootstrap ruleset was applied.
+
+This concept is a bit complicated, but DevTools provides a way to visualize cascading:
+
+1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open DevTools. 
+1. In the **Styles Pane**, click **Computed** to go to the **Computed Values Pane**. 
+   This pane allows you to see which rulesets are being applied.
+1. Right-click on **Contact** and select **Inspect**. 
+   Now you are looking at the CSS values for the contact link element.
+1. Expand the **font-family** menu with the gray arrow. 
+   In the menu you see that two items are crossed out. 
+   These are the default fonts for Bootstrap that were overwritten by your stylesheet.
+1. Click on the link that says **_reboot.scss:58**. This will take you to the place in the  
+   Bootstrap stylesheet where the font declaration was made.
+1. Click on the Elements tab to go back to the **Computed Values Pane**.
+
+If you're using multiple stylesheets and a style isn't showing up, you can use the **Computed Values Pane** to see if it's been overwritten.
 
 ### Use Bootstrap CSS {: #bootstrap }
 
@@ -298,14 +320,22 @@ With a single line of code.
 
 1. Copy this code: `class="jumbotron jumbotron-fluid"`
 1. Go to **the editor tab**.
-1. In `index.html`, paste the code you copied into the `<header>` tag. This tells the browser that the `<header>` tag should have the attributes of a jumbotron, which tells Bootstrap to apply a certain ruleset to the tag.
-1. Go to the **live tab**. Now, there is a big gray box around the elements that were in the `<header>` tag.
+1. In `index.html`, paste the code you copied into the `<header>` tag. 
+   This tells the browser that the `<header>` tag should have the attributes of a jumbotron,
+   which tells Bootstrap to apply a certain ruleset to the tag.
+1. Go to the **live tab**. Now, there is a big gray box around 
+   the elements that were in the `<header>` tag.
 1. Go back to the **editor tab**.
-1.  In `contact.html`, paste the code you copied into the `<header>` tag. Now, the `contact.html` page has the same formatting as `index.html`.
+1. In `contact.html`, paste the code you copied into the `<header>` tag. 
+   Now, the `contact.html` page has the same formatting as `index.html`.
 1. Go back to the **live tab**.
-1. Click the **Contact** link to go to the contact page. The contact page has the same formatting as the home page.
+1. Click the **Contact** link to go to the contact page. 
+   The contact page has the same formatting as the home page.
 
-You've just used your first **HTML class**. A class is an HTML attribute that can be used as a **CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are are patterns that may apply to one or more HTML elements. These selectors are then used to apply CSS **declarations** to elements. 
+You've just used your first **HTML class**. A class is an HTML attribute that can be used as 
+a **CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are are 
+patterns that may apply to one or more HTML elements. 
+These selectors are then used to apply CSS **declarations** to elements. 
 
 For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
 
@@ -323,9 +353,12 @@ For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
 
 ```
 
-In this case, the selector `.jumbotron` means "all HTML elements with the class `jumbotron`". 
+In this case, the selector `.jumbotron` means "
+all HTML elements with the class `jumbotron`". 
 
-While the **class** attribute can be used in any HTML element, a class like `jumbotron` will not format in the way you see on your site unless you have Bootstrap linked to your web page.
+While the **class** attribute can be used in any HTML element, 
+a class like `jumbotron` will not format 
+in the way you see on your site unless you have Bootstrap linked to your web page.
 
 Bootstrap also has classes that align elements:
 
@@ -340,7 +373,10 @@ Bootstrap also has classes that align elements:
 1. Repeat the previous steps for `contact.html`.
 
 
-Bootstrap's default CSS has given you a more polished site, but there are still some issues you'll need to fix. The spacing of the content both inside and outside of the `<nav>` section and the jumbotron section looks off. DevTools can help change that:
+Bootstrap's default CSS has given you a more polished site, 
+but there are still some issues you'll need to fix. 
+The spacing of the content both inside and outside 
+of the `<nav>` section and the jumbotron section looks off. DevTools can help change that:
 
 1. Go to the **live tab**. 
 1. Right click on the jumbotron (the big gray box) and click **Inspect**.
