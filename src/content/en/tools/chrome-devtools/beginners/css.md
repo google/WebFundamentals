@@ -1,11 +1,11 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-27 #}
+{# wf_updated_on: 2018-08-28 #}
 {# wf_published_on: 2018-07-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
-TODO 
+
 # DevTools For Beginners: Getting Started with CSS {: .page-title }
 
 This is the second in a series of tutorials that teach you the basics of web
@@ -77,8 +77,6 @@ CSS is a language that determines the layout and visual elements of your web sit
 
 <p style="border:1px dashed red; padding:5px">This has been styled with CSS.</p> 
 
-**TODO: Explain the two broad categories of css declarations: layout and visual. Explain rulesets**
-
 And here is the HTML and CSS code used to create that paragraph:
 
 ```
@@ -93,7 +91,6 @@ The rest should look familiar. If not, complete
 
 
 ### Add inline styles {: #inline }
-TODO: DevTools workflow at end of this section. Box model?
 
 Inline styles are used to define styles for a single element. 
 For example, to add a background color to your page's navigational menu:
@@ -114,8 +111,6 @@ In the next section, you learn about how to add styling to multiple elements.
 
 
 ### Re-use styles with internal stylesheets {: #internal }
-
-TODO: DevTools workflow at end of this section
 
 Earlier, you used inline styles to apply a style to a `<p>` tag like this:
 
@@ -261,7 +256,6 @@ nav {
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
 
-TODO: DevTools CSS exploration/ Pseudo-state selector 
 
 #### Use CSS frameworks {: #frameworks}
 
@@ -311,9 +305,29 @@ With a single line of code.
 1. Go back to the **live tab**.
 1. Click the **Contact** link to go to the contact page. The contact page has the same formatting as the home page.
 
-TODO: Paragraph on classes. Define concept generally, boils down to rulesets, copy some of jumbotron's code.
+You've just used your first **HTML class**. A class is an HTML attribute that can be used as a **CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are are patterns that may apply to one or more HTML elements. These selectors are then used to apply CSS **declarations** to elements. 
 
-You can also align content with Bootstrap classes:
+For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
+
+```
+.jumbotron {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: $jumbotron-padding;
+  background-color: $jumbotron-bg;
+  @include border-radius($border-radius-lg);
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+}
+
+```
+
+In this case, the selector `.jumbotron` means "all HTML elements with the class `jumbotron`". 
+
+While the **class** attribute can be used in any HTML element, a class like `jumbotron` will not format in the way you see on your site unless you have Bootstrap linked to your web page.
+
+Bootstrap also has classes that align elements:
 
 1. Copy this code: `class="container-fluid"` .
 1. Go to the **editor tab**.
