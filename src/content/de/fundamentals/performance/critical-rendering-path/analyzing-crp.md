@@ -115,7 +115,7 @@ Die einfachste Seite besteht lediglich aus dem HTML-Markup: weder CSS noch JavaS
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
-<img src="images/analysis-dom.png" alt=""Hallo Welt" - kritischer Rendering-Pfad" class="center">
+<img src="images/analysis-dom.png" alt="'Hallo Welt' - kritischer Rendering-Pfad" class="center">
 
 **Die Zeit zwischen T<sub>0</sub> und T<sub>1</sub> erfasst die Verarbeitungsdauer von Netzwerk und Server.** Bestenfalls (wenn die HTML-Datei klein ist), benötigen wir nur einen Netzwerkumlauf zum Abrufen des gesamten Dokuments. Aufgrund der Funktionsweise der TCP-Transportprotokolle sind bei größeren Dateien möglicherweise mehr Umläufe nötig. Darauf kommen wir später noch einmal zurück. **Folglich lässt sich sagen, dass der (minimale) kritische Rendering-Pfad der oben stehenden Seite bestenfalls aus einem Umlauf besteht.**
 
