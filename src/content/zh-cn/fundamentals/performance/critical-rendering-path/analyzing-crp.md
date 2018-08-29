@@ -34,7 +34,7 @@ description:学习发现和解决关键渲染路径性能瓶颈。
 
 我们将从基本 HTML 标记和单个图像（无 CSS 或 JavaScript）开始。让我们在 Chrome DevTools 中打开 Network 时间线并检查生成的资源瀑布：
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 Note: 尽管本文档使用 DevTools 说明 CRP 概念，DevTools 当前并不非常适合 CRP 分析。
 如需了解详细信息，请参阅 [DevTools 如何？](measure-crp#devtools)。
