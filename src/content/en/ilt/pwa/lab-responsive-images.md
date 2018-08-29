@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-08-15 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -44,14 +44,24 @@ This lab shows you how to make images on your web page look good on all devices.
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Open your browser and navigate to __localhost:8080/responsive-images-lab/app__.
+If you don't have a preferred local development server, install the Node.js `http-server` package:
 
+    npm install http-server -g
 
+Navigate into the __responsive-images-lab/app__ directory and start the server:
 
-Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
+    cd responsive-images-lab/app
+    http-server -p 8080 -a localhost -c 0
 
+You can terminate the server at any time with `Ctrl-c`.
+
+Open your browser and navigate to __localhost:8080/__.
+
+<aside markdown="1" class="key-point">
+<p>Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking <strong>Clear site data</strong> from the <strong>Clear storage</strong> section of the <strong>Application</strong> tab.</p>
+</aside>
 
 
 If you have a text editor that lets you open a project, open the __responsive-images-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
