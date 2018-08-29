@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: TODO
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,265 +12,211 @@ experiments_path: /web/updates/2018/08/_experiments.yaml
 
 [settings]: /web/updates/images/2018/05/settings.png
 
-# What's New In DevTools (Chrome 68) {: .page-title }
+{# https://chromium.googlesource.com/chromium/src/+/a39ce6e61cd170b5b549f119f3b6f7a08253cba9 #}
+
+# What's New In DevTools (Chrome 70) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-New to DevTools in Chrome 68:
+Note: We'll publish the video version of <i>What's New In DevTools (Chrome 70)</i> around
+mid-October 2018.
 
-* [Eager Evaluation](#eagerevaluation). As you type expressions, the Console previews
-  the result.
-* [Argument hints](#hints). As you type functions, the Console shows you the expected arguments
-  for that function.
-* [Function autocompletion](#autocomplete). After typing a function call such as
-  `document.querySelector('p')`, the Console shows you the functions and properties that
-  the return value supports.
-* [ES2017 keywords in the Console](#keywords). Keywords such as `await` are now available in the
-  Console's autocomplete UI.
-* [Lighthouse 3.0 in the Audits panel](#lh3). Faster, more consistent audits, a new UI, and
-  new audits.
-* [`BigInt` support](#bigint). Try out JavaScript's new arbitrary-precision integer in the
-  Console.
-* [Adding property paths to the Watch pane](#watch). Add properties from the Scope pane to
-  the Watch pane.
-* ["Show timestamps" moved to Settings](#timestamps).
+Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68.
+We skipped Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
 
-Note: Check what version of Chrome you're running at `chrome://version`. If you're running
-an earlier version, these features won't exist. If you're running a later version, these features
-may have changed. Chrome auto-updates to a new major version about every 6 weeks.
+New features and major changes coming to DevTools in Chrome 70 include:
 
-Read on, or watch the video version of the release notes, below.
+* [Watch expressions in the Console](#watch). Pin an expression to the top of your Console and
+  monitor its value in real-time.
+* [Highlight DOM nodes during Eager Evaluation](#nodes). Type an expression that evaluates
+  to a DOM node to highlight that node in the viewport.
+* [Performance panel optimizations](#performance).
+* [More reliable debugging](#debugging).
+* [Enable network throttling from the Command Menu](#throttling). Run commands to simulate
+  fast 3G or slow 3G.
+* [Autocomplete Conditional Breakpoints](#autocomplete). Use the Autocomplete UI to type out
+  conditional breakpoints faster.
+* [Break on `AudioContext` events](#audiocontext). Use the Event Listener Breakpoints
+  pane to pause on the first line of an `AudioContext` lifecycle event handler.
+* [Debug Node.js apps with ndb](#ndb). Detect and attach to child processes, place breakpoints
+  before modules are required, edit files from the DevTools UI, blackbox scripts outside
+  of the working directory, and more.
 
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="br4JZ5qz_20"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
+## Watch expressions in the Console {: #watch }
 
-## Assistive Console {: #console }
+{# https://chromium.googlesource.com/chromium/src/+/589cdcb33ef96770a2c3e4a9c76ee439d1e2e56e #}
 
-Chrome 68 ships with a few new Console features related to autocompletion and previewing.
+Pin a Console expression to the top of your Console when you want to monitor its value in
+real-time.
 
-### Eager Evaluation {: #eagerevaluation }
+1. Click **Create Watch Expression** ![Create Watch Expression][watch]{: .inline-icon }.
+   The Watch Expression UI opens.
 
-When you type an expression in the Console, the Console can now show a preview of the result of
-that expression below your cursor.
+     <figure>
+       <img src="/web/updates/images/2018/08/watch1.png"
+            alt="The Watch UI"/>
+       <figcaption>
+         <b>Figure X</b>. The Watch UI
+       </figcaption>
+     </figure>
+
+[watch]: /web/updates/images/2018/08/create-watch-expression.png
+
+1. Type the expression that you want to watch.
+
+     <figure>
+       <img src="/web/updates/images/2018/08/watch2.png"
+            alt="Typing Date.now() into the Watch Expression UI."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>Date.now()</code> into the Watch Expression UI
+       </figcaption>
+     </figure>
+
+1. Click outside of the Watch Expression UI to save your expression.
+
+     <figure>
+       <img src="/web/updates/images/2018/08/watch3.png"
+            alt="A saved Watch Expression."/>
+       <figcaption>
+         <b>Figure X</b>. A saved Watch Expression
+       </figcaption>
+     </figure>
+
+Watch Expression values update every 250 milliseconds.
+
+## Debug Node.js apps with ndb {: #ndb }
+
+ndb is a new debugger for Node.js applications. On top of the [usual debugging features that
+you get through DevTools][medium]{: .external }, ndb also offers:
+
+[medium]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
+
+* Detecting and attaching to child processes.
+* Placing breakpoints before modules are required.
+* Editing files within the DevTools UI.
+* Blackboxing all scripts outside of the current working directory by default.
 
 <figure>
-  <img src="/web/updates/images/2018/05/eagereval.png"
-       alt="The Console is printing the result of the sort() operation before it has been
-            explicitly executed."/>
+  <img src="/web/updates/images/2018/08/ndb.png"
+       alt="The ndb UI."/>
   <figcaption>
-    <b>Figure 1</b>. The Console is printing the result of the <code>sort()</code> operation
-    before it has been explicitly executed
+    <b>Figure X</b>. The ndb UI
   </figcaption>
 </figure>
 
-To enable Eager Evaluation:
+Check out [ndb's README][ndb]{: .external } to learn more.
 
-1. Open the **Console**.
-1. Open **Console Settings** ![Console
-   Settings][settings]{:.inline-icon}.
-1. Enable the **Eager evaluation** checkbox.
+[ndb]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
 
-DevTools does not eager evaluate if the expression causes [side effects][SE]{:.external}.
+## Highlight DOM nodes during Eager Evaluation {: #nodes }
 
-[SE]: https://stackoverflow.com/a/8129277/1669860
+{# https://chromium.googlesource.com/chromium/src/+/d23141f79f139a042e5be53f499be649b6babbd1 #}
 
-### Argument hints {: #hints }
-
-As you're typing out functions, the Console now shows you the arguments that the function
-expects.
+Type an expression that evaluates to a DOM node in the Console and [Eager Evaluation][EE]
+highlights that node in the viewport.
 
 <figure>
-  <img src="/web/updates/images/2018/05/arghints.png"
-       alt="Argument hints in the Console."/>
+  <img src="/web/updates/images/2018/08/node.png"
+       alt="Since the current expression evaluates to a node, that node is highlighted in the
+            viewport."/>
   <figcaption>
-    <b>Figure 2</b>. Various examples of argument hints in the Console
+    <b>Figure X</b>. Since the current expression evaluates to a node, that node is highlighted
+    in the viewport
   </figcaption>
 </figure>
 
-Notes:
+[EE]: /web/updates/2018/05/devtools#eagerevaluation
 
-* A question mark before an arg, such as `?options`, represents an
-  [optional][optional]{:.external} arg.
-* An ellipsis before an arg, such as `...items`, represents a [spread][spread]{:.external}.
-* Some functions, such as `CSS.supports()`, accept multiple argument signatures. 
+## Performance panel optimizations {: #performance }
 
-[optional]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
-[spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
-
-### Autocomplete after function executions {: #autocomplete }
-
-Note: This feature depends on [Eager Evaluation](#eagerevaluation), which needs to be enabled
-from **Console Settings** ![Console Settings][settings]{:.inline-icon}.
-
-After enabling Eager Evaluation, the Console now also shows you which properties and
-functions are available after you type out a function.
+When profiling a large page, the Performance panel previously took tens of seconds to process
+and visualize the data. Clicking on a event to learn more about it in the Summary tab also
+sometimes took multiple seconds to load.
 
 <figure>
-  <img src="/web/updates/images/2018/05/autocomplete.png"
-       alt="After running document.querySelector('p'), the Console can now show you the available
-            properties and functions for that element."/>
+  <img src="/web/updates/images/2018/08/performance.png"
+       alt="Processing and loading Performance data."/>
   <figcaption>
-    <b>Figure 3</b>. The top screenshot represents the old behavior, and the bottom screenshot
-    represents the new behavior that supports function autocompletion
+    <b>Figure X</b>. Processing and loading Performance data
+  </figcaption>
+
+## More reliable debugging {: #debugging }
+
+
+
+breakpoints disappearing
+
+not getting triggered
+
+blackboxing works more reliably with sourcemaps
+
+user would mark a typescript file to be blackboxed and instead it would blackbox the entire
+bundle file
+
+sources panel becoming slower because blackboxing
+
+## Enable network throttling from the Command Menu {: #throttling }
+
+{# https://chromium.googlesource.com/chromium/src/+/80a1b32298704be36598864ddfc6d8c478af3193 #}
+
+You can now set network throttling to fast 3G or slow 3G from the [Command Menu][CM].
+
+[CM]: /web/tools/chrome-devtools/ui#command-menu
+
+<figure>
+  <img src="/web/updates/images/2018/08/throttling.png"
+       alt="Network throttling commands in the Command Menu."/>
+  <figcaption>
+    <b>Figure X</b>. Network throttling commands in the Command Menu
   </figcaption>
 </figure>
 
-### ES2017 keywords in autocomplete {: #keywords }
+## Autocomplete Conditional Breakpoints {: #autocomplete }
 
-ES2017 keywords, such as `await`, are now available in the Console's autocomplete UI.
+{# https://chromium.googlesource.com/chromium/src/+/f5874da31db94985ad43b1d50b6689e07794c5a6 #}
+
+Use the Autocomplete UI to type out your [Conditional Breakpoint][CB] expressions faster.
 
 <figure>
-  <img src="/web/updates/images/2018/05/await.png"
-       alt="The Console now suggests 'await' in its autocomplete UI."/>
+  <img src="/web/updates/images/2018/08/autocomplete.png"
+       alt="The Autocomplete UI"/>
   <figcaption>
-    <b>Figure 4</b>. The Console now suggests <code>await</code> in its autocomplete UI
+    <b>Figure X</b>. The Autocomplete UI
   </figcaption>
 </figure>
 
-## Faster, more reliable audits, a new UI, and new audits {: #lh3 }
+[CB]: /web/tools/chrome-devtools/javascript/breakpoints#conditional-loc
 
-Chrome 68 ships with Lighthouse 3.0. The next sections are a roundup of some of the biggest
-changes. See [Announcing Lighthouse 3.0][LH3] for the full story.
+<aside class="objective">
+  <b>Did you know?</b> The Autocomplete UI is possible thanks to <a href="https://codemirror.net/"
+  class="external">CodeMirror</a>, which also powers the Console.
+</aside>
 
-[LH3]: /web/updates/2018/05/lighthouse3
+## Break on AudioContext events {: #audiocontext }
 
-### Faster, more reliable audits {: #lantern }
+Use the [Event Listener Breakpoints][ELB] pane to pause on the first line of an `AudioContext`
+lifecycle event handler.
 
-Lighthouse 3.0 has a new internal auditing engine, codenamed Lantern, which completes your
-audits faster, and with less variance between runs.
+[AudioContext][AudioContext]{: .external } is part of the Web Audio API, which you can use to
+process and synthesize audio.
 
-### New UI {: #ui }
+[AudioContext]: https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
 
-Lighthouse 3.0 also brings a new UI, thanks to a collaboration between the Lighthouse and
-Chrome UX (Research & Design) teams.
+[ELB]: https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints#event-listeners
 
 <figure>
-  <img src="/web/updates/images/2018/05/lighthouse3.png"
-       alt="The new report UI in Lighthouse 3.0."/>
+  <img src="/web/updates/images/2018/08/audiocontext.png"
+       alt="AudioContext events in the Event Listener Breakpoints pane."/>
   <figcaption>
-    <b>Figure 5</b>. The new report UI in Lighthouse 3.0
+    <b>Figure X</b>. AudioContext events in the Event Listener Breakpoints pane
   </figcaption>
 </figure>
 
-### New audits {: #audits }
-
-Lighthouse 3.0 also ships with 4 new audits:
-
-* First Contentful Paint
-* robots.txt is not valid
-* Use video formats for animated content
-* Avoid multiple, costly round trips to any origin
-
-## BigInt support {: #bigint }
-
-Note: This isn't a DevTools features per se, but it is a new JavaScript capability that you
-can try out in the Console.
-
-Chrome 68 supports a new numeric primitive called [`BigInt`][BigInt]. `BigInt` lets you represent
-integers with arbitrary precision. Try it out in the Console:
-
-<figure>
-  <img src="/web/updates/images/2018/05/bigint.png"
-       alt="An example of BigInt in the Console."/>
-  <figcaption>
-    <b>Figure 6</b>. An example of <code>BigInt</code> in the Console
-  </figcaption>
-</figure>
-
-[BigInt]: /web/updates/2018/05/bigint
-
-## Add property path to watch {: #watch }
-
-While paused on a breakpoint, right-click a property in the Scope pane and select
-**Add property path to watch** to add that property to the Watch pane.
-
-<figure>
-  <img src="/web/updates/images/2018/05/watch.png"
-       alt="An example of Add property path to watch."/>
-  <figcaption>
-    <b>Figure 7</b>. An example of <b>Add property path to watch</b>
-  </figcaption>
-</figure>
-
-## "Show timestamps" moved to settings {: #timestamps }
-
-The **Show timestamps** checkbox previously in **Console Settings**
-![Console Settings][settings]{:.inline-icon} has moved to
-[Settings](/web/tools/chrome-devtools/ui#settings).
+{# https://chromium.googlesource.com/chromium/src/+/5cc93793d9819f9b0d9e6fde47cdeb8e9c481ae4 #}
 
 ## Feedback {: #feedback }
 
-<style>
-  .wndt-feedback {
-    display: inline;
-    margin: 1em;
-  }
-  #quickstart-feedback-question {
-    margin: 1em 0;
-    position: relative;
-  }
-  #quickstart-feedback-question section.expandable {
-    position: static;
-    display: inline;
-  }
-</style>
-
-Was this page helpful?
-
-{% dynamic if experiments.feedback.red %}
-  <div id="quickstart-feedback-question">
-    <section class="expandable">
-      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-              style="background-color: #f44336"
-              data-category="Helpful"
-              data-label="{% dynamic print request.path %} (red)" data-value="1">
-        Yes
-      </button>
-      <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-        we're doing well, or how we can improve.
-      </aside>
-    </section>
-    <section class="expandable">
-      <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-              style="background-color: #f44336"
-              data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %} (red)" data-value="0">
-        No
-      </button>
-      <aside id="quickstart-feedback-failure" class="warning">
-        Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
-      </aside>
-    </section>
-  </div>
-{% dynamic elif experiments.feedback.white %}
-  <div id="quickstart-feedback-question">
-    <section class="expandable">
-      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
-              data-category="Helpful"
-              data-label="{% dynamic print request.path %} (white)" data-value="1">
-        Yes
-      </button>
-      <aside id="quickstart-feedback-success" class="success">
-        Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-        we're doing well, or how we can improve.
-      </aside>
-    </section>
-    <section class="expandable">
-      <button class="wndt-feedback button button-blue expand-control gc-analytics-event"
-              data-category="Helpful" data-action="Feedback"
-              data-label="{% dynamic print request.path %} (white)" data-value="0">
-        No
-      </button>
-      <aside id="quickstart-feedback-failure" class="warning">
-        Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
-      </aside>
-    </section>
-  </div>
-{% dynamic endif %}
+{% include "web/_shared/helpful.html" %}
 
 To discuss the new features and changes in this post, or anything else related to DevTools:
 
@@ -288,13 +234,12 @@ To discuss the new features and changes in this post, or anything else related t
 
 ## Consider Canary {: #canary }
 
-If you're on Mac or Windows, please consider using [Chrome Canary][canary] as your default
-development browser. If you report a bug or a change that you don't like while it's still in
-Canary, the DevTools team can address your feedback significantly faster.
+If you're on Mac or Windows, consider using [Chrome Canary][canary] as your default
+development browser. Canary gives you access to the latest DevTools features.
 
-Note: Canary is the bleeding-edge version of Chrome. It's released as soon as its built, without
-testing. This means that Canary breaks from time-to-time, about once-a-month, and it's usually
-fixed within a day. You can go back to using Chrome Stable while Canary is broken.
+Note: Canary is released as soon as its built, without testing. This means that Canary
+breaks about once-a-month. It's usually fixed within a day. You can go back to using Chrome
+Stable while Canary is broken.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
