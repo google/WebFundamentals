@@ -4,13 +4,59 @@ landing_page:
   header:
     description: ''
   rows:
-  - 
-  - 
-  - 
-  - 
-  - 
+  - custom_html: "  \n用于为Web应用程序添加离线支持的 JavaScript 库\n入门 "
+  - background: grey
+    items:
+    - description: Workbox 是一组库和 Node 模块，可以轻松缓存资源和用于构建渐进式Web应用程序.
+  - custom_html: " \n  \n    \n      \n    \n    \n      性能\n      停止在网络上等待！ 您可以通过缓存和提供文件来提高Web应用程序的性能，这些文件由
+      \ Service Worker 提供支持。\n    \n  \n  \n    \n      \n    \n    \n      弹性\n      即使在不可靠的连接上，您的Web应用程序仍然可以使用正确的运行时缓存策略。\n
+      \   \n  \n  \n    \n      \n    \n    \n      增强\n      想要构建一个渐进的 Web 应用程序？
+      Workbox 可以轻松创建离线，即使是初次体验 。\n    \n  \n"
+  - background: grey
+    heading: 为何选择 Workbox ？
+    items:
+    - description: "Workbox 是一个库，它结合了一组最佳实践，并删除了每个开发人员在与  service workers 一起工作时编写的样板文件。
+        \n 预缓存 运行时缓存 策略 请求路由 后台同步 调试 比 sw-precache 和 sw-toolbox 更全面，更灵活 "
+  - custom_html: "API 是什么样子？ 下面是Workbox API的一些示例，演示了开发人员在其  Service Worker 中使用的一些常用方法。\n缓存
+      Google Fonts\n希望您的用户访问过您的网站后可以使用离线的 Google 字体吗？ 添加快速规则以从缓存中提供它们。\n // 在重新验证策略时，使用已经缓存
+      Google 字体样式表。\nworkbox.routing.registerRoute(\n  /^https:\\/\\/fonts\\.googleapis\\.com/,\n
+      \ workbox.strategies.staleWhileRevalidate({\n    cacheName: \\\\\\\\\\\\\\\\\\'google-fonts-stylesheets\\\\\\\\\\\\\\\\\\',\n
+      \ }),\n);\n\n// 使用缓存优先原则缓存一年 Google Fonts 文件。\nworkbox.routing.registerRoute(\n
+      \ /^https:\\/\\/fonts\\.gstatic\\.com/,\n  workbox.strategies.cacheFirst({\n
+      \   cacheName: \\\\\\\\\\\\\\\\\\'google-fonts-webfonts\\\\\\\\\\\\\\\\\\',\n
+      \   plugins: [\n      new workbox.cacheableResponse.Plugin({\n        statuses:
+      [0, 200],\n      }),\n      new workbox.expiration.Plugin({\n        maxAgeSeconds:
+      60 * 60 * 24 * 365,\n      }),\n    ],\n  }),\n); \n缓存 JavaScript 和 CSS 通过从缓存中返回
+      JS和CSS，同时确保它们在后台更新以供下次使用。\n workbox.routing.registerRoute(\n  /\\.(?:js|css)$/,\n
+      \ workbox.strategies.staleWhileRevalidate(),\n); \n缓存图片 图像是网页中很重要的一部分。 使用此规则可以从缓存中快速提供这些命中规则的图片，同时确保不会无限期地缓存它们，从而消耗用户存储空间。\n
+      workbox.routing.registerRoute(\n  /\\.(?:png|gif|jpg|jpeg|svg)$/,\n  workbox.strategies.cacheFirst({\n
+      \   cacheName: \\\\\\\\\\\\\\\\\\'images\\\\\\\\\\\\\\\\\\',\n    plugins: [\n
+      \     new workbox.expiration.Plugin({\n        maxEntries: 60,\n        maxAgeSeconds:
+      30 * 24 * 60 * 60, // 30 Days\n      }),\n    ],\n  }),\n); \n预缓存文件 可以通过 CLI,
+      Node 模块或者 webpack 插件来使用 Workbox 在你的网页应用中预缓存资源。 \n\n  \n    CLI\n    workbox
+      wizard\n  \n  \n    Node Module\n    const workboxBuild = require(\\\\\\\\\\\\\\\\\\'workbox-build\\\\\\\\\\\\\\\\\\');\nworkboxBuild.generateSW({\n
+      \ swDest: \\\\\\\\\\\\\\\\\\'./build/sw.js\\\\\\\\\\\\\\\\\\'\n  globDirectory:
+      \\\\\\\\\\\\\\\\\\'./app\\\\\\\\\\\\\\\\\\',\n  globPatterns: \\\\\\\\\\\\\\\\\\'**\\/*.{js,css,html,png}\\\\\\\\\\\\\\\\\\',\n});\n
+      \ \n  \n    webpack\n    const WorkboxPlugin = require(\\\\\\\\\\\\\\\\\\'workbox-webpack-plugin\\\\\\\\\\\\\\\\\\');\n\n//
+      webpack config\n{\n  plugins: [\n    // Other webpack plugins...\n    new WorkboxPlugin()\n
+      \ ]\n}\n  \n\n离线使用 Google Analytics想要离线分析你的离线 PWA 应用？没问题。\n workbox.googleAnalytics.initialize(); "
   - items:
     - youtube_id: DtuJ55tmjps
-  - 
-  - 
+      description: 在本次演讲中，Jeff Posnick概述了Workbox对缓存策略，预缓存和处理导航请求的支持。 其中有很多现实中的例子，讲述了
+        Pinterest 和 WIRED 这样的公司如何在产品中使用 Workbox。
+    background: grey
+    heading: Workbox @ Chrome Dev Summit
+  - description: "    \n   "
+    heading: 都有谁在使用 Workbox?
+  - background: grey
+    items:
+    - custom_html: |2
+
+          学习如何使用 Workbox
+          入门
   - heading: 贡献者
+    description: |-
+      Workbox 由一群友好的贡献者构建和维护，没有他们，就没有这一切。
+
+      {% include \\'web/tools/workbox/_shared/contributors.html\\' %}
+project_path: "/web/tools/workbox/_project.yaml"
