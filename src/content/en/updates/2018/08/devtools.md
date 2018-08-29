@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Watch expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
+description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 
 {# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Watch expressions in the Console, highlight DOM nodes during Eager Evaluation, and more. #}
+{# wf_featured_snippet: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 [settings]: /web/updates/images/2018/05/settings.png
@@ -25,7 +25,7 @@ We skipped Chrome 69 because we didn't have enough new features or UI changes to
 
 New features and major changes coming to DevTools in Chrome 70 include:
 
-* [Watch expressions in the Console](#watch). Pin an expression to the top of your Console and
+* [Live Expressions in the Console](#watch). Pin an expression to the top of your Console and
   monitor its value in real-time.
 * [Highlight DOM nodes during Eager Evaluation](#nodes). Type an expression that evaluates
   to a DOM node to highlight that node in the viewport.
@@ -43,47 +43,47 @@ New features and major changes coming to DevTools in Chrome 70 include:
   before modules are required, edit files from the DevTools UI, blackbox scripts outside
   of the working directory, and more.
 
-## Watch expressions in the Console {: #watch }
+## Live Expressions in the Console {: #watch }
 
 {# https://chromium.googlesource.com/chromium/src/+/589cdcb33ef96770a2c3e4a9c76ee439d1e2e56e #}
 
-Pin a Console expression to the top of your Console when you want to monitor its value in
+Pin a Live Expression to the top of your Console when you want to monitor its value in
 real-time.
 
-1. Click **Create Watch Expression** ![Create Watch Expression][watch]{: .inline-icon }.
-   The Watch Expression UI opens.
+1. Click **Create Live Expression** ![Create Live Expression][live]{: .inline-icon }.
+   The Live Expression UI opens.
 
      <figure>
-       <img src="/web/updates/images/2018/08/watch1.png"
-            alt="The Watch UI"/>
+       <img src="/web/updates/images/2018/08/live1.png"
+            alt="The Live Expression UI"/>
        <figcaption>
-         <b>Figure X</b>. The Watch UI
+         <b>Figure X</b>. The Live Expression UI
        </figcaption>
      </figure>
 
-[watch]: /web/updates/images/2018/08/create-watch-expression.png
+[live]: /web/updates/images/2018/08/create-live-expression.png
 
-1. Type the expression that you want to watch.
+1. Type the expression that you want to monitor.
 
      <figure>
-       <img src="/web/updates/images/2018/08/watch2.png"
-            alt="Typing Date.now() into the Watch Expression UI."/>
+       <img src="/web/updates/images/2018/08/live2.png"
+            alt="Typing Date.now() into the Live Expression UI."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>Date.now()</code> into the Watch Expression UI
+         <b>Figure X</b>. Typing <code>Date.now()</code> into the Live Expression UI
        </figcaption>
      </figure>
 
-1. Click outside of the Watch Expression UI to save your expression.
+1. Click outside of the Live Expression UI to save your expression.
 
      <figure>
-       <img src="/web/updates/images/2018/08/watch3.png"
-            alt="A saved Watch Expression."/>
+       <img src="/web/updates/images/2018/08/live3.png"
+            alt="A saved Live Expression."/>
        <figcaption>
-         <b>Figure X</b>. A saved Watch Expression
+         <b>Figure X</b>. A saved Live Expression
        </figcaption>
      </figure>
 
-Watch Expression values update every 250 milliseconds.
+Live Expression values update every 250 milliseconds.
 
 ## Debug Node.js apps with ndb {: #ndb }
 
@@ -145,10 +145,13 @@ sometimes took multiple seconds to load. Processing and visualizing is faster in
 ## More reliable debugging {: #debugging }
 
 Chrome 70 fixes some bugs that were causing breakpoints to disappear or not get
-triggered. It also fixes bugs related to sourcemaps. Some TypeScript users would instruct
+triggered.
+
+It also fixes bugs related to sourcemaps. Some TypeScript users would instruct
 DevTools to blackbox a certain TypeScript file while stepping through code, and instead DevTools
-would blackbox the entire bundled JavaScript file. These fixes also address an issue that was
-causing the Sources panel to generally run slowly.
+would blackbox the entire bundled JavaScript file.
+
+These fixes also address an issue that was causing the Sources panel to generally run slowly.
 
 ## Enable network throttling from the Command Menu {: #throttling }
 
