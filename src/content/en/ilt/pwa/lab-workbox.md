@@ -55,7 +55,7 @@ In this lab, you'll use the __workbox-sw.js__ library and the `workbox-build` No
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
 ### 1.1 Install project dependencies and start the server
 
