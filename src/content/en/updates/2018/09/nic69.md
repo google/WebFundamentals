@@ -195,8 +195,12 @@ there’s plenty more.
 * And [`OffscreenCanvas`](/web/updates/2018/08/offscreen-canvas) moves work
   off the main thread in to a worker, helping to eliminate performance bottlenecks.
 
+<style>
+  table.exw-expanded-content { display: table; }
+</style>
+
 <section class="expandable">
-  Did you find all of the easter e<a href="" class="expand-control once">g</a>gs
+  Did you find all of the easter e<a href="" class="expand-control">g</a>gs
   in the video?
   </a>
   <ul>

@@ -174,6 +174,17 @@ function initFeed() {
   });
 }
 
+function initDevSite() {
+  console.log('initDevSite');
+  devsite.localInit();
+  document.querySelectorAll('.expandable').forEach((elem) => {
+    jQuery.expandable.fromDomElement(elem);
+  });
+  devsite.kennedy.InitializeTabbars();
+  devsite.kennedy.InitializeSelects();
+
+}
+
 function init() {
   initNavToggles();
   initLangSelector();
