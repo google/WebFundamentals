@@ -57,7 +57,7 @@ real-time.
        <img src="/web/updates/images/2018/08/live1.png"
             alt="The Live Expression UI"/>
        <figcaption>
-         <b>Figure X</b>. The Live Expression UI
+         <b>Figure 1</b>. The Live Expression UI
        </figcaption>
      </figure>
 
@@ -69,7 +69,7 @@ real-time.
        <img src="/web/updates/images/2018/08/live2.png"
             alt="Typing Date.now() into the Live Expression UI."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>Date.now()</code> into the Live Expression UI
+         <b>Figure 2</b>. Typing <code>Date.now()</code> into the Live Expression UI
        </figcaption>
      </figure>
 
@@ -79,35 +79,11 @@ real-time.
        <img src="/web/updates/images/2018/08/live3.png"
             alt="A saved Live Expression."/>
        <figcaption>
-         <b>Figure X</b>. A saved Live Expression
+         <b>Figure 3</b>. A saved Live Expression
        </figcaption>
      </figure>
 
 Live Expression values update every 250 milliseconds.
-
-## Debug Node.js apps with ndb {: #ndb }
-
-ndb is a new debugger for Node.js applications. On top of the [usual debugging features that
-you get through DevTools][medium]{: .external }, ndb also offers:
-
-[medium]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
-
-* Detecting and attaching to child processes.
-* Placing breakpoints before modules are required.
-* Editing files within the DevTools UI.
-* Blackboxing all scripts outside of the current working directory by default.
-
-<figure>
-  <img src="/web/updates/images/2018/08/ndb.png"
-       alt="The ndb UI."/>
-  <figcaption>
-    <b>Figure X</b>. The ndb UI
-  </figcaption>
-</figure>
-
-Check out [ndb's README][ndb]{: .external } to learn more.
-
-[ndb]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
 
 ## Highlight DOM nodes during Eager Evaluation {: #nodes }
 
@@ -121,7 +97,7 @@ highlights that node in the viewport.
        alt="Since the current expression evaluates to a node, that node is highlighted in the
             viewport."/>
   <figcaption>
-    <b>Figure X</b>. Since the current expression evaluates to a node, that node is highlighted
+    <b>Figure 4</b>. Since the current expression evaluates to a node, that node is highlighted
     in the viewport
   </figcaption>
 </figure>
@@ -138,7 +114,7 @@ sometimes took multiple seconds to load. Processing and visualizing is faster in
   <img src="/web/updates/images/2018/08/performance.png"
        alt="Processing and loading Performance data."/>
   <figcaption>
-    <b>Figure X</b>. Processing and loading Performance data
+    <b>Figure 5</b>. Processing and loading Performance data
   </figcaption>
 </figure>
 
@@ -150,7 +126,6 @@ triggered.
 It also fixes bugs related to sourcemaps. Some TypeScript users would instruct
 DevTools to blackbox a certain TypeScript file while stepping through code, and instead DevTools
 would blackbox the entire bundled JavaScript file.
-
 These fixes also address an issue that was causing the Sources panel to generally run slowly.
 
 ## Enable network throttling from the Command Menu {: #throttling }
@@ -165,7 +140,7 @@ You can now set network throttling to fast 3G or slow 3G from the [Command Menu]
   <img src="/web/updates/images/2018/08/throttling.png"
        alt="Network throttling commands in the Command Menu."/>
   <figcaption>
-    <b>Figure X</b>. Network throttling commands in the Command Menu
+    <b>Figure 6</b>. Network throttling commands in the Command Menu
   </figcaption>
 </figure>
 
@@ -179,7 +154,7 @@ Use the Autocomplete UI to type out your [Conditional Breakpoint][CB] expression
   <img src="/web/updates/images/2018/08/autocomplete.png"
        alt="The Autocomplete UI"/>
   <figcaption>
-    <b>Figure X</b>. The Autocomplete UI
+    <b>Figure 7</b>. The Autocomplete UI
   </figcaption>
 </figure>
 
@@ -206,11 +181,35 @@ process and synthesize audio.
   <img src="/web/updates/images/2018/08/audiocontext.png"
        alt="AudioContext events in the Event Listener Breakpoints pane."/>
   <figcaption>
-    <b>Figure X</b>. AudioContext events in the Event Listener Breakpoints pane
+    <b>Figure 8</b>. AudioContext events in the Event Listener Breakpoints pane
   </figcaption>
 </figure>
 
 {# https://chromium.googlesource.com/chromium/src/+/5cc93793d9819f9b0d9e6fde47cdeb8e9c481ae4 #}
+
+## Debug Node.js apps with ndb {: #ndb }
+
+ndb is a new debugger for Node.js applications. On top of the [usual debugging features that
+you get through DevTools][medium]{: .external }, ndb also offers:
+
+[medium]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
+
+* Detecting and attaching to child processes.
+* Placing breakpoints before modules are required.
+* Editing files within the DevTools UI.
+* Blackboxing all scripts outside of the current working directory by default.
+
+<figure>
+  <img src="/web/updates/images/2018/08/ndb.png"
+       alt="The ndb UI."/>
+  <figcaption>
+    <b>Figure 9</b>. The ndb UI
+  </figcaption>
+</figure>
+
+Check out [ndb's README][ndb]{: .external } to learn more.
+
+[ndb]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
 
 ## Feedback {: #feedback }
 
