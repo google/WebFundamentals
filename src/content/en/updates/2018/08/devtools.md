@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Watch expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
-experiments_path: /web/updates/2018/08/_experiments.yaml
 
 {# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2018-08-29 #}
