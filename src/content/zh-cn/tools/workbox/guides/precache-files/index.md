@@ -32,8 +32,7 @@ workbox.precaching.precacheAndRoute([
 
 上面的代码会下载文件`/styles/index.0c9a31.css` ， `/scripts/main.0d5770.js`和`/index.html`在 Service Worker 的 "install" 事件中，并创建一个直接从缓存中提供这些文件的路径。
 
-This list of files is normally generated using a tool that manages the
-versioning of files.
+通常使用管理文件版本控制的工具生成此文件列表。
 
 ### 生成一个 Precache 清单
 
@@ -43,19 +42,18 @@ Workbox 的大多数用户会使用下面的一个工具来生成需要预缓存
 
 ###### Workbox Command Line Interface (CLI)
 
-Ideal for developers who are **unfamiliar with Node** or **have simple needs**.
+非常适合**不熟悉Node**或**有简单需求的**开发人员。
 
-<a href="./cli" class="button button-primary">Learn how to use the CLI</a>
+<a href="./cli" class="button button-primary">了解如何使用CLI</a>
 
 ###### workbox Build
 
-Perfect for developers wanting to **programmatically build the list in Node**
-or are **using Gulp** for their build process.
+非常适合希望以**编程方式在Node中构建列表**或正在**使用Gulp**进行构建过程的开发人员。
 
-<a href="./workbox-build" class="button button-primary">Learn how to use workbox-build</a>
+<a href="./workbox-build" class="button button-primary">了解如何使用workbox-build</a>
 
 ###### Workbox Webpack Plugin
 
-Ideal for **developers using webpack** to build their project.
+非常适合**使用webpack**构建项目的**开发人员** 。
 
-<a href="./webpack" class="button button-primary">Learn how to use the Webpack Plugin</a>
+<a href="./webpack" class="button button-primary">了解如何使用Webpack插件</a>
