@@ -1,0 +1,21 @@
+
+<p>{# wf_uses_template #}
+{% comment %}
+  用例请参见 https://web-central.appspot.com/web/resources/widgets#inline-feedback 。
+{% endcomment %}
+{% framebox width="auto" height="auto" enable_widgets="true" %}
+#cdata-section&gt;#cdata-section&gt;<style><#cdata-section></div></style></p>
+<p>{{ question }}</p>
+<p>
+{% endif %}
+<button type="button" class="button button-primary gc-analytics-event" data-category="{{ category }}" data-label="{{ label }}" data-value="1">
+  {{ success_button }}
+</button>
+<button type="button" class="button gc-analytics-event" data-category="{{ category }}" data-label="{{ label }}" data-value="0">
+  {{ fail_button }}
+</button>
+<aside class="success wf-feedback--hidden">{{ success_response }}</aside>
+<aside class="caution wf-feedback--hidden">{{ fail_response }}</aside>
+#cdata-section&gt;<script><#cdata-section>
+{% endframebox %}
+</div></script></p>
