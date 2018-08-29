@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-13 #}
+{# wf_updated_on: 2018-08-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -16,19 +16,41 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-Use these instructions to install the lab repository on your computer prior to starting the labs. You must also install Node and set up a local Node server.
+Use these instructions to install the lab repository on your computer prior to starting the labs. You must also install  [Node.js](https://nodejs.org/en/) (the most recent LTS version).
 
 ### Prerequisites
 
-* These labs are intended to be used on systems running Windows 7 and later, macOS, and Linux.
+* These labs are intended to be used on systems running Windows 7 (and later), macOS X 10.1 (and later), and Linux.
 * Multiple browsers - although individual labs may require a specific level of support for progressive web apps, we recommend trying out the labs on multiple browsers (where feasible) so that you get a sense of how different users might experience the app.
 * A programming editor - for example,  [Atom](https://atom.io/),  [Sublime Text](https://www.sublimetext.com/), or  [Notepad++](https://notepad-plus-plus.org/) (for Windows only).
 
+Note: Although not a hard requirement, for general development it can be useful to [disable the HTTP cache](tools-for-pwa-developers#disablehttpcache).
 
 
-Note: Although not a hard requirement, for general development it can be useful to <a href="tools-for-pwa-developers#disablehttpcache">disable the HTTP cache</a></a>.
+## Install Git
 
 
+
+
+[Install the latest version of Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on your computer.
+
+
+## Clone the repo
+
+
+
+
+Open your computer's command line interface. Clone the course repository with Git using the following command:
+
+    git clone https://github.com/google-developer-training/pwa-training-labs.git
+
+Then navigate into the repository:
+
+    cd pwa-training-labs
+
+Note: If you do not use Git, then you can  [download the repo as a zip file](https://github.com/google-developer-training/pwa-training-labs/archive/master.zip). Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. In this case the navigation command is `cd pwa-training-labs-master`.
+
+Some projects in the download contain folders that correspond to checkpoints in the lab. You can refer back to these checkpoints if you get stuck during the labs.
 
 
 ## Set up Node & NPM
@@ -36,15 +58,23 @@ Note: Although not a hard requirement, for general development it can be useful 
 
 
 
-Install  [Node](https://nodejs.org/en/) and run a local Node server (you may need administrator privileges to do this).
+If you don't have Node.js, download and install the latest __long term support (LTS)__ version from the  [website](https://nodejs.org/en/). After Node.js is installed, you can skip the rest of this doc and start the labs.
 
-We recommend installing the latest __long term support (LTS)__ version of  [Node](https://nodejs.org/en/) (labelled as "LTS, Recommended for Most Users") rather than the most current version with the latest features (the current version may be unstable).
+If you already have Node.js installed on your computer, check that it is the latest  [__LTS__ version](https://nodejs.org/en/) with the following command:
+
+```
+node -v
+```
+
+If it's not the latest LTS version, follow the instructions below to install the right version.
+
+Note: We recommend the LTS version of Node.js rather than the current version (with the latest features) because the current version may be unstable.
 
 ### Using NVM
 
-If you have an existing version of Node installed that you would like to keep, you can install a Node version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (NVM) lets you install multiple versions of Node, and easily switch between them. If you have issues with a specific version of Node, you can <a href="https://github.com/creationix/nvm#usage">switch to another version</a> with a single command.
+If you have an existing version of Node.js installed that you would like to keep, you can install a Node.js version manager (for  [macOS and Linux platforms](https://github.com/creationix/nvm) and  [Windows](https://github.com/coreybutler/nvm-windows)). This tool (NVM) lets you install multiple versions of Node.js, and easily switch between them. If you have issues with a specific version of Node.js, you can  [switch to another version](https://github.com/creationix/nvm#usage) with a single command.
 
-Install Node by running one of the following commands from the command line:
+Install Node.js by running one of the following commands from the command line:
 
 If you have installed Node Version Manager (for macOS, Linux, or Windows):
 
@@ -52,15 +82,15 @@ If you have installed Node Version Manager (for macOS, Linux, or Windows):
 
 For example:
 
-    nvm install node 6.11.2
+    nvm install node 8.9.4
 
 For the Windows version you can specify whether to install the 32-bit or 64-bit binaries.  For example:
 
-    nvm install node 6.11.2 64
+    nvm install node 8.9.4 64
 
 ### Without NVM
 
-If you did not install NVM, download and install Node from the  [Node.js](https://nodejs.org/en/) website.
+If you did not install NVM, download and install Node.js from the  [website](https://nodejs.org/en/).
 
 This also installs Node's package manager,  [`npm`](https://www.npmjs.com/).
 
@@ -72,56 +102,5 @@ Check that Node and `npm` are both installed by running the following commands f
     npm -v
 
 If both commands return a version number, then the installations were successful.
-
-
-## Install a simple Node HTTP server
-
-
-
-
-Install a simple Node server with the following command:
-
-    npm install http-server -g
-
-
-## Clone the repo
-
-
-
-
-Clone the course repository with Git using the following command:
-
-    git clone https://github.com/google-developer-training/pwa-training-labs.git
-    cd pwa-training-labs
-
-Some projects in the download contain folders that correspond to checkpoints in the lab (in case you get stuck during the labs, you can refer back to the checkpoints to get back on track).
-
-
-
-Note: If you do not use Git, then you can <a href="https://github.com/google-developer-training/pwa-training-labs/archive/master.zip">download the repo as a zip file</a>. Note that if you download the repository with this method, it will be named __pwa-training-labs-master__ instead of __pwa-training-labs__. Rename the folder to __pwa-training-labs__ so that the name is consistent with the lab instructions.
-
-
-
-
-## Start the local server
-
-
-
-
-From the __pwa-training-labs__ directory, run the server with the following:
-
-
-
-Note: If this command blocks your command line, open a new command-line window.
-
-
-
-    http-server -p 8080 -a localhost -c 0
-
-Remember to restart the server if you shut down your computer, or end the process using  `Ctrl-c`.
-
-### Explanation
-
-Node packages are used throughout the labs.  [Npm](https://www.npmjs.com/) will allow easy package installation. The `http-server` server lets you test your code on __localhost:8080__.
 
 

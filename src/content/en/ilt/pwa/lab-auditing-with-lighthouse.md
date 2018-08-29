@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-02-15 #}
+{# wf_updated_on: 2018-08-16 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -10,8 +10,6 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 
-
-Concepts:  [Lighthouse PWA Analysis Tool](lighthouse-pwa-analysis-tool)
 
 <div id="overview"></div>
 
@@ -46,9 +44,20 @@ This lab shows you how you can use  [Lighthouse](/web/tools/lighthouse/), an  [o
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
-Open your browser and navigate to __localhost:8080/lighthouse-lab/app__.
+If you don't have a preferred local development server, install the Node.js `http-server` package:
+
+    npm install http-server -g
+
+Navigate into the __lighthouse-lab/app__ directory and start the server:
+
+    cd lighthouse-lab/app
+    http-server -p 8080 -a localhost -c 0
+
+You can terminate the server at any time with `Ctrl-c`.
+
+Open your browser and navigate to __localhost:8080/__.
 
 
 

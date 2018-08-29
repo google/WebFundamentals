@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2018-08-28 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -45,15 +45,22 @@ This lab shows you how to style your content to make it responsive.
 
 
 
-If you have not downloaded the repository, installed Node, and started a local server, follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
-Open your browser and navigate to __localhost:8080/responsive-design-lab/app__.
+If you don't have a preferred local development server, install the Node.js `http-server` package:
 
+    npm install http-server -g
 
+Navigate into the __responsive-design-lab/app__ directory and start the server:
 
-Note: <a href="tools-for-pwa-developers#unregister">Unregister</a> any service workers and <a href="tools-for-pwa-developers#clearcache">clear all service worker caches</a> for localhost so that they do not interfere with the lab.
+    cd responsive-design-lab/app
+    http-server -p 8080 -a localhost -c 0
 
+You can terminate the server at any time with `Ctrl-c`.
 
+Open your browser and navigate to __localhost:8080/__.
+
+Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
 If you have a text editor that lets you open a project, open the __responsive-design-lab/app__ folder. This will make it easier to stay organized. Otherwise, open the folder in your computer's file system. The __app__ folder is where you will be building the lab.
 
@@ -93,11 +100,7 @@ Replace TODO 3 in <strong>index.html</strong> with the following tag:
 
 Save the file. Refresh the page in the browser and <a href="tools-for-pwa-developers#mobile">check the page in device mode</a>. Notice the page is no longer zoomed out and the scale of the content matches the scale on a desktop device. If the content behaves unexpectedly in the device emulator, toggle in and out of device mode to reset it.
 
-
-
-__Warning:__ Device emulation gives you a close approximation as to how your site will look on a mobile device, but to get the full picture you should always test your site on real devices. You can learn more about debugging Android devices on <a href="/web/tools/chrome-devtools/remote-debugging/">Chrome</a> and <a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging">Firefox</a>.
-
-
+Note: Device emulation gives you a close approximation as to how your site will look on a mobile device, but to get the full picture you should always test your site on real devices. You can learn more about debugging Android devices on  [Chrome](/web/tools/chrome-devtools/remote-debugging/) and  [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging).
 
 #### Explanation
 
