@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -48,7 +48,7 @@ This lab walks you through creating a simple service worker and explains the ser
 
 If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Navigate into the __service-worker-lab/app__ directory and start a local development server:
+Navigate into the `service-worker-lab/app/` directory and start a local development server:
 
 ```
 cd service-worker-lab/app
@@ -58,21 +58,21 @@ node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-Open your browser and navigate to __localhost:8081/__.
+Open your browser and navigate to `localhost:8081/`.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __service-worker-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `service-worker-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __below/another.html__, __js/another.js__, __js/other.js__, and __other.html__ are sample resources that we use to experiment with service worker scope
-* __styles__ folder contains the cascading stylesheets for this lab
-* __test__ folder contains files for testing your progress
-* __index.html__ is the main HTML page for our sample site/application
-* __service-worker.js__ is the JavaScript file that is used to create our service worker
-* __package.json__ and __package-lock.json__ track the node packages used in this project
-* __server.js__ is a simple express server that we use to host our app
+* `below/another.html`, `js/another.js`, `js/other.js`, and `other.html` are sample resources that we use to experiment with service worker scope
+* `styles/` folder contains the cascading stylesheets for this lab
+* `test/` folder contains files for testing your progress
+* `index.html` is the main HTML page for our sample site/application
+* `service-worker.js` is the JavaScript file that is used to create our service worker
+* `package.json` and `package-lock.json` track the node packages used in this project
+* `server.js` is a simple express server that we use to host our app
 
 <div id="register-the-service-worker"></div>
 
@@ -82,9 +82,9 @@ This folder contains:
 
 
 
-Open __service-worker.js__ in your text editor. Note that the file is empty. We have not added any code to run within the service worker yet.
+Open `service-worker.js` in your text editor. Note that the file is empty. We have not added any code to run within the service worker yet.
 
-Open __index.html__ in your text editor.
+Open `index.html` in your text editor.
 
 Inside the `<script>` tags, add the following code to register the service worker:
 
@@ -112,7 +112,7 @@ __Optional__: Open the site on an  [unsupported browser](https://jakearchibald.g
 
 #### Explanation
 
-The above code registers the __service-worker.js__ file as a service worker. It first checks whether the browser supports service workers. This should be done every time you register a service worker because some browsers may not support service workers. The code then registers the service worker using the  [`register`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the  [`ServiceWorkerContainer` API](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer), which is contained in the window's  [`Navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) interface.
+The above code registers the `service-worker.js` file as a service worker. It first checks whether the browser supports service workers. This should be done every time you register a service worker because some browsers may not support service workers. The code then registers the service worker using the  [`register`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) method of the  [`ServiceWorkerContainer` API](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer), which is contained in the window's  [`Navigator`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) interface.
 
 `navigator.serviceWorker.register(...)` returns a promise that resolves with a  [`registration`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration) object once the service worker is successfully registered. If the registration fails, the promise will reject.
 
@@ -128,7 +128,7 @@ Changes in the service worker's status trigger events in the service worker.
 
 ### 3.1 Add event listeners
 
-Open __service-worker.js__ in your text editor.
+Open `service-worker.js` in your text editor.
 
 Add the following event listeners to the service worker:
 
@@ -167,7 +167,7 @@ Note: You can also manually activate a new service worker using some browsers' [
 
 ### 3.2 Update the service worker
 
-Add the following comment anywhere in __service-worker.js__:
+Add the following comment anywhere in `service-worker.js`:
 
 #### service-worker.js
 
@@ -179,7 +179,7 @@ Save the file and refresh the page. Look at the logs in the console; notice that
 
 ![e11f7fd7ee1efd5f.png](img/e11f7fd7ee1efd5f.png)
 
-Close all pages associated with the service worker. Then, reopen the __localhost:8081/__. The console log should indicate that the new service worker has now activated.
+Close all pages associated with the service worker. Then, reopen the `localhost:8081/`. The console log should indicate that the new service worker has now activated.
 
 Note: If you are getting unexpected results, make sure your [HTTP cache is disabled](tools-for-pwa-developers#disablehttpcache) in developer tools.
 
@@ -191,7 +191,7 @@ The browser detects a byte difference between the new and existing service worke
 
 It is possible for a new service worker to activate immediately, even if an existing service worker is present, by skipping the waiting phase.
 
-In __service-worker.js__, add a call to `skipWaiting` in the `install` event listener:
+In `service-worker.js`, add a call to `skipWaiting` in the `install` event listener:
 
 #### service-worker.js
 
@@ -221,7 +221,7 @@ Service Workers can act as a proxy between your web app and the network.
 
 Let's add a fetch listener to intercept requests from our domain.
 
-Add the following code to __service-worker.js__:
+Add the following code to `service-worker.js`:
 
 #### service-worker.js
 
@@ -255,7 +255,7 @@ Why didn't any fetch events log on the first refresh? By default, fetch events f
 
 #### Solution code
 
-To get a copy of the working code, navigate to the __04-intercepting-network-requests__ folder.
+To get a copy of the working code, navigate to the `04-intercepting-network-requests/` folder.
 
 <div id="optional-exploring-service-worker-scope"></div>
 
@@ -269,7 +269,7 @@ Service workers have  [scope](/web/ilt/pwa/introduction-to-service-worker#regist
 
 ### 5.1 Find the scope
 
-Update the registration code in __index.html__ with:
+Update the registration code in `index.html` with:
 
 #### index.html
 
@@ -287,7 +287,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Refresh the browser. Notice that the console shows the scope of the service worker (in this case it's __http://localhost:8081/__).
+Refresh the browser. Notice that the console shows the scope of the service worker (in this case it's `http://localhost:8081/`).
 
 #### Explanation
 
@@ -297,11 +297,11 @@ The default scope is the path to the service worker file, and extends to all low
 
 ### 5.2 Move the service worker
 
-Move __service-worker.js__ into the __below/__ directory and update the service worker URL in the registration code in __index.html__.
+Move `service-worker.js` into the `below/` directory and update the service worker URL in the registration code in `index.html`.
 
 [Unregister](tools-for-pwa-developers#unregister) the current service worker in the browser and refresh the page.
 
-The console shows that the scope of the service worker is now __http://localhost:8081/below/__. In Chrome, you can also see the service worker scope in the application tab of DevTools:
+The console shows that the scope of the service worker is now `http://localhost:8081/below/`. In Chrome, you can also see the service worker scope in the application tab of DevTools:
 
 ![290daea91df4c1a4.png](img/290daea91df4c1a4.png)
 
@@ -309,17 +309,17 @@ Back on the main page, click __Other page__, __Another page__ and __Back__. Whic
 
 #### Explanation
 
-The service worker's default scope is the path to the service worker file. Since the service worker file is now in __below/__, that is its scope. The console is now only logging fetch events for __another.html__, __another.css__, and __another.js__, because these are the only resources within the service worker's scope.
+The service worker's default scope is the path to the service worker file. Since the service worker file is now in `below/`, that is its scope. The console is now only logging fetch events for `another.html`, `another.css`, and `another.js`, because these are the only resources within the service worker's scope.
 
 ### 5.3 Set an arbitrary scope
 
-Move the service worker back out into the project root directory (__app__) and update the service worker URL in the registration code in __index.html__.
+Move the service worker back out into the project root directory (`app/`) and update the service worker URL in the registration code in `index.html`.
 
-Use the  [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) to set the scope of the service worker to the __below/__ directory using the optional parameter in `register()`.
+Use the  [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register) to set the scope of the service worker to the `below/` directory using the optional parameter in `register()`.
 
 [Unregister the service worker](tools-for-pwa-developers#unregister) and refresh the page. Click __Other page__, __Another page__ and __Back__.
 
-Again the console shows that the scope of the service worker is now __http://localhost:8081/below/__, and logs fetch events only for __another.html__, __another.css__, and __another.js__.
+Again the console shows that the scope of the service worker is now `http://localhost:8081/below/`, and logs fetch events only for `another.html`, `another.css`, and `another.js`.
 
 #### Explanation
 
@@ -333,7 +333,7 @@ navigator.serviceWorker.register('/service-worker.js', {
 });
 ```
 
-In the above example the scope of the service worker is set to __/kitten/__. The service worker intercepts requests from pages in __/kitten/__ and __/kitten/lower/__ but not from pages like __/kitten__ or __/__.
+In the above example the scope of the service worker is set to `/kitten/`. The service worker intercepts requests from pages in `/kitten/` and `/kitten/lower/` but not from pages like `/kitten` or `/`.
 
 Note: You cannot set an arbitrary scope that is above the service worker's actual location. However, if your server worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a max scope for that service worker above the service worker's location.
 
@@ -345,7 +345,7 @@ Note: You cannot set an arbitrary scope that is above the service worker's actua
 
 #### Solution code
 
-To get a copy of the working code, navigate to the __solution__ folder.
+To get a copy of the working code, navigate to the `solution/` folder.
 
 <div id="congratulations"></div>
 

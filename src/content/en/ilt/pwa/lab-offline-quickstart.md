@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -49,7 +49,7 @@ In this lab you'll use  [Lighthouse](/web/tools/lighthouse/) to audit a website 
 
 If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Navigate into the __offline-quickstart-lab/app__ directory and start a local development server:
+Navigate into the `offline-quickstart-lab/app/` directory and start a local development server:
 
 ```
 cd offline-quickstart-lab/app
@@ -59,20 +59,20 @@ node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-Open your browser and navigate to __localhost:8081/__. You should see that the site is a simple and static web page.
+Open your browser and navigate to `localhost:8081/`. You should see that the site is a simple and static web page.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __offline-quickstart-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `offline-quickstart-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __images__ folder contains sample images
-* __styles/main.css__ is the main stylesheet
-* __index.html__ is the main HTML page for our sample site
-* __package-lock.json__ and __package.json__ track app dependencies (the only dependencies in this case are for the local development server)
-* __server.js__ is a local development server for testing
-* __service-worker.js__ is the service worker file (currently empty)
+* `images/` folder contains sample images
+* `styles/main.css` is the main stylesheet
+* `index.html` is the main HTML page for our sample site
+* `package-lock.json` and `package.json` track app dependencies (the only dependencies in this case are for the local development server)
+* `server.js` is a local development server for testing
+* `service-worker.js` is the service worker file (currently empty)
 
 <div id="auditing-the-site-with-lighthouse"></div>
 
@@ -124,9 +124,9 @@ Take a moment to look through the PWA section of the report and see what is miss
 
 ### 3.1 Register a service worker
 
-One of the failures listed in the report is that no service worker is registered. We currently have an empty service worker file at __app/service-worker.js__.
+One of the failures listed in the report is that no service worker is registered. We currently have an empty service worker file at `app/service-worker.js`.
 
-Add the following script to the bottom of __index.html__, just before the closing `</body>` tag:
+Add the following script to the bottom of `index.html`, just before the closing `</body>` tag:
 
 #### index.html
 
@@ -148,13 +148,13 @@ if ('serviceWorker' in navigator) {
 
 #### Explanation
 
-This code registers the empty __sw.js__ service worker file once the page has loaded. However the current service worker file is empty and won't do anything. Let's add service code in the next step.
+This code registers the empty `sw.js` service worker file once the page has loaded. However the current service worker file is empty and won't do anything. Let's add service code in the next step.
 
 ### 3.2 Precache resources
 
 Another failure listed in the report is that the app doesn't respond with a 200 status code when offline. We need to update our service worker to solve this.
 
-Add the following code to the service worker file (__sw.js__):
+Add the following code to the service worker file (`sw.js`):
 
 ##### service-worker.js
 
@@ -210,7 +210,7 @@ Note: You may see a console error indicating that the service worker could not b
 
 #### Explanation
 
-Once the service worker is registered by the registration script in __index.html__, the service worker `install` event occurs. During this event, the `install` event listener opens a named cache, and caches the files specified with the `cache.addAll` method. This is called "precaching" because it happens during the `install` event, which is typically the first time a user visits your site.
+Once the service worker is registered by the registration script in `index.html`, the service worker `install` event occurs. During this event, the `install` event listener opens a named cache, and caches the files specified with the `cache.addAll` method. This is called "precaching" because it happens during the `install` event, which is typically the first time a user visits your site.
 
 After a service worker is installed, and if another service worker is not currently controlling the page, the new service worker is "activated" (the `activate` event listener is triggered in the service worker) and it begins controlling the page.
 
@@ -248,7 +248,7 @@ Our PWA score still isn't great. Some of the remaining failures listed in the re
 
 ### 5.1 Create a Manifest file
 
-Create a file in __app__ called __manifest.json__, and add the following code:
+Create a file in `app/` called `manifest.json`, and add the following code:
 
 #### manifest.json
 
@@ -288,7 +288,7 @@ Create a file in __app__ called __manifest.json__, and add the following code:
 
 The images referenced in the manifest are already supplied in the app.
 
-Then add the following HTML to the bottom of the `<head>` tag in __index.html:__
+Then add the following HTML to the bottom of the `<head>` tag in `index.html`:
 
 #### index.html
 
@@ -317,21 +317,21 @@ Then add the following HTML to the bottom of the `<head>` tag in __index.html:__
 <link rel="apple-touch-icon" sizes="512x512" href="/images/touch/icon-512x512.png">
 ```
 
-Return to the site. In the __Application__ tab of Developer Tools, select the __Clear storage__ section, and click __Clear site data__. Then refresh the page. Now select the __Manifest__ section. You should see the icons and configuration options that are configured in the __manifest.json__ file. If you don't see your changes, open the site in an incognito window and check again.
+Return to the site. In the __Application__ tab of Developer Tools, select the __Clear storage__ section, and click __Clear site data__. Then refresh the page. Now select the __Manifest__ section. You should see the icons and configuration options that are configured in the `manifest.json` file. If you don't see your changes, open the site in an incognito window and check again.
 
 #### Explanation
 
-The __manifest.json__ file tells the browser how to style and format some of the progressive aspects your app, such as the browser chrome, home screen icon, and splash screen. It can also be used to configure your web app to open in `standalone` mode, like a native app does (in other words, outside of the browser).
+The `manifest.json` file tells the browser how to style and format some of the progressive aspects your app, such as the browser chrome, home screen icon, and splash screen. It can also be used to configure your web app to open in `standalone` mode, like a native app does (in other words, outside of the browser).
 
 Support is still under development for some browsers as of the time of this writing, and the `<meta>` tags configure a subset of these features for certain browsers that don't yet have full support.
 
-We had to __Clear site data__ to remove our old cached version of __index.html__ (since that version didn't have the manifest link). Try running another Lighthouse audit and see how much the PWA score improved!
+We had to __Clear site data__ to remove our old cached version of `index.html` (since that version didn't have the manifest link). Try running another Lighthouse audit and see how much the PWA score improved!
 
 ### 5.2 Activating the install prompt
 
 The next step to installing our app is to show users with the install prompt. Chrome 67 prompted users automatically, but  [starting in Chrome 68](/web/updates/2018/06/a2hs-updates), the install prompt should be activated programmatically in response to a user gesture.
 
-Add an "Install app" button and banner to the top of __index.html__ (just after the `<main>` tag) with the following code:
+Add an "Install app" button and banner to the top of `index.html` (just after the `<main>` tag) with the following code:
 
 #### index.html
 
@@ -341,7 +341,7 @@ Add an "Install app" button and banner to the top of __index.html__ (just after 
 </section>
 ```
 
-Then style the banner by adding the following styles to __styles/main.css__:
+Then style the banner by adding the following styles to `styles/main.css`:
 
 #### styles/main.css
 
@@ -354,7 +354,7 @@ Then style the banner by adding the following styles to __styles/main.css__:
 }
 ```
 
-Save the file. Finally, add the following script tag to __index.html__:
+Save the file. Finally, add the following script tag to `index.html`:
 
 #### index.html
 

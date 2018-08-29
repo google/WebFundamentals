@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,7 +52,7 @@ This lab shows you the basics of sending, receiving, and displaying push notific
 
 If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Open your computer's command line. Navigate into the __push-notification-lab/app__ directory and start a local development server:
+Open your computer's command line. Navigate into the `push-notification-lab/app/` directory and start a local development server:
 
 ```
 cd push-notification-lab/app
@@ -62,25 +62,25 @@ node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-`npm install`  reads the dependencies in __package.json__ and installs the `web-push` module for Node.js, which we will use in the second half of the lab to push a message to our app. The `express` module is also installed, which is used by the development server (__server.js__).
+`npm install`  reads the dependencies in `package.json` and installs the `web-push` module for Node.js, which we will use in the second half of the lab to push a message to our app. The `express` module is also installed, which is used by the development server (`server.js`).
 
-Open your browser and navigate __localhost:8081/__.
+Open your browser and navigate `localhost:8081/`.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __push-notification-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `push-notification-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __images__ folder contains sample images
-* __js/main.js__ is the main JavaScript for the app, and where you will write the app's code
-* __node/main.js__ is the Node.js server
-* __samples__ folder contains sample landing pages
-* __index.html__ is the main HTML page for our sample site/application
-* __manifest.json__ is the Firebase manifest file
-* __package.json & package-lock.json__ keep track of app depencies
-* __server.js__ is a local development server for testing
-* __sw.js__ is the service worker file where we will write the script to handle notifications
+* `images/` folder contains sample images
+* `js/main.js` is the main JavaScript for the app, and where you will write the app's code
+* `node/main.js` is the Node.js server
+* `samples/` folder contains sample landing pages
+* `index.html` is the main HTML page for our sample site/application
+* `manifest.json` is the Firebase manifest file
+* `package.json` & `package-lock.json` keep track of app dependencies
+* `server.js` is a local development server for testing
+* `sw.js` is the service worker file where we will write the script to handle notifications
 
 <div id="using-the-notifications-api"></div>
 
@@ -96,7 +96,7 @@ Push notifications are assembled using two APIs: the  [Notifications API](https:
 
 Because notifications are not yet fully supported by all browsers, we must check for support.
 
-Replace TODO 2.1 in __js/main.js__ with the following code:
+Replace TODO 2.1 in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -113,7 +113,7 @@ Note: In a practical application we would perform some logic to compensate for l
 
 Before we can show notifications, we must get permission from the user.
 
-Replace TODO 2.2 in __js/main.js__ with the following code:
+Replace TODO 2.2 in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -135,7 +135,7 @@ Note: In production, requesting permissions on page load is a poor user experien
 
 ### 2.3 Display the notification
 
-Replace TODO 2.3 in __js/main.js__ in the `displayNotification()` function with the following code:
+Replace TODO 2.3 in `js/main.js` in the `displayNotification()` function with the following code:
 
 #### js/main.js
 
@@ -162,7 +162,7 @@ Note: Notifications may not surface if you're in full screen mode.
 
 The notification can do much more than just display a title.
 
-Replace TODO 2.4 in __js/main.js__ with an options object:
+Replace TODO 2.4 in `js/main.js` with an options object:
 
 #### main.js
 
@@ -203,7 +203,7 @@ Attaching data to the notification when you create it lets your app get that dat
 
 To create a notification with a set of custom actions, we can add an actions array inside our notification options object.
 
-Replace TODO 2.5 in the options object in __js/main.js__ with the following code:
+Replace TODO 2.5 in the options object in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -228,7 +228,7 @@ The actions array contains a set of action objects that define the buttons that 
 
 When the user closes a notification, a `notificationclose` event is triggered in the service worker.
 
-Replace TODO 2.6 in __sw.js__ with an event listener for the `notificationclose` event:
+Replace TODO 2.6 in `sw.js` with an event listener for the `notificationclose` event:
 
 #### sw.js
 
@@ -247,13 +247,13 @@ Save the code and [update the service worker](tools-for-pwa-developers#update) i
 
 This code gets the notification object and its data from the event. This data can be anything we like. In this case, we get the value of the `primaryKey` property.
 
-Note:  The `notificationclose` event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the [Google Analytics lab](lab-integrating-analytics).
+Note: The `notificationclose` event is a great place to add Google analytics to see how often users are closing our notifications. You can learn more about this in the [Google Analytics lab](lab-integrating-analytics).
 
 ### 2.7 Handle the notificationclick event
 
 When the user clicks on a notification or notification action, a `notificationclick` event is triggered in the service worker.
 
-Replace the TODO 2.7 in __sw.js__ with the following code:
+Replace the TODO 2.7 in `sw.js` with the following code:
 
 #### sw.js
 
@@ -277,13 +277,13 @@ To complete TODO 2.8 inside the `notificationclick` event, write the code to com
 3. Replace the URL in `clients.openWindow` with `'samples/page' + primaryKey + '.html'`.
 4. Finally, at the bottom of the listener, add a line to close the notification. Refer to the Methods section in the  [Notification article on MDN](https://developer.mozilla.org/en-US/docs/Web/API/notification) to see how to programmatically close the notification.
 
-Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me!__ to create a new notification and then click the notification. It should take you to __page1.html__ and the notification should close after it is clicked. Try changing the `primaryKey` in __main.js__ to 2 and test it again. This should take you to __page2.html__ when you click the notification.
+Save the code and [update the service worker](tools-for-pwa-developers#update) in the browser. Click __Notify me!__ to create a new notification and then click the notification. It should take you to `page1.html` and the notification should close after it is clicked. Try changing the `primaryKey` in `main.js` to 2 and test it again. This should take you to `page2.html` when you click the notification.
 
 ### 2.9 Handle actions
 
 Let's add some code to the service worker to handle the actions.
 
-Replace the entire `notificationclick` event listener in __sw.js__ with the following code:
+Replace the entire `notificationclick` event listener in `sw.js` with the following code:
 
 #### sw.js
 
@@ -311,7 +311,7 @@ Note: Notice we check for the "close" action first and handle the "explore" acti
 
 #### Solution code
 
-The solution code for the steps so far can be found in the __02-9-handle-events__ directory.
+The solution code for the steps so far can be found in the `02-9-handle-events/` directory.
 
 <div id="using-the-push-api"></div>
 
@@ -332,7 +332,7 @@ The Push API is an interface that lets your app subscribe to a push service and 
 
 If a browser that supports push messages receives one, it registers a `push` event in the service worker.
 
-Inside __sw.js__ replace TODO 3.1 with the code to handle push events:
+Inside `sw.js` replace TODO 3.1 with the code to handle push events:
 
 #### sw.js
 
@@ -385,7 +385,7 @@ Note: Recent changes to Firebase Cloud Messaging let developers avoid creating a
 3. Click the __Settings__ icon (next to your project name in the Navigation panel), and select __Project Settings__.
 4. Open the __Cloud Messaging__ tab. You can find your __Server key__ and __Sender ID__ in this page. Save these values.
 
-Replace `YOUR_SENDER_ID`  in the code below with the Sender ID of your project on Firebase and paste it into __manifest.json__ (replace any code already there):
+Replace `YOUR_SENDER_ID`  in the code below with the Sender ID of your project on Firebase and paste it into `manifest.json` (replace any code already there):
 
 #### manifest.json
 
@@ -406,7 +406,7 @@ Note: FCM has replaced Google Cloud Messaging (GCM). Some of the code to push me
 
 Whenever the user opens the app, check for the subscription object and update the server and UI.
 
-Replace TODO 3.3a in the service worker registration code at the bottom of __js/main.js__ with the following function call:
+Replace TODO 3.3a in the service worker registration code at the bottom of `js/main.js` with the following function call:
 
 #### js/main.js
 
@@ -414,7 +414,7 @@ Replace TODO 3.3a in the service worker registration code at the bottom of __js/
 initializeUI();
 ```
 
-Replace TODO 3.3b in the `initializeUI()` function in __js/main.js__ with the following code:
+Replace TODO 3.3b in the `initializeUI()` function in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -453,7 +453,7 @@ We then get the latest subscription object from the `pushManager`. In a producti
 
 Before sending any data via a push message, you must first subscribe to the browser's push service.
 
-Replace TODO 3.4 in __js/main.js__ with the following code:
+Replace TODO 3.4 in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -497,7 +497,7 @@ Note: We are setting the `userVisibleOnly` option to `true` in the subscribe met
 
 Let's give users the ability to opt-out of the push subscription.
 
-Replace TODO 3.5 in __js/main.js__ with the following code:
+Replace TODO 3.5 in `js/main.js` with the following code:
 
 #### js/main.js
 
@@ -537,7 +537,7 @@ Note: Windows machines do not come with cURL preinstalled. If you are using Wind
 
 In the browser, click __Enable Push Messaging__ and copy the endpoint URL.
 
-Open a new command window at __push-notification-lab/app__ (press `Cmd + T` or `Ctrl + T` in the command window).
+Open a new command window at `push-notification-lab/app/` (press `Cmd + T` or `Ctrl + T` in the command window).
 
 If you are using Chrome, execute the following cURL command in the command window, with your copied `ENDPOINT_URL` and your `SERVER_KEY`:
 
@@ -575,7 +575,7 @@ We are using the Web Push protocol to send a push message to the endpoint URL, w
 
 Chrome and Firefox support the ability to deliver data directly to your service worker using a push message.
 
-Replace the `push` event listener in __sw.js__ with the following code to get the data from the message:
+Replace the `push` event listener in `sw.js` with the following code to get the data from the message:
 
 #### sw.js
 
@@ -629,10 +629,10 @@ We can get all the information we need to send the push message to the right pus
 
 There are a few things you must do for this step to work:
 
-1. Paste the code below into __node/main.js__
+1. Paste the code below into `node/main.js`
 2. Make sure you have saved the changes you made to the service worker in the last step and then update the service worker in the browser by [unregistering the previous service worker](tools-for-pwa-developers#unregister) and refreshing the page.
 3. Then, click __Enable Push Messaging__ and copy the whole subscription object.
-4. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into __node/main.js__ with the subscription object.
+4. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into `node/main.js` with the subscription object.
 5. If you are working in Chrome, replace `YOUR_SERVER_KEY` in the `options` object with your own Server Key from your project on Firebase. Do not overwrite the single quotes.
 
 Note: If you are working in Firefox, you can delete the `gcmAPIKey` option.
@@ -663,7 +663,7 @@ webPush.sendNotification(
 );
 ```
 
-Save the code. From the __push-notification-lab/app__ directory, run the command below:
+Save the code. From the `push-notification-lab/app/` directory, run the command below:
 
     node node/main.js
 
@@ -671,7 +671,7 @@ A push notification should pop up on the screen. It may take a few seconds to ap
 
 #### Explanation
 
-We are using the  [web-push library](https://www.npmjs.com/package/web-push) for Node.js to simplify the syntax for sending a message to the push service. This library takes care of encrypting the message with the public encryption key. The code we added to __node/main.js__ configures the server key (for Chrome), payload, and push subscription. These configuration options are then passed to the `sendNotification` method.
+We are using the  [web-push library](https://www.npmjs.com/package/web-push) for Node.js to simplify the syntax for sending a message to the push service. This library takes care of encrypting the message with the public encryption key. The code we added to `node/main.js` configures the server key (for Chrome), payload, and push subscription. These configuration options are then passed to the `sendNotification` method.
 
 #### For more information
 
@@ -680,7 +680,7 @@ We are using the  [web-push library](https://www.npmjs.com/package/web-push) for
 
 #### Solution code
 
-The solution code can be found in the __03-8-payload__ directory.
+The solution code can be found in the `03-8-payload/` directory.
 
 <div id="optional-identifying-your-service-with-vapid"></div>
 
@@ -702,7 +702,7 @@ Run the following command:
 npm install web-push -g
 ```
 
-Now generate public and private keys by entering the following command into a command window at the __project__ directory:
+Now generate public and private keys by entering the following command into a command window at the `project/` directory:
 
     web-push generate-vapid-keys [--json]
 
@@ -726,7 +726,7 @@ Note: The keys are URL Safe Base64 encoded strings.
 
 In order for VAPID to work we must pass the public key to the `subscribe` method as a `Uint8Array`. We have included a helper function to convert the public key to this format.
 
-Replace TODO 4.2a in __js/main.js__, with the following code with your VAPID public key substituted in:
+Replace TODO 4.2a in `js/main.js`, with the following code with your VAPID public key substituted in:
 
 #### js/main.js
 
@@ -734,7 +734,7 @@ Replace TODO 4.2a in __js/main.js__, with the following code with your VAPID pub
 const applicationServerPublicKey = 'YOUR_VAPID_PUBLIC_KEY';
 ```
 
-Replace the `subscribeUser()` function in __js/main.js__ with the code below:
+Replace the `subscribeUser()` function in `js/main.js` with the code below:
 
 #### js/main.js
 
@@ -766,9 +766,9 @@ Save the code. In the browser, click __Disable Push Messaging__ or unregister th
 
 ### 4.3 Sign and send the request
 
-Copy the new subscription object and overwrite the old subscription object assigned to the `pushSubscription` variable in __node/main.js__.
+Copy the new subscription object and overwrite the old subscription object assigned to the `pushSubscription` variable in `node/main.js`.
 
-Replace TODO 4.3a in __node/main.js__ with the following code, with your values for the public and private keys substituted in:
+Replace TODO 4.3a in `node/main.js` with the following code, with your values for the public and private keys substituted in:
 
 #### node/main.js
 
@@ -797,7 +797,7 @@ Comment out the `gcmAPIKey` in the options object (it's no longer necessary):
 // gcmAPIKey: 'YOUR_SERVER_KEY',
 ```
 
-Save the file. Enter the following command in a command window at the working directory (__push-notification-lab/app__):
+Save the file. Enter the following command in a command window at the working directory (`push-notification-lab/app/`):
 
     node node/main.js
 
@@ -816,7 +816,7 @@ The web-push library makes using VAPID relatively simple, but the process is a b
 
 #### Solution code
 
-The solution code can be found in the __04-3-vapid__ directory.
+The solution code can be found in the `04-3-vapid/` directory.
 
 <div id="optional-best-practices"></div>
 
@@ -828,7 +828,7 @@ The solution code can be found in the __04-3-vapid__ directory.
 
 ### 5.1 Manage the number of notifications
 
-To complete TODO 5.1 in __js/main.js__ in the `displayNotification` function, give the notification a `tag` attribute of `'id1'`.
+To complete TODO 5.1 in `js/main.js` in the `displayNotification` function, give the notification a `tag` attribute of `'id1'`.
 
 Save the code and refresh the page in the browser. Click __Notify me!__ multiple times. The notifications should replace themselves instead of creating new notifications.
 
@@ -842,7 +842,7 @@ Your can use this to group messages that are contextually relevant into one noti
 
 Depending on the use case, if the user is already using our application we may want to update the UI instead of sending them a notification.
 
-In the `push` event handler in __sw.js__, replace the `event.waitUntil()` call with following code:
+In the `push` event handler in `sw.js`, replace the `event.waitUntil()` call with the following code:
 
 #### sw.js
 
@@ -861,9 +861,9 @@ event.waitUntil(
 );
 ```
 
-Save the file and update the service worker, then refresh the page in the browser. Click __Enable Push Messaging__. Copy the subscription object and replace the old subscription object in __node/main.js__ with it.
+Save the file and update the service worker, then refresh the page in the browser. Click __Enable Push Messaging__. Copy the subscription object and replace the old subscription object in `node/main.js` with it.
 
-Execute the command to run the node server in the command window at the __app__ directory:
+Execute the command to run the node server in the command window at the `app/` directory:
 
     node node/main.js
 
@@ -879,7 +879,7 @@ If there  *are*  active clients it means that the user has your site open in one
 
 If there are several open notifications originating from our app, we can close them all when the user clicks on one.
 
-In __sw.js__, replace the TODO 5.3 in the `notificationclick` event handler with the following code:
+In `sw.js`, replace the TODO 5.3 in the `notificationclick` event handler with the following code:
 
 #### sw.js
 
@@ -893,7 +893,7 @@ self.registration.getNotifications().then(notifications => {
 
 Save the code.
 
-Comment out the `tag` attribute in the `displayNotification` function in __main.js__ so that multiple notifications will display at once:
+Comment out the `tag` attribute in the `displayNotification` function in `main.js` so that multiple notifications will display at once:
 
 #### main.js
 
@@ -913,13 +913,13 @@ In most cases, you send the user to the same page that has easy access to the ot
 
 #### Solution code
 
-The solution code can be found in the __solution__ directory.
+The solution code can be found in the `solution/` directory.
 
 ### 5.4 Notifications and tabs
 
 We can re-use existing pages rather than opening a new tab when the notification is clicked.
 
-In __sw.js__, replace the code inside the `else` block in the `notificationclick` handler with the following code:
+In `sw.js`, replace the code inside the `else` block in the `notificationclick` handler with the following code:
 
 #### sw.js
 
@@ -955,7 +955,7 @@ In this code we get all the clients of the service worker and assign the first "
 
 #### Solution code
 
-The solution code can be found in the __solution__ directory.
+The solution code can be found in the `solution/` directory.
 
 <div id="congrats"></div>
 
