@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Watch expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
 {# wf_updated_on: 2018-08-29 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Watch expressions in the Console, highlight DOM nodes during Eager Evaluation, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 [settings]: /web/updates/images/2018/05/settings.png
@@ -30,8 +30,10 @@ New features and major changes coming to DevTools in Chrome 70 include:
   monitor its value in real-time.
 * [Highlight DOM nodes during Eager Evaluation](#nodes). Type an expression that evaluates
   to a DOM node to highlight that node in the viewport.
-* [Performance panel optimizations](#performance).
-* [More reliable debugging](#debugging).
+* [Performance panel optimizations](#performance). Faster visualizing and processing of
+  data.
+* [More reliable debugging](#debugging). Bug fixes related to breakpoints, and code stepping
+  for TypeScript users.
 * [Enable network throttling from the Command Menu](#throttling). Run commands to simulate
   fast 3G or slow 3G.
 * [Autocomplete Conditional Breakpoints](#autocomplete). Use the Autocomplete UI to type out
@@ -131,7 +133,7 @@ highlights that node in the viewport.
 
 When profiling a large page, the Performance panel previously took tens of seconds to process
 and visualize the data. Clicking on a event to learn more about it in the Summary tab also
-sometimes took multiple seconds to load.
+sometimes took multiple seconds to load. Processing and visualizing is faster in Chrome 70.
 
 <figure>
   <img src="/web/updates/images/2018/08/performance.png"
@@ -139,21 +141,15 @@ sometimes took multiple seconds to load.
   <figcaption>
     <b>Figure X</b>. Processing and loading Performance data
   </figcaption>
+</figure>
 
 ## More reliable debugging {: #debugging }
 
-
-
-breakpoints disappearing
-
-not getting triggered
-
-blackboxing works more reliably with sourcemaps
-
-user would mark a typescript file to be blackboxed and instead it would blackbox the entire
-bundle file
-
-sources panel becoming slower because blackboxing
+Chrome 70 fixes some bugs that were causing breakpoints to disappear or not get
+triggered. It also fixes bugs related to sourcemaps. Some TypeScript users would instruct
+DevTools to blackbox a certain TypeScript file while stepping through code, and instead DevTools
+would blackbox the entire bundled JavaScript file. These fixes also address an issue that was
+causing the Sources panel to generally run slowly.
 
 ## Enable network throttling from the Command Menu {: #throttling }
 
