@@ -1,0 +1,21 @@
+
+<p>这个页面有帮助吗？</p>
+
+<div class="helpful--container">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event" data-category="Helpful" data-value="1" data-label="{% dynamic print request.path %}" style="background-color:#f44336;">
+      是
+    </button>
+    <aside class="success">
+      好的！感谢您的反馈。
+    </aside>
+  </section>
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event" data-category="Helpful" data-value="0" data-label="{% dynamic print request.path %}" style="position:absolute;top:0;left:70px;background-color:#f44336;">
+      否
+    </button>
+    <aside class="warning">
+      对此感到十分抱歉。请 <a href="https://github.com/google/WebFundamentals/issues/new">提交问题</a> 来告诉我们如何改善。
+    </aside>
+  </section>
+</div>
