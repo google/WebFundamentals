@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,34 +47,32 @@ This lab shows you how to use JavaScript  [Promises](https://developer.mozilla.o
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Open your computer's command line interface. Navigate into the __promises-lab/app__ directory and start a local development server:
+Open your computer's command line interface. Navigate into the `promises-lab/app/` directory and start a local development server:
 
-```
-cd promises-lab/app
-npm install
-node server.js
-```
+    cd promises-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-`npm install` installs the `express` package, which is used by the development server (__server.js__).
+`npm install` installs the `express` package, which is used by the development server (`server.js`).
 
-Open your browser and navigate to __localhost:8081/__.
+Open your browser and navigate to `localhost:8081/`.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __promises-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `promises-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __flags/chile.png__, __flags/peru.png__, __flags/spain.png__ - sample resources that we use to experiment
-* __js/main.js__ is the main JavaScript file for the app
-* __test/test.html__ is a file for testing your progress
-* __index.html__ is the main HTML page for our sample site/application
-* __package.json & package-lock.json__ keep track of the development server dependencies
-* __server.js__ is a local development server for testing
+* `flags/chile.png`, `flags/peru.png`, `flags/spain.png` - sample resources that we use to experiment
+* `js/main.js` is the main JavaScript file for the app
+* `test/test.html` is a file for testing your progress
+* `index.html` is the main HTML page for our sample site/application
+* `package.json` & `package-lock.json` keep track of the development server dependencies
+* `server.js` is a local development server for testing
 
 <div id="using-promises"></div>
 
@@ -90,9 +88,7 @@ A  [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using
 
 Let's start by creating a simple promise.
 
-Replace the `getImageName` function in __js/main.js__ with the following code:
-
-#### js/main.js
+Replace the `getImageName` function in `js/main.js` with the following code:
 
 ```
 function getImageName(country) {
@@ -117,13 +113,11 @@ Enter "Spain" into the app's __Country Name__ field. Then, click __Get Image Nam
 
 Now enter "Hello World" into the __Country Name__ field and click __Get Image Name__. You should see another Promise object logged in the console, followed by an error.
 
-Note: Navigate to __localhost:8081/test/test.html__ in the browser to check your function implementations. Functions that are incorrectly implemented or unimplemented show red errors. You should be passing the first test that checks if the `getImageName` function was implemented correctly
+Note: Navigate to `localhost:8081/test/test.html` in the browser to check your function implementations. Functions that are incorrectly implemented or unimplemented show red errors. You should be passing the first test that checks if the `getImageName` function was implemented correctly
 
 #### Explanation
 
 The `getImageName` function creates a  [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). A promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. In effect, a promise lets an asynchronous function such as `getImageName` (the `setTimeout` method is used to make `getImageName` asynchronous) return a value much like a synchronous function. Rather than returning the final value (in this case, "Spain.png"), `getImageName` returns a promise of a future value (this is what you see in the console log). Promise construction typically looks like  [this example at developers.google.com](/web/fundamentals/getting-started/primers/promises#promises_arrive_in_javascript):
-
-#### js/main.js
 
 ```
 const promise = new Promise((resolve, reject) => {
@@ -140,15 +134,13 @@ const promise = new Promise((resolve, reject) => {
 
 Depending on the outcome of an asynchronous operation, a promise can either  [resolve](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) with a value or  [reject](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) with an error. In the `getImageName` function, the `promiseOfImageName` promise either resolves with an image filename, or rejects with a custom error signifying that the function input was invalid.
 
-__Optional__: Complete the `isSpain` function so that it takes a string as input, and returns a new promise that resolves if the function input is "Spain", and rejects otherwise. You can verify that you implemented `isSpain` correctly by navigating to __localhost:8081/test/test.html__ and checking the `isSpain` test. Note that this exercise is optional and is not used in the app.
+__Optional__: Complete the `isSpain` function so that it takes a string as input, and returns a new promise that resolves if the function input is "Spain", and rejects otherwise. You can verify that you implemented `isSpain` correctly by navigating to `localhost:8081/test/test.html` and checking the `isSpain` test. Note that this exercise is optional and is not used in the app.
 
 ### 2.2. Use the promise
 
 This section uses the promise we just created.
 
-Update the `flagChain` function in __js/main.js__ with the following code:
-
-#### js/main.js
+Update the `flagChain` function in `js/main.js` with the following code:
 
 ```
 function flagChain(country) {
@@ -182,8 +174,6 @@ Let's look at the `catch` method, which is a clearer alternative for error handl
 
 Replace the `flagChain` function with the following:
 
-#### js/main.js
-
 ```
 function flagChain(country) {
   return getImageName(country)
@@ -199,8 +189,6 @@ Save the script and refresh the page. Repeat the experiments from section 2.2 an
 The  [catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method is similar to `then`, but deals only with rejected cases. It behaves like `then(undefined, onRejected)`. With this new pattern, if the promise from `getImageName` resolves, then `logSuccess` is called (and is implicitly passed the resolved promise value). If the promise from `getImageName` rejects, then `logError` is called (and implicitly passed the rejection error).
 
 This code is not quite equivalent to the code in section 2.2, however. This new code also triggers `catch` if `logSuccess` rejects, because `logSuccess` occurs before the `catch`. This new code would actually be equivalent to the following:
-
-#### js/main.js
 
 ```
 return getImageName(country)
@@ -221,7 +209,7 @@ The difference is subtle, but extremely useful. Promise rejections skip forward 
 
 #### Solution code
 
-To get a copy of the working code, navigate to the __02-basic-promises__ folder.
+To get a copy of the working code, navigate to the `02-basic-promises/` folder.
 
 <div id="chaining-promises"></div>
 
@@ -236,8 +224,6 @@ The `then` and `catch` methods also return promises, making it possible to chain
 ### 3.1 Add asynchronous steps
 
 Replace the code in the `flagChain` function with the following:
-
-#### main.js
 
 ```
 function flagChain(country) {
@@ -270,7 +256,7 @@ If any of the promises reject, then all subsequent `then` blocks are skipped, an
 
 The `flagChain` function does not add a flag to the page if an invalid country is used as input (`getImageName` rejects and execution skips to the `catch` block).
 
-Add a `catch` to the promise chain that uses the `fallbackName` function to supply a fallback image file name to the `fetchFlag` function if an invalid country is supplied to `flagChain`. To verify this was added correctly, navigate to __localhost:8081/test/test.html__ and check the `flagChain` test.
+Add a `catch` to the promise chain that uses the `fallbackName` function to supply a fallback image file name to the `fetchFlag` function if an invalid country is supplied to `flagChain`. To verify this was added correctly, navigate to `localhost:8081/test/test.html` and check the `flagChain` test.
 
 Save the script and refresh the page. Enter "Hello World" in the __Country Name__ field and click __Fetch Flag Image__. Now the Chilean flag should display even though an invalid input was passed to `flagChain`.
 
@@ -284,7 +270,7 @@ Because `catch` returns a promise, you can use the `catch` method inside a promi
 
 #### Solution code
 
-To get a copy of the working code, navigate to the __03-chaining-promises__ folder.
+To get a copy of the working code, navigate to the `03-chaining-promises/` folder.
 
 <div id="optional-using-promise-all-and-promise-race"></div>
 
@@ -305,11 +291,9 @@ Write your own code to complete the `allFlags` function according to the followi
 1. The function should use  [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to evaluate the list of promises.
 2. If all promises resolve successfully, then `allFlags` returns the values of the resolved promises as a list. Otherwise, `allFlags` returns `false`.
 
-To verify that you have done this correctly, navigate to __localhost:8081/test/test.html__ and check the `allFlags` test.
+To verify that you have done this correctly, navigate to `localhost:8081/test/test.html` and check the `allFlags` test.
 
 Test what you've written by calling `allFlags` just below the function  using the following code:
-
-#### js/main.js
 
 ```
 var promises = [
@@ -345,9 +329,7 @@ Note: Even if an input promise rejects, causing `Promise.all` to reject, the rem
 
 Another promise method that you may see referenced is  [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race).
 
-Add the following code to __js/main.js__ below the code we added in the previous step:
-
-#### js/main.js
+Add the following code to `js/main.js` below the code we added in the previous step:
 
 ```
 const promise1 = new Promise((resolve, reject) => {
@@ -381,7 +363,7 @@ Note: Because `Promise.race` rejects immediately if one of the supplied promises
 
 #### Solution code
 
-To get a copy of the working code, navigate to the __solution__ folder.
+To get a copy of the working code, navigate to the `solution` folder.
 
 <div id="congratulations"></div>
 

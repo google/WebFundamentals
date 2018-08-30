@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,19 +52,17 @@ This lab shows you how to integrate Google Analytics into your Progressive Web A
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Navigate into the __google-analytics-lab/app__ directory and start a local development server:
+Navigate into the `google-analytics-lab/app/` directory and start a local development server:
 
-```
-cd google-analytics-lab/app
-npm install
-node server.js
-```
+    cd google-analytics-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-Open Chrome and navigate to __localhost:8081/google-analytics-lab/app__.
+Open Chrome and navigate to `localhost:8081/google-analytics-lab/app/`.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
@@ -74,30 +72,30 @@ You should also see that a service worker registration is logged to the console.
 
 The app for this lab is a simple web page that has some  [push notification](/web/fundamentals/engage-and-retain/push-notifications/) code.
 
-Open the __google-analytics-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `google-analytics-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __pages__ folder contains sample resources that we use in experimenting:
-* __page-push-notification.html__
-* __other.html__
-* __images__ folder contains images to style our app and notifications
-* __index.html__ is the main HTML page for our sample site/application
-* __styles/main.css__ is the app's CSS
-* __js/main.js__ is the main JavaScript for the app
-* __js/analytics-helper.js__ is an empty helper file
-* __sw.js__ is the service worker file
-* __manifest.json__ is the manifest for push notifications
-* __package-lock.json__ & __package.json__ track app dependencies (the only dependencies in this case are for the local development server)
-* __server.js__ is a local development server for testing
+* `pages/` folder contains sample resources that we use in experimenting:
+* `page-push-notification.html`
+* `other.html`
+* `images/` folder contains images to style our app and notifications
+* `index.html` is the main HTML page for our sample site/application
+* `styles/main.css` is the app's CSS
+* `js/main.js` is the main JavaScript for the app
+* `js/analytics-helper.js` is an empty helper file
+* `sw.js` is the service worker file
+* `manifest.json` is the manifest for push notifications
+* `package-lock.json` & `package.json` track app dependencies (the only dependencies in this case are for the local development server)
+* `server.js` is a local development server for testing
 
-Currently, __main.js__ requests notification permission and registers a service worker, __sw.js__. __main.js__ also contains functions for subscribing and unsubscribing for push notifications. We will address that later (subscribing to push isn't yet possible because we haven't registered with a push service).
+Currently, `main.js` requests notification permission and registers a service worker, `sw.js`. `main.js` also contains functions for subscribing and unsubscribing for push notifications. We will address that later (subscribing to push isn't yet possible because we haven't registered with a push service).
 
-__sw.js__ contains listeners for push events and notification events.
+`sw.js` contains listeners for push events and notification events.
 
 Test the notification code by using developer tools to [send a push notification](tools-for-pwa-developers#push).
 
-A notification should appear on your screen. Try clicking it. It should take you to a sample page. You can see the logic for this behavior in __sw.js__ in the `notificationclick` and `push` event handlers.
+A notification should appear on your screen. Try clicking it. It should take you to a sample page. You can see the logic for this behavior in `sw.js` in the `notificationclick` and `push` event handlers.
 
 Note: Simulated push notifications can be sent from the browser even if the subscription object is null, which is how we are able to test push notifications before registering with a push service.
 
@@ -154,7 +152,7 @@ Enter an account name (for example "PWA Training").
 The property must be associated with a site. We will use a mock  [GitHub Pages](https://pages.github.com/) site.
 
 1. Set the website name to whatever you want, for example "GA Lab Site".
-2. Set the website URL to __USERNAME.github.io/google-analytics-lab/__, where __USERNAME__ is your  [GitHub](https://github.com/) username (or just your name if you don't have a GitHub account). Set the protocol to __https://__.
+2. Set the website URL to `USERNAME.github.io/google-analytics-lab/`, where `USERNAME` is your  [GitHub](https://github.com/) username (or just your name if you don't have a GitHub account). Set the protocol to `https://`.
 3. Select any industry or category.
 4. Select your timezone.
 5. Unselect any data sharing settings.
@@ -195,8 +193,6 @@ If you lost your place:
 
 Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks like:
 
-#### index.html
-
 ```
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114028926-1"></script>
   <script>
@@ -208,9 +204,9 @@ Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks
   </script>
 ```
 
-Note: If you haven't used Google Analytics in a while and are more familiar with __analytics.js__, this script may look unfamiliar. This code uses __gtag.js__, a more streamlined analytics system. You can read more about the differences between __analytics.js__ and __gtag.js__ in  [this documentation](/analytics/devguides/collection/gtagjs/migration).
+Note: If you haven't used Google Analytics in a while and are more familiar with `analytics.js`, this script may look unfamiliar. This code uses `gtag.js`, a more streamlined analytics system. You can read more about the differences between `analytics.js` and `gtag.js` in  [this documentation](/analytics/devguides/collection/gtagjs/migration).
 
-Copy this script (from the Google Analytics page) and paste it in the bottom of __index.html__ and __pages/other.html__. Save the scripts and refresh the app page (you can close the __page-push-notification.html__ page that was opened earlier from the notification click).
+Copy this script (from the Google Analytics page) and paste it in the bottom of `index.html` and `pages/other.html`. Save the scripts and refresh the app page (you can close the `page-push-notification.html` page that was opened earlier from the notification click).
 
 Now return to the Google Analytics site. Examine the real time data section by selecting __Real-Time__ and then __Overview__:
 
@@ -222,7 +218,7 @@ You should see yourself being tracked. The screen should look similar to this:
 
 Note: If you don't see this, refresh the app and check again.
 
-In the Google Analytics dashboard, the __Active Page__ indicates which page is being viewed. Back in the app, click the link to __Other page__ to navigate to the other page. Then check the Google Analytics dashboard and examine __Active Page__ again. It should now show __/pages/other.html__ (this might take a few seconds).
+In the Google Analytics dashboard, the __Active Page__ indicates which page is being viewed. Back in the app, click the link to __Other page__ to navigate to the other page. Then check the Google Analytics dashboard and examine __Active Page__ again. It should now show `/pages/other.html` (this might take a few seconds).
 
 #### Explanation
 
@@ -280,9 +276,7 @@ You can also see specific information like visitors' language, country, city, br
 
 Google Analytics supports marking "events" that allow fine grain analysis of user behavior.
 
-In __main.js__, replace the `favorite` function with the following:
-
-#### main.js
+In `main.js`, replace the `favorite` function with the following:
 
 ```
 const favorite = () => {
@@ -293,7 +287,7 @@ const favorite = () => {
 };
 ```
 
-Save the script and refresh the app's main page (__index.html__). Click __Favorite__.
+Save the script and refresh the app's main page (`index.html`). Click __Favorite__.
 
 Return to the __Real-Time__ reporting section of the Google Analytics dashboard. Instead of selecting __Overview__, select __Events__. Do you see the custom event? (If not, try clicking __Favorite__ again.)
 
@@ -332,9 +326,7 @@ First we need to add push subscribing to our app. To subscribe to the push servi
 3. Click the __Settings__ (gear) icon next to your project name in the navigation pane, and select __Project Settings__.
 4. Select the __Cloud Messaging__ tab. You can find your __Server key__ and __Sender ID__ in this page. Save these values.
 
-Replace `YOUR_SENDER_ID`  in the __manifest.json__ file with the Sender ID of your Firebase project. The __manifest.json__ file should look like this:
-
-#### manifest.json
+Replace `YOUR_SENDER_ID`  in the `manifest.json` file with the Sender ID of your Firebase project. The `manifest.json` file should look like this:
 
 ```
 {
@@ -357,8 +349,6 @@ Now we can add custom analytics events for push subscriptions.
 
 In the `subscribe` function, add the following code to mark subscription events:
 
-#### main.js
-
 ```
 gtag('event', 'subscribe', {
   'event_category': 'push',
@@ -367,8 +357,6 @@ gtag('event', 'subscribe', {
 ```
 
 Similarly, add the following code to mark unsubscribe events in the `unsubscribe` function:
-
-#### main.js
 
 ```
 gtag('event', 'unsubscribe', {
@@ -393,13 +381,11 @@ Adding these custom events lets us track how often users are subscribing and uns
 
 
 
-The __gtag.js__ analytics library requires access to the `Window` object. Service workers don't have access to `Window`, so we will need to use a separate API to send analytics hits from the service worker. The  [Measurement Protocol API](/analytics/devguides/collection/protocol/v1/) is a low level interface that allows developers to send analytics data directly as HTTP requests.
+The `gtag.js` analytics library requires access to the `Window` object. Service workers don't have access to `Window`, so we will need to use a separate API to send analytics hits from the service worker. The  [Measurement Protocol API](/analytics/devguides/collection/protocol/v1/) is a low level interface that allows developers to send analytics data directly as HTTP requests.
 
 ### 6.1 Use the Measurement Protocol interface
 
-In __analytics-helper.js__, add the following code to specify your property's tracking ID (use your analytics tracking ID instead of `UA-XXXXXXXX-Y`):
-
-#### analytics-helper.js
+In `analytics-helper.js`, add the following code to specify your property's tracking ID (use your analytics tracking ID instead of `UA-XXXXXXXX-Y`):
 
 ```
 // Set this to your tracking ID: UA-XXXXXXXX-Y
@@ -407,8 +393,6 @@ const trackingId = null;
 ```
 
 Below the tracking ID variable, add the following Measurement Protocol helper function:
-
-#### analytics-helper.js
 
 ```
 const sendAnalyticsEvent = (eventAction, eventCategory) => {
@@ -496,8 +480,6 @@ We start by creating a variable with your tracking ID. The Measurement Protocol 
 
 The `sendAnalyticsEvent` helper function starts by checking that the tracking ID is set and that the function is being called with the correct parameters. After checking that the client is subscribed to push, the analytics data is created in the `payloadData` variable:
 
-#### analytics-helper.js
-
 ```
 const payloadData = {
   // Version Number
@@ -517,11 +499,9 @@ const payloadData = {
 };
 ```
 
-The __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The __event category__, __event action__, and __event label__ are the same parameters that we have been using with the __gtag.js__ interface.
+The __version number__, __client ID__, __tracking ID__, and __hit type__ parameters are  [required by the API](/analytics/devguides/collection/protocol/v1/devguide). The __event category__, __event action__, and __event label__ are the same parameters that we have been using with the `gtag.js` interface.
 
 Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/protocol/v1/reference) with the following code:
-
-#### analytics-helper.js
 
 ```
     const payloadString = Object.keys(payloadData)
@@ -536,8 +516,6 @@ Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/pr
 
 Finally, the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) with the following code:
 
-#### analytics-helper.js
-
 ```
 return fetch('https://www.google-analytics.com/collect', {
   method: 'post',
@@ -551,17 +529,13 @@ Note: You can learn more about the Fetch API in the  [Fetch lab](lab-fetch-api).
 
 Now that we can use the Measurement Protocol interface to send hits, let's add custom events to the service worker.
 
-Import the helper file at the top of the service worker (__sw.js__):
-
-#### sw.js
+Import the helper file at the top of the service worker (`sw.js`):
 
 ```
 importScripts('js/analytics-helper.js');
 ```
 
 In the `notificationclose` listener, add the following code to send notification close events:
-
-#### sw.js
 
 ```
 e.waitUntil(
@@ -571,15 +545,11 @@ e.waitUntil(
 
 In the `notificationclick` listener, add the following code to mark click events:
 
-#### sw.js
-
 ```
 sendAnalyticsEvent('click', 'notification')
 ```
 
 Finally, add the following code to the `push` listener:
-
-#### sw.js
 
 ```
 sendAnalyticsEvent('received', 'push')
@@ -601,7 +571,7 @@ Note: Testing the Measurement Protocol can be difficult because it does not retu
 
 #### Explanation
 
-We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the __analytics-helper.js__ file with our `sendAnalyticsEvent` helper function. This function is used send custom events at appropriate places (such as when push events are received, or notifications are interacted with). The `eventAction` and `eventCategory` that we want to associate with the event are passed in as parameters.
+We start by using  [ImportScripts](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) to import the `analytics-helper.js` file with our `sendAnalyticsEvent` helper function. This function is used send custom events at appropriate places (such as when push events are received, or notifications are interacted with). The `eventAction` and `eventCategory` that we want to associate with the event are passed in as parameters.
 
 Note: [`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil) extends the life of an event until the asynchronous actions inside of it have completed. This ensures that the service worker will not be terminated preemptively while waiting for an asynchronous action to complete.
 
@@ -618,8 +588,6 @@ What can you do about sending analytics hits when your users are offline? Analyt
 Fortunately,  [Workbox](/web/tools/workbox/) has a module that supports  [offline analytics](/web/tools/workbox/modules/workbox-google-analytics).
 
 In the top of the service worker, add the following code to import and instantiate the analytics module:
-
-#### sw.js
 
 ```
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
@@ -651,7 +619,7 @@ Note: This strategy won't work for hits sent from within the service worker beca
 
 So far we have successfully enabled offline analytics. But retried requests are currently indistinguishable from requests that succeeded while online. This means you'll receive all the interaction data from offline users, but you won't be able to tell which interactions occurred while the user was offline. To address this, you can annotate data that is sent in retried requests.
 
-One solution is to modify offline requests with a  [custom dimension](https://support.google.com/analytics/answer/2709828). This task is outside the scope of the lab, but you can see an example in the  [Workbox Google Analytics documentation](/web/tools/workbox/modules/workbox-google-analytics). If you're using the __gtag.js__ library instead of __analytics.js__, you'll want to read about  [custom dimensions with gtag.js](/analytics/devguides/collection/gtagjs/custom-dims-mets).
+One solution is to modify offline requests with a  [custom dimension](https://support.google.com/analytics/answer/2709828). This task is outside the scope of the lab, but you can see an example in the  [Workbox Google Analytics documentation](/web/tools/workbox/modules/workbox-google-analytics). If you're using the `gtag.js` library instead of `analytics.js`, you'll want to read about  [custom dimensions with gtag.js](/analytics/devguides/collection/gtagjs/custom-dims-mets).
 
 <div id="congratulations"></div>
 

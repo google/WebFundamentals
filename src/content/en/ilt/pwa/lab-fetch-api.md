@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -41,11 +41,7 @@ This lab walks you through using the  [Fetch API](https://developer.mozilla.org/
 * A text editor
 *  [Node](https://nodejs.org/en/) and  [npm](https://www.npmjs.com/)
 
-
-
 Note: Although the Fetch API is  [not currently supported in all browsers](http://caniuse.com/#feat=fetch), there is a  [polyfill](https://github.com/github/fetch).
-
-
 
 <div id="get-set-up"></div>
 
@@ -55,32 +51,30 @@ Note: Although the Fetch API is  [not currently supported in all browsers](http:
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Open your computer's command line. Navigate into the __fetch-api-lab/app__ directory and start a local development server:
+Open your computer's command line. Navigate into the `fetch-api-lab/app/` directory and start a local development server:
 
-```
-cd fetch-api-lab/app
-npm install
-node server.js
-```
+    cd fetch-api-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-Open your browser and navigate to __localhost:8081/__. You should see a page with buttons for making requests (they won't work yet).
+Open your browser and navigate to `localhost:8081/`. You should see a page with buttons for making requests (they won't work yet).
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __fetch-api-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `fetch-api-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __echo-servers__ contains files that are used for running test servers
-* __examples__ contains sample resources that we use in experimenting with fetch
-* __js/main.js__ is the main JavaScript for the app, and it is where you will write all your code
-* __index.html__ is the main HTML page for our sample site/application
-* __package-lock.json__ and __package.json__ are configuration  files for our development server and echo server dependencies
-* __server.js__ is a node development server
+* `echo-servers/` contains files that are used for running test servers
+* `examples/` contains sample resources that we use in experimenting with fetch
+* `js/main.js` is the main JavaScript for the app, and it is where you will write all your code
+* `index.html` is the main HTML page for our sample site/application
+* `package-lock.json` and `package.json` are configuration  files for our development server and echo server dependencies
+* `server.js` is a node development server
 
 <div id="fetching-a-resource"></div>
 
@@ -94,11 +88,9 @@ The Fetch API has a relatively simple interface. This section explains how to wr
 
 ### 2.1 Fetch a JSON file
 
-In __js/main.js__, the app's __Fetch JSON__ button is attached to the `fetchJSON` function.
+In `js/main.js`, the app's __Fetch JSON__ button is attached to the `fetchJSON` function.
 
-Update the `fetchJSON` function to request the __examples/animals.json__ file and log the response:
-
-#### js/main.js
+Update the `fetchJSON` function to request the `examples/animals.json` file and log the response:
 
 ```
 function fetchJSON() {
@@ -112,7 +104,7 @@ Save the script and refresh the page. Click __Fetch JSON__. The console should l
 
 #### Explanation
 
-The `fetch` method accepts the path for the resource we want to retrieve as a parameter, in this case __examples/animals.json__. `fetch` returns a promise that resolves to a  [Response object](https://developer.mozilla.org/en-US/docs/Web/API/Response). If the promise resolves, the response is passed to the `logResult` function. If the promise rejects, the `catch` takes over and the error is passed to the `logError` function.
+The `fetch` method accepts the path for the resource we want to retrieve as a parameter, in this case `examples/animals.json`. `fetch` returns a promise that resolves to a  [Response object](https://developer.mozilla.org/en-US/docs/Web/API/Response). If the promise resolves, the response is passed to the `logResult` function. If the promise rejects, the `catch` takes over and the error is passed to the `logError` function.
 
 Response objects represent the response to a request. They contain the response body and also useful properties and methods.
 
@@ -121,8 +113,6 @@ Response objects represent the response to a request. They contain the response 
 Examine the logged response in the console. Note the values of the `status`, `url`, and `ok` properties.
 
 Replace the `examples/animals.json` resource in `fetchJSON` with `examples/non-existent.json`. The updated `fetchJSON` function should now look like:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -150,9 +140,7 @@ Why didn't a failed response activate the `catch` block? This is an important no
 
 We need to update our code to check the validity of responses.
 
-In __main.js__, add a function to validate responses:
-
-#### js/main.js
+In `main.js`, add a function to validate responses:
 
 ```
 function validateResponse(response) {
@@ -165,8 +153,6 @@ function validateResponse(response) {
 
 Then replace `fetchJSON` with the following code:
 
-#### js/main.js
-
 ```
 function fetchJSON() {
   fetch('examples/non-existent.json')
@@ -176,11 +162,9 @@ function fetchJSON() {
 }
 ```
 
-Save the script and refresh the page. Click __Fetch JSON__. Check the console. Now the response for __examples/non-existent.json__ should trigger the `catch` block.
+Save the script and refresh the page. Click __Fetch JSON__. Check the console. Now the response for `examples/non-existent.json` should trigger the `catch` block.
 
 Replace `examples/non-existent.json` in the `fetchJSON` function with the original `examples/animals.json`. The updated function should now look like:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -201,9 +185,7 @@ Now that we have added the `validateResponse` check, bad responses (like 404s) t
 
 Fetch responses are represented as  [ReadableStreams](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) ( [streams spec](https://streams.spec.whatwg.org/)) and must be read in order to access the body of the response. Response objects have  [methods](https://developer.mozilla.org/en-US/docs/Web/API/Response) for doing this.
 
-In __main.js__, add a `readResponseAsJSON` function with the following code:
-
-#### js/main.js
+In `main.js`, add a `readResponseAsJSON` function with the following code:
 
 ```
 function readResponseAsJSON(response) {
@@ -212,8 +194,6 @@ function readResponseAsJSON(response) {
 ```
 
 Then replace the `fetchJSON` function with the following code:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -225,19 +205,19 @@ function fetchJSON() {
 }
 ```
 
-Save the script and refresh the page. Click __Fetch JSON__. Check the console to see that the JSON from __examples/animals.json__ is being logged (instead of the Response object).
+Save the script and refresh the page. Click __Fetch JSON__. Check the console to see that the JSON from `examples/animals.json` is being logged (instead of the Response object).
 
 #### Explanation
 
 Let's review what is happening.
 
-Step 1. Fetch is called on a resource, __examples/animals.json__. Fetch returns a promise that resolves to a Response object. When the promise resolves, the response object is passed to `validateResponse`.
+Step 1. Fetch is called on a resource, `examples/animals.json`. Fetch returns a promise that resolves to a Response object. When the promise resolves, the response object is passed to `validateResponse`.
 
 Step 2. `validateResponse` checks if the response is valid (is it a 200?). If it isn't, an error is thrown, skipping the rest of the `then` blocks and triggering the `catch` block. This is particularly important. Without this check bad responses are passed down the chain and could break later code that may rely on receiving a valid response. If the response is valid, it is passed to `readResponseAsJSON`.
 
 Step 3. `readResponseAsJSON` reads the body of the response using the  [Response.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) method. This method returns a promise that resolves to JSON. Once this promise resolves, the JSON data is passed to `logResult`. (If the promise from `response.json()` rejects, the `catch` block is triggered.)
 
-Step 4. Finally, the JSON data from the original request to __examples/animals.json__ is logged by `logResult`.
+Step 4. Finally, the JSON data from the original request to `examples/animals.json` is logged by `logResult`.
 
 #### For more information
 
@@ -255,9 +235,7 @@ Step 4. Finally, the JSON data from the original request to __examples/animals.j
 
 Fetch is not limited to JSON. In this example we will fetch an image and append it to the page.
 
-In __main.js__, write a `showImage` function with the following code:
-
-#### js/main.js
+In `main.js`, write a `showImage` function with the following code:
 
 ```
 function showImage(responseAsBlob) {
@@ -271,8 +249,6 @@ function showImage(responseAsBlob) {
 
 Then add a `readResponseAsBlob` function that reads responses as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob):
 
-#### js/main.js
-
 ```
 function readResponseAsBlob(response) {
   return response.blob();
@@ -280,8 +256,6 @@ function readResponseAsBlob(response) {
 ```
 
 Update the `fetchImage` function with the following code:
-
-#### js/main.js
 
 ```
 function fetchImage() {
@@ -297,7 +271,7 @@ Save the script and refresh the page. Click __Fetch image.__ You should see an a
 
 #### Explanation
 
-In this example an image is being fetched, __examples/fetching.jpg__. Just like in the previous exercise, the response is validated with `validateResponse`. The response is then read as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) (instead of JSON as in the previous section). An image element is created and appended to the page, and the image's `src` attribute is set to a data URL representing the Blob.
+In this example an image is being fetched, `examples/fetching.jpg`. Just like in the previous exercise, the response is validated with `validateResponse`. The response is then read as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) (instead of JSON as in the previous section). An image element is created and appended to the page, and the image's `src` attribute is set to a data URL representing the Blob.
 
 Note: The  [URL object's](https://developer.mozilla.org/en-US/docs/Web/API/URL)  [`createObjectURL()` method](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) is used to generate a data URL representing the Blob. This is important to note. You cannot set an image's source directly to a Blob. The Blob must be converted into a data URL.
 
@@ -319,14 +293,12 @@ This section is an optional challenge.
 
 Update the `fetchText` function to
 
-1. fetch __/examples/words.txt__
+1. fetch `/examples/words.txt`
 2. validate the response with `validateResponse`
 3. read the response as text (hint: see  [Response.text()](https://developer.mozilla.org/en-US/docs/Web/API/Body/text))
 4. and display the text on the page
 
 You can use this `showText` function as a helper for displaying the final text:
-
-#### js/main.js
 
 ```
 function showText(responseAsText) {
@@ -357,8 +329,6 @@ By default, fetch uses the  [GET method](https://developer.mozilla.org/en-US/doc
 
 Replace the `headRequest` function with the following code:
 
-#### js/main.js
-
 ```
 function headRequest() {
   fetch('examples/words.txt', {
@@ -381,17 +351,17 @@ In this example we set the fetch request method to HEAD using the `init` paramet
 
 ### 5.2 Optional: Find the size of a resource
 
-Let's look at the  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) of the fetch response for __examples/words.txt__ to determine the size of the file.
+Let's look at the  [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) of the fetch response for `examples/words.txt` to determine the size of the file.
 
 Update the `headRequest` function to log the `content-length` property of the response `headers` (hint: see the  [headers](https://developer.mozilla.org/en-US/docs/Web/API/Response/headers) documentation and  [get](https://developer.mozilla.org/en-US/docs/Web/API/Headers/get) method).
 
-After you have updated the code, save the file and refresh the page. Click __HEAD request__. The console should log the size (in bytes) of __examples/words.txt__.
+After you have updated the code, save the file and refresh the page. Click __HEAD request__. The console should log the size (in bytes) of `examples/words.txt`.
 
 #### Explanation
 
 In this example, the HEAD method is used to request the size (in bytes) of a resource (represented in the `content-length` header) without actually loading the resource itself. In practice this could be used to determine if the full resource should be requested (or even how to request it).
 
-__Optional__: Find out the size of __examples/words.txt__ using another method and confirm that it matches the value from the response header (you can look up how to do this for your specific operating system—bonus points for using the command line!).
+__Optional__: Find out the size of `examples/words.txt` using another method and confirm that it matches the value from the response header (you can look up how to do this for your specific operating system—bonus points for using the command line!).
 
 #### For more information
 
@@ -411,19 +381,17 @@ Fetch can also send data with POST requests.
 
 ### 6.1 Set up an echo server
 
-For this example you need to run an echo server. From the __fetch-api-lab/app__ directory run the following command (if you command line is blocked by the __localhost:8081__ server, open a new command line window or tab):
+For this example you need to run an echo server. From the `fetch-api-lab/app/` directory run the following command (if you command line is blocked by the `localhost:8081` server, open a new command line window or tab):
 
     node echo-servers/cors-server.js
 
-This command starts up a simple server at __localhost:5000/__ that echoes back the requests sent to it.
+This command starts up a simple server at `localhost:5000/` that echoes back the requests sent to it.
 
 You can terminate this server at any time with `ctrl+c`.
 
 ### 6.2 Make a POST request
 
 Replace the `postRequest` function with the following code (make sure you have defined the `showText` function from section 4 if you didn't complete the section):
-
-#### js/main.js
 
 ```
 function postRequest() {
@@ -446,7 +414,7 @@ To make a POST request with fetch, we use the `init` parameter to specify the me
 
 Note: In production, remember to always encrypt any sensitive user data.
 
-When data is sent as a POST request to __localhost:5000/__, the request is echoed back as the response. The response is then validated with `validateResponse`, read as text, and displayed on the page.
+When data is sent as a POST request to `localhost:5000/`, the request is echoed back as the response. The response is then validated with `validateResponse`, read as text, and displayed on the page.
 
 In practice, this server would represent a 3rd party API.
 
@@ -455,8 +423,6 @@ In practice, this server would represent a 3rd party API.
 You can use the  [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) interface to easily grab data from forms.
 
 In the `postRequest` function, instantiate a new `FormData` object from the `msg-form` form element:
-
-#### js/main.js
 
 ```
 const formData = new FormData(document.getElementById('msg-form'));
@@ -485,25 +451,21 @@ The  [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Form
 
 ### 7.1 Start a non-cors echo server
 
-Stop the previous echo server (by pressing `ctrl+c` from the command line) and start a new echo server from the __fetch-lab-api/app__ directory by running the following command:
+Stop the previous echo server (by pressing `ctrl+c` from the command line) and start a new echo server from the `fetch-lab-api/app/` directory by running the following command:
 
     node echo-servers/no-cors-server.js
 
-This command sets up another simple echo server, this time at __localhost:5001/__. This server, however, is not configured to accept  [cross origin requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
+This command sets up another simple echo server, this time at `localhost:5001/`. This server, however, is not configured to accept  [cross origin requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).
 
 ### 7.2 Fetch from the new server
 
-Now that the new server is running at __localhost:5001/__, we can send a fetch request to it.
+Now that the new server is running at `localhost:5001/`, we can send a fetch request to it.
 
-Update the `postRequest` function to fetch from __localhost:5001/__ instead of __localhost:5000/__.
-
-After you have updated the code, save the file, refresh the page, and then click __POST Request__.
+Update the `postRequest` function to fetch from `localhost:5001/` instead of `localhost:5000/`. After you have updated the code, save the file, refresh the page, and then click __POST Request__.
 
 You should get an error in the console indicating that the cross-origin request is blocked because the CORS `Access-Control-Allow-Origin` header is missing.
 
 Update the `fetch` in the `postRequest` function with the following code, which uses  [no-cors](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode (as the error log suggests), and removes the calls to `validateResponse` and `readResponseAsText` (see explanation below):
-
-#### js/main.js
 
 ```
 function postRequest() {
@@ -524,23 +486,21 @@ Observe the response object logged in the console.
 
 #### Explanation
 
-Fetch (and XMLHttpRequest) follow the  [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy). This means that browsers restrict cross-origin HTTP requests from within scripts. A cross-origin request occurs when one domain (for example __http://foo.com/__) requests a resource from a separate domain (for example __http://bar.com/__).
+Fetch (and XMLHttpRequest) follow the  [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy). This means that browsers restrict cross-origin HTTP requests from within scripts. A cross-origin request occurs when one domain (for example `http://foo.com/`) requests a resource from a separate domain (for example `http://bar.com/`).
 
 Note: Cross-origin request restrictions are often a point of confusion. Many resources like images, stylesheets, and scripts are fetched across domains (i.e., cross-origin). However, these are exceptions to the same-origin policy. Cross-origin requests are still restricted from  *within scripts* .
 
-Since our app's server has a different port number than the two echo servers, requests to either of the echo servers are considered cross-origin. The first echo server, however, running on __localhost:5000/__, is configured to support  [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) (you can open __echo-servers/cors-server.js__ and examine the configuration). The new echo server, running on __localhost:5001/__, is not (which is why we get an error).
+Since our app's server has a different port number than the two echo servers, requests to either of the echo servers are considered cross-origin. The first echo server, however, running on `localhost:5000/`, is configured to support  [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) (you can open `echo-servers/cors-server.js` and examine the configuration). The new echo server, running on `localhost:5001/`, is not (which is why we get an error).
 
 Using `mode: no-cors` allows fetching an  [opaque response](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses). This allows use to get a response, but prevents accessing the response with JavaScript (which is why we can't use `validateResponse`, `readResponseAsText`, or `showResponse`). The response can still be  [consumed by other API's](https://jakearchibald.com/2015/thats-so-fetch/#no-cors-and-opaque-responses) or cached by a service worker.
 
 ### 7.3 Modify request headers
 
-Fetch also supports modifying request headers. Stop the __localhost:5001__ (no CORS) echo server and restart the __localhost:5000__ (CORS) echo server from section 6:
+Fetch also supports modifying request headers. Stop the `localhost:5001` (no CORS) echo server and restart the `localhost:5000` (CORS) echo server from section 6:
 
     node echo-servers/cors-server.js
 
-Restore the previous version of the `postRequest` function that fetches from __localhost:5000/__:
-
-js/main.js
+Restore the previous version of the `postRequest` function that fetches from `localhost:5000/`:
 
 ```
 function postRequest() {
@@ -561,8 +521,6 @@ Now use the  [Header interface](https://developer.mozilla.org/en-US/docs/Web/API
 Then set the `headers` property of the `init` object to be the `messageHeaders` variable.
 
 Update the `body` property to be a stringified JSON object, such as:
-
-js/main.js
 
 ```
 JSON.stringify({ lab: 'fetch', status: 'fun' })
@@ -598,7 +556,7 @@ You should get an error similar to this in the console:
 
 #### Explanation
 
-Like cross-origin requests, custom headers must be supported by the server from which the resource is requested. In this example, our echo server is configured to accept the `X-Custom` header but not the `Y-Custom` header (you can open __echo-servers/cors-server.js__ and look for `Access-Control-Allow-Headers` to see for yourself). Anytime a custom header is set, the browser performs a  [preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) check. This means that the browser first sends an OPTIONS request to the server, to determine what HTTP methods and headers are allowed by the server. If the server is configured to accept the method and headers of the original request, then it is sent, otherwise an error is thrown.
+Like cross-origin requests, custom headers must be supported by the server from which the resource is requested. In this example, our echo server is configured to accept the `X-Custom` header but not the `Y-Custom` header (you can open `echo-servers/cors-server.js` and look for `Access-Control-Allow-Headers` to see for yourself). Anytime a custom header is set, the browser performs a  [preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) check. This means that the browser first sends an OPTIONS request to the server, to determine what HTTP methods and headers are allowed by the server. If the server is configured to accept the method and headers of the original request, then it is sent, otherwise an error is thrown.
 
 #### For more information
 

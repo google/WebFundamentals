@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -48,33 +48,31 @@ This lab covers the basics of caching files with the service worker. The technol
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
 
-Navigate into the __cache-api-lab/app__ directory and start a local development server:
+Navigate into the `cache-api-lab/app/` directory and start a local development server:
 
-```
-cd cache-api-lab/app
-npm install
-node server.js
-```
+    cd cache-api-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
-Open your browser and navigate to __localhost:8081/__. You should see a simple picture blog site.
+Open your browser and navigate to `localhost:8081/`. You should see a simple picture blog site.
 
 Note: [Unregister](tools-for-pwa-developers#unregister) any service workers and [clear all service worker caches](tools-for-pwa-developers#clearcache) for localhost so that they do not interfere with the lab. In Chrome DevTools, you can achieve this by clicking __Clear site data__ from the __Clear storage__ section of the __Application__ tab.
 
-Open the __cache-api-lab/app__ folder in your preferred text editor. The __app__ folder is where you will be building the lab.
+Open the `cache-api-lab/app/` folder in your preferred text editor. The `app/` folder is where you will be building the lab.
 
 This folder contains:
 
-* __images__ folder contains sample images
-* __pages__ folder contains sample pages and a custom offline page
-* __style__ folder contains the app's cascading stylesheet
-* __index.html__ is the main HTML page for our sample site/application
-* __package.json__ and __package-lock.json__ track dependencies for the local development server
-* __server.js__ configures a local development server
-* __sw.js__ is the service worker file where we set up the interactions with the cache (currently empty)
+* `images/` folder contains sample images
+* `pages/` folder contains sample pages and a custom offline page
+* `style/` folder contains the app's cascading stylesheet
+* `index.html` is the main HTML page for our sample site/application
+* `package.json` and `package-lock.json` track dependencies for the local development server
+* `server.js` configures a local development server
+* `sw.js` is the service worker file where we set up the interactions with the cache (currently empty)
 
 <div id="cache-the-application-shell"></div>
 
@@ -86,9 +84,7 @@ This folder contains:
 
 The service worker's "install" event is a strategic time to cache static assets. Caching the application shell on install ensures that the service worker has access to all shell assets (if any assets fail to cache, the service worker installation is aborted).
 
-Paste the following code into __sw.js__ to cache the application shell during the install event:
-
-#### sw.js
+Paste the following code into `sw.js` to cache the application shell during the install event:
 
 ```
 const filesToCache = [
@@ -140,9 +136,7 @@ In the install event handler we create the cache with  [`caches.open`](https://d
 
 Now that we have the files cached, we can intercept requests for those files from the network and respond with the files from the cache.
 
-Add the following fetch listener in __sw.js__:
-
-#### sw.js
+Add the following fetch listener in `sw.js`:
 
 ```
 self.addEventListener('fetch', event => {
@@ -192,8 +186,6 @@ In addition to caching predetermined files, we can also dynamically add files to
 
 Replace TODO 4 in the `fetch` event handler with code to dynamically cache files:
 
-#### sw.js
-
 ```
 .then(response => {
   // TODO 5 - Respond with custom 404 page
@@ -226,7 +218,7 @@ We need to pass a `clone` of the response to `cache.put`, because the response i
 
 
 
-Below TODO 5 in __service-worker.js__, write your own code to respond with the __404.html__ page from the cache if the response status is `404`. You can check the response status with `response.status`.
+Below TODO 5 in `service-worker.js`, write your own code to respond with the `404.html` page from the cache if the response status is `404`. You can check the response status with `response.status`.
 
 To test your code, save what you've written and then [update the service worker](tools-for-pwa-developers#update) in the browser. Click the __Non-existent file__ link to request a resource that doesn't exist.
 
@@ -234,7 +226,7 @@ To test your code, save what you've written and then [update the service worker]
 
 Network response errors do not cause a `fetch` promise to reject. Instead, `fetch` promises resolve with the response object containing the network error code. This means we handle network errors explicitly by checking the response `status`. `fetch` promises only reject when the browser cannot reach the network in the first place (user is offline).
 
-Note: When intercepting a network request and serving a custom response, the service worker does not redirect the user to the address of the new response. The response is served at the address of the original request. For example, if the user requests a nonexistent file at __www.example.com/non-existent.html__ and the service worker responds with a custom 404 page, __404.html__, the custom page will display at __www.example.com/non-existent.html__, not __www.example.com/404.html__.
+Note: When intercepting a network request and serving a custom response, the service worker does not redirect the user to the address of the new response. The response is served at the address of the original request. For example, if the user requests a nonexistent file at `www.example.com/non-existent.html` and the service worker responds with a custom 404 page, `404.html`, the custom page will display at `www.example.com/non-existent.html`, not `www.example.com/404.html`.
 
 #### For more information
 
@@ -244,7 +236,7 @@ Note: When intercepting a network request and serving a custom response, the ser
 
 #### Solution code
 
-The solution code can be found in the __05-404-page__ directory.
+The solution code can be found in the `05-404-page/` directory.
 
 <div id="optional-respond-with-custom-offline-page"></div>
 
@@ -254,7 +246,7 @@ The solution code can be found in the __05-404-page__ directory.
 
 
 
-Below TODO 6 in __sw.js,__ update the `.catch` block to respond with the __offline.html__ page from the cache. The catch will trigger if the fetch to the network fails.
+Below TODO 6 in `sw.js`__,__ update the `.catch` block to respond with the `offline.html` page from the cache. The catch will trigger if the fetch to the network fails.
 
 To test your code, save what you've written and then update the service worker in the browser. [Take the app offline](tools-for-pwa-developers#offline) and navigate to a page you haven't visited before to see the custom offline page.
 
@@ -264,7 +256,7 @@ If `fetch` cannot reach the network, it rejects with an error and triggers the `
 
 #### Solution code
 
-The solution code can be found in the __06-offline-page__ directory.
+The solution code can be found in the `06-offline-page/` directory.
 
 <div id="delete-outdated-caches"></div>
 
@@ -276,9 +268,7 @@ The solution code can be found in the __06-offline-page__ directory.
 
 We can get rid of unused caches in the service worker "activate" event.
 
-Add the following activate event listener to __sw.js__:
-
-#### sw.js
+Add the following activate event listener to `sw.js`:
 
 ```
 self.addEventListener('activate', event => {
@@ -302,8 +292,6 @@ self.addEventListener('activate', event => {
 
 Change the name of the cache to "pages-cache-v2":
 
-#### service-worker.js
-
 ```
 var staticCacheName = 'pages-cache-v2';
 ```
@@ -321,7 +309,7 @@ It's important to remove outdated resources to conserve space on users' devices.
 
 #### Solution code
 
-The solution code can be found in the __solution__ directory.
+The solution code can be found in the `solution/` directory.
 
 <div id="congratulations"></div>
 
