@@ -206,7 +206,7 @@ suggestions:
 
 - If you use Bootstrap or Foundation to build your UI, ask yourself if they're
 necessary. Such abstractions add heaps of CSS the browser must download, parse,
-and apply to a page, all before before your site-specific CSS enters the
+and apply to a page, all before your site-specific CSS enters the
 picture.
 [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
 and [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are
