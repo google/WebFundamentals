@@ -914,7 +914,7 @@ JavaScript code.
 ### Resources
 * [CSS Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 * [Bootstrap's Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
-* [More Information on DevTools and CSS](https://developers.google.com/web/tools/chrome-devtools/css/)
+* [More Information on DevTools and CSS](/web/tools/chrome-devtools/css/)
 
 ## Feedback {: #feedback }
 {% include "web/_shared/helpful.html" %}
