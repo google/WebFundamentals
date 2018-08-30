@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2018-08-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -130,11 +130,11 @@ Try it now by adding a background color to your page's navigation menu:
 
 1. Copy the following code: 
 
-     style="background-color: aliceblue"
+     `style="background-color: aliceblue"`
 
 1. In `index.html`, add the code that you just copied to your `<nav>`.
 
-       TODO add code here
+       `<nav style="background-color: aliceblue">`
 
 1. Go to the **live tab** to see the changes! 
    The background of the `<nav>` section is now blue.
@@ -229,8 +229,8 @@ because they matched this pattern.
 A declaration is made of two parts: a property and a value. 
 In the example above, `font-family` is a property that has a value of 
 `'Courier New', Courier, monospace`. If Courier New isn't available, 
-the browser will choose Courier, and if Courier isn't available, t
-he browser will choose monospace. So, in plain English, the code above reads: 
+the browser will choose Courier, and if Courier isn't available, 
+the browser will choose monospace. So, in plain English, the code above reads: 
 "Change the font of any list item that contains a link to Courier New, 
 and if Courier New isn't available use Courier, and if Courier isn't available, 
 use monospace". A CSS selector combined with a declaration is called a **ruleset**. 
@@ -875,7 +875,7 @@ Put these changes in the external stylesheet you made earlier to save them:
          <b>Figure X</b>. The result of applying the inline style
        </figcaption>
      </figure>
-1. Paste the element.style{} ruleset into `style.css`
+1. Paste the **element.style{}** ruleset into `style.css`
      <figure>
        <img src="imgs/css/inline1.png"
             alt="The result of applying the inline style."/>
@@ -883,7 +883,7 @@ Put these changes in the external stylesheet you made earlier to save them:
          <b>Figure X</b>. The result of applying the inline style
        </figcaption>
      </figure>
-1. Replace element.style{} with `.jumbotron jumbotron-fluid`.
+1. Replace **element.style{}** with `.jumbotron jumbotron-fluid`.
      <figure>
        <img src="imgs/css/inline1.png"
             alt="The result of applying the inline style."/>
@@ -912,9 +912,9 @@ tutorial that will focus on how DevTools can help you create and fix your
 JavaScript code.
 
 ### Resources
-* [CSS Guide]()
-* [Bootstrap's Documentation]()
-* [More Information on DevTools and CSS]()
+* [CSS Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+* [Bootstrap's Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+* [More Information on DevTools and CSS](https://developers.google.com/web/tools/chrome-devtools/css/)
 
 ## Feedback {: #feedback }
 {% include "web/_shared/helpful.html" %}
