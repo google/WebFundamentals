@@ -54,11 +54,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Open your computer's command line. Navigate into the `push-notification-lab/app/` directory and start a local development server:
 
-```
-cd push-notification-lab/app
-npm install
-node server.js
-```
+    cd push-notification-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -98,8 +96,6 @@ Because notifications are not yet fully supported by all browsers, we must check
 
 Replace TODO 2.1 in `js/main.js` with the following code:
 
-#### js/main.js
-
 ```
 if (!('Notification' in window)) {
   console.log('This browser does not support notifications!');
@@ -114,8 +110,6 @@ Note: In a practical application we would perform some logic to compensate for l
 Before we can show notifications, we must get permission from the user.
 
 Replace TODO 2.2 in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 Notification.requestPermission(status => {
@@ -136,8 +130,6 @@ Note: In production, requesting permissions on page load is a poor user experien
 ### 2.3 Display the notification
 
 Replace TODO 2.3 in `js/main.js` in the `displayNotification()` function with the following code:
-
-#### js/main.js
 
 ```
 if (Notification.permission == 'granted') {
@@ -164,8 +156,6 @@ The notification can do much more than just display a title.
 
 Replace TODO 2.4 in `js/main.js` with an options object:
 
-#### main.js
-
 ```
 const options = {
   body: 'First notification!',
@@ -185,8 +175,6 @@ const options = {
 
 Be sure to add the options object to the second parameter of `showNotification`:
 
-#### main.js
-
 ```
 reg.showNotification('Hello world!', options);
 ```
@@ -204,8 +192,6 @@ Attaching data to the notification when you create it lets your app get that dat
 To create a notification with a set of custom actions, we can add an actions array inside our notification options object.
 
 Replace TODO 2.5 in the options object in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 actions: [
@@ -230,8 +216,6 @@ When the user closes a notification, a `notificationclose` event is triggered in
 
 Replace TODO 2.6 in `sw.js` with an event listener for the `notificationclose` event:
 
-#### sw.js
-
 ```
 self.addEventListener('notificationclose', event => {
   const notification = event.notification;
@@ -254,8 +238,6 @@ Note: The `notificationclose` event is a great place to add Google analytics to 
 When the user clicks on a notification or notification action, a `notificationclick` event is triggered in the service worker.
 
 Replace the TODO 2.7 in `sw.js` with the following code:
-
-#### sw.js
 
 ```
 self.addEventListener('notificationclick', event => {
@@ -284,8 +266,6 @@ Save the code and [update the service worker](tools-for-pwa-developers#update) i
 Let's add some code to the service worker to handle the actions.
 
 Replace the entire `notificationclick` event listener in `sw.js` with the following code:
-
-#### sw.js
 
 ```
 self.addEventListener('notificationclick', event => {
@@ -333,8 +313,6 @@ The Push API is an interface that lets your app subscribe to a push service and 
 If a browser that supports push messages receives one, it registers a `push` event in the service worker.
 
 Inside `sw.js` replace TODO 3.1 with the code to handle push events:
-
-#### sw.js
 
 ```
 self.addEventListener('push', event => {
@@ -387,8 +365,6 @@ Note: Recent changes to Firebase Cloud Messaging let developers avoid creating a
 
 Replace `YOUR_SENDER_ID`  in the code below with the Sender ID of your project on Firebase and paste it into `manifest.json` (replace any code already there):
 
-#### manifest.json
-
 ```
 {
   "name": "Push Notifications lab",
@@ -408,15 +384,11 @@ Whenever the user opens the app, check for the subscription object and update th
 
 Replace TODO 3.3a in the service worker registration code at the bottom of `js/main.js` with the following function call:
 
-#### js/main.js
-
 ```
 initializeUI();
 ```
 
 Replace TODO 3.3b in the `initializeUI()` function in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 pushButton.addEventListener('click', () => {
@@ -454,8 +426,6 @@ We then get the latest subscription object from the `pushManager`. In a producti
 Before sending any data via a push message, you must first subscribe to the browser's push service.
 
 Replace TODO 3.4 in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 swRegistration.pushManager.subscribe({
@@ -498,8 +468,6 @@ Note: We are setting the `userVisibleOnly` option to `true` in the subscribe met
 Let's give users the ability to opt-out of the push subscription.
 
 Replace TODO 3.5 in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 swRegistration.pushManager.getSubscription()
@@ -577,8 +545,6 @@ Chrome and Firefox support the ability to deliver data directly to your service 
 
 Replace the `push` event listener in `sw.js` with the following code to get the data from the message:
 
-#### sw.js
-
 ```
 self.addEventListener('push', event => {
   let body;
@@ -634,34 +600,31 @@ There are a few things you must do for this step to work:
 3. Then, click __Enable Push Messaging__ and copy the whole subscription object.
 4. Replace `YOUR_SUBSCRIPTION_OBJECT` in the code you just pasted into `node/main.js` with the subscription object.
 5. If you are working in Chrome, replace `YOUR_SERVER_KEY` in the `options` object with your own Server Key from your project on Firebase. Do not overwrite the single quotes.
+6. If you are working in Firefox, you can delete the `gcmAPIKey` option.
 
-Note: If you are working in Firefox, you can delete the `gcmAPIKey` option.
+        const webPush = require('web-push');
 
-#### node/main.js
+        const pushSubscription = YOUR_SUBSCRIPTION_OBJECT;
 
-```
-const webPush = require('web-push');
+        // TODO 4.3a - include VAPID keys
 
-const pushSubscription = YOUR_SUBSCRIPTION_OBJECT;
+        const payload = 'Here is a payload!';
 
-// TODO 4.3a - include VAPID keys
+        const options = {
+          gcmAPIKey: 'YOUR_SERVER_KEY',
+          TTL: 60,
 
-const payload = 'Here is a payload!';
+          // TODO 4.3b - add VAPID details
 
-const options = {
-  gcmAPIKey: 'YOUR_SERVER_KEY',
-  TTL: 60,
+        };
 
-  // TODO 4.3b - add VAPID details
+        webPush.sendNotification(
+          pushSubscription,
+          payload,
+          options
+        );
 
-};
 
-webPush.sendNotification(
-  pushSubscription,
-  payload,
-  options
-);
-```
 
 Save the code. From the `push-notification-lab/app/` directory, run the command below:
 
@@ -698,9 +661,7 @@ First, let's install the web-push library globally so we can use it from the com
 
 Run the following command:
 
-```
-npm install web-push -g
-```
+    npm install web-push -g
 
 Now generate public and private keys by entering the following command into a command window at the `project/` directory:
 
@@ -728,15 +689,11 @@ In order for VAPID to work we must pass the public key to the `subscribe` method
 
 Replace TODO 4.2a in `js/main.js`, with the following code with your VAPID public key substituted in:
 
-#### js/main.js
-
 ```
 const applicationServerPublicKey = 'YOUR_VAPID_PUBLIC_KEY';
 ```
 
 Replace the `subscribeUser()` function in `js/main.js` with the code below:
-
-#### js/main.js
 
 ```
 function subscribeUser() {
@@ -770,18 +727,12 @@ Copy the new subscription object and overwrite the old subscription object assig
 
 Replace TODO 4.3a in `node/main.js` with the following code, with your values for the public and private keys substituted in:
 
-#### node/main.js
-
 ```
 const vapidPublicKey = 'YOUR_VAPID_PUBLIC_KEY';
 const vapidPrivateKey = 'YOUR_VAPID_PRIVATE_KEY';
 ```
 
-Next, replace TODO 4.3b in the `options` object with the following code containing the required details for the request signing:
-
-Note: You'll need to replace `YOUR_EMAIL_ADDRESS` in the `subject` property with your actual email.
-
-#### node/main.js
+Next, replace TODO 4.3b in the `options` object with the following code containing the required details for the request signing. You'll need to replace `YOUR_EMAIL_ADDRESS` in the `subject` property with your actual email:
 
 ```
 vapidDetails: {
@@ -844,8 +795,6 @@ Depending on the use case, if the user is already using our application we may w
 
 In the `push` event handler in `sw.js`, replace the `event.waitUntil()` call with the following code:
 
-#### sw.js
-
 ```
 event.waitUntil(
   clients.matchAll().then(c => {
@@ -881,8 +830,6 @@ If there are several open notifications originating from our app, we can close t
 
 In `sw.js`, replace the TODO 5.3 in the `notificationclick` event handler with the following code:
 
-#### sw.js
-
 ```
 self.registration.getNotifications().then(notifications => {
   notifications.forEach(notification => {
@@ -894,8 +841,6 @@ self.registration.getNotifications().then(notifications => {
 Save the code.
 
 Comment out the `tag` attribute in the `displayNotification` function in `main.js` so that multiple notifications will display at once:
-
-#### main.js
 
 ```
 // tag: 'id1',
@@ -920,8 +865,6 @@ The solution code can be found in the `solution/` directory.
 We can re-use existing pages rather than opening a new tab when the notification is clicked.
 
 In `sw.js`, replace the code inside the `else` block in the `notificationclick` handler with the following code:
-
-#### sw.js
 
 ```
 event.waitUntil(

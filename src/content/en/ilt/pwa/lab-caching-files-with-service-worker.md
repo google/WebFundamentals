@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -52,11 +52,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Navigate into the `cache-api-lab/app/` directory and start a local development server:
 
-```
-cd cache-api-lab/app
-npm install
-node server.js
-```
+    cd cache-api-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -87,8 +85,6 @@ This folder contains:
 The service worker's "install" event is a strategic time to cache static assets. Caching the application shell on install ensures that the service worker has access to all shell assets (if any assets fail to cache, the service worker installation is aborted).
 
 Paste the following code into `sw.js` to cache the application shell during the install event:
-
-#### sw.js
 
 ```
 const filesToCache = [
@@ -142,8 +138,6 @@ Now that we have the files cached, we can intercept requests for those files fro
 
 Add the following fetch listener in `sw.js`:
 
-#### sw.js
-
 ```
 self.addEventListener('fetch', event => {
   console.log('Fetch event for ', event.request.url);
@@ -191,8 +185,6 @@ The `fetch` event listener intercepts all requests. We use  [`event.respondWith`
 In addition to caching predetermined files, we can also dynamically add files to the cache as they are requested.
 
 Replace TODO 4 in the `fetch` event handler with code to dynamically cache files:
-
-#### sw.js
 
 ```
 .then(response => {
@@ -278,8 +270,6 @@ We can get rid of unused caches in the service worker "activate" event.
 
 Add the following activate event listener to `sw.js`:
 
-#### sw.js
-
 ```
 self.addEventListener('activate', event => {
   console.log('Activating new service worker...');
@@ -301,8 +291,6 @@ self.addEventListener('activate', event => {
 ```
 
 Change the name of the cache to "pages-cache-v2":
-
-#### service-worker.js
 
 ```
 var staticCacheName = 'pages-cache-v2';

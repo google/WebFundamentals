@@ -122,8 +122,6 @@ Now that we have the starting app working, let's start writing the service worke
 
 In the empty source service worker file, `src/sw.js`, add the following snippet:
 
-#### src/sw.js
-
 ```
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
 
@@ -168,15 +166,11 @@ Now we need to configure `workbox-build` to inject a precache manifest in the `p
 
 Add code to include the `workbox-build` module into `gulpfile.js`:
 
-#### gulpfile.js
-
 ```
 const workboxBuild = require('workbox-build');
 ```
 
 Then add a `build-sw` task in `gulpfile.js` (above the `build` task) to generate and inject the precache manifest:
-
-#### gulpfile.js
 
 ```
 const buildSw = () => {
@@ -203,8 +197,6 @@ gulp.task('build-sw', buildSw);
 
 Finally, update the `build` task to include the `build-sw` task in its `series`. The updated `build` task should be as follows:
 
-#### gulpfile.js
-
 ```
 const build = gulp.series('clean', 'copy', 'build-sw');
 gulp.task('build', build);
@@ -213,8 +205,6 @@ gulp.task('build', build);
 Since we've updated `gulpfile.js`, we need to rerun the gulp `serve` task in the command line. Terminate the `serve` process with `Ctrl+c` and then restart it with `npm run serve`.
 
 Observe that the `precacheAndRoute` call in the production service worker (`build/sw.js`) has been updated with the precache manifest, and should look like this (your hash values may be different):
-
-#### build/sw.js
 
 ```
 workbox.precaching.precacheAndRoute([
@@ -247,8 +237,6 @@ The `build-sw` task uses the `workbox-build` module's  [`injectManifest`](/web/t
 
 
 Now add a script in the bottom of `index.html` (just before the closing `</body>` tag) to register the new service worker:
-
-#### index.html
 
 ```
   <script>
@@ -300,8 +288,6 @@ Note: Workbox also handles an edge case that we haven't mentioned. Workbox knows
 
 Let's add a route to the service worker now. Copy the following code into `src/sw.js` beneath the `precacheAndRoute` method. Make sure you're not editing the production service worker, `build/sw.js`, as this file will be overwritten by our build process.
 
-#### src/sw.js
-
 ```
 workbox.routing.registerRoute(
   /(.*)articles(.*)\.(?:png|gif|jpg)/,
@@ -321,9 +307,7 @@ Save the file.
 
 Rebuild the app (including the service worker) and restart the server with the following command:
 
-```
-npm run serve
-```
+    npm run serve
 
 Refresh the app and [activate the updated service worker](tools-for-pwa-developers#activate) in the browser. In Chrome DevTools you can activate a new service worker by clicking __skipWaiting__ in the __Service Worker__ section of the __Application__ tab. Navigate to __Article 1__ and __Article 2__. Check the caches to see that the `images-cache` now exists and contains the images from Articles 1 and 2. You may need to refresh the caches in developer tools to see the contents.
 
@@ -348,8 +332,6 @@ __Optional:__ Write your own route that caches the user avatar. The route should
 Sometimes content must always be kept up-to-date (e.g., news articles, stock figures, etc.). For this kind of data, the `cacheFirst` strategy is not the best solution. Instead, we can use the `networkFirst` strategy to fetch the newest content first, and only if that fails does the service worker get old content from the cache.
 
 Copy the following code below the existing route in `src/sw.js`:
-
-#### src/sw.js
 
 ```
 const articleHandler = workbox.strategies.networkFirst({
@@ -384,8 +366,6 @@ The `handle` method returns a promise resolving with the response, so we can acc
 
 Add the following `.then` inside the `article` route after the call to the `handle` method:
 
-#### sw.js
-
 ```
 .then(response => {
     if (!response) {
@@ -398,8 +378,6 @@ Add the following `.then` inside the `article` route after the call to the `hand
 ```
 
 Then add `pages/offline.html` and `pages/404.html` to the `globPatterns` in the `build-sw` task defined in `gulpfile.js`. The updated `build-sw` task should look like this:
-
-#### workbox-config.js
 
 ```
 const buildSw = () => {

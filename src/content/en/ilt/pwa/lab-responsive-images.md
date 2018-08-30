@@ -81,8 +81,6 @@ Before making the images responsive, let's make sure they won't overflow the scr
 
 Replace TODO 2 in `styles/main.css` with the following code:
 
-#### main.css
-
 ```
 img {
   max-width: 100%;
@@ -111,8 +109,6 @@ The goal is to get the browser to fetch the version of the image with the smalle
 
 To complete TODO 3.1 in `index.html`, add the following <code>srcset</code> attribute to the <code>&lt;img&gt;</code> element containing the SFO image:
 
-#### index.html
-
 ```
 srcset="images/sfo-1600_large.jpg, images/sfo-1000_large.jpg, images/sfo-800_medium.jpg, images/sfo-500_small.jpg"
 ```
@@ -128,8 +124,6 @@ In the `images/` folder there are several versions of the SFO image, each at dif
 To load the correct image size based on the viewport width we need to tell the browser how big each file is before it fetches them.
 
 To complete TODO 3.2 in `index.html`, add width descriptors to the SFO <code>&lt;img&gt;</code> element:
-
-#### index.html
 
 ```
 srcset="images/sfo-1600_large.jpg 1600w, images/sfo-1000_large.jpg 1000w, images/sfo-800_medium.jpg 800w, images/sfo-500_small.jpg 500w"
@@ -161,8 +155,6 @@ Note: You can also optionally specify a pixel density instead of a width. Howeve
 
 Replace TODO 4.1 in `styles/main.css` with the following code:
 
-#### styles/main.css
-
 ```
 img#sfo {
   transition: width 0.5s;
@@ -181,8 +173,6 @@ Because the CSS is parsed after the HTML at runtime, the browser has no way to k
 We can give <code>&lt;img&gt;</code> a `sizes` attribute to tell the browser the display size of the image before it is fetched.
 
 To complete TODO 4.2 in `index.html` add `sizes="50vw"` to the `img` element so that it looks like this:
-
-#### index.html
 
 ```
 <img id="sfo" src="images/sfo-500_small.jpg" srcset="images/sfo-1600_large.jpg 1600w, images/sfo-1000_large.jpg 1000w, images/sfo-800_medium.jpg 800w, images/sfo-500_small.jpg 500w" sizes="50vw" alt="View from aircraft window near San Francisco airport">
@@ -212,8 +202,6 @@ We can use media queries to resize images in real time based on the viewport wid
 
 Replace TODO 5.1 in `styles/main.css` with the following code:
 
-#### styles/main.css
-
 ```
 @media screen and (max-width: 700px) {
   img#sfo {
@@ -239,8 +227,6 @@ We can tell the browser about the media query in the `sizes` attribute so that i
 
 To complete TODO 5.2 in `index.html`, update the `sizes` attribute in the SFO image:
 
-#### index.html
-
 ```
 sizes="(max-width: 700px) 90vw, 50vw"
 ```
@@ -258,8 +244,6 @@ Save the code and refresh the page in the browser. Resize the browser window so 
 We can use the <code>&lt;picture&gt;</code> element and the <code>&lt;source&gt;</code> element, in combination with media queries, to change the image source as the window is resized.
 
 Replace TODO 6 in `index.html` with the following code:
-
-#### index.html
 
 ```
 <figure>

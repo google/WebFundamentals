@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -56,11 +56,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Navigate into the `google-analytics-lab/app/` directory and start a local development server:
 
-```
-cd google-analytics-lab/app
-npm install
-node server.js
-```
+    cd google-analytics-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -195,8 +193,6 @@ If you lost your place:
 
 Your tracking ID looks like `UA-XXXXXXXX-Y` and your tracking code snippet looks like:
 
-#### index.html
-
 ```
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114028926-1"></script>
   <script>
@@ -282,8 +278,6 @@ Google Analytics supports marking "events" that allow fine grain analysis of use
 
 In `main.js`, replace the `favorite` function with the following:
 
-#### main.js
-
 ```
 const favorite = () => {
   gtag('event', 'favorite', {
@@ -334,8 +328,6 @@ First we need to add push subscribing to our app. To subscribe to the push servi
 
 Replace `YOUR_SENDER_ID`  in the `manifest.json` file with the Sender ID of your Firebase project. The `manifest.json` file should look like this:
 
-#### manifest.json
-
 ```
 {
   "name": "Google Analytics lab",
@@ -357,8 +349,6 @@ Now we can add custom analytics events for push subscriptions.
 
 In the `subscribe` function, add the following code to mark subscription events:
 
-#### main.js
-
 ```
 gtag('event', 'subscribe', {
   'event_category': 'push',
@@ -367,8 +357,6 @@ gtag('event', 'subscribe', {
 ```
 
 Similarly, add the following code to mark unsubscribe events in the `unsubscribe` function:
-
-#### main.js
 
 ```
 gtag('event', 'unsubscribe', {
@@ -399,16 +387,12 @@ The `gtag.js` analytics library requires access to the `Window` object. Service 
 
 In `analytics-helper.js`, add the following code to specify your property's tracking ID (use your analytics tracking ID instead of `UA-XXXXXXXX-Y`):
 
-#### analytics-helper.js
-
 ```
 // Set this to your tracking ID: UA-XXXXXXXX-Y
 const trackingId = null;
 ```
 
 Below the tracking ID variable, add the following Measurement Protocol helper function:
-
-#### analytics-helper.js
 
 ```
 const sendAnalyticsEvent = (eventAction, eventCategory) => {
@@ -496,8 +480,6 @@ We start by creating a variable with your tracking ID. The Measurement Protocol 
 
 The `sendAnalyticsEvent` helper function starts by checking that the tracking ID is set and that the function is being called with the correct parameters. After checking that the client is subscribed to push, the analytics data is created in the `payloadData` variable:
 
-#### analytics-helper.js
-
 ```
 const payloadData = {
   // Version Number
@@ -521,8 +503,6 @@ The __version number__, __client ID__, __tracking ID__, and __hit type__ paramet
 
 Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/protocol/v1/reference) with the following code:
 
-#### analytics-helper.js
-
 ```
     const payloadString = Object.keys(payloadData)
     .filter(analyticsKey => {
@@ -535,8 +515,6 @@ Next, the hit data is  [formatted into a URI](/analytics/devguides/collection/pr
 ```
 
 Finally, the data is sent to the  [API endpoint](/analytics/devguides/collection/protocol/v1/reference) with the following code:
-
-#### analytics-helper.js
 
 ```
 return fetch('https://www.google-analytics.com/collect', {
@@ -553,15 +531,11 @@ Now that we can use the Measurement Protocol interface to send hits, let's add c
 
 Import the helper file at the top of the service worker (`sw.js`):
 
-#### sw.js
-
 ```
 importScripts('js/analytics-helper.js');
 ```
 
 In the `notificationclose` listener, add the following code to send notification close events:
-
-#### sw.js
 
 ```
 e.waitUntil(
@@ -571,15 +545,11 @@ e.waitUntil(
 
 In the `notificationclick` listener, add the following code to mark click events:
 
-#### sw.js
-
 ```
 sendAnalyticsEvent('click', 'notification')
 ```
 
 Finally, add the following code to the `push` listener:
-
-#### sw.js
 
 ```
 sendAnalyticsEvent('received', 'push')
@@ -618,8 +588,6 @@ What can you do about sending analytics hits when your users are offline? Analyt
 Fortunately,  [Workbox](/web/tools/workbox/) has a module that supports  [offline analytics](/web/tools/workbox/modules/workbox-google-analytics).
 
 In the top of the service worker, add the following code to import and instantiate the analytics module:
-
-#### sw.js
 
 ```
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');

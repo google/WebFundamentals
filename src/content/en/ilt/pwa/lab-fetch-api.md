@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,11 +55,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Open your computer's command line. Navigate into the `fetch-api-lab/app/` directory and start a local development server:
 
-```
-cd fetch-api-lab/app
-npm install
-node server.js
-```
+    cd fetch-api-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -94,8 +92,6 @@ In `js/main.js`, the app's __Fetch JSON__ button is attached to the `fetchJSON` 
 
 Update the `fetchJSON` function to request the `examples/animals.json` file and log the response:
 
-#### js/main.js
-
 ```
 function fetchJSON() {
   fetch('examples/animals.json')
@@ -117,8 +113,6 @@ Response objects represent the response to a request. They contain the response 
 Examine the logged response in the console. Note the values of the `status`, `url`, and `ok` properties.
 
 Replace the `examples/animals.json` resource in `fetchJSON` with `examples/non-existent.json`. The updated `fetchJSON` function should now look like:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -148,8 +142,6 @@ We need to update our code to check the validity of responses.
 
 In `main.js`, add a function to validate responses:
 
-#### js/main.js
-
 ```
 function validateResponse(response) {
   if (!response.ok) {
@@ -160,8 +152,6 @@ function validateResponse(response) {
 ```
 
 Then replace `fetchJSON` with the following code:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -175,8 +165,6 @@ function fetchJSON() {
 Save the script and refresh the page. Click __Fetch JSON__. Check the console. Now the response for `examples/non-existent.json` should trigger the `catch` block.
 
 Replace `examples/non-existent.json` in the `fetchJSON` function with the original `examples/animals.json`. The updated function should now look like:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -199,8 +187,6 @@ Fetch responses are represented as  [ReadableStreams](https://developer.mozilla.
 
 In `main.js`, add a `readResponseAsJSON` function with the following code:
 
-#### js/main.js
-
 ```
 function readResponseAsJSON(response) {
   return response.json();
@@ -208,8 +194,6 @@ function readResponseAsJSON(response) {
 ```
 
 Then replace the `fetchJSON` function with the following code:
-
-#### js/main.js
 
 ```
 function fetchJSON() {
@@ -253,8 +237,6 @@ Fetch is not limited to JSON. In this example we will fetch an image and append 
 
 In `main.js`, write a `showImage` function with the following code:
 
-#### js/main.js
-
 ```
 function showImage(responseAsBlob) {
   const container = document.getElementById('img-container');
@@ -267,8 +249,6 @@ function showImage(responseAsBlob) {
 
 Then add a `readResponseAsBlob` function that reads responses as a  [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob):
 
-#### js/main.js
-
 ```
 function readResponseAsBlob(response) {
   return response.blob();
@@ -276,8 +256,6 @@ function readResponseAsBlob(response) {
 ```
 
 Update the `fetchImage` function with the following code:
-
-#### js/main.js
 
 ```
 function fetchImage() {
@@ -322,8 +300,6 @@ Update the `fetchText` function to
 
 You can use this `showText` function as a helper for displaying the final text:
 
-#### js/main.js
-
 ```
 function showText(responseAsText) {
   const message = document.getElementById('message');
@@ -352,8 +328,6 @@ By default, fetch uses the  [GET method](https://developer.mozilla.org/en-US/doc
 ### 5.1 Make a HEAD request
 
 Replace the `headRequest` function with the following code:
-
-#### js/main.js
 
 ```
 function headRequest() {
@@ -419,8 +393,6 @@ You can terminate this server at any time with `ctrl+c`.
 
 Replace the `postRequest` function with the following code (make sure you have defined the `showText` function from section 4 if you didn't complete the section):
 
-#### js/main.js
-
 ```
 function postRequest() {
   fetch('http://localhost:5000/', {
@@ -451,8 +423,6 @@ In practice, this server would represent a 3rd party API.
 You can use the  [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData) interface to easily grab data from forms.
 
 In the `postRequest` function, instantiate a new `FormData` object from the `msg-form` form element:
-
-#### js/main.js
 
 ```
 const formData = new FormData(document.getElementById('msg-form'));
@@ -497,8 +467,6 @@ You should get an error in the console indicating that the cross-origin request 
 
 Update the `fetch` in the `postRequest` function with the following code, which uses  [no-cors](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) mode (as the error log suggests), and removes the calls to `validateResponse` and `readResponseAsText` (see explanation below):
 
-#### js/main.js
-
 ```
 function postRequest() {
   const formData = new FormData(document.getElementById('msg-form'));
@@ -534,8 +502,6 @@ Fetch also supports modifying request headers. Stop the `localhost:5001` (no COR
 
 Restore the previous version of the `postRequest` function that fetches from `localhost:5000/`:
 
-js/main.js
-
 ```
 function postRequest() {
   const formData = new FormData(document.getElementById('msg-form'));
@@ -555,8 +521,6 @@ Now use the  [Header interface](https://developer.mozilla.org/en-US/docs/Web/API
 Then set the `headers` property of the `init` object to be the `messageHeaders` variable.
 
 Update the `body` property to be a stringified JSON object, such as:
-
-js/main.js
 
 ```
 JSON.stringify({ lab: 'fetch', status: 'fun' })

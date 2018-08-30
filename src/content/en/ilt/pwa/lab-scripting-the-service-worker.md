@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -50,11 +50,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Navigate into the `service-worker-lab/app/` directory and start a local development server:
 
-```
-cd service-worker-lab/app
-npm install
-node server.js
-```
+    cd service-worker-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -87,8 +85,6 @@ Open `service-worker.js` in your text editor. Note that the file is empty. We ha
 Open `index.html` in your text editor.
 
 Inside the `<script>` tags, add the following code to register the service worker:
-
-#### index.html
 
 ```
 if ('serviceWorker' in navigator) {
@@ -132,8 +128,6 @@ Open `service-worker.js` in your text editor.
 
 Add the following event listeners to the service worker:
 
-#### service-worker.js
-
 ```
 self.addEventListener('install', event => {
   console.log('Service worker installing...');
@@ -169,8 +163,6 @@ Note: You can also manually activate a new service worker using some browsers' [
 
 Add the following comment anywhere in `service-worker.js`:
 
-#### service-worker.js
-
 ```
 // I'm a new service worker
 ```
@@ -192,8 +184,6 @@ The browser detects a byte difference between the new and existing service worke
 It is possible for a new service worker to activate immediately, even if an existing service worker is present, by skipping the waiting phase.
 
 In `service-worker.js`, add a call to `skipWaiting` in the `install` event listener:
-
-#### service-worker.js
 
 ```
 self.skipWaiting();
@@ -222,8 +212,6 @@ Service Workers can act as a proxy between your web app and the network.
 Let's add a fetch listener to intercept requests from our domain.
 
 Add the following code to `service-worker.js`:
-
-#### service-worker.js
 
 ```
 self.addEventListener('fetch', event => {
@@ -270,8 +258,6 @@ Service workers have  [scope](/web/ilt/pwa/introduction-to-service-worker#regist
 ### 5.1 Find the scope
 
 Update the registration code in `index.html` with:
-
-#### index.html
 
 ```
 if ('serviceWorker' in navigator) {
@@ -324,8 +310,6 @@ Again the console shows that the scope of the service worker is now `http://loca
 #### Explanation
 
 It is possible to set an arbitrary scope by passing in an additional parameter when registering, for example:
-
-#### index.html
 
 ```
 navigator.serviceWorker.register('/service-worker.js', {

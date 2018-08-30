@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -51,11 +51,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Navigate into the `offline-quickstart-lab/app/` directory and start a local development server:
 
-```
-cd offline-quickstart-lab/app
-npm install
-node server.js
-```
+    cd offline-quickstart-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -128,8 +126,6 @@ One of the failures listed in the report is that no service worker is registered
 
 Add the following script to the bottom of `index.html`, just before the closing `</body>` tag:
 
-#### index.html
-
 ```
 <script>
 if ('serviceWorker' in navigator) {
@@ -155,8 +151,6 @@ This code registers the empty `sw.js` service worker file once the page has load
 Another failure listed in the report is that the app doesn't respond with a 200 status code when offline. We need to update our service worker to solve this.
 
 Add the following code to the service worker file (`sw.js`):
-
-##### service-worker.js
 
 ```
 const cacheName = 'cache-v1';
@@ -250,8 +244,6 @@ Our PWA score still isn't great. Some of the remaining failures listed in the re
 
 Create a file in `app/` called `manifest.json`, and add the following code:
 
-#### manifest.json
-
 ```
 {
   "name": "Space Missions",
@@ -289,8 +281,6 @@ Create a file in `app/` called `manifest.json`, and add the following code:
 The images referenced in the manifest are already supplied in the app.
 
 Then add the following HTML to the bottom of the `<head>` tag in `index.html`:
-
-#### index.html
 
 ```
 <link rel="manifest" href="manifest.json">
@@ -333,8 +323,6 @@ The next step to installing our app is to show users with the install prompt. Ch
 
 Add an "Install app" button and banner to the top of `index.html` (just after the `<main>` tag) with the following code:
 
-#### index.html
-
 ```
 <section id="installBanner" class="banner">
     <button id="installBtn">Install app</button>
@@ -342,8 +330,6 @@ Add an "Install app" button and banner to the top of `index.html` (just after th
 ```
 
 Then style the banner by adding the following styles to `styles/main.css`:
-
-#### styles/main.css
 
 ```
 .banner {
@@ -355,8 +341,6 @@ Then style the banner by adding the following styles to `styles/main.css`:
 ```
 
 Save the file. Finally, add the following script tag to `index.html`:
-
-#### index.html
 
 ```
   <script>

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -88,8 +88,6 @@ Because IndexedDB isn't supported by all browsers, we need to check that the use
 
 Replace TODO 2 in `app/js/main.js` with the following code:
 
-#### main.js
-
 ```
 if (!('indexedDB' in window)) {
   console.log('This browser doesn\'t support IndexedDB');
@@ -111,8 +109,6 @@ Create the database for your app.
 
 In `js/main.js`, replace `var dbPromise;` with the following code:
 
-#### main.js
-
 ```
 var dbPromise = idb.open('couches-n-things', 1);
 ```
@@ -132,8 +128,6 @@ Note: If at any point in the codelab your database gets into a bad state, you ca
 Let's create an object store in the database to hold the furniture objects.
 
 Replace `var dbPromise = idb.open('couches-n-things', 1);` in `main.js` with the following:
-
-#### main.js
 
 ```
 var dbPromise = idb.open('couches-n-things', 2, function(upgradeDb) {
@@ -180,8 +174,6 @@ Note: We are deliberately not including `break` statements in the switch block t
 Add some sample furniture items to the object store.
 
 Replace TODO 3.3 in `main.js` with the following code:
-
-#### main.js
 
 ```
 dbPromise.then(function(db) {
@@ -289,8 +281,6 @@ Close the test page. The database version can't be changed while another page is
 
 Replace TODO 4.1 in `main.js` with the following code:
 
-#### main.js
-
 ```
 case 2:
   console.log('Creating a name index');
@@ -299,8 +289,6 @@ case 2:
 ```
 
 Change the version number to 3 in the call to `idb.open`. The full `idb.open` method should look like this:
-
-#### main.js
 
 ```
 var dbPromise = idb.open('couches-n-things', 3, function(upgradeDb) {
@@ -352,8 +340,6 @@ Use the indexes you created in the previous sections to retrieve items from the 
 
 Add the following code to the `getByName` function in `main.js`:
 
-#### main.js
-
 ```
 return dbPromise.then(function(db) {
   var tx = db.transaction('products', 'readonly');
@@ -386,8 +372,6 @@ The __Search__ button calls the `displayByName` function, which passes the user 
 Use a cursor object to get items from your store within a price range.
 
 Replace TODO 4.4a in `main.js` with the following code:
-
-#### main.js
 
 ```
 var lower = document.getElementById('priceLower').value;
@@ -465,11 +449,7 @@ Open the test page. Your app should pass the next test which tests if the `order
 
 ### 5.2 Add sample orders
 
-This step is for you to complete on your own. In the `addOrders` function in `main.js`, write the code to add the following items to the `orders` object store:
-
-Note: This code will be very similar to the `addProducts` function that we wrote at the start of the lab.
-
-#### main.js
+This step is for you to complete on your own. In the `addOrders` function in `main.js`, write the code to add the following items to the `orders` object store. This code will be very similar to the `addProducts` function that we wrote at the start of the lab:
 
 ```
 var items = [
@@ -527,8 +507,6 @@ This step processes the array of orders passed to the `processOrders` function.
 
 Replace TODO 5.5 in `main.js` with the following code:
 
-#### main.js
-
 ```
 return dbPromise.then(function(db) {
   var tx = db.transaction('products');
@@ -557,8 +535,6 @@ This code gets each object from the `products` object store with an id matching 
 Now we need to check if there are enough items left in the `products` object store to fulfill the order.
 
 Replace TODO 5.6 in `main.js` with the following code:
-
-#### main.js
 
 ```
 return new Promise(function(resolve, reject) {

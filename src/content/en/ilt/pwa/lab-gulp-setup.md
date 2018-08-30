@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -110,15 +110,11 @@ Gulp is configured using a `gulpfile.js/` file. In this file, gulp "tasks" are d
 
 In the empty `project/gulpfile.js` file, add the following code to import the `gulp` package from the `node_modules/` directory.
 
-#### gulpfile.js
-
 ```
 const gulp = require('gulp');
 ```
 
 Next, add the following function to the same file in order to define a `copy` function:
-
-#### gulpfile.js
 
 ```
 function copy() {
@@ -133,8 +129,6 @@ function copy() {
 ```
 
 Then add the following line to define a `copy` task:
-
-#### gulpfile.js
 
 ```
 gulp.task('copy', copy);
@@ -170,15 +164,11 @@ Run the following to install the  [browser-sync](https://browsersync.io/docs/gul
 
 Then require the new package in `gulpfile.js` with the following code:
 
-#### gulpfile.js
-
 ```
 const browserSync = require('browser-sync');
 ```
 
 Add the following `serve` function below the existing code:
-
-#### gulpfile.js
 
 ```
 function serve() {
@@ -191,8 +181,6 @@ function serve() {
 ```
 
 Next, define the `buildAndServe` task, with slightly different syntax than we saw before:
-
-#### gulpfile.js
 
 ```
 gulp.task('buildAndServe', gulp.series(copy, serve));
@@ -226,15 +214,11 @@ Note: If the `browserSync` server is blocking your command line, terminate the p
 
 Then require the new package in `gulpfile.js` with the following code:
 
-#### gulpfile.js
-
 ```
 const babel = require('gulp-babel');
 ```
 
 Add the following `processJs` function and expose it to gulp with the `gulp.task` method:
-
-#### gulpfile.js
 
 ```
 function processJs() {
@@ -249,8 +233,6 @@ gulp.task('processJs', processJs);
 ```
 
 Next, remove the JavaScript files from the `copy` function, since we are processing them separately in `processJs`. The updated `copy` function should look like:
-
-#### gulpfile.js
 
 ```
 function copy() {
@@ -278,13 +260,9 @@ A single gulp task is not limited to using one package. Let's extend the `proces
 
 Run the following to install the  [gulp-uglify](https://www.npmjs.com/package/gulp-uglify-es) and  [gulp-rename](https://www.npmjs.com/package/gulp-rename) packages:
 
-```
-npm install --save-dev gulp-uglify gulp-rename
-```
+    npm install --save-dev gulp-uglify gulp-rename
 
 Then require the new packages in `gulpfile.js` with the following code:
-
-#### gulpfile.js
 
 ```
 const uglify = require('gulp-uglify');
@@ -292,8 +270,6 @@ const rename = require('gulp-rename');
 ```
 
 Update the `processJs` function to the following:
-
-#### gulpfile.js
 
 ```
 function processJs() {
@@ -320,8 +296,6 @@ Rather than piping the output of the `babel` function directly to `dest`, `proce
 Gulp supports a powerful "watch" functionality, which configures tasks to be automatically run when specified files change.
 
 Add the following `watch` function and corresponding task:
-
-#### gulpfile.js
 
 ```
 function watch() {

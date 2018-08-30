@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -69,8 +69,6 @@ In `sw-precache-workbox-lab/`, open the `project/` folder in your preferred text
 
 The starting app is a working PWA that currently uses `sw-precache` and `sw-toolbox` to generate a service worker and manage its  [routes](https://googlechromelabs.github.io/sw-toolbox/usage.html#regular-expression-routes). Open `project/gulpfile.js` and look at the code. Notice the `service-worker` task uses `sw-precache` to generate a service worker and imports the `sw-toolbox` library (`sw-toolbox.js`) and a custom `sw-toolbox` script (`js/toolbox-script.js`) into the generated service worker:
 
-#### gulpfile.js
-
 ```
 const serviceWorker = () => {
   return swPrecache.write('build/sw.js', {
@@ -91,8 +89,6 @@ gulp.task('service-worker', serviceWorker);
 This lab shows you how to translate this code so that it uses `workbox-build`, which is the Workbox version of `sw-precache`.
 
 Let's look at the custom `sw-toolbox` script now. Open `app/js/toolbox-script.js` and look at the code. The file contains a couple routes that use the `cacheFirst` strategy to handle requests for pages and images, and puts them into caches named `pages` and `images`, respectively:
-
-#### app/js/toolbox-script.js
 
 ```
 toolbox.router.get(/\.(?:html|css)$/, toolbox.cacheFirst, {
@@ -123,15 +119,11 @@ Now that you have seen the code, run the app so you can see how it works.
 
 Run the following command in the `project/` directory to install the project dependencies:
 
-```
-npm install
-```
+    npm install
 
 After it's finished installing, build and serve the app with the following command::
 
-```
-npm run serve
-```
+    npm run serve
 
 The `serve` command is aliased to our gulp `serve` task in `package.json` (we do this to avoid installing the gulp command line tool and to have better control of the gulp version used). The gulp `serve` task copies all of the app files to a build directory, generates a service worker (`build/sw.js`), starts a server, and opens the app in the browser.
 
@@ -151,9 +143,7 @@ Close the app in the browser and stop the server by running `ctrl+c` from the co
 
 After the server has stopped, run the following command in the `project/` directory to remove the `node_modules` folder containing the `sw-precache` and `sw-toolbox` modules:
 
-```
-rm -rf node_modules
-```
+    rm -rf node_modules
 
 Next, install the `workbox-build` module:
 
@@ -162,8 +152,6 @@ npm install --save-dev workbox-build
 ```
 
 Then, open the `package.json` file and delete `sw-toolbox` from the `dependencies` and delete `sw-precache` from the `devDependencies`. The full `package.json` file should look like the following (your version numbers may differ):
-
-#### package.json
 
 ```
 {
@@ -225,8 +213,6 @@ Workbox lets you write the service worker file yourself and the `workbox-sw.js` 
 
 Let's write the service worker now. Create an `sw.js` file in `app/` and add the following snippet to it:
 
-#### app/sw.js
-
 ```
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js');
 
@@ -254,8 +240,6 @@ See the  [documentation](https://workboxjs.org/) for full descriptions of the Wo
 With `workbox-sw.js`, we can write the routes directly in the service worker, instead of importing a separate file like we did with `sw-toolbox`. This leaves us with one less file to serve and a simpler development process.
 
 Add the following routes to `app/sw.js`. These are the Workbox equivalents of the existing `sw-toolbox` routes.
-
-#### app/sw.js
 
 ```
 workbox.routing.registerRoute(/\.(?:html|css)$/,
@@ -294,16 +278,12 @@ So far, we've removed the `sw-precache` and `sw-toolbox` modules and replaced th
 
 In `app/gulpfile.js`, replace the line requiring `sw-precache` with the following line to require the `workbox-build` module:
 
-#### app/gulpfile.js
-
 ```
 // const swPrecache = require('sw-precache');
 const workboxBuild = require('workbox-build');
 ```
 
 Then, replace the `service-worker` task in `app/gulpfile.js` with the following task:
-
-#### app/gulpfile.js
 
 ```
 const serviceWorker = () => {

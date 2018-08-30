@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -115,8 +115,6 @@ Create an empty file called `manifest.json` in the `app/` directory.
 
 Replace TODO 4.1 in `index.html` with the following:
 
-#### index.html
-
 ```
 <!-- Web Application Manifest -->
 <link rel="manifest" href="manifest.json">
@@ -125,8 +123,6 @@ Replace TODO 4.1 in `index.html` with the following:
 ### 4.2 Add manifest code
 
 Add the following to the `manifest.json` file:
-
-#### manifest.json
 
 ```
 {
@@ -163,8 +159,6 @@ Add the following to the `manifest.json` file:
 ### 4.3 Add tags for other browsers
 
 Replace TODO 4.3 in `index.html` with the following:
-
-#### index.html
 
 ```
 <!-- Chrome for Android theme color -->
@@ -216,8 +210,6 @@ Create an empty JavaScript file in the root directory (`app/`) and name it `serv
 
 Now replace TODO 5.1 in <strong>index.html</strong> with the following and save the file:
 
-#### index.html
-
 ```
 <script>
   (function() {
@@ -241,8 +233,6 @@ Now replace TODO 5.1 in <strong>index.html</strong> with the following and save 
 The report also indicates that our app must respond with a 200 when offline and must have our starting URL ("start_url") cached.
 
 Add the following code to the empty service-worker.js file (which should be at `app/service-worker.js`):
-
-#### service-worker.js
 
 ```
 self.addEventListener('install', function(event) {

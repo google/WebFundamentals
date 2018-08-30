@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -51,11 +51,9 @@ If you have not downloaded the repository and installed the  [LTS version of Nod
 
 Open your computer's command line interface. Navigate into the `promises-lab/app/` directory and start a local development server:
 
-```
-cd promises-lab/app
-npm install
-node server.js
-```
+    cd promises-lab/app
+    npm install
+    node server.js
 
 You can terminate the server at any time with `Ctrl-c`.
 
@@ -92,8 +90,6 @@ Let's start by creating a simple promise.
 
 Replace the `getImageName` function in `js/main.js` with the following code:
 
-#### js/main.js
-
 ```
 function getImageName(country) {
   country = country.toLowerCase();
@@ -123,8 +119,6 @@ Note: Navigate to `localhost:8081/test/test.html` in the browser to check your f
 
 The `getImageName` function creates a  [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). A promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value. In effect, a promise lets an asynchronous function such as `getImageName` (the `setTimeout` method is used to make `getImageName` asynchronous) return a value much like a synchronous function. Rather than returning the final value (in this case, "Spain.png"), `getImageName` returns a promise of a future value (this is what you see in the console log). Promise construction typically looks like  [this example at developers.google.com](/web/fundamentals/getting-started/primers/promises#promises_arrive_in_javascript):
 
-#### js/main.js
-
 ```
 const promise = new Promise((resolve, reject) => {
   // do a thing, possibly async, then...
@@ -147,8 +141,6 @@ __Optional__: Complete the `isSpain` function so that it takes a string as input
 This section uses the promise we just created.
 
 Update the `flagChain` function in `js/main.js` with the following code:
-
-#### js/main.js
 
 ```
 function flagChain(country) {
@@ -182,8 +174,6 @@ Let's look at the `catch` method, which is a clearer alternative for error handl
 
 Replace the `flagChain` function with the following:
 
-#### js/main.js
-
 ```
 function flagChain(country) {
   return getImageName(country)
@@ -199,8 +189,6 @@ Save the script and refresh the page. Repeat the experiments from section 2.2 an
 The  [catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method is similar to `then`, but deals only with rejected cases. It behaves like `then(undefined, onRejected)`. With this new pattern, if the promise from `getImageName` resolves, then `logSuccess` is called (and is implicitly passed the resolved promise value). If the promise from `getImageName` rejects, then `logError` is called (and implicitly passed the rejection error).
 
 This code is not quite equivalent to the code in section 2.2, however. This new code also triggers `catch` if `logSuccess` rejects, because `logSuccess` occurs before the `catch`. This new code would actually be equivalent to the following:
-
-#### js/main.js
 
 ```
 return getImageName(country)
@@ -236,8 +224,6 @@ The `then` and `catch` methods also return promises, making it possible to chain
 ### 3.1 Add asynchronous steps
 
 Replace the code in the `flagChain` function with the following:
-
-#### main.js
 
 ```
 function flagChain(country) {
@@ -309,8 +295,6 @@ To verify that you have done this correctly, navigate to `localhost:8081/test/te
 
 Test what you've written by calling `allFlags` just below the function  using the following code:
 
-#### js/main.js
-
 ```
 var promises = [
   getImageName('Spain'),
@@ -346,8 +330,6 @@ Note: Even if an input promise rejects, causing `Promise.all` to reject, the rem
 Another promise method that you may see referenced is  [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race).
 
 Add the following code to `js/main.js` below the code we added in the previous step:
-
-#### js/main.js
 
 ```
 const promise1 = new Promise((resolve, reject) => {

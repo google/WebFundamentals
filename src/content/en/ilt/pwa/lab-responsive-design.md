@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -92,8 +92,6 @@ Open developer tools and <a href="tools-for-pwa-developers#mobile">enable respon
 
 Replace TODO 3 in `index.html` with the following tag:
 
-#### index.html
-
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
@@ -122,8 +120,6 @@ The initial-scale property controls the zoom level when the page is first loaded
 
 
 Replace TODO 4 in `styles/main.css` with the following code:
-
-#### main.css
 
 ```
 @media screen and (max-width: 48rem) {
@@ -156,8 +152,6 @@ Comment out all of the rules in `styles/main.css` by wrapping them in `/*` and `
 ### 5.2 Add Flexbox layout
 
 Replace TODO 5.2 in `styles/main.css` with the following code:
-
-#### main.css
 
 ```
 .container {
@@ -201,8 +195,6 @@ Use the  [nth-child pseudo-class](https://developer.mozilla.org/en-US/docs/Web/C
 
 Replace TODO 5.4 in `styles/main.css` with the code below:
 
-#### main.css
-
 ```
 @media screen and (max-width: 48rem) {
   .container {
@@ -236,8 +228,6 @@ As Flexbox is a relatively new technology, we should include fallbacks in our CS
 
 Replace TODO 6.1 in `index.html` with the code to include the custom Modernizr build:
 
-#### index.html
-
 ```
 <script src="modernizr-custom.js"></script>
 ```
@@ -253,8 +243,6 @@ Note: If we were using the `flex-wrap` property of Flexbox, we would need to add
 Let's use the `flexbox` and `no-flexbox` classes in the CSS to provide fallback rules when Flexbox is not supported.
 
 Now in `styles/main.css`, add `.no-flexbox` in front of each rule that we commented out:
-
-#### main.css
 
 ```
 .no-flexbox .container {
@@ -276,8 +264,6 @@ Now in `styles/main.css`, add `.no-flexbox` in front of each rule that we commen
 ```
 
 In the same file, add `.flexbox` in front of the rest of the rules:
-
-#### main.css
 
 ```
 .flexbox .container {
