@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-08-31 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -25,23 +25,14 @@ We skipped Chrome 69 because we didn't have enough new features or UI changes to
 
 New features and major changes coming to DevTools in Chrome 70 include:
 
-* [Live Expressions in the Console](#watch). Pin an expression to the top of your Console and
-  monitor its value in real-time.
-* [Highlight DOM nodes during Eager Evaluation](#nodes). Type an expression that evaluates
-  to a DOM node to highlight that node in the viewport.
-* [Performance panel optimizations](#performance). Faster visualizing and processing of
-  data.
-* [More reliable debugging](#debugging). Bug fixes related to breakpoints, and code stepping
-  for TypeScript users.
-* [Enable network throttling from the Command Menu](#throttling). Run commands to simulate
-  fast 3G or slow 3G.
-* [Autocomplete Conditional Breakpoints](#autocomplete). Use the Autocomplete UI to type out
-  conditional breakpoints faster.
-* [Break on `AudioContext` events](#audiocontext). Use the Event Listener Breakpoints
-  pane to pause on the first line of an `AudioContext` lifecycle event handler.
-* [Debug Node.js apps with ndb](#ndb). Detect and attach to child processes, place breakpoints
-  before modules are required, edit files from the DevTools UI, blackbox scripts outside
-  of the working directory, and more.
+* [Live Expressions in the Console](#watch).
+* [Highlight DOM nodes during Eager Evaluation](#nodes).
+* [Performance panel optimizations](#performance).
+* [More reliable debugging](#debugging).
+* [Enable network throttling from the Command Menu](#throttling).
+* [Autocomplete Conditional Breakpoints](#autocomplete).
+* [Break on `AudioContext` events](#audiocontext).
+* [Debug Node.js apps with ndb](#ndb).
 
 ## Live Expressions in the Console {: #watch }
 
@@ -90,7 +81,12 @@ Live Expression values update every 250 milliseconds.
 {# https://chromium.googlesource.com/chromium/src/+/d23141f79f139a042e5be53f499be649b6babbd1 #}
 
 Type an expression that evaluates to a DOM node in the Console and [Eager Evaluation][EE]
-highlights that node in the viewport.
+now highlights that node in the viewport.
+
+Note: **The highlighted node only updates when you type**. It does not update on an interval.
+For example, if you type `document.activeElement`, which tracks the element in focus, and then
+tab through the page, DevTools will still be highlighting the node that was active when you originally
+typed out the expression.
 
 <figure>
   <img src="/web/updates/images/2018/08/node.png"
@@ -103,6 +99,15 @@ highlights that node in the viewport.
 </figure>
 
 [EE]: /web/updates/2018/05/devtools#eagerevaluation
+
+Here are some expressions you may find useful:
+
+* `document.activeElement` for highlighting the node that currently has focus.
+* `document.querySelector(s)` for highlighting an arbitrary node, where `s` is a CSS selector.
+  This is equivalent to hovering over a node in the [DOM Tree](/web/tools/chrome-devtools/css/reference#select).
+* [`$0`](/web/tools/chrome-devtools/console/command-line-reference#dom) for highlighting whatever node is currently
+  selected in the DOM Tree.
+* `$0.parentElement` to highlight the parent of the currently-selected node.
 
 ## Performance panel optimizations {: #performance }
 
@@ -188,6 +193,8 @@ process and synthesize audio.
 {# https://chromium.googlesource.com/chromium/src/+/5cc93793d9819f9b0d9e6fde47cdeb8e9c481ae4 #}
 
 ## Debug Node.js apps with ndb {: #ndb }
+
+Note: ndb is an experimental project from Google Chrome Labs.
 
 ndb is a new debugger for Node.js applications. On top of the [usual debugging features that
 you get through DevTools][medium]{: .external }, ndb also offers:
