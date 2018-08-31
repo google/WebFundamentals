@@ -105,7 +105,7 @@ Notes:
 Note: This feature depends on [Eager Evaluation](#eagerevaluation), which needs to be enabled
 from **Console Settings** ![Console Settings][settings]{:.inline-icon}.
 
-After enabling Eager Evaluation, the Console now also shows you which which properties and
+After enabling Eager Evaluation, the Console now also shows you which properties and
 functions are available after you type out a function.
 
 <figure>

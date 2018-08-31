@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: How webpack helps with asset caching
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_blink_components: N/A #}
 
@@ -801,3 +801,7 @@ To enable the plugin, add it to the `plugins` section of the config:
 * Inline the runtime to save an HTTP request
 * Lazy-load non-critical code with <code>import</code>
 * Split code by routes/pages to avoid loading unnecessary stuff
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

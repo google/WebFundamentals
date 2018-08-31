@@ -9,6 +9,8 @@ description: ReportingObserver gives developers insight into what their code is 
 {# wf_featured_snippet: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console. #}
 {# wf_blink_components: Blink #}
 
+{% include "web/updates/_shared/see-all-dep-rem.html" %}
+
 # ReportingObserver: know your code health {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}

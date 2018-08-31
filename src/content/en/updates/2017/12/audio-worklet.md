@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2017-12-14 #}
-{# wf_updated_on: 2018-03-15 #}
+{# wf_updated_on: 2018-08-29 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: chrome64,chrome66,webaudio #}
 {# wf_featured_snippet: Chrome 64 comes with a highly anticipated new feature in Web Audio API - AudioWorklet. AudioWorklet nicely keeps the user-supplied JavaScript code all within the audio processing thread — that is, it doesn’t have to jump over to the main thread to process audio. #}
@@ -249,6 +249,7 @@ Putting everything together, here's a complete example of GainNode built on
 top of AudioWorkletNode and AudioWorkletProcessor.
 
 Index.html
+
 ```html
 <!doctype html>
 <html>
@@ -272,6 +273,7 @@ Index.html
 ```
 
 gain-processor.js
+
 ```js
 class GainProcessor extends AudioWorkletProcessor {
 

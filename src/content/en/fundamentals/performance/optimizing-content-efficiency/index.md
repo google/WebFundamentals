@@ -3,8 +3,9 @@ book_path: /web/fundamentals/_book.yaml
 description: The amount of data downloaded by apps continues to increase over time. To deliver great performance you must optimize data delivery as much as possible.
 
 
-{# wf_updated_on: 2015-10-05 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # Optimizing Content Efficiency {: .page-title }
 
@@ -71,3 +72,7 @@ A median site at the beginning of 2014 is composed of 75 requests that add up to
 Unlike their desktop counterparts, web applications do not require a separate installation process: enter the URL and we are up and running -- that’s a key feature of the web. However, to make this happen **we often have to fetch dozens, and sometime hundreds, of various resources, all of which can add up to megabytes of data and must come together in hundreds of milliseconds to facilitate the instant web experience we are aiming for.**
 
 Achieving an instant web experience in light of these requirements is no small feat, which is why optimizing content efficiency is critical: eliminating unnecessary downloads, optimizing transfer encoding of each resource through various compression techniques, and leveraging caching whenever possible to eliminate redundant downloads.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

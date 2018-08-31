@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/consistently-interactive
+  to: /web/tools/lighthouse/audits/time-to-interactive
+
 - from: /web/tools/polymer-starter-kit/...
   to: https://www.polymer-project.org/2.0/start/toolbox/set-up
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A quick look at some of the efforts the Chrome team are doing to helps developers get started with Web Development and iterate on their sites.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2014-12-01 #}
 {# wf_tags: news,fundamentals,mobile,frontend #}
 {# wf_blink_components: N/A #}
@@ -70,7 +70,7 @@ need:
 For those of you who are new to build processes, the easiest way to think of a
 build process is to view it as a program which takes a set of files and performs
 certain tasks on them and outputs new versions in a different location. The
-tasks optimise the files to improve load times, check for possible errors or
+tasks optimize the files to improve load times, check for possible errors or
 handle tasks that can be automated.
 
 In Web Starter Kit we have the following processes:
