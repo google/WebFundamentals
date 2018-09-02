@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2017-12-22 #}
+{# wf_updated_on: 2018-09-03 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -16,61 +16,61 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-WebVR è una JavaScript API che fa uso di qualsiasi apparecchio VR e di un
-dispositivo VR che i tuoi utenti hanno, come un [auricolare
-Daydream](https://vr.google.com/daydream/) e un telefono Pixel, per creare
+WebVR è una API JavaScript per utilizzare qualsiasi tipo di visore VR e dispositivo
+abilitato per VR posseduto dagli utenti, come i [visori
+Daydream](https://vr.google.com/daydream/) e il telefono Pixel, per creare
 esperienze 3D completamente immersive nel tuo browser.
 
 <div class="clearfix"></div>
 
 ## Supporto e disponibilità
 
-Oggi WebVR API 2.0 è in [fase di
+Attualmente l'API Device è in [fase di
 sviluppo](https://www.chromestatus.com/features/5680169905815552) ma puoi
-provare WebVR 1.1 API in:
+provarla con:
 
-- Chrome Beta (M56 +) tramite un [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+- Il flag [#webxr] in Chrome 66 e versioni successive.
+Come un [OriginTrial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) in Chrome 67
+e versioni successive.
 - Firefox Nightly.
-- Samsung Internet per Android e per Gear VR.
 
-Per i browser che non supportano WebVR, o che hanno versioni precedenti delle
-API, è possibile tornare a [WebVR
-Polyfill](https://github.com/googlevr/webvr-polyfill). Tenete a mente, tuttavia,
-che la VR è *estremamente sensibile alle prestazioni* e che  polyfill ha in
+È anche disponibile
+tramite il [WebVR Polyfill](https://github.com/googlevr/webvr-polyfill).
+Tuttavia, bisogna tenere a mente
+che la VR è *estremamente sensibile alle prestazioni* e che il polyfill ha in
 genere un costo di prestazioni relativamente elevato, quindi potrebbe essere
-utile valutare se si desidera utilizzare il polyfill o meno per un utente che
-non ha il supporto nativo per WebVR .
+utile valutare se desideri utilizzare il polyfill o meno per un utente che
+non ha il supporto nativo per WebVR.
 
-In caso di dubbio evita di dare alle persone malesseri da movimento attraverso
-esperienze da scarse performance!
+Se hai dubbi, evita episodi di cinetosi ai tuoi utenti causati da
+di esperienze poco soddisfacenti!
 
-[Controlla lo stato attuale di WebVR.](./status/)
+[Informazioni sull'ultimissimo stato di WebVR](./status/).
 
-## Creazione di contenuto WebVR
+## Creazione di contenuti WebVR
 
 Per creare contenuti WebVR è necessario utilizzare alcune API nuovissime nonché
 tecnologie esistenti come
 [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial) e
 [Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-oltre a tenere conto di diversi tipi di input e cuffie.
+oltre a tenere in considerazione i diversi tipi di input e visori.
 
 <div class="attempt-left">
   <h3>Inizia con WebVR</h3>
   <a href="./getting-started-with-webvr/">
     <img src="img/getting-started-with-webvr.jpg" alt="Get started with WebVR">
   </a>
-<p>Inizia subito con WebVR prendendo una scena WebGL e aggiungendo VR API.
+<p>Inizia subito con WebVR, aggiungendo l'API VR a una scena WebGL.
 <br> <a href="./getting-started-with-webvr/">Per saperne di più</a></p>
 </div>
 <div class="attempt-right">
-  <h3>Aggiungi input ad una scena WebVR</h3>
+  <h3>Aggiungere input a una scena WebVR</h3>
   <a href="./adding-input-to-a-webvr-scene/">
 <img src="img/adding-input-to-a-webvr-scene.jpg" alt="Add input to a WebVR
 scene">
   </a>
 <p>L'interazione è una parte cruciale per fornire un'esperienza coinvolgente
-ed immersiva. <br> <a href="./adding-input-to-a-webvr-scene/">Per
+e immersiva. <br> <a href="./adding-input-to-a-webvr-scene/">Per
 iniziare</a></p>
 </div>
 
@@ -78,58 +78,58 @@ iniziare</a></p>
 
 ### Ulteriori risorse
 
-Ci sono alcune eccellenti risorse WebVR che iniziano ad apparire sul web.
+Nel web cominciano ad affiorare molte ottime risorse su WebVR.
 
-- [Scopri di più a proposito di WebVR
-API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API)
+- [[Scopri di più sull'API
+WebVR](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API)
 - [Vedi gli esempi WebVR](https://webvr.info/samples/)
 - [Designing per Google
 Cardboard](https://www.google.com/design/spec-vr/designing-for-google-cardboard/a-new-dimension.html)
 
-## Tieni traccia delle performance
+## Tenere traccia delle prestazioni
 
 <img src="img/oce.png" class="attempt-right" alt="WebVR Performance">
 
-Al fine minimizzare il disagio per le persone che utilizzano le esperienze WebVR
-devono mantenere una frequenza fotogrammi coerente (e alta). Non riuscendo a
-farlo puoi causare agli utenti malesseri da spostamento!
+Per minimizzare il disagio delle persone che utilizzano le esperienze WebVR,
+la frequenza dei fotogrammi deve essere mantenuta costante (e alta). Altrimenti
+gli utenti potrebbero soffrire di cinetosi!
 
-Sui dispositivi mobili la frequenza di aggiornamento è in genere di 60 Hz, il
-che significa che il target è 60 fps (o 16 ms per frame, *incluso* l'overhead
-del browser per frame). Sul desktop, il target è in genere 90Hz (11 ms incluso
-overhead).
+Solitamente sui dispositivi mobili la frequenza di aggiornamento è pari a 60 Hz,
+vale a dire un target di 60 fps (o 16 ms per fotogramma, *incluso* l'overhead
+del browser per fotogramma). Sul desktop in genere puntiamo a 90 Hz (11 ms incluso
+l'overhead).
 
 Per raggiungere questi obiettivi è necessario testare [regolarmente nei
-dispositivi di destinazione](/web/tools/chrome-devtools/remote-debugging/) ed
+dispositivi di destinazione](/web/tools/chrome-devtools/remote-debugging/) e
 [utilizzare la timeline di Chrome DevTools per misurare i costi per
-frame](/web/tools/chrome-devtools/evaluate-performance/timeline-tool) .
+fotogramma](/web/tools/chrome-devtools/evaluate-performance/timeline-tool).
 
-## Abbracciare il Progressive Enhancement
+## Sfruttare il Progressive Enhancement al meglio
 
 <img src="img/touch-input.png" class="attempt-right" alt="Use Progressive
 Enhancement to maximize reach">
 
-Che cosa devi fare se i tuoi utenti non hanno un Head Mounterd Display ('HMD') o
-un dispositivo con capacità VR? La migliore risposta è usare Progressive
+Cosa fai se gli utenti non hanno un casco con visore (Head Mounted Display, HMD) o
+un dispositivo con capacità VR? La risposta è usare il Progressive
 Enhancement.
 
-1. Supponiamo che l'utente stia utilizzando l'input tradizionale, ad esempio una
-tastiera, un mouse o un touchscreen senza accesso ad un VR headset.
-2. Adattamento alle modifiche nella disponibilità di input e cuffie in fase di
+1. Supponi che l'utente stia utilizzando input tradizionali, come la
+tastiera, un mouse o un touchscreen senza accesso al visore VR.
+2. Adattati ai cambiamenti di disponibilità di input e visori in fase di
 esecuzione.
 
 Fortunatamente le [API
 WebVR](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API) consentono di
 rilevare le modifiche nell'ambiente VR per consentirci di individuare e
-adattarsi alle modifiche degli input e delle opzioni di visualizzazione nel
+adattarci ai diversi input e visualizzare le opzioni nel
 dispositivo dell'utente.
 
-Assumendo per prima cosa un ambiente non VR, puoi massimizzare la portata delle
-tue esperienze e assicurarti di fornire la migliore esperienza possibile,
-indipendentemente dalla configurazione dei tuoi utenti.
+Pianificare partendo da un ambiente non VR ti consente di rendere la tua soluzione molto più
+raggiungibile e assicurarti di fornire la migliore esperienza possibile,
 
-Per ulteriori informazioni leggi la nostra guida sull'[aggiunta di input a una
-scena WebVR](./adding-input-to-a-webvr-scene/) .
+
+Per ulteriori informazioni, leggi la nostra guida su come [aggiungere input a una
+scena WebVR](./adding-input-to-a-webvr-scene/).
 
 Translated by
 {% include "web/_shared/contributors/lucaberton.html" %}
