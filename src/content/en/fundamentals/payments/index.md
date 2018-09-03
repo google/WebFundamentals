@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-14 #}
-{# wf_updated_on: 2018-08-21 #}
+{# wf_updated_on: 2018-09-03 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Overview {: .page-title }
@@ -34,16 +34,37 @@ relatively easy integration.
 **For payment service providers**, they bring new payment methods and enhance the ability of 
 businesses to serve more customers with a better developer experience and more secure solutions.
 
-W3C Payment APIs is:
+## 3 principles
 
-*   **Standard and Open:** W3C Payment APIs are an open source payment standard for the web 
-platform for the first time in history. They are available for any players to implement.
-*   **Easy and Consistent**: W3C Payment APIs make checkout easy for the user, by reusing stored 
+<section style="display:flex;background-color:#f7f7f7;">
+  <div style="min-width:50%">
+    <img src="images/overview/standard-open.png" width="100%" alt="Standard and Open" title="">
+  </div>
+  <div style="min-width:50%">
+    <h3>Standard and Open</h3>
+    W3C Payment APIs are an open source payment standard for the web platform for the first time
+    in history. They are available for any players to implement.</div>
+</section>
+<section style="display:flex">
+  <div style="min-width:50%">
+    <h3>Easy and Consistent</h3>
+    W3C Payment APIs make checkout easy for the user, by reusing stored 
 payments and address information and removing the need for the user to fill in checkout forms. 
 Since the UI is implemented by the browser natively, users see a familiar and consistent checkout 
-experience on any website that implements the standard.
-*   **Secure and Flexible:** W3C Payment APIs provide industry-leading payment technology to the 
-web, and can easily integrate a secure payment solution.
+experience on any website that implements the standard.</div>
+  <div style="min-width:50%">
+    <img src="images/overview/easy-consistent.png" width="100%" alt="Standard and Open" title="">
+  </div>
+</section>
+<section style="display:flex;background-color:#f7f7f7;">
+  <div style="min-width:50%">
+    <img src="images/overview/secure-flexible.png" width="100%" alt="Standard and Open" title="">
+  </div>
+  <div style="min-width:50%">
+    <h3>Secure and Flexible</h3>
+    W3C Payment APIs provide industry-leading payment technology to the 
+web, and can easily integrate a secure payment solution.</div>
+</section>
 
 ## A Closer Look
 
