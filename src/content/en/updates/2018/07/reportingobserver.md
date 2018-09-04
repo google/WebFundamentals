@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 
-{# wf_updated_on: 2018-08-09 #}
+{# wf_updated_on: 2018-09-03 #}
 {# wf_published_on: 2018-07-26 #}
 {# wf_tags: chrome69,reporting-observer,analytics,reports,interventions,deprecations,reporting #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
@@ -87,7 +87,7 @@ and [interventions][interventions]. You can use it as a reporting tool and
 lose less sleep wondering if users are hitting unexpected issues on your live
 site.
 
-`ReportingObserver` is part of a larger spec, the [Reporting API][/web/updates/2018/08/reportingapi],
+`ReportingObserver` is part of a larger spec, the [Reporting API][/web/updates/2018/09/reportingapi],
 which provides a common way to send these different reports to a backend.
 The Reporting API is basically a generic framework to specify a set of server
 endpoints to report issues to.
