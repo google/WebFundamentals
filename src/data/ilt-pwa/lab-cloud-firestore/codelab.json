@@ -1,19 +1,20 @@
 {
   "environment": "web",
-  "source": "1VXYpqi3pPjVosE_c5SOMWbYjZ8f86A05Q2Wc2pHUG_U",
+  "source": "1VJJk1QwxAHJX4GJSq4ZpSSXsAbdNtQFbKqbjNm2pHSY",
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2018-08-30T20:51:45Z",
-  "id": "lab-integrating-web-push",
+  "updated": "2018-09-06T18:10:04Z",
+  "id": "lab-cloud-firestore",
   "duration": 0,
-  "title": "Lab: Integrating Web Push",
+  "title": "Lab: Cloud Firestore",
   "summary": "",
   "theme": "",
   "status": null,
   "category": null,
   "tags": [
+    "2-day",
     "3-day"
   ],
-  "url": "lab-integrating-web-push"
+  "url": "lab-cloud-firestore"
 }
