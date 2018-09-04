@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 69 for developers?
 
 {# wf_published_on: 2018-09-04 #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-09-04 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome69,new-in-chrome #}
 {# wf_featured_snippet: It’s been ten years since Chrome was first released. A lot has changed since then, but our goal of building a solid foundation for modern web applications hasn’t! In Chrome 69 there’s support CSS Scroll Snapping, support for notches, web locks, and a few cool new CSS4 features. Let’s dive in and see what’s new for developers in Chrome 69! #}
@@ -16,7 +16,7 @@ description: What's new in Chrome 69 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="WF2IjH35w8o"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -41,7 +41,7 @@ I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/68.0.3440.70..69.0.TODO.70).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/68.0.3440.70..69.0.3497.81).
 
 
 ## CSS Scroll Snap {: #scroll-snap }
@@ -95,7 +95,17 @@ for more details and samples you can try!
 
 ## Display cutouts (aka notches) {: #notch }
 
-<img src="/web/updates/images/2018/09/notch-extra-margin.png" class="attempt-right">
+<figure class="attempt-right">
+  <a href="/web/updates/images/2018/09/notch-extra-margin.png">
+    <img src="/web/updates/images/2018/09/notch-extra-margin.png"
+         alt="mobile phone with display cutout">
+  </a>
+  <figcaption>
+    Browsers add some extra margin on a mobile device with display cutout to
+    prevent content from being covered by the cutout.
+  </figcaption>
+</figure>
+
 
 There are an
 [increasing number of mobile devices](https://www.google.com/search?q=what+phones+have+a+notch)
@@ -110,6 +120,8 @@ With CSS environment variables and the
 meta tag, now you can. For example, to tell the browser to expand into the
 display cutout area, set the `viewport-fit` property, in the `viewport` meta
 tag to `cover`.
+
+<div class="clearfix"></div>
 
 ```
 <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
@@ -178,16 +190,19 @@ and includes a more in-depth explanation and lots of examples.
 These are just a few of the changes in Chrome 69 for developers, of course,
 there’s plenty more.
 
-<img src="/web/updates/images/2018/09/conic-gradient.jpg" class="attempt-right" style="width: 125px;">
+<img src="/web/updates/images/2018/09/conic-gradient.jpg"
+     alt="conical gradient" class="attempt-right" style="width: 125px;">
 
 * From the CSS4 spec, you can now create color transitions around the
   circumference of a circle, using
-  [conic gradients](https://www.w3.org/TR/css-images-4/#gradients). Lea Verou
-  has a [CSS `conic-gradient()` polyfill](https://leaverou.github.io/conic-gradient/)
-  that you can use, and the the page includes a whole bunch of really cool
+  [conic gradients](https://www.w3.org/TR/css-images-4/#gradients).
+  [Lea Verou](https://lea.verou.me/) has a
+  [CSS `conic-gradient()` polyfill](https://leaverou.github.io/conic-gradient/)
+  that you can use, and the page includes a whole bunch of really cool
   community submitted samples.
-* There’s a new `toggleAttribute()` method on elements that toggles the
-  existence of an attribute, similar to
+* There’s a new
+  [`toggleAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute)
+  method on elements that toggles the existence of an attribute, similar to
   [`classList.toggle()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
 * JavaScript arrays are getting two new methods:
   [`flat()` and `flatMap()`](/web/updates/2018/03/smooshgate). They return a
@@ -199,7 +214,7 @@ there’s plenty more.
   table.exw-expanded-content { display: table; }
 </style>
 
-<section class="expandable">
+<section class="expandable" id="easter-eggs">
   Did you find all of the easter e<a href="" class="expand-control">g</a>gs
   in the video?
   </a>
@@ -211,6 +226,7 @@ there’s plenty more.
     <li><a href="https://www.youtube.com/watch?v=RjbkAECbDBE">Chromercise bands</a></li>
     <li><a href="https://www.youtube.com/watch?v=nCgQDjiotG0">Potato cannon</a></li>
     <li><a href="https://www.youtube.com/watch?v=iYYHRwLqrKM">Pete Monster</a></li>
+    <li>Wooden dino from CDS 2017</li>
   </ul>
   <p>
     A special thanks to all the people who have helped to make New in Chrome
@@ -257,8 +273,11 @@ there’s plenty more.
     </tr>
   </table>
   <p>
-    And of course, thank you to <b>you</b> for watching, and providing your
-    comments and feedback! These videos have gotten better because of you.
+    And of course, thank <b>you</b> for watching and providing your
+    comments and feedback! I read all of them, and take your suggestions
+    to heart. These videos have gotten better because of you!
+  </p>
+  <p>
     <b>Thanks for watching!</b>
   </p>
 </section>
