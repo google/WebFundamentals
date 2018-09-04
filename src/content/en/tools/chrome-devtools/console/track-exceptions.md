@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -10,6 +11,10 @@ description: Chrome DevTools provides tools to help you fix web pages throwing e
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/flaviocopes.html" %}
+
+
+Warning: This page is deprecated.
+
 Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript.
 
 Page exceptions and JavaScript errors are actually quite useful - if you can get to the details behind them. When a page throws an exception or a script produces an error, the Console provides specific, reliable information to help you locate and correct the problem. 

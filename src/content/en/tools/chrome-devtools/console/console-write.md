@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -13,6 +14,7 @@ description: Console logging is a powerful way to inspect what your page or appl
 {% include "web/_shared/contributors/flaviocopes.html" %}
 Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
+Warning: This page is deprecated.
 
 ### TL;DR {: .hide-from-toc }
 - Use <a href="/web/tools/chrome-devtools/console/console-reference#log">console.log()</a> for basic logging

@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Take advantage of the Console API to measure execution times and count statement executions.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-02 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -11,6 +12,9 @@ description: Take advantage of the Console API to measure execution times and co
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/flaviocopes.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
+
+
+Warning: This page is deprecated.
 
 Take advantage of the Console API to measure execution times and count statement executions.
 
