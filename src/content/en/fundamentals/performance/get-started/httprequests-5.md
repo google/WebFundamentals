@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: Blink>Network,Internals>Network>HTTP2 #}
 
@@ -268,3 +268,7 @@ In this section, we covered ways to reduce the number of HTTP requests our pages
 and considered techniques for both text and graphical resources. Every round-trip to the
 server we can avoid saves time, speeds up the page load, and gets its content to our users
 sooner.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

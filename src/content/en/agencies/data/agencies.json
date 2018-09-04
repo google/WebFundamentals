@@ -384,7 +384,9 @@
         {
           "country_name": "India",
           "cities": [
-            "Delhi"
+            "Delhi",
+            "Hyderabad",
+            "Chennai"
           ]
         }
       ],
@@ -395,6 +397,22 @@
           "geo": {
             "lat": 28.7040592,
             "lng": 77.10249019999999
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Hyderabad",
+          "geo": {
+            "lat": 17.385044,
+            "lng": 78.486671
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Chennai",
+          "geo": {
+            "lat": 13.0826802,
+            "lng": 80.2707184
           }
         }
       ]

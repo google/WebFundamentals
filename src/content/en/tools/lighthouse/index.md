@@ -47,8 +47,6 @@ figure {
 }
 </style>
 
-<script src="/_static/js/managed/cws_install.js" async></script>
-
 Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse),
 automated tool for improving the quality of web pages. You can run it against
 any web page, public or requiring authentication. It has audits for performance,

@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Caching and reusing previously fetched resources is a critical aspect of optimizing for performance.
 
-{# wf_updated_on: 2016-08-30 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2013-12-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # HTTP Caching {: .page-title }
 

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2014-04-30 #}
 {# wf_blink_components: N/A #}
 
@@ -41,14 +41,14 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
   </figcaption>
 </figure>
 
-Make sure your forms have no repeated actions, only as many fields as 
-necessary, and take advantage of 
+Make sure your forms have no repeated actions, only as many fields as
+necessary, and take advantage of
 [autofill](#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
-Look for opportunities to pre-fill information you already know, or may 
-anticipated to save the user from having to provide it.  For example, 
-pre-populate the shipping address with the last shipping address supplied by 
+Look for opportunities to pre-fill information you already know, or may
+anticipated to save the user from having to provide it.  For example,
+pre-populate the shipping address with the last shipping address supplied by
 the user.
 
 <div style="clear:both;"></div>
@@ -62,11 +62,11 @@ the user.
   </figcaption>
 </figure>
 
-Progress bars and menus should accurately convey overall progress through 
+Progress bars and menus should accurately convey overall progress through
 multi-step forms and processes.
 
-If you place a disproportionately complex form in an earlier step, users 
-are more likely to abandon your site before they go through the entire process. 
+If you place a disproportionately complex form in an earlier step, users
+are more likely to abandon your site before they go through the entire process.
 
 <div style="clear:both;"></div>
 
@@ -79,10 +79,10 @@ are more likely to abandon your site before they go through the entire process.
   </figcaption>
 </figure>
 
-Users often need more context when scheduling appointments and travel dates, 
-to make things easier and prevent them from leaving your site to check their 
-calendar app, provide a visual calendar with clear labeling for selecting 
-start and end dates. 
+Users often need more context when scheduling appointments and travel dates,
+to make things easier and prevent them from leaving your site to check their
+calendar app, provide a visual calendar with clear labeling for selecting
+start and end dates.
 
 <div style="clear:both;"></div>
 
@@ -154,8 +154,8 @@ type.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>number</code><br>For numeric input, can be any rational integer. Additionally, 
-        <a href="https://www.filamentgroup.com/lab/type-number.html">iOS requires using</a> 
+        <code>number</code><br>For numeric input, can be any rational integer. Additionally,
+        <a href="https://www.filamentgroup.com/lab/type-number.html">iOS requires using</a>
         <code>pattern="\d*"</code> to show the numeric keyboard.
       </td>
       <td data-th="Typical keyboard">
@@ -285,7 +285,7 @@ elements may be covered by the virtual keyboard.
 ### Use placeholders
 
 The placeholder attribute provides a hint to the user about what's expected in
-the input, typically by displaying the value as light text until the the user
+the input, typically by displaying the value as light text until the user
 starts typing in the element.
 
 <input type="text" placeholder="MM-YYYY">
@@ -306,7 +306,7 @@ small devices.
 Browsers use many heuristics to determine which fields they can
 [auto-populate](https://support.google.com/chrome/answer/142893)
 [based on previously specified data by the user](https://support.google.com/chrome/answer/142893),
-and you can give hints to the browser by providing both the `name` attribute 
+and you can give hints to the browser by providing both the `name` attribute
 and the `autocomplete` attribute on each input element.
 
 Note: Chrome requires `input` elements to be wrapped in a `<form>` tag to enable
@@ -475,35 +475,35 @@ navigation.
 
 
     <input type="text" autofocus ...>
-    
 
-## Avoid common patterns that break Chrome Autofill 
+
+## Avoid common patterns that break Chrome Autofill
 
 Chrome Autofill makes filling out forms easier by automatically entering information they've saved to their Google account,
 Chrome browser, or mobile device. As a developer, you want to ensure that Autofill works well on your website so you can
 create a better experience for your users. This is especially important for checkout forms; users who successfully use Chrome
-Autofill to enter their information go through checkout an average of 30% faster than those who don't. 
+Autofill to enter their information go through checkout an average of 30% faster than those who don't.
 
-If you haven't already, make sure you have read the previous sections on 
-[developing good forms](#design_efficient_forms) and using 
+If you haven't already, make sure you have read the previous sections on
+[developing good forms](#design_efficient_forms) and using
 [autocomplete attributes](#use_metadata_to_enable_auto-complete)
 (part of the WHATWG HTML standard) on your site. This section covers some of the common mistakes developers make when building
 forms. Avoiding these pitfalls helps ensure that your users can effectively use Autofill, and could help increase conversions.
 
-### Field validation pitfalls 
+### Field validation pitfalls
 
 Some developers use client-side validation, which triggers input change or key events. For example, a site might truncate
-fields with Javascript instead of using the fields' "maxlength" attribute. Because Autofill does not recognize client-side
+fields with JavaScript instead of using the fields' "maxlength" attribute. Because Autofill does not recognize client-side
 validation, this truncation may cause the data to become invalid.
 
 This often happens with phone fields when the maximum length is enforced using Javascript. Without the use of autocomplete
 attributes, Autofill may infer that it needs to fill a full phone number including the country code (e.g., in the US, eleven
 digits, such as "15552125555"). If the website truncates the value to ten digits using Javascript, the field value incorrectly
 becomes "1555212555". The correct way to support Autofill is to include `autocomplete="tel-national"` on the field, as pointed
-out in the 
+out in the
 [WHATWG HTML standard](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
 
-While client-side validation may provide some benefits to users typing in their data, it usually ends up removing values 
+While client-side validation may provide some benefits to users typing in their data, it usually ends up removing values
 that are pasted or autofilled.
 
 ### Use standard input fields
@@ -520,7 +520,7 @@ field gains focus. Autofill interprets such values as user-entered and doesn't r
 values, resulting in a poor Autofill experience. Instead, use floating field labels or `placeholder="First Name"` to guide
 users.
 
-### Don't copy the shipping address into the billing address section 
+### Don't copy the shipping address into the billing address section
 
 Another common pitfall is when a user wants to use a billing address that differs from the shipping address. Often, the site
 automatically copies the shipping address values into the billing address section. This potentially creates additional work
@@ -529,17 +529,17 @@ to assist in clearing the form and filling in the desired address.
 
 ### Ensure that autocomplete attributes are correct
 
-[Autocomplete attributes](#use_metadata_to_enable_auto-complete) 
+[Autocomplete attributes](#use_metadata_to_enable_auto-complete)
 as defined in the WHATWG HTML standard help your website tell Chrome Autofill explicitly what the fields are supposed to be,
 removing guesswork. However, these attributes are often misspelled or otherwise incorrect. When this happens, Autofill won't
 recognize the attribute and the unknown field type will not be autofilled.
 
 For example, the correct attribute for the Credit Card CVC is "cc-csc". Many sites mistakenly use "cc-cvc", and because
-Autofill does not recognize this attribute, this field won't get autofilled. 
+Autofill does not recognize this attribute, this field won't get autofilled.
 
 The best practice for these attributes is to use this format: `autocomplete="<section> <fieldtype>"`, for example:
-`autocomplete="shipping address-line1"`. For a complete list of all the accepted values, please see the 
-[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill). 
+`autocomplete="shipping address-line1"`. For a complete list of all the accepted values, please see the
+[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill).
 
 
 ## Provide real-time validation
@@ -564,7 +564,7 @@ set the `pattern` like this:
 
 
     <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 ##### Common regular expression patterns
 
@@ -618,7 +618,7 @@ simply add the required attribute:
 
 
     <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-    
+
 
 #### The `min`, `max` and `step` attributes
 
@@ -630,7 +630,7 @@ of 0.5
 
 
     <input type="number" min="1" max="13" step="0.5" ...>
-    
+
 
 #### The `maxlength` attribute
 
@@ -641,7 +641,7 @@ you can use the following.
 
 
     <input type="text" id="83filename" maxlength="12" ...>
-    
+
 
 #### The `minlength` attribute
 
@@ -652,7 +652,7 @@ provide. For example, if you want to specify that a file name requires at least
 
 
     <input type="text" id="83filename" minlength="8" ...>
-    
+
 
 #### The `novalidate` attribute
 
@@ -666,7 +666,7 @@ JavaScript APIs will still allow you to check if the form validates.
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-    
+
 
 
 Success: Even with client-side input validation, it is always important to validate data on the server to ensure consistency and security in your data.
@@ -674,7 +674,7 @@ Success: Even with client-side input validation, it is always important to valid
 ### Use JavaScript for more complex real-time validation
 
 When the built-in validation plus regular expressions aren't enough, you can use
-the [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation),
+the [Constraint Validation API](https://w3c.github.io/html/sec-forms.html#constraints),
 a powerful tool for handling custom validation.  The API allows you to do things
 like set a custom error, check whether an element is valid, and determine the
 reason that an element is invalid:

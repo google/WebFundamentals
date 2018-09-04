@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2018-07-22 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_blink_components: N/A #}
 
 # What Makes a Good Mobile Site? {: .page-title }
@@ -309,7 +309,7 @@ Success: Provide a seamless, frictionless conversion experience with usable form
 ### Streamline information entry
 
 Automatically advance to the next field when a user presses Return. In general,
-the less taps the user must perform, the better.
+the fewer taps the user must perform, the better.
 
 ### Choose the simplest input
 

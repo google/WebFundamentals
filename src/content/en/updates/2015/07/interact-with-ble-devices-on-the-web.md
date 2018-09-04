@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2018-08-28 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -52,6 +52,9 @@ to Bluetooth descriptors](#read_and_write_to_bluetooth_descriptors).
 On Linux, you still have to go to
 `chrome://flags/#enable-experimental-web-platform-features`, enable the
 highlighted flag, and restart Chrome for now.
+
+Dogfood: In Chrome 70 it is shipping on Windows 10. For earlier versions of
+Windows and Linux, it is still behind a flag.
 
 ### Available for Origin Trials
 

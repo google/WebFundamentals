@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution.
 
-{# wf_updated_on: 2018-03-02 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-09-19 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -755,3 +755,7 @@ worker, a cache-first strategy is appropriate.
 
 *This article contains contributions from [Monica Dinculescu](https://meowni.ca/posts/web-fonts/),
 [Rob Dodson](/web/updates/2016/02/font-display), and Jeff Posnick.*
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

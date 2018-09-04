@@ -9,10 +9,7 @@ description: Aprende a identificar y resolver cuellos de botella en el rendimien
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Para la identificación y resolución de cuellos de botella en el rendimiento de la ruta de acceso de representación crítica 
-se requiere un amplio conocimiento de los inconvenientes comunes. Realicemos un recorrido práctico 
-y extraigamos patrones comunes de rendimiento que te ayudarán a optimizar tus 
-páginas.
+Para la identificación y resolución de cuellos de botella en el rendimiento de la ruta de acceso de representación crítica se requiere un amplio conocimiento de los inconvenientes comunes. Realicemos un recorrido práctico y extraigamos patrones comunes de rendimiento que te ayudarán a optimizar tus páginas.
 
 
 Optimizar la ruta de acceso de representación crítica permite que el navegador pinte la página lo más pronto posible: las páginas más rápidas proporcionan una mayor atracción, aumentan el número de páginas vistas y [mejoran la conversión](https://www.google.com/think/multiscreen/success.html). Para minimizar la cantidad de tiempo que un visitante pierde en ver una pantalla en blanco, necesitamos optimizar qué recursos se cargan y en qué orden.
@@ -34,7 +31,7 @@ Hasta ahora, nos hemos enfocado exclusivamente en lo que sucede en el navegador 
 
 Comenzaremos con lenguaje de marcado HTML básico y una sola imagen (sin CSS ni JavaScript). Abriremos la línea de tiempo de nuestra red en Chrome DevTools e inspeccionaremos la cascada de recursos resultante:
 
-<img src="images/waterfall-dom.png" alt=""  alt="Ruta de acceso de representación crítica">
+<img src="images/waterfall-dom.png" alt="Ruta de acceso de representación crítica">
 
 Note: Aunque este documento use DevTools para ilustrar conceptos de CRP, DevTools
 actualmente no es adecuado para un análisis de CRP. Para más información, consulta [¿Qué hay de

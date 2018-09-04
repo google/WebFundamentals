@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Next to eliminating unnecessary resource downloads, the best thing we can do to improve page-load speed is to minimize the overall download size by optimizing and compressing the remaining resources.
 
-{# wf_updated_on: 2016-08-26 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # Optimizing Encoding and Transfer Size of Text-Based Assets {: .page-title }
 
@@ -282,3 +283,7 @@ Finally, while most servers automatically compress the assets for you when servi
 to the user, some CDNs require extra care and manual effort to ensure that the
 GZIP asset is served. Audit your site and ensure that your assets are, in fact,
 [being compressed](http://www.whatsmyip.org/http-compression-test/).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

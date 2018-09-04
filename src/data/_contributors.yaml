@@ -121,7 +121,7 @@ kaycebasques:
   role:
     - author
   description:
-    en: Technical Writer for Chrome DevTools
+    en: Technical Writer, Chrome DevTools & Lighthouse
 
 beaufortfrancois:
   name:
@@ -752,6 +752,19 @@ paulirish:
   twitter: paul_irish
   email: paulirish@google.com
 
+katjackson:
+  name:
+    given: Katherine
+    family: Jackson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  description:
+    en: Technical Writer Intern, Chrome DevTools
+
 captainpangyo:
   name:
     given: Josh
@@ -780,6 +793,18 @@ kazukikanamori:
   email: kazuki.kanamori@gmail.com
   description:
     en: Digital Marketing Engineer
+
+mkazi:
+  name:
+    given: Minhaz
+    family: Kazi
+  role:
+    - author
+  org:
+    name: Google
+    unit: Developer Relations
+  twitter: _mkazi_
+  github: minhaz
 
 megginkearney:
   name:
@@ -1638,7 +1663,6 @@ rviscomi:
     name: Google
     unit: Developer Relations
   country: USA
-  homepage: 'https://twitter.com/rick_viscomi'
   twitter: rick_viscomi
   github: rviscomi
   role:

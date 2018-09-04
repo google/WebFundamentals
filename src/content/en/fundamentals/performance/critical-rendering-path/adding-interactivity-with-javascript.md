@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript allows us to modify just about every aspect of the page: content, styling, and its response to user interaction. However, JavaScript can also block DOM construction and delay when the page is rendered. To deliver optimal performance, make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path.
 
-{# wf_updated_on: 2014-09-17 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2013-12-31 #}
+{# wf_blink_components: Blink>JavaScript>Runtime #}
 
 # Adding Interactivity with JavaScript {: .page-title }
 
@@ -93,3 +94,7 @@ To achieve this, we mark our script as _async_:
 [Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/split_script_async.html){: target="_blank" .external }
 
 Adding the async keyword to the script tag tells the browser not to block DOM construction while it waits for the script to become available, which can significantly improve performance.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

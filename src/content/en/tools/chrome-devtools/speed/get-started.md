@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to find ways to make your websites load faster.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-08-24 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -14,6 +14,14 @@ description: Learn how to use Chrome DevTools to find ways to make your websites
 
 This tutorial teaches you how to use Chrome DevTools to find ways to make your websites
 load faster.
+
+Read on, or watch the video version of this tutorial:
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="5fLW5Q5ODiE"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Prerequisites
 
