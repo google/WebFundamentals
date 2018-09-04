@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'How we designed Chrome'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E01-how-we-designed-chrome
       - title: 'Designing for offline'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E07-Designing-for-offline
       - title: 'Designing a VR game in a week'
