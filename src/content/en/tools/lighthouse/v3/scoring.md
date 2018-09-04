@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: How scoring works in Lighthouse v3.
 
-{# wf_updated_on: 2018-06-15 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
@@ -126,3 +126,7 @@ Lighthouse returns a Best Practices score between 0 and 100. 0 is the worst poss
 The Best Practices audits are equally weighted. To calculate how much each audit contributes
 to your overall Best Practices score, count the number of Best Practices audits, then divide
 100 by that number.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
