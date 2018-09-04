@@ -275,7 +275,8 @@ Workers?](https://nolanlawson.github.io/html5workertest/)
 
 ###Helpful resources
 
-* [Workbox](https://developers.google.com/web/tools/workbox/) (set of service worker libraries that making build progressive web apps easy)
+* [Workbox](/web/tools/workbox/) (set of service worker libraries that make building progressive
+web apps easy)
 
 * Webpack users can directly use the above or
 [offline-plugin](https://github.com/NekR/offline-plugin)
@@ -308,4 +309,3 @@ synchronization)
 [BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)
 heavily inspired this article), Jake Archibald, Dru Knox and others for their
 previous work in the web storage space.**
-
