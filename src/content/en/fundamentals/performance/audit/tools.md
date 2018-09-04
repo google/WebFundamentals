@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are several core objectives for building a performant, resilient site with low data cost. For each objective, you need an audit.
 
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2018-09-02 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -293,7 +293,7 @@ compared to 'did entry via the home page result in a sale?'
 <br><br>
 <figure>
   <img src="images/site-speed.png" srcset="images/site-speed-500.png 500w,
-  images/site-speed-1000.png 1000w" alt="Screenshot showing Google Analytics Site Spped">
+  images/site-speed-1000.png 1000w" alt="Screenshot showing Google Analytics Site Speed">
 </figure>
 <br>
 Google Analytics uses data from the
