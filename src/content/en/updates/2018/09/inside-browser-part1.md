@@ -5,7 +5,6 @@ description: Learn how browser turn your code into functional website from high-
 {# wf_published_on: 2018-09-05 #}
 {# wf_updated_on: 2018-09-05 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
-{# wf_tags: inside-browser #}
 {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
 {# wf_blink_components: N/A #}
 
@@ -76,7 +75,8 @@ GPU alone.
 <div class="clearfix"></div>
 
 When you start an application on your computer or phone, the CPU and GPU are the ones powering 
-the application. Usually, applications run on the CPU and GPU using mechanisms provided by the Operating System.
+the application. Usually, applications run on the CPU and GPU using mechanisms provided by the 
+Operating System.
 
 <figure>
   <img src="../../images/inside-browser/hw-os-app.png" alt="Hadware, OS, Application">
@@ -170,7 +170,7 @@ The following table describes each Chrome process and what it controls:
   <tr>
     <td>Browser</td>
     <td>
-      Controls "chrome" part of the application including omnibox (URL bar), bookmarks, back and 
+      Controls "chrome" part of the application including address bar, bookmarks, back and 
       forward buttons. <br>Also handles the invisible, privileged parts of a web browser such as 
       network requests and file access.
     </td>
