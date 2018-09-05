@@ -128,7 +128,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
  *
  */
   var initData = function(response) {
-    cardsData = response.entries;
+    cardsData = response.data;
     filtersData = response.filters_;
 
     // Sort cards alphabetically on load
@@ -204,8 +204,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
          cardEl.classList.add(CLASS_AGENCY_CARD);
 
          var logoDiv = div.cloneNode(false);
-         logoDiv.classList.add(CLASS_AGENCY_LOGO);
-         logoDiv.classList.add(CLASS_MOBILE_HIDDEN);
+         logoDiv.classList.add(CLASS_AGENCY_LOGO, CLASS_MOBILE_HIDDEN);
 
          var logoImg = img.cloneNode(false);
          var logoImgAttrs = {
@@ -248,8 +247,9 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
 
          var verticalDiv = div.cloneNode(false);
          if (company.vertical.length) {
-           verticalDiv.classList.add(CLASS_AGENCY_VERTICAL);
-           verticalDiv.classList.add(CLASS_AGENCY_SMALL_TEXT);
+           verticalDiv.classList.add(
+               CLASS_AGENCY_VERTICAL,
+               CLASS_AGENCY_SMALL_TEXT);
            var verticalLabel =
                company.vertical.length == 1 ? 'Vertical: ' : 'Verticals: ';
            var verticalString = verticalLabel + company.vertical.join(', ');
@@ -259,8 +259,9 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
          }
 
          var lighthouseDivMobile = div.cloneNode(false);
-         lighthouseDivMobile.classList.add(CLASS_AGENCY_LIGHTHOUSE_SCORE);
-         lighthouseDivMobile.classList.add(CLASS_DESKTOP_HIDDEN);
+         lighthouseDivMobile.classList.add(
+           CLASS_AGENCY_LIGHTHOUSE_SCORE,
+           CLASS_DESKTOP_HIDDEN);
          var dataPercent = company.max_lighthouse_score;
          if (dataPercent == null) {
            dataPercent = 'N/A';
@@ -304,7 +305,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
          var locationsDiv = div.cloneNode(false);
          locationsDiv.classList.add(CLASS_AGENCY_LOCATIONS);
 
-         for (var i=0; i<company.locations_view; i++) {
+         for (var i=0; i < company.locations_view.length; i++) {
            var location = company.locations_view[i];
            var countryDiv = div.cloneNode(false);
            countryDiv.classList.add(CLASS_AGENCY_LOCATION);
@@ -314,6 +315,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
            var citiesSpan = span.cloneNode(false);
            citiesSpan.innerText = location.cities.join(', ');
            appendChildren(countryDiv, [countryTitle, citiesSpan]);
+           locationsDiv.appendChild(countryDiv);
          }
 
          var projectsTitle = text.cloneNode(false);
@@ -540,12 +542,13 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
     var filterDropdownsEl
       = document.querySelector('.' + CLASS_FILTERS_DROPDOWNS);
     var filterEl = div.cloneNode(false);
-    filterEl.classList.add(CLASS_FILTERS + '__' + filterKey);
-    filterEl.classList.add(CLASS_FILTERS_FILTER);
+    filterEl.classList.add(
+      CLASS_FILTERS + '__' + filterKey,
+      CLASS_FILTERS_FILTER);
 
     var filterLabelEl = span.cloneNode(false);
-    filterLabelEl.classList.add(CLASS_FILTERS_LABEL);
-    filterLabelEl.classList.add(CLASS_FILTERS_LABEL + '--' + filterKey);
+    filterLabelEl.classList.add(CLASS_FILTERS_LABEL,
+      CLASS_FILTERS_LABEL + '--' + filterKey);
     filterLabelEl.innerHTML = filterKey.replace('_', ' ') + ':';
     filterEl.appendChild(filterLabelEl);
 
@@ -800,8 +803,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
 
       cta_ = document.createElement('a');
       cta_.appendChild(document.createTextNode('Website'));
-      cta_.classList.add('button');
-      cta_.classList.add('button-flat');
+      cta_.classList.add('button', 'button-flat');
     })();
 
     /**
@@ -827,13 +829,8 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
       if (company.image_url) {
         var imageCtn = div.cloneNode(false);
         imageCtn.classList.add('devsite-info-window-logo');
-        var logoImg = img.cloneNode(false);
-        var logoImgAttrs = {
-         'alt': company.agency_name + ' logo',
-         'src': company.image_url,
-        };
-        setAttributes(logoImg, logoImgAttrs);
-        imageCtn.appendChild(logoImg);
+        img.src = company.image_url;
+        imageCtn.appendChild(img);
         ctn.appendChild(imageCtn);
       }
 
@@ -864,8 +861,8 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
       // For projects with lighthouse scores
       if (company.projects) {
         var projects = projects_.cloneNode(false);
-        projects.classList.add('gc-analytics-event');
-        projects.classList.add('devsite-info-window-projects');
+        projects.classList.add('gc-analytics-event',
+        'devsite-info-window-projects');
 
         var projectsHeading = document.createElement('h6');
         var projectsHeadingText = document.createTextNode('Work examples');

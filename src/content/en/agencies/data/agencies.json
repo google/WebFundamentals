@@ -29,7 +29,9 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": "Chelmsford"
+          "cities": [
+            "Chelmsford"
+          ]
         }
       ],
       "locations_map": [
@@ -71,7 +73,9 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": "London"
+          "cities": [
+            "London"
+          ]
         }
       ],
       "locations_map": [
@@ -114,19 +118,12 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": "Bangalore"
+          "cities": [
+            "Bangalore"
+          ]
         }
       ],
-      "locations_map": [
-        {
-          "country_name": "India",
-          "city_name": "Bangalore",
-          "geo": {
-            "lat": 12.9715987,
-            "lng": 77.5945627
-          }
-        }
-      ]
+      "locations_map": []
     },
     {
       "countries_": [
@@ -166,7 +163,9 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": "London"
+          "cities": [
+            "London"
+          ]
         }
       ],
       "locations_map": [
@@ -209,7 +208,9 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": "London"
+          "cities": [
+            "London"
+          ]
         }
       ],
       "locations_map": [
@@ -252,7 +253,9 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": "London"
+          "cities": [
+            "London"
+          ]
         }
       ],
       "locations_map": [
@@ -295,7 +298,9 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": "Ahmedabad"
+          "cities": [
+            "Ahmedabad"
+          ]
         }
       ],
       "locations_map": [
@@ -338,7 +343,9 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": "Mumbai"
+          "cities": [
+            "Mumbai"
+          ]
         }
       ],
       "locations_map": [
@@ -381,7 +388,11 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": "Delhi, Hyderabad, Chennai"
+          "cities": [
+            "Delhi",
+            "Hyderabad",
+            "Chennai"
+          ]
         }
       ],
       "locations_map": [
@@ -440,7 +451,9 @@
       "locations_view": [
         {
           "country_name": "China",
-          "cities": "Shanghai"
+          "cities": [
+            "Shanghai"
+          ]
         }
       ],
       "locations_map": [
@@ -483,7 +496,9 @@
       "locations_view": [
         {
           "country_name": "Indonesia",
-          "cities": "Jakarta"
+          "cities": [
+            "Jakarta"
+          ]
         }
       ],
       "locations_map": [
@@ -527,28 +542,32 @@
       "locations_view": [
         {
           "country_name": "Vietnam",
-          "cities": "Ho Chi Minh City"
+          "cities": [
+            "Ho Chi Minh City"
+          ]
         },
         {
           "country_name": "India",
-          "cities": "Bangalore"
+          "cities": [
+            "Bangalore"
+          ]
         }
       ],
       "locations_map": [
-        {
-          "country_name": "Vietnam",
-          "city_name": "Ho Chi Minh City",
-          "geo": {
-            "lat": 10.8230989,
-            "lng": 106.6296638
-          }
-        },
         {
           "country_name": "India",
           "city_name": "Bangalore",
           "geo": {
             "lat": 12.9699573,
             "lng": 77.6394906
+          }
+        },
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
           }
         }
       ]
