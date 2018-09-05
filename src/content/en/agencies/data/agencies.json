@@ -1,20 +1,10 @@
 {
   "initMap": true,
-  "filters_": {
-    "vertical": [
-      "Agency",
-      "Education",
-      "News",
-      "Other",
-      "Social"
-    ],
-    "region": [
-      "Asia",
-      "Europe"
-    ]
-  },
   "data": [
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Enovate",
       "region": [
         "Europe"
@@ -39,9 +29,7 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": [
-            "Chelmsford"
-          ]
+          "cities": "Chelmsford"
         }
       ],
       "locations_map": [
@@ -56,6 +44,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Selesti Ltd",
       "region": [
         "Europe"
@@ -80,9 +71,7 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": [
-            "London"
-          ]
+          "cities": "London"
         }
       ],
       "locations_map": [
@@ -97,6 +86,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "22feet Tribal Worldwide Pvt Ltd",
       "region": [
         "Asia"
@@ -122,9 +114,7 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": [
-            "Bangalore"
-          ]
+          "cities": "Bangalore"
         }
       ],
       "locations_map": [
@@ -139,6 +129,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Featurist Ltd",
       "region": [
         "Europe"
@@ -173,9 +166,7 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": [
-            "London"
-          ]
+          "cities": "London"
         }
       ],
       "locations_map": [
@@ -190,6 +181,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Your Favourite Story",
       "region": [
         "Europe"
@@ -215,9 +209,7 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": [
-            "London"
-          ]
+          "cities": "London"
         }
       ],
       "locations_map": [
@@ -232,6 +224,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Hex Digital Ltd",
       "region": [
         "Europe"
@@ -257,9 +252,7 @@
       "locations_view": [
         {
           "country_name": "United Kingdom",
-          "cities": [
-            "London"
-          ]
+          "cities": "London"
         }
       ],
       "locations_map": [
@@ -274,6 +267,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "Enforce",
       "region": [
         "Asia"
@@ -299,9 +295,7 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": [
-            "Ahmedabad"
-          ]
+          "cities": "Ahmedabad"
         }
       ],
       "locations_map": [
@@ -316,6 +310,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "PRODITECH Solutions",
       "region": [
         "Asia"
@@ -341,9 +338,7 @@
       "locations_view": [
         {
           "country_name": "India",
-          "cities": [
-            "Mumbai"
-          ]
+          "cities": "Mumbai"
         }
       ],
       "locations_map": [
@@ -358,6 +353,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "Mediology Software (Readwhere CMS)",
       "region": [
         "Asia"
@@ -369,7 +367,7 @@
           "url": "https://mobi.uttamhindu.com/",
           "client_name": "",
           "vertical": [
-            "News"
+            "Media"
           ],
           "lighthouse_score": 100
         }
@@ -378,16 +376,12 @@
       "contact": "mobile@readwhere.com",
       "image_url": "/web/agencies/images/mediology_software_readwhere_cms.png",
       "vertical": [
-        "News"
+        "Media"
       ],
       "locations_view": [
         {
           "country_name": "India",
-          "cities": [
-            "Delhi",
-            "Hyderabad",
-            "Chennai"
-          ]
+          "cities": "Delhi, Hyderabad, Chennai"
         }
       ],
       "locations_map": [
@@ -416,6 +410,162 @@
           }
         }
       ]
+    },
+    {
+      "countries_": [
+        "China"
+      ],
+      "agency_name": "Wunderman",
+      "region": [
+        "Asia"
+      ],
+      "description": "The Wunderman network in Greater China includes Wunderman, AGENDA and Blast Radius, with 9 offices in Beijing, Shanghai, Guangzhou, Hong Kong and Taipei.",
+      "website": "http://wunderman.com.cn",
+      "projects": [
+        {
+          "url": "https://www.victoriassecretcn.com/html/index.html",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 88
+        }
+      ],
+      "max_lighthouse_score": 88,
+      "contact": "guoliang.liu@wunderman.com",
+      "image_url": "/web/agencies/images/wunderman.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": "Shanghai"
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Indonesia"
+      ],
+      "agency_name": "uatech",
+      "region": [
+        "Asia"
+      ],
+      "description": "Build great web and mobile apps with love.",
+      "website": "https://uatech.co.id/",
+      "projects": [
+        {
+          "url": "https://cariharga.co.id",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "rizkiheryandi@uatech.co.id",
+      "image_url": "/web/agencies/images/uatech.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": "Jakarta"
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Jakarta",
+          "geo": {
+            "lat": -6.17511,
+            "lng": 106.8650395
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Vietnam",
+        "India"
+      ],
+      "agency_name": "DigiFutura",
+      "region": [
+        "Asia"
+      ],
+      "description": "Award Winning Web & Mobile App Development Company. Think With Google case Study: https://developers.google.com/web/showcase/2016/housing",
+      "website": "https://www.digifutura.com/",
+      "projects": [
+        {
+          "url": "https://housing.com/in/",
+          "client_name": "",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 92
+        }
+      ],
+      "max_lighthouse_score": 92,
+      "contact": "raghav@digifutura.com",
+      "image_url": "/web/agencies/images/digifutura.png",
+      "vertical": [
+        "Other"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Vietnam",
+          "cities": "Ho Chi Minh City"
+        },
+        {
+          "country_name": "India",
+          "cities": "Bangalore"
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Bangalore",
+          "geo": {
+            "lat": 12.9699573,
+            "lng": 77.6394906
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "filters_": {
+    "vertical": [
+      "Agency",
+      "Education",
+      "Media",
+      "Other",
+      "Retail",
+      "Social"
+    ],
+    "region": [
+      "Asia",
+      "Europe"
+    ]
+  }
 }
