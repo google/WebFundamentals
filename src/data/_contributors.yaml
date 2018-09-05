@@ -916,6 +916,21 @@ zkoch:
   description:
     en: Google Chrome Product Manager
 
+kosamari:
+  name:
+    given: Mariko
+    family: Kosaka
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  twitter: kosamari
+  email: kosamari@google.com
+  description:
+    en: Mariko is a drawsplainer
+
 mustafa:
   name:
     given: Mustafa
