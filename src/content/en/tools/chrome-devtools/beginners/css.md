@@ -1,13 +1,15 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-30 #}
-{# wf_published_on: 2018-08-28 #}
+{# wf_updated_on: 2018-09-05 #}
+{# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
 [HTML]: /web/tools/chrome-devtools/beginners/html
 
-# DevTools For Beginners: Getting Started with CSS {: .page-title }
+# DevTools For Beginners: Get Started with CSS {: .page-title }
+
+{% include "web/_shared/contributors/katjackson.html" %}
 
 In this tutorial, you learn how to use CSS to style a web page. You also learn how to
 use Chrome DevTools to experiment with CSS changes.
@@ -17,8 +19,7 @@ development and Chrome DevTools. You gain hands-on experience by actually buildi
 website. 
 
 Note: You don't have to complete the first tutorial before doing this one. 
-You can start with this tutorial. 
-[Set up your code](#setup) will show you how to get set up.
+You can start here. [Set up your code](#setup) shows you how to get set up.
 
 Currently your site looks like this: 
 
@@ -68,16 +69,17 @@ In order to start creating your site, you need to set up your code:
 
 1. **If you have already completed the first tutorial in this series, skip this section! 
    Continue using your code from the last tutorial, 
-   [Getting Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html).**
-2. Open the [source code](https://glitch.com/edit/#!/dfb2). A code editor called 
-   Glitch shows a page called `index.html`. This tab of your browser will be called the
-   **editing tab**.
+   [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html).**
+2. Open the <a class="external gc-analytics-event" target="_blank" rel="noopener"
+   data-category="CTA" data-label="/web/tools/chrome-devtools/beginners/css"
+   href="https://glitch.com/edit/#!/dfb2?path=index.html">source code</a>. This tab of your
+   browser will be called the **editing tab**.
 
      <figure>
        <img src="imgs/css/setup1.png"
-            alt="The source code."/>
+            alt="The editing tab."/>
        <figcaption>
-         <b>Figure X</b>. The source code
+         <b>Figure X</b>. The editing tab
        </figcaption>
      </figure>
 
@@ -85,14 +87,14 @@ In order to start creating your site, you need to set up your code:
 
      <figure>
        <img src="imgs/css/setup2.png"
-            alt="The editor tab."/>
+            alt="The Project Options menu."/>
        <figcaption>
-         <b>Figure X</b>. The editor tab
+         <b>Figure X</b>. The Project Options menu
        </figcaption>
      </figure>
 
 3. Click **Remix This**. Glitch creates a copy of the project that you can 
-   edit. Note that the name of the new project will be randomly generated.
+   edit. Note that Glitch generates a random name for the new project.
 4. Click **Show Live**. Another tab opens with a live view of your site.
    This tab of your browser will be called the **live tab**.
 
@@ -114,12 +116,12 @@ example, here is a paragraph with a border:
 Here is the HTML and CSS code used to create that paragraph:
 
 ```
-<p style="border:1px dashed red; padding:5px">
+<p style="border: 1px dashed red; padding: 5px;">
   This has been styled with CSS.
 </p> 
 ```
 
-The code that you haven't seen before is `style="border:1px dashed red; padding:5px"`. 
+The code that you haven't seen before is `style="border: 1px dashed red; padding: 5px;"`. 
 The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
 before attempting this tutorial.
 
@@ -128,13 +130,20 @@ before attempting this tutorial.
 Use **inline styles** when you want to apply styles to a single element. 
 Try it now by adding a background color to your page's navigation menu:
 
-1. Copy the following code: 
-
-     `style="background-color: aliceblue"`
+1. Copy the following code: `style="background-color: aliceblue;"`
 
 1. In `index.html`, add the code that you just copied to your `<nav>`.
 
-       `<nav style="background-color: aliceblue">`
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <header>
+      <p>Welcome to my site!</p>
+    </header>{% endhtmlescape %}<strong>
+    {% htmlescape %}<nav style="background-color: aliceblue;">{% endhtmlescape %}</strong>{% htmlescape %}
+    <ul>
+      <li><a href="/">Home</a></li>
+      ...
+    {% endhtmlescape %}</pre>
 
 1. Go to the **live tab** to see the changes! 
    The background of the `<nav>` section is now blue.
@@ -146,17 +155,12 @@ Try it now by adding a background color to your page's navigation menu:
        </figcaption>
      </figure>
 
-As mentioned above, inline styles only apply to a single element,
-so only the `<nav>` section of `index.html` changes. 
-In the next section, you learn about how to add styling to multiple elements.
-
-
 ### Re-use styles with internal stylesheets {: #internal }
 
 [Earlier](#add), you saw an inline style that applied a style to a `<p>` tag like this:
 
 ```
-<p style="border:1px dashed red; padding:5px">
+<p style="border: 1px dashed red; padding: 5px;">
   This has been styled with CSS.
 </p>
 ```
@@ -166,7 +170,7 @@ You'd have to copy and paste the code into every single `<p>` tag on your site.
 That's a lot of time and effort, and if you need to make an edit, 
 you'll have to change every tag again. 
 **Internal stylesheets** allow you to write your CSS once 
-so that applies to multiple elements. Try it now:
+so that it applies to multiple elements. Try it now:
 
 1. Go to the **live tab**. 
 1. Click **Contact** to go to the contact page. Notice the font of **Home** and **Contact**.
