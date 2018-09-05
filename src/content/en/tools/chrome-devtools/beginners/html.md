@@ -384,30 +384,7 @@ source code.
 
 1. Copy the code below.
 
-<pre>
-<body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
-  <header>
-    <p><b>Welcome to my site!</b></p>
-    <button>Download my resume</button>
-  </header>
-  <main>
-    <h1>About Me</h1>
-    <p>I am learning web development. Recent accomplishments:</p>
-    <ul>
-      <li>Learned how to set up my code in Glitch.</li>
-      <li>Added content to my HTML.</li>
-      <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
-      <li>Learned the difference between HTML and the DOM.</li>
-    </ul>
-  </main>
-</body>
-</pre>
+<pre class="prettyprint notranslate lang-html">{% includecode content_path="web/tools/chrome-devtools/beginners/_code/final.html" html_escape="false" %}</pre>
 
 1. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
    you just copied.
@@ -422,11 +399,11 @@ source code.
 
 ## Next steps {: #next-steps}
 
+* Complete the next tutorial in this series, [Get Started with CSS](css), to learn how to style your page
+  and experiment with style changes in Chrome DevTools.
 * Read [Introduction to the DOM][DOM]{: .external } to learn more about the DOM.
 * Check out a course like [Introduction to Web Development][Intro]{: .external } to get
   more hands-on web development experience.
-* Stay tuned for the next tutorial in this series, in which you'll learn how to style
-  your page using CSS, and experiment with CSS changes in DevTools.
 
 [DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 [Intro]: https://www.coursera.org/learn/web-development
