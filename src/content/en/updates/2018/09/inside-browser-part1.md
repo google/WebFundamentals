@@ -201,9 +201,9 @@ The following table describes each Chrome process and what it controls:
 
 There are even more processes like the Extension process and utility processes. If you want to see 
 how many processes are running in your Chrome, click the options menu icon 
-<span class="material-icons">more_vert</span> at the top right corner, select More Tools, then select 
-Task Manager. This opens up a window with a list of processes that are currently running and how 
-much CPU/Memory they are using.
+<span class="material-icons">more_vert</span> at the top right corner, select More Tools, then 
+select Task Manager. This opens up a window with a list of processes that are currently running 
+and how much CPU/Memory they are using.
 
 ## The benefit of multi-process architecture in Chrome
 
