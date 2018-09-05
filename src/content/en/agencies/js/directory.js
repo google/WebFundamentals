@@ -104,7 +104,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
   * @return {string}
   */
   var formatUrl = function(url) {
-    return url.split('//')[1].replace('www.', '');
+    return url.split('//')[1].replace('www.', '').replace(/\/+$/, '');
   };
 
   /**
@@ -128,7 +128,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
  *
  */
   var initData = function(response) {
-    cardsData = response.data;
+    cardsData = response.entries;
     filtersData = response.filters_;
 
     // Sort cards alphabetically on load
