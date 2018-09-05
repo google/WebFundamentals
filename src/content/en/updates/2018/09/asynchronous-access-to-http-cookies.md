@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous acesss to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-09-01 #}
+{# wf_updated_on: 2018-09-05 #}
 {# wf_published_on: 2018-07-23 #}
 {# wf_tags: cookie,chrome69 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
-{# wf_featured_snippet: The Cookie Store API offers asynchronous acesss to HTTP cookies, and opens up the cookie jar to service workers. #}
+{# wf_featured_snippet: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers. #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Asynchronous Access to HTTP Cookies {: .page-title }
@@ -15,7 +15,7 @@ description: The Cookie Store API offers asynchronous acesss to HTTP cookies, an
 
 The [Cookie Store API](https://www.chromestatus.com/feature/5658847691669504) is
 available for Origin Trials starting in Chrome 69. The API introduces the
-following exciting possibilities.
+following exciting possibilities:
 
 * Cookies can be accessed asynchronously, avoiding jank on the main thread.
 * Changes to cookies can be observed, avoiding polling.
@@ -25,7 +25,7 @@ following exciting possibilities.
 
 Before diving into the new API, I'd like to state that cookies are still the Web
 platform's worst client-side storage primitive, and should still be used as a
-last resort. This isn't an accident - cookies are the Web's first client-side
+last resort. This isn't an accident - cookies were the Web's first client-side
 storage mechanism, and we've learned a lot since then.
 
 The main reasons for avoiding cookies are:
@@ -105,11 +105,11 @@ changes, which does not require polling.
     cookieStore.addEventListener('change', (event) => {
       for (const cookie in event.changed) {
         if (cookie.name === 'session_id')
-          SessionCookieChanged(cookie.value);
+          sessionCookieChanged(cookie.value);
       }
       for (const cookie in event.deleted) {
         if (cookie.name === 'session_id')
-          SessionCookieChanged(null);
+          sessionCookieChanged(null);
       }
     });
 
@@ -125,7 +125,7 @@ Interacting with the cookies works the same way in document contexts and in
 service workers.
 
     // Works in documents and service workers.
-    async function LogOut() {
+    async function logOut() {
       await cookieStore.delete('session_id');
     }
 
