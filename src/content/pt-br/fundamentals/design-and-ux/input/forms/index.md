@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas.
 
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Crie formulários incríveis {: .page-title }
@@ -134,9 +134,9 @@ entrada.
     </tr>
     <tr>
       <td data-th="Input type">
-        <code>email</code><br>Para inserir endereços de e-mail e dicas de que
+        <code>email</code><br>Para inserir endereços de email e dicas de que
         a @ deve ser mostrada no teclado por padrão. Você pode adicionar o
-        atributo multiple se mais de um endereço de e-mail será fornecido.
+        atributo multiple se mais de um endereço de email será fornecido.
       </td>
       <td data-th="Typical keyboard">
         <img src="imgs/email-android.png" srcset="imgs/email-android.png 1x, imgs/email-android-2x.png 2x">
@@ -297,7 +297,7 @@ Warning: Os marcadores desaparecem assim que o usuário começa a digitar em um 
 ### Use metadados para ativar o preenchimento automático
 
 O usuário gosta quando os sites economizam tempo preenchendo automaticamente campos
-comuns como nomes, endereços de e-mail e outros campos usados com frequência. Além disso, isso ajuda
+comuns como nomes, endereços de email e outros campos usados com frequência. Além disso, isso ajuda
 a reduzir possíveis erros de entrada, especialmente em teclados virtuais e
 pequenos dispositivos.
 
@@ -312,7 +312,7 @@ preenchimento automático. Se eles não estiverem inseridos em uma tag `form`, o
 sugestões, mas **não** preencherá o formulário.
 
 Por exemplo, para avisar o navegador que ele deve preencher automaticamente o formulário com
-o nome do usuário, endereço de e-mail e telefone, você deve usar:
+o nome do usuário, endereço de email e telefone, você deve usar:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}

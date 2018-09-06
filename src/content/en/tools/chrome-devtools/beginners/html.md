@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-20 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -77,7 +77,7 @@ You're going to build your site in an online code editor called Glitch.
        </figcaption>
      </figure>
 
-3. Click **Remix This**. Glitch creates a copy of the project that you can 
+3. Click **Remix This**. Glitch creates a copy of the project that you can
    edit and randomly generates a new name for the project. The content is
    the same as before.
 
@@ -303,7 +303,7 @@ The next couple of sections show you some more ways that you can change content 
 
 ## Reorder nodes {: #reorder }
 
-You can also change the order of DOM nodes. For example, on your webpage the navigation menu is near the
+You can also change the order of DOM nodes. For example, on your web page the navigation menu is near the
 bottom. To move it to the top:
 
 1. Find the `<nav>` node in the **DOM Tree** of DevTools.

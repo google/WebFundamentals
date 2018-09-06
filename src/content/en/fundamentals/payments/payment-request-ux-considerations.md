@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -116,8 +116,8 @@ by using steppers.
 <div class="clearfix"></div>
 
 
-## What is customisable
-Some of the UI is customisable with some exceptions such as the
+## What is customizable
+Some of the UI is customizable with some exceptions such as the
 colour of button and their respective text labels.
 
 Note: This example is for the Chrome browser. Other browsers
@@ -136,12 +136,12 @@ on brand recognition.
   </figure>
 </div>
 
-1. The icon is taken from the favicon. Favicon is hi-res and recognizable for 
-   the store. For best practice, provide multiple icons at different sizes to 
-   allow the browser to pick the most appropriate size. You can 
+1. The icon is taken from the favicon. Favicon is hi-res and recognizable for
+   the store. For best practice, provide multiple icons at different sizes to
+   allow the browser to pick the most appropriate size. You can
    [learn more here](/web/fundamentals/payments/deep-dive-into-payment-request).
 2. This is taken from the <code>&#60;title&#62;</code> tag. This is your
-   strongest chance to provide a human-readable indication of what the user 
+   strongest chance to provide a human-readable indication of what the user
    is buying and who they're buying from.
 3. This is the domain/URL.
 4. This text label can be modified via the Payments Request API.
