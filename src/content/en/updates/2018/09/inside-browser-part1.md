@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline.
 
 {# wf_published_on: 2018-09-05 #}
-{# wf_updated_on: 2018-09-05 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
 {# wf_blink_components: N/A #}
@@ -221,6 +221,11 @@ the tabs are unresponsive. That’s sad.
   </figcaption>
 </figure>
 
+Another benefit of separating the browser's work into multiple processes is security and 
+sandboxing. Since operating systems provide a way to restrict processes’ privileges, the browser 
+can sandbox certain processes from certain features. For example, the Chrome browser restricts 
+arbitrary file access for processes that handle arbitrary user input like the renderer process.
+
 Because processes have their own private memory space, they often contain copies of common 
 infrastructure (like V8 which is a Chrome's JavaScript engine). This means more memory usage as 
 they can't be shared the way they would be if they were threads inside the same process. 
@@ -254,7 +259,6 @@ introduced feature in Chrome that runs a separate renderer process for each ifra
 We’ve been talking about one renderer process per tab model which allowed cross-site 
 iframes to run in a single renderer process with sharing memory space between different sites. 
 Running a.com and b.com in the same renderer process might seem okay. 
-
 The [Same Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) 
 is the core security model of the web; it makes sure one site cannot access data from other sites 
 without consent. Bypassing this policy is a primary goal of security attacks. 
