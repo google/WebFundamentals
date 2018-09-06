@@ -356,6 +356,23 @@ flaviocopes:
   description:
     en: Flavio is a Full Stack Developer
 
+victorcostan:
+  name:
+    given: Victor
+    family: Costan
+  google: "102128305988485092292"
+  twitter: pwnall
+  github: pwnall
+  role:
+    - author
+  description:
+    en: "Tech Lead, Chrome Storage"
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  email: costan@google.com
+
 dalecurtis:
   name:
     given: Dale
