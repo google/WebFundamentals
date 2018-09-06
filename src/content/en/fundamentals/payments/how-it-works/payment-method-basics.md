@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Methods page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-21 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -29,13 +29,18 @@ built to integrate with the Payment Request API via the URL
 https://bobpay.xyz/pay.
 
 ```javascript
-const methodData = [{ 
- supportedMethods: 'basic-card', 
- data: { 
-   supportedNetworks: ['visa', 'master', 'jcb'] 
- } 
-}, { 
- supportedMethods: 'https://bobpay.xyz/pay' 
+const methodData = [{
+ supportedMethods: 'basic-card',
+ data: {
+   supportedNetworks: ['visa', 'master', 'jcb']
+ }
+}, {
+ supportedMethods: 'https://google.com/pay',
+ data: {
+   ...
+ }
+}, {
+ supportedMethods: 'https://bobpay.xyz/pay'
 }];
 ```
 
@@ -45,7 +50,7 @@ to the user consists of all the payment methods available to the user on this
 device. The customer can select one of the methods to use for payment, as shown
 here. 
 
-<img src="../images/4-image1.png" />
+<img src="../images/payment-method-basics/payment-methods.png" />
 
 ## Standardized vs. URL-based Payment Methods
 
@@ -102,22 +107,22 @@ data: {
 
 URL-based payment methods are those that anyone can define independently,
 without reliance on W3C standardization. Proprietary payment methods such as
-Google Pay, Apple Pay, Samsung Pay are good examples. These payment methods 
-are specified using a unique URL identifier such as https://google.com/pay or
-https://www.alipay.com/webpay. 
+Google Pay, Apple Pay, Samsung Pay are good examples. These payment methods are
+specified using a unique URL identifier such as `https://google.com/pay` or
+`https://www.alipay.com/webpay`.
 
 The URLs represent a payment method and are usually associated with a particular
 payment app, but it is not necessarily a one-to-one relationship. It's possible
 for one payment method to be supported by multiple payment apps, or for one
-payment app to support multiple payment methods. 
+payment app to support multiple payment methods.
 
 For example, a third-party payment app might support both the basic-card method
-as well as a specific https://bobpay.xyz method. 
+as well as a specific `https://bobpay.xyz` method.
 
 Unlike standardized payment methods, URL-based payment methods have no registry.
 Anyone can develop and provide their own payment apps that support a payment
 method. This allows the W3C Payment APIs concept to inherently scale into quite 
-a large payment ecosystem. 
+a large payment ecosystem.
 
 In the example below, Google Pay is invoked via its URL; any information to be
 passed to the payment method can be supplied in the optional `data` value.
@@ -136,8 +141,3 @@ details, check out the links below.
 *   [Google Pay](/pay/api/web/)
 *   [Apple Pay](https://developer.apple.com/documentation/apple_pay_on_the_web)
 *   [Samsung Pay](https://developer.samsung.com/internet/android/web-payments-guide)
-
-## Next Up
-
-Learn how to integrate with PSPs, see best practices, and more in the [Merchant
-Guide](https://docs.google.com/document/d/17s-faFdkDc7DgviDigQR07jI0rh05HV3E2krNrs136Q/edit).

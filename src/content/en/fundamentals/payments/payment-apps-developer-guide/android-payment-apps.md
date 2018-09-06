@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-06-27 #}
-{# wf_updated_on: 2018-08-24 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Android Payment App integration guide {: .page-title }
@@ -13,16 +13,38 @@ description: About the Ecosystem page for the Web Payments doc set.
 
 ## Background
 
-Web payments is a [W3C standard API](https://w3c.github.io/browser-payment-api/) for e-commerce websites to collect payment information from users with user consent. Native Android payment app support should be added to Android web browsers to let users pay in their preferred way. Web browsers cannot link in every payment app SDK in the world. This document describes a generic method for any payment app to work with any web browser through Android intents.
+Web payments is a [W3C standard API](https://w3c.github.io/browser-payment-api/)
+for e-commerce websites to collect payment information from users with user
+consent. Native Android payment app support should be added to Android web
+browsers to let users pay in their preferred way. Web browsers cannot link in
+every payment app SDK in the world. This document describes a generic method for
+any payment app to work with any web browser through Android intents.
 
 ## Requirements
 
--   Browser permissions: A payment app needs to know where the money is going. Therefore, a payment app should be able to control which browser is allowed to call it.      
--   Website permissions: A payment app should be able to control which website is allowed to invoke it. Therefore, a browser should pass the origin and certificate of the calling website to the payment app.  
--   Payment app permissions: If a merchant specifies that they accept a certain payment app, then the merchant needs to know that an impersonator app will not be stealing user’s credentials. Therefore, a payment app should be able to control which apps can respond to its payment method identifier. For example, “[https://bobpay.com](https://bobpay.com)” may be locked down to only Bob Pay native Android app. On the other hand, “[http://www.alice.com/web-pay](http://www.alice.com/web-pay)” may allow any payment app to provide payments.  
--   Loose integration: Web browsers should not be compiling against payment app SDKs. Payment apps should not be compiling against web browser SDKs.  
--   Performance: The integration should be fast. The worst case scenario would be a device with 512MB of RAM, cold start for both the browser and the payment app.  
--   Install awareness: If a user installs or uninstalls a payment app, a web browser should be aware of this change. Even if a web browser is installed after a payment app, the browser should be able to use the pre-installed payment app for web payments.
+-   Browser permissions: A payment app needs to know where the money is going.
+    Therefore, a payment app should be able to control which browser is allowed
+    to call it.
+-   Website permissions: A payment app should be able to control which website
+    is allowed to invoke it. Therefore, a browser should pass the origin and
+    certificate of the calling website to the payment app.
+-   Payment app permissions: If a merchant specifies that they accept a certain
+    payment app, then the merchant needs to know that an impersonator app will
+    not be stealing user’s credentials. Therefore, a payment app should be able
+    to control which apps can respond to its payment method identifier. For
+    example, `https://bobpay.com` may be locked down to
+    only Bob Pay native Android app. On the other hand,
+    `http://www.alice.com/web-pay` may allow any
+    payment app to provide payments.
+-   Loose integration: Web browsers should not be compiling against payment app
+    SDKs. Payment apps should not be compiling against web browser SDKs.  
+-   Performance: The integration should be fast. The worst case scenario would
+    be a device with 512MB of RAM, cold start for both the browser and the
+    payment app.
+-   Install awareness: If a user installs or uninstalls a payment app, a web
+    browser should be aware of this change. Even if a web browser is installed
+    after a payment app, the browser should be able to use the pre-installed
+    payment app for web payments.
 
 ## Design
 
@@ -30,51 +52,99 @@ Web payments is a [W3C standard API](https://w3c.github.io/browser-payment-api/)
 
 ![](https://lh6.googleusercontent.com/vIhSpKP8yZsqwSVp8h4bWQGyPAbMhm8gRe9hN83_w2lRpTffKFqWeytQ5Xfk2slY4ZzjsegBnWT7VbTNgC74lGtz-dWVYZxMPshb7NXsBa8rN6jh1m4OvFpTNzgLa8jBFuWaXfXR)
 
-When a merchant requests payment via “[https://bobpay.com](https://bobpay.com)” method, the web browser queries the Package Manager for any app that can respond to “[https://bobpay.com](https://bobpay.com)” intent. (Checking locally installed apps first reduces the number of server requests for “payment-manifest.json” file.) If such app is found, then the browser downloads the HEAD of “[https://bobpay.com](https://bobpay.com/payment-manifest.json)”, and downloads the JSON file pointed to by the HTTP header link with rel="payment-method-manifest" attribute. Example of such HTTP header:
+When a merchant requests payment via “[https://bobpay.com](https://bobpay.com)”
+method, the web browser queries the Package Manager for any app that can respond
+to “[https://bobpay.com](https://bobpay.com)” intent. (Checking locally
+installed apps first reduces the number of server requests for
+“payment-manifest.json” file.) If such app is found, then the browser downloads
+the HEAD of “[https://bobpay.com](https://bobpay.com/payment-manifest.json)”,
+and downloads the JSON file pointed to by the HTTP header link with
+rel="payment-method-manifest" attribute. Example of such HTTP header:
 
 ```
 Link: <payment-manifest.json>; rel="payment-method-manifest"
 ```
 
-Then the browser downloads “[https://bobpay.com/payment-manifest.json](https://bobpay.com/payment-manifest.json)”, which contains pointers to the default applications of that payment method. Example of such payment method manifest:
+Then the browser downloads
+“[https://bobpay.com/payment-manifest.json](https://bobpay.com/payment-manifest.json)”,
+which contains pointers to the default applications of that payment method.
+Example of such payment method manifest:
 
 ```
 {"default_applications": ["https://bobpay.com/bobpay-app.json"]}
 ```
 
-The browser downloads “[https://bobpay.com/bobpay-app.json](https://bobpay.com/bobpay-app.json)” and verifies the installed app against the version and signatures in “bobpay-app.json”. All downloads must be over HTTPS. HTTP response codes must be 200. HTTP redirects are not followed.
+The browser downloads
+“[https://bobpay.com/bobpay-app.json](https://bobpay.com/bobpay-app.json)” and
+verifies the installed app against the version and signatures in
+“bobpay-app.json”. All downloads must be over HTTPS. HTTP response codes must be
+200. HTTP redirects are not followed.
 
 ![](https://lh6.googleusercontent.com/fC5MN-f_bui7xsGhel8hCUZRSLKcDOZpElcoRfM0A4ddCKFSId-qAGhVI0uy06EYGrJ5BTFyeDl2jSbMexLu6bX4Pue7ezTZ6bZBNPLzU8QcCEHsIgjcWh6i5FIfvQVh4SyDBgaW)
 
-After the browser has been used for web payments at least once, it has a cache of locally installed payment apps. This cache allows for faster display of payment UI. When user taps on the merchant website &lt;&lt;BUY&gt;&gt; button, the browser immediately shows the cached list of apps with a “Refreshing…” indicator. When the payment app cache has refreshed, the user can tap a &lt;&lt;Refresh&gt;&gt; button to see the updated list of payment apps.
+After the browser has been used for web payments at least once, it has a cache
+of locally installed payment apps. This cache allows for faster display of
+payment UI. When user taps on the merchant website &lt;&lt;BUY&gt;&gt; button,
+the browser immediately shows the cached list of apps with a “Refreshing…”
+indicator. When the payment app cache has refreshed, the user can tap a
+&lt;&lt;Refresh&gt;&gt; button to see the updated list of payment apps.
 
-Protecting the cache from malware is out of scope of this project. If the user has phone malware that can read and write other apps' data directories, the malware would be able to read user's credit card numbers, addresses, and passwords from disk, for example. Guarding against malware on OS is orthogonal to this project, but is good to keep in mind. See [https://developer.android.com/guide/topics/data/data-storage.html](https://developer.android.com/guide/topics/data/data-storage.html) for details.
+Protecting the cache from malware is out of scope of this project. If the user
+has phone malware that can read and write other apps' data directories, the
+malware would be able to read user's credit card numbers, addresses, and
+passwords from disk, for example. Guarding against malware on OS is orthogonal
+to this project, but is good to keep in mind. See
+[https://developer.android.com/guide/topics/data/data-storage.html](https://developer.android.com/guide/topics/data/data-storage.html)
+for details.
 
 ### Preloading
 
 ![](https://lh3.googleusercontent.com/cKE2-Eq7KvEywkWer5sYigzEKVlM2IJe5JvBAMP83-hhy3xTUIfKEj0w1i84pBNE49VS4YvypdpXegDPB1L9Z10tZOBksKSr7kpmPtwbwNMufqZOBYq3QcUwSylLqvc0Tq3MSc71)
 
-A web browser queries installed payment apps when the JavaScript PaymentRequest object is constructed. A website can create a PaymentRequest object when showing the &lt;&lt;BUY&gt;&gt; button, but call PaymentRequest.show() only when user taps this &lt;&lt;BUY&gt;&gt; button. This allows for faster UI response.
+A web browser queries installed payment apps when the JavaScript PaymentRequest
+object is constructed. A website can create a PaymentRequest object when showing
+the &lt;&lt;BUY&gt;&gt; button, but call PaymentRequest.show() only when user
+taps this &lt;&lt;BUY&gt;&gt; button. This allows for faster UI response.
 
 ## Messages
 
-Browsers and payment apps pass data to each other via Intent extras, which are key-value string pairs.
+Browsers and payment apps pass data to each other via Intent extras, which are
+key-value string pairs.
 
 ### Optional: “Is ready to pay”
 
 ![](https://lh3.googleusercontent.com/497XZ7MYxuDKEsLRovm7I0TsK6ANr9vPlYPowUOQbj6FhrVTzoPx0WOkamE2k93zRbUu9X_124C8hwtqk5_gmqkOeCexMYziR8ubGNoTg_Vlo8tjMNIqUymHmAXOamwAdPTod9hh)
 
-If the payment app has a service with "IS_READY_TO_PAY" Android intent handler, then the web browser can check with the payment app before showing it as an option for payment.
+If the payment app has a service with "IS_READY_TO_PAY" Android intent handler,
+then the web browser can check with the payment app before showing it as an
+option for payment.
 
 #### “Is ready to pay” parameters
 
--   ArrayList&lt;String&gt; methodNames - The names of the method being queried. The elements are the keys in [methodData](https://w3c.github.io/browser-payment-api/#paymentrequest-interface) dictionary.
--   Bundle[String] methodData - A mapping from each of the [methodName](https://w3c.github.io/browser-payment-api/#paymentrequest-interface) to the output of JSON.stringify([methodData[methodName].data](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)).
--   String topLevelOrigin - The scheme-less origin of the top-level browsing context. For example, “https://mystore.com/checkout” will be passed as “mystore.com”.
--   Parcelable[] topLevelCertificateChain - The certificate chain of the top-level browsing context. Null for localhost and file on disk, which are both secure contexts without SSL certificates. (The certificate chain is necessary because a payment app might have different trust requirements for websites.)
--   String paymentRequestOrigin - The schemeless origin of the iframe browsing context that invoked new PaymentRequest(methodData, details, options) constructor. If the constructor was invoked from top-level context, then the value of this parameter equals the value of topLevelOrigin parameter.
+-   ArrayList&lt;String&gt; methodNames - The names of the method being queried.
+    The elements are the keys in
+    [methodData](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)
+    dictionary.
+-   Bundle[String] methodData - A mapping from each of the
+    [methodName](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)
+    to the output of
+    JSON.stringify([methodData[methodName].data](https://w3c.github.io/browser-payment-api/#paymentrequest-interface)).
+-   String topLevelOrigin - The scheme-less origin of the top-level browsing
+    context. For example, “https://mystore.com/checkout” will be passed as
+    “mystore.com”.
+-   Parcelable[] topLevelCertificateChain - The certificate chain of the
+    top-level browsing context. Null for localhost and file on disk, which are
+    both secure contexts without SSL certificates. (The certificate chain is
+    necessary because a payment app might have different trust requirements for
+    websites.)
+-   String paymentRequestOrigin - The schemeless origin of the iframe browsing
+    context that invoked new PaymentRequest(methodData, details, options)
+    constructor. If the constructor was invoked from top-level context, then the
+    value of this parameter equals the value of topLevelOrigin parameter.
 
-Not all browsers have the capability to determine the values for all of these parameters. Therefore, the payment app should check for existence of these parameters before accessing them.
+Not all browsers have the capability to determine the values for all of these
+parameters. Therefore, the payment app should check for existence of these
+parameters before accessing them.
 
 These parameters are sent to the payment app using intent extras.
 

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-21 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How Payment Request API Works {: .page-title }
@@ -164,5 +164,8 @@ result of PSP returns.
 ## Next Up
 
 Learn more about the payment method types in [Standardized vs. URL-based Payment
-Methods](https://docs.google.com/document/d/13hYK7-ddiRpD-VdD05310ZTUxrfUZ3Zj911NofaFc6I/edit#heading=h.xn0li2wq7erf).
+Methods](/web/fundamentals/payments/how-it-works/payment-method-basics).
 
+To learn more about the Payment Request API itself, checkout [Deep Dive into the
+Payment Request
+API](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request).

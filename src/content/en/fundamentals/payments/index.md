@@ -3,13 +3,19 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-14 #}
-{# wf_updated_on: 2018-09-03 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_blink_components: Blink>Payments #}
 
-# Overview {: .page-title }
+# W3C Payment APIs {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="hmqZxP6iTpo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Introduction
 
@@ -66,59 +72,8 @@ experience on any website that implements the standard.</div>
 web, and can easily integrate a secure payment solution.</div>
 </section>
 
-## A Closer Look
-
-The Payment Request UI on Chrome is flexible and can display a variety of appropriate elements, 
-such as the following.
-
-<table>
-  <tr>
-   <td>It can display the list of items in the user's shopping cart, shipping addresses, 
-     payment methods, and contact info.
-   </td>
-   <td><img src="images/1-image1.png" width="" alt="" title="">
-   </td>
-  </tr>
-  <tr>
-   <td>It can display available payment methods (called <em>payment apps)</em> from third parties. 
-     Google Pay, for example, is a payment app.
-   </td>
-   <td><img src="images/1-image2.png" width="" alt="" title="">
-   </td>
-  </tr>
-  <tr>
-   <td>It can request a shipping address; if the user has previously stored addresses in Autofill, 
-     they are displayed and the user can choose one  with a single tap.
-   </td>
-   <td><img src="images/1-image3.png" width="" alt="" title="">
-   </td>
-  </tr>
-  <tr>
-   <td>It can display shipping options; for example, a user might choose between free shipping 
-     that takes a few days and faster shipping that incurs a fee.
-   </td>
-   <td><img src="images/1-image4.png" width="" alt="" title="">
-   </td>
-  </tr>
-  <tr>
-   <td>It can request the payer's contact information, such as name, email address, and phone 
-     number -- all of which may also be available from Autofill.
-   </td>
-   <td><img src="images/1-image5.png" width="" alt="" title="">
-   </td>
-  </tr>
-  <tr>
-   <td>Finally, it can ask the user to authorize payment in the payment method-specific UI and 
-     complete the purchase, as in this basic-card example.
-   </td>
-   <td><img src="images/1-image6.png" width="" alt="" title="">
-   </td>
-  </tr>
-</table>
-
 ## Next Up
 
 Learn about the basics of W3C Payment APIs, including how the W3C Payment APIs ecosystem works 
 and the anatomy of payment apps, in 
-[How the Payment Ecosystem Works](https://drive.google.com/a/google.com/open?id=1PwPi_TD3G-kQyz31nW-1A4A5kvoCy7UCz6grk1TMaE8).
-
+[How the Payment Ecosystem Works](/web/fundamentals/payments/how-it-works/how-payment-ecosyste-works).

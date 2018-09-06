@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-08-24 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -98,7 +98,7 @@ There are typically four participants in an online transaction.
 The typical sequence of events in processing a credit card payment on the web 
 looks like this:
 
-<img src="../images/2-web0.png" />
+![](../images/payment-ecosystem/payment-interactions.png)
 
 1.  The Customer visits a merchant's website, adds items to a shopping cart, 
 and starts the checkout flow.
@@ -123,6 +123,8 @@ the customer's bank or credit card issuer to the merchant, and then returns a
 success or failure result to the merchant website.
 1.  The merchant website notifies the customer of the success or failure of the 
 transaction and displays the next step, e.g., shipping the purchased item.
+
+![](../images/payment-ecosystem/payment-transaction-process.png)
 
 ## Caveat: PSP Reliance
 
@@ -166,5 +168,5 @@ if your payment gateway supports Payment Request API but is not listed here.
 ## Next Up
 
 Learn about the Payment Request API's fields and methods in [How the Payment Request API 
-Works](https://docs.google.com/document/d/1xlhsGaCB5jEiq0MMWPwg7ve4d6YcswW2_8jg6BWUMTI/edit).
+Works](/web/fundamentals/payments/how-it-works/how-payment-request-api-works).
 
