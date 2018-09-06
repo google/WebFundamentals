@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 69 for developers?
 
 {# wf_published_on: 2018-09-04 #}
-{# wf_updated_on: 2018-09-04 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome69,new-in-chrome #}
 {# wf_featured_snippet: It’s been ten years since Chrome was first released. A lot has changed since then, but our goal of building a solid foundation for modern web applications hasn’t! In Chrome 69 there’s support CSS Scroll Snapping, support for notches, web locks, and a few cool new CSS4 features. Let’s dive in and see what’s new for developers in Chrome 69! #}
@@ -60,7 +60,11 @@ Note: Want the full list of changes? Check out the
   </figcaption>
 </figure>
 
-[CSS Scroll Snap](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap_Points)
+Caution: This post refers to **CSS Scroll Snap**, which is the current standard,
+not to be confused with _CSS Scroll Snap Points_, which has been deprecated and
+is no longer on the standards track.
+
+[CSS Scroll Snap](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap)
 allows you to create smooth, slick, scroll experiences, by declaring scroll
 snap positions that tell the browser where to stop after each scrolling
 operation. This is super helpful for image carousels, or paginated sections
@@ -158,10 +162,10 @@ for more details.
 
 ## Web Locks API {: #web-locks }
 
-The [Web Locks API](https://github.com/WICG/web-locks) allows you to
-asynchronously acquire a lock, hold it while work is performed, then release it.
-While the lock is held, no other script in the origin can acquire the same lock,
-helping to coordinate the usage of shared resources.
+The [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)
+allows you to asynchronously acquire a lock, hold it while work is performed,
+then release it. While the lock is held, no other script in the origin can
+acquire the same lock, helping to coordinate the usage of shared resources.
 
 For example, if a web app running in multiple tabs wants to ensure that only
 one tab is syncing to the network, the sync code would attempt to acquire a
@@ -181,7 +185,8 @@ another tab tries to acquire the same lock, it’ll be queued. Once the lock has
 been released, the next queued request will be granted the lock, and execute.
 
 MDN has a great [Web Locks primer](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)
-and includes a more in-depth explanation and lots of examples.
+and includes a more in-depth explanation and lots of examples. Or dive in deeper
+and check out the [spec](https://github.com/WICG/web-locks).
 
 <div class="clearfix"></div>
 
@@ -229,8 +234,10 @@ there’s plenty more.
     <li>Wooden dino from CDS 2017</li>
   </ul>
   <p>
-    A special thanks to all the people who have helped to make New in Chrome
-    happen. Every single one of these people are awesome!
+    A special thanks to all the people who have helped to make the
+    <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m">
+    28 episodes of New in Chrome</a> happen. Every single one of these people
+    are awesome!
   </p>
   <table class="columns">
     <tr>
@@ -273,24 +280,25 @@ there’s plenty more.
     </tr>
   </table>
   <p>
+    Want to see how far New in Chrome has come since our first episode?
+    Check out this fun 30 second
+    <a href="https://www.youtube.com/watch?v=kMRdS5pusU0">progression video</a>
+    that charts our history from our first video to today!
+  </p>
+  <p>
     And of course, thank <b>you</b> for watching and providing your
     comments and feedback! I read all of them, and take your suggestions
     to heart. These videos have gotten better because of you!
-  </p>
-  <p>
     <b>Thanks for watching!</b>
   </p>
 </section>
 
 ### New in Chrome Bloopers
 
-<div class="video-wrapper screenshot">
-  Video coming soon!
-  <!--
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="LScSTMOMEDM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-  -->
 </div>
 
 We put together a fun little blooper reel for you to enjoy! After watching
