@@ -42,7 +42,7 @@ computer parts and what they do.
   <img src="/web/updates/images/inside-browser/CPU.png" alt="CPU">
   </a>
   <figcaption>
-    Figure 1: 4 CPU cores as office worker sitting at each desk handling tasks as they come in
+    Figure 1: 4 CPU cores as office workers sitting at each desk handling tasks as they come in
   </figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ Operating System.
 
 Another concept to grasp before diving into browser architecture is Process and Thread. 
 A process can be described as an application’s executing program. A thread is the one that lives 
-inside of process and executes any part of its process program. 
+inside of process and executes any part of its process's program. 
 
 When you start an application, a process is created. The program might create thread(s) to help it 
 do work, but that's optional. The Operating System gives the process a "slab" of memory to work 
@@ -265,8 +265,8 @@ without consent. Bypassing this policy is a primary goal of security attacks.
 Process isolation is the most effective way to separate sites. With 
 [Meltdown and Spectre](/web/updates/2018/02/meltdown-spectre), 
 it became even more apparent that we need to separate sites using processes. 
-With Site Isolation enabled on desktop by default since Chrome 67, each iframe in a tab gets a 
-separate renderer process. 
+With Site Isolation enabled on desktop by default since Chrome 67,  each cross-site iframe in a tab 
+gets a separate renderer process. 
 
 <figure>
   <img src="/web/updates/images/inside-browser/isolation.png" alt="site isolation">
