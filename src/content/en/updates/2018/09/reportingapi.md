@@ -503,7 +503,7 @@ a promising tool for diagnosing issues across your site.
 Warnings that get logged to the DevTools console are super helpful
 but have limited value to you as the site author. That's because they're
 local to the user's browser! The Reporting API changes this. Use it to
-configure, detect, and report to a server even errors even when your own
+configure, detect, and report errors to a server even when your own
 code cannot. Propagate browser warnings to a backend, catch issues across
 your site before they grow out of control, and prevent future bugs before they
 happen (e.g. know about deprecated APIs ahead of their removal).
