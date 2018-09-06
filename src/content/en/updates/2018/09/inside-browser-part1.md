@@ -255,7 +255,7 @@ processes for less memory usage have been used on platform like Android before t
 ## Per-frame renderer processes - Site Isolation {: #site-isolation }
 
 [Site Isolation](/web/updates/2018/07/site-isolation) is a recently 
-introduced feature in Chrome that runs a separate renderer process for each iframe. 
+introduced feature in Chrome that runs a separate renderer process for each cross-site iframe. 
 We’ve been talking about one renderer process per tab model which allowed cross-site 
 iframes to run in a single renderer process with sharing memory space between different sites. 
 Running a.com and b.com in the same renderer process might seem okay. 
