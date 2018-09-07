@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous acesss to HTTP cookies, and opens up the cookie jar to service workers.
 
 {# wf_updated_on: 2018-09-07 #}
-{# wf_published_on: 2018-07-23 #}
+{# wf_published_on: 2018-09-06 #}
 {# wf_tags: cookie,chrome69 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers. #}
