@@ -18,7 +18,7 @@ description: Learn how browser handles navigation request.
 
 {% include "web/_shared/contributors/kosamari.html" %}
 
-## What Happens in Navigation
+## What happens in navigation
 
 This is part 2 of a 4 part blog series looking at the inner workings of Chrome. 
 In [the previous post](/web/updates/2018/09/inside-browser-part1), we looked at how different 
@@ -41,8 +41,8 @@ user requests a site and the browser prepares to render a page - also known as a
 </figure>
 
 As we covered in 
-[part 1: CPU, GPU, Memory, and multi-process architecture](/web/updates/2018/09/inside-browser-part1)
-, everything outside of a tab is handled by the browser process. 
+[part 1: CPU, GPU, Memory, and multi-process architecture](/web/updates/2018/09/inside-browser-part1), 
+everything outside of a tab is handled by the browser process. 
 The browser process has threads like the UI thread which draws buttons and input fields of the 
 browser, the network thread which deals with network stack to receive data from the internet, 
 the storage thread that controls access to the files and more. When you type a URL into the address 
@@ -95,8 +95,8 @@ Once the response body (payload) starts to come in, the network thread looks at 
 of the stream if necessary. The response's Content-Type header should say what type of data it is, 
 but since it may be missing or wrong, 
 [MIME Type sniffing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 
-is done here. This is a “tricky business” as commented in [the source code](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5)
-. You can read the comment to see how different browsers treat content-type/payload pairs.
+is done here. This is a "tricky business" as commented in [the source code](https://cs.chromium.org/chromium/src/net/base/mime_sniffer.cc?sq=package:chromium&dr=CS&l=5). 
+You can read the comment to see how different browsers treat content-type/payload pairs.
 
 <div class="clearfix"></div>
 
@@ -167,23 +167,24 @@ process "finishes" rendering, it sends an IPC back to the browser process (this 
 `onload` events have fired on all frames in the page and have finished executing). At this point, 
 the UI thread stops the loading spinner on the tab. 
 
-I say "finishes" rendering in scare quotes, because client side JavaScript could still load 
+I say "finishes", because client side JavaScript could still load 
 additional resources and render new views after this point.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part2/loaded.png" alt="Page finish loading">
   <figcaption>
-    Figure 7: IPC from the renderer to the browser process to notify the page has “loaded” 
+    Figure 7: IPC from the renderer to the browser process to notify the page has "loaded" 
   </figcaption>
 </figure>
 
 ## Navigating to a different site
+
 The simple navigation was complete! But what happens if a user puts different URL to address bar 
 again? Well, the browser process goes through the same steps to navigate to the different site. 
 But before it can do that, it needs to check with the currently rendered site if they care about 
 [`beforeunload`](https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload) event. 
 
-`beforeunload`can create “Leave this site?” alert when you try to navigate away or close the tab. 
+`beforeunload` can create "Leave this site?" alert when you try to navigate away or close the tab. 
 Everything inside of a tab including your JavaScript code is handled by the renderer process, so 
 the browser process has to check with current renderer process when new navigation request comes in.
 
@@ -202,7 +203,7 @@ entered on the page.
 </figure>
 
 If the navigation was initiated from the renderer process (like user clicked on a link or 
-client-side JavaScript has run `window.location = “https://newsite.com”`) the renderer process 
+client-side JavaScript has run `window.location = "https://newsite.com"`) the renderer process 
 first checks `beforeunload` handlers. Then, it goes through the same process as browser process 
 initiated navigation. The only difference is that navigation request is kicked off from the 
 renderer process to the browser process.
