@@ -22,6 +22,21 @@
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
 
+ahnzaz:
+  name:
+    given: TackSu
+    family: Ahn
+  org:
+    name: Samsung SDS.
+    unit: Platform development group(web)
+  country: KR
+  role:
+    - translator
+  homepage: N/A
+  email: ahnzaz@gmail.com
+  description:
+    en: I am groot.
+
 iamakulov:
   name:
     given: Ivan
