@@ -259,9 +259,13 @@ consolidates services into one process saving memory footprint. Similar approach
 processes for less memory usage have been used on platform like Android before this change.
 
 <figure>
-  <video src="/web/updates/images/inside-browser/part1/servicfication.mp4"
-    autoplay loop muted playsinline controls alt="Chrome servicfication">
-  </video>
+  <a href="/web/updates/images/inside-browser/part1/servicfication.svg">
+    <img src="/web/updates/images/inside-browser/part1/servicfication.png"
+      alt="Chrome servicfication">
+  </a>
+  <b>
+    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+  </b>
   <figcaption>
    Figure 11: Diagram of Chrome’s servicification moving different services into multiple processes 
    and a single browser process
