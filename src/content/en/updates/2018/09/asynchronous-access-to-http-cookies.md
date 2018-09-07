@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous acesss to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-09-05 #}
+{# wf_updated_on: 2018-09-07 #}
 {# wf_published_on: 2018-07-23 #}
 {# wf_tags: cookie,chrome69 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -139,9 +139,9 @@ user logs off.
 
     // Specify the cookie changes we're interested in during the install event.
     self.addEventListener('install', (event) => {
-      event.waitFor(async () => {
-        await cookieStore.subscribeToChanges([{ name: 'session_id' }]);
-      });
+      event.waitUntil(
+        cookieStore.subscribeToChanges([{ name: 'session_id' }])
+      );
     });
 
     // Delete cached data when the user logs out.
