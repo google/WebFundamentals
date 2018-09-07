@@ -35,6 +35,12 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4507242028072960) &#124;
 [Chromium Bug](https://crbug.com/865642)
 
+## Deprecate Custom Elements v0
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
+[Chromium Bug](https://crbug.com/180965)
+
 
 ## Deprecate Shadow DOM v0
 
