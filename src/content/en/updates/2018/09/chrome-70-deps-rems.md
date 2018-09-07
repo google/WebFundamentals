@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 70 to help you plan.
 
-{# wf_updated_on: 2018-09-05 #}
+{# wf_updated_on: 2018-09-07 #}
 {# wf_published_on: 2018-09-13 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink #}
@@ -21,17 +21,27 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5714236168732672) &#124;
 [Chromium Bug](https://crbug.com/588931)
 
-## Deprecate and remove Gamepads.item(index)
-
-[Intent to Remove]() &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5135093320384512) &#124;
-[Chromium Bug](https://crbug.com/865642)
 
 ## Remove anonymous getter for HTMLFrameSetElement
 
 [Intent to Remove]() &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5235521668251648) &#124;
 [Chromium Bug](https://crbug.com/695891)
+
+
+## Deprecate and remove Gamepads.item()
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4507242028072960) &#124;
+[Chromium Bug](https://crbug.com/865642)
+
+
+## Deprecate Shadow DOM v0
+
+[Intent to Remove]() &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5135093320384512) &#124;
+[Chromium Bug](https://crbug.com/336121)
+
 
 ## Deprecate SpeechSynthesis.speak() without user activation
 
