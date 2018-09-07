@@ -4,7 +4,7 @@ description: Learn how browser turn your code into functional website from high-
 
 {# wf_published_on: 2018-09-05 #}
 {# wf_updated_on: 2018-09-06 #}
-{# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
+{# wf_featured_image: /web/updates/images/inside-browser/part1/cover.png #}
 {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
 {# wf_blink_components: N/A #}
 
@@ -39,7 +39,7 @@ computer parts and what they do.
 ### CPU
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/inside-browser/CPU.png" alt="CPU">
+  <img src="/web/updates/images/inside-browser/part1/CPU.png" alt="CPU">
   </a>
   <figcaption>
     Figure 1: 4 CPU cores as office workers sitting at each desk handling tasks as they come in
@@ -58,8 +58,7 @@ to your phones and laptops.
 ### GPU
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/inside-browser/GPU.png" alt="GPU">
-  </a>
+  <img src="/web/updates/images/inside-browser/part1/GPU.png" alt="GPU">
   <figcaption>
     Figure 2: Many GPU cores with wrench suggesting they handle a limited task
   </figcaption>
@@ -79,8 +78,7 @@ the application. Usually, applications run on the CPU and GPU using mechanisms p
 Operating System.
 
 <figure>
-  <img src="/web/updates/images/inside-browser/hw-os-app.png" alt="Hadware, OS, Application">
-  </a>
+  <img src="/web/updates/images/inside-browser/part1/hw-os-app.png" alt="Hadware, OS, Application">
   <figcaption>
    Figure 3: Three layers of computer architecture. Machine Hardware at the bottom, Operating 
    System in the middle, and Application on top.
@@ -90,7 +88,7 @@ Operating System.
 ## Executing program on Process and Thread
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/inside-browser/process-thread.png" alt="process and threads">
+  <img src="/web/updates/images/inside-browser/part1/process-thread.png" alt="process and threads">
   <figcaption>
    Figure 4: Process as a bounding box, threads as abstract fish swimming inside of a process
   </figcaption>
@@ -108,9 +106,14 @@ application, the process also goes away and the Operating System frees up the me
 <div class="clearfix"></div>
 
 <figure>
-  <img src="/web/updates/images/inside-browser/memory.svg" alt="process and memory">
+  <a href="/web/updates/images/inside-browser/part1/memory.svg">
+    <img src="/web/updates/images/inside-browser/part1/memory.png" alt="process and memory">
+  </a>
+  <b>
+    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+  </b>
   <figcaption>
-   Figure 5: Diagram of a process using memory space and storing application data
+    Figure 5: Diagram of a process using memory space and storing application data
   </figcaption>
 </figure>
 
@@ -121,9 +124,14 @@ are designed to work this way so that if a worker process get unresponsive, it c
 without stopping other processes which are running different parts of the application.
 
 <figure>
-  <img src="/web/updates/images/inside-browser/workerprocess.svg" alt="worker process and IPC">
+  <a href="/web/updates/images/inside-browser/part1/workerprocess.svg">
+    <img src="/web/updates/images/inside-browser/part1/workerprocess.png" alt="worker process and IPC">
+  </a>
+  <b>
+    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+  </b>
   <figcaption>
-   Figure 6: Diagram of separate processes communicating over IPC
+    Figure 6: Diagram of separate processes communicating over IPC
   </figcaption>
 </figure>
 
@@ -134,7 +142,7 @@ So how is a web browser built using processes and threads? Well, it could be one
 different threads or many different processes with a few threads communicating over IPC. 
 
 <figure>
-  <img src="/web/updates/images/inside-browser/browser-arch.png" alt="browser architecture">
+  <img src="/web/updates/images/inside-browser/part1/browser-arch.png" alt="browser architecture">
   <figcaption>
    Figure 7: Different browser architectures in process/thread diagram
   </figcaption>
@@ -153,7 +161,7 @@ each tab. Until very recently, Chrome gave each tab a process when it could; now
 each site its own process, including iframes (see [Site Isolation](#site-isolation)).
 
 <figure>
-  <img src="/web/updates/images/inside-browser/browser-arch2.png" alt="browser architecture">
+  <img src="/web/updates/images/inside-browser/part1/browser-arch2.png" alt="browser architecture">
   <figcaption>
    Figure 8: Diagram of Chrome’s multi-process architecture. Multiple layers are shown under 
    Renderer Process to represent Chrome running multiple Renderer Processes for each tab.
@@ -193,7 +201,7 @@ The following table describes each Chrome process and what it controls:
 </table>
 
 <figure>
-  <img src="/web/updates/images/inside-browser/browserui.png" alt="Chrome processes">
+  <img src="/web/updates/images/inside-browser/part1/browserui.png" alt="Chrome processes">
   <figcaption>
    Figure 9: Different processes pointing to different parts of browser UI
   </figcaption>
@@ -215,9 +223,14 @@ other tabs alive. If all tabs are running on one process, when one tab becomes u
 the tabs are unresponsive. That’s sad.
 
 <figure>
-  <img src="/web/updates/images/inside-browser/tabs.svg" alt="multiple renderer for tabs">
+  <a href="/web/updates/images/inside-browser/part1/tabs.svg">
+    <img src="/web/updates/images/inside-browser/part1/tabs.png" alt="multiple renderer for tabs">
+  </a>
+  <b>
+    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+  </b>
   <figcaption>
-   Figure 10: Diagram showing multiple processes running each tab
+    Figure 10: Diagram showing multiple processes running each tab
   </figcaption>
 </figure>
 
@@ -245,12 +258,15 @@ consolidates services into one process saving memory footprint. Similar approach
 processes for less memory usage have been used on platform like Android before this change.
 
 <figure>
-  <img src="/web/updates/images/inside-browser/servicfication.svg" alt="Chrome servicfication">
+  <video src="/web/updates/images/inside-browser/part1/servicfication.mp4"
+    autoplay loop muted playsinline controls alt="Chrome servicfication">
+  </video>
   <figcaption>
    Figure 11: Diagram of Chrome’s servicification moving different services into multiple processes 
    and a single browser process
   </figcaption>
 </figure>
+
 
 ## Per-frame renderer processes - Site Isolation {: #site-isolation }
 
@@ -269,7 +285,7 @@ With Site Isolation enabled on desktop by default since Chrome 67,  each cross-s
 gets a separate renderer process. 
 
 <figure>
-  <img src="/web/updates/images/inside-browser/isolation.png" alt="site isolation">
+  <img src="/web/updates/images/inside-browser/part1/isolation.png" alt="site isolation">
   <figcaption>
 Figure 12: Diagram of site isolation; multiple renderer processes pointing to iframes within a site
   </figcaption>
