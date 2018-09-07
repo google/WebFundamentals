@@ -125,7 +125,8 @@ without stopping other processes which are running different parts of the applic
 
 <figure>
   <a href="/web/updates/images/inside-browser/part1/workerprocess.svg">
-    <img src="/web/updates/images/inside-browser/part1/workerprocess.png" alt="worker process and IPC">
+    <img src="/web/updates/images/inside-browser/part1/workerprocess.png"
+      alt="worker process and IPC">
   </a>
   <b>
     <span class="material-icons">play_circle_outline</span>click on the image to see annimation
