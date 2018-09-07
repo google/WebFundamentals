@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-09-06 #}
+{# wf_updated_on: 2018-09-07 #}
 {# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -121,21 +121,28 @@ Here is the HTML and CSS code used to create that paragraph:
 </p> 
 ```
 
-The code that you haven't seen before is `style="border: 1px dashed red; padding: 5px;"`. 
+`style="border: 1px dashed red; padding: 5px;"` probably looks new to you.
 The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
 before attempting this tutorial.
 
 ## Add inline styles {: #inline }
 
 Use **inline styles** when you want to apply styles to a single element. 
-Try it now by adding a background color to your page's navigation menu:
+Try it now:
 
 1. Go back to the editing tab and open `index.html`.
 
-1. Copy the following code: `style="background-color: aliceblue;"`
+     <figure>
+       <img src="imgs/css/inline1.png"
+            alt="index.html."/>
+       <figcaption>
+         <b>Figure X</b>. <code>index.html</code>
+       </figcaption>
+     </figure>
 
-1. Add the code that you just copied to your `<nav>`.
-
+1. Add `style="background-color: aliceblue;"` to your `<nav>`. In the code block below,
+   the bold line of code is the one you need to change. The rest is just there so you
+   can be sure that you're putting the new code in the right place.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
     <header>
@@ -150,19 +157,13 @@ Try it now by adding a background color to your page's navigation menu:
 1. Go to the **live tab** to see the changes! 
    The background of the `<nav>` section is now blue.
 
-### View your inline style in DevTools {: #inline-devtools }
-
-As you continue your journey to master web development, you will find that CSS can be tricky.
-You'll write some CSS code, expecting it to display one way, but the browser displays it
-completely differently. DevTools makes it easy to see which styles the browser is actually applying
-to each element.
-
-1. Right-click the **Home** link.
-1. Select **Inspect**. As you may remember from [Get Started with HTML and the DOM](html),
-   DevTools opens alongside your page and highlights the code representation of the **Home** link
-   in the **DOM Tree**, which is `<a href="/">Home</a>`. Above this link you can see
-   `<nav style="background-color: aliceblue;">` which verifies that the inline style is being applied
-   to the `<nav>` element.
+     <figure>
+       <img src="imgs/css/inline2.png"
+            alt="The background color behind the Home and Contact links is now blue."/>
+       <figcaption>
+         <b>Figure X</b>. The background color behind the Home and Contact links is now blue
+       </figcaption>
+     </figure>
 
 ## Re-use styles on a single page with internal stylesheets {: #internal }
 
@@ -182,18 +183,18 @@ Try it now:
 
 1. In the live tab, click **Contact** to go to the contact page. Notice the font of **Home** and **Contact**.
 
-1. Copy the following code:
+     <figure>
+       <img src="imgs/css/internal1.png"
+            alt="The Contact page."/>
+       <figcaption>
+         <b>Figure X</b>. The Contact page
+       </figcaption>
+     </figure>
 
-    <pre class="prettyprint lang-html">{% htmlescape %}
-    <style>
-      li a {
-        font-family: 'Courier New', Courier, Serif;
-      }
-    </style>{% endhtmlescape %}
- 
 1. In the **editor tab**, go to `contact.html`.
 
-1. Add the code that you just copied just before the `</head>` end tag.
+1. Add the following code to `contact.html`. Remember, the bold code is what you need to add. The
+   other code is just there so you know where to put the new code.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
     <head>
@@ -209,45 +210,51 @@ Try it now:
     {% endhtmlescape %}</pre>
 
 1. Go back to the **live tab**. 
-1. Click **Contact** to go back to the contact page. 
-   The font of **Home** and **Contact** has changed.
+1. Click **Contact** to go back to the contact page. The font of **Home** and **Contact** has changed.
+
+     <figure>
+       <img src="imgs/css/internal2.png"
+            alt="The font of the Home and Contact links has changed."/>
+       <figcaption>
+         <b>Figure X</b>. The font of the Home and Contact links has changed
+       </figcaption>
+     </figure>
 
 ### Understand internal stylesheets {: #internal-overview }
 
-Internal stylesheets apply styles using **CSS selectors**. 
-CSS selectors are patterns that may apply to one or more HTML elements. 
+Internal stylesheets apply styles using **selectors**. 
+Selectors are patterns that may apply to one or more HTML elements.
 For example, in the previous code:
 
 ```
 <style>
   li a {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, serif;
   }
 </style>
 ```
 
-`li a` is a CSS selector that translates to "any list item that contains a link". 
-The browser changed the font of the **Home** and **Contact** links 
-because they matched this pattern. 
+`li a` is a selector that translates to "any list item that contains a link". 
+The browser changes the font of the **Home** and **Contact** links 
+because they match this pattern. 
 
 ```
 <li><a href="/">Home</a></li>
 <li><a href="/contact.html">Contact</a></li>
 ```
 
-`font-family: 'Courier New', Courier, monospace;` is a CSS **declaration**. 
-A declaration is made of two parts: a property and a value. 
-In the example above, `font-family` is a property that has a value of 
-`'Courier New', Courier, monospace`. If `'Courier New'` isn't available, 
-the browser will choose `Courier`, and if `Courier` isn't available, 
-the browser will choose `Serif`. So, in plain English, the code above reads: 
-"Change the font of any list item that contains a link to Courier New, 
-and if Courier New isn't available then use Courier, and if Courier isn't available, 
-then use Serif". A CSS selector combined with a declaration is called a **ruleset**. 
+`font-family: 'Courier New', Courier, serif` is a **declaration**. 
+A declaration is made of two parts: a **property** and a **value**. 
+`font-family` is the property, and `'Courier New', Courier, serif` is the value
+of that property. The property describes a general way that you can change the element's style,
+and the value says how exactly it should change.
+For example, `font-family: 'Courier New', Courier, serif` gives the browser this instruction:
+"Set the font of elements that match the pattern `li a` to `'Courier New'`. If that font
+isn't available, use `Courier`. If that isn't available, use `serif`."
 
-### Create a selector that applies to multiple elements {: #internal-multiple }
+### Add multiple selectors to a ruleset {: #multiple }
 
-To quickly review, a block of CSS code like this is called a ruleset:
+A block of CSS code like what you see below is called a **ruleset**.
 
 ```
 li a {
@@ -255,13 +262,10 @@ li a {
 }
 ```
 
-`li a` is called a selector.
-
 Use commas to add multiple selectors to a ruleset. Try it now:
 
 1. In the **editor tab**, open `contact.html`.
-1. After `li a` type `, h1`. This tells the browser to apply the style to any
-   list element that contains a link, **and** any h1 element.
+1. After `li a` type `, h1`.
 
     <pre class="prettyprint lang-html">{% htmlescape %}...
     <style>
@@ -272,28 +276,95 @@ Use commas to add multiple selectors to a ruleset. Try it now:
     ...
     {% endhtmlescape %}</pre>
 
+    This tells the browser to style `<h1>` elements the same way that it styles
+    elements that match the pattern `li a`.
+
 1. Go to the **live tab**. 
 1. Click the **Contact** link to go back to the contact page. 
    Now, **Contact Me!** has the same font as the navigation links.
 
+     <figure>
+       <img src="imgs/css/multiple1.png"
+            alt="The text 'Contact Me!' now has the same font as the Home and Contact links."/>
+       <figcaption>
+         <b>Figure X</b>. The text "Contact Me!" now has the same font as the Home and Contact links
+       </figcaption>
+     </figure>
+
 ## Experiment with DevTools {: #experiment }
 
-### Add a declaration to an existing rulest in DevTools {: #add-declaration }
+As you continue your journey to master web development, you'll find that CSS can be tricky.
+You'll write some CSS and expect it to display one way, but the browser does something completely
+different. Chrome DevTools makes it easy to experiment with changes and immediately see how
+those changes affect the page.
 
-DevTools also makes it easy to experiment with CSS changes.
+### Add a declaration to an existing rulest in DevTools {: #add }
 
-1. Right-click the **Home** link.
-1. Select **Inspect**. `<a href="/">Home</a>`
-   is highlighted blue in the **DOM Tree**.
+When you want to iterate on the style of an existing element, add a declaration
+to an existing ruleset. Try it now:
 
-    Below the DOM Tree, the **Styles** pane shows you the styles that
-    are being applied to the `<a href="/">Home</a>` element. You can see the
-    `font-family: 'Courier New', Courier, Serif;` declaration that you added earlier.
+1. Right-click the **Home** link and select **Inspect**.
 
-1. Click anywhere on the whitespace just a little below `font-family: 'Courier New', Courier, Serif;` to add
-   a new declaration.
-1. Type `color` and then press <kbd>Enter</kbd>.
+     <figure>
+       <img src="imgs/css/add1.png"
+            alt="Inspecting the Home link."/>
+       <figcaption>
+         <b>Figure X</b>. Inspecting the Home link
+       </figcaption>
+     </figure>
+
+    DevTools opens up alongside your page. The code that represents the Home link,
+    `<nav href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
+    [Get Started with HTML and the DOM](html). In the **Styles** tab below the DOM Tree you can see the
+    `font-family: 'Courier New', serif` declaration that you added to `contact.html` earlier.
+
+     <figure>
+       <img src="imgs/css/add2.png"
+            alt="The Styles tab is below the DOM Tree."/>
+       <figcaption>
+         <b>Figure X</b>. The Styles tab is below the DOM Tree
+       </figcaption>
+     </figure>
+
+    If your DevTools window is wide, the Styles tab is to the right of the DOM Tree.
+
+     <figure>
+       <img src="imgs/css/add3.png"
+            alt="The Styles tab is to the right of the DOM Tree."/>
+       <figcaption>
+         <b>Figure X</b>. The Styles tab is to the right of the DOM Tree
+       </figcaption>
+     </figure>
+
+1. Click the whitespace below `font-family: 'Courier New', Courier, Serif` to add a new declaration.
+
+     <figure>
+       <img src="imgs/css/add4.png"
+            alt="Adding a new declaration."/>
+       <figcaption>
+         <b>Figure X</b>. Adding a new declaration
+       </figcaption>
+     </figure>
+
+1. Type `color` and then press <kbd>Enter</kbd>. The autocomplete UI suggests options as you type.
+
+     <figure>
+       <img src="imgs/css/add5.png"
+            alt="Typing 'color'."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>color</code>
+       </figcaption>
+     </figure>
+
 1. Type `magenta` and then press <kbd>Enter</kbd> again. All of the text on the contact page is now magenta.
+
+     <figure>
+       <img src="imgs/css/add6.png"
+            alt="Typing 'magenta'."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>magenta</code>
+       </figcaption>
+     </figure>
 
 ### Edit a declaration in DevTools {: #edit-declaration }
 
@@ -306,10 +377,14 @@ You can also edit existing declarations in DevTools. Try it now:
 
 You can also add new rulesets in DevTools. Try it now:
 
-1. Click **New Style Rule**. A new ruleset appears. `a` is the selector.
-1. Replace `a` with `a:hover`. `:hover` is a **pseudo-class**. Use pseudo-classes to
-   style elements when they enter special states. For example, the `a:hover` style
-   only takes effect when you're hovering over an `<a>` element.
+1. Click **New Style Rule**. An empty ruleset appears with `a` as the selector.
+1. Replace `a` with `a:hover`.
+
+
+    `:hover` is a **pseudo-class**. Use pseudo-classes to
+    style elements when they enter special states. For example, the `a:hover` style
+    only takes effect when you're hovering over an `<a>` element.
+
 1. Click between the brackets to add a new declaration.
 1. Type `background-color` for the declaration name and then press <kbd>Enter</kbd>.
 1. Type `green` for the declaration value and then press <kbd>Enter</kbd>.
@@ -403,7 +478,9 @@ a collection of styles that you can use on your page elements.
    the font of the other elements has changed.
 1. Click the `Contact` link to go to the contact page. 
    The same changes are present. 
-  
+
+### Use a class {: #class }
+ 
 In the last section, you added Bootstrap to your web pages, 
 which changed the fonts of some of the elements on your site. 
 CSS frameworks can help you make major changes to your page with very little code. 
@@ -426,38 +503,43 @@ With a single line of code.
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
 
-You've just used your first **HTML class**. A class is an HTML attribute that defines a 
-**CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are 
-patterns that may apply to one or more HTML elements. 
-
-For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
-
-```
-.jumbotron {
-  padding: $jumbotron-padding ($jumbotron-padding / 2);
-  margin-bottom: $jumbotron-padding;
-  background-color: $jumbotron-bg;
-  @include border-radius($border-radius-lg);
-
-  @include media-breakpoint-up(sm) {
-    padding: ($jumbotron-padding * 2) $jumbotron-padding;
-  }
-}
-
-```
-
-In this case, the selector `.jumbotron` means "all HTML elements with the 
-class `jumbotron`". 
-
-While any HTML element can have a **class** attribute, 
-a class like `jumbotron` will not format 
-in the way you see on your site unless you have Bootstrap linked to your web page.
+### Align elements {: #align }
 
 Bootstrap has other exclusive classes that align elements:
 
 1. Copy this code: `class="container-fluid"` .
 1. Go to the **editor tab**.
-1. In `index.html`, paste the code you copied into the `<body>` tag.
+1. In `index.html`, wrap your `<nav>` and `<main>` elements in a `<div>`.
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <body class="container-fluid">
+      <header class="jumbotron jumbotron-fluid">
+        <p>Welcome to my site!</p>
+      </header>{% endhtmlescape %}
+    <strong>{% htmlescape %}  <div class="row">{% endhtmlescape %}</strong>{% htmlescape %}
+        <nav class="col-3">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <main class="col-9">
+          <h1>About Me</h1>
+          <p>I am learning web development. Recent accomplishments:</p>
+          <ul>
+            <li>Learned how to set up my code in Glitch.</li>
+            <li>Added content to my HTML.</li>
+            <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
+            <li>Learned the difference between HTML and the DOM.</li>
+          </ul>
+        </main>{% endhtmlescape %}
+    <strong>{% htmlescape %}  </div>{% endhtmlescape %}</strong>{% htmlescape %}
+    </body>
+    ...
+    {% endhtmlescape %}</pre>
+
+
+
 
 1. Above the `<nav>`, type `<div class= "row">`. 
    This adds a **row** to your site. However, 
@@ -478,6 +560,30 @@ Bootstrap has other exclusive classes that align elements:
    as your site is not mobile optimized.
 
 1. Repeat the previous steps for `contact.html`.
+
+### Understand classes {: #classes-overview }
+
+You've just used your first **HTML class**. A class is an HTML attribute that defines a 
+**CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are 
+patterns that may apply to one or more HTML elements. 
+
+For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
+
+```
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+```
+
+In this case, the selector `.jumbotron` means "all HTML elements with the 
+class `jumbotron`". 
+
+While any HTML element can have a **class** attribute, 
+a class like `jumbotron` will not format 
+in the way you see on your site unless you have Bootstrap linked to your web page.
 
 ## Next steps {: #next-steps }
 
