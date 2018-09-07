@@ -117,7 +117,7 @@ shown and the user has responded to it.
         });
     });
 
-You can only call `prompt()` on the deferred event once, if the user dismissed
+You can only call `prompt()` on the deferred event once. If the user dismisses
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
 
