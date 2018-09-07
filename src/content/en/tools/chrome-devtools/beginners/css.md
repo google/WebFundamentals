@@ -106,7 +106,7 @@ In order to start creating your site, you need to set up your code:
        </figcaption>
      </figure>
 
-## Add CSS {: #add }
+## Understand CSS {: #add }
 
 **CSS** is a computer language that determines the layout and styling of web pages. For
 example, here is a paragraph with a border:
@@ -125,7 +125,7 @@ The code that you haven't seen before is `style="border: 1px dashed red; padding
 The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
 before attempting this tutorial.
 
-### Add inline styles {: #inline }
+## Add inline styles {: #inline }
 
 Use **inline styles** when you want to apply styles to a single element. 
 Try it now by adding a background color to your page's navigation menu:
@@ -150,7 +150,7 @@ Try it now by adding a background color to your page's navigation menu:
 1. Go to the **live tab** to see the changes! 
    The background of the `<nav>` section is now blue.
 
-#### View your inline style in DevTools {: #inline-devtools }
+### View your inline style in DevTools {: #inline-devtools }
 
 As you continue your journey to master web development, you will find that CSS can be tricky.
 You'll write some CSS code, expecting it to display one way, but the browser displays it
@@ -164,7 +164,7 @@ to each element.
    `<nav style="background-color: aliceblue;">` which verifies that the inline style is being applied
    to the `<nav>` element.
 
-### Re-use styles with internal stylesheets {: #internal }
+## Re-use styles on a single page with internal stylesheets {: #internal }
 
 Earlier, you saw an inline style that applied a style to a single `<p>` tag like this:
 
@@ -276,6 +276,8 @@ Use commas to add multiple selectors to a ruleset. Try it now:
 1. Click the **Contact** link to go back to the contact page. 
    Now, **Contact Me!** has the same font as the navigation links.
 
+## Experiment with DevTools {: #experiment }
+
 ### Add a declaration to an existing rulest in DevTools {: #add-declaration }
 
 DevTools also makes it easy to experiment with CSS changes.
@@ -322,7 +324,7 @@ Remember that changes you make in DevTools are lost when you reload the page. Tr
 
 1. Click **Reload**.
 
-### Re-use styles with external stylesheets {: #external}
+## Re-use styles across pages with external stylesheets {: #external}
 
 Earlier you added this internal stylesheet to `contact.html`:
 
@@ -384,7 +386,7 @@ Try it now:
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
 
-#### Use CSS frameworks {: #frameworks}
+## Use a CSS framework {: #framework }
 
 **CSS frameworks** are collections of styles built by other developers that make it easier
 to create attractive web sites. Instead of defining styles yourself, a framework gives you
@@ -402,42 +404,6 @@ a collection of styles that you can use on your page elements.
 1. Click the `Contact` link to go to the contact page. 
    The same changes are present. 
   
-
-Why did some of the elements change, but not others? This is because of a CSS property
-called **cascading**. One of the properties of cascading is that if you have multiple rulesets for an element, 
-the browser will choose to display the ruleset with the most **specific** selector. 
-For example, the Bootstrap style sheet has a ruleset for `a` elements, 
-but the stylesheet you made has a ruleset for `li a` elements. 
-Since "all list items containing a link" is more specific than "all links", 
-the browser uses the ruleset from your external stylesheet.
-
-However, if there are two rulesets with the same specificity, 
-the browser applies that last ruleset assigned to the element. 
-Both your stylesheet and the Bootstrap stylesheet have rulesets for `h1` elements, 
-but because you added Bootstrap's stylesheet last, 
-the browser applied the Bootstrap ruleset.
-
-This concept is a bit complicated, but DevTools provides a way to visualize **cascading**:
-
-1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open DevTools. 
-1. In the **Styles Pane**, click **Computed** to go to the **Computed Values Pane**. 
-   This pane allows you to see which rulesets have been applied by the browser.
-1. Right-click on **Contact** and select **Inspect**. 
-   Now you are looking at the CSS values for the contact link element.
-1. Expand the **font-family** menu with the gray arrow. 
-   In the menu you see that two items are crossed out. 
-   These are the default fonts for Bootstrap that your stylesheet overwrote.
-1. Click on the link that says **_reboot.scss:58**. This will take you to the place in the  
-   Bootstrap stylesheet where the font declaration was made. 
-   `body` is a less specific selector than `li a`, 
-   so the ruleset associated with `li a` is applied.
-1. Click on the **Elements** tab to go back to the **Elements Panel**.
-
-If you're using multiple stylesheets and a style isn't showing up, 
-you can use the **Computed Values Pane** to see if something wrote over the style.
-
-### Use Bootstrap CSS {: #bootstrap }
-
 In the last section, you added Bootstrap to your web pages, 
 which changed the fonts of some of the elements on your site. 
 CSS frameworks can help you make major changes to your page with very little code. 
@@ -513,54 +479,6 @@ Bootstrap has other exclusive classes that align elements:
 
 1. Repeat the previous steps for `contact.html`.
 
-
-## Polish your site {: #polish}
-Bootstrap's default CSS has given you a more polished site, 
-but there are still some issues you'll need to fix. 
-The spacing of the content both inside and outside 
-of the `<nav>` section and the jumbotron section looks off. DevTools can help change that:
-
-1. Go to the **live tab**. 
-1. Right click on the jumbotron (the big gray box) and click **Inspect**.
-
-
-Next to the **Styles Pane**, there is a diagram called the **Box Model Diagram**. 
-The **Box Model** is a set of properties that control the positioning of elements. 
-Each box has four elements: content, padding, border, and margin:
-
-1. Click on the left `-` in the **padding** box.
-
-2. Type `25`. 
-3. Press <kbd>Enter</kbd>. 
-   This moves the text in the jumbotron to the right so that it isn't so close to the edge.
-
-Do the same thing to the `<nav>` section:
-
-1. Right-click the `<nav>` section (the blue box) and click **Inspect**. 
-   The `<nav>` node is highlighted.
-
-1. Click the top `-` in the **padding box**. 
-1. Type `10`.
-1. Press <kbd>Enter</kbd>. This changes the padding on the top of the `<nav>` section from `0` pixels to `10` pixels.
-
-
-Put these changes in the external stylesheet you made earlier to save them:
-
-1. Copy `padding-top:10px` from the **element.style{}** ruleset.
-1. Go to the **editor tab**.
-1. Go to `style.css`.
-1. Paste the code you copied into the **nav{}** ruleset.
-1. Go back to the **live tab**.
-1. Right click on the jumbotron (the big gray box) and click **Inspect**.
-1. Copy everything in the **element.style{}** ruleset.
-1. Paste the **element.style{}** ruleset into `style.css`
-1. Replace **element.style{}** with `.jumbotron jumbotron-fluid`.
-
-The **Box Model Diagram** can edit other properties related to spacing and layout. 
-It can also change the size of an element, the element's **margins** 
-(the space around the element), and the element's **border** 
-(the space around an element's padding and content).
-
 ## Next steps {: #next-steps }
 
 Now that you've got HTML and CSS down, there's one more language you'll need
@@ -569,9 +487,11 @@ tutorial that will focus on how DevTools can help you create and fix your
 JavaScript code.
 
 ### Resources
+
 * [CSS Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 * [Bootstrap's Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 * [More Information on DevTools and CSS](/web/tools/chrome-devtools/css/)
 
 ## Feedback {: #feedback }
+
 {% include "web/_shared/helpful.html" %}
