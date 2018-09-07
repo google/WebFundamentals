@@ -276,7 +276,7 @@ Use commas to add multiple selectors to a ruleset. Try it now:
 1. Click the **Contact** link to go back to the contact page. 
    Now, **Contact Me!** has the same font as the navigation links.
 
-### Experiment with CSS changes in DevTools {: #edit }
+### Add a declaration to an existing rulest in DevTools {: #add-declaration }
 
 DevTools also makes it easy to experiment with CSS changes.
 
@@ -293,35 +293,38 @@ DevTools also makes it easy to experiment with CSS changes.
 1. Type `color` and then press <kbd>Enter</kbd>.
 1. Type `magenta` and then press <kbd>Enter</kbd> again. All of the text on the contact page is now magenta.
 
-You can also directly edit existing styles:
+### Edit a declaration in DevTools {: #edit-declaration }
 
-1. Copy this number: `#28a78c` This is a **Hexadecimal Color Code**, 
-   a different way of representing colors.
-1. Click on the gray square next to `gray`. A color picker pops up.
-1. In the box that says **Hex**, paste in the number you copied. 
-   The color of the font on the contact page will change.
+You can also edit existing declarations in DevTools. Try it now:
 
-Finally, you can add new rulesets:
+1. Click the magenta square next to `magenta`. A color picker pops up.
+1. Use the color picker to change the font text to a color that you like.
 
-1. Click on the gray plus to **Add a new style rule**. 
-   A ruleset will appear with the `a` selector.
-1. Replace `a` with `a:hover`. `hover` is a **pseudo-state selector**,
-   which defines a special state of an element. In this case, `a:hover` translates to, 
-   "any link that is being hovered over". 
-1. Inside the brackets in the ruleset, type `background-color: cornsilk`. 
-   Now you have a ruleset that translates to "change the background color of any link that
-   is being hovered over to cornsilk".
-1. Move your cursor over the home link. The link's background color will change.
+### Add a new ruleset in DevTools {: #add-ruleset }
+
+You can also add new rulesets in DevTools. Try it now:
+
+1. Click **New Style Rule**. A new ruleset appears. `a` is the selector.
+1. Replace `a` with `a:hover`. `:hover` is a **pseudo-class**. Use pseudo-classes to
+   style elements when they enter special states. For example, the `a:hover` style
+   only takes effect when you're hovering over an `<a>` element.
+1. Click between the brackets to add a new declaration.
+1. Type `background-color` for the declaration name and then press <kbd>Enter</kbd>.
+1. Type `green` for the declaration value and then press <kbd>Enter</kbd>.
+1. Hover your mouse over the **Home** link. The background of the link turns green.
 
 You can use DevTools to preview CSS changes you make in real time, 
 much like you did with HTML and the DOM.
 
+### Delete your changes {: #delete }
 
+Remember that changes you make in DevTools are lost when you reload the page. Try it now:
+
+1. Click **Reload**.
 
 ### Re-use styles with external stylesheets {: #external}
 
-[Earlier](#internal), you used internal stylesheets to apply styles to 
-`li a` and `h1` elements in `contact.html` like this:
+Earlier you added this internal stylesheet to `contact.html`:
 
 ```
 <style>
@@ -331,48 +334,51 @@ much like you did with HTML and the DOM.
 </style>
 ```
 
-What if you wanted to style the elements in `index.html` the same way? 
-What if you had a thousand pages and you wanted them to all be styled the same way?
-You'd have to copy and paste the stylesheet into every single web page on your site. 
-**External stylesheets** allow you to write your CSS once 
-so that applies to multiple web pages. Try it now:
+What if you wanted to style `index.html` the same way? 
+What if you had a *thousand* pages and you wanted to apply these styles to all of them?
+You'd have to copy and paste this internal stylesheet into every single web page on your site. 
+**External stylesheets** allow you to write your CSS once yet apply it to multiple pages.
+Try it now:
 
-1. Copy this code:
-
-```
-li a, h1 {
-   font-family: 'Courier New', Courier, monospace;
-}
-
-a:hover {
-  background-color:cornsilk;
-}
-
-nav {
-  background-color: aliceblue;
-}
-
-```
- You've seen the first two rulesets already. 
- The third ruleset represents the **inline style** you applied to the `<nav>` in the 
- *[Add inline styles](#inline)* section. It turns the background color of the `<nav>` 
-  section blue. 
-
-1. Go to the **editor tab**.
-1. In `contact.html`, delete everything between `<style>` and `</style>`, 
-   including the `<style>` and `</style>` tags. This removes the internal stylesheet.
-
-1. Go to `index.html` and remove the inline style (`style="background-color: aliceblue"`) 
+1. Go back to the **editor tab** and open `contact.html`.
+1. Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.
+1. Go to `index.html` and remove the inline style, `style="background-color: aliceblue;"`,
    from the `<nav>` tag.
-1. Click the **New File** button on the left-hand side.
-1. Replace `cool-file.js` with `style.css` and click **Add File**.
-   You've now created a blank external stylesheet.
-1. In `style.css`, paste in the code you copied. 
-1. Copy this code: `<link rel="stylesheet" href="style.css">`. 
-1. Go back to `index.html`. Above the `</head>` tag, paste the code you copied. 
-   The stylesheet is now linked to  `index.html`.
+
+    You have now removed all of the CSS that you previously added to your site.
+
+1. Click **New File**.
+1. Replace `cool-file.js` with `style.css` and then click **Add File**.
+1. Paste this code into `styles.css`:
+
+    <pre class="prettyprint lang-css">
+    li a, h1 {
+      font-family: 'Courier New', Courier, Serif;
+    }
+    a:hover {
+      background-color: green;
+    }
+    nav {
+      background-color: aliceblue;
+    }
+    </pre>
+
+    At this point, you have created an external stylesheet, but your HTML doesn't know that it exists, yet.
+
+1. Open `index.html`.
+1. Add `<link rel="stylesheet" href="style.css">` to your HTML.
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <head>
+      ...
+      <meta name="viewport" content="width=device-width, initial-scale=1">{% endhtmlescape %}<strong>
+    {% htmlescape %}  <link rel="stylesheet" href="styles.css">{% endhtmlescape %}</strong>{% htmlescape %}
+    </head>
+    ...
+    {% endhtmlescape %}</pre>
+
 1. Go back to `contact.html`. Above the `</head>` tag, paste the code you copied. 
-   The stylesheet is now linked to  `contact.html`.
+   The stylesheet is now linked to `contact.html`.
 1. Go to the **live tab**. The home page now has the same font 
    from the last section and a blue navigation section.
 1. Click the **Contact** link to go to the contact page. 
@@ -382,11 +388,7 @@ nav {
 
 **CSS frameworks** are collections of styles built by other developers that make it easier
 to create attractive web sites. Instead of defining styles yourself, a framework gives you
-consistent fonts, spacing, and so on for your elements. 
-This probably doesn't make complete sense yet, but it will after you complete 
-the following two sections.Complete the steps below to begin to understand 
-how frameworks work:
-
+a collection of styles that you can use on your page elements.
 
 1. Copy the following code: 
    `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">` 
