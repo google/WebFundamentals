@@ -139,9 +139,9 @@ user logs off.
 
     // Specify the cookie changes we're interested in during the install event.
     self.addEventListener('install', (event) => {
-      event.waitFor(async () => {
-        await cookieStore.subscribeToChanges([{ name: 'session_id' }]);
-      });
+      event.waitUntil(
+        cookieStore.subscribeToChanges([{ name: 'session_id' }])
+      );
     });
 
     // Delete cached data when the user logs out.
