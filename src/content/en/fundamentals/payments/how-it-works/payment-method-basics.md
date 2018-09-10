@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Methods page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-11 #}
-{# wf_updated_on: 2018-09-06 #}
+{# wf_updated_on: 2018-09-10 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -24,9 +24,9 @@ Payment Request API. Each payment method consists of a required payment method
 identifier and an optional detail parameter.
 
 In the following example we declare two payment methods: one that can process
-Visa, Mastercard, and JCB cards via basic-card; and an Android app called BobPay
+Visa, Mastercard, and JCB cards via `basic-card`; and an Android app called BobPay
 built to integrate with the Payment Request API via the URL
-https://bobpay.xyz/pay.
+`https://bobpay.xyz/pay`.
 
 ```javascript
 const methodData = [{
@@ -91,7 +91,7 @@ there are other standardization candidates under active discussion.
     payment method that supports payment by SEPAmail Applications such as RUBIS,
     GEMME, or JADE.
 
-In the example below, basic-card is specified as the `supportedMethods` value
+In the example below, `basic-card` is specified as the `supportedMethods` value
 and requires that the `data` value be supplied, containing a list of the
 supported card providers and card types.
 

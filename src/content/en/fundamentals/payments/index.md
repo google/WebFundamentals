@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-08-14 #}
-{# wf_updated_on: 2018-09-06 #}
+{# wf_updated_on: 2018-09-10 #}
 {# wf_blink_components: Blink>Payments #}
 
 # W3C Payment APIs {: .page-title }
@@ -48,7 +48,7 @@ businesses to serve more customers with a better developer experience and more s
   </div>
   <div style="min-width:50%">
     <h3>Standard and Open</h3>
-    W3C Payment APIs are an open source payment standard for the web platform for the first time
+    W3C Payment APIs are an open payment standard for the web platform for the first time
     in history. They are available for any players to implement.</div>
 </section>
 <section style="display:flex">
