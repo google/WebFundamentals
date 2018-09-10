@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-09-07 #}
+{# wf_updated_on: 2018-09-10 #}
 {# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -314,7 +314,7 @@ to an existing ruleset. Try it now:
      </figure>
 
     DevTools opens up alongside your page. The code that represents the Home link,
-    `<nav href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
+    `<a href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
     [Get Started with HTML and the DOM](html). In the **Styles** tab below the DOM Tree you can see the
     `font-family: 'Courier New', serif` declaration that you added to `contact.html` earlier.
 
@@ -366,20 +366,53 @@ to an existing ruleset. Try it now:
        </figcaption>
      </figure>
 
-### Edit a declaration in DevTools {: #edit-declaration }
+### Edit a declaration in DevTools {: #edit }
 
 You can also edit existing declarations in DevTools. Try it now:
 
 1. Click the magenta square next to `magenta`. A color picker pops up.
+
+     <figure>
+       <img src="imgs/css/edit1.png"
+            alt="The Color Picker."/>
+       <figcaption>
+         <b>Figure X</b>. The Color Picker
+       </figcaption>
+     </figure>
+
 1. Use the color picker to change the font text to a color that you like.
 
-### Add a new ruleset in DevTools {: #add-ruleset }
+     <figure>
+       <img src="imgs/css/edit2.png"
+            alt="Changing the font color to purple with the Color Picker."/>
+       <figcaption>
+         <b>Figure X</b>. Changing the font color to purple with the Color Picker
+       </figcaption>
+     </figure>
+
+### Add a new ruleset in DevTools {: #rule }
 
 You can also add new rulesets in DevTools. Try it now:
 
 1. Click **New Style Rule**. An empty ruleset appears with `a` as the selector.
+
+     <figure>
+       <img src="imgs/css/rule1.png"
+            alt="Adding a new rule."/>
+       <figcaption>
+         <b>Figure X</b>. Adding a new rule
+       </figcaption>
+     </figure>
+
 1. Replace `a` with `a:hover`.
 
+     <figure>
+       <img src="imgs/css/rule2.png"
+            alt="Replacing 'a' with 'a:hover'."/>
+       <figcaption>
+         <b>Figure X</b>. Replacing <code>a</code> with <code>a:hover</code>
+       </figcaption>
+     </figure>
 
     `:hover` is a **pseudo-class**. Use pseudo-classes to
     style elements when they enter special states. For example, the `a:hover` style
@@ -387,17 +420,34 @@ You can also add new rulesets in DevTools. Try it now:
 
 1. Click between the brackets to add a new declaration.
 1. Type `background-color` for the declaration name and then press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="imgs/css/rule3.png"
+            alt="Typing 'background-color'."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>background-color</code>
+       </figcaption>
+     </figure>
+
 1. Type `green` for the declaration value and then press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="imgs/css/rule4.png"
+            alt="Typing 'green'."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>green</code>
+       </figcaption>
+     </figure>
+
 1. Hover your mouse over the **Home** link. The background of the link turns green.
 
-You can use DevTools to preview CSS changes you make in real time, 
-much like you did with HTML and the DOM.
-
-### Delete your changes {: #delete }
-
-Remember that changes you make in DevTools are lost when you reload the page. Try it now:
-
-1. Click **Reload**.
+     <figure>
+       <img src="imgs/css/rule5.png"
+            alt="Hovering over the Home link to reveal its green background."/>
+       <figcaption>
+         <b>Figure X</b>. Hovering over the Home link to reveal its green background
+       </figcaption>
+     </figure>
 
 ## Re-use styles across pages with external stylesheets {: #external}
 
@@ -417,16 +467,71 @@ You'd have to copy and paste this internal stylesheet into every single web page
 **External stylesheets** allow you to write your CSS once yet apply it to multiple pages.
 Try it now:
 
+1. First, reload the live tab to remove the changes that you made in DevTools.
+
+     <figure>
+       <img src="imgs/css/external1.png"
+            alt="After reloading the page the changes that were made in DevTools are gone."/>
+       <figcaption>
+         <b>Figure X</b>. After reloading the page the changes that were made in DevTools are gone
+       </figcaption>
+     </figure>
+
 1. Go back to the **editor tab** and open `contact.html`.
+
+     <figure>
+       <img src="imgs/css/external2.png"
+            alt="contact.html"/>
+       <figcaption>
+         <b>Figure X</b>. contact.html
+       </figcaption>
+     </figure>
+
 1. Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.
-1. Go to `index.html` and remove the inline style, `style="background-color: aliceblue;"`,
+
+     <figure>
+       <img src="imgs/css/external3.png"
+            alt="The style tag has been removed."/>
+       <figcaption>
+         <b>Figure X</b>. The style tag has been removed
+       </figcaption>
+     </figure>
+
+1. Go to `index.html` and remove `style="background-color: aliceblue;"`
    from the `<nav>` tag.
 
     You have now removed all of the CSS that you previously added to your site.
 
+
+     <figure>
+       <img src="imgs/css/external4.png"
+            alt="The inline style has been removed from the nav element."/>
+       <figcaption>
+         <b>Figure X</b>. The inline style has been removed from the nav element
+       </figcaption>
+     </figure>
+
 1. Click **New File**.
+
+     <figure>
+       <img src="imgs/css/external5.png"
+            alt="The new file dialog."/>
+       <figcaption>
+         <b>Figure X</b>. The new file dialog
+       </figcaption>
+     </figure>
+
 1. Replace `cool-file.js` with `style.css` and then click **Add File**.
-1. Paste this code into `styles.css`:
+
+     <figure>
+       <img src="imgs/css/external6.png"
+            alt="Typing 'style.css'."/>
+       <figcaption>
+         <b>Figure X</b>. Typing <code>style.css</code>
+       </figcaption>
+     </figure>
+
+1. Paste this code into `style.css`:
 
     <pre class="prettyprint lang-css">
     li a, h1 {
@@ -439,6 +544,16 @@ Try it now:
       background-color: aliceblue;
     }
     </pre>
+
+
+     <figure>
+       <img src="imgs/css/external7.png"
+            alt="Adding code to style.css"/>
+       <figcaption>
+         <b>Figure X</b>. Adding code to <code>style.css</code>
+       </figcaption>
+     </figure>
+
 
     At this point, you have created an external stylesheet, but your HTML doesn't know that it exists, yet.
 
@@ -454,12 +569,46 @@ Try it now:
     ...
     {% endhtmlescape %}</pre>
 
-1. Go back to `contact.html`. Above the `</head>` tag, paste the code you copied. 
-   The stylesheet is now linked to `contact.html`.
+
+     <figure>
+       <img src="imgs/css/external8.png"
+            alt="Linking to style.css."/>
+       <figcaption>
+         <b>Figure X</b>. Linking to <code>style.css</code>
+       </figcaption>
+     </figure>
+
+1. Go to `contact.html` and add the link there, too.
+
+     <figure>
+       <img src="imgs/css/external9.png"
+            alt="Linking to style.css in contact.html."/>
+       <figcaption>
+         <b>Figure X</b>. Linking to <code>style.css</code> in <code>contact.html</code>
+       </figcaption>
+     </figure>
+
 1. Go to the **live tab**. The home page now has the same font 
    from the last section and a blue navigation section.
+
+     <figure>
+       <img src="imgs/css/external10.png"
+            alt="The home page."/>
+       <figcaption>
+         <b>Figure X</b>. The home page
+       </figcaption>
+     </figure>
+
 1. Click the **Contact** link to go to the contact page. 
    The contact page has the same formatting as the home page.
+
+     <figure>
+       <img src="imgs/css/external11.png"
+            alt="The contact page"/>
+       <figcaption>
+         <b>Figure X</b>. The contact page
+       </figcaption>
+     </figure>
 
 ## Use a CSS framework {: #framework }
 
