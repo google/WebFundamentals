@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
-{# wf_published_on: 2018-08-14 #}
+{# wf_published_on: 2018-09-10 #}
 {# wf_updated_on: 2018-09-10 #}
 {# wf_blink_components: Blink>Payments #}
 
