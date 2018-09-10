@@ -29,7 +29,7 @@ In Chrome 69, we've added support for:
 
 * [CSS Scroll Snap](#scroll-snap) allows you to create smooth, slick,
   scroll experiences.
-* [Display cutouts](#notch) let's you use the full area of the screen,
+* [Display cutouts](#notch) lets you use the full area of the screen,
   including any space behind the display cutout, sometimes called a notch.
 * The [Web Locks API](#web-locks) allows you to asynchronously acquire a
   lock, hold it while work is performed, then release it.
