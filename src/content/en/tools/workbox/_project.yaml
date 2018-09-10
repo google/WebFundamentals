@@ -15,3 +15,21 @@ social_media:
     width: 1200
     height: 675
 gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
+announcement:
+  description: |
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+        font-weight: 500;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style> The <a href="https://developer.chrome.com/devsummit/?utm_source=webfu&utm_medium=hpp-banner&utm_campaign=chromedevsummit_may18" class="gc-analytics-event" data-category="webFu" data-label="cds18-hpp" data-action="banner">#ChromeDevSummit</a> site is live, happening Nov 12-13 in San Francisco, CA<br> Check it out for details and request an invite. We'll be diving deep into modern web tech & looking ahead to the platform's future.
