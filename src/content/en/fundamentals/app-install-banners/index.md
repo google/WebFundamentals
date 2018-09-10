@@ -11,16 +11,16 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 {% include "web/_shared/contributors/petelepage.html" %}
 
 
-**Add to Home Screen**, sometimes referred to as the web app install prompt
+**Add to Home Screen**, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
-or desktop device. When installed, it adds your PWA to to their launcher,
-and runs it like any other installed app.
+or desktop device. After the user accepts the prompt, your PWA will be added
+to their launcher, and it will run like any other installed app.
 
 Chrome handles most of the heavy lifting for you, and on Android, Chrome will
-generate a [WebAPK](/web/fundamentals/integration/webapks) creating an even
+generate a [WebAPK](/web/fundamentals/integration/webapks), creating an even
 more integrated experience for your users.
 
-## What is the criteria? {: #criteria }
+## What are the criteria? {: #criteria }
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
@@ -29,7 +29,7 @@ has <code>"prefer_related_applications": true</code>, the
 <a href="/web/fundamentals/app-install-banners/native">native app install
 prompt</a> will be shown instead.
 
-## Show the add to home screen dialog {: #trigger }
+## Show the Add to Home Screen dialog {: #trigger }
 
 <figure class="attempt-right">
   <img src="images/a2hs-dialog-g.png" alt="Add to Home Screen dialog on Android">
