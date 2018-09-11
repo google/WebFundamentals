@@ -110,7 +110,7 @@ application, the process also goes away and the Operating System frees up the me
     <img src="/web/updates/images/inside-browser/part1/memory.png" alt="process and memory">
   </a>
   <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+    <span class="material-icons">play_circle_outline</span>click on the image to see animation
   </b>
   <figcaption>
     Figure 5: Diagram of a process using memory space and storing application data
@@ -129,7 +129,7 @@ without stopping other processes which are running different parts of the applic
       alt="worker process and IPC">
   </a>
   <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+    <span class="material-icons">play_circle_outline</span>click on the image to see animation
   </b>
   <figcaption>
     Figure 6: Diagram of separate processes communicating over IPC
@@ -228,7 +228,7 @@ the tabs are unresponsive. That’s sad.
     <img src="/web/updates/images/inside-browser/part1/tabs.png" alt="multiple renderer for tabs">
   </a>
   <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+    <span class="material-icons">play_circle_outline</span>click on the image to see animation
   </b>
   <figcaption>
     Figure 10: Diagram showing multiple processes running each tab
@@ -264,7 +264,7 @@ processes for less memory usage have been used on platform like Android before t
       alt="Chrome servicfication">
   </a>
   <b>
-    <span class="material-icons">play_circle_outline</span>click on the image to see annimation
+    <span class="material-icons">play_circle_outline</span>click on the image to see animation
   </b>
   <figcaption>
    Figure 11: Diagram of Chrome’s servicification moving different services into multiple processes 
