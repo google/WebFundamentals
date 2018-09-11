@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-11 #}
 {# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -690,8 +690,8 @@ Try in now by changing your header:
 
 ### Understand classes {: #classes-overview }
 
-Classes let you assign styles to arbitrary elements. Setting the `class` attribute
-of the `<header>` tags to `jumbotron` applied the following styles to them:
+Classes let you assign collections of styles to arbitrary elements. For example, setting the
+`class` attribute of the `<header>` tags to `jumbotron` applied the following styles to them:
 
 ```
 .jumbotron {
@@ -702,7 +702,7 @@ of the `<header>` tags to `jumbotron` applied the following styles to them:
 }
 ```
 
-One advantage of classes is that they let you apply styles to specific elements. For example,
+One advantage of classes is that they let you apply styles to whatever elements you want. For example,
 suppose you want to set the background color of *some* `<p>` elements to purple, but not *all* of them.
 You could define the style in a class:
 
@@ -721,69 +721,51 @@ And then apply the class to only the `<p>` elements that you want to style:
 <p class="custom-background">This will be purple.</p>
 ```
 
-TODO classes are what make frameworks easy
-
-Classes are what make it easy to 
-
-Frameworks let you quickly add a lot of styles to your page 
-
 ### Align elements {: #align }
 
-Bootstrap has other exclusive classes that align elements:
+Bootstrap also provides classes for aligning elements. Try it now:
 
-1. Copy this code: `class="container-fluid"` .
-1. Go to the **editor tab**.
-1. In `index.html`, wrap your `<nav>` and `<main>` elements in a `<div>`.
+1. Go back to the editor tab and open `index.html`.
+1. Add `class="container-fluid"` to your `<body>` tag.
 
-    <pre class="prettyprint lang-html">{% htmlescape %}...
-    <body class="container-fluid">
-      <header class="jumbotron jumbotron-fluid">
-        <p>Welcome to my site!</p>
-      </header>{% endhtmlescape %}
-    <strong>{% htmlescape %}  <div class="row">{% endhtmlescape %}</strong>{% htmlescape %}
-        <nav class="col-3">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <main class="col-9">
-          <h1>About Me</h1>
-          <p>I am learning web development. Recent accomplishments:</p>
-          <ul>
-            <li>Learned how to set up my code in Glitch.</li>
-            <li>Added content to my HTML.</li>
-            <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
-            <li>Learned the difference between HTML and the DOM.</li>
-          </ul>
-        </main>{% endhtmlescape %}
-    <strong>{% htmlescape %}  </div>{% endhtmlescape %}</strong>{% htmlescape %}
-    </body>
-    ...
-    {% endhtmlescape %}</pre>
+     <figure>
+       <img src="imgs/css/align1.png"
+            alt="Adding the 'container-fluid' class."/>
+       <figcaption>
+         <b>Figure X</b>. Adding the <code>container-fluid</code> class
+       </figcaption>
+     </figure>
 
+1. Wrap your `<nav>` and `<main>` elements in `<div class="row">`. Make sure to put `</div>` after
+   `</main>` in order to properly close the new tag.
 
+     <figure>
+       <img src="imgs/css/align2.png"
+            alt="Adding a row."/>
+       <figcaption>
+         <b>Figure X</b>. Adding a row
+       </figcaption>
+     </figure>
 
+1. Add `class="col-3"` to your `<nav>` tag and `class="col-9"` to your `<main>` tag.
 
-1. Above the `<nav>`, type `<div class= "row">`. 
-   This adds a **row** to your site. However, 
-   nothing will be visible until you assign elements to **columns**.
+     <figure>
+       <img src="imgs/css/align3.png"
+            alt="Adding the 'col-3' and 'col-9' classes."/>
+       <figcaption>
+         <b>Figure X</b>. Adding the <code>col-3</code> and <code>col-9</code> classes
+       </figcaption>
+     </figure>
 
-1. Below `</main>`, close the `<div>` with `</div>`. Now the `<nav>` section and the 
-   `<main>` section are in the same row.
+1. View your changes in the live tab.
 
-1. In the `<nav>` tag, insert the following code: `class= "col-2"` 
-   This assigns the `<nav>` section to a column that is 2 units wide. 
-
-1. In the `<main>` tag, insert the following code: `class= "col-10"` 
-   This assigns the `<nav>` section to a column that is 10 units wide.
-
-1. Go to the **live tab**. The `<nav>` section should be a sidebar on the left side 
-   of the screen. Note that on some mobile devices, 
-   the placement of your content may not reflect your changes, 
-   as your site is not mobile optimized.
-
-1. Repeat the previous steps for `contact.html`.
+     <figure>
+       <img src="imgs/css/align4.png"
+            alt="The nav content is now to the left of the main content."/>
+       <figcaption>
+         <b>Figure X</b>. The nav content is now to the left of the main content
+       </figcaption>
+     </figure>
 
 ## Next steps {: #next-steps }
 
