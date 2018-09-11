@@ -394,7 +394,8 @@ You can also edit existing declarations in DevTools. Try it now:
 
 You can also add new rulesets in DevTools. Try it now:
 
-1. Click **New Style Rule**. An empty ruleset appears with `a` as the selector.
+1. Click **New Style Rule** ![New Style Rule](/web/tools/chrome-devtools/images/shared/new-style-rule.png){: .inline-icon },
+   which is next to **.cls**. An empty ruleset appears with `a` as the selector.
 
      <figure>
        <img src="imgs/css/rule1.png"
@@ -618,39 +619,113 @@ a collection of styles that you can use on your page elements.
 
 1. Copy the following code: 
    `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">` 
-   This code tells the browser to import a framework called **Bootstrap**.
-1. In the `contact.html` file, paste the code you copied directly above the `</head>` tag.
-1. Go to `index.html`.
-1. Paste the code you copied above the `</head>` tag.
-1. Go to the **live tab**. While the background color of the `<nav>` 
-   and the font of the `li a` elements are the same, 
-   the font of the other elements has changed.
-1. Click the `Contact` link to go to the contact page. 
-   The same changes are present. 
+1. Go to the editing tab and paste the code into `contact.html`.
+
+     <figure>
+       <img src="imgs/css/framework1.png"
+            alt="Linking to the framework in contact.html."/>
+       <figcaption>
+         <b>Figure X</b>. Linking to the framework in contact.html
+       </figcaption>
+     </figure>
+
+1. Paste the code into `index.html`, as well.
+
+     <figure>
+       <img src="imgs/css/framework2.png"
+            alt="Linking to the framework in index.html"/>
+       <figcaption>
+         <b>Figure X</b>. Linking to the framework in index.html
+       </figcaption>
+     </figure>
+
+1. Go back to the live tab to view your changes. While the background color of the `<nav>` 
+   and the font of the `li a` elements are the same, the font of the other elements has changed.
+
+     <figure>
+       <img src="imgs/css/framework3.png"
+            alt="Some of the font on the home page has changed because of the framework."/>
+       <figcaption>
+         <b>Figure X</b>. Some of the font on the home page has changed because of the framework
+       </figcaption>
+     </figure>
 
 ### Use a class {: #class }
  
 In the last section, you added Bootstrap to your web pages, 
 which changed the fonts of some of the elements on your site. 
 CSS frameworks can help you make major changes to your page with very little code. 
-For example, you are going to take your header from this: 
-
-To this:
-
-With a single line of code.  
+Try in now by changing your header:
 
 1. Copy this code: `class="jumbotron jumbotron-fluid"`
-1. Go to **the editor tab**.
-1. In `index.html`, paste the code you copied into the `<header>` tag. 
-   This tells the browser that the `<header>` tag should have the attributes of a jumbotron,
-   which tells Bootstrap to apply a certain ruleset to the tag.
-1. Go to the **live tab**. Now, there is a big gray box around 
-   the elements that were in the `<header>` tag.
-1. Go back to the **editor tab**.
-1. In `contact.html`, paste the code you copied into the `<header>` tag. 
-1. Go back to the **live tab**.
-1. Click the **Contact** link to go to the contact page. 
-   The contact page has the same formatting as the home page.
+1. Add this code to your `<header>` tag in `index.html`.
+
+     <figure>
+       <img src="imgs/css/jumbotron1.png"
+            alt="Adding the jumbotron class in index.html."/>
+       <figcaption>
+         <b>Figure X</b>. Adding the jumbotron class in index.html
+       </figcaption>
+     </figure>
+
+1. Add the code to your `<header>` tag in `contact.html`, too.
+
+     <figure>
+       <img src="imgs/css/jumbotron2.png"
+            alt="Adding the jumbotron class in contact.html."/>
+       <figcaption>
+         <b>Figure X</b>. Adding the jumbotron class in contact.html
+       </figcaption>
+     </figure>
+
+1. View your changes in the live tab. There's a big, grey box around your header now.
+
+     <figure>
+       <img src="imgs/css/jumbotron3.png"
+            alt="The header now has a big, grey box around it."/>
+       <figcaption>
+         <b>Figure X</b>. The header now has a big, grey box around it
+       </figcaption>
+     </figure>
+
+### Understand classes {: #classes-overview }
+
+Classes let you assign styles to arbitrary elements. Setting the `class` attribute
+of the `<header>` tags to `jumbotron` applied the following styles to them:
+
+```
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+```
+
+One advantage of classes is that they let you apply styles to specific elements. For example,
+suppose you want to set the background color of *some* `<p>` elements to purple, but not *all* of them.
+You could define the style in a class:
+
+```
+.custom-background {
+  background-color: purple;
+}
+```
+
+And then apply the class to only the `<p>` elements that you want to style:
+
+```
+<p>This won't be purple.</p>
+<p class="custom-background">This will be purple.</p>
+<p>This won't be purple.</p>
+<p class="custom-background">This will be purple.</p>
+```
+
+TODO classes are what make frameworks easy
+
+Classes are what make it easy to 
+
+Frameworks let you quickly add a lot of styles to your page 
 
 ### Align elements {: #align }
 
@@ -709,30 +784,6 @@ Bootstrap has other exclusive classes that align elements:
    as your site is not mobile optimized.
 
 1. Repeat the previous steps for `contact.html`.
-
-### Understand classes {: #classes-overview }
-
-You've just used your first **HTML class**. A class is an HTML attribute that defines a 
-**CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are 
-patterns that may apply to one or more HTML elements. 
-
-For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
-
-```
-.jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #e9ecef;
-  border-radius: .3rem;
-}
-```
-
-In this case, the selector `.jumbotron` means "all HTML elements with the 
-class `jumbotron`". 
-
-While any HTML element can have a **class** attribute, 
-a class like `jumbotron` will not format 
-in the way you see on your site unless you have Bootstrap linked to your web page.
 
 ## Next steps {: #next-steps }
 
