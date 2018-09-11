@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-11 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -20,8 +20,8 @@ The [Payment Request API](https://www.w3.org/TR/payment-request/) brought to the
 web a native browser-based interface that allows users to enter required
 purchase information easier than ever before. The API can also invoke payment
 apps that provide [various kinds of payment
-methods](/web/fundamentals/payments/how-it-works/payment-method-basics), such as
-e-money, cryptocurrency, bank transfers, and more. 
+methods](/web/fundamentals/payments/basics/payment-method-basics) such as
+e-money, cryptocurrency, bank transfers, and more.
 
 The [Payment Handler API](https://www.w3.org/TR/payment-handler/) is an emerging
 web standard that enables websites to act as a payment app. With other related
@@ -35,9 +35,8 @@ Payment Handler API.
 ## Overview
 
 A payment app built with the Payment Handler API includes multiple endpoints
-that return specific content to a request.
-
-This chart shows example URL mappings of endpoints used in this document.
+that return specific content to a request. This chart shows example URL mappings
+of endpoints used in this document.
 
 <table>
 <tr>
@@ -86,7 +85,7 @@ JavaScript code that handles a payment request.
 <code>/pay</code>
 </td>
 <td markdown="block">
-A Payment Method Identifier URL that returns an HTTP header pointing to the 
+A Payment Method Identifier URL that returns an HTTP header pointing to the
 payment method manifest.
 </td>
 </tr>
@@ -100,52 +99,54 @@ The actual checkout page exposed to users.
 </tr>
 </table>
 
-**Note:** Although code examples in this document include URLs such as
-[https://bobpay.xyz](https://bobpay.xyz), they do not necessarily match what is
-implemented at [https://bobpay.xyz](https://bobpay.xyz). The actual BobPay app's
-source code can be found
-[here](https://github.com/madmath/payment-request-show/tree/master/bobpay/public/pay).
+Note: Although code examples in this document include URLs such as
+`https://bobpay.xyz`, they do not necessarily match what is actually implemented
+at `https://bobpay.xyz`. The demo BobPay app's source code can be found in [this
+GitHub
+repository](https://github.com/madmath/payment-request-show/tree/master/bobpay/public/pay).
 
 ## Define a payment method identifier
 
 A [payment method
 identifier](https://w3c.github.io/payment-method-id/#dfn-payment-method-identifiers)
-can be specified as a URL such as `https://bobpay.xyz/pay` that will be used on a
+can be specified as a URL such as `https://bobpay.xyz/pay` that is used on a
 merchant website.
 
 ```js
-const request = new PaymentRequest([{  
-  supportedMethods: 'https://bobpay.xyz/pay'  
-}], {  
-  total: {  
-    label: 'total',  
-    amount: { value: '10', currency: 'USD' }  
-  }  
+const request = new PaymentRequest([{
+  supportedMethods: 'https://bobpay.xyz/pay'
+}], {
+  total: {
+    label: 'total',
+    amount: { value: '10', currency: 'USD' }
+  }
 });
 ```
-The browser will [send a HEAD
-HTTP](https://w3c.github.io/payment-method-manifest/#accessing)[ request to the
-URL](https://w3c.github.io/payment-method-manifest/#accessing), which will
-respond to the request with status code `200 OK` or `204 No Content` including
-the URL of where the [payment method
-manifest](https://w3c.github.io/payment-method-manifest/) is hosted. For
-example, if it is at `https://bobpay.xyz/payment-manifest.json`, the response
-might look like this:
+
+The browser [sends a `HEAD` HTTP request to the
+URL](https://w3c.github.io/payment-method-manifest/#accessing), which responds
+to the request with status code `200 OK` or `204 No Content` plus the URL of the
+[payment method manifest](https://w3c.github.io/payment-method-manifest/). For
+example, if the manifest is at `https://bobpay.xyz/payment-manifest.json`, the
+response might look like this.
+
 ```
 Link: <https://bobpay.xyz/payment-manifest.json>; rel="payment-method-manifest"
 ```
-The URL can be a fully-qualified domain name or a relative path. Inspect 
-`https://bobpay.xyz/pay/` for network traffic to see an 
-example. You can do this from a command line using the curl command:
 
-```
+The URL can be a fully-qualified domain name or a relative path. Inspect
+`https://bobpay.xyz/pay/` for network traffic to see an example. You can do this
+from a command line using the `curl` command:
+
+```shell
 curl --head https://bobpay.xyz/pay
 ```
+
 ## Locate a payment method manifest
 
 A [payment method manifest](https://w3c.github.io/payment-method-manifest/) is a
-JSON file that defines which payment apps can use this payment method. The
-manifest file resides on your web server.
+JSON file that resides on your web server and defines which payment apps can use
+this payment method. A manifest file might look like this.
 
 ```json
 {
@@ -158,9 +159,9 @@ manifest file resides on your web server.
 
 ### Important properties:
 
-* **`default_applications`:** An array of absolute, fully-qualified URLs that points
-  to web app manifests where the payment apps are hosted. This array is expected
-  to allocate the development manifest, production manifest, etc.
+* **`default_applications`:** An array of absolute, fully-qualified URLs that
+  points to web app manifests where the payment apps are hosted. This array is
+  expected to reference the development manifest, production manifest, etc.
 * **`supported_origins`:** An array of URLs that points to origins that may host
   third-party payment apps implementing the same payment method. Note that a
   payment method can be supported by multiple payment apps. Use `*` to indicate
@@ -168,10 +169,10 @@ manifest file resides on your web server.
 
 ## Locate a web app manifest
 
-You'll need a [web app
-manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) file, as the
-payment app will act as a [Progressive Web App](/web/progressive-web-apps/)
-(PWA).
+Because the payment app acts as a [Progressive Web App
+(PWA)](/web/progressive-web-apps/), you need a [web app
+manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) file similar to
+this one.
 
 ```json
 {
@@ -211,24 +212,25 @@ payment app will act as a [Progressive Web App](/web/progressive-web-apps/)
 
 <figure>
   <img src="../images/web-payment-apps/pay-with-bobpay.png" alt="Pay with Bobpay" />
-  <figcaption><i>Web App Manifest's <code>name</code> property will be used as a payment app name</i></figcaption>
+  <figcaption><i>The web app manifest's <code>name</code> property is used as the payment app name</i></figcaption>
 </figure>
 
-Name the file `manifest.json` for example and place it on the web server,
-typically in the root folder, such as `https://www.example.com/manifest.json`.
-Point to the file from the HTML where you want it to be identified as part of
-the payment app.
+Name the file `manifest.json` and place it on the web server, typically in the
+root folder, such as `https://www.example.com/manifest.json`. Point to the file
+from the HTML page that identifies it as part of the payment app.
+
 ```
 <link rel="manifest" href="/manifest.json">
 ```
 Chrome downloads this manifest at the time of payment app installation, so the
 page that installs the payment app (see next section) should contain this
-`link` element.
+`<link>` element.
 
 ## Install a payment app and set a payment instrument
 
 Include the following JavaScript as part of the page that installs a service 
 worker.
+
 ```js
 // Check if service worker is available 
 if ('serviceWorker' in navigator) {
@@ -253,14 +255,14 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Let's break this code down.
+Let's examine this code in more detail.
 
 ### Register a service worker
 
 Assuming you have a separate JavaScript file named `service-worker.js`,
-[register the file as a source of the service
+[register the file as the source of the service
 worker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register).
-Be mindful of the [service worker's
+Be mindful of the [service worker
 scope](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Why_is_my_service_worker_failing_to_register)
 concept.
 
@@ -280,33 +282,33 @@ Service worker registration returns a promise. Continue registering a payment
 instrument using the payment manager.
 
 ```js
-  // When service worker registration is done,  
-  // you'll receive a service worker registration object 
+  // When service worker registration is done,
+  // you'll receive a service worker registration object
   // (https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration).
 
-  // Check if Payment Handler is available  
+  // Check if Payment Handler is available
   if (!registration.paymentManager) return;
 
-  // `userHint` will be an exposed next to the name of the  
-  // payment app. The user hint should be user specific.  
-  // For example, this can be user email address.  
-  // If the user is on a public computer, be sure to clear the user  
-  // specific data after user logs out.  
+  // `userHint` will be an exposed next to the name of the
+  // payment app. The user hint should be user specific.
+  // For example, this can be user email address.
+  // If the user is on a public computer, be sure to clear the user
+  // specific data after user logs out.
   registration.paymentManager.userHint = 'payment-handler user hint';
 ```
 
+As shown above,
 [`registration.paymentManager.userHint`](https://w3c.github.io/payment-handler/#userhint-attribute)
-will optionally set your payment app's hint. This is handy when you want to show
-something like `Visa ****4242`.
+can optionally set your payment app's hint. This is handy when you want to show
+some dynamic text like `Visa ****4242`.
 
 <figure>
   <img src="../images/web-payment-apps/user-hint.png" alt="User Hint" />
   <figcaption><i><code>userHint</code> will be used as second string in payment app interface.</i></figcaption>
 </figure>
 
-Note: userHint has been temporarily removed from the payment app interface in
+Note: `userHint` has been temporarily removed from the payment app interface in
 M68 for security considerations.
-
 
 ```js
   registration.paymentManager.instruments.set(
@@ -324,32 +326,34 @@ M68 for security considerations.
 ```
 
 You can call
-[`registration.paymentManager.instrument.set()`](https://w3c.github.io/payment-handler/#paymentinstruments-interface) 
-to set your app's details. It accepts two arguments.
+[`registration.paymentManager.instrument.set()`](https://w3c.github.io/payment-handler/#paymentinstruments-interface)
+to set your app's details. It accepts two arguments, `instrumentKey` and
+`paymentInstrument`.
 
 ```js
 registration.paymentManager.instruments.set(instrumentKey, paymentInstrument)
 ```
 
-Set a string that identifies the payment instrument as the first argument. This 
-can be any arbitrary string, and is used to identify instruments when you want 
-to update them. Therefore, we recommended that you use an identifier from your 
+Set a string that identifies the payment instrument as the first argument. This
+can be any arbitrary string, and is used to identify instruments when you want
+to update them. Therefore, we recommended that you use an identifier from your
 payment app backend.
 
 Set an object containing the payment instrument details
 ([`PaymentInstrument`](https://w3c.github.io/payment-handler/#dom-paymentinstrument))
 as the second argument.
 
-* **`name`:** Set a string as the instrument name. This is ignored in Chrome, which
-  uses the web app manifest's `name` property, but other browsers may use it.
+* **`name`:** Set a string as the instrument name. This is ignored in Chrome,
+  which uses the web app manifest’s `name` property, but other browsers may use
+  it.
 * **`icons`:** Set an array of
-  [`ImageObject`](https://w3c.github.io/payment-handler/#imageobject-dictionary)s
+  [`ImageObject`s](https://w3c.github.io/payment-handler/#imageobject-dictionary)
   the Payment Request sheet will display. This is ignored in Chrome, which uses
   the web app manifest's `icons` property, but other browsers may use it.
 * **`method`:** A supported payment method identifier.
-* **`capabilities`:** Set the payment method specific parameters as an object. As of
-  Feb 2018, `basic-card` is the only payment method that accepts capabilities.
-  See the following example.
+* **`capabilities`:** Set the payment method specific parameters as an object.
+  As of August 2018, `basic-card` is the only payment method that accepts
+  `capabilities`. See the following example.
 
 ```
 const request = new PaymentRequest([{ 
@@ -384,24 +388,23 @@ payment app's manifest must have a `serviceworker` section to indicate where to
 get the `service-worker.js` and its registration scope (as well as its name and
 icon).
 
-JIT-installable payment apps will be presented to the user when the payment
-request dialog is shown. After the user chooses an installable payment app and
-clicks "Pay", the payment app will be installed before sending a
+JIT-installable payment apps are presented to the user when the payment request
+dialog is shown. After the user chooses an installable payment app and clicks
+"Pay", the payment app is installed and then a
 [`PaymentRequestEvent`](https://w3c.github.io/payment-handler/#dom-paymentrequestevent)
-to it. Note that
+is sent to it. Note that
 [`CanMakePaymentEvent`](https://w3c.github.io/payment-handler/#dom-canmakepaymentevent)
 will not be sent to a JIT-installable payment app because the event happens
 before the payment request dialog is shown.
 
-After the installation, the JIT-installable payment app will be set as the
-supported payment method. The payment app can update it later as an installed
-payment app. 
+After the installation, the JIT-installable payment app is set as the supported
+payment method. The payment app can update it later as a previously-installed
+payment app.
 
 ## Write a service worker
 
 After the service worker is installed and the payment instrument is set, you are
-ready to accept payment requests. Here's the content of an example
-`service-worker.js`.
+ready to accept payment requests. Here's an example `service-worker.js`.
 
 ```js
 const origin = 'https://bobpay.xyz';
@@ -453,15 +456,15 @@ const sendPaymentRequest = () => {
   });
 }
 ```
-Let's break this code down.
+Let's break down this code block as well.
 
 ### Receive a `paymentrequest` event and open a window
 
-As a user selects your payment method and presses Pay, the service worker will
-receive a `paymentrequest` event. To receive it, add an event listener.
+When a user selects your payment method and presses "Pay", the service worker
+receives a `paymentrequest` event. To receive it, add an event listener.
 
 ```js
-// `self` is global object in service worker  
+// `self` is global object in service worker
 self.addEventListener('paymentrequest', e => {
   // Preserve the event for future use
   payment_request_event = e;
@@ -469,9 +472,9 @@ self.addEventListener('paymentrequest', e => {
   // As it's not implemented in Chrome yet.
   resolver = new PromiseResolver();
 
-  // Pass a promise that resolves when payment is done.  
-  e.respondWith(resolver.promise);  
-  // Open the checkout page.  
+  // Pass a promise that resolves when payment is done.
+  e.respondWith(resolver.promise);
+  // Open the checkout page.
   e.openWindow(checkoutURL).then(client => {
     if (client === null) {
       // Make sure to reject the promise on failure
@@ -496,10 +499,10 @@ The service worker needs to exchange messages with the frontend. To do this, add
 self.addEventListener('message', e => {
 ```
 
-Open a window in order to get authorization from the payer to proceed with
-payment. To display total price, etc., obtain a message from the opened window
-that it is ready, then post the payment info back to it. In this case, we set
-`payment_app_window_ready` to signal that condition.
+The listener opens a window in order to get authorization from the payer to
+proceed with payment. To display total price, etc., obtain a message from the
+opened window that it is ready, then post the payment info back to it. In this
+case, we set `payment_app_window_ready` to signal that condition.
 
 ```js
   // Determine a message that tells the service worker that
@@ -510,8 +513,8 @@ that it is ready, then post the payment info back to it. In this case, we set
     if (!payment_request_event) return;
 ```
 
-Now, let's send the payment details back. In this case we're only sending the
-total of the payment request, but you can pass more details if you like.
+Now send the payment details back. In this case we're only sending the `total`
+of the payment request, but you can pass more details if you like.
 
 ```js
     // Query all open windows
@@ -552,7 +555,7 @@ with the payment details.
 ## Write frontend code
 
 The checkout frontend will be the actual interface that users will interact
-with. Here's a quick sample:
+with. Here's a quick sample.
 
 ```js
 let client;
@@ -581,12 +584,12 @@ onCancel() {
 }
 ```
 
-Let's break this code down.
+Again, let's examine this code.
 
 ### Listen to service worker messages and let it know the window is ready
 
 Let the service worker know that it is ready to receive information by sending a
-message. Don't forget to listen for its message back as well.
+message. Don't forget to listen for its message as well.
 
 ```js
 // Listen to messages from service worker
@@ -599,12 +602,12 @@ navigator.serviceWorker.addEventListener('message', e => {
 navigator.serviceWorker.controller.postMessage('payment_app_window_ready');
 ```
 
-### Pay operation
+### Invoke the Pay operation
 
-You'll probably want to authenticate the user and let them authorize payment.
-(This process is outside the scope of this document.) Once the user indicates
-they want to make the payment, send a message to the service worker with the
-information required for merchant to proceed.
+You'll probably want to authenticate the user and let them authorize payment,
+although that process is outside the scope of this document. Once the user
+indicates they want to make the payment, send a message to the service worker
+with the information required for merchant to proceed.
 
 ```js
 onPay() {
@@ -621,11 +624,20 @@ onPay() {
 
 ### Cancel the operation
 
-You can set up a protocol with the service worker to tell it that the operation
+You can set up a protocol with the service worker to notify it if the operation
 is canceled. This code is sending a sample cancel message.
+
 ```js
 onCancel() {
   if (!client) return;
   client.postMessage('The payment request is cancelled by user');
 }
 ```
+
+## Summary
+
+The Payment Handler API is an emerging web standard that enables a website to
+act as a payment app by integration into a website that uses the Payment Request
+API. By implementing these related specifications, you can produce a clean,
+browser-based UI that makes user purchases as smooth and seamless as a native
+app.

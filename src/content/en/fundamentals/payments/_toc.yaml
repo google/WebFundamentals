@@ -3,14 +3,14 @@ toc:
   section:
   - title: Overview
     path: /web/fundamentals/payments/
-  - title: How it works
+  - title: Basics
     section:
     - title: How payment ecosystem works
-      path: /web/fundamentals/payments/how-it-works/how-payment-ecosyste-works
+      path: /web/fundamentals/payments/basics/how-payment-ecosyste-works
     - title: How payment request api works
-      path: /web/fundamentals/payments/how-it-works/how-payment-request-api-works
+      path: /web/fundamentals/payments/basics/how-payment-request-api-works
     - title: Payment method basics
-      path: /web/fundamentals/payments/how-it-works/payment-method-basics
+      path: /web/fundamentals/payments/basics/payment-method-basics
   - title: Merchant Guide
     section:
     - title: Deep Dive into the Payment Request API

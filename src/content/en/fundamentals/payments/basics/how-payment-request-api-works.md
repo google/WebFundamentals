@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-11 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How Payment Request API Works {: .page-title }
@@ -50,11 +50,11 @@ _supportedMethods_ and, optionally, _data_.
 The existence and content of _data_ depends on the content of
 _supportedMethods_, as in the example below. The first method, `basic-card`, is
 a [standardized
-method](https://docs.google.com/document/d/13hYK7-ddiRpD-VdD05310ZTUxrfUZ3Zj911NofaFc6I/edit?ts=5b075b04#)
+method](/web/fundamentals/payments/basics/payment-method-basics#standardized)
 and requires `data` to list the supported card types; the second method,
 `https://bobpay.xyz/pay`, is a [URL-based payment
-method](https://docs.google.com/document/d/13hYK7-ddiRpD-VdD05310ZTUxrfUZ3Zj911NofaFc6I/edit#heading=h.3lvtd3sanlb1)
-and (in this case) requires no additional `data` values.
+method](/web/fundamentals/payments/basics/payment-method-basics#url-based) and
+(in this case) requires no additional `data` values.
 
 ```javascript
 // Supported payment methods
@@ -164,7 +164,7 @@ result of PSP returns.
 ## Next Up
 
 Learn more about the payment method types in [Standardized vs. URL-based Payment
-Methods](/web/fundamentals/payments/how-it-works/payment-method-basics).
+Methods](/web/fundamentals/payments/basics/payment-method-basics).
 
 To learn more about the Payment Request API itself, checkout [Deep Dive into the
 Payment Request

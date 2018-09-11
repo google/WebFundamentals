@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-11 #}
 {# wf_blink_components: Blink>Payments #}
 
 # W3C Payment APIs {: .page-title }
@@ -11,11 +11,11 @@ description: Overview page to the W3C Payment APIs doc set.
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 
-<div class="video-wrapper-full-width">
+<!-- <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="hmqZxP6iTpo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div>
+</div> -->
 
 ## Introduction
 
@@ -74,6 +74,28 @@ web, and can easily integrate a secure payment solution.</div>
 
 ## Next Up
 
-Learn about the basics of W3C Payment APIs, including how the W3C Payment APIs ecosystem works 
-and the anatomy of payment apps, in 
-[How the Payment Ecosystem Works](/web/fundamentals/payments/how-it-works/how-payment-ecosyste-works).
+This document aims at developers who are working for payment industries,
+especially at merchants, payment service providers and payment handlers.
+
+**All developers** should start with reading through ["Basics"
+section](/web/fundamentals/payments/basics/how-payment-ecosyste-works).
+
+**Merchants without PCI-DSS compliance** should then consult with their payment
+service provider to see if they have support for Payment Request API. If they
+don't, consider forwarding this document and ask them to support W3C Payment
+APIs. [UX
+considerations](/web/fundamentals/payments/merchant-guide/payment-request-ux-considerations)
+of "Merchant Guide" should be also helpful.
+
+
+**Merchants or payment service providers with PCI-DSS compliance** should
+proceed to ["Merchants
+Guide"](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request)
+and learn the Payment Request API in details.
+
+**Payment handlers** should proceed to "Payment Apps Developer Guide" section.
+Depending on your technology set, consider implementing either [Android payment
+app](/web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps)
+or [web-based payment
+app](/web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps)
+by reading respective section.

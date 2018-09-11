@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Methods page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-11 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -103,6 +103,12 @@ data: {
 }
 ```
 
+Warning: `basic-card` payment method passes you a non-tokenized payment
+credential. Make sure that you are compliant with PCI DSS in order to handle it.
+Also, if you are interested to [take advantage of card information stored to
+Google](https://medium.com/dev-channel/web-payments-payment-request-api-and-google-pay-a1073e405235),
+consider using [Google Pay](/pay/api/web/).
+
 ### URL-based
 
 URL-based payment methods are those that anyone can define independently,
@@ -134,10 +140,21 @@ data: {
 }
 ```
 
-URL-based payment methods other than Google Pay include Apple Pay and Samsung
-Pay. If you want to learn more about them, including their `data` property
-details, check out the links below.
+## Existing payment method identifiers
 
-*   [Google Pay](/pay/api/web/)
-*   [Apple Pay](https://developer.apple.com/documentation/apple_pay_on_the_web)
-*   [Samsung Pay](https://developer.samsung.com/internet/android/web-payments-guide)
+*   [Google Pay (`https://google.com/pay`)](/pay/api/web/)
+*   [Apple Pay (`https://apple.com/apple-pay`)](https://developer.apple.com/documentation/apple_pay_on_the_web)
+*   [Samsung Pay (`https://spay.samsung.com`)](https://developer.samsung.com/internet/android/web-payments-guide)
+*   [Tez (`https://tez.google.com/pay`)](/pay/india/api/web/)
+
+Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to
+us if your payment app supports Payment Request API but is not listed here.
+
+## Next Up
+
+If you handle payments and are interested to build your own payment app, proceed
+to [Android payment apps developer
+guide](/web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps)
+or [web based payment apps developer
+guide](/web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps)
+to learn how to implement them.
