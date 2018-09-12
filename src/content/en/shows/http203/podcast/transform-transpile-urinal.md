@@ -35,7 +35,7 @@ In this episode:
 * [`transform-box`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box) - [Examples and
   workarounds](https://codepen.io/jaffathecake/full/EeVrMv/).
 * Urinal dynamics.
-* [Session stroage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
+* [Session storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
 * [The page lifecycle API](/web/updates/2018/07/page-lifecycle-api).
 
 <a href="http://feeds.feedburner.com/Http203Podcast">
