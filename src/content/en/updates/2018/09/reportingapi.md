@@ -74,7 +74,7 @@ to report errors to:
 Report-To: {
              "max_age": 10886400,
              "endpoints": [{
-               "url": "https://example.com/browser-errors"
+               "url": "https://analytics.provider.com/browser-errors"
              }]
            }
 ```
@@ -85,7 +85,7 @@ Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS; Access-Control-Allow-
 
 In the example, sending this response header with your main page
 configures the browser to report browser-generated warnings
-to the endpoint `https://example.com/browser-errors` for `max_age` seconds.
+to the endpoint `https://analytics.provider.com/browser-errors` for `max_age` seconds.
 It's important to note that all subsequent HTTP requests made by the page
 (for images, scripts, etc.) are ignored. Configuration is setup during
 the response of the main page.
@@ -293,7 +293,7 @@ Report-To: {
 
 For backwards compatibility, continue to use `report-uri` along with `report-to`.
 In other words: `Content-Security-Policy: ...; report-uri https://example.com/csp-reports; report-to groupname`.
-Browsers that support `report-to` will use it instead of the `report-uri`.
+Browsers that support `report-to` will use it instead of `report-uri`.
 {: .key-point }
 
 ### Network errors {: #nel }
