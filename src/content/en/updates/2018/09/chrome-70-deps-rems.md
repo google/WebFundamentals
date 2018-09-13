@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 70 to help you plan.
 
-{# wf_updated_on: 2018-09-07 #}
+{# wf_updated_on: 2018-09-13 #}
 {# wf_published_on: 2018-09-13 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink #}
@@ -17,7 +17,11 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 
 ## Remove AppCache from insecure contexts.
 
-[Intent to Remove]() &#124;
+When used over insecure contexts, AppCache potentially allows *persistent* online and offline cross-site scripting attacks. This is a serious escalation from regular cross-site scripting.
+
+To mitigate this threat, AppCache is now only supported on origins that serve over HTTPS. 
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/UKF8cK0EwMI/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5714236168732672) &#124;
 [Chromium Bug](https://crbug.com/588931)
 
