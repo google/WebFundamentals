@@ -45,7 +45,7 @@ The legacy item() accessor is removed from the Gamepads array. This change impro
 
 ## Deprecate Custom Elements v0
 
-Custom Elements are a web components technology that lets you create new HTML tags, beef up existing tags, or extend components authored by other developers. Custom Elements v1 have been implemented in Chrome since version 54, which shipped in October 2016. Custom Elements v0 was an experimental version not implemented in other browsers. As such it is now deprecated with removal expected in Chrome 73, around April 2019.
+Custom Elements are a web components technology that lets you create new HTML tags, beef up existing tags, or extend components authored by other developers. Custom Elements v1 have been [implemented in Chrome](https://www.chromestatus.com/feature/4696261944934400) since version 54, which shipped in October 2016. Custom Elements v0 was an experimental version not implemented in other browsers. As such it is now deprecated with removal expected in Chrome 73, around April 2019.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
@@ -62,6 +62,8 @@ HTML Imports allow HTML to be imported from one document to another. This featur
 
 
 ## Deprecate Shadow DOM v0
+
+Shadow DOM is a web components technology that uses scoped subtrees inside elements. Shadow DOM v1 has been [implemented in Chrome](https://www.chromestatus.com/feature/4667415417847808) since version 53, which shipped in August of 2016. Shadow DOM v0 was an experimental version not implemented in other browsers. As such it is now deprecated with removal expected in Chrome 73, around April 2019.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5135093320384512) &#124;
