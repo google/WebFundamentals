@@ -37,7 +37,8 @@ The anonymous getter for `HTMLFrameSetElement` is non-standard and therefore bei
 
 ## Deprecate and remove Gamepads.item()
 
-[Intent to Remove]() &#124;
+The legacy item() accessor is removed from the Gamepads array. This change improves compatibility with Firefox which is so far the only browser to implement GamepadList.
+
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4507242028072960) &#124;
 [Chromium Bug](https://crbug.com/865642)
 
