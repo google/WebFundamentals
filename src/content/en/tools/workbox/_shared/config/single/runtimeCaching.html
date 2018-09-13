@@ -55,6 +55,13 @@
       plugins: [
         {cacheDidUpdate: () => /* custom plugin code */}
       ],
+      // matchOptions and fetchOptions are used to configure the handler.
+      fetchOptions: {
+        mode: 'no-cors',
+      },
+      matchOptions: {
+        ignoreSearch: true,
+      },
     },
   }, {
     // To match cross-origin requests, use a RegExp that matches
