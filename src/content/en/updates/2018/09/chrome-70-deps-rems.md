@@ -72,7 +72,12 @@ Shadow DOM is a web components technology that uses scoped subtrees inside eleme
 
 ## Deprecate SpeechSynthesis.speak() without user activation
 
-[Intent to Remove]() &#124;
+The `[SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)` interface is actively being abused on the web. There's anecdotal evidences that because other autoplay avenues are being closed, abuse is moving to the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API), which doesn't follow autoplay rules.
+
+The `speechSynthesis.speak()` function now throws an error if the document has not received a user activation. Removal is expected in Chrome 71, some time in late November.
+
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/XpkevOngqUs/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5687444770914304) &#124;
 [Chromium Bug](https://crbug.com/812767)
 
