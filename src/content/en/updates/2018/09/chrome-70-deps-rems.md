@@ -55,7 +55,7 @@ implement `GamepadList`.
 
 ## Deprecate Custom Elements v0
 
-Custom Elements are a web components technology that lets you create new HTML
+Custom Elements are a Web Components technology that lets you create new HTML
 tags, beef up existing tags, or extend components authored by other developers.
 Custom Elements v1 have been [implemented in
 Chrome](https://www.chromestatus.com/feature/4696261944934400) since version
@@ -71,7 +71,7 @@ removal expected in Chrome 73, around April 2019.
 ## Deprecate HTML Imports
 
 HTML Imports allow HTML to be imported from one document to another. This
-feature was part of the early experimental version of web components not
+feature was part of the early experimental version of Web Components not
 implemented in other browsers. As such it is now deprecated with removal
 expected in Chrome 73, around April 2019.
 
@@ -82,7 +82,7 @@ expected in Chrome 73, around April 2019.
 
 ## Deprecate Shadow DOM v0
 
-Shadow DOM is a web components technology that uses scoped subtrees inside
+Shadow DOM is a Web Components technology that uses scoped subtrees inside
 lements. Shadow DOM v1 has been [implemented in
 Chrome](https://www.chromestatus.com/feature/4667415417847808) since version
 53, which shipped in August of 2016. Shadow DOM v0 was an experimental version
