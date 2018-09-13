@@ -22,7 +22,12 @@ online and offline cross-site scripting attacks. This is a serious escalation
 from regular cross-site scripting.
 
 To mitigate this threat, AppCache is now only supported on origins that serve
-over HTTPS.
+over HTTPS. 
+
+Developers looking for an alternative to AppCache are encouraged to use service
+workers. An experimental
+[library is available](https://www.npmjs.com/package/sw-appcache-behavior)
+to ease that transition.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/UKF8cK0EwMI/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5714236168732672) &#124;
