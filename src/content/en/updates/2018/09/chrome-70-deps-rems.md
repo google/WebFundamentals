@@ -42,16 +42,28 @@ The legacy item() accessor is removed from the Gamepads array. This change impro
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4507242028072960) &#124;
 [Chromium Bug](https://crbug.com/865642)
 
+
 ## Deprecate Custom Elements v0
 
-[Intent to Remove]() &#124;
+Custom Elements are a web components technology that lets you create new HTML tags, beef up existing tags, or extend components authored by other developers. Custom Elements v1 have been implemented in Chrome since version 54, which shipped in October 2016. Custom Elements v0 was an experimental version not implemented in other browsers. As such it is now deprecated with removal expected in Chrome 73, around April 2019.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
 [Chromium Bug](https://crbug.com/180965)
 
 
+## Deprecate HTML Imports
+
+HTML Imports allow HTML to be imported from one document to another. This feature was part of the early experimental version of web components not implemented in other browsers. As such it is now deprecated with removal expected in Chrome 73, around April 2019.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5144752345317376) &#124;
+[Chromium Bug](https://crbug.com/240592)
+
+
 ## Deprecate Shadow DOM v0
 
-[Intent to Remove]() &#124;
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5135093320384512) &#124;
 [Chromium Bug](https://crbug.com/336121)
 
