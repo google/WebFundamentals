@@ -15,11 +15,11 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-## Remove AppCache from insecure contexts.
+## Remove AppCache from insecure contexts
 
 When used over insecure contexts, AppCache potentially allows *persistent* online and offline cross-site scripting attacks. This is a serious escalation from regular cross-site scripting.
 
-To mitigate this threat, AppCache is now only supported on origins that serve over HTTPS. 
+To mitigate this threat, AppCache is now only supported on origins that serve over HTTPS.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/UKF8cK0EwMI/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5714236168732672) &#124;
@@ -28,7 +28,9 @@ To mitigate this threat, AppCache is now only supported on origins that serve ov
 
 ## Remove anonymous getter for HTMLFrameSetElement
 
-[Intent to Remove]() &#124;
+The anonymous getter for `HTMLFrameSetElement` is non-standard and therefore being removed. This feature was [added 13 years ago](https://trac.webkit.org/changeset/8717/webkit) to resolve a compatibility issue that then existed, but now does not. Because this is a non-standard feature no alternatives are available. Usage is low enough that we do not expect this to be a problem.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/7jBHd71Yf0s/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5235521668251648) &#124;
 [Chromium Bug](https://crbug.com/695891)
 
