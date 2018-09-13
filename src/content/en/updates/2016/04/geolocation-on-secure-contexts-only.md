@@ -6,6 +6,7 @@ description: Starting with version 50, Chrome no longer supports the HTML5 Geolo
 {# wf_published_on: 2016-04-21 #}
 {# wf_tags: geolocation,removals,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png #}
+{# wf_blink_components: Blink #}
 
 # Geolocation API Removed from Unsecured Origins in Chrome 50 {: .page-title }
 
