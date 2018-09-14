@@ -48,9 +48,9 @@ expect this to be a problem.
 [Chromium Bug](https://crbug.com/695891)
 
 
-## Deprecate and remove Gamepads.item()
+## Deprecate and remove `Gamepads.item()`
 
-The legacy `item()`` accessor is removed from the `Gamepads` array. This change
+The legacy `item()` accessor is removed from the `Gamepads` array. This change
 improves compatibility with Firefox which is so far the only browser to
 implement `GamepadList`.
 
@@ -99,9 +99,9 @@ expected in Chrome 73, around April 2019.
 [Chromium Bug](https://crbug.com/336121)
 
 
-## Deprecate SpeechSynthesis.speak() without user activation
+## Deprecate `SpeechSynthesis.speak()` without user activation
 
-The `[SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)`
+The [`SpeechSynthesis`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
 interface is actively being abused on the web. There's anecdotal evidences that
 because other autoplay avenues are being closed, abuse is moving to the [Web
 Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API),
