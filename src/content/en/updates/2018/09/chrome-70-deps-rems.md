@@ -94,7 +94,9 @@ lements. Shadow DOM v1 has been [implemented in
 Chrome](https://www.chromestatus.com/feature/4667415417847808) since version
 53, which shipped in August of 2016. Shadow DOM v0 was an experimental version
 not implemented in other browsers. As such it is now deprecated with removal
-expected in Chrome 73, around April 2019.
+expected in Chrome 73, around April 2019. Sites depending on Shadow DOM v0
+already require a polyfill on non-Chromium browsers. When HTML imports is removed,
+sites that have the polyfill should continue to work on Chrome.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5135093320384512) &#124;
