@@ -78,7 +78,9 @@ removal expected in Chrome 73, around April 2019.
 HTML Imports allow HTML to be imported from one document to another. This
 feature was part of the early experimental version of Web Components not
 implemented in other browsers. As such it is now deprecated with removal
-expected in Chrome 73, around April 2019.
+expected in Chrome 73, around April 2019. Sites depending on HTML imports
+already require a polyfill on non-Chromium browsers. When HTML imports is
+removed, sites that have the polyfill should continue to work on Chrome.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5144752345317376) &#124;
