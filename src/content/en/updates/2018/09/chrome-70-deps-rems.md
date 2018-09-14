@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 70 to help you plan.
 
-{# wf_updated_on: 2018-09-13 #}
-{# wf_published_on: 2018-09-13 #}
+{# wf_updated_on: 2018-09-14 #}
+{# wf_published_on: 2018-09-14 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink>HTML,Blink>GamepadAPI,Blink>SecurityFeature,Internals>SpeechSynthesis #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -48,7 +48,7 @@ expect this to be a problem.
 [Chromium Bug](https://crbug.com/695891)
 
 
-## Deprecate and remove `Gamepads.item()`
+## Deprecate and remove Gamepads.item()
 
 The legacy `item()` accessor is removed from the `Gamepads` array. This change
 improves compatibility with Firefox which is so far the only browser to
@@ -99,7 +99,7 @@ expected in Chrome 73, around April 2019.
 [Chromium Bug](https://crbug.com/336121)
 
 
-## Deprecate `SpeechSynthesis.speak()` without user activation
+## Deprecate SpeechSynthesis.speak() without user activation
 
 The [`SpeechSynthesis`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
 interface is actively being abused on the web. There's anecdotal evidences that
