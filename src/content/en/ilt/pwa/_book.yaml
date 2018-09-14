@@ -151,6 +151,10 @@ upper_tabs:
           section:
           - title: Challenge
             path: /web/ilt/pwa/challenge-convert-a-news-app-to-a-pwa
+        - title: PWA Ecommerce
+          section:
+          - title: Challenge
+            path: /web/ilt/pwa/challenge-convert-an-e-commerce-site-to-a-pwa
         - title: Appendix
           section:
           - title: Setting Up the Labs
