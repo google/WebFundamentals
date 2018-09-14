@@ -144,6 +144,8 @@ not appear again until a sufficient amount of time has passed
 regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
 or not.
 
+Note: The mini-info bar is not displayed on Chrome OS.
+
 ## Feedback {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
