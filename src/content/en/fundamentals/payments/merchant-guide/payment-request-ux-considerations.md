@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-08-30 #}
+{# wf_updated_on: 2018-09-10 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -42,13 +42,13 @@ forced to continue there.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/state01-receipt-view.png"
+    <img src="../images/ux-considerations/state01-receipt-view.png"
     alt="This is an example of the 'receipt' view">
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="images/state02-edit-view.png"
+    <img src="../images/ux-considerations/state02-edit-view.png"
     alt="This is an example of the edit view">
   </figure>
 </div>
@@ -63,7 +63,7 @@ Otherwise the user can add these. Depending on your particular use
 case you can have defaults auto selected or force the user to fill
 them in.
 
-<video controls autoplay loop muted poster="images/basic-intro-poster.png">
+<video controls autoplay loop muted poster="../images/ux-considerations/basic-intro-poster.png">
   <source src="videos/basic-intro.webm" type="video/webm; codecs=vp8">
   <source src="videos/basic-intro.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -96,7 +96,7 @@ by using steppers.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/graceful-error-messaging.png"
+    <img src="../images/ux-considerations/graceful-error-messaging.png"
     alt="This is an example of error messages">
     <figcaption>Make sure error messages are clear.</figcaption>
   </figure>
@@ -104,7 +104,7 @@ by using steppers.
 
 <div class="attempt-right">
   <figure>
-    <img src="images/graceful-stepper.png"
+    <img src="../images/ux-considerations/graceful-stepper.png"
     alt="This is an example of steppers">
     <figcaption>
       This stepper shows the progress from Cart to Address
@@ -118,7 +118,7 @@ by using steppers.
 
 ## What is customizable
 Some of the UI is customizable with some exceptions such as the
-colour of button and their respective text labels.
+color of buttons and their respective text labels.
 
 Note: This example is for the Chrome browser. Other browsers
 may contain different UI elements as well, or even labels for
@@ -131,7 +131,7 @@ on brand recognition.
 
 <div class="attempt-right">
   <figure>
-    <img src="images/what-can-be-changed.png"
+    <img src="../images/ux-considerations/what-can-be-changed.png"
     alt="This is an example what parts of the Payment Request API can be changed.">
   </figure>
 </div>
@@ -172,7 +172,7 @@ thereby making your checkout a success.
 
 <div>
   <figure>
-    <img src="images/general-ux-buy-now.png"
+    <img src="../images/ux-considerations/general-ux-buy-now.png"
     alt="This is an example of 'buy now' buttons">
     <figcaption>
       Add <em>‘Buy now’</em> buttons where possible to
@@ -208,7 +208,7 @@ with motor disability skills.
 
 <div>
   <figure>
-    <img src="images/affordance-touch-targets.png"
+    <img src="../images/ux-considerations/affordance-touch-targets.png"
     alt="This is an example of desired touch targets">
     <figcaption>
       By giving a minimum of 48px touch target you
@@ -231,7 +231,7 @@ screen for long enough for the user to read,
 roughly 3 seconds for five word sentence.
 
 <video class="attempt-left" controls autoplay loop muted
-    poster="images/basic-intro-poster.png">
+    poster="../images/ux-considerations/basic-intro-poster.png">
   <source src="videos/components_snackbar.webm" type="video/webm; codecs=vp8">
   <source src="videos/components_snackbar.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -255,7 +255,7 @@ Make sure you use the labels that make the most sense.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/delivery-options-delivery.png"
+    <img src="../images/ux-considerations/delivery-options-delivery.png"
     alt="This is an example of a label titled 'delivery'">
   </figure>
 </div>
@@ -263,7 +263,7 @@ Make sure you use the labels that make the most sense.
 
 <div class="attempt-right">
   <figure>
-    <img src="images/delivery-options-pickup.png"
+    <img src="../images/ux-considerations/delivery-options-pickup.png"
     alt="This is an example of a label titled 'pickup'">
   </figure>
 </div>
@@ -292,7 +292,7 @@ item to their cart, and is directed to checkout.
 
 <div>
   <figure>
-    <img src="images/user-flow-diagram.png"
+    <img src="../images/ux-considerations/user-flow-diagram.png"
     alt="This is an illustrative example
     of the above, different paths a user
     takes when checking out">
@@ -310,7 +310,7 @@ email them an ID code and receipt. Alternatively
 you can offer a button that calls `window.print();`
 and gives the user a PDF.
 
-<video controls autoplay loop muted poster="images/basic-intro-poster.png">
+<video controls autoplay loop muted poster="../images/ux-considerations/basic-intro-poster.png">
   <source src="videos/basic-intro.webm" type="video/webm; codecs=vp8">
   <source src="videos/basic-intro.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -323,7 +323,7 @@ The next step in the process launches the Payment Request
 API which is followed by a confirmation page.
 <div>
   <figure>
-    <img src="images/general-ux-buy-now.png"
+    <img src="../images/ux-considerations/general-ux-buy-now.png"
     alt="This is an example of 'buy now' buttons">
     <figcaption>
       Add <em>"Buy now"</em> buttons where possible to
@@ -358,7 +358,7 @@ will be delivered.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/delivery-options-with-dates.png"
+    <img src="../images/ux-considerations/delivery-options-with-dates.png"
     alt="This is an example of delivery options with dates">
     <figcaption>
       Give dates to help a user plan and customize
@@ -386,7 +386,7 @@ demonstrates this flow.
 
 <div>
   <figure>
-    <img src="images/gift-card-checkout-flow.png"
+    <img src="../images/ux-considerations/gift-card-checkout-flow.png"
     alt="This is an example of giftcard workflow
     mentioned above">
   </figure>
@@ -407,7 +407,7 @@ Below is an example of this.
 
 <div>
   <figure>
-    <img src="images/wooCommerce.png"
+    <img src="../images/ux-considerations/wooCommerce.png"
     alt="This is an example of WooCommerce">
     <figcaption>
       In this example <a href="https://woocommerce.paymentrequest.show/">
@@ -448,11 +448,12 @@ the Payment Request API OR their own UI.
 * If all conditions are met the merchant serves up a
 confirmation page.
 
-You can learn more about this [technique here](/web/fundamentals/payments/deep-dive-into-payment-request#completing_the_transaction)
+You can learn more about this technique
+[here](/web/fundamentals/payments/deep-dive-into-payment-request#completing_the_transaction)
 
 <div>
   <figure>
-    <img src="images/show-to-promise.png"
+    <img src="../images/ux-considerations/show-to-promise.png"
     alt="This is an example of the different flow you can take after firing a 'show()' function">
   </figure>
 </div>
@@ -468,7 +469,7 @@ if the payment has been successful.
 
 <div>
   <figure>
-    <img src="images/mid-way-flow.png"
+    <img src="../images/ux-considerations/mid-way-flow.png"
     alt="This is an example of a 'textfield' appearing after the checkout flow.">
   </figure>
 </div>
@@ -520,10 +521,11 @@ Payment Request API is currently supported by;
 * Chrome 61 and above on Desktop & iOS
 * Edge 15 and above on Desktop
 
-You can track the latest status for all other browsers here
+You can track the latest status for all other browsers
 on [caniuse.com](https://caniuse.com/#search=payments).
 
 ## Stickersheet
 
-To create your own flows, you can download the Payment Request API sticker sheet from [our Github Repo](https://goo.gl/daxhRa).
+To create your own flows, you can download the Payment Request API 
+sticker sheet from [our GitHub Repo](https://goo.gl/daxhRa).
 

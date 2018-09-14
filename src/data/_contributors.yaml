@@ -1547,6 +1547,19 @@ borissmus:
     - author
   email: smus@google.com
 
+rsolomakhin:
+  name:
+    given: Rouslan
+    family: Solomakhin
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  twitter: rsolomakhin
+  email: rouslan@google.com
+
 emilystark:
   name:
     given: Emily

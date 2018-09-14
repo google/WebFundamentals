@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-08-16 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -21,7 +21,7 @@ description: How to implement and take full advantage of the Payment Request API
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-top.png" alt="Payment request UI on desktop and mobile Chrome.">
+    <img src="../images/deep-dive/pr-top.png" alt="Payment request UI on desktop and mobile Chrome.">
     <figcaption>
       Payment request UI on desktop and mobile Chrome.
     </figcaption>
@@ -54,8 +54,8 @@ two major Chrome versions.
 ## Feature Detect
 
 Payment Request has been available since Chrome 53 for Android and has been
-enabled by default since Chrome 61 on desktop. Before we start covering how to
-use Payment Request, we should feature detect to ensure it's available and
+enabled by default since Chrome 61 on desktop. Before we start covering how 
+to use Payment Request, we should feature detect to ensure it's available and
 fallback to a traditional checkout page in browsers that don't support it.
 
 The feature detect is simply:
@@ -73,8 +73,8 @@ Note: Payment Request is only available on sites served over HTTPS.
 
 ## PaymentRequest Constructor
 
-Once you are ready to collect payment details from the user, you'll need to
-construct a new PaymentRequest object.
+Once you are ready to collect payment details from the user, you'll need 
+to construct a new PaymentRequest object.
 
 ```
 const supportedPaymentMethods = [
@@ -101,19 +101,23 @@ new PaymentRequest(
 );
 ```
 
-The constructor takes three arguments. The [first
-argument](#defining_supported_payment_methods) defines which forms of payment you can
+The constructor takes three arguments. The 
+[first argument](#defining_supported_payment_methods) 
+defines which forms of payment you can
 accept; for example, you may only accept 'visa' and 'mastercard'. The
-[paymentDetails](#defining_payment_details) argument defines the total and display
-items. The [optional third argument](#defining_options_optional42) is an object
+[paymentDetails](#defining_payment_details) 
+argument defines the total and display
+items. The 
+[optional third argument](#defining_options_optional42) 
+is an object
 used to request additional information from the user; for example, you can
 request the payer's name, email address, and phone number.
 
 All of these options affect the UI presented to the user as well as the amount
 of information the browser will need to collect from them.
 
-Constructing a new `PaymentRequest` object can be done at any point in your app.
-Nothing will be shown to the user until you call its `show()` method.
+Constructing a new `PaymentRequest` object can be done at any point in your 
+app. Nothing will be shown to the user until you call its `show()` method.
 
 ```
 const request = new PaymentRequest(
@@ -153,8 +157,8 @@ const supportedPaymentMethods = [
 new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
 
-First we'll look at how to define support for credit and debit cards, followed
-by a brief look at supporting Google Pay.
+First we'll look at how to define support for credit and debit cards, 
+followed by a brief look at supporting Google Pay.
 
 ### Payment Method: 'basic-card'
 
@@ -174,13 +178,14 @@ new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 If the user has no cards set up they'll be prompted to add details, otherwise
 an existing card will be selected for them.
 
-Note: To get access to all forms of payment available with Google, developers
-will need to implement the Google Pay method. Refer to the
-[Google Pay API](/pay/api/web/guides/paymentrequest/tutorial) docs for more information.
+Note: To get access to all forms of payment available with Google, 
+developers will need to implement the Google Pay method. Refer to the
+[Google Pay API](/pay/api/web/guides/paymentrequest/tutorial) 
+docs for more information.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
+    <img src="../images/deep-dive/pr-demo-basic-card-only.png" alt="Example of basic-card support in the Payment Request API.">
     <figcaption>
       Example of basic-card support in the Payment Request API.
     </figcaption>
@@ -210,7 +215,7 @@ prevented from selecting other cards:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-basic-card-visa-mastercard-amex.png" alt="Example of reduced the list of supported cards in the Payment Request API.">
+    <img src="../images/deep-dive/pr-demo-basic-card-visa-mastercard-amex.png" alt="Example of reduced the list of supported cards in the Payment Request API.">
     <figcaption>
       Example of reduced the list of supported cards in the Payment Request API.
     </figcaption>
@@ -226,7 +231,7 @@ UI would start with a suitable card already selected:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-pre-selected-visa-short-blackout.png" alt="Cards will be preselected if available.">
+    <img src="../images/deep-dive/pr-demo-pre-selected-visa-short-blackout.png" alt="Cards will be preselected if available.">
     <figcaption>
       Cards will be preselected if available.
     </figcaption>
@@ -243,13 +248,13 @@ which could be an unsupported type, and the Payment Request API will allow this.
 The `supportedTypes` option is **just** for filtering out existing cards.
 Merchants still need to check the card type on their backend.
 
-Chrome version 61 added support for the `supportedTypes` option. In older versions of Chrome
-you would receive the following console warning:
+Chrome version 61 added support for the `supportedTypes` option. In older versions 
+of Chrome you would receive the following console warning:
 
 `Cannot yet distinguish credit, debit, and prepaid cards.`
 
-It's safe to use this option. The only difference is that some cards wouldn't be filtered
-automatically for the user.
+It's safe to use this option. The only difference is that some cards wouldn't 
+be filtered automatically for the user.
 
 ```
 const creditCardPaymentMethod = {
@@ -264,8 +269,8 @@ const creditCardPaymentMethod = {
 #### Payment Method: Multiple Payment Methods
 
 In the above example for basic cards, we created an object
-`creditCardPaymentMethod` and we passed that into an array before giving it to the
-`PaymentRequest` constructor.
+`creditCardPaymentMethod` and we passed that into an array before giving it 
+to the `PaymentRequest` constructor.
 
 ```
 const creditCardPaymentMethod = {
@@ -277,11 +282,11 @@ const supportedPaymentMethods = [creditCardPaymentMethod];
 new PaymentRequest(supportedPaymentMethods, paymentDetails, options);
 ```
 
-The reason for putting `creditCardPaymentMethod` into an array is to cater for
-scenarios where a merchant supports multiple payment methods. For example, let's
-say there was a payment processor called "BobPay" and you (the merchant)
-accepted payments through BobPay as well as credit cards. You'd define the
-supported payment methods like so:
+The reason for putting `creditCardPaymentMethod` into an array is to cater 
+for scenarios where a merchant supports multiple payment methods. For 
+example, let's say there was a payment processor called "BobPay" and you 
+(the merchant) accepted payments through BobPay as well as credit cards. 
+You'd define the supported payment methods like so:
 
 ```
 const creditCardPaymentMethod = {
@@ -304,8 +309,8 @@ const supportedPaymentMethods = [
 new PaymentRequest(supportedPaymentMethods, paymentDetails, order);
 ```
 
-If the browser can support the BobPay payment method it will offer it to the
-user alongside credit cards.
+If the browser can support the BobPay payment method it will offer it 
+to the user alongside credit cards.
 
 An example of using a third party payment processor like this can be
 shown with "Google Pay", which is supported on Chrome for Android.
@@ -336,26 +341,27 @@ const googlePayPaymentMethod = {
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Google Pay example in the payment request UI.">
+    <img src="../images/deep-dive/pr-demo-pwg-and-cards-short-blackout.png" alt="Google Pay example in the payment request UI.">
     <figcaption>
       Google Pay example in payment request UI.
     </figcaption>
   </figure>
 </div>
 
-We won't go into details of how to add Google Pay in this article, [we have
-a dedicated document to that](/pay/api/web/guides/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
+We won't go into details of how to add Google Pay in this article, 
+as we have
+[a dedicated document to that](/pay/api/web/guides/paymentrequest/tutorial "Google Pay API Payment Request tutorial").
 
 
 #### Edge Cases
 
-There are some edge cases to be aware of when defining your supported payment
-methods.
+There are some edge cases to be aware of when defining your supported 
+payment methods.
 
 **Unsupported Payment Methods**
-If you try to call `show()` on a `PaymentRequest` object and there are no supported
-payment methods, the returned promise will reject immediately with the following
-error:
+If you try to call `show()` on a `PaymentRequest` object and there are no 
+supported payment methods, the returned promise will reject immediately with 
+the following error:
 
 `DOMException: The payment method is not supported`
 
@@ -366,8 +372,8 @@ that supports the Payment Request API.
 
 **Third Party Payment Method Skipping the Payment Request UI**
 In the screenshot above you can see "Google Pay" as the pre-selected
-payment option. This has occurred because the example supports both Google Pay
-and basic cards. If you define Google Pay as your **only** payment
+payment option. This has occurred because the example supports both Google 
+Pay and basic cards. If you define Google Pay as your **only** payment
 method and the browser supports it, and no additional data is requested from
 `PaymentOptions`, the browser can (and Chrome does, at the time of writing)
 skip the payment request UI altogether after the `show()` method is called
@@ -375,14 +381,15 @@ Users will be taken straight to Google Play services to complete the payment.
 
 ### Defining Payment Details
 
-The second argument we need to pass to the `PaymentRequest` constructor is the
-payment details object. This object contains the total for the order and an
-optional array of display items (i.e. a high level breakdown of the total).
+The second argument we need to pass to the `PaymentRequest` constructor is 
+the payment details object. This object contains the total for the order and 
+an optional array of display items (i.e. a high level breakdown of the total).
 
 #### Transaction Details: Total
 
-The contents of the `total` parameter should contain a `label` parameter and an
-`amount` parameter consisting of a `currency` and `value`. A basic example would be:
+The contents of the `total` parameter should contain a `label` parameter and 
+an `amount` parameter consisting of a `currency` and `value`. A basic example 
+would be:
 
 ```
 const paymentDetails = {
@@ -402,20 +409,20 @@ This controls the "order summary" section of the UI:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-order-summary.png" alt="How the total parameter affects the UI.">
+    <img src="../images/deep-dive/pr-demo-order-summary.png" alt="How the total parameter affects the UI.">
     <figcaption>
       How the total parameter affects the UI.
     </figcaption>
   </figure>
 </div>
 
-The `total` parameter is the only *required* piece of information in the payment
-details object.
+The `total` parameter is the only *required* piece of information in the 
+payment details object.
 
 The `label` can be any piece of text you like, the `currency` must be a string
-currency code following the [ISO 4217
-standard](https://www.iso.org/iso-4217-currency-codes.html), and the `value` is
-the amount for the order.
+currency code following the 
+[ISO 4217 standard](https://www.iso.org/iso-4217-currency-codes.html), 
+and the `value` is the amount for the order.
 
 To give another example, we can define the total as:
 
@@ -435,7 +442,7 @@ This produces the following order summary:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-order-summary-example-short.png" alt="Another example of how the total parameter affects the UI.">
+    <img src="../images/deep-dive/pr-demo-order-summary-example-short.png" alt="Another example of how the total parameter affects the UI.">
     <figcaption>
       Another example of how the total parameter affects the UI.
     </figcaption>
@@ -447,8 +454,9 @@ This produces the following order summary:
 Display items can used to provide a high level breakdown of the total. This
 would typically include subtotal, tax, deductions, and shipping cost.
 
-The format of the display items should be an array of items following the same
-structure as the total (i.e., a `label` and an `amount` with `currency` and `value`).
+The format of the display items should be an array of items following the 
+same structure as the total (i.e., a `label` and an `amount` with `currency` 
+and `value`).
 
 ```
 const allDisplayItems = [
@@ -489,7 +497,7 @@ If we provided the above example, we'd get the following UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/display-items.png" alt="Displaying the items from the payment details object.">
+    <img src="../images/deep-dive/display-items.png" alt="Displaying the items from the payment details object.">
     <figcaption>
       Displaying the items from the payment details object.
     </figcaption>
@@ -499,15 +507,16 @@ If we provided the above example, we'd get the following UI.
 The order of the items in the `displayItems` array will dictate their display
 order in the UI.
 
-Please bear in mind that `displayItems` are not designed to display a long list of
-items. You should use this for high level entries instead of an itemized list,
-for example subtotal, discount, tax and shipping cost.
+Please bear in mind that `displayItems` are not designed to display a long 
+list of items. You should use this for high level entries instead of an itemized 
+list; for example, subtotal, discount, tax, and shipping cost.
 
 <div class="warning">
-It's worth repeating that the <code>PaymentRequest</code> API does not perform any
-arithmetic. If you look at the above example, all the items values do not add up
+It's worth repeating that the <code>PaymentRequest</code> API does not perform 
+any arithmetic. In the above example, all the item values do not add up
 to the total. This is because we've set the total to have a value of zero.
-<strong>It is the responsibility of your web app to calculate the correct total.</strong>
+<strong>It is the responsibility of your web app to calculate the correct 
+total.</strong>
 </div>
 
 #### Transaction Details: Display Items - Pending
@@ -543,7 +552,7 @@ Which will be given a slightly different text color in Chrome as a result:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/display-items-pending.png" alt="Demonstration of a display item being marked as pending.">
+    <img src="../images/deep-dive/display-items-pending.png" alt="Demonstration of a display item being marked as pending.">
     <figcaption>
       Demonstration of a display item being marked as pending.
     </figcaption>
@@ -552,8 +561,8 @@ Which will be given a slightly different text color in Chrome as a result:
 
 #### Edge Cases
 
-There are some minor edge cases with the `paymentDetails` argument where you can
-stress the UI and incorrectly define the object resulting in an error.
+There are some minor edge cases with the `paymentDetails` argument where 
+you can stress the UI and incorrectly define the object resulting in an error.
 
 **Long Total Label**
 Be wary of the length of the labels. Browsers have
@@ -562,7 +571,7 @@ truncate the total label at all, but does truncate display item labels.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-long-labels.png" alt="Long labels may result in a bad UI for users.">
+    <img src="../images/deep-dive/pr-demo-long-labels.png" alt="Long labels may result in a bad UI for users.">
     <figcaption>
       Long labels may result in a bad UI for users.
     </figcaption>
@@ -576,8 +585,8 @@ receive the following the error:
 `TypeError: Failed to construct 'PaymentRequest': Must specify total`
 
 **Failing to include Label, Amount, Currency or Value**
-If you exclude a `label`, `amount`, `currency`, or `value` from the `total` or one of the
-`displayItems`, you'll receive one of the following errors:
+If you exclude a `label`, `amount`, `currency`, or `value` from the `total` 
+or one of the `displayItems`, you'll receive one of the following errors:
 
 ```
 // No label
@@ -618,7 +627,7 @@ the currency code is shown. Compare the screenshots below for 'USD' and 'XBT'.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the payment request UI.">
+    <img src="../images/deep-dive/usd-bitcoin-comparison.png" alt="Comparison of USD and XBT currencies on the payment request UI.">
     <figcaption>
       Comparison of USD and XBT currencies on the payment request UI.
     </figcaption>
@@ -627,12 +636,13 @@ the currency code is shown. Compare the screenshots below for 'USD' and 'XBT'.
 
 **Multiple Currencies**
 At the time of writing, Chrome does not support multiple currencies and
-unfortunately the error it throws does not make it clear that mixing currencies
-is not supported.
+unfortunately the error it throws does not make it clear that mixing 
+currencies is not supported.
 
 `DOMException: Request cancelled`
 
-You can [follow changes to this issue
+You can 
+[follow changes to this issue
 here](https://bugs.chromium.org/p/chromium/issues/detail?id=709296&q=component%3ABlink%3EPayments%20&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified).
 
 **Formatting Currency**
@@ -676,7 +686,7 @@ will result in an extra step in the UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-require-info-short.png" alt="Payment request UI requesting additional information from the user.">
+    <img src="../images/deep-dive/pr-demo-require-info-short.png" alt="Payment request UI requesting additional information from the user.">
     <figcaption>
       Payment request UI requesting additional information from the user.
     </figcaption>
@@ -688,7 +698,7 @@ pre-populated.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-info-preselected-short.png" alt="Pre-populated user information.">
+    <img src="../images/deep-dive/payer-info-preselected-short.png" alt="Pre-populated user information.">
     <figcaption>
       Pre-populated user information.
     </figcaption>
@@ -701,21 +711,22 @@ shipping in much more detail later on as it touches many parts of the API.
 #### Edge Cases
 
 The only edge case to note here is that if you define any of the parameters
-(`requestPayerName`, `requestPayerPhone` or `requestPayerEmail`) with a non-boolean
-value it will use the usual JavaScript [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
-[falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) value (i.e., null,
-undefined, 0 will be treated as false and 'string value', {}, [] will be treated
-as true).
+(`requestPayerName`, `requestPayerPhone` or `requestPayerEmail`) with a 
+non-boolean value it will use the usual JavaScript 
+[truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) /
+[falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) 
+value (i.e., null, undefined, 0 will be treated as false and 'string value', 
+{}, and [] will be treated as true).
 
 ## Responding to PaymentRequest.show()
 
-After calling `show()` the payment request UI will be displayed to the user. Users
-will either close the UI or fill in the required fields and select 'Pay', at
-which point your app will need to "complete" the transaction.
+After calling `show()` the payment request UI will be displayed to the user. 
+Users will either close the UI or fill in the required fields and select 'Pay', 
+at which point your app will need to "complete" the transaction.
 
 You'll know if the user has successfully filled in the details as the promise
-returned by `show()` will resolve; if there was an issue or the user closed the UI the
-promise will reject.
+returned by `show()` will resolve; if there was an issue or the user closed the 
+UI the promise will reject.
 
 ```
 paymentRequest.show()
@@ -732,8 +743,8 @@ paymentRequest.show()
 Once the user has filled in the payment request UI, your web app will receive a
 `PaymentResponse` object in the `show()` promise.
 
-It's this `paymentResponse` object that contains the user's payment information that you'll
-submit to your payment processor.
+It's this `paymentResponse` object that contains the user's payment information 
+that you'll submit to your payment processor.
 
 ### Accessing Details from the PaymentResponse
 
@@ -743,23 +754,29 @@ The `PaymentResponse` object contains the following parameters:
 <tr>
 <th>methodName</th>
 <td>This is the payment method selected by the user.
-This will be one of the values passed into the `supportedMethods` objects ("basic-card" for example).</td>
+This will be one of the values passed into the `supportedMethods` objects 
+  ("basic-card" for example).</td>
 </tr>
 <tr>
 <th>details</th>
-<td>This is an object containing the payment details. The contents of this object will depend on the selected payment method. In the next paragraph we'll look at the contents of a basic card.</td>
+<td>This is an object containing the payment details. The contents of this 
+  object will depend on the selected payment method. In the next paragraph 
+  we'll look at the contents of a basic card.</td>
 </tr>
 <tr>
 <th>payerName</th>
-<td>This will be null unless you set `requestPayerName` to true in the options object, in which case this will be a string of the payer's name. </td>
+<td>This will be null unless you set `requestPayerName` to true in the options 
+  object, in which case this will be a string of the payer's name. </td>
 </tr>
 <tr>
 <th>payerPhone</th>
-<td>This will be null unless you set `requestPayerPhone` to true in the options object, in which case this will be a string of the payer's phone number.</td>
+<td>This will be null unless you set `requestPayerPhone` to true in the options 
+  object, in which case this will be a string of the payer's phone number.</td>
 </tr>
 <tr>
 <th>payerEmail</th>
-<td>This will be null unless you set `requestPayerEmail` to true in the options object, in which case this will be a string of the payer's email address.</td>
+<td>This will be null unless you set `requestPayerEmail` to true in the options 
+  object, in which case this will be a string of the payer's email address.</td>
 </tr>
 <tr>
 <th>* Shipping Info</th>
@@ -787,15 +804,15 @@ payment details in your own UI.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/show-to-promise.png" alt="Possible flows after the show() promise has resolved.">
+    <img src="../images/deep-dive/show-to-promise.png" alt="Possible flows after the show() promise has resolved.">
     <figcaption>
       Possible flows after the show() promise has resolved.
     </figcaption>
   </figure>
 </div>
 
-If you wanted to close the payment request UI immediately, you would call the
-`PaymentResponse.complete()` method.
+If you wanted to close the payment request UI immediately, you would call 
+the `PaymentResponse.complete()` method.
 
 ```
 paymentRequest.show()
@@ -813,18 +830,18 @@ paymentRequest.show()
 ```
 
 This will close the payment request UI and you can do whatever you want to
-process the user's payment information. Calling the `complete()` method without
-any arguments like this, is equivalent to calling
+process the user's payment information. Calling the `complete()` method 
+without any arguments like this, is equivalent to calling
 `paymentResponse.complete('unknown')`. You are telling the browser to
-not treat the payment as a success or failure and to show no UI or animations to
-suggest otherwise to the user.
+not treat the payment as a success or failure and to show no UI or animations 
+to suggest otherwise to the user.
 
-If you wanted to process the payment while the payment request UI is showing a
-spinner you'd delay the call to `complete()`. Let's assume we have a method called
-`validatePaymentWithBackend()` that will check the details with our backend and
-return a promise resolving to a boolean (true if the payment was successful,
-false otherwise). We'd keep the spinner up and call `complete()` after this method has
-resolved, like so:
+If you wanted to process the payment while the payment request UI is showing 
+a spinner you'd delay the call to `complete()`. Let's assume we have a method 
+called `validatePaymentWithBackend()` that will check the details with our 
+backend and return a promise resolving to a boolean (true if the payment was 
+successful, false otherwise). We'd keep the spinner up and call `complete()` 
+after this method has resolved, like so:
 
 ```
 paymentRequest.show()
@@ -843,17 +860,17 @@ paymentRequest.show()
 });
 ```
 
-In this example we are using the 'success' and 'fail' strings to highlight to
-the browser the states of the transaction. If you include these strings the
-browser may show a visual indication to the user suggesting a positive or
-negative outcome.
+In this example we are using the 'success' and 'fail' strings to highlight 
+to the browser the states of the transaction. If you include these strings 
+the browser may show a visual indication to the user suggesting a positive 
+or negative outcome.
 
 At the time of writing, Chrome will just hide the UI on success but will show
 an error dialog to the user if you call with `complete('fail')` .
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-complete-fail.png" alt="Example of the error dialog shown when calling complete with fail input.">
+    <img src="../images/deep-dive/pr-demo-complete-fail.png" alt="Example of the error dialog shown when calling complete with fail input.">
     <figcaption>
       Example of the error dialog shown when calling complete with fail input.
     </figcaption>
@@ -863,19 +880,20 @@ an error dialog to the user if you call with `complete('fail')` .
 ### Edge Cases
 
 **Completing with a Diff String**
-One possible gotcha with the `complete()` method is that if you pass in a string
-that is not defined by the spec (i.e., the string is not 'unknown', 'success,'
-or 'fail'), the promise returned by complete() will reject and the
-payment request UI **will not close** ([this behavior will hopefully change
-soon](https://www.google.com/url?q=http://crbug.com/712240&sa=D&ust=1492454346433000&usg=AFQjCNHUMRnlee4WgrbErEhA0VQOC_Sl-g)).
+One possible gotcha with the `complete()` method is that if you pass in a 
+string that is not defined by the spec (i.e., the string is not 'unknown', 
+'success,' or 'fail'), the promise returned by complete() will reject and 
+the payment request UI **will not close**. 
+([This behavior will hopefully change
+soon](https://www.google.com/url?q=http://crbug.com/712240&sa=D&ust=1492454346433000&usg=AFQjCNHUMRnlee4WgrbErEhA0VQOC_Sl-g).)
 The error in the rejected promise will be:
 
 `Failed to execute 'complete' on 'PaymentResponse': The provided value '...' is not a valid enum value of type PaymentComplete.`
 
 **Not Calling Complete**
-If you fail to call complete() in a timely manner, it will time out and the UI
-will be closed. The browser will show a message to the user highlighting there
-was an issue.
+If you fail to call complete() in a timely manner, it will time out and the 
+UI will be closed. The browser will show a message to the user highlighting 
+there was an issue.
 
 ## Shipping in Payment Request API
 
@@ -901,15 +919,15 @@ This will ask the user for their shipping address:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-require-shipping-short.png" alt="Request shipping information from the user.">
+    <img src="../images/deep-dive/payer-require-shipping-short.png" alt="Request shipping information from the user.">
     <figcaption>
       Request shipping information from the user.
     </figcaption>
   </figure>
 </div>
 
-By default the Payment Request API will set a shippingType to 'shipping'. This is
-why the title on the highlighted row above is "Shipping".
+By default the Payment Request API will set a shippingType to 'shipping'. 
+This is why the title on the highlighted row above is "Shipping".
 
 #### Changing the Shipping Type
 
@@ -923,7 +941,7 @@ or "pickup" to change the UI's title to "Shipping", "Delivery" and "Pickup".
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/payer-require-shipping-types-short.png" alt="Examples of delivery and pickup shipping labels.">
+    <img src="../images/deep-dive/payer-require-shipping-types-short.png" alt="Examples of delivery and pickup shipping labels.">
     <figcaption>
       Examples of delivery and pickup shipping labels.
     </figcaption>
@@ -931,15 +949,15 @@ or "pickup" to change the UI's title to "Shipping", "Delivery" and "Pickup".
 </div>
 
 [The spec defines these types fairly
-well](https://www.w3.org/TR/payment-request/#dom-paymentshippingtype) if you
-need further clarification.
+well](https://www.w3.org/TR/payment-request/#dom-paymentshippingtype) 
+if you need further clarification.
 
 There is a small lifecycle that the user will go through when selecting a
 shipping address.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-addr-change.png" alt="Lifecycle of shipping address selection.">
+    <img src="../images/deep-dive/shipping-addr-change.png" alt="Lifecycle of shipping address selection.">
     <figcaption>
       Lifecycle of shipping address selection.
     </figcaption>
@@ -957,8 +975,8 @@ The flow is:
 1. Your app will have the option to validate the selection.
 1. The user will be able to continue with the rest of the flow.
 
-We'll start by looking at the `shppingAddressChange` event which is dispatched as the
-user selects a new address.
+We'll start by looking at the `shppingAddressChange` event which is 
+dispatched as the user selects a new address.
 
 ### Handling Shipping Address Changes
 
@@ -969,8 +987,10 @@ might have (e.g. you may not ship to specific countries) and it provides an
 opportunity to determine what the available shipping options are.
 
 <div class="warning">
-At the time of writing, you are required to add a <code>shippingaddresschange</code>
- event listener in Chrome (although this behavior is likely to change to be optional).
+At the time of writing, you are required to add a 
+ <code>shippingaddresschange</code>
+ event listener in Chrome (although this behavior is likely to change to be 
+ optional).
 </div>
 
 You can listen for the event like so:
@@ -995,8 +1015,8 @@ options.
 #### Retrieving the shippingAddress
 
 When a `shippingAddressChange` event has been dispatched, the selected address
-will be added to the current `PaymentRequest` instance under the `shippingAddress`
-parameter.
+will be added to the current `PaymentRequest` instance under the 
+`shippingAddress` parameter.
 
 To give an example, we can print the shipping address to the console like so:
 
@@ -1008,7 +1028,8 @@ paymentRequest.addEventListener('shippingaddresschange', (event) => {
 });
 ```
 
-_Alternatively_, you can use `event.target` to access the `PaymentRequest` instance.
+_Alternatively_, you can use `event.target` to access the `PaymentRequest` 
+instance.
 
 ```
 const paymentRequest = new PaymentRequest(...);
@@ -1023,7 +1044,7 @@ In the console we'd see this:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/devtools-shipping-addr-output.png" alt="The details we can retrieve from the shipping address parameter.">
+    <img src="../images/deep-dive/devtools-shipping-addr-output.png" alt="The details we can retrieve from the shipping address parameter.">
     <figcaption>
       The details we can retrieve from the shipping address parameter.
     </figcaption>
@@ -1036,7 +1057,9 @@ The `shippingAddress` will have the following *readonly* parameters:
 <tr>
 <th>recipient</th>
 <td><p><i>String</i></p>
-This is the name of the recipient or contact person. This member may, under certain circumstances, contain multiline information. For example, it might contain "care of" information.</td>
+This is the name of the recipient or contact person. 
+  This member may, under certain circumstances, contain multiline information. 
+  For example, it might contain "care of" information.</td>
 </tr>
 <tr>
 <th>organization</th>
@@ -1046,7 +1069,9 @@ This is the organization, firm, company, or institution at this address.</td>
 <tr>
 <th>addressLine</th>
 <td><p><i>Array of string</i></p>
-This is the most specific part of the address. It can include, for example, a street name, a house number, apartment number, a rural delivery route, descriptive instructions, or a post office box number.</td>
+This is the most specific part of the address. It can include, for example, 
+  a street name, a house number, apartment number, a rural delivery route, 
+  descriptive instructions, or a post office box number.</td>
 </tr>
 <tr>
 <th>city</th>
@@ -1056,12 +1081,14 @@ This is the city/town portion of the address.</td>
 <tr>
 <th>region</th>
 <td><p><i>String</i></p>
-This is the top level administrative subdivision of the country. For example, this can be a state, a province, an oblast, or a prefecture.</td>
+This is the top level administrative subdivision of the country. 
+  For example, this can be a state, a province, an oblast, or a prefecture.</td>
 </tr>
 <tr>
 <th>country</th>
 <td><p><i>String</i></p>
-This is the [CLDR] (Common Locale Data Repository) region code. For example, US, GB, CN, or JP.</td>
+This is the [CLDR] (Common Locale Data Repository) region code. For example, 
+  US, GB, CN, or JP.</td>
 </tr>
 <tr>
 <th>postalCode</th>
@@ -1076,7 +1103,9 @@ This is the phone number of the recipient or contact person.</td>
 <tr>
 <th>languageCode</th>
 <td><p><i>String</i></p>
-This is the BCP-47 language code for the address. It's used to determine the field separators and the order of fields when formatting the address for display.</td>
+This is the BCP-47 language code for the address. It's used to determine 
+  the field separators and the order of fields when formatting the address 
+  for display.</td>
 </tr>
 <tr>
 <th>sortingCode</th>
@@ -1086,7 +1115,8 @@ This is the sorting code as used in, for example, France.</td>
 <tr>
 <th>dependentLocality</th>
 <td><p><i>String</i></p>
-This is the dependent locality or sublocality within a city. For example, used for neighborhoods, boroughs, districts, or UK dependent localities.</td>
+This is the dependent locality or sublocality within a city. For example, 
+  used for neighborhoods, boroughs, districts, or UK dependent localities.</td>
 </tr>
 </table>
 
@@ -1097,15 +1127,15 @@ available shipping options are?
 #### Defining the Available Shipping Options
 
 The event object you'll receive in the `shippingaddresschange` event is a
-`PaymentRequestUpdateEvent` which has a method `updateWith()`. You must call this
-method with a `paymentDetails` object (i.e. an object with a `total` and
-optional `displayItems`) or call it with a `Promise` that resolves to a `paymentDetails`
-object.
+`PaymentRequestUpdateEvent` which has a method `updateWith()`. You must call 
+this method with a `paymentDetails` object (i.e. an object with a `total` and
+optional `displayItems`) or call it with a `Promise` that resolves to a 
+`paymentDetails` object.
 
-The important difference when passing in a `paymentDetails` object to `event.updateWith()`
-compared to passing it to the constructor, is that we **must**
-include `shippingOptions`, which will be the array of objects defining what
-the user can select.
+The important difference when passing in a `paymentDetails` object to 
+`event.updateWith()` compared to passing it to the constructor, is that we 
+**must** include `shippingOptions`, which will be the array of objects defining 
+what the user can select.
 
 For a simple example, we can call `event.updateWith()` with payment details of
 a `total` and an empty array for `shippingOptions`:
@@ -1132,7 +1162,7 @@ will display an error to the user:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/no-shipping-opts.png" alt="Returning no shipping options displays an error to users.">
+    <img src="../images/deep-dive/no-shipping-opts.png" alt="Returning no shipping options displays an error to users.">
     <figcaption>
       Returning no shipping options displays an error to users.
     </figcaption>
@@ -1172,7 +1202,7 @@ Which will display to the user as:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-custom-error-short.png" alt="Example of a custom error when returning no shipping options.">
+    <img src="../images/deep-dive/pr-demo-custom-error-short.png" alt="Example of a custom error when returning no shipping options.">
     <figcaption>
       Example of a custom error when returning no shipping options.
     </figcaption>
@@ -1182,8 +1212,8 @@ Which will display to the user as:
 ##### Defining Shipping Options
 
 Where there are available shipping options, you can define the available options
-by setting the `shippingOptions` to an array of objects containing an `id`, `label`,
-and `amount` with `currency` and `value`, like so:
+by setting the `shippingOptions` to an array of objects containing an `id`, 
+`label`, and `amount` with `currency` and `value`, like so:
 
 ```
 paymentRequest.addEventListener('shippingaddresschange', (event) => {
@@ -1231,7 +1261,7 @@ title.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-shipping-opts-blackedout.png" alt="How shipping options are displayed to the user.">
+    <img src="../images/deep-dive/pr-demo-shipping-opts-blackedout.png" alt="How shipping options are displayed to the user.">
     <figcaption>
       How shipping options are displayed to the user.
     </figcaption>
@@ -1239,13 +1269,13 @@ title.
 </div>
 
 In the above examples, we are calling `event.updateWith()` directly with our
-`paymentDetails` containing the `total` and `shippingOptions`. If we do this, the
-user will not see a loading spinner and can continue with the rest of the
+`paymentDetails` containing the `total` and `shippingOptions`. If we do this, 
+the user will not see a loading spinner and can continue with the rest of the
 checkout flow.
 
 If you need time to retrieve available shipping options from your backend, you
-can pass a `Promise` to `event.updateWith()`. In the following example we are making an
-API call and setting the shipping options based on the response:
+can pass a `Promise` to `event.updateWith()`. In the following example we are 
+making an API call and setting the shipping options based on the response:
 
 ```
 paymentRequest.addEventListener('shippingaddresschange', (event) => {
@@ -1284,7 +1314,7 @@ While the network request is being made, the user will see a spinner:
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/pr-demo-shipping-addr-spinner.png" alt="A spinner is shown if you return a Promise to event.updateWith().">
+    <img src="../images/deep-dive/pr-demo-shipping-addr-spinner.png" alt="A spinner is shown if you return a Promise to event.updateWith().">
     <figcaption>
       A spinner is shown if you return a Promise to event.updateWith().
     </figcaption>
@@ -1355,7 +1385,7 @@ paymentRequest.addEventListener('shippingoptionchange', (event) => {
 
 <div class="warning">
 At the time of writing, you are required to add a <code>shippingoptionchange</code>
- event listener in Chrome (although this behavior is likely to change to be optional).
+event listener in Chrome (although this behavior is likely to change to be optional).
 </div>
 
 In many ways this event is similar to the `shippingaddresschange` event.
@@ -1363,13 +1393,13 @@ In many ways this event is similar to the `shippingaddresschange` event.
 * It expects a `paymentDetails` object with a `total`, `displayItems`, and
   `shippingoptions` to be passed into `event.updateWith()` (or a Promise that
   resolves to this object).
-* Updating with an empty array for `shippingoptions` is treated as an error and treats
-  the address as unsupported.
-* Updating with an empty array for `shippingoptions` and adding a string to an `error`
-  parameter will display the custom error message to the user.
+* Updating with an empty array for `shippingoptions` is treated as an error and 
+  treats the address as unsupported.
+* Updating with an empty array for `shippingoptions` and adding a string to an 
+  `error` parameter will display the custom error message to the user.
 
-**The one thing you must do** is mark the selected shipping option as `selected`. To
-do this we'll take the following steps:
+**The one thing you must do** is mark the selected shipping option as `selected`. 
+To do this we'll take the following steps:
 
 1. Get the `PaymentRequest` object from the event.
 1. Get the selected shipping option from the `PaymentRequest` object.
@@ -1404,13 +1434,13 @@ paymentRequest.addEventListener('shippingoptionchange', (event) => {
 });
 ```
 
-Doing this will update the UI as the user selects a new shipping option. If you
-return a promise to `updateWith()`, the user will also be presented with a spinner
-until it resolves.
+Doing this will update the UI as the user selects a new shipping option. 
+If you return a promise to `updateWith()`, the user will also be presented 
+with a spinner until it resolves.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-option-lifecycle.png" alt="The lifecycle of shipping option selection.">
+    <img src="../images/deep-dive/shipping-option-lifecycle.png" alt="The lifecycle of shipping option selection.">
     <figcaption>
       The lifecycle of shipping option selection.
     </figcaption>
@@ -1432,8 +1462,8 @@ nothing is marked as selected, they'll be taken back to the payment request UI
 and have to select a shipping method again.
 
 **Selecting Multiple Options**
-If you set the selected parameter to `true` on *multiple shipping options*, the last
-entry will be selected.
+If you set the selected parameter to `true` on *multiple shipping options*, 
+the last entry will be selected.
 
 ### Variants to Above Flow
 
@@ -1450,9 +1480,9 @@ different stages. In this section we'll see what we can change.
 
 #### Defining Shipping Options Up Front
 
-In the `PaymentRequest` constructor, we can define `shippingOptions` as part of the
-initial `paymentDetails` object (i.e. we don't have to wait until a
-`shippingaddresschange` event):
+In the `PaymentRequest` constructor, we can define `shippingOptions` as 
+part of the initial `paymentDetails` object (i.e. we don't have to wait 
+until a `shippingaddresschange` event):
 
 ```
 const paymentDetails = {
@@ -1477,11 +1507,12 @@ const paymentDetails = {
 new PaymentRequest(paymentMethods, paymentDetails, options);
 ```
 
-If we do this, there is no difference to the flow we discussed before. The user
-will still need to select an address and then shipping options. **However**, if you
-mark one of the shipping options as selected in this initial object, the
-browser may pre-select an address. For example, if we construct our
-payment request UI with the following input (Note the `selected` parameter):
+If we do this, there is no difference to the flow we discussed before. 
+The user will still need to select an address and then shipping options. 
+**However**, if you mark one of the shipping options as selected in this 
+initial object, the browser may pre-select an address. For example, if 
+we construct our payment request UI with the following input 
+(note the `selected` parameter):
 
 ```
 const paymentDetails = {
@@ -1507,21 +1538,22 @@ const paymentDetails = {
 new PaymentRequest(paymentMethods, paymentDetails, options);
 ```
 
-The user will be presented with a UI where an address and shipping has been selected.
+The user will be presented with a UI where an address and shipping 
+has been selected.
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/shipping-preset.png" alt="An example of preselecting a shipping option in the PaymentRequest constructor.">
+    <img src="../images/deep-dive/shipping-preset.png" alt="An example of preselecting a shipping option in the PaymentRequest constructor.">
     <figcaption>
       An example of preselecting a shipping option in the PaymentRequest constructor.
     </figcaption>
   </figure>
 </div>
 
-This has the advantage that the user can click the 'Pay' button immediately and
-complete the transaction with one click. The downside is that you won't receive
-a `shippingaddresschange` event, meaning that you can't validate the address
-details.
+This has the advantage that the user can click the 'Pay' button immediately 
+and complete the transaction with one click. The downside is that you won't 
+receive a `shippingaddresschange` event, meaning that you can't validate the 
+address details.
 
 <div class="key-point">
 Only select a shipping option in the constructor like this <strong>if you are
@@ -1582,8 +1614,9 @@ paymentRequest.addEventListener('shippingaddresschange', (event) => {
 
 ## Abort a Transaction
 
-The `abort()` method can be used when the shopping session has timed out or an item in the
-cart sells out during the transaction and you need to close the payment request UI.
+The `abort()` method can be used when the shopping session has timed 
+out or an item in the cart sells out during the transaction and you need 
+to close the payment request UI.
 
 For a simple example:
 
@@ -1606,8 +1639,8 @@ setTimeout(() => {
 }, 4000);
 ```
 
-In the above example, if we leave the payment request dialog visible, the `show()`
-promise will reject with the following error:
+In the above example, if we leave the payment request dialog visible, 
+the `show()` promise will reject with the following error:
 
 `DOMException: The user aborted a request.`
 
@@ -1624,7 +1657,7 @@ payment request UI is constructed?
 
 <div class="attempt-center">
   <figure>
-    <img src="./images/deep-dive/top-ui-short.png" alt="The generated piece of the payment request UI.">
+    <img src="../images/deep-dive/top-ui-short.png" alt="The generated piece of the payment request UI.">
     <figcaption>
       The generated piece of the payment request UI.
     </figcaption>
@@ -1642,19 +1675,19 @@ You can define multiple icon sizes in the head of your document like so:
 <link rel="icon" href="images/icon-512x512.png" sizes="512x512" type="image/png">
 ```
 
-The text in bold, "Payment Request Demo", is taken from the title of the current
-page (i.e., `<title>Payment Request Demo</title>`).
+The text in bold, "Payment Request Demo", is taken from the title of the 
+current page (i.e., `<title>Payment Request Demo</title>`).
 
 The URL that is displayed is the current origin.
 
 ## Check Payment Method Availability
 
-Before calling `paymentRequest.show()` you might want to know if the user already
-has an available payment method set-up (i.e. will the payment request UI have a
-preselected payment method or not).
+Before calling `paymentRequest.show()` you might want to know if the user 
+already has an available payment method set-up (i.e., will the payment request 
+UI have a preselected payment method or not).
 
-The `canMakePayment()` method tells you whether the user has a payment method that
-fulfills the current `PaymentRequest`'s supported payment methods.
+The `canMakePayment()` method tells you whether the user has a payment method 
+that fulfills the current `PaymentRequest`'s supported payment methods.
 
 ```
 const paymentRequest = new PaymentRequest(
@@ -1690,32 +1723,37 @@ result in a quota error:
 
 `DOMException: Query quota exceeded`
 
-The reason this error is thrown is to block attempts to fingerprint the user.
+The reason this error is thrown is to block attempts to fingerprint the 
+user.
 
-At the time of writing, Chrome will reset the quota after 30 minutes or when
-it's restarted.
+At the time of writing, Chrome will reset the quota after 30 minutes or 
+when it's restarted.
 
 **Will it Ever Fail for Basic-Cards?**
-Basic cards are a standardized payment method of the Payment Request API, so
-is there every a scenario where `canMakePayment()` will fail?
+Basic cards are a standardized payment method of the Payment Request API, 
+so is there every a scenario where `canMakePayment()` will fail?
 
-It can fail if the user has no known cards or the known cards are invalid (i.e.
-the details for the card don't pass the [LUHN check](https://en.wikipedia.org/wiki/Luhn_algorithm)).
+It can fail if the user has no known cards or the known cards are invalid 
+(i.e., the details for the card don't pass the 
+[LUHN check](https://en.wikipedia.org/wiki/Luhn_algorithm)).
 
 **How does canMakePayment() Work with Payment Apps?**
 If a site indicates support for URL payment method, like
-'https://example.com/bobpay', `canMakePayment()` will return "false" if the app
-is not installed. When the app is installed, it can decide if `canMakePayment()`
-should return true or false.
+'https://example.com/bobpay', `canMakePayment()` will return "false" if the 
+app is not installed. When the app is installed, it can decide if 
+`canMakePayment()` should return true or false.
 
 *Note*: In incognito mode, the 3rd party app will not be queried and
 `canMakePayment()` will always return "true".
 
 ## PaymentRequest Shim
 
-To mitigate the pains of catching up with this living standard API, we strongly
-recommend you add [this shim](https://github.com/GoogleChrome/payment-request-shim)
-to the `<head>` of your page. This shim will be updated as the API changes and will
-do its best to keep your code working for at least 2 major releases of Chrome.
+To mitigate the pains of catching up with this living standard API, we 
+strongly recommend you add 
+[this shim](https://github.com/GoogleChrome/payment-request-shim)
+to the `<head>` of your page. This shim will be updated as the API changes 
+and will do its best to keep your code working for at least two major 
+releases of Chrome.
 
-We also provide a [PaymentRequest wrapper for Apple Pay JS](https://github.com/GoogleChrome/appr-wrapper).
+We also provide a 
+[PaymentRequest wrapper for Apple Pay JS](https://github.com/GoogleChrome/appr-wrapper).
