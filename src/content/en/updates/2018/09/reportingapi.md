@@ -85,7 +85,7 @@ Access-Control-Allow-Methods: GET,PUT,POST,DELETE,OPTIONS; Access-Control-Allow-
 
 In the example, sending this response header with your main page
 configures the browser to report browser-generated warnings
-to the endpoint `https://example.com/browser-errors` for `max_age` seconds.
+to the endpoint `https://analytics.provider.com/browser-errors` for `max_age` seconds.
 It's important to note that all subsequent HTTP requests made by the page
 (for images, scripts, etc.) are ignored. Configuration is setup during
 the response of the main page.
@@ -292,8 +292,8 @@ Report-To: {
 ```
 
 For backwards compatibility, continue to use `report-uri` along with `report-to`.
-In other words: `Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname`.
-Browsers that support `report-to` will use it instead of the former.
+In other words: `Content-Security-Policy: ...; report-uri https://example.com/csp-reports; report-to groupname`.
+Browsers that support `report-to` will use it instead of `report-uri`.
 {: .key-point }
 
 ### Network errors {: #nel }
@@ -319,7 +319,7 @@ Report-To: {
 ```
 
 Next, send the `NEL` response header to start collecting errors. Since NEL
-is opt-in for an origin*, you only need to send the header once. Both `NEL` and
+is opt-in for an origin, you only need to send the header once. Both `NEL` and
 `Report-To` will apply to future requests to the same origin and will continue
 to collect errors according to the `max_age` value that was used to set up
 the collector.
