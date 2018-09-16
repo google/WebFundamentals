@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Modern sites often contain a lot of JavaScript. These scripts are often sent down in large, monolithic bundles which can take a long time to download and process. Code-splitting encourages breaking up these scripts so you only send what a user needs when they need it.
 
-{# wf_updated_on: 2018-09-05 #}
+{# wf_updated_on: 2018-09-16 #}
 {# wf_published_on: 2018-08-06 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -27,8 +27,8 @@ panel](/web/updates/2017/04/devtools-release-notes#coverage) in DevTools to
 measure the impact of your app's scripts on performance and how many scripts are
 unused.
 - Code-splitting can be done in the following ways:
-    - **Vendor splitting** separates vendor code (e.g., React or lodash) away
-from your app's code. This allows you to keep application and vendor code
+    - **Vendor splitting** separates vendor code (e.g., React, lodash, _etc._)
+away from your app's code. This allows you to keep application and vendor code
 separate. This isolates the negative performance impacts of cache invalidation
 for returning users when either your vendor or app code changes. This should be
 done in _every_ app.
@@ -41,7 +41,7 @@ and others are part of a single page application.
 are used. This type of splitting is often best for single page applications.
 - Choose tools that split code for you ([Preact
 CLI](https://github.com/developit/preact-cli/), [PWA Starter
-Kit](https://github.com/Polymer/pwa-starter-kit/), _et al._) where possible.
+Kit](https://github.com/Polymer/pwa-starter-kit/), _etc._) where possible.
 [React](https://reactjs.org/docs/code-splitting.html),
 [Vue](https://vuejsdevelopers.com/2017/07/03/vue-js-code-splitting-webpack/),
 and [Angular](https://angular.io/guide/lazy-loading-ngmodules) support manual
@@ -150,7 +150,59 @@ will perform similarly. If you're unable to procure a real device for testing,
 you can always fall back on [WebPagetest](https://www.webpagetest.org/), which
 allows you to assess performance across a variety of platforms.
 
-Enough talk. Let's talk about the "how" of code splitting!
+## Set a budget and stick to it
+
+If you treat performance as a one-off task, your performance improvements _will_
+eventually go by the wayside, as the addition of new features and tech debt will
+erase the gains you've made. Performance budgets help you to to cement gains,
+and prevent the addition of new features from killing your app's performance.
+
+Performance budgets enable shared enthusiasm for keeping a site’s user
+experience within the constraints needed to keep it fast. They usher in a
+culture of accountability that enable business stakeholders to weigh the impact
+to user-centric metrics of each change to a site.
+
+Embracing performance budgets encourage teams to think seriously about the
+consequences of any decisions they make from early on in the design phases right
+through to the end of a milestone.
+
+Performance Budgets are aided by having internal processes for operationalizing
+a performance culture within a business. Organizational performance budgets
+ensure that a budget is owned by everyone rather than just being defined by one
+group (e.g engineering). Ensuring fast page loads are one of the most common
+performance budgets teams set.
+
+When budgets have been set and the entire organization is aware early on what
+the budget parameters are, you're able to say performance isn't just an
+engineering issue, but a critical piece of the whole package as a site is
+constructed. It provides a guideline for design and engineering when considering
+performance and should be checked with each decision that could impact
+performance.
+
+When teams are crafting their performance budgets, they need to review their
+research and be aware of the metrics that matter most to their users. If you're
+trying to get interactive quickly on a low-mid end device, you can't ship 5MB of
+JavaScript.
+
+Walking back from Alex Russell's performance budgeting goals outlined in ["Can
+You Afford
+It?"](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/),
+this may be:
+
+- Time-To-Interactive < 5s on 3G over an emulated (or real) [Moto
+G4](https://en.wikipedia.org/wiki/Moto_G4)
+- JavaScript budget of < 200 KB if targeting mobile. If you're just starting out,
+align with a budget that's less than [the HTTP Archive
+medians](https://httparchive.org/reports/state-of-javascript#bytesJs) for
+desktop.
+- Budgets for other resources can be drawn from a total page weight target. If a
+page cannot be larger than 600 KB, your budget for images, JS, CSS, etc will
+need to fit in. It's important we remind developers more resources can be lazy
+loaded as needed, but the initial costs should be clearly budgeted.
+
+A range of options are available for sites looking for inspiration on how to set
+budgets: you can check your competitor's sites or consult industry medians
+derived from case studies in your vertical.
 
 ## Getting hands on with code splitting
 
@@ -577,9 +629,37 @@ branch](https://github.com/malchata/code-splitting-example/tree/webpack-dynamic-
 ## Loading performance considerations
 
 A potential pain point with code splitting is it increases the amount of
-requests for scripts which, even in HTTP/2 environments, can present challenges.
+requests for scripts which, even in HTTP/2 environments, presents challenges.
 Let's cover some ways you can improve loading performance in apps where code
 splitting is used.
+
+### There's that "budget" word again
+
+At the start of this guide, we talked at a high level about performance budgets,
+which can be difficult to enforce if the practice isn't followed in your
+organization. If you use webpack in your project, you can configure your app to
+throw an error for builds emitting assets that are too large by way of [the
+`performance` configuration
+object](https://webpack.js.org/configuration/performance/). With this config
+object, we can effectively enforce budgets for asset sizes like so:
+
+```javascript
+module.exports = {
+  // ...
+  performance: {
+    hints: "error",
+    maxAssetSize: 102400
+  }
+};
+```
+
+This configuration effectively tells Webpack "if any asset larger than 100 KB is
+emitted during build, throw an error". This is certainly a draconian
+configuration (and is one you probably can't put into an existing app without
+running into some trouble), but if you're serious about sticking to a budget,
+the `performance` object can help you do just that. Be sure to check out other
+options available in this object, such as
+[`maxEntrypointSize`](https://webpack.js.org/configuration/performance/#performance-maxentrypointsize).
 
 ### Precache scripts with a service worker
 
