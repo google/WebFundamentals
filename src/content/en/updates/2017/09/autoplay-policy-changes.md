@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn best practices for good user experiences with the new autoplay policies in Chrome, coming April 2018.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-08-20 #}
 {# wf_published_on: 2017-09-13 #}
 {# wf_tags: autoplay,news,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -13,7 +13,7 @@ description: Learn best practices for good user experiences with the new autopla
 
 Note: The Autoplay Policy launched in M66 Stable for audio and video
 elements and is effectively blocking roughly half of unwanted media autoplays
-in Chrome. For the Web Audio API, the autoplay policy will launch in M70. This
+in Chrome. For the Web Audio API, the autoplay policy will launch in M71. This
 affects web games, some WebRTC applications, and other web pages using audio
 features.  Developers will need to update their code to take advantage of the
 policy. More details can be found in the <a href="#webaudio">Web Audio API
@@ -207,8 +207,8 @@ including Facebook, Instagram, Twitter, and YouTube.
 
 ### Web Audio {: #webaudio }
 
-Note: The Web Audio API will be included in the Chrome autoplay policy with M70
-(October 2018).
+Note: The Web Audio API will be included in the Chrome autoplay policy with M71
+(December 2018).
 
 First, be reminded that it is good practice to wait for a user interaction
 before starting audio playback as user is aware of something happening. Think
@@ -221,7 +221,9 @@ will need to call <code>resume()</code> after a user gesture is received.
 
 If you create your <code>AudioContext</code> on page load, you’ll have to call
 <code>resume()</code> at some time after the user interacted with the page
-(e.g., user clicked a button).
+(e.g., user clicked a button). Alternatively, the <code>AudioContext</code> 
+will be resumed after a user gesture if <code>start()</code> is called on
+any attached node.
 
     // Existing code unchanged.
     window.onload = function() {
@@ -237,8 +239,8 @@ If you create your <code>AudioContext</code> on page load, you’ll have to call
       });
     });
 
-You may also create the <code>AudioContext</code> only when user interacts wit
-the page.
+You may also create the <code>AudioContext</code> only when the user interacts 
+with the page.
 
     document.querySelector('button').addEventListener('click', function() {
       var context = new AudioContext();
