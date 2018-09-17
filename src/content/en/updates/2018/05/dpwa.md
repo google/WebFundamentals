@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're fast. Feel integrated because they launched in the same way as other apps, and run in an app window, without an address bar or tabs. They're reliable because service workers can cache all of the assets they need to run. And they create an engaging experience for users.
 
-{# wf_updated_on: 2018-07-17 #}
+{# wf_updated_on: 2018-09-18 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: progressive-web-apps,desktop,responsive,chrome67 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -20,8 +20,8 @@ Success: Support for Desktop Progressive Web Apps is supported on Chrome OS
 
 <div class="clearfix"></div>
 
-Dogfood: Work is currently under way to support Mac and Windows. You can test
-support by enabling the `#enable-desktop-pwas` flag.
+Dogfood: As of September 2018, Windows support is available in Chrome 70 (currently beta),
+and Mac support is expected to land in Chrome 72. 
 
 <div class="clearfix"></div>
 
