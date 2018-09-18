@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android.
 
 {# wf_updated_on: 2018-09-18 #}
-{# wf_published_on: 2018-09-17 #}
+{# wf_published_on: 2018-09-18 #}
 {# wf_tags: news,chrome70,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
 {# wf_featured_snippet: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android. #}
