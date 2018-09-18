@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android.
 
-{# wf_updated_on: 2018-09-17 #}
+{# wf_updated_on: 2018-09-18 #}
 {# wf_published_on: 2018-09-17 #}
 {# wf_tags: news,chrome70,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -23,26 +23,28 @@ description: A round up of the audio/video updates in Chrome 70: Cross-codec and
 
 Chrome is [adding support] for improved cross-codec or cross-bytestream
 transitions in [Media Source Extensions] (MSE) playback using a new
-`changeType()` method on `SourceBuffer`. It basically allows the type of media
-bytes subsequently appended to the `SourceBuffer` to be changed.
+`changeType()` method on `SourceBuffer`. It allows the type of media
+bytes appended to the `SourceBuffer` to be changed afterwards.
 
-While the [W3C REC version of MSE] supports adaptive playback of media, that
-adaptation requires that any media appended to a `SourceBuffer` must conform to
-the MIME type provided when initially creating the `SourceBuffer` via
-`MediaSource.addSourceBuffer(type)`, and codecs from that type and any
-previously parsed initialization segments must remain the same throughout. This
-means the website has to take explicit steps to accomplish codec or bytestream
-switching (by using multiple media elements or `SourceBuffer` tracks and
-switching among those), increasing application complexity and user-visible
-latency (such transitions require the web app to take synchronous action on the
-renderer main thread). This transition latency impairs the smoothness of media
-playback across transitions.
+The [current version of MSE] (W3C Recommendation 17 November 2016) supports
+adaptive playback of media; however adaptation requires that any media appended
+to a `SourceBuffer` must conform to the MIME type provided when initially
+creating the `SourceBuffer` via `MediaSource.addSourceBuffer(type)`. Codecs
+from that type and any previously parsed initialization segments must remain
+the same throughout. This means the website has to take explicit steps to
+accomplish codec or bytestream switching (by using multiple media elements or
+`SourceBuffer` tracks and switching among those), increasing application
+complexity and user-visible latency. (Such transitions require the web app to
+take synchronous action on the renderer main thread). This transition latency
+impairs the smoothness of media playback across transitions.
 
-With the new `changeType()` method on `SourceBuffer`, a `SourceBuffer` can
-buffer and support playback across different [bytestream formats] and codecs.
-This new method retains previously buffered media modulo future MSE coded frame
-eviction or removal, and leverages the splicing and buffering logic in the
-existing MSE coded frame processing algorithm.
+With its new `changeType()` method, a `SourceBuffer` can buffer and support
+playback across different [bytestream formats] and codecs. This new method
+retains previously buffered media modulo future MSE coded frame eviction or
+removal, and leverages the splicing and buffering logic in the existing MSE
+coded frame processing algorithm.
+
+Here's how to use the `changeType()` method:
 
     const sourceBuffer = myMediaSource.addSourceBuffer('video/webm; codecs="opus, vp09.00.10.08"');
     sourceBuffer.appendBuffer(someWebmOpusVP9Data);
@@ -55,7 +57,7 @@ existing MSE coded frame processing algorithm.
     }
 
 As expected, if the passed type is not supported by the browser, this method
-throws an error.
+throws a `NotSupportedError` exception.
 
 Check out the [sample] to play with cross-codec and
 cross-bytestream buffering and playback of an audio element.
@@ -66,10 +68,10 @@ cross-bytestream buffering and playback of an audio element.
 
 ## Opus in MP4 for MSE {: #opus-in-mp4-for-mse }
 
-The open and highly versatile audio codec [Opus] has been supported in regular
-Chrome media playback since Chrome 33. [Opus in ISO-BMFF] support (aka Opus in
-MP4) was added after. And now Opus in MP4 is available in Chrome 70 for [Media
-Source Extensions] (MSE).
+The open and highly versatile audio codec [Opus] has been supported in the
+`<audio>` and `<video>` elements since Chrome 33. [Opus in ISO-BMFF] support
+(aka Opus in MP4) was added after. And now Opus in MP4 is available in Chrome
+70 for [Media Source Extensions] (MSE).
 
 Here's how you can detect if Opus in MP4 is supported for MSE:
 
@@ -93,12 +95,12 @@ versions prior to Lollipop.
 
 ## Allow protected content playback by default on Android {: #protected-content-allowed-by-default }
 
-In Chrome 70 for Android, the default value of “protected content” site setting
-changes from “Ask first” to “Allowed”, lowering the friction associated with
-playback of such media. This change is possible, in part, because of additional
-steps taken to clear media licenses alongside cookies and site data, ensuring
-that media licenses are not used by sites to track users who have cleared
-browsing data.
+In Chrome 70 for Android, the default value of the “protected content” site
+setting changes from “Ask first” to “Allowed”, lowering the friction associated
+with playback of such media. This change is possible, in part, because of
+additional steps taken to clear media licenses alongside cookies and site data,
+ensuring that media licenses are not used by sites to track users who have
+cleared browsing data.
 
 <div class="attempt-right">
 <figure>
@@ -120,7 +122,7 @@ browsing data.
 
 [adding support]: https://github.com/wicg/media-source/blob/codec-switching/codec-switching-explainer.md
 [Media Source Extensions]: /web/fundamentals/media/mse/basics
-[W3C REC version of MSE]: https://www.w3.org/TR/2016/REC-media-source-20161117/
+[current version of MSE]: https://www.w3.org/TR/2016/REC-media-source-20161117/
 [bytestream formats]: https://www.w3.org/TR/mse-byte-stream-format-registry/
 [sample]: https://googlechrome.github.io/samples/media/sourcebuffer-changetype.html
 [Opus]: https://opus-codec.org/
