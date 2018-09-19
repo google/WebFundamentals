@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -161,8 +161,9 @@ with PCI SAQ A-EP, some PSPs provide an SDK that uses the Payment Request API.
 *   [Stripe](https://stripe.com/docs/stripe-js/elements/payment-request-button)
 *   [Braintree](https://developers.braintreepayments.com/guides/payment-request/overview)
 
-Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to us 
-if your payment gateway supports Payment Request API but is not listed here.
+Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to
+us if your payment gateway provides an SDK that involves the Payment Request API
+but is not listed here.
 
 ## Next Up
 
