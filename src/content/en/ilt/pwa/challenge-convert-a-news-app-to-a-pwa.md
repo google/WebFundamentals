@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-09-05 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -55,7 +55,7 @@ Unlike the other labs, this is a self-guided exercise - only the setup is explai
 
 
 
-If you have not downloaded the  [repository](https://github.com/google-developer-training/pwa-training-labs) and installed  [the LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the  [repository](https://github.com/google-developer-training/pwa-training-labs) and installed  [the LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 ### Install project dependencies and explore the app
 

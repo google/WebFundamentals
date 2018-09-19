@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-30 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -47,7 +47,7 @@ In this lab you'll use  [Lighthouse](/web/tools/lighthouse/) to audit a website 
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Navigate into the `offline-quickstart-lab/app/` directory and start a local development server:
 
