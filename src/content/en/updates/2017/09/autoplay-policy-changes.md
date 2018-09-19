@@ -57,7 +57,7 @@ Chrome's autoplay policies are simple:
     - User has interacted with the domain (click, tap, etc.).
     - On desktop, the user's [Media Engagement Index](#mei) threshold has been crossed,
       meaning the user has previously play video with sound.
-    - On mobile, the user has [added the site to his or her home screen].
+    - On mobile, the user has [added the site to their home screen].
 - Top frames can [delegate autoplay permission](#iframe) to their iframes to
   allow autoplay with sound.
 
