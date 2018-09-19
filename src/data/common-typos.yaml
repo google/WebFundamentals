@@ -269,15 +269,7 @@
   fix: website
   description: "See: https://developers.google.com/style/word-list#website"
 
-- typo: \bhis|her('?s)?\b
-  fix: "they/their/theirs/they're/etc"
-  description: "Avoid gendered pronouns"
-
-- typo: \bs?he('?s)?\b
-  fix: "they/their/theirs/they're/etc"
-  description: "Avoid gendered pronouns"
-  
-- typo: \bhim|her[^']\b
+- typo: \b(s?he('?s)?|him|his|her('?s)?)\b
   fix: "they/their/theirs/they're/etc"
   description: "Avoid gendered pronouns"
 
