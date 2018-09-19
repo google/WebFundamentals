@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2018-08-22 #}
+{# wf_updated_on: 2018-09-18 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -85,18 +85,18 @@ A plugin using all of these callbacks would look like this:
 
 ```javascript
 const myPlugin = {
-  cacheWillUpdate: async ({request, response}) => {
+  cacheWillUpdate: async ({request, response, event}) => {
     // Return `response`, a different Response object or null
     return response;
   },
-  cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse}) => {
+  cacheDidUpdate: async ({cacheName, request, oldResponse, newResponse, event}) => {
     // No return expected
     // Note: `newResponse.bodyUsed` is `true` when this is called,
     // meaning the body has already been read. If you need access to
     // the body of the fresh response, use a technique like:
     // const freshResponse = await caches.match(request, {cacheName});
   },
-  cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse}) => {
+  cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse, event}) => {
     // Return `cachedResponse`, a different Response object or null
     return cachedResponse;
   },
@@ -104,7 +104,7 @@ const myPlugin = {
     // Return `request` or a different Request
     return request;
   },
-  fetchDidFail: async ({originalRequest, request, error}) => {
+  fetchDidFail: async ({originalRequest, request, error, event}) => {
     // No return expected.
     // NOTE: `originalRequest` is the browser's request, `request` is the
     // request after being passed through plugins with
@@ -113,3 +113,11 @@ const myPlugin = {
   }
 };
 ```
+
+Note: the `event` object passed to each plugin callback above represents the
+original event that triggered the fetch or cache action. In some cases there
+will **not** be an original event, so your code should check for its existence
+before referencing it. Also, when invoking the
+[`makeRequest()`](/web/tools/workbox/guides/advanced-recipes#make-requests)
+method of a strategy, the `event` you pass to `makeRequest()` will be the event
+passed to the plugin callbacks.
