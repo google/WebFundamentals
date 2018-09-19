@@ -19,7 +19,7 @@ def parse(requestPath, fileLocation, rawYaml, lang='en'):
   # Parse the Yaml
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
-  if page['body_class']:
+  if 'body_class' in page:
     context['bodyClass'] += ' ' + page['body_class']
 
   # Get the project_path and read/parse the project file.
