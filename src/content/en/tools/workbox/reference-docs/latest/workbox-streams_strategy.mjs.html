@@ -5,7 +5,7 @@
   <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
   <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
-  <title>Source: workbox-streams/_default.mjs</title>
+  <title>Source: workbox-streams/strategy.mjs</title>
   <link href="jsdoc.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
         </div>
         <div id="jsdoc-main" role="main">
           <header class="page-header">
-            <h1>Source: workbox-streams/_default.mjs</h1>
+            <h1>Source: workbox-streams/strategy.mjs</h1>
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
@@ -38,7 +38,6 @@
 import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
 
 import {createHeaders} from &#x27;./utils/createHeaders.mjs&#x27;;
-import {concatenate} from &#x27;./concatenate.mjs&#x27;;
 import {concatenateToResponse} from &#x27;./concatenateToResponse.mjs&#x27;;
 import {isSupported} from &#x27;./isSupported.mjs&#x27;;
 
@@ -61,7 +60,7 @@ import &#x27;./_version.mjs&#x27;;
  *
  * @memberof workbox.streams
  */
-function strategy(sourceFunctions, headersInit) {
+export function strategy(sourceFunctions, headersInit) {
   return async ({event, url, params}) &#x3D;&gt; {
     if (isSupported()) {
       const {done, response} &#x3D; concatenateToResponse(sourceFunctions.map(
@@ -98,13 +97,6 @@ function strategy(sourceFunctions, headersInit) {
     return new Response(new Blob(parts), {headers});
   };
 }
-
-export default {
-  concatenate,
-  concatenateToResponse,
-  isSupported,
-  strategy,
-};
 </code></pre>
           </article>
         </div>
