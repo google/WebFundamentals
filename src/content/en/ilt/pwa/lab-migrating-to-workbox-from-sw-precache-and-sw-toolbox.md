@@ -55,7 +55,7 @@ This lab shows you how to take an existing PWA that uses `sw-precache` and `sw-t
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 In `sw-precache-workbox-lab/`, open the `project/` folder in your preferred text editor. The `project/` folder is where you do the work in this lab.
 

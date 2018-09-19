@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2018-08-30 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -46,7 +46,7 @@ This lab walks you through creating a simple service worker and explains the ser
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Navigate into the `service-worker-lab/app/` directory and start a local development server:
 

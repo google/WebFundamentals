@@ -48,7 +48,7 @@ This lab shows you how you can automate tasks with  [gulp](https://gulpjs.com/),
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open the `gulp-lab/project/` folder in your preferred text editor. The `project/` folder is where you will be building the lab.
 

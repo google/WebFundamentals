@@ -55,7 +55,7 @@ Unlike the other labs, this is a self-guided exercise - only the setup is explai
 
 
 
-If you have not downloaded the  [repository](https://github.com/google-developer-training/pwa-training-labs) and installed  [the LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting_up_the_labs.md).
+If you have not downloaded the  [repository](https://github.com/google-developer-training/pwa-training-labs) and installed  [the LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 ### Install project dependencies and explore the app
 
