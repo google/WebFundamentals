@@ -207,6 +207,9 @@
 - typo: \bwith\s+with\b
   fix: with
 
+- typo: \byou\s+you\b
+  fix: you
+
 
 ## DevSite Word List
 # See https://developers.google.com/style/word-list
@@ -265,6 +268,10 @@
 - typo: web\ssite
   fix: website
   description: "See: https://developers.google.com/style/word-list#website"
+
+- typo: \b(s?he('?s)?|him|his|her('?s)?)\b
+  fix: "they/their/theirs/they're/etc"
+  description: "Avoid gendered pronouns"
 
 ## Spelling mistakes & typos in docs
 
