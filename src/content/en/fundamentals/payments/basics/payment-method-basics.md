@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Methods page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -145,7 +145,6 @@ data: {
 *   [Google Pay (`https://google.com/pay`)](/pay/api/web/)
 *   [Apple Pay (`https://apple.com/apple-pay`)](https://developer.apple.com/documentation/apple_pay_on_the_web)
 *   [Samsung Pay (`https://spay.samsung.com`)](https://developer.samsung.com/internet/android/web-payments-guide)
-*   [Tez (`https://tez.google.com/pay`)](/pay/india/api/web/)
 
 Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to
 us if your payment app supports Payment Request API but is not listed here.

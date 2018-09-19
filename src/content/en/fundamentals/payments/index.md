@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_blink_components: Blink>Payments #}
 
 # W3C Payment APIs {: .page-title }
@@ -11,11 +11,11 @@ description: Overview page to the W3C Payment APIs doc set.
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
 
-<!-- <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="hmqZxP6iTpo"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="colCcgKoLUM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> -->
+</div>
 
 ## Introduction
 
@@ -42,8 +42,8 @@ businesses to serve more customers with a better developer experience and more s
 
 ## 3 principles
 
-<section style="display:flex;background-color:#f7f7f7;">
-  <div style="min-width:50%">
+<section style="display:flex;background-color:#f7f7f7;padding-bottom:32px;">
+  <div style="min-width:50%;padding-top:32px;">
     <img src="images/overview/standard-open.png" width="100%" alt="Standard and Open" title="">
   </div>
   <div style="min-width:50%">
@@ -51,19 +51,19 @@ businesses to serve more customers with a better developer experience and more s
     W3C Payment APIs are an open payment standard for the web platform for the first time
     in history. They are available for any players to implement.</div>
 </section>
-<section style="display:flex">
+<section style="display:flex;padding-bottom:32px;">
   <div style="min-width:50%">
     <h3>Easy and Consistent</h3>
     W3C Payment APIs make checkout easy for the user, by reusing stored 
 payments and address information and removing the need for the user to fill in checkout forms. 
 Since the UI is implemented by the browser natively, users see a familiar and consistent checkout 
 experience on any website that implements the standard.</div>
-  <div style="min-width:50%">
+  <div style="min-width:50%;padding-top:32px;">
     <img src="images/overview/easy-consistent.png" width="100%" alt="Standard and Open" title="">
   </div>
 </section>
-<section style="display:flex;background-color:#f7f7f7;">
-  <div style="min-width:50%">
+<section style="display:flex;background-color:#f7f7f7;padding-bottom:32px;">
+  <div style="min-width:50%;padding-top:32px;">
     <img src="images/overview/secure-flexible.png" width="100%" alt="Standard and Open" title="">
   </div>
   <div style="min-width:50%">
