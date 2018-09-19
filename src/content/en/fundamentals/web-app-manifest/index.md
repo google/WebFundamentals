@@ -13,7 +13,7 @@ description: The web app manifest is a JSON file that gives you the ability to c
 
 The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 is a simple JSON file that tells the browser about your web application and
-how it should behave when 'installed' on the users mobile device or desktop.
+how it should behave when 'installed' on the user's mobile device or desktop.
 Having a manifest is required by Chrome to show the
 [Add to Home Screen prompt](/web/fundamentals/app-install-banners/).
 
@@ -55,7 +55,7 @@ prompt.
 
 ## Tell the browser about your manifest
 
-When you have created the manifest add a `link` tag to all the pages that
+When you have created the manifest, add a `link` tag to all the pages that
 encompass your web app:
 
 
@@ -68,7 +68,7 @@ encompass your web app:
 
 You must provide at least the `short_name` or `name` property. If both are
 provided, `short_name` is used on the user's home screen, launcher, or other
-places where space may be limited. `name` is used on the
+places where space may be limited. `name` is used in the
 [app install prompt](/web/fundamentals/app-install-banners/).
 
     "short_name": "Maps",
@@ -81,7 +81,7 @@ When a user adds your site to their home screen, you can define a set of
 icons for the browser to use. These icons are used in places like the home
 screen, app launcher, task switcher, splash screen, etc.
 
-`icons` is an array of image objects, each object should
+`icons` is an array of image objects. Each object should
 include the `src`, a `sizes` property, and the `type` of image.
 
     "icons": [
@@ -102,6 +102,10 @@ automatically scale the icon for the device. If you'd prefer to scale your
 own icons and adjust them for pixel-perfection, provide icons in increments
 of 48dp.
 
+Note: "sizes" is plural because it's a string of space-separate image
+dimensions. This is useful for certain image formats that contain more than
+one size (e.g. [ico](https://en.wikipedia.org/wiki/ICO_(file_format)).
+
 ### `start_url` {: #start-url }
 
 The `start_url` tells the browser where your application should start when it
@@ -109,13 +113,13 @@ is launched, and prevents the app from starting on whatever page the user was
 on when they added your app to their home screen.
 
 Your `start_url` should direct the user straight into your app, rather than
-a product landing page. Think about the what the user will want to do once
+a product landing page. Think about what the user will want to do once
 they open your app, and place them there.
 
     "start_url": "/?utm_source=a2hs"
 
 Success: add a query string to the end of the `start_url` to track how often
-your app is launched.
+your app is launched from the home screen.
 
 ### `background_color` {: #background-color }
 
@@ -149,7 +153,7 @@ to go completely full screen.
       <td><code>standalone</code></td>
       <td>
         Opens the web app to look and feel like a standalone native
-        app. The app runs in it's own window, separate from the browser, and
+        app. The app runs in its own window, separate from the browser, and
         hides standard browser UI elements like the URL bar, etc.</td>
     </tr>
     <tr>
@@ -170,7 +174,7 @@ to go completely full screen.
 
 Success: In order to show the
 [Add to Home Screen Prompt](/web/fundamentals/app-install-banners/), `display`
-must be set to standalone.
+must be set to `standalone`.
 
 ### `orientation` {: #orientation }
 
@@ -182,9 +186,9 @@ Users prefer selecting the orientation.
 
 ### `scope` {: #scope }
 
-The `scope` defines the set of URLs that the browser considers within your app,
-and is used to decide when you’ve left your app, and should be bounced
-back out to a browser tab. The `scope` controls the url structure that
+The `scope` defines the set of URLs that the browser considers to be within your
+app, and is used to decide when the user has left the app, and should be bounced
+back out to a browser tab. The `scope` controls the URL structure that
 encompasses all the entry and exit points in your web app. Your `start_url`
 must reside within the `scope`.
 
@@ -203,7 +207,8 @@ A few other tips:
 
 ### `theme_color` {: #theme-color }
 
-The `theme_color` sets the color of the tool bar, and in the task switcher.
+The `theme_color` sets the color of the tool bar, and may be reflected in
+the app's preview in task switchers.
 
     "theme_color": "#3367D6"
 
@@ -245,6 +250,11 @@ but you can provide additional icons as necessary.
 
 <div class="clearfix"></div>
 
+## Generating manifests (and icons) automatically
+
+To help generate a manifest, you can also use tools like [PWABuilder](https://pwabuilder.com),
+which pre-populate manifest properties based on your app's URL.
+
 ## Feedback {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -258,11 +268,8 @@ but you can provide additional icons as necessary.
   <figcaption>Manifest tab of Chrome DevTools</figcaption>
 </figure>
 
-To verify your manifest is setup correctly, you can use the **Manifest** tab
-in the **Application** panel of Chrome DevTools.
-
-If you want to manually verify that your web app manifest is set up correctly,
-use the [**Manifest**](/web/tools/chrome-devtools/progressive-web-apps) tab
+To manually verify your manifest is setup correctly, you can use the
+[**Manifest**](/web/tools/chrome-devtools/progressive-web-apps) tab
 on the **Application** panel of Chrome DevTools.
 
 This tab provides a human-readable version of many of your manifest's
@@ -272,14 +279,14 @@ for more on this topic.
 
 If you want an automated approach towards validating your web app manifest,
 check out [Lighthouse](/web/tools/lighthouse/). Lighthouse is a web app auditing
-tool that you run as a Chrome Extension or as an NPM module. You provide
-Lighthouse with a URL, it runs a suite of audits against that page, and then
-displays the results in a report.
+tool. It's built into the Audits tab of Chrome DevTools, or can be run as an NPM
+module. You provide Lighthouse with a URL, it runs a suite of audits against that
+page, and then displays the results in a report.
 
 
 ## What's next?
 
-* If you're using a web app manifest, you'll probably want set up an
+* If you're using a web app manifest, you'll probably want to set up an
   [app install banner](/web/fundamentals/app-install-banners) as well.
 * [A complete reference](https://developer.mozilla.org/en-US/docs/Web/Manifest)
   to the web app manifest is available on the Mozilla Developer Network.
