@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Cookie Store API offers asynchronous acesss to HTTP cookies, and opens up the cookie jar to service workers.
+description: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-09-07 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2018-09-06 #}
 {# wf_tags: cookie,chrome69 #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
@@ -77,7 +77,7 @@ getter to the asynchronous Cookie Store API.
     // {
     //   domain: "example.com",
     //   expires: 1593745721000,
-    //   name: "sesion_id",
+    //   name: "session_id",
     //   path: "/",
     //   sameSite: "unrestricted",
     //   secure: true,
@@ -94,7 +94,7 @@ that the change is only guaranteed to be applied after the Promise returned by
 
 ## Observe, don't poll
 
-A popular application for accessing cokies from JavaScript is detecting when
+A popular application for accessing cookies from JavaScript is detecting when
 the user logs out, and updating the UI. This is currently done by polling
 `document.cookie`, which introduces jank and has a negative impact on battery
 life.

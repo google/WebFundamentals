@@ -22,7 +22,7 @@ toc:
       status: external
   - title: Payment Apps Developer Guide
     section:
-    - title: Anroid payment apps developer guide
+    - title: Android payment apps developer guide
       path: /web/fundamentals/payments/payment-apps-developer-guide/android-payment-apps
     - title: Web based payment apps developer guide
       path: /web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps
