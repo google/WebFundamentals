@@ -31,7 +31,7 @@ Currently your site looks like this:
   <img src="imgs/css/intro1.png"
        alt="What your site currently looks like."/>
   <figcaption>
-    <b>Figure X</b>. What your site currently looks like
+    <b>Figure 1</b>. What your site currently looks like
   </figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ After completing the tutorial, it will look like this:
   <img src="imgs/css/intro2.png"
        alt="What your site will look like at the end of the tutorial."/>
   <figcaption>
-    <b>Figure X</b>. What your site will look like at the end of the tutorial
+    <b>Figure 2</b>. What your site will look like at the end of the tutorial
   </figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ In order to start creating your site, you need to set up your code:
        <img src="imgs/css/setup1.png"
             alt="The editing tab."/>
        <figcaption>
-         <b>Figure X</b>. The editing tab
+         <b>Figure 3</b>. The editing tab
        </figcaption>
      </figure>
 
@@ -93,7 +93,7 @@ In order to start creating your site, you need to set up your code:
        <img src="imgs/css/setup2.png"
             alt="The Project Options menu."/>
        <figcaption>
-         <b>Figure X</b>. The Project Options menu
+         <b>Figure 4</b>. The Project Options menu
        </figcaption>
      </figure>
 
@@ -106,7 +106,7 @@ In order to start creating your site, you need to set up your code:
        <img src="imgs/css/setup3.png"
             alt="The live tab."/>
        <figcaption>
-         <b>Figure X</b>. The live tab
+         <b>Figure 5</b>. The live tab
        </figcaption>
      </figure>
 
@@ -140,7 +140,7 @@ Try it now:
        <img src="imgs/css/inline1.png"
             alt="index.html."/>
        <figcaption>
-         <b>Figure X</b>. <code>index.html</code>
+         <b>Figure 6</b>. <code>index.html</code>
        </figcaption>
      </figure>
 
@@ -165,7 +165,7 @@ Try it now:
        <img src="imgs/css/inline2.png"
             alt="The background color behind the Home and Contact links is now blue."/>
        <figcaption>
-         <b>Figure X</b>. The background color behind the Home and Contact links is now blue
+         <b>Figure 7</b>. The background color behind the Home and Contact links is now blue
        </figcaption>
      </figure>
 
@@ -191,7 +191,7 @@ Try it now:
        <img src="imgs/css/internal1.png"
             alt="The Contact page."/>
        <figcaption>
-         <b>Figure X</b>. The Contact page
+         <b>Figure 8</b>. The Contact page
        </figcaption>
      </figure>
 
@@ -220,7 +220,7 @@ Try it now:
        <img src="imgs/css/internal2.png"
             alt="The font of the Home and Contact links has changed."/>
        <figcaption>
-         <b>Figure X</b>. The font of the Home and Contact links has changed
+         <b>Figure 9</b>. The font of the Home and Contact links has changed
        </figcaption>
      </figure>
 
@@ -291,7 +291,7 @@ Use commas to add multiple selectors to a ruleset. Try it now:
        <img src="imgs/css/multiple1.png"
             alt="The text 'Contact Me!' now has the same font as the Home and Contact links."/>
        <figcaption>
-         <b>Figure X</b>. The text "Contact Me!" now has the same font as the Home and Contact links
+         <b>Figure 10</b>. The text "Contact Me!" now has the same font as the Home and Contact links
        </figcaption>
      </figure>
 
@@ -313,7 +313,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add1.png"
             alt="Inspecting the Home link."/>
        <figcaption>
-         <b>Figure X</b>. Inspecting the Home link
+         <b>Figure 11</b>. Inspecting the Home link
        </figcaption>
      </figure>
 
@@ -326,7 +326,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add2.png"
             alt="The Styles tab is below the DOM Tree."/>
        <figcaption>
-         <b>Figure X</b>. The Styles tab is below the DOM Tree
+         <b>Figure 12</b>. The Styles tab is below the DOM Tree
        </figcaption>
      </figure>
 
@@ -336,7 +336,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add3.png"
             alt="The Styles tab is to the right of the DOM Tree."/>
        <figcaption>
-         <b>Figure X</b>. The Styles tab is to the right of the DOM Tree
+         <b>Figure 13</b>. The Styles tab is to the right of the DOM Tree
        </figcaption>
      </figure>
 
@@ -346,7 +346,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add4.png"
             alt="Adding a new declaration."/>
        <figcaption>
-         <b>Figure X</b>. Adding a new declaration
+         <b>Figure 14</b>. Adding a new declaration
        </figcaption>
      </figure>
 
@@ -356,7 +356,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add5.png"
             alt="Typing 'color'."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>color</code>
+         <b>Figure 15</b>. Typing <code>color</code>
        </figcaption>
      </figure>
 
@@ -366,7 +366,7 @@ to an existing ruleset. Try it now:
        <img src="imgs/css/add6.png"
             alt="Typing 'magenta'."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>magenta</code>
+         <b>Figure 16</b>. Typing <code>magenta</code>
        </figcaption>
      </figure>
 
@@ -380,7 +380,7 @@ You can also edit existing declarations in DevTools. Try it now:
        <img src="imgs/css/edit1.png"
             alt="The Color Picker."/>
        <figcaption>
-         <b>Figure X</b>. The Color Picker
+         <b>Figure 16</b>. The Color Picker
        </figcaption>
      </figure>
 
@@ -390,7 +390,7 @@ You can also edit existing declarations in DevTools. Try it now:
        <img src="imgs/css/edit2.png"
             alt="Changing the font color to purple with the Color Picker."/>
        <figcaption>
-         <b>Figure X</b>. Changing the font color to purple with the Color Picker
+         <b>Figure 17</b>. Changing the font color to purple with the Color Picker
        </figcaption>
      </figure>
 
@@ -405,7 +405,7 @@ You can also add new rulesets in DevTools. Try it now:
        <img src="imgs/css/rule1.png"
             alt="Adding a new rule."/>
        <figcaption>
-         <b>Figure X</b>. Adding a new rule
+         <b>Figure 18</b>. Adding a new rule
        </figcaption>
      </figure>
 
@@ -415,7 +415,7 @@ You can also add new rulesets in DevTools. Try it now:
        <img src="imgs/css/rule2.png"
             alt="Replacing 'a' with 'a:hover'."/>
        <figcaption>
-         <b>Figure X</b>. Replacing <code>a</code> with <code>a:hover</code>
+         <b>Figure 19</b>. Replacing <code>a</code> with <code>a:hover</code>
        </figcaption>
      </figure>
 
@@ -430,7 +430,7 @@ You can also add new rulesets in DevTools. Try it now:
        <img src="imgs/css/rule3.png"
             alt="Typing 'background-color'."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>background-color</code>
+         <b>Figure 20</b>. Typing <code>background-color</code>
        </figcaption>
      </figure>
 
@@ -440,7 +440,7 @@ You can also add new rulesets in DevTools. Try it now:
        <img src="imgs/css/rule4.png"
             alt="Typing 'green'."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>green</code>
+         <b>Figure 21</b>. Typing <code>green</code>
        </figcaption>
      </figure>
 
@@ -450,7 +450,7 @@ You can also add new rulesets in DevTools. Try it now:
        <img src="imgs/css/rule5.png"
             alt="Hovering over the Home link to reveal its green background."/>
        <figcaption>
-         <b>Figure X</b>. Hovering over the Home link to reveal its green background
+         <b>Figure 22</b>. Hovering over the Home link to reveal its green background
        </figcaption>
      </figure>
 
@@ -478,7 +478,7 @@ Try it now:
        <img src="imgs/css/external1.png"
             alt="After reloading the page the changes that were made in DevTools are gone."/>
        <figcaption>
-         <b>Figure X</b>. After reloading the page the changes that were made in DevTools are gone
+         <b>Figure 23</b>. After reloading the page the changes that were made in DevTools are gone
        </figcaption>
      </figure>
 
@@ -488,7 +488,7 @@ Try it now:
        <img src="imgs/css/external2.png"
             alt="contact.html"/>
        <figcaption>
-         <b>Figure X</b>. contact.html
+         <b>Figure 24</b>. contact.html
        </figcaption>
      </figure>
 
@@ -498,7 +498,7 @@ Try it now:
        <img src="imgs/css/external3.png"
             alt="The style tag has been removed."/>
        <figcaption>
-         <b>Figure X</b>. The style tag has been removed
+         <b>Figure 25</b>. The style tag has been removed
        </figcaption>
      </figure>
 
@@ -512,7 +512,7 @@ Try it now:
        <img src="imgs/css/external4.png"
             alt="The inline style has been removed from the nav element."/>
        <figcaption>
-         <b>Figure X</b>. The inline style has been removed from the nav element
+         <b>Figure 26</b>. The inline style has been removed from the nav element
        </figcaption>
      </figure>
 
@@ -522,7 +522,7 @@ Try it now:
        <img src="imgs/css/external5.png"
             alt="The new file dialog."/>
        <figcaption>
-         <b>Figure X</b>. The new file dialog
+         <b>Figure 27</b>. The new file dialog
        </figcaption>
      </figure>
 
@@ -532,7 +532,7 @@ Try it now:
        <img src="imgs/css/external6.png"
             alt="Typing 'style.css'."/>
        <figcaption>
-         <b>Figure X</b>. Typing <code>style.css</code>
+         <b>Figure 28</b>. Typing <code>style.css</code>
        </figcaption>
      </figure>
 
@@ -555,7 +555,7 @@ Try it now:
        <img src="imgs/css/external7.png"
             alt="Adding code to style.css"/>
        <figcaption>
-         <b>Figure X</b>. Adding code to <code>style.css</code>
+         <b>Figure 29</b>. Adding code to <code>style.css</code>
        </figcaption>
      </figure>
 
@@ -579,7 +579,7 @@ Try it now:
        <img src="imgs/css/external8.png"
             alt="Linking to style.css."/>
        <figcaption>
-         <b>Figure X</b>. Linking to <code>style.css</code>
+         <b>Figure 30</b>. Linking to <code>style.css</code>
        </figcaption>
      </figure>
 
@@ -589,7 +589,7 @@ Try it now:
        <img src="imgs/css/external9.png"
             alt="Linking to style.css in contact.html."/>
        <figcaption>
-         <b>Figure X</b>. Linking to <code>style.css</code> in <code>contact.html</code>
+         <b>Figure 31</b>. Linking to <code>style.css</code> in <code>contact.html</code>
        </figcaption>
      </figure>
 
@@ -600,7 +600,7 @@ Try it now:
        <img src="imgs/css/external10.png"
             alt="The home page."/>
        <figcaption>
-         <b>Figure X</b>. The home page
+         <b>Figure 32</b>. The home page
        </figcaption>
      </figure>
 
@@ -611,7 +611,7 @@ Try it now:
        <img src="imgs/css/external11.png"
             alt="The contact page"/>
        <figcaption>
-         <b>Figure X</b>. The contact page
+         <b>Figure 33</b>. The contact page
        </figcaption>
      </figure>
 
@@ -629,7 +629,7 @@ a collection of styles that you can use on your page elements.
        <img src="imgs/css/framework1.png"
             alt="Linking to the framework in contact.html."/>
        <figcaption>
-         <b>Figure X</b>. Linking to the framework in contact.html
+         <b>Figure 34</b>. Linking to the framework in contact.html
        </figcaption>
      </figure>
 
@@ -639,7 +639,7 @@ a collection of styles that you can use on your page elements.
        <img src="imgs/css/framework2.png"
             alt="Linking to the framework in index.html"/>
        <figcaption>
-         <b>Figure X</b>. Linking to the framework in index.html
+         <b>Figure 35</b>. Linking to the framework in index.html
        </figcaption>
      </figure>
 
@@ -650,7 +650,7 @@ a collection of styles that you can use on your page elements.
        <img src="imgs/css/framework3.png"
             alt="Some of the font on the home page has changed because of the framework."/>
        <figcaption>
-         <b>Figure X</b>. Some of the font on the home page has changed because of the framework
+         <b>Figure 36</b>. Some of the font on the home page has changed because of the framework
        </figcaption>
      </figure>
 
@@ -668,7 +668,7 @@ Try it now by changing your header:
        <img src="imgs/css/jumbotron1.png"
             alt="Adding the jumbotron class in index.html."/>
        <figcaption>
-         <b>Figure X</b>. Adding classes in index.html
+         <b>Figure 37</b>. Adding classes in index.html
        </figcaption>
      </figure>
 
@@ -678,7 +678,7 @@ Try it now by changing your header:
        <img src="imgs/css/jumbotron2.png"
             alt="Adding the jumbotron class in contact.html."/>
        <figcaption>
-         <b>Figure X</b>. Adding classes in contact.html
+         <b>Figure 38</b>. Adding classes in contact.html
        </figcaption>
      </figure>
 
@@ -688,7 +688,7 @@ Try it now by changing your header:
        <img src="imgs/css/jumbotron3.png"
             alt="The header now has a big, grey box around it."/>
        <figcaption>
-         <b>Figure X</b>. The header now has a big, grey box around it
+         <b>Figure 39</b>. The header now has a big, grey box around it
        </figcaption>
      </figure>
 
@@ -736,7 +736,7 @@ Bootstrap also provides classes for aligning elements. Try it now:
        <img src="imgs/css/align1.png"
             alt="Adding the 'container-fluid' class."/>
        <figcaption>
-         <b>Figure X</b>. Adding the <code>container-fluid</code> class
+         <b>Figure 40</b>. Adding the <code>container-fluid</code> class
        </figcaption>
      </figure>
 
@@ -747,7 +747,7 @@ Bootstrap also provides classes for aligning elements. Try it now:
        <img src="imgs/css/align2.png"
             alt="Adding a row."/>
        <figcaption>
-         <b>Figure X</b>. Adding a row
+         <b>Figure 41</b>. Adding a row
        </figcaption>
      </figure>
 
@@ -757,7 +757,7 @@ Bootstrap also provides classes for aligning elements. Try it now:
        <img src="imgs/css/align3.png"
             alt="Adding the 'col-3' and 'col-9' classes."/>
        <figcaption>
-         <b>Figure X</b>. Adding the <code>col-3</code> and <code>col-9</code> classes
+         <b>Figure 42</b>. Adding the <code>col-3</code> and <code>col-9</code> classes
        </figcaption>
      </figure>
 
@@ -767,7 +767,7 @@ Bootstrap also provides classes for aligning elements. Try it now:
        <img src="imgs/css/align4.png"
             alt="The nav content is now to the left of the main content."/>
        <figcaption>
-         <b>Figure X</b>. The nav content is now to the left of the main content
+         <b>Figure 43</b>. The nav content is now to the left of the main content
        </figcaption>
      </figure>
 
