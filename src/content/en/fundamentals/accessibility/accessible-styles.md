@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2018-05-23 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -357,3 +357,7 @@ should be fine when it comes to supporting high-contrast mode. But for added
 peace of mind, consider installing the Chrome High Contrast extension and giving
 your page a once-over just to check that everything works, and looks, as
 expected.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-10 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-28 #}
 {# wf_blink_components: Blink>Payments #}
 
@@ -529,3 +529,6 @@ on [caniuse.com](https://caniuse.com/#search=payments).
 To create your own flows, you can download the Payment Request API 
 sticker sheet from [our GitHub Repo](https://goo.gl/daxhRa).
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

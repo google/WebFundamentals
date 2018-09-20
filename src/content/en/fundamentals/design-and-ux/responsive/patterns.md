@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices
 
-{# wf_updated_on: 2014-10-20 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-29 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Responsive Web Design Patterns {: .page-title }
 
@@ -163,3 +164,7 @@ Sites using this pattern include:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

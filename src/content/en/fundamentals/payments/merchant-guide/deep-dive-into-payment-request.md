@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to implement and take full advantage of the Payment Request API.
 
 {# wf_published_on: 2017-04-21 #}
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Deep Dive into the Payment Request API {: .page-title }
@@ -1757,3 +1757,7 @@ releases of Chrome.
 
 We also provide a 
 [PaymentRequest wrapper for Apple Pay JS](https://github.com/GoogleChrome/appr-wrapper).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

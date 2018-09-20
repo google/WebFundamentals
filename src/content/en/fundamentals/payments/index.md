@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview page to the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-19 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # W3C Payment APIs {: .page-title }
@@ -99,3 +99,7 @@ app](/web/fundamentals/payments/payment-apps-developer-guide/android-payment-app
 or [web-based payment
 app](/web/fundamentals/payments/payment-apps-developer-guide/web-payment-apps)
 by reading respective section.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

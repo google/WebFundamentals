@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
-{# wf_updated_on: 2017-06-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-15 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -754,4 +754,6 @@ page on the Mozilla Developer Network for a complete listing.
   </tbody>
 </table>
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

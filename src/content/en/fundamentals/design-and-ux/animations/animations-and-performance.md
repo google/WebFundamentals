@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Animations must perform well, otherwise they will negatively impact the user experience.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animations and Performance {: .page-title }
@@ -51,4 +52,6 @@ There are many pages and comments threads around the web that discuss the relati
 
 For more information about which work is triggered by animating a given property, see [CSS Triggers](http://csstriggers.com).
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

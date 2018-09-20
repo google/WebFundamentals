@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can animate with CSS or JavaScript. Which should you use, and why?
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # CSS Versus JavaScript Animations {: .page-title }
@@ -158,3 +159,7 @@ By default, Web Animations only modify the presentation of an element. If you'd 
 The Web Animations API is a new standard from the W3C. It is supported natively in Chrome and Opera, and is in [active development for Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. For other modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
 
 With JavaScript animations, you're in total control of an element's styles at every step. This means you can slow down animations, pause them, stop them, reverse them, and manipulate elements as you see fit. This is especially useful if you're building complex, object-oriented applications, because you can properly encapsulate your behavior.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

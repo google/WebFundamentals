@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to store data locally for improved response time and offline support.
 
-{# wf_updated_on: 2018-09-04 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>Storage #}
 
@@ -309,3 +309,7 @@ synchronization)
 [BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)
 heavily inspired this article), Jake Archibald, Dru Knox and others for their
 previous work in the web storage space.**
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -641,3 +641,7 @@ act as a payment app by integration into a website that uses the Payment Request
 API. By implementing these related specifications, you can produce a clean,
 browser-based UI that makes user purchases as smooth and seamless as a native
 app.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

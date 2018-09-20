@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to incorporate accessibility into your team's process.
 
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-08-01 #}
 {# wf_blink_components: Blink>Accessibility #}
 
@@ -334,4 +334,6 @@ To learn more about accessibility, be sure to check out [our free Udacity
 course](https://bit.ly/web-a11y) and browse [the accessibility docs](/web/fundamentals/accessibility/)
 available here on Web Fundamentals.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

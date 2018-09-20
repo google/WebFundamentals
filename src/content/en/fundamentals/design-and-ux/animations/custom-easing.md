@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Go offroad and create totally custom animations for your projects.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Custom Easing {: .page-title }
@@ -82,4 +83,6 @@ After the script is in place, you can call TweenMax against your element and tel
 The [TweenMax documentation](https://greensock.com/docs/#/HTML5/GSAP/TweenMax/) highlights all the options you have here, so it's well worth a read.
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

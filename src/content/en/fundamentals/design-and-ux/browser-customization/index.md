@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
 
 
-{# wf_updated_on: 2015-09-21 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Icons & Browser Colors {: .page-title }
@@ -147,4 +148,6 @@ more height, but obstructs the top.  Here’s the code required:
 
 <div style="clear:both;"></div>
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

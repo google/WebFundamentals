@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2017-08-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
@@ -545,3 +545,7 @@ has already begun work on the specification's next iteration,
 If you're interested in the discussion around these upcoming features,
 [skim the public-webappsec@ mailing list archives](http://lists.w3.org/Archives/Public/public-webappsec/),
 or join in yourself.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

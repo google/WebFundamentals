@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Get the latest info on WebVR and AR's status, as well as things to keep in mind when building WebVR experiences.
 
-{# wf_updated_on: 2018-06-20 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -74,3 +74,7 @@ Here are things to remember when building WebVR experiences today.
 * **For some types of sessions, users must click a button before
   AR or VR are available to your code**. See the [Immersive Web Early Adopters
   Guide](https://immersive-web.github.io/webxr-reference/) for more information.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

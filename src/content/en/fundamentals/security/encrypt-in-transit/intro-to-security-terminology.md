@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-03-27 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
@@ -63,3 +63,7 @@ to have a CA vouch for your web server's public key, you send the CA a CSR. The
 CA validates the information in the CSR and uses it to generate a certificate.
 The CA then sends you the final certificate, and you install that certificate (or,
 more likely, a certificate chain) and your private key on your web server.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

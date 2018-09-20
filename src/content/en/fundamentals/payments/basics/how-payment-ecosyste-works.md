@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-19 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -170,3 +170,6 @@ but is not listed here.
 Learn about the Payment Request API's fields and methods in [How the Payment Request API 
 Works](/web/fundamentals/payments/basics/how-payment-request-api-works).
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

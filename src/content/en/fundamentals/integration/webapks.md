@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -234,3 +234,6 @@ to delete site data.
 
 </dl>
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
