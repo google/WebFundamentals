@@ -3,6 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Improving accessibility for web pages
 
 
+{# wf_blink_components: Blink>Accessibility #}
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-26 #}
 
