@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Reporting API brings a common infrastructure for the browser to send reports for various issues: CSP violations, deprecations, browser interventions, network errors, and feature policy violations.
 
-{# wf_updated_on: 2018-09-03 #}
+{# wf_updated_on: 2018-09-09 #}
 {# wf_published_on: 2018-09-03 #}
 {# wf_tags: CSP,interventions,deprecations,removals,feature-policy,reporting,reporting-observer,analytics,reports #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
 {# wf_featured_snippet: Reporting API brings a common infrastructure for the browser to send reports for various issues: CSP violations, deprecations, browser interventions, network errors, and feature policy violations. #}
-{# wf_blink_components: Blink>ReportingObserver #}
+{# wf_blink_components: N/A #}
 
 # The Reporting API {: .page-title }
 
