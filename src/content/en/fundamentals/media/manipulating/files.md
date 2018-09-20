@@ -4,6 +4,7 @@ description: Let's take a raw video file off a camera and transform it into an e
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-30 #}
+{# wf_blink_components: Blink>Media #}
 
 # From Raw Video to Web Ready {: .page-title }
 

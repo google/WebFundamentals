@@ -2,6 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-30 #}
 

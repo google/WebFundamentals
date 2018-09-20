@@ -4,6 +4,7 @@ description: On devices with phone capabilities, make it easy for users to direc
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-06-17 #}
+{# wf_blink_components: Blink>Input #}
 
 # Click to Call {: .page-title }
 

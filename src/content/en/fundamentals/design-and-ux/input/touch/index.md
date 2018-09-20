@@ -4,6 +4,7 @@ description: Touchscreens are available on more and more devices,  from phones u
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-01 #}
+{# wf_blink_components: Blink>Input #}
 
 # Add Touch to Your Site {: .page-title }
 

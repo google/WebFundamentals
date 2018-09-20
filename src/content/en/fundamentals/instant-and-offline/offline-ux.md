@@ -4,6 +4,7 @@ description: A guide to designing web experiences for slow networks and offline.
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-10 #}
+{# wf_blink_components: N/A #}
 
 # Offline UX Considerations {: .page-title }
 

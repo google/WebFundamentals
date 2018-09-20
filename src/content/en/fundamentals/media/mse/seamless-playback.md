@@ -5,6 +5,7 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-06-11 #}
 {# wf_tags: news,audio,codecs,mse #}
+{# wf_blink_components: Blink>Media #}
 
 # Media Source Extensions for Audio {: .page-title }
 

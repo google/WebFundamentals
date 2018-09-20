@@ -4,6 +4,7 @@ description: There are right ways of using notifications, and ways of using them
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-03-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # Web Push: Common Issues and Reporting Bugs {: .page-title }
 

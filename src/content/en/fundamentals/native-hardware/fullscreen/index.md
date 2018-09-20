@@ -4,6 +4,7 @@ description: Going fullscreen.
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-01 #}
+{# wf_blink_components: Blink>Fullscreen #}
 
 # Making Fullscreen Experiences {: .page-title }
 

@@ -4,6 +4,7 @@ description: Much of the web isn't optimized for those multi-device experiences.
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-29 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Responsive Web Design Basics {: .page-title }
 

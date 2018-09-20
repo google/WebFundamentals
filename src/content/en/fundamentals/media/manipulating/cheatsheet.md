@@ -4,6 +4,7 @@ description: A summary of commands used to convert a raw mov file to an encrypte
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-09 #}
+{# wf_blink_components: Blink>Media #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
 

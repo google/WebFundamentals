@@ -2,6 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
+{# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-10-07 #}
 

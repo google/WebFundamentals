@@ -4,6 +4,7 @@ description: Most browsers and devices have access to the user's geographic loca
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-01 #}
+{# wf_blink_components: Blink>Location #}
 
 # User Location {: .page-title }
 

@@ -2,6 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
 
+{# wf_blink_components: Blink>PushAPI #}
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 

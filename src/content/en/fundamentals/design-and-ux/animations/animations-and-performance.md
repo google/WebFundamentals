@@ -2,6 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Animations must perform well, otherwise they will negatively impact the user experience.
 
+{# wf_blink_components: Blink>Animation #}
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 

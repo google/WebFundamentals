@@ -4,6 +4,7 @@ description: Much media work requires changing characteristics of media files. I
 
 {# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-09 #}
+{# wf_blink_components: Blink>Media #}
 
 # Application Primers {: .page-title }
 
