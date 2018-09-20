@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline.
 
 {# wf_published_on: 2018-09-05 #}
-{# wf_updated_on: 2018-09-07 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
 {# wf_blink_components: N/A #}
@@ -78,7 +78,7 @@ the application. Usually, applications run on the CPU and GPU using mechanisms p
 Operating System.
 
 <figure>
-  <img src="/web/updates/images/inside-browser/part1/hw-os-app.png" alt="Hadware, OS, Application">
+  <img src="/web/updates/images/inside-browser/part1/hw-os-app.png" alt="Hardware, OS, Application">
   <figcaption>
    Figure 3: Three layers of computer architecture. Machine Hardware at the bottom, Operating 
    System in the middle, and Application on top.

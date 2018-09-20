@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 70 to help you plan.
 
-{# wf_updated_on: 2018-09-14 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2018-09-14 #}
 {# wf_tags: deprecations,removals,chrome70 #}
 {# wf_blink_components: Blink>HTML,Blink>GamepadAPI,Blink>SecurityFeature,Internals>SpeechSynthesis #}
@@ -90,7 +90,7 @@ removed, sites that have the polyfill should continue to work on Chrome.
 ## Deprecate Shadow DOM v0
 
 Shadow DOM is a Web Components technology that uses scoped subtrees inside
-lements. Shadow DOM v1 has been [implemented in
+elements. Shadow DOM v1 has been [implemented in
 Chrome](https://www.chromestatus.com/feature/4667415417847808) since version
 53, which shipped in August of 2016. Shadow DOM v0 was an experimental version
 not implemented in other browsers. As such it is now deprecated with removal
