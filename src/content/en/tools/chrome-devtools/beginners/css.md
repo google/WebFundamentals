@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -16,10 +16,14 @@ use Chrome DevTools to experiment with CSS changes.
 
 This is the second tutorial in a series of tutorials that teaches you the basics of web
 development and Chrome DevTools. You gain hands-on experience by actually building your own
-website. 
-
-Note: You don't have to complete the first tutorial before doing this one. 
+website. You don't have to complete the first tutorial before doing this one. 
 You can start here. [Set up your code](#setup) shows you how to get set up.
+
+Note: This tutorial is designed for absolute beginners and focuses on both the **fundamentals of
+web development** and the basics of using DevTools to experiment with CSS. If you want a tutorial
+that only focuses on DevTools, see [Get Started with Viewing and Changing
+CSS](/web/tools/chrome-devtools/css/).
+
 
 Currently your site looks like this: 
 
@@ -234,7 +238,7 @@ For example, in the previous code:
 </style>
 ```
 
-`li a` is a selector that translates to "any list item that contains a link". 
+`li a` is a selector that translates to "any `<li>` that contains an `<a>`". 
 The browser changes the font of the **Home** and **Contact** links 
 because they match this pattern. 
 
@@ -316,7 +320,7 @@ to an existing ruleset. Try it now:
     DevTools opens up alongside your page. The code that represents the Home link,
     `<a href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
     [Get Started with HTML and the DOM](html). In the **Styles** tab below the DOM Tree you can see the
-    `font-family: 'Courier New', serif` declaration that you added to `contact.html` earlier.
+    `font-family: 'Courier New', Courier, serif` declaration that you added to `contact.html` earlier.
 
      <figure>
        <img src="imgs/css/add2.png"
@@ -565,7 +569,7 @@ Try it now:
     <head>
       ...
       <meta name="viewport" content="width=device-width, initial-scale=1">{% endhtmlescape %}<strong>
-    {% htmlescape %}  <link rel="stylesheet" href="styles.css">{% endhtmlescape %}</strong>{% htmlescape %}
+    {% htmlescape %}  <link rel="stylesheet" href="style.css">{% endhtmlescape %}</strong>{% htmlescape %}
     </head>
     ...
     {% endhtmlescape %}</pre>
@@ -655,7 +659,7 @@ a collection of styles that you can use on your page elements.
 In the last section, you added Bootstrap to your web pages, 
 which changed the fonts of some of the elements on your site. 
 CSS frameworks can help you make major changes to your page with very little code. 
-Try in now by changing your header:
+Try it now by changing your header:
 
 1. Copy this code: `class="jumbotron jumbotron-fluid"`
 1. Add this code to your `<header>` tag in `index.html`.
@@ -664,7 +668,7 @@ Try in now by changing your header:
        <img src="imgs/css/jumbotron1.png"
             alt="Adding the jumbotron class in index.html."/>
        <figcaption>
-         <b>Figure X</b>. Adding the jumbotron class in index.html
+         <b>Figure X</b>. Adding classes in index.html
        </figcaption>
      </figure>
 
@@ -674,7 +678,7 @@ Try in now by changing your header:
        <img src="imgs/css/jumbotron2.png"
             alt="Adding the jumbotron class in contact.html."/>
        <figcaption>
-         <b>Figure X</b>. Adding the jumbotron class in contact.html
+         <b>Figure X</b>. Adding classes in contact.html
        </figcaption>
      </figure>
 
@@ -769,16 +773,14 @@ Bootstrap also provides classes for aligning elements. Try it now:
 
 ## Next steps {: #next-steps }
 
-Now that you've got HTML and CSS down, there's one more language you'll need
-to put in your web development toolkit: JavaScript. Soon, there will be a
-tutorial that will focus on how DevTools can help you create and fix your
-JavaScript code.
+Congratulations! You're done! 
 
-### Resources
-
-* [CSS Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
-* [Bootstrap's Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
-* [More Information on DevTools and CSS](/web/tools/chrome-devtools/css/)
+* The best way to get better at web development is to build more sites. Don't worry about breaking stuff. Just
+  have fun and learn as much as you can along the way.
+* Check out [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) to learn lots
+  more about styling web pages.
+* Work through our [Get Started with Viewing and Changing CSS](/web/tools/chrome-devtools/css/) tutorial
+  to learn more about how you can use DevTools to experiment with a page's CSS.
 
 ## Feedback {: #feedback }
 
