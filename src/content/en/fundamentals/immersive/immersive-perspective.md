@@ -2,11 +2,11 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Find out more about how creating content for WebVR is different from creating regular web content.
 
-{# wf_updated_on: 2018-04-30 #}
-{# wf_published_on: 2017-06-05 #}
+{# wf_updated_on: 2018-07-09 #}
+{# wf_published_on: 2018-06-29 #}
 {# wf_blink_components: Blink>WebVR #}
 
-# Seeing the Web from a VR Perspective {: .page-title }
+# Seeing the Web from an immersive perspective {: .page-title }
 
 There are several things about creating content for the WebXR Device API that
 are not like regular web development. This means that you need different
@@ -17,24 +17,7 @@ of this may be familiar to you. But even for seasoned HTML5 game pros, there are
 things specific to the immersive web that you need to think about.
 
 ## Performance is everything
-If you create animations on the web, you should already want them to be
-silky smooth at 60 frames per seconds. That said, if sometimes you don't quite
-make it because you are processing something in the background it isn't always a
-huge deal.
-
-In Web VR, janky animation could literally make your users ill. It's not good
-enough to hit frame timing most of the time. You need enough headroom on every
-frame to handle any variance that the device throws at you.
-
-Everyone wants to pack as much awesome as they can into their VR apps, but your
-complete experience just may not be possible to do at full speed on all of your
-target devices. Make sure that you allow the content to scale with the
-performance of the device.
-
-You can use the high-resolution timestamp from `performance.now()` to measure the
-time between successive frames, and if you find that you aren't keeping up you
-can dynamically scale back things like number of objects, draw distance,
-lighting quality, etc..
+TBD
 
 ## The display is not the window
 If you are testing on a desktop VR headset then it is pretty easy to see that
@@ -93,6 +76,32 @@ supported this functionality since it uses touch to detect the position of the
 mobile device within the viewer to make sure that the presented image lines up
 with the lenses. And of course, non-mobile VR headsets will not trigger touch
 events at all.
+
+// This is for AR. What about VR?
+
+Instead use the `xrSession.requestHitTest()` method. An example, taken from the [AR Hit Test demo](https://github.com/immersive-web/webxr-samples/blob/master/proposals/phone-ar-hit-test.html) is shown below. This is covered in more detail elsewhere. The thing to note is that `requestHitTest()` is part of the same loop used when drawing frames.  
+
+```JavaScript
+function onXRFrame(t, frame) {
+  let xrSession = frame.session;
+  // The frame of reference, which was set elsewhere, is 'eye-level'.
+  // See onSessionStarted() ins the sample code for details.
+  let xrPose = frame.getDevicePose(xrFrameOfRef);
+  if (xrPose && xrPose.poseModelMatrix) {
+    // Calculate the origin and direction for the raycast.
+    xrSession.requestHitTest(rayOrigin, rayDirection, xrFrameOfRef)
+    .then((results) => {
+      if (results.length) {
+        // Draw for each view.
+      }
+    });
+  }
+  session.requestAnimationFrame(onXRFrame);
+}
+```
+
+
+
 
 Instead, use a combination of the session's select events and your own selection logic to detect when and what a user clicks. The `XRSession` object provides the `getInputSources()` method which allows you to query for the position of an input device and the direction that it is pointing. Updating this every frame lets you respond quickly when users click the device.
 

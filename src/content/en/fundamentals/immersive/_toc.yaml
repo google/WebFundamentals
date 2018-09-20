@@ -1,0 +1,17 @@
+toc:
+  - title: Immersive web
+    style: accordion
+    status: beta
+    section:
+    - title: Overview
+      path: /web/fundamentals/immersive/
+    - title: Status and requirements
+      path: /web/fundamentals/immersive/status-requirements
+    - title: Seeing the Web from an immersive perspective
+      path: /web/fundamentals/immersive/vr-perspective
+    - title: Getting started
+      path: /web/fundamentals/immersive/getting-started
+    - title: Rendering 101
+      path: /web/fundamentals/immersive/rendering-101
+    - title: Debugging
+      path: /web/fundamentals/immersive/debugging
