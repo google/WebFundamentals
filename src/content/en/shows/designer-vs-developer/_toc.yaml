@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Material Design Components'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E03-material-design-components
       - title: 'UX research and usability testing'
         path: /web/shows/designer-vs-developer/podcast/DVDS4E02-ux-research-usability-testingy
       - title: 'How we designed Chrome'
