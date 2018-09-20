@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to animate modal views in your apps.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animating Modal Views {: .page-title }
@@ -104,4 +104,6 @@ The duration is pretty short, though, but it's ideal for when the user dismisses
 Now the modal view takes 0.3 seconds to come onto the screen, which is a bit less aggressive, but it is dismissed quickly, which the user will appreciate.
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

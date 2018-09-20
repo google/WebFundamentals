@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Introduction to ARIA and non-native HTML semantics
 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to ARIA {: .page-title }
@@ -159,3 +159,6 @@ the [Landmark Roles Design
 Patterns](https://www.w3.org/TR/wai-aria-practices-1.1#kbd_layout_landmark_XHTML){: .external }
 spec for more information.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

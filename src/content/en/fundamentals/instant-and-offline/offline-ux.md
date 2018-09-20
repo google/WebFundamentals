@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2018-09-16 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-10 #}
 
 # Offline UX Considerations {: .page-title }
@@ -445,3 +445,7 @@ When designing for unstable network connections, use these:
 * Utilize language, icons, imagery, typography and color to express ideas to the 
   user collectively.
 * Provide reassurance and feedback to help the user.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

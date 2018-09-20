@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -42,3 +42,7 @@ After you’ve double checked your pages, if you still think think your site
 was incorrectly flagged, please post in the
 [Webmaster Help Forums](https://productforums.google.com/forum/#!forum/webmasters).
 Otherwise, start building your [support team](support_team).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

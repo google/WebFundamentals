@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: About the Ecosystem page for the Web Payments doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Android payment apps developer guide {: .page-title }
@@ -704,3 +704,7 @@ in Android web browsers, because browsers cannot be expected to support every
 possible payment app SDK. Thus the method described here allows any Android
 payment app to work with any Android web browser, giving users more flexibility
 in making payments.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

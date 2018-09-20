@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Payment Request API page for the W3C Payment APIs doc set.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How Payment Request API Works {: .page-title }
@@ -169,3 +169,7 @@ Methods](/web/fundamentals/payments/basics/payment-method-basics).
 To learn more about the Payment Request API itself, checkout [Deep Dive into the
 Payment Request
 API](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

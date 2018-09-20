@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mixed occurs when initial HTML is loaded over a secure HTTPS connection, but other resources are loaded over an insecure HTTP connection.
 
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-09-25 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
@@ -281,4 +281,6 @@ information published by the vendors directly.
 
 Note: Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

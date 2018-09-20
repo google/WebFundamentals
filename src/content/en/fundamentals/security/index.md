@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
-{# wf_updated_on: 2017-05-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-09-08 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -59,4 +59,6 @@ One of the most critical security features, one that is required for many modern
 * [Understand Security Issues](/web/tools/chrome-devtools/security)
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-08-14 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -80,3 +80,7 @@ the test of time?
 </div>
 
 <div style="clear:both;"></div>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

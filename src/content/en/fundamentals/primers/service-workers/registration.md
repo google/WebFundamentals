@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Best practices for timing your service worker registration.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-28 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -199,3 +199,7 @@ registration until after the first page has loaded is to use the following:
         navigator.serviceWorker.register('/service-worker.js');
       });
     }
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

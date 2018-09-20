@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A summary of commands used to convert a raw mov file to an encrypted full HD file for web playback.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-09 #}
 
 # Media Manipulation Cheat Sheet  {: .page-title }
@@ -341,3 +341,7 @@ ffmpeg when I need to.
     ```  --hls_base_url="http://localhost:1000/" \```<br/>
     ```  --enable_fixed_key_encryption --enable_fixed_key_decryption \```<br/>
     ```  -key INSERT_KEY_HERE -key_id INSERT_KEY_ID_HERE \```<br/>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

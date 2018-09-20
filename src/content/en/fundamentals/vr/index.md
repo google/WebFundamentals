@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -120,3 +120,7 @@ experiences, and ensure that you’re providing the best possible experience no
 matter what setup your users have.
 
 For more, read our guide on [adding input to a WebVR scene](./adding-input-to-a-webvr-scene/).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

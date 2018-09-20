@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: The role of semantics in page navigation
 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Semantics and Navigating Content {: .page-title }
@@ -156,4 +156,6 @@ Semantic structural elements replace multiple, repetitive `div` blocks, and
 provide a clearer, more descriptive way to intuitively express page structure
 for both authors and readers.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

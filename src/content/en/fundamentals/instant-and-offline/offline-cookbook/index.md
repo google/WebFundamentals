@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-12 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-12-09 #}
 {# wf_blink_components: N/A #}
 
@@ -729,3 +729,7 @@ before I hit "publish".
 [is_sw_ready]: https://jakearchibald.github.io/isserviceworkerready/
 [sw_primer]: /web/fundamentals/getting-started/primers/service-workers
 [caches_api]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

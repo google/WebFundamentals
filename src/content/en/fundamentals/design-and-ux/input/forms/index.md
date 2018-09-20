@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-30 #}
 {# wf_blink_components: N/A #}
 
@@ -795,3 +795,6 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 Success: You should show the user all of the issues on the form at once, rather than showing them one at a time.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

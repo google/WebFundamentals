@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Displaying a Notification {: .page-title }
@@ -390,3 +390,7 @@ With this, we could change the notification we display to our users.
 
 With the other options, just do the same as above, replacing 'actions' with the desired
 parameter name.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

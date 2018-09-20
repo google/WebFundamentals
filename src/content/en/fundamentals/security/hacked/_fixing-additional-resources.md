@@ -30,3 +30,7 @@ and let us know.
 
 
 <div class="clearfix"></div>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

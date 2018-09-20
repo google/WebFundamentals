@@ -20,3 +20,7 @@ which PHP files are suspicious:
 
 Note: Attackers commonly inject scripts into the following files:
 `index.php`, `wp-load.php`, `404.php`, and `view.php`.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

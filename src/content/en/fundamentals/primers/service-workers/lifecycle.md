@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2018-06-07 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -826,3 +826,7 @@ So, to enable as many patterns as we can, the whole update cycle is observable:
 
 Phew! That was a lot of technical theory. Stay tuned in the coming weeks where
 we'll dive into some practical applications of the above.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

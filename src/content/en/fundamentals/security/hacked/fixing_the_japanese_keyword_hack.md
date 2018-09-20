@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -136,3 +136,7 @@ of text, making it look smaller than it actually is.
 <<_fixing-prevent.md>>
 
 <<_fixing-additional-resources.md>>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

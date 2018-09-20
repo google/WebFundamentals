@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -162,3 +162,7 @@ access over a server.
 Webspam is blackhat search engine optimization (SEO) tactics or spam
 content that attempts to boost the ranking or popularity of a site by
 deceiving and manipulating search engines.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
