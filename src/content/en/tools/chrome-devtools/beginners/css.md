@@ -1,24 +1,29 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-30 #}
-{# wf_published_on: 2018-08-28 #}
+{# wf_updated_on: 2018-09-20 #}
+{# wf_published_on: 2018-09-05 #}
 {# wf_blink_components: Platform>DevTools #}
 
 [HTML]: /web/tools/chrome-devtools/beginners/html
 
-# DevTools For Beginners: Getting Started with CSS {: .page-title }
+# DevTools For Beginners: Get Started with CSS {: .page-title }
+
+{% include "web/_shared/contributors/katjackson.html" %}
 
 In this tutorial, you learn how to use CSS to style a web page. You also learn how to
 use Chrome DevTools to experiment with CSS changes.
 
 This is the second tutorial in a series of tutorials that teaches you the basics of web
 development and Chrome DevTools. You gain hands-on experience by actually building your own
-website. 
+website. You don't have to complete the first tutorial before doing this one. 
+You can start here. [Set up your code](#setup) shows you how to get set up.
 
-Note: You don't have to complete the first tutorial before doing this one. 
-You can start with this tutorial. 
-[Set up your code](#setup) will show you how to get set up.
+Note: This tutorial is designed for absolute beginners and focuses on both the **fundamentals of
+web development** and the basics of using DevTools to experiment with CSS. If you want a tutorial
+that only focuses on DevTools, see [Get Started with Viewing and Changing
+CSS](/web/tools/chrome-devtools/css/).
+
 
 Currently your site looks like this: 
 
@@ -26,7 +31,7 @@ Currently your site looks like this:
   <img src="imgs/css/intro1.png"
        alt="What your site currently looks like."/>
   <figcaption>
-    <b>Figure X</b>. What your site currently looks like
+    <b>Figure 1</b>. What your site currently looks like
   </figcaption>
 </figure>
 
@@ -36,7 +41,7 @@ After completing the tutorial, it will look like this:
   <img src="imgs/css/intro2.png"
        alt="What your site will look like at the end of the tutorial."/>
   <figcaption>
-    <b>Figure X</b>. What your site will look like at the end of the tutorial
+    <b>Figure 2</b>. What your site will look like at the end of the tutorial
   </figcaption>
 </figure>
 
@@ -68,16 +73,17 @@ In order to start creating your site, you need to set up your code:
 
 1. **If you have already completed the first tutorial in this series, skip this section! 
    Continue using your code from the last tutorial, 
-   [Getting Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html).**
-2. Open the [source code](https://glitch.com/edit/#!/dfb2). A code editor called 
-   Glitch shows a page called `index.html`. This tab of your browser will be called the
-   **editing tab**.
+   [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html).**
+2. Open the <a class="external gc-analytics-event" target="_blank" rel="noopener"
+   data-category="CTA" data-label="/web/tools/chrome-devtools/beginners/css"
+   href="https://glitch.com/edit/#!/dfb2?path=index.html">source code</a>. This tab of your
+   browser will be called the **editing tab**.
 
      <figure>
        <img src="imgs/css/setup1.png"
-            alt="The source code."/>
+            alt="The editing tab."/>
        <figcaption>
-         <b>Figure X</b>. The source code
+         <b>Figure 3</b>. The editing tab
        </figcaption>
      </figure>
 
@@ -85,14 +91,14 @@ In order to start creating your site, you need to set up your code:
 
      <figure>
        <img src="imgs/css/setup2.png"
-            alt="The editor tab."/>
+            alt="The Project Options menu."/>
        <figcaption>
-         <b>Figure X</b>. The editor tab
+         <b>Figure 4</b>. The Project Options menu
        </figcaption>
      </figure>
 
 3. Click **Remix This**. Glitch creates a copy of the project that you can 
-   edit. Note that the name of the new project will be randomly generated.
+   edit. Note that Glitch generates a random name for the new project.
 4. Click **Show Live**. Another tab opens with a live view of your site.
    This tab of your browser will be called the **live tab**.
 
@@ -100,11 +106,11 @@ In order to start creating your site, you need to set up your code:
        <img src="imgs/css/setup3.png"
             alt="The live tab."/>
        <figcaption>
-         <b>Figure X</b>. The live tab
+         <b>Figure 5</b>. The live tab
        </figcaption>
      </figure>
 
-## Add CSS {: #add }
+## Understand CSS {: #add }
 
 **CSS** is a computer language that determines the layout and styling of web pages. For
 example, here is a paragraph with a border:
@@ -114,258 +120,343 @@ example, here is a paragraph with a border:
 Here is the HTML and CSS code used to create that paragraph:
 
 ```
-<p style="border:1px dashed red; padding:5px">
+<p style="border: 1px dashed red; padding: 5px;">
   This has been styled with CSS.
 </p> 
 ```
 
-The code that you haven't seen before is `style="border:1px dashed red; padding:5px"`. 
+`style="border: 1px dashed red; padding: 5px;"` probably looks new to you.
 The rest should look familiar. If not, complete [Get Started with HTML and the DOM][HTML]
 before attempting this tutorial.
 
-### Add inline styles {: #inline }
+## Add inline styles {: #inline }
 
 Use **inline styles** when you want to apply styles to a single element. 
-Try it now by adding a background color to your page's navigation menu:
+Try it now:
 
-1. Copy the following code: 
+1. Go back to the editing tab and open `index.html`.
 
-     `style="background-color: aliceblue"`
-
-1. In `index.html`, add the code that you just copied to your `<nav>`.
-
-       `<nav style="background-color: aliceblue">`
-
-1. Go to the **live tab** to see the changes! 
-   The background of the `<nav>` section is now blue.
      <figure>
        <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+            alt="index.html."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 6</b>. <code>index.html</code>
        </figcaption>
      </figure>
 
-As mentioned above, inline styles only apply to a single element,
-so only the `<nav>` section of `index.html` changes. 
-In the next section, you learn about how to add styling to multiple elements.
+1. Add `style="background-color: aliceblue;"` to your `<nav>`. In the code block below,
+   the bold line of code is the one you need to change. The rest is just there so you
+   can be sure that you're putting the new code in the right place.
 
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <header>
+      <p>Welcome to my site!</p>
+    </header>{% endhtmlescape %}<strong>
+    {% htmlescape %}<nav style="background-color: aliceblue;">{% endhtmlescape %}</strong>{% htmlescape %}
+    <ul>
+      <li><a href="/">Home</a></li>
+      ...
+    {% endhtmlescape %}</pre>
 
-### Re-use styles with internal stylesheets {: #internal }
+1. Go to the **live tab** to see the changes! 
+   The background of the `<nav>` section is now blue.
 
-[Earlier](#add), you saw an inline style that applied a style to a `<p>` tag like this:
+     <figure>
+       <img src="imgs/css/inline2.png"
+            alt="The background color behind the Home and Contact links is now blue."/>
+       <figcaption>
+         <b>Figure 7</b>. The background color behind the Home and Contact links is now blue
+       </figcaption>
+     </figure>
+
+## Re-use styles on a single page with internal stylesheets {: #internal }
+
+Earlier, you saw an inline style that applied a style to a single `<p>` tag like this:
 
 ```
-<p style="border:1px dashed red; padding:5px">
+<p style="border: 1px dashed red; padding: 5px;">
   This has been styled with CSS.
 </p>
 ```
 
-But what if you wanted all of the `<p>` elements on your webpage to be styled the same way? 
+What if you wanted all of the `<p>` elements on your webpage to be styled the same way? 
 You'd have to copy and paste the code into every single `<p>` tag on your site. 
-That's a lot of time and effort, and if you need to make an edit, 
-you'll have to change every tag again. 
-**Internal stylesheets** allow you to write your CSS once 
-so that applies to multiple elements. Try it now:
+That's a lot of time and effort. And, if you needed to make an edit, you'd have to change every tag again. 
+**Internal stylesheets** allow you to write your CSS once so that it applies to multiple elements.
+Try it now:
 
-1. Go to the **live tab**. 
-1. Click **Contact** to go to the contact page. Notice the font of **Home** and **Contact**.
+1. In the live tab, click **Contact** to go to the contact page. Notice the font of **Home** and **Contact**.
 
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/internal1.png"
+            alt="The Contact page."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 8</b>. The Contact page
        </figcaption>
      </figure>
 
-
-1. Copy the following code:
-```
-<style>
-  li a {
-    font-family: 'Courier New', Courier, monospace;
-  }
-</style>
-```
 1. In the **editor tab**, go to `contact.html`.
-1. Add the code that you just copied just before the `</head>` tag.
 
-TODO: Add code sample with highlighting the new code.
+1. Add the following code to `contact.html`. Remember, the bold code is what you need to add. The
+   other code is just there so you know where to put the new code.
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <head>
+      ...
+      <meta name="viewport" content="width=device-width, initial-scale=1">{% endhtmlescape %}<strong>
+    {% htmlescape %}  <style>
+        li a {
+          font-family: 'Courier New', Courier, Serif;
+        }
+      </style>{% endhtmlescape %}</strong>{% htmlescape %}
+    </head>
+    ...
+    {% endhtmlescape %}</pre>
 
 1. Go back to the **live tab**. 
-1. Click **Contact** to go back to the contact page. 
-   The font of **Home** and **Contact** has changed.
+1. Click **Contact** to go back to the contact page. The font of **Home** and **Contact** has changed.
 
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/internal2.png"
+            alt="The font of the Home and Contact links has changed."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 9</b>. The font of the Home and Contact links has changed
        </figcaption>
      </figure>
 
-Internal stylesheets apply styles using **CSS selectors**. 
-CSS selectors are patterns that may apply to one or more HTML elements. 
+### Understand internal stylesheets {: #internal-overview }
+
+Internal stylesheets apply styles using **selectors**. 
+Selectors are patterns that may apply to one or more HTML elements.
 For example, in the previous code:
 
 ```
 <style>
   li a {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, serif;
   }
 </style>
 ```
-**li a** is a CSS selector that translates to "any list item that contains a link". 
-The browser changed the font of the **Home** and **Contact** links 
-because they matched this pattern. 
+
+`li a` is a selector that translates to "any `<li>` that contains an `<a>`". 
+The browser changes the font of the **Home** and **Contact** links 
+because they match this pattern. 
 
 ```
 <li><a href="/">Home</a></li>
 <li><a href="/contact.html">Contact</a></li>
 ```
 
-`font-family: 'Courier New', Courier, monospace;` is a CSS **declaration**. 
-A declaration is made of two parts: a property and a value. 
-In the example above, `font-family` is a property that has a value of 
-`'Courier New', Courier, monospace`. If Courier New isn't available, 
-the browser will choose Courier, and if Courier isn't available, 
-the browser will choose monospace. So, in plain English, the code above reads: 
-"Change the font of any list item that contains a link to Courier New, 
-and if Courier New isn't available use Courier, and if Courier isn't available, 
-use monospace". A CSS selector combined with a declaration is called a **ruleset**. 
+`font-family: 'Courier New', Courier, serif` is a **declaration**. 
+A declaration is made of two parts: a **property** and a **value**. 
+`font-family` is the property, and `'Courier New', Courier, serif` is the value
+of that property. The property describes a general way that you can change the element's style,
+and the value says how exactly it should change.
+For example, `font-family: 'Courier New', Courier, serif` gives the browser this instruction:
+"Set the font of elements that match the pattern `li a` to `'Courier New'`. If that font
+isn't available, use `Courier`. If that isn't available, use `serif`."
 
-CSS selectors are also flexible, meaning that multiple CSS selectors can be 
-assigned to a style definition. For example, to add the same font to the `<h1>`
-elements on your contact page:
+### Add multiple selectors to a ruleset {: #multiple }
 
-1. Go to the **editor tab**.
-1. Go to the internal stylesheet you added before.
-1. After `li a`, type `, h1`. This tells the browser you want to apply the style to
-   "any list item that contains a link **and** any item that is an h1". 
-   Your code should look like this:
+A block of CSS code like what you see below is called a **ruleset**.
 
 ```
-<style>
-  li a, h1 {
-    font-family: 'Courier New', Courier, monospace;
-  }
-</style>
+li a {
+  font-family: 'Courier New', Courier, monospace;
+}
 ```
+
+Use commas to add multiple selectors to a ruleset. Try it now:
+
+1. In the **editor tab**, open `contact.html`.
+1. After `li a` type `, h1`.
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <style>
+      li a{% endhtmlescape %}<strong>{% htmlescape %}, h1{% endhtmlescape %}</strong>{% htmlescape %} {
+        font-family: 'Courier New', Courier, Serif;
+      }
+    </style>{% endhtmlescape %}</strong>{% htmlescape %}
+    ...
+    {% endhtmlescape %}</pre>
+
+    This tells the browser to style `<h1>` elements the same way that it styles
+    elements that match the pattern `li a`.
 
 1. Go to the **live tab**. 
 1. Click the **Contact** link to go back to the contact page. 
-   Now, **Contact Me** has the same font as the navigation links.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-Now that you understand internal stylesheets, you can use DevTools to add new styles:
+   Now, **Contact Me!** has the same font as the navigation links.
 
-1. Right-click the **Home** link.
-1. Select **Inspect Element**. This opens up DevTools' **Elements Panel** 
-   with the **Home** link highlighted.
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/multiple1.png"
+            alt="The text 'Contact Me!' now has the same font as the Home and Contact links."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 10</b>. The text "Contact Me!" now has the same font as the Home and Contact links
        </figcaption>
      </figure>
 
-1. On the bottom left, there is a panel called the **Styles Pane**. 
-   In that pane, you can see the internal stylesheet you made. 
-   Under ` font-family: 'Courier New', Courier, monospace;`, 
-   type `color:gray` This tells the browser to change the font color to gray.
+## Experiment with DevTools {: #experiment }
+
+As you continue your journey to master web development, you'll find that CSS can be tricky.
+You'll write some CSS and expect it to display one way, but the browser does something completely
+different. Chrome DevTools makes it easy to experiment with changes and immediately see how
+those changes affect the page.
+
+### Add a declaration to an existing rulest in DevTools {: #add }
+
+When you want to iterate on the style of an existing element, add a declaration
+to an existing ruleset. Try it now:
+
+1. Right-click the **Home** link and select **Inspect**.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add1.png"
+            alt="Inspecting the Home link."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 11</b>. Inspecting the Home link
        </figcaption>
      </figure>
 
-1. Press <kbd>Enter</kbd>. All of the text on the contact page is now gray.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-You can also directly edit existing styles:
+    DevTools opens up alongside your page. The code that represents the Home link,
+    `<a href="/">Home</a>` is highlighted blue in the DOM Tree. This should be familiar from
+    [Get Started with HTML and the DOM](html). In the **Styles** tab below the DOM Tree you can see the
+    `font-family: 'Courier New', Courier, serif` declaration that you added to `contact.html` earlier.
 
-1. Copy this number: `#28a78c` This is a **Hexadecimal Color Code**, 
-   a different way of representing colors.
-1. Click on the gray square next to `gray`. A color picker pops up.
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add2.png"
+            alt="The Styles tab is below the DOM Tree."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. In the box that says **Hex**, paste in the number you copied. 
-   The color of the font on the contact page will change.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 12</b>. The Styles tab is below the DOM Tree
        </figcaption>
      </figure>
 
-Finally, you can add new rulesets:
+    If your DevTools window is wide, the Styles tab is to the right of the DOM Tree.
 
-1. Click on the gray plus to **Add a new style rule**. 
-   A ruleset will appear with the `a` selector.
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add3.png"
+            alt="The Styles tab is to the right of the DOM Tree."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 13</b>. The Styles tab is to the right of the DOM Tree
        </figcaption>
      </figure>
-1. Replace `a` with `a:hover`. `hover` is a **pseudo-state selector**,
-   which defines a special state of an element. In this case, `a:hover` translates to, 
-   "any link that is being hovered over". 
+
+1. Click the whitespace below `font-family: 'Courier New', Courier, Serif` to add a new declaration.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add4.png"
+            alt="Adding a new declaration."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 14</b>. Adding a new declaration
        </figcaption>
      </figure>
-1. Inside the brackets in the ruleset, type `background-color: cornsilk`. 
-   Now you have a ruleset that translates to "change the background color of any link that
-   is being hovered over to cornsilk".
+
+1. Type `color` and then press <kbd>Enter</kbd>. The autocomplete UI suggests options as you type.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add5.png"
+            alt="Typing 'color'."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 15</b>. Typing <code>color</code>
        </figcaption>
      </figure>
-1. Move your cursor over the home link. The link's background color will change.
+
+1. Type `magenta` and then press <kbd>Enter</kbd> again. All of the text on the contact page is now magenta.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/add6.png"
+            alt="Typing 'magenta'."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 16</b>. Typing <code>magenta</code>
        </figcaption>
      </figure>
-You can use DevTools to preview CSS changes you make in real time, 
-much like you did with HTML and the DOM.
 
+### Edit a declaration in DevTools {: #edit }
 
+You can also edit existing declarations in DevTools. Try it now:
 
-### Re-use styles with external stylesheets {: #external}
+1. Click the magenta square next to `magenta`. A color picker pops up.
 
-[Earlier](#internal), you used internal stylesheets to apply styles to 
-`li a` and `h1` elements in `contact.html` like this:
+     <figure>
+       <img src="imgs/css/edit1.png"
+            alt="The Color Picker."/>
+       <figcaption>
+         <b>Figure 16</b>. The Color Picker
+       </figcaption>
+     </figure>
+
+1. Use the color picker to change the font text to a color that you like.
+
+     <figure>
+       <img src="imgs/css/edit2.png"
+            alt="Changing the font color to purple with the Color Picker."/>
+       <figcaption>
+         <b>Figure 17</b>. Changing the font color to purple with the Color Picker
+       </figcaption>
+     </figure>
+
+### Add a new ruleset in DevTools {: #rule }
+
+You can also add new rulesets in DevTools. Try it now:
+
+1. Click **New Style Rule** ![New Style Rule](/web/tools/chrome-devtools/images/shared/new-style-rule.png){: .inline-icon },
+   which is next to **.cls**. An empty ruleset appears with `a` as the selector.
+
+     <figure>
+       <img src="imgs/css/rule1.png"
+            alt="Adding a new rule."/>
+       <figcaption>
+         <b>Figure 18</b>. Adding a new rule
+       </figcaption>
+     </figure>
+
+1. Replace `a` with `a:hover`.
+
+     <figure>
+       <img src="imgs/css/rule2.png"
+            alt="Replacing 'a' with 'a:hover'."/>
+       <figcaption>
+         <b>Figure 19</b>. Replacing <code>a</code> with <code>a:hover</code>
+       </figcaption>
+     </figure>
+
+    `:hover` is a **pseudo-class**. Use pseudo-classes to
+    style elements when they enter special states. For example, the `a:hover` style
+    only takes effect when you're hovering over an `<a>` element.
+
+1. Click between the brackets to add a new declaration.
+1. Type `background-color` for the declaration name and then press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="imgs/css/rule3.png"
+            alt="Typing 'background-color'."/>
+       <figcaption>
+         <b>Figure 20</b>. Typing <code>background-color</code>
+       </figcaption>
+     </figure>
+
+1. Type `green` for the declaration value and then press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="imgs/css/rule4.png"
+            alt="Typing 'green'."/>
+       <figcaption>
+         <b>Figure 21</b>. Typing <code>green</code>
+       </figcaption>
+     </figure>
+
+1. Hover your mouse over the **Home** link. The background of the link turns green.
+
+     <figure>
+       <img src="imgs/css/rule5.png"
+            alt="Hovering over the Home link to reveal its green background."/>
+       <figcaption>
+         <b>Figure 22</b>. Hovering over the Home link to reveal its green background
+       </figcaption>
+     </figure>
+
+## Re-use styles across pages with external stylesheets {: #external}
+
+Earlier you added this internal stylesheet to `contact.html`:
 
 ```
 <style>
@@ -375,546 +466,322 @@ much like you did with HTML and the DOM.
 </style>
 ```
 
-What if you wanted to style the elements in `index.html` the same way? 
-What if you had a thousand pages and you wanted them to all be styled the same way?
-You'd have to copy and paste the stylesheet into every single web page on your site. 
-**External stylesheets** allow you to write your CSS once 
-so that applies to multiple web pages. Try it now:
+What if you wanted to style `index.html` the same way? 
+What if you had a *thousand* pages and you wanted to apply these styles to all of them?
+You'd have to copy and paste this internal stylesheet into every single web page on your site. 
+**External stylesheets** allow you to write your CSS once yet apply it to multiple pages.
+Try it now:
 
-1. Copy this code:
+1. First, reload the live tab to remove the changes that you made in DevTools.
 
-```
-li a, h1 {
-   font-family: 'Courier New', Courier, monospace;
-}
-
-a:hover {
-  background-color:cornsilk;
-}
-
-nav {
-  background-color: aliceblue;
-}
-
-```
- You've seen the first two rulesets already. 
- The third ruleset represents the **inline style** you applied to the `<nav>` in the 
- *[Add inline styles](#inline)* section. It turns the background color of the `<nav>` 
-  section blue. 
-
-1. Go to the **editor tab**.
-1. In `contact.html`, delete everything between `<style>` and `</style>`, 
-   including the `<style>` and `</style>` tags. This removes the internal stylesheet.
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/external1.png"
+            alt="After reloading the page the changes that were made in DevTools are gone."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 23</b>. After reloading the page the changes that were made in DevTools are gone
        </figcaption>
      </figure>
 
-1. Go to `index.html` and remove the inline style (`style="background-color: aliceblue"`) 
+1. Go back to the **editor tab** and open `contact.html`.
+
+     <figure>
+       <img src="imgs/css/external2.png"
+            alt="contact.html"/>
+       <figcaption>
+         <b>Figure 24</b>. contact.html
+       </figcaption>
+     </figure>
+
+1. Delete everything between `<style>` and `</style>`, including `<style>` and `</style>`.
+
+     <figure>
+       <img src="imgs/css/external3.png"
+            alt="The style tag has been removed."/>
+       <figcaption>
+         <b>Figure 25</b>. The style tag has been removed
+       </figcaption>
+     </figure>
+
+1. Go to `index.html` and remove `style="background-color: aliceblue;"`
    from the `<nav>` tag.
+
+    You have now removed all of the CSS that you previously added to your site.
+
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/external4.png"
+            alt="The inline style has been removed from the nav element."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 26</b>. The inline style has been removed from the nav element
        </figcaption>
      </figure>
-1. Click the **New File** button on the left-hand side.
-1. Replace `cool-file.js` with `style.css` and click **Add File**.
+
+1. Click **New File**.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/external5.png"
+            alt="The new file dialog."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure> 
-   You've now created a blank external stylesheet.
-1. In `style.css`, paste in the code you copied. 
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 27</b>. The new file dialog
        </figcaption>
      </figure>
-1. Copy this code: `<link rel="stylesheet" href="style.css">`. 
-1. Go back to `index.html`. Above the `</head>` tag, paste the code you copied. 
-   The stylesheet is now linked to  `index.html`.
-        <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+
+1. Replace `cool-file.js` with `style.css` and then click **Add File**.
+
+     <figure>
+       <img src="imgs/css/external6.png"
+            alt="Typing 'style.css'."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 28</b>. Typing <code>style.css</code>
        </figcaption>
      </figure>
-1. Go back to `contact.html`. Above the `</head>` tag, paste the code you copied. 
-   The stylesheet is now linked to  `contact.html`.
+
+1. Paste this code into `style.css`:
+
+    <pre class="prettyprint lang-css">
+    li a, h1 {
+      font-family: 'Courier New', Courier, Serif;
+    }
+    a:hover {
+      background-color: green;
+    }
+    nav {
+      background-color: aliceblue;
+    }
+    </pre>
+
+
+     <figure>
+       <img src="imgs/css/external7.png"
+            alt="Adding code to style.css"/>
+       <figcaption>
+         <b>Figure 29</b>. Adding code to <code>style.css</code>
+       </figcaption>
+     </figure>
+
+
+    At this point, you have created an external stylesheet, but your HTML doesn't know that it exists, yet.
+
+1. Open `index.html`.
+1. Add `<link rel="stylesheet" href="style.css">` to your HTML.
+
+    <pre class="prettyprint lang-html">{% htmlescape %}...
+    <head>
+      ...
+      <meta name="viewport" content="width=device-width, initial-scale=1">{% endhtmlescape %}<strong>
+    {% htmlescape %}  <link rel="stylesheet" href="style.css">{% endhtmlescape %}</strong>{% htmlescape %}
+    </head>
+    ...
+    {% endhtmlescape %}</pre>
+
+
+     <figure>
+       <img src="imgs/css/external8.png"
+            alt="Linking to style.css."/>
+       <figcaption>
+         <b>Figure 30</b>. Linking to <code>style.css</code>
+       </figcaption>
+     </figure>
+
+1. Go to `contact.html` and add the link there, too.
+
+     <figure>
+       <img src="imgs/css/external9.png"
+            alt="Linking to style.css in contact.html."/>
+       <figcaption>
+         <b>Figure 31</b>. Linking to <code>style.css</code> in <code>contact.html</code>
+       </figcaption>
+     </figure>
+
 1. Go to the **live tab**. The home page now has the same font 
    from the last section and a blue navigation section.
-        <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Click the **Contact** link to go to the contact page. 
-   The contact page has the same formatting as the home page.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/external10.png"
+            alt="The home page."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 32</b>. The home page
        </figcaption>
      </figure>
 
-#### Use CSS frameworks {: #frameworks}
+1. Click the **Contact** link to go to the contact page. 
+   The contact page has the same formatting as the home page.
+
+     <figure>
+       <img src="imgs/css/external11.png"
+            alt="The contact page"/>
+       <figcaption>
+         <b>Figure 33</b>. The contact page
+       </figcaption>
+     </figure>
+
+## Use a CSS framework {: #framework }
 
 **CSS frameworks** are collections of styles built by other developers that make it easier
 to create attractive web sites. Instead of defining styles yourself, a framework gives you
-consistent fonts, spacing, and so on for your elements. 
-This probably doesn't make complete sense yet, but it will after you complete 
-the following two sections.Complete the steps below to begin to understand 
-how frameworks work:
-
+a collection of styles that you can use on your page elements.
 
 1. Copy the following code: 
    `<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">` 
-   This code tells the browser to import a framework called **Bootstrap**.
-1. In the `contact.html` file, paste the code you copied directly above the `</head>` tag.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go to `index.html`.
-1. Paste the code you copied above the `</head>` tag.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go to the **live tab**. While the background color of the `<nav>` 
-   and the font of the `li a` elements are the same, 
-   the font of the other elements has changed.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Click the `Contact` link to go to the contact page. 
-   The same changes are present. 
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-  
+1. Go to the editing tab and paste the code into `contact.html`.
 
-Why did some of the elements change, but not others? This is because of a CSS property
-called **cascading**. One of the properties of cascading is that if you have multiple rulesets for an element, 
-the browser will choose to display the ruleset with the most **specific** selector. 
-For example, the Bootstrap style sheet has a ruleset for `a` elements, 
-but the stylesheet you made has a ruleset for `li a` elements. 
-Since "all list items containing a link" is more specific than "all links", 
-the browser uses the ruleset from your external stylesheet.
-
-However, if there are two rulesets with the same specificity, 
-the browser applies that last ruleset assigned to the element. 
-Both your stylesheet and the Bootstrap stylesheet have rulesets for `h1` elements, 
-but because you added Bootstrap's stylesheet last, 
-the browser applied the Bootstrap ruleset.
-
-This concept is a bit complicated, but DevTools provides a way to visualize **cascading**:
-
-1. Press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> to open DevTools. 
-1. In the **Styles Pane**, click **Computed** to go to the **Computed Values Pane**. 
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/framework1.png"
+            alt="Linking to the framework in contact.html."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-   This pane allows you to see which rulesets have been applied by the browser.
-1. Right-click on **Contact** and select **Inspect**. 
-   Now you are looking at the CSS values for the contact link element.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Expand the **font-family** menu with the gray arrow. 
-   In the menu you see that two items are crossed out. 
-   These are the default fonts for Bootstrap that your stylesheet overwrote.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Click on the link that says **_reboot.scss:58**. This will take you to the place in the  
-   Bootstrap stylesheet where the font declaration was made. 
-   `body` is a less specific selector than `li a`, 
-   so the ruleset associated with `li a` is applied.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Click on the **Elements** tab to go back to the **Elements Panel**.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 34</b>. Linking to the framework in contact.html
        </figcaption>
      </figure>
 
-If you're using multiple stylesheets and a style isn't showing up, 
-you can use the **Computed Values Pane** to see if something wrote over the style.
+1. Paste the code into `index.html`, as well.
 
-### Use Bootstrap CSS {: #bootstrap }
+     <figure>
+       <img src="imgs/css/framework2.png"
+            alt="Linking to the framework in index.html"/>
+       <figcaption>
+         <b>Figure 35</b>. Linking to the framework in index.html
+       </figcaption>
+     </figure>
 
+1. Go back to the live tab to view your changes. While the background color of the `<nav>` 
+   and the font of the `li a` elements are the same, the font of the other elements has changed.
+
+     <figure>
+       <img src="imgs/css/framework3.png"
+            alt="Some of the font on the home page has changed because of the framework."/>
+       <figcaption>
+         <b>Figure 36</b>. Some of the font on the home page has changed because of the framework
+       </figcaption>
+     </figure>
+
+### Use a class {: #class }
+ 
 In the last section, you added Bootstrap to your web pages, 
 which changed the fonts of some of the elements on your site. 
 CSS frameworks can help you make major changes to your page with very little code. 
-For example, you are going to take your header from this: 
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-To this:
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-With a single line of code.  
+Try it now by changing your header:
 
 1. Copy this code: `class="jumbotron jumbotron-fluid"`
-1. Go to **the editor tab**.
-1. In `index.html`, paste the code you copied into the `<header>` tag. 
-   This tells the browser that the `<header>` tag should have the attributes of a jumbotron,
-   which tells Bootstrap to apply a certain ruleset to the tag.
+1. Add this code to your `<header>` tag in `index.html`.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/jumbotron1.png"
+            alt="Adding the jumbotron class in index.html."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go to the **live tab**. Now, there is a big gray box around 
-   the elements that were in the `<header>` tag.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go back to the **editor tab**.
-1. In `contact.html`, paste the code you copied into the `<header>` tag. 
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go back to the **live tab**.
-1. Click the **Contact** link to go to the contact page. 
-   The contact page has the same formatting as the home page.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 37</b>. Adding classes in index.html
        </figcaption>
      </figure>
 
-You've just used your first **HTML class**. A class is an HTML attribute that defines a 
-**CSS selector**. As mentioned in [a previous section](#internal), CSS selectors are 
-patterns that may apply to one or more HTML elements. 
+1. Add the code to your `<header>` tag in `contact.html`, too.
 
-For example, setting the `<header>'s` class to `jumbotron` applied this ruleset:
+     <figure>
+       <img src="imgs/css/jumbotron2.png"
+            alt="Adding the jumbotron class in contact.html."/>
+       <figcaption>
+         <b>Figure 38</b>. Adding classes in contact.html
+       </figcaption>
+     </figure>
+
+1. View your changes in the live tab. There's a big, grey box around your header now.
+
+     <figure>
+       <img src="imgs/css/jumbotron3.png"
+            alt="The header now has a big, grey box around it."/>
+       <figcaption>
+         <b>Figure 39</b>. The header now has a big, grey box around it
+       </figcaption>
+     </figure>
+
+### Understand classes {: #classes-overview }
+
+Classes let you assign collections of styles to arbitrary elements. For example, setting the
+`class` attribute of the `<header>` tags to `jumbotron` applied the following styles to them:
 
 ```
 .jumbotron {
-  padding: $jumbotron-padding ($jumbotron-padding / 2);
-  margin-bottom: $jumbotron-padding;
-  background-color: $jumbotron-bg;
-  @include border-radius($border-radius-lg);
-
-  @include media-breakpoint-up(sm) {
-    padding: ($jumbotron-padding * 2) $jumbotron-padding;
-  }
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
 }
-
 ```
 
-In this case, the selector `.jumbotron` means "all HTML elements with the 
-class `jumbotron`". 
+One advantage of classes is that they let you apply styles to whatever elements you want. For example,
+suppose you want to set the background color of *some* `<p>` elements to purple, but not *all* of them.
+You could define the style in a class:
 
-While any HTML element can have a **class** attribute, 
-a class like `jumbotron` will not format 
-in the way you see on your site unless you have Bootstrap linked to your web page.
+```
+.custom-background {
+  background-color: purple;
+}
+```
 
-Bootstrap has other exclusive classes that align elements:
+And then apply the class to only the `<p>` elements that you want to style:
 
-1. Copy this code: `class="container-fluid"` .
-1. Go to the **editor tab**.
-1. In `index.html`, paste the code you copied into the `<body>` tag.
+```
+<p>This won't be purple.</p>
+<p class="custom-background">This will be purple.</p>
+<p>This won't be purple.</p>
+<p class="custom-background">This will be purple.</p>
+```
+
+### Align elements {: #align }
+
+Bootstrap also provides classes for aligning elements. Try it now:
+
+1. Go back to the editor tab and open `index.html`.
+1. Add `class="container-fluid"` to your `<body>` tag.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/align1.png"
+            alt="Adding the 'container-fluid' class."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 40</b>. Adding the <code>container-fluid</code> class
        </figcaption>
      </figure>
 
-1. Above the `<nav>`, type `<div class= "row">`. 
-   This adds a **row** to your site. However, 
-   nothing will be visible until you assign elements to **columns**.
+1. Wrap your `<nav>` and `<main>` elements in `<div class="row">`. Make sure to put `</div>` after
+   `</main>` in order to properly close the new tag.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/align2.png"
+            alt="Adding a row."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 41</b>. Adding a row
        </figcaption>
      </figure>
 
-1. Below `</main>`, close the `<div>` with `</div>`. Now the `<nav>` section and the 
-   `<main>` section are in the same row.
+1. Add `class="col-3"` to your `<nav>` tag and `class="col-9"` to your `<main>` tag.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/align3.png"
+            alt="Adding the 'col-3' and 'col-9' classes."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 42</b>. Adding the <code>col-3</code> and <code>col-9</code> classes
        </figcaption>
      </figure>
 
-1. In the `<nav>` tag, insert the following code: `class= "col-2"` 
-   This assigns the `<nav>` section to a column that is 2 units wide. 
+1. View your changes in the live tab.
+
      <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
+       <img src="imgs/css/align4.png"
+            alt="The nav content is now to the left of the main content."/>
        <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
+         <b>Figure 43</b>. The nav content is now to the left of the main content
        </figcaption>
      </figure>
-
-1. In the `<main>` tag, insert the following code: `class= "col-10"` 
-   This assigns the `<nav>` section to a column that is 10 units wide.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-1. Go to the **live tab**. The `<nav>` section should be a sidebar on the left side 
-   of the screen. Note that on some mobile devices, 
-   the placement of your content may not reflect your changes, 
-   as your site is not mobile optimized.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-1. Repeat the previous steps for `contact.html`.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-
-## Polish your site {: #polish}
-Bootstrap's default CSS has given you a more polished site, 
-but there are still some issues you'll need to fix. 
-The spacing of the content both inside and outside 
-of the `<nav>` section and the jumbotron section looks off. DevTools can help change that:
-
-1. Go to the **live tab**. 
-1. Right click on the jumbotron (the big gray box) and click **Inspect**.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
- <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-Next to the **Styles Pane**, there is a diagram called the **Box Model Diagram**. 
-The **Box Model** is a set of properties that control the positioning of elements. 
-Each box has four elements: content, padding, border, and margin:
-
-1. Click on the left `-` in the **padding** box.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-2. Type `25`. 
-3. Press <kbd>Enter</kbd>. 
-   This moves the text in the jumbotron to the right so that it isn't so close to the edge.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-Do the same thing to the `<nav>` section:
-
-1. Right-click the `<nav>` section (the blue box) and click **Inspect**. 
-   The `<nav>` node is highlighted.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-1. Click the top `-` in the **padding box**. 
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Type `10`.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Press <kbd>Enter</kbd>. This changes the padding on the top of the `<nav>` section from `0` pixels to `10` pixels.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-
-Put these changes in the external stylesheet you made earlier to save them:
-
-1. Copy `padding-top:10px` from the **element.style{}** ruleset.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure> 
-1. Go to the **editor tab**.
-1. Go to `style.css`.
-1. Paste the code you copied into the **nav{}** ruleset.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Go back to the **live tab**.
-1. Right click on the jumbotron (the big gray box) and click **Inspect**.
-1. Copy everything in the **element.style{}** ruleset.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Paste the **element.style{}** ruleset into `style.css`
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-1. Replace **element.style{}** with `.jumbotron jumbotron-fluid`.
-     <figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
-
-The **Box Model Diagram** can edit other properties related to spacing and layout. 
-It can also change the size of an element, the element's **margins** 
-(the space around the element), and the element's **border** 
-(the space around an element's padding and content).
 
 ## Next steps {: #next-steps }
-<figure>
-       <img src="imgs/css/inline1.png"
-            alt="The result of applying the inline style."/>
-       <figcaption>
-         <b>Figure X</b>. The result of applying the inline style
-       </figcaption>
-     </figure>
 
-Now that you've got HTML and CSS down, there's one more language you'll need
-to put in your web development toolkit: JavaScript. Soon, there will be a
-tutorial that will focus on how DevTools can help you create and fix your
-JavaScript code.
+Congratulations! You're done! 
 
-### Resources
-* [CSS Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
-* [Bootstrap's Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
-* [More Information on DevTools and CSS](/web/tools/chrome-devtools/css/)
+* The best way to get better at web development is to build more sites. Don't worry about breaking stuff. Just
+  have fun and learn as much as you can along the way.
+* Check out [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) to learn lots
+  more about styling web pages.
+* Work through our [Get Started with Viewing and Changing CSS](/web/tools/chrome-devtools/css/) tutorial
+  to learn more about how you can use DevTools to experiment with a page's CSS.
 
 ## Feedback {: #feedback }
+
 {% include "web/_shared/helpful.html" %}

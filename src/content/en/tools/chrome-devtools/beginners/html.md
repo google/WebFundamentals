@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-08-30 #}
+{# wf_updated_on: 2018-09-06 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -68,7 +68,7 @@ You're going to build your site in an online code editor called Glitch.
        </figcaption>
      </figure>
 
-2. Click **dfb1**. The Project Options menu opens in the top-left corner.
+1. Click **dfb1**. The Project Options menu opens in the top-left corner.
 
      <figure>
        <img src="imgs/setup2.png" alt="The Project Options menu.">
@@ -77,7 +77,7 @@ You're going to build your site in an online code editor called Glitch.
        </figcaption>
      </figure>
 
-3. Click **Remix This**. Glitch creates a copy of the project that you can
+1. Click **Remix This**. Glitch creates a copy of the project that you can 
    edit and randomly generates a new name for the project. The content is
    the same as before.
 
@@ -88,7 +88,11 @@ You're going to build your site in an online code editor called Glitch.
        </figcaption>
      </figure>
 
-4. Click **Show Live**. A new tab opens, showing you the live page.
+1. If you plan on completing the next tutorial in this series, click **Sign In** and sign
+   in to Glitch with your GitHub or Facebook account. If you don't sign in you will lose the
+   ability to edit this project once you close the editing tab.
+
+1. Click **Show Live**. A new tab opens, showing you the live page.
    This tab will be called the **live tab** throughout this tutorial.
 
      <figure>
@@ -380,45 +384,14 @@ source code.
 
 1. Copy the code below.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-    <header>
-      <p><b>Welcome to my site!</b></p>
-      <button>Download my resume</button>
-    </header>
-    <main>
-      <h1>About Me</h1>
-      <p>I am learning web development. Recent accomplishments:</p>
-      <ul>
-        <li>Learned how to set up my code in Glitch.</li>
-        <li>Added content to my HTML.</li>
-        <li>Learned how to use Chrome DevTools to experiment with content changes.</li>
-        <li>Learned the difference between HTML and the DOM.</li>
-      </ul>
-    </main>
-  </body>
-</html>
-```
+<pre class="prettyprint notranslate lang-html">{% includecode content_path="web/tools/chrome-devtools/beginners/_code/final.html" html_escape="false" %}</pre>
 
 1. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
    you just copied.
 
      <figure>
        <img src="imgs/copy2.png"
-            alt="How your index.html file should work."/>
+            alt="How your index.html file should look."/>
        <figcaption>
          <b>Figure 22</b>. How your <code>index.html</code> file should look
        </figcaption>
@@ -426,11 +399,11 @@ source code.
 
 ## Next steps {: #next-steps}
 
+* Complete the next tutorial in this series, [Get Started with CSS](css), to learn how to style your page
+  and experiment with style changes in Chrome DevTools.
 * Read [Introduction to the DOM][DOM]{: .external } to learn more about the DOM.
 * Check out a course like [Introduction to Web Development][Intro]{: .external } to get
   more hands-on web development experience.
-* Stay tuned for the next tutorial in this series, in which you'll learn how to style
-  your page using CSS, and experiment with CSS changes in DevTools.
 
 [DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 [Intro]: https://www.coursera.org/learn/web-development
