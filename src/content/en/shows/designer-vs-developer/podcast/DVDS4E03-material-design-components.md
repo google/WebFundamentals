@@ -1,18 +1,18 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Lynn Mercier on Material Design Components
+description: Lynn Mercier on material design components
 
 {# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-09-20 #}
-{# wf_published_on: 2018-09-14 #}
+{# wf_published_on: 2018-09-20 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E02-Getting-started-with-UX-research.mp3 #}
 {# wf_podcast_duration: 00:16:10 #}
 {# wf_podcast_fileSize: 23453475 #}
-{# wf_podcast_subtitle: Lynn Mercier on Material Design Components#}
+{# wf_podcast_subtitle: Lynn Mercier on material design components#}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s04-e03-cover-large.jpg #}
 
 
-# Lynn Mercier on Material Design Components {: .page-title }
+# Lynn Mercier on material design components {: .page-title }
 
 Welcome to Designer Vs. Developer, a show that tries to solve the
 challenges faced in the industry by opening a conversation between
@@ -29,13 +29,13 @@ and collaboration between designers and developers on material design.
   
 In this episode:
 
-* [Material Design Components for Web](https://github.com/material-components/material-components-web)
-* [Material Components for React](https://github.com/material-components/material-components-web-react)
-* [Getting started with Material Design Components for web](https://medium.com/dev-channel/getting-started-with-material-design-components-for-web-3cb30fbac7d8)
+* [Material design components for Web](http://bit.ly/2MOnp3Y)
+* [Material components for React](http://bit.ly/2O2W9Dg)
+* [Getting started with MDC web](http://bit.ly/2MN47vT)
 * Stress testing designs
-* Material Design shapes
+* Material design shapes
 * Using SVG
-* [Responsive web design tips from BBC News](https://www.creativebloq.com/web-design/responsive-web-design-tips-bbc-news-9134667)
+* [Responsive web design tips from BBC News](https://muss.me/2pqlSI4)
 
 
 <audio style="width: 100%" controls preload="none"
