@@ -114,10 +114,13 @@ they need to pass the data to download manager.
 
 This is also where the [SafeBrowsing](https://safebrowsing.google.com/) check happens. 
 If the domain and the response data seems to match a known malicious site, then the network thread 
-alerts to display a warning page. Additionally, 
+alerts to display a warning page. 
+
+Note: this is a check point every network request (both page navigation and subresource download) 
+goes through. For subresource download, 
 [**C**ross **O**rigin **R**ead **B**locking (**CORB**)](https://www.chromium.org/Home/chromium-security/corb-for-developers) 
-check happens in order to make sure sensitive cross-site 
-data does not make it to the renderer process.
+check happens here in order to make sure sensitive cross-site data does not make it to the renderer 
+process.
 
 ### Step 3: Find a renderer process
 
