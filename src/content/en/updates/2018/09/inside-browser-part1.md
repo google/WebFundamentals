@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline.
 
 {# wf_published_on: 2018-09-05 #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Learn how browser turn your code into functional website from high-level architecture to the specifics of the rendering pipeline. In part 1, we’ll take a look at core computing terminology and Chrome’s multi-process architecture. #}
 {# wf_blink_components: N/A #}
@@ -312,6 +312,12 @@ happens between these processes and threads in order to display a website.
 
 Did you enjoy the post? If you have any questions or suggestions for the future post, I'd love to 
 hear from you in the comment section below or [@kosamari](https://twitter.com/kosamari) on Twitter.
+
+<a class="button button-primary gc-analytics-event attempt-right"
+   href="/web/updates/2018/09/inside-browser-part2"
+   data-category="InsideBrowser" data-label="Part1 / Next">Next: What happens in navigation</a>
+
+<div class="clearfix"></div>
 
 ## Feedback {: .hide-from-toc }
 
