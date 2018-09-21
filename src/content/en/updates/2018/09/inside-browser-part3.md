@@ -18,7 +18,7 @@ description: Inner workings of a browser rendering engine
 
 {% include "web/_shared/contributors/kosamari.html" %}
 
-## Inner workings of a Renderer Process
+## Inner workings of a renderer process
 
 This is part 3 of 4 part blog series looking at how browsers work. Previously, we covered 
 [multi-process architecture](/web/updates/2018/09/inside-browser-part1) and 
@@ -279,7 +279,7 @@ to avoid blocking the main thread.
     </video>
   </a>
   <figcaption>
-    Figure 14: Annimation of naive rastering process
+    Figure 14: Annimation of naive rasterizing process
   </figcaption>
 </figure>
 
@@ -287,8 +287,8 @@ Now that the browser knows the structure of the document, the style of each elem
 of the page, and the paint order, how does it draw a page? Turning this information into pixels on 
 the screen is called rasterizing.
 
-Perhaps a naive way to handle this would be to raster parts inside of the viewport. If a user 
-scrolls the page, then move the rastered frame, and fill in the missing parts by rastering more. 
+Perhaps a naive way to handle this would be to rasterize parts inside of the viewport. If a user 
+scrolls the page, move the rasterized frame, and fill in the missing parts by rasterizing more. 
 This is how Chrome handled rasterizing when it was first released. However, the modern browser 
 runs a more sophisticated process called compositing. 
 
@@ -352,10 +352,10 @@ memory.
 </figure>
 
 The compositor thread can prioritize different aster threads so that things within the viewport 
-(or nearby) can be rastered first. A layer also has multiple tilings for different resolutions to 
+(or nearby) can be rasterized first. A layer also has multiple tilings for different resolutions to 
 handle things like zoom-in action.
 
-Once tiles are rastered, compositor thread gathers tile information called **draw quads** to create 
+Once tiles are rasterized, compositor thread gathers tile information called **draw quads** to create 
 a **compositor frame**. 
 
 <table class="responsive">

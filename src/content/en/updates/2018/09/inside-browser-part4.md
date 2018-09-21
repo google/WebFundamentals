@@ -18,7 +18,7 @@ description: Input event handling with the compositor thread
 
 {% include "web/_shared/contributors/kosamari.html" %}
 
-## Input is coming to the Compositor
+## Input is coming to the compositor
 
 This is the last of the 4 part blog series looking inside of Chrome; investigating how it handles 
 our code to display a website. In the previous post, we looked at [the rendering process and 
