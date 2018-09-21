@@ -90,7 +90,7 @@ might have seen or written code like the blow.
 
 ```javascript
 document.body.addEventListener('touchstart',  event => {
-    if(event.target === area){
+    if (event.target === area) {
         event.preventDefault();
     }
 } );
@@ -117,7 +117,7 @@ but compositor can go ahead and composite new frame as well.
 
 ```javascript
 document.body.addEventListener('touchstart',  event => {
-    if(event.target === area){
+    if (event.target === area) {
         event.preventDefault()
     }
  }, {passive: true} );
@@ -142,14 +142,12 @@ scroll direction. You can check against this by using `event.cancelable` method.
 
 ```javascript
 document.body.addEventListener('pointermove', event => {
-    if(event.cancelable){
+    if (event.cancelable) {
         event.preventDefault(); // block the native scroll
         /*
         *  do what you want the application to do here
         */
-        return;
     } 
-    return;
 }, {passive: true});
 ```
 

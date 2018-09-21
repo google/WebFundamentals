@@ -5,7 +5,7 @@ description: Inner workings of a browser rendering engine
 {# wf_published_on: 2018-09-20 #}
 {# wf_updated_on: 2018-09-21 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
-{# wf_featured_snippet: Once the browser recieved page data, what happens inside ofthe renderer process to display a page? #}
+{# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
 
 <style>
