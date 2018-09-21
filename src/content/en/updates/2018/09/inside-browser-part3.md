@@ -215,8 +215,11 @@ a note of painting process like "background first, then text, then rectangle". I
 ### Updating rendering pipeline is costly
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/inside-browser/part3/trees.png" 
-       alt="DOM+Style, Layout, and Paint trees">
+  <a href="/web/updates/images/inside-browser/part3/trees.mp4">
+    <video src="/web/updates/images/inside-browser/part3/trees.mp4"
+           autoplay loop muted playsinline controls alt="DOM+Style, Layout, and Paint trees">
+    </video>
+  </a>
   <figcaption>
     Figure 10: DOM+Style, Layout, and Paint trees in order it is generated
   </figcaption>
