@@ -355,8 +355,8 @@ The compositor thread can prioritize different aster threads so that things with
 (or nearby) can be rasterized first. A layer also has multiple tilings for different resolutions to 
 handle things like zoom-in action.
 
-Once tiles are rasterized, compositor thread gathers tile information called **draw quads** to create 
-a **compositor frame**. 
+Once tiles are rasterized, compositor thread gathers tile information called **draw quads** to 
+create a **compositor frame**. 
 
 <table class="responsive">
   <tr>
