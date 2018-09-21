@@ -2,17 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2017-12-14 #}
-{# wf_updated_on: 2018-08-29 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: chrome64,chrome66,webaudio #}
-{# wf_featured_snippet: Chrome 64 comes with a highly anticipated new feature in Web Audio API - AudioWorklet. AudioWorklet nicely keeps the user-supplied JavaScript code all within the audio processing thread — that is, it doesn’t have to jump over to the main thread to process audio. #}
+{# wf_featured_snippet: Chrome 64 comes with a highly anticipated new feature in Web Audio API - Audio Worklet. Audio Worklet nicely keeps the user-supplied JavaScript code all within the audio processing thread — that is, it doesn’t have to jump over to the main thread to process audio. #}
 {# wf_blink_components: Blink>WebAudio #}
 
-# Enter AudioWorklet {: .page-title }
+# Enter Audio Worklet {: .page-title }
 
 {% include "web/_shared/contributors/hongchanchoi.html" %}
 
-Note: AudioWorklet is enabled by default in Chrome 66.
+Note: Audio Worklet is enabled by default in Chrome 66.
 
 Chrome 64 comes with a highly anticipated new feature in Web Audio API -
 [AudioWorklet](https://webaudio.github.io/web-audio-api/#AudioWorklet). This
@@ -39,7 +39,7 @@ replaced with AudioWorklet.
 
 ## Concepts
 
-AudioWorklet nicely keeps the user-supplied JavaScript code all within the
+Audio Worklet nicely keeps the user-supplied JavaScript code all within the
 audio processing thread — that is, it doesn’t have to jump over to the main
 thread to process audio. This means the user-supplied script code gets to run
 on the audio rendering thread (AudioWorkletGlobalScope) along with other
@@ -50,7 +50,7 @@ rendering.
 
 ### Registration and Instantiation
 
-Using AudioWorklet consists of two parts: AudioWorkletProcessor and
+Using Audio Worklet consists of two parts: AudioWorkletProcessor and
 AudioWorkletNode. This is more involved than using ScriptProcessorNode,
 but it is needed to give developers the low-level capability for custom audio
 processing. AudioWorkletProcessor represents the actual audio processor
@@ -79,8 +79,8 @@ context.audioWorklet.addModule('processors.js').then(() => {
 
 Creating an AudioWorkletNode requires at least two things: an AudioContext
 object and the processor name as a string. A processor definition can be
-loaded and registered by the new AudioWorklet object's `addModule()` call.
-Worklet APIs including AudioWorklet are only available in a
+loaded and registered by the new Audio Worklet object's `addModule()` call.
+Worklet APIs including Audio Worklet are only available in a
 [secure context](https://w3c.github.io/webappsec-secure-contexts/), thus a
 page using them must be served over HTTPS, although `http://localhost` is
 considered a secure for local testing.
@@ -138,10 +138,18 @@ class MyWorkletProcessor extends AudioWorkletProcessor {
   constructor() { super(); }
 
   process(inputs, outputs, parameters) {
-    // |myParamValues| is a Float32Array of 128 audio samples calculated
-    // by WebAudio engine from regular AudioParam operations. (automation
-    // methods, setter) By default this array would be all values of 0.707
-    let myParamValues = parameters.myParam;
+    // |myParamValues| is a Float32Array of either 1 or 128 audio samples
+    // calculated by WebAudio engine from regular AudioParam operations.
+    // (automation methods, setter) Without any AudioParam change, this array
+    // would be a single value of 0.707.
+    const myParamValues = parameters.myParam;
+
+    if (myParamValues.length === 1) {
+      // |myParam| has been a constant value for the current render quantum,
+      // which can be accessed by |myParamValues[0]|.
+    } else {
+      // |myParam| has been changed and |myParamValues| has 128 values.
+    }
   }
 }
 ```
@@ -158,20 +166,28 @@ fashion to feed **inputs** and parameters and fetch **outputs**.
 process(inputs, outputs, parameters) {
   // The processor may have multiple inputs and outputs. Get the first input and
   // output.
-  let input = inputs[0];
-  let output = outputs[0];
+  const input = inputs[0];
+  const output = outputs[0];
 
   // Each input or output may have multiple channels. Get the first channel.
-  let inputChannel0 = input[0];
-  let outputChannel0 = output[0];
+  const inputChannel0 = input[0];
+  const outputChannel0 = output[0];
 
   // Get the parameter value array.
-  let myParamValues = parameters.myParam;
+  const myParamValues = parameters.myParam;
 
-  // Simple gain (multiplication) processing over a render quantum (128 samples).
-  // This processor only supports the mono channel.
-  for (let i = 0; i < inputChannel0.length; ++i) {
-    outputChannel0[i] = inputChannel0[i] * myParamValues[i];
+  // if |myParam| has been a constant value during this render quantum, the
+  // length of the array would be 1.
+  if (myParamValues.length === 1) {
+    // Simple gain (multiplication) processing over a render quantum
+    // (128 samples). This processor only supports the mono channel.
+    for (let i = 0; i < inputChannel0.length; ++i) {
+      outputChannel0[i] = inputChannel0[i] * myParamValues[0];
+    }
+  } else {
+    for (let i = 0; i < inputChannel0.length; ++i) {
+      outputChannel0[i] = inputChannel0[i] * myParamValues[i];
+    }
   }
 
   // To keep this processor alive.
@@ -240,7 +256,7 @@ registerProcessor('port-processor', PortProcessor);
 
 Also note that MessagePort supports Transferable, which allows you to
 transfer data storage or a WASM module over the thread boundary. This opens
-up countless possibility on how the AudioWorklet system can be utilized.
+up countless possibility on how the Audio Worklet system can be utilized.
 
 
 ## Walkthrough: building a GainNode
@@ -288,14 +304,19 @@ class GainProcessor extends AudioWorkletProcessor {
   }
 
   process(inputs, outputs, parameters) {
-    let input = inputs[0];
-    let output = outputs[0];
-    let gain = parameters.gain;
+    const input = inputs[0];
+    const output = outputs[0];
+    const gain = parameters.gain;
     for (let channel = 0; channel < input.length; ++channel) {
-      let inputChannel = input[channel];
-      let outputChannel = output[channel];
-      for (let i = 0; i < inputChannel.length; ++i)
-        outputChannel[i] = inputChannel[i] * gain[i];
+      const inputChannel = input[channel];
+      const outputChannel = output[channel];
+      if (gain.length === 1) {
+        for (let i = 0; i < inputChannel.length; ++i)
+          outputChannel[i] = inputChannel[i] * gain[0];
+      } else {
+        for (let i = 0; i < inputChannel.length; ++i)
+          outputChannel[i] = inputChannel[i] * gain[i];
+      }
     }
 
     return true;
@@ -305,27 +326,14 @@ class GainProcessor extends AudioWorkletProcessor {
 registerProcessor('gain-processor', GainProcessor);
 ```
 
-This covers the fundamental of AudioWorklet system. Live demos are available
+This covers the fundamental of Audio Worklet system. Live demos are available
 at [Chrome WebAudio team's GitHub
 repository](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/).
 
 
 ## Feature Transition: Experimental to Stable {: #experimental }
 
-AudioWorklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
-the feature is behind the experimental flag. You can activate the feature with
-the following command line option:
-
-```
---enable-blink-features=AudioWorklet
-```
-
-Along with the experimental release, we have added this feature in Chrome 64
-and 65 as an Origin Trial for all platforms. With the Origin Trial, You can
-deploy code using AudioWorklet to users and get feedback from them. To
-participate in this trial please use the [signup
-form](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform). This experimental program is expired on
-4/10/2018 and the participating developers need to prepare the site for the
-stable launch of the AudioWorklet in Chrome 66.
+Audio Worklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
+the feature was behind the experimental flag.
 
 {% include "comment-widget.html" %}
