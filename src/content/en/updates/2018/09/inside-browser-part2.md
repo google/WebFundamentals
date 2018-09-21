@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Learn how browser handles navigation request.
 
 {# wf_published_on: 2018-09-07 #}
-{# wf_updated_on: 2018-09-07 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: When you type a URL into the address bar, what happens after? When are security checks done and how does the browser speed up the process? Let's look at the page navigation process in browser! #}
 {# wf_blink_components: N/A #}
@@ -17,6 +17,7 @@ description: Learn how browser handles navigation request.
 # Inside look at modern web browser (part 2) {: .page-title }
 
 {% include "web/_shared/contributors/kosamari.html" %}
+
 
 ## What happens in navigation
 
@@ -286,6 +287,14 @@ HTML/CSS/JavaScript to render pages.
 
 Did you enjoy the post? If you have any questions or suggestions for the future post, I'd love to 
 hear from you in the comment section below or [@kosamari](https://twitter.com/kosamari) on Twitter.
+
+<a class="button button-primary gc-analytics-event attempt-right"
+   href="/web/updates/2018/09/inside-browser-part3"
+   data-category="InsideBrowser" data-label="Part2 / Next">
+  Next: Inner workings of a Renderer Process
+</a>
+
+<div class="clearfix"></div>
 
 ## Feedback {: .hide-from-toc }
 
