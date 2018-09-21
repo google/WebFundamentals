@@ -138,10 +138,18 @@ class MyWorkletProcessor extends AudioWorkletProcessor {
   constructor() { super(); }
 
   process(inputs, outputs, parameters) {
-    // |myParamValues| is a Float32Array of 128 audio samples calculated
-    // by WebAudio engine from regular AudioParam operations. (automation
-    // methods, setter) By default this array would be all values of 0.707
-    let myParamValues = parameters.myParam;
+    // |myParamValues| is a Float32Array of either 1 or 128 audio samples
+    // calculated by WebAudio engine from regular AudioParam operations.
+    // (automation methods, setter) Without any AudioParam change, this array
+    // would be a single value of 0.707.
+    const myParamValues = parameters.myParam;
+
+    if (myParamValues.length === 1) {
+      // |myParam| has been a constant value for the current render quantum,
+      // which can be accessed by |myParamValues[0]|.
+    } else {
+      // |myParam| has been changed and |myParamValues| has 128 values.
+    }
   }
 }
 ```
@@ -158,20 +166,28 @@ fashion to feed **inputs** and parameters and fetch **outputs**.
 process(inputs, outputs, parameters) {
   // The processor may have multiple inputs and outputs. Get the first input and
   // output.
-  let input = inputs[0];
-  let output = outputs[0];
+  const input = inputs[0];
+  const output = outputs[0];
 
   // Each input or output may have multiple channels. Get the first channel.
-  let inputChannel0 = input[0];
-  let outputChannel0 = output[0];
+  const inputChannel0 = input[0];
+  const outputChannel0 = output[0];
 
   // Get the parameter value array.
-  let myParamValues = parameters.myParam;
+  const myParamValues = parameters.myParam;
 
-  // Simple gain (multiplication) processing over a render quantum (128 samples).
-  // This processor only supports the mono channel.
-  for (let i = 0; i < inputChannel0.length; ++i) {
-    outputChannel0[i] = inputChannel0[i] * myParamValues[i];
+  // if |myParam| has been a constant value during this render quantum, the
+  // length of the array would be 1.
+  if (myParamValues.length === 1) {
+    // Simple gain (multiplication) processing over a render quantum
+    // (128 samples). This processor only supports the mono channel.
+    for (let i = 0; i < inputChannel0.length; ++i) {
+      outputChannel0[i] = inputChannel0[i] * myParamValues[0];
+    }
+  } else {
+    for (let i = 0; i < inputChannel0.length; ++i) {
+      outputChannel0[i] = inputChannel0[i] * myParamValues[i];
+    }
   }
 
   // To keep this processor alive.
