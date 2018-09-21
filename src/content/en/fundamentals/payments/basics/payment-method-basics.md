@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Payment Methods page for the W3C Payment APIs doc set.
+description: Understanding how payment methods are specified in the Payment Request API is mandatory for you. Learn 2 types of payment methods and how to create your own.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -127,7 +127,7 @@ as well as a specific `https://bobpay.xyz` method.
 
 Unlike standardized payment methods, URL-based payment methods have no registry.
 Anyone can develop and provide their own payment apps that support a payment
-method. This allows the W3C Payment APIs concept to inherently scale into quite 
+method. This allows the Web Payments concept to inherently scale into quite 
 a large payment ecosystem.
 
 In the example below, Google Pay is invoked via its URL; any information to be
@@ -142,9 +142,10 @@ data: {
 
 ## Existing payment method identifiers
 
-*   [Google Pay (`https://google.com/pay`)](/pay/api/web/)
-*   [Apple Pay (`https://apple.com/apple-pay`)](https://developer.apple.com/documentation/apple_pay_on_the_web)
-*   [Samsung Pay (`https://spay.samsung.com`)](https://developer.samsung.com/internet/android/web-payments-guide)
+* [Google Pay (`https://google.com/pay`)](/pay/api/web/)
+* [Apple Pay (`https://apple.com/apple-pay`)](https://developer.apple.com/documentation/apple_pay_on_the_web)
+* [Samsung Pay (`https://spay.samsung.com`)](https://developer.samsung.com/internet/android/web-payments-guide)
+* [Facebook (`fb`)](https://developers.facebook.com/docs/messenger-platform/reference/messenger-extensions-sdk/PaymentRequest/)
 
 Note: Send [pull requests](https://github.com/google/WebFundamentals/pulls) to
 us if your payment app supports Payment Request API but is not listed here.

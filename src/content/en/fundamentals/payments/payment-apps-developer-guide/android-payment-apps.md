@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: About the Ecosystem page for the Web Payments doc set.
+description: Web Payments allows any Android payment apps to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Android payment apps developer guide {: .page-title }
