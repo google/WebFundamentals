@@ -3,11 +3,11 @@ book_path: /web/shows/_book.yaml
 description: Lynn Mercier on material design components
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-09-20 #}
-{# wf_published_on: 2018-09-20 #}
-{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E02-Getting-started-with-UX-research.mp3 #}
-{# wf_podcast_duration: 00:16:10 #}
-{# wf_podcast_fileSize: 23453475 #}
+{# wf_updated_on: 2018-09-21 #}
+{# wf_published_on: 2018-09-21 #}
+{# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E03-Material-Design-Components.mp3 #}
+{# wf_podcast_duration: 00:13:01 #}
+{# wf_podcast_fileSize: 18918718 #}
 {# wf_podcast_subtitle: Lynn Mercier on material design components#}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s04-e03-cover-large.jpg #}
 
@@ -39,7 +39,7 @@ In this episode:
 
 
 <audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E02-Getting-started-with-UX-research.mp3">
+  src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E03-Material-Design-Components.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
