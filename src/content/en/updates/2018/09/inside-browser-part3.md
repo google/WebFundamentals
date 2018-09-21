@@ -5,7 +5,7 @@ description: Inner workings of a browser rendering engine
 {# wf_published_on: 2018-09-20 #}
 {# wf_updated_on: 2018-09-21 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
-{# wf_featured_snippet: Once the browser recieves page data, what happens inside ofthe renderer process to display a page? #}
+{# wf_featured_snippet: Once the browser recieved page data, what happens inside ofthe renderer process to display a page? #}
 {# wf_blink_components: N/A #}
 
 <style>
@@ -121,7 +121,7 @@ default style sheet. If you want to know what Chrome's default CSS is like,
 
 ## Layout
 
-Now the renderer process knows the structure of a document and styles for eac nodes, but that is 
+Now the renderer process knows the structure of a document and styles for each nodes, but that is 
 not enough to render a page. Imagine you are trying to describe a painting to your friend over a 
 phone. "There is a big red circle and a small blue square" is not enough information for your 
 friend to know what exactly the painting would look like. 
@@ -375,7 +375,8 @@ a **compositor frame**.
 A compositor frame is then submitted to the browser process via IPC. At this point, another 
 compositor frame could be added from UI thread for the browser UI change or from other renderer 
 processes for extensions. These compositor frames are sent to the GPU to display it on a screen. 
-If a scroll event comes in, compositor thread creates another compositor frame to be sent to the GPU.
+If a scroll event comes in, compositor thread creates another compositor frame to be sent to the 
+GPU.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/composit.png" alt="composit">
