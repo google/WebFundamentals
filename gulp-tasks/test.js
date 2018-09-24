@@ -573,6 +573,7 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
     gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
+    gutil.log(' ', chalk.cyan('--ignoreHelpfulWidget'), 'Skips helpful widget');
     gutil.log(' ', chalk.cyan('--ignoreTemplateTags'),
       'Skips template tag check ({{)');
     gutil.log(' ', chalk.cyan('--ignoreMissingFeedWidget'),
@@ -591,6 +592,7 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreTemplateTags = true;
     global.WF.options.ignoreCommentWidget = true;
+    global.WF.options.ignoreHelpfulWidget = true;
     global.WF.options.ignoreMissingFeedWidget = true;
     global.WF.options.hideIgnored = true;
     global.WF.options.skipTypos = true;
@@ -674,6 +676,13 @@ gulp.task('test', ['test:travis-init'], function() {
     let msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.ignoreMissingCommentWidget = true;
+  }
+
+  // Supress missing helpful widget warnings
+  if (global.WF.options.ignoreHelpfulWidget) {
+    let msg = `${chalk.cyan('--ignoreHelpfulWidget')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreMissingHelpfulWidget = true;
   }
 
   // Supress missing feed widget checks
