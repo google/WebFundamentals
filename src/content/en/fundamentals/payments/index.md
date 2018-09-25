@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn the concept of the Web Payments and how it works at a high level.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-09-25 #}
 {# wf_blink_components: Blink>Payments #}
 {# wf_featured_image: /web/fundamentals/payments/images/webpayments.png #}
 
@@ -11,6 +11,7 @@ description: Learn the concept of the Web Payments and how it works at a high le
 
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/durgapandey.html" %}
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="colCcgKoLUM"
@@ -81,7 +82,7 @@ This document aims at developers who are working for payment industries,
 especially at merchants, payment service providers and payment handlers.
 
 **All developers** should start with reading through ["Basics"
-section](/web/fundamentals/payments/basics/how-payment-ecosyste-works).
+section](/web/fundamentals/payments/basics/how-payment-ecosystem-works).
 
 **Merchants without PCI-DSS compliance** should then consult with their payment
 service provider to see if they have support for Payment Request API. If they
