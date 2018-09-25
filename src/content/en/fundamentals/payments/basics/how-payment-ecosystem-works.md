@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn who are involved in the Web Payments ecosystem, how they interact each other and how you can get involved.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-09-25 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }

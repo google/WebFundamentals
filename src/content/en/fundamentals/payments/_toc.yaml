@@ -6,7 +6,7 @@ toc:
   - title: Basics
     section:
     - title: How payment ecosystem works
-      path: /web/fundamentals/payments/basics/how-payment-ecosyste-works
+      path: /web/fundamentals/payments/basics/how-payment-ecosystem-works
     - title: How payment request api works
       path: /web/fundamentals/payments/basics/how-payment-request-api-works
     - title: Payment method basics
