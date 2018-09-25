@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2018-09-24 #}
+{# wf_updated_on: 2018-09-25 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -267,3 +267,7 @@ the average value is `0.75`, that means that 75 out of 100 people clicked **Yes*
   Make that change, and then check back after a while to see if your rating improved.
 * If your page is getting high ratings and you think you know why, share this knowledge with the
   rest of the team. We can conduct experiments to see if this change reproducibly improves page ratings.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
