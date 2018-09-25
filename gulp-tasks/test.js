@@ -233,7 +233,7 @@ function parseYAML(filename, contents) {
   try {
     return jsYaml.safeLoad(contents);
   } catch (ex) {
-    const msg = 'Unable to parse YAML';
+    let msg = 'Unable to parse YAML';
     if (ex.reason) {
       msg = ex.reason;
     }
