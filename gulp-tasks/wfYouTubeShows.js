@@ -170,7 +170,8 @@ function buildFeeds(videos, options) {
     `;
     const description = video.snippet.description.replace(/\n/g, '<br>\n');
     const content = iframe + description;
-    const publishedAtMoment = moment(video.snippet.publishedAt);
+    let publishedAtMoment = moment(video.snippet.publishedAt);
+    publishedAtMoment = publishedAtMoment.utcOffset(0, true);
 
     articles.push({
       url: video.snippet.resourceId.videoId,
