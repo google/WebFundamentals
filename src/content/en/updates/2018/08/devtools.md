@@ -222,18 +222,12 @@ Check out [ndb's README][ndb]{: .external } to learn more.
 ## Feedback {: #feedback }
 
 <style>
-  .wndt-feedback {
-    display: inline;
-    margin: 1em;
-    background-color: #f44336;
-  }
-  #quickstart-feedback-question {
+  .helpful--container {
     margin: 1em 0;
     position: relative;
   }
-  #quickstart-feedback-question section.expandable {
+  .helpful--section {
     position: static;
-    display: inline;
   }
 </style>
 
@@ -241,26 +235,29 @@ Check out [ndb's README][ndb]{: .external } to learn more.
 
 Was this page helpful?
 
-<div id="quickstart-feedback-question">
-  <section class="expandable">
-    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-            data-category="Helpful"
-            data-label="{% dynamic print request.path %} (helpful)" data-value="1">
+<div class="helpful--container">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="1"
+            data-label="{% dynamic print request.path %} (helpful)"
+            style="background-color:#f44336;">
       Yes
     </button>
-    <aside id="quickstart-feedback-success" class="success">
-      Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-      we're doing well, or how we can improve.
+    <aside class="success">
+      Great! Thank you for the feedback.
     </aside>
   </section>
-  <section class="expandable">
-    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-action="Feedback"
-            data-label="{% dynamic print request.path %} (helpful)" data-value="0">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="0"
+            data-label="{% dynamic print request.path %} (helpful)"
+            style="position:absolute;top:0;left:70px;background-color:#f44336;">
       No
     </button>
-    <aside id="quickstart-feedback-failure" class="warning">
-      Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
+    <aside class="warning">
+      Sorry to hear that. Please <a
+      href="https://github.com/google/WebFundamentals/issues/new">open an
+      issue</a> and tell us how we can improve.
     </aside>
   </section>
 </div>
@@ -269,26 +266,29 @@ Was this page helpful?
 
 Was this page useful?
 
-<div id="quickstart-feedback-question">
-  <section class="expandable">
-    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-            data-category="Helpful"
-            data-label="{% dynamic print request.path %} (useful)" data-value="1">
+<div class="helpful--container">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="1"
+            data-label="{% dynamic print request.path %} (useful)"
+            style="background-color:#f44336;">
       Yes
     </button>
-    <aside id="quickstart-feedback-success" class="success">
-      Great! Thank you for the feedback. Please use the feedback channels below to tell us what
-      we're doing well, or how we can improve.
+    <aside class="success">
+      Great! Thank you for the feedback.
     </aside>
   </section>
-  <section class="expandable">
-    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
-            data-category="Helpful" data-action="Feedback"
-            data-label="{% dynamic print request.path %} (useful)" data-value="0">
+  <section class="expandable helpful--section">
+    <button class="button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-value="0"
+            data-label="{% dynamic print request.path %} (useful)"
+            style="position:absolute;top:0;left:70px;background-color:#f44336;">
       No
     </button>
-    <aside id="quickstart-feedback-failure" class="warning">
-      Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
+    <aside class="warning">
+      Sorry to hear that. Please <a
+      href="https://github.com/google/WebFundamentals/issues/new">open an
+      issue</a> and tell us how we can improve.
     </aside>
   </section>
 </div>
