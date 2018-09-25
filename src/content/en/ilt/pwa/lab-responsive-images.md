@@ -44,7 +44,7 @@ This lab shows you how to make images on your web page look good on all devices.
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 If you don't have a preferred local development server, install the Node.js `http-server` package:
 
