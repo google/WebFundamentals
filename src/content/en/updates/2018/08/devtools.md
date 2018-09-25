@@ -1,8 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
+experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-08-31 #}
+{# wf_updated_on: 2018-09-25 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -220,7 +221,79 @@ Check out [ndb's README][ndb]{: .external } to learn more.
 
 ## Feedback {: #feedback }
 
-{% include "web/_shared/helpful.html" %}
+<style>
+  .wndt-feedback {
+    display: inline;
+    margin: 1em;
+    background-color: #f44336;
+  }
+  #quickstart-feedback-question {
+    margin: 1em 0;
+    position: relative;
+  }
+  #quickstart-feedback-question section.expandable {
+    position: static;
+    display: inline;
+  }
+</style>
+
+{% dynamic if experiments.feedback.helpful %}
+
+Was this page helpful?
+
+<div id="quickstart-feedback-question">
+  <section class="expandable">
+    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+            data-category="Helpful"
+            data-label="{% dynamic print request.path %} (helpful)" data-value="1">
+      Yes
+    </button>
+    <aside id="quickstart-feedback-success" class="success">
+      Great! Thank you for the feedback. Please use the feedback channels below to tell us what
+      we're doing well, or how we can improve.
+    </aside>
+  </section>
+  <section class="expandable">
+    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-action="Feedback"
+            data-label="{% dynamic print request.path %} (helpful)" data-value="0">
+      No
+    </button>
+    <aside id="quickstart-feedback-failure" class="warning">
+      Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
+    </aside>
+  </section>
+</div>
+
+{% dynamic elif experiments.feedback.useful %}
+
+Was this page useful?
+
+<div id="quickstart-feedback-question">
+  <section class="expandable">
+    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+            data-category="Helpful"
+            data-label="{% dynamic print request.path %} (useful)" data-value="1">
+      Yes
+    </button>
+    <aside id="quickstart-feedback-success" class="success">
+      Great! Thank you for the feedback. Please use the feedback channels below to tell us what
+      we're doing well, or how we can improve.
+    </aside>
+  </section>
+  <section class="expandable">
+    <button class="wndt-feedback button button-primary expand-control gc-analytics-event"
+            data-category="Helpful" data-action="Feedback"
+            data-label="{% dynamic print request.path %} (useful)" data-value="0">
+      No
+    </button>
+    <aside id="quickstart-feedback-failure" class="warning">
+      Sorry to hear that. Please use the feedback channels below to tell us how we can improve.
+    </aside>
+  </section>
+</div>
+
+{% dynamic endif %}
 
 To discuss the new features and changes in this post, or anything else related to DevTools:
 
