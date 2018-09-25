@@ -244,7 +244,8 @@ Was this page helpful?
       Yes
     </button>
     <aside class="success">
-      Great! Thank you for the feedback.
+      Great! Thank you for the feedback. Please use the feedback channels below to
+      tell us how we can improve.
     </aside>
   </section>
   <section class="expandable helpful--section">
@@ -255,9 +256,8 @@ Was this page helpful?
       No
     </button>
     <aside class="warning">
-      Sorry to hear that. Please <a
-      href="https://github.com/google/WebFundamentals/issues/new">open an
-      issue</a> and tell us how we can improve.
+      Sorry to hear that. Please use the feedback channels below to tell us
+      how we can improve.
     </aside>
   </section>
 </div>
@@ -275,7 +275,8 @@ Was this page useful?
       Yes
     </button>
     <aside class="success">
-      Great! Thank you for the feedback.
+      Great! Thank you for the feedback. Please use the feedback channels below to
+      tell us how we can improve.
     </aside>
   </section>
   <section class="expandable helpful--section">
@@ -286,9 +287,8 @@ Was this page useful?
       No
     </button>
     <aside class="warning">
-      Sorry to hear that. Please <a
-      href="https://github.com/google/WebFundamentals/issues/new">open an
-      issue</a> and tell us how we can improve.
+      Sorry to hear that. Please use the feedback channels below to tell us
+      how we can improve.
     </aside>
   </section>
 </div>
