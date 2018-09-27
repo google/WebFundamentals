@@ -11,7 +11,7 @@ description: A round up of the deprecations and removals in Chrome 70 to help yo
 
 {% include "web/updates/_shared/see-all-dep-rem.html" %}
 
-# Deprecations and removals in Chrome 69 {: .page-title }
+# Deprecations and removals in Chrome 70 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
