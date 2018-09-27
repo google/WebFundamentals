@@ -121,10 +121,6 @@ proposal](https://github.com/tc39/proposal-regexp-dotall-flag).
 
 ## Unicode Property Escapes
 
-Regular expression syntax has always included shorthands for certain character
-classes. `\d` represent digits and is really just `[0-9]`; `\w` is short for
-word characters, or `[A-Za-z0-9_]`.
-
 With Unicode awareness introduced in ES2015, there are suddenly many more
 characters that could be considered numbers, for example the circled digit one:
 ①; or considered word characters, for example the Chinese character for snow:
@@ -133,7 +129,7 @@ characters that could be considered numbers, for example the circled digit one:
 Neither of these can be matched with `\d` or `\w`. Changing the meaning of
 these shorthands would break existing regular expression patterns.
 
-Instead, new character classes are being
+Instead, new property escape sequences are being
 [introduced](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
 Note that they are only available for Unicode-aware regular expressions denoted
 by the `/u` flag.
@@ -150,8 +146,8 @@ The inverse can be matched by with `\P`.
 /\P{Alphabetic}/u.test('雪');  // false
 ```
 
-The Unicode consortium defines many more ways to classify code points, for
-example math symbols or Japanese Hiragana characters:
+The Unicode consortium defines many more properties, for example for math symbols
+or Japanese Hiragana characters:
 
 ```js
 /^\p{Math}+$/u.test('∛∞∉');                            // true
