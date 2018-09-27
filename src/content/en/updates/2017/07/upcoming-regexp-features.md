@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An overview of the exciting new features coming to JavaScript regular expressions, including named captures, the dotAll flag, Unicode property escapes, and lookbehind assertions.
 
-{# wf_updated_on: 2017-07-10 #}
+{# wf_updated_on: 2018-09-27 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: javascript,regex #}
 {# wf_blink_components: Blink>JavaScript>Language #}
