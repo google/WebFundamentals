@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-09-25 #}
+{# wf_updated_on: 2018-09-28 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -34,6 +34,7 @@ New features and major changes coming to DevTools in Chrome 70 include:
 * [Autocomplete Conditional Breakpoints](#autocomplete).
 * [Break on `AudioContext` events](#audiocontext).
 * [Debug Node.js apps with ndb](#ndb).
+* [Bonus tip: Measure real world user interactions with the User Timing API](#bonus).
 
 ## Live Expressions in the Console {: #watch }
 
@@ -218,6 +219,57 @@ you get through DevTools][medium]{: .external }, ndb also offers:
 Check out [ndb's README][ndb]{: .external } to learn more.
 
 [ndb]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
+
+## Bonus tip: Measure real world user interactions with the User Timing API {: #bonus }
+
+Want to measure how long it takes real users to complete critical journeys on your pages?
+Consider instrumeting your code with the [User Timing API][UTA]{:.external}.
+
+[UTA]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+
+For example, suppose you wanted to measure how long a user spends on your homepage before
+clicking your [call-to-action][CTA]{:.external} (CTA) button. First, you would mark the
+beginning of the journey in an event handler associated to a page load event, such as
+`DOMContentLoaded`:
+
+[CTA]: https://en.wikipedia.org/wiki/Call_to_action_(marketing)
+
+```js
+document.addEventListener('DOMContentLoaded', () => {
+  window.performance.mark('start');
+});
+```
+
+Then, you would mark the end of the journey and calculate its duration when the button is clicked:
+
+```js
+document.querySelector('#CTA').addEventListener('click', () => {
+  window.performance.mark('end');
+  window.performance.measure('CTA', 'start', 'end');
+});
+```
+
+You can also extract your measurements, making it easy to send them to your
+analytics service to collect anonymous, aggregated data:
+
+```js
+const CTA = window.performance.getEntriesByName('CTA')[0].duration;
+```
+
+DevTools automatically marks up your User Timing measurements in the **User Timing** section
+of your Performance recordings.
+
+<figure>
+  <img src="/web/updates/images/2018/08/usertiming.png"
+       alt="The User Timing section."/>
+  <figcaption>
+    <b>Figure 10</b>. The User Timing section
+  </figcaption>
+</figure>
+
+This also comes in handy when debugging or optimizing code. For example, if you want to optimize
+a certain phase of your lifecycle, call `window.performance.mark()` at the beginning and end of your
+lifecycle function. React does this in development mode.
 
 ## Feedback {: #feedback }
 
