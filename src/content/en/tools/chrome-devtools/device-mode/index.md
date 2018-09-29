@@ -2,9 +2,11 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use virtual devices in Chrome's Device Mode to build mobile-first websites.
 
-{# wf_updated_on: 2018-09-28 #}
+{# wf_updated_on: 2018-09-29 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
+
+[capture]: /web/tools/chrome-devtools/images/shared/capture-settings.png
 
 # Simulate Mobile Devices with Device Mode in Chrome DevTools {: .page-title }
 
@@ -12,23 +14,19 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 
 Use Device Mode to approximate how your page will look and perform on a mobile device.
 
-## Definition {: #definition }
-
 Device Mode is the name for the loose collection of features in Chrome DevTools that
-are related to simulating mobile devices. This collection includes:
+help you simulate mobile devices. These features include:
 
 * [Simulating a mobile viewport](#viewport).
 * [Throttling the network](#network).
 * [Throttling the CPU](#cpu).
 * [Simulating geolocation](#geolocation).
-* [Simulating device orientation](#orientation).
 
 ## Limitations {: #limitations }
 
 Think of Device Mode as a first-order approximation of how your page looks and feels
 on a mobile device. With Device Mode you don't actually run your code on a mobile device.
 You simulate the mobile user experience from your laptop or desktop.
-
 There are some aspects of mobile devices that DevTools will never be able to simulate. For
 example, the architecture of mobile CPUs is very different than the architecture of laptop
 or desktop CPUs.
@@ -56,7 +54,9 @@ By default the Device Toolbar opens in Responsive Viewport Mode.
 
 ### Responsive Viewport Mode {: #responsive }
 
-Drag the handles to resize the viewport to whatever dimensions you need.
+Drag the handles to resize the viewport to whatever dimensions you need. Or, enter specific values
+in the width and height boxes. In **Figure X**, the width is set to `628` and the height is set to
+`662`.
 
 <figure>
   <img src="imgs/responsive-handles.png"
@@ -168,13 +168,103 @@ of your viewport. The sizing unit of the rulers is pixels.
   </figcaption>
 </figure>
 
-## Throttle the network {: #network }
+### Zoom the viewport {: #zoom }
 
-## Throttle the CPU {: #cpu }
+Use the **Zoom** list to zoom in or out.
+
+<figure>
+  <img src="imgs/zoom-viewport.png"
+       alt="Zoom."/>
+  <figcaption>
+    <b>Figure X</b>. Zoom
+  </figcaption>
+</figure>
+
+## Throttle the network and CPU {: #throttle }
+
+To throttle the network and CPU, select **Mid-tier mobile** or **Low-end mobile**
+from the **Throttle** list.
+
+<figure>
+  <img src="imgs/throttling.png"
+       alt="The Throttle list."/>
+  <figcaption>
+    <b>Figure X</b>. The Throttle list
+  </figcaption>
+</figure>
+
+**Mid-tier mobile** simulates fast 3G and throttles your CPU so that it is 4 times
+slower than normal. **Low-end mobile simulates slow 3G and throttles your CPU 6 times slower than normal.
+Keep in mind that the throttling is relative to the normal capability of your laptop or desktop. 
+
+Note that the **Throttle** list will be hidden if your **Device Toolbar** is narrow.
+
+<figure>
+  <img src="imgs/device-toolbar.png"
+       alt="The Device Toolbar."/>
+  <figcaption>
+    <b>Figure X</b>. The Device Toolbar
+  </figcaption>
+</figure>
+
+### Throttle the CPU only {: #cpu }
+
+To throttle the CPU only and not the network, go to the **Performance** panel, click
+**Capture Settings** ![Capture Settings][capture]{:.inline-icon}, and then select
+**4x slowdown** or **6x slowdown** from the **CPU** list.
+
+<figure>
+  <img src="imgs/cpu.png"
+       alt="The CPU list."/>
+  <figcaption>
+    <b>Figure X</b>. The CPU list
+  </figcaption>
+</figure>
+
+### Throttle the network only {: #network }
+
+To throttle the network only and not the CPU, go the **Network** panel and select
+**Fast 3G** or **Slow 3G** from the **Throttle** list.
+
+<figure>
+  <img src="imgs/network.png"
+       alt="The Throttle list."/>
+  <figcaption>
+    <b>Figure X</b>. The Throttle list
+  </figcaption>
+</figure>
+
+Or press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or 
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open
+the Command Menu, type `3G`, and select **Enable fast 3G throttling** or
+**Enable slow 3G throttling**.
+
+<figure>
+  <img src="imgs/commandmenu.png"
+       alt="The Command Menu."/>
+  <figcaption>
+    <b>Figure X</b>. The Command Menu
+  </figcaption>
+</figure>
+
+You can also set network throttling from the **Performance** panel. Click
+**Capture Settings** ![Capture Settings][capture]{: .inline-icon } and then
+select **Fast 3G** or **Slow 3G** from the **Network** list.
+
+<figure>
+  <img src="imgs/network2.png"
+       alt="Setting network throttling from the Performance panel."/>
+  <figcaption>
+    <b>Figure X</b>. Setting network throttling from the Performance panel
+  </figcaption>
+</figure>
 
 ## Override geolocation {: #geolocation }
 
-## Simulate device orientation {: #orientation }
+To override geolocation click **Customize and control DevTools**
+![customize]{: .inline-icon } > **More tools** > **Sensors**.
+
+[customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
 
 ## Feedback {: #feedback }
 
