@@ -7,6 +7,7 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 {# wf_blink_components: Platform>DevTools #}
 
 [capture]: /web/tools/chrome-devtools/images/shared/capture-settings.png
+[customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
 
 # Simulate Mobile Devices with Device Mode in Chrome DevTools {: .page-title }
 
@@ -267,8 +268,6 @@ To open the geolocation overriding UI click **Customize and control DevTools**
 ![Customize and control DevTools][customize]{: .inline-icon } and then select
 **More tools** > **Sensors**.
 
-[customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
-
 <figure>
   <img src="imgs/sensors.png"
        alt="Sensors"/>
@@ -307,7 +306,6 @@ To open the orientation UI click **Customize and control DevTools**
 ![Customize and control DevTools][customize]{: .inline-icon } and then select
 **More tools** > **Sensors**.
 
-[customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
 
 <figure>
   <img src="imgs/sensors.png"
