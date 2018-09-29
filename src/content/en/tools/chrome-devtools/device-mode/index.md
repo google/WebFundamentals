@@ -12,26 +12,26 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Use Device Mode to approximate how your page will look and perform on a mobile device.
+Use Device Mode to approximate how your page looks and performs on a mobile device.
 
 Device Mode is the name for the loose collection of features in Chrome DevTools that
 help you simulate mobile devices. These features include:
 
-* [Simulating a mobile viewport](#viewport).
-* [Throttling the network](#network).
-* [Throttling the CPU](#cpu).
-* [Simulating geolocation](#geolocation).
+* [Simulating a mobile viewport](#viewport)
+* [Throttling the network](#network)
+* [Throttling the CPU](#cpu)
+* [Simulating geolocation](#geolocation)
+* [Setting orientation](#orientation)
 
 ## Limitations {: #limitations }
 
-Think of Device Mode as a first-order approximation of how your page looks and feels
-on a mobile device. With Device Mode you don't actually run your code on a mobile device.
-You simulate the mobile user experience from your laptop or desktop.
+Think of Device Mode as a [first-order approximation][approximation]{:.external} of how your
+page looks and feels on a mobile device. With Device Mode you don't actually run your code
+on a mobile device. You simulate the mobile user experience from your laptop or desktop.
+
 There are some aspects of mobile devices that DevTools will never be able to simulate. For
 example, the architecture of mobile CPUs is very different than the architecture of laptop
-or desktop CPUs.
-
-When in doubt, your best bet is to actually run your page on a mobile device. 
+or desktop CPUs. When in doubt, your best bet is to actually run your page on a mobile device. 
 Use [Remote Debugging](/web/tools/chrome-devtools/remote-debugging/) to view, change, debug,
 and profile a page's code from your laptop or desktop while it actually runs on a mobile device.
 
@@ -46,7 +46,7 @@ enables you to simulate a mobile viewport.
   <img src="imgs/device-toolbar.png"
        alt="The Device Toolbar."/>
   <figcaption>
-    <b>Figure X</b>. The Device Toolbar
+    <b>Figure 1</b>. The Device Toolbar
   </figcaption>
 </figure>
 
@@ -55,14 +55,14 @@ By default the Device Toolbar opens in Responsive Viewport Mode.
 ### Responsive Viewport Mode {: #responsive }
 
 Drag the handles to resize the viewport to whatever dimensions you need. Or, enter specific values
-in the width and height boxes. In **Figure X**, the width is set to `628` and the height is set to
+in the width and height boxes. In **Figure 2**, the width is set to `628` and the height is set to
 `662`.
 
 <figure>
   <img src="imgs/responsive-handles.png"
        alt="The handles for changing the viewport's dimensions when in Responsive Viewport Mode."/>
   <figcaption>
-    <b>Figure X</b>. The handles for changing the viewport's dimensions when in Responsive Viewport Mode
+    <b>Figure 2</b>. The handles for changing the viewport's dimensions when in Responsive Viewport Mode
   </figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ queries**.
   <img src="imgs/show-media-queries.png"
        alt="Show media queries."/>
   <figcaption>
-    <b>Figure X</b>. Show media queries
+    <b>Figure 3</b>. Show media queries
   </figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ Click a breakpoint to change the viewport's width so that the breakpoint gets tr
   <img src="imgs/breakpoint.png"
        alt="Click a breakpoint to change the viewport's width."/>
   <figcaption>
-    <b>Figure X</b>. Click a breakpoint to change the viewport's width
+    <b>Figure 4</b>. Click a breakpoint to change the viewport's width
   </figcaption>
 </figure>
 
@@ -97,7 +97,7 @@ To simulate the dimensions of a specific mobile device, select the device from t
   <img src="imgs/device-list.png"
        alt="The Device list."/>
   <figcaption>
-    <b>Figure X</b>. The Device list
+    <b>Figure 5</b>. The Device list
   </figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ Click **Rotate** ![Rotate](imgs/rotate.png){: .inline-icon } to rotate the viewp
   <img src="imgs/landscape.png"
        alt="Landscape orientation."/>
   <figcaption>
-    <b>Figure X</b>. Landscape orientation
+    <b>Figure 6</b>. Landscape orientation
   </figcaption>
 </figure>
 
@@ -119,9 +119,11 @@ Note that the **Rotate** button disappears if your **Device Toolbar** is narrow.
   <img src="imgs/device-toolbar.png"
        alt="The Device Toolbar."/>
   <figcaption>
-    <b>Figure X</b>. The Device Toolbar
+    <b>Figure 7</b>. The Device Toolbar
   </figcaption>
 </figure>
+
+See also [Set orientation](#orientation).
 
 #### Show device frame {: #frame }
 
@@ -135,7 +137,7 @@ just doesn't have art for that specific option.
   <img src="imgs/show-device-frame.png"
        alt="Show device frame."/>
   <figcaption>
-    <b>Figure X</b>. Show device frame
+    <b>Figure 8</b>. Show device frame
   </figcaption>
 </figure>
 
@@ -143,7 +145,7 @@ just doesn't have art for that specific option.
   <img src="imgs/iphone-frame.png"
        alt="The device frame for the iPhone 6."/>
   <figcaption>
-    <b>Figure X</b>. The device frame for the iPhone 6
+    <b>Figure 9</b>. The device frame for the iPhone 6
   </figcaption>
 </figure>
 
@@ -156,7 +158,7 @@ of your viewport. The sizing unit of the rulers is pixels.
   <img src="imgs/show-rulers.png"
        alt="Show rulers."/>
   <figcaption>
-    <b>Figure X</b>. Show rulers
+    <b>Figure 10</b>. Show rulers
   </figcaption>
 </figure>
 
@@ -164,7 +166,7 @@ of your viewport. The sizing unit of the rulers is pixels.
   <img src="imgs/rulers.png"
        alt="Rulers above and to the left of the viewport."/>
   <figcaption>
-    <b>Figure X</b>. Rulers above and to the left of the viewport
+    <b>Figure 11</b>. Rulers above and to the left of the viewport
   </figcaption>
 </figure>
 
@@ -176,7 +178,7 @@ Use the **Zoom** list to zoom in or out.
   <img src="imgs/zoom-viewport.png"
        alt="Zoom."/>
   <figcaption>
-    <b>Figure X</b>. Zoom
+    <b>Figure 11</b>. Zoom
   </figcaption>
 </figure>
 
@@ -189,12 +191,12 @@ from the **Throttle** list.
   <img src="imgs/throttling.png"
        alt="The Throttle list."/>
   <figcaption>
-    <b>Figure X</b>. The Throttle list
+    <b>Figure 12</b>. The Throttle list
   </figcaption>
 </figure>
 
 **Mid-tier mobile** simulates fast 3G and throttles your CPU so that it is 4 times
-slower than normal. **Low-end mobile simulates slow 3G and throttles your CPU 6 times slower than normal.
+slower than normal. **Low-end mobile** simulates slow 3G and throttles your CPU 6 times slower than normal.
 Keep in mind that the throttling is relative to the normal capability of your laptop or desktop. 
 
 Note that the **Throttle** list will be hidden if your **Device Toolbar** is narrow.
@@ -203,7 +205,7 @@ Note that the **Throttle** list will be hidden if your **Device Toolbar** is nar
   <img src="imgs/device-toolbar.png"
        alt="The Device Toolbar."/>
   <figcaption>
-    <b>Figure X</b>. The Device Toolbar
+    <b>Figure 13</b>. The Device Toolbar
   </figcaption>
 </figure>
 
@@ -217,7 +219,7 @@ To throttle the CPU only and not the network, go to the **Performance** panel, c
   <img src="imgs/cpu.png"
        alt="The CPU list."/>
   <figcaption>
-    <b>Figure X</b>. The CPU list
+    <b>Figure 14</b>. The CPU list
   </figcaption>
 </figure>
 
@@ -230,7 +232,7 @@ To throttle the network only and not the CPU, go the **Network** panel and selec
   <img src="imgs/network.png"
        alt="The Throttle list."/>
   <figcaption>
-    <b>Figure X</b>. The Throttle list
+    <b>Figure 14</b>. The Throttle list
   </figcaption>
 </figure>
 
@@ -243,7 +245,7 @@ the Command Menu, type `3G`, and select **Enable fast 3G throttling** or
   <img src="imgs/commandmenu.png"
        alt="The Command Menu."/>
   <figcaption>
-    <b>Figure X</b>. The Command Menu
+    <b>Figure 15</b>. The Command Menu
   </figcaption>
 </figure>
 
@@ -255,17 +257,92 @@ select **Fast 3G** or **Slow 3G** from the **Network** list.
   <img src="imgs/network2.png"
        alt="Setting network throttling from the Performance panel."/>
   <figcaption>
-    <b>Figure X</b>. Setting network throttling from the Performance panel
+    <b>Figure 16</b>. Setting network throttling from the Performance panel
   </figcaption>
 </figure>
 
 ## Override geolocation {: #geolocation }
 
-To override geolocation click **Customize and control DevTools**
-![customize]{: .inline-icon } > **More tools** > **Sensors**.
+To open the geolocation overriding UI click **Customize and control DevTools**
+![Customize and control DevTools][customize]{: .inline-icon } and then select
+**More tools** > **Sensors**.
 
 [customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
+
+<figure>
+  <img src="imgs/sensors.png"
+       alt="Sensors"/>
+  <figcaption>
+    <b>Figure 17</b>. Sensors
+  </figcaption>
+</figure>
+
+Or press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or 
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open
+the Command Menu, type `Sensors`, and then select **Show Sensors**.
+
+<figure>
+  <img src="imgs/show-sensors.png"
+       alt="Show Sensors"/>
+  <figcaption>
+    <b>Figure 18</b>. Show Sensors
+  </figcaption>
+</figure>
+
+Select one of the presets from the **Geolocation** list, or select **Custom location**
+to enter your own coordinates, or select **Location unavailable** to test out how your
+page behaves when geolocation is in an error state.
+
+<figure>
+  <img src="imgs/geolocation.png"
+       alt="Geolocation"/>
+  <figcaption>
+    <b>Figure 19</b>. Geolocation
+  </figcaption>
+</figure>
+
+## Set orientation {: #orientation }
+
+To open the orientation UI click **Customize and control DevTools**
+![Customize and control DevTools][customize]{: .inline-icon } and then select
+**More tools** > **Sensors**.
+
+[customize]: /web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png
+
+<figure>
+  <img src="imgs/sensors.png"
+       alt="Sensors"/>
+  <figcaption>
+    <b>Figure 20</b>. Sensors
+  </figcaption>
+</figure>
+
+Or press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or 
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open
+the Command Menu, type `Sensors`, and then select **Show Sensors**.
+
+<figure>
+  <img src="imgs/show-sensors.png"
+       alt="Show Sensors"/>
+  <figcaption>
+    <b>Figure 21</b>. Show Sensors
+  </figcaption>
+</figure>
+
+Select one of the presets from the **Orientation** list or select **Custom orientation**
+to set your own alpha, beta, and gamma values.
+
+<figure>
+  <img src="imgs/orientation.png"
+       alt="Orientation"/>
+  <figcaption>
+    <b>Figure 22</b>. Orientation
+  </figcaption>
+</figure>
 
 ## Feedback {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
+
+See [Join the DevTools community](/web/tools/chrome-devtools/#community) for other ways
+to leave feedback.
