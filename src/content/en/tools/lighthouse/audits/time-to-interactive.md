@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Time to Interactive" Lighthouse audit.
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2018-10-01 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -26,7 +26,7 @@ The Time to Interactive (TTI) metric measures how long it takes a page to become
 * Event handlers are registered for most visible page elements.
 * The page responds to user interactions within 50 milliseconds.
 
-[FMP]: /web/tools/lighthouse/audits/first-contentful-paint
+[FCP]: /web/tools/lighthouse/audits/first-contentful-paint
 
 Some sites optimize content visibility at the expense of interactivity. This can create a frustrating
 user experience. The site appears to be ready, but when the user tries to interact with it, nothing happens.

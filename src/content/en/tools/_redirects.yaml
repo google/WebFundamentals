@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/first-interactive
+  to: /web/tools/lighthouse/audits/first-cpu-idle
+
 - from: /web/tools/lighthouse/audits/consistently-interactive
   to: /web/tools/lighthouse/audits/time-to-interactive
 
