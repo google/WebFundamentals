@@ -42,7 +42,7 @@ toc:
     path: /web/tools/lighthouse/audits/optimize-images
   - title: Oversized Images
     path: /web/tools/lighthouse/audits/oversized-images
-  - title: Perceptual Speed Index
+  - title: Speed Index
     path: /web/tools/lighthouse/audits/speed-index
   - title: Preload key requests
     path: /web/tools/lighthouse/audits/preload
