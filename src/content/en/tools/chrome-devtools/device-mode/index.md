@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use virtual devices in Chrome's Device Mode to build mobile-first websites.
 
-{# wf_updated_on: 2018-09-29 #}
+{# wf_updated_on: 2018-10-02 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -29,6 +29,8 @@ help you simulate mobile devices. These features include:
 Think of Device Mode as a [first-order approximation][approximation]{:.external} of how your
 page looks and feels on a mobile device. With Device Mode you don't actually run your code
 on a mobile device. You simulate the mobile user experience from your laptop or desktop.
+
+[approximation]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order
 
 There are some aspects of mobile devices that DevTools will never be able to simulate. For
 example, the architecture of mobile CPUs is very different than the architecture of laptop
