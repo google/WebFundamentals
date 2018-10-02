@@ -33,16 +33,16 @@ you have a recent version of [Node](https://nodejs.org/en/) and the
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
-1. Run `npm install` (needed for the build process)
+1. Run `NPM install` (needed for the build process)
 
 ## Build the auto-generated files
 Some files (contributors includes, some pages for updates, showcases, etc.) are
-automatically generated. The first time you clone the repo and run `npm install`,
+automatically generated. The first time you clone the repo and run `NPM install`,
 this is done for you. However, when you add a case study, update, etc., you'll
 need to re-build those files using:
 
 ```
-npm run build
+NPM run build
 ```
 
 ## Start Local Server
@@ -50,7 +50,7 @@ npm run build
 To view the site locally, just run:
 
 ```
-npm start
+NPM start
 ```
 
 ## Update the code labs
@@ -63,7 +63,7 @@ access to the original Doc files. This will likely only work for Googlers.
 1. Check the latest changes into GitHub
 
 ## Start the development server
-1. Run `npm start`
+1. Run `NPM start`
 
 ## Test your changes before submitting a PR
 Please run your changes through npm test before submitting a PR. The test
@@ -72,5 +72,5 @@ content consistent. It's part of the deployment process, so PRs will fail
 if there are any errors! To run:
 
 ```
-npm test
+NPM test
 ```
