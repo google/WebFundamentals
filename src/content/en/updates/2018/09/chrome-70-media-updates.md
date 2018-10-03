@@ -2,22 +2,51 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android.
 
-{# wf_updated_on: 2018-09-19 #}
+{# wf_updated_on: 2018-10-03 #}
 {# wf_published_on: 2018-09-18 #}
 {# wf_tags: news,chrome70,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
-{# wf_featured_snippet: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android. #}
+{# wf_featured_snippet: A round up of the audio/video updates in Chrome 70: AV1 decoder, cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android. #}
 {# wf_blink_components: Blink>Media #}
 
 # Audio/Video Updates in Chrome 70 {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
+- [AV1 decoder](#av1-decoder) is now supported in Chrome Desktop x86-64.
 - [Cross-codec and cross-bytestream buffering and
   playback](#sourcebuffer-changetype) is possible in MSE.
 - Chrome now supports [Opus in MP4 with MSE](#opus-in-mp4-for-mse).
 - Protected content playback is [allowed by
   default](#protected-content-allowed-by-default) on Android.
+
+## AV1 decoder {: #av1-decoder }
+
+AV1 is a next generation codec developed by the [Alliance for Open Media]. AV1
+[improves compression efficiency by greater than 30%] over the current
+state-of-the-art video codec, VP9. Chrome 70 adds an AV1 decoder to Chrome
+Desktop x86-64 based on the [official bitstream specification]. At this time,
+support is limited to “Main” [profile 0] and does not include encoding
+capabilities. The supported container is [MP4 (ISO-BMFF)] (see [From raw video
+to web ready] for a brief explanation of containers).
+
+To try AV1:
+
+- Go to the [YouTube TestTube page].
+- Select "Prefer AV1 for SD" or "Always Prefer AV1" to get the desired
+  resolution AV1. Note that at higher resolutions, AV1 is more likely to
+  experience playback performance issues on some devices.
+- Try playing YouTube clips from the [AV1 Beta Launch Playlist].
+- Confirm the codec av01 in "Stats for nerds"
+
+<figure>
+  <img src="/web/updates/images/2018/09/stats-for-nerds-featuring-av1-in-youtube.png"
+       alt="Stats for nerds featuring AV1 in YouTube.">
+  <figcaption>
+    <b>Figure 1.</b>
+    Stats for nerds featuring AV1 in YouTube.
+  </figcaption>
+</figure>
 
 ## Support for codec and container switching in MSE {: #sourcebuffer-changetype }
 
@@ -107,7 +136,7 @@ cleared browsing data.
   <img src="/web/updates/images/2018/09/protected-content-setting.png"
        alt="Protected content setting in Android.">
   <figcaption>
-    <b>Figure 1.</b>
+    <b>Figure 2.</b>
     Protected content setting in Android.
   </figcaption>
 </figure>
@@ -120,6 +149,14 @@ cleared browsing data.
 
 {% include "comment-widget.html" %}
 
+[Alliance for Open Media]: http://aomedia.org/
+[improves compression efficiency by greater than 30%]: https://code.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
+[official bitstream specification]: https://aomedia.org/av1-bitstream-and-decoding-process-specification/
+[profile 0]: https://aomediacodec.github.io/av1-spec/#profiles
+[MP4 (ISO-BMFF)]: https://aomediacodec.github.io/av1-isobmff
+[From raw video to web ready]: /web/fundamentals/media/manipulating/files#how_are_media_files_put_together
+[YouTube TestTube page]: https://www.youtube.com/testtube
+[AV1 Beta Launch Playlist]: https://www.youtube.com/playlist?list=PLyqf6gJt7KuHBmeVzZteZUlNUQAVLwrZS
 [adding support]: https://github.com/wicg/media-source/blob/codec-switching/codec-switching-explainer.md
 [Media Source Extensions]: /web/fundamentals/media/mse/basics
 [current version of MSE]: https://www.w3.org/TR/2016/REC-media-source-20161117/

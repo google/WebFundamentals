@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP policy check.
 
-{# wf_updated_on: 2018-09-06 #}
+{# wf_updated_on: 2018-10-03 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,chrome69,media,removals #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -25,7 +25,7 @@ description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP po
 
 ## AV1 video decoder {: #av1 }
 
-Note: AV1 video decoder support had to be pushed back to Chrome 70 because of
+Note: AV1 video decoder support had to be pushed back to [Chrome 70] because of
 changes to the MP4 binding.
 
 [Chromestatus Tracker](https://www.chromestatus.com/features/5729898442260480) &#124;
@@ -264,6 +264,7 @@ continue to raise "stalled" events as they do today.
 
 {% include "comment-widget.html" %}
 
+[Chrome 70]: /web/updates/2018/09/chrome-70-media-updates#av1-decoder
 [CENC mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-2:v1:en
 [CBCS mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-3:v1:en
 [added]: https://github.com/WICG/encrypted-media-encryption-scheme/blob/master/explainer.md
