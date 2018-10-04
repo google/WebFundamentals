@@ -1,9 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: About the Ecosystem page for the Web Payments doc set.
+description: Web Payments allows any websites to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-09-21 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -24,8 +24,8 @@ methods](/web/fundamentals/payments/basics/payment-method-basics) such as
 e-money, cryptocurrency, bank transfers, and more.
 
 The [Payment Handler API](https://www.w3.org/TR/payment-handler/) is an emerging
-web standard that enables websites to act as a payment app. With other related
-specifications like [Payment Method
+web standard that enables websites to act as a payment handler. With other
+related specifications like [Payment Method
 Identifier](https://www.w3.org/TR/payment-method-id/) and [Payment Method
 Manifest](https://www.w3.org/TR/payment-method-manifest/), the Payment Handler
 API can be integrated into and made available through the Payment Request API.
@@ -142,6 +142,9 @@ from a command line using the `curl` command:
 curl --head https://bobpay.xyz/pay
 ```
 
+Note: Learn more about [payment method practices at W3C
+documentation](https://github.com/w3c/payment-request-info/wiki/PaymentMethodPractice).
+
 ## Locate a payment method manifest
 
 A [payment method manifest](https://w3c.github.io/payment-method-manifest/) is a
@@ -212,7 +215,8 @@ this one.
 
 <figure>
   <img src="../images/web-payment-apps/pay-with-bobpay.png" alt="Pay with Bobpay" />
-  <figcaption><i>The web app manifest's <code>name</code> property is used as the payment app name</i></figcaption>
+  <figcaption><i>The web app manifest's <code>name</code> property is used as the
+  payment app name</i></figcaption>
 </figure>
 
 Name the file `manifest.json` and place it on the web server, typically in the
@@ -304,7 +308,8 @@ some dynamic text like `Visa ****4242`.
 
 <figure>
   <img src="../images/web-payment-apps/user-hint.png" alt="User Hint" />
-  <figcaption><i><code>userHint</code> will be used as second string in payment app interface.</i></figcaption>
+  <figcaption><i><code>userHint</code> will be used as second string in payment app
+  interface.</i></figcaption>
 </figure>
 
 Note: `userHint` has been temporarily removed from the payment app interface in
@@ -372,7 +377,8 @@ const request = new PaymentRequest([{
 
 <figure>
   <img src="../images/web-payment-apps/manifest-icons.png" alt="Manifest icons" />
-  <figcaption><i>The web app manifest's <code>icons</code> will be used as payment app icon.</i></figcaption>
+  <figcaption><i>The web app manifest's <code>icons</code> will be used as payment
+  app icon.</i></figcaption>
 </figure>
 
 ## Optional: Let Chrome install your payment app just-in-time

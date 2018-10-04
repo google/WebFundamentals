@@ -48,7 +48,7 @@ This lab covers the basics of caching files with the service worker. The technol
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Navigate into the `cache-api-lab/app/` directory and start a local development server:
 

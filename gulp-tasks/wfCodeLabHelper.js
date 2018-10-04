@@ -92,7 +92,7 @@ function updateCodeLab(sourceFile, destFile, bookPath, projPath) {
     match = match.replace(re, 'href="$1$2"').replace(/_/g, '-');
     return match;
   });
-  re = /\[(.*?)\]\((.*?)\.md(.*?)\)/g;
+  re = /\[([^\]]*?)\]\(([^\]]*?)\.md(.*?)\)/g;
   markdown = markdown.replace(re, function(match) {
     if (match.indexOf('/') > 0) {
       return match;

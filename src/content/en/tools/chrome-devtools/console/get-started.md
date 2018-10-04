@@ -401,9 +401,9 @@ See [Command Line API Reference][CLAPI] for the full reference.
 
 {% include "web/_shared/helpful.html" %}
 
-{# Runs on page load. Down here because it takes up space, even though it's not supposed to. #}
+{# Runs on page load. #}
 
-{% framebox width="0" height="0" enable_widgets="true" %}
+{% framebox width="0px" height="0px" enable_widgets="true" %}
   <script>
     console.log('%cWelcome to the Console!', 'font-weight:bold;color:#317efb;font-style:italic',
         'Read on to learn how messages like this get here.');

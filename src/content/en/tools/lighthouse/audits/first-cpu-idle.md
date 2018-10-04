@@ -1,16 +1,19 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "First Interactive" Lighthouse audit.
+description: Reference documentation for the "First CPU Idle" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-10-01 #}
 {# wf_published_on: 2017-06-23 #}
 {# wf_blink_components: N/A #}
 
-# First Interactive {: .page-title }
+# First CPU Idle {: .page-title }
 
 ## Overview {: #overview }
 
-The First Interactive metric measures when a page is *minimally* interactive:
+Note: This audit used to be called First Interactive. It changed to First CPU Idle
+in Lighthouse 3.0 to more clearly describe how it works.
+
+The First CPU Idle metric measures when a page is *minimally* interactive:
 
 * *Most*, but maybe not all, UI elements on the screen are interactive.
 * The page responds, *on average*, to most user input in a reasonable amount
@@ -34,7 +37,7 @@ There are two general strategies for improving load time:
 ## More information {: #more-info }
 
 The score is a lognormal distribution of some complicated calculations based on
-the definition of the First Interactive metric. See [First Interactive And
+the definition of the First CPU Idle metric. See [First Interactive And
 Consistently Interactive][FIACI] for definitions.
 
 [FIACI]: https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c

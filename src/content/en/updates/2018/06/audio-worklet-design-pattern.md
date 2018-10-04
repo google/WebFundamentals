@@ -5,7 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2018-07-12 #}
 {# wf_featured_image: /web/updates/images/generic/webaudio.png #}
 {# wf_tags: chrome68,webaudio,worklet #}
-{# wf_featured_snippet: Advanced design patterns to unlock AudioWorklet's fullest power with WebAssembly and SharedArrayBuffer. #}
+{# wf_featured_snippet: Advanced design patterns to unlock Audio Worklet's fullest power with WebAssembly and SharedArrayBuffer. #}
 {# wf_blink_components: Blink>WebAudio #}
 
 <style>
@@ -13,44 +13,44 @@ book_path: /web/updates/_book.yaml
   figcaption { font-size: 14px; text-align: center; padding: 8px; }
 </style>
 
-# AudioWorklet Design Pattern {: .page-title }
+# Audio Worklet Design Pattern {: .page-title }
 
 {% include "web/_shared/contributors/hongchanchoi.html" %}
 
 The [previous article](/web/updates/2017/12/audio-worklet)
-on AudioWorklets detailed the basic concepts and usage. Since its launch
+on Audio Worklet detailed the basic concepts and usage. Since its launch
 in Chrome 66 there have been many requests for more examples of how it can be
-used in actual applications. The AudioWorklet unlocks the full potential of
+used in actual applications. The Audio Worklet unlocks the full potential of
 WebAudio, but taking advantage of it can be challenging because it requires
 understanding concurrent programming wrapped with several JS APIs. Even for
-developers who are familiar with WebAudio, integrating the AudioWorklet
+developers who are familiar with WebAudio, integrating the Audio Worklet
 with other APIs (e.g. WebAssembly) can be difficult.
 
 This article will give the reader a better understanding of how to use the
-AudioWorklet in real-world settings and to offer tips to draw on its fullest
+Audio Worklet in real-world settings and to offer tips to draw on its fullest
 power. Be sure to check out
 [code examples and live demos](https://googlechromelabs.github.io/web-audio-samples/audio-worklet#design-pattern)
 as well!
 
-## Recap: AudioWorklet
+## Recap: Audio Worklet
 
-Before diving in, let's quickly recap terms and facts around the AudioWorklet
+Before diving in, let's quickly recap terms and facts around the Audio Worklet
 system which was previously introduced in
 [this post](/web/updates/2017/12/audio-worklet).
 
   - [BaseAudioContext](https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext):
     Web Audio API's primary object.
-  - [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet): A
-    special script file loader for the AudioWorklet operation. Belongs to
-    BaseAudioContext. A BaseAudioContext can have one AudioWorklet. The loaded
+  - [Audio Worklet](https://webaudio.github.io/web-audio-api/#audioworklet): A
+    special script file loader for the Audio Worklet operation. Belongs to
+    BaseAudioContext. A BaseAudioContext can have one Audio Worklet. The loaded
     script file is evaluated in the AudioWorkletGlobalScope and is used to
     create the AudioWorkletProcessor instances.
   - [AudioWorkletGlobalScope](https://webaudio.github.io/web-audio-api/#audioworkletglobalscope)
-    : A special JS global scope for the AudioWorklet operation. Runs on a
+    : A special JS global scope for the Audio Worklet operation. Runs on a
     dedicated rendering thread for the WebAudio. A BaseAudioContext can have one
     AudioWorkletGlobalScope.
   - [AudioWorkletNode](https://webaudio.github.io/web-audio-api/#audioworkletnode)
-    : An AudioNode designed for the AudioWorklet operation. Instantiated from a
+    : An AudioNode designed for the Audio Worklet operation. Instantiated from a
     BaseAudioContext. A BaseAudioContext can have multiple AudioWorkletNodes
     similarly to the native AudioNodes.
   - [AudioWorkletProcessor](https://webaudio.github.io/web-audio-api/#audioworkletprocessor)
@@ -62,7 +62,7 @@ system which was previously introduced in
 
 ## Design Patterns
 
-### Using AudioWorklet with WebAssembly
+### Using Audio Worklet with WebAssembly
 
   - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/)
 
@@ -82,7 +82,7 @@ must optimize the code for faster processing, but also minimize the amount of JS
 garbage being generated. Using WebAssembly can be a solution that addresses both
 problems at the same time: it is faster and generates no garbage from the code.
 
-The next section describes how WebAssembly can be used with an AudioWorklet and
+The next section describes how WebAssembly can be used with an Audio Worklet and
 the accompanied code example can be found
 [here](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/wasm/).
 For the basic tutorial on how to use Emscripten and WebAssembly (especially the
@@ -178,7 +178,7 @@ class in the example code handles this operation nicely.
 </figure>
 
 There is an [early proposal](https://github.com/WebAudio/web-audio-api/issues/1384)
-under discussion to integrate the WASM heap directly into the AudioWorklet
+under discussion to integrate the WASM heap directly into the Audio Worklet
 system. Getting rid of this redundant data cloning between the JS memory and the
 WASM heap seems natural, but the specific details need to be worked out.
 
@@ -192,7 +192,7 @@ while AudioWorkletProcessor takes care of internal audio processing. Because a
 regular AudioNode processes 128
 [frames](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers_frames_samples_and_channels)
 at a time, AudioWorkletProcessor must do the same to become a first-class
-citizen. This is one of the advantages of the AudioWorklet design that ensures
+citizen. This is one of the advantages of the Audio Worklet design that ensures
 no additional latency due to internal buffering is introduced within the
 AudioWorkletProcessor, but it can be a problem if a processing function requires
 a buffer size different than 128 frames. The common solution for such case is to
@@ -252,7 +252,7 @@ to reduce redundant data cloning will be discussed in the future.
 The RingBuffer class can be found
 [here](https://github.com/GoogleChromeLabs/web-audio-samples/blob/gh-pages/audio-worklet/design-pattern/lib/wasm-audio-helper.js#L170).
 
-### WebAudio Powerhouse: AudioWorklet and SharedArrayBuffer
+### WebAudio Powerhouse: Audio Worklet and SharedArrayBuffer
 
 Note: SharedArrayBuffer is disabled by default at the time of writing. Go to
 `chrome://flags` and enable _SharedArrayBuffer_ to play with this feature.
@@ -260,7 +260,7 @@ Note: SharedArrayBuffer is disabled by default at the time of writing. Go to
   - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/shared-buffer/)
 
 The last design pattern in this article is to put several cutting edge APIs into
-one place; AudioWorklet,
+one place; Audio Worklet,
 [SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer),
 [Atomics](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
 and [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker). With this
@@ -272,7 +272,7 @@ C/C++ to run in a web browser while maintaining a smooth user experience.
       class="diagram"
       src="/web/updates/images/2018/06/aw-design-pattern-5.png">
   <figcaption>
-    An overview of the last design pattern: AudioWorklet, SharedArrayBuffer and
+    An overview of the last design pattern: Audio Worklet, SharedArrayBuffer and
     Worker
   </figcaption>
 </figure>
@@ -296,7 +296,7 @@ allocation and messaging latency. So we allocate a memory block up front that
 can be accessed from both threads for fast bidirectional data transfer.
 
 From Web Audio API purist's viewpoint, this design might look suboptimal because
-it uses the AudioWorklet as a simple "audio sink" and does everything in the
+it uses the Audio Worklet as a simple "audio sink" and does everything in the
 Worker. But considering the cost of rewriting C/C++ projects in JavaScript can
 be prohibitive or even be impossible, this design can be the most efficient
 implementation path for such projects.
@@ -393,15 +393,15 @@ class.
 
 ## Conclusion
 
-The ultimate goal of the AudioWorklet is to make the Web Audio API truly
+The ultimate goal of the Audio Worklet is to make the Web Audio API truly
 "extensible". A multi-year effort went into its design to make it possible to
-implement the rest of Web Audio API with the AudioWorklet. In turn, now we have
+implement the rest of Web Audio API with the Audio Worklet. In turn, now we have
 higher complexity in its design and this can be an unexpected challenge.
 
 Fortunately, the reason for such complexity is purely to empower developers.
 Being able to run WebAssembly on AudioWorkletGlobalScope unlocks huge potential
 for high-performance audio processing on the web. For large-scale audio
-applications written in C or C++, using an AudioWorklet with SharedArrayBuffers
+applications written in C or C++, using an Audio Worklet with SharedArrayBuffers
 and Workers can be an attractive option to explore.
 
 ## Credits

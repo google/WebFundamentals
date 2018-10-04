@@ -22,8 +22,8 @@ toc:
     path: /web/tools/lighthouse/audits/estimated-input-latency
   - title: First Contentful Paint
     path: /web/tools/lighthouse/audits/first-contentful-paint
-  - title: First Interactive
-    path: /web/tools/lighthouse/audits/first-interactive
+  - title: First CPU Idle
+    path: /web/tools/lighthouse/audits/first-cpu-idle
   - title: First Meaningful Paint
     path: /web/tools/lighthouse/audits/first-meaningful-paint
   - title: Has Enormous Network Payloads
@@ -42,7 +42,7 @@ toc:
     path: /web/tools/lighthouse/audits/optimize-images
   - title: Oversized Images
     path: /web/tools/lighthouse/audits/oversized-images
-  - title: Perceptual Speed Index
+  - title: Speed Index
     path: /web/tools/lighthouse/audits/speed-index
   - title: Preload key requests
     path: /web/tools/lighthouse/audits/preload

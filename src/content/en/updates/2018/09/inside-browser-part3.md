@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Inner workings of a browser rendering engine
 
 {# wf_published_on: 2018-09-20 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-09-26 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
@@ -98,7 +98,7 @@ JavaScript execution, [the V8 team has talks and blog posts on this](https://mat
 ## Hint to browser how you want to load resources
 
 There are many ways web developers can send hints to the browser in order to load resources nicely. 
-If your JavaScript does not use `document.write()`, you can add [`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async) or [`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer) attribute to the `<script>` tag. The browser then loads and runs the JavaScript code asynchronously and does not block the parsing. You may also use [JavaScript module](/web/fundamentals/primers/modules) if that's suitable. `<link rel="preload">` is a way to inform bowser that the resource is definitely needed for current navigation and you would like to download as soon as possible. You are read more on this at [Resource Prioritization – Getting the Browser to Help You](/web/fundamentals/performance/resource-prioritization).
+If your JavaScript does not use `document.write()`, you can add [`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async) or [`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer) attribute to the `<script>` tag. The browser then loads and runs the JavaScript code asynchronously and does not block the parsing. You may also use [JavaScript module](/web/fundamentals/primers/modules) if that's suitable. `<link rel="preload">` is a way to inform browser that the resource is definitely needed for current navigation and you would like to download as soon as possible. You are read more on this at [Resource Prioritization – Getting the Browser to Help You](/web/fundamentals/performance/resource-prioritization).
 
 ## Style calculation
 
@@ -179,7 +179,7 @@ quite interesting to watch.
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part3/drawgame.png" alt="drawing game">
   <figcaption>
-    Figure 7: A person in front of a canvas holding paintbrush, wondering if they shoudl draw a 
+    Figure 7: A person in front of a canvas holding paintbrush, wondering if they should draw a 
     circle first or square first
   </figcaption>
 </figure>
@@ -279,7 +279,7 @@ to avoid blocking the main thread.
     </video>
   </a>
   <figcaption>
-    Figure 14: Annimation of naive rasterizing process
+    Figure 14: Animation of naive rastering process
   </figcaption>
 </figure>
 
@@ -303,7 +303,7 @@ runs a more sophisticated process called compositing.
     </video>
   </a>
   <figcaption>
-    Figure 15: Annimation of compositing process
+    Figure 15: Animation of compositing process
   </figcaption>
 </figure>
 
@@ -320,7 +320,7 @@ You can see how your website is divided into layers in DevTools using
 ### Dividing into layers
 In order to find out which elements need to be in which layers, the main thread walks through the 
 layout tree to create the layer tree (this part is called "Update Layer Tree" in the DevTools 
-performance panel). If certain parts of a page that should be seplate layer (like slide-in side 
+performance panel). If certain parts of a page that should be separate layer (like slide-in side 
 menu) is not getting one, then you can hint to the browser by using `will-change` attribute in CSS. 
 
 
@@ -332,7 +332,7 @@ menu) is not getting one, then you can hint to the browser by using `will-change
 </figure>
 
 You might be tempted to give layers to every element, but compositing across an excess number of 
-layers could result in slower operation than rasterizeing small parts of a page every frame, so it 
+layers could result in slower operation than rasterizing small parts of a page every frame, so it 
 is crucial that you measure rendering performance of your application. For more about on topic, see 
 [Stick to Compositor-Only Properties and Manage Layer Count](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count).
 

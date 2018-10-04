@@ -47,7 +47,7 @@ This lab shows you how to use JavaScript  [Promises](https://developer.mozilla.o
 
 
 
-If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs.md).
+If you have not downloaded the repository and installed the  [LTS version of Node.js](https://nodejs.org/en/), follow the instructions in [Setting up the labs](setting-up-the-labs).
 
 Open your computer's command line interface. Navigate into the `promises-lab/app/` directory and start a local development server:
 

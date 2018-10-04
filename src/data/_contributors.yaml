@@ -1276,6 +1276,17 @@ chrispalmer:
   description:
     en: 'Chris is a security engineer on the Chrome Security Team, focusing on secure usability.'
 
+durgapandey:
+  name:
+    given: Durga
+    family: Pandey
+  country: US
+  role:
+    - author
+  twitter: _angleofrepose_
+  description:
+    en: 'Product Manager of Web Payments'
+
 jasonpark:
   name:
     given: Jason
