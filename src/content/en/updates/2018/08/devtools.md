@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-09-28 #}
+{# wf_updated_on: 2018-10-05 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -17,9 +17,6 @@ experiments_path: /web/updates/2018/08/_experiments.yaml
 # What's New In DevTools (Chrome 70) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-Note: We'll publish the video version of <i>What's New In DevTools (Chrome 70)</i> around
-mid-October 2018.
 
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68.
 We skipped Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
@@ -35,6 +32,14 @@ New features and major changes coming to DevTools in Chrome 70 include:
 * [Break on `AudioContext` events](#audiocontext).
 * [Debug Node.js apps with ndb](#ndb).
 * [Bonus tip: Measure real world user interactions with the User Timing API](#bonus).
+
+Read on, or watch the video version of this doc:
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="LJq8vg8ktdQ"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Live Expressions in the Console {: #watch }
 
