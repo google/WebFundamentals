@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-08-01 #}
+{# wf_updated_on: 2018-10-08 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/08/watch-video-using-picture-in-picture/hero.png #}
@@ -150,17 +150,20 @@ notified if a user manually resizes the window.
 The example below shows how to get the width and height of the
 Picture-in-Picture window when it is created or resized.
 
-    const pipWindow = await videoElement.requestPictureInPicture();
-    updateVideoQuality(pipWindow);
+    let pipWindow;
 
-    pipWindow.addEventListener('resize', function(event) {
-      const pipWindow = event.target;
-      updateVideoQuality(pipWindow);
+    videoElement.addEventListener('enterpictureinpicture', function(event) {
+      pipWindow = event.pictureInPictureWindow;
+      console.log(`> Window size is ${pipWindow.width}x${pipWindow.height}`);
+      pipWindow.addEventListener('resize', onPipWindowResize);
     });
 
-    function updateVideoQuality(pipWindow) {
-      console.log('Picture-in-Picture window width is ' + pipWindow.width);
-      console.log('Picture-in-Picture window height is ' + pipWindow.height);
+    videoElement.addEventListener('leavepictureinpicture', function(event) {
+      pipWindow.removeEventListener('resize', onPipWindowResize);
+    });
+
+    function onPipWindowResize(event) {
+      console.log(`> Window size changed to ${pipWindow.width}x${pipWindow.height}`);
       // TODO: Change video quality based on Picture-in-Picture window size.
     }
 
