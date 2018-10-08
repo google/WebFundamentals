@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,3 +58,7 @@ If you feel ill-equipped to recover your site on your own, try the following opt
 * Transfer your site to new hoster who specializes in site recovery and can
   recover your site as part of the transfer.
 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

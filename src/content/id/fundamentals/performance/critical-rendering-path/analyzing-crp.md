@@ -9,10 +9,7 @@ description: Pelajari cara mengidentifikasi dan mengatasi bottleneck kinerja jal
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Untuk mengidentifikasi dan mengatasi bottleneck kinerja jalur rendering penting 
-diperlukan pengetahuan yang baik mengenai kesalahan umum. Mari kita ikuti tur praktik langsung 
-dan memahami pola kinerja umum yang akan membantu mengoptimalkan laman 
-Anda.
+Untuk mengidentifikasi dan mengatasi bottleneck kinerja jalur rendering penting diperlukan pengetahuan yang baik mengenai kesalahan umum. Mari kita ikuti tur praktik langsung dan memahami pola kinerja umum yang akan membantu mengoptimalkan laman Anda.
 
 
 Pengoptimalan jalur rendering penting memungkinkan browser menggambar laman secepat mungkin: semakin cepat mengubah laman menjadi interaksi yang lebih tinggi, semakin banyak laman yang ditampilkan, dan [semakin baik konversi](https://www.google.com/think/multiscreen/success.html). Untuk meminimalkan lama pengunjung menampilkan layar kosong, kita perlu mengoptimalkan sumber daya yang akan dimuat dan urutannya.
@@ -34,7 +31,7 @@ Sejauh ini kita telah memfokuskan secara eksklusif pada apa yang terjadi di brow
 
 Kita akan mulai dengan markup HTML dasar dan gambar tunggal; tanpa CSS atau JavaScript. Mari kita buka timeline Network di Chrome DevTools dan periksa jenjang sumber daya yang dihasilkan:
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 Note: Walaupun dokumen ini menggunakan DevTools untuk mengilustrasikan konsep CRP, DevTools
 saat ini tidak cocok untuk analisis CRP. Lihat [Bagaimana dengan

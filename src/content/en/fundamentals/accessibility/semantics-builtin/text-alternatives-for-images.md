@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using the alt attribute to provide text alternatives for images
 
 
-{# wf_updated_on: 2018-04-06 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -89,3 +89,7 @@ To summarize, all images should have an `alt` attribute, but they need not all
 have text. Important images should have descriptive alt text that succinctly
 describes what the image is, while decorative images should have empty alt
 attributes &mdash; that is, `alt=""`.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,6 +2,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
+  body_class: hide-devsite-banner
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
@@ -40,6 +41,29 @@ landing_page:
           </div>
 
   rows:
+
+  - classname:  wf-cds-banner devsite-landing-row-large-headings
+    background: grey
+    items:
+    - heading: chrome dev summit
+      description: >
+        November 12-13 | San Francisco, USA<br><br>
+        Save the Date! Chrome Dev Summit 2018 is returning November 12–13
+        to the Yerba Buena Center for the Arts in San Francisco, California.
+      icon:
+        path: https://www.gstatic.com/images/branding/product/2x/chrome_96dp.png
+      buttons:
+      - label: Learn more
+        path: https://developer.chrome.com/devsummit/?utm_source=webfu&utm_medium=hpp&utm_campaign=chromedevsummit_may18
+        attributes:
+        - name: data-category
+          value: webFu
+        - name: data-label
+          value: cds18-hpp
+        - name: data-action
+          value: button
+
+
   - classname: wf-landing-row
     items:
     - heading: Move to HTTPS

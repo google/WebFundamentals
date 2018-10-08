@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A guide to designing web experiences for slow networks and offline.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-10 #}
+{# wf_blink_components: N/A #}
 
 # Offline UX Considerations {: .page-title }
 
@@ -33,13 +34,13 @@ in connectivity.
 
 The first question that must be asked is: what does success and failure of a
 network connection look like? A successful connection is your app's normal
-online experience. The failure of a connection however can be both the offline
+online experience. The failure of a connection, however, can be both the offline
 state of your app as well how the app behaves when there is a laggy network.
 
 When thinking about the success or failure of a network connection you need to
 ask yourself these important UX questions:
 
-* How long do you wait to determine success or failure of a connection? 
+* How long do you wait to determine the success or failure of a connection? 
 * What can you do while success or failure is being determined? 
 * What should you do in the event of failure?
 * How do you inform the user of the above?
@@ -79,7 +80,7 @@ will depend largely on your application. For apps that require update
 information displayed as a priority such as a stock market app, auto-updating
 and notifying the user as soon as possible is crucial.
 
-It is recommended that you let the user user know that your web app 
+It is recommended that you let the user know that your web app 
 has been updated "in the background" by using a visual cue such as a 
 material design toast element. This involves detecting both the 
 initial registration of your service worker and that there's been an 
@@ -88,7 +89,7 @@ example of this
 <a 
 href="https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L29">function at work here</a>.
 
-Once example of this would be 
+One example of this would be 
 <a href="https://www.chromestatus.com/features">
   www.chromestatus.com</a>which posts a note to the user when the app has been updated.
 
@@ -150,7 +151,7 @@ refresh the page and they would lose where they were reading last.
 
 Each bit of UI may have its own context and functionality that will change
 depending on if it requires a successful connection. One example would be an
-ecommerce site that can be browsed offline though the Buy button and pricing is
+e-commerce site that can be browsed offline through the Buy button and pricing is
 disabled until a connection has been reestablished.
 
 Other forms of contextual states could include data. For example, the financial
@@ -181,7 +182,7 @@ lessens the impact of a network failure will feel magical to the user.
 News sites could benefit from auto downloading and saving the latest news
 content of the day so a user could read today's news without a connection,
 perhaps downloading the text without the article images. Also adapt with the
-user's behaviour so if the sports section is what they typically view, perhaps
+user's behavior so if the sports section is what they typically view, perhaps
 make this the priority data that is downloaded.
 
 <figure>
@@ -232,7 +233,7 @@ feature is obvious to the user.
 
 One example would be a music player that requires large data files. The user is
 aware of the associated data cost, but is also aware that they may want to use
-the player when they they are offline. Downloading music for later use requires
+the player when they are offline. Downloading music for later use requires
 the user to plan ahead, so education about this may be required during
 onboarding.
 
@@ -251,14 +252,14 @@ with other users, or save content for offline use when they have connectivity.
 
 Users on data plans may avoid downloading large files for fear of cost, so you
 may also want to display an associated cost so users can make an active
-comparison for a specific file or task.  For example if the music app above
+comparison for a specific file or task.  For example, if the music app above
 could detect if the user is on a data plan and show the file size so that users
 can see the true cost of a file.
 
 ### Help prevent hacked experiences 
 
 Often users hack an experience without realizing they are doing it. For example
-before cloud sharing apps like Google Drive, it was common for users save large
+before cloud sharing apps like Google Drive, it was common for users to save large
 files and attach them to emails so they could carry on editing from a different
 device. It is important not to be pulled into their hacked experience but rather
 look at what they are trying to achieve. In other words instead of thinking of
@@ -274,7 +275,7 @@ booking. When the connection is reestablished, the app syncs with the user's
 account and then they can continue their booking on their desktop device. Not
 being able to transfer experiences is incredibly jarring to users.
 
-Inform the user of the current state of their data, for example if the app has
+Inform the user of the current state of their data, for example, if the app has
 managed to sync or not. Educate them where possible but try not to overburden
 them with messaging.
 
@@ -312,9 +313,9 @@ phrase “app offline” might not convey to the user the current state of the a
 
 ### Use multiple design devices to create accessible user experiences
 
-Use language, color and visual components to demonstrate a change of state or
+Use language, color, and visual components to demonstrate a change of state or
 current status. Solely using color to demonstrate state may not be noticed by
-the user, and may be inaccessible to users who suffer from visual disabilities.
+the user and may be inaccessible to users who suffer from visual disabilities.
 Also, the gut instinct for designers is to use grayed UI to represent offline,
 but this can have a loaded meaning on the web. Grayed UI is also used to mean
 that an element is disabled, such as input elements on a form. This can cause
@@ -361,7 +362,7 @@ description. For example, saving for offline might be a typical download icon or
 perhaps if the action involves syncing it could be a syncing icon. Some actions
 may be interpreted as saving for offline rather than demonstrating a network's
 status. Think of the action you are trying to convey rather than presenting the
-user with an abstract concept. For example save or download data would be action
+user with an abstract concept. For example, save or download data would be action
 based.
 
 <img src="images/download-icons-examples.png" alt="Various icon examples that convey offline">
@@ -370,7 +371,7 @@ Offline can mean a number of things depending on the context, such as download,
 export, pin etc.. For more inspiration checkout the
 [material design icon set](https://material.io/icons/ "material design icon set")
 
-### Use skeleton layouts with other feedback mechanism 
+### Use skeleton layouts with other feedback mechanisms 
 
 A skeleton layout is essentially a wireframe version of your app that displays
 while content is being loaded. This helps demonstrate to the user that content
@@ -390,7 +391,7 @@ resubmissions or refreshes of your app.
 
 ### Don’t block content
 
-In some applications a user might trigger an action such as creating a new
+In some applications, a user might trigger an action such as creating a new
 document. Some apps will try to connect to a server in order to sync the new
 document and to demonstrate this they display an intrusive loading modal dialog
 that covers the entire screen. This may work fine if the user has a stable
@@ -417,7 +418,7 @@ connections and simplify the interface to help speed up tasks. Always try to ask
 users before downloading data-heavy content.
 
 Offer low bandwidth options for users on laggy connections. So if the network
-connection is slow provide small assets. Offer an option to choose high or low
+connection is slow, provide small assets. Offer an option to choose high or low
 quality assets.
 
 ## Conclusion
@@ -436,7 +437,7 @@ When designing for unstable network connections, use these:
 * Low end devices are commonplace, with limited storage, memory and processing 
   power and, small displays and lower touchscreen quality. Make sure performance 
   is a part of your design process. 
-* Allow users to browser your application when they are offline.
+* Allow users to browse your application when they are offline.
 * Inform users of their current state and of changes in states.
 * Try to provide offline by default if your app doesn't require much data.
 * If the app is data-heavy, educate users about how they can download for
@@ -445,3 +446,7 @@ When designing for unstable network connections, use these:
 * Utilize language, icons, imagery, typography and color to express ideas to the 
   user collectively.
 * Provide reassurance and feedback to help the user.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

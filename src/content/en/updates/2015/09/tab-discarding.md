@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Reducing Chrome's memory footprint is one of the team's top priorities this year.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-08-31 #}
 {# wf_tags: news,performance,update #}
 {# wf_featured_image: /web/updates/images/2015-09-01-tab-discarding/image09.png #}
+{# wf_blink_components: N/A #}
 
 # Tab Discarding in Chrome: A Memory-Saving Experiment {: .page-title }
 
@@ -74,7 +75,7 @@ to you, from most to least.
 
 <img src="/web/updates/images/2015-09-01-tab-discarding/image05.png" />
 
-To test out the feature, you can either carry out your normal browsing behaviour
+To test out the feature, you can either carry out your normal browsing behavior
 until your system is in a low-memory mode, or alternatively trigger a tab
 discard from about:discards by clicking 'Discard tab now'. This will discard the
 last tab in the list. You can also discard a particular tab from the list by

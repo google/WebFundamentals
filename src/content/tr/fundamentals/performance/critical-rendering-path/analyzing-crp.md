@@ -31,7 +31,7 @@ Son olarak, baslamadan önce son bir noktayi belirtmek istiyoruz... Simdiye kada
 
 Mümkün olan en basit örnek olmasi için temel HTML biçimlendirmesi ve tek bir resimle baslayacagiz, CSS veya JavaScript olmayacak. Simdi, Chrome DevTools'ta Ag zaman çizelgemizi açip kaynak selalemizi inceleyim:
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" class="center" alt="CRP">
 
 Beklendigi gibi HTML dosyasinin indirilmesi yaklasik 200 ms sürdü. Mavi çizginin seffaf kisminin, tarayicinin agda bekledigi (hiç yanit baytinin alinmadigi) süreyi, mat kisminin da ilk yanit baytlari alindiktan sonra indirme islemini bitirmek için geçen süreyi gösterdigini unutmayin. Yukaridaki örnegimizde, HTML indirme islemi küçük (<4K) oldugundan tüm ihtiyacimiz olan tam dosyayi getirmek için tek bir gidis gelisti. Sonuç olarak, HTML dokümaninin getirilmesi yaklasik 200 ms sürdü. Bu sürenin yarisi agda bekleyerek, diger yarisi da sunucu yanitiyla geçti.
 
@@ -190,6 +190,3 @@ Son olarak, CSS stil sayfasinin yalnizca yazdirma için gerektigini düsünelim.
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, engelleme olmayan CSS ve zaman uyumsuz JavaScript CRP" class="center">
 
 style.css kaynagi yalnizca yazdirma için kullanildigindan, tarayicinin sayfayi olusturmak için bunu engellemesine gerek yoktur. Dolayisiyla, DOM yapimi tamamlanir tamamlanmaz tarayici sayfayi olusturmak için yeterli bilgiye sahip olur! Sonuç olarak, bu sayfada yalnizca tek bir kritik kaynak (HTML dokümani) vardir ve en düsük kritik olusturma yolu uzunlugu bir gidis gelistir.
-
-
-

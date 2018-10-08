@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: DH1vTVkqCDQ #}
+{# wf_blink_components: N/A #}
 
 # Polymer declarative, encapsulated, reusable components {: .page-title }
 
@@ -28,7 +29,7 @@ Building web pages in the 90s was limiting, but powerful. We only had a few elem
 
 Take the humble `<select>` element. There is a ton of functionality built into the element, simply by declaring it:
 
-- Customisable through HTML attributes
+- Customizable through HTML attributes
 - Renders children (e.g. `<option>`) with a default UI, but configurable via attributes.
 - Useful in other contexts like `<form>`
 - Has a DOM API: properties and methods
@@ -39,21 +40,21 @@ Take the humble `<select>` element. There is a ton of functionality built into t
 
     <polymer-ajax url="http://gdata.youtube.com/feeds/api/videos/"
                    params='{"alt":"json"}'></polymer-ajax>
-    
+
 
 Or [responsive elements](http://html5-demos.appspot.com/static/cds2013/index.html#44) that data-bind to a `queryMatches` attribute:
 
 <pre class="prettyprint">
 &lt;polymer-media-query query="max-width:640px" queryMatches="&#123;{isPhone}}">&lt;/…
 </pre>
-    
-    
+
+
 
 This is exactly the approach we're taking in Polymer. Instead of building monolithic JavaScript-based web apps, let's create reusable elements. Over time, an entire app grows out of composing smaller elements together. Heck, and entire app could be an element:
 
 
     <my-app></my-app>
-    
+
 
 ## Building web components with Polymer's special sauce
 

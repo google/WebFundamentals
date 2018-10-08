@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-08-31 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -42,7 +42,7 @@ to become the latest evaluated expression, 4:
 
 ![$_ changes when new commands are evaluated](images/recently-evaluated-expression-2.png)
 
-## $0 - $4
+## $0 - $4 {: #dom }
 
 The `$0`, `$1`, `$2`, `$3` and `$4` commands work as a historical reference to the last five
 DOM elements inspected within the Elements panel
@@ -446,3 +446,6 @@ of all properties belonging to the specified object.
 		values(object);
 
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

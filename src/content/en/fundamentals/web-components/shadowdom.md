@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2017-08-14 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -1261,3 +1261,7 @@ See [Closed shadow roots](#closed).
 [sd_spec_whatwg]: https://dom.spec.whatwg.org/#shadow-trees
 [differences]: http://hayato.io/2016/shadowdomv1/
 [css_props]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

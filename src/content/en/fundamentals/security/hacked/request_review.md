@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-02-09 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -163,3 +163,7 @@ caution to protect users.
   modifications or new files created by the hacker. Alternatively, you
   can consider requesting more help from
   [specialists in your support team](support_team).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

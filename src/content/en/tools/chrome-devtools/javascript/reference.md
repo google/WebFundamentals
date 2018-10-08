@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
 
-{# wf_updated_on: 2017-01-23 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-01-04 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -415,3 +416,7 @@ To edit a script:
      alt="The Editor pane."/>
    <figcaption><b>Figure 17</b>. The Editor pane, outlined in blue</figcaption>
  </figure>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

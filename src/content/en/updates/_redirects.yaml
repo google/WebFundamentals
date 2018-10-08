@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/nic
+  to: /web/updates/2018/09/nic69
+
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
 

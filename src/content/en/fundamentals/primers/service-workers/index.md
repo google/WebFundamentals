@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
-{# wf_updated_on: 2018-03-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
 # Service Workers: an Introduction {: .page-title }
@@ -488,3 +488,7 @@ that you may find useful.
 If you get stuck then please post your questions on StackOverflow and use the
 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)'
 tag so that we can keep a track of issues and try and help as much as possible.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

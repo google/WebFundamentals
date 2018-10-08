@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to animate between two views in your apps.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Animating Between Views {: .page-title }
@@ -145,4 +146,6 @@ For a larger screen, you should keep the list view around all the time rather th
 
 
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

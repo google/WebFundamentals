@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on all the ways to record and analyze performance in Chrome DevTools.
 
-{# wf_updated_on: 2018-06-27 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-05-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -892,3 +892,7 @@ To view scroll performance issues:
     viewport that may harm scroll performance
   </figcaption>
 </figure>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

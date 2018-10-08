@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
-{# wf_updated_on: 2017-11-13 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-29 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Edit the DOM {: .page-title }
 
@@ -375,3 +376,7 @@ To show or hide HTML comments in the Elements panel:
 To show or hide HTML comments in the **Elements** panel, [open
 **Settings**](#settings), go to the **Preferences** panel, find the
 **Elements** section, and then toggle the **Show HTML comments** checkbox.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

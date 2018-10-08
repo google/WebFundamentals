@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -32,3 +32,7 @@ the guide.
 * [Fixing the Japanese Keyword Hack](fixing_the_japanese_keyword_hack)
 * [Fixing the Gibberish Hack](fixing_the_gibberish_hack)
 * [Fixing the Cloaked Keywords and Links Hack](fixing_the_cloaked_keywords_hack)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

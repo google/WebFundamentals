@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ES2015 Proxies (in Chrome 49 and later) provide JavaScript with an intercession API, enabling us to trap or intercept all of the operations on a target object and modify how this target operates.
 
-{# wf_updated_on: 2018-03-30 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: javascript,es2015,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/02/es2015-proxies/featured.png #}
@@ -37,7 +37,7 @@ The behavior of a proxy is controlled by the **handler**, which can modify the o
 
 ## Interception
 
-Let’s begin by taking a plain object and adding some interception middleware to it using the Proxy API. Remember, the first parameter passed to the constructor is the target (the object being proxied) and the second is the handler (the proxy itself). This is where we can add hooks for our getters, setters, or other behaviour.
+Let’s begin by taking a plain object and adding some interception middleware to it using the Proxy API. Remember, the first parameter passed to the constructor is the target (the object being proxied) and the second is the handler (the proxy itself). This is where we can add hooks for our getters, setters, or other behavior.
 
 
     var target = {};

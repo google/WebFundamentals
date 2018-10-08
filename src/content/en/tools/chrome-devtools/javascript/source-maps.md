@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Keep your client-side code readable and debuggable even after you've combined, minified or compiled it.
 
-{# wf_updated_on: 2015-04-21 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Map Preprocessed Code to Source Code {: .page-title }
 
@@ -72,4 +73,6 @@ If you expand the _Sources_ sub-panel you will now see a new file with the custo
 
 ![Working with sourceURL](imgs/coffeescript.jpg)
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

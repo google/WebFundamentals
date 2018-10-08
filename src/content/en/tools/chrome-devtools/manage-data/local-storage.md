@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, databases, and caches from the Application panel.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Inspect and Manage Storage, Databases, and Caches {: .page-title }
 
@@ -175,3 +176,7 @@ data**. The action wipes all of the data for the origin listed under the
 ![clear storage][clear]
 
 [clear]: /web/tools/chrome-devtools/manage-data/imgs/clear-storage.png
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
 
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-09-04 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
@@ -955,6 +955,11 @@ be discarded unless under extreme resource constraints:
 * Updating the table title or favicon
 * Showing alerts
 * Sending push notifications
+
+For the current list features used to determine whether a tab can be safely
+frozen or discarded, see: [Heuristics for Freezing &amp; Discarding](
+https://docs.google.com/document/d/1QJpuBTdllLVflMJSov0tlFX3e3yfSfd_-al2IBavbQM/edit?usp=sharing)
+in Chrome.
 
 <aside>
   <strong>Note:</strong>

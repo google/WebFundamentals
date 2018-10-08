@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-06-20 #}
+{# wf_updated_on: 2018-08-20 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -12,21 +12,42 @@ This page contains a set of example caching strategies you can use with Workbox.
 
 ## Google Fonts
 
-You can use a cache first strategy to cache the Google Fonts in your page.
-Here we've limited the cache to 30 entries to ensure we don't balloon a users
-device.
+The Google Fonts service consist of two parts:
+
+- The stylesheet with the `@font-face` definitions, which link to the font
+  files.
+- The static, revisioned font files.
+
+The stylesheet can change frequently, so it's best to use a caching strategy
+like stale while revalidate that checks for updates with every request. The font
+files themselves, on the other hand, do not change and can leverage a cache
+first strategy.
+
+Here we've limited the age of the cached font files to one year (matching the
+HTTP `Cache-Control` header) and the max entries to 30 (to ensure we don't use
+up too much storage on the user's device).
 
 ```javascript
+// Cache the Google Fonts stylesheets with a stale while revalidate strategy.
 workbox.routing.registerRoute(
-  new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+  /^https:\/\/fonts\.googleapis\.com/,
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'google-fonts-stylesheets',
+  }),
+);
+
+// Cache the Google Fonts webfont files with a cache first strategy for 1 year.
+workbox.routing.registerRoute(
+  /^https:\/\/fonts\.gstatic\.com/,
   workbox.strategies.cacheFirst({
-    cacheName: 'google-fonts',
+    cacheName: 'google-fonts-webfonts',
     plugins: [
-      new workbox.expiration.Plugin({
-        maxEntries: 30,
-      }),
       new workbox.cacheableResponse.Plugin({
-        statuses: [0, 200]
+        statuses: [0, 200],
+      }),
+      new workbox.expiration.Plugin({
+        maxAgeSeconds: 60 * 60 * 24 * 365,
+        maxEntries: 30,
       }),
     ],
   }),
@@ -130,13 +151,13 @@ from the network, but could benefit by being served by the cache if the
 network request is taking too long.
 
 For this, you can use a `NetworkFirst` strategy with the
-`networkTimetoutSeconds` option configured.
+`networkTimeoutSeconds` option configured.
 
 ```javascript
 workbox.routing.registerRoute(
     'https://hacker-news.firebaseio.com/v0/*',
     workbox.strategies.networkFirst({
-        networkTimetoutSeconds: 3,
+        networkTimeoutSeconds: 3,
         cacheName: 'stories',
         plugins: [
           new workbox.expiration.Plugin({

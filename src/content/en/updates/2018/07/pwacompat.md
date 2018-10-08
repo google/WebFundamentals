@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use the PWACompat library to bring your Web App Manifest to all browsers.
 
-{# wf_updated_on: 2018-07-20 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2018-07-17 #}
 {# wf_tags: manifest,mobile #}
 {# wf_featured_image: /web/updates/images/2018/07/pwacompat.png #}
-{# wf_featured_snippet: Use the PWACompat library to bring your Web App Manifest to all browsers. By simply dropping in the library, many of the <code>link</code> and <code>meta</code> meta tags required to suppord older browsers for icons, home screen behavior, theming etc, will be added automatically- no more steps required! #}
+{# wf_featured_snippet: Use the PWACompat library to bring your Web App Manifest to all browsers. By simply dropping in the library, many of the <code>link</code> and <code>meta</code> meta tags required to support older browsers for icons, home screen behavior, theming etc, will be added automatically- no more steps required! #}
 {# wf_blink_components: N/A #}
 
 # PWACompat: the Web App Manifest for all browsers {: .page-title }

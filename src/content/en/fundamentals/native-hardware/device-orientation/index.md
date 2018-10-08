@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Device motion and orientation events provide access to the built-in accelerometer, gyroscope, and compass in mobile devices.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-06-17 #}
+{# wf_blink_components: Blink>Sensor>DeviceOrientation #}
 
 # Device Orientation & Motion {: .page-title }
 
@@ -332,3 +333,7 @@ jumping?
 After tapping the Go! button, the user is told to jump. During that time,
 the page stores the maximum (and minimum) acceleration values, and after the
 jump, tells the user their maximum acceleration.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

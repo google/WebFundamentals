@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When we measure loading performance, we often do so using testing tools that only describe performance from the perspective of the tester. If we want to measure loading performance from the user's perspective, we must rely on the Navigation and Resource Timing APIs.
 
-{# wf_updated_on: 2018-06-11 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-06-08 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
 
@@ -688,3 +688,7 @@ _Special thanks to [Paul Irish](/web/resources/contributors/paulirish), Gray
 Norton, [Addy Osmani](/web/resources/contributors/addyosmani), and [Philip
 Walton](/web/resources/contributors/philipwalton) for their valuable feedback,
 which significantly improved the quality of this article._
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

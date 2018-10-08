@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools' Device Mode lets you mimic how your development  site will look in production on a range of devices.
 
-{# wf_updated_on: 2017-11-17 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -306,4 +306,6 @@ When you need to test on a real device, you can use
 [Remote Debugging](/web/tools/chrome-devtools/debug/remote-debugging) 
 for additional insight.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

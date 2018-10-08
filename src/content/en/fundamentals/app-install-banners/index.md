@@ -11,16 +11,16 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 {% include "web/_shared/contributors/petelepage.html" %}
 
 
-**Add to Home Screen**, sometimes referred to as the web app install prompt
+**Add to Home Screen**, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
-or desktop device. When installed, it adds your PWA to to their launcher,
-and runs it like any other installed app.
+or desktop device. After the user accepts the prompt, your PWA will be added
+to their launcher, and it will run like any other installed app.
 
 Chrome handles most of the heavy lifting for you, and on Android, Chrome will
-generate a [WebAPK](/web/fundamentals/integration/webapks) creating an even
+generate a [WebAPK](/web/fundamentals/integration/webapks), creating an even
 more integrated experience for your users.
 
-## What is the criteria? {: #criteria }
+## What are the criteria? {: #criteria }
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
@@ -29,7 +29,7 @@ has <code>"prefer_related_applications": true</code>, the
 <a href="/web/fundamentals/app-install-banners/native">native app install
 prompt</a> will be shown instead.
 
-## Show the add to home screen dialog {: #trigger }
+## Show the Add to Home Screen dialog {: #trigger }
 
 <figure class="attempt-right">
   <img src="images/a2hs-dialog-g.png" alt="Add to Home Screen dialog on Android">
@@ -46,7 +46,7 @@ In order to show the Add to Home Screen dialog, you need to:
 
 <div class="clearfix"></div>
 
-Note: Chrome 67 and earlier showed an add to home screen banner, the banner
+Note: Chrome 67 and earlier showed an "Add to home screen" banner. It
 was removed in Chrome 68.
 
 ### Listen for `beforeinstallprompt`
@@ -117,7 +117,7 @@ shown and the user has responded to it.
         });
     });
 
-You can only call `prompt()` on the deferred event once, if the user dismissed
+You can only call `prompt()` on the deferred event once. If the user dismisses
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
 
@@ -144,6 +144,8 @@ not appear again until a sufficient amount of time has passed
 regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
 or not.
 
+Note: The mini-info bar is not displayed on Chrome OS.
+
 ## Feedback {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -152,7 +154,7 @@ or not.
 
 ## Determine if the app was successfully installed {: #appinstalled }
 
-To determine if the app was successfully added to the users home screen _after_
+To determine if the app was successfully added to the user's home screen _after_
 they accepted the prompt, you can listen for the `appinstalled` event.
 
     window.addEventListener('appinstalled', (evt) => {
@@ -212,7 +214,7 @@ Chrome will throw an exception in the console, and the event will not be fired.
 
 Caution: Chrome has a slightly different install flow for desktop and mobile.
 Although the instructions are similar, testing on mobile <b>requires</b> remote
-debugging, without it, it will use the desktop install flow.
+debugging; without it, Chrome will use the desktop install flow.
 
 
 ### Chrome for Android

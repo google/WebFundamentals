@@ -32,7 +32,7 @@ Tot slot nog één ding voordat we van start gaan... Tot nu toe hebben we ons en
 
 We beginnen met basis HTML-opmaak en een enkele afbeelding, geen CSS of JavaScript. Dit is het meest eenvoudige voorbeeld. Laten we nu de `Network timeline` (Netwerktijdlijn) openen in Chrome DevTools en de volgende bronwaterval bekijken:
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" class="center" alt="CRP">
 
 Zoals verwacht kost het ongeveer 200 ms voordat het HTML-bestand is gedownload. Het transparante gedeelte van de blauwe lijn geeft de tijd aan die de browser heeft gewacht op het netwerk, dat wil zeggen dat er nog geen responsbytes zijn ontvangen. Het vaste gedeelte geeft de tijd aan die nodig is om de download te voltooien nadat de eerste responsbytes zijn ontvangen. In ons bovenstaande voorbeeld is de HTML-download minuscuul (<4 K), dus is er maar één roundtrip nodig om het volledige bestand op te halen. Daarom duurt het ongeveer 200 ms om het bestand op te halen, waarvan de helft van de tijd is gewacht op het netwerk en de andere helft op de serverrespons.
 
@@ -191,6 +191,3 @@ Laten we tot slot zeggen dat het CSS-stijlblad alleen nodig was voor het afdrukk
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, niet-blokkerende CSS en asynchroon JavaScript CRP" class="center">
 
 Omdat de bron style.css alleen gebruikt wordt voor afdrukken, hoeft de browser hierbij niet te blokkeren om de pagina weer te geven. Daarom heeft de browser zodra de DOM-opbouw voltooid is, voldoende informatie om de pagina weer te geven. De pagina heeft hierdoor maar één kritieke bron (het HTML-document) en de minimale kritieke padlengte is één roundtrip.
-
-
-

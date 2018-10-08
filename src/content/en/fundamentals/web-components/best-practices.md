@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements let you construct your own HTML tags. This checklist covers best practices to help you build high quality elements.
 
-{# wf_updated_on: 2017-08-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-08-14 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -538,3 +538,7 @@ attributeChangedCallback(name, oldValue, newValue) {
   }
 }
 ```
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

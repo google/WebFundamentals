@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: How to review your site for accessibility issues.
 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-03-12 #}
 {# wf_blink_components: Blink>Accessibility #}
 
@@ -293,3 +293,7 @@ your site. Remember, good accessibility equals good UX!
 - [Web Accessibility by Google](https://bit.ly/web-a11y)
 - [Accessibility Fundamentals](/web/fundamentals/accessibility/)
 - [A11ycasts](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Many of today's most popular apps let you apply filters and effects to images or video. This article shows how to implement these features on the open web.
 
-{# wf_updated_on: 2017-08-08 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-08-08 #}
 {# wf_blink_components: Blink>WebGL, Blink>Canvas #}
 
@@ -399,3 +399,7 @@ applied. When animated, however, delays of only 16ms can cause visible jerkiness
   kernels with interactive demos.
 - [Transformations](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations):
   MDN article about 2D canvas transformations
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

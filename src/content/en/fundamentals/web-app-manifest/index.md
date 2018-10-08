@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-10-02 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -149,7 +149,7 @@ to go completely full screen.
       <td><code>standalone</code></td>
       <td>
         Opens the web app to look and feel like a standalone native
-        app. The app runs in it's own window, separate from the browser, and
+        app. The app runs in its own window, separate from the browser, and
         hides standard browser UI elements like the URL bar, etc.</td>
     </tr>
     <tr>
@@ -286,3 +286,7 @@ displays the results in a report.
 * If you want feature descriptions from the engineers who created web app
   manifests, you can read the
   [W3C Web App Manifest Spec](http://www.w3.org/TR/appmanifest/).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

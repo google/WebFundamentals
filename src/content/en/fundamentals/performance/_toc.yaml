@@ -75,6 +75,8 @@ toc:
         section:
         - title: Reduce JavaScript Payloads with Tree Shaking
           path: /web/fundamentals/performance/optimizing-javascript/tree-shaking/
+        - title: Reduce JavaScript Payloads with Code Splitting
+          path: /web/fundamentals/performance/optimizing-javascript/code-splitting/
       - title: Never Load the Same Resource Twice
         section:
         - title: Offline Cookbook
@@ -172,3 +174,23 @@ toc:
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
         step_group: perf-rendering
+    - title: Audit your site
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/audit/
+        step_group: perf-audit
+      - title: Prework
+        path: /web/fundamentals/performance/audit/prework
+      - title: Check site security
+        path: /web/fundamentals/performance/audit/security
+        step_group: perf-audit
+      - title: Measure performance
+        path: /web/fundamentals/performance/audit/tools
+        step_group: perf-audit
+      - title: Share the results
+        path: /web/fundamentals/performance/audit/share
+        step_group: perf-audit
+      - title: Next steps
+        path: /web/fundamentals/performance/audit/next
+        step_group: perf-audit
+

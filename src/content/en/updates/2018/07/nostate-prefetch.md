@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 63 shipped with NoState Prefetch. NoState Prefetch is a mechanism for fetching resources in advance that uses less memory than the deprecated prerendering process.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2018-07-20 #}
 {# wf_tags: performance, chrome63 #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -59,7 +59,7 @@ The following steps explain how NoState Prefetch works.
 
  1. **NoStatePrefetch is triggered.**
 
-      A prerender resource hint (i.e. `<link rel=”prerender”>`) and some Chrome features will 
+      A prerender resource hint (i.e. `<link rel="prerender">`) and some Chrome features will 
       trigger NoState Prefetch provided that the following two conditions are met: a) the user is 
       not on a low-end device, and b) the user is not on a cellular network.
 

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Remote debug live content on an Android device from a Windows, Mac, or Linux computer.
 
-{# wf_updated_on: 2018-01-12 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -206,3 +206,7 @@ Some notes on screencasts:
 * If your Android device screen locks, the content of your screencast
   disappears. Unlock your Android device screen to automatically resume the
   screencast.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

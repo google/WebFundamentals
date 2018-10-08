@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-09-27 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # The Web Push Protocol {: .page-title }
@@ -629,3 +630,7 @@ href="https://tools.ietf.org/html/draft-ietf-webpush-protocol-10#section-7.2">40
 (or 4kb).</td>
   </tr>
 </table>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
