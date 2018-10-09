@@ -279,7 +279,7 @@ Note: Web Audio FAQs can be found [here].
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [rejected]: /web/updates/2017/06/play-request-was-interrupted
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md
+[feature policy for autoplay]: https://github.com/WICG/feature-policy/blob/master/features.md
 [feature policy]: https://wicg.github.io/feature-policy/
 [current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
 [enable MEI]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
