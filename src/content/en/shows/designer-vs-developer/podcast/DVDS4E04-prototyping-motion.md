@@ -29,10 +29,13 @@ of material design.
   
 In this episode:
 
-* [Animating on schedule](https://medium.com/androiddevelopers/animating-on-a-schedule-8a90d812ae4)
-* [Lottie](https://airbnb.io/lottie/)
-* [Plaid](https://github.com/nickbutcher/plaid)
-* [How to design your own design system](https://medium.com/dev-channel/how-to-create-a-design-system-460b93a6565)
+* Prototyping tools
+* After Effects
+* [Animating on schedule](http://bit.ly/2IN9xXd)
+* [Lottie](http://bit.ly/2pIEOSr)
+* [Plaid](http://bit.ly/2OQ34jy)
+* [How to design your own design system](http://bit.ly/2CyaQcq)
+* Material Design Layer Cake
 
 
 <audio style="width: 100%" controls preload="none"
