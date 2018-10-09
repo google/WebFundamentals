@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-10-08 #}
+{# wf_updated_on: 2018-10-09 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/08/watch-video-using-picture-in-picture/hero.png #}
@@ -263,7 +263,7 @@ involved in the [standardization effort].
 [feature policy]: /web/updates/2018/06/feature-policy
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
-[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md#picture-in-picture
+[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/master/features.md#picture-in-picture
 [implementation status page]: https://github.com/WICG/picture-in-picture/blob/master/implementation-status.md
 [add custom Picture-in-Picture controls]: https://github.com/WICG/picture-in-picture/pull/69
 [https://www.chromestatus.com/feature/5729206566649856]: https://www.chromestatus.com/feature/5729206566649856
