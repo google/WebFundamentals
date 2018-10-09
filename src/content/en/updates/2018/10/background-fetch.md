@@ -28,12 +28,24 @@ levels of a game. That's what background fetch is for. Background fetch is a [we
 standard](https://wicg.github.io/background-fetch/) implemented behind the *Experimental Web
 Platform features* flag in Chrome 71.
 
+Here's a quick two minute demo showing the traditional state of things, vs using background fetch:
+
+<div class="video-wrapper-full-width" style="padding-bottom: 100%">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="eLfgf2ZvFpo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+[Try the demo yourself](https://bgfetch-http203.glitch.me/) and [browse the
+code](https://glitch.com/edit/#!/bgfetch-http203?path=public/client.js). It requires Chrome 71, and
+the *Experimental Web Platform features* flag.
+
 This is also being run as an Origin Trial. If you're interested in testing this API with real users
-(without a flag), [see below](#origin-trial)
+without a flag, [see below](#origin-trial).
 
-## The model
+## How it works
 
-A background fetch goes like this:
+A background fetch works like this:
 
 1. You tell the browser to perform a group of fetches in the background.
 1. The browser fetches those things, displaying progress to the user.
@@ -48,15 +60,8 @@ that it could abuse the system, such as mining bitcoin in the background.
 On some platforms (such as Android) it's possible for the browser to close after step 1, as the
 browser can hand off the fetching to the operating system.
 
-If the user goes offline, the background fetch will be paused and resumed later.
-
-Here's what it looks like for the user:
-
-TODO: video demo
-
-[Try the demo yourself](https://bgfetch-http203.glitch.me/) and [browse the
-code](https://glitch.com/edit/#!/bgfetch-http203?path=public/client.js). It requires Chrome 71, and
-the *Experimental Web Platform features* flag.
+If the user starts the download while offline, or goes offline during the download, the background
+fetch will be paused and resumed later.
 
 ## The API
 
@@ -139,7 +144,7 @@ out the guide](/web/fundamentals/primers/async-functions).
   </tbody>
 </table>
 
-`backgroundFetch.fetch` returns a promise that resolves with a "background fetch registration". I'll
+`backgroundFetch.fetch` returns a promise that resolves with a `BackgroundFetchRegistration`. I'll
 cover the details of that later. The promise rejects if the user has opted out of downloads, or one
 of the provided parameters is invalid.
 
@@ -172,9 +177,9 @@ You can get a list of all the active background fetches using `getIds`:
       const ids = await swReg.backgroundFetch.getIds();
     });
 
-### A background fetch registration
+### Background fetch registrations
 
-A background fetch registration (`bgFetch` in the above examples) has the following:
+A `BackgroundFetchRegistration` (`bgFetch` in the above examples) has the following:
 
 <table class="responsive">
   <tbody>
@@ -191,46 +196,91 @@ A background fetch registration (`bgFetch` in the above examples) has the follow
       <td><code>uploaded</code></td>
       <td><code>number</code><br>The number of bytes successfully sent.</td>
     </tr>
+    <tr>
+      <td><code>downloadTotal</code></td>
+      <td><code>number</code><br>The value provided when the background fetch was registered, or
+      zero.</td>
+    </tr>
+    <tr>
+      <td><code>downloaded</code></td>
+      <td><code>number</code><br>The number of bytes successfully received.
+      <p>This value may decrease. For example, if the connection drops and the download cannot be
+      resumed, in which case the browser restarts the fetch for that resource from scratch.</p></td>
+    </tr>
+    <tr>
+      <td><code>result</code></td>
+      <td><p>One of the following:</p>
+        <ul>
+          <li><code>""</code> - The background fetch is active, so there's no result yet.</li>
+          <li><code>"success"</code> - The background fetch was successful.</li>
+          <li><code>"failure"</code> -  The background fetch failed. This value only appears when
+          the background fetch totally fails, as in the browser cannot retry/resume.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>failureReason</code></td>
+      <td><p>One of the following:</p>
+        <ul>
+          <li><code>""</code> - The background fetch hasn't failed.</li>
+          <li><code>"aborted"</code> – The background fetch was aborted by the user, or
+          <code>abort()</code> was called.</li>
+          <li><code>"bad-status"</code> - One of the responses had a not-ok status, e.g. 404.</li>
+          <li><code>"fetch-error"</code> - One of the fetches failed for some other reason, e.g.
+          CORS, MIX, an invalid partial response, or a general network failure for a fetch that
+          cannot be retried.</li>
+          <li><code>"quota-exceeded"</code> - Storage quota was reached during the background
+          fetch.</li>
+          <li><code>"download-total-exceeded"</code> - The provided `downloadTotal` was
+          exceeded.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><code>recordsAvailable</code></td>
+      <td><code>boolean</code><br>Can the underlying requests/responses can be accessed.</td>
+    </tr>
+    <tr><th colspan=2>Methods</th></tr>
+    <tr>
+      <td><code>abort()</code></td>
+      <td>Returns <code>Promise&lt;boolean&gt;</code><br>Abort the background fetch.
+      <p>The returned promise resolves with true if the fetch was successfully aborted.</p></td>
+    </tr>
+    <tr>
+      <td><code>matchAll(request, opts)</code></td>
+      <td>Returns <code>Promise&lt;Array&lt;BackgroundFetchRecord&gt;&gt;</code><br>Get the requests
+      and responses.
+      <p>The arguments here are the same as
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache/match#Parameters">the cache
+      API</a>. Calling without arguments returns a promise for all records.</p>
+      <p>See below for more details.</p></td>
+    </tr>
+    <tr>
+      <td><code>match(request, opts)</code></td>
+      <td>Returns <code>Promise&lt;BackgroundFetchRecord&gt;</code><br>As above, but resolves with
+      the first match.</td>
+    </tr>
+    <tr><th colspan=2>Events</th></tr>
+    <tr>
+      <td><code>progress</code></td>
+      <td>Fired when any of <code>uploaded</code>, <code>downloaded</code>, <code>result</code>, or
+      <code>failurereason</code> change.</td>
+    </tr>
   </tbody>
 </table>
 
-* **downloadTotal** - The value provided when the background fetch was registered, or zero.
-* **downloaded** - The number of bytes successfully received. This value may decrease if the
-  connection drops and the download cannot be resumed, in which case the browser restarts the fetch
-  for that resource.
-* **result** - One of:
-  * `""` - The background fetch is active, so there's no result yet.
-  * `"success"` - The background fetch was successful.
-  * `"failure"` - The background fetch failed. This value only appears when the background fetch
-    totally fails, as in the browser cannot retry/resume.
-* **failureReason** - One of:
-  * `""` - The background fetch hasn't failed.
-  * `"aborted"` – The background fetch was aborted by the user, or `abort()` was called.
-  * `"bad-status"` - One of the responses had a not-ok status, e.g. 404.
-  * `"fetch-error"` - One of the fetches failed for some other reason, e.g. CORS, MIX, an invalid
-    partial response, or a general network failure for a fetch that cannot be retried.
-  * `"quota-exceeded"` - Storage quota was reached during the background fetch.
-  * `"download-total-exceeded"` - The provided `downloadTotal` was exceeded.
-* **recordsAvailable** - A boolean determining if the underlying requests/responses can be accessed.
+### Tracking progress
 
-The following methods:
+This can be done via the `progress` event. Remember that `downloadTotal` is whatever value you
+provided, or `0` if you didn't provide a value.
 
-* `abort()` - Cancel the background fetch.
-* `match(request, opts)` and `matchAll(request, opts)` - These let you get at the requests &
-  responses. I'll dig into these below.
+    bgFetch.addEventListener('progress', () => {
+      // If we didn't provide a total, we can't provide a %.
+      if (!bgFetch.downloadTotal) return;
 
-And an event, `progress`. This fires when any of `uploaded`, `downloaded`, `result`, or
-`failurereason` change. E.g:
-
-<pre class="prettyprint">
-bgFetch.addEventListener('progress', () => {
-  // If we didn't provide a total, we can't provide a %.
-  if (!bgFetch.downloadTotal) return;
-
-  const percent = Math.round(bgFetch.downloaded / bgFetch.downloadTotal * 100);
-  console.log(`Download progress: ${percent}%`);
-});
-</pre>
+      const percent = Math.round(bgFetch.downloaded / bgFetch.downloadTotal * 100);
+      console.log(`Download progress: ${percent}%`);
+    });
 
 ### Getting the requests and responses
 
@@ -238,33 +288,84 @@ Caution: In Chrome's current implementation you can only get the requests and re
 `backgroundfetchsuccess` and `backgroundfetchfailure` service worker events (see below). In future
 you'll be able to get in-progress fetches.
 
-<pre class="prettyprint">
-bgFetch.match('/podcast.mp3').then(async (record) => {
-  if (!record) {
-    console.log('No record found');
-    return;
-  }
+    bgFetch.match('/podcast.mp3').then(async (record) => {
+      if (!record) {
+        console.log('No record found');
+        return;
+      }
 
-  console.log(`Here's the request`, record.request);
-  const response = await record.responseReady;
-  console.log(`And here's the response`, response);
-});
-</pre>
+      console.log(`Here's the request`, record.request);
+      const response = await record.responseReady;
+      console.log(`And here's the response`, response);
+    });
 
-The response is behind a promise because it may not have been received yet. The promise will reject
-if the fetch fails.
+`record` is a `BackgroundFetchRecord`, and it looks like this:
 
-Along with `match` there's `matchAll`, which can return multiple records. Calling
-`bgFetch.matchAll()` without arguments returns a promise for all records.
+<table class="responsive">
+  <tbody>
+    <tr><th colspan=2>Properties</th></tr>
+    <tr>
+      <td><code>request</code></td>
+      <td><code>Request</code><br>The request that was provided.</td>
+    </tr>
+    <tr>
+      <td><code>responseReady</code></td>
+      <td><code>Promise&lt;Response&gt;</code><br>The fetched response.
+      <p>The response is behind a promise because it may not have been received yet. The promise
+      will reject if the fetch fails.</p></td>
+    </tr>
+  </tbody>
+</table>
 
-Both methods can take additional query parameters, [the same as the cache
-API](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match#Parameters).
+### Service worker events
 
-### Reacting to success
+<table class="responsive">
+  <tbody>
+    <tr><th colspan=2>Events</th></tr>
+    <tr>
+      <td><code>backgroundfetchsuccess</code></td>
+      <td>Everything was fetched successfully.</td>
+    </tr>
+    <tr>
+      <td><code>backgroundfetchfailure</code></td>
+      <td>One or more of the fetches failed.</td>
+    </tr>
+    <tr>
+      <td><code>backgroundfetchabort</code></td>
+      <td>One or more fetches failed.
+      <p>This is only really useful if you want to perform clean-up of related data.</p></td>
+    </tr>
+    <tr>
+      <td><code>backgroundfetchclick</code></td>
+      <td>The user clicked on the download notification.</td>
+    </tr>
+  </tbody>
+</table>
 
-We've already seen the `progress` event, but that's only useful while the user still has a page open
-to your site. The main benefit of background fetch is things continue to work after the user leaves
-the page, or even closes the browser.
+The event objects have the following:
+
+<table class="responsive">
+  <tbody>
+    <tr><th colspan=2>Properties</th></tr>
+    <tr>
+      <td><code>registration</code></td>
+      <td><code>BackgroundFetchRegistration</code></td>
+    </tr>
+    <tr><th colspan=2>Methods</th></tr>
+    <tr>
+      <td><code>updateUI({ title, icons })</code></td>
+      <td>Lets you change the title/icons you initially set. This is optional, but it lets you
+      provide more context if necessary. You can only do this during
+      <code>backgroundfetchsuccess</code> and <code>backgroundfetchfailure</code> events.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Reacting to success/failure
+
+We've already seen the `progress` event, but that's only useful while the user has a page open to
+your site. The main benefit of background fetch is things continue to work after the user leaves the
+page, or even closes the browser.
 
 If the background fetch successfully completes, your service worker will receive the
 `backgroundfetchsuccess` event, and `event.registration` will be the background fetch registration.
@@ -278,43 +379,30 @@ is complete.
 
 For example, in your service worker:
 
-<pre class="prettyprint">
-addEventListener('backgroundfetchsuccess', (event) => {
-  const bgFetch = event.registration;
+    addEventListener('backgroundfetchsuccess', (event) => {
+      const bgFetch = event.registration;
 
-  event.waitUntil(async function() {
-    // Create/open a cache.
-    const cache = await caches.open('downloads');
-    // Get all the records.
-    const records = await bgFetch.matchAll();
-    // Copy each request/response across.
-    const promises = records.map(async (record) => {
-      const response = await record.responseReady;
-      await cache.put(record.request, response);
+      event.waitUntil(async function() {
+        // Create/open a cache.
+        const cache = await caches.open('downloads');
+        // Get all the records.
+        const records = await bgFetch.matchAll();
+        // Copy each request/response across.
+        const promises = records.map(async (record) => {
+          const response = await record.responseReady;
+          await cache.put(record.request, response);
+        });
+
+        // Wait for the copying to complete.
+        await Promise.all(promises);
+
+        // Update the progress notification
+        event.updateUI({ title: 'Podcast ready to listen' });
+      }());
     });
 
-    // Wait for the copying to complete.
-    await Promise.all(promises);
-
-    // Update the progress notification
-    event.updateUI({ title: 'Podcast ready to listen' });
-  }());
-});
-</pre>
-
-`updateUI` lets you change the title/icons you initially set. This is optional, but it lets you
-provide more context if necessary.
-
-### Reacting to failure
-
-Same as above, but the event is `backgroundfetchfailure`. Failure may have come down to a single
-404, which may not have been important to you, so it might still be worth copying some responses
-into a cache.
-
-### Reacting to abort
-
-You might want to perform some clean-up if the background fetch is aborted. In which case, listen
-for the `backgroundfetchabort` event in your service worker.
+Failure may have come down to a single 404, which may not have been important to you, so it might
+still be worth copying some responses into a cache as above.
 
 ### Reacting to click
 
@@ -324,17 +412,15 @@ fetch registration.
 
 The common thing to do with this event is open a window:
 
-<pre class="prettyprint">
-addEventListener('backgroundfetchclick', (event) => {
-  const bgFetch = event.registration;
+    addEventListener('backgroundfetchclick', (event) => {
+      const bgFetch = event.registration;
 
-  if (bgFetch.result === 'success') {
-    clients.openWindow('/latest-podcasts');
-  } else {
-    clients.openWindow('/download-progress');
-  }
-});
-</pre>
+      if (bgFetch.result === 'success') {
+        clients.openWindow('/latest-podcasts');
+      } else {
+        clients.openWindow('/download-progress');
+      }
+    });
 
 ## Origin trial ## {#origin-trial}
 
