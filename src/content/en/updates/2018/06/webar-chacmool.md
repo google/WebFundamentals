@@ -39,7 +39,7 @@ fact, to access the demo you'll need to enable two flags in `chrome://flags:`
 Canary, you can check out the [Chacmool](https://web-education-ar-demo.appspot.com/) demo.  
 
 Note: If you want to be notified of spec updates as they land in Chrome, the
-[Immersive Web Early Adopters Guide](Immersive Web Early Adopters Guide) is
+[Immersive Web Early Adopters Guide](https://immersive-web.github.io/webxr-reference/) is
 kept in a GitHub repo and updated whenever spec changes land in Chrome. To be
 notified of those updates watch [its repo on
 GitHub](https://github.com/immersive-web/webxr-reference).
