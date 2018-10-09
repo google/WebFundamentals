@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background fetch lets you handle large downloads, even if the browser closes.
 
-{# wf_updated_on: 2018-10-05 #}
+{# wf_updated_on: 2018-10-09 #}
 {# wf_published_on: 2018-10-05 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -65,62 +65,83 @@ the *Experimental Web Platform features* flag.
 As with any new feature, you want to detect if the browser supports it. For background fetch, it's
 as simple as:
 
-<pre class="prettyprint">
-if ('BackgroundFetchManager' in self) {
-  // This browser supports background fetch!
-}
-</pre>
+    if ('BackgroundFetchManager' in self) {
+      // This browser supports background fetch!
+    }
 
 ### Starting a background fetch
 
 The main API hangs off a [service worker](/web/fundamentals/primers/service-workers/) registration,
 so make sure you've registered a service worker first. Then:
 
-<pre class="prettyprint">
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/podcast.mp3'], {
-    title: 'Downloading podcast',
-    icons: [{
-      sizes: '300x300',
-      src: '/podcast-icon.png',
-      type: 'image/png',
-    }],
-    downloadTotal: 60 * 1024 * 1024,
-  });
-});
-</pre>
+    navigator.serviceWorker.ready.then(async (swReg) => {
+      const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/podcast.mp3'], {
+        title: 'Downloading podcast',
+        icons: [{
+          sizes: '300x300',
+          src: '/podcast-icon.png',
+          type: 'image/png',
+        }],
+        downloadTotal: 60 * 1024 * 1024,
+      });
+    });
 
 Note: Many examples in this article use async functions. If you aren't familiar with them, [check
 out the guide](/web/fundamentals/primers/async-functions).
 
 `backgroundFetch.fetch` takes three arguments:
 
-1. **id** - A string that uniquely identifies this background fetch. `backgroundFetch.fetch` will
-   reject if use an ID of an existing background fetch.
-1. **requests** - An array of [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request)
-   objects. You can include strings here, in which case they'll be turned into `Request`s via `new
-   Request(theString)`.
-1. **options** - which includes:
-  * **title** - A title for the browser to display along with progress.
-  * **icons** - An array of objects with a `src`, `size`, and `type`. Similar to the format used by
-     [`manifest.json`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
-  * **downloadTotal** - The total size of the response bodies (after being un-gzipped).
+<table class="responsive">
+  <tbody>
+    <tr><th colspan=2>Parameters</th></tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><code>string</code><br>uniquely identifies this background fetch.
+      <p><code>backgroundFetch.fetch</code> will reject the ID matches an existing background
+      fetch.</p></td>
+    </tr>
+    <tr>
+      <td><code>requests</code></td>
+      <td><code>Array&lt;<a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Request">Request</a>|string&gt;</code>
+      <br>The things to fetch. Strings will be treated as URLs, and turned into
+      <code>Request</code>s via <code>new Request(theString)</code>.
+      <p>You can fetch things from other origins as long as the resources allow it via
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>options</code></td>
+      <td>An object which may include the following:</td>
+    </tr>
+    <tr>
+      <td><code>options.title</code></td>
+      <td><code>string</code><br>A title for the browser to display along with progress.</td>
+    </tr>
+    <tr>
+      <td><code>options.icons</code></td>
+      <td><code>Array&lt;<a
+      href="https://developer.mozilla.org/en-US/docs/Web/Manifest">IconDefinition</a>&gt;</code><br>
+      An array of objects with a `src`, `size`, and `type`.</td>
+    </tr>
+    <tr>
+      <td><code>options.downloadTotal</code></td>
+      <td><code>number</code><br>The total size of the response bodies (after being un-gzipped).
+      <p>Although this is optional, it's strongly recommended that you provide it. It's used to tell
+      the user how big the download is, and to provide progress information. If you don't provide
+      this, the browser will tell the user the size is unknown, and as a result the user may be more
+      likely to abort the download.</p>
+      <p>If the background fetch downloads exceeds the number given here, it will be aborted. It's
+      totally fine if the download is smaller than the <code>downloadTotal</code>, so if you aren't
+      sure what the download total will be, it's best to err on the side of caution.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 `backgroundFetch.fetch` returns a promise that resolves with a "background fetch registration". I'll
 cover the details of that later. The promise rejects if the user has opted out of downloads, or one
 of the provided parameters is invalid.
-
-Although `downloadTotal` is optional, it's strongly recommended that you provide it. It's used to
-tell the user how big the download is, and to provide progress information. If you don't provide
-this, the browser will tell the user the size is unknown, and as a result the user may be more
-likely to abort the download.
-
-If the background fetch exceeds the number given in `downloadTotal`, it will be aborted. It's
-totally fine if the download is smaller than `downloadTotal`, so if you aren't sure what the
-download total will be, it's best to err on the side of caution.
-
-You can fetch things from other origins as long as the resources allow it via
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 Providing many requests for a single background fetch lets you combine things that are logically a
 single thing to the user. For example, a movie may be split into 1000s of resources (typical with
@@ -135,11 +156,9 @@ will be allowed, meaning you can use background fetch for large uploads, such as
 
 You can get an existing background fetch like this:
 
-<pre class="prettyprint">
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.get('my-fetch');
-});
-</pre>
+    navigator.serviceWorker.ready.then(async (swReg) => {
+      const bgFetch = await swReg.backgroundFetch.get('my-fetch');
+    });
 
 …by passing the **id** of the background fetch you want. `get` returns `undefined` if there's no
 active background fetch with that ID.
@@ -149,19 +168,32 @@ or totally fails.
 
 You can get a list of all the active background fetches using `getIds`:
 
-<pre class="prettyprint">
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const ids = await swReg.backgroundFetch.getIds();
-});
-</pre>
+    navigator.serviceWorker.ready.then(async (swReg) => {
+      const ids = await swReg.backgroundFetch.getIds();
+    });
 
 ### A background fetch registration
 
-A background fetch registration (`bgFetch` in the above examples) has the following properties:
+A background fetch registration (`bgFetch` in the above examples) has the following:
 
-* **id** - The background fetch's ID.
-* **uploadTotal** - The number of bytes to be sent to the server.
-* **uploaded** - The number of bytes successfully sent.
+<table class="responsive">
+  <tbody>
+    <tr><th colspan=2>Properties</th></tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><code>string</code><br>The background fetch's ID.</td>
+    </tr>
+    <tr>
+      <td><code>uploadTotal</code></td>
+      <td><code>number</code><br>The number of bytes to be sent to the server.</td>
+    </tr>
+    <tr>
+      <td><code>uploaded</code></td>
+      <td><code>number</code><br>The number of bytes successfully sent.</td>
+    </tr>
+  </tbody>
+</table>
+
 * **downloadTotal** - The value provided when the background fetch was registered, or zero.
 * **downloaded** - The number of bytes successfully received. This value may decrease if the
   connection drops and the download cannot be resumed, in which case the browser restarts the fetch
