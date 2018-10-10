@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Nick Butcher on prototyping motion and material design
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-10-09 #}
+{# wf_updated_on: 2018-10-10 #}
 {# wf_published_on: 2018-10-09 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E4_prototyping_motion.mp3 #}
 {# wf_podcast_duration: 00:19:58 #}
@@ -35,7 +35,7 @@ In this episode:
 * [Lottie](http://bit.ly/2pIEOSr)
 * [Plaid](http://bit.ly/2OQ34jy)
 * [How to design your own design system](http://bit.ly/2CyaQcq)
-* Material Design Layer Cake
+* Material design layer cake
 
 
 <audio style="width: 100%" controls preload="none"
