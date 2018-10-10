@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Houdini’s Animation Worklet
+description: Animation Worklet allows you to write imperative animations that run at the device's native frame rate for that extra buttery jank-free smoothness™, make your animations more resilient against main thread jank and are linkable to scroll instead of time.
 
-{# wf_updated_on: 2018-10-08 #}
+{# wf_updated_on: 2018-10-10 #}
 {# wf_published_on: 2018-10-06 #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2018/10/animation-worklet/social.png #}
-{# wf_featured_snippet: Supercharge your web app’s animations with a new primitive from the Houdini Task Force. #}
+{# wf_featured_snippet: Animation Worklet allows you to write imperative animations that run at the device's native frame rate for that extra buttery jank-free smoothness™, make your animations more resilient against main thread jank and are linkable to scroll instead of time. #}
 {# wf_blink_components: Blink #}
 
 # Houdini's Animation Worklet {: .page-title }
@@ -16,7 +16,7 @@ description: Houdini’s Animation Worklet
 
 **TL;DR:** Animation Worklet allows you to write imperative animations that run
 at the device's native frame rate for that extra buttery jank-free smoothness™,
-make your animations more resilient against main thread jank and can be linked
+make your animations more resilient against main thread jank and are linkable
 to scroll instead of time. Animation Worklet is in Chrome Canary (behind the
 "Experimental Web Platform features" flag) and we are planning an [Origin
 Trial](http://bit.ly/OriginTrialSignup) for Chrome 71. You can start using it as
@@ -24,29 +24,29 @@ a progressive enhancement _today_.
 
 ## Another Animation API?
 
-Actually no, it is an extension of what we've already have, and with good
-reason! Bear with me, let's start at the beginning: What do we have? If you want
-to animate any DOM element on the web today, you have 2 ½ choices: [CSS
+Actually no, it is an extension of what we already have, and with good reason!
+Let's start at the beginning. If you want to animate any DOM element on the web
+today, you have 2 ½ choices: [CSS
 Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) for
 simple A to B transitions, [CSS
 Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) for
 potentially cyclical, more complex time-based animations and [Web Animations
-API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) (or
-WAAPI) for almost arbitrarily complex animations. [WAAPI's support
+API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
+(WAAPI) for almost arbitrarily complex animations. [WAAPI's support
 matrix](https://caniuse.com/#feat=web-animation) is looking pretty grim, but
 it's on the way up. Until then, there is a
 [polyfill](https://github.com/web-animations/web-animations-js).
 
 What all these methods have in common is that they are stateless and
-time-driven. But some of the effects developers are trying to do are neither
+time-driven. But some of the effects developers are trying are neither
 time-driven nor stateless. For example the infamous parallax scroller is, as the
 name implies, scroll-driven. [Implementing a performant parallax scroller on the
 web today is surprisingly
 hard.](/web/updates/2016/12/performant-parallaxing)
 
 And what about statelessness? Think about Chrome's address bar on Android, for
-example. If you start scrolling down, it also scrolls out of view. But the
-second you start scrolling up, it comes back into view, even if you are half way
+example. If you scroll down, it scrolls out of view. But the
+second you scroll up, it comes back, even if you are half way
 down that page. The animation depends not only on scroll position, but also on
 your previous scroll direction. It is _stateful_.
 
@@ -54,32 +54,33 @@ your previous scroll direction. It is _stateful_.
   src="https://storage.googleapis.com/webfundamentals-assets/animation-worklet/hidey_x264.mp4">
 </video>
 
-Another thing is styling scrollbars. They are notoriously unstylable — or at
+Another issue is styling scrollbars. They are notoriously unstylable — or at
 least not styleable enough. What if I want a [nyan cat as my
 scrollbar](https://googlechromelabs.github.io/ui-element-samples/custom-scrollbar/)?
-Whatever technique you choose, building a custom scrollbar is either
-unperformant, inaccessible and/or [very
-hard](/web/updates/2017/03/custom-scrollbar).
+Whatever technique you choose, building a custom scrollbar is neither
+performant, nor [easy](/web/updates/2017/03/custom-scrollbar).
 
-The point is: All of these things are awkward and hard to impossible to
-implement efficiently on the web today. Most of them will rely on events and/or
+The point is all of these things are awkward and hard to impossible to
+implement efficiently. Most of them rely on events and/or
 `requestAnimationFrame`, which might keep you at 60fps, even when your screen is
 capable of running at 90fps, 120fps or higher and use a fraction of your
 precious main thread frame budget.
 
 Animation Worklet extends the capabilities of the web's animations stack to make
-these kind of effects easier. Before we start diving in, let's make sure we are
-all up-to-date on the basics of animations.
+these kind of effects easier. Before we dive in, let's make sure we are
+up-to-date on the basics of animations.
 
-## A primer on animations & timelines
+## A primer on animations and timelines
 
-WAAPI and Animation Worklet make extensive use timelines to allow you to
+WAAPI and Animation Worklet make extensive use of timelines to allow you to
 orchestrate animations and effects in the way that you want. This section is a
 quick refresher or introduction to timelines and how they work with animations.
 
 Each document has `document.timeline`. It starts at 0 when the document is
-created and counts the milliseconds since the document started existing. This is
-the timeline that all of the document's animations work relative to.
+created and counts the milliseconds since the document started existing. All of
+a document's animations work relative to this timeline.
+
+<div class="clearfix"></div>
 
 To make things a little more concrete, let's take a look at this WAAPI snippet
 
@@ -108,28 +109,27 @@ To make things a little more concrete, let's take a look at this WAAPI snippet
 
     animation.play();
 
-When we call `animation.play()`, the animation gets the `currentTime` from the
-given timeline (in this case: `document.timeline`) and uses it as the
-`startTime` for this animation. Our animation has a delay of 3000ms, meaning
-that the animation will start (or become "active") when the timeline reaches
-`startTime + 3000`. Once that point in time is reached, the animation engine
-will animate the given element from the first keyframe (`translateX(0)`),
-through all intermediate keyframes (`translateX(500px)`) all the way to the last
-keyframe (`translateY(500px)`) in exactly 2000ms, as prescribed by the
-`duration` options. Since we have a duration of 2000ms, we will reach the middle
-keyframe when the timeline's `currentTime` is `startTime + 3000 + 1000` and the
-last keyframe at `startTime + 3000 + 2000`. The important realization is: The
-timeline controls where we are in our animation!
+When we call `animation.play()`, the animation uses the timeline’s `currentTime`
+ as its start time. Our animation has a delay of 3000ms, meaning that the
+ animation will start (or become "active") when the timeline reaches `startTime
+ + 3000`. After that time, the animation engine will animate
+ the given element from the first keyframe (`translateX(0)`), through all
+ intermediate keyframes (`translateX(500px)`) all the way to the last keyframe
+ (`translateY(500px)`) in exactly 2000ms, as prescribed by the `duration`
+ options. Since we have a duration of 2000ms, we will reach the middle keyframe
+ when the timeline's `currentTime` is `startTime + 3000 + 1000` and the last
+ keyframe at `startTime + 3000 + 2000`. The point is, the
+ timeline controls where we are in our animation!
 
 Once the animation has reached the last keyframe, it will jump back to the first
 keyframe and start the next iteration of the animation. This process repeats a
 total of 3 times since we set `iterations: 3`. If we wanted the animation to
-never stop, we can write `iterations: Number.POSITIVE_INFINITY`. Here's the
+never stop, we would write `iterations: Number.POSITIVE_INFINITY`. Here's the
 [result](https://animation-worklet-article.glitch.me/waapi.html) of the code
 above.
 
-> Note: All demos currently require Canary with the "Experimental Web Platform
-> features" flag enabled on chrome://flags.
+Note: All demos currently require Canary with the "Experimental Web Platform
+features" flag enabled on chrome://flags.
 
 WAAPI is incredibly powerful and there are many more features in this API like
 easing, start offsets, keyframe weightings and fill behavior that would blow the
@@ -139,9 +139,9 @@ Tricks.](https://css-tricks.com/css-animations-vs-web-animations-api/)
 
 ## Writing an Animation Worklet
 
-Now that we have the concept timelines down, we can start looking at Animation
-Worklet and how it allows you to mess with timelines! The Animation Worklet API
-is not only based on WAAPI, but is — in the sense of the [extensible
+Now that we have the concept of timelines down, we can start looking at
+Animation Worklet and how it allows you to mess with timelines! The Animation
+Worklet API is not only based on WAAPI, but is — in the sense of the [extensible
 web](https://extensiblewebmanifesto.org/) — a lower-level primitive that
 explains how WAAPI functions. In terms of syntax, they are incredibly similar:
 
@@ -201,14 +201,14 @@ new Animation(
 </table>
 
 The difference is in the first parameter, which is the name of the _worklet_
-that is supposed to drive this animation.
+that drives this animation.
 
 ## Feature detection
 
 Chrome is the first browser to ship this feature, so you need to make sure your
-code doesn't just expect AnimationWorklet to be there. So before loading the
-worklet, we should detect if the user's browser has support for AnimationWorklet
-with a simple check:
+code doesn't just expect `AnimationWorklet` to be there. So before loading the
+worklet, we should detect if the user's browser has support for
+`AnimationWorklet` with a simple check:
 
     if('animationWorklet' in CSS) {
       // AnimationWorklet is supported!
@@ -237,24 +237,24 @@ before declaring the animation:
 
 
 What is happening here? We are registering a class as an animator using the
-AnimationWorklet's `registerAnimator` call, giving it the name "passthrough".
-It's the same name we used in the WorkletAnimation constructor above. Once the
-registration is complete, the promise returned by `addModule` will resolve and
+AnimationWorklet's `registerAnimator()` call, giving it the name "passthrough".
+It's the same name we used in the `WorkletAnimation()` constructor above. Once the
+registration is complete, the promise returned by `addModule()` will resolve and
 we can start creating animations using that worklet.
 
-The `animate` method of our instance will be called for _every frame_ the
+The `animate()` method of our instance will be called for _every frame_ the
 browser wants to render, passing the `currentTime` of the animation's timeline
 as well as the effect that is currently being processed. We only have one
 effect, the `KeyframeEffect` and we are using `currentTime` to set the effect's
 `localTime`, hence why this animator is called "passthrough". With this code for
-the worklet, the WAAPI vs AnimationWorklet comparison above behave exactly the
+the worklet, the WAAPI and the AnimationWorklet above behave exactly the
 same, as you can see in the
 [demo](https://animation-worklet-article.glitch.me/index.html).
 
 ## Master of time
 
-The `currentTime` parameter of our `animate` method is the `currentTime` of the
-timeline we passed to the `WorkletTimeline` constructor. In the previous
+The `currentTime` parameter of our `animate()` method is the `currentTime` of the
+timeline we passed to the `WorkletAnimation()` constructor. In the previous
 example, we just passed that time through to the effect. But since this is
 JavaScript code, and we can _distort time_ 💫
 
@@ -268,12 +268,12 @@ JavaScript code, and we can _distort time_ 💫
       }
     });
 
-Note: `currentTime` _can_ be `NaN` in certain circumstances (more later). Your
-should keep that in mind when writing animation worklet code. Since all
+Note: `currentTime` _can_ be `NaN` in certain circumstances (more later). You
+should keep that in mind when writing animation worklets. Since all
 mathematical operations can handle `NaN` (they return `NaN` when one of their
 inputs is `NaN`) we are fine here!
 
-We are taking the `Math.sin` of the `currentTime`, and remapping that value to
+We are taking the `Math.sin()` of the `currentTime`, and remapping that value to
 the range [0; 2000], which is the time range that our effect is defined for. Now
 [the animation looks very
 different](https://animation-worklet-article.glitch.me/sin.html), without having
@@ -287,9 +287,8 @@ played in which order and to which extent.
 
 ## Options over Options
 
-You might find yourself wanting to reuse a worklet and just wanting to adjust
-some numbers. For this reason the WorkletAnimation constructor allows you pass
-an options object to the worklet:
+You might want to reuse a worklet and change its numbers. For this reason the
+WorkletAnimation constructor allows you pass an options object to the worklet:
 
     registerAnimator('factor', class {
       constructor(options = {}) {
@@ -318,15 +317,15 @@ Note: The options object will be structurally cloned when it is being sent to
 the worklet, similar to how `postMessage()` operates.
 
 In this [example](https://animation-worklet-article.glitch.me/options.html),
-both animations are driven with the same worklet, but with different options.
+both animations are driven with the same code, but with different options.
 
 ## Gimme your local state!
 
-As I hinted at before, one of the key problems AnimationWorklet aims to solve is
-stateful animations. AnimationWorklets are allowed to hold state. However, one
+As I hinted at before, one of the key problems animation worklet aims to solve is
+stateful animations. Animation worklets are allowed to hold state. However, one
 of the core features of worklets is that they can be migrated to a different
-thread or even be destroyed to save resources, which would also destroy the
-state. To prevent this kind of state loss, AnimationWorklet offers a hook that
+thread or even be destroyed to save resources, which would also destroy their
+state. To prevent state loss, animation worklet offers a hook that
 is called _before_ a worklet is destroyed that you can use to return a state
 object. That object will be passed to the constructor when the worklet is
 re-created. On initial creation, that parameter will be `undefined`.
@@ -346,13 +345,16 @@ re-created. On initial creation, that parameter will be `undefined`.
       }
     });
 
-Everytime you refresh [this
+Every time you refresh [this
 demo](https://animation-worklet-article.glitch.me/state.html), you have a 50/50
-chance in which direction the square will spin. If the browser was to tear down
+chance in which direction the square will spin. If the browser were to tear down
 the worklet and migrate it to a different thread, there would be another
 `Math.random()` call on creation, which could cause a sudden change of
-direction. To make sure that doesn't happen, we return the animations randomly
-chosen direction as _state_ and use it in the constructor, if provided.
+direction. To make sure that doesn't happen, we return the animations
+randomly-chosen direction as _state_ and use it in the constructor, if provided.
+
+Note: The `destroy()` lifecycle hook has been replaced by getter method, but
+this change is not reflected in the spec or Chrome’s implementation just yet.
 
 ## Hooking into the space-time continuum: ScrollTimeline
 
@@ -361,7 +363,7 @@ programmatically define how advancing the timeline affects the effects of the
 animation. But so far, our timeline has always been `document.timeline`, which
 tracks time.
 
-ScrollTimeline opens up new possibilities and allows you to drive animations
+`ScrollTimeline` opens up new possibilities and allows you to drive animations
 with scrolling instead of time. We are going to reuse our very first
 "passthrough" worklet for this
 [demo](https://animation-worklet-article.glitch.me/scroller.html):
@@ -391,9 +393,9 @@ with scrolling instead of time. We are going to reuse our very first
     ).play();
 
 Instead of passing `document.timeline`, we are creating a new `ScrollTimeline`.
-You might be able to guess it, a `ScrollTimeline` doesn't use time but the
+You might have guessed it, `ScrollTimeline` doesn't use time but the
 `scrollSource`'s scroll position to set the `currentTime` in the worklet. Being
-scrolled all the way to the top (or left) is means `currentTime = 0`, while
+scrolled all the way to the top (or left) means `currentTime = 0`, while
 being scrolled all the way to the bottom (or right) sets `currentTime` to
 `timeRange`. If you scroll the box in this
 [demo](https://animation-worklet-article.glitch.me/scroller.html), you can
@@ -409,15 +411,16 @@ in Chrome.
 
 If you create a `ScrollTimeline` with an element that doesn't scroll, the
 timeline's `currentTime` will be `NaN`. So especially with responsive design in
-mind, you should always be prepared for `NaN` as your `currentTime`.
+mind, you should always be prepared for `NaN` as your `currentTime`. It’s often
+sensible to default to a value of 0.
 
-Linking animations with scroll position is something that has long been sought
-after, but was never really achieved at this level of fidelity (apart from hacky
+Linking animations with scroll position is something that has long been sought,
+but was never really achieved at this level of fidelity (apart from hacky
 workarounds with CSS3D). Animation Worklet allows these effects to be
 implemented in a straightforward way while being highly performant. For example:
 a parallax scrolling effect like this
-[demo](https://animation-worklet-article.glitch.me/parallax.html) shows now
-takes just a couple of lines to define a scroll-driven animation.
+[demo](https://animation-worklet-article.glitch.me/parallax.html) shows that it
+now takes just a couple of lines to define a scroll-driven animation.
 
 ## Under the hood
 ### Worklets
@@ -446,10 +449,11 @@ operation that only the main thread can do. Depending on which properties you
 are planning to animate, your animation worklet will either be bound to the main
 thread or run in a separate thread in sync with the compositor.
 
-Note: You should try avoiding "slow" properties at all costs. Limit yourself to
-animation `opacity` and `transform` to make sure your animations run smooth even
-on slow devices. Currently, Chrome's implementation doesn't even allow you to
-animate slow properties with AnimationWorklet and will throw a warning at you
+Note: You should avoid "slow" properties at all costs. Limit yourself to
+animation `opacity` and `transform` to make sure your animations run smoothly
+even on slow devices. Currently, Chrome's implementation doesn't even allow you
+to animate slow properties with AnimationWorklet and will throw a warning at
+you:
 
 ![DevTools showing an error when animating slow properts](/web/updates/images/2018/10/animation-worklet/slowprop.png)
 
@@ -478,13 +482,13 @@ animations to bring a new level of visual fidelity to the web. But the APIs
 design also allows you to make your app more resilient to jank while getting
 access to all the new goodness at the same time.
 
-Animation Worklet is in Canary and we are aiming for an Origin Trial with Chrome
-69. We are eagerly awaiting you to build great new experiences on the web and
-telling us about your experiences and what we can improve. There is also a
+Animation Worklet is in Canary and we are aiming for an Origin Trial with
+Chrome 71. We are eagerly awaiting your great new web experiences and hearing
+about what we can improve. There is also a
 [polyfill](https://github.com/GoogleChromeLabs/houdini-samples/blob/master/animation-worklet/anim-worklet.js)
-that gives you the same API, but doesn't provide the performance isolation.tion.
+that gives you the same API, but doesn't provide the performance isolation.
 
-Keep in mind that CSS Transitions and CSS Animations are still very valid
+Keep in mind that CSS Transitions and CSS Animations are still valid
 options and can be much simpler for basic animations. But if you need to go
 fancy, AnimationWorklet has your back!
 
