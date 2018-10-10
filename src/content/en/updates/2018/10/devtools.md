@@ -18,10 +18,10 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 * [Hover over a Live Expression to highlight a DOM node](#hover)
 * [Store DOM nodes as global variables](#store)
 * [Emulate page focus](#focus)
-* [Picture-in-Picture breakpoints](#picture-in-picture)
 * [Initiator and priority information now in HAR imports and exports](#HAR)
 * [Access the Command Menu from the Main Menu](#command-menu)
 * ["Add to homescreen" now referred to as "Trigger beforeinstallprompt"](#beforeinstallprompt)
+* [Picture-in-Picture breakpoints](#picture-in-picture)
 
 ## Hover over a Live Expression to highlight a DOM node {: #hover }
 
@@ -106,27 +106,6 @@ Now the blue border remains while you do stuff in DevTools or elsewhere.
   </figcaption>
 </figure>
 
-## Picture-in-Picture breakpoints {: #picture-in-picture }
-
-[Picture-in-Picture][PiP]{: .external } is a new API that enables a page to create
-a floating video window over the desktop.
-
-[PiP]: https://github.com/WICG/picture-in-picture
-
-Enable the `enterpictureinpicture`, `leavepictureinpicture`, and `resize` checkboxes in the
-[Event Listener Breakpoints pane][ELBs] to pause whenever one of these picture-in-picture events
-fires. DevTools pauses on the first line of the handler.
-
-[ELBs]: /web/tools/chrome-devtools/javascript/breakpoints#event-listeners
-
-<figure>
-  <img src="/web/updates/images/2018/10/pip1.png"
-       alt="Picture-in-Picture events in the Event Listener Breakpoints pane."/>
-  <figcaption>
-    <b>Figure 8</b>. Picture-in-Picture events in the Event Listener Breakpoints pane
-  </figcaption>
-</figure>
-
 ## Initiator and priority information now in HAR imports and exports {: #HAR }
 
 If you'd like to diagnose network logs with colleagues, you can [export the network requests
@@ -138,7 +117,7 @@ to a HAR file][export].
   <img src="/web/tools/chrome-devtools/network-performance/imgs/save-as-har.png"
        alt="Exporting network requests to a HAR file."/>
   <figcaption>
-    <b>Figure 9</b>. Exporting network requests to a HAR file
+    <b>Figure 8</b>. Exporting network requests to a HAR file
   </figcaption>
 </figure>
 
@@ -155,7 +134,7 @@ This maps to the **Initiator** column in the Requests table.
   <img src="/web/updates/images/2018/10/HAR1.png"
        alt="The initiator column."/>
   <figcaption>
-    <b>Figure 10</b>. The initiator column
+    <b>Figure 9</b>. The initiator column
   </figcaption>
 </figure>
 
@@ -167,7 +146,7 @@ You can also [hold <kbd>Shift</kbd> and hover over a request][initiator] to view
   <img src="/web/tools/chrome-devtools/network-performance/imgs/initiators-dependencies.png"
        alt="Viewing initiators and dependencies."/>
   <figcaption>
-    <b>Figure 11</b>. Viewing initiators and dependencies
+    <b>Figure 10</b>. Viewing initiators and dependencies
   </figcaption>
 </figure>
 
@@ -178,7 +157,7 @@ The `_priority` field states what priority level the browser assigned to the res
   <img src="/web/updates/images/2018/10/HAR2.png"
        alt="The Priority column."/>
   <figcaption>
-    <b>Figure 12</b>. The Priority column
+    <b>Figure 11</b>. The Priority column
   </figcaption>
 </figure>
 
@@ -188,7 +167,7 @@ Right-click the header of the Requests table and select **Priority** to show the
   <img src="/web/updates/images/2018/10/HAR3.png"
        alt="How to show the Priority column."/>
   <figcaption>
-    <b>Figure 13</b>. How to show the <b>Priority</b> column
+    <b>Figure 12</b>. How to show the <b>Priority</b> column
   </figcaption>
 </figure>
 
@@ -206,7 +185,7 @@ tabs, and features.
   <img src="/web/tools/chrome-devtools/images/command-menu.png"
        alt="The Command Menu."/>
   <figcaption>
-    <b>Figure 14</b>. The Command Menu
+    <b>Figure 13</b>. The Command Menu
   </figcaption>
 </figure>
 
@@ -219,7 +198,7 @@ button and select **Run command**.
   <img src="/web/updates/images/2018/10/command-menu1.png"
        alt="Opening the Command Menu from the Main Menu."/>
   <figcaption>
-    <b>Figure 15</b>. Opening the Command Menu from the Main Menu
+    <b>Figure 14</b>. Opening the Command Menu from the Main Menu
   </figcaption>
 </figure>
 
@@ -234,7 +213,28 @@ to requiring a user gesture on a JavaScript API call on the `beforeinstallprompt
   <img src="/web/updates/images/2018/10/beforeinstallprompt1.png"
        alt="Trigger beforeinstallprompt."/>
   <figcaption>
-    <b>Figure 16</b>. Trigger beforeinstallprompt
+    <b>Figure 15</b>. Trigger beforeinstallprompt
+  </figcaption>
+</figure>
+
+## Picture-in-Picture breakpoints {: #picture-in-picture }
+
+[Picture-in-Picture][PiP]{: .external } is a new experimental API that enables a page to create
+a floating video window over the desktop.
+
+[PiP]: https://github.com/WICG/picture-in-picture
+
+Enable the `enterpictureinpicture`, `leavepictureinpicture`, and `resize` checkboxes in the
+[Event Listener Breakpoints pane][ELBs] to pause whenever one of these picture-in-picture events
+fires. DevTools pauses on the first line of the handler.
+
+[ELBs]: /web/tools/chrome-devtools/javascript/breakpoints#event-listeners
+
+<figure>
+  <img src="/web/updates/images/2018/10/pip1.png"
+       alt="Picture-in-Picture events in the Event Listener Breakpoints pane."/>
+  <figcaption>
+    <b>Figure 16</b>. Picture-in-Picture events in the Event Listener Breakpoints pane
   </figcaption>
 </figure>
 
