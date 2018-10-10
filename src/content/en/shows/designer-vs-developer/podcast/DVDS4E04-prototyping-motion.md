@@ -43,7 +43,7 @@ In this episode:
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
-<a href="https://goo.gl/1E9U0G">iTunes</a> Or
+<a href="https://goo.gl/1E9U0G">iTunes</a> or
 <a href="https://goo.gl/qCBlST">Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
