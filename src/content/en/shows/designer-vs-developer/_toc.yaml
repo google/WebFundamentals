@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Prototyping motion and material design'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E04-prototyping-motion.md
       - title: 'Material Design Components'
         path: /web/shows/designer-vs-developer/podcast/DVDS4E03-material-design-components
       - title: 'UX research and usability testing'
