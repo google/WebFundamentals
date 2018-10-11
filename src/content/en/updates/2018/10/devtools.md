@@ -17,7 +17,6 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 
 * [Hover over a Live Expression to highlight a DOM node](#hover)
 * [Store DOM nodes as global variables](#store)
-* [Emulate page focus](#focus)
 * [Initiator and priority information now in HAR imports and exports](#HAR)
 * [Access the Command Menu from the Main Menu](#command-menu)
 * ["Add to homescreen" now referred to as "Trigger beforeinstallprompt"](#beforeinstallprompt)
@@ -58,51 +57,6 @@ Or, right-click the node in the **DOM Tree** and select **Store as global variab
        alt="Store as global variable in the DOM Tree."/>
   <figcaption>
     <b>Figure 3</b>. Store as global variable in the DOM Tree
-  </figcaption>
-</figure>
-
-## Emulate page focus {: #focus }
-
-Suppose you've got a collection of buttons on a page. While the page is in focus, the currently-selected
-button has a blue border around it.
-
-<figure>
-  <img src="/web/updates/images/2018/10/focus1.png"
-       alt="The currently-selected button has a blue border around it when the page is in focus."/>
-  <figcaption>
-    <b>Figure 4</b>. The currently-selected button has a blue border around it when the page is in focus
-  </figcaption>
-</figure>
-
-However, when you click over to DevTools to do something, such as [open the Command Menu](#command-menu),
-the page loses focus, so the button loses its blue border.
-
-<figure>
-  <img src="/web/updates/images/2018/10/focus2.png"
-       alt="The blue border is gone when DevTools is in focus."/>
-  <figcaption>
-    <b>Figure 5</b>. The blue border is gone when DevTools is in focus
-  </figcaption>
-</figure>
-
-Running the new **Emulate a focused page** command from the Command Menu enables you to pretend as if the page still
-has focus while do you stuff elsewhere.
-
-<figure>
-  <img src="/web/updates/images/2018/10/focus3.png"
-       alt="Emulate a focused page."/>
-  <figcaption>
-    <b>Figure 6</b>. Emulate a focused page
-  </figcaption>
-</figure>
-
-Now the blue border remains while you do stuff in DevTools or elsewhere.
-
-<figure>
-  <img src="/web/updates/images/2018/10/focus4.png"
-       alt="The blue border remains even though the page doesn't really have focus."/>
-  <figcaption>
-    <b>Figure 7</b>. The blue border remains even though the page doesn't really have focus
   </figcaption>
 </figure>
 
