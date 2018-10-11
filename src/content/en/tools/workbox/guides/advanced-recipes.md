@@ -180,7 +180,7 @@ workbox.routing.registerRoute(
 
 Starting in Workbox v4, all of the built-in caching strategies reject in a consistent manner when
 there's a network failure and/or a cache miss. This promotes the pattern of
-[setting a global "catch" handler](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.routing#.setCatchHandler)
+[setting a global "catch" handler](/web/tools/workbox/reference-docs/latest/workbox.routing#.setCatchHandler)
 to deal with any failures in a single handler function:
 
 ```javascript
