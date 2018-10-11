@@ -19,7 +19,6 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 * [Store DOM nodes as global variables](#store)
 * [Initiator and priority information now in HAR imports and exports](#HAR)
 * [Access the Command Menu from the Main Menu](#command-menu)
-* ["Add to homescreen" now referred to as "Trigger beforeinstallprompt"](#beforeinstallprompt)
 * [Picture-in-Picture breakpoints](#picture-in-picture)
 
 ## Hover over a Live Expression to highlight a DOM node {: #hover }
@@ -153,21 +152,6 @@ button and select **Run command**.
        alt="Opening the Command Menu from the Main Menu."/>
   <figcaption>
     <b>Figure 14</b>. Opening the Command Menu from the Main Menu
-  </figcaption>
-</figure>
-
-## "Add to homescreen" now referred to as "Trigger beforeinstallprompt" {: #beforeinstallprompt }
-
-The **Add to homescreen** button on the **Manifest** tab has been renamed to **Trigger beforeinstallprompt** to
-be more semantically accurate. There is no concept of homescreens on desktop platforms. Also, this name
-is more behaviorally accurate because add to homescreen behavior has changed from always triggering an app banner
-to requiring a user gesture on a JavaScript API call on the `beforeinstallprompt` event to trigger.
-
-<figure>
-  <img src="/web/updates/images/2018/10/beforeinstallprompt1.png"
-       alt="Trigger beforeinstallprompt."/>
-  <figcaption>
-    <b>Figure 15</b>. Trigger beforeinstallprompt
   </figcaption>
 </figure>
 
