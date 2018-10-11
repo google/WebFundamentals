@@ -159,7 +159,7 @@ to return a response at all. An example is returning a placeholder image when
 the original image can't be retrieved.
 
 To do this in all versions of Workbox you can use the `handle()` method on strategy to make
-a custom handler function. **Note:** You'll should precache any assets you
+a custom handler function. **Note:** You should precache any assets you
 use for your fallback; in the example below we'd need to make sure that
 `FALLBACK_IMAGE_URL` was already cached.
 
