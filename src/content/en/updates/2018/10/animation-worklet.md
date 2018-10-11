@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Animation Worklet allows you to write imperative animations that run at the device's native frame rate for that extra buttery jank-free smoothness™, make your animations more resilient against main thread jank and are linkable to scroll instead of time.
 
-{# wf_updated_on: 2018-10-10 #}
+{# wf_updated_on: 2018-10-11 #}
 {# wf_published_on: 2018-10-06 #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2018/10/animation-worklet/social.png #}
@@ -451,11 +451,7 @@ thread or run in a separate thread in sync with the compositor.
 
 Note: You should avoid "slow" properties at all costs. Limit yourself to
 animation `opacity` and `transform` to make sure your animations run smoothly
-even on slow devices. Currently, Chrome's implementation doesn't even allow you
-to animate slow properties with AnimationWorklet and will throw a warning at
-you:
-
-![DevTools showing an error when animating slow properts](/web/updates/images/2018/10/animation-worklet/slowprop.png)
+even on slow devices.
 
 ### Slap on the wrist
 
