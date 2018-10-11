@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2017-08-29 #}
+{# wf_updated_on: 2018-10-10 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Async functions - making promises friendly {: .page-title }
@@ -196,7 +196,7 @@ function to complete before calling the second.
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-Note: Class constructors and getters/settings cannot be async.
+Note: Class constructors and getters/setters cannot be async.
 
 ## Careful! Avoid going too sequential
 
