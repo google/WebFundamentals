@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-04-13 #}
+{# wf_updated_on: 2018-10-11 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -158,17 +158,69 @@ There are scenarios where returning a fallback response is better than failing
 to return a response at all. An example is returning a placeholder image when
 the original image can't be retrieved.
 
-To do this in Workbox you can use the `handle()` method on strategy to make
-a custom handler function. **Note:** You'll need to cache any assets you
-use for your fallback, in the example below we'd need to cache the
-`FALLBACK_IMAGE_URL`.
+To do this in all versions of Workbox you can use the `handle()` method on strategy to make
+a custom handler function. **Note:** You should precache any assets you
+use for your fallback; in the example below we'd need to make sure that
+`FALLBACK_IMAGE_URL` was already cached.
 
 ```javascript
 const FALLBACK_IMAGE_URL = '/images/fallback.png';
-const imagesHandler = workbox.strategies.cacheFirst();
-workbox.routing.registerRoute(new RegExp('/images/'), ({event}) => {
-  return imagesHandler.handle({event})
-    .catch(() => caches.match(FALLBACK_IMAGE_URL));
+
+workbox.routing.registerRoute(
+  new RegExp('/images/'),
+  async ({event}) => {
+    try {
+      return await workbox.strategies.cacheFirst().handle({event});
+    } catch (error) {
+      return caches.match(FALLBACK_IMAGE_URL);
+    }
+  }
+});
+```
+
+Starting in Workbox v4, all of the built-in caching strategies reject in a consistent manner when
+there's a network failure and/or a cache miss. This promotes the pattern of
+[setting a global "catch" handler](/web/tools/workbox/reference-docs/latest/workbox.routing#.setCatchHandler)
+to deal with any failures in a single handler function:
+
+```javascript
+// Use an explicit cache-first strategy and a dedicated cache for images.
+workbox.routing.registerRoute(
+  new RegExp('/images/'),
+  workbox.strategies.cacheFirst({
+    cacheName: 'images',
+    plugins: [...],
+  })
+);
+
+// Use a stale-while-revalidate strategy for all other requests.
+workbox.routing.setDefaultHandler(
+  workbox.strategies.staleWhileRevalidate()
+);
+
+// This "catch" handler is triggered when any of the other routes fail to
+// generate a response.
+workbox.routing.setCatchHandler(({event, request, url}) => {
+  // Use event, request, and url to figure out how to respond.
+  // One approach would be to use request.destination, see
+  // https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c
+  switch (request.destination) {
+    case 'document':
+      return caches.match(FALLBACK_HTML_URL);
+    break;
+
+    case 'image':
+      return caches.match(FALLBACK_IMAGE_URL);
+    break;
+
+    case 'font':
+      return caches.match(FALLBACK_FONT_URL);
+    break;
+
+    default:
+      // If we don't have a fallback, just return an error response.
+      return Response.error();
+  }
 });
 ```
 
@@ -255,7 +307,7 @@ self.addEventListener('fetch', async (event) => {
   if (event.request.url.endsWith('/complexRequest')) {
     // Configure the strategy in advance.
     const strategy = workbox.strategies.staleWhileRevalidate({cacheName: 'api-cache'});
-    
+
     // Make two requests using the strategy.
     // Because we're passing in event, event.waitUntil() will be called automatically.
     const firstPromise = strategy.makeRequest({event, request: 'https://example.com/api1'});
@@ -263,7 +315,7 @@ self.addEventListener('fetch', async (event) => {
 
     const [firstResponse, secondResponse] = await Promise.all(firstPromise, secondPromise);
     const [firstBody, secondBody] = await Promise.all(firstResponse.text(), secondResponse.text());
-    
+
     // Assume that we just want to concatenate the first API response with the second to create the
     // final response HTML.
     const compositeResponse = new Response(firstBody + secondBody, {

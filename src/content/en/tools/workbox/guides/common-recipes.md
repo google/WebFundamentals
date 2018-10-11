@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-08-20 #}
+{# wf_updated_on: 2018-10-11 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -28,15 +28,15 @@ HTTP `Cache-Control` header) and the max entries to 30 (to ensure we don't use
 up too much storage on the user's device).
 
 ```javascript
-// Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+// Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
-  }),
+  })
 );
 
-// Cache the Google Fonts webfont files with a cache first strategy for 1 year.
+// Cache the underlying font files with a cache-first strategy for 1 year.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
   workbox.strategies.cacheFirst({
@@ -50,14 +50,13 @@ workbox.routing.registerRoute(
         maxEntries: 30,
       }),
     ],
-  }),
+  })
 );
 ```
 
 ## Caching Images
 
-You can capture and caching images with a cache first strategy based on
-the extension.
+You might want to use a cache-first images, by matching against a list of known extensions.
 
 ```javascript
 workbox.routing.registerRoute(
@@ -70,21 +69,21 @@ workbox.routing.registerRoute(
         maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
       }),
     ],
-  }),
+  })
 );
 ```
 
 ## Cache CSS and JavaScript Files
 
-You can use a stale while revalidate for CSS and JavaScript files that
-aren't precached.
+You might want to use a stale-while-revalidate strategy for CSS and JavaScript files that aren't
+precached.
 
 ```javascript
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'static-resources',
-  }),
+  })
 );
 ```
 
@@ -96,7 +95,7 @@ like `googleapis.com` and `gstatic.com` with a single route.
 
 ```javascript
 workbox.routing.registerRoute(
-  /.*(?:googleapis|gstatic)\.com.*$/,
+  /.*(?:googleapis|gstatic)\.com/,
   workbox.strategies.staleWhileRevalidate(),
 );
 ```
@@ -106,17 +105,17 @@ store assets in  cache for each origin.
 
 ```javascript
 workbox.routing.registerRoute(
-  /.*(?:googleapis)\.com.*$/,
+  /.*(?:googleapis)\.com/,
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'googleapis',
-  }),
+  })
 );
 
 workbox.routing.registerRoute(
-  /.*(?:gstatic)\.com.*$/,
+  /.*(?:gstatic)\.com/,
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'gstatic',
-  }),
+  })
 );
 ```
 
@@ -128,19 +127,19 @@ up to 5 minutes.
 
 ```javascript
 workbox.routing.registerRoute(
-    'https://hacker-news.firebaseio.com/v0/*',
-    workbox.strategies.cacheFirst({
-        cacheName: 'stories',
-        plugins: [
-          new workbox.expiration.Plugin({
-            maxEntries: 50,
-            maxAgeSeconds: 5 * 60, // 5 minutes
-          }),
-          new workbox.cacheableResponse.Plugin({
-            statuses: [0, 200],
-          }),
-        ],
-    }),
+  'https://hacker-news.firebaseio.com/v0/api',
+  workbox.strategies.cacheFirst({
+      cacheName: 'stories',
+      plugins: [
+        new workbox.expiration.Plugin({
+          maxEntries: 50,
+          maxAgeSeconds: 5 * 60, // 5 minutes
+        }),
+        new workbox.cacheableResponse.Plugin({
+          statuses: [0, 200],
+        }),
+      ],
+  })
 );
 ```
 
@@ -155,17 +154,17 @@ For this, you can use a `NetworkFirst` strategy with the
 
 ```javascript
 workbox.routing.registerRoute(
-    'https://hacker-news.firebaseio.com/v0/*',
-    workbox.strategies.networkFirst({
-        networkTimeoutSeconds: 3,
-        cacheName: 'stories',
-        plugins: [
-          new workbox.expiration.Plugin({
-            maxEntries: 50,
-            maxAgeSeconds: 5 * 60, // 5 minutes
-          }),
-        ],
-    }),
+  'https://hacker-news.firebaseio.com/v0/api',
+  workbox.strategies.networkFirst({
+      networkTimeoutSeconds: 3,
+      cacheName: 'stories',
+      plugins: [
+        new workbox.expiration.Plugin({
+          maxEntries: 50,
+          maxAgeSeconds: 5 * 60, // 5 minutes
+        }),
+      ],
+  })
 );
 ```
 
@@ -173,12 +172,12 @@ workbox.routing.registerRoute(
 
 You can use a regular expression to easily route requests to files in a
 specific directory. If we wanted to route requests to files in `/static/`,
-we could use the regular expression `new RegExp('/static/.*/')`, like so:
+we could use the regular expression `new RegExp('/static/')`, like so:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('/static/(.*)'),
-  workbox.strategies.staleWhileRevalidate(),
+  new RegExp('/static/'),
+  workbox.strategies.staleWhileRevalidate()
 );
 ```
 
@@ -217,7 +216,7 @@ that were added by the web page itself:
 // Inside service-worker.js:
 
 workbox.routing.registerRoute(
-  new RegExp('^/static/'),
+  new RegExp('/static/'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'my-cache', // Use the same cache name as before.
   })

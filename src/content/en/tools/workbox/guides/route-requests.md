@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-10-11 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -40,7 +40,7 @@ workbox.routing.registerRoute(
 
 The only thing to be wary of is that this would only match for requests
 on your origin. If there was a separate site that had the URL
-"https://some-other-origin.com/logo.png", this route wouldn’t match, because
+`https://some-other-origin.com/logo.png`, this route wouldn’t match, because
 in most cases, that’s not what was intended. Instead you’d need to define
 the entire URL to match.
 
@@ -53,48 +53,63 @@ workbox.routing.registerRoute(
 
 ## Matching a Route with a Regular Expression
 
-When you have a set of URLs that you want to route as a group, Regular
-Expressions are the best way to go.
+When you have a set of URLs that you want to route as a group, regular
+expressions are the best way to go.
 
-The regular expression needs to match part of the URL to be treated as a
-match for that route. This provides a lot of flexibility as to how you use it.
+The regular expression provided is tested against the full URL. If there's a match, the route will
+be triggered. This provides a lot of flexibility as to how you use it.
 If we wanted to route specific file extensions we could write routes such as:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
+  new RegExp('\\.js$'),
   jsHandler
 );
 
 workbox.routing.registerRoute(
-  new RegExp('.*\.css'),
+  new RegExp('\\.css$'),
   cssHandler
 );
 ```
 
-Or you can write regular expressions that test for a specific URL format, for
-example a blog that follows the format `/blog/<year>/<month>/<post title slug>`.
+Or you can write regular expressions that test for a specific URL format: for
+example, a blog that follows the format `/blog/<year>/<month>/<post title slug>`:
 
 ```javascript
 workbox.routing.registerRoute(
-  /\/blog\/\d\d\d\d\/\d\d\/.+/,
+  new RegExp('/blog/\\d{4}/\\d{2}/.+'),
   handler
 );
 ```
 
-Just like the string matching, requests for different origins are treated
-differently. Instead of needing match a part of the URL, it must match from
-the beginning of the URL. For example,
-`https://some-other-origin.com/blog/<year>/<month>/<post title slug>` would
-need to match against "https://some-other-origin.com" as well as the path
-name. So we’d have to change our regular expression to something like the
-following if we wanted to capture both same origin and third party origin
-requests:
+Just like with string matching, requests for different origins are treated differently. Instead of
+matching against any part of the URL, the regular expression must match from
+the beginning of the URL in order to trigger a route when there's a cross-origin request.
+
+For example, the previous regular expression `new RegExp('/blog/\\d{4}/\\d{2}/.+')` would not match
+a request for `https://some-other-origin.com/blog/<year>/<month>/<post title slug>`. If we wanted a
+route that would match that general path pattern made against both same- and cross-origin requests,
+using a regular expression with a wildcard (`.+`)at the start is one approach:
 
 ```javascript
 workbox.routing.registerRoute(
-  /(?:https:\/\/.*)?\/blog\/\d\d\d\d\/\d\d\/.+/,
+  new RegExp('.+/blog/\\d{4}/\\d{2}/.+'),
   handler
+);
+```
+
+Similarly, if we wanted to take the previous examples that matched CSS or JS URLs and have them
+apply to both same- and cross-origin requests, they can be modified to add in a wildcard:
+
+```javascript
+workbox.routing.registerRoute(
+  new RegExp('.+\\.js$'),
+  jsHandler
+);
+
+workbox.routing.registerRoute(
+  new RegExp('.+\\.css$'),
+  cssHandler
 );
 ```
 
