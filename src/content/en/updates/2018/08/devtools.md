@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-10-11 #}
+{# wf_updated_on: 2018-10-05 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -30,6 +30,7 @@ New features and major changes coming to DevTools in Chrome 70 include:
 * [Enable network throttling from the Command Menu](#throttling).
 * [Autocomplete Conditional Breakpoints](#autocomplete).
 * [Break on `AudioContext` events](#audiocontext).
+* [Debug Node.js apps with ndb](#ndb).
 * [Bonus tip: Measure real world user interactions with the User Timing API](#bonus).
 
 Read on, or watch the video version of this doc:
@@ -197,6 +198,32 @@ process and synthesize audio.
 </figure>
 
 {# https://chromium.googlesource.com/chromium/src/+/5cc93793d9819f9b0d9e6fde47cdeb8e9c481ae4 #}
+
+## Debug Node.js apps with ndb {: #ndb }
+
+Note: ndb is an experimental project from Google Chrome Labs.
+
+ndb is a new debugger for Node.js applications. On top of the [usual debugging features that
+you get through DevTools][medium]{: .external }, ndb also offers:
+
+[medium]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
+
+* Detecting and attaching to child processes.
+* Placing breakpoints before modules are required.
+* Editing files within the DevTools UI.
+* Blackboxing all scripts outside of the current working directory by default.
+
+<figure>
+  <img src="/web/updates/images/2018/08/ndb.png"
+       alt="The ndb UI."/>
+  <figcaption>
+    <b>Figure 9</b>. The ndb UI
+  </figcaption>
+</figure>
+
+Check out [ndb's README][ndb]{: .external } to learn more.
+
+[ndb]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
 
 ## Bonus tip: Measure real world user interactions with the User Timing API {: #bonus }
 
