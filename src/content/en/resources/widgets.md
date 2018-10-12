@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2018-09-25 #}
+{# wf_updated_on: 2018-10-12 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -230,13 +230,13 @@ widget to your docs.
 1. Open your doc in a code editor.
 1. Put the following code at the bottom of your page.
 
-     <pre>## Feedback {: #feedback .hide-from-toc }
+     <pre>## Feedback &#123;: #feedback .hide-from-toc }
 
-     \{% include "web/_shared/helpful.html" %\}</pre>
+     &#123;% include "web/_shared/helpful.html" %}</pre>
 
 The widget reports your data to Google Analytics as an [event][event]{:.external}.
 The category of the event is `Helpful`. The label is the page's absolute path. The value
-is `0` if the user clicks **No** (the doc was not helpful) or `1` if the user clicks 
+is `0` if the user clicks **No** (the doc was not helpful) or `1` if the user clicks
 **Yes** (the doc was helpful).
 
 [event]: https://developers.google.com/analytics/devguides/collection/analyticsjs/events
@@ -251,7 +251,7 @@ data actually represents the sentiment of your users.
 
 1. Request access to the **Web Fundamentals** site data on Google Analytics.
 1. Open [Google Analytics](https://analytics.google.com).
-1. Go to Behavior > Events > Overview. 
+1. Go to Behavior > Events > Overview.
 1. Under **Events Category** select **Helpful**. If you can't see **Helpful**, click **view full report** and find it there.
 1. For **Primary Dimension** select **Label**.
 
