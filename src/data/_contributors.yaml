@@ -452,6 +452,21 @@ cwdoh:
   description:
     en: Chang is a mobile and HTML5 technologist
 
+tdresser:
+  name:
+    given: Tim
+    family: Dresser
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - author
+  twitter: tdresser
+  email: tdresser@chromium.org
+  description:
+    en: Software Engineer working on performance metrics at Google
+
 samdutton:
   name:
     given: Sam
