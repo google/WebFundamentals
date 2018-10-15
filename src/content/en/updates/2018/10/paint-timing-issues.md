@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Chrome 69 includes an incorrect change to our paint-timing metrics, which was intended to capture more of the rendering pipeline resulting in some accurate timestamps.
+description: Chrome 69 includes an incorrect change to our paint-timing metrics, which was intended to capture more of the rendering pipeline, but resulted in some inaccurate timestamps.
 
-{# wf_updated_on: 2018-10-12 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_published_on: 2018-10-12 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: Chrome 69 includes an incorrect change to our paint-timing metrics, which was intended to capture more of the rendering pipeline resulting in some accurate timestamps. #}
+{# wf_featured_snippet: Chrome 69 includes an incorrect change to our paint-timing metrics, which was intended to capture more of the rendering pipeline, but resulted in some inaccurate timestamps. #}
 
 # Chrome 69 Paint Timing Issues {: .page-title }
 
@@ -16,8 +16,8 @@ description: Chrome 69 includes an incorrect change to our paint-timing metrics,
 
 Chrome 69 includes an incorrect change to our
 [paint-timing](https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming)
-metrics, which was intended to capture more of the rendering pipeline resulting
-in some accurate timestamps.
+metrics, which was intended to capture more of the rendering pipeline, but
+resulted in some inaccurate timestamps.
 
 This introduced two issues with the first-paint and first-contentful-paint
 metrics, which may show up in your site's analytics.
