@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -13,18 +13,24 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 
 **Add to Home Screen**, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
-or desktop device. After the user accepts the prompt, your PWA will be added
-to their launcher, and it will run like any other installed app.
+or [desktop device](/web/progressive-web-apps/desktop). After the user
+accepts the prompt, your PWA will be added to their launcher, and it will run
+like any other installed app.
 
-Chrome handles most of the heavy lifting for you, and on Android, Chrome will
-generate a [WebAPK](/web/fundamentals/integration/webapks), creating an even
-more integrated experience for your users.
+
+Chrome handles most of the heavy lifting for you:
+
+* On mobile, Chrome will generate a
+  [WebAPK](/web/fundamentals/integration/webapks), creating an even
+  more integrated experience for your users.
+* On desktop, your app will installed, and run in an
+  [app window](/web/progressive-web-apps/desktop#app-window).
 
 ## What are the criteria? {: #criteria }
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
-If the web app manifest includes <code>related_applications</code> and
+Note: If the web app manifest includes <code>related_applications</code> and
 has <code>"prefer_related_applications": true</code>, the
 <a href="/web/fundamentals/app-install-banners/native">native app install
 prompt</a> will be shown instead.
@@ -144,7 +150,7 @@ not appear again until a sufficient amount of time has passed
 regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
 or not.
 
-Note: The mini-info bar is not displayed on Chrome OS.
+Note: The mini-info bar is not displayed on desktop devices.
 
 ## Feedback {: .hide-from-toc }
 
@@ -226,7 +232,7 @@ debugging; without it, Chrome will use the desktop install flow.
 4. Click **Add to home screen**
 
 
-### Chrome OS
+### Chrome OS or Windows
 
 1. Open Chrome DevTools
 2. Go to the **Application** panel.
@@ -235,8 +241,7 @@ debugging; without it, Chrome will use the desktop install flow.
 
 
 Dogfood: To test the install flow for Desktop Progressive Web Apps on Mac or
-Windows, you'll need to <a href="/web/updates/2018/05/dpwa#getting-started">
-enable the <code>#enable-desktop-pwas</code> flag.</a>
+Linux, you'll need to enable the <code>#enable-desktop-pwas</code> flag.
 
 
 ### Will `beforeinstallprompt` be fired?

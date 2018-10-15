@@ -6,10 +6,10 @@ landing_page:
 
   header:
     description: >
-        A new way to deliver amazing user experiences on the web.
+        Progressive Web Apps are now supported on the desktop!
     buttons:
-      - label: PWA Checklist
-        path: /web/progressive-web-apps/checklist
+      - label: Desktop PWAs
+        path: /web/progressive-web-apps/desktop
 
 
   rows:
@@ -41,6 +41,14 @@ landing_page:
         </p>
       youtube_id: m-sCdS0sQO8
       # image_path: images/pwa-intro.png
+
+  # - classname: devsite-landing-row-100
+  #   items:
+  #   - heading: "<b>New:</b> Progressive Web Apps on the Desktop"
+  #     description: >
+  #         Progressive Web Apps are now supported on Chrome OS, and Windows,
+  #         and support for Mac and Linux is coming soon.
+  #         <a href="/web/progressive-web-apps/desktop">Learn more</a>
 
 
   - classname: devsite-landing-row-50 devsite-landing-row-no-image-background
@@ -200,6 +208,12 @@ landing_page:
     - items:
       - description: >
           <ul>
+            <li>
+              <a href="/web/progressive-web-apps/desktop">
+                Progressive Web Apps on Desktop
+              </a><br>Progressive Web Apps now work on the desktop, including
+              Chrome OS and Windows, with support for Mac and Linux coming soon.
+            </li>
             <li>
               <a href="/web/fundamentals/app-install-banners">
                 App Install Banners

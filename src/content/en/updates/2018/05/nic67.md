@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 67 for developers?
 
 {# wf_published_on: 2018-05-29 #}
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome67,new-in-chrome #}
 {# wf_featured_snippet: Chrome 67 brings Progressive Web Apps to the desktop. Adds support for the generic sensor API, which makes it way easier to get access to device sensors like the accelerometer, gyroscope and more. And adds support for BigInts making dealing with big integers way easier. Let’s dive in and see what’s new for developers in Chrome 67! #}
@@ -43,7 +43,7 @@ Note: Want the full list of changes? Check out the
 Desktop Progressive Web Apps are now supported on Chrome OS 67, and we’ve
 already started working on support for Mac and Windows. Once installed,
 they’re launched in the same way as other apps, and run in an
-[app window](/web/updates/2018/05/dpwa#the_app_window), without an address
+[app window](/web/progressive-web-apps/desktop#app-window), without an address
 bar or tabs. Service workers ensure that they’re fast, and reliably,
 the app window experience makes them feel integrated. And they create an
 engaging experience for your users.
@@ -51,7 +51,7 @@ engaging experience for your users.
 Getting started isn't any different than what you're already doing today.
 **All of the work you've done for your existing Progressive Web App still
 applies**, you simply need to consider some
-[additional break points](/web/updates/2018/05/dpwa#design).
+[additional break points](/web/progressive-web-apps/desktop#responsive-design).
 
 If your app meets the standard
 [PWA criteria](/web/fundamentals/app-install-banners/#criteria), Chrome will
@@ -76,7 +76,7 @@ considerations you need to think about when building a desktop progressive
 web app.
 
 And, if you want to start playing with this on Mac or Windows - check out
-the full [Desktop Progressive Web App post](/web/updates/2018/05/dpwa) for
+the full [Desktop Progressive Web App post](/web/progressive-web-apps/desktop) for
 details on how to enable support with a flag.
 
 
