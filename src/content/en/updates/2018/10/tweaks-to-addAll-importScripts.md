@@ -35,7 +35,7 @@ initial download, there's very little overhead involved in executing the importe
 
 For that to work, though, the browser needs to know that there won't be any "surprise" code imported
 into the service worker after the initial
-[installation](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#install).
+[installation](/web/fundamentals/primers/service-workers/lifecycle#install).
 As per the [service worker specification](https://w3c.github.io/ServiceWorker/#importscripts),
 calling `importScripts()` is supposed to only work during the synchronous execution of the top-level
 service worker script, or if needed, asynchronously inside of the `install` handler.
@@ -66,9 +66,9 @@ self.addEventListener('fetch', event => {
 });
 ```
 
-Note: Some users of the [Workbox library](https://developers.google.com/web/tools/workbox/) might be
+Note: Some users of the [Workbox library](/web/tools/workbox/) might be
 implicitly relying on asynchronous calls to `importScripts()` without realizing it. Please see [this
-guidance](https://developers.google.com/web/tools/workbox/modules/workbox-sw#avoid_async_imports) to
+guidance](/web/tools/workbox/modules/workbox-sw#avoid_async_imports) to
 make sure you don't run into issues in Chrome 71.
 
 ## Deprecating repeated URLs passed to cache.addAll()
@@ -126,3 +126,7 @@ this point. If you regularly test your progressive web app against a number of b
 have a significant number of users who don't use Chrome, then chances are you've already detected
 the inconsistency and updated your code. But on the off chance that you haven't noticed this
 behavior in other browsers, we wanted to call out the change before switching Chrome's behavior.
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
+{% include "comment-widget.html" %}
