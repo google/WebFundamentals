@@ -123,7 +123,16 @@
           ]
         }
       ],
-      "locations_map": []
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Bangalore",
+          "geo": {
+            "lat": 12.9715987,
+            "lng": 77.5945627
+          }
+        }
+      ]
     },
     {
       "countries_": [
@@ -443,7 +452,7 @@
         }
       ],
       "max_lighthouse_score": 88,
-      "contact": "guoliang.liu@wunderman.com",
+      "contact": "contacts@wunderman.com",
       "image_url": "/web/agencies/images/wunderman.png",
       "vertical": [
         "Retail"
@@ -471,12 +480,12 @@
       "countries_": [
         "Indonesia"
       ],
-      "agency_name": "uatech",
+      "agency_name": "Uasoft",
       "region": [
         "Asia"
       ],
-      "description": "Build great web and mobile apps with love.",
-      "website": "https://uatech.co.id/",
+      "description": "Uasoft is digital agency based in Jakarta, Indonesia. We connect brands and businesses with their markets through the digital medium. We are trusted by various brands and companies to build valuable, functional, and beautiful digital applications.",
+      "website": "https://soft.uatech.co.id/",
       "projects": [
         {
           "url": "https://cariharga.co.id",
@@ -488,8 +497,8 @@
         }
       ],
       "max_lighthouse_score": 100,
-      "contact": "rizkiheryandi@uatech.co.id",
-      "image_url": "/web/agencies/images/uatech.png",
+      "contact": "hello@uatech.co.id",
+      "image_url": "/web/agencies/images/uasoft.png",
       "vertical": [
         "Retail"
       ],
@@ -558,8 +567,8 @@
           "country_name": "India",
           "city_name": "Bangalore",
           "geo": {
-            "lat": 12.9699573,
-            "lng": 77.6394906
+            "lat": 12.93389,
+            "lng": 77.630443
           }
         },
         {
@@ -568,6 +577,105 @@
           "geo": {
             "lat": 10.8230989,
             "lng": 106.6296638
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "China"
+      ],
+      "agency_name": "GIMC Chance",
+      "region": [
+        "Asia"
+      ],
+      "description": "Chance Ads is a leading mobile driven agency in China. It was acquired by GIMC in 2017. GIMC is the first advertising company and currently is also the largest local marketing communications group in China.  It has more than 300 well-known clients. In 2010, it was public listed on “Small and Medium Enterprise Board” in the Shenzhen stock exchange (stock code: 002400) as “The First Shares of Chinese Advertising”. \n",
+      "website": "http://www.cocounion.com/",
+      "projects": [
+        {
+          "url": "https://pwa.coculm.cn/",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 96
+        }
+      ],
+      "max_lighthouse_score": 96,
+      "contact": "lingyun.zhang@chance-ad.com",
+      "image_url": "/web/agencies/images/gmic_chance.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": [
+            "Shanghai",
+            "Beijing"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        },
+        {
+          "country_name": "China",
+          "city_name": "Beijing",
+          "geo": {
+            "lat": 39.90419989999999,
+            "lng": 116.4073963
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "United Kingdom"
+      ],
+      "agency_name": "Lunar Works Lab Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Lunar Works Lab Ltd create impactful websites and digital platforms using cutting edge technologies. Driven by their creativity and passion for their projects, they are always looking to help businesses succeed in their market.",
+      "website": "https://lunarworks.co.uk",
+      "projects": [
+        {
+          "url": "https://lunarworks.co.uk",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "launch@lunarworks.co.uk",
+      "image_url": "/web/agencies/images/lunar_works_lab_ltd.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Tenterden"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Tenterden",
+          "geo": {
+            "lat": 51.069358,
+            "lng": 0.689122
           }
         }
       ]
