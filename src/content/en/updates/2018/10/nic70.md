@@ -231,10 +231,13 @@ there’s plenty more.
   [send intervention and deprecation messages](https://www.chromestatus.com/feature/5544632075157504)
   to your servers using the `Report-To HTTP` Response header field or surface
   them in the `ReportingObserver` interface.
-* And, there are a number of important deprecations you should know about,
+* There are a number of important deprecations you should know about,
   check the
   [Deprecations and removals in Chrome 70](/web/updates/2018/09/chrome-70-deps-rems)
   post for more details.
+* And be sure to check out the latest
+  [What's new in DevTools](/web/updates/2018/08/devtools) post to learn what's
+  new in Chrome DevTools.
 
 
 <div class="clearfix"></div>
