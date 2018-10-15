@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
 experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-10-05 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -228,7 +228,7 @@ Check out [ndb's README][ndb]{: .external } to learn more.
 ## Bonus tip: Measure real world user interactions with the User Timing API {: #bonus }
 
 Want to measure how long it takes real users to complete critical journeys on your pages?
-Consider instrumeting your code with the [User Timing API][UTA]{:.external}.
+Consider instrumenting your code with the [User Timing API][UTA]{:.external}.
 
 [UTA]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
 
