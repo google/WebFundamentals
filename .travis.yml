@@ -24,6 +24,7 @@ script:
 after_success:
   - ./tools/travis/deploy-master.sh
   - ./tools/travis/deploy-pr.sh
+  - ./tools/travis/flush-memcache.sh
   - node ./tools/travis/removeStagedPRs.js
 branches:
   only:
