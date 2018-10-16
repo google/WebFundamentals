@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "Page Load Is Fast Enough On 3G" Lighthouse audit.
+description: Reference documentation for the "Page load is fast enough on mobile networks" Lighthouse audit.
 
 {# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-14 #}
@@ -10,8 +10,8 @@ description: Reference documentation for the "Page Load Is Fast Enough On 3G" Li
 
 ## Overview {: #overview }
 
-Many mobile users of your page experience the equivalent of a slow 4G network
-connection. Ensuring that your page loads fast over a simulated mobile network
+Many users of your page visit over a slow cellular network connection. 
+Ensuring that your page loads fast over a simulated mobile network
 ensures that your page loads in a reasonable amount of time for your mobile
 users.
 
