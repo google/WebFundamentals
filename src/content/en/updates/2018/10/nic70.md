@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 70 for developers?
 
 {# wf_published_on: 2018-10-16 #}
-{# wf_updated_on: 2018-10-15 #}
+{# wf_updated_on: 2018-10-16 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome70,new-in-chrome,progressive-web-apps,desktop,credentials,security,workers #}
 {# wf_featured_snippet: Chrome 70 adds support for Desktop Progressive Web Apps on Windows, adds support for Public Key Credentials to the Credential Management API, allows you to provide a <code>name</code> to dedicated <code>workers</code> and plenty more. Let’s dive in and see what’s new for developers in Chrome 70! #}
@@ -16,7 +16,7 @@ description: What's new in Chrome 70 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="msA284Q6yZU"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -35,7 +35,7 @@ what’s new for developers in Chrome 70!
 <div class="clearfix"></div>
 
 Note: Want the full list of changes? Check out the
-[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/69.0.3497.81..69.0.3497.81).
+[Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/69.0.3497.81..70.0.3538.66).
 
 
 ## Desktop Progressive Web Apps on Windows {: #dpwa-windows }
@@ -66,13 +66,11 @@ event. Save the event; then,
 [add some UI](/web/fundamentals/app-install-banners/#notify_the_user_your_app_can_be_installed)
 (like an install app button) to tell the user your app can be installed. Then,
 when the user clicks the button, call
-[`prompt`](/web/fundamentals/app-install-banners/#show_the_prompt) on the
+[`prompt()`](/web/fundamentals/app-install-banners/#show_the_prompt) on the
 saved event; Chrome will then show the prompt to the user. If they click add,
 Chrome will add your PWA to their start menu and desktop.
 
-See my
-[Desktop PWAs](/web/updates/2018/05/dpwa) post
-for complete details.
+See my [Desktop PWAs](/web/updates/2018/05/dpwa) post for complete details.
 
 <div class="clearfix"></div>
 
@@ -132,13 +130,13 @@ computation.
   background-color: #ECEFF1;
 }
 
-.with-worker:nth-of-type(1) img {
+.spin-fast {
   animation: spin-smooth 1s linear infinite;
 }
-.with-worker:nth-of-type(2) img {
-  animation: spin-smooth 3s linear infinite;
+.spin-slow {
+  animation: spin-smooth 2s linear infinite;
 }
-.no-worker img {
+.spin-janky {
   animation: spin-janky 4s linear infinite;
 }
 @keyframes spin-smooth {
@@ -151,7 +149,7 @@ computation.
  30% { transform:rotate(108deg); }
  40% { transform:rotate(144deg); }
  50% { transform:rotate(180deg); }
- 53% { transform:rotate(180deg); }
+ 58% { transform:rotate(180deg); }
  60% { transform:rotate(216deg); }
  70% { transform:rotate(216deg); }
  80% { transform:rotate(288deg); }
@@ -164,7 +162,8 @@ computation.
   <div class="no-worker">
     <p><b>Without WebWorkers</b></p>
     <figure>
-      <img src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
+      <img class="spin-janky"
+           src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
       <figcaption>
         <b>Main thread</b><br>
         Lots of heavy JavaScript running, resulting in slow, janky experience.
@@ -175,14 +174,16 @@ computation.
     <p><b>With WebWorkers</b></p>
     <div style="display:flex">
       <figure>
-        <img src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
+        <img class="spin-fast"
+             src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
         <figcaption>
           <b>Main thread</b><br>
           No heavy JavaScript running, resulting in fast, smooth experience.
         </figcaption>
       </figure>
       <figure>
-        <img src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
+        <img class="spin-slow"
+             src="https://www.gstatic.com/images/icons/material/system/2x/settings_black_48dp.png">
         <figcaption>
           <b>WebWorker</b><br>
           Lots of heavy JavaScript running, doesn't affect main thread.
@@ -198,14 +199,13 @@ In Chrome 70, workers now have a
 [`name` attribute](https://www.chromestatus.com/feature/4594144336936960),
 which is specified by an optional argument on the constructor.
 
-<pre class="prettyprint js">
+<pre class="prettyprint lang-js">
 const url = '/scripts/my-worker.js';
 
-const oNYC = {<b>name: 'NewYork'</b>};
-const wNYC = new Worker(url, <b>oNYC</b>);
+const wNYC = <strong>new Worker(url, {name: 'NewYork'});</strong>
 
-const oSF = {<b>name: 'SanFrancisco'</b>};
-const wSF = new Worker(url, <b>oSF</b>);
+<atrong>const oSF = {name: 'SanFrancisco'};</atrong>
+const wSF = new Worker(url, <strong>oSF</strong>);
 </pre>
 
 This lets you distinguish dedicated workers by `name` when you have multiple
