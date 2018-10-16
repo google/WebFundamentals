@@ -1,31 +1,34 @@
 project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
-description: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're fast. Feel integrated because they launched in the same way as other apps, and run in an app window, without an address bar or tabs. They're reliable because service workers can cache all of the assets they need to run. And they create an engaging experience for users.
+book_path: /web/progressive-web-apps/_book.yaml
+description: Progressive Web Apps work on the desktop, including Chrome OS, Mac, Linux, and Windows.
 
-{# wf_updated_on: 2018-09-18 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_published_on: 2018-05-08 #}
-{# wf_tags: progressive-web-apps,desktop,responsive,chrome67 #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
-{# wf_featured_snippet: Desktop progressive web apps can be 'installed' on the users device much like native apps. They're <b>fast</b>. Feel <b>integrated</b> because they launched in the same way as other apps, and run in an <b>app window</b>, without an address bar or tabs. They're <b>reliable</b> because service workers can cache all of the assets they need to run. And they create an <b>engaging</b> experience for users. #}
 {# wf_blink_components: N/A #}
 
-# Progressive Web Apps on the Desktop {: .page-title }
+# Desktop Progressive Web Apps {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
 <div class="clearfix"></div>
 
-Success: Support for Desktop Progressive Web Apps is supported on Chrome OS
-67, which was released in May, 2018.
+<aside class="success">
+  <b>Desktop Progressive Web Apps</b> are supported on the following platforms:
+  <ul>
+    <li>Chrome OS (Chrome 67+)</li>
+    <li>Windows (Chrome 70+)</li>
+  </ul>
+</aside>
+<aside class="dogfood">
+  <b>Mac</b> and <b>Linux</b> support for Desktop PWAs is expected to land in
+  Chrome 72. To test on earlier versions, enable the
+  <code>#enable-desktop-pwas</code> flag.
+</aside>
+
 
 <div class="clearfix"></div>
 
-Dogfood: As of September 2018, Windows support is available in Chrome 70 (currently beta),
-and Mac support is expected to land in Chrome 72. 
-
-<div class="clearfix"></div>
-
-![Spotify's desktop progressive web app](/web/updates/images/2018/05/spotify-screenshot.jpg){: .attempt-right }
+![Spotify's desktop progressive web app](/web/progressive-web-apps/images/spotify-screenshot.jpg){: .attempt-right }
 
 Desktop progressive web apps can be 'installed' on the user's device much like
 native apps. They're **fast**. Feel **integrated** because they launched in
@@ -35,17 +38,7 @@ assets they need to run. And they create an **engaging** experience for users.
 
 <div class="clearfix"></div>
 
-<aside class="note">
-  Check out my Google I/O talk <a href="https://youtu.be/NITk4kXMQDw">
-  PWAs: building bridges to mobile, desktop, and native</a>, for more about
-  what's new with Progressive Web Apps and some important best practices you
-  should be following, or jump right to the section on
-  <a href="https://youtu.be/NITk4kXMQDw?t=1678">desktop PWAs</a>
-</aside>
-
-<div class="clearfix"></div>
-
-### Desktop usage is important
+## Why build Desktop Progressive Web Apps? {: #why }
 
 Mobile has driven a lot of the evolution of Progressive Web Apps. But while
 the growth of mobile has been so strong, desktop usage is still growing.
@@ -54,7 +47,7 @@ significantly higher use in the evening.  Desktop usage is more evenly
 distributed throughout the day than mobile usage. It has significant use
 during the day when most people are at work and at their desks.
 
-![Device usage by time](/web/updates/images/2018/05/device-usage.png){: .attempt-right }
+![Device usage by time](/web/progressive-web-apps/images/device-usage.png){: .attempt-right }
 
 Having that ‘installed’, native feel, is important to users, it gives them the
 confidence that the app will be fast, integrated, reliable and engaging.
@@ -66,9 +59,9 @@ like other apps on the desktop.
 
 ## Getting started {: #getting-started }
 
-Getting started isn't any different than what you're already doing today;
-it's not like this is a whole new class of apps. All of the work you've done
-for your existing Progressive Web App still applies.
+Getting started isn't any different than what you're already doing for existing
+progressive web apps; it's not like this is a whole new class of apps.
+All of the work you've done already still applies.
 [Service workers](/web/fundamentals/primers/service-workers/) make it works
 fast, and reliably; [Web Push and Notifications](/web/fundamentals/push-notifications/)
 keep users updated, and it can be ‘installed’ with the
@@ -76,26 +69,15 @@ keep users updated, and it can be ‘installed’ with the
 real difference is that instead of running in a browser tab, it's running in
 an app window.
 
-### Add to home screen
-
-<img src="/web/updates/images/2018/05/spotify-a2hs.png"
-     alt="Spotify's Add to Home Screen button"
-     class="attempt-left" style="max-height: 200px;">
-
-If the add to home screen [criteria](/web/fundamentals/app-install-banners/#criteria)
-are met, Chrome will fire a `beforeinstallprompt` event. In the event handler,
-save the event, and update your user interface to indicate to the user that
-they can add your app to the home screen. For example, Spotify's desktop
-Progressive Web App, adds an 'Install App' button, just above the users
-profile name.
-
-See [Add to Home Screen](/web/fundamentals/app-install-banners/) for more
-information about how to handle the event, update the UI and show the add to
-home screen prompt.
-
 <div class="clearfix"></div>
 
-## The app window
+## Design considerations {: #design-considerations }
+
+There are some unique considerations you need to take into account when
+building Desktop Progressive Web Apps, things that don’t necessarily apply to
+Progressive Web Apps on mobile devices.
+
+### The app window {: #app-window }
 
 With an app window, there are no tabs or address bar, it’s just your app. It’s
 optimized to support the needs of apps, with more flexible window organization
@@ -104,15 +86,15 @@ task with the window in full screen, or multi-task with multiple windows open.
 App windows also make it really easy to switch between apps using an app
 switcher or a keyboard shortcut such as alt-tab.
 
-![App window components on Chrome OS](/web/updates/images/2018/05/app-window-elements.png)
+![App window components on Chrome OS](/web/progressive-web-apps/images/app-window-elements.png)
 
 As you’d expect, the app window has the standard title bar icons to minimize,
-maximize and close the window. On Chrome OS, the title bar is also themed,
-based on the `theme_color` defined in the
+maximize and close the window. The title bar is also themed based on the
+`theme_color` defined in the
 [web app manifest](/web/fundamentals/web-app-manifest/). And your app should be
-[designed](#design) to take up the full width of the window.
+[designed](#responsive-design) to take up the full width of the window.
 
-![App menu](/web/updates/images/2018/05/app-menu.png){: .attempt-left }
+![App menu](/web/progressive-web-apps/images/app-menu.png){: .attempt-left }
 
 Within the app window, there’s also the app menu (the button with the three
 dots), that gives you access to information about the app, makes it easy to
@@ -121,13 +103,9 @@ your browser.
 
 <div class="clearfix"></div>
 
-## Design considerations {: #design }
+### Use responsive design {: #responsive-design }
 
-There are some unique design considerations you need to take into account when
-building Desktop Progressive Web Apps, things that don’t necessarily apply to
-Progressive Web Apps on mobile devices.
-
-![Full screen app window](/web/updates/images/2018/05/dpwa-resp-1.png){: .attempt-right }
+![Full screen app window](/web/progressive-web-apps/images/dpwa-resp-1.png){: .attempt-right }
 
 Apps on the desktop have access to significantly larger screen real-estate.
 Don’t just pad your content with extra margin, but use that additional space
@@ -143,12 +121,12 @@ everything down, it might show a 5 day forecast. As it continues to get
 smaller, content might shuffle around, and it's been optimized for the
 smaller display.
 
-![7 day forecast in menu](/web/updates/images/2018/05/dpwa-resp-2.png){: .attempt-left }
-![5 day forecast in menu](/web/updates/images/2018/05/dpwa-resp-3.png){: .attempt-right }
+![7 day forecast in menu](/web/progressive-web-apps/images/dpwa-resp-2.png){: .attempt-left }
+![5 day forecast in menu](/web/progressive-web-apps/images/dpwa-resp-3.png){: .attempt-right }
 
 <div class="clearfix"></div>
 
-![Full screen app window](/web/updates/images/2018/05/dpwa-resp-4.png){: .attempt-right }
+![Full screen app window](/web/progressive-web-apps/images/dpwa-resp-4.png){: .attempt-right }
 
 For some apps, a mini-mode might be really helpful. This weather app shows
 only the current conditions. A music player might only show me the current
@@ -169,16 +147,37 @@ designer and take a responsive approach that adds new breakpoints for larger
 screens, supports landscape or portrait views, works when fullscreen - or
 not, and works nicely with virtual keyboards.
 
+### Prompting the user to install
+
+Installing a desktop progressive web app, known as *Add to Homescreen* on
+mobile, works the same.
+
+<img src="/web/updates/images/2018/05/spotify-a2hs.png"
+     alt="Spotify's Add to Home Screen button"
+     class="attempt-left" style="max-height: 200px;">
+
+If Chrome's [criteria](/web/fundamentals/app-install-banners/#criteria)
+are met, Chrome will fire a `beforeinstallprompt` event. In the event handler,
+save the event, and update your user interface to indicate to the user that
+they can add your app to the home screen. For example, Spotify's desktop
+Progressive Web App, adds an 'Install App' button, just above the users
+profile name.
+
+See [Add to Home Screen](/web/fundamentals/app-install-banners/) for more
+information about how to handle the event, update the UI and show the add to
+home screen prompt.
+
+<div class="clearfix"></div>
+
 ## What's next?
 
-We’re already working on support for Mac and Windows. For all of these
-platforms, we’re looking at:
+In addition to supporting additional platforms, we're also looking at:
 
-* Adding support for keyboard shortcuts, so you can provide your own
-  functionality.
-* Badging for the launch icon, so you can let the user know about important
+* **Keyboard shortcuts** - Adding support for keyboard shortcuts, so you can
+  provide your own functionality.
+* **Badging for the launch icon** Let the user know about important
   events that you don’t want to display a full notification for.
-* And link capturing - opening the installed PWA when the user clicks on a
+* **Link capturing** - Opening the installed PWA when the user clicks on a
   link handled by that app.
 
 ### Learn more
@@ -189,12 +188,11 @@ platforms, we’re looking at:
   </iframe>
 </div>
 
-Check out my Google I/O talk, **PWAs: building bridges to mobile, desktop,
+Check the 2018 Google I/O talk, **PWAs: building bridges to mobile, desktop,
 and native**, it covers everything from Desktop PWAs to, upcoming changes to
 add to home screen prompts, and more.
 
 <div class="clearfix"></div>
 
-{% include "web/_shared/rss-widget-updates.html" %}
+{% include "web/_shared/helpful.html" %}
 
-{% include "comment-widget.html" %}

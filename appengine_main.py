@@ -84,7 +84,7 @@ class DevSitePages(webapp2.RequestHandler):
         self.response.set_cookie('hl', lang, max_age=3600, path='/')
 
         fullPath = self.request.path
-        memcacheKey = fullPath + '?hl=' + lang
+        memcacheKey = self.request.host + fullPath + '?hl=' + lang
         logging.info('GET ' + memcacheKey)
 
         if USE_MEMCACHE:
