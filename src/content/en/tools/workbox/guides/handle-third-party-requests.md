@@ -20,7 +20,7 @@ different and what you can do in Workbox to support these requests.
 ## Cross-Origin Requests and Opaque Responses
 
 One of the security mechanisms in browsers is that when a piece of JavaScript
-requests a URL on a different origin, it’s prevented from being able to
+requests a URL from a different origin, it’s prevented from being able to
 access the body and many other details of the response.
 
 When you get a response like this, it’s known as an "opaque response". Some
@@ -128,6 +128,6 @@ workbox.routing.registerRoute(
 ```
 
 <aside markdown="1" class="warning">
-<strong>Warning:</strong> This will cache a response that could be an error, would then never end
-being updated!
+<strong>Warning:</strong> This will cache a response that could be an error, which would then never
+get updated!
 </aside>
