@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-10-11 #}
+{# wf_updated_on: 2018-10-17 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -175,7 +175,7 @@ workbox.routing.registerRoute(
       return caches.match(FALLBACK_IMAGE_URL);
     }
   }
-});
+);
 ```
 
 Starting in Workbox v4, all of the built-in caching strategies reject in a consistent manner when
