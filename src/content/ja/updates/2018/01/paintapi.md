@@ -10,7 +10,7 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 {# wf_blink_components: Blink>CSS #}
 
 
-#CSSペイントAPI {: .page-title }
+# CSSペイントAPI {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
