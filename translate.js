@@ -25,6 +25,7 @@ async function translateLines(text, to) {
   const linkDefs = [];
   const squareLinks = [];
   const specialWords = [];
+  const pragmas = [];
 
   // Find markdown []() links and replace URL.
   text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2, offset, str) => {
@@ -42,6 +43,12 @@ async function translateLines(text, to) {
   text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (match, p1, p2, offset, str) => {
     squareLinks.push(p2);
     return `[${p1}][${squareLinks.length-1}]`;
+  });
+
+  // Find {: } [][] links and replace URL.
+  text = text.replace(/\{:([^\}]+)\}/g, (match, p1, p2, offset, str) => {
+    pragmas.push(p1);
+    return `__PRAGMAS__ ${pragmas.length-1}`;
   });
 
   // Find special words and don't translate
@@ -90,8 +97,13 @@ async function translateLines(text, to) {
       return `[${p1}][${squareLinks.shift()}]`;
     });
 
-     // Remap all link defintions 
-     translation = translation.replace(/^__LINK_DEFS__ (.+)/, (match, p1, p2, offset, str) => {
+    // Remap all {: } 
+    translation = translation.replace(/__PRAGMAS__ (.+)/, (match, p1, p2, offset, str) => {
+      return `{:${pragmas.shift()}}`;
+    });
+
+    // Remap all link defintions 
+    translation = translation.replace(/^__LINK_DEFS__ (.+)/, (match, p1, p2, offset, str) => {
       return `${linkDefs.shift()}`;
     });
 
