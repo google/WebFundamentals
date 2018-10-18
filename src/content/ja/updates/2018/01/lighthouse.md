@@ -32,7 +32,7 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## 2.7に更新する方法{: #update }
+## 2.7に更新する方法 {: #update }
 
 * NPM。 Lighthouseをグローバルにインストールした場合は、__ SPECIALWORD0または__ SPECIALWORD1フラグを実行します。
 * Chrome拡張機能。拡張機能は自動的に更新されますが、`chrome://extensions`経由で手動で更新することができます。
@@ -40,7 +40,7 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-##新しいSEO監査{: #seo }
+## 新しいSEO監査 {: #seo }
 
 新しいSEOカテゴリでは、検索エンジンの検索結果におけるページのランキングを向上させるための監査が提供されます。
 
@@ -57,7 +57,7 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
   </figcaption>
 </figure>
 
-##新規のマニュアルアクセシビリティ監査{: #a11y }
+## 新規のマニュアルアクセシビリティ監査 {: #a11y }
 
 新しい手動アクセシビリティ監査では、ページのアクセシビリティを向上させるためにできることを通知します。 「手動」とは、Lighthouseがこれらの監査を自動化できないことを意味します。手動で手動でテストする必要があります。
 
@@ -74,7 +74,7 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
   </figcaption>
 </figure>
 
-## WebP監査の更新{: #webp }
+## WebP監査の更新 {: #webp }
 
 [コミュニティのフィードバック][feedback]のおかげで、[WebP監査][webp]はJPEG 2000やJPEG XRのような次世代の高性能画像フォーマットをより包括的に取り入れています。
 

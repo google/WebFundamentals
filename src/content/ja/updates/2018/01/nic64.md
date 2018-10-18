@@ -60,7 +60,7 @@ ro.observe(someElement);
 詳細と実際の例については、[`ResizeObserver`：要素の`document.onresize`](/web/updates/2016/10/resizeobserver)を参照してください。
 
 
-##改良されたポップアップブロッカー{: #popup-blocker }
+## 改良されたポップアップブロッカー {: #popup-blocker }
 
 私はタブアンダーが嫌いです。あなたはそれらを知っています、それはあるページがある目的地へのポップアップを開き、そのページをナビゲートする時です。通常、そのうちの1つは、あなたが欲しくない広告か何かです。
 

@@ -154,7 +154,8 @@ async function translateLines(text, to) {
 
     // Bodge for Japan
     translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
-    translation = translation.replace(/([\r\n]|^)#([^#\s])/gm,'$1# $2');
+    translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
+    translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
     
     output.push(translation);
   });
