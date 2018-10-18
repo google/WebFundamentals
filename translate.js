@@ -19,7 +19,6 @@ const translate = new Translate({
 const targets = program.target.split(',')
 
 async function translateLines(text, to) {
-  console.log('Translating paragraph',text)
   if(text === ' ') return ' ';
   const links = [];
   const srcs = [];
@@ -134,7 +133,6 @@ async function translateLines(text, to) {
 
     // Remap all src="" and src=''
     translation = translation.replace(/__SRCURL__ (\d+)/, (match, p1, p2, offset, str) => {
-      console.log(match, p1, srcs)
       return `${srcs.shift()}`;
     });
 
