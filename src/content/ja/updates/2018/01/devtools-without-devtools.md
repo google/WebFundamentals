@@ -11,7 +11,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-＃DevToolsを開くことなくDevTools機能を使用す {: .page-title }
+#DevToolsを開くことなくDevTools機能を使用す {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 

@@ -109,6 +109,7 @@ async function translateLines(text, to) {
     // Find markdown links where the target has spaces in the wrong place [](/ ERROR /)
     translation = translation.replace(/\[([^\]]+)\]\(\/( ([^\)]+) )\/\)/g,'[$1]($3)');
     translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
+    translation = translation.replace(/＃/gu,'#');
 
     // Remap all links of form []()
     translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/g, (match, p1, p2, offset, str) => {
@@ -153,7 +154,7 @@ async function translateLines(text, to) {
 
     // Bodge for Japan
     translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
-    translation = translation.replace(/^#([^#\s])/g,'# $1');
+    translation = translation.replace(/[\r\n]#([^#\s])/gm,'\n# $1');
 
     output.push(translation);
   });

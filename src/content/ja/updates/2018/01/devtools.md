@@ -11,7 +11,7 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-＃DevTools（Chrome 65）の新機 {: .page-title }
+#DevTools（Chrome 65）の新機 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
