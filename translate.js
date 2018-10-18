@@ -22,6 +22,7 @@ async function translateLines(text, to) {
   console.log('Translating paragraph',text)
   if(text === ' ') return ' ';
   const links = [];
+  const linkDefs = [];
   const squareLinks = [];
   const specialWords = [];
 
@@ -29,6 +30,12 @@ async function translateLines(text, to) {
   text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2, offset, str) => {
     links.push(p2);
     return `[${p1}](${links.length-1})`;
+  });
+
+  // Find markdown []: https:..... links and replace URL.
+  text = text.replace(/^\[([^\]]+)\]:.*/, (match, p1, p2, offset, str) => {
+    linkDefs.push(match); // the entire line
+    return `__LINK_DEFS__ ${linkDefs.length-1}`;
   });
 
   // Find markdown [][] links and replace URL.
@@ -40,7 +47,7 @@ async function translateLines(text, to) {
   // Find special words and don't translate
   text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
     specialWords.push(p1);
-    return `(SPECIAL ${specialWords.length-1})`;
+    return `(__SPECIAL_WORD__ ${specialWords.length-1})`;
   });
 
   const output = [];
@@ -71,8 +78,14 @@ async function translateLines(text, to) {
       return `[${p1}][${squareLinks.shift()}]`;
     });
 
+     // Remap all link defintions 
+     translation = translation.replace(/^__LINK_DEFS__ (.+)/, (match, p1, p2, offset, str) => {
+      return `${linkDefs.shift()}`;
+    });
+
+
     // Remap all specialWords 
-    translation = translation.replace(/\(SPECIAL (\d+)\)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/\(__SPECIAL_WORD__ (\d+)\)/g, (match, p1, p2, offset, str) => {
       return `\`${specialWords.shift()}\``;
     });
 
@@ -139,7 +152,7 @@ async function processFile(filePath, target) {
     if (line.charAt(0) === '\n' || line.length === 0) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
 
     // Treat links in form [TEXT]: #blah as paragraphs, need to filter links `[][]` too
-    if (line.match(/^\[([^\]]:)/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
+    if (line.match(/^\[([^\]]+)\]:/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
 
     // Treat list as paragraphs
     if (line.match(/^[\s]*\*/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
