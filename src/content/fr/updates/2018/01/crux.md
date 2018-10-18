@@ -9,7 +9,7 @@ description: Announcing the release of a new country dimension in the Chrome Use
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Announcing the release of a new country dimension in the Chrome User Experience Report. #}
 
-# Rapport d'expérience utilisateur Chrome: nouvelle dimension de pays {: .page-title}
+# Rapport d'expérience utilisateur Chrome: nouvelle dimension de pays {: .page-title }
 
 {% include "web/_shared/contributors/rviscomi.html" %}
 
@@ -17,7 +17,7 @@ description: Announcing the release of a new country dimension in the Chrome Use
 
 Le [Chrome User Experience Report](/web/tools/chrome-user-experience-report/) (CrUX) est un jeu de données public contenant des données de performances utilisateur réelles. Depuis que nous avons [annoncé](https://blog.chromium.org/2017/10/introducing-chrome-user-experience-report.html) le rapport, l'un des ajouts les plus demandés a été la capacité de mieux comprendre les différences d'expérience utilisateur entre les sites. Sur la base de ces informations, nous développons l'ensemble de données CrUX existant - qui fournit une vue globale de toutes les régions géographiques - afin d'inclure également une collection d'ensembles de données distincts spécifiques à chaque pays!
 
-<img src = "/ web / updates / images / 2018/01 / crux-countries.png"
+<img src="/web/updates/images/2018/01/crux-countries.png"
     alt="Map of countries included in the CrUX dataset"/>
 
 Par exemple, dans la capture d'écran ci-dessus, une requête compare les densités agrégées des types de connexion effectifs 4G et 3G dans quelques pays. Ce qui est intéressant, c’est de voir à quel point les vitesses 4G sont répandues au Japon, alors que les vitesses 3G sont encore très répandues en Inde. De telles connaissances sont rendues possibles grâce à la nouvelle dimension nationale.

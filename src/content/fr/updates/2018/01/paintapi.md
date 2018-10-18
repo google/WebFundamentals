@@ -10,7 +10,7 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 {# wf_blink_components: Blink>CSS #}
 
 
-# API de peinture CSS {: .page-title}
+# API de peinture CSS {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
@@ -33,9 +33,9 @@ Pour définir un worklet de peinture appelé `myPainter`, nous devons charger un
 
 Dans le rappel `paint()`, nous pouvons utiliser `ctx` de la même manière que nous utiliserions un `CanvasRenderingContext2D` tel que nous le connaissons `<canvas>`. Si vous savez dessiner un `<canvas>`, vous pouvez dessiner un worklet de peinture! `geometry` nous indique la largeur et la hauteur de la toile à notre disposition. `properties` Je vais expliquer plus tard dans cet article.
 
-Remarque: le contexte d’un worklet de peinture n’est pas identique à un contexte `<canvas>`. À l'heure actuelle, les méthodes de rendu du texte sont manquantes et pour des raisons de sécurité, vous ne pouvez pas lire les pixels du canevas.
+Remarque: le contexte d’un worklet de peinture n’est pas identique à un contexte `<canvas>`. À l'heure actuelle, les méthodes de rendu du texte sont manquantes et pour des raisons de sécurité, vous ne pouvez pas lire les pixels de la toile.
 
-En guise d’introduction, écrivons un worklet de peinture en damier et l’utilisons comme image de fond d’un `<textarea>`. (J'utilise une zone de texte car elle est redimensionnable par défaut.):
+À titre d’introduction, écrivons un worklet de peinture en damier et l’utilisons comme image de fond d’un `<textarea>`. (J'utilise une zone de texte car elle est redimensionnable par défaut.):
 
     <!-- index.html -->
     <!doctype html>
@@ -72,7 +72,7 @@ En guise d’introduction, écrivons un worklet de peinture en damier et l’uti
     // Register our class under a specific name
     registerPaint('checkerboard', CheckerboardPainter);
 
-Si vous avez utilisé `<canvas>` par le passé, ce code devrait vous paraître familier. Voir le live [démo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) ici.
+Si vous avez déjà utilisé `<canvas>` par le passé, ce code devrait vous paraître familier. Voir le live [démo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) ici.
 
 Remarque: Comme avec presque toutes les nouvelles API, CSS Paint API est uniquement disponible via HTTPS (ou `localhost`).
 
@@ -84,7 +84,7 @@ C’est plutôt cool, mais c’est aussi assez statique. Voulons-nous écrire un
 
 ### Paramétrage de votre worklet
 
-Heureusement, le worklet de peinture peut accéder à d’autres propriétés CSS. C’est là que le paramètre supplémentaire `properties` entre en jeu. En attribuant à la classe un attribut statique `inputProperties`, vous pouvez vous abonner aux modifications apportées à toute propriété CSS, y compris les propriétés personnalisées. Les valeurs vous seront données via le paramètre `properties`.
+Heureusement, le worklet de peinture peut accéder à d’autres propriétés CSS. C’est là que le paramètre supplémentaire `properties` entre en jeu. En attribuant à la classe un attribut statique `inputProperties`, vous pouvez souscrire aux modifications apportées à toute propriété CSS, y compris les propriétés personnalisées. Les valeurs vous seront données via le paramètre `properties`.
 
     <!-- index.html -->
     <!doctype html>
@@ -128,7 +128,7 @@ Heureusement, le worklet de peinture peut accéder à d’autres propriétés CS
 
     registerPaint('checkerboard', CheckerboardPainter);
 
-Nous pouvons maintenant utiliser le même code pour tous les types de damiers. Mais mieux encore, nous pouvons maintenant aller dans DevTools et [modifier les valeurs](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) jusqu'à ce que nous trouvions le bon look.
+Nous pouvons maintenant utiliser le même code pour tous les types de damiers. Mais encore mieux, nous pouvons maintenant aller dans DevTools et [modifier les valeurs](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) jusqu'à ce que nous trouvions le bon look.
 
 <div style="display: flex; justify-content: center">   <video loop muted controls>
     <source

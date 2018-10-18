@@ -11,7 +11,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Mises à jour du phare 2.7 {: .page-title}
+# Mises à jour du phare 2.7 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -32,7 +32,7 @@ Voir les [Notes de version 2.7][RN] pour la liste complète des nouvelles foncti
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## Comment mettre à jour à 2.7 {: #update}
+## Comment mettre à jour à 2.7 {: #update }
 
 * NPM. Exécutez l'indicateur `npm update lighthouse` ou `npm update lighthouse -g` si vous avez installé Lighthouse globalement.
 * Extension Chrome. L'extension doit être mise à jour automatiquement, mais vous pouvez la mettre à jour manuellement via `chrome://extensions`.
@@ -40,7 +40,7 @@ Voir les [Notes de version 2.7][RN] pour la liste complète des nouvelles foncti
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Nouveaux audits SEO {: #seo}
+## Nouveaux audits SEO {: #seo }
 
 La nouvelle catégorie SEO propose des audits qui aident à améliorer le classement de votre page dans les résultats des moteurs de recherche.
 
@@ -57,7 +57,7 @@ Remarque: de nombreux facteurs affectent le classement du moteur de recherche d'
   </figcaption>
 </ figure>
 
-## Nouveaux audits manuels d'accessibilité {: # a11y}
+## Nouveaux audits manuels d'accessibilité {: #a11y }
 
 Les nouvelles vérifications manuelles de l'accessibilité vous informent des choses que vous pouvez faire pour améliorer l'accessibilité de votre page. "Manuel" signifie ici que Lighthouse ne peut pas automatiser ces audits. Vous devez donc les tester manuellement.
 
@@ -74,7 +74,7 @@ Les nouvelles vérifications manuelles de l'accessibilité vous informent des ch
   </figcaption>
 </ figure>
 
-## Mises à jour de l'audit WebP {: #webp}
+## Mises à jour de l'audit WebP {: #webp }
 
 Grâce à certains [commentaires de la communauté][feedback], l'audit [WebP][webp] comprend désormais davantage d'autres formats d'image hautes performances de nouvelle génération, tels que JPEG 2000 et JPEG XR.
 
