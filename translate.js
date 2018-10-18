@@ -144,12 +144,16 @@ async function translateLines(text, to) {
 
     // Find annotated markdown links [@ChromeDevTools][twitter] {:.external} => [][]{}
     translation = translation.replace(/\[([^\]]+)\]\[([^\]]+)\] \{([^\}]+)\}/g,'[$1][$2]{$3}');
-     // Find annotated markdown links [@ChromeDevTools](twitter){:.external} => [](){}
-     translation = translation.replace(/\[([^\]]+)\]\(([^\)]+)\) \{([^\}]+)\}/g,'[$1]($2){$3}');
+    // Find annotated markdown links [@ChromeDevTools](twitter){:.external} => [](){}
+    translation = translation.replace(/\[([^\]]+)\]\(([^\)]+)\) \{([^\}]+)\}/g,'[$1]($2){$3}');
     // Clean up {:. external} => [][]{}
-    translation = translation.replace(/\{:.([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
-      return `{: ${p1.toLowerCase().replace(' ', '')} }`;
+    translation = translation.replace(/\{:\. ([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
+      return `{: .${p1.toLowerCase().replace(' ', '')} }`;
     });
+
+    // Bodge
+    translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
+    
 
     output.push(translation);
   });

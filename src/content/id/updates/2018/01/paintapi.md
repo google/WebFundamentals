@@ -17,11 +17,11 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 ## Kemungkinan baru di API Cat CSS CSS Chrome (juga dikenal sebagai "Cat Khusus CSS" atau "worklet cat Houdini") akan diaktifkan secara default di Chrome Stable. Apa itu? Apa yang bisa kamu lakukan dengan itu? Dan bagaimana cara kerjanya? Yah, baca terus, ya ...
 
 
-CSS Paint API memungkinkan Anda memprogram menghasilkan gambar setiap kali properti CSS mengharapkan gambar. Properti seperti `background-image` atau `border-image` biasanya digunakan dengan `url()` untuk memuat file gambar atau dengan fungsi-fungsi bawaan CSS seperti `linear-gradient()`. Daripada menggunakan itu, Anda sekarang dapat menggunakan `paint(myPainter)` untuk merujuk ke _paint worklet_.
+CSS Paint API memungkinkan Anda memprogram menghasilkan gambar setiap kali properti CSS mengharapkan gambar. Properti seperti `background-image` atau `border-image` biasanya digunakan dengan `url()` untuk memuat file gambar atau dengan fungsi bawaan CSS seperti `linear-gradient()`. Daripada menggunakan itu, Anda sekarang dapat menggunakan `paint(myPainter)` untuk merujuk ke _paint worklet_.
 
 ### Menulis sebuah worklet cat
 
-Untuk menentukan worklet cat yang disebut `myPainter`, kita perlu memuat file worksheet cat CSS menggunakan `CSS.paintWorklet.addModule('my-paint-worklet.js')`. Dalam file itu kita bisa menggunakan fungsi `registerPaint` untuk mendaftarkan kelas worklet cat:
+Untuk menentukan worklet cat yang disebut `myPainter`, kita perlu memuat file worklet cat CSS menggunakan `CSS.paintWorklet.addModule('my-paint-worklet.js')`. Dalam file itu kita bisa menggunakan fungsi `registerPaint` untuk mendaftarkan kelas worklet cat:
 
     class MyPainter {
       paint(ctx, geometry, properties) {
@@ -31,7 +31,7 @@ Untuk menentukan worklet cat yang disebut `myPainter`, kita perlu memuat file wo
 
     registerPaint('myPainter', MyPainter);
 
-Di dalam callback `paint()`, kita dapat menggunakan `ctx` dengan cara yang sama seperti kita `CanvasRenderingContext2D` seperti yang kita ketahui dari `<canvas>`. Jika Anda tahu cara menggambar `<canvas>`, Anda dapat menggambar di worklet cat! `geometry` memberi tahu kita lebar dan tinggi kanvas yang kita miliki. `properties` Saya akan jelaskan nanti di artikel ini.
+Di dalam callback `paint()`, kita dapat menggunakan `ctx` dengan cara yang sama kita akan `CanvasRenderingContext2D` seperti yang kita tahu dari `<canvas>`. Jika Anda tahu cara menggambar dalam `<canvas>`, Anda dapat menggambar di worklet cat! `geometry` memberi tahu kami lebar dan tinggi kanvas yang kami miliki. `properties` Saya akan jelaskan nanti di artikel ini.
 
 Catatan: Konteks cat worklet tidak 100% sama dengan konteks `<canvas>`. Sampai sekarang, metode render teks hilang dan untuk alasan keamanan Anda tidak dapat membaca kembali piksel dari kanvas.
 
@@ -84,7 +84,7 @@ Itu sangat keren, tetapi itu juga cukup statis. Apakah kita ingin menulis sebuah
 
 ### Parameterisasi worklet Anda
 
-Untungnya, worklet cat dapat mengakses properti CSS lainnya, yang mana parameter tambahan `properties` ikut bermain. Dengan memberi kelas atribut statis `inputProperties`, Anda dapat berlangganan perubahan ke properti CSS apa pun, termasuk properti khusus. Nilai-nilai akan diberikan kepada Anda melalui parameter `properties`.
+Untungnya, worklet cat dapat mengakses properti CSS lainnya, yang mana parameter tambahan `properties` ikut bermain. Dengan memberikan atribut statis `inputProperties` kelas, Anda dapat berlangganan perubahan ke properti CSS apa pun, termasuk properti khusus. Nilai-nilai akan diberikan kepada Anda melalui parameter `properties`.
 
     <!-- index.html -->
     <!doctype html>
@@ -140,7 +140,7 @@ Sekarang kita dapat menggunakan kode yang sama untuk semua jenis checkerboards y
   </video>
 </div>
 
-Catatan: Akan sangat bagus untuk membuat parameter warna juga, bukan? Spec memungkinkan untuk fungsi `paint()` untuk mengambil daftar argumen. Fitur ini belum diterapkan di Chrome, karena sangat bergantung pada Houdini Properties and Values ​​API, yang masih membutuhkan beberapa pekerjaan sebelum dapat dikirimkan.
+Catatan: Akan sangat bagus untuk membuat parameter warna juga, bukan? Spec memungkinkan fungsi `paint()` untuk mengambil daftar argumen. Fitur ini belum diterapkan di Chrome, karena sangat bergantung pada Houdini Properties and Values ​​API, yang masih membutuhkan beberapa pekerjaan sebelum dapat dikirimkan.
 
 ## Browser yang tidak mendukung worklet cat Pada saat penulisan, hanya Chrome yang menerapkan worklet paint. Meskipun ada sinyal positif dari semua vendor browser lainnya, tidak ada banyak kemajuan. Untuk tetap up to date, periksa [Apakah Houdini Siap Namun?](https://ishoudinireadyyet.com) secara teratur. Sementara itu, pastikan untuk menggunakan peningkatan progresif agar kode Anda tetap berjalan meskipun tidak ada dukungan untuk melukis worklet. Untuk memastikan semuanya bekerja seperti yang diharapkan, Anda harus menyesuaikan kode Anda di dua tempat: CSS dan JS.
 
@@ -179,7 +179,7 @@ Bagi saya, prospek yang paling menarik adalah bahwa worklet paint memungkinkan p
 
 <img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="Elemen DOM dalam bentuk berlian.">
 
-`mask-image` mengambil gambar yang merupakan ukuran elemen. Area di mana gambar topeng transparan, elemen transparan. Area di mana gambar mask buram, elemen buram.
+`mask-image` mengambil gambar yang berukuran seperti elemen. Area di mana gambar topeng transparan, elemen transparan. Area di mana gambar mask buram, elemen buram.
 
 ## Sekarang di Chrome
 

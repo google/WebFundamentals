@@ -39,9 +39,9 @@ Le suivi des modifications de la taille d’un élément peut être un peu péni
 
 Et si la fenêtre du navigateur ne changeait pas de taille, mais si un nouvel élément était ajouté au document? Ou vous avez ajouté `display: none` à un élément? Ces deux éléments peuvent modifier la taille des autres éléments de la page.
 
-`ResizeObserver` vous avertit chaque fois que la taille d’un élément change et fournit la nouvelle hauteur et la nouvelle largeur de l’élément, ce qui réduit le risque de contournement de la présentation.
+`ResizeObserver` vous avertit chaque fois que la taille d’un élément change et fournit les nouvelles hauteur et largeur de l’élément, réduisant ainsi le risque de contorsions de la présentation.
 
-Comme d'autres observateurs, son utilisation est assez simple, créez un objet `ResizeObserver` et transmettez un rappel au constructeur. Le rappel recevra un tableau de `ResizeOberverEntries` - une entrée par élément observé - contenant les nouvelles dimensions de l'élément.
+Comme d'autres observateurs, son utilisation est assez simple: créez un objet `ResizeObserver` et transmettez un rappel au constructeur. Le rappel recevra un tableau de `ResizeOberverEntries` - une entrée par élément observé - qui contient les nouvelles dimensions de l'élément.
 
 ```js
 const ro = new ResizeObserver( entries => {
@@ -57,7 +57,7 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Découvrez [`ResizeObserver`: c'est comme `document.onresize` pour Elements](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
+Consultez [`ResizeObserver`: c'est comme `document.onresize` pour les éléments](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
 
 
 ## Bloqueur de pop-up amélioré {: #popup-blocker }
@@ -79,15 +79,15 @@ Ceci est très utile lorsque vous souhaitez résoudre des ressources relatives a
 Ce ne sont là que quelques-uns des changements apportés à Chrome 64 par les développeurs. Bien entendu, il y en a beaucoup plus.
 
 * Chrome prend désormais en charge les [captures nommées](/web/updates/2017/07/upcoming-regexp-features#named_captures) et les [échappements de propriétés Unicode](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) dans les expressions régulières.
-* La valeur par défaut `preload` des éléments `<audio>` et `<video>` est maintenant `metadata`. Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l'utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
-* Vous pouvez maintenant utiliser `Request.prototype.cache` pour afficher le mode de cache d'un `Request` et déterminer si une demande est une demande de rechargement.
+* La valeur par défaut `preload` pour les éléments `<audio>` et `<video>` est désormais `metadata`. Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l'utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
+* Vous pouvez désormais utiliser `Request.prototype.cache` pour afficher le mode de cache d'un `Request` et déterminer si une demande est une demande de rechargement.
 * À l'aide de l'API Focus Management, vous pouvez maintenant focaliser un élément sans y accéder avec l'attribut `preventScroll`.
 
 ## `window.alert()` {: #window-alert }
 
-Oh, et un de plus! Bien que ce ne soit pas vraiment une "fonctionnalité de développeur", cela me fait plaisir. `window.alert()` ne met plus un onglet d'arrière-plan au premier plan! Au lieu de cela, l'alerte sera affichée lorsque l'utilisateur reviendra à cet onglet.
+Oh, et un de plus! Bien que ce ne soit pas vraiment une "fonctionnalité de développeur", cela me fait plaisir. `window.alert()` n'apporte plus d'onglet d'arrière-plan au premier plan! Au lieu de cela, l'alerte sera affichée lorsque l'utilisateur reviendra à cet onglet.
 
-Plus de tabulation aléatoire, car quelque chose m'a tiré dessus `window.alert`. Je vous regarde le vieil agenda Google.
+Plus de commutation aléatoire d’onglet car quelque chose a déclenché un `window.alert` sur moi. Je vous regarde le vieil agenda Google.
 
 
 Assurez-vous de vous abonner (0) à notre [chaîne YouTube](https://goo.gl/6FP1a5) et vous recevrez une notification par e-mail chaque fois que nous lancerons une nouvelle vidéo ou ajouterons notre [flux RSS](https://www.youtube.com/user/ChromeDevelopers/) à votre lecteur de flux.

@@ -127,12 +127,12 @@ Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat 
   </figcaption>
 </gambar>
 
-Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{: external }. Jika hanya ada satu tanda centang, itu berarti ia memenuhi [rasio kontras yang disarankan minimum (AA)][minimum] PRAGMAS1.
+Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external}. Jika hanya ada satu tanda centang, itu berarti ia memenuhi [rasio kontras yang disarankan minimum (AA)][minimum] PRAGMAS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Klik ** Tampilkan Lebih Banyak ** ![Tampilkan Lebih Banyak][SM]] {: cdt-inl } untuk memperluas bagian ** Contrast Ratio **. Garis putih di kotak ** Color Spectrum ** menunjukkan batas antara warna yang memenuhi rasio kontras yang direkomendasikan, dan yang tidak. Misalnya, karena warna abu-abu di
+Klik ** Tampilkan Lebih Banyak ** ![Tampilkan Lebih Banyak][SM]] {:.cdt-inl} untuk memperluas bagian ** Contrast Ratio **. Garis putih di kotak ** Color Spectrum ** menunjukkan batas antara warna yang memenuhi rasio kontras yang direkomendasikan, dan yang tidak. Misalnya, karena warna abu-abu di
 ** Gambar 6 ** memenuhi rekomendasi, itu berarti bahwa semua warna di bawah garis putih juga memenuhi rekomendasi.
 
 <figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -210,7 +210,7 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 
 ## Kode yang dapat dipercaya melangkah dengan pekerja dan kode asinkron {: #stepping }
 
-Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] {: cdt-inl } ketika masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] PRAGMAS1 yang baru.
+Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] {:.cdt-inl} ketika masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] PRAGMAS1 yang baru.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -219,7 +219,7 @@ Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] {: cdt-in
 
 Ketika Anda masuk ke kode yang mengirimkan pesan antar utas, DevTools sekarang menunjukkan apa yang terjadi di setiap utas.
 
-Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke panggilan `postMessage()` pada utas utama, DevTools berhenti di pengatur `onmessage` di utas pekerja. Pengendali `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
+Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke panggilan `postMessage()` pada utas utama, DevTools berhenti di penangan `onmessage` di utas pekerja. Penangan `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
@@ -241,7 +241,7 @@ Ketika Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya m
 
 Ketika melangkah ke kode asynchronous, DevTools sekarang mengasumsikan bahwa Anda ingin berhenti di kode asynchronous yang akhirnya berjalan.
 
-Misalnya, dalam ** Gambar 10 ** setelah masuk ke `setTimeout()`, DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti di fungsi yang diteruskan ke `setTimeout()`.
+Misalnya, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()`, DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, lalu berhenti dalam fungsi yang diteruskan ke `setTimeout()`.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>

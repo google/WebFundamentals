@@ -31,7 +31,7 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
   </iframe>
 </div>
 
-Remarque: vérifiez la version de Google Chrome utilisée `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
+Remarque: vérifiez quelle version de Chrome vous exécutez à `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
 ## Remplacement local {: #overrides }
 
@@ -89,7 +89,7 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
 
 ## Nouveaux outils d'accessibilité {: #a11y }
 
-Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées déficiences de la vision.
+Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées. déficiences de la vision.
 
 ### Volet d'accessibilité {: #a11y-pane }
 
@@ -127,12 +127,12 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   </figcaption>
 </figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{: external }. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {: cdt-inl } pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
+Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
 ** La figure 6 ** correspond aux recommandations. Cela signifie que toutes les couleurs situées au-dessous de la ligne blanche sont également conformes aux recommandations.
 
 <figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -210,7 +210,7 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 
 ## Code pas à pas fiable avec les travailleurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {: cdt-inl } pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
+Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -219,7 +219,7 @@ Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][int
 
 Lorsque vous entrez dans le code qui transmet les messages entre les threads, DevTools vous montre maintenant ce qui se passe dans chaque thread.
 
-Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l'appel `postMessage()` sur le thread principal, DevTools met en pause le gestionnaire `onmessage` dans le thread de travail. Le gestionnaire `onmessage` envoie lui-même un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
+Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l'appel `postMessage()` sur le thread principal, DevTools met en pause le gestionnaire `onmessage` dans le thread de travail. Le gestionnaire `onmessage` lui-même envoie un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
@@ -241,7 +241,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
 
 Lorsque vous entrez dans le code asynchrone, DevTools suppose maintenant que vous souhaitez suspendre le code asynchrone qui s'exécute.
 
-Par exemple, dans la ** figure 10 ** après être entré dans `setTimeout()`, DevTools exécute tout le code menant à ce point en arrière-plan, puis met en pause la fonction transmise à `setTimeout()`.
+Par exemple, dans la ** figure 10 ** après être passé dans `setTimeout()`, DevTools exécute tout le code menant à ce point derrière la scène, puis met en pause la fonction transmise à `setTimeout()`.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>

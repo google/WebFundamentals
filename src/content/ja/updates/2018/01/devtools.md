@@ -11,7 +11,7 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-＃DevTools（Chrome 65）の新機能{: .page-title }
+＃DevTools（Chrome 65）の新機 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -127,12 +127,12 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
   </figcaption>
 </figure>
 
-**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[強化推奨コントラスト比（AAA）[0] {: external }を満たしていることを意味します。チェックマークが1つしかない場合は、[最小推奨コントラスト比（AA）][enhanced] PRAGMAS1を満たしていることを意味します。
+**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[強化推奨コントラスト比（AAA）[0] {:.external}を満たしていることを意味します。チェックマークが1つしかない場合は、[最小推奨コントラスト比（AA）][enhanced] PRAGMAS1を満たしていることを意味します。
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-** [もっと見る] ** [詳細を表示][SM]{: cdt-inl }をクリックすると、**コントラスト比**セクションが拡大されます。 ** Color Spectrum **ボックスの白い線は、推奨されるコントラスト比を満たす色と、そうでない色との境界を表します。例えば、
+** [もっと見る] ** [詳細を表示][SM]{:.cdt-inl}をクリックすると、**コントラスト比**セクションが拡大されます。 ** Color Spectrum **ボックスの白い線は、推奨されるコントラスト比を満たす色と、そうでない色との境界を表します。例えば、
 **図6 **は推奨を満たしています。つまり、白線の下のすべての色も推奨値を満たしています。
 
 <figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -210,7 +210,7 @@ Chrome 65には、多くの新しいパフォーマンス監査が付属して�
 
 ##作業者と非同期コードによる信頼性の高いコードステッピング{: #stepping }
 
-Chrome 65は、スレッド間のメッセージを渡すコードと非同期コードにステップインする際に、** Step Into **！[Step Into][into]{: cdt-inl }ボタンを更新します。以前のステップ動作をしたい場合は、新しい**ステップ**！[ステップ][step] PRAGMAS1ボタンを代わりに使用することができます。
+Chrome 65は、スレッド間のメッセージを渡すコードと非同期コードにステップインする際に、** Step Into **！[Step Into][into]{:.cdt-inl}ボタンを更新します。以前のステップ動作をしたい場合は、新しい**ステップ**！[ステップ][step] PRAGMAS1ボタンを代わりに使用することができます。
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

@@ -35,13 +35,13 @@ Catatan: Ingin daftar lengkap perubahan? Lihat [daftar perubahan repositori sumb
 
 ## `ResizeObserver` {: #resizeobserver }
 
-Melacak saat perubahan ukuran elemen bisa sedikit merepotkan. Kemungkinan besar, Anda akan melampirkan pendengar ke acara dokumen `resize`, kemudian menelepon `getBoundingClientRect` atau `getComputedStyle`. Namun, keduanya dapat menyebabkan labrakan tata letak.
+Melacak saat perubahan ukuran elemen bisa sedikit merepotkan. Kemungkinan besar, Anda akan melampirkan pendengar ke acara `resize` dokumen, kemudian memanggil `getBoundingClientRect` atau `getComputedStyle`. Namun, keduanya dapat menyebabkan labrakan tata letak.
 
 Dan bagaimana jika jendela browser tidak mengubah ukuran, tetapi elemen baru ditambahkan ke dokumen? Atau Anda menambahkan `display: none` ke elemen? Keduanya dapat mengubah ukuran elemen lain di dalam halaman.
 
 `ResizeObserver` memberi tahu Anda kapan pun ukuran elemen berubah, dan menyediakan tinggi dan lebar elemen yang baru, sehingga mengurangi risiko benturan tata letak.
 
-Seperti Pengamat lainnya, menggunakannya cukup sederhana, buat objek `ResizeObserver` dan teruskan panggilan balik ke konstruktor. Callback akan diberikan array `ResizeOberverEntries` - satu entri per elemen yang diamati - yang berisi dimensi baru untuk elemen.
+Seperti Pengamat lainnya, menggunakannya cukup sederhana, buat objek `ResizeObserver` dan teruskan panggilan balik ke konstruktor. Callback akan diberikan array `ResizeOberverEntries` - satu entri per elemen yang diamati - yang berisi dimensi baru untuk elemen tersebut.
 
 ```js
 const ro = new ResizeObserver( entries => {
@@ -57,7 +57,7 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Lihat [`ResizeObserver`: Ini seperti `document.onresize` untuk Elemen](/web/updates/2016/10/resizeobserver) untuk rincian lebih lanjut dan contoh dunia nyata.
+Lihat [`ResizeObserver`: Ini seperti `document.onresize` for Elements](/web/updates/2016/10/resizeobserver) untuk perincian lebih lanjut dan contoh dunia nyata.
 
 
 ## Peningkatan Pemblokir Pop-up {: #popup-blocker }
@@ -69,7 +69,7 @@ Mulai dari Chrome 64, jenis navigasi ini akan diblokir, dan Chrome akan menampil
 
 ## `import.meta` {: #import-meta }
 
-Saat menulis modul JavaScript, Anda sering ingin mengakses metadata khusus-host tentang modul saat ini. Chrome 64 sekarang mendukung properti `import.meta` dalam modul dan mengekspos URL untuk modul sebagai `import.meta.url`.
+Saat menulis modul JavaScript, Anda sering ingin mengakses metadata khusus-host tentang modul saat ini. Chrome 64 sekarang mendukung properti `import.meta` dalam modul dan memaparkan URL untuk modul tersebut sebagai `import.meta.url`.
 
 Ini sangat membantu ketika Anda ingin menyelesaikan sumber daya relatif terhadap file modul yang bertentangan dengan dokumen HTML saat ini.
 
@@ -80,8 +80,8 @@ Ini hanyalah beberapa perubahan di Chrome 64 untuk pengembang, tentu saja, masih
 
 * Chrome sekarang mendukung [tangkapan bernama](/web/updates/2017/07/upcoming-regexp-features#named_captures) dan [Pelolosan properti Unicode](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) dalam ekspresi reguler.
 * Nilai default `preload` untuk elemen `<audio>` dan `<video>` sekarang `metadata`. Ini membawa Chrome sejalan dengan peramban lain dan membantu mengurangi penggunaan bandwidth dan sumber daya dengan hanya memuat metadata dan bukan media itu sendiri.
-* Anda sekarang dapat menggunakan `Request.prototype.cache` untuk melihat mode cache dari `Request` dan menentukan apakah permintaan merupakan permintaan pemuatan ulang.
-* Menggunakan API Manajemen Fokus, Anda sekarang dapat memfokuskan elemen tanpa menggulirnya dengan atribut `preventScroll`.
+* Sekarang Anda dapat menggunakan `Request.prototype.cache` untuk melihat mode cache `Request` dan menentukan apakah permintaan merupakan permintaan pemuatan ulang.
+* Dengan menggunakan API Manajemen Fokus, Anda sekarang dapat memfokuskan elemen tanpa menggulirnya ke atribut `preventScroll`.
 
 ## `window.alert()` {: #window-alert }
 

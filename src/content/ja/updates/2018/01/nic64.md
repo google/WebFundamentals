@@ -9,7 +9,7 @@ description: What's new in Chrome 64 for developers?
 {# wf_featured_snippet: Chrome 64 adds support for ResizeObservers, which will notify you when an element’s content rectangle has changed its size. Modules can now access to host specific metadata with import.metadata The pop-up blocker gets strong and plenty more. Let’s dive in and see what’s new for developers in Chrome 64! #}
 {# wf_blink_components: N/A #}
 
-＃Chrome 64の新機能{: .page-title }
+＃Chrome 64の新機 {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 

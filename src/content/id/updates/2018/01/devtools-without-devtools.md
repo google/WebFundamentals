@@ -19,7 +19,7 @@ Saya biasanya melihat pertanyaan di sepanjang baris "Saya sangat suka fitur X De
 
 Jawaban singkatnya adalah: Anda mungkin tidak bisa.
 
-Namun, Anda * dapat * meretas skrip [Puppeteer][puppeteer]{: external } yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP] PRAGMAS1), tanpa pernah secara eksplisit membuka DevTools.
+Namun, Anda * dapat * meretas skrip [Puppeteer][puppeteer]{:.external} yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP] PRAGMAS1), tanpa pernah secara eksplisit membuka DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -52,15 +52,15 @@ Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di
 
 Ini hanyalah salah satu dari sekian banyak fitur DevTools yang dapat Anda akses secara potensial melalui Chrome DevTools Protocol.
 
-Saran umum: lihat [Puppeteer API][API]{: external } sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [cakupan kode][coverage] PRAGMAS1 dan [intercepting ** Console ** messages][console] PRAGMAS2.
+Saran umum: lihat [Puppeteer API][API]{:.external} sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [cakupan kode][coverage] PRAGMAS1 dan [intercepting ** Console ** messages][console] PRAGMAS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Jika Anda memerlukan bantuan mengakses fitur DevTools melalui Puppeteer, [ajukan pertanyaan tentang Stack Overflow][SO]{: external }.
+Jika Anda memerlukan bantuan mengakses fitur DevTools melalui Puppeteer, [ajukan pertanyaan tentang Stack Overflow][SO]{:.external}.
 
-Jika Anda ingin memamerkan skrip Puppeteer yang memanfaatkan Protokol DevTools, tweet kami di [@ChromeDevTools][twitter]{: external }.
+Jika Anda ingin memamerkan skrip Puppeteer yang memanfaatkan Protokol DevTools, tweet kami di [@ChromeDevTools][twitter]{:.external}.
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

@@ -11,7 +11,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-＃DevToolsを開くことなくDevTools機能を使用する{: .page-title }
+＃DevToolsを開くことなくDevTools機能を使用す {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -19,7 +19,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 短い答えは、おそらくできないことです。
 
-しかし、Chromiumを起動し、リモートデバッグクライアントを開き、（[Chrome DevTools Protocol][puppeteer]{: external }を使用して）好きなDevTools機能をオンにする[Puppeteer][CDP] PRAGMAS0スクリプトを一緒にハックすることができますDevToolsを明示的に開くことはありません。
+しかし、Chromiumを起動し、リモートデバッグクライアントを開き、（[Chrome DevTools Protocol][puppeteer]{:.external}を使用して）好きなDevTools機能をオンにする[Puppeteer][CDP] PRAGMAS0スクリプトを一緒にハックすることができますDevToolsを明示的に開くことはありません。
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -52,15 +52,15 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 
-一般的な提案：DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{: external }をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage] PRAGMAS1と[インターセプト**コンソール**メッセージ][console] PRAGMAS2など、DevToolsの多くの機能に専用のAPIを既に用意しています。
+一般的な提案：DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage] PRAGMAS1と[インターセプト**コンソール**メッセージ][console] PRAGMAS2など、DevToolsの多くの機能に専用のAPIを既に用意しています。
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Puppeteerを介してDevTools機能にアクセスするための助けが必要な場合は、[Stack Overflowについての質問][SO]{: external }。
+Puppeteerを介してDevTools機能にアクセスするための助けが必要な場合は、[Stack Overflowについての質問][SO]{:.external}。
 
-DevToolsプロトコルを使用するPuppeteerスクリプトを見せたい場合は、[@ChromeDevTools][twitter]{: external }でつぶやいてください。
+DevToolsプロトコルを使用するPuppeteerスクリプトを見せたい場合は、[@ChromeDevTools][twitter]{:.external}でつぶやいてください。
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools
