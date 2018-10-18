@@ -3,10 +3,10 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 70 for developers?
 
 {# wf_published_on: 2018-10-16 #}
-{# wf_updated_on: 2018-10-16 #}
+{# wf_updated_on: 2018-10-18 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome70,new-in-chrome,progressive-web-apps,desktop,credentials,security,workers #}
-{# wf_featured_snippet: Chrome 70 adds support for Desktop Progressive Web Apps on Windows, adds support for Public Key Credentials to the Credential Management API, allows you to provide a <code>name</code> to dedicated <code>workers</code> and plenty more. Let’s dive in and see what’s new for developers in Chrome 70! #}
+{# wf_featured_snippet: Chrome 70 adds support for Desktop Progressive Web Apps on Windows and Linux, support for Public Key Credentials to the Credential Management API, allows you to provide a <code>name</code> to dedicated <code>workers</code> and plenty more. Let’s dive in and see what’s new for developers in Chrome 70! #}
 {# wf_blink_components: N/A #}
 
 # New in Chrome 70 {: .page-title }
@@ -23,7 +23,7 @@ description: What's new in Chrome 70 for developers?
 
 In Chrome 70, we've added support for:
 
-* [Desktop Progressive Web Apps on Windows](#dpwa-windows).
+* [Desktop Progressive Web Apps on Windows & Linux](#dpwa-windows).
 * The credential management API adds support for [Public Key Credentials](#pki).
 * And you can now [name workers](#named-workers)!
 
@@ -38,9 +38,9 @@ Note: Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/69.0.3497.81..70.0.3538.66).
 
 
-## Desktop Progressive Web Apps on Windows {: #dpwa-windows }
+## Desktop Progressive Web Apps on Windows & Linux {: #dpwa-windows }
 
-**Users can now install Desktop Progressive Web Apps on Windows!**
+**Users can now install Desktop Progressive Web Apps on Windows & Linux!**
 
 <a href="https://storage.googleapis.com/webfundamentals-assets/updates/2018/10/spotify-on-windows.mp4">
   <video class="attempt-right screenshot" autoplay muted loop>
@@ -70,11 +70,12 @@ when the user clicks the button, call
 saved event; Chrome will then show the prompt to the user. If they click add,
 Chrome will add your PWA to their start menu and desktop.
 
-See my [Desktop PWAs](/web/updates/2018/05/dpwa) post for complete details.
+See my [Desktop PWAs](/web/progressive-web-apps/desktop) post for complete details.
 
 <div class="clearfix"></div>
 
-Note: Mac and Linux support is expected to arrive in Chrome 72.
+Note: Mac support is expected to arrive in Chrome 72. Linux support was added
+in Chrome 70, but was accidentally left out of the original version of this post.
 
 <div class="clearfix"></div>
 
