@@ -48,31 +48,31 @@ async function translateLines(text, to) {
   // Find things that look like a src="" and don't replace
   text = text.replace(/src=\"([^\"]+)\"/g, (match, p1, p2, offset, str) => {
     srcs.push(match);
-    return `__SRCURL__ ${srcs.length-1}`;
+    return `SRCURL${srcs.length-1}`;
   });
 
   // Find things that look like a src='' and don't replace
   text = text.replace(/src=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
     srcs.push(match);
-    return `__SRCURL__ ${srcs.length-1}`;
+    return `SRCURL${srcs.length-1}`;
   });
 
   // Find things that look like a href='' and don't replace
   text = text.replace(/href=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
     srcs.push(match);
-    return `__SRCURL__ ${srcs.length-1}`;
+    return `SRCURL${srcs.length-1}`;
   });
 
   // Find things that look like a href="" and don't replace
   text = text.replace(/href=\"([^\']+)\"/g, (match, p1, p2, offset, str) => {
     srcs.push(match);
-    return `__SRCURL__ ${srcs.length-1}`;
+    return `SRCURL${srcs.length-1}`;
   });
 
   // Find {: } [][] links and replace URL.
   text = text.replace(/\{:([^\}]+)\}/g, (match, p1, p2, offset, str) => {
     pragmas.push(p1);
-    return `__PRAGMAS__ ${pragmas.length-1}`;
+    return `PRAGMAS${pragmas.length-1}`;
   });
 
   // Find special words and don't translate
@@ -122,7 +122,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all {: } 
-    translation = translation.replace(/__PRAGMAS__ (\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/PRAGMAS(\d+)/, (match, p1, p2, offset, str) => {
       return `{:${pragmas.shift()}}`;
     });
 
@@ -132,7 +132,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all src="" and src=''
-    translation = translation.replace(/__SRCURL__ (\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SRCURL(\d+)/, (match, p1, p2, offset, str) => {
       return `${srcs.shift()}`;
     });
 

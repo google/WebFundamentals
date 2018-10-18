@@ -11,7 +11,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Mises à jour du phare 2.7 {: .page-title }
+# Mise à jour du phare 2.7 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -57,7 +57,7 @@ Remarque: de nombreux facteurs affectent le classement du moteur de recherche d'
   </figcaption>
 </ figure>
 
-## Nouveaux audits manuels d'accessibilité {: #a11y }
+## Nouveaux audits manuels d’accessibilité {: #a11y }
 
 Les nouvelles vérifications manuelles de l'accessibilité vous informent des choses que vous pouvez faire pour améliorer l'accessibilité de votre page. "Manuel" signifie ici que Lighthouse ne peut pas automatiser ces audits. Vous devez donc les tester manuellement.
 

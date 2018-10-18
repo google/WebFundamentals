@@ -33,7 +33,7 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
 
 Remarque: vérifiez la version de Chrome utilisée `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
-## Remplacements locaux {: #overrides }
+## Remplacement local {: #overrides }
 
 ** Les remplacements locaux ** vous permettent d'apporter des modifications à DevTools et de les conserver tout au long du chargement des pages. Auparavant, toute modification apportée dans DevTools était perdue lorsque vous rechargiez la page.
 ** Les substitutions locales ** fonctionnent pour la plupart des types de fichiers, à quelques exceptions près. Voir [Limitations](#overrides-limitations).
@@ -91,7 +91,7 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
 
 Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées déficiences de la vision.
 
-### Volet d'accessibilité {: #a11y-pane }
+### Volet d’accessibilité {: #a11y-pane }
 
 Utilisez le volet ** Accessibilité ** du panneau ** Eléments ** pour examiner les propriétés d'accessibilité de l'élément actuellement sélectionné.
 
@@ -127,12 +127,12 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   </figcaption>
 </ figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced] __ PRAGMAS__ 0. S'il ne comporte qu'une coche, conforme au [rapport de contraste minimal recommandé (AA)][minimum] __ PRAGMAS__ 1.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced] {:.external}. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] __ PRAGMAS__ 0 pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
+Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
 ** La figure 6 ** correspond aux recommandations. Cela signifie que toutes les couleurs situées au-dessous de la ligne blanche sont également conformes aux recommandations.
 
 <figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -208,9 +208,9 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 [2.6]: /web/updates/2017/12/lighthouse
 [2.7]: /web/updates/2018/01/lighthouse
 
-## Code de progression fiable avec les opérateurs et le code asynchrone {: #stepping }
+## Code pas à pas fiable avec les travailleurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] __ PRAGMAS__ 0 lorsque vous entrez dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] __ PRAGMAS__ 1 à la place.
+Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -237,7 +237,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
   </figcaption>
 </ figure>
 
-### Passage dans le code asynchrone {: #async }
+### Passage au code asynchrone {: #async }
 
 Lorsque vous entrez dans le code asynchrone, DevTools suppose maintenant que vous souhaitez suspendre le code asynchrone qui s'exécute.
 
@@ -259,7 +259,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a
   </figcaption>
 </ figure>
 
-## Plusieurs enregistrements dans le panneau Performances {: #recordings }
+## Plusieurs enregistrements dans le panneau Performance {: #recordings }
 
 Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairement jusqu'à 5 enregistrements. Les enregistrements sont supprimés lorsque vous fermez la fenêtre de DevTools. Voir [Mise en route pour l'analyse des performances d'exécution][runtime] pour vous familiariser avec le panneau ** Performance **.
 
@@ -314,7 +314,7 @@ Remarque: Canary est la version avancée de Chrome. Il est publié dès sa const
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Feedback {: #feedback }
+## Commentaires {: #feedback }
 
 Le meilleur endroit pour discuter des fonctionnalités ou des modifications que vous voyez ici est la [liste de diffusion google-chrome-developer-tools@googlegroups.com][ML]. Vous pouvez également nous envoyer un courriel à [@ChromeDevTools](https://twitter.com/chromedevtools) si vous manquez de temps. Si vous êtes certain d'avoir rencontré un bogue dans DevTools, veuillez [ouvrir un problème](https://crbug.com/new).
 
