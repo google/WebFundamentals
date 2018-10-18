@@ -78,7 +78,7 @@ async function translateLines(text, to) {
   // Find special words and don't translate
   text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
     specialWords.push(p1);
-    return `(__SPECIAL_WORD__ ${specialWords.length-1})`;
+    return `__SPECIALWORD${specialWords.length-1}`;
   });
 
   const output = [];
@@ -136,7 +136,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all specialWords 
-    translation = translation.replace(/\(__SPECIAL_WORD__ (\d+)\)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/__SPECIALWORD(\d+)/g, (match, p1, p2, offset, str) => {
       return `\`${specialWords.shift()}\``;
     });
 
