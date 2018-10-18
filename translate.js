@@ -96,13 +96,7 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\] \(([^\)]+)\)/g,'[$1]($2)');
     // Find markdown links that are broken [] [] => [][]
     translation = translation.replace(/\[([^\]]+)\] \[([^\]]+)\]/g,'[$1][$2]');
-    // Find annotated markdown links [@ChromeDevTools][twitter] {:. external} => [][]{}
-    translation = translation.replace(/\[([^\]]+)\]\[([^\]]+)\] \{([^\}]+)\}/g,'[$1][$2]{$3}');
-    // Clean up {:. external} => [][]{}
-    translation = translation.replace(/\{:.([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
-      return `{:.${p1.toLowerCase().replace(' ', '')}}`;
-    });
-
+    
     // Clean up things that look like broken tags
     translation = translation.replace(/<\/ ([^>]+)>/g,  (match, p1, p2, offset, str) => {
       return `${match.replace(' ', '')}`;
@@ -144,6 +138,17 @@ async function translateLines(text, to) {
     // Remap all specialWords 
     translation = translation.replace(/\(__SPECIAL_WORD__ (\d+)\)/g, (match, p1, p2, offset, str) => {
       return `\`${specialWords.shift()}\``;
+    });
+
+    // Fix things after the major replacements have happened
+
+    // Find annotated markdown links [@ChromeDevTools][twitter] {:.external} => [][]{}
+    translation = translation.replace(/\[([^\]]+)\]\[([^\]]+)\] \{([^\}]+)\}/g,'[$1][$2]{$3}');
+     // Find annotated markdown links [@ChromeDevTools](twitter){:.external} => [](){}
+     translation = translation.replace(/\[([^\]]+)\]\(([^\)]+)\) \{([^\}]+)\}/g,'[$1]($2){$3}');
+    // Clean up {:. external} => [][]{}
+    translation = translation.replace(/\{:.([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
+      return `{: ${p1.toLowerCase().replace(' ', '')} }`;
     });
 
     output.push(translation);

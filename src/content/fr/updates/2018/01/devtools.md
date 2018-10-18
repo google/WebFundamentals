@@ -89,9 +89,9 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
 
 ## Nouveaux outils d'accessibilité {: #a11y }
 
-Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées déficiences de la vision.
+Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées. déficiences de la vision.
 
-### Volet d’accessibilité {: #a11y-pane }
+### Volet d'accessibilité {: #a11y-pane }
 
 Utilisez le volet ** Accessibilité ** du panneau ** Eléments ** pour examiner les propriétés d'accessibilité de l'élément actuellement sélectionné.
 
@@ -116,7 +116,7 @@ Consultez l'étiquette A11ycast de Rob Dodson sur l'étiquetage ci-dessous pour 
 
 ### Rapport de contraste dans le sélecteur de couleurs {: #contrast }
 
-Le [Color Picker][CP] vous indique maintenant le rapport de contraste des éléments de texte. L'augmentation du rapport de contraste des éléments de texte rend votre site plus accessible aux utilisateurs malvoyants ou souffrant de troubles de la vision des couleurs. Voir [Couleur et contraste][contrast] pour en savoir plus sur la manière dont le rapport de contraste affecte l'accessibilité
+Le [Color Picker][CP] vous indique maintenant le rapport de contraste des éléments de texte. L'augmentation du rapport de contraste des éléments de texte rend votre site plus accessible aux utilisateurs malvoyants ou souffrant de troubles de la vision des couleurs. Voir [Couleur et contraste][contrast] pour en savoir plus sur l’influence du taux de contraste sur l’accessibilité.
 
 L&#39;amélioration du contraste des couleurs de vos éléments de texte rend votre site plus utilisable par <i>tous les</i> utilisateurs. En d&#39;autres termes, si votre texte est gris avec un arrière-plan blanc, il est difficile à lire pour quiconque.
 
@@ -127,12 +127,12 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   </figcaption>
 </figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced] {:.external}. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{: external }. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
+Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {: cdt-inl } pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
 ** La figure 6 ** correspond aux recommandations. Cela signifie que toutes les couleurs situées au-dessous de la ligne blanche sont également conformes aux recommandations.
 
 <figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -210,7 +210,7 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 
 ## Code pas à pas fiable avec les travailleurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
+Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {: cdt-inl } pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

@@ -19,7 +19,7 @@ Je vois souvent des questions du type "J'aime beaucoup la fonctionnalité X de D
 
 La réponse courte est: vous ne pouvez probablement pas.
 
-Toutefois, vous * pouvez * pirater un script [Puppeteer][puppeteer] {:.external} qui lance Chromium, ouvre un client de débogage distant, puis active la fonctionnalité DevTools que vous aimez (via le [Protocole Chrome DevTools][CDP] PRAGMAS1), sans jamais ouvrir explicitement DevTools.
+Toutefois, vous * pouvez * pirater un script [Puppeteer][puppeteer]{: external } qui lance Chromium, ouvre un client de débogage distant, puis active la fonctionnalité DevTools que vous aimez (via le [Protocole Chrome DevTools][CDP] PRAGMAS1), sans jamais ouvrir explicitement DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -52,15 +52,15 @@ Par exemple, le script ci-dessous me permet de superposer le [mètre FPS][FPS] e
 
 Il ne s'agit que de l'une des nombreuses fonctionnalités de DevTools auxquelles vous pouvez potentiellement accéder via le protocole Chrome DevTools.
 
-Une suggestion générale: consultez l'API [Puppeteer][API] {:.external} avant de créer un client avec le protocole DevTools. Puppeteer dispose déjà d’API dédiées à de nombreuses fonctionnalités de DevTools, telles que [couverture de code][coverage] PRAGMAS1 et [messages interceptant ** Console **][console] PRAGMAS2.
+Une suggestion générale: consultez l'API [Puppeteer][API]{: external } avant de créer un client avec le protocole DevTools. Puppeteer dispose déjà d’API dédiées à de nombreuses fonctionnalités de DevTools, telles que [couverture de code][coverage] PRAGMAS1 et [messages interceptant ** Console **][console] PRAGMAS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Si vous avez besoin d'aide pour accéder à une fonctionnalité de DevTools via Puppeteer, [posez une question sur le dépassement de capacité de la pile][SO] {:.external}.
+Si vous avez besoin d'aide pour accéder à une fonctionnalité de DevTools via Puppeteer, [posez une question sur le dépassement de capacité de la pile][SO]{: external }.
 
-Si vous voulez montrer un script Puppeteer qui utilise le protocole DevTools, envoyez-nous un tweet à l'adresse [@ChromeDevTools][twitter] {:.external}.
+Si vous voulez montrer un script Puppeteer qui utilise le protocole DevTools, envoyez-nous un tweet à l'adresse [@ChromeDevTools][twitter]{: external }.
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools
