@@ -60,10 +60,22 @@ async function translateLines(text, to) {
 
   // Note these fixes are not sustainable
   translations.forEach((translation, i) => {
-    // Find markdown links that are broken () [] => ()[]
+
+    // Find markdown links that are broken [] () => []()
     translation = translation.replace(/\[([^\]]+)\] \(([^\)]+)\)/g,'[$1]($2)');
     // Find markdown links that are broken [] [] => [][]
     translation = translation.replace(/\[([^\]]+)\] \[([^\]]+)\]/g,'[$1][$2]');
+    // Find annotated markdown links [@ChromeDevTools][twitter] {:. external} => [][]{}
+    translation = translation.replace(/\[([^\]]+)\]\[([^\]]+)\] \{([^\}]+)\}/g,'[$1][$2]{$3}');
+    // Clean up {:. external} => [][]{}
+    translation = translation.replace(/\{:.([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
+      return `{:.${p1.toLowerCase().replace(' ', '')}}`;
+    });
+
+    // Find markdown image links that are broken ! []() => ![]()
+    translation = translation.replace(/! \[([^\]]+)\]\(([^\)]+)\)/g,' ![$1]($2)');
+    // Find markdown image links that are broken ! []() => ![][]
+    translation = translation.replace(/! \[([^\]]+)\]\[([^\]+)])/g,' ![$1][$2]');
     // Find markdown links where the target has spaces in the wrong place [](/ ERROR /)
     translation = translation.replace(/\[([^\]]+)\]\(\/( ([^\)]+) )\/\)/g,'[$1]($3)');
     translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
@@ -166,7 +178,7 @@ async function processFile(filePath, target) {
   const newPath = filePath.replace(/src\/content\/en\//, `src/content/${target}/`);
   ensureDirectoryExistence(newPath);
   fs.writeFileSync(newPath, result);
-  console.log(`Translation written to '${filePath.replace(/src\/content\/en/, `src/content/${target}/`)}`);
+  console.log(`Translation written to '${newPath}`);
 }
 
 targets.forEach(async (target) => {
