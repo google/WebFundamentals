@@ -29,7 +29,7 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
 <div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</ div>
+</div>
 
 Remarque: vérifiez la version de Chrome utilisée `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
@@ -43,7 +43,7 @@ Remarque: vérifiez la version de Chrome utilisée `chrome://version`. Si vous u
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
   </figcaption>
-</ figure>
+</figure>
 
 Comment ça marche:
 
@@ -85,7 +85,7 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
   </figcaption>
-</ figure>
+</figure>
 
 ## Nouveaux outils d'accessibilité {: #a11y }
 
@@ -104,7 +104,7 @@ Utilisez le volet ** Accessibilité ** du panneau ** Eléments ** pour examiner 
     and computed properties for the element that's currently selected in the <b>DOM Tree</b> on
     the <b>Elements</b> panel, as well as its position in the accessibility tree
   </figcaption>
-</ figure>
+</figure>
 
 Consultez l'étiquette A11ycast de Rob Dodson sur l'étiquetage ci-dessous pour voir le volet ** Accessibility ** en action.
 
@@ -112,7 +112,7 @@ Consultez l'étiquette A11ycast de Rob Dodson sur l'étiquetage ci-dessous pour 
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
-</ div>
+</div>
 
 ### Rapport de contraste dans le sélecteur de couleurs {: #contrast }
 
@@ -125,7 +125,7 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
   </figcaption>
-</ figure>
+</figure>
 
 Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced] {:.external}. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
 
@@ -140,7 +140,7 @@ Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développ
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
   </figcaption>
-</ figure>
+</figure>
 
 [CP]: /web/tools/chrome-devtools/css/reference#color-picker
 [contrast]: /web/fundamentals/accessibility/accessible-styles#color_and_contrast
@@ -157,7 +157,7 @@ Reportez-vous à la section [Exécuter Lighthouse dans Chrome DevTools][audit] o
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
-</ div>
+</div>
 
 [audit]: /web/tools/lighthouse/#devtools
 
@@ -176,7 +176,7 @@ S'assurer que vos pages réussissent chacun des audits de la nouvelle catégorie
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
   </figcaption>
-</ figure>
+</figure>
 
 ### Nouveaux audits de performance {: #performance }
 
@@ -226,7 +226,7 @@ Par exemple, l’application de la Figure 8 ** transmet un message entre le fil 
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
   </figcaption>
-</ figure>
+</figure>
 
 Lorsque vous êtes entré dans un code comme celui-ci dans les versions précédentes de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la Figure ** **.
 
@@ -235,7 +235,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
   </figcaption>
-</ figure>
+</figure>
 
 ### Passage au code asynchrone {: #async }
 
@@ -248,7 +248,7 @@ Par exemple, dans la ** figure 10 ** après être entré dans `setTimeout()`, De
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
   </figcaption>
-</ figure>
+</figure>
 
 Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a interrompu la lecture du code chronologiquement, comme vous pouvez le voir sur la ** figure 11 **.
 
@@ -257,7 +257,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
   </figcaption>
-</ figure>
+</figure>
 
 ## Plusieurs enregistrements dans le panneau Performance {: #recordings }
 
@@ -270,7 +270,7 @@ Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairemen
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel
   </figcaption>
-</ figure>
+</figure>
 
 ## Bonus: Automatisez les actions DevTools avec Puppeteer 1.0 {: #puppeteer }
 

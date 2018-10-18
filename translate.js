@@ -103,6 +103,11 @@ async function translateLines(text, to) {
       return `{:.${p1.toLowerCase().replace(' ', '')}}`;
     });
 
+    // Clean up things that look like broken tags
+    translation = translation.replace(/<\/ ([^>]+)>/g,  (match, p1, p2, offset, str) => {
+      return `${match.replace(' ', '')}`;
+    });
+
     // Find markdown image links that are broken ! []() => ![]()
     translation = translation.replace(/! \[([^\]]+)\]\(([^\)]+)\)/g,' ![$1]($2)');
     // Find markdown image links that are broken ! []() => ![][]

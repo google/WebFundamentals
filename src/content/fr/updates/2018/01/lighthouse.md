@@ -55,7 +55,7 @@ Remarque: de nombreux facteurs affectent le classement du moteur de recherche d'
   <figcaption>
     <b>Figure 1</b>. The new <b>SEO</b> category
   </figcaption>
-</ figure>
+</figure>
 
 ## Nouveaux audits manuels d’accessibilité {: #a11y }
 
@@ -72,7 +72,7 @@ Les nouvelles vérifications manuelles de l'accessibilité vous informent des ch
   <figcaption>
     <b>Figure 2</b>. The new, manual <b>Accessibility</b> audits
   </figcaption>
-</ figure>
+</figure>
 
 ## Mises à jour de l'audit WebP {: #webp }
 
@@ -86,6 +86,6 @@ Grâce à certains [commentaires de la communauté][feedback], l'audit [WebP][we
   <figcaption>
     <b>Figure 3</b>. The new WebP audit
   </figcaption>
-</ figure>
+</figure>
 
 {% include "web/_shared/rss-widget-updates.html" %}

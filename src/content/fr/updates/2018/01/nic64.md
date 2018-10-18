@@ -18,7 +18,7 @@ description: What's new in Chrome 64 for developers?
 <div class="video-wrapper">   <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</ div>
+</div>
 
 * La prise en charge de [`ResizeObservers`](#resizeobserver) vous avertira lorsque le rectangle de contenu d’un élément aura changé de taille.
 * Les modules peuvent désormais accéder à des métadonnées spécifiques à l’hôte avec [import.meta](#import-meta).

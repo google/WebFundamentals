@@ -138,7 +138,7 @@ Nous pouvons maintenant utiliser le même code pour tous les types de damiers. M
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_x264.mp4"
       type="video/mp4; codecs=h264">
   </video>
-</ div>
+</div>
 
 Remarque: il serait bon de paramétrer les couleurs, n’est-ce pas? La spécification permet à la fonction `paint()` de prendre une liste d'arguments. Cette fonctionnalité n’est pas encore implémentée dans Chrome, car elle fait largement appel à l’API Propriétés et valeurs de Houdini, qui nécessite encore du travail avant de pouvoir être expédiée.
 
