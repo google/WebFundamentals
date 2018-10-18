@@ -1,0 +1,149 @@
+#! /usr/bin/node
+// Imports the Google Cloud client library
+const { Translate } = require('@google-cloud/translate');
+const program = require('commander');
+const fs = require('fs');
+const path = require('path');
+
+program
+  .version('0.1.0')
+  .option('-s, --source [path]', 'Add in the source file.')
+  .option('-t, --target <lang>', 'Add target language.')
+  .parse(process.argv);
+
+// Creates a client
+const translate = new Translate({
+  projectId: 'html5rocks-hrd'
+});
+
+const targets = program.target.split(',')
+
+async function translateLines(text, to) {
+  console.log('Translating paragraph',text)
+  if(text === ' ') return ' ';
+  const links = [];
+  const specialWords = [];
+
+  // Find markdown links and replace URL.
+  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2, offset, str) => {
+    links.push(p2);
+    return `[${p1}](${links.length-1})`;
+  });
+
+  // Find special words and don't translate
+  text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
+    specialWords.push(p1);
+    return `(SPECIAL ${specialWords.length-1})`;
+  });
+
+  const output = [];
+  let results = await translate.translate(text, {to});
+
+  let translations = results[0];
+  translations = Array.isArray(translations)
+    ? translations
+    : [translations];
+
+  // Note these fixes are not sustainable
+  translations.forEach((translation, i) => {
+    // Find markdown links that are broken () [] => ()[]
+    translation = translation.replace(/\[([^\]]+)\] \(([^\)]+)\)/g,'[$1]($2)');
+    // Find markdown links where the target has spaces in the wrong place [](/ ERROR /)
+    translation = translation.replace(/\[([^\]]+)\]\(\/( ([^\)]+) )\/\)/g,'[$1]($3)');
+    translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
+
+    // Remap all links
+    translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/g, (match, p1, p2, offset, str) => {
+      return `[${p1}](${links.shift()})`;
+    });
+
+    // Remap all specialWords 
+    translation = translation.replace(/\(SPECIAL (\d+)\)/g, (match, p1, p2, offset, str) => {
+      return `\`${specialWords.shift()}\``;
+    });
+
+    output.push(translation);
+  });
+
+  return output.join('\n');
+};
+
+
+function ensureDirectoryExistence(filePath) {
+  var dirname = path.dirname(filePath);
+  if (fs.existsSync(dirname)) {
+    return true;
+  }
+  ensureDirectoryExistence(dirname);
+  fs.mkdirSync(dirname);
+}
+
+// Translates the text into the target language. "text" can be a string for
+// translating a single piece of text, or an array of strings for translating
+// multiple texts.
+async function processFile(filePath, target) {
+
+  const text = fs.readFileSync(filePath, 'utf8');
+  const lines = text.split('\n');
+  const output = [];
+  let translateBlock = [];
+
+  // Statemachine variables.
+  let inHeader = false;
+  let inCodeTicks = false;
+  let inCodeSpaces = false;
+  let inQuote = false;
+  let headerNeedsParse = true;
+  for (const line of lines) {
+    // Don't translate preamble - we are assuming there is a header that ends with just a \n
+    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(line); continue; }
+    if (headerNeedsParse) { inHeader = true; output.push(line); continue; }
+    if (inHeader) { output.push(line); continue; }
+
+    // Don't translate code
+    if (inCodeTicks && line.startsWith('```')) { inCodeTicks = false; output.push(line); continue; }
+    if (line.startsWith('```')) { inCodeTicks = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (inCodeTicks) { output.push(line); continue; }
+
+    // Don't translate code prefixed with spaces
+    if (inCodeSpaces && line.startsWith('    ') === false) { inCodeSpaces = false; output.push(line); continue; }
+    if (line.startsWith('    ')) { inCodeSpaces = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (inCodeSpaces) { output.push(line); continue; }
+
+    // Dont translate quotes
+    if (inQuote && line.startsWith('>') === false) { inQuote = false; }
+    if (line.startsWith('>')) { inQuote = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (inQuote) { output.push(line); continue; }
+
+    // Don't translate processing directives, but translate previous text
+    if (line.startsWith('{# ')) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+
+     // Don't translate processing directives, but translate previous text
+     if (line.startsWith('{% ')) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+
+    // Treat empty line as point to translate paragraph
+    if (line.charAt(0) === '\n' || line.length === 0) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+
+    // Treat list as paragraphs
+    if (line.match(/^[\s]*\*/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
+
+    translateBlock.push(line);
+  }
+
+  if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target))
+
+  const result = output.join('\n');
+  const newPath = filePath.replace(/src\/content\/en\//, `src/content/${target}/`);
+  ensureDirectoryExistence(newPath);
+  fs.writeFileSync(newPath, result);
+  console.log(`Translation written to '${filePath.replace(/src\/content\/en/, `src/content/${target}/`)}`);
+}
+
+targets.forEach(async (target) => {
+  try {
+    await processFile(program.source, target);
+  } catch (ex) {
+    console.log(target, ex)
+    process.exit(-1);   
+  }
+})
