@@ -22,6 +22,7 @@ async function translateLines(text, to) {
   console.log('Translating paragraph',text)
   if(text === ' ') return ' ';
   const links = [];
+  const srcs = [];
   const linkDefs = [];
   const squareLinks = [];
   const specialWords = [];
@@ -43,6 +44,30 @@ async function translateLines(text, to) {
   text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (match, p1, p2, offset, str) => {
     squareLinks.push(p2);
     return `[${p1}][${squareLinks.length-1}]`;
+  });
+
+  // Find things that look like a src="" and don't replace
+  text = text.replace(/src=\"([^\"]+)\"/g, (match, p1, p2, offset, str) => {
+    srcs.push(match);
+    return `__SRCURL__ ${srcs.length-1}`;
+  });
+
+  // Find things that look like a src='' and don't replace
+  text = text.replace(/src=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
+    srcs.push(match);
+    return `__SRCURL__ ${srcs.length-1}`;
+  });
+
+  // Find things that look like a href='' and don't replace
+  text = text.replace(/href=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
+    srcs.push(match);
+    return `__SRCURL__ ${srcs.length-1}`;
+  });
+
+  // Find things that look like a href="" and don't replace
+  text = text.replace(/href=\"([^\']+)\"/g, (match, p1, p2, offset, str) => {
+    srcs.push(match);
+    return `__SRCURL__ ${srcs.length-1}`;
   });
 
   // Find {: } [][] links and replace URL.
@@ -98,15 +123,20 @@ async function translateLines(text, to) {
     });
 
     // Remap all {: } 
-    translation = translation.replace(/__PRAGMAS__ (.+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/__PRAGMAS__ (\d+)/, (match, p1, p2, offset, str) => {
       return `{:${pragmas.shift()}}`;
     });
 
     // Remap all link defintions 
-    translation = translation.replace(/^__LINK_DEFS__ (.+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/^__LINK_DEFS__ (\d+)/, (match, p1, p2, offset, str) => {
       return `${linkDefs.shift()}`;
     });
 
+    // Remap all src="" and src=''
+    translation = translation.replace(/__SRCURL__ (\d+)/, (match, p1, p2, offset, str) => {
+      console.log(match, p1, srcs)
+      return `${srcs.shift()}`;
+    });
 
     // Remap all specialWords 
     translation = translation.replace(/\(__SPECIAL_WORD__ (\d+)\)/g, (match, p1, p2, offset, str) => {
