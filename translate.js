@@ -151,9 +151,9 @@ async function translateLines(text, to) {
       return `{: .${p1.toLowerCase().replace(' ', '')} }`;
     });
 
-    // Bodge
+    // Bodge for Japan
     translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
-    
+    translation = translation.replace(/^#([^#\s])/g,'# $1');
 
     output.push(translation);
   });
