@@ -31,7 +31,7 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
   </iframe>
 </div>
 
-Remarque: vérifiez la version de Chrome utilisée `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
+Remarque: vérifiez la version de Google Chrome utilisée `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
 ## Remplacement local {: #overrides }
 
@@ -68,7 +68,7 @@ Pour configurer les ** dérogations locales **:
 ### Limitations {: #overrides-limitations }
 
 * DevTools n'enregistre pas les modifications apportées dans l'arborescence ** DOM ** du panneau ** Elements **. Modifiez le code HTML dans le panneau ** Sources ** à la place.
-* Si vous modifiez CSS dans le volet ** Styles ** et que la source de ce CSS est un fichier HTML, DevTools n'enregistre pas les modifications. Modifiez le fichier HTML dans le panneau ** Sources ** à la place.
+* Si vous modifiez CSS dans le volet ** Styles ** et que la source de ce CSS est un fichier HTML, DevTools n'enregistrera pas le changement. Modifiez le fichier HTML dans le panneau ** Sources ** à la place.
 
 ### Fonctions associées {: #overrides-related }
 
@@ -89,7 +89,7 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
 
 ## Nouveaux outils d'accessibilité {: #a11y }
 
-Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées. déficiences de la vision.
+Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées déficiences de la vision.
 
 ### Volet d'accessibilité {: #a11y-pane }
 
@@ -169,7 +169,7 @@ Remarque: le panneau ** Audits ** est alimenté par [Lighthouse][LH]. Chrome 64 
 
 ### Nouveaux audits SEO {: #seo }
 
-S'assurer que vos pages réussissent chacun des audits de la nouvelle catégorie ** SEO ** peut aider à améliorer votre classement dans les moteurs de recherche.
+En vous assurant que vos pages réussissent chacune des vérifications de la nouvelle catégorie ** SEO **, vous pourrez améliorer votre classement dans les moteurs de recherche.
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
@@ -228,7 +228,7 @@ Par exemple, l’application de la Figure 8 ** transmet un message entre le fil 
   </figcaption>
 </figure>
 
-Lorsque vous êtes entré dans un code comme celui-ci dans les versions précédentes de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la Figure ** **.
+Lorsque vous êtes entré dans un code comme celui-ci dans les versions précédentes de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la ** figure 9 **.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
@@ -241,7 +241,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
 
 Lorsque vous entrez dans le code asynchrone, DevTools suppose maintenant que vous souhaitez suspendre le code asynchrone qui s'exécute.
 
-Par exemple, dans la ** figure 10 ** après être entré dans `setTimeout()`, DevTools exécute tout le code menant à ce point derrière la scène, puis met en pause la fonction transmise à `setTimeout()`.
+Par exemple, dans la ** figure 10 ** après être entré dans `setTimeout()`, DevTools exécute tout le code menant à ce point en arrière-plan, puis met en pause la fonction transmise à `setTimeout()`.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
@@ -261,7 +261,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a
 
 ## Plusieurs enregistrements dans le panneau Performance {: #recordings }
 
-Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairement jusqu'à 5 enregistrements. Les enregistrements sont supprimés lorsque vous fermez la fenêtre de DevTools. Voir [Mise en route pour l'analyse des performances d'exécution][runtime] pour vous familiariser avec le panneau ** Performance **.
+Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairement jusqu'à 5 enregistrements. Les enregistrements sont supprimés lorsque vous fermez la fenêtre de DevTools. Reportez-vous à [Mise en route pour l'analyse des performances d'exécution][runtime] pour vous familiariser avec le panneau ** Performance **.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
@@ -272,7 +272,7 @@ Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairemen
   </figcaption>
 </figure>
 
-## Bonus: Automatisez les actions DevTools avec Puppeteer 1.0 {: #puppeteer }
+## Bonus: Automatisez les actions de DevTools avec Puppeteer 1.0 {: #puppeteer }
 
 Remarque: cette section n'est pas liée à Chrome 65.
 
@@ -308,7 +308,7 @@ Vous pouvez également utiliser Puppeteer pour exposer les fonctionnalités de D
 
 ## Une demande de l'équipe de DevTools: considérez Canary {: #canary }
 
-Si vous utilisez un ordinateur Mac ou Windows, veuillez utiliser [Chrome Canary][canary] comme navigateur de développement par défaut. Si vous signalez un bogue ou une modification que vous n'aimez pas tant qu'il est encore dans Canary, l'équipe de DevTools peut traiter vos commentaires beaucoup plus rapidement.
+Si vous utilisez Mac ou Windows, envisagez d'utiliser [Chrome Canary][canary] comme navigateur de développement par défaut. Si vous signalez un bogue ou une modification que vous n'aimez pas tant qu'il est encore dans Canary, l'équipe de DevTools peut traiter vos commentaires beaucoup plus rapidement.
 
 Remarque: Canary est la version avancée de Chrome. Il est publié dès sa construction, sans test. Cela signifie que Canary effectue des pauses de temps en temps, environ une fois par mois, et que cela se règle habituellement en un jour. Vous pouvez revenir à l'utilisation de Chrome Stable en cas de rupture de Canary.
 

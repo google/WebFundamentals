@@ -39,7 +39,7 @@ Le suivi des modifications de la taille d’un élément peut être un peu péni
 
 Et si la fenêtre du navigateur ne changeait pas de taille, mais si un nouvel élément était ajouté au document? Ou vous avez ajouté `display: none` à un élément? Ces deux éléments peuvent modifier la taille des autres éléments de la page.
 
-`ResizeObserver` vous avertit chaque fois que la taille d’un élément change et fournit la nouvelle hauteur et la nouvelle largeur de l’élément, réduisant ainsi le risque de contournement de la présentation.
+`ResizeObserver` vous avertit chaque fois que la taille d’un élément change et fournit la nouvelle hauteur et la nouvelle largeur de l’élément, ce qui réduit le risque de contournement de la présentation.
 
 Comme d'autres observateurs, son utilisation est assez simple, créez un objet `ResizeObserver` et transmettez un rappel au constructeur. Le rappel recevra un tableau de `ResizeOberverEntries` - une entrée par élément observé - contenant les nouvelles dimensions de l'élément.
 
@@ -87,13 +87,13 @@ Ce ne sont là que quelques-uns des changements apportés à Chrome 64 par les d
 
 Oh, et un de plus! Bien que ce ne soit pas vraiment une "fonctionnalité de développeur", cela me fait plaisir. `window.alert()` ne met plus un onglet d'arrière-plan au premier plan! Au lieu de cela, l'alerte sera affichée lorsque l'utilisateur reviendra à cet onglet.
 
-Plus de commutation aléatoire des onglets, car quelque chose a déclenché un `window.alert` sur moi. Je vous regarde le vieil agenda Google.
+Plus de tabulation aléatoire, car quelque chose m'a tiré dessus `window.alert`. Je vous regarde le vieil agenda Google.
 
 
 Assurez-vous de vous abonner (0) à notre [chaîne YouTube](https://goo.gl/6FP1a5) et vous recevrez une notification par e-mail chaque fois que nous lancerons une nouvelle vidéo ou ajouterons notre [flux RSS](https://www.youtube.com/user/ChromeDevelopers/) à votre lecteur de flux.
 
 
-Je suis Pete LePage. Dès que Chrome 65 sera disponible, je serai ici pour vous dire: les nouveautés de Chrome!
+Je suis Pete LePage. Dès que Chrome 65 sera disponible, je serai ici pour vous dire ce qu’il ya de nouveau dans Chrome!
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

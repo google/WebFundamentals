@@ -128,7 +128,7 @@ Heureusement, le worklet de peinture peut accéder à d’autres propriétés CS
 
     registerPaint('checkerboard', CheckerboardPainter);
 
-Nous pouvons maintenant utiliser le même code pour tous les types de damiers. Mais encore mieux, nous pouvons maintenant aller dans DevTools et [modifier les valeurs](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) jusqu'à ce que nous trouvions le bon look.
+Nous pouvons maintenant utiliser le même code pour tous les types de damiers. Mais mieux encore, nous pouvons maintenant aller dans DevTools et [modifier les valeurs](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) jusqu'à ce que nous trouvions le bon look.
 
 <div style="display: flex; justify-content: center">   <video loop muted controls>
     <source
