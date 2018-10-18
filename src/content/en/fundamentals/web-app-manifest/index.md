@@ -102,10 +102,6 @@ automatically scale the icon for the device. If you'd prefer to scale your
 own icons and adjust them for pixel-perfection, provide icons in increments
 of 48dp.
 
-Note: "sizes" is plural because it's a string of space-separate image
-dimensions. This is useful for certain image formats that contain more than
-one size (e.g. [ico](https://en.wikipedia.org/wiki/ICO_(file_format)).
-
 ### `start_url` {: #start-url }
 
 The `start_url` tells the browser where your application should start when it
@@ -119,7 +115,7 @@ they open your app, and place them there.
     "start_url": "/?utm_source=a2hs"
 
 Success: add a query string to the end of the `start_url` to track how often
-your app is launched from the home screen.
+your installed app is launched.
 
 ### `background_color` {: #background-color }
 
@@ -216,6 +212,7 @@ Success: the `theme_color` should match the
 [`meta` theme color](/web/fundamentals/design-and-ux/browser-customization/)
 specified in your document head.
 
+Learn more about theming in [this video](https://www.youtube.com/watch?v=5fEMTxpA6BA&t=0s&index=7&list=PLNYkxOF6rcIB1V2i_qfRtDMcY6YZK1lkt).
 
 ## Splash screens {: #splash-screen }
 
@@ -249,11 +246,6 @@ Again, providing a 192px and a 512px icon will be sufficient for most cases,
 but you can provide additional icons as necessary.
 
 <div class="clearfix"></div>
-
-## Generating manifests (and icons) automatically
-
-To help generate a manifest, you can also use tools like [PWABuilder](https://pwabuilder.com),
-which pre-populate manifest properties based on your app's URL.
 
 ## Feedback {: .hide-from-toc }
 
