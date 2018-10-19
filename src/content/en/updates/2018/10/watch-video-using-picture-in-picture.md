@@ -151,17 +151,20 @@ notified if a user manually resizes the window.
 The example below shows how to get the width and height of the
 Picture-in-Picture window when it is created or resized.
 
-    const pipWindow = await videoElement.requestPictureInPicture();
-    updateVideoQuality(pipWindow);
+    let pipWindow;
 
-    pipWindow.addEventListener('resize', function(event) {
-      const pipWindow = event.target;
-      updateVideoQuality(pipWindow);
+    videoElement.addEventListener('enterpictureinpicture', function(event) {
+      pipWindow = event.pictureInPictureWindow;
+      console.log(`> Window size is ${pipWindow.width}x${pipWindow.height}`);
+      pipWindow.addEventListener('resize', onPipWindowResize);
     });
 
-    function updateVideoQuality(pipWindow) {
-      console.log('Picture-in-Picture window width is ' + pipWindow.width);
-      console.log('Picture-in-Picture window height is ' + pipWindow.height);
+    videoElement.addEventListener('leavepictureinpicture', function(event) {
+      pipWindow.removeEventListener('resize', onPipWindowResize);
+    });
+
+    function onPipWindowResize(event) {
+      console.log(`> Window size changed to ${pipWindow.width}x${pipWindow.height}`);
       // TODO: Change video quality based on Picture-in-Picture window size.
     }
 
@@ -261,7 +264,7 @@ involved in the [standardization effort].
 [feature policy]: /web/updates/2018/06/feature-policy
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
-[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/gh-pages/features.md#picture-in-picture
+[disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/master/features.md#picture-in-picture
 [implementation status page]: https://github.com/WICG/picture-in-picture/blob/master/implementation-status.md
 [add custom Picture-in-Picture controls]: https://github.com/WICG/picture-in-picture/pull/69
 [https://www.chromestatus.com/feature/5729206566649856]: https://www.chromestatus.com/feature/5729206566649856
