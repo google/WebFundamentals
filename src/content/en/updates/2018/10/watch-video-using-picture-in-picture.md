@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-08-01 #}
-{# wf_published_on: 2018-08-01 #}
+{# wf_updated_on: 2018-10-19 #}
+{# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
-{# wf_featured_image: /web/updates/images/2018/08/watch-video-using-picture-in-picture/hero.png #}
+{# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
 {# wf_featured_snippet: Control Picture-in-Picture for video elements on your website. #}
 {# wf_blink_components: Blink>Media>PictureInPicture #}
 
@@ -13,10 +13,11 @@ description: Control Picture-in-Picture for video elements on your website.
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-<video controls playsinline poster="https://storage.googleapis.com/webfundamentals-assets/videos/picture-in-picture-poster.png">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/picture-in-picture-screen-recording.webm" type="video/webm">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/videos/picture-in-picture-screen-recording.mp4" type="video/mp4">
-</video>
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="t2QAzHZH-5s"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Picture-in-Picture (PiP) allows users to watch videos in a floating window
 (always on top of other windows) so they can keep an eye on what they’re
@@ -218,7 +219,7 @@ API are currently implemented in Chrome and other browsers.
 
 Here's what you can expect to see in the near future:
 
-- Picture-in-Picture will be supported on Android O.
+- Picture-in-Picture will be supported in Chrome OS and Android O.
 - MediaStreams from `MediaDevices.getUserMedia()` will work with
   Picture-in-Picture.
 - Web developers will be able to [add custom Picture-in-Picture controls].
