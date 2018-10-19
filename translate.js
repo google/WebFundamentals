@@ -168,7 +168,7 @@ async function translateLines(text, to) {
     translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
     translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
     translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
-    translation = translation.replace(/：/g,':');
+    translation = translation.replace(/：/gu,':');
     
     output.push(translation);
   });
