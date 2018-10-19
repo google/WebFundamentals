@@ -77,7 +77,8 @@ Note: ペイントワークレットのコンテキストは、`<canvas>` コン
 
 Note: ほぼすべての新しいAPIと同様に、CSSペイントAPIはHTTPS（または`localhost` ）でのみ使用できます。
 
-<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="背景画像としてチェッカーボードパターンのTextarea。">
+<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
+  Textarea with a checkerboard pattern as a background image.">
 
 ここで一般的な背景画像を使用するのと異なるのは、ユーザーがテキストエリアのサイズを変更するたびに、パターンが必要に応じて再描画されることです。これは、高密度ディスプレイのための補償を含む、バックグラウンドイメージが常に必要な大きさであることを意味します。
 
@@ -131,7 +132,8 @@ Note: ほぼすべての新しいAPIと同様に、CSSペイントAPIはHTTPS（
 
 今では、すべての異なる種類のチェッカーボードに同じコードを使用できます。しかし、さらにうまくいくと、正しい外観が見つかるまでDevToolsと[値を使って](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/)に行くことができます。
 
-<div style="display: flex; justify-content: center">  <video loop muted controls>
+<div style="display: flex; justify-content: center">
+  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -178,7 +180,8 @@ CSS側には2つのオプションがあります。 `@supports` を使用する
 
 ## "ボックスの外で考える"ほとんどの人は、ペイントワークレットについて学ぶとき、背景イメージと境界イメージについて考えるようになります。ペイントワークレットの直感的ではない使い方の1つは、DOM要素を任意の形にするための`mask-image` です。たとえば、[ダイヤモンド](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
-<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="ダイヤモンドの形をしたDOM要素。">
+<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
+  A DOM element in the shape of a diamond.">
 
 `mask-image` は、要素のサイズであるイメージを取ります。マスク画像が透明である領域は、透明である。マスク画像が不透明な領域、要素は不透明です。
 

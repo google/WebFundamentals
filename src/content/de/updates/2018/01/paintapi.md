@@ -77,7 +77,8 @@ Wenn Sie `<canvas>` in der Vergangenheit verwendet haben, sollte dieser Code bek
 
 Note: Wie bei fast allen neuen APIs ist die CSS Paint-API nur über HTTPS (oder `localhost` ) verfügbar.
 
-<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea mit einem Schachbrettmuster als Hintergrundbild.">
+<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
+  Textarea with a checkerboard pattern as a background image.">
 
 Der Unterschied zur Verwendung eines allgemeinen Hintergrundbildes besteht darin, dass das Muster bei Bedarf immer dann neu gezeichnet wird, wenn der Benutzer die Größe des Textfelds ändert. Dies bedeutet, dass das Hintergrundbild immer genau so groß ist, wie es sein muss, einschließlich der Kompensation für Anzeigen mit hoher Dichte.
 
@@ -131,7 +132,8 @@ Glücklicherweise kann das Paint Worlet auf andere CSS-Eigenschaften zugreifen, 
 
 Jetzt können wir den gleichen Code für alle Arten von Schachbrettern verwenden. Aber noch besser, wir können jetzt in DevTools gehen und [fiedeln mit den Werten](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) bis wir das richtige Aussehen finden.
 
-<div style="display: flex; justify-content: center">  <video loop muted controls>
+<div style="display: flex; justify-content: center">
+  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -178,7 +180,8 @@ Für mich ist die aufregendste Aussicht, dass die Paint-Worklet-Software ein eff
 
 ## Denken außerhalb der "Box" Die meisten Menschen beginnen, über Hintergrundbilder und Randbilder nachzudenken, wenn sie etwas über das Paintworklet lernen. Ein weniger intuitiver Anwendungsfall für Farbarbeitsflächen ist `mask-image` , um DOM-Elemente mit beliebigen Formen zu versehen. Zum Beispiel ein [Diamant](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
-<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="Ein DOM-Element in Form eines Diamanten.">
+<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
+  A DOM element in the shape of a diamond.">
 
 `mask-image` nimmt ein Bild, das die Größe des Elements hat. Bereiche, in denen das Maskenbild transparent ist, ist das Element transparent. Bereiche, in denen das Maskenbild undurchsichtig ist, das Element undurchsichtig.
 

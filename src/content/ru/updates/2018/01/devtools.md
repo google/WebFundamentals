@@ -27,10 +27,11 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 Читайте дальше или смотрите видео-версию этих примечаний к выпуску ниже.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</DIV>
+</div>
 
 Note: Проверьте, какая версия Chrome вы используете в `chrome://version` . Если вы используете более раннюю версию, эти функции не будут существовать. Если вы используете более позднюю версию, эти функции могут быть изменены. Chrome автоматически обновляет новую основную версию каждые 6 недель.
 
@@ -39,12 +40,13 @@ Note: Проверьте, какая версия Chrome вы используе
 ** Локальные перестановки ** позволяют вносить изменения в DevTools и сохранять эти изменения при загрузке страниц. Раньше любые изменения, которые вы делали в DevTools, терялись при перезагрузке страницы.
 ** Локальные переопределения ** работают для большинства типов файлов с несколькими исключениями. См. [Ограничения](#overrides-limitations).
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
        alt="Persisting a CSS change across page loads with Local Overrides."/>
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
   </figcaption>
-</Цифра>
+</figure>
 
 Как это устроено:
 
@@ -81,12 +83,13 @@ Note: Проверьте, какая версия Chrome вы используе
 
 Отслеживайте изменения, которые вы делаете локально в DevTools с помощью новой вкладки ** Изменения **.
 
-<figure>  <img src="/web/updates/images/2018/01/changes.png"
+<figure>
+  <img src="/web/updates/images/2018/01/changes.png"
        alt="The Changes tab"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
   </figcaption>
-</Цифра>
+</figure>
 
 ## Новые инструменты доступности {: #a11y }
 
@@ -96,7 +99,8 @@ Note: Проверьте, какая версия Chrome вы используе
 
 Используйте панель ** Доступность ** на панели ** Элементы **, чтобы исследовать свойства доступности выбранного в данный момент элемента.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y-pane.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y-pane.png"
        alt="The Accessibility pane shows the ARIA attributes and computed
             properties for the element that's currently selected in the DOM Tree of
             the Elements panel, as well as its position in the accessibility tree."/>
@@ -105,15 +109,16 @@ Note: Проверьте, какая версия Chrome вы используе
     and computed properties for the element that's currently selected in the <b>DOM Tree</b> on
     the <b>Elements</b> panel, as well as its position in the accessibility tree
   </figcaption>
-</Цифра>
+</figure>
 
 Посмотрите на A11ycast от Rob Dodson по маркировке ниже, чтобы увидеть панель ** Доступность ** в действии.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
-</DIV>
+</div>
 
 ### Контрастность в наборе цветов {: #contrast }
 
@@ -121,12 +126,13 @@ Note: Проверьте, какая версия Chrome вы используе
 
 Улучшение цветового контраста ваших текстовых элементов делает ваш сайт более удобным для <i>всех</i> пользователей. Другими словами, если ваш текст серый с белым фоном, это трудно для кого-то читать.
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
        alt="Inspecting the contrast ratio of the highlighted H1 element."/>
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
   </figcaption>
-</Цифра>
+</figure>
 
 В ** Рисунок 5 **, две галочки рядом с ** 4.61 ** означают, что этот элемент соответствует [расширенному рекомендуемому коэффициенту контрастности (AAA)][enhanced]{:.external}. Если бы у него была только одна галочка, это означало бы, что она соответствовала [минимальному рекомендуемому коэффициенту контрастности (AA)][minimum]{:.external}.
 
@@ -136,12 +142,13 @@ Note: Проверьте, какая версия Chrome вы используе
 Нажмите ** Показать больше ** ![Показать больше][SM]] {:.cdt-inl}, чтобы развернуть раздел ** Контрастность **. Белая линия в поле ** Цветной спектр ** обозначает границу между цветами, которые соответствуют рекомендуемому коэффициенту контрастности, и тем, которые этого не делают. Например, поскольку серый цвет в
 ** Рисунок 6 ** соответствует рекомендациям, это означает, что все цвета под белой линией также соответствуют рекомендациям.
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
        alt="The expanded Contrast Ratio section."/>
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
   </figcaption>
-</Цифра>
+</figure>
 
 [CP]: /web/tools/chrome-devtools/css/reference#color-picker
 [contrast]: /web/fundamentals/accessibility/accessible-styles#color_and_contrast
@@ -154,11 +161,12 @@ Note: Проверьте, какая версия Chrome вы используе
 
 См. [Запуск маяка в Chrome DevTools][audit] или смотрите A11ycast ниже, чтобы узнать, как использовать панель ** Audits ** для проверки доступности.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
-</DIV>
+</div>
 
 [audit]: /web/tools/lighthouse/#devtools
 
@@ -172,12 +180,13 @@ Note: Панель ** Audits ** питается от [Маяк][LH]. Chrome 64 
 
 Обеспечение того, чтобы ваши страницы проходили каждый аудит в новой категории ** SEO **, может помочь улучшить рейтинг вашей поисковой системы.
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
   </figcaption>
-</Цифра>
+</figure>
 
 ### Новые аудиты эффективности {: #performance }
 
@@ -190,9 +199,18 @@ Chrome 65 также обладает множеством новых аудит
 * Минимизировать CSS
 * Минимизировать JavaScript
 
-<aside class="key-point"> <b>Перф имеет значение!</b> После того, как Mynet улучшил скорость загрузки страницы на 4X, пользователи потратили на 43% больше времени на сайте, просмотрели на 34% больше страниц, показатели отказов упали на 24%, а доход увеличился на 25% за просмотр статьи. <a href="/web/showcase/2017/mynet">Узнайте больше</a> . </aside>
+<aside class="key-point">
+  <b>Perf matters!</b> After Mynet improved their page load speed by 4X, users spent 43% more time
+  on the site, viewed 34% more pages, bounce rates dropped 24%, and revenue increased 25% per
+  article pageview. <a href="/web/showcase/2017/mynet">Learn more</a>.
+</aside>
 
-<aside class="success"> <b>Совет!</b> Если вы хотите повысить производительность загрузки своих страниц, но не знаете с чего начать, попробуйте панель « <b>Аудит»</b> . Вы даете ему URL-адрес, и он дает вам подробный отчет по различным способам улучшения этой страницы. <a href="/web/tools/lighthouse/#devtools">Начните</a> . </aside>
+<aside class="success">
+  <b>Tip!</b> If you want to improve the load performance of your pages, but don't know where
+  to start, try the <b>Audits</b> panel. You give it a URL, and it gives you a detailed report
+  on many different ways you can improve that page. <a href="/web/tools/lighthouse/#devtools">Get
+  started</a>.
+</aside>
 
 ### Другие обновления {: #audits-other }
 
@@ -222,21 +240,23 @@ Chrome 65 приносит обновления ** Step Into ** ![Step Into][int
 
 Например, приложение в ** Рисунок 8 ** передает сообщение между основным потоком и рабочим потоком. После входа в вызов `postMessage()` в основном потоке DevTools приостанавливается в обработчике `onmessage` в рабочем потоке. Обработчик `onmessage` сам отправляет сообщение обратно в основной поток. Вступая в * этот * вызов, паузы DevTools возвращаются в основной поток.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
   </figcaption>
-</Цифра>
+</figure>
 
 Когда вы вступили в такой код в более ранних версиях Chrome, Chrome показал вам основную часть кода, как вы можете видеть в ** Рисунок 9 **.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
   </figcaption>
-</Цифра>
+</figure>
 
 ### Переход в асинхронный код {: #async }
 
@@ -244,21 +264,23 @@ Chrome 65 приносит обновления ** Step Into ** ![Step Into][int
 
 Например, в ** Рисунок 10 ** после перехода на `setTimeout()` , DevTools запускает весь код, ведущий к этой точке за кулисами, а затем приостанавливает функцию, переданную в `setTimeout()` .
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
   </figcaption>
-</Цифра>
+</figure>
 
 Когда вы вступили в такой код в Chrome 63, DevTools приостановился в коде, поскольку он хронологически работал, как вы можете видеть в ** Рисунок 11 **.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 63."/>
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
   </figcaption>
-</Цифра>
+</figure>
 
 ## Несколько записей в панели Performance {: #recordings }
 
@@ -266,12 +288,13 @@ Chrome 65 приносит обновления ** Step Into ** ![Step Into][int
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
-<figure>  <img src="/web/updates/images/2018/01/recordings.png"
+<figure>
+  <img src="/web/updates/images/2018/01/recordings.png"
        alt="Selecting between multiple recordings in the Performance panel."/>
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel
   </figcaption>
-</Цифра>
+</figure>
 
 ## Бонус: автоматизация действий DevTools с Puppeteer 1.0 {: #puppeteer }
 

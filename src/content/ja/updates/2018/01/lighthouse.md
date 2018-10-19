@@ -47,7 +47,8 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです:
 
 Note: 多くの要素がページの検索エンジンランキングに影響します。灯台はこれらの要因のすべてをテストしません。 Lighthouseで完璧な100点を獲得しても、どの検索エンジンでも一流のスポットが保証されるわけではありません！
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +63,8 @@ Note: 多くの要素がページの検索エンジンランキングに影響�
 
 新しい手動アクセシビリティ監査では、ページのアクセシビリティを向上させるためにできることを通知します。 「手動」とは、Lighthouseがこれらの監査を自動化できないことを意味します。手動で手動でテストする必要があります。
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +84,8 @@ Note: 多くの要素がページの検索エンジンランキングに影響�
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

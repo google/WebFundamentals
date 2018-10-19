@@ -16,10 +16,11 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-<div class="video-wrapper">  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</Div>
+</div>
 
 * [`ResizeObservers` ](#resizeobserver) के लिए समर्थन, आपको सूचित करेगा जब किसी तत्व की सामग्री आयताकार ने अपना आकार बदल दिया है।
 * मॉड्यूल अब [import.meta](#import-meta) के साथ होस्ट विशिष्ट मेटाडेटा तक पहुंच सकते हैं।

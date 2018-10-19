@@ -47,7 +47,8 @@ La nueva categoría de SEO proporciona auditorías que ayudan a mejorar la clasi
 
 Note: Muchos factores afectan la clasificación del motor de búsqueda de una página. El faro no prueba todos estos factores. ¡Una puntuación perfecta de 100 en Lighthouse no garantiza un puesto de primer nivel en ningún motor de búsqueda!
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +63,8 @@ Note: Muchos factores afectan la clasificación del motor de búsqueda de una p�
 
 Las nuevas auditorías de accesibilidad manual le informan sobre lo que puede hacer para mejorar la accesibilidad de su página. "Manual" aquí significa que Lighthouse no puede automatizar estas auditorías, por lo que debe probarlas manualmente.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +84,8 @@ Gracias a algunos [comentarios de la comunidad][feedback], la [auditoría de Web
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

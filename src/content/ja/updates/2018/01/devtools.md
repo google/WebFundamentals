@@ -27,7 +27,8 @@ Chrome 65のDevToolsには次の新機能が含まれています。
 
 以下のリリースノートを読んだり、ビデオ版をご覧ください。
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -39,7 +40,8 @@ Note: `chrome://version` で実行しているChromeのバージョンを確認�
 **ローカルオーバーライド**を使用すると、DevToolsで変更を加え、それらの変更をページ読み込み全体に保持できます。以前は、DevToolsで行った変更は、ページを再読み込みすると失われていました。
 **ローカルオーバーライド**は、ほとんどのファイルタイプで動作しますが、いくつかの例外があります。 [制限事項](#overrides-limitations)を参照してください。
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
        alt="Persisting a CSS change across page loads with Local Overrides."/>
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
@@ -81,7 +83,8 @@ DevToolsを変更すると、DevToolsは変更されたファイルのコピー�
 
 DevToolsでローカルで行った変更を新しい**変更**タブで追跡します。
 
-<figure>  <img src="/web/updates/images/2018/01/changes.png"
+<figure>
+  <img src="/web/updates/images/2018/01/changes.png"
        alt="The Changes tab"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
@@ -96,7 +99,8 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 ** Elements **パネルの** Accessibility **ペインを使用して、現在選択されている要素のアクセシビリティプロパティを調べます。
 
-<figure>  <img src="/web/updates/images/2018/01/a11y-pane.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y-pane.png"
        alt="The Accessibility pane shows the ARIA attributes and computed
             properties for the element that's currently selected in the DOM Tree of
             the Elements panel, as well as its position in the accessibility tree."/>
@@ -109,7 +113,8 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 下のラベリングのRob DodsonのA11ycastをチェックして、**アクセシビリティ**ペインを実際に見てください。
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
@@ -121,7 +126,8 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 テキスト要素の色のコントラストを改善すると、 <i>すべての</i>ユーザーがサイトをより使いやすくすることができます。言い換えれば、テキストが白い背景で灰色である場合、誰にでも読むことは難しいです。
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
        alt="Inspecting the contrast ratio of the highlighted H1 element."/>
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
@@ -136,7 +142,8 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 ** [もっと見る] ** [詳細を表示][SM]{:.cdt-inl}をクリックして**コントラスト比**セクションを展開します。 ** Color Spectrum **ボックスの白い線は、推奨されるコントラスト比を満たす色と、そうでない色との境界を表します。例えば、
 **図6 **は推奨を満たしています。つまり、白線の下のすべての色も推奨値を満たしています。
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
        alt="The expanded Contrast Ratio section."/>
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
@@ -154,7 +161,8 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 ** Audits **パネルを使用してアクセシビリティをテストする方法については、[Chrome DevToolsの灯台を実行する][audit]、または下記のA11ycastをご覧ください。
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
@@ -172,7 +180,8 @@ Note: ** Audits **パネルは[Lighthouse][LH]によって強化されていま�
 
 ページが新しい** SEO **カテゴリの各監査に合格するようにすることで、検索エンジンのランキングが向上する場合があります。
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
@@ -190,9 +199,18 @@ Chrome 65には、多くの新しいパフォーマンス監査が付属して�
 * CSSの縮小
 * JavaScriptを縮小する
 
-<aside class="key-point"> <b>パフォーマンスが重要！</b> Mynetのページ読み込み速度を4倍向上させた後、ユーザーはサイトで43％多く時間を費やし、ページ数は34％増加し、直帰率は24％低下し、記事ページビューあたり25％増加しました。 <a href="/web/showcase/2017/mynet">詳しくはこちら</a> </aside>
+<aside class="key-point">
+  <b>Perf matters!</b> After Mynet improved their page load speed by 4X, users spent 43% more time
+  on the site, viewed 34% more pages, bounce rates dropped 24%, and revenue increased 25% per
+  article pageview. <a href="/web/showcase/2017/mynet">Learn more</a>.
+</aside>
 
-<aside class="success"> <b>先端！</b>ページの負荷パフォーマンスを向上させたいが、どこから開始するのかわからない場合は、[ <b>監査</b> ]パネルを試してください。 URLを指定すると、そのページを改善するさまざまな方法に関する詳細なレポートが表示されます。 <a href="/web/tools/lighthouse/#devtools">始めてください</a> 。 </aside>
+<aside class="success">
+  <b>Tip!</b> If you want to improve the load performance of your pages, but don't know where
+  to start, try the <b>Audits</b> panel. You give it a URL, and it gives you a detailed report
+  on many different ways you can improve that page. <a href="/web/tools/lighthouse/#devtools">Get
+  started</a>.
+</aside>
 
 ### その他の更新 {: #audits-other }
 
@@ -222,7 +240,8 @@ Chrome 65は、スレッド間のメッセージを渡すコードと非同期�
 
 たとえば、**図8 **のアプリは、メインスレッドとワーカースレッドの間にメッセージを渡します。メインスレッドで`postMessage()` 呼び出しを実行すると、DevToolsはワーカースレッドの`onmessage` ハンドラで一時停止します。 `onmessage` ハンドラ自体は、メインスレッドにメッセージを戻します。 *その*への呼び出しは、DevToolsをメインスレッドに戻します。
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
@@ -231,7 +250,8 @@ Chrome 65は、スレッド間のメッセージを渡すコードと非同期�
 
 以前のバージョンのChromeでこのようなコードを使用した場合、**図9 **に示すように、Chromeはコードのメインスレッド側のみを表示しました。
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
@@ -244,7 +264,8 @@ Chrome 65は、スレッド間のメッセージを渡すコードと非同期�
 
 例えば、**図10 **では、`setTimeout()` にステップインした後、DevToolsはその背後にあるすべてのコードを実行し、`setTimeout()` に渡された関数で一時停止します。
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
@@ -253,7 +274,8 @@ Chrome 65は、スレッド間のメッセージを渡すコードと非同期�
 
 Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 **に示すように、時系列的にコードを一時停止しました。
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 63."/>
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
@@ -266,7 +288,8 @@ Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 *
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
-<figure>  <img src="/web/updates/images/2018/01/recordings.png"
+<figure>
+  <img src="/web/updates/images/2018/01/recordings.png"
        alt="Selecting between multiple recordings in the Performance panel."/>
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel

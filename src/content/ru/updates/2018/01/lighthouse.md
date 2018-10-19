@@ -47,7 +47,8 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Note: Многие факторы влияют на ранжирование поисковой системы страницы. Маяк не проверяет все эти факторы. Совершенный 100 очков в Маяке не гарантирует место в рейтинге в любой поисковой системе!
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -56,13 +57,14 @@ Note: Многие факторы влияют на ранжирование п�
   <figcaption>
     <b>Figure 1</b>. The new <b>SEO</b> category
   </figcaption>
-</Цифра>
+</figure>
 
 ## Новые, ручные проверки доступности {: #a11y }
 
 Новые проверочные проверки доступности вручную информируют вас о том, что вы можете сделать, чтобы улучшить доступность вашей страницы. «Руководство» означает, что «Маяк» не может автоматизировать эти проверки, поэтому вам нужно вручную их протестировать самостоятельно.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -73,7 +75,7 @@ Note: Многие факторы влияют на ранжирование п�
   <figcaption>
     <b>Figure 2</b>. The new, manual <b>Accessibility</b> audits
   </figcaption>
-</Цифра>
+</figure>
 
 ## Обновления для аудита WebP {: #webp }
 
@@ -82,12 +84,13 @@ Note: Многие факторы влияют на ранжирование п�
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit
   </figcaption>
-</Цифра>
+</figure>
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

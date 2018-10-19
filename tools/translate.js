@@ -204,6 +204,16 @@ async function processFile(filePath, target) {
   let inCodeSpaces = false;
   let inQuote = false;
   let headerNeedsParse = true;
+
+  let inHTML = false;
+
+  let translate = async () => {
+    if(translateBlock.length > 0) {
+      output.push(await translateLines(translateBlock.join(' '), target));
+    }
+    translateBlock = [];
+  }
+
   for (const line of lines) {
     // Don't translate preamble - we are assuming there is a header that ends with just a \n
     if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`{% include "web/_shared/machine-translation-start.html" %}`); output.push(line); continue; }
@@ -212,33 +222,38 @@ async function processFile(filePath, target) {
 
     // Don't translate code
     if (inCodeTicks && line.startsWith('```')) { inCodeTicks = false; output.push(line); continue; }
-    if (line.startsWith('```')) { inCodeTicks = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (line.startsWith('```')) { inCodeTicks = true; await translate(); translateBlock = []; output.push(line); continue; }
     if (inCodeTicks) { output.push(line); continue; }
 
     // Don't translate code prefixed with spaces
     if (inCodeSpaces && line.startsWith('    ') === false) { inCodeSpaces = false; output.push(line); continue; }
-    if (line.startsWith('    ')) { inCodeSpaces = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (line.startsWith('    ') && !inHTML) { inCodeSpaces = true; await translate(); output.push(line); continue; }
     if (inCodeSpaces) { output.push(line); continue; }
 
     // Dont translate quotes
     if (inQuote && line.startsWith('>') === false) { inQuote = false; }
-    if (line.startsWith('>')) { inQuote = true; if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = []; output.push(line); continue; }
+    if (line.startsWith('>')) { inQuote = true; await translate(); output.push(line); continue; }
     if (inQuote) { output.push(line); continue; }
 
-    // Don't translate processing directives, but translate previous text
-    if (line.startsWith('{# ')) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+    // Don't translate HTML - valid HTML has a <
+    if (inHTML && line.length === 0) { inHTML = false; output.push(line); continue; }
+    if (line.startsWith('<')) { inHTML = true; await translate(); output.push(line); continue; }
+    if (inHTML) { output.push(line); continue; }
 
-     // Don't translate processing directives, but translate previous text
-     if (line.startsWith('{% ')) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+    // Don't translate processing directives, but translate previous text
+    if (line.startsWith('{# ')) { await translate(); output.push(line); continue; }
+
+    // Don't translate processing directives, but translate previous text
+    if (line.startsWith('{% ')) { await translate(); output.push(line); continue; }
 
     // Treat empty line as point to translate paragraph
-    if (line.charAt(0) === '\n' || line.length === 0) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); output.push(line); translateBlock = []; continue; } 
+    if (line.charAt(0) === '\n' || line.length === 0) { await translate(); output.push(line); continue; } 
 
     // Treat links in form [TEXT]: #blah as paragraphs, need to filter links `[][]` too
-    if (line.match(/^\[([^\]]+)\]:/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
+    if (line.match(/^\[([^\]]+)\]:/) !== null) { await translate(); }
 
     // Treat list as paragraphs
-    if (line.match(/^[\s]*\*/) !== null) { if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target)); translateBlock = [];} 
+    if (line.match(/^[\s]*\*/) !== null) { await translate(); }
 
     translateBlock.push(line);
   }

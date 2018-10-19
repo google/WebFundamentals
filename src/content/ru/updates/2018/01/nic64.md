@@ -16,10 +16,11 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-<div class="video-wrapper">  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</DIV>
+</div>
 
 * Поддержка [`ResizeObservers` ](#resizeobserver) будет уведомлять вас, когда прямоугольник содержимого элемента изменил свой размер.
 * Модули теперь могут обращаться к конкретным метаданным узла с помощью [import.meta](#import-meta).

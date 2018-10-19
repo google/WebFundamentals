@@ -77,7 +77,8 @@ Nếu trước đây bạn đã sử dụng `<canvas>` , mã này sẽ trông qu
 
 Note: Giống như hầu hết các API mới, API CSS Paint chỉ khả dụng trên HTTPS (hoặc `localhost` ).
 
-<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea với mẫu bàn cờ làm hình nền.">
+<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
+  Textarea with a checkerboard pattern as a background image.">
 
 Sự khác biệt khi sử dụng hình nền chung ở đây là mẫu sẽ được vẽ lại theo yêu cầu, bất cứ khi nào người dùng thay đổi kích thước vùng văn bản. Điều này có nghĩa là hình nền luôn chính xác lớn như nó cần, bao gồm cả mức bù cho các màn hình có mật độ cao.
 
@@ -131,7 +132,8 @@ May mắn thay, công việc sơn có thể truy cập các thuộc tính CSS kh
 
 Bây giờ chúng ta có thể sử dụng cùng một mã cho tất cả các loại bàn cờ khác nhau. Nhưng thậm chí tốt hơn, bây giờ chúng ta có thể đi vào DevTools và [fiddle với các giá trị](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) cho đến khi chúng ta tìm thấy cái nhìn đúng đắn.
 
-<div style="display: flex; justify-content: center">  <video loop muted controls>
+<div style="display: flex; justify-content: center">
+  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -178,7 +180,8 @@ Với tôi, triển vọng thú vị nhất là công việc sơn cho phép tín
 
 ## Suy nghĩ bên ngoài “ô” Hầu hết mọi người bắt đầu nghĩ về hình ảnh nền và hình ảnh biên giới khi họ tìm hiểu về công việc sơn. Một trường hợp sử dụng ít trực quan hơn cho công việc sơn là `mask-image` để làm cho các phần tử DOM có các hình dạng tùy ý. Ví dụ: [kim cương](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
-<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="Một phần tử DOM trong hình dạng của một viên kim cương.">
+<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
+  A DOM element in the shape of a diamond.">
 
 `mask-image` chụp một hình ảnh có kích thước của phần tử. Các khu vực có hình ảnh mặt nạ trong suốt, phần tử trong suốt. Các khu vực có hình ảnh mặt nạ mờ đục, yếu tố mờ đục.
 

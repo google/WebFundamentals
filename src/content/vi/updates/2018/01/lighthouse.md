@@ -47,7 +47,8 @@ Danh mục SEO mới cung cấp các kiểm tra giúp cải thiện thứ hạng
 
 Note: Nhiều yếu tố ảnh hưởng đến xếp hạng công cụ tìm kiếm của trang. Ngọn hải đăng không kiểm tra tất cả các yếu tố này. Một điểm số 100 hoàn hảo trong Lighthouse không đảm bảo một vị trí xếp hạng cao nhất trên bất kỳ công cụ tìm kiếm nào!
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +63,8 @@ Note: Nhiều yếu tố ảnh hưởng đến xếp hạng công cụ tìm ki�
 
 Kiểm tra khả năng truy cập thủ công mới, thông báo cho bạn về những điều bạn có thể làm để cải thiện khả năng truy cập trang của bạn. "Thủ công" ở đây có nghĩa là Ngọn hải đăng không thể tự động hóa các kiểm tra này, vì vậy bạn cần tự mình kiểm tra chúng.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +84,8 @@ Nhờ có một số [phản hồi cộng đồng][feedback], [Kiểm tra WebP][
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

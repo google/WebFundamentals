@@ -27,7 +27,8 @@ Las nuevas características que llegan a DevTools en Chrome 65 incluyen:
 
 Siga leyendo o vea la versión en video de estas notas de publicación, a continuación.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -39,7 +40,8 @@ Note: Comprueba qué versión de Chrome estás ejecutando en `chrome://version` 
 ** Anulaciones locales ** le permiten realizar cambios en DevTools y mantener esos cambios en todas las cargas de la página. Anteriormente, cualquier cambio que hiciera en DevTools se perdería al volver a cargar la página.
 ** Anulaciones locales ** funcionan para la mayoría de los tipos de archivos, con un par de excepciones. Ver [Limitaciones](#overrides-limitations).
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
        alt="Persisting a CSS change across page loads with Local Overrides."/>
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
@@ -81,7 +83,8 @@ Para configurar ** Anulaciones Locales **:
 
 Realice un seguimiento de los cambios que realice localmente en DevTools a través de la nueva pestaña ** Changes **.
 
-<figure>  <img src="/web/updates/images/2018/01/changes.png"
+<figure>
+  <img src="/web/updates/images/2018/01/changes.png"
        alt="The Changes tab"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
@@ -96,7 +99,8 @@ Use el nuevo panel ** Accesibilidad ** para inspeccionar las propiedades de acce
 
 Use el panel ** Accesibilidad ** en el panel ** Elementos ** para investigar las propiedades de accesibilidad del elemento actualmente seleccionado.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y-pane.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y-pane.png"
        alt="The Accessibility pane shows the ARIA attributes and computed
             properties for the element that's currently selected in the DOM Tree of
             the Elements panel, as well as its position in the accessibility tree."/>
@@ -109,7 +113,8 @@ Use el panel ** Accesibilidad ** en el panel ** Elementos ** para investigar las
 
 Echa un vistazo a A11ycast de Rob Dodson en el etiquetado a continuación para ver el panel ** Accesibilidad ** en acción.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
@@ -121,7 +126,8 @@ El [Selector de color][CP] ahora muestra la relación de contraste de los elemen
 
 Mejorar el contraste de color de sus elementos de texto hace que su sitio sea más utilizable para <i>todos los</i> usuarios. En otras palabras, si el texto es gris con un fondo blanco, es difícil de leer para cualquiera.
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
        alt="Inspecting the contrast ratio of the highlighted H1 element."/>
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
@@ -136,7 +142,8 @@ En ** Figura 5 **, las dos marcas de verificación junto a ** 4.61 ** significa 
 Haga clic en ** Mostrar más ** ![Mostrar más][SM]] {:.cdt-inl} para expandir la sección ** Relación de contraste **. La línea blanca en el cuadro ** Espectro de color ** representa el límite entre los colores que cumplen con la relación de contraste recomendada y los que no. Por ejemplo, ya que el color gris en
 ** La Figura 6 ** cumple con las recomendaciones, lo que significa que todos los colores debajo de la línea blanca también cumplen con las recomendaciones.
 
-<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
+<figure>
+  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
        alt="The expanded Contrast Ratio section."/>
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
@@ -154,7 +161,8 @@ El panel ** Auditorías ** tiene una auditoría de accesibilidad automatizada pa
 
 Vea [Ejecutar Lighthouse en Chrome DevTools][audit], o vea el A11ycast a continuación, para aprender cómo usar el panel ** Auditorías ** para probar la accesibilidad.
 
-<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
@@ -172,7 +180,8 @@ Note: El panel ** Auditorías ** está alimentado por [Faro][LH]. Chrome 64 ejec
 
 Asegurarse de que sus páginas superen cada una de las auditorías en la nueva categoría ** SEO ** puede ayudar a mejorar su posicionamiento en los motores de búsqueda.
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
@@ -190,9 +199,18 @@ Chrome 65 también viene con muchas auditorías de rendimiento nuevas:
 * Minify CSS
 * Minificar JavaScript
 
-<aside class="key-point"> <b>¡El asunto importa!</b> Después de que Mynet mejoró su velocidad de carga de páginas en 4X, los usuarios pasaron un 43% más de tiempo en el sitio, vieron un 34% más de páginas, las tasas de rebote disminuyeron un 24% y los ingresos aumentaron un 25% por página de artículo. <a href="/web/showcase/2017/mynet">Aprende más</a> </aside>
+<aside class="key-point">
+  <b>Perf matters!</b> After Mynet improved their page load speed by 4X, users spent 43% more time
+  on the site, viewed 34% more pages, bounce rates dropped 24%, and revenue increased 25% per
+  article pageview. <a href="/web/showcase/2017/mynet">Learn more</a>.
+</aside>
 
-<aside class="success"> <b>¡Propina!</b> Si desea mejorar el rendimiento de carga de sus páginas, pero no sabe por dónde empezar, pruebe el panel <b>Auditorías</b> . Le asigna una URL y le proporciona un informe detallado sobre diferentes maneras en que puede mejorar esa página. <a href="/web/tools/lighthouse/#devtools">Empezar</a> </aside>
+<aside class="success">
+  <b>Tip!</b> If you want to improve the load performance of your pages, but don't know where
+  to start, try the <b>Audits</b> panel. You give it a URL, and it gives you a detailed report
+  on many different ways you can improve that page. <a href="/web/tools/lighthouse/#devtools">Get
+  started</a>.
+</aside>
 
 ### Otras actualizaciones {: #audits-other }
 
@@ -222,7 +240,8 @@ Cuando entras en el código que pasa mensajes entre subprocesos, DevTools ahora 
 
 Por ejemplo, la aplicación en ** Figura 8 ** pasa un mensaje entre el hilo principal y el hilo trabajador. Después de pasar a la llamada `postMessage()` en el subproceso principal, DevTools se detiene en el controlador `onmessage` en el subproceso de trabajo. El propio controlador `onmessage` envía un mensaje al hilo principal. Al entrar en * esa * llamada se detiene DevTools nuevamente en el hilo principal.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
@@ -231,7 +250,8 @@ Por ejemplo, la aplicación en ** Figura 8 ** pasa un mensaje entre el hilo prin
 
 Cuando ingresó a un código como este en versiones anteriores de Chrome, Chrome solo le mostró el lado del hilo principal del código, como puede ver en ** Figura 9 **.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
@@ -244,7 +264,8 @@ Al entrar en el código asíncrono, DevTools ahora asume que desea hacer una pau
 
 Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()` , DevTools ejecuta todo el código que lleva hasta ese punto detrás de la escena y luego se detiene en la función que se pasa a `setTimeout()` .
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
@@ -253,7 +274,8 @@ Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()` , DevTools
 
 Cuando ingresó a un código como este en Chrome 63, DevTools se detuvo en el código mientras se ejecutaba cronológicamente, como puede ver en ** Figura 11 **.
 
-<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
+<figure>
+  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 63."/>
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
@@ -266,7 +288,8 @@ El panel ** Performance ** ahora le permite guardar temporalmente hasta 5 grabac
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
-<figure>  <img src="/web/updates/images/2018/01/recordings.png"
+<figure>
+  <img src="/web/updates/images/2018/01/recordings.png"
        alt="Selecting between multiple recordings in the Performance panel."/>
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel
