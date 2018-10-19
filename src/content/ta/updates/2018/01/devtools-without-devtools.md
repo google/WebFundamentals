@@ -47,9 +47,9 @@ ____DEFS__ 0
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>   video { width: 100%; } </style>
+<style>  video { width: 100%; } </style>
 
-<video controls>   <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
 
 இது Chrome DevTools நெறிமுறை வழியாக நீங்கள் அணுகக்கூடிய பல DevTools அம்சங்களில் ஒன்றாகும்.
 

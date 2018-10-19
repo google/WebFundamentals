@@ -47,9 +47,9 @@ Par exemple, le script ci-dessous me permet de superposer le [mètre FPS][FPS] e
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>   video { width: 100%; } </style>
+<style>  video { width: 100%; } </style>
 
-<video controls>   <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
 
 Il ne s'agit que de l'une des nombreuses fonctionnalités de DevTools auxquelles vous pouvez potentiellement accéder via le protocole Chrome DevTools.
 

@@ -47,9 +47,9 @@ Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>   video { width: 100%; } </style>
+<style>  video { width: 100%; } </style>
 
-<video controls>   <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
 
 Esta es solo una de las muchas, muchas características de DevTools a las que potencialmente puede acceder a través del protocolo de Chrome DevTools.
 

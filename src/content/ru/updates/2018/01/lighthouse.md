@@ -35,9 +35,9 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 ## Как обновить до 2.7 {: #update }
 
-* NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g`, если вы установили Lighthouse глобально.
-* Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions`.
-* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version`. Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary].
+* NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g` , если вы установили Lighthouse глобально.
+* Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions` .
+* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary].
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -47,7 +47,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Note: Многие факторы влияют на ранжирование поисковой системы страницы. Маяк не проверяет все эти факторы. Совершенный 100 очков в Маяке не гарантирует место в рейтинге в любой поисковой системе!
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +62,7 @@ Note: Многие факторы влияют на ранжирование п�
 
 Новые проверочные проверки доступности вручную информируют вас о том, что вы можете сделать, чтобы улучшить доступность вашей страницы. «Руководство» означает, что «Маяк» не может автоматизировать эти проверки, поэтому вам нужно вручную их протестировать самостоятельно.
 
-<figure>   <img src="/web/updates/images/2018/01/a11y.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +82,7 @@ Note: Многие факторы влияют на ранжирование п�
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>   <img src="/web/updates/images/2018/01/webp.png"
+<figure>  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

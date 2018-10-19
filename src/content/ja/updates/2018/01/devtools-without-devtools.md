@@ -47,9 +47,9 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>   video { width: 100%; } </style>
+<style>  video { width: 100%; } </style>
 
-<video controls>   <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 

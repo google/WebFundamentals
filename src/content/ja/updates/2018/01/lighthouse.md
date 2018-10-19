@@ -23,7 +23,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 [CLI]: /web/tools/lighthouse/#cli
 [CE]: /web/tools/lighthouse/#extension
 
-Lighthouse 2.7が出ました！ハイライトは次のとおりです：
+Lighthouse 2.7が出ました！ハイライトは次のとおりです:
 
 * [新しいSEO監査](#seo)。
 * [新規のマニュアルアクセシビリティ監査](#a11y)。
@@ -36,8 +36,8 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
 ## 2.7に更新する方法 {: #update }
 
 * NPM。 Lighthouseをグローバルにインストールした場合は、__ SPECIALWORD0または__ SPECIALWORD1フラグを実行します。
-* Chrome拡張機能。拡張機能は自動的に更新されますが、`chrome://extensions`経由で手動で更新することができます。
-* DevTools。 Lighthouse 2.7はChrome 65で出荷されています。実行中のChromeのバージョンを`chrome://version`で確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは[Chrome Canary][Canary]をダウンロードして実行できます。
+* Chrome拡張機能。拡張機能は自動的に更新されますが、`chrome://extensions` 経由で手動で更新することができます。
+* DevTools。 Lighthouse 2.7はChrome 65で出荷されています。実行中のChromeのバージョンを`chrome://version` で確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは[Chrome Canary][Canary]をダウンロードして実行できます。
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -45,9 +45,9 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです：
 
 新しいSEOカテゴリでは、検索エンジンの検索結果におけるページのランキングを向上させるための監査が提供されます。
 
-Note:多くの要素がページの検索エンジンランキングに影響します。灯台はこれらの要因のすべてをテストしません。 Lighthouseで完璧な100点を獲得しても、どの検索エンジンでも一流のスポットが保証されるわけではありません！
+Note: 多くの要素がページの検索エンジンランキングに影響します。灯台はこれらの要因のすべてをテストしません。 Lighthouseで完璧な100点を獲得しても、どの検索エンジンでも一流のスポットが保証されるわけではありません！
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +62,7 @@ Note:多くの要素がページの検索エンジンランキングに影響し
 
 新しい手動アクセシビリティ監査では、ページのアクセシビリティを向上させるためにできることを通知します。 「手動」とは、Lighthouseがこれらの監査を自動化できないことを意味します。手動で手動でテストする必要があります。
 
-<figure>   <img src="/web/updates/images/2018/01/a11y.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +82,7 @@ Note:多くの要素がページの検索エンジンランキングに影響し
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>   <img src="/web/updates/images/2018/01/webp.png"
+<figure>  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

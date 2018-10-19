@@ -47,9 +47,9 @@ Ví dụ: tập lệnh bên dưới cho phép tôi chồng [FPS Meter][FPS] lên
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>   video { width: 100%; } </style>
+<style>  video { width: 100%; } </style>
 
-<video controls>   <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
 
 Đây chỉ là một trong nhiều tính năng của DevTools mà bạn có thể truy cập thông qua Giao thức Chrome DevTools.
 

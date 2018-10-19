@@ -47,7 +47,7 @@ Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seit
 
 Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lighthouse testet nicht alle diese Faktoren. Ein perfektes Ergebnis von 100 Punkten in Lighthouse garantiert keinen Top-Platz in irgendeiner Suchmaschine!
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +62,7 @@ Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lightho
 
 Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. "Manuell" bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
 
-<figure>   <img src="/web/updates/images/2018/01/a11y.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +82,7 @@ Dank einiger [Community-Feedbacks][feedback] umfasst das [WebP-Audit][webp] jetz
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>   <img src="/web/updates/images/2018/01/webp.png"
+<figure>  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit

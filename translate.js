@@ -125,7 +125,7 @@ async function translateLines(text, to) {
 
     // Remap all callouts
     translation = translation.replace(/__SPECIALCALLOUTS(\d+)__/g, (match, p1, p2, offset, str) => {
-      return `${callouts.shift()}`;
+      return `${callouts.shift()} `;
     });
 
     // Remap all links of form [][]
@@ -150,7 +150,7 @@ async function translateLines(text, to) {
 
     // Remap all specialWords 
     translation = translation.replace(/__SPECIALWORD(\d+)/g, (match, p1, p2, offset, str) => {
-      return `\`${specialWords.shift()}\``;
+      return `\`${specialWords.shift()}\` `;
     });
 
     // Fix things after the major replacements have happened
@@ -169,6 +169,8 @@ async function translateLines(text, to) {
     translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
     translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
     translation = translation.replace(/：/gu,':');
+    // Remove double spaces to clean up.
+    translation = translation.replace(/  /g, ' ');
     
     output.push(translation);
   });

@@ -35,9 +35,9 @@ Lihat [2,7 catatan rilis][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 ## Cara memperbarui ke 2.7 {: #update }
 
-* NPM. Jalankan `npm update lighthouse`, atau `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
-* Ekstensi Chrome. Ekstensi harus diperbarui secara otomatis, tetapi Anda dapat memperbaruinya secara manual melalui `chrome://extensions`.
-* DevTools. Lighthouse 2.7 adalah pengiriman di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version`. Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary].
+* NPM. Jalankan `npm update lighthouse` , atau `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
+* Ekstensi Chrome. Ekstensi harus diperbarui secara otomatis, tetapi Anda dapat memperbaruinya secara manual melalui `chrome://extensions` .
+* DevTools. Lighthouse 2.7 adalah pengiriman di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version` . Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary].
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -47,7 +47,7 @@ Kategori SEO baru menyediakan audit yang membantu meningkatkan peringkat halaman
 
 Note: Banyak faktor memengaruhi peringkat mesin pencari suatu halaman. Mercusuar tidak menguji semua faktor ini. Skor sempurna 100 di Lighthouse tidak menjamin peringkat teratas di mesin pencari apa pun!
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -62,7 +62,7 @@ Note: Banyak faktor memengaruhi peringkat mesin pencari suatu halaman. Mercusuar
 
 Audit aksesibilitas baru dan manual menginformasikan hal-hal yang dapat Anda lakukan untuk meningkatkan aksesibilitas halaman Anda. "Manual" di sini berarti bahwa Lighthouse tidak dapat mengotomatisasi audit ini, jadi Anda harus menguji sendiri secara manual.
 
-<figure>   <img src="/web/updates/images/2018/01/a11y.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -82,7 +82,7 @@ Terima kasih kepada beberapa [umpan balik komunitas][feedback], [Audit WebP][web
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>   <img src="/web/updates/images/2018/01/webp.png"
+<figure>  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit
