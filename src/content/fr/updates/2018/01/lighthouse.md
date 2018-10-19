@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
+<span lang="fr-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -89,3 +90,5 @@ Grâce à certains [commentaires de la communauté][feedback], l'audit [WebP][we
 </figure>
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

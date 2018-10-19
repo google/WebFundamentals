@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
+<span lang="ru-x-mtfrom-en">
 
 {# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2018-01-18 #}
@@ -190,3 +191,5 @@ CSS Paint API позволяет вам программно генериров�
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
+
+</span>

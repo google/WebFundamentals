@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
+<span lang="de-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-24 #}
@@ -29,3 +30,5 @@ Wir freuen uns, diese neuen Daten mit Ihnen teilen zu können und hoffen, dass S
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
+
+</span>

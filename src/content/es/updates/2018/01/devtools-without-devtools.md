@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
+<span lang="es-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -66,3 +67,5 @@ Si desea mostrar un script de Puppeteer que hace uso del Protocolo de DevTools, 
 [twitter]: https://twitter.com/chromedevtools
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>
