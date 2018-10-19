@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2018-08-28 #}
+{# wf_updated_on: 2018-10-18 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -40,8 +40,9 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-A subset of the Web Bluetooth API is available in Chrome 56 for Chrome OS,
-Chrome for Android M, and Mac. This means you should be able to
+A subset of the Web Bluetooth API is available in Chrome OS,
+Chrome for Android M, Mac (Chrome 56) and Windows 10 (Chrome 70). 
+This means you should be able to
 [request](#request_bluetooth_devices) and [connect to](#connect_to_a_bluetooth_device)
 nearby Bluetooth devices,
 [read](#read_a_bluetooth_characteristic)/[write](#write_to_a_bluetooth_characteristic)
@@ -49,12 +50,9 @@ Bluetooth characteristics, [receive GATT Notifications](#receive_gatt_notificati
 know when a [Bluetooth device gets disconnected](#get_disconnected_from_a_bluetooth_device), and even [read and write
 to Bluetooth descriptors](#read_and_write_to_bluetooth_descriptors).
 
-On Linux, you still have to go to
+For earlier versions of Windows and Linux, you still have to go to
 `chrome://flags/#enable-experimental-web-platform-features`, enable the
 highlighted flag, and restart Chrome for now.
-
-Dogfood: In Chrome 70 it is shipping on Windows 10. For earlier versions of
-Windows and Linux, it is still behind a flag.
 
 ### Available for Origin Trials
 
@@ -504,10 +502,6 @@ Though it's still incomplete, here's a sneak peek of what to expect in the near 
   while `serviceremoved` event will track removed ones. A new `servicechanged`
   event will fire when any characteristic and/or descriptor gets added or
   removed from a Bluetooth GATT Service.
-
-At the time of writing, Chrome OS, Android M, Linux, and Mac are [the most advanced
-platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/master/implementation-status.md).
-Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
 

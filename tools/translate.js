@@ -204,6 +204,7 @@ async function processFile(filePath, target) {
   let inCodeSpaces = false;
   let inQuote = false;
   let headerNeedsParse = true;
+
   let inHTML = false;
 
   let translate = async () => {
@@ -242,8 +243,8 @@ async function processFile(filePath, target) {
     // Don't translate processing directives, but translate previous text
     if (line.startsWith('{# ')) { await translate(); output.push(line); continue; }
 
-     // Don't translate processing directives, but translate previous text
-     if (line.startsWith('{% ')) { await translate(); output.push(line); continue; }
+    // Don't translate processing directives, but translate previous text
+    if (line.startsWith('{% ')) { await translate(); output.push(line); continue; }
 
     // Treat empty line as point to translate paragraph
     if (line.charAt(0) === '\n' || line.length === 0) { await translate(); output.push(line); continue; } 
