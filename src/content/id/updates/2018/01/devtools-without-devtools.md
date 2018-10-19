@@ -47,9 +47,13 @@ Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>  video { width: 100%; } </style>
+<style>
+  video { width: 100%; }
+</style>
 
-<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4">
+</video>
 
 Ini hanyalah salah satu dari sekian banyak fitur DevTools yang dapat Anda akses secara potensial melalui Chrome DevTools Protocol.
 

@@ -77,7 +77,8 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 एसपीसीएलसीएलएलटीएस 0 लगभग सभी नए एपीआई के साथ, सीएसएस पेंट एपीआई केवल एचटीटीपीएस (या एसपीसीएलडब्ल्यूआरडी 0) पर उपलब्ध है।
 
-<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="एक पृष्ठभूमि छवि के रूप में एक चेकरबोर्ड पैटर्न के साथ Textarea।">
+<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
+  Textarea with a checkerboard pattern as a background image.">
 
 यहां एक सामान्य पृष्ठभूमि छवि का उपयोग करने से अंतर यह है कि जब भी उपयोगकर्ता टेक्स्टरेरा का आकार बदलता है तो पैटर्न मांग पर फिर से खींचा जाएगा। इसका मतलब है कि बैकग्राउंड छवि हमेशा उतनी ही बड़ी होती है जितनी बड़ी होनी चाहिए, जिसमें उच्च-घनत्व वाले डिस्प्ले के लिए मुआवजे शामिल हैं।
 
@@ -131,7 +132,8 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 अब हम सभी अलग-अलग प्रकार के चेकरबोर्ड के लिए एक ही कोड का उपयोग कर सकते हैं। लेकिन इससे भी बेहतर, अब हम DevTools और [मूल्यों के साथ बेवकूफ](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) में जा सकते हैं जब तक कि हमें सही नज़र न मिले।
 
-<div style="display: flex; justify-content: center">  <video loop muted controls>
+<div style="display: flex; justify-content: center">
+  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -139,7 +141,7 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_x264.mp4"
       type="video/mp4; codecs=h264">
   </video>
-</Div>
+</div>
 
 एसपीसीएलसीएलएलटीएस 0 रंगों को पैरामीटर करना भी बहुत अच्छा होगा, है ना? Spec एसपीसीएलडब्ल्यूआरडी 0 फ़ंक्शन के लिए तर्कों की एक सूची लेने की अनुमति देता है। यह सुविधा अभी तक क्रोम में लागू नहीं की गई है, क्योंकि यह भारी रूप से हुडिनी के गुणों और मूल्यों एपीआई पर निर्भर करती है, जिसे अभी भी जहाज से पहले कुछ काम की आवश्यकता है।
 
@@ -178,7 +180,8 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 ## "बॉक्स" के बाहर सोचकर ज्यादातर लोग पृष्ठभूमि छवियों और सीमा छवियों के बारे में सोचने लगते हैं जब वे पेंट वर्कलेट के बारे में सीखते हैं। पेंट वर्कलेट के लिए एक कम अंतर्ज्ञानी उपयोग केस एसओसीएलडब्ल्यूआरडी 0 है जो डीओएम तत्वों को मनमाने ढंग से आकार देता है। उदाहरण के लिए एक [हीरा](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
-<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="एक हीरे के आकार में एक डोम तत्व।">
+<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
+  A DOM element in the shape of a diamond.">
 
 एसपीसीएलडब्ल्यूआरडी 0 एक छवि लेता है जो तत्व का आकार है। क्षेत्र जहां मुखौटा छवि पारदर्शी है, तत्व पारदर्शी है। क्षेत्र जहां मास्क छवि अपारदर्शी है, तत्व अपारदर्शी है।
 

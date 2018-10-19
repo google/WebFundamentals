@@ -47,9 +47,13 @@ Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts 
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>  video { width: 100%; } </style>
+<style>
+  video { width: 100%; }
+</style>
 
-<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4">
+</video>
 
 Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicherweise über das Chrome DevTools-Protokoll zugreifen können.
 

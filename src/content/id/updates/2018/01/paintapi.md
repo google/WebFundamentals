@@ -77,7 +77,8 @@ Jika Anda pernah menggunakan `<canvas>` di masa lalu, kode ini akan terlihat fam
 
 Note: Seperti dengan hampir semua API baru, CSS Paint API hanya tersedia melalui HTTPS (atau `localhost` ).
 
-<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea dengan pola kotak-kotak sebagai gambar latar belakang.">
+<img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
+  Textarea with a checkerboard pattern as a background image.">
 
 Perbedaan dari menggunakan gambar latar belakang umum di sini adalah bahwa pola tersebut akan ditarik kembali sesuai permintaan, setiap kali pengguna mengubah ukuran textarea. Ini berarti gambar latar belakang selalu sama besar dengan kebutuhannya, termasuk kompensasi untuk layar berdensitas tinggi.
 
@@ -131,7 +132,8 @@ Untungnya, worklet cat dapat mengakses properti CSS lainnya, yang mana parameter
 
 Sekarang kita dapat menggunakan kode yang sama untuk semua jenis checkerboards yang berbeda. Tetapi bahkan lebih baik, kita sekarang dapat masuk ke DevTools dan [bermain-main dengan nilai](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) sampai kita menemukan tampilan yang tepat.
 
-<div style="display: flex; justify-content: center">  <video loop muted controls>
+<div style="display: flex; justify-content: center">
+  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -178,7 +180,8 @@ Bagi saya, prospek yang paling menarik adalah bahwa worklet paint memungkinkan p
 
 ## Berpikir di luar "kotak" Kebanyakan orang mulai berpikir tentang gambar latar belakang dan gambar perbatasan ketika mereka belajar tentang worklet cat. Satu kasus penggunaan yang kurang intuitif untuk worklet cat adalah `mask-image` untuk membuat elemen DOM memiliki bentuk acak. Misalnya [berlian](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
-<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="Elemen DOM dalam bentuk berlian.">
+<img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
+  A DOM element in the shape of a diamond.">
 
 `mask-image` mengambil gambar yang merupakan ukuran elemen. Area di mana gambar topeng transparan, elemen transparan. Area di mana gambar mask buram, elemen buram.
 
