@@ -206,7 +206,7 @@ async function processFile(filePath, target) {
   let headerNeedsParse = true;
   for (const line of lines) {
     // Don't translate preamble - we are assuming there is a header that ends with just a \n
-    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`<span lang="${target}-x-mtfrom-en">`); output.push(line); continue; }
+    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`\n<span lang="${target}-x-mtfrom-en">`); output.push(line); continue; }
     if (headerNeedsParse) { inHeader = true; output.push(line); continue; }
     if (inHeader) { output.push(line); continue; }
 
