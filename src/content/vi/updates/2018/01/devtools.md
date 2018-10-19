@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
+<span lang="vi-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -31,7 +32,7 @@ Các tính năng mới sắp tới với DevTools trong Chrome 65 bao gồm:
   </iframe>
 </div>
 
-Lưu ý: Kiểm tra xem bạn đang chạy phiên bản Chrome nào tại `chrome://version`. Nếu bạn đang chạy phiên bản cũ hơn, các tính năng này sẽ không tồn tại. Nếu bạn đang chạy phiên bản mới hơn, các tính năng này có thể đã thay đổi. Chrome tự động cập nhật lên phiên bản chính mới khoảng 6 tuần một lần.
+Note: Kiểm tra xem bạn đang chạy phiên bản Chrome nào tại `chrome://version`. Nếu bạn đang chạy phiên bản cũ hơn, các tính năng này sẽ không tồn tại. Nếu bạn đang chạy phiên bản mới hơn, các tính năng này có thể đã thay đổi. Chrome tự động cập nhật lên phiên bản chính mới khoảng 6 tuần một lần.
 
 ## Ghi đè cục bộ {: #overrides }
 
@@ -165,7 +166,7 @@ Xem [Chạy Ngọn hải đăng trong Chrome DevTools][audit] hoặc xem A11ycas
 
 Chrome 65 mang đến một danh mục kiểm toán SEO hoàn toàn mới và nhiều kiểm tra hiệu suất mới.
 
-Lưu ý: Bảng điều khiển ** Kiểm tra ** được hỗ trợ bởi [Ngọn hải đăng][LH]. Chrome 64 chạy phiên bản Lighthouse 2.5. Chrome 65 chạy phiên bản Lighthouse 2.8. Vì vậy, phần này chỉ đơn giản là một bản tóm tắt các cập nhật Lighthouse từ 2.6, 2.7 và 2.8.
+Note: Bảng điều khiển ** Kiểm tra ** được hỗ trợ bởi [Ngọn hải đăng][LH]. Chrome 64 chạy phiên bản Lighthouse 2.5. Chrome 65 chạy phiên bản Lighthouse 2.8. Vì vậy, phần này chỉ đơn giản là một bản tóm tắt các cập nhật Lighthouse từ 2.6, 2.7 và 2.8.
 
 ### Kiểm tra SEO mới {: #seo }
 
@@ -274,7 +275,7 @@ Bảng điều khiển ** Hiệu suất ** hiện cho phép bạn lưu tạm th�
 
 ## Tiền thưởng: Tự động hóa các hành động DevTools với Puppeteer 1.0 {: #puppeteer }
 
-Lưu ý: Phần này không liên quan đến Chrome 65.
+Note: Phần này không liên quan đến Chrome 65.
 
 Phiên bản 1.0 của Puppeteer, một công cụ tự động hóa trình duyệt được duy trì bởi nhóm Chrome DevTools, hiện đã hết. Bạn có thể sử dụng Puppeteer để tự động hóa nhiều tác vụ trước đây chỉ có sẵn thông qua DevTools, chẳng hạn như chụp ảnh màn hình:
 
@@ -302,7 +303,7 @@ Xem [Bắt đầu nhanh][quickstart] để tìm hiểu thêm.
 
 [quickstart]: /web/tools/puppeteer/get-started
 
-Bạn cũng có thể sử dụng Puppeteer để trưng ra các tính năng của DevTools trong khi duyệt mà không bao giờ mở DevTools một cách rõ ràng. Xem [Sử dụng các tính năng DevTools mà không cần mở DevTools][without] để biết ví dụ.
+Bạn cũng có thể sử dụng Puppeteer để lộ các tính năng của DevTools trong khi duyệt mà không bao giờ mở DevTools một cách rõ ràng. Xem [Sử dụng các tính năng DevTools mà không cần mở DevTools][without] để biết ví dụ.
 
 [without]: /web/updates/2018/01/devtools-without-devtools
 
@@ -310,7 +311,7 @@ Bạn cũng có thể sử dụng Puppeteer để trưng ra các tính năng c�
 
 Nếu bạn sử dụng Mac hoặc Windows, vui lòng xem xét sử dụng [Chrome Canary][canary] làm trình duyệt phát triển mặc định của bạn. Nếu bạn báo cáo lỗi hoặc thay đổi mà bạn không thích trong khi vẫn còn trong Canary, nhóm DevTools có thể giải quyết phản hồi của bạn nhanh hơn đáng kể.
 
-Lưu ý: Canary là phiên bản Chrome độc ​​nhất. Nó được phát hành ngay sau khi được xây dựng, mà không cần thử nghiệm. Điều này có nghĩa là Canary thường xuyên chia tay, khoảng một lần mỗi tháng và thường cố định trong vòng một ngày. Bạn có thể quay lại sử dụng Chrome Stable khi Canary ngừng hoạt động.
+Note: Canary là phiên bản Chrome độc ​​nhất. Nó được phát hành ngay sau khi được xây dựng, mà không cần thử nghiệm. Điều này có nghĩa là Canary thường xuyên chia tay, khoảng một lần mỗi tháng và thường cố định trong vòng một ngày. Bạn có thể quay lại sử dụng Chrome Stable khi Canary ngừng hoạt động.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -327,3 +328,5 @@ Xem thẻ [devtools-whatsnew][tag] để biết các liên kết tới tất c�
 [tag]: /web/updates/tags/devtools-whatsnew
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

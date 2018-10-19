@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
+<span lang="fr-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -31,7 +32,7 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
   </iframe>
 </div>
 
-Remarque: vérifiez quelle version de Chrome vous exécutez à `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
+Note: Vérifiez la version de Chrome que vous exécutez à `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
 ## Remplacement local {: #overrides }
 
@@ -165,7 +166,7 @@ Reportez-vous à la section [Exécuter Lighthouse dans Chrome DevTools][audit] o
 
 Chrome 65 est livré avec une toute nouvelle catégorie d'audits de référencement et de nombreux nouveaux audits de performance.
 
-Remarque: le panneau ** Audits ** est alimenté par [Lighthouse][LH]. Chrome 64 exécute la version 2.5 de phare. Chrome 65 exécute la version 2.8 de phare. Cette section est donc simplement un résumé des mises à jour de Lighthouse de 2.6, 2.7 et 2.8.
+Note: Le panneau ** Audits ** est alimenté par [Lighthouse][LH]. Chrome 64 exécute la version 2.5 de phare. Chrome 65 exécute la version 2.8 de phare. Cette section est donc simplement un résumé des mises à jour de Lighthouse de 2.6, 2.7 et 2.8.
 
 ### Nouveaux audits SEO {: #seo }
 
@@ -274,7 +275,7 @@ Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairemen
 
 ## Bonus: Automatisez les actions de DevTools avec Puppeteer 1.0 {: #puppeteer }
 
-Remarque: cette section n'est pas liée à Chrome 65.
+Note: Cette section n'est pas liée à Chrome 65.
 
 La version 1.0 de Puppeteer, un outil d'automatisation de navigation géré par l'équipe de Chrome DevTools, est maintenant disponible. Vous pouvez utiliser Puppeteer pour automatiser de nombreuses tâches auparavant uniquement disponibles via DevTools, telles que la capture de captures d'écran:
 
@@ -310,7 +311,7 @@ Vous pouvez également utiliser Puppeteer pour exposer les fonctionnalités de D
 
 Si vous utilisez Mac ou Windows, envisagez d'utiliser [Chrome Canary][canary] comme navigateur de développement par défaut. Si vous signalez un bogue ou une modification que vous n'aimez pas tant qu'il est encore dans Canary, l'équipe de DevTools peut traiter vos commentaires beaucoup plus rapidement.
 
-Remarque: Canary est la version avancée de Chrome. Il est publié dès sa construction, sans test. Cela signifie que Canary effectue des pauses de temps en temps, environ une fois par mois, et que cela se règle habituellement en un jour. Vous pouvez revenir à l'utilisation de Chrome Stable en cas de rupture de Canary.
+Note: Canary est la version avancée de Chrome. Il est publié dès sa construction, sans test. Cela signifie que Canary effectue des pauses de temps en temps, environ une fois par mois, et que cela se règle habituellement en un jour. Vous pouvez revenir à l'utilisation de Chrome Stable en cas de rupture de Canary.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -327,3 +328,5 @@ Voir la balise [devtools-whatsnew][tag] pour des liens vers toutes les notes de 
 [tag]: /web/updates/tags/devtools-whatsnew
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

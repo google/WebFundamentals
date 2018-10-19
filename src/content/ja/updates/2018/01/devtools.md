@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
+<span lang="ja-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -31,7 +32,7 @@ Chrome 65のDevToolsには次の新機能が含まれています。
   </iframe>
 </div>
 
-注：`chrome://version`で実行しているChromeのバージョンを確認してください。以前のバージョンを使用している場合、これらの機能は存在しません。それ以降のバージョンを使用している場合は、これらの機能が変更されている可能性があります。 Chromeは6週間ごとに新しいメジャーバージョンに自動的に更新されます。
+Note: `chrome://version`で実行しているChromeのバージョンを確認してください。以前のバージョンを使用している場合、これらの機能は存在しません。それ以降のバージョンを使用している場合は、これらの機能が変更されている可能性があります。 Chromeは6週間ごとに新しいメジャーバージョンに自動的に更新されます。
 
 ## ローカルは{: #overrides }をオーバーライドします
 
@@ -165,7 +166,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 Chrome 65には、全く新しいカテゴリのSEO監査と多くの新しいパフォーマンス監査が付属しています。
 
-注：** Audits **パネルは[Lighthouse][LH]によって強化されています。 Chrome 64はLighthouseバージョン2.5を実行します。 Chrome 65はLighthouseバージョン2.8を実行します。したがって、このセクションは、2.6,2.7、および2.8からLighthouseのアップデートをまとめたものです。
+Note: **審査**パネルは[Lighthouse][LH]によって強化されています。 Chrome 64はLighthouseバージョン2.5を実行します。 Chrome 65はLighthouseバージョン2.8を実行します。したがって、このセクションは、2.6,2.7、および2.8からLighthouseのアップデートをまとめたものです。
 
 ### 新しいSEO監査 {: #seo }
 
@@ -274,7 +275,7 @@ Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 *
 
 ## ボーナス：Puppeteer 1.0でDevToolsアクションを自動化する {: #puppeteer }
 
-注：このセクションはChrome 65とは関係ありません。
+Note:このセクションはChrome 65とは関係ありません。
 
 Chrome DevToolsチームが管理するブラウザ自動化ツールPuppeteerのバージョン1.0がリリースされました。 Puppeteerを使用すると、以前はDevToolsでしか利用できなかった、スクリーンショットのキャプチャなど、多くのタスクを自動化できます。
 
@@ -310,7 +311,7 @@ Chrome DevToolsチームが管理するブラウザ自動化ツールPuppeteer�
 
 MacまたはWindowsの場合は、[Chrome Canary][canary]をデフォルトの開発ブラウザとして使用することを検討してください。 Canaryに残っている間に好きではないバグや変更を報告した場合、DevToolsチームはフィードバックを大幅に早く解決できます。
 
-注：CanaryはChromeの最先端バージョンです。テストなしでビルドされるとすぐにリリースされます。これは、Canaryが時々、約1ヶ月に1回壊れてしまうことを意味し、通常は1日以内に修正されます。 Canaryが壊れたときにChrome Stableを使用することに戻ることができます。
+Note: CanaryはChromeの最先端バージョンです。テストなしでビルドされるとすぐにリリースされます。これは、Canaryが時々、約1ヶ月に1回壊れてしまうことを意味し、通常は1日以内に修正されます。 Canaryが壊れたときにChrome Stableを使用することに戻ることができます。
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -327,3 +328,5 @@ MacまたはWindowsの場合は、[Chrome Canary][canary]をデフォルトの�
 [tag]: /web/updates/tags/devtools-whatsnew
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

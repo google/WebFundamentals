@@ -45,7 +45,7 @@ Consulte las [2.7 notas de la versión][RN] para ver la lista completa de nuevas
 
 La nueva categoría de SEO proporciona auditorías que ayudan a mejorar la clasificación de su página en los resultados de los motores de búsqueda.
 
-Nota: muchos factores afectan el ranking del motor de búsqueda de una página. El faro no prueba todos estos factores. ¡Una puntuación perfecta de 100 en Lighthouse no garantiza un puesto de primer nivel en ningún motor de búsqueda!
+Note: Muchos factores afectan la clasificación del motor de búsqueda de una página. El faro no prueba todos estos factores. ¡Una puntuación perfecta de 100 en Lighthouse no garantiza un puesto de primer nivel en ningún motor de búsqueda!
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,

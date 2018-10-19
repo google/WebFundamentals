@@ -34,7 +34,7 @@ Um ein Paint-Arbeitsblatt namens `myPainter` zu definieren, müssen Sie eine CSS
 
 Innerhalb des `paint()`-Callbacks können wir `ctx` genauso verwenden wie ein `CanvasRenderingContext2D`, wie wir es aus `<canvas>` kennen. Wenn Sie wissen, wie Sie ein `<canvas>` zeichnen, können Sie ein Farbarbeitsblatt einzeichnen! `geometry` sagt uns die Breite und die Höhe der Leinwand, die uns zur Verfügung steht. `properties` Ich werde später in diesem Artikel erklären.
 
-Hinweis: Der Kontext eines Paint Workslet ist nicht 100% identisch mit einem Kontext `<canvas>`. Ab sofort fehlen Text Rendering Methoden und aus Sicherheitsgründen können Sie keine Pixel aus dem Canvas zurücklesen.
+Note: Der Kontext eines Malarbeitsbereichs ist nicht 100% identisch mit einem Kontext `<canvas>`. Ab sofort fehlen Text Rendering Methoden und aus Sicherheitsgründen können Sie keine Pixel aus dem Canvas zurücklesen.
 
 Als ein einleitendes Beispiel schreiben wir ein Schachbrett-Paint-Worlet und verwenden es als Hintergrundbild eines `<textarea>`. (Ich benutze ein Textfeld, da es standardmäßig in der Größe veränderbar ist.):
 
@@ -75,7 +75,7 @@ Als ein einleitendes Beispiel schreiben wir ein Schachbrett-Paint-Worlet und ver
 
 Wenn Sie `<canvas>` in der Vergangenheit verwendet haben, sollte dieser Code bekannt sein. Sehen Sie das Live [Demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) hier.
 
-Hinweis: Wie bei fast allen neuen APIs ist die CSS-Paint-API nur über HTTPS (oder `localhost`) verfügbar.
+Note: Wie bei fast allen neuen APIs ist die CSS Paint API nur über HTTPS (oder `localhost`) verfügbar.
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea mit einem Schachbrettmuster als Hintergrundbild.">
 
@@ -141,7 +141,7 @@ Jetzt können wir den gleichen Code für alle Arten von Schachbrettern verwenden
   </video>
 </div>
 
-Hinweis: Es wäre auch schön, die Farben zu parametrisieren, oder? Die Spezifikation ermöglicht es der `paint()`-Funktion, eine Liste von Argumenten zu übernehmen. Diese Funktion ist in Chrome noch nicht implementiert, da sie sich stark auf die Houdini API für Eigenschaften und Werte stützt, die noch einige Zeit benötigt, bevor sie ausgeliefert werden kann.
+Note: Es wäre auch schön, die Farben zu parametrisieren, oder? Die Spezifikation ermöglicht es der `paint()`-Funktion, eine Liste von Argumenten zu übernehmen. Diese Funktion ist in Chrome noch nicht implementiert, da sie sich stark auf die Houdini API für Eigenschaften und Werte stützt, die noch einige Zeit benötigt, bevor sie ausgeliefert werden kann.
 
 ## Browser, die kein Farbarbeitsgerät unterstützen Zum Zeitpunkt der Erstellung dieses Handbuchs wurde in Chrome nur ein Farbarbeitsblatt implementiert. Während es von allen anderen Browser-Anbietern positive Signale gibt, gibt es keine großen Fortschritte. Um auf dem Laufenden zu bleiben, überprüfe regelmäßig [Ist Houdini Ready?](https://ishoudinireadyyet.com). In der Zwischenzeit sollten Sie die progressive Erweiterung verwenden, damit der Code auch dann ausgeführt wird, wenn keine Unterstützung für Paint Worlet vorhanden ist. Um sicherzustellen, dass die Dinge wie erwartet funktionieren, müssen Sie Ihren Code an zwei Stellen anpassen: CSS und JS.
 
@@ -186,7 +186,7 @@ Für mich ist die aufregendste Aussicht, dass die Paint-Worklet-Software ein eff
 
 Paint Worklet war eine Weile in Chrome Canary. Mit Chrome 65 ist es standardmäßig aktiviert. Probieren Sie die neuen Möglichkeiten aus, die das Malwerk öffnet und zeigen Sie uns, was Sie gebaut haben! Für mehr Inspiration, werfen Sie einen Blick auf [Vincent De Oliveira's Sammlung](https://lab.iamvdo.me/houdini/).
 
-Hinweis: Haltepunkte werden derzeit in der CSS-Paint-API nicht unterstützt, werden jedoch in einer späteren Version von Chrome aktiviert.
+Note: Breakpoints werden derzeit in CSS Paint API nicht unterstützt, aber in einer späteren Version von Chrome aktiviert.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

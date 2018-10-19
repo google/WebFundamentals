@@ -34,7 +34,7 @@ Pour définir un worklet de peinture appelé `myPainter`, vous devez charger un 
 
 Dans le rappel `paint()`, nous pouvons utiliser `ctx` de la même manière que nous utiliserions un `CanvasRenderingContext2D` tel que nous le connaissons depuis `<canvas>`. Si vous savez dessiner un `<canvas>`, vous pouvez dessiner un worklet de peinture! `geometry` nous indique la largeur et la hauteur de la toile à notre disposition. `properties` Je l'expliquerai plus tard dans cet article.
 
-Remarque: le contexte d’un worklet de peinture n’est pas identique à celui d’un contexte `<canvas>`. À l'heure actuelle, les méthodes de rendu du texte sont manquantes et pour des raisons de sécurité, vous ne pouvez pas lire les pixels du canevas.
+Note: Le contexte d’un worklet de peinture n’est pas identique à un contexte `<canvas>`. À l'heure actuelle, les méthodes de rendu du texte sont manquantes et pour des raisons de sécurité, vous ne pouvez pas lire les pixels du canevas.
 
 En guise d’introduction, écrivons un worklet de peinture en damier et l’utilisons comme image de fond d’un `<textarea>`. (J'utilise une zone de texte car elle est redimensionnable par défaut.):
 
@@ -75,7 +75,7 @@ En guise d’introduction, écrivons un worklet de peinture en damier et l’uti
 
 Si vous avez déjà utilisé `<canvas>`, ce code devrait vous paraître familier. Voir le live [démo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) ici.
 
-Remarque: Comme avec presque toutes les nouvelles API, CSS Paint API est uniquement disponible via HTTPS (ou `localhost`).
+Note: Comme avec presque toutes les nouvelles API, l'API CSS Paint est uniquement disponible via HTTPS (ou `localhost`).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea avec un motif en damier comme image de fond.">
 
@@ -141,7 +141,7 @@ Nous pouvons maintenant utiliser le même code pour tous les types de damiers. M
   </video>
 </div>
 
-Remarque: il serait bon de paramétrer les couleurs, n’est-ce pas? La spécification permet à la fonction `paint()` de prendre une liste d'arguments. Cette fonctionnalité n’est pas encore implémentée dans Chrome, car elle fait largement appel à l’API Propriétés et valeurs de Houdini, qui nécessite encore du travail avant de pouvoir être expédiée.
+Note: Ce serait bien de paramétrer les couleurs aussi, non? La spécification permet à la fonction `paint()` de prendre une liste d'arguments. Cette fonctionnalité n’est pas encore implémentée dans Chrome, car elle fait largement appel à l’API Propriétés et valeurs de Houdini, qui nécessite encore du travail avant de pouvoir être expédiée.
 
 ## Navigateurs qui ne prennent pas en charge le worklet de peinture Au moment de la rédaction de cet article, seul le worklet de peinture de Chrome était implémenté. Bien que tous les autres fournisseurs de navigateurs émettent des signaux positifs, il n’ya pas eu beaucoup de progrès. Pour vous tenir au courant, vérifiez régulièrement [Houdini est-il prêt?](https://ishoudinireadyyet.com). En attendant, veillez à utiliser l’amélioration progressive pour que votre code continue de fonctionner même s’il n’ya pas de support pour le worklet de peinture. Pour vous assurer que tout fonctionne comme prévu, vous devez ajuster votre code à deux endroits: le CSS et le JS.
 
@@ -186,7 +186,7 @@ Pour moi, la perspective la plus excitante est que Paint Worklet permet de polyf
 
 Le worklet Paint est dans Chrome Canary depuis un moment. Avec Chrome 65, il est activé par défaut. Allez-y et essayez les nouvelles possibilités qui s'ouvrent à la peinture et montrez-nous ce que vous avez construit! Pour plus d’inspiration, jetez un coup d’œil à [Collection de Vincent De Oliveira](https://lab.iamvdo.me/houdini/).
 
-Remarque: Les points d'arrêt ne sont actuellement pas pris en charge dans l'API CSS Paint, mais seront activés dans une version ultérieure de Chrome.
+Note: Les points d'arrêt ne sont actuellement pas pris en charge dans l'API CSS Paint, mais seront activés dans une version ultérieure de Chrome.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

@@ -22,6 +22,7 @@ async function translateLines(text, to) {
   if(text === ' ') return ' ';
   const links = [];
   const srcs = [];
+  const callouts = [];
   const linkDefs = [];
   const squareLinks = [];
   const specialWords = [];
@@ -43,6 +44,12 @@ async function translateLines(text, to) {
   text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (match, p1, p2, offset, str) => {
     squareLinks.push(p2);
     return `[${p1}][${squareLinks.length-1}]`;
+  });
+
+  // Find markdown [][] links and replace URL.
+  text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, (match, p1, p2, offset, str) => {
+    callouts.push(p1);
+    return `__SPECIALCALLOUTS${callouts.length-1}__`;
   });
 
   // Find things that look like a src="" and don't replace
@@ -114,6 +121,11 @@ async function translateLines(text, to) {
     // Remap all links of form []()
     translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/g, (match, p1, p2, offset, str) => {
       return `[${p1}](${links.shift()})`;
+    });
+
+    // Remap all callouts
+    translation = translation.replace(/__SPECIALCALLOUTS(\d+)__/g, (match, p1, p2, offset, str) => {
+      return `${callouts.shift()}`;
     });
 
     // Remap all links of form [][]

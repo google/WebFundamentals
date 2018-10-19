@@ -34,7 +34,7 @@ Para definir un worklet de pintura llamado `myPainter`, necesitamos cargar un ar
 
 Dentro de la devolución de llamada `paint()`, podemos usar `ctx` de la misma manera que lo haríamos con `CanvasRenderingContext2D` tal como lo conocemos de `<canvas>`. Si sabes cómo dibujar en un `<canvas>`, ¡puedes dibujar en un worklet de pintura! `geometry` nos dice el ancho y la altura del lienzo que está a nuestra disposición. `properties` Lo explicaré más adelante en este artículo.
 
-Nota: el contexto de un worklet de pintura no es 100% lo mismo que un contexto `<canvas>`. A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
+Note: El contexto de un worklet de pintura no es 100% lo mismo que un contexto `<canvas>`. A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
 
 Como ejemplo introductorio, escribamos un cuadro de trabajo de pintura de tablero de ajedrez y lo usamos como imagen de fondo de un `<textarea>`. (Estoy usando un área de texto porque se puede cambiar de tamaño por defecto):
 
@@ -75,7 +75,7 @@ Como ejemplo introductorio, escribamos un cuadro de trabajo de pintura de tabler
 
 Si ha usado `<canvas>` en el pasado, este código debería parecerle familiar. Vea el [demo] en vivo (0) aquí.
 
-Nota: Al igual que con casi todas las API nuevas, CSS Paint API solo está disponible a través de HTTPS (o `localhost`).
+Note: Al igual que con casi todas las API nuevas, la CSS Paint API solo está disponible a través de HTTPS (o `localhost`).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea con un patrón de tablero de ajedrez como imagen de fondo.">
 
@@ -141,7 +141,7 @@ Ahora podemos usar el mismo código para todos los diferentes tipos de tableros 
   </video>
 </div>
 
-Nota: También sería bueno parametrizar los colores, ¿no es así? La especificación permite que la función `paint()` tome una lista de argumentos. Esta función aún no está implementada en Chrome, ya que se basa en gran medida en la API de propiedades y valores de Houdini, que todavía necesita algo de trabajo antes de poder enviarse.
+Note: También sería bueno parametrizar los colores, ¿no es así? La especificación permite que la función `paint()` tome una lista de argumentos. Esta función aún no está implementada en Chrome, ya que se basa en gran medida en la API de propiedades y valores de Houdini, que todavía necesita algo de trabajo antes de poder enviarse.
 
 ## Exploradores que no son compatibles con Paint Worklet Al momento de escribir, solo Chrome tiene implementado Paint Worklet. Si bien hay señales positivas de todos los demás proveedores de navegadores, no hay mucho progreso. Para mantenerse al día, marque [¿Ya está listo Houdini?](https://ishoudinireadyyet.com) regularmente. Mientras tanto, asegúrese de usar la mejora progresiva para mantener su código en funcionamiento incluso si no hay soporte para el cuadro de trabajo de pintura. Para asegurarse de que las cosas funcionen como se espera, debe ajustar su código en dos lugares: el CSS y el JS.
 
@@ -186,7 +186,7 @@ Para mí, la perspectiva más emocionante es que Paint Worklet permite realizar 
 
 El worklet de pintura ha estado en Chrome Canary por un tiempo. Con Chrome 65, está habilitado por defecto. ¡Anímate y prueba las nuevas posibilidades que abre Worklet Paint y muéstranos lo que has construido! Para más inspiración, eche un vistazo a [la colección de Vincent De Oliveira](https://lab.iamvdo.me/houdini/).
 
-Nota: los puntos de interrupción actualmente no son compatibles con la API de pintura CSS, pero se habilitarán en una versión posterior de Chrome.
+Note: Los puntos de interrupción actualmente no son compatibles con la API de pintura de CSS, pero se habilitarán en una versión posterior de Chrome.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

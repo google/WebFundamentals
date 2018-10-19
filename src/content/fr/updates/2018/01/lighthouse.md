@@ -45,7 +45,7 @@ Voir les [Notes de version 2.7][RN] pour la liste complète des nouvelles foncti
 
 La nouvelle catégorie SEO propose des audits qui aident à améliorer le classement de votre page dans les résultats des moteurs de recherche.
 
-Remarque: de nombreux facteurs affectent le classement du moteur de recherche d'une page. Phare ne teste pas tous ces facteurs. Un score parfait de 100 dans Lighthouse ne garantit pas une place de premier rang sur les moteurs de recherche!
+Note: De nombreux facteurs affectent le classement du moteur de recherche d'une page. Phare ne teste pas tous ces facteurs. Un score parfait de 100 dans Lighthouse ne garantit pas une place de premier rang sur les moteurs de recherche!
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,

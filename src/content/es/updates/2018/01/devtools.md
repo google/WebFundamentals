@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
+<span lang="es-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -31,7 +32,7 @@ Siga leyendo o vea la versión en video de estas notas de publicación, a contin
   </iframe>
 </div>
 
-Nota: verifique qué versión de Chrome está ejecutando en `chrome://version`. Si está ejecutando una versión anterior, estas características no existirán. Si está ejecutando una versión posterior, estas características pueden haber cambiado. Chrome se actualiza automáticamente a una nueva versión principal cada 6 semanas.
+Note: Comprueba qué versión de Chrome está ejecutando en `chrome://version`. Si está ejecutando una versión anterior, estas características no existirán. Si está ejecutando una versión posterior, estas características pueden haber cambiado. Chrome se actualiza automáticamente a una nueva versión principal cada 6 semanas.
 
 ## Anulaciones locales {: #overrides }
 
@@ -165,7 +166,7 @@ Vea [Ejecutar Lighthouse en Chrome DevTools][audit], o vea el A11ycast a continu
 
 Chrome 65 incluye una categoría completamente nueva de auditorías de SEO y muchas auditorías de rendimiento nuevas.
 
-Nota: El panel ** Auditorías ** está alimentado por [Faro][LH]. Chrome 64 ejecuta la versión 2.5 del faro. Chrome 65 ejecuta la versión 2.8 de Faro. Así que esta sección es simplemente un resumen de las actualizaciones de Lighthouse de 2.6, 2.7 y 2.8.
+Note: El panel ** Auditorías ** está alimentado por [Lighthouse][LH]. Chrome 64 ejecuta la versión 2.5 del faro. Chrome 65 ejecuta la versión 2.8 de Faro. Así que esta sección es simplemente un resumen de las actualizaciones de Lighthouse de 2.6, 2.7 y 2.8.
 
 ### Nuevas auditorías de SEO {: #seo }
 
@@ -241,7 +242,7 @@ Cuando ingresó a un código como este en versiones anteriores de Chrome, Chrome
 
 Al entrar en el código asíncrono, DevTools ahora asume que desea hacer una pausa en el código asíncrono que finalmente se ejecuta.
 
-Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()`, DevTools ejecuta todo el código que lleva hasta ese punto entre bambalinas y luego se detiene en la función que se pasa a `setTimeout()`.
+Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()`, DevTools ejecuta todo el código que lleva hasta ese punto detrás de la escena, y luego se detiene en la función que se pasa a `setTimeout()`.
 
 <figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
@@ -274,7 +275,7 @@ El panel ** Performance ** ahora le permite guardar temporalmente hasta 5 grabac
 
 ## Bonus: Automatice las acciones de DevTools con Puppeteer 1.0 {: #puppeteer }
 
-Nota: Esta sección no está relacionada con Chrome 65.
+Note: Esta sección no está relacionada con Chrome 65.
 
 La versión 1.0 de Puppeteer, una herramienta de automatización del navegador mantenida por el equipo de Chrome DevTools, ya está disponible. Puede usar Puppeteer para automatizar muchas tareas que antes solo estaban disponibles a través de DevTools, como la captura de capturas de pantalla:
 
@@ -310,7 +311,7 @@ También puede usar Puppeteer para exponer las funciones de DevTools mientras na
 
 Si está en Mac o Windows, considere usar [Chrome Canary][canary] como su navegador de desarrollo predeterminado. Si informa un error o un cambio que no le gusta mientras aún está en Canary, el equipo de DevTools puede abordar sus comentarios de manera significativamente más rápida.
 
-Nota: Canarias es la versión de vanguardia de Chrome. Se lanza tan pronto como se construye, sin pruebas. Esto significa que Canary se quiebra de vez en cuando, aproximadamente una vez al mes, y generalmente se arregla dentro de un día. Puedes volver a usar Chrome Estable cuando se rompe Canary.
+Note: Canary es la versión de vanguardia de Chrome. Se lanza tan pronto como se construye, sin pruebas. Esto significa que Canary se quiebra de vez en cuando, aproximadamente una vez al mes, y generalmente se arregla dentro de un día. Puedes volver a usar Chrome Estable cuando se rompe Canary.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -327,3 +328,5 @@ Consulte la etiqueta [devtools-whatsnew][tag] para ver los enlaces a todas las n
 [tag]: /web/updates/tags/devtools-whatsnew
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

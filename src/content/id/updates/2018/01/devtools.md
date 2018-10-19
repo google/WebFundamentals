@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
+<span lang="id-x-mtfrom-en">
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -31,7 +32,7 @@ Baca terus, atau tonton versi video dari catatan rilis ini, di bawah ini.
   </iframe>
 </div>
 
-Catatan: Periksa versi Chrome apa yang Anda jalankan di `chrome://version`. Jika Anda menjalankan versi sebelumnya, fitur-fitur ini tidak akan ada. Jika Anda menjalankan versi yang lebih baru, fitur-fitur ini mungkin telah berubah. Pembaruan otomatis Chrome ke versi utama baru setiap 6 minggu.
+Note: Periksa versi Chrome apa yang Anda jalankan di `chrome://version`. Jika Anda menjalankan versi sebelumnya, fitur-fitur ini tidak akan ada. Jika Anda menjalankan versi yang lebih baru, fitur-fitur ini mungkin telah berubah. Pembaruan otomatis Chrome ke versi utama baru setiap 6 minggu.
 
 ## Lokal Menggantikan {: #overrides }
 
@@ -165,7 +166,7 @@ Lihat [Jalankan Lighthouse di Chrome DevTools][audit], atau tonton A11ycast di b
 
 Chrome 65 dikirimkan dengan kategori baru audit SEO, dan banyak audit kinerja baru.
 
-Catatan: Panel ** Audit ** didukung oleh [Lighthouse][LH]. Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
+Note: Panel ** Audit ** didukung oleh [Lighthouse][LH]. Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
 
 ### Audit SEO baru {: #seo }
 
@@ -274,7 +275,7 @@ Panel ** Performance ** sekarang memungkinkan Anda menyimpan hingga 5 rekaman se
 
 ## Bonus: Mengotomatiskan aksi DevTools dengan Puppeteer 1.0 {: #puppeteer }
 
-Catatan: Bagian ini tidak terkait dengan Chrome 65.
+Note: Bagian ini tidak terkait dengan Chrome 65.
 
 Versi 1.0 dari Puppeteer, alat otomatisasi browser yang dikelola oleh tim Chrome DevTools, sekarang keluar. Anda dapat menggunakan Puppeteer untuk mengotomatiskan banyak tugas yang sebelumnya hanya tersedia melalui DevTools, seperti menangkap tangkapan layar:
 
@@ -310,7 +311,7 @@ Anda juga dapat menggunakan Puppeteer untuk mengekspos fitur DevTools saat menje
 
 Jika Anda menggunakan Mac atau Windows, pertimbangkan untuk menggunakan [Chrome Canary][canary] sebagai browser pengembangan default Anda. Jika Anda melaporkan bug atau perubahan yang tidak Anda sukai saat masih ada di Canary, tim DevTools dapat menanggapi umpan balik Anda secara signifikan lebih cepat.
 
-Catatan: Canary adalah versi Chrome yang mengandung pendarahan. Ini dirilis segera setelah dibangun, tanpa pengujian. Ini berarti bahwa Canary istirahat dari waktu ke waktu, sekitar sebulan sekali, dan biasanya tetap dalam satu hari. Anda dapat kembali menggunakan Chrome Stable saat Canary putus.
+Note: Canary adalah versi Chrome yang mengandung pendarahan. Ini dirilis segera setelah dibangun, tanpa pengujian. Ini berarti bahwa Canary istirahat dari waktu ke waktu, sekitar sebulan sekali, dan biasanya tetap dalam satu hari. Anda dapat kembali menggunakan Chrome Stable saat Canary putus.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -327,3 +328,5 @@ Lihat tag [devtools-whatsnew][tag] untuk tautan ke semua catatan rilis DevTools 
 [tag]: /web/updates/tags/devtools-whatsnew
 
 {% include "web/_shared/rss-widget-updates.html" %}
+
+</span>

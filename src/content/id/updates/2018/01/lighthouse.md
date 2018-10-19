@@ -45,7 +45,7 @@ Lihat [2,7 catatan rilis][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 Kategori SEO baru menyediakan audit yang membantu meningkatkan peringkat halaman Anda dalam hasil mesin pencari.
 
-Catatan: Banyak faktor memengaruhi peringkat mesin telusur laman. Mercusuar tidak menguji semua faktor ini. Skor sempurna 100 di Lighthouse tidak menjamin peringkat teratas di mesin pencari apa pun!
+Note: Banyak faktor memengaruhi peringkat mesin pencari suatu halaman. Mercusuar tidak menguji semua faktor ini. Skor sempurna 100 di Lighthouse tidak menjamin peringkat teratas di mesin pencari apa pun!
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,

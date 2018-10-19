@@ -45,7 +45,7 @@ Xem [2.7 ghi chú phát hành][RN] để biết danh sách đầy đủ các tí
 
 Danh mục SEO mới cung cấp các kiểm tra giúp cải thiện thứ hạng trang của bạn trong các kết quả của công cụ tìm kiếm.
 
-Lưu ý: Nhiều yếu tố ảnh hưởng đến xếp hạng của công cụ tìm kiếm của trang. Ngọn hải đăng không kiểm tra tất cả các yếu tố này. Một điểm số 100 hoàn hảo trong Lighthouse không đảm bảo một vị trí xếp hạng cao nhất trên bất kỳ công cụ tìm kiếm nào!
+Note: Nhiều yếu tố ảnh hưởng đến xếp hạng công cụ tìm kiếm của trang. Ngọn hải đăng không kiểm tra tất cả các yếu tố này. Một điểm số 100 hoàn hảo trong Lighthouse không đảm bảo một vị trí xếp hạng cao nhất trên bất kỳ công cụ tìm kiếm nào!
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,

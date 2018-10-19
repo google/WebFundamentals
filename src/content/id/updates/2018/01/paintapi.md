@@ -34,7 +34,7 @@ Untuk menentukan worklet cat yang disebut `myPainter`, kita perlu memuat file wo
 
 Di dalam callback `paint()`, kita dapat menggunakan `ctx` dengan cara yang sama kita akan `CanvasRenderingContext2D` seperti yang kita tahu dari `<canvas>`. Jika Anda tahu cara menggambar dalam `<canvas>`, Anda dapat menggambar di worklet cat! `geometry` memberi tahu kami lebar dan tinggi kanvas yang kami miliki. `properties` Saya akan jelaskan nanti di artikel ini.
 
-Catatan: Konteks cat worklet tidak 100% sama dengan konteks `<canvas>`. Sampai sekarang, metode render teks hilang dan untuk alasan keamanan Anda tidak dapat membaca kembali piksel dari kanvas.
+Note: Konteks cat worklet tidak 100% sama dengan konteks `<canvas>`. Sampai sekarang, metode render teks hilang dan untuk alasan keamanan Anda tidak dapat membaca kembali piksel dari kanvas.
 
 Sebagai contoh pengantar, mari tuliskan papan tulis dam dan gunakan sebagai gambar latar belakang `<textarea>`. (Saya menggunakan textarea karena itu dapat diubah ukurannya secara default.):
 
@@ -75,7 +75,7 @@ Sebagai contoh pengantar, mari tuliskan papan tulis dam dan gunakan sebagai gamb
 
 Jika Anda pernah menggunakan `<canvas>` di masa lalu, kode ini akan terlihat familier. Lihat langsung [demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) di sini.
 
-Catatan: Seperti hampir semua API baru, CSS Paint API hanya tersedia melalui HTTPS (atau `localhost`).
+Note: Seperti hampir semua API baru, CSS Paint API hanya tersedia melalui HTTPS (atau `localhost`).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea dengan pola kotak-kotak sebagai gambar latar belakang.">
 
@@ -141,7 +141,7 @@ Sekarang kita dapat menggunakan kode yang sama untuk semua jenis checkerboards y
   </video>
 </div>
 
-Catatan: Akan sangat bagus untuk membuat parameter warna juga, bukan? Spec memungkinkan fungsi `paint()` untuk mengambil daftar argumen. Fitur ini belum diterapkan di Chrome, karena sangat bergantung pada Houdini Properties and Values ​​API, yang masih membutuhkan beberapa pekerjaan sebelum dapat dikirimkan.
+Note: Akan sangat bagus untuk menentukan warna juga, bukan? Spec memungkinkan fungsi `paint()` untuk mengambil daftar argumen. Fitur ini belum diterapkan di Chrome, karena sangat bergantung pada Houdini Properties and Values ​​API, yang masih membutuhkan beberapa pekerjaan sebelum dapat dikirimkan.
 
 ## Browser yang tidak mendukung worklet cat Pada saat penulisan, hanya Chrome yang menerapkan worklet paint. Meskipun ada sinyal positif dari semua vendor browser lainnya, tidak ada banyak kemajuan. Untuk tetap up to date, periksa [Apakah Houdini Siap Namun?](https://ishoudinireadyyet.com) secara teratur. Sementara itu, pastikan untuk menggunakan peningkatan progresif agar kode Anda tetap berjalan meskipun tidak ada dukungan untuk melukis worklet. Untuk memastikan semuanya bekerja seperti yang diharapkan, Anda harus menyesuaikan kode Anda di dua tempat: CSS dan JS.
 
@@ -186,7 +186,7 @@ Bagi saya, prospek yang paling menarik adalah bahwa worklet paint memungkinkan p
 
 Worklet cat telah berada di Chrome Canary untuk sementara waktu. Dengan Chrome 65, diaktifkan secara default. Pergi ke depan dan mencoba kemungkinan-kemungkinan baru yang melukis worklet membuka dan menunjukkan kepada kita apa yang Anda bangun! Untuk inspirasi lebih lanjut, lihat koleksi [Vincent De Oliveira](https://lab.iamvdo.me/houdini/).
 
-Catatan: Breakpoint saat ini tidak didukung di CSS Paint API, tetapi akan diaktifkan di rilis Chrome selanjutnya.
+Note: Breakpoint saat ini tidak didukung di CSS Paint API, tetapi akan diaktifkan di rilis Chrome selanjutnya.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

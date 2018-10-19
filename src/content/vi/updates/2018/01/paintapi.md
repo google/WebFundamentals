@@ -34,7 +34,7 @@ CSS Paint API cho phép bạn lập trình một hình ảnh bất cứ khi nào
 
 Bên trong hàm gọi lại `paint()`, chúng ta có thể sử dụng `ctx` giống như cách chúng ta có một `CanvasRenderingContext2D` như chúng ta biết từ `<canvas>`. Nếu bạn biết làm thế nào để vẽ trong một `<canvas>`, bạn có thể vẽ trong một worklet sơn! `geometry` cho chúng ta biết chiều rộng và chiều cao của canvas mà chúng tôi đang sử dụng. `properties` Tôi sẽ giải thích sau trong bài viết này.
 
-Lưu ý: Ngữ cảnh của một worklet sơn không phải là 100% giống như ngữ cảnh `<canvas>`. Hiện tại, phương thức hiển thị văn bản bị thiếu và vì lý do bảo mật, bạn không thể đọc lại pixel từ canvas.
+Note: Ngữ cảnh của một công nhân sơn không phải là 100% giống như bối cảnh `<canvas>`. Hiện tại, phương thức hiển thị văn bản bị thiếu và vì lý do bảo mật, bạn không thể đọc lại pixel từ canvas.
 
 Như một ví dụ giới thiệu, hãy viết một worklet sơn bàn cờ và sử dụng nó làm hình nền của một `<textarea>`. (Tôi đang sử dụng vùng văn bản vì nó có thể thay đổi kích thước theo mặc định.):
 
@@ -75,7 +75,7 @@ Như một ví dụ giới thiệu, hãy viết một worklet sơn bàn cờ và
 
 Nếu trước đây bạn đã sử dụng `<canvas>`, mã này sẽ trông quen thuộc. Xem [demo] trực tiếp (0) tại đây.
 
-Lưu ý: Giống như hầu hết các API mới, API CSS Paint chỉ khả dụng trên HTTPS (hoặc `localhost`).
+Note: Giống như hầu hết các API mới, API CSS Paint chỉ khả dụng trên HTTPS (hoặc `localhost`).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea với mẫu bàn cờ làm hình nền.">
 
@@ -141,7 +141,7 @@ Bây giờ chúng ta có thể sử dụng cùng một mã cho tất cả các l
   </video>
 </div>
 
-Lưu ý: Thật tuyệt vời khi tham số hóa màu sắc, phải không? Đặc tả này cho phép hàm `paint()` lấy một danh sách các đối số. Tính năng này chưa được triển khai trong Chrome, vì nó phụ thuộc rất nhiều vào API và Giá trị của Houdini, vẫn cần một số công việc trước khi có thể vận chuyển.
+Note: Thật tuyệt vời khi tham số hóa màu sắc, phải không? Đặc tả này cho phép hàm `paint()` lấy một danh sách các đối số. Tính năng này chưa được triển khai trong Chrome, vì nó phụ thuộc rất nhiều vào API và Giá trị của Houdini, vẫn cần một số công việc trước khi có thể vận chuyển.
 
 ## Các trình duyệt không hỗ trợ công việc sơn Tại thời điểm viết, chỉ Chrome đã triển khai công việc sơn. Mặc dù có các tín hiệu tích cực từ tất cả các nhà cung cấp trình duyệt khác, nhưng không có nhiều tiến bộ. Để cập nhật, hãy kiểm tra [Houdini Ready Yet?](https://ishoudinireadyyet.com) thường xuyên. Trong thời gian chờ đợi, hãy đảm bảo sử dụng cải tiến nâng cao để giữ cho mã của bạn chạy ngay cả khi không có hỗ trợ cho công việc sơn. Để đảm bảo mọi thứ hoạt động như mong đợi, bạn phải điều chỉnh mã của mình ở hai nơi: CSS và JS.
 
@@ -186,7 +186,7 @@ Với tôi, triển vọng thú vị nhất là công việc sơn cho phép tín
 
 Paint Worklet đã có trong Chrome Canary trong một thời gian. Với Chrome 65, Chrome được bật theo mặc định. Hãy tiếp tục và thử những khả năng mới mà công việc sơn sẽ mở ra và cho chúng tôi thấy những gì bạn đã xây dựng! Để có thêm cảm hứng, hãy xem [bộ sưu tập của Vincent De Oliveira](https://lab.iamvdo.me/houdini/).
 
-Lưu ý: Các điểm ngắt hiện không được hỗ trợ trong CSS Paint API, nhưng sẽ được bật trong bản phát hành sau của Chrome.
+Note: Điểm ngắt hiện không được hỗ trợ trong CSS Paint API, nhưng sẽ được bật trong bản phát hành sau của Chrome.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

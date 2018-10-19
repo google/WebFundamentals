@@ -45,7 +45,7 @@ Eine vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen 
 
 Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seite in Suchmaschinenergebnissen zu verbessern.
 
-Hinweis: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lighthouse testet nicht alle diese Faktoren. Ein perfektes Ergebnis von 100 Punkten in Lighthouse garantiert keinen Top-Platz in irgendeiner Suchmaschine!
+Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lighthouse testet nicht alle diese Faktoren. Ein perfektes Ergebnis von 100 Punkten in Lighthouse garantiert keinen Top-Platz in irgendeiner Suchmaschine!
 
 <figure>   <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
