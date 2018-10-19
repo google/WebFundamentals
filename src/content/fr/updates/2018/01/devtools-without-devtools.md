@@ -1,8 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-
-{% setvar translang "fr" %}
 {% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
@@ -61,7 +59,7 @@ Une suggestion générale: consultez l'API [Puppeteer][API]{:.external} avant de
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Si vous avez besoin d'aide pour accéder à une fonctionnalité de DevTools via Puppeteer, [posez une question sur le dépassement de capacité de la pile][SO]{:.external}.
+Si vous avez besoin d'aide pour accéder à une fonctionnalité de DevTools via Puppeteer, posez une question sur le dépassement de capacité de la pile.
 
 Si vous voulez montrer un script Puppeteer qui utilise le protocole DevTools, envoyez-nous un tweet à l'adresse [@ChromeDevTools][twitter]{:.external}.
 
