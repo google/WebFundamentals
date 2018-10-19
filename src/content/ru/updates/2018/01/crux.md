@@ -10,7 +10,7 @@ description: Announcing the release of a new country dimension in the Chrome Use
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Announcing the release of a new country dimension in the Chrome User Experience Report. #}
 
-# Отчет о работе Chrome Chrome: новый размер страны {: .page-title }
+Отчет о работе Chrome Chrome: новый размер страны {: .page-title }
 
 {% include "web/_shared/contributors/rviscomi.html" %}
 

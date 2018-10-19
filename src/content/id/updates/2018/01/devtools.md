@@ -128,7 +128,7 @@ Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat 
   </figcaption>
 </gambar>
 
-Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external}. Jika hanya memiliki satu tanda centang, itu berarti itu memenuhi [rasio kontras yang direkomendasikan minimum (AA)][minimum] PRGMS1.
+Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external}. Jika hanya memiliki satu tanda centang, itu berarti itu memenuhi [rasio kontras yang direkomendasikan minimum (AA)][minimum]{:.external}.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 
 ## Kode yang dapat dipercaya melangkah dengan pekerja dan kode asinkron {: #stepping }
 
-Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] Tombol {:.cdt-inl} saat memasukkan kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] PRGMS1 yang baru.
+Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] Tombol {:.cdt-inl} saat memasukkan kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] {:.cdt-inl} yang baru.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

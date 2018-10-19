@@ -36,7 +36,7 @@ Note: ¿Desea la lista completa de cambios? Echa un vistazo a la [lista de cambi
 
 ## `ResizeObserver` {: #resizeobserver }
 
-El seguimiento de los cambios de tamaño de un elemento puede ser un poco molesto. Lo más probable es que adjunte un escucha al evento `resize` del documento y luego llame a `getBoundingClientRect` o `getComputedStyle` . Pero, ambos pueden causar una paliza de diseño.
+El seguimiento de los cambios de tamaño de un elemento puede ser un poco molesto. Lo más probable es que adjunte un agente de escucha al evento `resize` del documento, luego llame a `getBoundingClientRect` o `getComputedStyle` . Pero, ambos pueden causar una paliza de diseño.
 
 ¿Y qué sucede si la ventana del navegador no cambió el tamaño, pero se agregó un nuevo elemento al documento? ¿O agregaste `display: none` a un elemento? Ambos pueden cambiar el tamaño de otros elementos dentro de la página.
 

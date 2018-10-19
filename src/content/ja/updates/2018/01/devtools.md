@@ -128,7 +128,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
   </figcaption>
 </figure>
 
-**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[強化された推奨コントラスト比（AAA）][enhanced]{:.external}を満たすことを意味します。チェックマークが1つしかない場合は、[最小推奨コントラスト比（AA）][minimum] PRGMS1を満たしていることを意味します。
+**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[強化された推奨コントラスト比（AAA）][enhanced]{:.external}を満たすことを意味します。チェックマークが1つしかない場合は、[最小推奨コントラスト比（AA）][minimum]{:.external}を満たしていることを意味します。
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65には、多くの新しいパフォーマンス監査が付属して�
 
 ## 作業者と非同期コードによる信頼性の高いコードステッピング {: #stepping }
 
-Chrome 65は、スレッド間のメッセージを渡すコードと非同期コードに進む際に、** Step Into **！[Step Into][into]{:.cdt-inl}ボタンを更新します。以前のステップ動作をしたい場合は、代わりに新しい** Step **！[Step][step] PRGMS1ボタンを使用することができます。
+Chrome 65は、スレッド間のメッセージを渡すコードと非同期コードに進む際に、** Step Into **！[Step Into][into]{:.cdt-inl}ボタンを更新します。以前のステップ動作をしたい場合は、代わりに新しい** Step **！[Step][step]{:.cdt-inl}ボタンを使用することができます。
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

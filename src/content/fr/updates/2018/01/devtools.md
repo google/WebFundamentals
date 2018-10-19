@@ -128,7 +128,7 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   </figcaption>
 </figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il n'y avait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRGMS1.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il n'y avait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum]{:.external}.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 
 ## Code de progression fiable avec les opérateurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRGMS1 à la place.
+Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] {:.cdt-inl} à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

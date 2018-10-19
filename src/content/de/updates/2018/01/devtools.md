@@ -128,7 +128,7 @@ Durch die Verbesserung des Farbkontrastes Ihrer Textelemente wird Ihre Website f
   </figcaption>
 </Figur>
 
-In ** Abbildung 5 ** bedeuten die zwei Häkchen neben ** 4.61 **, dass dieses Element das [erweiterte empfohlene Kontrastverhältnis (AAA)][enhanced]{:.external} erfüllt. Wenn es nur ein Häkchen hätte, würde das bedeuten, dass es das [minimale empfohlene Kontrastverhältnis (AA)][minimum] PRGMS1 erfüllt.
+In ** Abbildung 5 ** bedeuten die zwei Häkchen neben ** 4.61 **, dass dieses Element das [erweiterte empfohlene Kontrastverhältnis (AAA)][enhanced]{:.external} erfüllt. Wenn es nur ein Häkchen hätte, würde das bedeuten, dass es das [minimale empfohlene Kontrastverhältnis (AA)][minimum]{:.external} erfüllt.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65 wird außerdem mit vielen neuen Leistungsprüfungen ausgeliefert:
 
 ## Zuverlässiges Code-Stepping mit Workern und asynchronem Code {: #stepping }
 
-Chrome 65 enthält Updates für die Schaltfläche ** Schritt in ** ![Schritt in][into]] {:.cdt-inl}, wenn Sie in Code wechseln, der Nachrichten zwischen Threads und asynchronem Code übergibt. Wenn Sie das vorherige Stepping-Verhalten wünschen, können Sie stattdessen die neue Schaltfläche ** Step ** ![Step][step]] PRGMS1 verwenden.
+Chrome 65 enthält Updates für die Schaltfläche ** Schritt in ** ![Schritt in][into]] {:.cdt-inl}, wenn Sie in Code wechseln, der Nachrichten zwischen Threads und asynchronem Code übergibt. Wenn Sie das vorherige Stepping-Verhalten wünschen, können Sie stattdessen die neue Schaltfläche ** Step ** ![Step][step]] {:.cdt-inl} verwenden.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

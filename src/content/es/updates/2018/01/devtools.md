@@ -128,7 +128,7 @@ Mejorar el contraste de color de sus elementos de texto hace que su sitio sea m�
   </figcaption>
 </figure>
 
-En ** Figura 5 **, las dos marcas de verificación junto a ** 4.61 ** significa que este elemento cumple con la [relación de contraste recomendada mejorada (AAA)][enhanced]{:.external}. Si solo tuviera una marca de verificación, eso significaría que cumplió con la [relación de contraste mínima recomendada (AA)][minimum] PRGMS1.
+En ** Figura 5 **, las dos marcas de verificación junto a ** 4.61 ** significa que este elemento cumple con la [relación de contraste recomendada mejorada (AAA)][enhanced]{:.external}. Si solo tuviera una marca de verificación, eso significaría que cumplió con la [relación de contraste mínima recomendada (AA)][minimum]{:.external}.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65 también viene con muchas auditorías de rendimiento nuevas:
 
 ## Paso a paso de código confiable con trabajadores y código asíncrono {: #stepping }
 
-Chrome 65 trae actualizaciones al botón ** Step Into ** ![Step Into][into]] {:.cdt-inl} al ingresar en el código que pasa mensajes entre subprocesos y código asíncrono. Si desea el comportamiento paso a paso anterior, puede utilizar el nuevo botón ** Paso ** ![Paso][step]] PRGMS1, en su lugar.
+Chrome 65 trae actualizaciones al botón ** Step Into ** ![Step Into][into]] {:.cdt-inl} al ingresar en el código que pasa mensajes entre subprocesos y código asíncrono. Si desea el comportamiento paso a paso anterior, puede utilizar el nuevo botón ** Paso ** ![Paso][step]] {:.cdt-inl}, en su lugar.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

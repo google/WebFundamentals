@@ -128,7 +128,7 @@ Cải thiện độ tương phản màu của các yếu tố văn bản làm ch
   </figcaption>
 </figure>
 
-Trong ** Hình 5 **, hai dấu kiểm bên cạnh ** 4.61 ** có nghĩa là phần tử này đáp ứng [tỷ lệ tương phản được khuyến nghị nâng cao (AAA)][enhanced]{:.external}. Nếu nó chỉ có một dấu kiểm, điều đó có nghĩa là nó đã đáp ứng [tỷ lệ tương phản tối thiểu được đề nghị (AA)][minimum] PRGMS1.
+Trong ** Hình 5 **, hai dấu kiểm bên cạnh ** 4.61 ** có nghĩa là phần tử này đáp ứng [tỷ lệ tương phản được khuyến nghị nâng cao (AAA)][enhanced]{:.external}. Nếu nó chỉ có một dấu kiểm, điều đó có nghĩa là nó đã đáp ứng [tỷ lệ tương phản tối thiểu được đề nghị (AA)][minimum]{:.external}.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -211,7 +211,7 @@ Chrome 65 cũng có nhiều kiểm tra hiệu suất mới:
 
 ## Mã đáng tin cậy với công nhân và mã không đồng bộ {: #stepping }
 
-Chrome 65 mang đến các cập nhật cho ** Bước vào ** ![Bước vào][into]] Nút {:.cdt-inl} khi bước vào mã chuyển các thông điệp giữa các chủ đề và mã không đồng bộ. Nếu bạn muốn hành vi bước trước đó, bạn có thể sử dụng nút ** Bước ** mới ![Bước][step]] PRGMS1, thay vào đó.
+Chrome 65 mang đến các cập nhật cho ** Bước vào ** ![Bước vào][into]] Nút {:.cdt-inl} khi bước vào mã chuyển các thông điệp giữa các chủ đề và mã không đồng bộ. Nếu bạn muốn hành vi bước trước đó, bạn có thể sử dụng nút ** Bước ** mới ![Bước][step]] {:.cdt-inl}, thay vào đó.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png

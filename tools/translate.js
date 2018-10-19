@@ -119,37 +119,37 @@ async function translateLines(text, to) {
     translation = translation.replace(/＃/gu,'#');
 
     // Remap all links of form []()
-    translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/gm, (match, p1, p2, offset, str) => {
       return `[${p1}](${links.shift()})`;
     });
 
     // Remap all callouts
-    translation = translation.replace(/SPCLCLLTS(\d+)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SPCLCLLTS(\d+)/gm, (match, p1, p2, offset, str) => {
       return `${callouts.shift()} `;
     });
 
     // Remap all links of form [][]
-    translation = translation.replace(/\[([^\]]+)\]\[(\d+)\]/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/\[([^\]]+)\]\[(\d+)\]/gm, (match, p1, p2, offset, str) => {
       return `[${p1}][${squareLinks.shift()}]`;
     });
 
     // Remap all {: } 
-    translation = translation.replace(/PRGMS(\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/PRGMS(\d+)/gm, (match, p1, p2, offset, str) => {
       return `{:${pragmas.shift()}}`;
     });
 
     // Remap all link defintions 
-    translation = translation.replace(/^LNKDFS(\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/^LNKDFS(\d+)/gm, (match, p1, p2, offset, str) => {
       return `${linkDefs.shift()}`;
     });
 
     // Remap all src="" and src=''
-    translation = translation.replace(/SRCURL(\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SRCURL(\d+)/gm, (match, p1, p2, offset, str) => {
       return `${srcs.shift()}`;
     });
 
     // Remap all specialWords 
-    translation = translation.replace(/SPCLWRD(\d+)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SPCLWRD(\d+)/gm, (match, p1, p2, offset, str) => {
       return `\`${specialWords.shift()}\` `;
     });
 
@@ -165,7 +165,7 @@ async function translateLines(text, to) {
     });
 
     // Bodge for Japan
-    translation = translation.replace(/\S(\{: \.page-title \})/g,' $1');
+    translation = translation.replace(/\S(\{: \.page-title \})/gm,' $1');
     translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
     translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
     translation = translation.replace(/：/gu,':');

@@ -20,7 +20,7 @@ Tôi thường thấy các câu hỏi dọc theo dòng "Tôi thực sự thích 
 
 Câu trả lời ngắn gọn là: bạn có thể không thể.
 
-Tuy nhiên, bạn * có thể * tấn công cùng một tập lệnh [Puppeteer][puppeteer]{:.external} khởi chạy Chromium, mở ứng dụng gỡ lỗi từ xa, sau đó bật tính năng DevTools mà bạn thích (thông qua [Giao thức Chrome DevTools][CDP] PRGMS1), mà không bao giờ mở DevTools một cách rõ ràng.
+Tuy nhiên, bạn * có thể * tấn công cùng một tập lệnh [Puppeteer][puppeteer]{:.external} khởi chạy Chromium, mở ứng dụng gỡ lỗi từ xa, sau đó bật tính năng DevTools mà bạn thích (thông qua [Giao thức Chrome DevTools][CDP]{:.external}), mà không bao giờ mở DevTools một cách rõ ràng.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +53,7 @@ Ví dụ: tập lệnh bên dưới cho phép tôi chồng [FPS Meter][FPS] lên
 
 Đây chỉ là một trong nhiều tính năng của DevTools mà bạn có thể truy cập thông qua Giao thức Chrome DevTools.
 
-Một gợi ý chung: xem [Puppeteer API][API]{:.external} trước khi sử dụng để tạo một trình khách giao thức DevTools. Puppeteer đã có API chuyên dụng cho nhiều tính năng của DevTools, chẳng hạn như [mã bảo hiểm][coverage] PRGMS1 và [thông báo ** giao diện điều khiển **][console] PRGMS2.
+Một gợi ý chung: xem [Puppeteer API][API]{:.external} trước khi sử dụng để tạo một trình khách giao thức DevTools. Puppeteer đã có API chuyên dụng cho nhiều tính năng của DevTools, chẳng hạn như [mã bảo hiểm][coverage]{:.external} và [thông báo ** giao diện điều khiển **][console]{:.external}.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage

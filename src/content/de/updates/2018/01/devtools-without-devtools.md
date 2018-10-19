@@ -20,7 +20,7 @@ Ich sehe häufig Fragen in der Art von "Ich mag Feature X von DevTools wirklich,
 
 Die kurze Antwort ist: Sie können wahrscheinlich nicht.
 
-Sie können * jedoch * ein [Puppenspieler][puppeteer]{:.external}-Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über das [Chrome DevTools-Protokoll][CDP] PRGMS1), ohne jemals DevTools explizit zu öffnen.
+Sie können * jedoch * ein [Puppenspieler][puppeteer]{:.external}-Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über das [Chrome DevTools-Protokoll][CDP]{:.external}), ohne jemals DevTools explizit zu öffnen.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +53,7 @@ Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts 
 
 Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicherweise über das Chrome DevTools-Protokoll zugreifen können.
 
-Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer-API][API]{:.external}, bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [Code Coverage][coverage] PRGMS1 und [Abfangen von ** Console ** -Nachrichten][console] PRGMS2.
+Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer-API][API]{:.external}, bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [Code Coverage][coverage]{:.external} und [Abfangen von ** Console ** -Nachrichten][console]{:.external}.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage

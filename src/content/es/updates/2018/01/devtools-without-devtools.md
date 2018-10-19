@@ -20,7 +20,7 @@ Normalmente veo preguntas en la línea de "Realmente me gusta la función X de D
 
 La respuesta corta es: probablemente no puedas.
 
-Sin embargo, usted * puede * piratear una secuencia de comandos de [Puppeteer][puppeteer]{:.external} que inicia Chromium, abre un cliente de depuración remoto y luego activa la función DevTools que le gusta (a través del [Protocolo de Chrome DevTools][CDP] PRGMS1), sin nunca abrir explícitamente DevTools.
+Sin embargo, usted * puede * piratear una secuencia de comandos de [Puppeteer][puppeteer]{:.external} que inicia Chromium, abre un cliente de depuración remoto y luego activa la función DevTools que le gusta (a través del [Protocolo de Chrome DevTools][CDP]{:.external}), sin nunca abrir explícitamente DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +53,7 @@ Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter
 
 Esta es solo una de las muchas, muchas características de DevTools a las que potencialmente puede acceder a través del protocolo de Chrome DevTools.
 
-Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} antes de volver a crear un cliente de protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [cobertura de código][coverage] PRGMS1 y [interceptación ** de la consola ** mensajes][console] PRGMS2.
+Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} antes de volver a crear un cliente de protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [cobertura de código][coverage]{:.external} y [interceptación ** de la consola ** mensajes][console]{:.external}.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage

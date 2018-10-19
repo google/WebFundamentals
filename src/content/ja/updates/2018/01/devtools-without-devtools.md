@@ -20,7 +20,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 短い答えは、おそらくできないことです。
 
-しかし、Chromiumを起動し、リモートデバッグクライアントを開き、[DevToolsプロトコル][puppeteer]{:.external}を介して）あなたが好きなDevTools機能をオンにする[Puppeteer][CDP] PRGMS0スクリプトを一緒にハックすることができますDevToolsを明示的に開くことはありません。
+しかし、Chromiumを起動し、リモートデバッグクライアントを開き、[DevToolsプロトコル][puppeteer]{:.external}を介して）あなたが好きなDevTools機能をオンにする[Puppeteer][CDP]{:.external}スクリプトを一緒にハックすることができますDevToolsを明示的に開くことはありません。
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +53,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 
-一般的な提案:DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage] PRGMS1と[インターセプト**コンソール**メッセージ][console] PRGMS2など、DevToolsの多くの機能に専用のAPIを既に持っています。
+一般的な提案:DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage]{:.external}と[インターセプト**コンソール**メッセージ][console]{:.external}など、DevToolsの多くの機能に専用のAPIを既に持っています。
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
