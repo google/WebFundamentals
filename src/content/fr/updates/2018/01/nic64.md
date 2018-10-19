@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
-<span lang="fr-x-mtfrom-en">
+
+{% setvar translang "fr" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -16,15 +18,15 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-<div class="video-wrapper">   <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
+<div class="video-wrapper">  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-* La prise en charge de [`ResizeObservers`](#resizeobserver) vous avertira lorsque le rectangle de contenu d’un élément aura changé de taille.
+* La prise en charge de [`ResizeObservers` ](#resizeobserver) vous avertira lorsque le rectangle de contenu d’un élément aura changé de taille.
 * Les modules peuvent désormais accéder à des métadonnées spécifiques à l’hôte avec [import.meta](#import-meta).
 * Le [bloqueur de pop-up](#popup-blocker) devient fort.
-* [`window.alert()`](#window-alert) ne change plus le focus.
+* [`window.alert()` ](#window-alert) ne change plus le focus.
 
 Et il y a [beaucoup plus](#more)!
 
@@ -32,11 +34,11 @@ Je suis Pete LePage. Découvrons ce qui est nouveau pour les développeurs dans 
 
 <div class="clearfix"></div>
 
-Note: Voulez-vous la liste complète des changements? Consultez la [liste de modifications du référentiel source Chromium](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
+Note: Vous voulez la liste complète des changements? Consultez la [liste de modifications du référentiel source Chromium](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
 
 ## `ResizeObserver` {: #resizeobserver }
 
-Le suivi des modifications de la taille d’un élément peut être un peu pénible. Très probablement, vous attacherez un écouteur à l'événement `resize` du document, puis appelez `getBoundingClientRect` ou `getComputedStyle`. Mais, les deux peuvent causer des problèmes de mise en page.
+Le suivi des modifications de la taille d’un élément peut être un peu pénible. Très probablement, vous attacherez un écouteur à l'événement `resize` du document, puis appelez `getBoundingClientRect` ou `getComputedStyle` . Mais, les deux peuvent causer des problèmes de mise en page.
 
 Et si la fenêtre du navigateur ne changeait pas de taille, mais si un nouvel élément était ajouté au document? Ou vous avez ajouté `display: none` à un élément? Ces deux éléments peuvent modifier la taille des autres éléments de la page.
 
@@ -58,7 +60,7 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Consultez [`ResizeObserver`: c'est comme `document.onresize` pour les éléments](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
+Regardez [`ResizeObserver` : C'est comme `document.onresize` pour Elements](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
 
 
 ## Bloqueur de pop-up amélioré {: #popup-blocker }
@@ -70,7 +72,7 @@ Je déteste tab-under. Vous les connaissez, c’est quand une page ouvre une fen
 
 ## `import.meta` {: #import-meta }
 
-Lors de l'écriture de modules JavaScript, vous souhaitez souvent accéder à des métadonnées spécifiques à l'hôte concernant le module actuel. Chrome 64 prend désormais en charge la propriété `import.meta` dans les modules et expose l'URL du module sous la forme `import.meta.url`.
+Lors de l'écriture de modules JavaScript, vous souhaitez souvent accéder à des métadonnées spécifiques à l'hôte concernant le module actuel. Chrome 64 prend désormais en charge la propriété `import.meta` dans les modules et expose l'URL du module en tant que `import.meta.url` .
 
 Ceci est très utile lorsque vous souhaitez résoudre des ressources relatives au fichier de module par opposition au document HTML actuel.
 
@@ -80,15 +82,15 @@ Ceci est très utile lorsque vous souhaitez résoudre des ressources relatives a
 Ce ne sont là que quelques-uns des changements apportés à Chrome 64 par les développeurs. Bien entendu, il y en a beaucoup plus.
 
 * Chrome prend désormais en charge les [captures nommées](/web/updates/2017/07/upcoming-regexp-features#named_captures) et les [échappements de propriétés Unicode](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) dans les expressions régulières.
-* La valeur par défaut `preload` pour les éléments `<audio>` et `<video>` est désormais `metadata`. Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l'utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
-* Vous pouvez désormais utiliser `Request.prototype.cache` pour afficher le mode de cache d'un `Request` et déterminer si une demande est une demande de rechargement.
-* À l'aide de l'API Focus Management, vous pouvez maintenant focaliser un élément sans y accéder avec l'attribut `preventScroll`.
+* La valeur `preload` par défaut pour les éléments `<audio>` et `<video>` est maintenant `metadata` . Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l'utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
+* Vous pouvez maintenant utiliser `Request.prototype.cache` pour afficher le mode de cache d'un `Request` et déterminer si une demande est une demande de rechargement.
+* À l'aide de l'API Focus Management, vous pouvez maintenant focaliser un élément sans y accéder avec l'attribut `preventScroll` .
 
 ## `window.alert()` {: #window-alert }
 
 Oh, et un de plus! Bien que ce ne soit pas vraiment une "fonctionnalité de développeur", cela me fait plaisir. `window.alert()` n'apporte plus d'onglet d'arrière-plan au premier plan! Au lieu de cela, l'alerte sera affichée lorsque l'utilisateur reviendra à cet onglet.
 
-Plus de commutation aléatoire d’onglet car quelque chose a déclenché un `window.alert` sur moi. Je vous regarde le vieil agenda Google.
+Plus de commutation aléatoire des onglets, car quelque chose a déclenché un `window.alert` sur moi. Je vous regarde le vieil agenda Google.
 
 
 Assurez-vous de vous abonner (0) à notre [chaîne YouTube](https://goo.gl/6FP1a5) et vous recevrez une notification par e-mail chaque fois que nous lancerons une nouvelle vidéo ou ajouterons notre [flux RSS](https://www.youtube.com/user/ChromeDevelopers/) à votre lecteur de flux.
@@ -100,4 +102,4 @@ Je suis Pete LePage. Dès que Chrome 65 sera disponible, je serai ici pour vous 
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="es-x-mtfrom-en">
+
+{% setvar translang "es" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -12,7 +14,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Actualizaciones {: .page-title }
+# Lighthouse 2.7 actualiza {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -75,7 +77,7 @@ Las nuevas auditorías de accesibilidad manual le informan sobre lo que puede ha
   </figcaption>
 </figure>
 
-## Actualizaciones a la auditoría WebP {: #webp }
+## Actualizaciones a la auditoría de WebP {: #webp }
 
 Gracias a algunos [comentarios de la comunidad][feedback], la [auditoría de WebP][webp] ahora incluye más formatos de imagen de próxima generación y alto rendimiento, como JPEG 2000 y JPEG XR.
 
@@ -91,4 +93,4 @@ Gracias a algunos [comentarios de la comunidad][feedback], la [auditoría de Web
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="ru-x-mtfrom-en">
+
+{% setvar translang "ru" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -35,7 +37,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 ## Как обновить до 2.7 {: #update }
 
-* NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g` , если вы установили Lighthouse глобально.
+* NPM. Запустите `npm update lighthouse` или флаг `npm update lighthouse -g` , если вы установили Lighthouse глобально.
 * Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions` .
 * DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary].
 
@@ -75,7 +77,7 @@ Note: Многие факторы влияют на ранжирование п�
   </figcaption>
 </Цифра>
 
-## Обновления для аудита WebPA {: #webp }
+## Обновления для аудита WebP {: #webp }
 
 Благодаря некоторой [обратной связи сообщества][feedback], [проверка WebP][webp] теперь более включает в себя другие высокопроизводительные графические форматы следующего поколения, такие как JPEG 2000 и JPEG XR.
 
@@ -91,4 +93,4 @@ Note: Многие факторы влияют на ранжирование п�
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
-<span lang="vi-x-mtfrom-en">
+
+{% setvar translang "vi" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -16,15 +18,15 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-<div class="video-wrapper">   <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
+<div class="video-wrapper">  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-* Hỗ trợ cho [`ResizeObservers`](#resizeobserver), sẽ thông báo cho bạn khi hình chữ nhật nội dung của phần tử đã thay đổi kích thước của nó.
+* Hỗ trợ cho [`ResizeObservers` ](#resizeobserver), sẽ thông báo cho bạn khi hình chữ nhật nội dung của phần tử đã thay đổi kích thước của nó.
 * Các mô-đun hiện có thể truy cập để lưu trữ siêu dữ liệu cụ thể bằng [import.meta](#import-meta).
 * [Trình chặn cửa sổ bật lên](#popup-blocker) trở nên mạnh mẽ.
-* [`window.alert()`](#window-alert) không còn thay đổi tiêu điểm.
+* [`window.alert()` ](#window-alert) không còn thay đổi tiêu điểm.
 
 Và có [nhiều hơn nữa](#more)!
 
@@ -36,13 +38,13 @@ Note: Muốn có danh sách đầy đủ các thay đổi? Xem [Danh sách thay 
 
 ## `ResizeObserver` {: #resizeobserver }
 
-Theo dõi khi thay đổi kích thước của một phần tử có thể hơi đau. Rất có thể, bạn sẽ đính kèm một người nghe vào sự kiện `resize` của tài liệu, sau đó gọi `getBoundingClientRect` hoặc `getComputedStyle`. Nhưng, cả hai đều có thể gây ra sự đổ vỡ bố cục.
+Theo dõi khi thay đổi kích thước của một phần tử có thể hơi đau. Rất có thể, bạn sẽ đính kèm một người nghe vào sự kiện `resize` của tài liệu, sau đó gọi `getBoundingClientRect` hoặc `getComputedStyle` . Nhưng, cả hai đều có thể gây ra sự đổ vỡ bố cục.
 
 Và điều gì sẽ xảy ra nếu cửa sổ trình duyệt không thay đổi kích thước, nhưng một phần tử mới đã được thêm vào tài liệu? Hoặc bạn đã thêm `display: none` vào một phần tử? Cả hai đều có thể thay đổi kích thước của các phần tử khác trong trang.
 
-`ResizeObserver` thông báo cho bạn bất cứ khi nào kích thước của một phần tử thay đổi, đồng thời cung cấp chiều cao và chiều rộng mới của phần tử, giảm nguy cơ vỡ trang web.
+`ResizeObserver` thông báo cho bạn bất cứ khi nào kích thước của một phần tử thay đổi và cung cấp chiều cao và chiều rộng mới của phần tử, giảm nguy cơ vỡ trang web.
 
-Giống như các nhà quan sát khác, việc sử dụng nó khá đơn giản, tạo một đối tượng `ResizeObserver` và chuyển một cuộc gọi lại đến hàm tạo. Hàm gọi lại sẽ được cung cấp một mảng `ResizeOberverEntries` - một mục nhập cho mỗi phần tử quan sát - có chứa các tham số mới cho phần tử.
+Giống như các nhà quan sát khác, việc sử dụng nó khá đơn giản, tạo ra một đối tượng `ResizeObserver` và chuyển một cuộc gọi lại đến hàm tạo. Hàm gọi lại sẽ được cấp một mảng `ResizeOberverEntries` - một mục nhập cho mỗi phần tử quan sát - chứa các tham số mới cho phần tử.
 
 ```js
 const ro = new ResizeObserver( entries => {
@@ -58,10 +60,10 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Kiểm tra [`ResizeObserver`: Nó giống như `document.onresize` cho phần tử](/web/updates/2016/10/resizeobserver) để biết thêm chi tiết và ví dụ thực tế.
+Kiểm tra [`ResizeObserver` : Nó giống như `document.onresize` cho phần tử](/web/updates/2016/10/resizeobserver) để biết thêm chi tiết và ví dụ thực tế.
 
 
-## Cải thiện Trình chặn cửa sổ bật lên {: #popup-blocker }
+## Cải tiến Trình chặn cửa sổ bật lên {: #popup-blocker }
 
 Tôi ghét tab-under. Bạn biết họ, đó là khi một trang mở một cửa sổ bật lên đến một số đích VÀ điều hướng trang. Thông thường, một trong số đó là quảng cáo hoặc thứ gì đó mà bạn không muốn.
 
@@ -70,7 +72,7 @@ Bắt đầu từ Chrome 64, các loại điều hướng này sẽ bị chặn 
 
 ## `import.meta` {: #import-meta }
 
-Khi viết các mô-đun JavaScript, bạn thường muốn truy cập vào siêu dữ liệu của máy chủ lưu trữ cụ thể về mô-đun hiện tại. Chrome 64 hiện hỗ trợ thuộc tính `import.meta` trong các mô-đun và hiển thị URL cho mô-đun là `import.meta.url`.
+Khi viết các mô-đun JavaScript, bạn thường muốn truy cập vào siêu dữ liệu của máy chủ lưu trữ cụ thể về mô-đun hiện tại. Chrome 64 giờ đây hỗ trợ thuộc tính `import.meta` trong các mô đun và hiển thị URL cho mô-đun là `import.meta.url` .
 
 Điều này thực sự hữu ích khi bạn muốn giải quyết tài nguyên liên quan đến tệp mô-đun trái ngược với tài liệu HTML hiện tại.
 
@@ -80,15 +82,15 @@ Khi viết các mô-đun JavaScript, bạn thường muốn truy cập vào siê
 Đây chỉ là một vài thay đổi trong Chrome 64 dành cho nhà phát triển, tất nhiên, có nhiều thay đổi hơn.
 
 * Chrome hiện hỗ trợ [các ảnh chụp có tên](/web/updates/2017/07/upcoming-regexp-features#named_captures) và [thoát thuộc tính Unicode](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) trong các biểu thức chính quy.
-* Giá trị mặc định `preload` cho các phần tử `<audio>` và `<video>` bây giờ là `metadata`. Điều này mang Chrome phù hợp với các trình duyệt khác và giúp giảm băng thông và sử dụng tài nguyên bằng cách chỉ tải siêu dữ liệu chứ không phải chính phương tiện.
-* Bây giờ bạn có thể sử dụng `Request.prototype.cache` để xem chế độ bộ nhớ cache của `Request` và xác định xem yêu cầu có phải là yêu cầu tải lại hay không.
-* Sử dụng API quản lý tập trung, giờ đây bạn có thể tập trung một phần tử mà không cần cuộn đến phần tử đó bằng thuộc tính `preventScroll`.
+* Giá trị `preload` mặc định cho các phần tử `<audio>` và `<video>` giờ là `metadata` . Điều này mang Chrome phù hợp với các trình duyệt khác và giúp giảm băng thông và sử dụng tài nguyên bằng cách chỉ tải siêu dữ liệu chứ không phải chính phương tiện.
+* Bây giờ bạn có thể sử dụng `Request.prototype.cache` để xem chế độ cache của `Request` và xác định xem yêu cầu có phải là một yêu cầu tải lại hay không.
+* Sử dụng API quản lý tập trung, giờ đây bạn có thể tập trung một phần tử mà không cần cuộn đến phần tử đó bằng thuộc tính `preventScroll` .
 
 ## `window.alert()` {: #window-alert }
 
 Oh, và một nữa! Mặc dù đây không thực sự là ‘tính năng dành cho nhà phát triển’, điều đó làm tôi hạnh phúc. `window.alert()` không còn mang đến một tab nền cho nền trước! Thay vào đó, cảnh báo sẽ được hiển thị khi người dùng chuyển sang quay lại tab đó.
 
-Không có chuyển đổi tab ngẫu nhiên hơn bởi vì một cái gì đó đã kích hoạt `window.alert` trên tôi. Tôi đang xem bạn Lịch Google cũ.
+Không có chuyển đổi tab ngẫu nhiên hơn bởi vì một cái gì đó bắn một `window.alert` vào tôi. Tôi đang xem bạn Lịch Google cũ.
 
 
 Hãy nhớ [đăng ký](https://goo.gl/6FP1a5) vào [kênh YouTube] của chúng tôi (1) và bạn sẽ nhận được thông báo qua email mỗi khi chúng tôi khởi chạy video mới hoặc thêm [Nguồn cấp dữ liệu RSS](https://www.youtube.com/user/ChromeDevelopers/) của chúng tôi vào trình đọc nguồn cấp dữ liệu của bạn.
@@ -100,4 +102,4 @@ Tôi là Pete LePage và ngay sau khi Chrome 65 được phát hành, tôi sẽ 
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

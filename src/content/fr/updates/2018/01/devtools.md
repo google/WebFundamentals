@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
-<span lang="fr-x-mtfrom-en">
+
+{% setvar translang "fr" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -27,19 +29,19 @@ Les nouvelles fonctionnalités de DevTools dans Chrome 65 incluent:
 
 Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dessous.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-Note: Vérifiez la version de Chrome que vous exécutez à `chrome://version`. Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
+Note: Vérifiez quelle version de Chrome vous exécutez sur `chrome://version` . Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
 ## Remplacement local {: #overrides }
 
 ** Les remplacements locaux ** vous permettent d'apporter des modifications à DevTools et de les conserver tout au long du chargement des pages. Auparavant, toute modification apportée dans DevTools était perdue lorsque vous rechargiez la page.
 ** Les substitutions locales ** fonctionnent pour la plupart des types de fichiers, à quelques exceptions près. Voir [Limitations](#overrides-limitations).
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
        alt="Persisting a CSS change across page loads with Local Overrides."/>
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
@@ -71,7 +73,7 @@ Pour configurer les ** dérogations locales **:
 * DevTools n'enregistre pas les modifications apportées dans l'arborescence ** DOM ** du panneau ** Elements **. Modifiez le code HTML dans le panneau ** Sources ** à la place.
 * Si vous modifiez CSS dans le volet ** Styles ** et que la source de ce CSS est un fichier HTML, DevTools n'enregistrera pas le changement. Modifiez le fichier HTML dans le panneau ** Sources ** à la place.
 
-### Fonctions associées {: #overrides-related }
+### Fonctions connexes {: #overrides-related }
 
 * [Espaces de travail][WS]. DevTools mappe automatiquement les ressources réseau sur un référentiel local. Chaque fois que vous apportez une modification à DevTools, cette modification est également enregistrée dans votre référentiel local.
 
@@ -81,7 +83,7 @@ Pour configurer les ** dérogations locales **:
 
 Suivez les modifications que vous apportez localement dans DevTools via le nouvel onglet ** Modifications **.
 
-<figure>   <img src="/web/updates/images/2018/01/changes.png"
+<figure>  <img src="/web/updates/images/2018/01/changes.png"
        alt="The Changes tab"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
@@ -92,11 +94,11 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
 
 Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées. déficiences de la vision.
 
-### Volet d'accessibilité {: #a11y-pane }
+### Volet Accessibilité {: #a11y-pane }
 
 Utilisez le volet ** Accessibilité ** du panneau ** Eléments ** pour examiner les propriétés d'accessibilité de l'élément actuellement sélectionné.
 
-<figure>   <img src="/web/updates/images/2018/01/a11y-pane.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y-pane.png"
        alt="The Accessibility pane shows the ARIA attributes and computed
             properties for the element that's currently selected in the DOM Tree of
             the Elements panel, as well as its position in the accessibility tree."/>
@@ -109,7 +111,7 @@ Utilisez le volet ** Accessibilité ** du panneau ** Eléments ** pour examiner 
 
 Consultez l'étiquette A11ycast de Rob Dodson sur l'étiquetage ci-dessous pour voir le volet ** Accessibility ** en action.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
@@ -121,14 +123,14 @@ Le [Color Picker][CP] vous indique maintenant le rapport de contraste des élém
 
 L&#39;amélioration du contraste des couleurs de vos éléments de texte rend votre site plus utilisable par <i>tous les</i> utilisateurs. En d&#39;autres termes, si votre texte est gris avec un arrière-plan blanc, il est difficile à lire pour quiconque.
 
-<figure>   <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
+<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
        alt="Inspecting the contrast ratio of the highlighted H1 element."/>
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
   </figcaption>
 </figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il ne comportait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRAGMAS1.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il n'y avait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum] PRGMS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -136,7 +138,7 @@ Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient
 Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
 ** La figure 6 ** correspond aux recommandations. Cela signifie que toutes les couleurs situées au-dessous de la ligne blanche sont également conformes aux recommandations.
 
-<figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
+<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
        alt="The expanded Contrast Ratio section."/>
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
@@ -154,7 +156,7 @@ Le panneau ** Audits ** dispose d’un audit d’accessibilité automatisé pour
 
 Reportez-vous à la section [Exécuter Lighthouse dans Chrome DevTools][audit] ou consultez l'A11ycast ci-dessous pour apprendre à utiliser le panneau ** Audits ** pour tester l'accessibilité.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
@@ -172,7 +174,7 @@ Note: Le panneau ** Audits ** est alimenté par [Lighthouse][LH]. Chrome 64 exé
 
 En vous assurant que vos pages réussissent chacune des vérifications de la nouvelle catégorie ** SEO **, vous pourrez améliorer votre classement dans les moteurs de recherche.
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
@@ -209,9 +211,9 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 [2.6]: /web/updates/2017/12/lighthouse
 [2.7]: /web/updates/2018/01/lighthouse
 
-## Code pas à pas fiable avec les travailleurs et le code asynchrone {: #stepping }
+## Code de progression fiable avec les opérateurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRAGMAS1 à la place.
+Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] PRGMS1 à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -220,9 +222,9 @@ Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][int
 
 Lorsque vous entrez dans le code qui transmet les messages entre les threads, DevTools vous montre maintenant ce qui se passe dans chaque thread.
 
-Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l'appel `postMessage()` sur le thread principal, DevTools met en pause le gestionnaire `onmessage` dans le thread de travail. Le gestionnaire `onmessage` lui-même envoie un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
+Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l'appel `postMessage()` sur le thread principal, DevTools s'interrompt dans le gestionnaire `onmessage` du thread de travail. Le gestionnaire `onmessage` lui-même envoie un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
@@ -231,7 +233,7 @@ Par exemple, l’application de la Figure 8 ** transmet un message entre le fil 
 
 Lorsque vous êtes entré dans un code comme celui-ci dans les versions précédentes de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la ** figure 9 **.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
@@ -242,9 +244,9 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
 
 Lorsque vous entrez dans le code asynchrone, DevTools suppose maintenant que vous souhaitez suspendre le code asynchrone qui s'exécute.
 
-Par exemple, dans la ** figure 10 ** après être passé dans `setTimeout()`, DevTools exécute tout le code menant à ce point derrière la scène, puis met en pause la fonction transmise à `setTimeout()`.
+Par exemple, dans la ** figure 10 **, après avoir accédé à `setTimeout()` , DevTools exécute tout le code menant jusque-là à l'arrière-plan, puis met en pause la fonction transmise à `setTimeout()` .
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
@@ -253,7 +255,7 @@ Par exemple, dans la ** figure 10 ** après être passé dans `setTimeout()`, De
 
 Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a interrompu la lecture du code chronologiquement, comme vous pouvez le voir sur la ** figure 11 **.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 63."/>
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
@@ -266,14 +268,14 @@ Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairemen
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
-<figure>   <img src="/web/updates/images/2018/01/recordings.png"
+<figure>  <img src="/web/updates/images/2018/01/recordings.png"
        alt="Selecting between multiple recordings in the Performance panel."/>
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel
   </figcaption>
 </figure>
 
-## Bonus: Automatisez les actions de DevTools avec Puppeteer 1.0 {: #puppeteer }
+## Bonus: Automatisez les actions DevTools avec Puppeteer 1.0 {: #puppeteer }
 
 Note: Cette section n'est pas liée à Chrome 65.
 
@@ -321,7 +323,7 @@ Le meilleur endroit pour discuter des fonctionnalités ou des modifications que 
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-## Notes de version précédentes {: #links }
+## Notes de publication précédentes {: #links }
 
 Voir la balise [devtools-whatsnew][tag] pour des liens vers toutes les notes de publication précédentes de DevTools.
 
@@ -329,4 +331,4 @@ Voir la balise [devtools-whatsnew][tag] pour des liens vers toutes les notes de 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

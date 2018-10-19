@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
-<span lang="de-x-mtfrom-en">
+
+{% setvar translang "de" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2018-01-18 #}
@@ -22,7 +24,7 @@ Mit CSS Paint API können Sie ein Bild programmgesteuert generieren, wenn eine C
 
 ### Ein Malarbeitsblatt schreiben
 
-Um ein Paint-Arbeitsblatt namens `myPainter` zu definieren, müssen Sie eine CSS-Paint-Arbeitsblattdatei mit `CSS.paintWorklet.addModule('my-paint-worklet.js')` laden. In dieser Datei können wir die `registerPaint`-Funktion verwenden, um eine Paint-Workle-Klasse zu registrieren:
+Um ein Arbeitsblatt namens `myPainter` zu definieren, müssen Sie eine CSS-Arbeitsblattdatei mit `CSS.paintWorklet.addModule('my-paint-worklet.js')` laden. In dieser Datei können wir die `registerPaint` -Funktion verwenden, um eine Paint Workle-Klasse zu registrieren:
 
     class MyPainter {
       paint(ctx, geometry, properties) {
@@ -32,11 +34,11 @@ Um ein Paint-Arbeitsblatt namens `myPainter` zu definieren, müssen Sie eine CSS
 
     registerPaint('myPainter', MyPainter);
 
-Innerhalb des `paint()`-Callbacks können wir `ctx` genauso verwenden wie ein `CanvasRenderingContext2D`, wie wir es aus `<canvas>` kennen. Wenn Sie wissen, wie Sie ein `<canvas>` zeichnen, können Sie ein Farbarbeitsblatt einzeichnen! `geometry` sagt uns die Breite und die Höhe der Leinwand, die uns zur Verfügung steht. `properties` Ich werde später in diesem Artikel erklären.
+Innerhalb des `paint()` -Callbacks können wir `ctx` genauso verwenden wie `CanvasRenderingContext2D` , wie wir es aus `<canvas>` kennen. Wenn Sie wissen, wie Sie in `<canvas>` zeichnen, können Sie ein Farbarbeitsblatt einzeichnen! `geometry` sagt uns die Breite und die Höhe der Leinwand, die uns zur Verfügung steht. `properties` Ich werde später in diesem Artikel erklären.
 
-Note: Der Kontext eines Malarbeitsbereichs ist nicht 100% identisch mit einem Kontext `<canvas>`. Ab sofort fehlen Text Rendering Methoden und aus Sicherheitsgründen können Sie keine Pixel aus dem Canvas zurücklesen.
+Note: Der Kontext eines Malarbeitsbereichs entspricht nicht 100% dem `<canvas>` -Kontext. Ab sofort fehlen Text Rendering Methoden und aus Sicherheitsgründen können Sie keine Pixel aus dem Canvas zurücklesen.
 
-Als ein einleitendes Beispiel schreiben wir ein Schachbrett-Paint-Worlet und verwenden es als Hintergrundbild eines `<textarea>`. (Ich benutze ein Textfeld, da es standardmäßig in der Größe veränderbar ist.):
+Als einleitendes Beispiel schreiben wir ein Schachbrett-Paint-Arbeitsblatt und verwenden es als Hintergrundbild eines `<textarea>` . (Ich benutze ein Textfeld, da es standardmäßig in der Größe veränderbar ist.):
 
     <!-- index.html -->
     <!doctype html>
@@ -75,7 +77,7 @@ Als ein einleitendes Beispiel schreiben wir ein Schachbrett-Paint-Worlet und ver
 
 Wenn Sie `<canvas>` in der Vergangenheit verwendet haben, sollte dieser Code bekannt sein. Sehen Sie das Live [Demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) hier.
 
-Note: Wie bei fast allen neuen APIs ist die CSS Paint API nur über HTTPS (oder `localhost`) verfügbar.
+Note: Wie bei fast allen neuen APIs ist die CSS Paint-API nur über HTTPS (oder `localhost` ) verfügbar.
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea mit einem Schachbrettmuster als Hintergrundbild.">
 
@@ -85,7 +87,7 @@ Das ist ziemlich cool, aber es ist auch ziemlich statisch. Würden wir jedes Mal
 
 ### Parametriere dein Worklet
 
-Glücklicherweise kann das Paint Worlet auf andere CSS-Eigenschaften zugreifen, wo der zusätzliche Parameter `properties` ins Spiel kommt. Wenn Sie der Klasse ein statisches Attribut `inputProperties` zuweisen, können Sie Änderungen an jeder CSS-Eigenschaft, einschließlich benutzerdefinierter Eigenschaften, abonnieren. Die Werte werden Ihnen über den Parameter `properties` übergeben.
+Glücklicherweise kann das Paint Worlet auf andere CSS-Eigenschaften zugreifen, wo der zusätzliche Parameter `properties` ins Spiel kommt. Wenn Sie der Klasse ein statisches `inputProperties` -Attribut zuweisen, können Sie Änderungen an jeder CSS-Eigenschaft, einschließlich benutzerdefinierter Eigenschaften, abonnieren. Die Werte werden Ihnen über den Parameter `properties` übergeben.
 
     <!-- index.html -->
     <!doctype html>
@@ -131,7 +133,7 @@ Glücklicherweise kann das Paint Worlet auf andere CSS-Eigenschaften zugreifen, 
 
 Jetzt können wir den gleichen Code für alle Arten von Schachbrettern verwenden. Aber noch besser, wir können jetzt in DevTools gehen und [fiedeln mit den Werten](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) bis wir das richtige Aussehen finden.
 
-<div style="display: flex; justify-content: center">   <video loop muted controls>
+<div style="display: flex; justify-content: center">  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -141,11 +143,11 @@ Jetzt können wir den gleichen Code für alle Arten von Schachbrettern verwenden
   </video>
 </div>
 
-Note: Es wäre auch schön, die Farben zu parametrisieren, oder? Die Spezifikation ermöglicht es der `paint()`-Funktion, eine Liste von Argumenten zu übernehmen. Diese Funktion ist in Chrome noch nicht implementiert, da sie sich stark auf die Houdini API für Eigenschaften und Werte stützt, die noch einige Zeit benötigt, bevor sie ausgeliefert werden kann.
+Note: Es wäre auch schön, die Farben zu parametrisieren, oder? Die Spezifikation ermöglicht der `paint()` -Funktion, eine Liste von Argumenten zu übernehmen. Diese Funktion ist in Chrome noch nicht implementiert, da sie sich stark auf die Houdini API für Eigenschaften und Werte stützt, die noch einige Zeit benötigt, bevor sie ausgeliefert werden kann.
 
 ## Browser, die kein Farbarbeitsgerät unterstützen Zum Zeitpunkt der Erstellung dieses Handbuchs wurde in Chrome nur ein Farbarbeitsblatt implementiert. Während es von allen anderen Browser-Anbietern positive Signale gibt, gibt es keine großen Fortschritte. Um auf dem Laufenden zu bleiben, überprüfe regelmäßig [Ist Houdini Ready?](https://ishoudinireadyyet.com). In der Zwischenzeit sollten Sie die progressive Erweiterung verwenden, damit der Code auch dann ausgeführt wird, wenn keine Unterstützung für Paint Worlet vorhanden ist. Um sicherzustellen, dass die Dinge wie erwartet funktionieren, müssen Sie Ihren Code an zwei Stellen anpassen: CSS und JS.
 
-Die Unterstützung für das Farbarbeitsblatt in JS kann durch Überprüfen des `CSS`-Objekts ermittelt werden:
+Die Unterstützung für das Farbarbeitsblatt in JS kann durch Überprüfen des `CSS` -Objekts ermittelt werden:
 
     if ('paintWorklet' in CSS) {
       CSS.paintWorklet.addModule('mystuff.js');
@@ -164,19 +166,19 @@ Ein kompakterer Trick besteht darin, die Tatsache zu verwenden, dass CSS eine vo
       background-image: paint(myGradient, red, blue);
     }
 
-In Browsern mit Unterstützung für Paint Worlet wird die zweite Deklaration von `background-image` die erste überschreiben. In Browsern ohne Unterstützung für Paint Worletlet ist die zweite Deklaration ungültig und wird verworfen, sodass die erste Deklaration wirksam bleibt.
+In Browsern mit Unterstützung für Paint Worlet überschreibt die zweite Deklaration von `background-image` die erste. In Browsern ohne Unterstützung für Paint Worletlet ist die zweite Deklaration ungültig und wird verworfen, sodass die erste Deklaration wirksam bleibt.
 
 ### CSS Paint Polyfill
 
 Für viele Anwendungen ist es auch möglich, [CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) zu verwenden, das modernen Browsern CSS-Unterstützung für benutzerdefinierte Paint- und Paint-Worklets hinzufügt.
 
-## Use Cases Es gibt viele Anwendungsfälle für Paint Worklets, von denen einige offensichtlicher sind als andere. Einer der offensichtlichsten ist die Verwendung von Paint Workles, um die Größe Ihres DOM zu reduzieren. Oft werden Elemente hinzugefügt, um Verschönerungen mithilfe von CSS zu erstellen. Zum Beispiel enthält in [Material Design Lite](https://getmdl.io) die Schaltfläche mit dem Ripple-Effekt 2 zusätzliche `<span>`-Elemente, um die Ripple selbst zu implementieren. Wenn Sie viele Schaltflächen haben, kann dies zu einer Reihe von DOM-Elementen führen und zu einer Verschlechterung der Leistung auf Mobilgeräten führen. Wenn Sie stattdessen den Welleneffekt mit dem Paint-Arbeitsblatt (1) implementieren, erhalten Sie 0 zusätzliche Elemente und nur ein Malarbeitselement. Darüber hinaus haben Sie etwas, das viel einfacher anzupassen und zu parametrisieren ist.
+## Use Cases Es gibt viele Anwendungsfälle für Paint Worklets, von denen einige offensichtlicher sind als andere. Einer der offensichtlichsten ist die Verwendung von Paint Workles, um die Größe Ihres DOM zu reduzieren. Oft werden Elemente hinzugefügt, um Verschönerungen mithilfe von CSS zu erstellen. Zum Beispiel enthält in [Material Design Lite](https://getmdl.io) die Schaltfläche mit dem Welleneffekt 2 zusätzliche `<span>` -Elemente, um die Welligkeit selbst zu implementieren. Wenn Sie viele Schaltflächen haben, kann dies zu einer Reihe von DOM-Elementen führen und zu einer Verschlechterung der Leistung auf Mobilgeräten führen. Wenn Sie stattdessen den Welleneffekt mit dem Paint-Arbeitsblatt (1) implementieren, erhalten Sie 0 zusätzliche Elemente und nur ein Malarbeitselement. Darüber hinaus haben Sie etwas, das viel einfacher anzupassen und zu parametrisieren ist.
 
 Ein weiterer Vorteil der Verwendung von Paint Worlet ist, dass in den meisten Szenarien eine Lösung mit Paint Worlet klein in Bytes ist. Natürlich gibt es einen Kompromiss: Ihr Malcode wird immer dann ausgeführt, wenn sich die Leinwandgröße oder einer der Parameter ändert. Wenn Ihr Code also komplex ist und lange braucht, könnte er jank einführen. Chrome arbeitet daran, Farbarbeitselemente vom Hauptthread zu entfernen, sodass selbst lang laufende Farbarbeitsflächen die Reaktionsfähigkeit des Hauptthreads nicht beeinträchtigen.
 
 Für mich ist die aufregendste Aussicht, dass die Paint-Worklet-Software ein effizientes Polyfilling von CSS-Funktionen ermöglicht, die ein Browser noch nicht hat. Ein Beispiel wäre Polyfill [Kegelschnittgradienten](https://lab.iamvdo.me/houdini/conic-gradient), bis sie nativ in Chrome landen. Ein anderes Beispiel: In einem CSS-Meeting wurde entschieden, dass Sie jetzt mehrere Rahmenfarben haben können. Während dieses Meeting noch lief, schrieb mein Kollege Ian Kilpatrick [1] für dieses neue CSS-Verhalten einen Paintfill (1) mit Hilfe eines Paint Worletts.
 
-## Denken außerhalb der "Box" Die meisten Menschen beginnen, über Hintergrundbilder und Randbilder nachzudenken, wenn sie etwas über das Paintworklet lernen. Ein weniger intuitiver Anwendungsfall für das Farbarbeitsblatt ist `mask-image`, damit DOM-Elemente beliebige Formen haben. Zum Beispiel ein [Diamant](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
+## Denken außerhalb der "Box" Die meisten Menschen beginnen, über Hintergrundbilder und Randbilder nachzudenken, wenn sie etwas über das Paintworklet lernen. Ein weniger intuitiver Anwendungsfall für Farbarbeitsflächen ist `mask-image` , um DOM-Elemente mit beliebigen Formen zu versehen. Zum Beispiel ein [Diamant](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/):
 
 <img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="Ein DOM-Element in Form eines Diamanten.">
 
@@ -186,10 +188,10 @@ Für mich ist die aufregendste Aussicht, dass die Paint-Worklet-Software ein eff
 
 Paint Worklet war eine Weile in Chrome Canary. Mit Chrome 65 ist es standardmäßig aktiviert. Probieren Sie die neuen Möglichkeiten aus, die das Malwerk öffnet und zeigen Sie uns, was Sie gebaut haben! Für mehr Inspiration, werfen Sie einen Blick auf [Vincent De Oliveira's Sammlung](https://lab.iamvdo.me/houdini/).
 
-Note: Breakpoints werden derzeit in CSS Paint API nicht unterstützt, aber in einer späteren Version von Chrome aktiviert.
+Note: Breakpoints werden derzeit in der CSS Paint-API nicht unterstützt, werden jedoch in einer späteren Version von Chrome aktiviert.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

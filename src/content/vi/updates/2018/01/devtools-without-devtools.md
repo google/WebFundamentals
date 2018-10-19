@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-<span lang="vi-x-mtfrom-en">
+
+{% setvar translang "vi" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -20,7 +22,7 @@ Tôi thường thấy các câu hỏi dọc theo dòng "Tôi thực sự thích 
 
 Câu trả lời ngắn gọn là: bạn có thể không thể.
 
-Tuy nhiên, bạn * có thể * cùng nhau tập lệnh [Puppeteer][puppeteer]{:.external} chạy Chromium, mở ứng dụng gỡ lỗi từ xa, sau đó bật tính năng DevTools mà bạn thích (thông qua [Giao thức Chrome DevTools][CDP] PRAGMAS1), mà không bao giờ mở DevTools một cách rõ ràng.
+Tuy nhiên, bạn * có thể * tấn công cùng một tập lệnh [Puppeteer][puppeteer]{:.external} khởi chạy Chromium, mở ứng dụng gỡ lỗi từ xa, sau đó bật tính năng DevTools mà bạn thích (thông qua [Giao thức Chrome DevTools][CDP] PRGMS1), mà không bao giờ mở DevTools một cách rõ ràng.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +55,7 @@ Ví dụ: tập lệnh bên dưới cho phép tôi chồng [FPS Meter][FPS] lên
 
 Đây chỉ là một trong nhiều tính năng của DevTools mà bạn có thể truy cập thông qua Giao thức Chrome DevTools.
 
-Một gợi ý chung: xem [Puppeteer API][API]{:.external} trước khi sử dụng để tạo một trình khách giao thức DevTools. Puppeteer đã có API chuyên dụng cho nhiều tính năng DevTools, chẳng hạn như [mã bảo hiểm][coverage] PRAGMAS1 và [chặn ** Bảng điều khiển **][console] PRAGMAS2.
+Một gợi ý chung: xem [Puppeteer API][API]{:.external} trước khi sử dụng để tạo một trình khách giao thức DevTools. Puppeteer đã có API chuyên dụng cho nhiều tính năng của DevTools, chẳng hạn như [mã bảo hiểm][coverage] PRGMS1 và [thông báo ** giao diện điều khiển **][console] PRGMS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
@@ -68,4 +70,4 @@ Nếu bạn muốn thể hiện kịch bản Puppeteer sử dụng Giao thức D
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

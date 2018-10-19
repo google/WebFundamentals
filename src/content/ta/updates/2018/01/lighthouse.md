@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="ta-x-mtfrom-en">
+
+{% setvar translang "ta" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -12,7 +14,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# கலங்கரை விளக்கு 2.7 புதுப்பிப்புகள் {: .page-title }
+# லைட்ஹவுஸ் 2.7 புதுப்பிப்புகள் {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -35,13 +37,13 @@ ____DEFS__ 0
 
 ## 2.7 {: #update } க்கு புதுப்பிப்பது எப்படி
 
-* NPM. உலகளாவிய லைட்ஹவுஸ் நிறுவப்பட்டால் `npm update lighthouse` , அல்லது `npm update lighthouse -g` இயக்கவும்.
+* NPM. உலகளாவிய லைட்ஹவுஸ் நிறுவப்பட்டிருந்தால் `npm update lighthouse` அல்லது `npm update lighthouse -g` கொடியை இயக்கவும்.
 * Chrome நீட்டிப்பு. நீட்டிப்பு தானாக புதுப்பிக்கப்பட வேண்டும், ஆனால் நீங்கள் அதை `chrome://extensions` வழியாக கைமுறையாக புதுப்பிக்கலாம்.
-* DevTools. லைட்ஹவுஸ் 2.7 Chrome இல் 65 வது கப்பல் ஆகும். நீங்கள் இயங்கும் Chrome இன் பதிப்பை `chrome://version` வழியாக சரிபார்க்கலாம். ஒவ்வொரு 6 வாரங்களுக்கும் ஒரு புதிய பதிப்புக்கான Chrome புதுப்பிப்புகள். [Chrome கேனரி][Canary] பதிவிறக்குவதன் மூலம் சமீபத்திய Chrome குறியீட்டை இயக்கலாம்.
+* DevTools. லைட்ஹவுஸ் 2.7 Chrome இல் 65 ஆவது கப்பல். நீங்கள் `chrome://version` வழியாக இயங்கும் Chrome இன் பதிப்பை சரிபார்க்கலாம். ஒவ்வொரு 6 வாரங்களுக்கும் ஒரு புதிய பதிப்புக்கான Chrome புதுப்பிப்புகள். [Chrome கேனரி][Canary] பதிவிறக்குவதன் மூலம் சமீபத்திய Chrome குறியீட்டை இயக்கலாம்.
 
 ____DEFS__ 0
 
-## புதிய எஸ்சிஓ தணிக்கை {: #seo }
+## {: #seo } புதிய எஸ்சிஓ தணிக்கை
 
 புதிய எஸ்சிஓ வகை தேடுபொறி முடிவுகளில் உங்கள் பக்கத்தின் தரவரிசை மேம்படுத்த உதவும் தணிக்கைகளை வழங்குகிறது.
 
@@ -91,4 +93,4 @@ ____DEFS__ 0
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

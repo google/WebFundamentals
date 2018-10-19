@@ -49,7 +49,7 @@ async function translateLines(text, to) {
   // Find markdown [][] links and replace URL.
   text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, (match, p1, p2, offset, str) => {
     callouts.push(p1);
-    return `__SPECIALCALLOUTS${callouts.length-1}__`;
+    return `SPCLCLLTS${callouts.length-1}`;
   });
 
   // Find things that look like a src="" and don't replace
@@ -79,13 +79,13 @@ async function translateLines(text, to) {
   // Find {: } [][] links and replace URL.
   text = text.replace(/\{:([^\}]+)\}/g, (match, p1, p2, offset, str) => {
     pragmas.push(p1);
-    return `PRAGMAS${pragmas.length-1}`;
+    return `PRGMS${pragmas.length-1}`;
   });
 
   // Find special words and don't translate
   text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
     specialWords.push(p1);
-    return `__SPECIALWORD${specialWords.length-1}`;
+    return `SPCLWRD${specialWords.length-1}`;
   });
 
   const output = [];
@@ -124,7 +124,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all callouts
-    translation = translation.replace(/__SPECIALCALLOUTS(\d+)__/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SPCLCLLTS(\d+)/g, (match, p1, p2, offset, str) => {
       return `${callouts.shift()} `;
     });
 
@@ -134,7 +134,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all {: } 
-    translation = translation.replace(/PRAGMAS(\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/PRGMS(\d+)/, (match, p1, p2, offset, str) => {
       return `{:${pragmas.shift()}}`;
     });
 
@@ -149,7 +149,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all specialWords 
-    translation = translation.replace(/__SPECIALWORD(\d+)/g, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/SPCLWRD(\d+)/g, (match, p1, p2, offset, str) => {
       return `\`${specialWords.shift()}\` `;
     });
 
@@ -206,7 +206,7 @@ async function processFile(filePath, target) {
   let headerNeedsParse = true;
   for (const line of lines) {
     // Don't translate preamble - we are assuming there is a header that ends with just a \n
-    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`\n<span lang="${target}-x-mtfrom-en">`); output.push(line); continue; }
+    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`\n{% setvar translang "${target}" %}`); output.push(`{% include "web/_shared/translation-start.html" %}`); output.push(line); continue; }
     if (headerNeedsParse) { inHeader = true; output.push(line); continue; }
     if (inHeader) { output.push(line); continue; }
 
@@ -245,7 +245,7 @@ async function processFile(filePath, target) {
 
   if(translateBlock.length > 0) output.push(await translateLines(translateBlock.join(' '), target));
 
-  output.push('</span>');
+  output.push('{% include "web/_shared/translation-end.html" %}')
 
   const result = output.join('\n');
   const newPath = filePath.replace(/src\/content\/en\//, `src/content/${target}/`);

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-<span lang="id-x-mtfrom-en">
+
+{% setvar translang "id" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -20,7 +22,7 @@ Saya biasanya melihat pertanyaan di sepanjang baris "Saya sangat suka fitur X De
 
 Jawaban singkatnya adalah: Anda mungkin tidak bisa.
 
-Namun, Anda * dapat * meretas skrip [Puppeteer][puppeteer]{:.external} yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP] PRAGMAS1), tanpa pernah secara eksplisit membuka DevTools.
+Namun, Anda * dapat * meretas skrip [Puppeteer][puppeteer]{:.external} yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP] PRGMS1), tanpa pernah secara eksplisit membuka DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +55,7 @@ Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di
 
 Ini hanyalah salah satu dari sekian banyak fitur DevTools yang dapat Anda akses secara potensial melalui Chrome DevTools Protocol.
 
-Saran umum: lihat [Puppeteer API][API]{:.external} sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [cakupan kode][coverage] PRAGMAS1 dan [intercepting ** Console ** messages][console] PRAGMAS2.
+Saran umum: periksa [Puppeteer API][API]{:.external} sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [cakupan kode][coverage] PRGMS1 dan [intercepting ** Console ** messages][console] PRGMS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
@@ -68,4 +70,4 @@ Jika Anda ingin memamerkan skrip Puppeteer yang memanfaatkan Protokol DevTools, 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

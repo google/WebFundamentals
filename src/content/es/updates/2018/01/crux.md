@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
-<span lang="es-x-mtfrom-en">
+
+{% setvar translang "es" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-24 #}
@@ -23,7 +25,7 @@ El [Informe de experiencia de usuario de Chrome](/web/tools/chrome-user-experien
 
 Por ejemplo, en la captura de pantalla anterior vemos una consulta que compara las densidades agregadas para los tipos de conexión efectiva 4G y 3G en unos pocos países. Lo interesante es ver cómo prevalecen las velocidades de 4G en Japón, mientras que las velocidades de 3G son todavía muy comunes en la India. Ideas como estas son posibles gracias a la nueva dimensión del país.
 
-Para comenzar, diríjase al [proyecto CrUX](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all) en BigQuery y verá una lista de conjuntos de datos organizados por [código de país](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) desde `country_ae` (Emiratos Árabes Unidos) hasta `country_za` (Sudáfrica). El familiar conjunto de datos `all` todavía está allí para capturar los datos globales de rendimiento agregado. Dentro de cada conjunto de datos, hay tablas mensuales que comienzan con el informe más reciente, `201712`. Para obtener una guía detallada sobre cómo comenzar, consulte nuestra [documentación de CrUX] actualizada (2).
+Para comenzar, diríjase al [proyecto CrUX](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all) en BigQuery y verá una lista de conjuntos de datos organizados por [código de país](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) desde `country_ae` (Emiratos Árabes Unidos) hasta `country_za` (Sudáfrica). El familiar conjunto de datos `all` todavía está allí para capturar los datos globales de rendimiento agregado. Dentro de cada conjunto de datos, hay tablas mensuales que comienzan con el informe más reciente, `201712` . Para obtener una guía detallada sobre cómo comenzar, consulte nuestra [documentación de CrUX] actualizada (2).
 
 Estamos encantados de compartir esta nueva información con usted y esperamos ver que la use para mejorar la experiencia del usuario en la web. Para obtener ayuda, hacer preguntas, ofrecer comentarios o compartir los resultados de su propio análisis, únase a la discusión en el [foro de CrUX](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report). Y si el nivel gratuito en BigQuery no es suficiente para contener su entusiasmo por las consultas, todavía estamos realizando una promoción para darle un [10 extra TB gratis](https://docs.google.com/forms/d/e/1FAIpQLSeMYnz93JQuO7rPewVrKpLfxO7JREOysti0CQyRo31bc7cXHA/viewform), así que ¡obtenga sus créditos hasta agotar existencias!
 
@@ -31,4 +33,4 @@ Estamos encantados de compartir esta nueva información con usted y esperamos ve
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

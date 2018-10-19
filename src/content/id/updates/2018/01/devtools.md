@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
-<span lang="id-x-mtfrom-en">
+
+{% setvar translang "id" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-17 #}
@@ -27,19 +29,19 @@ Fitur baru yang datang ke DevTools di Chrome 65 meliputi:
 
 Baca terus, atau tonton versi video dari catatan rilis ini, di bawah ini.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="D1pV7ermy6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-Note: Periksa versi Chrome apa yang Anda jalankan di `chrome://version`. Jika Anda menjalankan versi sebelumnya, fitur-fitur ini tidak akan ada. Jika Anda menjalankan versi yang lebih baru, fitur-fitur ini mungkin telah berubah. Pembaruan otomatis Chrome ke versi utama baru setiap 6 minggu.
+Note: Periksa versi Chrome apa yang Anda jalankan di `chrome://version` . Jika Anda menjalankan versi sebelumnya, fitur-fitur ini tidak akan ada. Jika Anda menjalankan versi yang lebih baru, fitur-fitur ini mungkin telah berubah. Pembaruan otomatis Chrome ke versi utama baru setiap 6 minggu.
 
 ## Lokal Menggantikan {: #overrides }
 
 ** Local Overrides ** memungkinkan Anda membuat perubahan di DevTools, dan menjaga perubahan tersebut di seluruh beban halaman. Sebelumnya, perubahan apa pun yang Anda buat di DevTools akan hilang saat Anda memuat ulang halaman.
 ** Local Override ** berfungsi untuk sebagian besar jenis file, dengan beberapa pengecualian. Lihat [Keterbatasan](#overrides-limitations).
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
        alt="Persisting a CSS change across page loads with Local Overrides."/>
   <figcaption>
     <b>Figure 1</b>. Persisting a CSS change across page loads with <b>Local Overrides</b>
@@ -81,7 +83,7 @@ Untuk mengatur ** Local Overrides **:
 
 Lacak perubahan yang Anda buat secara lokal di DevTools melalui tab ** Perubahan ** yang baru.
 
-<figure>   <img src="/web/updates/images/2018/01/changes.png"
+<figure>  <img src="/web/updates/images/2018/01/changes.png"
        alt="The Changes tab"/>
   <figcaption>
     <b>Figure 3</b>. The <b>Changes</b> tab
@@ -96,7 +98,7 @@ Gunakan panel ** Accessibility ** baru untuk memeriksa properti aksesibilitas su
 
 Gunakan ** Accessibility ** pane pada panel ** Elements ** untuk menyelidiki properti aksesibilitas dari elemen yang saat ini dipilih.
 
-<figure>   <img src="/web/updates/images/2018/01/a11y-pane.png"
+<figure>  <img src="/web/updates/images/2018/01/a11y-pane.png"
        alt="The Accessibility pane shows the ARIA attributes and computed
             properties for the element that's currently selected in the DOM Tree of
             the Elements panel, as well as its position in the accessibility tree."/>
@@ -109,26 +111,26 @@ Gunakan ** Accessibility ** pane pada panel ** Elements ** untuk menyelidiki pro
 
 Lihat A11ycast Rob Dodson tentang pelabelan di bawah ini untuk melihat panel ** Accessibility ** dalam tindakan.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
           data-autohide="1" data-showinfo="0" frameborder="0"
           data-start="350" allowfullscreen>
   </iframe>
 </div>
 
-### Rasio kontras dalam Color Picker {: #contrast }
+### Rasio kontras dalam {: #contrast } Color Picker
 
 The [Color Picker][CP] sekarang menunjukkan Anda rasio kontras elemen teks. Meningkatkan rasio kontras elemen teks membuat situs Anda lebih mudah diakses oleh pengguna dengan gangguan penglihatan rendah atau kekurangan penglihatan warna. Lihat [Warna dan kontras][contrast] untuk mempelajari lebih lanjut tentang bagaimana rasio kontras memengaruhi aksesibilitas.
 
 Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat bagi <i>semua</i> pengguna. Dengan kata lain, jika teks Anda berwarna abu-abu dengan latar belakang putih, sulit bagi siapa pun untuk membaca.
 
-<figure>   <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
+<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-collapsed.png"
        alt="Inspecting the contrast ratio of the highlighted H1 element."/>
   <figcaption>
     <b>Figure 5</b>. Inspecting the contrast ratio of the highlighted <code>h1</code> element
   </figcaption>
 </gambar>
 
-Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external}. Jika hanya ada satu tanda centang, itu berarti ia memenuhi [rasio kontras yang disarankan minimum (AA)][minimum] PRAGMAS1.
+Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external}. Jika hanya memiliki satu tanda centang, itu berarti itu memenuhi [rasio kontras yang direkomendasikan minimum (AA)][minimum] PRGMS1.
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -136,7 +138,7 @@ Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elem
 Klik ** Tampilkan Lebih Banyak ** ![Tampilkan Lebih Banyak][SM]] {:.cdt-inl} untuk memperluas bagian ** Contrast Ratio **. Garis putih di kotak ** Color Spectrum ** menunjukkan batas antara warna yang memenuhi rasio kontras yang direkomendasikan, dan yang tidak. Misalnya, karena warna abu-abu di
 ** Gambar 6 ** memenuhi rekomendasi, itu berarti bahwa semua warna di bawah garis putih juga memenuhi rekomendasi.
 
-<figure>   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
+<figure>  <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
        alt="The expanded Contrast Ratio section."/>
   <figcaption>
     <b>Figure 6</b>. The expanded <b>Contrast Ratio</b> section
@@ -154,7 +156,7 @@ Panel ** Audit ** memiliki audit akses otomatis untuk memastikannya
 
 Lihat [Jalankan Lighthouse di Chrome DevTools][audit], atau tonton A11ycast di bawah ini, untuk mempelajari cara menggunakan panel ** Audit ** untuk menguji aksesibilitas.
 
-<div class="video-wrapper-full-width">   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
+<div class="video-wrapper-full-width">  <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
           data-autohide="1" data-showinfo="0" frameborder="0"
           allowfullscreen>
   </iframe>
@@ -166,13 +168,13 @@ Lihat [Jalankan Lighthouse di Chrome DevTools][audit], atau tonton A11ycast di b
 
 Chrome 65 dikirimkan dengan kategori baru audit SEO, dan banyak audit kinerja baru.
 
-Note: Panel ** Audit ** didukung oleh [Lighthouse][LH]. Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
+SPCLCLLES0 Panel ** Audit ** didukung oleh [Lighthouse][LH]. Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
 
 ### Audit SEO baru {: #seo }
 
 Memastikan bahwa halaman Anda melewati setiap audit dalam kategori ** SEO ** yang baru dapat membantu meningkatkan peringkat mesin pencari Anda.
 
-<figure>   <img src="/web/updates/images/2018/01/seo.png"
+<figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category of audits."/>
   <figcaption>
     <b>Figure 7</b>. The new <b>SEO</b> category of audits
@@ -211,7 +213,7 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 
 ## Kode yang dapat dipercaya melangkah dengan pekerja dan kode asinkron {: #stepping }
 
-Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] {:.cdt-inl} ketika masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] PRAGMAS1 yang baru.
+Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] Tombol {:.cdt-inl} saat memasukkan kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan tombol ** Langkah ** ![Langkah][step]] PRGMS1 yang baru.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -220,9 +222,9 @@ Chrome 65 menghadirkan pembaruan ke ** Step Into ** ![Masuk ke][into]] {:.cdt-in
 
 Ketika Anda masuk ke kode yang mengirimkan pesan antar utas, DevTools sekarang menunjukkan apa yang terjadi di setiap utas.
 
-Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke panggilan `postMessage()` pada utas utama, DevTools berhenti di penangan `onmessage` di utas pekerja. Penangan `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
+Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah melangkah ke panggilan `postMessage()` pada utas utama, DevTools berhenti di handler `onmessage` di thread pekerja. Handler `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 65."/>
   <figcaption>
     <b>Figure 8</b>. Stepping into message-passing code in Chrome 65
@@ -231,20 +233,20 @@ Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan u
 
 Ketika Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya menunjukkan Anda sisi utas-utama dari kode, seperti yang Anda lihat di ** Gambar 9 **.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
        alt="Stepping into message-passing code in Chrome 63."/>
   <figcaption>
     <b>Figure 9</b>. Stepping into message-passing code in Chrome 63
   </figcaption>
 </gambar>
 
-### Masuk ke kode asynchronous {: #async }
+### Masuk ke kode asinkron {: #async }
 
 Ketika melangkah ke kode asynchronous, DevTools sekarang mengasumsikan bahwa Anda ingin berhenti di kode asynchronous yang akhirnya berjalan.
 
-Misalnya, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()`, DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, lalu berhenti dalam fungsi yang diteruskan ke `setTimeout()`.
+Sebagai contoh, di ** Gambar 10 ** setelah melangkah ke `setTimeout()` , DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti di fungsi yang diteruskan ke `setTimeout()` .
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 65."/>
   <figcaption>
     <b>Figure 10</b>. Stepping into asynchronous code in Chrome 65
@@ -253,20 +255,20 @@ Misalnya, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()`, DevTools me
 
 Ketika Anda masuk ke kode seperti ini di Chrome 63, DevTools berhenti dalam kode karena secara kronologis berjalan, seperti yang Anda lihat di ** Gambar 11 **.
 
-<figure>   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
+<figure>  <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
        alt="Stepping into asynchronous code in Chrome 63."/>
   <figcaption>
     <b>Figure 11</b>. Stepping into asynchronous code in Chrome 63
   </figcaption>
 </gambar>
 
-## Beberapa rekaman dalam panel Performance {: #recordings }
+## Beberapa rekaman dalam panel Kinerja {: #recordings }
 
 Panel ** Performance ** sekarang memungkinkan Anda menyimpan hingga 5 rekaman secara sementara. Rekaman akan dihapus ketika Anda menutup jendela DevTools Anda. Lihat [Memulai dengan Menganalisis Kinerja Runtime][runtime] untuk merasa nyaman dengan panel ** Performance **.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
-<figure>   <img src="/web/updates/images/2018/01/recordings.png"
+<figure>  <img src="/web/updates/images/2018/01/recordings.png"
        alt="Selecting between multiple recordings in the Performance panel."/>
   <figcaption>
     <b>Figure 12</b>. Selecting between multiple recordings in the <b>Performance</b> panel
@@ -315,7 +317,7 @@ Note: Canary adalah versi Chrome yang mengandung pendarahan. Ini dirilis segera 
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Umpan balik {: #feedback }
+## Masukan {: #feedback }
 
 Tempat terbaik untuk mendiskusikan salah satu fitur atau perubahan yang Anda lihat di sini adalah milis [google-chrome-developer-tools@googlegroups.com][ML]. Anda juga dapat mentweet kami di [@ChromeDevTools](https://twitter.com/chromedevtools) jika Anda kekurangan waktu. Jika Anda yakin telah menemukan bug di DevTools, silakan [buka masalah](https://crbug.com/new).
 
@@ -329,4 +331,4 @@ Lihat tag [devtools-whatsnew][tag] untuk tautan ke semua catatan rilis DevTools 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

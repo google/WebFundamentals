@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-<span lang="de-x-mtfrom-en">
+
+{% setvar translang "de" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -12,7 +14,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Verwenden von DevTools-Funktionen ohne Öffnen von DevTools {: .page-title }
+# Verwenden von DevTools Features ohne Öffnen von DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,7 +22,7 @@ Ich sehe häufig Fragen in der Art von "Ich mag Feature X von DevTools wirklich,
 
 Die kurze Antwort ist: Sie können wahrscheinlich nicht.
 
-Sie können * jedoch * ein [Puppenspieler][puppeteer]{:.external}-Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über das [Chrome DevTools Protocol][CDP] PRAGMAS1), ohne jemals DevTools explizit zu öffnen.
+Sie können * jedoch * ein [Puppenspieler][puppeteer]{:.external}-Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über das [Chrome DevTools-Protokoll][CDP] PRGMS1), ohne jemals DevTools explizit zu öffnen.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,19 +55,19 @@ Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts 
 
 Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicherweise über das Chrome DevTools-Protokoll zugreifen können.
 
-Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer-API][API]{:.external}, bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen, wie [Code coverage][coverage] PRAGMAS1 und [abfangende ** Konsolen ** -Nachrichten][console] PRAGMAS2.
+Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer-API][API]{:.external}, bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [Code Coverage][coverage] PRGMS1 und [Abfangen von ** Console ** -Nachrichten][console] PRGMS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Wenn Sie Hilfe beim Zugriff auf eine DevTools-Funktion über Puppenspieler benötigen, [stellen Sie eine Frage zu Stapelüberlauf][SO]{:.external}.
+Wenn Sie Hilfe beim Zugriff auf eine DevTools-Funktion über Puppenspieler benötigen, [stellen Sie eine Frage zu Stack Overflow][SO]{:.external}.
 
-Wenn Sie ein Puppenspieler-Skript, das das DevTools-Protokoll verwendet, vorführen möchten, senden Sie uns eine Nachricht unter [@ChromeDevTools][twitter]{:.external}.
+Wenn Sie ein Puppeneer-Skript, das das DevTools-Protokoll verwendet, vorführen möchten, senden Sie uns eine Nachricht unter [@ChromeDevTools][twitter]{:.external}.
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini’s CSS Paint API allows you to programmatically draw CSS images.
-<span lang="es-x-mtfrom-en">
+
+{% setvar translang "es" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-05-21 #}
 {# wf_published_on: 2018-01-18 #}
@@ -18,11 +20,11 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 ## Las nuevas posibilidades en Chrome 65 CSS Paint API (también conocido como “CSS Custom Paint” o “worklet de pintura de Houdini”) están a punto de habilitarse de forma predeterminada en Chrome Stable. ¿Qué es? ¿Qué puedes hacer con eso? Y, ¿cómo funciona? Bueno, sigue leyendo, ¿quieres?
 
 
-CSS Paint API le permite generar una imagen mediante programación cada vez que una propiedad CSS espera una imagen. Las propiedades como `background-image` o `border-image` se usan generalmente con `url()` para cargar un archivo de imagen o con funciones incorporadas de CSS como `linear-gradient()`. En lugar de usarlos, ahora puede usar `paint(myPainter)` para hacer referencia a un _paint worklet_.
+CSS Paint API le permite generar una imagen mediante programación cada vez que una propiedad CSS espera una imagen. Las propiedades como `background-image` o `border-image` generalmente se usan con `url()` para cargar un archivo de imagen o con funciones incorporadas de CSS como `linear-gradient()` . En lugar de usarlos, ahora puede usar `paint(myPainter)` para hacer referencia a un _paint worklet_.
 
 ### Escribiendo un worklet de pintura
 
-Para definir un worklet de pintura llamado `myPainter`, necesitamos cargar un archivo de worklet de pintura CSS usando `CSS.paintWorklet.addModule('my-paint-worklet.js')`. En ese archivo podemos usar la función `registerPaint` para registrar una clase de worklet de pintura:
+Para definir un worklet de pintura llamado `myPainter` , necesitamos cargar un archivo de worklet de pintura CSS utilizando `CSS.paintWorklet.addModule('my-paint-worklet.js')` . En ese archivo podemos usar la función `registerPaint` para registrar una clase de worklet de pintura:
 
     class MyPainter {
       paint(ctx, geometry, properties) {
@@ -32,11 +34,11 @@ Para definir un worklet de pintura llamado `myPainter`, necesitamos cargar un ar
 
     registerPaint('myPainter', MyPainter);
 
-Dentro de la devolución de llamada `paint()`, podemos usar `ctx` de la misma manera que lo haríamos con `CanvasRenderingContext2D` tal como lo conocemos de `<canvas>`. Si sabes cómo dibujar en un `<canvas>`, ¡puedes dibujar en un worklet de pintura! `geometry` nos dice el ancho y la altura del lienzo que está a nuestra disposición. `properties` Lo explicaré más adelante en este artículo.
+Dentro de la devolución de llamada `paint()` , podemos usar `ctx` de la misma forma que lo haríamos con un `CanvasRenderingContext2D` tal como lo conocemos de `<canvas>` . Si sabes dibujar en un `<canvas>` , ¡puedes dibujar en un worklet de pintura! `geometry` nos dice el ancho y la altura del lienzo que está a nuestra disposición. `properties` Lo explicaré más adelante en este artículo.
 
-Note: El contexto de un worklet de pintura no es 100% lo mismo que un contexto `<canvas>`. A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
+Note: El contexto de un worklet de pintura no es 100% lo mismo que el contexto `<canvas>` . A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
 
-Como ejemplo introductorio, escribamos un cuadro de trabajo de pintura de tablero de ajedrez y lo usamos como imagen de fondo de un `<textarea>`. (Estoy usando un área de texto porque se puede cambiar de tamaño por defecto):
+Como ejemplo introductorio, escribamos un cuadro de trabajo de pintura de tablero de ajedrez y lo usamos como imagen de fondo de un `<textarea>` . (Estoy usando un área de texto porque se puede cambiar de tamaño por defecto):
 
     <!-- index.html -->
     <!doctype html>
@@ -75,7 +77,7 @@ Como ejemplo introductorio, escribamos un cuadro de trabajo de pintura de tabler
 
 Si ha usado `<canvas>` en el pasado, este código debería parecerle familiar. Vea el [demo] en vivo (0) aquí.
 
-Note: Al igual que con casi todas las API nuevas, la CSS Paint API solo está disponible a través de HTTPS (o `localhost`).
+Note: Como con casi todas las API nuevas, la CSS Paint API solo está disponible a través de HTTPS (o `localhost` ).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="Textarea con un patrón de tablero de ajedrez como imagen de fondo.">
 
@@ -85,7 +87,7 @@ Eso es bastante bueno, pero también es bastante estático. ¿Querríamos escrib
 
 ### Parametrizando tu worklet
 
-Afortunadamente, el worklet de pintura puede acceder a otras propiedades de CSS, que es donde el parámetro adicional `properties` entra en juego. Al darle a la clase un atributo `inputProperties` estático, puede suscribirse a los cambios en cualquier propiedad CSS, incluidas las propiedades personalizadas. Los valores se le entregarán a través del parámetro `properties`.
+Afortunadamente, el worklet de pintura puede acceder a otras propiedades CSS, que es donde el parámetro adicional `properties` entra en juego. Al darle a la clase un atributo `inputProperties` estático, puede suscribirse a los cambios en cualquier propiedad de CSS, incluidas las propiedades personalizadas. Los valores se le entregarán a través del parámetro `properties` .
 
     <!-- index.html -->
     <!doctype html>
@@ -131,7 +133,7 @@ Afortunadamente, el worklet de pintura puede acceder a otras propiedades de CSS,
 
 Ahora podemos usar el mismo código para todos los diferentes tipos de tableros de ajedrez. Pero aún mejor, ahora podemos ir a DevTools y [jugar con los valores](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) hasta que encontremos el aspecto correcto.
 
-<div style="display: flex; justify-content: center">   <video loop muted controls>
+<div style="display: flex; justify-content: center">  <video loop muted controls>
     <source
       src="https://storage.googleapis.com/webfundamentals-assets/paintapi/checkercast_vp8.webm"
       type="video/webm; codecs=vp8">
@@ -145,13 +147,13 @@ Note: También sería bueno parametrizar los colores, ¿no es así? La especific
 
 ## Exploradores que no son compatibles con Paint Worklet Al momento de escribir, solo Chrome tiene implementado Paint Worklet. Si bien hay señales positivas de todos los demás proveedores de navegadores, no hay mucho progreso. Para mantenerse al día, marque [¿Ya está listo Houdini?](https://ishoudinireadyyet.com) regularmente. Mientras tanto, asegúrese de usar la mejora progresiva para mantener su código en funcionamiento incluso si no hay soporte para el cuadro de trabajo de pintura. Para asegurarse de que las cosas funcionen como se espera, debe ajustar su código en dos lugares: el CSS y el JS.
 
-La detección del soporte para el worklet de pintura en JS se puede hacer al verificar el objeto `CSS`:
+La detección del soporte para el worklet de pintura en JS se puede hacer al verificar el objeto `CSS` :
 
     if ('paintWorklet' in CSS) {
       CSS.paintWorklet.addModule('mystuff.js');
     }
 
-Para el lado de CSS, tienes dos opciones. Puedes usar `@supports`:
+Para el lado de CSS, tienes dos opciones. Puedes usar `@supports` :
 
     @supports (background: paint(id)) {
       /* ... */
@@ -186,10 +188,10 @@ Para mí, la perspectiva más emocionante es que Paint Worklet permite realizar 
 
 El worklet de pintura ha estado en Chrome Canary por un tiempo. Con Chrome 65, está habilitado por defecto. ¡Anímate y prueba las nuevas posibilidades que abre Worklet Paint y muéstranos lo que has construido! Para más inspiración, eche un vistazo a [la colección de Vincent De Oliveira](https://lab.iamvdo.me/houdini/).
 
-Note: Los puntos de interrupción actualmente no son compatibles con la API de pintura de CSS, pero se habilitarán en una versión posterior de Chrome.
+Los puntos de interrupción Note: actualmente no son compatibles con la API de pintura CSS, pero se habilitarán en una versión posterior de Chrome.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

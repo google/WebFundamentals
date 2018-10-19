@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
-<span lang="de-x-mtfrom-en">
+
+{% setvar translang "de" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -16,15 +18,15 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-<div class="video-wrapper">   <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
+<div class="video-wrapper">  <iframe class="devsite-embedded-youtube-video" data-video-id="y5sb-icqOyg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-* Unterstützung für [`ResizeObservers`](#resizeobserver), benachrichtigt Sie, wenn das Inhaltsrechteck eines Elements seine Größe geändert hat.
+* Unterstützung für [`ResizeObservers` ](#resizeobserver), benachrichtigt Sie, wenn das Inhaltsrechteck eines Elements seine Größe geändert hat.
 * Module können jetzt mit [import.meta](#import-meta) auf hostspezifische Metadaten zugreifen.
 * Der [Popup-Blocker](#popup-blocker) wird stark.
-* [`window.alert()`](#window-alert) ändert nicht mehr den Fokus.
+* [`window.alert()` ](#window-alert) ändert nicht mehr den Fokus.
 
 Und es gibt [viel mehr](#more)!
 
@@ -36,13 +38,13 @@ Note: Möchten Sie die vollständige Liste der Änderungen? Überprüfen Sie die
 
 ## `ResizeObserver` {: #resizeobserver }
 
-Das Nachverfolgen, wenn sich die Größe eines Elements ändert, kann ein wenig schmerzhaft sein. Höchstwahrscheinlich fügen Sie dem Ereignis `resize` des Dokuments einen Listener hinzu und rufen dann `getBoundingClientRect` oder `getComputedStyle` auf. Aber beide können Layout-Thrashing verursachen.
+Das Nachverfolgen, wenn sich die Größe eines Elements ändert, kann ein wenig schmerzhaft sein. Wahrscheinlich fügen Sie dem Ereignis `resize` des Dokuments einen Listener hinzu und rufen dann `getBoundingClientRect` oder `getComputedStyle` auf. Aber beide können Layout-Thrashing verursachen.
 
 Und was, wenn das Browserfenster nicht die Größe ändert, sondern ein neues Element zum Dokument hinzugefügt wurde? Oder Sie haben `display: none` zu einem Element hinzugefügt? Beide können die Größe anderer Elemente innerhalb der Seite ändern.
 
-`ResizeObserver` benachrichtigt Sie, wenn sich die Größe eines Elements ändert, und stellt die neue Höhe und Breite des Elements bereit, wodurch das Risiko eines Layout-Thrashings verringert wird.
+`ResizeObserver` benachrichtigt Sie, wenn sich die Größe eines Elements ändert, und stellt die neue Höhe und Breite des Elements bereit, wodurch das Risiko von Layout-Thrashing verringert wird.
 
-Wie bei anderen Beobachtern ist es relativ einfach, ein `ResizeObserver`-Objekt zu erstellen und einen Callback an den Konstruktor zu übergeben. Der Callback erhält ein Array von `ResizeOberverEntries` - ein Eintrag pro beobachtetem Element -, das die neuen Dimensionen für das Element enthält.
+Wie bei anderen Beobachtern ist es ziemlich einfach, ein `ResizeObserver` -Objekt zu erstellen und einen Callback an den Konstruktor zu übergeben. Der Callback erhält ein Array von `ResizeOberverEntries` - ein Eintrag pro beobachtetem Element -, das die neuen Dimensionen für das Element enthält.
 
 ```js
 const ro = new ResizeObserver( entries => {
@@ -58,7 +60,7 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Auschecken [`ResizeObserver`: Es ist wie `document.onresize` für Elemente](/web/updates/2016/10/resizeobserver) für weitere Details und reale Beispiele.
+Check out [`ResizeObserver` : Es ist wie `document.onresize` für Elemente](/web/updates/2016/10/resizeobserver) für mehr Details und reale Beispiele.
 
 
 ## Verbesserter Popup-Blocker {: #popup-blocker }
@@ -80,15 +82,15 @@ Dies ist sehr hilfreich, wenn Sie Ressourcen relativ zur Moduldatei im Gegensatz
 Dies sind nur einige der Änderungen in Chrome 64 für Entwickler, natürlich gibt es noch viel mehr.
 
 * Chrome unterstützt nun in regulären Ausdrücken [named captures](/web/updates/2017/07/upcoming-regexp-features#named_captures) und [Unicode property escapes](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes).
-* Der Standardwert für `preload` für die Elemente `<audio>` und `<video>` lautet jetzt `metadata`. Dies bringt Chrome in Einklang mit anderen Browsern und hilft, die Bandbreite und die Ressourcennutzung zu reduzieren, indem nur die Metadaten und nicht die Medien selbst geladen werden.
-* Sie können nun `Request.prototype.cache` verwenden, um den Cache-Modus eines `Request` anzuzeigen und zu bestimmen, ob es sich bei einer Anforderung um eine Neuladeanforderung handelt.
-* Mit der Focus-Management-API können Sie jetzt ein Element fokussieren, ohne mit dem Attribut `preventScroll` dorthin zu scrollen.
+* Der Standardwert `preload` für `<audio>` - und `<video>` -Elemente lautet jetzt `metadata` . Dies bringt Chrome in Einklang mit anderen Browsern und hilft, die Bandbreite und die Ressourcennutzung zu reduzieren, indem nur die Metadaten und nicht die Medien selbst geladen werden.
+* Sie können `Request.prototype.cache` jetzt verwenden, um den Cache-Modus eines `Request` anzuzeigen und zu bestimmen, ob es sich bei einer Anforderung um eine Neuladeanforderung handelt.
+* Mithilfe der Focus-Management-API können Sie jetzt ein Element fokussieren, ohne mit dem `preventScroll` -Attribut dorthin zu scrollen.
 
 ## `window.alert()` {: #window-alert }
 
 Oh, und noch eins! Das ist zwar kein "Entwickler-Feature", aber es macht mich glücklich. `window.alert()` bringt keine Hintergrund-Registerkarte mehr in den Vordergrund! Stattdessen wird die Warnung angezeigt, wenn der Benutzer zu dieser Registerkarte zurückwechselt.
 
-Kein zufälliges Wechseln der Tabs mehr, weil etwas ein `window.alert` auf mich ausgelöst hat. Ich sehe dir den alten Google Kalender an.
+Kein zufälliges Wechseln der Tabs mehr, weil etwas einen `window.alert` auf mich abgefeuert hat. Ich sehe dir den alten Google Kalender an.
 
 
 Achten Sie darauf, [0] zu unserem [YouTube-Kanal](https://goo.gl/6FP1a5) zu abonnieren, und Sie erhalten eine E-Mail-Benachrichtigung, wenn wir ein neues Video starten oder unseren [RSS-Feed](https://www.youtube.com/user/ChromeDevelopers/) zu Ihrem Feed-Reader hinzufügen.
@@ -100,4 +102,4 @@ Ich bin Pete LePage, und sobald Chrome 65 veröffentlicht wird, bin ich hier, um
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

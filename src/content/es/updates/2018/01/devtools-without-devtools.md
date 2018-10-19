@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-<span lang="es-x-mtfrom-en">
+
+{% setvar translang "es" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -20,7 +22,7 @@ Normalmente veo preguntas en la línea de "Realmente me gusta la función X de D
 
 La respuesta corta es: probablemente no puedas.
 
-Sin embargo, usted * puede * piratear un script de [Puppeteer][puppeteer]{:.external} que inicia Chromium, abre un cliente de depuración remoto y luego activa la función DevTools que le gusta (a través del [Protocolo de Chrome DevTools][CDP] PRAGMAS1), sin nunca abrir explícitamente DevTools.
+Sin embargo, usted * puede * piratear una secuencia de comandos de [Puppeteer][puppeteer]{:.external} que inicia Chromium, abre un cliente de depuración remoto y luego activa la función DevTools que le gusta (a través del [Protocolo de Chrome DevTools][CDP] PRGMS1), sin nunca abrir explícitamente DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +55,7 @@ Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter
 
 Esta es solo una de las muchas, muchas características de DevTools a las que potencialmente puede acceder a través del protocolo de Chrome DevTools.
 
-Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} antes de recurrir a la creación de un cliente de protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [cobertura de código][coverage] PRAGMAS1 y [interceptación ** de la consola ** mensajes][console] PRAGMAS2.
+Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} antes de volver a crear un cliente de protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [cobertura de código][coverage] PRGMS1 y [interceptación ** de la consola ** mensajes][console] PRGMS2.
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
@@ -61,11 +63,11 @@ Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} an
 
 Si necesita ayuda para acceder a una función de DevTools a través de Puppeteer, [haga una pregunta sobre el desbordamiento de pila][SO]{:.external}.
 
-Si desea mostrar un script de Puppeteer que hace uso del Protocolo de DevTools, envíenos un tweet en [@ChromeDevTools][twitter]{:.external}.
+Si desea mostrar un script de Puppeteer que hace uso del Protocolo de DevTools, envíenos un tweet a [@ChromeDevTools][twitter]{:.external}.
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="de-x-mtfrom-en">
+
+{% setvar translang "de" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -35,13 +37,13 @@ Eine vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen 
 
 ## Aktualisierung auf 2.7 {: #update }
 
-* NPM. Führen Sie das Flag `npm update lighthouse` oder `npm update lighthouse -g` aus, wenn Sie Lighthouse global installiert haben.
+* NPM. Führen Sie `npm update lighthouse` oder `npm update lighthouse -g` aus, wenn Sie Lighthouse global installiert haben.
 * Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, Sie können sie jedoch manuell über `chrome://extensions` aktualisieren.
-* DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können Ihre Version von Chrome über `chrome://version` überprüfen. Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
+* DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können überprüfen, welche Chrome-Version über `chrome://version` ausgeführt wird. Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Neue SEO Audits {: #seo }
+## Neue SEO prüft {: #seo }
 
 Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seite in Suchmaschinenergebnissen zu verbessern.
 
@@ -91,4 +93,4 @@ Dank einiger [Community-Feedbacks][feedback] umfasst das [WebP-Audit][webp] jetz
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

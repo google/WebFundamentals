@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="ja-x-mtfrom-en">
+
+{% setvar translang "ja" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -12,7 +14,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# ライトハウス2.7更 {: .page-title }
+# 灯台2.7更 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -35,9 +37,9 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです:
 
 ## 2.7に更新する方法 {: #update }
 
-* NPM。 Lighthouseをグローバルにインストールした場合は、__ SPECIALWORD0または__ SPECIALWORD1フラグを実行します。
-* Chrome拡張機能。拡張機能は自動的に更新されますが、`chrome://extensions` 経由で手動で更新することができます。
-* DevTools。 Lighthouse 2.7はChrome 65で出荷されています。実行中のChromeのバージョンを`chrome://version` で確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは[Chrome Canary][Canary]をダウンロードして実行できます。
+* NPM。 Lighthouseをグローバルにインストールした場合は、`npm update lighthouse` または`npm update lighthouse -g` フラグを実行します。
+* Chrome拡張機能。拡張機能は自動的に更新されますが、`chrome://extensions` を使用して手動で更新することができます。
+* DevTools。 Lighthouse 2.7はChrome 65に付属しています。実行中のChromeのバージョンは`chrome://version` で確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは[Chrome Canary][Canary]をダウンロードして実行できます。
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -91,4 +93,4 @@ Note: 多くの要素がページの検索エンジンランキングに影響�
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

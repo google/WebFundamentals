@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
-<span lang="hi-x-mtfrom-en">
+
+{% setvar translang "hi" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-22 #}
@@ -20,7 +22,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 संक्षिप्त जवाब है: आप शायद नहीं कर सकते हैं।
 
-हालांकि, आप * [Puppeteer][puppeteer]{:.external} स्क्रिप्ट को एक साथ हैक कर सकते हैं जो क्रोमियम लॉन्च करता है, एक रिमोट डीबगिंग क्लाइंट खोलता है, फिर आपको पसंद करते हुए DevTools सुविधा को चालू करता है ([क्रोम देवटूल प्रोटोकॉल][CDP] PRAGMAS1 के माध्यम से) कभी भी स्पष्ट रूप से DevTools खोलने के बिना।
+हालांकि, आप * [Puppeteer][puppeteer]{:.external} स्क्रिप्ट को एक साथ हैक कर सकते हैं जो क्रोमियम लॉन्च करता है, एक रिमोट डीबगिंग क्लाइंट खोलता है, फिर आपको पसंद करते हुए DevTools सुविधा को चालू करता है ([क्रोम देवटूल प्रोटोकॉल][CDP] पीआरजीएमएस 1 के माध्यम से) कभी भी स्पष्ट रूप से DevTools खोलने के बिना।
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -53,7 +55,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 यह केवल कई में से एक है, कई देवटूल की विशेषताएं हैं जिन्हें आप संभावित रूप से क्रोम देवटूल प्रोटोकॉल के माध्यम से एक्सेस कर सकते हैं।
 
-एक सामान्य सुझाव: DevTools प्रोटोकॉल क्लाइंट बनाने का प्रयास करने से पहले [Puppeteer API][API]{:.external} देखें। Puppeteer पहले से ही कई DevTools सुविधाओं के लिए समर्पित एपीआई है, जैसे [कोड कवरेज][coverage] PRAGMAS1 और [intercepting ** कंसोल ** संदेश][console] PRAGMAS2।
+एक सामान्य सुझाव: DevTools प्रोटोकॉल क्लाइंट बनाने का प्रयास करने से पहले [Puppeteer API][API]{:.external} देखें। Puppeteer पहले से ही कई DevTools सुविधाओं के लिए समर्पित एपीआई है, जैसे [कोड कवरेज][coverage] पीआरजीएमएस 1 और [इंटरसेप्टिंग ** कंसोल ** संदेश][console] पीआरजीएमएस 2।
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
@@ -68,4 +70,4 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

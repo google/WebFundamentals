@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
-<span lang="hi-x-mtfrom-en">
+
+{% setvar translang "hi" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-24 #}
@@ -23,7 +25,7 @@ description: Announcing the release of a new country dimension in the Chrome Use
 
 उदाहरण के लिए, ऊपर स्क्रीनशॉट में हम एक क्वेरी देखते हैं जो कुछ देशों में 4 जी और 3 जी प्रभावी कनेक्शन प्रकारों के लिए कुल घनत्व की तुलना करता है। दिलचस्प बात यह है कि जापान में 4 जी की गति कितनी प्रचलित है, जबकि भारत में 3 जी गति अभी भी बहुत आम है। इन तरह की अंतर्दृष्टि नए देश आयाम के लिए संभव हो गई है।
 
-शुरू करने के लिए, BigQuery पर [CrUX प्रोजेक्ट](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all) पर जाएं और आपको `country_ae` (संयुक्त अरब अमीरात) से `country_za` (दक्षिण अफ्रीका) तक [देश कोड](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) द्वारा आयोजित डेटासेट की एक सूची दिखाई देगी। परिचित `all` डेटासेट अभी भी वैश्विक समग्र प्रदर्शन डेटा को कैप्चर करने के लिए है। प्रत्येक डेटासेट के भीतर सबसे हालिया रिपोर्ट से शुरू होने वाली मासिक सारणीएं हैं, `201712`। कैसे शुरू किया जाए, इस बारे में एक विस्तृत walkthrough के लिए, कृपया हमारे अद्यतन [CrUX दस्तावेज](/web/tools/chrome-user-experience-report/) देखें।
+शुरू करने के लिए, BigQuery पर [CrUX प्रोजेक्ट](https://bigquery.cloud.google.com/dataset/chrome-ux-report:all) पर जाएं और आपको [देश कोड](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) द्वारा एसपीसीएलडब्ल्यूआरडी 0 (संयुक्त अरब अमीरात) से एसपीसीएलडब्ल्यूआरडी 1 (दक्षिण अफ्रीका) में आयोजित डेटासेट की एक सूची दिखाई देगी। परिचित एसपीसीएलडब्लूआरडी 2 डेटासेट अभी भी वैश्विक समग्र प्रदर्शन डेटा को पकड़ने के लिए है। प्रत्येक डेटासेट के भीतर सबसे हालिया रिपोर्ट, एसपीसीएलडब्ल्यूआरडी 3 से शुरू होने वाली मासिक सारणीएं हैं। कैसे शुरू किया जाए, इस बारे में एक विस्तृत walkthrough के लिए, कृपया हमारे अद्यतन [CrUX दस्तावेज](/web/tools/chrome-user-experience-report/) देखें।
 
 हम इस नए डेटा को आपके साथ साझा करने के लिए उत्साहित हैं और आशा करते हैं कि आप वेब पर उपयोगकर्ता अनुभव को बेहतर बनाने के तरीकों से इसका उपयोग करें। सहायता प्राप्त करने के लिए, प्रश्न पूछें, फीडबैक दें, या अपने विश्लेषण से निष्कर्ष साझा करें, [क्रुक्स फोरम](https://groups.google.com/a/chromium.org/forum/#!forum/chrome-ux-report) पर चर्चा में शामिल हों। और यदि BigQuery पर नि: शुल्क स्तर आपके पूछताछ उत्साह को शामिल करने के लिए पर्याप्त नहीं है, तो हम आपको एक [अतिरिक्त 10 टीबी मुक्त](https://docs.google.com/forms/d/e/1FAIpQLSeMYnz93JQuO7rPewVrKpLfxO7JREOysti0CQyRo31bc7cXHA/viewform) देने के लिए अभी भी एक पदोन्नति चला रहे हैं, इसलिए आपूर्ति के दौरान अपने क्रेडिट प्राप्त करें!
 
@@ -31,4 +33,4 @@ description: Announcing the release of a new country dimension in the Chrome Use
 
 {% include "comment-widget.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

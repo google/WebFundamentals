@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="id-x-mtfrom-en">
+
+{% setvar translang "id" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -33,11 +35,11 @@ Lihat [2,7 catatan rilis][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## Cara memperbarui ke 2.7 {: #update }
+## Cara memperbarui ke 2,7 {: #update }
 
-* NPM. Jalankan `npm update lighthouse` , atau `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
+* NPM. Jalankan `npm update lighthouse` , atau bendera `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
 * Ekstensi Chrome. Ekstensi harus diperbarui secara otomatis, tetapi Anda dapat memperbaruinya secara manual melalui `chrome://extensions` .
-* DevTools. Lighthouse 2.7 adalah pengiriman di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version` . Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary].
+* DevTools. Lighthouse 2.7 dikirim di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version` . Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary].
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -45,7 +47,7 @@ Lihat [2,7 catatan rilis][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 Kategori SEO baru menyediakan audit yang membantu meningkatkan peringkat halaman Anda dalam hasil mesin pencari.
 
-Note: Banyak faktor memengaruhi peringkat mesin pencari suatu halaman. Mercusuar tidak menguji semua faktor ini. Skor sempurna 100 di Lighthouse tidak menjamin peringkat teratas di mesin pencari apa pun!
+Note: Banyak faktor mempengaruhi peringkat mesin pencari halaman. Mercusuar tidak menguji semua faktor ini. Skor sempurna 100 di Lighthouse tidak menjamin peringkat teratas di mesin pencari apa pun!
 
 <figure>  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
@@ -75,7 +77,7 @@ Audit aksesibilitas baru dan manual menginformasikan hal-hal yang dapat Anda lak
   </figcaption>
 </gambar>
 
-## Pembaruan pada audit WebP {: #webp }
+## Pembaruan pada audit {: #webp } WebP
 
 Terima kasih kepada beberapa [umpan balik komunitas][feedback], [Audit WebP][webp] sekarang lebih inklusif untuk format gambar berkinerja tinggi generasi berikutnya lainnya, seperti JPEG 2000 dan JPEG XR.
 
@@ -91,4 +93,4 @@ Terima kasih kepada beberapa [umpan balik komunitas][feedback], [Audit WebP][web
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}

@@ -1,7 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
-<span lang="vi-x-mtfrom-en">
+
+{% setvar translang "vi" %}
+{% include "web/_shared/translation-start.html" %}
 
 {# wf_updated_on: 2018-03-05 #}
 {# wf_published_on: 2018-01-05 #}
@@ -35,8 +37,8 @@ Xem [2.7 ghi chú phát hành][RN] để biết danh sách đầy đủ các tí
 
 ## Cách cập nhật lên 2,7 {: #update }
 
-* NPM. Chạy cờ `npm update lighthouse` hoặc `npm update lighthouse -g` nếu bạn đã cài đặt Lighthouse trên toàn cầu.
-* Tiện ích mở rộng của Chrome. Tiện ích mở rộng sẽ tự động cập nhật, nhưng bạn có thể cập nhật thủ công qua `chrome://extensions` .
+* NPM. Chạy cờ `npm update lighthouse` hoặc `npm update lighthouse -g` nếu bạn đã cài đặt Ngọn hải đăng trên toàn cầu.
+* Tiện ích mở rộng của Chrome. Tiện ích sẽ tự động cập nhật, nhưng bạn có thể cập nhật thủ công qua `chrome://extensions` .
 * Những công cụ của nhà phát triển. Ngọn hải đăng 2.7 đang giao hàng trong Chrome 65. Bạn có thể kiểm tra phiên bản Chrome nào bạn đang chạy qua `chrome://version` . Chrome cập nhật lên phiên bản mới khoảng 6 tuần một lần. Bạn có thể chạy mã Chrome mới nhất bằng cách tải xuống [Chrome Canary][Canary].
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
@@ -75,7 +77,7 @@ Kiểm tra khả năng truy cập thủ công mới, thông báo cho bạn về 
   </figcaption>
 </figure>
 
-## Cập nhật cho kiểm tra WebP {: #webp }
+## Cập nhật cho kiểm toán WebP {: #webp }
 
 Nhờ có một số [phản hồi cộng đồng][feedback], [Kiểm tra WebP][webp] hiện bao gồm các định dạng hình ảnh hiệu suất cao, thế hệ tiếp theo khác, như JPEG 2000 và JPEG XR.
 
@@ -91,4 +93,4 @@ Nhờ có một số [phản hồi cộng đồng][feedback], [Kiểm tra WebP][
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-</span>
+{% include "web/_shared/translation-end.html" %}
