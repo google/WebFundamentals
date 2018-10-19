@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
-{% include "web/_shared/translation-start.html" %}
+{% include "web/_shared/machine-translation-start.html" %}
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
