@@ -37,7 +37,7 @@ async function translateLines(text, to) {
   // Find markdown []: https:..... links and replace URL.
   text = text.replace(/^\[([^\]]+)\]:.*/, (match, p1, p2, offset, str) => {
     linkDefs.push(match); // the entire line
-    return `__LINK_DEFS__ ${linkDefs.length-1}`;
+    return `LNKDFS${linkDefs.length-1}`;
   });
 
   // Find markdown [][] links and replace URL.
@@ -139,7 +139,7 @@ async function translateLines(text, to) {
     });
 
     // Remap all link defintions 
-    translation = translation.replace(/^__LINK_DEFS__ (\d+)/, (match, p1, p2, offset, str) => {
+    translation = translation.replace(/^LNKDFS(\d+)/, (match, p1, p2, offset, str) => {
       return `${linkDefs.shift()}`;
     });
 
@@ -206,7 +206,7 @@ async function processFile(filePath, target) {
   let headerNeedsParse = true;
   for (const line of lines) {
     // Don't translate preamble - we are assuming there is a header that ends with just a \n
-    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`\n{% setvar translang "${target}" %}`); output.push(`{% include "web/_shared/translation-start.html" %}`); output.push(line); continue; }
+    if ((line.charAt(0) === '\n' || line.length === 0) && inHeader) { headerNeedsParse = false; inHeader = false; output.push(`{% include "web/_shared/translation-start.html" %}`); output.push(line); continue; }
     if (headerNeedsParse) { inHeader = true; output.push(line); continue; }
     if (inHeader) { output.push(line); continue; }
 
