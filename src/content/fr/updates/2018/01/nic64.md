@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
+<span lang="fr-x-mtfrom-en">
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -31,7 +32,7 @@ Je suis Pete LePage. Découvrons ce qui est nouveau pour les développeurs dans 
 
 <div class="clearfix"></div>
 
-Remarque: vous voulez la liste complète des modifications? Consultez la [liste de modifications du référentiel source Chromium](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
+Note: Voulez-vous la liste complète des changements? Consultez la [liste de modifications du référentiel source Chromium](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
 
 ## `ResizeObserver` {: #resizeobserver }
 
@@ -98,3 +99,5 @@ Je suis Pete LePage. Dès que Chrome 65 sera disponible, je serai ici pour vous 
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
+
+</span>

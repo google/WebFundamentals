@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
+<span lang="ja-x-mtfrom-en">
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -31,7 +32,7 @@ description: What's new in Chrome 64 for developers?
 
 <div class="clearfix"></div>
 
-注：変更の完全なリストを希望しますか？ [Chromiumソースリポジトリ変更リスト](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140)をご覧ください。
+Note:変更の完全なリストをお望みですか？ [Chromiumソースリポジトリ変更リスト](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140)をご覧ください。
 
 ## `ResizeObserver` {: #resizeobserver }
 
@@ -57,7 +58,7 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-詳細と実際の例については、[`ResizeObserver`：要素の`document.onresize`](/web/updates/2016/10/resizeobserver)を参照してください。
+詳細と実際の例については、[`ResizeObserver`:要素の`document.onresize`](/web/updates/2016/10/resizeobserver)を参照してください。
 
 
 ## 改良されたポップアップブロッカー {: #popup-blocker }
@@ -98,3 +99,5 @@ JavaScriptモジュールを書くときには、現在のモジュールに関�
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
+
+</span>

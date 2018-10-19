@@ -53,7 +53,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 
-一般的な提案：DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage] PRAGMAS1と[インターセプト**コンソール**メッセージ][console] PRAGMAS2など、DevToolsの多くの機能に専用のAPIを既に用意しています。
+一般的な提案:DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage] PRAGMAS1と[インターセプト**コンソール**メッセージ][console] PRAGMAS2など、DevToolsの多くの機能に専用のAPIを既に用意しています。
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage

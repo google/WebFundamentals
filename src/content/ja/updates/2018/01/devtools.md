@@ -46,13 +46,13 @@ Note: `chrome://version`で実行しているChromeのバージョンを確認�
   </figcaption>
 </figure>
 
-使い方：
+使い方:
 
 * DevToolsが変更を保存するディレクトリを指定します。
 DevToolsを変更すると、DevToolsは変更されたファイルのコピーをディレクトリに保存します。
 *ページをリロードすると、DevToolsはネットワークリソースではなくローカルの変更されたファイルを提供します。
 
-**ローカルオーバーライド**を設定するには：
+**ローカルオーバーライド**を設定するには:
 
 1. **ソース**パネルを開きます。 1. **上書き**タブを開きます。
 
@@ -273,7 +273,7 @@ Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 *
   </figcaption>
 </figure>
 
-## ボーナス：Puppeteer 1.0でDevToolsアクションを自動化する {: #puppeteer }
+## ボーナス:Puppeteer 1.0でDevToolsアクションを自動化する {: #puppeteer }
 
 Note:このセクションはChrome 65とは関係ありません。
 
@@ -307,7 +307,7 @@ Chrome DevToolsチームが管理するブラウザ自動化ツールPuppeteer�
 
 [without]: /web/updates/2018/01/devtools-without-devtools
 
-## DevToolsチームからの要請：Canary {: #canary }
+## DevToolsチームからの要請:Canary {: #canary }
 
 MacまたはWindowsの場合は、[Chrome Canary][canary]をデフォルトの開発ブラウザとして使用することを検討してください。 Canaryに残っている間に好きではないバグや変更を報告した場合、DevToolsチームはフィードバックを大幅に早く解決できます。
 

@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What's new in Chrome 64 for developers?
+<span lang="id-x-mtfrom-en">
 
 {# wf_published_on: 2018-01-23 #}
 {# wf_updated_on: 2018-03-05 #}
@@ -31,7 +32,7 @@ Saya Pete LePage. Mari selami dan lihat apa yang baru bagi pengembang di Chrome 
 
 <div class="clearfix"></div>
 
-Catatan: Ingin daftar lengkap perubahan? Lihat [daftar perubahan repositori sumber Chrome](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
+Note: Ingin daftar lengkap perubahan? Lihat [daftar perubahan repositori sumber Chrome](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
 
 ## `ResizeObserver` {: #resizeobserver }
 
@@ -98,3 +99,5 @@ Saya Pete LePage, dan segera setelah Chrome 65 dirilis, saya akan ada di sini un
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
+
+</span>
