@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 70: Cross-codec and cross-bytestream buffering and playback, Opus in MP4 with MSE, and protected content playback allowed by default on Android.
 
-{# wf_updated_on: 2018-10-03 #}
+{# wf_updated_on: 2018-10-19 #}
 {# wf_published_on: 2018-09-18 #}
 {# wf_tags: news,chrome70,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -13,12 +13,29 @@ description: A round up of the audio/video updates in Chrome 70: Cross-codec and
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
+- Web developers can control [Picture-in-Picture for videos](#pip).
 - [AV1 decoder](#av1-decoder) is now supported in Chrome Desktop x86-64.
 - [Cross-codec and cross-bytestream buffering and
   playback](#sourcebuffer-changetype) is possible in MSE.
 - Chrome now supports [Opus in MP4 with MSE](#opus-in-mp4-for-mse).
 - Protected content playback is [allowed by
   default](#protected-content-allowed-by-default) on Android.
+
+## Watch video using Picture-in-Picture {: #pip }
+
+Picture-in-Picture (PiP) allows users to watch videos in a floating window
+(always on top of other windows) so they can keep an eye on what they’re
+watching while interacting with other sites, or applications. With the new
+[Picture-in-Picture Web API], you can initiate and control Picture-in-Picture
+for videos on your website.
+
+Read [our article] to learn all about it.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="t2QAzHZH-5s"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## AV1 decoder {: #av1-decoder }
 
@@ -149,6 +166,8 @@ cleared browsing data.
 
 {% include "comment-widget.html" %}
 
+[Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
+[our article]: /web/updates/2018/10/watch-video-using-picture-in-picture
 [Alliance for Open Media]: http://aomedia.org/
 [improves compression efficiency by greater than 30%]: https://code.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
 [official bitstream specification]: https://aomedia.org/av1-bitstream-and-decoding-process-specification/
