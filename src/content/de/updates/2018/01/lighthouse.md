@@ -33,15 +33,15 @@ Eine vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen 
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-{: #update } Aktualisierung auf 2.7 {: #update }
+## So aktualisieren auf 2,7 {: #update }
 
-* NPM. Führen Sie `npm update lighthouse` `npm update lighthouse -g` wenn Sie Lighthouse global installiert haben.
-* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, aber Sie können sie manuell über `chrome://extensions` aktualisieren.
+* NPM. Führen Sie `npm update lighthouse` oder `npm update lighthouse -g` wenn Sie Lighthouse global installiert haben.
+* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, aber Sie können sie manuell über `chrome://extensions` .
 * DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können überprüfen, welche Version von Chrome Sie über `chrome://version` . Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-{: #seo } Neue SEO Audits {: #seo }
+## Audits Neue SEO {: #seo }
 
 Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seite in Suchmaschinenergebnissen zu verbessern.
 
@@ -59,7 +59,7 @@ Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lightho
   </figcaption>
 </figure>
 
-{: #a11y } Neue, manuelle Barrierefreiheitsprüfungen {: #a11y }
+## neue, manuelle Zugänglichkeit Audits {: #a11y }
 
 Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. "Manuell" bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
 
@@ -77,7 +77,7 @@ Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Si
   </figcaption>
 </figure>
 
-{: #webp } Updates für die WebP-Prüfung {: #webp }
+## Updates für die WebP Prüfung {: #webp }
 
 Dank einiger [community feedback][feedback] ist das [WebP audit][webp] jetzt stärker auf andere Hochleistungsbildformate der nächsten Generation wie JPEG 2000 und JPEG XR ausgerichtet.
 

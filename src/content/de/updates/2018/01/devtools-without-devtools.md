@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Verwenden von DevTools Features ohne Öffnen von DevTools {: .page-title }
+# Verwenden von DevTools-Funktionen ohne Öffnen von DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,7 +20,7 @@ Ich sehe häufig Fragen in der Art von "Ich mag Feature X von DevTools wirklich,
 
 Die kurze Antwort ist: Sie können wahrscheinlich nicht.
 
-Sie können * jedoch * ein [Puppenspieler][puppeteer]{:.external}-Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über das [Chrome DevTools-Protokoll][CDP]{:.external}), ohne jemals DevTools explizit zu öffnen.
+Sie können jedoch * ein [Puppeteer][puppeteer]{:.external} , das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über [Chrome DevTools Protocol][CDP]{:.external} ), ohne DevTools explizit zu öffnen.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -57,15 +57,15 @@ Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts 
 
 Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicherweise über das Chrome DevTools-Protokoll zugreifen können.
 
-Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer-API][API]{:.external}, bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [Code Coverage][coverage]{:.external} und [Abfangen von ** Console ** -Nachrichten][console]{:.external}.
+Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer API][API]{:.external} bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen, wie [code coverage][coverage]{:.external} und [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Wenn Sie Hilfe beim Zugriff auf eine DevTools-Funktion über Puppenspieler benötigen, [stellen Sie eine Frage zu Stack Overflow][SO]{:.external}.
+Wenn Sie Hilfe beim Zugriff auf eine DevTools-Funktion über Puppenspieler benötigen, [ask a question on Stack Overflow][SO]{:.external} [ask a question on Stack Overflow][SO]{:.external} .
 
-Wenn Sie ein Puppeneer-Skript, das das DevTools-Protokoll verwendet, vorführen möchten, senden Sie uns eine Nachricht unter [@ChromeDevTools][twitter]{:.external}.
+Wenn Sie ein Puppeneer-Skript, das das DevTools-Protokoll verwendet, vorführen möchten, twittern Sie uns unter [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

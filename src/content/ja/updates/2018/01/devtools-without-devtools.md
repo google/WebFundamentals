@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# DevToolsを開くことなくDevTools機能を使用す {: .page-title }
+# デベロッパーツールを開かずにデベロッパーツール機能の使 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,12 +20,12 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 短い答えは、おそらくできないことです。
 
-しかし、Chromiumを起動し、リモートデバッグクライアントを開き、[DevToolsプロトコル][puppeteer]{:.external}を介して）あなたが好きなDevTools機能をオンにする[Puppeteer][CDP]{:.external}スクリプトを一緒にハックすることができますDevToolsを明示的に開くことはありません。
+しかし、Chromiumを起動し、リモートのデバッグクライアントを開き、 [Chrome DevTools Protocol][CDP]使ってあなたが好きなDevTools機能をオンにする[Puppeteer][puppeteer]{:.external} [Puppeteer][puppeteer]{:.external}スクリプトを一緒にハックすることができます[Chrome DevTools Protocol][CDP]{:.external} ）、明示的にDevToolsを開くことはありません。
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-たとえば、下のスクリプトで見られるように、DevToolsが開かないにもかかわらず、以下のスクリプトでは、[FPSメーター][FPS]をビューポートの右上に重ねることができます。
+たとえば、以下のスクリプトでは、DevToolsが開かない場合でも、 [FPS Meter][FPS]をビューポートの右上に重ねることができます。
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -57,15 +57,15 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 
-一般的な提案:DevToolsプロトコルクライアントを作成する前に[Puppeteer API][API]{:.external}をチェックしてください。 Puppeteerは、[コードカバレッジ][coverage]{:.external}と[インターセプト**コンソール**メッセージ][console]{:.external}など、DevToolsの多くの機能に専用のAPIを既に持っています。
+一般的な提案:DevToolsプロトコルクライアントを作成する前に、 [Puppeteer API][API]{:.external}チェックしてください。以下のような多くのデベロッパーツール機能の人形既に捧げているAPIを、 [code coverage][coverage]{:.external}と[intercepting **Console** messages][console]{:.external}
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Puppeteerを介してDevTools機能にアクセスするための助けが必要な場合は、[Stack Overflowに関する質問をしてください][SO]{:.external}。
+Puppeteerを介してDevTools機能にアクセスするための助けが必要な場合は、 [ask a question on Stack Overflow][SO]{:.external} 。
 
-DevToolsプロトコルを利用したPuppeteerスクリプトを見せたいのであれば、[@ChromeDevTools][twitter]{:.external}でつぶやいてください。
+DevToolsプロトコルを使用するPuppeteerスクリプトを見せたい場合は、 [@ChromeDevTools][twitter]{:.external}でツイートしてください。
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

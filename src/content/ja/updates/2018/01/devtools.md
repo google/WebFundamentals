@@ -12,18 +12,18 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# DevTools（Chrome 65）の新機 {: .page-title }
+# デベロッパーツールで新しい（クローム65）は何です {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 Chrome 65のDevToolsには次の新機能が含まれています。
 
-* [**ローカルオーバーライド**](#overrides)
-* [新しいアクセシビリティツール](#a11y)
-* [**変更** **]タブ（0）
-* [新しいSEOとパフォーマンスの監査](#audits)
-* [**パフォーマンス**パネルで複数録音](#recordings)
-* [労働者と非同期コードによる信頼できるコードステッピング](#stepping)
+* [**Local Overrides**](#overrides)
+* [New accessibility tools](#a11y)
+* [The **Changes** tab](#changes)
+* [New SEO and performance audits](#audits)
+* [Multiple recordings in the **Performance** panel](#recordings)
+* [Reliable code stepping with workers and asynchronous code](#stepping)
 
 以下のリリースノートを読んだり、ビデオ版をご覧ください。
 
@@ -33,12 +33,12 @@ Chrome 65のDevToolsには次の新機能が含まれています。
   </iframe>
 </div>
 
-Note: `chrome://version` で実行しているChromeのバージョンを確認してください。以前のバージョンを使用している場合、これらの機能は存在しません。それ以降のバージョンを使用している場合は、これらの機能が変更されている可能性があります。 Chromeは6週間ごとに新しいメジャーバージョンに自動的に更新されます。
+Note: `chrome://version`実行しているChromeのバージョンを確認してください。以前のバージョンを使用している場合、これらの機能は存在しません。それ以降のバージョンを使用している場合は、これらの機能が変更されている可能性があります。 Chromeは6週間ごとに新しいメジャーバージョンに自動的に更新されます。
 
-## ローカルは{: #overrides }をオーバーライドします
+## ローカルオーバーライド {: #overrides }
 
 **ローカルオーバーライド**を使用すると、DevToolsで変更を加え、それらの変更をページ読み込み全体に保持できます。以前は、DevToolsで行った変更は、ページを再読み込みすると失われていました。
-**ローカルオーバーライド**は、ほとんどのファイルタイプで動作しますが、いくつかの例外があります。 [制限事項](#overrides-limitations)を参照してください。
+**ローカルオーバーライド**は、ほとんどのファイルタイプで動作しますが、いくつかの例外があります。 [Limitations](#overrides-limitations)参照してください。
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -68,14 +68,14 @@ DevToolsを変更すると、DevToolsは変更されたファイルのコピー�
 
 1. **設定の上書き**をクリックします。 1.変更を保存するディレクトリを選択します。 1.ビューポートの上部で、**許可**をクリックしてDevToolsにディレクトリへの読み書きアクセスを許可します。 1.変更を加えます。
 
-### 制限事項 {: #overrides-limitations }
+### 制限 {: #overrides-limitations }
 
 * DevToolsは、** Elements **パネルの** DOM Tree **の変更を保存しません。代わりに**ソース**パネルでHTMLを編集してください。
 * **スタイル**ペインでCSSを編集し、そのCSSのソースがHTMLファイルの場合、DevToolsは変更を保存しません。代わりに**ソース**パネルでHTMLファイルを編集してください。
 
 ### 関連機能 {: #overrides-related }
 
-* [ワークスペース][WS]。 DevToolsは自動的にネットワークリソースをローカルリポジトリにマップします。 DevToolsを変更すると、その変更もローカルリポジトリに保存されます。
+* [Workspaces][WS] 。 DevToolsは自動的にネットワークリソースをローカルリポジトリにマップします。 DevToolsを変更すると、その変更もローカルリポジトリに保存されます。
 
 [WS]: /web/updates/2017/10/devtools-release-notes#workspaces
 
@@ -95,7 +95,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 新しい**アクセシビリティ**ペインを使用して、要素のアクセシビリティプロパティを検査し、**カラーピッカー**のテキスト要素のコントラスト比を調べて、低視力障害または色のあるユーザーがアクセシビリティにアクセスできるようにします - 欠陥の欠陥。
 
-### アクセシビリティペイン {: #a11y-pane }
+### アクセシビリティパネル {: #a11y-pane }
 
 ** Elements **パネルの** Accessibility **ペインを使用して、現在選択されている要素のアクセシビリティプロパティを調べます。
 
@@ -120,9 +120,9 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
   </iframe>
 </div>
 
-### カラーピッカー{: #contrast }のコントラスト比
+### カラーピッカーのコントラスト比 {: #contrast }
 
-[カラーピッカー][CP]に、テキスト要素のコントラスト比が表示されるようになりました。テキスト要素のコントラスト比を増やすと、視覚障害や色覚障害のあるユーザーがサイトにアクセスしやすくなります。コントラスト比がアクセシビリティにどのように影響するかについては、[色とコントラスト][contrast]を参照してください。
+[Color Picker][CP] 、テキスト要素のコントラスト比が表示されるようになりました。テキスト要素のコントラスト比を増やすと、視覚障害や色覚障害のあるユーザーがサイトにアクセスしやすくなります。コントラスト比がアクセシビリティにどのように影響するかについては、 [Color and contrast][contrast]を参照してください。
 
 テキスト要素の色のコントラストを改善すると、 <i>すべての</i>ユーザーがサイトをより使いやすくすることができます。言い換えれば、テキストが白い背景で灰色である場合、誰にでも読むことは難しいです。
 
@@ -134,12 +134,12 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
   </figcaption>
 </figure>
 
-**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[強化された推奨コントラスト比（AAA）][enhanced]{:.external}を満たすことを意味します。チェックマークが1つしかない場合は、[最小推奨コントラスト比（AA）][minimum]{:.external}を満たしていることを意味します。
+**図5 **では、** 4.61 **の隣にある2つのチェックマークは、この要素が[enhanced recommended contrast ratio (AAA)][enhanced]{:.external} 。チェックマークが1つしかない場合は、 [minimum recommended contrast ratio (AA)][minimum]{:.external}満たしていることを意味します。
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-** [もっと見る] ** [詳細を表示][SM]{:.cdt-inl}をクリックして**コントラスト比**セクションを展開します。 ** Color Spectrum **ボックスの白い線は、推奨されるコントラスト比を満たす色と、そうでない色との境界を表します。例えば、
+**もっと見る**をクリックしてください！ [Show More][SM]{:.cdt-inl}は、** Contrast Ratio **セクションを拡張します。 ** Color Spectrum **ボックスの白い線は、推奨されるコントラスト比を満たす色と、そうでない色との境界を表します。例えば、
 **図6 **は推奨を満たしています。つまり、白線の下のすべての色も推奨値を満たしています。
 
 <figure>
@@ -159,7 +159,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 **監査**パネルには、自動アクセシビリティ監査機能があります。
 *ページ上のすべての*テキスト要素は十分なコントラスト比を持っています。
 
-** Audits **パネルを使用してアクセシビリティをテストする方法については、[Chrome DevToolsの灯台を実行する][audit]、または下記のA11ycastをご覧ください。
+** Audits **パネルを使用してアクセシビリティをテストする方法については、 [Run Lighthouse in Chrome DevTools][audit] 、または下記のA11ycastをご覧ください。
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -174,7 +174,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 Chrome 65には、全く新しいカテゴリのSEO監査と多くの新しいパフォーマンス監査が付属しています。
 
-Note: ** Audits **パネルは[Lighthouse][LH]によって強化されています。 Chrome 64はLighthouseバージョン2.5を実行します。 Chrome 65はLighthouseバージョン2.8を実行します。したがって、このセクションは、2.6,2.7、および2.8からLighthouseのアップデートをまとめたものです。
+Note: **監査**パネルは[Lighthouse][LH]によって提供されています。 Chrome 64はLighthouseバージョン2.5を実行します。 Chrome 65はLighthouseバージョン2.8を実行します。したがって、このセクションは、2.6,2.7、および2.8からLighthouseのアップデートをまとめたものです。
 
 ### 新しいSEO監査 {: #seo }
 
@@ -212,11 +212,11 @@ Chrome 65には、多くの新しいパフォーマンス監査が付属して�
   started</a>.
 </aside>
 
-### その他の更新 {: #audits-other }
+### その他のアップデート {: #audits-other }
 
-* [新規のマニュアルアクセシビリティ監査](/web/updates/2018/01/lighthouse#a11y)
-* [WebP監査の更新][webp] - 他の次世代イメージフォーマットをより包括的にする
-* [アクセシビリティスコアの再確認][a11yscore]
+* [New, manual accessibility audits](/web/updates/2018/01/lighthouse#a11y)
+* [Updates to the WebP audit][webp] - 他の次世代イメージフォーマットをより包括的にする
+* [A rehaul of the accessibility score][a11yscore]
 *アクセシビリティ監査がページに適用されない場合、その監査はアクセシビリティスコアにカウントされなくなります
 *パフォーマンスはレポートの一番上のセクションになりました
 
@@ -229,16 +229,16 @@ Chrome 65には、多くの新しいパフォーマンス監査が付属して�
 
 ## 作業者と非同期コードによる信頼性の高いコードステッピング {: #stepping }
 
-Chrome 65は、スレッド間のメッセージを渡すコードと非同期コードに進む際に、** Step Into **！[Step Into][into]{:.cdt-inl}ボタンを更新します。以前のステップ動作をしたい場合は、代わりに新しい** Step **！[Step][step]{:.cdt-inl}ボタンを使用することができます。
+Chrome 65は**ステップイン**へのアップデートをもたらします。スレッド間のメッセージを渡すコードに[Step Into][into]{:.cdt-inl}ボタン、非同期コード。以前のステップ動作をしたい場合は、新しい**ステップ**を使用することができます！ [Step][step]{:.cdt-inl}ボタンをクリックします。
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
 
-### スレッド間でメッセージを渡すコードをステップ実行する {: #workers }
+### スレッド間でメッセージを渡すコードを実行する {: #workers }
 
 スレッド間でメッセージを渡すコードに入ると、DevToolsは各スレッドで何が起きたかを表示します。
 
-たとえば、**図8 **のアプリは、メインスレッドとワーカースレッドの間にメッセージを渡します。メインスレッドで`postMessage()` 呼び出しを実行すると、DevToolsはワーカースレッドの`onmessage` ハンドラで一時停止します。 `onmessage` ハンドラ自体は、メインスレッドにメッセージを戻します。 *その*への呼び出しは、DevToolsをメインスレッドに戻します。
+たとえば、**図8 **のアプリは、メインスレッドとワーカースレッドの間にメッセージを渡します。メインスレッドで`postMessage()`呼び出しを実行すると、 `onmessage`はワーカースレッドの`onmessage`ハンドラで一時停止します。 undefinedハンドラ自体は、メインスレッドにメッセージを戻します。 *その*への呼び出しは、DevToolsをメインスレッドに戻します。
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -258,11 +258,11 @@ Chrome 65は、スレッド間のメッセージを渡すコードと非同期�
   </figcaption>
 </figure>
 
-### 非同期コード{: #async }へのステップイン
+### 非同期コード {: #async }
 
 非同期コードにステップインすると、DevToolsは最終的に実行される非同期コードで一時停止することを前提とします。
 
-例えば、**図10 **では、`setTimeout()` にステップインした後、DevToolsはその背後にあるすべてのコードを実行し、`setTimeout()` に渡された関数で一時停止します。
+例えば、**図10に**に足を踏み入れる後`setTimeout()` 、デベロッパーツールは舞台裏で、その点に至るまでのすべてのコードを実行し、その後に渡された機能で一時停止します`setTimeout()` 。
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -282,9 +282,9 @@ Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 *
   </figcaption>
 </figure>
 
-## パフォーマンスパネルの複数録音 {: #recordings }
+## パフォーマンスパネルの複数の録音 {: #recordings }
 
-**パフォーマンス**パネルで、最大5つの録音を一時的に保存できます。 DevToolsウィンドウを閉じると、録画が削除されます。 **パフォーマンス**パネルで快適になるためには、[ランタイムパフォーマンスの分析を開始する][runtime]を参照してください。
+**パフォーマンス**パネルで、最大5つの録音を一時的に保存できます。 DevToolsウィンドウを閉じると、録画が削除されます。 **パフォーマンス**パネルで快適になるためには、 [Get Started with Analyzing Runtime Performance][runtime]を参照してください。
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
@@ -296,9 +296,9 @@ Chrome 63でこのようなコードを実行したとき、DevToolsは**図11 *
   </figcaption>
 </figure>
 
-## ボーナス:Puppeteer 1.0でDevToolsアクションを自動化する {: #puppeteer }
+## Bonus:Puppeteer 1.0 {: #puppeteer } DevToolsアクションを自動化する
 
-Note: このセクションはChrome 65とは関係ありません。
+Note:このセクションはChrome 65とは関係ありません。
 
 Chrome DevToolsチームが管理するブラウザ自動化ツールPuppeteerのバージョン1.0がリリースされました。 Puppeteerを使用すると、以前はDevToolsでしか利用できなかった、スクリーンショットのキャプチャなど、多くのタスクを自動化できます。
 
@@ -322,17 +322,17 @@ Chrome DevToolsチームが管理するブラウザ自動化ツールPuppeteer�
       await browser.close();
     })();
 
-詳細は[クイックスタート][quickstart]を参照してください。
+詳細は、 [Quick Start][quickstart]を参照してください。
 
 [quickstart]: /web/tools/puppeteer/get-started
 
-また、DevToolsを明示的に開いていなくても、Puppeteerを使用してブラウズ中にDevToolsの機能を公開することもできます。例については、[DevToolsを開くことなくDevTools機能を使用する][without]を参照してください。
+また、DevToolsを明示的に開いていなくても、Puppeteerを使用してブラウズ中にDevToolsの機能を公開することもできます。例については、 [Using DevTools Features Without Opening DevTools][without]を参照してください。
 
 [without]: /web/updates/2018/01/devtools-without-devtools
 
 ## DevToolsチームからのリクエスト:Canary {: #canary }
 
-MacまたはWindowsの場合は、[Chrome Canary][canary]をデフォルトの開発ブラウザとして使用することを検討してください。 Canaryに残っている間に好きではないバグや変更を報告した場合、DevToolsチームはフィードバックを大幅に早く解決できます。
+MacまたはWindowsの場合は、 [Chrome Canary][canary]をデフォルトの開発ブラウザとして使用することを検討してください。 Canaryに残っている間に好きではないバグや変更を報告した場合、DevToolsチームはフィードバックを大幅に早く解決できます。
 
 Note: CanaryはChromeの最先端バージョンです。テストなしでビルドされるとすぐにリリースされます。これは、Canaryが時々、約1ヶ月に1回壊れてしまうことを意味し、通常は1日以内に修正されます。 Canaryが壊れたときにChrome Stableを使用することに戻ることができます。
 
@@ -340,13 +340,13 @@ Note: CanaryはChromeの最先端バージョンです。テストなしでビ�
 
 ## フィードバック {: #feedback }
 
-ここに表示される機能や変更について話すには、[google-chrome-developer-tools@googlegroups.comメーリングリスト][ML]が最適です。また、時間が足りない場合は、[@ChromeDevTools](https://twitter.com/chromedevtools)でツイートすることもできます。 DevToolsにバグがありましたら、[問題を開く](https://crbug.com/new)を押してください。
+ここに表示される機能や変更について議論する最も良い場所は[google-chrome-developer-tools@googlegroups.com mailing list][ML]です。また、時間が足りない場合は、 [@ChromeDevTools](https://twitter.com/chromedevtools)でツイートすることもできます。 DevToolsにバグがありましたら、 [open an issue](https://crbug.com/new) 。
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
 ## 以前のリリースノート {: #links }
 
-以前のすべてのDevToolsリリースノートへのリンクについては、[devtools-whatsnew][tag]タグを参照してください。
+以前のすべてのDevToolsリリースノートへのリンクについては、 [devtools-whatsnew][tag]タグを参照してください。
 
 [tag]: /web/updates/tags/devtools-whatsnew
 

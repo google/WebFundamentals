@@ -21,53 +21,48 @@ const targets = program.target.split(',')
 async function translateLines(text, to) {
   if(text === ' ') return ' ';
 
-  // Find markdown []() links and replace URL.
-  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
-  });
-
-  // Find markdown []: https:..... links and replace URL.
-  text = text.replace(/^\[([^\]]+)\]:.*/, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
-  });
-
-  // Find markdown [][] links and replace URL.
-  text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
-  });
-
-  // Find markdown [][] links and replace URL.
-  text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
-  });
-
-  let srcurlfn = (match) => {
-    return `<span translate="no">${match}</span>`;
-  };
-
-  // Find things that look like a src="" and don't replace
-  text = text.replace(/src=\"([^\"]+)\"/g, srcurlfn);
-
-  // Find things that look like a src='' and don't replace
-  text = text.replace(/src=\'([^\']+)\'/g, srcurlfn);
-
-  // Find things that look like a href='' and don't replace
-  text = text.replace(/href=\'([^\']+)\'/g, srcurlfn);
-
-  // Find things that look like a href="" and don't replace
-  text = text.replace(/href=\"([^\']+)\"/g, srcurlfn);
-
-  // Find {: } [][] links and replace URL.
-  text = text.replace(/\{:([^\}]+)\}/g, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
-  });
+  const replaceText = '<span class="notranslate">$&<\/span>';
+  const backtickWords = [];
 
   // Find special words and don't translate
   text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
-    return `<span translate="no">${match}</span>`;
+    backtickWords.push(match);
+    // Gogole translate doesn't like HTML in the span so we have to do something special.
+    return `<span class="notranslate">BACKTICKWORDS${backtickWords.length - 1}</span>`;
   });
 
+  // # headings should not be considered in the translations
+  text = text.replace(/^(#+)/g, replaceText);
+
+  // Find markdown []() links and replace URL.
+  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, replaceText);
+
+  // Find markdown []: https:..... links and replace URL.
+  text = text.replace(/^\[([^\]]+)\]:.*/, replaceText);
+
+  // Find markdown [][] links and replace URL.
+  text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, replaceText);
+
+  // Find markdown [][] links and replace URL.
+  text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, replaceText);
+
+  // Find things that look like a src="" and don't replace
+  text = text.replace(/src=\"([^\"]+)\"/g, replaceText);
+
+  // Find things that look like a src='' and don't replace
+  text = text.replace(/src=\'([^\']+)\'/g, replaceText);
+
+  // Find things that look like a href='' and don't replace
+  text = text.replace(/href=\'([^\']+)\'/g, replaceText);
+
+  // Find things that look like a href="" and don't replace
+  text = text.replace(/href=\"([^\"]+)\"/g, replaceText);
+
+  // Find {: } [][] links and replace URL.
+  text = text.replace(/\{:([^\}]+)\}/g, replaceText);
+
   const output = [];
+
   let results = await translate.translate(text, {to});
 
   let translations = results[0];
@@ -97,7 +92,11 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
     translation = translation.replace(/＃/gu,'#');
 
-    translation = translation.replace(/<span translate="no">(.+?)<\/span>/gm, '$1');
+    translation = translation.replace(/<span class="notranslate">BACKTICKWORDS(\d+)<\/span>/gm, (match, p1) => {
+      return backtickWords.shift();
+    });
+
+    translation = translation.replace(/<span class="notranslate">(.+?)<\/span>/gm, '$1');
 
     // Fix things after the major replacements have happened
 
@@ -105,11 +104,7 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\]\[([^\]]+)\] \{([^\}]+)\}/g,'[$1][$2]{$3}');
     // Find annotated markdown links [@ChromeDevTools](twitter){:.external} => [](){}
     translation = translation.replace(/\[([^\]]+)\]\(([^\)]+)\) \{([^\}]+)\}/g,'[$1]($2){$3}');
-    // Clean up {:. external} => [][]{}
-    translation = translation.replace(/\{:\. ([^\}]+)\}/g,  (match, p1, p2, offset, str) => {
-      return `{: .${p1.toLowerCase().replace(' ', '')} }`;
-    });
-
+   
     // Bodge for Japan
     translation = translation.replace(/\S(\{: \.page-title \})/gm,' $1');
     translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
@@ -144,7 +139,7 @@ async function processFile(filePath, target) {
   const output = [];
   let translateBlock = [];
 
-  // Statemachine variables.
+  // State machine variables.
   let inHeader = false;
   let inCodeTicks = false;
   let inCodeSpaces = false;
@@ -212,14 +207,21 @@ async function processFile(filePath, target) {
   const newPath = filePath.replace(/src\/content\/en\//, `src/content/${target}/`);
   ensureDirectoryExistence(newPath);
   fs.writeFileSync(newPath, result);
-  console.log(`Translation written to '${newPath}`);
+  return newPath;
 }
 
-targets.forEach(async (target) => {
-  try {
-    await processFile(program.source, target);
-  } catch (ex) {
-    console.log(target, ex)
-    process.exit(-1);   
+
+const run = async () => {
+  for (const target of targets) {
+    try {
+      console.log(`Translating ${program.source} in to ${target}`)
+      let newPath = await processFile(program.source, target);
+      console.log(`Translation written to '${newPath}`);
+    } catch (ex) {
+      console.log(target, ex)
+      process.exit(-1);   
+    }
   }
-})
+};
+
+run();

@@ -35,9 +35,9 @@ Lighthouse 2.7が出ました！ハイライトは次のとおりです:
 
 ## 2.7にアップデートする方法 {: #update }
 
-* NPM。実行`npm update lighthouse` 、または`npm update lighthouse -g`あなたが世界的に灯台を設置した場合のフラグを。
-* Chrome拡張機能。拡張機能は自動的に更新されますが、手動で`chrome://extensions`使って更新することができます。
-* DevTools。 Lighthouse 2.7はChrome 65に`chrome://version`います。実行しているChromeのバージョンは`chrome://version`確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは、 [Chrome Canary][Canary]ダウンロードすることで実行できます。
+* NPM。ファイル名を指定して実行`npm update lighthouse` 、または`npm update lighthouse -g`あなたが世界的に灯台を設置した場合のフラグ。
+* Chrome拡張機能。拡張機能は自動的に更新されますが、 `chrome://extensions`経由で手動で更新することができます。
+* DevTools。 Lighthouse 2.7はChrome 65に`chrome://version`ます。あなたはundefined経由で実行しているChromeのバージョンを確認できます。 Chromeは6週間ごとに新しいバージョンに更新されます。最新のChromeコードは、 [Chrome Canary][Canary]ダウンロードすることで実行できます。
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 

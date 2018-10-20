@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Использование функций DevTools без открытия DevTools {: .page-title }
+# Использование функций DevTools без открытия DevTools {: .page-title } .page {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,7 +20,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 Короткий ответ: вы, вероятно, не можете.
 
-Тем не менее, вы можете * взломать сценарий [Puppeteer][puppeteer]{:.external}, который запускает Chromium, открывает удаленный клиент отладки, затем включает функцию DevTools, которая вам нравится (через [Chrome DevTools Protocol][CDP]{:.external}) без явного открытия DevTools.
+Тем не менее, вы можете * взломать сценарий [Puppeteer][puppeteer]{:.external} который запускает Chromium, открывает удаленный отладочный клиент, затем включает функцию DevTools, которая вам нравится (через [Chrome DevTools Protocol][CDP]{:.external} ), без явного открытия DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
@@ -57,15 +57,15 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 Это всего лишь одна из многих функций DevTools, доступ к которой вы можете получить через протокол Chrome DevTools.
 
-Общее предложение: проверьте API [Puppeteer API][API]{:.external}, прежде чем приступать к созданию клиента протокола DevTools. Puppeteer уже имеет специальные API для многих функций DevTools, таких как [покрытие кода][coverage]{:.external} и [перехват ** сообщений консоли **][console]{:.external}.
+Общее предложение: проверьте [Puppeteer API][API]{:.external} прежде чем {:.external} к созданию клиента протокола DevTools. У Puppeteer уже есть специальные API для многих функций DevTools, таких как [code coverage][coverage]{:.external} и [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Если вам нужна помощь в доступе к функции DevTools через Puppeteer, [задайте вопрос о переполнении стека][SO]{:.external}.
+Если вам нужна помощь в доступе к функции DevTools через Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 
-Если вы хотите показать сценарий Puppeteer, который использует протокол DevTools, напишите нам в [@ChromeDevTools][twitter]{:.external}.
+Если вы хотите показать сценарий Puppeteer, который использует протокол DevTools, напишите нам в [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

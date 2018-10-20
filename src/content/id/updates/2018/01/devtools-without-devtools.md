@@ -20,12 +20,12 @@ Saya biasanya melihat pertanyaan di sepanjang baris "Saya sangat suka fitur X De
 
 Jawaban singkatnya adalah: Anda mungkin tidak bisa.
 
-Namun, Anda * dapat * meretas skrip [Puppeteer][puppeteer]{:.external} yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP]{:.external}), tanpa pernah secara eksplisit membuka DevTools.
+Namun, Anda * dapat * meretas bersama [Puppeteer][puppeteer]{:.external} skrip yang meluncurkan Chromium, membuka klien debugging jarak jauh, kemudian mengaktifkan fitur DevTools yang Anda sukai (melalui [Chrome DevTools Protocol][CDP]{:.external} ), tanpa pernah secara eksplisit membuka DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di atas kanan-atas area pandang, meskipun DevTools tidak pernah terbuka, seperti yang dapat Anda lihat dalam video di bawah ini.
+Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di atas kanan atas area pandang, meskipun DevTools tidak pernah terbuka, seperti yang Anda lihat dalam video di bawah ini.
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -57,15 +57,15 @@ Misalnya, skrip di bawah ini memungkinkan saya menghamparkan [FPS Meter][FPS] di
 
 Ini hanyalah salah satu dari sekian banyak fitur DevTools yang dapat Anda akses secara potensial melalui Chrome DevTools Protocol.
 
-Saran umum: periksa [Puppeteer API][API]{:.external} sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [cakupan kode][coverage]{:.external} dan [intercepting ** Console ** messages][console]{:.external}.
+Saran umum: lihat [Puppeteer API][API]{:.external} sebelum beralih ke pembuatan klien Protokol DevTools. Dalang sudah memiliki API khusus untuk banyak fitur DevTools, seperti [code coverage][coverage]{:.external} dan [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Jika Anda memerlukan bantuan mengakses fitur DevTools melalui Puppeteer, [ajukan pertanyaan tentang Stack Overflow][SO]{:.external}.
+Jika Anda membutuhkan bantuan mengakses fitur DevTools melalui Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 
-Jika Anda ingin memamerkan skrip Puppeteer yang memanfaatkan Protokol DevTools, tweet kami di [@ChromeDevTools][twitter]{:.external}.
+Jika Anda ingin memamerkan skrip Puppeteer yang memanfaatkan Protokol DevTools, tweet kami di [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

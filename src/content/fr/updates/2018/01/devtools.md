@@ -18,12 +18,12 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 Les nouvelles fonctionnalités de DevTools dans Chrome 65 incluent:
 
-* [** Remplacement local **](#overrides)
-* [Nouveaux outils d'accessibilité](#a11y)
-* [L'onglet ** Modifications **](#changes)
-* [Nouveaux audits de référencement et de performance](#audits)
-* [Plusieurs enregistrements dans le panneau ** Performance **](#recordings)
-* [Code fiable avec les opérateurs et le code asynchrone](#stepping)
+* [**Local Overrides**](#overrides)
+* [New accessibility tools](#a11y)
+* [The **Changes** tab](#changes)
+* [New SEO and performance audits](#audits)
+* [Multiple recordings in the **Performance** panel](#recordings)
+* [Reliable code stepping with workers and asynchronous code](#stepping)
 
 Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dessous.
 
@@ -33,12 +33,12 @@ Lisez la suite ou regardez la version vidéo de ces notes de publication ci-dess
   </iframe>
 </div>
 
-Note: Vérifiez quelle version de Chrome vous exécutez sur `chrome://version` . Si vous utilisez une version antérieure, ces fonctionnalités n'existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
+Note: vérifiez la version de Chrome que vous utilisez sur `chrome://version` . Si vous utilisez une version antérieure, ces fonctionnalités n&#39;existeront pas. Si vous utilisez une version ultérieure, ces fonctionnalités peuvent avoir changé. Chrome met à jour automatiquement une nouvelle version majeure toutes les 6 semaines environ.
 
-## Remplacement local {: #overrides }
+## Local Overrides {: #overrides }
 
 ** Les remplacements locaux ** vous permettent d'apporter des modifications à DevTools et de les conserver tout au long du chargement des pages. Auparavant, toute modification apportée dans DevTools était perdue lorsque vous rechargiez la page.
-** Les substitutions locales ** fonctionnent pour la plupart des types de fichiers, à quelques exceptions près. Voir [Limitations](#overrides-limitations).
+** Les substitutions locales ** fonctionnent pour la plupart des types de fichiers, à quelques exceptions près. Voir [Limitations](#overrides-limitations) .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -73,13 +73,13 @@ Pour configurer les ** dérogations locales **:
 * DevTools n'enregistre pas les modifications apportées dans l'arborescence ** DOM ** du panneau ** Elements **. Modifiez le code HTML dans le panneau ** Sources ** à la place.
 * Si vous modifiez CSS dans le volet ** Styles ** et que la source de ce CSS est un fichier HTML, DevTools n'enregistrera pas le changement. Modifiez le fichier HTML dans le panneau ** Sources ** à la place.
 
-### Fonctions connexes {: #overrides-related }
+### Fonctions associées {: #overrides-related }
 
-* [Espaces de travail][WS]. DevTools mappe automatiquement les ressources réseau sur un référentiel local. Chaque fois que vous apportez une modification à DevTools, cette modification est également enregistrée dans votre référentiel local.
+* [Workspaces][WS] . DevTools mappe automatiquement les ressources réseau sur un référentiel local. Chaque fois que vous apportez une modification à DevTools, cette modification est également enregistrée dans votre référentiel local.
 
 [WS]: /web/updates/2017/10/devtools-release-notes#workspaces
 
-## L'onglet Modifications {: #changes }
+## L&#39;onglet Modifications {: #changes }
 
 Suivez les modifications que vous apportez localement dans DevTools via le nouvel onglet ** Modifications **.
 
@@ -91,7 +91,7 @@ Suivez les modifications que vous apportez localement dans DevTools via le nouve
   </figcaption>
 </figure>
 
-## Nouveaux outils d'accessibilité {: #a11y }
+## Nouveaux outils d&#39;accessibilité {: #a11y }
 
 Utilisez le nouveau volet ** Accessibilité ** pour examiner les propriétés d'accessibilité d'un élément, ainsi que le rapport de contraste des éléments de texte du ** Sélecteur de couleurs ** pour vous assurer qu'ils sont accessibles aux utilisateurs malvoyants ou aux couleurs dégradées. déficiences de la vision.
 
@@ -122,7 +122,7 @@ Consultez l'étiquette A11ycast de Rob Dodson sur l'étiquetage ci-dessous pour 
 
 ### Rapport de contraste dans le sélecteur de couleurs {: #contrast }
 
-Le [Color Picker][CP] vous indique maintenant le rapport de contraste des éléments de texte. L'augmentation du rapport de contraste des éléments de texte rend votre site plus accessible aux utilisateurs malvoyants ou souffrant de troubles de la vision des couleurs. Voir [Couleur et contraste][contrast] pour en savoir plus sur l’influence du taux de contraste sur l’accessibilité.
+Le [Color Picker][CP] vous indique maintenant le rapport de contraste des éléments de texte. L&#39;augmentation du rapport de contraste des éléments de texte rend votre site plus accessible aux utilisateurs malvoyants ou souffrant de troubles de la vision des couleurs. Voir [Color and contrast][contrast] pour en savoir plus sur la manière dont le rapport de contraste affecte l&#39;accessibilité.
 
 L&#39;amélioration du contraste des couleurs de vos éléments de texte rend votre site plus utilisable par <i>tous les</i> utilisateurs. En d&#39;autres termes, si votre texte est gris avec un arrière-plan blanc, il est difficile à lire pour quiconque.
 
@@ -134,12 +134,12 @@ L&#39;amélioration du contraste des couleurs de vos éléments de texte rend vo
   </figcaption>
 </figure>
 
-Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [taux de contraste recommandé amélioré (AAA)][enhanced]{:.external}. S'il n'y avait qu'une coche, cela signifierait qu'il respecte le [rapport de contraste minimal recommandé (AA)][minimum]{:.external}.
+Dans la Figure 5 **, les deux coches situées à côté de ** 4.61 ** signifient que cet élément respecte le [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . S&#39;il n&#39;y avait qu&#39;une coche, cela signifierait qu&#39;il respecte le [minimum recommended contrast ratio (AA)][minimum]{:.external} .
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
+Cliquez sur ** Afficher plus **! [Show More][SM]{:.cdt-inl} pour développer la section ** Rapport de contraste **. La ligne blanche dans la zone ** Color Spectrum ** (Spectre de couleurs **) représente la limite entre les couleurs conformes au rapport de contraste recommandé et celles qui ne le sont pas. Par exemple, depuis la couleur grise dans
 ** La figure 6 ** correspond aux recommandations. Cela signifie que toutes les couleurs situées au-dessous de la ligne blanche sont également conformes aux recommandations.
 
 <figure>
@@ -159,7 +159,7 @@ Cliquez sur ** Afficher plus ** ![Afficher plus][SM]] {:.cdt-inl} pour développ
 Le panneau ** Audits ** dispose d’un audit d’accessibilité automatisé pour garantir que
 * chaque * élément de texte d'une page a un rapport de contraste suffisant.
 
-Reportez-vous à la section [Exécuter Lighthouse dans Chrome DevTools][audit] ou consultez l'A11ycast ci-dessous pour apprendre à utiliser le panneau ** Audits ** pour tester l'accessibilité.
+Reportez-vous à la section [Run Lighthouse in Chrome DevTools][audit] ou consultez la diffusion A11ycast ci-dessous pour savoir comment utiliser le panneau ** Audits ** afin de tester l&#39;accessibilité.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -174,7 +174,7 @@ Reportez-vous à la section [Exécuter Lighthouse dans Chrome DevTools][audit] o
 
 Chrome 65 est livré avec une toute nouvelle catégorie d'audits de référencement et de nombreux nouveaux audits de performance.
 
-Note: Le panneau ** Audits ** est alimenté par [Lighthouse][LH]. Chrome 64 exécute la version 2.5 de phare. Chrome 65 exécute la version 2.8 de phare. Cette section est donc simplement un résumé des mises à jour de Lighthouse de 2.6, 2.7 et 2.8.
+Note: le panneau ** Audits ** est alimenté par [Lighthouse][LH] . Chrome 64 exécute la version 2.5 de phare. Chrome 65 exécute la version 2.8 de phare. Cette section est donc simplement un résumé des mises à jour de Lighthouse de 2.6, 2.7 et 2.8.
 
 ### Nouveaux audits SEO {: #seo }
 
@@ -214,11 +214,11 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 
 ### Autres mises à jour {: #audits-other }
 
-* [Nouveau, audits d’accessibilité manuels](/web/updates/2018/01/lighthouse#a11y)
-* [Mises à jour de l'audit WebP][webp] pour l'inclure davantage dans les autres formats d'image de la prochaine génération
-* [Un rehaul du score d'accessibilité][a11yscore]
+* [New, manual accessibility audits](/web/updates/2018/01/lighthouse#a11y)
+* [Updates to the WebP audit][webp] pour l&#39;inclure davantage dans les autres formats d&#39;image de la prochaine génération
+* [A rehaul of the accessibility score][a11yscore]
 * Si un audit d'accessibilité n'est pas applicable pour une page, cet audit ne compte plus dans le score d'accessibilité.
-* La performance est désormais la partie la plus importante des rapports.
+* La performance est désormais la partie la plus importante des rapports
 
 [seoaudits]: /web/updates/2018/01/lighthouse#seo
 [webp]: /web/updates/2018/01/lighthouse#webp
@@ -229,7 +229,7 @@ Chrome 65 est également livré avec de nombreux nouveaux audits de performance:
 
 ## Code de progression fiable avec les opérateurs et le code asynchrone {: #stepping }
 
-Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][into]] {:.cdt-inl} pour entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de progression précédent, vous pouvez utiliser le nouveau bouton ** Step ** ![Step][step]] {:.cdt-inl} à la place.
+Chrome 65 apporte les mises à jour du ** Step Into **! [Step Into][into] bouton [Step Into][into]{:.cdt-inl} vous permet d&#39;entrer dans le code qui transmet les messages entre les threads et le code asynchrone. Si vous voulez le comportement de pas précédent, vous pouvez utiliser le nouveau ** Step **! [Step][step]{:.cdt-inl} , à la place.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -238,7 +238,7 @@ Chrome 65 apporte les mises à jour du bouton ** Pas à pas ** ![Pas à pas][int
 
 Lorsque vous entrez dans le code qui transmet les messages entre les threads, DevTools vous montre maintenant ce qui se passe dans chaque thread.
 
-Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l'appel `postMessage()` sur le thread principal, DevTools s'interrompt dans le gestionnaire `onmessage` du thread de travail. Le gestionnaire `onmessage` lui-même envoie un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
+Par exemple, l’application de la Figure 8 ** transmet un message entre le fil principal et le fil de travail. Après être intervenu dans l&#39;appel `postMessage()` sur le thread principal, DevTools s&#39;interrompt dans le gestionnaire `onmessage` dans le thread de travail. Le gestionnaire `onmessage` lui-même undefined un message au thread principal. Entrer dans * cet * appel met en pause DevTools dans le thread principal.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -248,7 +248,7 @@ Par exemple, l’application de la Figure 8 ** transmet un message entre le fil 
   </figcaption>
 </figure>
 
-Lorsque vous êtes entré dans un code comme celui-ci dans les versions précédentes de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la ** figure 9 **.
+Lorsque vous êtes entré dans un code comme celui-ci dans les versions antérieures de Chrome, Chrome ne vous montrait que le côté thread principal du code, comme vous pouvez le voir sur la ** figure 9 **.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
@@ -258,11 +258,11 @@ Lorsque vous êtes entré dans un code comme celui-ci dans les versions précéd
   </figcaption>
 </figure>
 
-### Passage au code asynchrone {: #async }
+### Entrer dans le code asynchrone {: #async }
 
 Lorsque vous entrez dans le code asynchrone, DevTools suppose maintenant que vous souhaitez suspendre le code asynchrone qui s'exécute.
 
-Par exemple, dans la ** figure 10 **, après avoir accédé à `setTimeout()` , DevTools exécute tout le code menant jusque-là à l'arrière-plan, puis met en pause la fonction transmise à `setTimeout()` .
+Par exemple, dans la ** figure 10 ** après être `setTimeout()` dans `setTimeout()` , DevTools exécute tout le code menant à ce point derrière la scène, puis met en pause la fonction transmise à undefined .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -284,7 +284,7 @@ Lorsque vous êtes entré dans un code comme celui-ci dans Chrome 63, DevTools a
 
 ## Plusieurs enregistrements dans le panneau Performance {: #recordings }
 
-Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairement jusqu'à 5 enregistrements. Les enregistrements sont supprimés lorsque vous fermez la fenêtre de DevTools. Reportez-vous à [Mise en route pour l'analyse des performances d'exécution][runtime] pour vous familiariser avec le panneau ** Performance **.
+Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairement jusqu&#39;à 5 enregistrements. Les enregistrements sont supprimés lorsque vous fermez la fenêtre de DevTools. Voir [Get Started with Analyzing Runtime Performance][runtime] pour vous familiariser avec le panneau ** Performance **.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 
@@ -296,9 +296,9 @@ Le panneau ** Performance ** vous permet maintenant de sauvegarder temporairemen
   </figcaption>
 </figure>
 
-## Bonus: Automatisez les actions DevTools avec Puppeteer 1.0 {: #puppeteer }
+## Bonus: Automatiser les actions de DevTools avec Puppeteer 1.0 {: #puppeteer }
 
-Note: Cette section n'est pas liée à Chrome 65.
+Note: cette section n&#39;est pas liée à Chrome 65.
 
 La version 1.0 de Puppeteer, un outil d'automatisation de navigation géré par l'équipe de Chrome DevTools, est maintenant disponible. Vous pouvez utiliser Puppeteer pour automatiser de nombreuses tâches auparavant uniquement disponibles via DevTools, telles que la capture de captures d'écran:
 
@@ -322,31 +322,31 @@ Il dispose également d’API pour de nombreuses tâches d’automatisation gén
       await browser.close();
     })();
 
-Voir [Démarrage rapide][quickstart] pour en savoir plus.
+Voir [Quick Start][quickstart] pour en savoir plus.
 
 [quickstart]: /web/tools/puppeteer/get-started
 
-Vous pouvez également utiliser Puppeteer pour exposer les fonctionnalités de DevTools lors de la navigation sans jamais ouvrir explicitement DevTools. Voir [Utiliser les fonctionnalités de DevTools sans ouvrir DevTools][without] pour un exemple.
+Vous pouvez également utiliser Puppeteer pour exposer les fonctionnalités de DevTools lors de la navigation sans jamais ouvrir explicitement DevTools. Voir [Using DevTools Features Without Opening DevTools][without] pour un exemple.
 
 [without]: /web/updates/2018/01/devtools-without-devtools
 
-## Une demande de l'équipe de DevTools: considérez Canary {: #canary }
+## Une demande de l&#39;équipe de DevTools: considérez Canary {: #canary }
 
-Si vous utilisez Mac ou Windows, envisagez d'utiliser [Chrome Canary][canary] comme navigateur de développement par défaut. Si vous signalez un bogue ou une modification que vous n'aimez pas tant qu'il est encore dans Canary, l'équipe de DevTools peut traiter vos commentaires beaucoup plus rapidement.
+Si vous utilisez un ordinateur Mac ou Windows, veuillez utiliser [Chrome Canary][canary] comme navigateur de développement par défaut. Si vous signalez un bogue ou une modification que vous n&#39;aimez pas tant qu&#39;il est encore dans Canary, l&#39;équipe de DevTools peut traiter vos commentaires beaucoup plus rapidement.
 
-Note: Canary est la version avancée de Chrome. Il est publié dès sa construction, sans test. Cela signifie que Canary effectue des pauses de temps en temps, environ une fois par mois, et que cela se règle habituellement en un jour. Vous pouvez revenir à l'utilisation de Chrome Stable en cas de rupture de Canary.
+Note: Canary est la version avancée de Chrome. Il est publié dès sa construction, sans test. Cela signifie que Canary effectue des pauses de temps en temps, environ une fois par mois, et que cela se règle habituellement en un jour. Vous pouvez revenir à l&#39;utilisation de Chrome Stable en cas de rupture de Canary.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Commentaires {: #feedback }
+## Feedback {: #feedback }
 
-Le meilleur endroit pour discuter des fonctionnalités ou des modifications que vous voyez ici est la [liste de diffusion google-chrome-developer-tools@googlegroups.com][ML]. Vous pouvez également nous envoyer un courriel à [@ChromeDevTools](https://twitter.com/chromedevtools) si vous manquez de temps. Si vous êtes certain d'avoir rencontré un bogue dans DevTools, veuillez [ouvrir un problème](https://crbug.com/new).
+Le meilleur endroit pour discuter des fonctionnalités ou des modifications que vous voyez ici est la [google-chrome-developer-tools@googlegroups.com mailing list][ML] . Vous pouvez également nous [@ChromeDevTools](https://twitter.com/chromedevtools) si vous manquez de temps. Si vous êtes certain d&#39;avoir rencontré un bogue dans DevTools, veuillez [open an issue](https://crbug.com/new) .
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
 ## Notes de publication précédentes {: #links }
 
-Voir la balise [devtools-whatsnew][tag] pour des liens vers toutes les notes de publication précédentes de DevTools.
+Voir la [devtools-whatsnew][tag] pour des liens vers toutes les notes de publication précédentes de DevTools.
 
 [tag]: /web/updates/tags/devtools-whatsnew
 

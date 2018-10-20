@@ -35,9 +35,9 @@ Consulte las [2.7 release notes][RN] para ver la lista completa de nuevas funcio
 
 ## Cómo actualizar a 2.7 {: #update }
 
-* NPM. Ejecute el `npm update lighthouse` `npm update lighthouse -g` si instaló Lighthouse globalmente.
+* NPM. Ejecute el `npm update lighthouse` o `npm update lighthouse -g` si instaló Lighthouse globalmente.
 * Extensión de Chrome. La extensión debería actualizarse automáticamente, pero puede actualizarla manualmente a través de `chrome://extensions` .
-* DevTools. Lighthouse 2.7 se está enviando en Chrome 65. Puedes verificar qué versión de Chrome estás ejecutando a través de `chrome://version` . Chrome se actualiza a una nueva versión cada 6 semanas aproximadamente. Puede ejecutar el último código de Chrome descargando [Chrome Canary][Canary] .
+* DevTools. Lighthouse 2.7 se está enviando en Chrome 65. Puedes verificar qué versión de Chrome estás `chrome://version` través de undefined . Chrome se actualiza a una nueva versión cada 6 semanas aproximadamente. Puede ejecutar el último código de Chrome descargando [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 

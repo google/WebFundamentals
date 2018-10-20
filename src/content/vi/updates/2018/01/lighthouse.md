@@ -35,9 +35,9 @@ Xem [2.7 release notes][RN] để biết danh sách đầy đủ các tính năn
 
 ## Cách cập nhật lên 2,7 {: #update }
 
-* NPM. Chạy `npm update lighthouse` , `npm update lighthouse -g` flag nếu bạn cài đặt Lighthouse trên toàn cầu.
-* Tiện ích mở rộng của Chrome. Tiện ích mở rộng sẽ tự động cập nhật nhưng bạn có thể cập nhật `chrome://extensions` theo cách thủ công thông qua `chrome://extensions` .
-* Những công cụ của nhà phát triển. Lighthouse 2.7 được giao trong Chrome 65. Bạn có thể kiểm tra phiên bản Chrome nào bạn đang chạy thông qua `chrome://version` . Chrome cập nhật lên phiên bản mới khoảng 6 tuần một lần. Bạn có thể chạy mã Chrome mới nhất bằng cách tải xuống [Chrome Canary][Canary] .
+* NPM. Run `npm update lighthouse` , hoặc `npm update lighthouse -g` cờ nếu bạn cài đặt Ngọn hải đăng trên toàn cầu.
+* Tiện ích mở rộng của Chrome. Tiện ích sẽ tự động cập nhật nhưng bạn có thể cập nhật tiện ích theo cách thủ công qua `chrome://extensions` .
+* Những công cụ của nhà phát triển. Ngọn hải đăng 2.7 đang giao hàng trong Chrome 65. Bạn có thể kiểm tra phiên bản Chrome nào bạn đang chạy qua `chrome://version` . Chrome cập nhật lên phiên bản mới khoảng 6 tuần một lần. Bạn có thể chạy mã Chrome mới nhất bằng cách tải xuống [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 

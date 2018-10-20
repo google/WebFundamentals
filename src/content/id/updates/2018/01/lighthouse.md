@@ -35,7 +35,7 @@ Lihat [2.7 release notes][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 ## Cara memperbarui ke 2.7 {: #update }
 
-* NPM. Jalankan `npm update lighthouse` , `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
+* NPM. Jalankan `npm update lighthouse` , atau `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
 * Ekstensi Chrome. Ekstensi harus diperbarui secara otomatis, tetapi Anda dapat memperbaruinya secara manual melalui `chrome://extensions` .
 * DevTools. Lighthouse 2.7 adalah pengiriman di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version` . Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary] .
 

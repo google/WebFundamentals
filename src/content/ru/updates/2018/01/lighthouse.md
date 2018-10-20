@@ -35,8 +35,8 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 ## Как обновить до 2.7 {: #update }
 
-* NPM. Запустите `npm update lighthouse` `npm update lighthouse -g` флаг `npm update lighthouse -g` если вы установили Lighthouse глобально.
-* Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его с помощью `chrome://extensions` .
+* NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g` если вы установили Lighthouse глобально.
+* Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions` .
 * DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
