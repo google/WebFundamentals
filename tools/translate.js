@@ -20,72 +20,51 @@ const targets = program.target.split(',')
 
 async function translateLines(text, to) {
   if(text === ' ') return ' ';
-  const links = [];
-  const srcs = [];
-  const callouts = [];
-  const linkDefs = [];
-  const squareLinks = [];
-  const specialWords = [];
-  const pragmas = [];
 
   // Find markdown []() links and replace URL.
   text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, (match, p1, p2, offset, str) => {
-    links.push(p2);
-    return `[${p1}](${links.length-1})`;
+    return `<span translate="no">${match}</span>`;
   });
 
   // Find markdown []: https:..... links and replace URL.
   text = text.replace(/^\[([^\]]+)\]:.*/, (match, p1, p2, offset, str) => {
-    linkDefs.push(match); // the entire line
-    return `LNKDFS${linkDefs.length-1}`;
+    return `<span translate="no">${match}</span>`;
   });
 
   // Find markdown [][] links and replace URL.
   text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, (match, p1, p2, offset, str) => {
-    squareLinks.push(p2);
-    return `[${p1}][${squareLinks.length-1}]`;
+    return `<span translate="no">${match}</span>`;
   });
 
   // Find markdown [][] links and replace URL.
   text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, (match, p1, p2, offset, str) => {
-    callouts.push(p1);
-    return `SPCLCLLTS${callouts.length-1}`;
+    return `<span translate="no">${match}</span>`;
   });
+
+  let srcurlfn = (match) => {
+    return `<span translate="no">${match}</span>`;
+  };
 
   // Find things that look like a src="" and don't replace
-  text = text.replace(/src=\"([^\"]+)\"/g, (match, p1, p2, offset, str) => {
-    srcs.push(match);
-    return `SRCURL${srcs.length-1}`;
-  });
+  text = text.replace(/src=\"([^\"]+)\"/g, srcurlfn);
 
   // Find things that look like a src='' and don't replace
-  text = text.replace(/src=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
-    srcs.push(match);
-    return `SRCURL${srcs.length-1}`;
-  });
+  text = text.replace(/src=\'([^\']+)\'/g, srcurlfn);
 
   // Find things that look like a href='' and don't replace
-  text = text.replace(/href=\'([^\']+)\'/g, (match, p1, p2, offset, str) => {
-    srcs.push(match);
-    return `SRCURL${srcs.length-1}`;
-  });
+  text = text.replace(/href=\'([^\']+)\'/g, srcurlfn);
 
   // Find things that look like a href="" and don't replace
-  text = text.replace(/href=\"([^\']+)\"/g, (match, p1, p2, offset, str) => {
-    srcs.push(match);
-    return `SRCURL${srcs.length-1}`;
-  });
+  text = text.replace(/href=\"([^\']+)\"/g, srcurlfn);
 
   // Find {: } [][] links and replace URL.
   text = text.replace(/\{:([^\}]+)\}/g, (match, p1, p2, offset, str) => {
-    pragmas.push(p1);
-    return `PRGMS${pragmas.length-1}`;
+    return `<span translate="no">${match}</span>`;
   });
 
   // Find special words and don't translate
   text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
-    specialWords.push(p1);
-    return `SPCLWRD${specialWords.length-1}`;
+    return `<span translate="no">${match}</span>`;
   });
 
   const output = [];
@@ -118,40 +97,7 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
     translation = translation.replace(/＃/gu,'#');
 
-    // Remap all links of form []()
-    translation = translation.replace(/\[([^\]]+)\]\((\d+)\)/gm, (match, p1, p2, offset, str) => {
-      return `[${p1}](${links.shift()})`;
-    });
-
-    // Remap all callouts
-    translation = translation.replace(/SPCLCLLTS(\d+)/gm, (match, p1, p2, offset, str) => {
-      return `${callouts.shift()} `;
-    });
-
-    // Remap all links of form [][]
-    translation = translation.replace(/\[([^\]]+)\]\[(\d+)\]/gm, (match, p1, p2, offset, str) => {
-      return `[${p1}][${squareLinks.shift()}]`;
-    });
-
-    // Remap all {: } 
-    translation = translation.replace(/PRGMS(\d+)/gm, (match, p1, p2, offset, str) => {
-      return `{:${pragmas.shift()}}`;
-    });
-
-    // Remap all link defintions 
-    translation = translation.replace(/^LNKDFS(\d+)/gm, (match, p1, p2, offset, str) => {
-      return `${linkDefs.shift()}`;
-    });
-
-    // Remap all src="" and src=''
-    translation = translation.replace(/SRCURL(\d+)/gm, (match, p1, p2, offset, str) => {
-      return `${srcs.shift()}`;
-    });
-
-    // Remap all specialWords 
-    translation = translation.replace(/SPCLWRD(\d+)/gm, (match, p1, p2, offset, str) => {
-      return `\`${specialWords.shift()}\` `;
-    });
+    translation = translation.replace(/<span translate="no">(.+?)<\/span>/gm, '$1');
 
     // Fix things after the major replacements have happened
 

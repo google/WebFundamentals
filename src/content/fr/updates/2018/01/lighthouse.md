@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Mise à jour du phare 2.7 {: .page-title }
+# Mises à jour du phare 2.7 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -25,27 +25,27 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Phare 2.7 est sorti! Les points forts incluent:
 
-* [Nouveaux audits de référencement](#seo).
-* [Nouveaux audits d’accessibilité manuels](#a11y).
-* [Mises à jour de l'audit WebP](#webp).
+* [New SEO audits](#seo) .
+* [New, manual accessibility audits](#a11y) .
+* [Updates to the WebP audit](#webp) .
 
-Voir les [Notes de version 2.7][RN] pour la liste complète des nouvelles fonctionnalités, modifications et corrections de bugs.
+Reportez-vous aux [2.7 release notes][RN] pour obtenir la liste complète des nouvelles fonctionnalités, modifications et corrections de bugs.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
 ## Comment mettre à jour à 2.7 {: #update }
 
-* NPM. Exécutez l'indicateur `npm update lighthouse` ou `npm update lighthouse -g` si vous avez installé globalement Lighthouse.
-* Extension Chrome. L'extension doit être mise à jour automatiquement, mais vous pouvez la mettre à jour manuellement via `chrome://extensions` .
-* DevTools. Lighthouse 2.7 est livré dans Chrome 65. Vous pouvez vérifier quelle version de Chrome vous exécutez via `chrome://version` . Chrome met à jour une nouvelle version toutes les 6 semaines environ. Vous pouvez exécuter le dernier code Chrome en téléchargeant [Chrome Canary][Canary].
+* NPM. Exécutez `npm update lighthouse` `npm update lighthouse -g` si vous avez installé Lighthouse globalement.
+* Extension Chrome. L&#39;extension devrait se mettre à jour automatiquement, mais vous pouvez la mettre à jour manuellement via `chrome://extensions` .
+* DevTools. Lighthouse 2.7 est livré dans Chrome 65. Vous pouvez vérifier quelle version de Chrome vous utilisez via `chrome://version` . Chrome met à jour une nouvelle version toutes les 6 semaines environ. Vous pouvez exécuter le dernier code Chrome en téléchargeant [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Nouveaux audits de référencement {: #seo }
+## Nouveaux audits SEO {: #seo }
 
 La nouvelle catégorie SEO propose des audits qui aident à améliorer le classement de votre page dans les résultats des moteurs de recherche.
 
-Note: De nombreux facteurs affectent le classement du moteur de recherche d'une page. Phare ne teste pas tous ces facteurs. Un score parfait de 100 dans Lighthouse ne garantit pas une place de premier rang sur les moteurs de recherche!
+Note: nombreux facteurs affectent le classement du moteur de recherche d&#39;une page. Phare ne teste pas tous ces facteurs. Un score parfait de 100 dans Lighthouse ne garantit pas une place de premier rang sur les moteurs de recherche!
 
 <figure>
   <img src="/web/updates/images/2018/01/seo.png"
@@ -59,7 +59,7 @@ Note: De nombreux facteurs affectent le classement du moteur de recherche d'une 
   </figcaption>
 </figure>
 
-## Nouveaux audits manuels d’accessibilité {: #a11y }
+## Nouveaux audits manuels d&#39;accessibilité {: #a11y }
 
 Les nouvelles vérifications manuelles de l'accessibilité vous informent des choses que vous pouvez faire pour améliorer l'accessibilité de votre page. "Manuel" signifie ici que Lighthouse ne peut pas automatiser ces audits. Vous devez donc les tester manuellement.
 
@@ -77,9 +77,9 @@ Les nouvelles vérifications manuelles de l'accessibilité vous informent des ch
   </figcaption>
 </figure>
 
-## Mises à jour de l'audit WebP {: #webp }
+## Mises à jour de l&#39;audit WebP {: #webp }
 
-Grâce à certains [commentaires de la communauté][feedback], l'audit [WebP][webp] comprend désormais davantage d'autres formats d'image hautes performances de nouvelle génération, tels que JPEG 2000 et JPEG XR.
+Grâce à certains [community feedback][feedback] , [WebP audit][webp] désormais davantage d&#39;autres formats d&#39;image hautes performances de nouvelle génération, tels que JPEG 2000 et JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
