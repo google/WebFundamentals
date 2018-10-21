@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Обновления {: .page-title }
+# 2.7 Обновления {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -29,7 +29,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 * [New, manual accessibility audits](#a11y) .
 * [Updates to the WebP audit](#webp) .
 
-См. [2.7 release notes][RN] для полного списка новых функций, изменений и исправлений ошибок.
+См. [2.7 release notes][RN] для получения полного списка новых функций, изменений и исправлений ошибок.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
@@ -37,7 +37,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 * NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g` если вы установили Lighthouse глобально.
 * Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions` .
-* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary] .
+* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какую версию Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -77,9 +77,9 @@ Note: Многие факторы влияют на ранжирование п�
   </figcaption>
 </figure>
 
-## Обновления аудита WebP {: #webp }
+## Обновления для аудита WebP. {: #webp }
 
-Благодаря [community feedback][feedback] , [WebP audit][webp] теперь больше включает в себя другие форматы изображений следующего поколения, такие как JPEG 2000 и JPEG XR.
+Благодаря некоторому [community feedback][feedback] , [WebP audit][webp] теперь больше включает в себя другие форматы изображений нового поколения следующего поколения, такие как JPEG 2000 и JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp

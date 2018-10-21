@@ -35,7 +35,7 @@ Baca terus, atau tonton versi video dari catatan rilis ini, di bawah ini.
 
 Note: Periksa versi Chrome apa yang Anda jalankan di `chrome://version` . Jika Anda menjalankan versi sebelumnya, fitur-fitur ini tidak akan ada. Jika Anda menjalankan versi yang lebih baru, fitur-fitur ini mungkin telah berubah. Pembaruan otomatis Chrome ke versi utama baru setiap 6 minggu.
 
-## {: #overrides } Lokal {: #overrides }
+## Local Overridees {: #overrides }
 
 ** Local Overrides ** memungkinkan Anda membuat perubahan di DevTools, dan menjaga perubahan tersebut di seluruh beban halaman. Sebelumnya, perubahan apa pun yang Anda buat di DevTools akan hilang saat Anda memuat ulang halaman.
 ** Local Override ** berfungsi untuk sebagian besar jenis file, dengan beberapa pengecualian. Lihat [Limitations](#overrides-limitations) .
@@ -68,7 +68,7 @@ Untuk mengatur ** Local Overrides **:
 
 1. Klik ** Pengaturan Mengganti **. 1. Pilih direktori mana Anda ingin menyimpan perubahan Anda. 1. Di bagian atas viewport Anda, klik ** Allow ** untuk memberi DevTools akses baca dan tulis ke direktori. 1. Buat perubahan Anda.
 
-### Pembatasan {: #overrides-limitations }
+### Batasan {: #overrides-limitations }
 
 * DevTools tidak menyimpan perubahan yang dibuat di ** DOM Tree ** dari panel ** Elements **. Edit HTML di panel ** Sumber ** sebagai gantinya.
 * Jika Anda mengedit CSS di ** Styles ** pane, dan sumber CSS itu adalah file HTML, DevTools tidak akan menyimpan perubahan. Edit file HTML di panel ** Sources **.
@@ -95,7 +95,7 @@ Lacak perubahan yang Anda buat secara lokal di DevTools melalui tab ** Perubahan
 
 Gunakan panel ** Accessibility ** baru untuk memeriksa properti aksesibilitas suatu elemen, dan periksa rasio kontras elemen teks di ** Color Picker ** untuk memastikan bahwa mereka dapat diakses oleh pengguna dengan gangguan penglihatan atau warna rendah -visi kekurangan.
 
-### {: #a11y-pane } Aksesibilitas {: #a11y-pane }
+### Accessibility pane {: #a11y-pane }
 
 Gunakan ** Accessibility ** pane pada panel ** Elements ** untuk menyelidiki properti aksesibilitas dari elemen yang saat ini dipilih.
 
@@ -120,9 +120,9 @@ Lihat A11ycast Rob Dodson tentang pelabelan di bawah ini untuk melihat panel ** 
   </iframe>
 </div>
 
-### Rasio kontras dalam Pemilih Warna {: #contrast }
+### Contrast ratio dalam Color Picker {: #contrast }
 
-[Color Picker][CP] sekarang menunjukkan rasio kontras elemen teks. Meningkatkan rasio kontras elemen teks membuat situs Anda lebih mudah diakses oleh pengguna dengan gangguan penglihatan rendah atau kekurangan penglihatan warna. Lihat [Color and contrast][contrast] untuk mempelajari lebih lanjut tentang bagaimana rasio kontras memengaruhi aksesibilitas.
+[Color Picker][CP] sekarang menunjukkan rasio kontras elemen teks. Meningkatkan rasio kontras elemen teks membuat situs Anda lebih mudah diakses oleh pengguna dengan gangguan penglihatan rendah atau kekurangan penglihatan warna. Lihat [Color and contrast][contrast] untuk mempelajari lebih lanjut tentang bagaimana rasio kontras mempengaruhi aksesibilitas.
 
 Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat bagi <i>semua</i> pengguna. Dengan kata lain, jika teks Anda berwarna abu-abu dengan latar belakang putih, sulit bagi siapa pun untuk membaca.
 
@@ -134,7 +134,7 @@ Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat 
   </figcaption>
 </figure>
 
-Dalam ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Jika hanya memiliki satu tanda centang, itu berarti ia memenuhi [minimum recommended contrast ratio (AA)][minimum]{:.external} .
+Di ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Jika hanya ada satu tanda centang, itu berarti ia bertemu dengan [minimum recommended contrast ratio (AA)][minimum]{:.external} .
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -159,7 +159,7 @@ Klik ** Tampilkan Lebih Banyak **! [Show More][SM]{:.cdt-inl} untuk memperluas b
 Panel ** Audit ** memiliki audit akses otomatis untuk memastikannya
 * setiap elemen * teks pada halaman memiliki rasio kontras yang cukup.
 
-Lihat [Run Lighthouse in Chrome DevTools][audit] , atau tonton A11ycast di bawah ini, untuk mempelajari cara menggunakan panel ** Audit ** untuk menguji aksesibilitas.
+Lihat [Run Lighthouse in Chrome DevTools][audit] , atau tonton A11ycast di bawah ini, untuk mempelajari cara menggunakan ** ** panel ** untuk menguji aksesibilitas.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -215,7 +215,7 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 ### Pembaruan lainnya {: #audits-other }
 
 * [New, manual accessibility audits](/web/updates/2018/01/lighthouse#a11y)
-* [Updates to the WebP audit][webp] untuk membuatnya lebih inklusif dari format gambar generasi selanjutnya lainnya
+* [Updates to the WebP audit][webp] untuk membuatnya lebih inklusif dari format gambar generasi mendatang lainnya
 * [A rehaul of the accessibility score][a11yscore]
 * Jika audit aksesibilitas tidak berlaku untuk suatu halaman, audit itu tidak lagi diperhitungkan terhadap skor aksesibilitas
 * Kinerja kini menjadi bagian teratas dalam laporan
@@ -227,18 +227,18 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 [2.6]: /web/updates/2017/12/lighthouse
 [2.7]: /web/updates/2018/01/lighthouse
 
-## Kode yang dapat diandalkan melangkah bersama pekerja dan kode asinkron {: #stepping }
+## Kode yang dapat dipercaya melangkah dengan pekerja dan kode asynchronous {: #stepping }
 
-Chrome 65 menghadirkan pembaruan ke ** Step Into **! [Step Into][into] tombol {:.cdt-inl} saat masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan ** Langkah ** yang baru! [Step][step]{:.cdt-inl} tombol, sebagai gantinya.
+Chrome 65 menghadirkan pembaruan ke ** Step Into **! Tombol [Step Into][into]{:.cdt-inl} saat masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan ** Langkah ** yang baru! Tombol [Step][step]{:.cdt-inl} , sebagai gantinya.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
 
-### ke kode yang melewatkan pesan antar utas {: #workers }
+### Melangkah ke kode yang melewatkan pesan antara utas benang {: #workers }
 
 Ketika Anda masuk ke kode yang mengirimkan pesan antar utas, DevTools sekarang menunjukkan apa yang terjadi di setiap utas.
 
-Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke panggilan `postMessage()` pada utas utama, DevTools berhenti di pengatur `onmessage` di utas pekerja. The `onmessage` handler itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
+Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke dalam panggilan `postMessage()` pada utas utama, DevTools berhenti di handler `onmessage` di thread pekerja. Penangan `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -248,7 +248,7 @@ Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan u
   </figcaption>
 </figure>
 
-Ketika Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya menunjukkan Anda sisi utas-utama dari kode, seperti yang Anda lihat di ** Gambar 9 **.
+Saat Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya menunjukkan Anda sisi utas-utama dari kode, seperti yang Anda lihat di ** Gambar 9 **.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
@@ -258,11 +258,11 @@ Ketika Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya m
   </figcaption>
 </figure>
 
-### ke kode asinkron {: #async }
+### Melangkah ke dalam kode asynchronous {: #async }
 
 Ketika melangkah ke kode asynchronous, DevTools sekarang mengasumsikan bahwa Anda ingin berhenti di kode asynchronous yang akhirnya berjalan.
 
-Sebagai contoh, dalam ** Gambar 10 ** setelah masuk ke `setTimeout()` , DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti dalam fungsi yang diteruskan ke `setTimeout()` .
+Sebagai contoh, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()` , DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti dalam fungsi yang diteruskan ke `setTimeout()` .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -282,7 +282,7 @@ Ketika Anda masuk ke kode seperti ini di Chrome 63, DevTools berhenti dalam kode
   </figcaption>
 </figure>
 
-## Beberapa rekaman dalam panel Kinerja {: #recordings }
+## Beberapa rekaman dalam panel Performance {: #recordings }
 
 Panel ** Performance ** sekarang memungkinkan Anda menyimpan hingga 5 rekaman secara sementara. Rekaman akan dihapus ketika Anda menutup jendela DevTools Anda. Lihat [Get Started with Analyzing Runtime Performance][runtime] untuk merasa nyaman dengan panel ** Performance **.
 
@@ -326,7 +326,7 @@ Lihat [Quick Start][quickstart] untuk mempelajari lebih lanjut.
 
 [quickstart]: /web/tools/puppeteer/get-started
 
-Anda juga dapat menggunakan Puppeteer untuk mengekspos fitur DevTools saat menjelajah tanpa pernah secara eksplisit membuka DevTools. Lihat [Using DevTools Features Without Opening DevTools][without] untuk contoh.
+Anda juga dapat menggunakan Puppeteer untuk mengekspos fitur DevTools saat menjelajah tanpa pernah secara eksplisit membuka DevTools. Lihat [Using DevTools Features Without Opening DevTools][without] sebagai contoh.
 
 [without]: /web/updates/2018/01/devtools-without-devtools
 
@@ -338,15 +338,15 @@ Note: Canary adalah versi Chrome yang mengandung pendarahan. Ini dirilis segera 
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Tanggapan {: #feedback }
+## Umpan balik {: #feedback }
 
-Tempat terbaik untuk mendiskusikan salah satu fitur atau perubahan yang Anda lihat di sini adalah [google-chrome-developer-tools@googlegroups.com mailing list][ML] . Anda juga dapat mentweet kami di [@ChromeDevTools](https://twitter.com/chromedevtools) jika Anda kekurangan waktu. Jika Anda yakin telah menemukan bug di DevTools, silakan [open an issue](https://crbug.com/new) .
+Tempat terbaik untuk mendiskusikan salah satu fitur atau perubahan yang Anda lihat di sini adalah [google-chrome-developer-tools@googlegroups.com mailing list][ML] . Anda juga dapat mentweet kami di [@ChromeDevTools](https://twitter.com/chromedevtools) jika waktu Anda [@ChromeDevTools](https://twitter.com/chromedevtools) . Jika Anda yakin telah menemukan bug di DevTools, silakan [open an issue](https://crbug.com/new) .
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
 ## Catatan rilis sebelumnya {: #links }
 
-Lihat [devtools-whatsnew][tag] untuk tautan ke semua catatan rilis DevTools sebelumnya.
+Lihat tag [devtools-whatsnew][tag] untuk tautan ke semua catatan rilis DevTools sebelumnya.
 
 [tag]: /web/updates/tags/devtools-whatsnew
 

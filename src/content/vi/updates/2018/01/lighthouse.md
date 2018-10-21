@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Bản cập nhật {: .page-title }
+# Lighthouse 2.7 Cập nhật {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -33,7 +33,7 @@ Xem [2.7 release notes][RN] để biết danh sách đầy đủ các tính năn
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## Cách cập nhật lên 2,7 {: #update }
+## Cách cập nhật lên 2.7 {: #update }
 
 * NPM. Run `npm update lighthouse` , hoặc `npm update lighthouse -g` cờ nếu bạn cài đặt Ngọn hải đăng trên toàn cầu.
 * Tiện ích mở rộng của Chrome. Tiện ích sẽ tự động cập nhật nhưng bạn có thể cập nhật tiện ích theo cách thủ công qua `chrome://extensions` .
@@ -59,9 +59,9 @@ Note: Nhiều yếu tố ảnh hưởng đến xếp hạng của công cụ tì
   </figcaption>
 </figure>
 
-## Mới, kiểm tra trợ năng thủ công {: #a11y }
+## Kiểm tra khả năng truy cập {: #a11y }
 
-Kiểm tra khả năng truy cập thủ công mới, thông báo cho bạn về những điều bạn có thể làm để cải thiện khả năng truy cập trang của bạn. "Thủ công" ở đây có nghĩa là Ngọn hải đăng không thể tự động hóa các kiểm tra này, vì vậy bạn cần tự mình kiểm tra chúng.
+Kiểm tra khả năng truy cập thủ công mới, thông báo cho bạn về những điều bạn có thể làm để cải thiện khả năng truy cập trang của bạn. &quot;Thủ công&quot; ở đây có nghĩa là Ngọn hải đăng không thể tự động hóa các kiểm tra này, vì vậy bạn cần tự mình kiểm tra chúng.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y.png"
@@ -77,9 +77,9 @@ Kiểm tra khả năng truy cập thủ công mới, thông báo cho bạn về 
   </figcaption>
 </figure>
 
-## Cập nhật cho kiểm tra WebP {: #webp }
+## Cập nhật cho kiểm toán WebP {: #webp }
 
-Nhờ có một số [community feedback][feedback] , [WebP audit][webp] hiện nay bao gồm các định dạng hình ảnh hiệu năng cao, thế hệ tiếp theo khác, như JPEG 2000 và JPEG XR.
+Nhờ có một số [community feedback][feedback] , [WebP audit][webp] bây giờ đã bao gồm nhiều định dạng hình ảnh hiệu suất cao, thế hệ tiếp theo khác, như JPEG 2000 và JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp

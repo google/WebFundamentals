@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Updates {: .page-title }
+# Lighthouse 2.7 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -29,19 +29,19 @@ Leuchtturm 2.7 ist out! Höhepunkte umfassen:
 * [New, manual accessibility audits](#a11y) .
 * [Updates to the WebP audit](#webp) .
 
-Eine vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen finden Sie in den [2.7 release notes][RN] .
+[2.7 release notes][RN] vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen finden Sie in WORDS0.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## So aktualisieren auf 2,7 {: #update }
+## Wie man auf 2.7 {: #update }
 
 * NPM. Führen Sie `npm update lighthouse` oder `npm update lighthouse -g` wenn Sie Lighthouse global installiert haben.
-* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, aber Sie können sie manuell über `chrome://extensions` .
+* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, Sie können sie jedoch manuell über `chrome://extensions` .
 * DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können überprüfen, welche Version von Chrome Sie über `chrome://version` . Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Audits Neue SEO {: #seo }
+## Neue SEO Audits {: #seo }
 
 Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seite in Suchmaschinenergebnissen zu verbessern.
 
@@ -59,9 +59,9 @@ Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lightho
   </figcaption>
 </figure>
 
-## neue, manuelle Zugänglichkeit Audits {: #a11y }
+## Neue, manuelle Zugänglichkeitsüberprüfungen {: #a11y }
 
-Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. "Manuell" bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
+Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. &quot;Manuell&quot; bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y.png"
@@ -77,9 +77,9 @@ Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Si
   </figcaption>
 </figure>
 
-## Updates für die WebP Prüfung {: #webp }
+## Updates für das WebP-Audit {: #webp }
 
-Dank einiger [community feedback][feedback] ist das [WebP audit][webp] jetzt stärker auf andere Hochleistungsbildformate der nächsten Generation wie JPEG 2000 und JPEG XR ausgerichtet.
+Dank einiger [community feedback][feedback] ist die [WebP audit][webp] jetzt stärker auf andere Hochleistungsbildformate der nächsten Generation wie JPEG 2000 und JPEG XR abgestimmt.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp

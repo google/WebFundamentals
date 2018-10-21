@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Использование функций DevTools без открытия DevTools {: .page-title } .page {: .page-title }
+# Использование функций DevTools без открытия DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,12 +20,12 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 Короткий ответ: вы, вероятно, не можете.
 
-Тем не менее, вы можете * взломать сценарий [Puppeteer][puppeteer]{:.external} который запускает Chromium, открывает удаленный отладочный клиент, затем включает функцию DevTools, которая вам нравится (через [Chrome DevTools Protocol][CDP]{:.external} ), без явного открытия DevTools.
+Однако вы можете * взломать скрипт [Puppeteer][puppeteer]{:.external} который запускает Chromium, открывает удаленный отладочный клиент, а затем включает функцию DevTools, которая вам нравится (через [Chrome DevTools Protocol][CDP]{:.external} ), без явного открытия DevTools.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-Например, приведенный ниже сценарий позволяет мне наложить [FPS Meter][FPS] поверх правого окна просмотра, хотя DevTools никогда не открывается, как вы можете видеть в видео ниже.
+Например, приведенный ниже сценарий позволяет мне накладывать [FPS Meter][FPS] поверх правого окна просмотра, хотя DevTools никогда не открывается, как вы можете видеть в видео ниже.
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -57,7 +57,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 Это всего лишь одна из многих функций DevTools, доступ к которой вы можете получить через протокол Chrome DevTools.
 
-Общее предложение: проверьте [Puppeteer API][API]{:.external} прежде чем {:.external} к созданию клиента протокола DevTools. У Puppeteer уже есть специальные API для многих функций DevTools, таких как [code coverage][coverage]{:.external} и [intercepting **Console** messages][console]{:.external} .
+Общее предложение: ознакомьтесь с [Puppeteer API][API]{:.external} прежде чем [Puppeteer API][API]{:.external} к созданию клиента протокола DevTools. Puppeteer уже имеет специальные API для многих функций DevTools, таких как [code coverage][coverage]{:.external} и [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
@@ -65,7 +65,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 Если вам нужна помощь в доступе к функции DevTools через Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 
-Если вы хотите показать сценарий Puppeteer, который использует протокол DevTools, напишите нам в [@ChromeDevTools][twitter]{:.external} .
+Если вы хотите показать сценарий Puppeteer, который использует протокол DevTools, [@ChromeDevTools][twitter]{:.external} нам на [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

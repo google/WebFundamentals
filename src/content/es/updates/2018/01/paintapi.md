@@ -15,10 +15,10 @@ description: Houdini’s CSS Paint API allows you to programmatically draw CSS i
 
 {% include "web/_shared/contributors/surma.html" %}
 
-## nuevas posibilidades en Chrome 65 CSS Paint API (también conocido como &quot;CSS Custom Paint&quot; o &quot;Houdini&#39;s paint worklet&quot;) están a punto de habilitarse de forma predeterminada en Chrome Stable. ¿Qué es? ¿Qué puedes hacer con eso? Y, ¿cómo funciona? Bueno, sigue leyendo, ¿quieres?
+## Nuevas posibilidades en Chrome 65 CSS Paint API (también conocido como &quot;CSS Custom Paint&quot; o &quot;Houdini&#39;s paint worklet&quot;) está a punto de habilitarse de forma predeterminada en Chrome Stable. ¿Qué es? ¿Qué puedes hacer con eso? Y, ¿cómo funciona? Bueno, sigue leyendo, ¿quieres?
 
 
-CSS Paint API le permite generar una imagen mediante programación cada vez que una propiedad CSS espera una imagen. Las propiedades como `background-image` o `border-image` se usan generalmente con `url()` para cargar un archivo de imagen o con funciones incorporadas de CSS como `linear-gradient()` . En lugar de usarlos, ahora puede usar `paint(myPainter)` para hacer referencia a un _paint worklet_.
+CSS Paint API le permite generar una imagen mediante programación cada vez que una propiedad CSS espera una imagen. Las propiedades como `background-image` o `border-image` generalmente se usan con `url()` para cargar un archivo de imagen o con funciones incorporadas de CSS como `linear-gradient()` . En lugar de usarlos, ahora puede usar `paint(myPainter)` para hacer referencia a un _paint worklet_.
 
 ### Escribiendo un worklet de pintura
 
@@ -32,11 +32,11 @@ Para definir un worklet de pintura llamado `myPainter` , necesitamos cargar un a
 
     registerPaint('myPainter', MyPainter);
 
-Dentro de la `paint()` llamada `ctx` , podemos usar `CanvasRenderingContext2D` la misma manera que lo `<canvas>` con `<canvas>` como lo conocemos en `geometry` . Si sabes cómo dibujar en `properties` , ¡puedes dibujar en un worklet de pintura! undefined nos dice el ancho y la altura del lienzo que está a nuestra disposición. undefined Lo explicaré más adelante en este artículo.
+Dentro de la `paint()` llamada de `paint()` , podemos usar `ctx` la misma forma que lo `CanvasRenderingContext2D` con `CanvasRenderingContext2D` como lo conocemos de `<canvas>` . Si sabes dibujar en `<canvas>` , ¡puedes dibujar en un worklet de pintura! `geometry` nos dice el ancho y la altura del lienzo que está a nuestra disposición. `properties` Lo explicaré más adelante en este artículo.
 
-Note: el contexto de un worklet de pintura no es 100% lo mismo que un contexto `<canvas>` . A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
+Note: el contexto de un worklet de pintura no es 100% lo mismo que el contexto `<canvas>` . A partir de ahora, faltan métodos de representación de texto y, por razones de seguridad, no puede leer los píxeles del lienzo.
 
-Como ejemplo introductorio, escribamos un worklet de pintura de tablero de ajedrez y lo usamos como imagen de fondo de un `<textarea>` . (Estoy usando un área de texto porque se puede cambiar de tamaño de manera predeterminada):
+Como ejemplo introductorio, escribamos un worklet de pintura de tablero de ajedrez y lo usemos como imagen de fondo de `<textarea>` . (Estoy usando un área de texto porque se puede cambiar de tamaño de manera predeterminada):
 
     <!-- index.html -->
     <!doctype html>
@@ -73,20 +73,20 @@ Como ejemplo introductorio, escribamos un worklet de pintura de tablero de ajedr
     // Register our class under a specific name
     registerPaint('checkerboard', CheckerboardPainter);
 
-Si ha usado `<canvas>` en el pasado, este código debería undefined familiar. Vea la [demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) vivo [demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) aquí.
+Si ha usado `<canvas>` en el pasado, este código debería `<canvas>` familiar. Vea las [demo](https://googlechromelabs.github.io/houdini-samples/paint-worklet/checkerboard/) vivo aquí.
 
-Note: Al igual que con casi todas las API nuevas, CSS Paint API solo está disponible a través de HTTPS (o `localhost` ).
+Note: Al igual que con casi todas las API nuevas, la CSS Paint API solo está disponible a través de HTTPS (o `localhost` ).
 
 <img src="/web/updates/images/2018/01/paintapi/checkerboard1.png" alt="
   Textarea with a checkerboard pattern as a background image.">
 
 La diferencia de usar una imagen de fondo común aquí es que el patrón se volverá a dibujar a pedido, siempre que el usuario cambie el tamaño del área de texto. Esto significa que la imagen de fondo es siempre tan grande como debe ser, incluida la compensación para pantallas de alta densidad.
 
-Eso es bastante bueno, pero también es bastante estático. ¿Querríamos escribir un nuevo worklet cada vez que quisiéramos el mismo patrón pero con cuadrados de diferente tamaño? ¡La respuesta es no!
+Eso es genial, pero también es bastante estático. ¿Querríamos escribir un nuevo worklet cada vez que quisiéramos el mismo patrón pero con cuadrados de diferente tamaño? ¡La respuesta es no!
 
-### Parametrizando tu worklet
+### Parametrizando su worklet
 
-Afortunadamente, el worklet de pintura puede acceder a otras propiedades de CSS, que es donde el parámetro adicional `properties` entra en juego. Al darle a la clase un atributo `inputProperties` estático, puede suscribirse a los cambios en cualquier propiedad de CSS, incluidas las propiedades personalizadas. Los valores se te darán a través del parámetro `properties` .
+Afortunadamente, el worklet de pintura puede acceder a otras propiedades CSS, que es donde el parámetro adicional `properties` entra en juego. Al darle a la clase un atributo `inputProperties` estático, puede suscribirse a los cambios en cualquier propiedad de CSS, incluidas las propiedades personalizadas. Los valores se te darán a través del parámetro `properties` .
 
     <!-- index.html -->
     <!doctype html>
@@ -130,7 +130,7 @@ Afortunadamente, el worklet de pintura puede acceder a otras propiedades de CSS,
 
     registerPaint('checkerboard', CheckerboardPainter);
 
-Ahora podemos usar el mismo código para todos los diferentes tipos de tableros de ajedrez. Pero aún mejor, ahora podemos ir a DevTools y [fiddle with the values](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) jugar [fiddle with the values](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) hasta que encontremos el aspecto correcto.
+Ahora podemos usar el mismo código para todos los diferentes tipos de tableros de ajedrez. Pero aún mejor, ahora podemos ir a DevTools y [fiddle with the values](https://googlechromelabs.github.io/houdini-samples/paint-worklet/parameter-checkerboard/) hasta que encontremos el aspecto correcto.
 
 <div style="display: flex; justify-content: center">
   <video loop muted controls>
@@ -145,9 +145,9 @@ Ahora podemos usar el mismo código para todos los diferentes tipos de tableros 
 
 Note: También sería bueno parametrizar los colores, ¿no es así? La especificación permite que la función `paint()` tome una lista de argumentos. Esta función aún no está implementada en Chrome, ya que se basa en gran medida en la API de propiedades y valores de Houdini, que todavía necesita algo de trabajo antes de poder enviarse.
 
-## Navegadores que no son compatibles con Paint Worklet Al momento de escribir, solo Chrome ha implementado Paint Worklet. Si bien hay señales positivas de todos los demás proveedores de navegadores, no hay mucho progreso. Para mantenerse actualizado, verifique [Is Houdini Ready Yet?](https://ishoudinireadyyet.com) regularidad. Mientras tanto, asegúrese de usar la mejora progresiva para mantener su código en funcionamiento incluso si no hay soporte para paintlet. Para asegurarse de que las cosas funcionen como se espera, debe ajustar su código en dos lugares: el CSS y el JS.
+## Navegadores que no son compatibles con Paint Worklet Al momento de escribir, solo Chrome ha implementado Paint Worklet. Si bien hay señales positivas de todos los demás proveedores de navegadores, no hay mucho progreso. Para mantenerse al día, verifique [Is Houdini Ready Yet?](https://ishoudinireadyyet.com) regularmente. Mientras tanto, asegúrese de usar la mejora progresiva para mantener su código en funcionamiento incluso si no hay soporte para paintlet. Para asegurarse de que las cosas funcionen como se espera, debe ajustar su código en dos lugares: el CSS y el JS.
 
-La detección del soporte para el worklet de pintura en JS se puede hacer comprobando el objeto `CSS` :
+La detección del soporte para el worklet de pintura en JS se puede hacer al verificar el objeto `CSS` :
 
     if ('paintWorklet' in CSS) {
       CSS.paintWorklet.addModule('mystuff.js');
@@ -170,24 +170,24 @@ En los navegadores _con_ soporte para paint worklet, la segunda declaración de 
 
 ### CSS Paint Polyfill
 
-Para muchos usos, también es posible utilizar el [CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) , que agrega la compatibilidad con los talleres de pintura personalizada de CSS y Worklets de pintura a los navegadores modernos.
+Para muchos usos, también es posible utilizar el [CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) , que agrega la [CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) los [CSS Paint Polyfill](https://github.com/GoogleChromeLabs/css-paint-polyfill) personalizados de pintura de CSS y los navegadores de pintura a los navegadores modernos.
 
-## Casos de uso Hay muchos casos de uso para los worklets de pintura, algunos de ellos más obvios que otros. Uno de los más obvios es el uso de paint worklet para reducir el tamaño de su DOM. A menudo, los elementos se agregan únicamente para crear adornos utilizando CSS. Por ejemplo, en [Material Design Lite](https://getmdl.io) el botón con el efecto de onda contiene 2 elementos `<span>` adicionales para implementar la onda en sí. Si tiene muchos botones, esto puede agregar un número considerable de elementos DOM y puede llevar a un rendimiento degradado en el móvil. Si [implement the ripple effect using paint worklet](https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/) lugar, obtendrá 0 elementos adicionales y un solo worklet de pintura. Además, tienes algo que es mucho más fácil de personalizar y parametrizar.
+## Casos de uso Hay muchos casos de uso para los worklets de pintura, algunos de ellos más obvios que otros. Uno de los más obvios es el uso de paint worklet para reducir el tamaño de su DOM. A menudo, los elementos se agregan únicamente para crear adornos utilizando CSS. Por ejemplo, en [Material Design Lite](https://getmdl.io) el botón con el efecto de onda contiene 2 elementos adicionales de `<span>` para implementar la onda en sí. Si tiene muchos botones, esto puede agregar un número considerable de elementos DOM y puede llevar a un rendimiento degradado en el móvil. Si, [implement the ripple effect using paint worklet](https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/) contrario, [implement the ripple effect using paint worklet](https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/) , [implement the ripple effect using paint worklet](https://googlechromelabs.github.io/houdini-samples/paint-worklet/ripple/) 0 elementos adicionales y solo un worklet de pintura. Además, tienes algo que es mucho más fácil de personalizar y parametrizar.
 
-Otra ventaja del uso de paint worklet es que, en la mayoría de los escenarios, una solución que usa paint worklet es pequeña en términos de bytes. Por supuesto, hay un compromiso: su código de pintura se ejecutará cada vez que cambie el tamaño del lienzo o cualquiera de los parámetros. Por lo tanto, si su código es complejo y lleva mucho tiempo, podría presentar un jank. Chrome está trabajando para mover los worklets de pintura del hilo principal, de modo que incluso los worklets de pintura de larga duración no afecten la capacidad de respuesta del hilo principal.
+Otra ventaja del uso de paint worklet es que, en la mayoría de los escenarios, una solución que usa paint worklet es pequeña en términos de bytes. Por supuesto, hay un compromiso: su código de pintura se ejecutará siempre que cambie el tamaño del lienzo o cualquiera de los parámetros. Por lo tanto, si su código es complejo y lleva mucho tiempo, podría presentar un jank. Chrome está trabajando para mover los worklets de pintura del hilo principal, de modo que incluso los worklets de pintura de larga duración no afecten la capacidad de respuesta del hilo principal.
 
-Para mí, la perspectiva más emocionante es que Paint Worklet permite realizar un relleno múltiple eficiente de las funciones CSS que un navegador aún no tiene. Un ejemplo sería polyfill [conic gradients](https://lab.iamvdo.me/houdini/conic-gradient) hasta que lleguen a Chrome de forma nativa. Otro ejemplo: en una reunión de CSS se decidió que ahora puede tener varios colores de borde. Mientras esta reunión continuaba, mi colega Ian Kilpatrick [wrote a polyfill](https://twitter.com/malyw/status/934737334494429184) para este nuevo comportamiento de CSS usando el worklet de pintura.
+Para mí, la perspectiva más emocionante es que Paint Worklet permite realizar un relleno múltiple eficiente de las funciones CSS que un navegador aún no tiene. Un ejemplo sería polyfill [conic gradients](https://lab.iamvdo.me/houdini/conic-gradient) hasta que [conic gradients](https://lab.iamvdo.me/houdini/conic-gradient) a Chrome de forma nativa. Otro ejemplo: en una reunión de CSS se decidió que ahora puede tener varios colores de borde. Mientras esta reunión continuaba, mi colega Ian Kilpatrick [wrote a polyfill](https://twitter.com/malyw/status/934737334494429184) por este nuevo comportamiento de CSS utilizando paint worklet.
 
-## Pensando fuera del &quot;cuadro&quot; La mayoría de las personas comienzan a pensar en imágenes de fondo y en imágenes de bordes cuando aprenden sobre los cuadros de pintura. Un caso de uso menos intuitivo para worklet de pintura es `mask-image` para hacer que los elementos DOM tengan formas arbitrarias. Por ejemplo, un [diamond](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/) :
+## Pensar fuera del &quot;cuadro&quot; La mayoría de las personas comienzan a pensar en imágenes de fondo e imágenes de bordes cuando aprenden sobre el worklet de pintura. Un caso de uso menos intuitivo para el worklet de pintura es `mask-image` para hacer que los elementos DOM tengan formas arbitrarias. Por ejemplo un [diamond](https://googlechromelabs.github.io/houdini-samples/paint-worklet/diamond-shape/) :
 
 <img src="/web/updates/images/2018/01/paintapi/houdinidiamond.png" alt="
   A DOM element in the shape of a diamond.">
 
 `mask-image` toma una imagen que es del tamaño del elemento. Áreas donde la imagen de la máscara es transparente, el elemento es transparente. Áreas donde la imagen de la máscara es opaca, el elemento opaco.
 
-## Ahora en Chrome
+## Ahora en cromo
 
-El worklet de pintura ha estado en Chrome Canary por un tiempo. Con Chrome 65, está habilitado por defecto. ¡Anímate y prueba las nuevas posibilidades que abre Worklet Paint y muéstranos lo que has construido! Para más inspiración, eche un vistazo a [Vincent De Oliveira&#39;s collection](https://lab.iamvdo.me/houdini/) .
+El worklet de pintura ha estado en Chrome Canary por un tiempo. Con Chrome 65, está habilitado por defecto. ¡Anímate y prueba las nuevas posibilidades que abre Worklet Paint y muéstranos lo que has construido! Para más inspiración, echa un vistazo a [Vincent De Oliveira’s collection](https://lab.iamvdo.me/houdini/) .
 
 Note: puntos de interrupción actualmente no son compatibles con la API de pintura CSS, pero se habilitarán en una versión posterior de Chrome.
 

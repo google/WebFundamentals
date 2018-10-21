@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Mises à jour du phare 2.7 {: .page-title }
+# Phare 2.7 Mises à jour {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -29,19 +29,19 @@ Phare 2.7 est sorti! Les points forts incluent:
 * [New, manual accessibility audits](#a11y) .
 * [Updates to the WebP audit](#webp) .
 
-Reportez-vous aux [2.7 release notes][RN] pour obtenir la liste complète des nouvelles fonctionnalités, modifications et corrections de bugs.
+Voir [2.7 release notes][RN] pour la liste complète des nouvelles fonctionnalités, modifications et corrections de bugs.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## Comment mettre à jour à 2.7 {: #update }
+## Mise à jour vers 2.7 {: #update }
 
-* NPM. Exécutez l&#39; `npm update lighthouse` ou `npm update lighthouse -g` si vous avez installé Lighthouse globalement.
+* NPM. Exécutez `npm update lighthouse` ou l&#39;indicateur `npm update lighthouse -g` si vous avez installé Lighthouse globalement.
 * Extension Chrome. L&#39;extension doit être mise à jour automatiquement, mais vous pouvez la mettre à jour manuellement via `chrome://extensions` .
-* DevTools. Lighthouse 2.7 est livré dans Chrome 65. Vous pouvez vérifier quelle version de Chrome vous exécutez via `chrome://version` . Chrome met à jour une nouvelle version toutes les 6 semaines environ. Vous pouvez exécuter le dernier code Chrome en téléchargeant [Chrome Canary][Canary] .
+* DevTools. Lighthouse 2.7 est livré dans Chrome 65. Vous pouvez vérifier quelle version de Chrome vous utilisez via `chrome://version` . Chrome met à jour une nouvelle version toutes les 6 semaines environ. Vous pouvez exécuter le dernier code Chrome en téléchargeant [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Nouveaux audits SEO {: #seo }
+## Nouveaux audits de référencement {: #seo }
 
 La nouvelle catégorie SEO propose des audits qui aident à améliorer le classement de votre page dans les résultats des moteurs de recherche.
 
@@ -59,9 +59,9 @@ Note: nombreux facteurs affectent le classement du moteur de recherche d&#39;une
   </figcaption>
 </figure>
 
-## Nouveaux audits manuels d&#39;accessibilité {: #a11y }
+## Nouveaux audits d’accessibilité manuels {: #a11y }
 
-Les nouvelles vérifications manuelles de l'accessibilité vous informent des choses que vous pouvez faire pour améliorer l'accessibilité de votre page. "Manuel" signifie ici que Lighthouse ne peut pas automatiser ces audits. Vous devez donc les tester manuellement.
+Les nouvelles vérifications manuelles de l&#39;accessibilité vous informent des choses que vous pouvez faire pour améliorer l&#39;accessibilité de votre page. &quot;Manuel&quot; signifie ici que Lighthouse ne peut pas automatiser ces audits. Vous devez donc les tester manuellement.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y.png"
@@ -79,7 +79,7 @@ Les nouvelles vérifications manuelles de l'accessibilité vous informent des ch
 
 ## Mises à jour de l&#39;audit WebP {: #webp }
 
-Grâce à certains [community feedback][feedback] , [WebP audit][webp] désormais davantage d&#39;autres formats d&#39;image hautes performances de nouvelle génération, tels que JPEG 2000 et JPEG XR.
+Grâce à certains [community feedback][feedback] , le [WebP audit][webp] désormais d’autres formats d’image hautes performances de nouvelle génération, tels que JPEG 2000 et JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp

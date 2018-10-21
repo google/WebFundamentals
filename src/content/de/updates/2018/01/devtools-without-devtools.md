@@ -16,16 +16,16 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Ich sehe häufig Fragen in der Art von "Ich mag Feature X von DevTools wirklich, aber es funktioniert nicht mehr, wenn ich DevTools schließe. Wie kann ich Feature X laufen lassen, selbst wenn DevTools geschlossen ist?"
+Ich sehe häufig Fragen in der Art von &quot;Ich mag Feature X von DevTools wirklich, aber es funktioniert nicht mehr, wenn ich DevTools schließe. Wie kann ich Feature X laufen lassen, selbst wenn DevTools geschlossen ist?&quot;
 
 Die kurze Antwort ist: Sie können wahrscheinlich nicht.
 
-Sie können jedoch * ein [Puppeteer][puppeteer]{:.external} , das Chromium startet, einen Remote-Debugging-Client öffnet und dann die DevTools-Funktion aktiviert, die Ihnen gefällt (über [Chrome DevTools Protocol][CDP]{:.external} ), ohne DevTools explizit zu öffnen.
+Sie können * jedoch * ein [Puppeteer][puppeteer]{:.external} Skript zusammenhacken, das Chromium startet, einen Remote-Debugging-Client öffnet und anschließend die DevTools-Funktion aktiviert, die Ihnen gefällt (über [Chrome DevTools Protocol][CDP]{:.external} ), ohne DevTools explizit zu öffnen.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts im Ansichtsfenster überlagern, obwohl DevTools niemals geöffnet wird, wie Sie im folgenden Video sehen können.
+Mit dem unten stehenden Skript kann ich zum Beispiel die [FPS Meter][FPS] über der rechten oberen [FPS Meter][FPS] des Ansichtsfensters überlagern, obwohl DevTools niemals geöffnet wird, wie Sie im folgenden Video sehen können.
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -57,15 +57,15 @@ Mit dem folgenden Skript kann ich zum Beispiel das [FPS Meter][FPS] oben rechts 
 
 Dies ist nur eine von vielen, vielen DevTools-Funktionen, auf die Sie möglicherweise über das Chrome DevTools-Protokoll zugreifen können.
 
-Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer API][API]{:.external} bevor Sie einen DevTools-Protokoll-Client erstellen. Puppeteer verfügt bereits über dedizierte APIs für viele DevTools-Funktionen, wie [code coverage][coverage]{:.external} und [intercepting **Console** messages][console]{:.external} .
+Ein allgemeiner Vorschlag: Überprüfen Sie die [Puppeteer API][API]{:.external} bevor Sie einen DevTools-Protokoll-Client erstellen. Puppenspieler verfügt bereits über dedizierte APIs für viele DevTools-Funktionen wie [code coverage][coverage]{:.external} und [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Wenn Sie Hilfe beim Zugriff auf eine DevTools-Funktion über Puppenspieler benötigen, [ask a question on Stack Overflow][SO]{:.external} [ask a question on Stack Overflow][SO]{:.external} .
+Wenn Sie Hilfe benötigen, um eine DevTools-Funktion über Puppeteer, [ask a question on Stack Overflow][SO]{:.external} , zu [ask a question on Stack Overflow][SO]{:.external} .
 
-Wenn Sie ein Puppeneer-Skript, das das DevTools-Protokoll verwendet, vorführen möchten, twittern Sie uns unter [@ChromeDevTools][twitter]{:.external} .
+Wenn Sie ein Puppenspieler-Skript, das das DevTools-Protokoll verwendet, zeigen möchten, twittern Sie uns unter [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

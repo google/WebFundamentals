@@ -22,28 +22,36 @@ async function translateLines(text, to) {
   if(text === ' ') return ' ';
 
   const replaceText = '<span class="notranslate">$&<\/span>';
-  const backtickWords = [];
+  const wordsToReplace = [];
 
-  // Find special words and don't translate
-  text = text.replace(/\`([^\`]+)\`/g, (match, p1, p2, offset, str) => {
-    backtickWords.push(match);
+  let replacer = (match) => {
+    wordsToReplace.push(match);
     // Gogole translate doesn't like HTML in the span so we have to do something special.
-    return `<span class="notranslate">BACKTICKWORDS${backtickWords.length - 1}</span>`;
-  });
+    return `<span class="notranslate">WORDS${wordsToReplace.length - 1}</span>`;
+  };
 
   // # headings should not be considered in the translations
-  text = text.replace(/^(#+)/g, replaceText);
+  text = text.replace(/^(#+)/g, replacer);
+
+  // Find markdown [](){: } links and replace URL.
+  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)\{:([^\}]+)\}/g, replacer);
 
   // Find markdown []() links and replace URL.
-  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, replaceText);
+  text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, replacer);
 
   // Find markdown []: https:..... links and replace URL.
-  text = text.replace(/^\[([^\]]+)\]:.*/, replaceText);
+  text = text.replace(/^\[([^\]]+)\]:.*/, replacer);
 
-  // Find markdown [][] links and replace URL.
-  text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, replaceText);
+  // Find markdown [][]{: } links
+  text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]\{:([^\}]+)\}/g, replacer);
 
-  // Find markdown [][] links and replace URL.
+  // Find markdown [][] links
+  text = text.replace(/\[([^\]]+)\]\[([^\]]+)\]/g, replacer);
+
+  // Find special words and don't translate
+  text = text.replace(/\`([^\`]+)\`/g, replacer);
+
+  // Find special markdown commands.
   text = text.replace(/^(Note:|Caution:|Warning:|Success:|Key Point:|Key Term:)/g, replaceText);
 
   // Find things that look like a src="" and don't replace
@@ -58,12 +66,15 @@ async function translateLines(text, to) {
   // Find things that look like a href="" and don't replace
   text = text.replace(/href=\"([^\"]+)\"/g, replaceText);
 
-  // Find {: } [][] links and replace URL.
-  text = text.replace(/\{:([^\}]+)\}/g, replaceText);
+  // Find {: } and replace that are remaining.
+  text = text.replace(/\{:([^\}]+)\}/g, replacer);
+
+  // NOTE: The ordering of above is important, we need to work out what to do
+  // when we have nested replacers [Some `text` goes here]  everthing in the [] is left un-translated
 
   const output = [];
 
-  let results = await translate.translate(text, {to});
+  let results = await translate.translate(text, {to, from: 'en', format: 'html'});
 
   let translations = results[0];
   translations = Array.isArray(translations)
@@ -72,7 +83,6 @@ async function translateLines(text, to) {
 
   // Note these fixes are not sustainable
   translations.forEach((translation, i) => {
-
     // Find markdown links that are broken [] () => []()
     translation = translation.replace(/\[([^\]]+)\] \(([^\)]+)\)/g,'[$1]($2)');
     // Find markdown links that are broken [] [] => [][]
@@ -92,8 +102,8 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\]\u{FF08}([^\u{FF09}]+)\u{FF09}/gu,'[$1]($2)');
     translation = translation.replace(/＃/gu,'#');
 
-    translation = translation.replace(/<span class="notranslate">BACKTICKWORDS(\d+)<\/span>/gm, (match, p1) => {
-      return backtickWords.shift();
+    translation = translation.replace(/<span class="notranslate">WORDS(\d+)<\/span>/gm, (match, p1) => {
+      return wordsToReplace[parseInt(p1)];
     });
 
     translation = translation.replace(/<span class="notranslate">(.+?)<\/span>/gm, '$1');
@@ -106,9 +116,9 @@ async function translateLines(text, to) {
     translation = translation.replace(/\[([^\]]+)\]\(([^\)]+)\) \{([^\}]+)\}/g,'[$1]($2){$3}');
    
     // Bodge for Japan
-    translation = translation.replace(/\S(\{: \.page-title \})/gm,' $1');
+    //translation = translation.replace(/\S(\{: \.page-title \})/gm,' $1');
     translation = translation.replace(/^(#+)([^#\s])/gm,'$1 $2');
-    translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
+    //translation = translation.replace(/^(#.+?)([^\s])({:[^}]+})([\r\n]|$)/gm,'$1$2 $3');
     translation = translation.replace(/：/gu,':');
     // Remove double spaces to clean up.
     translation = translation.replace(/  /g, ' ');

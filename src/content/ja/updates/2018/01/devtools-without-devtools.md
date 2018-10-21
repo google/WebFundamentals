@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# デベロッパーツールを開かずにデベロッパーツール機能の使 {: .page-title }
+# デベロッパーツールを開くことなく、デベロッパーツールの機能を使用して{: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
@@ -20,12 +20,12 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 短い答えは、おそらくできないことです。
 
-しかし、Chromiumを起動し、リモートのデバッグクライアントを開き、 [Chrome DevTools Protocol][CDP]使ってあなたが好きなDevTools機能をオンにする[Puppeteer][puppeteer]{:.external} [Puppeteer][puppeteer]{:.external}スクリプトを一緒にハックすることができます[Chrome DevTools Protocol][CDP]{:.external} ）、明示的にDevToolsを開くことはありません。
+ただし、Chromiumを起動し、リモートデバッグクライアントを開き、 [Chrome DevTools Protocol][CDP]{:.external}明示的に開くことなく（ [Chrome DevTools Protocol][CDP]{:.external}経由で）好きなDevTools機能をオンにする[Puppeteer][puppeteer]{:.external}スクリプトを一緒にハックすることができます。
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-たとえば、以下のスクリプトでは、DevToolsが開かない場合でも、 [FPS Meter][FPS]をビューポートの右上に重ねることができます。
+たとえば、以下のスクリプトでは、 [FPS Meter][FPS]が開かない場合でも、ビューポートの右上に[FPS Meter][FPS]をオーバーレイすることができます。
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -57,15 +57,15 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 これは、DevToolsの多くの機能のうちの1つで、Chrome DevToolsプロトコル経由でアクセスすることができます。
 
-一般的な提案:DevToolsプロトコルクライアントを作成する前に、 [Puppeteer API][API]{:.external}チェックしてください。以下のような多くのデベロッパーツール機能の人形既に捧げているAPIを、 [code coverage][coverage]{:.external}と[intercepting **Console** messages][console]{:.external}
+一般的な提案:DevToolsプロトコルクライアントの作成に頼る前に、 [Puppeteer API][API]{:.external}チェックしてください。 Puppeteerはすでに、 [code coverage][coverage]{:.external}や[intercepting **Console** messages][console]{:.external}などのDevToolsの多くの機能に専用のAPIを備えています。
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Puppeteerを介してDevTools機能にアクセスするための助けが必要な場合は、 [ask a question on Stack Overflow][SO]{:.external} 。
+Puppeteer、 [ask a question on Stack Overflow][SO]{:.external}介してDevTools機能にアクセスするための助けが必要な場合。
 
-DevToolsプロトコルを使用するPuppeteerスクリプトを見せたい場合は、 [@ChromeDevTools][twitter]{:.external}でツイートしてください。
+あなたはデベロッパーツールプロトコルを使用する人形遣いスクリプトを誇示したい場合は、でお問い合わせをつぶやき[@ChromeDevTools][twitter]{:.external} 。
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Updates {: .page-title }
+# Lighthouse 2.7 Pemutakhiran {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -35,7 +35,7 @@ Lihat [2.7 release notes][RN] untuk daftar lengkap fitur baru, perubahan, dan pe
 
 ## Cara memperbarui ke 2.7 {: #update }
 
-* NPM. Jalankan `npm update lighthouse` , atau `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
+* NPM. Jalankan `npm update lighthouse` , atau bendera `npm update lighthouse -g` jika Anda menginstal Lighthouse secara global.
 * Ekstensi Chrome. Ekstensi harus diperbarui secara otomatis, tetapi Anda dapat memperbaruinya secara manual melalui `chrome://extensions` .
 * DevTools. Lighthouse 2.7 adalah pengiriman di Chrome 65. Anda dapat memeriksa versi Chrome apa yang Anda jalankan melalui `chrome://version` . Pembaruan Chrome ke versi baru setiap 6 minggu. Anda dapat menjalankan kode Chrome terbaru dengan mengunduh [Chrome Canary][Canary] .
 
@@ -61,7 +61,7 @@ Note: Banyak faktor memengaruhi peringkat mesin telusur laman. Mercusuar tidak m
 
 ## Baru, audit aksesibilitas manual {: #a11y }
 
-Audit aksesibilitas baru dan manual menginformasikan hal-hal yang dapat Anda lakukan untuk meningkatkan aksesibilitas halaman Anda. "Manual" di sini berarti bahwa Lighthouse tidak dapat mengotomatisasi audit ini, jadi Anda harus menguji sendiri secara manual.
+Audit aksesibilitas baru dan manual menginformasikan hal-hal yang dapat Anda lakukan untuk meningkatkan aksesibilitas halaman Anda. &quot;Manual&quot; di sini berarti bahwa Lighthouse tidak dapat mengotomatisasi audit ini, jadi Anda harus menguji sendiri secara manual.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y.png"
@@ -77,9 +77,9 @@ Audit aksesibilitas baru dan manual menginformasikan hal-hal yang dapat Anda lak
   </figcaption>
 </figure>
 
-## Pembaruan pada audit WebP {: #webp }
+## Pembaruan ke audit WebP {: #webp }
 
-Terima kasih kepada beberapa [community feedback][feedback] , [WebP audit][webp] sekarang lebih inklusif untuk format gambar berkinerja tinggi generasi berikutnya, seperti JPEG 2000 dan JPEG XR.
+Berkat beberapa [community feedback][feedback] , [WebP audit][webp] sekarang lebih inklusif untuk format gambar berkinerja tinggi generasi berikutnya, seperti JPEG 2000 dan JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp

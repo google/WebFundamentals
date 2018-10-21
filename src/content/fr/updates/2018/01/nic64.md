@@ -10,7 +10,7 @@ description: What's new in Chrome 64 for developers?
 {# wf_featured_snippet: Chrome 64 adds support for ResizeObservers, which will notify you when an element’s content rectangle has changed its size. Modules can now access to host specific metadata with import.metadata The pop-up blocker gets strong and plenty more. Let’s dive in and see what’s new for developers in Chrome 64! #}
 {# wf_blink_components: N/A #}
 
-# Nouveau dans Chrome 64 {: .page-title }
+# Nouveauté de Chrome 64 {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -22,10 +22,10 @@ description: What's new in Chrome 64 for developers?
   </iframe>
 </div>
 
-* La prise en charge de [ `ResizeObservers` ](#resizeobserver) vous avertira lorsque le rectangle de contenu d&#39;un élément aura changé de taille.
-* Les modules peuvent désormais accéder à des métadonnées spécifiques à l’hôte avec [import.meta](#import-meta) .
-* Le [pop-up blocker](#popup-blocker) devient puissant.
-* [ `window.alert()` ](#window-alert) ne change plus le focus.
+* La prise en charge de [`ResizeObservers`](#resizeobserver) vous avertira lorsque le rectangle de contenu d&#39;un élément aura changé de taille.
+* Les modules peuvent désormais accéder à des métadonnées spécifiques avec [import.meta](#import-meta) .
+* Le [pop-up blocker](#popup-blocker) devient fort.
+* [`window.alert()`](#window-alert) ne change plus le focus.
 
 Et il y a [plenty more](#more) !
 
@@ -33,7 +33,7 @@ Je suis Pete LePage. Découvrons ce qui est nouveau pour les développeurs dans 
 
 <div class="clearfix"></div>
 
-Note: vous voulez la liste complète des modifications? Consultez la [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140) .
+Note: vous voulez la liste complète des modifications? Découvrez le [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140) .
 
 ## `ResizeObserver` {: #resizeobserver }
 
@@ -59,12 +59,12 @@ const ro = new ResizeObserver( entries => {
 ro.observe(someElement);
 ```
 
-Consultez [ `ResizeObserver` : It&#39;s like `document.onresize` for Elements](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
+Consultez [`ResizeObserver`: It's like `document.onresize` for Elements](/web/updates/2016/10/resizeobserver) pour plus de détails et des exemples concrets.
 
 
 ## Bloqueur de {: #popup-blocker } intempestives {: #popup-blocker }
 
-Je déteste tab-under. Vous les connaissez, c’est quand une page ouvre une fenêtre contextuelle vers une destination ET navigue sur la page. Habituellement, l’un d’eux est une annonce ou quelque chose que vous ne voulez pas.
+Je déteste tab-under. Vous les connaissez, c&#39;est quand une page ouvre une fenêtre contextuelle vers une destination ET navigue sur la page. Habituellement, l’un d’eux est une annonce ou quelque chose que vous ne voulez pas.
 
 À partir de Chrome 64, ces types de navigation seront bloqués et Google Chrome affichera une interface utilisateur native à l’utilisateur, lui permettant de suivre la redirection s’il le souhaite.
 
@@ -80,22 +80,22 @@ Ceci est très utile lorsque vous souhaitez résoudre des ressources relatives a
 
 Ce ne sont là que quelques-uns des changements apportés à Chrome 64 par les développeurs. Bien entendu, il y en a beaucoup plus.
 
-* Chrome prend désormais en charge les [named captures](/web/updates/2017/07/upcoming-regexp-features#named_captures) et [Unicode property escapes](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) dans les expressions régulières.
-* La valeur par défaut de `preload` pour les éléments `<audio>` et `<video>` est maintenant `metadata` . Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l&#39;utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
+* Chrome prend désormais en charge [named captures](/web/updates/2017/07/upcoming-regexp-features#named_captures) et [Unicode property  escapes](/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes) dans les expressions régulières.
+* La valeur par défaut de `preload` pour les éléments `<audio>` et `<video>` est désormais `metadata` . Cela met Chrome en ligne avec les autres navigateurs et permet de réduire l&#39;utilisation de la bande passante et des ressources en ne chargeant que les métadonnées et non le support lui-même.
 * Vous pouvez maintenant utiliser `Request.prototype.cache` pour afficher le mode de cache d&#39;un `Request` et déterminer si une demande est une demande de rechargement.
-* À l&#39;aide de l&#39;API Focus Management, vous pouvez maintenant focaliser un élément sans y `preventScroll` avec l&#39;attribut undefined .
+* À l&#39;aide de l&#39;API Focus Management, vous pouvez maintenant focaliser un élément sans y `preventScroll` avec l&#39;attribut `preventScroll` .
 
 ## `window.alert()` {: #window-alert }
 
 Oh, et un de plus! Bien que ce ne soit pas vraiment une &quot;fonctionnalité de développeur&quot;, cela me rend heureux. `window.alert()` n&#39;apporte plus d&#39;onglet d&#39;arrière-plan au premier plan! Au lieu de cela, l&#39;alerte sera affichée lorsque l&#39;utilisateur reviendra à cet onglet.
 
-Plus de commutation aléatoire des onglets, car quelque chose m&#39;a renvoyé de `window.alert` . Je te regarde le vieil agenda de Google.
+Plus de tabulation aléatoire, car un `window.alert` a été `window.alert` sur moi. Je te regarde le vieil agenda de Google.
 
 
-Assurez-vous de vous [subscribe](https://goo.gl/6FP1a5) à notre [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/) et vous recevrez une notification par e-mail chaque fois que nous vous contacterons. lancez une nouvelle vidéo ou ajoutez notre [RSS feed](/web/shows/rss.xml) à votre lecteur de flux.
+N&#39;oubliez pas de [subscribe](https://goo.gl/6FP1a5) dans notre [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/) et vous recevrez une notification par courrier électronique chaque fois que nous lançons une nouvelle vidéo ou ajoutez notre [RSS feed](/web/shows/rss.xml) à votre lecteur de flux.
 
 
-Je suis Pete LePage. Dès que Chrome 65 sera disponible, je serai ici pour vous dire ce qu’il ya de nouveau dans Chrome!
+Je m&#39;appelle Pete LePage et, dès la sortie de Chrome 65, je serai ici pour vous dire ce qu&#39;il y a de neuf dans Chrome!
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
