@@ -50,3 +50,6 @@ Subscribe to Designer Vs Developer Podcast via
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}
+
