@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -145,8 +145,25 @@ to delete site data.
 
 ## Frequently asked questions
 
-<dl>
+If any of the required manifest properties are changed,. For full details
 
+<dl>
+  <dt id="manifest-changes">
+    What manifest changes will cause the WebAPK to be updated?
+  </dt>
+  <dd>
+    Any changes to the required manifest properties (see the
+    <a href="https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35">
+      <code><b>UpdateReason</b></code> enum in the <code>message WebApk</code>
+    </a>) will cause the WebAPK to be updated.
+  </dd>
+  <dt id="manifest-check">
+    When is the manifest checked for changes?
+  </dt>
+  <dl>
+    Chrome will typically only check if the device is plugged in and
+    connected to WiFi.
+  </dl>
   <dt>
     What happens if the user has already installed the native app for the site?
   </dt>
