@@ -98,7 +98,7 @@ skip_files:
 - ^node_modules/.*
 - ^scratch/.*
 - ^src/content/(.*/)?(rss|atom)\.xml$
-- ^src/content/en/updates/tags/.*
+- ^src/content/en/updates/tags/.*?\.md
 - ^src/data/.*
 - ^src/templates/.*
 - ^src/tests/.*
