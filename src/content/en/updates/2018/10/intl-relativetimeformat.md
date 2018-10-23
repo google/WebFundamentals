@@ -106,9 +106,9 @@ more English output based on the default settings:
 // default settings (just like before). In this example, the default
 // values are explicitly passed in.
 const rtf = new Intl.RelativeTimeFormat('en', {
- localeMatcher: 'best fit', // other values: 'lookup'
- style: 'long', // other values: 'short' or 'narrow'
- numeric: 'always', // other values: 'auto'
+  localeMatcher: 'best fit', // other values: 'lookup'
+  style: 'long', // other values: 'short' or 'narrow'
+  numeric: 'always', // other values: 'auto'
 });
 
 // Now, let’s try some special cases!
@@ -182,11 +182,9 @@ rtf.format(3, 'week');
 // → 'in 3 weeks'
 
 rtf.formatToParts(3, 'week');
-// → [
-//  { type: 'literal', value: 'in ' },
-//  { type: 'integer', value: '3', unit: 'week' },
-//  { type: 'literal', value: ' weeks' }
-// ]
+// → [{ type: 'literal', value: 'in ' },
+//    { type: 'integer', value: '3', unit: 'week' },
+//    { type: 'literal', value: ' weeks' }]
 ```
 
 For more information about the remaining options and their behavior, see [the API docs in the
