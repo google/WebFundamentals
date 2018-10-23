@@ -137,6 +137,21 @@ worker is installed and ready to go.
 Though, this can be an issue if the user clears their Chrome profile, or chooses
 to delete site data.
 
+## Updating the WebAPK {: #update-webapk }
+
+When the WebAPK is launched, Chrome checks the currently installed manifest
+against the live manifest. If any of the properties in the manifest required
+to add the PWA to the home screen have changed, Chrome will request an
+updated WebAPK. The request may be queued until the device is plugged in and
+has a WiFi connection.
+
+See
+[`UpdateReason`](https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35)
+enum in `message WebApk` for the reasons a WebAPK may be updated.
+
+Note: Icons may be cached, so it may be helpful to change the filenames when
+updating icons or other graphics.
+
 ## Feedback {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -148,22 +163,6 @@ to delete site data.
 If any of the required manifest properties are changed,. For full details
 
 <dl>
-  <dt id="manifest-changes">
-    What manifest changes will cause the WebAPK to be updated?
-  </dt>
-  <dd>
-    Any changes to the required manifest properties (see the
-    <a href="https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35">
-      <code><b>UpdateReason</b></code> enum in the <code>message WebApk</code>
-    </a>) will cause the WebAPK to be updated.
-  </dd>
-  <dt id="manifest-check">
-    When is the manifest checked for changes?
-  </dt>
-  <dl>
-    Chrome will typically only check if the device is plugged in and
-    connected to WiFi.
-  </dl>
   <dt>
     What happens if the user has already installed the native app for the site?
   </dt>

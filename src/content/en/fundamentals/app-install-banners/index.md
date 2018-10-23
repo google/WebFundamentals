@@ -202,16 +202,17 @@ use JavaScript to check:
 
 ## Updating your app's icon and name
 
-After the user has added your app to their device, Chrome will occasionally
-check the manifest for changes and make any updates.
+### Android
 
-Note: On Android, Chrome will typically only check if the device is plugged
-in and connected to WiFi. See
-[WebAPKs on Android](/web/fundamentals/integration/webapks#manifest-changes)
-for more information
+On Android, when the WebAPK is launched, will Chrome check the currently
+installed manifest against the live manifest. If an update is required, it will
+be [queued and updated](/web/fundamentals/integration/webapks#update-webapk)
+once the device has is plugged in and connected to WiFi.
 
-Icons may be cached, so it may be helpful to change the filenames when
-updating icons or other graphics.
+### Desktop
+
+On Desktop, the manifest is not automatically updated, but this is planned
+for a future update.
 
 
 ## Test your add to home screen experience {: #test }
