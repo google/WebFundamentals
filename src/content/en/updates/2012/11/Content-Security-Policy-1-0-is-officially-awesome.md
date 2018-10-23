@@ -4,6 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2012-11-15 #}
 {# wf_tags: news,content-security-policy,security #}
+{# wf_blink_components: N/A #}
 
 # Content Security Policy 1.0 is officially awesome. {: .page-title }
 
