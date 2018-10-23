@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: BigInts are a new numeric primitive in JavaScript that can represent integers with arbitrary precision. This article walks through some use cases and explains the new functionality in Chrome 67 by comparing BigInts to Numbers in JavaScript.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-05-01 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -294,7 +294,7 @@ The `BigUint64Array` flavor does the same using the unsigned 64-bit limit instea
 
 If you’re interested in how `BigInt`s work behind the scenes (e.g. how they are represented in
 memory, and how operations on them are performed), [read our V8 blog post with implementation
-details](https://v8project.blogspot.com/2018/05/bigint.html).
+details](https://v8.dev/blog/bigint).
 
 Have fun with `BigInt`s!
 
