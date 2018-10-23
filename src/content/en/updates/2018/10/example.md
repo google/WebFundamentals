@@ -41,8 +41,8 @@ scopes.
 | ---- | ------ |
 | 1. Create explainer | [Complete](#explainer) |
 | **2. Gather feedback & iterate on design** | [**In progress**](#feedback) |
-| 3. Origin trial | Not started |
-| 4. Launched | Not started |
+| 3. Origin trial | [Not started](#origin-trial) |
+| 4. Launched | [Not started](#usage) |
 
 ## Feedback {: #feedback }
 
@@ -55,8 +55,14 @@ We need your help!
 * **Like it, and want to show your support?**
   Like it on the [Example WICG Discourse][wicg-discourse] discussion.
 
+## Origin trial {: #origin-trial }
 
+This feature is not available as an origin trial at this time.
 
+## How do I use this? {: #usage }
+
+Dogfood: The design for this feature has not been finalized yet.
+Check the [explainer] the current thinking.
 
 ## Helpful Links
 
