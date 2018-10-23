@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 58 中添加到 DevTools 的新功能和变更。
 
-{# wf_updated_on: 2017-03-06 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2017-03-06 #}
 {# wf_tags: chrome58,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -58,7 +58,7 @@ description: Chrome 58 中添加到 DevTools 的新功能和变更。
   </figcaption>
 </figure>
 
-[heap]: https://v8project.blogspot.com/2017/02/one-small-step-for-chrome-one-giant.html
+[heap]: https://v8.dev/blog/heap-size-limit
 
 ### Canvas 被创建的断点 {: #canvas-creation-breakpoints }
 

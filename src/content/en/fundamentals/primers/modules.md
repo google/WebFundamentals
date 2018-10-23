@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: N/A #}
 
@@ -351,7 +351,7 @@ preference.
 Not only does this keep your source code nice and simple, it also reduces the need for dead-code
 elimination as performed by bundlers. If one of the modules in your source tree is unused, then it
 never gets imported, and so the browser never downloads it. The modules that _do_ get used can be
-individually [code-cached](https://v8project.blogspot.com/2018/04/improved-code-caching.html) by
+individually [code-cached](https://v8.dev/blog/improved-code-caching) by
 the browser. (The infrastructure to make this happen already landed in V8, and [work is
 underway](https://bugs.chromium.org/p/chromium/issues/detail?id=841466) to enable it in Chrome as
 well.)
