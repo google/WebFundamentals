@@ -1425,6 +1425,23 @@ yvoschaap:
   description:
     en: "Loves to code and build great things."
 
+borisschapira:
+  name:
+    given: Boris
+    family: Schapira
+  org:
+    name: Dareboost
+    unit: Customer Success Manager
+  country: France
+  homepage: 'https://borisschapira.com'
+  twitter: borisschapira
+  github: borisschapira
+  role:
+    - translator
+  email: borisschapira@gmail.com
+  description:
+    en: 'Boris is Web Performance expert, currently CSM at Dareboost.'
+
 moinshaikh:
   name:
     given: Moin
