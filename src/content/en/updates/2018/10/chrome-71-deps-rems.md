@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 71 to help you plan.
 
-{# wf_updated_on: 2018-10-19 #}
-{# wf_published_on: 2018-10-25 #}
+{# wf_updated_on: 2018-10-29 #}
+{# wf_published_on: 2018-10-29 #}
 {# wf_tags: deprecations,removals,chrome71 #}
 {# wf_blink_components: Blink>Storage>CacheStorage,Blink>ServiceWorker,Internals>SpeechSynthesis,Blink>Animation,Blink>MediaStream #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
