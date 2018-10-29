@@ -29,7 +29,7 @@ allow developers to experiment with new web features before they are fully
 standardized. This allows us to gather real-world feedback from intrepid
 developers, which is critical to validate and improve new features.
 
-The upcoming Chrome 70 release supports threads for WebAssembly and we encourage
+The Chrome 70 release supports threads for WebAssembly and we encourage
 interested developers to start using them and give us feedback.
 
 ## Threads? What about Workers?
@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
     // Create the background thread
     if (pthread_create(&bg_thread, NULL, bg_func, &bg_val)) {
         perror("Thread create failed");
-         return 1;
+        return 1;
     }
     // Calculate on the foreground thread
     fg_val = fibonacci(fg_val);
