@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-10-17 #}
+{# wf_updated_on: 2018-10-22 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -200,11 +200,11 @@ workbox.routing.setDefaultHandler(
 
 // This "catch" handler is triggered when any of the other routes fail to
 // generate a response.
-workbox.routing.setCatchHandler(({event, request, url}) => {
+workbox.routing.setCatchHandler(({event}) => {
   // Use event, request, and url to figure out how to respond.
   // One approach would be to use request.destination, see
   // https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c
-  switch (request.destination) {
+  switch (event.request.destination) {
     case 'document':
       return caches.match(FALLBACK_HTML_URL);
     break;
