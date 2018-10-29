@@ -23,7 +23,7 @@ Security is a big topic, here are a few things to get you started.
 
 <img src="/web/images/content-https-2x.jpg" class="attempt-right">
 
-One of the most critical security features, one that is required for many modern APIs and [progressive web apps](/web/progressive-web-apps/) is [Secure HTTP also called HTTPS](encrypt-in-transit/why-https). A common misconception about HTTPS is that the only websites that need it are those that handle sensitive communications. If privacy and security weren't reason enough to protect your users, many new browser features such as service workers the Payment Request API require HTTPS.
+One of the most critical security features, one that is required for many modern APIs and [progressive web apps](/web/progressive-web-apps/) is [HTTPS](encrypt-in-transit/why-https) (secure HTTP). A common misconception about HTTPS is that the only websites that need it are those that handle sensitive communications. If privacy and security weren't reason enough to protect your users, many new browser features such as service workers the Payment Request API require HTTPS.
 
 [Enabling HTTPS on Your Servers](/web/fundamentals/security/encrypt-in-transit/enable-https)
 
