@@ -59,11 +59,11 @@ scrivanie.
 ![Device usage by time](/web/progressive-web-apps/images/device-usage.png){:
 .attempt-right }
 
-Having that ‘installed’, native feel, is important to users, it gives them the
-confidence that the app will be fast, integrated, reliable and engaging.
-Desktop Progressive Web Apps can be launched from the same place as other
-desktop apps, but that they run in an app window - so they look and feel
-like other apps on the desktop.
+Avere quella sensazione "installata", nativa, è importante per gli utenti, dà
+loro la certezza che l'app sarà veloce, integrata, affidabile e coinvolgente. Le
+app desktop Progressive Web possono essere lanciate nello stesso posto delle
+altre app desktop, ma possono essere eseguite in una finestra dell'app, in modo
+che appaiano come altre app sul desktop.
 
 <div class="clearfix"></div>
 
@@ -144,9 +144,9 @@ essere ottimizzato per un display più piccolo.
 ![Full screen app window](/web/progressive-web-apps/images/dpwa-resp-4.png){:
 .attempt-right }
 
-For some apps, a mini-mode might be really helpful. This weather app shows
-only the current conditions. A music player might only show me the current
-song and the buttons to change to the next song.
+Per alcune app, una modalità mini potrebbe essere davvero utile. Questa app
+meteo mostra solo le condizioni attuali. Un lettore musicale potrebbe mostrarmi
+solo la canzone corrente e i pulsanti per passare alla canzone successiva.
 
 Puoi portare questa idea di responsive design al livello successivo per
 supportare convertibili come Pixelbook o Surface. Quando si passa alla modalità
@@ -179,24 +179,24 @@ aggiungere la tua app alla schermata iniziale. Ad esempio, la Progressive Web
 App Desktop di Spotify aggiunge un pulsante "Installa app", appena sopra il nome
 del profilo utente.
 
-See [Add to Home Screen](/web/fundamentals/app-install-banners/) for more
-information about how to handle the event, update the UI and show the add to
-home screen prompt.
+Vedi [Aggiungi alla schermata iniziale](/web/fundamentals/app-install-banners/)
+per ulteriori informazioni su come gestire l'evento, aggiornare l'interfaccia
+utente e mostrare la schermata di aggiunta alla schermata iniziale.
 
 <div class="clearfix"></div>
 
 ## Quali sono i prossimi passi?
 
-In addition to supporting additional platforms, we're also looking at:
+Oltre a supportare piattaforme aggiuntive, stiamo anche esaminando:
 
-- **Keyboard shortcuts** - Adding support for keyboard shortcuts, so you
-canprovide your own functionality.
-- **Badging for the launch icon** Let the user know about importantevents that
-you don’t want to display a full notification for.
-- **Link capturing** - Opening the installed PWA when the user clicks on alink
-handled by that app.
+- **Tasti di scelta rapida** - Aggiunta del supporto per le scorciatoie da
+tastiera, in modo da poter fornire le proprie funzionalità.
+- **Badge per l'icona di avvio** Consente all'utente di conoscere eventi
+importanti per i quali non si desidera visualizzare una notifica completa.
+- **Acquisizione dei collegamenti** : apertura del PWA installato quando
+l'utente fa clic su un collegamento gestito da tale app.
 
-### Learn more
+### Per saperne di più
 
 <div class="video-wrapper">
 <iframe class="devsite-embedded-youtube-video"
