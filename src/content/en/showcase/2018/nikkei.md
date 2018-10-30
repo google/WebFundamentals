@@ -16,6 +16,13 @@ book_path: /web/showcase/_book.yaml
 
 <!-- TODO Update Featured Image -->
 
+<style>
+  figcaption {
+    text-align: center;
+    font-size: small;
+  }
+</style>
+
 With a publishing history of more than 140 years, [Nikkei](https://r.nikkei.com/)
 is one of the most authoritative media businesses in Japan. Along with their
 print newspaper, they have over 450 million monthly visits to their digital
@@ -75,23 +82,32 @@ and accelerate their business on the web.
 
 ### Results
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-01.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-01.png">
-</a>
+<figure class="attempt-right screenshot">
+  <a  href="/web/showcase/2018/images/nikkei/nikkei-01.png">
+    <img src="/web/showcase/2018/images/nikkei/nikkei-01.png">
+  </a>
+  <figcaption>
+    Audit run in Apr 2018 on old site hosted at
+    <a href="http://mw.nikkei.com">mw.nikkei.com</a>
+  </figcaption>
+</figure>
 
 Nikkei achieved impressive performance gains. Their Lighthouse score soared
 from 23 to 82. Their time-to-interactive measurement improved by 14 seconds.
 Organic traffic, speed, conversion rate, and active daily users all rose as
 well.
 
+The PWA is a multi-page app (MPA) that reduces front-end complexity,
+built with Vanilla JavaScript. Five core front-end engineers worked for a
+year to achieve this performance.
+
+<div class="clearfix"></div>
+
 > The Nikkei front-end engineers have proved that great UX brings good
 > business performance. We’re fully invested in continuing our journey of
 > bringing a new level of quality to the web. <br> **Hiroyuki Higashi**,
 > Product Manager, Nikkei
 
-The PWA is a multi-page app (MPA) that reduces front-end complexity,
-built with Vanilla JavaScript. Five core front-end engineers worked for a
-year to achieve this performance.
 
 <div class="clearfix"></div>
 
