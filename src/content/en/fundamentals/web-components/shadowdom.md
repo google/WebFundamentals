@@ -39,7 +39,7 @@ familiar with the <a href="https://www.chromestatus.com/features/450724202807296
 v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills.
 The concepts are the same, but the v1 spec has important API differences. It's
 also the version that all major browsers have agreed to implement, with
-implementations already in Safari Tech Preview and Chrome Canary. Keep reading
+implementations already in Safari, Chrome and Firefox. Keep reading
 to see what's new or check out the section on <a href="#historysupport">
 History and browser support</a> for more info.
 
@@ -1155,11 +1155,9 @@ There's also a great comparison of the
 
 ### Browser support {: #support}
 
-Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)),
-Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration
-[with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/).
-Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542)
-to implement.
+Shadow DOM v1 is shipped in Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)),
+Opera 40, Safari 10, and Firefox 63. Edge 
+[has started development](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/).
 
 To feature detect shadow DOM, check for the existence of `attachShadow`:
 
