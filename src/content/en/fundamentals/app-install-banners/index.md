@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-10-18 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -202,13 +202,17 @@ use JavaScript to check:
 
 ## Updating your app's icon and name
 
-If you change any of the properties in your manifest, those changes will be
-reflected to the user after they've run your app again.
+### Android
 
-<aside class="note">
-  <b>Tip:</b> Icons may be cached, so it may be helpful to change the
-  filenames when updating icons or other graphics.
-</aside>
+On Android, when the WebAPK is launched, Chrome will check the currently
+installed manifest against the live manifest. If an update is required, it will
+be [queued and updated](/web/fundamentals/integration/webapks#update-webapk)
+once the device has is plugged in and connected to WiFi.
+
+### Desktop
+
+On Desktop, the manifest is not automatically updated, but this is planned
+for a future update.
 
 
 ## Test your add to home screen experience {: #test }
