@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
 {% include "web/_shared/machine-translation-start.html" %}
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2018-01-17 #}
 {# wf_tags: chrome65,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,7 +12,7 @@ description: Local Overrides, accessibility tools, performance and SEO audits, a
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# DevTools（Chrome 65）の新{: .page-title }
+# DevTools（Chrome 65）の新 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: New SEO audits and manual accessibility audits, and updates to the WebP audit.
 {% include "web/_shared/machine-translation-start.html" %}
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2018-01-05 #}
 {# wf_tags: lighthouse,accessibility,images #}
 {# wf_featured_image: /web/progressive-web-apps/images/pwa-lighthouse.png #}
@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# ライトハウス2.7更新{: .page-title }
+# ライトハウス2.7更新 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}

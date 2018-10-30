@@ -3,14 +3,14 @@ book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
 {% include "web/_shared/machine-translation-start.html" %}
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2018-01-24 #}
 {# wf_tags: ux #}
 {# wf_blink_components: Blink #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Announcing the release of a new country dimension in the Chrome User Experience Report. #}
 
-# Chromeユーザーエクスペリエンスレポート:新しい国の次元{: .page-title }
+# Chromeユーザーエクスペリエンスレポート:新しい国の次元 {: .page-title }
 
 {% include "web/_shared/contributors/rviscomi.html" %}
 

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Use Puppeteer to launch Chromium with DevTools features enabled.
 {% include "web/_shared/machine-translation-start.html" %}
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2018-01-22 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -12,7 +12,7 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# デベロッパーツールを開くことなく、デベロッパーツールの機能を使用して{: .page-title }
+# デベロッパーツールを開くことなく、デベロッパーツールの機能を使用して {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
