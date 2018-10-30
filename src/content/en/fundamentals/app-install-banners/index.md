@@ -204,7 +204,7 @@ use JavaScript to check:
 
 ### Android
 
-On Android, when the WebAPK is launched, will Chrome check the currently
+On Android, when the WebAPK is launched, Chrome will check the currently
 installed manifest against the live manifest. If an update is required, it will
 be [queued and updated](/web/fundamentals/integration/webapks#update-webapk)
 once the device has is plugged in and connected to WiFi.
