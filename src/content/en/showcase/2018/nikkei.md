@@ -75,7 +75,9 @@ and accelerate their business on the web.
 
 ### Results
 
-<img src="https://via.placeholder.com/550x300" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-01.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-01.png">
+</a>
 
 Nikkei achieved impressive performance gains. Their Lighthouse score soared
 from 23 to 82. Their time-to-interactive measurement improved by 14 seconds.
@@ -132,7 +134,9 @@ optimizations in the new PWA, <r.nikkei.com>.
 
 #### Preload key requests
 
-<img src="https://via.placeholder.com/550x300" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-02.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-02.png">
+</a>
 
 It is
 [important to prioritize the loading of the critical path](/web/tools/lighthouse/audits/critical-request-chains). Using HTTP/2 Server Push, they're able to prioritize critical JavaScript and
@@ -142,7 +146,9 @@ CSS bundles they know a user will need.
 
 #### Avoid multiple, costly round trips to any origin
 
-<img src="https://via.placeholder.com/550x150" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-03.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-03.png">
+</a>
 
 The website needed to load 3rd party resources for tracking, ads and many
 other use cases. They used
@@ -154,9 +160,15 @@ origins.
 
 #### Dynamically prefetch the next page
 
-<img src="https://via.placeholder.com/550x150" class="attempt-right">
-<img src="https://via.placeholder.com/550x300" class="attempt-right">
-<img src="https://via.placeholder.com/550x300" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-04.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-04.png">
+</a>
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-05.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-05.png">
+</a>
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-06.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-06.png">
+</a>
 
 When they were confident that the user will navigate to a certain page, they
 didn’t just wait for the navigation to happen. Nikkei dynamically adds
@@ -168,7 +180,9 @@ the link. This enables instant page navigation.
 
 #### Inline Critical-path CSS
 
-<img src="https://via.placeholder.com/550x300" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-07.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-07.png">
+</a>
 
 Reducing render blocking CSS is one of the best practices of speed loading. The
 website inlines all the critical CSS with 0
@@ -179,7 +193,9 @@ This optimization reduced more than 1 second of first meaningful paint.
 
 #### Optimize JavaScript bundles
 
-<img src="https://via.placeholder.com/550x450" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-08.png">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-08.png">
+</a>
 
 In their previous experience, Nikkei's JavaScript bundles were bloated,
 weighing over 300KB in total. Through a rewrite to vanilla JavaScript and
@@ -225,7 +241,9 @@ approach and improved initialization time by 100ms and reduced JS size by 30%:
 
 ### Progressively enhancing the website
 
-<img src="https://via.placeholder.com/300x600" class="attempt-right">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-09.gif">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-09.gif">
+</a>
 
 In addition to these basic optimizations, Nikkei leveraged
 [Web App Manifest](/web/fundamentals/web-app-manifest/) and
