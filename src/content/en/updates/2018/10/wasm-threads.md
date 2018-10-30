@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: WebAssembly thread support has shipped in Chrome 70 under an origin-trial.
 
 {# wf_published_on: 2018-10-29 #}
-{# wf_updated_on: 2018-10-29 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_tags: webassembly,threads #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_featured_snippet: WebAssembly threads enable an application to make use of parallel threads running while sharing the same memory address space. This enables libraries and applications that rely on pthreads to be ported to run in the browser. This feature is being run under an origin-trial to solicit feedback from the developer community. #}
@@ -223,8 +223,10 @@ libraries which require **_pthreads_** support in the WebAssembly environment.
 
 We're looking for feedback from developers trying out this feature as it'll help
 inform the standardization process as well as validate its usefulness. The best
-way to send feedback is to [report issues](https://TBD) and/or get involved with
-the [standardization](https://github.com/WebAssembly/threads) process in the
+way to send feedback is to
+[report issues](https://bugs.chromium.org/p/chromium/issues/list) and/or get
+involved with the [standardization](https://github.com/WebAssembly/threads)
+process in the
 [WebAssembly Community Group](https://www.w3.org/community/webassembly/).
 
 {% include "web/_shared/rss-widget-updates.html" %}
