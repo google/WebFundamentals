@@ -1,18 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
-description: Progressive Web App funzionano sul desktop Chrome OS, Mac, Linux e
+description: Progressive Web App che funzionano sul desktop Chrome OS, Mac, Linux e
 Windows.
 
-{# wf_updated_on: 2018-10-18 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_blink_components: N/A #}
 
-#   {b0}Progressive Web App Desktop{/b0} sono supportate nelle seguenti piattaforme:
-  {ul1}
-    {li2}Chrome OS (Chrome 67+){/li2}
-    {li3}Linux (Chrome 70+){/li3}
-    {li4}Windows (Chrome 70+){/li4}
-  {/ul1}
+# Desktop Progressive Web Apps {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
@@ -26,13 +21,16 @@ Windows.
     <li>Windows (Chrome 70+)</li>
   </ul>
 </aside>
-<aside class="dogfood">Il supporto <b>Mac</b> per gli PWA Desktop dovrebbe
-arrivare con Chrome 72. Per testare su versioni precedenti, abilitare il flag
-<code>#enable-desktop-pwas</code> .</aside>
+<aside class="dogfood">
+   Il supporto <b>Mac</b> per gli PWA Desktop arriverà
+   con Chrome 72. Per testare su versioni precedenti, abilitare il flag
+   <code>#enable-desktop-pwas</code>.
+</aside>
+
 
 <div class="clearfix"></div>
 
-![Spotify's desktop progressive web
+![Spotify desktop progressive web
 app](/web/progressive-web-apps/images/spotify-screenshot.jpg){: .attempt-right }
 
 Le app desktop progressive web possono essere "installate" sul dispositivo
@@ -56,10 +54,10 @@ della giornata rispetto all'utilizzo mobile. Ha un uso significativo durante il
 giorno in cui la maggior parte delle persone si trova al lavoro e alle proprie
 scrivanie.
 
-![Device usage by time](/web/progressive-web-apps/images/device-usage.png){:
+![Utilizzo dispositivi nel tempo](/web/progressive-web-apps/images/device-usage.png){:
 .attempt-right }
 
-Avere quella sensazione "installata", nativa, è importante per gli utenti, dà
+Avere quella sensazione ‘installata‘, nativa, è importante per gli utenti, dà
 loro la certezza che l'app sarà veloce, integrata, affidabile e coinvolgente. Le
 app desktop Progressive Web possono essere lanciate nello stesso posto delle
 altre app desktop, ma possono essere eseguite in una finestra dell'app, in modo
@@ -117,7 +115,7 @@ oppure aprire l'app nel tuo browser.
 
 ### Usa il responsive design {: #responsive-design }
 
-![Full screen app window](/web/progressive-web-apps/images/dpwa-resp-1.png){:
+![finestra app a pieno schermo](/web/progressive-web-apps/images/dpwa-resp-1.png){:
 .attempt-right }
 
 Le app sul desktop hanno accesso a uno schermo molto più grande. Non limitarti a
@@ -134,14 +132,14 @@ finestra si riduce, anziché ridurne tutto, potrebbe mostrare una previsione di 
 giorni. Mentre continua a ridursi, il contenuto potrebbe spostarsi in giro ed
 essere ottimizzato per un display più piccolo.
 
-![7 day forecast in menu](/web/progressive-web-apps/images/dpwa-resp-2.png){:
+![previsioni a 7 gioni nel menu](/web/progressive-web-apps/images/dpwa-resp-2.png){:
 .attempt-left }
-![5 day forecast in menu](/web/progressive-web-apps/images/dpwa-resp-3.png){:
+![previsioni a 5 gioni nel menu](/web/progressive-web-apps/images/dpwa-resp-3.png){:
 .attempt-right }
 
 <div class="clearfix"></div>
 
-![Full screen app window](/web/progressive-web-apps/images/dpwa-resp-4.png){:
+![Finestra app a pieno schermo](/web/progressive-web-apps/images/dpwa-resp-4.png){:
 .attempt-right }
 
 Per alcune app, una modalità mini potrebbe essere davvero utile. Questa app
@@ -199,9 +197,8 @@ l'utente fa clic su un collegamento gestito da tale app.
 ### Per saperne di più
 
 <div class="video-wrapper">
-<iframe class="devsite-embedded-youtube-video"
-data-video-id="NITk4kXMQDw?t=1678" data-autohide="1" data-showinfo="0"
-frameborder="0" allowfullscreen>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="NITk4kXMQDw?t=1678"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
