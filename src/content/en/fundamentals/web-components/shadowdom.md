@@ -438,8 +438,6 @@ Stylesheets are also scoped to the shadow tree:
 
 
     #shadow-root
-      <!-- Available in Chrome 54+ -->
-      <!-- WebKit bug: https://bugs.webkit.org/show_bug.cgi?id=160683 -->
       <link rel="stylesheet" href="styles.css">
       <div id="tabs">
         ...
