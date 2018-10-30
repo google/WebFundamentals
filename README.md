@@ -29,7 +29,7 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have a recent version of [Node](https://nodejs.org/en/) and the
+you have [Node](https://nodejs.org/en/) 10 or greater, and the
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
@@ -52,6 +52,9 @@ To view the site locally, just run:
 ```
 npm start
 ```
+
+**Note:** The first time you start the server, you may need to run
+`start-appenging.sh` and answer any prompts provided by `dev_appserver.py`.
 
 ## Update the code labs
 To update the Code Labs, you'll need the
