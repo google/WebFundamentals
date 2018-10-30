@@ -16,16 +16,16 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Normalmente veo preguntas en la línea de "Realmente me gusta la función X de DevTools, pero deja de funcionar cuando cierro DevTools. ¿Cómo mantengo la función X en funcionamiento incluso cuando DevTools está cerrado?"
+Normalmente veo preguntas en la línea de &quot;Realmente me gusta la función X de DevTools, pero deja de funcionar cuando cierro DevTools. ¿Cómo mantengo la función X en funcionamiento incluso cuando DevTools está cerrado?&quot;
 
 La respuesta corta es: probablemente no puedas.
 
-Sin embargo, usted * puede * piratear una secuencia de comandos de [Puppeteer][puppeteer]{:.external} que inicia Chromium, abre un cliente de depuración remoto y luego activa la función DevTools que le gusta (a través del [Protocolo de Chrome DevTools][CDP]{:.external}), sin nunca abrir explícitamente DevTools.
+Sin embargo, usted * puede * hackear un script [Puppeteer][puppeteer]{:.external} que [Puppeteer][puppeteer]{:.external} Chromium, abra un cliente de depuración remoto y luego active la función DevTools que le guste (a través de [Chrome DevTools Protocol][CDP]{:.external} ), sin tener que abrir DevTools explícitamente.
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter][FPS] sobre la parte superior derecha de la ventana gráfica, aunque DevTools nunca se abre, como puede ver en el video a continuación.
+Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter][FPS] en la parte superior derecha de la ventana gráfica, aunque DevTools nunca se abre, como puede ver en el video a continuación.
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -47,21 +47,25 @@ Por ejemplo, la siguiente secuencia de comandos me permite superponer [FPS Meter
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>  video { width: 100%; } </style>
+<style>
+  video { width: 100%; }
+</style>
 
-<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4">
+</video>
 
 Esta es solo una de las muchas, muchas características de DevTools a las que potencialmente puede acceder a través del protocolo de Chrome DevTools.
 
-Una sugerencia general: echa un vistazo a la [Puppeteer API][API]{:.external} antes de volver a crear un cliente de protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [cobertura de código][coverage]{:.external} y [interceptación ** de la consola ** mensajes][console]{:.external}.
+Una sugerencia general: echa un vistazo a [Puppeteer API][API]{:.external} antes de recurrir a la creación de un cliente de Protocolo DevTools. Puppeteer ya tiene API dedicadas para muchas funciones de DevTools, como [code coverage][coverage]{:.external} y [intercepting **Console** messages][console]{:.external} .
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-Si necesita ayuda para acceder a una función de DevTools a través de Puppeteer, [haga una pregunta sobre el desbordamiento de pila][SO]{:.external}.
+Si necesita ayuda para acceder a una función de DevTools a través de Puppeteer, [ask a question on Stack Overflow][SO]{:.external} .
 
-Si desea mostrar un script de Puppeteer que hace uso del Protocolo de DevTools, envíenos un tweet a [@ChromeDevTools][twitter]{:.external}.
+Si desea mostrar un script de Puppeteer que utiliza el Protocolo de DevTools, envíenos un tweet a [@ChromeDevTools][twitter]{:.external} .
 
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools,puppeteer
 [twitter]: https://twitter.com/chromedevtools

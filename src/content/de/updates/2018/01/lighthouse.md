@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Leuchtturm 2.7 aktualisiert {: .page-title }
+# Lighthouse 2.7 {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -25,29 +25,30 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Leuchtturm 2.7 ist out! Höhepunkte umfassen:
 
-* [Neue SEO-Audits](#seo).
-* [Neue, manuelle Zugänglichkeitsprüfungen](#a11y).
-* [Aktualisierungen des WebP-Audits](#webp).
+* [New SEO audits](#seo) .
+* [New, manual accessibility audits](#a11y) .
+* [Updates to the WebP audit](#webp) .
 
-Eine vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen finden Sie in den [2.7 Release Notes][RN].
+[2.7 release notes][RN] vollständige Liste der neuen Funktionen, Änderungen und Fehlerbehebungen finden Sie in WORDS0.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
-## Aktualisierung auf 2.7 {: #update }
+## Wie man auf 2.7 {: #update }
 
-* NPM. Führen Sie `npm update lighthouse` oder `npm update lighthouse -g` aus, wenn Sie Lighthouse global installiert haben.
-* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, Sie können sie jedoch manuell über `chrome://extensions` aktualisieren.
-* DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können überprüfen, welche Chrome-Version über `chrome://version` ausgeführt wird. Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
+* NPM. Führen Sie `npm update lighthouse` oder `npm update lighthouse -g` wenn Sie Lighthouse global installiert haben.
+* Chrome-Erweiterung. Die Erweiterung sollte automatisch aktualisiert werden, Sie können sie jedoch manuell über `chrome://extensions` .
+* DevTools. Lighthouse 2.7 wird in Chrome 65 ausgeliefert. Sie können überprüfen, welche Version von Chrome Sie über `chrome://version` . Chrome aktualisiert alle sechs Wochen eine neue Version. Sie können den neuesten Chrome-Code ausführen, indem Sie [Chrome Canary][Canary] herunterladen.
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
-## Neue SEO prüft {: #seo }
+## Neue SEO Audits {: #seo }
 
 Die neue SEO-Kategorie bietet Audits, die dazu beitragen, das Ranking Ihrer Seite in Suchmaschinenergebnissen zu verbessern.
 
 Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lighthouse testet nicht alle diese Faktoren. Ein perfektes Ergebnis von 100 Punkten in Lighthouse garantiert keinen Top-Platz in irgendeiner Suchmaschine!
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -56,13 +57,14 @@ Note: Viele Faktoren beeinflussen das Suchmaschinen-Ranking einer Seite. Lightho
   <figcaption>
     <b>Figure 1</b>. The new <b>SEO</b> category
   </figcaption>
-</Figur>
+</figure>
 
-## Neue, manuelle Zugänglichkeitsprüfungen {: #a11y }
+## Neue, manuelle Zugänglichkeitsüberprüfungen {: #a11y }
 
-Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. "Manuell" bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
+Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Sie tun können, um die Barrierefreiheit Ihrer Seite zu verbessern. &quot;Manuell&quot; bedeutet hier, dass Lighthouse diese Audits nicht automatisieren kann. Sie müssen sie daher manuell testen.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -73,21 +75,22 @@ Die neuen manuellen Barrierefreiheitsprüfungen informieren Sie darüber, was Si
   <figcaption>
     <b>Figure 2</b>. The new, manual <b>Accessibility</b> audits
   </figcaption>
-</Figur>
+</figure>
 
 ## Updates für das WebP-Audit {: #webp }
 
-Dank einiger [Community-Feedbacks][feedback] umfasst das [WebP-Audit][webp] jetzt andere leistungsstarke Bildformate der nächsten Generation, wie JPEG 2000 und JPEG XR.
+Dank einiger [community feedback][feedback] ist die [WebP audit][webp] jetzt stärker auf andere Hochleistungsbildformate der nächsten Generation wie JPEG 2000 und JPEG XR abgestimmt.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit
   </figcaption>
-</Figur>
+</figure>
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
