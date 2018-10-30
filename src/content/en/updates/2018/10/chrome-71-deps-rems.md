@@ -16,7 +16,7 @@ description: A round up of the deprecations and removals in Chrome 71 to help yo
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 Chrome 71 also includes changes to `cache.addAll()` and `importScripts()`. Read
-about it in [Tweaks to cache.addAll() and importScripts() coming in Chrome
+about it in [Tweaks to `cache.addAll()` and `importScripts()` coming in Chrome
 71](/web/updates/2018/10/tweaks-to-addAll-importScripts) by Jeff Posnick.
 
 ## Remove SpeechSynthesis.speak() without user activation
@@ -70,9 +70,9 @@ Edge only support the un-prefixed `TransitionEvent`.
 The `URL.createObjectURL()` method has been removed from the `MediaStream`
 interface. This method has been deprecated in 2013 and superseded by assigning
 streams to
-[HTMLMediaElement.srcObject](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject)
-. The old method was removed because it is less safe, requiring a call to
-`URL.revokeOjbectURL()`` to end the stream. Other user agents have either
+[`HTMLMediaElement.srcObject`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject).
+The old method was removed because it is less safe, requiring a call to
+`URL.revokeOjbectURL()` to end the stream. Other user agents have either
 deprecated (Firefox) or removed (Safari) this feature feature.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/tWzutytXsqc/discussion) &#124;
