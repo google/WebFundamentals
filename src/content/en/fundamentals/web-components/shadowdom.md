@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-10-29 #}
 {# wf_published_on: 2016-08-01 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -166,7 +166,7 @@ create shadow DOM for an element, call `element.attachShadow()`:
 I'm using `.innerHTML` to fill the shadow root, but you could also use other DOM
 APIs. This is the web. We have choice.
 
-The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/shadow/#h-methods)
+The spec [defines a list of elements](https://dom.spec.whatwg.org/#dom-element-attachshadow)
 that can't host a shadow tree. There are several reasons an element might be
 on the list:
 
