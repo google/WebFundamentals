@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2018-10-29 #}
+{# wf_updated_on: 2018-10-30 #}
 {# wf_published_on: 2016-07-25 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -181,8 +181,8 @@ If you've got two or more caches open, you'll see them listed below the
 ## Opaque responses {:#opaque-responses}
 
 Some responses within the Cache Storage pane may be flagged as being
-"[opaque](/web/fundamentals/glossary#o)". This refers to a response retrieved from a different
-origin, like from a [CDN](/web/fundamentals/glossary#CDN) or remote API, when
+"[opaque](/web/fundamentals/glossary#opaque-response)". This refers to a response retrieved from a
+different origin, like from a [CDN](/web/fundamentals/glossary#CDN) or remote API, when
 [CORS](https://fetch.spec.whatwg.org/#http-cors-protocol) is not enabled.
 
 In order to avoid leakage of cross-domain information, there's significant padding added to the size
