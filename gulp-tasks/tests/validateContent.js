@@ -260,7 +260,7 @@ function test(filename, contents, options) {
   }
 
   // Warn on missing "was this page helpful?" widget
-  if (!options.ignoreHelpfulWidget) {
+  if (!options.ignoreMissingHelpfulWidget) {
     const reHelpful = /^{%\s?include "web\/_shared\/helpful\.html"\s?%}/m;
     const rePath = /src\/content\/.+?\//;
     if (rePath.test(filename)) {

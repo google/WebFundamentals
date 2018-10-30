@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Knowing where to begin optimizing your application's JavaScript can be daunting. If you're taking advantage of modern tooling such as webpack, however, tree shaking might be a good place to start!
 
-{# wf_updated_on: 2018-08-01 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-06-14 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -46,7 +46,7 @@ rel="noopener">source</a>).</figcaption>
 </figure>
 
 [While improvements are continually being
-made](https://v8project.blogspot.com/2018/03/background-compilation.html) to
+made](https://v8.dev/blog/background-compilation) to
 [improve the efficiency of JavaScript
 engines](https://blog.mozilla.org/javascript/2017/12/12/javascript-startup-bytecode-cache/),
 improving JavaScript performance is, as always, a task fit for developers. After

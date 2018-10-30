@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Announcing the release of a new country dimension in the Chrome User Experience Report.
 {% include "web/_shared/machine-translation-start.html" %}
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-01-24 #}
 {# wf_tags: ux #}
 {# wf_blink_components: Blink #}

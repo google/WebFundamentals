@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/google/WebFundamentals",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "devDependencies": {
     "eslint": "^4.12.0",

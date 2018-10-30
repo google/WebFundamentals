@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Input event handling with the compositor thread 
 
 {# wf_published_on: 2018-09-21 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-10-22 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: For the last of this 4 part blog series, we look at how the compositor is enabling smooth interaction when user input comes in #}
 {# wf_blink_components: N/A #}
@@ -89,11 +89,11 @@ can attach one event handler at the topmost element and delegate tasks based on 
 might have seen or written code like the blow.
 
 ```javascript
-document.body.addEventListener('touchstart',  event => {
+document.body.addEventListener('touchstart', event => {
     if (event.target === area) {
         event.preventDefault();
     }
-} );
+});
 ```
 
 Since you only need to write one event handler for all elements, ergonomics of this event 
@@ -116,11 +116,11 @@ listener. This hints to the browser that you still want to listen to the event i
 but compositor can go ahead and composite new frame as well. 
 
 ```javascript
-document.body.addEventListener('touchstart',  event => {
+document.body.addEventListener('touchstart', event => {
     if (event.target === area) {
         event.preventDefault()
     }
- }, {passive: true} );
+ }, {passive: true});
 ```
 
 ## Check if the event is cancelable
@@ -281,7 +281,7 @@ to): [Alex Russell](https://twitter.com/slightlylate),
 [Paul Irish](https://twitter.com/paul_irish), 
 [Meggin Kearney](https://twitter.com/MegginKearney), 
 [Eric Bidelman](https://twitter.com/ebidel), 
-[Mathias Bynenes](https://twitter.com/mathias), 
+[Mathias Bynens](https://twitter.com/mathias), 
 [Addy Osmani](https://twitter.com/addyosmani), 
 [Kinuko Yasuda](https://twitter.com/kinu), 
 [Nasko Oskov](https://twitter.com/nasko), 

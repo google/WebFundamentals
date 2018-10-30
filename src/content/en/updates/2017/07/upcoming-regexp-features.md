@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An overview of the exciting new features coming to JavaScript regular expressions, including named captures, the dotAll flag, Unicode property escapes, and lookbehind assertions.
 
-{# wf_updated_on: 2018-09-27 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: javascript,regex #}
 {# wf_blink_components: Blink>JavaScript>Language #}
@@ -12,7 +12,7 @@ description: An overview of the exciting new features coming to JavaScript regul
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 
-# Upcoming Regular Expression Features {: .page-title }
+# Upcoming regular expression features {: .page-title }
 
 {% include "web/_shared/contributors/jgruber.html" %}
 {% include "web/_shared/contributors/yangguo.html" %}
@@ -37,7 +37,7 @@ follow along with the upcoming examples, enable experimental JavaScript
 features at `chrome://flags/#enable-javascript-harmony`.
 
 
-## Named Captures
+## Named captures
 
 Regular expressions can contain so-called captures (or groups), which can
 capture a portion of the matched text. So far, developers could only refer to
@@ -99,7 +99,7 @@ Full details of this new feature are available in the [specification
 proposal](https://github.com/tc39/proposal-regexp-named-groups).
 
 
-## dotAll Flag
+## dotAll flag
 
 By default, the `.` atom in regular expressions matches any character except
 for line terminators:
@@ -119,7 +119,7 @@ Full details of this new feature are available in the [specification
 proposal](https://github.com/tc39/proposal-regexp-dotall-flag).
 
 
-## Unicode Property Escapes
+## Unicode property escapes
 
 With Unicode awareness introduced in ES2015, there are suddenly many more
 characters that could be considered numbers, for example the circled digit one:
@@ -161,7 +161,7 @@ For more examples, take a look at [this informative
 article](https://mathiasbynens.be/notes/es-unicode-property-escapes).
 
 
-## Lookbehind Assertions
+## Lookbehind assertions
 
 Lookahead assertions have been part of JavaScript’s regular expression syntax
 from the start. Their counterpart, lookbehind assertions, are finally being
@@ -180,7 +180,7 @@ comes in both matching and non-matching flavors:
 ```
 
 For more details, check out our [previous blog
-post](https://v8project.blogspot.com/2016/02/regexp-lookbehind-assertions.html)
+post](https://v8.dev/blog/regexp-lookbehind-assertions)
 dedicated to lookbehind assertions, and examples in related [V8 test
 cases](https://github.com/v8/v8/blob/master/test/mjsunit/harmony/regexp-lookbehind.js).
 
