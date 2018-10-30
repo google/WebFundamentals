@@ -1111,19 +1111,6 @@ need to recursively traverse the shadow DOM of all elements used on the page.
     findAllCustomElements(document.querySelectorAll('*'));
 
 
-{% comment %}
-Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
-
-
-    const allCustomElements = Array.from(document.querySelectorAll('html /deep/ *')).filter(el => {
-      const isAttr = el.getAttribute('is');
-      return el.localName.includes('-') || isAttr && isAttr.includes('-');
-    });
-
-
-For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
-{% endcomment %}
-
 ### Creating elements from a &lt;template&gt; {: #fromtemplate}
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative
