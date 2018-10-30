@@ -335,6 +335,9 @@
 - typo: chome\s
   fix: Chrome
 
+- type: choses
+  fix: chooses
+
 - typo: defau[lt](s|)\b
   fix: default$1
 
