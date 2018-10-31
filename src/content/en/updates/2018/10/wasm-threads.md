@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: WebAssembly thread support has shipped in Chrome 70 under an origin-trial.
 
 {# wf_published_on: 2018-10-29 #}
-{# wf_updated_on: 2018-10-30 #}
+{# wf_updated_on: 2018-10-31 #}
 {# wf_tags: webassembly,threads #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_featured_snippet: WebAssembly threads enable an application to make use of parallel threads running while sharing the same memory address space. This enables libraries and applications that rely on pthreads to be ported to run in the browser. This feature is being run under an origin-trial to solicit feedback from the developer community. #}
@@ -61,7 +61,7 @@ Here's an example of a simple 'C' program that uses threads.
 #include <pthread.h>
 #include <stdio.h>
 
-// Calculate fibonacci numbers shared function
+// Calculate Fibonacci numbers shared function
 int fibonacci(int iterations) {
     int     val = 1;
     int     last = 0;
