@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2018-10-30 #}
-{# wf_updated_on: 2018-10-30 #}
+{# wf_updated_on: 2018-10-31 #}
 {# wf_blink_components: N/A #}
-{# wf_featured_image: /web/images/pwa-f-16x9.gif #}
+{# wf_featured_image: /web/showcase/2018/images/nikkei/featured.jpg #}
 {# wf_featured_snippet: With a publishing history of more than 140 years, Nikkei is one of the most authoritative media businesses in Japan. To provide a better user experience and accelerate their business on the web, Nikkei successfully launched a Progressive Web App in November 2017, and they’re seeing amazing results from the new platform. #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
@@ -83,8 +83,8 @@ and accelerate their business on the web.
 ### Results
 
 <figure class="attempt-right screenshot">
-  <a  href="/web/showcase/2018/images/nikkei/nikkei-01.png">
-    <img src="/web/showcase/2018/images/nikkei/nikkei-01.png">
+  <a  href="/web/showcase/2018/images/nikkei/nikkei-01.jpg">
+    <img src="/web/showcase/2018/images/nikkei/nikkei-01.jpg">
   </a>
   <figcaption>
     Audit run in Apr 2018 on old site hosted at
@@ -150,8 +150,8 @@ optimizations in the new PWA, <r.nikkei.com>.
 
 #### Preload key requests
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-02.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-02.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-02.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-02.jpg">
 </a>
 
 It is
@@ -162,8 +162,8 @@ CSS bundles they know a user will need.
 
 #### Avoid multiple, costly round trips to any origin
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-03.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-03.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-03.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-03.jpg">
 </a>
 
 The website needed to load 3rd party resources for tracking, ads and many
@@ -176,14 +176,14 @@ origins.
 
 #### Dynamically prefetch the next page
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-04.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-04.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-04.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-04.jpg">
 </a>
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-05.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-05.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-05.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-05.jpg">
 </a>
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-06.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-06.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-06.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-06.jpg">
 </a>
 
 When they were confident that the user will navigate to a certain page, they
@@ -196,8 +196,8 @@ the link. This enables instant page navigation.
 
 #### Inline Critical-path CSS
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-07.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-07.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-07.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-07.jpg">
 </a>
 
 Reducing render blocking CSS is one of the best practices of speed loading. The
@@ -209,8 +209,8 @@ This optimization reduced more than 1 second of first meaningful paint.
 
 #### Optimize JavaScript bundles
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-08.png">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-08.png">
+<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-08.jpg">
+  <img src="/web/showcase/2018/images/nikkei/nikkei-08.jpg">
 </a>
 
 In their previous experience, Nikkei's JavaScript bundles were bloated,
@@ -257,9 +257,14 @@ approach and improved initialization time by 100ms and reduced JS size by 30%:
 
 ### Progressively enhancing the website
 
-<a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-09.gif">
-  <img src="/web/showcase/2018/images/nikkei/nikkei-09.gif">
-</a>
+<video autoplay loop muted class="screenshot attempt-right">
+  <source
+      src="/web/showcase/2018/images/nikkei/nikkei-09.webm"
+      type="video/webm" />
+  <source
+      src="/web/showcase/2018/images/nikkei/nikkei-09.mp4"
+      type="video/mp4" />
+</video>
 
 In addition to these basic optimizations, Nikkei leveraged
 [Web App Manifest](/web/fundamentals/web-app-manifest/) and
