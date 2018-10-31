@@ -74,7 +74,7 @@ degli indirizzi funzionerà esattamente come con le app native che hanno un
 filtro intent. Chrome presuppone che l'utente <b>intende</b> visitare il sito e
 aprirà questo sito.
 
-### Using `scope`  to restrict intent filters
+### Utilizzo `scope` per limitare i filtri di intent
 
 Se non vuoi che la tua Progressive Web App gestisca tutti gli URL all'interno
 del tuo sito, puoi aggiungere la proprietà
@@ -123,7 +123,7 @@ Consulta [`scope`](/web/fundamentals/web-app-manifest/) per ulteriori
 informazioni a proposito di `scope`, su cosa accade quando non lo imposti e su
 come utilizzarlo per definire il perimetro della tua app.
 
-## Managing permissions
+## Gestione delle autorizzazioni
 
 Le autorizzazioni funzionano allo stesso modo delle altre web app e non possono
 essere richieste al momento dell'installazione, ma devono essere richieste in
@@ -136,7 +136,7 @@ notifiche per le app installate, ma le app installate tramite WebAPK non sono
 concesse al momento dell'installazione, è necessario richiederle in fase di
 runtime all'interno della tua app.
 
-## Managing storage and app state
+## Gestione dello stato di archiviazione e app
 
 Anche se la Progressive Web App viene installata tramite un APK, Chrome utilizza
 il profilo corrente per archiviare tutti i dati e non verrà separato. Ciò
@@ -144,8 +144,8 @@ consente un'esperienza condivisa tra il browser e l'app installata. I cookie
 sono condivisi ed attivi, qualsiasi spazio di archiviazione lato client è
 accessibile ed i service workersono installati e pronti all'uso.
 
-Though, this can be an issue if the user clears their Chrome profile, or chooses
-to delete site data.
+Tuttavia, questo può essere un problema se l'utente cancella il proprio profilo
+Chrome o sceglie di cancellare i dati del sito.
 
 ## Aggiornamento di WebAPK {: #update-webapk }
 
@@ -170,98 +170,71 @@ icone o di altri elementi grafici.
 
 <div class="clearfix"></div>
 
-## Frequently asked questions
+## Domande frequenti
 
 Se viene modificata una delle proprietà manifest. Per tutti i dettagli
 
 <dl>
-  <dt>
-    What happens if the user has already installed the native app for the site?
-  </dt>
+  <dt>Cosa succede se l'utente ha già installato l'app nativa per il sito?</dt>
 <dd>Ad oggi tramite aggiungi alla schermata iniziale, gli utenti saranno in
 grado di aggiungere un sito indipendente da qualsiasi app nativa. Se prevedi che
 gli utenti possano installare entrambe, ti consigliamo di differenziare l'icona
 o il nome del tuo sito dall'app nativa.</dd>
 </dl>
 
-  <dt>
-    When a user opens a site installed via improved add to Home screen, will
-    Chrome be running?
-  </dt>
-  <dd>
-    Yes, once the site is opened from the home screen the primary activity is
-    still Chrome. Cookies, permissions, and all other browser state will be
-    shared.
-  </dd>
+<dt>Quando un utente apre un sito installato tramite l'aggiunta avanzata alla
+schermata Home, Chrome sarà in esecuzione?</dt>
+<dd>Sì, una volta che il sito è stato aperto dalla schermata principale,
+l'attività principale è ancora Chrome. I cookie, le autorizzazioni e tutti gli
+altri stati del browser saranno condivisi.</dd>
 
 
-  <dt>
-    Will my installed site's storage be cleared if the user clears Chrome's
-    cache?
-  </dt>
-  <dd>Yes.</dd>
+<dt>Lo spazio di archiviazione del mio sito installato verrà cancellato se
+l'utente cancella la cache di Chrome?</dt>
+  <dd>Sì.</dd>
 
 
-  <dt>
-    Will my app be re-installed when I get a new device?
-  </dt>
-  <dd>
-    Not at this time, but we think it is an important area and we are
-    investigating ways to make it work.
-  </dd>
+  <dt>La mia app verrà reinstallata quando avrò un nuovo dispositivo?</dt>
+<dd>Non in questo momento, ma riteniamo che sia un'area importante e stiamo
+studiando i modi per farlo funzionare.</dd>
 
 
-  <dt>
-    Will I be able to register to handle custom URL schemes and protocols?
-  </dt>
+<dt>Sarò in grado di registrarmi per gestire schemi e protocolli URL
+personalizzati?</dt>
   <dd>No.</dd>
 
 
-  <dt>
-    How are permissions handled? Will I see the Chrome prompt or Android's?
-  </dt>
-  <dd>
-    Permissions will still be managed through Chrome. Users will see the Chrome
-    prompts to grant permissions and will be able to edit them in Chrome
-    settings.
-  </dd>
+<dt>Come vengono gestite le autorizzazioni? Verrà visualizzato il prompt di
+Chrome o Android?</dt>
+<dd>Le autorizzazioni saranno comunque gestite tramite Chrome. Gli utenti
+vedranno le richieste di Chrome di concedere le autorizzazioni e potranno
+modificarle nelle impostazioni di Chrome.</dd>
 
 
-  <dt>
-    What versions of Android will this work on?
-  </dt>
+  <dt>Su quali versioni di Android funzionerà?</dt>
 <dd>Le Progressive Web App possono essere installate su tutte le versioni di
 Android che eseguono Chrome per Android, in particolare Jelly Bean e versioni
 successive.</dd>
 
 
   <dt>Questo usa WebView?</dt>
-  <dd>
-    No, the site opens in the version of Chrome the user added the site from.
-  </dd>
+<dd>No, il sito si apre nella versione di Chrome da cui l'utente ha aggiunto
+il sito.</dd>
 
 
-  <dt>
-    Can we upload the APKs that are created to the Play Store?
-  </dt>
+  <dt>Possiamo caricare gli APK creati nel Play Store?</dt>
 <dd>No. Non sono fornite informazioni sulla firma delle chiavi per consentire
 all'utente di creare il proprio PWA anziché dallo store.</dd>
 
 
-  <dt>
-    Are these listed in the Play Store?
-  </dt>
+  <dt>Sono elencati nel Play Store?</dt>
   <dd>No.</dd>
 
 
-  <dt>
-    I am developer of another browser on Android, can I have this seamless
-    install process?
-  </dt>
-  <dd>
-    We are working on it. We are committed to making this available to all
-    browsers on Android and we will have more details soon.
-  </dd>
+<dt>Sono uno sviluppatore di un altro browser su Android, posso avere questo
+processo di installazione senza interruzioni?</dt>
+<dd>Ci stiamo lavorando. Ci impegniamo a renderlo disponibile a tutti i
+browser su Android e avremo presto maggiori dettagli.</dd>
 
 
 
