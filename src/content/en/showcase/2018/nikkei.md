@@ -21,6 +21,10 @@ book_path: /web/showcase/_book.yaml
     text-align: center;
     font-size: small;
   }
+  .no-bullets {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
 </style>
 
 With a publishing history of more than 140 years, [Nikkei](https://r.nikkei.com/)
@@ -33,20 +37,39 @@ results from the new platform.
 
 <div class="attempt-left">
   <p><b>Performance gains</b></p>
-  <ul>
-    <li><b>2X</b> better Speed Index</li>
-    <li><b>14</b> seconds faster time-to-interactive</li>
-    <li><b>75% faster</b> loading with prefetch</li>
+  <ul class="no-bullets">
+    <li>
+      <span class="compare-better"></span> <b>2X</b> better Speed Index
+    </li>
+    <li>
+      <span class="compare-better"></span>
+      <b>14</b> seconds faster time-to-interactive
+    </li>
+    <li>
+      <span class="compare-better"></span>
+      <b>75% faster</b> loading with prefetch
+    </li>
   </ul>
 </div>
 
 <div class="attempt-right">
   <p><b>Business impact</b></p>
-  <ul>
-    <li><b>2.3X</b> organic traffic</li>
-    <li><b>58%</b> more conversions (subscriptions)</li>
-    <li><b>49%</b> more daily active users</li>
-    <li><b>2X</b> page views per session</li>
+  <ul class="no-bullets">
+    <li>
+      <span class="compare-better"></span> <b>2.3X</b> organic traffic
+    </li>
+    <li>
+      <span class="compare-better"></span>
+      <b>58%</b> more conversions (subscriptions)
+    </li>
+    <li>
+      <span class="compare-better"></span>
+      <b>49%</b> more daily active users
+    </li>
+    <li>
+      <span class="compare-better"></span>
+      <b>2X</b> page views per session
+    </li>
   </ul>
 </div>
 
