@@ -13,6 +13,9 @@ description: Signed Exchanges allow websites to sign web content in the way that
 
 {% include "web/_shared/contributors/kinukoyasuda.html" %}
 
+**TL;DR** We are starting an origin trial for Signed HTTP Exchange starting in Chrome 71, and we _love_ to hear your feedback.
+
+
 [Signed HTTP Exchange](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html) (or "SXG") is a subset of the emerging technology called [Web Packages](https://github.com/WICG/webpackage), which enables publishers to safely make their content portable, i.e. available for redistribution by other parties, while still keeping the content’s integrity and attribution. Portable content has many benefits, from enabling faster content delivery to facilitating content sharing between users, and simpler offline experiences.
 
 So, how do Signed HTTP Exchanges work?  This technology allows a publisher to [sign a single HTTP exchange](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3) (i.e., a request/response pair), in the way that the signed exchange can be served from any caching server. When the browser loads this Signed Exchange, it can safely show the publisher’s URL in the address bar because the signature in the exchange is sufficient proof that the content originally came from the publisher’s origin.
@@ -32,9 +35,9 @@ Chrome is [experimenting with SXG](https://groups.google.com/a/chromium.org/d/ms
 
 There will be two types of participants for this experiment:
 
-+ **Content publishers:** If you want to create SXGs for your content to share them with aggregators and cache operators (who can collect and serve SXGs), you do NOT need to participate in the origin trial.  Instead you will need your origin’s certificate to sign the SXGs. If you belong to this group skip over to the [Creating your SXG](#creating-your-sxg) section below.
++ **Content publishers:** If you want to create SXGs for your content to share them with aggregators and cache operators (who can collect and serve SXGs), you do NOT need to participate in the origin trial.  Instead you will need your origin’s certificate to sign the SXGs. If you belong to this group skip over to the [Creating your SXG](#creating_your_sxg) section below.
 
-+ **Content servers:** If you want to host SXGs created by publishers on their behalf, you can participate in the origin trial to have the SXGs processed by Chrome without requiring your users turn on a flag. If you belong to this group keep on reading the [Participate in the Origin Trial](#particiate-in-the-origin-trial) section below.
++ **Content servers:** If you want to host SXGs created by publishers on their behalf, you can participate in the origin trial to have the SXGs processed by Chrome without requiring your users turn on a flag. If you belong to this group keep on reading the [Participate in the Origin Trial](#particiate_in_the_origin_trial) section below.
 
 ### Participate in the Origin Trial 
 
