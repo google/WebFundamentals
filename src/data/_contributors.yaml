@@ -1837,6 +1837,19 @@ myakura:
   description:
     en: Masataka is a Web Google Developers Expert
 
+kinukoyasuda:
+  name:
+    given: Kinuko
+    family: Yasuda
+  twitter: kinu
+  github: kinu
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Tech lead of loading projects for the web platform in Chrome"
+
 maciejzasada:
   name:
     given: Maciej
