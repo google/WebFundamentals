@@ -68,7 +68,8 @@ Code like the following should work if your server, certificate, and SXGs are co
 <!-- prefetch the sample.sxg -->
 <link rel="prefetch" href="https://your-site.com/sample.sxg">
 
-<!-- clicking the link below should make Chrome navigate to the inner response of sample.sxg (and the prefetched SXG is used) -->
+<!-- clicking the link below should make Chrome navigate to the inner
+     response of sample.sxg (and the prefetched SXG is used) -->
 <a href="https://your-site.com/sample.sxg">Sample</a>
 ```
 
