@@ -306,8 +306,8 @@ When we want to send a push message to a user with a payload, there are three in
 We've seen the `auth` and `p256dh` values being retrieved from a `PushSubscription` but for a
 quick reminder, given a subscription we'd need these values:
 
-    subscription.joJSON().keys.auth
-    subscription.joJSON().keys.p256dh
+    subscription.toJSON().keys.auth
+    subscription.toJSON().keys.p256dh
 
     subscription.getKey('auth')
     subscription.getKey('p256dh')
