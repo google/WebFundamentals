@@ -53,7 +53,7 @@ Please note that origin trials will be globally shut off if its usage exceeds 0.
 
 ### Creating your SXG
 
-In order to create SXGs for your origin (as a publisher), you need a certificate key to sign the signature, and the certificate must have a special ["CanSignHttpExchanges" extension](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#cross-origin-cert-req) to be processed as a valid SXG.  As of November 2018, [digicert](https://www.digicert.com/) is the only CA that supports this extension, and you can request the certificate that works for SXG from [this page](https://www.digicert.com/account/ietf/http-signed-exchange.php).
+In order to create SXGs for your origin (as a publisher), you need a certificate key to sign the signature, and the certificate must have a special ["CanSignHttpExchanges" extension](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#cross-origin-cert-req) to be processed as a valid SXG.  As of November 2018, [DigiCert](https://www.digicert.com/) is the only CA that supports this extension, and you can request the certificate that works for SXG from [this page](https://www.digicert.com/account/ietf/http-signed-exchange.php).
 
 Once you get a certificate for SXG you can create your own SXGs by using the [reference generator tools](https://github.com/WICG/webpackage/tree/master/go/signedexchange) published on github.
 
