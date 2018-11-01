@@ -45,7 +45,7 @@ If you want to serve SXGs on your own site, please follow these instructions:
 
 + **To serve SXGs on your site and have them processed by Chrome:** Request a token for your origin via [this form](https://bit.ly/OriginTrialSignup) and [configure your site](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin) to send the provided token as an `Origin-Trial` HTTP header. Note that you need to send the token via HTTP headers, i.e. using `<meta http-equiv>` will not work for the SXG origin trial.
 
-+ **If you'd like Chrome to advertise support for the trial via `Accept: application/signed-exchange` HTTP header:** Send an email with the subject "SXG Accept Header Sign-up: <your origin>" to webpackage-ot-application@chromium.org. Please also indicate if you want all subdomains of the origin included. We will get back to you with the necessary procedure, and process your request within 5 business days. Note that this process requires that you have permission to modify the DNS entry of the requested origin for validation.
++ **If you'd like Chrome to advertise support for the trial via `Accept: application/signed-exchange` HTTP header:** Send an email with the subject "SXG Accept Header Sign-up: <your origin>" to [webpackage-ot-application@chromium.org](mailto:webpackage-ot-application@chromium.org). Please also indicate if you want all subdomains of the origin included. We will get back to you with the necessary procedure, and process your request within 5 business days. Note that this process requires that you have permission to modify the DNS entry of the requested origin for validation.
 
 You do not need to sign-up for both, but if your site wants to rely on Accept header for feature detection consider applying for the latter too.
 
@@ -80,7 +80,7 @@ Note that SXG is only supported by the anchor tag (`<a>`) and `link rel=prefetch
 
 ## Providing Feedback
 
-We are keen to hear your feedback on this experiment at webpackage-dev@chromium.org. You can also join [the spec discussion](https://github.com/WICG/webpackage/issues), or report [a chrome bug](https://bugs.chromium.org/p/chromium/issues/entry?status=untriaged&components=Blink%3ELoader&labels=Type-Bug,Hotlist-SignedExchange) to the team.  Your feedback will greatly help the standardization process and also help us address implementation issues.
+We are keen to hear your feedback on this experiment at [webpackage-dev@chromium.org](mailto:webpackage-dev@chromium.org). You can also join [the spec discussion](https://github.com/WICG/webpackage/issues), or report [a chrome bug](https://bugs.chromium.org/p/chromium/issues/entry?status=untriaged&components=Blink%3ELoader&labels=Type-Bug,Hotlist-SignedExchange) to the team.  Your feedback will greatly help the standardization process and also help us address implementation issues.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
