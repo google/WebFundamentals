@@ -54,7 +54,7 @@ npm start
 ```
 
 **Note:** The first time you start the server, you may need to run
-`start-appenging.sh` and answer any prompts provided by `dev_appserver.py`.
+`start-appengine.sh` and answer any prompts provided by `dev_appserver.py`.
 
 ## Update the code labs
 To update the Code Labs, you'll need the

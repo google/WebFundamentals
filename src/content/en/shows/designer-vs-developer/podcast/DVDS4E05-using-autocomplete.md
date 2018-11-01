@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Adrienne Porter Felt on using autocomplete to improve user experience
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-10-23 #}
+{# wf_updated_on: 2018-10-31 #}
 {# wf_published_on: 2018-10-23 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E5_using_autocomplete.mp3 #}
 {# wf_podcast_duration: 00:15:42 #}
@@ -32,7 +32,7 @@ In this episode:
 * Autocomplete
 * HTTPS and security
 * Payments request API
-* Customising form elements
+* Customizing form elements
 * [Help users checkout faster with Autofill](http://bit.ly/2q8iXEe)
 * [Creating amazing forms](http://bit.ly/2PRr5Ek)
 * [Redesigning Chrome](http://bit.ly/2PRr9E4)
