@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Olu Niyi-Awosusi talks about getting a head start in the industry via a boot camp, gatekeeping and WildcardJS.
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-01 #}
+{# wf_updated_on: 2018-11-02 #}
 {# wf_published_on: 2018-06-01 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3 #}
 {# wf_podcast_duration: 00:13:37 #}
 {# wf_podcast_fileSize: 19709128 #}
-{# wf_podcast_subtitle: description: Olu Niyi-Awosusi talks about getting a head start in the industry via a boot camp, gatekeeping and WildcardJS. #}
+{# wf_podcast_subtitle: description: Olu talks about getting a head start in the industry via a boot camp. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e03-cover-large.jpg #}
 
 
@@ -38,10 +38,12 @@ In this episode:
 
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
+<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">
@@ -49,3 +51,5 @@ Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}
