@@ -1,20 +1,18 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2018-10-30 #}
-{# wf_updated_on: 2018-10-31 #}
+{# wf_published_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-02 #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/showcase/2018/images/nikkei/featured.jpg #}
 {# wf_featured_snippet: With a publishing history of more than 140 years, Nikkei is one of the most authoritative media businesses in Japan. To provide a better user experience and accelerate their business on the web, Nikkei successfully launched a Progressive Web App in November 2017, and they’re seeing amazing results from the new platform. #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
 {# wf_vertical: media #}
-{# wf_featured_date: 2018-10-30 #}
+{# wf_featured_date: 2018-11-02 #}
 {# wf_blink_components: N/A #}
 
 # Nikkei achieves a new level of quality and performance with their multi-page PWA {: .page-title }
-
-<!-- TODO Update Featured Image -->
 
 <style>
   figcaption {
@@ -73,9 +71,11 @@ results from the new platform.
   </ul>
 </div>
 
+<!--
 <a class="button button-primary" download href="/web/showcase/2018/pdfs/nikkei.pdf">
   Download Business Focused PDF Case Study
 </a>
+-->
 
 <div class="clearfix"></div>
 
@@ -139,11 +139,11 @@ year to achieve this performance.
 Nikkei created and launched a Progressive Web App, using responsive design,
 vanilla JavaScript, and a multi-page architecture, they focused on building a
 delightful user experience. By adding a service worker, they were able to
-provide consistently predictable performance, regardless of the network. This
+provide predictable performance, regardless of the network. This
 also ensures that top articles are always available and loaded almost
-immediately because they're stored using Cache Storage. They added a web
-app manifest, which along with their service worker, it makes it possible
-for users to install the PWA, making it easy to access. And to ensure
+immediately because they're stored using Cache Storage. They added a web app
+manifest, and together with their service worker this allows users to
+install the PWA, so it’s easily accessible. And to ensure
 performance was entirely within their control, they optimized their
 3rd-party JavaScript.
 
@@ -226,7 +226,7 @@ the link. This enables instant page navigation.
 Reducing render blocking CSS is one of the best practices of speed loading. The
 website inlines all the critical CSS with 0
 [render blocking stylesheets](/web/tools/lighthouse/audits/blocking-resources).
-This optimization reduced more than 1 second of first meaningful paint.
+This optimization reduced first meaningful paint by more than 1 second.
 
 <div class="clearfix"></div>
 
@@ -246,12 +246,12 @@ by 80%, dropping it to 60KB with RollUp.
 
 #### Other best practices implemented
 
-* [Compression](/web/tools/lighthouse/audits/text-compression): Gzip all
+* [Compression](/web/tools/lighthouse/audits/text-compression): Gzip/Brotli all
   compressible resources using Fastly CDN
 * [Caching](/web/tools/lighthouse/audits/cache-policy): Enable HTTP caching,
   edge side caching
 * [Image optimization](/web/tools/lighthouse/audits/unoptimized-images): Use
-  Imagix for optimization and image format detection
+  [imgix](https://www.imgix.com/) for optimization and image format detection
 * [Lazy-load non-critical resources](/web/fundamentals/performance/lazy-loading-guidance/images-and-video/):
   Use intersection observer API to load below-the-fold fragments
 * [Have a web font-loading strategy](/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization):
@@ -262,17 +262,17 @@ by 80%, dropping it to 60KB with RollUp.
   Keeping JavaScript transmission and parse/compile times low
 
 
-### Optimizing 3P JavaScript
+### Optimizing third-party JavaScript
 
 While it’s not as easy to optimize 3rd party JavaScripts compared to your
 own scripts, Nikkei successfully minified and bundled all ad-related scripts,
-which is now served from its own content delivery network (CDN). Ad-related
-tags usually provide a snippet to initiate and load other required scripts
+which are now served from its own content delivery network (CDN). Ad-related
+tags usually provide a snippet to initiate and load other required scripts,
 which often block the page rendering and also require extra network
 turnaround time for each of the scripts downloaded. Nikkei took the following
-approach and improved initialization time by 100ms and reduced JS size by 30%:
+approach and improved initialization time by 100ms, plus reduced JS size by 30%:
 
-* Bundle all the required scripts by using JS bundler (e.g., Webpack)
+* Bundle all the required scripts using a JS bundler (e.g., Webpack)
 * Async load the bundled script, so that it doesn’t block the page rendering
 * Attach the calculated ad banner to Shadow DOM (vs iframe)
 * Progressively load ads on user scroll with Intersection Observer API
