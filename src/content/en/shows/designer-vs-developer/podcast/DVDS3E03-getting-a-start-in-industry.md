@@ -7,7 +7,7 @@ description: Olu Niyi-Awosusi talks about getting a head start in the industry v
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E03-Getting-a-headstart-in-the-industry-Olu%20Niyi-Awosusi.mp3 #}
 {# wf_podcast_duration: 00:13:37 #}
 {# wf_podcast_fileSize: 19709128 #}
-{# wf_podcast_subtitle: description: Olu talks about getting a head start in the industry via a boot camp. #}
+{# wf_podcast_subtitle: description: Getting a head start in the industry. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e03-cover-large.jpg #}
 
 

@@ -37,9 +37,9 @@ In this episode:
 * [Trivago case study](http://bit.ly/2K5I8is){: .external }
 * [Read about Navigator.onLine](https://mzl.la/2vaRjsm){: .external }
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/
-  DVDS3E07-Designing-for-offline.mp3">
+<audio style="width: 100%" controls preload="none" src="
+https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E07-Designing-for-offline.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

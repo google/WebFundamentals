@@ -38,9 +38,9 @@ In this episode:
 * Material design layer cake
 
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/
-  DVDS4E4_prototyping_motion.mp3">
+<audio style="width: 100%" controls preload="none" 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS4E4_prototyping_motion.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

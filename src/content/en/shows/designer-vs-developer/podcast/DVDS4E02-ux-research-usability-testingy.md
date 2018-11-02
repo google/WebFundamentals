@@ -38,9 +38,9 @@ In this episode:
 * [Google Ventures guide to research](http://bit.ly/2MoAH6M)
 
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/
-  DVDS4E02-Getting-started-with-UX-research.mp3">
+<audio style="width: 100%" controls preload="none" src="
+https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS4E02-Getting-started-with-UX-research.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

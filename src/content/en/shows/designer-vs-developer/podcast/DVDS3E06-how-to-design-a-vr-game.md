@@ -40,9 +40,9 @@ In this episode:
 * [Google Poly](http://bit.ly/2Jdo6lr){: .external }
 * Accessibility in VR
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/
-  DVDS3E06-How-to-design-VR-game.mp3">
+<audio style="width: 100%" controls preload="none" src="
+https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS3E06-How-to-design-VR-game.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

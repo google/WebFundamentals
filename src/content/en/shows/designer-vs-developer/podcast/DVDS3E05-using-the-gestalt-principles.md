@@ -7,7 +7,7 @@ description: Sven Laqua talks about designing motion, HCI, eye tracking and the 
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E05-using-gestalt-principles.mp3 #}
 {# wf_podcast_duration: 00:18:40 #}
 {# wf_podcast_fileSize: 26993340 #}
-{# wf_podcast_subtitle: Sven Laqua talks about designing motion, HCI, eye tracking and the Gestalt principles. #}
+{# wf_podcast_subtitle: Designing motion and the Gestalt principles. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e05-cover-large.jpg #}
 
 

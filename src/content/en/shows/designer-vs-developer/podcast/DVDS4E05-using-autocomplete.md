@@ -40,9 +40,8 @@ In this episode:
 * [How we designed Chrome 10 years ago](http://bit.ly/2CAyHr9)
 
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/
-  designer-vs-developer-podcast/DVDS4E5_using_autocomplete.mp3">
+<audio style="width: 100%" controls preload="none"src="https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS4E5_using_autocomplete.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

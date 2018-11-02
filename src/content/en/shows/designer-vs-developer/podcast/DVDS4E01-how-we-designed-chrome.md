@@ -38,9 +38,9 @@ In this episode:
 * What the next 10 years holds for the web.
 
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/
-  DVDS4E01-How-we-designed-Chrome.mp3">
+<audio style="width: 100%" controls preload="none" src="
+https://storage.googleapis.com/designer-vs-developer-podcast/
+DVDS4E01-How-we-designed-Chrome.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

@@ -7,7 +7,7 @@ description: Brendan Kearns talks about creative ways to prototype and how using
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3 #}
 {# wf_podcast_duration: 00:12:04 #}
 {# wf_podcast_fileSize: 17484030 #}
-{# wf_podcast_subtitle: Brendan Kearns talks about creative ways to prototype and how using scenario based design can help you sculpt great user experiences. #}
+{# wf_podcast_subtitle: Scenario based design. #}
 {# wf_featured_image: /web/shows/designer-vs-developer/podcast/images/dvd-s03-e04-cover-large.jpg #}
 
 
