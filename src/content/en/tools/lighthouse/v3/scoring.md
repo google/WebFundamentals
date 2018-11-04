@@ -126,3 +126,7 @@ Lighthouse returns a Best Practices score between 0 and 100. 0 is the worst poss
 The Best Practices audits are equally weighted. To calculate how much each audit contributes
 to your overall Best Practices score, count the number of Best Practices audits, then divide
 100 by that number.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
