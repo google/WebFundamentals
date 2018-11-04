@@ -11,8 +11,8 @@ description: A guide on how scoring works in Lighthouse v2.
 
 # Lighthouse v2 Scoring Guide {: .page-title }
 
-Note: This guide covers how scoring works in Lighthouse v2. See [Lighthouse v3 Scoring Guide][v3]
-if you're using v3.
+Note: This guide covers how scoring worked in Lighthouse v2. See [Lighthouse Scoring Guide][v3]
+for the latest.
 
 [v3]: /web/tools/lighthouse/v3/scoring
 
