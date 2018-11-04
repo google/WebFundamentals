@@ -78,9 +78,9 @@ in each audit affects your overall Performance score.
 
 The color-coding maps to these Performance score ranges:
 
-* 0 to 49 (poor): Red
+* 0 to 49 (slow): Red
 * 50 to 89 (average): Orange
-* 90 to 100 (good): Green
+* 90 to 100 (fast): Green
 
 These color buckets were revised in Lighthouse [v3.1.1](https://github.com/GoogleChrome/lighthouse/releases).
 
