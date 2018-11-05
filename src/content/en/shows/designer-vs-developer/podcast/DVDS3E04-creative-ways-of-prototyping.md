@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Brendan Kearns talks about creative ways to prototype and how using scenario based design can help you sculpt great user experiences.
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2018-06-11 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3 #}
 {# wf_podcast_duration: 00:12:04 #}
@@ -38,8 +38,7 @@ informing a developer.
 
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E04-creative-ways-of-prototyping-scenario-design.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via

@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Darin Fisher about how we designed Google Chrome.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2018-08-23 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E01-How-we-designed-Chrome.mp3 #}
 {# wf_podcast_duration: 00:23:13 #}
@@ -39,8 +39,7 @@ In this episode:
 
 
 <audio style="width: 100%" controls preload="none" src="
-https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS4E01-How-we-designed-Chrome.mp3">
+https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E01-How-we-designed-Chrome.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,

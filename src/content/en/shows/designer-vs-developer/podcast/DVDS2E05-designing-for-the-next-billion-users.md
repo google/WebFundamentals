@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Sam talks about designing for the next billion users
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2017-09-25 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3 #}
 {# wf_podcast_duration: 00:09:23 #}
@@ -41,8 +41,7 @@ In this episode:
 
 
 <audio style="width: 100%"
-src="https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS2E05-designing-for-the-next-billion-users.mp3"
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS2E05-designing-for-the-next-billion-users.mp3"
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via

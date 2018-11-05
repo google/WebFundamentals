@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: This week we speak to Jake Archibald about communication.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2017-03-07 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3 #}
 {# wf_podcast_duration: 00:13:28 #}
@@ -33,8 +33,7 @@ In this episode:
 * Designers lack of version control
 
 <audio style="width: 100%" 
-src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/
-dvd-s01-e01-creative-collaborations.mp3" 
+src="https://storage.googleapis.com/http-203-podcast/designer-vs-developer/dvd-s01-e01-creative-collaborations.mp3" 
 controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via

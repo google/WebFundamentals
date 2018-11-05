@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Ada Rose Cannon on designing a VR game in a week.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2018-07-18 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3 #}
 {# wf_podcast_duration: 00:21:02 #}
@@ -40,9 +40,7 @@ In this episode:
 * [Google Poly](http://bit.ly/2Jdo6lr){: .external }
 * Accessibility in VR
 
-<audio style="width: 100%" controls preload="none" src="
-https://storage.googleapis.com/designer-vs-developer-podcast/
-DVDS3E06-How-to-design-VR-game.mp3">
+<audio style="width: 100%" controls preload="none" src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
 <a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
