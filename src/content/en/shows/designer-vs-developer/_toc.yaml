@@ -3,6 +3,8 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Progressive Web Apps and Firebase'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E06-pwas-firebase
       - title: 'Using autocomplete to improve user experience'
         path: /web/shows/designer-vs-developer/podcast/DVDS4E05-using-autocomplete
       - title: 'Prototyping motion and material design'
