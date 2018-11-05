@@ -166,7 +166,7 @@ create shadow DOM for an element, call `element.attachShadow()`:
 I'm using `.innerHTML` to fill the shadow root, but you could also use other DOM
 APIs. This is the web. We have choice.
 
-The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/shadow/#h-methods)
+The spec [defines a list of elements](https://dom.spec.whatwg.org/#dom-element-attachshadow)
 that can't host a shadow tree. There are several reasons an element might be
 on the list:
 

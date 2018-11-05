@@ -12,20 +12,20 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# DevTools {: .page-title } खोलने के बिना DevTools सुविधाओं का उपयोग करना
+# DevTools खोले बिना DevTools सुविधाओं का उपयोग करना {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-मैं आमतौर पर "मुझे वास्तव में DevTools की विशेषता एक्स पसंद है, लेकिन यह DevTools बंद करते समय काम करना बंद कर देता है। मैं DevTools बंद होने पर भी सुविधा एक्स को कैसे चला सकता हूं?"
+मैं आमतौर पर &quot;मुझे वास्तव में DevTools की विशेषता एक्स पसंद है, लेकिन यह DevTools बंद करते समय काम करना बंद कर देता है। मैं DevTools बंद होने पर भी सुविधा एक्स को कैसे चला सकता हूं?&quot;
 
 संक्षिप्त जवाब है: आप शायद नहीं कर सकते हैं।
 
-हालांकि, आप * [Puppeteer][puppeteer]{:.external} स्क्रिप्ट को एक साथ हैक कर सकते हैं जो क्रोमियम लॉन्च करता है, एक रिमोट डीबगिंग क्लाइंट खोलता है, फिर आपको पसंद करते हुए DevTools सुविधा को चालू करता है ([क्रोम देवटूल प्रोटोकॉल][CDP] पीआरजीएमएस 1 के माध्यम से) कभी भी स्पष्ट रूप से DevTools खोलने के बिना।
+हालांकि, आप * [Puppeteer][puppeteer]{:.external} स्क्रिप्ट को एक साथ जोड़ सकते हैं जो क्रोमियम लॉन्च करता है, एक रिमोट डीबगिंग क्लाइंट खोलता है, फिर DevTools को स्पष्ट रूप से खोलने के बिना, जिसे आप पसंद करते हैं ( [Chrome DevTools Protocol][CDP]{:.external} माध्यम से) DevTools सुविधा को चालू करता है।
 
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
 [CDP]: https://chromedevtools.github.io/devtools-protocol/
 
-उदाहरण के लिए, नीचे दी गई स्क्रिप्ट मुझे व्यूपोर्ट के ऊपरी दाएं भाग पर [एफपीएस मीटर][FPS] ओवरले करने देती है, भले ही DevTools कभी नहीं खुलती है, जैसा कि आप नीचे दिए गए वीडियो में देख सकते हैं।
+उदाहरण के लिए, नीचे दी गई स्क्रिप्ट मुझे व्यूपोर्ट के ऊपरी दाएं [FPS Meter][FPS] पर [FPS Meter][FPS] को ओवरले करने [FPS Meter][FPS] , भले ही DevTools कभी नहीं खुलती है, जैसा कि आप नीचे दिए गए वीडियो में देख सकते हैं।
 
 [FPS]: /web/tools/chrome-devtools/evaluate-performance/reference#fps-meter
 
@@ -47,19 +47,23 @@ description: Use Puppeteer to launch Chromium with DevTools features enabled.
       await page.goto('https://developers.google.com/web/tools/chrome-devtools');
     })();
 
-<style>  video { width: 100%; } </style>
+<style>
+  video { width: 100%; }
+</style>
 
-<video controls>  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4"> </video>
+<video controls>
+  <source src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/devtools.mp4">
+</video>
 
 यह केवल कई में से एक है, कई देवटूल की विशेषताएं हैं जिन्हें आप संभावित रूप से क्रोम देवटूल प्रोटोकॉल के माध्यम से एक्सेस कर सकते हैं।
 
-एक सामान्य सुझाव: DevTools प्रोटोकॉल क्लाइंट बनाने का प्रयास करने से पहले [Puppeteer API][API]{:.external} देखें। Puppeteer पहले से ही कई DevTools सुविधाओं के लिए समर्पित एपीआई है, जैसे [कोड कवरेज][coverage] पीआरजीएमएस 1 और [इंटरसेप्टिंग ** कंसोल ** संदेश][console] पीआरजीएमएस 2।
+एक सामान्य सुझाव: DevTools प्रोटोकॉल क्लाइंट बनाने का सहारा लेने से पहले [Puppeteer API][API]{:.external} । Puppeteer पहले से ही कई DevTools सुविधाओं, जैसे [code coverage][coverage]{:.external} और [intercepting **Console** messages][console]{:.external} लिए समर्पित एपीआई है।
 
 [API]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md
 [coverage]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-coverage
 [console]: https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#event-console
 
-यदि आपको Puppeteer के माध्यम से DevTools सुविधा तक पहुंचने में सहायता की आवश्यकता है, [स्टैक ओवरफ़्लो पर एक प्रश्न पूछें][SO]{:.external}।
+यदि आपको [ask a question on Stack Overflow][SO]{:.external} , [ask a question on Stack Overflow][SO]{:.external} माध्यम से DevTools सुविधा तक पहुंचने में सहायता [ask a question on Stack Overflow][SO]{:.external} ।
 
 यदि आप एक Puppeteer स्क्रिप्ट को दिखाना चाहते हैं जो DevTools प्रोटोकॉल का उपयोग करता है, तो हमें [@ChromeDevTools][twitter]{:.external} पर ट्वीट करें।
 

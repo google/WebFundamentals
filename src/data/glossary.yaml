@@ -42,7 +42,7 @@
   description: "A CDN is a network of geographically distributed servers that cooperate to satisfy requests for content. CDNs optimize content delivery by distributing copies of files (such as videos, images, HTML, CSS and JavaScript) to multiple servers. This reduces latency by placing the content closer to the requestor. For example, if a user in India requests a web page from a Brazilian website, the request could be rerouted to deliver assets served from a local CDN server in Mumbai."
   acronym: CDN
   see:
-    title: Content deliver network on Wikipedia
+    title: Content delivery network on Wikipedia
     link: https://en.wikipedia.org/wiki/Content_delivery_network
 
 - term: custom element
@@ -152,6 +152,19 @@
   links:
   - title: OL in the HTML Specification
     link: https://html.spec.whatwg.org/#event-load
+
+- term: "opaque response"
+  description: "Opaque responses represent the result of a request made to a remote origin when CORS is not enabled."
+  see:
+    title: "The Fetch API Specification"
+    link: https://fetch.spec.whatwg.org/#concept-filtered-response-opaque
+  links:
+    - title: "Cross-Origin Resource Sharing (CORS)"
+      link: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+    - title: "What limitations apply to opaque responses?"
+      link: https://stackoverflow.com/q/39109789/385997
+    - title: "Workbox: Understanding Storage Quota"
+      link: /web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
 
 - term: Progressive Web App
   acronym: PWA

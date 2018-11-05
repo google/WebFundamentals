@@ -48,7 +48,7 @@
   fix: Firefox
   caseSensitive: True
 
-- typo: '[^\S](java\s*script|java\s*Script|Java\s*script)[^\S]'
+- typo: '(?<!wf_tags:\s+)(java\s*script|java\s*Script|Java\s*script)'
   fix: JavaScript
   caseSensitive: True
 
@@ -334,6 +334,9 @@
 
 - typo: chome\s
   fix: Chrome
+
+- typo: choses
+  fix: chooses
 
 - typo: defau[lt](s|)\b
   fix: default$1

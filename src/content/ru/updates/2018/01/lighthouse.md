@@ -12,7 +12,7 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Lighthouse 2.7 Обновления {: .page-title }
+# 2.7 Обновления {: .page-title }
 
 {% include "web/_shared/contributors/vinamratasingal.html" %}
 {% include "web/_shared/contributors/patrickhulce.html" %}
@@ -25,19 +25,19 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Маяк 2.7 отсутствует! Основные моменты:
 
-* [Новые аудит SEO](#seo).
-* [Новые, ручные проверки доступности](#a11y).
-* [Обновления аудита WebP](#webp).
+* [New SEO audits](#seo) .
+* [New, manual accessibility audits](#a11y) .
+* [Updates to the WebP audit](#webp) .
 
-См. Примечания к выпуску [2.7][RN] для полного списка новых функций, изменений и исправлений ошибок.
+См. [2.7 release notes][RN] для получения полного списка новых функций, изменений и исправлений ошибок.
 
 [RN]: https://github.com/GoogleChrome/lighthouse/releases/tag/v2.7.0
 
 ## Как обновить до 2.7 {: #update }
 
-* NPM. Запустите `npm update lighthouse` или флаг `npm update lighthouse -g` , если вы установили Lighthouse глобально.
+* NPM. Запустите `npm update lighthouse` или `npm update lighthouse -g` если вы установили Lighthouse глобально.
 * Расширение Chrome. Расширение должно автоматически обновляться, но вы можете вручную обновить его через `chrome://extensions` .
-* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какая версия Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary].
+* DevTools. Lighthouse 2.7 поставляется в Chrome 65. Вы можете проверить, какую версию Chrome вы используете через `chrome://version` . Обновление Chrome до новой версии происходит каждые 6 недель. Вы можете запустить последний код Chrome, загрузив [Chrome Canary][Canary] .
 
 [Canary]: https://www.google.com/chrome/browser/canary.html
 
@@ -47,7 +47,8 @@ description: New SEO audits and manual accessibility audits, and updates to the 
 
 Note: Многие факторы влияют на ранжирование поисковой системы страницы. Маяк не проверяет все эти факторы. Совершенный 100 очков в Маяке не гарантирует место в рейтинге в любой поисковой системе!
 
-<figure>  <img src="/web/updates/images/2018/01/seo.png"
+<figure>
+  <img src="/web/updates/images/2018/01/seo.png"
        alt="The new SEO category. New audits include: Document uses legible font sizes,
             Has a meta viewport tag with width or initial-scale attribute,
             Document has a title element, Document has a meta description, Page has
@@ -56,13 +57,14 @@ Note: Многие факторы влияют на ранжирование п�
   <figcaption>
     <b>Figure 1</b>. The new <b>SEO</b> category
   </figcaption>
-</Цифра>
+</figure>
 
 ## Новые, ручные проверки доступности {: #a11y }
 
 Новые проверочные проверки доступности вручную информируют вас о том, что вы можете сделать, чтобы улучшить доступность вашей страницы. «Руководство» означает, что «Маяк» не может автоматизировать эти проверки, поэтому вам нужно вручную их протестировать самостоятельно.
 
-<figure>  <img src="/web/updates/images/2018/01/a11y.png"
+<figure>
+  <img src="/web/updates/images/2018/01/a11y.png"
        alt="The new, manual accessibility audits, which includes: The page has a logical tab order,
             Interactive controls are keyboard focusable, The user's focus is directed to new
             content added to the page, User focus is not accidentally trapped in a region,
@@ -73,21 +75,22 @@ Note: Многие факторы влияют на ранжирование п�
   <figcaption>
     <b>Figure 2</b>. The new, manual <b>Accessibility</b> audits
   </figcaption>
-</Цифра>
+</figure>
 
-## Обновления для аудита WebP {: #webp }
+## Обновления для аудита WebP. {: #webp }
 
-Благодаря некоторой [обратной связи сообщества][feedback], [проверка WebP][webp] теперь более включает в себя другие высокопроизводительные графические форматы следующего поколения, такие как JPEG 2000 и JPEG XR.
+Благодаря некоторому [community feedback][feedback] , [WebP audit][webp] теперь больше включает в себя другие форматы изображений нового поколения следующего поколения, такие как JPEG 2000 и JPEG XR.
 
 [feedback]: https://www.reddit.com/r/webdev/comments/75w7t0/so_exactly_what_do_i_do_google_put_my_css_in_js/doatllq/
 [webp]: /web/tools/lighthouse/audits/webp
 
-<figure>  <img src="/web/updates/images/2018/01/webp.png"
+<figure>
+  <img src="/web/updates/images/2018/01/webp.png"
        alt="The new WebP audit."/>
   <figcaption>
     <b>Figure 3</b>. The new WebP audit
   </figcaption>
-</Цифра>
+</figure>
 
 {% include "web/_shared/rss-widget-updates.html" %}
 

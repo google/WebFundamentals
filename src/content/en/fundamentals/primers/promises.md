@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-11-01 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
@@ -367,11 +367,8 @@ Now let's use it:
     })
 
 
-[Click here to see that in action](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/story.json),
-check the console in DevTools to see the result. Now we can make HTTP
-requests without manually typing `XMLHttpRequest`, which is great, because
-the less I have to see the infuriating camel-casing of `XMLHttpRequest`,
-the happier my life will be.
+Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the
+less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
 
 
 ## Chaining
@@ -424,10 +421,7 @@ we can make a shortcut:
     })
 
 
-[See that in action here](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/story.json),
-check the console in DevTools to see the result. In fact, we could make a
-`getJSON()` function really easily:
-
+In fact, we could make a `getJSON()` function really easily:
 
     function getJSON(url) {
       return get(url).then(JSON.parse);

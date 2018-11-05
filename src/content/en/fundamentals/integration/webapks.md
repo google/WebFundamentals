@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -137,6 +137,21 @@ worker is installed and ready to go.
 Though, this can be an issue if the user clears their Chrome profile, or chooses
 to delete site data.
 
+## Updating the WebAPK {: #update-webapk }
+
+When the WebAPK is launched, Chrome checks the currently installed manifest
+against the live manifest. If any of the properties in the manifest required
+to add the PWA to the home screen have changed, Chrome will request an
+updated WebAPK. The request may be queued until the device is plugged in and
+has a WiFi connection.
+
+See
+[`UpdateReason`](https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35)
+enum in `message WebApk` for the reasons a WebAPK may be updated.
+
+Note: Icons may be cached, so it may be helpful to change the filenames when
+updating icons or other graphics.
+
 ## Feedback {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
@@ -145,8 +160,9 @@ to delete site data.
 
 ## Frequently asked questions
 
-<dl>
+If any of the required manifest properties are changed,. For full details
 
+<dl>
   <dt>
     What happens if the user has already installed the native app for the site?
   </dt>
