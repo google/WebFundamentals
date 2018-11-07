@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Bruce Lawson talks about designing for standards, and not just one browser. We also cover Styleable, a CSS preprocessor that they are working on at Wix.
+description: Bruce Lawson talks about designing for standards, and not just one browser. We also cover Stylable, a CSS preprocessor developed at Wix.
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E02-Designing-for-standards-with-Bruce-Lawson.mp3 #}
 {# wf_podcast_duration: 00:18:00 #}

@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: David East on Progressive web apps and Firebase
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-10-23 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E6_PWA_Firebase.mp3 #}
 {# wf_podcast_duration: 00:17:23 #}
@@ -32,7 +32,7 @@ In this episode:
 * Designing for speed
 * Firebase and its size
 * [Progressive WordPress (PWP)](http://bit.ly/2Jl2nMK) 
-* [Cloud firestore](http://bit.ly/2AMVu1u)
+* [Cloud Firestore](http://bit.ly/2AMVu1u)
 * [How to build a simple camera component](http://bit.ly/2SK90dn)
 * [Firebase hosting](http://bit.ly/2SLQKQJ)
 * [JavaScript Start-up Optimization](http://bit.ly/2D2CzkW)

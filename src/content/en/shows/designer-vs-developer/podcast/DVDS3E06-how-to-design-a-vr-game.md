@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Ada Rose Cannon on designing a VR game in a week.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-07-18 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3 #}
 {# wf_podcast_duration: 00:21:02 #}
@@ -20,7 +20,7 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
 Mustafa speaks to Ada Rose Cannon, Developer Advocate for the
-Samsung Internet Web Browser, about their passion about Virtual
+Samsung Internet Web Browser, about their passion for Virtual
 Reality on the Web, new Web Standards and stitching various
 technologies on the web to build a VR game on anxiety and
 mental health.
