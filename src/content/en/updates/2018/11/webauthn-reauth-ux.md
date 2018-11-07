@@ -2,70 +2,92 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn how to design and implement reauth UX in your website using WebAuthn standard and a fingerprint sensor.
 
-{# wf_updated_on: 2018-11-05 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-11-09 #}
 {# wf_tags: webauthn, credentials, sign-in #}
 {# wf_featured_image: /web/updates/images/2018/11/webauthn-reauth-ux.png #}
 {# wf_featured_snippet: Learn how to design and implement reauth UX in your website using WebAuthn standard and a fingerprint sensor. #}
 {# wf_blink_components: Blink>WebAuthentication #}
 
-# Implementing fingerprint reauth UX with Webauthn {: .page-title }
+# Implementing fingerprint reauthentication UX with WebAuthn {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
+<style>
+  .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 226px;
+    text-align: center;
+  }
+</style>
+
 ## Introduction
 
-[WebAuthn (Web Authentication API)](https://www.w3.org/TR/webauthn/) is a new 
-web standard that enables you to use strong authentication on the web. It's 
-[shipped in Chrome](/web/updates/2018/05/webauthn), 
-Firefox and Edge. Webkit is also [implementing actively 
-it](https://webkit.org/status/#feature-web-authentication).
+[WebAuthn (Web Authentication API)](https://www.w3.org/TR/webauthn/) is a new
+web standard that enables you to use strong authentication on the web. It's
+[shipped in Chrome](/web/updates/2018/05/webauthn), Firefox and Edge. Webkit is
+also [actively](https://webkit.org/status/#feature-web-authentication)
+[implementing it](https://webkit.org/status/#feature-web-authentication).
 
-[FIDO Alliance](https://fidoalliance.org) started working on WebAuthn as part of 
-FIDO2 standard. FIDO2 consists of:
+WebAuthn consists of the W3C WebAuthentication standard and the [FIDO 
+Alliance](https://fidoalliance.org) CTAP2 standard:
 
-* **CTAP2** that defines a communication protocol between clients and 
-  authenticators (hardware device that generates key pairs).
-* **WebAuthn** that defines JavaScript API to handle credentials on 
-  authenticators through web browsers.
+* **WebAuthn** defines JavaScript API to handle credentials from authenticators 
+  through web browsers.
+* **CTAP2** defines a communication protocol between client apps like browsers 
+  and authenticators (hardware device that generates key pairs).
 
-Authenticators are hardware devices that has various forms and transports. They 
-can generate a key pair for a user and the origin of a website. One form of 
-authenticators include security keys:
+Authenticators are hardware devices that can generate a key pair for a user and 
+the origin of a website. They have various form factors and transports to 
+exchange data with a client. One form factor of authenticators is security keys:
 
-<img src="/web/updates/images/2018/11/webauthn-security-keys.jpg" />  
-The security keys shown above are Google Titan Keys which support NFC and BLE, 
-USB transport respectively.
+<img src="/web/updates/images/2018/11/webauthn-security-keys.jpg" />
+
+The security keys shown above are Google Titan Keys which support NFC, BLE and 
+USB as transports.
 
 With security keys, a website can ensure that the user trying to sign-in owns 
-the same device physically and there's a human who can tap it. Along with a 
-password (what you know), security keys can play one factor role (what you have) 
-in two factor authentication scenarios.
+the same device and is physically present with the device (via a 'tap'). Along 
+with a password (what you know), security keys can play one factor role (what 
+you have) in two factor authentication scenarios.
 
 <img src="/web/updates/images/2018/11/webauthn-fingerprint.png" width="344" height="295">
 
 Other authenticator examples include fingerprint sensors that are built into 
-computer devices. Unlike security keys, because consumers don't have to spend 
-additional time and money to own them separately, owners of such devices can 
-quickly become a potential customer of your WebAuthn enabled website.
+computer devices. While security keys require consumers to purchase separate 
+pieces of hardware, owners of fingerprint-enabled devices can more quickly 
+become a potential customer of your WebAuthn enabled website.
 
-We consider WebAuthn can give you three additional sign-in scenarios:
+Key Point: This article highlights fingerprint sensor specifically, however,
+FIDO compatible authenticators can support other biometric form factors like
+facial recognition as well. For example, Windows Hello provides a facial
+recognition authenticator for Microsoft Edge (Support in Chrome is in
+development). Moving forward this article will use the term "biometric" instead
+of fingerprint.
 
-1. Reauth
-1. Second factor
-1. Passwordless auth
+We consider WebAuthn can help you with three sign-in scenarios:
 
-In this article, we'll guide you through how to design and implement a reauth 
-scenario using WebAuthn with a fingerprint sensor on Android or macOS.
+1. Reauthentication
+1. Bootstrapping with Multi-factor authentication
+1. Bootstrapping with Multi-factor authentication in a Passwordless fashion
 
-### What is reauth?
+In this article, we'll guide you through how to design and implement a reauth In this article, we'll guide you through how to design and implement a 
+reauthentication scenario using WebAuthn with a biometric sensor on Android or 
+macOS.
 
-Before going into details, let's define what is "reauth" exactly.
+## What is reauthentication?
 
-Reauth is an additional authentication that is required after initial 
-authentication by accessing certain parts of a website. They are typically areas 
-where a transaction is performed, or sensitive information is provided.
+Before going into details, let's define what is "reauthentication" exactly.
 
+Reauthentication is an authentication when a user returns to a website, or an 
+additional authentication required to access certain parts of a website where 
+they have signed in before. Areas where a transaction is performed, or sensitive 
+information is provided tend to require reauthentication.
+
+* Navigate to a sensitive website (bank for example) signed-in in the past on 
+  the same device
 * Send purchased item to a new address
 * Transfer money from your bank account to another
 * View privacy protected information
@@ -74,231 +96,288 @@ where a transaction is performed, or sensitive information is provided.
 For example, accessing [Chrome Web Store's developer 
 dashboard](https://chrome.google.com/webstore/developer/dashboard) almost always 
 asks you to sign-in to your Google account again, unless you did so very 
-recently. This is because modifying a Chrome Extension can affect security and 
-privacy of hundreds and millions of users who installed it. Protecting the page 
-by double checking the developer's identity is tremendously important. Also in 
-the very near future, it's [going to mandate a second 
-factor](https://blog.chromium.org/2018/10/trustworthy-chrome-extensions-by-default.html) 
-for ensuring extra security.
+recently. This is because modifying a Chrome Extension can affect the security 
+and privacy of hundreds and millions of users who installed it. Protecting the 
+page by double checking the developer's identity is tremendously important.
 
-While reauth ensures stronger security, it's a burden for end users to type a 
-password and provide a second factor like OTP (One Time Password), every time 
-they try to access a sensitive area. OTP is generated by an authenticator app or 
-sent via SMS and email, but this whole process is cumbersome for users.
+While reauthentication promotes stronger security, it's a burden for end users 
+to type a password and provide a second factor like an OTP (One Time Password) 
+every time they try to access a sensitive area. OTP is generated by an 
+authenticator app or sent via SMS and email, but this whole process is 
+cumbersome for users.
 
-With WebAuthn and fingerprint sensor, we can drastically simplify this process 
-as easy as a tap of a finger, along with a better security.
+With WebAuthn and biometrics like fingerprint sensor, we can drastically 
+simplify this process to be as easy as a tap of a finger, along with a better 
+security.
 
-Note: Your fingerprint data won't leave the device. It's security stored in the 
-area any software won't access directly. This also means users will have to 
-register their fingerprint per device.
+Note: Your biometric information like fingerprint data won't leave the device.
+It's securely stored in the area that software can't access directly. This also
+means users will have to register their biometric info per device.
 
-Let's start with seeing how a fingerprint reauth experience would look like.
+Let's start with seeing how a biometric based reauth experience would look like.
 
 ## User experience
 ### Credential registration:
 
 On each device, user has to register their credential to the device.
 
-1. User landing on Tri-bank.
-1. Initial sign-in should be done with an id...
-1. And a password (and optionally a second factor).
-1. After signing in, the site shows a promo to optionally enable sign-in with a 
-   fingerprint.
-1. Turning it on pops up a browser native dialog.
-1. By user tapping on a fingerprint sensor on their device, the dialog closes 
-   and now fingerprint reauth is enabled.
+<table class="centered-table">
+<tr>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-1.png" width="226"
+height="404" />
+1. User lands on Tri-bank.
+</div></td>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-2.png" width="226"
+height="404" />
+2. Initial sign-in should be done with an id...
+</div></td>
+</tr>
+<tr>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-3.png" width="226"
+height="404" />
+3. And a password (and optionally a second factor).
+</div></td>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-4.png" width="226"
+height="404" />
+4. After signing in, the site shows a promo to optionally enable sign-in with a
+fingerprint.
+</div></td>
+</tr>
+<tr>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-5.png" width="226"
+height="404" />
+5. Accepting the prompt pops up a browser native dialog.
+</div></td>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-6.png" width="226"
+height="404" />
+6. The user taps on a fingerprint sensor on their device, the dialog closes, and
+now fingerprint reauth is enabled.
+</div></td>
+</tr>
+</table>
 
-<img src="/web/updates/images/2018/11/webauthn-flow-1.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-2.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-3.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-4.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-5.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-6.png" width="226" height="404" />
+### Reauthentication:
 
-### Reauth:
+After registering a credential, any future authentication can be performed with 
+a fingerprint.
 
-After registering a credential, whenever user needs an authentication can be 
-performed with a fingerprint.
+<table>
+<tr>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-1.png" width="226"
+height="404" />
+1. User comes back to the website.
+</div></td>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-5.png" width="226"
+height="404" />
+2. Browser native dialog pops up to verify identity with a fingerprint instead
+of showing a password form.
+</div></td>
+</tr>
+<tr>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-7.png" width="226"
+height="404" />
+3. The user taps on a fingerprint sensor and the dialog closes.
+</div></td>
+<td>
+<div class="centered">
+<img src="/web/updates/images/2018/11/webauthn-flow-6.png" width="226"
+height="404" />
+4. The user is successfully signed-in. (When fingerprint reauth is not
+successful, you may fallback to sign-in with username and password)
+</div></td>
+</tr>
+</table>
 
-1. User coming back to the website.
-1. Browser native dialog pops up to verify identity with a fingerprint instead 
-   of showing a password form.
-1. By user tapping on a fingerprint sensor, the dialog closes.
-1. The user is successfully signed-in. (When fingerprint reauth is not 
-   successful, you may fallback to sign-in with id and password)
 
-<img src="/web/updates/images/2018/11/webauthn-flow-1.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-5.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-7.png" width="226" height="404" />
-<img src="/web/updates/images/2018/11/webauthn-flow-6.png" width="226" height="404" />
+Note: In this banking example, user needs to reauthenticate every time they
+visit. Alternative design idea would be to make users permanently signed in
+while requiring them to reauthenticate whenever stricter security is required.
+E-commerce website may want to implement this design. Let users explore the shop
+signed in, only request reauthentication when they proceed to purchase the items
+in the cart across devices.
 
-Note: Alternative design idea would be to make users permanently signed in while 
-requiring them to reauth whenever stricter security is required. E-commerce 
-website may want to implement this design. Let users explore the shop signed in, 
-only request reauth when they proceed to purchase the items in the cart across 
-devices.
+Now, let's dive into the implementation details of biometric reauthentication.
 
-Now, let's dive into the implementation details of fingerprint reauth.
-
-Warning: Following sections are targeted at developers who have already read other articles about WebAuthn and understand the basics of how it works.
+Warning: Following sections are targeted at developers who already understand
+the basics of how WebAuthn works. If you are new, this tutorial will be a great
+start.
 
 ## Registering a credential
 
-Before performing reauth, user has to register a credential using a fingerprint 
-enabled authenticator. Following is an overview of client side code.
+Before performing reauthentication, user has to register a credential using a 
+biometric enabled authenticator. Following is an overview of client side code.
 
-On browser:  
+On browser:
 ```js
-async registerReauthKey() {  
-  // Feature detection  
-  if (!window.PublicKeyCredential)  
+async registerReauthKey() {
+  // Feature detection
+  if (!window.PublicKeyCredential)
     throw 'WebAuthn not supported on this browser.';
 
-  // If reauth key is already registered, no need to register  
-  const credId = localStorage.getItem('reauth_key');  
-  if (credId !== null)  
+  // If reauth key is already registered, no need to register
+  const credId = localStorage.getItem('reauth_key');
+  if (credId !== null)
     throw 'Reauth key already registered.';
 
-  // Request credential creation options  
+  // Request credential creation options
   const options = await this._fetch('/makeCred');
 
-  // Decode the options  
-  options.user.id = base64url.decode(options.user.id);  
+  // Decode the options
+  options.user.id = base64url.decode(options.user.id);
   options.challenge = base64url.decode(options.challenge);
 
-  // Create a public key credential  
-  const cred = await navigator.credentials.create({  
-    publicKey: options  
+  // Create a public key credential
+  const cred = await navigator.credentials.create({
+    publicKey: options
   });
 
-  // Encode the credential  
+  // Encode the credential
   const parsedCred = await this._encodeAuthenticatorAttestationResponse(cred);
 
-  // Verify the credential  
+  // Verify the credential
   const profile = await this._fetch('/regCred', parsedCred);
 
-  // Store the credential id locally  
+  // Store the credential id locally
   localStorage.setItem('reauth_key', parsedCred.id);;
 
-  return parsedCred.id;  
+  return parsedCred.id;
 }
 ```
 
 ### Request a credential creation options
 
 We start by creating an object that will be passed to WebAuthn's credential 
-creation API as an option. A PublicKeyCredentialCreationOptions look something 
+creation API as an option. A `PublicKeyCredentialCreationOptions` look something 
 like this.
 
 ```js
-const options = {  
-  rp: ...,  
-  user: ...,  
-  challenge: ...   
-  pubKeyCredParams: ...,  
-  // excludeCredentials: [],  
-  authenticatorSelection: {  
-    authenticatorAttachment: 'platform',  
-    // requireResidentKey: false,  
-    userVerification: 'required'  
-  },  
-  attestation = "none"  
+const options = {
+  rp: ...,
+  user: ...,
+  challenge: ... 
+  pubKeyCredParams: ...,
+  // excludeCredentials: [],
+  authenticatorSelection: {
+    authenticatorAttachment: 'platform',
+    // requireResidentKey: false,
+    userVerification: 'required'
+  },
+  attestation = 'none'
 };
 ```
 
-Let's have a look at key properties specific for reauth use case.
-
-`challenge` is an arbitrary length of random bytes associated with a user session 
-so that resulting credential can be properly mapped to the same user when 
-registration is done. In order to achieve this goal, the challenge must be 
-created at the server side. Encoding it with BASE64URL is a common practice when 
-transferring WebAuthn related data over HTTP, since some of them tend to be 
-binary when passed to WebAuthn.
+Let's have a look at key properties specific for biometric reauth.
 
 `authenticatorSelection.authenticatorAttachment` should be '`platform`' as we
-expect user to use platform authenticator. '`platform`' authenticator is a type
-of authenticators which are built into the platform itself. This includes
-fingerprint sensor attached to Android or macOS devices, facial recognition
-mechanism through cameras on Windows devices, for example (Note that Windows
-Hello is not supported in Google Chrome as of ver. 71, though it's supported in
-Microsoft Edge.). If you choose '`cross-platform`' authenticator, user may use
-authenticators that are detachable from the platform they are using.
+expect users to use a platform authenticator. 'Platform' authenticators are a
+type of authenticators which are built into the platform itself. This includes
+fingerprint sensors attached to Android or macOS devices and facial recognition
+mechanisms through cameras on Windows devices (Note that Windows Hello is not
+supported in Google Chrome as of ver. 71, though it's supported in Microsoft
+Edge.). If you choose '`cross-platform`', users may use authenticators that are
+detachable from the platform they are using.
 
-`authenticatorSelection.userVerification` should be '`required`'. "User
-Verification" requests an authenticator to verify the user identity using
+`authenticatorSelection.userVerification` should be '`required`'. "**User
+Verification**" requests an authenticator to verify the user identity using
 methodologies such as fingerprint, facial recognition, PIN, etc. This makes an
-authentication stronger by adding "who you are" in addition to "what you have"
-which can prove "User Present".
+authentication stronger by adding "who you are" in addition to "what you have",
+which can prove "**User Presence**".
 
 ![](/web/updates/images/2018/11/webauthn-three-factors.png)
 
 Note: User verification with PIN is not implemented in Chrome as of ver. 71.
 
-Note: Simple tap based security key should be sufficient to attest "User 
-Present".
+Note: Simple tap based security key should be sufficient to attest "User
+Presence".
 
-Note: You can check in advance whether a user has a platform UV (User Verifying) 
-authenticator by calling 
-PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable(). It returns 
-a promise that resolves to true if available.
+Note: You can check in advance whether a user has a platform UV (User Verifying)
+authenticator by calling
+`PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()`. It
+returns a promise that resolves to `true` if available.
 
-`excludeCredentials` is used to prevent creating multiple credentials for the same 
-origin using the same authenticator by providing a list of already registered 
-credentials. In reauth case, you don't have to worry about duplication so give 
-it an empty array or don't include excludeCredentials at all.
+`excludeCredentials` is used to prevent creating multiple credentials for the
+same origin using the same authenticator by providing a list of already
+registered credentials. In reauth case, you don't have to worry about
+duplication so give it an empty array or don't include `excludeCredentials` at
+all.
 
-`attestation` should be '`none`'. Attestation is data that describes the 
-authenticator itself and this property provides a preference if you want to 
-receive one or not. A server can use returned attestation to make sure that the 
-user is using a valid authenticator.  
-We discourage you to use one unless you are using WebAuthn for enterprise 
-audience. Because:
+`attestation` should be '`none`'. Attestation is data that describes the
+authenticator device model and this property provides a preference if you want
+to receive one or not. A server can use returned attestations to make sure that
+the user is using a valid authenticator.
 
-* It requires user permission before generating a credential, which is an extra 
-  step for the user.
-* Attestation provides unique identifier per models. Risks user privacy.
-* Whitelisting authenticator will damage WebAuthn ecosystem significantly.
+We discourage you to use attestations unless you are using WebAuthn for 
+enterprise audience.
 
-<img src="/web/updates/images/2018/11/webauthn-attestation.png" width="354" height="164" />
+Your specific use case will dictate whether or not you will require attestation 
+when creating a credential. While attestation can help you determine the 
+properties of the authenticator that's in use in a cryptographically bound way, 
+in most cases it should actually not be required since we believe that _any 
+_WebAuthn compliant authenticator is better than the current alternative: a 
+username and password. If your use case does rely on attestation data to be 
+returned, be aware that in some cases this may trigger an additional user 
+consent dialog (usually only applicable to external security keys).
 
-We recommend constructing this object server side and pass it to a browser 
+Key Point: Be aware that whitelisting only certain types of authenticators for
+use with your website has the potential to confuse users and damage the WebAuthn
+ecosystem, we therefore recommend that, even if attestation is required, it's
+used as a way to risk-score and troubleshoot only.
+
+We recommend constructing this object server-side and passing it to a browser 
 BASE64URL encoded.
 
-Server side:  
+Server side:
 ```js
-router.post('/makeCred', sessionCheck, async (req, res) =&gt; {  
+router.post('/makeCred', sessionCheck, async (req, res) => {
   const profile = req.session.profile;
 
-  const response = {};  
-  response.rp = {  
-    id: req.host,  
-    name: 'Example'  
-  };  
-  response.user = {  
-    displayName: profile.displayName,  
-    // Randomly generate a user id and BASE64URL encode it  
-    id: createBase64Random(),  
-    name: profile.name  
-  };  
-  response.pubKeyCredParams = [{  
-    type: 'public-key', alg: -7  
-  }, {  
-    type: 'public-key', alg: -257  
-  }];  
-  response.timeout = 1000 * 30;  
-  // Randomly generate a challenge and BASE64URL encode it  
-  response.challenge = createBase64Random();  
+  const response = {};
+  response.rp = {
+    id: req.host,
+    name: 'Example'
+  };
+  response.user = {
+    displayName: profile.displayName,
+    // Randomly generate a user id and BASE64URL encode it
+    id: createBase64Random(),
+    name: profile.name
+  };
+  response.pubKeyCredParams = [{
+    type: 'public-key', alg: -7
+  }, {
+    type: 'public-key', alg: -257
+  }];
+  response.timeout = 1000 * 30;
+  // Randomly generate a challenge and BASE64URL encode it
+  response.challenge = createBase64Random();
   req.session.challenge = response.challenge;
 
-  const as = {}; // authenticatorSelection  
-  as.authenticatorAttachment = 'platform';  
+  const as = {}; // authenticatorSelection
+  as.authenticatorAttachment = 'platform';
   as.userVerification = 'required';
 
-  response.authenticatorSelection = as;  
+  response.authenticatorSelection = as;
   response.attestation = 'none';
 
-  res.json(response);  
+  res.json(response);
 });
 ```
 
@@ -308,14 +387,14 @@ Based on the object you just received from the server, call the Credential
 Management API to create a public key after decoding it.
 
 ```js
-  // Request a credential creation options  
+  // Request a credential creation options
   const options = await this._fetch('/makeCred');
 
-  options.user.id = base64url.decode(options.user.id);  
+  options.user.id = base64url.decode(options.user.id);
   options.challenge = base64url.decode(options.challenge);
 
-  const cred = await navigator.credentials.create({  
-    publicKey: options  
+  const cred = await navigator.credentials.create({
+    publicKey: options
   });
 ```
 
@@ -323,24 +402,24 @@ This should prompt the user to verify the identity using fingerprint etc.
 
 <img src="/web/updates/images/2018/11/webauthn-fingerprint.png" width="344" height="295">
 
-Once a user verifies identity, you will receive a public-key credential.
+Once a user verifies their identity, you will receive a public-key credential.
 
 ### Register the credential
 
 The public-key credential should be verified and stored for future use.  The 
-resulted PublicKeyCredential should looks like this:
+resultant `PublicKeyCredential` looks like this:
 
 ```js
-{  
-  id: ...,  
-  rawId: ...,  
-  type: 'public-key',  
-  response: {  
-    clientDataJSON: ...,  
-    attestationObject: ...,  
-    signature: ...,  
-    userHandle: ...  
-  }  
+{
+  id: ...,
+  rawId: ...,
+  type: 'public-key',
+  response: {
+    clientDataJSON: ...,
+    attestationObject: ...,
+    signature: ...,
+    userHandle: ...
+  }
 }
 ```
 
@@ -355,78 +434,66 @@ verify.
 
 On the server, verify the credential by:
 
-* Checking if the challenge in clientDataJSON matches with the one you left in 
-  the session.
-* Checking if the origin in clientDataJSON matches with your serving origin.
+* Checking if the `challenge` in `clientDataJSON` matches the one you left in the 
+  session.
+* Checking if the `origin` in `clientDataJSON` matches your serving origin.
 
 Server side code would look like this:
 
 ```js
-router.post('/regCred', sessionCheck, async (req, res) =&gt; {  
-  const profile = req.session.profile;  
-  const challenge = req.session.challenge;  
+router.post('/regCred', sessionCheck, async (req, res) => {
+  const profile = req.session.profile;
+  const challenge = req.session.challenge;
   const origin = `${req.protocol}://${req.get('host')}`;
 
-  const credId = req.body.id;  
-  const type = req.body.type;  
-  const response = req.body.response;  
-  if (!credId || !type || !response) {  
-    res.status(400).send('`response` missing in request');  
-    return;  
+  const credId = req.body.id;
+  const type = req.body.type;
+  const response = req.body.response;
+  if (!credId || !type || !response) {
+    res.status(400).send('`response` missing in request');
+    return;
   }
 
-  try {  
-    const attestationObject = response.attestationObject;  
-    const clientDataJSON = response.clientDataJSON;  
-    if (!attestationObject || !clientDataJSON)  
-      throw 'Invalid request.';
-
-    // const signature = response.signature;  
-    // const userHandle = response.userHandle;  
+  try {
+    const clientDataJSON = response.clientDataJSON;
     const clientData = JSON.parse(base64url.decode(clientDataJSON));
 
-    // Verify challenge  
-    if (clientData.challenge !== challenge)  
+    // Verify challenge
+    if (clientData.challenge !== challenge)
       throw 'Wrong challenge code.';
 
-    // Verify origin  
-    if (clientData.origin !== origin)  
+    // Verify origin
+    if (clientData.origin !== origin)
       throw 'Wrong origin.';
 
-    // Skip checking attestation as we assume `fmt == 'none'`  
-    // const buffer = base64url.toBuffer(attestationObject);  
-    // const response = cbor.decodeAllSync(buffer)[0];
+    const credentialData = {
+      credId: credId,
+      type: type,
+      transports: ['internal'],
+      created: (new Date()).getTime(),
+      last_used: null
+    };
 
-    const credentialData = {  
-      credId: credId,  
-      type: type,  
-      transports: ['internal'],  
-      // Ignore attestation  
-      // response: response,  
-      created: (new Date()).getTime(),  
-      last_used: null  
-    };  
-      
-    const store = new CredentialStore();  
-    const _profile = await store.get(profile.id);  
-    if (!_profile.reauthKeys) {  
-      _profile.reauthKeys = [];  
-    }  
+    const store = new CredentialStore();
+    const _profile = await store.get(profile.id);
+    if (!_profile.reauthKeys) {
+      _profile.reauthKeys = [];
+    }
     _profile.reauthKeys.push(credentialData);
 
-    // Ignore authenticator for the moment  
+    // Ignore authenticator for the moment
     await store.save(profile.id, _profile);
 
-    res.json(profile);  
-  } catch (e) {  
-    res.status(400).send(e);  
-  }  
+    res.json(profile);
+  } catch (e) {
+    res.status(400).send(e);
+  }
 });
 ```
 
-Once verification is done, register the credential by storing the credential id. 
-Store the credential both to a server and a browser's local storage as it's 
-strongly tied to the device with the platform authenticator. Don't worry about 
+Once verification is done, register the credential by storing the credential id.
+Store the credential both to a server and a browser's local storage as it's
+strongly tied to the device with the platform authenticator. Don't worry about
 leaking the credential, it's a public key.
 
 ```js
@@ -435,107 +502,102 @@ leaking the credential, it's a public key.
 
 Now the user's credential is registered and you are ready to perform reauth.
 
-## Performing reauth
+## Performing reauthentication
 
-When a user tries to access a page that requires stronger authentication, 
-perform reath.  
-Before calling WebAuthn, make sure that
+When reauthentication is required, before calling WebAuthn, make sure that
 
-* The user needs to perform reauth because sufficient time has passed since 
-  previous authentication.
-* The user has a registered credential.
-* The device is capable of User Verifying Platform Authenticator.
+* The user has a locally stored and registered credential.
+* The device has a user verifying platform authenticator.
 
-You can check in advance whether a user has a platform UV authenticator by 
-calling PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable(). It 
-returns a promise that resolves to true if available.
+Warning: Always fallback to username/password entry form if reauthentication 
+using WebAuthn is not possible.
 
-Warning: Always fallback to id/password entry form if reauth using fingerprint 
-is not possible.
+Here's an overview of the client side code for reauthentication. We'll dive into 
+details in the following sections:
 
-On browser:  
+On browser:
 ```js
-async reauth() {  
-  // Feature detection  
-  if (!window.PublicKeyCredential)  
+async reauth() {
+  // Feature detection
+  if (!window.PublicKeyCredential)
     throw 'WebAuthn not supported on this browser.';
 
-  // If reauth key is not registered, abort  
-  const credId = localStorage.getItem('reauth_key');  
-  if (credId === null)  
+  // If reauth key is not registered, abort
+  const credId = localStorage.getItem('reauth_key');
+  if (credId === null)
     throw 'Reauth key not registered.';
 
-  // Request credential request options  
-  const url =`/reauth?key=${encodeURIComponent(credId)}`;  
+  // Request credential request options
+  const url =`/reauth?key=${encodeURIComponent(credId)}`;
   const options = await this._fetch(url);
 
-  // Decode the options  
+  // Decode the options
   options.challenge = base64url.decode(options.challenge);
 
-  if (options.allowCredentials) {  
-    for (let cred of options.allowCredentials) {  
-      cred.id = base64url.decode(cred.id);  
-    }  
+  if (options.allowCredentials) {
+    for (let cred of options.allowCredentials) {
+      cred.id = base64url.decode(cred.id);
+    }
   }
 
-  // Get a public key credential  
-  const cred = await navigator.credentials.get({  
-    publicKey: options  
+  // Get a public key credential
+  const cred = await navigator.credentials.get({
+    publicKey: options
   });
 
-  // Encode the credential  
+  // Encode the credential
   const parsedCred = await this._encodeAuthenticatorAssertionResponse(cred);
 
-  // Verify the credential  
-  return await this._fetch('/verifyReauth', parsedCred);  
+  // Verify the credential
+  return await this._fetch('/verifyReauth', parsedCred);
 }
 ```
 
 ### Request a credential request options
 
-We start by creating an object that will be passed to WebAuthn's credential 
-getting API as an option. A PublicKeyCredentialRequestOptions look something 
-like this.
+We start by creating an object that will be passed to Credential Management
+API's get() function as an option. A `PublicKeyCredentialRequestOptions` look
+something like this.
 
 ```js
-const options = {  
-  challenge: ...,  
-  allowCredentials: [{  
-    id: ..., // credential id  
-    type: 'public-key',  
-    transports: ['internal'] // platform authenticator  
-  }],  
-  userVerification: 'required'  
+const options = {
+  challenge: ...,
+  allowCredentials: [{
+    id: ..., // credential id
+    type: 'public-key',
+    transports: ['internal'] // platform authenticator
+  }],
+  userVerification: 'required'
 };
 ```
 
 Let's have a look at key properties specific for reauth use case.
 
-userVerfiication should be 'required' for the same reason mentioned earlier in 
-this post. This restricts to be user verifiable authenticator.
+`userVerfiication` should be '`required`' to limit the request to user verifying 
+authenticator.
 
-allowCredentials whitelist authenticators that matches credential descriptors 
-provided as an array. In reauth case, you are supposed to provide a single 
-credential descriptor that matches the one stored locally.
+`allowCredentials` lists the authenticators that have been previously registered. 
+In reauth case, you are supposed to provide a single credential descriptor that 
+matches the one stored locally.
 
-Server side:  
+Server side:
 ```js
-router.get('/reauth', sessionCheck, async (req, res) =&gt; {  
+router.get('/reauth', sessionCheck, async (req, res) => {
   const key = req.query.key;
 
-  const response = {};  
-  response.userVerification = 'required';  
+  const response = {};
+  response.userVerification = 'required';
   response.challenge = createBase64Random();
 
   req.session.challenge = response.challenge;
 
-  response.allowCredentials = [{  
-    id: key,  
-    type: 'public-key',  
-    transports: ['internal']  
+  response.allowCredentials = [{
+    id: key,
+    type: 'public-key',
+    transports: ['internal']
   }];
 
-  res.json(response);  
+  res.json(response);
 });
 ```
 
@@ -545,18 +607,18 @@ Based on the object you just received from the server, call the Credential
 Management API to get a public key after decoding it.
 
 ```js
-  // Decode the options  
+  // Decode the options
   options.challenge = base64url.decode(options.challenge);
 
-  if (options.allowCredentials) {  
-    for (let cred of options.allowCredentials) {  
-      cred.id = base64url.decode(cred.id);  
-    }  
+  if (options.allowCredentials) {
+    for (let cred of options.allowCredentials) {
+      cred.id = base64url.decode(cred.id);
+    }
   }
 
-  // Get a public key credential  
-  const cred = await navigator.credentials.get({  
-    publicKey: options  
+  // Get a public key credential
+  const cred = await navigator.credentials.get({
+    publicKey: options
   });
 ```
 
@@ -570,20 +632,20 @@ Once a user verifies identity, you will receive a public-key credential.
 
 The public-key credential should be verified before authenticating the user. 
 This looks very similar to the object you received when registering an 
-authenticator, except response.attestationObject is replaced with 
-response.authenticatorData.
+authenticator, except `response.attestationObject` is replaced with 
+`response.authenticatorData`.
 
 ```js
-{  
-  id: ...,  
-  rawId: ...,  
-  type: 'public-key',  
-  response: {  
-    clientDataJSON: ...,  
-    authenticatorData: ...,  
-    signature: ...,  
-    userHandle: ...  
-  }  
+{
+  id: ...,
+  rawId: ...,
+  type: 'public-key',
+  response: {
+    clientDataJSON: ...,
+    authenticatorData: ...,
+    signature: ...,
+    userHandle: ...
+  }
 }
 ```
 
@@ -591,85 +653,78 @@ Encode necessary part of it with BASE64URL and pass it back to a server to
 verify.
 
 ```js
-  // Encode the credential  
+  // Encode the credential
   const parsedCred = await this._encodeAuthenticatorAssertionResponse(cred);
 
-  // Verify the credential  
+  // Verify the credential
   return await this._fetch('/verifyReauth', parsedCred);
 ```
 
 On the server, verify the credential by:
 
-* Checking if the challenge in clientDataJSON matches with the one you left in 
-  the session.
-* Checking if the origin in clientDataJSON matches with your serving origin.
+* Checking if the `challenge` in `clientDataJSON` matches the one you left in the 
+  session.
+* Checking if the `origin` in `clientDataJSON` matches your serving origin.
 * Checking that the credential id matches the one stored to database.
 
-Server side:  
+You can use almost identical code as registering a credential, except checking 
+whether the credential id is stored in the database.
+
+Server side:
 ```js
-router.post('/verifyReauth', sessionCheck, async (req, res) =&gt; {  
-  const profile = req.session.profile;  
-  const challenge = req.session.challenge;  
+router.post('/verifyReauth', sessionCheck, async (req, res) => {
+  const profile = req.session.profile;
+  const challenge = req.session.challenge;
   const origin = `${req.protocol}://${req.get('host')}`;
 
-  const credId = req.body.id;  
-  const type = req.body.type;  
-  const response = req.body.response;  
-  if (!credId || !type || !response) {  
-    res.status(400).send('`response` missing in request');  
-    return;  
+  const credId = req.body.id;
+  const type = req.body.type;
+  const response = req.body.response;
+  if (!credId || !type || !response) {
+    res.status(400).send('`response` missing in request');
+    return;
   }
 
-  try {  
-    const authenticatorData = response.authenticatorData;  
-    const clientDataJSON = response.clientDataJSON;  
-    if (!authenticatorData || !clientDataJSON)  
-      throw 'Invalid request.';
-
-    // const signature = response.signature;  
-    // const userHandle = response.userHandle;  
+  try {
+    const clientDataJSON = response.clientDataJSON;
     const clientData = JSON.parse(base64url.decode(clientDataJSON));
 
-    // Verify challenge  
-    if (clientData.challenge !== challenge)  
+    // Verify challenge
+    if (clientData.challenge !== challenge)
       throw 'Wrong challenge code.';
 
-    // Verify origin  
-    if (clientData.origin !== origin)  
+    // Verify origin
+    if (clientData.origin !== origin)
       throw 'Wrong origin.';
 
-    // Skip checking attestation as we assume `fmt == 'none'`  
-    // const buffer = base64url.toBuffer(authenticatorData);  
-    // const response = cbor.decodeAllSync(buffer)[0];
-
-    const store = new CredentialStore();  
-    const _profile = await store.get(profile.id);  
-    let authr = null;  
-    if (_profile.reauthKeys) {  
-      for (let _authr of _profile.reauthKeys) {  
-        if (_authr.credId === credId) {  
-          authr = _authr;  
-          break;  
-        }  
-      }  
-    }  
-    if (!authr) {  
-      res.status(400).send('Matching authenticator not found');  
-      return;  
+    const store = new CredentialStore();
+    const _profile = await store.get(profile.id);
+    let authr = null;
+    if (_profile.reauthKeys) {
+      for (let _authr of _profile.reauthKeys) {
+        if (_authr.credId === credId) {
+          authr = _authr;
+          break;
+        }
+      }
+    }
+    if (!authr) {
+      res.status(400).send('Matching authenticator not found');
+      return;
     }
 
-    // Update timestamp  
-    const now = (new Date()).getTime();  
-    authr.last_used = now;  
+    // Update timestamp
+    const now = (new Date()).getTime();
+    authr.last_used = now;
     profile.last_auth = now;
 
-    // Ignore authenticator for the moment  
+    // Ignore authenticator for the moment
     store.save(profile.id, _profile);
 
-    res.json(profile);  
-  } catch (e) {  
-    res.status(400).send(e);  
-  }  
+    res.json(profile);
+  } catch (e) {
+    res.status(400).send(e);
+  }
 });
 ```
 
@@ -677,11 +732,28 @@ Once verification is done, you can let the user sign-in.
 
 ## Summary
 
-Important concepts you have learned in this article:
+You have learned several important concepts specifically needed for biometric
+based reauthentication UX in this article:
 
-* Platform authenticators
-* "User Present" and "User Verification"
-* Reauth credential should stored both locally and remotely.
+* **Platform authenticators** are authenticators built into a client device
+  running the browser. By making  `authenticatorSelection.authenticatorAttachment`
+  to '`platform`', you can restrict users to use platform authenticators only.
+* Authenticators such as security keys prove user presence (**User Present**).
+  Other authenticators with biometric sensors can additionally verify a user
+  (**User Verification**). By making `authenticatorSelection.userVerification`
+  to '`required`', you can restrict users to use user verifying authenticators
+  only.
+* To check if user verifying and platform authenticators is available on the
+  browser, you can use
+  `PublicKeyCredentials.isUserVerifyingPlatformAuthenticatorAvailable()`.
+* Using attestation is discouraged in consumer scenarios. By making
+  `attestation` to '`none`', you can request an authenticator not to return an
+  attestation.
+* As reauthentication is specific to the same device, a credential or an
+  identifier for it should be stored locally.
+
+With these in mind, I hope you'll build a great reauthentication UX on your
+website.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
