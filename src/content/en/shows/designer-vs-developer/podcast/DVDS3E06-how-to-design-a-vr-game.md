@@ -20,7 +20,7 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
 Mustafa speaks to Ada Rose Cannon, Developer Advocate for the
-Samsung Internet Web Browser, about their passion about Virtual
+Samsung Internet Web Browser, about their passion for Virtual
 Reality on the Web, new Web Standards and stitching various
 technologies on the web to build a VR game on anxiety and
 mental health.
