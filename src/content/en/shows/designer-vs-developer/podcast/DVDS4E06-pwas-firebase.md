@@ -32,7 +32,7 @@ In this episode:
 * Designing for speed
 * Firebase and its size
 * [Progressive WordPress (PWP)](http://bit.ly/2Jl2nMK) 
-* [Cloud firestore](http://bit.ly/2AMVu1u)
+* [Cloud Firestore](http://bit.ly/2AMVu1u)
 * [How to build a simple camera component](http://bit.ly/2SK90dn)
 * [Firebase hosting](http://bit.ly/2SLQKQJ)
 * [JavaScript Start-up Optimization](http://bit.ly/2D2CzkW)
