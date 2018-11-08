@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Lynn Mercier on material design components
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-09-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E03-Material-Design-Components.mp3 #}
 {# wf_podcast_duration: 00:13:01 #}
@@ -38,13 +38,16 @@ In this episode:
 * [Responsive web design tips from BBC News](https://muss.me/2pqlSI4)
 
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E03-Material-Design-Components.mp3">
+<audio style="width: 100%" controls preload="none" 
+src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS4E03-Material-Design-Components.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
+<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}

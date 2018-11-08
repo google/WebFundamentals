@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Ada Rose Cannon on designing a VR game in a week.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-18 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2018-07-18 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3 #}
 {# wf_podcast_duration: 00:21:02 #}
@@ -20,7 +20,7 @@ the two, providing take aways, solutions to workflows, tools and
 discussions on everyday struggles.
 
 Mustafa speaks to Ada Rose Cannon, Developer Advocate for the
-Samsung Internet Web Browser, about her passion about Virtual
+Samsung Internet Web Browser, about their passion for Virtual
 Reality on the Web, new Web Standards and stitching various
 technologies on the web to build a VR game on anxiety and
 mental health.
@@ -40,13 +40,15 @@ In this episode:
 * [Google Poly](http://bit.ly/2Jdo6lr){: .external }
 * Accessibility in VR
 
-<audio style="width: 100%" controls preload="none"
-  src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3">
+<audio style="width: 100%" controls preload="none" src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS3E06-How-to-design-VR-game.mp3">
 
 Subscribe to Designer Vs Developer Podcast via
+<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}
