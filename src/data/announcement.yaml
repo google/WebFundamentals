@@ -17,4 +17,4 @@ description: >
       }
     </style>
     <b>Chrome Dev Summit 2018</b> is happening now and streaming live on YouTube.
-    <a href="https://developer.chrome.com/devsummit/schedule" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Watch now</a>.
+    <a href="https://developer.chrome.com/devsummit/" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Watch now</a>.
