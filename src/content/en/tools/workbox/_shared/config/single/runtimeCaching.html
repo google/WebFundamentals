@@ -42,6 +42,13 @@
         maxEntries: 5,
         maxAgeSeconds: 60,
       },
+      // Configure background sync.
+      backgroundSync: {
+        name: 'my-queue-name',
+        options: {
+          maxRetentionTime: 60 * 60,
+        },
+      },
       // Configure which responses are considered cacheable.
       cacheableResponse: {
         statuses: [0, 200],
