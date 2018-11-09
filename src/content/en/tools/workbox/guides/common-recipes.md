@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-10-11 #}
+{# wf_updated_on: 2018-11-07 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -178,6 +178,36 @@ we could use the regular expression `new RegExp('/static/')`, like so:
 workbox.routing.registerRoute(
   new RegExp('/static/'),
   workbox.strategies.staleWhileRevalidate()
+);
+```
+
+## Cache Resources Based on Resource Type
+
+You can use the
+[`RequestDestination`](https://developer.mozilla.org/en-US/docs/Web/API/RequestDestination)
+enumerate type of the
+[destination](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
+of the request to determine a strategy.
+For example, when the target is `<audio>` data:
+
+```javascript
+workbox.routing.registerRoute(
+  // Custom `matchCallback` function
+  (context) => {
+    if (context.event.request.destination === 'audio') {
+      return true;
+    }
+    return null;
+  },
+  workbox.strategies.cacheFirst({
+    cacheName: 'audio',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
 );
 ```
 
