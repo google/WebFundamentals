@@ -4,7 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2018-11-09 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
+{# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
 {# wf_featured_snippet: We strongly believe that every developer should have access to the capabilities they need to make a great web experience, and we are committed to a more capable web. Learn about some of the new APIs we're considering and how you can get involved. #}
 {# wf_blink_components: N/A #}
 
