@@ -3,17 +3,19 @@ book_path: /web/updates/_book.yaml
 
 
 {# wf_published_on: 2018-11-12 #}
-{# wf_updated_on: 2018-11-08 #}
+{# wf_updated_on: 2018-11-09 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
-{# wf_tags: capabilities,files #}
-{# wf_featured_snippet: TODO #}
+{# wf_tags: writable-files,capabilities,file,filesystem #}
+{# wf_featured_snippet: The writable files API is being designed to increase interoperability of web applications with native applications, making it possible for users to choose files or directories that a web app can interact with on the native file system. #}
 {# wf_blink_components: Blink>Storage>FileSystem #}
 
 # The Writable Files API: Simplifying local file access {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+
 <div class="clearfix"></div>
+
 
 {% include "web/updates/_shared/capabilities.html" %}
 
@@ -41,12 +43,12 @@ the same directory. And there are plenty more.
 Note: Want to see how this might be implemented? Check the explainer for
 some [sample code](https://github.com/WICG/writable-files/blob/master/EXPLAINER.md#example-code).
 
-[Continue reading][explainer]{: .button .button-primary }
+[Read explainer][explainer]{: .button .button-primary }
 
 ## Security considerations
 
 The primary entry point for this API is a
-file picker, which ensures that the user always in full control over
+file picker, which ensures that the user is always in full control over
 what files and directories a website has access to. Every access to a
 user selected file (either reading or writing) is done through an
 asynchronous API, allowing the browser to potentially include additional
@@ -94,12 +96,18 @@ useful in a way that is both secure and protects user privacy.
 Share your thoughts on the [Writable Files WICG Discourse][wicg-discourse]
 discussion.
 
+{% include "web/_shared/helpful.html" %}
 
 ## Helpful Links
 
 * [Public explainer][explainer]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
+* Blink Component: `Blink>Storage>FileSystem`
+
+{% include "web/_shared/rss-widget-updates.html" %}
+
+{% include "comment-widget.html" %}
 
 
 [spec]: https://wicg.github.io/writable-files/
