@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-11-09 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -25,17 +25,17 @@ the API and ensuring assets are downloaded efficiently.
 
 ## How workbox-precaching Works
 
-When a web app is loaded for the first time workbox-precaching will look at all 
-the assets you want to download, remove any duplicates and hook up the relevant 
-service worker events to download and store the assets, saving information about 
-the revision of the asset in indexedDB.
+When a web app is loaded for the first time workbox-precaching will look at all
+the assets you want to download, remove any duplicates and hook up the relevant
+service worker events to download and store the assets, saving information about
+the revision of the asset in IndexedDB.
 
 ![Workbox precaching list to precached assets](../images/modules/workbox-precaching/precaching-step-1.png)
 
  workbox-precaching does all of this during the service worker's
  [install event](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Install_and_activate_populating_your_cache).
 
-When a user later re-visits your web app and you have a new service worker with
+When a user later revisits your web app and you have a new service worker with
 different precached assets, workbox-precaching will look at the new list
 and determine which assets are completely new and which of the existing assets
 need updating, based of their revisioning. These assets will be updated in the
@@ -47,13 +47,34 @@ this new service workers install event.
 This new service worker won't be used until it's activated and it’s activate
 event has been triggered. It’s in the activate event that workbox-precaching
 will check for any old cached assets and remove them from the cache and
-indexedDB.
+IndexedDB.
 
 ![Workbox precaching cleanup step](../images/modules/workbox-precaching/precaching-step-3.png)
 
 Precache will perform these steps each time your service worker is install
 and activated, ensuring the user has the latest assets, only downloading the
 files that have changed.
+
+### Serving Precached Responses
+
+Calling
+[`workbox.precaching.precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/workbox.precaching#.precacheAndRoute)
+or
+[`workbox.precaching.addRoute()`](/web/tools/workbox/reference-docs/latest/workbox.precaching#.addRoute)
+will create a [route](/web/tools/workbox/modules/workbox-routing) that matches requests for
+precached URLs.
+
+The response strategy used in this route is
+[cache-first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network):
+the precached response will be used, unless for that cached response is not present (due to some
+unexpected error), in which case a network response will be used instead.
+
+The order in which you call `workbox.precaching.precacheAndRoute()` or
+`workbox.precaching.addRoute()` is important. You would normally want to call it early on in your
+service worker file, before registering any additional routes with
+`workbox.routing.registerRoute()`. If you did call `workbox.routing.registerRoute()` first, and that
+route matched an incoming request, whatever strategy you defined in that additional route will be
+used to respond, instead of the cache-first strategy used by `workbox-precaching`.
 
 ## Explanation of the Precache List
 
@@ -83,11 +104,11 @@ This allows workbox-precaching to know when the file has changed and update it.
 Workbox comes with tools to help with generating this list:
 
 - workbox-build
-    - This is an npm module that can be used in a gulp task or as an npm run script.
+  - This is an npm module that can be used in a gulp task or as an npm run script.
 - workbox-webpack-plugin
-    - Webpack users can use the Workbox webpack plugin.
+  - Webpack users can use the Workbox webpack plugin.
 - workbox-cli
-    - Our CLI can also be used to generate the list of assets and add them to your service worker.
+  - Our CLI can also be used to generate the list of assets and add them to your service worker.
 
 These tools make it easy to generate and use the list of assets for your site
 but you can generate the list yourself, just make sure you include unique
@@ -117,7 +138,7 @@ workbox.precaching.precache([
 workbox.precaching.addRoute();
 ```
 
-## Incoming Requests to Precached Files
+## Incoming Requests for Precached Files
 
 One thing that `workbox.precaching` will do out of the box is manipulate
 the incoming network requests to try and match precached files. This
@@ -219,7 +240,7 @@ workbox.precaching.precacheAndRoute(
 
 ## Advanced Usage
 
-By default, workbox-precaching will set up the install and activate listeners
+By default, `workbox-precaching` will set up the install and activate listeners
 for you. For developers familiar with service workers, this may not be
 desirable and you may want finer grained control.
 
