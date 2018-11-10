@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 'Speed Index' Lighthouse 감사의 참조 문서입니다.
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Speed Index  {: .page-title }
@@ -30,8 +30,8 @@ Speed Index를 구성하는 알고리즘과 방법론에 대한 자세한 내용
 [Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index)를 참조하세요.
 
 목표 점수는 로그 정규 분포의 누적 분포 함수로
-계산됩니다. 자세한 내용은 감사의 
-[소스](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)에서
+계산됩니다. 자세한 내용은 감사의
+[소스](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)에서
 코멘트를 확인하세요.
 
 

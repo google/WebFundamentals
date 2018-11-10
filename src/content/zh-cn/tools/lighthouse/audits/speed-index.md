@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“速度指标”Lighthouse 审查的参考文档。
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-11-10 #}
 {# wf_published_on:2016-10-04 #}
 
 # 速度指标 {: .page-title }
@@ -30,7 +30,7 @@ Lighthouse 使用一个名为 [Speedline](https://github.com/pmdartus/speedline)
 
 
 目标分数通过对数正态分布的累积分布函数计算得出。
-如果您需要了解更多信息，请查看此审查的[源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)中的备注。
+如果您需要了解更多信息，请查看此审查的[源代码](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)中的备注。
 
 
 
