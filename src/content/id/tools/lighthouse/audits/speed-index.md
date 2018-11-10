@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Dokumentasi referensi untuk audit Lighthouse "Indeks Kecepatan".
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Indeks Kecepatan  {: .page-title }
@@ -31,7 +31,7 @@ lihat [Indeks Kecepatan](https://sites.google.com/a/webpagetest.org/docs/using-w
 
 Target nilai dihitung dengan fungsi distribusi kumulatif dari
 distribusi normal-log. Lihat komentar di
-[sumber](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
+[sumber](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
 dari audit jika Anda ingin mengetahui lebih banyak.
 
 

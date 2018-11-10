@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:“速度指標”Lighthouse 審查的參考文檔。
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-11-10 #}
 {# wf_published_on:2016-10-04 #}
 
 # 速度指標 {: .page-title }
@@ -30,7 +30,7 @@ Lighthouse 使用一個名爲 [Speedline](https://github.com/pmdartus/speedline)
 
 
 目標分數通過對數正態分佈的累積分佈函數計算得出。
-如果您需要了解更多信息，請查看此審查的[源代碼](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)中的備註。
+如果您需要了解更多信息，請查看此審查的[源代碼](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)中的備註。
 
 
 
