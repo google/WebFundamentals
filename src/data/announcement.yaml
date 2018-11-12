@@ -16,7 +16,5 @@ description: >
         margin-right: 8px;
       }
     </style>
-    The <b>Chrome Dev Summit</b> begins next Monday at 10:00am (Pacific). Don’t
-    forget to tune into the livestream on the Google Chrome Developers
-    channel on YouTube to follow the event.
-    <a href="https://developer.chrome.com/devsummit/schedule" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">#ChromeDevSummit Schedule.</a>
+    <b>Chrome Dev Summit 2018</b> is happening now and streaming live on YouTube.
+    <a href="https://developer.chrome.com/devsummit/" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Watch now</a>.
