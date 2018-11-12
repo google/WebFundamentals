@@ -29,6 +29,7 @@
   "buildprocess",
   "cache",
   "canvas",
+  "capabilities",
   "casestudy",
   "chai",
   "chrome-ux-report",
@@ -293,6 +294,7 @@
   "workers",
   "worklet",
   "workflow",
+  "writable-files",
   "xhr",
   "xhr2",
   "yeoman"
