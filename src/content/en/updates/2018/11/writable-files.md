@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 
 
 {# wf_published_on: 2018-11-12 #}
-{# wf_updated_on: 2018-11-09 #}
+{# wf_updated_on: 2018-11-12 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: writable-files,capabilities,file,filesystem #}
 {# wf_featured_snippet: The writable files API is being designed to increase interoperability of web applications with native applications, making it possible for users to choose files or directories that a web app can interact with on the native file system. #}
