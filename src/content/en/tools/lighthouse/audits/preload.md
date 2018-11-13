@@ -62,18 +62,8 @@ as soon as possible.
   </figcaption>
 </figure>
 
-The table below lists browser support for preload links.
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-  <p class="ciu_embed" data-feature="link-rel-preload"
-     data-periods="future_2,future_1,current,past_1,past_2"
-     data-accessible-colours="false">
-    See <a href="http://caniuse.com/#feat=link-rel-preload">Can I Use link-rel-preload?</a>
-    to see browser support for preload links.
-  </p>
-  <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"
-          onload="devsite.framebox.AutoSizeClient.updateSize()"></script>
-{% endframebox %}
+See <a href="http://caniuse.com/#feat=link-rel-preload">Can I Use link-rel-preload?</a>
+to see browser support for preload links.
 
 ## More information {: #more-info }
 
