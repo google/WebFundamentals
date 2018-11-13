@@ -9,13 +9,14 @@ stylesheets" e "Render-blocking scripts".
 
 # Risorse bloccanti il rendering {: .page-title }
 
-## Overview {: #overview }
+## Panoramica {: #overview}
 
 Caricamenti rapidi delle pagine comportano un maggiore coinvolgimento degli
 utenti, più visualizzazioni di pagina e conversione migliorata.
 
-You can improve your page load speed by inlining links and scripts that
-are required for first paint, and deferring those that aren't.
+È possibile migliorare la velocità di caricamento della pagina mediante
+l'integrazione di collegamenti e script necessari per la prima vernice e il
+differimento di quelli che non lo sono.
 
 ## Raccomandazioni {: #recommendations }
 
@@ -47,21 +48,21 @@ per saperne di più.
 Come regola generale, `async` dovrebbe essere usato il più possibile con le
 importazioni HTML.
 
-## More information {: #more-info }
+## Ulteriori informazioni {: # more-info}
 
 Lighthouse identifica tre tipi di risorse bloccanti.
 
-A `<script>` tag that:
+Un tag `<script>` che:
 
 - Si trova all'interno di `<head>` del documento.
-- Does not have a `defer` attribute.
-- Does not have an `async` attribute.
+- Non ha un attributo di `defer` .
+- Non ha un attributo `async` .
 
 Un tag `<link rel="stylesheet">` che:
 
-- Does not have a `disabled` attribute. When this attribute is present,the
-browser does not download the stylesheet.
-- Does not have a `media` attribute that matches the user's device.
+- Non ha un attributo `disabled` . Quando questo attributo è presente, il
+browser non scarica il foglio di stile.
+- Non ha un attributo `media` che corrisponda al dispositivo dell'utente.
 
 Un tag `<link rel="import">` che:
 
