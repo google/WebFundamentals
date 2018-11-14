@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 page_type: landing
 
-{# wf_updated_on: 2017-09-10 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: Blink>DOM #}
 
 <style>
   .wf-hot {padding-top: 0 !important;}
@@ -51,11 +52,11 @@ devsite-landing-row-cards">
       <div class="devsite-landing-row-item-description">
         <h3>Быстрый</h3>
         <div class="devsite-landing-row-item-description-content">
-<p>Пользователи не ожидают дерганной прокрутки или низкой
-производительности. Сделать ваш сайт быстрым это процесс, который начинается с
-понимания <a href="performance/rail">как RAIL влияет на производительность</a>
-вашего сайта и как использовать эти измерения и улучшить производительность
-вашего сайта.         </p>
+<p>Пользователи не ожидают дёргающющуюся прокрутку или медленную
+загрузку. Увеличение скорости работы вашего сайта это процесс, которые
+начинается с понимания того, <a href="performance/rail">как RAIL влияет на
+произвонительность</a> вашего сайта и как использовать его для измерения и
+улучшения производительности.</p>
           <ul>
             <li>
 <span class="compare-yes"></span> <a
