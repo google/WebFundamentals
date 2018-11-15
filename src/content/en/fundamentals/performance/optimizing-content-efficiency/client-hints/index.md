@@ -2,8 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TBD
 
-{# wf_updated_on: 2018-11-11 #}
-{# wf_published_on: 2018-11-12 #}
+{# wf_updated_on: 2018-11-15 #}
+{# wf_published_on: 2018-11-22 #}
 {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
 # Adapting to Users with Client Hints {: .page-title }
