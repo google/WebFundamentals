@@ -92,7 +92,7 @@ window.customElements.define('app-drawer', AppDrawer);
 window.customElements.define('app-drawer', class extends HTMLElement {...});
 ```
 
-Example usage:
+Пример использования:
 
 ```
 <app-drawer></app-drawer>
@@ -104,7 +104,7 @@ Example usage:
 быть добавлены обработчики событий и т.д. Читайте далее для ознакомления с
 большим количеством примеров.
 
-### Defining an element's JavaScript API {: #jsapi}
+### Описание API JavaScript {: #jsapi}
 
 Функциональные возможности пользовательского элемента определяются при помощи
 [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
@@ -173,68 +173,67 @@ class AppDrawer extends HTMLElement {
 customElements.define('app-drawer', AppDrawer);
 ```
 
-In this example, we're creating a drawer that has an `open` property, `disabled`
-property, and a `toggleDrawer()` method. It also [reflects properties as HTML
-attributes](#reflectattr).
+В этом примере мы создаем ящик с `open` свойством, `disabled` свойством и
+`toggleDrawer()` . Он также [отражает свойства как атрибуты HTML](#reflectattr)
+. В этом случае мы создаем боковую выдвижную навигационную панель со свойствами
+`open` , `disabled` и методом `toggleDrawer()` . [HTML](#reflectattr) .
 
-A neat feature of custom elements is that **`this` inside a class definition
-refers to the DOM element itself** i.e. the instance of the class. In our
-example, `this` refers to `<app-drawer>`. This (😉) is how the element can
-attach a `click` listener to itself! And you're not limited to event listeners.
-The entire DOM API is available inside element code. Use `this` to access the
-element's properties, inspect its children (`this.children`), query nodes
-(`this.querySelectorAll('.items')`), etc.
+Отличная возможность пользовательских элементов - то, что **`this` внутри
+определения класса относится к самому элементу DOM** , то есть к образцу класса.
+В нашем примере `this` относится к `<app-drawer>` . За счет этого элемента может
+подключить обработчик события нажмите для себя самого! И при помощи этого
+ключевого слова можно не только подключать обработчики событий. Весь API DOM
+доступен внутри кода элемента. Используйте `this` для доступа к свойствам
+элемента, обращения к его дочерним элементам ( `this.children` ), запроса узлов
+( `this.querySelectorAll('.items')` ) и т.д.
 
-**Rules on creating custom elements**
+**Правила создания пользовательских элементов**
 
-1. The name of a custom element **must contain a dash (-)**. So
-`<x-tags>`,`<my-element>`, and `<my-awesome-app>` are all valid names, while
-`<tabs>`and `<foo_bar>` are not. This requirement is so the HTML parser
-candistinguish custom elements from regular elements. It also ensures
-forwardcompatibility when new tags are added to HTML.
+1. В имени пользовательского элемента **должен содержать дефис (-)** . Таким
+образом, `<x-tags>` , `<my-element>` и `<my-awesome-app>` - допустимые имена, а
+`<tabs>` и `<foo_bar>` - нет. Благодаря этому парсер (* синтаксический
+анализатор) HTML может отличить пользовательские элементы от стандартных. (При
+работе с другими приложениями).
 2. Вы не можете зарегистрировать один и тот же тэг более одного раза. При
 попытке это выполнить будет выкунута ошибка `DOMException`. Как только вы
 сообщили браузеру о новом тэге, то все. Назад дороги нет.
-3. Custom elements cannot be self-closing because HTML only allows [a few
-elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)to be
-self-closing. Always write a closing
-tag(<code><app-drawer></app-drawer></code>).
+3. Пользовательские элементы не могут быть самозакрывающимися, поскольку
+согласно стандарту HTML только [несколько
+элементов](https://html.spec.whatwg.org/multipage/syntax.html#void-elements)
+могут быть самозакрывающимися. Всегда добавляйте закрывающийся тэг (
+<code><app-drawer></app-drawer></code> drawer
+<code><app-drawer></app-drawer></code> ).
 
-## Custom element reactions {: #reactions}
+## Реакции (* ответные действия) пользовательского элемента {: #reactions}
 
-A custom element can define special lifecycle hooks for running code during
-interesting times of its existence. These are called **custom element
-reactions**.
+Для детской организации могут быть назначены специальные перехватчики событий (*
+специальная процедура, отслеживающая появление некоторых дорог), связанных с его
+жизненным циклом, для выполнения кода в определенных моментах его существования.
+Они называются **реакциями пользовательского элемента {* strong0}.**
 
 <table>
   <thead>
     <tr>
       <th>Имя</th>
-      <th>Called when</th>
+      <th>Вызывается</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>constructor</code></td>
-      <td>An instance of the element is
-        created or <a href="#upgrades">upgraded</a>. Useful for initializing
-        state, settings up event listeners, or
-        <a href="#shadowdom">creating shadow dom</a>.
-        See the
-<a
-href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">
-        spec
-        </a>
-        for restrictions on what you can do in the <code>constructor</code>.
-      </td>
+<td>При создании или <a href="#upgrades">обновлении</a> образца элемента.
+Полезен для инициализации характеристик состояния, регистрации обработчиков
+событий или <a href="#shadowdom">создания Shadow DOM</a> . Обратитесь к <a
+href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">спецификации</a>
+для ознакомления с тем, что вы можете выполнить в <code>constructor</code>
+.</td>
     </tr>
     <tr>
       <td><code>connectedCallback</code></td>
-      <td>Called every time the
-        element is inserted into the DOM. Useful for running setup code, such as
-        fetching resources or rendering. Generally, you should try to delay work
-        until this time.
-      </td>
+<td>каждый раз при добавлении элемента в DOM. Полезен для выполнения кода
+для настройки элемента, например для получения ресурсов или отображения. Как
+правило, вам следует стараться отложить выполнение остального кода до
+наступления этого момента.</td>
     </tr>
     <tr>
       <td><code>disconnectedCallback</code></td>
@@ -252,19 +251,19 @@ href="#upgrades">обновлении</a>. <b>Обратите внимание:
     </tr>
     <tr>
       <td><code>adoptedCallback()</code></td>
-      <td>The
-        custom element has been moved into a new <code>document</code> (e.g.
-        someone called <code>document.adoptNode(el)</code>).
-      </td>
+<td>при перемещении пользовательского элемента в новый
+<code>документ</code> (например при вызове <code>document.adoptNode(el)</code>
+).</td>
     </tr>
   </tbody>
 </table>
 
-Note: The browser calls the `attributeChangedCallback()` for any attributes
-whitelisted in the `observedAttributes` array (see [Observing changes to
-attributes](#attrchanges)). Essentially, this is a performance optimization.
-When users change a common attribute like `style` or `class`, you don't want to
-be spammed with tons of callbacks.
+Обратите внимание: Браузер вызывает `attributeChangedCallback()` при изменении
+значений любого атрибут, указанный в массиве `observedAttributes` (обратитесь к
+разделу, посвященное [Отслеживание изменений значений атрибутов](#attrchanges)
+). По сути, это делается с максимальной производительностью (* для программных
+средств это делается путем профилирования и последующего анализа узких мест ).
+Например, `style` или `class` .
 
 **Вышеуказанные обработчики событий вызываются последовательно**. Если кто-либо
 вызывает  `el.setAttribute()` для вашего элемента, то браузер тут же вызывает
@@ -300,7 +299,7 @@ class AppDrawer extends HTMLElement {
 `disconnectedCallback()` никогда не будет вызван при закрытии пользователем
 вкладки.
 
-## Properties and attributes
+## Свойства и атрибуты
 
 ### Преобразование значений свойств в значения атрибутов HTML {: #reflectattr}
 
@@ -312,7 +311,7 @@ div.id = 'my-id';
 div.hidden = true;
 ```
 
-the values are applied to the live DOM as attributes:
+значения применяются к существущему DOM в качестве атрибутов:
 
 ```
 <div id="my-id" hidden>
@@ -326,9 +325,8 @@ the values are applied to the live DOM as attributes:
 ограниченными возможностями) или API для работы с селекторами CSS, в своей
 работе полагаются на атрибуты.
 
-Reflecting a property is useful anywhere you want to **keep the element's DOM
-representation in sync with its JavaScript state**. One reason you might want to
-reflect a property is so user-defined styling applies when JS state changes.
+Преобразование значений свойств полезно везде, где вы хотите **синхронизировать
+представление элемента в DOM с его состоянием в коде JavaScript** .
 
 Одна из причин, по которой вам могло бы захотеться преобразовать значение
 свойства – то, что благодаря этому определенные пользователем стилевые правила
@@ -344,9 +342,10 @@ app-drawer[disabled] {
 }
 ```
 
-When the `disabled` property is changed in JS, we want that attribute to be
-added to the DOM so the user's selector matches. The element can provide that
-behavior by reflecting the value to an attribute of the same name:
+При изменении в коде JS значения свойства `disabled` Мы хотим, чтобы этот
+атрибут был добавлен в DOM, за счет чего были применены административные правила
+для определенного пользователя селектора. Такое поведение может быть обеспечено
+за счет преобразования значений свойств в значение атрибута c тем же именем.
 
 ```
 ...
@@ -429,7 +428,8 @@ JS с его атрибутом**.
 `customElements.define()`. Однако это не означает, что вы должны определить +
 зарегистрировать пользовательский элемент сразу.
 
-**Custom elements can be used *before* their definition is registered**.
+**Пользовательские элементы могут быть использованы *до* регистрации их
+определения** .
 
 Прогрессивное улучшение (* предполагает, что веб-интерфейсы должны создаваться
 поэтапно, циклически, от простого к сложному. На каждом из этапов должен
@@ -492,7 +492,7 @@ DOM в коде для определения элемента. Custom elements 
 content by using the DOM APIs inside
 element code. При этом нам оказываются полезными [реакции](#reactions).
 
-**Example** - create an element with some default HTML:
+**Пример** : создание элемента с чем-то HTML-кодом, элемента по умолчанию:
 
 ```
 customElements.define('x-foo-with-markup', class extends HTMLElement {
@@ -503,7 +503,7 @@ customElements.define('x-foo-with-markup', class extends HTMLElement {
 });
 ```
 
-Declaring this tag will produce:
+При объявлении этого тэга получим:
 
 ```
 <x-foo-with-markup>
@@ -549,7 +549,7 @@ Declaring this tag will produce:
 удивлены, что их разметка удалена. Более удачный вариант добавления контента,
 определенного в элементе, – использование Shadow DOM, что мы далее и рассмотрим.
 
-### Creating an element that uses Shadow DOM {: #shadowdom}
+### Создание элемента, в котором используется Shadow DOM {: #shadowdom}
 
 Обратите внимание: я не буду рассматривать возможности [Shadow
 DOM](http://w3c.github.io/webcomponents/spec/shadow/) в этом руководстве, но
@@ -591,13 +591,14 @@ customElements.define('x-foo-shadowdom', class extends HTMLElement {
 });
 ```
 
-Note: In the above snippet we use a `template` element to clone DOM, instead of
-setting the `innerHTML` of the `shadowRoot`. This technique cuts down on HTML
-parse costs because the content of the template is only parsed once, whereas
-calling `innerHTML` on the `shadowRoot` will parse the HTML for each instance.
-We'll talk more about templates in the next section.
+Обратите внимание: В примере выше мы используем `template` для клонирования DOM,
+а не `shadowRoot` `innerHTML` `shadowRoot` . Благодаря этому маневру сокращается
+время, используемое для парсинга HTML, поскольку контент шаблона подвергается
+парсингу только один раз, в то время как при вызове `innerHTML` для `shadowRoot`
+парсинг HTML будет выполняться при добавлении каждого образца элемента. Мы
+поговорим подробнее о шаблонах в следующем разделе.
 
-Example usage:
+Пример использования:
 
 ```
 <x-foo-shadowdom>
@@ -656,17 +657,17 @@ Example usage:
 
 {% endframebox %}
 
-### Creating elements from a `<template>` {: #fromtemplate}
+### Создание элементов из `<template>` {: #fromtemplate}
 
-For those unfamiliar, the [`<template>`
+Для тех, кто не знает, элемент [`<template>`
 element](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
-allows you to declare fragments of DOM which are parsed, inert at page load, and
-can be activated later at runtime. It's another API primitive in the web
-components family. **Templates are an ideal placeholder for declaring the
-structure of a custom element**.
+позволяет вам объявлять фрагменты DOM, которые подвергаются парсингу, неактивны
+при загрузке страницы и могут быть активированы позже при выполнении кода. Это
+еще один примитив (* базовый элемент) API в семействе Web Components. **Шаблоны
+являются идеальным местом для объявлений** .
 
-**Example:** registering an element with Shadow DOM content created from a
-`<template>`:
+**Пример** : регистрация элемента с контентом Shadow DOM, созданным из
+`<template>` :
 
 ```
 <template id="x-foo-from-template">
@@ -695,10 +696,11 @@ structure of a custom element**.
 За счет этих нескольких строк кода многое происходит. Давайте рассмотрим
 ключевые моменты:
 
-1. We're defining a new element in HTML: `<x-foo-from-template>`
-2. The element's Shadow DOM is created from a `<template>`
-3. The element's DOM is local to the element thanks to Shadow DOM
-4. The element's internal CSS is scoped to the element thanks to Shadow DOM
+1. Мы определяем новый элемент в HTML - `<x-foo-from-template>`
+2. Создаем Shadow DOM элемента из `<template>`
+3. DOM элемента заключена в самом элементе благодаря Shadow DOM
+4. Область видимости (CSS): CSS CSS-код элемента ограничена самим элементом
+Благодаря Shadow DOM
 
 {% framebox height="120px" %}
 
@@ -742,7 +744,7 @@ structure of a custom element**.
 
 {% endframebox %}
 
-## Styling a custom element {: #styling}
+## Добавление стилевого оформления для пользовательского элемента {: #styling}
 
 Даже если бы такое оформление для элемента задано в нем самом при помощи Shadow
 DOM, пользователи могут добавить для вашего пользовательского элемента свое
@@ -789,7 +791,7 @@ DOM, пользователи могут добавить для вашего п
 стилевые правила, заданные в самом элементе. Обратитесь к разделу «[Создание
 элемента, в котором используется Shadow DOM](#shadowdom)[».](#shadowdom)
 
-### Pre-styling unregistered elements {: #prestyle}
+### Добавление соответствующего стиля для незарегистрированного элемента {: #prestyle}
 
 До [обновления](#upgrades) элемента вы можете выбрать его в CSS при помощи
 псевдокласса `:defined`. Before an element is [upgraded](#upgrades) you can
@@ -800,7 +802,7 @@ Flash of unstyled content – появление контента без сти�
 скрытия неопределенных компонентов и их постепенного проявления после их
 определения.
 
-**Example** - hide `<app-drawer>` before it's defined:
+**Пример** : скрываем `<app-drawer>` drawer `<app-drawer>` до его определения:
 
 ```
 app-drawer:not(:defined) {
@@ -812,19 +814,23 @@ app-drawer:not(:defined) {
 }
 ```
 
-After `<app-drawer>` becomes defined, the selector (`app-drawer:not(:defined)`)
-no longer matches.
+После того, как `<app-drawer>` drawer `<app-drawer>` определенно, селектор (
+`app-drawer:not(:defined)` drawer `app-drawer:not(:defined)` ) для него более не
+подходит.
 
-## Extending elements {: #extend}
+## Расширение возможностей элементов {: #extend}
 
-The Custom Elements API is useful for creating new HTML elements, but it's also
-useful for extending other custom elements or even the browser's built-in HTML.
+Пользовательские элементы API полезны для создания новых элементов HTML, однако
+он также полезен для расширения возможностей других пользовательских элементов
+или даже встроенных в браузера элементов HTML.
 
-### Extending a custom element {: #extendcustomeel}
+### Расширение возможностей пользовательского элемента {: #extendcustomeel}
 
-Extending another custom element is done by extending its class definition.
+Расширение возможностей другого пользовательского элемента осуществляется за
+счет унаследования определения его класса.
 
-**Example** - create `<fancy-app-drawer>` that extends `<app-drawer>`:
+**Пример** : создание `<fancy-app-drawer>` drawer `<fancy-app-drawer>` , в
+котором расширяются возможности `<app-drawer>` drawer `<app-drawer>` :
 
 ```
 class FancyDrawer extends AppDrawer {
@@ -847,33 +853,44 @@ class FancyDrawer extends AppDrawer {
 customElements.define('fancy-app-drawer', FancyDrawer);
 ```
 
-### Extending native HTML elements {: #extendhtml}
+### Расширение возможностей собственных элементов HTML {: #extendhtml}
 
 Давайте предположим, что вы хотели бы создать более изящный элемент `<button>`.
 Вместо копирования поведения и функциональных возможностей `<button>` более
 удачный вариант – прогрессивное улучшение существующего элемента при помощи
 пользовательских элементов.
 
-A **customized built-in element** is a custom element that extends one of the
-browser's built-in HTML tags. The primary benefit of extending an existing
-element is to gain all of its features (DOM properties, methods, accessibility).
-There's no better way to write a [progressive web
-app](/web/progressive-web-apps/) than to **progressively enhance existing HTML
-elements**.
+**Настроенный встроенный элемент** - пользовательский элемент, который наследует
+возможности встроенных в браузер тэгов HTML. Основное преимущество наследования
+существующего элемента - получение всех его возможностей (свойств DOM, методов,
+доступности пользовательского интерфейса). Нет лучшего способа написания
+[прогрессивных веб-приложений](/web/progressive-web-apps/) (* название группы
+приложений, которые используют стек Web-технологии (JS + HTML + CSS) и позволяют
+соединить простоту использования Web-сайт со специфичными для нахих приложений
+UX (пользовательский опыт - опыт взаимодействия пользователя) и технические
+возможности ), чем **прогрессивное улучшение домена HTML-элементов** .
+Пользовательский **встроенный элемент** - это настраиваемый элемент, который
+расширяет один из встроенных HTML-тегов браузера. Основным преимуществом
+расширения существующего элемента является получение всех его функций (свойств,
+методов, доступности DOM). Нет лучшего способа написать [прогрессивное
+веб-приложение, а](/web/progressive-web-apps/) не **улучшать существующие
+элементы HTML** .
 
-Note: Only Chrome 67 supports customized built-in elements
-([status](https://www.chromestatus.com/feature/4670146924773376))
-right now. Edge and Firefox will implement it, but Safari
-has chosen not to implement it. This is unfortunate for accessibility and
-progressive enhancement. If you think extending native HTML elements is
-useful, voice your thoughts on
-<a href="https://github.com/w3c/webcomponents/issues/509">509</a> and <a
-href="https://github.com/w3c/webcomponents/issues/662">662</a> on Github.
+Обратите внимание: Только в Chrome 67 сейчас имеется поддержка встроенных
+элементов ( [статус](https://www.chromestatus.com/feature/4670146924773376) ). В
+Edge и Firefox будет реализована их поддержка, однако в Safari - нет. Из-за
+этого может пострадать доступность пользовательского интерфейса и возможность
+осуществления прогрессивного улучшения. Если вы считаете, что расширение
+возможностей встроенных элементов HTML полезно, выскажитесь на Github (проблемы
+<a href="https://github.com/w3c/webcomponents/issues/509">509</a> и <a
+href="https://github.com/w3c/webcomponents/issues/662">662</a> ).
 
-To extend an element, you'll need to create a class definition that inherits
-from the correct DOM interface. For example, a custom element that extends
-`<button>` needs to inherit from `HTMLButtonElement` instead of `HTMLElement`.
-Similarly, an element that extends `<img>` needs to extend `HTMLImageElement`.
+Для того чтобы получить возможность элемента, вам необходимо будет создать
+определение класса, которое наследует возможности от подходящего интерфейса DOM.
+Например, пользовательский элемент, который расширяет возможности `<button>` ,
+должен наследовать характеристики `HTMLButtonElement` , а не `HTMLElement` .
+Подобным образом элемент, расширяющий возможности `<img>` , должен наследовать
+характеристики `HTMLImageElement` .
 
 **Пример**: расширение возможностей `<button>`:
 
@@ -902,15 +919,17 @@ class FancyButton extends HTMLButtonElement {
 customElements.define('fancy-button', FancyButton, {extends: 'button'});
 ```
 
-Notice that the call to `define()` changes slightly when extending a native
-element. The required third parameter tells the browser which tag you're
-extending. This is necessary because many HTML tags share the same DOM
-interface. `<section>`, `<address>`, and `<em>` (among others) all share
-`HTMLElement`; both `<q>` and `<blockquote>` share `HTMLQuoteElement`; etc..
-Specifying `{extends: 'blockquote'}` lets the browser know you're creating a
-souped-up `<blockquote>` instead of a `<q>`. See [the HTML
-spec](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)
-for the full list of HTML's DOM interfaces.
+Обратите внимание, что при расширении возможностей встроенного элемента вызов
+`define()` происходит немного по-другому. За счет обязательного третьего уровня
+браузера сообщается, характеристики какого-то тэга вы наследуете. Это
+необходимо, поскольку для многих тэгов HTML используется один и тот же интерфейс
+DOM. Для элементов `<section>` , `<address>` и `<em>` (и многих других)
+используют `HTMLElement` ; для `<q>` и `<blockquote>` используется
+`HTMLQuoteElement` ; и т.д. За счет указания `{extends: 'blockquote'}` браузеру
+сообщается, что вы создаете `<blockquote>` (* для выделения длинных цитат), а не
+`<q>` (* для выделения коротких). Обратитесь к
+[спецификации](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces)
+HTML для ознакомления со всеми списком интерфейсов DOM HTML.
 
 Обратите внимание: за счет наследования характеристик `HTMLButtonElement` наша
 изящная кнопка наделяется всеми свойствами/методами DOM `<button>`. В результате
@@ -922,15 +941,16 @@ Tab). Вместо этого мы можем сфокусироваться н�
 `drawRipple()` (* для добавления эффекта волны (ripple – волна на поверхности
 жидкости)). В итоге мы пишем меньше кода и чаще используем тот же самый.
 
-Consumers of a customized built-in element can use it in several ways. They can
-declare it by adding the `is=""` attribute on the native tag:
+Пользователи настроенного встроенного элемента могут его использовать
+несколькими способами. Они могут объявить его за счет добавления `is=""` атрибут
+во встроенном тэге:
 
 ```
 <!-- This <button> is a fancy button. -->
 <button is="fancy-button" disabled>Fancy button!</button>
 ```
 
-create an instance in JavaScript:
+создать образец в JavaScript:
 
 ```
 // Custom elements overload createElement() to support the is="" attribute.
@@ -940,7 +960,7 @@ button.disabled = true;
 document.body.appendChild(button);
 ```
 
-or use the `new` operator:
+или воспользоваться оператором `new` :
 
 ```
 let button = new FancyButton();
@@ -948,9 +968,9 @@ button.textContent = 'Fancy button!';
 button.disabled = true;
 ```
 
-Here's another example that extends `<img>`.
+Вот еще пример, в котором расширяются возможности `<img>` .
 
-**Example** - extending `<img>`:
+**Пример** : расширение возможностей `<img>` :
 
 ```
 customElements.define('bigger-img', class extends Image {
@@ -961,14 +981,14 @@ customElements.define('bigger-img', class extends Image {
 }, {extends: 'img'});
 ```
 
-Users declare this component as:
+Пользователи могут объявить этот элемент так:
 
 ```
 <!-- This <img> is a bigger img. -->
 <img is="bigger-img" width="15" height="20">
 ```
 
-or create an instance in JavaScript:
+или создать его образец в JavaScript:
 
 ```
 const BiggerImage = customElements.get('bigger-img');
@@ -977,24 +997,25 @@ console.assert(image.width === 150);
 console.assert(image.height === 200);
 ```
 
-## Misc details {: #details}
+## Дополнительные моменты {: #details}
 
-### Unknown elements vs. undefined custom elements {: #unknown}
+### Сравнение неизвестных элементов с незарегистрированными пользовательскими элементами {: #unknown}
 
-HTML is lenient and flexible to work with. For example, declare
-`<randomtagthatdoesntexist>` on a page and the browser is perfectly happy
-accepting it. Why do non-standard tags work? The answer is the [HTML
-specification](https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement)
-allows it. Elements that are not defined by the specification get parsed as
-`HTMLUnknownElement`.
+HTML - нестрогая и гибкая в работе технология. Например, объявление на странице
+`<randomtagthatdoesntexist>` , и браузер успешно воспримет его. Почему элементы
+с нестандартными именами работают? Потому что [спецификация
+HTML](https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement)
+позволяет их использовать. После парсинга не определенные в спецификации
+элементов получается `HTMLUnknownElement` .
 
-The same is not true for custom elements. Potential custom elements are parsed
-as an `HTMLElement` if they're created with a valid name (includes a "-"). You
-can check this in a browser that supports custom elements. Fire up the Console:
-<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span
-class="kbd">J</span> (or <span class="kbd">Cmd</span>+<span
-class="kbd">Opt</span>+<span class="kbd">J</span> on Mac) and paste in the
-following lines of code:
+В случае с пользовательскими элементами дело обстоит иначе. В результате
+парсинга потенциальных пользовательских элементов получается `HTMLElement` ,
+если при создании для них были указаны корректные имена (с "-"). Вы можете в
+этом удостовериться в браузере, который поддерживает пользовательские элементы.
+Запустите консоль при помощи комбинации pan1} Ctrl + <span
+class="kbd">Shift</span> + <span class="kbd">J</span> (или <span
+class="kbd">Cmd</span> + <span class="kbd">Opt</span> + <span
+class="kbd">J</span> для Mac) и в следующий код:
 
 ```
 // "tabs" is not a valid custom element name
@@ -1004,16 +1025,16 @@ document.createElement('tabs') instanceof HTMLUnknownElement === true
 document.createElement('x-tabs') instanceof HTMLElement === true
 ```
 
-## API reference
+## Список API
 
 Свойство `customElements` глобального объекта window имеет полезные методы для
 работы с пользовательскими элементами.
 
-**`define(tagName, constructor, options)`**
+**`define (tagName, конструктор, параметры)`**
 
-Defines a new custom element in the browser.
+Используется для определения пользовательского элемента в браузере.
 
-Example
+Пример:
 
 ```
 customElements.define('my-app', class extends HTMLElement { ... });
@@ -1023,10 +1044,11 @@ customElements.define(
 
 **`get(tagName)`**
 
-Given a valid custom element tag name, returns the element's constructor.
-Returns `undefined` if no element definition has been registered.
+При передаче ему в качестве допустимого имени тэга пользовательского элемента
+возвращает конструктор элемента. Возвращает `undefined` , если не было
+зарегистрировано ни одного определения элемента для переданного имени.
 
-Example
+Пример:
 
 ```
 let Drawer = customElements.get('app-drawer');
@@ -1041,7 +1063,7 @@ let drawer = new Drawer();
 состояние «отклонено», если именем тэга является некорректное имя
 пользовательского элемента.
 
-Example
+Пример:
 
 ```
 customElements.whenDefined('app-drawer').then(() => {
@@ -1049,20 +1071,21 @@ customElements.whenDefined('app-drawer').then(() => {
 });
 ```
 
-## History and browser support {: #historysupport}
+## История версий и поддержка браузерами {: #historysupport}
 
-If you've been following web components for the last couple of years, you'll
-know that Chrome 36+ implemented a version of the Custom Elements API that uses
-`document.registerElement()` instead of `customElements.define()`. That's now
-considered a deprecated version of the standard, called v0.
-`customElements.define()` is the new hotness and what browser vendors are
-starting to implement. It's called Custom Elements v1.
+Если вы следили за Web Components последние несколько лет, то знаете, что в
+версии Chrome 36+ реализована версия API Custom Elements, в которой вместо
+`document.registerElement()` используется `customElements.define()` . Эта версия
+(v0) стандарта сейчас рассматривается устаревшей. `customElements.define()` -
+новый востребованный метод, который поставщики браузеров начинают реализовывать.
+Она называется Custom Elements v1.
 
-If you happen to be interested in the old v0 spec, check out the [html5rocks
-article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){:
-.external }.
+Если вы, вдруг, заинтересованы в спецификации более ранней версии (v0), то
+ознакомьтесь со своим товаром [html5rocks
+article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
+{: .external}.
 
-### Browser support
+### Поддержка браузерами
 
 Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) и
 Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)) и
@@ -1076,8 +1099,8 @@ Internet Explorer, который останется для сохранения
 новой системы). Edge has [begun
 development](https://developer.microsoft.com/microsoft-edge/platform/status/customelements/).
 
-To feature detect custom elements, check for the existence of
-`window.customElements`:
+Для того чтобы определить, поддерживает ли браузер создание пользовательских
+элементов, проверьте наличие `window.customElements` :
 
 ```
 const supportsCustomElementsV1 = 'customElements' in window;
@@ -1085,14 +1108,14 @@ const supportsCustomElementsV1 = 'customElements' in window;
 
 #### Полифилл (* библиотека, которая добавляет в старые браузеры поддержку возможностей, которые в современных браузерах являются встроенными) {: #polyfill}
 
-Until browser support is widely available, there's a
-[standalone polyfill](https://github.com/webcomponents/custom-elements/)
-available for Custom Elements v1. However, we recommend using the
-[webcomponents.js
-loader](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
-to optimally load the web components polyfills. The loader
-uses feature detection to asynchronously load only the necessary pollyfills
-required by the browser.
+Пока во многих браузерах не реализована поддержка этой возможности, вы можете
+использовать [автономный
+полиполк](https://github.com/webcomponents/custom-elements/) для добавления
+поддержки пользовательских элементов v1. Однако, мы рекомендуем использовать
+[загрузчик](https://github.com/webcomponents/webcomponentsjs#using-webcomponents-loaderjs)
+загрузчика webcomponents.js для оптимальной загрузки полифиллов веб-компонентов.
+Загрузчик проверяет поддержку возможностей для асинхронной загрузки только
+необходимых для браузера полифиллов.
 
 Обратите внимание: если выполняется транспиляция вашего проекта или в нем
 используется ES5, то обязательно ознакомьтесь с советами по добавлению
@@ -1105,7 +1128,7 @@ required by the browser.
 npm install --save @webcomponents/webcomponentsjs
 ```
 
-Usage:
+Использование:
 
 ```
 <!-- Use the custom element on the page. -->
@@ -1138,22 +1161,35 @@ Usage:
 </script>
 ```
 
-Note: the `:defined` CSS pseudo-class cannot be polyfilled.
+Обратите внимание: нельзя добавить поддержку псевдокласса CSS `:defined` .
 
 ## Заключение
 
-Custom elements give us a new tool for defining new HTML tags in the browser and
-creating reusable components. Combine them with the other new platform
-primitives like Shadow DOM and `<template>`, and we start to realize the grand
-picture of Web Components:
+Технология Пользовательские элементы предоставили нам новый инструмент для
+определения новых тэгов HTML в браузере и создании компонентов для повторного
+использования. При совместном использовании пользовательских элементов с другими
+новыми примитивами Веб-платформа (* коллекция технологий, разработанных как
+открытые стандарты Кносорциумом World Wide Web (консорциум производителей
+программного обеспечения для интернета, поддерживающих его стандартов) и по
+стандартизации (Рабочая группа по технологии веб-гипертекстовой технологии,
+Консорциум Unicode, Целевая группа Internet Engineering и Ecma International). В
+состав Веб-платформы входят технологии - языки и API - которые изначально были
+созданы для публикации веб-страниц. Среди них: HTML, CSS 2.1, CSS, SVG,
+ECMAScript , WebGL, Web Storage, Indexed Database API и т. Д.) (Например, Shadow
+DOM и `<template>` ) мы начинаем понимать общую картину Веб-компоненты:
 
-- Cross-browser (web standard) for creating and extending reusable components.
-- Requires no library or framework to get started. Vanilla JS/HTML FTW!
-- Provides a familiar programming model. It's just DOM/CSS/HTML.
-- Works well with other new web platform features (Shadow DOM, `<template>`,
-CSScustom properties, etc.)
-- Tightly integrated with the browser's DevTools.
-- Leverage existing accessibility features.
+- Web Components - кросс-браузерная технология (веб-стандарт) для создания
+веб-компонентов для повторного использования и расширения их возможностей.
+- Для того, чтобы начать работать с этой технологией, не нужно подключать
+никаких библиотек или фреймворков. Чистый код JS / HTML / CSS - все, что
+необходимо для победы!
+- Предоставляет знакомую модель программирования (* описание возможностей,
+доступных для эффективного программирования в рамках компьютерной архитектуры),
+в которых используются только DOM / CSS / HTML.
+- Совместимость с другими преимуществами Веб-платформа (Shadow DOM, `<template>`
+, пользовательские свойства CSS и т.д.).
+- Тесно интегрирована с DevTools браузера.
+- Пользуется существующими доступностью пользовательского интерфейса.
 
 ## Замечания и предложения {: #inline-feedback }
 
