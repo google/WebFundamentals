@@ -14,15 +14,17 @@ HTML-теги, расширять фунциональные возможнос�
 
 ### Краткое изложение {: #tldr .hide-from-toc }
 
-With [Custom
-Elements](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements),
-web developers can **create new HTML tags**,
-beef-up existing HTML tags, or extend the components other developers have
-authored. The API is the foundation of [web
-components](http://webcomponents.org/). It brings a web
-standards-based way to create reusable components using nothing more than
-vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in
-our apps.
+При помощи [Custom
+Elements](https://html.spec.whatwg.org/multipage/scripting.html#custom-elements)
+(* пользовательские элементы. Здесь и далее примеч. пер.) веб-разработчики могут
+** создавать новые теги HTML **, совершенствовать существующие или улучшать
+созданные другими разработчиками компоненты. Этот API (* Application Programming
+Interface – программный интерфейс приложения) – фундамент [ Web Components
+](http://webcomponents.org/). За счет него у нас имеется основанный на
+веб-стандартах способ создания компонентов для повторного использования при
+помощи лишь чистого кода JS/HTML/CSS. Благодаря нему нам необходимо писать
+меньше кода и мы получаем модульный код, который можем повторно использовать в
+нашем приложении.
 
 ## Введение
 
