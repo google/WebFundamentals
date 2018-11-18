@@ -5,9 +5,9 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2018-11-16 #}
 {# wf_updated_on: 2018-11-18 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
-{# wf_tags:  #}
-{# wf_featured_snippet: The writable files API is being designed to increase interoperability of web applications with native applications, making it possible for users to choose files or directories that a web app can interact with on the native file system. #}
-{# wf_blink_components: Blink>Storage>FileSystem #}
+{# wf_tags: autoplay,news,media,games #}
+{# wf_featured_snippet: Recapping our Web Audio autoplay policy changes. #}
+{# wf_blink_components: Blink>Media #}
 
 # Web Audio, Autoplay Policy and Games {: .page-title }
 
