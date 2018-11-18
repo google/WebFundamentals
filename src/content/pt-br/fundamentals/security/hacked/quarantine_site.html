@@ -1,0 +1,61 @@
+<html devsite><head>
+  <title>Colocar o site em quarentena</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Será necessário:</h3>
+<ul>
+  <li>Saber impedir que o servidor de Web veicule páginas (você também pode discutir as opções
+    com seu hoster). Esteja ciente de que em etapas posteriores será necessário colocar o site on-line
+    novamente por curtos períodos de tempo.</li>
+  <li>Ter permissões de gerenciamento de conta (poder visualizar todos os usuários, excluir usuários e alterar todas
+    as senhas relacionadas à sua conta).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Próximas ações:</h3>
+<ol>
+  <li><strong>Deixar o site off-line</strong> para que ele não veicule mais conteúdo aos usuários. Por
+    exemplo, pare o servidor da Web ou aponte as entradas de DNS do site para uma página estática em um servidor
+    diferente que use um código de resposta HTTP 503.
+<p>Ao deixar o site comprometido completamente off-line, você é capaz de concluir tarefas administrativas com
+  menos interferência do hacker, ao mesmo tempo que evita que códigos maliciosos ou arquivos com spam sejam expostos
+  aos visitantes. É improvável que a ação de colocar o site off-line intermitente/temporariamente durante o
+  processo de recuperação afete a classificação do site nos resultados de pesquisa no futuro.</p>
+      <ul>
+        <li>Entrar em contato com o hoster será útil caso você não saiba ao certo como deixar o site off-line. Por
+          exemplo, o hoster pode configurar a resposta 503 para o site <em>de fora dos
+          diretórios infectados</em>, o que é uma ótima opção. Avise o hoster que em breve
+          você precisará alternar o site entre on-line e off-line para fins de teste. Isso pode ajudar
+          o hoster a fornecer o método mais autônomo para colocar o site off-line.
+        </li><li>Fazer com que o site retorne um
+          <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">código de status HTTP</a>
+          4xx ou 5xx não é o suficiente para proteger seus usuários. Com os códigos 404, 503 etc. ainda pode ser possível
+          retornar conteúdo prejudicial ao usuário. <em>O código de status 503 é útil para sinalizar que o site está
+          temporariamente fora do ar, mas a resposta deve vir de fora do servidor ou site comprometido</em>.
+        </li>
+        <li>Usar a <a href="/search/reference/robots_txt">proibição
+          robots.txt</a> também não é o suficiente, pois ela bloqueia apenas os rastreadores dos mecanismos de pesquisa. Usuários
+          regulares ainda podem acessar conteúdo prejudicial.</li>
+      </ul>
+  </li>
+  <li>Se você ainda não fez isso, <strong>entre em contato com o hoster para avisá-lo da
+    situação</strong>. Se o hoster também foi comprometido, isso pode ajudá-lo a entender a extensão
+    do problema.</li>
+  <li><strong>Realize o gerenciamento completo de contas de usuário</strong>.
+    <ul>
+      <li>Analise a lista de contas de usuários do site e verifique se o hacker criou uma nova
+        conta. Se contas ilícitas foram criadas, anote os nomes das contas indesejadas para investigação
+        posterior. Em seguida, exclua as contas para evitar acessos futuros do hacker.</li>
+      <li>Altere as senhas de todos os usuários e contas do site. Isso inclui logins de FTP,
+        de acesso ao banco de dados, de contas de administradores de sistema e de sistemas de gerenciamento de conteúdo (CMS, na sigla em inglês).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Próxima etapa</h2>
+<p>A próxima etapa do processo é <a href="use_search_console">usar o Search Console</a>.</p>
+
+</body></html>

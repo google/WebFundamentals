@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Class: Router</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small><a href="workbox.html">workbox</a>.<wbr><a href="workbox.routing.html">routing</a>.<wbr></small><span class="symbol-name">Router</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0</small></span>
+            </div>
+            <p>The Router can be used to process a FetchEvent through one or more
+              <a href="workbox.routing.Route.html">Routes</a> responding with a Request if a matching route exists.</p>
+            <p>If no route matches a given a request, the Router will use a &quot;default&quot; handler if one is defined.</p>
+            <p>Should the matching Route throw an error, the Router will use a &quot;catch&quot; handler if one is defined to gracefully deal with issues and respond with a Request.
+            </p>
+            <p>If a request matches multiple routes, the <strong>earliest</strong> registered route will be used to respond to the request.</p>
+          </header>
+          <section>
+            <h2>Constructor</h2>
+            <section>
+              <h3 id="Router" class="symbol-name">Router</h3>
+              <p class="type-signature"> new Router()
+              </p>
+              <p>Initializes a new Router.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+          <section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id="handleRequest" class="symbol-name">handleRequest</h3>
+              <p class="type-signature"> handleRequest(event)&nbsp;returns&nbsp;(Promise containing Response or undefined)</p>
+              <p>Apply the routing rules to a FetchEvent object to get a Response from an appropriate Route's handler.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>event</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">FetchEvent</p>
+                        <p>The event from a service worker's 'fetch' event listener.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>(Promise containing Response or undefined)</code>&nbsp;A promise is returned if a registered route can handle the FetchEvent's request. If there is no matching route and there's no <code>defaultHandler</code>, <code>undefined</code>                    is returned.</p>
+                </dd>
+              </dl>
+              <h3 id="registerRoute" class="symbol-name">registerRoute</h3>
+              <p class="type-signature"> registerRoute(route)</p>
+              <p>Registers a route with the router.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>route</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="workbox.routing.Route.html">workbox.routing.Route</a></p>
+                        <p>The route to register.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="setCatchHandler" class="symbol-name">setCatchHandler</h3>
+              <p class="type-signature"> setCatchHandler(handler)</p>
+              <p>If a Route throws an error while handling a request, this <code>handler</code> will be called and given a chance to provide a response.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>handler</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="workbox.routing.Route.html#~handlerCallback">workbox.routing.Route~handlerCallback</a></p>
+                        <p>A callback function that returns a Promise resulting in a Response.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="setDefaultHandler" class="symbol-name">setDefaultHandler</h3>
+              <p class="type-signature"> setDefaultHandler(handler)</p>
+              <p>Define a default <code>handler</code> that's called when no routes explicitly match the incoming request.</p>
+              <p>Without a default handler, unmatched requests will go against the network as if there were no service worker present.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>handler</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="workbox.routing.Route.html#~handlerCallback">workbox.routing.Route~handlerCallback</a></p>
+                        <p>A callback function that returns a Promise resulting in a Response.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id="unregisterRoute" class="symbol-name">unregisterRoute</h3>
+              <p class="type-signature"> unregisterRoute(route)</p>
+              <p>Unregisters a route with the router.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>route</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="workbox.routing.Route.html">workbox.routing.Route</a></p>
+                        <p>The route to unregister.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

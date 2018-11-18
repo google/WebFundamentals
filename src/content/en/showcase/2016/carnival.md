@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-11-09T21:00:00.000Z #}
-{# wf_updated_on: 2016-11-09T21:00:00.000Z #}
+{# wf_published_on: 2016-11-09 #}
+{# wf_updated_on: 2016-11-09 #}
 {# wf_featured_image: /web/showcase/2016/images/carnival/card.png #}
 {# wf_featured_snippet: Carnival Cruise Line, one of the world’s largest leisure-travel companies, wanted to enhance how it re-engaged its customers. Working with Mobify, Carnival implemented push notifications for mobile web users on Android and for desktop users on Chrome. The new strategy delivered a 42% engagement rate from customers who receive notifications. #}
 {# wf_tags: progressive-web-apps,webpush,notifications,serviceworker,casestudy #}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2017-08-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
@@ -89,7 +89,7 @@ than the success they were expecting.
 While script resources are the most obvious security risks, CSP provides a rich
 set of policy directives that enable fairly granular control over the resources
 that a page is allowed to load. You've already seen `script-src`, so the concept
-should be clear. 
+should be clear.
 
 Let's quickly walk through the rest of the resource directives. The list below
 represents the state of the directives as of level 2. A [level 3
@@ -100,7 +100,7 @@ browsers.
 * **`base-uri`** restricts the URLs that can appear in a page's `<base>` element.
 * **`child-src`** lists the URLs for workers and embedded frame contents. For
   example: `child-src https://youtube.com` would enable embedding videos from
-  YouTube but not from other origins. 
+  YouTube but not from other origins.
 * **`connect-src`** limits the origins that you can connect to (via XHR,
   WebSockets, and EventSource).
 * **`font-src`** specifies the origins that can serve web fonts. Google's web
@@ -216,7 +216,7 @@ inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range o
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
-["Sandboxing" section of the HTML5 spec](https://developers.whatwg.org/origin-0.html#sandboxing)..
+["Sandboxing" section of the HTML5 spec](https://html.spec.whatwg.org/dev/origin.html#sandboxing)..
 
 ### The meta tag
 
@@ -271,7 +271,7 @@ to something more like:
     function doAmazingThings() {
       alert('YOU AM AMAZING!');
     }
-    document.addEventListener('DOMContentReady', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('amazing')
         .addEventListener('click', doAmazingThings);
     });
@@ -478,7 +478,6 @@ Level 2 required you to change it to `child-src`. This is no longer necessary
 in CSP Level 3.
 
 * Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }
-
 has a number of implementation options. We recommend sticking with the
 `<iframe>` version as it's safely sandboxed from the rest of your site. It
 requires a `child-src https://facebook.com` directive to function properly. Note
@@ -546,3 +545,7 @@ has already begun work on the specification's next iteration,
 If you're interested in the discussion around these upcoming features,
 [skim the public-webappsec@ mailing list archives](http://lists.w3.org/Archives/Public/public-webappsec/),
 or join in yourself.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-11-01 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
@@ -367,11 +367,8 @@ Now let's use it:
     })
 
 
-[Click here to see that in action](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json),
-check the console in DevTools to see the result. Now we can make HTTP
-requests without manually typing `XMLHttpRequest`, which is great, because
-the less I have to see the infuriating camel-casing of `XMLHttpRequest`,
-the happier my life will be.
+Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the
+less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
 
 
 ## Chaining
@@ -424,10 +421,7 @@ we can make a shortcut:
     })
 
 
-[See that in action here](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json),
-check the console in DevTools to see the result. In fact, we could make a
-`getJSON()` function really easily:
-
+In fact, we could make a `getJSON()` function really easily:
 
     function getJSON(url) {
       return get(url).then(JSON.parse);
@@ -674,11 +668,11 @@ try writing the code as if it were synchronous. In this case:
 
     document.querySelector('.spinner').style.display = 'none'
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/sync-example.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/sync-example.html)
 
 
 That works (see
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/sync-example.html))!
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/sync-example.html))!
 But it's sync and locks up the browser while things download. To make this
 work async we use `then()` to make things happen one after another.
 
@@ -798,10 +792,10 @@ Let's put it all together:
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-example.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-example.html)
 
 And there we have it (see
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-example.html)),
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-example.html)),
 a fully async version of the sync version. But we can do better. At the moment
 our page is downloading like this:
 
@@ -851,10 +845,10 @@ the promises fulfilled to) in the same order as the promises you passed in.
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-all-example.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-all-example.html)
 
 Depending on connection, this can be seconds faster than loading one-by-one (see
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-all-example.html)),
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-all-example.html)),
 and it's less code than our first try. The chapters can download in whatever
 order, but they appear on screen in the right order.
 
@@ -899,10 +893,10 @@ sequence to add them to the document:
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-best-example.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-best-example.html)
 
 And there we go (see
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-best-example.html)),
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-best-example.html)),
 the best of both! It takes the same amount of time to deliver all the content,
 but the user gets the first bit of content sooner.
 
@@ -1015,11 +1009,11 @@ it into:
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-generators-example.html)
 
 This works exactly as before but is so much easier to read. This works in
 Chrome and Opera today (see
-[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html)),
+[code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-generators-example.html)),
 and works in Microsoft Edge by going to `about:flags` and turning on
 the **Enable experimental JavaScript features** setting. This will be
 enabled by default in an upcoming version.
@@ -1154,7 +1148,11 @@ opposite of `Promise.all` that only rejects if all items reject.
 </tr>
 </table>
 
+## Feedback {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp,
 Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made

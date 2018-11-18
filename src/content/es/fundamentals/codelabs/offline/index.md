@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtén más información sobre cómo integrar un service worker en una app existente para hacer que la app funcione sin conexión.
 
-{# wf_updated_on: 2016-11-09T18:31:19Z #}
+{# wf_updated_on: 2016-11-09 #}
 {# wf_published_on: 2016-01-01 #}
 
 

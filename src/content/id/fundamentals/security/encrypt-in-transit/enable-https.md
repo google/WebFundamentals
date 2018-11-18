@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Mengaktifkan HTTPS di server Anda sangatlah penting untuk mengamankan laman web. 
+description: Mengaktifkan HTTPS di server Anda sangatlah penting untuk mengamankan laman web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Mengaktifkan HTTPS di Server Anda {: .page-title }
@@ -199,7 +199,7 @@ Selain itu, bila Anda menautkan ke laman lain di situs Anda, pengguna bisa menga
 penurunan versi dari HTTPS menjadi HTTP.
 
 Masalah-masalah ini terjadi bila laman Anda berisi URL intrasitus yang benar-benar memenuhi syarat,
-yang menggunakan skema *http://*. 
+yang menggunakan skema *http://*.
 
 <p><span class="compare-worse">Tidak disarankan</span> — Kami tidak menyarankan Anda menggunakan URL intrasitus yang sepenuhnya memenuhi syarat.</p>
 
@@ -250,7 +250,7 @@ Jika situs Anda bergantung pada skrip, gambar, atau sumber daya lainnya yang dil
 pihak ketiga, misalnya CDN atau jquery.com, Anda memiliki dua opsi:
 
 * Gunakan URL protokol-relatif untuk sumber daya ini. Jika pihak ketiga tidak
-melayani HTTPS, mintalah mereka melakukannya. Sebagian besar sudah melakukannya, termasuk jquery.com. 
+melayani HTTPS, mintalah mereka melakukannya. Sebagian besar sudah melakukannya, termasuk jquery.com.
 * Layani sumber daya dari server yang Anda kontrol, dan yang menawarkan HTTP
 maupun HTTPS. Sering kali ini merupakan ide bagus, karena nanti Anda memiliki kontrol
 yang lebih baik atas penampilan, kinerja, dan keamanan situs Anda. Selain itu,
@@ -267,7 +267,7 @@ membantu mesin telusur menentukan cara terbaik menuju situs Anda.
 
 ## Mengaktifkan Strict Transport Security dan cookie aman
 
-Pada titik ini, Anda siap untuk "mengunci" penggunaan HTTPS. 
+Pada titik ini, Anda siap untuk "mengunci" penggunaan HTTPS.
 
 * Gunakan HTTP Strict Transport Security (HSTS) untuk menghindari biaya pengalihan 301.
 * Selalu setel flag Secure pada cookie.
@@ -276,7 +276,7 @@ Pertama, gunakan [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_
 untuk memberi tahu klien bahwa mereka harus selalu menghubungkan ke server Anda melalui HTTPS, bahkan
 saat mengikuti referensi `http://`. Ini akan mengalahkan serangan seperti
 [SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/){: .external }, juga
-akan menghindari biaya bolak-balik `301 redirect` yang kita aktifkan di 
+akan menghindari biaya bolak-balik `301 redirect` yang kita aktifkan di
 [Mengalihkan HTTP ke HTTPS](#redirect-http-to-https).
 
 Note: Klien yang telah mengenali situs Anda sebagai HSTS Host kemungkinan akan mengalami <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> jika situs Anda memiliki kesalahan dalam konfigurasi TLS</a> (misalnya sertifikat telah berakhir). HSTS secara eksplisit didesain seperti ini untuk memastikan penyerang jaringan tidak bisa menipu klien agar mengakses situs tanpa HTTPS. Jangan aktifkan HSTS hingga Anda yakin bahwa operasi situs cukup tangguh untuk menghindari penerapan HTTPS dengan kesalahan validasi sertifikat.
@@ -318,8 +318,8 @@ Bila layer materi dan aplikasi telah diatur dengan baik (lihat
 [buku Steve Souders](https://stevesouders.com/){: .external } untuk mendapatkan saran bagus),
 persoalan kinerja TLS selebihnya umumnya kecil, relatif dengan biaya
 keseluruhan aplikasi. Selain itu, biaya tersebut bisa dikurangi
-dan disusutkan. (Untuk mendapatkan saran bagus mengenai optimalisasi TLS dan secara umum, lihat 
-[High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) oleh Ilya Grigorik.) Lihat juga tulisan Ivan Ristic di [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) dan [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/).
+dan disusutkan. (Untuk mendapatkan saran bagus mengenai optimalisasi TLS dan secara umum, lihat
+[High Performance Browser Networking](https://hpbn.co/) oleh Ilya Grigorik.) Lihat juga tulisan Ivan Ristic di [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) dan [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/).
 
 Dalam beberapa kasus, TLS bisa _meningkatkan_ kinerja, umumnya akibat mengizinkan
 HTTP/2. Chris Palmer memberikan pendapatnya mengenai [kinerja HTTPS dan HTTP/2 di Chrome Dev Summit 2014](/web/shows/cds/2014/tls-all-the-things).
@@ -346,7 +346,7 @@ operator situs tidak bisa bermigrasi ke HTTPS tanpa kehilangan pendapatan iklan;
 situs bermigrasi ke HTTPS, pengiklan memiliki motivasi kecil untuk mempublikasikan HTTPS.
 
 Pengiklan setidaknya harus menawarkan layanan iklan lewat HTTPS (misalnya dengan melakukan bagian
-"Mengaktifkan HTTPS di server Anda" pada laman ini). Banyak yang sudah melakukan. Mintalah 
+"Mengaktifkan HTTPS di server Anda" pada laman ini). Banyak yang sudah melakukan. Mintalah
 para pengiklan yang sama sekali tidak menggunakan HTTPS untuk memulainya.
 Anda mungkin perlu menunda penyelesaian [Membuat relatif URL intrasitus](#make-intrasite-urls-relative) hingga cukup banyak pengiklan yang melakukan interoperasi dengan benar.
 

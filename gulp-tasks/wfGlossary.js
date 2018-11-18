@@ -1,18 +1,15 @@
-'use strict';
-
-/*
-    wfGlossary.js
-    Reads the glossary.yaml file and uses Handlebars to generate the
-    glossary file.
+/**
+ * @fileoverview Reads the glossary.yaml file and uses Handlebars to
+ *  generate the glossary file.
+ *
+ * @author Pete LePage <petele@google.com>
  */
 
+'use strict';
+
 const fs = require('fs-extra');
-const path = require('path');
-const moment = require('moment');
 const jsYaml = require('js-yaml');
 const gutil = require('gulp-util');
-const wfHelper = require('./wfHelper');
-const wfTemplateHelper = require('./wfTemplateHelper');
 const Handlebars = require('handlebars');
 require('handlebars-helpers')();
 
@@ -20,6 +17,11 @@ const GLOSSARY_FILE = './src/data/glossary.yaml';
 const TEMPLATE = './src/templates/fundamentals/glossary.md';
 const DEST_FILE = './src/content/en/fundamentals/glossary.md';
 
+/**
+ * Parses the glossary data file and renders the markdown version.
+ *
+ * @param {Array} glossary The parsed glossary data.
+ */
 function buildGlossary(glossary) {
   gutil.log(' ', 'Building glossary');
   const ts = fs.readFileSync(TEMPLATE, 'utf8');
@@ -34,14 +36,16 @@ function buildGlossary(glossary) {
   });
   const context = {
     sortedTerms: terms,
-    updatedOn: moment().utcOffset(0).format()
   };
   const result = template(context);
   fs.outputFileSync(DEST_FILE, result);
 }
 
+/**
+ * Reads glossary data file and generates a markdown version file.
+ */
 function build() {
-  gutil.log(' ', 'Reading contributors.yaml file...');
+  gutil.log(' ', 'Reading glossary.yaml file...');
   const contents = fs.readFileSync(GLOSSARY_FILE, 'utf8');
   const glossaryYaml = jsYaml.safeLoad(contents);
   buildGlossary(glossaryYaml);

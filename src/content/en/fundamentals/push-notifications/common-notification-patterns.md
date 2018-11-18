@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # Common Notification Patterns {: .page-title }
 
@@ -372,3 +373,7 @@ you'll need before showing your notification.
 
 For more information check out this [introduction to service workers
 post](/web/fundamentals/getting-started/primers/service-workers).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

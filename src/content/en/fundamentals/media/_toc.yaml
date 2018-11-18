@@ -3,7 +3,7 @@ toc:
   section:
   - title: Using <video> and <audio>
     path: /web/fundamentals/media/video
-  - title: Customizing the <video> Tag
+  - title: Mobile Web Video Playback
     path: /web/fundamentals/media/mobile-web-video-playback
   - title: Playing Protected Content with Encrypted Media Extensions
     path: /web/fundamentals/media/eme

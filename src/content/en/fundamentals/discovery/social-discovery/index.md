@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-10-07 #}
 
 # Social Discovery {: .page-title }
@@ -24,7 +25,7 @@ You can influence the way your site appears when shared via social media by
 adding a few lines of code to each page. This can help increase engagement by
 providing previews with richer information than would otherwise be available.
 Without it, social sites will provide only basic information, without images or
-other helpful information. 
+other helpful information.
 
 Which one do you think is more likely to be clicked? People are drawn to images
 and feel more confident they'll like what they find when they have an early
@@ -107,7 +108,7 @@ snippets and rendering on Google+, read the following documents:
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:
 
-* [Structured Data Testing Tool](https://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
+* [Structured Data Testing Tool](https://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -175,7 +176,7 @@ In order to validate your markup on Facebook, you can use tools such as:
 * [Debugger](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Use Twitter Cards to provide rich snippets on Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
+[Twitter Cards](https://dev.twitter.com/cards/overview) are an extension to the
 Open [Graph Protocol applicable for Twitter](https://twitter.com/){: .external }. They allow
 you to add media attachments like images and video to Tweets with a link to
 your web page. By adding the appropriate metadata, Tweets with links to your
@@ -186,7 +187,7 @@ In order to get a Twitter Card working, [your domain must be
 approved](https://cards-dev.twitter.com/validator) and must
 contain a meta tag that has `twitter:card` as the `name` attribute instead of
 `property` attribute.
-  
+
 Here's a quick example:
 
 <pre class="prettyprint">
@@ -202,7 +203,7 @@ owner.
 ### Learn more
 To learn more about Twitter Cards, visit:
 
-* [Twitter's developer site](https://dev.twitter.com/docs/cards)
+* [Twitter's developer site](https://dev.twitter.com/cards)
 
 ### Validate rich snippets
 In order to validate your markup, Twitter provides:
@@ -223,7 +224,10 @@ Notice that microdata and OGP share some markup:
 * `title` and `description` are shared between microdata and OGP
 * `itemprop="image"` is using `link` tag with `href` attribute instead of
 reusing `meta` tag with `property="og:image"`
-  
+
 Lastly, make sure to validate that your web page appears as expected on each
 social site before publishing.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Snippets are small scripts that you can author and execute within the Sources panel of Chrome DevTools. You can access and run them from any page. When you run a snippet, it executes from the context of the currently open page.
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-10-12 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Run Snippets Of Code From Any Page {: .page-title }
 
@@ -59,28 +60,13 @@ Console**, or use the keyboard shortcut
 
 ![evaluate in console](images/evaluate-in-console.png)
 
-## View local modifications
-
-<!-- TODO apply revision content doesn't really work... -->
-
-To view a diff of modifications you've made to a snippet, right-click in 
-the editor (while the snippet is displayed) and select **Local modifications**.
-
-![local modifications](images/local-modifications.png)
-
-A new tab named **History** pops up in the Console drawer.
-
-![snippet history](images/snippet-history.png)
-
-Each of the timestamps represent a modification. Expand the carat next to
-a timestamp to view a diff of the modifications at that point in time.
-The **revert** link removes the revision history. As of June 27, 2016 the
-**apply revision content** and **apply original content** links appear
-to not work as intended.
-
 ## Set breakpoints
 
 Just like other scripts, you can set breakpoints on snippets. See
 [Pause Your Code With
 Breakpoints](/web/tools/chrome-devtools/debug/breakpoints/breakpoints)
 to learn how to add breakpoints from within the **Sources** panel.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,0 +1,268 @@
+<html devsite><head>
+  <title>Membersihkan dan memelihara situs Anda</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Anda membutuhkan:</h3>
+
+<ul>
+  <li>Akses administrator terminal/shell ke server situs Anda: web, database, file</li>
+  <li>Pengetahuan tentang perintah terminal/shell</li>
+  <li>Pemahaman tentang kode (seperti PHP atau JavaScript)</li>
+  <li>Penyimpanan untuk membuat backup situs Anda (termasuk file, database, gambar, dll.)</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Tindakan selanjutnya:</h3>
+
+<p>Kami akan membahas beberapa tindakan pada langkah ini: </p>
+
+<ul>
+  <li>Tempat untuk menemukan referensi tambahan jika Anda yakin peretas bermaksud untuk mendapatkan informasi pribadi
+    pengguna (seperti dengan halaman phishing)</li>
+  <li>Opsi untuk menggunakan <a href="https://www.google.com/webmasters/tools/removals">Hapus URL</a>
+    di Search Console guna mempercepat penghapusan URL yang dapat dilihat pengguna, yang tidak diinginkan, dan benar-benar baru dibuat oleh
+    peretas yang tidak Anda inginkan untuk muncul di hasil Google Penelusuran</li>
+  <li>Opsi untuk menggunakan <a href="https://www.support.google.com/webmasters/answer/1352276">Ambil sebagai
+    Google</a> di Search Console guna mempercepat pemrosesan Google terhadap halaman bersih -- halaman yang
+    dimaksud adalah yang baru atau baru diupdate-- yang ingin Anda munculkan di hasil penelusuran Google</li>
+  <li>Penginstalan software versi terbaru yang paling aman</li>
+  <li>Penghapusan aplikasi atau plugin yang tidak perlu atau tidak terpakai yang dapat
+    membuat situs Anda lebih rentan di masa mendatang</li>
+  <li>Memulihkan konten yang bagus dan menghapus konten peretas</li>
+  <li>Memperbaiki akar penyebab kerentanan yang dimanfaatkan oleh peretas</li>
+  <li>Mengubah semua sandi</li>
+  <li>Merencanakan untuk menjaga situs Anda tetap aman</li>
+</ul>
+
+<h4>1. Cari referensi dukungan saat menghadapi hilangnya informasi rahasia, seperti dengan
+  halaman phishing</h4>
+
+<p>Jika informasi pengguna yang bersifat rahasia didapat dari situs (misalnya, karena ini
+  merupakan bagian dari serangan phishing), Anda dapat mempertimbangkan tanggung jawab
+  hukum, peraturan, bisnis apa pun sebelum mulai membersihkan situs atau menghapus file mana pun. Pada kasus phishing,
+  <a href="https://antiphishing.org">antiphishing.org</a> memiliki resource yang berguna, seperti dokumen
+  <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">Hal yang perlu dilakukan jika situs Anda
+  diretas oleh pelaku phishing</a>.</p>
+
+<h4>2. Pertimbangkan untuk mempercepat penghapusan URL baru yang dibuat peretas</h4>
+
+<p>Jika peretas membuat URL dapat dilihat pengguna dan benar-benar baru, Anda
+  dapat menghapus halaman dari hasil penelusuran Google dengan lebih cepat
+  menggunakan fitur <a href="https://www.google.com/webmasters/tools/removals">Hapus URL</a> di Search
+  Console. Ini sepenuhnya merupakan langkah opsional. Jika Anda hanya ingin menghapus halaman lalu mengonfigurasikan server
+  untuk mengembalikan <a href="https://www.support.google.com/webmasters/answer/40132">kode status
+  404</a>, halaman secara alami akan keluar dari indeks Google seiring waktu berjalan.</p>
+
+<ul>
+  <li>Keputusan menggunakan Penghapusan URL mungkin bergantung pada jumlah halaman
+    yang tidak diinginkan dan baru yang dibuat (terlalu banyak halaman dapat menjadi beban di Penghapusan URL), serta potensi
+    kerusakan yang dapat disebabkan halaman ini bagi para pengguna. Agar halaman yang dikirim melalui Penghapusan URL tidak akan muncul di hasil
+    penelusuran lagi, pastikan halaman juga dikonfigurasi guna mengembalikan tanggapan 404 File tidak
+    Ditemukan untuk URL yang tidak diinginkan/dihapus.</li>
+  <li>Jangan menggunakan alat ini untuk meminta penghapusan dari halaman yang sebelumnya bagus namun dirusak oleh
+    peretas -- Anda akan menginginkan halaman tersebut muncul di hasil penelusuran setelah dibersihkan.
+    <em>Penghapusan URL hanya untuk halaman yang tidak ingin Anda munculkan di hasil.</em></li>
+</ul>
+
+<h4>3. Pertimbangkan untuk meminta Google mempercepat proses halaman bersih Anda</h4>
+
+<p>Jika Anda memiliki halaman bersih yang baru atau yang diupdate, Anda dapat menggunakan
+  fitur <a href="https://www.support.google.com/webmasters/answer/1352276">Ambil sebagai Google</a> di
+  Search Console untuk mengirimkan halaman tersebut ke indeks Google. Hal ini sepenuhnya opsional. Jika Anda melewati langkah ini,
+  halaman yang dimodifikasi atau baru mungkin akan dirayapi dan diproses seiring waktu berjalan.</p>
+
+<h4>4. Mulai bersihkan server Anda</h4>
+
+<p>Saatnya memulai pembersihan situs berdasarkan catatan yang Anda buat selama
+  <a href="hacked_with_spam">Mengevaluasi kerusakan</a> dan <a href="vulnerability">
+  Mengidentifikasi kerentanan</a>. Beberapa jalur yang diambil pada langkah ini berdasarkan pada jenis
+  backup yang Anda miliki.</p>
+
+<ul>
+  <li>Backup bersih dan terkini</li>
+  <li>Backup bersih tapi usang</li>
+  <li>Tidak ada backup   </li>
+</ul>
+
+<p>Pertama-tama, periksa apakah backup ini dibuat <strong>sebelum</strong> situs Anda diretas.</p>
+
+<ul>
+  <li><strong>Backup bersih dan terkini</strong>
+
+    <ol>
+      <li>Pulihkan backup Anda.</li>
+      <li>Instal semua upgrade, update, atau patch software apa pun yang tersedia. Termasuk software untuk
+        OS jika Anda mengontrol server, dan semua aplikasi, seperti sistem pengelolaan konten,
+        platform e-niaga, plugin, template, dll.</li>
+      <li>Pertimbangkan apakah Anda dapat menghapus software di server (misalnya, widget, plugin,
+        atau aplikasi) yang tidak lagi digunakan situs.</li>
+      <li>Perbaiki kerentanan.</li>
+      <li>Pastikan semua masalah yang ditemukan selama <a href="hacked_with_spam">Mengevaluasi kerusakan</a>
+        diselesaikan.</li>
+      <li>Ubah sandi sekali lagi untuk semua akun yang berhubungan dengan situs (misalnya, info masuk
+        untuk akses FTP, akses database, administrator sistem, dan akun CMS). Pada sistem berbasis Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Backup bersih tapi usang</strong>
+    <ol>
+      <li>Buat gambar disk situs Anda saat ini meskipun situs itu masih terinfeksi. Salinan ini dibuat
+        hanya demi keamanan. Tandai salinan sebagai terinfeksi untuk membedakannya dari yang lain. Pada sistem berbasis Unix,
+        pembuatan gambar disk bisa jadi:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Buat salinan sistem file backup dari server, termasuk file gambar dan media. Jika Anda
+        memiliki database, lakukan backup database itu juga.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Pulihkan salinan bersih tapi usang di server.</li>
+      <li>Pertimbangkan apakah Anda dapat menghapus software di server (misalnya, widget, plugin,
+        atau aplikasi) yang tidak lagi digunakan situs.</li>
+      <li>Tingkatkan versi semua software, termasuk OS jika Anda mengendalikan server, dan semua
+        aplikasi software, misalnya sistem manajemen konten, platform e-niaga, plugin,
+        template, dll. Pastikan untuk memeriksa dan menginstal patch dan update keamanan yang tersedia.</li>
+      <li>Perbaiki kerentanan.</li>
+      <li>Lakukan <code>diff</code> situs secara manual atau secara otomatis -- antara
+        backup bersih dan salinan yang terinfeksi saat ini.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Upload konten baru dan bersih yang ingin Anda lindungi dari salinan terinfeksi pada server yang ditingkatkan versinya.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Periksa apakah setiap URL yang terdaftar dari <a href="hacked_with_spam">Mengevaluasi
+        kerusakan</a> telah dikoreksi.</li>
+      <li>Ubah sandi sekali lagi untuk semua akun yang berhubungan dengan situs (misalnya, info masuk
+        untuk akses FTP, akses database, administrator sistem, dan akun CMS). Pada sistem berbasis Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Tidak ada backup</strong>
+    <ol>
+      <li>Buat dua backup situs Anda meskipun situs itu masih terinfeksi. Memiliki backup tambahan akan
+        membantu memulihkan konten yang tidak sengaja terhapus, atau memungkinkan Anda mengembalikan dan mencoba lagi jika
+        terjadi masalah. Labeli tiap backup dengan "terinfeksi" untuk referensi di masa mendatang.
+        <ul>
+          <li>Salah satu backup tersebut adalah gambar disk atau "versi kloning" situs Anda. Format ini
+            menyederhanakan proses pemulihan konten. Simpan gambar disk untuk
+            keadaan darurat. Pada sistem berbasis Unix, pembuatan gambar disk bisa jadi:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>Backup lainnya akan menjadi salinan sistem file dari server Anda, termasuk file
+            gambar dan media. Jika Anda memiliki database, lakukan backup database itu juga.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Jika Anda tidak memiliki gambar disk, buat dua backup database dan dua
+            backup sistem file.</li>
+        </ul>
+      </li>
+      <li>Bersihkan konten situs pada salinan sistem file backup baru (bukan server itu sendiri)
+        <ol>
+          <li>Jika penyelidikan Anda sebelumnya menemukan izin file yang terlalu longgar, lanjutkan dan perbaiki
+            izin file tersebut. Pastikan Anda melakukan hal ini pada salinan backup, bukan pada server itu sendiri.</li>
+          <li>Juga pada salinan backup, bersihkan semua file yang terkait dengan URL yang ditemukan sebagai
+            disusupi dari <a href="hacked_with_spam">Mengevaluasi kerusakan</a>. File tersebut dapat berupa file konfigurasi
+            server, JavaScript, HTML, PHP.</li>
+          <li>Pastikan untuk menghapus (menayangkan respons 404) file baru yang dibuat oleh peretas
+            juga (yang sudah atau belum Anda kirimkan menggunakan alat Penghapusan URL di Search Console).</li>
+          <li>Perbaiki kerentanan jika ada dalam kode atau sandi Anda yang diretas. Perpustakaan
+            validasi masukan atau audit keamanan mungkin dapat membantu.</li>
+          <li>Jika situs Anda memiliki database, mulai bersihkan catatan yang dimodifikasi oleh peretas pada backup Anda.
+            Sebelum benar-benar selesai, lakukan pemeriksaan stabilitas pada catatan lainnya untuk memastikan
+            catatan tampak bersih.</li>
+          <li>Ubah sandi sekali lagi untuk semua akun yang berhubungan dengan situs (misalnya, info masuk
+            untuk akses FTP, akses database, administrator sistem, dan akun CMS). Pada sistem berbasis
+            Unix:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>Sampai di sini, salinan backup situs Anda yang pernah terinfeksi seharusnya hanya berisi data yang
+            bersih. Sisihkan salinan yang bersih ini dan lakukan langkah #5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Hapus software yang tidak perlu</h4>
+
+<p>Pertimbangkan apakah Anda dapat menghapus software di server -- misalnya, widget, plugin, atau aplikasi -- yang tidak lagi digunakan oleh situs. Cara ini dapat meningkatkan keamanan dan menyederhanakan pemeliharaan di masa mendatang.</p>
+
+<h4>6. Bersihkan semua server</h4>
+
+<ol>
+  <li>Lakukan penginstalan bersih, bukan hanya upgrade. Upgrade masih dapat menyisakan file
+    dari versi sebelumnya. Jika file yang terinfeksi tetap ada di server, peretasan lain kemungkinan dapat terjadi.
+    <ul>
+      <li>Penginstalan baru harus mencakup OS jika Anda mengendalikan server, dan semua
+        aplikasi software, seperti sistem pengelolaan konten, platform e-niaga, plugin,
+        template, dll. Pastikan Anda memeriksa patch dan update keamanan yang tersedia.</li>
+    </ul>
+  </li>
+  <li>Transfer konten yang bagus dari salinan sistem file backup yang bersih ke server yang baru diinstal.
+    Upload/pulihkan file/database yang benar-benar bersih. Pastikan Anda mempertahankan izin file yang sesuai dan tidak menimpa file
+    sistem yang baru diinstal.</li>
+  <li>Ubah sandi untuk terakhir kalinya untuk semua akun yang berhubungan dengan situs (misalnya, login untuk
+    akses FTP, akses database, administrator sistem, dan akun CMS). Pada sistem berbasis Unix:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Buat rencana perawatan jangka panjang</h4>
+
+<p>Terdapat banyak referensi informatif di web mengenai pemeliharaan situs yang andal, seperti
+  <a href="https://www.stopbadware.org/prevent-badware-basics">Mencegah badware: dasar-dasar</a> dari StopBadware. Kami
+  juga sangat menyarankan agar Anda melakukan hal berikut:</p>
+
+<ul>
+  <li>Buat backup situs Anda secara otomatis dan rutin.</li>
+  <li>Waspada saat terdapat update software.</li>
+  <li>Pahami praktik keamanan semua aplikasi, plugin, software pihak ketiga, dll.,
+    sebelum menginstal di server. Kerentanan keamanan pada satu aplikasi software dapat
+    memengaruhi keamanan seluruh situs.</li>
+  <li>Terus buat sandi yang rumit.</li>
+  <li>Jaga agar semua perangkat yang digunakan untuk masuk ke mesin tetap aman (browser dan sistem operasi yang diupdate).</li>
+</ul>
+
+<h4>8. Periksa kembali apakah pembersihan telah selesai</h4>
+
+<p>Pastikan Anda dapat menjawab "ya" untuk pertanyaan berikut:</p>
+
+<ul>
+  <li>Apakah saya telah mengambil langkah yang tepat jika peretas memperoleh informasi pribadi pengguna? </li>
+  <li>Apakah situs saya menjalankan software versi terbaru yang paling aman? </li>
+  <li>Apakah saya telah menghapus semua aplikasi atau plugin yang tidak perlu atau tidak terpakai
+    yang dapat membuat situs saya lebih rentan di masa mendatang? </li>
+  <li>Apakah saya telah memulihkan konten dan menghapus konten peretas? </li>
+  <li>Apakah saya telah memperbaiki akar penyebab kerentanan yang memungkinkan situs saya diretas? </li>
+  <li>Apakah saya memiliki rencana untuk menjaga agar situs saya tetap aman?</li>
+</ul>
+
+<h4>9. Buat situs Anda online kembali</h4>
+<h2>Langkah berikutnya</h2>
+<p>Anda hampir selesai! Langkah terakhir dalam proses ini adalah
+  <a href="request_review">Meminta peninjauan</a>.</p>
+
+</body></html>

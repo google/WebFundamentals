@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-12-06 #}
 {# wf_published_on: 2016-09-13 #}
+{# wf_blink_components: N/A #}
 
 # Writing an Update or Case Study {: .page-title }
 
@@ -30,6 +31,10 @@ To get started quickly, copy the template and start there.
 1. Write/iterate on the update or showcase
 1. Before submitting the pull request, run `gulp test` to verify everything is happy
 1. Submit your PR with the appropriate changes.
+
+Note: See
+[YAML Front Matter and Attribute Reference](/web/resources/yaml-and-attr-reference)
+for all of the YAML Front Matter and other attributes you can or should use.
 
 ## YAML Front Matter & Special Attributes
 
@@ -64,7 +69,7 @@ be an absolute page on DevSite.
 &#123;# wf_featured_image: /web/updates/images/weird.jpg #}
 </pre>
 
-Images should be 2x1, ideally 1000px by 500px.
+Images should be 16x9, ideally 800px by 450px.
 
 **Looking for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/master/src/content/en/updates/images/generic) folder.
 

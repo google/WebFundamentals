@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn about all the ways you can pause your code in Chrome DevTools.
 
-{# wf_updated_on: 2017-06-22 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-02-03 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -200,13 +201,17 @@ To set a DOM change breakpoint:
 
 * **Node Removal**: Triggered when the currently-selected node is removed.
 
-## XHR breakpoints {: #xhr }
+## XHR/Fetch breakpoints {: #xhr }
 
 Use an XHR breakpoint when you want to break when the request URL of an XHR
 contains a specified string. DevTools pauses on the line of code where the
 XHR calls `send()`.
 
 Note: This feature also works with [Fetch][Fetch] requests.
+
+One example of when this is helpful is when you see that your
+page is requesting an incorrect URL, and you want to quickly find the AJAX or
+Fetch source code that is causing the incorrect request.
 
 To set an XHR breakpoint:
 
@@ -310,3 +315,7 @@ calling `debug()` from the DevTools Console. Here's one strategy:
 1. Trigger the breakpoint.
 1. Call `debug()` in the DevTools Console while the code is still paused
    on your line-of-code breakpoint.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

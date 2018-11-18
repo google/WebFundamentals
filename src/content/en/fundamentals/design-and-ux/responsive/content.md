@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Consider content as well as layout and graphic design when building for a range of users and devices.
 
-{# wf_updated_on: 2016-05-10 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-05-10 #}
 
 # Multi-Device Content {: .page-title }
@@ -254,3 +255,7 @@ Bear in mind that this doesn't take into account affordability relative to incom
 Page weight isn't just a problem for emerging markets. In many countries, people use mobile plans with limited data, and will avoid your site or app if they perceive it to be heavy and expensive. Even "unlimited" cell and wifi data plans generally have a data limit beyond which they are blocked or throttled.
 
 The bottom line: page weight affects performance and costs money. [Optimizing content efficiency](/web/fundamentals/performance/optimizing-content-efficiency/) shows how to reduce that cost.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

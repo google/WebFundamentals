@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 웹 앱 매니페스트는 사용자가 네이티브 앱을 볼 것으로 예상되는 영역(예: 기기의 홈 화면)에 웹 앱이나 사이트를 나타내는 방식을 제어하고, 사용자가 시작할 수 있는 항목을 지시하고, 시작 시의 모습을 정의할 수 있는 JSON 파일입니다.
 
-{# wf_updated_on: 2016-08-19 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-02-11 #}
 
 # 웹 앱 매니페스트 {: .page-title }
@@ -249,7 +249,7 @@ Chrome DevTools의 **Application** 창에서 **Manifest** 탭을 사용하세요
 매니페스트](/web/tools/chrome-devtools/progressive-web-apps#manifest)를
 참조하세요. 또한
 여기서 Add to Homescreen 이벤트를 시뮬레이션할 수 있습니다. 이 주제에 대한 자세한 내용은 [앱 설치 배너
-테스트](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)를
+테스트](/web/fundamentals/app-install-banners#test)를
 참조하세요.
 
 웹 앱 매니페스트를 자동으로 검증하고 싶다면
@@ -270,7 +270,7 @@ URL을 입력하면 Lighthouse가 해당 페이지에 대해 감사 스위트를
 그러나 알아야 할 것이 더 많이 있습니다.
 
 * 웹 앱 매니페스트를 사용 중인 경우, 아마
-[앱 설치 배너](/web/fundamentals/engage-and-retain/app-install-banners/)도 함께 설치할 것입니다. 
+[앱 설치 배너](/web/fundamentals/app-install-banners)도 함께 설치할 것입니다.
 
 * 웹 앱 매니페스트에 대한 [전체 참조](https://developer.mozilla.org/en-US/docs/Web/Manifest)는
 Mozilla 개발자 네트워크에서 구할 수 있습니다.

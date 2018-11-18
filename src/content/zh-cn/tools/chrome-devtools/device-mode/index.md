@@ -11,7 +11,7 @@ description:使用 Chrome 的 Device Mode 下的虚拟设备打造移动设备�
 
 使用 Chrome DevTools 的 Device Mode 打造移动设备优先的完全自适应式网站。了解如何使用 Device Mode 模拟多种设备及其功能。
 
-警告：Device Mode 可以让您了解您的网站在移动设备上的大致显示效果，但要获得全面的了解，则应始终在真实设备上测试您的网站。DevTools 无法模拟移动设备的性能特性。
+Warning: Device Mode 可以让您了解您的网站在移动设备上的大致显示效果，但要获得全面的了解，则应始终在真实设备上测试您的网站。DevTools 无法模拟移动设备的性能特性。
 
 
 

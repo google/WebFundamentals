@@ -1,0 +1,91 @@
+<html devsite><head>
+  <title>Utilizzare Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>Se hai già <a href="https://www.support.google.com/webmasters/answer/35179">verificato la proprietà</a> del tuo sito, puoi ignorare la prima operazione descritta di seguito e passare direttamente a controllare le informazioni del sito in Search Console.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>Requisiti:</h3>
+
+<ul>
+  <li>Capacità di <a href="https://www.support.google.com/webmasters/answer/35179">verificare la proprietà</a> del sito, ad esempio aggiungendo un file nella directory principale, creando <a href="https://www.support.google.com/webmasters/answer/79812">meta tag</a>, dimostrando di possedere un account amministrativo Google Analytics per il sito e così via.</li>
+</ul>
+
+<div class="action">
+  <h3>Operazioni da eseguire:</h3>
+
+  <p>In questa sezione vengono eseguite le seguenti operazioni:</p>
+
+  <ol>
+    <li><a href="#verify">Verifica della proprietà del sito in Search Console.</a></li>
+    <li><a href="#check">Controllo che l'hacker non abbia già verificato la proprietà in Search Console e apportato modifiche indesiderate alle impostazioni.</a></li>
+    <li><a href="#determine">Determinazione della natura dell'attacco.</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Verifica della proprietà del sito in Search Console</h4>
+
+<ol>
+  <li>Apri un browser e visita il Centro webmaster all'indirizzo <a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>.</li>
+  <li>Fai clic su <strong>Search Console</strong>.</li>
+  <li>Accedi a Search Console utilizzando un <a href="https://www.google.com/accounts">account Google</a>.
+    Se non disponi di un account Google, fai clic su <strong>Crea un account</strong>. Anche se crei un nuovo account Google, puoi comunque mantenere il tuo account di posta elettronica creato con un'altra società.
+    <a href="https://accounts.google.com/SignUp">Ulteriori informazioni sugli account</a>.</li>
+  <li>Fai clic su <strong>Aggiungi un sito</strong>. Digita l'URL del tuo sito nella casella, quindi fai clic su <strong>Continua</strong>.</li>
+  <li>Scegli il metodo di verifica che trovi più comodo. Nella scheda <strong>Metodo consigliato</strong> della pagina di verifica è mostrato il metodo migliore secondo Google. Altri metodi sono elencati nella scheda <strong>Metodi alternativi</strong>.
+    <a href="https://goo.gl/kQnHQ">Ulteriori informazioni sulla verifica</a>.</li>
+  <li>Se hai scelto un metodo di verifica che richiede di accedere al tuo sito, ad esempio se hai scelto di aggiungere meta tag HTML o un file HTML, devi riportare il sito online.</li>
+  <li>Fai clic su <strong>Verifica</strong> per verificare la proprietà utilizzando il metodo scelto. Se la verifica ha esito positivo, viene mostrata una schermata in cui viene confermato che sei un proprietario verificato.
+    A questo punto, puoi riportare il sito offline, ma ricorda che nei prossimi passaggi devi portarlo nuovamente online.</li>
+</ol>
+<a name="check"></a>
+
+<h4>Completata la verifica, controlla che l'hacker non abbia già verificato la proprietà in Search Console e apportato modifiche indesiderate alle impostazioni.</h4>
+
+<ol>
+  <li>Accedi alla home page principale di Search Console facendo clic sul logo Search Console.</li>
+  <li>Individua il tuo sito, quindi fai clic su <strong>Gestisci sito</strong>.</li>
+  <li>Fai clic su <strong>Aggiungi o rimuovi proprietari</strong>.</li>
+  <li>Assicurati che tutti gli <a href="https://www.support.google.com/webmasters/answer/44227">utenti e proprietari</a> elencati siano autorizzati.</li>
+  <li>Annota l'indirizzo email di eventuali utenti non autorizzati (se pensi che possa tornare utile in futuro), quindi elimina tali utenti dal sito. Nel caso di proprietari non autorizzati, devi eliminare sia il proprietario sia eventuali token di verifica quali, ad esempio, un meta tag di verifica nella home page o un file HTML sul server. <a href="https://www.support.google.com/webmasters/answer/2454036">Ulteriori informazioni.</a></li>
+  <li>Controlla se sono state apportate modifiche indesiderate alle impostazioni di Search Console. Fai clic sull'<span class="material-icons">icona a forma di ingranaggio</span>, quindi su <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>Impostazioni sito</strong></a> per individuare eventuali modifiche indesiderate come, ad esempio, una minore <a href="https://www.support.google.com/webmasters/answer/48620">velocità di scansione</a> che l'hacker potrebbe aver impostato per evitare gli spider dei motori di ricerca. Inoltre, controlla che tutto sia impostato correttamente nella sezione <strong>Indice Google</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">Rimuovi URL</a> oppure selezionando l'<span class="material-icons">icona a forma di ingranaggio</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">Cambio indirizzo</a>.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>Determinazione della natura dell'attacco</h4>
+
+<p>Le informazioni disponibili nel Centro messaggi e in Problemi di sicurezza di Search Console possono aiutarti a stabilire se il tuo sito è stato compromesso in uno dei seguenti modi:</p>
+
+<ul>
+  <li>Con contenuti di spam che potrebbero penalizzare la qualità e la pertinenza dei risultati di ricerca.</li>
+  <li>Per scopi di phishing.</li>
+  <li>Per distribuire malware.</li>
+</ul>
+
+<p>Per esaminare problemi di compromissione o malware utilizzando Search Console, completa le seguenti operazioni:</p>
+
+<ol>
+  <li>Visita la home page di Search Console facendo clic sul logo nell'angolo in alto.</li>
+  <li>Fai clic su <strong>Messaggi</strong>.</li>
+  <li>Controlla se sono presenti messaggi importanti da Google con comunicazioni sull'avvenuto utilizzo del tuo sito per 1) pubblicare pagine, testo o link contenenti spam, 2) phishing, 3) distribuire malware. Se hai ricevuto una notifica di phishing, non eliminare il messaggio finché il processo di ripristino non sarà ultimato.</li>
+  <li>Accedi alla sezione <strong>Problemi di sicurezza</strong> in Search Console.
+    <ul>
+      <li>I siti colpiti da malware presenteranno l'intestazione principale "Malware", seguita dalle categorie dei tipi di malware quali, ad esempio, "Configurazione del server alterata" oppure "Iniezione di modello di errore". In questi casi, è possibile che l'hacker stia utilizzando il tuo sito per infettarne i visitatori con software progettato per accedere a informazioni riservate o danneggiare i computer. Per informazioni su come risolvere il problema, procedi con il passaggio <a href="hacked_with_malware">Valuta il danno (malware)</a>.
+      </li>
+      <li>I siti compromessi allo scopo di pubblicare spam potrebbero essere mostrati con l'intestazione principale "Sito compromesso", seguita dalle categorie dei tipi di compromissione come, ad esempio, "Iniezione di contenuti". È probabile che l'hacker abbia inserito nel tuo sito pagine, testo o link contenenti spam. Per informazioni su come risolvere il problema, procedi con il passaggio <a href="hacked_with_spam">Valuta il danno (spam)</a>.</li>
+      <li>Per i siti contrassegnati da una "notifica di phishing" nel Centro messaggi di Search Console, potrebbero non essere presenti informazioni nella sezione Problemi di sicurezza. Creando pagine di phishing, l'hacker utilizza il tuo sito per ottenere credenziali di accesso, password o informazioni finanziarie degli utenti, spesso spacciando il sito come affidabile. Poiché i rimedi contro il phishing sono simili a quelli contro lo spam, procedi al passaggio <a href="hacked_with_spam">Valuta il danno (spam)</a>.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Passaggio successivo</h2>
+
+<p>Procedi al passaggio <a href="hacked_with_spam">Valuta il danno (spam)</a> oppure al passaggio <a href="hacked_with_malware">Valuta il danno (malware)</a>.</p>
+
+</body></html>

@@ -7,6 +7,8 @@ description: O RAIL é um modelo de desempenho centrado no usuário. Todo app da
 
 # Medição do desempenho com o modelo RAIL {: .page-title }
 
+{% include "web/_shared/translation-out-of-date.html" %}
+
 {% include "web/_shared/contributors/megginkearney.html" %}
 
 O RAIL é um modelo de desempenho centrado no usuário. Todo aplicativo web tem estes quatro aspectos distintos no seu ciclo de vida, e o desempenho se relaciona com eles de maneiras muito diferentes:
@@ -93,10 +95,10 @@ Seu objetivo é produzir 60 quadros por segundo, e todo quadro tem que passar pe
 
 ![Etapas para se renderizar um quadro](images/render-frame.png)
 
-De um ponto de vista puramente matemático, todo quadro tem um "orçamento" de cerca de 
+De um ponto de vista puramente matemático, todo quadro tem um "orçamento" de cerca de
 16 ms (1000 ms/60 quadros por segundo = 16,66 ms por quadro). Porém, como
 os navegadores precisam de algum tempo para exibir o novo quadro na tela, **o seu código
-deve finalizar a execução em até 10 ms**. 
+deve finalizar a execução em até 10 ms**.
 
 Em pontos de alta pressão, como as animações, a chave é não fazer nada
 onde for possível e absolutamente o mínimo onde não for possível não fazer nada. Sempre que der, use a
@@ -110,7 +112,7 @@ Para saber mais, acesse
 
 Use o tempo de ociosidade para concluir trabalhos adiados. Por exemplo, mantenha um mínimo de dados pré-carregados para que o aplicativo carregue rapidamente, e use o tempo de ociosidade para carregar os demais dados.
 
-Os trabalhos adiados devem ser agrupados em blocos de cerca de 50 ms. Caso um usuário comece a interagir, a prioridade é responder a isso. 
+Os trabalhos adiados devem ser agrupados em blocos de cerca de 50 ms. Caso um usuário comece a interagir, a prioridade é responder a isso.
 
 Para tornar possível uma <resposta de 100 ms,
 o aplicativo deve devolver o controle ao encadeamento principal a cada <50 ms,
@@ -166,7 +168,7 @@ Para avaliar o seu site com base nas métricas do RAIL, use a [ferramenta "Timel
       <td data-th="User Test">O usuário carrega a página e vê o conteúdo do caminho crítico.</td>
     </tr>
   </tbody>
-</table> 
+</table>
 
 
 

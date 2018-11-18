@@ -26,7 +26,7 @@ book_path: /web/fundamentals/_book.yaml
       }
     }).then(function(cred) {
       if (cred) {
-        // Use provided credential to sign user in  
+        // Use provided credential to sign user in
       }
     });
 
@@ -152,7 +152,7 @@ navigator.credentials.get({
 要确定它是 `PasswordCredential` 还是 `FederatedCredential`，只需查看此对象的 `.type` 属性，即 `password` 或 `federated`。
 
 
- 
+
 
 如果 `.type` 是 `federated`，则 `.provider` 属性是一个表示身份提供程序的字符串。
 
@@ -212,7 +212,7 @@ navigator.credentials.get({
     testtest
     ------WebKitFormBoundaryOkstjzGAv8zab97W--
 
-注：您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的服务器。
+Note: 您不能使用 `XMLHttpRequest` 将 `PasswordCredential` POST 到您的服务器。
 
 
 #### `PasswordCredential` 参数
@@ -319,14 +319,14 @@ navigator.credentials.get({
     // Is this user already signed in?
     if (auth2.isSignedIn.get()) {
       var googleUser = auth2.currentUser.get();
-      
+
       // Same user as in the credential object?
       if (googleUser.getBasicProfile().getEmail() === id) {
         // Continue with the signed-in user.
         return Promise.resolve(googleUser);
       }
     }
-    
+
     // Otherwise, run a new authentication flow.
     return auth2.signIn({
       login_hint: id || ''

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up Lighthouse to audit your web apps.
 
-{# wf_updated_on: 2017-09-26 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2016-09-27 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -46,8 +46,6 @@ figure {
   vertical-align: middle;
 }
 </style>
-
-<script src="/_static/js/managed/cws_install.js" async></script>
 
 Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse),
 automated tool for improving the quality of web pages. You can run it against
@@ -155,7 +153,7 @@ To see audit options:
 See [Using programmatically][programmatic] for an example of running Lighthouse
 programmatically, as a Node module.
 
-[programmatic]: https://github.com/GoogleChrome/lighthouse#using-programmatically
+[programmatic]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically
 
 ### Run Lighthouse as a Chrome Extension {: #extension }
 
@@ -169,7 +167,8 @@ To install the extension:
 1. Download [Google Chrome for Desktop][desktop].
 
 1. Install the <a class="gc-analytics-event" data-category="Lighthouse"
-   data-label="Home / Install Extension (Secondary CTA)" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+   data-label="Home / Install Extension (Secondary CTA)"
+   href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
    title="Install Lighthouse Chrome Extension" target="_blank">Lighthouse
    Chrome Extension</a> from the Chrome Webstore.
 

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/mynet/mynet-thumb_2x.jpg #}
 {# wf_featured_snippet: After implementing AMP and a Progressive Web App, Mynet saw a significant increase in user engagement, with the average time spent on their mobile site rising 43% #}
 {# wf_tags: casestudy,progressive-web-apps,amp #}

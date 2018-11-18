@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
 {# wf_published_on: 2016-10-20 #}
-{# wf_updated_on: 2017-08-29 #}
+{# wf_updated_on: 2018-10-10 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # Async functions - making promises friendly {: .page-title }
@@ -196,7 +196,7 @@ function to complete before calling the second.
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-Note: Class constructors and getters/settings cannot be async.
+Note: Class constructors and getters/setters cannot be async.
 
 ## Careful! Avoid going too sequential
 
@@ -332,9 +332,15 @@ code-bloat.
 ## Async all the things!
 
 Once async functions land across all browsers, use them on every
-promise-returning function! Not only do they make your code tider, but it makes
+promise-returning function! Not only do they make your code tidier, but it makes
 sure that function will *always* return a promise.
 
 I got really excited about async functions [back in
 2014](https://jakearchibald.com/2014/es7-async-functions/){: .external}, and
 it's great to see them land, for real, in browsers. Whoop!
+
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>

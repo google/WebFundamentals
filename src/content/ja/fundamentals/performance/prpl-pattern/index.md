@@ -229,7 +229,7 @@ PRPL では、ユーザーが選択したルートをインタラクティブに
 
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[Resource hints]: /web/updates/2016/03/link-rel-preload
 [HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 

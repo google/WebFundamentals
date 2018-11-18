@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-webpack-plugin/src/index.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-webpack-plugin/src/index.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+  Copyright 2017 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+const path &#x3D; require(&#x27;path&#x27;);
+const {getModuleUrl} &#x3D; require(&#x27;workbox-build&#x27;);
+
+const generateManifest &#x3D; require(&#x27;./lib/generate-manifest-with-webpack&#x27;);
+const generateOrCopySW &#x3D; require(&#x27;./lib/generate-or-copy-sw&#x27;);
+const getAssetHash &#x3D; require(&#x27;./lib/utils/get-asset-hash&#x27;);
+const getEntries &#x3D; require(&#x27;./lib/get-manifest-entries-with-webpack&#x27;);
+const formatAsWebpackAsset &#x3D; require(&#x27;./lib/utils/format-as-webpack-asset&#x27;);
+const {setReadFile} &#x3D; require(&#x27;./lib/utils/read-file&#x27;);
+
+/**
+ * This module exports the &#x60;WorkboxWebpackPlugin&#x60;.
+ *
+ * Use an instance of &#x60;WorkboxWebpackPlugin&#x60; in the
+ * [&#x60;plugins&#x60; array](https://webpack.js.org/concepts/plugins/#usage) of a
+ * webpack config.
+ *
+ * @module workbox-webpack-plugin
+ */
+class WorkboxWebpackPlugin {
+  /**
+   * Creates an instance of WorkboxWebpackPlugin.
+   *
+   * @param {module:workbox-build.Configuration} [config] All the options as
+   *        passed to {@link module:workbox-build.generateSWString}.
+   * @param {Array&amp;lt;String&gt;} [config.chunks] Array of chunk names to use for
+   *        generating the asset manifest. All assets belonging to the provided
+   *        chunk names will be included in the asset manifest. Any chunks that
+   *        are not listed or do not have a name will be removed.
+   * @param {Array&amp;lt;String&gt;} [config.excludeChunks] Array of chunk names to
+   *        exclude from the asset manifest. Any asset beloning to the provided
+   *        chunk names will not be included in the asset manifest. This does
+   *        not affect chunks with no chunk name.
+   * @param {string} [config.filename &#x3D; &#x27;sw.js&#x27;] Name of the service worker file
+   * @param {string} [config.manifestFilename &#x3D; &#x27;file-manifest[hash].js&#x27;] Name
+   *        of the manifest file that will be written to the build directory
+   * @param {string} [config.swSrc] Path to an existing service worker file.
+   *        Will be added to the webpack compilation and prepended with
+   *        importScripts(&#x27;workbox-sw.js&#x27;, &#x27;file-manifest.js&#x27;)
+   */
+  constructor(config &#x3D; {}) {
+    this.config &#x3D; config;
+  }
+
+  /**
+   * @return {Object} All workbox configuration options that can be accepted
+   * by {@link module:workbox-build.generateSWString}
+   *
+   * @private
+   */
+  get generateSWStringOptions() {
+    const {
+      importScripts &#x3D; [],
+      // TODO: decide on other options that should be passed to
+      // &#x60;generateSWString&#x60;. What operations should be possible for webpack
+      // users? eg, should webpack users also be able to specify a
+      // &#x60;globDirectory&#x60; that allows manifestEntries to be added that are
+      // outside webpack&#x27;s scope?
+    } &#x3D; this.config;
+
+    return {
+      importScripts,
+    };
+  }
+
+  /**
+   * @param {Object} [compiler] default compiler object passed from webpack
+   *
+   * @private
+   */
+  apply(compiler) {
+    /**
+     * The plugin was instantiated and the webpack compilation has just begun.
+     * We configure the workbox-webpack-plugin/utils/read-file module to use
+     * webpack&#x27;s compilation.inputFileSystem._readFile method for reading files.
+     *
+     * TODO: Determine if this is absolutely necessary. It might be possible to
+     * only do this in development (when the file system is a &quot;memory&quot; file
+     * system). If that is the case, it might be better to set different values
+     * for setReadFile using compiler.plugin(&#x27;run&#x27;) for production and
+     * compiler.plugin(&#x27;watch-run&#x27;) for development.
+     */
+    setReadFile(compiler.inputFileSystem._readFile);
+
+    /**
+     * During the emit phase of the webpack compilation, we:
+     *  1. Get the manifest entries.
+     *  2. Use the entries to generate a file-manifest.
+     *  3. Generate a service worker with the file-manifest name and workbox-sw
+     *     name, or copy a service worker from the config.swSrc, then prepend
+     *     it with the required importScripts(workbox-sw.js, file-manifest.js).
+     *  4. Add both the file-manifest and the service worker to the webpack
+     *     assets.
+     */
+    compiler.plugin(&#x27;emit&#x27;, async (compilation, next) &#x3D;&gt; {
+      const {swSrc} &#x3D; this.config;
+      const serviceWorkerFilename &#x3D; swSrc ? path.basename(swSrc) : &#x27;sw.js&#x27;;
+
+      const entries &#x3D; getEntries(compilation, this.config);
+
+      const fileManifest &#x3D; generateManifest(entries);
+      const fileManifestAsset &#x3D; formatAsWebpackAsset(fileManifest);
+      const fileManifestHash &#x3D; getAssetHash(fileManifestAsset);
+      const manifestFilename &#x3D; &#x60;precache-manifest.${fileManifestHash}.js&#x60;;
+      compilation.assets[manifestFilename] &#x3D; fileManifestAsset;
+
+      this.config.importScripts &#x3D; (this.config.importScripts || []).concat([
+        getModuleUrl(&#x27;workbox-sw&#x27;),
+        manifestFilename,
+      ]);
+
+      const serviceWorker &#x3D; await generateOrCopySW(this.config, swSrc);
+      compilation.assets[serviceWorkerFilename] &#x3D; formatAsWebpackAsset(
+        serviceWorker);
+
+      next();
+    });
+  }
+}
+
+module.exports &#x3D; WorkboxWebpackPlugin;
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

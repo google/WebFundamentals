@@ -3,6 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget dapibus libero. Morbi ultricies varius accumsan.
 
 {# wf_updated_on: 2017-02-09 #}
+{# wf_blink_components: n/a #}
 
 # This Is The Page Title {: .page-title }
 

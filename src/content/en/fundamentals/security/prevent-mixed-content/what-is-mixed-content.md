@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mixed occurs when initial HTML is loaded over a secure HTTPS connection, but other resources are loaded over an insecure HTTP connection.
 
-{# wf_updated_on: 2016-08-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-09-25 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
@@ -76,7 +76,7 @@ you want to learn more, the following resources are a good place to start:
 * [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS){: .external}
 * [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security){: .external}
 * [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography){: .external}
-* [TLS chapter](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html){: .external} in [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545){: .external} by Ilya Grigorik
+* [TLS chapter](https://hpbn.co/transport-layer-security-tls/){: .external} in [High Performance Browser Networking](https://hpbn.co/){: .external} by Ilya Grigorik
 
 ## Mixed content weakens HTTPS
 
@@ -281,4 +281,6 @@ information published by the vendors directly.
 
 Note: Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

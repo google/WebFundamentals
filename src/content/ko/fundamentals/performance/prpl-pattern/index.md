@@ -247,7 +247,7 @@ PRPL은 사용자가 상호작용할 수 있는 경로를 만드는 데 필요�
 코드를 제공하여 이러한 문제를 해결할 수 있도록 지원합니다.
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[Resource hints]: /web/updates/2016/03/link-rel-preload
 [HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
 
 

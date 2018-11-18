@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # Buku Petunjuk Offline {: .page-title }
@@ -242,7 +242,7 @@ Di HTTP ini sangat mirip dengan
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+[Push API](/web/fundamentals/push-notifications)
 adalah fitur lain yang dibangun berbasis ServiceWorker. Ini memungkinkan
 ServiceWorker dibangunkan untuk merespons pesan dari
 layanan perpesanan OS. Ini terjadi bahkan bila pengguna tidak memiliki tab yang dibuka untuk

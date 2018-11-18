@@ -1,0 +1,180 @@
+<html devsite><head>
+  <title>解决乱码黑客入侵问题</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+<body>
+
+<p>本指南专门针对的是一种向您的网站添加包含大量关键字的乱码网页的黑客行为，我们将这种黑客行为称为“乱码黑客行为”。我们专门针对<a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">热门内容管理系统</a> (CMS) 的用户推出了这一指南；但即使您并未使用内容管理系统，本指南也会对您有帮助。</p>
+
+<p><strong>注意</strong>：不确定您的网站是否遭到了入侵？请先阅读我们的<a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">如何检查您的网站是否遭到了入侵</a>指南。</p>
+
+<aside class="note">我们希望确保本指南确实对您有帮助。请<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">提供反馈</a>以帮助我们做出改进！</aside>
+
+<h2>目录</h2>
+
+<ul>
+<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">第 1 步：识别此类黑客行为</a></li><p></p>
+<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">第 2 步：解决黑客入侵问题</a></li><p></p>
+<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">第 3 步：其他资源</a></li><p></p>
+<p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">与被黑网站相关的常见问题解答</a></li><p></p>
+</ul>
+
+<a name="identifying"></a>
+<h2>识别此类黑客行为</h2>
+
+<p>乱码黑客行为会在您的网站上使用由关键字堆砌而成的无意义句子自动创建很多网页。这些网页并不是您创建的，但它们的网址可能会吸引用户去点击。黑客这样做的目的是，使被黑网页显示在 Google 搜索结果中。然后，如果用户尝试访问这些网页，就会被重定向到不相关的网页（例如色情网站）。当用户访问这些不相关的网页时，黑客便会获得收入。下面是您在受到乱码黑客行为影响的网站上可能会看到的文件类型的一些示例：</p>
+
+  <ul>
+    <li>www.example.com/cheap-hair-styles-cool.html</li>
+    <li>www.example.com/free-pictures-fun.html</li>
+    <li>www.example.com/nice-song-download-file.php</li>
+   </ul>
+
+<p>有时，这些网页所处的文件夹的名称由随机字符组成，并采用不同的语言：</p>
+
+   <ul>
+   <li>www.example.com/jfwoea/cheap-hair-styles-cool.html</li>
+   <li>www.example.com/jfwoea/free-pictures-fun.html</li>
+   <li>www.example.com/jfwoea/www-ki-motn-dudh-photo.php</li>
+   <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
+   </ul>
+
+<p>首先，请在 Search Console 中的<a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">安全问题</a>工具中查看 Google 是否在您的网站上发现了上述任何被黑网页。有时，您也可以通过打开 Google 搜索窗口并输入 <code class="notranslate l10n-notranslate">site:<i>your site url</i></code>（使用您网站的根级网址）来发现此类网页。搜索结果页面将会显示 Google 已针对您的网站编入索引的网页，其中也包括被黑网页。您可以翻阅几页搜索结果，看看能否发现任何异常网址。如果您在 Google 搜索结果中没有看到任何被黑内容，请使用其他搜索引擎搜索相同的搜索字词。此操作的效果如以下示例所示。</p>
+
+
+<img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<div class="tip">请注意，上面的搜索结果包含许多并非由网站所有者创建的网页。如果您仔细查看相关描述，便会看到这种黑客行为所创建的乱码文字的示例。</div>
+
+<p>通常，当您点击指向被黑网页的链接后，您要么被重定向到其他网站，要么看到充满乱码内容的网页。不过，您还有可能会看到一条表示网页不存在的消息（例如 404 错误）。别被骗了！在网页仍然被黑时，黑客会试图使您相信相应网页已消失或修复。为此，他们会<a href="https://support.google.com/webmasters/answer/66355">隐藏真实内容</a>。您可以在 <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Google 抓取工具</a>中输入您网站的网址，以此来检查是否存在隐藏真实内容的问题。Google 抓取工具可以让您看到潜在的隐藏内容。</p>
+
+<p>如果您看到上述问题，则说明您的网站很可能受到了此类黑客行为的影响。</p>
+
+<a name="fixing"></a>
+<h2>解决黑客入侵问题</h2>
+
+<p>开始前，请先为您要移除的任何文件创建离线副本，以备日后需要恢复这些文件时使用。在开始执行清理流程之前，最好先备份您的整个网站。为此，您可以离线保存您服务器上的所有文件，或搜索最适合您的特定内容管理系统的备份选项。</p>
+
+<h3>检查 .htaccess 文件（共 2 步）</h3>
+
+<p>乱码黑客行为会利用 .htaccess 文件重定向您网站的访问者。</p>
+
+<p><b>第 1 步</b></p>
+<p>查找您网站上的 .htaccess 文件。如果您不确定在哪里可以找到此文件，并且您使用了 WordPress、Joomla 或 Drupal 等内容管理系统，请在搜索引擎中同时搜索“.htaccess 文件的位置”以及您的内容管理系统的名称。您可能会看到多个 .htaccess 文件，具体取决于您的网站。然后，列出所有 .htaccess 文件的位置。</p>
+
+<p><strong>注意</strong>：.htaccess 通常是“隐藏文件”。请确保您在搜索此类文件时启用了显示隐藏文件选项。</p>
+
+<p><b>第 2 步</b></p>
+<p>将所有 .htaccess 文件替换为相应 .htaccess 文件的未遭入侵版本或默认版本。您通常可以通过同时搜索“默认 .htaccess 文件”和您的内容管理系统的名称来查找 .htaccess 文件的默认版本。对于拥有多个 .htaccess 文件的网站，请查找每个文件的未遭入侵版本并进行替换。</p>
+
+<p>如果不存在默认的 .htaccess 文件，并且您从未在网站上配置任何 .htaccess 文件，那么您在网站上找到的 .htaccess 文件可能是恶意文件。为保险起见，请离线保存一个 .htaccess 文件副本，然后从网站中删除相应的 .htaccess 文件。</p>
+
+<h3>查找并移除其他恶意文件（共 5 步）</h3>
+
+<p>识别恶意文件可能会有些棘手，并且可能需要几个小时才能完成。在检查文件时请不要着急。如果您尚未备份网站上的文件，这便是个好时机。您可以在 Google 搜索中同时搜索“备份网站”以及您的内容管理系统的名称，以查找有关如何备份网站的说明。</p>
+
+<p><b>第 1 步</b></p>
+<p>如果您使用了内容管理系统，请重新安装此内容管理系统的默认分发中附带的所有核心（默认）文件，以及您可能添加过的任何内容（例如主题背景、模块、插件）。这样有助于确保这些文件中不含被黑内容。您可以在 Google 搜索中同时搜索“重新安装”以及您的内容管理系统的名称，以查找有关重新安装流程的说明。如果您有任何插件、模块、扩展程序或主题背景，请确保您也重新安装了这些内容。</p>
+
+<p>重新安装这些核心文件可能会导致您所做的任何自定义设置丢失。请务必先为您的数据库和所有文件创建备份，然后再重新安装。</p>
+
+<p><b>第 2 步</b></p>
+<p>现在，您需要查找剩余的任何其他恶意或遭到入侵的文件。这是这一流程中难度最大且耗时最长的环节，但完成此环节后，您马上就大功告成了！</p>
+
+<p>这种黑客行为通常会留下两种类型的文件：.txt 文件和 .php 文件。.txt 文件充当模板文件，而 .php 文件可确定在您的网站上加载哪类无意义内容。首先，请查找 .txt 文件。根据您连接到您网站的方式，您应该会看到某种文件搜索功能。搜索“.txt”即可搜出所有扩展名为 .txt 的文件。大多数此类文件都是合法的文本文件，例如许可协议、readme 文件等。您要查找的是一组特定的 .txt 文件，其中包含用于创建垃圾内容模板的 HTML 代码。下面是您可能会在这些恶意 .txt 文件中找到的不同代码的代码段。</p><p>
+
+</p><p>黑客会使用关键字替换手段来创建垃圾内容网页。您很可能会在整个被黑文件中看到某种可以被替换的通用字词。</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;title&gt;{keyword}&lt;/title&gt;
+  &lt;meta name="description" content="{keyword}" /&gt;
+  &lt;meta name="keywords" content="{keyword}" /&gt;
+  &lt;meta property="og:title" content="{keyword}" /&gt;
+</pre>
+
+<p>此外，大多数这种文件都包含某种代码，以便将垃圾内容链接和垃圾内容文本放在可见网页范围外。</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  &lt;div style="position: absolute; top: -1000px; left: -1000px;"&gt;
+  Cheap prescription drugs
+  &lt;/div&gt;
+</pre>
+
+<p>请移除这些 .txt 文件。如果这些文件都位于同一文件夹中，您可以移除整个文件夹。</p>
+
+<p><b>第 3 步</b></p>
+<p>查找恶意 PHP 文件的难度会略大一些。您的网站上可能存在一个或多个恶意 PHP 文件。这些文件可能包含在同一子目录中，也可能遍布整个网站。</p>
+
+<p>不要由于认为需要打开并查看每个 PHP 文件而感到太大压力。首先，请创建一个您想要调查的可疑 PHP 文件的列表。以下几种方法可用于确定哪些 PHP 文件可疑：</p>
+
+<ul>
+<li>由于您已经重新加载了内容管理系统文件，所以您只需查看不包含在默认内容管理系统文件或文件夹范围内的文件。这样应该可以排除大量 PHP 文件，并只需检查少数文件。</li>
+<li>按最后修改日期对网站上的文件进行排序。查找在您首次发现网站遭到入侵后的几个月内遭到修改的文件。</li>
+<li>按大小对网站上的文件进行排序。查找是否有任何异常大的文件。</li>
+</ul>
+
+<p><b>第 4 步</b></p>
+<p>创建好可疑 PHP 文件的列表之后，便可以检查这些文件是正常文件还是恶意文件了。如果您对 PHP 文件不熟悉，该流程会消耗更多时间，因此不妨重温一些 <a href="https://php.net/docs.php">PHP 文档</a>。但即使您刚开始接触编码，您还是可以通过一些基本模式来查找恶意文件。</p>
+
+<p>首先，扫描您已经找到的可疑文件，以查找包含看似混乱的字母和数字组合的大型文本块。大型文本块的前面通常是 PHP 函数组合（例如 base64_decode、rot13、eval、strrev、gzinflate）。下面是此类代码块的一个示例。有时，所有此类代码会被填充到一长串文本中，使其看起来小于实际大小。</p>
+
+<p></p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+&lt;!--Hackers try to confuse webmasters by encoding malicious code into blocks
+of texts. Be wary of unfamiliar code blocks like this.--&gt;
+
+base64_decode(strrev("hMXZpRXaslmYhJXZuxWd2BSZ0l2cgknbhByZul2czVmckRWYgknYgM3ajFGd0FGIlJXd0VnZgk
+nbhBSbvJnZgUGdpNHIyV3b5BSZyV3YlNHIvRHI0V2Zy9mZgQ3Ju9GRg4SZ0l2cgIXdvlHI4lmZg4WYjBSdvlHIsU2chVmcnBydv
+JGblBiZvBCdpJGIhBCZuFGIl1Wa0BCa0l2dgQXdCBiLkJXYoBSZiBibhNGIlR2bjBycphGdgcmbpRXYjNXdmJ2blRGI5xWZ0Fmb
+1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWdjlmZmlGZgQXagU2ah1GIvRHIzlGa0B
+SZrlGbgUGZvNGIlRWaoByb0BSZrlGbgMnclt2YhhEIuUGZvNGIlxmYhRWYlJnb1BychByZulGZhJXZ1F3ch1GIlR2bjBCZlRXY
+jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
+</pre>
+
+
+<p>有时，此类代码并不混乱，看起来就像正常的脚本。如果您不确定代码是否为恶意代码，请访问我们的<a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">网站站长帮助论坛</a>；在该论坛中，有一群经验丰富的网站站长可以帮助您检查相关文件。</p>
+
+<p><b>第 5 步</b></p>
+<p>您已经知道哪些文件可疑了，接下来便可以创建备份或通过将其保存到您的计算机上来创建本地副本，以免这些文件并不是恶意文件，然后删除这些可疑文件。</p>
+
+<h3>检查您的网站是否已清理干净</h3>
+
+<p>删除被黑文件之后，请检查您的辛苦工作是否已见成效。还记得您早先发现的那些乱码网页吗？再次使用“Google 抓取工具”检查这些网页，看它们是否仍然存在。如果它们在“Google 抓取工具”中的结果是“未找到”，则说明您的网站很可能处于良好状态！</p>
+
+<p>您还可以按照<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">“被黑客入侵的网站”问题排查工具</a>中的步骤检查网站上是否仍然存在被黑内容。</p>
+
+<h3>如何防止再次遭到入侵？</h3>
+
+<p>修复网站上的漏洞是修复网站的最后一个关键步骤。最近的一项研究发现，20% 的被黑网站会在 1 天内再次遭到入侵。了解网站遭到入侵的具体方式非常有用。请参阅我们的<a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">垃圾内容发布者最常用的网站入侵方法</a>指南以开始调查问题。不过，如果您无法找出网站遭到入侵的方式，则可以按照以下核对清单操作，以减少网站上的漏洞。</p>
+
+<ul>
+  <li><strong>定期扫描计算机</strong>：使用任何热门的病毒扫描程序检查是否存在病毒或漏洞。</li>
+<li><strong>定期更改密码</strong>：定期更改用于所有网站帐号（例如托管服务提供商、FTP 和内容管理系统）的密码可以阻止攻击者未经授权地访问您的网站。为每个帐号分别创建一个唯一的安全系数高的密码很重要。</li>
+<li><strong>使用<a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">双重身份验证 (2FA)</a></strong>：考虑针对任何需要您登录的服务启用双重身份验证功能。双重身份验证功能让黑客难以登录，即使他们成功窃取了您的密码也没关系。</li>
+<li><strong>定期更新内容管理系统、插件、扩展程序和模块</strong>：希望您已经执行此步骤。许多网站遭到入侵，是因为网站上运行了过期软件。某些内容管理系统支持自动更新功能。</li>
+<li><strong>考虑订阅安全服务以监控您的网站</strong>：有许多优秀的服务可以帮助您监控网站，并且只需支付少量的费用。您可以考虑注册此类服务以确保您网站的安全。</li>
+</ul>
+
+<a name="resources"></a>
+<h2>其他资源</h2>
+<p>如果您在修复网站时仍然遇到问题，还有一些其他资源或许可以帮助您。</p>
+
+<p>这些工具可对您的网站进行扫描，并且可能会找出有问题的内容。除 VirusTotal 以外，Google 不会运行或支持其他工具。</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>、<a href="https://aw-snap.info/">Aw-snap.info</a>、<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>、<a href="https://www.quttera.com/">Quttera</a>：这些工具（此外还有许多其他工具）也许能够通过扫描您的网站来找出有问题的内容。但请注意，这些扫描工具无法保证一定能找到每一类有问题的内容。</p>
+
+<p>下面是 Google 提供的可为您提供帮助的其他资源：</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Google 网站站长帮助论坛</a></li>
+<li><a href="/web/fundamentals/security/hacked/">针对被黑网站的 Google 网站站长帮助</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google 安全浏览</a></li>
+</ul>
+
+<div class="alert">没有找到您认为可能有用的工具？请<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">留下反馈</a>并告知我们。</div>
+
+
+
+</body></html>

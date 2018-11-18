@@ -1,0 +1,200 @@
+<html devsite><head>
+  <title>Oczyść i zabezpiecz witrynę</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Czego potrzebujesz:</h3>
+
+<ul>
+  <li>dostępu administratora do powłoki lub terminala serwerów witryny: internetowego, bazy danych i plików;</li>
+  <li>znajomości poleceń powłoki lub terminala;</li>
+  <li>umiejętności czytania kodu (np. PHP lub JavaScript);</li>
+  <li>miejsca na tworzenie kopii zapasowych witryny (w tym plików, bazy danych, obrazów itp.).</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Kolejne działania:</h3>
+
+<p>Na tym etapie omawiamy kilka spraw: </p>
+
+<ul>
+  <li>Gdzie znaleźć dodatkowe materiały, gdy sądzisz, że haker zamierzał uzyskać dane osobowe użytkowników (np. korzystając ze stron wyłudzających informacje).</li>
+  <li>Możliwość użycia funkcji <a href="https://www.google.com/webmasters/tools/removals">Usuń adresy URL</a> w Search Console, by przyspieszyć usunięcie utworzonych przez hakera zupełnie nowych, niepożądanych adresów URL widocznych dla użytkowników i zapobiec pojawianiu się tych adresów w wynikach wyszukiwania Google.</li>
+  <li>Możliwość użycia funkcji <a href="https://www.support.google.com/webmasters/answer/1352276">Pobierz jako Google</a> w Search Console, by przyspieszyć przetwarzanie przez Google nienaruszonych stron (nowych lub ostatnio zaktualizowanych), które chcesz umieścić w wynikach wyszukiwania Google.</li>
+  <li>Instalację najnowszej i najbezpieczniejszej wersji oprogramowania.</li>
+  <li>Usunięcie niepotrzebnych lub nieużywanych aplikacji i wtyczek, które mogą narazić witrynę na ataki w przyszłości.</li>
+  <li>Przywrócenie właściwych treści i cofnięcie zmian wprowadzonych przez hakera.</li>
+  <li>Usunięcie głównej przyczyny luki w zabezpieczeniach, którą wykorzystał haker.</li>
+  <li>Zmianę wszystkich haseł.</li>
+  <li>Zaplanowanie sposobów zabezpieczenia witryny.</li>
+</ul>
+
+<h4>1. W razie wycieku poufnych danych (na przykład przez strony wyłudzające informacje) znajdź odpowiednie materiały pomocy</h4>
+
+<p>Jeśli haker uzyskał z Twojej witryny poufne dane o użytkownikach (np. gdy jego atak miał na celu wyłudzenie informacji), przed rozpoczęciem czyszczenia witryny i usuwania plików warto zastanowić się, jaka wynika z tego odpowiedzialność biznesowa, administracyjna i prawna. Przydatne materiały o phishingu znajdziesz na <a href="https://antiphishing.org">antiphishing.org</a> – m.in. dokument w języku angielskim <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">What to do if you your site has been hacked by phishers</a> (Co robić, gdy witrynę zaatakowali hakerzy wyłudzający informacje).</p>
+
+<h4>2. Rozważ szybsze usunięcie nowych adresów URL utworzonych przez hakera</h4>
+
+<p>Jeśli haker utworzył zupełnie nowe adresy URL widoczne dla użytkowników, możesz przyspieszyć usuwanie ich z wyników wyszukiwania Google, używając funkcji <a href="https://www.google.com/webmasters/tools/removals">Usuń adresy URL</a> w Search Console. Ta czynność jest całkowicie opcjonalna. Gdy po prostu usuniesz strony, a potem skonfigurujesz serwer, by zwracał <a href="https://www.support.google.com/webmasters/answer/40132">kod stanu 404</a>, po jakimś czasie strony w naturalny sposób znikną z indeksu Google.</p>
+
+<ul>
+  <li>Decyzja o użyciu funkcji Usuń adresy URL zależy zwykle od liczby nowych, niepożądanych stron (podawanie zbyt wielu stron w żądaniu usunięcia może być kłopotliwe) oraz zakresu potencjalnych szkód, jakie te strony mogą spowodować u użytkowników. Aby mieć pewność, że strony zgłoszone w narzędziu do usuwania adresów URL nie pojawią się już w wynikach wyszukiwania, musisz też tak skonfigurować swój serwer, by zamiast nich zwracał odpowiedź 404 Nie znaleziono pliku.</li>
+  <li>Nie używaj tego narzędzia do usunięcia istniejących wcześniej stron, które zostały zmienione przez hakera – zapewne chcesz, by po oczyszczeniu można było je znaleźć w wynikach wyszukiwania.
+    <em>Narzędzie do usuwania adresów URL stosuje się tylko w przypadku stron, które mają na stałe zniknąć z wyników wyszukiwania.</em></li>
+</ul>
+
+<h4>3. Rozważ przyspieszenie przetwarzania nienaruszonych stron przez Google</h4>
+
+<p>Jeśli masz nowe lub zaktualizowane strony, które nie zostały zaatakowane, możesz użyć funkcji <a href="https://www.support.google.com/webmasters/answer/1352276">Pobierz jako Google</a> w Search Console, by przesłać je do indeksu Google. Ta czynność jest całkowicie opcjonalna. Gdy ją pominiesz, prawdopodobnie nowe lub zmienione strony po jakimś czasie i tak zostaną zindeksowane i przetworzone.</p>
+
+<h4>4. Zacznij oczyszczać serwery</h4>
+
+<p>Nadszedł czas, by rozpocząć oczyszczanie witryny na podstawie informacji zebranych na etapach <a href="hacked_with_spam">Oceń szkody</a> i <a href="vulnerability">Znajdź lukę w zabezpieczeniach</a>. Sposób działania na tym etapie zależy od rodzaju dostępnej kopii zapasowej.</p>
+
+<ul>
+  <li>Nienaruszona i aktualna kopia zapasowa</li>
+  <li>Nienaruszona, ale przestarzała kopia zapasowa</li>
+  <li>Brak dostępnej kopii zapasowej   </li>
+</ul>
+
+<p>Najpierw sprawdź, czy kopia zapasowa została utworzona <strong>przed</strong> atakiem hakerów na witrynę.</p>
+
+<ul>
+  <li><strong>Nienaruszona i aktualna kopia zapasowa</strong>
+
+    <ol>
+      <li>Przywróć kopię zapasową.</li>
+      <li>Zainstaluj wszystkie dostępne uaktualnienia do nowszej wersji, aktualizacje i poprawki oprogramowania. Dotyczy to oprogramowania systemu operacyjnego (jeśli masz odpowiednie uprawnienia do administrowania serwerem) oraz każdej aplikacji, w tym systemu zarządzania treścią, platformy handlu elektronicznego, wtyczek, szablonów itp.</li>
+      <li>Zastanów się, czy możesz usunąć z serwera oprogramowanie (np. widżety, wtyczki i aplikacje), z którego witryna już nie korzysta.</li>
+      <li>Usuń lukę w zabezpieczeniach.</li>
+      <li>Upewnij się, że wszystkie problemy znalezione na etapie <a href="hacked_with_spam">Oceń szkody</a> zostały rozwiązane.</li>
+      <li>Ponownie zmień hasła do wszystkich kont związanych z witryną (dotyczy to m.in. loginów do serwera FTP, bazy danych, kont administratorów systemu oraz kont w systemie zarządzania treścią). W systemie typu Unix użyj polecenia:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Nienaruszona, ale przestarzała kopia zapasowa</strong>
+    <ol>
+      <li>Utwórz aktualny obraz dysku witryny, bez względu na to, że wciąż jest ona zainfekowana. Ta kopia jest tylko dla bezpieczeństwa. Oznacz kopię jako zainfekowaną, by odróżnić ją od innych. W systemie typu Unix obraz dysku możesz utworzyć tak:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Zrób kopię zapasową systemu plików na serwerze, w tym plików graficznych i multimedialnych. Jeśli korzystasz z bazy danych, utwórz także jej kopię.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Przywróć nienaruszoną, ale przestarzałą kopię zapasową na serwer.</li>
+      <li>Zastanów się, czy możesz usunąć z serwera oprogramowanie (np. widżety, wtyczki i aplikacje), z którego witryna już nie korzysta.</li>
+      <li>Uaktualnij całe oprogramowanie, w tym system operacyjny (jeśli masz odpowiednie uprawnienia do administrowania serwerem), oraz każdą aplikację, w tym system zarządzania treścią, platformę handlu elektronicznego, wtyczki, szablony itp. Pamiętaj, by pobrać i zainstalować dostępne aktualizacje oraz poprawki zabezpieczeń.</li>
+      <li>Usuń lukę w zabezpieczeniach.</li>
+      <li>Ręcznie lub automatycznie porównaj z użyciem parametru <code>diff</code> nienaruszoną kopię zapasową z aktualną zainfekowaną kopią.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Na uaktualniony serwer prześlij wszystkie nowe, nienaruszone treści z zainfekowanej kopii zapasowej, które chcesz zachować.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Upewnij się, że każdy URL wymieniony w etapie <a href="hacked_with_spam">Oceń szkody</a> został poprawiony.</li>
+      <li>Ponownie zmień hasła do wszystkich kont związanych z witryną (dotyczy to m.in. loginów do serwera FTP, bazy danych, kont administratorów systemu oraz kont w systemie zarządzania treścią). W systemie typu Unix użyj polecenia:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Brak dostępnej kopii zapasowej</strong>
+    <ol>
+      <li>Zrób dwie kopie zapasowe witryny, bez względu na to, że wciąż jest ona zainfekowana. Dodatkowa kopia zapasowa pozwoli przywrócić przypadkowo usunięte treści lub zacząć od początku, gdy coś pójdzie nie tak. Każdą kopię oznacz etykietą „zainfekowana”, by nie pomylić ich z innymi.
+        <ul>
+          <li>Pierwsza kopia zapasowa to obraz dysku – „sklonowana wersja” witryny. Taki format ułatwia przywracanie treści. Obrazu dysku będzie można użyć w sytuacji awaryjnej. W systemie typu Unix obraz dysku możesz utworzyć tak:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>Druga kopia zapasowa to kopia systemu plików na serwerze, w tym plików graficznych i multimedialnych. Jeśli korzystasz z bazy danych, utwórz także jej kopię.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Jeśli nie masz obrazu dysku, zrób dwie kopie zapasowe bazy danych i dwie systemu plików.</li>
+        </ul>
+      </li>
+      <li>Oczyść zawartość witryny w nowej kopii zapasowej systemu plików (nie na samym serwerze).
+        <ol>
+          <li>Jeśli podczas wcześniejszej kontroli okazało się, że uprawnienia do plików są zbyt szerokie, popraw je. Upewnij się, że robisz to w kopii zapasowej, a nie na samym serwerze.</li>
+          <li>Także w kopii zapasowej oczyść wszystkie pliki powiązane z przejętymi adresami URL wykrytymi w trakcie etapu <a href="hacked_with_spam">Oceń szkody</a>. Mogą to być pliki konfiguracyjne serwera oraz pliki JavaScript, HTML i PHP.</li>
+          <li>Pamiętaj też, by usunąć (i ustawić zamiast nich odpowiedź 404) nowe pliki utworzone przez hakera (opcjonalnie zgłoszone w narzędziu do usuwania adresów URL w Search Console).</li>
+          <li>Usuń lukę w zabezpieczeniach – w razie potrzeby popraw kod lub zmień złamane hasła. Mogą w tym pomóc biblioteki do weryfikacji wprowadzanych danych i audyty bezpieczeństwa.</li>
+          <li>Jeśli witryna korzysta z bazy danych, zacznij czyścić zmienione przez hakera rekordy w kopii zapasowej.
+            Gdy uznasz, że wszystkie zostały poprawione, jeszcze raz pobieżnie je przejrzyj i upewnij się, że wyglądają na oczyszczone.</li>
+          <li>Ponownie zmień hasła do wszystkich kont związanych z witryną (dotyczy to m.in. loginów do serwera FTP, bazy danych, kont administratorów systemu oraz kont w systemie zarządzania treścią). W systemie typu Unix użyj polecenia:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>W tym momencie kopia zapasowa, która wcześniej była zainfekowana, powinna już zawierać tylko nienaruszone dane. Zachowaj ją na później i przejdź do punktu 5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Usuń niepotrzebne oprogramowanie</h4>
+
+<p>Zastanów się, czy możesz usunąć z serwera oprogramowanie (np. widżety, wtyczki i aplikacje), z którego witryna już nie korzysta. To może zwiększyć bezpieczeństwo i uprości zarządzanie w przyszłości.</p>
+
+<h4>6. Oczyść wszystkie serwery</h4>
+
+<ol>
+  <li>Zainstaluj wszystko od nowa zamiast uaktualniać. Uaktualnienia mogą pozostawić pliki z poprzedniej wersji. Jeśli na serwerze pozostanie zainfekowany plik, zwiększy to prawdopodobieństwo kolejnego ataku hakerów.
+    <ul>
+      <li>Nowa instalacja powinna obejmować system operacyjny (jeśli masz odpowiednie uprawnienia do administrowania serwerem) oraz każdą aplikację, w tym system zarządzania treścią, platformę handlu elektronicznego, wtyczki, szablony itp. Pamiętaj, by pobrać i zainstalować dostępne aktualizacje oraz poprawki zabezpieczeń.</li>
+    </ul>
+  </li>
+  <li>Na serwery z nowo zainstalowanym oprogramowaniem przenieś odpowiednie treści z oczyszczonej kopii systemu plików.
+    Prześlij lub przywróć tylko te rekordy bazy danych i pliki, w których nie ma już niepożądanych zmian. Pamiętaj, by ustawić odpowiednie uprawnienia do plików i nie zastępować nowo zainstalowanych plików systemowych.</li>
+  <li>Ostatni raz zmień hasła do wszystkich kont związanych z witryną (dotyczy to m.in. loginów do serwera FTP, bazy danych, kont administratorów systemu oraz kont w systemie zarządzania treścią). W systemie typu Unix użyj polecenia:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Utwórz długoterminowy plan zarządzania</h4>
+
+<p>W internecie znajdziesz wiele przydatnych materiałów o tym, jak skutecznie zarządzać witryną, na przykład przygotowany przez StopBadware artykuł w języku angielskim <a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics</a> (Przeciwdziałanie szkodliwemu oprogramowaniu: podstawy). Zdecydowanie zalecamy też skorzystanie z tych wskazówek:</p>
+
+<ul>
+  <li>Rób regularne, automatyczne kopie zapasowe witryny.</li>
+  <li>Pamiętaj o aktualizowaniu oprogramowania.</li>
+  <li>Zanim zainstalujesz jakiekolwiek aplikacje, wtyczki, oprogramowanie firmy zewnętrznej itp. na swoim serwerze, zapoznaj się z ich zabezpieczeniami. Luka w zabezpieczeniach jednej aplikacji może negatywnie wpłynąć na bezpieczeństwo całej witryny.</li>
+  <li>Wymagaj tworzenia silnych haseł.</li>
+  <li>Dbaj o bezpieczeństwo wszystkich urządzeń używanych do logowania się na serwer (aktualizuj system operacyjny i przeglądarkę).</li>
+</ul>
+
+<h4>8. Dokładnie sprawdź, czy wszystkie elementy zostały oczyszczone</h4>
+
+<p>Sprawdź, czy możesz odpowiedzieć „tak” na te pytania:</p>
+
+<ul>
+  <li>Czy jeśli haker uzyskał dane osobowe użytkowników, zostały podjęte odpowiednie działania? </li>
+  <li>Czy oprogramowanie witryny zostało zaktualizowane do najnowszej i najbezpieczniejszej wersji? </li>
+  <li>Czy niepotrzebne lub nieużywane aplikacje i wtyczki, które mogłyby narazić witrynę na ataki w przyszłości, zostały usunięte? </li>
+  <li>Czy pierwotne treści zostały przywrócone, a zmiany wprowadzone przez hakera – cofnięte? </li>
+  <li>Czy główna luka w zabezpieczeniach, która pozwoliła hakerom zaatakować witrynę, została usunięta? </li>
+  <li>Czy masz plan zabezpieczenia witryny na przyszłość?</li>
+</ul>
+
+<h4>9. Przełącz witrynę z powrotem w tryb online</h4>
+<h2>Kolejny etap</h2>
+<p>Już prawie kończymy. Został ostatni etap – <a href="request_review">Poproś o sprawdzenie witryny</a>.</p>
+
+</body></html>

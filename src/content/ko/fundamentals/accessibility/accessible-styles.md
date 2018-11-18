@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: 알맞은 스타일 지정으로 접근성 개선
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # 액세스 가능한 스타일 {: .page-title }
@@ -227,11 +227,9 @@ maximum-scale=1이나 user-scaleable=no로 설정하지 않도록 주의하세�
 
 ![48픽셀 크기의 터치 대상 두 개를 보여주는 그림](imgs/touch-target.jpg)
 
-또한, 터치 대상은 서로 가로 및 세로 방향으로 약 32픽셀 이상의 간격으로 떨어져 있어야 합니다.
+또한, 터치 대상은 서로 가로 및 세로 방향으로 약 8픽셀 이상의 간격으로 떨어져 있어야 합니다.
 그래야 사용자가 손가락으로 한 탭 대상을
 누를 때 본의 아니게 다른 탭 대상을 누르게 되는 상황을 피할 수 있습니다.
-
-![한 터치 대상 주변에 32픽셀의 공간을 보여주는 그림](imgs/touch-target2.jpg)
 
 ## 색상과 대비
 

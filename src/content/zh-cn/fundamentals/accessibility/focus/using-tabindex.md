@@ -211,7 +211,7 @@ description: 使用 tabindex 修改 DOM 顺序
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+<script src="https://www.gstatic.com/devrel-devsite/v9dcc115658e2b070ea1ae9baed63d566/developers/js/custom-elements.min.js"></script>
 
 <script>
   class RadioButton extends HTMLElement {

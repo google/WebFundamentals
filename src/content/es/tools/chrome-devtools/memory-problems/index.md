@@ -150,7 +150,7 @@ comenzar (el “comienzo” en este caso es el punto después de la recolección
 forzada de elementos no usados). En el mundo real, si vieras este patrón de aumento
 del tamaño del montón JS o de los nodos, posiblemente indicaría una fuga de memoria.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

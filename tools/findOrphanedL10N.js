@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Finds translated docs that no longer have a matching EN
+ *  version.
+ *
+ * @author Pete LePage <petele@google.com>
+ */
+
 'use strict';
 
 const fs = require('fs');

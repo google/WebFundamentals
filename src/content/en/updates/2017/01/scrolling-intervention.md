@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default.
 
-{# wf_updated_on: 2017-01-10 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-01-10 #}
 {# wf_tags: interventions,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Scrolling responsiveness is critical to the user's engagement with a website on mobile, yet touch event listeners often cause serious scrolling performance problems. Learn how we are helping users and developers to be fast by default. #}
+{# wf_blink_components: N/A #}
 
 # Making touch scrolling fast by default {: .page-title }
 
@@ -34,7 +35,7 @@ impact on sites.
 In rare cases this change can result in unintended scrolling. This is usually 
 easily addressed by applying a 
 [touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action): 
-none** **style to the element where scrolling shouldn't occur. Read on for 
+**none** style to the element where scrolling shouldn't occur. Read on for 
 details, how to know if you are impacted, and what you can do about it.
 
 ## Background: Cancelable Events slow your page down
@@ -62,7 +63,7 @@ blocking on the listener. For example:
 
 Our main motivation is to reduce the time it takes to update the display after 
 the user touches the screen. To understand the usage of touchstart and touchmove 
-we added metrics to determine how frequently scroll blocking behaviour occurred. 
+we added metrics to determine how frequently scroll blocking behavior occurred. 
 
 We looked at the percentage of cancelable touch events that were sent to a root 
 target (window, document, or body) and determined that about 80% of these 

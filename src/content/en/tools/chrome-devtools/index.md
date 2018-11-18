@@ -2,32 +2,57 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2017-06-16 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-03-28 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Chrome DevTools {: .page-title }
 
-Chrome DevTools is a set of authoring, debugging, and profiling tools built
-into Google Chrome.
+Chrome DevTools is a set of web developer tools built directly into the [Google
+Chrome](https://www.google.com/chrome/){: .external } browser. DevTools can help you edit
+pages on-the-fly and diagnose problems quickly, which ultimately helps you build better
+websites, faster.
 
-Note: Many of the DevTools docs are based on [Chrome Canary][canary], which
-provides the latest Chrome features.
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="G_P6rpRSr4g"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
-[canary]: https://www.google.com/intl/en/chrome/browser/canary.html
+With DevTools you can view and change any page. Even the Google homepage, as the video
+demonstrates.
 
-## Open DevTools {: #open }
+## DevTools for Beginners {: #beginners }
 
-* Select **More Tools** > **Developer Tools** from Chrome's Main Menu.
-* Right-click a page element and select **Inspect**.
-* Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or
-  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
+DevTools for Beginners teaches you the **fundamentals of web development** as well as the basics of DevTools.
+Check out [Get started](#get-started) below if you'd prefer tutorials that focus on DevTools.
 
-## Discover DevTools {: #discover-devtools }
+* [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html)
+* [Get Started with CSS](/web/tools/chrome-devtools/beginners/css)
+
+## Get started {: #get-started }
+
+If you're a more experienced web developer, here are the recommended starting points for learning how
+DevTools can improve your productivity:
+
+* [View and Change a Page's Styles (CSS)](/web/tools/chrome-devtools/css/)
+* [Debug JavaScript](/web/tools/chrome-devtools/javascript/)
+* [View Messages and Run JavaScript in the Console](console/get-started)
+* [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started)
+
+## Discover DevTools {: #discover }
+
+The DevTools UI can be a little overwhelming... there's so many tabs! But, if you take some
+time to get familiar with each tab to understand what's possible, you may discover that DevTools
+can seriously boost your productivity.
+
+Note: In the DevTools docs, the top-level tabs are called panels.
 
 ### Device Mode {: #device-mode }
 
 <img src="images/device-mode.png" alt="Device Mode" class="attempt-right">
-Build fully responsive, mobile-first web experiences.</p>
+
+Simulate mobile devices.
 
 * [Device Mode](/web/tools/chrome-devtools/device-mode/)
 * [Test Responsive and Device-specific Viewports](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports)
@@ -39,7 +64,7 @@ Build fully responsive, mobile-first web experiences.</p>
 
 <img src="images/panels/elements.png" alt="Elements Panel" class="attempt-right">
 
-Iterate on the layout and design of your site by freely manipulating the DOM and CSS.
+View and change the DOM and CSS.
 
 * [Get Started With Viewing And Changing CSS](/web/tools/chrome-devtools/css/)
 * [Inspect and Tweak Your Pages](/web/tools/chrome-devtools/inspect-styles/)
@@ -53,10 +78,12 @@ Iterate on the layout and design of your site by freely manipulating the DOM and
 
 <img src="images/panels/console.png" alt="Console Panel" class="attempt-right">
 
-Log diagnostic information during development or interact with the JavaScript on the page.
+View messages and run JavaScript from the Console.
 
+* [Get Started With The Console](/web/tools/chrome-devtools/console/get-started)
 * [Using the Console](/web/tools/chrome-devtools/console/)
 * [Interact from Command Line](/web/tools/chrome-devtools/console/command-line-reference)
+* [Console API Reference](/web/tools/chrome-devtools/console/console-reference)
 
 <div style="clear:both;"></div>
 
@@ -64,14 +91,15 @@ Log diagnostic information during development or interact with the JavaScript on
 
 <img src="images/panels/sources.png" alt="Sources Panel" class="attempt-right">
 
-Debug your JavaScript using breakpoints or connect your local files via Workspaces to use
-DevTools as a code editor.
+Debug JavaScript, persist changes made in DevTools across page reloads,
+save and run snippets of JavaScript, and save changes that you make in DevTools to disk.
 
 * [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript)
 * [Pause Your Code With Breakpoints](/web/tools/chrome-devtools/javascript/breakpoints)
-* [Set Up Persistence with DevTools Workspaces](/web/tools/setup/setup-workflow)
+* [Save Changes to Disk with Workspaces](/web/tools/setup/setup-workflow)
 * [Run Snippets Of Code From Any Page](/web/tools/chrome-devtools/snippets)
 * [JavaScript Debugging Reference](/web/tools/chrome-devtools/javascript/reference)
+* [Persist Changes Across Page Reloads with Local Overrides](/web/updates/2018/01/devtools#overrides)
 
 <div style="clear:both;"></div>
 
@@ -79,7 +107,7 @@ DevTools as a code editor.
 
 <img src="images/panels/network.png" alt="Network Panel" class="attempt-right">
 
-Optimize page load performance and debug request issues.
+View and debug network activity.
 
 * [Get Started](/web/tools/chrome-devtools/network-performance/)
 * [Network Issues Guide](/web/tools/chrome-devtools/network-performance/issues)
@@ -87,15 +115,15 @@ Optimize page load performance and debug request issues.
 
 <div style="clear:both;"></div>
 
-### Performance panel (previously Timeline panel) {: #performance }
+### Performance panel {: #performance }
 
 Note: In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
 <img src="images/panels/performance.png" alt="Timeline Panel" class="attempt-right">
 
-Improve the runtime performance of your page by recording and exploring the
-various events that happen during the lifecycle of a site.
+Find ways to improve load and runtime performance.
 
+* [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started)
 * [Get Started With Analyzing Runtime Performance][runtimegs]
 * [Performance Analysis Reference](/web/tools/chrome-devtools/evaluate-performance/reference)
 * [Analyze runtime performance](/web/tools/chrome-devtools/rendering-tools/)
@@ -105,7 +133,7 @@ various events that happen during the lifecycle of a site.
 
 <div style="clear:both;"></div>
 
-### Memory panel (previously Profiles panel) {: #memory }
+### Memory panel {: #memory }
 
 Note: In Chrome 58 the Profiles panel was renamed to the Memory panel.
 
@@ -141,7 +169,7 @@ Debug mixed content issues, certificate problems, and more.
 
 <div style="clear:both;"></div>
 
-## Get Involved (Bugs and Feature Requests) {: #community }
+## Join the DevTools community {: #community }
 
 <style>
   .cdt-but {
@@ -191,3 +219,7 @@ consistently.
 <a class="button button-primary gc-analytics-event"
    href="https://chromiumdev.slack.com/messages/devtools/"
    data-category="DevTools" data-label="Home / Slack">Slack</a>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

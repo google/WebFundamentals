@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The visual viewport API gives you details on how the user zooms and scrolls around your page.
 
-{# wf_updated_on: 2017-09-07 #}
+{# wf_updated_on: 2017-11-17 #}
 {# wf_published_on: 2017-09-04 #}
 {# wf_tags: chrome61 #}
 {# wf_blink_components: Blink>Scroll #}
@@ -238,6 +238,7 @@ handling the change multiple times:
 
       pendingUpdate = true;
 
+      // Use requestAnimationFrame so the update happens before next render
       requestAnimationFrame(() => {
         pendingUpdate = false;
 

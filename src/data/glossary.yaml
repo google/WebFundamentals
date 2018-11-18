@@ -42,7 +42,7 @@
   description: "A CDN is a network of geographically distributed servers that cooperate to satisfy requests for content. CDNs optimize content delivery by distributing copies of files (such as videos, images, HTML, CSS and JavaScript) to multiple servers. This reduces latency by placing the content closer to the requestor. For example, if a user in India requests a web page from a Brazilian website, the request could be rerouted to deliver assets served from a local CDN server in Mumbai."
   acronym: CDN
   see:
-    title: Content deliver network on Wikipedia
+    title: Content delivery network on Wikipedia
     link: https://en.wikipedia.org/wiki/Content_delivery_network
 
 - term: custom element
@@ -50,6 +50,16 @@
   see:
     title: "Custom Elements v1: Reusable Web Components"
     link: /web/fundamentals/architecture/building-components/customelements
+
+- term: DOMContentLoaded
+  acronym: DCL
+  description: "Defined by the HTML specification: <blockquote>The DOMContentLoaded reports the time when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</blockquote>"
+  see:
+    title: DCL on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+  links:
+  - title: DCL in the HTML Specification
+    link: https://html.spec.whatwg.org/#event-domcontentloaded
 
 - term: Fast, Integrated, Reliable, Engaging
   acronym: FIRE
@@ -69,9 +79,31 @@
 
 - term: First Contentful Paint
   acronym: FCP
+  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Contentful Paint reports the time when the browser first rendered any text, image (including background images), non-white canvas or SVG. This includes text with pending webfonts. This is the first time users could start consuming page content.</blockquote>"
+  see:
+    title: Paint Timing API
+    link: https://w3c.github.io/paint-timing/#first-contentful-paint
+  links:
+  - title: Chrome Platform Status
+    link: https://www.chromestatus.com/feature/5688621814251520
+  - title: FCP on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
 
 - term: First Meaningful Paint
   acronym: FMP
+  description: ""
+
+- term: First Paint
+  acronym: FP
+  description: "Defined by the Paint Timing API and available in Chrome M60+: <blockquote>First Paint reports the time when the browser first rendered after navigation. This excludes the default background paint, but includes non-default background paint. This is the first key moment developers care about in page load – when the browser has started to render the page.</blockquote>"
+  see:
+    title: Paint Timing API
+    link: https://w3c.github.io/paint-timing/#first-paint
+  links:
+  - title: Chrome Platform Status
+    link: https://www.chromestatus.com/feature/5688621814251520
+  - title: FP on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
 
 - term: First, Last, Invert, Play
   acronym: FLIP
@@ -111,6 +143,29 @@
     title: Detect DOM changes with Mutation Observers
     link: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 
+- term: onload
+  acronym: OL
+  description: "Defined by the HTML specification: <blockquote>The load event is fired when the page and its dependent resources have finished loading.</blockquote>"
+  see:
+    title: OL on MDN
+    link: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+  links:
+  - title: OL in the HTML Specification
+    link: https://html.spec.whatwg.org/#event-load
+
+- term: "opaque response"
+  description: "Opaque responses represent the result of a request made to a remote origin when CORS is not enabled."
+  see:
+    title: "The Fetch API Specification"
+    link: https://fetch.spec.whatwg.org/#concept-filtered-response-opaque
+  links:
+    - title: "Cross-Origin Resource Sharing (CORS)"
+      link: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+    - title: "What limitations apply to opaque responses?"
+      link: https://stackoverflow.com/q/39109789/385997
+    - title: "Workbox: Understanding Storage Quota"
+      link: /web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
+
 - term: Progressive Web App
   acronym: PWA
   description: "Progressive Web Apps are user experiences that have the reach of the web, and are fast, integrated, reliable and engaging."
@@ -119,7 +174,7 @@
     link: /web/progressive-web-apps/
 
 - term: promise
-  description: "A JavaScript promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAscript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
+  description: "A JavaScript promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation. JavaScript promises are an addition to ECMAScript 6 that provide a cleaner, more intuitive way to deal with the completion (or failure) of asynchronous tasks."
   see:
     title: JavaScript Promises
     link: /web/fundamentals/primers/promises
@@ -139,9 +194,11 @@
 
 - term: requestAnimationFrame
   acronym: rAF
+  description: ""
 
 - term: requestIdleCallback
   acronym: rIC
+  description: ""
 
 - term: Response, Animation, Idle, Load
   acronym: RAIL
@@ -183,12 +240,15 @@
 
 - term: Time To First Byte
   acronym: TTFB
+  description: ""
 
 - term: Time To First Paint
   acronym: TTFP
+  description: ""
 
 - term: Time To Interactive
   acronym: TTI
+  description: ""
 
 - term: web app manifest
   description: "A web app manifest is a JSON-formatted file named manifest.json that is a centralized place to put metadata that controls how the web application appears to the user and how it can be launched. (Do not confuse this with a manifest file used by AppCache.) Some browsers, such as Chrome, use the web app manifest to enable 'add to homescreen'."

@@ -1,11 +1,11 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-08-18#}
+{# wf_updated_on: 2017-10-11#}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Blink>DOM #}
 
-# HowTo: Components – &lt;howto-tooltip&gt; {: .page-title }
+# HowTo: Components – howto-tooltip {: .page-title }
 
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
@@ -25,130 +25,15 @@ tooltip itself can never be focused.
 
 ## Reference {: #reference }
 
+- [HowTo: Components on GitHub][howto-github]
 - [Tooltip pattern in ARIA Authoring Practices 1.1][tooltip-pattern]
 
+[howto-github]: https://github.com/GoogleChromeLabs/howto-components
 [tooltip-pattern]: https://www.w3.org/TR/wai-aria-practices-1.1/#tooltip
 
 
 ## Demo {: #demo }
-{% framebox height="auto" width="100%" class="demo" suppress_site_styles="true" %}
-<!--
-Copyright 2017 Google Inc. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
-<div class="text">
-   <label for="name">Your name:</label>
-   <input id="name" aria-describedby="tp1"/>
-   <howto-tooltip id="tp1">Ideally your name is Batman</howto-tooltip>
-   <br>
-   <label for="cheese">Favourite type of cheese: </label>
-   <input id="cheese" aria-describedby="tp2"/>
-   <howto-tooltip id="tp2">Help I am trapped inside a tooltip message</howto-tooltip>
-</div>
-
-
-<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/d5b7ca65/webcomponents-sd-ce.js"></script>
-<script>
-  devsite.framebox.AutoSizeClient.initAutoSize(true);
-  (function() {
-    /**
- * Copyright 2017 Google Inc. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-class HowtoTooltip extends HTMLElement {
-  /**
-  * The constructor does work that needs to be executed _exactly_ once.
-  */
-  constructor() {
-    super();
-
-    // These functions are used in a bunch of places, and always need to
-    // bind the correct `this` reference, so do it once.
-    this._show = this._show.bind(this);
-    this._hide = this._hide.bind(this);
-  }
-
-  /**
-   * `connectedCallback()` fires when the element is inserted into the DOM.
-   * It's a good place to set the initial `role`, `tabindex`, internal state,
-   * and install event listeners.
-   */
-  connectedCallback() {
-    if (!this.hasAttribute('role'))
-      this.setAttribute('role', 'tooltip');
-
-    if (!this.hasAttribute('tabindex'))
-      this.setAttribute('tabindex', -1);
-
-    this._hide();
-
-    // The element that triggers the tooltip references the tooltip
-    // element with `aria-describedby`.
-    this._target = document.querySelector('[aria-describedby=' + this.id + ']');
-    if (!this._target)
-      return;
-
-    // The tooltip needs to listen to `focus`/`blur` events from the target,
-    // as well as `hover` events over the target.
-    this._target.addEventListener('focus', this._show);
-    this._target.addEventListener('blur', this._hide);
-    this._target.addEventListener('mouseenter', this._show);
-    this._target.addEventListener('mouseleave', this._hide);
-  }
-
-  /**
-   * `disconnectedCallback()` unregisters the event listeners that were set up
-   * in `connectedCallback()`.
-   */
-  disconnectedCallback() {
-    if (!this._target)
-      return;
-
-    // Remove the existing listeners, so that they don't trigger even though
-    // there's no tooltip to show.
-    this._target.removeEventListener('focus', this._show);
-    this._target.removeEventListener('blur', this._hide);
-    this._target.removeEventListener('mouseenter', this._show);
-    this._target.removeEventListener('mouseleave', this._hide);
-    this._target = null;
-  }
-
-  _show() {
-    this.hidden = false;
-  }
-
-  _hide() {
-    this.hidden = true;
-  }
-}
-
-window.customElements.define('howto-tooltip', HowtoTooltip);
-
-  })();
-</script>
-</html>
-
-{% endframebox %}
+[View live demo on GitHub](https://googlechromelabs.github.io/howto-components/howto-tooltip/#demo)
 
 ## Example usage {: #usage }
 <ul class="literate demo" id="howto-tooltip_demo">

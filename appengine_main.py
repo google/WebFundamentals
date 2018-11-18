@@ -65,6 +65,8 @@ class Framebox(webapp2.RequestHandler):
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
 
+        self.response.headers.add('x-frame-options', 'SAMEORIGIN')
+
         if path.endswith('.html') or path.endswith('.md'):
           redirectTo = '/web/' + os.path.splitext(path)[0]
           self.redirect(redirectTo, permanent=True)
@@ -82,7 +84,7 @@ class DevSitePages(webapp2.RequestHandler):
         self.response.set_cookie('hl', lang, max_age=3600, path='/')
 
         fullPath = self.request.path
-        memcacheKey = fullPath + '?hl=' + lang
+        memcacheKey = self.request.host + fullPath + '?hl=' + lang
         logging.info('GET ' + memcacheKey)
 
         if USE_MEMCACHE:
@@ -93,8 +95,14 @@ class DevSitePages(webapp2.RequestHandler):
         if response is None:
           try:
             if os.path.isdir(os.path.join(SOURCE_PATH, 'en', path)):
+              # Make sure the directory ends with a /, as required by devsite
+              if len(path) > 0 and not path.endswith('/'):
+                redirectTo = '/web/' +  path + '/'
+                logging.info('301 ' + redirectTo)
+                self.redirect(redirectTo, permanent=True)
+                return
               response = devsiteIndex.getPage(path, lang)
-              if (response is None) and (path.startswith('showcase') or 
+              if (response is None) and (path.startswith('showcase') or
                   path.startswith('shows') or path.startswith('updates')):
                 response = devsiteIndex.getDirIndex(path)
             else:
@@ -121,7 +129,7 @@ class DevSitePages(webapp2.RequestHandler):
             response = render('gae/500.tpl', context)
             logging.exception('500 ' + fullPath)
             self.response.set_status(500)
-        
+
         self.response.out.write(response)
 
 

@@ -150,7 +150,7 @@ Timeline 패널을 조사의 또 다른 출발점으로 사용할 수도
 가비지 수집 이후 시점). 실제로는 JS 힙 크기 또는 노드 크기가 이렇게 증가하는 패턴이
 나타나면 메모리 누수를 의미할 가능성이 있습니다.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

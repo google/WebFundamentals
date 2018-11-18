@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Permission UX {: .page-title }
@@ -79,7 +80,7 @@ pattern.
 
 First show a fake permission prompt that your website controls, consisting
 of buttons to allow or ignore the permission request. If the user clicks
-allows, request permission, triggering the real browser permission prompt.
+allow, request permission, triggering the real browser permission prompt.
 
 With this approach you display a custom permission prompt in your web app
 which asks the user to enable notifications. By doing this the user can
@@ -177,3 +178,7 @@ offers no UI for disabling push notifications is astounding.
 
 Your site should explain to your users how they can disable push. If you don't, users are
 likely to take the nuclear option and block permission permanently.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

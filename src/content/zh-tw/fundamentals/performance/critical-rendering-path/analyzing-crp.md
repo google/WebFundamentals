@@ -31,7 +31,7 @@ description: 您需要瞭解很多常見問題，才可確定並解決關鍵轉�
 
 我們將從基本的 HTML 標記和單一圖片開始，沒有 CSS 或 JavaScript，就是這麼簡單。現在，我們在 Chrome DevTools 中開啟網路時間軸，並檢查產生的資源瀑布：
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" class="center" alt="CRP">
 
 不出我們所料，HTML 檔案的下載時間大約為 200 毫秒。注意，藍線的透明部分表示瀏覽器在網路上等待 (也就是尚未收到任何回應位元組) 的時間，而實線部分則顯示收到第一個回應位元組之後完成下載的時間。在上述示例中，HTML 下載量極少 (不足 4K)，因此我們僅需單一往返過程即可擷取整個檔案。因此，擷取 HTML 檔案大約耗時 200 毫秒，其中一半的時間在網路上等待，而另一半的時間則在等待伺服器回應。
 
@@ -101,7 +101,7 @@ _非同步 (外部) JavaScript：_
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、內嵌 CSS 和內嵌 JS" class="center">
 
-注意：_domContentLoaded_ 時間與前一個示例中的時間沒有區別：我們並沒有將 JavaScript 設定為非同步，而是將 CSS 和 JS 同時內嵌到網頁中。雖然我們的 HTML 網頁因此變得更大，但好處是瀏覽器無需等待擷取外部資源，因為每個元素都已納入網頁。
+Note: _domContentLoaded_ 時間與前一個示例中的時間沒有區別：我們並沒有將 JavaScript 設定為非同步，而是將 CSS 和 JS 同時內嵌到網頁中。雖然我們的 HTML 網頁因此變得更大，但好處是瀏覽器無需等待擷取外部資源，因為每個元素都已納入網頁。
 
 如您所見，即使是非常簡單的網頁，最佳化關鍵轉譯路徑也不是一件輕而易舉的事情：我們需要瞭解不同資源之間的依存關係圖，需要確定哪些資源是「關鍵資源」，而且我們必須在許多的策略中做出選擇，並找出在網頁中新增這些資源的適當方式。這個問題不是一個方案就能解決的，每個網頁都不盡相同，因此您必須按照相似的解決流程，找出最佳策略。
 
@@ -190,6 +190,3 @@ _非同步 (外部) JavaScript：_
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、非禁止性 CSS 和非同步 JavaScript CRP" class="center">
 
 因為 style.css 資源僅用於列印，因此，瀏覽器不必禁止它即可轉譯網頁。因此，只要 DOM 建構完成，瀏覽器即具備轉譯網頁的足夠資訊！ 所以，這個網頁僅具有一種關鍵資源 (HTML 檔案)，最小關鍵轉譯路徑長度為一個往返過程。
-
-
-

@@ -1,6 +1,12 @@
 toc:
   - title: Chrome Dev Summit
     section:
+    - title: '2017'
+      path: https://www.youtube.com/watch?list=PLNYkxOF6rcICUD5nBfRdAR6Fveosnqa5m
+      status: external
+    - title: '2016'
+      path: https://www.youtube.com/watch?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj
+      status: external
     - title: '2015'
       path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn
       status: external

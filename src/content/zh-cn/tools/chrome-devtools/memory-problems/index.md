@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description:了解如何使用 Chrome 和 DevTools 查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收。
 
-{# wf_updated_on:2015-08-03 #}
+{# wf_updated_on:2017-12-19 #}
 {# wf_published_on:2015-04-13 #}
+{# wf_blink_components: Blink>MemoryAllocator #}
 
 # 解决内存问题 {: .page-title }
 
@@ -131,7 +132,7 @@ Timeline 面板可以帮助您直观了解页面在一段时间内的内存使�
 JS 堆图表（蓝色图表）的显示并不直接。为了符合最佳做法，第一次下降实际上是一次强制垃圾回收（通过按 **Collect garbage** 按钮实现）。随着记录的进行，您会看到 JS 堆大小高低交错变化。这种现象是正常的并且在预料之中：每次点击按钮，JavaScript 代码都会创建 DOM 节点，在创建由 100 万个字符组成的字符串期间，代码会完成大量工作。这里的关键是，JS 堆在结束时会比开始时大（这里“开始”是指强制垃圾回收后的时间点）。在实际使用过程中，如果您看到这种 JS 堆大小或节点大小不断增大的模式，则可能存在内存泄漏。
 
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

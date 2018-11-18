@@ -13,7 +13,7 @@ Flexbox의 오래된 2009년 사양은 지원이 중단되었고 최신 사양�
 속도가 느립니다. 자세한 내용은 [Flexbox 레이아웃은 느리지 않습니다][slow]를
 참조하세요.
 
-[slow]: https://developers.google.com/web/updates/2013/10/Flexbox-layout-isn-t-slow
+[slow]: /web/updates/2013/10/Flexbox-layout-isn-t-slow
 
 ## 감사를 통과하는 방법 {: #how }
 

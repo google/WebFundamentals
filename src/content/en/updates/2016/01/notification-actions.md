@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Users can interact with your site without opening up the page by using Notification Action buttons
 
-{# wf_updated_on: 2016-01-29 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-29 #}
 {# wf_tags: notifications #}
 {# wf_featured_image: /web/updates/images/2016/01/notification-actions/notification.png #}
@@ -126,6 +126,6 @@ and read up on the [Notifications
 specification](https://notifications.spec.whatwg.org/#using-actions) or [follow 
 along with spec as it updates](https://github.com/whatwg/notifications).
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

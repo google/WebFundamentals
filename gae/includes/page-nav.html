@@ -1,0 +1,12 @@
+<nav class="devsite-page-nav devsite-nav">
+  <ul class="devsite-page-nav-list">
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      <a href="#top_of_page" class="devsite-nav-title">
+        <span>Contents</span>
+      </a>
+    </li>
+    {% autoescape off %}
+      {{ renderedTOC }}
+    {% endautoescape %}
+  </ul>
+</nav>

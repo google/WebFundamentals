@@ -7,6 +7,13 @@
   {{~#withOnly symbol=this~}}
     {{~#embed 'symbol-labels'}}{{/embed~}}
   {{/withOnly~}}
+
+  {{!--
+    This is a custom handlebars template to add version information to the
+    output.
+  --}}
+  {{~#embed 'symbol-version'}}{{/embed~}}
+
   {{#block 'symbol-header-classdesc'}}
     {{#if classdesc}}
       {{#markdown}}{{resolveLinks classdesc}}{{/markdown}}

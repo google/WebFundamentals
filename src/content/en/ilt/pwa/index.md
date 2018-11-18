@@ -1,8 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
 
 # Progressive Web Apps Training {: .page-title }
 
@@ -54,9 +55,3 @@ top of each codelab.
 
 Find more codelabs on
 [codelabs.developers.google.com](https://codelabs.developers.google.com)
-
-## Agency training
-
-Are you an agency in the UK, India or Indonesia? <a href="https://goo.gl/BgmVzk"
-class="gc-analytics-event" data-category="web" data-label="agency-training">
-Apply to attend the training</a> with professional trainers at no cost.

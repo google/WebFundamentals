@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「Speed Index」のリファレンス ドキュメント。
 
-{# wf_updated_on:2016-10-04 #}
+{# wf_updated_on:2018-11-10 #}
 {# wf_published_on:2016-10-04 #}
 
 #  Speed Index {: .page-title }
@@ -30,7 +30,7 @@ Speed Index のベースとなるアルゴリズムと手法の詳細につい�
 をご覧ください。
 
 目標スコアは、対数正規分布の累積分布関数によって計算されます。
-さらに詳しい内容については、監査の[ソース](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)のコメントをご覧ください。
+さらに詳しい内容については、監査の[ソース](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)のコメントをご覧ください。
 
 
 

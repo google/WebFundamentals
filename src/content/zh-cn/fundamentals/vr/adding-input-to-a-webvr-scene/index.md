@@ -9,7 +9,7 @@ description:探索如何使用 Ray Input 内容库向 WebVR 场景添加输入�
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-警告：WebVR 仍处于实验阶段，并且随时可能更改。
+Warning: WebVR 仍处于实验阶段，并且随时可能更改。
 
 在 [WebVR 使用入门部分](../getting-started-with-webvr/)中，我们介绍了如何选取 WebGL 场景并向其添加 WebVR 功能。执行上述操作后，您可以环顾 VR 中的场景，如果您能够与场景中的实体进行交互，将体验到非常多的乐趣。
 

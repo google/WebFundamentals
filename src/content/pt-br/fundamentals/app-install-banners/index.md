@@ -7,6 +7,8 @@ description: Existem dois tipos de banners de instalação de aplicativo: os web
 
 # Banners de instalação de aplicativo web {: .page-title }
 
+{% include "web/_shared/translation-out-of-date.html" %}
+
 {% include "web/_shared/contributors/mattgaunt.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -19,7 +21,7 @@ description: Existem dois tipos de banners de instalação de aplicativo: os web
 Há dois tipos de banner de instalação de aplicativo: os **web** e
 os [**nativos**](native-app-install). Eles permitem que os usuários adicionem seu aplicativo web ou nativo às telas iniciais de forma rápida e fácil sem sair do navegador.
 
-É muito fácil adicionar banners de instalação de aplicativo: o Chrome faz todo o trabalho duro 
+É muito fácil adicionar banners de instalação de aplicativo: o Chrome faz todo o trabalho duro
 para você. Você precisa incluir o arquivo de manifesto do aplicativo web no site
 com detalhes sobre o aplicativo.
 
@@ -86,20 +88,20 @@ banner de instalação de aplicativo e até mesmo cancelá-lo ou deferi-lo para 
 
 ### Um usuário instalou o aplicativo?
 
-O evento `beforeinstallprompt` retorna uma promessa chamada `userChoice` 
-que resolve quando o usuário executa uma ação em relação à solicitação.  A promessa 
+O evento `beforeinstallprompt` retorna uma promessa chamada `userChoice`
+que resolve quando o usuário executa uma ação em relação à solicitação.  A promessa
 retorna um objeto com um valor de `dismissed` no atributo `outcome`
 ou `accepted` se o usuário adicionou a página à tela inicial.
 
     window.addEventListener('beforeinstallprompt', function(e) {
       // beforeinstallprompt Event fired
-      
-      // e.userChoice will return a Promise. 
+
+      // e.userChoice will return a Promise.
       // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
       e.userChoice.then(function(choiceResult) {
-        
+
         console.log(choiceResult.outcome);
-        
+
         if(choiceResult.outcome == 'dismissed') {
           console.log('User cancelled home screen install');
         }
@@ -108,63 +110,63 @@ ou `accepted` se o usuário adicionou a página à tela inicial.
         }
       });
     });
-    
 
-Essa é uma boa ferramenta para entender como seus usuários interagem com a solicitação 
+
+Essa é uma boa ferramenta para entender como seus usuários interagem com a solicitação
 de instalação de aplicativo.
 
 
 ### Retardando ou cancelando a solicitação
 
-O Chrome gerencia quando acionar a solicitação, mas, para alguns sites, isso pode não 
-ser o ideal. Você pode deferir a solicitação para um momento posterior no uso do aplicativo ou 
-mesmo cancelá-la. 
+O Chrome gerencia quando acionar a solicitação, mas, para alguns sites, isso pode não
+ser o ideal. Você pode deferir a solicitação para um momento posterior no uso do aplicativo ou
+mesmo cancelá-la.
 
-Quando o Chrome decide solicitar o usuário a instalar o aplicativo, você 
-pode evitar a ação padrão e armazenar o evento para um momento posterior. Então, quando 
-o usuário tiver uma interação positiva com seu site, você poderá acionar novamente 
-a solicitação chamando `prompt()` no evento armazenado. 
+Quando o Chrome decide solicitar o usuário a instalar o aplicativo, você
+pode evitar a ação padrão e armazenar o evento para um momento posterior. Então, quando
+o usuário tiver uma interação positiva com seu site, você poderá acionar novamente
+a solicitação chamando `prompt()` no evento armazenado.
 
-This causes Chrome to show the banner and all the Promise attributes 
-such as `userChoice` will be available to bind to so that you can understand 
+This causes Chrome to show the banner and all the Promise attributes
+such as `userChoice` will be available to bind to so that you can understand
 what action the user took.
-    
+
     var deferredPrompt;
-    
+
     window.addEventListener('beforeinstallprompt', function(e) {
       console.log('beforeinstallprompt Event fired');
       e.preventDefault();
-      
+
       // Stash the event so it can be triggered later.
       deferredPrompt = e;
-      
+
       return false;
     });
-    
+
     btnSave.addEventListener('click', function() {
       if(deferredPrompt !== undefined) {
         // The user has had a postive interaction with our app and Chrome
         // has tried to prompt previously, so let's show the prompt.
         deferredPrompt.prompt();
-      
+
         // Follow what the user has done with the prompt.
         deferredPrompt.userChoice.then(function(choiceResult) {
-      
+
           console.log(choiceResult.outcome);
-          
+
           if(choiceResult.outcome == 'dismissed') {
             console.log('User cancelled home screen install');
           }
           else {
             console.log('User added to home screen');
           }
-          
+
           // We no longer need the prompt.  Clear it up.
           deferredPrompt = null;
         });
       }
     });
-    
+
 
 Como alternativa, você pode cancelar a solicitação ao impedir a ação padrão.
 
@@ -173,7 +175,7 @@ Como alternativa, você pode cancelar a solicitação ao impedir a ação padrã
       e.preventDefault();
       return false;
     });
-    
+
 ## Banner de instalação de aplicativo nativo
 
 <div class="attempt-right">
@@ -212,7 +214,7 @@ plataformas de `play` (do Google Play) e o ID do aplicativo.
       "id": "com.google.samples.apps.iosched"
       }
     ]
-    
+
 
 Se só quiser oferecer ao usuário a possibilidade de instalar o seu
 aplicativo Android e não exibir o banner de instalação de aplicativo web, adicione

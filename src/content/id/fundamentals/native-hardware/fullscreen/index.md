@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Beralih ke layar penuh.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Membuat Pengalaman Layar Penuh {: .page-title }
@@ -231,7 +231,7 @@ Opsi yang lebih baik untuk menggunakan Manifes Aplikasi Web.
 
 #### Manifes Aplikasi Web (Chrome, Opera, Firefox, Samsung)
 
-[Manifes untuk aplikasi web](/web/fundamentals/engage-and-retain/web-app-manifest/)
+[Manifes untuk aplikasi web](/web/fundamentals/web-app-manifest)
 adalah file JSON sederhana yang memberi Anda, sebagai
 developer, kemampuan mengontrol bagaimana aplikasi Anda muncul pada pengguna di berbagai area
 yang mereka harapkan untuk melihat aplikasi (misalnya layar beranda seluler), mengarahkan

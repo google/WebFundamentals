@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2015-08-20 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>Layout,Blink>Paint #}
 
 # Render-tree Construction, Layout, and Paint {: .page-title }
 
@@ -89,7 +90,6 @@ Our demo page may look simple, but it requires quite a bit of work. If either th
 
 **_Optimizing the critical rendering path_ is the process of minimizing the total amount of time spent performing steps 1 through 5 in the above sequence.** Doing so renders content to the screen as quickly as possible and also reduces the amount of time between screen updates after the initial render; that is, achieve higher refresh rates for interactive content.
 
-<a href="render-blocking-css" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Render-Blocking CSS">
-  <button>Next Up: Render-Blocking CSS</button>
-</a>
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

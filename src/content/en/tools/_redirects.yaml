@@ -1,5 +1,11 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/first-interactive
+  to: /web/tools/lighthouse/audits/first-cpu-idle
+
+- from: /web/tools/lighthouse/audits/consistently-interactive
+  to: /web/tools/lighthouse/audits/time-to-interactive
+
 - from: /web/tools/polymer-starter-kit/...
   to: https://www.polymer-project.org/2.0/start/toolbox/set-up
 
@@ -17,6 +23,9 @@ redirects:
 
 - from: /web/tools/lighthouse/audits/has-viewport-meta-tag%22
   to: /web/tools/lighthouse/audits/has-viewport-meta-tag
+
+- from: /web/tools/lighthouse/audits/contrast-ratio
+  to: https://dequeuniversity.com/rules/axe/2.2/color-contrast?application=lighthouse
 
 - from: /web/tools/chrome-devtools/javascript/What%20do%20the%20colors%20mean%20in%20Chrome%20Developer%20Tools%20Scope%20panel
   to: /web/tools/chrome-devtools/javascript
@@ -167,3 +176,27 @@ redirects:
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
+
+- from: /web/tools/workbox/next/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/examples/
+  to: /web/tools/workbox/modules/
+
+- from: /web/tools/workbox/overview
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/overview/
+  to: /web/tools/workbox/
+
+- from: /web/tools/workbox/get-started/gulp
+  to: /web/tools/workbox/guides/codelabs/gulp
+
+- from: /web/tools/workbox/get-started/webpack
+  to: /web/tools/workbox/guides/codelabs/webpack
+
+- from: /web/tools/workbox/get-started/npm-script
+  to: /web/tools/workbox/guides/codelabs/npm-script
+
+- from: /web/tools/workbox/guides/migrate
+  to: /web/tools/workbox/guides/migrations/migrate-from-sw

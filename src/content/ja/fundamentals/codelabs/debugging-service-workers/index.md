@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: このコードラボでは、新しい DevTools の [Application] パネルを使用して、Service Worker をデバッグする方法について説明します。また、プッシュ通知をシミュレートして登録が正常にセットアップされていることを確認する方法についても説明します。
 
 {# wf_auto_generated #}
-{# wf_updated_on:2016-10-19T18:28:32Z #}
+{# wf_updated_on:2016-10-19 #}
 {# wf_published_on:2016-01-01 #}
 
 

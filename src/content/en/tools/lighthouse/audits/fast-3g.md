@@ -2,12 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Page Load Is Fast Enough On 3G" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-14 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-14 #}
+{# wf_blink_components: N/A #}
 
 # Page Load Is Fast Enough On 3G  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Many mobile users of your page experience the equivalent of a 3G network
 connection. Ensuring that your page loads fast over a simulated 3G network
@@ -18,7 +19,7 @@ Note: A fast page load on 3G is a baseline requirement for a site to be
 considered a Progressive Web App. See [Baseline Progressive Web App
 Checklist](/web/progressive-web-apps/checklist#baseline).
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 There are two main metrics regarding how users perceive load time:
 
@@ -46,7 +47,7 @@ Performance][RP] for strategies.
 [load]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
 [RP]: /web/fundamentals/performance/rendering/
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse throttles the page if the network connection is faster than
 3G and then measures the time to first interactive. If the time to first
@@ -54,37 +55,4 @@ interactive is less than 10s, the audit passes.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Fast Enough On 3G / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

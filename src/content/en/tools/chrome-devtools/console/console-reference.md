@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2016-03-21 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2016-03-21 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Console API Reference {: .page-title }
 
@@ -210,6 +211,19 @@ prints the report to the **Profiles** panel.
 
 See [`console.profile()`](#profile) for an example.
 
+## console.table(array) {: #table }
+
+Logs an array of objects as a table.
+
+    let data = [
+      { name: "Yusuf", age: 26 },
+      { age: 34, name: "Chen" }
+    ];
+
+    console.table(data);
+
+![an example of console.table()](images/table2.png)
+
 ## console.time([label]) {: #time }
 
 Starts a new timer. Call [`console.timeEnd()`](#timeend) to stop the timer and
@@ -282,3 +296,7 @@ warning icon next to the logged message.
     console.warn('user limit reached!');
 
 ![console.warn() example](images/warn.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

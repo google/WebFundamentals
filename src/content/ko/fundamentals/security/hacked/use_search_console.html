@@ -1,0 +1,105 @@
+<html devsite><head>
+  <title>Search Console 사용</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>사이트의 <a href="https://www.support.google.com/webmasters/answer/35179">소유권을 확인</a>한 이후라면 아래의 첫 번째 작업을 건너뛰고 곧바로 Search Console에서 사이트 정보 확인으로 이동할 수 있습니다.</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>필요 사항:</h3>
+
+<ul>
+  <li>루트 디렉토리에
+    파일 추가, <a href="https://www.support.google.com/webmasters/answer/79812">메타 태그</a> 작성, 사이트에 관한 Google 애널리틱스 관리자 계정 소유 등의
+    기술을 사용하여
+    사이트의 <a href="https://www.support.google.com/webmasters/answer/35179">소유권을 확인</a>할 수 있어야 합니다.</li>
+</ul>
+
+<div class="action">
+  <h3>수행할 작업:</h3>
+
+  <p>이 섹션에서는 다음 작업을 수행합니다.</p>
+
+  <ol>
+    <li><a href="#verify">Search Console에서 사이트의 소유권을 확인합니다.</a></li>
+    <li><a href="#check">해커가 이미 Search Console에서 소유권을 확인하고 원치 않는 설정 변경을 하지 않았는지 확인합니다.</a></li>
+    <li><a href="#determine">공격의 성격을 판단합니다.</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>Search Console에서 사이트의 소유권 확인</h4>
+
+<ol>
+  <li>브라우저를 열고 웹마스터 센터(<a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>)로 이동합니다.</li>
+  <li><strong>Search Console</strong>을 클릭합니다.</li>
+  <li><a href="https://www.google.com/accounts">Google 계정</a>을 사용하여 Search Console에 로그인합니다.
+    Google 계정이 없다면 <strong>계정 만들기</strong>를 클릭합니다. Google 계정을 새로 만들어도 다른 회사의 기존 이메일 계정이 손실되지 않습니다
+    (<a href="https://accounts.google.com/SignUp">계정 관련 정보 자세히 보기</a>).</li>
+  <li><strong>사이트 추가</strong>를 클릭합니다. 입력란에 사이트의 URL을 입력한 다음 <strong>계속</strong>을 클릭합니다.</li>
+  <li>가장 편리한 확인 방법을 결정합니다. Google에서 가장 적합할 것으로 판단한 방법이 확인 페이지의 <strong>권장 방법</strong> 탭에 표시됩니다. 다른 방법은 <strong>대체 방법</strong> 탭에 표시됩니다
+    (<a href="https://goo.gl/kQnHQ">확인 방법 자세히 알아보기</a>).</li>
+  <li>HTML 메타태그 또는 HTML 파일 등 사이트에 액세스해야 하는 확인 방법을 선택했다면 사이트를 다시 온라인으로 전환합니다.</li>
+  <li><strong>확인</strong>을 클릭하여 선택한 방법으로 소유권을 확인합니다. 확인을 완료하면 확인된 소유자임을 알리는 화면이 표시됩니다.
+    사이트를 다시 오프라인으로 전환할 수 있지만 이후 단계부터는 다시 온라인 상태여야 합니다.</li>
+</ol>
+<a name="check"></a>
+
+<h4>소유권 확인이 완료되면, 해커가 이미 Search Console에서 소유권을 확인하고 원치 않는 설정 변경을 하지 않았는지 확인합니다.</h4>
+
+<ol>
+  <li>Search Console 로고를 클릭하여 기본 Search Console 홈페이지로 이동합니다.</li>
+  <li>사이트를 찾은 다음 <strong>사이트 관리</strong>를 클릭합니다.</li>
+  <li><strong>사용자 추가 또는 삭제</strong>를 클릭합니다.</li>
+  <li>표시된 모든 <a href="https://www.support.google.com/webmasters/answer/44227">사용자 및 소유자</a>는 승인된 사용자여야 합니다.</li>
+  <li>승인되지 않은 사용자가 있으면 이메일 주소를 기록한 다음(나중에 유용할 수 있음) 사이트에서 삭제합니다. 승인되지 않은 소유자의 경우 소유자 및 사용 가능한 모든 확인 토큰(예: 홈페이지의 확인 메타태그 또는 서버의 HTML 파일)을 모두 삭제해야 합니다 (<a href="https://www.support.google.com/webmasters/answer/2454036">추가 정보</a>).</li>
+  <li>Search Console에서 원치 않는 설정 변경이 있었는지 조사합니다. <span class="material-icons">설정</span> 아이콘을
+    클릭한 다음 <a href="https://www.support.google.com/webmasters/answer/2454036"><strong>사이트 설정</strong></a>을 클릭하여
+    느린 <a href="https://www.support.google.com/webmasters/answer/48620">크롤링 속도</a>
+    (검색 엔진 스파이더를 피하기 위한 목적일 수 있음) 등
+    내 의사와 상관없이 해커가 변경했을 수도 있는
+    설정을 확인합니다. 또한
+    <strong>Google 색인</strong>
+    &gt; <a href="https://www.support.google.com/webmasters/answer/164734">URL 삭제</a> 또는
+    <span class="material-icons">설정</span> &gt;
+    <a href="https://www.support.google.com/webmasters/answer/83106">주소 변경 알림</a>에 이상이 없는지 확인합니다.</li>
+</ol>
+<a name="determine"></a>
+
+<h4>공격의 성격 판단</h4>
+
+<p>Search Console의 메시지 센터 및 보안 문제에 있는 정보를 토대로 사이트가 다음 중 어떤 목적으로 해킹되었는지 판단할 수 있습니다.</p>
+
+<ul>
+  <li>검색결과의 품질 및 관련성을 저하시킬 수 있는 스팸성 콘텐츠인지 확인</li>
+  <li>피싱 목적인지 확인</li>
+  <li>멀웨어 배포를 위한 것인지 확인</li>
+</ul>
+
+<p>Search Console을 사용하여 해킹 또는 멀웨어를 조사하려면 다음 단계를 완료하세요.</p>
+
+<ol>
+  <li>상단의 Search Console 로고를 클릭하여 기본 Search Console 홈페이지로 이동합니다.</li>
+  <li><strong>메시지</strong>를 클릭합니다.</li>
+  <li>사이트가 1) 스팸성 페이지, 텍스트 또는 링크 게재, 2) 피싱, 3) 멀웨어 배포에 사용되었는지와 관련하여 Google에서 보낸 중요한 메시지가 있는지 확인합니다. 피싱 알림이 있는 경우 전체 복구 절차를 완료할 때까지 이 메시지를 삭제하지 마세요.</li>
+  <li>웹마스터 도구의 <strong>보안 문제</strong>로 이동합니다.
+    <ul>
+      <li>멀웨어의 영향을 받은 사이트에는 '멀웨어'라는 최상위 제목이 표시되고 '서버 설정 수정됨' 또는 '오류 템플릿 삽입' 등 멀웨어 유형의 카테고리가 표시됩니다. 이 경우 해커가 사이트를 이용하여 기밀 정보에 액세스하거나 컴퓨터에 해를 입히도록 만들어진 소프트웨어로 방문자를 감염시킬 수 있습니다. 이에 대한 해결 방법을 알아보려면 <a href="hacked_with_malware">멀웨어 피해 평가</a>를 진행하세요.
+      </li>
+      <li>스팸을 게재하기 위해 해킹된 사이트에는 '해킹됨'이라는 최상위 제목이 표시되고 '콘텐츠 삽입' 등의 해킹 유형 카테고리가 표시될 수 있습니다. 이 경우 해커가 스팸성 페이지, 텍스트, 링크 등을 사이트에 삽입했을 수 있습니다. 이에 대한 해결 방법을 알아보려면 <a href="hacked_with_spam">스팸 피해 평가</a>를 진행하세요.</li>
+      <li>Search Console 메시지 센터에 '피싱 알림'이 있는 사이트에는 보안 문제 내에 아무 정보도 표시되지 않을 수 있습니다. 해커는 사이트에 피싱 페이지를 만들고 주로 사이트를 이용해 믿을 만한 사이트로 가장하여 사용자의 로그인 비밀번호 또는 재정 정보를 확보합니다. 피싱 삭제는 스팸과 유사하므로 <a href="hacked_with_spam">스팸 피해 평가</a>를 진행하세요.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>다음 단계</h2>
+
+<p>다음 단계는
+  <a href="hacked_with_spam">스팸 피해 평가(스팸으로 해킹됨)</a> 또는
+  <a href="hacked_with_malware">멀웨어 피해 평가(멀웨어로 해킹됨)</a>입니다.</p>
+
+</body></html>

@@ -22,7 +22,7 @@ description: クリティカル レンダリング パスの測定方法を説�
 
 
 
-##  Lighthouse を使用したページの監査{: #lighthouse }
+## Lighthouse を使用したページの監査{: #lighthouse }
 
 Lighthouse は、指定したページに対して一連のテストを実行し、ページの結果をレポートにまとめて表示するウェブアプリの監査ツールです。
 Lighthouse は Chrome 拡張機能または NPM モジュールとして実行できるため、Lighthouse を継続的インテグレーション システムと統合する場合に便利です。
@@ -41,7 +41,7 @@ Lighthouse を Chrome 拡張機能として実行すると、ページの CRP �
 
 [crc]: /web/tools/lighthouse/audits/critical-request-chains
 
-##  Navigation Timing API でコードを計測する {: #navigation-timing }
+## Navigation Timing API でコードを計測する {: #navigation-timing }
 
 Navigation Timing API と、ページの読み込み時に発行されたその他のブラウザ イベントを組み合わせると、任意のページでの実際の CRP パフォーマンスを取得および記録できます。
 
@@ -83,7 +83,7 @@ HTML 仕様では、イベントを発行するタイミング、満たすべき
 
 以上です。これで、トラッキング対象の具体的なマイルストーンと、その測定値を出力するシンプルな関数がそろいました。これらのメトリックをページに出力する代わりに、コードを修正してアナリティクス サーバーに送信することもできます（[Google アナリティクスではこれを自動で実行](https://support.google.com/analytics/answer/1205784)）。これは、ページのパフォーマンスを正しく把握し、最適化作業によってメリットが生じそうなページを特定する方法として優れています。
 
-##  DevTools とは {: #devtools }
+## DevTools とは {: #devtools }
 
 このようなドキュメントでは、Chrome DevTools の [Network] パネルを使用して、CRP のコンセプトを説明している場合がありますが、DevTools は現在、CRP の測定に最適というわけではありません。クリティカルなリソースを特定する仕組みが組み込まれていないためです。
 クリティカルなリソースを特定するには、[Lighthouse](#lighthouse) の監査を実行します。

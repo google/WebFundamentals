@@ -3,6 +3,7 @@ book_path: /web/{{section}}/_book.yaml
 full_width: true
 
 {# wf_auto_generated #}
+{# wf_template: src/templates/showcase/vertical.md #}
 {# wf_updated_on: 1900-01-01 #}
 {# wf_published_on: 1900-01-01 #}
 
@@ -36,7 +37,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }} 
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -52,7 +53,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -68,7 +69,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -84,7 +85,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>
@@ -101,7 +102,7 @@ full_width: true
   {{{description}}}
 </p>
 <p>
-  {{datePublishedPretty}} 
+  {{ formatDatePretty datePublishedMoment }}
   {{#if tags}} <br> {{#each tags}}<a href="/web/{{../../section}}/tags/{{this}}">#{{this}}</a> {{/each}}{{/if}}
 </p>
 <div class="clearfix"></div>

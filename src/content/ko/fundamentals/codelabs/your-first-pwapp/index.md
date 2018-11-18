@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 이 코드랩에서는 무척 느린 네트워크에서도 빠르게 로드되고 홈 화면에 아이콘이 있고 최상위의 전체 화면 환경으로 로드되는 Progressive Web App을 빌드합니다.
 
-{# wf_updated_on: 2017-01-05T16:32:36Z #}
+{# wf_updated_on: 2017-01-05 #}
 {# wf_published_on: 2016-01-01 #}
 
 

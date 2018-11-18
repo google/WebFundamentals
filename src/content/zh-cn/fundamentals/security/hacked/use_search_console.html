@@ -1,0 +1,87 @@
+<html devsite><head>
+  <title>使用 Search Console</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+    <p>如果您已<a href="https://www.support.google.com/webmasters/answer/35179">验证对自己网站的所有权</a>，则可跳过下面的第 1 步操作，直接在 Search Console 中查看您的网站信息。</p>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jC7jja6ebBM" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+<h3>您需要：</h3>
+
+<ul>
+  <li>能够使用下述方法之一<a href="https://www.support.google.com/webmasters/answer/35179">验证对自己网站的所有权</a>：在根目录中添加一个文件、制作<a href="https://www.support.google.com/webmasters/answer/79812">元标记</a>、拥有该网站的 Google Analytics（分析）管理员帐号，等等。</li>
+</ul>
+
+<div class="action">
+  <h3>您应执行的操作：</h3>
+
+  <p>在此部分中，您应执行以下操作：</p>
+
+  <ol>
+    <li><a href="#verify">在 Search Console 中验证您对自己网站的所有权</a></li>
+    <li><a href="#check">确认黑客尚未在 Search Console 中验证所有权且尚未对设置进行恶意更改</a></li>
+    <li><a href="#determine">确定攻击的性质</a></li>
+  </ol>
+</div>
+<a name="verify"></a>
+
+<h4>在 Search Console 中验证您对自己网站的所有权</h4>
+
+<ol>
+  <li>打开浏览器，然后通过以下网址访问网站站长中心：<a href="https://www.google.com/webmaster">http://www.google.com/webmasters</a>。</li>
+  <li>点击 <strong>Search Console</strong>。</li>
+  <li>使用 <a href="https://www.google.com/accounts">Google 帐号</a>登录 Search Console。如果您没有 Google 帐号，请点击<strong>创建帐号</strong>。新建一个 Google 帐号并不意味着您会丢失其他公司的现有电子邮件帐号。（<a href="https://accounts.google.com/SignUp">详细了解帐号</a>。）</li>
+  <li>点击<strong>添加网站</strong>。在框内输入您网站的网址，然后点击<strong>继续</strong>。</li>
+  <li>确定对您而言最方便的验证方法。在验证页面上，<strong>推荐的方法</strong>标签中会显示 Google 认为最有效的方法；<strong>备用方法</strong>标签中则会列出其他方法。（<a href="https://goo.gl/kQnHQ">详细了解验证</a>。）</li>
+  <li>如果您选择的验证方法（例如使用 HTML 元标记或 HTML 文件）需要访问您的网站，请将您的网站恢复到在线状态。</li>
+  <li>点击<strong>验证</strong>，使用您所选的方法验证所有权。如果验证成功，您就会看到祝贺屏幕，其中会显示您已是经过验证的所有者。此时，您可以让自己的网站再次离线，但请注意，在后续步骤中您的网站仍需恢复到在线状态。</li>
+</ol>
+<a name="check"></a>
+
+<h4>完成验证后，请确认黑客尚未在 Search Console 中验证所有权且尚未对设置进行恶意更改。</h4>
+
+<ol>
+  <li>点击 Search Console 徽标，转到 Search Console 首页。</li>
+  <li>找到您的网站，然后点击<strong>管理网站</strong>。</li>
+  <li>点击<strong>添加或删除用户</strong>。</li>
+  <li>确保列出的所有<a href="https://www.support.google.com/webmasters/answer/44227">用户和所有者</a>都已获得授权。</li>
+  <li>将所有未获授权的用户的电子邮件地址记录下来（日后或许有用），然后从您的网站中删除此类用户。对于未获授权的所有者，您需要同时删除所有者以及任何可能存在的验证令牌，例如您首页上的验证元标记或您服务器上的 HTML 文件。（<a href="https://www.support.google.com/webmasters/answer/2454036">了解详情</a>。）</li>
+  <li>检查 Search Console 中的设置是否遭到了恶意更改。点击“设置”图标 <span class="material-icons">设置</span>，然后点击<a href="https://www.support.google.com/webmasters/answer/2454036"><strong>网站设置</strong></a>以检查黑客是否进行了恶意更改，例如调低了<a href="https://www.support.google.com/webmasters/answer/48620">抓取速度</a>（其目的可能是为了避开搜索引擎“蜘蛛”程序）。此外，确认 <strong>Google 索引</strong> &gt; <a href="https://www.support.google.com/webmasters/answer/164734">移除网址</a>部分或 <span class="material-icons">设置</span> &gt; <a href="https://www.support.google.com/webmasters/answer/83106">地址更改</a>部分中列出的内容没有任何异常。</li>
+</ol>
+<a name="determine"></a>
+
+<h4>确定攻击的性质</h4>
+
+<p>Search Console 的“消息中心”和“安全问题”内的信息可帮助您确定您的网站是否遭到了以下任何形式的入侵：</p>
+
+<ul>
+  <li>可能会降低搜索结果的质量和相关程度的网络垃圾。</li>
+  <li>网上诱骗。</li>
+  <li>传播恶意软件。</li>
+</ul>
+
+<p>要使用 Search Console 调查黑客入侵或恶意软件问题，请完成以下步骤：</p>
+
+<ol>
+  <li>点击上角的 Search Console 徽标，转到 Search Console 首页。</li>
+  <li>点击<strong>消息</strong>。</li>
+  <li>检查是否有来自 Google 且指明您的网站存在以下行为的重要消息：1) 提供包含垃圾内容的网页、文本或链接，2) 网上诱骗，3) 传播恶意软件。如果您收到了关于网上诱骗的通知，请一定等到完成整个恢复流程后再删除该消息。</li>
+  <li>转到网站站长工具中的<strong>安全问题</strong>。
+    <ul>
+      <li>受到恶意软件感染的网站会显示“恶意软件”顶级标题，后跟恶意软件类型的类别，例如“经过修改的服务器配置”或“错误模板注入”。在这些情况下，黑客可能会利用您的网站，使您的访问者感染上企图获取机密信息或损害其计算机的恶意软件。要了解如何解决此问题，请继续执行<a href="hacked_with_malware">评估受恶意软件破坏的程度</a>。
+      </li>
+      <li>因被黑客入侵而提供网络垃圾的网站可能会显示“遭到黑客入侵”顶级标题，后跟黑客行为类型的类别，例如“内容注入”。黑客可能在您的网站上放置了包含垃圾内容的网页、文本或链接。要了解如何解决此问题，请继续执行<a href="hacked_with_spam">评估受网络垃圾破坏的程度</a>。</li>
+      <li>在 Search Console 的“消息中心”内有“网上诱骗通知”的网站可能不会在“安全问题”内显示任何信息。在您的网站上创建网上诱骗网页后，黑客通常会冒充值得信任的网站，利用您的网站获取用户的登录名、密码或财务详情。由于对网上诱骗内容的清理方法与对网络垃圾的清理方法类似，因此请继续执行<a href="hacked_with_spam">评估受网络垃圾破坏的程度</a>。</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>下一步</h2>
+
+<p>此流程中的下一步是<a href="hacked_with_spam">评估受网络垃圾破坏的程度（遭到网络垃圾入侵）</a>或<a href="hacked_with_malware">评估受恶意软件破坏的程度（遭到恶意软件入侵）</a>。</p>
+
+</body></html>

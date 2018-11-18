@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -18,8 +18,7 @@ EME is designed to enable the same app and encrypted files to be used in any
 browser, regardless of the underlying protection system. The former is made
 possible by the standardized APIs and flow while the latter is made possible by
 the concept of
-[Common Encryption](https://www.html5rocks.com/en/tutorials/eme/basics/#common-
-encryption).
+[Common Encryption](https://www.html5rocks.com/en/tutorials/eme/basics/#common-encryption).
 
 EME is an extension to the HTMLMediaElement specification — hence the name.
 Being an 'extension' means that browser support for EME is optional: if a
@@ -197,7 +196,7 @@ from a license server.
     var video = document.querySelector('video');
 
     var config = [{initDataTypes: ['webm'],
-      videoCapabilities: [{contentType: 'video/webm; codecs="vp9"'}]}];
+      videoCapabilities: [{contentType: 'video/webm; codecs="vp09.00.10.08"'}]}];
 
     if (!video.mediaKeys) {
       navigator.requestMediaKeySystemAccess('org.w3.clearkey',
@@ -515,8 +514,7 @@ on how to use WebM tools and FFmpeg to segment video and build an MPD.
 ## Conclusion
 
 Use of the web to deliver paid-for video and audio is growing at a
-[huge rate](http://www.cmo.com/content/dam/CMO_Other/ADI/Video_Benchmark_Q2_2014/video_benchm
-ark_report-2014.pdf).
+[huge rate](http://www.cmo.com/content/dam/CMO_Other/ADI/Video_Benchmark_Q2_2014/video_benchmark_report-2014.pdf).
 It seems that every new device, whether it's a tablet,
 game console, connected TV, or set-top box, is able to stream media from the
 major content providers over HTTP. [Over 85%](http://longtailvideo.com/html5) of
@@ -538,7 +536,7 @@ for APIs that most media plugins rely on.
 [Media Source Extensions](https://w3c.github.io/media-source/): latest Editor's Draft
 [DASH standard](http://standards.iso.org/ittf/PubliclyAvailableStandards/c057623_ISO_IEC_23009-1_2012.zip)
 (yes, it's a PDF)
-[Overview of the DASH standard](http://dashif.org/mpeg-dash/)
+[Overview of the DASH standard](http://dashif.org/about/)
 
 ### Articles
 
@@ -553,3 +551,7 @@ Clear Key demo: [simpl.info/ck](http://simpl.info/eme/clearkey)
 [Media Source Extensions (MSE) demo](http://simpl.info/mse)
 Google's [Shaka Player](https://github.com/google/shaka-player)
 implements a DASH client with EME support
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

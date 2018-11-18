@@ -9,6 +9,7 @@ toc:
     step_group: tools_setup
   - title: Setup Persistence with DevTools Workspaces
     path: /web/tools/setup/setup-workflow
+    status: deprecated
     step_group: tools_setup
   - title: Setup CSS & JS Preprocessors
     path: /web/tools/setup/setup-preprocessors

@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2017-09-29 #}
+{# wf_updated_on: 2018-09-20 #}
+{# wf_blink_components: Blink>Image #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -167,7 +168,7 @@ depending on media queries or image format.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/media.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media.html){: target="_blank" .external }
 
 In the above example, if the browser width is at least 800px then either
 `head.jpg` or `head-2x.jpg` is used, depending on the device resolution. If the
@@ -193,7 +194,7 @@ pixel density and choose the best image to download.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/sizes.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/sizes.html){: target="_blank" .external }
 
 
 The above example renders an image that is half the viewport width
@@ -263,7 +264,7 @@ take a small proportion.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/breakpoints.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/breakpoints.html){: target="_blank" .external }
 
 The `sizes` attribute, in the above example, uses several media queries to
 specify the size of the image. When the browser width is greater than
@@ -304,7 +305,7 @@ capabilities of the device.  Depending on the type of image and level of
 compression, image quality may not appear to change, but the file size drops
 significantly.
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/compressive.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/compressive.html){: target="_blank" .external }
 
 Caution: Use caution with the compressive technique because of the increased
 memory and decoding costs it requires. Resizing large images to fit on smaller
@@ -332,15 +333,15 @@ images, resulting in increased page weight.
 There are two fundamentally different ways to create and store images&mdash;and
 this affects how you deploy images responsively.
 
-**Raster images&mdash;such as photographs and other images&mdash;are represented
-**as a grid of individual dots of color. Raster images might come from a camera
-**or scanner, or be created with the HTML canvas element. Formats like PNG,
-**JPEG, and WebP are used to store raster images.
+**Raster images** &mdash; such as photographs and other images, are 
+represented as a grid of individual dots of color. Raster images might come
+from a camera or scanner, or be created with the HTML canvas element. Formats 
+like PNG, JPEG, and WebP are used to store raster images.
 
-**Vector images&mdash;such as logos and line art&mdash;are defined as a set of
-**curves, lines, shapes, fill colors and gradients. Vector images can be created
-**with programs like Adobe Illustrator or Inkscape, or handwritten in code using
-**a vector format such as SVG.
+**Vector images** such as logos and line art are defined as a set of
+curves, lines, shapes, fill colors and gradients. Vector images can be created
+with programs like Adobe Illustrator or Inkscape, or handwritten in code using
+a vector format such as SVG.
 
 ##### SVG
 
@@ -525,7 +526,7 @@ url(large.png)` is applied to the content `div`.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/conditional-mq.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/conditional-mq.html){: target="_blank" .external }
 
 ### Use image-set to provide high res images
 
@@ -555,7 +556,7 @@ fallback image for when `image-set()` is not supported; for example:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/image-set.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/image-set.html){: target="_blank" .external }
 
 The above loads the appropriate asset in browsers that support image-set;
 otherwise it falls back to the 1x asset. The obvious caveat is that while
@@ -586,7 +587,7 @@ doesn't support resolution-specific media queries.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/media-query-dppx.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/media-query-dppx.html){: target="_blank" .external }
 
 You can also use the min-width syntax to display alternative images depending on
 the viewport size.  This technique has the advantage that the image is not
@@ -651,14 +652,14 @@ raster images:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/icon-svg.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/icon-svg.html){: target="_blank" .external }
 
 ### Use icon fonts with caution
 
 <figure class="attempt-right">
   <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="Example of a page that uses FontAwesome for its font icons.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/media/icon-font.html" target="_blank" class="external">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/icon-font.html" target="_blank" class="external">
       Example of a page that uses FontAwesome for its font icons.
     </a>
   </figcaption>
@@ -683,7 +684,7 @@ compared to SVG icons:
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/icon-font.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/icon-font.html){: target="_blank" .external }
 
 There are hundreds of free and paid icon fonts available including [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
@@ -783,7 +784,7 @@ correct part.
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/media/image-sprite.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ux/responsive/image-sprite.html){: target="_blank" .external }
 
 Spriting has the advantage of reducing the number of downloads required to get
 multiple images, while still enabling caching.
@@ -866,3 +867,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 Keep in mind that using these techniques does require rendering cycles, which
 can be significant on mobile.  If over-used, you'll lose any benefit you may
 have gained and it may hinder performance.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

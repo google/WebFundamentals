@@ -3,16 +3,16 @@ book_path: /web/fundamentals/_book.yaml
 description: Google e AnswerLab realizaram um estudo examinando como os usuários interagem com um conjunto diverso de sites móveis. O objetivo era responder à seguinte pergunta: 'o que torna um site móvel bom?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # O Que Torna um Site Móvel Bom? {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-A Google e a AnswerLab conduziram um [estudo de pesquisa](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) para responder a essa pergunta. 
+A Google e a AnswerLab conduziram um [estudo de pesquisa](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) para responder a essa pergunta.
 
 >Usuários de dispositivos móveis têm objetivos muito definidos. Eles esperam poder obter o que
->precisam imediatamente e à sua maneira.  
+>precisam imediatamente e à sua maneira.
 
 O estudo foi conduzido em sessões de usabilidade presenciais de 119 horas com
  participantes dos EUA. Os participantes foram solicitados a realizar tarefas essenciais
@@ -89,7 +89,7 @@ de uma página para dispositivos móveis e, quando esse recurso não está dispo
 
 Grandes intersticiais de instalação de aplicativo (como promoções de página
 inteira que ocultam o conteúdo e incentivam o usuário a instalar um aplicativo)
- irritam os usuários e dificultam a realização de tarefas. Além disso, sites que usam intersticiais de instalação de aplicativos são 
+ irritam os usuários e dificultam a realização de tarefas. Além disso, sites que usam intersticiais de instalação de aplicativos são
 reprovados no
 [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly),
 o que pode afetar negativamente seus rankings de pesquisa.
@@ -214,7 +214,7 @@ de consulta de pesquisa para garantir que os resultados apresentados sejam do se
 
 ## Comércio e conversão
 
-Success: Entenda as jornadas dos seus clientes e deixe que os usuários realizem conversões como quiserem.  
+Success: Entenda as jornadas dos seus clientes e deixe que os usuários realizem conversões como quiserem.
 
 ### Deixe que os usuários explorem antes de se comprometer
 
@@ -342,14 +342,14 @@ Identifique as entradas corretamente e valide-as em tempo real.
 
 <div style="clear:both;"></div>
 
-### Crie formulários eficientes 
+### Crie formulários eficientes
 
 Utilize o recurso de [preenchimento automático](/web/fundamentals/design-and-ux/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
  para que os usuários possam preencher formulários com facilidade com dados pré-preenchidos. Pré-preencha
 campos com informações que você já tem. Por exemplo, ao recuperar endereços
 de entrega e cobrança, tente usar
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
- ou permita que os usuários copiem o endereço de entrega para o endereço de cobrança (ou vice-versa). 
+ ou permita que os usuários copiem o endereço de entrega para o endereço de cobrança (ou vice-versa).
 
 ## Usabilidade e formato
 

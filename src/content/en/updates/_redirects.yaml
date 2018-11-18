@@ -2,6 +2,9 @@
 
 redirects:
 
+- from: /web/updates/nic
+  to: /web/updates/2018/10/nic70
+
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
 
@@ -262,9 +265,6 @@ redirects:
 
 - from: /web/updates/2015/09/tab-discarding-in-chrome-46
   to: /web/updates/2015/09/tab-discarding
-
-- from: /web/updates/2015/09/using-manifest-to-set-sitewide-theme-color
-  to: /web/updates/2015/08/using-manifest-to-set-sitewide-theme-color
 
 - from: /web/updates/2015/09/using-web-app-manifest-to-set-solid-color-loading-screen
   to: /web/updates/2015/08/using-web-app-manifest-to-set-solid-color-loading-screen

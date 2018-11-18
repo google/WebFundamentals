@@ -1,0 +1,66 @@
+<html devsite><head>
+  <title>Sitenizi karantinaya alma</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>İhtiyacınız olanlar:</h3>
+<ul>
+  <li>Web sunucunuzun sayfaları sunmasını engelleyebilme (alternatif olarak, seçenekleri
+    barındırıcınızla tartışabilirsiniz). Sonraki adımlarda kısa sürelerle sitenizi tekrar
+    çevrimiçi yapmanız gerekeceğine lütfen dikkat edin.</li>
+  <li>Hesap yönetimi izinleri (hesabınızla ilgili tüm kullanıcıları görebilme, silebilme
+    ve şifreleri değiştirebilme).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Sonraki işlemler:</h3>
+<ol>
+  <li>Kullanıcılara içerik sunmaması için <strong>sitenizi çevrimdışı yapın</strong>. Örneğin, web sunucunuzu durdurun
+    veya web sitenizin DNS girişlerini farklı bir sunucudaki, 503 HTTP yanıt kodu
+    kullanan statik bir sayfaya yönlendirin.
+<p>Güvenliği ihlal edilmiş sitenin tamamını çevrimdışı yaparak, bilgisayar korsanının müdahalesine
+  fazla maruz kalmadan yönetim görevlerini tamamlayabilirsiniz. Bu süre içinde zararlı kod
+  veya spam içerikli dosyalar ziyaretçilerinize sunulmaz. Kurtarma işlemi sırasında sitenizi
+  ara ara/geçici olarak çevrimdışı yapmanız, sitenizin gelecekte arama sonuçlarındaki sıralamasını etkilemez.</p>
+      <ul>
+        <li>Sitenizi nasıl çevrimdışı yapacağınızdan emin değilseniz barındırıcınızla iletişim
+kurmak yararlı olur. Örneğin, barındırıcınız <em>saldırıya uğramış dizinlerinizin dışından</em>
+    siteniz için 503 yanıtı yapılandırabilir (bu iyi bir seçenektir). Sitenizin durumunu
+    kısa bir süre sonra test amacıyla çevrimiçi ve çevrimdışı arasında değiştireceğinizi
+    barındırıcınıza bildirin. Bunu yapmak,
+    sitenizi çevrimdışı yapma konusunda size en uygun self servis yöntemi sağlamalarına yardımcı olabilir.
+        </li><li>Sitenizin 4xx veya 5xx
+        <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP durum kodu</a>
+        döndürmesini sağlamak kullanıcılarınızı korumak için yeterli bir yöntem değildir. 404, 503 vb. yöntemler kullanılsa da kullanıcılarınıza
+        zararlı içerikler sunulmaya devam edilebilir. <em>503 durum kodu sitenizin geçici olarak
+        kapalı olduğunu belirten yararlı bir sinyaldir, ancak yanıt güvenliği ihlal edilmiş
+        olan sunucunuzun/sitenizin dışından olmalıdır.</em>
+        </li>
+        <li>Bir <a href="/search/reference/robots_txt">robots.txt
+        engelleme</a> dosyası kullanmak da yeterli olmaz, çünkü bu dosya sadece
+        arama motoru tarayıcılarını engeller.
+ Normal
+         kullanıcılar zararlı içeriğe hâlâ erişebilir.</li>
+      </ul>
+  </li>
+  <li>Henüz yapmadıysanız <strong>durumu bildirmek üzere barındırıcınızla iletişim kurun</strong>. Barındırıcınızın da
+    güvenliği ihlal edilmişse, kendilerine durumu bildirmeniz, sorunun kapsamını anlamalarına
+    yardımcı olabilir.</li>
+  <li><strong>Tam bir kullanıcı hesabı yönetimi uygulayın</strong>.
+    <ul>
+      <li>Sitenizin kullanıcı hesaplarının listesini görüntüleyin ve bilgisayar korsanının yeni bir
+        kullanıcı hesabı oluşturup oluşturmadığını kontrol edin. Yasal olmayan hesaplar
+        oluşturulmuşsa, istenmeyen hesap adlarını daha sonra incelenmek üzere
+        bir yere not edin. Ardından, bilgisayar korsanının gelecekte giriş yapmasını önlemek üzere hesapları silin.</li>
+      <li>Tüm site kullanıcılarının ve hesaplarının şifrelerini değiştirin. Buna FTP, veritabanı erişimi,
+        sistem yöneticileri ve içerik yönetimi sistemi (CMS) hesaplarına ait girişler de dahildir.</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Sonraki adım</h2>
+<p>Süreçte bir sonraki adım <a href="use_search_console">Search Console'u kullanma</a> işlemidir.</p>
+
+</body></html>

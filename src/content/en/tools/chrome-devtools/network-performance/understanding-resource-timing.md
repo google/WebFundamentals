@@ -3,7 +3,8 @@ book_path: /web/tools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
 {# wf_published_on: 2016-12-29 #}
-{# wf_updated_on: 2016-02-03 #}
+{# wf_updated_on: 2018-07-27 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Understanding Resource Timing {: .page-title }
 
@@ -236,3 +237,7 @@ The simplest method to test reducing this is to put your application on another 
 
 If you see lots of time spent in the Content Download phases, then improving server response or concatenating won't help.
 The primary solution is to send fewer bytes.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

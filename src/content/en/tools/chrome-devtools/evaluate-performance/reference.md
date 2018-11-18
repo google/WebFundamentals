@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference on all the ways to record and analyze performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-05-17 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-05-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -764,6 +765,15 @@ To move the diagram:
 * Click **Reset Transform** ![Reset
   Transform](imgs/reset-transform.png){:.cdt-inl} to reset the diagram to its
   original position.
+  
+See layer analysis in action:
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="6je49J67TQk"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 
 ### View paint profiler {: #paint-profiler }
 
@@ -855,6 +865,10 @@ To enable Layer Borders:
   </figcaption>
 </figure>
 
+See the comments in [`debug_colors.cc`][layer colors] for an explanation of the color-codings.
+
+[layer colors]: https://cs.chromium.org/chromium/src/cc/debug/debug_colors.cc
+
 ### Find scroll performance issues in realtime {: #scrolling-performance-issues }
 
 Use Scrolling Performance Issues to identify elements of the page that have
@@ -878,3 +892,7 @@ To view scroll performance issues:
     viewport that may harm scroll performance
   </figcaption>
 </figure>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

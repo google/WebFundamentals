@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Hiding content from assistive technology
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Hiding and Updating Content {: .page-title }
@@ -160,3 +161,6 @@ temporarily ignore changes to an element, such as when things are loading. Once
 everything is in place, `aria-busy` should be set to false to normalize the
 reader's operation.
  
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,0 +1,20 @@
+{% if footerLinks %}
+<footer class="devsite-footer-linkboxes nocontent">
+  <nav class="devsite-full-site-width">
+    <ul class="devsite-footer-linkboxes-list">
+      {% for linkList in footerLinks %}
+      <li class="devsite-footer-linkbox">
+        <h3 class="devsite-footer-linkbox-heading">{{ linkList.name }}</h3>
+        <ul class="devsite-footer-linkbox-list">
+          {% for item in linkList.contents %}
+            <li class="devsite-footer-linkbox-item">
+              <a href="{{ item.path }}">{{ item.label }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</footer>
+{% endif %}

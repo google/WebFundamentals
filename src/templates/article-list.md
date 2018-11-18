@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
 
 {# wf_auto_generated #}
+{# wf_template: src/templates/article-list.md #}
 {# wf_updated_on: 1900-01-01 #}
 {# wf_published_on: 1900-01-01 #}
 
@@ -9,17 +10,19 @@ book_path: /web/{{section}}/_book.yaml
 
 {{#each articles}}
 
-## {{ title }}
-<div class="attempt-right">
-  {{#if image}}
-    <img src="{{image}}">
-  {{else}}
-    <img src="/web/updates/images/generic/star.png">
-  {{/if}}
-</div>
-{{{description}}}
+## [{{ title }}]({{url}})
 
-[Read more]({{url}})
+<div class="attempt-right">
+  <a href="{{url}}">
+    {{#if image}}
+      <img src="{{image}}">
+    {{else}}
+      <img src="/web/updates/images/generic/star.png">
+    {{/if}}
+  </a>
+</div>
+
+{{{description}}}
 
 {{#if author}}
 [{{author}}](/web/resources/contributors#{{author}})
@@ -27,8 +30,11 @@ book_path: /web/{{section}}/_book.yaml
 {{published}}
 
 {{#if tags}}
-Tags: {{#each tags}}[{{this}}](/web/{{../../section}}/tags/{{this}}) {{/each}}
+<span class="material-icons">local_offer</span>
+{{#each tags}}[`{{this}}`](/web/{{../../section}}/tags/{{this}}) {{/each}}
 {{/if}}
+
+[Read article]({{url}}){: .button .button-primary }
 
 <div style="clear:both"></div>
 

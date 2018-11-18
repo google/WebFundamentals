@@ -10,7 +10,7 @@ Welcome to the new Web**Fundamentals**! An effort to showcase best practices and
 * We're now using the [DevSite](https://developers.google.com/) infrastructure
   * New [style guide](https://petele-scratch.appspot.com/web/resources/style-guide)
   * New [widgets](https://petele-scratch.appspot.com/web/resources/widgets) allow inline JavaScript, common links, related guide and more
-* Jekyll has been eliminated, instead pages are rendered at request time
+* Jekyll has been eliminated. Instead, pages are rendered at request time
 * Front-matter has been eliminated from the markdown, but files now require a [simple set of tags](https://petele-scratch.appspot.com/web/resources/writing-an-article#yaml-front-matter)
 
 ### What stays the same?
@@ -29,14 +29,14 @@ git clone https://github.com/google/WebFundamentals.git
 
 ## Getting set up
 The new DevSite infrastructure simplifies the dependencies a lot. Ensure
-you have a recent version of [Node](https://nodejs.org/en/) and the
+you have [Node](https://nodejs.org/en/) 10 or greater, and the
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
 1. Run `npm install` (needed for the build process)
 
 ## Build the auto-generated files
-Some files (contributors includes, some pages for updates, showcases, etc) are
+Some files (contributors includes, some pages for updates, showcases, etc.) are
 automatically generated. The first time you clone the repo and run `npm install`,
 this is done for you. However, when you add a case study, update, etc., you'll
 need to re-build those files using:
@@ -53,9 +53,12 @@ To view the site locally, just run:
 npm start
 ```
 
+**Note:** The first time you start the server, you may need to run
+`start-appengine.sh` and answer any prompts provided by `dev_appserver.py`.
+
 ## Update the code labs
 To update the Code Labs, you'll need the
-[`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool, and
+[`claat`](https://github.com/googlecodelabs/tools/tree/master/claat) tool and
 access to the original Doc files. This will likely only work for Googlers.
 
 1. Download the `claat` tool and place it in your `tools` directory.

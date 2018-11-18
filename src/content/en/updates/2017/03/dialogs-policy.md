@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs.
 
-{# wf_updated_on: 2017-06-27 #}
+{# wf_updated_on: 2018-06-08 #}
 {# wf_published_on: 2017-03-24 #}
 {# wf_tags: policy,dialog,javascript #}
+{# wf_blink_components: Blink>WindowDialog,Blink>JavaScript #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: Synchronous, app-modal JavaScript dialogs are commonly (and unfortunately) used to harm users. Because of this, the Chromium team highly recommends that you not use JavaScript dialogs. #}
 
@@ -66,8 +67,25 @@ Showing an `alert()/confirm()/prompt()` dialog while in fullscreen will cause
 fullscreen to be lost
 [starting in Chrome 61](https://www.chromestatus.com/feature/5669548871122944).
 
+`prompt()` dialogs do not activate their tab. If `prompt()` is called from a
+background tab, the call returns immediately and no dialog is shown.
+[This change](https://www.chromestatus.com/feature/5637107137642496)
+took place across all channels at the beginning of May 2017.
+
+`alert()` dialogs do not activate their tab. If `alert()` is called from a
+background tab, the call returns immediately. The tab is marked with an indicator
+and the user will see the dialog when they switch to the tab. This behavior change
+is seen
+[starting in Chrome 64](https://www.chromestatus.com/feature/6477774290157568).
+
+`confirm()` dialogs do not activate their tab. If `confirm()` is called from a
+background tab, the call returns immediately and no dialog is shown.
+This behavior change is seen
+[starting in Chrome 69](https://www.chromestatus.com/feature/5140698722467840).
+
 Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not
 affect you.
 
 {% include "comment-widget.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

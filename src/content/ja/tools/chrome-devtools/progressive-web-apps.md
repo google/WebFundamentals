@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: [Application] パネルを使用して、ウェブアプリ マニフェスト、Service Worker、Service Worker のキャッシュの調査、変更、およびデバッグを行うことができます。
 
-{# wf_updated_on:2016-07-25 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-07-25 #}
 
 # Progressive Web App のデバッグ {: .page-title }
@@ -38,8 +38,8 @@ description: [Application] パネルを使用して、ウェブアプリ マニ�
 
 関連ガイド:
 
-* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/engage-and-retain/web-app-manifest)
-* [アプリのインストール バナーの使用](/web/fundamentals/engage-and-retain/app-install-banners)
+* [ウェブアプリ マニフェストによるユーザー エクスペリエンスの向上](/web/fundamentals/web-app-manifest)
+* [アプリのインストール バナーの使用](/web/fundamentals/app-install-banners)
 
 
 マニフェストを設定したら、[**Application**] パネルの [**Manifest**] ペインを使用して調べることができます。
@@ -97,7 +97,7 @@ Service Worker は、将来のウェブ プラットフォームの基礎とな�
 関連ガイド:
 
 * [Service Worker の概要](/web/fundamentals/primers/service-worker)
-* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/engage-and-retain/push-notifications)
+* [プッシュ通知:タイムリー、有用、的確](/web/fundamentals/push-notifications)
 
 
 [**Application**] パネルの [**Service Workers**] ペインは、DevTools で Service Worker の調査やデバッグを行う際の主要な場所です。
@@ -135,7 +135,7 @@ Service Worker でエラーが発生すると、[**Errors**] という新しい�
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
+[tickle]: /web/fundamentals/push-notifications/how-push-works
 [errors]: images/sw-error.png
 
 ##  Service Worker のキャッシュ{:#caches}

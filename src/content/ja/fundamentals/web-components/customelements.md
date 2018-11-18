@@ -93,7 +93,7 @@ HTML で問題を解決できない場合は、問題を解決できるカスタ
     
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
     
@@ -141,7 +141,7 @@ HTML で問題を解決できない場合は、問題を解決できるカスタ
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
     
@@ -165,7 +165,7 @@ HTML で問題を解決できない場合は、問題を解決できるカスタ
 
 
 **カスタム組み込み要素**は、ブラウザの組み込み HTML タグのいずれかを拡張するカスタム要素です。
-既存の要素を拡張することの主な利点は、その機能（DOM プロパティ、メソッド、ユーザー補助機能）をすべて取得できることです。
+既存の要素を拡張することの主な利点は、その機能（DOM プロパティ、メソッド、アクセシビリティ）をすべて取得できることです。
 [Progressive Web App](/web/progressive-web-apps/) を作成する場合、**既存の HTML 要素を段階的に拡張**するよりもよい方法はありません。
 
 要素を拡張するには、正しい DOM インターフェースを継承するクラス定義を作成する必要があります。
@@ -180,7 +180,7 @@ HTML で問題を解決できない場合は、問題を解決できるカスタ
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
     
@@ -255,12 +255,12 @@ JavaScript でインスタンスを作成できます。
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
     
 
-注: 一部のブラウザは  <code>is=""</code> 構文の実装に反対しています。これは、ユーザー補助機能や進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、<a href='https://github.com/w3c/webcomponents/issues/509'>Github</a> にあなたの意見を投稿してください。
+注: 一部のブラウザは  <code>is=""</code> 構文の実装に反対しています。これは、アクセシビリティや進歩的な機能拡張にとって残念なことです。ネイティブ HTML 要素を拡張することが有用であるとお考えの場合は、<a href='https://github.com/w3c/webcomponents/issues/662'>Github</a> にあなたの意見を投稿してください。
 
 ## カスタム要素応答 {: #reactions}
 
@@ -311,7 +311,7 @@ JavaScript でインスタンスを作成できます。
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -377,7 +377,7 @@ HTML プロパティでは、その値が HTML 属性として DOM に反映さ�
     <div id="my-id" hidden>
     
 
-これは「[属性へのプロパティの反映](https://html.spec.whatwg.org/multipage/infrastructure.html#reflecting-content-attributes-in-idl-attributes)」と呼ばれます。HTML のほぼすべてのプロパティでこれが行われます。なぜでしょうか。属性は、要素を宣言的に設定するためにも役立ち、ユーザー補助機能や CSS セレクターといった特定の API は属性を利用して機能します。
+これは「[属性へのプロパティの反映](https://html.spec.whatwg.org/multipage/infrastructure.html#reflecting-content-attributes-in-idl-attributes)」と呼ばれます。HTML のほぼすべてのプロパティでこれが行われます。なぜでしょうか。属性は、要素を宣言的に設定するためにも役立ち、アクセシビリティや CSS セレクターといった特定の API は属性を利用して機能します。
 
 
 プロパティを反映することが役立つのは、**要素の DOM 表現がその JavaScript 状態と同期された状態を保つ**必要がある状況です。
@@ -586,7 +586,7 @@ Shadow DOM は、ページの他の部分とは別に一連の DOM を所有、�
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -636,7 +636,7 @@ const supportsCustomElementsV1 = 'customElements' in window;
 if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     constructor() {
-      super(); // always call super() first in the ctor.
+      super(); // always call super() first in the constructor.
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <b>I'm in shadow dom!</b>
@@ -668,7 +668,7 @@ if (supportsCustomElementsV1) {
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);
@@ -909,7 +909,7 @@ Chrome 54（[ステータス](https://www.chromestatus.com/features/469626194493
 - 使い慣れたプログラミング モデルを提供します。これは単なる DOM / CSS / HTML です。
 - その他の新しいウェブ プラットフォーム機能（Shadow DOM、`<template>`、CSS カスタム プロパティなど）と連携して適切に動作します。
 - ブラウザの DevTools と緊密に統合されています。
-- 既存のユーザー補助機能を利用します。
+- 既存のアクセシビリティを利用します。
 
 [spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/

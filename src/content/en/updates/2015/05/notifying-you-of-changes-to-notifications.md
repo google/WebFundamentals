@@ -1,16 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: 2 new API's have been added in Chrome 44 which makes using Notifications with push easier to work with and customise.
+description: 2 new API's have been added in Chrome 44 which makes using Notifications with push easier to work with and customize.
 
-{# wf_updated_on: 2015-07-16 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-05-21 #}
 {# wf_tags: news,webpush,notifications,data #}
+{# wf_blink_components: N/A #}
 
 # Notifying you of Changes to Notifications {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-Firstly, I apologise for that awful title, but I couldn't not.
+Firstly, I apologize for that awful title, but I couldn't not.
 
 In Chrome 44 [Notfication.data](https://notifications.spec.whatwg.org/#data) and
 [ServiceWorkerRegistration.getNotifications()](https://notifications.spec.whatwg.org/#dom-serviceworkerregistration-getnotificationsfilter)
@@ -87,7 +88,7 @@ a much better user experience.
 
 The code to do this is relatively simple. Inside your push event, call
 ServiceWorkerRegistration.getNotifications() to get an array of current
-Notifications and from there decide the right behaviour, whether that's
+Notifications and from there decide the right behavior, whether that's
 collapsing all notifications or by using the Notification.tag.
 
 
@@ -156,7 +157,7 @@ collapsing all notifications or by using the Notification.tag.
         }).catch(function(err) {
           console.error('Unable to retrieve data', err);
     
-          var title = 'An error occured';
+          var title = 'An error occurred';
           var message = 'We were unable to get the information for this ' +
             'push message';
     
@@ -230,7 +231,7 @@ opens up a range of other use cases.
 As of Chrome 45 you can specify a vibration pattern when creating a
 notification. On devices that support the
 <a href="http://www.w3.org/TR/vibration/">Vibration API</a> - currently only
-Chrome for Android - this allows you to customise the vibration pattern that
+Chrome for Android - this allows you to customize the vibration pattern that
 will be used when the notification is displayed.
 
 A vibration pattern can either be an array of numbers, or a single number which
@@ -320,6 +321,6 @@ This can be used like so:
         showOptInUIForNotifications();
     }
     
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

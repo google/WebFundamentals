@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse の監査項目「マニフェストを使用する」のリファレンス ドキュメント。
 
-{# wf_updated_on:2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-09-20 #}
 
 #  マニフェストを使用する {: .page-title }
@@ -19,7 +19,7 @@ description: Lighthouse の監査項目「マニフェストを使用する」�
 で順を追って説明しています。
 
 
-ウェブアプリ マニフェストに関するより詳細な情報については、[ウェブアプリ マニフェストを使用してユーザー エクスペリエンスを改善する](/web/fundamentals/engage-and-retain/web-app-manifest)ためのガイドをご覧ください。
+ウェブアプリ マニフェストに関するより詳細な情報については、[ウェブアプリ マニフェストを使用してユーザー エクスペリエンスを改善する](/web/fundamentals/web-app-manifest)ためのガイドをご覧ください。
 
 
 

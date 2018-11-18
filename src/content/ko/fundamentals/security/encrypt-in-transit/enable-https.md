@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 서버에서 HTTPS를 활성화하는 것은 웹페이지 보안에 매우 중요한 요소입니다. 
+description: 서버에서 HTTPS를 활성화하는 것은 웹페이지 보안에 매우 중요한 요소입니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # 서버에서 HTTPS 활성화 {: .page-title }
@@ -199,7 +199,7 @@ HTTPS를 통해 HTTP 리소스를 포함하는
 HTTPS에서 HTTP로 다운그레이드될 수 있습니다.
 
 이러한 문제는 페이지에 *http://* 스키마를 사용하는 정규화된 사이트 내 URL이
-포함될 때 발생합니다. 
+포함될 때 발생합니다.
 
 <p><span class="compare-worse">권장되지 않음</span> — 정규화된 사이트 내 URL을 사용하지 않는 것이 좋습니다.</p>
 
@@ -250,7 +250,7 @@ Success: 대규모 사이트에 대한 마이그레이션 작업이 더 원활�
 제공하는 스크립트, 이미지 또는 기타 리소스를 사용하는 경우 두 가지 옵션을 사용할 수 있습니다.
 
 * 이러한 리소스에 대해 프로토콜에 상대적인 URL을 사용합니다. 타사에서
-HTTPS를 지원하지 않을 경우 이를 지원하도록 요청합니다. jquery.com을 포함하여 대부분의 업체에서 이미 HTTPS를 지원하고 있습니다. 
+HTTPS를 지원하지 않을 경우 이를 지원하도록 요청합니다. jquery.com을 포함하여 대부분의 업체에서 이미 HTTPS를 지원하고 있습니다.
 * 개발자가 제어하고 HTTP와 HTTPS를 모두 제공하는 서버에서 리소스를
 제공합니다. 이 경우 사이트의 모양, 성능 및 보안을 더 효과적으로 제어할 수 있다는
 장점이 있습니다. 또한,
@@ -267,7 +267,7 @@ HTTPS가 사이트에 액세스할 수 있는 가장 좋은 방법임을 검색 
 
 ## STS(Strict Transport Security) 및 보안 쿠키 설정
 
-이제 HTTPS 사용을 '락인(lock in)'할 준비가 되었습니다. 
+이제 HTTPS 사용을 '락인(lock in)'할 준비가 되었습니다.
 
 * 301 리디렉션 비용을 방지하려면 HSTS(HTTP Strict Transport Security)를 사용하세요.
 * 항상 쿠키에 보안 플래그를 설정하세요.
@@ -319,7 +319,7 @@ Google은 [HTTPS를 긍정적인 검색 품질 지표로 사용합니다](https:
 일반적으로 애플리케이션의 전반적인 비용에 대해
 상대적으로 매우 작은 수준입니다. 또한, 이러한 비용은 절감하고
 상각할 수 있습니다. (TLS 최적화를 비롯한 유용한 정보는 Ilya Grigorik의
-[High Performance BrowserNetworking](http://chimera.labs.oreilly.com/books/1230000000545)을 참조하세요.) Ivan Ristic의 [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)과 [Bulletproof SSL 및 TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)도 참조하세요.
+[High Performance BrowserNetworking](https://hpbn.co/)을 참조하세요.) Ivan Ristic의 [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)과 [Bulletproof SSL 및 TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)도 참조하세요.
 
 경우에 따라 TLS는 성능을 _향상_ 시킬 수 있습니다. 이는 주로 HTTP/2가 실현
 가능해졌기 때문입니다. Chris Palmer는 [Chrome Dev Summit 2014에서 HTTPS 및 HTTP/2 성능](/web/shows/cds/2014/tls-all-the-things)에 관한 고찰을 발표했습니다.

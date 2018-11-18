@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Push Events {: .page-title }
@@ -178,3 +179,7 @@ Just remember - if you see that notification, check your promise chains and `eve
 
 In the next section we're going to look at what we can do to style notifications and
 what content we can display.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

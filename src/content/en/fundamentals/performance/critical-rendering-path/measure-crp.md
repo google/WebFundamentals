@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to measure the critical rendering path.
 
-{# wf_updated_on: 2014-09-17 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: Blink>PerformanceAPIs>NavigationTiming #}
 
 # Measuring the Critical Rendering Path {: .page-title }
 
@@ -103,7 +104,6 @@ measurements because it does not have a built-in mechanism for isolating
 critical resources. Run a [Lighthouse](#lighthouse) audit to help
 identify such resources.
 
-<a href="analyzing-crp" class="gc-analytics-event"
-    data-category="CRP" data-label="Next / Analyzing CRP">
-  <button>Next Up: Analyzing Critical Rendering Path Performance</button>
-</a>
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

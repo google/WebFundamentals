@@ -95,7 +95,7 @@ Android Emulator 标配 Android SDK，您需要从<a href="http://developer.andr
 
 完成后，您可以通过 [Apple 的文档](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html)学习如何使用模拟器。
 
-注：为了避免在每次想要使用 iOS 模拟器时都要打开 Xcode，请打开 Xcode，然后右键点击停靠栏中的 iOS Simulator 图标并选择 `Keep in Dock`。现在，您可以在需要时随时点击此图标。
+Note: 为了避免在每次想要使用 iOS 模拟器时都要打开 Xcode，请打开 Xcode，然后右键点击停靠栏中的 iOS Simulator 图标并选择 `Keep in Dock`。现在，您可以在需要时随时点击此图标。
 
 ### Modern.IE
 

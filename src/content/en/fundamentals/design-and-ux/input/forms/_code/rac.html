@@ -190,7 +190,7 @@
 
       function requestAutocompleteError(evt) {
         console.log("requestAutocomplete Error", evt);
-        isRACSupported(false, "An error occured attempting to autocomplete the form.");
+        isRACSupported(false, "An error occurred attempting to autocomplete the form.");
       }
       /* // [END handlerac] */
 
@@ -207,7 +207,7 @@
   var isCompleted = {};
   function sampleCompleted(sampleName){
     if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
       isCompleted[sampleName] = true;
     }
   }

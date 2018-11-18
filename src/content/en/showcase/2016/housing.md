@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2016-09-26 #}
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2017-10-11 #}
 {# wf_featured_image: /web/showcase/2016/images/housing/card.png #}
 {# wf_featured_snippet: Most Indian users reach the Internet via 2G and 3G networks, so a fast user experience is essential. To decrease load times, Housing.com added Service Workers and streamlined their site to help consumers quickly find what they’re looking for. Users can continue browsing properties and reviewing previous searches, all while offline. #}
 {# wf_tags: progressive-web-apps,offline,serviceworker,casestudy #}
@@ -36,7 +36,7 @@ across browsers. The new PWA also delivered higher-value users, with
 visitors spending 10% longer per session and returning more often.
 
 ## Challenges
-Housing.com knew their mobile users woudn’t tolerate slow load times, which
+Housing.com knew their mobile users wouldn't tolerate slow load times, which
 significantly affect conversions. They measured the impact of users’ average
 page-load time and found that even a one-second improvement brought a
 significant boost in the conversion rate.
@@ -75,8 +75,8 @@ experience is something that defines state-of-the-art applications.”
 ## Related resources
 
 * [Service Workers](/web/fundamentals/getting-started/primers/service-workers)
-* [Add to Home Screen](/web/fundamentals/engage-and-retain/app-install-banners/)
-* [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+* [Add to Home Screen](/web/fundamentals/app-install-banners)
+* [Push Notifications](/web/fundamentals/push-notifications)
 
 ### Codelabs
 

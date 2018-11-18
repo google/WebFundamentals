@@ -1,0 +1,65 @@
+<html devsite><head>
+  <title>垃圾内容发布者最常用的网站入侵方法</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="9zItsxS/fL9X/nV/RwRY/vxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKril0ujkfrC/WCkVnHV2soTDmc2ORF1Lkt+7NCiGHaIhRh2JUKRR0pmqTL220uNkfsc838Y4Gpr0QFRjk8ksx2sc="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+<p>了解您的网站遭到入侵的方式是保护网站免遭入侵的关键步骤之一。在本文中，我们将介绍一些可能会导致您的网站遭到入侵的安全漏洞。</p>
+
+    <h2>密码被盗用</h2>
+<p>攻击者会使用密码猜测技术，即通过尝试不同的密码，直到猜出正确的密码为止。攻击者可通过各种方法进行密码猜测攻击，例如尝试使用常用密码，或扫描随机组合的字母和数字，直到猜对密码为止。为了防止出现这种情况，请创建难以猜测的安全系数高的密码。要查找<a href="https://support.google.com/accounts/answer/32040" l10n-encrypted-href="PUOk06V/bRLmdopV/wSCnkkCfIu7sCbUls/iCrWrRlwtKD7X+LQoliQ3R5q6BgM3JMvPx64R34Rzm9AG5IWykA==">有关如何创建安全系数高的密码的提示</a>，请参阅 Google 帮助中心的文章。</p>
+
+<p>您需要注意两个要点。第一，务必避免针对多种服务重复使用相同的密码。一旦攻击者能够识别出一个有效的用户名和密码组合，他们便会尝试针对尽可能多的服务使用此用户名和密码组合。因此，针对不同的服务使用不同的密码可以防止用于其他服务的其他帐号被盗用。</p>
+
+<p>第二，利用双重身份验证 (2FA)，例如 <a href="https://www.google.com/landing/2step/" l10n-encrypted-href="pyyfMXvZENy75E/2vywa8JmZYYtAdDjPTefDHHQyT1nxc28SLLGdF5SejxVMBGG0">Google 两步验证</a>（如果有相应选项的话）。借助双重身份验证，您可以增加一道登录凭据安全保障，而这通常是通过短信验证码或其他动态生成的 PIN 码实现的；这样一来，攻击者使用被盗的密码访问您的帐号的能力便会削弱。有些内容管理系统提供商提供了有关如何配置双重身份验证的指南：请参阅 <a href="https://docs.joomla.org/J3.x:Two_Factor_Authentication" l10n-encrypted-href="glT/uv7x/xTfB7pJVh6/sanzoyv6n9NsKZNFKjvLxzww8ChbysK9ugRJaWk119QiorChdJArL3HyrwYjcdJreA==">Joomla!</a>、<a href="https://codex.wordpress.org/Two_Step_Authentication" l10n-encrypted-href="xa6/TlZ/be6PkfmUSgvbQDRQy6HTqvZI/qXrac1BQEkp1emfq+OONcQ7OzAz5+8BZ0lJVLgkuxbrZuca+oAOCg==">WordPress</a> 或 <a href="https://www.drupal.org/project/tfa" l10n-encrypted-href="DqO1CNU8DNKESLi7tYKuiWsZMbSsRVdCkmwmMfDONH3Gh4U25ylCwrIOz14uXUZn">Drupal</a> 文档。</p>
+
+    <h2>缺少安全更新</h2>
+<p>较旧版本的软件可能会受到高风险安全漏洞的影响，这些漏洞会导致攻击者能够入侵整个网站。攻击者会积极寻找具有漏洞的旧软件。忽略网站上存在的漏洞会提高网站遭到攻击的几率。</p>
+
+<p><b>注意</b>：定期检查适用于您网站的软件更新以使用补丁程序消除漏洞至关重要。最好尽可能为您的软件设置自动更新，并针对所有正在运行的有效软件注册安全通知邮寄名单。</p>
+
+<p>以下是您应该保持更新的一些软件示例：</p>
+<ul>
+  <li>网络服务器软件（如果您运行自己的服务器的话）</li>
+  <li>内容管理系统。示例：来自 <a href="https://wordpress.org/news/category/security/" l10n-encrypted-href="W+9PxfeRyWb/RzbKS6a0sLxh9UnE0mkXXvvktk1Dxe1RNObDS28WP/zNormWufvFqvP4zdF86Pqj1NbCoHpRoQ==">Wordpress</a>、<a href="https://www.drupal.org/security" l10n-encrypted-href="ce91eMLVR+A4rhrrOr4rbSfTTkV/xGd2qLdiFF0fAgkuIpAt8qN4rd7/Y0xv3gnm">Drupal</a> 和 <a href="https://developer.joomla.org/security-centre.html" l10n-encrypted-href="r9wGZnZ5gWTdBk9DubOim4ZndVF978w0JzgzHtbJoLMGMY2rSgOaHEHaNq9eE5zraort4qj/MEcLxlAk3CkpBw==">Joomla!</a> 的安全更新版本。</li>
+  <li>您在您网站上使用的所有插件</li>
+</ul>
+
+  <h2>不安全的主题背景和插件</h2>
+<p>内容管理系统上的插件和主题背景可以带来有价值的增强功能。不过，过期或未安装补丁程序的主题背景和插件是网站的一项主要漏洞来源。如果您在网站上使用了主题背景或插件，请务必使其保持最新版本。请移除开发者已不再维护的主题背景或插件。</p>
+
+<p>请格外警惕来自不受信任的网站的免费插件或主题背景。向付费插件或主题背景的免费版本添加恶意代码是攻击者的一种常用手段。在移除插件时，请务必从服务器中移除其所有文件，而不是仅将其停用。</p>
+
+    <h2>社交工程</h2>
+<p><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)" l10n-encrypted-href="GNl3mBL0HYVq6mbgtcZZBAOrZfK8qSBsW73e1nANJzDhdag+xA68+MwQ16jfZc75PDy3vtY3O31aYZLUJFuYjA==">社交工程</a>是指利用人性绕过复杂的安全基础架构。此类攻击会诱使经授权的用户提供密码等机密信息。例如，网上诱骗便是一种常见的社交工程形式。在试图进行网上诱骗时，攻击者会冒充合法组织发送电子邮件并索取机密信息。</p>
+
+<p><b>注意</b>：根据 <a href="https://research.google.com/pubs/pub43469.html">Google 针对社交工程展开的一项调查</a>，某些最有效的网上诱骗活动的成功率竟高达 45%！</p>
+
+<p>请注意，除非您可以确定请求者的身份，否则切勿交出任何敏感信息（例如密码、信用卡号、银行信息，甚至是出生日期）。如果您的网站是由多人共同管理的，请考虑提供相关培训以提高大家应对社交工程袭击的安全意识。要了解<a href="https://support.google.com/mail/answer/8253" l10n-encrypted-href="Qxy7djzLrQDlRvlnztgY6uGsVVamVB4dakLBAujPCV5MZGYTR6r2uoEtKSMEEuiF">基本的网上诱骗保护提示</a>，请参阅 Gmail 帮助中心。</p>
+
+    <h2>安全政策漏洞</h2>
+<p>如果您是系统管理员或运营着自己的网站，请注意，安全政策不当可能会导致攻击者能够入侵您的网站。以下是一些示例：</p>
+  <ul>
+    <li>允许用户创建安全系数低的密码</li>
+    <li>将管理员权限授予并不需要此权限的用户</li>
+    <li>不在网站上启用 HTTPS，并允许用户使用 HTTP 进行登录</li>
+    <li>允许未经身份验证的用户上传文件，或不检查所上传的文件类型</li>
+  </ul>
+
+<p>有关如何保护您网站的几个基本提示：</p>
+  <ul>
+    <li>停用不必要的服务，以确保为您的网站配置较强的安全控制措施</li>
+    <li>测试访问控制措施和用户权限</li>
+    <li>对处理敏感信息的网页（如登录页）采用加密技术</li>
+    <li>定期检查日志中是否存在任何可疑活动</li>
+  </ul>
+
+
+    <h2>数据泄露</h2>
+<p>如果在上传机密数据后，配置错误导致机密信息被公开，便可能发生数据泄露问题。例如，网络应用中的错误处理和消息传递功能便有可能在未处理的错误消息中泄露配置信息。利用<a href="https://en.wikipedia.org/wiki/Google_hacking" l10n-encrypted-href="FDZcx272AJOi7Y9OblQ6JQOrZfK8qSBsW73e1nANJzCd/pbaXyxvswzDfzJkDrry">“dorking”</a>这种方法，恶意行为者可利用搜索引擎功能来查找此类数据。</p>
+
+<p>请定期检查您的网站，并借助安全政策将机密数据限制在受信任的实体范围内，以确保网站不会向未经授权的用户透露敏感信息。如果您的确发现您的网站上显示了任何敏感信息，并急需从 Google 搜索结果中将其移除，您可以使用<a href="https://www.google.com/webmasters/tools/removals" l10n-encrypted-href="8XmwXx73jEjMr74g6qSO7wSJUyK0ahq5p2Xo+yKO2LCb6sVoHIw/dbKYlYNpC3bE6alqqczRgjG7j5E4wpj/eg==">网址移除工具</a>从 Google 搜索结果中移除单个网址。</p>
+
+
+</body></html>

@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 page_type: landing
 
-{# wf_updated_on: 2017-09-10 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: Blink>DOM #}
 
 <style>
   .wf-hot {padding-top: 0 !important;}
@@ -17,7 +18,7 @@ page_type: landing
   <p>The core foundations of a delightful web experience are...</p>
   <img src="/web/images/hero-2x.png" class="attempt-right">
   <ul>
-    <li><span class="compare-yes"></span> <b><a href="#fast">Fast</a></b> - It respond quickly to user
+    <li><span class="compare-yes"></span> <b><a href="#fast">Fast</a></b> - It responds quickly to user
       interactions with silky smooth animations and no janky scrolling.</li>
     <li><span class="compare-yes"></span> <b><a href="#integrated">Integrated</a></b> - The user doesn’t have to
       reach through the browser, it uses the full capabilities of the device
@@ -45,7 +46,7 @@ page_type: landing
             Users don’t expect janky scrolling or slow load performance. Making your
             site fast is a process that starts with understanding
             <a href="performance/rail">how RAIL affects the performance</a> of your
-            site and how use that to measure and improve your performance. 
+            site and how to use that to measure and improve your performance.
           </p>
           <ul>
             <li><span class="compare-yes"></span> <a href="performance/critical-rendering-path/">Critical Rendering Path</a></li>

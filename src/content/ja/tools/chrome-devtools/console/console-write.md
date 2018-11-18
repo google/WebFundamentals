@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: コンソールログは、ページやアプリケーションの動作を調査するための効果的な方法です。まずは console.log() から始め、その他の高度な使用方法を確認しましょう。
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2015-04-13 #}
 
 #  診断とコンソールへのログ出力 {: .page-title }
@@ -202,7 +202,7 @@ CSS フォーマット指定子を使用すると、コンソールの表示を�
 
 ### JavaScript オブジェクトとしての DOM 要素のフォーマット
 
-デフォルトでは、DOM 要素は HTML の表現としてコンソールに出力されますが、JavaScript オブジェクトとして DOM 要素にアクセスし、そのプロパティを調査することもできます。そのためには、`%o` 文字列指定子を使用します（上記を参照）。また、`console.dir` を使用しても同じ結果が得られます。 
+デフォルトでは、DOM 要素は HTML の表現としてコンソールに出力されますが、JavaScript オブジェクトとして DOM 要素にアクセスし、そのプロパティを調査することもできます。そのためには、`%O` 文字列指定子を使用します（上記を参照）。また、`console.dir` を使用しても同じ結果が得られます。 
 
 ![dir() を使用した要素のログ出力](images/dir-element.png)
 

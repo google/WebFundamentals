@@ -5,6 +5,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget d
 {# wf_published_on: 2017-01-25 #}
 {# wf_updated_on: 2017-02-09 #}
 {# wf_featured_image: /web/updates/this/file/does/not/exist.png #}
+{# wf_blink_components: n/a #}
 
 # This Is The Page Title {: .page-title }
 

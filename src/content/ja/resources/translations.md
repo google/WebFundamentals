@@ -70,4 +70,4 @@ description: Web Fundamentals を日本語化したい人は、誰でも Contrib
 
 ## コミュニティ
 Web Fundamentals の翻訳作業について何かわからないことがあれば、Slack の [chromiumdev.slack.com](https://chromiumdev.slack.com/) にある #l10n チャネルで質問してください。  
-（ [https://chromiumdev-slack.herokuapp.com/](https://chromiumdev-slack.herokuapp.com/) から参加できます）  
+（ [こちら](https://join.slack.com/t/chromiumdev/shared_invite/enQtMzM3NjYwNjI0MDM4LTk2NjEyYTIxODk1MDYxMmNjNWYzMGMxZGVhMDNhY2I1ZjBhMjdlYTg0MTg4ZGE0OTQ0ZmYwNTRiMGJlYzVjOTE) から参加できます）  

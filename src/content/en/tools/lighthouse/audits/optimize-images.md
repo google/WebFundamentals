@@ -2,18 +2,19 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Optimize Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-06-20 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-20 #}
+{# wf_blink_components: N/A #}
 
 # Optimize Images  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Optimized images load faster and consume less cellular data.
 
 Note: This audit only tests JPEG images.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 Click **View details** to see each JPEG image that can be optimized.
 To pass the audit, set the compression level of each image to 85 or lower.
@@ -25,7 +26,7 @@ See [Image Optimization][IO] to learn more about the topic in general.
 Web services like [TinyJPG](https://tinyjpg.com/) can help automate the
 process of image optimization.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse collects each JPEG image on the page, sets each image's compression
 level to 85, and then compares the original version with the compressed
@@ -38,37 +39,4 @@ image in its report.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Optimize Images / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

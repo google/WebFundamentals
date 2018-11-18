@@ -1,0 +1,58 @@
+<h2>Deprecation policy</h2>
+
+<p>
+  To keep the platform healthy, we sometimes remove APIs from the Web Platform
+  which have run their course. There can be many reasons why we would remove an
+  API, such as:
+</p>
+
+<ul>
+  <li>
+    They are superseded by newer APIs.
+  </li>
+  <li>
+    They are updated to reflect changes to specifications to bring alignment
+    and consistency with other browsers.
+  </li>
+  <li>
+    They are early experiments that never came to fruition in other browsers
+    and thus can increase the burden of support for web developers.
+  </li>
+</ul>
+
+<p>
+  Some of these changes will have an effect on a very small number of sites. To
+  mitigate issues ahead of time, we try to give developers advanced notice so
+  they can make the required changes to keep their sites running.
+</p>
+
+<p>
+  Chrome currently has a
+  <a href="http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation">
+  process for deprecations and removals of API's</a>, essentially:
+</p>
+
+<ul>
+  <li>
+    Announce on the
+    <a href="https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev">
+      blink-dev
+    </a> mailing list.
+  </li>
+  <li>
+    Set warnings and give time scales in the Chrome DevTools Console when usage
+    is detected on the page.
+  </li>
+  <li>
+    Wait, monitor, and then remove the feature as usage drops.
+  </li>
+</ul>
+
+<p>
+  You can find a list of all deprecated features on chromestatus.com using the
+  <a href="https://www.chromestatus.com/features#deprecated">
+  deprecated filter </a> and removed features by applying the
+  <a href="https://www.chromestatus.com/features#removed">removed filter</a>.
+  We will also try to summarize some of the changes, reasoning, and migration
+  paths in these posts.
+</p>

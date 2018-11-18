@@ -41,7 +41,7 @@ Chrome 和 Opera 均使用 `icon.png`，图标将被缩放到设备所需的大�
 
 
 
-注：图标大小应基于 48px，例如 48px、96px、144px 和 192px
+Note: 图标大小应基于 48px，例如 48px、96px、144px 和 192px
 
 ### Safari
 

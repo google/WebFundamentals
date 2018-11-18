@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Namespace: strategies</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small><a href="workbox.html">workbox</a>.<wbr></small><span class="symbol-name">strategies</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0-alpha.3</small></span>
+            </div>
+            <p>There are common caching strategies that most service workers will need and use. This module provides simple implementations of these strategies.</p>
+          </header>
+          <section>
+            <h2>Classes</h2>
+            <section id='members-links'>
+              <h3 class="class-list"><a href="workbox.strategies.CacheFirst.html">CacheFirst</a></h3>
+              <p>An implementation of a <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network">cache-first</a> request strategy.</p>
+              <p>A cache first strategy is useful for assets that have beeng revisioned, such as URLs like <code>/styles/example.a8f5f1.css</code>, since they can be cached for long periods of time.</p>
+              <h3 class="class-list"><a href="workbox.strategies.CacheOnly.html">CacheOnly</a></h3>
+              <p>An implementation of a
+                <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only">cache-only</a> request strategy.</p>
+              <p>This class is useful if you want to take advantage of any <a href="https://docs.google.com/document/d/1Qye_GDVNF1lzGmhBaUvbgwfBWRQDdPgwUAgsbs8jhsk/edit?usp=sharing">Workbox plugins</a>.</p>
+              <h3 class="class-list"><a href="workbox.strategies.NetworkFirst.html">NetworkFirst</a></h3>
+              <p>An implementation of a
+                <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache">network first</a> request strategy.</p>
+              <p>By default, this strategy will cache responses with a 200 status code as well as <a href="/web/tools/workbox/guides/handle-third-party-requests">opaque responses</a>. Opaque responses are are cross-origin requests
+                where the response doesn't support <a href="https://enable-cors.org/">CORS</a>.</p>
+              <h3 class="class-list"><a href="workbox.strategies.NetworkOnly.html">NetworkOnly</a></h3>
+              <p>An implementation of a
+                <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#network-only">network-only</a> request strategy.</p>
+              <p>This class is useful if you want to take advantage of any <a href="https://docs.google.com/document/d/1Qye_GDVNF1lzGmhBaUvbgwfBWRQDdPgwUAgsbs8jhsk/edit?usp=sharing">Workbox plugins</a>.</p>
+              <h3 class="class-list"><a href="workbox.strategies.StaleWhileRevalidate.html">StaleWhileRevalidate</a></h3>
+              <p>An implementation of a
+                <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate">stale-while-revalidate</a> request strategy.</p>
+              <p>Resources are requested from both the cache and the network in parallel. The strategy will respond with the cached version if available, otherwise wait for the network response. The cache is updated with the network response with each successful
+                request.</p>
+              <p>By default, this strategy will cache responses with a 200 status code as well as <a href="/web/tools/workbox/guides/handle-third-party-requests">opaque responses</a>. Opaque responses are are cross-origin requests
+                where the response doesn't support <a href="https://enable-cors.org/">CORS</a>.</p>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id=".cacheFirst" class="symbol-name">cacheFirst</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> cacheFirst(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">StrategyOptions</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".cacheOnly" class="symbol-name">cacheOnly</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> cacheOnly(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">StrategyOptions</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".networkFirst" class="symbol-name">networkFirst</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> networkFirst(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">StrategyOptions</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".networkOnly" class="symbol-name">networkOnly</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> networkOnly(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">StrategyOptions</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".staleWhileRevalidate" class="symbol-name">staleWhileRevalidate</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> staleWhileRevalidate(options)</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">StrategyOptions</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+            <h2>Abstract type</h2>
+            <section>
+              <h3 id=".StrategyOptions" class="symbol-name">StrategyOptions</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature">Object</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>cacheName</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>Name of cache to use for caching (both lookup and updating).</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>cacheExpiration</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Defining this object will add a cache expiration plugins to this strategy.</p>
+                        <p>Values in <code>cacheExpiration</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>maxEntries</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Number</p>
+                                <p>The maximum number of entries to store in a cache.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>maxAgeSeconds</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Number</p>
+                                <p>The maximum lifetime of a request to stay in the cache before it's removed.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

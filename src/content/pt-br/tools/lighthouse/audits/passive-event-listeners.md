@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse “Site usa detectores de evento passivos para melhorar o desempenho de rolagem”.
 
-{# wf_updated_on: 2016-11-30 #}
+{# wf_updated_on: 2017-12-19 #}
 {# wf_published_on: 2016-11-30 #}
+{# wf_blink_components: N/A #}
 
 # Site usa detectores de evento passivos para melhorar o desempenho de rolagem {: .page-title }
 
@@ -18,7 +19,7 @@ obter uma visão geral.
 Consulte o [Explainer][explainer] na especificação do detector de evento
 para obter detalhes técnicos.
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## Como ser aprovado na auditoria {: #how }

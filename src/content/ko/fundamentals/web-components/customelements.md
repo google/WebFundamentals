@@ -97,7 +97,7 @@ description: 사용자설정 요소를 사용하면 웹 개발자가 새로운 H
     
       // Can define constructor arguments if you wish.
       constructor() {
-        // If you define a ctor, always call super() first!
+        // If you define a constructor, always call super() first!
         // This is specific to CE and required by the spec.
         super();
     
@@ -145,7 +145,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
 
     class FancyDrawer extends AppDrawer {
       constructor() {
-        super(); // always call super() first in the ctor. This also calls the extended class' ctor.
+        super(); // always call super() first in the constructor. This also calls the extended class' constructor.
         ...
       }
     
@@ -184,7 +184,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
     // for the list of other DOM interfaces.
     class FancyButton extends HTMLButtonElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         this.addEventListener('click', e => this.drawRipple(e.offsetX, e.offsetY));
       }
     
@@ -259,12 +259,12 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
 
 
     const BiggerImage = customElements.get('bigger-img');
-    const image = new BiggerImage(15, 20); // pass ctor values like so.
+    const image = new BiggerImage(15, 20); // pass constructor values like so.
     console.assert(image.width === 150);
     console.assert(image.height === 200);
     
 
-참고: 일부 브라우저는  <code>is=""</code> 구문 구현을 지원하지 않습니다. 이는 접근성 및 점진적인 개선에 있어서는 불행한 일입니다. 기본 HTML 요소를 확장하는 것이 유용하다고 생각되면 여러분의 생각을 <a href='https://github.com/w3c/webcomponents/issues/509'>Github</a>에 올려 주세요.
+참고: 일부 브라우저는  <code>is=""</code> 구문 구현을 지원하지 않습니다. 이는 접근성 및 점진적인 개선에 있어서는 불행한 일입니다. 기본 HTML 요소를 확장하는 것이 유용하다고 생각되면 여러분의 생각을 <a href='https://github.com/w3c/webcomponents/issues/662'>Github</a>에 올려 주세요.
 
 ## 사용자설정 요소 반응 {: #reactions}
 
@@ -317,7 +317,7 @@ Custom Elements API는 새로운 HTML 요소를 생성하는 데 유용하지만
 
     class AppDrawer extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
         ...
       }
       connectedCallback() {
@@ -592,7 +592,7 @@ DOM 집합을 소유하고, 렌더링하고, 이에 대한 스타일을 지정�
 
     customElements.define('x-foo-shadowdom', class extends HTMLElement {
       constructor() {
-        super(); // always call super() first in the ctor.
+        super(); // always call super() first in the constructor.
 
         // Attach a shadow root to the element.
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -642,7 +642,7 @@ const supportsCustomElementsV1 = 'customElements' in window;
 if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     constructor() {
-      super(); // always call super() first in the ctor.
+      super(); // always call super() first in the constructor.
       let shadowRoot = this.attachShadow({mode: 'open'});
       shadowRoot.innerHTML = `
         <b>I'm in shadow dom!</b>
@@ -674,7 +674,7 @@ if (supportsCustomElementsV1) {
     <script>
       customElements.define('x-foo-from-template', class extends HTMLElement {
         constructor() {
-          super(); // always call super() first in the ctor.
+          super(); // always call super() first in the constructor.
           let shadowRoot = this.attachShadow({mode: 'open'});
           const t = document.querySelector('#x-foo-from-template');
           const instance = t.content.cloneNode(true);

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: El registro por consola es un poderoso método para inspeccionar el comportamiento de tu página o app. Empecemos por console.log() y exploremos otros usos avanzados.
 
-{# wf_updated_on: 2015-05-11 #}
+{# wf_updated_on: 2018-04-06 #}
 {# wf_published_on: 2015-04-13 #}
 
 # Diagnosticar y registrar por consola {: .page-title }
@@ -203,7 +203,7 @@ La salida del registro se verá con tamaño grande y en azul:
 
 ### Dar a elementos DOM formato de objetos JavaScript
 
-De forma predeterminada, los elementos DOM se registran en la consola como representaciones de sus HTML, pero a veces te convendrá acceder al elemento DOM como un objeto JavaScript e inspeccionar sus propiedades. Para hacer esto, puedes usar el especificador de string `%o` (ver arriba) o `console.dir`: 
+De forma predeterminada, los elementos DOM se registran en la consola como representaciones de sus HTML, pero a veces te convendrá acceder al elemento DOM como un objeto JavaScript e inspeccionar sus propiedades. Para hacer esto, puedes usar el especificador de string `%O` (ver arriba) o `console.dir`: 
 
 ![Registrar un elemento con dir()](images/dir-element.png)
 

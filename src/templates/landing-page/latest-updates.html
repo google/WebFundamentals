@@ -1,0 +1,10 @@
+<!-- DevSite required this level of indentation, do NOT change -->
+          <!-- wf_template: src/templates/landing-page/latest-updates.html -->
+          <div class="wf-updates">
+            {{#each articles}}
+            <div class="wf-updates-item">
+              <h5><a href="{{url}}" class="gc-analytics-event" data-category="webFu" data-label="updates-article" data-action="web-home">{{title}}</a></h5>
+              <p>{{{description}}}</p>
+            </div>
+            {{/each}}
+          </div>

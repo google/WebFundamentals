@@ -1,0 +1,200 @@
+<html devsite><head>
+  <title>Uw site schoonmaken en bijhouden</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Wat u nodig heeft:</h3>
+
+<ul>
+  <li>Beheerderstoegang via shell/terminal tot de servers van uw site: internet, database, bestanden</li>
+  <li>Kennis van shell/terminal-opdrachten</li>
+  <li>Inzicht in code (zoals PHP of JavaScript)</li>
+  <li>Opslagruimte om back-ups van uw site te maken (inclusief de bestanden, database, afbeeldingen, enzovoort)</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Volgende acties:</h3>
+
+<p>In deze stap behandelen we verschillende acties: </p>
+
+<ul>
+  <li>Waar u extra bronnen kunt vinden als u vermoedt dat de hacker uit was op de persoonlijke gegevens van gebruikers (net als bij phishing-pagina's)</li>
+  <li>De optie om <a href="https://www.google.com/webmasters/tools/removals">URL's verwijderen</a> in Search Console te gebruiken om ervoor te zorgen dat geheel nieuwe, ongewenste en voor gebruikers zichtbare URL's van de hacker waarvan u niet wilt dat deze worden weergegeven in zoekresultaten van Google, sneller worden verwijderd</li>
+  <li>De optie om <a href="https://www.support.google.com/webmasters/answer/1352276">Fetchen als Google</a> in Search Console te gebruiken om ervoor te zorgen dat schone pagina's (pagina's die nieuw zijn of onlangs zijn geüpdatet) die u wilt weergeven in zoekresultaten van Google, sneller worden verwerkt door Google</li>
+  <li>Installatie van de nieuwste, veiligste softwareversie</li>
+  <li>Verwijdering van onnodige of ongebruikte apps of plug-ins die uw site in de toekomst kwetsbaarder kunnen maken</li>
+  <li>Herstellen van valide content en elimineren van de content van de hacker</li>
+  <li>Repareren van het onderliggende beveiligingsprobleem waarvan de hacker misbruik heeft gemaakt</li>
+  <li>Wijzigen van alle wachtwoorden</li>
+  <li>Plannen maken om uw site veilig te houden</li>
+</ul>
+
+<h4>1. Ondersteuningsbronnen vinden voor de omgang met het verlies van vertrouwelijke gegevens, zoals bij phishing-pagina's</h4>
+
+<p>Als er vertrouwelijke gebruikersgegevens zijn verkregen via uw site (bijvoorbeeld vanwege een phishing-aanval), moet u rekening houden met zakelijke verplichtingen en wet- en regelgeving voordat u begint met het schoonmaken van uw site of het verwijderen van bestanden. Op <a href="https://antiphishing.org">antiphishing.org</a> vindt u nuttige bronnen, zoals het document <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">Wat te doen wanneer uw site is gehackt door phishing</a>.</p>
+
+<h4>2. De verwijdering van door de hacker gemaakte URL's bespoedigen</h4>
+
+<p>Als de hacker geheel nieuwe, voor gebruikers zichtbare URL's heeft gemaakt, kunt u deze sneller laten verwijderen uit zoekresultaten van Google met de functie <a href="https://www.google.com/webmasters/tools/removals">URL's verwijderen</a> in Search Console. Deze stap is geheel optioneel. Als u de pagina's gewoon verwijdert en uw server zo configureert dat een <a href="https://www.support.google.com/webmasters/answer/40132">Statuscode 404</a> wordt weergegeven, verdwijnen de pagina's na verloop van tijd vanzelf uit de index van Google.</p>
+
+<ul>
+  <li>Het besluit om 'URL's verwijderen' te gebruiken, hangt waarschijnlijk af van het aantal nieuwe ongewenste pagina's en de mogelijke schade die gebruikers als gevolg van deze pagina's kunnen lijden. Het kan omslachtig zijn om een groot aantal pagina's op deze manier te verwijderen. Als u wilt voorkomen dat de pagina's die u met 'URL's verwijderen' heeft ingediend, ooit nog verschijnen in zoekresultaten, moet u deze pagina's ook zo configureren dat voor de ongewenste/verwijderde URL's het antwoord '404 Bestand niet gevonden' wordt weergegeven.</li>
+  <li>Gebruik deze tool niet voor het verwijderen van voorheen goede pagina's die zijn geïnfecteerd door de hacker. U wilt dat deze pagina's na herstel weer zichtbaar zijn in zoekresultaten.
+    <em>URL's verwijderen is alleen bedoeld voor pagina's die u niet meer terug wilt zien in zoekresultaten.</em></li>
+</ul>
+
+<h4>3. Bespoedigen van de verwerking van schone pagina's door Google</h4>
+
+<p>Als u nieuwe of geüpdatete schone pagina's heeft, kunt u de functie <a href="https://www.support.google.com/webmasters/answer/1352276">Fetchen als Google</a> in Search Console gebruiken om deze pagina's naar de index van Google te verzenden. Dit is geheel optioneel. Als u deze stap overslaat, worden uw nieuwe of aangepaste pagina's na verloop van tijd waarschijnlijk gecrawld en verwerkt.</p>
+
+<h4>4. Uw server(s) schoonmaken</h4>
+
+<p>Nu kunt u beginnen met het schoonmaken van uw site op basis van de notities die u heeft gemaakt tijdens de stappen <a href="hacked_with_spam">De schade beoordelen</a> en <a href="vulnerability">Het beveiligingsprobleem identificeren</a>. De volgende actie die u in deze stap onderneemt, is afhankelijk van het type back-up waarover u beschikt.</p>
+
+<ul>
+  <li>Schone en actuele back-up</li>
+  <li>Schone maar verouderde back-up</li>
+  <li>Geen beschikbare back-up   </li>
+</ul>
+
+<p>Controleer eerst of deze back-up is gemaakt <strong>voordat</strong> uw site werd gehackt.</p>
+
+<ul>
+  <li><strong>Schone en actuele back-up</strong>
+
+    <ol>
+      <li>Zet uw back-up terug.</li>
+      <li>Installeer alle beschikbare software-upgrades, -updates of -patches. Dit omvat software voor het besturingssysteem als u de server beheert en alle apps, zoals contentmanagementsysteem, e-commerceplatform, plug-ins, sjablonen, enzovoort.</li>
+      <li>Ga na of u software op uw server kunt verwijderen die niet meer nodig is voor de site (bijvoorbeeld widgets, plug-ins of apps).</li>
+      <li>Verhelp het beveiligingsprobleem.</li>
+      <li>Los alle problemen op die u in <a href="hacked_with_spam">De schade beoordelen</a> heeft gevonden.</li>
+      <li>Wijzig de wachtwoorden nog een keer voor alle aan de site gerelateerde accounts (bijvoorbeeld inloggegevens voor FTP-toegang, voor toegang tot databases, van systeembeheerders en van CMS-accounts). Op systemen met Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Schone maar verouderde back-up</strong>
+    <ol>
+      <li>Maak een schijf-image van uw huidige website, ook als deze nog steeds is geïnfecteerd. Dit exemplaar is voor de zekerheid. Markeer de kopie als geïnfecteerd om deze te onderscheiden van de andere exemplaren. Op een systeem met Unix maakt u als volgt een schijf-image:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Maak een back-up van het bestandssysteem van uw server, inclusief afbeeldingen en mediabestanden. Als u een database heeft, maakt u ook daarvan een back-up.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Zet de schone maar verouderde back-up terug op uw server.</li>
+      <li>Ga na of u software op uw server kunt verwijderen die niet meer nodig is voor de site (bijvoorbeeld widgets, plug-ins of apps).</li>
+      <li>Upgrade alle software, inclusief het besturingssysteem als u de server beheert en alle apps, zoals contentmanagementsysteem, e-commerceplatform, plug-ins, sjablonen, enzovoort. Zorg ervoor dat alle beschikbare beveiligingsupdates en -patches zijn geïnstalleerd.</li>
+      <li>Verhelp het beveiligingsprobleem.</li>
+      <li>Voer handmatig of geautomatiseerd een <code>diff</code> voor de site uit tussen de schone back-up en de huidige, geïnfecteerde kopie.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Upload alle nieuwe, schone content die u van de geïnfecteerde kopie wilt behouden, naar de geüpgradede server.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Controleer of u elke URL heeft gecorrigeerd die u in <a href="hacked_with_spam">De schade beoordelen</a> heeft genoteerd.</li>
+      <li>Wijzig de wachtwoorden nog een keer voor alle aan de site gerelateerde accounts (bijvoorbeeld inloggegevens voor FTP-toegang, voor toegang tot databases, van systeembeheerders en van CMS-accounts). Op systemen met Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Geen beschikbare back-up</strong>
+    <ol>
+      <li>Maak twee back-ups van uw site, ook als deze nog steeds is geïnfecteerd. Een extra back-up is handig voor het herstellen van per ongeluk verwijderde content of voor het ongedaan maken van vergissingen. Markeer beide back-ups als 'geïnfecteerd' zodat u ze kunt herkennen.
+        <ul>
+          <li>Een van de back-ups fungeert als schijf-image of kloon van uw site. Deze indeling maakt het herstellen van de content nog eenvoudiger. U kunt de schijf-image bewaren voor noodgevallen. Op een systeem met Unix maakt u als volgt een schijf-image:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>De andere back-up dient als kopie van het bestandssysteem van uw server, inclusief afbeeldingen en mediabestanden. Maak indien van toepassing ook een back-up van uw database.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Als u geen schijf-image heeft, maakt u twee back-ups van de database en twee back-ups van het bestandssysteem.</li>
+        </ul>
+      </li>
+      <li>Maak de content van de site in de nieuwe back-up van het bestandssysteem schoon (niet de server zelf).
+        <ol>
+          <li>Als u in uw eerdere onderzoek te soepele toegangsrechten voor bestanden heeft gevonden, kunt u deze nu corrigeren. Doe dit in de back-up, niet op de server zelf.</li>
+          <li>Maak in de back-up alle bestanden schoon die horen bij de gehackte URL's die u in <a href="hacked_with_spam">De schade beoordelen</a> heeft gevonden. Dit kunnen configuratiebestanden van de server, JavaScript, HTML of PHP zijn.</li>
+          <li>Verwijder ook (op basis van een 404-melding) nieuwe bestanden van de hacker (die u al dan niet heeft ingediend met de tool 'URL's verwijderen' in Search Console).</li>
+          <li>Verhelp het beveiligingsprobleem als dit zich in uw code of gekraakte wachtwoorden bevindt. Bibliotheken met invoervalidaties of veiligheidscontroles kunnen nuttig zijn.</li>
+          <li>Als uw site een database heeft, begint u met het schoonmaken van door de hacker gewijzigde records in uw back-up.
+            Als u alle records heeft gehad, voert u een laatste controle uit voor de resterende records om er zeker van te zijn dat alles er schoon uitziet.</li>
+          <li>Wijzig de wachtwoorden nog een keer voor alle aan de site gerelateerde accounts (bijvoorbeeld inloggegevens voor FTP-toegang, voor toegang tot databases, van systeembeheerders en van CMS-accounts). Op systemen met Unix:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>Op dit punt moet de back-up van uw site die eerst geïnfecteerd was, alleen nog schone gegevens bevatten. Houd dit schone exemplaar bij de hand en ga door naar actie 5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Overbodige software verwijderen</h4>
+
+<p>Ga na of u software op uw server kunt verwijderen die niet meer nodig is voor de site (bijvoorbeeld widgets, plug-ins of apps). Dit kan de veiligheid verhogen en verder onderhoud vereenvoudigen.</p>
+
+<h4>6. Alle servers schoonmaken</h4>
+
+<ol>
+  <li>Voer niet alleen een upgrade uit, maar verwijder ook de software en installeer deze opnieuw. Upgrades kunnen bestanden van een vorige versie onberoerd laten. Als een geïnfecteerd bestand op de server achterblijft, is de kans groter dat de server opnieuw gehackt wordt.
+    <ul>
+      <li>Het opnieuw installeren geldt voor het besturingssysteem als u de server beheert en voor alle apps, zoals contentmanagementsysteem, e-commerceplatform, plug-ins, sjablonen, enzovoort. Zorg ervoor dat alle beschikbare beveiligingsupdates en -patches zijn geïnstalleerd.</li>
+    </ul>
+  </li>
+  <li>Zet goede content uit de schone back-up van het bestandssysteem over naar de opnieuw geïnstalleerde server(s).
+    Upload/herstel alleen bestanden/databases als u zeker weet dat deze schoon zijn. Zorg ervoor dat u de juiste toegangsrechten behoudt en de opnieuw geïnstalleerde systeembestanden niet overschrijft.</li>
+  <li>Wijzig de wachtwoorden nog een laatste keer voor alle aan de site gerelateerde accounts (bijvoorbeeld inloggegevens voor FTP-toegang, voor toegang tot databases, van systeembeheerders en van CMS-accounts). Op systemen met Unix:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Een onderhoudsplan voor de lange termijn maken</h4>
+
+<p>U kunt op internet veel nuttige bronnen vinden voor goed onderhoud van uw site, zoals <a href="https://www.stopbadware.org/prevent-badware-basics">Badware voorkomen: de basisbeginselen</a> van StopBadware. We raden u ook sterk aan het volgende te doen:</p>
+
+<ul>
+  <li>Maak regelmatige, geautomatiseerde back-ups van uw site.</li>
+  <li>Zorg ervoor dat u uw software up-to-date houdt.</li>
+  <li>Zorg dat u weet hoe u alle apps, plug-ins, externe software, enzovoort, beveiligt voordat u deze op uw server installeert. Een beveiligingsprobleem in één app kan invloed hebben op de veiligheid van uw gehele site.</li>
+  <li>Zorg ervoor dat u sterke wachtwoorden gebruikt.</li>
+  <li>Beveilig alle apparaten die u gebruikt om in te loggen (houd besturingssysteem en browser up-to-date).</li>
+</ul>
+
+<h4>8. Laatste controle of u het schoonmaken volledig heeft afgerond</h4>
+
+<p>Zorg dat u de volgende vragen positief kunt beantwoorden:</p>
+
+<ul>
+  <li>Heb ik de juiste stappen ondernomen als de hacker zich persoonlijke informatie van gebruikers heeft toegeëigend? </li>
+  <li>Beschikt mijn site over de nieuwste, veiligste softwareversie? </li>
+  <li>Heb ik alle onnodige of ongebruikte apps of plug-ins verwijderd die mijn site in de toekomst kwetsbaarder kunnen maken? </li>
+  <li>Heb ik mijn content hersteld en de content van de hacker verwijderd? </li>
+  <li>Heb ik het primaire beveiligingsprobleem opgelost waardoor mijn site kon worden gehackt? </li>
+  <li>Heb ik een plan om mijn site veilig te houden?</li>
+</ul>
+
+<h4>9. Zet uw site weer online</h4>
+<h2>Volgende stap</h2>
+<p>U bent bijna klaar. De laatste stap in het proces is <a href="request_review">Een beoordeling aanvragen</a>.</p>
+
+</body></html>

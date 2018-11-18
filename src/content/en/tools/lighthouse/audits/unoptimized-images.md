@@ -2,19 +2,20 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Unoptimized Images" Lighthouse audit.
 
-{# wf_updated_on: 2017-04-20 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-04-20 #}
+{# wf_blink_components: N/A #}
 
 # Unoptimized Images  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Optimized images take less time to download, resulting in faster page
 loads. Page load time is one of the most important metrics for how users
 perceive the performance of your site. See [Load: Deliver content under
 1000ms](/web/fundamentals/performance/rail#load) to learn more.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 There are two types of images: vector and raster. See [Vector vs. raster
 images][overview] for an overview.
@@ -41,7 +42,7 @@ tuning][tools] for some examples of optimization tools.
 
 [tools]: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization#tools_and_parameter_tuning
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 Lighthouse optimizes each image it finds on the page, and then compares
 the version used on the page against its own optimized version. The audit
@@ -52,4 +53,6 @@ fails when one of the following conditions is met:
 * An image could be at least 100KB smaller if it is encoded in WebP.
 * The savings of encoding all images in WebP is greater than 1MB.
 
-{% include "web/tools/lighthouse/audits/_feedback/unoptimized-images.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

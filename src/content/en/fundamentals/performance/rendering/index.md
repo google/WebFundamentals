@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Paint #}
 
 # Rendering Performance {: .page-title }
 
@@ -107,3 +108,7 @@ Let’s take a dive into the different parts of the pipeline. We’ll take a loo
 at the common issues, as well how to diagnose and fix them.
 
 {% include "web/_shared/udacity/ud860.html" %}
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>隔離您的網站</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>您需要：</h3>
+<ul>
+  <li>能阻止網路伺服器提供網頁 (您也可以和主機服務供應商討論其他選項的可行性)。請注意，在後面的步驟中，您將需要讓網站暫時重新上線。</li>
+  <li>帳戶管理權限 (能查看所有使用者、刪除使用者，以及變更所有與帳戶相關的密碼)。</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>下一步行動：</h3>
+<ol>
+  <li><strong>讓您的網站下線</strong>，不再為使用者提供內容。具體而言，您可以關閉網路伺服器，或是將網站的 DNS 項目指向另一個伺服器 (使用 503 HTTP 回應碼) 上的靜態網頁。
+<p>將遭入侵的網站完全下線，可讓您在執行管理工作時，比較不會受到駭客干擾，同時避免訪客暴露在惡意程式碼或垃圾檔案的威脅下。請放心，在修復期間讓網站間歇/暫時下線，並不會影響日後網站在搜尋結果中的排名。</p>
+      <ul>
+        <li>如果您不知道該如何將網站下線，與主機服務供應商聯絡將有所幫助。主機服務供應商可以「從遭感染的目錄之外」為您的網站設定 503 回應 (建議選項)<em></em>。您可以向主機服務供應商傳達，您需要切換網站的上下線狀態以進行測試，請他們告訴您如何以最自助的方式讓網站下線。
+        </li><li>只是讓網站傳回 4xx 或 5xx <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP 狀態碼</a>，並不能為使用者的安全提供足夠的保護。有害內容仍可能和 404、503 狀態碼一起回傳給使用者。雖然傳回 503 狀態碼能指出網站暫時無法提供服務，但是遭入侵的伺服器/網站之外仍會產生回應。<em></em>
+        </li>
+        <li>使用 <a href="/search/reference/robots_txt">robots.txt disallow</a> 只會封鎖搜尋引擎檢索器，也不足以保護使用者。一般使用者仍可能接觸到有害內容。</li>
+      </ul>
+  </li>
+  <li>如果您還沒有這樣做，請<strong>將這個情形告知您的主機服務供應商</strong>。要是您的主機服務供應商也遭到了入侵，這或許能協助他們瞭解問題涉及的範圍。</li>
+  <li><strong>對使用者帳戶執行全面管理</strong>。
+    <ul>
+      <li>查看網站的使用者帳戶清單，檢查駭客是否有建立新的使用者帳戶。如有非法建立的帳戶，請記下這些多出來的帳戶名稱以供日後調查。隨後，請刪除這些帳戶，避免駭客繼續以此登入。</li>
+      <li>變更網站上所有使用者和帳戶的密碼，包括用來登入 FTP、存取資料庫、系統管理員及內容管理系統 (CMS) 帳戶的密碼。</li>
+    </ul>
+  </li>
+</ol>
+ <h2>後續步驟</h2>
+<p>本程序的下一個步驟是<a href="use_search_console">使用 Search Console</a>。</p>
+
+</body></html>

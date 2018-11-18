@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-02-02T18:00:00.000Z #}
-{# wf_updated_on: 2017-02-02T18:00:00.000Z #}
+{# wf_published_on: 2017-02-02 #}
+{# wf_updated_on: 2017-02-02 #}
 {# wf_featured_image: /web/showcase/2017/images/within/featured.jpg #}
 {# wf_featured_snippet: Within is a platform for storytelling in virtual reality and is available everywhere VR is. This includes the web. Leveraging WebVR, viewers are able to go to a website, click a link, and immediately watch Within’s films in immersive VR - including high end head-mounted displays. During the development process the team discovered rendering text is difficult in this new environment, and they created an example using shaders to make it a smoother process. #}
 {# wf_tags: webvr,casestudy #}

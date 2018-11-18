@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Uso de estilo adecuado para mejorar la accesibilidad
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Estilos accesibles {: .page-title }
@@ -227,11 +227,9 @@ que es alrededor del tamaño del área de la yema del dedo.
 
 ![un diagrama que muestra un par de objetivos táctiles de 48 píxeles](imgs/touch-target.jpg)
 
-Los objetivos táctiles también deberían tener un espacio de alrededor de 32 píxeles
+Los objetivos táctiles también deberían tener un espacio de alrededor de 8 píxeles
 de separación, en orientación horizontal y vertical, de manera que el dedo del usuario, al presionar un
 objetivo de presión, no toque inintencionalmente otro objetivo de presión.
-
-![un diagrama que muestra 32 píxeles de espacio alrededor de un objetivo táctil](imgs/touch-target2.jpg)
 
 ## Color y contraste
 

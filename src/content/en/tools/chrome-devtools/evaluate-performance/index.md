@@ -2,14 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-04-06 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 # Get Started With Analyzing Runtime Performance {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+Note: See [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started) to learn how
+make your pages load faster.
 
 Runtime performance is how your page performs when it is running, as opposed to
 loading. This tutorial teaches you how to use the Chrome DevTools Performance
@@ -455,3 +459,7 @@ tips for improving various aspects of runtime performance, such as:
 [Paint]: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
 [Layer]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 [Debounce]: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

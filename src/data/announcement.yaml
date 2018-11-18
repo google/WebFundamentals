@@ -1,0 +1,20 @@
+enabled: true
+description: >
+    <style>
+      .devsite-banner-announcement {
+        background-color: #e8f0fe;
+        color: #424242;
+        font-weight: 500;
+      }
+      .devsite-banner-announcement :link,
+      .devsite-banner-announcement :visited {
+        background: #e8f0fe;
+        color: #039BE5;
+      }
+      .devsite-banner-announcement span.material-icons {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    </style>
+    <b>Chrome Dev Summit 2018</b> is happening now and streaming live on YouTube.
+    <a href="https://developer.chrome.com/devsummit/" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Watch now</a>.

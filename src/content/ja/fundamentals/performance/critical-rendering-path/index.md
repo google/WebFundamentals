@@ -5,7 +5,7 @@ description: クリティカル レンダリング パスの最適化は、現�
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-#  クリティカル レンダリング パス {: .page-title }
+# クリティカル レンダリング パス {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 

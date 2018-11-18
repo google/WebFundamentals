@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2014-12-09 #}
 
 # La guía sin conexión {: .page-title }
@@ -242,7 +242,7 @@ Es muy parecido a
 
 <img src="images/cm-on-push.png">
 
-La [Push API](/web/fundamentals/engage-and-retain/push-notifications/)
+La [Push API](/web/fundamentals/push-notifications)
 es otra característica de ServiceWorker. Le permite a
 ServiceWorker despertarse cuando llegue un mensaje del servicio de mensajería del
 SO. Esto ocurre incluso cuando el usuario no tiene una pestaña abierta

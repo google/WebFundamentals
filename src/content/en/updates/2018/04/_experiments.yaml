@@ -1,0 +1,12 @@
+experiments:
+- name: inline_feedback
+  description: Test whether more specific inline feedback prompts elicit more responses.
+  analytics_id: UA-52746336-1
+  analytics_custom_dimension_index: 1
+  variants:
+  - name: generic_prompt
+    description: A generic prompt, not related to the page. Should get less responses.
+    percent: 50
+  - name: specific_prompt
+    description: A specific prompt, related to the page. Should get more responses.
+    percent: 50

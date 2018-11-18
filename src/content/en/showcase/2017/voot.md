@@ -1,18 +1,19 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-04-20T10:00:00.000Z #}
-{# wf_updated_on: 2017-04-28T10:00:00.000Z #}
-{# wf_featured_image: /web/showcase/2017/images/voot/voot.png #}
+{# wf_published_on: 2017-04-20 #}
+{# wf_updated_on: 2018-03-20 #}
+{# wf_featured_image: /web/showcase/2017/images/voot/voot-lite.png #}
 {# wf_featured_snippet: Voot.com launches their media Progressive Web App in India. Within days of implementation, session time per user increased by 39% and daily views per user by 15%. #}
 {# wf_tags: media,casestudy #}
 {# wf_region: asia #}
 {# wf_vertical: media #}
 {# wf_featured_date: 2017-04-20 #}
+{# wf_blink_components: n/a #}
 
 # Progressive Web App at Voot {: .page-title }
 
-<img src="/web/showcase/2017/images/voot/voot.png" class="attempt-right">
+<img src="/web/showcase/2017/images/voot/voot-lite.png" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 
@@ -22,10 +23,10 @@ by 15%.
 
 #### Results {: .hide-from-toc }
 
-* 80% reduction in page load time  
-* 39% increase in session time per user  
-* 19% reduction in bounce rate  
-* 77% increase in conversion from visitor to video viewer  
+* 80% reduction in page load time
+* 39% increase in session time per user
+* 19% reduction in bounce rate
+* 77% increase in conversion from visitor to video viewer
 * 15% increase in average daily video views per user
 
 ## About voot.com
@@ -75,7 +76,7 @@ loads became 5 times faster for first-time visitors, and almost 7 times faster
 for returning users.
 
 To offer a true app-like experience, Voot.com also implemented
-[add to home screen](/web/fundamentals/engage-and-retain/app-install-banners/),
+[add to home screen](/web/fundamentals/app-install-banners),
 allowing users to launch the page from their home screen like a native app. This
 combined with a streamlined login process allows users to quickly and easily
 re-engage with the site and watch their favorite shows.

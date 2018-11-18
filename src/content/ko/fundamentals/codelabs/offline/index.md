@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 서비스 워커를 기존 애플리케이션에 통합하여 애플리케이션이 오프라인에서 작동하도록 하는 방법을 배워보세요.
 
-{# wf_updated_on: 2016-11-09T18:31:19Z #}
+{# wf_updated_on: 2016-11-09 #}
 {# wf_published_on: 2016-01-01 #}
 
 

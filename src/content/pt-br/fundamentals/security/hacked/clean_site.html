@@ -1,0 +1,243 @@
+<html devsite><head>
+  <title>Limpar e fazer a manutenção do site</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Será necessário:</h3>
+
+<ul>
+  <li>Acesso de administrador shell/de terminal aos servidores do seu site: Web, banco de dados, arquivos.</li>
+  <li>Conhecimento de comandos shell/de terminal.</li>
+  <li>Compreensão do código (como PHP ou JavaScript).</li>
+  <li>Armazenamento para criar backups do site (incluindo os arquivos, banco de dados, imagens etc.).</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Próximas ações:</h3>
+
+<p>Abrangeremos várias ações nesta etapa: </p>
+
+<ul>
+  <li>Onde localizar recursos adicionais caso você acredite que o hacker pretendia conseguir informações pessoais dos usuários (como ocorre com páginas de phishing).</li>
+  <li>Opção <a href="https://www.google.com/webmasters/tools/removals">Remover URLs</a> no Search Console para agilizar a remoção de URLs totalmente novos, indesejados e visíveis para o usuário criados pelo hacker e que você não quer que apareçam nos resultados da Pesquisa Google.</li>
+  <li>Opção <a href="https://www.support.google.com/webmasters/answer/1352276">Fetch as Google</a> no Search Console para agilizar o processamento pelo Google de páginas limpas, ou seja, páginas novas ou recém-atualizadas que você deseja ver nos resultados da Pesquisa Google.</li>
+  <li>Instalação da versão mais recente e segura do software.</li>
+  <li>Remoção de aplicativos ou plug-ins desnecessários ou não utilizados que poderiam tornar o site mais vulnerável no futuro.</li>
+  <li>Restauração do conteúdo de boa qualidade e eliminação do conteúdo do hacker.</li>
+  <li>Correção da vulnerabilidade da causa raiz que foi explorada pelo hacker.</li>
+  <li>Alteração de todas as senhas.</li>
+  <li>Planejamento para manter seu site seguro.</li>
+</ul>
+
+<h4>1. Localize os recursos de suporte ao lidar com perda de informações confidenciais, como ocorre com páginas de phishing</h4>
+
+<p>Se informações confidenciais do usuário foram reunidas a partir do seu site (por exemplo, por ser parte de um ataque de phishing), é possível considerar quaisquer responsabilidades empresariais, regulamentares ou legais antes de começar a limpar o site ou a apagar os arquivos. Em casos de phishing, o site <a href="https://antiphishing.org">antiphishing.org</a> (em inglês) tem recursos úteis, como o documento <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">What to Do if Your Site Has Been Hacked by Phishers</a> (o que fazer caso seu site tenha sido invadido com phishing).</p>
+
+<h4>2. Considere acelerar a remoção de novos URLs criados pelo hacker</h4>
+
+<p>Se o hacker criou URLs totalmente novos e visíveis para o usuário, é possível remover essas páginas mais rapidamente dos resultados da Pesquisa Google usando o recurso <a href="https://www.google.com/webmasters/tools/removals">Remover URLs</a> no Search Console. Esta é uma etapa inteiramente opcional. Se você simplesmente excluir as páginas e configurar o servidor para retornar um <a href="https://www.support.google.com/webmasters/answer/40132">código de status 404</a>, as páginas sairão do índice do Google naturalmente com o tempo.</p>
+
+<ul>
+  <li>A decisão de usar a remoção de URLs dependerá do número de novas páginas indesejadas
+    que foram criadas (pode ser complicado incluir muitas páginas em Remover URLs), bem como do possível
+    dano que essas páginas podem causar aos usuários. Para evitar que as páginas enviadas por meio da remoção de URL
+    apareçam nos resultados de pesquisa, certifique-se de que as páginas também estejam configuradas para retornar uma
+  resposta "404 – Arquivo não encontrado" para os URLs indesejados/removidos.</li>
+  <li>Não use esta ferramenta para solicitar a remoção de páginas anteriormente íntegras que foram danificadas pelo
+    hacker. Essas páginas devem aparecer nos resultados de pesquisa depois de limpas.
+    <em>A remoção de URLs destina-se somente a páginas que não devem aparecer nos resultados.</em></li>
+</ul>
+
+<h4>3. Considere acelerar o processamento do Google nas páginas limpas</h4>
+
+<p>Se você tem páginas limpas novas ou atualizadas, pode usar o recurso
+  <a href="https://www.support.google.com/webmasters/answer/1352276">Fetch as Google</a> no
+  Search Console para enviar essas páginas ao índice do Google. Isso é totalmente opcional. Se você pular
+  essa etapa, as páginas novas ou modificadas provavelmente serão rastreadas e processadas com o tempo.</p>
+
+<h4>4. Comece a limpeza dos seus servidores</h4>
+
+<p>Agora é hora de limpar o site com base nas anotações que você fez ao <a href="hacked_with_spam">avaliar os danos</a> e <a href="vulnerability">identificar a vulnerabilidade</a>. O caminho que você seguirá nesta etapa depende do tipo
+  de backup que você tem disponível.</p>
+
+<ul>
+  <li>backup limpo e atual</li>
+  <li>backup limpo, mas desatualizado</li>
+  <li>sem backup disponível   </li>
+</ul>
+
+<p>Primeiro, verifique se o backup foi criado <strong>antes</strong> de o site ser invadido.</p>
+
+<ul>
+  <li><strong>Backup limpo e atual</strong>
+
+    <ol>
+      <li>Restaure o backup.</li>
+      <li>Instale todas as atualizações e upgrades de software, além dos patches disponíveis. Isso inclui o software do
+        sistema operacional, caso você esteja no controle do servidor, e todos os aplicativos, como o sistema
+        de gerenciamento de conteúdo, a plataforma de comércio eletrônico, os plug-ins, os modelos etc.</li>
+      <li>Considere se é possível eliminar algum software em seu servidor (por exemplo, widgets, plug-ins ou
+        aplicativos) que o site não usa mais.</li>
+      <li>Corrija a vulnerabilidade.</li>
+      <li>Certifique-se de que todos os problemas encontrados em <a href="hacked_with_spam">Avaliar os danos</a>
+        foram abordados.</li>
+      <li>Altere as senhas mais uma vez em todas as contas relacionadas ao site (por exemplo, logins de
+        acesso ao FTP, acesso ao banco de dados, administradores de sistemas e contas CMS). Em sistemas Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Backup limpo, mas desatualizado</strong>
+    <ol>
+      <li>Faça uma imagem de disco do site atual, mesmo que ele ainda esteja infectado. Essa cópia é apenas
+        para segurança. Marque a cópia como infectada para distingui-la das outras. Em um sistema Unix,
+        você cria uma imagem de disco assim:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Faça uma cópia de backup do sistema de arquivos do seu servidor, incluindo imagens e arquivos de mídia. Se você
+        tiver um banco de dados, faça backup dele também.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Restaure o backup limpo, mas desatualizado, no seu servidor.</li>
+      <li>Avalie se é possível eliminar algum software em seu servidor (por exemplo, widgets, plug-ins ou aplicativos) que o site não usa mais.</li>
+      <li>Se você estiver no controle do servidor, faça o upgrade de todo o software, incluindo o sistema operacional e todos
+        os aplicativos de software, como o sistema de gerenciamento de conteúdo, a plataforma de comércio eletrônico, os plug-ins,
+        os modelos etc. Certifique-se de verificar e instalar as atualizações de segurança e os patches disponíveis.</li>
+      <li>Corrija a vulnerabilidade.</li>
+      <li>Realize uma <code>diff</code> do site, seja ela manual ou automática, entre o backup
+        limpo e a cópia atualmente infectada.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Faça o upload de qualquer conteúdo novo e limpo que você deseja preservar a partir da cópia infectada no servidor atualizado.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Verifique se cada URL listado em <a href="hacked_with_spam">Avaliar os danos</a> foi corrigido.</li>
+      <li>Altere as senhas mais uma vez em todas as contas relacionadas ao site (por exemplo, logins de
+        acesso ao FTP, acesso ao banco de dados, administradores de sistemas e contas CMS). Em sistemas Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Sem backup disponível</strong>
+    <ol>
+      <li>Faça dois backups do site, mesmo que ele ainda esteja infectado. Fazer um backup extra ajuda a recuperar o conteúdo apagado acidentalmente, além de permitir que você reverta a situação e tente de novo em caso de erro. Marque os backups com "infectado" para referência futura.
+        <ul>
+          <li>Um dos backups será uma imagem de disco ou uma "versão clone" do seu site. Esse formato
+            facilita a restauração de conteúdo. Deixe a imagem de disco à mão para alguma
+            emergência. Em um sistema Unix, você cria uma imagem de disco assim:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>O outro backup será uma cópia do sistema de arquivos do servidor, incluindo imagens e
+            arquivos de mídia. Se você tiver um banco de dados, faça backup dele também.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Se você não tem uma imagem de disco, faça dois backups do banco de dados e dois backups do
+            sistema de arquivos.</li>
+        </ul>
+      </li>
+      <li>Limpe o conteúdo do site na nova cópia do sistema de arquivos do backup (e não no servidor)
+        <ol>
+          <li>Se a investigação anterior encontrou permissões de arquivo muito brandas, prossiga e
+            corrija-as. Certifique-se de fazer isso na cópia de backup, e não no próprio servidor.</li>
+          <li>Também na cópia de backup, limpe todos os arquivos correspondentes aos URLs comprometidos
+            descobertos em <a href="hacked_with_spam">Avaliar o dano</a>. Eles podem ser
+            arquivos de configuração do servidor, JavaScript, HTML, PHP.</li>
+          <li>Certifique-se também de ter removido (veiculado uma resposta 404) os novos arquivos criados pelo hacker
+            (que você pode ou não ter enviado usando a ferramenta de remoção de URL no Search Console).</li>
+          <li>Corrija a vulnerabilidade se ela existir no código ou nas senhas decifradas. As bibliotecas
+            de validação de entrada ou as auditorias de segurança podem ser muito úteis.</li>
+          <li>Se o site tiver um banco de dados, comece a limpar os registros modificados pelo hacker em seu backup.
+            Pouco antes de terminar, faça um teste de sanidade em mais registros para
+            confirmar se eles estão limpos.</li>
+          <li>Altere as senhas mais uma vez em todas as contas relacionadas ao site (por exemplo, logins
+            de acesso ao FTP, acesso ao banco de dados, administradores de sistemas e contas CMS). Em sistemas
+            Unix:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>Neste ponto, a cópia de backup do site, antes infectada, deve conter apenas dados
+            limpos. Mantenha essa cópia limpa à mão e passe à ação nº 5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Elimine o software desnecessário</h4>
+
+<p>Avalie se é possível eliminar algum software em seu servidor, como widgets, plug-ins ou aplicativos, que o site não usa mais. Isso pode aumentar a segurança e simplificar manutenções
+  futuras.</p>
+
+<h4>6. Limpe todos os servidores</h4>
+
+<ol>
+  <li>Execute uma instalação limpa, e não apenas um upgrade. Os upgrades podem deixar arquivos de uma versão
+    anterior. Se um arquivo infectado permanecer no servidor, outra invasão poderá ocorrer.
+    <ul>
+      <li>A nova instalação deve incluir o sistema operacional, se você estiver no controle do servidor, e todos
+        os aplicativos de software, como o sistema de gerenciamento de conteúdo, a plataforma de comércio eletrônico, os plug-ins,
+        os modelos etc. Certifique-se de verificar as atualizações de segurança e os patches disponíveis.</li>
+    </ul>
+  </li>
+  <li>Transfira o conteúdo em bom estado da cópia limpa do sistema de arquivos de backup para o servidor recém-instalado.
+    Faça o upload/restaure somente os arquivos/banco de dados conhecidos e limpos. Certifique-se de manter as permissões de arquivo
+    apropriadas e não substituir os arquivos de sistema recém-instalados.</li>
+  <li>Altere as senhas uma última vez em todas as contas relacionadas ao site (por exemplo, logins de
+    acesso ao FTP, acesso ao banco de dados, administradores de sistemas e contas CMS). Em sistemas Unix:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Crie um plano de manutenção em longo prazo</h4>
+
+<p>Há muitos recursos informativos na Web para manutenção robusta de sites, como o
+  <a href="https://www.stopbadware.org/prevent-badware-basics">Preventing badware: basics</a> (Como evitar badware: noções básicas, em tradução livre), da StopBadware. Também
+  recomendamos que você:</p>
+
+<ul>
+  <li>faça backups regulares e automáticos do site;</li>
+  <li>esteja atento para manter o software atualizado;</li>
+  <li>compreenda as práticas de segurança de todos os aplicativos, plug-ins, software de terceiros etc. antes de instalá-los no servidor. Uma vulnerabilidade de segurança em um aplicativo de software pode afetar a segurança de todo o site;</li>
+  <li>imponha a criação de senhas fortes;</li>
+  <li>mantenha todos os dispositivos usados para fazer login seguro na máquina (sistema operacional e navegador atualizados).</li>
+</ul>
+
+<h4>8. Confira se a limpeza foi concluída</h4>
+
+<p>Veja se é possível responder "sim" às seguintes perguntas:</p>
+
+<ul>
+  <li>Tomei as medidas adequadas caso o hacker tenha acessado as informações pessoais dos usuários? </li>
+  <li>Meu site tem a versão mais recente e mais segura do software? </li>
+  <li>Removi todos os aplicativos ou plug-ins desnecessários ou não utilizados que poderiam tornar o site mais
+    vulnerável no futuro? </li>
+  <li>Restaurei meu conteúdo e eliminei o conteúdo do hacker? </li>
+  <li>Corrigi a vulnerabilidade da causa raiz que possibilitou que meu site fosse invadido? </li>
+  <li>Tenho um plano para manter meu site seguro?</li>
+</ul>
+
+<h4>9.  Coloque seu site on-line novamente</h4>
+<h2>Próxima etapa</h2>
+<p>Estamos quase no fim! A última etapa do processo é <a href="request_review">solicitar uma revisão</a>.</p>
+
+</body></html>

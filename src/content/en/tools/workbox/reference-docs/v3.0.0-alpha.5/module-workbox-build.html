@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Module: workbox-build</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small></small><span class="symbol-name">workbox-build</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>module</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0-alpha.5</small></span>
+            </div>
+            <p>This Node module can be used to generate a list of assets that should be precached in a service worker, generating a hash that can be used to intelligently update a cache when the service worker is updated.</p>
+            <p>This module will use glob patterns to find assets in a given directory and use the resulting URL and revision data for one of the follow uses:</p>
+            <ol>
+              <li>Generate a complete service worker with precaching and some basic configurable options, writing the resulting service worker file to disk. See
+                <a href="module-workbox-build.html#.generateSW">generateSW()</a>.</li>
+              <li>Generate a complete service worker with precaching and some basic configurable options, without writing the results to disk. See
+                <a href="module-workbox-build.html#.generateSWString">generateSWString()</a>.</li>
+              <li>Inject a manifest into an existing service worker. This allows you to control your own service worker while still taking advantage of workboxSW.precache() logic. See <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>.</li>
+              <li>Just generate a manifest, not a full service worker file. This is useful if you want to make use of the manifest from your own existing service worker file and are okay with including the manifest yourself. See <a href="module-workbox-build.html#.getManifest">getManifest()</a>.</li>
+            </ol>
+          </header>
+          <section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id=".copyWorkboxLibraries" class="symbol-name">copyWorkboxLibraries</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> copyWorkboxLibraries(destDirectory)&nbsp;returns&nbsp;Promise containing string</p>
+              <p>This copies over a set of runtime libraries used by Workbox into a local directory, which should be deployed alongside your service worker file.</p>
+              <p>As an alternative to deploying these local copies, you could instead use Workbox from its official CDN URL.</p>
+              <p>This method is exposed for the benefit of developers using
+                <a href="module-workbox-build.html#.injectManifest">injectManifest()</a> who would prefer not to use the CDN copies of Workbox. Developers using
+                <a href="module-workbox-build.html#.generateSW">generateSW()</a> don't need to explicitly call this method, as it's called automatically when
+                <code>importWorkboxFrom</code> is set to <code>local</code>.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>destDirectory</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>The path to the parent directory under which the new directory of libraries will be created.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing string</code>&nbsp;The name of the newly created directory.</p>
+                </dd>
+              </dl>
+              <h3 id=".generateSW" class="symbol-name">generateSW</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> generateSW(config)&nbsp;returns&nbsp;Promise containing {count: Number, size: Number}</p>
+              <p>This method creates a list of URLs to precache, referred to as a &quot;precache manifest&quot;, based on the options you provide.</p>
+              <p>It also takes in additional options that configures the service worker's behavior, like any <code>runtimeCaching</code> rules it should use.</p>
+              <p>Based on the precache manifest and the additional configuration, it writes a ready-to-use service worker file to disk at <code>swDest</code>.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>config</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="module-workbox-build.html#.Configuration">module:workbox-build.Configuration</a></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing {count: Number, size: Number}</code>&nbsp;A promise that resolves once the service worker file has been written to <code>swDest</code>. The <code>size</code> property contains the aggregate size of all the precached
+                    entries, in bytes, and the
+                    <code>count</code> property contains the total number of precached entries.</p>
+                </dd>
+              </dl>
+              <h3 id=".generateSWString" class="symbol-name">generateSWString</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> generateSWString(config)&nbsp;returns&nbsp;Promise containing String</p>
+              <p>This method generates a service worker based on the configuration options provided.
+              </p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>config</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="module-workbox-build.html#.Configuration">module:workbox-build.Configuration</a></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing String</code>&nbsp;A populated service worker template, based on the other configuration options provided.</p>
+                </dd>
+              </dl>
+              <h3 id=".getManifest" class="symbol-name">getManifest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> getManifest(config)&nbsp;returns&nbsp;Promise containing {manifestEntries: Array of ManifestEntry, count: Number, size: Number}</p>
+              <p>This method returns a list of URLs to precache, referred to as a &quot;precache manifest&quot;, along with details about the number of entries and their size, based on the options you provide.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>config</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="module-workbox-build.html#.Configuration">module:workbox-build.Configuration</a></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing {manifestEntries: Array of ManifestEntry, count: Number, size: Number}</code>&nbsp;A promise that resolves once the precache manifest is determined. The <code>size</code> property contains the aggregate size
+                    of all the precached entries, in bytes, the <code>count</code> property contains the total number of precached entries, and the <code>manifestEntries</code> property contains all the <code>ManifestEntry</code> items.</p>
+                </dd>
+              </dl>
+              <h3 id=".injectManifest" class="symbol-name">injectManifest</h3>
+              <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> injectManifest(config)&nbsp;returns&nbsp;Promise containing {count: Number, size: Number}</p>
+              <p>This method creates a list of URLs to precache, referred to as a &quot;precache manifest&quot;, based on the options you provide.</p>
+              <p>The manifest is injected into the <code>swSrc</code> file, and the regular expression
+                <code>injectionPointRegexp</code> determines where in the file the manifest should go.</p>
+              <p>The final service worker file, with the manifest injected, is written to disk at <code>swDest</code>.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>config</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types"><a href="module-workbox-build.html#.Configuration">module:workbox-build.Configuration</a></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Promise containing {count: Number, size: Number}</code>&nbsp;A promise that resolves once the service worker file has been written to <code>swDest</code>. The <code>size</code> property contains the aggregate size of all the precached
+                    entries, in bytes, and the
+                    <code>count</code> property contains the total number of precached entries.</p>
+                </dd>
+              </dl>
+            </section>
+            <h2>Abstract types</h2>
+            <section>
+              <h3 id=".Configuration" class="symbol-name">Configuration</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature">Object</p>
+              <p>These are the full set of options that could potentially be used to configure one of the build tools. Each of the build tools has a slightly different way of providing this configuration:</p>
+              <ul>
+                <li>
+                  <p>When using the <code>workbox-build</code> module directly, pass the configuration object to appropriate method. For example,
+                    <code>workboxBuild.injectManifest(configuration)</code> or
+                    <code>workboxBuild.generateSW(configuration)</code>.</p>
+                </li>
+                <li>
+                  <p>When using the <code>workbox-cli</code> command line interface, use the
+                    <code>--config-file</code> flag to point to a
+                    <a href="https://nodejs.org/docs/latest/api/modules.html">CommonJS module file</a> that assigns the configuration object to <code>module.exports</code>.</p>
+                </li>
+                <li>
+                  <p>When using <code>workbox-webpack-plugin</code> within a
+                    <a href="https://webpack.js.org/">Webpack</a> build, pass the configuration object to the plugin's constructor, like
+                    <code>new WorkboxBuildWebpackPlugin(configuration)</code>.</p>
+                </li>
+              </ul>
+              <p>Some specific options might not make sense with certain combinations of interfaces. In those cases, the limitations are called out in the documentation, and may lead to build-time warnings or errors.</p>
+              <p>Each option documented here includes an example, which, for the sake of illustration, assumes the following local filesystem setup. Please adjust the example values to match your actual setup.</p>
+              <pre class="prettyprint source lang-sh"><code>./
+├── dev/
+│   ├── app.js
+│   ├── ignored.html
+│   ├── image.png
+│   ├── index.html
+│   ├── main.css
+│   ├── sw.js
+│   └── templates/
+│       └── app_shell.hbs
+└── dist/
+    ├── app.js
+    ├── image.png
+    ├── index.html
+    ├── main.css
+    └── sw.js</code></pre>
+              <section>
+                <h4>Properties</h4>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>swDest</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>The path to the final service worker file that will be created by the build process, relative to the current working directory.</p>
+                        <p>E.g.: <code>'./dist/sw.js'</code></p>
+                        <p>Note: This option is only valid when used with
+                          <a href="module-workbox-build.html#.generateSW">generateSW()</a> or
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>swSrc</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>The path to the source service worker containing a <code>precache([])</code> placeholder, which will be replaced with the precache manifest generated by the build.</p>
+                        <p>E.g.: <code>'./dev/sw.js'</code></p>
+                        <p> Note: This option is only valid when used with
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>swTemplate</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>A service worker template that should be populated based on the configuration provided. The template should be in a format that <a href="https://lodash.com/docs/4.17.4#template"><code>lodash.template</code></a> understands.
+                        </p>
+                        <p>Note: This option is only valid when used with generateSWNoFS().
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>importWorkboxFromCDN</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">boolean</p>
+                        <p>If <code>true</code>, the WorkboxSW runtime will be automatically imported into the generated service worker from the official CDN URL. If <code>false</code>, the WorkboxSW runtime will be copied locally into your <code>swDest</code>                          directory when using
+                          <a href="module-workbox-build.html#.generateSW">generateSW()</a>. If <code>process.env.NODE_ENV</code> is set to a string starting with <code>dev</code> then the
+                          <code>dev</code> bundle of WorkboxSW, with additional assertions and debugging info, will be used; otherwise, the <code>prod</code> bundle will be used.</p>
+                        <p>Note: This option is only valid when used with
+                          <a href="module-workbox-build.html#.generateSW">generateSW()</a> or generateSWNoFS().
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>importScripts</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of String</p>
+                        <p>An optional list of JavaScript files that should be passed to
+                          <a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts"><code>importScripts()</code></a> inside the generated service worker file.</p>
+                        <p>Note: This option is only valid when used with
+                          <a href="module-workbox-build.html#.generateSW">generateSW()</a> or generateSWNoFS().
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>globPatterns</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of String</p>
+                        <p>Files matching against any of these
+                          <a href="https://github.com/isaacs/node-glob">glob patterns</a> will be included in the precache manifest.</p>
+                        <p>E.g.: <code>'**\/*.{js,css,html,png}'</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>globDirectory</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>The base directory you wish to match <code>globPatterns</code> against, related to the current working directory.</p>
+                        <p>E.g.: <code>'./dev'</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>globIgnores</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">(String or Array of String)</p>
+                        <p>Files matching against any of these glob patterns will be excluded from the file manifest, overriding any matches from <code>globPatterns</code>.</p>
+                        <p>E.g. <code>['**\/ignored.html']</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>globFollow</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Boolean</p>
+                        <p>Follow symlinked directories when expanding '**' patterns. Note that this can result in a lot of duplicate references in the presence of cyclic links.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>globStrict</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Boolean</p>
+                        <p>When an unusual error is encountered when attempting to read a directory, the process will just continue on in search of other matches. Set the strict option to raise an error in these cases.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>templatedUrls</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Object with (Array or string) properties</p>
+                        <p>If a URL is rendered generated based on some server-side logic, its contents may depend on multiple files or on some other unique string value.</p>
+                        <p>If used with an array of strings, they will be interpreted as
+                          <a href="https://github.com/isaacs/node-glob">glob patterns</a>, and the contents of any files matching the patterns will be used to uniquely version the URL.</p>
+                        <p>If used with a single string, it will be interpreted as unique versioning information that you've generated out of band for a given URL.</p>
+                        <p>E.g.</p>
+                        <pre class="prettyprint source lang-js"><code>{
+  '/app-shell': [
+    'dev/templates/app-shell.hbs',
+    'dev/**\/*.css',
+   ],
+  '/other-page': 'my-version-info',
+}</code></pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>maximumFileSizeToCacheInBytes</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">number</p>
+                        <p>This value can be used to determine the maximum size of files that will be precached. This prevents you from inadvertantly precaching very large files that might have been accidentally match your <code>globPatterns</code> values.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>manifestTransforms</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of ManifestTransform</p>
+                        <p>An array of manifest transformations, which will be applied sequentially against the generated manifest. If <code>modifyUrlPrefix</code> or <code>dontCacheBustUrlsMatching</code> are also specified, their corresponding transformations
+                          will be applied first.</p>
+                        <p>See <a href="module-workbox-build.html#.ManifestTransform">ManifestTransform</a>.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>modifyUrlPrefix</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Object with String properties</p>
+                        <p>A mapping of prefixes that, if present in an entry in the precache manifest, will be replaced with the corresponding value.</p>
+                        <p>This can be used to, for example, remove or add a path prefix from a manifest entry if your web hosting setup doesn't match your local filesystem setup.</p>
+                        <p>As an alternative with more flexibility, you can use the <code>manifestTransforms</code> option and provide a function that modifies the entries in the manifest using whatever logic you provide.</p>
+                        <p>E.g.</p>
+                        <pre class="prettyprint source lang-js"><code>{
+  '/prefix-to-remove': '',
+}</code></pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>dontCacheBustUrlsMatching</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">RegExp</p>
+                        <p>Assets that match this regex will be assumed to be uniquely versioned via their URL, an exempted from the normal HTTP cache-busting that's done when populating the precache.</p>
+                        <p>While not required, it's recommended that if your existing build process already inserts a <code>[hash]</code> value into each filename, you provide a RegExp that will detect those values, as it will reduce the amount of bandwidth
+                          consumed when precaching.</p>
+                        <p>E.g. <code>/\.\w{8}\./</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>navigateFallback</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">String</p>
+                        <p>This will be used to create a
+                          <a href="workbox.routing.NavigationRoute.html">NavigationRoute</a> that will respond to navigation requests for URLs that that aren't precached.</p>
+                        <p>This is meant to be used in a
+                          <a href="https://en.wikipedia.org/wiki/Single-page_application">Single Page App</a> scenario, in which you want all navigations to result in common App Shell HTML being reused.</p>
+                        <p>It's <em>not</em> intended for use as a fallback that's displayed when the browser is offline.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly add in a call to registerNavigationRoute() in your <code>swSrc</code> file.</p>
+                        <p>E.g. <code>'/app-shell'</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>navigateFallbackWhitelist</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of RegExp</p>
+                        <p>An optional array of regular expressions that restrict which URLs the navigation route applies to.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly add in the whitelist when calling registerNavigationRoute() in your <code>swSrc</code> file.</p>
+                        <p>E.g. <code>[/pages/, /articles/]</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>cacheId</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">String</p>
+                        <p>An optional ID to be prepended to caches used by <code>workbox-sw</code>. This is primarily useful for local development where multiple sites may be served from the same <code>http://localhost</code> origin.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                        <p>E.g. <code>'my-app-name'</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>skipWaiting</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Boolean</p>
+                        <p>Whether or not the service worker should skip over the <a href="/web/fundamentals/instant-and-offline/service-worker/lifecycle#waiting">waiting</a> lifecycle stage.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>clientsClaim</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Boolean</p>
+                        <p>Whether or not the service worker should <a href="/web/fundamentals/instant-and-offline/service-worker/lifecycle#clientsclaim">start controlling</a> any existing clients as soon as it activates.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>directoryIndex</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">string</p>
+                        <p>If a request for a URL ending in '/' fails, this value will be appended to the URL and a second request will be made.</p>
+                        <p>This should be configured to whatever your web server is using, if anything, for its <a href="https://httpd.apache.org/docs/2.0/mod/mod_dir.html">directory index</a>.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>runtimeCaching</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of Object</p>
+                        <p>Passing in an array of objects containing <code>urlPattern</code>s, <code>handler</code>s, and potentially <code>option</code>s that will add the appropriate code to the generated service worker to handle runtime caching.
+                        </p>
+                        <p>Requests for precached URLs that are picked up via <code>globPatterns</code> are handled by default, and don't need to be accomodated in <code>runtimeCaching</code>.</p>
+                        <p>The <code>handler</code> values correspond the names of the strategies supported by <code>workbox-sw</code>.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly add in the corresponding runtime caching behavior via registerRoute() in your
+                          <code>swSrc</code> file.</p>
+                        <p>E.g.</p>
+                        <pre class="prettyprint source lang-js"><code>[{
+  // You can use a RegExp as the pattern:
+  urlPattern: /.jpg$/,
+  handler: 'cacheFirst',
+  // Any options provided will be used when
+  // creating the caching strategy.
+  options: {
+    cacheName: 'image-cache',
+    cacheExpiration: {
+      maxEntries: 10,
+    },
+  },
+}, {
+  // You can also use Express-style strings:
+  urlPattern: 'https://example.com/path/to/:file',
+  handler: 'staleWhileRevalidate',
+  options: {
+    cacheableResponse: {
+         statuses: [0],
+    },
+  },
+}]</code></pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>ignoreUrlParametersMatching</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Array of RegExp</p>
+                        <p>Any search parameter names that match against one of the regex's in this array will be removed before looking for a precache match.</p>
+                        <p>This is useful if your users might request URLs that contain, for example, URL parameters used to track the source of the traffic. Those URL parameters would normally cause the cache lookup to fail, since the URL strings used as
+                          cache keys would not be expected to include them.</p>
+                        <p>You can use <code>[/./]</code> to ignore all URL parameters.</p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                        <p>E.g. <code>[/homescreen/]</code></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>handleFetch</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Boolean</p>
+                        <p>Whether or not <code>workbox-sw</code> should create a <code>fetch</code> event handler that responds to network requests. This is useful during development if you don't want the service worker serving stale content.
+                        </p>
+                        <p>Note: This option is only valid when used with generateSW(). When using
+                          <a href="module-workbox-build.html#.injectManifest">injectManifest()</a>, you can explicitly pass the desired value in to the WorkboxSW() constructor in your <code>swSrc</code> file.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".ManifestEntry" class="symbol-name">ManifestEntry</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature">Object</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>url</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>The URL to the asset in the manifest.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>revision</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">String</p>
+                        <p>The revision details for the file. This is a hash generated by node based on the file contents.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".ManifestTransform" class="symbol-name">ManifestTransform</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> ManifestTransform(manifestEntries)&nbsp;returns&nbsp;Array of ManifestEntry</p>
+              <p>A <code>ManifestTransform</code> function can be used to modify the modify the <code>url</code> or
+                <code>revision</code> properties of some or all of the ManifestEntries in the manifest.</p>
+              <p>Deleting the <code>revision</code> property of an entry will cause the corresponding <code>url</code> to be precached without cache-busting parameters applied, which is to say, it implies that the URL itself contains proper versioning info.
+                If the <code>revision</code> property is present, it must be set to a string.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>manifestEntries</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Array of ManifestEntry</p>
+                        <p>The full array of entries, prior to the current transformation.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Array of ManifestEntry</code>&nbsp;The array of entries with the transformation applied.
+                  </p>
+                </dd>
+              </dl>
+              <section>
+                <h4>
+                  Examples
+                </h4>
+                <div>
+                  <pre class="prettyprint"><code>&lt;caption&gt;A transformation that prepended the origin of a CDN for any
+URL starting with &#x27;/assets/&#x27; could be implemented as:&lt;/caption&gt;
+
+const cdnTransform &#x3D; (manifestEntries) &#x3D;&gt; manifestEntries.map(entry &#x3D;&gt; {
+  const cdnOrigin &#x3D; &#x27;https://example.com&#x27;;
+  if (entry.url.startsWith(&#x27;/assets/&#x27;)) {
+    entry.url &#x3D; cdnOrigin + entry.url;
+  }
+  return entry;
+});</code></pre>
+                </div>
+                <div>
+                  <pre class="prettyprint"><code>&lt;caption&gt;A transformation that removes the revision field when the
+URL contains an 8-character hash surrounded by &#x27;.&#x27;, indicating that it
+already contains revision information:&lt;/caption&gt;
+
+const removeRevisionTransform &#x3D; (manifestEntries) &#x3D;&gt; {
+  return manifestEntries.map(entry &#x3D;&gt; {
+    const hashRegExp &#x3D; /\.\w{8}\./;
+    if (entry.url.match(hashRegExp)) {
+      delete entry.revision;
+    }
+    return entry;
+  });
+};</code></pre>
+                </div>
+              </section>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

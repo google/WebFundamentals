@@ -1,0 +1,65 @@
+<html devsite><head>
+  <title>スパマーがウェブサイトのハッキングでよく利用する手段</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="9zItsxS/fL9X/nV/RwRY/vxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKril0ujkfrC/WCkVnHV2soTDmc2ORF1Lkt+7NCiGHaIhRh2JUKRR0pmqTL220uNkfsc838Y4Gpr0QFRjk8ksx2sc="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+<p>サイトのセキュリティ侵害がどのように発生したかを把握することは、攻撃からサイトを守るうえで重要です。この記事では、サイトのセキュリティ侵害につながる恐れがあるセキュリティ上の脆弱性について説明します。</p>
+
+    <h2>パスワードの不正使用</h2>
+<p>攻撃では、さまざまなパスワードを試して正しいパスワードを類推する、パスワード類推手法が使われることがあります。パスワード類推攻撃は、よくあるパスワードを試したり、パスワードが検出されるまで文字と数字をランダムに組み合わせてみたりするなど、さまざまな方法を使って実施される可能性があります。この攻撃を防ぐには、類推しにくい安全なパスワードを作成します。Google のヘルプセンター記事で、<a href="https://support.google.com/accounts/answer/32040" l10n-encrypted-href="PUOk06V/bRLmdopV/wSCnkkCfIu7sCbUls/iCrWrRlwtKD7X+LQoliQ3R5q6BgM3JMvPx64R34Rzm9AG5IWykA==">安全なパスワードを作成するためのヒント</a>をご確認ください。</p>
+
+<p>覚えておく必要がある重要な点が 2 つあります。1 つは、複数のサービス間で同じパスワードを使い回さないことです。攻撃者はユーザー名とパスワードの有効な組み合わせを特定できると、できる限り多くのサービスでそのユーザー名とパスワードの組み合わせを試します。このため、サービスごとにパスワードを変えれば、他のサービスの他のアカウントが不正使用されるのを防ぐことができます。</p>
+
+<p>もう 1 つは、利用可能な場合は、<a href="https://www.google.com/landing/2step/" l10n-encrypted-href="pyyfMXvZENy75E/2vywa8JmZYYtAdDjPTefDHHQyT1nxc28SLLGdF5SejxVMBGG0">Google 2 段階認証プロセス</a>などの 2 段階認証プロセス（2FA）を利用することです。2FA を利用すれば、通常はテキスト メッセージ コードなどの動的生成の PIN で、ログイン認証プロセスのセキュリティを強化できます。攻撃者は盗んだパスワードのみではアカウントにアクセスできません。一部の CMS プロバイダでは、２FA の設定に関するガイダンスを提供しています。詳しくは、<a href="https://docs.joomla.org/J3.x:Two_Factor_Authentication" l10n-encrypted-href="glT/uv7x/xTfB7pJVh6/sanzoyv6n9NsKZNFKjvLxzww8ChbysK9ugRJaWk119QiorChdJArL3HyrwYjcdJreA==">Joomla!</a>、<a href="https://codex.wordpress.org/Two_Step_Authentication" l10n-encrypted-href="xa6/TlZ/be6PkfmUSgvbQDRQy6HTqvZI/qXrac1BQEkp1emfq+OONcQ7OzAz5+8BZ0lJVLgkuxbrZuca+oAOCg==">WordPress</a>、<a href="https://www.drupal.org/project/tfa" l10n-encrypted-href="DqO1CNU8DNKESLi7tYKuiWsZMbSsRVdCkmwmMfDONH3Gh4U25ylCwrIOz14uXUZn">Drupal</a> のドキュメントをご覧ください。</p>
+
+    <h2>セキュリティ アップデートを行っていない</h2>
+<p>ソフトウェアはバージョンが古いと、リスクの高いセキュリティ上の脆弱性の影響を受ける可能性があり、攻撃者はこの脆弱性を利用してサイト全体を不正利用します。攻撃者は脆弱性のある古いソフトウェアを積極的に探します。サイトの脆弱性に気付かないと、サイトが攻撃される可能性が高まります。</p>
+
+<p><b>注:</b> 脆弱性のパッチを適用するため、サイトにソフトウェア アップデートがあるかどうかを定期的に確認することが大切です。さらに、可能な場合はソフトウェアの自動アップデートを設定し、活用している実行中のソフトウェアにセキュリティ関連のメールサービスがあれば登録することをおすすめします。</p>
+
+<p>常に最新の状態にしておく必要があるソフトウェアの例:</p>
+<ul>
+  <li>ウェブサーバー ソフトウェア（専用のサーバーを稼働している場合）</li>
+  <li>コンテンツ管理システム。<a href="https://wordpress.org/news/category/security/" l10n-encrypted-href="W+9PxfeRyWb/RzbKS6a0sLxh9UnE0mkXXvvktk1Dxe1RNObDS28WP/zNormWufvFqvP4zdF86Pqj1NbCoHpRoQ==">Wordpress</a>、<a href="https://www.drupal.org/security" l10n-encrypted-href="ce91eMLVR+A4rhrrOr4rbSfTTkV/xGd2qLdiFF0fAgkuIpAt8qN4rd7/Y0xv3gnm">Drupal</a>、<a href="https://developer.joomla.org/security-centre.html" l10n-encrypted-href="r9wGZnZ5gWTdBk9DubOim4ZndVF978w0JzgzHtbJoLMGMY2rSgOaHEHaNq9eE5zraort4qj/MEcLxlAk3CkpBw==">Joomla!</a> からのセキュリティ リリースなど。</li>
+  <li>サイトで使用しているすべてのプラグインとアドオン</li>
+</ul>
+
+  <h2>安全性の低いテーマとプラグイン</h2>
+<p>CMS でプラグインやテーマを利用すれば、高度な優れた機能が加わります。しかし、テーマやプラグインが古かったり、パッチが適用されていなかったりすると、ウェブサイトを脆弱にする大きな原因となります。サイトでテーマやプラグインを使用している場合は、常に最新の状態にしてください。デベロッパーが管理していないテーマやプラグインは削除してください。</p>
+
+<p>信頼できないサイトからの無料のプラグインやテーマには十分注意してください。有料のプラグインやテーマの無料版に悪意のあるコードを追加する方法は、攻撃者の常套手段です。プラグインを削除する場合は、単に無効にするのではなく、サーバーからそのプラグインのファイルを完全に削除してください。</p>
+
+    <h2>ソーシャル エンジニアリング</h2>
+<p><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)" l10n-encrypted-href="GNl3mBL0HYVq6mbgtcZZBAOrZfK8qSBsW73e1nANJzDhdag+xA68+MwQ16jfZc75PDy3vtY3O31aYZLUJFuYjA==">ソーシャル エンジニアリング</a>とは、人間の心理を悪用して高度なセキュリティ インフラストラクチャを回避する手法です。このタイプの攻撃では、認証済みのユーザーをだましてパスワードなどの機密情報を提供するよう仕向けます。たとえば、ソーシャル エンジニアリングのよくある形式がフィッシングです。フィッシング行為では、攻撃者が正規の組織を装ったメールを送信して機密情報を要請します。</p>
+
+<p><b>注:</b> <a href="https://research.google.com/pubs/pub43469.html">ソーシャル エンジニアリングに関する Google の調査</a>によると、高い効果を発揮したフィッシングのなかには成功率 45% のものもあります。</p>
+
+<p>要請元の身元に確信を持てない場合は、機密情報（パスワード、クレジット カード番号、銀行口座、生年月日など）を絶対に開示しないでください。サイトを複数の担当者で管理している場合は、ソーシャル エンジニアリング攻撃に対するセキュリティ認識を高めるトレーニングを実施することをご検討ください。Gmail ヘルプセンターで、<a href="https://support.google.com/mail/answer/8253" l10n-encrypted-href="Qxy7djzLrQDlRvlnztgY6uGsVVamVB4dakLBAujPCV5MZGYTR6r2uoEtKSMEEuiF">フィッシングに対する基本的な保護方法</a>についての説明をご覧ください。</p>
+
+    <h2>セキュリティ ポリシーの欠点</h2>
+<p>システム管理者の方や、自分でサイトを運営している方は、セキュリティ ポリシーの質が低いことが原因で攻撃者にサイトを不正使用される可能性があることを覚えておきましょう。次にその例を紹介します。</p>
+  <ul>
+    <li>ユーザーに脆弱なパスワードの作成を許可している</li>
+    <li>管理者権限を必要としないユーザーに付与している</li>
+    <li>サイトで HTTPS を有効にしておらず、ユーザーが HTTP を使ってログインできるようにしている</li>
+    <li>未認証のユーザーからのファイル アップロードや、型検査なしのファイル アップロードを許可している</li>
+  </ul>
+
+<p>サイトを保護するための基本的なヒント:</p>
+  <ul>
+    <li>不要なサービスを無効にして、ウェブサイトが質の高いセキュリティ管理で設定されるようにする</li>
+    <li>アクセス制御とユーザー権限をテストする</li>
+    <li>ログインページなど、機密情報を扱うページには暗号化を使用する</li>
+    <li>不審なアクティビティがないかどうかログを定期的に確認する</li>
+  </ul>
+
+
+    <h2>データ漏えい</h2>
+<p>機密データがアップロードされ、設定ミスが原因でその機密情報が一般に公開されると、データ漏えいが発生する可能性があります。たとえば、ウェブアプリのエラー処理とメッセージ送信が原因で、処理されていないエラー メッセージで設定情報が漏えいする可能性があります。「<a href="https://en.wikipedia.org/wiki/Google_hacking" l10n-encrypted-href="FDZcx272AJOi7Y9OblQ6JQOrZfK8qSBsW73e1nANJzCd/pbaXyxvswzDfzJkDrry">ドーキング</a>」という手法を使って、悪意のある人がこのデータを探すために検索エンジン機能を悪用することもあります。</p>
+
+<p>未認証のユーザーに機密情報を知られることがないよう、定期的にチェックを実施し、セキュリティ ポリシーに沿って機密データを信頼できるエンティティに制限してください。サイトに表示されている機密情報が Google 検索結果に掲載されることが判明し、Google 検索結果から至急削除することが必要になった場合は、<a href="https://www.google.com/webmasters/tools/removals" l10n-encrypted-href="8XmwXx73jEjMr74g6qSO7wSJUyK0ahq5p2Xo+yKO2LCb6sVoHIw/dbKYlYNpC3bE6alqqczRgjG7j5E4wpj/eg==">URL 削除ツール</a>を使って、Google 検索結果から個々の URL を削除することができます。</p>
+
+
+</body></html>

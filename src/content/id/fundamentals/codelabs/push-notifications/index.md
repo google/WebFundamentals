@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan mempelajari cara menambahkan pemberitahuan push ke aplikasi web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -58,11 +58,11 @@ Meskipun Anda bebas menggunakan server web sendiri, codelab ini dirancang untuk 
 
 [Tautan](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark: 
+Setelah memasang aplikasi Web Server for Chrome, klik pada pintasan Apps di bilah bookmark:
 
 ![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-Pada jendela berikutnya, klik ikon Web Server: 
+Pada jendela berikutnya, klik ikon Web Server:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -137,7 +137,7 @@ Buka Chrome DevTools untuk memeriksa konsol bagi `Service Worker is registered`,
 
 ### Mendapatkan Kunci Server Aplikasi
 
-Untuk bekerja dengan code lab ini Anda harus membuat beberapa kunci server aplikasi yang bisa kita lakukan dengan situs pendamping ini:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+Untuk bekerja dengan code lab ini Anda harus membuat beberapa kunci server aplikasi yang bisa kita lakukan dengan situs pendamping ini:  [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)
 
 Di sini Anda bisa membuat pasangan kunci Publik dan Privat.
 
@@ -528,7 +528,7 @@ Kita telah melihat bahwa aplikasi web kita mampu menampilkan notifikasi mengguna
 
 Biasanya proses ini akan mengirimkan langganan dari laman web ke backend dan backend kemudian akan memicu pesan push dengan membuat panggilan API ke endpoint di langganan.
 
-Ini di luar cakupan codelab ini, namun Anda bisa menggunakan situs pendamping ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) bagi code lab ini untuk memicu pesan push yang sebenarnya. Salin dan tempel langganan di bagian bawah laman Anda:
+Ini di luar cakupan codelab ini, namun Anda bisa menggunakan situs pendamping ( [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)) bagi code lab ini untuk memicu pesan push yang sebenarnya. Salin dan tempel langganan di bagian bawah laman Anda:
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -643,13 +643,13 @@ Anda seharusnya bisa menekan  *Enable Push Messaging*  /  *Disable Push Messagin
 
 Selamat telah menyelesaikan codelab ini!
 
-Code lab ini menunjukkan kepada Anda cara bangun dan berjalan dengan menambahkan push ke aplikasi web Anda. Jika Anda ingin mengetahui selengkapnya tentang apa yang bisa dilakukan notifikasi web,  [lihat dokumen ini](/web/fundamentals/engage-and-retain/push-notifications/). 
+Code lab ini menunjukkan kepada Anda cara bangun dan berjalan dengan menambahkan push ke aplikasi web Anda. Jika Anda ingin mengetahui selengkapnya tentang apa yang bisa dilakukan notifikasi web,  [lihat dokumen ini](/web/fundamentals/push-notifications).
 
 Jika Anda ingin menerapkan push pada situs, Anda mungkin tertarik untuk menambahkan dukungan bagi compliant browser lama / non-standar yang menggunakan GCM, [ketahui selengkapnya di sini](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Bacaan Lebih Lanjut
 
-*  Dokumentasi [Pemberitahuan Push Web](/web/fundamentals/engage-and-retain/push-notifications/) pada Web__Fundamentals__
+*  Dokumentasi [Pemberitahuan Push Web](/web/fundamentals/push-notifications) pada Web__Fundamentals__
 *  [Pustaka Web Push](https://github.com/web-push-libs/) - Pustaka Web Push termasuk Node.js, PHP, Java dan Python.
 
 #### Entri blog terkait
@@ -664,7 +664,7 @@ Jika Anda ingin menerapkan push pada situs, Anda mungkin tertarik untuk menambah
 
 
 ## Menemukan masalah, atau memiliki masukan? {: .hide-from-toc }
-Bantu kami menjadikan code lab lebih baik dengan mengirimkan 
+Bantu kami menjadikan code lab lebih baik dengan mengirimkan
 [masalah](https://github.com/googlechrome/push-notifications/issues) hari ini. Dan terima kasih!
 
 {# wf_devsite_translation #}

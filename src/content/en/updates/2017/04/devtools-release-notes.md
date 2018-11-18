@@ -4,7 +4,7 @@ description: New features and changes coming to DevTools in Chrome 59.
 
 {# wf_updated_on: 2017-04-19 #}
 {# wf_published_on: 2017-04-12 #}
-{# wf_tags: chrome59,devtools #}
+{# wf_tags: chrome59,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 59. #}
 

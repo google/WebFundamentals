@@ -1,0 +1,289 @@
+<html devsite><head>
+  <title>Làm sạch và bảo trì trang web của bạn</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Bạn sẽ cần:</h3>
+
+<ul>
+  <li>Quyền truy cập quản trị viên shell/terminal vào các máy chủ của trang web: web, cơ sở dữ liệu, tệp</li>
+  <li>Kiến thức về lệnh shell/terminal</li>
+  <li>Hiểu biết về mã (chẳng hạn như PHP hoặc JavaScript)</li>
+  <li>Bộ nhớ để tạo bản sao lưu trang web của bạn (bao gồm tệp, cơ sở dữ liệu, hình ảnh, v.v.)</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Các hành động tiếp theo:</h3>
+
+<p>Chúng tôi sẽ đề cập đến một số hành động trong bước này: </p>
+
+<ul>
+  <li>Nơi tìm nguồn tài nguyên bổ sung nếu bạn tin rằng tin tặc có ý định lấy thông tin cá nhân
+  của người dùng (chẳng hạn như thông qua các trang lừa đảo)</li>
+  <li>Tùy chọn sử dụng <a href="https://www.google.com/webmasters/tools/removals">Xóa URL</a> trong
+  Search Console để đẩy nhanh việc xóa các URL hoàn toàn mới, không mong muốn,
+  hiển thị cho người dùng do tin tặc tạo mà bạn không muốn hiển thị trong kết quả
+  của Google Tìm kiếm</li>
+  <li>Tùy chọn sử dụng <a href="https://www.support.google.com/webmasters/answer/1352276">Tìm nạp như
+  Google</a> trong Search Console để đẩy nhanh tiến trình xử lý các trang sạch
+  của Google - nghĩa là các trang mới hoặc mới cập nhật - mà bạn muốn
+  xuất hiện trong kết quả tìm kiếm của Google</li>
+  <li>Cài đặt phiên bản phần mềm mới nhất, an toàn nhất</li>
+  <li>Việc gỡ bỏ các ứng dụng hoặc plugin không cần thiết hoặc không được sử dụng
+  có thể làm cho trang web của bạn dễ bị tấn công hơn trong tương lai</li>
+  <li>Khôi phục nội dung tốt và xóa nội dung của tin tặc</li>
+  <li>Khắc phục lỗ hổng là nguyên nhân gốc rễ mà tin tặc đã khai thác</li>
+  <li>Thay đổi tất cả mật khẩu</li>
+  <li>Lập kế hoạch giữ an toàn cho trang web của bạn</li>
+</ul>
+
+<h4>1. Tìm tài nguyên hỗ trợ khi xử lý việc bị mất thông tin mật, chẳng hạn như
+  thông qua các trang lừa đảo</h4>
+
+<p>Nếu thông tin mật của người dùng được lấy từ trang web của bạn (ví dụ: vì đó là
+  một phần của cuộc tấn công lừa đảo), bạn có thể xem xét mọi trách nhiệm
+  pháp lý, luật định, kinh doanh trước khi bắt đầu làm sạch trang web hoặc xóa
+  bất kỳ tệp nào. Trong trường hợp lừa đảo, <a href="https://antiphishing.org">antiphishing.org</a> có các tài nguyên
+  hữu ích như tài liệu <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">Làm gì nếu trang web của bạn bị tấn công
+  bởi kẻ lừa đảo</a>.</p>
+
+<h4>2. Cân nhắc đẩy nhanh việc xóa các URL mới do tin tặc tạo</h4>
+
+<p>Nếu tin tặc tạo các URL hoàn toàn mới và hiển thị cho người dùng, bạn có thể
+  đẩy nhanh việc xóa các trang này khỏi kết quả tìm kiếm của Google bằng cách
+  sử dụng tính năng <a href="https://www.google.com/webmasters/tools/removals">Xóa URL</a> trong
+  Search Console. Bước này hoàn toàn không bắt buộc. Nếu bạn chỉ cần xóa các trang và sau đó định
+  cấu hình máy chủ để trả lại <a href="https://www.support.google.com/webmasters/answer/40132">mã trạng thái
+  404</a>, thì các trang sẽ dần dần bị gỡ khỏi chỉ mục của Google theo thời gian.</p>
+
+<ul>
+  <li>Quyết định sử dụng công cụ Xóa URL sẽ phụ thuộc vào số lượng trang
+  mới, không mong muốn được tạo (quá nhiều trang có thể khiến việc sử dụng
+  Xóa URL khá rườm rà), cũng như khả năng gây hại đến người dùng
+  của những trang này. Để ngăn các trang được gửi đến Xóa URL xuất hiện trong kết quả tìm kiếm,
+  hãy đảm bảo các trang này cũng được định cấu hình để trả về phản hồi
+  404 File not Found đối với URL không mong muốn/đã xóa.</li>
+  <li>Không sử dụng công cụ này để yêu cầu xóa bất kỳ trang nào từng hợp lệ nhưng
+  đã bị tin tặc phá hỏng bởi - bạn sẽ muốn các trang này xuất hiện trong kết quả
+  tìm kiếm khi trang đã được làm sạch.
+    <em>Chỉ nên dùng công cụ Xóa URL với các trang bạn không bao giờ muốn xuất hiện trong kết quả.</em></li>
+</ul>
+
+<h4>3. Cân nhắc việc đẩy nhanh tiến trình xử lý các trang sạch của Google</h4>
+
+<p>Nếu có trang sạch mới hoặc cập nhật, bạn có thể sử dụng tính năng
+  <a href="https://www.support.google.com/webmasters/answer/1352276">Tìm nạp như Google</a> trong
+  Search Console để gửi các trang này tới chỉ mục của Google. Điều này hoàn toàn không bắt buộc. Nếu bạn bỏ qua bước này, các trang mới hoặc
+  đã khắc phục sẽ có thể được thu thập dữ liệu và xử lý theo thời gian.</p>
+
+<h4>4. Bắt đầu làm sạch (các) máy chủ của bạn</h4>
+
+<p>Bây giờ là lúc bắt đầu làm sạch trang web của bạn dựa trên các ghi chú
+  bạn đã thực hiện trong <a href="hacked_with_spam">Đánh giá thiệt hại</a> và
+  <a href="vulnerability">Xác định tính lỗ hổng</a>. Quy trình bạn sẽ thực hiện trong bước này phụ thuộc vào loại bản sao lưu
+  bạn có sẵn.</p>
+
+<ul>
+  <li>Bản sao lưu sạch và cập nhật</li>
+  <li>Bản sao lưu sạch nhưng đã lỗi thời</li>
+  <li>Không có bản sao lưu   </li>
+</ul>
+
+<p>Trước tiên, hãy kiểm tra để đảm bảo bản sao lưu này được tạo <strong>trước khi</strong> trang web của bạn bị tấn công.</p>
+
+<ul>
+  <li><strong>Bản sao lưu sạch và cập nhật</strong>
+
+    <ol>
+      <li>Khôi phục bản sao lưu của bạn.</li>
+      <li>Cài đặt bất kỳ bản nâng cấp, cập nhật hay vá lỗi nào. Điều này bao gồm phần mềm cho
+         hệ điều hành nếu bạn nắm quyền kiểm soát máy chủ và tất cả các
+         ứng dụng, chẳng hạn như hệ thống quản lý nội dung, nền tảng thương mại
+         điện tử, plugin, mẫu, v.v.</li>
+      <li>Xem xét liệu bạn có thể loại bỏ phần mềm trên máy chủ của mình (ví dụ:
+         tiện ích con, plugin hoặc ứng dụng) mà trang web không còn sử dụng nữa
+         hay không.</li>
+      <li>Sửa lỗ hổng.</li>
+      <li>Đảm bảo rằng tất cả các vấn đề tìm thấy trong <a href="hacked_with_spam">Đánh giá thiệt hại</a>
+        đều được giải quyết.</li>
+      <li>Thay đổi mật khẩu một lần nữa cho tất cả các tài khoản liên quan đến trang web
+        (ví dụ: thông tin đăng nhập để truy cập FTP, truy cập cơ sở dữ liệu, quản trị
+        viên hệ thống và tài khoản CMS). Trên các hệ thống có nền tảng Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Bản sao lưu sạch nhưng đã lỗi thời</strong>
+    <ol>
+      <li>Tạo ảnh ổ đĩa cho trang hiện tại của bạn mặc dù trang vẫn bị nhiễm. Bản sao này chỉ
+        nhằm mục đích an toàn. Đánh dấu bản sao là bị nhiễm để phân biệt với
+        những bản khác. Trên hệ thống có nền tảng Unix, có thể làm như sau
+        để tạo ảnh ổ đĩa:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Tạo bản sao hệ thống tệp sao lưu của máy chủ của bạn, bao gồm cả hình ảnh
+        và tệp đa phương tiện. Nếu có cơ sở dữ liệu, bạn cũng nên sao lưu cơ sở dữ liệu.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Khôi phục bản sao lưu sạch nhưng đã lỗi thời trên máy chủ của bạn.</li>
+      <li>Xem xét liệu bạn có thể loại bỏ phần mềm trên máy chủ của mình (ví dụ:
+         tiện ích con, plugin hoặc ứng dụng) mà trang web không còn sử dụng nữa
+         hay không.</li>
+      <li>Nâng cấp tất cả phần mềm, bao gồm cả hệ điều hành nếu bạn nắm quyền
+         kiểm soát máy chủ và tất cả các ứng dụng, chẳng hạn như hệ thống quản lý
+         nội dung, nền tảng thương mại điện tử, plugin, mẫu, v.v. Đảm bảo kiểm tra
+         các bản cập nhật bảo mật và vá lỗi có sẵn.</li>
+      <li>Sửa lỗ hổng.</li>
+      <li>Thực hiện <code>diff</code> trang web theo cách thủ công hoặc tự động -- giữa bản sao lưu
+        sạch và bản sao hiện tại bị nhiễm.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Tải lên bất kỳ nội dung mới, sạch nào mà bạn muốn bảo vệ khỏi bản sao bị nhiễm trên máy chủ đã nâng cấp.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li>Kiểm tra để đảm bảo mỗi URL được liệt kê từ <a href="hacked_with_spam">Đánh giá thiệt hại</a>
+        đều đã được khắc phục.</li>
+      <li>Thay đổi mật khẩu một lần nữa cho tất cả các tài khoản liên quan đến trang web
+        (ví dụ: thông tin đăng nhập để truy cập FTP, truy cập cơ sở dữ liệu, quản trị
+        viên hệ thống và tài khoản CMS). Trên các hệ thống có nền tảng Unix:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Không có bản sao lưu</strong>
+    <ol>
+      <li>Tạo hai bản sao lưu của trang web của bạn ngay cả khi trang vẫn bị nhiễm. Việc có một bản sao lưu bổ sung sẽ giúp
+        khôi phục lại nội dung bị xóa nhầm hoặc cho phép bạn hoàn nguyên và
+        thử lại nếu gặp trục trặc. Hãy gắn nhãn mỗi bản sao lưu là "bị nhiễm" để tham khảo
+        trong tương lai.
+        <ul>
+          <li>Một trong những bản sao lưu của bạn sẽ là ảnh ổ đĩa hoặc "bản sao"
+        của trang web của bạn. Định dạng này làm cho việc khôi phục nội dung trở nên
+        đơn giản hơn. Bạn có thể lưu trữ ảnh ổ đĩa cho trường hợp khẩn cấp. Trên hệ thống có nền tảng Unix, có thể làm như sau
+        để tạo ảnh ổ đĩa:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>Bản sao lưu còn lại sẽ là bản sao hệ thống tệp sao lưu của máy chủ của bạn,
+        bao gồm cả hình ảnh và tệp đa phương tiện. Nếu có cơ sở dữ liệu, bạn cũng nên sao lưu cơ sở dữ liệu.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Nếu bạn không có ảnh ổ đĩa, hãy tạo hai bản sao lưu của cơ sở dữ liệu và
+        hai bản sao lưu của hệ thống tệp.</li>
+        </ul>
+      </li>
+      <li>Làm sạch nội dung của trang web trên bản sao hệ thống tệp sao lưu mới (không phải trên chính máy chủ)
+        <ol>
+          <li>Nếu cuộc điều tra trước đó của bạn cho thấy quyền với tệp quá rộng, hãy khắc phục
+        điều đó. Đảm bảo rằng bạn làm điều này trên bản sao lưu, chứ không phải trên máy chủ.</li>
+          <li>Ngoài ra trên bản sao lưu, hãy làm sạch tất cả các tệp tương ứng với URL
+        được phát hiện là đã bị xâm nhập trong <a href="hacked_with_spam">Đánh giá thiệt hại</a>. Các tệp này có thể
+        là tệp cấu hình máy chủ, JavaScript, HTML, PHP.</li>
+          <li>Đảm bảo cũng xóa (trả về phản hồi 404) các tệp mới do tin tặc tạo
+        (bạn có thể đã gửi hoặc chưa gửi các tệp này qua công cụ Xóa URL
+        trong Search Console).</li>
+          <li>Sửa lỗ hổng nếu có trong mã hoặc các mật khẩu bị bẻ khóa của bạn. Thư viện
+        xác nhận đầu vào hoặc kiểm tra bảo mật có thể hữu ích.</li>
+          <li>Nếu trang web của bạn có cơ sở dữ liệu, hãy bắt đầu dọn dẹp các bản ghi
+        đã bị tin tặc sửa đổi trong bản sao lưu.
+            Ngay trước khi bạn nghĩ mình
+        đã xong, hãy kiểm tra kỹ hơn các bản ghi để đảm bảo rằng bản ghi đã sạch.</li>
+          <li>Thay đổi mật khẩu một lần nữa cho tất cả các tài khoản liên quan đến trang web
+        (ví dụ: thông tin đăng nhập để truy cập FTP, truy cập cơ sở dữ liệu, quản trị
+        viên hệ thống và tài khoản CMS). Trên các hệ thống có nền tảng Unix:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>Tại thời điểm này, bản sao lưu từng bị nhiễm của trang web của bạn
+        sẽ chỉ chứa dữ liệu sạch. Lưu trữ bản sao sạch này
+        và chuyển sang hành động #5.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Loại bỏ phần mềm không cần thiết</h4>
+
+<p>Xem xét liệu bạn có thể loại bỏ phần mềm trên máy chủ của mình -- chẳng hạn
+  như tiện ích con, plugin hoặc ứng dụng -- mà trang web không còn sử dụng
+  nữa hay không. Điều này có thể làm tăng tính bảo mật và đơn giản hóa
+  việc bảo trì trong tương lai.</p>
+
+<h4>6. Làm sạch tất cả máy chủ</h4>
+
+<ol>
+  <li>Hãy thực hiện cài đặt mới chứ không chỉ nâng cấp. Nâng cấp có thể để lại các tệp từ một
+  phiên bản trước đó. Nếu một tệp bị nhiễm còn lại trên máy chủ, một cuộc tấn công khác
+  có khả năng sẽ xảy ra.
+    <ul>
+      <li>Cài đặt mới nên bao gồm cả hệ điều hành nếu bạn nắm quyền kiểm soát máy chủ
+         và tất cả các ứng dụng, chẳng hạn như hệ thống quản lý
+         nội dung, nền tảng thương mại điện tử, plugin, mẫu, v.v. Đảm bảo kiểm tra
+         các bản cập nhật bảo mật và vá lỗi có sẵn.</li>
+    </ul>
+  </li>
+  <li>Chuyển nội dung tốt từ bản sao hệ thống tệp sao lưu sạch sang (các) máy chủ mới được cài đặt.
+    Chỉ tải lên/khôi phục những tệp/cơ sở dữ liệu đã biết rõ. Đảm bảo duy trì các quyền thích hợp với tệp và không ghi đè lên các tệp hệ thống được cài đặt mới.</li>
+  <li>Thay đổi mật khẩu lần cuối cho tất cả các tài khoản liên quan đến trang web
+  (ví dụ: thông tin đăng nhập để truy cập FTP, truy cập cơ sở dữ liệu, quản trị
+  viên hệ thống và tài khoản CMS). Trên các hệ thống có nền tảng Unix:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Tạo kế hoạch bảo trì dài hạn</h4>
+
+<p>Có rất nhiều tài nguyên giàu thông tin trên web về bảo trì trang web hiệu quả, như
+  <a href="https://www.stopbadware.org/prevent-badware-basics"></a>Ngăn chặn phần mềm độc hại: những điều cơ bản của Stop Badware. Chúng tôi cũng
+  khuyên bạn nên thực hiện những điều sau:</p>
+
+<ul>
+  <li>Thường xuyên thực hiện sao lưu tự động trang web của bạn.</li>
+  <li>Hãy thận trọng về việc cập nhật phần mềm.</li>
+  <li>Hiểu được phương pháp bảo mật của tất cả các ứng dụng, plugin, phần mềm
+  của bên thứ ba, v.v. trước khi cài đặt chúng trên máy chủ của bạn. Một lỗ hổng bảo mật
+  trong một ứng dụng phần mềm có thể ảnh hưởng đến sự an toàn của
+  toàn bộ trang web của bạn.</li>
+  <li>Tạo mật khẩu mạnh.</li>
+  <li>Bảo mật tất cả các thiết bị được sử dụng để đăng nhập vào máy (hệ điều hành và trình duyệt cập nhật).</li>
+</ul>
+
+<h4>8. Kiểm tra lại để đảm bảo việc dọn dẹp đã hoàn tất</h4>
+
+<p>Đảm bảo bạn có thể trả lời "có" cho các câu hỏi sau:</p>
+
+<ul>
+  <li>Tôi đã thực hiện các bước thích hợp nếu tin tặc lấy được thông tin cá nhân của người dùng chưa? </li>
+  <li>Trang web của tôi có đang chạy phiên bản phần mềm mới nhất, an toàn nhất? </li>
+  <li>Tôi đã gỡ bỏ các ứng dụng hoặc plugin không cần thiết hoặc không được sử dụng có thể làm cho trang web của tôi dễ bị tấn công hơn trong tương lai chưa? </li>
+  <li>Tôi đã khôi phục lại nội dung của mình và gỡ bỏ nội dung của tin tặc chưa? </li>
+  <li>Tôi đã sửa lỗ hổng là nguyên nhân gốc rễ khiến trang web của tôi bị tấn công chưa? </li>
+  <li>Tôi có kế hoạch giữ an toàn cho trang web của mình không?</li>
+</ul>
+
+<h4>9. Đưa trang web của bạn trở lại trực tuyến</h4>
+<h2>Bước tiếp theo</h2>
+<p>Bạn gần như đã xong! Bước cuối cùng trong quy trình là
+  <a href="request_review">Yêu cầu xem lại</a>.</p>
+
+</body></html>

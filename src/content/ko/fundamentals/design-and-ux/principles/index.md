@@ -3,16 +3,16 @@ book_path: /web/fundamentals/_book.yaml
 description: Google과 AnswerLab에서는 사용자가 다양한 모바일 사이트와 어떻게 상호작용하는지에 대한 연구를 시작했습니다. 이 연구의 목적은 '좋은 모바일 사이트란 어떤 것입니까?'라는 질문에 대답하는 것이었습니다.
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # 좋은 모바일 사이트란 어떤 것입니까? {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)를 수행했습니다. 
+Google과 AnswerLab에서는 이 질문에 대답하기 위해 [연구 조사](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)를 수행했습니다.
 
 > 모바일 사용자는 매우 목적 지향적입니다. 이들은 자신이 필요한 것을
-> 자신의 조건에 따라 즉시 찾고 싶어합니다. 
+> 자신의 조건에 따라 즉시 찾고 싶어합니다.
 
 이 연구는 미국의 참가자를 대상으로 하는 119시간 분량의
 실황 세션을 통해 수행되었습니다. 참가자는 다양한 종류의 모바일 사이트에서
@@ -214,7 +214,7 @@ Success: 사이트 검색은 모바일 사용자가 원하는 것을 서둘러 �
 
 ## 상거래 및 전환
 
-Success: 여러분의 고객 여정을 이해하고 사용자가 자신의 조건에 따라 전환하도록 하세요. 
+Success: 여러분의 고객 여정을 이해하고 사용자가 자신의 조건에 따라 전환하도록 하세요.
 
 ### 사용자가 커밋하기 전에 탐색하도록 하세요
 
@@ -349,7 +349,7 @@ Success: 사용 가능한 양식으로 매끄럽고 원활한 전환 경험을 �
 알고 있는 정보로 필드를 미리 채우세요. 예를 들어, 배송 주소 및 청구지 주소를
 검색할 경우,
 [`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)를 사용하거나,
-사용자가 배송 주소를 청구지 주소에 복사할 수 있도록 하세요(그 반대도 마찬가지). 
+사용자가 배송 주소를 청구지 주소에 복사할 수 있도록 하세요(그 반대도 마찬가지).
 
 ## 사용성 및 폼 팩터
 

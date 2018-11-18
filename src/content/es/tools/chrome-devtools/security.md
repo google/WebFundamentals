@@ -81,9 +81,9 @@ proporcionadas a través de HTTP.
 
 
 
-[mixed-content]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[mixed-content]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [same-origin-policy]: https://en.wikipedia.org/wiki/Same-origin_policy
-[why-https]: https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+[why-https]: /web/fundamentals/security/encrypt-in-transit/why-https
 
 
 {# wf_devsite_translation #}

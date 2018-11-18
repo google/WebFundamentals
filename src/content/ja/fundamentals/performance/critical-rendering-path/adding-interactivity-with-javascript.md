@@ -29,7 +29,7 @@ JavaScript はブラウザで実行される動的な言語であり、あらゆ
 
 [サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/script.html){: target="_blank" .external }
 
-* JavaScript を使用すると DOM の内部にアクセスして非表示の span ノード（レンダーツリーに表示されなくても、DOM にあるノード）へのリファレンスを取得することができます。リファレンスを取得すると、テキストの変更（.textContent を利用）や、計算済みの表示スタイルのプロパティを「none」から「inline」にオーバーライドすることができます。サンプルページには「**Hello interactive students!**」と表示されます。
+* JavaScript を使用すると DOM の内部にアクセスして非表示の span ノード（レンダリング ツリーに表示されなくても、DOM にあるノード）へのリファレンスを取得することができます。リファレンスを取得すると、テキストの変更（.textContent を利用）や、計算済みの表示スタイルのプロパティを「none」から「inline」にオーバーライドすることができます。サンプルページには「**Hello interactive students!**」と表示されます。
 
 * JavaScript では、DOM の要素の新規作成、スタイル設定、追加、削除を行うこともできます。技術的には、ページ全体を単一の大きな JavaScript ファイルにして、1 つずつ要素を作成してスタイル設定を行うことも可能です。ただし、実際には HTML や CSS と連携させる方がはるかに簡単です。この JavaScript 関数の後半では、新しい div 要素を作成し、テキスト コンテンツ、スタイルの設定を行って、body に追加しています。
 

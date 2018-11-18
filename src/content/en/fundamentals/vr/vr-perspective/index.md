@@ -2,11 +2,13 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Find out more about how creating content for WebVR is different from creating regular web content.
 
-{# wf_updated_on: 2017-06-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-05 #}
 {# wf_blink_components: Blink>WebVR #}
 
 # Seeing the Web from a VR Perspective {: .page-title }
+
+{% include "web/_shared/webxr-status.html" %}
 
 There are several things about creating WebVR content that are not like regular
 web development. This means that you need different techniques and a different
@@ -130,3 +132,7 @@ could use code like:
         }
       }
     }
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

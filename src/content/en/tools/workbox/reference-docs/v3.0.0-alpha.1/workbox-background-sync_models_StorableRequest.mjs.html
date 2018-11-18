@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-background-sync/models/StorableRequest.mjs</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-background-sync/models/StorableRequest.mjs</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/*
+ Copyright 2017 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+import &#x27;../_version.mjs&#x27;;
+
+const serializableProperties &#x3D; [
+  &#x27;method&#x27;,
+  &#x27;referrer&#x27;,
+  &#x27;referrerPolicy&#x27;,
+  &#x27;mode&#x27;,
+  &#x27;credentials&#x27;,
+  &#x27;cache&#x27;,
+  &#x27;redirect&#x27;,
+  &#x27;integrity&#x27;,
+  &#x27;keepalive&#x27;,
+  &#x27;signal&#x27;,
+];
+
+
+/**
+ * A class to make it easier to serialize and de-serialize requests so they
+ * can be stored in IndexedDB.
+ *
+ * @private
+ */
+export default class StorableRequest {
+  /**
+   * Converts a Request object to a plain object that can be structured
+   * cloned or JSON-stringified.
+   *
+   * @param {Request} request
+   * @return {Promise&amp;lt;StorableRequest&gt;}
+   */
+  static async fromRequest(request) {
+    const requestInit &#x3D; {headers: {}};
+
+    // Set the body if present.
+    if (request.method !&#x3D;&#x3D; &#x27;GET&#x27;) {
+      // Use blob to support non-text request bodies,
+      // and clone first in case the caller still needs the request.
+      requestInit.body &#x3D; await request.clone().blob();
+    }
+
+    // Convert the headers from an iterable to an object.
+    for (const [key, value] of request.headers.entries()) {
+      requestInit.headers[key] &#x3D; value;
+    }
+
+    // Add all other serializable request properties
+    for (const prop of serializableProperties) {
+      if (request[prop] !&#x3D;&#x3D; undefined) {
+        requestInit[prop] &#x3D; request[prop];
+      }
+    }
+
+    return new StorableRequest({url: request.url, requestInit});
+  }
+
+  /**
+   * Accepts a URL and RequestInit dictionary that can be used to create a
+   * new Request object. A timestamp is also generated so consumers can
+   * reference when the object was created.
+   *
+   * @param {Object} param1
+   * @param {string} param1.url
+   * @param {Object} param1.requestInit
+   *     See: https://fetch.spec.whatwg.org/#requestinit
+   * @param {number} param1.timestamp The time the request was created,
+   *     defaulting to the current time if not specified.
+   */
+  constructor({url, requestInit, timestamp &#x3D; Date.now()}) {
+    this.url &#x3D; url;
+    this.requestInit &#x3D; requestInit;
+
+    // &quot;Private&quot;
+    this._timestamp &#x3D; timestamp;
+  }
+
+  /**
+   * Gets the private _timestamp property.
+   *
+   * @return {number}
+   */
+  get timestamp() {
+    return this._timestamp;
+  }
+
+  /**
+   * Coverts this instance to a plain Object.
+   *
+   * @return {Object}
+   */
+  toObject() {
+    return {
+      url: this.url,
+      timestamp: this.timestamp,
+      requestInit: this.requestInit,
+    };
+  }
+
+  /**
+   * Converts this instance to a Request.
+   *
+   * @return {Request}
+   */
+  toRequest() {
+    return new Request(this.url, this.requestInit);
+  }
+}
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

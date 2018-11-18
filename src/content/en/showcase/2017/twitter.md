@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-05-17T10:00:00.000Z #}
-{# wf_updated_on: 2017-05-17T10:00:00.000Z #}
+{# wf_published_on: 2017-05-17 #}
+{# wf_updated_on: 2017-05-17 #}
 {# wf_featured_image: /web/showcase/2017/images/twitter/twitter-thumb_2x.jpg #}
 {# wf_featured_snippet: The Twitter Lite Progressive Web App combines the best of the modern web and native features to deliver a more robust experience, with explicit goals for instant loading, user engagement and lower data consumption #}
 {# wf_tags: casestudy,progressive-web-apps #}

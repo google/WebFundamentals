@@ -2,10 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of all of the keyboard shortcuts in Chrome DevTools.
 
-{# wf_updated_on: 2017-09-05 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-29 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Keyboard Shortcuts Reference {: .page-title }
+
+{% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -36,6 +39,11 @@ on the browser viewport:
       <td>Open the <b>Console</b> panel</td>
       <td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd></td>
       <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd></td>
+    </tr>
+    <tr>
+      <td>Open the <b>Elements</b> panel</td>
+      <td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd></td>
+      <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
     </tr>
   </tbody>
 </table>
@@ -251,7 +259,7 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
     <tr>
       <td>Increment / decrement a property value by 100</td>
       <td>Click a value then press <kbd>Command</kbd>+<kbd>Up Arrow</kbd> / <kbd>Command</kbd>+<kbd>Down Arrow</kbd></td>
-      <td>Click a value then press <kbd>Shift</kbd>+<kbd>Page Up</kbd> / <kbd>Shift</kbd>+<kbd>Page Down</kbd></td>
+      <td>Click a value then press <kbd>Control</kbd>+<kbd>Up Arrow</kbd> / <kbd>Control</kbd>+<kbd>Down Arrow</kbd></td>
     </tr>
   </tbody>
 </table>
@@ -459,5 +467,20 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
       <td><kbd>Return</kbd></td>
       <td><kbd>Enter</kbd></td>
     </tr>
+    <tr>
+      <td>Expand all sub-properties of an object that's been logged to the Console</td>
+      <td>
+        Hold <kbd>Alt</kbd> then click <b>Expand</b>
+        <img class="cdt-inl" src="/web/tools/chrome-devtools/images/expand.png"/>
+      </td>
+      <td>
+        Hold <kbd>Alt</kbd> then click <b>Expand</b>
+        <img class="cdt-inl" src="/web/tools/chrome-devtools/images/expand.png"/>
+      </td>
+    </tr>
   </tbody>
 </table>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

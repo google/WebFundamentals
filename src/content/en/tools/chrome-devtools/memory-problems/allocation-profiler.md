@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the allocation profiler tool to find objects that aren't being properly garbage collected, and continue to retain memory.
 
-{# wf_updated_on: 2015-07-08 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # How to Use the Allocation Profiler Tool {: .page-title }
 
@@ -65,3 +66,7 @@ Clicking on a specific object in the heap will show its retaining tree in the bo
 You can also view memory allocation by JavaScript function. See
 [Investigate memory allocation by function](index#allocation-profile) for
 more information.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

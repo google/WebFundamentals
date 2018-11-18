@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2017-02-02T18:00:00.000Z #}
-{# wf_updated_on: 2017-02-02T18:00:00.000Z #}
+{# wf_published_on: 2017-02-02 #}
+{# wf_updated_on: 2017-11-06 #}
 {# wf_featured_image: /web/showcase/2017/images/bear71/featured.png #}
 {# wf_featured_snippet: <emphasis>Bear 71</emphasis> is an interactive documentary launched by the National Film Board of Canada in 2012 to much critical acclaim. When it was built, Flash was in its golden years but with the deprecation of browser support for Flash, we were eager to explore WebVR, both as a way to preserve the project's legacy and a chance to innovate how the story is experienced. #}
 {# wf_tags: webvr,casestudy #}
@@ -110,7 +110,7 @@ of this article, but here are a few key points:
   geometry.
 - Be sure your art style is economical to render. It's better to look like
   *Super Mario 64* at 60fps than *Mario Galaxy* at 6 fps.
-- Treat the user as a solipsist: find ways to only simulate the world around the
+- Treat the user as a solipsistic: find ways to only simulate the world around the
   player.
 - Look for opportunities to cache results of expensive computations in typed
   arrays. Memory is often cheaper than processing power.

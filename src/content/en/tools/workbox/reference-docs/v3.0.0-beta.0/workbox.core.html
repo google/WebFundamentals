@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Namespace: core</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small><a href="workbox.html">workbox</a>.<wbr></small><span class="symbol-name">core</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.0.0-beta.0</small></span>
+            </div>
+            <p>All of the Workbox service worker libraries use workbox-core for shared code as well as setting default values that need to be shared (like cache names).
+            </p>
+          </header>
+          <section>
+            <h2>Properties</h2>
+            <section>
+              <h3 id=".cacheNames" class="symbol-name">cacheNames</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Get the current cache names used by Workbox.</p>
+              <p><code>cacheNames.precache</code> is used for precached assets,
+                <code>cacheNames.googleAnalytics</code> is used by <code>workbox-google-analytics</code> to store <code>analytics.js</code>, and <code>cacheNames.runtime</code> is used for everything else.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>Object</code>&nbsp;An object with <code>precache</code> and <code>runtime</code> cache names.</p>
+                </dd>
+              </dl>
+              <h3 id=".LOG_LEVELS" class="symbol-name">LOG_LEVELS</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>The available log levels in Workbox: debug, log, warn, error and silent.</p>
+              <section>
+                <h4>Properties</h4>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>debug</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">int</p>
+                        <p>Prints all logs from Workbox. Useful for debugging.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>log</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">int</p>
+                        <p>Prints console log, warn, error and groups. Default for debug builds.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>warn</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">int</p>
+                        <p>Prints console warn, error and groups. Default for non-debug builds.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>error</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">int</p>
+                        <p>Print console error and groups.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>silent</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">int</p>
+                        <p>Force no logging from Workbox.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".logLevel" class="symbol-name">logLevel</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"></p>
+              <p>Get the current log level.</p>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>number</code>&nbsp;.</p>
+                </dd>
+              </dl>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id=".setCacheNameDetails" class="symbol-name">setCacheNameDetails</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> setCacheNameDetails(details)</p>
+              <p>You can alter the default cache names used by the Workbox modules by changing the cache name details.</p>
+              <p>Cache names are generated as <code>&lt;prefix&gt;-&lt;Cache Name&gt;-&lt;suffix&gt;</code>.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>details</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>details</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>prefix</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Object</p>
+                                <p>The string to add to the beginning of the precache and runtime cache names.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>suffix</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Object</p>
+                                <p>The string to add to the end of the precache and runtime cache names.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>precache</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Object</p>
+                                <p>The cache name to use for precache caching.
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>runtime</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Object</p>
+                                <p>The cache name to use for runtime caching.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>googleAnalytics</p>
+                              </td>
+                              <td>
+                                <p class="details-table-types">Object</p>
+                                <p>The cache name to use for
+                                  <code>workbox-google-analytics</code> caching.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".setLogLevel" class="symbol-name">setLogLevel</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> setLogLevel(newLevel)</p>
+              <p>Set the current log level passing in one of the values from LOG_LEVELS.
+              </p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>newLevel</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">number</p>
+                        <p>The new log level to use.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

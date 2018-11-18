@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Manifes aplikasi web adalah file JSON yang memberikan Anda kemampuan untuk mengontrol bagaimana aplikasi web atau situs terlihat oleh pengguna di daerah yang mereka harap akan melihat aplikasi asli (misalnya, layar beranda perangkat), mengarahkan apa yang bisa diluncurkan pengguna, dan menentukan tampilannya pada saat peluncuran.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-02-11 #}
 
 # Manifes Aplikasi Web {: .page-title }
@@ -249,7 +249,7 @@ yang mudah kita baca. Lihat [Manifes aplikasi
 web](/web/tools/chrome-devtools/progressive-web-apps#manifest) pada
 dokumen Chrome DevTools untuk informasi selengkapnya mengenai tab ini. Anda juga bisa
 menyimulasikan kejadian Add to Homescreen dari sini. Lihat [Menguji spanduk pemasangan
-aplikasi](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
+aplikasi](/web/fundamentals/app-install-banners#test)
 untuk informasi selengkapnya mengenai topik ini.
 
 Jika ingin pendekatan otomatis terhadap validasi manifes aplikasi web Anda,
@@ -270,7 +270,7 @@ Artikel ini memberikan pengenalan singkat untuk manifes aplikasi web, namun
 ada banyak hal lain untuk dipelajari.
 
 * Jika menggunakan manifes aplikasi web, Anda mungkin juga ingin
-menyiapkan [spanduk pemasangan aplikasi](/web/fundamentals/engage-and-retain/app-install-banners/). 
+menyiapkan [spanduk pemasangan aplikasi](/web/fundamentals/app-install-banners).
 
 * [Referensi lengkap](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 bagi manifes aplikasi web tersedia di Mozilla Developer Network.

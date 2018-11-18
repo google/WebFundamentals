@@ -1,0 +1,33 @@
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+title: Find a qualified web dev agency to help you build optimized web apps
+
+landing_page:
+  body_class: web-landing-page web-landing-page--agencies
+  custom_css_path: /web/agencies/css/web-agencies-styles.css
+  rows:
+  # DIRECTORY
+  - classname: devsite-landing-row-50 devsite-landing-row-large-headings
+    items:
+    - heading: Directory of Agencies Building Progressive Web Apps
+      description: >
+        Find a qualified web development agency to help you build optimized
+        and mobile friendly web apps.<br><br>
+        Has your agency built Progressive Web Apps for your clients ? If yes,
+        please use
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeRV9YHhGeofFw_PxLEVV50A-hxCygutjh7mw9U4ffqjVcxZA/viewform?usp=sf_link">
+        this application form</a> to be considered for being listed in this
+        directory.<br><br><p class='disclaimer'><small>Google Developers
+        does not endorse, or offer any warranty, regarding these certified
+        agencies. Each agency is fully responsible for their services, and is
+        not affiliated with Google Developers nor do they offer services on
+        behalf of Google Developers. Customers are fully responsible for their
+        use of services, if any. Google Developers will have no liability for
+        any products or services provided by an agency.
+        </small></p>
+
+  # DIRECTORY IFRAME
+  - classname: devsite-landing-row-100 programs-directory-ctn
+    items:
+    - custom_html: >
+        {% include "web/agencies/_partials/web-directory.html" %}

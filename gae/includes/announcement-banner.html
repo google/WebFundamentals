@@ -1,0 +1,8 @@
+{% if projectYaml.announcement %}
+<div class="devsite-banner devsite-banner-announcement
+{% if projectYaml.announcement.background %}devsite-background devsite-background-{{ projectYaml.announcement.background }}{% endif %}">
+  <div class="devsite-banner-inner">
+    {% autoescape off %}{{ projectYaml.announcement.description }}{% endautoescape %}
+  </div>
+</div>
+{% endif %}

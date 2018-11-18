@@ -21,7 +21,7 @@ HTML에서 요소를 물리적으로 이동하는 것은 때로 적합하지 못
 요소의 탭 위치를 설정합니다.
 
 `tabindex`는 어떤 요소에든 적용할 수 있습니다. 그러나
-모든 요소에서 반드시 필요한 것은 아니며 다양한 정수값 범위를 취합니다. 
+모든 요소에서 반드시 필요한 것은 아니며 다양한 정수값 범위를 취합니다.
 `tabindex`를 사용하면 포커스 가능한 요소에 대해 명시적 순서를 지정하고
 포커스 불가능한 요소를 탭 순서에 삽입하고 탭 순서에서
 요소를 제거합니다. 예를 들면 다음과 같습니다.
@@ -119,7 +119,7 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
 </select>
 
 어떤 키보드 동작을 구현할지 알기 어려울 수 있지만
-참조하면 도움이 될 만한 문서가 있습니다. 
+참조하면 도움이 될 만한 문서가 있습니다.
 [Accessible Rich Internet Applications(ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external }
 가이드는 구성 요소 유형과 이들이 지원하는 키보드 동작 유형을 보여줍니다.
 나중에 ARIA에 대해서는 더욱 상세히 설명하겠지만 지금 이 가이드는
@@ -232,7 +232,7 @@ DOM 시퀀스가 논리적인 탭 순서를 제공하도록 소스 코드를 적
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+<script src="https://www.gstatic.com/devrel-devsite/v9dcc115658e2b070ea1ae9baed63d566/developers/js/custom-elements.min.js"></script>
 
 <script>
   class RadioButton extends HTMLElement {

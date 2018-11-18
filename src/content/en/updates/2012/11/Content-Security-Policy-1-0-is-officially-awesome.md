@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-11-15 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2012-11-15 #}
-{# wf_tags: news,contentsecuritypolicy,security #}
+{# wf_tags: news,content-security-policy,security #}
+{# wf_blink_components: N/A #}
 
 # Content Security Policy 1.0 is officially awesome. {: .page-title }
 
@@ -16,14 +17,14 @@ Chrome Canary and WebKit nightlies now support the unprefixed `Content-Security-
 
 
       X-WebKit-CSP: script-src 'self'; object-src 'none'
-    
+
 
 
 You'll write:
 
 
     Content-Security-Policy: script-src 'self'; object-src 'none'
-    
+
 
 We expect other browser vendors to follow suit within the next few revisions, so it's a great idea to start sending the canonical header today.
 

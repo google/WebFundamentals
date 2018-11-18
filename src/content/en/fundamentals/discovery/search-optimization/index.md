@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-30 #}
 
 # Search Optimization {: .page-title }
@@ -356,3 +357,6 @@ Check out concrete steps at the respective search engine's help pages:
 * [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)
 * [Yandex](https://help.yandex.com/search/robots/logs.xml)
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

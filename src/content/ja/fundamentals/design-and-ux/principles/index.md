@@ -2,17 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Google と AnswerLab は、多様なモバイルサイトにおけるユーザーのインタラクションについて、調査を実施しました。この調査の目的は、「優れたモバイルサイトの条件とは何か」という疑問に答えることです。
 
-{# wf_published_on:2014-08-08 #}
-{# wf_updated_on:2015-09-17 #}
+{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on: 2018-02-05 #}
 
 # 優れたモバイル サイトの条件とは {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/jennygove.html" %}
 
-Google と AnswerLab は、この疑問の答えを出すために[調査](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)を実施しました。 
+Google と AnswerLab は、この疑問の答えを出すために[調査](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals)を実施しました。
 
 > モバイル ユーザーは目的指向が非常に高く、自分独自の条件に合わせて、必要なものをすぐに入手できることを期待しています。
- 
+
 
 この調査は、参加者との対面のユーザビリティ セッションという形で、119 時間にわたって米国で実施されました。参加者は、さまざまなモバイルサイトで主なタスクを実行することを求められました。iOS と Android のユーザーが含まれており、参加者自身のスマートフォンでサイトをテストしました。参加者はサイトごとに購入や予約などコンバージョンに特化したタスクを実行し、そのときの感想を求められました。
 
@@ -207,7 +207,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 
 ##  コマースとコンバージョン
 
-ポイント: カスタマー ジャーニーについて理解し、ユーザーの好みに応じたコンバージョンを実現してください。 
+ポイント: カスタマー ジャーニーについて理解し、ユーザーの好みに応じたコンバージョンを実現してください。
 
 ###  登録しなくても閲覧できるようにする
 
@@ -338,7 +338,7 @@ Google と AnswerLab は、この疑問の答えを出すために[調査](https
 たとえば、出荷先および請求先住所を取得するときは、[`requestAutocomplete`](/web/fundamentals/design-and-ux/input/forms/use-request-auto-complete)
 の使用を試みるか、出荷先住所と請求先住所を相互にコピーできるようにします。
 
- 
+
 
 ##  ユーザビリティとフォーム ファクタ
 

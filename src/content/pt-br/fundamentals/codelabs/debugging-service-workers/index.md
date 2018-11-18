@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Neste codelab, você aprenderá como depurar um service worker usando o novo painel DevTools Application. Você também aprenderá como simular uma notificação push para verificar se sua inscrição está configurada corretamente.
 
-{# wf_updated_on: 2016-10-19T18:28:32Z #}
+{# wf_updated_on: 2016-10-19 #}
 {# wf_published_on: 2016-01-01 #}
 
 

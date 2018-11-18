@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference of Chrome DevTools Network panel features.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-08-23 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -518,7 +519,7 @@ To view the response body to a request:
 
 1. Click the URL of the request, under the **Name** column of the Requests
    table.
-1. Click the **Headers** tab.
+1. Click the **Response** tab.
 
 <figure>
   <img src="imgs/response.svg"
@@ -537,7 +538,7 @@ To view HTTP header data about a request:
 1. Click the **Headers** tab.
 
 <figure>
-  <img src="imgs/headers.svg"
+  <img src="/web/tools/chrome-devtools/images/headers.svg"
        alt="The Headers tab.">
   <figcaption>
     <b>Figure 23</b>. The Headers tab, outlined in blue
@@ -742,20 +743,60 @@ requests aren't counted.
   </figcaption>
 </figure>
 
-## Export requests data
+See [View the uncompressed size of a resource](#uncompressed) to see how large
+resources are after the browser uncompresses them.
 
-### Save a request as HAR with content {: #save-as-har }
+### View the stack trace that caused a request {: #initiator-stack-trace }
 
-To save a request in the HAR format with content:
+When a JavaScript statement causes a resource to be requested, hover over the **Initiator**
+column to view the stack trace leading up to the request.
 
-1. Right-click the row containing the request in the Requests table.
-1. Select **Save as HAR with Content**.
+<figure>
+  <img src="imgs/initiator-stack.png"
+       alt="The stack trace leading up to a resource request">
+  <figcaption>
+    <b>Figure 32</b>. The stack trace leading up to a resource request
+  </figcaption>
+</figure>
+
+### View the uncompressed size of a resource {: #uncompressed }
+
+Click **Use Large Request Rows** ![Use Large Request
+Rows](imgs/large-resource-rows-button.png){:.inline-icon} and then look at the
+bottom value of the **Size** column.
+
+<figure>
+  <img src="imgs/large-request-rows.png"
+       alt="An example of uncompressed resources.">
+  <figcaption>
+    <b>Figure 33</b>. The compressed size of the <code>jquery-bundle.js</code> file
+    that was sent over the network was <code>30.9 KB</code>, whereas the uncompressed size was
+    <code>86.3 KB</code>
+  </figcaption>
+</figure>
+
+## Export requests data {: #export }
+
+### Save all network requests to a HAR file {: #save-as-har }
+
+To save all network requests to a HAR file:
+
+1. Right-click any request in the Requests table.
+1. Select **Save as HAR with Content**. DevTools saves all requests that have occurred since you
+   opened DevTools to the HAR file. There is no way to filter requests, or to save just a single
+   request.
+
+Once you've got a HAR file, you can import it back into DevTools for analysis. Just
+drag-and-drop the HAR file into the Requests table. See also [HAR Analyzer][HAR
+Analyzer]{: .external }.
+
+[HAR Analyzer]: https://toolbox.googleapps.com/apps/har_analyzer/
 
 <figure>
   <img src="imgs/save-as-har.png"
-       alt="Selecting Save As HAR With Content.">
+       alt="Selecting Save as HAR with Content.">
   <figcaption>
-    <b>Figure 32</b>. Selecting Save As HAR With Content
+    <b>Figure 34</b>. Selecting <b>Save as HAR with Content</b>
   </figcaption>
 </figure>
 
@@ -773,7 +814,7 @@ hover over **Copy**, and select one of the following options:
 <figure>
   <img src="imgs/copy.png" alt="Selecting Copy Response.">
   <figcaption>
-    <b>Figure 33</b>. Selecting Copy Response
+    <b>Figure 35</b>. Selecting Copy Response
   </figcaption>
 </figure>
 
@@ -790,7 +831,7 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 <figure>
   <img src="imgs/hide-filters.svg" alt="The Hide Filters button">
   <figcaption>
-    <b>Figure 34</b>. Hide Filters, outlined in blue
+    <b>Figure 36</b>. Hide Filters, outlined in blue
   </figcaption>
 </figure>
 
@@ -798,24 +839,10 @@ Click **Filter** ![Filter][filter]{: .devtools-inline } to hide it.
 
 ### Use large request rows {: #request-rows }
 
-By default, DevTools uses small rows in the [Requests pane](#requests).
-Click **Use large request rows** ![Use large request
-rows][large]{:.devtools-inline} to use large rows, instead.
-
-<figure>
-  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
-  <figcaption>
-    <b>Figure 35</b>. Large Request Rows, outlined in blue
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="imgs/small-request-rows.png"
-       alt="An example of small request rows in the Requests pane.">
-  <figcaption>
-    <b>Figure 36</b>. An example of small request rows in the Requests pane
-  </figcaption>
-</figure>
+Use large rows when you want more whitespace in your network
+requests table. Some columns also provide a little more information
+when using large rows. For example, the bottom value of the **Size**
+column is the uncompressed size of a request.
 
 <figure>
   <img src="imgs/large-request-rows.png"
@@ -825,7 +852,17 @@ rows][large]{:.devtools-inline} to use large rows, instead.
   </figcaption>
 </figure>
 
+Click **Use large request rows** ![Use large request
+rows][large]{:.devtools-inline} to enable large rows.
+
 [large]: imgs/large-resource-rows-button.png
+
+<figure>
+  <img src="imgs/large-request-rows.svg" alt="The Large Request Rows button">
+  <figcaption>
+    <b>Figure 38</b>. Large Request Rows, outlined in blue
+  </figcaption>
+</figure>
 
 ### Hide the Overview pane {: #hide-overview }
 
@@ -835,8 +872,12 @@ Click **Hide overview** ![Hide overview][hide]{:.devtools-inline} to hide it.
 <figure>
   <img src="imgs/hide-overview.svg" alt="The Hide Overview button">
   <figcaption>
-    <b>Figure 38</b>. Hide Overview, outlined in blue
+    <b>Figure 39</b>. Hide Overview, outlined in blue
   </figcaption>
 </figure>
 
 [hide]: imgs/hide-overview.png
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

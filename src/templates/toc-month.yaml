@@ -1,4 +1,5 @@
 # {# wf_auto_generated #}
+# {# wf_template: src/templates/toc-month.yaml #}
 # ATTENTION - This file is auto-generated, changes must be made to the template!
 toc:
 - title: "{{{title}}}"

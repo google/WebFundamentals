@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Source: workbox-cli/src/app.js</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-banner" role="banner">
+        </div>
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1>Source: workbox-cli/src/app.js</h1>
+          </header>
+          <article>
+            <pre class="prettyprint linenums"><code>/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+**/
+
+const assert &#x3D; require(&#x27;assert&#x27;);
+const path &#x3D; require(&#x27;path&#x27;);
+const prettyBytes &#x3D; require(&#x27;pretty-bytes&#x27;);
+const workboxBuild &#x3D; require(&#x27;workbox-build&#x27;);
+
+const errors &#x3D; require(&#x27;./lib/errors&#x27;);
+const logger &#x3D; require(&#x27;./lib/logger&#x27;);
+const readConfig &#x3D; require(&#x27;./lib/read-config&#x27;);
+const runWizard &#x3D; require(&#x27;./lib/run-wizard&#x27;);
+
+module.exports &#x3D; async (command, configFile) &#x3D;&gt; {
+  assert(command, errors[&#x27;missing-command-param&#x27;]);
+
+  switch (command) {
+    case &#x27;wizard&#x27;: {
+      await runWizard();
+      break;
+    }
+
+    case &#x27;generateSW&#x27;:
+    case &#x27;injectManifest&#x27;: {
+      assert(configFile, errors[&#x27;missing-config-file-param&#x27;]);
+
+      // TODO: Confirm that this works with Windows paths.
+      const configPath &#x3D; path.resolve(process.cwd(), configFile);
+      let config;
+      try {
+        config &#x3D; readConfig(configPath);
+      } catch (error) {
+        logger.error(errors[&#x27;invalid-common-js-module&#x27;]);
+        throw error;
+      }
+
+      try {
+        const {size, count} &#x3D; await workboxBuild[command](config);
+        logger.log(&#x60;The service worker was written to ${config.swDest}\n&#x60; +
+          &#x60;${count} files will be precached, totalling ${prettyBytes(size)}.&#x60;);
+      } catch (error) {
+        // See https://github.com/hapijs/joi/blob/v11.3.4/API.md#errors
+        if (typeof error.annotate &#x3D;&#x3D;&#x3D; &#x27;function&#x27;) {
+          throw new Error(
+            &#x60;${errors[&#x27;config-validation-failed&#x27;]}\n${error.annotate()}&#x60;);
+        }
+        logger.error(errors[&#x27;workbox-build-runtime-error&#x27;]);
+        throw error;
+      }
+      break;
+    }
+
+    default: {
+      throw new Error(errors[&#x27;unknown-command&#x27;] + &#x60; &#x60; + command);
+    }
+  }
+};
+</code></pre>
+          </article>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

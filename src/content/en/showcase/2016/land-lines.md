@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2016-12-15T19:00:00.000Z #}
-{# wf_updated_on: 2016-12-15T19:00:00.000Z #}
+{# wf_published_on: 2016-12-15 #}
+{# wf_updated_on: 2016-12-15 #}
 {# wf_featured_image: /web/showcase/2016/images/land-lines/card.png #}
 {# wf_featured_snippet: Land Lines is an experiment that lets you explore Google Earth satellite images through gesture. Using a combination of machine learning, optimized algorithms,and graphics card power, the experiment is able to run efficiently on your phone's web browser without a need for backend servers. This is a look into our development process and the various approaches we tried leading us to the final result. #}
 {# wf_tags: experiment,casestudy #}

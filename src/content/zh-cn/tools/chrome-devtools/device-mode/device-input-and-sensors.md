@@ -33,7 +33,7 @@ description:由于大多数桌面设备都没有触摸屏、GPS 芯片和加速�
   </div>
 </div>
 
-注：如果您的应用检测到使用 JavaScript（如 Modernizr）的传感器加载，请确保在启用传感器模拟器之后重新加载页面。
+Note: 如果您的应用检测到使用 JavaScript（如 Modernizr）的传感器加载，请确保在启用传感器模拟器之后重新加载页面。
 
 ## 替换地理定位数据
 

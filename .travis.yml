@@ -1,5 +1,4 @@
 language: node_js
-node_js: '4'
 dist: trusty
 sudo: false
 git:
@@ -18,11 +17,13 @@ install:
   - npm run clean
 script:
   - npm run build
+  - gulp puppeteer:build
   - npm run test
   - node ./tools/travis/addCommitComment.js
 after_success:
   - ./tools/travis/deploy-master.sh
   - ./tools/travis/deploy-pr.sh
+  - ./tools/travis/flush-memcache.sh
   - node ./tools/travis/removeStagedPRs.js
 branches:
   only:

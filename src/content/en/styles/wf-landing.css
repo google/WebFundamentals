@@ -1,0 +1,128 @@
+/* Classes for Hero */
+.wf-hero-flex-item {
+  flex-basis: 0%;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 20px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.wf-hero-flex-item > p :link,
+.wf-hero-flex-item > p :visited {
+  color: white;
+}
+.wf-hero-flex-item > img {
+  float: left;
+  margin-right: 16px;
+}
+.wf-hero-flex-item > h3 {
+  /* Material Headline */
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.wf-hero-flex-item > p {
+  /* Material Subheading */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 8px;
+}
+.wf-hero-webfu {
+  background-color: #FED400;
+  background-image: url('data:image/svg+xml;utf8,<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 0,100 100,0" style="fill:#ffffff;opacity:0.30" /></svg>');
+  padding-left: 20px;
+}
+.wf-hero-tools {
+  background-color: #34B8F8;
+  background-image: url('data:image/svg+xml;utf8,<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,0 100,0 100,100" style="fill:#ffffff;opacity:0.12" /></svg>');
+  padding-right: 20px;
+}
+.wf-hero-flex-item img {
+  height: 75px;
+  width: 75px;
+}
+.wf-hero-flex-item .button {
+  float: right;
+  margin: 0;
+}
+@media screen and (min-width: 480px) {
+  .wf-hero-flex {display:flex;}
+}
+@media screen and (min-width: 600px) {
+  .wf-hero-flex-item img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .wf-hero-flex-item img {
+    height: 125px;
+    width: 125px;
+  }
+  .wf-hero-webfu {
+    padding-left: 120px;
+  }
+  .wf-hero-tools {
+    padding-right: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .wf-hero-flex-item img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* WF Landing Rows */
+.wf-landing-row .devsite-landing-row-item > .devsite-landing-row-item-image {
+  margin-bottom: 16px;
+}
+.wf-landing-row .devsite-landing-row-item h3 {
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.wf-landing-row .devsite-landing-row-item .devsite-landing-row-item-buttons {
+  margin: auto 12px -8px -12px;
+}
+.wf-landing-row .devsite-landing-row-item .button {
+  width: 100%;
+}
+
+/* Updates Section */
+.wf-updates-item h5 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.wf-updates-item p {
+  margin-top: 0;
+}
+
+/* hide banner from landing */
+.hide-devsite-banner .devsite-banner {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+  .wf-cds-banner {
+    background-image: url('/web/images/cds18-banner-img.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+    background-size: auto 135%;
+  }
+
+  .wf-cds-banner .devsite-landing-row-item-description {
+    max-width: 40%;
+  }
+
+  .wf-cds-banner h3 {
+    margin-bottom: 16px !important;
+  }
+}
+

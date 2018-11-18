@@ -1,0 +1,47 @@
+toc:
+- title: Help, I've been hacked
+  section:
+  - title: Overview
+    path: /web/fundamentals/security/hacked/
+    step_group: security-hacked
+  - title: How do I know if my site is hacked?
+    path: /web/fundamentals/security/hacked/how_do_I_know_if_site_hacked
+    step_group: security-hacked
+  - title: Top ways websites get hacked by spammers
+    path: /web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers
+  - title: Build a support team
+    path: /web/fundamentals/security/hacked/support_team
+    step_group: security-hacked
+  - title: Quarantine your site
+    path: /web/fundamentals/security/hacked/quarantine_site
+    step_group: security-hacked
+  - title: Use Search Console
+    path: /web/fundamentals/security/hacked/use_search_console
+    step_group: security-hacked
+  - title: Assess spam damage
+    section:
+    - title: Overview
+      path: /web/fundamentals/security/hacked/hacked_with_spam
+      step_group: security-hacked
+    - title: Fixing the Japanese keyword hack
+      path: /web/fundamentals/security/hacked/fixing_the_japanese_keyword_hack
+    - title: Fixing the gibberish hack
+      path: /web/fundamentals/security/hacked/fixing_the_gibberish_hack
+    - title: Fixing the cloaked keywords and links hack
+      path: /web/fundamentals/security/hacked/fixing_the_cloaked_keywords_hack
+  - title: Assess malware damage
+    path: /web/fundamentals/security/hacked/hacked_with_malware
+    step_group: security-hacked
+  - title: Identify the vulnerability
+    path: /web/fundamentals/security/hacked/vulnerability
+    step_group: security-hacked
+  - title: Clean and maintain your site
+    path: /web/fundamentals/security/hacked/clean_site
+    step_group: security-hacked
+  - title: Request a review
+    path: /web/fundamentals/security/hacked/request_review
+    step_group: security-hacked
+  - title: Glossary for hacked sites
+    path: /web/fundamentals/security/hacked/glossary_for_hacked_sites
+  - title: FAQs for hacked sites
+    path: /web/fundamentals/security/hacked/FAQs_for_hacked_sites

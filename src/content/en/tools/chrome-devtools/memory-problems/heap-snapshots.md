@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-06-08 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # How to Record Heap Snapshots {: .page-title }
 
@@ -254,3 +255,6 @@ To read more about DOM leaks and memory analysis fundamentals checkout
 </p>
 
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

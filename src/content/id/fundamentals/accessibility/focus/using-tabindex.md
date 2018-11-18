@@ -120,7 +120,7 @@ keyboard tetap bisa berinteraksi dengan kontrol Anda.
 
 Boleh jadi sulit mengetahui perilaku keyboard mana yang akan diimplementasikan, namun ada
 dokumen berguna yang bisa Anda rujuk. Panduan
-[Accessible Rich Internet Applications (ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external } 
+[Accessible Rich Internet Applications (ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external }
 mencantumkan daftar tipe komponen dan macam tindakan keyboard yang didukungnya.
 Kita akan membahas ARIA secara lebih detail nanti, namun untuk saat ini mari kita gunakan panduan tersebut untuk membantu
 menambahkan dukungan keyboard ke sebuah komponen baru.
@@ -232,7 +232,7 @@ DevTools untuk mengamati pergerakan tabindex dari satu tombol radio ke tombol be
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+<script src="https://www.gstatic.com/devrel-devsite/v9dcc115658e2b070ea1ae9baed63d566/developers/js/custom-elements.min.js"></script>
 
 <script>
   class RadioButton extends HTMLElement {

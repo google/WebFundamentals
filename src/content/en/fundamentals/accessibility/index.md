@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Improving accessibility for web pages
 
 
-{# wf_updated_on: 2017-07-19 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-26 #}
 
 # Accessibility {: .page-title }
@@ -375,3 +376,6 @@ of creating accessible web sites. However, we'll give you enough information to
 get started, and point you to some good places where you can learn more about
 each topic.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

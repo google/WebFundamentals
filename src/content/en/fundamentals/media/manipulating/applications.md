@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much media work requires changing characteristics of media files. In this section, I intend to provide an easy onramp into that world.
 
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-09 #}
+{# wf_blink_components: Blink>Media #}
 
 # Application Primers {: .page-title }
 
@@ -200,3 +201,7 @@ So that's a few bits about media manipulation software in a nutshell. Now jump
 next door to the
 [cheat sheet](cheatsheet). Check back every few weeks as we continue to add new
 content about media for the web.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

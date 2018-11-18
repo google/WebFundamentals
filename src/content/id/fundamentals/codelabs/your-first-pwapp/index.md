@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Di codelab ini, Anda membangun Progressive Web App, yang dimuat dengan cepat, bahkan pada jaringan yang tidak stabil, memiliki ikon di layar beranda, dan dimuat dengan pengalaman tingkat atas selayar penuh.
 
-{# wf_updated_on: 2017-01-05T16:32:36Z #}
+{# wf_updated_on: 2017-01-05 #}
 {# wf_published_on: 2016-01-01 #}
 
 

@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: La habilitación de HTTPS en tus servidores es fundamental para la seguridad de tus páginas web. 
+description: La habilitación de HTTPS en tus servidores es fundamental para la seguridad de tus páginas web.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-02-12 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Habilitación de HTTPS en tus servidores {: .page-title }
@@ -199,7 +199,7 @@ Además, si incluyes vínculos con otras páginas en tu sitio, los usuarios podr
 sufrir una degradación de HTTPS a HTTP.
 
 Estos problemas se presentan cuando en tus páginas se incluyen URL totalmente
-calificadas dentro del sitio en las que se use el esquema *http://*. 
+calificadas dentro del sitio en las que se use el esquema *http://*.
 
 <p><span class="compare-worse">No recomendado</span>: no recomendamos que uses URL totalmente calificadas dentro del sitio.</p>
 
@@ -250,7 +250,7 @@ Si tu sitio depende de una secuencia de comandos, una imagen u otros recursos of
 tercero, como CDN o jquery.com, tienes dos opciones:
 
 * Usar URL relativas de protocolo para estos recursos. Si el tercero no
-ofrece HTTPS, pídele que lo haga. La mayoría de ellos ya lo hacen, incluido jquery.com. 
+ofrece HTTPS, pídele que lo haga. La mayoría de ellos ya lo hacen, incluido jquery.com.
 * Ofrecer los recursos desde un servidor que controles y en que ofrezca tanto HTTP
 como HTTPS. De todos modos, esta suele ser una buena idea, ya que luego puedes tener mejor
 control sobre la apariencia, el rendimiento y la seguridad de tu sitio. Además,
@@ -267,7 +267,7 @@ permite que los motores de búsqueda puedan determinar la mejor forma de acceder
 
 ## Activa la seguridad de transporte estricta y cookies de seguridad
 
-En este punto, ya está preparado para utilizar el protocolo HTTPS de forma segura. 
+En este punto, ya está preparado para utilizar el protocolo HTTPS de forma segura.
 
 * Usa la seguridad de transporte estricta de HTTP (HSTS) para evitar el costo del redireccionamiento mediante el código 301.
 * Configura siempre el marcador Secure para las cookies.
@@ -319,7 +319,7 @@ Si las capas de contenido y apps están bien configuradas (consulta
 restantes sobre el rendimiento de la TLS son generalmente pequeñas en relación con el
 costo total de la app. Además, puedes reducir y amortizar
 esos costos. (Para obtener muy buenos consejos sobre la optimización de la TLS y en general, consulta
-[High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) de Ilya Grigorik). Consulta también [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) y [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/) de Ivan Ristic.
+[High Performance Browser Networking](https://hpbn.co/) de Ilya Grigorik). Consulta también [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/) y [Bulletproof SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/) de Ivan Ristic.
 
 En algunos casos, la TLS puede mejorar el rendimiento, principalmente porque permite que
 HTTP/2 sea posible. Chris Palmer dio una charla sobre [el rendimiento de HTTPS y HTTP/2 en la Cumbre de Desarrolladores de Chrome del 2014](/web/shows/cds/2014/tls-all-the-things).

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Preventing Mixed Content {: .page-title }
@@ -309,3 +309,7 @@ across your site for you, such as
 [HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external }
 or
 [Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external }
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

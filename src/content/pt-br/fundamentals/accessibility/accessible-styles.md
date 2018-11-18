@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Uso do estilo adequado para aprimorar a acessibilidade
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Estilos acessíveis {: .page-title }
@@ -227,11 +227,9 @@ que é aproximadamente o tamanho da área de toque do dedo de uma pessoa.
 
 ![um diagrama que mostra alguns alvos de toque de 48 pixels](imgs/touch-target.jpg)
 
-Alvos de toque também devem ter um espaço de cerca de 32 pixels
+Alvos de toque também devem ter um espaço de cerca de 8 pixels
 entre si, tanto horizontal como verticalmente, de modo que o dedo de um
 usuário pressionando um alvo de toque não pressione outro alvo de toque sem querer.
-
-![um diagrama que mostra 32 pixels de espaço em volta de um alvo de toque](imgs/touch-target2.jpg)
 
 ## Cor e contraste
 

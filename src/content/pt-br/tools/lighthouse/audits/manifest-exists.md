@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência para a auditoria do Lighthouse “O manifesto existe”.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-20 #}
 
 # O manifesto existe  {: .page-title }
@@ -21,7 +21,7 @@ tela inicial de um usuário](https://codelabs.developers.google.com/codelabs/add
 
 Para obter um guia mais informal e mais aprofundado sobre os manifestos
 de aplicativos da Web, consulte [Melhorar as experiências da Web com um manifesto
-de aplicativo da Web](/web/fundamentals/engage-and-retain/web-app-manifest).
+de aplicativo da Web](/web/fundamentals/web-app-manifest).
 
 Use as informações obtidas nesses guias para adicionar suporte a A2HS em seu
 próprio aplicativo da Web.

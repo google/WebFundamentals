@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 전체 화면 보기
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-10-01 #}
 
 # 전체 화면 경험 구현 {: .page-title }
@@ -231,7 +231,7 @@ iOS Safari 모델과 유사합니다.
 
 #### 웹 앱 매니페스트(Chrome, Opera, Firefox, Samsung)
 
-[웹 애플리케이션의 매니페스트](/web/fundamentals/engage-and-retain/web-app-manifest/)
+[웹 애플리케이션의 매니페스트](/web/fundamentals/web-app-manifest)
 는 원하는 영역(예: 모바일 홈 화면)에 표시되는 앱의 모양을 제어할 수 있는 기능을
 개발자에게 제공하고 실행 가능한 것과 실행 방식을
 지시하는 단순한 JSON 파일입니다.

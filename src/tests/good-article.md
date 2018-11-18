@@ -6,6 +6,7 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget d
 {# wf_updated_on: 2017-02-09 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,chrome56, new-in-chrome,webvr #}
+{# wf_blink_components: n/a #}
 
 # This Is The Page Title {: .page-title }
 
@@ -15,7 +16,7 @@ libero.
 ## Images
 
 Sed porttitor ex eget dolor fringilla, eget rutrum odio tempus. Curabitur
-feugiat vitae ex eu tempor. 
+feugiat vitae ex eu tempor.
 
 ![Alt text](web-fundamentals-icon192x192.png "WF Logo")
 
@@ -35,18 +36,18 @@ Phasellus quis nunc leo. Donec lacus mauris, placerat sed turpis ac, eleifend
 iaculis ipsum. Curabitur convallis felis vel lectus mattis, a accumsan magna
 consectetur.
 
-## Includes 
+## Includes
 
 Donec volutpat convallis ligula, nec dapibus enim sodales at. Aenean
 ullamcorper tristique dapibus. Aliquam risus orci, commodo nec dui eget,
-tempus laoreet tellus. 
+tempus laoreet tellus.
 
 ### Author includes
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
 Morbi ultricies varius accumsan. Mauris vel odio semper, ultricies
-diam eu, lobortis enim. 
+diam eu, lobortis enim.
 
 ### HTML includes
 
@@ -54,7 +55,7 @@ diam eu, lobortis enim.
 
 Donec suscipit ac sapien ultricies sodales. Vivamus
 purus odio, fringilla at accumsan ut, luctus eu dui. Curabitur vel faucibus
-ante. Phasellus cursus tempus tristique. 
+ante. Phasellus cursus tempus tristique.
 
 ### Markdown includes
 

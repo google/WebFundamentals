@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop, or anything else with a screen.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-29 #}
+{# wf_blink_components: Blink>CSS #}
 
 # Responsive Web Design Basics {: .page-title }
 
@@ -510,3 +511,7 @@ query is active. Right-click on a bar to jump to the media query's
 definition. See 
 [Media queries](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#media-queries)
 for more help.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

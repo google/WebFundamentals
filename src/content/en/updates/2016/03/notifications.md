@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: There are lots of great new features in Chrome 50 for Notifications, here is a rundown.
 
-{# wf_updated_on: 2016-03-13 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
+{# wf_blink_components: N/A #}
 
 # Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps {: .page-title }
 
@@ -24,7 +25,7 @@ ability to:
 
 * add icons to notification buttons,
 * modify the timestamp to help create a consistent experience,
-* track notification close events to help synchronise notifications and provide
+* track notification close events to help synchronize notifications and provide
   analytics,
 * manage the renotify experience when a notification replaces the currently
   displayed notification.
@@ -57,7 +58,7 @@ you can now specify an image on the action button:
 
 The action icon's appearance differs by platform. For example, on Android the
 icon will have a dark grey filter applied in Lollipop and above, and a white
-filter pre-Lollipop, while on desktop it will be full colour. (Note: there is
+filter pre-Lollipop, while on desktop it will be full color. (Note: there is
 [discussion about the future of this on desktop](https://bugs.chromium.org/p/chromium/issues/detail?id=589837).) Some
 platforms might not even be able to display action icons, so ensure that you are
 using the icons to provide context to the action and not as the sole indicator
@@ -81,13 +82,13 @@ understand how your users are interacting with your notifications. Are they
 leaving them open for a long time and then actively dismissing them or are they
 acting on them right away.
 
-One popular use case is to be able to synchronise notifications between devices.
+One popular use case is to be able to synchronize notifications between devices.
 If the user dismisses a notification on their desktop device, the same
 notification on their mobile device should also be dismissed. We don't yet have
 the ability to do this silently (remember every push message must have a
 notification displayed), but by using notificationclose it opens up the ability
 to handle this by allowing you to track the notification state for the user on
-your server and synchronise that with the other devices as the user uses them.
+your server and synchronize that with the other devices as the user uses them.
 
 To use the notificationclose event, register it inside your service worker and
 it will fire only when the user has actively dismissed a notification, for
@@ -127,7 +128,7 @@ existing one, it would run a vibration pattern or play an audible alert and this
 could cause frustration for your users.  Now In Chrome 50, [you now have
 control](https://bugs.chromium.org/p/chromium/issues/detail?id=442133) over what
 happens during the renotification via a simple boolean flag called 'renotify'.
-The new default behaviour when using the same 'tag' for subsequent notifications
+The new default behavior when using the same 'tag' for subsequent notifications
 is to be silent and as the developer you must opt in to "re-notifying" the user
 by setting the flag to "true".
 
@@ -163,6 +164,6 @@ The timestamp is currently only visible on Chrome for Android. Although it is
 not visible on desktop, it will affect the notification order on both mobile and
 desktop.
 
-Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
 {% include "comment-widget.html" %}

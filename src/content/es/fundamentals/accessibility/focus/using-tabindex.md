@@ -120,7 +120,7 @@ el teclado también puedan interactuar con tu control.
 
 Es difícil conocer qué comportamientos de teclado implementar, pero existe un
 documento útil que puedes consultar. El
-sitio sobre las [prácticas para autores de apps de Internet enriquecidas accesibles (ARIA)](https://www.w3.org/TR/wai-aria-practices/){: .external } 
+sitio sobre las [prácticas para autores de apps de Internet enriquecidas accesibles (ARIA)](https://www.w3.org/TR/wai-aria-practices/){: .external }
 contiene una guía que enumera los tipos de componentes y qué tipos de acciones de teclado admiten.
 Hablaremos con mayor profundidad sobre ARIA más adelante, pero por ahora usemos la guía para
 ayudarnos a agregar compatibilidad con el teclado a un componente nuevo.
@@ -232,7 +232,7 @@ DevTools para observar el desplazamiento del tabindex de un botón de selección
   </radio-group>
 </div>
 
-<script src="https://cdn.rawgit.com/webcomponents/custom-elements/master/custom-elements.min.js"></script>
+<script src="https://www.gstatic.com/devrel-devsite/v9dcc115658e2b070ea1ae9baed63d566/developers/js/custom-elements.min.js"></script>
 
 <script>
   class RadioButton extends HTMLElement {

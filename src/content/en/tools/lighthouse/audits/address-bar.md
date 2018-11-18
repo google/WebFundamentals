@@ -2,17 +2,18 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Address Bar Matches Brand Colors" Lighthouse audit.
 
-{# wf_updated_on: 2017-09-02 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-05-12 #}
+{# wf_blink_components: N/A #}
 
 # Address Bar Matches Brand Colors  {: .page-title }
 
-## Why the audit is important {: #why }
+## Overview {: #overview }
 
 Theming the browser's address bar to match your brand's colors provides
 a more immersive user experience.
 
-## How to pass the audit {: #how }
+## Recommendations {: #recommendations }
 
 To ensure that the address bar is always themed to your colors:
 
@@ -45,10 +46,10 @@ CSS color value.
       ...
     }
 
-See [Manifest Exists](manifest-exists#how) for more resources on adding a
+See [Manifest Exists](manifest-exists#recommendations) for more resources on adding a
 manifest to your app.
 
-{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
+## More information {: #more-info }
 
 The audit passes if Lighthouse finds a `theme-color` meta tag in the page's
 HTML and a `theme_color` property in the Web App Manifest. Lighthouse does
@@ -56,37 +57,4 @@ not test whether the values are valid CSS color values.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Address Bar / Helpful';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "This Doc Was Helpful"
-      },
-      "response": "Thanks for the feedback.",
-      "analytics": {
-        "label": label
-      }
-    },
-    {
-      "button": {
-        "text": "This Doc Was Not Helpful"
-      },
-      "response": 'Sorry to hear that. Please <a href="' + url +
-          '" target="_blank">open a GitHub issue</a> and tell us how to ' +
-          'make it better.',
-      "analytics": {
-        "label": label,
-        "value": 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}

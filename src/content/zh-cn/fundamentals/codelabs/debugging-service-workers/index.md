@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:在此代码实验室中，您将学习如何使用新版 DevTools Application 面板调试服务工作线程。您还将学习如何模拟推送通知以验证您的订阅是否正确设置。
 
-{# wf_updated_on:2016-10-19T18:28:32Z #}
+{# wf_updated_on:2016-10-19 #}
 {# wf_published_on:2016-01-01 #}
 
 

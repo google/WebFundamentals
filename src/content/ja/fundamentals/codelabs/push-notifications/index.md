@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: このコードラボでは、プッシュ通知をウェブアプリに追加する方法を学びます。
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2016-11-21T15:42:20Z #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -138,7 +138,7 @@ Chrome DevTools を開き、コンソールに `Service Worker is registered` �
 
 ###  アプリケーション サーバーキーの入手
 
-このコードラボでの作業には、アプリケーション サーバーキーをいくつか生成する必要があります。生成するにはこのコンパニオン サイト: [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/) を使用します。
+このコードラボでの作業には、アプリケーション サーバーキーをいくつか生成する必要があります。生成するにはこのコンパニオン サイト: [https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/) を使用します。
 
 ここで公開鍵と秘密鍵のペアを生成できます。
 
@@ -529,7 +529,7 @@ DevTools を使用してウェブアプリで通知を表示できることを�
 
 通常このプロセスはウェブページからバックエンドに登録を送信し、バックエンドは登録のエンドポイントに対する API 呼び出しを生成してプッシュ メッセージをトリガーします。
 
-これはこのコードラボの範囲外ですが、このコードラボのコンパニオン サイト（[https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)）を使用して実際のプッシュ メッセージをトリガーできます。ページの下部の登録をコピーして貼り付けます。
+これはこのコードラボの範囲外ですが、このコードラボのコンパニオン サイト（[https://web-push-codelab.glitch.me/](https://web-push-codelab.glitch.me/)）を使用して実際のプッシュ メッセージをトリガーできます。ページの下部の登録をコピーして貼り付けます。
 
 ![cf0e71f76cb79cc4.png](img/cf0e71f76cb79cc4.png)
 
@@ -644,13 +644,13 @@ swRegistration.pushManager.getSubscription()
 
 これでこのコードラボは完了です。
 
-このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/engage-and-retain/push-notifications/)。
+このコードラボでは、プッシュをウェブアプリに追加して使用できるようにする方法を説明しました。ウェブ通知で実行できる内容の詳細については、[これらのドキュメントをご覧ください](/web/fundamentals/push-notifications)。
 
 サイトにプッシュをデプロイする場合は、GCM を使用する古い標準に準拠していないブラウザのサポートを追加する必要がある場合があります。[詳細については、こちらをご覧ください](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/)。
 
 ###  参考資料
 
-*  Web__Fundamentals__ の[ウェブでのプッシュ通知](/web/fundamentals/engage-and-retain/push-notifications/)のドキュメント
+*  Web__Fundamentals__ の[ウェブでのプッシュ通知](/web/fundamentals/push-notifications)のドキュメント
 *  [ウェブプッシュ ライブラリ](https://github.com/web-push-libs/) - Node.js、PHP、Java、Python などのウェブプッシュ ライブラリ
 
 ####  関連するブログ投稿

@@ -1,5 +1,3 @@
-# ATTENTION - changes made to this file not in GitHub will be over written!
-
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 title: Building for Billions
@@ -8,15 +6,11 @@ landing_page:
 
   header:
     description: >
-      <h2 class="wf-header-title">Building for Billions</h2>
-      <p>
         The next billion people coming online will be diverse in every respect:
         their location, cultural experience, computer expertise,
         connectivity access, and the kinds of devices they use.
-      </p>
 
   rows:
-
   - classname: devsite-landing-row-50
     items:
     - description: >
@@ -32,8 +26,8 @@ landing_page:
         </p>
       youtube_id: 9Bz5TikmJ-A
 
-  # TWO
-  - classname: devsite-landing-row-no-image-background
+  # Row 1 - two cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Design for seamless connectivity
       description: >
@@ -51,7 +45,7 @@ landing_page:
         path: /web/fundamentals/performance/poor-connectivity/#lie-fi
         classname: wf-small-link
       - label: Design for offline
-        path: /web/fundamentals/getting-started/codelabs/offline/
+        path: /web/fundamentals/codelabs/offline/
         classname: wf-small-link
       - label: Reduce the number of resource requests
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
@@ -76,14 +70,15 @@ landing_page:
         path: /web/fundamentals/performance/optimizing-content-efficiency/
         classname: wf-small-link
       - label: "Streamline navigation: help users get to what they want"
-        path: /web/fundamentals/getting-started/principles/#home-page-and-site-navigation
+        path: /web/fundamentals/design-and-ux/principles/#home-page-and-site-navigation
         classname: wf-small-link
       - label: Prioritize content display
         path: /web/fundamentals/performance/critical-rendering-path/
         classname: wf-small-link
 
-  # TWO
-  - classname: devsite-landing-row-no-image-background
+
+  # Row 2 - two cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Reduce battery consumption
       description: >
@@ -102,7 +97,7 @@ landing_page:
         path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
         classname: wf-small-link
       - label: Reduce user actions required to access content
-        path: /web/fundamentals/getting-started/principles/
+        path: /web/fundamentals/design-and-ux/principles/
         classname: wf-small-link
       - label: Avoid expensive animations
         path: /web/fundamentals/design-and-ux/animations/animations-and-performance
@@ -116,16 +111,14 @@ landing_page:
       image_path: images/capability.png
       buttons:
       - label: Cater for a range of viewports and devices
-        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+        path: /web/fundamentals/codelabs/your-first-multi-screen-site/
         classname: wf-small-link
       - label: "Design for limited memory and CPU: reduce and optimize"
         path: /web/fundamentals/performance/
         classname: wf-small-link
 
-
-
-  # THREE
-  - classname: devsite-landing-row-no-image-background
+  # Row 3 - three cards
+  - classname: devsite-landing-row-cards
     items:
     - heading: Build multi-device content
       description: >
@@ -156,13 +149,13 @@ landing_page:
       image_path: images/monetization.png
       buttons:
       - label: Streamline transactions
-        path: /web/fundamentals/getting-started/principles/#commerce-and-conversion
+        path: /web/fundamentals/design-and-ux/principles/#commerce-and-conversion
         classname: wf-small-link
       - label: Streamline forms
         path: /web/fundamentals/design-and-ux/input/forms/
         classname: wf-small-link
       - label: Design orientation-friendly layouts for small screens
-        path: /web/fundamentals/getting-started/principles/#usability-and-form-factor
+        path: /web/fundamentals/design-and-ux/principles/#usability-and-form-factor
         classname: wf-small-link
     - heading: Plan for localization
       description: >

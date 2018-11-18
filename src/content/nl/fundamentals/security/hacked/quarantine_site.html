@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Uw site in quarantaine plaatsen</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Wat u nodig heeft:</h3>
+<ul>
+  <li>De mogelijkheid om te voorkomen dat uw webserver pagina's verstuurt. U kunt de mogelijkheden ook bespreken met uw hostingprovider. In latere stappen moet u ervoor zorgen dat uw site weer voor korte perioden online is.</li>
+  <li>Beheerdersrechten voor uw account (de mogelijkheid om alle gebruikers weer te geven, gebruikers te verwijderen en alle wachtwoorden gerelateerd aan uw account te wijzigen).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Volgende acties:</h3>
+<ol>
+  <li><strong>Zorg ervoor dat uw site offline is</strong>, zodat er geen content meer vanaf uw site naar gebruikers wordt verstuurd. Stop uw webserver bijvoorbeeld of laat de DNS-gegevens verwijzen naar een statische pagina op een andere server die gebruikmaakt van de HTTP-statuscode 503.
+<p>Als u uw gehackte site volledig offline haalt, kunt u beheerderstaken met minder inmenging van de hacker uitvoeren en worden bezoekers ook niet blootgesteld aan schadelijke code of bestanden die spam bevatten. Het is niet waarschijnlijk dat de positie van uw site in zoekresultaten zal dalen vanwege het feit dat u uw site tijdens het herstelproces tijdelijk of met tussenpozen offline haalt.</p>
+      <ul>
+        <li>Als u niet goed weet hoe u uw site offline haalt, is het verstandig contact op te nemen met uw hostingprovider. Uw hostingprovider kan voor uw site bijvoorbeeld een 503-code configureren <em>van buiten de geïnfecteerde directory's</em> (wat een goede optie is). Laat uw hostingprovider weten dat u uw site voor testdoeleinden binnenkort tijdelijk beurtelings offline en online wilt halen. Zo kan uw hostingprovider u de beste manier bieden om zelfstandig uw site offline te halen.
+        </li><li>U kunt uw site een <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP-statuscode</a> 4xx of 5xx laten retourneren, maar dit is niet voldoende om uw gebruikers te beschermen. Met 404, 503, enzovoort, kan schadelijke content nog steeds naar gebruikers worden verstuurd. <em>Statuscode 503 is een nuttig signaal dat uw site tijdelijk niet werkt, maar dit antwoord moet van buiten uw gehackte server/site worden verstuurd.</em>
+        </li>
+        <li>Het gebruik van <a href="/search/reference/robots_txt">robots.txt disallow</a> volstaat ook niet, omdat u hiermee slechts crawlers van zoekmachines blokkeert. Regelmatige gebruikers hebben nog steeds toegang tot schadelijke content.</li>
+      </ul>
+  </li>
+  <li><strong>Laat uw hostingprovider weten wat er aan de hand is</strong> als u dit nog niet heeft gedaan. Als ook uw hostingprovider is gehackt, kan de hostingprovider hierdoor beter inzicht krijgen in het probleem.</li>
+  <li><strong>Voer een strenge controle van gebruikersaccounts uit</strong>.
+    <ul>
+      <li>Bekijk een lijst met de gebruikersaccounts van uw site en controleer of de hacker een nieuw gebruikersaccount heeft gemaakt. Als er illegale accounts zijn gemaakt, noteert u de namen van de ongewenste accounts voor later onderzoek. Verwijder vervolgens de accounts om toekomstig inloggen door de hacker te voorkomen.</li>
+      <li>Wijzig de wachtwoorden voor alle gebruikers van de site en van alle accounts. Dit omvat inloggegevens voor FTP, databases en accounts voor systeembeheerders en het contentmanagementsysteem (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Volgende stap</h2>
+<p>De volgende stap in het proces is <a href="use_search_console">Search Console gebruiken</a>.</p>
+
+</body></html>

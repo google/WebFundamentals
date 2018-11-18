@@ -1,0 +1,38 @@
+<html devsite><head>
+  <title>Placer votre site en quarantaine</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Vous aurez besoin :</h3>
+<ul>
+  <li>de configurer votre serveur Web de sorte qu'il ne diffuse plus vos pages (vous pouvez également discuter des options possibles avec votre hébergeur). Sachez que vous devrez remettre votre site en ligne brièvement à plusieurs reprises au cours des étapes à venir ;</li>
+  <li>de disposer de droits de gestion des comptes (possibilité d'afficher tous les utilisateurs, d'en supprimer et de modifier tous les mots de passe associés à votre compte).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Actions suivantes :</h3>
+<ol>
+  <li><strong>Retirez votre site du Web</strong>, afin que son contenu ne puisse plus être proposé aux internautes. Vous pouvez, par exemple, arrêter votre serveur Web ou rediriger les entrées DNS de votre site Web vers une page statique d'un autre serveur qui affiche un code de réponse HTTP 503.
+<p>Le retrait de l'ensemble de votre site infecté du Web permet de réduire le risque d'interruption par le pirate informatique lorsque vous effectuez des tâches d'administration. Cela permet également d'empêcher la diffusion de code malveillant ou de fichiers contenant du spam auprès des internautes. Il est peu probable que le retrait temporaire ou par intermittence de votre site lors du processus de récupération ait une influence sur son classement futur dans les résultats de recherche.</p>
+      <ul>
+        <li>Si vous ne savez pas comment retirer votre site du Web, nous vous invitons à prendre contact avec votre hébergeur. Par exemple, votre hébergeur peut configurer un code de réponse 503 pour votre site <em>en dehors de vos répertoires infectés</em>, ce qui constitue une solution adaptée. Expliquez à votre hébergeur que vous devrez bientôt retirer votre site du Web pour le remettre ensuite en ligne à plusieurs reprises à des fins de test. Il pourra ainsi vous proposer la méthode qui vous offre le plus d'autonomie possible.
+        </li><li>L'affichage d'un <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">code d'état HTTP</a> 4xx ou 5xx sur votre site ne suffit pas pour protéger les internautes. Les codes tels que 404 et 503 ne permettent pas d'empêcher la diffusion de contenu malveillant. <em>Le code d'état 503 permet de signaler que votre site est temporairement indisponible, mais la réponse doit provenir d'une source autre que votre serveur ou votre site piraté</em>.
+        </li>
+        <li>L'<a href="/search/reference/robots_txt">utilisation d'un fichier robots.txt</a> n'est pas suffisante non plus, car elle ne permet de bloquer que les robots d'exploration des moteurs de recherche. Les internautes qui ne passent pas par un moteur peuvent toujours accéder au contenu malveillant.</li>
+      </ul>
+  </li>
+  <li>Si vous ne l'avez pas déjà fait, <strong>contactez votre hébergeur pour lui faire part de la situation</strong>. Si votre hébergeur a également été piraté, cela peut l'aider à juger de l'étendue du problème.</li>
+  <li><strong>Procédez à une analyse complète de l'ensemble des comptes utilisateur</strong>.
+    <ul>
+      <li>Consultez la liste des comptes utilisateur de votre site et vérifiez si le pirate informatique en a créé un. Si des comptes non autorisés ont été créés, notez leurs noms pour pouvoir les examiner plus tard. Supprimez-les ensuite afin d'empêcher le pirate informatique de se connecter.</li>
+      <li>Modifiez les mots de passe de tous les utilisateurs et de tous les comptes associés au site. Cela inclut les comptes du serveur FTP, d'accès aux bases de données, des administrateurs système et du système de gestion de contenu (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Étape suivante</h2>
+<p>L'étape suivante du processus consiste à <a href="use_search_console">utiliser la Search Console</a>.</p>
+
+</body></html>

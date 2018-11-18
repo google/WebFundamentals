@@ -18,7 +18,7 @@ obtener información general.
 Consulta el [Explainer][explainer] de la especificación del gestor de eventos pasivos
 para obtener información técnica detallada.
 
-[blog]: https://developers.google.com/web/updates/2016/06/passive-event-listeners
+[blog]: /web/updates/2016/06/passive-event-listeners
 [explainer]: https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
 
 ## Cómo aprobar la auditoría {: #how }

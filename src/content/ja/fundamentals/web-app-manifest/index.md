@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ウェブアプリ マニフェストは、ユーザーが想定するネイティブ アプリの場所（端末のホーム画面など）にウェブアプリやサイトを表示する方法を制御したり、ユーザーが起動できる対象や起動時の外観を指定したりするための JSON ファイルです。
 
-{# wf_updated_on:2016-08-19 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on:2016-02-11 #}
 
 #  ウェブアプリ マニフェスト {: .page-title }
@@ -248,7 +248,7 @@ Chrome は、サイトのテーマカラーのコンセプトを 2014 年に導�
 このタブの詳細については、Chrome DevTools ドキュメントの[ウェブアプリ マニフェスト](/web/tools/chrome-devtools/progressive-web-apps#manifest)をご覧ください。
 
 このタブでは、[Add to Homescreen] イベントのシミュレーションも可能です。
-このトピックの詳細については、[アプリのインストール バナーのテスト](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)をご覧ください。
+このトピックの詳細については、[アプリのインストール バナーのテスト](/web/fundamentals/app-install-banners#test)をご覧ください。
 
 
 
@@ -269,7 +269,7 @@ Lighthouse では関連するウェブアプリ マニフェストを監査し�
 ここまで、ウェブアプリ マニフェストについて簡単に説明してきましたが、理解すべきことはまだたくさんあります。
 
 
-* ウェブアプリ マニフェストを使用する場合は、たいてい[アプリのインストール バナー](/web/fundamentals/engage-and-retain/app-install-banners/)のセットアップも必要になります。
+* ウェブアプリ マニフェストを使用する場合は、たいてい[アプリのインストール バナー](/web/fundamentals/app-install-banners)のセットアップも必要になります。
  
 
 * ウェブアプリ マニフェストについての[包括的なリファレンス](https://developer.mozilla.org/en-US/docs/Web/Manifest)は、Mozilla Developer Network で利用できます。

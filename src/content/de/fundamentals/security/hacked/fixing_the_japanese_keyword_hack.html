@@ -1,0 +1,152 @@
+<html devsite><head>
+  <title>Behebung von Hacking durch japanische Keywords</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+<meta name="devsite_continuous_localization_fp" value="DGV7xNragN9HZ8y5MSlU2fxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmoailNK2BnFK9vo6D7ZUkV7Qcmve4gLC1dniNzb2FV146rz+M3RfOj6o9TWwqB6UaE="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
+
+<body>
+
+<p>Dieser Leitfaden wurde insbesondere für eine Art von Hack erstellt, bei dem auf Ihrer Website automatisch generierter japanischer Text erscheint und den wir im Folgenden als "Hacking durch japanische Keywords" bezeichnen. Der Leitfaden richtet sich zwar speziell an Nutzer von bekannten <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Content-Management-Systemen</a> (CMS), kann aber auch nützlich sein, wenn Sie kein CMS verwenden.</p>
+
+<p><strong>Hinweis</strong>: Sie sind sich nicht sicher, ob Ihre Website gehackt wurde? Dann lesen Sie zuerst den Leitfaden <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">Überprüfen, ob Ihre Website gehackt wurde</a>.</p>
+
+<aside class="note">Unser Ziel ist es, Ihnen in diesem Leitfaden hilfreiche Informationen zur Verfügung zu stellen. Bitte <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">geben Sie uns Feedback</a>, um uns dabei zu helfen!</aside>
+
+<h2>Inhaltsverzeichnis</h2>
+
+<ul>
+  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Schritt 1: Art des Hacks identifizieren</a></li>
+  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Schritt 2: Hack beheben</a></li>
+  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Schritt 3: Zusätzliche Ressourcen</a></li>
+  <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">FAQs zu gehackten Websites</a></li>
+</ul>
+
+<a name="identifying"></a>
+  <h2>Art des Hacks identifizieren</h2>
+
+<p>Beim Hacking durch japanische Keywords werden in der Regel neue Seiten mit automatisch generiertem japanischem Text auf Ihrer Website erstellt. Diese befinden sich in zufällig generierten Verzeichnissen, wie zum Beispiel http://ihrebeispielurl.de/ltjmnjp/341.html. Diese Seiten werden mithilfe von Links zu Online-Stores mit gefälschten Markenprodukten monetarisiert und dann in der Google-Suche angezeigt. Die Seiten können beispielsweise so aussehen:</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
+
+<p>Bei dieser Art von Hack fügt der Hacker sich üblicherweise in der Search Console als Property-Inhaber hinzu, um den Gewinn durch Manipulation der Website-Einstellungen, wie geografische Ausrichtung oder Sitemaps, zu steigern. Wenn Sie eine Benachrichtigung erhalten haben, dass eine fremde Person Ihre Website in der <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a> bestätigt hat, ist es sehr wahrscheinlich, dass Ihre Website gehackt wurde.</p>
+
+<p>Überprüfen Sie in der Search Console zuerst im <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Tool "Sicherheitsprobleme"</a>, ob Google diese Art von gehackten Seiten auf Ihrer Website entdeckt hat. Sie können solche Seiten auch finden, indem Sie die Google-Suche in einem Fenster öffnen und <code class="notranslate l10n-notranslate">site:[your site root URL]</code> eingeben. So können Sie die von Google indexierten Seiten für Ihre Website sehen, einschließlich der gehackten Seiten. Überprüfen Sie in den Suchergebnissen ein paar Seiten auf ungewöhnliche URLs. Wenn Sie in der Google-Suche keine gehackten Inhalte finden, geben Sie dieselben Suchbegriffe noch einmal in einer anderen Suchmaschine ein. Bei anderen Suchmaschinen werden unter Umständen gehackte Inhalte angezeigt, die Google aus dem Index entfernt hat. Ungewöhnliche URLs würden beispielsweise wie folgt aussehen:</p>
+
+<img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
+
+<p>Die Suchergebnisse hier beinhalten viele Seiten, die nicht vom Inhaber der Website erstellt wurden. Wenn Sie sich die Beschreibungen genau ansehen, finden Sie Beispiele für japanischen Text, der bei dieser Hacking-Methode verwendet wird.</p>
+
+<p>Wenn Sie eine gehackte Seite besuchen, sehen Sie unter Umständen eine Meldung, dass die Seite nicht existiert, wie beispielsweise die 404-Fehlermeldung. Lassen Sie sich nicht in die Irre führen! Die Hacker versuchen Ihnen vorzutäuschen, dass die gehackten Seiten nicht mehr existieren oder bereinigt sind und das Problem auf Ihrer Website damit behoben ist.
+  Dazu nutzen sie <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">Cloaking</a>. Geben Sie die URLs Ihrer Website in der Search Console im Tool <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Abruf wie durch Google</a> ein, um nach Cloaking zu suchen.
+  Mit diesem Tool können Sie versteckte Inhalte finden.</p>
+
+<a name="fixing"></a>
+  <h2>Hack beheben</h2>
+<p>Erstellen Sie zuerst eine Offline-Kopie aller Dateien, die Sie entfernen möchten, damit Sie diese später im Zweifel wiederherstellen können. Am besten sichern Sie Ihre gesamte Website, bevor Sie mit der Bereinigung beginnen. Dazu können Sie alle Dateien, die sich auf Ihrem Server befinden, an einem Speicherort außerhalb Ihres Servers speichern. Sie können aber auch nach den optimalen Sicherungsoptionen für Ihr spezielles Content-Management-System (CMS) suchen. Wenn Sie ein CMS verwenden, sollten Sie auch die Datenbank sichern.</p>
+
+  <h3>Alle neu erstellten Konten aus der Search Console entfernen</h3>
+<p>Wenn ein neuer Inhaber, den Sie nicht kennen, zu Ihrem Search Console-Konto hinzugefügt wurde, sollten Sie diese Zugriffsberechtigung so schnell wie möglich widerrufen. Auf der <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">Bestätigungsseite der Search Console</a> können Sie überprüfen, welche Nutzer für Ihre Website verifiziert sind. Klicken Sie auf "Überprüfungsdetails" für die Website, um alle verifizierten Benutzer zu sehen.</p>
+
+<p>Lesen Sie im Hilfeartikel <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">Nutzer, Inhaber und Berechtigungen verwalten</a> im Abschnitt "Inhaber hinzufügen oder entfernen" nach, wie Sie Inhaber in der Search Console entfernen können.
+  Sie müssen dazu das dazugehörige Bestätigungstoken entfernen. Dieses ist in der Regel entweder eine HTML-Datei im Stammverzeichnis Ihrer Website oder eine dynamisch erstellte .htaccess-Datei, die wie eine HTML-Datei aussieht.</p>
+
+<p>Wenn Sie auf Ihrer Website kein HTML-Bestätigungstoken finden, suchen Sie in Ihrer .htaccess-Datei nach einer Überschreibungsregel. Diese sieht ungefähr so aus:</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  RewriteEngine On
+  RewriteRule ^google(.*)\.html$ dir/file.php?google=$1 [L] </pre>
+
+<p><b>Hinweis</b>: Normalerweise können Sie überprüfen, ob Sie ein dynamisch generiertes Bestätigungstoken entfernt haben, indem Sie eine simulierte Bestätigungstoken-Datei wie <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code> öffnen.
+  Wenn Ihre Website beispielsweise www.michaelsfussballkarten.de heißt, versuchen Sie, www.michaelsfussballkarten.de/google1234.html zu öffnen.
+  Falls Sie auf dieser Seite den HTTP-Fehlercode 404 erhalten, ist das dynamisch generierte Bestätigungstoken sehr wahrscheinlich behoben.</p>
+
+<p>Folgen Sie der Anleitung unten, um das dynamisch generierte Bestätigungstoken aus Ihrer .htaccess-Datei zu entfernen.
+
+  </p><h3>.htaccess-Datei in 2 Schritten überprüfen</h3>
+<p>Abgesehen von der Nutzung einer .htaccess-Datei zur Erstellung dynamisch generierter Bestätigungstokens nutzen Hacker oftmals .htaccess-Regeln, um Nutzer auf andere Seiten weiterzuleiten oder Spam-Seiten mit unsinnigem Inhalt zu erstellen. Wenn Sie keine benutzerdefinierten .htaccess-Regeln haben, sollten Sie Ihre .htaccess-Datei durch eine vollkommen neue Kopie ersetzen.</p>
+
+  <strong>Schritt 1</strong>
+<p>Suchen Sie die .htaccess-Datei auf Ihrer Website. Wenn Sie nicht sicher sind, wo Sie diese finden, und ein CMS wie WordPress, Joomla oder Drupal verwenden, geben Sie in einer Suchmaschine ".htaccess Dateispeicherort" und den Namen Ihres CMS ein. Abhängig von Ihrer Website haben Sie möglicherweise mehrere .htaccess-Dateien. Erstellen Sie eine Liste aller .htaccess-Dateispeicherorte.</p>
+
+  <strong>Schritt 2</strong>
+<p>Ersetzen Sie alle .htaccess-Dateien durch eine saubere oder standardmäßige Version der .htaccess-Datei. In der Regel finden Sie eine Standardversion einer .htaccess-Datei, indem Sie nach ".htaccess standarddatei" und dem Namen Ihres CMS suchen. Für Websites mit mehreren .htaccess-Dateien sollten Sie für jede Datei eine saubere Version suchen und die alte Version damit ersetzen.</p>
+
+<p><strong>Hinweis</strong>: Die .htaccess-Datei ist oft eine "versteckte Datei". Achten Sie deshalb darauf, dass bei der Suche auch versteckte Dateien angezeigt werden.</p>
+
+  <h3>Alle schädlichen Dateien und Skripte in 4 Schritten entfernen</h3>
+<p>Schädliche Dateien zu identifizieren, kann schwierig sein und mehrere Stunden dauern.
+  Nehmen Sie sich Zeit, wenn Sie Ihre Dateien überprüfen. Bei dieser Gelegenheit können Sie auch die Dateien auf Ihrer Website sichern, falls Sie dies noch nicht getan haben. Geben Sie in der Google-Suche "Website sichern" und den Namen Ihres CMS ein, um nach einer Anleitung zum Sichern Ihrer Website zu suchen.</p>
+
+  <strong>Schritt 1</strong>
+<p>Wenn Sie ein CMS verwenden, installieren Sie die wichtigsten Standarddateien neu, die in der Standardversion Ihres CMS enthalten sind. So können Sie sicher sein, dass diese Dateien frei von gehackten Inhalten sind. Geben Sie in der Google-Suche "Neuinstallation" und den Namen Ihres CMS ein, um nach einer Anleitung zur Neuinstallation der Dateien zu suchen. Falls Sie Plug-ins, Module, Erweiterungen oder Designs nutzen, sollten Sie auch diese neu installieren.</p>
+
+<p>Durch die Neuinstallation der Standarddateien können alle von Ihnen vorgenommenen Anpassungen verloren gehen. Erstellen Sie deshalb eine Sicherung Ihrer Datenbank und aller Dateien, bevor Sie die Neuinstallation durchführen.</p>
+
+  <strong>Schritt 2</strong>
+<p>Hacker ändern oft Ihre Sitemap oder fügen neue Sitemaps hinzu, damit ihre URLs schneller indexiert werden. Wenn Sie eine Sitemap-Datei hatten, überprüfen Sie die Datei auf verdächtige Links und entfernen Sie diese aus Ihrer Sitemap. Wenn es irgendwelche Sitemap-Dateien gibt, die Sie Ihrer Meinung nach Ihrer Website nicht selbst hinzugefügt haben, überprüfen Sie diese und entfernen Sie sie, wenn sie nur Spam-URLs enthalten.</p>
+
+  <strong>Schritt 3</strong>
+<p>Suchen Sie nach schädlichen oder manipulierten Dateien. Möglicherweise haben Sie in den letzten beiden Schritten bereits alle schädlichen Dateien entfernt. Trotzdem empfehlen wir, auch die nächsten Schritte durchzuführen, falls es auf Ihrer Website doch noch weitere Dateien gibt, die manipuliert wurden.</p>
+
+<p>Keine Sorge – Sie müssen dazu nicht jede einzelne PHP-Datei öffnen und überprüfen. Erstellen Sie zuerst eine Liste verdächtiger PHP-Dateien, die Sie überprüfen möchten. Hier sind einige Möglichkeiten, wie Sie herausfinden können, welche PHP-Dateien verdächtig sind:</p>
+   <ul>
+    <li>Da Sie Ihre CMS-Dateien bereits neu geladen haben, schauen Sie sich nur die Dateien an, die nicht Teil Ihrer standardmäßigen CMS-Dateien oder -Ordner sind. Dadurch werden zahlreiche PHP-Dateien ausgeschlossen, sodass Sie nur noch wenige Dateien überprüfen müssen.</li>
+    <li>Sortieren Sie die Dateien auf Ihrer Website nach dem Datum der letzten Änderung. Suchen Sie nach Dateien, deren letzte Änderung in dem Zeitraum liegt, in dem Sie herausgefunden haben, dass Ihre Website gehackt wurde.</li>
+    <li>Sortieren Sie die Dateien auf Ihrer Website nach Größe. Suchen Sie nach ungewöhnlich großen Dateien.</li>
+  </ul>
+
+<p><strong>Hinweis</strong>: Angreifer fügen häufig Skripte zu folgenden Dateien hinzu: index.php, wp-load.php, 404.php und view.php.</p>
+
+  <strong>Schritt 4</strong>
+<p>Überprüfen Sie die verdächtigen PHP-Dateien auf der Liste darauf, ob diese schädlich sind. Wenn Sie sich mit PHP nicht auskennen, kann dieser Vorgang zeitaufwendiger sein. In diesem Fall empfehlen wir, zuerst eine <a href="https://php.net/docs.php">PHP-Dokumentation</a> zu lesen.
+  Wenn Sie keine Programmiererfahrung haben, sollten Sie sich dafür <a href="/web/fundamentals/security/hacked/support_team">professionelle Hilfe suchen</a>. Es gibt jedoch auch einige Möglichkeiten, wie Sie in der Zwischenzeit schädliche Dateien finden können.</p>
+
+<p>Wenn Sie ein CMS verwenden und diese Dateien normalerweise nicht direkt bearbeiten, vergleichen Sie die Dateien auf Ihrem Server mit einer Liste der im CMS enthaltenen Standarddateien sowie Plug-ins und Designs. Suchen Sie nach Dateien, die nicht dazugehören, sowie nach Dateien, die größer als die Standardversionen sind.</p>
+
+<p>Suchen Sie in den verdächtigen Dateien, die Sie bereits identifiziert haben, nach Textblöcken mit verschleiertem Code. Dieser besteht möglicherweise aus einer Kombination von wahllos aneinandergereihten Buchstaben und Zahlen. Vor dem verschleierten Code steht in der Regel eine Kombination von PHP-Funktionen wie base64_decode, rot13, eval, strrev oder gzinflate. In manchen Fällen sind jedoch sogar diese Funktionen verschleiert. Wie ein solcher Codeblock aussehen könnte, sehen Sie im folgenden Beispiel. Manchmal wird dieser Code in nur eine Textzeile gesetzt, sodass er kleiner erscheint, als er eigentlich ist.</p>
+
+<pre class="notranslate l10n-notranslate prettyprint">
+  $O_O0O_O0_0=urldecode("%6E1%7A%62%2F%6D%615%5C%76%740%6928%2D%70
+  %78%75%71%79%2A6%6C%72%6B%64%679%5F%65%68%63%73%77%6F4%2B%6637%6A");
+  $OO0_0OO0__=$O_O0O_O0_0{26}.$O_O0O_O0_0{6}.$O_O0O_O0_0{10}.$O_O0O_O0_0{30}</pre>
+
+  <h3>Überprüfen, ob Ihre Website bereinigt ist</h3>
+<p>Sobald Sie die gehackten Dateien entfernt haben, können Sie überprüfen, ob Ihre Website nun vollständig bereinigt ist. Erinnern Sie sich an die Seiten mit unsinnigen Inhalten, die Sie gefunden haben? Überprüfen Sie mit dem Tool "Abruf wie durch Google", ob die Seiten noch vorhanden sind. Wenn Sie mit "Abruf wie durch Google" die Antwort "Nicht gefunden" erhalten, ist das ein gutes Zeichen.</p>
+
+<p>Sie können auch der Anleitung in der <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Fehlerbehebung für gehackte Websites</a> folgen, um zu überprüfen, ob sich auf Ihrer Website immer noch gehackte Inhalte befinden.</p>
+
+  <h3>Wie kann ich einen weiteren Hack verhindern?</h3>
+<p>Das Beheben der Sicherheitslücken auf Ihrer Website ist ein wichtiger letzter Schritt zur Bereinigung Ihrer Website. <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">Eine aktuelle Studie ergab</a>, dass 12 % der gehackten Seiten innerhalb von 30 Tagen wieder gehackt werden. Deshalb ist es wichtig herauszufinden, wie genau Ihre Website gehackt wurde. Lesen Sie dazu unseren Leitfaden <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Die gängigsten Methoden von Spammern beim Hacken von Websites</a>, bevor Sie mit der Überprüfung beginnen. Wenn Sie nicht herausfinden können, wie Ihre Website gehackt wurde, finden Sie hier einige Dinge, die Sie tun können, um Sicherheitslücken auf Ihrer Website zu reduzieren.</p>
+  <ul>
+    <li><strong>Computer regelmäßig scannen</strong>: Verwenden Sie einen vertrauenswürdigen Virenscanner, um nach Viren oder Sicherheitslücken zu suchen.</li>
+    <li><strong>Passwörter regelmäßig ändern</strong>: Um unautorisierten Zugriff auf Ihre Website zu verhindern, sollten Sie die Passwörter aller Konten auf Ihrer Website regelmäßig ändern. Dazu gehören beispielsweise die Konten von Hostanbietern, FTP und CMS. Es ist wichtig, für jedes Konto ein starkes und eindeutiges Passwort zu erstellen.</li>
+    <li><strong><a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">Bestätigung in zwei Schritten (2FA)</a> nutzen</strong>: Die 2FA sollten Sie möglichst bei jedem Dienst verwenden, bei dem eine Anmeldung notwendig ist. Dadurch wird Hackern die Anmeldung erschwert, auch wenn sie Ihr Passwort gestohlen haben.</li>
+    <li><strong>CMS, Plug-ins, Erweiterungen und Module regelmäßig aktualisieren</strong>: Diesen Schritt haben Sie hoffentlich bereits durchgeführt. Viele Websites können aufgrund von veralteter Software gehackt werden. Einige CMS unterstützten automatische Aktualisierungen.</li>
+    <li><strong>Sicherheitsdienst zur Überwachung Ihrer Website abonnieren</strong>: Es gibt viele sehr gute Anbieter, die Ihnen für wenig Geld bei der Überwachung Ihrer Website behilflich sind. Es empfiehlt sich, sich bei einem dieser Anbieter anzumelden.</li>
+  </ul>
+
+
+<a name="resources"></a>
+  <h2>Zusätzliche Ressourcen</h2>
+<p>Falls Sie immer noch Schwierigkeiten bei der Bereinigung Ihrer Website haben, gibt es noch ein paar weitere Ressourcen, die Ihnen helfen könnten.</p>
+
+<p>Diese Tools scannen Ihre Website und können unter Umständen problematische Inhalte finden.
+  Google unterstützt bzw. nutzt nur VirusTotal.</p>
+
+<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Mit diesen Tools können Sie Ihre Website auf problematische Inhalte untersuchen. Bitte denken Sie daran, dass auch mit diesen Tools nicht gewährleistet ist, dass alle Arten von problematischem Inhalt erkannt werden.</p>
+
+<p>Weitere Ressourcen von Google, die Ihnen helfen könnten, finden Sie hier:</p>
+
+<ul>
+<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+  Hilfeforum für Google-Webmaster</a></li>
+<li><a href="/web/fundamentals/security/hacked/">Google Webmaster-Hilfe für gehackte Websites</a></li>
+<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google Safe Browsing</a></li>
+</ul>
+
+
+
+
+
+
+</body></html>

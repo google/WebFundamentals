@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 58.
 
-{# wf_updated_on: 2017-09-20 #}
+{# wf_updated_on: 2018-07-02 #}
 {# wf_published_on: 2017-03-21 #}
 {# wf_tags: news,chrome58,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -53,17 +53,20 @@ sample](https://googlechrome.github.io/samples/media/controlslist.html).
 Usage in HTML:
 
 <pre class="prettyprint lang-html">
-&lt;video controls <b>controlsList="nofullscreen nodownload noremoteplayback foobar"</b>>&lt;/video>
+&lt;video controls <b>controlsList="nofullscreen nodownload noremoteplayback"</b>>&lt;/video>
 </pre>
 
 Usage in JavaScript:
 
     var video = document.querySelector('video');
     video.controls; // true
-    video.controlsList; // "nofullscreen nodownload noremoteplayback" - "foobar" not present
+    video.controlsList; // ["nofullscreen", "nodownload", "noremoteplayback"]
     video.controlsList.remove('noremoteplayback');
-    video.controlsList; // "nofullscreen nodownload" - "noremoteplayback" not present
+    video.controlsList; // ["nofullscreen", "nodownload"]
     video.getAttribute('controlsList'); // "nofullscreen nodownload"
+
+    video.controlsList.supports('foo'); // false
+    video.controlsList.supports('noremoteplayback'); // true
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/tFuQd3AcsIQ/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5737006365671424) &#124;
@@ -189,7 +192,9 @@ Usage in JavaScript:
     }
 
 <p>For info, this screen currently supports approximately:</p>
+
 {% framebox height="100%" %}
+
 <style>
   ul {
     padding: 0;
@@ -212,6 +217,7 @@ Usage in JavaScript:
     the gamut specified by the ITU-R Recommendation BT.2020 Color Space or more.
   </li>
 </ul>
+
 <script>
   document.querySelector('#srgb').innerHTML = 
       (window.matchMedia("(color-gamut: srgb)").matches) ? '&#x2714;' : '&#x274C;';
@@ -220,6 +226,7 @@ Usage in JavaScript:
   document.querySelector('#rec2020').innerHTML =
       (window.matchMedia("(color-gamut: rec2020)").matches) ? '&#x2714;' : '&#x274C;';
 </script>
+
 {% endframebox %}
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/36CcloDrB3E/1wMSNMl9BQAJ) &#124;
@@ -231,6 +238,6 @@ Usage in JavaScript:
 [remoteplayback]: https://w3c.github.io/remote-playback/
 [ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html
-[web app manifest]: /web/fundamentals/engage-and-retain/web-app-manifest/
+[web app manifest]: /web/fundamentals/web-app-manifest
 [Improving Color on the Web]: https://webkit.org/blog/6682/improving-color-on-the-web/
 [switch between encrypted and clear streams]: /web/updates/2017/03/mixing-streams

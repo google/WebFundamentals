@@ -1,0 +1,61 @@
+<html devsite><head>
+  <title>Mengarantina situs Anda</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>Anda membutuhkan:</h3>
+<ul>
+  <li>Kemampuan untuk mencegah server web menyajikan halaman (selain itu, Anda dapat mendiskusikan
+    opsi yang ada dengan penyedia hosting). Hati-hati, pada langkah selanjutnya Anda perlu menyambungkan kembali situs ke internet
+    dalam jangka waktu yang singkat.</li>
+  <li>Izin pengelolaan akun (kemampuan untuk melihat semua pengguna, menghapus pengguna, dan mengubah semua
+    sandi yang terkait dengan akun Anda).</li>
+</ul>
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="StID0NXeycw" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+<h3>Tindakan selanjutnya:</h3>
+<ol>
+  <li><strong>Buat situs Anda offline</strong> sehingga situs tidak lagi menyajikan konten kepada pengguna. Misalnya,
+    hentikan server web atau arahkan entri DNS situs web ke halaman statis
+    di server yang berbeda yang menggunakan kode tanggapan HTTP 503.
+<p>Dengan membuat situs yang disusupi menjadi offline sepenuhnya, Anda dapat menyelesaikan tugas administratif tanpa gangguan dari peretas,
+  dan sementara itu, kode berbahaya atau file yang berisi spam tidak akan diperlihatkan kepada
+  pengunjung. Membuat situs Anda menjadi offline sesekali/sementara selama proses pemulihan
+  kemungkinan besar tidak akan memengaruhi peringkat situs dalam hasil penelusuran di masa mendatang.</p>
+      <ul>
+        <li>Menghubungi penyedia hosting Anda akan sangat membantu jika Anda tidak yakin cara membuat situs menjadi offline. Misalnya,
+          penyedia hosting Anda mungkin mengonfigurasi tanggapan 503 untuk situs Anda <em>dari luar direktori
+          yang terinfeksi</em> (yang merupakan opsi yang baik). Sampaikan kepada penyedia hosting bahwa tidak lama lagi
+          Anda perlu mengalihkan situs dari online ke offline, dan sebaliknya, untuk tujuan pengujian. Tindakan ini dapat
+          membantu mereka memberikan metode layanan mandiri terbaik kepada Anda untuk membuat situs jadi offline.
+        </li><li>Membuat situs mengembalikan
+          <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">kode status HTTP</a>
+          4xx atau 5xx tidaklah cukup untuk melindungi pengguna. Konten berbahaya masih dapat kembali ke pengguna dengan
+          404, 503, dsb. <em>Kode status 503 adalah sinyal yang berguna yang menunjukkan bahwa situs Anda sementara tidak aktif,
+          namun tanggapan harus berasal dari luar situs/server Anda yang disusupi.</em>
+        </li>
+        <li>Menggunakan <a href="/search/reference/robots_txt">pelarangan
+          robots.txt</a> juga tidak cukup karena hanya memblokir crawler mesin telusur. Pengguna
+          reguler masih dapat mengakses konten berbahaya.</li>
+      </ul>
+  </li>
+  <li>Jika Anda belum melakukannya, <strong>hubungi penyedia hosting untuk membuat mereka menyadari
+    situatsi tersebut</strong>. Jika penyedia hosting juga disusupi, tindakan ini dapat membantu mereka memahami
+    ruang lingkup masalah.</li>
+  <li><strong>Lakukan pengelolaan akun pengguna secara menyeluruh</strong>.
+    <ul>
+      <li>Lihat daftar akun pengguna situs dan periksa apakah peretas membuat akun
+          pengguna baru. Jika akun terlarang dibuat, tuliskan nama akun yang tidak diinginkan untuk penyelidikan
+          lebih lanjut. Lalu hapus akun untuk mencegah proses masuk yang dilakukan peretas di masa mendatang.</li>
+      <li>Ubah sandi untuk semua akun dan pengguna situs. Termasuk proses masuk untuk FTP,
+          akses database, administrator sistem, dan akun sistem pengelolaan konten (CMS).</li>
+    </ul>
+  </li>
+</ol>
+ <h2>Langkah berikutnya</h2>
+<p>Langkah selanjutnya dalam proses ini adalah <a href="use_search_console">Menggunakan Search Console</a>.</p>
+
+</body></html>

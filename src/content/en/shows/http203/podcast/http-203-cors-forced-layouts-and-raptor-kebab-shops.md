@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Why does nobody seem to include CORS headers on their files? And can Paul answer Jake's dreaded CORS pre-flight quiz?
 
-{# wf_updated_on: 2015-10-06 #}
+{# wf_updated_on: 2018-04-05 #}
 {# wf_published_on: 2015-10-06 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-2.mp3 #}
 {# wf_podcast_duration: 00:30:37 #}
@@ -31,7 +31,7 @@ In this episode:
   Subscribe
 </a>
 
-<audio src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
+<audio style="width: 100%" src="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" controls preload="none">
 
 
 

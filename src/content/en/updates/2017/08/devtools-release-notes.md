@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more.
 
-{# wf_updated_on: 2017-10-03 #}
+{# wf_updated_on: 2017-11-10 #}
 {# wf_published_on: 2017-08-29 #}
-{# wf_tags: chrome62,devtools #}
+{# wf_tags: chrome62,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more. #}
 
@@ -32,8 +32,11 @@ Note: You can check what version of Chrome you're running at
 `chrome://version`. Chrome auto-updates to a new major version about every 6
 weeks.
 
-Note: Looking for the video version of these release notes? It'll be
-published around mid-October 2017.
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="eD4fiqjaxHw"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Top-level await operators in the Console {: #await }
 
@@ -128,6 +131,15 @@ parent of the selected item, has `display:grid` applied to it.
   </figcaption>
 </figure>
 
+Check out the video below to learn the basics of CSS Grid in less than
+2 minutes.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="AqwPrR7hklE"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## A new API for querying heap objects {: #query-objects }
 
 Call `queryObjects(Constructor)` from the **Console** to return an array
@@ -168,6 +180,8 @@ DevTools filters out a message if `<text>` is found:
 * In the message text.
 * In the filename from which the message originated.
 * In the stack trace text.
+
+The negative filter also works with regular expressions such as `-/[4-5]*ms/`.
 
 ### URL filters {: #url-filters }
 

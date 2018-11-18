@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Muted autoplay for video is supported on Android from Chrome 53. Previously, a video element required a user gesture to initiate playback.
 
-{# wf_updated_on: 2017-09-25 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-07-27 #}
 {# wf_tags: canvas,chrome53,gif,media,security,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/07/autoplay/featured.jpg #}
@@ -74,7 +74,7 @@ They look pretty similar, but the video is less than 200KB in size and the anima
 
 Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts [high data cost is often a greater barrier to access than poor connectivity](/web/billions/#conserve-data-usage). Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do.
 
-The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behaviour across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
+The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behavior across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
 
 ## The finer points
 
@@ -82,7 +82,7 @@ The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/c
 * This change does not affect the `audio` element: autoplay is still disabled on Chrome on Android, because muted autoplay doesn't make much sense for audio.
 * There is no autoplay if [Data Saver mode](https://support.google.com/chrome/answer/2392284) is enabled. If Data Saver mode is enabled, autoplay is disabled in Media settings.
 * Muted autoplay will work for any visible video element in any visible document, iframe or otherwise.
-* Remember that to take advantage of the new behaviour, you'll need to add `muted` as well as `autoplay`: compare [simpl.info/video](https://simpl.info/video) with [simpl.info/video/muted](https://simpl.info/video/muted).
+* Remember that to take advantage of the new behavior, you'll need to add `muted` as well as `autoplay`: compare [simpl.info/video](https://simpl.info/video) with [simpl.info/video/muted](https://simpl.info/video/muted).
 
 ## Support
 

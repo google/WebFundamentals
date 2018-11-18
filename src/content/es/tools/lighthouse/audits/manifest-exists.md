@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "El manifiesto existe".
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-09-20 #}
 
 # El manifiesto existe  {: .page-title }
@@ -21,7 +21,7 @@ inicio de un usuario](https://codelabs.developers.google.com/codelabs/add-to-hom
 
 Para obtener una guía menos estructurada que analiza más detalladamente los manifiestos de apps
 web, consulta [Mejorar la experiencia del usuario con el manifiesto de apps
-web](/web/fundamentals/engage-and-retain/web-app-manifest).
+web](/web/fundamentals/web-app-manifest).
 
 Aplica lo que aprendiste en estas guías para agregar compatibilidad con A2HS a tu
 app web.

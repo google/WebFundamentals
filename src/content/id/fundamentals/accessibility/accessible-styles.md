@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Menggunakan penataan gaya yang tepat untuk meningkatkan aksesibilitas
 
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-05-23 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Gaya yang Dapat Diakses {: .page-title }
@@ -226,11 +226,9 @@ yaitu sekitar ukuran area isi jari seseorang.
 
 ![diagram yang menampilkan beberapa target sentuh 48 piksel](imgs/touch-target.jpg)
 
-Target sentuh juga harus diberi ruang sekitar 32 piksel
+Target sentuh juga harus diberi ruang sekitar 8 piksel
 terpisah, baik horizontal maupun vertikal, sehingga jari pengguna yang menekan satu
 target ketuk tidak akan menyentuh target sentuh yang lain tanpa sengaja.
-
-![diagram yang menampilkan 32 piksel ruang di sekitar target sentuh](imgs/touch-target2.jpg)
 
 ## Warna dan kontras
 

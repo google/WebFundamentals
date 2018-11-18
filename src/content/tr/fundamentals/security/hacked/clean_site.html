@@ -1,0 +1,270 @@
+<html devsite><head>
+  <title>Sitenizi temizleme ve bakımını yapma</title>
+  <meta name="project_path" value="/web/fundamentals/_project.yaml"/>
+  <meta name="book_path" value="/web/fundamentals/_book.yaml"/>
+</head>
+  <body>
+<h3>İhtiyacınız olanlar:</h3>
+
+<ul>
+  <li>Sitenizin sunucularına kabuk/terminal yönetici erişimi: Web, veritabanı, dosyalar</li>
+  <li>Kabuk/terminal komutları bilgisi</li>
+  <li>Kodu anlama (PHP veya JavaScript gibi)</li>
+  <li>Sitenizin yedeklerini oluşturmak için depolama (dosyalar, veritabanı, resimler vb. dahil)</li>
+</ul>
+    <div class="video-wrapper">
+      <iframe class="devsite-embedded-youtube-video" data-video-id="OAvydrgDa6Q" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+<h3>Sonraki işlemler:</h3>
+
+<p>Bu adımda çeşitli işlemleri anlatacağız: </p>
+
+<ul>
+  <li>Bilgisayar korsanının kullanıcıların kişisel bilgilerini ele geçirmek istediğini düşünüyorsanız
+    (ör. kimlik avı sayfaları kullanarak) ek kaynakların nerede bulunabileceği</li>
+  <li>Bilgisayar korsanı tarafından oluşturulan ve
+    Google Arama sonuçlarında görünmesini istemediğiniz tamamen yeni, istenmeyen, kullanıcı tarafından görülebilen
+    URL'leri kaldırma işlemini hızlandırmak için Search Console'da <a href="https://www.google.com/webmasters/tools/removals">URL'leri kaldır</a>'ı kullanma seçeneği</li>
+  <li>Google arama sonuçlarında görünmesini
+    istediğiniz temiz sayfaların (yani yeni olan veya yeni güncellenmiş sayfalar) Google tarafından
+    işlenmesini hızlandırmak için Search Console'da <a href="https://www.support.google.com/webmasters/answer/1352276">Google Gibi Getir</a>'i kullanma seçeneği</li>
+  <li>En yeni, en güvenli yazılım sürümünü yükleme</li>
+  <li>Sitenizi gelecekte tehlikelere daha açık hale getirebilecek gereksiz veya kullanılmayan uygulamaları
+    ya da eklentileri kaldırma</li>
+  <li>İyi içeriği geri yükleme ve bilgisayar korsanının içeriğini kaldırma</li>
+  <li>Bilgisayar korsanı tarafından kötüye kullanılan güvenlik açığının asıl nedenini ortadan kaldırma</li>
+  <li>Tüm şifreleri değiştirme</li>
+  <li>Sitenizi güven altında tutma sürecini planlama</li>
+</ul>
+
+<h4>1. Gizli bilgilerin kaybedilmesi (ör. kimlik avı sayfaları kullanarak) konusunu ele alırken
+  destek kaynaklarını bulma</h4>
+
+<p>Sitenizden gizli kullanıcı bilgileri elde edilmişse (ör. bir kimlik avı saldırısı sonucunda), sitenizi
+  temizlemeye veya dosyaları silmeye başlamadan önce işle, düzenlemelerle veya yasalarla
+  ilgili yükümlülükleri dikkate almak isteyebilirsiniz. Kimlik avı durumunda,
+  <a href="https://docs.apwg.org/reports/APWG_WTD_HackedWebsite.pdf">Siteniz kimlik avı yapanlar tarafından saldırıya uğramışsa
+  ne yapacaksınız?</a> başlıklı belge gibi
+  yararlı kaynakları <a href="https://antiphishing.org">antiphishing.org</a> adresinde bulabilirsiniz.</p>
+
+<h4>2. Bilgisayar korsanı tarafından oluşturulan yeni URL'lerin kaldırılması işlemini hızlandırmayı düşünün</h4>
+
+<p>Bilgisayar korsanı tamamen yeni, kullanıcı tarafından görülebilen URL'ler oluşturmuşsa
+  Search Console'daki <a href="https://www.google.com/webmasters/tools/removals">URL'leri kaldır</a> özelliğini kullanarak
+  bu sayfaların Google arama sonuçlarından
+  daha hızlı şekilde kaldırılmasını sağlayabilirsiniz. Bu tamamen isteğe bağlı bir adımdır. Sadece sayfaları siler
+  ve ardından sunucunuzu bir <a href="https://www.support.google.com/webmasters/answer/40132">404 durum
+  kodu</a> döndürecek şekilde yapılandırırsanız sayfalar zaman içinde doğal olarak Google'ın dizininden kalkar.</p>
+
+<ul>
+  <li>URL Kaldırma işlevini kullanma kararı muhtemelen, ne kadar çok sayıda istenmeyen, yeni sayfa
+    oluşturulduğuna (çok fazla sayıda sayfanın URL Kaldırma işlevine eklenmesi zahmetli bir iş olabilir) ve bu sayfaların
+    kullanıcılarda neden olabileceği olası hasara bağlı olacaktır. URL Kaldırma işleviyle bildirilen sayfaların arama sonuçlarında
+    artık görünmemesi için sayfaların istenmeyen/kaldırılan URL'lerde "404 Dosya bulunamadı"
+    yanıtı döndürecek şekilde yapılandırıldığından da emin olun.</li>
+  <li>Daha önce temizken, sadece bilgisayar korsanı tarafından saldırıya uğramış olan sayfaların
+    kaldırılmasını istemek için bu aracı kullanmayın -- bu sayfalar temizlendikten sonra arama sonuçlarında görünmesini isteyeceksiniz.
+    <em>URL Kaldırma aracı sadece arama sonuçlarında artık hiçbir zaman görünmesini istemediğiniz sayfalar içindir.</em></li>
+</ul>
+
+<h4>3. Google'ın temiz sayfalarınızı işlemesini hızlandırmayı düşünün</h4>
+
+<p>Yeni veya güncellenmiş temiz sayfalarınız varsa, bu sayfaları
+  Google'ın dizinine göndermek için
+  Search Console'daki <a href="https://www.support.google.com/webmasters/answer/1352276">Google Gibi Getir</a> özelliğini kullanabilirsiniz. Bu tamamen isteğe bağlıdır.
+  Bu adımı atlarsanız yeni veya değiştirilmiş sayfalarınız muhtemelen zaman içinde taranır ve işlenir.</p>
+
+<h4>4. Sunucularınızı temizlemeye başlayın.</h4>
+
+<p>Şimdi <a href="hacked_with_spam">Hasarı değerlendirme</a> ve <a href="vulnerability">Güvenlik açığını bulma</a> adımlarında aldığınız
+  notlara dayanarak
+  sitenizi temizlemeye sıra geldi. Bu adımda uygulayacağınız aşağıdaki yöntem, elinizdeki
+  yedek dosyalara göre değişir.</p>
+
+<ul>
+  <li>Temiz ve güncel yedek</li>
+  <li>Temiz, ancak eski yedek</li>
+  <li>Hiç yedek yok   </li>
+</ul>
+
+<p>Öncelikle, bu yedeğin, siteniz saldırıya uğramadan <strong>önce</strong> oluşturulup oluşturulmadığını kontrol edin.</p>
+
+<ul>
+  <li><strong>Temiz ve güncel yedek</strong>
+
+    <ol>
+      <li>Yedeğinizi geri yükleyin.</li>
+      <li>Varolan yeni yazılım sürümlerini, güncellemeleri veya yamaları yükleyin. Buna OS yazılımları (sunucu
+        sizin kontrolünüz altındaysa) ve tüm uygulamalar (içerik yönetimi sistemi, e-ticaret platformu,
+        eklentiler, şablonlar vb.) dahildir.</li>
+      <li>Sunucunuzda sitenin artık kullanmadığı yazılımları (ör. widget'lar, eklentiler veya uygulamalar)
+        kaldırıp kaldıramayacağınızı düşünün.</li>
+      <li>Güvenlik açığını kapatın.</li>
+      <li><a href="hacked_with_spam">Hasarı değerlendirme</a> adımında bulunan tüm sorunların
+        düzeltildiğinden emin olun.</li>
+      <li>Siteyle ilgili tüm hesaplar için şifreleri (ör. FTP erişimi, veritabanı erişimi, sistem yöneticileri
+        ve CMS hesapları için girişler) bir kez daha değiştirin. Unix tabanlı sistemlerde:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Temiz, ancak eski yedek</strong>
+    <ol>
+      <li>Hâlâ virüslü olsa dahi geçerli sitenizin bir disk görüntüsünü oluşturun. Bu kopya
+        sadece güvenlik içindir. Kopyayı diğerlerinden ayırt etmek amacıyla virüslü olarak işaretleyin.
+         Unix tabanlı
+                bir sistemde disk görüntüsü şu şekilde oluşturulabilir:
+        <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9
+  &gt; /mirror/full-backup-20120125-infected.gz</pre>
+      </li>
+      <li>Görseller ve medya dosyaları dahil, sunucunuzun bir yedek dosya sistemi kopyasını oluşturun.
+         Veritabanınız varsa onu da yedekleyin.
+        <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/ $ mysqldump -u root
+  -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+      </li>
+      <li>Temiz, ancak eski yedeği sunucunuza geri yükleyin.</li>
+      <li>Sunucunuzda sitenin artık kullanmadığı yazılımları (ör. widget'lar, eklentiler veya uygulamalar)
+        kaldırıp kaldıramayacağınızı düşünün.</li>
+      <li>Sunucunuzun kontrolü sizde ise işletim sistemi dahil, tüm yazılımları ve yazılım
+        uygulamalarını (içerik yönetimi sistemi, e-ticaret platformu, eklentiler, şablonlar, vb.) yeni sürüme geçirin.
+        Mevcut güvenlik güncellemelerini ve yamalarını kontrol edip yüklediğinizden emin olun.</li>
+      <li>Güvenlik açığını kapatın.</li>
+      <li>Temiz yedek ile virüs bulaşmış geçerli kopya arasında manuel veya otomatik
+        olarak bir site <code>diff</code> işlemi gerçekleştirin.
+        <pre>
+$diff -qr www/ backups/full-backup-20120124/</pre>
+      </li>
+      <li>Korumak istediğiniz yeni, temiz içerikleri virüslü kopyadan alıp yeni sürüme geçirilmiş sunucuya yükleyin.
+        <pre>
+$rsync -avz /backups/full-backup-20120124/www/clean-file.jpg /www/</pre>
+      </li>
+      <li><a href="hacked_with_spam">Hasarı değerlendirme</a> adımında listelenen tüm URL'lerin
+        düzeltildiğinden emin olun.</li>
+      <li>Siteyle ilgili tüm hesaplar için şifreleri (ör. FTP erişimi, veritabanı erişimi, sistem yöneticileri ve
+        CMS hesapları için girişler) bir daha değiştirin. Unix tabanlı sistemlerde:
+        <pre>
+$passwd admin1</pre>
+      </li>
+    </ol>
+  </li>
+  <li><strong>Hiç yedek yok</strong>
+    <ol>
+      <li>Hâlâ virüslü olsa da sitenizin iki yedeğini oluşturun. Ekstra bir yedeğinizin olması,
+        kaza ile silinen içeriği kurtarmanıza ve işler ters gittiğinde geri dönüp tekrar denemenize yardımcı
+        olur. Gelecekte referans olması için her yedeğe “virüslü” etiketi ekleyin.
+        <ul>
+          <li>Yedeklerinizden biri bir disk görüntüsü veya sitenizin "klon sürümü" olacaktır. Bu format
+            içerik geri yüklemeyi çok daha basit hale getirir. Acil durum için disk görüntüsünü bir kenarda
+            tutabilirsiniz. Unix tabanlı bir sistemde disk görüntüsü şu şekilde oluşturulabilir:
+            <pre>
+$dd if=/dev/sda bs=1024 conv=noerror,sync | gzip -c -9 &gt;
+  /mirror/full-backup-20120125-infected.gz</pre>
+          </li>
+          <li>Diğer yedek, sunucunuzdan bir dosya sistemi kopyası (görseller ve medya dosyaları
+            dahil) olacaktır. Veritabanınız varsa onu da yedekleyin.
+            <pre>
+$tar -pczf full-backup-20120125-infected.tar.gz www/</pre>
+             
+
+            <pre>
+$mysqldump -u root -p --all-databases | gzip -9 &gt; fulldb_backup-20120125-infected.sql</pre>
+          </li>
+          <li>Disk görüntünüz yoksa veritabanının ve dosya sisteminin ikişer yedeğini oluşturun.</li>
+        </ul>
+      </li>
+      <li>Yeni yedek dosya sistemi kopyasında sitenin içeriğini temizleyin (sunucunun kendisini değil)
+        <ol>
+          <li>Daha önceki araştırmanızda çok esnek dosya izinleri bulduysanız bunları
+            düzeltin. Bunu sunucunun kendisinde değil, yedek kopyada yaptığınızdan emin olun.</li>
+          <li>Ayrıca yedek kopyada, <a href="hacked_with_spam">Hasarı değerlendirme</a> bölümünde güvenliği ihlal edildiği
+            tesbit edilen URL'lere ilişkin tüm dosyaları temizleyin. Bunlar,
+            sunucu yapılandırma dosyaları, JavaScript, HTML, PHP olabilir.</li>
+          <li>Ayrıca, bilgisayar korsanı tarafından oluşturulan yeni dosyalar için (bir 404 yanıtı sunma)
+            seçeneğini de kaldırdığınızdan emin olun. Bu dosyaları Search Console'da URL Kaldırma
+            aracıyla bildirmiş olabilir ya da olmayabilirsiniz.</li>
+          <li>Kodunuzda veya kırılan şifrelerinizde güvenlik açığı varsa kapatın. Giriş doğrulama
+            kitaplıkları veya güvenlik denetlemeleri bunda yardımcı olabilir.</li>
+          <li>Sitenizde veritabanı varsa, yedeğinizde bilgisayar korsanı tarafından değiştirilmiş kayıtları temizlemeye başlayın.
+            Bitti demeden önce, temiz olduğundan emin olmak için daha fazla kayıt
+            üzerinde genel bir kontrol yapın.</li>
+          <li>Siteyle ilgili tüm hesaplar için şifreleri (ör. FTP erişimi, veritabanı erişimi,
+            sistem yöneticileri ve CMS hesapları için girişler) bir daha değiştirin. Unix tabanlı sistemlerde:
+            <pre>
+$passwd admin1</pre>
+          </li>
+          <li>Bu noktada, daha önce virüslü olan sitenizin yedek kopyası artık sadece temiz veriler
+            içeriyor olmalıdır. Bu temiz kopyayı bir kenarda saklayın ve 5 numaralı işleme gidin.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4>5. Gereksiz yazılımları kaldırın</h4>
+
+<p>Sunucunuzda sitenin artık kullanmadığı yazılımları (ör. widget'lar, eklentiler veya uygulamalar)
+  kaldırıp kaldıramayacağınızı düşünün. Bu, güvenliği artırabilir ve ileride yapılacak bakım
+  çalışmalarını basitleştirebilir.</p>
+
+<h4>6. Tüm sunucuları temizleyin</h4>
+
+<ol>
+  <li>Sadece yeni sürüme geçme değil, temiz bir yükleme yapın. Yeni sürüme geçme işlemleri geride eski bir sürümden
+  bazı dosyalar bırakabilir. Virüslü bir dosya sunucuda kalırsa yeni bir saldırının daha meydana gelmesi muhtemeldir.
+    <ul>
+      <li>Yeni yükleme; sunucunuzun kontrolü sizde ise OS ile birlikte tüm yazılımları ve yazılım
+        uygulamalarını (içerik yönetimi sistemi, e-ticaret platformu, eklentiler, şablonlar, vb.) içermelidir.
+        Mevcut güvenlik güncellemelerini ve yamalarını kontrol ettiğinizden emin olun.</li>
+    </ul>
+  </li>
+  <li>Temiz yedek dosya sistemi kopyasından iyi içerikleri yeni yüklenen sunuculara aktarın.
+    Sadece bilinen temiz dosyaları/veritabanını yükleyin/geri yükleyin. Uygun dosya izinlerini koruduğunuzdan
+        ve yeni yüklenen sistem dosyalarının üzerine yazmadığınızdan emin olun.</li>
+  <li>Siteyle ilgili tüm hesaplar için şifreleri (ör. FTP erişimi, veritabanı erişimi, sistem yöneticileri ve
+    CMS hesapları için girişler) son bir kez daha değiştirin. Unix tabanlı sistemlerde:
+    <pre>
+$passwd admin1</pre>
+  </li>
+</ol>
+
+<h4>7. Uzun vadeli bir bakım planı yapın</h4>
+
+<p>Düzgün bir site bakımı için web'de StopBadware’in <a href="https://www.stopbadware.org/prevent-badware-basics">Kötü uygulamaları önleme: Temel ilkeler</a> gibi bilgi verici
+  pek çok kaynak bulunmaktadır. Ayrıca
+  aşağıdakileri yapmanızı da kesinlikle öneririz:</p>
+
+<ul>
+  <li>Sitenizin düzenli olarak ve otomatik şekilde yedeklerini oluşturun.</li>
+  <li>Yazılımı güncel tutma konusunda tedbirli olun.</li>
+  <li>Sunucunuza yüklemeden önce tüm uygulamaların, eklentilerin, üçüncü taraf yazılımların vb.
+    güvenlik uygulamalarını öğrenin. Bir yazılım uygulamasındaki güvenlik açığı tüm sitenizin
+    güvenliğini etkileyebilir.</li>
+  <li>Güçlü şifreler oluşturulmasını zorunlu kılın.</li>
+  <li>Makineye giriş yapmak için kullanılan tüm cihazları güven altında tutun (işletim sistemini ve tarayıcıyı güncelleyin).</li>
+</ul>
+
+<h4>8. Temizleme işleminin tamamlandığını bir daha kontrol edin</h4>
+
+<p>Aşağıdaki sorulara “evet” yanıtı verebildiğinizden emin olun:</p>
+
+<ul>
+  <li>Bilgisayar korsanı kullanıcıların kişisel bilgilerini ele geçirmişse uygun adımları attım mı? </li>
+  <li>Sistemde yazılımın en yeni, en güvenli sürümü mü çalışıyor? </li>
+  <li>Sitemi gelecekte tehditlere açık hale getirebilecek gereksiz veya kullanılmayan tüm uygulamaları
+    veya eklentileri kaldırdım mı? </li>
+  <li>İçeriğimi geri yükleyip bilgisayar korsanının içeriklerini sildim mi? </li>
+  <li>Siteme saldırı yapılmasına olanak veren güvenlik açığının asıl nedenini ortadan kaldırdım mı? </li>
+  <li>Sitemi güven altında tutacak bir planım var mı?</li>
+</ul>
+
+<h4>9. Sitenizi tekrar çevrimiçi yapın</h4>
+<h2>Sonraki adım</h2>
+<p>Neredeyse bitti! Süreçteki son adım
+  <a href="request_review">İnceleme talebinde bulunma</a> işlemidir.</p>
+
+</body></html>

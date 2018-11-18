@@ -130,7 +130,7 @@ Chrome と DevTools を使用して、メモリリーク、メモリの肥大化
 JS ヒープのグラフ（青のグラフ）は単純ではありません。ベスト プラクティスを踏まえると、最初の落ち込みは実際にガベージ コレクションが強制的に行われたことを示します（ガベージ コレクションは、**ガベージ コレクションの実行**ボタンをクリックして行います）。記録が進んでいくと、JS ヒープサイズが急上昇しているのが分かります。これは不自然ではなく、想定できます。JavaScript コードでは、ボタンがクリックされるたびに DOM ノードが作成され、100 万文字から成る文字列を作成するときに多くの処理を行います。重要なのは、開始時よりも終了時の方が JS ヒープが高くなっている点です（「開始時」とはガベージ コレクションを強制的に行った直後を指します）。実際に JS ヒープサイズまたはノードサイズが増加していくパターンを見つけた場合は、メモリリークの可能性を考えます。
 
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[recording]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

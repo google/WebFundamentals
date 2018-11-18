@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started analyzing network performance.
 
-{# wf_updated_on: 2017-03-30 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-01-17 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 .devtools-inline {
@@ -18,6 +19,10 @@ figcaption {
 # Get Started with Analyzing Network Performance in Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+Note: See [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started) for a
+comprehensive approach to improving load speed. That tutorial contains the recommended workflow
+for analyzing load performance.
 
 Learn how to use the Chrome DevTools Network panel to understand why a page
 loads slowly in this step-by-step, interactive tutorial.
@@ -243,3 +248,7 @@ of skills and knowledge, though.
 * See <a class="gc-analytics-event" data-category="DevTools / Network /
   Get Started" data-label="Next Steps / Reference" href="reference">Network
   Panel Reference</a> for a comprehensive list of Network panel features.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}
