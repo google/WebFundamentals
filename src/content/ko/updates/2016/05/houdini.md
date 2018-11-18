@@ -13,9 +13,17 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 
 참고: 본 글의 각 문단들을 연관 표준의 최신 내용으로 업데이트하고 있습니다.
 
-CSS가 할 수 있는 일들을 생각해본 적이 있나요? 여러분이 하나의 attribute를 바꾸면 전체 웹 페이지는 완전히 다른 레이아웃으로 보여집니다. 그런 점에 있어서 마법과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은 이러한 마법을 바라보기만 할 수 있었습니다. 만약 우리가 우리만의 마법을 부리고 싶다면요? 만약 우리가 마법사가 되고 싶다면요? Houdini를 시작해보세요!
+CSS가 할 수 있는 일들을 생각해본 적이 있나요? 여러분이 하나의 attribute를 바꾸면 전체 웹 페이지는 완전히 다른 레이아웃으로
+ 보여집니다. 그런 점에 있어서 마법과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은
+이러한 마법을 바라보기만 할 수 있었습니다. 만약 우리가 우리만의 마법을 부리고 싶다면요? 만약 우리가 마법사가 되고 싶다면요?
+Houdini를 시작해보세요!
 
-Houdini task force는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Google의 엔지니어들로 구성되어 (번역자: LG도 있습니다!) CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 협업하고 있습니다. 이 task force는 공식 W3C 표준으로 채택되기 위한 표준 초안들을 작성하고 있습니다. 그들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로 하여 하위 수준 사양의 표준 문서들이 개발되었습니다. 이 표준 문서들은 누군가가 “Houdini”에 대해 이야기할 때 보통 의미하는 것입니다. 표준안 개발 작업이 진행되는 동안 표준 문서 초안들은 미완성 단계이며 일부 초안은 다소 가안일 수 있습니다. 그것이 우리가 Houdini를 개발하는 초기 단계입니다.
+Houdini task force는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Google의 엔지니어들로 구성되어 (번역자: LG도 있습니다!)
+CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 협업하고 있습니다. 이 task force는 공식 W3C 표준으로 채택되기 위한
+표준 초안들을 작성하고 있습니다. 그들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로
+하위 수준 사양의 표준 문서들이 개발되었습니다. 이 표준 문서들은 누군가가 “Houdini”에 대해 이야기할 때 보통 의미하는 것입니다.
+표준안 개발 작업이 진행되는 동안 표준 문서 초안들은 미완성 단계이며 일부 초안은 다소 가안일 수 있습니다.
+그것이 우리가 Houdini를 개발하는 초기 단계입니다.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="EUlIxr8mk7s"
@@ -23,19 +31,28 @@ Houdini task force는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Goog
   </iframe>
 </div>
 
-주의: 저는 Houdini 표준안에 대한 간단한 개요를 통해 Houdini에서 어떠한 문제를 풀고자하는지 알려드리고 싶었습니다. 현재의 표준안이 지원 가능한 수준에서, 코드 샘플 또한 보여드립니다. 표준안들은 계속 수정되고 있는 초안임을 유념하시길 바랍니다. 향후에 본 글에서 설명하고 있는 코드의 결과는 정확하지 않을 수 있고, 일부 표준안의 내용은 공식 표준이 되지 않을 수 있습니다.
+주의: 저는 Houdini 표준안에 대한 간단한 개요를 통해 Houdini에서 어떠한 문제를 풀고자하는지 알려드리고 싶었습니다.
+현재의 표준안이 지원 가능한 수준에서, 코드 샘플 또한 보여드립니다. 표준안들은 계속 수정되고 있는 초안임을 유념하시길 바랍니다.
+향후에 본 글에서 설명하고 있는 코드의 결과는 정확하지 않을 수 있고, 일부 표준안의 내용은 공식 표준이 되지 않을 수 있습니다.
 
 ## 표준안
 
 ### Worklets
 ([spec][Worklets spec])
 
-Worklets 자체는 큰 의미가 있지는 않습니다. Worklets는 다른 연관 표준안을 가능하게 하기 위해 도입된 개념입니다. “Worklet”을 접했을 때 Web Workers를 떠올린다면 틀린 것은 아닙니다. 그 둘은 많은 개념적인 유사성을 가지고 있습니다. 그렇다면 이미 Workers가 있는데 왜 새로운 개념이 생겼을까요? Houdini의 목표는 웹 개발자가 자신의 코드를 CSS 엔진과 주변 시스템에 연결할 수 있도록 새로운 API를 제공하는 것입니다.  아마도 이러한 코드의 일부가 모든, 단일 프레임에서 실행되어야 한다고 가정하는 것은 비 현실적이지 않을 것입니다. 어쩌면 당연히 그렇게 되어야 합니다.
+Worklets 자체는 큰 의미가 있지는 않습니다. Worklets는 다른 연관 표준안을 가능하게 하기 위해 도입된 개념입니다.
+“Worklet”을 접했을 때 Web Workers를 떠올린다면 틀린 것은 아닙니다. 그 둘은 많은 개념적인 유사성을 가지고 있습니다.
+그렇다면 이미 Workers가 있는데 왜 새로운 개념이 생겼을까요? Houdini의 목표는 웹 개발자가 자신의 코드를 CSS 엔진과
+주변 시스템에 연결할 수 있도록 새로운 API를 제공하는 것입니다.  아마도 이러한 코드의 일부가 모든, 단일 프레임에서
+실행되어야 한다고 가정하는 것은 비 현실적이지 않을 것입니다. 어쩌면 당연히 그렇게 되어야 합니다.
 [Web Worker 표준]에는 다음과 같은 내용이 있습니다.:
 
-> Workers [...] 는 상대적으로 무거우며 한 페이지에 많은 수의 Workers 사용은 권장하지 않습니다. 예를 들어 4 mega pixel 이미지의 각 pixel마다 하나의 Worker를 생성하는 것은 적절하지 않습니다.
+> Workers [...] 는 상대적으로 무거우며 한 페이지에 많은 수의 Workers 사용은 권장하지 않습니다. 예를 들어 4 mega pixel
+이미지의 각 pixel마다 하나의 Worker를 생성하는 것은 적절하지 않습니다.
 
-이는 곧 web workers가 Houdini가 하려고 했던 것을 하기에는 무리라는 의미입니다. 따라서 worklets이 만들어졌습니다. Worklets은 ES2015의 class들을 써서 method 집합들, worklet의 미리 정의된 타입인 signature들을 정의합니다. 그렇기 때문에 Worklet은 보다 경량화가 되었으며 수명 주기가 짧습니다.
+이는 곧 web workers가 Houdini가 하려고 했던 것을 하기에는 무리라는 의미입니다. 따라서 worklets이 만들어졌습니다.
+Worklets은 ES2015의 class들을 써서 method 집합들, worklet의 미리 정의된 타입인 signature들을 정의합니다.
+그렇기 때문에 Worklet은 보다 경량화가 되었으며 수명 주기가 짧습니다.
 
 ### Paint worklet
 ([spec][Paint Worklet spec])
@@ -138,41 +155,17 @@ the Paint Worklet API ([Demo][Paint Worklet demo]).
 
 ### Compositor worklet
 
-Note: The API described here is obsolete. Compositor worklet has
-been redesigned and is now proposed as “Animation Worklet”. More details on the
-current iteration of the API can be found
-[here](https://dassur.ma/things/animworklet/).
+참고: 이 곳에 서술된 API는 더 이상 사용되지 않습니다. Compositor worklet 는 현재 “Animation Worklet”으로
+새로 디자인되었습니다. 해당 API에 대한 더 자세한 사항은
+[여기](https://dassur.ma/things/animworklet/)에서 찾아보실 수 있습니다.
 
-Even though the compositor worklet spec has been moved to the WICG and will
-be iterated on, it’s the one the specs that excites me the most. As you might know, some
-operations are outsourced to the graphics card of your computer by the CSS
-engine, although that is dependent on both your grapics card and your device in
-general. A browser usually takes the DOM tree and, based on specific criteria,
-decides to give some branches and subtrees their own [layer][HTML5Rocks layers].
-These subtrees paint themselves onto it (maybe using a paint worklet in the
-future). As a final step, all these individual, now painted, layers are stacked
-and positioned on top of each other, respecting z-indices, 3D transforms and
-such, to yield the final image that is visible on your screen. This process is
-called “compositing” and is executed by the “compositor”. The advantage of this
-process is that you don’t have to make *all* the elements repaint themselves
-when the page scrolls a tiny bit. Instead, you can reuse the layers from the
-previous frame and just re-run the compositor with the changed scroll position.
-This makes things fast. This helps us reach 60fps. This makes [Paul Lewis]
-happy.
+
+Compositor Worklet이 WICG로 옮겨졌고 계속 내용이 바뀌고 있지만, 저에게는 가장 흥미로운 표준안입니다. 아시다시피 일부 작업은 CSS 엔진에 의해 그래픽 카드로 아웃소싱되며 일반적으로 그래픽 카드와 장치 모두에 의존합니다. 브라우저는 일반적으로 DOM 트리를 사용하고 특정 기준에 따라 일부 branch 혹은 하위 트리에 자체 [레이어][HTML5Rocks layers]를 공개합니다.
+이러한 하위 트리는 스스로 해당 레이어에 그립니다. (향후에는 paint worklet을 사용하여 그릴 수도 있겠죠!) 마지막 단계로, 페인트 과정이 완료된 모든 개별 레이어는 z-index, 3D Transform등을 고려하여 서로 중첩이 디어 화면에 보이는 최종 이미지를 완성합니다. 이 프로세스를 “컴포지팅 (Compositing)”이라고 하며 컴포지터(Compositor)가 실행합니다. 이 프로세스의 장점은 페이지가 조금 스크롤될 때 *모든* 요소를 다시 그릴 필요가 없다는 것입니다. 대신, 이전 프레임에서 레이어를 재사용하고 변경된 스크롤 위치로 컴포지터를 다시 실행할 수 있습니다. 이로 인하여 빠른 처리가 가능합니다. 이는 60fps를 맞출수 있게 해줍니다. 이것은 [Paul Lewis]를 행복합니다.
 
 <img src="/web/updates/images/2016/05/houdini/compworklet_small.png">
 
-As the name suggests, the compositor worklet lets you hook into the compositor
-and influence the way an element’s layer, which has already been painted, is
-positioned and layered on top of the other layers. To get a little more
-specific, you can tell the browser that you want to hook into the compositing
-process for a certain DOM node and can request access to certain attributes like
-scroll position, `transform` or `opacity`. This will force this element on to its
-own layer and *on each frame* your code gets called. You can move your layer
-by manipulating the layers transform and change its attributes (like `opacity`)
-allowing you to do fancy-schmancy things at a whopping 60 fps. Here’s a *full*
-implementation for parallax scrolling using the compositor worklet.
-
+이름에서 알 수 있듯이 compositor worklet을 사용하면 컴포지션에 연결하여 이미 그린 레이어의 요소 레이어를 다른 레이어 위에 배치하고 레이어에 적용하는 방식에 영향을 줄 수 있습니다. 좀 더 구체적으로 설명하면, 특정 DOM 노드의 컴포지팅 과정에 연결하고 스크롤 위치, `transform` 또는 `opacity`와 같은 특정 속성에 대한 액세스를 요청할 수 있다고 브라우저에 알릴 수 있습니다. 이러한 방법으로 해당 요소는 자체의 레이어에서, 또한 여러분의 코드는 *각 프레임*에서 실행되게 해줍니다. 여러분은 레이어 변환을 조작하여 레이어를 이동시킬 수 있고 레이어의 속성 (`opacity` 같은)을 변경하여 60fps에서 실행되는 무엇인가 매우 멋진 것들을 구현할 수 있습니다. 다음 예제는 compositor worklet을 사용하여 parallax scrolling을 구현한 *전체* 코드입니다.
 
     // main.js
     window.compositorWorklet.import('worklet.js')
@@ -199,9 +192,8 @@ implementation for parallax scrolling using the compositor worklet.
     });
 
 
-My colleague Robert Flack has written a [polyfill][CompWorklet polyfill] for the
-compositor worklet so you can give it a try – obviously with a much
-higher performance impact.
+저의 동료 Robert Flack이 Compositor Worklet을 위한 [polyfill][CompWorklet polyfill]을
+구현했으니 사용해보세요 - 확실히 성능이 향상된 것을 볼 수 있습니다.
 
 ### Layout worklet
 ([spec][Layout Worklet spec])
