@@ -1861,3 +1861,18 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+tomgreenaway:
+  name:
+    given: Tom
+    family: Greenaway
+  org:
+    name: Google
+    unit: Developer Relations
+  country: AU
+  role:
+    - author
+  github: tcmg
+  twitter: tcmg
+  description:
+    en: Chrome & Web Developer Relations Games Lead
