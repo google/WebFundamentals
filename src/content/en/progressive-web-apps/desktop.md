@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
 description: Progressive Web Apps work on the desktop, including Chrome OS, Mac, Linux, and Windows.
 
-{# wf_updated_on: 2018-10-18 #}
+{# wf_updated_on: 2018-11-16 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_blink_components: N/A #}
 
@@ -21,9 +21,9 @@ description: Progressive Web Apps work on the desktop, including Chrome OS, Mac,
   </ul>
 </aside>
 <aside class="dogfood">
-  <b>Mac</b> support for Desktop PWAs is expected to land in
-  Chrome 72. To test on earlier versions, enable the
-  <code>#enable-desktop-pwas</code> flag.
+  <b>Mac</b> support for Desktop PWAs is in development and we hope to see it
+  land in the first half of 2019. Until it lands, you can test the experience
+  by enabling the <code>#enable-desktop-pwas</code> flag.
 </aside>
 
 
