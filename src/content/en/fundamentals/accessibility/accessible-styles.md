@@ -305,8 +305,8 @@ for areas where you may be relying too heavily on color to convey important
 information.
 
 If you're curious about how your site looks to different people, or if you rely
-heavily on the use of color in your UI, you can use the [NoCoffee Chrome
-extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
+heavily on the use of color in your UI, you can use the
+[NoCoffee Chrome extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
 to simulate various forms of visual impairment, including different types of
 color blindness.
 
