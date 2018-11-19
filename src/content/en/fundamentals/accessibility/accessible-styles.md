@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-11-19 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: Blink>CSS #}
 
