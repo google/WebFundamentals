@@ -68,6 +68,9 @@ toc:
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
           step_group: perf-oce
+        - title: Adapting to Users with Client Hints
+          path: /web/fundamentals/performance/optimizing-content-efficiency/client-hints/
+          step_group: perf-oce
         - title: Delivering Fast and Light Applications with Save-Data
           path: /web/fundamentals/performance/optimizing-content-efficiency/save-data/
           step_group: perf-oce
@@ -193,4 +196,3 @@ toc:
       - title: Next steps
         path: /web/fundamentals/performance/audit/next
         step_group: perf-audit
-
