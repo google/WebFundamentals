@@ -1,15 +1,15 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 
-{# wf_published_on: 2018-11-02 #}
-{# wf_updated_on: 2018-11-02 #}
+{# wf_published_on: 2018-11-19 #}
+{# wf_updated_on: 2018-11-19 #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/showcase/2018/images/nikkei/featured.jpg #}
 {# wf_featured_snippet: With a publishing history of more than 140 years, Nikkei is one of the most authoritative media businesses in Japan. To provide a better user experience and accelerate their business on the web, Nikkei successfully launched a Progressive Web App in November 2017, and they’re seeing amazing results from the new platform. #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
 {# wf_vertical: media #}
-{# wf_featured_date: 2018-11-02 #}
+{# wf_featured_date: 2018-11-19 #}
 {# wf_blink_components: N/A #}
 
 # Nikkei achieves a new level of quality and performance with their multi-page PWA {: .page-title }
@@ -71,11 +71,9 @@ results from the new platform.
   </ul>
 </div>
 
-<!--
-<a class="button button-primary" download href="/web/showcase/2018/pdfs/nikkei.pdf">
+<a class="button button-primary" download href="/web/showcase/2018/pdfs/nikkei-pwa.pdf">
   Download Business Focused PDF Case Study
 </a>
--->
 
 <div class="clearfix"></div>
 
