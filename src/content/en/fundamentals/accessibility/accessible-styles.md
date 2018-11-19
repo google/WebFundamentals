@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-11-19 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: Blink>CSS #}
 
@@ -96,20 +96,7 @@ fake button and notice the `:focus` style is always applied.
     <fake-button tabindex="0">Click Me!</fake-button>
 
 {% framebox height="80px" %}
-<style>
-  fake-button {
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  fake-button:focus {
-    outline: none;
-    background: pink;
-  }
-</style>
+<style>fake-button {display: inline-block;padding: 10px;border: 1px solid black;cursor: pointer;user-select: none;}fake-button:focus {outline: none;background: pink;}</style>
 <fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
@@ -318,8 +305,8 @@ for areas where you may be relying too heavily on color to convey important
 information.
 
 If you're curious about how your site looks to different people, or if you rely
-heavily on the use of color in your UI, you can use the [NoCoffee Chrome
-extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
+heavily on the use of color in your UI, you can use the
+[NoCoffee Chrome extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
 to simulate various forms of visual impairment, including different types of
 color blindness.
 
