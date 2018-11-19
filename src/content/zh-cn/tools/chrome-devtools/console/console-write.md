@@ -173,7 +173,7 @@ console.log("%s has %d points", "Sam", 100);
 %f | 将值格式化为浮点值
 %o | 将值格式化为可扩展 DOM 元素。如同在 Elements 面板中显示的一样
 %O | 将值格式化为可扩展 JavaScript 对象
-%c | 将 CSS 样式规则应用到第二个参数指定的输出字符串
+%c | 将第二个参数提供的CSS 样式规则应用到输出字符串
 
 本示例使用数字说明符设置 `document.childNodes.length` 的值的格式。同时使用浮点说明符设置 `Date.now()` 的值的格式。
 
