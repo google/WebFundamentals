@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Remote debug live content on an Android device from a Windows, Mac, or Linux computer.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-11-19 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -105,12 +105,15 @@ Android device](#troubleshooting) for more help.
   are unlocked.
 * If your development machine is running Windows, try manually installing the USB drivers for
   your Android device. See [Install OEM USB Drivers][drivers]{:.external}.
-* If you don't see the **Allow USB Debugging** prompt on your Android device, try
-  disconnecting and then re-connecting the USB cable while DevTools is in focus on
-  your development machine and your Android homescreen is showing. In other words,
-  sometimes the prompt doesn't show up when your Android or development machine screens
-  are locked. Consider updating the display settings for your Android device and development
-  machine so that they never go to sleep.
+* If you don't see the **Allow USB Debugging** prompt on your Android device try:
+  * Disconnecting and then re-connecting the USB cable while DevTools is in focus on
+    your development machine and your Android homescreen is showing. In other words,
+    sometimes the prompt doesn't show up when your Android or development machine screens
+    are locked.
+  * Updating the display settings for your Android device and development
+    machine so that they never go to sleep.
+  * Setting Android's USB mode to PTP. See [Galaxy S4 does not show Authorize USB debugging
+    dialog box](https://android.stackexchange.com/questions/101933){: .external }.
 * Select **Revoke USB Debugging Authorizations** from the **Developer Options** screen on your
   Android device to reset it to a fresh state.
 * Some combinations of Windows and Android devices (especially Samsung) require extra
