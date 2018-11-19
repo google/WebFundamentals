@@ -15,12 +15,12 @@
       }
     </style>
     <meta property="og:title" content="Enjoy Fireworks">
-    <meta property="og:description" content="Fireworks are beautiful.
-     This article explains how beautiful fireworks are.">
-    <meta property="og:image" content=
-     "https://developers.google.com/web/imgs/fireworks.jpg">
-    <meta property="og:url" content=
-     "{{site.sample_link_base}}discovery-and-distribution/optimizations-for-crawlers/social-sites.html">
+    <meta property="og:description"
+          content="Fireworks are beautiful. This article explains how beautiful fireworks are.">
+    <meta property="og:image"
+          content="https://developers.google.com/web/imgs/fireworks.jpg">
+    <meta property="og:url"
+          content="https://example.com/discovery-and-distribution/optimizations-for-crawlers/social-sites.html">
     <meta property="og:type" content="website">
 <!-- // [END ogp] -->
     <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +48,7 @@
   var isCompleted = {};
   function sampleCompleted(sampleName){
     if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed');
       isCompleted[sampleName] = true;
     }
   }
