@@ -96,20 +96,7 @@ fake button and notice the `:focus` style is always applied.
     <fake-button tabindex="0">Click Me!</fake-button>
 
 {% framebox height="80px" %}
-<style>
-  fake-button {
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  fake-button:focus {
-    outline: none;
-    background: pink;
-  }
-</style>
+<style>fake-button {display: inline-block;padding: 10px;border: 1px solid black;cursor: pointer;user-select: none;}fake-button:focus {outline: none;background: pink;}</style>
 <fake-button tabindex="0">Click Me!</fake-button>
 {% endframebox %}
 
