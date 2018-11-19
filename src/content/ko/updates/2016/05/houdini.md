@@ -14,15 +14,15 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 참고: 본 글의 각 문단들을 연관 표준의 최신 내용으로 업데이트하고 있습니다.
 
 CSS가 할 수 있는 일들을 생각해본 적이 있나요? 여러분이 하나의 attribute를 바꾸면 전체 웹 페이지는 완전히 다른 레이아웃으로
- 보여집니다. 그런 점에 있어서 마법과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은
-이러한 마법을 바라보기만 할 수 있었습니다. 만약 우리가 우리만의 마법을 부리고 싶다면요? 만약 우리가 마법사가 되고 싶다면요?
+ 보여집니다. 그런 점에 있어서 *마법*과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은
+이러한 마법을 바라보기만 할 수 있었습니다. 만약 우리가 우리만의 마법을 부리고 싶다면요? 만약 우리가 *마법사가 되고 싶다면요*?
 Houdini를 시작해보세요!
 
 Houdini task force는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Google의 엔지니어들로 구성되어 (번역자: LG도 있습니다!)
 CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 협업하고 있습니다. 이 task force는 공식 W3C 표준으로 채택되기 위한
-표준 초안들을 작성하고 있습니다. 그들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로
+*표준 초안*들을 작성하고 있습니다. 그들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로
 하위 수준 사양의 표준 문서들이 개발되었습니다. 이 표준 문서들은 누군가가 “Houdini”에 대해 이야기할 때 보통 의미하는 것입니다.
-표준안 개발 작업이 진행되는 동안 표준 문서 초안들은 미완성 단계이며 일부 초안은 다소 가안일 수 있습니다.
+표준안 개발 작업이 진행되는 동안 [list of drafts][Houdini 표준안 초안]들은 미완성 단계이며 일부 초안은 다소 가안일 수 있습니다.
 그것이 우리가 Houdini를 개발하는 초기 단계입니다.
 
 <div class="video-wrapper-full-width">
@@ -198,8 +198,7 @@ Compositor Worklet이 WICG로 옮겨졌고 계속 내용이 바뀌고 있지만,
 ### Layout worklet
 ([spec][Layout Worklet spec])
 
-Note: First real spec draft has been been proposed. Implementation
-is a good while away.
+참고: 첫 공식 표준안이 제안되었습니다. 표준안의 구현도 상당히 진행되었습니다.
 
 Again, the specification for this is practically empty, but the concept is
 intriguing: write your own layout! The layout worklet is supposed to enable you
