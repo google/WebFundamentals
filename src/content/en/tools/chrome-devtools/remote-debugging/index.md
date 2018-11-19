@@ -208,7 +208,7 @@ You can interact with the screencast in multiple ways:
 Some notes on screencasts:
 
 * Screencasts only display page content. Transparent portions of the screencast 
-  represent device interfaces, such as the Chrome omnibox, the Android status 
+  represent device interfaces, such as the Chrome address bar, the Android status 
   bar, or the Android keyboard.
 * Screencasts negatively affect frame rates. Disable screencasting while
   measuring scrolls or animations to get a more accurate picture of your
