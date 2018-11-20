@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2018-11-19 #}
+{# wf_updated_on: 2018-11-20 #}
 {# wf_published_on: 2016-07-25 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -178,7 +178,7 @@ If you've got two or more caches open, you'll see them listed below the
 [sw-cache-pane]: images/sw-cache.png
 [multiple-caches]: images/multiple-caches.png
 
-## Quota usage {: #quota }
+## Quota usage {:#opaque-responses}
 
 Some responses within the Cache Storage pane may be flagged as being
 "[opaque](/web/fundamentals/glossary#opaque-response)". This refers to a response retrieved from a
