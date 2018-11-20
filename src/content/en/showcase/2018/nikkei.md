@@ -71,7 +71,7 @@ results from the new platform.
   </ul>
 </div>
 
-<a class="button button-primary" download href="/web/showcase/2018/pdfs/nikkei-pwa.pdf">
+<a class="button button-primary" download href="/web/showcase/2018/pdf/nikkei-pwa.pdf">
   Download Business Focused PDF Case Study
 </a>
 
