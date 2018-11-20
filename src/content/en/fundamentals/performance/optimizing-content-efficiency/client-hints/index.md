@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: TBD
 
-{# wf_updated_on: 2018-11-18 #}
+{# wf_updated_on: 2018-11-20 #}
 {# wf_published_on: 2018-11-22 #}
 {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
@@ -598,15 +598,12 @@ self.addEventListener("fetch", event => {
 });
 ```
 
-Warning: Because not all browsers support client hints, you’ll need to check
-what values `event.request.headers.get` returns. A possible alternative approach
-is to record JS equivalents such as
+Warning: Because not all browsers support client hints, you’ll need to check what values
+`event.request.headers.get` returns. A possible alternative approach is to record JS equivalents
+such as
 [`window.devicePixelRatio`](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
-or
-[`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth)
-to
-[`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage),
-which is accessible in the service worker scope.
+or [`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth) to
+[`IndexedDB`](/web/ilt/pwa/working-with-indexeddb), which is accessible in the service worker scope.
 
 Any client hint header you opt into can be read in this fashion. Though that’s
 not the only way you can get some of this information. Network-specific hints
