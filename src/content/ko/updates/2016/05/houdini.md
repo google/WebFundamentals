@@ -103,19 +103,15 @@ Compositor Worklet이 WICG로 옮겨졌고 계속 내용이 바뀌고 있지만,
 ### Layout worklet
 ([spec][Layout Worklet spec])
 
-참고: 첫 공식 표준안이 제안되었습니다. 표준안의 구현도 상당히 진행되었습니다.
+참고: 첫 공식 표준안이 제안되었음 표준안의 구현도 상당히 진행되었습니다.
 
-Again, the specification for this is practically empty, but the concept is
-intriguing: write your own layout! The layout worklet is supposed to enable you
-to do `display: layout('myLayout')` and run your JavaScript to arrange a node’s
-children in the node’s box. Of course, running a full JavaScript implementation
-of CSS’s `flex-box` layout will be slower than running an equivalent native
-implementation, but it’s easy to imagine a scenario where cutting corners can
-yield a performance gain. Imagine a website consisting of nothing but tiles á la
-Windows 10 or a [Masonry]-style layout. Absolute/fixed positioning is not used,
-neither is `z-index` nor do elements ever overlap or have any kind of border or
-overflow. Being able to skip all these checks on re-layout could yield a
-performance gain.
+다시 말하지만, 본 표준안의 실질적인 내용은 그리 많지는 않으나, 개념은 흥미롭습니다.: 여러분만의 레이웃을 작성해보세요!
+Layout Worklet은 여러분이 `display: layout('myLayout')`와 같은 자바스크립트를 코드를 작성하면
+이를 실행하여 구현 내용에 따라 특정 노드의 box안에 해당 노드의 자식 요소들을 배치합니다.
+물론, CSS `flex-box` Layout을 모두 자바스크립트로 구현하는 것은 동일한 기능을 native에서
+실행하는 것보다 느리겠지만 성능 상의 이득을 얻을 수 있는 지름길을 택하는 시나리오를 생각해볼 수 있습니다.
+ Windows 10 또는  [Masonry] 스타일의 레이아웃으로 구성된 웹 페이지를 상상해보세요. Absolute/fixed positioning은 사용되지 않으며,
+`z-index` 나 요소가 겹치거나 어떤 종류의 border 혹은 overflow도 없습니다. 재 레이아웃 시 이러한 모든 검사를 건너뛸 수 있으면 성능이 향상될 수 있습니다.
 
 
     registerLayout('random-layout', class {
