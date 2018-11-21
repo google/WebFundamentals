@@ -3,10 +3,10 @@ book_path: /web/updates/_book.yaml
 
 
 {# wf_published_on: 2018-11-16 #}
-{# wf_updated_on: 2018-11-18 #}
-{# wf_featured_image: /web/updates/images/generic/file.png #}
+{# wf_updated_on: 2018-11-21 #}
+{# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: autoplay,news,media,games #}
-{# wf_featured_snippet: Recapping our Web Audio autoplay policy changes. #}
+{# wf_featured_snippet: A recap of our Web Audio autoplay policy changes which are rolling out soon in Chrome. #}
 {# wf_blink_components: Blink>Media #}
 
 # Web Audio, Autoplay Policy and Games {: .page-title }
