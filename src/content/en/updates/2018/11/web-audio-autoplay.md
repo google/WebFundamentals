@@ -13,7 +13,7 @@ book_path: /web/updates/_book.yaml
 
 {% include "web/_shared/contributors/tomgreenaway.html" %}
 {% include "web/_shared/contributors/mlamouri.html" %}
-{% include "web/_shared/contributors/hongchan.html" %}
+{% include "web/_shared/contributors/hongchanchoi.html" %}
 
 <div class="clearfix"></div>
 
