@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 
 
 {# wf_published_on: 2018-11-16 #}
-{# wf_updated_on: 2018-11-21 #}
+{# wf_updated_on: 2018-11-22 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: autoplay,news,media,games #}
 {# wf_featured_snippet: A recap of our Web Audio autoplay policy changes which are rolling out soon in Chrome. #}
@@ -12,6 +12,8 @@ book_path: /web/updates/_book.yaml
 # Web Audio, Autoplay Policy and Games {: .page-title }
 
 {% include "web/_shared/contributors/tomgreenaway.html" %}
+{% include "web/_shared/contributors/mlamouri.html" %}
+{% include "web/_shared/contributors/hongchan.html" %}
 
 <div class="clearfix"></div>
 

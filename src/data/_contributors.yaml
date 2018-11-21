@@ -1876,3 +1876,29 @@ tomgreenaway:
   twitter: tcmg
   description:
     en: Chrome & Web Developer Relations Games Lead
+
+hongchan:
+  name:
+    given: Hongchan
+    family: Choi
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - engineer
+  description:
+    en: Senior Software Engineer for Web, Audio and Chrome
+
+mlamouri:
+  name:
+    given: Mounir
+    family: Lamouri
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - engineer
+  description:
+    en: Software Engineer for Web Media Experience
