@@ -151,35 +151,32 @@ Layout Worklet은 여러분이 `display: layout('myLayout')`와 같은 자바스
 ### Typed CSSOM
 ([spec][Typed CSSOM spec])
 
-Note: An “almost complete” implementation has landed in Chrome Canary
-behind the “Experimental Web Platform features” flag.
+참고: Chrome Canary에서 “Experimental Web Platform features” 플래그를 설정하시면
+ “거의 완성된” 구현을 사용해볼 수 있습니다.
 
-Typed CSSOM (CSS Object Model or Cascading Style Sheets Object Model) addresses a
-problem we probably all have encountered and just learned to just put up with.
-Let me illustrate with a line of JavaScript:
+Typed CSSOM (CSS 객체 모델 혹은 계층 스타일 시트 객체 모델)은 아마 이제까지 우리들 모두가 마주했으며
+참아왔었던 문제들을 다룹니다. 자바스크립트 코드로 설명해보겠습니다:
 
 
     $('#someDiv').style.height = getRandomInt() + 'px';
 
 
-We are doing math, converting a number to a string to append a unit just to have
-the browser parse that string and convert it back to a number for the CSS engine.
-This gets even uglier when you [manipulate transforms with JavaScript][Aerotwist FLIP].
-No more! CSS is about to get some typing!
+위의 코드에서는 덧셈 연산이 이루어지며 숫자를 문자열 형식으로 변환한 뒤 단위에 해당하는
+문자열도 더하여 해당 문자열을 브라우저가 파싱하고 그것을 다시 숫자로 변환하여 CSS 엔진이 처리하도록 합니다.
+이 과정은 여러분이 [자바스크립트로 변형 속성을 변경하려 할 때][Aerotwist FLIP] 더 복잡해집니다.
+더 이상 이런 일은 없습니다! CSS로 타이핑을 할 수 있습니다!
 
-This draft is one of the more mature ones and a [polyfill][Typed CSSOM polyfill] is
-already being worked on. (Disclaimer: using the polyfill will obviously
-add *even more* computational overhead. The point is to show how convenient the
-API is.)
+이 표준안은 Houdini 표준안 중에서 완성도가 높은 표준안이며 [polyfill][Typed CSSOM polyfill]은 이미 작업 중입니다.
+(주의 사항: polyfill을 사용하면 분명히 *더 많은* 계산 오버헤드가 들 것입니다.
+  요점은 API가 얼마나 편리한지 보여주는 것입니다.)
 
-Instead of strings you will be working on an element’s `StylePropertyMap`, where
-each CSS attribute has it’s own key and corresponding value type. Attributes
-like `width` have `LengthValue` as their value type. A `LengthValue` is a
-dictionary of all CSS units like `em`, `rem`, `px`, `percent`, etc. Setting
-`height: calc(5px + 5%)` would yield a `LengthValue{px: 5, percent: 5}`. Some
-properties like `box-sizing` just accept certain keywords and therefore have a
-`KeywordValue` value type. The validity of those attributes could then be checked
-at runtime.
+여러분은 문자열 대신에 요소의 `StylePropertyMap`에서 작업 하게 됩니다. `StylePropertyMap`에서
+ 각 CSS 속성은 자체의 키와 그에 해당하는 값 유형을 가집니다.
+ `width`와 같은 속성의 값 유형으로는 `LengthValue`가 있습니다. `LengthValue`는
+`em`, `rem`, `px`, `percent` 등과 같은 모든 CSS 단위를 의미합니다.
+`height: calc(5px + 5%)`로 명시하는 것은 `LengthValue{px: 5, percent: 5}`와 동일한 의미입니다.
+`box-sizing`과 같은 일부 속성은 특정 키워드를 값으로 가지므로 `KeywordValue`를 값 유형로 가집니다.
+이러한 해당 속성들의 유효성은 런타임에 확인할 수 있습니다.
 
 
     <div style="width: 200px;" id="div1"></div>
