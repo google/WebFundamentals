@@ -179,7 +179,7 @@ The pre-seeded site list is algorithmically generated, rather than manually cura
 
 ## Finding balance {: #conclusion}
 
-We have posted new documentation to give more insight into our decision making process and the design rationale behind this policy. As well as new documentation on how the pre-seeded site list works.
+We have posted new documentation to give more insight into our [decision making process and the design rationale] behind this policy. As well as new documentation on [how the pre-seeded site list works].
 
 We always put our users first but we also don’t want to let down the web development community. Sometimes being the browser means that these two goals must be carefully balanced. We believe that with our adjustments to the implementation of the policy, and the additional time we provided for web audio developers to update their code, that we will achieve this balance with Chrome 71.
 
@@ -199,4 +199,5 @@ We always put our users first but we also don’t want to let down the web devel
 [AudioContext]: https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
 [AudioNodes]: https://developer.mozilla.org/en-US/docs/Web/API/AudioNode
 [AudioScheduledSourceNode]: https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode
-
+[decision making process and the design rationale]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay/autoplay-policy-design-rationale
+[how the pre-seeded site list works]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay/autoplay-pre-seeding-in-chrome
