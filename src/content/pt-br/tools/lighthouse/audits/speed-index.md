@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentação de referência da auditoria do Lighthouse "Índice de velocidade".
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Índice de velocidade  {: .page-title }
@@ -31,7 +31,7 @@ consulte [Índice de velocidade](https://sites.google.com/a/webpagetest.org/docs
 
 A pontuação-alvo é calculada por uma função de distribuição acumulada de uma distribuição
 log-normal. Confira os comentários na
-[fonte](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
+[fonte](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
 da auditoria caso queira saber mais.
 
 

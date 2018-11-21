@@ -16,5 +16,6 @@ description: >
         margin-right: 8px;
       }
     </style>
-    <b>Chrome Dev Summit 2018</b> is happening now and streaming live on YouTube.
-    <a href="https://developer.chrome.com/devsummit/" class="gc-analytics-event" data-category="webFu" data-label="cds-banner-schedule">Watch now</a>.
+    Missed the action at the 2018 <b>Chrome Dev Summit</b>? Catch up with
+    our playlist on the Google Chrome Developers channel on YouTube.
+    <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Speed Index" Lighthouse audit.
 
-{# wf_updated_on: 2018-10-01 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 {# wf_blink_components: N/A #}
 
@@ -33,7 +33,7 @@ see [Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpaget
 
 The target score is computed by a cumulative distribution function of a
 log-normal distribution. Check out the comments in the
-[source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
+[source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
 of the audit if you need to know more.
 
 ## Feedback {: #feedback }
