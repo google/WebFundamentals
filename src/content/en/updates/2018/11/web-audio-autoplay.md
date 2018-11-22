@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 
-{# wf_published_on: 2018-11-16 #}
+{# wf_published_on: 2018-11-26 #}
 {# wf_updated_on: 2018-11-22 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: autoplay,news,media,games #}
