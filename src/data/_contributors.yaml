@@ -625,6 +625,21 @@ greenido:
   description:
     en: Ido is a Developer Advocate and a runner
 
+tomgreenaway:
+  name:
+    given: Tom
+    family: Greenaway
+  org:
+    name: Google
+    unit: Developer Relations
+  country: AU
+  role:
+    - author
+  github: tcmg
+  twitter: tcmg
+  description:
+    en: Chrome & Web Developer Relations Games Lead
+
 eligrey:
   name:
     given: Eli
@@ -993,6 +1008,19 @@ sethladd:
   twitter: sethladd
   role:
     - author
+
+mlamouri:
+  name:
+    given: Mounir
+    family: Lamouri
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - engineer
+  description:
+    en: Software Engineer for Web Media Experience
 
 ericlawrence:
   name:
