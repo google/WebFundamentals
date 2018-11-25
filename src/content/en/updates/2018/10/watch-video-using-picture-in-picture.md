@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-10-19 #}
+{# wf_updated_on: 2018-11-21 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -208,6 +208,49 @@ handle your Picture-in-Picture button visibility.
                                   videoElement.disablePictureInPicture;
     }
 
+## MediaStream video support
+
+Video playing MediaStream objects (e.g. `getUserMedia()`, `getDisplayMedia()`,
+`canvas.captureStream()`) also support Picture-in-Picture in Chrome 71. This
+means you can show a Picture-in-Picture window that contains user's webcam
+video stream, display video stream, or even a canvas element. Note that the
+video element doesn't have to be attached to the DOM to enter
+Picture-in-Picture as shown below.
+
+### Show user's webcam in Picture-in-Picture window
+
+```js
+const video = document.createElement('video');
+video.autoplay = true;
+video.srcObject = await navigator.mediaDevices.getUserMedia({ video: true });
+
+// Later on, video.requestPictureInPicture();
+```
+
+### Show display in Picture-in-Picture window
+
+```js
+const video = document.createElement('video');
+video.autoplay = true;
+video.srcObject = await navigator.mediaDevices.getDisplayMedia({ video: true });
+
+// Later on, video.requestPictureInPicture();
+```
+
+### Show canvas element in Picture-in-Picture window
+
+```js
+const canvas = document.createElement('canvas');
+// Draw something to canvas.
+canvas.getContext('2d').fillRect(0, 0, canvas.width, canvas.height);
+
+const video = document.createElement('video');
+video.autoplay = true;
+video.srcObject = canvas.captureStream();
+
+// Later on, video.requestPictureInPicture();
+```
+
 ## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
@@ -223,8 +266,6 @@ API are currently implemented in Chrome and other browsers.
 Here's what you can expect to see in the near future:
 
 - Picture-in-Picture will be supported in Chrome OS and Android O.
-- MediaStreams from `MediaDevices.getUserMedia()` will work with
-  Picture-in-Picture.
 - Web developers will be able to [add custom Picture-in-Picture controls].
 
 ## Resources {: #resources }
@@ -237,8 +278,8 @@ Here's what you can expect to see in the near future:
 - Unofficial Picture-in-Picture polyfill: [https://github.com/gbentaieb/pip-polyfill/]
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="5azRhKsSU_M"
-          data-start="714" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="iTC3mfe0DwE"
+          data-start="80" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
