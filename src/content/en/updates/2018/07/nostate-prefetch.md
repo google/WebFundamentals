@@ -131,10 +131,11 @@ times depending on whether the tool collects data on the client-side or the serv
 Client-side analytics scripts register a pageview when the page is shown to the user. These 
 scripts rely on the execution of JavaScript and NoState Prefetch does not execute any JavaScript.
 
-Server-side analytics tools register metrics when a request is handled. For resources loaded via 
-NoState Prefetch, there can be a significant gap of time between when a request is handled and 
-when the response is actually used by the client (if it is used at all). Currently, there is no 
-server-side mechanism for determining whether a request was made via NoStatePrefetch.
+Server-side analytics tools register metrics when a request is handled. For resources loaded via
+NoState Prefetch, there can be a significant gap of time between when a request is handled and when
+the response is actually used by the client (if it is used at all). Since Chrome 69 NoState Prefetch
+adds the header `Purpose: Prefetch` to all requests in order to make them distinguishable from
+normal browsing.
 
 ## Check it out {: #check-it-out }
 
