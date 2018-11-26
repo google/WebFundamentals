@@ -1336,6 +1336,18 @@ jeffnusz:
     - author
   homepage: 'http://www.custom-logic.com'
 
+yoichiosato:
+  name:
+    given: Yoichi
+    family: Osato
+  github: yoichio
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Software Engineer at Google working on the web platform"
+
 addyosmani:
   name:
     given: Addy
