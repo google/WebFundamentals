@@ -320,7 +320,7 @@ import JSBI from './jsbi.mjs';
 const max = JSBI.BigInt(Number.MAX_SAFE_INTEGER);
 const two = JSBI.BigInt('2');
 const result = JSBI.add(max, two);
-console.log(result.toString(result));
+console.log(result.toString());
 // → '9007199254740993'
 ```
 
