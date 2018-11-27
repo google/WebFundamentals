@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 63 shipped with NoState Prefetch. NoState Prefetch is a mechanism for fetching resources in advance that uses less memory than the deprecated prerendering process.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-07-20 #}
 {# wf_tags: performance, chrome63 #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
