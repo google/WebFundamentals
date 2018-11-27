@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: BigInts are a new numeric primitive in JavaScript that can represent integers with arbitrary precision. This article walks through some use cases and explains the new functionality in Chrome 67 by comparing BigInts to Numbers in JavaScript.
 
-{# wf_updated_on: 2018-10-23 #}
+{# wf_updated_on: 2018-11-26 #}
 {# wf_published_on: 2018-05-01 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -291,6 +291,53 @@ view[0];
 ```
 
 The `BigUint64Array` flavor does the same using the unsigned 64-bit limit instead.
+
+## Polyfilling and transpiling BigInts
+
+At the time of writing, `BigInt`s are only supported in Chrome. Other browsers are actively working
+on implementing them. But what if you want to use `BigInt` functionality *today* without
+sacrificing browser compatibility? I’m glad you asked! The answer is… interesting, to say the least.
+
+Unlike most other modern JavaScript features, `BigInt`s cannot reasonably be transpiled down to ES5.
+
+The `BigInt` proposal [changes the behavior of operators](#operators) (like `+`, `>=`, etc.) to
+work on `BigInt`s. These changes are impossible to polyfill directly; and they are also making it
+infeasible (in most cases) to transpile `BigInt` code to fallback code using Babel or similar
+tools. The reason is that such a transpilation would have to replace *every single operator* in the
+program with a call to some function that performs type checks on its inputs, which would incur an
+unacceptable run-time performance penalty. In addition, it would greatly increase the file size of
+any transpiled bundle, negatively impacting download, parse, and compile times.
+
+A more feasible and future-proof solution is to write your code using [the JSBI
+library](https://github.com/GoogleChromeLabs/jsbi#why) for now. JSBI is a JavaScript port of the
+`BigInt` implementation in V8 and Chrome — by design, it behaves exactly like the native `BigInt`
+functionality. The difference is that instead of relying on syntax, it exposes [an
+API](https://github.com/GoogleChromeLabs/jsbi#how):
+
+```js
+import JSBI from './jsbi.mjs';
+
+const max = JSBI.BigInt(Number.MAX_SAFE_INTEGER);
+const two = JSBI.BigInt('2');
+const result = JSBI.add(max, two);
+console.log(result.toString(result));
+// → '9007199254740993'
+```
+
+Once `BigInt`s are natively supported in all browsers you care about, you can [use
+`babel-plugin-transform-jsbi-to-bigint` to transpile your code to native `BigInt`
+code](https://github.com/GoogleChromeLabs/babel-plugin-transform-jsbi-to-bigint) and drop the JSBI
+dependency. For example, the above example transpiles to:
+
+```js
+const max = BigInt(Number.MAX_SAFE_INTEGER);
+const two = 2n;
+const result = max + two;
+console.log(result);
+// → '9007199254740993'
+```
+
+## Further reading
 
 If you’re interested in how `BigInt`s work behind the scenes (e.g. how they are represented in
 memory, and how operations on them are performed), [read our V8 blog post with implementation
