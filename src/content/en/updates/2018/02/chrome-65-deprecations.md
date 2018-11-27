@@ -2,10 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and document.all is now read only.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
-{# wf_blink_components: Blink,Blink>Bindings,Blink>Network #}
+{# wf_blink_components: Blink,Blink>Bindings,Blink>Network,Internals,Network,Cookies #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and <code>document.all</code> is now read only.  #}
 
@@ -49,6 +49,20 @@ Starting in version 65, Chrome complies with the standard.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5072231356956672) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=794433)
 
+## The set-cookie value no longer supported for &lt;meta&gt; element's http-equiv attribute 
+
+Currently, `<meta http-equiv="set-cookie" ...>` can be used to manipulate
+existing cookies for a host, or to set new cookies. This allows a non-script
+content injection to upgrade itself to a session fixation attack, even in the
+presence of a strong content security policy.
+
+It's better from a security perspective to require either access to HTTP
+headers (in other words `Set-Cookie`) or script execution (in other words
+`document.cookie`).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/0sJ8GUJO0Dw/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6170540112871424) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=767813)
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
