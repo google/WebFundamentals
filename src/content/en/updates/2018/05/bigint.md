@@ -306,7 +306,7 @@ infeasible (in most cases) to transpile `BigInt` code to fallback code using Bab
 tools. The reason is that such a transpilation would have to replace *every single operator* in the
 program with a call to some function that performs type checks on its inputs, which would incur an
 unacceptable run-time performance penalty. In addition, it would greatly increase the file size of
-any transpiled bundle, which increases download time, parse time, and compile time.
+any transpiled bundle, negatively impacting download, parse, and compile times.
 
 A more feasible and future-proof solution is to write your code using [the JSBI
 library](https://github.com/GoogleChromeLabs/jsbi#why) for now. JSBI is a JavaScript port of the
