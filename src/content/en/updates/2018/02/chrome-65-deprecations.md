@@ -5,7 +5,7 @@ description: A round up of the deprecations and removals in Chrome 65 to help yo
 {# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-02-08 #}
 {# wf_tags: deprecations,removals,chrome65 #}
-{# wf_blink_components: Blink,Blink>Bindings,Blink>Network,Internals,Network,Cookies #}
+{# wf_blink_components: Blink,Blink>Bindings,Blink>Network,Internals>Network>Cookies #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome 65 to help you plan. In this version, a reminder about Symantec certificates, cross-origin downloads are blocked, and <code>document.all</code> is now read only.  #}
 
@@ -49,7 +49,7 @@ Starting in version 65, Chrome complies with the standard.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5072231356956672) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=794433)
 
-## The set-cookie value no longer supported for &lt;meta&gt; element's http-equiv attribute 
+## The set-cookie value no longer supported for &lt;meta&gt; element's http-equiv attribute
 
 Currently, `<meta http-equiv="set-cookie" ...>` can be used to manipulate
 existing cookies for a host, or to set new cookies. This allows a non-script
