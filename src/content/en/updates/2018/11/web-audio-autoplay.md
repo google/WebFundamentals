@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 
 
 {# wf_published_on: 2018-11-26 #}
-{# wf_updated_on: 2018-11-22 #}
+{# wf_updated_on: 2018-11-26 #}
 {# wf_featured_image: /web/updates/images/generic/audio.png #}
 {# wf_tags: autoplay,news,media,games #}
 {# wf_featured_snippet: A recap of our Web Audio autoplay policy changes which are rolling out soon in Chrome. #}
@@ -31,7 +31,7 @@ However, if the user arrives on a page with autoplay content and they navigated 
 
 Additionally, we added a heuristic to learn from users’ past behavior with regard to websites that autoplay audio. We detect when users regularly let audio play for more than 7 seconds during most of their visits to a website, and enable autoplay for that website.
 
-We do this with an index that is stored locally per Chrome profile on a device – it is not synced across devices and is only shared as part of the anonymised user statistics. We call this index the Media Engagement Index (MEI) and you can view it via chrome://media-engagement.
+We do this with an index that is stored locally per Chrome profile on a device – it is not synced across devices and is only shared as part of the anonymized user statistics. We call this index the Media Engagement Index (MEI) and you can view it via chrome://media-engagement.
 
 MEI keeps track of how many visits to a site include audio playback that is more than 7 seconds long. Based on a user’s MEI, we believe we can understand whether a user expects audio from a particular website or not – and anticipate the user's intent in the future.
 
@@ -95,7 +95,7 @@ There are many interfaces which inherit from AudioNode, one of which is the [Aud
 
 Source nodes commonly represent individual audio snippets that games play, for example: the sound that is played when a player collects a coin or the background music that plays in the current stage. Game developers are very likely to be calling the start() function on source nodes whenever any of these sounds are necessary for the game. 
 
-Once we recognised this common pattern in web games we decided to adjust our implementation to the following:
+Once we recognized this common pattern in web games we decided to adjust our implementation to the following:
 
 <i>An AudioContext will be resumed automatically when two conditions are met:
 
@@ -108,7 +108,7 @@ Due to this change, most web games will now resume their audio when the user sta
 
 In order to move the web platform forward it’s sometimes necessary to make changes which can break compatibility. Unfortunately, audio autoplay is complex and falls into this category of change. But making this shift is critical to ensure that the web doesn’t stagnate or lose its innovative edge.
 
-Nonetheless, we recognise that applying fixes for websites is not always feasible in the short term for various reasons:
+Nonetheless, we recognize that applying fixes for websites is not always feasible in the short term for various reasons:
 
 * Web developers might be focused on a new project and maintenance to an older website is not immediately possible.
 * Web game portals may not have control over the implementation of the games in their catalog and updating hundreds – if not thousands – of games can be time consuming and expensive for publishers.
