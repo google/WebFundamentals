@@ -209,8 +209,6 @@ filter the **Console** to only show messages that you care about.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
 
-         {% verbatim %}
-
            <button class="gc-analytics-event" data-category="DevTools"
                    data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
            <script>
@@ -228,8 +226,6 @@ filter the **Console** to only show messages that you care about.
                }
              });
            </script>
-
-         {% endverbatim %}
 
        {% endframebox %}
 
