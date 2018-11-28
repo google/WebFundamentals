@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits panel updates.
 
-{# wf_updated_on: 2018-11-27 #}
+{# wf_updated_on: 2018-11-28 #}
 {# wf_published_on: 2018-11-27 #}
 {# wf_tags: chrome72, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -28,7 +28,7 @@ New features and major changes coming to Chrome DevTools in Chrome 72 include:
 [FMP]: /web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
 
 After [recording a page load](/web/tools/chrome-devtools/speed/get-started), DevTools now
-marks performance metrics like `DOMContentLoaded` and [First Meaningful Paint][FMP] in the **Timing** section.
+marks performance metrics like `DOMContentLoaded` and [First Meaningful Paint][FMP] in the **Timings** section.
 
 <figure>
   <img src="/web/updates/images/2018/11/metrics.png"
@@ -97,7 +97,7 @@ in your report under **Best Practices** > **Passed audits**.
   </figcaption>
 </figure>
 
-Also, you can now access the Audits panel from the Command Menu by typing `lighthouse` or `PWA`.
+Also, you can now access the Audits panel from the Command Menu by typing `Lighthouse` or `PWA`.
 
 <figure>
   <img src="/web/updates/images/2018/11/lighthouse.png"
