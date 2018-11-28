@@ -13,6 +13,8 @@ description: Visualize performance metrics, highlight text nodes, copy the JS pa
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
+Note: We'll publish the video version of this page in early February 2019.
+
 New features and major changes coming to Chrome DevTools in Chrome 72 include:
 
 * [Visualize performance metrics](#metrics) in the Performance panel.
@@ -95,7 +97,7 @@ in your report under **Best Practices** > **Passed audits**.
   </figcaption>
 </figure>
 
-Also, you can now access the Audits panel from the Command Menu by typing `lighthouse`.
+Also, you can now access the Audits panel from the Command Menu by typing `lighthouse` or `PWA`.
 
 <figure>
   <img src="/web/updates/images/2018/11/lighthouse.png"
