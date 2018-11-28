@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-11-28 #}
 {# wf_published_on: 2018-09-06 #}
-{# wf_tags: cookie,chrome69 #}
+{# wf_tags: cookie,chrome69,capabilities #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers. #}
 {# wf_blink_components: Blink>WebVR #}
@@ -13,15 +13,51 @@ description: The Cookie Store API offers asynchronous access to HTTP cookies, an
 
 {% include "web/_shared/contributors/victorcostan.html" %}
 
-The [Cookie Store API](https://www.chromestatus.com/feature/5658847691669504) is
-available for Origin Trials starting in Chrome 69. The API introduces the
-following exciting possibilities:
+<div class="clearfix"></div>
+
+
+{% include "web/updates/_shared/capabilities.html" %}
+
+
+## What is the Cookie Store API? {: #explainer }
+
+The [Cookie Store API][cr-status] is available for Origin Trials starting in
+Chrome 69. The API introduces the following exciting possibilities:
 
 * Cookies can be accessed asynchronously, avoiding jank on the main thread.
 * Changes to cookies can be observed, avoiding polling.
 * Cookies can be accessed from service workers.
 
-## You (probably) don't need cookies
+[Read explainer][explainer]{: .button .button-primary }
+
+## Current status {: #status }
+
+| Step                                       | Status                       |
+| ------------------------------------------ | ---------------------------- |
+| 1. Create explainer                        | [Complete][explainer]        |
+| 2. Create initial draft of specification   | [Complete][spec]             |
+| 3. Gather feedback & iterate on spec       | [In progress](#feedback) |
+| **4. Origin trial**                        | [**In progress**](#origin-trial)  |
+| 5. Launch                                  | Not started                  |
+
+
+## How do I use the async cookie store? {: #how-do-i-use }
+
+### Enable the origin trial {: #origin-trial }
+
+To get access to this new API on your site, please [sign
+up](http://bit.ly/OriginTrialSignup){: .external} for the "Cookie Store API"
+Origin Trial. If you just want to try it out locally, the API can be enabled
+on the command line:
+
+<pre class="devsite-terminal devsite-click-to-copy">
+chrome --enable-blink-features=CookieStore
+</pre>
+
+Passing this flag on the command line enables the API globally in Chrome for
+the current session.
+
+### You (probably) don't need cookies
 
 Before diving into the new API, I'd like to state that cookies are still the Web
 platform's worst client-side storage primitive, and should still be used as a
@@ -30,11 +66,11 @@ storage mechanism, and we've learned a lot since then.
 
 The main reasons for avoiding cookies are:
 
-* Cookies bring your storage schema into the your backend API.
+* Cookies bring your storage schema into the your back-end API.
   Each HTTP request carries a snapshot of the cookie jar. This makes it easy for
-  backend engineers to introduce dependencies on the current cookie format. Once
-  this happens, your frontend can't change its storage schema without deploying
-  a matching change to the backend.
+  back-end engineers to introduce dependencies on the current cookie format. Once
+  this happens, your front-end can't change its storage schema without deploying
+  a matching change to the back-end.
 
 * Cookies have a complex security model.
   Modern Web platform features follow the same origin policy, meaning that
@@ -60,7 +96,7 @@ via the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API.
 That being said, you're still reading this article because you have a good
 reason to use cookies...
 
-## Say goodbye to jank
+### Reading a cookie, and eliminating jank
 
 The venerable
 [document.cookie](https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie)
@@ -92,7 +128,7 @@ that the change is only guaranteed to be applied after the Promise returned by
 
     // undefined
 
-## Observe, don't poll
+### Observe, don't poll
 
 A popular application for accessing cookies from JavaScript is detecting when
 the user logs out, and updating the UI. This is currently done by polling
@@ -113,7 +149,7 @@ changes, which does not require polling.
       }
     });
 
-## Welcome service workers
+### Welcome service workers
 
 Because of synchronous design, the `document.cookie` API has not been made
 available to
@@ -154,34 +190,36 @@ user logs off.
       }
     });
 
-## How to enable the API {: #heading-origin-trial }
+## Best practices {: #best-practices }
 
-To get access to this new API on your site, please [sign
-up](http://bit.ly/OriginTrialSignup){: .external} for the "Cookie Store API"
-Origin Trial. If you just want to try it out locally, the API can be enabled
-on the command line:
+Coming soon.
 
-    chrome --enable-blink-features=CookieStore
-
-Passing this flag on the command line enables the API globally in Chrome for
-the current session.
+## Feedback {: #feedback }
 
 If you give this API a try, please let us know what you think! Please direct
-feedback on the API shape to [the specification
-repository](https://github.com/WICG/cookie-store/issues), and report
-implementation bugs to [the CookiesAPI Blink
-component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3EStorage%3ECookiesAPI).
+feedback on the API shape to the
+[specification repository](https://github.com/WICG/cookie-store/issues),
+and report implementation bugs to the
+[CookiesAPI Blink component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3EStorage%3ECookiesAPI).
 
-We are especially
-interested to learn about performance measurements and use cases beyond the ones
-outlined in [the explainer](https://wicg.github.io/cookie-store/explainer.html).
+We are especially interested to learn about performance measurements and use
+cases beyond the ones outlined in the [explainer][explainer].
 
 ## Additional resources
 
-* [Explainer](https://wicg.github.io/cookie-store/explainer.html)
-* [Specification](https://wicg.github.io/cookie-store/)
-* [chromestatus.com entry](https://www.chromestatus.com/feature/5658847691669504)
+* [Public explainer][explainer]
+* [Specification][spec]
+* [Tracking bug][cr-bug]
+* [chromestatus.com entry][cr-status]
+* [WICG Discourse Thread][wicg-discourse]
+* Blink Component: `Blink>Storage>CookiesAPI`
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
+
+
+[spec]: https://wicg.github.io/cookie-store/
+[cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=729800
+[cr-status]: https://www.chromestatus.com/feature/5658847691669504
+[explainer]: https://wicg.github.io/cookie-store/explainer.html
+[wicg-discourse]: https://discourse.wicg.io/t/rfc-proposal-for-an-asynchronous-cookies-api/1652

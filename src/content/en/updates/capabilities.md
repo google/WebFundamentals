@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-11-09 #}
+{# wf_updated_on: 2018-11-28 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -37,13 +37,30 @@ design, to ensure an interoperable design.
   </thead>
   <tbody>
     <tr>
-      <td><a href="/web/updates/2018/11/writable-files">Writable Files API</a></td>
+      <td>
+        <a href="/web/updates/2018/09/asynchronous-access-to-http-cookies">
+          Asynchronous Cookie API
+        </a>
+      </td>
+      <td>
+        The Cookie Store API exposes HTTP cookies to service workers and offers
+        an asynchronous alternative to <code>document.cookie</code>.
+        <br><br>
+        <b>Current Status:</b> Available as an origin trial in Chrome 69+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
+      </td>
       <td>
         The writable files API is designed to increase interoperability of
         web applications with native applications, making it possible for users
         to choose files or directories that a web app can interact with on the
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
     </tr>
     <tr>
