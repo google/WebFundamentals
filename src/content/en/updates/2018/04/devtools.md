@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
 experiments_path: /web/updates/2018/04/_experiments.yaml
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-04-11 #}
 {# wf_tags: chrome67,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -395,11 +395,4 @@ fixed within a day. You can go back to using Chrome Stable while Canary is broke
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
-
-{% include "web/_shared/rss-widget-updates.html" %}
+<</web/updates/_shared/discover.md>>
