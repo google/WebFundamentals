@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-11-21 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -128,6 +128,11 @@ Operating systems usually restrict Picture-in-Picture to one window, so
 Chrome's implementation follows this pattern. This means users can only play
 one Picture-in-Picture video at a time. You should expect users to exit
 Picture-in-Picture even when you didn't ask for it.
+
+Warning: Listen to Picture-in-Picture events instead of waiting for promises
+to update your media player controls for instance as video can enter and leave
+Picture-in-Picture at any time (e.g. user clicks some browser context menu
+or Picture-in-Picture is triggered automatically).
 
 The new `enterpictureinpicture` and `leavepictureinpicture` event handlers let
 us tailor the experience for users. It could be anything from browsing a
