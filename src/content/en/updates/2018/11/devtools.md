@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits panel updates.
 
-{# wf_updated_on: 2018-11-28 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-11-27 #}
 {# wf_tags: chrome72, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -136,11 +136,6 @@ Note: Canary is released as soon as its built, without testing. This means that 
 breaks about once-a-month. It's usually fixed within a day. You can go back to using Chrome
 Stable while Canary is broken.
 
-## Previous release notes {: #links }
-
-[tag]: /web/updates/tags/devtools-whatsnew
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
+<</web/updates/_shared/discover.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}

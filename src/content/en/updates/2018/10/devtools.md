@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Highlight DOM nodes from Live expressions, store nodes as global variables, and more.
 
-{# wf_updated_on: 2018-10-10 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-10-10 #}
 {# wf_tags: chrome71,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -205,11 +205,6 @@ Stable while Canary is broken.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
+<</web/updates/_shared/discover.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}

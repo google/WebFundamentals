@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more.
 
-{# wf_updated_on: 2017-11-10 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2017-08-29 #}
 {# wf_tags: chrome62,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -292,9 +293,4 @@ you're short on time. If you've encountered a certain bug in DevTools, please
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-## Previous release notes {: #links }
-
-* [What's New In DevTools (Chrome 61)](/web/updates/2017/07/devtools-release-notes)
-* [What's New In DevTools (Chrome 60)](/web/updates/2017/05/devtools-release-notes)
-* [What's New In DevTools (Chrome 59)](/web/updates/2017/04/devtools-release-notes)
-* [What's New In DevTools (Chrome 58)](/web/updates/2017/03/devtools-release-notes)
+<</web/updates/_shared/discover.md>>
