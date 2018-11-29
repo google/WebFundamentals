@@ -224,20 +224,17 @@ come true.
 
 ### 잠시만요, 아직 끝이 아닙니다!
 
-There’s even more specs in Houdini’s list of drafts, but the future of those is
-rather uncertain and they are not much more than placeholders for ideas.
-Examples include custom overflow behaviors, CSS syntax extension API, extension
-of native scroll behavior and similarly ambitious things all of which enable
-things on the web platform that weren't possible before.
+Houdini의 초안 목록에는 더 많은 사양이 있습니다. 해당 내용들이 앞으로 지원 가능할지는
+다소 불확실하지만 아이디어는 무궁무진합니다. 예를 들면, 사용자 정의 overflow 동작,
+CSS 구문 확장 API, 네이티브 스크롤 동작 확장 그리고 이와 유사하게 이제까지
+웹 플랫폼이 하지 못했던 것을 가능하게 하는 야심찬 아이디어들이 있습니다.
 
-## Demos
+## 데모
 
-I have open-sourced the [code for the demo][Houdini Samples]
-([live demo][Houdini Demo] using polyfill) videos I made so you can get a feeling
-on what working with worklets feels like. I will update the repository with new
-demos as new APIs are landing in Canary.
+제가 만든 [데모 코드][Houdini Samples]와 (polyfill을 사용한 [live demo][Houdini Demo]) 비디오를 공개하였으니
+실제로 worklet이 어떻게 동작하는지 살펴보세요. 앞으로도 Canary에서 지원 가능한 새로운 API들을 기반으로 새로운 데모들을 업데이트할 것입니다.
 
-If you want to get involved, there’s always the [Houdini mailing list].
+함께 참여하고 싶으시다면 언제든지 [Houdini 메일링 리스트]에 문의하세요.
 
 [Houdini Drafts]: http://dev.w3.org/houdini/
 [Worklets spec]: https://drafts.css-houdini.org/worklets/
@@ -254,7 +251,7 @@ If you want to get involved, there’s always the [Houdini mailing list].
 [ruby annotations]: https://en.wikipedia.org/wiki/Ruby_character
 [Properties and Values spec]: https://drafts.css-houdini.org/css-properties-values-api/
 [Houdini Samples]: https://github.com/GoogleChrome/houdini-samples
-[Houdini mailing list]: https://lists.w3.org/Archives/Public/public-houdini/
+[Houdini 메일링 리스트]: https://lists.w3.org/Archives/Public/public-houdini/
 [CompWorklet Polyfill]: https://github.com/googlechrome/houdini-samples
 [Web Components]: http://webcomponents.org/
 [parallax scrolling]: https://en.wikipedia.org/wiki/Parallax_scrolling
