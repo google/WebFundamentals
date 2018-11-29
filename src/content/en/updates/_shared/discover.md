@@ -2,7 +2,7 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
-### Chrome 72 {: #index72 .hide-from-toc }
+### Chrome 72 {: #discover72 .hide-from-toc }
 
 * [Visualize performance metrics](/web/updates/2018/11/devtools#metrics) in the Performance panel.
 * [Highlight text nodes](/web/updates/2018/11/devtools#highlight) in the DOM Tree.
@@ -10,7 +10,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Audits panel updates](/web/updates/2018/11/devtools#audits), including a new audit
   that detects JS libraries and new keywords for accessing the Audits panel from the Command Menu.
 
-### Chrome 71 {: #index71 .hide-from-toc }
+### Chrome 71 {: #discover71 .hide-from-toc }
 
 * [Hover over a Live Expression result](/web/updates/2018/10/devtools#hover) to highlight a DOM node.
 * [Store DOM nodes as global variables](/web/updates/2018/10/devtools).
@@ -18,7 +18,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Access the Command Menu from the Main Menu](/web/updates/2018/10/devtools).
 * [Picture-in-Picture breakpoints](/web/updates/2018/10/devtools). 
 
-### Chrome 70 {: #index70 .hide-from-toc }
+### Chrome 70 {: #discover70 .hide-from-toc }
 
 * [Live Expressions](/web/updates/2018/08/devtools#watch) in the Console.
 * [Highlight DOM nodes during Eager Evaluation](/web/updates/2018/08/devtools#nodes).
@@ -30,7 +30,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Debug Node.js apps with ndb](/web/updates/2018/08/devtools#ndb).
 * [(Bonus Tip) Measure real world user interactions with the User Timing API](/web/updates/2018/08/devtools#bonus).
 
-### Chrome 68 {: #index68 .hide-from-toc }
+### Chrome 68 {: #discover68 .hide-from-toc }
 
 * [Eager Evaluation](/web/updates/2018/05/devtools#eagerevaluation).
 * [Argument hints](/web/updates/2018/05/devtools#hints).
@@ -41,7 +41,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Adding property paths to the Watch pane](/web/updates/2018/05/devtools#watch).
 * ["Show timestamps" moved to Settings](/web/updates/2018/05/devtools#timestamps).
 
-### Chrome 67 {: #index67 .hide-from-toc }
+### Chrome 67 {: #discover67 .hide-from-toc }
 
 * [Search across all network headers](/web/updates/2018/04/devtools#network-search).
 * [CSS variable value previews](/web/updates/2018/04/devtools#vars).
@@ -55,7 +55,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Certificate transparency information in the Security panel](/web/updates/2018/04/devtools#security).
 * [Site isolation features in the Performance panel](/web/updates/2018/04/devtools#site-isolation).
 
-### Chrome 66 {: #index66 .hide-from-toc }
+### Chrome 66 {: #discover66 .hide-from-toc }
 
 * [Blackboxing in the Network panel](/web/updates/2018/02/devtools#blackboxing).
 * [Auto-adjust zooming in Device Mode](/web/updates/2018/02/devtools#auto-adjust).
@@ -64,7 +64,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Local Overrides support for styles inside of HTML](/web/updates/2018/02/devtools#overrides).
 * [(Bonus Tip) Blackbox framework scripts to make Event Listener Breakpoints more useful](/web/updates/2018/02/devtools#tip).
 
-### Chrome 65 {: #index65 .hide-from-toc }
+### Chrome 65 {: #discover65 .hide-from-toc }
 
 * [Local Overrides](/web/updates/2018/01/devtools#overrides).
 * [New accessibility tools](/web/updates/2018/01/devtools#a11y).
@@ -73,13 +73,13 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Multiple recordings in the Performance panel](/web/updates/2018/01/devtools#recordings).
 * [Reliable code stepping with workers in async code](/web/updates/2018/01/devtools#stepping).
 
-### Chrome 64 {: #index64 .hide-from-toc }
+### Chrome 64 {: #discover64 .hide-from-toc }
 
 * [Performance Monitor](/web/updates/2017/11/devtools-release-notes#perf-monitor).
 * [Console Sidebar](/web/updates/2017/11/devtools-release-notes#console-sidebar).
 * [Group similar Console messages](/web/updates/2017/11/devtools-release-notes#group-similar).
 
-### Chrome 63 {: #index63 .hide-from-toc }
+### Chrome 63 {: #discover63 .hide-from-toc }
 
 * [Multi-client remote debugging support](/web/updates/2017/10/devtools-release-notes#multi-client).
 * [Workspaces 2.0](/web/updates/2017/10/devtools-release-notes#workspaces).
@@ -87,7 +87,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Simulate push notifications with custom data](/web/updates/2017/10/devtools-release-notes#push).
 * [Trigger background sync events with custom tags](/web/updates/2017/10/devtools-release-notes#sync).
 
-### Chrome 62 {: #index62 .hide-from-toc }
+### Chrome 62 {: #discover62 .hide-from-toc }
 
 * [Top-level await in the Console](/web/updates/2017/08/devtools-release-notes#await).
 * [New screenshot workflows](/web/updates/2017/08/devtools-release-notes#screenshots).
@@ -99,7 +99,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [More predictable cache debugging](/web/updates/2017/08/devtools-release-notes#cache-debugging).
 * [Block-level code coverage](/web/updates/2017/08/devtools-release-notes#coverage).
 
-### Chrome 61 {: #index61 .hide-from-toc }
+### Chrome 61 {: #discover61 .hide-from-toc }
 
 * [Mobile device throttling simulation](/web/updates/2017/07/devtools-release-notes#throttling).
 * [View storage usage](/web/updates/2017/07/devtools-release-notes#storage).
@@ -108,7 +108,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Set mousewheel behavior to zoom or scroll](/web/updates/2017/07/devtools-release-notes#mousewheel).
 * [Debugging support for ES6 modules](/web/updates/2017/07/devtools-release-notes#modules).
 
-### Chrome 60 {: #index60 .hide-from-toc }
+### Chrome 60 {: #discover60 .hide-from-toc }
 
 * [New Audits panel](/web/updates/2017/05/devtools-release-notes#lighthouse).
 * [3rd-Party Badges](/web/updates/2017/05/devtools-release-notes#badges).
@@ -120,7 +120,7 @@ Below is a list of everything that's been covered in the *What's New In DevTools
 * [Simpler network throttling options](/web/updates/2017/05/devtools-release-notes#network-throttling).
 * [Async stacks on by default](/web/updates/2017/05/devtools-release-notes#async-stacks).
 
-### Chrome 59 {: #index59 .hide-from-toc }
+### Chrome 59 {: #discover59 .hide-from-toc }
 
 * [CSS and JS code coverage](/web/updates/2017/04/devtools-release-notes#coverage).
 * [Full-page screenshots](/web/updates/2017/04/devtools-release-notes#screenshots).
