@@ -63,7 +63,7 @@ DOM Tree, select **Copy** > **Copy selector**, and then pass that CSS selector t
 `document.querySelector()`. But if the node is in a [Shadow DOM][shadow]{: .external }
 this approach doesn't work because the selector yields a path from within the shadow tree.
 
-To quickly get a quickly get a reference to a DOM node, right-click the DOM node and select
+To quickly get a reference to a DOM node, right-click the DOM node and select
 **Copy** > **Copy JS path**. DevTools copies to your clipboard a `document.querySelector()`
 expression that points to the node. As mentioned above, this is particularly helpful when
 working with Shadow DOM, but you can use it for any DOM node.
