@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers.
 
-{# wf_updated_on: 2018-11-28 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-09-06 #}
-{# wf_tags: cookie,chrome69,capabilities #}
+{# wf_tags: cookie,storage #}
 {# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_featured_snippet: The Cookie Store API offers asynchronous access to HTTP cookies, and opens up the cookie jar to service workers. #}
 {# wf_blink_components: Blink>WebVR #}
@@ -15,18 +15,15 @@ description: The Cookie Store API offers asynchronous access to HTTP cookies, an
 
 <div class="clearfix"></div>
 
-
-{% include "web/updates/_shared/capabilities.html" %}
-
-
 ## What is the Cookie Store API? {: #explainer }
 
-The [Cookie Store API][cr-status] is available for Origin Trials starting in
-Chrome 69. The API introduces the following exciting possibilities:
+The [Cookie Store API][cr-status] exposes HTTP cookies to service workers and
+offers an asynchronous alternative to `document.cookie`. The API makes it
+easier to:
 
-* Cookies can be accessed asynchronously, avoiding jank on the main thread.
-* Changes to cookies can be observed, avoiding polling.
-* Cookies can be accessed from service workers.
+* Avoid jank on the main thread, by accessing cookies asynchronously.
+* Avoid polling for cookies, because changes to cookies can be observed.
+* Access cookies from service workers.
 
 [Read explainer][explainer]{: .button .button-primary }
 
@@ -36,8 +33,8 @@ Chrome 69. The API introduces the following exciting possibilities:
 | ------------------------------------------ | ---------------------------- |
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [Complete][spec]             |
-| 3. Gather feedback & iterate on spec       | [In progress](#feedback) |
-| **4. Origin trial**                        | [**In progress**](#origin-trial)  |
+| **3. Gather feedback & iterate on spec**   | [**In progress**](#feedback) |
+| 4. Origin trial                            | [Paused](#origin-trial)      |
 | 5. Launch                                  | Not started                  |
 
 
@@ -45,10 +42,17 @@ Chrome 69. The API introduces the following exciting possibilities:
 
 ### Enable the origin trial {: #origin-trial }
 
+Note: We've temporarily ended the origin trial while we review your feedback
+and use it to improve the API. Keep an eye out here for updates and
+announcements about when we plan to re-open the origin trial.
+
+<!--
 To get access to this new API on your site, please [sign
 up](http://bit.ly/OriginTrialSignup){: .external} for the "Cookie Store API"
-Origin Trial. If you just want to try it out locally, the API can be enabled
-on the command line:
+Origin Trial.
+-->
+
+To try it out locally, the API can be enabled on the command line:
 
 <pre class="devsite-terminal devsite-click-to-copy">
 chrome --enable-blink-features=CookieStore
@@ -56,6 +60,9 @@ chrome --enable-blink-features=CookieStore
 
 Passing this flag on the command line enables the API globally in Chrome for
 the current session.
+
+Alternatively, you can enable the `#enable-experimental-web-platform-features`
+flag in `chrome://flags`.
 
 ### You (probably) don't need cookies
 
@@ -200,7 +207,8 @@ If you give this API a try, please let us know what you think! Please direct
 feedback on the API shape to the
 [specification repository](https://github.com/WICG/cookie-store/issues),
 and report implementation bugs to the
-[CookiesAPI Blink component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3EStorage%3ECookiesAPI).
+[`Blink>Storage>CookiesAPI`](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+report+from+developer&components=Blink%3EStorage%3ECookiesAPI)
+Blink component.
 
 We are especially interested to learn about performance measurements and use
 cases beyond the ones outlined in the [explainer][explainer].
