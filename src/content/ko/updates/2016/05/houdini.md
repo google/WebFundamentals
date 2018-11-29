@@ -11,19 +11,19 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 
 {% include "web/_shared/contributors/surma.html" %}
 
-참고: 본 글의 각 문단들을 연관 표준의 최신 내용으로 업데이트하고 있습니다.
+참고: 본 글의 내용들은 연관 표준의 최신 내용으로 업데이트하고 있습니다.
 
-CSS가 할 수 있는 일들을 생각해본 적이 있나요? 여러분이 하나의 attribute를 바꾸면 전체 웹 페이지는 완전히 다른 레이아웃으로
- 보여집니다. 그런 점에 있어서 *마법*과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은
-이러한 마법을 바라보기만 할 수 있었습니다. 만약 우리가 우리만의 마법을 부리고 싶다면요? 만약 우리가 *마법사가 되고 싶다면요*?
+CSS가 할 수 있는 일들을 생각해본 적이 있나요? 여러분이 하나의 CSS 속성을 바꾸면 전체 웹 페이지를 완전히 다른 레이아웃으로
+ 변경할 수 있습니다. 그런 점에 있어서 *마법*과도 같죠. (앞으로 제가 무슨 말을 할 지 감이 오시나요?!) 지금까지 우리 웹 개발자들은
+이러한 마법을 바라보기만 했었습니다. 만약 여러분만의 마법을 부리고 싶다면요? 만약 우리가 *마법사가 되고 싶다면요*?
 Houdini를 시작해보세요!
 
-Houdini task force는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Google의 엔지니어들로 구성되어 (번역자: LG도 있습니다!)
-CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 협업하고 있습니다. 이 task force는 공식 W3C 표준으로 채택되기 위한
-*표준 초안*들을 작성하고 있습니다. 그들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로
-하위 수준 사양의 표준 문서들이 개발되었습니다. 이 표준 문서들은 누군가가 “Houdini”에 대해 이야기할 때 보통 의미하는 것입니다.
-표준안 개발 작업이 진행되는 동안 [Houdini 표준안 초안][Houdini Drafts]들은 미완성 단계이며 일부 초안은 다소 가안일 수 있습니다.
-그것이 우리가 Houdini를 개발하는 초기 단계입니다.
+Houdini 프로젝트는 Mozilla, Apple, Opera, Microsoft, HP, Intel 그리고 Google의 엔지니어들로 구성되어 (번역자: LG도 있습니다!)
+CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있도록 협업하고 있습니다. 이 프로젝트는 공식 W3C 표준으로 채택되기 위한
+*표준 초안*들을 작성하고 있습니다. 프로젝트의 구성원들은 표준안에 대한 몇 가지 높은 수준의 목표를 세워 표준 초안을 작성하였으며 이를 기반으로
+하위 수준 사양의 표준 문서들이 개발되었습니다. 결국, “Houdini”라하면 이 표준 문서들의 내용을 의미합니다.
+표준안 개발 작업이 진행되는 동안 [Houdini 표준안 초안][Houdini Drafts]들은 미완성 단계이며 일부 초안은 다소 가안입니다.
+이것이 Houdini를 개발하는 초기 단계입니다.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="EUlIxr8mk7s"
@@ -31,8 +31,8 @@ CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 �
   </iframe>
 </div>
 
-주의: 저는 Houdini 표준안에 대한 간단한 개요를 통해 Houdini에서 어떠한 문제를 풀고자하는지 알려드리고 싶었습니다.
-현재의 표준안이 지원 가능한 수준에서, 코드 샘플 또한 보여드립니다. 표준안들은 계속 수정되고 있는 초안임을 유념하시길 바랍니다.
+주의: 저는 Houdini 표준안에 대한 간단한 개요를 통해 Houdini에서 어떠한 문제를 풀고자 하는지 알려드리고 싶었습니다.
+현재의 표준안이 지원 가능한 수준에서, 코드 샘플 또한 공유드립니다. 표준안들은 계속 수정되고 있음을 유념하시길 바랍니다.
 향후에 본 글에서 설명하고 있는 코드의 결과는 정확하지 않을 수 있고, 일부 표준안의 내용은 공식 표준이 되지 않을 수 있습니다.
 
 ## 표준안
@@ -40,11 +40,11 @@ CSS 엔진의 일부분에 웹 개발자들이 접근할 수 있게 하도록 �
 ### Worklets
 ([spec][Worklets spec])
 
-Worklets 자체는 큰 의미가 있지는 않습니다. Worklets는 다른 연관 표준안을 가능하게 하기 위해 도입된 개념입니다.
-“Worklet”을 접했을 때 Web Workers를 떠올린다면 틀린 것은 아닙니다. 그 둘은 많은 개념적인 유사성을 가지고 있습니다.
+Worklets 자체는 큰 의미가 있지 않습니다. Worklets는 다른 연관 표준안을 가능하게 하기 위해 도입된 개념입니다.
+“Worklet”을 접했을 때 Web Workers가 생각난다면 틀린 것이 아닙니다. 이 둘은 많은 개념적인 유사성을 가지고 있습니다.
 그렇다면 이미 Workers가 있는데 왜 새로운 개념이 생겼을까요? Houdini의 목표는 웹 개발자가 자신의 코드를 CSS 엔진과
-주변 시스템에 연결할 수 있도록 새로운 API를 제공하는 것입니다.  아마도 이러한 코드의 일부가 모든, 단일 프레임에서
-실행되어야 한다고 가정하는 것은 비 현실적이지 않을 것입니다. 어쩌면 당연히 그렇게 되어야 합니다.
+주변 시스템에 연결할 수 있도록 새로운 API를 제공하는 것입니다.  아마도 이러한 코드의 일부를 모든 단일 프레임에서
+실행한다고 가정해보는 것은 비현실적이지는 않습니다. 어쩌면 그렇게 되는 것이 당연합니다.
 [Web Worker 표준]에는 다음과 같은 내용이 있습니다.:
 
 > Workers [...] 는 상대적으로 무거우며 한 페이지에 많은 수의 Workers 사용은 권장하지 않습니다. 예를 들어 4 mega pixel
@@ -66,7 +66,7 @@ Worklets은 ES2015의 class들을 써서 method 집합들, worklet의 미리 정
 [여기](https://dassur.ma/things/animworklet/)에서 찾아보실 수 있습니다.
 
 Compositor Worklet이 WICG로 옮겨졌고 계속 내용이 바뀌고 있지만, 저에게는 가장 흥미로운 표준안입니다. 아시다시피 일부 작업은 CSS 엔진에 의해 그래픽 카드로 아웃소싱되며 일반적으로 그래픽 카드와 장치 모두에 의존합니다. 브라우저는 일반적으로 DOM 트리를 사용하고 특정 기준에 따라 일부 branch 혹은 하위 트리에 자체 [레이어][HTML5Rocks layers]를 공개합니다.
-이러한 하위 트리는 스스로 해당 레이어에 그립니다. (향후에는 paint worklet을 사용하여 그릴 수도 있겠죠!) 마지막 단계로, 페인트 과정이 완료된 모든 개별 레이어는 z-index, 3D Transform등을 고려하여 서로 중첩이 디어 화면에 보이는 최종 이미지를 완성합니다. 이 프로세스를 “컴포지팅 (Compositing)”이라고 하며 컴포지터(Compositor)가 실행합니다. 이 프로세스의 장점은 페이지가 조금 스크롤될 때 *모든* 요소를 다시 그릴 필요가 없다는 것입니다. 대신, 이전 프레임에서 레이어를 재사용하고 변경된 스크롤 위치로 컴포지터를 다시 실행할 수 있습니다. 이로 인하여 빠른 처리가 가능합니다. 이는 60fps를 맞출수 있게 해줍니다. 이것은 [Paul Lewis]를 행복합니다.
+이러한 하위 트리는 스스로 해당 레이어에 그립니다. (향후에는 paint worklet을 사용하여 그릴 수도 있겠죠!) 마지막 단계로, 페인트 과정이 완료된 모든 개별 레이어는 z-index, 3D Transform등을 고려하여 서로 중첩이 되어 화면에 보이는 최종 이미지를 완성합니다. 이 프로세스를 “컴포지팅 (Compositing)”이라고 하며 컴포지터(Compositor)가 실행합니다. 이 프로세스의 장점은 페이지가 조금 스크롤될 때 *모든* 요소를 다시 그릴 필요가 없다는 것입니다. 대신, 이전 프레임에서 레이어를 재사용하고 변경된 스크롤 위치로 컴포지터를 다시 실행할 수 있습니다. 이로 인하여 빠른 처리가 가능합니다. 이는 60fps를 맞출수 있게 해줍니다. 이런 성능 개선은 [Paul Lewis]를 행복하게 해줍니다!
 
 <img src="/web/updates/images/2016/05/houdini/compworklet_small.png">
 
@@ -105,12 +105,12 @@ Compositor Worklet이 WICG로 옮겨졌고 계속 내용이 바뀌고 있지만,
 
 참고: 첫 공식 표준안이 제안되었음 표준안의 구현도 상당히 진행되었습니다.
 
-다시 말하지만, 본 표준안의 실질적인 내용은 그리 많지는 않으나, 개념은 흥미롭습니다.: 여러분만의 레이웃을 작성해보세요!
+다시 말하지만, 본 표준안의 실질적인 내용은 그리 많지는 않으나, 개념은 흥미롭습니다.: 여러분만의 레이아웃을 작성해보세요!
 Layout Worklet은 여러분이 `display: layout('myLayout')`와 같은 자바스크립트를 코드를 작성하면
 이를 실행하여 구현 내용에 따라 특정 노드의 box안에 해당 노드의 자식 요소들을 배치합니다.
 물론, CSS `flex-box` Layout을 모두 자바스크립트로 구현하는 것은 동일한 기능을 native에서
 실행하는 것보다 느리겠지만 성능 상의 이득을 얻을 수 있는 지름길을 택하는 시나리오를 생각해볼 수 있습니다.
- Windows 10 또는  [Masonry] 스타일의 레이아웃으로 구성된 웹 페이지를 상상해보세요. Absolute/fixed positioning은 사용되지 않으며,
+ Windows 10 또는  [Masonry] 스타일의 레이아웃으로 구성된 웹 페이지를 상상해보세요. absolute/fixed positioning은 사용되지 않으며,
 `z-index` 나 요소가 겹치거나 어떤 종류의 border 혹은 overflow도 없습니다. 재 레이아웃 시 이러한 모든 검사를 건너뛸 수 있으면 성능이 향상될 수 있습니다.
 
 
@@ -194,15 +194,14 @@ Typed CSSOM (CSS 객체 모델 혹은 계층 스타일 시트 객체 모델)은 
 ### Properties and values
 ([spec][Properties and Values spec])
 
-Note: Spec is pretty stable. No accesible implementation as of yet.
+참고: 표준안은 상당히 완성되었습니다. 하지만 아직 사용 가능한 구현은 없습니다.
 
-Do you know [CSS Custom Properties] (or their unofficial alias “CSS Variables”)?
-This is them but with types! So far, variables could only have string values and
-used a simple search-and-replace approach. This draft would allow you to not
-only specify a type for your variables, but also define a default value and
-influence the inheritance behavior using a JavaScript API. Technically, this
-would also allow custom properties to get animated with standard CSS transitions
-and animations, which is also being considered.
+[CSS Custom Properties] (비공식적으로는 “CSS Variables”로도 불립니다.) 를 아시나요?
+이것은 타입이 있는 변수입니다! 지금까지, 변수들은 string 값들 만을 가지거나
+간단한 검색 및 교체 방식을 사용했습니다. 이 표준안은 여러분이 변수에 대한 유형을 정의할 수 있게 해줄 뿐만 아니라 기본값을 정의하고
+자바스크립트 API를 이용해서 상속 과정에도 영향을 줍니다. 이론적으로, 이를 이용하면
+표준 CSS 전환을 사용하여 사용자 정의 속성에 애니메이션을 적용할 수 있고
+비슷하게 애니메이션 표준에 응용하는 것도 논의되고 있습니다.
 
 
     ["--scale-x", "--scale-y"].forEach(function(name) {
@@ -223,7 +222,7 @@ Z? What if I go all crazy unicode on you like using [ruby annotations]? This has
 been requested a lot and Houdini should finally make these wishes
 come true.
 
-### But wait, there’s more!
+### 잠시만요, 아직 끝이 아닙니다!
 
 There’s even more specs in Houdini’s list of drafts, but the future of those is
 rather uncertain and they are not much more than placeholders for ideas.
