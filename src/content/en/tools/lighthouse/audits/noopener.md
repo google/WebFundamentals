@@ -18,7 +18,7 @@ description: Reference documentation for the "Opens External Anchors Using rel="
 When you open another page using `target="_blank"`, the other page may
 run on the same process as your page, unless [Site Isolation][SI] is enabled.
 If the other page is running a lot of JavaScript, your page's performance may
-also suffer. See [The Performance Benefits of `rel=noopener`][jake]{: .external }.
+also suffer. See [The Performance Benefits of `rel=noopener`][jake]{: .external rel="noopener" }.
 
 ### Security
 
@@ -26,9 +26,9 @@ also suffer. See [The Performance Benefits of `rel=noopener`][jake]{: .external 
 [attack]: https://en.wikipedia.org/wiki/Attack_surface
 
 The other page can access your `window` object with the `window.opener` property.
-This exposes an [attack surface][attack]{: .external } because the other page
+This exposes an [attack surface][attack]{: .external rel="noopener" } because the other page
 can potentially redirect your page to a malicious URL.
-See [About rel=noopener][mths]{: .external }.
+See [About rel=noopener][mths]{: .external rel="noopener" }.
 
 ## Recommendations {: #recommendations }
 
@@ -47,7 +47,7 @@ add `rel="noopener"` or `rel="noreferrer"`.
   process.
 * `rel="noreferrer"` attribute has the same effect, but also
   prevents the `Referer` header from being sent to the new page. See 
-  [Link type "noreferrer"][whatwg]{: .external }.
+  [Link type "noreferrer"][whatwg]{: .external rel="noopener" }.
 
 ## More information {: #more-info }
 
@@ -64,7 +64,9 @@ a link to another section of your site without using `rel="noopener"`, the
 performance implications of this audit still apply. However, you won't see these
 links in your Lighthouse results.
 
-[Audit source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js){: .external }
+[source]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js
+
+[Audit source][source]{: .external rel="noopener" }
 
 ## Feedback {: #feedback }
 
