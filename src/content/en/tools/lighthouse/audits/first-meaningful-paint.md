@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "First Meaningful Paint" Lighthouse audit.
 
-{# wf_updated_on: 2018-10-18 #}
+{# wf_updated_on: 2018-11-30 #}
 {# wf_published_on: 2016-10-05 #}
 {# wf_blink_components: N/A #}
 
@@ -23,6 +23,19 @@ appears to display its primary content.
 
 [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/)
 is particularly helpful towards achieving a faster First Meaningful Paint.
+
+### Tracking FMP in the real world {: #RUM }
+
+[hero]: /web/fundamentals/performance/user-centric-performance-metrics#tracking_fmp_using_hero_elements
+[RUM]: /web/fundamentals/performance/navigation-and-resource-timing/
+[UT]: /web/tools/lighthouse/audits/user-timing
+
+To measure when FMP actually occurs on your users' devices, see
+[Tracking FMP using hero elements][hero].
+
+See [Assessing Loading Performance in Real Life with Navigation and Resource Timing][RUM]
+for more on collecting real-user metrics with the User Timing API. The [User Timing Marks and
+Measures][UT] Lighthouse audit enables you to see User Timing data in your report.
 
 ## More information {: #more-info }
 
