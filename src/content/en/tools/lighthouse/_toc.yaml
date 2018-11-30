@@ -150,7 +150,7 @@ toc:
     path: /web/tools/lighthouse/audits/vulnerabilities
   - title: Manifest's short_Name Won't Be Truncated When Displayed On Homescreen
     path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
-  - title: Opens External Anchors Using rel="noopener"
+  - title: Links to cross-origin destinations are unsafe
     path: /web/tools/lighthouse/audits/noopener
   - title: Prevents Users From Pasting Into Password Fields
     path: /web/tools/lighthouse/audits/password-pasting

@@ -2,42 +2,52 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Opens External Anchors Using rel="noopener"" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-11-30 #}
 {# wf_published_on: 2016-11-30 #}
 {# wf_blink_components: N/A #}
 
-# Opens External Anchors Using rel="noopener"  {: .page-title }
+# Links to cross-origin destinations are unsafe {: .page-title }
 
 ## Overview {: #overview }
 
-When your page links to another page using `target="_blank"`, the new page
-runs on the same process as your page. If the new page is executing expensive
-JavaScript, your page's performance may also suffer. See [The Performance
-Benefits of `rel=noopener`][jake] for more information.
+### Performance
 
-
-On top of this, `target="_blank"` is also a security vulnerability. The new page
-has access to your `window` object via `window.opener`, and it can navigate your
-page to a different URL using `window.opener.location = newURL`. See [About
-`rel=noopener`][mths] for a demo and explanation of the vulnerability.
-
-Adding a `rel="noopener"` attribute prevents the new page from being able to
-access the `window.opener` property and will ensure it runs in a separate
-process. The `rel="noreferrer"` attribute has the same effect, but will also
-prevent the `Referer` header from being sent to the new page. See [HTML
-Standard: Link type "noreferrer"][whatwg] for an explanation of this behavior.
-
+[SI]: /web/updates/2018/07/site-isolation
 [jake]: https://jakearchibald.com/2016/performance-benefits-of-rel-noopener/
+
+When you open another page using `target="_blank"`, the other page may
+run on the same process as your page, unless [Site Isolation][SI] is enabled.
+If the other page is running a lot of JavaScript, your page's performance may
+also suffer. See [The Performance Benefits of `rel=noopener`][jake]{: .external }.
+
+### Security
+
 [mths]: https://mathiasbynens.github.io/rel-noopener/
-[whatwg]: https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer
+[attack]: https://en.wikipedia.org/wiki/Attack_surface
+
+The other page can access your `window` object with the `window.opener` property.
+This exposes an [attack surface][attack]{: .external } because the other page
+can potentially redirect your page to a malicious URL.
+See [About rel=noopener][mths]{: .external }.
 
 ## Recommendations {: #recommendations }
 
-Add `rel="noopener"` or `rel="noreferrer"` to each of the links that Lighthouse
-has identified in your report. In general, always add one of these attributes
-when you open an external link in a new window or tab.
+[whatwg]: https://html.spec.whatwg.org/multipage/links.html#link-type-noreferrer
 
-    <a href="https://examplepetstore.com" target="_blank" rel="noopener">...</a>
+Add `rel="noopener"` or `rel="noreferrer"` to each of the links that Lighthouse
+has identified in your report. In general, when you use `target="_blank"`, always
+add `rel="noopener"` or `rel="noreferrer"`.
+
+    <a href="https://examplepetstore.com" target="_blank" rel="noopener">
+      Example Pet Store
+    </a>
+
+* `rel="noopener"` prevents the new page from being able to
+  access the `window.opener` property and ensures it runs in a separate
+  process.
+* `rel="noreferrer"` attribute has the same effect, but also
+  prevents the `Referer` header from being sent to the new page. See 
+  [Link type "noreferrer"][whatwg]{: .external }.
 
 ## More information {: #more-info }
 
@@ -54,6 +64,7 @@ a link to another section of your site without using `rel="noopener"`, the
 performance implications of this audit still apply. However, you won't see these
 links in your Lighthouse results.
 
+[Audit source](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/external-anchors-use-rel-noopener.js){: .external }
 
 ## Feedback {: #feedback }
 
