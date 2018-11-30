@@ -142,8 +142,6 @@ toc:
     path: /web/tools/lighthouse/audits/geolocation-on-load
   - title: Avoids Requesting The Notification Permission On Page Load
     path: /web/tools/lighthouse/audits/notifications-on-load
-  - title: Avoids Web SQL
-    path: /web/tools/lighthouse/audits/web-sql
   - title: Displays Images With Incorrect Aspect Ratio
     path: /web/tools/lighthouse/audits/aspect-ratio
   - title: Includes Front-End JavaScript Libraries With Known Security Vulnerabilities
@@ -162,6 +160,9 @@ toc:
     path: /web/tools/lighthouse/audits/http2
   - title: Uses Passive Event Listeners To Improve Scrolling Performance
     path: /web/tools/lighthouse/audits/passive-event-listeners
+  - title: Avoids Web SQL
+    path: /web/tools/lighthouse/audits/web-sql
+    status: deprecated
 - title: SEO
   section:
   - title: Document Does Not Have A Meta Description
