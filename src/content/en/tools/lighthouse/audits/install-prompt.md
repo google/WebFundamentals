@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Can Be Prompted To Install The Web App" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-11-30 #}
 {# wf_published_on: 2017-06-16 #}
 {# wf_blink_components: N/A #}
 
@@ -31,30 +31,6 @@ and the page specified in the `start_url` property of the web app manifest. See
 [add to home screen][WAIB] to learn more.
 
 [WAIB]: /web/fundamentals/app-install-banners
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = 'Install Prompt / Needs More Info';
-var url = 'https://github.com/google/webfundamentals/issues/new?title=[' +
-      label + ']';
-var feedback = {
-  "category": "Lighthouse",
-  "choices": [
-    {
-      "button": {
-        "text": "I Need More Information"
-      },
-      "response": 'Please <a href="' + url + '" target="_blank">open a ' +
-          'GitHub issue</a> and tell us how to make this section better.',
-      "analytics": {
-        "label": label
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
 
 ## More information {: #more-info }
 
