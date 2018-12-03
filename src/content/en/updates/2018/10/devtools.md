@@ -20,6 +20,7 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 * [Initiator and priority information now in HAR imports and exports](#HAR)
 * [Access the Command Menu from the Main Menu](#command-menu)
 * [Picture-in-Picture breakpoints](#picture-in-picture)
+* [(Bonus Tip) Run monitorEvents() in the Console to watch an element's events fire](#bonus)
 
 Read on, or watch the video version of this page:
 
@@ -183,6 +184,12 @@ fires. DevTools pauses on the first line of the handler.
     <b>Figure 16</b>. Picture-in-Picture events in the Event Listener Breakpoints pane
   </figcaption>
 </figure>
+
+## (Bonus Tip) Run monitorEvents() in the Console to watch an element's events fire {: #bonus }
+
+Suppose you wanted to add a red border around a button after focusing it and pressing `R`, `E`, `D`,
+but you don't know what events to add listeners to. Use `monitorEvents()` to log all of the
+element's events to the Console.
 
 ## Feedback {: #feedback }
 
