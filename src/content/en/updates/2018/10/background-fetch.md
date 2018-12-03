@@ -2,33 +2,33 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background fetch lets you handle large downloads, even if the browser closes.
 
-{# wf_updated_on: 2018-10-09 #}
-{# wf_published_on: 2018-10-05 #}
+{# wf_updated_on: 2018-12-03 #}
+{# wf_published_on: 2018-12-03 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
-{# wf_featured_snippet: Background fetch lets you handle large downloads, even if the browser closes. #}
+{# wf_featured_snippet: Background Fetch lets you handle large downloads, even if the browser closes. #}
 {# wf_blink_components: Blink>BackgroundFetch #}
 
-# Introducing background fetch {: .page-title }
+# Introducing Background Fetch {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
-In 2015 we [introduced background sync](/web/updates/2015/12/background-sync) which allows the
+In 2015 we [introduced Background Sync](/web/updates/2015/12/background-sync) which allows the
 service worker to defer work until the user has connectivity. This means the user could type a
 message, hit send, and leave the site knowing that the message will be sent either now, or when they
 have connectivity.
 
 It's a useful feature, but it requires the service worker to be alive for the duration of the
-"work". That isn't a problem for short bits of work like sending a message, but if the task takes
+fetch. That isn't a problem for short bits of work like sending a message, but if the task takes
 too long the browser will kill the service worker, otherwise it's a risk to the user's privacy and
 battery.
 
 So, what if you need to download something that might take a long time, like a movie, podcasts, or
-levels of a game. That's what background fetch is for. Background fetch is a [web
+levels of a game. That's what Background Fetch is for. Background Fetch is a [web
 standard](https://wicg.github.io/background-fetch/) implemented behind the *Experimental Web
 Platform features* flag in Chrome 71.
 
-Here's a quick two minute demo showing the traditional state of things, vs using background fetch:
+Here's a quick two minute demo showing the traditional state of things, vs using Background Fetch:
 
 <div class="video-wrapper-full-width" style="padding-bottom: 100%">
   <iframe class="devsite-embedded-youtube-video" data-video-id="eLfgf2ZvFpo"
@@ -38,7 +38,7 @@ Here's a quick two minute demo showing the traditional state of things, vs using
 
 [Try the demo yourself](https://bgfetch-http203.glitch.me/) and [browse the
 code](https://glitch.com/edit/#!/bgfetch-http203?path=public/client.js). It requires Chrome 71, and
-the *Experimental Web Platform features* flag.
+the *Experimental Web Platform features* flag to be enabled.
 
 This is also being run as an Origin Trial. If you're interested in testing this API with real users
 without a flag, [see below](#origin-trial).
@@ -67,11 +67,11 @@ fetch will be paused and resumed later.
 
 ### Feature detect
 
-As with any new feature, you want to detect if the browser supports it. For background fetch, it's
+As with any new feature, you want to detect if the browser supports it. For Background Fetch, it's
 as simple as:
 
     if ('BackgroundFetchManager' in self) {
-      // This browser supports background fetch!
+      // This browser supports Background Fetch!
     }
 
 ### Starting a background fetch
@@ -80,11 +80,11 @@ The main API hangs off a [service worker](/web/fundamentals/primers/service-work
 so make sure you've registered a service worker first. Then:
 
     navigator.serviceWorker.ready.then(async (swReg) => {
-      const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/podcast.mp3'], {
-        title: 'Downloading podcast',
+      const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
+        title: 'Episode 5: Interesting things.',
         icons: [{
           sizes: '300x300',
-          src: '/podcast-icon.png',
+          src: '/ep-5-icon.png',
           type: 'image/png',
         }],
         downloadTotal: 60 * 1024 * 1024,
@@ -113,6 +113,8 @@ out the guide](/web/fundamentals/primers/async-functions).
       <code>Request</code>s via <code>new Request(theString)</code>.
       <p>You can fetch things from other origins as long as the resources allow it via
       <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>.</p>
+      <p class="note"><strong>Note:</strong> Chrome doesn't currently support requests that would
+      require a CORS preflight.</p>
       </td>
     </tr>
     <tr>
@@ -168,8 +170,8 @@ You can get an existing background fetch like this:
 …by passing the **id** of the background fetch you want. `get` returns `undefined` if there's no
 active background fetch with that ID.
 
-A background fetch is considered "active" from the moment it's registered, until it either succeeds
-or totally fails.
+A background fetch is considered "active" from the moment it's registered, until it either succeeds,
+fails, or is aborted.
 
 You can get a list of all the active background fetches using `getIds`:
 
@@ -238,7 +240,8 @@ A `BackgroundFetchRegistration` (`bgFetch` in the above examples) has the follow
     </tr>
     <tr>
       <td><code>recordsAvailable</code></td>
-      <td><code>boolean</code><br>Can the underlying requests/responses can be accessed.</td>
+      <td><code>boolean</code><br>Can the underlying requests/responses can be accessed?
+      <p>Once this is false <code>match</code> and <code>matchAll</code> cannot be used.</p></td>
     </tr>
     <tr><th colspan=2>Methods</th></tr>
     <tr>
@@ -264,7 +267,7 @@ A `BackgroundFetchRegistration` (`bgFetch` in the above examples) has the follow
     <tr>
       <td><code>progress</code></td>
       <td>Fired when any of <code>uploaded</code>, <code>downloaded</code>, <code>result</code>, or
-      <code>failurereason</code> change.</td>
+      <code>failureReason</code> change.</td>
     </tr>
   </tbody>
 </table>
@@ -285,10 +288,10 @@ provided, or `0` if you didn't provide a value.
 ### Getting the requests and responses
 
 Caution: In Chrome's current implementation you can only get the requests and responses during
-`backgroundfetchsuccess` and `backgroundfetchfailure` service worker events (see below). In future
-you'll be able to get in-progress fetches.
+`backgroundfetchsuccess`, `backgroundfetchfailure`, and `backgroundfetchabort` service worker events
+(see below). In future you'll be able to get in-progress fetches.
 
-    bgFetch.match('/podcast.mp3').then(async (record) => {
+    bgFetch.match('/ep-5.mp3').then(async (record) => {
       if (!record) {
         console.log('No record found');
         return;
@@ -337,7 +340,7 @@ you'll be able to get in-progress fetches.
     </tr>
     <tr>
       <td><code>backgroundfetchclick</code></td>
-      <td>The user clicked on the download notification.</td>
+      <td>The user clicked on the download progress UI.</td>
     </tr>
   </tbody>
 </table>
@@ -355,7 +358,7 @@ The event objects have the following:
     <tr>
       <td><code>updateUI({ title, icons })</code></td>
       <td>Lets you change the title/icons you initially set. This is optional, but it lets you
-      provide more context if necessary. You can only do this during
+      provide more context if necessary. You can only do this *once* during
       <code>backgroundfetchsuccess</code> and <code>backgroundfetchfailure</code> events.</td>
     </tr>
   </tbody>
@@ -377,6 +380,9 @@ API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage).
 As with most service worker events, use `event.waitUntil` so the service worker knows when the event
 is complete.
 
+Note: You can't hold the service worker open indefinitely here, so avoid doing things that would
+keep the service worker open a long time here, such as additional fetching.
+
 For example, in your service worker:
 
     addEventListener('backgroundfetchsuccess', (event) => {
@@ -396,8 +402,8 @@ For example, in your service worker:
         // Wait for the copying to complete.
         await Promise.all(promises);
 
-        // Update the progress notification
-        event.updateUI({ title: 'Podcast ready to listen' });
+        // Update the progress notification.
+        event.updateUI({ title: 'Episode 5 ready to listen!' });
       }());
     });
 
