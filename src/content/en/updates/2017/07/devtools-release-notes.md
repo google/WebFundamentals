@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 61.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-07-10 #}
 {# wf_tags: chrome61,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -153,4 +153,4 @@ you're short on time.
 That's all for what's new in DevTools in Chrome 61. See you in 6 weeks for
 Chrome 62!
 
-<</web/updates/_shared/discover.md>>
+<<../../_shared/discover.md>>

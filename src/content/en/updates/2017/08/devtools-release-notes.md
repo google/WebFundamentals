@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and more.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-08-29 #}
 {# wf_tags: chrome62,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -293,4 +293,4 @@ you're short on time. If you've encountered a certain bug in DevTools, please
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-<</web/updates/_shared/discover.md>>
+<<../../_shared/discover.md>>

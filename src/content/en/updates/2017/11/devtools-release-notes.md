@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Monitor, Console Sidebar, and Console groupings.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-11-28 #}
 {# wf_tags: chrome64,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -162,4 +162,4 @@ DevTools, please [open an issue](https://crbug.com/new).
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-<</web/updates/_shared/discover.md>>
+<<../../_shared/discover.md>>
