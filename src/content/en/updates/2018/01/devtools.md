@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Local Overrides, accessibility tools, performance and SEO audits, and more.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-01-17 #}
 {# wf_tags: chrome65,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -403,4 +403,4 @@ DevTools, please [open an issue](https://crbug.com/new).
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-<</web/updates/_shared/discover.md>>
+<<../../_shared/discover.md>>
