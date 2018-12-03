@@ -449,6 +449,10 @@ component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+rep
 * [Specification](https://wicg.github.io/background-fetch/)
 * [chromestatus.com entry](https://www.chromestatus.com/features/5712608971718656)
 
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
