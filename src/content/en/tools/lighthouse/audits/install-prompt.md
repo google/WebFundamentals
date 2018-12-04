@@ -60,7 +60,7 @@ var feedback = {
 
 [Audit source][src]{:.external}
 
-[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/webapp-install-banner.js
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/installable-manifest.js
 
 ## Feedback {: #feedback }
 
