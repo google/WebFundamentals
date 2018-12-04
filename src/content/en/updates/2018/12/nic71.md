@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 71 for developers?
 
 {# wf_published_on: 2018-12-04 #}
-{# wf_updated_on: 2018-12-03 #}
+{# wf_updated_on: 2018-12-04 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome71,new-in-chrome,intl,css,vertical-text,speech,synthesis #}
 {# wf_featured_snippet: Chrome 71 makes displaying relative time values easier with the new <code>Intl.RelativeTimeFormat()</code> API. You can specify which side of the text the underline should appear on for text that flows vertically. And using the speech synthesis API now requires user activation before your computer starts talking to you! Let’s dive in and see what’s new for developers in Chrome 71! #}
@@ -16,7 +16,7 @@ description: What's new in Chrome 71 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="SkIgtVvAR6w"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
