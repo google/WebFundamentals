@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-11-09 #}
+{# wf_updated_on: 2018-12-04 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -44,12 +44,40 @@ design, to ensure an interoperable design.
         to choose files or directories that a web app can interact with on the
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
+        <br><br>
+        <b>Status:</b> Gathering feedback & iterating on design
       </td>
     </tr>
     <tr>
       <td colspan="2">
         See the <a href="https://goo.gl/JkDCXM">full list</a> of capabilities
         including the backlog of ones we've haven't started working on yet.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Launched {: #launched }
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
+      </td>
+      <td>
+        The Web Share Target API allows installed web apps to register with
+        the underlying OS as a share target to receive shared content from
+        either the Web Share API or system events, like the OS-level share
+        button.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 71
       </td>
     </tr>
   </tbody>
@@ -124,6 +152,8 @@ process](https://www.chromium.org/blink/launching-features) have been completed,
 it’s time to ship it.
 
 
+<div class="clearfix"></div>
 
+{% include "web/_shared/helpful.html" %}
 
 
