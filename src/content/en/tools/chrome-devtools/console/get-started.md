@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-09-19 #}
+{# wf_updated_on: 2018-12-04 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -234,7 +234,11 @@ filter the **Console** to only show messages that you care about.
 1. Replace `-not` with `/1[0-9]1/`, which is a [regular expression][regex]{:.external}.
    The **Console** only shows messages that include a 3-digit number that starts with `1` and
    ends with `1`. Keep the filter enabled and continue to the next step.
-1. Click **Show Console Sidebar**. The **Sidebar** lets you further filter messages by type.
+
+[sidebar]: /web/tools/chrome-devtools/images/shared/show-console-sidebar.png
+
+1. Click **Show Console Sidebar** ![Show Console Sidebar][sidebar]{: .inline-icon }.
+   The **Sidebar** lets you further filter messages by type.
 1. Click **333 Warnings**. DevTools now only shows messages that were logged with
    `console.warn()`. Remember that the `/1[0-9]1/` filter is still active, so you actually
    are filtering along 2 dimensions right now.
