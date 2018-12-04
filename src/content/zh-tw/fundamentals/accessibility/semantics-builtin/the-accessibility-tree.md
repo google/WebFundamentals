@@ -93,7 +93,7 @@ description:無障礙樹簡介
 
 
     <div class="button-ish">Give me tacos</div>
-    
+
 
 當我們不使用實際按鈕元素時，屏幕閱讀器無從知曉其讀取的內容。
 此外，我們還需要額外完成[添加 tabindex](/web/fundamentals/accessibility/focus/using-tabindex) 的工作，以便只使用鍵盤的用戶能夠使用它，因爲按照現有編碼，它只能使用鼠標操作。
@@ -162,7 +162,7 @@ description:無障礙樹簡介
     <label for="promo">Receive promotional offers?</label>
 </div>
 {% endframebox %}
-    
+
 
 正確標示覆選框後，屏幕閱讀器便可報告元素角色爲 checkbox，處於 checked 狀態，名稱爲“Receive promotional offers?”。
 
@@ -170,7 +170,7 @@ description:無障礙樹簡介
 
 ![VoiceOver 產生的顯示覆選框朗讀標籤的屏幕文本輸出](imgs/promo-offers.png)
 
-成功：您實際上可以使用屏幕閱讀器，通過按 Tab 鍵在頁面上循環跳轉並驗證朗讀的角色、狀態和名稱來找到關聯不正確的標籤。
+Success: 您實際上可以使用屏幕閱讀器，通過按 Tab 鍵在頁面上循環跳轉並驗證朗讀的角色、狀態和名稱來找到關聯不正確的標籤。
 
 
 

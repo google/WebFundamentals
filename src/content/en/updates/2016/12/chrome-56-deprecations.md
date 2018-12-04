@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 56 to help you plan.
 
 {# wf_blink_components: Security,UI>Shell>GestureNav,Blink>JavaScript>Language,Blink>MediaStream>*,Blink>Payments,Blink>SVG #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-12-08 #}
 {# wf_tags: deprecations,removals,chrome56 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -82,7 +82,7 @@ will not be executed when parsed. By deprecating the fetch, the preload scanner
 and the parser will have the same semantics, and we will not be initiating
 fetches for scripts we will not use. This is intended to save data for users who
 navigate to sites with a lot of custom script tags that are post-processed (like
-`type=”text/template”`, for example).
+`type="text/template"`, for example).
 
 The use case of using invalid scripts to ping servers is adequately covered by
 the [sendBeacon API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).

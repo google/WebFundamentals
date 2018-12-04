@@ -101,3 +101,28 @@
 .wf-updates-item p {
   margin-top: 0;
 }
+
+/* hide banner from landing */
+.hide-devsite-banner .devsite-banner {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+
+  .wf-cds-banner {
+    background-image: url('/web/images/cds18-banner-img.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+    background-size: auto 135%;
+  }
+
+  .wf-cds-banner .devsite-landing-row-item-description {
+    max-width: 40%;
+  }
+
+  .wf-cds-banner h3 {
+    margin-bottom: 16px !important;
+  }
+}
+

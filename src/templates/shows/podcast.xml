@@ -3,6 +3,7 @@
 <channel>
   <title>{{ title }}</title>
   <link>{{ baseUrl }}</link>
+  <description>{{ summary }}</description>
   <language>en</language>
   <copyright>Google</copyright>
   <itunes:subtitle>{{ subtitle }}</itunes:subtitle>
@@ -13,16 +14,20 @@
     <itunes:email>{{ author.email }}</itunes:email>
   </itunes:owner>
   <itunes:image href="{{ image }}" />
+  <image><url>{{ image }}</url></image>
   <itunes:category text="Technology"/>
   {{#each articles}}
   <item>
     <title>{{ title }}</title>
     <itunes:author>{{ ../author.name }}</itunes:author>
     <itunes:subtitle>{{ podcast.subtitle }}</itunes:subtitle>
+    <description>
+      {{{ description }}}
+    </description>
     <itunes:summary>
       {{{ description }}}
     </itunes:summary>
-    <itunes:image href="{{ image }}" />
+    <itunes:image href="{{ ../host }}{{ image }}" />
     <itunes:explicit>no</itunes:explicit>
     <enclosure url="{{ podcast.audioUrl }}" length="{{podcast.fileSize}}" type="audio/mpeg"/>
     <guid isPermaLink="true">{{ ../host }}{{ url }}</guid>

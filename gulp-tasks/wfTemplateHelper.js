@@ -255,9 +255,13 @@ function generateIndex(files, options) {
  */
 function generateLatestWidget(files, options) {
   gutil.log(' ', 'Generating latest updates widget...');
-  const context = {
-    articles: files.splice(0, options.articlesToShow),
-  };
+  // Create a new array instead of mutating the existing array
+  const articles = [];
+  const len = options.articlesToShow || files.length;
+  for (let i = 0; i < len; i++) {
+    articles.push(files[i]);
+  }
+  const context = {articles};
   const template = path.join(global.WF.src.templates, 'latest_articles.html');
   const outputFile = path.join(options.outputPath, '_shared',
       'latest_articles.html');

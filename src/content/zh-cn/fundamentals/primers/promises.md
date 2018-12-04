@@ -595,7 +595,7 @@ JavaScript promise API 将任何使用 `then()` 方法的结构都当作 promise
     })
 
 
-这是我们第一次看到 `Promise.resolve()`，这种 promise 可解析为您赋予的任何值。如果向其传递一个 `Promise` 实例，它也会将其返回（**注意：**这是对本规范的一处更改，某些实现尚未遵循）。如果将类似于 promise 的内容（带有 `then()` 方法）传递给它，它将创建以相同方式执行/拒绝的真正 `Promise`。如果向其传递任何其他值，例如 `Promise.resolve('Hello')`，它在执行时将以该值创建一个 promise。如果调用时不带任何值（如上所示），它在执行时将返回“undefined”。
+这是我们第一次看到 `Promise.resolve()`，这种 promise 可解析为您赋予的任何值。如果向其传递一个 `Promise` 实例，它也会将其返回（**Note: **这是对本规范的一处更改，某些实现尚未遵循）。如果将类似于 promise 的内容（带有 `then()` 方法）传递给它，它将创建以相同方式执行/拒绝的真正 `Promise`。如果向其传递任何其他值，例如 `Promise.resolve('Hello')`，它在执行时将以该值创建一个 promise。如果调用时不带任何值（如上所示），它在执行时将返回“undefined”。
 
 
 此外还有 `Promise.reject(val)`，它创建的 promise 在拒绝时将返回赋予的值（或“undefined”）。
@@ -871,7 +871,7 @@ ES6 还为我们提供了 [generator](http://wiki.ecmascript.org/doku.php?id=har
 </tr>
 </table>
 
-注：我对 `Promise.race` 的实用性表示怀疑；我更倾向于使用与之相对的 `Promise.all`，它仅在所有项拒绝时才拒绝。
+Note: 我对 `Promise.race` 的实用性表示怀疑；我更倾向于使用与之相对的 `Promise.all`，它仅在所有项拒绝时才拒绝。
 
 ###  构造函数
 
@@ -902,7 +902,7 @@ ES6 还为我们提供了 [generator](http://wiki.ecmascript.org/doku.php?id=har
   </td>
 </tr>
 </table>
-    
+
 ###  实例方法
 
 <table class="responsive methods">

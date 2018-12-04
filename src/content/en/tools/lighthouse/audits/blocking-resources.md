@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Render-blocking stylesheets" and "Render-blocking scripts" Lighthouse audits.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-12-01 #}
 {# wf_blink_components: N/A #}
 
@@ -62,5 +62,6 @@ A `<link rel="import">` tag that:
 
 * Does not have an `async` attribute.
 
+## Feedback {: #feedback }
 
-{% include "web/tools/lighthouse/audits/_feedback/blocking-resources.html" %}
+{% include "web/_shared/helpful.html" %}

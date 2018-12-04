@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
 
-{# wf_updated_on: 2017-06-14 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Web Push Notifications: Timely, Relevant, and Precise {: .page-title }
@@ -88,3 +89,7 @@ and Mozilla's [Push Payload Demo](https://serviceworke.rs/push-payload_demo.html
 Note: Unless you're using localhost, the Push API requires HTTPS.
 
 <<../../_common-links.md>>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

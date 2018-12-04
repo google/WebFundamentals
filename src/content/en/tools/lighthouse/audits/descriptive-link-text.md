@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Links Do Not Have Descriptive Text" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-23 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-02-22 #}
 {# wf_blink_components: N/A #}
 
@@ -58,3 +58,7 @@ Lighthouse flags the following generic link descriptions:
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/link-text.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

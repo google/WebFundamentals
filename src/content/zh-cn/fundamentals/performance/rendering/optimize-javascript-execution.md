@@ -15,7 +15,7 @@ JavaScript 经常会触发视觉变化。有时是直接通过样式操作，有
 
 JavaScript 性能分析可以说是一门艺术，因为您编写的 JavaScript 代码与实际执行的代码完全不像。现代浏览器使用 JIT 编译器和各种各样的优化和技巧来尝试为您实现尽可能快的执行，这极大地改变了代码的动态。
 
-注：如果您真的想了解 JIT 的实例，应当查看 <a href='http://mrale.ph/irhydra/2/'>Vyacheslav Egorov 提供的 IRHydra<sup>2</sup></a>。它显示了当 Chrome 的 JavaScript 引擎 V8 对 JavaScript 代码进行优化时，JavaScript 代码的中间状态。
+Note: 如果您真的想了解 JIT 的实例，应当查看 <a href='http://mrale.ph/irhydra/2/'>Vyacheslav Egorov 提供的 IRHydra<sup>2</sup></a>。它显示了当 Chrome 的 JavaScript 引擎 V8 对 JavaScript 代码进行优化时，JavaScript 代码的中间状态。
 
 尽管如此，您肯定还是可以做一些事情来帮助您的应用很好地执行 JavaScript。
 

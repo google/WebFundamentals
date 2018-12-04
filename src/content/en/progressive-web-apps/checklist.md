@@ -1,16 +1,16 @@
 project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
-description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app. 
+description: A checklist which breaks down all the things we think it takes to be a baseline progressive web app, and how to take it a step further with an exemplary progressive web app.
 
 {# wf_updated_on: 2017-10-06 #}
 {# wf_published_on: 2016-11-07 #}
 
 # Progressive Web App Checklist {: .page-title }
 
-Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are 
+Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are
 many things that can take a PWA from a baseline to exemplary experience.
 
-To help teams create the best possible experiences we've put together this 
+To help teams create the best possible experiences we've put together this
 checklist which breaks down all the things we think it takes to be a
 [Baseline](#baseline) PWA, and how to take that a step further with an
 [Exemplary](#exemplary) PWA by providing a more meaningful offline experience,
@@ -42,7 +42,7 @@ on the this list and may prove helpful in easily testing sites.
       <td><b>To Fix</b></td>
       <td>
         <a href="/web/fundamentals/security/encrypt-in-transit/enable-https">
-        Implement HTTPS</a> and check out 
+        Implement HTTPS</a> and check out
         <a href="https://letsencrypt.org/">letsencrypt.org</a> to get started.
       </td>
     </tr>
@@ -74,7 +74,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Look at implementing a 
+        Look at implementing a
         <a href="/web/fundamentals/design-and-ux/responsive/">
         responsive design</a>, or adaptively serving a viewport-friendly site.
       </td>
@@ -149,12 +149,12 @@ on the this list and may prove helpful in easily testing sites.
           <li>
             You can understand your performance better by using
             <a href="/speed/pagespeed/insights/">Pagespeed Insights</a>
-            (aim for score &gt;85) and SpeedIndex on 
+            (aim for score &gt;85) and SpeedIndex on
             <a href="https://www.webpagetest.org/">WebPageTest</a>
             (aim for &lt;4000 first view on Mobile 3G Nexus 5 Chrome)
           </li>
           <li>
-            A few tips are to focus on loading less script, make sure as much 
+            A few tips are to focus on loading less script, make sure as much
             script is loaded asynchronously as possible using <code>&lt;script
             async&gt;</code> and make sure
             <a href="/web/fundamentals/performance/critical-rendering-path/render-blocking-css">
@@ -208,7 +208,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Open the app on a simulated very slow network. Every time you tap 
+        Open the app on a simulated very slow network. Every time you tap
         a link/button in the app the page should respond immediately, either by:
         <ul>
           <li>
@@ -225,8 +225,8 @@ on the this list and may prove helpful in easily testing sites.
     </tr>
     <tr>
       <td><b>To Fix</b></td>
-      <td>        
-        If using a single-page-app (client rendered), transition the user to 
+      <td>
+        If using a single-page-app (client rendered), transition the user to
         the next page immediately and show a
         <a href="http://hannahatkin.com/skeleton-screens/">
         skeleton screen</a> and use any content such as title or
@@ -244,7 +244,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Ensure individual pages are deep linkable via the URLs and that URLs 
+        Ensure individual pages are deep linkable via the URLs and that URLs
         are unique for the purpose of shareability on social media by
         testing with individual pages can be opened and directly accessed
         via new browser windows.
@@ -253,7 +253,7 @@ on the this list and may prove helpful in easily testing sites.
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        If building a single-page app, make sure the client-side router can 
+        If building a single-page app, make sure the client-side router can
         re-construct app state from a given URL.
       </td>
     </tr>
@@ -269,8 +269,8 @@ implemented in [Lighthouse][lighthouse].
 
 ### Indexability & social {: .hide-from-toc }
 
-For more information, see our guide to 
-[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
+For more information, see our guide to
+[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/)
 and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
 
 <table class="responsive pwa-cl">
@@ -290,7 +290,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         <a href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html">
-        Google's indexing system does run JavaScript</a> but some issues 
+        Google's indexing system does run JavaScript</a> but some issues
         may need to be fixed to make content accessible. For example,
         if you are using new browser features like the Fetch API, ensure that they are
         polyfilled in browsers without support.
@@ -328,7 +328,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           </li>
           <li>
             A news app should have the <a href="/search/docs/data-types/articles">
-            NewsArticle type markup</a> for Rich Cards and/or 
+            NewsArticle type markup</a> for Rich Cards and/or
             <a href="https://www.ampproject.org/docs/reference/spec.html">
             AMP support</a>.
           </li>
@@ -359,7 +359,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           </li>
           <li>
             Check that <a href="https://dev.twitter.com/cards/overview">Twitter
-            Cards meta data</a> is present (for example <code>&lt;meta 
+            Cards meta data</a> is present (for example <code>&lt;meta
             name="twitter:card" content="summary" /&gt;</code>) if you feel
             it would be appropriate.
         </ul>
@@ -394,7 +394,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
           </li>
           <li>
             Open both of these pages and ensure they use <code>&lt;link
-            rel=canonical&gt;</code> tags in the head to indicate the 
+            rel=canonical&gt;</code> tags in the head to indicate the
             canonical version
           </li>
         </ul>
@@ -404,7 +404,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td><b>To Fix</b></td>
       <td>
         Add a canonical link tag to the <code>&lt;head&gt;</code> of each page,
-        pointing to the canonical source document. See 
+        pointing to the canonical source document. See
         <a href="//support.google.com/webmasters/answer/139066">Use canonical
         URLs</a> for more information.
       </td>
@@ -446,7 +446,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Load various pages in the PWA and ensure content or UI doesn't 
+        Load various pages in the PWA and ensure content or UI doesn't
         "jump" as the page loads.
       </td>
     </tr>
@@ -475,16 +475,16 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Find a list view in the app. Scroll down. Tap an item to enter the 
-        detail page. Scroll around on the detail page. Press back and ensure 
-        the list view is scrolled to the same place it was at before the 
+        Find a list view in the app. Scroll down. Tap an item to enter the
+        detail page. Scroll around on the detail page. Press back and ensure
+        the list view is scrolled to the same place it was at before the
         detail link/button was tapped.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Restore the scroll position in lists when the user presses 'back'. 
+        Restore the scroll position in lists when the user presses 'back'.
         Some routing libraries have a feature to do this for you.
       </td>
     </tr>
@@ -501,20 +501,20 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Find a page with text inputs. Scroll to put the text input as low on 
-        the screen as you can make it. Tap the input and verify it is not 
+        Find a page with text inputs. Scroll to put the text input as low on
+        the screen as you can make it. Tap the input and verify it is not
         covered when the keyboard appears.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Explore using features like 
+        Explore using features like
         <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView">
         <code>Element.scrollIntoView()</code></a>
         and
         <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded">
-        <code>Element.scrollIntoViewIfNeeded()</code></a> 
+        <code>Element.scrollIntoViewIfNeeded()</code></a>
         to ensure the input is visible when tapped.
       </td>
     </tr>
@@ -531,17 +531,17 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Ensure from standalone mode (after adding the app to your home screen) 
-        that you are able to share content, if appropriate, from within the 
+        Ensure from standalone mode (after adding the app to your home screen)
+        that you are able to share content, if appropriate, from within the
         app's UI.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Provide social share buttons, or a generic share button within your 
-        UI. If a generic button, you may want to directly copy the URL to the 
-        user's clipboard when tapped, offer them social networks to share to, 
+        Provide social share buttons, or a generic share button within your
+        UI. If a generic button, you may want to directly copy the URL to the
+        user's clipboard when tapped, offer them social networks to share to,
         or try out the new <a href="/web/updates/2016/10/navigator-share">
         Web Share API</a> to integrate with the native sharing system on Android.
       </td>
@@ -559,7 +559,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        View the PWA on small, medium and large screens and ensure it 
+        View the PWA on small, medium and large screens and ensure it
         works reasonably on all.
       </td>
     </tr>
@@ -590,7 +590,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
         <ul>
           <li>There should only be <b>one</b> top or bottom app install banner</li>
           <li>
-            After the PWA is added to the user's home screen, any top/bottom 
+            After the PWA is added to the user's home screen, any top/bottom
             banners should be removed.
           </li>
         </ul>
@@ -640,8 +640,8 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Use Lighthouse on a Nexus 5 (or similar) to verify time to interactive 
-        &lt;5s for first visit on a simulated 3G network (as opposed to the 
+        Use Lighthouse on a Nexus 5 (or similar) to verify time to interactive
+        &lt;5s for first visit on a simulated 3G network (as opposed to the
         10s goal for <a href="#baseline">baseline</a> PWAs)
       </td>
     </tr>
@@ -655,19 +655,19 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
             practices.
           </li>
           <li>
-            You can understand your performance better by using 
+            You can understand your performance better by using
             <a href="/speed/pagespeed/insights/">Pagespeed Insights</a>
             (aim for a score &gt;85) and <b>SpeedIndex</b> on
             <a href="https://www.webpagetest.org">WebPageTest</a>
-            (aim for a score &lt;4000 on the first view on Mobile 3G Nexus 
+            (aim for a score &lt;4000 on the first view on Mobile 3G Nexus
             5 Chrome).
           </li>
           <li>
-            A few tips are to focus on loading less script, make sure as much 
+            A few tips are to focus on loading less script, make sure as much
             script is loaded asynchronously as possible using <code>&lt;script
             async&gt;</code> and make sure
             <a href="/web/fundamentals/performance/critical-rendering-path/render-blocking-css">
-            render blocking CSS</a> is marked as such. 
+            render blocking CSS</a> is marked as such.
           </li>
         </ul>
       </td>
@@ -687,7 +687,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
       <td>
         <ul>
           <li>
-            Set the network emulation to the slowest setting and browse around 
+            Set the network emulation to the slowest setting and browse around
             the app.
           </li>
           <li>
@@ -699,8 +699,8 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        Use cache-first responses wherever possible. Also review our set of 
-        <a href="/web/tools/service-worker-libraries/">service worker libraries</a> 
+        Use cache-first responses wherever possible. Also review our set of
+        <a href="/web/tools/service-worker-libraries/">service worker libraries</a>
         that make implementing these kinds of patterns easier.
       </td>
     </tr>
@@ -717,7 +717,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Emulate an offline network and verify the PWA provides an 
+        Emulate an offline network and verify the PWA provides an
         indication that you are offline.
       </td>
     </tr>
@@ -750,12 +750,12 @@ notifications is not a requirement for an exemplary progressive web app.
           <li>Visit the site, and find the push notifications opt-in flow</li>
           <li>
             When you are shown the permission request by the browser, ensure
-            that context has been provided explaining what the site wants 
+            that context has been provided explaining what the site wants
             the permission for.
           </li>
           <li>
-            If the site is requesting for the permission on page load, ensure it 
-            provides very clear context simultaneously for why the user should 
+            If the site is requesting for the permission on page load, ensure it
+            provides very clear context simultaneously for why the user should
             enable push notifications.
           </li>
         </ul>
@@ -784,15 +784,15 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Visit the site and find the push notifications opt in flow. Ensure 
-        that if you dismiss push notification, the site does not re-prompt 
+        Visit the site and find the push notifications opt in flow. Ensure
+        that if you dismiss push notification, the site does not re-prompt
         in the same way within the same session.
       </td>
     </tr>
     <tr>
       <td><b>To Fix</b></td>
       <td>
-        If users say they don't want a certain kind of notification, do not 
+        If users say they don't want a certain kind of notification, do not
         reprompt for at least a few days (for example, one week).
       </td>
     </tr>
@@ -811,7 +811,7 @@ notifications is not a requirement for an exemplary progressive web app.
       <td>
         Visit the site and find the push notifications opt-in flow. When
         Chrome is showing the permission request, ensure that the page is
-        "dimming" (placing a dark overlay over) all content not relevant to 
+        "dimming" (placing a dark overlay over) all content not relevant to
         explaining why the site needs push notifications.
       </td>
     </tr>
@@ -836,11 +836,11 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Enable push notifications from the site and ensure the use cases 
+        Enable push notifications from the site and ensure the use cases
         they're using the push notifications for are:
         <ul>
           <li>
-            <b>Timely</b> — A timely notification is one that appears 
+            <b>Timely</b> — A timely notification is one that appears
             when users want it and when it matters to them.
           </li>
           <li>
@@ -875,8 +875,8 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Enable push notifications from the site. Ensure there is some place on 
-        the site that allows you to manage your notifications permissions or 
+        Enable push notifications from the site. Ensure there is some place on
+        the site that allows you to manage your notifications permissions or
         disable them.
       </td>
     </tr>
@@ -909,13 +909,13 @@ notifications is not a requirement for an exemplary progressive web app.
       <td>
         <ul>
           <li>
-            Create an account for a service and ensure you see the save 
+            Create an account for a service and ensure you see the save
             password/account dialog show up. Click "Save".
           </li>
           <li>
             Clear cookies for the site (via clicking on the padlock or Chrome
-            settings) and refresh the site. Ensure that you either see an 
-            account picker (e.g. if there are multiple accounts saved) or 
+            settings) and refresh the site. Ensure that you either see an
+            account picker (e.g. if there are multiple accounts saved) or
             are automatically signed back in.
           </li>
           <li>
@@ -949,9 +949,9 @@ notifications is not a requirement for an exemplary progressive web app.
     <tr>
       <td><b>To Test</b></td>
       <td>
-        Enter the payment flow. Instead of filling out a conventional form, 
-        verify the user is able to pay easily via the native UI triggered by the 
-        Payment Request API. 
+        Enter the payment flow. Instead of filling out a conventional form,
+        verify the user is able to pay easily via the native UI triggered by the
+        Payment Request API.
       </td>
     </tr>
     <tr>
@@ -963,3 +963,10 @@ notifications is not a requirement for an exemplary progressive web app.
     </tr>
   </tbody>
 </table>
+
+
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>

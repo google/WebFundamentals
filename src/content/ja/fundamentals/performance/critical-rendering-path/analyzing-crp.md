@@ -24,7 +24,7 @@ description: クリティカル レンダリング パスにおけるパフォ�
 * サーバーまでのネットワーク ラウンドトリップ（プロパゲーション レイテンシ）は 100 ms
 * サーバーの応答時間は、HTML ドキュメントの場合は 100 ms、その他のファイルの場合は 10 ms
 
-##  Hello World サンプル
+## Hello World サンプル
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
@@ -34,7 +34,7 @@ description: クリティカル レンダリング パスにおけるパフォ�
 
 まずは CSS と JavaScript は使わずに、基本的な HTML マークアップと 1 つの画像から始めましょう。Chrome DevTools でネットワーク タイムラインを開き、リソース ウォーターフォールを確認します。
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 注: このドキュメントでは DevTools を使用して CRP のコンセプトを説明しますが、現在のところ、DevTools は CRP 分析にあまり適してはいません。
 詳細については、[DevTools に関するドキュメント](measure-crp#devtools)をご覧ください。
@@ -49,7 +49,7 @@ HTML コンテンツが利用可能になると、ブラウザはバイトを解
 ただし、`load` イベント（`onload`）は、画像によってブロックされます。DevTools では、335 ms で `onload` イベントが記録されています。前に説明したとおり、`onload` イベントは、ページに必要な**すべてのリソース**がダウンロードされ、処理が完了した時点を表します。この段階で、ブラウザの読み込み中マークの回転が止まります（ウォーターフォール上の赤色の縦線に相当）。
 
 
-##  JavaScript と CSS をサンプルに追加する
+## JavaScript と CSS をサンプルに追加する
 
 「Hello World サンプル」ページは、一見するとシンプルに見えますが、内部ではさまざまな処理が実行されていました。また、現実的には HTML 以外の要素も必要になります。CSS スタイルシートと 1 つ以上のスクリプトを組み合わせて、インタラクティブなページにするケースも多くあります。この両者をサンプルに追加して、どうなるか見てみましょう。
 
@@ -59,7 +59,7 @@ HTML コンテンツが利用可能になると、ブラウザはバイトを解
 
 [サンプルを見る](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_timing.html){: target="_blank" .external }
 
-_JavaScript と CSSを追加する前：_
+_JavaScript と CSSを追加する前:_
 
 <img src="images/waterfall-dom.png" alt="DOM の CRP" >
 
@@ -116,13 +116,13 @@ _非同期（外部）JavaScript:_
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、インライン CSS、インライン JS" >
 
-`domContentLoaded` のタイミングは、前のサンプルとほぼ変わりません。今回は avaScript を非同期にする代わりに、CSS と JavaScript の両方を直接ページにインライン化しています。これにより、HTML ページのサイズはかなり大きくなっていますが、すべてがページ内にあるため、ブラウザで外部リソースの取得を待つ必要がないというメリットがあります。
+`domContentLoaded` のタイミングは、前のサンプルとほぼ変わりません。今回は JavaScript を非同期にする代わりに、CSS と JavaScript の両方を直接ページにインライン化しています。これにより、HTML ページのサイズはかなり大きくなっていますが、すべてがページ内にあるため、ブラウザで外部リソースの取得を待つ必要がないというメリットがあります。
 
 以上のように、非常にシンプルなページでも、クリティカル レンダリング パスの最適化は簡単ではありません。さまざまなリソース間の依存関係図を把握し、どのリソースが「クリティカル」であるか特定し、そのようなリソースをページに組み込む方法をさまざまな戦略の中から選ぶ必要があります。ただし、ページごとに違いがあるため、対策は 1 つではありません。最適な戦略を特定するには、このようなプロセスを自身で実践する必要があります。
 
 では、これらのことを踏まえて、一般的なパフォーマンス パターンを特定していきましょう。
 
-##  フォーマンス パターン
+## パフォーマンス パターン
 
 最もシンプルなページは、CSS、JavaScript、その他のリソースを含まず、HTML マークアップだけで構成されているページです。このページをレンダリングするために、ブラウザはリクエストを開始し、HTML ドキュメントが届くのを待ち、それを解析し、DOM を構築して、ようやく画面上にレンダリングします。
 

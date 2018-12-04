@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are right ways of using notifications, and ways of using them better. Learn what makes a good notification. We won't just show you what to do. We'll show you how to do it.
 
-{# wf_updated_on: 2017-03-30 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-03-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # Web Push: Common Issues and Reporting Bugs {: .page-title }
 
@@ -270,3 +271,7 @@ To provide a good bug report you should provide the following details:
 
 If you can provide a reproducible example, either source code or a hosted web
 site, it often speeds up diagnosing and solving the problem.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

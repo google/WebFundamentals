@@ -320,7 +320,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 
 <div style="clear:both;"></div>
 
-注： <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> 在初始化时必须为  <code>undefined</code> 或空数组才能接收  <code>shippingaddresschange</code> 事件。否则事件将无法触发。
+Note:  <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> 在初始化时必须为  <code>undefined</code> 或空数组才能接收  <code>shippingaddresschange</code> 事件。否则事件将无法触发。
 
 
     var options = {
@@ -346,7 +346,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
 
 <div style="clear:both;"></div>
 
-注：解析  <code>shippingaddresschange</code> 事件并保留 <code>details.shippingOptions</code> 的空数组状态也会导致地址遭拒（换言之，您无法发货到该地址）。请确保发货选项保持更新，并能匹配用户提供的地址。
+Note: 解析  <code>shippingaddresschange</code> 事件并保留 <code>details.shippingOptions</code> 的空数组状态也会导致地址遭拒（换言之，您无法发货到该地址）。请确保发货选项保持更新，并能匹配用户提供的地址。
 
 
     request.addEventListener('shippingaddresschange', e => {
@@ -443,7 +443,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
     var request = new PaymentRequest(methodData, details, options);
 
 
-注：如前所述， <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> 在初始化时必须为  <code>undefined</code> 或空数组才能接收  <code>shippingaddresschange</code> 事件。仅在发货选项不会随地址而变化的情况下（例如全球免费发货），才能在初始化时设置此值。
+Note: 如前所述， <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> 在初始化时必须为  <code>undefined</code> 或空数组才能接收  <code>shippingaddresschange</code> 事件。仅在发货选项不会随地址而变化的情况下（例如全球免费发货），才能在初始化时设置此值。
 
 更改发货选项会导致价格变动。要添加运费并更改总价，可以为 `shippingoptionchange` 事件添加事件侦听器（用户选择发货选项时会触发该侦听器），这样您即可对选项数据执行程序化检查。您也可以根据收货地址更改运费。
 
@@ -558,7 +558,7 @@ Payment Request 也可以扩展为返回额外信息，例如收货地址和选�
       // Continue with existing form based solution
     }
 
-注：最好使用普通的常规结账流程链接。然后使用 JavaScript 在支持 PaymentRequest 的情况下阻止导航。
+Note: 最好使用普通的常规结账流程链接。然后使用 JavaScript 在支持 PaymentRequest 的情况下阻止导航。
 
 ## 汇总{: #putting-them-together}
 

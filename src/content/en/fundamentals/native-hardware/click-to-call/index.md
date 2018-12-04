@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-06-17 #}
+{# wf_blink_components: Blink>Input #}
 
 # Click to Call {: .page-title }
 
@@ -84,3 +85,7 @@ following meta tag to the top of the page:
 In addition to the `tel:` schema, some modern browsers also support the `sms:`
 and `mms:` schemas, though support is not as consistent, and some
 features like setting the message body don't always work. 
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

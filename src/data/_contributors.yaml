@@ -121,7 +121,7 @@ kaycebasques:
   role:
     - author
   description:
-    en: Technical Writer for Chrome DevTools
+    en: Technical Writer, Chrome DevTools & Lighthouse
 
 beaufortfrancois:
   name:
@@ -356,6 +356,23 @@ flaviocopes:
   description:
     en: Flavio is a Full Stack Developer
 
+victorcostan:
+  name:
+    given: Victor
+    family: Costan
+  google: "102128305988485092292"
+  twitter: pwnall
+  github: pwnall
+  role:
+    - author
+  description:
+    en: "Tech Lead, Chrome Storage"
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  email: costan@google.com
+
 dalecurtis:
   name:
     given: Dale
@@ -434,6 +451,21 @@ cwdoh:
   email: changwook.doh@gmail.com
   description:
     en: Chang is a mobile and HTML5 technologist
+
+tdresser:
+  name:
+    given: Tim
+    family: Dresser
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - author
+  twitter: tdresser
+  email: tdresser@chromium.org
+  description:
+    en: Software Engineer working on performance metrics at Google
 
 samdutton:
   name:
@@ -593,6 +625,21 @@ greenido:
   description:
     en: Ido is a Developer Advocate and a runner
 
+tomgreenaway:
+  name:
+    given: Tom
+    family: Greenaway
+  org:
+    name: Google
+    unit: Developer Relations
+  country: AU
+  role:
+    - author
+  github: tcmg
+  twitter: tcmg
+  description:
+    en: Chrome & Web Developer Relations Games Lead
+
 eligrey:
   name:
     given: Eli
@@ -709,6 +756,19 @@ ilmariheikkinen:
   role:
     - author
 
+katiehempenius:
+  name:
+    given: Katie
+    family: Hempenius
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  twitter: katiehempenius
+  email: khempenius@google.com
+
 patrickhulce:
   name:
     given: Patrick
@@ -739,6 +799,19 @@ paulirish:
   twitter: paul_irish
   email: paulirish@google.com
 
+katjackson:
+  name:
+    given: Katherine
+    family: Jackson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  description:
+    en: Technical Writer Intern, Chrome DevTools
+
 captainpangyo:
   name:
     given: Josh
@@ -767,6 +840,18 @@ kazukikanamori:
   email: kazuki.kanamori@gmail.com
   description:
     en: Digital Marketing Engineer
+
+mkazi:
+  name:
+    given: Minhaz
+    family: Kazi
+  role:
+    - author
+  org:
+    name: Google
+    unit: Developer Relations
+  twitter: _mkazi_
+  github: minhaz
 
 megginkearney:
   name:
@@ -878,6 +963,21 @@ zkoch:
   description:
     en: Google Chrome Product Manager
 
+kosamari:
+  name:
+    given: Mariko
+    family: Kosaka
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  twitter: kosamari
+  email: kosamari@google.com
+  description:
+    en: Mariko is a drawsplainer
+
 mustafa:
   name:
     given: Mustafa
@@ -908,6 +1008,19 @@ sethladd:
   twitter: sethladd
   role:
     - author
+
+mlamouri:
+  name:
+    given: Mounir
+    family: Lamouri
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - engineer
+  description:
+    en: Software Engineer for Web Media Experience
 
 ericlawrence:
   name:
@@ -1206,6 +1319,17 @@ chrispalmer:
   description:
     en: 'Chris is a security engineer on the Chrome Security Team, focusing on secure usability.'
 
+durgapandey:
+  name:
+    given: Durga
+    family: Pandey
+  country: US
+  role:
+    - author
+  twitter: _angleofrepose_
+  description:
+    en: 'Product Manager of Web Payments'
+
 jasonpark:
   name:
     given: Jason
@@ -1477,6 +1601,19 @@ borissmus:
     - author
   email: smus@google.com
 
+rsolomakhin:
+  name:
+    given: Rouslan
+    family: Solomakhin
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  twitter: rsolomakhin
+  email: rouslan@google.com
+
 emilystark:
   name:
     given: Emily
@@ -1625,7 +1762,6 @@ rviscomi:
     name: Google
     unit: Developer Relations
   country: USA
-  homepage: 'https://twitter.com/rick_viscomi'
   twitter: rick_viscomi
   github: rviscomi
   role:
@@ -1728,6 +1864,19 @@ myakura:
   email: masataka.yakura@gmail.com
   description:
     en: Masataka is a Web Google Developers Expert
+
+kinukoyasuda:
+  name:
+    given: Kinuko
+    family: Yasuda
+  twitter: kinu
+  github: kinu
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Software Engineer at Google working on the web platform"
 
 maciejzasada:
   name:

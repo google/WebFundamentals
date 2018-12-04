@@ -1,19 +1,10 @@
 {
   "initMap": true,
-  "filters_": {
-    "vertical": [
-      "Agency",
-      "Education",
-      "Other",
-      "Social"
-    ],
-    "region": [
-      "Asia",
-      "Europe"
-    ]
-  },
   "data": [
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Enovate",
       "region": [
         "Europe"
@@ -55,6 +46,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Selesti Ltd",
       "region": [
         "Europe"
@@ -96,6 +90,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "22feet Tribal Worldwide Pvt Ltd",
       "region": [
         "Asia"
@@ -138,6 +135,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Featurist Ltd",
       "region": [
         "Europe"
@@ -189,6 +189,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Your Favourite Story",
       "region": [
         "Europe"
@@ -231,6 +234,9 @@
       ]
     },
     {
+      "countries_": [
+        "United Kingdom"
+      ],
       "agency_name": "Hex Digital Ltd",
       "region": [
         "Europe"
@@ -273,6 +279,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "Enforce",
       "region": [
         "Asia"
@@ -315,6 +324,9 @@
       ]
     },
     {
+      "countries_": [
+        "India"
+      ],
       "agency_name": "PRODITECH Solutions",
       "region": [
         "Asia"
@@ -355,6 +367,332 @@
           }
         }
       ]
+    },
+    {
+      "countries_": [
+        "India"
+      ],
+      "agency_name": "Mediology Software (Readwhere CMS)",
+      "region": [
+        "Asia"
+      ],
+      "description": "Readwhere CMS aim to be a Complete Mobile Solution, powering the enterprise needs of publishers by delivering PWA, AMP and Native Apps, through one platform. Our mobile first CMS will increase user engagement and enhance monetisation on Mobile.",
+      "website": "http://mobi.readwhere.com/",
+      "projects": [
+        {
+          "url": "https://mobi.uttamhindu.com/",
+          "client_name": "",
+          "vertical": [
+            "Media"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "mobile@readwhere.com",
+      "image_url": "/web/agencies/images/mediology_software_readwhere_cms.png",
+      "vertical": [
+        "Media"
+      ],
+      "locations_view": [
+        {
+          "country_name": "India",
+          "cities": [
+            "Delhi",
+            "Hyderabad",
+            "Chennai"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Delhi",
+          "geo": {
+            "lat": 28.7040592,
+            "lng": 77.10249019999999
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Hyderabad",
+          "geo": {
+            "lat": 17.385044,
+            "lng": 78.486671
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Chennai",
+          "geo": {
+            "lat": 13.0826802,
+            "lng": 80.2707184
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "China"
+      ],
+      "agency_name": "Wunderman",
+      "region": [
+        "Asia"
+      ],
+      "description": "The Wunderman network in Greater China includes Wunderman, AGENDA and Blast Radius, with 9 offices in Beijing, Shanghai, Guangzhou, Hong Kong and Taipei.",
+      "website": "http://wunderman.com.cn",
+      "projects": [
+        {
+          "url": "https://www.victoriassecretcn.com/html/index.html",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 88
+        }
+      ],
+      "max_lighthouse_score": 88,
+      "contact": "contacts@wunderman.com",
+      "image_url": "/web/agencies/images/wunderman.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": [
+            "Shanghai"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Indonesia"
+      ],
+      "agency_name": "Uasoft",
+      "region": [
+        "Asia"
+      ],
+      "description": "Uasoft is digital agency based in Jakarta, Indonesia. We connect brands and businesses with their markets through the digital medium. We are trusted by various brands and companies to build valuable, functional, and beautiful digital applications.",
+      "website": "https://soft.uatech.co.id/",
+      "projects": [
+        {
+          "url": "https://cariharga.co.id",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@uatech.co.id",
+      "image_url": "/web/agencies/images/uasoft.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": [
+            "Jakarta"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Jakarta",
+          "geo": {
+            "lat": -6.17511,
+            "lng": 106.8650395
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Vietnam",
+        "India"
+      ],
+      "agency_name": "DigiFutura",
+      "region": [
+        "Asia"
+      ],
+      "description": "Award Winning Web & Mobile App Development Company. Think With Google case Study: https://developers.google.com/web/showcase/2016/housing",
+      "website": "https://www.digifutura.com/",
+      "projects": [
+        {
+          "url": "https://housing.com/in/",
+          "client_name": "",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 92
+        }
+      ],
+      "max_lighthouse_score": 92,
+      "contact": "raghav@digifutura.com",
+      "image_url": "/web/agencies/images/digifutura.png",
+      "vertical": [
+        "Other"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Vietnam",
+          "cities": [
+            "Ho Chi Minh City"
+          ]
+        },
+        {
+          "country_name": "India",
+          "cities": [
+            "Bangalore"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "India",
+          "city_name": "Bangalore",
+          "geo": {
+            "lat": 12.93389,
+            "lng": 77.630443
+          }
+        },
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "China"
+      ],
+      "agency_name": "GIMC Chance",
+      "region": [
+        "Asia"
+      ],
+      "description": "Chance Ads is a leading mobile driven agency in China. It was acquired by GIMC in 2017. GIMC is the first advertising company and currently is also the largest local marketing communications group in China.  It has more than 300 well-known clients. In 2010, it was public listed on “Small and Medium Enterprise Board” in the Shenzhen stock exchange (stock code: 002400) as “The First Shares of Chinese Advertising”. \n",
+      "website": "http://www.cocounion.com/",
+      "projects": [
+        {
+          "url": "https://pwa.coculm.cn/",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 96
+        }
+      ],
+      "max_lighthouse_score": 96,
+      "contact": "lingyun.zhang@chance-ad.com",
+      "image_url": "/web/agencies/images/gmic_chance.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": [
+            "Shanghai",
+            "Beijing"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        },
+        {
+          "country_name": "China",
+          "city_name": "Beijing",
+          "geo": {
+            "lat": 39.90419989999999,
+            "lng": 116.4073963
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "United Kingdom"
+      ],
+      "agency_name": "Lunar Works Lab Ltd",
+      "region": [
+        "Europe"
+      ],
+      "description": "Lunar Works Lab Ltd create impactful websites and digital platforms using cutting edge technologies. Driven by their creativity and passion for their projects, they are always looking to help businesses succeed in their market.",
+      "website": "https://lunarworks.co.uk",
+      "projects": [
+        {
+          "url": "https://lunarworks.co.uk",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "launch@lunarworks.co.uk",
+      "image_url": "/web/agencies/images/lunar_works_lab_ltd.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Tenterden"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Tenterden",
+          "geo": {
+            "lat": 51.069358,
+            "lng": 0.689122
+          }
+        }
+      ]
     }
-  ]
+  ],
+  "filters_": {
+    "vertical": [
+      "Agency",
+      "Education",
+      "Media",
+      "Other",
+      "Retail",
+      "Social"
+    ],
+    "region": [
+      "Asia",
+      "Europe"
+    ]
+  }
 }

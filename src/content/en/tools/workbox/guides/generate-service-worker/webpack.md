@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with the Workbox Webpack Plugin.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-08 #}
+{# wf_updated_on: 2018-07-18 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with Webpack {: .page-title }
@@ -72,9 +72,6 @@ module.exports = {
 
       // Define runtime caching rules.
       runtimeCaching: [{
-        // Use a custom cache name.
-        cacheName: 'images',
-
         // Match any request ends with .png, .jpg, .jpeg or .svg.
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
@@ -82,6 +79,9 @@ module.exports = {
         handler: 'cacheFirst',
 
         options: {
+          // Use a custom cache name.
+          cacheName: 'images',
+
           // Only cache 10 images.
           expiration: {
             maxEntries: 10,

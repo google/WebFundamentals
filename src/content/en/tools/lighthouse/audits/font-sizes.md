@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document Doesn't Use Legible Font Sizes" Lighthouse audit.
 
-{# wf_updated_on: 2018-02-22 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-02-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -36,3 +36,7 @@ your document. See [Has A Viewport Meta Tag With Width Or Initial-Scale][viewpor
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/font-size.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

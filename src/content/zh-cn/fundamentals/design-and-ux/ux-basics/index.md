@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:循序渐进的用户体验设计基础知识指南。
 
-{# wf_updated_on:2016-10-01 #}
+{# wf_updated_on:2018-12-03 #}
 {# wf_published_on:2016-10-01 #}
 
 # 用户体验基础知识 {: .page-title }
@@ -229,7 +229,7 @@ description:循序渐进的用户体验设计基础知识指南。
 
 
 <figure  class="attempt-left">
-  <img src="images/crazy-8s.jpg" alt="疯狂的 8 可以非常有效地将您的所有创意落实到纸面上”。>
+  <img src="images/crazy-8s.jpg" alt="疯狂的 8 可以非常有效地将您的所有创意落实到纸面上">
   <figcaption>疯狂的 8 可以非常有效地将您的所有创意落实到纸面上。</figcaption>
 </figure>
 

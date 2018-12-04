@@ -38,7 +38,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-注：您的网页必须可被 Googlebot 抓取，才能确保它们是安全无害的。
+Note: 您的网页必须可被 Googlebot 抓取，才能确保它们是安全无害的。
  请确保您没有使用 `noindex` 漫游器元标记或指令将这些网页排除在抓取范围之外或禁止将其编入索引。
 
 

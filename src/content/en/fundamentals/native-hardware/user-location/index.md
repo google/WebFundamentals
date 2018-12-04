@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers and devices have access to the user's geographic location. Learn how to work with the user's location in your site and apps.
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-01 #}
+{# wf_blink_components: Blink>Location #}
 
 # User Location {: .page-title }
 
@@ -420,3 +421,7 @@ and click the **Sensors** option to show the Sensors Drawer.
 From here you can override the location to a preset major city,
 enter a custom location, or disable geolocation by setting the override
 to **Location unavailable**.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

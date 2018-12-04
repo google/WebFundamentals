@@ -4,7 +4,7 @@ description: This week we speak to Surma about design tools.
 
 {# wf_blink_components: N/A #}
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-29 #}
+{# wf_updated_on: 2018-11-05 #}
 {# wf_published_on: 2017-05-30 #}
 {# wf_podcast_audio: https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3 #}
 {# wf_podcast_duration: 00:10:34 #}
@@ -40,6 +40,7 @@ href="https://github.com/GoogleChrome/howto-components">HowTo: Components</a>’
 src="https://storage.googleapis.com/designer-vs-developer-podcast/DVDS1E06-are-design-tools-fit-for-purpose.mp3" controls preload="none">
 
 Subscribe to Designer Vs Developer Podcast via
+<a href="http://bit.ly/mustafaOnSpotify">Spotify</a>,
 <a href="https://goo.gl/USHXv8">Feedburner</a>,
 <a href="https://goo.gl/1E9U0G">iTunes</a> Or
 <a href="https://goo.gl/qCBlST">
@@ -47,3 +48,5 @@ Google Music</a>
 
 Watch <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC60856GnLEV5GQXMxc9ByJ">
 the video recording</a>.
+
+{% include "web/_shared/helpful.html" %}

@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Create the best mobile media experience on the Web by following these best practises.
 
 {# wf_published_on: 2017-04-07 #}
-{# wf_updated_on: 2017-07-25 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Media #}
 
 # Mobile Web Video Playback {: .page-title }
@@ -647,3 +647,7 @@ shows up on lock screens.
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [Intersection Observer API]: /web/updates/2016/04/intersectionobserver
 [Media Session API]: /web/updates/2017/02/media-session
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

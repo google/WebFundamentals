@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -66,3 +66,7 @@ understand the scope of the problem.
 * Change the passwords for all site users and accounts. This includes logins
   for FTP, database access, system administrators, and content management
   system (CMS) accounts.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O Android Pay oferece segurança e simplicidade para as compras on-line e elimina a necessidade de os usuários lembrarem e digitarem seus dados de pagamento. Integre o Android Pay para atingir milhões de usuários Android, aumentar as taxas de conversão e dar aos usuários a verdadeira experiência de compra com um toque.
 
-{# wf_updated_on: 2016-12-06 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-09-07 #}
 
 # Como integrar o Android Pay ao Payment Request {: .page-title }
@@ -85,7 +85,7 @@ figure {
 * É necessário ter o aplicativo do Android Pay instalado no dispositivo e estar em um dos países suportados para instalá-lo. Dê uma olhada em [android.com/pay](https://www.android.com/pay/){: .external } para ver se o seu país oferece suporte ao Pay.
 * Para testar, você precisa [adicionar um cartão de crédito](https://support.google.com/androidpay/answer/6289372) ao Android Pay pelo seu dispositivo.
 * Cadastro no Android Pay
-    * Adicione o nome da sua empresa, a origem do site, um e-mail profissional etc. usando [este formulário](https://androidpay.developers.google.com/signup).
+    * Adicione o nome da sua empresa, a origem do site, um email profissional etc. usando [este formulário](https://androidpay.developers.google.com/signup).
 * Confirme que o [seu gateway/processador de pagamentos oferece suporte aos tokens do Android Pay](/android-pay/#processors).
 * Adquira um par de chaves usado para criptografar a resposta do Android Pay se estiver usando [a abordagem de token na rede](#integration-using-network-token).
     * O Google recomenda entrar em contato com o seu processador de pagamentos para obter uma chave pública. Isso simplifica o processo, porque o processador poderá operar a descriptografia dos dados enviados pelo Android Pay. Acesse a documentação do seu processador de pagamentos para saber mais.

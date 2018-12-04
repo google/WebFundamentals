@@ -72,5 +72,9 @@ browser about your preferred native application. Each object must include
 a `platform` property and an `id` property. Where the `platform` is `play`
 and the `id` is your Play Store app ID.
 
+## Feedback {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 

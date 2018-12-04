@@ -8,7 +8,7 @@
 
 <p>本指南旨在協助您處理所謂的日文關鍵字植入問題。顧名思義，遭到入侵的網站會出現自動產生的日文字。<a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">各大內容管理系統</a> (CMS) 的使用者皆可參考本指南。不過，即使您並未使用 CMS，本指南仍提供了十分實用的資訊。</p>
 
-<p><strong>注意：</strong>不確定您的網站是否遭到入侵嗎？首先請詳閱我們的<a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">如何檢查網站是否遭到入侵</a>指南。</p>
+<p><strong>Note: </strong>不確定您的網站是否遭到入侵嗎？首先請詳閱我們的<a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">如何檢查網站是否遭到入侵</a>指南。</p>
 
 <aside class="note">我們希望確定本指南確實對您有所幫助。歡迎<a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">提供意見</a>，協助我們讓指南內容更臻完善！</aside>
 
@@ -54,7 +54,7 @@
   RewriteEngine On
   RewriteRule ^google(.*)\.html$ dir/file.php?google=$1 [L] </pre>
 
-<p><b>注意：</b>一般來說，查看您是否成功移除了動態產生的驗證憑證時，您可以瀏覽模擬的驗證憑證檔案，例如 <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code>。舉例來說，如果您的網站是 www.brandonsbaseballcards.com，請嘗試前往 www.brandonsbaseballcards.com/google1234.html。如果該網頁傳回 HTTP 404，表示動態產生的驗證憑證應已修正。</p>
+<p><b>Note: </b>一般來說，查看您是否成功移除了動態產生的驗證憑證時，您可以瀏覽模擬的驗證憑證檔案，例如 <code class="notranslate l10n-notranslate">wwww.example.com/google[random number and letters].html</code>。舉例來說，如果您的網站是 www.brandonsbaseballcards.com，請嘗試前往 www.brandonsbaseballcards.com/google1234.html。如果該網頁傳回 HTTP 404，表示動態產生的驗證憑證應已修正。</p>
 
 <p>如要將動態產生的驗證憑證從 .htaccess 檔案中移除，請按照以下步驟操作。
 
@@ -67,7 +67,7 @@
   <strong>步驟 2</strong>
 <p>使用沒有惡意內容或預設版本的 .htaccess 檔案取代所有 .htaccess 檔案。一般來說，如要尋找預設版本的 .htaccess 檔案，您可以使用「預設 .htaccess 檔案」搭配您的 CMS 名稱進行搜尋。如果您的網站有多個 .htaccess 檔案，請針對各個檔案 找出沒有惡意內容的版本，再執行取代作業。</p>
 
-<p><strong>注意：</strong>.htaccess 經常是「隱藏的檔案」。搜尋時請務必讓系統顯示所有隱藏的檔案。</p>
+<p><strong>Note: </strong>.htaccess 經常是「隱藏的檔案」。搜尋時請務必讓系統顯示所有隱藏的檔案。</p>
 
   <h3>移除所有惡意檔案和指令碼 (4 個步驟)</h3>
 <p>判別惡意檔案不太容易，可能需要數小時。請耐心檢查檔案。如果您尚未備份網站上的檔案，這時可以順便進行備份。請透過 Google 搜尋「備份網站」和您的 CMS 名稱，尋找相關的操作說明。</p>
@@ -91,7 +91,7 @@
     <li>依大小排序您網站上的檔案，找出所有特別大的檔案。</li>
   </ul>
 
-<p><strong>注意：</strong>攻擊者常在下列檔案中植入指令碼：
+<p><strong>Note: </strong>攻擊者常在下列檔案中植入指令碼：
   index.php、wp-load.php、404.php 和 view.php。</p>
 
   <strong>步驟 4</strong>

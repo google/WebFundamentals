@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Overview of screen focus in accessibility
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to Focus {: .page-title }
@@ -133,3 +134,6 @@ used in the form are native HTML tags with implicit focus, the form works fine
 with the keyboard, and you don't have to write any code to add or manage focus
 behavior.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

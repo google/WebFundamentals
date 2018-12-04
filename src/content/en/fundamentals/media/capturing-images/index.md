@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's camera.
 
-{# wf_updated_on: 2017-08-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>ImageCapture #}
 
@@ -351,3 +351,7 @@ More information about mobile and desktop browser implementation:
 
 We also recommend using the [adapter.js](https://github.com/webrtc/adapter) shim to protect apps
 from WebRTC spec changes and prefix differences.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -37,7 +37,7 @@ function test(filename, contents, options) {
    * Simple wrapper that adds a warning to the list
    *
    * @param {string} message The message to add.
-   * @param {object} position The line number the warning occured on.
+   * @param {object} position The line number the warning occurred on.
    */
   function logWarning(message, position) {
     results.push({

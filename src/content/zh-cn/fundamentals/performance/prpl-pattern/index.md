@@ -95,7 +95,7 @@ Polymer 的 [Shop](https://shop.polymer-project.org) 电子商务演示是使用
 ![具有两个视图的应用图表，该应用包含独立和共享的依赖项](images/app-build-components.png)
 
 
-注：尽管 HTML 导入是 Polymer 的首选捆绑策略，您也可以使用代码拆分和基于路由的分块，通过现代 JavaScript 模块捆绑程序实现相似的设置
+Note: 尽管 HTML 导入是 Polymer 的首选捆绑策略，您也可以使用代码拆分和基于路由的分块，通过现代 JavaScript 模块捆绑程序实现相似的设置
 
 
 
@@ -198,7 +198,7 @@ Shell（包括其静态依赖项）应包含第一次绘制所需的全部资源
 
 需要小心使用 HTTP/2 推送，因为即使文件已经位于浏览器的本地缓存中或带宽已饱和，它都会对浏览器强制推送数据。如果操作错误，性能将降低。[`<link rel="preload">`][Resource hints] 能够有效地使浏览器对设置这些请求的优先级做出明智的决定。
 
-  
+
 
 ##  结论
 

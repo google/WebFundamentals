@@ -26,6 +26,9 @@ redirects:
 - from: /web/fundamentals/media
   to: /web/fundamentals/media/video
 
+- from: /web/updates/2018/05/dpwa
+  to: /web/progressive-web-apps/desktop
+
 - from: /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
   to: /web/fundamentals/web-app-manifest/
 

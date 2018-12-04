@@ -4,8 +4,9 @@ description: Layout is where the browser figures out the geometric information f
 
 # Avoid Large, Complex Layouts and Layout Thrashing {: .page-title }
 
-{# wf_updated_on: 2015-03-20 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>Layout #}
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
@@ -155,3 +156,7 @@ The fix for this sample is to once again _read_ then _write_ values:
 
 
 If you want to guarantee safety you should check out [FastDOM](https://github.com/wilsonpage/fastdom), which automatically batches your reads and writes for you, and should prevent you from triggering forced synchronous layouts or layout thrashing accidentally.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

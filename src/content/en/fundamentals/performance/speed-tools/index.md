@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-11 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2018-02-26 #}
 {# wf_blink_components: N/A #}
 
@@ -320,3 +320,7 @@ development versions of a website.
 **[WebPageTest](https://www.webpagetest.org/)** contains an advanced suite of
 metrics and trace viewers. It enables deep diving into the performance of your
 site on real mobile hardware with network conditions.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

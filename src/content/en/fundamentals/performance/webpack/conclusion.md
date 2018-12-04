@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-18 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2017-12-18 #}
 {# wf_blink_components: N/A #}
 
@@ -34,3 +34,7 @@ Don’t forget to read [webpack docs](https://webpack.js.org/guides/) – they h
 useful information.
 
 And make sure to play [with the training app](https://github.com/GoogleChromeLabs/webpack-training-project)!
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

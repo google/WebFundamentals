@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 59.
 
-{# wf_updated_on: 2017-04-19 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-04-12 #}
 {# wf_tags: chrome59,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 59. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -154,3 +155,5 @@ is prepended with a greater-than character (`>`). This is because the Command
 Menu has been unified with the **Open File** menu, which is
 <kbd>Command</kbd>+<kbd>O</kbd> (Mac), or <kbd>Control</kbd>+<kbd>O</kbd>
 (Windows, Linux).
+
+<<../../_shared/discover.md>>

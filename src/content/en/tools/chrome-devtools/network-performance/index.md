@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started analyzing network performance.
 
-{# wf_updated_on: 2018-06-18 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2017-01-17 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -248,3 +248,7 @@ of skills and knowledge, though.
 * See <a class="gc-analytics-event" data-category="DevTools / Network /
   Get Started" data-label="Next Steps / Reference" href="reference">Network
   Panel Reference</a> for a comprehensive list of Network panel features.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

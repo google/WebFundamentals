@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2018-02-05 #}
+{# wf_updated_on: 2018-10-12 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -216,52 +216,58 @@ automatically maintain a 16:9 ratio.
 [common-links]: https://github.com/google/WebFundamentals/blob/master/src/content/en/_common-links.md
 
 
-## Inline Feedback {: #inline-feedback }
+## Add the "was this page helpful?" widget to your docs {: #helpful }
 
-Gain more feedback on your doc by asking your readers yes / no questions.
+Note: This widget is intended for the Google Web DevRel team.
 
-### Example
+Want to find out if readers actually find your docs useful? Add the "was this page helpful?"
+widget to your docs.
 
-See [Get Started Debugging JS][inline feedback example] for examples. Each of
-the questions at the bottom of the sections use the Inline Feedback widget.
+![The "was this page helpful?" widget](images/red.png)
 
-[inline feedback example]: /web/tools/chrome-devtools/javascript/
+### Step 1: Add the widget to your page {: #helpful1 }
 
-### Usage
+1. Open your doc in a code editor.
+1. Put the following code at the bottom of your page.
 
-1. Make a directory called `_feedback` near the doc that'll include the feedback.
-2. If you want to include a question before your buttons, then copy
-   `/src/content/en/tools/chrome-devtools/javascript/_feedback/7.html` into
-   your `_feedback` directory. Else, copy `.../1.html`.
-2. Copy `/src/content/en/tools/chrome-devtools/javascript/_feedback/1.html`
-   into your `_feedback` directory.
-3. Modify all of the variables to suit your question. All variables except
-   `question` are required.
-4. Include `_feedback/1.html` into your doc, like this:
+     <pre>## Feedback &#123;: #feedback .hide-from-toc }
 
-<pre class="prettyprint">
-&#123;% include "web/path/to/_feedback/1.html" %}
-</pre>
+     &#123;% include "web/_shared/helpful.html" %}</pre>
 
-Path must always start with relative reference to `web/`. This
-is just how the `include` tag works.
+The widget reports your data to Google Analytics as an [event][event]{:.external}.
+The category of the event is `Helpful`. The label is the page's absolute path. The value
+is `0` if the user clicks **No** (the doc was not helpful) or `1` if the user clicks
+**Yes** (the doc was helpful).
 
-Other stuff:
+[event]: https://developers.google.com/analytics/devguides/collection/analyticsjs/events
 
-* The widget is hard-coded (and styled) to expect a success /
-  fail scenario. It won't make sense in other contexts.
-* Can be used more than once on a doc!
-* Doesn't work on Web Fundamentals' local development
-  server, because that server is just an approximation of
-  DevSite's real capabilities. You'll see all of the variables
-  printed on the page.
+### Step 2: Wait {: #helpful2 }
 
-### Viewing data
+Once the widget is live on your page, you'll probably need to wait a while before you can derive
+any meaning from the data. The more responses you get, the more confident you can be that the
+data actually represents the sentiment of your users.
 
-Note: only relevant to users who have access to Web Fundamentals'
-analytics data.
+### Step 3: Access the data {: #helpful3 }
 
-See Google Analytics > Behavior > Events. When the user clicks "fail",
-a value of 0 is sent for this label. When user clicks "success", a value
-of 1 is sent. So, a value of 1 means that users are always clicking your
-"success" button.
+1. Request access to the **Web Fundamentals** site data on Google Analytics.
+1. Open [Google Analytics](https://analytics.google.com).
+1. Go to Behavior > Events > Overview.
+1. Under **Events Category** select **Helpful**. If you can't see **Helpful**, click **view full report** and find it there.
+1. For **Primary Dimension** select **Label**.
+
+The **Total Events** column represents the total number of times that someone clicked **Yes** or **No**.
+The **Avg. Value** column represents the average sentiment. For example, if 100 people responded, and
+the average value is `0.75`, that means that 75 out of 100 people clicked **Yes** (the page is helpful).
+
+!["Was this page helpful?" data in Google Analytics](images/helpfuldata.png)
+
+### Step 4: Interpret and act on the data {: #helpful4 }
+
+* If your page is getting low ratings, take a look at it and think about how you can improve it.
+  Make that change, and then check back after a while to see if your rating improved.
+* If your page is getting high ratings and you think you know why, share this knowledge with the
+  rest of the team. We can conduct experiments to see if this change reproducibly improves page ratings.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

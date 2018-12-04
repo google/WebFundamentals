@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Implications for Web Developers and Chrome’s mitigations.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-02-06 #}
 {# wf_tags: security #}
 {# wf_featured_image: /web/updates/images/generic/encryption.png #}
@@ -201,7 +201,7 @@ decided to disable SharedArrayBuffer until other mitigations are in place.
 
 To exploit Spectre, a specifically crafted sequence of CPU instructions is
 needed. [The V8 team has implemented
-mitigations](https://github.com/v8/v8/wiki/Untrusted-code-mitigations) for
+mitigations](https://v8.dev/docs/untrusted-code-mitigations) for
 known attack proofs of concept, and is working on changes in TurboFan, their
 optimizing compiler, that make its generated code safe even when these attacks
 are triggered. However, these code generation changes may come at a performance

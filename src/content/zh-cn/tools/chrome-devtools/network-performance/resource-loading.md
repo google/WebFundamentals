@@ -79,13 +79,13 @@ Network 面板由五个窗格组成：
 ## 在记录期间捕捉屏幕截图{:#filmstrip}
 
 **Network** 面板可以在页面加载期间捕捉屏幕截图。此功能称为**幻灯片**。
- 
+
 
 点击**摄影机**图标可以启用幻灯片。图标为灰色时，幻灯片处于停用状态 (![已停用幻灯片](imgs/filmstrip-disabled.png){:.inline})。如果图标为蓝色，则说明已启用 (![已启用幻灯片](imgs/filmstrip-enabled.png){:.inline})。
 
 
 重新加载页面可以捕捉屏幕截图。屏幕截图显示在**概览**上方。
- 
+
 
 ![带幻灯片的记录](imgs/filmstrip.png)
 
@@ -141,7 +141,7 @@ Network 面板由五个窗格组成：
 ### 查看网络耗时
 
 点击 **Timing** 标签可以查看单个资源请求生命周期的精细分解。
- 
+
 
 生命周期按照以下类别显示花费的时间：
 
@@ -158,7 +158,7 @@ Network 面板由五个窗格组成：
 ![timing 标签](imgs/timing-tab.png)
 
 将鼠标悬停到 **Timeline** 图表内的资源上时，您也可以看到相同的信息。
- 
+
 
 ![Timeline 中一个资源的定时数据](imgs/timeline-view-hover.png)
 
@@ -174,7 +174,7 @@ Network 面板由五个窗格组成：
 
 **Headers** 标签可以显示资源的请求网址、HTTP 方法以及响应状态代码。
 此外，该标签还会列出 HTTP 响应和请求标头、它们的值以及任何查询字符串参数。
- 
+
 
 ![单一资源的 HTTP 标头](imgs/network-headers.png)
 
@@ -248,10 +248,10 @@ Network 面板由五个窗格组成：
 * **Length**。消息负载的长度（以字节为单位）。
 * **Time**。消息创建时的时间戳。
 
-消息根据其类型进行彩色编码： 
+消息根据其类型进行彩色编码：
 
 * 传出文本消息为浅绿色。
-* 传入文本消息为白色。 
+* 传入文本消息为白色。
 * WebSocket 操作码为浅黄色。
 * 错误为浅红色。
 
@@ -265,7 +265,7 @@ Network 面板由五个窗格组成：
 
 按住 <kbd>Shift</kbd> 并将鼠标悬停在资源上，可以查看其发起者和依赖项。
 本部分将您悬停的资源称为**目标**。
- 
+
 
 目标上方的第一个绿色编码资源为目标的发起者。
 如果上方存在第二个也是绿色编码的资源，那么该资源将是发起者的发起者。
@@ -280,7 +280,7 @@ Network 面板由五个窗格组成：
 ![查看资源发起者和依赖关系](imgs/initiators-dependencies.png)
 
 请记住，对于具有大量资源的页面，您可能无法看到所有的发起者或依赖项。
- 
+
 
 ## 排序请求
 
@@ -305,7 +305,7 @@ Network 面板由五个窗格组成：
 
 ![Timeline 排序字段](imgs/timeline-sort-fields.png)
 
-## 过滤请求 
+## 过滤请求
 
 **Network** 面板提供了多种方式来过滤要显示哪些资源。
 点击 **Filter** 按钮 (![Filter 按钮](imgs/filters.png){:.inline}) 可以隐藏或显示 **Filters** 窗格。
@@ -313,9 +313,9 @@ Network 面板由五个窗格组成：
 
 
 使用内容类型按钮可以仅显示选定内容类型的资源。
- 
 
-注：按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd> (Windows/Linux) 并点击过滤器可以同时启用多个过滤器。
+
+Note: 按住 <kbd>Cmd</kbd> (Mac) 或 <kbd>Ctrl</kbd> (Windows/Linux) 并点击过滤器可以同时启用多个过滤器。
 
 ![同时选择了多个内容类型过滤器]
 (imgs/multiple-content-type-filters.png)
@@ -330,7 +330,7 @@ Network 面板由五个窗格组成：
 
 
 
-下文列表说明了所有关键字。 
+下文列表说明了所有关键字。
 
 * `domain`。仅显示来自指定域的资源。您可以使用通配符字符 (`*`) 来包含多个域。
 例如，`*.com` 将显示来自以 `.com` 结尾的所有域名的资源。
@@ -385,14 +385,14 @@ HTTP 归档 (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-
 * **Replay XHR**。重新发送选定的 `XMLHTTPRequest`。仅在 XHR 资源上显示。
 
 
-![复制并保存上下文菜单](imgs/copy-save-menu.png) 
+![复制并保存上下文菜单](imgs/copy-save-menu.png)
 
 [nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
 
 ### 以 cURL 命令形式复制一个或所有请求 {: #curl }
 
 [cURL](http://curl.haxx.se/){: .external } 是一种用于进行 HTTP 事务的命令行工具。
- 
+
 
 在 Requests Table 中右键点击某个资源，将鼠标悬停在 **Copy** 上，然后选择 **Copy as cURL**，复制 Network 面板检测到的所有资源的 cURL 请求的字符串。
 
@@ -412,11 +412,11 @@ HTTP 归档 (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-
 默认情况下，**Requests Table** 会使用小行显示资源。点击 **Use large resource rows** 按钮 (![large resource rows 按钮](imgs/large-resource-rows-button.png){:.inline}) 可以增大每一行的大小。
 
 
- 
+
 
 大行可以让某些列显示两个文本字段：主要字段和次要字段。
 列标头指示次要字段的含义。
- 
+
 
 ![大资源行](imgs/large-resource-rows.png)
 

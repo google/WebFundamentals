@@ -109,8 +109,8 @@ required to use insecure endpoints as a fallback. Because of this, attackers
 could force _any_ website, not just those that are incorrectly configured, to
 negotiate for weaker versions of TLS.
 
-Affected sites will fail to connect with `ERR_SSL_FALLBACK_BEYOND_MINIMUM_VERSION`. Administrators 
-should ensure their server software is up-to-date. If still unresolved, contact the server 
+Affected sites will fail to connect with `ERR_SSL_FALLBACK_BEYOND_MINIMUM_VERSION`. Administrators
+should ensure their server software is up-to-date. If still unresolved, contact the server
 software vendor to see if a fix is available.
 
 ## Remove KeyboardEvent.prototype.keyLocation
@@ -140,8 +140,8 @@ deprecated.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5663288008376320) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=579476)
 
-In Chrome 49we added a warning if you call 
-[`setLocalDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description) 
+In Chrome 49we added a warning if you call
+[`setLocalDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description)
 or [`setRemoteDescription()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setRemoteDescription-Promise-void--RTCSessionDescriptionInit-description)
 without supplying an error handler. The error handler argument is mandatory as of Chrome 50.
 
@@ -162,7 +162,7 @@ Here's an example from the WebRTC
       }, onSetSessionDescriptionError);
       pc2.createAnswer(onCreateAnswerSuccess, onCreateSessionDescriptionError);
     }
-    
+
 
 Note that both `setLocalDescription()` and `setRemoteDescription()` have an
 error handler. Older browsers expecting only a success handler will simply
@@ -197,7 +197,7 @@ functionality has long been superceded by the
           progressBar.value = pe.loaded
         }
       }
-    
+
 
 ## Remove prefixed Encrypted Media Extensions
 
@@ -235,6 +235,10 @@ Though equivalent properties are part of `HTMLElement`, developers looking for
 an alternative can also use
 [`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
+## Feedback {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 {% include "comment-widget.html" %}

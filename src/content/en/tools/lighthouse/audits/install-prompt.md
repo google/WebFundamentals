@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "User Can Be Prompted To Install The Web App" Lighthouse audit.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-06-16 #}
 {# wf_blink_components: N/A #}
 
@@ -60,4 +60,8 @@ var feedback = {
 
 [Audit source][src]{:.external}
 
-[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/webapp-install-banner.js
+[src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/installable-manifest.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

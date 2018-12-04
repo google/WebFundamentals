@@ -88,11 +88,11 @@ Progressive Web App 具备以下特点：
 
 [链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式：
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-在随后出现的窗口中，点击 Web Server 图标： 
+在随后出现的窗口中，点击 Web Server 图标：
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -114,7 +114,7 @@ Progressive Web App 具备以下特点：
 
 ![aa64e93e8151b642.png](img/aa64e93e8151b642.png)
 
-显然，此应用还没有做任何有趣的事情 - 目前，它只是一个最小的主干，我们使用其中的微调框验证网络服务器的功能。我们会在接下来的步骤中添加功能和 UI 功能。 
+显然，此应用还没有做任何有趣的事情 - 目前，它只是一个最小的主干，我们使用其中的微调框验证网络服务器的功能。我们会在接下来的步骤中添加功能和 UI 功能。
 
 
 ## 构建 App Shell
@@ -124,7 +124,7 @@ Progressive Web App 具备以下特点：
 
 ### 什么是 App Shell？
 
-App Shell 是驱动 Progressive Web App 用户界面所需的最小的 HTML、CSS 和 JavaScript，是确保获得可靠而又出色性能的组件之一。它的第一次加载速度非常快，并且能够立即缓存。“缓存”意味着 Shell 文件一旦通过网络完成加载，就会保存到本地设备中。以后每当用户打开应用时，就会自动从本地设备的缓存中打开 Shell 文件，这样应用就能超快启动。 
+App Shell 是驱动 Progressive Web App 用户界面所需的最小的 HTML、CSS 和 JavaScript，是确保获得可靠而又出色性能的组件之一。它的第一次加载速度非常快，并且能够立即缓存。“缓存”意味着 Shell 文件一旦通过网络完成加载，就会保存到本地设备中。以后每当用户打开应用时，就会自动从本地设备的缓存中打开 Shell 文件，这样应用就能超快启动。
 
 App Shell 架构将核心应用基础架构和 UI 与数据分离。所有 UI 和基础架构都利用服务工作线程缓存在本地，这样在后续加载时，Progressive Web App 只需检索必要的数据，而不必加载所有内容。
 
@@ -136,7 +136,7 @@ App Shell 架构将核心应用基础架构和 UI 与数据分离。所有 UI �
 
 采用 App Shell 架构可令您专注于提高速度，从而赋予您的 Progressive Web App 类似于本机应用的特性：即时加载和定期更新，并且根本无需借助应用商店。
 
-### 设计 App Shell 
+### 设计 App Shell
 
 第一步是将设计细分成其核心组件。
 
@@ -432,7 +432,7 @@ self.addEventListener('install', function(e) {
 
 如果您看到类似的信息，就表示页面正在运行服务工作线程。
 
-现在，我们简要插入一点其他内容，说明您在开发服务工作线程时可能会遇到的 Gotcha。为了说明这一问题，让我们在 `service-worker.js` 文件中的 `install` 侦听器下面添加 `activate` 事件侦听器。 
+现在，我们简要插入一点其他内容，说明您在开发服务工作线程时可能会遇到的 Gotcha。为了说明这一问题，让我们在 `service-worker.js` 文件中的 `install` 侦听器下面添加 `activate` 事件侦听器。
 
 ```
 self.addEventListener('activate', function(e) {
@@ -450,7 +450,7 @@ self.addEventListener('activate', function(e) {
 
 现在启用 __update on reload __复选框，并重新加载页面，以确认新的服务工作线程被激活。
 
-__注：__ 您可能会在 Application 面板的 Service Worker 窗格中发到一个错误（类似于以下内容），__完全可以__忽略此错误。
+__Note: __ 您可能会在 Application 面板的 Service Worker 窗格中发到一个错误（类似于以下内容），__完全可以__忽略此错误。
 
 ![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
 
@@ -666,7 +666,7 @@ self.addEventListener('fetch', function(e) {
 
 以上代码会拦截请求，并检查网址是否以 weather API 的地址开头。如果是，我们将使用[抓取](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)发出请求。返回请求后，我们的代码会打开缓存，克隆响应，将其存储在缓存内，最后将响应返回给原始请求者。
 
-我们的应用尚不能完全离线工作。我们已经实现了 App Shell 的缓存和检索，但尽管我们缓存了数据，应用也没有查看缓存来看看其中是否有任何天气数据。 
+我们的应用尚不能完全离线工作。我们已经实现了 App Shell 的缓存和检索，但尽管我们缓存了数据，应用也没有查看缓存来看看其中是否有任何天气数据。
 
 ### 发出请求
 
@@ -675,7 +675,7 @@ self.addEventListener('fetch', function(e) {
 为此，我们需要做的是：
 
 1. 检查全局 `window` 对象中是否提供了 `caches` 对象。
-2. 从缓存请求数据。 
+2. 从缓存请求数据。
 
 * 如果服务器请求仍未完成，则用缓存的数据更新应用。
 
@@ -729,7 +729,7 @@ self.addEventListener('fetch', function(e) {
 
 ### 测试
 
-现在应用应能完全离线运行了。保存两个城市，按应用上的 refresh 按钮获取最新的天气数据，然后转为离线状态并重新加载页面。 
+现在应用应能完全离线运行了。保存两个城市，按应用上的 refresh 按钮获取最新的天气数据，然后转为离线状态并重新加载页面。
 
 转至 DevTools 的 __Application__ 面板的 __Cache Storage__ 窗格。展开这个部分，您会看到左侧列出的 App Shell 和数据缓存的名称。如果每个城市存储有数据，即可打开数据缓存。
 
@@ -803,7 +803,7 @@ self.addEventListener('fetch', function(e) {
 
 #### 将清单文件的相关信息告知浏览器
 
-现在将以下行添加到 `index.html` 文件中的 `<head>` 元素底部： 
+现在将以下行添加到 `index.html` 文件中的 `<head>` 元素底部：
 
 ```
 <link rel="manifest" href="/manifest.json">
@@ -891,17 +891,17 @@ self.addEventListener('fetch', function(e) {
 
 如果您从未接触过 Firebase，需要先创建您的帐户并安装一些工具。
 
-1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/) 上创建一个 Firebase 帐户 
+1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/) 上创建一个 Firebase 帐户
 2. 通过 npm 安装 Firebase：`npm install -g firebase-tools`
 
 创建帐户并登录后，便可随时进行部署！
 
-1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/)  上创建一个新应用 
-2. 如果您近期未登录 Firebase 工具，请更新您的凭据：`firebase login` 
+1. 在  [https://firebase.google.com/console/](https://firebase.google.com/console/)  上创建一个新应用
+2. 如果您近期未登录 Firebase 工具，请更新您的凭据：`firebase login`
 3. 初始化您的应用，并提供您完成的应用所在的目录（很可能是 `work`）：
-`firebase init` 
+`firebase init`
 4. 最后，将应用部署到 Firebase：
-`firebase deploy` 
+`firebase deploy`
 5. 大功告成。
 操作完成！您的应用将部署到以下网域：`https://YOUR-FIREBASE-APP.firebaseapp.com`
 

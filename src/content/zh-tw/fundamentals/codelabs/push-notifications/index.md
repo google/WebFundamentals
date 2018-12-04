@@ -474,7 +474,7 @@ event.waitUntil(notificationPromise);
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
-注：如果這個步驟不管用，請通過 DevTools Application 面板中的 *Unregister* 鏈接取消註冊服務工作線程，等待服務工作線程停止，然後重新加載頁面。
+Note: 如果這個步驟不管用，請通過 DevTools Application 面板中的 *Unregister* 鏈接取消註冊服務工作線程，等待服務工作線程停止，然後重新加載頁面。
 
 
 ## 通知點擊

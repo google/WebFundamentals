@@ -48,7 +48,7 @@
   fix: Firefox
   caseSensitive: True
 
-- typo: '[^\S](java\s*script|java\s*Script|Java\s*script)[^\S]'
+- typo: '(?<!wf_tags:\s+)(java\s*script|java\s*Script|Java\s*script)'
   fix: JavaScript
   caseSensitive: True
 
@@ -57,7 +57,7 @@
   caseSensitive: True
 
 - typo: m[\d]{2,}
-  fix: $1
+  fix: Chrome XX
   description: "Do not use 'M' or 'milestone'"
   caseSensitive: True
 
@@ -207,6 +207,9 @@
 - typo: \bwith\s+with\b
   fix: with
 
+- typo: \byou\s+you\b
+  fix: you
+
 
 ## DevSite Word List
 # See https://developers.google.com/style/word-list
@@ -265,6 +268,10 @@
 - typo: web\ssite
   fix: website
   description: "See: https://developers.google.com/style/word-list#website"
+
+- typo: \b(s?he('?s)?|him|his|her('?s)?)\b
+  fix: "they/their/theirs/they're/etc"
+  description: "Avoid gendered pronouns"
 
 ## Spelling mistakes & typos in docs
 
@@ -327,6 +334,9 @@
 
 - typo: chome\s
   fix: Chrome
+
+- typo: choses
+  fix: chooses
 
 - typo: defau[lt](s|)\b
   fix: default$1
@@ -546,7 +556,7 @@
 
 # Call-outs
 
-- typo: '(注意|노트)[：:]'
+- typo: '(注|注意|노트)[：:]'
   fix: 'Note:'
   description: Call-outs like 'Note:' should not be translated.
 
@@ -554,7 +564,7 @@
   fix: 'Caution:'
   description: Call-outs like 'Caution:' should not be translated.
 
-- typo: '(警告|경고)[：:]'
+- typo: '(경고)[：:]'
   fix: 'Warning:'
   description: Call-outs like 'Warning:' should not be translated.
 

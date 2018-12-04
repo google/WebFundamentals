@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-11-08 #}
 {# wf_blink_components: Blink>SecurityFeature>CredentialManagement #}
 
@@ -180,3 +180,7 @@ or proceed to the personalized page.
         showError('Sign-in Failed');
       });
     });
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,8 +1,9 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # FAQ {: .page-title }
 
@@ -148,3 +149,7 @@ This uses web push behind the scenes, but its goal is to abstract it away.
 Like I said in the previous question, if you consider web push as just a browser and push
 service, then you can consider the Messaging SDK in Firebase as a library to simplify
 implementing web push.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

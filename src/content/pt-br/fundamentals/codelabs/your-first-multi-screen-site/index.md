@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A Web pode ser acessada por diversos tipos de dispositivos, desde celulares com pequenas telas até televisores com grandes telas. Cada dispositivo inclui seus próprios benefícios e limitações. Como um desenvolvedor Web, você deve oferecer suporte a todos os tipos de dispositivos.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Seu Primeiro Site para Vários Dispositivos {: .page-title }
@@ -14,7 +14,7 @@ Warning: Este artigo não é atualizado há algum tempo e pode não refletir a r
 <img src="images/finaloutput-2x.jpg" alt="muitos dispositivos mostrando o projeto final" class="attempt-right">
 
 Criar experiências para vários dispositivos não é tão difícil quando parece.
-Neste guia, criaremos uma página de destino de produto para o 
+Neste guia, criaremos uma página de destino de produto para o
 [CS256: Curso de desenvolvimento para Web móvel](https://www.udacity.com/course/mobile-web-development--cs256)
  que funciona bem em diferentes tipos de dispositivos.
 
@@ -107,7 +107,7 @@ No título, adicione um texto simples para descrever o curso:
 [Experimente](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/addheadline.html){: target="_blank" .external }
 
 Também precisamos preencher o formulário.
-Ele será um formulário simples que coleta o nome dos usuários, seus endereços de e-mail
+Ele será um formulário simples que coleta o nome dos usuários, seus endereços de email
 e números de telefone.
 
 Todos os formulários devem ter rótulos e marcadores para permitir que os usuários
@@ -347,7 +347,7 @@ cabeçalho e a aplicaremos com um CSS simples.
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 Nós escolhemos uma imagem de fundo simples que é desfocada e não desvia a atenção
 do conteúdo. Nós a definimos como `cover` para todo o elemento, para que ela seja sempre
@@ -373,9 +373,9 @@ pois ele nos dará o escopo para reposicionar elementos para que eles caibam na 
 Podemos fazer isso usando uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 Uma tela maior tem mais espaço, portanto, há mais flexibilidade para a exibição
 do conteúdo.
 
@@ -530,7 +530,7 @@ você pode exibir uma imagem de alta densidade em uma tela de alta densidade.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 #### Tabelas
 

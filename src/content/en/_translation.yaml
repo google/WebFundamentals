@@ -1,13 +1,14 @@
 ignore_paths:
-- /_translation.yaml
-- /_common-links.md
-- /manifest.json
-- /_shared/sample.html
-- /resources/...
-- /showcase/...
-- /shows/...
-- /updates/...
-- /fundamentals/atom.xml
-- /fundamentals/rss.xml
-- /tools/atom.xml
-- /tools/rss.xml
+- /web/_translation.yaml
+- /web/_common-links.md
+- /web/manifest.json
+- /web/_shared/sample.html
+- /web/resources/...
+- /web/showcase/...
+- /web/shows/...
+- /web/updates/...
+- /web/fundamentals/atom.xml
+- /web/fundamentals/rss.xml
+- /web/tools/atom.xml
+- /web/tools/rss.xml
+title: DevSite translation request for /web/

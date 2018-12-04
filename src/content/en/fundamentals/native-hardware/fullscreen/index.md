@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Going fullscreen.
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-01 #}
+{# wf_blink_components: Blink>Fullscreen #}
 
 # Making Fullscreen Experiences {: .page-title }
 
@@ -502,3 +503,7 @@ be considerate to the user.
 While we don't have a fully standardized and implemented API, using some of the
 guidance presented in this article you can easily build experiences that take
 advantage of the user's entire screen, irrespective of the client.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

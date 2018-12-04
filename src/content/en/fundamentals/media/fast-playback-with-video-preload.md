@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Preload video and audio for faster playback.
 
 {# wf_published_on: 2017-08-17 #}
-{# wf_updated_on: 2018-03-20 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: Blink>Media #}
 
 # Fast Playback with Video Preload {: .page-title }
@@ -591,3 +591,7 @@ requests.
 [Delivering Fast and Light Applications with Save-Data]: /web/updates/2016/02/save-data
 [Network Information sample]: https://googlechrome.github.io/samples/network-information/
 [in Chrome]: https://github.com/whatwg/fetch/issues/569
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

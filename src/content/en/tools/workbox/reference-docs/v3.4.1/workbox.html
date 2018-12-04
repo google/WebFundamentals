@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html devsite>
+
+<head>
+  <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
+  <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
+  <meta name="gtm_var" data-key="docType" data-value="reference">
+  <title>Namespace: workbox</title>
+  <link href="jsdoc.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="jsdoc-body-container">
+    <div id="jsdoc-content">
+      <div id="jsdoc-content-container">
+        <div id="jsdoc-main" role="main">
+          <header class="page-header">
+            <h1><small></small><span class="symbol-name">workbox</span></h1>
+            <div class="symbol-detail-labels"><span class="label label-kind"><small>namespace</small></span></div>
+            <div class="symbol-detail-labels">
+              <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
+              <span class="label label-version"><small>v3.4.1</small></span>
+            </div>
+            <p>This module is a single import that can be used to dynamically import additional Workbox modules with no effort.</p>
+          </header>
+          <section>
+            <h2>Namespaces</h2>
+            <section id='members-links'>
+              <h3><a href="workbox.backgroundSync.html">backgroundSync</a></h3>
+              <h3><a href="workbox.broadcastUpdate.html">broadcastUpdate</a></h3>
+              <h3><a href="workbox.cacheableResponse.html">cacheableResponse</a></h3>
+              <h3><a href="workbox.core.html">core</a></h3>
+              <h3><a href="workbox.expiration.html">expiration</a></h3>
+              <h3><a href="workbox.googleAnalytics.html">googleAnalytics</a></h3>
+              <h3><a href="workbox.navigationPreload.html">navigationPreload</a></h3>
+              <h3><a href="workbox.precaching.html">precaching</a></h3>
+              <h3><a href="workbox.rangeRequests.html">rangeRequests</a></h3>
+              <h3><a href="workbox.routing.html">routing</a></h3>
+              <h3><a href="workbox.strategies.html">strategies</a></h3>
+              <h3><a href="workbox.streams.html">streams</a></h3>
+            </section>
+            <h2>Methods</h2>
+            <section>
+              <h3 id=".clientsClaim" class="symbol-name">clientsClaim</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> clientsClaim()</p>
+              <p>Claim any currently available clients once the service worker becomes active. This is normally used in conjunction with <code>skipWaiting()</code>.</p>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".loadModule" class="symbol-name">loadModule</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> loadModule(moduleName)</p>
+              <p>Load a Workbox module by passing in the appropriate module name.</p>
+              <p>This is not generally needed unless you know there are modules that are dynamically used and you want to safe guard use of the module while the user may be offline.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>moduleName</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".setConfig" class="symbol-name">setConfig</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> setConfig(options)</p>
+              <p>Updates the configuration options. You can specify whether to treat as a debug build and whether to use a CDN or a specific path when importing other workbox-modules</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>options</p>
+                      </td>
+                      <td>
+                        <p class="details-table-optional">Optional</p>
+                        <p class="details-table-types">Object</p>
+                        <p>Values in <code>options</code> have the following properties:</p>
+                        <table class="function param responsive">
+                          <tr>
+                            <th colspan="2">
+                              <h4>Parameter</h4>
+                            </th>
+                          </tr>
+                          <tbody>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>debug</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">boolean</p>
+                                <p>If true, <code>dev</code> builds are using, otherwise
+                                  <code>prod</code> builds are used. By default, <code>prod</code> is used unless on localhost.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>modulePathPrefix</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types">function()</p>
+                                <p>To avoid using the CDN with
+                                  <code>workbox-sw</code> set the path prefix of where modules should be loaded from. For example <code>modulePathPrefix: '/third_party/workbox/v3.0.0/'</code>.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="details-table-name">
+                                <p>modulePathCb</p>
+                              </td>
+                              <td>
+                                <p class="details-table-optional">Optional</p>
+                                <p class="details-table-types"><a href="workbox.html#~ModulePathCallback">workbox~ModulePathCallback</a></p>
+                                <p>If defined, this callback will be responsible for determining the path of each workbox module.</p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+              </dl>
+              <h3 id=".skipWaiting" class="symbol-name">skipWaiting</h3>
+              <div class="symbol-detail-labels"><span class="label label-static"><small>static</small></span></div>
+              <p class="type-signature"> skipWaiting()</p>
+              <p>Force a service worker to become active, instead of waiting. This is normally used in conjunction with <code>clientsClaim()</code>.</p>
+              <dl class="dl-compact">
+              </dl>
+            </section>
+            <h2>Abstract type</h2>
+            <section>
+              <h3 id="~ModulePathCallback" class="symbol-name">ModulePathCallback</h3>
+              <div class="symbol-detail-labels"><span class="label label-inner"><small>inner</small></span></div>
+              <p class="type-signature"> ModulePathCallback(moduleName, debug)&nbsp;returns&nbsp;string</p>
+              <p>A <code>ModulePathCallback</code> function can be used to modify the modify the where Workbox modules are loaded.</p>
+              <section>
+                <table class="function param responsive">
+                  <tr>
+                    <th colspan="2">
+                      <h4>Parameter</h4>
+                    </th>
+                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>moduleName</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">string</p>
+                        <p>The name of the module to load (i.e. 'workbox-core', 'workbox-precaching' etc.).</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="details-table-name">
+                        <p>debug</p>
+                      </td>
+                      <td>
+                        <p class="details-table-types">boolean</p>
+                        <p>When true, <code>dev</code> builds should be loaded, otherwise load <code>prod</code> builds.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <dl class="dl-compact">
+                <dt>Returns</dt>
+                <dd>
+                  <p><code>string</code>&nbsp;This callback should return a path of module. This will be passed to <code>importScripts()</code>.</p>
+                </dd>
+              </dl>
+            </section>
+          </section>
+        </div>
+      </div>
+      <nav id="jsdoc-toc-nav" role="navigation"></nav>
+    </div>
+  </div>
+</body>
+
+</html>

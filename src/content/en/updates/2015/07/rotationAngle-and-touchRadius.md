@@ -42,7 +42,7 @@ the police a fingerprint.  Without the `rotationAngle` you would simple get
 how wide and how tall the touch gesture was.  With the `rotationAngle`, you 
 get 90 degrees of rotation (0 being vertical and 90 being horizontal). Why only 
 90 degrees? You only need the 90 degrees because as you move past those angles 
-the `radiusX` and `radiusY` will change to accomodate. 
+the `radiusX` and `radiusY` will change to accommodate. 
 
 Another cool thing about this is that the contact area of the user's finger changes 
 as they vary the degree of pressure of their finger on the screen.  It is not a 

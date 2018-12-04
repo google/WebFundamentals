@@ -1,13 +1,19 @@
 toc:
-- title: Overview
+- title: Home
   path: /web/tools/chrome-devtools/
-- title: View and Change CSS
+- title: DevTools for Beginners
+  section:
+  - title: HTML and the DOM
+    path: /web/tools/chrome-devtools/beginners/html
+  - title: CSS
+    path: /web/tools/chrome-devtools/beginners/css
+- title: CSS
   section:
   - title: Get Started with Viewing and Changing CSS
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
-- title: View and Change JavaScript
+- title: JavaScript
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/javascript/
@@ -34,9 +40,9 @@ toc:
     path: /web/tools/chrome-devtools/sources
   - title: Keyboard Shortcuts Reference
     path: /web/tools/chrome-devtools/shortcuts
-- title: Optimize Website Speed
-  path: /web/tools/chrome-devtools/speed/get-started
-- title: Simulate Mobile Devices with Device Mode
+- title: Accessibility
+  path: /web/tools/chrome-devtools/accessibility/reference
+- title: Simulate Mobile Devices
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
@@ -46,7 +52,7 @@ toc:
     path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
-- title: Remote-Debug Android Devices
+- title: Remote Debug Android Devices
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/remote-debugging/
@@ -54,7 +60,7 @@ toc:
     path: /web/tools/chrome-devtools/remote-debugging/local-server
   - title: Remote Debugging WebViews
     path: /web/tools/chrome-devtools/remote-debugging/webviews
-- title: Log Messages and Run JavaScript in the Console
+- title: Console
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/console/
@@ -76,10 +82,12 @@ toc:
     path: /web/tools/chrome-devtools/console/events
   - title: Command Line Reference
     path: /web/tools/chrome-devtools/console/command-line-reference
-- title: Analyze Runtime Performance
+- title: Performance
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/evaluate-performance/
+  - title: Optimize Website Speed
+    path: /web/tools/chrome-devtools/speed/get-started
   - title: Overview
     path: /web/tools/chrome-devtools/rendering-tools/
   - title: Performance Analysis Reference
@@ -94,7 +102,7 @@ toc:
   - title: Diagnose Forced Synchronous Layouts
     path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
     status: deprecated
-- title: Analyze Network Performance
+- title: Network
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/network-performance/
@@ -105,7 +113,7 @@ toc:
   - title: Resource Loading
     path: /web/tools/chrome-devtools/network-performance/resource-loading
     status: deprecated
-- title: Analyze Memory Problems
+- title: Memory
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/memory-problems/
@@ -115,15 +123,15 @@ toc:
     path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
   - title: Use the Allocation Profiler
     path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
-- title: Save Changes To Disk With Workspaces
+- title: Workspaces
   path: /web/tools/chrome-devtools/workspaces/
-- title: Debug Progressive Web Apps
+- title: Progressive Web Apps
   path: /web/tools/chrome-devtools/progressive-web-apps
-- title: Analyze Security Problems
+- title: Security
   path: /web/tools/chrome-devtools/security
-- title: Run Snippets of JavaScript From Any Page
+- title: Snippets
   path: /web/tools/chrome-devtools/snippets
-- title: View and Change HTML
+- title: HTML
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/inspect-styles/
@@ -134,7 +142,7 @@ toc:
   - title: Edit Styles
     path: /web/tools/chrome-devtools/inspect-styles/edit-styles
     status: deprecated
-- title: View and Change Storage and Resources
+- title: Storage and Resources
   section:
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage

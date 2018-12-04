@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Another text entry frustration for users is being removed.
 
-{# wf_updated_on: 2015-04-15 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_tags: news,autocapitalize,mobile #}
+{# wf_blink_components: N/A #}
 
 # Autocapitalize for mobile {: .page-title }
 
@@ -13,7 +14,7 @@ description: Another text entry frustration for users is being removed.
 This may look like the most unimpressive feature in existence, but I think it is important because everyone dislikes typing on mobile: You hate it, I loathe it. In Chrome for Android (prior to Chrome 43 -  Beta as of April 2015) a developer has little control over how the browser can  help the user enter text. If you are typing on a device today, it might look  like:
 
 
-Notice everything is in lowercase apart from some values that Android recognised was a name.
+Notice everything is in lowercase apart from some values that Android recognized was a name.
 
 Apple introduced an attribute on `HTMLInputElement` and
 `HTMLTextAreaElement` called [autocapitalize](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize) [in iOS 5](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize)
@@ -24,7 +25,7 @@ capitalize the first letter of every new sentence.
 
 From Chrome 43, Chrome will support the _autocapitalize_ attribute on both
 `HTMLInputElement` and `HTMLTextAreaElement`, which will allow you to control
-the autocapitalization behaviour of the virtual keyboard and bring it inline
+the autocapitalization behavior of the virtual keyboard and bring it inline
 with Safari on iOS.
 
 _autocapitalize_ will only apply to `HTMLInputElement`s that have
@@ -87,7 +88,7 @@ For `HTMLInputElement`, the invalid value default is _Sentences Capitalization_ 
 *  `<input>` would be a text field with _No Capitalization_.
 
 For `HTMLTextAreaElement`, the invalid value default is _Sentences
-Capitalization_. This is a change from the default behaviour.
+Capitalization_. This is a change from the default behavior.
 
 *  `<textarea autocapitalize="terry"></textarea>` would be a text area with _Sentences Capitalization_  
 *  `<textarea></textarea>` would be a text area with _Sentence Capitalization_.
@@ -130,7 +131,7 @@ there are a number of places where helping the user enter text provides great va
 
 ## Other interesting links
 
-* [Original implmentation proposal by Mounir Lamouri](https://github.com/mounirlamouri/html-autocapitalize/blob/master/proposal.md)
+* [Original implementation proposal by Mounir Lamouri](https://github.com/mounirlamouri/html-autocapitalize/blob/master/proposal.md)
 
 
 {% include "comment-widget.html" %}

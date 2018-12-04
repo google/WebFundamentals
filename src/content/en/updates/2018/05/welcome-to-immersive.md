@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The immersive web means virtual world experiences hosted through the browser. This entire virtual reality experiences surfaced in the browser or in VR enabled headsets.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-05-08 #}
 {# wf_tags: immersive-web,webvr,webxr #}
 {# wf_featured_image: /web/updates/images/generic/vr-in-chrome.png #}
@@ -61,7 +61,7 @@ polyfill for Safari.
 
 But it's time to move on.
 
-The origin trial is ending on July 24, 2018, and the spec has been superseded
+The origin trial ended on July 24, 2018, and the spec has been superseded
 by the [WebXR Device API](https://www.chromestatus.com/features/5680169905815552)
 and a new origin trial.
 
@@ -100,8 +100,10 @@ spectrum of immersive experiences. It's available in the previously mentioned
 [origin trial](https://github.com/GoogleChrome/OriginTrials) as well as through
 a [polyfill](https://github.com/immersive-web/webxr-polyfill).
 
-**Note:** As of Chrome 67 only VR capabilities are enabled. AR capabilities are
-expected in Chrome 69 so I hope to tell you about them soon.
+When this article was originally published during the Chrome 67 beta period,
+only VR capabilities were enabled. Augmented reality arrived in Chrome 69. Read
+about it in [Augmented reality for the
+web](/web/updates/2018/06/ar-for-the-web).
 
 There's more to this new API than I can go to in an article like this. I want
 to give you enough to start making sense of the [WebXR
@@ -111,7 +113,13 @@ explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md) and
 our [Immersive Web Early Adopters
 Guide](https://immersive-web.github.io/webxr-reference/). I'll be expanding the
 latter as the origin trial progresses. Feel free to open issues or submit pull
-requests. For this article, I'm going to discuss starting, stopping and running
+requests.
+
+Note: The Early Adopters Guide is updated when spec changes land in Chrome. To
+be notified of those updates watch [its repo on
+GitHub](https://github.com/immersive-web/webxr-reference).
+
+For this article, I'm going to discuss starting, stopping and running
 an XR session, plus a few basics about processing input.
 
 What I'm not going to cover is how to draw AR/VR content to the screen. The
@@ -129,7 +137,7 @@ The basic process is this:
 
 1. Request an XR device.
 1. If it's available, request an XR session. If you want the user to put their
-phone in a headset, it's called an exclusive session and requires a user
+phone in a headset, it's called an immersive session and requires a user
 gesture to enter.
 1. Use the session to run a render loop which provides 60 image frames per
 second. Draw appropriate content to the screen in each frame.
@@ -145,9 +153,9 @@ give a sense of it.
 Here, you'll recognize the standard feature detection code. You could wrap this
 in a function called something like `checkForXR()`.
 
-If you're not using an exclusive session you can skip advertising the
+If you're not using an immersive session you can skip advertising the
 functionality and getting a user gesture and go straight to requesting a
-session. An exclusive session is one that requires a headset. A non-exclusive
+session. An immersive session is one that requires a headset. A non-immersive
 session simply shows content on the device screen. The former is what most
 people think of when you refer to virtual reality or augmented reality. The
 latter is sometimes called a 'magic window'.
@@ -185,9 +193,9 @@ To create a session, the browser needs a canvas on which to draw.
 
     xrPresentationContext = htmlCanvasElement.getContext('xrpresent');
     let sessionOptions = {
-      // The exclusive option is optional for non-exclusive sessions; the value
+      // The immersive option is optional for non-immersive sessions; the value
       //   defaults to false.
-      exclusive: false,
+      immersive: false,
       outputContext: xrPresentationContext
     }
     xrDevice.requestSession(sessionOptions)
@@ -270,7 +278,7 @@ want to draw to the screen.
 After checking the pose, it's time to draw something. The object you draw to is
 called a view (`XRView`). This is where the session type becomes important. Views
 are retrieved from the `XRFrame` object as an array. If you're in a
-non-exclusive session the array has one view. If you're in an exclusive
+non-immersive session the array has one view. If you're in an immersive
 session, the array has two, one for each eye.
 
     for (let view of xrFrame.views) {
@@ -316,7 +324,7 @@ resumed.
       xrSession.addEventListener('end', onSessionEnd);
     });
 
-    // Restore the page to normal after exclusive access has been released.
+    // Restore the page to normal after immersive access has been released.
     function onSessionEnd() {
       xrSession = null;
 

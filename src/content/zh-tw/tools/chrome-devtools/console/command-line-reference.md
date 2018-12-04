@@ -12,7 +12,7 @@ description:TODO
 
 Command Line API 包含一個用於執行以下常見任務的便捷函數集合：選擇和檢查 DOM 元素，以可讀格式顯示數據，停止和啓動分析器，以及監控 DOM 事件。
 
-注：此 API 僅能通過控制檯本身獲取。您無法通過網頁上的腳本訪問 Command Line API。
+Note: 此 API 僅能通過控制檯本身獲取。您無法通過網頁上的腳本訪問 Command Line API。
 
 
 ## $_
@@ -74,7 +74,7 @@ Command Line API 包含一個用於執行以下常見任務的便捷函數集合
 
 ![$('img').src 的示例](images/selector-img-src.png)
 
-注：如果您在使用庫，例如，使用  <code>$</code> 的 jQuery，則此功能將被覆蓋， <code>$</code> 將與該庫的實現對應。
+Note: 如果您在使用庫，例如，使用  <code>$</code> 的 jQuery，則此功能將被覆蓋， <code>$</code> 將與該庫的實現對應。
 
 ## $$(selector)
 
@@ -94,7 +94,7 @@ Command Line API 包含一個用於執行以下常見任務的便捷函數集合
 
 ![使用 $$() 選擇文檔中的所有圖像並顯示其來源的示例。](images/all-selector.png)
 
-注：在控制檯中按 <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> 以開始一個新行，無需執行腳本。
+Note: 在控制檯中按 <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> 以開始一個新行，無需執行腳本。
 
 ## $x(path)
 
@@ -327,7 +327,7 @@ Command Line API 包含一個用於執行以下常見任務的便捷函數集合
 ![分組的個人資料](images/grouped-profiles.png)
 
 
-注：一次可運行多個 CPU 配置文件，不需要您按創建順序結束它們。
+Note: 一次可運行多個 CPU 配置文件，不需要您按創建順序結束它們。
 
 ## table(data[, columns])
 

@@ -33,7 +33,7 @@ description:由於大多數桌面設備都沒有觸摸屏、GPS 芯片和加速�
   </div>
 </div>
 
-注：如果您的應用檢測到使用 JavaScript（如 Modernizr）的傳感器加載，請確保在啓用傳感器模擬器之後重新加載頁面。
+Note: 如果您的應用檢測到使用 JavaScript（如 Modernizr）的傳感器加載，請確保在啓用傳感器模擬器之後重新加載頁面。
 
 ## 替換地理定位數據
 

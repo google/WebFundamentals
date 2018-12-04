@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Introduction to semantics and assistive technology
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Introduction to Semantics {: .page-title }
@@ -170,3 +171,7 @@ this.
 
 ![a screen reader uses the DOM to create accessible
 nodes](imgs/nativecodetoacc.png)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

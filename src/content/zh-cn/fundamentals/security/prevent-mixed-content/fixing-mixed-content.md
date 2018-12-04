@@ -9,7 +9,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 {% include "web/_shared/contributors/johyphenel.html" %}
 
-成功：让您的网站支持 HTTPS 是保护您的网站和用户免受攻击的重要一步，但混合内容会使这种保护失效。为保护您的网站和用户，查找和修正混合内容非常重要。
+Success: 让您的网站支持 HTTPS 是保护您的网站和用户免受攻击的重要一步，但混合内容会使这种保护失效。为保护您的网站和用户，查找和修正混合内容非常重要。
 
 查找和修正混合内容是一项重要任务，但可能非常耗时。本指南将介绍可为此过程提供帮助的一些工具和技术。如需了解混合内容本身的更多信息，请参阅[什么是混合内容](./what-is-mixed-content)。
 
@@ -19,7 +19,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 * 使用 `Content-Security-Policy-Report-Only` 标头监控网站上的混合内容错误。
 * 使用 `upgrade-insecure-requests` CSP 指令防止访问者访问不安全的内容。
 
-## 查找和修正混合内容 
+## 查找和修正混合内容
 
 手动查找混合内容可能很耗时，具体取决于存在的问题数量。本文档中介绍的流程使用 Chrome 浏览器；但是大多数现代浏览器都提供相似的工具来帮助您处理此过程。
 
@@ -48,9 +48,9 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 [试一下](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html){: target="_blank" .external }
 
 
-您需要在网站的源代码中修正这些错误和警告中列出的 http:// 网址。列出这些网址及其所在页面有助于您稍后修正它们。 
+您需要在网站的源代码中修正这些错误和警告中列出的 http:// 网址。列出这些网址及其所在页面有助于您稍后修正它们。
 
-注：系统仅针对您当前正在查看的页面显示混合内容错误和警告，在每次您导航到一个新页面时将清理 JavaScript 控制台。这意味着您必须单独查看网站的每一个页面来查找这些错误。有些错误可能仅在您与页面的一部分进行交互后才出现，请参考我们之前的指南中提供的图像库混合内容示例。
+Note: 系统仅针对您当前正在查看的页面显示混合内容错误和警告，在每次您导航到一个新页面时将清理 JavaScript 控制台。这意味着您必须单独查看网站的每一个页面来查找这些错误。有些错误可能仅在您与页面的一部分进行交互后才出现，请参考我们之前的指南中提供的图像库混合内容示例。
 
 ### 在源代码中查找混合内容
 
@@ -58,11 +58,11 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 具体而言，您要查找之前指南中的[混合内容类型与相关安全威胁](what-is-mixed-content#mixed-content-types--security-threats-associated){: .external}部分列出的标记。
 请注意，在定位标记 (`<a>`) 的 href 属性中有 `http://` 通常不属于混合内容问题，后面会介绍一些值得注意的例外情况。
- 
+
 
 如果您有一个来自 Chrome 混合内容错误和警告的 HTTP 网址列表，您也可以在源代码中搜索这些完整的网址，以找出它们在网站中的位置。
 
- 
+
 
 ### 修正混合内容
 
@@ -76,8 +76,8 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 </figure>
 
 下面是您在源代码中找到的内容：
- 
-    <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
+
+    <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg">
 
 #### 第 1 步
 
@@ -148,7 +148,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 这意味着它们通常不需要修正。然而，有些图像库脚本替换了 `<a>` 标记的功能，并将 `href` 属性指定的 HTTP 资源加载到页面上的灯箱展示，从而引发混合内容问题。
 
 
- 
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" region_tag="snippet1" adjust_indentation="auto" %}
@@ -158,7 +158,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 在上面的代码中，将 `<a>` 标记 href 保留为 `http://` 可能看上去是安全的；但是，如果您查看示例并点击图像，您会发现其加载一个混合内容资源并在页面上显示它。
 
- 
+
 
 ## 处理大批量的混合内容
 
@@ -181,19 +181,19 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 * [CSP playground](http://www.cspplayground.com/){: .external }
 * [CSP 规范](//www.w3.org/TR/CSP/){: .external }
 
-注：浏览器强制执行它们收到的<b>所有</b>内容安全政策。浏览器在响应标头或 <code>&lt;meta&gt;</code> 元素中收到的多个 CSP 标头值被合并，强制作为一个政策；报告政策也以同样的方式进行合并。通过采用政策的交集合并政策；也就是说，第一个政策之后的每个政策都只能进一步限制允许的内容，而不是扩宽它。
+Note: 浏览器强制执行它们收到的<b>所有</b>内容安全政策。浏览器在响应标头或 <code>&lt;meta&gt;</code> 元素中收到的多个 CSP 标头值被合并，强制作为一个政策；报告政策也以同样的方式进行合并。通过采用政策的交集合并政策；也就是说，第一个政策之后的每个政策都只能进一步限制允许的内容，而不是扩宽它。
 
 
 
-### 使用内容安全政策查找混合内容 
+### 使用内容安全政策查找混合内容
 
 您可以使用内容安全政策收集网站上的混合内容报告。
 如需启用此功能，请设置 `Content-Security-Policy-Report-Only` 指令，方法是将其添加为网站的响应标头。
- 
 
-响应标头：  
 
-    Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://example.com/reportingEndpoint 
+响应标头：
+
+    Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://example.com/reportingEndpoint
 
 
 无论用户在何时访问网站上的页面，他们的浏览器都会向 `https://example.com/reportingEndpoint` 发送有关任何违背内容安全政策的内容的 JSON 格式报告。
@@ -201,7 +201,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 在此情况下，任何时候通过 HTTP 加载子资源，浏览器都会发送报告。
 这些报告包括发生政策违规行为的页面网址和违背该政策的子资源网址。如果您配置报告端点以记录这些报告，您可以跟踪您网站上的混合内容，无需亲自访问每个页面。
 
- 
+
 
 对此，需要注意两个方面：
 
@@ -211,7 +211,7 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 
 
-如需了解 CSP 标头格式的详细信息，请参阅[内容安全政策规范](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports){: .external}。 
+如需了解 CSP 标头格式的详细信息，请参阅[内容安全政策规范](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports){: .external}。
 
 如果您不想亲自配置报告端点，[https://report-uri.io/](https://report-uri.io/){: .external} 是一个合理的替代做法。
 
@@ -224,8 +224,8 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 例如，如果某个页面包含一个带有 HTTP 网址的图像标记：
 
- 
-    <img src="http://example.com/image.jpg"> 
+
+    <img src="http://example.com/image.jpg">
 
 
 此浏览器改而对 <code><b>https:</b>//example.com/image.jpg</code> 进行安全请求，从而使用户不会看到混合内容。
@@ -236,19 +236,19 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 
 
 
-    Content-Security-Policy: upgrade-insecure-requests  
+    Content-Security-Policy: upgrade-insecure-requests
 
 
 或使用一个 `<meta>` 元素在文档的 `<head>` 部分中嵌入相同的指令内联：
 
 
-  
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
 值得注意的是，如果资源不能通过 HTTPS 获得，则升级的请求失败，并且无法加载该资源。
 这可保证您的页面的安全性。
- 
+
 
 `upgrade-insecure-requests` 指令级联到 `<iframe>` 文档中，从而确保整个页面受到保护。
 
@@ -261,21 +261,21 @@ description:查找和修正混合内容是一项重要任务，但可能非常�
 页面可以选择执行此行为，方法是发送一个带有该指令的 `Content-Security-Policy` 标头：
 
 
-  
-    Content-Security-Policy: block-all-mixed-content  
+
+    Content-Security-Policy: block-all-mixed-content
 
 
 或使用一个 `<meta>` 元素在文档的 `<head>` 部分中嵌入相同的指令内联：
 
 
-  
+
     <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
 
 
 使用 `block-all-mixed-content` 的弊端可能很明显，即所有混合内容均被阻止。
 这可提升安全性，但它意味着页面上不再提供这些资源。
 这可能会中断用户期望获得的功能和内容。
- 
+
 
 ### CSP 替代方案
 

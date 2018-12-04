@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Follow along with this interactive guide to learn how to use  DevTools to diagnose forced synchronous layouts.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Diagnose Forced Synchronous Layouts {: .page-title }
 
@@ -140,3 +141,7 @@ animation truly is faster and more performant than before.
 ![timeline recording after optimization](imgs/after.png)
 
 Much better.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

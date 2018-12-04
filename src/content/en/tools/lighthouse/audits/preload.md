@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Preload key requests" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-29 #}
+{# wf_updated_on: 2018-11-13 #}
 {# wf_published_on: 2018-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -62,18 +62,8 @@ as soon as possible.
   </figcaption>
 </figure>
 
-The table below lists browser support for preload links.
-
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-  <p class="ciu_embed" data-feature="link-rel-preload"
-     data-periods="future_2,future_1,current,past_1,past_2"
-     data-accessible-colours="false">
-    See <a href="http://caniuse.com/#feat=link-rel-preload">Can I Use link-rel-preload?</a>
-    to see browser support for preload links.
-  </p>
-  <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"
-          onload="devsite.framebox.AutoSizeClient.updateSize()"></script>
-{% endframebox %}
+See <a href="http://caniuse.com/#feat=link-rel-preload">Can I Use link-rel-preload?</a>
+to see browser support for preload links.
 
 ## More information {: #more-info }
 
@@ -93,3 +83,7 @@ Sources:
 [Addy]: https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
 [Yoav]: https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/uses-rel-preload.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

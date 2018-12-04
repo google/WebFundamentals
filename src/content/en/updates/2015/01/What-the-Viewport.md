@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The virtual viewport separates layout and viewing of the viewport.
 
-{# wf_updated_on: 2017-09-27 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,virtualviewport #}
+{# wf_blink_components: N/A #}
 
 # What the Virtual Viewport? {: .page-title }
 
@@ -53,7 +54,7 @@ Compare this to Chrome M40 (which has a "virtual viewport") and you'll see that
 the "visual viewport" scrolls everything inside the "layout viewport", allowing
 you to view the links on the right.
 
-Internet Explorer already has this behaviour and these changes bring us more
+Internet Explorer already has this behavior and these changes bring us more
 closely inline with them.
 
 ### html { overflow: hidden; }

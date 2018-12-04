@@ -174,11 +174,27 @@ function initFeed() {
   });
 }
 
+function initExpandable() {
+  document.querySelectorAll('.expandable').forEach((elem) => {
+    jQuery.expandable.fromDomElement(elem);
+  });
+}
+
+function initDevSite() {
+  initExpandable();
+  devsite.base.init();
+  devsite.darkCodeToggle.init();
+  devsite.header.init();
+  devsite.kennedy.InitializeTabbars();
+  devsite.kennedy.InitializeSelects();
+  devsite.openInJsfiddle.init()
+  devsite.multipleChoice.init();
+  devsite.navigatingRadio.init();
+}
+
 function init() {
   initNavToggles();
   initLangSelector();
-  initLangSelector();
-  initYouTubeVideos();
   highlightActiveNavElement();
   initFeed();
   highlightLowerTab();
@@ -186,6 +202,7 @@ function init() {
   window.addEventListener('scroll', function(e) {
     collapseBanner(window.scrollY);
   });
+  initDevSite();
 }
 
 init();

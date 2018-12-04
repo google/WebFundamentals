@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Document doesn't have a valid hreflang" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-23 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-23 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -73,3 +73,7 @@ Lighthouse does not check your Sitemap.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/hreflang.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

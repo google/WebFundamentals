@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -34,12 +34,12 @@ hacked pages to different 3rd parties. Often the hacked pages will also
 redirect visitors to an unrelated page, like a porn site where hackers can
 earn money.
 
-<img src="/webmasters/images/CloakedKeywordHackExampleSearch.png" class="attempt-right">
+<img src="images/CloakedKeywordHackExampleSearch.png" class="attempt-right">
 
 <<_fixing-identify.md>>
 
 
-<img src="/webmasters/images/CloakedKeywordHackExamplePage.png">
+<img src="images/CloakedKeywordHackExamplePage.png">
 
 
 ## Fixing the hack
@@ -147,3 +147,7 @@ and delete the suspicious files.
 <<_fixing-prevent.md>>
 
 <<_fixing-additional-resources.md>>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

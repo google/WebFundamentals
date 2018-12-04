@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Scroll anchoring stops a web page from moving once you've started reading the content.
 
-{# wf_updated_on: 2016-04-07 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2016-04-07 #}
 {# wf_tags: interventions,scroll-anchoring #}
 {# wf_featured_image: /web/updates/images/2016/04/scroll-anchoring/scroll-anchoring-keyart.png #}
+{# wf_blink_components: N/A #}
 
 # Experiment Time: Scroll Anchoring {: .page-title }
 
@@ -41,7 +42,7 @@ With this you’ll have scroll anchoring enabled.
 
 We've been using this for a while and we believe that this drastically improves the experience for all users on the web but we want to make sure that it works well everywhere. If you spot any examples where scroll anchoring failed to handle reflows in the page or examples where it shouldn’t have intervened, *we desperately want to hear about it!*
 
-Send us feedback / examples where you’ve seen unexpected behaviour by filling out this form: [g.co/reportbadreflow](http://g.co/reportbadreflow)
+Send us feedback / examples where you’ve seen unexpected behavior by filling out this form: [g.co/reportbadreflow](http://g.co/reportbadreflow)
 
 ## FAQ
 

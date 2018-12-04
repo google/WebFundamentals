@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Discover how to use the Ray Input library to add input to your WebVR scene.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -189,3 +189,7 @@ There are some things to keep in mind as you add input to your experiences.
 Adding input to your scene is vital to making an immersive experience, and with [Ray Input](https://github.com/borismus/ray-input) it’s much easier to get going.
 
 Let us know how you get on!
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

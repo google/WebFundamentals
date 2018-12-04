@@ -91,7 +91,7 @@ Facebook 的 [Augmented Traffic Control](http://facebook.github.io/augmented-tra
 
 ###  使用超时来处理时断时续的连接
 
-过去，[使用 XHR 的笨方法](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline)用于测试时断时续的网络连接，但是服务工作线程采用更可靠的方法来设置网络超时。Jeff Posnick 在其[通过服务工作线程实现瞬时加载](https://youtu.be/jCKZDTtUA2A?t=19m58s)演讲中，解释了如何使用 [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) 超时来实现这一目的：
+过去，[使用 XHR 的笨方法](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline)用于测试时断时续的网络连接，但是服务工作线程采用更可靠的方法来设置网络超时。Jeff Posnick 在其[通过服务工作线程实现瞬时加载](https://youtu.be/jCKZDTtUA2A?t=19m58s)演讲中，解释了如何使用 [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) 超时来实现这一Objective:
 
 
     toolbox.router.get(
@@ -99,7 +99,7 @@ Facebook 的 [Augmented Traffic Control](http://facebook.github.io/augmented-tra
       toolbox.networkFirst,
       {networkTimeoutSeconds: 3}
     );
-    
+
 
 此外，[超时选项](https://github.com/whatwg/fetch/issues/20)也即将在 [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch) 中实现 - 而且 [Streams API](https://www.w3.org/TR/streams-api/) 会通过优化内容交付和避免庞大的请求来提供帮助。Jake Archibald 在[超负荷页面加载](https://youtu.be/d5_6yHixpsQ?t=6m42s)中给出了有关如何解决 lie-fi 的更多详情。
 

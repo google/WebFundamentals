@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Includes Front-End JavaScript Libraries With Known Security Vulnerabilities" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2017-12-21 #}
 {# wf_blink_components: N/A #}
 
@@ -37,3 +37,7 @@ An intruder can scan your entire site using the process above and a web crawler.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/no-vulnerable-libraries.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

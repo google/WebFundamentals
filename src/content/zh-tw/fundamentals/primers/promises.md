@@ -595,7 +595,7 @@ JavaScript promise API 將任何使用 `then()` 方法的結構都當作 promise
     })
 
 
-這是我們第一次看到 `Promise.resolve()`，這種 promise 可解析爲您賦予的任何值。如果向其傳遞一個 `Promise` 實例，它也會將其返回（**注意：**這是對本規範的一處更改，某些實現尚未遵循）。如果將類似於 promise 的內容（帶有 `then()` 方法）傳遞給它，它將創建以相同方式執行/拒絕的真正 `Promise`。如果向其傳遞任何其他值，例如 `Promise.resolve('Hello')`，它在執行時將以該值創建一個 promise。如果調用時不帶任何值（如上所示），它在執行時將返回“undefined”。
+這是我們第一次看到 `Promise.resolve()`，這種 promise 可解析爲您賦予的任何值。如果向其傳遞一個 `Promise` 實例，它也會將其返回（**Note: **這是對本規範的一處更改，某些實現尚未遵循）。如果將類似於 promise 的內容（帶有 `then()` 方法）傳遞給它，它將創建以相同方式執行/拒絕的真正 `Promise`。如果向其傳遞任何其他值，例如 `Promise.resolve('Hello')`，它在執行時將以該值創建一個 promise。如果調用時不帶任何值（如上所示），它在執行時將返回“undefined”。
 
 
 此外還有 `Promise.reject(val)`，它創建的 promise 在拒絕時將返回賦予的值（或“undefined”）。
@@ -871,7 +871,7 @@ ES6 還爲我們提供了 [generator](http://wiki.ecmascript.org/doku.php?id=har
 </tr>
 </table>
 
-注：我對 `Promise.race` 的實用性表示懷疑；我更傾向於使用與之相對的 `Promise.all`，它僅在所有項拒絕時才拒絕。
+Note: 我對 `Promise.race` 的實用性表示懷疑；我更傾向於使用與之相對的 `Promise.all`，它僅在所有項拒絕時才拒絕。
 
 ###  構造函數
 
@@ -902,7 +902,7 @@ ES6 還爲我們提供了 [generator](http://wiki.ecmascript.org/doku.php?id=har
   </td>
 </tr>
 </table>
-    
+
 ###  實例方法
 
 <table class="responsive methods">

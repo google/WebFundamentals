@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-11-28 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -149,7 +149,7 @@ workbox.setConfig({ debug: true });
 workbox.setConfig({ debug: false });
 ```
 
-If you are using the modules directly (via CDN of from npm modules), you can
+If you are using the modules directly (via CDN or from `npm` modules), you can
 switch between development and production builds by changing the file extension
 between `<module>.dev.js` and `<module>.prod.js`.
 

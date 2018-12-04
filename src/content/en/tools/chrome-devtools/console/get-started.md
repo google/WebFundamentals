@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-09-19 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -16,7 +16,7 @@ This tutorial teaches you how to use the **Console** in Chrome DevTools.
 
 <figure>
   <img src="/web/tools/chrome-devtools/images/panels/console.png"
-       alt="The Console."
+       alt="The Console.">
   <figcaption><b>Figure 1</b>. The <b>Console</b></figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 
      <figure>
        <img src="images/open.png"
-            alt="The Console, opened alongside this very page."
+            alt="The Console, opened alongside this very page.">
        <figcaption>
          <b>Figure 2</b>. The <b>Console</b>, opened alongside this very page
        </figcaption>
@@ -77,7 +77,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 
      <figure>
        <img src="images/cause.png"
-            alt="Highlighted in yellow is the line of code that caused the message to get logged."
+            alt="Highlighted in yellow is the line of code that caused the message to get logged.">
        <figcaption>
          <b>Figure 3</b>. Highlighted in yellow is the line of code that caused the message to
          get logged
@@ -149,7 +149,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
 
      <figure>
        <img src="images/error-stack.png"
-            alt="The call stack leading up to console.error()."
+            alt="The call stack leading up to console.error().">
        <figcaption>
          <b>Figure 4</b>. The call stack leading up to <code>console.error()</code>
        </figcaption>
@@ -208,9 +208,6 @@ filter the **Console** to only show messages that you care about.
    filtering.
 
        {% framebox width="auto" height="auto" enable_widgets="true" %}
-
-         {% verbatim %}
-
            <button class="gc-analytics-event" data-category="DevTools"
                    data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
            <script>
@@ -228,9 +225,6 @@ filter the **Console** to only show messages that you care about.
                }
              });
            </script>
-
-         {% endverbatim %}
-
        {% endframebox %}
 
 1. Type `123` in the **Filter** text box. The **Console** only shows messages that contain
@@ -247,7 +241,7 @@ filter the **Console** to only show messages that you care about.
 
      <figure>
        <img src="images/sidebar-regex.png"
-            alt="Filtering with the Sidebar and a regular expression, simultaneously."
+            alt="Filtering with the Sidebar and a regular expression, simultaneously.">
        <figcaption>
          <b>Figure 5</b>. Filtering with the <b>Sidebar</b> and a regular expression,
          simultaneously
@@ -297,7 +291,7 @@ in order to change how the page looks or runs.
 
      <figure>
        <img src="images/change-fail.png"
-            alt="Unsuccessfully attempting to change the button's text."
+            alt="Unsuccessfully attempting to change the button's text.">
        <figcaption>
          <b>Figure 6</b>. Unsuccessfully attempting to change the button's text
        </figcaption>
@@ -310,7 +304,7 @@ in order to change how the page looks or runs.
 
      <figure>
        <img src="images/inspect-button.png"
-            alt="Inspecting the button."
+            alt="Inspecting the button.">
        <figcaption>
          <b>Figure 7</b>. Inspecting the button
        </figcaption>
@@ -325,7 +319,7 @@ in order to change how the page looks or runs.
      <figure>
        <img src="images/iframe-context.png"
             alt="The Console opened at the bottom of the Elements panel, and in a different
-                 execution context."
+                 execution context.">
        <figcaption>
          <b>Figure 8</b>. The <b>Console</b> opened at the bottom of the <b>Elements</b> panel,
          and in a different execution context
@@ -399,52 +393,11 @@ See [Command Line API Reference][CLAPI] for the full reference.
 
 ## Feedback {: #feedback }
 
-<aside class="note">
-  <b>Help me help you!</b> Hi, I'm Kayce. I wrote this tutorial. Please take a moment to
-  provide feedback. I really do monitor this data, and it helps me create better tutorials for
-  you.
-</aside>
+{% include "web/_shared/helpful.html" %}
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/console/get-started';
-var title = '[feedback] ' + label;
-var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
-var link = '<a href="' + url + '">open an issue</a>';
-var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
-var feedback = {
-  category: "Helpful",
-  question: "Was this page helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{# Runs on page load. #}
 
-{# Runs on page load. Down here because it takes up space, even though it's not supposed to. #}
-
-{% framebox width="0" height="0" enable_widgets="true" %}
+{% framebox width="0px" height="0px" enable_widgets="true" %}
   <script>
     console.log('%cWelcome to the Console!', 'font-weight:bold;color:#317efb;font-style:italic',
         'Read on to learn how messages like this get here.');

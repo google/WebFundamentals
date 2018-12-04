@@ -59,7 +59,7 @@ function test(filename, contents, options) {
    * Simple wrapper that adds an error to the list
    *
    * @param {string} message The message to add.
-   * @param {object} position The line number the error occured on.
+   * @param {object} position The line number the error occurred on.
    */
   function logError(message, position) {
     results.push({
@@ -257,6 +257,21 @@ function test(filename, contents, options) {
         `please double check.`;
       logWarning(msg, position);
     });
+  }
+
+  // Warn on missing "was this page helpful?" widget
+  if (!options.ignoreMissingHelpfulWidget) {
+    const reHelpful = /^{%\s?include "web\/_shared\/helpful\.html"\s?%}/m;
+    const rePath = /src\/content\/.+?\//;
+    if (rePath.test(filename)) {
+      if (!reHelpful.test(contents)) {
+        const position = {line: getLineNumber(contents, contents.length - 1)};
+        const msg =
+          'Consider adding a "was this page helpful?" widget to your page: ' +
+          'https://developers.google.com/web/resources/widgets#helpful';
+        logWarning(msg, position);
+      }
+    }
   }
 
   // Warn on missing comment widgets

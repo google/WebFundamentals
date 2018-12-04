@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Displays Images With Incorrect Aspect Ratio" Lighthouse audit.
 
-{# wf_updated_on: 2018-01-03 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-01-03 #}
 {# wf_blink_components: N/A #}
 
@@ -44,3 +44,7 @@ than its natural ratio.
 [Audit source][src]{:.external}
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/image-aspect-ratio.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

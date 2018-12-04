@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Users expect pages to be interactive and smooth. Each stage in  the pixel pipeline represents an opportunity to introduce jank. Learn about  tools and strategies to identify and fix common problems that slow down  runtime performance.
 
-{# wf_updated_on: 2016-03-15 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Analyze Runtime Performance {: .page-title }
 
@@ -257,3 +258,7 @@ The following table describes some common paint and composite problems and poten
 [recording]: ../evaluate-performance/timeline-tool#make-a-recording
 [paint]: ../evaluate-performance/timeline-tool#profile-painting
 [rendering settings]: ../evaluate-performance/timeline-tool#rendering-settings
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

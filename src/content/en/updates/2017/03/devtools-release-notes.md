@@ -2,11 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: New features and changes coming to DevTools in Chrome 58.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2017-03-06 #}
 {# wf_tags: chrome58,devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: New features and changes coming to DevTools in Chrome 58. #}
+{# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
@@ -62,7 +63,7 @@ V8][heap] for more information.
   </figcaption>
 </figure>
 
-[heap]: https://v8project.blogspot.com/2017/02/one-small-step-for-chrome-one-giant.html
+[heap]: https://v8.dev/blog/heap-size-limit
 
 ### Breakpoints on canvas creation {: #canvas-creation-breakpoints }
 

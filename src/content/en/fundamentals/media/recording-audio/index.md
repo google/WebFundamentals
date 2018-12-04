@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers can get access to the user's microphone.
 
-{# wf_updated_on: 2017-09-24 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-08-23 #}
 {# wf_blink_components: Blink>GetUserMedia #}
 
@@ -263,3 +263,7 @@ interface to accommodate the actions that the user needs to take.
 
       };
     });
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

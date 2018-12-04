@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A quick look at some of the efforts the Chrome team are doing to helps developers get started with Web Development and iterate on their sites.
 
-{# wf_updated_on: 2014-12-01 #}
+{# wf_updated_on: 2018-08-07 #}
 {# wf_published_on: 2014-12-01 #}
 {# wf_tags: news,fundamentals,mobile,frontend #}
+{# wf_blink_components: N/A #}
 
 # Fundamentals of Mobile Web Development {: .page-title }
 
@@ -69,7 +70,7 @@ need:
 For those of you who are new to build processes, the easiest way to think of a
 build process is to view it as a program which takes a set of files and performs
 certain tasks on them and outputs new versions in a different location. The
-tasks optimise the files to improve load times, check for possible errors or
+tasks optimize the files to improve load times, check for possible errors or
 handle tasks that can be automated.
 
 In Web Starter Kit we have the following processes:
@@ -166,8 +167,8 @@ doing during that paint.
 ### Invalidation Tracking
 
 DevTools now gives a reason why a paint or layout occurred whenever it can, this
-is useful for anyone learning about the timeline, the browser behaviours and
-allows you to optimise your code to prevent performance issues.
+is useful for anyone learning about the timeline, the browser behaviors and
+allows you to optimize your code to prevent performance issues.
 
 <p style="text-align: center;">
 <img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image09.png" alt="Screenshot of Invalidation Tracking in Chrome Devtools" width="624" height="396" style="max-width: 100%; height: auto;" />
@@ -177,7 +178,7 @@ allows you to optimise your code to prevent performance issues.
 
 This is a very different way of viewing the information available in the
 timeline. This makes it much easier to see how tasks overlap and what browser
-behaviour happened as a result of other tasks.
+behavior happened as a result of other tasks.
 
 <p style="text-align: center;">
 <img src="/web/updates/images/2014-12-02-fundamentals-of-web-dev/image10.png" alt="Screenshot of Flame Chart View in Chrome DevTools" width="624" height="384" style="max-width: 100%; height: auto;" />

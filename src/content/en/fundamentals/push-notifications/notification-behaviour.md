@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Notification Behaviour {: .page-title }
@@ -13,7 +14,7 @@ book_path: /web/fundamentals/_book.yaml
 So far we've looked at the options that alter the visual appearance of a notification. There
 are also options that alter the behaviour of notifications.
 
-Be default, calling `showNotification()` with just visual options will have
+By default, calling `showNotification()` with just visual options will have
 the following behaviours:
 
 - Clicking on the notification does nothing.
@@ -252,3 +253,7 @@ what they are doing to dismiss your notification can be frustrating.
 
 In the next section we are going to look at some of the common patterns used on the web for
 managing notifications and performing actions such as opening pages when a notification is clicked.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

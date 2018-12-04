@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-03-20 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-16 #}
 {# wf_blink_components: Blink>Media #}
 
@@ -551,3 +551,7 @@ Clear Key demo: [simpl.info/ck](http://simpl.info/eme/clearkey)
 [Media Source Extensions (MSE) demo](http://simpl.info/mse)
 Google's [Shaka Player](https://github.com/google/shaka-player)
 implements a DASH client with EME support
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

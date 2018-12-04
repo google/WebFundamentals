@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Minify CSS" Lighthouse audit.
 
-{# wf_updated_on: 2018-03-30 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2018-03-30 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -70,3 +70,7 @@ Sources:
 * [Minify Resources](/speed/docs/insights/MinifyResources)
 
 [src]: https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/byte-efficiency/unminified-css.js
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

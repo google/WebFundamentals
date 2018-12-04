@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2017-12-11 #}
+{# wf_updated_on: 2018-07-23 #}
 {# wf_published_on: 2016-10-05 #}
 {# wf_blink_components: N/A #}
 
@@ -65,4 +65,6 @@ which is roughly 5 seconds after the time to [Consistently Interactive][CI].
 [trace]: https://www.chromium.org/developers/how-tos/trace-event-profiling-tool
 [CI]: /web/tools/lighthouse/audits/consistently-interactive
 
-{% include "web/tools/lighthouse/audits/_feedback/estimated-input-latency.html" %}
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

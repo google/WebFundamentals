@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -135,3 +135,7 @@ steps:
       password, or financial details, often by masquerading as a trustworthy
       site. Since the cleanup for phishing is similar to spam, please continue
       to [Assess spam damage](hacked_with_spam).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

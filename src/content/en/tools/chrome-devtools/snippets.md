@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Snippets are small scripts that you can author and execute within the Sources panel of Chrome DevTools. You can access and run them from any page. When you run a snippet, it executes from the context of the currently open page.
 
-{# wf_updated_on: 2018-05-03 #}
+{# wf_updated_on: 2018-07-27 #}
 {# wf_published_on: 2015-10-12 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -69,39 +69,4 @@ to learn how to add breakpoints from within the **Sources** panel.
 
 ## Feedback {: #feedback }
 
-{% framebox width="auto" height="auto" enable_widgets="true" %}
-<script>
-var label = '/web/tools/chrome-devtools/snippets';
-var title = '[feedback] ' + label;
-var url = 'https://github.com/google/webfundamentals/issues/new?title=' + title;
-var link = '<a href="' + url + '">open an issue</a>';
-var response = 'Thanks for the feedback. Please ' + link + ' and tell us how we can improve.';
-var feedback = {
-  category: "Helpful",
-  question: "Was this page helpful?",
-  choices: [
-    {
-      button: {
-        text: "Yes"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 1
-      }
-    },
-    {
-      button: {
-        text: "No"
-      },
-      response: response,
-      analytics: {
-        label: label,
-        value: 0
-      }
-    }
-  ]
-};
-</script>
-{% include "web/_shared/multichoice.html" %}
-{% endframebox %}
+{% include "web/_shared/helpful.html" %}
