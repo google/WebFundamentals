@@ -245,8 +245,9 @@ const canvas = document.createElement('canvas');
 canvas.getContext('2d').fillRect(0, 0, canvas.width, canvas.height);
 
 const video = document.createElement('video');
-video.autoplay = true;
+video.muted = true;
 video.srcObject = canvas.captureStream();
+video.play();
 
 // Later on, video.requestPictureInPicture();
 ```
