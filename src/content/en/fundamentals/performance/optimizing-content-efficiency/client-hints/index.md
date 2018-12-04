@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD
+description: Client hints are a set of HTTP request headers we can use to change how we deliver page resources based on characteristics of a user's device and network connection. In this article, you'll learn all about client hints, how they work, and a few ideas on how you can use them to make your site faster for users.
 
-{# wf_updated_on: 2018-11-20 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-11-22 #}
 {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
@@ -130,7 +130,7 @@ For example, let’s take this markup:
 
 ```html
 <img src="whats-up-1x.png"
-     srcset="whats-up-1x.png 2x, whats-up-1x.png 1x"
+     srcset="whats-up-2x.png 2x, whats-up-1x.png 1x"
      alt="I'm that image you wanted.">
 ```
 
