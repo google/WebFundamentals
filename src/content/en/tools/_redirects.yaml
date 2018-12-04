@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/unoptimized-images
+  to: /web/tools/lighthouse/audits/optimize-images
+
 - from: /web/tools/lighthouse/audits/first-interactive
   to: /web/tools/lighthouse/audits/first-cpu-idle
 
