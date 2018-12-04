@@ -130,8 +130,8 @@ one Picture-in-Picture video at a time. You should expect users to exit
 Picture-in-Picture even when you didn't ask for it.
 
 Warning: Listen to Picture-in-Picture events instead of waiting for promises
-to update your media player controls for instance as video can enter and leave
-Picture-in-Picture at any time (e.g. user clicks some browser context menu
+to update your media player controls. It's possible for the video to enter and
+exit Picture-in-Picture at any time (e.g. user clicks some browser context menu
 or Picture-in-Picture is triggered automatically).
 
 The new `enterpictureinpicture` and `leavepictureinpicture` event handlers let
