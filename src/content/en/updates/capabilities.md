@@ -37,7 +37,9 @@ design, to ensure an interoperable design.
   </thead>
   <tbody>
     <tr>
-      <td><a href="/web/updates/2018/11/writable-files">Writable Files API</a></td>
+      <td>
+        <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
+      </td>
       <td>
         The writable files API is designed to increase interoperability of
         web applications with native applications, making it possible for users
@@ -45,7 +47,7 @@ design, to ensure an interoperable design.
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
         <br><br>
-        <b>Status:</b> Gathering feedback & iterating on design
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
     </tr>
     <tr>

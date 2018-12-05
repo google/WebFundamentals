@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Intl.RelativeTimeFormat API enables localized formatting of relative times without sacrificing performance.
 
-{# wf_updated_on: 2018-10-22 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-10-22 #}
-{# wf_tags: javascript #}
+{# wf_tags: javascript,intl,chrome71 #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 {# wf_featured_snippet: The `Intl.RelativeTimeFormat` API enables localized formatting of relative times without sacrificing performance. #}
 {# wf_blink_components: Blink>JavaScript>Language #}

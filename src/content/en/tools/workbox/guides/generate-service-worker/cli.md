@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with Workbox CLI.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-18 #}
+{# wf_updated_on: 2018-11-28 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Complete Service Worker with Workbox CLI {: .page-title }
@@ -97,5 +97,5 @@ The full set of available options can be found on the
 [Workbox CLI module page](/web/tools/workbox/modules/workbox-cli).
 
 <aside class="note"><b>Note:</b> Please ensure that whenever you update your
-site you re-run `workbox generateSW` as this will unsure your service worker
+site you re-run `workbox generateSW` as this will ensure your service worker
 caches the latest files.</aside>
