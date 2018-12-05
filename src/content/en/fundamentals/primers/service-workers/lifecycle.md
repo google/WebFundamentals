@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-12-05 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -355,11 +355,12 @@ worker anyway.
 
 In brief:
 
-* An update is triggered:
-    * On navigation to an in-scope page.
-    * On functional events such as `push` and `sync`, unless there's been an
-      update check within the previous 24 hours.
-    * On calling `.register()` *only if* the service worker URL has changed.
+* An update is triggered if any of the following happens:
+    * A navigation to an in-scope page.
+    * A functional events such as `push` and `sync`, unless there's been an update check within the
+      previous 24 hours.
+    * Calling `.register()` *only if* the service worker URL has changed. However, you should [avoid
+      changing the worker URL](#avoid-url-change).
 * Most browsers, including [Chrome 68 and later](/web/updates/2018/06/fresher-sw), default to
   ignoring caching headers when checking for updates of the registered service worker script. They
   still respect caching headers when fetching resources loaded inside a service worker via
@@ -717,7 +718,7 @@ navigations and functional events, but you can also trigger them manually:
 If you expect the user to be using your site for a long time without reloading,
 you may want to call `update()` on an interval (such as hourly).
 
-### Avoid changing the URL of your service worker script
+### Avoid changing the URL of your service worker script {: #avoid-url-change}
 
 If you've read [my post on caching best
 practices](https://jakearchibald.com/2016/caching-best-practices/){: .external },
