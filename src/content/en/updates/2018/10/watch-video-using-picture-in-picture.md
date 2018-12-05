@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-11-29 #}
+{# wf_updated_on: 2018-12-05 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -226,8 +226,9 @@ Picture-in-Picture as shown below.
 
 ```js
 const video = document.createElement('video');
-video.autoplay = true;
+video.muted = true;
 video.srcObject = await navigator.mediaDevices.getUserMedia({ video: true });
+video.play()
 
 // Later on, video.requestPictureInPicture();
 ```
@@ -236,8 +237,9 @@ video.srcObject = await navigator.mediaDevices.getUserMedia({ video: true });
 
 ```js
 const video = document.createElement('video');
-video.autoplay = true;
+video.muted = true;
 video.srcObject = await navigator.mediaDevices.getDisplayMedia({ video: true });
+video.play();
 
 // Later on, video.requestPictureInPicture();
 ```
