@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2018-12-04 #}
+{# wf_updated_on: 2018-12-05 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: capabilities,sharing,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
@@ -51,7 +51,7 @@ system-level share target picker.
 | 4. Origin trial                            | Complete                     |
 | **5. Launch**                              | [**Chrome 71+**][cr-status]  |
 
-Web Share Target is current supported on Android in Chrome 71 or later. Both
+Web Share Target is currently supported on Android in Chrome 71 or later. Both
 Mozilla and Microsoft have indicated their support but have not implemented it
 yet.
 
