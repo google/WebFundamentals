@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background fetch lets you handle large downloads, even if the browser closes.
 
-{# wf_updated_on: 2018-12-03 #}
+{# wf_updated_on: 2018-12-05 #}
 {# wf_published_on: 2018-12-03 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -428,7 +428,7 @@ The common thing to do with this event is open a window:
       }
     });
 
-## Origin trial ## {#origin-trial}
+## Origin trial {: #origin-trial}
 
 To get access to this new API on your site, please [sign up](http://bit.ly/OriginTrialSignup) for
 the "Background Fetch API" Origin Trial. If you just want to try it out locally, the API can be
