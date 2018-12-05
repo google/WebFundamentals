@@ -607,6 +607,9 @@ gulp.task('test', ['test:travis-init'], function() {
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
   };
 
+  // Comment widget will be deprecated in 2019Q2-3, disabling the warning
+  global.WF.options.ignoreCommentWidget = true;
+
   // Test master
   if (global.WF.options.testMaster) {
     const msg = `${chalk.cyan('--testMaster')} was used.`;
