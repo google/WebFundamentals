@@ -15,8 +15,6 @@ description: The Web Share Target API allows installed web apps to register with
 
 <div class="clearfix"></div>
 
-{% include "web/updates/_shared/capabilities.html" %}
-
 ## What is the Web Share Target API? {: #what }
 
 <figure class="attempt-right">
@@ -47,7 +45,7 @@ system-level share target picker.
 | ------------------------------------------ | ---------------------------- |
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [Complete][spec]             |
-| 3. Gather feedback & iterate on design     | Complete                     |
+| 3. Gather feedback & iterate on design     | [Complete][issues]           |
 | 4. Origin trial                            | Complete                     |
 | **5. Launch**                              | [**Chrome 71+**][cr-status]  |
 
@@ -55,19 +53,19 @@ Web Share Target is currently supported on Android in Chrome 71 or later. Both
 Mozilla and Microsoft have indicated their support but have not implemented it
 yet.
 
-We’ve also started working on Web Share Target - Level 2, adding support for
-sharing file objects. I’ll get a post about that written soon, in the meantime,
-you check out the [level 2, draft spec](https://wicg.github.io/web-share/level-2/).
+We’ve started working on
+[Web Share Target - Level 2](https://wicg.github.io/web-share/level-2/), adding
+support for sharing file objects. Look for a post about that coming soon.
 
 
 ### See it in action {: .hide-from-toc }
 
-1. Using Chrome 71 or later, open the
-   [Web Share Target demo app](https://web-share.glitch.me/).
-2. When prompted, click **'Install'** to add the app to your home screen.
+1. Using Chrome 71 or later, open the [Web Share Target demo][demo].
+2. When prompted, click **Install** to add the app to your home screen, or
+   use the Chrome menu to add it to your home screen.
 3. Open any app that includes a native share intent, or use the Share button
    in the demo app.
-4. Choose ‘Web Share Test’
+4. Choose **Web Share Test**
 
 After sharing to the demo app, you should see all of the information sent
 via the web share target web app.
@@ -171,14 +169,18 @@ appear in the `text` field, or occasionally in the `title` field.
 
 * [Public explainer][explainer]
 * [Tracking bug][cr-bug]
+* [Web Share Target Demo][demo] | [Web Share Target Demo source][demo-source]
 * [ChromeStatus.com entry][cr-status]
 * Blink Component: `Blink>WebShare`
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
 [spec]: https://wicg.github.io/web-share-target/
+[demo]: https://web-share.glitch.me/
+[demo-source]: https://glitch.com/edit/#!/web-share?path=index.html
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=668389
 [cr-status]: https://www.chromestatus.com/features/5662315307335680
 [explainer]: https://github.com/WICG/web-share-target/blob/master/docs/explainer.md
+[issues]: https://github.com/WICG/web-share-target/issues
 [wicg-discourse]: https://discourse.wicg.io/t/web-share-target-api-for-websites-to-receive-shared-content/1854
 
