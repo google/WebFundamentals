@@ -216,11 +216,9 @@ Typed CSSOM (CSS 객체 모델 혹은 계층 스타일 시트 객체 모델)은 
 
 ### Font metrics
 
-Font metrics is exactly what it sounds like. What is the bounding box (or the
-bounding boxes when we are wrapping) when I render string X with font Y at size
-Z? What if I go all crazy unicode on you like using [ruby annotations]? This has
-been requested a lot and Houdini should finally make these wishes
-come true.
+Font metrics는 들리는 바로 그대로를 의미합니다. 만일 제가 문자열 X를 Y폰트의 Z크기로 렌더한다면
+bounding box(혹은 다수의 bounding box들)은 어떻게 될까요? 만약 제가 [ruby annotations]로
+복잡한 unicode를 사용한다면요? 이러한 기능은 예전부터 요청되었는데, 드디어 Houdini에서 현실화되었습니다.
 
 ### 잠시만요, 아직 끝이 아닙니다!
 
