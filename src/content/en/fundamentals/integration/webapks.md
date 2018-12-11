@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2018-10-23 #}
+{# wf_updated_on: 2018-12-11 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -152,17 +152,23 @@ enum in `message WebApk` for the reasons a WebAPK may be updated.
 Note: Icons may be cached, so it may be helpful to change the filenames when
 updating icons or other graphics.
 
-## Feedback {: .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}
-
-<div class="clearfix"></div>
 
 ## Frequently asked questions
 
-If any of the required manifest properties are changed,. For full details
-
 <dl>
+  <dt>
+    What icons are used to generate the splash screen?
+  </dt>
+  <dd>
+    We recommend you provide at least two icons:
+    <a href="/web/fundamentals/web-app-manifest/#splash-screen">
+    192px and 512px</a> for the splash screen.
+    <br><br>We heard from you that icons
+    on the splash screen were too small. WebAPKs generated in Chrome 71 or later
+    will show a larger icon on the splash screen. No action is required, as
+    long as the recommended icons are provided.
+  </dd>
+
   <dt>
     What happens if the user has already installed the native app for the site?
   </dt>

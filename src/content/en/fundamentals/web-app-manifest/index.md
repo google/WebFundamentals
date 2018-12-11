@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2018-10-02 #}
+{# wf_updated_on: 2018-12-11 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -236,7 +236,7 @@ properties, including:
 The `background_color` should be the same color as the load page, to provide
 a smooth transition from the splash screen to your app.
 
-### Icons used for the splash screen
+### Icons used for the splash screen {: #splash-screen-icons }
 
 Chrome will choose the icon that closely matches the 128dp icon for that
 device. 128dp is the ideal size for the image on the splash screen, and means
