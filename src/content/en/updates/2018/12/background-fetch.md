@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Background fetch lets you handle large downloads, even if the browser closes.
 
-{# wf_updated_on: 2018-12-05 #}
+{# wf_updated_on: 2018-12-07 #}
 {# wf_published_on: 2018-12-03 #}
 {# wf_tags: serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -102,7 +102,7 @@ out the guide](/web/fundamentals/primers/async-functions).
     <tr>
       <td><code>id</code></td>
       <td><code>string</code><br>uniquely identifies this background fetch.
-      <p><code>backgroundFetch.fetch</code> will reject the ID matches an existing background
+      <p><code>backgroundFetch.fetch</code> will reject if the ID matches an existing background
       fetch.</p></td>
     </tr>
     <tr>
