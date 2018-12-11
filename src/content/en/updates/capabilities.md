@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-04 #}
+{# wf_updated_on: 2018-12-10 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -36,6 +36,22 @@ design, to ensure an interoperable design.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/badging-api">Badging API</a>
+      </td>
+      <td>
+        The Badging API is a new web platform API that allows installed web
+        apps to set an application-wide badge, shown in an
+        operating-system-specific place associated with the application, such
+        as the shelf or home screen. Badging makes it easy to subtly notify
+        the user that there is some new activity that might require their
+        attention, or it can be used to indicate a small amount of information,
+        such as an unread count.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
+    </tr>
     <tr>
       <td>
         <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
