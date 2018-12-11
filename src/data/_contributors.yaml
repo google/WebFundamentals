@@ -1861,3 +1861,17 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
+
+jihyerish:
+  name:
+    given: Jihye
+    family: Hong
+  org:
+    name: LG Electronics
+  country: KR
+  role:
+    - translator
+  twitter: jihyerish
+  email: jh.hong@lge.com
+  description:
+    en: "Software Engineer at LG Electronics working on the web standards"
