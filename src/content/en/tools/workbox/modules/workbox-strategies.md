@@ -93,7 +93,7 @@ workbox.routing.registerRoute(
 ![Network Only Diagram](../images/modules/workbox-strategies/network-only.png)
 
 If you require specific requests to be fulfilled from the network, the
-[network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
+[network only](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
 is the strategy to use.
 
 ```javascript
