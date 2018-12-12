@@ -99,6 +99,10 @@ for safe deprecation and removal. Removal is expected in Chrome 74.
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
 {% include "web/_shared/rss-widget-updates.html" %}
 
 {% include "comment-widget.html" %}
