@@ -1,16 +1,15 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: A reference of all of the keyboard shortcuts in Chrome DevTools.
+description: The canonical documentation for Chrome DevTools keyboard shortcuts.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2015-04-29 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# Keyboard Shortcuts Reference {: .page-title }
+# Chrome DevTools Keyboard Shortcuts {: .page-title }
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-{% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 This page is a reference of keyboard shortcuts in Chrome DevTools.
@@ -481,6 +480,6 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
   </tbody>
 </table>
 
-## Feedback {: #feedback }
+## Feedback {: #feedback .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}

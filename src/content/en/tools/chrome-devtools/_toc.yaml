@@ -1,6 +1,8 @@
 toc:
 - title: Home
   path: /web/tools/chrome-devtools/
+- title: Open DevTools
+  path: /web/tools/chrome-devtools/open
 - title: DevTools for Beginners
   section:
   - title: HTML and the DOM
@@ -23,22 +25,28 @@ toc:
     path: /web/tools/chrome-devtools/javascript/source-maps
   - title: JS Debugging Reference
     path: /web/tools/chrome-devtools/javascript/reference
-  - title: Step Through Code
-    path: /web/tools/chrome-devtools/javascript/step-code
-    status: deprecated
-  - title: Pretty-Print Minified JavaScript
-    path: /web/tools/chrome-devtools/javascript/pretty-print
-    status: deprecated
-  - title: Watch Variables in Sources
-    path: /web/tools/chrome-devtools/javascript/watch-variables
-    status: deprecated
+  - title: Guides
+    section:
+    - title: Blackbox Chrome Extension Scripts
+      path: /web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts
+  - title: Deprecated
+    section:
+    - title: Step Through Code
+      path: /web/tools/chrome-devtools/javascript/step-code
+      status: deprecated
+    - title: Pretty-Print Minified JavaScript
+      path: /web/tools/chrome-devtools/javascript/pretty-print
+      status: deprecated
+    - title: Watch Variables in Sources
+      path: /web/tools/chrome-devtools/javascript/watch-variables
+      status: deprecated
 - title: UI References and Overviews
   section:
   - title: UI Reference
     path: /web/tools/chrome-devtools/ui
   - title: Sources Panel Overview
     path: /web/tools/chrome-devtools/sources
-  - title: Keyboard Shortcuts Reference
+  - title: Keyboard Shortcuts
     path: /web/tools/chrome-devtools/shortcuts
 - title: Accessibility
   path: /web/tools/chrome-devtools/accessibility/reference
@@ -46,12 +54,15 @@ toc:
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
-  - title: Test Responsive and Device-Specific Viewports
-    path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
   - title: Emulate Geolocation and Accelerometer Sensors
     path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+  - title: Deprecated
+    section:
+    - title: Test Responsive and Device-Specific Viewports
+      path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      status: deprecated
 - title: Remote Debug Android Devices
   section:
   - title: Get Started
