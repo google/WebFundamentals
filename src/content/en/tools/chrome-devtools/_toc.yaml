@@ -44,7 +44,7 @@ toc:
     path: /web/tools/chrome-devtools/ui
   - title: Sources Panel Overview
     path: /web/tools/chrome-devtools/sources
-  - title: Keyboard Shortcuts Reference
+  - title: Keyboard Shortcuts
     path: /web/tools/chrome-devtools/shortcuts
 - title: Accessibility
   path: /web/tools/chrome-devtools/accessibility/reference
