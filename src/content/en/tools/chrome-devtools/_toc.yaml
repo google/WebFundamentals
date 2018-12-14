@@ -1,6 +1,8 @@
 toc:
 - title: Home
   path: /web/tools/chrome-devtools/
+- title: Open DevTools
+  path: /web/tools/chrome-devtools/open
 - title: DevTools for Beginners
   section:
   - title: HTML and the DOM
