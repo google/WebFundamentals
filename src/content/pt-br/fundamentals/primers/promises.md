@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "As promessas simplificam cálculos postergados e assíncronos. Uma promessa representa uma operação ainda não concluída."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2014-01-29 #}
+{# wf_updated_on: 2018-12-14 #}
 
 # Promessas em JavaScript: uma introdução {: .page-title }
 
@@ -120,7 +120,7 @@ Uma promessa pode ser:
 * **definida** - a ação foi atendida ou rejeitada
 
 
-[A especificação](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects) também usa o termo **thenable** para descrever um objeto semelhante à promessa, no sentido de que tem um método `then`. Esse termo me lembra do ex-dirigente do futebol inglês, [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables). Por isso, vou usá-lo o menos possível.
+[A especificação](http://www.ecma-international.org/ecma-262/#sec-promise-objects) também usa o termo **thenable** para descrever um objeto semelhante à promessa, no sentido de que tem um método `then`. Esse termo me lembra do ex-dirigente do futebol inglês, [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables). Por isso, vou usá-lo o menos possível.
 
 
 ## As promessas chegaram ao JavaScript!

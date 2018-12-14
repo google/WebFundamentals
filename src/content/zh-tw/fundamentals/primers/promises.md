@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description:"Promise 可簡化延遲和異步計算。Promise 代表一個尚未完成的操作。"
 
 {# wf_published_on:2013-12-16 #}
-{# wf_updated_on:2014-01-29 #}
+{# wf_updated_on:2018-12-14 #}
 
 # JavaScript Promise：簡介 {: .page-title }
 
@@ -120,7 +120,7 @@ promise 可以是：
 * **已解決** - 已執行或拒絕
 
 
-[本規範](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)還使用術語 **thenable** 來描述類似於 promise 的對象，並使用 `then` 方法。該術語讓我想起前英格蘭國家隊教練 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)，因此我將盡可能不用這個術語。
+[本規範](http://www.ecma-international.org/ecma-262/#sec-promise-objects)還使用術語 **thenable** 來描述類似於 promise 的對象，並使用 `then` 方法。該術語讓我想起前英格蘭國家隊教練 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)，因此我將盡可能不用這個術語。
 
 
 ##  Promise 在 JavaScript 中受支持！

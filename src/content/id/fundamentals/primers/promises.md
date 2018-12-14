@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promise menyederhanakan komputasi yang ditangguhkan dan asinkron. Sebuah promise mewakili sebuah operasi yang belum selesai."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-12-14 #}
 
 # Promise JavaScript: Pengantar {: .page-title }
 
@@ -120,7 +120,7 @@ Sebuah promise bisa berupa:
 * **settled** - sudah terlaksana atau ditolak
 
 
-[Spesifikasi](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects) juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise, karena ia memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi saya akan menggunakannya sesedikit mungkin.
+[Spesifikasi](http://www.ecma-international.org/ecma-262/#sec-promise-objects) juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise, karena ia memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi saya akan menggunakannya sesedikit mungkin.
 
 
 ## Promise hadir di JavaScript!

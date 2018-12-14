@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2018-11-01 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_blink_components: Blink>JavaScript #}
 
 # JavaScript Promises: an Introduction {: .page-title }
@@ -160,7 +160,7 @@ A promise can be:
 * **settled** - Has fulfilled or rejected
 
 
-[The spec](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)
+[The spec](http://www.ecma-international.org/ecma-262/#sec-promise-objects)
 also uses the term **thenable** to describe an object that is promise-like,
 in that it has a `then` method. This term reminds me of ex-England Football
 Manager [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) so
