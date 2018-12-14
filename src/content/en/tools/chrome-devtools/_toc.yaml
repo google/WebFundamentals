@@ -54,12 +54,15 @@ toc:
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
-  - title: Test Responsive and Device-Specific Viewports
-    path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
   - title: Emulate Geolocation and Accelerometer Sensors
     path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+  - title: Deprecated
+    section:
+    - title: Test Responsive and Device-Specific Viewports
+      path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      status: deprecated
 - title: Remote Debug Android Devices
   section:
   - title: Get Started
