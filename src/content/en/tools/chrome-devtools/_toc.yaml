@@ -23,15 +23,21 @@ toc:
     path: /web/tools/chrome-devtools/javascript/source-maps
   - title: JS Debugging Reference
     path: /web/tools/chrome-devtools/javascript/reference
-  - title: Step Through Code
-    path: /web/tools/chrome-devtools/javascript/step-code
-    status: deprecated
-  - title: Pretty-Print Minified JavaScript
-    path: /web/tools/chrome-devtools/javascript/pretty-print
-    status: deprecated
-  - title: Watch Variables in Sources
-    path: /web/tools/chrome-devtools/javascript/watch-variables
-    status: deprecated
+  - title: Guides
+    section:
+    - title: Blackbox Chrome Extension Scripts
+      path: /web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts
+  - title: Deprecated
+    section:
+    - title: Step Through Code
+      path: /web/tools/chrome-devtools/javascript/step-code
+      status: deprecated
+    - title: Pretty-Print Minified JavaScript
+      path: /web/tools/chrome-devtools/javascript/pretty-print
+      status: deprecated
+    - title: Watch Variables in Sources
+      path: /web/tools/chrome-devtools/javascript/watch-variables
+      status: deprecated
 - title: UI References and Overviews
   section:
   - title: UI Reference
