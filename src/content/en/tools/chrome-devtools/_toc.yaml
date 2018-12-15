@@ -58,6 +58,10 @@ toc:
     path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+  - title: Guides
+    section:
+    - title: Override The User Agent String
+      path: /web/tools/chrome-devtools/device-mode/override-user-agent
   - title: Deprecated
     section:
     - title: Test Responsive and Device-Specific Viewports
