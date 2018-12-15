@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_blink_components: Blink>Image #}
 {# wf_published_on: 2014-04-29 #}
 
@@ -85,7 +85,7 @@ width: 100% to prevent images and other content from overflowing.  For example:
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Be sure to provide meaningful descriptions via the `alt` attribute on `img`
 elements; these help make your site more accessible by giving context to screen
@@ -114,7 +114,7 @@ a 2x device when on a limited bandwidth network.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 On browsers that don't support `srcset`, the browser simply uses the default
 image file specified by the `src` attribute.  This is why it is important to
@@ -145,7 +145,7 @@ and more.
 Dogfood: The `picture` element is beginning to land in browsers. Although it's
 not available in every browser yet, we recommend its use because of the strong
 backward compatibility and potential use of the
-[Picturefill polyfill](http://picturefill.responsiveimages.org/). See the
+[Picturefill polyfill](https://scottjehl.github.io/picturefill/). See the
 [ResponsiveImages.org](http://responsiveimages.org/#implementation) site for
 further details.
 
@@ -333,9 +333,9 @@ images, resulting in increased page weight.
 There are two fundamentally different ways to create and store images&mdash;and
 this affects how you deploy images responsively.
 
-**Raster images** &mdash; such as photographs and other images, are 
+**Raster images** &mdash; such as photographs and other images, are
 represented as a grid of individual dots of color. Raster images might come
-from a camera or scanner, or be created with the HTML canvas element. Formats 
+from a camera or scanner, or be created with the HTML canvas element. Formats
 like PNG, JPEG, and WebP are used to store raster images.
 
 **Vector images** such as logos and line art are defined as a set of
@@ -436,14 +436,14 @@ following format:
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 The start of the code for the HTML5 logo above looks like this:
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 (The full version is over 5000 characters in length!)
 
@@ -541,7 +541,7 @@ or a 1x image on a 2x device when on a limited bandwidth network.
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 In addition to loading the correct image, the browser also scales it
 accordingly. In other words, the browser assumes that 2x images are twice as
@@ -564,8 +564,8 @@ otherwise it falls back to the 1x asset. The obvious caveat is that while
 
 ### Use media queries to provide high res images or art direction
 
-Media queries can create rules based on the 
-[device pixel ratio](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), 
+Media queries can create rules based on the
+[device pixel ratio](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg),
 making it possible to specify different images for 2x versus 1x displays.
 
 
@@ -574,7 +574,7 @@ making it possible to specify different images for 2x versus 1x displays.
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox, and Opera all support the standard `(min-resolution: 2dppx)`,
 while the Safari and Android browsers both require the older vendor prefixed
@@ -600,10 +600,10 @@ downloaded and applied to the `body` if the browser width is 500px or greater:
         background-image: url(bg.png);
       }
     }
-    
 
 
-## Use SVG for icons 
+
+## Use SVG for icons
 
 When adding icons to your page, use SVG icons where possible or in some
 cases, unicode characters.
@@ -619,7 +619,7 @@ Many fonts include support for the myriad of unicode glyphs, which can be used
 instead of images. Unlike images, unicode fonts scale well and look good no
 matter how small or large they appear on screen.
 
-Beyond the normal character set, unicode may include symbols for 
+Beyond the normal character set, unicode may include symbols for
 arrows (&#8592;), math operators (&#8730;), geometric shapes
 (&#9733;), control pictures (&#9654;), music notation (&#9836;),
 Greek letters (&#937;), even chess pieces (&#9822;).
@@ -629,18 +629,18 @@ Including a unicode character is done in the same way named entities are:
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
 ### Replace complex icons with SVG
 
-For more complex icon requirements, SVG icons are generally lightweight, 
+For more complex icon requirements, SVG icons are generally lightweight,
 easy to use, and can be styled with CSS. SVG have a number of advantages over
 raster images:
 
 * They're vector graphics that can be infinitely scaled.
-* CSS effects such as color, shadowing, transparency, and animations are 
+* CSS effects such as color, shadowing, transparency, and animations are
   straightforward.
 * SVG images can be inlined right in the document.
 * They are semantic.
@@ -665,18 +665,18 @@ raster images:
   </figcaption>
 </figure>
 
-Icon fonts are popular, and can be easy to use, but have some drawbacks 
+Icon fonts are popular, and can be easy to use, but have some drawbacks
 compared to SVG icons:
 
-* They're vector graphics that can be infinitely scaled, but may be 
+* They're vector graphics that can be infinitely scaled, but may be
   anti-aliased resulting in icons that aren’t as sharp as expected.
 * Limited styling with CSS.
-* Pixel perfect positioning can be difficult, depending on line-height, 
+* Pixel perfect positioning can be difficult, depending on line-height,
   letter spacing, etc.
-* They aren't semantic, and can be difficult to use with screen readers or 
+* They aren't semantic, and can be difficult to use with screen readers or
   other assistive technology.
-* Unless properly scoped, they can result in a large file size for only using a 
-  small subset of the icons available. 
+* Unless properly scoped, they can result in a large file size for only using a
+  small subset of the icons available.
 
 <div style="clear:both;"></div>
 
@@ -798,7 +798,7 @@ improvements, using lazy loading can create infinite scrolling experiences.
 
 Be careful when creating infinite scrolling pages&mdash;because content is loaded as
 it becomes visible, search engines may never see that content.  In addition,
-users who are looking for information they expect to see in the footer, 
+users who are looking for information they expect to see in the footer,
 never see the footer because new content is always loaded.
 
 
@@ -825,7 +825,7 @@ and if necessary use webfonts to achieve the style you need.
 
 Modern browsers can use CSS features to create styles that would previously have
 required images.  For example: complex gradients can be created using the
-`background` property, shadows can be created using `box-shadow`, and rounded 
+`background` property, shadows can be created using `box-shadow`, and rounded
 corners can be added with the `border-radius` property.
 
 <style>
@@ -862,7 +862,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Keep in mind that using these techniques does require rendering cycles, which
 can be significant on mobile.  If over-used, you'll lose any benefit you may
