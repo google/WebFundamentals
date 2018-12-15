@@ -15,6 +15,10 @@ toc:
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
+  - title: Guides
+    section:
+    - title: Force DevTools Into Print Preview Mode
+      path: /web/tools/chrome-devtools/css/print-preview
 - title: JavaScript
   section:
   - title: Get Started
@@ -49,7 +53,13 @@ toc:
   - title: Keyboard Shortcuts
     path: /web/tools/chrome-devtools/shortcuts
 - title: Accessibility
-  path: /web/tools/chrome-devtools/accessibility/reference
+  section:
+  - title: Reference
+    path: /web/tools/chrome-devtools/accessibility/reference
+  - title: Guides
+    section:
+    - title: Track Which Element Has Focus
+      path: /web/tools/chrome-devtools/accessibility/focus
 - title: Simulate Mobile Devices
   section:
   - title: Overview

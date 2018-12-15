@@ -293,6 +293,11 @@ The following keyboard shortcuts are available in most, if not all, DevTools pan
       <td><kbd>Shift</kbd>+<kbd>F11</kbd> or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd></td>
     </tr>
     <tr>
+      <td><a href="/web/updates/2017/05/devtools-release-notes#continue">Continue to a certain line of code while paused</a></td>
+      <td>Hold <kbd>Command</kbd> and then click the line of code</td>
+      <td>Hold <kbd>Control</kbd> and then click the line of code</td>
+    </tr>
+    <tr>
       <!-- TODO mention that it only works when paused on a line -->
       <td>Select the call frame below / above the currently-selected frame</td>
       <td><kbd>Control</kbd>+<kbd>.</kbd> / <kbd>Control</kbd>+<kbd>,</kbd></td>

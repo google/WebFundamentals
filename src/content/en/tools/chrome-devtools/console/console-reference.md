@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2016-03-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -46,22 +46,31 @@ focus still works.
 
 See [Clearing the console](index#clearing) for more information.
 
-## console.count(label) {:#count}
+## console.count([label]) {:#count}
 
 Writes the number of times that `count()` has been invoked at the same 
-line and with the same label.
+line and with the same (optional) label.
 
+    console.count(); // default: 1
+    console.count(); // default: 2
+    console.count('cat'); // cat: 1
+    console.count(); // default: 3
+    console.count('cat'); // cat: 2
 
-    function login(name) {
-      console.count(name + ' logged in');
-    }
-    
+See also [`console.countReset([label])`](#countreset).
 
-![console.count() example](images/count.png)
+## console.countReset([label]) {: #countreset }
 
-See [Counting Statement Executions][cse] for more examples.
+Resets the count.
 
-[cse]: track-executions#counting-statement-executions
+    console.countReset();
+
+If you pass a label, the count is reset for that label only.
+
+    console.count('cat'); // cat: 1
+    console.count('cat'); // cat: 2
+    console.countReset('cat');
+    console.count('cat'); // cat: 1
 
 ## console.debug(object [, object, ...])
 
