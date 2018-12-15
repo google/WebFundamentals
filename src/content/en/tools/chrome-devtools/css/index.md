@@ -108,6 +108,9 @@ var feedback = {
   </figcaption>
 </figure>
 
+If you'd like to dock your DevTools window to the right of your viewport, like
+you see in **Figure 1**, see [Change DevTools placement](/web/tools/chrome-devtools/ui#placement).
+
 <figure>
   <img src="imgs/aloha.png"
        alt="CSS classes being applied to the inspected element are highlighted
