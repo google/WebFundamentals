@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to use Chrome DevTools to view and change a page's CSS.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2017-06-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -226,7 +226,7 @@ before doing this one.
      {% include "web/tools/chrome-devtools/css/_margin.html" %}
 
 1. In the **Box Model** diagram in the **Styles** tab, hover over
-   **padding**. The element's margin is highlighted in the viewport.
+   **padding**. The element's padding is highlighted in the viewport.
 
      <aside class="note"><b>Note</b>: Depending on the size of your DevTools
      window, you may need to scroll to the bottom of the <b>Styles</b> tab to
