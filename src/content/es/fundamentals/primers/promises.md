@@ -120,7 +120,7 @@ Una promesa puede ser de estas clases:
 * **settled (finalizada)**: se completa o se rechaza.
 
 
-En [las especificaciones](http://www.ecma-international.org/ecma-262/#sec-promise-objects), también aparece el término **thenable** para describir un objeto parecido a una promesa porque tiene un método `then`. Este término me recuerda a [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables), un ex entrenador de fútbol de Inglaterra, así que lo usaré lo menos posible.
+En [las especificaciones](https://www.ecma-international.org/ecma-262/#sec-promise-objects), también aparece el término **thenable** para describir un objeto parecido a una promesa porque tiene un método `then`. Este término me recuerda a [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables), un ex entrenador de fútbol de Inglaterra, así que lo usaré lo menos posible.
 
 
 ## ¡Llegaron las promesas a JavaScript!

@@ -120,7 +120,7 @@ Uma promessa pode ser:
 * **definida** - a ação foi atendida ou rejeitada
 
 
-[A especificação](http://www.ecma-international.org/ecma-262/#sec-promise-objects) também usa o termo **thenable** para descrever um objeto semelhante à promessa, no sentido de que tem um método `then`. Esse termo me lembra do ex-dirigente do futebol inglês, [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables). Por isso, vou usá-lo o menos possível.
+[A especificação](https://www.ecma-international.org/ecma-262/#sec-promise-objects) também usa o termo **thenable** para descrever um objeto semelhante à promessa, no sentido de que tem um método `then`. Esse termo me lembra do ex-dirigente do futebol inglês, [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables). Por isso, vou usá-lo o menos possível.
 
 
 ## As promessas chegaram ao JavaScript!

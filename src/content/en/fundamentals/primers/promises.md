@@ -160,7 +160,7 @@ A promise can be:
 * **settled** - Has fulfilled or rejected
 
 
-[The spec](http://www.ecma-international.org/ecma-262/#sec-promise-objects)
+[The spec](https://www.ecma-international.org/ecma-262/#sec-promise-objects)
 also uses the term **thenable** to describe an object that is promise-like,
 in that it has a `then` method. This term reminds me of ex-England Football
 Manager [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) so

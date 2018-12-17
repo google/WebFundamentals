@@ -120,7 +120,7 @@ Promise の状態は次のいずれかです。
 * **完了** - 解決または棄却された
 
 
-[仕様](http://www.ecma-international.org/ecma-262/#sec-promise-objects)では、`then` メソッドを持っているという点で Promise に似ているオブジェクトを示すために **thenable** という用語も使用されています。この用語はイングランド サッカーの前のマネージャーである [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) を思い出させるので、できるだけ使わないようにします。
+[仕様](https://www.ecma-international.org/ecma-262/#sec-promise-objects)では、`then` メソッドを持っているという点で Promise に似ているオブジェクトを示すために **thenable** という用語も使用されています。この用語はイングランド サッカーの前のマネージャーである [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) を思い出させるので、できるだけ使わないようにします。
 
 
 ## JavaScript に Promise がやってきた

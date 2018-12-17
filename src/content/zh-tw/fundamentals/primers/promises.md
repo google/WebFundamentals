@@ -120,7 +120,7 @@ promise 可以是：
 * **已解決** - 已執行或拒絕
 
 
-[本規範](http://www.ecma-international.org/ecma-262/#sec-promise-objects)還使用術語 **thenable** 來描述類似於 promise 的對象，並使用 `then` 方法。該術語讓我想起前英格蘭國家隊教練 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)，因此我將盡可能不用這個術語。
+[本規範](https://www.ecma-international.org/ecma-262/#sec-promise-objects)還使用術語 **thenable** 來描述類似於 promise 的對象，並使用 `then` 方法。該術語讓我想起前英格蘭國家隊教練 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)，因此我將盡可能不用這個術語。
 
 
 ##  Promise 在 JavaScript 中受支持！

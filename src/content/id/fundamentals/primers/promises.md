@@ -120,7 +120,7 @@ Sebuah promise bisa berupa:
 * **settled** - sudah terlaksana atau ditolak
 
 
-[Spesifikasi](http://www.ecma-international.org/ecma-262/#sec-promise-objects) juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise, karena ia memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi saya akan menggunakannya sesedikit mungkin.
+[Spesifikasi](https://www.ecma-international.org/ecma-262/#sec-promise-objects) juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise, karena ia memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi saya akan menggunakannya sesedikit mungkin.
 
 
 ## Promise hadir di JavaScript!
