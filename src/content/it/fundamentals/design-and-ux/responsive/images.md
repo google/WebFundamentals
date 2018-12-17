@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Il Web design reactive consente di modificare disposizione e immagini in base alle caratteristiche del dispositivo.
 
-{# wf_updated_on: 2017-11-10 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2000-01-01 #}
 
 
@@ -42,7 +42,7 @@ per ulteriori esempi.
 {% include "web/_shared/udacity/ud882.html" %}
 
 
-## Immagini nel markup 
+## Immagini nel markup
 
 Il potente elemento<code>img</code> consente di scaricare, decodificare e
 renderizzare i contenuti, mentre i browser odierni supportano numerosi formati
@@ -76,7 +76,7 @@ altri contenuti. Ad esempio:
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Inserisci descrizioni dettagliate con l'attributo `alt` degli elementi `img`
 per ottimizzare l'accessibilità del sito e fornire contesto ai lettori di
@@ -104,7 +104,7 @@ limiti di larghezza di banda.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 I browser che non supportano `srcset` utilizzano il file di immagine predefinito
 indicato dall'attributo `src`. Per questo motivo fondamentale inserire sempre
@@ -133,7 +133,7 @@ artistica" srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Note: L'elemento `picture` inizia a essere supportato dai browser. Anche se non
 è disponibile in tutti i browser, è consigliabile utilizzarlo grazie alla
 retroattività e alla possibilità di utilizzare una [polilinea
-Picturefill](http://picturefill.responsiveimages.org/). Consulta il sito
+Picturefill](https://scottjehl.github.io/picturefill/). Consulta il sito
 [ResponsiveImages.org](http://responsiveimages.org/#implementation) per maggiori
 informazioni.
 
@@ -163,7 +163,7 @@ base alla risoluzione del dispositivo viene utilizzato `head.jpg` o
 in questo caso viene utilizzato `head.jpg` o `head-2x.jpg` a seconda della
 risoluzione del dispositivo. Con schermi di larghezze inferiori a 450 pixel e
 retrocompatibilità nei casi in cui l'elemento `picture` non sia supportato, il
-browser esegue il rendering dell'elemento `img` (che occorre includere sempre). 
+browser esegue il rendering dell'elemento `img` (che occorre includere sempre).
 
 
 #### Immagini con dimensioni relative
@@ -245,7 +245,7 @@ che verrà utilizzata dal browser:
 In alcuni casi, le dimensioni o l'immagine potrebbero variare in base ai
 breakpoint della disposizione del sito. Ad esempio, con schermi di dimensioni
 ridotte l'immagine potrebbe coprire l'intera larghezza del viewport, mentre su
-schermi più grandi potrebbe occuparne solo una piccola parte. 
+schermi più grandi potrebbe occuparne solo una piccola parte.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
@@ -318,7 +318,7 @@ dell'attivazione dell'evento `pageload`. Inoltre, il browser scarica l'immagine
 1x e 2x causando un aumento del peso della pagina.
 
 
-## Immagini in CSS 
+## Immagini in CSS
 
 La proprietà 'background' CSS è un potente strumento per l'aggiunta di immagini
 complesse agli elementi in modo da semplificare l'inserimento di immagini
@@ -372,7 +372,7 @@ con larghezza di banda limitata.
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Oltre al caricamento dell'immagine appropriata, il browser ne esegue un
 ridimensionamento adeguato. In altri termini, il browser suppone che le immagini
@@ -406,7 +406,7 @@ diverse immagini per la visualizzazione 2x o 1x.
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox e Opera supportano lo standard `(min-resolution: 2dppx)`, mentre
 Safari e il browser di Android richiedono una sintassi prefissata del fornitore
@@ -431,9 +431,9 @@ e applicato a `body` solo se la larghezza del browser è di almeno 500 pixel:
         background-image: url(bg.png);
       }
     }
-    	
 
-## Utilizzo di SVG per le icone 
+
+## Utilizzo di SVG per le icone
 
 Per aggiungere icone alla pagina cerca di utilizzare icone SVG o i caratteri
 unicode.
@@ -451,7 +451,7 @@ unicode ottenendo una qualità ottimale in qualsiasi dimensione.
 
 Oltre al normale insieme set di caratteri, l'unicode inlcude simboli per forme
 numeriche (&#8528;), frecce (&#8592;), operatori matematici (&#8730;), forme
-geometriche (&#9733;), immagini di controllo (&#9654;), schemi braille 
+geometriche (&#9733;), immagini di controllo (&#9654;), schemi braille
 (&#10255;), note musicali (&#9836;), lettere greche (&#937;) e pezzi degli
 scacchi (&#9822;).
 
@@ -461,7 +461,7 @@ del carattere unicode. Ad esempio:
 
 
     Sei un super&#9733;
-    
+
 
 Sei un super&#9733;
 
@@ -497,7 +497,7 @@ rispetto alle icone SVG.
 * Non essendo elementi semantici, sono inadatti a lettori dello schermo o altre
   tecnologie di assistenza.
 * Se non utilizzati al meglio possono creare file di grandi dimensioni anche con
-  l'utilizzo di un gruppo ridotto di icone. 
+  l'utilizzo di un gruppo ridotto di icone.
 
 
 
@@ -509,7 +509,7 @@ alt="Esempio di pagina che utilizza FontAwesome come icone dei caratteri.">
 </pre>
 
 Esistono diversi caratteri per icone gratuiti e a pagamento come [Font
-Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, 
+Awesome](http://fortawesome.github.io/Font-Awesome/){: .external },
 [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
 
 Equilibra il peso delle richieste HTTP aggiuntive e le dimensioni del file con
@@ -517,7 +517,7 @@ le esigenze in termini di icone. Ad esempio, se occorrono poche icone è
 consigliabile l'utilizzo di un'immagine o di uno sprite di immagine.
 
 
-## Ottimizzazione delle immagini per un rendimento ottimale 
+## Ottimizzazione delle immagini per un rendimento ottimale
 
 Spesso le immagini richiedono il download di molti dati e occupano una parte
 rilevante dello spazio di visualizzazione della pagina. L'ottimizzazione delle
@@ -541,7 +541,7 @@ numero di byte da scaricare.
 ### Scelta del formato corretto
 
 Esistono due tipi di immagini da prendere in considerazione: [immagini
-vettoriali](http://it.wikipedia.org/wiki/Grafica_vettoriale){: .external } e 
+vettoriali](http://it.wikipedia.org/wiki/Grafica_vettoriale){: .external } e
 [immagini raster](http://it.wikipedia.org/wiki/Grafica_raster). Per le immagini
 raster occorre selezionare il formato di compressione appropriato, come ad
 esempio GIF, PNG e JPG.
@@ -566,7 +566,7 @@ l'origine dell'immagine (raster o vettoriale) e i contenuti (colori, animazioni,
 testo e così via). Non esiste un formato adatto a tutti i tipi di immagini:
 ciascun formato presenta vantaggi e svantaggi.
 
-Per scegliere il formato corretto attieniti alle linee guida seguenti: 
+Per scegliere il formato corretto attieniti alle linee guida seguenti:
 
 * Utilizza il JPG per le fotografie.
 * Utilizza l'SVG per gli elementi grafici vettoriali e a tinta unita come logo
@@ -627,7 +627,7 @@ del continuo caricamento dei nuovi contenuti.
 {# include shared/related_guides.liquid inline=true list=page.related-guides.optimize #}
 
 
-## Evitare le immagini 
+## Evitare le immagini
 
 In alcuni casi, è consigliabile evitare l'utilizzo delle immagini. Se possibile,
 utilizza le funzionalità native del browser per offrire funzionalità analoghe. I
@@ -656,11 +656,11 @@ gradienti complessi con la proprietà `background`, ombre con `box-shadow` e
 angoli smussati con `border-radius`.
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -673,7 +673,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Inoltre, l'utilizzo di queste tecniche non richiede cicli di rendering, cosa
 molto importante per i dispositivi mobili. Attenzione a non esagerare, poiché

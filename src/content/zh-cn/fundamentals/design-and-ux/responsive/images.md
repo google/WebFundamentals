@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:一图胜千言，图像也是每个页面不可或缺的组成部分。但是，图像通常也占了下载字节的多数。有了自适应网页设计，不仅我们的布局能根据设备特性而变化，图像也可以。
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 图像 {: .page-title }
@@ -133,7 +133,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 <div style="clear:both;"></div>
 
-Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是每个浏览器都支持，但我们推荐使用它，因为它具备出色的向后兼容性，还可以使用 [Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external }。如需了解更多详细信息，请参阅 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 网站。
+Dogfood：`picture` 元素刚开始在浏览器上实现。虽然目前还不是每个浏览器都支持，但我们推荐使用它，因为它具备出色的向后兼容性，还可以使用 [Picturefill polyfill](https://scottjehl.github.io/picturefill/){: .external }。如需了解更多详细信息，请参阅 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 网站。
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"

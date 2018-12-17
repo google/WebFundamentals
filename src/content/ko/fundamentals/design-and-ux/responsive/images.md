@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 하나의 그림은 1000단어의 가치가 있으며, 이미지는 모든 페이지에서 중요한 역할을 합니다. 그러나 이미지는 다운로드되는 바이트의 대부분을 차지하기도 합니다.  반응형 웹 디자인은 기기 특성에 따라 레이아웃을 변경할 뿐만 아니라 이미지도 변경할 수 있습니다.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 이미지 {: .page-title }
@@ -80,7 +80,7 @@ CSS에서는 콘텐츠가 컨테이너를 오버플로하도록 허용하므로,
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 `img` 요소의 `alt` 속성을 통해 의미있는 설명을 제공하세요.
 그러면 스크린 리더와 기타 보조 기술에 대한 컨텍스트를 제공하여,
@@ -109,7 +109,7 @@ CSS에서는 콘텐츠가 컨테이너를 오버플로하도록 허용하므로,
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 `srcset`를 지원하지 않는 브라우저에서는 `src` 속성에 의해 지정된
 기본 이미지 파일을 사용합니다.  이러한 이유 때문에,
@@ -137,7 +137,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 <div style="clear:both;"></div>
 
-Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. 아직은 이 요소가 모든 브라우저에서 제공되지는 않지만, 뛰어난 이전 버전과의 호환성과 [Picturefill 폴리필](http://picturefill.responsiveimages.org/){: .external }의 잠재적 용도가 있기 때문에 이 요소를 사용하는 것이 좋습니다. 자세한 내용은 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 사이트를 참조하세요.
+Dogfood: `picture` 요소가 브라우저에 들어가기 시작했습니다. 아직은 이 요소가 모든 브라우저에서 제공되지는 않지만, 뛰어난 이전 버전과의 호환성과 [Picturefill 폴리필](https://scottjehl.github.io/picturefill/){: .external }의 잠재적 용도가 있기 때문에 이 요소를 사용하는 것이 좋습니다. 자세한 내용은 [ResponsiveImages.org](http://responsiveimages.org/#implementation) 사이트를 참조하세요.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -399,14 +399,14 @@ SVG에는 모바일 및 데스크톱에 대한 [뛰어난 지원](http://caniuse
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 HTML5 로고의 코드 시작은 다음과 같습니다.
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 (전체 버전은 길이가 5000자 이상입니다!)
 
@@ -483,7 +483,7 @@ CSS의 `image-set()` 함수는 동작 `background` 속성을 개선하여
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 브라우저는 정확한 이미지를 로드할 뿐만 아니라
 그에 따라 배율도 조정합니다. 즉, 브라우저는 2x 이미지가 1x 이미지보다 두 배 더 크다고
@@ -516,7 +516,7 @@ CSS의 `image-set()` 함수는 동작 `background` 속성을 개선하여
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 지원하는 반면, Safari 및 Android 브라우저는 `dppx` 단위가 없는
@@ -542,10 +542,10 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
         background-image: url(bg.png);
       }
     }
-    
 
 
-## 아이콘에 SVG 사용 
+
+## 아이콘에 SVG 사용
 
 아이콘을 페이지에 추가할 때, 가능하면 SVG 아이콘을 사용하고
 일부 경우에는 유니코드 문자를 사용합니다.
@@ -561,7 +561,7 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 이것을 이미지 대신 사용할 수 있습니다. 이미지와 달리 유니코드 글꼴은 큰 화면이든 작은 화면이든
 상관없이 보기가 좋고 확장이 잘됩니다.
 
-일반 문자 집합을 넘어서는 유니코드에는 
+일반 문자 집합을 넘어서는 유니코드에는
 화살표(&#8592;), 수학 연산자(&#8730;), 기하학적 모양
 (&#9733;), 컨트롤 사진(&#9654;), 음악 표기(&#9836;),
 그리스 문자(&#937;), 심지어는 체스 말(&#9822;)에 대한 기호가 포함될 수 있습니다.
@@ -571,7 +571,7 @@ Chrome, Firefox 및 Opera는 모두 표준 `(min-resolution: 2dppx)`를
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
@@ -618,7 +618,7 @@ You're a super &#9733;
 * 문맥적이 아니며, 스크린 리더 또는 기타 보조 기술과 함께
 사용하기가 어려울 수 있습니다.
 * 범위가 잘못 지정될 경우, 제공되는 아이콘의 일부만을
-사용하기 위해 파일 크기가 커질 수 있습니다. 
+사용하기 위해 파일 크기가 커질 수 있습니다.
 
 <div style="clear:both;"></div>
 
@@ -797,7 +797,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 이러한 기법을 사용하려면 렌더링 주기가 필요하며
 모바일에서 상당한 부담이 될 수 있다는 점에 유의하세요.  지나치게 사용할 경우, 얻을 수 있는 이점이 사라지고
