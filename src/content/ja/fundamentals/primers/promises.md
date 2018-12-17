@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: "Promise は、延期された非同期の計算を簡素化します。Promise はまだ完了していない操作を表します。"
 
 {# wf_published_on:2013-12-16 #}
-{# wf_updated_on:2014-01-29 #}
+{# wf_updated_on:2018-12-14 #}
 
 # JavaScript の Promise: 概要 {: .page-title }
 
@@ -120,7 +120,7 @@ Promise の状態は次のいずれかです。
 * **完了** - 解決または棄却された
 
 
-[仕様](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)では、`then` メソッドを持っているという点で Promise に似ているオブジェクトを示すために **thenable** という用語も使用されています。この用語はイングランド サッカーの前のマネージャーである [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) を思い出させるので、できるだけ使わないようにします。
+[仕様](https://www.ecma-international.org/ecma-262/#sec-promise-objects)では、`then` メソッドを持っているという点で Promise に似ているオブジェクトを示すために **thenable** という用語も使用されています。この用語はイングランド サッカーの前のマネージャーである [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) を思い出させるので、できるだけ使わないようにします。
 
 
 ## JavaScript に Promise がやってきた
