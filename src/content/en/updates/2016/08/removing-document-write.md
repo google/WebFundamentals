@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome is blocking some scripts that are added using document.write()
 
 {# wf_blink_components: Blink>DOM #}
-{# wf_updated_on: 2018-12-14 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2016-08-29 #}
 {# wf_tags: interventions,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -199,5 +199,3 @@ To learn more, see these additional resources:
 ## Feedback {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
-
-{% include "comment-widget.html" %}
