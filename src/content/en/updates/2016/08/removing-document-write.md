@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is blocking some scripts that are added using document.write()
 
-{# wf_updated_on: 2016-12-02 #}
+{# wf_blink_components: Blink>DOM #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2016-08-29 #}
 {# wf_tags: interventions,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
@@ -195,5 +196,6 @@ To learn more, see these additional resources:
 * [Additional rationale for this effort](https://docs.google.com/document/d/1dMJRQKTw75ZNdknP3pirSBH3koPl_IWHnxlcBuu4t_c/preview)
 * [blink-dev Intent to implement thread](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HGh92uMX_kE/discussion)
 
+## Feedback {: #feedback }
 
-{% include "comment-widget.html" %}
+{% include "web/_shared/helpful.html" %}
