@@ -1,5 +1,17 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/required-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-required-attr
+
+- from: /web/tools/lighthouse/audits/valid-aria-values
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr-value
+
+- from: /web/tools/lighthouse/audits/valid-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr
+
+- from: /web/tools/lighthouse/audits/aria-allowed-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-allowed-attr
+
 - from: /web/tools/lighthouse/audits/unoptimized-images
   to: /web/tools/lighthouse/audits/optimize-images
 

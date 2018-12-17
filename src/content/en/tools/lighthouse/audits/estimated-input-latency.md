@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Estimated Input Latency" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2016-10-05 #}
 {# wf_blink_components: N/A #}
 
@@ -29,15 +29,16 @@ less calculations, to using CSS properties that minimize the amount of
 browser-intensive operations.
 
 One important caveat of this audit is that it's not a complete measurement of
-input latency. As explained in the [What this doc tests for](#what) section
+input latency. As explained in the [More information](#more-info) section
 of this doc, this audit does not measure how long your app truly takes
 to respond to a user input. In other words, it does not measure that your app's
 response to the user's input is visually complete.
 
+[devtools]: /web/tools/chrome-devtools/speed/get-started#main
+
 To measure this manually, make a recording with the
-Chrome DevTools Timeline. See [How to use the Timeline
-Tool](/web/tools/chrome-devtools/evaluate-performance/timeline-tool) for more
-help. The basic idea is to start a recording, perform the user input that
+Chrome DevTools Timeline. See [Do less main thread work][devtools] for an example of the
+workflow. The basic idea is to start a recording, perform the user input that
 you want to measure, stop the recording, and then analyze the flame chart
 to ensure that all stages of [the pixel
 pipeline](/web/fundamentals/performance/rendering/#the_pixel_pipeline) are

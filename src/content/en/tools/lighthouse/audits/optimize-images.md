@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A guide on how to pass the "Optimize Images" Lighthouse audit.
 
-{# wf_updated_on: 2018-12-04 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2017-06-20 #}
 {# wf_blink_components: N/A #}
 
@@ -31,6 +31,11 @@ Optimize each of these images in order to pass this audit.
 [EIO]: https://images.guide/
 
 The canonical guide for image optimization is [Essential Image Optimization][EIO]{: .external rel="noopener" }.
+
+### web.dev tutorials {: #webdev }
+
+[web.dev](https://web.dev) has a collection of tutorials on the topic of optimizing images.
+See [Optimize your images](https://web.dev/fast/#topic-Optimize-your-images).
 
 ### Explore different image formats {: #formats }
 
@@ -96,6 +101,9 @@ computer and run as a GUI. For example, with [ImageOptim](https://imageoptim.com
 you drag and drop images into its UI, and then it automatically compresses the images
 without compromising quality noticeably. If you're running a small site and can handle manually
 optimizing all images, this option is probably good enough.
+
+[Squoosh](https://squoosh.app/) is another option. Squoosh is maintained by the Google
+Web DevRel team, the team that runs developers.google.com/web.
 
 ### Command line tools {: #cli }
 

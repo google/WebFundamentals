@@ -108,14 +108,6 @@ toc:
     path: /web/tools/lighthouse/audits/button-name
   - title: Document Doesn't Have A Title Element
     path: /web/tools/lighthouse/audits/title
-  - title: Element aria-* Attributes Are Allowed For This Role
-    path: /web/tools/lighthouse/audits/aria-allowed-attributes
-  - title: Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent
-    path: /web/tools/lighthouse/audits/valid-aria-attributes
-  - title: Element aria-* Attributes Have Valid Values
-    path: /web/tools/lighthouse/audits/valid-aria-values
-  - title: Elements With ARIA Roles Have The Required aria-* Attributes
-    path: /web/tools/lighthouse/audits/required-aria-attributes
   - title: Every Form Element Has A Label
     path: /web/tools/lighthouse/audits/form-labels
   - title: Every Image Has An alt Attribute
