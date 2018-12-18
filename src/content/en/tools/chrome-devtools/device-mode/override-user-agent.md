@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Open the Network conditions tab, disable "Select automatically", and choose from the list or enter a custom string.
 
-{# wf_updated_on: 2018-12-14 #}
+{# wf_updated_on: 2018-12-18 #}
 {# wf_published_on: 2018-12-14 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -22,6 +22,7 @@ To override the [user agent][ua]{: .external } string from Chrome DevTools:
             alt="The Command Menu."/>
        <figcaption>
          <b>Figure 1</b>. The Command Menu
+       </figcaption>
      </figure>
 
 1. Type `network conditions`, select **Show Network conditions**, and press <kbd>Enter</kbd>
@@ -33,6 +34,7 @@ To override the [user agent][ua]{: .external } string from Chrome DevTools:
             alt="Disabling 'Select automatically'."/>
        <figcaption>
          <b>Figure 2</b>. Disabling <b>Select automatically</b>
+       </figcaption>
      </figure>
 
 1. Select a user agent string from the list, or enter your own custom string.

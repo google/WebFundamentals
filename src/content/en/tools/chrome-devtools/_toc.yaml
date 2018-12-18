@@ -64,18 +64,23 @@ toc:
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
-  - title: Emulate Geolocation and Accelerometer Sensors
-    path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
   - title: Guides
     section:
     - title: Override The User Agent String
       path: /web/tools/chrome-devtools/device-mode/override-user-agent
+    - title: Override Geolocation
+      path: /web/tools/chrome-devtools/device-mode/geolocation
+    - title: Simulate Device Orientation
+      path: /web/tools/chrome-devtools/device-mode/orientation
   - title: Deprecated
     section:
     - title: Test Responsive and Device-Specific Viewports
       path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      status: deprecated
+    - title: Emulate Geolocation and Accelerometer Sensors
+      path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
       status: deprecated
 - title: Remote Debug Android Devices
   section:
