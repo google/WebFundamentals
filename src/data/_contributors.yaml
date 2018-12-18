@@ -1680,6 +1680,19 @@ yoichiro:
   description:
     en: Yoichiro is a Google Developers Expert
 
+franktang:
+  name:
+    given: Frank
+    family: Tang
+  org:
+    name: Google
+  role:
+    - author
+  github: FrankYFTang
+  email: ftang@google.com
+  description:
+    en: i18n engineer
+
 dtapuska:
   name:
     given: Dave
