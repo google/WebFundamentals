@@ -2,13 +2,13 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn about all the ways you can pause your code in Chrome DevTools.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-18 #}
 {# wf_published_on: 2017-02-03 #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-# Pause Your Code With Breakpoints {: .page-title }
+# How To Pause Your Code With Breakpoints In Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
