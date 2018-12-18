@@ -73,11 +73,11 @@ Here’s an example of using a different language (Chinese, with language code `
 const lf = new Intl.ListFormat('zh');
 lf.format(['永鋒']);
 // → '永鋒'
-lf.format(['永鋒','新宇']);
+lf.format(['永鋒', '新宇']);
 // → '永鋒和新宇'
-lf.format(['永鋒','新宇','芳遠']);
+lf.format(['永鋒', '新宇', '芳遠']);
 // → '永鋒、新宇和芳遠'
-lf.format(['永鋒','新宇','芳遠','澤遠']);
+lf.format(['永鋒', '新宇', '芳遠', '澤遠']);
 // → '永鋒、新宇、芳遠和澤遠'
 ```
 
