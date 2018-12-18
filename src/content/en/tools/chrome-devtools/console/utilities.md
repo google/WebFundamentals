@@ -2,21 +2,21 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-12-02 #}
+{# wf_updated_on: 2018-12-18 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# Command Line API Reference {: .page-title }
+# Console Utilities API Reference {: .page-title }
 
 {% include "web/_shared/contributors/andismith.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-The Command Line API contains a collection of convenience functions for performing common
+The Console Utilities API contains a collection of convenience functions for performing common
 tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and
 starting the profiler, and monitoring DOM events.
 
-Note: This API is only available from within the console itself. You cannot access the Command
-Line API from scripts on the page.
+Warning: These functions are only available from within the DevTools Console. They won't work
+if you try to call them in your scripts.
 
 Note: If you are looking for functions that write to the Console 
 (functions that start with `console.*`), consult the ![Console API] 

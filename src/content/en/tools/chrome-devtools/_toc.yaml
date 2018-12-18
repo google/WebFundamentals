@@ -91,6 +91,10 @@ toc:
     path: /web/tools/chrome-devtools/console/
   - title: Get Started
     path: /web/tools/chrome-devtools/console/get-started
+  - title: API Reference
+    path: /web/tools/chrome-devtools/console/api
+  - title: Utilities API Reference
+    path: /web/tools/chrome-devtools/console/utilities
   - title: Diagnose and Log to the Console
     path: /web/tools/chrome-devtools/console/console-write
   - title: Compare Similar Data Objects
@@ -99,14 +103,10 @@ toc:
     path: /web/tools/chrome-devtools/console/track-executions
   - title: Handle Exceptions and Errors
     path: /web/tools/chrome-devtools/console/track-exceptions
-  - title: Console API Reference
-    path: /web/tools/chrome-devtools/console/console-reference
   - title: Evaluate Expressions
     path: /web/tools/chrome-devtools/console/expressions
   - title: Monitor Events
     path: /web/tools/chrome-devtools/console/events
-  - title: Command Line Reference
-    path: /web/tools/chrome-devtools/console/command-line-reference
 - title: Performance
   section:
   - title: Get Started
