@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-10 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -48,6 +48,22 @@ design, to ensure an interoperable design.
         the user that there is some new activity that might require their
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/wakelock">Wake Lock API</a>
+      </td>
+      <td>
+        To avoid draining the battery, most devices will quickly fall asleep
+        when left idle. While this is fine for most of the time, there are
+        some applications that need to keep the screen or the device awake in
+        order to complete some work. The Wake Lock API provides a way to
+        prevent the device from dimming or locking the screen or prevent
+        the device from going to sleep when an application needs to keep
+        running.
         <br><br>
         <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
