@@ -215,6 +215,7 @@ discussion.
 * [Wake Lock Demo][demo] | [Wake Lock Demo source][demo-source]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
+* [Experimenting with Wake Lock API](https://medium.com/dev-channel/experimenting-with-the-wake-lock-api-b6f42e0a089f)
 * Blink Component: `Blink>WakeLock`
 
 
