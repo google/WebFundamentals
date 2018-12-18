@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Several proposals expand the existing JavaScript class syntax with new functionality. This article explains the new public class fields syntax in V8 v7.2 and Chrome 72, as well as the upcoming private class fields syntax.
 
-{# wf_updated_on: 2018-12-13 #}
+{# wf_updated_on: 2018-12-18 #}
 {# wf_published_on: 2018-12-13 #}
 {# wf_tags: javascript,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/js.png #}
@@ -211,5 +211,8 @@ soon.
 Questions about this new feature? Comments about this article? Feel free to ping me on Twitter via
 [@mathias](https://twitter.com/mathias)!
 
+## Feedback
+
 {% include "web/_shared/helpful.html" %}
+
 {% include "web/_shared/rss-widget-updates.html" %}
