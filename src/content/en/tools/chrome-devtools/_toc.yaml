@@ -64,18 +64,23 @@ toc:
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
-  - title: Emulate Geolocation and Accelerometer Sensors
-    path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
   - title: Guides
     section:
     - title: Override The User Agent String
       path: /web/tools/chrome-devtools/device-mode/override-user-agent
+    - title: Override Geolocation
+      path: /web/tools/chrome-devtools/device-mode/geolocation
+    - title: Simulate Device Orientation
+      path: /web/tools/chrome-devtools/device-mode/orientation
   - title: Deprecated
     section:
     - title: Test Responsive and Device-Specific Viewports
       path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      status: deprecated
+    - title: Emulate Geolocation and Accelerometer Sensors
+      path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
       status: deprecated
 - title: Remote Debug Android Devices
   section:
@@ -91,6 +96,10 @@ toc:
     path: /web/tools/chrome-devtools/console/
   - title: Get Started
     path: /web/tools/chrome-devtools/console/get-started
+  - title: API Reference
+    path: /web/tools/chrome-devtools/console/api
+  - title: Utilities API Reference
+    path: /web/tools/chrome-devtools/console/utilities
   - title: Diagnose and Log to the Console
     path: /web/tools/chrome-devtools/console/console-write
   - title: Compare Similar Data Objects
@@ -99,14 +108,10 @@ toc:
     path: /web/tools/chrome-devtools/console/track-executions
   - title: Handle Exceptions and Errors
     path: /web/tools/chrome-devtools/console/track-exceptions
-  - title: Console API Reference
-    path: /web/tools/chrome-devtools/console/console-reference
   - title: Evaluate Expressions
     path: /web/tools/chrome-devtools/console/expressions
   - title: Monitor Events
     path: /web/tools/chrome-devtools/console/events
-  - title: Command Line Reference
-    path: /web/tools/chrome-devtools/console/command-line-reference
 - title: Performance
   section:
   - title: Get Started

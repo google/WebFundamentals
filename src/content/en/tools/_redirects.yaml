@@ -1,5 +1,11 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/console/command-line-reference
+  to: /web/tools/chrome-devtools/console/utilities
+
+- from: /web/tools/chrome-devtools/console/console-reference
+  to: /web/tools/chrome-devtools/console/api
+
 - from: /web/tools/lighthouse/audits/required-aria-attributes
   to: https://dequeuniversity.com/rules/axe/2.2/aria-required-attr
 
