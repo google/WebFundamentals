@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 72 to help you plan.
 
-{# wf_updated_on: 2018-12-18 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2018-12-18 #}
 {# wf_tags: deprecations,removals,chrome73 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -41,9 +41,9 @@ For these reasons, this feature is being removed.
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5903385005916160) &#124;
 [Chromium Bug](https://crbug.com/779166)
 
-### Remopve rendering FTP resources.
+### Remove rendering FTP resources.
 
-FTP is a non-securable legacy protocol. When even the linux kernel is
+FTP is a non-securable legacy protocol. When even the Linux kernel is
 [migrating off of it](https://www.kernel.org/shutting-down-ftp-services.html),
 it's time to move on. One step toward deprecation and removal is to deprecate
 rendering resources from FTP servers and instead download them. Chrome will
