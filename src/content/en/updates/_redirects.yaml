@@ -5,6 +5,9 @@ redirects:
 - from: /web/updates/nic
   to: /web/updates/2018/12/nic71
 
+- from: /web/updates/2017/04/getinstalledrelatedapps
+  to: /web/updates/2018/12/get-installed-related-apps
+
 - from: /web/updates/2011/06/HTML5-Libraries---Late-June
   to: /web/updates/2011/06/HTML5-Libraries-Late-June
 

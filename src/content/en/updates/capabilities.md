@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-17 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -48,6 +48,20 @@ design, to ensure an interoperable design.
         the user that there is some new activity that might require their
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/get-installed-related-apps">
+          Get Installed Related Apps API
+        </a>
+      </td>
+      <td>
+        The <code>getInstalledRelatedApps</code> API is a new web platform API
+        that allows your web app to check to see if your native app is
+        installed on the users device, and vice versa.
         <br><br>
         <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
