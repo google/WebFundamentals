@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -24,17 +24,17 @@ Use the Chrome DevTools **Sources** panel to:
 
 ## View files {: #files }
 
-Use the **Network** pane to view all of the resources that the page has loaded.
+Use the **Page** pane to view all of the resources that the page has loaded.
 
 <figure>
-  <img src="images/sources-network-pane.png"
-       alt="The Network pane"/>
+  <img src="images/sources-page-pane.png"
+       alt="The Page pane"/>
   <figcaption>
-    <b>Figure 1</b>. The <b>Network</b> pane
+    <b>Figure 1</b>. The <b>Page</b> pane
   </figcaption>
 </figure>
 
-How the **Network** pane is organized:
+How the **Page** pane is organized:
 
 * The top-level, such as `top` in <b>Figure 1</b>, represents an [HTML frame][frame].
   You'll find `top` on every page that you visit. `top` represents the main document
@@ -49,7 +49,7 @@ How the **Network** pane is organized:
 [frame]: https://www.w3.org/TR/html401/present/frames.html
 [origin]: https://www.w3.org/TR/2011/WD-html5-20110525/origin-0.html
 
-Click a file in the **Network** pane to view its contents in the **Editor** pane. You
+Click a file in the **Page** pane to view its contents in the **Editor** pane. You
 can view any type of file. For images, you see a preview of the image.
 
 <figure>
@@ -156,7 +156,7 @@ By default, when you edit a file in the **Sources** panel, those changes are los
 reload the page. **Workspaces** enable you to save the changes that you make in DevTools to
 your file system. Essentially, this lets you use DevTools as your code editor.
 
-See [Set Up Persistence With DevTools Workspaces][WS] to get started.
+See [Edit Files With Workspaces][WS] to get started.
 
 [WS]: /web/tools/chrome-devtools/workspaces/
 
