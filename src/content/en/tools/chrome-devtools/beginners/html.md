@@ -1,7 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 
-{# wf_updated_on: 2018-09-06 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2018-08-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -384,7 +384,37 @@ source code.
 
 1. Copy the code below.
 
-<pre class="prettyprint notranslate lang-html">{% includecode content_path="web/tools/chrome-devtools/beginners/_code/final.html" html_escape="false" %}</pre>
+    <pre class="prettyprint notranslate lang-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;p&gt;Welcome to my site!&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;main&gt;
+          &lt;h1&gt;About Me&lt;/h1&gt;
+          &lt;p&gt;I am learning web development. Recent accomplishments:&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Learned how to set up my code in Glitch.&lt;/li&gt;
+            &lt;li&gt;Added content to my HTML.&lt;/li&gt;
+            &lt;li&gt;Learned how to use Chrome DevTools to experiment with content changes.&lt;/li&gt;
+            &lt;li&gt;Learned the difference between HTML and the DOM.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/main&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
 
 1. Go back to the **editor tab** and replace the contents of your `index.html` file with the code that
    you just copied.

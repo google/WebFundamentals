@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to view messages and run JavaScript in the Console.
 
-{# wf_updated_on: 2018-12-04 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -143,7 +143,7 @@ The [**Console** API][API] lets you log messages from your JavaScript to the **C
      Use `console.warn()` to warn that something has happened in your code that may cause
      problems. Use `console.error()` to call out a critical error.
 
-1. Click **Expand** ![The Expand icon][expand]{:.cdt-inl} next to `warn` and `error` to see
+1. Click **Expand** ![The Expand icon][expand]{:.inline-icon} next to `warn` and `error` to see
    the [call stack][callstack]{:.external} leading up to those messages. The function at the
    bottom of the stack called the one above it.
 
@@ -172,14 +172,13 @@ code.
          <script>
            const button = document.querySelector('button');
            button.addEventListener('click', function () {
-             const message = 'this declaration throws an error because there is no p element';
-             document.querySelector('p').textContent = message;
+             boosh.howard = "I don't buffet about in the winds of fashion.";
            });
          </script>
        {% endframebox %}
 
-     The browser throws this error when some JavaScript tries to access a DOM node that
-     doesn't exist.
+     The browser throws this error because the button's click listener is trying to access an object
+     property that doesn't exist.
 
 1. Click **Throw 404**. The browser logs a `404 (Not Found)` error, as well as others.
 
@@ -207,25 +206,9 @@ filter the **Console** to only show messages that you care about.
    `console.warn()` for warning scenarios, but this is just a contrived example to demonstrate
    filtering.
 
-       {% framebox width="auto" height="auto" enable_widgets="true" %}
-           <button class="gc-analytics-event" data-category="DevTools"
-                   data-label="Console / Get Started / 1.C.1 (Numbers)">Log Numbers</button>
-           <script>
-             const button = document.querySelector('button');
-             button.addEventListener('click', function () {
-               function isPrime(num) {
-                 for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-                   if (num % i === 0) return false;
-                 }
-                 return num !== 1;
-               };
-               for (let j = 1; j <= 1000; j++) {
-                 const label = isPrime(j) ? 'prime:' : 'not prime:';
-                 j % 3 === 0 ? console.warn(label, j) : console.log(label, j);
-               }
-             });
-           </script>
-       {% endframebox %}
+     {% framebox width="auto" height="auto" enable_widgets="true" %}
+       {% includecode content_path="web/tools/chrome-devtools/console/_code/primes.html" %}
+     {% endframebox %}
 
 1. Type `123` in the **Filter** text box. The **Console** only shows messages that contain
    `123` in either the content of the message, or the filename that caused the message.
