@@ -77,6 +77,16 @@ const SCHEMA_PROJECT = {
       },
       additionalProperties: false,
     },
+    feedback: {
+      type: 'object',
+      properties: {
+        product_id: {
+          type: 'number',
+          required: true,
+        },
+      },
+      additionalProperties: false,
+    },
   },
   additionalProperties: false,
 };
