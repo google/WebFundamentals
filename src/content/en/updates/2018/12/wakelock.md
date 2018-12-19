@@ -37,8 +37,8 @@ security and privacy issues.
 
 ### Suggested use cases for the Wake Lock API {: #use-cases }
 
-[RioRun](riorun.theguardian.com) a web app developed by
-[The Guardian](https://www.theguardian.com/sport/2016/aug/06/rio-running-app-marathon-course-riorun)
+[RioRun](https://www.theguardian.com/sport/2016/aug/06/rio-running-app-marathon-course-riorun) a web app developed by
+[The Guardian](https://www.theguardian.com/)
 that takes you on a virtual audio tour of Rio, following the route of the 2016
 Olympic marathon would be a perfect use case. Without wake locks, your screen
 will turn off frequently, making it hard to use.
@@ -215,7 +215,7 @@ discussion.
 * [Wake Lock Demo][demo] | [Wake Lock Demo source][demo-source]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
-* [Experimenting with Wake Lock API](https://medium.com/dev-channel/experimenting-with-the-wake-lock-api-b6f42e0a089f)
+* [Experimenting with the Wake Lock API](https://medium.com/dev-channel/experimenting-with-the-wake-lock-api-b6f42e0a089f)
 * Blink Component: `Blink>WakeLock`
 
 
