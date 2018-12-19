@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2018-12-18 #}
+{# wf_updated_on: 2018-12-19 #}
 {# wf_published_on: 2016-03-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -72,7 +72,7 @@ If you pass a label, the count is reset for that label only.
     console.countReset('cat');
     console.count('cat'); // cat: 1
 
-## console.debug(object [, object, ...])
+## console.debug(object [, object, ...]) {: #debug }
 
 Identical to [`console.log()`](#log).
 
@@ -93,7 +93,7 @@ in [String substitution and formatting][of].
 
 [of]: console-write#string-substitution-and-formatting
 
-## console.dirxml(object)
+## console.dirxml(object) {: #dirxml }
 
 Prints an XML representation of the descendant elements of `object` if 
 possible, or the JavaScript representation if not. Calling `console.dirxml()`
@@ -161,7 +161,7 @@ You can also nest groups:
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.organizing #}
 
-## console.groupCollapsed(object[, object, ...])
+## console.groupCollapsed(object[, object, ...]) {: #groupcollapsed }
 
 Creates a new logging group that is initially collapsed instead of open. 
 
@@ -175,10 +175,9 @@ Creates a new logging group that is initially collapsed instead of open.
 
 Closes a logging group. See [`console.group`](#group) for an example.
 
-## console.info(object [, object, ...])
+## console.info(object [, object, ...]) {: #info }
 
-Prints a message like [`console.log()`](#log) but also shows an icon (blue
-circle with white "i") next to the output. 
+Identical to [`console.log()`](#log).
 
 ## console.log(object [, object, ...]) {:#log}
 
@@ -189,7 +188,7 @@ Each object is evaluated and concatenated into a space-delimited string.
     console.log('Hello, Logs!');
     
 
-### Format specifiers {:#format-specifiers}
+### Format specifiers {:#format}
 
 The first object you pass can contain one or more **format specifiers**. A
 format specifier is composed of the percent sign (`%`) followed by a letter
