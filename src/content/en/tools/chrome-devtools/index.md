@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-12-14 #}
+{# wf_updated_on: 2018-12-20 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -56,7 +56,7 @@ DevTools can improve your productivity:
 
 ## Discover DevTools {: #discover }
 
-The DevTools UI can be a little overwhelming... there's so many tabs! But, if you take some
+The DevTools UI can be a little overwhelming... there are so many tabs! But, if you take some
 time to get familiar with each tab to understand what's possible, you may discover that DevTools
 can seriously boost your productivity.
 
