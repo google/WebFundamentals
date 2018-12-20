@@ -19,13 +19,15 @@ In this episode:
 
 * Surma has [the worst speaking experience ever](https://youtu.be/P-oysz0NKCo?t=742).
 * We built [squoosh.app](https://squoosh.app).
-* [OxiPNG](https://github.com/shssoichiro/oxipng), a PNG optimiser built in Rust.
+* [OxiPNG](https://github.com/shssoichiro/oxipng), a PNG optimizer built in Rust.
 * [Web Share Target Level 2](https://wicg.github.io/web-share-target/level-2/).
 * Should computers be seen and not heard?
 * How many Google servers does it take to generate a random number?
 * [CSS `::part`](https://drafts.csswg.org/css-shadow-parts/).
-* [Drying a basin with a motion-activated tap](https://twitter.com/jaffathecake/status/1060885922642767872).
-* [Transferrable streams](https://github.com/whatwg/streams/blob/master/transferable-streams-explainer.md).
+* [Drying a basin with a motion-activated
+  tap](https://twitter.com/jaffathecake/status/1060885922642767872).
+* [Transferrable
+  streams](https://github.com/whatwg/streams/blob/master/transferable-streams-explainer.md).
 * [Limmy's show](https://www.youtube.com/watch?v=PzKo1JPNf4s).
 * [The Cumbrian dictionary](http://www.cumbriandictionary.co.uk/).
 
