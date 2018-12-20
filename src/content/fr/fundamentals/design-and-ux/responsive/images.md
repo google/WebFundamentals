@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Les images font justement partie intégrante de chaque page. Cependant, elles constituent également la majorité des octets téléchargés. La conception de sites Web adaptatifs permet non seulement d'adapter les dispositions aux caractéristiques de l'appareil, mais aussi les images.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
@@ -34,7 +34,7 @@ Dans d'autres cas, il se peut que l'image doive subir des modifications plus imp
 
 
 
-## Images dans le balisage 
+## Images dans le balisage
 
 
 
@@ -60,7 +60,7 @@ Dans la mesure où la technologie CSS autorise le contenu à dépasser la capaci
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Veillez à fournir des descriptions explicites au moyen de l'attribut `alt` sur les éléments `img`. Elles contribuent à rendre votre site plus accessible en offrant du contexte aux lecteurs d'écran et à d'autres technologies assistives.
 
@@ -78,7 +78,7 @@ L'attribut <code>srcset</code> améliore le comportement de l'élément <code>im
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Sur les navigateurs non compatibles avec l'attribut `srcset`, le fichier image par défaut spécifié par l'attribut `src` est utilisé. C'est pourquoi il est important de toujours inclure une image 1x pouvant être affichée sur tout appareil, quelles qu'en soient les capacités. Lorsque l'attribut `srcset` est accepté, une liste d'images/de conditions séparées par des virgules est analysée avant de formuler des requêtes, et seule l'image appropriée est téléchargée et affichée.
 
@@ -91,7 +91,7 @@ La modification d'images sur la base des caractéristiques de l'appareil (opéra
 <img class="center" src="img/art-direction.png" alt="Exemple d'art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: L'élément <code>picture</code> commence à faire son apparition dans les navigateurs. Bien que cet élément ne soit pas encore disponible dans tous les navigateurs, il est conseillé de l'utiliser en raison de sa puissante rétrocompatibilité et de l'utilisation potentielle du <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Pour plus d'informations, rendez-vous sur le site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: L'élément <code>picture</code> commence à faire son apparition dans les navigateurs. Bien que cet élément ne soit pas encore disponible dans tous les navigateurs, il est conseillé de l'utiliser en raison de sa puissante rétrocompatibilité et de l'utilisation potentielle du <a href='https://scottjehl.github.io/picturefill/'>polyfill Picturefill</a>. Pour plus d'informations, rendez-vous sur le site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -111,7 +111,7 @@ Dans l'exemple ci-dessus, si la largeur du navigateur est d'au moins 800 pixels,
 
 #### Images à dimensionnement relatif
 
-Si la taille définitive de l'image est inconnue, il peut s'avérer difficile de spécifier un descripteur de densité pour les sources d'images. Cela vaut tout particulièrement pour les images qui couvrent une largeur proportionnelle du navigateur et qui sont fluides, en fonction de la taille du navigateur. 
+Si la taille définitive de l'image est inconnue, il peut s'avérer difficile de spécifier un descripteur de densité pour les sources d'images. Cela vaut tout particulièrement pour les images qui couvrent une largeur proportionnelle du navigateur et qui sont fluides, en fonction de la taille du navigateur.
 
 Au lieu de fournir des densités et des tailles d'image fixes, vous pouvez spécifier la taille de chaque image diffusée en ajoutant un descripteur de largeur avec la taille de l'élément d'image. Cela permet au navigateur de calculer automatiquement la densité de pixels effective et de choisir la meilleure image à télécharger.
 
@@ -173,7 +173,7 @@ L'exemple ci-dessus affiche une image dont la largeur équivaut à la moitié de
 
 #### Tenir compte des points de rupture dans les images adaptatives
 
-Dans la plupart des cas, il se peut que la taille ou l'image change en fonction des points de rupture de la mise en page du site. Sur un petit écran, par exemple, vous souhaitez que l'image occupe toute la largeur de la fenêtre d'affichage, alors qu'elle n'occupera qu'une petite partie sur un écran de plus grande dimension. 
+Dans la plupart des cas, il se peut que la taille ou l'image change en fonction des points de rupture de la mise en page du site. Sur un petit écran, par exemple, vous souhaitez que l'image occupe toute la largeur de la fenêtre d'affichage, alors qu'elle n'occupera qu'une petite partie sur un écran de plus grande dimension.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture"   adjust_indentation="auto" %}
@@ -215,7 +215,7 @@ Le principal inconvénient de cette méthode est que l'utilisation du langage Ja
 
 
 
-## Images dans la propriété CSS 
+## Images dans la propriété CSS
 
 
 
@@ -250,7 +250,7 @@ La fonction `image-set()` de CSS améliore le comportement de la propriété `ba
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Outre le chargement de l'image appropriée, le navigateur la dimensionne
 comme il se doit. En d'autres termes, le navigateur suppose que les images 2x sont deux fois plus grandes que les images 1x et les réduit donc selon un facteur 2, de sorte qu'elles semblent avoir la même taille sur la page.
@@ -273,7 +273,7 @@ Les requêtes média peuvent créer des règles sur la base du [rapport de pixel
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Les navigateurs Chrome, Firefox et Opera acceptent tous la syntaxe `(min-resolution: 2dppx)` standard. Pour Safari et Android, en revanche, l'ancienne syntaxe sans `dppx` est requise. Pour rappel, ces styles ne sont chargés que si l'appareil correspond à la requête média. En outre, vous devez spécifier des styles pour le scénario de base. Cette méthode offre également l'avantage d'afficher quelque chose si le navigateur n'accepte pas les requêtes média spécifiques à la résolution.
 
@@ -289,13 +289,13 @@ Vous pouvez également utiliser la syntaxe `min-width` pour afficher d'autres im
         background-image: url(bg.png);
       }
     }
-    	
 
 
 
 
 
-## Utiliser des images SVG pour les icônes 
+
+## Utiliser des images SVG pour les icônes
 
 
 
@@ -319,7 +319,7 @@ Pour inclure un caractère unicode, vous devez utiliser le même format que pour
 
 
     Vous êtes une super &#9733;
-    
+
 
 Vous êtes une super &#9733;
 
@@ -346,7 +346,7 @@ Les polices d'icône sont populaires et peuvent être faciles à utiliser. En re
 * Styles limités avec CSS.
 * Il est parfois difficile de les positionner parfaitement au pixel près, selon la hauteur de ligne, l'espacement des lettres, etc.
 * Elles ne sont pas sémantiques et peuvent être difficiles à utiliser avec des lecteurs d'écran ou d'autres technologies d'assistance.
-* Si elles ne sont pas conçues correctement, elles peuvent générer un fichier de taille importante pour une utilisation limitée à un petit sous-groupe d'icônes, parmi celles qui sont disponibles. 
+* Si elles ne sont pas conçues correctement, elles peuvent générer un fichier de taille importante pour une utilisation limitée à un petit sous-groupe d'icônes, parmi celles qui sont disponibles.
 
 
 
@@ -366,7 +366,7 @@ Veillez à comparer le poids de la demande HTTP et de la taille de fichier suppl
 
 
 
-## Optimiser les images dans une optique de performances 
+## Optimiser les images dans une optique de performances
 
 
 
@@ -429,7 +429,7 @@ Soyez prudent lorsque vous créez des pages en défilement infini. En effet, pui
 
 
 
-## Éviter complètement les images 
+## Éviter complètement les images
 
 
 
@@ -452,11 +452,11 @@ Dans la mesure du possible, évitez d'intégrer le texte dans des images. Évite
 Les navigateurs modernes peuvent utiliser des fonctionnalités CSS pour créer des styles qui, auparavant, auraient nécessité des images. Quelques exemples : des dégradés complexes peuvent être créés à l'aide de la propriété <code>background</code>, des ombres peuvent être créées à l'aide de <code>box-shadow</code> et des coins arrondis peuvent être ajoutés à l'aide de la propriété <code>border-radius</code>.
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -469,7 +469,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Veuillez noter que l'utilisation de ces techniques exige des cycles de rendu, qui peuvent être relativement importants sur des appareils mobiles. En cas d'utilisation excessive, vous risquez de perdre les éventuels avantages obtenus et une baisse des performances est possible.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augmented reality allows placement and tracking of virtual objects in a real-world view.
 
-{# wf_updated_on: 2018-07-17 #}
+{# wf_updated_on: 2018-07-30 #}
 {# wf_published_on: 2018-06-15 #}
 {# wf_tags: immersive-web,webar #}
 {# wf_blink_components: Blink>WebVR #}
@@ -23,6 +23,12 @@ just added the
 [WebXR Hit Test API](https://github.com/immersive-web/hit-test/blob/master/explainer.md)
 to Chrome Canary, a new method that helps immersive web code place objects in
 the real world.
+
+Note: If you want to be notified of spec updates as they land in Chrome, the
+[Immersive Web Early Adopters Guide](Immersive Web Early Adopters Guide) is
+kept in a GitHub repo and updated whenever spec changes land in Chrome. To be
+notified of those updates watch [its repo on
+GitHub](https://github.com/immersive-web/webxr-reference).
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="GDhujHhUEKc"

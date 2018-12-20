@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Una imagen vale más que mil palabras y las imágenes son parte integral de las páginas. Sin embargo, a menudo también cuentan para la mayoría de los bytes descargados.  Con el diseño web adaptable, no solo nuestros diseños pueden cambiar según las características del dispositivo: también lo pueden hacer las imágenes.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imágenes {: .page-title }
@@ -80,7 +80,7 @@ ejemplo:
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Asegúrate de usar descriptores útiles en el atributo `alt` de los elementos `img`:
 brindan contexto a los
@@ -109,7 +109,7 @@ ancho de banda limitado.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 En navegadores que no son compatibles con `srcset`, el navegador simplemente usa el archivo de imagen predeterminado
 especificado por el atributo `src`.  Por esta razón, siempre es importante
@@ -137,7 +137,7 @@ y otras.
 
 <div style="clear:both;"></div>
 
-Prueba interna: El elemento `picture` está llegando a los navegadores. Aunque todavía no se encuentra disponible en todos los navegadores, recomendamos usarlo debido a la sólida compatibilidad con versiones anteriores y al potencial uso del [polyfill Picturefill](http://picturefill.responsiveimages.org/){: .external }. Consulta el sitio [ResponsiveImages.org](http://responsiveimages.org/#implementation) para obtener más información.
+Prueba interna: El elemento `picture` está llegando a los navegadores. Aunque todavía no se encuentra disponible en todos los navegadores, recomendamos usarlo debido a la sólida compatibilidad con versiones anteriores y al potencial uso del [polyfill Picturefill](https://scottjehl.github.io/picturefill/){: .external }. Consulta el sitio [ResponsiveImages.org](http://responsiveimages.org/#implementation) para obtener más información.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -307,7 +307,7 @@ imagen cargar.
 
 Una gran desventaja de este enfoque: el uso de JavaScript implica que
 retardarás la carga de imágenes al menos hasta que el analizador de lectura previa haya terminado. Esto
-significa que incluso las imágenes no comenzarán a descargarse hasta después de que el evento `pageload` 
+significa que incluso las imágenes no comenzarán a descargarse hasta después de que el evento `pageload`
 se active. Además, el navegador seguramente descargará
 imágenes de 1x y 2x, lo cual aumentará el volumen de la página.
 
@@ -399,14 +399,14 @@ Los URI de datos proporcionan una manera de incluir un archivo, como una imagen,
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 El comienzo del código para el logotipo HTML5 presentado arriba tiene el siguiente aspecto:
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 (La versión completa tiene más de 5000 caracteres de extensión).
 
@@ -483,7 +483,7 @@ o una imagen de 1x en un dispositivo de 2x en una red con un ancho de banda limi
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Además de cargar la imagen correcta, el navegador le cambia el tamaño
 de manera acorde. Es decir, el navegador presupone que las imágenes 2x tienen el doble de tamaño
@@ -506,7 +506,7 @@ de lo contrario, regresará al recurso 1x. La razón obvia es que pocos navegad
 
 ### Usar consultas de medios para proporcionar imágenes de alta resolución o dirección artística
 
-Las consultas de medios pueden crear reglas según la 
+Las consultas de medios pueden crear reglas según la
 [relación de píxeles del dispositivo](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg). De
 esta forma, se pueden especificar distintas imágenes para pantallas 2x en comparación con pantallas 1x.
 
@@ -516,7 +516,7 @@ esta forma, se pueden especificar distintas imágenes para pantallas 2x en comp
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox y Opera admiten `(min-resolution: 2dppx)` estándar,
 mientras que Safari y Android requieren la sintaxis con prefijo del proveedor
@@ -542,10 +542,10 @@ descarga y se aplica en el `body` si el ancho del navegador es de 500 px o supe
         background-image: url(bg.png);
       }
     }
-    
 
 
-## Usa SVG para íconos 
+
+## Usa SVG para íconos
 
 Cuando agregues íconos a tu página, usa íconos SVG cuando sea posible o, en
 algunos casos, caracteres unicode.
@@ -561,7 +561,7 @@ Muchas fuentes incluyen compatibilidad con los numerosos glifos unicode, que se 
 en lugar de imágenes. A diferencia de las imágenes, las fuentes unicode cambian su tamaño y lucen bien
 independientemente de cómo aparezcan en pantalla (grandes o chicas).
 
-Además del grupo de caracteres convencionales, unicode puede incluir símbolos de 
+Además del grupo de caracteres convencionales, unicode puede incluir símbolos de
 flechas (&#8592;), operadores matemáticos (&#8730;), formas geométricas
 (&#9733;), imágenes de control (&#9654;), notas musicales (&#9836;),
 letras griegas (&#937;) y hasta piezas de ajedrez (&#9822;).
@@ -571,18 +571,18 @@ Un carácter unicode se incluye del mismo modo que las entidades nombradas:
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
 ### Reemplazar íconos complejos por SVG
 
-Si necesitas íconos más complejos, los íconos SVG son, por lo general, livianos y 
+Si necesitas íconos más complejos, los íconos SVG son, por lo general, livianos y
 fáciles de usar, y su estilo se puede definir con CSS. SVG tiene varias ventajas sobre
 las imágenes de trama:
 
 * Son gráficos vectoriales que se pueden ajustar a escala de manera infinita.
-* CSS modifica el color, las sombras y la transparencia, y las animaciones son 
+* CSS modifica el color, las sombras y la transparencia, y las animaciones son
   simples.
 * Las imágenes SVG se pueden incluir por referencia directamente en el documento.
 * Son semánticos.
@@ -607,18 +607,18 @@ las imágenes de trama:
   </figcaption>
 </figure>
 
-Las fuentes de íconos se usan mucho y pueden ser fáciles de usar, pero demuestran ciertas desventajas 
+Las fuentes de íconos se usan mucho y pueden ser fáciles de usar, pero demuestran ciertas desventajas
 en comparación con los íconos SVG.
 
-* Son gráficos vectoriales que se pueden ajustar a escala de manera infinita, pero se pueden 
+* Son gráficos vectoriales que se pueden ajustar a escala de manera infinita, pero se pueden
   suavizar. Esto hace que los íconos no sean tan definidos como se espera.
 * Ajuste de estilos limitados con CSS.
-* Lograr un posicionamiento de píxeles ideal puede resultar difícil, según la altura de línea 
+* Lograr un posicionamiento de píxeles ideal puede resultar difícil, según la altura de línea
   y el espaciado de letras, entre otros aspectos.
-* No son semánticas y pueden ser difícil de usar en lectores de pantalla u otras 
+* No son semánticas y pueden ser difícil de usar en lectores de pantalla u otras
   tecnologías de asistencia.
-* Si su ámbito no se establece correctamente, pueden terminar en archivos de gran tamaño en los que solo se usará un 
-  pequeño conjunto de los íconos disponibles. 
+* Si su ámbito no se establece correctamente, pueden terminar en archivos de gran tamaño en los que solo se usará un
+  pequeño conjunto de los íconos disponibles.
 
 <div style="clear:both;"></div>
 
@@ -734,7 +734,7 @@ contenido principal ya se ha cargado y representado.  Además de mejoras en el r
 
 Ten cuidado al crear páginas con desplazamiento infinito: dado que el contenido se carga a medida que se muestra,
 es posible que los motores de búsqueda nunca vean dicho contenido.  Además,
-es posible que los usuarios que busquen información de pie de página nunca 
+es posible que los usuarios que busquen información de pie de página nunca
 la encuentren porque se carga contenido nuevo continuamente.
 
 
@@ -751,7 +751,7 @@ archivos de imagen separados; de esta forma, se evita que aparezcan imágenes co
 
 Cuando sea posible, inserta texto en formato de texto y no en imágenes. Por
 ejemplo, si usas imágenes para los encabezados o colocas información de contacto (como números telefónicos
-o direcciones) directamente en imágenes, los usuarios no podrán 
+o direcciones) directamente en imágenes, los usuarios no podrán
 copiar ni pegar la información, los lectores de pantalla no podrán acceder a los datos y la información no será
 adaptable.  Como alternativa, ubica el texto en tu lenguaje de marcado y, si es necesario, usa
 fuentes web para alcanzar el estilo que necesitas.
@@ -797,7 +797,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Ten en cuenta que para usar estas técnicas se necesitan ciclos de representación, requisito
 que puede ser considerable para los dispositivos móviles.  Si los utilizas demasiado, perderás los beneficios

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: When working with WebAssembly, you often want to download a module, compile it, instantiate it, and then use whatever it exports in JavaScript. This post explains our recommended approach for optimal efficiency.
 
-{# wf_updated_on: 2018-04-12 #}
+{# wf_updated_on: 2018-10-23 #}
 {# wf_published_on: 2018-04-12 #}
 {# wf_tags: javascript, webassembly #}
 {# wf_featured_image: /web/updates/images/generic/timer.png #}
@@ -73,7 +73,7 @@ free](https://twitter.com/mathias/status/978549917332500480), we can use the asy
 ```
 
 Let’s get back to the `compile` optimization I hinted at earlier. With [streaming
-compilation](https://v8project.blogspot.com/2018/02/v8-release-65.html), the browser can already
+compilation](https://v8.dev/blog/v8-release-65), the browser can already
 start to compile the WebAssembly module while the module bytes are still downloading. Since download
 and compilation happen in parallel, this is faster — especially for large payloads.
 
@@ -136,7 +136,7 @@ See how we compile the response into a module, and then instantiate it immediate
   const fetchPromise = fetch('fibonacci.wasm');
   const { module, instance } = await WebAssembly.instantiateStreaming(fetchPromise);
   // To create a new instance later:
-  const otherInstance = await WebAssembly.instantiate(module); 
+  const otherInstance = await WebAssembly.instantiate(module);
   const result = instance.exports.fibonacci(42);
   console.log(result);
 })();

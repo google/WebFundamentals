@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Thanks to mobile device and network proliferation, more people are using the web than ever before. As this user base grows, performance is more important than ever. In this article, find out why performance matters, and learn what you can do to make the web faster for everyone.
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2018-10-04 #}
 {# wf_published_on: 2018-03-08 #}
 {# wf_blink_components: N/A #}
 
@@ -10,54 +10,51 @@ description: Thanks to mobile device and network proliferation, more people are 
 
 {% include "web/_shared/contributors/jeremywagner.html" %}
 
-In our collective pursuit to push the web to do more, we're running into a
-common problem: Performance. Sites and apps are richer in functionality than
-ever before. As a consequence, they've become more demanding of network and
-device resources. So much so, that we now struggle with achieving a high level
+In our shared pursuit to push the web to do more, we're running into a
+common problem: performance. Sites have more features than
+ever before. So much so, that many sites now struggle to achieve a high level
 of performance across a variety of network conditions and devices.
 
-Performance issues are variable. At best, slow sites and applications incur
-trivial delays that impede users for only briefly annoying moments. At their
-worst, they're completely inaccessible, unresponsive to user input, or both.
+Performance issues vary. At best, they create small delays that are only briefly
+annoying to your users. At worst, they make your site completely inaccessible,
+unresponsive to user input, or both.
 
 ## Performance is about retaining users
 
-We want users to interact meaningfully with what we build for the web. If it's a
-blog, we want people to read posts. If it's an online store, we want to turn
-prospective shoppers into buyers. If it's a social networking web app, we want
-visitors to write posts, upload photos, and interact with one other.
+We want users to interact meaningfully with what we build. If it's a
+blog, we want people to read posts. If it's an online store, we want them to
+buy stuff. If it's a social network, we want them
+to interact with each other.
 
-Performance plays a significant role in the success of any online venture, as
-high performing sites engage and retain users better than poorly performing
-ones. Here are some case studies of how performance has affected engagement and
-conversions for several websites.
+Performance plays a major role in the success of any online venture. Here are some
+case studies that show how high-performing sites engage and retain users better than
+low-performing ones:
 
-- [Pinterest rebuilt their pages for performance realizing a 40% reduction in
-perceived wait times, thus increasing both search engine traffic and sign-ups by
-15%](https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7).
-- [By cutting average page load time by 850 milliseconds, COOK found they were
-able to increase conversions by 7%, decrease bounce rates by 7%, and increase
-pages per session by
-10%](https://www.nccgroup.trust/uk/about-us/resources/cook-real-user-monitoring-case-study/?style=Website+Performance&resources=Case+Studies).
+- [Pinterest increased search engine traffic and sign-ups by 15%][pinterest] when
+  they reduced perceived wait times by 40%.
+- [COOK increased conversions by 7%, decreased bounce rates by 7%, and increased
+  pages per session by 10%][COOK] when they reduced average page load time by 850
+  milliseconds.
 
-If high performance is an asset, then poor performance is a liability. Here are
-a couple case studies where poor performance had a negative impact on business
+[pinterest]: https://medium.com/@Pinterest_Engineering/driving-user-growth-with-performance-improvements-cfc50dafadd7
+[COOK]: https://www.nccgroup.trust/uk/about-us/resources/cook-real-user-monitoring-case-study/?style=Website+Performance&resources=Case+Studies
+
+Here are a couple case studies where low performance had a negative impact on business
 goals:
 
-- [The BBC found they lost an additional 10% of users for every additional second
-their site took to
-load](https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale).
-- [DoubleClick by Google found 53% of mobile site visits were abandoned if a page
-took longer than 3 seconds to
-load](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/).
+- [The BBC found they lost an additional 10% of users][BBC] for every additional second
+  their site took to load.
+- [DoubleClick by Google found 53% of mobile site visits were abandoned][DoubleClick] if a page
+  took longer than 3 seconds to load.
 
-Because business is highly competitive, we're always cognizant of how our
-competitors are doing. [In the same DoubleClick by Google study cited
-above](https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/), it
+[BBC]: https://www.creativebloq.com/features/how-the-bbc-builds-websites-that-scale
+[DoubleClick]: https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/
+
+In the same DoubleClick by Google study cited above, it
 was found that sites loading within 5 seconds had 70% longer sessions, 35% lower
 bounce rates, and 25% higher ad viewability than sites taking nearly four times
 longer at 19 seconds. To get a rough idea of how your site's performance
-compares with the competition, [check out the Speed Scorecard
+compares with your competitors, [check out the Speed Scorecard
 tool](https://www.thinkwithgoogle.com/feature/mobile/).
 
 <figure>
@@ -71,13 +68,12 @@ States.</figcaption>
 
 ## Performance is about improving conversions
 
-Retaining users is crucial to improving conversions. If you run an online
-business, conversions are the goal and performance is _critical_. Slow sites
+Retaining users is crucial to improving conversions. Slow sites
 have a negative impact on revenue, and the opposite is also true. Here are some
 examples of how performance has played a role in making businesses more (or
 less) profitable:
 
-- For Mobify, [Every 100ms decrease in homepage load speed worked out to a **1.11%
+- For Mobify, [every 100ms decrease in homepage load speed worked out to a **1.11%
 increase** in session-based conversion, yielding an average annual revenue
 increase of **nearly
 $380,000**](http://resources.mobify.com/2016-Q2-mobile-insights-benchmark-report.html).
@@ -93,7 +89,7 @@ sales**](https://www.digitalcommerce360.com/2010/08/19/web-accelerator-revs-conv
 
 If you run a business on the web, performance is crucial. If your site's user
 experience is fast and responsive to user input, it can only serve you well. To
-see how performance could potentially affect your revenue, check out our [Impact
+see how performance could potentially affect your revenue, check out the [Impact
 Calculator](https://www.thinkwithgoogle.com/feature/mobile/) tool.
 
 <figure>
@@ -108,8 +104,8 @@ revenue you stand to gain by improving site performance.</figcaption>
 ## Performance is about the user experience
 
 When you navigate to a URL, you do so from any number of potential starting
-points, possibly discarding one experience for another. Depending on a number of
-conditions (e.g., connection quality, server and front end architecture), your
+points. Depending on a number of
+conditions, such as connection quality and the device you're using, your
 experience could be quite different from another user's.
 
 <figure>
@@ -123,22 +119,19 @@ the second shows the same page loading on a fast connection.">
 As a site begins to load, there's a period of time where users wait for content
 to appear. Until this happens, there's no user experience to speak of. This lack
 of an experience is fleeting on fast connections. On slower connections,
-however, the opposite occurs and users are forced to wait. When rendering
-finally _does_ start in such conditions, users may be plagued by further
-problems as CSS, JavaScript, and other page resources slowly trickle in, each
-presenting their own unique performance problems.
+however, users are forced to wait. Users may experience more problems as
+page resources slowly trickle in.
 
-Consequently, it could be argued that performance is a foundational aspect of
-good user experiences. When sites ship tons of code, poor performance persists
-as browsers chew through megabytes of it on slow networks. Devices with limited
-processing power and memory can have trouble coping with what we might consider
-to be a modest amount of unoptimized code. As poor performance persists,
-application responsiveness and availability diminishes. Knowing what we know
-about human behavior, these poorly performing applications will only be
-tolerated for so long before users abandon them. If you want to know more about
+Performance is a foundational aspect of
+good user experiences. When sites ship a lot of code, browsers must use megabytes
+of the user's data plan in order to download the code. Mobile devices have limited
+CPU power and memory. They often get overwhelmed with what we might consider a
+small amount of unoptimized code. This creates poor performance which leads
+to unresponsiveness. Knowing what we know about human behavior, users will only
+tolerate low performing applications for so long before abandoning them.
+If you want to know more about
 how to assess your site's performance and find opportunities for improvement,
-check out our guide [_How to Think About Speed
-Tools_](/web/fundamentals/performance/speed-tools/).
+check out [_How to Think About Speed Tools_](/web/fundamentals/performance/speed-tools/).
 
 <figure>
   <img srcset="images/lighthouse-2x.png 2x, images/lighthouse-1x.png 1x"
@@ -150,47 +143,40 @@ href="/web/tools/lighthouse/">Lighthouse</a>.</figcaption>
 
 ## Performance is about people
 
-While improving performance is vital to the financial success and well-being of
-businesses, it's important not to overlook the potential challenges people face
-as they navigate the web. Improving performance should not be seen solely as a
-means of advancing ourselves, but also as ethically responsible behavior. Poorly
-performing sites and applications can pose real consequences and costs for the
+Poorly performing sites and applications can also pose real costs for the
 people who use them.
 
-[As mobile users continue to make up a large portion of internet users
+[As mobile users continue to make up a larger portion of internet users
 worldwide](http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet),
 it's important to bear in mind that many of these users access the web through
-mobile LTE, 4G, 3G and even 2G networks. [As Ben Schwarz of Calibre points out
-in this study of real world
+mobile LTE, 4G, 3G and even 2G networks. As Ben Schwarz of Calibre points out
+in [this study of real world
 performance](https://building.calibreapp.com/beyond-the-bubble-real-world-performance-9c991dcd5342),
 the cost of prepaid data plans is decreasing, which in turn is making access to
-the internet more affordable in places where it once wasn't. Simply put, mobile
-devices and internet access are no longer luxuries for well-to-do consumers.
+the internet more affordable in places where it once wasn't. Mobile
+devices and internet access are no longer luxuries.
 They are common tools necessary to navigate and function in an increasingly
 interconnected world.
 
 [Total page size has been steadily increasing since at least
 2011](http://beta.httparchive.org/reports/state-of-the-web#bytesTotal), and the
-trend appears to be continuing. As the amount of data the typical page delivers
-increases, metered data plans become less economical. When these plans run out
-they must be replenished, which costs money.
+trend appears to be continuing. As the typical page sends more data, users
+must replenish their metered data plans more often, which costs them money.
 
-While fast and lightweight user experiences show economic consideration, they
+In addition to saving your users money, fast and lightweight user experiences
 can also prove crucial for users in crisis. Public resources such as hospitals,
-clinics, and crisis centers have online resources which convey important and
-specific information a person needs in the midst of a crisis. [While design is
+clinics, and crisis centers have online resources that give users important
+and specific information that they need during a crisis. [While design is
 pivotal in presenting important information efficiently in stressful
 moments](https://aneventapart.com/news/post/eric-meyer-designing-for-crisis),
-the importance of delivering this information expediently can't be understated.
+the importance of delivering this information fast can't be understated.
 It's part of our job.
 
 ## Where to go from here
 
-You know now _why_ performance matters, but you might be wondering "what next?"
-Next, we'll cover three pragmatic performance considerations, complete with
-suggestions for addressing each. While these lists may seem daunting, understand
+While the lists below may seem daunting, understand
 you don't need to do _all_ of these things to improve the performance of your
-site. They are merely potential starting points, so don't feel overwhelmed!
+site. They are just starting points, so don't feel overwhelmed!
 _Anything_ you can do to improve performance will be helpful to your users.
 
 ### Mind what resources you send
@@ -198,24 +184,22 @@ _Anything_ you can do to improve performance will be helpful to your users.
 An effective method of building high performance applications is to [audit
 _what_ resources you send to
 users](/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads).
-While the [network panel in Chrome's developer
-tools](/web/tools/chrome-devtools/network-performance/) does a fantastic job of
-summarizing all the resources used on a given page, it can be daunting to know
+While the [Network panel in Chrome DevTools](/web/tools/chrome-devtools/network-performance/)
+does a fantastic job of summarizing all the resources used on a given page, it can be daunting to know
 where to start if you haven't considered performance until now. Here are a few
 suggestions:
 
 - If you use Bootstrap or Foundation to build your UI, ask yourself if they're
 necessary. Such abstractions add heaps of CSS the browser must download, parse,
-and apply to a page, all before before your site-specific CSS enters the
+and apply to a page, all before your site-specific CSS enters the
 picture.
 [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
 and [Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are
 superb at creating both simple and complex layouts with relatively little code.
 [Because CSS is a render blocking
 resource](/web/fundamentals/performance/critical-rendering-path/render-blocking-css),
-the overhead of a CSS framework can delay rendering significantly. You should
-seek to expedite rendering by eliminating unnecessary overhead, and instead rely
-on tools baked into the browser whenever possible.
+the overhead of a CSS framework can delay rendering significantly. You can
+speed up your rendering by removing unnecessary overhead whenever possible.
 - JavaScript libraries are convenient, but not always necessary. Take jQuery for
 example: Element selection has been greatly simplified thanks to methods like
 [`querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
@@ -244,15 +228,12 @@ worker](/web/fundamentals/primers/service-workers/) is used.
 
 ### Mind how you send resources
 
-When you know _what_ resources you need to send for your app to be as beautiful
-and functional as you want it to be, think next about _how_ you send them. As is
-the case with forethought and prevention, delivery is vital to building fast
-user experiences.
+Efficient delivery is vital to building fast user experiences.
 
 - [Migrate to HTTP/2](/web/fundamentals/performance/http2/). HTTP/2 addresses many
 performance problems inherent in HTTP/1.1, such as concurrent request limits and
 the lack of header compression.
-- [Expedite the delivery of resources using resource
+- [Download resources earlier using resource
 hints](/web/fundamentals/performance/resource-prioritization). `rel=preload` is
 one such resource hint that allows early fetches of critical resources before
 the browser would otherwise discover them. [This can have a pronounced positive
@@ -276,22 +257,20 @@ those resources where they're likely to be used.
 
 ### Mind how much data you send
 
-With some ideas of what resources are appropriate to send and _how_ you should
-send them, let's cover a few suggestions for limiting _how much_ data you send:
+Here are some suggestions for limiting _how much_ data you send:
 
 - [Minify text
 assets](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#minification_preprocessing_context-specific_optimizations).
 Minification is the removal of unnecessary whitespace, comments and other
 content in text-based resources. It significantly reduces the amount of data you
-send to users without impacting functionality. [Employ uglification in
-JavaScript](https://www.npmjs.com/package/uglifyjs) to achieve further savings
+send to users without impacting functionality. [Use uglification in
+JavaScript](https://www.npmjs.com/package/uglifyjs) to get more savings
 through shortening variable and method names. Since SVG is a text-based image
 format, [it can be optimized with SVGO](https://github.com/svg/svgo).
 - [Configure your server to compress
 resources](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer).
 Compression drastically reduces the amount of data you send to users,
-_especially_ where text assets are concerned. GZIP is a venerable format in this
-space, but [Brotli compression can go
+_especially_ text assets. GZIP is a popular option, but [Brotli compression can go
 further](https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/).
 Understand, however, that compression is _not_ a catch-all for performance woes:
 Some file formats which are implicitly compressed (e.g., JPEG, PNG, GIF, WOFF,
@@ -304,8 +283,8 @@ web](http://httparchive.org/trends.php#bytesImg&reqImg), image optimization
 represents a uniquely large opportunity to boost performance.
 - If you have time, consider serving alternative image formats.
 [WebP](/speed/webp/) enjoys reasonably [broad browser
-support](https://caniuse.com/#feat=webp), and can undercut established formats
-in file size while retaining similar visual quality. [JPEG XR is another
+support](https://caniuse.com/#feat=webp), and uses less data than JPEG and PNG
+while keeping visual quality high. [JPEG XR is another
 alternative format](https://jpeg.org/jpegxr/index.html) supported in IE and Edge
 offering similar savings.
 - [Deliver images
@@ -320,11 +299,11 @@ choose the most optimal format (e.g., WebP over JPEG or PNG), or serve
 altogether different treatments of images for different screen sizes.
 - [Use video instead of animated
 GIFs](/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/).
-Animated GIFs are _massive_, but videos of similar quality are _far_ smaller,
+Animated GIFs are _massive_. Videos of similar quality are _far_ smaller,
 often by 80% or so. If your site makes heavy use of animated GIFs, this is
 probably the most impactful thing you can do to improve loading performance.
-- [Client hints](http://httpwg.org/http-extensions/client-hints.html) can be used
-to tailor resource delivery based on current network conditions and device
+- [Client hints](http://httpwg.org/http-extensions/client-hints.html) can
+tailor resource delivery based on current network conditions and device
 characteristics. The `DPR`, `Width` and `Viewport-Width` headers can help you
 [deliver the best images for a device using server-side code _and_ deliver less
 markup](/web/updates/2015/09/automating-resource-selection-with-client-hints).

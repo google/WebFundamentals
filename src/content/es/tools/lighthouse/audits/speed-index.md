@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Documentación de referencia para la auditoría de Lighthouse "Índice de velocidad".
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_updated_on: 2018-11-10 #}
 {# wf_published_on: 2016-10-04 #}
 
 # Índice de velocidad  {: .page-title }
@@ -30,8 +30,8 @@ Para obtener más información sobre los algoritmos y las metodologías detrás 
 consulta [Índice de velocidad](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index).
 
 El puntaje objetivo se calcula mediante una función de distribución acumulativa de una
-distribución lognormal. Consulta los comentarios de la 
-[fuente](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/speed-index-metric.js)
+distribución lognormal. Consulta los comentarios de la
+[fuente](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/metrics/speed-index.js)
 de la auditoría si necesitas obtener más información.
 
 

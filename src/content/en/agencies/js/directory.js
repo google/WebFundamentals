@@ -104,7 +104,7 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
   * @return {string}
   */
   var formatUrl = function(url) {
-    return url.split('//')[1].replace('www.', '');
+    return url.split('//')[1].replace('www.', '').replace(/\/+$/, '');
   };
 
   /**
@@ -304,17 +304,18 @@ var initializeDirectory = function(requestUrl, alphabeticalSortKey) {
          var locationsDiv = div.cloneNode(false);
          locationsDiv.classList.add(CLASS_AGENCY_LOCATIONS);
 
-         for (var i=0; i<company.locations_view; i++) {
-           var location = company.locations_view[i];
-           var countryDiv = div.cloneNode(false);
-           countryDiv.classList.add(CLASS_AGENCY_LOCATION);
-           var countryTitle = text.cloneNode(false);
-           countryTitle.classList.add(CLASS_AGENCY_HEADER_TITLE);
-           countryTitle.innerText = location.country_name;
-           var citiesSpan = span.cloneNode(false);
-           citiesSpan.innerText = location.cities.join(', ');
-           appendChildren(countryDiv, [countryTitle, citiesSpan]);
-         }
+         for (var i=0; i < company.locations_view.length; i++) {
+          var location = company.locations_view[i];
+          var countryDiv = div.cloneNode(false);
+          countryDiv.classList.add(CLASS_AGENCY_LOCATION);
+          var countryTitle = text.cloneNode(false);
+          countryTitle.classList.add(CLASS_AGENCY_HEADER_TITLE);
+          countryTitle.innerText = location.country_name;
+          var citiesSpan = span.cloneNode(false);
+          citiesSpan.innerText = location.cities.join(', ');
+          appendChildren(countryDiv, [countryTitle, citiesSpan]);
+          locationsDiv.appendChild(countryDiv);
+        }
 
          var projectsTitle = text.cloneNode(false);
          projectsTitle.classList.add(CLASS_AGENCY_HEADER_TITLE);

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-04-30 #}
 {# wf_blink_components: N/A #}
 
@@ -17,11 +17,10 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
   </iframe>
 </div>
 
-Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. Good forms provide semantic input types. Keys should change to match the user's input type; users pick a date in a calendar. Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
+Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. This article will cover designing efficient forms, validating them effectively, and keeping the user informed along the way.
 
 
 ## Design efficient forms
-
 
 Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
 
@@ -249,7 +248,7 @@ Note: The <code>datalist</code> values are provided as suggestions, and users ar
 
 ## Label and name inputs properly
 
-Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. Good forms provide semantic input types. Keys should change to match the user's input type; users pick a date in a calendar. Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
+Good forms provide semantic input types. This enables virtual keyboard layouts to match the input type, or lets users pick a date from a calendar, rather than entering it by hand.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -544,6 +543,8 @@ The best practice for these attributes is to use this format: `autocomplete="<se
 
 ## Provide real-time validation
 
+Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
+
 Real-time data validation doesn't just help to keep your data clean, but it also helps improve the user experience.  Modern browsers have several built-in tools to help provide real-time data validation and may prevent the user from submitting an invalid form.  Visual cues should be used to indicate whether a form has been completed properly.
 
 
@@ -794,3 +795,6 @@ JavaScript to only show invalid styling when the user has visited the field.
 
 Success: You should show the user all of the issues on the form at once, rather than showing them one at a time.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

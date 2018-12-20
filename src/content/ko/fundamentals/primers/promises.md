@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: '프라미스(promise)는 지연된 비동기 계산을 단순화합니다. 프라미스는 아직 완료되지 않은 작업을 나타냅니다.'
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2014-01-29 #}
+{# wf_updated_on: 2018-12-14 #}
 
 # 자바스크립트 프라미스: 소개 {: .page-title }
 
@@ -120,7 +120,7 @@ description: '프라미스(promise)는 지연된 비동기 계산을 단순화�
 * **해결됨(settled)** - 처리되거나 거부되었습니다.
 
 
-[사양](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)에서도 **thenable**라는 용어를 사용하여, `then` 메서드를 포함한다는 점에서 프라미스와 유사한 객체를 설명합니다. 이 용어를 보면 영국 축구 감독을 역임한 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)가 떠올라서 가급적 이 용어를 사용하지 않을 것입니다.
+[사양](https://www.ecma-international.org/ecma-262/#sec-promise-objects)에서도 **thenable**라는 용어를 사용하여, `then` 메서드를 포함한다는 점에서 프라미스와 유사한 객체를 설명합니다. 이 용어를 보면 영국 축구 감독을 역임한 [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables)가 떠올라서 가급적 이 용어를 사용하지 않을 것입니다.
 
 
 ## 프라미스를 자바스크립트에 도입!

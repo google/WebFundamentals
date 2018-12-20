@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -170,3 +170,6 @@ and delete the suspicious files.
 
 <<_fixing-additional-resources.md>>
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

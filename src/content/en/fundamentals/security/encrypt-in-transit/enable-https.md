@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-03-27 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -430,3 +430,7 @@ should ask advertisers that do not serve HTTPS at all to at least start.
 You may wish to defer completing
 [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough
 advertisers interoperate properly.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

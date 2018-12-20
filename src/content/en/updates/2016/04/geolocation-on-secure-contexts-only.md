@@ -2,10 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Starting with version 50, Chrome no longer supports the HTML5 Geolocation API over non-secure connections.
 
-{# wf_updated_on: 2016-04-21 #}
+{# wf_updated_on: 2018-09-12 #}
 {# wf_published_on: 2016-04-21 #}
 {# wf_tags: geolocation,removals,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png #}
+{# wf_blink_components: Blink #}
 
 # Geolocation API Removed from Unsecured Origins in Chrome 50 {: .page-title }
 
@@ -103,12 +104,12 @@ This can be quite brittle as it might change in the future, but a strong signal 
 a non-secure content issue is to look for the string "Only secure origins are allowed".
 
 
-    navigator.geolocation.getCurrentPosition(function(success) { /* Do some magic. */ },
-      function(failure) {
-        if(failure.message.indexOf("Only secure origins are allowed") == 0) {
-          // Secure Origin issue.
-        }
-      };
+    navigator.geolocation.getCurrentPosition(success => {
+      /* Do some magic. */
+    }, failure => {
+      if (failure.message.startsWith("Only secure origins are allowed")) {
+        // Secure Origin issue.
+      }
     });
      
 

@@ -2,6 +2,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
+  body_class: xx-hide-devsite-banner
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
@@ -19,7 +20,7 @@ landing_page:
                     Tutorials, guides, and best practices for building the next
                     generation of web experiences.
                   </p>
-                  <a class="button gc-analytics-event" data-category="webFu" data-label="fundamentals-landing" data-action="web-home" href="/web/fundamentals/">Get Started</a>
+                  <a class="button gc-analytics-event" data-category="webFu" data-label="fundamentals-landing" data-action="web-home" href="/web/fundamentals/">Get started</a>
                   <div class="clearfix"></div>
                 </div>
                 <div class="wf-hero-flex-item wf-hero-tools">
@@ -32,7 +33,7 @@ landing_page:
                     and more tools to make your life easier and improve your
                     development artistry.
                   </p>
-                  <a class="button gc-analytics-event" href="/web/tools/" data-category="webFu" data-label="tools-landing" data-action="web-home">Learn More</a>
+                  <a class="button gc-analytics-event" href="/web/tools/" data-category="webFu" data-label="tools-landing" data-action="web-home">Learn more</a>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -86,7 +87,7 @@ landing_page:
       - name: data-action
         value: web-home
       buttons:
-      - label: Get Started
+      - label: Get started
         path: /web/progressive-web-apps/
         classname: button button-primary
         attributes:
@@ -99,7 +100,7 @@ landing_page:
         - name: data-action
           value: web-home
 
-    - heading: Load Instantly
+    - heading: Load instantly
       description: >
         Users don't have the patience to wait for sites that can't deliver
         content quickly.
@@ -115,7 +116,7 @@ landing_page:
       - name: data-action
         value: web-home
       buttons:
-      - label: Get Fast
+      - label: Get fast
         path: /web/fundamentals/performance/
         classname: button button-primary
         attributes:
@@ -142,7 +143,7 @@ landing_page:
 
   - classname: wf-landing-row
     items:
-    - heading: Get Involved
+    - heading: Get involved
       description: >
         Check the state of existing bugs and provide feedback for web platform features.
       custom_image:
@@ -159,7 +160,7 @@ landing_page:
       - name: data-action
         value: web-home
       buttons:
-      - label: Get Involved
+      - label: Get involved
         path: /web/feedback/
         classname: button button-primary
         attributes:
@@ -189,7 +190,7 @@ landing_page:
       - name: data-action
         value: web-home
       buttons:
-      - label: Start Learning
+      - label: Start learning
         path: /web/ilt/
         classname: button button-primary
         attributes:
@@ -202,7 +203,7 @@ landing_page:
         - name: data-action
           value: web-home
 
-    - heading: Case Studies
+    - heading: Case studies
       description: >
         Learn why and how other developers have used the web to create amazing
         web experiences for their users.
@@ -220,7 +221,7 @@ landing_page:
       - name: data-action
         value: web-home
       buttons:
-      - label: See More
+      - label: See more
         path: /web/showcase/
         classname: button button-primary
         attributes:

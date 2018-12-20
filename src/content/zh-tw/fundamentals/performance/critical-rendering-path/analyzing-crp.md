@@ -31,7 +31,7 @@ description: 您需要瞭解很多常見問題，才可確定並解決關鍵轉�
 
 我們將從基本的 HTML 標記和單一圖片開始，沒有 CSS 或 JavaScript，就是這麼簡單。現在，我們在 Chrome DevTools 中開啟網路時間軸，並檢查產生的資源瀑布：
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" class="center" alt="CRP">
 
 不出我們所料，HTML 檔案的下載時間大約為 200 毫秒。注意，藍線的透明部分表示瀏覽器在網路上等待 (也就是尚未收到任何回應位元組) 的時間，而實線部分則顯示收到第一個回應位元組之後完成下載的時間。在上述示例中，HTML 下載量極少 (不足 4K)，因此我們僅需單一往返過程即可擷取整個檔案。因此，擷取 HTML 檔案大約耗時 200 毫秒，其中一半的時間在網路上等待，而另一半的時間則在等待伺服器回應。
 
@@ -190,6 +190,3 @@ Note: _domContentLoaded_ 時間與前一個示例中的時間沒有區別：我�
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、非禁止性 CSS 和非同步 JavaScript CRP" class="center">
 
 因為 style.css 資源僅用於列印，因此，瀏覽器不必禁止它即可轉譯網頁。因此，只要 DOM 建構完成，瀏覽器即具備轉譯網頁的足夠資訊！ 所以，這個網頁僅具有一種關鍵資源 (HTML 檔案)，最小關鍵轉譯路徑長度為一個往返過程。
-
-
-

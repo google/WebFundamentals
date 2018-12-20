@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Navigation preload lets you overcome service worker startup time by making requests in parallel.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2018-09-07 #}
 {# wf_published_on: 2017-02-15 #}
 {# wf_tags: chrome59,serviceworker,performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -15,20 +15,11 @@ description: Navigation preload lets you overcome service worker startup time by
 
 ### TL;DR {: .hide-from-toc }
 
-* In some situations, [service worker boot-up time can delay a network
-  response](#the-problem).
-* A new experimental feature, [navigation preload](#the-solution), fixes this by
-  allowing you to make the request in parallel with service worker boot-up.
-* You can distinguish preload requests from regular navigations using a header,
-  and [serve different content](#header).
-* Navigation preload is in Chrome 59 Canary behind a flag, and the API may
-  change in response to developer feedback.
-* It'll remain behind a flag in Chrome 59 stable (likely to be released in
-  March), but you can [apply for an origin trial](#origin-trial) to test it with
-  real users.
-
-Note: An earlier version of this article stated that navigation preload was in
-Chrome 57; however, the feature was delayed to Chrome 59.
+* In some situations, [service worker boot-up time can delay a network response](#the-problem).
+* A new feature, [navigation preload](#the-solution), released in Chrome 59, fixes this by allowing
+  you to make the request in parallel with service worker boot-up.
+* You can distinguish preload requests from regular navigations using a header, and [serve different
+  content](#header).
 
 ## The problem {: #the-problem }
 
@@ -310,29 +301,6 @@ You can look up the state of navigation preload using `getState`:
       console.log(state.enabled); // boolean
       console.log(state.headerValue); // string
     });
-
-## Use it on live sites today! {: #origin-trial }
-
-We're still experimenting with this feature, but we're looking for real-world
-feedback. To get feedback, we're making it available as an [origin
-trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
-starting in Chrome 59. Origin trials allow you to temporarily enable the feature
-for users of your website, so you can test its real-world impact. To do this,
-you'll need to [request a token for your
-origin](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin),
-and include the token as a header on your pages and service worker:
-
-    Origin-Trial: token_obtained_from_signup
-
-To avoid the problems we saw with vendor prefixes, origin trials are globally
-shut off if usage exceeds 0.03% of all Chrome page loads, so large sites should
-only enable the feature for a fraction of its users.
-
-If you do experiment with this feature, you can send us feedback on our [mailing
-list](https://groups.google.com/a/chromium.org/forum/#!forum/service-worker-discuss),
-or join the [spec discussion](https://github.com/w3c/ServiceWorker/issues/920).
-If you find any bugs, please [file an issue](https://crbug.com/new), including
-the words "service worker navigation preload" in the issue Summary.
 
 <small>Many thanks to Matt Falkenhagen and Tsuyoshi Horo for their work on this
 feature, and help with this article. And a huge thanks to everyone involved in

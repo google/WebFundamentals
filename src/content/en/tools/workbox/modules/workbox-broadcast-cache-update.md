@@ -87,9 +87,6 @@ updatesChannel.addEventListener('message', async (event) => {
 
 ### Message format
 
-The message that's sent via the Broadcast Channel API adheres to the
-
-
 When a `message` event listener as received in your web app, the
 `event.data` property will have the following format:
 

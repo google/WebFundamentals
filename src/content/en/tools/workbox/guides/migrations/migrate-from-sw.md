@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2018-10-31 #}
 {# wf_published_on: 2018-01-25 #}
 {# wf_blink_components: N/A #}
 
@@ -212,7 +212,7 @@ is equivalent to this Workbox code:
 ```
 importScripts('path/to/workbox-sw.js');
 
-workbox.router.registerRoute(
+workbox.routing.registerRoute(
   // Match any URL that contains 'ytimg.com'.
   // Unlike in sw-toolbox, in Workbox, a RegExp that matches
   // a cross-origin URL needs to include the initial 'https://'
@@ -240,7 +240,7 @@ workbox.router.registerRoute(
 
 // Set a default network-first strategy to use when
 // there is no explicit matching route:
-workbox.router.setDefaultHandler(workbox.strategies.networkFirst());
+workbox.routing.setDefaultHandler(workbox.strategies.networkFirst());
 ```
 
 ## Getting help

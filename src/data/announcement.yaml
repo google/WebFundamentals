@@ -1,4 +1,4 @@
-enabled: false
+enabled: true
 description: >
     <style>
       .devsite-banner-announcement {
@@ -16,5 +16,6 @@ description: >
         margin-right: 8px;
       }
     </style>
-    Missed the action at this year's <b>Chrome Dev Summit</b>? Catch up with our playlist on YouTube.
-    <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICUD5nBfRdAR6Fveosnqa5m" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>
+    Missed the action at the 2018 <b>Chrome Dev Summit</b>? Catch up with
+    our playlist on the Google Chrome Developers channel on YouTube.
+    <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>

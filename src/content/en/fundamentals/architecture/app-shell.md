@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 
-{# wf_updated_on: 2018-07-20 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: N/A #}
 
@@ -285,3 +285,6 @@ offline and populate its content using JavaScript.
 On repeat visits, this allows you to get meaningful pixels on the screen without
 the network, even if your content eventually comes from there.
 
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

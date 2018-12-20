@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -266,3 +266,7 @@ Make sure you can answer "yes" to the following questions:
 * Do I have a plan to keep my site secure?
 
 ### 9. Bring your site back online
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

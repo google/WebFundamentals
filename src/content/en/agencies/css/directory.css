@@ -211,6 +211,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 32px;
 }
 
 .agency__location {

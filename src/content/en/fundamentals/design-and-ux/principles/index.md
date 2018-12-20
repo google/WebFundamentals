@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
 {# wf_published_on: 2014-08-08 #}
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_blink_components: N/A #}
 
 # What Makes a Good Mobile Site? {: .page-title }
@@ -473,3 +473,7 @@ populate them through a clear call-to-action like “Find Near Me”.
 </div>
 
 <div style="clear:both;"></div>
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

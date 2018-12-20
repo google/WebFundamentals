@@ -68,6 +68,9 @@ toc:
         - title: HTTP Caching
           path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
           step_group: perf-oce
+        - title: Adapting to Users with Client Hints
+          path: /web/fundamentals/performance/optimizing-content-efficiency/client-hints/
+          step_group: perf-oce
         - title: Delivering Fast and Light Applications with Save-Data
           path: /web/fundamentals/performance/optimizing-content-efficiency/save-data/
           step_group: perf-oce
@@ -174,3 +177,22 @@ toc:
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
         step_group: perf-rendering
+    - title: Audit your site
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/audit/
+        step_group: perf-audit
+      - title: Prework
+        path: /web/fundamentals/performance/audit/prework
+      - title: Check site security
+        path: /web/fundamentals/performance/audit/security
+        step_group: perf-audit
+      - title: Measure performance
+        path: /web/fundamentals/performance/audit/tools
+        step_group: perf-audit
+      - title: Share the results
+        path: /web/fundamentals/performance/audit/share
+        step_group: perf-audit
+      - title: Next steps
+        path: /web/fundamentals/performance/audit/next
+        step_group: perf-audit

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-11-08 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-11-08 #}
 
 # A Credential Management API {: .page-title }
@@ -23,7 +23,7 @@ removendo gargalos dos fluxos de acesso por senha.
 
 A Credential Management API:
 
-* **Simplifique o fluxo de acesso** — os usuários podem fazer novo acesso automaticamente 
+* **Simplifique o fluxo de acesso** — os usuários podem fazer novo acesso automaticamente
   em um site, mesmo que a sessão tenha expirado.
 * **Permite acesso em um toque com o seletor de contas** — um seletor de contas nativos é exibido,
   eliminando o formulário de acesso por senha.
@@ -64,7 +64,7 @@ e use-as.
 
 Por exemplo:
 
-1. Quando o usuário chegar no site e não fizer login automaticamente, 
+1. Quando o usuário chegar no site e não fizer login automaticamente,
   chame `navigator.credential.get()`
 2. Use as credenciais recuperadas para aplicar o login automático ao usuário.
 3. Atualize a IU para indicar que o usuário fez login.
@@ -86,8 +86,8 @@ Se o usuário acessou com um provedor de identidade universal, como o Google
 Sign-In, o Facebook, o GitHub etc.:
 
 1. Depois que o usuário acessar com sucesso, criar uma conta ou alterar uma
-   senha, crie o `FederatedCredential` com o endereço de e-mail do usuário como
-   o ID e especifique o provedor de identidade com `.provider` 
+   senha, crie o `FederatedCredential` com o endereço de email do usuário como
+   o ID e especifique o provedor de identidade com `.provider`
 2. Salve o objeto da credencial usando `navigator.credentials.store()`.
 
 Saiba mais em

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sebuah gambar bernilai 1000 kata, dan gambar adalah bagian tidak terpisahkan dari setiap laman. Namun mereka juga yang bertanggung jawab untuk sebagian besar byte yang diunduh.  Dengan desain web responsif, tidak hanya layout yang bisa berubah berdasarkan karakteristik perangkat, namun gambar juga.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Gambar {: .page-title }
@@ -68,7 +68,7 @@ ubahan kecil untuk menciptakan pengalaman pengguna yang baik.
 ### Gunakan ukuran relatif untuk gambar
 
 Ingatlah untuk menggunakan unit relatif ketika menetapkan lebar gambar untuk mencegah gambar
-tanpa sengaja meluap dari tampilan yang terlihat.  Misalnya, `width: 50%;` 
+tanpa sengaja meluap dari tampilan yang terlihat.  Misalnya, `width: 50%;`
 menyebabkan lebar gambar menjadi 50% dari elemen yang terkandung (bukan 50% dari tampilan yang terlihat atau
 50% dari ukuran piksel yang sebenarnya).
 
@@ -80,7 +80,7 @@ max-width: 100% untuk mencegah gambar dan materi lainnya meluap.  Misalnya
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Pastikan untuk memberikan keterangan penuh arti melalui atribut `alt` pada elemen `img`
 ; ini akan membantu membuat situs Anda lebih mudah diakses dengan memberikan konteks untuk
@@ -109,7 +109,7 @@ perangkat 2x saat berada di jaringan bandwidth yang terbatas.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Pada browser yang tidak mendukung `srcset`, browser hanya menggunakan file gambar
 default yang ditentukan oleh atribut `src`.  Inilah sebabnya mengapa penting untuk
@@ -137,7 +137,7 @@ dan lainnya.
 
 <div style="clear:both;"></div>
 
-Dogfood: Elemen `picture` mulai mendarat di browser. Meskipun belum tersedia di semua browser, kami merekomendasikan penggunaannya karena kompatibilitas mundur yang kuat dan potensi penggunaan [Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external }. Lihat situs [ResponsiveImages.org](http://responsiveimages.org/#implementation) untuk lebih jelasnya.
+Dogfood: Elemen `picture` mulai mendarat di browser. Meskipun belum tersedia di semua browser, kami merekomendasikan penggunaannya karena kompatibilitas mundur yang kuat dan potensi penggunaan [Picturefill polyfill](https://scottjehl.github.io/picturefill/){: .external }. Lihat situs [ResponsiveImages.org](http://responsiveimages.org/#implementation) untuk lebih jelasnya.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -399,14 +399,14 @@ Data URI menyediakan cara untuk menyertakan file, seperti gambar, inline dengan 
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 Awal kode untuk logo HTML5 di atas terlihat seperti ini:
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 (Versi lengkap lebih dari 5000 karakter panjangnya!)
 
@@ -483,7 +483,7 @@ atau gambar 1x pada perangkat 2x ketika berada pada jaringan bandwidth terbatas.
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Selain memuat gambar yang benar, browser juga mengubah ukurannya
 secara sesuai. Dengan kata lain, browser berasumsi bahwa gambar 2x berukuran dua kali
@@ -506,8 +506,8 @@ kembali ke aset 1x. Kekurangan yang nyata adalah bahwa meskipun dukungan browser
 
 ### Menggunakan kueri media untuk memberikan gambar resolusi tinggi atau tujuan seni
 
-Kueri media bisa membuat aturan berdasarkan 
-[rasio piksel perangkat](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), 
+Kueri media bisa membuat aturan berdasarkan
+[rasio piksel perangkat](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg),
 sehingga bisa menentukan gambar yang berbeda untuk tampilan 2x versus 1x.
 
 
@@ -516,7 +516,7 @@ sehingga bisa menentukan gambar yang berbeda untuk tampilan 2x versus 1x.
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox dan Opera semua mendukung `(min-resolution: 2dppx)` standar,
 sementara Safari dan browser Android keduanya membutuhkan sintaks berawalan vendor yang lebih lama
@@ -542,10 +542,10 @@ diunduh dan diaplikasikan ke `body` jika lebar browser 500px atau lebih besar:
         background-image: url(bg.png);
       }
     }
-    
 
 
-## Menggunakan SVG untuk ikon 
+
+## Menggunakan SVG untuk ikon
 
 Ketika menambahkan ikon ke laman Anda, gunakan ikon SVG jika memungkinkan atau dalam kasus
 tertentu, karakter unicode.
@@ -561,7 +561,7 @@ Banyak font mengikutsertakan dukungan untuk berbagai karakter unicode, yang bisa
 sebagai pengganti gambar. Tidak seperti gambar, font unicode akan diskalakan dengan baik dan terlihat baik tidak
 peduli seberapa kecil atau besar mereka ditampilkan di layar.
 
-Selain himpunan karakter normal, unicode mungkin memasukkan simbol untuk 
+Selain himpunan karakter normal, unicode mungkin memasukkan simbol untuk
 panah (&#8592;), operator matematika (&#8730;), bentuk geometris
 (&#9733;), gambar kontrol (&#9654;), notasi musik (&#9836;),
 huruf Yunani (&#937;), bahkan bidak catur (&#9822;).
@@ -571,18 +571,18 @@ Memasukkan karakter unicode dilakukan secara sama dengan memberi nama entitas:
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
 ### Ganti ikon kompleks dengan SVG
 
-Untuk persyaratan ikon kompleks lainnya, ikon SVG biasanya ringan, 
+Untuk persyaratan ikon kompleks lainnya, ikon SVG biasanya ringan,
 mudah digunakan, dan bisa diberi gaya dengan CSS. SVG memiliki sejumlah keunggulan dibandingkan
 gambar bitmap:
 
 * Mereka adalah grafis vektor yang bisa diskalakan secara tak terbatas.
-* Efek CSS seperti warna, bayangan, transparansi, dan animasi 
+* Efek CSS seperti warna, bayangan, transparansi, dan animasi
   bisa dibuat dengan mudah.
 * Gambar SVG bisa disisipkan langsung dalam dokumen.
 * Mereka semantik.
@@ -607,18 +607,18 @@ gambar bitmap:
   </figcaption>
 </figure>
 
-Font ikon memang populer, dan mudah digunakan, namun memiliki beberapa kekurangan jika 
+Font ikon memang populer, dan mudah digunakan, namun memiliki beberapa kekurangan jika
 dibandingkan dengan ikon SVG:
 
-* Mereka grafis vektor yang bisa secara tak terbatas diskalakan, namun 
+* Mereka grafis vektor yang bisa secara tak terbatas diskalakan, namun
   anti-alias mungkin menghasilkan ikon tidak setajam yang diharapkan.
 * Penataan gaya terbatas dengan CSS.
-* Pemosisian sempurna hingga tingkat piksel bisa sulit dilakukan, tergantung pada tinggi-baris, 
+* Pemosisian sempurna hingga tingkat piksel bisa sulit dilakukan, tergantung pada tinggi-baris,
   pengaturan jarak huruf, dll.
-* Font ikon bukan semantik, dan sulit digunakan dengan pembaca layar atau 
+* Font ikon bukan semantik, dan sulit digunakan dengan pembaca layar atau
   teknologi bantu lainnya.
-* Kecuali dengan benar tercakup, Font ikon bisa menghasilkan ukuran file yang besar hanya karena menggunakan 
-  subset kecil dari ikon yang tersedia. 
+* Kecuali dengan benar tercakup, Font ikon bisa menghasilkan ukuran file yang besar hanya karena menggunakan
+  subset kecil dari ikon yang tersedia.
 
 <div style="clear:both;"></div>
 
@@ -734,7 +734,7 @@ kinerja, menggunakan lazy loading bisa menciptakan pengalaman gulir tak terbatas
 
 Hati-hati saat membuat laman gulir tak terbatas&mdash;karena materi dimuat
 ketika terlihat, mesin telusur mungkin tidak akan pernah melihat materi tersebut.  Selain itu,
-pengguna yang mencari informasi yang mereka harapkan bisa dilihat di footer, 
+pengguna yang mencari informasi yang mereka harapkan bisa dilihat di footer,
 tidak akan pernah melihat footer karena materi baru selalu dimuat.
 
 
@@ -751,7 +751,7 @@ file gambar yang terpisah sehingga mencegah gambar diskalakan dengan canggung.  
 
 Bila memungkinkan, teks harus berupa teks dan tidak disematkan ke dalam gambar. Misalnya,
 menggunakan gambar sebagai judul atau menempatkan informasi kontak&mdash;seperti nomor
-telepon atau alamat&mdash;secara langsung pada gambar untuk mencegah pengguna 
+telepon atau alamat&mdash;secara langsung pada gambar untuk mencegah pengguna
 menyalin dan menempelkan informasi; hal ini membuat informasi tidak bisa diakses pembaca layar, dan
 tidak responsif.  Sebagai gantinya, letakkan teks dalam markup Anda dan jika perlu gunakan
 webfonts untuk memperoleh gaya yang Anda butuhkan.
@@ -760,7 +760,7 @@ webfonts untuk memperoleh gaya yang Anda butuhkan.
 
 Browser modern bisa menggunakan fitur CSS untuk menciptakan gaya yang sebelumnya
 memerlukan gambar.  Misalnya: gradien kompleks bisa dibuat dengan menggunakan properti
-`background`, bayangan dapat dibuat dengan menggunakan `box-shadow`, dan sudut 
+`background`, bayangan dapat dibuat dengan menggunakan `box-shadow`, dan sudut
 membulat bisa ditambahkan dengan properti `border-radius`.
 
 <style>
@@ -797,7 +797,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Harap diingat bahwa menggunakan teknik ini tidak memerlukan siklus rendering, yang
 bisa cukup signifikan pada perangkat seluler.  Jika digunakan berlebihan, Anda akan kehilangan manfaat yang mungkin telah

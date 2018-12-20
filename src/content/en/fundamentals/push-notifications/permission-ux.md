@@ -1,7 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-03-03 #}
+{# wf_blink_components: Blink>PushAPI #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Permission UX {: .page-title }
@@ -177,3 +178,7 @@ offers no UI for disabling push notifications is astounding.
 
 Your site should explain to your users how they can disable push. If you don't, users are
 likely to take the nuclear option and block permission permanently.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

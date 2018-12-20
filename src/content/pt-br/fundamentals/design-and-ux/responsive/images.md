@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Uma imagem vale 1.000 palavras e as imagens têm um papel essencial em todas as páginas. No entanto, elas frequentemente também representam a maior parte dos bytes baixados.  Com um Web design responsivo, não só seus layouts podem ser alterados com base nas características do dispositivo, mas as imagens também.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Imagens {: .page-title }
@@ -68,7 +68,7 @@ ajustes para criar uma boa experiência.
 ### Use tamanhos relativos para imagens
 
 Lembre-se de usar unidades relativas ao especificar larguras de imagens para impedir que elas
-acidentalmente ultrapassem a janela de visualização.  Por exemplo, `width: 50%;` fará 
+acidentalmente ultrapassem a janela de visualização.  Por exemplo, `width: 50%;` fará
 com que a largura da imagem seja 50% do contêiner (não 50% da janela de visualização ou do
 tamanho real em pixels).
 
@@ -80,7 +80,7 @@ exemplo:
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Forneça descrições significativas pelo atributo `alt` em elementos `img`
 ; elas tornarão seu site mais acessível, fornecendo contexto para
@@ -109,7 +109,7 @@ um dispositivo de 2x em uma rede de largura de banda limitada.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Navegadores que não oferecem suporte a `srcset` simplesmente usam o arquivo de imagem
 padrão especificado pelo atributo `src`.  Por esse motivo, é importante
@@ -137,7 +137,7 @@ e muito mais.
 
 <div style="clear:both;"></div>
 
-Dogfood: O elemento `picture` está começando a ser usado em navegadores. Apesar de ele ainda não estar disponível em todos os navegadores, recomendamos seu uso por causa de sua compatibilidade com versões anteriores e do possível uso do [polyfill Picturefill](http://picturefill.responsiveimages.org/){: .external }. Consulte o site [ResponsiveImages.org](http://responsiveimages.org/#implementation) para saber mais.
+Dogfood: O elemento `picture` está começando a ser usado em navegadores. Apesar de ele ainda não estar disponível em todos os navegadores, recomendamos seu uso por causa de sua compatibilidade com versões anteriores e do possível uso do [polyfill Picturefill](https://scottjehl.github.io/picturefill/){: .external }. Consulte o site [ResponsiveImages.org](http://responsiveimages.org/#implementation) para saber mais.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -399,14 +399,14 @@ URIs de dados oferecem uma maneira de incluir um arquivo em linha, como uma imag
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 O início do código para o logotipo HTML5 acima tem a seguinte aparência:
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 (A versão completa tem mais de 5000 caracteres!)
 
@@ -483,7 +483,7 @@ ou de uma imagem de 1x em um dispositivo de 2x em uma rede de largura de banda l
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Além de carregar a imagem correta, o navegador também a dimensionará
 da forma adequada. Em outras palavras, o navegador presume que imagens de 2x são duas vezes
@@ -506,8 +506,8 @@ utilizam o ativo de 1x. A ressalva óbvia é que, embora o suporte a
 
 ### Use consultas de mídia para fornecer imagens de alta resolução ou direção de arte
 
-Consultas de mídia podem criar regras baseadas na 
-[proporção de pixels do dispositivo](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), 
+Consultas de mídia podem criar regras baseadas na
+[proporção de pixels do dispositivo](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg),
 possibilitando a especificação de diferentes imagens para exibições de 2x vs. 1x.
 
 
@@ -516,7 +516,7 @@ possibilitando a especificação de diferentes imagens para exibições de 2x vs
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 O Chrome, o Firefox e o Opera oferecem suporte ao `(min-resolution: 2dppx)` padrão,
 enquanto os navegadores Safari e Android exigem a sintaxe prefixada de fornecedor mais antiga
@@ -542,10 +542,10 @@ baixado e aplicado ao `body` se a largura do navegador por de 500 pixels ou mais
         background-image: url(bg.png);
       }
     }
-    
 
 
-## Use SVG para ícones 
+
+## Use SVG para ícones
 
 Ao adicionar ícones à sua página, use ícones SVG quando possível ou, em alguns
 casos, caracteres Unicode.
@@ -561,7 +561,7 @@ Muitas fontes incluem suporte para uma variedade de glifos Unicode, que podem se
 no lugar de imagens. Diferentemente de imagens, fontes Unicode podem ser dimensionadas e manter uma aparência boa
 aparecendo grandes ou pequenas na tela.
 
-Além do conjunto de caracteres normal, o Unicode pode incluir símbolos para 
+Além do conjunto de caracteres normal, o Unicode pode incluir símbolos para
 setas (&#8592;), operadores matemáticos (&#8730;), formas geométricas
 (&#9733;), imagens de controle (&#9654;), notação musical (&#9836;),
 letras gregas (&#937;) e até peças de xadrez (&#9822;).
@@ -571,18 +571,18 @@ Você pode incluir um caractere Unicode da mesma maneira que faz com entidades n
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
 ### Substitua ícones complexos por SVG
 
-Para requisitos de ícone mais complexos, os ícones SVG geralmente são leves, 
+Para requisitos de ícone mais complexos, os ícones SVG geralmente são leves,
 fáceis de usar e podem estilizados com CSS. O SVG tem diversas vantagens sobre
 imagens de raster:
 
 * Imagens SVG são gráficos vetoriais que podem ser infinitamente dimensionados.
-* Efeitos CSS como cor, sombreamento, transparência e animações são 
+* Efeitos CSS como cor, sombreamento, transparência e animações são
   simples.
 * Imagens SVG podem ser incorporadas diretamente no documento.
 * Elas são semânticas.
@@ -607,18 +607,18 @@ imagens de raster:
   </figcaption>
 </figure>
 
-Fontes de ícone são populares e podem ser fáceis de usar, mas têm algumas desvantagens 
+Fontes de ícone são populares e podem ser fáceis de usar, mas têm algumas desvantagens
 em comparação com ícones SVG:
 
-* Elas são gráficos vetoriais que podem ser infinitamente dimensionadas, mas elas podem sofrer 
+* Elas são gráficos vetoriais que podem ser infinitamente dimensionadas, mas elas podem sofrer
  suavização, resultando em ícones que não têm a nitidez esperada.
 * Estilização limitada com CSS.
-* Pode ser difícil posicionar pixels perfeitamente, dependendo da altura da linha, 
+* Pode ser difícil posicionar pixels perfeitamente, dependendo da altura da linha,
  do espaçamento entre as letras etc.
-* Não são semânticas e podem ser difíceis de usar com leitores de tela ou 
+* Não são semânticas e podem ser difíceis de usar com leitores de tela ou
   outras tecnologias assistenciais.
-* A não ser que o escopo seja definido corretamente, podem resultar em um tamanho de arquivo grande que usa 
-  apenas um pequeno subconjunto dos ícones disponíveis. 
+* A não ser que o escopo seja definido corretamente, podem resultar em um tamanho de arquivo grande que usa
+  apenas um pequeno subconjunto dos ícones disponíveis.
 
 <div style="clear:both;"></div>
 
@@ -734,7 +734,7 @@ desempenho, o uso do carregamento lento pode criar experiências de rolagem infi
 
 Tenha cuidado ao criar páginas com rolagem infinita &mdash; pois o conteúdo é carregado conforme
 ele se torna visível, então mecanismos de pesquisa poderão nunca ver o conteúdo.  Além disso,
-usuários que procuram informações no rodapé nunca 
+usuários que procuram informações no rodapé nunca
 verão o rodapé, pois há sempre um novo conteúdo a ser carregado.
 
 
@@ -751,7 +751,7 @@ separados, evitando o uso de imagens dimensionadas de forma inadequada.  Você p
 
 Sempre que possível, o texto deve ser texto, não incorporado em imagens. Por
 exemplo, usar imagens como títulos ou colocar informações de contato &mdash; como números
-de telefone ou endereços &mdash; diretamente em imagens impede os usuários de 
+de telefone ou endereços &mdash; diretamente em imagens impede os usuários de
 copiar e colar essas informações, além de torná-las inacessíveis para leitores de tela e criar um design
 não responsivo.  O texto deve ser colocado na sua marcação e, se necessário,
 use fontes da Web para criar o estilo desejado.
@@ -760,7 +760,7 @@ use fontes da Web para criar o estilo desejado.
 
 Navegadores modernos podem usar recursos CSS para criar estilos que anteriormente
 exigiam imagens.  Por exemplo: gradientes complexos podem ser usados usando a propriedade
-`background`, sombras podem ser criadas usando `box-shadow` e bordas 
+`background`, sombras podem ser criadas usando `box-shadow` e bordas
 arredondadas podem ser adicionadas com a propriedade `border-radius`.
 
 <style>
@@ -797,7 +797,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Lembre-se de que o uso dessas técnicas exige ciclos de renderização, que
 podem ser significativos em dispositivos móveis.  Se elas forem utilizadas excessivamente, você perderá

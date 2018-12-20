@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new workflows for viewing and changing CSS in Chrome DevTools.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2017-06-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -235,6 +235,10 @@ The Coverage tab shows you what CSS a page actually uses.
          are unused, whereas lines 59 to 63 are used
        </figcaption>
      </figure>
+
+### Force print preview mode {: #print }
+
+See [Force DevTools Into Print Preview Mode](/web/tools/chrome-devtools/css/print-preview).
 
 ## Change CSS {: #change }
 

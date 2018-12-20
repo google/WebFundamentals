@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to handle third party requests with Workbox.
 
-{# wf_updated_on: 2018-04-18 #}
+{# wf_updated_on: 2018-10-17 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -20,9 +20,8 @@ different and what you can do in Workbox to support these requests.
 ## Cross-Origin Requests and Opaque Responses
 
 One of the security mechanisms in browsers is that when a piece of JavaScript
-requests a URL on a different origin, it’s not prevented from being able to
-view the response. The reason for this is so websites can’t try and scan for
-URLs on a user’s network.
+requests a URL from a different origin, it’s prevented from being able to
+access the body and many other details of the response.
 
 When you get a response like this, it’s known as an "opaque response". Some
 requests can be read in JavaScript if the server returns
@@ -34,8 +33,8 @@ responses. For opaque responses the contents of the Response will still
 be hidden. You can’t even check that status code of the response. Because
 of this Workbox treats opaque responses differently.
 
-You can learn more from this
-[Stackoverflow Q&A](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
+You can learn more about opaque responses from this
+[Stack Overflow Q&A](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
 
 ### Remember to Opt-in to CORS Mode
 
@@ -129,6 +128,6 @@ workbox.routing.registerRoute(
 ```
 
 <aside markdown="1" class="warning">
-<strong>Warning:</strong> This will cache a response that could be an error and it will not
+<strong>Warning:</strong> This will cache a response that could be an error, which would then never
 get updated!
 </aside>

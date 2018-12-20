@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Third-party scripts provide a wide range of useful functionality, making the web more dynamic. Learn how to optimize the loading of third-party scripts to reduce their impact on performance.
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-10-31 #}
 {# wf_published_on: 2018-02-28 #}
 {# wf_blink_components: Blink>JavaScript #}
 
@@ -17,7 +17,7 @@ You've optimized all of your code, but your site still loads too slowly. Who's
 the culprit?
 
 Often, performance problems slowing pages down are due to third-party scripts:
-ads, analytics, trackers, social-media buttons, and so on. 
+ads, analytics, trackers, social-media buttons, and so on.
 
 Third-party scripts provide a wide range of useful functionality, making the web
 more dynamic, interactive, and interconnected. These scripts may be crucial to
@@ -33,19 +33,19 @@ about third-party scripts?
 * They can be a **privacy** concern
 * They might be a **security** concern
 * They can be **unpredictable** and change without you knowing
-* They can have **unintended consequences** 
+* They can have **unintended consequences**
 
 Ideally, you’ll want to ensure third-party script is not impacting the [critical
 rendering path](/web/fundamentals/performance/critical-rendering-path/). In this
 guide, we’ll walk through how to find and fix issues related to loading
-third-party JavaScript. 
+third-party JavaScript.
 
 ## What do we mean by third-party scripts?
 
 Third-party JavaScript often refers to scripts that can be embedded into any
 site directly from a third-party vendor. These scripts can include ads,
 analytics, widgets and other scripts that make the web more dynamic and
-interactive. 
+interactive.
 
 Examples of third-party scripts include:
 
@@ -55,7 +55,7 @@ Examples of third-party scripts include:
 
 * Advertising iframes
 
-* Analytics & metrics scripts 
+* Analytics & metrics scripts
 
 * A/B testing scripts for experiments
 
@@ -64,7 +64,7 @@ Examples of third-party scripts include:
 <img src="images/image_0.jpg" alt="example of a youtube video embed"/>
 
 ```html
-<iframe 
+<iframe
   width="560" height="315" src="https://www.youtube.com/embed/mo8thg5XGV0"
   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
@@ -76,7 +76,7 @@ embed a video into your page.
 Unfortunately, embedding third-party scripts means we often rely on them to be
 fast in order to avoid slowing our pages down. Third-party scripts are a
 predominant cause of performance slowdowns and are often caused by resources
-outside of your control. 
+outside of your control.
 
 These issues can include:
 
@@ -116,7 +116,7 @@ These issues can include:
 
 * Including multiple third party embeds can lead to multiple frameworks and
   libraries being pulled in several times. This is wasteful and exacerbates the
-  performance issues. 
+  performance issues.
 
 * Third-party scripts often use embed techniques that can block
   [window.onload](https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onload)
@@ -136,7 +136,7 @@ DevTools](https://developer.chrome.com/devtools), [PageSpeed
 Insights](/speed/pagespeed/insights/) and
 [WebPageTest](https://www.webpagetest.org/). These tools display rich diagnostic
 information that can tell you *how many* third party scripts are loaded by your
-site and which take the most time to execute. 
+site and which take the most time to execute.
 
 WebPageTest’s waterfall view can highlight the impact of heavy third-party
 script use. Below is an example of the requests required to load the main
@@ -159,13 +159,13 @@ yourself whether the script is really that necessary. Do an A/B test to balance
 the perceived value versus its impact on key user engagement or performance
 metrics.
 
-### Chrome DevTools Third-party Script Badging 
+### Chrome DevTools Third-party Script Badging
 
 [Chrome DevTools](/web/tools/chrome-devtools/) has support for highlighting
 third-parties (by their product name) in the [Network
 panel](/web/tools/chrome-devtools/network-performance/resource-loading). This
 allows you to get more insight into the third-parties making request on a page,
-logging to the console and executing expensive JavaScript on your page. 
+logging to the console and executing expensive JavaScript on your page.
 
 To show third party badges, navigate to any panel in the Chrome DevTools and hit
 CMD + Shift + P to bring up the Command Menu. Next enter in "Show third party
@@ -177,12 +177,12 @@ feature from the DevTools command menu"/>
 When you record a page load using the Network panel it will now include third
 party badges, like the "AOL Advertising" badges shown below in green. Hovering
 over a third-party badge in the Network panel will display more information
-about that script, helping you identify what it does. 
+about that script, helping you identify what it does.
 
 <img src="images/image_5.png" alt="DevTools third-party badging in the network
 panel"/>
 
-## How do I measure the impact of third-party script on my page? 
+## How do I measure the impact of third-party script on my page?
 
 ### Lighthouse Boot-up Time Audit
 
@@ -215,7 +215,7 @@ third-party resources from your page.
 
 To enable request blocking, right click on any request in the Network panel and
 select "Block Request URL". A Request blocking tab will display in the DevTools
-drawer, letting you manage which requests have been blocked. 
+drawer, letting you manage which requests have been blocked.
 
 <img src="images/image_7.png" alt="Block request URLs from the DevTools network
 panel"/>
@@ -229,7 +229,7 @@ record button and loading your page presents you with a waterfall representing
 where your site is spending time. At the bottom of the Performance panel, you
 will see a drawer starting with
 "[Summary](/web/tools/chrome-devtools/evaluate-performance/reference#record-load)".
-Navigate to the “Bottom-up” tab. 
+Navigate to the “Bottom-up” tab.
 
 Here, you can use the "Group by product" option in the Bottom-Up tab to group
 third-parties by the time they spent. This helps identify which third party
@@ -246,7 +246,7 @@ performance](/web/tools/chrome-devtools/evaluate-performance/).
 
 A good **workflow** for measuring the impact of third-party scripts is:
 
-* Measure how long it takes to load your page using the Network panel. 
+* Measure how long it takes to load your page using the Network panel.
     * To emulate real-world conditions, we recommend turning on [network
       throttling](/web/tools/chrome-devtools/network-performance/#emulate) and
       [CPU throttling](/web/updates/2017/07/devtools-release-notes#throttling).
@@ -257,7 +257,7 @@ A good **workflow** for measuring the impact of third-party scripts is:
   scripts).
 
 * Reload the page and re-measure how long the page takes without loading these
-  blocked third-party scripts. You should hopefully see an improvement. 
+  blocked third-party scripts. You should hopefully see an improvement.
 
     * There may be value in doing 3 or more runs of measurement and looking at
       the median for more stable figures. As third-party content can
@@ -270,10 +270,10 @@ A good **workflow** for measuring the impact of third-party scripts is:
 
 [WebPageTest](https://www.webpagetest.org/) supports blocking individual
 requests from loading (which can be useful for blocking content like ads and
-third-party embeds) to measure their impact. 
+third-party embeds) to measure their impact.
 
 Under "Advanced Settings" is a Block tab. This can be used to specify a list of
-domains to block, simulating what it would be like if they didn't load at all. 
+domains to block, simulating what it would be like if they didn't load at all.
 
 <img src="images/image_9.png" alt="WebPageTest advanced settings &lt; Block.
 Displays a text area for specifying domains to block."/>
@@ -294,7 +294,7 @@ allowing you to compare two reports"/>
 Below we can see the difference between filmstrips both with and without
 third-party resources blocked. It can be useful to try this out for individual
 third-party origins to determine which ones have the biggest impact on your
-page-load performance: 
+page-load performance:
 
 <img src="images/image_11.png" alt="WebPageTest filmstrip displaying the impact
 of loading a site with and without third-parties disabled"/>
@@ -311,14 +311,14 @@ blocking domains.
 - takes a list of domains and blocks anything not on the list.
 
 WebPageTest also has a single-point of failure (SPOF) tab. This allows you to
-simulate a timeout or complete failure to load a resource. 
+simulate a timeout or complete failure to load a resource.
 
 The difference between "SPOF" and "Block" is that SPOF slowly times out. This
 can make it useful for testing network resilience of third-party content to
 determine how well your pages hold up when services are under heavy load or
 temporarily unavailable.
 
-<img src="images/image_12.png" alt="WebPageTest advanced settings > SPOF > hosts
+<img src="images/image_12.png" alt="WebPageTest advanced settings &gt; SPOF &gt; hosts
 to fail"/>
 
 ### Detecting expensive iframes using Long Tasks
@@ -334,7 +334,7 @@ use the JavaScript
 API and observe
 [longtask](/web/fundamentals/performance/user-centric-performance-metrics#long_tasks)
 entries. As these entries contain an attribution property, we can track down
-which frame context was responsible for the task. 
+which frame context was responsible for the task.
 
 Below is an example that will log `longtask` entries to the console, including
 one for an "expensive" iframe:
@@ -378,19 +378,19 @@ to improve performance:
 * Consider [Resource
   Hints](/web/fundamentals/performance/resource-prioritization#preconnect) like
   `<link rel=preconnect>` or `<link rel=dns-prefetch>` to perform a DNS lookup
-  for domains hosting third-party scripts. 
+  for domains hosting third-party scripts.
 
 ### Use async or defer
 
 JavaScript execution is parser blocking. This means when the browser encounters
 a script it must pause DOM construction, hand this over to the JavaScript engine
-and allow script execution before proceeding with DOM construction. 
+and allow script execution before proceeding with DOM construction.
 
-The async and defer attributes change this behavior. 
+The async and defer attributes change this behavior.
 
 * With async, the browser downloads the script asynchronously while it continues
   to parse the HTML document. When the script finishes downloading, parsing is
-  blocked while the script executes. 
+  blocked while the script executes.
 
 * With defer, the browser downloads the script asynchronously while it continues
   to parse the HTML document. The script doesn't run until the parsing is
@@ -454,7 +454,7 @@ Hints](/web/fundamentals/performance/resource-prioritization#preconnect) like
 rel=dns-prefetch>](/web/fundamentals/performance/resource-prioritization#preconnect)
 to perform a DNS lookup for domains hosting third-party scripts. When the
 request for them is finally made, time can be saved as the DNS lookup has
-already been carried out. 
+already been carried out.
 
 ```
 <link rel="dns-prefetch" href="http://example.com">
@@ -497,7 +497,7 @@ round-trip times, improve HTTP caching headers or take advantage of advanced
 techniques like HTTP/2 server push. Self-hosting may be a viable consideration
 if a script is considered critical.
 
-Self-hosting can come with a number of big caveats: 
+Self-hosting can come with a number of big caveats:
 
 * Scripts can go out of date. This can be a large issue as it prevents you from
   getting important security fixes without manually updating.
@@ -505,7 +505,7 @@ Self-hosting can come with a number of big caveats:
 * Scripts that are self-hosted won’t get automatic updates due to an API change.
   One example: a publisher with 90% of their revenue from ads discovers that ads
   didn’t serve for half a day due to an API change that their self-hosted script
-  didn’t account for, leading to loss in income. 
+  didn’t account for, leading to loss in income.
 
 An alternative to self-hosting scripts would be using [Service
 Workers](/web/fundamentals/primers/service-workers/) to cache them. This can
@@ -522,7 +522,7 @@ determine which one performs best. This is done by enabling both variants (A and
 B) for different samples of your website traffic. The page that provides a
 better conversion rate wins.
 
-A/B testing is a very useful tool for analyzing user experience and behavior. 
+A/B testing is a very useful tool for analyzing user experience and behavior.
 
 However, by design, A/B testing delays rendering to figure out which experiment
 needs to be active. JavaScript is often used to check if any of your users
@@ -542,7 +542,7 @@ to slow page speed when constructed poorly. Lazy-loading can be used to only
 load embedded resources when necessary. For example, serving an ad in the footer
 only when a user scrolls down the page. Another pattern is lazy-loading content
 after the main page content loads but before a user might otherwise interact
-with the page. 
+with the page.
 
 <img src="images/image_15.png" alt="An illustration showing assets that are
 critical for the above the fold experience and those that are less critical and
@@ -562,9 +562,9 @@ documentation](https://support.google.com/dfp_premium/answer/4578089#lazyloading
 If used properly, lazy loading can increase the overall viewability percentage
 of an ad. For example, MediaVine switched to[ lazy-loading
 ads](https://www.mediavine.com/lazy-loading-ads-mediavine-ads-load-200-faster/)
-and saw a 200% improvement in page load speed. 
+and saw a 200% improvement in page load speed.
 
-#### Efficient lazy-loading with Intersection Observer 
+#### Efficient lazy-loading with Intersection Observer
 
 Historically, solutions for detecting if an element is visible in the viewport
 (in order to lazy-load its content) have been error-prone, often causing the
@@ -574,7 +574,7 @@ browser to become sluggish. Solutions have often listened for
 then used DOM APIs like
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 to calculate where elements are relative to the viewport. This works, but is not
-efficient. 
+efficient.
 
 [IntersectionObserver](/web/updates/2016/04/intersectionobserver) is a browser
 API that allows us to efficiently detect when an observed element enters or
@@ -589,7 +589,7 @@ for IntersectionObserver.
 Analytics scripts should never slow down your page load experience, but if you
 defer the load too long you can miss valuable analytics data. Fortunately, there
 are some well-known patterns for initializing analytics lazily while retaining
-early page-load data. 
+early page-load data.
 
 Phil Walton's blog post, [The Google Analytics Setup I Use on Every Site I
 Build](https://philipwalton.com/articles/the-google-analytics-setup-i-use-on-every-site-i-build/)
@@ -604,7 +604,7 @@ Third-party scripts sometimes use
 to inject and load scripts. This is particularly true of older services that
 haven’t been updated in some time. Thankfully, many third-parties offer an
 option to asynchronously load themselves, which allows third-party scripts to
-load without blocking the display of the rest of the content on the page. 
+load without blocking the display of the rest of the content on the page.
 
 The fix for document.write() is to simply not inject scripts using it. As of
 Chrome 53, Chrome DevTools will log warnings to the console for problematic use
@@ -633,7 +633,7 @@ A "tag" is a snippet of code that allows digital marketing teams to collect
 data, set cookies or integrate third-party content like social media widgets
 into a site. These tags have a cost to your page's loading performance -
 additional network requests, heavy JavaScript dependencies, images and resources
-the tag itself may pull in. 
+the tag itself may pull in.
 
 Managing these tags can become a real mess over time as marketing teams wish to
 add more ways to understand users and engineering tries to minimize the impact
@@ -689,7 +689,7 @@ quickly pages load. This is because:
 
 Third-party scripts injected into the unknown can sometimes load a number of
 their own JavaScript dependencies. This can pollute the global scope and cause
-accidental breakage in pages. 
+accidental breakage in pages.
 
 There is also no guarantee that code loaded from a third-party will remain the
 same as what you saw during testing. New features can be pushed out by third
@@ -751,16 +751,16 @@ ignore third-party script performance. Good things you can do:
 
 * Become familiar with some of the most effective third-party script
   optimization methods like only loading tags that support the async loading
-  pattern. 
+  pattern.
 
 * Understand how to identify and fix issues with third-party script loading.
-  This can help you take back control of your page load performance. 
+  This can help you take back control of your page load performance.
 
 Third-party script optimization should be followed by on-going real-time
 performance monitoring of your scripts and communication with your third-party
 providers. The web is evolving at a rapid pace and a script’s locally observed
 performance gives no guarantees that it will perform as well in the future or in
-the wild. 
+the wild.
 
 ## Further reading
 

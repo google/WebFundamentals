@@ -259,6 +259,21 @@ function test(filename, contents, options) {
     });
   }
 
+  // Warn on missing "was this page helpful?" widget
+  if (!options.ignoreMissingHelpfulWidget) {
+    const reHelpful = /^{%\s?include "web\/_shared\/helpful\.html"\s?%}/m;
+    const rePath = /src\/content\/.+?\//;
+    if (rePath.test(filename)) {
+      if (!reHelpful.test(contents)) {
+        const position = {line: getLineNumber(contents, contents.length - 1)};
+        const msg =
+          'Consider adding a "was this page helpful?" widget to your page: ' +
+          'https://developers.google.com/web/resources/widgets#helpful';
+        logWarning(msg, position);
+      }
+    }
+  }
+
   // Warn on missing comment widgets
   if (!options.ignoreMissingCommentWidget) {
     const reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;

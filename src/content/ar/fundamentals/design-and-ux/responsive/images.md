@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك تلعب الصور دورًا كبيرًا في أية صفحة. إلا أن وضع الصور يعني إضافة لعدد وحدات بايت التي يتم تنزيلها.  في تصميم الويب سريع الاستجابة، لا يمكن للتنسيقات فقط التغير بناءً على سمات الجهاز، بل الصور أيضًا.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # الصور {: .page-title }
@@ -35,7 +35,7 @@ description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك
 {% include "web/_shared/udacity/ud882.html" %}
 
 
-## الصور في الترميز 
+## الصور في الترميز
 
 يتميز العنصر `img` بأهميته الكبيرة؛ نظرًا لأنه يساعد على التنزيل وفك الترميز
 وعرض المحتوى، ولذلك تتوافق المتصفحات الحديثة مع عدد مختلف من تنسيقات الصور. لا يختلف تضمين الصور
@@ -65,7 +65,7 @@ description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 لا تنس توفير كلمات وصفية معبرة عبر السمة `alt` على عناصر `img`؛ نظرًا لأن ذلك يساعد في جعل موقعك
 على الويب أكثر سهولة في الاستخدام من خلال توفير سياق لأجهزة قراءة الشاشة والتقنيات الحساسة الأخرى.
@@ -86,7 +86,7 @@ description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك
 <div class="clearfix"></div>
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 في المتصفحات التي لا تتوافق مع `srcset`، يستخدم المتصفح ملف الصورة الافتراضي المحدد في السمة `src`.
 ولذلك من الضروري دائمًا تضمين صورة 1x يمكن عرضها على أي جهاز، بغض النظر عن الإمكانيات. وعندما يكون
@@ -106,7 +106,7 @@ description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك
 <img class="center" src="img/art-direction.png" alt="مثال على الإخراج الفني"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: يبدأ العنصر  `picture` الوصول إلى المتصفحات. وعلى الرغم من أنه ليس متوفرًا في جميع المتصفحات إلى الآن، نوصي باستخدامه نظرًا لإمكانية التوافق مع إصدارات أقدم وإمكانية الاستفادة من <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>. راجع موقع <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> للحصول على مزيد من التفاصيل.
+Note: يبدأ العنصر  `picture` الوصول إلى المتصفحات. وعلى الرغم من أنه ليس متوفرًا في جميع المتصفحات إلى الآن، نوصي باستخدامه نظرًا لإمكانية التوافق مع إصدارات أقدم وإمكانية الاستفادة من <a href="https://scottjehl.github.io/picturefill/">Picturefill polyfill</a>. راجع موقع <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> للحصول على مزيد من التفاصيل.
 
 
 <div class="video-wrapper">
@@ -252,7 +252,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 حتى انتهاء المحلل المقدم على الأقل. وهذا يعني أن الصور لن تبدأ في التنزيل حتى بعد بدء حدث `pageload`.
 علاوة على ذلك، سيتولى المتصفح في الغالب تنزيل كل من صور 1x و2x، مما يؤدي إلى زيادة في وزن الصفحة.
 
-## الصور في  CSS 
+## الصور في  CSS
 
 يعد العنصر `background` في CSS `أداة مفيدة لإضافة صور معقدة إلى العناصر، مما يسهل إضافة عدة صور
 ويساعد على تكرارها وغير ذلك الكثير. عند اقتران عنصر الخلفية باستعلامات الوسائط، يصبح أكثر فائدة،
@@ -292,7 +292,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 وبالإضافة إلى تحميل الصورة السليمة، سيكون بإمكان المتصفح ضبطها وفقًا لذلك. وبمعنى آخر، يفترض المتصفح
 أن الصور 2x أكبر بنسبة الضعف من الصور 1x، ولذلك سيضبط الصورة 2x إلى قيمة أقل بمضاعف 2،
@@ -320,7 +320,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 يتوافق كل من Chrome وFirefox وOpera مع المعيار `(min-resolution: 2dppx)`، بينما يتطلب كل من Safari
 ومتصفح Android أن تكون بنية مقدم الخدمة المثبتة مسبقًا والأقدم بدون وحدة `dppx`. لا تنس أن هذه
@@ -341,8 +341,8 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
         background-image: url(bg.png);
       }
     }
-    	
-## استخدام SVG مع الرموز 
+
+## استخدام SVG مع الرموز
 
 عند إضافة رموز إلى الصفحة، يمكنك استخدام رموز SVG قدر الإمكان أو رموز الترميز الموحد في بعض الحالات.
 
@@ -367,7 +367,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
@@ -396,7 +396,7 @@ You're a super &#9733;
 * يمكن أن يكون تحديد الموضع المثالي لوحدة بكسل صعبًا، بناءً على طول السطر ومسافة الحرف وما إلى ذلك.
 * ليست دلالية، وقد يصعب استخدامها مع أجهزة قراءة الشاشة أو التقنيات المساعدة الأخرى.
 * ما لم يتم تحديد الهدف منها على نحو سليم، قد تؤدي هذه الصور إلى زيادة حجم الملف بسبب استخدام
- مجموعة فرعية صغيرة فقط من الرموز المتاحة. 
+ مجموعة فرعية صغيرة فقط من الرموز المتاحة.
 
 
 <img src="img/icon-fonts.png" class="center"
@@ -418,7 +418,7 @@ You're a super &#9733;
 
 
 
-## تحسين أداء الصور 
+## تحسين أداء الصور
 
 
 
@@ -470,7 +470,7 @@ You're a super &#9733;
 وسطر الأوامر. من الأفضل قدر الإمكان محاولة تحسين الصور تلقائيًا بحيث يكون ذلك أهم إجراء في خطوات العمل.
 
 وهناك العديد من الأدوات التي يمكن استخدامها، منها ضغط البيانات غير المنقوص على ملفات `JPG` و`PNG`،
-بدون تأثر جودة الصورة. بالنسبة إلى `JPG`، جرب [jpegtran](http://jpegclub.org/) 
+بدون تأثر جودة الصورة. بالنسبة إلى `JPG`، جرب [jpegtran](http://jpegclub.org/)
 أو [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (المتاح على نظام التشغيل Linux فقط؛
 مع تشغيل الخيار `تجريد الكل`). بالنسبة إلى `PNG` جرب [OptiPNG](http://optipng.sourceforge.net/)
 أو [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
@@ -508,7 +508,7 @@ You're a super &#9733;
 
 
 
-## تجنب الصور تمامًا 
+## تجنب الصور تمامًا
 
 
 
@@ -550,11 +550,11 @@ You're a super &#9733;
 </style>
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -567,7 +567,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 ضع في اعتبارك أن استخدام هذه التقنيات لا يتطلب عرض الدوائر، الأمر الذي يظهر جليًا
 في الجوّال. وعند المبالغة في استخدام هذه التقنيات، ستفقد أية ميزة قد تكون حصلت

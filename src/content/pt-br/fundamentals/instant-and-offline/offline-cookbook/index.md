@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2014-12-09 #}
 
 # The Offline Cookbook {: .page-title }
@@ -14,8 +14,8 @@ loteria do AppCache (o prêmio principal continua sem ganhador), mas o resto
 de nós ficou amontoado em um canto
 [sem saber o que fazer](http://alistapart.com/article/application-cache-is-a-douchebag).
 
-Com o [ServiceWorker][sw_primer], desistimos de tentar resolver a questão do off-line e disponibilizamos 
-aos desenvolvedores as peças necessárias para que eles mesmos resolvessem essa questão. O Service Worker oferece 
+Com o [ServiceWorker][sw_primer], desistimos de tentar resolver a questão do off-line e disponibilizamos
+aos desenvolvedores as peças necessárias para que eles mesmos resolvessem essa questão. O Service Worker oferece
 controle sobre o armazenamento em cache e como as solicitações são processadas. Isso significa que você mesmo
 cria seus próprios padrões. Vamos examinar isoladamente alguns padrões possíveis
 , mas na prática você usará vários deles em conjunto,
@@ -24,8 +24,8 @@ dependendo do URL e do contexto.
 Todos os exemplos de código funcionam hoje no Chrome e no Firefox, salvo indicação em contrário.
 Para obter todos os detalhes sobre a compatibilidade com service workers, consulte ["O service worker está pronto?"][is_sw_ready].
 
-Para uma demonstração funcional de alguns desses padrões, consulte [Trained-to-thrill][ttt] 
-e [este vídeo](https://www.youtube.com/watch?v=px-J9Ghvcx4), 
+Para uma demonstração funcional de alguns desses padrões, consulte [Trained-to-thrill][ttt]
+e [este vídeo](https://www.youtube.com/watch?v=px-J9Ghvcx4),
 que mostra o impacto sobre o desempenho.
 
 ## A máquina de cache - quando armazenar recursos
@@ -64,10 +64,10 @@ como parte do download inicial.
       );
     });
 
-O `event.waitUntil` faz uma promessa para definir a duração e o sucesso da 
+O `event.waitUntil` faz uma promessa para definir a duração e o sucesso da
 instalação. Se a promessa for rejeitada, a instalação será considerada uma falha
 e esse ServiceWorker será abandonado (se houver uma versão anterior
-em execução, ficará intacta). `caches.open` e `cache.addAll` retornam 
+em execução, ficará intacta). `caches.open` e `cache.addAll` retornam
 promessas. Se a recuperação de um dos recursos falhar, a chamada de `cache.addAll`
 será rejeitada.
 
@@ -98,8 +98,8 @@ ativos para níveis posteriores de um jogo.
       );
     });
 
-Não estamos passando a promessa `cache.addAll` para os níveis 11 a 20 de volta para 
-`event.waitUntil`. Portanto, mesmo se houver falha, o jogo continuará disponível 
+Não estamos passando a promessa `cache.addAll` para os níveis 11 a 20 de volta para
+`event.waitUntil`. Portanto, mesmo se houver falha, o jogo continuará disponível
 off-line. Naturalmente, você terá de considerar a possível ausência desses
 níveis e tentar armazená-los em cache novamente se estiverem ausentes.
 
@@ -140,7 +140,7 @@ ativação longa poderá bloquear carregamentos de páginas. Mantenha a ativaç�
 o mais leve possível. Use-a apenas para atividades que _não podem_ ser feitas enquanto a versão
 antiga está ativa.
 
-Em [trained-to-thrill][ttt], eu uso isso para 
+Em [trained-to-thrill][ttt], eu uso isso para
 [remover caches antigos](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L17).
 
 ### Na interação do usuário {: #on-user-interaction }
@@ -204,7 +204,7 @@ itens do cache que não são mais necessários.
     });
 
 Para possibilitar o uso eficiente de memória, você pode ler um corpo de resposta/solicitação
-uma única vez. No código acima, 
+uma única vez. No código acima,
 [`.clone()`](https://fetch.spec.whatwg.org/#dom-request-clone) é usado para
 criar cópias adicionais que podem ser lidas separadamente.
 
@@ -250,7 +250,7 @@ seu site. Somente o ServiceWorker será despertado. Você solicita permissão pa
 em uma página e o usuário será notificado.
 
 **Ideal para:** conteúdo relacionado a uma notificação, como uma mensagem de
-bate-papo, uma notícia recente ou um e-mail. Também se aplica a conteúdo com poucas
+bate-papo, uma notícia recente ou um email. Também se aplica a conteúdo com poucas
 mudanças que se beneficie com uma sincronização imediata, como uma atualização de lista de tarefas ou
 uma alteração de calendário.
 
@@ -411,7 +411,7 @@ de análises, solicitações diferentes de GET.
       // will result in default browser behaviour
     });
 
-… embora você nem sempre precise processar esse caso especificamente, 
+… embora você nem sempre precise processar esse caso especificamente,
 [Cache, fallback para rede](#cache-falling-back-to-network) fará isso.
 
 ### Cache, fallback para rede {: #cache-falling-back-to-network }
@@ -567,7 +567,7 @@ Observação: O código acima ainda não funciona no Chrome, pois falta expor `f
 
 Em [trained-to-thrill][ttt], eu contornei essa situação
 usando [XHR em vez de fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3)
-e abusando do cabeçalho de Accept para informar o ServiceWorker de onde obter o 
+e abusando do cabeçalho de Accept para informar o ServiceWorker de onde obter o
 resultado ([código da página](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70),
 [código do ServiceWorker](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)).
 
@@ -599,8 +599,8 @@ página "Não disponível em modo off-line".
 
 O item para o qual você fizer fallback será provavelmente uma [dependência de instalação](#on-install-as-dependency).
 
-Se sua página estiver enviando um e-mail, o ServiceWorker poderá fazer fallback para
-armazenar o e-mail em uma "caixa de saída" do IDB e responder informando a página que
+Se sua página estiver enviando um email, o ServiceWorker poderá fazer fallback para
+armazenar o email em uma "caixa de saída" do IDB e responder informando a página que
 o envio falhou, mas os dados foram retidos.
 
 ### Modelos do lado do ServiceWorker {: #serviceworker-side-templating }

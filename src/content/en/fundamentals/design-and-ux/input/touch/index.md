@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Touchscreens are available on more and more devices,  from phones up to desktop screens. Your app should respond to their touch  in intuitive and beautiful ways.
 
-{# wf_updated_on: 2014-01-06 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-01-01 #}
+{# wf_blink_components: Blink>Input #}
 
 # Add Touch to Your Site {: .page-title }
 
@@ -621,3 +622,7 @@ elements in the page, alleviating some of the performance concerns.
         }
       }
     };
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

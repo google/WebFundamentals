@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-06-18 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-06-18 #}
 {# wf_blink_components: N/A #}
 
@@ -351,8 +351,10 @@ preference.
 Not only does this keep your source code nice and simple, it also reduces the need for dead-code
 elimination as performed by bundlers. If one of the modules in your source tree is unused, then it
 never gets imported, and so the browser never downloads it. The modules that _do_ get used can be
-individually [code-cached](https://v8project.blogspot.com/2018/04/improved-code-caching.html) by
-the browser.
+individually [code-cached](https://v8.dev/blog/improved-code-caching) by
+the browser. (The infrastructure to make this happen already landed in V8, and [work is
+underway](https://bugs.chromium.org/p/chromium/issues/detail?id=841466) to enable it in Chrome as
+well.)
 
 Using small, fine-grained modules helps prepare your code base for the future where [a native
 bundling solution](#web-packaging) might be available.
@@ -459,7 +461,7 @@ const worker = new SharedWorker('worker.mjs', { type: 'module' });
 const registration = await navigator.serviceWorker.register('worker.mjs', { type: 'module' });
 ```
 
-### Package name maps {: #package-name-maps }
+### Import maps {: #package-name-maps }
 
 In Node.js/npm, it’s common to import JS modules by their “package name”. For example:
 
@@ -470,14 +472,14 @@ import { pluck } from 'lodash-es';
 
 Currently, [per the HTML
 spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), such
-“bare import specifiers” throw an exception. [Our package name maps
-proposal](https://github.com/domenic/package-name-maps) allows such code to work on the web,
-including in production apps. A package name map is a JSON resource that helps the browser convert
-bare import specifiers into full URLs.
+“bare import specifiers” throw an exception. [Our import maps
+proposal](https://github.com/domenic/import-maps) allows such code to work on the web, including
+in production apps. An import map is a JSON resource that helps the browser convert bare import
+specifiers into full URLs.
 
-Package name maps are still in the proposal stage. Although we’ve thought a lot about how they
-address various use cases, we’re still engaging with the community, and haven’t yet written up a
-full specification. Feedback is welcome!
+Import maps are still in the proposal stage. Although we’ve thought a lot about how they address
+various use cases, we’re still engaging with the community, and haven’t yet written up a full
+specification. Feedback is welcome!
 
 ### Web packaging: native bundles {: #web-packaging }
 

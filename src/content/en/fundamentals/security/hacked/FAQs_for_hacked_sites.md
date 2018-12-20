@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-12-21 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -49,3 +49,7 @@ has an active group of Googlers and technical contributors that can help you
 with additional feedback. Also, most major Content Management System (CMS)
 providers have detailed documentation on how to resolve hacked cases. You
 can also seek help from a trusted security professional.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

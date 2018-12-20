@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Today we're releasing the CrUX Dashboard that you can use to better understand how an origin's performance evolves.
 
-{# wf_updated_on: 2018-08-08 #}
+{# wf_updated_on: 2018-09-05 #}
 {# wf_published_on: 2018-08-08 #}
 {# wf_tags: ux,performance,chrome-ux-report #}
 {# wf_blink_components: N/A #}
@@ -12,7 +12,7 @@ description: Today we're releasing the CrUX Dashboard that you can use to better
 # Custom site performance reports with the CrUX Dashboard {: .page-title }
 
 {% include "web/_shared/contributors/rviscomi.html" %}
-<!-- include "web/_shared/contributors/mkazi.html" -->
+{% include "web/_shared/contributors/mkazi.html" %}
 
 Continuous performance monitoring is crucial to identify trends and
 regressions before they negatively affect your site engagement and bottom line

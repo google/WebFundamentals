@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: We will look at what variable fonts are, how we can use them in our work.
 
-{# wf_updated_on: 2018-03-01 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2018-02-19 #}
 {# wf_blink_components: Blink>Fonts #}
 
@@ -347,3 +347,7 @@ people:
 * Laurence Penney, developer of [axis-praxis.org](https://axis-praxis.org){: .external}
 * [Mandy Michael](https://twitter.com/Mandy_Kerr){: .external}
 * Dave Crossland, Program Manager, Google Fonts
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

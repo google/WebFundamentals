@@ -25,7 +25,7 @@ landing_page:
 
       <p class="devsite-landing-row-description">JavaScript Libraries for adding offline support to web apps</p>
 
-      <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get Started</a></p>
+      <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get started</a></p>
       </div>
 
   - background: grey
@@ -136,13 +136,28 @@ landing_page:
       cache.</p>
 
       <pre class="prettyprint lang-javascript">
+      // Cache the Google Fonts stylesheets with a stale while revalidate strategy.
+
       workbox.routing.registerRoute(
-        new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
+        /^https:\/\/fonts\.googleapis\.com/,
+        workbox.strategies.staleWhileRevalidate({
+          cacheName: 'google-fonts-stylesheets',
+        }),
+      );
+
+
+      // Cache the Google Fonts webfont files with a cache first strategy for 1 year.
+
+      workbox.routing.registerRoute(
+        /^https:\/\/fonts\.gstatic\.com/,
         workbox.strategies.cacheFirst({
-          cacheName: 'google-fonts',
+          cacheName: 'google-fonts-webfonts',
           plugins: [
             new workbox.cacheableResponse.Plugin({
               statuses: [0, 200],
+            }),
+            new workbox.expiration.Plugin({
+              maxAgeSeconds: 60 * 60 * 24 * 365,
             }),
           ],
         }),
@@ -231,7 +246,7 @@ landing_page:
         Pinterest and WIRED are using Workbox in production.
       youtube_id: DtuJ55tmjps
 
-  - heading: "Who's Using Workbox?"
+  - heading: "Who's using Workbox?"
     description: >
       <style>
       .using-workbox {
@@ -254,6 +269,7 @@ landing_page:
 
       <div><img src="./images/third_party/logos/forbes.png" alt="Forbes Logo" /></div>
       <div><img src="./images/third_party/logos/iheartradio.png" alt="iHeart Radio Logo" /></div>
+      <div><img src="./images/third_party/logos/bbva.png" alt="BBVA Logo" /></div>
       <div><img src="./images/third_party/logos/tinder.png" alt="Tinder Logo" /></div>
       </div>
 
@@ -262,7 +278,7 @@ landing_page:
     - custom_html: >
         <div style="width: 100%; text-align: center;">
           <h2>Learn how to use Workbox</h2>
-          <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get Started</a></p>
+          <p><a class="button button-primary" href="/web/tools/workbox/guides/get-started">Get started</a></p>
         </div>
 
   - heading: "Contributors"

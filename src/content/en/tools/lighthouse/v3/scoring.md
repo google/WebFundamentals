@@ -1,15 +1,15 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: How scoring works in Lighthouse v3.
+description: How scoring works in Lighthouse
 
-{# wf_updated_on: 2018-06-15 #}
+{# wf_updated_on: 2018-11-04 #}
 {# wf_published_on: 2018-05-04 #}
 {# wf_blink_components: N/A #}
 
 [details]: https://docs.google.com/spreadsheets/d/1Cxzhy5ecqJCucdf1M0iOzM8mIxNc7mmx107o5nj38Eo/edit#gid=0
 [WikiHow]: https://www.wikihow.com/Calculate-Weighted-Average#Weighted_Averages_without_Percentages_sub
 
-# Lighthouse v3 Scoring Guide {: .page-title }
+# Lighthouse Scoring Guide {: .page-title }
 
 The scores that you see at the top of your Lighthouse report represent the page's score for
 that particular category. This guide explains how Lighthouse calculates those scores.
@@ -37,7 +37,7 @@ percentile.
 
 ### Which Performance audits contribute to your score {: #perf-audits }
 
-In general, only the audits in the Metrics section of the Performance category contribute
+In general, only the items in the Metrics section of the Performance category contribute
 to your score. See [Scoring Details][details]{:.external} for the complete list.
 The audits under Diagnostics and Opportunities do not contribute to your Performance score.
 
@@ -47,24 +47,22 @@ The audits under Diagnostics and Opportunities do not contribute to your Perform
 [PSI]: /web/tools/lighthouse/audits/perceptual-speed-index
 [EIL]: /web/tools/lighthouse/audits/estimated-input-latency
 
-### How each Performance audit is scored {: #perf-scoring }
+### How each Performance metric is scored {: #perf-scoring }
 
 Each Performance audit that contributes to your score has its own scoring methodology.
 Lighthouse maps each raw score to a number between 0 and 100. The scoring distribution is
 a log normal distribution derived from the performance metrics of real website performance
-data on HTTPArchive. A score of 100 typically maps to the 98th percentile for that audit. 
-A score of 50 maps to the 75th percentile. In other words, if you get a score of 100, it 
-means that your page performs better in that audit than 98% of pages on the web.
+data on HTTPArchive.
 
 For example, the First Meaningful Paint (FMP) audit measures when a user perceives that the
 primary content of a page is visible. The raw score for FMP represents the time duration between
 the user initiating the page load and the page rendering its primary content. Based on real
-website data, top-performing sites render FMP in about 1223ms, so that raw score is mapped to
+website data, top-performing sites render FMP in about 1,220ms, so that metric value is mapped to
 a Lighthouse score of 99.
 
 ### How the Performance score is weighted {: #perf-weighting }
 
-The audits that contribute to the Performance score are not equally weighted. See [Scoring
+The metrics that contribute to the Performance score are not equally weighted. See [Scoring
 Details][details]{:.external} to see how each Performance audit is weighted. The heaver-weighted
 audits have a larger impact on your overall Performance score. The weightings are based on
 heuristics. The Lighthouse team is working on formalizing this approach through more field data.
@@ -80,9 +78,11 @@ in each audit affects your overall Performance score.
 
 The color-coding maps to these Performance score ranges:
 
-* 0 to 44 (poor): Red
-* 45 to 74 (average): Orange
-* 75 to 100 (good): Green
+* 0 to 49 (slow): Red
+* 50 to 89 (average): Orange
+* 90 to 100 (fast): Green
+
+These color buckets were revised in Lighthouse [v3.1.1](https://github.com/GoogleChrome/lighthouse/releases).
 
 ### How to reduce fluctuations in your Performance score {: #perf-consistency }
 
@@ -126,3 +126,7 @@ Lighthouse returns a Best Practices score between 0 and 100. 0 is the worst poss
 The Best Practices audits are equally weighted. To calculate how much each audit contributes
 to your overall Best Practices score, count the number of Best Practices audits, then divide
 100 by that number.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

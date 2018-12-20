@@ -78,18 +78,12 @@ handlers:
 
 skip_files:
 - ^CONTRIBUTING\.md$
-- ^README\.md$
-- ^TRANSLATION\.md$
 - ^gcloud-client-secret\.json.*
 - ^gulpfile\.js$
-- ^package\.json$
-- ^gulp-tasks/.*
-- ^node_modules/.*
-- ^scratch/.*
-- ^src/data/.*
-- ^src/templates/.*
-- ^src/tests/.*
-- ^tools/.*
+- ^package.*?\.json$
+- ^README\.md$
+- ^start-appengine\.sh$
+- ^TRANSLATION\.md$
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.DS_Store$
@@ -100,3 +94,16 @@ skip_files:
 - ^(.*/)?.*\.pyc$
 - ^(.*/)?.*\.sh$
 - ^(.*/)?\..*$
+- ^gulp-tasks/.*
+- ^node_modules/.*
+- ^scratch/.*
+- ^src/content/(.*/)?(rss|atom)\.xml$
+- ^src/content/en/updates/tags/.*?\.md
+- ^src/data/.*
+- ^src/templates/.*
+- ^src/tests/.*
+- ^tools/.*
+
+
+
+

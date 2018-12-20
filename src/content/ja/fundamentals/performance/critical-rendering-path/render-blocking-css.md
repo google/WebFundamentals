@@ -5,7 +5,7 @@ description: デフォルトでは CSS はレンダリング ブロック リソ
 {# wf_updated_on:2014-09-17 #}
 {# wf_published_on:2014-03-31 #}
 
-#  レンダリング ブロック CSS {: .page-title }
+# レンダリング ブロック CSS {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
@@ -48,7 +48,7 @@ CSS の「メディアタイプ」および「メディアクエリ」を使用�
     <link href="style.css" rel="stylesheet">
     <link href="print.css" rel="stylesheet" media="print">
     <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
-    
+
 
 [メディアクエリ](../../design-and-ux/responsive/#use-css-media-queries-for-responsiveness)は、メディアタイプと、0 個以上の式（式は特定のメディア機能の条件をチェック）で構成されます。たとえば、1 番目のスタイルシートの宣言は、メディアタイプやメディアクエリを指定していないため、あらゆるケースに適用されます。つまり、常にレンダリング ブロックになります。一方で 2 番目のスタイルシートは、コンテンツが印刷される場合にのみ適用されます。レイアウトやフォントを変更したい、といった理由が考えられます。このスタイルシートは、最初の読み込まれても、ページのレンダリングをブロックする必要はありません。最後のスタイルシートの宣言は、ブラウザによって実行される「メディアクエリ」を規定しています。条件が一致すると、ブラウザは、スタイルシートのダウンロードと処理が完了するまで、レンダリングをブロックします。
 
@@ -61,7 +61,7 @@ CSS の「メディアタイプ」および「メディアクエリ」を使用�
     <link href="style.css"    rel="stylesheet" media="all">
     <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
     <link href="print.css"    rel="stylesheet" media="print">
-    
+
 
 * 1 つ目の宣言はレンダリング ブロックであり、すべての条件と一致します。
 * 2 つ目の宣言もレンダリング ブロックです。「all」はデフォルトのタイプであり、タイプを指定しなかった場合、暗黙で「all」に設定されます。したがって、1 つ目と 2 つ目の宣言は、実のところ同等です。

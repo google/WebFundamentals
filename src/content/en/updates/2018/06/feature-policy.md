@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2018-08-15 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -311,7 +311,8 @@ to guarantee a certain UX for users.
 #### Is there a way to report policy violations to my server? {: #report }
 
 A [Reporting API](https://github.com/WICG/feature-policy/blob/master/reporting.md)
-is in the works! Similar to how sites can opt-in to receiving reports about
+is [in the works](https://github.com/WICG/feature-policy/blob/master/reporting.md)!
+Similar to how sites can opt-in to receiving reports about
 [CSP violations](https://www.chromestatus.com/feature/5826576096690176) or
 [deprecations](https://www.chromestatus.com/feature/4691191559880704), you'll
 be able to receive reports about feature policy violations in the wild.

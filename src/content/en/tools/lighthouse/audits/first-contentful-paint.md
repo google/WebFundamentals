@@ -19,9 +19,9 @@ description: Reference documentation for the "First Contentful Paint" Lighthouse
   <p>--- <a class="external" href="https://w3c.github.io/paint-timing/">Paint Timing spec</a></p>
 </blockquote>
 
-First Contentful Paint (FCP) marks the point, immediately after navigation, when the browser renders
-the first bit of content from the DOM. This is an important milestone for users because
-it provides feedback that the page is actually loading.
+First Contentful Paint (FCP) measures the time from navigation to the time when the browser renders the
+first bit of content from the DOM. This is an important milestone for users because it provides 
+feedback that the page is actually loading.
 
 ## Recommendations {: #recommendations }
 

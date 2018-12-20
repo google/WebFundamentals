@@ -1,16 +1,18 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools' Device Mode lets you mimic how your development  site will look in production on a range of devices.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Test Responsive and Device-specific Viewports {: .page-title }
 
-{% include "web/_shared/contributors/pbakaus.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
-{% include "web/_shared/contributors/kaycebasques.html" %}
+<aside class="warning">
+  <b>This page is deprecated</b>. There are links to up-to-date documentation
+  throughout the page.
+</aside>
 
 The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and 
 extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or 
@@ -25,6 +27,13 @@ go fully responsive.
 
 ## Using the viewport controls {: #viewport-controls }
 
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#responsive">Response Viewport Mode</a>
+  and
+  <a href="/web/tools/chrome-devtools/device-mode/#device">Mobile Device Viewport Mode</a>.
+</aside>
+
 ![device mode enabled](imgs/device-mode.png)
 
 The Viewport Controls allow you to test your site against a variety of devices, as well as fully 
@@ -35,6 +44,11 @@ responsively. It comes in two modes:
   emulates certain device characteristics.
 
 ## Responsive mode
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#responsive">Response Viewport Mode</a>.
+</aside>
 
 We recommend using the **Responsive Mode** as your default work mode. Use it during active 
 development of your site and app and resize the viewport often to create a freely responsive design 
@@ -49,10 +63,20 @@ finer grained control.
 
 ## Device-specific mode
 
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#device">Mobile Device Viewport Mode</a>.
+</aside>
+
 Use the **Device-specific Mode** when you're nearing the end of active development and want to 
 perfect how your site looks like on specific mobiles (e.g. a certain iPhone or Nexus).
 
 ### Built-in device presets
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#device">Mobile Device Viewport Mode</a>.
+</aside>
 
 <div class="wf-devtools-flex">
   <div>
@@ -72,6 +96,11 @@ perfect how your site looks like on specific mobiles (e.g. a certain iPhone or N
 </div>
 
 ### Adding custom device presets
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#custom">Add a custom mobile device</a>.
+</aside>
 
 Device Mode offers a wide array of devices for emulation. You can add a 
 custom device if you find an edge-case or niche device that isn't covered. 
@@ -95,6 +124,11 @@ custom device if you find an edge-case or niche device that isn't covered.
 </div>
 
 ### Device states and orientation
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#orientation">Set orientation</a>.
+</aside>
 
 ![toggle orientation](imgs/change-orientation.png)
 
@@ -161,23 +195,6 @@ When emulating a specific device, the Device Mode toolbar shows an additional co
 
 Read on to learn more about the specific options.
 
-### User agent type
-
-The **User Agent Type**, or Device Type, setting let's you change the type of
-the device. Possible values are:
-
-  1. Mobile
-  2. Desktop
-  3. Desktop with touch
-
-Changing this setting will influence mobile viewport and touch event emulation
-and change the UA string. So if you'd like to create a responsive site for
-Desktop and want to test hover effects, switch to "Desktop" in Responsive Mode.
-
-**Tip**: You can also set the user agent in the [**Network conditions**][nc] 
-drawer.
-
-
 ### Device pixel ratio (DPR)
 
 If you want to emulate a Retina device from a non-Retina machine or vice 
@@ -209,6 +226,11 @@ by zooming. A 2x asset will continue to look sharp, while a 1x one will look
 pixelated.
 
 ### Media queries {: #media-queries }
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#queries">Show media queries</a>.
+</aside>
 
 [Media queries](/web/fundamentals/design-and-ux/responsive/#use-media-queries)
 are an essential part of responsive web design.To view the media query inspector,
@@ -258,6 +280,11 @@ the definition in source code.
 ![web fundamentals media queries view](imgs/reveal-source-code.png)
 
 ### Rulers
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See
+  <a href="/web/tools/chrome-devtools/device-mode/#rulers">Show rulers</a>.
+</aside>
 
 Toggle this option to show pixel-based rulers next to the viewport.
 

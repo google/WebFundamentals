@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even use bounces for extra fun!
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # Choosing the Right Easing {: .page-title }
@@ -39,4 +40,6 @@ It is important that any animation added to your project has the correct duratio
 
 Of course, these are just guidelines. Experiment with your own eases and choose what feels right for your projects.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

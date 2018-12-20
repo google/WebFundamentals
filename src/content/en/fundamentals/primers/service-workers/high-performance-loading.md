@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ensure you're getting the best performance out of your service worker implementation.
 
-{# wf_updated_on: 2017-11-30 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-09-21 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -238,3 +238,7 @@ used by client-side code after the page has loaded. The
 "[Speed up Service Worker with Navigation Preloads](/web/updates/2017/02/navigation-preload)"
 article has all the details you'd need to configure your service worker
 accordingly.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0.
 
-{# wf_updated_on: 2017-12-28 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2017-12-28 #}
 {# wf_tags: chrome63,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -168,9 +168,4 @@ DevTools, please [open an issue](https://crbug.com/new).
 
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
+<<../../_shared/discover.md>>

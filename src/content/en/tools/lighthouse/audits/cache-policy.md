@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Uses inefficient cache policy on static assets" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2018-11-30 #}
 {# wf_published_on: 2018-03-29 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -13,17 +13,33 @@ description: Reference documentation for the "Uses inefficient cache policy on s
 HTTP caching can speed up your page load time on repeat visits.
 
 When a browser requests a resource, the server providing the resource can tell the browser
-how long it should temporarily store or "cache" the resource. For any subsequent request for that
+how long it should temporarily store or **cache** the resource. For any subsequent request for that
 resource, the browser uses its local copy, rather than going to the network to get it.
 
 ## Recommendations {: #recommendations }
 
 Configure your server to return the `Cache-Control` HTTP response header.
 
-     Cache-Control: max-age=86400
+     Cache-Control: max-age=31536000
+
+[Invalidate]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses
+
+Caution: Make sure to provide yourself a way to [invalidate and update
+cached responses][Invalidate].
 
 The `max-age` directive tells the browser how long it should cache the resource, in seconds.
-`86400` corresponds to 1 day (60 seconds * 60 minutes * 24 hours).
+`31536000` corresponds to 1 year: 60 seconds * 60 minutes * 24 hours * 365 days = 
+31536000 seconds.
+
+[webpack]: https://webpack.js.org/guides/caching/
+
+When possible, cache immutable static assets for a long time, such as a year or longer. Configure
+your build tool to embed a hash in your static asset filenames so that each one is unique. See
+[Caching][webpack]{: .external target="_blank" rel="noopener" } for webpack guidance.
+
+Use `no-cache` if the resource changes and freshness matters but you still want to get some of the speed
+benefits of caching. The browser still caches a resource that's set to `no-cache`, but checks with the
+server first to make sure that the resource is still current.
 
 There are many directives for customizing how the browser caches different resources. See the links
 below for more guidance.
@@ -36,10 +52,7 @@ below for more guidance.
 [spec]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
 
-Caution: Make sure to provide yourself a way to [invalidate and update
-cached responses][Invalidate].
-
-[Invalidate]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses
+### Verifying cached responses in Chrome DevTools {: #devtools }
 
 The **Size** column in Chrome DevTools can help you verify that a resource has been cached.
 
@@ -65,7 +78,7 @@ as expected.
 
 ## More information {: #more-info }
 
-Lighthouse considers a resource cache-able if:
+Lighthouse considers a resource cache-able if all of the following conditions are met:
 
 * It's a font, image, media file, script, or stylesheet.
 * It has a `200`, `203`, or `206` HTTP status code.
