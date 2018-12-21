@@ -154,7 +154,8 @@ description: 서비스 워커 등록 타이밍 관련 모범 사례
 방문하는 동안 네트워크 제한을 통해
 느린 연결을 시뮬레이션하여 촬영했습니다.
 
-<img alt="일찍 등록한 경우의 네트워크 트래픽" src="images/early-registration.png" data-tooltip-align="b,c" data-tooltip="일찍 등록한 경우의 네트워크 트래픽" aria-label="일찍 등록한 경우의 네트워크 트래픽" data-title="일찍 등록한 경우의 네트워크 트래픽">
+![일찍 등록한 경우의 네트워크 트래픽](images/early-registration.png
+"일찍 등록한 경우의 네트워크 트래픽트래픽")
 
 위의 스크린샷은 서비스 워커 등록을 가급적 빨리 수행하도록
 샘플을 수정한 경우의 네트워크 트래픽을 반영합니다. 페이지를
@@ -163,7 +164,8 @@ description: 서비스 워커 등록 타이밍 관련 모범 사례
 나온, [기어 아이콘](http://stackoverflow.com/questions/33590378/status-code200-ok-from-serviceworker-in-chrome-network-devtools/33655173#33655173)이 옆에 표시된 항목)을
 볼 수 있습니다.
 
-<img alt="늦게 등록한 경우의 네트워크 트래픽" src="images/late-registration.png" data-tooltip-align="b,c" data-tooltip="늦게 등록한 경우의 네트워크 트래픽" aria-label="늦게 등록한 경우의 네트워크 트래픽" data-title="늦게 등록한 경우의 네트워크 트래픽">
+![늦게 등록한 경우의 네트워크 트래픽](images/late-registration.png
+"늦게 등록한 경우의 네트워크 트래픽")
 
 위의 스크린샷에서 서비스 워커 등록은 페이지가 로드된 이후까지
 연기되었습니다. 네트워크에서 모든 자원을 가져올 때까지 사전 캐싱 요청은

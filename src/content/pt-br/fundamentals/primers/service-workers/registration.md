@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Práticas recomendadas para determinar o momento de registro dos service workers.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2018-12-21 #}
 {# wf_published_on: 2016-11-28 #}
 
 # Registro dos service workers {: .page-title }
@@ -154,8 +154,8 @@ fazer. As duas capturas de tela foram obtidas durante o acesso a um [aplicativo
 de exemplo](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo)
 no modo de navegação anônima usando limitação de rede para simular uma conexão lenta.
 
-![Tráfego de rede com o registro antes.](../images/early-registration.png
-"Network traffic with early registration.")
+![Tráfego de rede com o registro antes.](images/early-registration.png
+"Tráfego de rede com o registro antes.")
 
 A captura de tela acima reflete o tráfego de rede quando o exemplo foi  modificado
 para realizar o registro do service worker o quanto antes. É possível identificar
@@ -164,8 +164,8 @@ de engrenagem](http://stackoverflow.com/questions/33590378/status-code200-ok-fro
 originadas pelo gerenciador de `install` do service worker)
 intercaladas com solicitações de outros recursos necessários para exibir a página.
 
-![Tráfego de rede com registro depois.](../images/late-registration.png
-"Network traffic with late registration.")
+![Tráfego de rede com registro depois.](images/late-registration.png
+"Tráfego de rede com registro depois.")
 
 
 Na captura de tela acima, o registro do service worker foi adiado até que a

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:确定服务工作线程注册时间的最佳做法。
 
-{# wf_updated_on:2016-11-28 #}
+{# wf_updated_on:2018-12-21 #}
 {# wf_published_on:2016-11-28 #}
 
 # 服务工作线程注册 {: .page-title }
@@ -110,8 +110,8 @@ description:确定服务工作线程注册时间的最佳做法。
 
 
 
-![尽早注册时的网络流量。](../images/early-registration.png
-"Network traffic with early registration.")
+![尽早注册时的网络流量。](images/early-registration.png
+"尽早注册时的网络流量。")
 
 上面的屏幕截图反映了修改示例以尽快执行服务工作线程注册时的网络流量。
 您可以看到预缓存请求（旁边带有[齿轮图标](http://stackoverflow.com/questions/33590378/status-code200-ok-from-serviceworker-in-chrome-network-devtools/33655173#33655173)的条目，源自服务工作线程的 `install` 处理程序）与针对显示页面所需的其他资源的请求分散排列。
@@ -120,8 +120,8 @@ description:确定服务工作线程注册时间的最佳做法。
 
 
 
-![延迟注册时的网络流量。](../images/late-registration.png
-"Network traffic with late registration.")
+![延迟注册时的网络流量。](images/late-registration.png
+"延迟注册时的网络流量。")
 
 
 在上面的屏幕截图中，延迟服务工作线程注册直到页面已加载。
