@@ -379,7 +379,7 @@ That completes the path from server push to user notification. Let's look at eac
 
 Let's see how the service worker handles push messages. The service worker both receives the push message and creates the notification.
 
-When a  [browser that supports push messages](http://caniuse.com/#search=notification) receives a message, it sends a `push` event to the service worker. We can create a `push` event listener in the service worker to handle the message:
+When a  [browser that supports push messages](https://caniuse.com/#search=notification) receives a message, it sends a `push` event to the service worker. We can create a `push` event listener in the service worker to handle the message:
 
 #### serviceworker.js
 
@@ -580,7 +580,7 @@ self.addEventListener('push', function(e) {
     actions: [
       {action: 'explore', title: 'Explore this new world',
         icon: 'images/checkmark.png'},
-      {action: 'close', title: 'I don't want any of this',
+      {action: 'close', title: 'I don\'t want any of this',
         icon: 'images/xmark.png'},
     ]
   };
