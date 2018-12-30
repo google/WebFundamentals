@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Praktik terbaik untuk pengaturan waktu pendaftaran service worker Anda.
 
-{# wf_updated_on: 2016-11-28 #}
+{# wf_updated_on: 2018-12-21 #}
 {# wf_published_on: 2016-11-28 #}
 
 # Pendaftaran Service Worker {: .page-title }
@@ -154,8 +154,8 @@ pengaturan waktu pendaftaran. Kedua tangkapan layar diambil saat mengunjungi seb
 contoh](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo) dalam mode
 Penyamaran dengan menggunakan throttling jaringan untuk menyimulasikan koneksi yang lambat.
 
-![Lalu lintas jaringan pada pendaftaran dini.](../images/early-registration.png
-"Network traffic with early registration.")
+![Lalu lintas jaringan pada pendaftaran dini.](images/early-registration.png
+"Lalu lintas jaringan pada pendaftaran dini.")
 
 Tangkapan layar di atas mencerminkan lalu lintas jaringan bila contoh dimodifikasi
 untuk melakukan pendaftaran service worker sesegera mungkin. Anda bisa melihat
@@ -164,8 +164,8 @@ roda gigi](http://stackoverflow.com/questions/33590378/status-code200-ok-from-se
 di sebelahnya, berasal dari penangan `install` service worker)
 diselingi dengan permintaan akan sumber daya lain yang dibutuhkan untuk menampilkan laman.
 
-![Lalu lintas jaringan dengan pendaftaran terlambat.](../images/late-registration.png
-"Network traffic with late registration.")
+![Lalu lintas jaringan dengan pendaftaran terlambat.](images/late-registration.png
+"Lalu lintas jaringan dengan pendaftaran terlambat.")
 
 
 Dalam tangkapan layar di atas, pendaftaran service worker ditunda hingga setelah
