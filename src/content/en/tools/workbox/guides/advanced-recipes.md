@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2018-10-22 #}
+{# wf_updated_on: 2019-01-03 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -325,4 +325,56 @@ self.addEventListener('fetch', async (event) => {
     event.respondWith(compositeResponse);
   }
 });
+```
+
+## Serve cached audio and video {: #cached-av }
+
+There are a few wrinkles in how some browsers request media assets (e.g., the `src` of a `<video>`
+or `<audio>` element) that can lead to incorrect serving behavior unless you take specific steps
+when configuring Workbox.
+
+Full details are available in [this GitHub issue
+discussion](https://github.com/GoogleChrome/workbox/issues/1663#issuecomment-448755945); a summary
+of the important points is:
+
+- Workbox must be told to respect [`Range` request
+  headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) by adding in the
+  [`workbox-range-requests` plugin](/web/tools/workbox/modules/workbox-range-requests) to the
+  strategy used as the handler.
+- The audio or video element needs to opt-in to CORS mode using the [`crossOrigin`
+  attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes), e.g. via
+  `<video src="movie.mp4" crossOrigin="anonymous"></video>`.
+- If you want to serve the media from the cache, you should explicitly add it to the cache ahead of
+  time. This could happen either via precaching, or via calling
+  [`cache.add()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add) directly. Using a
+  runtime caching strategy to add the media file to the cache implicitly is not likely to work,
+  since at runtime, only partial content is fetched from the network via a `Range` request.
+
+Putting this all together, here's an example of one approach to serving cached media content using
+Workbox:
+
+```html
+<!-- In your page: -->
+<!-- You currently need to set crossOrigin even for same-origin URLs! -->
+<video src="movie.mp4" crossOrigin="anonymous"></video>
+```
+
+```javascript
+// In your service worker:
+// It's up to you to either precache or explicitly call cache.add('movie.mp4')
+// to populate the cache.
+//
+// This route will go against the network if there isn't a cache match,
+// but it won't populate the cache at runtime.
+// If there is a cache match, then it will properly serve partial responses.
+workbox.routing.registerRoute(
+  /.*\.mp4/,
+  workbox.strategies.cacheFirst({
+    cacheName: 'your-cache-name-here',
+    plugins: [
+      new workbox.cacheableResponse.Plugin({statuses: [200]}),
+      new workbox.rangeRequests.Plugin(),
+    ],
+  }),
+);
 ```
