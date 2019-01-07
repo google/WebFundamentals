@@ -564,19 +564,19 @@
       ],
       "locations_map": [
         {
-          "country_name": "India",
-          "city_name": "Bangalore",
-          "geo": {
-            "lat": 12.93389,
-            "lng": 77.630443
-          }
-        },
-        {
           "country_name": "Vietnam",
           "city_name": "Ho Chi Minh City",
           "geo": {
             "lat": 10.8230989,
             "lng": 106.6296638
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Bangalore",
+          "geo": {
+            "lat": 12.93389,
+            "lng": 77.630443
           }
         }
       ]
@@ -830,6 +830,14 @@
           "geo": {
             "lat": 34.6937378,
             "lng": 135.5021651
+          }
+        },
+        {
+          "country_name": "Japan",
+          "city_name": "Nagoya",
+          "geo": {
+            "lat": 35.1814464,
+            "lng": 136.906398
           }
         }
       ]
