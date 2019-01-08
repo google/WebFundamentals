@@ -186,7 +186,7 @@ function test(filename, contents, options) {
       logError(`'{% include %}' is badly quoted: ${include[0]}`, position);
     }
     if (inclFile === 'comment-widget.html') {
-      const widget = `{% include "comment-widget.html" %}`
+      const widget = `{% include "comment-widget.html" %}`;
       const msg = `The comments widget '${widget}' has been deprecated.`;
       logError(`${msg} Do not use it.`, position);
       return;
