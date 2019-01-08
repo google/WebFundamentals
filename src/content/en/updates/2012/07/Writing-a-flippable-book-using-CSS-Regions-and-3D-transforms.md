@@ -202,4 +202,3 @@ With that, we have acquired the "book" technology and can evacuate the overworld
 You can see an example online [here](http://kig.github.com/html-book) and get the [full source](http://github.com/kig/html-book) for the examples. If you don't have CSS Regions in your browser, the example will look quite broken. In which case you can try [this example](http://kig.github.com/html-book/no_regions.html) instead.
 
 
-{% include "comment-widget.html" %}

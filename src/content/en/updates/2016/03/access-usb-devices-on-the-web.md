@@ -331,4 +331,3 @@ Note: Microsoft OS 2.0 Descriptors used by the Arduino examples only work on Win
 
 Please share your WebUSB demos with the [#webusb](https://twitter.com/search?q=webusb) hashtag.
 
-{% include "comment-widget.html" %}

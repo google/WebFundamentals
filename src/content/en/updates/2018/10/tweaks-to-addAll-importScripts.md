@@ -129,4 +129,3 @@ behavior in other browsers, we wanted to call out the change before switching Ch
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

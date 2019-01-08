@@ -30,4 +30,3 @@ Each of Scripts, Stylesheets, documents, fonts and more will be colored based on
 		
 
 
-{% include "comment-widget.html" %}

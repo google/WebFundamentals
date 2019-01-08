@@ -106,4 +106,3 @@ So, you may wish to grep your code for the following terms:
 Once more, if you're in a hurry and want to get up and running, just grab a copy of [my monkeypatch webkitAudioContext library](https://github.com/cwilso/webkitAudioContext-MonkeyPatch) and include it in your application.  Happy Audio Hacking!
 
 
-{% include "comment-widget.html" %}

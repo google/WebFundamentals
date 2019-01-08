@@ -17,4 +17,3 @@ description: Learn the quick console shortcut to get the currently selected DOM 
 When you have a node selected in the Elements panel, use <strong>$0</strong> to access it in the Console panel. On this subject, you can also use <strong>$_</strong> to access the value of the most recently evaluated expression.
 
 
-{% include "comment-widget.html" %}

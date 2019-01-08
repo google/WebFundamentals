@@ -18,4 +18,3 @@ Here's the scoop:
 * `Sec-WebSocket-Version` header value: 8 -> 13
 
 
-{% include "comment-widget.html" %}

@@ -27,4 +27,3 @@ To get the full accelerated Web Animations experience in either Chrome, Firefox 
 
 
 
-{% include "comment-widget.html" %}

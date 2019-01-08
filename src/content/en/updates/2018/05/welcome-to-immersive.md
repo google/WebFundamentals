@@ -434,4 +434,3 @@ which will improve pose tracking.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

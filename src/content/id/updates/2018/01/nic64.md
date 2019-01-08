@@ -99,6 +99,4 @@ Saya Pete LePage, dan segera setelah Chrome 65 dirilis, saya akan ada di sini un
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

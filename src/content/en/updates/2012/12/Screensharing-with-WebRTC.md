@@ -103,4 +103,3 @@ book_path: /web/updates/_book.yaml
 <p>Happy hacking -- and best wishes for 2013 from everyone at HTML5R and WebRTC!</p>
 
 
-{% include "comment-widget.html" %}

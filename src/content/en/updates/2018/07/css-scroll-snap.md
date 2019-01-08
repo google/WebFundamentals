@@ -362,4 +362,3 @@ particularly focusing on missing features, improving snap selection algorithm,
 animation smoothness, and devtools facilities.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-{% include "comment-widget.html" %}

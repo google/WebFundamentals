@@ -150,4 +150,3 @@ that use overlay video components...
 Happy film making! Let us know if you build something amazing with alpha transparency.
 
 
-{% include "comment-widget.html" %}

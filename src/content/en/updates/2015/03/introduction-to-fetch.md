@@ -260,4 +260,3 @@ H/T [@Nexii](https://twitter.com/Nexii) for pointing this out.
 This is due to a security concern, you can [learn more here](https://code.google.com/p/chromium/issues/detail?id=457157&q=fetch%20no-cors&colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified).
 
 
-{% include "comment-widget.html" %}

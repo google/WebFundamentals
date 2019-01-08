@@ -84,4 +84,3 @@ The Critical Rendering Path refers to anything (JavaScript, HTML, CSS, images) t
 + Large data URIs inlined in render-blocking CSS are harmful for render performance; they are blocking resources where image URLs are non-blocking.
 
 
-{% include "comment-widget.html" %}

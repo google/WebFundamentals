@@ -16,4 +16,3 @@ Check out the open source NES Emulator in HTML5, [gwt-nes-port](https://code.goo
 
 
 
-{% include "comment-widget.html" %}

@@ -44,4 +44,3 @@ Note: 目前JavaScript API如`querySelector()` 和 `querySelectorAll()`會繼續
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6750456638341120) |
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=489954)
 
-{% include "comment-widget.html" %}

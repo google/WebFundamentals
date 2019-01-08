@@ -309,4 +309,3 @@ default zoom level.
 And that's it! `visualViewport` is a nice little API which solves compatibility
 issues along the way.
 
-{% include "comment-widget.html" %}

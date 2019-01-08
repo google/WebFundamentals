@@ -17,4 +17,3 @@ This server is trivial but it demonstrates two things. The first is sending a fi
 Note: the sample has been removed.
 
 
-{% include "comment-widget.html" %}

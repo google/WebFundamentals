@@ -107,9 +107,6 @@ discussion.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
-
 [spec]: https://wicg.github.io/writable-files/
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=853326
 [cr-status]: https://www.chromestatus.com/features/6284708426022912

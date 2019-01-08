@@ -190,4 +190,3 @@ As you use the API please provide feedback on the [GitHub Repo](https://github.c
 or file Chrome bugs at [crbug.com](https://crbug.com/).
 
 
-{% include "comment-widget.html" %}

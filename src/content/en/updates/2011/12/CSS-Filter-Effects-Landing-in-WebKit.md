@@ -48,4 +48,3 @@ Chrome 18.0.976.0 (currently canary), Webkit nightly
 In Webkit nightlies, filters can be applied to hardware accelerated content ( e.g. `img { -webkit-transform: translateZ(0); }` ). In Chrome, filters on accelerated content are still a work in progress (use the `--enable-accelerated-filters` flag). This includes `<video>`, which is accelerated by default.
 
 
-{% include "comment-widget.html" %}

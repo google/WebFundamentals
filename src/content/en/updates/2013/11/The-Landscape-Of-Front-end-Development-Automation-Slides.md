@@ -35,4 +35,3 @@ The key to staying effective is choosing tools you'll **actually** use. Spend ti
 If you have any questions, comments or tooling suggestions you'd like to share, please feel free to let us know in the comments below!
 
 
-{% include "comment-widget.html" %}

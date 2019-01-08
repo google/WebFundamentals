@@ -59,4 +59,3 @@ If you want to try this for yourself in Chrome or any other browser,
 [download our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/css-flexbox-abspos)
 or visit the [live demo](https://googlechrome.github.io/samples/css-flexbox-abspos/index.html).
 
-{% include "comment-widget.html" %}

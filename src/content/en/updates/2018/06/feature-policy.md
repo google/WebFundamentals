@@ -362,8 +362,6 @@ since it can help avoid potential footguns before they sneak into your codebase.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [spec]: https://wicg.github.io/feature-policy/
 [jsapi]: https://www.chromestatus.com/features/5190687460950016
 [chromestatus]: https://www.chromestatus.com/features/5694225681219584

@@ -102,4 +102,3 @@ Checking `if (timestamp < 1e12)` is a quick duck test to see how big of a number
 We plan on pushing this change out in Chrome 21, so if you're already taking advantage of this callback parameter, be sure to update your code!
 
 
-{% include "comment-widget.html" %}

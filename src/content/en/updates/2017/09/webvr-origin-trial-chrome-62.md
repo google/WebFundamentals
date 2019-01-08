@@ -40,8 +40,6 @@ Your current WebVR Origin Trial tokens will not be recognized by Chrome 62. To p
 new trial please [use the sign up form][11].
 
 
-{% include "comment-widget.html" %}
-
 [0]: https://github.com/w3c/webvr/blob/master/explainer.md
 [1]: https://docs.google.com/document/d/1k0Ua-ZWlM_PsFCFdLMa8kaVTo32PeNZ4G7FFHqpFx4E/edit#heading=h.4yubgixv5l6b
 [2]: https://github.com/w3c/webvr/issues/86

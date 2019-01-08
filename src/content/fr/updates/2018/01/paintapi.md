@@ -193,6 +193,4 @@ Note: points d&#39;arrêt ne sont actuellement pas pris en charge dans l&#39;API
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

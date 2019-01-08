@@ -124,6 +124,4 @@ Chacmool demo.) The WebXR Device API is actively in development and we'd love
 feedback so we can ensure it enables all types of applications and use cases, so
 [please head over to GitHub and join the conversation](https://github.com/immersive-web/webxr)!
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-updates.html" %}

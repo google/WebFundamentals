@@ -200,4 +200,3 @@ The `SVGZoomEvent`  is not part of the SVG2.0 specification and does not functio
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

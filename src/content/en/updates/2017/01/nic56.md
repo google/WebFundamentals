@@ -142,4 +142,3 @@ Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our
 Oh, and a big thanks to Andrew for lending me his shirt! I had a bit of a
 wardrobe malfunction.
 
-{% include "comment-widget.html" %}

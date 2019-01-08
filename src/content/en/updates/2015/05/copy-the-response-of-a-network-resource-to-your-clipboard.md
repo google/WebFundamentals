@@ -17,4 +17,3 @@ description: In addition to copying the request/response headers of a network re
 In addition to copying the <strong>request/response</strong> headers of a network resource, you can also copy the response itself.﻿
 
 
-{% include "comment-widget.html" %}

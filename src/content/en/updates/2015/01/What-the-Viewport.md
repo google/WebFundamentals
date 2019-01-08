@@ -74,4 +74,3 @@ should do since he's much better at this stuff than me ;)
 </p>
 
 
-{% include "comment-widget.html" %}

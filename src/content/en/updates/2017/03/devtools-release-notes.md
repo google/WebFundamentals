@@ -169,4 +169,3 @@ The WebGL [event listener breakpoints][event-listener-breakpoint]
 have moved from the **WebGL** category to the **Canvas** category. The
 **WebGL** category has been removed.
 
-{% include "comment-widget.html" %}

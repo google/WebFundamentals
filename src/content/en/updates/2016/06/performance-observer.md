@@ -133,4 +133,3 @@ should open the door to more efficient performance tooling for web apps.
 [measure]: https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure
 
 
-{% include "comment-widget.html" %}

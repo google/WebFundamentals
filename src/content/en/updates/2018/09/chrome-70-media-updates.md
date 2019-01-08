@@ -164,8 +164,6 @@ cleared browsing data.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
 [our article]: /web/updates/2018/10/watch-video-using-picture-in-picture
 [Alliance for Open Media]: http://aomedia.org/

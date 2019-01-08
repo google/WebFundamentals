@@ -86,4 +86,3 @@ We're on the cusp of a very exciting time in web development. Unlike other new f
 If you want to learn more about the fundamentals of the APIs, check out webcomponents.org.
 
 
-{% include "comment-widget.html" %}

@@ -66,4 +66,3 @@ The WebSocket protocol specification has recently been updated to solve previous
 * Chrome 14 supports HyBi 10 protocol although the WebSocket JavaScript API changes mentioned above are still on the way. Firefox 7 is also planned to support HyBi 10.
 
 
-{% include "comment-widget.html" %}

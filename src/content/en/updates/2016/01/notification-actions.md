@@ -128,4 +128,3 @@ along with spec as it updates](https://github.com/whatwg/notifications).
 
 Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
-{% include "comment-widget.html" %}

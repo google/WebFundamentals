@@ -48,4 +48,3 @@ And here’s how it looks with Mutation Observers:
     
 
 
-{% include "comment-widget.html" %}

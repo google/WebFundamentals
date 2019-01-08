@@ -17,4 +17,3 @@ description: You can make a column selection in the Sources Panel editor by hold
 You can make a column selection in the Sources Panel editor by holding <kbd class="kbd">Alt</kbd> while dragging the mouse.﻿
 
 
-{% include "comment-widget.html" %}

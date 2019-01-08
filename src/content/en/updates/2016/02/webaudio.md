@@ -111,4 +111,3 @@ create chains of nodes, as in this
 That's all for now, and keep rocking!
 
 
-{% include "comment-widget.html" %}

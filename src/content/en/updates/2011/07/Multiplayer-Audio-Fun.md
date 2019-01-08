@@ -14,4 +14,3 @@ Using the Web Audio API, WebSockets and a very nice designed UI here comes a <a 
 We will keep posting quick updates with the demos that developers around the world make with HTML5.
 
 
-{% include "comment-widget.html" %}

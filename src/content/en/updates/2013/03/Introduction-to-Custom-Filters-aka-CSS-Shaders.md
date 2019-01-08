@@ -167,4 +167,3 @@ I've included a recorded version of a presentation I recently delivered to Londo
 </ul>
 
 
-{% include "comment-widget.html" %}

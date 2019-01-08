@@ -15,4 +15,3 @@ While before we could see sockets being established, we haven't had inspection a
 Open up your [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) or a [fresh Chromium build](http://download-chromium.appspot.com) for the latest changes here.
 
 
-{% include "comment-widget.html" %}

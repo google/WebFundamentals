@@ -21,4 +21,3 @@ Let's say for example, I've saved index.html in the filesystem's root folder (`f
 This feature makes it trivial to pull down a page and save all of its resources offline, while still preserving the exact same folder structure as the online version.
 
 
-{% include "comment-widget.html" %}

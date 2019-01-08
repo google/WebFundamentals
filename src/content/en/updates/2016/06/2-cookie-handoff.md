@@ -80,4 +80,3 @@ We hope you will [try it for yourself](https://ws-codelab.appspot.com/) and
 [answer a survey about session management](//goo.gl/forms/djaMEOgBUb4WEhCz2).
 
 
-{% include "comment-widget.html" %}

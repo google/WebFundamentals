@@ -21,4 +21,3 @@ I spoke at Velocity a little bit ago and talked about the Developer Tools in Chr
 ps. chrome teleports goats. that's what i heard.
 
 
-{% include "comment-widget.html" %}

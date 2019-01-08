@@ -455,4 +455,3 @@ component](https://bugs.chromium.org/p/chromium/issues/entry?template=Defect+rep
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

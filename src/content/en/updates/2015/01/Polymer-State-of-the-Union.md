@@ -134,4 +134,3 @@ The 0.8 preview is available now as a branch on GitHub (though it's still being 
 With all the recent changes in Polymer, the team behind it is laying the groundwork for Web Components to become an integral part of every developer's stack. If you're new to Web Components, now is a great time to take a look and familiarize yourself with these transformative technologies. If you're already working with components (and Polymer), the future looks bright indeed. Keep an eye on the Polymer Blog for all the latest updates, and sign up for the Polymer mailing list for questions or comments. Happy hacking!
 
 
-{% include "comment-widget.html" %}

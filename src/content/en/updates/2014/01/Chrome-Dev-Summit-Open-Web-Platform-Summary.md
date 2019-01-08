@@ -143,4 +143,3 @@ So what do we have for web developers? An ecosystem of media APIs for the open W
 **Slides:** [Media APIs for the multi-device Web](/web/shows/cds/2013/media-apis-for-the-web)
 
 
-{% include "comment-widget.html" %}

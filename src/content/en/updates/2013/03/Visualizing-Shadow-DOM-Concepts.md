@@ -37,4 +37,3 @@ between the two worlds. Because they're logically in the Shadow DOM, they're col
 Shadow DOM is available in Chrome 25 and the `<template>` element is available in Chrome 26 (although you only need the first to try the demo).
 
 
-{% include "comment-widget.html" %}

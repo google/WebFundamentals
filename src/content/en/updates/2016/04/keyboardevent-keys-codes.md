@@ -49,4 +49,3 @@ Support for the [`code`](http://caniuse.com/#feat=keyboardevent-code) attribute 
 The [`key`](http://caniuse.com/#feat=keyboardevent-key) attribute is supported in Firefox 44+, Chrome 51+, and Opera 38+, with [partial support](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#Browser_compatibility) in Internet Explorer 9+ and Edge 13+.
 
 
-{% include "comment-widget.html" %}

@@ -381,4 +381,3 @@ In the future,
 [AnimationWorklet](https://dassur.ma/things/animworklet/) is going to make
 frame-perfect scroll-linked effects like this a lot easier.
 
-{% include "comment-widget.html" %}

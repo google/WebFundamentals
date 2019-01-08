@@ -96,4 +96,3 @@ The `requestAutocomplete()` function allowed forms to be filled out on demand by
 
 
 
-{% include "comment-widget.html" %}

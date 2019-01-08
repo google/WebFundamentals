@@ -165,4 +165,3 @@ These two features are also fully supported in other modern browsers [via a ligh
 The Web Animations spec will also continue to evolve. If you're interested in playing around with upcoming features, they're also available now in a [more detailed polyfill: web-animations-next](https://github.com/web-animations/web-animations-js#web-animations-nextminjs).
 
 
-{% include "comment-widget.html" %}

@@ -59,4 +59,3 @@ You can find some great examples of combining values [here](http://thecssninja.c
 With `calc()` you can use +, -, *  and / to add, subtract, multiply and divide values, allowing all sorts of possibilities. You can use `calc()` anywhere a CSS length or number can be used. We’re also working on adding `calc()` for angle and frequency properties soon. The `calc()` property for lengths is available now in Chrome 19 (Dev channel build) by use of the `-webkit-calc` property, in Firefox since version 8 using the `-moz-calc` property and in Internet Explorer since version 9 unprefixed. Let us know what you think by leaving a comment below.
 
 
-{% include "comment-widget.html" %}

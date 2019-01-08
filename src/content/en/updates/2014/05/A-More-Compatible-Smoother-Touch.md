@@ -97,4 +97,3 @@ in hearing what developers think, and in seeing the creative things you can do
 with it.
 
 
-{% include "comment-widget.html" %}

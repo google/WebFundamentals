@@ -21,4 +21,3 @@ A [Call for Participation](//goo.gl/iWA2J) is now open, if you are building real
 See you at New Game this fall!
 
 
-{% include "comment-widget.html" %}

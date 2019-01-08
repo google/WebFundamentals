@@ -95,4 +95,3 @@ book_path: /web/updates/_book.yaml
 Note: Demo removed
 
 
-{% include "comment-widget.html" %}

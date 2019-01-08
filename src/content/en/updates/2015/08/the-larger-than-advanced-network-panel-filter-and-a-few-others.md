@@ -38,4 +38,3 @@ A few other queries which you can experiment with:
 Note: you get autocomplete for these, it makes it easier to discover query types and their corresponding values. The values which autocomplete will exist in your current network recording.
 
 
-{% include "comment-widget.html" %}

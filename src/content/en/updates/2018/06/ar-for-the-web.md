@@ -279,4 +279,3 @@ new articles here as we make progress.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

@@ -92,4 +92,3 @@ Some browsers, like [Chrome](http://www.chromestatus.com/feature/481860970872832
 **Update, September 2014**: Linked to an additional polyfill option, [es6-shim](https://github.com/paulmillr/es6-shim/)
 
 
-{% include "comment-widget.html" %}

@@ -59,4 +59,3 @@ There are several options that will provide an easy fix for this:
 In addition to this change, there’s now greater flexibility in positioning the image within the background.  In the past, you could only specify the image position relative from the top left corner, now you can specify an offset from the edges of the container.  For example setting `background-position: right 5px bottom 5px;` the image will be positioned 5px from the right edge and 5px from the bottom.  Check out this [sample on JSBin](http://jsbin.com/ixogup/1/edit)
 
 
-{% include "comment-widget.html" %}

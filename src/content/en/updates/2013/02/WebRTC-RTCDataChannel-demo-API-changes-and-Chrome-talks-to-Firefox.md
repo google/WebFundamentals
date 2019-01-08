@@ -54,4 +54,3 @@ book_path: /web/updates/_book.yaml
 <p>...and don't forget, you can always get up-to-date implementation information from the excellent <a href="http://www.chromestatus.com" title="chromestatus.com: implementation information for APIs in Chrome">chromestatus.com</a>.</p>
 
 
-{% include "comment-widget.html" %}

@@ -17,4 +17,3 @@ The [Page Visibility API](http://updates.html5rocks.com/2011/06/Page-Visibility-
 The demo requires Chrome 13 or higher but could be adapted to work with the upcoming IE10, which will include [support](https://msdn.microsoft.com/en-us/ie/hh272906) for the Page Visibility API.
 
 
-{% include "comment-widget.html" %}

@@ -18,4 +18,3 @@ Our in-house expert, <a href="http://fhtr.org/">Ilmari Heikkinen</a>, has built 
 [Screenshot from <a href="http://creativejs.com/">creativeJS</a>]
 
 
-{% include "comment-widget.html" %}

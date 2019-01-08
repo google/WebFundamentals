@@ -31,4 +31,3 @@ We will still do occasional blogs on the [Chromium blog](http://blog.chromium.or
 Let us know what you think and come by often!
 
 
-{% include "comment-widget.html" %}

@@ -36,4 +36,3 @@ to check out the
 for more ways to make your site stand out.
 
 
-{% include "comment-widget.html" %}

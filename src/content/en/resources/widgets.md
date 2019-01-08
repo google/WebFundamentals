@@ -176,17 +176,10 @@ Will render as:
 {% include "web/_shared/related-guides/service-workers.html" %}
 
 
-## User comments
+## User comments (deprecated)
 
-To allow users to comment on your documentation, add a comment widget to the
-bottom of the page. For example:
-
-<pre class="prettyprint">
-&#123;% include "comment-widget.html" %}
-</pre>
-
-Note: the comment widget does **not** render in the staging or development
-environment, and will only be visible when the page is published on DevSite.
+Caution: The User Comment widget is deprecated, and has been removed from all
+pages, do not add it to any new pages.
 
 
 ## Videos

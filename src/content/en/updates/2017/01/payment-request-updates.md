@@ -265,4 +265,3 @@ optional as users can still add a new payment method on the payment UI.
       });
     }
 
-{% include "comment-widget.html" %}

@@ -32,4 +32,3 @@ If you have a `File` object (say, one stored using the [FileSystem API](http://w
     
 
 
-{% include "comment-widget.html" %}

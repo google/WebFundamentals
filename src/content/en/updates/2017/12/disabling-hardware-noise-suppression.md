@@ -104,4 +104,3 @@ If possible, include what microphone / headset / etc. was used and if it
 supports ambient noise reduction. If doing more large-scale experiments, links
 to comparative statistics on audio call quality are appreciated.
 
-{% include "comment-widget.html" %}

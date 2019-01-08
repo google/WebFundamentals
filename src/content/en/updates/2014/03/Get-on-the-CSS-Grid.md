@@ -53,4 +53,3 @@ Now just click the _Relaunch Now_ button to restart your browser and you'll be a
 CSS Grid Layout is a great new primitive for web content, but as usual we're all keen to hear what developers think about it. There are lots of ways to give feedback - leave a comment here, send mail to the [W3C CSS Working Group list](mailto:www-style@w3.org) with "[css-grid]" in the subject line, log bugs, or blog and tweet what you think of it. We look forward to seeing the great layouts you build with this super useful new feature.
 
 
-{% include "comment-widget.html" %}

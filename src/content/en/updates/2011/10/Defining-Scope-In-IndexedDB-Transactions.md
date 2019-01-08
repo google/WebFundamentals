@@ -54,4 +54,3 @@ Other sources:
 So until next time... keep pushing the web to near territories.
 
 
-{% include "comment-widget.html" %}

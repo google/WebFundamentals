@@ -17,4 +17,3 @@ description: How to view and change your DOM breakpoints with the Breakpoints pa
 Use the DOM Breakpoints Pane to <em>enable</em>, <em>disable</em> or <em>remove</em> existing breakpoints  which you have set.
 
 
-{% include "comment-widget.html" %}

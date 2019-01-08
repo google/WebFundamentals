@@ -84,4 +84,3 @@ We are keen to hear your feedback on this experiment at [webpackage-dev@chromium
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

@@ -47,4 +47,3 @@ for consistency. Follow through, for details on
 While these changes make their way to stable release, you can use both syntaxes simultaneously for full tool support or migrate immediately to the `#` syntax, depending on your needs.
 
 
-{% include "comment-widget.html" %}

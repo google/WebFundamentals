@@ -92,4 +92,3 @@ Check out the [live example at jsFiddle](http://jsfiddle.net/Wedjf/1/){: .extern
 Note that attr() reads in the attribute values of the matching element, so if you use it for #foo:before, it reads the attributes from #foo.
 
 
-{% include "comment-widget.html" %}

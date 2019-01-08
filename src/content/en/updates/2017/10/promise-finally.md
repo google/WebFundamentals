@@ -95,4 +95,3 @@ remains to use them instead of vanilla promises. That said, if you prefer
 vanilla promises for some reason, `Promise.prototype.finally` can help make
 your code simpler and cleaner.
 
-{% include "comment-widget.html" %}

@@ -27,4 +27,3 @@ Changing it to the following should do the trick:
     
 
 
-{% include "comment-widget.html" %}

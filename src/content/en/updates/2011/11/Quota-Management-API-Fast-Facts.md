@@ -51,4 +51,3 @@ There’s various offline related features introduced to modern browsers through
 * The API is described in WebIDL here: [https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1](https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1)
 
 
-{% include "comment-widget.html" %}

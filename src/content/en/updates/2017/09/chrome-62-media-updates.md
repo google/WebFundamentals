@@ -186,8 +186,6 @@ playback will automatically switch to fullscreen mode. Rotating the device to
 portrait puts the video back to windowed mode. Check out our [past article] for
 more details.
 
-{% include "comment-widget.html" %}
-
 [Encrypted Media Extensions (EME)]: https://w3c.github.io/encrypted-media/
 [Widevine Security Level 1]: https://storage.googleapis.com/wvdocs/Widevine_DRM_Architecture_Overview.pdf
 [Sample Media PWA]: https://github.com/GoogleChrome/sample-media-pwa

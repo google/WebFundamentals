@@ -510,8 +510,6 @@ happen (e.g. know about deprecated APIs ahead of their removal).
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [spec]: https://w3c.github.io/reporting
 [reportingobserver]: /web/updates/2018/07/reportingobserver
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md

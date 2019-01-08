@@ -66,4 +66,3 @@ To make life a little simpler, I have created [a helper library](https://github.
 If you need more control with image decoding, `createImageBitmap()` is your new best friend. Check it out in Chrome 50, and let us know how you get on!
 
 
-{% include "comment-widget.html" %}

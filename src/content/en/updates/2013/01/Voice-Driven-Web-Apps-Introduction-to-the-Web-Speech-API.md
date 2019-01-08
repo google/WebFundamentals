@@ -98,4 +98,3 @@ book_path: /web/updates/_book.yaml
 
 <p>Please refer to the <a href="https://www.google.com/chrome/privacy/whitepaper.html#speech">Chrome Privacy Whitepaper<a/> to learn how Google is handling voice data from this API.</p>
 
-{% include "comment-widget.html" %}

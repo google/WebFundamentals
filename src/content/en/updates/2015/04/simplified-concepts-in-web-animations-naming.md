@@ -41,4 +41,3 @@ If you're keen to try out these features, then watch out for the [v2 release][po
 [polyfill-releases]: https://github.com/web-animations/web-animations-js/releases
 
 
-{% include "comment-widget.html" %}

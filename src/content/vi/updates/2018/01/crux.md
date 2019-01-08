@@ -29,6 +29,4 @@ Chúng tôi rất vui được chia sẻ dữ liệu mới này với bạn và 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

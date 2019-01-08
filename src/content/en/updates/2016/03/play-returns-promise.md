@@ -82,4 +82,3 @@ never rejects. It only happens if there are no valid sources.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=718647)
 
-{% include "comment-widget.html" %}

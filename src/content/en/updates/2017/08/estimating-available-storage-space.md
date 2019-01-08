@@ -197,4 +197,3 @@ function storageEstimateWrapper() {
 }
 ```
 
-{% include "comment-widget.html" %}

@@ -184,4 +184,3 @@ you’ll get an email notification whenever we launch a new video, or add our
 I’m Pete LePage, and as soon as Chrome 64 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
 
-{% include "comment-widget.html" %}

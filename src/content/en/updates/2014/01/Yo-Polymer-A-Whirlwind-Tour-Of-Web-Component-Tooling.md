@@ -105,4 +105,3 @@ A few other articles that are worth checking out on the subject:
 * [Building Apps With The Yeoman Workflow](http://net.tutsplus.com/tutorials/javascript-ajax/building-apps-with-the-yeoman-workflow/)
 
 
-{% include "comment-widget.html" %}

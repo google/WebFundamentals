@@ -38,4 +38,3 @@ Until now, the main issue with insertAdjacentHTML has been its lack of browser s
 </p>
 
 
-{% include "comment-widget.html" %}

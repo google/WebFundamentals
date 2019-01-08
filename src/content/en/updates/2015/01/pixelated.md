@@ -79,4 +79,3 @@ If you are building an airline ticketing tool, or an app that displays [QR codes
 If you are interested in seeing the implementation, checkout [Issue 317991](https://code.google.com/p/chromium/issues/detail?id=317991) (it is left open for the implementation of the crisp-edges value. Star the issue to track the implementation).
 
 
-{% include "comment-widget.html" %}

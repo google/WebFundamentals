@@ -21,4 +21,3 @@ Cheers,
 Eric
 
 
-{% include "comment-widget.html" %}

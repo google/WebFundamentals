@@ -79,4 +79,3 @@ The Fullscreen API is [enabled](http://caniuse.com/#search=fullscreen) by defaul
 *Updated 2014-02-11*: to include prefixes for IE, add the standard CSS syntax, and update the browser compatibility comment. Thanks [@dstorey](https://twitter.com/dstorey) and [@patrickkettner](https://twitter.com/patrickkettner).
 
 
-{% include "comment-widget.html" %}

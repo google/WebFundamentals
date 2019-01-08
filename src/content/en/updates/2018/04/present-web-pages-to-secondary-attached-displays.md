@@ -251,8 +251,6 @@ support will come [later].
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [Presentation API]: https://w3c.github.io/presentation-api/
 [Presentation Receiver API]: https://w3c.github.io/presentation-api/#dom-presentationreceiver
 [https://googlechrome.github.io/samples/presentation-api/]: https://googlechrome.github.io/samples/presentation-api/

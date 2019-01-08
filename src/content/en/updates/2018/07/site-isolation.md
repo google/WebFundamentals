@@ -272,4 +272,3 @@ for reading a draft version of this article and giving their feedback.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

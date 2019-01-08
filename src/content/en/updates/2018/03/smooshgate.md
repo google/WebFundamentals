@@ -220,4 +220,3 @@ meeting](https://github.com/tc39/agendas/blob/master/2018/05.md), #SmooshGate
 was officially resolved by renaming `flatten` to `flat`.
 
 {% include "web/_shared/rss-widget-updates.html" %}
-{% include "comment-widget.html" %}

@@ -209,4 +209,3 @@ deprecated in Chrome 54 and has now been removed.
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

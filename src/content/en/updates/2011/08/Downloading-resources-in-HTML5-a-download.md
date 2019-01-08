@@ -32,4 +32,3 @@ It'll give users a way to download content created/modified within your app.
 Browser support: only the current Chrome dev channel release (14.0.835.15+) supports this attribute.
 
 
-{% include "comment-widget.html" %}

@@ -26,4 +26,3 @@ Check out the demos in action either through a [video](http://protothon.com/blog
 
 
 
-{% include "comment-widget.html" %}
