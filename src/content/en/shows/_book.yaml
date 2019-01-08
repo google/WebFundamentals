@@ -24,7 +24,8 @@ upper_tabs:
         - title: A11ycasts with Rob Dodson
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g
           status: external
-        - include: /web/shows/http203/_toc.yaml
+        - title: HTTP203
+          path: /web/shows/http203
         - include: /web/shows/supercharged/_toc.yaml
         - title: Developer Diary with Paul Lewis
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J
