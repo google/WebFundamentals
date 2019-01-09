@@ -1,0 +1,21 @@
+
+<tr id="{{ anchor_prefix }}navigateFallbackBlacklist">
+  <td>
+    <p>navigateFallbackBlacklist</p>
+  </td>
+  <td>
+    <p>
+      <em>可选，<code>Array</code> of <code>RegExp</code>，默认<code>[]</code>。</em>
+    </p>
+    <p>一个可选的正则表达式数组，用于限制配置的 <code>navigateFallback</code>适用的URL。
+    </p>
+    <p>如果只将您网站的一部分网址视为<a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a>的一部分，这将非常有用。</p>
+    <p>如果同时配置了<code>navigateFallbackBlacklist</code>和<code>navigateFallbackWhitelist</code>，则navigateFallbackBlacklist优先。
+    </p>
+    <p>
+      <strong>例子：</strong>
+    </p>
+    <pre class="prettyprint">// 以`/_`开头或包含`admin`的URL，加入黑名单：
+navigateFallbackBlacklist: [/^\/_/, /admin/]</pre>
+  </td>
+</tr>
