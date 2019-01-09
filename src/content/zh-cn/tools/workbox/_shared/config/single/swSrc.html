@@ -1,0 +1,21 @@
+
+<tr id="{{ anchor_prefix }}swSrc">
+  <td>
+    <p>swSrc</p>
+  </td>
+  <td>
+    <p>
+      <em>必填， <code>String</code></em>
+    </p>
+    <p>除了包含<code>injectionPointRegexp</code>的匹配项之外，源service worker文件的路径会包含自定义代码。</p>
+    <p><strong>Node 环境：</strong></p>
+    <p>你的service worker文件应该包含对<a href="/web/tools/workbox/reference-docs/latest/workbox.precaching"><code>workbox.precaching</code>方法的调用，该方法用于注入预缓存清单。
+    </a></p>
+    <p><strong>Webpack 环境：</strong></p>
+    <p>你的service worker文件应引用<code>self.__precacheManifest</code>变量，获取编译后的<a href="/web/tools/workbox/reference-docs/latest/module-workbox-build#.ManifestEntry"><code>ManifestEntry</code> </a>列表：<code>workbox.precaching.precacheAndRoute(self.__precacheManifest)</code></p>
+    <p>
+      <strong>例子：</strong>
+    </p>
+    <pre class="prettyprint">swDest: path.join('src', 'sw.js')</pre>
+  </td>
+</tr>
