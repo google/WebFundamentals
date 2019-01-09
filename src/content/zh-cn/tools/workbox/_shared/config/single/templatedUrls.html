@@ -1,0 +1,24 @@
+
+<tr id="{{ anchor_prefix }}templatedUrls">
+  <td>
+    <p>templatedUrls</p>
+  </td>
+  <td>
+    <p>
+      <em>可选，带<code>String</code>或<code>Array</code>的<code>Object</code>，默认为<code>null</code>。</em>
+    </p>
+    <p>如果基于服务器端逻辑生成URL，则其内容可能依赖于多个文件或某些其他唯一字符串值。</p>
+    <p>如果与字符串数组一起使用，它们将被解释为glob模式，并且与模式匹配的任何文件的内容，将用于唯一的对URL进行版本。</p>
+    <p>如果与单个字符串一起使用，它将被解释为你给定URL生成的唯一版本信息。</p>
+    <p>
+      <strong>例子：</strong>
+    </p>
+    <pre class="prettyprint">templatedUrls: {
+  '/app-shell': [
+    'dev/templates/app-shell.hbs',
+    'dev/**/*.css',
+    ],
+  '/other-page': 'my-version-info',
+}</pre>
+  </td>
+</tr>
