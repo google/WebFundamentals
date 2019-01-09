@@ -4,6 +4,42 @@
 ## Please add new contributors in alphabetical order by family name.
 ##
 
+# EXAMPLE
+# givenfamily:  # REQUIRED - place a 512x512 px JPG image file with same name in /images/contributors
+#   name:
+#     given: First # Required
+#     family: Last # Optional
+#   homepage: https://developers.google.com/web/ # Optional
+#   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
+#   twitter: petele                              # Recommended - handle only (no @)
+#   github: petele                               # Recommended - handle only
+#   lanyrd: petele                               # Optional - handle only
+#   description:
+#     en: "This is my by-line, isn't it cool? I think so!" # Recommended
+#   org:
+#     name: Company           # Optional (not shown)
+#     unit: Team              # Optional (not shown)
+#   country: US               # Optional - ISO Country Code (not shown)
+#   email: test@example.com   # Optional (not shown)
+
+iamakulov:
+  name:
+    given: Ivan
+    family: Akulov
+  homepage: https://iamakulov.com
+  twitter: iamakulov
+  github: iamakulov
+  description:
+    en: Contracting software engineer · Blogging, open source, performance, UX
+  email: mail@iamakulov.com
+
+rezaali:
+  name:
+    given: Reza
+    family: Ali
+  description:
+    en: Reza is a software developer.
+
 jbnicolai:
   name:
     given: Joshua
@@ -17,10 +53,10 @@ jbnicolai:
     - contributor
   homepage: https://github.com/jbnicolai
   google: +JoshuaAppelman
-  twitter: BoyNicolai
+  twitter: jbnicolai_
   email: me@jbnicolai.com
   description:
-    en: "Open source contributor and software consultant"
+    en: Open source contributor and software consultant
 
 jakearchibald:
   name:
@@ -32,11 +68,13 @@ jakearchibald:
   country: UK
   role:
     - author
-  homepage: http://jakearchibald.com/
-  google: 116237864387312784020
+  homepage: https://jakearchibald.com/
+  google: +jakearchibald
   twitter: jaffathecake
   email: jakearchibald@google.com
-  lanyrd: true
+  lanyrd: jaffathecake
+  description:
+    en: Human boy working on web standards at Google
 
 pbakaus:
   name:
@@ -45,15 +83,15 @@ pbakaus:
   org:
     name: Google
     unit: Developer Relations
-  country: DE
+  country: US
   role:
     - author
-  homepage: http://paulbakaus.com
+  homepage: 'https://paulbakaus.com'
   google: +PaulBakaus
   twitter: pbakaus
   email: pbakaus@google.com
   description:
-    en: "Open Web Developer Advocate at Google • Tools, Performance, Animation, UX"
+    en: 'Open Web Developer Advocate at Google • Tools, Performance, Animation, UX'
 
 ianbarber:
   name:
@@ -65,12 +103,57 @@ ianbarber:
   country: UK
   role:
     - engineer
-  homepage: http://riskcompletefailure.com
-  google: +ianbarber
+  homepage: 'http://www.riskcompletefailure.com/'
+  google: +IanBarber
   twitter: ianbarber
   email: ianbarber@google.com
   description:
-    en: "Ian is a DRE"
+    en: Ian is a DRE
+
+kaycebasques:
+  name:
+    given: Kayce
+    family: Basques
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  description:
+    en: Technical Writer, Chrome DevTools & Lighthouse
+
+beaufortfrancois:
+  name:
+    given: François
+    family: Beaufort
+  org:
+    name: Google
+    unit: Developer Relations
+  country: FR
+  role:
+    - author
+  google: +FrancoisBeaufort
+  github: beaufortfrancois
+  description:
+    en: Dives into Chromium source code
+
+lucaberton:
+  name:
+    given: Luca
+    family: Berton
+  org:
+    name: Independent
+    unit: DevOps
+  country: IT
+  role:
+    - contributor
+    - translator
+  homepage: 'https://lucaberton.it'
+  google: +LucaBerton
+  twitter: mrevolution85
+  github: lucab85
+  email: luca@lucaberton.it
 
 ericbidelman:
   name:
@@ -80,14 +163,56 @@ ericbidelman:
     name: Google
     unit: Developer Relations
   country: USA
-  homepage: http://ericbidelman.com
+  homepage: 'http://ericbidelman.com'
   google: +EricBidelman
   twitter: ebidel
+  github: ebidel
   role:
     - author
   email: e.bidelman@google.com
   description:
-    en: "Engineer @ Google working on Polymer, Chrome, and the web"
+    en: 'Engineer @ Google working on web tooling: Headless Chrome, Puppeteer, Lighthouse'
+
+bokan:
+  name:
+    given: David
+    family: Bokan
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: david_bokan
+  email: bokan@google.com
+
+aliceboxhall:
+  name:
+    given: Alice
+    family: Boxhall
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  google: "111975973972817482025"
+  twitter: sundress
+  email: aboxhall@google.com
+
+cbrand:
+  name:
+    given: Christiaan
+    family: Brand
+  org:
+    name: Google
+  country: USA
+  role:
+    - author
+  twitter: christiaanbrand
+  github: christiaanbrand
+  description:
+    en: Security Product Manager
 
 yatesbuckley:
   name:
@@ -98,25 +223,26 @@ yatesbuckley:
   country: UK
   role:
     - author
-  homepage:
-  google: https://plus.google.com/+YatesBuckley
+  google: +YatesBuckley
   email: yates@unit9.com
 
-
-beaufortfrancois:
+mathiasbynens:
   name:
-    given: François
-    family: Beaufort
+    given: Mathias
+    family: Bynens
   org:
     name: Google
-    unit: Developer Relations
-  country: France
+    unit: V8
+  country: DE
   role:
     - author
-  homepage: https://plus.google.com/+FrancoisBeaufort
-  google: +FrancoisBeaufort
+  homepage: https://mathiasbynens.be/
+  twitter: mathias
+  github: mathiasbynens
+  email: mths@google.com
+  lanyrd: mathias
   description:
-    en: "Dives into Chromium source code"
+    en: V8 JavaScript whisperer
 
 owencm:
   name:
@@ -127,11 +253,27 @@ owencm:
     unit: Product Management
   country: US
   role:
-    - contributer
-  homepage: http://www.owencampbellmoore.com/
+    - contributor
+  homepage: 'http://www.owencampbellmoore.com/'
   google: +OwenCampbellMoore
   twitter: owencm
   email: owencm@google.com
+
+mcasas:
+  name:
+    given: Miguel
+    family: Casas-Sanchez
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - engineer
+  twitter: yellowdoge
+  github: yellowdoge
+  email: mcasas@chromium.org
+  description:
+    en: Miguel is an engineer in the Chrome team
 
 michaelchang:
   name:
@@ -139,24 +281,32 @@ michaelchang:
     family: Chang
   role:
     - author
-  homepage: http://minmax.design
+  homepage: 'http://minmax.design'
 
 samchen:
   name:
     given: Sam
     family: Chen
-  org:
-    name:
-    unit:
-  country: China
+  country: CN
   role:
     - translator
-  homepage: http://www.zfanw.com/blog/
-  google: +samchen
+  homepage: 'http://www.zfanw.com/blog/'
+  google: '104787680206754797134'
   twitter: chenxsan
   email: chenxsan@google.com
   description:
-    en: "Sam is a Front End Developer"
+    en: Sam is a Front End Developer
+
+hongchanchoi:
+  name:
+    given: Hongchan
+    family: Choi
+  org:
+    name: Google
+  homepage: https://hoch.io
+  twitter: hochsays
+  description:
+    en: Software Engineer working on Web Audio in Chromium
 
 kenchris:
   name:
@@ -164,15 +314,15 @@ kenchris:
     family: Christiansen
   org:
     name: Intel
-    unit: "OTC, Web Technology Team"
-  country: Denmark
+    unit: 'OTC, Web Technology Team'
+  country: DK
   role:
     - author
   twitter: kennethrohde
   email: kenneth.christiansen@gmail.com
   google: +KennethRohdeChristiansen
   description:
-    en: "Kenneth is an Engineer at Intel"
+    en: Kenneth is an Engineer at Intel
 
 mco:
   name:
@@ -181,26 +331,64 @@ mco:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   twitter: marcacohen
   role:
     - author
-  homepage: http://about.me/marc1
+  homepage: 'https://about.me/marc1'
   email: mco@google.com
   description:
-    en: "Eng Manager, Web Developer Relations"
+    en: 'Eng Manager, Web Developer Relations'
+
+flaviocopes:
+  name:
+    given: Flavio
+    family: Copes
+  org:
+    name: Independent
+    unit: Developer
+  country: IT
+  role:
+    - contributor
+  homepage: 'http://flaviocopes.com'
+  twitter: flaviocopes
+  email: copesc@gmail.com
+  description:
+    en: Flavio is a Full Stack Developer
+
+victorcostan:
+  name:
+    given: Victor
+    family: Costan
+  google: "102128305988485092292"
+  twitter: pwnall
+  github: pwnall
+  role:
+    - author
+  description:
+    en: "Tech Lead, Chrome Storage"
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  email: costan@google.com
 
 dalecurtis:
   name:
     given: Dale
     family: Curtis
   org:
-    name:
-    unit:
+    name: Google
+    unit: Chrome Media
+  country: US
   role:
     - author
+  google: +DaleCurtis
+  twitter: DaleCurtis
+  email: dalecurtis@google.com
+  homepage: 'https://github.com/dalecurtis'
   description:
-    en: "Dale."
+    en: Dale is a Senior Software Engineer
 
 alexdanilo:
   name:
@@ -209,13 +397,28 @@ alexdanilo:
   org:
     name: Google
     unit: Developer Relations
-  country: Australia
+  country: AU
   role:
     - author
-  homepage:
-  google: 113205278198625312096
+  google: +AlexDanilo
   twitter: alexanderdanilo
   email: adanilo@google.com
+
+wdenniss:
+  name:
+    given: William
+    family: Denniss
+  org:
+    name: Google
+    unit: Identity
+  country: US
+  role:
+    - author
+  google: +WilliamDenniss
+  twitter: WilliamDenniss
+  email: wdenniss@google.com
+  description:
+    en: Google Identity Product Manager
 
 robdodson:
   name:
@@ -224,11 +427,11 @@ robdodson:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   role:
     - author
-  homepage: https://robdodson.me
-  google: 118271135596408598424
+  homepage: 'https://robdodson.me'
+  google: +RobDodson
   twitter: rob_dodson
   email: robdodson@google.com
 
@@ -242,12 +445,27 @@ cwdoh:
   country: KR
   role:
     - translator
-  homepage: http://cwdoh.com
+  homepage: 'http://cwdoh.com'
   google: +ChangwookDoh
   twitter: cwdoh
   email: changwook.doh@gmail.com
   description:
-    en: "Chang is a mobile and HTML5 technologist"
+    en: Chang is a mobile and HTML5 technologist
+
+tdresser:
+  name:
+    given: Tim
+    family: Dresser
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - author
+  twitter: tdresser
+  email: tdresser@chromium.org
+  description:
+    en: Software Engineer working on performance metrics at Google
 
 samdutton:
   name:
@@ -259,10 +477,29 @@ samdutton:
   country: UK
   role:
     - author
-  google: +SamDutton
+  google: +samdutton
   email: dutton@google.com
   description:
-    en: "Sam is a Developer Advocate"
+    en: Sam is a Developer Advocate
+
+arthurevans:
+  name:
+    given: Arthur
+    family: Evans
+  twitter: devdocdude
+  github: arthurevans
+  description:
+    en: Arthur is a Tech Writer
+
+
+flackr:
+  name:
+    given: Robert
+    family: Flack
+  country: AN
+  role:
+    - author
+  email: flackr@google.com
 
 jonathangarbee:
   name:
@@ -270,12 +507,12 @@ jonathangarbee:
     family: Garbee
   org:
     name: Individual
-  country: USA
+  country: US
   email: jonathan.garbee@gmail.com
   role:
     - author
   description:
-    en: "Google Developer Expert for Web Technology"
+    en: Google Developer Expert for Web Technology
 
 dgash:
   name:
@@ -284,12 +521,12 @@ dgash:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   role:
     - author
   email: dgash@google.com
   description:
-    en: "Dave is a Tech Writer"
+    en: Dave is a Tech Writer
 
 ewagasperowicz:
   name:
@@ -315,161 +552,60 @@ mattgaunt:
   role:
     - author
     - engineer
-  homepage: http://blog.gauntface.com
-  google: +MattGuant
+  homepage: 'https://gauntface.com/blog'
+  google: +MattGaunt
   twitter: gauntface
 
-surma:
+mychaelgo:
   name:
-    given: Surma
-  org:
-    name: Google
-    unit: Developer Relations
-  country: UK
-  role:
-    - author
-    - engineer
-  twitter: DasSurma
-
-ilyagrigorik:
-  name:
-    given: Ilya
-    family: Grigorik
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage: http://igvita.com
-  google: +IlyaGrigorik
-  twitter: igrigorik
-  description:
-    en: "Ilya is a Developer Advocate and Web Perf Guru"
-
-umarhansa:
-  name:
-    given: Umar
-    family: Hansa
-  org:
-    name: Shazam
-    unit: Web Development
-  country: UK
-  role:
-    - contributor
-  homepage: https://umaar.com
-  google: +UmarHansa
-  twitter: umaar
-  email: umar.hansa@gmail.com
-  description:
-    en: "Umar is a front-end web developer"
-
-paulirish:
-  name:
-    given: Paul
-    family: Irish
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage: http://paulirish.com
-  google: +PaulIrish
-  twitter: paul_irish
-  email: paulirish@google.com
-
-megginkearney:
-  name:
-    given: Meggin
-    family: Kearney
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  google: 110573989653316535297
-  email: mkearney@google.com
-  description:
-    en: "Meggin is a Tech Writer"
-
-brendankenny:
-  name:
-    given: Brendan
-    family: Kenny
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage: http://twitter.com/brendankenny
-  twitter: brendankenny
-  email: bckenny@google.com
-
-paulkinlan:
-  name:
-    given: Paul
-    family: Kinlan
-  org:
-    name: Google
-    unit: Developer Relations
-  country: UK
-  role:
-    - author
-    - engineer
-  homepage: http://paul.kinlan.me
-  google: +PaulKinlan
-  twitter: paul_kinlan
-  email: paulkinlan@google.com
-  description:
-    en: "Paul is a Developer Advocate"
-
-agektmr:
-  name:
-    given: Eiji
-    family: Kitamura
-  org:
-    name: Google
-    unit: Developer Relations
-  country: Japan
-  role:
-    - author
-  homepage: http://blog.agektmr.com
-  google: +agektmr
-  twitter: agektmr
-  email: agektmr@google.com
-  description:
-    en: "Developer Advocate in Tokyo"
-
-ilmariheikkinen:
-  name:
-    given: Ilmari
-    family: Heikkinen
-  country: UK
-  homepage: http://fhtr.org
-  google: 115293744081058969329
-  twitter: ilmarihei
-  role:
-    - author
-
-jeokrang:
-  name:
-    given: Hunmin
-    family: Kim
-  org:
-    name: NAVER Corp.
-    unit: Blog & Post Development lab
-  country: Korea
+    given: Mychael
+    family: Go
+  country: ID
   role:
     - translator
-  homepage: http://huns.me
-  google: +jeokrang
-  twitter:
-  email: jeokrang@gmail.com
+  twitter: mychaelgo
+  github: mychaelgo
+  google: "113952063964933941833"
   description:
-    en: "Hunmin is a JavaScript Developer"
+    en: Mychael Go is Fullstack Software Engineer
+
+sgomes:
+  name:
+    given: Sérgio
+    family: Gomes
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  twitter: sergiomdgomes
+  description:
+    en: Web DevRel @ Google
+
+simongong:
+  name:
+    given: Simon
+    family: Gong
+  org:
+    name: Independent
+    unit: Developer
+  country: JP
+  role:
+    - translator
+  google: '113525015220376733647'
+  email: simon.gong64@gmail.com
+  description:
+    en: Simon is a Full Stack Developer
+
+jennygove:
+  name:
+    given: Jenny
+    family: Gove
+  description:
+    en: Jenny Gove is a UX Research Lead at Google, where she conducts research
+      on smartphone experiences. She obtained her PhD from the University of
+      Southampton, UK.
 
 greenido:
   name:
@@ -482,29 +618,286 @@ greenido:
   role:
     - author
     - engineer
-  homepage: http://greenido.wordpress.com
-  google: +IdoGreen
+  homepage: 'https://greenido.wordpress.com'
+  google: +GreenIdo
   twitter: greenido
   email: idog@google.com
   description:
-    en: "Ido is a Developer Advocate and a runner"
+    en: Ido is a Developer Advocate and a runner
+
+tomgreenaway:
+  name:
+    given: Tom
+    family: Greenaway
+  org:
+    name: Google
+    unit: Developer Relations
+  country: AU
+  role:
+    - author
+  github: tcmg
+  twitter: tcmg
+  description:
+    en: Chrome & Web Developer Relations Games Lead
 
 eligrey:
   name:
     given: Eli
     family: Grey
   org:
-    name: "ΩF:∅"
-  country: USA
+    name: 'ΩF:∅'
+  country: US
   role:
     - author
     - engineer
-  homepage: https://eligrey.com
-  google: 111217788892362755679
+  homepage: 'https://eligrey.com'
+  google: +EliGreyDeveloper
   twitter: sephr
   email: me@eligrey.com
   description:
-    en: "Eli is a Developer"
+    en: Eli is a Developer
+
+ilyagrigorik:
+  name:
+    given: Ilya
+    family: Grigorik
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  homepage: 'https://igvita.com'
+  google: +IlyaGrigorik
+  twitter: igrigorik
+  description:
+    en: Ilya is a Developer Advocate and Web Perf Guru
+
+jgruber:
+  name:
+    given: Jakob
+    family: Gruber
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: schuay
+  github: schuay
+  email: jgruber@google.com
+  description:
+    en: Jakob is an engineer working on V8
+
+yigu:
+  name:
+    given: Yi
+    family: Gu
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
+
+yangguo:
+  name:
+    given: Yang
+    family: Guo
+  org:
+    name: Google
+    unit: V8
+  country: DE
+  role:
+    - author
+  twitter: hashseed
+  github: hashseed
+  email: yangguo@google.com
+  description:
+    en: Yang is an engineer working on V8
+
+umarhansa:
+  name:
+    given: Umar
+    family: Hansa
+  org:
+    name: Shazam
+    unit: Web Development
+  country: UK
+  role:
+    - contributor
+  homepage: 'https://umaar.com'
+  google: +UmarHansa
+  twitter: umaar
+  email: umar.hansa@gmail.com
+  description:
+    en: Umar is a front-end web developer
+
+chrishtr:
+  name:
+    given: Chris
+    family: Harrelson
+  org:
+    name: Google
+    unit: Software engineering
+  country: US
+  role:
+    - author
+  email: chrishtr@google.com
+
+ilmariheikkinen:
+  name:
+    given: Ilmari
+    family: Heikkinen
+  country: UK
+  homepage: 'http://fhtr.org'
+  google: "105862726631119909094"
+  twitter: ilmarihei
+  role:
+    - author
+
+katiehempenius:
+  name:
+    given: Katie
+    family: Hempenius
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  twitter: katiehempenius
+  email: khempenius@google.com
+
+patrickhulce:
+  name:
+    given: Patrick
+    family: Hulce
+  org:
+    name: Google
+    unit: Chrome DevTools
+  country: US
+  role:
+    - author
+  description:
+    en: Performance Poet
+  github: patrickhulce
+  twitter: patrickhulce
+
+paulirish:
+  name:
+    given: Paul
+    family: Irish
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  homepage: 'https://www.paulirish.com'
+  google: +PaulIrish
+  twitter: paul_irish
+  email: paulirish@google.com
+
+katjackson:
+  name:
+    given: Katherine
+    family: Jackson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  description:
+    en: Technical Writer Intern, Chrome DevTools
+
+captainpangyo:
+  name:
+    given: Josh
+    family: Jang
+  org:
+    name: POSCO ICT
+    unit: SW Platform
+  country: KR
+  role:
+    - translator
+  homepage: 'https://joshuajangblog.wordpress.com/'
+  google: "112235341337838764023"
+  email: jangkeehyo@gmail.com
+  description:
+    en: Josh is a Singing Computer Scientist
+
+kazukikanamori:
+  name:
+    given: Kazuki
+    family: Kanamori
+  country: JP
+  role:
+    - translator
+  twitter: yogurito
+  google: "113987163927119714999"
+  email: kazuki.kanamori@gmail.com
+  description:
+    en: Digital Marketing Engineer
+
+mkazi:
+  name:
+    given: Minhaz
+    family: Kazi
+  role:
+    - author
+  org:
+    name: Google
+    unit: Developer Relations
+  twitter: _mkazi_
+  github: minhaz
+
+megginkearney:
+  name:
+    given: Meggin
+    family: Kearney
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  google: "110573989653316535297"
+  email: mkearney@google.com
+  description:
+    en: Meggin is a Tech Writer
+
+brendankenny:
+  name:
+    given: Brendan
+    family: Kenny
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  homepage: 'http://twitter.com/brendankenny/'
+  twitter: brendankenny
+  email: bckenny@google.com
+  description:
+    en: Lighthouse Bulb Installer
+
+jeokrang:
+  name:
+    given: Hunmin
+    family: Kim
+  org:
+    name: NAVER Corp.
+    unit: Blog & Post Development lab
+  country: KR
+  role:
+    - translator
+  homepage: 'http://huns.me'
+  email: jeokrang@gmail.com
+  description:
+    en: Hunmin is a JavaScript Developer
 
 swengineer:
   name:
@@ -515,12 +908,134 @@ swengineer:
   country: KR
   role:
     - translator
-  homepage: http://fetobe.co.kr
-  google: 112816149994035233646
+  homepage: 'http://fetobe.co.kr'
+  google: "112816149994035233646"
   email: kim.sw.engineer@gmail.com
-  twitter:
   description:
-    en: "Sungwon is a front-end Developer"
+    en: Sungwon is a front-end Developer
+
+paulkinlan:
+  name:
+    given: Paul
+    family: Kinlan
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  homepage: 'https://paul.kinlan.me'
+  google: +PaulKinlan
+  twitter: paul_kinlan
+  email: paulkinlan@google.com
+  description:
+    en: Paul is a Developer Advocate
+
+agektmr:
+  name:
+    given: Eiji
+    family: Kitamura
+  org:
+    name: Google
+    unit: Developer Relations
+  country: JP
+  role:
+    - author
+  homepage: 'https://blog.agektmr.com'
+  google: +agektmr
+  twitter: agektmr
+  email: agektmr@google.com
+  description:
+    en: Developer Advocate in Tokyo
+
+zkoch:
+  name:
+    given: Zach
+    family: Koch
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  email: zkoch@google.com
+  description:
+    en: Google Chrome Product Manager
+
+kosamari:
+  name:
+    given: Mariko
+    family: Kosaka
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+  twitter: kosamari
+  email: kosamari@google.com
+  description:
+    en: Mariko is a drawsplainer
+
+mustafa:
+  name:
+    given: Mustafa
+    family: Kurtuldu
+  org:
+    name: Google
+    unit: Design Relations
+  country: UK
+  role:
+    - author
+  homepage: 'http://www.designtoday.info'
+  google: +MustafaKurtuldu
+  twitter: mustafa_x
+  email: mkurtuldu@google.com
+  description:
+    en: 'Design Advocate at Google • Material Design, UX & Design Sprints'
+
+sethladd:
+  name:
+    given: Seth
+    family: Ladd
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  homepage: 'https://sethladd.com/'
+  google: +SethLadd
+  twitter: sethladd
+  role:
+    - author
+
+mlamouri:
+  name:
+    given: Mounir
+    family: Lamouri
+  org:
+    name: Google
+    unit: Chrome
+  country: CA
+  role:
+    - engineer
+  description:
+    en: Software Engineer for Web Media Experience
+
+ericlawrence:
+  name:
+    given: Eric
+    family: Lawrence
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  github: ericlaw1979
+  homepage: 'https://textslashplain.com/'
+  twitter: ericlaw
+  email: elawrence@chromium.org
 
 nurinamu:
   name:
@@ -532,12 +1047,29 @@ nurinamu:
   country: KR
   role:
     - translator
-  homepage: http://nurinamu.com
+  homepage: 'http://www.nurinamu.com'
   google: +nurinamu
   twitter: nurinamu
   email: nurinamu@gmail.com
   description:
-    en: "Wonjae loves WebRTC and HHK"
+    en: Wonjae loves WebRTC and HHK
+
+plegner:
+  name:
+    given: Philipp
+    family: Legner
+  homepage: https://mathigon.org
+  twitter: philipplegner
+  github: plegner
+  role:
+    - engineer
+  description:
+    en: Software Engineer at Google
+  org:
+    name: Google
+    unit: Software Engineer
+  country: GB
+  email: plegner@google.com
 
 petelepage:
   name:
@@ -546,16 +1078,29 @@ petelepage:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   role:
     - author
     - engineer
-  homepage: http://petelepage.com
+  homepage: 'http://petelepage.com'
   google: +PeteLePage
   twitter: petele
+  github: petele
   email: petele@google.com
+  lanyrd: petele
   description:
-    en: "Pete is a Developer Advocate"
+    en: Pete is a Developer Advocate
+
+kennith:
+  name:
+    given: Kennith
+    family: Leung
+  homepage: http://kennithleung.com
+  twitter: kennith
+  google: +kennith
+  email: kennith.leung@gmail.com
+  role:
+    - translator
 
 paullewis:
   name:
@@ -567,28 +1112,58 @@ paullewis:
   country: UK
   role:
     - author
-  homepage: http://aerotwist.com/
-  google: +PaulLewis
+  homepage: 'https://aerotwist.com/'
+  google: +aerotwist
   twitter: aerotwist
   description:
-    en: "Paul is a Design and Perf Advocate"
+    en: Paul is a Design and Perf Advocate
 
 henrylim:
   name:
     given: Henry
     family: Lim
   org:
-    name: Independent
-    unit: Developer
-  country: Malaysia
+    name: Google Developer Group Kuala Lumpur
+    unit: Community Co-organizer
+  country: MY
   role:
     - translator
   twitter: henrylim96
-  google: +henrylim96
-  homepage: https://limhenry.xyz
-  email: henrylim.everything@gmail.com
+  google: +HenryLim96
+  homepage: 'https://limhenry.xyz'
+  email: lets.email.henry@gmail.com
   description:
-    en: "Web Developer, Volunteer @ GDG Kuala Lumpur"
+    en: 'Henry is the community co-organizer @ Google Developer Group Kuala Lumpur.'
+
+wmlin:
+  name:
+    given: Wanming
+    family: Lin
+  org:
+    name: Intel
+    unit: Web team
+  country: CN
+  role:
+    - translator
+    - engineer
+  github: Honry
+  email: wanming.lin@intel.com
+  description:
+    en: Wanming is an Engineer at Intel
+
+wayouliu:
+  name:
+    given: Wayou
+    family: Liu
+  homepage: https://wayou.github.io/
+  google: +WayouLiu
+  twitter: liuwayong
+  github: wayou
+  description:
+    en: "Wayou is a developer and loves the web"
+  role:
+    - translator
+  email: liuwayong@gmail.com
 
 heathermahan:
   name:
@@ -600,12 +1175,12 @@ heathermahan:
   country: US
   role:
     - author
-  homepage: https://github.com/heatheramahan
-  google: 108335678119817391642
+  homepage: 'https://github.com/heatheramahan'
+  google: "108335678119817391642"
   twitter: heatheramahan
   email: heatheramahan@gmail.com
   description:
-    en: "Heather Mahan is a developer."
+    en: Heather Mahan is a developer.
 
 mikemahemoff:
   name:
@@ -617,11 +1192,11 @@ mikemahemoff:
   country: UK
   role:
     - author
-  homepage: https://github.com/mahemoff
-  google: 106413090159067280619
+  homepage: 'https://github.com/mahemoff'
+  google: +MichaelMahemoff
   twitter: mahemoff
   email: mahemoff@google.com
-  lanyrd: true
+  lanyrd: mahemoff
 
 renatomangini:
   name:
@@ -630,42 +1205,85 @@ renatomangini:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   role:
     - author
-  homepage: http://renatomangini.com/
-  google: 102180419759627664875
+  homepage: 'http://www.renatomangini.com/'
+  google: +RenatoMangini
   twitter: renatomangini
   email: mangini@google.com
+
+smcgruer:
+  name:
+    given: Stephen
+    family: McGruer
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - author
 
 josephmedley:
   name:
     given: Joseph
     family: Medley
-  country: USA
+  country: US
   role:
     - author
-  homepage:
-  google: jmedley@google.com
-  twitter:
-  email:
+  github: jpmedley
+  email: jmedley@google.com
   description:
-    en: "Technical Writer"
+    en: Technical Writer
+
+developit:
+  name:
+    given: Jason
+    family: Miller
+  org:
+    name: Google
+    unit: Developer Relations
+  country: US
+  role:
+    - author
+    - engineer
+  homepage: 'https://jasonformat.com'
+  google: +developit
+  twitter: _developit
+  github: developit
+  email: jasonjmiller@google.com
+  description:
+    en: Jason is a Web DevRel
+
+kuu:
+  name:
+    given: Kuu
+    family: Miyazaki
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: miyazaqui
+  email: miyazaqui@gmail.com
+  description:
+    en: "Kuu is interested in media technology on the Web"
 
 jacquerie:
   name:
     given: Jacopo
     family: Notarstefano
-  country: Italy
+  country: IT
   role:
     - engineer
     - contributor
-  homepage: http://jacquerie.github.io
+  homepage: 'http://jacquerie.github.io'
   google: +JacopoNotarstefano
   twitter: Jaconotar
   email: jacopo.notarstefano@gmail.com
   description:
-    en: "Jacopo is a Full Stack Developer"
+    en: Jacopo is a Full Stack Developer
 
 jeffnusz:
   name:
@@ -673,7 +1291,7 @@ jeffnusz:
     family: Nusz
   role:
     - author
-  homepage: http://www.custom-logic.com
+  homepage: 'http://www.custom-logic.com'
 
 addyosmani:
   name:
@@ -682,13 +1300,14 @@ addyosmani:
   org:
     name: Google
     unit: Developer Relations
-  country: UK
+  country: USA
   role:
     - author
-  homepage:
-  google: 115133653231679625609
+  google: +AddyOsmani
   twitter: addyosmani
   email: addyo@google.com
+  description:
+    en: 'Eng Manager, Web Developer Relations'
 
 chrispalmer:
   name:
@@ -698,20 +1317,31 @@ chrispalmer:
   role:
     - author
   description:
-    en: "Chris is a security engineer on the Chrome Security Team, focusing on secure usability."
+    en: 'Chris is a security engineer on the Chrome Security Team, focusing on secure usability.'
+
+durgapandey:
+  name:
+    given: Durga
+    family: Pandey
+  country: US
+  role:
+    - author
+  twitter: _angleofrepose_
+  description:
+    en: 'Product Manager of Web Payments'
 
 jasonpark:
   name:
     given: Jason
     family: Park
-  country: Singapore
+  country: SG
   role:
     - translator
   google: +JasonPark0913
   twitter: hyunjO_on
   email: jpar225@gmail.com
   description:
-    en: "Jason is a Node.js Developer"
+    en: Jason is a Node.js Developer
 
 jeffposnick:
   name:
@@ -720,272 +1350,78 @@ jeffposnick:
   org:
     name: Google
     unit: Developer Relations
-  country: USA
+  country: US
   role:
     - author
-  homepage: https://twitter.com/jeffposnick
-  google: 117780118136555864520
+  homepage: 'https://twitter.com/jeffposnick'
+  google: +jeffposnick
   twitter: jeffposnick
   email: jeffy@google.com
   description:
-    en: "Web DevRel @ Google"
+    en: Web DevRel @ Google
+
+pozdnyakov:
+  name:
+    given: Mikhail
+    family: Pozdnyakov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: pozdnyakov
+  email: mikhail.pozdnyakov@intel.com
+  description:
+    en: Mikhail is an Engineer at Intel
 
 rupl:
   name:
     given: Chris
     family: Ruppel
-  org:
-    name:
-    unit:
   country: DE
   role:
     - author
-  homepage: https://chrisruppel.com
+  homepage: 'https://chrisruppel.com'
   google: +ChrisRuppel
   twitter: rupl
   email: chris.ruppel@gmail.com
   description:
-    en: "Chris is a frontend developer and web performance advocate."
+    en: Chris is a frontend developer and web performance advocate.
 
-glenshires:
+satyakresna:
   name:
-    given: Glen
-    family: Shires
+    given: Kresna
+    family: Satya
   org:
-    name: Google
-    unit: Software Engineer
-  country: USA
-  homepage:
+    name: Independent
+    unit: Web Programmer
+  country: ID
   role:
-    - author
-  google: 110477083701772758618
-  twitter:
-  email: gshires@google.com
+    - translator
+  homepage: 'https://satyakresna.com'
+  google: +SatyaKresnaAdiPratama
+  twitter: _satyakresna
+  email: satyakresna6295@gmail.com
+  description:
+    en: Kresna is a Web Programmer.
 
-andismith:
+taylorsavage:
   name:
-    given: Andi
-    family: Smith
-  org:
-    name: AKQA
-    unit: Director of Web Development
-  country: UK
-  homepage: http://www.andismith.com
-  google: +AndiSmithUK
-  twitter: AndiSmith
-  role:
-    - author
-  email: andi.smith.uk+gdocs@gmail.com
-
-borissmus:
-  name:
-    given: Boris
-    family: Smus
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  homepage: http://smus.com
-  google: 115694705577863745195
-  twitter: borismus
-  role:
-    - author
-  email: smus@google.com
-
-emilystark:
-  name:
-    given: Emily
-    family: Stark
+    given: Taylor
+    family: Savage
   org:
     name: Google
     unit: Chrome
-  country: USA
-  role:
-    - author
-  homepage: https://www.emilymstark.com/
-  twitter: estark37
-  email: estark@chromium.org
-
-samthorogood:
-  name:
-    given: Sam
-    family: Thorogood
-  org:
-    name: Google
-    unit: Developer Relations
-  country: Australia
-  role:
-    - author
-    - engineer
-  homepage: http://whistlr.info
-  google: +SamThorogood
-  twitter: samthor
-  email: thorogood@google.com
-  description:
-    en: "Evangelises Chrome and the mobile web in the Developer Relations team at Google."
-
-johyphenel:
-  name:
-    given: Jo-el
-    family: van Bergen
-  org:
-    name: Google
-    unit: Software engineer
-  country: USA
-  role:
-    - author
-  homepage: https://plus.google.com/+Jo-elvanBergen
-  google: +Jo-elvanBergen
-  twitter: johyphenel
-  email: jo-el@google.com
-
-mikewest:
-  name:
-    given: Mike
-    family: West
-  org:
-    name: Google
-    unit: Developer Relations
-  country: DE
-  role:
-    - author
-  homepage: https://mikewest.org/
-  google: 104437754419996754779
-  twitter: mikewest
-  email: mkwst@google.com
-
-chriswilson:
-  name:
-    given: Chris
-    family: Wilson
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  homepage:
-  google: 106422711035746240826
-  twitter: cwilso
-  email: cwilso@google.com
-
-tomwiltzius:
-  name:
-    given: Tom
-    family: Wiltzius
-  country: USA
-  homepage:
-  google: 103238735625031210015
-  twitter:
-  email:
-  role:
-    - author
-  homepage: https://github.com/heatheramahan
-  google: 108335678119817391642
-  twitter: heatheramahan
-  email: heatheramahan@gmail.com
-  description:
-    en: "Heather Mahan is a developer."
-
-flaviocopes:
-  name:
-    given: Flavio
-    family: Copes
-  org:
-    name: Independent
-    unit: Developer
-  country: Italy
-  role:
-    - contributor
-  homepage: http://flaviocopes.com
-  twitter: flaviocopes
-  email: copesc@gmail.com
-  description:
-    en: "Flavio is a Full Stack Developer"
-
-龚振华:
-  name:
-    given: Simon
-    family: Gong
-  org:
-    name: Independent
-    unit: Developer
-  country: Japan
-  role:
-    - translator
-  homepage: http://allmyverse.com
-  google: 113525015220376733647
-  email: simon.gong64@gmail.com
-  description:
-    en: "Simon is a Full Stack Developer"
-
-dalecurtis:
-  name:
-    given: Dale
-    family: Curtis
-  org:
-    name: Google
-    unit: Chrome Media
   country: US
   role:
     - author
-  google: +DaleCurtis
-  twitter: DaleCurtis
-  email: dalecurtis@google.com
-  homepage: https://github.com/dalecurtis
+  twitter: taylorthesavage
+  email: tjsavage@google.com
   description:
-    en: "Dale is a Senior Software Engineer"
+    en: 'Taylor is a PM on the Chrome Team, focusing on Web Components and Polymer.'
 
-sethladd:
-  name:
-    given: Seth
-    family: Ladd
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  homepage: http://www.sethladd.com/
-  google: +SethLadd
-  twitter: sethladd
-  role:
-    - author
-
-kaycebasques:
-  name:
-    given: Kayce
-    family: Basques
-  org:
-    name: Google
-    unit: Developer Relations
-  country: USA
-  role:
-    - author
-  description:
-    en: "Technical Writer at Google"
-
-fouadvaladbeigi:
-  name:
-    given: Fouad
-    family: Valadbeigi
-  org:
-    name: UNIT9
-  country: UK
-  role:
-    - author
-  google: https://plus.google.com/115771375659957547634/posts
-  email: fouad.valadbeigi@unit9.com
-
-maciejzasada:
-  name:
-    given: Maciej
-    family: Zasada
-  org:
-    name: UNIT9
-  country: UK
-  role:
-    - author
-  google: https://plus.google.com/104812516714503133849/posts
-  email: maciej@unit9.com
 
 mscales:
   name:
@@ -1000,7 +1436,99 @@ mscales:
   twitter: wibblymat
   email: mscales@google.com
 
-alan:
+yvoschaap:
+  name:
+    given: Yvo
+    family: Schaap
+  org:
+    name: DirectLyrics
+  country: NL
+  role:
+    - translator
+    - engineer
+  homepage: http://www.directlyrics.com
+  google: +yvo
+  twitter: yvoschaap
+  email: yvo@yvoschaap.com
+  description:
+    en: "Loves to code and build great things."
+
+moinshaikh:
+  name:
+    given: Moin
+    family: Shaikh
+  org:
+    name: Contributor
+    unit: Developer/L10N Contributor
+  country: IN
+  role:
+    - translator
+  homepage: 'https://moingshaikh.wordpress.com/'
+  google: +MoinShaikhMS
+  twitter: moingshaikh
+  email: montugshaikh@gmail.com
+  description:
+    en: Moin is a passionate Opensource tech geek working towards making opensource more adoptable.
+
+alexshalamov:
+  name:
+    given: Alexander
+    family: Shalamov
+  org:
+    name: Intel
+    unit: Web team
+  country: Finland
+  role:
+    - author
+    - engineer
+  github: alexshalamov
+  email: alexander.shalamov@intel.com
+  description:
+    en: Alex is an Engineer at Intel
+
+glenshires:
+  name:
+    given: Glen
+    family: Shires
+  org:
+    name: Google
+    unit: Software Engineer
+  country: USA
+  role:
+    - author
+  google: +GlenShires
+  email: gshires@google.com
+
+abdshomad:
+  name:
+    given: Abd
+    family: Shomad
+  country: ID
+  role:
+    - translator
+  homepage: 'https://abdshomad.github.io'
+  google: +abdshomad
+  twitter: abdshomad
+  github: abdshomad
+  email: abd.shomad@gmail.com
+  description:
+    en: "Abd Shomad is Web Technology Enthusiast"
+
+sieke:
+  name:
+    given: Alex
+    family: Sieke
+  org:
+    name: Google
+    unit: Android
+  country: US
+  role:
+    - author
+  email: sieke@google.com
+  description:
+    en: Payments Product Manager
+
+alansilva:
   name:
     given: Alan
     family: Silva
@@ -1011,10 +1539,147 @@ alan:
   role:
     - translator
   twitter: AlanCezarAraujo
-  homepage: https://www.linkedin.com/in/alan-cezar-31a6a538
+  homepage: 'https://www.linkedin.com/in/alan-cezar-31a6a538'
   email: alan.cezar.silva@gmail.com
   description:
-    en: "Alan is a JavaScript Developer"
+    en: Alan is a JavaScript Developer
+
+vinamratasingal:
+  name:
+    given: Vinamrata
+    family: Singal
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  description:
+    en: Lighthouse Product Manager
+
+dmitryskripunov:
+  name:
+    given: Dmitry
+    family: Skripunov
+  country: Russia
+  role:
+    - translator
+  twitter: dmitryskripunov
+  google: "116954151022889696749"
+  github: dmitryskripunov
+  email: dskripunov@gmail.com
+  description:
+    en: Dmitry is a Software Engineer
+
+andismith:
+  name:
+    given: Andi
+    family: Smith
+  org:
+    name: AKQA
+    unit: Director of Web Development
+  country: UK
+  homepage: 'http://www.andismith.com'
+  google: +AndiSmithUK
+  twitter: AndiSmith
+  role:
+    - author
+  email: andi.smith.uk+gdocs@gmail.com
+
+borissmus:
+  name:
+    given: Boris
+    family: Smus
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'http://smus.com'
+  google: +BorisSmus
+  twitter: borismus
+  role:
+    - author
+  email: smus@google.com
+
+rsolomakhin:
+  name:
+    given: Rouslan
+    family: Solomakhin
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  twitter: rsolomakhin
+  email: rouslan@google.com
+
+emilystark:
+  name:
+    given: Emily
+    family: Stark
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  homepage: 'https://www.emilymstark.com/'
+  twitter: estark37
+  email: estark@chromium.org
+
+thomassteiner:
+  name:
+    given: Thomas
+    family: Steiner
+  homepage: https://blog.tomayac.com/
+  google: +ThomasSteiner
+  twitter: tomayac
+  github: tomayac
+  description:
+    en: "Tom is a Developer Advocate"
+  org:
+    name: Google
+    unit: Developer Relations
+  country: DE
+  role:
+    - author
+  email: tomac@google.com
+
+sunyunjia:
+  name:
+    given: Sandra
+    family: Sun
+  org:
+    name: Google
+    unit: Chrome
+  country: Canada
+  role:
+    - engineer
+  email: sunyunjia@google.com
+  description:
+    en: "Software Engineer working on Chromium"
+
+ossu:
+  name:
+    given: Oskar
+    family: Sundbom
+  org:
+    name: Google
+  description:
+    en: Software Engineer working on WebRTC and Audio in Chromium
+
+surma:
+  name:
+    given: Surma
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  twitter: DasSurma
 
 yoichiro:
   name:
@@ -1028,40 +1693,230 @@ yoichiro:
     - translator
   twitter: yoichiro
   google: +YoichiroTanaka
-  homepage: https://www.eisbahn.jp/yoichiro
+  homepage: 'https://www.eisbahn.jp/yoichiro/'
   email: yoichiro@eisbahn.jp
   description:
-    en: "Yoichiro is a Google Developers Expert"
+    en: Yoichiro is a Google Developers Expert
 
-wdenniss:
+franktang:
   name:
-    given: William
-    family: Denniss
+    given: Frank
+    family: Tang
   org:
     name: Google
-    unit: Identity
+  role:
+    - author
+  github: FrankYFTang
+  email: ftang@google.com
+  description:
+    en: i18n engineer
+
+dtapuska:
+  name:
+    given: Dave
+    family: Tapuska
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  twitter: dtapuska
+  email: dtapuska@google.com
+
+samthorogood:
+  name:
+    given: Sam
+    family: Thorogood
+  org:
+    name: Google
+    unit: Developer Relations
+  country: Australia
+  role:
+    - author
+    - engineer
+  homepage: 'https://whistlr.info/'
+  twitter: samthor
+  email: thorogood@google.com
+  description:
+    en: Evangelises Chrome and the mobile web in the Developer Relations team at Google.
+
+fouadvaladbeigi:
+  name:
+    given: Fouad
+    family: Valadbeigi
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  google: "115771375659957547634"
+  email: fouad.valadbeigi@unit9.com
+
+majidvp:
+  name:
+    given: Majid
+    family: Valipour
+  homepage: http://zgrs.ca
+  twitter: majido
+  github: majido
+  description:
+    en: "Software Engineer working on Chromium"
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: majidvp@google.com
+
+johyphenel:
+  name:
+    given: Jo-el
+    family: van Bergen
+  org:
+    name: Google
+    unit: Software engineer
   country: USA
   role:
     - author
-  google: +WilliamDenniss
-  twitter: WilliamDenniss
-  email: wdenniss@google.com
-  description:
-    en: "Google Identity Product Manager"
+  homepage: 'https://plus.google.com/+Jo-elvanBergen'
+  google: +Jo-elvanBergen
+  twitter: johyphenel
+  email: jo-el@google.com
 
-captainpangyo:
+rviscomi:
   name:
-    given: Josh
-    family: Jang
+    given: Rick
+    family: Viscomi
   org:
-    name: POSCO ICT
-    unit: SW Platform
-  country: KR
+    name: Google
+    unit: Developer Relations
+  country: USA
+  twitter: rick_viscomi
+  github: rviscomi
+  role:
+    - author
+  email: rviscomi@google.com
+
+jeremywagner:
+  name:
+    given: Jeremy
+    family: Wagner
+  org:
+    name: Tech Writer
+  country: USA
+  homepage: 'https://jeremywagner.me'
+  twitter: malchata
+  github: malchata
+  role:
+    - author
+  email: jeremy.l.wagner@gmail.com
+
+philipwalton:
+  name:
+    given: Philip
+    family: Walton
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  homepage: 'https://philipwalton.com'
+  twitter: philwalton
+  github: philipwalton
+  role:
+    - author
+  email: philip@philipwalton.com
+  description:
+    en: 'Engineer at Google working on the Web Platform'
+
+wangyu:
+  name:
+    given: Yu
+    family: Wang
+  country: CN
   role:
     - translator
-  homepage: https://joshuajangblog.wordpress.com/
-  google: +GihyoJoshuaJang
-  twitter:
-  email: jangkeehyo@google.com
+  homepage: 'http://wangyu.name'
+  twitter: wangyu_it
+  email: nameiswangyu@gmail.com
   description:
-    en: "Josh is a Singing Computer Scientist"
+    en: WangYu is Front End Developer
+
+mikewest:
+  name:
+    given: Mike
+    family: West
+  org:
+    name: Google
+    unit: Developer Relations
+  country: DE
+  role:
+    - author
+  homepage: 'https://mikewest.org/'
+  google: +MikeWest
+  twitter: mikewest
+  email: mkwst@google.com
+
+chriswilson:
+  name:
+    given: Chris
+    family: Wilson
+  org:
+    name: Google
+    unit: Developer Relations
+  country: USA
+  role:
+    - author
+  google: +ChrisWilson
+  twitter: cwilso
+  email: cwilso@google.com
+
+tomwiltzius:
+  name:
+    given: Tom
+    family: Wiltzius
+  country: USA
+  google: +TomWiltzius
+  role:
+    - author
+
+myakura:
+  name:
+    given: Masataka
+    family: Yakura
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: myakura
+  email: masataka.yakura@gmail.com
+  description:
+    en: Masataka is a Web Google Developers Expert
+
+kinukoyasuda:
+  name:
+    given: Kinuko
+    family: Yasuda
+  twitter: kinu
+  github: kinu
+  org:
+    name: Google
+    unit: Chrome
+  country: JPN
+  description:
+    en: "Software Engineer at Google working on the web platform"
+
+maciejzasada:
+  name:
+    given: Maciej
+    family: Zasada
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  google: "104812516714503133849"
+  email: maciej@unit9.com
