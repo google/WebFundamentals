@@ -1,0 +1,73 @@
+
+<tr id="{{ anchor_prefix }}runtimeCaching">
+    <td>
+      <p>runtimeCaching</p>
+    </td>
+    <td>
+      <p>
+        <em>可选，<code>Object</code>的<code>Array</code>，默认<code>[]</code>。</em>
+      </p>
+      <p>      通过传入<code>urlPatterns</code>、<code>handlers</code>和可用的一些<code>options</code>，在生成的service worker中去添加适当的代码来处理运行时的缓存。</p>
+      <p>默认情况下处理通过<code>globPatterns</code>获取的预缓存的URL请求，不需要写在<code>runtimeCaching</code>中。
+      </p>
+      <p><code>handler</code>的值是对应于<a href="/web/tools/workbox/reference-docs/latest/workbox.strategies#methods"><code>workbox.strategies</code></a>支持的策略名称。</p>
+      <p> <code>选项属性 </code>可在给定路由实例上配置缓存过期、缓存响应和广播缓存更新插件。
+      </p>
+      <p>
+        <strong>例子：</strong>
+      </p>
+      <pre class="prettyprint">runtimeCaching: [{
+    // 匹配包含`api`的任何同源请求。
+    urlPattern: /api/,
+    // 应用网络优先策略。
+    handler: 'networkFirst',
+    options: {
+      // 超过10s使用缓存做为回退方案。
+      networkTimeoutSeconds: 10,
+      // 为此路由指定自定义缓存名称。
+      cacheName: 'my-api-cache',
+      // 配置自定义缓存过期。
+      expiration: {
+        maxEntries: 5,
+        maxAgeSeconds: 60,
+      },
+      // 配置background sync.
+      backgroundSync: {
+        name: 'my-queue-name',
+        options: {
+          maxRetentionTime: 60 * 60,
+        },
+      },
+      // 配置哪些response是可缓存的。
+      cacheableResponse: {
+        statuses: [0, 200],
+        headers: {'x-test': 'true'},
+      },
+      // 配置广播缓存更新插件。
+      broadcastUpdate: {
+        channelName: 'my-update-channel',
+      },
+      // 添加您需要的任何其他逻辑插件。
+      plugins: [
+        {cacheDidUpdate: () =&gt; /* 自定义插件代码 */}
+      ],
+      // matchOptions 和 fetchOptions 用于配置 handler.
+      fetchOptions: {
+        mode: 'no-cors',
+      },
+      matchOptions: {
+        ignoreSearch: true,
+      },
+    },
+  }, {
+    // 匹配跨域请求，使用以origin开头的正则:
+    urlPattern: new RegExp('^https://cors\.example\.com/'),
+    handler: 'staleWhileRevalidate',
+    options: {
+      cacheableResponse: {
+        statuses: [0, 200]
+      }
+    }
+  }]</pre>
+    </td>
+  </tr>
