@@ -43,7 +43,7 @@ straight into it.
 All the APIs with the “observer” suffix I mentioned above share a simple API
 design. `ResizeObserver` is no exception. You create a `ResizeObserver`
 object and pass a callback to the constructor. The callback will be given an
-array of `ResizeOberverEntries` – one entry per observed element – which
+array of `ResizeObserverEntries` – one entry per observed element – which
 contain the new dimensions for the element.
 
     var ro = new ResizeObserver( entries => {
