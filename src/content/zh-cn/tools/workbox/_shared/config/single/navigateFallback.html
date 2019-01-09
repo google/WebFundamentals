@@ -1,0 +1,20 @@
+
+<tr id="{{ anchor_prefix }}navigateFallback">
+  <td>
+    <p>navigateFallback</p>
+  </td>
+  <td>
+    <p>
+      <em>可选，<code>String</code>，默认<code>undefined</code>。</em>
+    </p>
+    <p>用于创建一个<a href="/web/tools/workbox/reference-docs/latest/workbox.routing.NavigationRoute"><code>NavigationRoute</code></a>，响应未预缓存的<a href="/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests">navigation requests</a>URL。
+
+</p>
+    <p>它适用于<a href="https://en.wikipedia.org/wiki/Single-page_application" class="external">SPA</a>场景下通用的App Shell HTML导航请求。</p>
+    <p>它不适合用作浏览器离线时显示的后备方案。</p>
+    <p>
+      <strong>例子：</strong>
+    </p>
+    <pre class="prettyprint">navigateFallback: '/app-shell'</pre>
+  </td>
+</tr>
