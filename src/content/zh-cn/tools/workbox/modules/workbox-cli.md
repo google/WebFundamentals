@@ -1,6 +1,6 @@
-项目地址: /web/tools/workbox/_project.yaml
-文档地址: /web/tools/workbox/_book.yaml
-描述: workbox-cli模块向导.
+project_path: /web/tools/workbox/_project.yaml
+book_path: /web/tools/workbox/_book.yaml
+description: workbox-cli模块向导.
 
 {# wf_blink_components: N/A #}
 {# wf_updated_on: 2018-07-09 #}
