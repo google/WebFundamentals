@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ResizeObserver lets you know when an element has changed its size.
 
-{# wf_updated_on: 2016-10-07 #}
+{# wf_updated_on: 2019-01-09 #}
 {# wf_published_on: 2016-10-07 #}
-{# wf_tags: chrome54 #}
+{# wf_tags: chrome55,chrome64 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
 {# wf_blink_components: N/A #}
 
@@ -154,6 +154,8 @@ Until `ResizeObserver`, there was no reliable way to get notified when your own
 dimensions change so you ca re-layout your own children.
 
 ## Out now!
+
+Note: This feature was enabled by default in Chrome 64.
 
 As with a lot of the observer APIs, `ResizeObserver` is not 100% polyfillable,
 which is why native implementations are needed. [Current polyfill
