@@ -20,7 +20,7 @@ being iterated on in the WICG and *your* feedback is very much welcome.
 
 ## Motivation
 
-previously, you had to attach a listener to the document’s `resize` event to get
+Previously, you had to attach a listener to the document’s `resize` event to get
 notified of any change of the viewport’s dimensions. In the event handler, you
 would then have to figure out which elements have been affected by that change
 and call a specific routine to react appropriately. If you need the new
@@ -34,8 +34,8 @@ appending new children, setting an element’s `display` style to `none`, or
 similar actions can change the size of an element, its siblings or ancestors.
 
 This is why `ResizeObserver` is a useful primitive. It reacts to changes in
-size of any of the observed *elements*, independent of what caused the change.
-It provides you access to the new size of the observed elements, too. Let’s get
+size of any of the observed elements, independent of what caused the change.
+It provides access to the new size of the observed elements, too. Let’s get
 straight into it.
 
 ## API
@@ -44,7 +44,7 @@ All the APIs with the “observer” suffix I mentioned above share a simple API
 design. `ResizeObserver` is no exception. You create a `ResizeObserver`
 object and pass a callback to the constructor. The callback will be given an
 array of `ResizeObserverEntries` – one entry per observed element – which
-contain the new dimensions for the element.
+contains the new dimensions for the element.
 
     var ro = new ResizeObserver( entries => {
       for (let entry of entries) {
