@@ -71,7 +71,7 @@ landing_page:
       image_path: images/pwa-reliable.png
       image_left: True
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: /web/fundamentals/getting-started/primers/service-workers
         classname: button button-white
 
@@ -84,7 +84,7 @@ landing_page:
         or slow-to-respond interfaces.
       image_path: images/pwa-fast.png
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: /web/fundamentals/performance/
         classname: button button-white
 
@@ -172,7 +172,7 @@ landing_page:
       image_path: images/pwa-lighthouse.png
 
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: /web/tools/lighthouse/
 
 
