@@ -1,0 +1,21 @@
+
+<tr id="{{ anchor_prefix }}modifyUrlPrefix">
+  <td>
+    <p>modifyUrlPrefix</p>
+  </td>
+  <td>
+    <p>
+      <em>可选，<code>String</code><code>Object</code>，默认 <code>null</code>。</em>
+    </p>
+    <p>前缀的映射，如果存在于预缓存清单中的条目将替换为相应的值。</p>
+    <p>例如，如果你的Web主机设置与本地文件系统设置不匹配，则可以使用此选项从清单条目中删除或添加路径前缀。</p>
+    <p>作为具有更大灵活性的替代方法，你可以使用<code>manifestTransforms</code>选项并提供一个函数，该函数使用你提供的任何逻辑修改清单中的条目。</p>
+    <p>
+      <strong>例子：</strong>
+    </p>
+    <pre class="prettyprint">modifyUrlPrefix: {
+  // 从URL中删除'/ dist'前缀：
+  '/dist': ''
+}</pre>
+  </td>
+</tr>
