@@ -1,15 +1,13 @@
 #!/bin/bash
 
-TEMP_FILE='tempFile.txt'
-
 getResource() {
-  echo $1
-  curl --compressed --fail --progress-bar $1 > $TEMP_FILE
-  if [ $? -eq 0 ]; then
-      mv $TEMP_FILE $2
+  local TEMP_FILE="$(mktemp)"
+  echo "$1"
+  if curl --compressed --fail --progress-bar "$1" > "$TEMP_FILE"; then
+      mv "$TEMP_FILE" "$2"
   else
-      echo Unable to update $1
-      rm $TEMP_FILE
+      echo Unable to update "$1"
+      rm "$TEMP_FILE"
   fi
 }
 
