@@ -43,7 +43,7 @@ a reference implementation for a proposed
 [new specification](https://whatpr.org/html/3851/interaction.html#tracking-user-activation)
 that aims to bring all browsers together in the long run.
 
-# How does User Activation v2 work?
+## How does User Activation v2 work?
 
 The new API maintains a two-bit user activation state at every `window` object
 in the frame hierarchy: a sticky bit for historical user activation state (if a
@@ -61,7 +61,7 @@ user activation as it used to be, `Navigator.prototype.vibrate()` continues to
 be effective if a frame (or any of its subframes) has ever seen user action,
 and so on.
 
-# What's changing?
+## What's changing?
 
 +   User Activation v2 formalizes the notion of user activation visibility
 across frame boundaries: a user interaction with a particular frame will now
