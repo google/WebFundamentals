@@ -6,18 +6,18 @@
 
 <body>
 
-<p>Ce guide a été spécifiquement créé pour un type de piratage qui ajoute à votre site du texte en japonais. Nous l'appelons "Piratage par mots clés japonais". Ce guide s'adresse avant tout aux <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">utilisateurs de systèmes de gestion de contenu populaires</a> (CMS), mais il peut vous être utile, même si vous ne vous servez pas d'un tel système.</p>
+<p>Ce guide a été spécifiquement créé pour un type de piratage qui ajoute à votre site du texte en japonais. Nous l'appelons "Piratage par mots clés japonais". Ce guide s'adresse avant tout aux <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">utilisateurs de systèmes de gestion de contenu populaires</a> (CMS), mais il peut vous être utile, même si vous ne vous servez pas d'un tel système.</p>
 
 <p><strong>Remarque</strong> : Vous ignorez si votre site a été piraté ? Commencez par lire notre guide <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">Comment savoir si mon site a été piraté ?</a></p>
 
-<aside class="note">Nous voulons nous assurer que ce guide vous est vraiment utile. N'hésitez pas à nous <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">faire part de vos commentaires</a> pour nous permettre de l'améliorer.</aside>
+<aside class="note">Nous voulons nous assurer que ce guide vous est vraiment utile. N'hésitez pas à nous <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">faire part de vos commentaires</a> pour nous permettre de l'améliorer.</aside>
 
 <h2>Sommaire</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Étape 1 : Identification du type de piratage</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Étape 2 : Nettoyage du piratage</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Étape 3 : Ressources supplémentaires</a></li>
+  <li><a href="#identifying">Étape 1 : Identification du type de piratage</a></li>
+  <li><a href="#fixing">Étape 2 : Nettoyage du piratage</a></li>
+  <li><a href="#resources">Étape 3 : Ressources supplémentaires</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Questions fréquentes sur les sites piratés</a></li>
 </ul>
 
@@ -28,16 +28,16 @@
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
 
-<p>Avec ce type de piratage, le pirate informatique s'ajoute généralement en tant que propriétaire du site dans la Search Console afin d'accroître ses bénéfices en modifiant les paramètres de votre site, tels que le ciblage géographique ou vos sitemaps. Si vous avez reçu une notification indiquant qu'un inconnu a validé votre site dans la <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, il y a fort à parier que votre site a été piraté.</p>
+<p>Avec ce type de piratage, le pirate informatique s'ajoute généralement en tant que propriétaire du site dans la Search Console afin d'accroître ses bénéfices en modifiant les paramètres de votre site, tels que le ciblage géographique ou vos sitemaps. Si vous avez reçu une notification indiquant qu'un inconnu a validé votre site dans la <a href="https://www.google.com/webmasters/tools/">Search Console</a>, il y a fort à parier que votre site a été piraté.</p>
 
-<p>Commencez par consulter l'outil <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problèmes de sécurité</a> dans la Search Console pour voir si nous avons découvert l'une de ces pages piratées sur votre site. Vous pouvez également découvrir ce type de page en saisissant <code class="notranslate l10n-notranslate">site:[URL racine de votre site]</code> dans une fenêtre de recherche Google. Les pages que nous avons indexées pour votre site, y compris les pages piratées, sont alors affichées. Parcourez quelques pages des résultats de recherche pour voir si vous rencontrez des URL inhabituelles. Si vous ne détectez aucun contenu piraté dans la recherche Google, utilisez les mêmes termes de recherche dans un autre moteur de recherche. Les autres moteurs de recherche peuvent indiquer du contenu piraté que nous avons supprimé de l'index. Exemple :</p>
+<p>Commencez par consulter l'outil <a href="https://www.google.com/webmasters/tools/security-issues">Problèmes de sécurité</a> dans la Search Console pour voir si nous avons découvert l'une de ces pages piratées sur votre site. Vous pouvez également découvrir ce type de page en saisissant <code class="notranslate l10n-notranslate">site:[URL racine de votre site]</code> dans une fenêtre de recherche Google. Les pages que nous avons indexées pour votre site, y compris les pages piratées, sont alors affichées. Parcourez quelques pages des résultats de recherche pour voir si vous rencontrez des URL inhabituelles. Si vous ne détectez aucun contenu piraté dans la recherche Google, utilisez les mêmes termes de recherche dans un autre moteur de recherche. Les autres moteurs de recherche peuvent indiquer du contenu piraté que nous avons supprimé de l'index. Exemple :</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <p>Notez que les résultats de recherche contiennent ici plusieurs pages non créées par le propriétaire du site. Si vous examinez attentivement les descriptions, vous découvrirez des exemples de texte japonais inséré automatiquement.</p>
 
 <p>Lorsque vous consultez une page piratée, il se peut qu'un message vous indique que la page n'existe pas (par exemple, une erreur 404). Faites attention. Les pirates tenteront de vous faire croire que le site est désinfecté en vous laissant penser que la page a disparu ou qu'elle a été nettoyée.
-  Pour ce faire, les pirates utilisent des <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">techniques de dissimulation (cloaking)</a> pour cacher leur contenu. Vérifiez si votre site est concerné par le cloaking en saisissant les URL injectées dans l'outil <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Explorer comme Google</a>.
+  Pour ce faire, les pirates utilisent des <a href="https://support.google.com/webmasters/answer/66355">techniques de dissimulation (cloaking)</a> pour cacher leur contenu. Vérifiez si votre site est concerné par le cloaking en saisissant les URL injectées dans l'outil <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Explorer comme Google</a>.
   Cet outil vous permet de voir le contenu masqué sous-jacent.</p>
 
 <a name="fixing"></a>
@@ -45,9 +45,9 @@
 <p>Avant toute chose, faites une copie hors ligne des fichiers que vous souhaitez supprimer, au cas où vous devriez les restaurer plus tard. Il est même préférable de sauvegarder l'intégralité de votre site avant de commencer le processus de nettoyage. Pour cela, vous pouvez sauvegarder tous les fichiers de votre serveur sur un emplacement hors connexion ou rechercher les meilleures options de sauvegarde pour votre système CMS. Si vous utilisez un système CMS, vous devez également sauvegarder la base de données.</p>
 
   <h3>Supprimer les comptes nouvellement créés de la Search Console</h3>
-<p>Si un nouveau propriétaire qui vous est inconnu a été ajouté à votre compte Search Console, révoquez dès que possible son accès. Vous pouvez vérifier quels sont les utilisateurs validés pour votre site sur la <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">page de validation de la Search Console</a>. Cliquez sur l'option "Détails de la validation" associée au site pour afficher tous les utilisateurs validés.</p>
+<p>Si un nouveau propriétaire qui vous est inconnu a été ajouté à votre compte Search Console, révoquez dès que possible son accès. Vous pouvez vérifier quels sont les utilisateurs validés pour votre site sur la <a href="https://www.google.com/webmasters/verification">page de validation de la Search Console</a>. Cliquez sur l'option "Détails de la validation" associée au site pour afficher tous les utilisateurs validés.</p>
 
-<p>Pour supprimer un propriétaire de la Search Console, lisez la section consacrée à la suppression d'un propriétaire dans l'article <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">Gérer les utilisateurs, les propriétaires et les autorisations</a> du centre d'aide.
+<p>Pour supprimer un propriétaire de la Search Console, lisez la section consacrée à la suppression d'un propriétaire dans l'article <a href="https://support.google.com/webmasters/answer/2453966">Gérer les utilisateurs, les propriétaires et les autorisations</a> du centre d'aide.
   Vous devrez supprimer le jeton de validation associé à ce propriétaire. Il s'agit généralement d'un fichier HTML à la racine de votre site ou d'un fichier .htaccess généré dynamiquement et imitant un fichier HTML.</p>
 
 <p>Si vous ne parvenez pas à trouver de jeton de validation HTML sur votre site, recherchez une règle de réécriture dans votre fichier .htaccess. Cette règle ressemble à ceci :</p>
@@ -113,14 +113,14 @@
   <h3>Vérifier si votre site est propre</h3>
 <p>Une fois que les fichiers piratés ont été supprimés, vérifiez si votre travail est concluant. Vous rappelez-vous les pages vides de sens identifiées précédemment ? Utilisez à nouveau l'outil Explorer comme Google sur ces pages pour vérifier si elles existent encore. Si ces pages sont indiquées comme inexistantes dans cet outil, il y a de fortes chances pour que votre site soit nettoyé.</p>
 
-<p>Vous pouvez également suivre les étapes de l'<a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">outil de dépannage pour les sites piratés</a> pour vérifier si votre site contient encore du contenu piraté.</p>
+<p>Vous pouvez également suivre les étapes de l'<a href="https://support.google.com/webmasters/troubleshooter/6155978">outil de dépannage pour les sites piratés</a> pour vérifier si votre site contient encore du contenu piraté.</p>
 
   <h3>Comment ne plus être piraté ?</h3>
-<p>Pour finir de nettoyer votre site, il est indispensable d'en corriger les failles. Une <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">étude récente</a> a permis de constater que 12 % des sites piratés font l'objet d'un nouveau piratage dans les 30 jours. Il est très utile de savoir exactement comment votre site a été piraté. Pour commencer vos recherches, lisez notre guide consacré aux <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">principales méthodes de piratage des sites Web par les spammeurs</a>. Si vous ne parvenez pas à savoir comment votre site a été piraté, reportez-vous à la liste ci-dessous pour apprendre à réduire le nombre de vulnérabilités sur votre site.</p>
+<p>Pour finir de nettoyer votre site, il est indispensable d'en corriger les failles. Une <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">étude récente</a> a permis de constater que 12 % des sites piratés font l'objet d'un nouveau piratage dans les 30 jours. Il est très utile de savoir exactement comment votre site a été piraté. Pour commencer vos recherches, lisez notre guide consacré aux <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">principales méthodes de piratage des sites Web par les spammeurs</a>. Si vous ne parvenez pas à savoir comment votre site a été piraté, reportez-vous à la liste ci-dessous pour apprendre à réduire le nombre de vulnérabilités sur votre site.</p>
   <ul>
     <li><strong>Analysez régulièrement votre ordinateur</strong> : utilisez un antivirus de confiance pour rechercher les virus ou les vulnérabilités.</li>
     <li><strong>Modifiez régulièrement vos mots de passe</strong> : modifiez régulièrement les mots de passe de tous vos comptes de site Web, comme votre fournisseur d'hébergement, votre FTP et votre CMS, afin d'empêcher tout accès non autorisé à votre site. Il est important de créer un mot de passe sécurisé et unique pour chaque compte.</li>
-    <li><strong>Utilisez <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">l'authentification à deux facteurs (2FA)</a></strong> : pensez à activer ce type d'authentification sur tous les services qui nécessitent une connexion. Avec ce type d'authentification, les pirates informatiques ont plus de difficultés à se connecter, même s'ils réussissent à dérober votre mot de passe.</li>
+    <li><strong>Utilisez <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">l'authentification à deux facteurs (2FA)</a></strong> : pensez à activer ce type d'authentification sur tous les services qui nécessitent une connexion. Avec ce type d'authentification, les pirates informatiques ont plus de difficultés à se connecter, même s'ils réussissent à dérober votre mot de passe.</li>
     <li><strong>Mettez régulièrement à jour votre système de gestion de contenu, les plug-ins, les extensions et les modules</strong> : vous devez normalement déjà avoir effectué cette étape. De nombreux sites sont piratés parce que des logiciels obsolètes y sont exécutés. Certains CMS acceptent la mise à jour automatique.</li>
     <li><strong>Pensez à vous abonner à un service de sécurité pour surveiller votre site</strong> : de nombreux services très performants peuvent vous aider à surveiller votre site moyennant des frais modiques. Pensez à vous enregistrer auprès de ces services afin de protéger votre site.</li>
   </ul>
@@ -133,15 +133,15 @@
 <p>Ces outils analysent votre site et sont en mesure de détecter des contenus problématiques.
   Hormis VirusTotal, nous ne gérons aucun de ces outils et nous n'en sommes pas non plus responsables.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a> et <a href="https://www.quttera.com/">Quttera</a> : ces outils (entre autres) sont susceptibles de rechercher des contenus problématiques sur votre site. N'oubliez pas que ces analyseurs n'identifieront pas forcément tous les types de contenus problématiques.</p>
+<p><a href="https://www.virustotal.com/">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a> et <a href="https://www.quttera.com/">Quttera</a> : ces outils (entre autres) sont susceptibles de rechercher des contenus problématiques sur votre site. N'oubliez pas que ces analyseurs n'identifieront pas forcément tous les types de contenus problématiques.</p>
 
 <p>Les ressources supplémentaires Google suivantes pourront vous aider :</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   Forum d'aide Google pour les webmasters</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Aide Google destinée aux webmasters de sites piratés</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Navigation sécurisée Google</a></li>
+<li><a href="//safebrowsing.google.com/">Navigation sécurisée Google</a></li>
 </ul>
 
 

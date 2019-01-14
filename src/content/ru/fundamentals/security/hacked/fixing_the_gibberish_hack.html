@@ -5,18 +5,18 @@
 <meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
 <body>
 
-<p>В этом руководстве описывается тип взлома, при котором на сайт добавляются страницы с множественными вхождениями ключевых слов и большим количеством бессмысленного текста. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
+<p>В этом руководстве описывается тип взлома, при котором на сайт добавляются страницы с множественными вхождениями ключевых слов и большим количеством бессмысленного текста. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
 
 <p><strong>Примечание.</strong> Если вы не можете точно определить, взломан ли ваш сайт, прочитайте сначала <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">это руководство</a>.</p>
 
-<aside class="note">Мы хотим знать, насколько полезной для вас была информация, представленная в этом руководстве. Чтобы мы могли улучшить его, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">отправьте нам свой отзыв</a>.</aside>
+<aside class="note">Мы хотим знать, насколько полезной для вас была информация, представленная в этом руководстве. Чтобы мы могли улучшить его, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">отправьте нам свой отзыв</a>.</aside>
 
 <h2>Оглавление</h2>
 
 <ul>
-<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Этап 1. Идентификация этого типа взлома</a></li><p></p>
-<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Этап 2. Устранение последствий</a></li><p></p>
-<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Этап 3. Дополнительные ресурсы</a></li><p></p>
+<p></p><li><a href="#identifying">Этап 1. Идентификация этого типа взлома</a></li><p></p>
+<p></p><li><a href="#fixing">Этап 2. Устранение последствий</a></li><p></p>
+<p></p><li><a href="#resources">Этап 3. Дополнительные ресурсы</a></li><p></p>
 <p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Часто задаваемые вопросы по взломанным сайтам</a></li><p></p>
 </ul>
 
@@ -41,14 +41,14 @@
    <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
    </ul>
 
-<p>Для начала с помощью инструмента <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Проблемы безопасности</a> в Search Console проверьте, нашел ли сканер Google такие взломанные страницы на вашем сайте. Иногда их можно обнаружить, если в окне Google Поиска ввести <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> (после двоеточия укажите корневой URL своего веб-ресурса). Так вы увидите страницы сайта, которые проиндексированы Google, в том числе взломанные. Просмотрите несколько страниц с результатами поиска и проверьте, нет ли на них необычных URL. Если в Google Поиске взломанных страниц не обнаружилось, используйте те же запросы в другой поисковой системе. Вот несколько примеров таких URL:</p>
+<p>Для начала с помощью инструмента <a href="https://www.google.com/webmasters/tools/security-issues">Проблемы безопасности</a> в Search Console проверьте, нашел ли сканер Google такие взломанные страницы на вашем сайте. Иногда их можно обнаружить, если в окне Google Поиска ввести <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> (после двоеточия укажите корневой URL своего веб-ресурса). Так вы увидите страницы сайта, которые проиндексированы Google, в том числе взломанные. Просмотрите несколько страниц с результатами поиска и проверьте, нет ли на них необычных URL. Если в Google Поиске взломанных страниц не обнаружилось, используйте те же запросы в другой поисковой системе. Вот несколько примеров таких URL:</p>
 
 
 <img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <div class="tip">Обратите внимание, что в этих результатах поиска есть страницы, созданные не владельцем сайта. Просмотрев описания, можно заметить бессмысленный текст.</div>
 
-<p>Обычно, если перейти по ссылке, ведущей на взломанную страницу, выполняется переадресация на другой сайт или открывается страница с бессмысленным содержанием. Также может появиться сообщение о том, что страница не существует (например, ошибка 404). Однако это может не соответствовать действительности: хакеры вводят пользователей в заблуждение, создавая впечатление, что взломанная страница исчезла или работает нормально. Это делается с помощью <a href="https://support.google.com/webmasters/answer/66355">маскировки</a> контента. Чтобы выявить маскировку, введите URL страниц своего сайта в инструменте <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Просмотреть как Googlebot</a>. Он позволяет увидеть ту или иную страницу так, как ее видит робот Google. </p>
+<p>Обычно, если перейти по ссылке, ведущей на взломанную страницу, выполняется переадресация на другой сайт или открывается страница с бессмысленным содержанием. Также может появиться сообщение о том, что страница не существует (например, ошибка 404). Однако это может не соответствовать действительности: хакеры вводят пользователей в заблуждение, создавая впечатление, что взломанная страница исчезла или работает нормально. Это делается с помощью <a href="https://support.google.com/webmasters/answer/66355">маскировки</a> контента. Чтобы выявить маскировку, введите URL страниц своего сайта в инструменте <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Просмотреть как Googlebot</a>. Он позволяет увидеть ту или иную страницу так, как ее видит робот Google. </p>
 
 <p>Если вы обнаружили перечисленные выше нарушения, вероятно, ваш сайт подвергся взлому такого типа.</p>
 
@@ -137,7 +137,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 </pre>
 
 
-<p>Иногда код выглядит как обычный скрипт и не содержит бессмысленных наборов символов. Если вы не знаете, взломан ли код, попросите помощи у специалистов на <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">справочном форуме для веб-мастеров</a>.</p>
+<p>Иногда код выглядит как обычный скрипт и не содержит бессмысленных наборов символов. Если вы не знаете, взломан ли код, попросите помощи у специалистов на <a href="http://productforums.google.com/forum/#    !forum/webmasters">справочном форуме для веб-мастеров</a>.</p>
 
 <p><b>Этап 5</b></p>
 <p>Выявив подозрительные файлы, сохраните их резервную или локальную копию на своем компьютере на случай, если они окажутся не вредоносными, и удалите эти файлы с сайта.</p>
@@ -146,7 +146,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 
 <p>Удалив взломанные файлы, убедитесь, что все последствия хакерской атаки устранены. С помощью инструмента "Просмотреть как Googlebot" снова проверьте, есть ли на сайте найденные вами ранее страницы с бессмысленным текстом. Если вы видите статус "Не найдено", это с большой вероятностью означает, что всё в порядке.</p>
 
-<p>Также проверить наличие взломанного контента на сайте можно, следуя <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">этим инструкциям</a>.</p>
+<p>Также проверить наличие взломанного контента на сайте можно, следуя <a href="https://support.google.com/webmasters/troubleshooter/6155978">этим инструкциям</a>.</p>
 
 <h3>Как предотвратить повторный взлом?</h3>
 
@@ -155,7 +155,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 <ul>
   <li><strong>Регулярно сканируйте свой компьютер.</strong> Для поиска уязвимостей и вредоносных программ используйте любой популярный антивирус.</li>
 <li><strong>Регулярно меняйте свои пароли.</strong> Периодическое изменение паролей к аккаунтам провайдера, FTP, системе управления контентом и т. д. снижает вероятность несанкционированного доступа к сайту. Пароль для каждого аккаунта должен быть надежным и уникальным.</li>
-<li><strong>Используйте <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">двухфакторную аутентификацию</a></strong> везде, где это возможно: она усложнит проникновение для хакеров, даже если они украдут ваш пароль.</li>
+<li><strong>Используйте <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">двухфакторную аутентификацию</a></strong> везде, где это возможно: она усложнит проникновение для хакеров, даже если они украдут ваш пароль.</li>
 <li><strong>Регулярно обновляйте систему управления контентом, плагины, расширения и модули.</strong> Часто причиной взлома становится устаревшее программное обеспечение, на котором работает сайт. В некоторых системах управления контентом обновление выполняется автоматически.</li>
 <li><strong>Система обеспечения веб-безопасности.</strong> Есть немало надежных сервисов, которые помогут вам уберечь сайт от взлома.
   Воспользуйтесь их услугами.</li>
@@ -167,15 +167,15 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 
 <p>Эти инструменты просканируют ваш сайт и помогут найти проблемный контент. Google не связан ни с одним из них, кроме VirusTotal.</p>
 
-<p>Вот несколько таких сервисов: <a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>. Обратите внимание, что проверка этими сканерами не является абсолютной гарантией удаления проблемного контента.</p>
+<p>Вот несколько таких сервисов: <a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>. Обратите внимание, что проверка этими сканерами не является абсолютной гарантией удаления проблемного контента.</p>
 
 <p>Другие ресурсы Google, которые помогут вам устранить проблему:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Справочный форум для веб-мастеров
+<li><a href="//support.google.com/webmasters/go/community">Справочный форум для веб-мастеров
   </a></li>
 <li><a href="/web/fundamentals/security/hacked/">Помощь по восстановлению взломанных сайтов</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+<li><a href="//safebrowsing.google.com/">Google SafeBrowsing</a></li>
 </ul>
 
 <div class="alert">Отсутствует инструмент, который, по вашему мнению, может быть полезен? <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Сообщите нам об этом</a>.</div>

@@ -13,7 +13,7 @@ Gli utenti di oggi del web
 [si aspettano che le pagine visitate siano interattive e fluide](https://paul.kinlan.me/what-news-readers-want/)
 ed è qui che dovresti concentrare sempre più tempo e impegno. Le pagine
 non devono solo caricarsi rapidamente, ma anche funzionare bene; lo
-scorrimento deve seguire accuratamente il ditto, e le animazioni e le interazioni
+scorrimento deve seguire accuratamente il dito, e le animazioni e le interazioni
 devono essere morbide come la seta.
 
 Per scrivere siti e applicazioni prestanti, è necessario comprendere

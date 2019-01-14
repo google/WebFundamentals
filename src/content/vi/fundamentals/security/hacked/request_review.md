@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Vui lòng tham khảo các kênh dưới đây.
 #### A. Trang web bị tấn công
 
 *Bạn nhận được thông báo trang web bị tấn công trong
-[**Báo cáo Hành động thủ công**](https://www.google.com/webmasters/tools/manual-action)
+[**Báo cáo Hành động thủ công**](https://search.google.com/search-console/manual-actions)
 của Search Console:*
 
 1. Bạn đã trải qua các bước liên tiếp của quy trình làm sạch,
-  giờ đây bạn có thể truy cập lại vào báo cáo [Hành động thủ công](https://www.google.com/webmasters/tools/manual-action)
+  giờ đây bạn có thể truy cập lại vào báo cáo [Hành động thủ công](https://search.google.com/search-console/manual-actions)
   rồi tìm vấn đề dưới dạng kết quả khớp toàn trang web hoặc dưới dạng kết quả khớp
   một phần.
 2. Chọn **Yêu cầu xem xét**.
@@ -76,11 +76,11 @@ của Search Console:*
 
 #### B. Phần mềm không mong muốn (bao gồm cả phần mềm độc hại)
 
-*Bạn nhận được thông báo về phần mềm độc hại hoặc phần mềm không mong muốn trong 
+*Bạn nhận được thông báo về phần mềm độc hại hoặc phần mềm không mong muốn trong
 [**Báo cáo Vấn đề bảo mật**](https://www.google.com/webmasters/tools/security-issues)
 của Search Console:*
 
-1. Mở lại 
+1. Mở lại
   [**Báo cáo Vấn đề bảo mật**](https://www.google.com/webmasters/tools/security-issues)
   trong Search Console. Báo cáo có thể vẫn hiển thị các cảnh báo và ví dụ về
   URL bị nhiễm phần mềm độc hại mà bạn đã thấy trước đó.
@@ -102,11 +102,11 @@ của Search Console, nhưng bạn nhận được thông báo trong tài khoả
 
 #### C. Nội dung lừa đảo hay kỹ thuật lừa đảo qua mạng
 
-*Bạn nhận được thông báo về hành vi lừa đảo trong 
+*Bạn nhận được thông báo về hành vi lừa đảo trong
 [**Báo cáo Vấn đề bảo mật**](https://www.google.com/webmasters/tools/security-issues)
 của Search Console:*
 
-1. Mở lại 
+1. Mở lại
   [**Báo cáo Vấn đề bảo mật**](https://www.google.com/webmasters/tools/security-issues)
   trong Search Console. Báo cáo có thể vẫn hiển thị các cảnh báo và ví dụ về
   URL bị nhiễm phần mềm độc hại mà bạn đã thấy trước đó.
@@ -152,7 +152,7 @@ người dùng nên thận trọng.
   tất cả các chủ sở hữu trang web nên thực hiện kế hoạch bảo trì và bảo mật
   được tạo trong mục [Làm sạch và bảo trì trang web của bạn](clean_site).
 
-    Để biết thêm thông tin, hãy xem xét các tài nguyên sau từ 
+    Để biết thêm thông tin, hãy xem xét các tài nguyên sau từ
     [StopBadware](https://www.stopbadware.org):
 
       * [Ngăn chặn phần mềm độc hại: những điều cơ bản](https://www.stopbadware.org/prevent-badware-basics)

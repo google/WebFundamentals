@@ -90,6 +90,10 @@
 ## British vs American spellings
 # https://developers.google.com/style/spelling
 
+- typo: anonymise(d|)
+  fix: anonymize$1
+  british: True
+
 - typo: analyse
   fix: analyze
   british: True
@@ -102,8 +106,8 @@
   fix: color
   british: True
 
-- typo: customise(d|)
-  fix: customize$1
+- typo: customis(e|ed|ing)
+  fix: customiz$1
   british: True
 
 - typo: customisable
@@ -116,6 +120,10 @@
 
 - typo: initialisation
   fix: initialization
+  british: True
+
+- typo: localisation
+  fix: localization
   british: True
 
 - typo: minimise
@@ -170,8 +178,8 @@
   fix: synchronization
   british: True
 
-- typo: summarise
-  fix: summarize
+- typo: summarise(d|)
+  fix: summariz$1
   british: True
 
 - typo: supercede
@@ -311,6 +319,9 @@
 - typo: accpet
   fix: accept
 
+- typo: acceptible
+  fix: acceptable
+
 - typo: accessibile
   fix: accessible
 
@@ -332,11 +343,20 @@
 - typo: asume
   fix: assume
 
+- typo: broswer
+  fix: browser
+
 - typo: chome\s
   fix: Chrome
 
 - typo: choses
   fix: chooses
+
+- typo: compolete
+  fix: complete
+
+- typo: connecto
+  fix: connect
 
 - typo: defau[lt](s|)\b
   fix: default$1
@@ -353,6 +373,9 @@
 - typo: deubg
   fix: debug
 
+- typo: dictionnary
+  fix: dictionary
+
 - typo: doens't
   fix: doesn't
 
@@ -365,11 +388,23 @@
 - typo: flakey
   fix: flaky
 
+- typo: (auto|)fillle(d|)
+  fix: $1fille$2
+
+- typo: filesytem
+  fix: filesystem
+
 - typo: format(tt|)(ing|ed)
   fix: formatt$2
 
-- typo: func(iton|toin)(s|al|ed|ing|)
+- typo: func(iton|toin)(s|al|ality|ed|ing|)
   fix: function$2
+
+- typo: fundemental
+  fix: fundamental
+
+- typo: genearate
+  fix: generate
 
 - typo: geo(\s|-)location
   fix: geolocation
@@ -416,6 +451,9 @@
 - typo: intializ(e|ed|er|ers|ing|ation|)
   fix: initializ$1
 
+- typo: implment(s|ation|)
+  fix: implement$1
+
 - typo: implicity
   fix: implicitly
 
@@ -434,6 +472,9 @@
 - typo: maxumum
   fix: maximum
 
+- typo: negaive
+  fix: negative
+
 - typo: oc+ur+(a|e)nce
   fix: occurrence
 
@@ -442,6 +483,9 @@
 
 - typo: \bfo\b
   fix: of
+
+- typo: opportunites
+  fix: opportunities
 
 - typo: ove(r|)riden
   fix: overridden
@@ -494,11 +538,17 @@
 - typo: recomend(ation|ations|s|ing|)
   fix: recommend$1
 
+- typo: resouce
+  fix: resource
+
 - typo: seperate
   fix: separate
 
-- typo: specificly
+- typo: spec(ificly|fically)
   fix: specifically
+
+- typo: specturum
+  fix: spectrum
 
 - typo: stirng
   fix: string
@@ -508,6 +558,9 @@
 
 - typo: su(cccess|ccesss)
   fix: success
+
+- typo: suppord
+  fix: support
 
 - typo: thier
   fix: their
@@ -520,6 +573,9 @@
 
 - typo: upgarding
   fix: upgrading
+
+- typo: unsteranding
+  fix: understanding
 
 - typo: usecase
   fix: use case
@@ -545,8 +601,11 @@
 - typo: undefiend
   fix: undefined
 
-- typo: balue
+- typo: (ba|vav)lue
   fix: value
+
+- typo: runtume
+  fix: runtime
 
 ## Common issues in translations
 

@@ -6,18 +6,18 @@
 
 <body>
 
-<p>W tym przewodniku omawiamy ataki hakerów polegające na tworzeniu w witrynie automatycznie generowanego japońskiego tekstu. Jest to tzw. atak z wykorzystaniem japońskich słów kluczowych. Narażeni są na niego użytkownicy <a href="https://pl.wikipedia.org/wiki/System_zarz%C4%85dzania_tre%C5%9Bci%C4%85" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">popularnych systemów zarządzania treścią</a> (CMS), ale podane tu informacje mogą Ci się przydać, nawet jeśli nie korzystasz z takiego systemu.</p>
+<p>W tym przewodniku omawiamy ataki hakerów polegające na tworzeniu w witrynie automatycznie generowanego japońskiego tekstu. Jest to tzw. atak z wykorzystaniem japońskich słów kluczowych. Narażeni są na niego użytkownicy <a href="https://pl.wikipedia.org/wiki/System_zarz%C4%85dzania_tre%C5%9Bci%C4%85">popularnych systemów zarządzania treścią</a> (CMS), ale podane tu informacje mogą Ci się przydać, nawet jeśli nie korzystasz z takiego systemu.</p>
 
 <p><strong>Uwaga:</strong> nie masz pewności, czy Twoja witryna nie została zaatakowana? Poczytaj, <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">jak sprawdzić, czy witryna została zaatakowana przez hakera</a>.</p>
 
-<aside class="note">Chcemy, aby ten przewodnik był naprawdę użyteczny. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Napisz komentarz</a>, by pomóc nam go udoskonalić.</aside>
+<aside class="note">Chcemy, aby ten przewodnik był naprawdę użyteczny. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Napisz komentarz</a>, by pomóc nam go udoskonalić.</aside>
 
 <h2>Spis treści</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Krok 1. Jak rozpoznać ten rodzaj ataku</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Krok 2. Jak naprawić szkody spowodowane atakiem</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Krok 3. Dodatkowe zasoby</a></li>
+  <li><a href="#identifying">Krok 1. Jak rozpoznać ten rodzaj ataku</a></li>
+  <li><a href="#fixing">Krok 2. Jak naprawić szkody spowodowane atakiem</a></li>
+  <li><a href="#resources">Krok 3. Dodatkowe zasoby</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Witryny zaatakowane przez hakerów – najczęstsze pytania</a></li>
 </ul>
 
@@ -28,16 +28,16 @@
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
 
-<p>W przypadku tego rodzaju ataku haker zwykle dodaje siebie jako właściciela usługi w Search Console, ponieważ może zwiększać swoje zyski, manipulując ustawieniami witryny (np. kierowaniem geograficznym czy mapami witryn). Jeśli otrzymasz powiadomienie, że nieznana Ci osoba zweryfikowała Twoją witrynę w <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, może to z dużym prawdopodobieństwem oznaczać, że masz do czynienia z atakiem hakera.</p>
+<p>W przypadku tego rodzaju ataku haker zwykle dodaje siebie jako właściciela usługi w Search Console, ponieważ może zwiększać swoje zyski, manipulując ustawieniami witryny (np. kierowaniem geograficznym czy mapami witryn). Jeśli otrzymasz powiadomienie, że nieznana Ci osoba zweryfikowała Twoją witrynę w <a href="https://www.google.com/webmasters/tools/">Search Console</a>, może to z dużym prawdopodobieństwem oznaczać, że masz do czynienia z atakiem hakera.</p>
 
-<p>Najpierw skorzystaj z narzędzia <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemy z bezpieczeństwem</a> w Search Console i sprawdź, czy Google znajduje zmodyfikowane strony w Twojej witrynie. Takie strony możesz też wykryć, wpisując <code class="notranslate l10n-notranslate">site:[your site root URL]</code> w wyszukiwarce Google. Spowoduje to wyświetlenie stron zindeksowanych przez Google w Twojej witrynie – w tym zmodyfikowanych przez hakerów. Przejrzyj kilka stron wyników wyszukiwania pod kątem nietypowych adresów URL. Jeśli za pomocą wyszukiwarki Google nie znajdziesz zmodyfikowanych treści, spróbuj wpisać te same słowa w inną wyszukiwarkę. Inne wyszukiwarki mogą wyświetlać zmodyfikowane treści, które zostały usunięte z indeksu Google. Mogłoby to wyglądać tak:</p>
+<p>Najpierw skorzystaj z narzędzia <a href="https://www.google.com/webmasters/tools/security-issues">Problemy z bezpieczeństwem</a> w Search Console i sprawdź, czy Google znajduje zmodyfikowane strony w Twojej witrynie. Takie strony możesz też wykryć, wpisując <code class="notranslate l10n-notranslate">site:[your site root URL]</code> w wyszukiwarce Google. Spowoduje to wyświetlenie stron zindeksowanych przez Google w Twojej witrynie – w tym zmodyfikowanych przez hakerów. Przejrzyj kilka stron wyników wyszukiwania pod kątem nietypowych adresów URL. Jeśli za pomocą wyszukiwarki Google nie znajdziesz zmodyfikowanych treści, spróbuj wpisać te same słowa w inną wyszukiwarkę. Inne wyszukiwarki mogą wyświetlać zmodyfikowane treści, które zostały usunięte z indeksu Google. Mogłoby to wyglądać tak:</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <p>Zwróć uwagę, że w tych wynikach wyszukiwania pojawia się wiele stron, których nie utworzył właściciel witryny. Jeśli przyjrzysz się opisom, zauważysz przykłady japońskiego tekstu utworzonego przez hakera.</p>
 
 <p>Gdy spróbujesz odwiedzić zmodyfikowaną stronę, być może zobaczysz komunikat, że strona nie istnieje (np. błąd 404). Nie daj się zwieść. Haker będzie usiłował Cię przekonać, że witryna działa poprawnie, bo zmodyfikowane strony zniknęły lub zostały poprawione.
-  W tym celu zastosuje <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">maskowanie</a> treści. Aby sprawdzić, czy tak się nie stało, wpisz adresy URL witryny do narzędzia <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Pobierz jako Google</a> w Search Console.
+  W tym celu zastosuje <a href="https://support.google.com/webmasters/answer/66355">maskowanie</a> treści. Aby sprawdzić, czy tak się nie stało, wpisz adresy URL witryny do narzędzia <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Pobierz jako Google</a> w Search Console.
   Pozwoli to zobaczyć ukryte treści.</p>
 
 <a name="fixing"></a>
@@ -45,9 +45,9 @@
 <p>Zanim zaczniesz usuwać pliki, zrób ich kopię offline na wypadek, gdyby trzeba je było później przywrócić. Jeszcze lepiej jest utworzyć kopię zapasową całej witryny przed przystąpieniem do jej czyszczenia. Możesz zapisać wszystkie pliki z serwera w innej lokalizacji lub poszukać najlepszych metod tworzenia kopii zapasowej dla Twojego systemu zarządzania treścią (CMS). Jeśli korzystasz z takiego systemu, zadbaj również o kopię zapasową bazy danych.</p>
 
   <h3>Usuwanie nowych kont z Search Console</h3>
-<p>Jeśli do Twojego konta w Search Console został dodany nowy właściciel, którego nie rozpoznajesz, jak najszybciej unieważnij jego prawa dostępu. Na <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">stronie weryfikacji w Search Console</a> sprawdzisz, którzy użytkownicy są zweryfikowani. Po prostu kliknij „Szczegóły weryfikacji” przy danej witrynie.</p>
+<p>Jeśli do Twojego konta w Search Console został dodany nowy właściciel, którego nie rozpoznajesz, jak najszybciej unieważnij jego prawa dostępu. Na <a href="https://www.google.com/webmasters/verification">stronie weryfikacji w Search Console</a> sprawdzisz, którzy użytkownicy są zweryfikowani. Po prostu kliknij „Szczegóły weryfikacji” przy danej witrynie.</p>
 
-<p>Jeśli chcesz usunąć właściciela z Search Console, przeczytaj odpowiedni fragment artykułu <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">Zarządzanie użytkownikami, właścicielami i uprawnieniami</a> w Centrum pomocy.
+<p>Jeśli chcesz usunąć właściciela z Search Console, przeczytaj odpowiedni fragment artykułu <a href="https://support.google.com/webmasters/answer/2453966">Zarządzanie użytkownikami, właścicielami i uprawnieniami</a> w Centrum pomocy.
   Konieczne będzie usunięcie powiązanego tokena weryfikacyjnego, czyli zwykle pliku HTML w katalogu głównym witryny lub dynamicznie generowanego pliku .htaccess, który naśladuje taki plik.</p>
 
 <p>Jeśli nie możesz znaleźć w witrynie tokena weryfikacyjnego HTML, poszukaj reguły przepisywania w pliku .htaccess. Przykładowa reguła przepisywania wygląda tak:</p>
@@ -113,14 +113,14 @@
   <h3>Sprawdzanie, czy witryna jest czysta</h3>
 <p>Gdy zdołasz się pozbyć zmodyfikowanych plików, sprawdź, czy Twoja ciężka praca przyniosła efekty. Pamiętasz znalezione wcześniej strony z bezużytecznym tekstem? Poszukaj ich za pomocą narzędzia Pobierz jako Google, by sprawdzić, czy wciąż istnieją. Jeśli uzyskasz odpowiedź „Nie znaleziono”, prawdopodobnie jest całkiem dobrze.</p>
 
-<p>Aby sprawdzić, czy w witrynie nie ma już zmodyfikowanych treści, możesz też wykonać kroki opisane w <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Narzędziu do rozwiązywania problemów z zaatakowanymi witrynami</a>.</p>
+<p>Aby sprawdzić, czy w witrynie nie ma już zmodyfikowanych treści, możesz też wykonać kroki opisane w <a href="https://support.google.com/webmasters/troubleshooter/6155978">Narzędziu do rozwiązywania problemów z zaatakowanymi witrynami</a>.</p>
 
   <h3>Jak zapobiec ponownym atakom?</h3>
-<p>Zlikwidowanie luk w zabezpieczeniach witryny stanowi niezbędny etap naprawiania szkód. Zgodnie z <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">niedawnymi badaniami</a> 12% witryn zostaje ponownie zaatakowanych przed upływem 30 dni. Wiedza o tym, jak doszło do ataku, bardzo Ci się przyda. Na początek poczytaj o <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">najczęściej spotykanych atakach spamerskich</a>. Jeśli nie jesteś w stanie dowiedzieć się, jak doszło do ataku, zapoznaj się z listą kontrolną rzeczy, które możesz zrobić, by ograniczyć luki w witrynie:</p>
+<p>Zlikwidowanie luk w zabezpieczeniach witryny stanowi niezbędny etap naprawiania szkód. Zgodnie z <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">niedawnymi badaniami</a> 12% witryn zostaje ponownie zaatakowanych przed upływem 30 dni. Wiedza o tym, jak doszło do ataku, bardzo Ci się przyda. Na początek poczytaj o <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">najczęściej spotykanych atakach spamerskich</a>. Jeśli nie jesteś w stanie dowiedzieć się, jak doszło do ataku, zapoznaj się z listą kontrolną rzeczy, które możesz zrobić, by ograniczyć luki w witrynie:</p>
   <ul>
     <li><strong>Regularnie skanuj komputer:</strong> korzystaj z zaufanego programu antywirusowego i szukaj wirusów oraz luk w zabezpieczeniach.</li>
     <li><strong>Regularnie zmieniaj hasła:</strong> regularne zmienianie haseł do wszystkich kont powiązanych z witryną (FTP, CMS, konto u dostawcy usług hostingowych) może zapobiec nieautoryzowanemu dostępowi. Ważne, by dla każdego konta tworzyć silne, niepowtarzalne hasła.</li>
-    <li><strong>Stosuj <a href="https://pl.wikipedia.org/wiki/Uwierzytelnianie_wielopoziomowe" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">uwierzytelnianie dwuskładnikowe</a>:</strong> zastanów się nad włączeniem go we wszystkich usługach, które wymagają logowania. Uwierzytelnianie dwuskładnikowe utrudnia hakerom zalogowanie się, nawet jeśli zdobędą Twoje hasło.</li>
+    <li><strong>Stosuj <a href="https://pl.wikipedia.org/wiki/Uwierzytelnianie_wielopoziomowe">uwierzytelnianie dwuskładnikowe</a>:</strong> zastanów się nad włączeniem go we wszystkich usługach, które wymagają logowania. Uwierzytelnianie dwuskładnikowe utrudnia hakerom zalogowanie się, nawet jeśli zdobędą Twoje hasło.</li>
     <li><strong>Regularnie aktualizuj system CMS, wtyczki, rozszerzenia i moduły:</strong> ten krok już prawdopodobnie masz za sobą. Wiele witryn ulega atakom z powodu nieaktualnego oprogramowania. Niektóre systemy CMS obsługują automatyczne aktualizacje.</li>
     <li><strong>Zastanów się nad subskrypcją usługi monitorowania Twojej witryny pod kątem bezpieczeństwa:</strong> dostępnych jest wiele ciekawych usług, które za niewielką opłatą pomogą Ci w tym zadaniu. Rozważ, czy warto zarejestrować się w którejś z nich, by lepiej chronić witrynę.</li>
   </ul>
@@ -133,15 +133,15 @@
 <p>Te narzędzia przeskanują witrynę i być może znajdą problematyczne treści.
   Oprócz VirusTotal żadne z nich nie jest obsługiwane przez Google.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: to tylko część narzędzi, które mogą skanować witryny pod kątem podejrzanej zawartości. Pamiętaj, że nie gwarantują one wykrycia wszystkich treści, które stanowią zagrożenie.</p>
+<p><a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: to tylko część narzędzi, które mogą skanować witryny pod kątem podejrzanej zawartości. Pamiętaj, że nie gwarantują one wykrycia wszystkich treści, które stanowią zagrożenie.</p>
 
 <p>Dodatkowe zasoby Google, które mogą się przydać:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   Forum pomocy Google dla webmasterów</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Pomoc Google dla webmasterów stron, które zaatakowali hakerzy</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Bezpieczne przeglądanie Google</a></li>
+<li><a href="//safebrowsing.google.com/">Bezpieczne przeglądanie Google</a></li>
 </ul>
 
 

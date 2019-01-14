@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -57,13 +57,13 @@ Di seguito sono riportati i vari canali disponibili.
 
 #### A. Sito compromesso
 
-*Hai ricevuto una notifica di sito compromesso nel 
-[**report Manual Actions**](https://www.google.com/webmasters/tools/manual-action)
+*Hai ricevuto una notifica di sito compromesso nel
+[**report Manual Actions**](https://search.google.com/search-console/manual-actions)
 della Search Console:*
 
 1. Ora che hai analizzato i passaggi successivi del processo di pulizia,
- puoi consultare nuovamente il report [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
- e vedere se il problema è relativo all’intero sito 
+ puoi consultare nuovamente il report [Manual Actions](https://search.google.com/search-console/manual-actions)
+ e vedere se il problema è relativo all’intero sito
  o solo a una sua parte.
 2. Seleziona **Request a review**.
 
@@ -152,7 +152,7 @@ browser.
  consigliamo a tutti i proprietari di siti di implementare il programma di manutenzione e sicurezza
  creato in [Ripulisci e gestisci il sito](clean_site).
 
-    Per ulteriori informazioni, consulta le seguenti risorse da 
+    Per ulteriori informazioni, consulta le seguenti risorse da
     [StopBadware](https://www.stopbadware.org):
 
       * [Preventing badware: basics](https://www.stopbadware.org/prevent-badware-basics)

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Lütfen aşağıdaki kanallara başvurun.
 #### A. Korsan saldırısına uğramış site
 
 *Search Console'un
-[**Manual Actions raporunda**](https://www.google.com/webmasters/tools/manual-action)
+[**Manual Actions raporunda**](https://search.google.com/search-console/manual-actions)
 korsan saldırısına uğramış site bildirimi aldınız:*
 
 1. Temizleme sürecinin birbirini takip eden adımlarını uyguladığınıza göre tekrar
-  [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+  [Manual Actions](https://search.google.com/search-console/manual-actions)
   raporuna giderek sorunu site geneli bir eşleştirme veya kısmi bir eşleştirme olarak
   bulun.
 2. **Request a review** öğesini seçin.
@@ -96,7 +96,7 @@ kötü amaçlı yazılım veya istenmeyen yazılım bildirimi aldınız:*
 [**Security Issues raporunda**](https://www.google.com/webmasters/tools/security-issues)
 kötü amaçlı yazılım veya istenmeyen yazılım bildirimi almadınız, ancak AdWords hesabınızda bir bildirim aldınız:*
 
-1. 
+1.
   [AdWords destek merkezi](https://support.google.com/adwords/contact/site_policy) aracılığıyla inceleme talep edin.
 
 

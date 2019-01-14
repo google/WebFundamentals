@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ book_path: /web/fundamentals/_book.yaml
 #### A। हैक की गई साइट
 
 *आपको खोज कंसोल की
-[**मैन्युअल कार्रवाई रिपोर्ट **](https://www.google.com/webmasters/tools/manual-action)
+[**मैन्युअल कार्रवाई रिपोर्ट **](https://search.google.com/search-console/manual-actions)
 में हैक की गई साइट की अधिसूचना प्राप्त होगी:*
 
 1. अब चूँकि आप साफ़ करने की प्रक्रिया के क्रमिक चरणों से गुज़र चुके हैं,
- आप [मैन्युअल कार्रवाईयाँ](https://www.google.com/webmasters/tools/manual-action)
+ आप [मैन्युअल कार्रवाईयाँ](https://search.google.com/search-console/manual-actions)
   रिपोर्ट में फिर से जा सकते हैं और साइट-व्यापक मिलान के रूप में या आंशिक
   मिलान के रूप में समस्या को ढूँढ सकते हैं।
 2. **Request a review** चुनें।

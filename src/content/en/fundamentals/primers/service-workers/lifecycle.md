@@ -77,16 +77,13 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
-  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
-  crossorigin="anonymous" defer>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TweenLite.min.js"
+  defer>
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
-  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
-  crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
-  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
-  crossorigin="anonymous" defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TimelineLite.min.js"
+  defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/plugins/CSSPlugin.min.js"
+  defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -384,16 +381,12 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
-  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
-  crossorigin="anonymous" defer>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TweenLite.min.js" defer>
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
-  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
-  crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
-  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
-  crossorigin="anonymous" defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TimelineLite.min.js" defer>
+</script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/plugins/CSSPlugin.min.js" defer>
+</script>
 <style>
 .lifecycle-diagram {
   width: 100%;

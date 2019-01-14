@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Weitere Informationen finden Sie in den nachfolgenden Kanälen.
 #### A. Gehackte Website
 
 *In dem
-[**Bericht zu manuellen Maßnahmen**](https://www.google.com/webmasters/tools/manual-action)
+[**Bericht zu manuellen Maßnahmen**](https://search.google.com/search-console/manual-actions)
 der Search Console wird eine Benachrichtigung angezeigt, dass Ihre Website gehackt wurde:*
 
 1. Nachdem Sie die zur Bereinigung erforderlichen Schritte durchgeführt haben,
-  können Sie erneut den [Bericht zu manuellen Maßnahmen](https://www.google.com/webmasters/tools/manual-action)
+  können Sie erneut den [Bericht zu manuellen Maßnahmen](https://search.google.com/search-console/manual-actions)
   aufrufen und prüfen, ob es sich bei dem Problem um eine Übereinstimmung auf der ganzen Website oder um eine Teilübereinstimmung
   handelt.
 2. Wählen Sie **Request a review**.
