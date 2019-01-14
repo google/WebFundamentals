@@ -37,7 +37,7 @@ use of scroll listeners. There's even an awesome demo to prove it:
 <figure>
   <a href="https://ebidel.github.io/demos/sticky-position-event.html"
      target="_blank">
-    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop
+    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop muted
            alt="Demo screencast"></video>
   </a>
   <figcaption>
@@ -100,7 +100,7 @@ new title at the top of the page.
 <figure class="flex-center">
   <a href="https://ebidel.github.io/demos/sticky-position-event.html"
      target="_blank">
-    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop
+    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop muted
            alt="Demo screencast"></video>
   </a>
   <figcaption class="success">
@@ -165,7 +165,7 @@ It's helpful to see a screencast of 1-4 in the order they happen:
 
 <figure>
   <video src="/web/updates/images/2017/09/stickypos/demo-sentinels.mp4"
-         alt="Showing sentinel elements" loop autoplay height="300"></video>
+         alt="Showing sentinel elements" loop autoplay muted height="300"></video>
   <figcaption>Intersection Observers fire callbacks when the sentinels
   enter/leave the scroll container.</figcaption>
 </figure>
@@ -369,7 +369,7 @@ fixed and added scroll effects without the use of `scroll` events.
 <figure>
   <a href="https://ebidel.github.io/demos/sticky-position-event.html"
      target="_blank">
-    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop
+    <video src="/web/updates/images/2017/09/stickypos/demo.mp4" autoplay loop muted
          alt="Demo screencast"></video>
   </a>
   <figcaption>

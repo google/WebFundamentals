@@ -55,32 +55,32 @@ more information.
   <a href="/web/updates/images/2017/11/overscroll-behavior/drawer-scroll.mp4"
      target="_blank">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-scroll.mp4"
-           autoplay loop alt="Drawer demo" height="300"></video>
+           autoplay loop muted alt="Drawer demo" height="300"></video>
   </a>
   <figcaption>Scroll chaining on Chrome Android.</figcaption>
 </figure>
 
-Scrolling is one of the most fundamental ways to interact with a page, but 
-certain UX patterns can be tricky to deal with because of the browser's quirky 
-default behaviors. As an example, take an app drawer with a large number of 
+Scrolling is one of the most fundamental ways to interact with a page, but
+certain UX patterns can be tricky to deal with because of the browser's quirky
+default behaviors. As an example, take an app drawer with a large number of
 items that the user may have to scroll through. When they reach the bottom, the
-overflow container stops scrolling because there's no more content to consume. 
+overflow container stops scrolling because there's no more content to consume.
 In other words, the user
-reaches a "scroll boundary". But notice what happens if the user continues to 
-scroll. **The content *behind* the drawer starts scrolling**! Scrolling is 
-taken over by the parent container; the main page itself in the example. 
+reaches a "scroll boundary". But notice what happens if the user continues to
+scroll. **The content *behind* the drawer starts scrolling**! Scrolling is
+taken over by the parent container; the main page itself in the example.
 
-Turns out this behavior is called  **scroll chaining**; the browser's default 
-behavior when scrolling content. Oftentimes the default is pretty nice, but 
-sometimes it's not desirable or even unexpected. Certain apps may want to 
+Turns out this behavior is called  **scroll chaining**; the browser's default
+behavior when scrolling content. Oftentimes the default is pretty nice, but
+sometimes it's not desirable or even unexpected. Certain apps may want to
 provide a different user experience when the user hits a scroll boundary.
 
 ### The pull-to-refresh effect {: #p2r }
 
 Pull-to-refresh is a intuitive gesture popularized by mobile apps such as
-Facebook and Twitter. Pulling down on a social feed and releasing creates new 
-space for more recent posts to be loaded. In fact, this particular UX has 
-become _so popular_ that mobile browsers like Chrome on Android have adopted 
+Facebook and Twitter. Pulling down on a social feed and releasing creates new
+space for more recent posts to be loaded. In fact, this particular UX has
+become _so popular_ that mobile browsers like Chrome on Android have adopted
 the same effect. Swiping down at the top of the page refreshes the entire page:
 
 <div class="clearfix centered">
@@ -88,7 +88,7 @@ the same effect. Swiping down at the top of the page refreshes the entire page:
     <a href="/web/updates/images/2017/11/overscroll-behavior/twitter.mp4"
        target="_blank">
        <video src="/web/updates/images/2017/11/overscroll-behavior/twitter.mp4"
-              autoplay loop height="350" class="border"></video>
+              autoplay muted loop height="350" class="border"></video>
     </a>
     <figcaption>
       Twitter's custom pull-to-refresh<br>when refreshing a feed in
@@ -99,7 +99,7 @@ the same effect. Swiping down at the top of the page refreshes the entire page:
     <a href="/web/updates/images/2017/11/overscroll-behavior/mobilep2r.mp4"
        target="_blank">
        <video src="/web/updates/images/2017/11/overscroll-behavior/mobilep2r.mp4"
-              autoplay loop height="350" class="border"></video>
+              autoplay muted loop height="350" class="border"></video>
     </a>
     <figcaption>
       Chrome Android's native pull-to-refresh action<br>refreshes the entire
@@ -114,7 +114,7 @@ app, you probably don't want the user accidentally refreshing the page. There's
 also the potential to see a double refresh animation! Alternatively, it might
 be nicer to custom the browser's action, aligning it more closely to the site's
 branding. The unfortunate part is that this type of customization has been
-tricky to pull off. Developers end up writing unnecessary JavaScript, add 
+tricky to pull off. Developers end up writing unnecessary JavaScript, add
 [non-passive](/web/tools/lighthouse/audits/passive-event-listeners)
 touch listeners (which block scrolling), or stick the entire page in a 100vw/vh
 `<div>` (to prevent the page from overflowing). These workarounds have
@@ -136,7 +136,7 @@ page performance** like the hacks mentioned in the intro!
 The property takes three possible values:
 
 1. **auto** - Default. Scrolls that originate on the element may propagate to
-ancestor elements. 
+ancestor elements.
 - **contain** - prevents scroll chaining. Scrolls do not propagate to ancestors
 but local effects within the node are shown. For example, the overscroll glow
 effect on Android or the rubberbanding effect on iOS which notifies the user
@@ -161,7 +161,7 @@ Let's dive into some examples to see how to use `overscroll-behavior`.
      target="_blank">
     <video
       src="/web/updates/images/2017/11/overscroll-behavior/chatbox-chaining.mp4"
-      autoplay loop alt="Chatbox demo" height="350" class="border"></video>
+      autoplay muted loop alt="Chatbox demo" height="350" class="border"></video>
   </a>
   <figcaption>Content beneath the chat window scrolls too :(</figcaption>
 </figure>
@@ -203,7 +203,7 @@ it ends up making the site look buggy.
     <a href="/web/updates/images/2017/11/overscroll-behavior/modal-off.mp4"
        target="_blank">
       <video src="/web/updates/images/2017/11/overscroll-behavior/modal-off.mp4"
-             autoplay loop height="290"></video>
+             autoplay muted loop height="290"></video>
     </a>
     <figcaption>
       <b>Before</b>: page content scrolls beneath overlay.
@@ -213,7 +213,7 @@ it ends up making the site look buggy.
     <a href="/web/updates/images/2017/11/overscroll-behavior/modal-on.mp4"
        target="_blank">
       <video src="/web/updates/images/2017/11/overscroll-behavior/modal-on.mp4"
-             autoplay loop height="290"></video>
+             autoplay muted loop height="290"></video>
     </a>
     <figcaption>
       <b>After</b>: page content doesn't scroll beneath overlay.
@@ -242,12 +242,12 @@ entire inbox also blurs as the inbox refreshes:
 <figure class="clearfix centered">
   <div class="attempt-left">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh.mp4"
-           autoplay loop height="225"></video>
+           autoplay muted loop height="225"></video>
     <figcaption>Before</figcaption>
   </div>
   <div class="attempt-right">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh-fix.mp4"
-           autoplay loop height="225"></video>
+           autoplay muted loop height="225"></video>
     <figcaption>After</figcaption>
   </div>
 </figure>
@@ -270,7 +270,7 @@ Here's a snippet of the
     pointer-events: none;
     width: var(--refresh-width);
     height: var(--refresh-width);
-    border-radius: 50%; 
+    border-radius: 50%;
     position: absolute;
     transition: all 300ms cubic-bezier(0,0,0.2,1);
     will-change: transform, opacity;
@@ -323,14 +323,14 @@ body {
 <figure class="clearfix centered">
   <div class="attempt-left">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-glow.mp4"
-           autoplay loop height="300" class="border"></video>
+           autoplay muted loop height="300" class="border"></video>
     <figcaption>
       <b>Before</b>: hitting scroll boundary shows a glow.
     </figcaption>
   </div>
   <div class="attempt-right">
     <video src="/web/updates/images/2017/11/overscroll-behavior/drawer-noglow.mp4"
-           autoplay loop height="300" class="border"></video>
+           autoplay muted loop height="300" class="border"></video>
     <figcaption><b>After</b>: glow disabled.</figcaption>
   </div>
 </figure>
@@ -352,7 +352,7 @@ user experience that would have been tricky to achieve without CSS
   <a href="https://ebidel.github.io/demos/chatbox.html"
      target="_blank">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-fixed.mp4"
-           autoplay loop alt="Chatbox demo" height="600"></video>
+           autoplay muted loop alt="Chatbox demo" height="600"></video>
   </a>
   <figcaption>
     <a href="https://ebidel.github.io/demos/chatbox.html"
