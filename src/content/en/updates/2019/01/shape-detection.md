@@ -184,9 +184,9 @@ try {
 ## Feature detection {: #featuredetection}
 
 Purely checking for the existence of the constructors to feature detect the Shape Detection
-API doesn’t suffice, as Chrome on Linux and Chrome OS currently still exposes the detectors, but
-they are known to not work ([bug](https://crbug.com/920961)). Instead, we recommend to do feature
-detection like this:
+API doesn’t suffice, as Chrome on Linux and Chrome OS currently still expose the detectors, but
+they are known to not work ([bug](https://crbug.com/920961)). As a temporary measure, we instead
+recommend doing feature detection like this:
 
 ```js
 const supported = await (async () => 'FaceDetector' in window &&
