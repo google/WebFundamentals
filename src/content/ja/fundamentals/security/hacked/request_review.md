@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on:2018-03-14 #}
+{# wf_updated_on:2019-01-14 #}
 {# wf_published_on:2015-01-01 #}
 {# wf_blink_components:N/A #}
 
@@ -56,10 +56,10 @@ book_path: /web/fundamentals/_book.yaml
 #### A. ハッキングされたサイト
 
 *Search Console の
-[**Manual Actions レポート**](https://www.google.com/webmasters/tools/manual-action)にハッキングされたサイトについての通知が表示された場合:*
+[**Manual Actions レポート**](https://search.google.com/search-console/manual-actions)にハッキングされたサイトについての通知が表示された場合:*
 
 
-1. クリーンアップが完了したら再度 [Manual Actions](https://www.google.com/webmasters/tools/manual-action) レポートを開き、問題がサイト全体の一致または部分一致のどちらであるのかを確認します。
+1. クリーンアップが完了したら再度 [Manual Actions](https://search.google.com/search-console/manual-actions) レポートを開き、問題がサイト全体の一致または部分一致のどちらであるのかを確認します。
 2. [**Request a review**] を選択します。
 
     リクエストを送信するには、サイトをクリーンアップするために行ったことの詳細情報を入力する必要があります。

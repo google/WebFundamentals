@@ -5,18 +5,18 @@
 <meta name="devsite_continuous_localization_fp" value="wDLboSHSoOEqXBonRWn8UvxANYcQNA3KoE+YsYU0AtWHaYTDuDS8VMrRRGtvrq7FMcXWQdN5Hd3JAPNLQcUKrrvzQu5oWkLB+fiCoJN0cmrFt8cYhV7gL+hr3agSW6ztGwMwktYT4qx+ixSxJY26fg=="></meta><meta name="devsite_continuous_localization_translatable_html_file_type" value="source"></meta></head>
 <body>
 
-<p>W tym przewodniku omawiamy ataki hakerów polegające na dodawaniu do witryny stron z bezużytecznym tekstem zawierającym dużo słów kluczowych. Jest to tzw. atak z wykorzystaniem bezużytecznego tekstu. Narażeni są na niego użytkownicy <a href="https://pl.wikipedia.org/wiki/System_zarz%C4%85dzania_tre%C5%9Bci%C4%85" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">popularnych systemów zarządzania treścią</a> (CMS), ale podane tu informacje mogą Ci się przydać, nawet jeśli nie korzystasz z takiego systemu.</p>
+<p>W tym przewodniku omawiamy ataki hakerów polegające na dodawaniu do witryny stron z bezużytecznym tekstem zawierającym dużo słów kluczowych. Jest to tzw. atak z wykorzystaniem bezużytecznego tekstu. Narażeni są na niego użytkownicy <a href="https://pl.wikipedia.org/wiki/System_zarz%C4%85dzania_tre%C5%9Bci%C4%85">popularnych systemów zarządzania treścią</a> (CMS), ale podane tu informacje mogą Ci się przydać, nawet jeśli nie korzystasz z takiego systemu.</p>
 
 <p><strong>Uwaga:</strong> nie masz pewności, czy Twoja witryna nie została zaatakowana? Poczytaj, <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">jak sprawdzić, czy witryna została zaatakowana przez hakerów</a>.</p>
 
-<aside class="note">Chcemy mieć pewność, że ten przewodnik jest naprawdę użyteczny. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Napisz komentarz</a>, by pomóc nam go udoskonalić.</aside>
+<aside class="note">Chcemy mieć pewność, że ten przewodnik jest naprawdę użyteczny. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Napisz komentarz</a>, by pomóc nam go udoskonalić.</aside>
 
 <h2>Spis treści</h2>
 
 <ul>
-<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Krok 1. Jak rozpoznać ten rodzaj ataku</a></li><p></p>
-<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Krok 2. Jak naprawić szkody spowodowane atakiem</a></li><p></p>
-<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Krok 3. Dodatkowe zasoby</a></li><p></p>
+<p></p><li><a href="#identifying">Krok 1. Jak rozpoznać ten rodzaj ataku</a></li><p></p>
+<p></p><li><a href="#fixing">Krok 2. Jak naprawić szkody spowodowane atakiem</a></li><p></p>
+<p></p><li><a href="#resources">Krok 3. Dodatkowe zasoby</a></li><p></p>
 <p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Witryny zaatakowane przez hakerów – najczęstsze pytania</a></li><p></p>
 </ul>
 
@@ -41,14 +41,14 @@
    <li>www.example.com/jfwoea/foto-cewe-zaman-sekarang.php</li>
    </ul>
 
-<p>Najpierw skorzystaj z narzędzia <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemy dotyczące bezpieczeństwa</a> w Search Console i sprawdź, czy Google znajduje zmodyfikowane strony w Twojej witrynie. Czasem takie strony można również wykryć, wpisując <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> w wyszukiwarkę Google i podając główny adres URL witryny. Spowoduje to wyświetlenie stron zindeksowanych przez Google w Twojej witrynie – w tym stron zmodyfikowanych przez hakerów. Przejrzyj kilka stron wyników wyszukiwania pod kątem nietypowych adresów URL. Jeśli za pomocą wyszukiwarki Google nie znajdziesz zmodyfikowanych treści, spróbuj wpisać te same słowa w inną wyszukiwarkę. Mogłoby to wyglądać tak:</p>
+<p>Najpierw skorzystaj z narzędzia <a href="https://www.google.com/webmasters/tools/security-issues">Problemy dotyczące bezpieczeństwa</a> w Search Console i sprawdź, czy Google znajduje zmodyfikowane strony w Twojej witrynie. Czasem takie strony można również wykryć, wpisując <code class="notranslate l10n-notranslate">site:<i>your site url</i></code> w wyszukiwarkę Google i podając główny adres URL witryny. Spowoduje to wyświetlenie stron zindeksowanych przez Google w Twojej witrynie – w tym stron zmodyfikowanych przez hakerów. Przejrzyj kilka stron wyników wyszukiwania pod kątem nietypowych adresów URL. Jeśli za pomocą wyszukiwarki Google nie znajdziesz zmodyfikowanych treści, spróbuj wpisać te same słowa w inną wyszukiwarkę. Mogłoby to wyglądać tak:</p>
 
 
 <img src="/web/fundamentals/security/hacked/images/GibberishKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <div class="tip">Zwróć uwagę, że w tych wynikach wyszukiwania pojawia się wiele stron, których nie utworzył właściciel witryny. Jeśli przyjrzysz się opisom, zauważysz przykłady bezużytecznego tekstu utworzonego przez hakera.</div>
 
-<p>Zazwyczaj kliknięcie linka do zmodyfikowanej strony powoduje przekierowanie do innej witryny lub wyświetlenie bezużytecznego tekstu. Możesz też zobaczyć komunikat, że strona nie istnieje (np. błąd 404). Nie daj się zwieść. Haker będzie usiłował Cię przekonać, że zmodyfikowana strona zniknęła lub została poprawiona. W tym celu zastosuje <a href="https://support.google.com/webmasters/answer/66355">maskowanie</a> treści. Aby sprawdzić, czy tak się nie stało, wpisz adres URL witryny do narzędzia <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Pobierz jako Google</a>. Pozwoli to zobaczyć ukryte treści. </p>
+<p>Zazwyczaj kliknięcie linka do zmodyfikowanej strony powoduje przekierowanie do innej witryny lub wyświetlenie bezużytecznego tekstu. Możesz też zobaczyć komunikat, że strona nie istnieje (np. błąd 404). Nie daj się zwieść. Haker będzie usiłował Cię przekonać, że zmodyfikowana strona zniknęła lub została poprawiona. W tym celu zastosuje <a href="https://support.google.com/webmasters/answer/66355">maskowanie</a> treści. Aby sprawdzić, czy tak się nie stało, wpisz adres URL witryny do narzędzia <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Pobierz jako Google</a>. Pozwoli to zobaczyć ukryte treści. </p>
 
 <p>Jeśli stwierdzisz takie problemy, prawdopodobnie Twoja witryna została zaatakowana właśnie w ten sposób.</p>
 
@@ -137,7 +137,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 </pre>
 
 
-<p>Czasem kod nie jest przemieszany i wygląda jak normalny skrypt. Jeśli nie masz pewności, czy kod jest nieprawidłowy, na <a href="http://productforums.google.com/forum/#    !forum/webmasters" l10n-encrypted-href="eFqttkEJXOrPtYqL1dS4hMlzk68vmg1gLAq//4NlIesuA+SSwS44WzEss142F1VLcbCLWvVm2pEwqt29pdWwH6rz+M3RfOj6o9TWwqB6UaE=">forach pomocy dla webmasterów</a> znajdziesz doświadczonych programistów, którzy pomogą Ci przejrzeć pliki.</p>
+<p>Czasem kod nie jest przemieszany i wygląda jak normalny skrypt. Jeśli nie masz pewności, czy kod jest nieprawidłowy, na <a href="http://productforums.google.com/forum/#    !forum/webmasters">forach pomocy dla webmasterów</a> znajdziesz doświadczonych programistów, którzy pomogą Ci przejrzeć pliki.</p>
 
 <p><b>Krok 5</b></p>
 <p>Gdy wiesz już, które pliki są podejrzane, utwórz kopię zapasową lub lokalną – zapisz pliki na komputerze na wypadek, gdyby okazało się, że jednak nie są złośliwe, a potem usuń te podejrzane.</p>
@@ -146,7 +146,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 
 <p>Gdy zdołasz się pozbyć zmodyfikowanych plików, sprawdź, czy Twoja ciężka praca przyniosła efekty. Pamiętasz znalezione wcześniej strony z bezużytecznym tekstem? Poszukaj ich za pomocą narzędzia Pobierz jako Google, by sprawdzić, czy wciąż istnieją. Jeśli uzyskasz odpowiedź „Nie znaleziono”, prawdopodobnie jest całkiem dobrze.</p>
 
-<p>Aby sprawdzić, czy w witrynie nie ma już zmodyfikowanych treści, możesz też wykonać kroki opisane w <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Narzędziu do rozwiązywania problemów z zaatakowanymi witrynami</a>.</p>
+<p>Aby sprawdzić, czy w witrynie nie ma już zmodyfikowanych treści, możesz też wykonać kroki opisane w <a href="https://support.google.com/webmasters/troubleshooter/6155978">Narzędziu do rozwiązywania problemów z zaatakowanymi witrynami</a>.</p>
 
 <h3>Jak zapobiec ponownym atakom?</h3>
 
@@ -155,7 +155,7 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 <ul>
   <li><strong>Regularnie skanuj komputer:</strong> korzystaj z któregoś z popularnych programów antywirusowych i szukaj wirusów oraz luk w zabezpieczeniach.</li>
 <li><strong>Regularnie zmieniaj hasła:</strong> regularne zmienianie haseł do wszystkich kont powiązanych z witryną (FTP, CMS, konto u dostawcy usług hostingowych) może zapobiec nieautoryzowanemu dostępowi. Ważne, by dla każdego konta tworzyć silne, niepowtarzalne hasła.</li>
-<li><strong>Stosuj <a href="https://pl.wikipedia.org/wiki/Uwierzytelnianie_wielopoziomowe" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">uwierzytelnianie dwuskładnikowe</a>:</strong> zastanów się nad włączeniem go we wszystkich usługach, które wymagają logowania. Uwierzytelnianie dwuskładnikowe utrudnia hakerom zalogowanie się, nawet jeśli zdobędą Twoje hasło.</li>
+<li><strong>Stosuj <a href="https://pl.wikipedia.org/wiki/Uwierzytelnianie_wielopoziomowe">uwierzytelnianie dwuskładnikowe</a>:</strong> zastanów się nad włączeniem go we wszystkich usługach, które wymagają logowania. Uwierzytelnianie dwuskładnikowe utrudnia hakerom zalogowanie się, nawet jeśli zdobędą Twoje hasło.</li>
 <li><strong>Regularnie aktualizuj system CMS, wtyczki, rozszerzenia i moduły:</strong> ten krok już prawdopodobnie masz za sobą. Wiele witryn ulega atakom z powodu nieaktualnego oprogramowania. Niektóre systemy CMS obsługują automatyczne aktualizacje.</li>
 <li><strong>Zastanów się nad subskrypcją usługi monitorowania Twojej witryny pod kątem bezpieczeństwa:</strong> dostępnych jest wiele ciekawych usług, które za niewielką opłatą pomogą Ci w tym zadaniu.
   Rozważ, czy warto zarejestrować się w którejś z nich, by lepiej chronić witrynę.</li>
@@ -167,15 +167,15 @@ jNXdmJ2bgMXdvl2YpxWYtBiZvBSZjVWawBSYgMXagMXaoRFIskGS"));
 
 <p>Te narzędzia przeskanują witrynę i być może znajdą problematyczne treści. Oprócz VirusTotal żadne z nich nie jest obsługiwane przez Google.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: to tylko część narzędzi, które mogą skanować witryny pod kątem podejrzanej zawartości. Pamiętaj, że nie gwarantują one wykrycia wszystkich treści, które stanowią zagrożenie.</p>
+<p><a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: to tylko część narzędzi, które mogą skanować witryny pod kątem podejrzanej zawartości. Pamiętaj, że nie gwarantują one wykrycia wszystkich treści, które stanowią zagrożenie.</p>
 
 <p>Dodatkowe zasoby Google, które mogą się przydać:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Forum pomocy Google dla webmasterów
+<li><a href="//support.google.com/webmasters/go/community">Forum pomocy Google dla webmasterów
   </a></li>
 <li><a href="/web/fundamentals/security/hacked/">Pomoc Google dla webmasterów stron, które zaatakowali hakerzy</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Bezpieczne przeglądanie Google</a></li>
+<li><a href="//safebrowsing.google.com/">Bezpieczne przeglądanie Google</a></li>
 </ul>
 
 <div class="alert">Brakuje narzędzia, które Twoim zdaniem mogłoby się przydać? <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Napisz komentarz</a> i daj nam znać.</div>

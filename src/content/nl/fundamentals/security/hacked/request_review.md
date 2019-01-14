@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Zie de kanalen hieronder.
 #### A. Gehackte website
 
 *U hebt een melding ontvangen over een gehackte website in het
-[**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action)
+[**Manual Actions report**](https://search.google.com/search-console/manual-actions)
 in Search Console:*
 
 1. Nu u de opeenvolgende stappen van het schoonmaken hebt doorlopen,
- kunt u het rapport [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+ kunt u het rapport [Manual Actions](https://search.google.com/search-console/manual-actions)
  weer openen en het probleem opzoeken als match voor de hele website of als een gedeeltelijke
  match.
 2. Selecteer **Request a review**.

@@ -6,20 +6,20 @@
 
 <body>
 
-<p>Esta guía se ha elaborado para hacer frente a un tipo de ataque concreto que genera páginas de texto autogenerado con muchas palabras clave en tu sitio web y al que nos referiremos como ataque de texto autogenerado. Se ha diseñado pensando en los usuarios de los <a href="https://es.wikipedia.org/wiki/Sistema_de_gestión_de_contenido_web" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">sistemas de gestión de contenido (CMS)</a> más populares; no obstante, te resultará útil aunque no utilices dichos sistemas.</p>
+<p>Esta guía se ha elaborado para hacer frente a un tipo de ataque concreto que genera páginas de texto autogenerado con muchas palabras clave en tu sitio web y al que nos referiremos como ataque de texto autogenerado. Se ha diseñado pensando en los usuarios de los <a href="https://es.wikipedia.org/wiki/Sistema_de_gestión_de_contenido_web">sistemas de gestión de contenido (CMS)</a> más populares; no obstante, te resultará útil aunque no utilices dichos sistemas.</p>
 
 <p><strong>Nota:</strong> Si no estás seguro de si te han pirateado el sitio web, lee nuestra guía sobre <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">cómo comprobarlo</a>.</p>
 
 
 
-<aside class="note">Queremos asegurarnos de que esta guía te resulte realmente útil; <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">envíanos comentarios</a> para que podamos mejorarla.</aside>
+<aside class="note">Queremos asegurarnos de que esta guía te resulte realmente útil; <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">envíanos comentarios</a> para que podamos mejorarla.</aside>
 
 <h2>Índice</h2>
 
 <ul>
-<p></p><li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Paso 1: Identificar este tipo de ataque</a></li><p></p>
-<p></p><li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Paso 2: Corregir el ataque</a></li><p></p>
-<p></p><li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Paso 3: Recursos adicionales</a></li><p></p>
+<p></p><li><a href="#identifying">Paso 1: Identificar este tipo de ataque</a></li><p></p>
+<p></p><li><a href="#fixing">Paso 2: Corregir el ataque</a></li><p></p>
+<p></p><li><a href="#resources">Paso 3: Recursos adicionales</a></li><p></p>
 <p></p><li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Preguntas frecuentes sobre sitios web pirateados</a></li><p></p>
 </ul>
 
@@ -30,7 +30,7 @@
 
 <p>Las páginas pirateadas se crean para manipular los factores de clasificación de Google. Los hackers a menudo intentarán obtener ingresos de esto vendiendo los enlaces de las páginas pirateadas a diferentes terceros. También es frecuente que las páginas pirateadas redirijan a los visitantes a una página no relacionada, como un sitio web pornográfico donde los piratas informáticos también pueden ganar dinero.</p>
 
-<p>Para comprobar si tu sitio web se ha visto afectado por este tipo de ataque, consulta la herramienta <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Problemas de seguridad</a> de <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, que te indicará si Google ha descubierto algunas de estas páginas pirateadas en tu sitio. También podrás descubrirlas si escribes <code class="notranslate l10n-notranslate">site:[your site]</code> en la Búsqueda de Google. Te mostrará las páginas de tu sitio web que ha indexado, incluidas las pirateadas. Consulta algunas páginas de resultados de búsqueda para comprobar que no aparezca ninguna URL inusual. Si la Búsqueda de Google no devuelve contenido pirateado, prueba a utilizar los mismos términos de búsqueda en otros motores de búsqueda, ya que es posible que te devuelvan contenido que Google haya retirado del índice.
+<p>Para comprobar si tu sitio web se ha visto afectado por este tipo de ataque, consulta la herramienta <a href="https://www.google.com/webmasters/tools/security-issues">Problemas de seguridad</a> de <a href="https://www.google.com/webmasters/tools/">Search Console</a>, que te indicará si Google ha descubierto algunas de estas páginas pirateadas en tu sitio. También podrás descubrirlas si escribes <code class="notranslate l10n-notranslate">site:[your site]</code> en la Búsqueda de Google. Te mostrará las páginas de tu sitio web que ha indexado, incluidas las pirateadas. Consulta algunas páginas de resultados de búsqueda para comprobar que no aparezca ninguna URL inusual. Si la Búsqueda de Google no devuelve contenido pirateado, prueba a utilizar los mismos términos de búsqueda en otros motores de búsqueda, ya que es posible que te devuelvan contenido que Google haya retirado del índice.
   A continuación te mostramos un ejemplo del aspecto que tendría una búsqueda de este tipo:</p>
 
 
@@ -38,7 +38,7 @@
 
 <p l10n-encrypted-style="/eDMjbcyQ8YpGjRJggEDIBQTTm7qpsvvmfgxV6fkusE=" style="padding:0px 25px"><strong>Nota:</strong> <em>En la imagen se puede ver que los resultados de búsqueda contienen muchas páginas web que el propietario del sitio web no ha creado. Si observas atentamente las descripciones del segundo resultado de búsqueda y del tercero, verás un ejemplo del texto autogenerado que se crea con este ataque.</em></p>
 
-<p>Al entrar en una página pirateada, es posible que aparezca un mensaje que indique que la página no existe (por ejemplo, un error 404). Se trata de un engaño: los hackers tratarán de convencerte de que las páginas pirateadas de tu sitio web han desaparecido o ya se han corregido. Para ello, realizan un <a href="//support.google.com/webmasters/answer/66355" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9BJHSzkBQAHlU9iNsiuhPw">encubrimiento</a> del contenido. Para comprobar que no haya encubrimiento, introduce las URL de tu sitio web en la herramienta <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Explorar como Google</a> de Search Console, que te permite ver el contenido oculto subyacente.
+<p>Al entrar en una página pirateada, es posible que aparezca un mensaje que indique que la página no existe (por ejemplo, un error 404). Se trata de un engaño: los hackers tratarán de convencerte de que las páginas pirateadas de tu sitio web han desaparecido o ya se han corregido. Para ello, realizan un <a href="//support.google.com/webmasters/answer/66355">encubrimiento</a> del contenido. Para comprobar que no haya encubrimiento, introduce las URL de tu sitio web en la herramienta <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Explorar como Google</a> de Search Console, que te permite ver el contenido oculto subyacente.
   A continuación te mostramos un ejemplo del aspecto que tiene una de estas páginas:</p>
 
 <img src="/web/fundamentals/security/hacked/images/CloakedKeywordHackExamplePage.png" style="padding:0px 25px">
@@ -51,7 +51,7 @@
 
 <h3>Comprueba el archivo .htaccess (3 pasos)</h3>
 
-<p>El ataque con palabras clave y enlaces encubiertos utiliza el archivo .htaccess para crear automáticamente páginas encubiertas en tu sitio web. No es necesario, pero te recomendamos que te familiarices con los <a href="https://httpd.apache.org/docs/current/howto/htaccess.html" l10n-encrypted-href="oxukPFo/pb0BlXrrDLS8MY7H/A2VvrDif6x7R0dUeR+8wuajVXML/gAzUrl+oK27sJoXxFM3eSyNYOSGo/0x9Q==">conceptos básicos de los archivos .htaccess</a> que puedes encontrar en el sitio web oficial de Apache para entender mejor cómo afecta este tipo de ataque a tu sitio web. </p>
+<p>El ataque con palabras clave y enlaces encubiertos utiliza el archivo .htaccess para crear automáticamente páginas encubiertas en tu sitio web. No es necesario, pero te recomendamos que te familiarices con los <a href="https://httpd.apache.org/docs/current/howto/htaccess.html">conceptos básicos de los archivos .htaccess</a> que puedes encontrar en el sitio web oficial de Apache para entender mejor cómo afecta este tipo de ataque a tu sitio web. </p>
 
 <p><b>Paso 1</b></p>
 <p>Busca el archivo .htaccess en tu sitio web. Si no estás seguro de dónde encontrarlo y utilizas un sistema de gestión de contenido, como WordPress, Joomla! o Drupal, busca "ubicación de archivo .htaccess" y el nombre del sistema que uses en un motor de búsqueda. Dependiendo de tu sitio web, es posible que tengas varios archivos .htaccess, por lo que te recomendamos que elabores una lista de todas sus ubicaciones.
@@ -72,7 +72,7 @@
 <p>Escribe el archivo .php que se menciona en el archivo .htaccess. En el ejemplo, el archivo .php se llama "injected_file.php", pero el nombre del archivo .php real no será tan evidente; suelen ser palabras aleatorias e inofensivas, como "horsekeys.php", "potatolake.php", etc. En estos casos, es muy probable que sea un archivo .php malicioso que habrá que identificar y, posteriormente, eliminar.</p>
 
 <div class="alert">No todas las líneas con RewriteRule y un archivo .php que aparezcan en tu archivo .htaccess son maliciosas.
-  Si no estás seguro de la función de una línea de código, puedes obtener ayuda de un grupo de webmasters con experiencia en los <a href="https://support.google.com/webmasters/go/community" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhFJD1Yl7IKG6D/z+YJGpyzQKhraDV8RTvPIa5MbSVtR/w==">foros de ayuda para webmasters</a>.</div>
+  Si no estás seguro de la función de una línea de código, puedes obtener ayuda de un grupo de webmasters con experiencia en los <a href="https://support.google.com/webmasters/go/community">foros de ayuda para webmasters</a>.</div>
 
 <p><b>Paso 3</b></p>
 <p>Sustituye todos los archivos .htaccess por una versión limpia o predeterminada del archivo. Para encontrar una versión predeterminada, busca "archivo .htaccess predeterminado" y el nombre de tu sistema de gestión de contenido. En el caso de los sitios web con varios archivos de este tipo, busca una versión limpia de cada uno de ellos y sustitúyelos.</p>
@@ -131,7 +131,7 @@ lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWd
 
 <p>Una vez que hayas terminado de deshacerte de los archivos pirateados, comprueba si el esfuerzo ha valido la pena. Vuelve a utilizar la herramienta Explorar como Google en las páginas de texto autogenerado para verificar que ya no existan. Si la herramienta devuelve el resultado "No se encuentra", lo más probable es que se haya solucionado el problema.</p>
 
-<div class="tip">También puedes seguir los pasos que se describen en la <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Herramienta de recuperación de sitios web atacados</a> para comprobar si todavía hay contenido pirateado en tu sitio web.</div>
+<div class="tip">También puedes seguir los pasos que se describen en la <a href="https://support.google.com/webmasters/troubleshooter/6155978">Herramienta de recuperación de sitios web atacados</a> para comprobar si todavía hay contenido pirateado en tu sitio web.</div>
 
 <h2>¿Cómo puedo evitar que vuelvan a piratear mi sitio web?</h2>
 
@@ -142,7 +142,7 @@ lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWd
 <li>Examina periódicamente el ordenador: usa cualquier antivirus popular para comprobar que no haya virus o vulnerabilidades.</li>
 <li>Cambia las contraseñas con frecuencia: cambiar regularmente las contraseñas de todas las cuentas de tu sitio web, como las de tu proveedor de alojamiento, FTP y CMS, puede evitar que se acceda sin permiso a él.
   Es fundamental que cada cuenta disponga de una contraseña única y segura.</li>
-<li>Utiliza la <a href="https://es.wikipedia.org/wiki/Autenticación_de_múltiples_factores" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">autenticación de doble factor (A2F)</a>: te recomendamos que habilites la A2F en todos los servicios en los que sea necesario iniciar sesión, ya que este método dificulta que los hackers puedan acceder aunque roben tu contraseña.</li>
+<li>Utiliza la <a href="https://es.wikipedia.org/wiki/Autenticación_de_múltiples_factores">autenticación de doble factor (A2F)</a>: te recomendamos que habilites la A2F en todos los servicios en los que sea necesario iniciar sesión, ya que este método dificulta que los hackers puedan acceder aunque roben tu contraseña.</li>
 <li>Te recomendamos que te suscribas a un servicio de seguridad para controlar tu sitio web: existen muchos servicios de calidad y económicos que puedes usar para controlar tu sitio web. Regístrate en alguno de ellos para mantener tu sitio web seguro.</li>
 </ul>
 
@@ -152,17 +152,17 @@ lRGI5xWZ0Fmb1RncvZmbVBiLn5WauVGcwFGagM3J0FGa3BCZuFGdzJXZk5Wdg8GdgU3b5BicvZGI0xWd
 
 <p>Las herramientas que aparecen a continuación analizan sitios web y pueden encontrar contenido problemático; sin embargo, Google no es compatible con ninguna de ellas ni puede ejecutarlas, con la excepción de VirusTotal.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: son solo algunas herramientas que pueden analizar tu sitio web en busca de contenido que pueda suponer un problema; sin embargo, no se garantiza que puedan identificar todos los tipos de contenido problemático.</p>
+<p><a href="https://www.virustotal.com/">VirusTotal</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: son solo algunas herramientas que pueden analizar tu sitio web en busca de contenido que pueda suponer un problema; sin embargo, no se garantiza que puedan identificar todos los tipos de contenido problemático.</p>
 
 <p>A continuación te mostramos más recursos de Google que pueden resultarte útiles:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">Foro de ayuda para webmasters de Google</a></li>
+<li><a href="//support.google.com/webmasters/go/community">Foro de ayuda para webmasters de Google</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Ayuda para webmasters de Google para sitios web pirateados</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Navegación Segura de Google</a></li>
+<li><a href="//safebrowsing.google.com/">Navegación Segura de Google</a></li>
 </ul>
 
-<div class="alert">Si crees que falta alguna herramienta que podría ser útil, <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="voYeKygemXxQpSsj4TC5AfUbyuHWzoMwWwMBaPnMUvCB/+GeICZWcFPsNfkTA2yKrhrEkO/djoguK4tnJcrqXJ+wsE+tFKLdRQjytTrchinkpeA/GFKTKj/6rHbJmOv3qwUI9b2ZthvPFzCvc6kgQQ==">envíanos un comentario</a>.</div>
+<div class="alert">Si crees que falta alguna herramienta que podría ser útil, <a href="https://docs.google.com/a/  google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">envíanos un comentario</a>.</div>
 
 
 </body></html>

@@ -6,18 +6,18 @@
 
 <body>
 
-<p>Panduan ini dibuat khusus untuk jenis peretasan yang memunculkan teks Jepang secara otomatis di situs Anda, yang akan kita sebut sebagai peretasan kata kunci Jepang. Panduan ini ditujukan bagi pengguna <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">Sistem Manajemen Konten (CMS) populer</a>, tetapi juga berguna sekalipun Anda tidak menggunakan CMS.</p>
+<p>Panduan ini dibuat khusus untuk jenis peretasan yang memunculkan teks Jepang secara otomatis di situs Anda, yang akan kita sebut sebagai peretasan kata kunci Jepang. Panduan ini ditujukan bagi pengguna <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">Sistem Manajemen Konten (CMS) populer</a>, tetapi juga berguna sekalipun Anda tidak menggunakan CMS.</p>
 
 <p><strong>Catatan:</strong> Tidak yakin apakah situs Anda diretas atau tidak? Mulailah dengan membaca panduan <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">cara mengetahui apakah situs saya diretas</a>.</p>
 
-<aside class="note">Kami ingin memastikan panduan ini benar-benar bermanfaat bagi Anda. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Berikan masukan</a> Anda untuk membantu kami menyempurnakan panduan ini!</aside>
+<aside class="note">Kami ingin memastikan panduan ini benar-benar bermanfaat bagi Anda. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Berikan masukan</a> Anda untuk membantu kami menyempurnakan panduan ini!</aside>
 
 <h2>Daftar Isi</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Langkah 1: Mengidentifikasi jenis peretasan ini</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Langkah 2: Memperbaiki peretasan</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Langkah 3: Resource tambahan</a></li>
+  <li><a href="#identifying">Langkah 1: Mengidentifikasi jenis peretasan ini</a></li>
+  <li><a href="#fixing">Langkah 2: Memperbaiki peretasan</a></li>
+  <li><a href="#resources">Langkah 3: Resource tambahan</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">FAQs for Hacked Sites (FAQ untuk Situs yang Diretas)</a></li>
 </ul>
 
@@ -28,16 +28,16 @@
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
 
-<p>Pada jenis peretasan ini, peretas biasanya akan menambahkan dirinya sebagai pemilik properti di Search Console, dengan maksud meningkatkan keuntungan dengan memanipulasi setelan situs Anda seperti penargetan-geo atau peta situs. Jika Anda menerima pemberitahuan bahwa seseorang yang tidak Anda kenal telah memverifikasi situs Anda di <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, kemungkinan besar situs Anda telah diretas.</p>
+<p>Pada jenis peretasan ini, peretas biasanya akan menambahkan dirinya sebagai pemilik properti di Search Console, dengan maksud meningkatkan keuntungan dengan memanipulasi setelan situs Anda seperti penargetan-geo atau peta situs. Jika Anda menerima pemberitahuan bahwa seseorang yang tidak Anda kenal telah memverifikasi situs Anda di <a href="https://www.google.com/webmasters/tools/">Search Console</a>, kemungkinan besar situs Anda telah diretas.</p>
 
-<p>Mulailah dengan memeriksa <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">alat Masalah Keamanan</a> di Search Console untuk melihat apakah Google telah menemukan halaman yang diretas ini di situs Anda. Anda juga dapat menemukan halaman seperti ini dengan membuka Google Penelusuran dan menelusuri <code class="notranslate l10n-notranslate">site:[your site root URL]</code>. Langkah ini akan menampilkan halaman yang telah diindeks Google untuk situs Anda, termasuk halaman yang diretas. Buka beberapa halaman hasil penelusuran untuk melihat apakah Anda menemukan URL yang tidak biasa. Jika Anda tidak melihat konten yang diretas di Google Penelusuran, gunakan istilah penelusuran yang sama dengan mesin telusur berbeda. Mesin telusur lain mungkin menampilkan konten yang diretas yang telah dihapus Google dari indeks. Contoh dari tindakan ini diilustrasikan di bawah ini.</p>
+<p>Mulailah dengan memeriksa <a href="https://www.google.com/webmasters/tools/security-issues">alat Masalah Keamanan</a> di Search Console untuk melihat apakah Google telah menemukan halaman yang diretas ini di situs Anda. Anda juga dapat menemukan halaman seperti ini dengan membuka Google Penelusuran dan menelusuri <code class="notranslate l10n-notranslate">site:[your site root URL]</code>. Langkah ini akan menampilkan halaman yang telah diindeks Google untuk situs Anda, termasuk halaman yang diretas. Buka beberapa halaman hasil penelusuran untuk melihat apakah Anda menemukan URL yang tidak biasa. Jika Anda tidak melihat konten yang diretas di Google Penelusuran, gunakan istilah penelusuran yang sama dengan mesin telusur berbeda. Mesin telusur lain mungkin menampilkan konten yang diretas yang telah dihapus Google dari indeks. Contoh dari tindakan ini diilustrasikan di bawah ini.</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <p>Perhatikan bahwa hasil penelusuran di sini memuat banyak halaman yang tidak dibuat oleh pemilik situs. Jika Anda mencermati bagian deskripsi, Anda akan melihat contoh teks Jepang yang dibuat oleh peretasan ini.</p>
 
 <p>Saat mengunjungi halaman yang diretas, Anda mungkin melihat pesan yang menunjukkan bahwa halaman tersebut tidak ada (misalnya, error 404). Jangan tertipu! Peretas akan mencoba menipu Anda agar berpikir bahwa situs Anda telah diperbaiki dengan membuat Anda yakin bahwa halaman yang diretas telah hilang atau diperbaiki.
-  Mereka melakukan ini dengan teknik <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">penyelubungan</a> konten. Periksa apakah peretas menggunakan penyelubungan dengan mengetikkan URL situs Anda pada fitur <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Fetch sebagai Google</a> di Search Console.
+  Mereka melakukan ini dengan teknik <a href="https://support.google.com/webmasters/answer/66355">penyelubungan</a> konten. Periksa apakah peretas menggunakan penyelubungan dengan mengetikkan URL situs Anda pada fitur <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Fetch sebagai Google</a> di Search Console.
   Fitur Fetch sebagai Google memungkinkan Anda melihat konten tersembunyi yang mendasarinya.</p>
 
 <a name="fixing"></a>
@@ -45,9 +45,9 @@
 <p>Sebagai langkah awal, buat salinan offline dari semua file sebelum Anda menghapusnya, sebagai jaga-jaga jika Anda perlu memulihkannya nanti. Akan lebih baik lagi jika Anda mem-backup seluruh situs sebelum memulai proses pembersihan. Anda dapat melakukannya dengan menyimpan semua file yang ada di server ke sebuah lokasi di luar server atau mencari opsi backup terbaik untuk Sistem Manajemen Konten (CMS) yang Anda gunakan. Jika Anda menggunakan CMS, sebaiknya backup juga database Anda.</p>
 
   <h3>Menghapus akun yang baru dibuat dari Search Console</h3>
-<p>Jika pemilik baru yang tidak Anda kenal ditambahkan ke akun Search Console, cabut akses mereka sesegera mungkin. Anda dapat memeriksa daftar pengguna yang diverifikasi untuk situs Anda di <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">halaman verifikasi Search Console</a>. Klik "Detail Verifikasi" untuk situs Anda untuk melihat semua pengguna terverifikasi.</p>
+<p>Jika pemilik baru yang tidak Anda kenal ditambahkan ke akun Search Console, cabut akses mereka sesegera mungkin. Anda dapat memeriksa daftar pengguna yang diverifikasi untuk situs Anda di <a href="https://www.google.com/webmasters/verification">halaman verifikasi Search Console</a>. Klik "Detail Verifikasi" untuk situs Anda untuk melihat semua pengguna terverifikasi.</p>
 
-<p>Untuk menghapus pemilik dari Search Console, baca bagian Menghapus Pemilik pada <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">Mengelola pengguna, pemilik, dan izin di Pusat Bantuan</a>.
+<p>Untuk menghapus pemilik dari Search Console, baca bagian Menghapus Pemilik pada <a href="https://support.google.com/webmasters/answer/2453966">Mengelola pengguna, pemilik, dan izin di Pusat Bantuan</a>.
   Anda harus menghapus token verifikasi terkait yang biasanya berupa file HTML di root situs Anda atau file .htaccess yang dihasilkan secara dinamis yang meniru file HTML.</p>
 
 <p>Jika Anda tidak dapat menemukan token verifikasi HTML di situs Anda, periksa aturan penulisan ulang di file .htaccess Anda. Aturan penulisan ulang akan terlihat seperti ini:</p>
@@ -113,14 +113,14 @@
   <h3>Memeriksa apakah situs Anda bersih</h3>
 <p>Setelah selesai menyingkirkan file yang diretas, periksa apakah jerih payah Anda terbayar. Ingat halaman-halaman nonsens yang Anda identifikasi tadi? Gunakan lagi fitur Fetch sebagai Google untuk melihat apakah halaman itu masih ada. Jika Fetch sebagai Google mendapatkan respons "Tidak Ditemukan", kemungkinan Anda telah berhasil menyelesaikan masalah!</p>
 
-<p>Anda juga dapat mengikuti langkah-langkah di <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Pemecah Masalah Situs yang Diretas</a> untuk memeriksa apakah masih ada konten yang diretas di situs Anda.</p>
+<p>Anda juga dapat mengikuti langkah-langkah di <a href="https://support.google.com/webmasters/troubleshooter/6155978">Pemecah Masalah Situs yang Diretas</a> untuk memeriksa apakah masih ada konten yang diretas di situs Anda.</p>
 
   <h3>Bagaimana supaya saya tidak diretas lagi?</h3>
-<p>Memperbaiki kerentanan di situs Anda merupakan langkah penting terakhir untuk memperbaiki situs. Sebuah <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">studi baru-baru ini</a> menemukan bahwa 12% situs yang diretas akan diretas lagi dalam waktu 30 hari. Mengetahui secara persis bagaimana situs Anda diretas akan sangat membantu. Bacalah panduan <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">metode yang paling sering digunakan pengirim spam untuk meretas situs</a> untuk mengawali penyelidikan Anda. Namun, jika tidak dapat mengetahui bagaimana situs Anda diretas, berikut adalah checklist tentang hal-hal yang dapat dilakukan untuk mengurangi kerentanan di situs Anda:</p>
+<p>Memperbaiki kerentanan di situs Anda merupakan langkah penting terakhir untuk memperbaiki situs. Sebuah <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">studi baru-baru ini</a> menemukan bahwa 12% situs yang diretas akan diretas lagi dalam waktu 30 hari. Mengetahui secara persis bagaimana situs Anda diretas akan sangat membantu. Bacalah panduan <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">metode yang paling sering digunakan pengirim spam untuk meretas situs</a> untuk mengawali penyelidikan Anda. Namun, jika tidak dapat mengetahui bagaimana situs Anda diretas, berikut adalah checklist tentang hal-hal yang dapat dilakukan untuk mengurangi kerentanan di situs Anda:</p>
   <ul>
     <li><strong>Memindai komputer secara teratur:</strong> Gunakan pemindai virus tepercaya untuk mendeteksi virus atau kerentanan.</li>
     <li><strong>Mengganti sandi secara teratur:</strong> Mengganti sandi secara teratur untuk semua akun situs web seperti penyedia hosting, FTP, dan CMS dapat mencegah akses tidak sah ke situs Anda. Buatlah sandi yang kuat dan unik untuk setiap akun.</li>
-    <li><strong>Menggunakan <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">Autentikasi Dua Faktor (2FA)</a>:</strong> Pertimbangkan mengaktifkan 2FA pada semua layanan yang mengharuskan Anda untuk login. 2FA mempersulit peretas untuk login sekalipun mereka berhasil mencuri sandi Anda.</li>
+    <li><strong>Menggunakan <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">Autentikasi Dua Faktor (2FA)</a>:</strong> Pertimbangkan mengaktifkan 2FA pada semua layanan yang mengharuskan Anda untuk login. 2FA mempersulit peretas untuk login sekalipun mereka berhasil mencuri sandi Anda.</li>
     <li><strong>Mengupdate CMS, plugin, ekstensi, dan modul secara teratur:</strong> Mudah-mudahan Anda telah melakukan langkah ini. Banyak situs diretas karena menjalankan software usang. Beberapa CMS mendukung update otomatis.</li>
     <li><strong>Mempertimbangkan langganan layanan keamanan untuk memantau situs:</strong> Ada banyak layanan hebat di luar sana yang dapat membantu Anda memantau situs dengan biaya yang kecil. Pertimbangkan untuk mendaftar agar situs Anda tetap aman.</li>
   </ul>
@@ -133,15 +133,15 @@
 <p>Program berikut ini memindai situs dan mungkin dapat menemukan konten yang bermasalah.
   Selain VirusTotal, Google tidak menjalankan atau mendukung program lainnya.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Ini hanyalah beberapa program yang mungkin bisa memindai situs untuk menemukan konten bermasalah. Namun tidak ada jaminan bahwa program pemindai ini akan mengidentifikasi semua jenis konten yang bermasalah.</p>
+<p><a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>: Ini hanyalah beberapa program yang mungkin bisa memindai situs untuk menemukan konten bermasalah. Namun tidak ada jaminan bahwa program pemindai ini akan mengidentifikasi semua jenis konten yang bermasalah.</p>
 
 <p>Berikut adalah resource tambahan dari Google yang dapat membantu Anda:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   Forum Bantuan Google Webmaster</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Bantuan Google Webmaster untuk Situs yang Diretas</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+<li><a href="//safebrowsing.google.com/">Google SafeBrowsing</a></li>
 </ul>
 
 

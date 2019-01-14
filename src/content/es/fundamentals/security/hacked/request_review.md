@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -27,7 +27,7 @@ peligroso o posiblemente engañoso para los usuarios.
 Antes de solicitar una revisión, confirma que hayas realizado los siguientes pasos:
 
 * Verificar la propiedad de tu sitio en Search Console
-* Limpiar tu sitio de hechos de vandalismo de hackers 
+* Limpiar tu sitio de hechos de vandalismo de hackers
 * Corregir la vulnerabilidad
 * Volver a activar tu sitio limpio en línea
 
@@ -58,11 +58,11 @@ Consulta los siguientes canales.
 #### A: Sitio pirateado
 
 *Recibiste una notificación de sitio pirateado en el
-[**informe Manual Actions**](https://www.google.com/webmasters/tools/manual-action)
+[**informe Manual Actions**](https://search.google.com/search-console/manual-actions)
 de la Search Console:*
 
 1. Ahora que has realizado los pasos sucesivos del proceso de limpieza,
-  puedes acceder nuevamente al informe [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+  puedes acceder nuevamente al informe [Manual Actions](https://search.google.com/search-console/manual-actions)
   y buscar el problema, ya sea como una coincidencia en todo el sitio o como una coincidencia
   parcial.
 2. Selecciona **Request a review**.

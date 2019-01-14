@@ -1,13 +1,13 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
 # Demander un examen {: .page-title }
 
-Pour que nous cessions d'indiquer aux internautes que votre site ou votre page sont 
+Pour que nous cessions d'indiquer aux internautes que votre site ou votre page sont
 dangereux ou potentiellement trompeurs, vous devez nous demander de les réexaminer.
 
 <div class="video-wrapper">
@@ -33,36 +33,36 @@ Avant d'envoyer une demande d'examen, vérifiez que vous avez effectué les éta
 
 ### 2. Vérifiez à nouveau que vos pages sont disponibles et non infectées
 
-Pour plus de sûreté, utilisez les commandes Wget ou cURL pour consulter les pages de votre site, telles que votre 
-page d'accueil et une URL modifiée par le pirate informatique. Elles devraient à présent être saines. Si tel est le cas, 
-et si vous êtes certain qu'il en est de même pour l'ensemble des pages de votre site, 
+Pour plus de sûreté, utilisez les commandes Wget ou cURL pour consulter les pages de votre site, telles que votre
+page d'accueil et une URL modifiée par le pirate informatique. Elles devraient à présent être saines. Si tel est le cas,
+et si vous êtes certain qu'il en est de même pour l'ensemble des pages de votre site,
 vous pouvez effectuer une demande d'examen.
 
-Remarque : Vos pages doivent pouvoir être explorées par Googlebot pour vérifier 
-qu'elles ne sont pas infectées. Assurez-vous qu'aucun robot ne bloque leur exploration 
+Remarque : Vos pages doivent pouvoir être explorées par Googlebot pour vérifier
+qu'elles ne sont pas infectées. Assurez-vous qu'aucun robot ne bloque leur exploration
 et qu'aucune balise META ou directive `noindex` pour les robots n'empêche leur indexation.
 
 ### 3. Demandez un examen
 
 Avant de demander un examen :
 
-* **Assurez-vous que le problème a bien été résolu**. 
-Dans le cas contraire, votre site sera signalé comme étant dangereux 
+* **Assurez-vous que le problème a bien été résolu**.
+Dans le cas contraire, votre site sera signalé comme étant dangereux
 pendant plus longtemps encore.
 
-* **Vérifiez à nouveau à quel endroit vous devriez demander un examen**. L'examen est effectué 
+* **Vérifiez à nouveau à quel endroit vous devriez demander un examen**. L'examen est effectué
 au sein d'un outil spécifique en fonction du problème auquel votre site est confronté.
 Reportez-vous aux informations ci-dessous.
 
 
 #### A. Site piraté
 
-*Une notification de site piraté est affichée dans le 
-[**rapport Actions manuelles**](https://www.google.com/webmasters/tools/manual-action)
+*Une notification de site piraté est affichée dans le
+[**rapport Actions manuelles**](https://search.google.com/search-console/manual-actions)
  de la Search Console :*
 
-1. Après avoir exécuté les différentes étapes du processus de nettoyage, 
-vous pouvez revenir au rapport [Actions manuelles](https://www.google.com/webmasters/tools/manual-action)
+1. Après avoir exécuté les différentes étapes du processus de nettoyage,
+vous pouvez revenir au rapport [Actions manuelles](https://search.google.com/search-console/manual-actions)
  et rechercher le problème sous la forme d'une correspondance à l'échelle du site ou d'une correspondance
  partielle.
 2. Sélectionnez **Request a review**.
@@ -76,33 +76,33 @@ vous pouvez revenir au rapport [Actions manuelles](https://www.google.com/webmas
 
 #### B. Logiciels indésirables (y compris malveillants)
 
-*Vous avez reçu une notification de logiciels malveillants ou indésirables dans le 
+*Vous avez reçu une notification de logiciels malveillants ou indésirables dans le
 [**rapport Problèmes de sécurité**](https://www.google.com/webmasters/tools/security-issues)
  de la Search Console :*
 
-1. Ouvrez à nouveau le 
+1. Ouvrez à nouveau le
 [**rapport Problèmes de sécurité**](https://www.google.com/webmasters/tools/security-issues)
  dans la Search Console. Il affiche peut-être encore les avertissements et les exemples
  d'URL infectées que vous avez pu consulter précédemment.
 2. Sélectionnez **Request a review**.
 
     Pour que vous puissiez envoyer une demande d'examen, nous vous demandons de fournir des informations supplémentaires
- sur les mesures que vous avez prises pour résoudre le cas de non-respect des règles sur votre site. Par exemple : 
+ sur les mesures que vous avez prises pour résoudre le cas de non-respect des règles sur votre site. Par exemple :
 "J'ai supprimé le code tiers qui diffusait des logiciels malveillants sur mon
  site Web et je l'ai remplacé par une version plus récente".
 
 
-*Vous n'avez reçu aucune notification de logiciels malveillants ou indésirables dans le 
+*Vous n'avez reçu aucune notification de logiciels malveillants ou indésirables dans le
 [**rapport Problèmes de sécurité**](https://www.google.com/webmasters/tools/security-issues)
 de la Search Console, mais vous en avez reçu une dans votre compte AdWords :*
 
-1. Envoyez une demande d'examen par le biais du 
+1. Envoyez une demande d'examen par le biais du
 [Centre d'assistance AdWords](https://support.google.com/adwords/contact/site_policy).
 
 
 #### C. Hameçonnage ou ingénierie sociale
 
-*Vous avez reçu une notification d'hameçonnage dans le 
+*Vous avez reçu une notification d'hameçonnage dans le
 [**rapport Problèmes de sécurité**](https://www.google.com/webmasters/tools/security-issues)
 de la Search Console :*
 
@@ -116,7 +116,7 @@ de la Search Console :*
  sur les mesures que vous avez prises pour résoudre le cas de non-respect des règles sur votre site. Par exemple :
  "J'ai supprimé la page qui invitait les utilisateurs à saisir des informations personnelles".
 
-3. Vous pouvez également faire une demande d'examen à l'adresse suivante : 
+3. Vous pouvez également faire une demande d'examen à l'adresse suivante :
 [google.com/safebrowsing/report_error/](https://www.google.com/safebrowsing/report_error/).
   Ce rapport permet de signaler les avertissements qui, selon les propriétaires du
  site, ne sont pas justifiés, mais aussi de déclencher un réexamen des pages
@@ -157,7 +157,7 @@ Si nous estimons que vous n'avez pas résolu le problème, d'autres exemples
 
       * [Preventing badware: basics] (Les bases de la prévention contre les logiciels malveillants)(https://www.stopbadware.org/prevent-badware-basics)
       * [Additional resources: hacked sites] (Ressources supplémentaires : sites piratés)(https://www.stopbadware.org/hacked-sites-resources)
- 
+
 * **Si votre demande n'a pas été approuvée**, réexaminez votre site à la recherche de
  [logiciels malveillants](hacked_with_malware) ou de [spam](hacked_with_spam), et vérifiez que de nouvelles
  modifications ou de nouveaux fichiers n'ont pas été ajoutés par le pirate informatique. Vous pouvez également

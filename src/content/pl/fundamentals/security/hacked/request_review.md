@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Zapoznaj się z poniższymi kanałami.
 #### A. Zaatakowana witryna
 
 *Otrzymałeś powiadomienie o zaatakowanej witrynie w
-[**raporcie Ręczne działania**](https://www.google.com/webmasters/tools/manual-action)
+[**raporcie Ręczne działania**](https://search.google.com/search-console/manual-actions)
 usługi Search Console:*
 
 1. Teraz, gdy przeszedłeś kolejne etapy procesu oczyszczania,
-  możesz ponownie przejść do raportu [Ręczne działania](https://www.google.com/webmasters/tools/manual-action)
+  możesz ponownie przejść do raportu [Ręczne działania](https://search.google.com/search-console/manual-actions)
   i znaleźć problem z dopasowaniem do całej witryny lub częściowym
   dopasowaniem.
 2. Wybierz opcję **Request a review**.

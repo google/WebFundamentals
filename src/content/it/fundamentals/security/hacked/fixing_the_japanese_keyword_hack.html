@@ -6,18 +6,18 @@
 
 <body>
 
-<p>Questa guida è stata creata specificamente per un tipo di compromissione, denominata "Compromissione con parole chiave giapponesi", che crea un testo in giapponese generato automaticamente nel tuo sito. Pur essendo destinata agli utenti <a href="https://it.wikipedia.org/wiki/Content_management_system#CMS_pi.C3.B9_diffusi" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">dei più diffusi sistemi di gestione dei contenuti</a>, può risultare utile anche per chi non li utilizza.</p>
+<p>Questa guida è stata creata specificamente per un tipo di compromissione, denominata "Compromissione con parole chiave giapponesi", che crea un testo in giapponese generato automaticamente nel tuo sito. Pur essendo destinata agli utenti <a href="https://it.wikipedia.org/wiki/Content_management_system#CMS_pi.C3.B9_diffusi">dei più diffusi sistemi di gestione dei contenuti</a>, può risultare utile anche per chi non li utilizza.</p>
 
 <p><strong>Nota:</strong> non sei sicuro che il tuo sito sia stato compromesso? Leggi la nostra guida <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">Come faccio a sapere se il mio sito è compromesso</a>.</p>
 
-<aside class="note">Vogliamo essere sicuri che questa guida sia davvero utile. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">Lasciaci un feedback</a> per aiutarci a migliorarla.</aside>
+<aside class="note">Vogliamo essere sicuri che questa guida sia davvero utile. <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">Lasciaci un feedback</a> per aiutarci a migliorarla.</aside>
 
 <h2>Sommario</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Passaggio 1: come identificare questo tipo di compromissione</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Passaggio 2: come risolvere la compromissione</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Passaggio 3: altre risorse</a></li>
+  <li><a href="#identifying">Passaggio 1: come identificare questo tipo di compromissione</a></li>
+  <li><a href="#fixing">Passaggio 2: come risolvere la compromissione</a></li>
+  <li><a href="#resources">Passaggio 3: altre risorse</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Domande frequenti per i siti compromessi</a></li>
 </ul>
 
@@ -28,16 +28,16 @@
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
 
-<p>Con questo tipo di attacco, l'hacker in genere aggiunge se stesso come proprietario di una proprietà in Search Console, manipolando le impostazioni del tuo sito, come il targeting geografico o le Sitemap, per ottenere maggiori profitti. Se hai ricevuto una notifica che ti informa che qualcuno che non conosci ha verificato il tuo sito in <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, è molto probabile che il tuo sito sia stato compromesso.</p>
+<p>Con questo tipo di attacco, l'hacker in genere aggiunge se stesso come proprietario di una proprietà in Search Console, manipolando le impostazioni del tuo sito, come il targeting geografico o le Sitemap, per ottenere maggiori profitti. Se hai ricevuto una notifica che ti informa che qualcuno che non conosci ha verificato il tuo sito in <a href="https://www.google.com/webmasters/tools/">Search Console</a>, è molto probabile che il tuo sito sia stato compromesso.</p>
 
-<p>Per prima cosa, accedi allo <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">strumento Problemi di sicurezza</a> in Search Console per controllare se Google ha rilevato una di queste pagine compromesse sul tuo sito. Per individuare questo genere di pagine, puoi anche aprire la Ricerca Google e digitare <code class="notranslate l10n-notranslate">site:[your site root URL]</code> nel campo di ricerca. In questo modo vedrai le pagine che Google ha indicizzato per il tuo sito, incluse quelle compromesse. Scorri alcune pagine dei risultati di ricerca per vedere se sono presenti URL insoliti. Se la Ricerca Google non mostra contenuti compromessi, utilizza gli stessi termini di ricerca con un altro motore di ricerca. Altri motori potrebbero mostrare contenuti compromessi che Google ha invece rimosso dall'indice. Ecco un esempio dei risultati che potresti visualizzare.</p>
+<p>Per prima cosa, accedi allo <a href="https://www.google.com/webmasters/tools/security-issues">strumento Problemi di sicurezza</a> in Search Console per controllare se Google ha rilevato una di queste pagine compromesse sul tuo sito. Per individuare questo genere di pagine, puoi anche aprire la Ricerca Google e digitare <code class="notranslate l10n-notranslate">site:[your site root URL]</code> nel campo di ricerca. In questo modo vedrai le pagine che Google ha indicizzato per il tuo sito, incluse quelle compromesse. Scorri alcune pagine dei risultati di ricerca per vedere se sono presenti URL insoliti. Se la Ricerca Google non mostra contenuti compromessi, utilizza gli stessi termini di ricerca con un altro motore di ricerca. Altri motori potrebbero mostrare contenuti compromessi che Google ha invece rimosso dall'indice. Ecco un esempio dei risultati che potresti visualizzare.</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <p>Come puoi notare, i risultati di ricerca riportati in questa figura contengono molte pagine che non sono state create dal proprietario del sito. Se osservi attentamente le descrizioni, puoi vedere un esempio del testo in giapponese creato da questo tipo di compromissione.</p>
 
 <p>Quando visiti una pagina compromessa, potresti visualizzare un messaggio che indica che la pagina non esiste (ad esempio, un errore 404). Non farti ingannare. Gli hacker tentano di farti credere che il sito è stato pulito dall'infezione mostrando che le pagine compromesse non sono più disponibili o sono state corrette.
-  A tale scopo effettuano il <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">cloaking</a> dei contenuti. Per verificare l'eventuale presenza del cloaking, inserisci gli URL del tuo sito nello strumento <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Visualizza come Google</a>,
+  A tale scopo effettuano il <a href="https://support.google.com/webmasters/answer/66355">cloaking</a> dei contenuti. Per verificare l'eventuale presenza del cloaking, inserisci gli URL del tuo sito nello strumento <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Visualizza come Google</a>,
   che ti consente di vedere i contenuti sottostanti anche se sono nascosti.</p>
 
 <a name="fixing"></a>
@@ -45,9 +45,9 @@
 <p>Prima di iniziare, crea una copia offline dei file da rimuovere, nel caso in cui fosse necessario ripristinarli in un secondo momento. Ancor meglio, esegui il backup dell'intero sito prima di iniziare la procedura di pulizia, salvando tutti i file presenti sul server in un percorso offline o individuando le migliori opzioni di backup per il tuo sistema specifico di gestione dei contenuti. Se utilizzi un sistema di gestione dei contenuti, ti consigliamo di eseguire anche il backup del database.</p>
 
   <h3>Rimuovere gli account di nuova creazione da Search Console</h3>
-<p>Se non riconosci un nuovo proprietario che è stato aggiunto al tuo account Search Console, intervieni il più presto possibile con la revoca dell'accesso. Nella <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">pagina di verifica di Search Console</a> puoi controllare quali utenti sono verificati per il tuo sito. Per visualizzare tutti gli utenti verificati, fai clic sul pulsante "Dettagli verifica" relativo al sito.</p>
+<p>Se non riconosci un nuovo proprietario che è stato aggiunto al tuo account Search Console, intervieni il più presto possibile con la revoca dell'accesso. Nella <a href="https://www.google.com/webmasters/verification">pagina di verifica di Search Console</a> puoi controllare quali utenti sono verificati per il tuo sito. Per visualizzare tutti gli utenti verificati, fai clic sul pulsante "Dettagli verifica" relativo al sito.</p>
 
-<p>Per rimuovere un proprietario da Search Console, consulta la sezione dedicata all'argomento <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">nella pagina Gestione di utenti, proprietari e autorizzazioni del Centro assistenza</a>.
+<p>Per rimuovere un proprietario da Search Console, consulta la sezione dedicata all'argomento <a href="https://support.google.com/webmasters/answer/2453966">nella pagina Gestione di utenti, proprietari e autorizzazioni del Centro assistenza</a>.
   Dovrai eliminare il token di verifica associato, che in genere è un file HTML incluso nella pagina principale del tuo sito o un file .htaccess, generato dinamicamente, che simula un file HTML.</p>
 
 <p>Se non riesci a trovare un token di verifica HTML sul tuo sito, controlla se è presente una regola di riscrittura nel file .htaccess. La regola di riscrittura sarà simile alla seguente:</p>
@@ -113,14 +113,14 @@
   <h3>Verificare se il sito è pulito</h3>
 <p>Dopo aver eliminato i file compromessi, controlla se i tuoi sforzi sono stati ripagati. Ricordi le pagine di contenuti senza senso identificate in precedenza? Utilizza di nuovo lo strumento Visualizza come Google per vedere se esistono ancora. Se lo strumento restituisce "Non trovato", è probabile che il tuo sito goda di ottima salute.</p>
 
-<p>Per controllare se sul tuo sito sono ancora presenti contenuti compromessi, puoi anche seguire la procedura descritta nello <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">Strumento per la risoluzione dei problemi per siti compromessi</a>.</p>
+<p>Per controllare se sul tuo sito sono ancora presenti contenuti compromessi, puoi anche seguire la procedura descritta nello <a href="https://support.google.com/webmasters/troubleshooter/6155978">Strumento per la risoluzione dei problemi per siti compromessi</a>.</p>
 
   <h3>Come faccio a evitare future compromissioni?</h3>
-<p>Correggere le vulnerabilità del tuo sito è l'ultimo passaggio indispensabile per la procedura di pulizia. Secondo un <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">recente studio</a>, il 12% dei siti compromessi subisce un nuovo attacco entro 30 giorni. È quindi utile sapere esattamente come è stato compromesso il tuo sito. Per iniziare gli accertamenti, leggi la guida <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Principali modalità di compromissione dei siti web da parte degli spammer</a>. Tuttavia, se non riesci a scoprire come è stato compromesso il tuo sito, attieniti al seguente elenco di controllo che indica quali misure puoi adottare per mitigare le vulnerabilità nel tuo sito:</p>
+<p>Correggere le vulnerabilità del tuo sito è l'ultimo passaggio indispensabile per la procedura di pulizia. Secondo un <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">recente studio</a>, il 12% dei siti compromessi subisce un nuovo attacco entro 30 giorni. È quindi utile sapere esattamente come è stato compromesso il tuo sito. Per iniziare gli accertamenti, leggi la guida <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">Principali modalità di compromissione dei siti web da parte degli spammer</a>. Tuttavia, se non riesci a scoprire come è stato compromesso il tuo sito, attieniti al seguente elenco di controllo che indica quali misure puoi adottare per mitigare le vulnerabilità nel tuo sito:</p>
   <ul>
     <li><strong>Esegui periodicamente la scansione del computer:</strong> utilizza un programma antivirus attendibile per verificare la presenza di virus o vulnerabilità.</li>
     <li><strong>Modifica regolarmente le password:</strong> la modifica regolare delle password di tutti gli account associati al tuo sito web, come quelli del provider host, della piattaforma FTP e del sistema di gestione dei contenuti, può impedire l'accesso non autorizzato al tuo sito web. È importante creare una password univoca e complessa per ogni account.</li>
-    <li><strong>Utilizza<a href="https://it.wikipedia.org/wiki/Autenticazione_a_due_fattori" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g=="> l'autenticazione a due fattori (2FA)</a>:</strong> prova ad attivare l'autenticazione a due fattori in tutti i servizi che richiedono l'accesso. L'autenticazione a due fattori complica l'accesso per gli hacker, anche se sono riusciti a rubarti la password.</li>
+    <li><strong>Utilizza<a href="https://it.wikipedia.org/wiki/Autenticazione_a_due_fattori"> l'autenticazione a due fattori (2FA)</a>:</strong> prova ad attivare l'autenticazione a due fattori in tutti i servizi che richiedono l'accesso. L'autenticazione a due fattori complica l'accesso per gli hacker, anche se sono riusciti a rubarti la password.</li>
     <li><strong>Aggiorna regolarmente il sistema di gestione dei contenuti, i plug-in, le estensioni e i moduli:</strong> sperabilmente, hai già completato questo passaggio. Molti siti vengono compromessi perché eseguono software obsoleti. In alcuni sistemi di gestione dei contenuti è supportato l'aggiornamento automatico.</li>
     <li><strong>Valuta la possibilità di attivare un abbonamento a un servizio di sicurezza che monitori il tuo sito:</strong> il mercato offre molti servizi eccellenti che possono monitorare il tuo sito in cambio di una modesta tariffa. Per mantenere sicuro il tuo sito, valuta se registrarti a tali servizi.</li>
   </ul>
@@ -133,15 +133,15 @@
 <p>Questi strumenti analizzano i siti e potrebbero riuscire a rilevare contenuti problematici.
   Google non li esegue e non li supporta, ad eccezione dello strumento VirusTotal.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a> sono solo alcuni degli strumenti che potrebbero essere in grado di analizzare il sito per rilevare eventuali contenuti problematici. Tieni presente che questi strumenti di analisi non garantiscono l'identificazione di ogni tipo di contenuto problematico.</p>
+<p><a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a> sono solo alcuni degli strumenti che potrebbero essere in grado di analizzare il sito per rilevare eventuali contenuti problematici. Tieni presente che questi strumenti di analisi non garantiscono l'identificazione di ogni tipo di contenuto problematico.</p>
 
 <p>Ecco alcune risorse aggiuntive di Google che potrebbero essere utili:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   Forum di assistenza per i webmaster di Google</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Guida per i siti compromessi destinata ai webmaster di Google</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+<li><a href="//safebrowsing.google.com/">Google SafeBrowsing</a></li>
 </ul>
 
 

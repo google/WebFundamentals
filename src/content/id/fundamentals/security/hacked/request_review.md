@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Silakan merujuk ke saluran di bawah ini.
 #### A. Situs yang diretas
 
 *Anda menerima pemberitahuan situs yang diretas di
-[**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action)
+[**Manual Actions report**](https://search.google.com/search-console/manual-actions)
 dari Search Console:*
 
 1. Setelah Anda menyelesaikan langkah-langkah pembersihan secara berurutan,
-  Anda bisa masuk ke [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+  Anda bisa masuk ke [Manual Actions](https://search.google.com/search-console/manual-actions)
   report lagi dan menemukan masalahnya baik sebagai kecocokan di seluruh situs, atau kecocokan
   sebagian.
 2. Pilih **Request a review**.
