@@ -257,4 +257,3 @@ As the device landscape continues to widen, it's more important than ever that
 web developers consider the entire spectrum of users when making decisions that
 affect their experience.
 
-{% include "comment-widget.html" %}

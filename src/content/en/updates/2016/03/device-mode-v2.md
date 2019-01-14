@@ -110,4 +110,3 @@ You'll find full coverage about everything that's in it in the
 We'd love to hear from you on Twitter or if you need more than 140 characters,
 on our [bug tracker](https://crbug.com/new) (yes, even for feature requests).
 
-{% include "comment-widget.html" %}

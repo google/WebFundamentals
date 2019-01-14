@@ -100,4 +100,3 @@ and use the `visibilityChange` listener to avoid doing unnecessary work in backg
 Chrome provides the `--disable-background-timer-throttling` flag for use cases like
 running test suites and other user-sanctioned heavy computations.
 
-{% include "comment-widget.html" %}

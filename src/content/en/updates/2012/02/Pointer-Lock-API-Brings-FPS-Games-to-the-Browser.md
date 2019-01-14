@@ -57,4 +57,3 @@ You can see a fuller example at [html5-demos.com](http://html5-demos.appspot.com
 - [W3C Specificiation](http://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html)
 
 
-{% include "comment-widget.html" %}

@@ -31,4 +31,3 @@ Synchronous XHRs are bad for a number of reasons, but MSDN's blog post, "[Why Yo
 This is a generally a great change for the web, but it has the potential to break some existing apps that were relying on synchronous behavior. Please look over your XHR code and update it ASAP to use asynchronous requests.
 
 
-{% include "comment-widget.html" %}

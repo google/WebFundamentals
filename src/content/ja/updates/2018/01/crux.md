@@ -29,6 +29,4 @@ description: Announcing the release of a new country dimension in the Chrome Use
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

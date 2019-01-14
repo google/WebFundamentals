@@ -172,4 +172,3 @@ In the meantime, please let us know if you find bugs or have feature requests: [
 
 
 
-{% include "comment-widget.html" %}

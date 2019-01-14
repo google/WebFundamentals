@@ -411,4 +411,3 @@ element's computed styles.
 [position_sticky_spec]: https://drafts.csswg.org/css-position/#valdef-position-sticky
 [position_sticky_crstatus_entry]: https://www.chromestatus.com/features/6190250464378880
 
-{% include "comment-widget.html" %}

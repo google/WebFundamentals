@@ -42,4 +42,3 @@ Note: As of Oct 8, 2012 live audio input is now enabled for Windows, as long as 
 <p>Finally, you may want to take a look at the <a href="http://webaudiodemos.appspot.com/">collection of my web audio demos</a> - by the time you read this, I may have some more live audio demos up!</p>
 
 
-{% include "comment-widget.html" %}

@@ -38,4 +38,3 @@ Content Security Policy! It helps you reduce the risk of cross-site scripting an
 [h5r]: http://www.html5rocks.com/en/tutorials/security/content-security-policy/
 
 
-{% include "comment-widget.html" %}

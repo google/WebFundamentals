@@ -55,4 +55,3 @@ PNaCl helps developers produce a platform-independent form of their native appli
  
 <div style="clear:both;"></div>
 
-{% include "comment-widget.html" %}

@@ -84,4 +84,3 @@ With many heartz,
 The MDL [contributors](https://github.com/google/material-design-lite/graphs/contributors)
 
 
-{% include "comment-widget.html" %}

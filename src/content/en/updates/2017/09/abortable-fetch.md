@@ -306,4 +306,3 @@ be controlled at once! Further down the line, we'll look at enabling [priority
 changes](https://github.com/WICG/priority-hints/) throughout the life of a fetch, and a higher-level
 API to [observe fetch progress](https://github.com/whatwg/fetch/issues/607).
 
-{% include "comment-widget.html" %}

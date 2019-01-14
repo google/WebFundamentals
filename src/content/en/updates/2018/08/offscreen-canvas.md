@@ -178,4 +178,3 @@ to the DOM surrounding the canvas.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

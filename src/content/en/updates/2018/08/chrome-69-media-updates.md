@@ -262,8 +262,6 @@ continue to raise "stalled" events as they do today.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [Chrome 70]: /web/updates/2018/09/chrome-70-media-updates#av1-decoder
 [CENC mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-2:v1:en
 [CBCS mode]: https://www.iso.org/obp/ui/#iso:std:iso-iec:23001:-7:ed-3:v1:en

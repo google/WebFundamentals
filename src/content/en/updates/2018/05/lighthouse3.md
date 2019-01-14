@@ -185,4 +185,3 @@ is the same, but the underlying metric is slightly different.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

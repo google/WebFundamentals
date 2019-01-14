@@ -302,4 +302,3 @@ Or check the code:
 
 
 
-{% include "comment-widget.html" %}

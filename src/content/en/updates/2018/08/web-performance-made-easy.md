@@ -800,4 +800,3 @@ Yoav Weiss, Susie Lu, Yusuke Utsunomiya, Tom Ankers, Lighthouse & Google Doodles
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

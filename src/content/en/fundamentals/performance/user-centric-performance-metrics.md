@@ -796,4 +796,3 @@ Voice your support on concerns on new API proposals:
 
 * [https://github.com/w3c/charter-webperf/issues](https://github.com/w3c/charter-webperf/issues)
 
-{% include "comment-widget.html" %}

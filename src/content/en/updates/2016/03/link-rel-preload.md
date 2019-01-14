@@ -69,4 +69,3 @@ which was never implemented in browsers other than Chrome. As such, Chrome 50
 `<link rel="subresource">`.
 
 
-{% include "comment-widget.html" %}

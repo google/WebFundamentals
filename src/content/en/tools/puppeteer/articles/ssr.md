@@ -861,8 +861,6 @@ rendering some of my apps:
 
 <br>
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-tools.html" %}
 
 [headless-chrome]: /web/updates/2017/04/headless-chrome

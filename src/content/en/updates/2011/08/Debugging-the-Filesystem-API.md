@@ -25,4 +25,3 @@ During my [endeavors](http://oreilly.com/catalog/0636920021360) with the Filesys
 5. <b>Don't forget about error callbacks</b>. The Filesystem API lives in an asynchronous world (unless you're using the sync version in Workers). Always use error callback in your API calls. They're optional, but you'll save yourself a lot of grief later on when things blow up.
 
 
-{% include "comment-widget.html" %}

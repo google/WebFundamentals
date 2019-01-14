@@ -214,4 +214,3 @@ Note: check out the [example repo](https://github.com/ebidel/headless-karma-trav
 
 <br>
 
-{% include "comment-widget.html" %}

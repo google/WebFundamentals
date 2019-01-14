@@ -167,8 +167,6 @@ flag. It is a small primitive that allows you to write certain effects
 in a much more efficient way. Try them out and let us know what you think or if
 you have questions.
 
-{% include "comment-widget.html" %}
-
 [MutationObserver]: /web/updates/2012/02/Detect-DOM-changes-with-Mutation-Observers
 [PerformanceObserver]: /web/updates/2016/06/performance-observer
 [IntersectionObserver]: /web/updates/2016/04/intersectionobserver

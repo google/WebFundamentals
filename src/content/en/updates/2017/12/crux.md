@@ -57,4 +57,3 @@ documentation](/web/tools/chrome-user-experience-report/), and join the
 if you have questions or feedback. We're excited to see what you'll build with
 the expanded dataset!
 
-{% include "comment-widget.html" %}

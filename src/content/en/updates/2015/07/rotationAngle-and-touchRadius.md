@@ -126,4 +126,3 @@ read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6
 * [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)
 
 
-{% include "comment-widget.html" %}

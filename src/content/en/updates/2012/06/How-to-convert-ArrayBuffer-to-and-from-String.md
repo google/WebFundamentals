@@ -99,4 +99,3 @@ check out the demo here</a>.
 
 In Chrome 20, it is almost 27 times faster to use the direct `ArrayBuffer` manipulation code on this article than it is to use the `FileReader`/`Blob` method.
 
-{% include "comment-widget.html" %}

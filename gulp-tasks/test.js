@@ -546,11 +546,14 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('FEED_WIDGET') >= 0) {
       global.WF.options.ignoreMissingFeedWidget = true;
     }
-    if (ciFlags.indexOf('SKIP_TYPOS') >= 0) {
-      global.WF.options.skipTypos = true;
+    if (ciFlags.indexOf('TYPOS') >= 0) {
+      global.WF.options.ignoreTypos = true;
     }
     if (ciFlags.indexOf('TEMPLATE_TAGS') >= 0) {
       global.WF.options.ignoreTemplateTags = true;
+    }
+    if (ciFlags.indexOf('HELPFUL_WIDGET') >= 0) {
+      global.WF.options.ignoreHelpfulWidget = true;
     }
   });
 });
@@ -572,13 +575,13 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignoreFileSize'), 'Skips file size checks');
     gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
-    gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
     gutil.log(' ', chalk.cyan('--ignoreHelpfulWidget'), 'Skips helpful widget');
     gutil.log(' ', chalk.cyan('--ignoreTemplateTags'),
       'Skips template tag check ({{)');
     gutil.log(' ', chalk.cyan('--ignoreMissingFeedWidget'),
       'Skips feed widget check on updates');
-    gutil.log(' ', chalk.cyan('--skipTypos'), 'Skips common typo checks');
+    gutil.log(' ', chalk.cyan('--ignoreTypos'), 'Ignores common typos');
+    return true;
   }
 
   if ((global.WF.options.testMaster) ||
@@ -594,8 +597,8 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreCommentWidget = true;
     global.WF.options.ignoreHelpfulWidget = true;
     global.WF.options.ignoreMissingFeedWidget = true;
+    global.WF.options.ignoreTypos = true;
     global.WF.options.hideIgnored = true;
-    global.WF.options.skipTypos = true;
   }
 
   let opts = {
@@ -674,13 +677,6 @@ gulp.task('test', ['test:travis-init'], function() {
     opts.checkPermissions = false;
   }
 
-  // Supress missing comment widget warnings
-  if (global.WF.options.ignoreCommentWidget) {
-    const msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
-    gutil.log(chalk.bold.blue(' Option:'), msg);
-    opts.ignoreMissingCommentWidget = true;
-  }
-
   // Supress missing helpful widget warnings
   if (global.WF.options.ignoreHelpfulWidget) {
     const msg = `${chalk.cyan('--ignoreHelpfulWidget')} was used.`;
@@ -709,18 +705,18 @@ gulp.task('test', ['test:travis-init'], function() {
     opts.ignoreTemplateTags = true;
   }
 
+  // Skips the common typos checks
+  if (global.WF.options.ignoreTypos) {
+    const msg = `${chalk.cyan('--ignoreTypos')} was used.`;
+    gutil.log(chalk.bold.blue(' Option:'), msg);
+    opts.ignoreTypos = true;
+  }
+
   // Hide ignored file warning
   if (global.WF.options.hideIgnored) {
     const msg = `${chalk.cyan('--hideIgnored')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.hideIgnored = true;
-  }
-
-  // Skips the common typos checks
-  if (global.WF.options.skipTypos) {
-    const msg = `${chalk.cyan('--skipTypos')} was used.`;
-    gutil.log(chalk.bold.blue(' Option:'), msg);
-    opts.skipTypos = true;
   }
 
   return getFiles()

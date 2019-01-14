@@ -59,4 +59,3 @@ If you'd like to apply jQuery Datepicker only on platforms without `input[type=d
     
 
 
-{% include "comment-widget.html" %}

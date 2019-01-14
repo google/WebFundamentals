@@ -117,4 +117,3 @@ Check the [Structured Data documentation](/structured-data/) on developers.googl
 Consider submitting your shiny new elements to [customelements.io](http://customelements.io/){: .external } for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) or [+Polymer community](https://plus.google.com/communities/115626364525706131031) to show off the awesomeness!
 
 
-{% include "comment-widget.html" %}

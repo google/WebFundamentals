@@ -87,4 +87,3 @@ If set to `true`, `ignoreVary` means that cache lookups will be done without reg
 Developers who want to use `CacheQueryOptions` in versions of Chrome prior to 54 can make use of [a polyfill](https://www.npmjs.com/package/sw-cache-options), courtesy of [Arthur Stolyar](https://twitter.com/nekrtemplar).
 
 
-{% include "comment-widget.html" %}

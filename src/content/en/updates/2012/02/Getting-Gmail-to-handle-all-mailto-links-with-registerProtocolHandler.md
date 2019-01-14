@@ -36,4 +36,3 @@ Here's how:
 <br>
 
 
-{% include "comment-widget.html" %}

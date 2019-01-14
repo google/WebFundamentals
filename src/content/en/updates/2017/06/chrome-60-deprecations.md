@@ -207,4 +207,3 @@ suppressing the dialog in that case.
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

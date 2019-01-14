@@ -23,4 +23,3 @@ Some options include:
 Give them a shot, let us know in the comments how they work for you.
 
 
-{% include "comment-widget.html" %}

@@ -31,4 +31,3 @@ Actually keeping up with those features can be a challenge, but only if you don'
 Follow the above, stay up to date, and build for modern browsers!
 
 
-{% include "comment-widget.html" %}

@@ -520,4 +520,3 @@ Though it's still incomplete, here's a sneak peek of what to expect in the near 
 </div>
 
 
-{% include "comment-widget.html" %}

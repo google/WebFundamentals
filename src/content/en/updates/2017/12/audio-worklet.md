@@ -336,4 +336,3 @@ repository](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/)
 Audio Worklet is enabled by default for Chrome 66 or later. In Chrome 64 and 65,
 the feature was behind the experimental flag.
 
-{% include "comment-widget.html" %}

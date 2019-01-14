@@ -235,4 +235,3 @@ Check out the [sample](https://jsbin.com/nigahi/latest/edit?html,output) to give
 useful tool in your toolbelt!
 
 
-{% include "comment-widget.html" %}

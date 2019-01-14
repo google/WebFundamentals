@@ -173,4 +173,3 @@ If you have any questions, send them over to
 [@agektmr](https://twitter.com/agektmr) or
 &#x61;&#x67;&#x65;&#x6b;&#x74;&#x6d;&#x72;&#x40;chromium.org.
 
-{% include "comment-widget.html" %}

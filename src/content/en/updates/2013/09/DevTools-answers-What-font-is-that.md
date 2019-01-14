@@ -32,4 +32,3 @@ Under **Computed Styles**, you'll now see a summary of the typeface(s) used for 
 Enjoy and please leave a comment if you have any feedback.
 
 
-{% include "comment-widget.html" %}

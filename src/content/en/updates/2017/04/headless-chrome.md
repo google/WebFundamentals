@@ -562,6 +562,4 @@ For bugs in the DevTools protocol, file them at [github.com/ChromeDevTools/devto
 
 <br>
 
-{% include "comment-widget.html" %}
-
 [dtviewer]: https://chromedevtools.github.io/devtools-protocol/

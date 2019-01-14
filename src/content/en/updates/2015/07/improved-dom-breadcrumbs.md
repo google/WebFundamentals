@@ -28,4 +28,3 @@ In Canary, you can enable the <em>Material Design</em> experiment. A few nice th
 Don't forget, you can click each "crumb" within the breadcrumb trail. Doing this highlights the relevant DOM node in the DOM tree view.
 
 
-{% include "comment-widget.html" %}

@@ -255,6 +255,4 @@ for more information, including:
 * Tracking if the app has been installed
 * Determining if your app is running as an installed app
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-updates.html" %}

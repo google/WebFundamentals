@@ -233,8 +233,6 @@ Usage in JavaScript:
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5354410980933632) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=685456)
 
-{% include "comment-widget.html" %}
-
 [remoteplayback]: https://w3c.github.io/remote-playback/
 [ControlsList API]: https://github.com/WICG/controls-list/blob/gh-pages/explainer.md
 [improved Add to Home screen]: https://blog.chromium.org/2017/02/integrating-progressive-web-apps-deeply.html

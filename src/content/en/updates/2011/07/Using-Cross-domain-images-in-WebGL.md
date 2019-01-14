@@ -17,4 +17,3 @@ book_path: /web/updates/_book.yaml
 <p>Read all the details in <a href="http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">Using Cross-domain images in WebGL and Chrome 13</a>.</p>
 
 
-{% include "comment-widget.html" %}

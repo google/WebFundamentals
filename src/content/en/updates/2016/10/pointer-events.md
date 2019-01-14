@@ -310,4 +310,3 @@ handlers in the `if` block, and move your mouse/touch event handlers to the
 
 So go ahead, give them a spin and let us know what you think!
 
-{% include "comment-widget.html" %}

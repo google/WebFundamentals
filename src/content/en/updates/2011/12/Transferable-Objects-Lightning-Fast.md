@@ -57,4 +57,3 @@ Feature detecting is a bit tricky with this one. My recommendation is to send a 
 *Updated (2011-12-13):* Code snippet to show `webkitPostMessage()` signature is different for window and worker.
 *Updated (2016-11-03):* Removed vendor prefixes and updated code snippets
 
-{% include "comment-widget.html" %}

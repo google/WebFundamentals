@@ -85,4 +85,3 @@ especially for slow gestures.
 There is also plan to bring this improvement to mobile Safari as well: [https://bugs.webkit.org/show_bug.cgi?id=133180](https://bugs.webkit.org/show_bug.cgi?id=133180).
 
 
-{% include "comment-widget.html" %}

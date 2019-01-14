@@ -107,4 +107,3 @@ A few other articles that are worth checking out on the subject:
 * [Building Apps With The Yeoman Workflow](https://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254)
 
 
-{% include "comment-widget.html" %}

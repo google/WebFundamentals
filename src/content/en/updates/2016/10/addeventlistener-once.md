@@ -120,4 +120,3 @@ Thanks to [Ingvar Stepanyan](https://twitter.com/RReverser) for
 [feedback](https://twitter.com/RReverser/status/789160090624557056) about the
 sample code in this post.
 
-{% include "comment-widget.html" %}

@@ -91,4 +91,3 @@ The mini-timeline across the top of the pane lets you play back the painting pro
 When it comes to performance optimization, knowledge of the browser can be incredibly powerful. By giving you a peek under the hood, these Timeline updates help clarify the relationship between your code and Chrome’s rendering processes. Try out these new options in the Timeline and see what Chrome DevTools can do to enhance your jank-hunting workflow!
 
 
-{% include "comment-widget.html" %}

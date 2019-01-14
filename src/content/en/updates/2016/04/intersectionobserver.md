@@ -224,4 +224,3 @@ You can start using `IntersectionObservers` right now in Chrome Canary! Tell
 us what you came up with.
 
 
-{% include "comment-widget.html" %}

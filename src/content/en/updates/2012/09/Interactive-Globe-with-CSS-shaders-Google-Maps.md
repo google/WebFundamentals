@@ -96,4 +96,3 @@ Avaz Bokiev is a web developer in NYC. <a href="https://twitter.com/samarkandiy"
 </aside>
 
 
-{% include "comment-widget.html" %}

@@ -17,4 +17,3 @@ description: You can double click on the opening tag name of a node in the Eleme
 You can double click on the opening tag name of a node in the Elements Panel to edit it. When you do, the closing tag is automatically updated with your change.
 
 
-{% include "comment-widget.html" %}

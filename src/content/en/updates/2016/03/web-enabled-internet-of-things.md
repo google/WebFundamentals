@@ -551,4 +551,3 @@ refer to the Edison and breadboard sketch below:
 ![Sketch](/web/updates/images/2016/03/web-enabled-internet-of-things/sketch.png)
 
 
-{% include "comment-widget.html" %}

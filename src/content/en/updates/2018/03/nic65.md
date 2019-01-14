@@ -192,4 +192,3 @@ here to tell you -- what’s new in Chrome!
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

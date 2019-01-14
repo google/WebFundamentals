@@ -108,4 +108,3 @@ The links below capture most of the resources that explain the innerworkings of 
 If you know of other browser internals posts to capture, link them in the comments!
 
 
-{% include "comment-widget.html" %}

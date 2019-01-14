@@ -96,4 +96,3 @@ related.
 Until next month!
 
 
-{% include "comment-widget.html" %}

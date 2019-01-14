@@ -40,4 +40,3 @@ Eventually, sending `ArrayBuffers` will be removed, but for the time being you'l
 As always, you can keep up with these types of changes by following [chromestatus.com](http://chromestatus.com).
 
 
-{% include "comment-widget.html" %}

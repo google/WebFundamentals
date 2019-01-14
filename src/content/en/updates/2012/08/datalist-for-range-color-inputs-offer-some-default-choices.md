@@ -55,4 +55,3 @@ Note that `datalist` for `input[type=color]` only accepts the hex color values (
 To see these new features in action, visit [a demo page](http://demo.agektmr.com/datalist/){: .external }.
 
 
-{% include "comment-widget.html" %}

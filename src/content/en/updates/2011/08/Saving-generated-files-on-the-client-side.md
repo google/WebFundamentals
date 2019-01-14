@@ -63,4 +63,3 @@ book_path: /web/updates/_book.yaml
     
 
 
-{% include "comment-widget.html" %}

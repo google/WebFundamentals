@@ -275,4 +275,3 @@ repository](https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/cod
 
 See you next time!
 
-{% include "comment-widget.html" %}

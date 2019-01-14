@@ -193,6 +193,4 @@ Note: Breakpoint saat ini tidak didukung di CSS Paint API, tetapi akan diaktifka
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

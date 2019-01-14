@@ -67,4 +67,3 @@ Blob support for IndexedDB is already available on Firefox and Internet Explorer
 Enjoy!
 
 
-{% include "comment-widget.html" %}

@@ -364,6 +364,4 @@ user experience that would have been tricky to achieve without CSS
 
 <br>
 
-{% include "comment-widget.html" %}
-
 [spec]: https://wicg.github.io/overscroll-behavior/
