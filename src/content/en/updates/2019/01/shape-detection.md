@@ -211,8 +211,8 @@ support face detection per se, but not face landmark detection (eyes, nose, mout
 existence and the location of text may be recognized, but not the actual text contents.
 
 Note: This API is an optimization and not something guaranteed to be available from the platform
-for every user. We are looking for developers to combine this with their own image recognition code
-and take advantage of the native optimization when it is available.
+for every user. Developers are expected to combine this with their own image recognition code and
+take advantage of the native optimization when it is available.
 
 ## Feedback {: #feedback }
 
