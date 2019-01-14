@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ book_path: /web/fundamentals/_book.yaml
 #### A. Взломанный сайт
 
 *Вы получили уведомление о взломе сайта в отчете
-[**Manual Actions**](https://www.google.com/webmasters/tools/manual-action)
+[**Manual Actions**](https://search.google.com/search-console/manual-actions)
 в Search Console.*
 
 1. После успешного выполнения процесса очистки
-вы можете вернуться к отчету [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+вы можете вернуться к отчету [Manual Actions](https://search.google.com/search-console/manual-actions)
  и найти описание проблемы либо в разделе совпадений на всем сайте, либо в разделе частичных совпадений.
 2. Выберите **Request a review**.
 

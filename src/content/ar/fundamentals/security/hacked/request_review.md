@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ book_path: /web/fundamentals/_book.yaml
 #### أ. موقع ويب مخترق
 
 *لقد تلقيتَ إخطارًا بموقع ويب مخترق في
-[**تقرير الإجراءات اليدوية**](https://www.google.com/webmasters/tools/manual-action)
+[**تقرير الإجراءات اليدوية**](https://search.google.com/search-console/manual-actions)
 في Search Console:*
 
 1. الآن بعد أن تجاوزتَ جميع الخطوات المتتابعة لعملية التنظيف،
- يمكنك الانتقال إلى تقرير [الإجراءات اليدوية](https://www.google.com/webmasters/tools/manual-action)
+ يمكنك الانتقال إلى تقرير [الإجراءات اليدوية](https://search.google.com/search-console/manual-actions)
  مرة أخرى واكتشاف ما إذا كانت المشكلة من نوع مطابقة على مستوى موقع الويب أم مطابقة جزئية
 .
 2. حدد **Request a review**.

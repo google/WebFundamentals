@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -16,7 +16,7 @@ Follow these steps if:
 If you’re unsure if your site is actually hacked, or if you think your site
 was incorrectly flagged, start by registering your site in
 [Search Console](https://www.google.com/webmasters/tools/home). Go to the
-[Manual Actions](https://www.google.com/webmasters/tools/manual-action) or the
+[Manual Actions](https://search.google.com/search-console/manual-actions) or the
 [Security Issues](https://www.google.com/webmasters/tools/security-issues)
 sections of Search Console and look for example URLs where Google detected
 that your site has been hacked.

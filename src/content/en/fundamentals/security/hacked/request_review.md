@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Please refer to the channels below.
 #### A. Hacked site
 
 *You received a hacked site notification in the
-[**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action)
+[**Manual Actions report**](https://search.google.com/search-console/manual-actions)
 of the Search Console:*
 
 1. Now that you have gone through the successive steps of the clean-up process,
-  you can go in the [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+  you can go in the [Manual Actions](https://search.google.com/search-console/manual-actions)
   report again and find the issue either as a site-wide match, or as a partial
   match.
 2. Select **Request a review**.

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on:2018-03-14 #}
+{# wf_updated_on:2019-01-14 #}
 {# wf_published_on:2015-01-01 #}
 {# wf_blink_components:N/A #}
 
@@ -55,11 +55,11 @@ Note: 您的网页必须可被 Googlebot 抓取，才能确保它们是安全无
 
 #### A. 被黑客入侵的网站
 
-*您在 Search Console 的 [**Manual Actions 报告**](https://www.google.com/webmasters/tools/manual-action)中收到了网站被黑客入侵的通知：*
+*您在 Search Console 的 [**Manual Actions 报告**](https://search.google.com/search-console/manual-actions)中收到了网站被黑客入侵的通知：*
 
 
 
-1. 现在，您已完成连续的清理步骤，可以重新进入 [Manual Actions](https://www.google.com/webmasters/tools/manual-action) 报告，以全站匹配或部分匹配形式查找问题。
+1. 现在，您已完成连续的清理步骤，可以重新进入 [Manual Actions](https://search.google.com/search-console/manual-actions) 报告，以全站匹配或部分匹配形式查找问题。
 2. 选择 **Request a review**。
 
     要提交审核请求，我们会要求您详细说明您采取了哪些措施来清理网站。对于遭到网络垃圾入侵的每一个类别，您都可以用一句话来说明您是如何清理网站的（例如，“For Content injection hacked URLs, I removed the spammy content and corrected the vulnerability: updating an out-of-date plugin.”。

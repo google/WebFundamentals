@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-03-14 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2015-01-01 #}
 {# wf_blink_components: N/A #}
 
@@ -58,11 +58,11 @@ Consulte os canais abaixo.
 #### A. Site hackeado
 
 *Você recebeu uma notificação de site hackeado no
-[**relatório de Ações manuais**](https://www.google.com/webmasters/tools/manual-action)
+[**relatório de Ações manuais**](https://search.google.com/search-console/manual-actions)
 do Search Console:*
 
 1. Após realizar as etapas sucessivas do processo de limpeza,
-  acesse novamente o relatório de [Ações manuais](https://www.google.com/webmasters/tools/manual-action)
+  acesse novamente o relatório de [Ações manuais](https://search.google.com/search-console/manual-actions)
   e encontre o problema como uma correspondência integral ou parcial
   do site.
 2. Selecione **Request a review**.
@@ -158,7 +158,7 @@ para proteger os usuários.
       * [Preventing badware: basics](https://www.stopbadware.org/prevent-badware-basics)
       * [Additional resources: hacked sites](https://www.stopbadware.org/hacked-sites-resources)
 
-* **Se sua solicitação não foi aprovada,** avalie seu site novamente para verificar a presença de 
+* **Se sua solicitação não foi aprovada,** avalie seu site novamente para verificar a presença de
   [malwares](hacked_with_malware) ou [spam](hacked_with_spam) ou qualquer
   modificação ou novos arquivos criados pelo hacker. Como alternativa, considere
   solicitar ajuda adicional de

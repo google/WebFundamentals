@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on:2018-03-14 #}
+{# wf_updated_on:2019-01-14 #}
 {# wf_published_on:2015-01-01 #}
 {# wf_blink_components:N/A #}
 
@@ -56,12 +56,12 @@ book_path: /web/fundamentals/_book.yaml
 
 #### A. 遭駭網站
 
-*您在 
-[Search Console] 的 
-[**Manual Actions report**](https://www.google.com/webmasters/tools/manual-action) 中收到了遭駭網站通知：*
+*您在
+[Search Console] 的
+[**Manual Actions report**](https://search.google.com/search-console/manual-actions) 中收到了遭駭網站通知：*
 
 1. 完成清理程序的後續步驟後，
-您可以再次進入 [Manual Actions](https://www.google.com/webmasters/tools/manual-action)
+您可以再次進入 [Manual Actions](https://search.google.com/search-console/manual-actions)
  報告，瞭解問題是發生在整個網站或是網站中的部分區域。
 2. 選擇 **[Request a review]**。
 
@@ -75,10 +75,10 @@ book_path: /web/fundamentals/_book.yaml
 #### B. 垃圾軟體 (包括惡意軟體)
 
 *您在
- [Search Console] 的 
+ [Search Console] 的
 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues) 中收到了惡意軟體或垃圾軟體通知：*
 
-1. 再次開啟 
+1. 再次開啟
 [Search Console] 中的 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
 。 報告仍然可能會顯示您之前看到過的警告和遭駭 URL 範例。
 2. 選擇 **[Request a review]**。
@@ -89,28 +89,28 @@ book_path: /web/fundamentals/_book.yaml
 並以更符合現代版本的程式碼取代。」
 
 
-*您在 [Search Console] 的 
+*您在 [Search Console] 的
 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
  中並沒有收到惡意軟體或垃圾軟體通知，但您的 AdWords 帳戶收到了通知：*
 
-1. 經由 
+1. 經由
 [AdWords support center](https://support.google.com/adwords/contact/site_policy) 申請審核。
 
 
 #### C. 網路釣魚或社交工程
 
-*您在 [Search Console] 的 
-[**Security Issues report**](https://www.google.com/webmasters/tools/security-issues) 
+*您在 [Search Console] 的
+[**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
 中收到了網路釣魚通知：*
 
-1. 再次開啟 
+1. 再次開啟
 [Search Console] 中的 [**Security Issues report**](https://www.google.com/webmasters/tools/security-issues)
 。 報告仍然可能會顯示您之前看到過的警告和遭駭 URL 範例。
 2. 選擇 **[Request a review]**。
 
     提交審核時，我們會請您針對如何移除違反網站政策的內容提供詳細資訊。例如：「我移除了要求使用者輸入個人資訊的頁面」。
 
-3. 您也可以至 
+3. 您也可以至
 [google.com/safebrowsing/report_error/](https://www.google.com/safebrowsing/report_error/) 申請審核。
   這份報告除了可供認為自己的頁面
 遭誤標為網路釣魚頁面的網站擁有者當成通報工具，還可以通知我們開始審核
@@ -144,7 +144,7 @@ book_path: /web/fundamentals/_book.yaml
 我們鼓勵所有網站擁有者實作在 [Clean and maintain your site](clean_site) 中擬定的維護與安全
 方案。
 
-    如需詳細資訊，請參閱 
+    如需詳細資訊，請參閱
 [StopBadware](https://www.stopbadware.org) 的下列資源：
 
       * [Preventing badware: basics](https://www.stopbadware.org/prevent-badware-basics)
@@ -153,5 +153,5 @@ book_path: /web/fundamentals/_book.yaml
 * **若您申請未獲准，**請重新評估網站中的
  [malware](hacked_with_malware) 或 [spam](hacked_with_spam)，或者檢查駭客進行的任何
 修改或建立的任何新檔案。 或者，您
-可以考慮請 
+可以考慮請
 [specialists in your support team](support_team) 提供更多協助。
