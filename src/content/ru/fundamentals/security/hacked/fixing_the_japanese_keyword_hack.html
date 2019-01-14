@@ -6,18 +6,18 @@
 
 <body>
 
-<p>В этом руководстве описывается тип взлома, при котором на сайт добавляются автоматически созданные страницы с текстом на японском языке. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
+<p>В этом руководстве описывается тип взлома, при котором на сайт добавляются автоматически созданные страницы с текстом на японском языке. Оно предназначено для тех, кто использует <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">систему управления контентом</a>, однако может пригодиться и другим веб-мастерам.</p>
 
 <p><strong>Примечание.</strong> Если вы не можете точно определить, взломан ли ваш сайт, прочитайте сначала <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked">это руководство</a>.</p>
 
-<aside class="note">Мы хотим знать, насколько полезной для вас была информация, представленная в этом руководстве. Чтобы мы могли улучшить его, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">отправьте нам свой отзыв</a>.</aside>
+<aside class="note">Мы хотим знать, насколько полезной для вас была информация, представленная в этом руководстве. Чтобы мы могли улучшить его, <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">отправьте нам свой отзыв</a>.</aside>
 
 <h2>Оглавление</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">Шаг 1. Идентификация этого типа взлома</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">Шаг 2. Устранение последствий</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">Шаг 3: Дополнительные ресурсы</a></li>
+  <li><a href="#identifying">Шаг 1. Идентификация этого типа взлома</a></li>
+  <li><a href="#fixing">Шаг 2. Устранение последствий</a></li>
+  <li><a href="#resources">Шаг 3: Дополнительные ресурсы</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">Часто задаваемые вопросы по взломанным сайтам</a></li>
 </ul>
 
@@ -28,16 +28,16 @@
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExamplePage.png" style="padding:0px 25px">
 
-<p>При этом хакер нередко указывает в Search Console, что является владельцем ресурса, чтобы увеличить доход, изменяя различные настройки сайта (геотаргетинг, карты сайта и др.). Если вы получили оповещение, что кто-то подтвердил ваш сайт в <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>, это с высокой долей вероятности означает, что ваш ресурс взломан.</p>
+<p>При этом хакер нередко указывает в Search Console, что является владельцем ресурса, чтобы увеличить доход, изменяя различные настройки сайта (геотаргетинг, карты сайта и др.). Если вы получили оповещение, что кто-то подтвердил ваш сайт в <a href="https://www.google.com/webmasters/tools/">Search Console</a>, это с высокой долей вероятности означает, что ваш ресурс взломан.</p>
 
-<p>Для начала с помощью инструмента <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">Проблемы безопасности</a> в Search Console проверьте, обнаружил ли сканер Google такие взломанные страницы на вашем сайте. Иногда их можно найти, если в окне Google Поиска ввести <code class="notranslate l10n-notranslate">site:[your site root URL]</code> (после двоеточия укажите корневой URL своего веб-ресурса). Так вы увидите страницы сайта, которые проиндексированы Google, в том числе взломанные. Просмотрите несколько страниц с результатами поиска и проверьте, нет ли на них необычных URL. Если в Google Поиске взломанных страниц не обнаружилось, используйте те же запросы в другой поисковой системе. Другие поисковые системы могут показать взломанный контент, который удален из индекса Google. Вот несколько примеров таких URL:</p>
+<p>Для начала с помощью инструмента <a href="https://www.google.com/webmasters/tools/security-issues">Проблемы безопасности</a> в Search Console проверьте, обнаружил ли сканер Google такие взломанные страницы на вашем сайте. Иногда их можно найти, если в окне Google Поиска ввести <code class="notranslate l10n-notranslate">site:[your site root URL]</code> (после двоеточия укажите корневой URL своего веб-ресурса). Так вы увидите страницы сайта, которые проиндексированы Google, в том числе взломанные. Просмотрите несколько страниц с результатами поиска и проверьте, нет ли на них необычных URL. Если в Google Поиске взломанных страниц не обнаружилось, используйте те же запросы в другой поисковой системе. Другие поисковые системы могут показать взломанный контент, который удален из индекса Google. Вот несколько примеров таких URL:</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
 
 <p>Обратите внимание, что в этих результатах поиска есть страницы, созданные не владельцем сайта. Просмотрев описания, можно заметить текст на японском языке.</p>
 
 <p>Также может появиться сообщение о том, что страница не существует (например, ошибка 404). Однако это может не соответствовать действительности: хакеры вводят пользователей в заблуждение, создавая впечатление, что взломанная страница исчезла или работает нормально.
-  Это делается с помощью <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">маскировки</a> контента. Чтобы выявить маскировку, введите URL страниц своего сайта в инструменте <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">Просмотреть как Googlebot</a>.
+  Это делается с помощью <a href="https://support.google.com/webmasters/answer/66355">маскировки</a> контента. Чтобы выявить маскировку, введите URL страниц своего сайта в инструменте <a href="https://www.google.com/webmasters/tools/googlebot-fetch">Просмотреть как Googlebot</a>.
   Он позволяет увидеть ту или иную страницу так, как ее видит робот Google.</p>
 
 <a name="fixing"></a>
@@ -45,9 +45,9 @@
 <p>Прежде чем начать, сделайте копии всех файлов, которые вы собираетесь удалить: возможно, вам понадобится восстановить их позже. Оптимальный вариант – создать резервную копию всего сайта. Для этого можно сохранить все файлы с сервера на своем компьютере или воспользоваться средствами системы управления контентом, с которой вы работаете. Если вы используете систему управления контентом, также нужно создать резервную копию базы данных.</p>
 
   <h3>Удаление вновь созданных аккаунтов из Search Console</h3>
-<p>Если в ваш аккаунт Search Console добавлен новый владелец, которого вы не знаете, как можно скорее заблокируйте его. Узнать, какие пользователи подтверждены для вашего сайта, можно в <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">Центре веб-мастеров</a>. Нажмите на ссылку "Сведения о подтверждении", чтобы посмотреть всех подтвержденных пользователей.</p>
+<p>Если в ваш аккаунт Search Console добавлен новый владелец, которого вы не знаете, как можно скорее заблокируйте его. Узнать, какие пользователи подтверждены для вашего сайта, можно в <a href="https://www.google.com/webmasters/verification">Центре веб-мастеров</a>. Нажмите на ссылку "Сведения о подтверждении", чтобы посмотреть всех подтвержденных пользователей.</p>
 
-<p>Узнайте, <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">как удалить владельца из Search Console</a>.
+<p>Узнайте, <a href="https://support.google.com/webmasters/answer/2453966">как удалить владельца из Search Console</a>.
   Вам нужно удалить связанный токен подтверждения. Как правило, это либо файл HTML в корневом каталоге сайта, либо динамически сгенерированный файл .htaccess, похожий на файл HTML.</p>
 
 <p>Если вы не можете найти HTML-токен подтверждения на своем сайте, проверьте правило перезаписи в файле .htaccess. Оно выглядит примерно так:</p>
@@ -113,14 +113,14 @@
   <h3>Убедитесь, что на сайте нет вредоносных файлов</h3>
 <p>Удалив взломанные файлы, убедитесь, что на сайте не осталось следов взлома. С помощью инструмента "Просмотреть как Googlebot" снова проверьте, есть ли на сайте найденные вами ранее страницы с бессмысленным текстом. Если вы видите статус "Не найдено", это с большой вероятностью означает, что все в порядке.</p>
 
-<p>Также проверить наличие взломанного контента на сайте можно, следуя <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">этим инструкциям</a>.</p>
+<p>Также проверить наличие взломанного контента на сайте можно, следуя <a href="https://support.google.com/webmasters/troubleshooter/6155978">этим инструкциям</a>.</p>
 
   <h3>Как предотвратить повторный взлом?</h3>
-<p>Устранение уязвимостей на сайте – важный заключительный этап работы. <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">Недавнее исследование</a> показало, что 12% взломанных сайтов снова подвергаются атаке в течение 30 дней. Прежде всего вам нужно понять, как именно был взломан ваш сайт. Начните с изучения <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">этого руководства</a>. Если прояснить ситуацию не удалось, выполняйте действия, перечисленные в контрольном списке ниже.</p>
+<p>Устранение уязвимостей на сайте – важный заключительный этап работы. <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">Недавнее исследование</a> показало, что 12% взломанных сайтов снова подвергаются атаке в течение 30 дней. Прежде всего вам нужно понять, как именно был взломан ваш сайт. Начните с изучения <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">этого руководства</a>. Если прояснить ситуацию не удалось, выполняйте действия, перечисленные в контрольном списке ниже.</p>
   <ul>
     <li><strong>Регулярно сканируйте свой компьютер.</strong> Для поиска уязвимостей и вредоносных программ используйте надежное антивирусное ПО.</li>
     <li><strong>Регулярно меняйте свои пароли.</strong> Периодическое изменение паролей к аккаунтам провайдера, FTP, системе управления контентом и т. д. снижает вероятность несанкционированного доступа к сайту. Пароль для каждого аккаунта должен быть надежным и уникальным.</li>
-    <li><strong>Используйте <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">двухфакторную аутентификацию</a></strong> везде, где это возможно: она усложнит проникновение для хакеров, даже если они украдут ваш пароль.</li>
+    <li><strong>Используйте <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F">двухфакторную аутентификацию</a></strong> везде, где это возможно: она усложнит проникновение для хакеров, даже если они украдут ваш пароль.</li>
     <li><strong>Регулярно обновляйте систему управления контентом, плагины, расширения и модули.</strong> Часто причиной взлома становится устаревшее программное обеспечение, на котором работает сайт. В некоторых системах управления контентом обновление выполняется автоматически.</li>
     <li><strong>Система обеспечения веб-безопасности.</strong> Есть немало надежных сервисов, которые помогут вам уберечь сайт от взлома. Воспользуйтесь их услугами.</li>
   </ul>
@@ -133,15 +133,15 @@
 <p>Эти инструменты просканируют ваш сайт и помогут найти проблемный контент.
   Google не связан ни с одним из них, кроме VirusTotal.</p>
 
-<p>Вот несколько таких сервисов: <a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>. Обратите внимание, что проверка этими сканерами не является абсолютной гарантией удаления проблемного контента.</p>
+<p>Вот несколько таких сервисов: <a href="https://www.virustotal.com/">Virus Total</a>, <a href="https://aw-snap.info/">Aw-snap.info</a>, <a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a>, <a href="https://www.quttera.com/">Quttera</a>. Обратите внимание, что проверка этими сканерами не является абсолютной гарантией удаления проблемного контента.</p>
 
 <p>Другие ресурсы Google, которые помогут вам устранить проблему:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   Справочный форум для веб-мастеров</a></li>
 <li><a href="/web/fundamentals/security/hacked/">Помощь по восстановлению взломанных сайтов</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">Google SafeBrowsing</a></li>
+<li><a href="//safebrowsing.google.com/">Google SafeBrowsing</a></li>
 </ul>
 
 

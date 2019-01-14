@@ -7,22 +7,22 @@
 <body dir="rtl">
 
 <p>تم إنشاء هذا الدليل خصيصًا لتناول الاستيلاء الذي ينشئ نصًا يابانيًا تلقائيًا على موقعك الإلكتروني وهو ما نشير إليه باسم الاستيلاء باستخدام الكلمات الرئيسية اليابانية، لذا فإن هذا الدليل مُعد لمستخدمي
-  <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS" l10n-encrypted-href="fDAavPipNi3L7oKW173OnAOrZfK8qSBsW73e1nANJzBUmOWztsjdEWYvTckdpiUrlx3KV5JDmfAX78Sj/1rTByEHYmzohOA6JH22pQy1iU4=">
+  <a href="https://en.wikipedia.org/wiki/Web_content_management_system#Notable_web_CMS">
     أنظمة إدارة المحتوى الشائعة</a> (CMS) غير أنك ستستفيد منه حتى وإن لم تكن تستخدم هذه الأنظمة.</p>
 
 <p><strong>ملاحظة:</strong> ألست متأكدًا مما إذا كان موقعك قد تعرض للاستيلاء؟ ابدأ بقراءة دليل
   <a href="/web/fundamentals/security/hacked/how_do_I_know_if_site_hacked"> كيفية التحقق
   من تعرض موقعك للاستيلاء</a>.</p>
 
-<aside class="note">نود التأكد من أن هذا الدليل مفيد لك حقًا، لذا يرجى <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform" l10n-encrypted-href="Y8CvmyoECzXwls/oZTNUPel6/rzBFIuQf3sSK+uodQZOqpR94XBJ+XibPywvk0+b9ezSGKvhi8xxpIK7uGXOCI2dMR8PtqMn9qLJh3QQBiqDN7SHduMZkPeGTm9uywje4+7KYcijq55wcC/P3SGriA==">
+<aside class="note">نود التأكد من أن هذا الدليل مفيد لك حقًا، لذا يرجى <a href="https://docs.google.com/a/google.com/forms/d/12iF45BaZuEgwn29A7DOW73rd1Hi_7NiAHCFWB3zMu0U/viewform">
   ترك تعليقاتك</a> لمساعدتنا في تحسينه.</aside>
 
 <h2>جدول المحتويات</h2>
 
 <ul>
-  <li><a href="#identifying" l10n-encrypted-href="i8ndmVX5d0ID8O9zoenvuw==">الخطوة الأولى: تحديد هذا النوع من الاستيلاء</a></li>
-  <li><a href="#fixing" l10n-encrypted-href="E7jyI6Rsf8GvIQvlRXlhig==">الخطوة الثانية: حل مشكلة الاستيلاء</a></li>
-  <li><a href="#resources" l10n-encrypted-href="thupmU05Hk4T+qZrFSNMSw==">الخطوة الثالثة: موارد إضافية</a></li>
+  <li><a href="#identifying">الخطوة الأولى: تحديد هذا النوع من الاستيلاء</a></li>
+  <li><a href="#fixing">الخطوة الثانية: حل مشكلة الاستيلاء</a></li>
+  <li><a href="#resources">الخطوة الثالثة: موارد إضافية</a></li>
   <li><a href="/web/fundamentals/security/hacked/FAQs_for_hacked_sites">الأسئلة الشائعة بشأن مواقع الويب التي تم الاستيلاء عليها</a></li>
 </ul>
 
@@ -36,9 +36,9 @@
 
 <p>وفي هذا النوع من الاستيلاء، عادة ما يضيف المخترق نفسه بصفته مالك الموقع في Search
   Console بغرض زيادة الأرباح  من خلال التلاعب بإعدادات الموقع مثل الاستهداف الجغرافي أو ملفات sitemap، فإذا تلقيت إشعارًا بأن شخصًا لا تعرفه قد
-  أثبت ملكيته لموقعك في <a href="https://www.google.com/webmasters/tools/" l10n-encrypted-href="bnkUt+0jxHW5UePwiMjGHgSJUyK0ahq5p2Xo+yKO2LCoVUPePn2BCeqpvFwYJx5q">Search Console</a>، فهناك احتمال قوي بأن موقعك قد تعرض للاستيلاء.</p>
+  أثبت ملكيته لموقعك في <a href="https://www.google.com/webmasters/tools/">Search Console</a>، فهناك احتمال قوي بأن موقعك قد تعرض للاستيلاء.</p>
 
-<p>ابدأ بمراجعة أداة <a href="https://www.google.com/webmasters/tools/security-issues" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LDoa3a6ko9L8TWTgkY4BqOep2DEtUsCy0Ve7mU772iG0Q==">
+<p>ابدأ بمراجعة أداة <a href="https://www.google.com/webmasters/tools/security-issues">
   مشكلات الأمان</a> في Search Console لتعرف إذا ما اكتشف محرك البحث Google أيًا من هذه الصفحات التي تم الاستيلاء عليها على موقعك. كما يمكنك اكتشاف صفحات من هذه النوعية من خلال فتح بحث Google والبحث عن <code class="notranslate l10n-notranslate">site:[your site root URL]</code>، وهو ما يُظهر لك الصفحات التي فهرسها Google لموقعك بما في ذلك الصفحات التي تم الاستيلاء عليها. انقر على بضع صفحات من نتائج البحث لترى إذا ما يمكن تحديد عناوين URL مخالفة، وإذا لم تعثر على أي محتوى تم الاستيلاء عليه في بحث Google، فاستخدم نفس عبارات البحث مع محرك بحث مختلف، فقد تعرض محركات البحث الأخرى محتوى مُستَولى عليه قد أزاله Google من الفهرس. وفي ما يلي مثال لما قد يبدو عليه هذا.</p>
 
 <img src="/web/fundamentals/security/hacked/images/JapaneseKeywordHackExampleSearch.png" style="padding:0px 25px">
@@ -46,8 +46,8 @@
 <p>لاحظ أن نتائج البحث هنا تتضمن الكثير من الصفحات التي لم ينشئها مالك الموقع، وإذا أمعنت النظر في الأوصاف، فسترى أمثلة من النص الياباني الذي ينشئه هذا النوع من الاستيلاء.</p>
 
 <p>عند زيارة صفحة تم الاستيلاء عليها، فقد ترى رسالة تفيد بأن الصفحة غير موجودة (مثل خطأ 404)، فلا تنخدع حيث يحاول المخترقون خداعك لتعتقد بأن موقعك تم إصلاحه وهذا من خلال دفعك لتعتقد بأن الصفحات قيد الاستيلاء قد اختفت أو تم إصلاحها،
-  وهم ينفذون هذا من خلال <a href="https://support.google.com/webmasters/answer/66355" l10n-encrypted-href="5TGqX3BGnR1wDX3q2UuoUl8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqausFnRYfcPdJtT7j/7LC0qWg==">إخفاء هوية</a> المحتوى. ويمكنك التحقق من إخفاء الهوية بإدخال عناوين
-   URL لموقعك في أداة <a href="https://www.google.com/webmasters/tools/googlebot-fetch" l10n-encrypted-href="wFaZwKx/FqCH4eQvAdZWPgSJUyK0ahq5p2Xo+yKO2LAiz85uaQL1OSHmh9ZlIHN5PBF3nzIP4FICVwj1Kz6IHg==">
+  وهم ينفذون هذا من خلال <a href="https://support.google.com/webmasters/answer/66355">إخفاء هوية</a> المحتوى. ويمكنك التحقق من إخفاء الهوية بإدخال عناوين
+   URL لموقعك في أداة <a href="https://www.google.com/webmasters/tools/googlebot-fetch">
   جلب مثل Google</a>،
   والتي تتيح لك رؤية المحتوى المخفي.</p>
 
@@ -58,12 +58,12 @@
   <h3>إزالة الحسابات التي تم إنشاؤها حديثًا من Search Console</h3>
 <p>إذا تمت إضافة مالك جديد لا تعرفه إلى حسابك في Search Console، فأبطل إمكانية وصوله في أقرب وقت ممكن. ويمكنك
   التحقق من المستخدمين الذين تم إثبات ملكيتهم لموقعك في
-  <a href="https://www.google.com/webmasters/verification" l10n-encrypted-href="w+/AxGxgV5VhCAsoJueEswSJUyK0ahq5p2Xo+yKO2LBRkz9eV7ohMxFBbvqnrm26jlSneBdGNunDHPmxSA8Tjw==">صفحة إثبات الملكية في
+  <a href="https://www.google.com/webmasters/verification">صفحة إثبات الملكية في
   Search Console</a>. وانقر على "تفاصيل إثبات الملكية" للموقع لعرض جميع المستخدمين الذين تم إثبات مليكتهم.</p>
 
 <p>لإزالة مالك من Search Console، فاقرأ
    قسم "إزالة مالك" في
-  <a href="https://support.google.com/webmasters/answer/2453966" l10n-encrypted-href="h8KunduxzUQTzb6KfNx3KV8/1IcWIMZShUywi8+OFhGczDdT//DB7d2bh+zxFqauvOHSfE0UitWWNywfgF9JeA==">
+  <a href="https://support.google.com/webmasters/answer/2453966">
   مركز المساعدة بشأن إدارة المستخدمين والمالكين والأذونات</a>.
   وسيلزمك إزالة الرمز المميز المتربط بإثبات الملكية والذي يكون في العادة إما ملف HTML في جذر موقعك أو ملف htaccess تم إنشاؤه ديناميكيًا ويحاكي ملف HTML.</p>
 
@@ -137,17 +137,17 @@
   <h3>التحقق لمعرفة ما إذا أصبح موقعك نظيفًا أم لا</h3>
 <p>بعد الانتهاء من التخلص من الملفات التي تم الاستيلاء عليها، تحقق لترى مردود عملك الجاد. هل تذكر صفحات الهراء التي وجدتها قبلاً؟ استخدم أداة "جلب مثل Google" معها مرة أخرى لمعرفة هل مازالت موجودة أم لا، وإذا كانت الاستجابة "غير موجودة" في أداة جلب مثل Google، فهناك فرص بأن يكون موقعك في حالة جيدة.</p>
 
-<p>يمكنك أيضًا اتباع الخطوات الواردة في <a href="https://support.google.com/webmasters/troubleshooter/6155978" l10n-encrypted-href="L9cotzWz1Gz2EXZ4cybZUF8/1IcWIMZShUywi8+OFhFaf4PNa8lHkLSIkkiloXraU+YkdKmDgr9qSLhT4Aj5jg==">
+<p>يمكنك أيضًا اتباع الخطوات الواردة في <a href="https://support.google.com/webmasters/troubleshooter/6155978">
   أداة حل مشكلات المواقع التي تم الاستيلاء عليها</a> للتحقق من استمرار وجود محتوى تم الاستيلاء عليه على موقعك.</p>
 
   <h3>كيف يمكنني الحيلولة دون تعرض موقعي للاستيلاء مرة أخرى؟</h3>
-<p>إن إصلاح الثغرات الأمنية الموجودة في موقعك خطوة ختامية أساسية لإصلاح موقعك حيث أظهرت <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html" l10n-encrypted-href="HaoVnhrvp1ipt6jkrRLULkQg8+fqoPqLZVbZwHZzVSGEbm/ALd8tKcGkbG0DXJPH9mJYV+4aaiZf3CtTQGk0SoAD8yPFagwfQx1QvJaFoc6lviyJWslHwkLxMOd1ngrY">دراسة أجريت حديثًا</a> أن 12% من المواقع التي تم الاستيلاء عليها تتعرض للاستيلاء مرة أخرى في غضون 30 يومًا كما كانت معرفة الطريقة التي تم بها الاستيلاء مفيدة. فاقرأ دليل
+<p>إن إصلاح الثغرات الأمنية الموجودة في موقعك خطوة ختامية أساسية لإصلاح موقعك حيث أظهرت <a href="https://security.googleblog.com/2016/04/helping-webmasters-re-secure-their-sites.html">دراسة أجريت حديثًا</a> أن 12% من المواقع التي تم الاستيلاء عليها تتعرض للاستيلاء مرة أخرى في غضون 30 يومًا كما كانت معرفة الطريقة التي تم بها الاستيلاء مفيدة. فاقرأ دليل
   <a href="/web/fundamentals/security/hacked/top_ways_websites_get_hacked_by_spammers">أهم الطرق التي يستولي بها أصحاب الأسلوب غير المرغوب فيه على مواقع الويب</a> لبدء الفحص. ولكن إذا لم تتمكن من معرفة كيف تم الاستيلاء على موقعك، ففي ما يلي قائمة تحقق بالأشياء التي يمكنك فعلها للحد من الثغرات الأمنية على موقعك:</p>
   <ul>
     <li><strong>فحص جهاز الكمبيوتر بانتظام:</strong> استخدم برنامج فحص فيروسات موثوقًا به للبحث عن الفيروسات أو الثغرات الأمنية.</li>
     <li><strong>تغيير كلمات المرور بانتظام:</strong> يمكن للتغيير المنتظم لكلمات المرور إلى جميع حسابات موقعك -مثل موفر خدمة الاستضافة وبرتوكول نقل الملفات ونظام إدارة المحتوى-
 الحيلولة دون الوصول غير المصرح به إلى موقعك كما أنه من المهم إنشاء كلمة مرور قوية فريدة لكل حساب.</li>
-    <li><strong>استخدام <a href="https://en.wikipedia.org/wiki/Two-factor_authentication" l10n-encrypted-href="9xQhRBOSn9SmNcpVG2sojwOrZfK8qSBsW73e1nANJzDifCX+gGFDlLulOI0L7gbBir3zffj4Scth1kJJ0GCu7g==">المصادقة الثنائية (2FA)</a>:</strong> ننصحك بتمكين المصادقة الثنائية لأي خدمة تتطلب تسجيل الدخول فهي تصّعب على المخترقين تسجيل الدخول حتى إذا تمكنوا من سرقة كلمة المرور بنجاح.</li>
+    <li><strong>استخدام <a href="https://en.wikipedia.org/wiki/Two-factor_authentication">المصادقة الثنائية (2FA)</a>:</strong> ننصحك بتمكين المصادقة الثنائية لأي خدمة تتطلب تسجيل الدخول فهي تصّعب على المخترقين تسجيل الدخول حتى إذا تمكنوا من سرقة كلمة المرور بنجاح.</li>
     <li><strong>تحديث نظام إدارة المحتوى والإضافات والوحدات بانتظام:</strong> نأمل أن تكون قد نفذّت هذه الخطوة من قبل فهناك الكثير من المواقع التي تتعرض للاستيلاء لأن البرامج التي تعمل عليها غير محدثة علمًا بأن بعض أنظمة إدارة المحتوى تتيح التحديث التلقائي لها.</li>
     <li><strong>التفكير في الاشتراك في خدمة أمان لمراقبة موقعك:</strong> هناك الكثير من الخدمات الرائعة التي يمكنها مساعدتك في مراقبة موقعك مقابل رسوم بسيطة، ففكر في التسجيل فيها للحفاظ على موقعك آمنًا.</li>
   </ul>
@@ -160,16 +160,16 @@
 <p>تفحص هذه الأدوات موقعك وربما يمكنها العثور على المحتوى المتسبب في المشكلة،
   هذا ولا يستخدم محرك بحث Google أو يتوافق مع أي من هذه الأدوات ما عدا VirusTotal.</p>
 
-<p><a href="https://www.virustotal.com/" l10n-encrypted-href="+yh4nIlcln/5B9bKgkfEGM782VG+rd3m0a4VL0AU26M=">Virus Total</a> و<a href="https://aw-snap.info/">
-  Aw-snap.info</a> و<a href="https://sitecheck.sucuri.net/" l10n-encrypted-href="onZPCmFW+G106sKkIlw02x6VPeWQ/7qXNFWdb9FQ4feq8/jN0Xzo+qPU1sKgelGh">Sucuri Site Check</a> و<a href="https://www.quttera.com/">Quttera</a>: هذه بعض الأدوات التي يمكنها فحص موقعك بحثًا عن المحتوى الذي يمثل مشكلة. وتجدر الإشارة إلى أن أدوات الفحص هذه لا يمكنها أن تضمن التعرف على كل نوع من أنواع المحتوى الذي ينطوي على مشكلات.</p>
+<p><a href="https://www.virustotal.com/">Virus Total</a> و<a href="https://aw-snap.info/">
+  Aw-snap.info</a> و<a href="https://sitecheck.sucuri.net/">Sucuri Site Check</a> و<a href="https://www.quttera.com/">Quttera</a>: هذه بعض الأدوات التي يمكنها فحص موقعك بحثًا عن المحتوى الذي يمثل مشكلة. وتجدر الإشارة إلى أن أدوات الفحص هذه لا يمكنها أن تضمن التعرف على كل نوع من أنواع المحتوى الذي ينطوي على مشكلات.</p>
 
 <p>في ما يلي بعض الموارد الإضافية من Google والتي يمكنها مساعدتك:</p>
 
 <ul>
-<li><a href="//support.google.com/webmasters/go/community" l10n-encrypted-href="+MnmPhXLuMxD2VLFLngQ0KArGd6SuOrIdKNhJ8TAfI9k4yrci9ag38FePALAXcE0">
+<li><a href="//support.google.com/webmasters/go/community">
   منتدى مساعدة مشرفي المواقع من Google</a></li>
 <li><a href="/web/fundamentals/security/hacked/">مساعدة مشرفي المواقع من Google بشأن مواقع الويب التي تم الاستيلاء عليها</a></li>
-<li><a href="//safebrowsing.google.com/" l10n-encrypted-href="1ZOZ2H6Eo250Va95oXrumTbQA6KByQU0uWZ6m4BBYCY=">التصفح الآمن من Google</a></li>
+<li><a href="//safebrowsing.google.com/">التصفح الآمن من Google</a></li>
 </ul>
 
 
