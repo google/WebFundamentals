@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in
 images.
 
-{# wf_updated_on: 2019-01-11 #}
+{# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -60,33 +60,34 @@ text. The following bullet list contains examples of use cases for all three fea
 
 * Face detection
     - Online social networking or photo sharing sites commonly let their users annotate people in
-images. By highlighting the boundaries of detected faces, this task can be facilitated.
-    - Content sites can dynamically crop images based on potentially detected faces rather than rely on
-other heuristics, or highlight detected faces with [Ken
-Burns](https://en.wikipedia.org/wiki/Ken_Burns_effect) panning and zooming effects in story-like
-formats.
-    - Multimedia messaging sites can allow their users to overlay funny objects like [sunglasses or
-mustaches](https://beaufortfrancois.github.io/sandbox/media-recorder/mustache.html) on detected
-face landmarks.
+      images. By highlighting the boundaries of detected faces, this task can be facilitated.
+    - Content sites can dynamically crop images based on potentially detected faces rather than rely
+      on other heuristics, or highlight detected faces with
+      [Ken Burns](https://en.wikipedia.org/wiki/Ken_Burns_effect) panning and zooming effects in
+      story-like formats.
+    - Multimedia messaging sites can allow their users to overlay funny objects like
+      [sunglasses or mustaches](https://beaufortfrancois.github.io/sandbox/media-recorder/mustache.html)
+      on detected face landmarks.
 
 * Barcode detection
-    - Web applications that read QR codes can unlock interesting use cases like online payments or web
-navigation, or use barcodes for establishing social connections on messenger applications.
+    - Web applications that read QR codes can unlock interesting use cases like online payments or
+      web navigation, or use barcodes for establishing social connections on messenger applications.
     - Shopping apps can allow their users to scan
-[EAN](https://en.wikipedia.org/wiki/International_Article_Number) or
-[UPC](https://en.wikipedia.org/wiki/Universal_Product_Code) barcodes of items in a physical store
-to compare prices online.
-    - Airports can expose web kiosks where passengers can scan their boarding passes’ [Aztec
-codes](https://en.wikipedia.org/wiki/Aztec_Code) to show personalized information related to their
-flights.
+      [EAN](https://en.wikipedia.org/wiki/International_Article_Number) or
+      [UPC](https://en.wikipedia.org/wiki/Universal_Product_Code) barcodes of items in a physical
+      store to compare prices online.
+    - Airports can expose web kiosks where passengers can scan their boarding passes’
+      [Aztec codes](https://en.wikipedia.org/wiki/Aztec_Code) to show personalized information
+      related to their flights.
 
 * Text detection
-    - Online social networking sites can improve the accessibility of user-generated image content by
-adding detected texts as `img[alt]` attribute values when no other descriptions are provided.
+    - Online social networking sites can improve the accessibility of user-generated image content
+      by adding detected texts as `img[alt]` attribute values when no other descriptions are
+      provided.
     - Content sites can use text detection to avoid placing headings on top of hero images with
-contained text.
-    - Web applications can use text detection to translate texts, for example, to translate restaurant
-menus.
+      contained text.
+    - Web applications can use text detection to translate texts, for example, to translate
+      restaurant menus.
 
 ## Current status {: #status }
 
@@ -180,6 +181,20 @@ try {
 }
 ```
 
+## Feature detection {: #featuredetection}
+
+Purely checking for the existence of the constructors to feature detect the Shape Detection
+API doesn’t suffice, as Chrome on Linux and Chrome OS currently still exposes the detectors, but
+they are known to not work ([bug](https://crbug.com/920961)). Instead, we recommend to do feature
+detection like this:
+
+```js
+const supported = await (async () => 'FaceDetector' in window &&
+    await new FaceDetector().detect(document.createElement('canvas'))
+    .then(_ => true)
+    .catch(e => e.message === 'Face Detection not implemented.' ? false : true))();
+```
+
 ## Best practices {: #bestpractices}
 
 All detectors work asynchronously, that is, they are not blocking the main thread 🎉, so don’t rely
@@ -192,11 +207,8 @@ results are serializable and can thus be passed back from the worker to the main
 
 Not all platform implementations support all features, so be sure to check the support situation
 carefully and see the API more like a progressive enhancement. For example, some platforms might
-support face detection per se, but not face landmark detection (eyes, nose, mouth,…).
-
-Note: Purely checking for the existence of the constructors to feature detect the Shape Detection
-API doesn’t suffice, as Chrome on Linux and Chrome OS currently still exposes the detectors, but
-they are known to not work ([bug](https://crbug.com/920961)).
+support face detection per se, but not face landmark detection (eyes, nose, mouth,…); or the
+existence and the location of text may be recognized, but not the actual text contents.
 
 Note: This API is an optimization and not something guaranteed to be available from the platform
 for every user. We are looking for developers to combine this with their own image recognition code
