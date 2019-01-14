@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ResizeObserver lets you know when an element has changed its size.
 
-{# wf_updated_on: 2016-10-07 #}
+{# wf_updated_on: 2019-01-09 #}
 {# wf_published_on: 2016-10-07 #}
-{# wf_tags: chrome54 #}
+{# wf_tags: chrome55,chrome64 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
 {# wf_blink_components: N/A #}
 
@@ -20,7 +20,7 @@ being iterated on in the WICG and *your* feedback is very much welcome.
 
 ## Motivation
 
-previously, you had to attach a listener to the document’s `resize` event to get
+Previously, you had to attach a listener to the document’s `resize` event to get
 notified of any change of the viewport’s dimensions. In the event handler, you
 would then have to figure out which elements have been affected by that change
 and call a specific routine to react appropriately. If you need the new
@@ -34,8 +34,8 @@ appending new children, setting an element’s `display` style to `none`, or
 similar actions can change the size of an element, its siblings or ancestors.
 
 This is why `ResizeObserver` is a useful primitive. It reacts to changes in
-size of any of the observed *elements*, independent of what caused the change.
-It provides you access to the new size of the observed elements, too. Let’s get
+size of any of the observed elements, independent of what caused the change.
+It provides access to the new size of the observed elements, too. Let’s get
 straight into it.
 
 ## API
@@ -43,8 +43,8 @@ straight into it.
 All the APIs with the “observer” suffix I mentioned above share a simple API
 design. `ResizeObserver` is no exception. You create a `ResizeObserver`
 object and pass a callback to the constructor. The callback will be given an
-array of `ResizeOberverEntries` – one entry per observed element – which
-contain the new dimensions for the element.
+array of `ResizeObserverEntries` – one entry per observed element – which
+contains the new dimensions for the element.
 
     var ro = new ResizeObserver( entries => {
       for (let entry of entries) {
@@ -154,6 +154,8 @@ Until `ResizeObserver`, there was no reliable way to get notified when your own
 dimensions change so you ca re-layout your own children.
 
 ## Out now!
+
+Note: This feature was enabled by default in Chrome 64.
 
 As with a lot of the observer APIs, `ResizeObserver` is not 100% polyfillable,
 which is why native implementations are needed. [Current polyfill
