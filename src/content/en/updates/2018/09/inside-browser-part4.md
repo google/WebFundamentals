@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Input event handling with the compositor thread
 
 {# wf_published_on: 2018-09-21 #}
-{# wf_updated_on: 2019-01-08 #}
+{# wf_updated_on: 2019-01-12 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: For the last of this 4 part blog series, we look at how the compositor is enabling smooth interaction when user input comes in #}
 {# wf_blink_components: N/A #}
@@ -86,7 +86,7 @@ compositor thread carries on compositing new frame without waiting for the main 
 
 A common event handling pattern in web development is event delegation. Since events bubble, you
 can attach one event handler at the topmost element and delegate tasks based on event target. You
-might have seen or written code like the blow.
+might have seen or written code like the below.
 
 ```javascript
 document.body.addEventListener('touchstart', event => {
