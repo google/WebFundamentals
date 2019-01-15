@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Shape Detection API allows for faces, barcodes, and text to be detected in
-images.
+description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
 {# wf_updated_on: 2019-01-14 #}
 {# wf_published_on: 2019-01-07 #}
