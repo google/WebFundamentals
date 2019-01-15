@@ -192,7 +192,7 @@ recommend doing feature detection like this:
 const supported = await (async () => 'FaceDetector' in window &&
     await new FaceDetector().detect(document.createElement('canvas'))
     .then(_ => true)
-    .catch(e => e.message === 'Face Detection not implemented.' ? false : true))();
+    .catch(e => e.name === 'NotSupportedError' ? false : true))();
 ```
 
 ## Best practices {: #bestpractices}
