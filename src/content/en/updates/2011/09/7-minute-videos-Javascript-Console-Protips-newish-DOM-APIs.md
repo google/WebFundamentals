@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-09-27 #}
+{# wf_updated_on: 2019-01-12 #}
 {# wf_published_on: 2011-09-27 #}
 {# wf_tags: news,devtools #}
+{# wf_blink_components: N/A #}
 
 # 7 minute videos: JavaScript Console Protips & newish DOM APIs {: .page-title }
 
