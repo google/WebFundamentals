@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 72 for developers?
 
 {# wf_published_on: 2019-01-29 #}
-{# wf_updated_on: 2019-01-11 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome72,new-in-chrome,intl,es6,javascript,user-activation #}
 {# wf_featured_snippet: In Chrome 72, creating public class fields in JavaScript is now much cleaner, you can see if a page has been activated with the new User Activation API, localizing lists becomes way easier, and there’s plenty more. Let’s dive in and see what’s new for developers in Chrome 72! #}
@@ -118,6 +118,9 @@ that has two properties: `hasBeenActive` and `isActive`:
 * `isActive` indicates if the associated window currently has a user
   activation in its lifecycle.
 
+More details are in [Making user activation consistent across APIs][ua-doc]
+
+[ua-doc]: /web/updates/2019/01/user-activation
 [ua-spec]: https://html.spec.whatwg.org/multipage/interaction.html#activation
 
 <div class="clearfix"></div>
