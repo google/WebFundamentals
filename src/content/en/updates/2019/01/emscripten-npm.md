@@ -451,7 +451,7 @@ everything runs as before, but now the build environment has the `doxygen`
 command available, which will cause the documentation of libvpx to be built as
 well.
 
-## Conclusion {#conclusion}
+## Conclusion
 
 It is not surprising that C/C++ code and npm are not a natural fit, but you can
 make it work quite comfortably with some additional tooling and the isolation
