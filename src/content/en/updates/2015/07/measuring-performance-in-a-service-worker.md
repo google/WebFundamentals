@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: If you can't measure the performance of your requests in a service worker, how can you say it improves performance? Now you can answer that question with recent changes in Chrome.
 
-{# wf_updated_on: 2015-07-20 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2015-07-20 #}
 {# wf_tags: news,performance,serviceworker #}
 
@@ -27,7 +27,7 @@ If you are going to Supercharge your Page load time as Jake suggests, you really
 need to be able to understand how service workers affect your page's requests.
 
 The [Resource Timing](https://w3c.github.io/resource-timing/) and the [User Timing](https://w3c.github.io/user-timing/) API
-are critcial components in many sites RUM (Real User Monitoring)
+are critical components in many sites RUM (Real User Monitoring)
 infrastructure because it lets you understand holistically how all of your users see
 the performance of your site ([Another use-case is detecting content injection](https://paul.kinlan.me/detecting-injected-content/)).  In short, it lets you 
 understand nearly every aspect of every web request made from your site, well, unless you have a service worker or a Web worker.
@@ -57,7 +57,7 @@ to a domain that is not the current domain.
     
  
 The Resource Timing and User Timing APIs were created and implemented before service worker was a twinkle in
-an engineers eye and the above code would not be able to understand how the Service Woker
+an engineers eye and the above code would not be able to understand how the Service Worker
 impacted it.  
 
 A recent set of changes in Chrome 45 (Beta in July 2015) will help 
@@ -70,7 +70,7 @@ the network performance for all your users.
 The biggest change is the addition of the `performance` object into a Workers context (Web 
 and ServiceWorkers) that will now let you understand the performance timings of all 
 the requests that are made in the context of the worker and will also let you set your
-own marks for measurment of JS execution. If you can only see 
+own marks for measurement of JS execution. If you can only see 
 what happens from the context of the current window you would miss critical 
 timing information from:
 
@@ -125,7 +125,7 @@ the performance of your install based on real in the wild user usage.
             return cache.addAll(urls);
           })
           .then(function () {
-            // Analyse all the requests
+            // Analyze all the requests
             var requests = self.performance.getEntriesByType("resource");
             
             // Loop across all the requests and save the timing data.

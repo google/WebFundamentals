@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Record JavaScript CPU Profile" has been changed in Chrome 58.
 
-{# wf_updated_on: 2017-02-07 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2016-12-15 #}
 {# wf_tags: devtools, chrome58 #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -36,7 +36,7 @@ workflow that you're used to.
 
 ## Accessing the old JavaScript CPU profiler {: #old }
 
-If you prefer the old "Record JavaScipt CPU Profile" workflow that used to
+If you prefer the old "Record JavaScript CPU Profile" workflow that used to
 be available on the Profiles panel, you can still access it like so:
 
 1. Open the DevTools [main menu](/web/tools/chrome-devtools/ui#main-menu).
@@ -84,7 +84,7 @@ The **Heavy (Bottom Up)** view is available in the **Bottom-Up** tab:
 
 <figure>
   <img src="/web/updates/images/2016/12/bottom-up-map.png"
-    alt="Mapping betwen Bottom-Up view in old workflow and new workflow.">
+    alt="Mapping between Bottom-Up view in old workflow and new workflow.">
   <figcaption>
     <b>Figure 3</b>. Mapping between Bottom-Up view in old workflow (left) and
     new workflow (right).
@@ -95,7 +95,7 @@ And the **Tree (Top Down)** view is available in the **Call Tree** tab:
 
 <figure>
   <img src="/web/updates/images/2016/12/tree-map.png"
-    alt="Mapping betwen Tree view in old workflow and new workflow.">
+    alt="Mapping between Tree view in old workflow and new workflow.">
   <figcaption>
     <b>Figure 4</b>. Mapping between Tree view in old workflow (left) and
     new workflow (right).

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-08-27 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2011-08-27 #}
 {# wf_tags: news,dom #}
 
@@ -18,7 +18,7 @@ book_path: /web/updates/_book.yaml
 </ul>
 <p>One can arguably say we also have <code>document.write</code> for few use cases.</p>
 <p>
-<code>innerHTML</code> has been standarized in HTML5 and with it a brother method <code><a href="http://dev.w3.org/html5/spec/Overview.html#insertadjacenthtml">insertAdjacentHTML</a></code> which works as <code>innerHTML</code> but allows us to define more specifically where we want to insert the HTML content: beforeBegin, afterBegin, beforeEnd and afterEnd.
+<code>innerHTML</code> has been standardized in HTML5 and with it a brother method <code><a href="http://dev.w3.org/html5/spec/Overview.html#insertadjacenthtml">insertAdjacentHTML</a></code> which works as <code>innerHTML</code> but allows us to define more specifically where we want to insert the HTML content: beforeBegin, afterBegin, beforeEnd and afterEnd.
 </p>
 
 

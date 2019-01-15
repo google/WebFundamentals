@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-04-10 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2012-04-10 #}
 {# wf_tags: news,performance,dom #}
 
@@ -12,7 +12,7 @@ book_path: /web/updates/_book.yaml
 
 <p>We're very happy to see that some common DOM operations have just skyrocketed in speed. The changes were at the WebKit level, boosting performance for both Safari (JavaScriptCore) and Chrome (V8).</p>
 
-<p>Chrome Engineer Kentaro Hara made seven code optimisations within WebKit; below are the results, which show just how much faster JavaScript DOM access has become:</p>
+<p>Chrome Engineer Kentaro Hara made seven code optimizations within WebKit; below are the results, which show just how much faster JavaScript DOM access has become:</p>
 
 
 ## DOM performance boosts summary

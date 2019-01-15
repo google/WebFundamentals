@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-01-25 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2012-01-25 #}
 {# wf_tags: news,xhr2,binary #}
 
@@ -22,7 +22,7 @@ For example, the following code will now throw an `INVALID_ACCESS_ERR` in develo
     xhr.send();
     
 
-See [WebKit Bug](https://bugs.webkit.org/show_bug.cgi?id=72154), [Buzilla Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=701787)
+See [WebKit Bug](https://bugs.webkit.org/show_bug.cgi?id=72154), [Mozilla Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=701787)
 
 Note: the ability to parse HTML has also been added to `XMLHttpRequest` but the caveat is that you can't use it unless you're sending an asynchronous request! See [HTML in XMLHttpRequest](https://developer.mozilla.org/en/HTML_in_XMLHttpRequest).
 

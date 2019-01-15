@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Chrome can now add custom poster images to object elements to improve percieved loading performance of plugins such as Flash.
+description: Chrome can now add custom poster images to object elements to improve perceived loading performance of plugins such as Flash.
 
-{# wf_updated_on: 2015-08-19 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2015-08-19 #}
 {# wf_tags: news,poster,flash,performance #}
 

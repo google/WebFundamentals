@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ResizeObserver lets you know when an element has changed its size.
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2016-10-07 #}
 {# wf_tags: chrome55,chrome64 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
@@ -72,7 +72,7 @@ It's important to note that while `ResizeObserver` *reports* both the dimensions
 of the `contentRect` and the padding, it only *watches* the `contentRect`.
 *Don't* confuse `contentRect` with the bounding box of the element. The bounding
 box, as reported by `getBoundingClientRect`, is the box that contains the entire
-element and its decendants. SVGs are an exception to the rule, where
+element and its descendants. SVGs are an exception to the rule, where
 `ResizeObserver` will report the dimensions of the bounding box.
 
 ### When is it being reported?

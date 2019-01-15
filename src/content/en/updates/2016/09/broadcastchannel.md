@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: BroadcastChannel API can be used for simple pub/sub between windows, tabs, iframes, or workers.
 
-{# wf_updated_on: 2016-09-19 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2016-09-06 #}
 {# wf_tags: broadcast,messaging,chrome54 #}
 {# wf_featured_image: /web/updates/images/2016/09/broadcast.png #}
@@ -49,7 +49,7 @@ Messages can be strings or anything supported by the [structured clone](https://
     
 
 A channel won't broadcast to itself. So if you have an `onmessage` listener
-on the same page as a `postMessage()` to the same channle, that `message` event
+on the same page as a `postMessage()` to the same channel, that `message` event
 doesn't fire.
 
 ## Differences with other techniques

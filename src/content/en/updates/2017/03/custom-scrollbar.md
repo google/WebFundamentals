@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
-{# wf_updated_on: 2017-11-07 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/custom-scrollbar/poster.jpg #}
@@ -93,7 +93,7 @@ likely end up using
 I’m not going into detail what they are and why they work, but you can think of
 them like 3D coordinates with an additional, fourth coordinate called _w_. This
 coordinate should be 1 except if you want to have perspective distortion. We
-don’t need to worry about the detials of _w_ as we are not going to use any
+don’t need to worry about the details of _w_ as we are not going to use any
 other value than 1. Therefore all points are from now on 4-dimensional vectors
 [x, y, z, w=1] and consequently matrices need
 to be 4x4 as well.
@@ -119,7 +119,7 @@ created 3D space. For
 The elements inside a perspective container are processed by the CSS engine
 as follows:
 
-* Turn each corner (vertex) of an element into homogenous coordinates
+* Turn each corner (vertex) of an element into homogeneous coordinates
   `[x,y,z,w]`, relative to the perspective container.
 * Apply all of the element’s transforms as matrices from _right to left_.
 * If the perspective element is scrollable, apply a scroll matrix.

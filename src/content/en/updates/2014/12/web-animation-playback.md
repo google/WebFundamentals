@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn about Web Animation Playback
 
-{# wf_updated_on: 2014-12-04 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2014-12-04 #}
 {# wf_tags: news,webanimations #}
 
@@ -152,7 +152,7 @@ This creates an additional animation that performs a 'drift'. This plays between
 
 This works as animations have a priority based on their creation order: in this case, `driftPlayer` will take precedence over player. When `driftPlayer` completes, it and its effects will disappear. However, its final time will match the underlying player's currentTime, so your UI will remain consistent.
 
-Finally, if you like kittens, there's a [demo web application](http://whistlr.info/static/stuff/player/index.html) which shows off these gestures. It's mobile-friendly and uses the polyfill for backwards-compatability, so try loading it on your mobile device!
+Finally, if you like kittens, there's a [demo web application](http://whistlr.info/static/stuff/player/index.html) which shows off these gestures. It's mobile-friendly and uses the polyfill for backwards-compatibility, so try loading it on your mobile device!
 
 
 

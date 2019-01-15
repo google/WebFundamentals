@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is becoming in line with the spec. Check your sites if you are assuming the WebKit logic for attribute propagation
 
-{# wf_updated_on: 2015-04-13 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_tags: news,dom #}
 
@@ -119,7 +119,7 @@ Chrome 42 and earlier the following would have worked:
     }
     
 
-Chrome 43 onwards will not serialize the properties that are on defined on the protoype and you will be returned an empty object.
+Chrome 43 onwards will not serialize the properties that are on defined on the prototype and you will be returned an empty object.
 
 
     > JSON.stringify(subscription);

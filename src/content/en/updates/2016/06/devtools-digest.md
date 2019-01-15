@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Big themes and trends for DevTools in 2016 and beyond.
 
-{# wf_updated_on: 2016-06-06 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2016-06-06 #}
 {# wf_tags: devtools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -96,6 +96,6 @@ Crossing the boundary between frontend and backend is a difficult part of fullst
 
 With backends written in Node.js, however, the boundaries between frontend and backend are starting to blur. Since Node.js runs on the V8 JavaScript engine (the same engine that powers Google Chrome) we wanted to make it possible to debug Node.js from DevTools. Thanks to the V8, DevTools, and Google Cloud Platform for Node.js teams, you can now use all of DevTools' powerful debugging features to introspect a Node.js app. The functionality has already reached Node.js [nightly builds](https://nodejs.org/download/nightly/){: .external }, although DevTools integration is still being polished before being included in a major release. Debugging your Node.js app from DevTools will someday be as simple as passing `node --inspect app.js` and connecting from DevTools in any Chrome window.
 
-Although existing tools such as [Node Inspector](https://github.com/node-inspector/node-inspector) provide GUI-based debugging experiences, the new Node.js DevTools integration will remain up-to-date with DevTools’ latest debuging features, such as async stack debugging, blackboxing, and ES6 support.
+Although existing tools such as [Node Inspector](https://github.com/node-inspector/node-inspector) provide GUI-based debugging experiences, the new Node.js DevTools integration will remain up-to-date with DevTools’ latest debugging features, such as async stack debugging, blackboxing, and ES6 support.
 
 

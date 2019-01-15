@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Two new attributes bring consistent keyboard event handling to the web.
 
-{# wf_updated_on: 2016-04-18 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: uievents,input,chrome51 #}
 {# wf_featured_image: /web/updates/images/generic/keyboard.png #}
@@ -18,7 +18,7 @@ The past few versions of Chrome have seen two additions to [`KeyboardEvent`s](ht
 ## The code attribute
 
 First up is the `code` attribute. This is set to a [string](https://w3c.github.io/uievents-code/#code-value-tables) representing the key that was pressed to generate the `KeyboardEvent`, _without_ taking the current keyboard layout (for example, [QWERTY](https://en.wikipedia.org/wiki/QWERTY) vs. [Dvorak](https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard)), locale (for example, English vs. French), or any modifier keys into account.
-This is useful when you care about which _physical_ key was pressed, rather thanwhich character it corresponds to. For example, if you’re a writing a game, you might want a certain set of keys to move the player in different directions, and that mapping should ideally be independent of keyboard layout.
+This is useful when you care about which _physical_ key was pressed, rather than which character it corresponds to. For example, if you’re a writing a game, you might want a certain set of keys to move the player in different directions, and that mapping should ideally be independent of keyboard layout.
 
 ## The key attribute
 

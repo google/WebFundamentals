@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-09-28 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2011-09-28 #}
 {# wf_tags: news,games #}
 
@@ -19,7 +19,7 @@ You, too, can keep me from completing my TPS reports by learning how to write HT
 </p>
 
 <p>
-You don't build games? You'll learn mad Canvas, WebGL, performance, and JavaScript skillz at New Game. Nothing pushing the limits of a platform like video games.
+You don't build games? You'll learn mad Canvas, WebGL, performance, and JavaScript skills at New Game. Nothing pushing the limits of a platform like video games.
 </p>
 
 <p>

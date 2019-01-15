@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Powering a css background using canvas or webgl
 
-{# wf_updated_on: 2012-12-11 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2012-12-11 #}
 {# wf_tags: news,canvas,css,graphics #}
 
@@ -93,7 +93,7 @@ Hold on a sec. Does this mean we can power a CSS background using webgl? Of cour
     var gl = document.getCSSCanvasContext('experimental-webgl', 'animation', 300, 150);
     
 
-Here's a proof of concept that contains a div with it's background drawn using vertext and fragment shaders: [DEMO](http://jsbin.com/odimig/269/edit)
+Here's a proof of concept that contains a div with it's background drawn using vertex and fragment shaders: [DEMO](http://jsbin.com/odimig/269/edit)
 
 ### Other approaches
 
