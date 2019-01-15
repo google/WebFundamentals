@@ -4,6 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2011-07-14 #}
 {# wf_tags: news,webaudio,websockets,connectivity #}
+{# wf_blink_components: N/A #}
 
 # Multiplayer Audio Fun {: .page-title }
 
