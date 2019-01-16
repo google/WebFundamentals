@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2019-01-15 #}
-{# wf_published_on: 2019-01-14 #}
+{# wf_updated_on: 2019-01-16 #}
+{# wf_published_on: 2019-01-16 #}
 {# wf_tags: chrome72, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: TODO #}
@@ -21,26 +21,51 @@ Here's what's new in Chrome DevTools in Chrome 73:
 
 ## Logpoints
 
-https://chromium.googlesource.com/chromium/src/+/098da25c94fcb874ef01f853e7cb11f3759aabc8
-https://bugs.chromium.org/p/chromium/issues/detail?id=700519
+Use Logpoints to log messages to the Console without cluttering up your code with `console.*`
+calls.
 
-## Style properties in inspect mode
+[Chromium issue for this feature](https://crbug.com/700519){: .external }
 
-https://chromium.googlesource.com/chromium/src/+/78baa033b60f79de21d387ada6c92e166d7441d3
+## Styles properties in Inspect Mode {: #inspect }
+
+{# https://chromium.googlesource.com/chromium/src/+/78baa033b60f79de21d387ada6c92e166d7441d3 #}
+
+When inspecting a node, DevTools now shows commonly important style properties like color,
+font, margin, and padding.
+
+<figure>
+  <img src="/web/updates/images/2019/01/inspect.png"
+       alt="Inspecting a node"/>
+  <figcaption>
+    <b>Figure X</b>. Inspecting a node
+  </figcaption>
+</figure>
+
+To inspect a node:
+
+[inspect]: /web/tools/chrome-devtools/images/shared/inspect.png
+
+1. Click **Inspect** ![Inspect][inspect]{: .inline-icon }.
+
+     <aside class="objective">
+       <b>Tip!</b> Hover over <b>Inspect</b> to see its keyboard shortcut.
+     </aside>
+
+1. In your viewport, hover over the node.
 
 ## Code folding
 
-https://chromium.googlesource.com/chromium/src/+/9e5bce11314b18020acc24e078f2ccc723be3867
+{# https://chromium.googlesource.com/chromium/src/+/9e5bce11314b18020acc24e078f2ccc723be3867 #}
+
+The **Sources** panel now supports code folding.
+
+[Chromium issue for this feature](https://crbug.com/328431){: .external }
 
 ## Export code coverage data
 
 https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524
 
-### Breakpoint editor UI
-
-https://chromium.googlesource.com/chromium/src/+/3a2d091d43212bce947b34c824813dc6fbeadb48
-
-### Preserved tab order
+## Preserved tab order
 
 https://bugs.chromium.org/p/chromium/issues/detail?id=771144
 
@@ -49,34 +74,34 @@ https://bugs.chromium.org/p/chromium/issues/detail?id=771144
 https://chromium.googlesource.com/chromium/src/+/48789ec6e4da515fdeda4ec1c3d569a06466790c
 https://bugs.chromium.org/p/chromium/issues/detail?id=865674
 
-## `$0` and `$_` in autocomplete
-
-https://chromium.googlesource.com/chromium/src/+/4861a63889bacf46e3724f57c3df98e99c4dad4e
-
 ## New audit
 
 https://chromium.googlesource.com/chromium/src/+/5a003efcc60d91c76003893a4e29d413fb9ffeda
 https://github.com/googlechrome/lighthouse/pull/6397
 
-## Custom geolocation overrides
+## Save custom geolocation overrides {: #geolocation }
+
+The Sensors tab now lets you save custom geolocation overrides.
+
+1. Press <kbd>Escape</kbd> to open the Drawer.
+1. Click **More Tabs** ![TODO](TODO){: .inline-icon } and select **Sensors**.
+1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
+   <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
 
 https://chromium.googlesource.com/chromium/src/+/90c853aae4b8e1e538f6b486f0a0a30fa1c655dc
 
-## AA and AAA contrast ratio lines in the color picker
+## AAA contrast ratio line in the Color Picker {: #AAA }
+
+[contrast]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html
+
+The Color Picker now shows a line for colors that satisfy the AAA contrast ratio
+recommendation. See [Contrast (Enhanced)][contrast]{: .external }.
 
 https://chromium.googlesource.com/chromium/src/+/06c91da2e7454048cbe91e46685e9965b201d928
 
-## PWA installibilty warning in Manifest tab
+## Messages tab {: #messages }
 
-https://chromium.googlesource.com/chromium/src/+/6c30be45d7e9bd4a1f896d2906af9ccc2eb867cf
-https://bugs.chromium.org/p/chromium/issues/detail?id=901352
-
-## Keep initial main page request
-
-https://chromium.googlesource.com/chromium/src/+/d8b9212ada0fe3432a3078ba24c9ae297371097e
-https://bugs.chromium.org/p/chromium/issues/detail?id=908592&desc=2
-
-## Messages tab
+The **Frames** tab has been renamed to the **Messages** tab.
 
 https://chromium.googlesource.com/chromium/src/+/595fe3e4e2b1893fcbcd4469f3b86dfc328f8f98
 https://bugs.chromium.org/p/chromium/issues/detail?id=802182
