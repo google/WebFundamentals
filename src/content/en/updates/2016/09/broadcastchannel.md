@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: BroadcastChannel API can be used for simple pub/sub between windows, tabs, iframes, or workers.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-09-06 #}
 {# wf_tags: broadcast,messaging,chrome54 #}
+{# wf_blink_components: N/A #}
 {# wf_featured_image: /web/updates/images/2016/09/broadcast.png #}
 {# wf_featured_snippet: The BroadcastChannel API allows same-origin scripts to send messages to other browsing contexts. It can be thought of as a simple message bus that allows pub/sub semantics between windows/tabs, iframes, web workers, and service workers. #}
 
@@ -209,3 +210,6 @@ I haven't tried these, so your mileage may vary.
 [spec]: https://html.spec.whatwg.org/multipage/comms.html#broadcasting-to-other-browsing-contexts
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

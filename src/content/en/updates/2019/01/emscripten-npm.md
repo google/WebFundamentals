@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: How do you integrate WebAssembly into this setup? In this article we are going to work this out with C/C++ and Emscripten as an example.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2019-01-15 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/generic/webassembly.png #}
@@ -490,4 +490,5 @@ Note that you need to manually install git and clone libvpx as you don't have
 bind mounts when running `docker build`. As a side-effect, there is no need for
 napa anymore.
 
+{% include "web/_shared/helpful.html" %}
 {% include "web/_shared/rss-widget-updates.html" %}

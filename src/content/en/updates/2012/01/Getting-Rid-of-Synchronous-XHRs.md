@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-01-25 #}
 {# wf_tags: news,xhr2,binary #}
+{# wf_blink_components: Blink>Network>XHR #}
 
 # Getting Rid of Synchronous XHRs {: .page-title }
 
@@ -31,3 +32,6 @@ Synchronous XHRs are bad for a number of reasons, but MSDN's blog post, "[Why Yo
 This is a generally a great change for the web, but it has the potential to break some existing apps that were relying on synchronous behavior. Please look over your XHR code and update it ASAP to use asynchronous requests.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

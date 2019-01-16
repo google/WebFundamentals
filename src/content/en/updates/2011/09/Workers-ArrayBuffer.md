@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-31 #}
 {# wf_tags: news,binary,workers #}
 {# wf_blink_components: N/A #}
@@ -46,3 +46,6 @@ Typed array I/O makes intense image manipulation, sound processing, and heavy We
 In my opinion this is one of those nitpicks workers should have included from the start. It just makes sense.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

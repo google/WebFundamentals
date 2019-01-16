@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-07-15 #}
 {# wf_tags: news,games #}
 {# wf_blink_components: N/A #}
@@ -22,3 +22,6 @@ A [Call for Participation](//goo.gl/iWA2J) is now open, if you are building real
 See you at New Game this fall!
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

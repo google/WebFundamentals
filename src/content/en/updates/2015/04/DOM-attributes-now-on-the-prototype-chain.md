@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is becoming in line with the spec. Check your sites if you are assuming the WebKit logic for attribute propagation
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_tags: news,dom #}
+{# wf_blink_components: Blink>DOM #}
 
 # DOM Attributes now on the prototype chain {: .page-title }
 
@@ -195,3 +196,6 @@ Great question.  Most issues with sites will be based on the fact a site has cho
 * [Code Review](https://codereview.chromium.org/984523003/){: .external } for commit
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

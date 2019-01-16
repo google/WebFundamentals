@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: If you can't measure the performance of your requests in a service worker, how can you say it improves performance? Now you can answer that question with recent changes in Chrome.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-07-20 #}
 {# wf_tags: news,performance,serviceworker #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Measuring Performance in a Service Worker {: .page-title }
 
@@ -160,3 +161,6 @@ majority of your performance logic in your web app.
 * [https://w3c.github.io/resource-timing/](https://w3c.github.io/resource-timing/) 
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

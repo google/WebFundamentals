@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Big themes and trends for DevTools in 2016 and beyond.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-06-06 #}
 {# wf_tags: devtools #}
+{# wf_blink_components: Platform>DevTools #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 
 # DevTools Digest: DevTools in 2016 and Beyond {: .page-title }
@@ -99,3 +100,6 @@ With backends written in Node.js, however, the boundaries between frontend and b
 Although existing tools such as [Node Inspector](https://github.com/node-inspector/node-inspector) provide GUI-based debugging experiences, the new Node.js DevTools integration will remain up-to-date with DevTools’ latest debugging features, such as async stack debugging, blackboxing, and ES6 support.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

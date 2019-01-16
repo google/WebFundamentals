@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn about Web Animation Playback
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2014-12-04 #}
 {# wf_tags: news,webanimations #}
+{# wf_blink_components: Blink>Animation #}
 
 # Web Animations Playback Control in Chrome 39 {: .page-title }
 
@@ -165,3 +166,6 @@ These two features are also fully supported in other modern browsers [via a ligh
 The Web Animations spec will also continue to evolve. If you're interested in playing around with upcoming features, they're also available now in a [more detailed polyfill: web-animations-next](https://github.com/web-animations/web-animations-js#web-animations-nextminjs).
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

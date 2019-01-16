@@ -2,9 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome can now add custom poster images to object elements to improve perceived loading performance of plugins such as Flash.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-08-19 #}
 {# wf_tags: news,poster,flash,performance #}
+{# wf_blink_components: N/A #}
+
 
 # Using poster images on plugin content {: .page-title }
 
@@ -46,3 +48,6 @@ It's important that the image used is the same dimensions as the plugin content 
 the image could end up distorted on the user's screen
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

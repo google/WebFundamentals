@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Read about DevTools' new command menu and its over 60 actions that enable crazy fast workflows.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-04-21 #}
 {# wf_tags: devtools,digest,update #}
+{# wf_blink_components: Platform>DevTools #}
 {# wf_featured_image: /web/updates/images/2016/04/devtools-digest/command-menu.png #}
 
 # DevTools Digest: More Power with the New Command Menu {: .page-title }
@@ -61,3 +62,6 @@ Until next month!
 Paul Bakaus & the DevTools team
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

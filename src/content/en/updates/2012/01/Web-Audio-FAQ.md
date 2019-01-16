@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-01-09 #}
 {# wf_tags: news,webaudio,multimedia #}
+{# wf_blink_components: Blink>WebAudio #}
 
 # Web Audio FAQ {: .page-title }
 
@@ -112,3 +113,6 @@ A: Currently there is no support for this, but we’re looking into it. See [thi
 If you have additional questions, feel free to ask them on StackOverflow using the [web-audio](http://stackoverflow.com/questions/tagged/web-audio?sort=newest&pagesize=50) tag.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

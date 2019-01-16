@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Two new attributes bring consistent keyboard event handling to the web.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: uievents,input,chrome51 #}
+{# wf_blink_components: IO>Keyboard #}
 {# wf_featured_image: /web/updates/images/generic/keyboard.png #}
 
 # What’s New with KeyboardEvents? Keys and Codes! {: .page-title }
@@ -49,3 +50,6 @@ Support for the [`code`](http://caniuse.com/#feat=keyboardevent-code) attribute 
 The [`key`](http://caniuse.com/#feat=keyboardevent-key) attribute is supported in Firefox 44+, Chrome 51+, and Opera 38+, with [partial support](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#Browser_compatibility) in Internet Explorer 9+ and Edge 13+.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

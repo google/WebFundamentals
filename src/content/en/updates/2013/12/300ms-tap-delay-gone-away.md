@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Every click interaction in mobile browsers is hampered with a 300ms delay, but that's gone in Chrome 32 for mobile-optimized sites!
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2013-12-12 #}
 {# wf_tags: news,mobile,performance,touchevent #}
+{# wf_blink_components: Mobile(Android),Mobile>WebView #}
 
 # 300ms tap delay, gone away {: .page-title }
 
@@ -60,3 +61,6 @@ No. Pinch zoom continues to work, and OS features cater for users who find this 
 <p>Adding a <code>touchstart</code> listener to everything has a performance impact, because lower-level interactions such as scrolling are delayed by calling the listener to see if it <code>event.preventDefault()</code>s. Thankfully, FastClick will avoid setting listeners in cases where the browser already removes the 300ms delay, so you get the best of both!</p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

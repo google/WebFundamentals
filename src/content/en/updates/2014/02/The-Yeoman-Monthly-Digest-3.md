@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A monthly digest of high-quality Yeoman articles, generators and project news.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2014-02-16 #}
 {# wf_tags: news,frontend,scaffolding,yeoman,tools #}
+{# wf_blink_components: N/A #}
 
 # The Yeoman Monthly Digest #3 {: .page-title }
 
@@ -139,3 +140,6 @@ Until the next time we run `yo digest`, happy scaffolding and don't be afraid - 
 *With thanks for the rest of the Yeoman team for their reviews*
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

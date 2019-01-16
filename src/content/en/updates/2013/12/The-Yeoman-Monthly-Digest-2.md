@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A regular round-up of articles, videos and talks authored by the Yeoman community.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2013-12-25 #}
 {# wf_tags: news,frontend,workflow,tools,yeoman #}
+{# wf_blink_components: N/A #}
 
 # The Yeoman Monthly Digest #2 {: .page-title }
 
@@ -131,3 +132,6 @@ That's a wrap! If there are Yeoman resources you would like to suggest for the n
 *With special thanks to Stephen Sawchuk, Sindre Sorhus and Pascal Hartig for their review of this issue*
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

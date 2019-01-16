@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-27 #}
 {# wf_tags: news,dom #}
 {# wf_blink_components: N/A #}
@@ -39,3 +39,6 @@ Until now, the main issue with insertAdjacentHTML has been its lack of browser s
 </p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

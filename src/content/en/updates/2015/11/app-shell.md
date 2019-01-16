@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Application shell architecture is a method of building progressive web apps today, taking advantage of a range of technologies.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-11-16 #}
 {# wf_tags: app-shell,serviceworker #}
+{# wf_blink_components: Platform>Apps>Shell #}
 {# wf_featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg #}
 
 # Instant Loading Web Apps with an Application Shell Architecture {: .page-title }
@@ -223,3 +224,6 @@ If you’re already considering using service workers in your app, take a look a
 _With thanks to our reviewers: Jeff Posnick, Paul Lewis, Alex Russell, Seth Thompson, Rob Dodson, Taylor Savage and Joe Medley._
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

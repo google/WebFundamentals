@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-12-09 #}
 {# wf_tags: news,video,webrtc,getusermedia #}
+{# wf_blink_components: Blink>WebRTC #}
 
 # WebRTC hits Firefox, Android and iOS {: .page-title }
 
@@ -91,3 +92,6 @@ book_path: /web/updates/_book.yaml
 <p>...and don't forget to file any bugs you encounter at <a href="http://new.crbug.com" title="Post Chrome bug">new.crbug.com</a>!</p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-09-28 #}
 {# wf_tags: news,games #}
 {# wf_blink_components: N/A #}
@@ -48,3 +48,6 @@ New Game is proudly sponsored by Google and presented by Bocoup. Follow <a href=
 </p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

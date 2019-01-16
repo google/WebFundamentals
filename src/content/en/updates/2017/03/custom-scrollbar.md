@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Custom transform matrices allow you to build frame-perfect custom scrollbars.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2017-03-23 #}
 {# wf_tags: performance #}
+{# wf_blink_components: Blink>Layout>Scrollbars #}
 {# wf_featured_image: /web/updates/images/2017/03/custom-scrollbar/poster.jpg #}
 {# wf_featured_snippet: Custom transform matrices allow you to build frame-perfect custom scrollbars. #}
 
@@ -381,3 +382,5 @@ In the future,
 [AnimationWorklet](https://dassur.ma/things/animworklet/) is going to make
 frame-perfect scroll-linked effects like this a lot easier.
 
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

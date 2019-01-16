@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Record JavaScript CPU Profile" has been changed in Chrome 58.
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-12-15 #}
 {# wf_tags: devtools, chrome58 #}
+{# wf_blink_components: Platform>DevTools>JavaScript #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet:  "Record JavaScript CPU Profile" has been changed in Chrome 58. #} 
 
@@ -142,3 +143,6 @@ have any other questions about this article.
 
 [GH]: https://github.com/google/WebFundamentals/issues/new?title=[DevTools%20CPU%20Profile%20Migration]
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

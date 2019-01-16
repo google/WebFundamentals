@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-11-10 #}
 {# wf_tags: news,offline,quota,filesystem #}
+{# wf_blink_components: N/A #}
 
 # Quota Management API : Fast Facts {: .page-title }
 
@@ -50,4 +51,5 @@ There’s various offline related features introduced to modern browsers through
 
 * The API is described in WebIDL here: [https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1](https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1)
 
-
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-12-09 #}
 {# wf_tags: news,binary,performance,workers #}
+{# wf_blink_components: N/A #}
 
 # Transferable Objects: Lightning Fast! {: .page-title }
 
@@ -57,3 +58,6 @@ Feature detecting is a bit tricky with this one. My recommendation is to send a 
 *Updated (2011-12-13):* Code snippet to show `webkitPostMessage()` signature is different for window and worker.
 *Updated (2016-11-03):* Removed vendor prefixes and updated code snippets
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

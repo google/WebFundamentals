@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2016-05-19 #}
 {# wf_blink_components: N/A #}
 {# wf_tags: houdini,css #}
@@ -316,3 +316,6 @@ If you want to get involved, there’s always the [Houdini mailing list].
 
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

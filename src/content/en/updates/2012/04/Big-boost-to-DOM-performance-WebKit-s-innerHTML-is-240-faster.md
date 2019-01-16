@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-04-10 #}
 {# wf_tags: news,performance,dom #}
+{# wf_blink_components: Blink>DOM #}
 
 # Big boost to DOM performance - WebKit's innerHTML is 240% faster {: .page-title }
 
@@ -95,3 +96,6 @@ book_path: /web/updates/_book.yaml
 Note: Demo removed
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

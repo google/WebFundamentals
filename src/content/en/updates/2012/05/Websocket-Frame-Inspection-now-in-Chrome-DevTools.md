@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-05-07 #}
 {# wf_tags: news,devtools #}
+{# wf_blink_components: Blink>Network>WebSockets #}
 
 # Websocket Frame Inspection now in Chrome DevTools {: .page-title }
 
@@ -15,3 +16,6 @@ While before we could see sockets being established, we haven't had inspection a
 Open up your [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) or a [fresh Chromium build](http://download-chromium.appspot.com) for the latest changes here.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}
