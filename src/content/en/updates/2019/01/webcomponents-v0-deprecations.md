@@ -60,7 +60,7 @@ There are also other alternative polyfills for each feature (e.g.
 
 For web authors who need more time to handle this removal, you can re-enable
 these features with an [origin trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
-With a token generated for the trial, your site can continue to use them for
+After registering for the trial, you will receive a token that allows your site to use the three deprecated features for up to a year,
 an additional year, until Chrome 81.
 Chrome 81 is the planned milestone when we remove implementation code entirely so
 the trial token might last earlier.
