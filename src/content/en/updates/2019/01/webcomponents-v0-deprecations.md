@@ -56,7 +56,7 @@ There are also other alternative polyfills for each feature (e.g.
 [AshleyScirra’s HTML Imports polyfill](https://github.com/AshleyScirra/html-imports-polyfill)).
 
 
-### Reverse Origin Trial
+### Postpone removal via origin trial
 
 For web authors who need more time to handle this removal, you can re-enable
 these features with an [Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
