@@ -19,10 +19,73 @@ Here's what's new in Chrome DevTools in Chrome 73:
 
 * TODO
 
-## Logpoints
+## Logpoints {: #logpoints }
 
 Use Logpoints to log messages to the Console without cluttering up your code with `console.*`
 calls.
+
+1. Open a file containing JavaScript in the **Sources** panel.
+
+     <aside class="objective">
+       <b>Tip!</b> To open files quickly, press <kbd>Control</kbd>+<kbd>O</kbd>
+       or <kbd>Command</kbd>+<kbd>O</kbd> (Mac), start typing the name of the file,
+       select the file from the list, and then press <kbd>Enter</kbd>.
+     </aside>
+
+1. Right-click the line number where you want to add the Logpoint.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/add-logpoint.png"
+            alt="Adding a Logpoint"/>
+       <figcaption>
+         <b>Figure X</b>. Adding a Logpoint
+       </figcaption>
+     </figure>
+
+1. Select **Add logpoint**. The **Breakpoint Editor** pops up.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/breakpoint-editor.png"
+            alt="The Breakpoint Editor"/>
+       <figcaption>
+         <b>Figure X</b>. The Breakpoint Editor
+       </figcaption>
+     </figure>
+
+1. In the **Breakpoint Editor**, enter the expression that you want to log to the Console.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/logpoint-expression.png"
+            alt="Typing the Logpoint expression"/>
+       <figcaption>
+         <b>Figure X</b>. Typing the Logpoint expression
+       </figcaption>
+     </figure>
+
+     <aside class="objective">
+       <b>Tip!</b>
+     </aside>
+
+1. Press <kbd>Enter</kbd> or click outside of the **Breakpoint Editor** to save. The
+   orange badge on top of the line number represents the Logpoint.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/logpoint-badge.png"
+            alt="An orange Logpoint badge on line 174"/>
+       <figcaption>
+         <b>Figure X</b>. An orange Logpoint badge on line 174
+       </figcaption>
+     </figure>
+
+The next time that the line executes, DevTools logs the result of the Logpoint expression to the Console.
+
+<figure>
+  <img src="/web/updates/images/2019/01/logpoint-result.png"
+       alt="The result of the Logpoint expression in the Console"/>
+  <figcaption>
+    <b>Figure X</b>. The result of the Logpoint expression in the Console
+  </figcaption>
+</figure>
 
 [Chromium issue for this feature](https://crbug.com/700519){: .external }
 
@@ -30,8 +93,8 @@ calls.
 
 {# https://chromium.googlesource.com/chromium/src/+/78baa033b60f79de21d387ada6c92e166d7441d3 #}
 
-When inspecting a node, DevTools now shows commonly important style properties like color,
-font, margin, and padding.
+When inspecting a node, DevTools now shows an expanded tooltip containing commonly important style
+properties like font, margin, and padding.
 
 <figure>
   <img src="/web/updates/images/2019/01/inspect.png"
@@ -53,26 +116,90 @@ To inspect a node:
 
 1. In your viewport, hover over the node.
 
-## Code folding
+## Code folding {: #folding }
 
 {# https://chromium.googlesource.com/chromium/src/+/9e5bce11314b18020acc24e078f2ccc723be3867 #}
 
-The **Sources** panel now supports code folding.
+The **Sources** and **Network** panels now support code folding.
+
+<figure>
+  <img src="/web/updates/images/2019/01/folding.png"
+       alt="Lines 54 to 65 have been folded"/>
+  <figcaption>
+    <b>Figure X</b>. Lines 54 to 65 have been folded
+  </figcaption>
+</figure>
+
+To enable code folding:
+
+1. Press <kbd>F1</kbd> to open **Settings**.
+1. Under **Settings** > **Preferences** > **Sources** enable **Code folding**.
+
+To fold a block of code:
+
+1. Hover your mouse over the line number where the block starts.
+
+[fold]: /web/updates/images/2019/01/fold.png
+
+1. Click **Fold** ![Fold][fold]{: .inline-icon }.
 
 [Chromium issue for this feature](https://crbug.com/328431){: .external }
 
-## Export code coverage data
+## Export code coverage data {: #coverage }
 
-https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524
+{# https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524 #}
 
-## Preserved tab order
+Code coverage data can now be exported as a JSON file.
 
-https://bugs.chromium.org/p/chromium/issues/detail?id=771144
+The JSON file will have this shape:
 
-## Console keyboard navigation
+    [
+      {
+        "url": "https://developers.google.com/_static/styles.css",
+        "ranges": [
+          {
+            "start": 66,
+            "end": 183
+          },
+          {
+            "start": 205,
+            "end": 226
+          }
+        ],
+        "text": "body { margin:0; padding:0 }"
+      }
+    ]
 
-https://chromium.googlesource.com/chromium/src/+/48789ec6e4da515fdeda4ec1c3d569a06466790c
-https://bugs.chromium.org/p/chromium/issues/detail?id=865674
+* `url`
+* `ranges` the portions of the code that were executed
+* `start` the start offset for this range
+* `end` the end character offset for this range
+* `text` the full text of the resource. 
+
+[Chromium issue for this feature](https://crbug.com/717195)
+
+<!--
+
+## Bug fix for preserving tab order {: #order }
+
+If you've installed a Chrome Extension that adds a tab to DevTools, you may have
+noticed a bug where DevTools doesn't preserve your tab order. In other words,
+after dragging the extension's tab to the left, closing DevTools, and then
+re-opening DevTools, the extension's tab is back to its original position.
+This bug is now fixed.
+
+[Chromium issue for this bug fix](https://crbug.com/771144)
+
+-->
+
+## Console keyboard navigation {: #keyboard }
+
+You can now use the keyboard to inspect previous Console messages.
+
+1. Run some JavaScript in the Console, or log some messages.
+1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to focus the last evaluated result.
+
+[Chromium issue for this feature](https://crbug.com/865674)
 
 ## New audit
 
@@ -83,10 +210,12 @@ https://github.com/googlechrome/lighthouse/pull/6397
 
 The Sensors tab now lets you save custom geolocation overrides.
 
-1. Press <kbd>Escape</kbd> to open the Drawer.
-1. Click **More Tabs** ![TODO](TODO){: .inline-icon } and select **Sensors**.
-1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
+1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or 
    <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
+1. Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>.
+1. In the **Geolocation** section click **Manage**. **Settings** > **Geolocations** opens up.
+1. Click **Add location**.
+1. Enter a location name, latitude, and longitude, then click **Add**.
 
 https://chromium.googlesource.com/chromium/src/+/90c853aae4b8e1e538f6b486f0a0a30fa1c655dc
 
@@ -95,7 +224,7 @@ https://chromium.googlesource.com/chromium/src/+/90c853aae4b8e1e538f6b486f0a0a30
 [contrast]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html
 
 The Color Picker now shows a line for colors that satisfy the AAA contrast ratio
-recommendation. See [Contrast (Enhanced)][contrast]{: .external }.
+recommendation in addition to the preexisting AA line. See [Contrast (Enhanced)][contrast]{: .external }.
 
 https://chromium.googlesource.com/chromium/src/+/06c91da2e7454048cbe91e46685e9965b201d928
 
