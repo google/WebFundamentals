@@ -67,7 +67,9 @@ the trial token might last earlier.
 
 The trial name is `WebComponentsV0`. With that token, you can use Shadow DOM v0,
 Custom Elements v0, and HTML Imports APIs. Trial registration will be open
-after Chrome 73 beta release."
+We plan to remove the features permanently in the Chrome 81 release, although the trial tokens may expire before then.
+
+Soon after the Chrome 73 beta release, you can register for the trial at [Web Components V0](https://developers.chrome.com/origintrials/#/view_trial/2431943798780067841).
 
 ## Remove Shadow DOM v0
 Shadow DOM v0 API `Element.createShadowRoot()` is removed.
