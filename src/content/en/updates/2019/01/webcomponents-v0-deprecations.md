@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Components v0 deprecation and removal in Chrome 73 to help you plan.
 
-{# wf_updated_on: 2019-01-10 #}
+{# wf_updated_on: 2019-01-18 #}
 {# wf_published_on: 2019-01-18 #}
 {# wf_tags: deprecations,removals,chrome73,webcomponents,origintrials #}
 {# wf_blink_components: Blink>DOM #}
@@ -62,13 +62,7 @@ For web authors who need more time to handle this removal, you can re-enable
 these features with an [origin trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 After registering for the trial, you will receive a token that allows your site to use the three deprecated features for up to a year,
 until Chrome 81.
-Chrome 81 is the planned milestone when we remove implementation code entirely so
-the trial token might last earlier.
-
-The trial name is `WebComponentsV0`. With that token, you can use Shadow DOM v0,
-Custom Elements v0, and HTML Imports APIs. Trial registration will be open
 We plan to remove the features permanently in the Chrome 81 release, although the trial tokens may expire before then.
-
 Soon after the Chrome 73 beta release, you can register for the trial at [Web Components V0](https://developers.chrome.com/origintrials/#/view_trial/2431943798780067841).
 
 ## Remove Shadow DOM v0
