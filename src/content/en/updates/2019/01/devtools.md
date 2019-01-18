@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2019-01-17 #}
 {# wf_published_on: 2019-01-16 #}
 {# wf_tags: chrome72, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -27,9 +27,8 @@ calls.
 1. Open a file containing JavaScript in the **Sources** panel.
 
      <aside class="objective">
-       <b>Tip!</b> To open files quickly, press <kbd>Control</kbd>+<kbd>O</kbd>
-       or <kbd>Command</kbd>+<kbd>O</kbd> (Mac), start typing the name of the file,
-       select the file from the list, and then press <kbd>Enter</kbd>.
+       <b>Tip!</b> To open files quickly from any panel, press <kbd>Control</kbd>+<kbd>P</kbd>
+       or <kbd>Command</kbd>+<kbd>P</kbd> (Mac).
      </aside>
 
 1. Right-click the line number where you want to add the Logpoint.
@@ -63,7 +62,8 @@ calls.
      </figure>
 
      <aside class="objective">
-       <b>Tip!</b>
+       <b>Tip!</b> When logging out a variable like `TodoApp`, wrap the variable in
+       an object (`{TodoApp}`) to log out its name and value in the Console. TODO
      </aside>
 
 1. Press <kbd>Enter</kbd> or click outside of the **Breakpoint Editor** to save. The
@@ -111,7 +111,9 @@ To inspect a node:
 1. Click **Inspect** ![Inspect][inspect]{: .inline-icon }.
 
      <aside class="objective">
-       <b>Tip!</b> Hover over <b>Inspect</b> to see its keyboard shortcut.
+       <b>Tip!</b> Hover over <b>Inspect</b>
+       <img src="/web/tools/chrome-devtools/images/shared/inspect.png" class="inline-icon"
+            alt="Inspect"/> to see its keyboard shortcut.
      </aside>
 
 1. In your viewport, hover over the node.
@@ -149,34 +151,33 @@ To fold a block of code:
 
 {# https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524 #}
 
-Code coverage data can now be exported as a JSON file.
-
-The JSON file will have this shape:
+Code coverage data can now be exported as a JSON file. 
 
     [
       {
-        "url": "https://developers.google.com/_static/styles.css",
+        "url": "https://example.com/styles.css",
         "ranges": [
           {
-            "start": 66,
-            "end": 183
+            "start": 0,
+            "end": 18
           },
           {
-            "start": 205,
-            "end": 226
+            "start": 43,
+            "end": 66
           }
         ],
-        "text": "body { margin:0; padding:0 }"
-      }
+        "text": "body { margin: 0; } figure { padding: 0; } p { color: chartreuse; }"
+      },
+      ...
     ]
 
-* `url`
-* `ranges` the portions of the code that were executed
-* `start` the start offset for this range
-* `end` the end character offset for this range
-* `text` the full text of the resource. 
+`url` is the URL of the CSS or JavaScript file that DevTools analyzed.
+`ranges` describes the the portions of the code that were executed.
+`start` is the starting offset for a range that was executed.
+`end` is the ending offset.
+`text` is the full text of the file.
 
-[Chromium issue for this feature](https://crbug.com/717195)
+[Chromium issue for this feature](https://crbug.com/717195){: .external }
 
 <!--
 
@@ -188,7 +189,7 @@ after dragging the extension's tab to the left, closing DevTools, and then
 re-opening DevTools, the extension's tab is back to its original position.
 This bug is now fixed.
 
-[Chromium issue for this bug fix](https://crbug.com/771144)
+[Chromium issue for this bug fix](https://crbug.com/771144){: .external }
 
 -->
 
@@ -196,15 +197,42 @@ This bug is now fixed.
 
 You can now use the keyboard to inspect previous Console messages.
 
+To navigate Console messages with your keyboard:
+
 1. Run some JavaScript in the Console, or log some messages.
 1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to focus the last evaluated result.
 
-[Chromium issue for this feature](https://crbug.com/865674)
+Use the arrow keys to navigate:
 
-## New audit
+* Press the <kbd>Up</kbd> arrow to select the next result above.
+* Press the <kbd>Down</kbd> arrow to select the next result below.
+* Press the <kbd>Right</kbd> arrow to expand a result, such as an object.
+* Press the <kbd>Left</kbd> arrow to collapse a result. 
 
-https://chromium.googlesource.com/chromium/src/+/5a003efcc60d91c76003893a4e29d413fb9ffeda
-https://github.com/googlechrome/lighthouse/pull/6397
+[Chromium issue for this feature](https://crbug.com/865674){: .external }
+
+## AAA contrast ratio line in the Color Picker {: #AAA }
+
+[AAA]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html
+[WNDT65]: /web/updates/2018/01/devtools#contrast
+
+The Color Picker now shows a second line to indicate which colors meet the [AAA contrast
+ratio recommendation][AAA]{: .external }. The AA line was added in Chrome 65.
+
+<figure>
+  <img src="/web/updates/images/2019/01/AAA.png"
+       alt="The AA line (top) and AAA line (bottom)"/>
+  <figcaption>
+    <b>Figure X</b>. The AA line (top) and AAA line (bottom)
+  </figcaption>
+</figure>
+
+Colors between the 2 lines represent colors that meet the AA recommendation but do not
+meet the AAA recommendation.
+
+See [Contrast ratio in the Color Picker][WNDT65] to learn how to access this feature.
+
+[Chromium issue for this feature](https://crbug.com/879856){: .external }
 
 ## Save custom geolocation overrides {: #geolocation }
 
@@ -212,32 +240,63 @@ The Sensors tab now lets you save custom geolocation overrides.
 
 1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or 
    <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
-1. Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/command-menu.png"
+            alt="The Command Menu"/>
+       <figcaption>
+         <b>Figure X</b>. The Command Menu
+       </figcaption>
+     </figure>
+
+1. Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>. The **Sensors** tab
+   opens.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/sensors.png"
+            alt="The Sensors tab"/>
+       <figcaption>
+         <b>Figure X</b>. The Sensors tab
+       </figcaption>
+     </figure>
+
 1. In the **Geolocation** section click **Manage**. **Settings** > **Geolocations** opens up.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/geolocations.png"
+            alt="The Geolocations tab in Settings"/>
+       <figcaption>
+         <b>Figure X</b>. The Geolocations tab in Settings
+       </figcaption>
+     </figure>
+
 1. Click **Add location**.
 1. Enter a location name, latitude, and longitude, then click **Add**.
 
-https://chromium.googlesource.com/chromium/src/+/90c853aae4b8e1e538f6b486f0a0a30fa1c655dc
+     <figure>
+       <img src="/web/updates/images/2019/01/custom-geolocation.png"
+            alt="Adding a custom geolocation"/>
+       <figcaption>
+         <b>Figure X</b>. Adding a custom geolocation
+       </figcaption>
+     </figure>
 
-## AAA contrast ratio line in the Color Picker {: #AAA }
-
-[contrast]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html
-
-The Color Picker now shows a line for colors that satisfy the AAA contrast ratio
-recommendation in addition to the preexisting AA line. See [Contrast (Enhanced)][contrast]{: .external }.
-
-https://chromium.googlesource.com/chromium/src/+/06c91da2e7454048cbe91e46685e9965b201d928
+[Chromium issue for this feature](https://crbug.com/649657){: .external }
 
 ## Messages tab {: #messages }
 
-The **Frames** tab has been renamed to the **Messages** tab.
+The **Frames** tab has been renamed to the **Messages** tab. This tab is only available
+in the **Network** panel when inspecting a web socket connection.
 
-https://chromium.googlesource.com/chromium/src/+/595fe3e4e2b1893fcbcd4469f3b86dfc328f8f98
-https://bugs.chromium.org/p/chromium/issues/detail?id=802182
+<figure>
+  <img src="/web/updates/images/2019/01/messages.png"
+       alt="The Messages tab"/>
+  <figcaption>
+    <b>Figure X</b>. The Messages tab
+  </figcaption>
+</figure>
 
-## Cache storage filter
-
-https://chromium.googlesource.com/chromium/src/+/3c68e3a7bc37f6eeb338e7768735087ae469a329
+[Chromium issue for this feature](https://crbug.com/802182){: .external }
 
 ## Feedback {: #feedback }
 
