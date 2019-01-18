@@ -15,9 +15,7 @@ description: TODO
 
 Note: We'll publish the video version of this page in mid-March 2019.
 
-Here's what's new in Chrome DevTools in Chrome 73:
-
-* TODO
+Here's what's new in DevTools in Chrome 73.
 
 ## Logpoints {: #logpoints }
 
@@ -62,8 +60,12 @@ calls.
      </figure>
 
      <aside class="objective">
-       <b>Tip!</b> When logging out a variable like `TodoApp`, wrap the variable in
-       an object (`{TodoApp}`) to log out its name and value in the Console. TODO
+       <b>Tip!</b> When logging out a variable (e.g. <code>TodoApp</code>), wrap the variable in
+       an object (e.g. <code>{TodoApp}</code>) to log out its name and value in the Console. See
+       <a href="https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4#a4f3"
+              class="external">Always Log Objects</a> and
+       <a href=https://alligator.io/js/object-property-shorthand-es6/"
+          class="external">Object Property Value Shorthand</a> to learn more.
      </aside>
 
 1. Press <kbd>Enter</kbd> or click outside of the **Breakpoint Editor** to save. The
@@ -118,64 +120,82 @@ To inspect a node:
 
 1. In your viewport, hover over the node.
 
-## Code folding {: #folding }
-
-{# https://chromium.googlesource.com/chromium/src/+/9e5bce11314b18020acc24e078f2ccc723be3867 #}
-
-The **Sources** and **Network** panels now support code folding.
-
-<figure>
-  <img src="/web/updates/images/2019/01/folding.png"
-       alt="Lines 54 to 65 have been folded"/>
-  <figcaption>
-    <b>Figure X</b>. Lines 54 to 65 have been folded
-  </figcaption>
-</figure>
-
-To enable code folding:
-
-1. Press <kbd>F1</kbd> to open **Settings**.
-1. Under **Settings** > **Preferences** > **Sources** enable **Code folding**.
-
-To fold a block of code:
-
-1. Hover your mouse over the line number where the block starts.
-
-[fold]: /web/updates/images/2019/01/fold.png
-
-1. Click **Fold** ![Fold][fold]{: .inline-icon }.
-
-[Chromium issue for this feature](https://crbug.com/328431){: .external }
-
 ## Export code coverage data {: #coverage }
 
 {# https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524 #}
 
-Code coverage data can now be exported as a JSON file. 
+Code coverage data can now be exported as a JSON file. The JSON looks like this:
 
     [
       {
-        "url": "https://example.com/styles.css",
+        "url": "https://wndt73.glitch.me/style.css",
         "ranges": [
           {
             "start": 0,
-            "end": 18
+            "end": 21
           },
           {
-            "start": 43,
-            "end": 66
+            "start": 45,
+            "end": 67
           }
         ],
-        "text": "body { margin: 0; } figure { padding: 0; } p { color: chartreuse; }"
+        "text": "body { margin: 1em; } figure { padding: 0; } h1 { color: #317EFB; }"
       },
       ...
     ]
 
 `url` is the URL of the CSS or JavaScript file that DevTools analyzed.
-`ranges` describes the the portions of the code that were executed.
-`start` is the starting offset for a range that was executed.
-`end` is the ending offset.
-`text` is the full text of the file.
+`ranges` describes the portions of the code that were used.
+`start` is the starting offset for a range that was used.
+`end` is the ending offset. `text` is the full text of the file.
+
+In the example above, the range 0 to 21 corresponds to `body { margin: 1em; }` and the
+range 45 to 67 corresponds to `h1 { color: #317EFB; }`. In other words, the first and
+last rulesets were used and the middle one was not.
+
+To analyze how much code is used on page load and export the data:
+
+1. Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or 
+   <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/command-menu.png"
+            alt="The Command Menu"/>
+       <figcaption>
+         <b>Figure X</b>. The Command Menu
+       </figcaption>
+     </figure>
+
+1. Start typing `coverage`, select **Show Coverage** and then press <kbd>Enter</kbd>.
+
+     <figure>
+       <img src="/web/updates/images/2019/01/show-coverage.png"
+            alt="Show Coverage"/>
+       <figcaption>
+         <b>Figure X</b>. Show Coverage
+       </figcaption>
+     </figure>
+
+    The **Coverage** tab opens.
+ 
+    <figure>
+      <img src="/web/updates/images/2019/01/coverage.png"
+           alt="The Coverage tab"/>
+      <figcaption>
+        <b>Figure X</b>. The Coverage tab
+      </figcaption>
+    </figure>
+
+[reload]: /web/tools/chrome-devtools/images/shared/reload.png
+[export]: /web/tools/chrome-devtools/images/shared/export.png
+
+1. Click **Reload** ![Reload][reload]{: .inline-icon }. DevTools reloads the page and
+   records how much code is used compared to how much is shipped.
+1. Click **Export** ![Export][export]{: .inline-icon } to export the data as a JSON file.
+
+[coverage]: https://pptr.dev/#?product=Puppeteer&version=v1.11.0&show=api-class-coverage
+
+Code coverage analysis is also available in Puppeteer. See [Coverage][coverage]{: .external }.
 
 [Chromium issue for this feature](https://crbug.com/717195){: .external }
 
@@ -193,21 +213,55 @@ This bug is now fixed.
 
 -->
 
-## Console keyboard navigation {: #keyboard }
+## Navigate the Console with the keyboard {: #keyboard }
 
-You can now use the keyboard to inspect previous Console messages.
+You can now use the keyboard to navigate the Console. Here's an example.
 
-To navigate Console messages with your keyboard:
+Pressing <kbd>Shift</kbd>+<kbd>Tab</kbd> focuses the last message (or result of an evaluated
+expression). If the message contains links, the last link is highlighted first.
+Pressing <kbd>Enter</kbd> opens the link in a new tab. Pressing the <kbd>Left</kbd> arrow
+key highlights the entire message.
 
-1. Run some JavaScript in the Console, or log some messages.
-1. Press <kbd>Shift</kbd>+<kbd>Tab</kbd> to focus the last evaluated result.
+<figure>
+  <img src="/web/updates/images/2019/01/focus1.png"
+       alt="Focusing a link"/>
+  <figcaption>
+    <b>Figure X</b>. Focusing a link
+  </figcaption>
+</figure>
 
-Use the arrow keys to navigate:
+Pressing the <kbd>Up</kbd> arrow key focuses the next link.
 
-* Press the <kbd>Up</kbd> arrow to select the next result above.
-* Press the <kbd>Down</kbd> arrow to select the next result below.
-* Press the <kbd>Right</kbd> arrow to expand a result, such as an object.
-* Press the <kbd>Left</kbd> arrow to collapse a result. 
+<figure>
+  <img src="/web/updates/images/2019/01/focus2.png"
+       alt="Focusing another link"/>
+  <figcaption>
+    <b>Figure X</b>. Focusing another link
+  </figcaption>
+</figure>
+
+Pressing the <kbd>Up</kbd> arrow key again focuses the entire message.
+
+<figure>
+  <img src="/web/updates/images/2019/01/focus3.png"
+       alt="Focusing an entire message"/>
+  <figcaption>
+    <b>Figure X</b>. Focusing an entire message
+  </figcaption>
+</figure>
+
+Pressing the <kbd>Right</kbd> arrow key expands a collapsed stack trace (or object, array,
+and so on).
+
+<figure>
+  <img src="/web/updates/images/2019/01/focus4.png"
+       alt="Expanding a collapsed stack trace"/>
+  <figcaption>
+    <b>Figure X</b>. Expanding a collapsed stack trace
+  </figcaption>
+</figure>
+
+Pressing the <kbd>Left</kbd> arrow key collapses an expanded message or result.
 
 [Chromium issue for this feature](https://crbug.com/865674){: .external }
 
@@ -217,7 +271,7 @@ Use the arrow keys to navigate:
 [WNDT65]: /web/updates/2018/01/devtools#contrast
 
 The Color Picker now shows a second line to indicate which colors meet the [AAA contrast
-ratio recommendation][AAA]{: .external }. The AA line was added in Chrome 65.
+ratio recommendation][AAA]{: .external }. The AA line has been there since Chrome 65.
 
 <figure>
   <img src="/web/updates/images/2019/01/AAA.png"
@@ -282,6 +336,35 @@ The Sensors tab now lets you save custom geolocation overrides.
      </figure>
 
 [Chromium issue for this feature](https://crbug.com/649657){: .external }
+
+## Code folding {: #folding }
+
+{# https://chromium.googlesource.com/chromium/src/+/9e5bce11314b18020acc24e078f2ccc723be3867 #}
+
+The **Sources** and **Network** panels now support code folding.
+
+<figure>
+  <img src="/web/updates/images/2019/01/folding.png"
+       alt="Lines 54 to 65 have been folded"/>
+  <figcaption>
+    <b>Figure X</b>. Lines 54 to 65 have been folded
+  </figcaption>
+</figure>
+
+To enable code folding:
+
+1. Press <kbd>F1</kbd> to open **Settings**.
+1. Under **Settings** > **Preferences** > **Sources** enable **Code folding**.
+
+To fold a block of code:
+
+1. Hover your mouse over the line number where the block starts.
+
+[fold]: /web/updates/images/2019/01/fold.png
+
+1. Click **Fold** ![Fold][fold]{: .inline-icon }.
+
+[Chromium issue for this feature](https://crbug.com/328431){: .external }
 
 ## Messages tab {: #messages }
 
