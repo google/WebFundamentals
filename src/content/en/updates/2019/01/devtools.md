@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TODO
 
-{# wf_updated_on: 2019-01-17 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2019-01-16 #}
 {# wf_tags: chrome72, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -22,12 +22,7 @@ Here's what's new in DevTools in Chrome 73.
 Use Logpoints to log messages to the Console without cluttering up your code with `console.*`
 calls.
 
-1. Open a file containing JavaScript in the **Sources** panel.
-
-     <aside class="objective">
-       <b>Tip!</b> To open files quickly from any panel, press <kbd>Control</kbd>+<kbd>P</kbd>
-       or <kbd>Command</kbd>+<kbd>P</kbd> (Mac).
-     </aside>
+To add a logpoint:
 
 1. Right-click the line number where you want to add the Logpoint.
 
@@ -65,7 +60,8 @@ calls.
        <a href="https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4#a4f3"
               class="external">Always Log Objects</a> and
        <a href=https://alligator.io/js/object-property-shorthand-es6/"
-          class="external">Object Property Value Shorthand</a> to learn more.
+          class="external">Object Property Value Shorthand</a> to learn more about this
+       syntax.
      </aside>
 
 1. Press <kbd>Enter</kbd> or click outside of the **Breakpoint Editor** to save. The
@@ -89,7 +85,8 @@ The next time that the line executes, DevTools logs the result of the Logpoint e
   </figcaption>
 </figure>
 
-[Chromium issue for this feature](https://crbug.com/700519){: .external }
+See [Chromium issue #700519](https://crbug.com/700519){: .external } to report bugs or
+suggest improvements.
 
 ## Styles properties in Inspect Mode {: #inspect }
 
@@ -124,7 +121,9 @@ To inspect a node:
 
 {# https://chromium.googlesource.com/chromium/src/+/384dfbd0667873ec84d922bfc7b657045a66a524 #}
 
-Code coverage data can now be exported as a JSON file. The JSON looks like this:
+[CC]: /web/updates/2017/04/devtools-release-notes#coverage
+
+[Code coverage][CC] data can now be exported as a JSON file. The JSON looks like this:
 
     [
       {
@@ -195,9 +194,11 @@ To analyze how much code is used on page load and export the data:
 
 [coverage]: https://pptr.dev/#?product=Puppeteer&version=v1.11.0&show=api-class-coverage
 
-Code coverage analysis is also available in Puppeteer. See [Coverage][coverage]{: .external }.
+Code coverage is also available in Puppeteer, a browser automation tool maintained by
+the DevTools team. See [Coverage][coverage]{: .external }.
 
-[Chromium issue for this feature](https://crbug.com/717195){: .external }
+See [Chromium issue #717195](https://crbug.com/717195){: .external } to report bugs or
+suggest improvements.
 
 <!--
 
@@ -209,7 +210,8 @@ after dragging the extension's tab to the left, closing DevTools, and then
 re-opening DevTools, the extension's tab is back to its original position.
 This bug is now fixed.
 
-[Chromium issue for this bug fix](https://crbug.com/771144){: .external }
+See [Chromium issue #771144](https://crbug.com/771144){: .external } to report bugs or
+suggest improvements.
 
 -->
 
@@ -220,7 +222,7 @@ You can now use the keyboard to navigate the Console. Here's an example.
 Pressing <kbd>Shift</kbd>+<kbd>Tab</kbd> focuses the last message (or result of an evaluated
 expression). If the message contains links, the last link is highlighted first.
 Pressing <kbd>Enter</kbd> opens the link in a new tab. Pressing the <kbd>Left</kbd> arrow
-key highlights the entire message.
+key highlights the entire message (see <b>Figure X</b>).
 
 <figure>
   <img src="/web/updates/images/2019/01/focus1.png"
@@ -263,7 +265,8 @@ and so on).
 
 Pressing the <kbd>Left</kbd> arrow key collapses an expanded message or result.
 
-[Chromium issue for this feature](https://crbug.com/865674){: .external }
+See [Chromium issue #865674](https://crbug.com/865674){: .external } to report bugs or
+suggest improvements.
 
 ## AAA contrast ratio line in the Color Picker {: #AAA }
 
@@ -282,11 +285,21 @@ ratio recommendation][AAA]{: .external }. The AA line has been there since Chrom
 </figure>
 
 Colors between the 2 lines represent colors that meet the AA recommendation but do not
-meet the AAA recommendation.
+meet the AAA recommendation. When a color meets the AAA recommendation, anything on the
+same side of that color also meets the recommendation. For example, in **Figure X** anything
+below the lower line is AAA, and anything above the upper line does not even meet the AA
+recommendation.
+
+<aside class="objective">
+  <b>Tip!</b> In general, you can improve the readability of your pages by increasing the
+  amount of text that meets the AAA recommendation. If meeting the AAA recommendation is not
+  possible for some reason, try to at least meet the AA recommendation.
+</aside>
 
 See [Contrast ratio in the Color Picker][WNDT65] to learn how to access this feature.
 
-[Chromium issue for this feature](https://crbug.com/879856){: .external }
+See [Chromium issue #879856](https://crbug.com/879856){: .external } to report bugs or
+suggest improvements.
 
 ## Save custom geolocation overrides {: #geolocation }
 
@@ -335,7 +348,8 @@ The Sensors tab now lets you save custom geolocation overrides.
        </figcaption>
      </figure>
 
-[Chromium issue for this feature](https://crbug.com/649657){: .external }
+See [Chromium issue #649657](https://crbug.com/649657){: .external } to report bugs or
+suggest improvements.
 
 ## Code folding {: #folding }
 
@@ -364,7 +378,8 @@ To fold a block of code:
 
 1. Click **Fold** ![Fold][fold]{: .inline-icon }.
 
-[Chromium issue for this feature](https://crbug.com/328431){: .external }
+See [Chromium issue #328431](https://crbug.com/328431){: .external } to report bugs or
+suggest improvements.
 
 ## Messages tab {: #messages }
 
@@ -379,7 +394,8 @@ in the **Network** panel when inspecting a web socket connection.
   </figcaption>
 </figure>
 
-[Chromium issue for this feature](https://crbug.com/802182){: .external }
+See [Chromium issue #802182](https://crbug.com/802182){: .external } to report bugs or
+suggest improvements.
 
 ## Feedback {: #feedback }
 
