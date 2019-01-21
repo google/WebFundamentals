@@ -30,7 +30,7 @@ To add a logpoint:
        <img src="/web/updates/images/2019/01/add-logpoint.png"
             alt="Adding a Logpoint"/>
        <figcaption>
-         <b>Figure X</b>. Adding a Logpoint
+         <b>Figure 1</b>. Adding a Logpoint
        </figcaption>
      </figure>
 
@@ -40,7 +40,7 @@ To add a logpoint:
        <img src="/web/updates/images/2019/01/breakpoint-editor.png"
             alt="The Breakpoint Editor"/>
        <figcaption>
-         <b>Figure X</b>. The Breakpoint Editor
+         <b>Figure 2</b>. The Breakpoint Editor
        </figcaption>
      </figure>
 
@@ -50,7 +50,7 @@ To add a logpoint:
        <img src="/web/updates/images/2019/01/logpoint-expression.png"
             alt="Typing the Logpoint expression"/>
        <figcaption>
-         <b>Figure X</b>. Typing the Logpoint expression
+         <b>Figure 3</b>. Typing the Logpoint expression
        </figcaption>
      </figure>
 
@@ -71,7 +71,7 @@ To add a logpoint:
        <img src="/web/updates/images/2019/01/logpoint-badge.png"
             alt="An orange Logpoint badge on line 174"/>
        <figcaption>
-         <b>Figure X</b>. An orange Logpoint badge on line 174
+         <b>Figure 4</b>. An orange Logpoint badge on line 174
        </figcaption>
      </figure>
 
@@ -81,7 +81,7 @@ The next time that the line executes, DevTools logs the result of the Logpoint e
   <img src="/web/updates/images/2019/01/logpoint-result.png"
        alt="The result of the Logpoint expression in the Console"/>
   <figcaption>
-    <b>Figure X</b>. The result of the Logpoint expression in the Console
+    <b>Figure 5</b>. The result of the Logpoint expression in the Console
   </figcaption>
 </figure>
 
@@ -99,7 +99,7 @@ properties like font, margin, and padding.
   <img src="/web/updates/images/2019/01/inspect.png"
        alt="Inspecting a node"/>
   <figcaption>
-    <b>Figure X</b>. Inspecting a node
+    <b>Figure 6</b>. Inspecting a node
   </figcaption>
 </figure>
 
@@ -161,7 +161,7 @@ To analyze how much code is used on page load and export the data:
        <img src="/web/updates/images/2019/01/command-menu.png"
             alt="The Command Menu"/>
        <figcaption>
-         <b>Figure X</b>. The Command Menu
+         <b>Figure 7</b>. The Command Menu
        </figcaption>
      </figure>
 
@@ -171,7 +171,7 @@ To analyze how much code is used on page load and export the data:
        <img src="/web/updates/images/2019/01/show-coverage.png"
             alt="Show Coverage"/>
        <figcaption>
-         <b>Figure X</b>. Show Coverage
+         <b>Figure 8</b>. Show Coverage
        </figcaption>
      </figure>
 
@@ -181,7 +181,7 @@ To analyze how much code is used on page load and export the data:
       <img src="/web/updates/images/2019/01/coverage.png"
            alt="The Coverage tab"/>
       <figcaption>
-        <b>Figure X</b>. The Coverage tab
+        <b>Figure 9</b>. The Coverage tab
       </figcaption>
     </figure>
 
@@ -222,13 +222,13 @@ You can now use the keyboard to navigate the Console. Here's an example.
 Pressing <kbd>Shift</kbd>+<kbd>Tab</kbd> focuses the last message (or result of an evaluated
 expression). If the message contains links, the last link is highlighted first.
 Pressing <kbd>Enter</kbd> opens the link in a new tab. Pressing the <kbd>Left</kbd> arrow
-key highlights the entire message (see <b>Figure X</b>).
+key highlights the entire message (see <b>Figure 13</b>).
 
 <figure>
   <img src="/web/updates/images/2019/01/focus1.png"
        alt="Focusing a link"/>
   <figcaption>
-    <b>Figure X</b>. Focusing a link
+    <b>Figure 11</b>. Focusing a link
   </figcaption>
 </figure>
 
@@ -238,7 +238,7 @@ Pressing the <kbd>Up</kbd> arrow key focuses the next link.
   <img src="/web/updates/images/2019/01/focus2.png"
        alt="Focusing another link"/>
   <figcaption>
-    <b>Figure X</b>. Focusing another link
+    <b>Figure 12</b>. Focusing another link
   </figcaption>
 </figure>
 
@@ -248,7 +248,7 @@ Pressing the <kbd>Up</kbd> arrow key again focuses the entire message.
   <img src="/web/updates/images/2019/01/focus3.png"
        alt="Focusing an entire message"/>
   <figcaption>
-    <b>Figure X</b>. Focusing an entire message
+    <b>Figure 13</b>. Focusing an entire message
   </figcaption>
 </figure>
 
@@ -259,7 +259,7 @@ and so on).
   <img src="/web/updates/images/2019/01/focus4.png"
        alt="Expanding a collapsed stack trace"/>
   <figcaption>
-    <b>Figure X</b>. Expanding a collapsed stack trace
+    <b>Figure 14</b>. Expanding a collapsed stack trace
   </figcaption>
 </figure>
 
@@ -280,7 +280,7 @@ ratio recommendation][AAA]{: .external }. The AA line has been there since Chrom
   <img src="/web/updates/images/2019/01/AAA.png"
        alt="The AA line (top) and AAA line (bottom)"/>
   <figcaption>
-    <b>Figure X</b>. The AA line (top) and AAA line (bottom)
+    <b>Figure 15</b>. The AA line (top) and AAA line (bottom)
   </figcaption>
 </figure>
 
@@ -312,7 +312,7 @@ The Sensors tab now lets you save custom geolocation overrides.
        <img src="/web/updates/images/2019/01/command-menu.png"
             alt="The Command Menu"/>
        <figcaption>
-         <b>Figure X</b>. The Command Menu
+         <b>Figure 16</b>. The Command Menu
        </figcaption>
      </figure>
 
@@ -323,7 +323,7 @@ The Sensors tab now lets you save custom geolocation overrides.
        <img src="/web/updates/images/2019/01/sensors.png"
             alt="The Sensors tab"/>
        <figcaption>
-         <b>Figure X</b>. The Sensors tab
+         <b>Figure 17</b>. The Sensors tab
        </figcaption>
      </figure>
 
@@ -333,7 +333,7 @@ The Sensors tab now lets you save custom geolocation overrides.
        <img src="/web/updates/images/2019/01/geolocations.png"
             alt="The Geolocations tab in Settings"/>
        <figcaption>
-         <b>Figure X</b>. The Geolocations tab in Settings
+         <b>Figure 18</b>. The Geolocations tab in Settings
        </figcaption>
      </figure>
 
@@ -344,7 +344,7 @@ The Sensors tab now lets you save custom geolocation overrides.
        <img src="/web/updates/images/2019/01/custom-geolocation.png"
             alt="Adding a custom geolocation"/>
        <figcaption>
-         <b>Figure X</b>. Adding a custom geolocation
+         <b>Figure 19</b>. Adding a custom geolocation
        </figcaption>
      </figure>
 
@@ -361,7 +361,7 @@ The **Sources** and **Network** panels now support code folding.
   <img src="/web/updates/images/2019/01/folding.png"
        alt="Lines 54 to 65 have been folded"/>
   <figcaption>
-    <b>Figure X</b>. Lines 54 to 65 have been folded
+    <b>Figure 20</b>. Lines 54 to 65 have been folded
   </figcaption>
 </figure>
 
@@ -390,7 +390,7 @@ in the **Network** panel when inspecting a web socket connection.
   <img src="/web/updates/images/2019/01/messages.png"
        alt="The Messages tab"/>
   <figcaption>
-    <b>Figure X</b>. The Messages tab
+    <b>Figure 21</b>. The Messages tab
   </figcaption>
 </figure>
 
