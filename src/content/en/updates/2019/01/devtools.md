@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Logpoints, style properties in Inspect Mode, and much more.
 
 {# wf_updated_on: 2019-01-21 #}
-{# wf_published_on: 2019-01-16 #}
-{# wf_tags: chrome72, devtools, devtools-whatsnew #}
+{# wf_published_on: 2019-01-22 #}
+{# wf_tags: chrome73, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Logpoints, style properties in Inspect Mode, and much more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 73) {: .page-title }
@@ -19,7 +19,7 @@ Here's what's new in DevTools in Chrome 73.
 
 ## Logpoints {: #logpoints }
 
-Use Logpoints to log messages to the Console without cluttering up your code with `console.*`
+Use Logpoints to log messages to the Console without cluttering up your code with `console.log()`
 calls.
 
 To add a logpoint:
