@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Logpoints, style properties in Inspect Mode, and much more.
+description: Logpoints, detailed tooltips in Inspect Mode, and much more.
 
 {# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2019-01-22 #}
 {# wf_tags: chrome73, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Logpoints, style properties in Inspect Mode, and much more. #}
+{# wf_featured_snippet: Logpoints, detailed tooltips in Inspect Mode, and much more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 73) {: .page-title }
