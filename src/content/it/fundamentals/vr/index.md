@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: WebVR
 
-{# wf_updated_on: 2018-09-03 #}
+{# wf_updated_on: 2019-01-22 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -16,7 +16,7 @@ data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-WebVR è una API JavaScript per utilizzare qualsiasi tipo di visore VR e dispositivo
+WebVR è una API JavaScript ideata per utilizzare qualsiasi tipo di visore VR e dispositivo
 abilitato per VR posseduto dagli utenti, come i [visori
 Daydream](https://vr.google.com/daydream/) e il telefono Pixel, per creare
 esperienze 3D completamente immersive nel tuo browser.
@@ -125,7 +125,7 @@ adattarci ai diversi input e visualizzare le opzioni nel
 dispositivo dell'utente.
 
 Pianificare partendo da un ambiente non VR ti consente di rendere la tua soluzione molto più
-raggiungibile e assicurarti di fornire la migliore esperienza possibile,
+raggiungibile e assicurarti di fornire la migliore esperienza possibile.
 
 
 Per ulteriori informazioni, leggi la nostra guida su come [aggiungere input a una
