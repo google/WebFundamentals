@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Logpoints, style properties in Inspect Mode, and much more.
+description: Logpoints, detailed tooltips in Inspect Mode, and much more.
 
 {# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2019-01-22 #}
 {# wf_tags: chrome73, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Logpoints, style properties in Inspect Mode, and much more. #}
+{# wf_featured_snippet: Logpoints, detailed tooltips in Inspect Mode, and much more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 73) {: .page-title }
@@ -88,12 +88,12 @@ The next time that the line executes, DevTools logs the result of the Logpoint e
 See [Chromium issue #700519](https://crbug.com/700519){: .external } to report bugs or
 suggest improvements.
 
-## Styles properties in Inspect Mode {: #inspect }
+## Detailed tooltips in Inspect Mode {: #inspect }
 
 {# https://chromium.googlesource.com/chromium/src/+/78baa033b60f79de21d387ada6c92e166d7441d3 #}
 
-When inspecting a node, DevTools now shows an expanded tooltip containing commonly important style
-properties like font, margin, and padding.
+When inspecting a node, DevTools now shows an expanded tooltip containing commonly important
+information like font size, font color, contrast ratio, and box model dimensions.
 
 <figure>
   <img src="/web/updates/images/2019/01/inspect.png"
