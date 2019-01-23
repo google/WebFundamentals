@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies.
 
 {# wf_published_on: 2019-01-14 #}
-{# wf_updated_on: 2019-01-14 #}
+{# wf_updated_on: 2019-01-23 #}
 {# wf_featured_image: /web/updates/images/misc/first-input-delay.png #}
 {# wf_tags: chrome72,user-activation,user-gesture #}
 {# wf_featured_snippet: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies. #}
@@ -77,6 +77,64 @@ state is "active" (e.g. has neither expired nor been consumed).  Before User
 Activation v2, it would unconditionally fail.
 +   Multiple unused user interactions within the expiry time interval fuses
 into a single activation corresponding to the last interaction.
+
+## Examples of consistency in activation-gated APIs
+
+Here are two examples with popup windows (opened using`window.open()`) that
+show how User Activation v2 makes the behavior of activation-gated APIs
+consistent.
+
+### Chained setTimeout() calls
+
+This example is from
+[our `setTimeout()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/setTimeout.html).
+If a `click` handler tries to open a popup within a second, it is expected to
+succeed no matter how the code "composes" the delay.  User Activation v2 meets
+this expectation, so each of the following event handlers opens a popup on a
+`click` (with a 100ms delay):
+
+    function popupAfter100ms() {
+      setTimeout(callWindowOpen, 100);
+    }
+
+    function asyncPopupAfter100ms() {
+      setTimeout(popupAfter100ms, 0);
+    }
+
+    someButton.addEventListener("click", popupAfter100ms);
+    someButton.addEventListener("click", asyncPopupAfter100ms);
+
+Without User Activation v2, the second event handler fails in all browsers we
+tested. (Even the first one fails
+[in some cases](https://docs.google.com/document/d/1hYRTEkfWDl-KO4Y6cG469FBC3nyBy9_SYItZ1EEsXUA/edit#bookmark=id.7fb3jwz3is2s).)
+
+### Cross-domain postMessaging()
+
+Here's an example from
+[our `postMessaging()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/postMessages.html).
+Suppose a `click` handler in a cross-origin subframe sends two messages directly
+the parent frame.  The parent frame should be able to open a popup upon
+receiving either of these messages (but not both):
+
+    // Parent frame code
+    window.addEventListener("message", (e) => {
+      if (e.data === "open_popup" && e.origin === child_origin)
+        window.open("about:blank");
+    });
+
+    // Child frame code:
+    someButton.addEventListener("click", () => {
+      parent.postMessage("hi_there", parent_origin);
+      parent.postMessage("open_popup", parent_origin);
+    });
+
+Without User Activation v2, the parent frame can't open a popup upon receiving
+the second message.  Even the first message fails if it is "chained" to another
+cross-origin frame (in other words, if the first receiver forwards the message
+to another).
+
+This works with User Activation v2, both in the original form and with the
+chaining.  
 
 {% include "web/_shared/helpful.html" %}
 
