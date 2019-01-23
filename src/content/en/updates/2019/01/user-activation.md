@@ -108,7 +108,7 @@ Without User Activation v2, the second event handler fails in all browsers we
 tested. (Even the first one fails
 [in some cases](https://docs.google.com/document/d/1hYRTEkfWDl-KO4Y6cG469FBC3nyBy9_SYItZ1EEsXUA/edit#bookmark=id.7fb3jwz3is2s).)
 
-### Cross-domain postMessaging()
+### Cross-domain postMessage() calls
 
 Here's an example from
 [our `postMessaging()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/postMessages.html).
