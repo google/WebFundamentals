@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This article explains how to build a device to take full advantage of the WebUSB API.
 
-{# wf_updated_on: 2018-12-20 #}
+{# wf_updated_on: 2019-01-23 #}
 {# wf_published_on: 2018-12-20 #}
 {# wf_blink_components: Blink>USB #}
 
@@ -11,9 +11,9 @@ description: This article explains how to build a device to take full advantage 
 {% include "web/_shared/contributors/reillyg.html" %}
 
 This article explains how to build a device to take full advantage of the
-[WebUSB API](https://wicg.github.io/webusb){: .external}. For a brief
-introduction to the API itself see [this previous
-article](/web/updates/2016/03/access-usb-devices-on-the-web).
+[WebUSB API](https://wicg.github.io/webusb). For a brief introduction to the API
+itself see
+[this previous article](/web/updates/2016/03/access-usb-devices-on-the-web).
 
 ## Background
 
@@ -51,14 +51,14 @@ interface classes provides for greater flexibility.
 
 Many of the standard USB classes have corresponding web APIs. For example, a
 page can capture video from a video class device using
-[`getUserMedia()`](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia){: .external}
+[`getUserMedia()`](/web/fundamentals/media/recording-video)
 or receive input events from a human interface (HID) class device by listening
 for
-[KeyboardEvents](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent){: .external}
+[KeyboardEvents](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
 or
-[PointerEvents](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events){: .external},
+[PointerEvents](https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events),
 or using the
-[Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API){: .external}.
+[Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API).
 Just as not all devices implement a standardized class definition not all
 devices implement features that correspond to existing web platform APIs. When
 this is the case the WebUSB API can fill that gap by providing a way for sites
@@ -129,7 +129,7 @@ look something like this:
   <tr>
    <td><code>0x32</code></td>
    <td>bMaxPower</td>
-   <td>100 mA</td>
+   <td>Max Power is expressed in 2 mA increments</td>
   </tr>
   <tr class="alt">
    <td colspan="3">Interface descriptor</td>
@@ -372,11 +372,12 @@ bus and so any integer value larger than 1 byte should be sent least-significant
 byte first.
 
 The configuration descriptor consists of multiple descriptors concatenated
-together. Each begins with bLength and bDescriptorType fields so that they can
-be identified. The first interface is an HID interface with an associated HID
-descriptor and a single endpoint used to deliver input events to the operating
-system. The second interface is a vendor-specific interface with two endpoints
-that can be used to send commands to the device and receive responses in return.
+together. Each begins with `bLength` and `bDescriptorType` fields so that they
+can be identified. The first interface is an HID interface with an associated
+HID descriptor and a single endpoint used to deliver input events to the
+operating system. The second interface is a vendor-specific interface with two
+endpoints that can be used to send commands to the device and receive responses
+in return.
 
 ## WebUSB descriptors
 
@@ -470,16 +471,18 @@ Note: The UUID above would be written as
 `{3408b638-09a9-47a0-8bfd-a0768815b665}` however when sent as part of a USB
 descriptor its component fields must be sent in little-endian order. This
 transformation is complex (see
-[RFC4122](https://tools.ietf.org/html/rfc4122){: .external}) and so the proper
-encoding is given here for reference.
+[RFC4122](https://tools.ietf.org/html/rfc4122)) and so the proper encoding is
+given here for reference.
 
-The platform capability UUID identifies this as a WebUSB capability descriptor,
+The platform capability UUID identifies this as a
+[WebUSB Platform Capability descriptor](https://wicg.github.io/webusb/#webusb-platform-capability-descriptor),
 which provides basic information about the device. For the browser to fetch more
 information about the device it uses the `bVendorCode` value to issue additional
 requests to the device. The only request currently specified is `GET_URL` which
-returns a URL descriptor. These are similar to string descriptors however are
-designed to encode URLs in the fewest bytes. A URL descriptor for
-"https://google.com" would look like this:
+returns a [URL descriptor](https://wicg.github.io/webusb/#url-descriptor).
+These are similar to string descriptors however are designed to encode URLs in
+the fewest bytes. A URL descriptor for "https://google.com" would look like
+this:
 
 <table>
   <tr>
@@ -568,7 +571,7 @@ Again, this request may be issued twice in order to first probe for the length
 of the descriptor being read.
 
 Note: Support for displaying a notification when a USB device is plugged in is
-not currently available in Google Chrome on Android and Windows.
+not available yet in Google Chrome on Android and Windows.
 
 ## Platform-specific considerations
 
@@ -593,9 +596,10 @@ to peripherals:
 
     SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", ATTR{idProduct}=="XXXX", GROUP="plugdev"
 
-Replace `XXXX` with the hexadecimal vendor and product IDs for your device. This
-rule can be placed in a file in the `/etc/udev/rules.d` directory and takes
-effect as soon as the device is plugged in. No need to restart udev.
+Replace `XXXX` with the hexadecimal vendor and product IDs for your device.
+These can be found by running a command like `lsusb`. This rule can be placed in
+a file in the `/etc/udev/rules.d` directory and takes effect as soon as the
+device is plugged in. No need to restart udev.
 
 ### Android
 
@@ -603,12 +607,12 @@ The Android platform is based on Linux but does not require any modification to
 system configuration. By default any device which does not have a driver is
 accessible to the browser as long as the user acknowledges a permission prompt.
 This is an additional step that occurs when the application calls
-[`open()`](https://wicg.github.io/webusb/#dom-usbdevice-open){: .external} on a
-device and must be repeated every time the browser reloads. In addition more
-devices will be accessible on Android than on desktop Linux because fewer
-drivers are included by default. A notable omission, for example, is the USB
-CDC-ACM class commonly implemented by USB-to-serial adapters as there is no API
-in the Android SDK for communicating with a serial device.
+[`open()`](https://wicg.github.io/webusb/#dom-usbdevice-open) on a device and
+must be repeated every time the browser reloads. In addition more devices will
+be accessible on Android than on desktop Linux because fewer drivers are
+included by default. A notable omission, for example, is the USB CDC-ACM class
+commonly implemented by USB-to-serial adapters as there is no API in the Android
+SDK for communicating with a serial device.
 
 ### Chrome OS
 
@@ -955,14 +959,22 @@ assign this function a device interface GUID.
 Windows will only query the device for this information once. If the device does
 not respond with valid descriptors it will not ask again the next time the
 device is connected. This
-[page](https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-specific-registry-settings){: .external}
+[page](https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/usb-device-specific-registry-settings)
 describes the registry entries created when enumerating a device. When testing
 it is useful to delete the entries created for a device in order to get Windows
 to try to read the descriptors again.
 
 For more information check out Microsoft's
-[blog post](https://blogs.msdn.microsoft.com/usbcoreblog/2012/09/26/how-to-install-winusb-sys-without-a-custom-inf/){: .external}
+[blog post](https://blogs.msdn.microsoft.com/usbcoreblog/2012/09/26/how-to-install-winusb-sys-without-a-custom-inf/)
 on how to use these descriptors.
+
+## Examples
+
+Example code implementing WebUSB-aware devices that include both WebUSB
+descriptors and Microsoft OS descriptors can be found in these projects:
+
+ * [WebLight](https://github.com/sowbug/weblight)
+ * [WebUSB Arduino Library](https://github.com/webusb/arduino)
 
 ## Feedback {: #feedback .hide-from-toc }
 
