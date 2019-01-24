@@ -620,6 +620,24 @@ jennygove:
       on smartphone experiences. She obtained her PhD from the University of
       Southampton, UK.
 
+reillyg:
+  name:
+    given: Reilly
+    family: Grant
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+    - engineer
+  twitter: reillyeon
+  github: reillyeon
+  email: reillyg@google.com
+  description:
+    en: Reilly is a Software Engineer on Google Chrome focusing on hardware
+      APIs.
+
 greenido:
   name:
     given: Ido
