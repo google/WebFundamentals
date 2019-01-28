@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-01-28 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -9,6 +9,9 @@ book_path: /web/updates/_book.yaml
 {# wf_blink_components: N/A #}
 
 # Capabilities {: .page-title }
+
+> **We want to close the capability gap between the web and native and make it
+> easy for developers to build great experiences on the open web.**
 
 There are some capabilities, like file system access, idle detection, and
 more that are available to native but aren’t available on the web. These
@@ -19,12 +22,10 @@ We strongly believe that every developer should have access to the capabilities
 they need to make a great web experience, and we are committed to a more
 capable web.
 
-We want to close the capability gap between the web and native and make it
-easy for developers to build great experiences on the open web. We plan to
-design and develop these new capabilities in an open and transparent way,
-using the existing open web platform standards processes while getting early
-feedback from developers and other browser vendors as we iterate on the
-design, to ensure an interoperable design.
+We will design and develop these new capabilities in an
+[open and transparent way](#process), using the existing open web platform
+standards processes while getting early feedback from developers and other
+browser vendors as we iterate on the design, to ensure an interoperable design.
 
 ## In flight {: #in-flight }
 
@@ -132,6 +133,8 @@ design, to ensure an interoperable design.
 </table>
 
 ## How will we design & implement these new capabilities? {: #process }
+
+<img src="/web/updates/images/misc/capabilities-process.jpg">
 
 We developed this process to make it possible to design and develop new web
 platform capabilities that meet the needs of developers quickly, in the open,
