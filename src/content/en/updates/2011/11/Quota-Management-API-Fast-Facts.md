@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-11-10 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2011-11-10 #}
 {# wf_tags: news,offline,quota,filesystem #}
+{# wf_blink_components: N/A #}
 
 # Quota Management API : Fast Facts {: .page-title }
 
@@ -33,7 +34,7 @@ There’s various offline related features introduced to modern browsers through
       webkitStorageInfo.TEMPORARY,   // or PERSISTENT
       usageCallback,
       errorCallback);
-    
+
 
 * For `PERSISTENT` storage, its default quota is 0 and it needs to be explicitly requested per application using `requestQuota()` of Quota API.
     * The allocated space can be used only by File System API (for `PERSISTENT` type filesystem) and there’s no such thing like `PERSISTENT` storage on _IndexedDB, WebSQL DB or AppCache_ (yet).
@@ -44,10 +45,10 @@ There’s various offline related features introduced to modern browsers through
       newQuotaInBytes,
       quotaCallback,
       errorCallback);
-    
+
 
 * `unlimitedStorage` on manifest.json of Chrome Web App has been brought as a temporary solution for apps to work without Quota API. So, there’s no guarantee that Chrome will support this feature forever.
 
-* The API is described in WebIDL here: [https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1](https://groups.google.com/a/chromium.org/group/chromium-html5/msg/5261d24266ba4366?pli=1)
+* The API is described in WebIDL here: [https://groups.google.com/a/chromium.org/forum/#!msg/chromium-html5/m-ei3ATZr2c/ZkO6ZkLSYVIJ](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-html5/m-ei3ATZr2c/ZkO6ZkLSYVIJ)
 
 
