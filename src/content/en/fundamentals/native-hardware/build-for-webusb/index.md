@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This article explains how to build a device to take full advantage of the WebUSB API.
 
-{# wf_updated_on: 2019-01-23 #}
+{# wf_updated_on: 2019-01-24 #}
 {# wf_published_on: 2018-12-20 #}
 {# wf_blink_components: Blink>USB #}
 
@@ -448,7 +448,7 @@ Descriptor in the BOS descriptor:
    <td><code>{0x38, 0xB6, 0x08, 0x34, 0xA9, 0x09, 0xA0, 0x47, 0x8B, 0xFD, 0xA0,
    0x76, 0x88, 0x15, 0xB6, 0x65}</code></td>
    <td>PlatformCapablityUUID</td>
-   <td>WebUSB platform capabilty descriptor GUID in little-endian format</td>
+   <td>WebUSB platform capability descriptor GUID in little-endian format</td>
   </tr>
   <tr>
    <td><code>0x0100</code></td>
