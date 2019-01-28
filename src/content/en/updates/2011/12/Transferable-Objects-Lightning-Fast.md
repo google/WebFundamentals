@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-16 #}
+
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2011-12-09 #}
 {# wf_tags: news,binary,performance,workers #}
 {# wf_blink_components: N/A #}
@@ -11,7 +12,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 
-Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](http://updates.html5rocks.com/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.
+Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](/web/updates/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.
 
 ### Faster is better
 
@@ -25,7 +26,7 @@ To play with transferables, there's a new version of `postMessage()` that suppor
 
     worker.postMessage(arrayBuffer, [transferableList]);
     window.postMessage(arrayBuffer, targetOrigin, [transferableList]);
-    
+
 
 For the worker case, the first argument is the `ArrayBuffer` message. The second argument is a list of items that should be transferred. In this example, you'd specify the `arrayBuffer` in the transferable list.
 

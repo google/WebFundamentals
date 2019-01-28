@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Inner workings of a browser rendering engine
 
 {# wf_published_on: 2018-09-20 #}
-{# wf_updated_on: 2018-09-26 #}
+{# wf_updated_on: 2019-01-17 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
@@ -117,7 +117,7 @@ this information in the `computed` section of DevTools.
 Even if you do not provide any CSS, each DOM node has a computed style. `<h1>` tag is displayed 
 bigger than `<h2>` tag and margins are defined for each element. This is because the browser has a 
 default style sheet. If you want to know what Chrome's default CSS is like, 
-[you can see the source code here](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/css/html.css).
+[you can see the source code here](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/html/resources/html.css).
 
 ## Layout
 

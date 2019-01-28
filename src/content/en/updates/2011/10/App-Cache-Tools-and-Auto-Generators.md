@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-10-27 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2011-10-27 #}
 {# wf_tags: news,offline,appcache #}
+{# wf_blink_components: N/A #}
 
 # App Cache Tools and Auto-Generators {: .page-title }
 
@@ -16,9 +17,9 @@ However, for large apps and sites, it can be cumbersome to add each and every fi
 
 Some options include:
 
-* [Manifested](http://dregsoft.com/blog/?p=79)
 * [ManifestR](http://westciv.com/tools/manifestR/){: .external }
 * [H5BP build script](https://github.com/jamesgpearce/confess)
+* Manifested (No longer available)
 
 Give them a shot, let us know in the comments how they work for you.
 
