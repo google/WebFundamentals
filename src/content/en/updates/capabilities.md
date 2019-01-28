@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-01-28 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -49,7 +49,7 @@ design, to ensure an interoperable design.
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Available as an origin trial.
       </td>
     </tr>
     <tr>
