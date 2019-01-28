@@ -22,6 +22,14 @@ New features and major changes coming to Chrome DevTools in Chrome 72 include:
 * [Copy the JS path](#copy) to a DOM node from the DOM Tree.
 * [Audits panel updates](#audits), including a new audit that detects JS libraries and new
   keywords for accessing the Audits panel from the Command Menu.
+  
+## Video version of these release notes {: #video }
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="XVJxlEdB230"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Visualize performance metrics {: #metrics }
 
