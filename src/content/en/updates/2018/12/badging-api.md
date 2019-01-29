@@ -107,7 +107,7 @@ Chrome OS support is pending implementation of badging on the platform.
 ### Using the badging API during the origin trial
 
 Dogfood: During the origin trial, the API will be available via
-`window.ExperimentalBadging`. The below code is based on the current design,
+`window.ExperimentalBadge`. The below code is based on the current design,
 and will change before it lands in the browser as a standardized API.
 
 To use the badging API, your web app needs to meet
