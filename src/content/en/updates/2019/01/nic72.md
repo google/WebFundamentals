@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 72 for developers?
 
 {# wf_published_on: 2019-01-29 #}
-{# wf_updated_on: 2019-01-15 #}
+{# wf_updated_on: 2019-01-29 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome72,new-in-chrome,intl,es6,javascript,user-activation #}
 {# wf_featured_snippet: In Chrome 72, creating public class fields in JavaScript is now much cleaner, you can see if a page has been activated with the new User Activation API, localizing lists becomes way easier, and there’s plenty more. Let’s dive in and see what’s new for developers in Chrome 72! #}
@@ -16,7 +16,7 @@ description: What's new in Chrome 72 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="coh1k7TY1P0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -42,7 +42,7 @@ what’s new for developers in Chrome 72!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 72.
 
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/71.0.3578.82..71.0.3578.82)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/71.0.3578.82..72.0.3626.82)
 * [ChromeStatus.com updates for Chrome 72](https://www.chromestatus.com/features#milestone%3D72)
 * [Chrome 72 deprecations & removals](/web/updates/2018/12/chrome-72-deps-rems)
 
