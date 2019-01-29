@@ -22,6 +22,19 @@
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
 
+mustaqahmed:
+  name:
+    given: Mustaq
+    family: Ahmed
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: mustaq@google.com
+  github: mustaqahmed
+
 iamakulov:
   name:
     given: Ivan
@@ -606,6 +619,24 @@ jennygove:
     en: Jenny Gove is a UX Research Lead at Google, where she conducts research
       on smartphone experiences. She obtained her PhD from the University of
       Southampton, UK.
+
+reillyg:
+  name:
+    given: Reilly
+    family: Grant
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+    - engineer
+  twitter: reillyeon
+  github: reillyeon
+  email: reillyg@google.com
+  description:
+    en: Reilly is a Software Engineer on Google Chrome focusing on hardware
+      APIs.
 
 greenido:
   name:

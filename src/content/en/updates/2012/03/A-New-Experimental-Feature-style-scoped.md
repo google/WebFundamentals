@@ -99,4 +99,3 @@ There are currently no known bugs, but `@global` and scoped versions of `@keyfra
 We would like to encourage everyone interested in the feature to try it out and let us know about your experiences: the good, the bad and (maybe) the buggy.
 
 
-{% include "comment-widget.html" %}

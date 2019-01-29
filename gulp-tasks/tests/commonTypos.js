@@ -29,7 +29,7 @@ function getLineNumber(contents, idx) {
  */
 function test(filename, contents, options) {
   const results = [];
-  if (!options.commonTypos || options.skipTypos) {
+  if (!options.commonTypos || options.skipTypos || options.ignoreTypos) {
     return results;
   }
 

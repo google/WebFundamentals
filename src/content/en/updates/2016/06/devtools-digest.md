@@ -99,4 +99,3 @@ With backends written in Node.js, however, the boundaries between frontend and b
 Although existing tools such as [Node Inspector](https://github.com/node-inspector/node-inspector) provide GUI-based debugging experiences, the new Node.js DevTools integration will remain up-to-date with DevTools’ latest debuging features, such as async stack debugging, blackboxing, and ES6 support.
 
 
-{% include "comment-widget.html" %}

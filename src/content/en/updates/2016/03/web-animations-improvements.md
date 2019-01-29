@@ -94,4 +94,3 @@ browsers implementations and more compliant with the specification which all
 helps simplify web page content authoring for better interoperability.
 
 
-{% include "comment-widget.html" %}

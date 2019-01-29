@@ -255,9 +255,6 @@ the simpler text parts of the API.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
-
 [document.execCommand]: /web/updates/2015/04/cut-and-copy-commands
 [Async Clipboard API]: https://www.w3.org/TR/clipboard-apis/#async-clipboard-api
 [Drag & Drop API]: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API

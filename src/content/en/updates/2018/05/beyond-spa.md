@@ -764,6 +764,4 @@ data.
 - [Workbox](/web/tools/workbox/)
 - [Streams API specification](https://streams.spec.whatwg.org/)
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-updates.html" %}

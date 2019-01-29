@@ -41,4 +41,3 @@ You will find `history.scrollRestoration` in Chrome 46 onwards, and you can [fin
 Don't forget to leave us feedback, and let other vendors know if you want them to support `scrollRestoration`, too.
 
 
-{% include "comment-widget.html" %}

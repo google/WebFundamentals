@@ -131,4 +131,3 @@ That's a wrap! If there are Yeoman resources you would like to suggest for the n
 *With special thanks to Stephen Sawchuk, Sindre Sorhus and Pascal Hartig for their review of this issue*
 
 
-{% include "comment-widget.html" %}

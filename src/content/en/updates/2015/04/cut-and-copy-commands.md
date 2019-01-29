@@ -146,4 +146,3 @@ Safari does not support these commands.
   text](//crbug.com/476848).
 
 
-{% include "comment-widget.html" %}

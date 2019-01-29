@@ -98,4 +98,3 @@ repository](https://github.com/google/WebFundamentals/issues/new).
 Until next month!
 
 
-{% include "comment-widget.html" %}

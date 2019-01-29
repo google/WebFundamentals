@@ -99,6 +99,4 @@ Ich bin Pete LePage, und sobald Chrome 65 veröffentlicht wird, bin ich hier, um
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

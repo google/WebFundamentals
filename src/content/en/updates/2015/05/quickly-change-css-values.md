@@ -24,4 +24,3 @@ Quickly increment and decrement numeric CSS property values:
 </ul>
 
 
-{% include "comment-widget.html" %}

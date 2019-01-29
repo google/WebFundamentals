@@ -100,4 +100,3 @@ Here's a proof of concept that contains a div with it's background drawn using v
 It's worth noting that Mozilla has had `-moz-element()` ([MDN](https://developer.mozilla.org/en-US/docs/CSS/element)) for quite some time. This is part of the [CSS Image Values and Replaced Content Module Level 4](http://dev.w3.org/csswg/css4-images/#element-notation) spec and allows you to create an image generated from arbitrary HTML: videos, canvas, DOM content,...you name it. However, there are security concerns with having full access to snapshot images of the DOM. This is primarily why other browsers have not adopted said feature.
 
 
-{% include "comment-widget.html" %}

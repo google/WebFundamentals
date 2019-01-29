@@ -96,4 +96,3 @@ Until next month,
 
 Kayce
 
-{% include "comment-widget.html" %}

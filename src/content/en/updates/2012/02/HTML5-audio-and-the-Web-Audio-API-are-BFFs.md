@@ -48,4 +48,3 @@ As noted in the code, there's [a bug](http://crbug.com/112368) that requires the
 The next logical step is to fix [crbub.com/112367](http://crbug.com/112367). Once that puppy is ready, you'll be able to wire up WebRTC (the `navigator.getUserMedia()` API in particular) to pipe audio input (e.g mic, mixer, guitar) to an `<audio>` tag, then visualize it using the Web Audio API. Mega boom!
 
 
-{% include "comment-widget.html" %}

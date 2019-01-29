@@ -83,4 +83,3 @@ As with all releases, we encourage developers to try Chrome on the Canary, Dev, 
 
 
 
-{% include "comment-widget.html" %}

@@ -87,5 +87,4 @@ Because of these changes, if your site uses dialogs, it is highly recommended
 that you move to using the earlier-mentioned alternatives so that this will not
 affect you.
 
-{% include "comment-widget.html" %}
 {% include "web/_shared/rss-widget-updates.html" %}

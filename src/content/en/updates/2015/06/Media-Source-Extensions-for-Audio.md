@@ -366,4 +366,3 @@ On desktop Chrome, you can keep approximately 12 megabytes of audio content and 
 
 Garbage collection only impacts data added to `SourceBuffers`; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
 
-{% include "comment-widget.html" %}

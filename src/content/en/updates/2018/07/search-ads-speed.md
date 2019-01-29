@@ -139,4 +139,3 @@ framework for you pages, take a look at [AMP](https://www.ampproject.org/).
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

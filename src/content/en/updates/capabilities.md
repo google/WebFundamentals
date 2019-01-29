@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-01-28 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -66,6 +66,18 @@ design, to ensure an interoperable design.
         <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
     </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2019/01/shape-detection">Shape Detection API</a>
+      </td>
+      <td>
+        The Shape Detection API opens up native implementations of shape
+        detection services and exposes them through a set of JavaScript
+        interfaces. Currently, the supported features are face detection,
+        barcode detection, and text detection (Optical Character Recognition).
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
     <tr>
       <td>
         <a href="/web/updates/2018/12/wakelock">Wake Lock API</a>

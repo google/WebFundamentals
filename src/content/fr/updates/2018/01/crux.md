@@ -29,6 +29,4 @@ Nous sommes ravis de partager ces nouvelles données avec vous et espérons que 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

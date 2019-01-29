@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-07-25 #}
+{# wf_updated_on: 2019-01-09 #}
 {# wf_published_on: 2011-07-25 #}
 {# wf_tags: news #}
+{# wf_blink_components: N/A #}
 
 # HTML5 Libraries/polyfills - Mid July {: .page-title }
 
@@ -12,11 +13,10 @@ book_path: /web/updates/_book.yaml
 
 More awesome libraries popping up all over the place:
 
-- [SmokeJS](http://ssssnakes.com/smoke/){: .external } - A framework-agnostic styled alert system for javascript.
+- [SmokeJS](https://ssssnakes.com/smoke/){: .external } - A framework-agnostic styled alert system for JavaScript.
 - [Buzz](http://buzz.jaysalvat.com) - Buzz is a small but powerful JavaScript library that allows you to easily take advantage of the new HTML5 audio element. It degrades gracefully on non-modern browsers.
-- [FileSaver.js](https://github.com/eligrey/FileSaver.js/blob/master/FileSaver.js) - polyfill for the FileSaver's `window.saveAs()` API. Save blobs/files, client-side.
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js) - polyfill for the FileSaver's `window.saveAs()` API. Save blobs/files, client-side.
 - [BlobBuilder.js](https://github.com/eligrey/BlobBuilder.js) - BlobBuilder API polyfill.
 - [canvas-toBlob.js](https://github.com/eligrey/canvas-toBlob.js) - Polyfill for HTML5 canvas's `toBlob()` method, which is not implemented by any browsers.
 
 
-{% include "comment-widget.html" %}

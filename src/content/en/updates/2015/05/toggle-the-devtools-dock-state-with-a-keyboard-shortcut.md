@@ -23,4 +23,3 @@ Use <kbd class="kbd">Cmd + Shift + D</kbd> to toggle the DevTools dock state bet
 </ul>
 
 
-{% include "comment-widget.html" %}

@@ -147,4 +147,3 @@ zooming should be disabled to notify the browser before any touch events occur.
 To suppress the default behavior of a tap (such as the generation of a click
 event), call `preventDefault()` inside of a `touchend` listener.
 
-{% include "comment-widget.html" %}

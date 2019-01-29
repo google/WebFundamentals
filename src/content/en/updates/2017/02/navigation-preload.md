@@ -307,4 +307,3 @@ feature, and help with this article. And a huge thanks to everyone involved in
 [the standardization
 effort](https://github.com/w3c/ServiceWorker/issues/920)</small>
 
-{% include "comment-widget.html" %}

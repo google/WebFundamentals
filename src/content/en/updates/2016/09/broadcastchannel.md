@@ -209,4 +209,3 @@ I haven't tried these, so your mileage may vary.
 [spec]: https://html.spec.whatwg.org/multipage/comms.html#broadcasting-to-other-browsing-contexts
 
 
-{% include "comment-widget.html" %}

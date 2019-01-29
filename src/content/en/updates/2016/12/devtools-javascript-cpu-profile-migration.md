@@ -142,4 +142,3 @@ have any other questions about this article.
 
 [GH]: https://github.com/google/WebFundamentals/issues/new?title=[DevTools%20CPU%20Profile%20Migration]
 
-{% include "comment-widget.html" %}

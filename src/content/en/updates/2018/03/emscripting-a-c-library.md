@@ -417,4 +417,3 @@ Fibonacci program, we can just use the entire memory as a stack, hence `STACKTOP
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

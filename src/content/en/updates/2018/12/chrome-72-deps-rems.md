@@ -105,4 +105,3 @@ for safe deprecation and removal. Removal is expected in Chrome 74.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

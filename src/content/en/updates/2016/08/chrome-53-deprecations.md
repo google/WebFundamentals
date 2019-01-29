@@ -82,4 +82,3 @@ If you still need to include the search icon in your input field then you will h
 This attribute has been deprecated since Chrome 51. 
 
 
-{% include "comment-widget.html" %}

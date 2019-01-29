@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-09-28 #}
+{# wf_updated_on: 2019-01-12 #}
 {# wf_published_on: 2011-09-28 #}
 {# wf_tags: news,games #}
+{# wf_blink_components: N/A #}
 
 # New Game Conference for HTML5 Game Developers Coupon {: .page-title }
 
@@ -15,7 +16,7 @@ Oh, I didn't see you there! I was too busy playing awesome HTML5 games.
 </p>
 
 <p>
-You, too, can keep me from completing my TPS reports by learning how to write HTML5 and WebGL games at <a href="http://www.newgameconf.com">New Game, the conference for HTML5 game developers</a>. Use this nifty HTML5ROCKS coupon to <a href="http://newgame.eventbrite.com">register</a> for 15% off.
+You, too, can keep me from completing my TPS reports by learning how to write HTML5 and WebGL games at New Game, the conference for HTML5 game developers. Use this nifty HTML5ROCKS coupon to register for 15% off.
 </p>
 
 <p>
@@ -39,12 +40,11 @@ New Game will be held Nov 1-2, 2011 in San Francisco in the beautiful Yerba Buen
 </p>
 
 <p>
-So go ahead, <strong>put your token up</strong>. See you at <a href="http://www.newgameconf.com">New Game</a>.
+So go ahead, <strong>put your token up</strong>. See you at New Game.
 </p>
 
 <p>
-New Game is proudly sponsored by Google and presented by Bocoup. Follow <a href="http://twitter.com/newgameconf">@newgameconf</a> for deets and <a href="http://newgame.eventbrite.com">register today</a>.
+New Game is proudly sponsored by Google and presented by Bocoup. Follow <a href="https://twitter.com/newgameconf">@newgameconf</a> for deets and register today.
 </p>
 
 
-{% include "comment-widget.html" %}

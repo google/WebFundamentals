@@ -104,6 +104,4 @@ PWACompat is live on [Airhorner](https://airhorner.com) and
 
 📢🤣🎉
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-updates.html" %}

@@ -20,4 +20,3 @@ When I saw the support get checked in, I flipped back through some of the audio 
 So, I quickly used the skills I'm teaching in the upcoming [Mobile Web Development course](https://www.udacity.com/course/mobile-web-development--cs256) to whip it into shape - viewport, media queries, and flexbox to the rescue!  Be sure to preregister for the course if you're interested in taking your web development skills to the mobile world, too!
 
 
-{% include "comment-widget.html" %}

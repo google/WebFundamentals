@@ -193,8 +193,6 @@ We always put our users first but we also don’t want to let down the web devel
 
 <div class="clearfix"></div>
 
-{% include "comment-widget.html" %}
-
 [more detailed examples]: https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#example_scenarios
 [extends that right to the given iframe]: https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#iframe
 [these example sites can be viewed here]: https://docs.google.com/spreadsheets/d/1JDyGFK44q3DfnOFXMsubNeC2MI-pE5rwfERomDi2lJg/view

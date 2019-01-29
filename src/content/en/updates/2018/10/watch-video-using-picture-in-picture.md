@@ -299,8 +299,6 @@ involved in the [standardization effort].
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
 [Picture-in-Picture sample]: https://googlechrome.github.io/samples/picture-in-picture/
 [WebKit API]: https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html

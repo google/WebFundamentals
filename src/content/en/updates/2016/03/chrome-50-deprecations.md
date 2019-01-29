@@ -241,4 +241,3 @@ an alternative can also use
 
 <div class="clearfix"></div>
 
-{% include "comment-widget.html" %}

@@ -309,4 +309,3 @@ If you want to have a look through the code for this effect take a look at the
 [UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip)
 and, as always, let us know how you get on in the comments below.
 
-{% include "comment-widget.html" %}

@@ -249,4 +249,3 @@ We hope that you can experiment with this API and give us feedback at
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

@@ -221,4 +221,3 @@ kind of payment method, supported methods can include:
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

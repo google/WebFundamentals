@@ -17,4 +17,3 @@ description: Try undocking DevTools to a separate window so the record button is
 When you need to perform a Timeline recording on Mac, try Undocking DevTools to a separate window so the record button is positioned closely to the portion of the page where you need to carry out an action. Alternatively, use the shortcut <kbd class="kbd">CMD + E</kbd> to start/stop a recording.
 
 
-{% include "comment-widget.html" %}

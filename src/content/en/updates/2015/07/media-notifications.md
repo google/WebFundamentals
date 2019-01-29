@@ -50,4 +50,3 @@ customize media notifications by providing metadata for the media your web app
 is playing. This API also allows you to handle media related events such as
 seeking or track changing which may come from notifications or media keys.
 
-{% include "comment-widget.html" %}

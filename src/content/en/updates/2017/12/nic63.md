@@ -7,6 +7,7 @@ description: What's new in Chrome 63 for developers?
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome63,new-in-chrome,css,overscroll,scroll,android,async,await,es6,generators,iterators,modules,permissions,streams #}
 {# wf_featured_snippet: Chrome 63 allows you to import JavaScript modules dynamically. My favorite interview coding question becomes a piece of cake with async iterators and generators. And you can override the browser's default overflow scroll behavior with the CSS <code>overscroll-behavior</code> property. #}
+{# wf_blink_components: N/A #}
 
 # New in Chrome 63 {: .page-title }
 
@@ -100,12 +101,12 @@ where swiping down at the top of the page, does a hard reload.
 <figure class="clearfix centered">
   <div class="attempt-left">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh.mp4"
-           autoplay loop height="225"></video>
+           autoplay muted loop height="225"></video>
     <figcaption>Entire page reloads</figcaption>
   </div>
   <div class="attempt-right">
     <video src="/web/updates/images/2017/11/overscroll-behavior/chatbox-double-refresh-fix.mp4"
-           autoplay loop height="225"></video>
+           autoplay muted loop height="225"></video>
     <figcaption>Custom refresh behavior</figcaption>
   </div>
 </figure>
@@ -184,4 +185,3 @@ you’ll get an email notification whenever we launch a new video, or add our
 I’m Pete LePage, and as soon as Chrome 64 is released, I’ll be right
 here to tell you -- what’s new in Chrome!
 
-{% include "comment-widget.html" %}

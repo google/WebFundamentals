@@ -67,4 +67,3 @@ courtesy of [Majid Valipour](https://github.com/majido). It takes an
 <code>performance.timing.navigationStart</code>.
 
 
-{% include "comment-widget.html" %}

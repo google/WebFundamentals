@@ -128,4 +128,3 @@ to tell you -- what’s new in Chrome!
 Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our 
 [RSS feed](/web/shows/rss.xml)
 
-{% include "comment-widget.html" %}

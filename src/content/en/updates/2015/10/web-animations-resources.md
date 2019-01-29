@@ -96,4 +96,3 @@ For some samples using `motion-path`, check out [Eric Willigers' doc](https://do
 [web-animations-codelabs]: https://github.com/web-animations/web-animations-codelabs
 
 
-{% include "comment-widget.html" %}

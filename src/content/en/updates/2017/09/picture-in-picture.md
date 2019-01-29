@@ -104,8 +104,6 @@ solution but provides a temporary option until the Web API is implemented.
       }
     });
 
-{% include "comment-widget.html" %}
-
 [supported in Chrome]: /web/updates/2018/10/watch-video-using-picture-in-picture
 [Android O supports Picture-in-Picture]: https://developer.android.com/about/versions/oreo/android-8.0.html#opip
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/

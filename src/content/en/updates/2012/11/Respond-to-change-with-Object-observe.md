@@ -89,4 +89,3 @@ There's also a [nice descriptive write-up available](http://weblog.bocoup.com/Ja
 The TC39 standards body is seeking feedback on this feature, so go ahead and try it and let us know what you think.
 
 
-{% include "comment-widget.html" %}

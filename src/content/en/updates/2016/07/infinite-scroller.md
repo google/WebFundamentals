@@ -360,4 +360,3 @@ npm or as a separate repo. The primary use is educational.
 [Compositor Worklet]: /web/updates/2016/05/houdini
 
 
-{% include "comment-widget.html" %}

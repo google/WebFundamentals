@@ -34,4 +34,3 @@ Finally, I execute that changed block of code so I have <code>foo</code> and <co
 		
 
 
-{% include "comment-widget.html" %}

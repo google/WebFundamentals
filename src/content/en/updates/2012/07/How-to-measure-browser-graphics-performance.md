@@ -72,4 +72,3 @@ To see how to write high-performance web graphics code, check out th Google I/O 
 
 
 
-{% include "comment-widget.html" %}

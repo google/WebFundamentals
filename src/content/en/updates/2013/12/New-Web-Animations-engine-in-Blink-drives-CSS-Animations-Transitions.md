@@ -29,4 +29,3 @@ Try out the new engine that's already powering CSS Animations & Transitions now 
 We're excited to bring next-generation animation capabilities to Blink and look forwarding to working with other browser developers like [WebKit](https://bugs.webkit.org/show_bug.cgi?id=122912) and [Mozilla](https://wiki.mozilla.org/Platform/Layout/Web_Animations#Implementation) who've also committed to implementing the new model.
 
 
-{% include "comment-widget.html" %}

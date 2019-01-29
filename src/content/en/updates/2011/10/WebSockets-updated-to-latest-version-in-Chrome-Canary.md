@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-10-13 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2011-10-13 #}
 {# wf_tags: news,websockets #}
+{# wf_blink_components: N/A #}
 
 # WebSockets updated to latest version in Chrome Canary {: .page-title }
 
@@ -18,4 +19,3 @@ Here's the scoop:
 * `Sec-WebSocket-Version` header value: 8 -> 13
 
 
-{% include "comment-widget.html" %}

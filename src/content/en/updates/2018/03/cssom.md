@@ -579,8 +579,6 @@ results in fewer bugs and more performant code down the line.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [cssom-old]: https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information
 [spec]: https://drafts.css-houdini.org/css-typed-om/
 [chromestatus]: https://www.chromestatus.com/feature/5682491075592192

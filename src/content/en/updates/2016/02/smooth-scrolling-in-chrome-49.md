@@ -51,4 +51,3 @@ As of Chrome 49, scrolling is getting smoother. But that’s not all: there are 
 
 
 
-{% include "comment-widget.html" %}

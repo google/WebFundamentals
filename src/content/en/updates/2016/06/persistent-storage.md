@@ -108,4 +108,3 @@ changing, but we’re excited to take this strong first step in making
 web applications more reliable!
 
 
-{% include "comment-widget.html" %}

@@ -68,4 +68,3 @@ headers (in other words `Set-Cookie`) or script execution (in other words
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

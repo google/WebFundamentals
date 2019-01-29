@@ -17,4 +17,3 @@ description: If you get an error in the console panel, click it to reveal the li
 If you get an error in the console panel, click it to reveal the line in the Sources Panel where an indication of the error pops up. <em>Live-edits</em> you make are also checked for an errors in <em>real time</em>.
 
 
-{% include "comment-widget.html" %}

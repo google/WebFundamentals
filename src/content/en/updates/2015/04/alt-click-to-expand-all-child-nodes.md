@@ -16,4 +16,3 @@ book_path: /web/updates/_book.yaml
 You can use <kbd class="kbd">Alt + Click</kbd> in the Elements Panel to expand all child nodes. Just click on the small arrow to the left of the DOM node while holding <kbd class="kbd">Alt</kbd>.
 
 
-{% include "comment-widget.html" %}

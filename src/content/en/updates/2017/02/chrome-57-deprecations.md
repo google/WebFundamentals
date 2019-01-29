@@ -208,4 +208,3 @@ instead on cookies and other session management mechanisms.
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
-{% include "comment-widget.html" %}

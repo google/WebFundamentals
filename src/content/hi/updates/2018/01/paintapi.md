@@ -193,6 +193,4 @@ Note: ब्रेकपॉइंट्स वर्तमान में स�
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

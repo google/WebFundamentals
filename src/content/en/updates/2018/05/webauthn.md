@@ -166,4 +166,3 @@ at Google I/O 2018 covered WebAuthn.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

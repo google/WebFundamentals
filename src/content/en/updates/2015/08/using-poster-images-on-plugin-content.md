@@ -46,4 +46,3 @@ It's important that the image used is the same dimensions as the plugin content 
 the image could end up distorted on the user's screen
 
 
-{% include "comment-widget.html" %}

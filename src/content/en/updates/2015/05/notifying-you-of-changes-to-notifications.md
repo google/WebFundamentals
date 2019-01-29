@@ -323,4 +323,3 @@ This can be used like so:
     
 Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
-{% include "comment-widget.html" %}

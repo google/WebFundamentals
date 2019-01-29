@@ -91,4 +91,3 @@ This video shows the difference between `touch-action: pan-x` and
 All of these properties should simplify some of the logic that would
 otherwise need to implemented by developers using `pointer-events`.
 
-{% include "comment-widget.html" %}

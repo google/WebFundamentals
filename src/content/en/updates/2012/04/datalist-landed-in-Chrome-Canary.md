@@ -46,4 +46,3 @@ Options can be paired with a `datalist` by specifying its `id` in an `input` ele
 If `datalist` is available on your browser, everything under the `datalist` except the `option` elements will be hidden. If you use this fallback mechanism, make sure your server catches both “fruit_sel” and “fruit” as query parameters.
 
 
-{% include "comment-widget.html" %}
