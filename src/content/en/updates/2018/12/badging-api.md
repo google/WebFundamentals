@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
 {# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-01-28 #}
+{# wf_updated_on: 2019-01-29 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
 {# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
@@ -77,11 +77,19 @@ Examples of sites that may use this API include:
 ## How to use the badging API {: #use }
 
 Starting in Chrome 73, the Badging API is available as an origin trial
-for (?PLATFORMS?).
+for Windows (7+) and macOS.
 [Origin trials][ot-what-is] allow you to try out new features and give
 feedback on usability, practicality, and effectiveness to us, and the web
 standards community. For more information, see the
 [Origin Trials Guide for Web Developers][ot-dev-guide].
+
+### Support for badging across platforms
+
+The badging API is supported (in an origin trial) on Windows and macOS.
+Android is not supported because it requires you to show a notification,
+though this may change in the future.
+Chrome OS support is pending implementation of badging on the platform.
+
 
 ### Register for the origin trial {: #ot }
 
