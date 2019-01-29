@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-21 #}
+{# wf_updated_on: 2019-01-29 #}
 {# wf_published_on: 2011-11-10 #}
 {# wf_tags: news,offline,quota,filesystem #}
 {# wf_blink_components: N/A #}
@@ -21,7 +21,7 @@ There’s various offline related features introduced to modern browsers through
     * `PERSISTENT` storage is never deleted without the user's instruction, but usually requires up-front quota request to use.
 
 * For `TEMPORARY` storage, it is shared between all applications and websites run in the browser.
-    * `TEMPORARY` storage has a default quota of 50% of available disk as a shared pool. (50GB => 25GB)  (Not restricted to 1GB anymore)<br>[To be more specific, TEMP quota is calucalated by (<i>remaining disk space + TEMP storage space) * 50%</i>.  Therefore if apps are using 25GB TEMP storage in total and the current remaining disk space is 25GB that’s already full.]
+    * `TEMPORARY` storage has a default quota of 50% of available disk as a shared pool. (50GB => 25GB)  (Not restricted to 1GB anymore)<br>[To be more specific, TEMP quota is calculated by (<i>remaining disk space + TEMP storage space) * 50%</i>.  Therefore if apps are using 25GB TEMP storage in total and the current remaining disk space is 25GB that’s already full.]
     * Each application has a limitation to have 20% of the available `TEMPORARY` storage pool (i.e. 20% of 50% of available disk). (Not restricted to 5Mb anymore)
     * When `TEMPORARY` storage quota is exceeded, _all the data (incl. AppCache, IndexedDB, WebSQL, File System API) stored for oldest used origin gets deleted_ .<br>[Note: since each app can only use up to 20% of the pool, this won’t happen very frequently unless the user has more than 5 active offline apps.]
     * If app tries to make a modification which will result in exceeding `TEMPORARY` storage quota (20% of pool), an error will be thrown.
