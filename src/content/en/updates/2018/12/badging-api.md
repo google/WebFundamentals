@@ -27,10 +27,10 @@ description: The Badging API is a new web platform API that allows installed web
 ## What is the Badging API? {: #what }
 
 <figure class="attempt-right">
-  <img src="/web/updates/images/2018/12/badges.png">
+  <img src="/web/updates/images/2018/12/badges-on-windows.jpg">
   <figcaption>
-    Examples of badges from native apps on launch icons across different
-    platforms.
+    Example of Twitter with 8 notifications and another app showing a flag
+    type badge.
   </figcaption>
 </figure>
 
@@ -136,7 +136,7 @@ case, it affects the whole app, not just the current page.
 
 In some cases, the OS may not allow the exact representation of the badge,
 in this case, the browser will attempt to provide the best representation for
-that device. For example, while the Badging API isn’t supported on Android yet,
+that device. For example, while the Badging API isn’t supported on Android,
 Android only ever shows a dot instead of a numeric value.
 
 ## Feedback {: #feedback }
