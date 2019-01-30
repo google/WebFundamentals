@@ -24,20 +24,24 @@ The short answer is nothing, unless you're trying to return global matches with
 capturing groups. Here's a programming puzzle for you. Consider the following
 code:
 
-    const regex = /t(e)(st(\d?))/g;
-    const string = 'test1test2';
-    const results = string.match(regex);
-    // Prints ["test1", "test2"]
-    console.log(results);
+```js
+const regex = /t(e)(st(\d?))/g;
+const string = 'test1test2';
+const results = string.match(regex);
+console.log(results);
+// → ['test1', 'test2']
+```
 
 Run this in a console and notice that it returns an array containing the
-strings 'test1' and 'test2'. If I remove the g flag from the regular expression
-what I get has all of my capturing groups, but I only get the first match. It
-looks like this:
+strings `'test1'` and `'test2'`. If I remove the g flag from the regular
+expression what I get has all of my capturing groups, but I only get the first
+match. It looks like this:
 
-    ["test1", "e", "st1", "2", index: 0, input: "test1test2", groups: undefined]
+```js
+['test1', 'e', 'st1', '2', index: 0, input: 'test1test2', groups: undefined]
+```
 
-This string contains a second possible match beginning with 'test2' but I don't
+This string contains a second possible match beginning with `'test2'` but I don't
 have it. Now here's the puzzle: how do I get all of the capturing groups for
 each match? The [explainer for the String.prototype.matchAll()
 proposal](https://github.com/tc39/proposal-string-matchall)
@@ -48,12 +52,14 @@ won't need them much longer.
 
 What would the explainer examples look like with `matchAll()`? Have a look.
 
-    const regex = /t(e)(st(\d?))/g;
-    const string = 'test1test2';
-    const matches = string.matchAll(regex);
-    for (const match of matches) {
-    	console.log(match);
-    }
+```js
+const regex = /t(e)(st(\d?))/g;
+const string = 'test1test2';
+const matches = string.matchAll(regex);
+for (const match of matches) {
+  console.log(match);
+}
+```
 
 There are a few things to note about this. Unlike `match()` which returns an
 array on a global search, `matchAll()` returns an iterable object that works
@@ -61,8 +67,10 @@ beautifully with `for...of` loops. The iterable object produces an array for
 each match, including the capturing groups with a few extras. If you print
 these to the console they'll look like this:
 
-    ["test1", "e", "st1", "2", index: 0, input: "test1test2", groups: undefined]
-    ["test2", "e", "st2", "2", index: 5, input: "test1test2", groups: undefined]
+```js
+['test1', 'e', 'st1', '2', index: 0, input: 'test1test2', groups: undefined]
+['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', groups: undefined]
+```
 
 You may notice that the value for each match is an array in exactly the same
 format returned by `match()` for non-global regular expressions.
