@@ -6,7 +6,7 @@ description: Chrome 73 introduces the String.prototype.matchAll() method. It beh
 {# wf_updated_on: 2019-01-30 #}
 {# wf_featured_image: /web/updates/images/generic/js.png #}
 {# wf_tags: chrome73,javascript,regex #}
-{# wf_featured_snippet: Chrome 73 introduces the <code>String.prototype.matchAll()</code> method. It behaves similarly to <code>match()<code>, but offers a simple way to iterate over matches, especially when you need access to capture groups. #}
+{# wf_featured_snippet: Chrome 73 introduces the <code>String.prototype.matchAll()</code> method. It behaves similarly to <code>match()</code>, but offers a simple way to iterate over matches, especially when you need access to capture groups. #}
 {# wf_blink_components: Blink>JavaScript>Language #}
 
 # Better match results with String.prototype.matchAll() {: .page-title }
