@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Chrome 73 introduces the <code>String.prototype.matchAll()<code> method. It behaves similarly to <code>match()<code>, but offers a simple way to iterate over matches, especially when you need access to capture groups.
+description: Chrome 73 introduces the String.prototype.matchAll() method. It behaves similarly to match(), but offers a simple way to iterate over matches, especially when you need access to capture groups.
 
 {# wf_published_on: 2019-02-07 #}
 {# wf_updated_on: 2019-01-30 #}
@@ -40,7 +40,9 @@ looks like this:
 This string contains a second possible match beginning with 'test2' but I don't
 have it. Now here's the puzzle: how do I get all of the capturing groups for
 each match? The [explainer for the String.prototype.matchAll()
-proposal](https://github.com/tc39/proposal-string-matchall) shows two possible approaches. I won't describe them because hopefully you won't need them much longer.
+proposal](https://github.com/tc39/proposal-string-matchall)
+shows two possible approaches. I won't describe them because hopefully you
+won't need them much longer.
 
 ## String.prototype.matchAll()
 
@@ -85,7 +87,7 @@ deficiencies on MDN (which
 groups</a> specified in your regular expression.</dd>
 </dl>
 
-# Conclusion
+## Conclusion
 
 If I've missed anything please let me know in the comments below. You can read more about recent changes to JavaScript [in previous
 updates](/web/updates/tags/javascript) or on [the V8 website](https://v8.dev/).
