@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-01-30 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -44,10 +44,10 @@ How the **Page** pane is organized:
 * The third-level, fourth-level, and so on, represent directories and resources that
   were loaded from that origin. For example, in <b>Figure 1</b> the full path to the
   resource `devsite-googler-button` is
-  `developers.google.com/_static/f6e16de9fa/css/devsite-googler-button`
+  `developers.google.com/_static/19aa27122b/css/devsite-googler-button`
 
 [frame]: https://www.w3.org/TR/html401/present/frames.html
-[origin]: https://www.w3.org/TR/2011/WD-html5-20110525/origin-0.html
+[origin]: https://html.spec.whatwg.org/multipage/origin.html#origin
 
 Click a file in the **Page** pane to view its contents in the **Editor** pane. You
 can view any type of file. For images, you see a preview of the image.
@@ -87,7 +87,7 @@ change, then the text `A` would have been logged to the **Console**.
   <img src="images/edit-js.gif"
        alt="Editing JavaScript in the Editor pane"/>
   <figcaption>
-    <b>Figure 5</b>. Editing JavaScript in the <b>Editor</b> pane
+    <b>Figure 4</b>. Editing JavaScript in the <b>Editor</b> pane
   </figcaption>
 </figure>
 
@@ -114,7 +114,7 @@ any time you need it. DevTools saves the **Snippet** to your file system.
   <img src="images/snippet.png"
        alt="A Snippet that inserts the jQuery library into a page."/>
   <figcaption>
-    <b>Figure 6</b>. A <b>Snippet</b> that inserts the jQuery library into a page
+    <b>Figure 5</b>. A <b>Snippet</b> that inserts the jQuery library into a page
   </figcaption>
 </figure>
 
@@ -146,7 +146,7 @@ basics of debugging in DevTools.
   <img src="images/debugging.png"
        alt="Debugging JavaScript"/>
   <figcaption>
-    <b>Figure 7</b>. Debugging JavaScript
+    <b>Figure 6</b>. Debugging JavaScript
   </figcaption>
 </figure>
 
