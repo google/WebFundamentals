@@ -183,10 +183,11 @@ your web app. Your `start_url` must reside within the `scope`.
 
     "scope": "/maps/"
 
-Caution: If the user clicks a link in your app that is outside of the `scope`,
-the link will open, and render within the PWA window. If you want the link to
-open in a browser tab, you must add `target="_blank"` to the `<a>` tag. on
-Android, links with `target="_blank"` will open in a Chrome Custom Tab.
+Caution: If the user clicks a link in your app that navigates outside of the
+`scope`, the link will open and render within the existing the PWA window. If
+you want the link to open in a browser tab, you must add `target="_blank"`
+to the `<a>` tag. On Android, links with `target="_blank"` will open in a
+Chrome Custom Tab.
 
 A few other tips:
 
