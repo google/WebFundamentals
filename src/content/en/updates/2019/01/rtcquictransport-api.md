@@ -167,8 +167,8 @@ read buffer becomes full on the receive side. The send side has a write
 buffer that can fill when back pressure has been applied, and therefore
 the write side has a `waitForWriteBufferedAmountBelow` method as well to
 allow waiting for room in the buffer to write. More information on
-writing/reading data can be found in the further developer documentation
-(to be added).
+writing/reading data can be found in the further developer
+[documentation][further-documentation].
 
 #### Unordered/Unreliable Delivery {: #unordered }
 
@@ -254,6 +254,7 @@ against the QUIC handshake.
 
 ## Helpful Links {: #helpful }
 
+* [Further documentation][further-documentation]
 * [Public explainer][explainer]
 * [Tracking bug][cr-bug]
 * Request an [origin trial token][ot-request]
@@ -271,8 +272,8 @@ against the QUIC handshake.
 [ice-spec-issues]: https://github.com/w3c/webrtc-ice/issues
 [explainer]: https://docs.google.com/document/d/12oNEcgjAjQERMvATCVCWpoTxNU47NRUzxCK5g0FysTk/edit?usp=sharing
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=874296
-[ot-what-is]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/README.md
 [ot-dev-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [ot-use]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [ot-request]: https://developers.chrome.com/origintrials/#/trials/active
+[further-documentation]: https://github.com/shampson/RTCQuicTransport-Origin-Trial-Documentation
 
