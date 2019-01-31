@@ -747,6 +747,17 @@ yangguo:
   description:
     en: Yang is an engineer working on V8
 
+shampson:
+  name:
+    given: Seth
+    family: Hampson
+  org:
+    name: Google
+  country: US
+  email: maciej@unit9.com
+  description:
+    en: Software Engineer at Google working on WebRTC.
+
 umarhansa:
   name:
     given: Umar
