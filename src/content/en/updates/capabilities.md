@@ -50,7 +50,7 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Available as an origin trial.
       </td>
     </tr>
     <tr>
