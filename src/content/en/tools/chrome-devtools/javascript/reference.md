@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging features.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-01-31 #}
 {# wf_published_on: 2017-01-04 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -416,6 +416,10 @@ To edit a script:
      alt="The Editor pane."/>
    <figcaption><b>Figure 17</b>. The Editor pane, outlined in blue</figcaption>
  </figure>
+
+## Disable JavaScript {: #disable }
+
+See [Disable JavaScript With Chrome DevTools](/web/tools/chrome-devtools/javascript/disable).
 
 ## Feedback {: #feedback }
 
