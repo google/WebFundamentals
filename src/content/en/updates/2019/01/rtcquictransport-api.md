@@ -9,7 +9,7 @@ description: The RTCQuicTransport is a new web platform API that allows exchangi
 {# wf_featured_snippet: The RTCQuicTransport is a new web platform API that allows exchanging arbitrary data with remote peers using the QUIC protocol. #}
 {# wf_blink_components: Blink #}
 
-# RTCQuicTransport Coming to an Origin Trial Near You (M73) {: .page-title }
+# RTCQuicTransport Coming to an Origin Trial Near You (Chrome 73) {: .page-title }
 
 {% include "web/_shared/contributors/shampson.html" %}
 
@@ -95,7 +95,7 @@ alt="RTCQuicTransport diagram showing architecture of API">
 
 #### Client perspective: {: #client-perspective }
 
-```
+```js
 const iceTransport = new RTCIceTransport();
 const quicTransport = new RTCQuicTransport(iceTransport);
 // Signal parameters, key and candidates.
@@ -122,7 +122,7 @@ signalingChannel.onMessage = async ({iceParams, candidate}) => {
 
 #### Server perspective: {: #server-perspective }
 
-```
+```js
 const iceTransport = new RTCIceTransport();
 const quicTransport = new RTCQuicTransport(iceTransport);
 // Signal parameters, key and candidates.
@@ -150,7 +150,8 @@ signalingChannel.onMessage = async ({iceParams, quicKey, candidate}) => {
 
 Data transfer can be achieved  using the RTCQuicStream APIs for reading and
 writing:
-```
+
+```js
 RTCQuicStreamReadResult readInto(Uint8Array data);
 void write(RTCQuicStreamWriteParameters data);
 Promise<void> waitForWriteBufferedAmountBelow(unsigned long amount);
@@ -159,13 +160,14 @@ Promise<void> waitForReadable(unsigned long amount);
 
 #### Buffering {: #buffering }
 
-The promises returned by the waitFor\* methods allow buffering data when
+The promises returned by the `waitFor*` methods allow buffering data when
 JavaScript is busy. Back pressure is applied to the send side when the
 read buffer becomes full on the receive side. The send side has a write
 buffer that can fill when back pressure has been applied, and therefore
-the write side has a waitFor* method as well to allow waiting for room in
-the buffer to write. More information on writing/reading data can be found
-in the further developer documentation (to be added).
+the write side has a `waitForWriteBufferedAmountBelow` method as well to
+allow waiting for room in the buffer to write. More information on
+writing/reading data can be found in the further developer documentation
+(to be added).
 
 #### Unordered/Unreliable Delivery {: #unordered }
 
@@ -179,7 +181,7 @@ how many retransmissions are desired before dropping the data.
 
 ## When? {: #when }
 
-The origin trial will start in the M73 version, and will be available
+The origin trial will start in the Chrome 73 version, and will be available
 up to and including the M75 version. After this the origin trial will
 end. Based upon feedback and interest we will make appropriate changes
 and either ship the API, continue with a new origin trial of this API, or
@@ -245,7 +247,7 @@ handshake.
 | **2a. RTCQuicTransport Specification ** 	 | [**In Progress**][quic-spec] |
 | **2b. RTCIceTransport Specification ** 	 | [**In Progress**][ice-spec]  |
 | **3. Gather feedback & iterate on design** | [**In Progress**](#feedback) |
-| 4. Origin trial                            | Starts in M73!               |
+| 4. Origin trial                            | Starts in Chrome 73!         |
 | 5. Launch                                  | Not started                  |
 
 ## Helpful Links {: #helpful }
