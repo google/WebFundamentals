@@ -28,20 +28,21 @@ media transport, messaging, etc.
 ## Why? {: #why }
 A powerful low level data transport API can enable applications (like real time
 communications) to do new things on the web. You can build on top of the API,
-creating your own solutions, pushing the limits of what can be done with peer to
-peer connections, for example, unlocking custom bitrate allocation knobs. In the
-future, further support for encoded media could even enable building your own
-video communication application with low level controls. WebRTC’s NV effort
+creating your own solutions, pushing the limits of what can be done with peer
+to peer connections, for example, unlocking custom bitrate allocation knobs. In
+the future, further support for encoded media could even enable building your
+own video communication application with low level controls. WebRTC’s NV effort
 is to move towards lower level APIs, and experimenting early with this is
 valuable.
 
 ### Why QUIC? {: #why-quic }
 The QUIC protocol is desirable for real time communications. It is built on top
 of UDP, has built in encryption, congestion control and is multiplexed without
-head of line blocking. The `RTCQuicTransport` gives very similar abilities as the
-`RTCDataChannel` API, but uses QUIC rather than SCTP as its transport protocol.
-Because the `RTCQuicTransport` is a standalone API, it doesn’t have the overhead
-of the `RTCPeerConnection` API, which includes the real time media stack.
+head of line blocking. The `RTCQuicTransport` gives very similar abilities as
+the `RTCDataChannel` API, but uses QUIC rather than SCTP as its transport
+protocol. Because the `RTCQuicTransport` is a standalone API, it doesn’t have
+the overhead of the `RTCPeerConnection` API, which includes the real time media
+stack.
 
 ## How? {: #how }
 
@@ -69,20 +70,20 @@ level.
 
 Used for reading and writing data to/from the remote side. Streams transport
 data reliably and in order. Multiple streams can be created from the same
-`RTCQuicTransport` and once data is written to a stream it fires an “onquicstream”
-event on the remote transport. Streams offer a way to distinguish different
-data on the same QUIC connection. Common examples can be sending separate
-files across separate streams, small chunks of data across different streams,
-or different types of media across separate streams. `RTCQuicStream`s are
-lightweight, are multiplexed over a QUIC connection and do not cause head of
-line blocking to other `RTCQuicStream`s.
+`RTCQuicTransport` and once data is written to a stream it fires an
+“onquicstream” event on the remote transport. Streams offer a way to
+distinguish different data on the same QUIC connection. Common examples can
+be sending separate files across separate streams, small chunks of data across
+different streams, or different types of media across separate streams.
+`RTCQuicStream`s are lightweight, are multiplexed over a QUIC connection and
+do not cause head of line blocking to other `RTCQuicStream`s.
 
 ### Connection Setup {: #connection-setup }
 The following is an example for setting up a peer-to-peer QUIC connection.
-Like `RTCPeerConnection`, the `RTCQuicTransport` API requires the use of a secure
-signaling channel to negotiate the parameters of the connection, including its
-security parameters. The `RTCIceTransport` negotiates it’s ICE parameters
-(ufrag and password), as well as `RTCIceCandidate`s.
+Like `RTCPeerConnection`, the `RTCQuicTransport` API requires the use of a
+secure signaling channel to negotiate the parameters of the connection,
+including its security parameters. The `RTCIceTransport` negotiates it’s ICE
+parameters (ufrag and password), as well as `RTCIceCandidate`s.
 
 Note: The `RTCQuicTransport` connection is setup with a pre shared key
 API. We do not currently plan on keeping this API past the origin trial. It
@@ -176,7 +177,7 @@ unreliable/unordered delivery can be achieved through other means. For
 unordered delivery, one can send small chunks of data on separate streams
 because data is not ordered between streams. For unreliable delivery, one
 can send small chunks of data with finish set to true, followed by calling
-reset() on the stream after a timeout. The timeout should be dependent on
+`reset()` on the stream after a timeout. The timeout should be dependent on
 how many retransmissions are desired before dropping the data.
 
 ## When? {: #when }
@@ -217,7 +218,8 @@ the developers. We’re interested in:
 
 ## Web Specification {: #web-spec }
 
-The draft specification has moved ahead of the API in the origin trial including:
+The draft specification has moved ahead of the API in the origin trial
+including:
 
 * Unidirectional streams that are more closely aligned with WHATWG streams
 * Disabling retransmissions
@@ -229,16 +231,16 @@ WHATWG stream support), but want to hear your feedback first!
 ## Security {: #security }
 
 Security in the QUIC handshake is enforced through usage of a pre shared key to
-establish an encrypted P2P QUIC connection. This key needs to be signaled over a
-secure out of band channel with confidentiality and integrity guarantees. Note
-that the key will be exposed to JavaScript.
+establish an encrypted P2P QUIC connection. This key needs to be signaled over
+a secure out of band channel with confidentiality and integrity guarantees.
+Note that the key will be exposed to JavaScript.
 
 ### Active Attack {: #active-attack }
 Unlike DTLS-SRTP, which just requires integrity for signaling the certificate
-fingerprint, signaling the pre shared key requires integrity and confidentiality.
-If the PSK is compromised (say by the server in the signaling channel), an active
-attacker could potentially mount a man-in-the-middle attack against the QUIC
-handshake.
+fingerprint, signaling the pre shared key requires integrity and
+confidentiality. If the PSK is compromised (say by the server in the signaling
+channel), an active attacker could potentially mount a man-in-the-middle attack
+against the QUIC handshake.
 
 ## Current status {: #status }
 | Step                                       | Status                       |
