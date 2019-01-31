@@ -433,6 +433,23 @@ wdenniss:
   description:
     en: Google Identity Product Manager
 
+housseindjirdeh:
+  name:
+    given: Houssein
+    family: Djirdeh
+  org:
+    name: Google
+    unit: Developer Relations
+  homepage: https://houssein.me
+  country: USA
+  twitter: hdjirdeh
+  github: housseindjirdeh
+  role:
+    - author
+  email: houssein@google.com
+  description:
+    en: "Developer Advocate"
+
 robdodson:
   name:
     given: Rob
