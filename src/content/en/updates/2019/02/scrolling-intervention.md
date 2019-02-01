@@ -29,7 +29,13 @@ it starts scrolling/zooming even though waiting is not necessary. In Chrome 56
 , and that change was later adopted by both Safari and Firefox. As you can see
 from the demonstration video we made at that time, leaving the behavior as it
 was produced a noticeable delay in scroll response. Now in Chrome 73, we've
-applied the same intervention to `wheel` and `mousewheel` events
+applied the same intervention to `wheel` and `mousewheel` events.
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="65VMej8n23A"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## The Intervention
 
