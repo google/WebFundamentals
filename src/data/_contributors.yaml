@@ -1545,6 +1545,18 @@ alexshalamov:
   description:
     en: Alex is an Engineer at Intel
 
+sahel:
+  name:
+    given: Sahel
+    family: Sharify
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: sahel@google.com
+
 glenshires:
   name:
     given: Glen
