@@ -15,7 +15,7 @@ description: Scrolling responsiveness is critical to the user's engagement with 
 
 To improve `wheel` scrolling/zooming performance developers are encouraged to
 register `wheel` and `mousewheel` [event listeners as
-passive](https://developers.google.com/web/updates/2016/06/passive-event-listeners)
+passive](/web/updates/2016/06/passive-event-listeners)
 by passing the `{passive: true}` option to `addEventListener()`. Registering
 the event listeners as passive tells the browser that the wheel listeners will
 not call `preventDefault()` and the browser can safely perform scrolling and
@@ -25,7 +25,7 @@ The problem is that most often the wheel event listeners are conceptually
 passive (do not call `preventDefault()`) but are not explicitly specified as
 such requiring the browser to wait for the JS event handling to finish before
 it starts scrolling/zooming even though waiting is not necessary. In Chrome 56
-[we fixed this issue for touchStart and touchMove](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+[we fixed this issue for touchStart and touchMove](/web/updates/2017/01/scrolling-intervention)
 , and that change was later adopted by both Safari and Firefox. As you can see
 from the demonstration video we made at that time, leaving the behavior as it
 was produced a noticeable delay in scroll response. Now in Chrome 73, we've
