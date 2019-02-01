@@ -62,7 +62,8 @@ window.addEventListener("wheel", func, {passive: true} );
 And calling `preventDefault()` inside the listener will be ignored with the
 following DevTools warning:
 
-    [Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See https://www.chromestatus.com/features/6662647093133312
+    [Intervention] Unable to preventDefault inside passive event listener due
+    to target being treated as passive.See https://www.chromestatus.com/features/6662647093133312
 
 ## Breakage and Guidance
 
@@ -75,8 +76,6 @@ determine whether it may be hitting this in the wild by checking if calling
 for the affected cases is relatively easy: pass `{passive: false}` to
 `addEventListener()` to override the default behavior and preserve the event
 listener as blocking.
-
-<<../../_shared/discover.md>>
 
 ## Feedback {: .hide-from-toc }
 
