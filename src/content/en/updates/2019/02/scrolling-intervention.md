@@ -11,7 +11,7 @@ description: Scrolling responsiveness is critical to the user's engagement with 
 
 # Making wheel scrolling fast by default {: .page-title }
 
-{% include "web/_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/sahel.html" %}
 
 To improve `wheel` scrolling/zooming performance developers are encouraged to
 register `wheel` and `mousewheel` [event listeners as
