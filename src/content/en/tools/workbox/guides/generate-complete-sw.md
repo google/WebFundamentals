@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with Workbox.
 
-{# wf_updated_on: 2018-08-30 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -172,16 +172,16 @@ The format is simple:
   runtimeCaching: [
     {
       // You can use a RegExp as the pattern:
-      urlPattern: /.jpg$/,
-      handler: 'cacheFirst',
+      urlPattern: /\.jpg$/,
+      handler: 'CacheFirst',
     },
   ]
 }
 ```
 
 The `urlPattern` needs to be a regular expression and the handler must be
-one of the following, 'staleWhileRevalidate', 'cacheFirst', 'cacheOnly',
-'networkFirst' or 'networkOnly.
+one of the following, 'StaleWhileRevalidate', 'CacheFirst', 'CacheOnly',
+'NetworkFirst' or 'NetworkOnly.
 
 You can one or more of these routes.
 
@@ -234,7 +234,7 @@ so that any navigation requests are reopened to with a precached page.
 ### Templating Support
 
 If you are using a templating engine to generate the content for your pages,
-you can use the `templatedUrls` option to safely precache URL's, ensuring they
+you can use the `templatedURLs` option to safely precache URL's, ensuring they
 get updated whenever one of the templates is updated.
 
 This can also be a safe way to add a url to be precached and provide a custom
@@ -244,7 +244,7 @@ whenever the contents of the URL changes).
 ```javascript
 {
   ...
-  templatedUrls: {
+  templatedURLs: {
     '/app-shell': [
       'dev/templates/app-shell.hbs',
       'dev/**\/*.css',

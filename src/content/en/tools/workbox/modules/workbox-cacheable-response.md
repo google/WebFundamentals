@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cacheable-response.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 {# wf_blink_components: N/A #}
 
@@ -30,7 +30,7 @@ set of status codes as being eligible for caching by adding a
 ```js
 workbox.routing.registerRoute(
   new RegExp('^https://third-party.example.com/images/'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -57,7 +57,7 @@ to the cache by setting the `headers` object when constructing the plugin:
 ```js
 workbox.routing.registerRoute(
   new RegExp('/path/to/api/'),
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -88,7 +88,7 @@ have at least one of the provided headers.
 ```js
 workbox.routing.registerRoute(
   new RegExp('/path/to/api/'),
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'api-cache',
     plugins: [
       new workbox.cacheableResponse.Plugin({

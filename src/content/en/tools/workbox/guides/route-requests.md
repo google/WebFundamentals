@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2018-10-11 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -174,27 +174,27 @@ Using these as your `handler` can be done like so:
 ```javascript
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.staleWhileRevalidate()
+  new workbox.strategies.StaleWhileRevalidate()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.networkFirst()
+  new workbox.strategies.NetworkFirst()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.cacheFirst()
+  new workbox.strategies.CacheFirst()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.networkOnly()
+  new workbox.strategies.NetworkOnly()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.cacheOnly()
+  new workbox.strategies.CacheOnly()
 );
 ```
 
@@ -202,11 +202,11 @@ With each strategy you can customize the behavior of the Route by defining
 a custom cache to use and / or adding plugins.
 
 ```javascript
-workbox.strategies.staleWhileRevalidate({
-   // Use a custom cache for this route
+new workbox.strategies.StaleWhileRevalidate({
+   // Use a custom cache for this route.
   cacheName: 'my-cache-name',
 
-  // Add an array of custom plugins (like workbox.expiration.Plugin)
+  // Add an array of custom plugins (like workbox.expiration.Plugin).
   plugins: [
     ...
   ]
@@ -219,13 +219,14 @@ device is limited).
 
 ## Handling a Route with a Custom Callback
 
-There may be scenarios where you’d like to respond to a request with a
-different strategy of your own or simply generating the request in the
-service worker with templating. For this you can provide a function and
-it’ll be called with an object containing the request url and `FetchEvent`.
+There may be scenarios where you’d like to respond to a request with a different
+strategy of your own or simply generating the request in the service worker with
+templating. For this you can provide an `async`function which returns a
+`Response` object. It'll be called with a parameter object containing `url` and
+`event` (the `FetchEvent`) properties.
 
 ```javascript
-const handler = ({url, event}) => {
+const handler = async ({url, event}) => {
   return new Response(`Custom handler response.`);
 };
 
@@ -243,10 +244,10 @@ const match = ({url, event}) => {
   };
 };
 
-const handler = ({url, event, params}) => {
-   // Response will be “A guide on Workbox”
+const handler = async ({url, event, params}) => {
+   // Response will be "A guide to Workbox"
   return new Response(
-    `A ${params.type} on ${params.name}`
+    `A ${params.type} to ${params.name}`
   );
 };
 
@@ -254,4 +255,4 @@ workbox.routing.registerRoute(match, handler);
 ```
 
 This may be helpful if there are pieces of information in the URL that can
-be parsed once in the *match* callback and used in your *handler*.
+be parsed once in the `match` callback and used in your `handler`.

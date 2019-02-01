@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Common recipes to use with Workbox.
 
-{# wf_updated_on: 2018-11-07 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -31,7 +31,7 @@ up too much storage on the user's device).
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'google-fonts-stylesheets',
   })
 );
@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 // Cache the underlying font files with a cache-first strategy for 1 year.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'google-fonts-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
@@ -61,7 +61,7 @@ You might want to use a cache-first images, by matching against a list of known 
 ```javascript
 workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
       new workbox.expiration.Plugin({
@@ -81,7 +81,7 @@ precached.
 ```javascript
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'static-resources',
   })
 );
@@ -96,7 +96,7 @@ like `googleapis.com` and `gstatic.com` with a single route.
 ```javascript
 workbox.routing.registerRoute(
   /.*(?:googleapis|gstatic)\.com/,
-  workbox.strategies.staleWhileRevalidate(),
+  new workbox.strategies.StaleWhileRevalidate(),
 );
 ```
 
@@ -106,14 +106,14 @@ store assets in  cache for each origin.
 ```javascript
 workbox.routing.registerRoute(
   /.*(?:googleapis)\.com/,
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'googleapis',
   })
 );
 
 workbox.routing.registerRoute(
   /.*(?:gstatic)\.com/,
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'gstatic',
   })
 );
@@ -128,7 +128,7 @@ up to 5 minutes.
 ```javascript
 workbox.routing.registerRoute(
   'https://hacker-news.firebaseio.com/v0/api',
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
       cacheName: 'stories',
       plugins: [
         new workbox.expiration.Plugin({
@@ -155,7 +155,7 @@ For this, you can use a `NetworkFirst` strategy with the
 ```javascript
 workbox.routing.registerRoute(
   'https://hacker-news.firebaseio.com/v0/api',
-  workbox.strategies.networkFirst({
+  new workbox.strategies.NetworkFirst({
       networkTimeoutSeconds: 3,
       cacheName: 'stories',
       plugins: [
@@ -177,7 +177,7 @@ we could use the regular expression `new RegExp('/static/')`, like so:
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/static/'),
-  workbox.strategies.staleWhileRevalidate()
+  new workbox.strategies.StaleWhileRevalidate()
 );
 ```
 
@@ -193,13 +193,8 @@ For example, when the target is `<audio>` data:
 ```javascript
 workbox.routing.registerRoute(
   // Custom `matchCallback` function
-  (context) => {
-    if (context.event.request.destination === 'audio') {
-      return true;
-    }
-    return null;
-  },
-  workbox.strategies.cacheFirst({
+  ({event}) => event.request.destination === 'audio',
+  new workbox.strategies.CacheFirst({
     cacheName: 'audio',
     plugins: [
       new workbox.expiration.Plugin({
@@ -247,7 +242,7 @@ that were added by the web page itself:
 
 workbox.routing.registerRoute(
   new RegExp('/static/'),
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'my-cache', // Use the same cache name as before.
   })
 );

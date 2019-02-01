@@ -40,14 +40,14 @@ the service worker at build-time.
 1. Add the following code to `src/sw.js`.
 
     <pre class="prettyprint">importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
-    
+
     // Note: Ignore the error that Glitch raises about workbox being undefined.
-    workbox.skipWaiting();
-    workbox.clientsClaim();
-    
+    workbox.core.skipWaiting();
+    workbox.core.clientsClaim();
+
     workbox.routing.registerRoute(
       new RegExp('https://hacker-news.firebaseio.com'),
-      workbox.strategies.staleWhileRevalidate()
+      new workbox.strategies.StaleWhileRevalidate()
     );
 
     self.addEventListener('push', (event) => {

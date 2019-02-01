@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-08-10 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Strategies {: .page-title }
@@ -45,7 +45,7 @@ is not vital to the application.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/images/avatars/'),
-  workbox.strategies.staleWhileRevalidate()
+  new workbox.strategies.StaleWhileRevalidate()
 );
 ```
 
@@ -66,7 +66,7 @@ will be cached so that the next request is served directly from the cache.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/styles/'),
-  workbox.strategies.cacheFirst()
+  new workbox.strategies.CacheFirst()
 );
 ```
 
@@ -84,7 +84,7 @@ will be used.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/social-timeline/'),
-  workbox.strategies.networkFirst()
+  new workbox.strategies.NetworkFirst()
 );
 ```
 
@@ -99,7 +99,7 @@ is the strategy to use.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/admin/'),
-  workbox.strategies.networkOnly()
+  new workbox.strategies.NetworkOnly()
 );
 ```
 
@@ -114,7 +114,7 @@ in workbox, but can be useful if you have your own precaching step.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/app/v2/'),
-  workbox.strategies.cacheOnly()
+  new workbox.strategies.CacheOnly()
 );
 ```
 
@@ -134,7 +134,7 @@ useful if you want to separate out your assets to help with debugging.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/images/'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
   })
 );
@@ -154,7 +154,7 @@ instances to the `plugins` option.
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/images/'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.Plugin({
