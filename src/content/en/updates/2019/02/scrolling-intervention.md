@@ -78,4 +78,10 @@ listener as blocking.
 
 <<../../_shared/discover.md>>
 
+## Feedback {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
+
 {% include "web/_shared/rss-widget-updates.html" %}
