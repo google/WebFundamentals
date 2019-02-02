@@ -28,7 +28,7 @@ specific stack-based recommendations. Instead of only surfacing generalized
 advice, additional messages will be provided that explain how to address certain
 audits with tools that have been detected to be used on a website.
 
-<img src="/web/updates/images/2019/01/lighthouse-platform-packs/audit-with-wordpress-description.png"
+<img src="/web/updates/images/2019/01/lighthouse-platform-packs/audit.png"
 alt="Prototype of the WordPress Stack Pack">
 
 The community will get to decide what the recommendations for different
@@ -82,5 +82,7 @@ you have any thoughts.
 * [Stack Packs
   repository](https://github.com/GoogleChrome/lighthouse-stack-packs)
 * [Feature RFC](https://github.com/GoogleChrome/lighthouse/issues/7021)
+
+{% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
