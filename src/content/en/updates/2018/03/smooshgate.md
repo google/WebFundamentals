@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What can #SmooshGate teach us about standards development and the Web Platform? This write-up gives an overview.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
