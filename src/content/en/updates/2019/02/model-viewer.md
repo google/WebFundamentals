@@ -9,7 +9,7 @@ description: Adding 3D models to a website can be tricky for a variety of reason
 {# wf_featured_snippet: Adding 3D models to a website can be tricky for a variety of reasons including the hosting issues and the high bar of 3D programming. That's why we're introducing the <code>&lt;model-viewer&gt;</code> web component to let you use 3D models declaratively. #}
 {# wf_blink_components: N/A #}
 
-# The \<model-viewer> web component {: .page-title}
+# The &#60;model-viewer> web component {: .page-title}
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
