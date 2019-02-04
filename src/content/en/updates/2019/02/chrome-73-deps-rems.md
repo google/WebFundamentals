@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 73 to help you plan.
 
-{# wf_updated_on: 2019-02-04 #}
-{# wf_published_on: 2018-02-07 #}
+{# wf_updated_on: 2019-02-07 #}
+{# wf_published_on: 2019-02-07 #}
 {# wf_tags: deprecations,removals,chrome73 #}
 {# wf_blink_components: Blink>Storage>WebSQL,Blink>HTML,Blink #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
