@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Open the Command Menu and run the "Disable JavaScript" command.
 
-{# wf_updated_on: 2019-01-31 #}
+{# wf_updated_on: 2019-02-04 #}
 {# wf_published_on: 2019-01-31 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -39,7 +39,7 @@ To see how a web page looks and behaves when JavaScript is disabled:
  
      <figure>
        <img src="/web/tools/chrome-devtools/javascript/imgs/disabled-javascript-warning.png"
-            alt="The warnining icon next to Sources."/>
+            alt="The warning icon next to Sources."/>
        <figcaption>
          <b>Figure 3</b>. The warning icon next to <b>Sources</b>
        </figcaption>
