@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Adding 3D models to a website can be tricky for a variety of reasons including the hosting issues and the high bar of 3D programming. That's why we're introducing the &lt;model-viewer&gt; web component to let you use 3D models declaratively.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-02-04 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: 3d #}
 {# wf_featured_image: /web/updates/images/2019/02/space-suit.png #}
@@ -43,7 +43,7 @@ use it. In this article, I will show you some things that are particular to
 ## What can &lt;model-viewer> do?
 
 More specifically, what can it do now? I'll show you its current capabilities.
-You'll get Is a great experience today, and ``<model-viewer>`` will get better
+You'll get Is a great experience today, and `<model-viewer> will get better
 over time as we add new features and improve rendering quality. The examples
 I've provided are just to give you a sense of what it does. If you want to try
 them there are installation and usage instructions in [its GitHub
@@ -107,7 +107,7 @@ to conserve battery power and GPU cycles when a model isn't visible.
 
 ## Looking Forward
 
-[Install `<mode-viewer>` and give it a try](https://github.com/GoogleWebComponents/model-viewer#installing.)
+[Install `<model-viewer>` and give it a try](https://github.com/GoogleWebComponents/model-viewer#installing.)
 We want `<model-viewer>` to be useful to you, and we want your input on its
 future. That's not to say we don't have ideas, which we have on
 [our project roadmap](https://www.google.com/url?q=https://github.com/GoogleWebComponents/model-viewer/projects/1&sa=D&ust=1545076622047000&usg=AFQjCNF4ZWzKnfW0nnpstv6KW6gSKZfQ_g).
