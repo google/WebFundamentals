@@ -3,7 +3,7 @@
 getResource() {
   local TEMP_FILE="$(mktemp)"
   echo "$1"
-  if curl --compressed --fail --progress-bar "$1" > "$TEMP_FILE"; then
+  if curl --compressed --fail "$1" > "$TEMP_FILE"; then
     mv "$TEMP_FILE" "$2"
   else
     echo Unable to update "$1"
@@ -22,4 +22,5 @@ getResource https://developers.google.com/_static/js/script_foot_closure.js gae/
 getResource https://developers.google.com/_static/js/script_foot.js gae/scripts/script_foot.js &
 getResource https://developers.google.com/_static/js/prettify-bundle.js gae/scripts/prettify-bundle.js &
 
+# TODO: return an error code if one of the curls fails
 wait
