@@ -59,7 +59,6 @@ browser.
 <model-viewer src="assets/Astronaut.gltf" alt="A 3D model of an astronaut">
 ```
 
-Note: Our current web infrastructure has a little trouble with Web Components.
 To see <model-viewer> in action, check out our [demo hosted on
 Glitch](https://model-viewer.glitch.me/). The code we have so far looks
 something like this png.
@@ -88,7 +87,7 @@ some preload animation by using script to switch between multiple posters.
 ```html
 <model-viewer id="toggle-poster" src="assets/Astronaut.gltf" controls
 auto-rotate poster="assets/poster2.png"></model-viewer>  
-&lt;script>  
+<script>  
     const posters = ['poster.png', 'poster2.png'];  
     let i = 0;  
     setInterval(() =>  
@@ -108,6 +107,7 @@ to conserve battery power and GPU cycles when a model isn't visible.
 
 ## Looking Forward
 
+[Install `<mode-viewer>` and give it a try](https://github.com/GoogleWebComponents/model-viewer#installing.)
 We want `<model-viewer>` to be useful to you, and we want your input on its
 future. That's not to say we don't have ideas, which we have on
 [our project roadmap](https://www.google.com/url?q=https://github.com/GoogleWebComponents/model-viewer/projects/1&sa=D&ust=1545076622047000&usg=AFQjCNF4ZWzKnfW0nnpstv6KW6gSKZfQ_g).
