@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2019-02-02 #}
 {# wf_published_on: 2012-03-05 #}
 {# wf_tags: news,css,dom #}
 {# wf_blink_components: Blink>CSS #}
@@ -31,7 +31,7 @@ Here’s a simple document that uses standard styling:
       <div>a div! <span>a span!</span></div>
     </body>
     </html>
-    
+
 
 The style rules specified will color text within any `<div>` red, and within any `<span>` green:
 
@@ -52,7 +52,7 @@ However, if we set `scoped` on the `<style>` element:
       <div>a div! <span>a span!</span></div>
     </body>
     </html>
-    
+
 
 then it restricts the style rules so that they’re applied to the enclosing `<div>` that is the parent of the `<style scoped>` element and anything inside just that `<div>`. We call this ‘scoped’ and the result looks like:
 
@@ -73,7 +73,7 @@ When you want to author some nice demo code on a page, it's easy to limit the st
 
 Another use case is simply encapsulation: for example, if your web page has a side menu, it makes sense to put styles that are specific to that menu into a `<style scoped>` section in that part of the markup. Those style rules won’t have any effect when rendering other parts of the page, which keeps them nicely separated from the main content!
 
-Possibly one of the most compelling use cases is for the [web component](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) model. Web components are going to be a great way to build things like sliders, menus, date pickers, tab widgets, etc. By providing the scoped styles, a designer can build a widget and package it with their styles as a self-contained unit that others can grab and combine into a rich web application. We plan to use `<style scoped>` heavily with web components and the [shadow DOM](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html) (that can already be enabled by setting the experimental “shadow DOM” flag in chrome://flags). Right now there's no really good way to make sure that styles are limited to web components without resorting to bad practices like inline styling, so scoped styles are a perfect fit for this.
+Possibly one of the most compelling use cases is for the [web component](https://github.com/w3c/webcomponents) model. Web components are going to be a great way to build things like sliders, menus, date pickers, tab widgets, etc. By providing the scoped styles, a designer can build a widget and package it with their styles as a self-contained unit that others can grab and combine into a rich web application. We plan to use `<style scoped>` heavily with Web Components and the [shadow DOM](https://www.w3.org/TR/shadow-dom/) (that can already be enabled by setting the experimental “shadow DOM” flag in chrome://flags). Right now there's no really good way to make sure that styles are limited to Web Components without resorting to bad practices like inline styling, so scoped styles are a perfect fit for this.
 
 ### Why include the parent element?
 
@@ -85,7 +85,7 @@ The most natural way is to include the parent element so that the `<style scoped
         #menu .main { … }
         #menu .sub { … }
       …
-      
+
 
 This mimics the effect of using styles when  ‘scoped’ is implemented but with some run-time performance penalty due to the more complex selector. The nice thing about this approach is that it allows for a graceful fallback approach until the day when `<style scoped>` is widely supported and the ID selectors could simply be dropped.
 
@@ -98,4 +98,4 @@ There are currently no known bugs, but `@global` and scoped versions of `@keyfra
 
 We would like to encourage everyone interested in the feature to try it out and let us know about your experiences: the good, the bad and (maybe) the buggy.
 
-
+{% include "web/_shared/helpful.html" %}
