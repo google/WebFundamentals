@@ -9,7 +9,7 @@ description: "lit-html and LitElement bring fast, lightweight templates and inte
 {# wf_featured_snippet: lit-html and LitElement are two new libraries for building fast, interoperable components. lit-html provides lightning-fast templating. LitElement is a lightweight base class for building Web Components with lit-html templates. #}
 {# wf_blink_components: N/A #}
 
-# Lightning-Fast Templates & Web Components: lit-html & LitElement {: .page-title }
+# Lightning-fast templates & Web Components: lit-html & LitElement {: .page-title }
 
 {% include "web/_shared/contributors/justinfagnani.html" %}
 
@@ -38,7 +38,7 @@ const myTemplate = (name) => html`
 `;
 ```
 
-It's simple to render a lit-html template: 
+It's simple to render a lit-html template:
 
 ```js
 render(myTemplate('Ada'), document.body);
@@ -103,8 +103,6 @@ This creates an element you can use anywhere you'd use a regular HTML element:
 
 `<name-tag name="Ida"></name-tag>`
 
-Hi, my name is Ida!
-
 If you use Web Components already, you'll be happy to hear that they're now natively supported in
 Chrome, Safari and Firefox. Edge support is coming soon, and polyfills are only needed for legacy
 browser versions. 
@@ -112,13 +110,15 @@ browser versions.
 If you're new to Web Components, you should give them a try! Web Components let you extend HTML in
 a way that interoperates with other libraries, tools, and frameworks. This makes them ideal for
 sharing UI elements within a large organization, publishing components for use anywhere on the web,
-or building UI design systems like Material design. 
+or building UI design systems like Material Design.
 
 You can use custom elements anywhere you use HTML: in your main document, in a CMS, in Markdown, or
 in views [built with frameworks](https://custom-elements-everywhere.com/) like React and Vue. You
 can also mix and match LitElement components with other Web Components, whether they've been
-written using vanilla web technologies or made with the help of tools like Salesforce Lightning,
-StencilJS, SkateJS or the Polymer library.
+written using vanilla web technologies or made with the help of tools like
+[Salesforce Lightning Web Components](https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components.html), 
+Ionic's [Stencil](https://stenciljs.com/), [SkateJS](https://skatejs.netlify.com/) or the 
+[Polymer library](https://polymer-library.polymer-project.org).
 
 ## Get started {: #get-started }
 
