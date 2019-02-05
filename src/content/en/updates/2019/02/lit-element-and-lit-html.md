@@ -76,7 +76,8 @@ in your app or share with your team, read on to learn more.
 
 ## LitElement: a lightweight Web Component base class
 
-LitElement is a lightweight base class that makes it easier than ever to build and share Web Components.
+LitElement is a lightweight base class that makes it easier than ever to build and share Web
+Components.
 
 LitElement uses lit-html to render components and adds APIs to declare reactive properties and
 attributes. Elements update automatically when their properties change. And they update _fast_,
