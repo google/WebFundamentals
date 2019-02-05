@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies.
 
 {# wf_published_on: 2019-01-14 #}
-{# wf_updated_on: 2019-01-23 #}
+{# wf_updated_on: 2019-02-05 #}
 {# wf_featured_image: /web/updates/images/misc/first-input-delay.png #}
 {# wf_tags: chrome72,user-activation,user-gesture #}
 {# wf_featured_snippet: In version 72, Chrome ships User Activation v2 which makes user activation availability complete for all activation-gated APIs, resolving many user activation inconsistencies. #}
