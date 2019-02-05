@@ -124,7 +124,7 @@ Ionic's [Stencil](https://stenciljs.com/), [SkateJS](https://skatejs.netlify.com
 
 Want to try lit-html and LitElement? A good starting point is the LitElement tutorial:
 
-* [Try LitElement](https://lit-element.polymer-project.org/try/)
+* [Try LitElement](https://lit-element.polymer-project.org/try)
 
 If you're interested in using lit-html by itself, or integrating lit-html templating into another
 project, see the lit-html docs:
