@@ -111,7 +111,7 @@ tested. (Even the first one fails
 ### Cross-domain postMessage() calls
 
 Here's an example from
-[our `postMessaging()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/postMessages.html).
+[our `postMessage()` demo](https://mustaqahmed.github.io/user-activation-v2/api-consistency/postMessages.html).
 Suppose a `click` handler in a cross-origin subframe sends two messages directly
 the parent frame.  The parent frame should be able to open a popup upon
 receiving either of these messages (but not both):
