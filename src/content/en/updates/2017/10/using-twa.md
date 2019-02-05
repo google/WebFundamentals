@@ -256,7 +256,7 @@ Note: When running the project at this stage, the URL Bar from Custom Tabs will
 still show on the top of the screen. **This is not a bug**.
 
 The next section will show how to setup
-[Digital AssetLinks](https://developers.google.com/digital-asset-links/v1/getting-started)
+[Digital AssetLinks](/digital-asset-links/v1/getting-started)
 to verify relationship between the website and the app, and remove the URL bar.
 
 ### Remove the URL bar
@@ -265,9 +265,9 @@ Trusted Web Activities require an association between the Android application
 and the website to be established to remove the URL bar.
 
 This association is created via
-[Digital Asset Links](https://developers.google.com/digital-asset-links/v1/getting-started)
+[Digital Asset Links](/digital-asset-links/v1/getting-started)
 and the association must be established in both ways, linking
-[from the app to the website](https://developers.google.com/digital-asset-links/v1/create-statement)
+[from the app to the website](/digital-asset-links/v1/create-statement)
 and
 [from the website to the app](https://developer.android.com/training/app-links/verify-site-associations#web-assoc).
 
@@ -406,7 +406,7 @@ Version: 3
 ```
 
 With both pieces of information at hand, head over to the [assetlinks
-generator](https://developers.google.com/digital-asset-links/tools/generator),
+generator](/digital-asset-links/tools/generator),
 fill-in the fields and hit _Generate Statement_. Copy the generated statement
 and serve it from your domain, from the URL `/.well-known/assetlinks.json`.
 
