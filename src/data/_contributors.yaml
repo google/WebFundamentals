@@ -519,8 +519,22 @@ arthurevans:
   twitter: devdocdude
   github: arthurevans
   description:
-    en: Arthur is a Tech Writer
+    en: Arthur writes words about code
 
+justinfagnani: 
+  name:
+    given: Justin
+    family: Fagnani
+  org:
+    name: Google
+    unit: Chrome
+  role:
+    - author
+  homepage: 'http://justinfagnani.com/'
+  twitter: justinfagnani
+  github: justinfagnani
+  description:
+    en: Justin is a Software Engineer on the Polymer Project
 
 flackr:
   name:
