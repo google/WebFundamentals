@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: What can #SmooshGate teach us about standards development and the Web Platform? This write-up gives an overview.
 
-{# wf_updated_on: 2018-06-25 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2018-03-19 #}
 {# wf_tags: javascript #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
@@ -218,5 +218,8 @@ attendants are there to represent the JavaScript developer community.
 During [the May 2018 TC39
 meeting](https://github.com/tc39/agendas/blob/master/2018/05.md), #SmooshGate
 was officially resolved by renaming `flatten` to `flat`.
+
+`Array.prototype.flat` and `Array.prototype.flatMap` shipped in V8 v6.9 and
+Chrome 69.
 
 {% include "web/_shared/rss-widget-updates.html" %}
