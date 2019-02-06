@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-02-05 #}
-{# wf_published_on: 2017-10-24 #}
-{# wf_tags: trusted-web-activity,chrome69 #}
+{# wf_updated_on: 2019-02-06 #}
+{# wf_published_on: 2019-02-06 #}
+{# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs. #}
 {# wf_blink_components: N/A #}
@@ -13,27 +13,25 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 
 _Last updated: February 6th, 2019_
 
+<!--
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="TCgT8dzSiU8"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+-->
 
 **Trusted Web Activities** are a new way to integrate _your_ web-app content
 such as _your_ PWA with _your_ Android app using a protocol based on Custom
 Tabs.
 
-Note: Trusted Web Activities are available in
-<a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome
-on Android</a>, version 72 and above.
-
+Note: Trusted Web Activities are available in [Chrome on Android](https://play.google.com/store/apps/details?id=com.android.chrome),
+version 72 and above.
 
 _Looking for the code?_
 
-* [TrustedWebUtils Android Support Library API
-  reference](https://developer.android.com/reference/android/support/customtabs/TrustedWebUtils.html)
+* [TrustedWebUtils Android Support Library API reference](https://developer.android.com/reference/android/support/customtabs/TrustedWebUtils.html)
 * [Sample Trusted Web Activity application](https://github.com/GoogleChromeLabs/svgomg-twa)
-
 
 <div class="clearfix"></div>
 
@@ -67,32 +65,32 @@ opened in the preview of Trusted Web activities. You can expect, however, that
 Trusted Web activities will need to meet the same
 [Add to Home Screen](/web/fundamentals/app-install-banners/#what_are_the_criteria)
 requirements. You can audit your site for these requirements using the
-[Lighthouse](/web/tools/lighthouse/) "user can be prompted to Add to Home
-screen" audit.
+[Lighthouse](/web/tools/lighthouse/) "*user can be prompted to Add to Home
+screen*" audit.
 
 Today, if the user's version of Chrome doesn't support Trusted Web activities,
-we'll fall back to a simple toolbar using a Custom Tab. It
+Chrome will fall back to a simple toolbar using a Custom Tab. It
 is also possible for other browsers to implement the same protocol that Trusted
 Web activities use. While the host app has the final say on what browser gets
 opened, we recommend the same policy as for Custom Tabs: use the user's default
 browser, so long as that browser provides the required capabilities.
 
-## Getting started
+## Getting started {: #getting-started }
 
 Setting up a Trusted Web Activity (TWA) doesn’t require developers to author
 Java code, but [Android Studio](https://developer.android.com/studio/) is
 required. This guide was created using *Android Studio 3.3*. Check the [docs on
 how to install it](https://developer.android.com/studio/install).
 
-### Create a Trusted Web Activity Project
+### Create a Trusted Web Activity Project {: #create-project }
 
 When using Trusted Web Activities, the project must target API 16 or higher.
 
 Note: This section will guide you on setting up a new project on Android
 Studio. If you are already familiar with the tool feel free to skip to the
-[Getting the TWA Library](#) section.
+[Getting the TWA Library](#get-support-lib) section.
 
-Fire up Android Studio and click on _Start a new Android Studio project_.
+Open Android Studio and click on _Start a new Android Studio project_.
 
 Android Studio will prompt to choose an Activity type. Since TWAs use an
 Activity provided by support library, choose _Add No Activity_ and click
@@ -101,32 +99,28 @@ _Next_.
 Next step, the wizard will prompt for configurations for the project. Here's a
 short description of each field:
 
-**Name:** The name that will be used for your application on the
-_Android Launcher_.
-
-**Package Name**: An unique identifier for Android Applications on the Play Store
-and on Android devices. Check the
-[documentation](https://developer.android.com/guide/topics/manifest/manifest-element#package)
-for more information on requirements and best practices for creating package
-names for Android apps.
-
-**Save location**: Where Android Studio will create the project in the file
-system.
-
-**Language:**: The project doesn't require writing any Java or Kotlin code.
-Select Java, as the default.
-
-**Minimum API Level:**: The Support Library requires at least _API Level 16_.
-Select API 16 any version above.
+* **Name:** The name that will be used for your application on the
+  _Android Launcher_.
+* **Package Name:** An unique identifier for Android Applications on the
+  Play Store and on Android devices. Check the
+  [documentation](https://developer.android.com/guide/topics/manifest/manifest-element#package)
+  for more information on requirements and best practices for creating package
+  names for Android apps.
+* **Save location:** Where Android Studio will create the project in the file
+  system.
+* **Language:** The project doesn't require writing any Java or Kotlin code.
+  Select Java, as the default.
+* **Minimum API Level:** The Support Library requires at least _API Level 16_.
+  Select API 16 any version above.
 
 Leave the remaining checkboxes unchecked, as we will not be using Instant Apps
-or AndroidX artifacts and click _Finish_.
+or AndroidX artifacts, and click _Finish_.
 
-### Get the TWA Support Library
+### Get the TWA Support Library {: #get-support-lib }
 
 To setup the  TWA library in the project  you will need to edit a couple of
 files. Look for the _Gradle Scripts_ section in the _Project Navigator_. Both
-files are called _build.gradle_, which may be a bit confusing, but the
+files are called `build.gradle`, which may be a bit confusing, but the
 descriptions in parenthesis help identifying the correct one.
 
 The first file is the **Project** level `build.gradle`. Look for the one with
@@ -144,6 +138,7 @@ allprojects {
    }
 }
 ```
+
 Android Studio will prompt to synchronize the project. Click on the _Sync Now_
 link.
 
@@ -180,20 +175,20 @@ dependencies {
 Android Studio will show prompt asking to synchronize the project once more.
 Click on the _Sync Now_ link and synchronize it.
 
-### Add the TWA Activity
+### Add the TWA Activity {: #add-activity }
 
 Setting up the TWA Activity is achieved by editing the
 [Android App Manifest](https://developer.android.com/guide/topics/manifest/manifest-intro).
 
 On the _Project Navigator_, expand the _app_ section, followed by the
-_manifests_ and double click on _AndroidManifest.xml_ to open the file.
+_manifests_ and double click on `AndroidManifest.xml` to open the file.
 
 Since we asked Android Studio not to add any Activity to our project when
 creating it, the manifest is empty and contains only the application tag.
 
 Add the TWA Activity by inserting an `activity` tag into the `application` tag:
 
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.twa.myapplication">
@@ -245,12 +240,11 @@ There are two relevant pieces of information for the context of Trusted Web
 Activities:
 
 1. The `meta-data` tag tells the TWA Activity which URL it should open. Change
-the `android:value` attribute with the URL of the PWA you want to open. In this
-example, it is `https://airhorner.com`.
-
+   the `android:value` attribute with the URL of the PWA you want to open. In
+   this example, it is `https://airhorner.com`.
 2. The **second** `intent-filter` tag allows the TWA to intercept Android
-Intents that open `https://airhorner.com`. The `android:host` attribute inside
-the `data` tag must point to the domain being opened by the TWA.
+   Intents that open `https://airhorner.com`. The `android:host` attribute
+   inside the `data` tag must point to the domain being opened by the TWA.
 
 Note: When running the project at this stage, the URL Bar from Custom Tabs will
 still show on the top of the screen. **This is not a bug**.
@@ -279,7 +273,7 @@ the website to app validation, for debugging purposes.
 Open the string resources file `app > res > values > strings.xml` and add the
 Digital AssetLinks statement below:
 
-```
+```xml
 <resources>
     <string name="app_name">AirHorner TWA</string>
     <string name="asset_statements">
@@ -300,7 +294,7 @@ Back in the Android App Manifest file, `AndroidManifest.xml`, link to the
 statement by adding a new `meta-data` tag, but this time as a child of the
 `application` tag:
 
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.twa.myapplication">
 
@@ -333,21 +327,20 @@ Here’s how to test this on a development device:
 #### Enable debug mode
 
 1. Open Chrome on the development device, navigate to `chrome://flags`, search
-for an item called _Enable command line on non-rooted devices_ and change it to
-_ENABLED_ and then restart the browser.
-
+   for an item called _Enable command line on non-rooted devices_ and change it
+   to **ENABLED** and then restart the browser.
 2. Next, on the Terminal application of your operating system, use the
-[Android Debug Bridge](https://developer.android.com/studio/command-line/adb)
-(installed with Android Studio), and run the following command:
+   [Android Debug Bridge](https://developer.android.com/studio/command-line/adb)
+   (installed with Android Studio), and run the following command:
 
-```
+<pre class="devsite-terminal devsite-click-to-copy">
 adb shell "echo '_ --disable-digital-asset-link-verification-for-url=\"https://airhorner.com\"' > /data/local/tmp/chrome-command-line"
-```
+</pre>
 
 Close Chrome and re-launch your application from Android Studio. The
 application should now be shown in full-screen.
 
-Note: It may needed to force-close Chrome so it restarts with the correct
+Note: It may needed to force close Chrome so it restarts with the correct
 command line. Go to _Android Settings > Apps & notifications > Chrome_,
 and click on _Force stop_.
 
@@ -356,36 +349,34 @@ and click on _Force stop_.
 There are 2 pieces of information that the developer needs to collect from the
 app in order to create the association:
 
-**Package Name:** The first information is the package name for the app. This
-is the same package name generated when creating the app. It can also be found
-inside the **Module** `build.gradle`, under 
-_Gradle Scripts > build.gradle (Module: app)_, and is the value of the
-`applicationId` attribute.
-
-**SHA-256 Fingerprint:** Android applications must be signed in order to be
-uploaded to the Play Store. The same signature is used to establish the
-connection between the website and the app through the SHA-256 fingerprint of
-the upload key.
+* **Package Name:** The first information is the package name for the app. This
+  is the same package name generated when creating the app. It can also be found
+  inside the **Module** `build.gradle`, under
+  _Gradle Scripts > build.gradle (Module: app)_, and is the value of the
+  `applicationId` attribute.
+* **SHA-256 Fingerprint:** Android applications must be signed in order to be
+  uploaded to the Play Store. The same signature is used to establish the
+  connection between the website and the app through the SHA-256 fingerprint of
+  the upload key.
 
 The Android documentation [explains in detail how to generate a key using Android
- Studio](https://developer.android.com/studio/publish/app-signing#generate-key).
+Studio](https://developer.android.com/studio/publish/app-signing#generate-key).
 Make sure to take note the _path_, _alias_ and _passwords_ for the key store, as
 you will need it for the next step.
 
 Extract the SHA-256 fingerprint using the
-[keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html)
-, with the following command:
+[keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html),
+with the following command:
 
-```
+<pre class="devsite-terminal devsite-click-to-copy">
 keytool -list -v -keystore <path> -alias <alias> -storepass <password> -keypass <password>
-```
+</pre>
 
 The value for the *SHA-256 fingerprint* is printed under the *Certificate*
 fingerprints section. Here’s an example output:
 
-```
->> keytool -list -v -keystore ./mykeystore.ks -alias test \
->> -storepass password -keypass password
+<pre>
+<code class="devsite-terminal">keytool -list -v -keystore ./mykeystore.ks -alias test -storepass password -keypass password</code>
 
 Alias name: key0
 Creation date: 28 Jan 2019
@@ -402,38 +393,36 @@ Certificate fingerprints:
 Signature algorithm name: SHA256withRSA
 Subject Public Key Algorithm: 2048-bit RSA key
 Version: 3
-
-```
+</pre>
 
 With both pieces of information at hand, head over to the [assetlinks
 generator](/digital-asset-links/tools/generator),
 fill-in the fields and hit _Generate Statement_. Copy the generated statement
 and serve it from your domain, from the URL `/.well-known/assetlinks.json`.
 
-Note: The AssetLinks file must be under `/.well-known/assetlinks.json`, at the
+Note: The `AssetLinks` file must be under `/.well-known/assetlinks.json`, at the
 root of the domain, as that's only the place Chrome will look for it.
 
 ### Wrapping Up
 
-With the assetlinks file in place in your domain and the asset_statements tag
-configured in the Android application, the next step is generating a signed app
-. Again, the steps for this are widely
-[documented](https://developer.android.com/studio/publish/app-signing#sign-apk)
-.
+With the `assetlinks` file in place in your domain and the `asset_statements` tag
+configured in the Android application, the next step is generating a signed app.
+Again, the steps for this are widely
+[documented](https://developer.android.com/studio/publish/app-signing#sign-apk).
 
 The output APK can be installed into a test device, using adb:
 
-```
+<pre class="devsite-terminal devsite-click-to-copy">
 adb install app-release.apk
-```
+</pre>
 
 If the verification step fails it is possible to check for error
 messages using the Android Debug Bridge, from your OS’s terminal and with the
 test device connected.
 
-```
->> adb logcat | grep -e OriginVerifier -e digital_asset_links
-```
+<pre class="devsite-terminal devsite-click-to-copy">
+adb logcat | grep -e OriginVerifier -e digital_asset_links
+</pre>
 
 With the upload APK generated, you can now [upload the app to the Play
 Store](https://developer.android.com/studio/publish/upload-bundle).
@@ -442,5 +431,5 @@ We are looking forward to see what developers build with Trusted Web
 Activities. To drop any feedback, reach out to us at
 [@ChromiumDev](https://twitter.com/ChromiumDev).
 
+{% include "web/_shared/helpful.html" %}
 {% include "web/_shared/rss-widget-updates.html" %}
-
