@@ -1,57 +1,41 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Sebuah pendalaman mengenai daur hidup service worker.
+description: Sebuah pendalaman mengenai daur hidup pekerja layanan.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
-# Daur Hidup Service Worker {: .page-title }
+# Daur Hidup Pekerja Layanan {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
-Daur hidup service worker adalah bagiannya yang paling rumit. Jika Anda tidak
-tahu apa yang berusaha dilakukan dan apa manfaatnya, maka hal ini bisa terasa
-berat bagi Anda. Namun setelah Anda mengetahui cara kerjanya, Anda bisa menghasilkan pembaruan
-yang mulus dan tidak kentara pada pengguna, dengan memadukan yang aspek terbaik dari web dan pola asli.
+Daur hidup pekerja layanan adalah bagian yang paling rumit. Jika Anda tidak tahu apa yang harus dilakukan dan apa manfaatnya, maka hal ini bisa terasa berat bagi Anda. Namun setelah Anda mengetahui cara kerjanya, Anda bisa menghasilkan update yang mulus dan tidak kentara untuk pengguna, dengan memadukan yang aspek terbaik dari web dan pola asli.
 
-Ini merupakan pendalaman, namun poin-poin di awal setiap bagian membahas hampir semua
-hal yang perlu Anda ketahui.
+Ini merupakan penjelasan mendalam, namun poin-poin di awal setiap bagian hampir semua membahas hal yang perlu Anda ketahui.
 
 ## Maksud
 
-Maksud dari daur hidup adalah untuk:
+Intent dari daur hidup adalah untuk:
 
-* Memungkinkan offline-terlebih dahulu.
-* Biarkan service worker baru menyiapkan diri sendiri tanpa mengganggu apa yang
-  ada.
-* Memastikan laman dalam-cakupan dikontrol oleh service worker yang sama (atau tanpa
-  service worker) seluruhnya.
-* Memastikan hanya ada satu versi untuk situs Anda yang dijalankan pada satu waktu.
+* Memungkinkan pengutamaan offline.
+* Memungkinkan pekerja layanan baru melakukan penyiapan mandiri tanpa mengganggu pekerja layanan saat ini.
+* Memastikan halaman dalam cakupan dikontrol oleh pekerja layanan yang sama (atau tanpa pekerja layanan) seluruhnya.
+* Memastikan hanya ada satu versi yang dijalankan untuk situs Anda pada satu waktu.
 
-Hal terakhir itu sangat penting. Tanpa service worker, pengguna bisa memuat satu
-tab ke situs Anda, kemudian membuka tab lain nanti. Hal ini bisa mengakibatkan dua versi
-situs Anda dijalankan pada waktu yang sama. Kadang-kadang hal ini boleh saja, namun jika Anda sedang berurusan
-dengan storage, Anda bisa dengan mudah mengakibatkan dua tab memiliki opini sangat berbeda
-mengenai cara keduanya menangani penyimpanan bersama. Hal ini bisa mengakibatkan kesalahan, atau
-lebih buruk lagi, kehilangan data.
+Poin terakhir merupakan hal yang sangat penting. Tanpa pekerja layanan, pengguna bisa memuat satu tab ke situs Anda, kemudian membuka tab lain nanti. Hal ini bisa mengakibatkan dua versi situs Anda dijalankan pada waktu yang sama. Terkadang hal ini boleh terjadi, namun jika Anda sedang berurusan dengan penyimpanan, Anda bisa dengan mudah mengakibatkan dua tab memiliki opini sangat berbeda mengenai cara keduanya menangani penyimpanan bersama. Hal ini bisa mengakibatkan error, atau lebih buruk lagi, kehilangan data.
 
-Perhatian: Pengguna tidak suka kehilangan data. Hal itu akan menyebabkan mereka sangat bersedih.
+Perhatian: Pengguna sangat tidak suka kehilangan data. Hal itu akan menyebabkan mereka sangat bersedih.
 
-## Service worker pertama
+## Pekerja layanan pertama
 
-Singkatnya:
+Secara singkat:
 
-* Kejadian `install` adalah kejadian pertama yang diambil service worker, dan ini hanya terjadi
-  sekali.
-* Sebuah promise diteruskan ke `installEvent.waitUntil()` yang akan menunjukkan durasi serta
-  keberhasilan atau kegagalan pemasangan.
-* Service worker tidak akan menerima kejadian seperti `fetch` dan `push` sebelum ia
-  berhasil menyelesaikan pemasangan dan menjadi "aktif".
-* Secara default, pengambilan oleh laman tidak akan melalui service worker kecuali jika permintaan
-  laman itu sendiri melalui service worker. Jadi Anda nanti perlu menyegarkan
-  laman untuk melihat efek service worker.
-* `clients.claim()` bisa menggantikan default ini, dan mengambil kontrol atas
-  laman yang tidak dikontrol.
+* Peristiwa `install` adalah peristiwa pertama yang diambil pekerja layanan, dan ini hanya terjadi sekali.
+* Sebuah promise diteruskan ke `installEvent.waitUntil()` yang akan menunjukkan durasi serta keberhasilan atau kegagalan penginstalan.
+* Pekerja layanan tidak akan menerima peristiwa seperti `fetch` dan `push` sebelum berhasil menyelesaikan penginstalan dan menjadi "aktif".
+* Secara default, pengambilan oleh halaman tidak akan melalui pekerja layanan kecuali jika permintaan halaman itu sendiri melalui pekerja layanan. Jadi Anda perlu memuat ulang halaman untuk melihat pengaruh dari pekerja layanan.
+* `clients.claim()` bisa menggantikan default ini, dan mengambil kontrol atas halaman yang tidak dikontrol.
 
 <style>
   .framebox-container-container {
@@ -76,9 +60,16 @@ Singkatnya:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -125,7 +116,7 @@ Singkatnya:
 <svg class="lifecycle-diagram" style="display:none">
   <defs>
     <g id="diagram-static">
-      <text y="6.7" x="14.5" class="label">Memasang</text><text y="6.7" x="81.1" class="label">Aktif</text><circle r="14" cy="25.8" cx="14.5" class="state-placeholder"/><circle r="14" cy="25.8" cx="47.8" class="state-placeholder"/><circle r="14" cy="25.8" cx="81.2" class="state-placeholder"/>
+      <text y="6.7" x="14.5" class="label">Menginstal</text><text y="6.7" x="81.1" class="label">Aktif</text><circle r="14" cy="25.8" cx="14.5" class="state-placeholder"/><circle r="14" cy="25.8" cx="47.8" class="state-placeholder"/><circle r="14" cy="25.8" cx="81.2" class="state-placeholder"/>
     </g>
     <g id="diagram-page">
       <path d="M 191.3,0 12.8,0 C 5.8,0 0,5.7 0,12.8 L 0,167 c 0,7.2 5.7,13 12.8,13 l 178.5,0 c 7,0 12.8,-5.8 12.8,-13 l 0,-154 C 204,6 198.7,0.2 191.6,0.2 Z M 11,11 c 0.5,-0.5 1,-0.7 1.8,-0.8 l 178.5,0 c 0.7,0 1.3,0.3 1.8,0.8 0.8,0.5 1,1 1,1.8 l 0,13.5 -184.1,0 0,-13.5 c 0,-0.7 0.3,-1.3 0.8,-1.8 z m 182,158 c -0.4,0.4 -1,0.7 -1.7,0.7 l -178.5,0 c -0.7,0 -1.3,-0.3 -1.8,-0.8 -0.5,-0.8 -0.8,-1.4 -0.8,-2 l 0,-130.4 183.6,0 0,130.5 c 0,0.8 -0.2,1.4 -0.7,2 z" />
@@ -229,9 +220,9 @@ Perhatikan HTML ini:
       }, 3000);
     </script>
 
-Ini mendaftarkan sebuah service worker, dan menambahkan gambar anjing setelah 3 detik.
+HTML mendaftarkan pekerja layanan dan menambahkan gambar anjing setelah 3 detik.
 
-Inilah service worker tersebut, `sw.js`:
+Inilah pekerja layanan tersebut, `sw.js`:
 
     self.addEventListener('install', event => {
       console.log('V1 installing…');
@@ -256,127 +247,79 @@ Inilah service worker tersebut, `sw.js`:
       }
     });
 
-Ia menyimpan cache gambar kucing di cache, dan menyajikannya bila ada permintaan untuk
-`/dog.svg`. Akan tetapi, jika Anda [menjalankan
-contoh di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, Anda akan melihat anjing saat pertama memuat laman. Klik segarkan, dan
-Anda akan melihat gambar kucing tersebut.
+Pekerja layanan menyimpan cache gambar kucing, dan menyajikannya jika ada permintaan untuk `/dog.svg`. Akan tetapi, jika Anda [menjalankan contoh di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }, Anda akan melihat anjing saat pertama kali memuat halaman. Klik muat ulang, dan Anda akan melihat gambar kucing tersebut.
 
-Note: Kucing adalah lebih baik daripada anjing. Keduanya cuma *adalah*.
+Note: Kucing adalah lebih baik daripada anjing. Keduanya memang *demikian*.
 
 ### Cakupan dan kontrol
 
-Cakupan default pendaftaran service worker `./` relatif terhadap
-URL skrip. Berarti, jika Anda mendaftarkan service worker di
-`//example.com/foo/bar.js`, ini akan memiliki cakupan default `//example.com/foo/`.
+Cakupan default pendaftaran pekerja layanan `./` dibandingkan URL skrip. Berarti, jika Anda mendaftarkan pekerja layanan di `//example.com/foo/bar.js`, maka akan memiliki cakupan default `//example.com/foo/`.
 
-Kita memanggil laman, service worker, dan service worker bersama berupa `clients`. Service worker hanya
-bisa mengontrol klien yang berada dalam cakupan. Setelah klien "dikontrol", pengambilannya
-akan melalui service worker dalam-cakupan. Anda bisa mendeteksi jika klien
-dikontrol lewat `navigator.serviceWorker.controller` yang akan berupa nol atau instance
-service worker.
+Kita menyebutnya halaman, pekerja, dan pekerja bersama berupa `clients`. Pekerja layanan hanya bisa mengontrol klien yang berada dalam cakupan. Setelah klien "dikontrol", pengambilannya akan melalui pekerja layanan dalam cakupan. Anda bisa mendeteksi jika klien dikontrol lewat `navigator.serviceWorker.controller` yang akan berupa nol atau instance pekerja layanan.
 
-### Unduh, parse, dan eksekusi
+### Download, uraikan, dan jalankan
 
-Service worker pertama Anda akan diunduh bila Anda memanggil `.register()`. Jika skrip
-Anda gagal mengunduh, mem-parse, atau melontarkan kesalahan dalam eksekusi pertamanya,
-promise register akan menolak, dan service worker akan dibuang.
+Pekerja layanan pertama Anda akan didownload jika Anda memanggil `.register()` Jika skrip Anda gagal mendownload, menguraikan, atau membuang error dalam eksekusi pertamanya, promise register akan menolak, dan pekerja layanan akan dihapus.
 
-Chrome DevTools menampilkan kesalahan di konsol, dan di bagian service worker
-pada tab aplikasi:
+Chrome DevTools menampilkan error di konsol, dan di bagian pekerja layanan pada tab aplikasi:
 
 <figure>
-  <img src="images/register-fail.png" class="browser-screenshot" alt="Kesalahan yang ditampilkan di tab DevTools pada service worker">
+  <img src="images/register-fail.png" class="browser-screenshot" alt="Error yang ditampilkan di tab DevTools pada pekerja layanan"/>
 </figure>
 
-### Memasang
+### Instal
 
-Kejadian pertama yang diambil service worker adalah `install`. Ini akan dipicu begitu
-service worker dieksekusi, dan hanya dipanggil sekali per service worker. Jika
-Anda mengubah skrip service worker, browser akan menganggapnya sebagai
-service worker berbeda, dan akan mendapatkan kejadian `install` sendiri. Saya akan membahas [pembaruan secara detail
-nanti](#updates).
+Peristiwa pertama yang diambil pekerja layanan adalah `install`. Penginstalan akan dipicu begitu pekerja layanan dieksekusi, dan hanya dipanggil sekali per pekerja layanan. Jika Anda mengubah skrip pekerja layanan, browser akan menganggapnya sebagai pekerja layanan yang berbeda, dan akan mendapatkan peristiwa `install` sendiri. Saya akan membahas [update secara detail nanti](#updates).
 
-Kejadian `install` adalah kesempatan Anda untuk meng-cache segala sesuatu yang Anda butuhkan sebelum dapat
-mengontrol klien. Promise yang Anda teruskan ke `event.waitUntil()` memungkinkan browser
-mengetahui kapan Anda selesai memasang, dan apakah pemasangan itu berhasil.
+Peristiwa `install` adalah kesempatan Anda untuk men-cache segala sesuatu yang Anda butuhkan sebelum dapat mengontrol klien. Promise yang Anda teruskan ke `event.waitUntil()` memungkinkan browser mengetahui kapan Anda selesai menginstal, dan apakah penginstalan itu berhasil.
 
-Jika promise Anda ditolak, ini menandakan pemasangan gagal, dan browser membuang
-service worker. Ia tidak akan pernah mengontrol klien. Ini berarti kita bisa mengandalkan
-"cat.svg" yang ada di cache dalam kejadian `fetch` kita. Ini adalah dependensi.
+Jika promise Anda ditolak, ini menandakan penginstalan gagal, dan browser membuang pekerja layanan. Itu tidak akan pernah mengontrol klien. Ini berarti kita tidak bisa mengandalkan "cat.svg" yang ada di cache dalam peristiwa `fetch`. Ini adalah dependensi.
 
-### Mengaktifkan
+### Aktifkan
 
-Setelah service worker Anda siap mengontrol klien dan menangani kejadian
-fungsional seperti `push` dan `sync`, Anda akan mendapatkan kejadian `activate`. Namun itu tidak
-berarti laman yang disebut `.register()` akan dikontrol.
+Setelah pekerja layanan Anda siap mengontrol klien dan menangani peristiwa fungsional seperti `push` dan `sync`, Anda akan mendapatkan peristiwa `activate`. Namun itu tidak berarti halaman yang disebut `.register()` akan dikontrol.
 
-Saat pertama Anda memuat
-[demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, walaupun `dog.svg` diminta lama setelah service worker
-diaktifkan, ia tidak menangani permintaan tersebut, dan Anda tetap melihat gambar
-anjing. Default-nya adalah *konsistensi*, jika laman dimuat tanpa service worker,
-tidak ada yang akan menjadi sub-sumber dayanya. Jika Anda memuat
-[demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external} untuk kedua kali (dengan kata lain menyegarkan laman), ia akan dikontrol.
-Baik laman maupun gambar akan melalui kejadian `fetch`, dan Anda akan melihat gambar kucing
-sebagai gantinya.
+Saat pertama Anda memuat [demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }, walaupun `dog.svg` telah lama diminta setelah pekerja layanan diaktifkan, itu tidak menangani permintaan tersebut, dan Anda tetap melihat gambar anjing. Default-nya adalah *konsistensi*, jika halaman dimuat tanpa pekerja layanan, tidak ada yang akan menjadi sub-resourcenya. Jika Anda memuat [demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external } untuk kedua kalinya (dengan kata lain, muat ulang halaman), itu akan dikontrol. Halaman dan gambar akan melalui peristiwa `fetch`, dan Anda akan melihat kucing sebagai gantinya.
 
 ### clients.claim
 
-Anda bisa mengontrol klien yang tidak dikontrol dengan memanggil `clients.claim()` dalam
-service worker setelah ia diaktifkan.
+Anda bisa mengontrol klien yang tidak dikontrol dengan memanggil `clients.claim()` dalam pekerja layanan setelah itu diaktifkan.
 
-Inilah [variasi demo
-di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){:
-.external} yang memanggil `clients.claim()` dalam kejadian `activate`-nya. Anda *seharusnya* akan melihat
-gambar kucing untuk pertama kali. Saya katakan "seharusnya", karena ini adalah sesuatu yang peka terhadap waktu. Anda hanya akan
-melihat kucing jika service worker diaktifkan dan `clients.claim()` berlaku
-sebelum gambar berusaha dimuat.
+Inilah [variasi demodi atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){: .external } yang memanggil `clients.claim()` dalam peristiwa `activate`-nya. Anda *seharusnya* akan melihat gambar kucing untuk pertama kali. Saya katakan "seharusnya", karena ini adalah sesuatu yang sensitif terhadap waktu. Anda hanya akan melihat kucing jika pekerja layanan diaktifkan dan `clients.claim()` berlaku sebelum gambar berusaha dimuat.
 
-Jika Anda menggunakan service worker untuk memuat laman secara berbeda dengan laman yang dimuat lewat
-jaringan, `clients.claim()` nanti bisa menyulitkan, karena service worker Anda akan mengakhiri
-kontrol atas beberapa klien yang telah dimuat tanpa service worker.
+Jika Anda menggunakan pekerja layanan untuk memuat halaman secara berbeda dengan halaman yang dimuat melalui jaringan, `clients.claim()` akan mengganggu, karena pekerja layanan Anda akan mengakhiri kontrol atas beberapa klien yang telah dimuat tanpa pekerja layanan.
 
-Note: Saya memandang banyak orang termasuk `clients.claim()` sebagai boilerplate, namun saya
-jarang melakukannya sendiri. Ini hanya benar-benar penting pada saat pemuatan pertama, dan karena
-ada penyempurnaan progresif, laman biasanya bekerja dengan baik tanpa service
-worker sekalipun.
+Note: Saya mengetahui banyak orang termasuk `clients.claim()` sebagai boilerplate, namun saya jarang melakukannya sendiri. Ini hanya benar-benar penting pada saat pemuatan pertama, dan karena adanya penyempurnaan progresif, halaman biasanya bekerja dengan baik tanpa pekerja layanan sekalipun.
 
-## Memperbarui service worker {: #updates}
+## Mengupdate pekerja layanan {: #updates}
 
-Singkatnya:
+Secara singkat:
 
-* Pembaruan dipicu:
-    * Pada navigasi ke laman dalam-cakupan.
-    * Pada kejadian fungsional seperti `push` dan `sync`, kecuali jika ada
-      pemeriksaan pembaruan dalam 24 jam sebelumnya.
-    * Pada pemanggilan `.register()` *hanya jika* URL service worker telah berubah.
-* Header caching pada skrip service worker dipatuhi (hingga 24
-  jam) saat mengambil pembaruan. Kita akan membuat perilaku penyertaan ini, karen ia
-  akan menemukan orang. Anda barangkali ingin `max-age` berupa 0 pada skrip
-  service worker.
-* Service worker Anda dianggap diperbarui jika berbeda sedikit saja dengan service worker
-  yang sudah dimiliki browser. (Kita memperluasnya untuk menyertakan juga
-  skrip/modul yang telah diimpor.)
-* Service worker yang telah diperbarui diluncurkan bersama yang sudah ada, dan mendapatkan
-  kejadian `install`-nya sendiri.
-* Jika service worker baru Anda memiliki kode status bukan OK (misalnya, 404), gagal mem-parse, melontarkan
-  kesalahan selama eksekusi, atau ditolak selama pemasangan, service worker baru akan dibuang,
-  namun yang ada saat ini akan tetap aktif.
-* Setelah berhasil dipasang, service worker yang telah diperbarui akan `wait` hingga service
-  worker yang ada mengontrol nol klien. (Perhatikan, klien akan tumpang tindih selama
-  penyegaran.)
-* `self.skipWaiting()` mencegah waiting, yang berarti service worker
-  akan diaktifkan begitu selesai dipasang.
+* Update dipicu:
+    * Pada navigasi ke halaman dalam-cakupan.
+    * Pada peristiwa fungsional seperti `push` dan `sync`, kecuali jika ada pemeriksaan update dalam 24 jam sebelumnya.
+    * Pada pemanggilan `.register()` *hanya jika* URL pekerja layanan telah berubah.
+* Sebagian besar browser, termasuk [Chrome 68 dan yang lebih baru](/web/updates/2018/06/fresher-sw), secara default mengabaikan pemeriksaan header ketika memeriksa update skrip pekerja layanan terdaftar. Browser masih menghargai header caching ketika mengambil resource yang dimuat di dalam pekerja layanan melalui `importScripts()`. Anda dapat mengganti perilaku default ini dengan mengatur opsi [`updateViaCache`](/web/updates/2018/06/fresher-sw#updateviacache) saat mendaftarkan pekerja layanan Anda.
+* Pekerja layanan Anda dianggap diupdate jika berbeda sedikit saja dengan pekerja layanan yang sudah dimiliki browser. (Kita memperluasnya dengan menyertakan juga skrip/modul yang telah diimpor.)
+* Pekerja layanan yang telah diupdate diluncurkan bersama yang sudah ada, dan mendapatkan peristiwa `install`-nya sendiri.
+* Jika pekerja layanan baru Anda memiliki kode status bukan OK (misalnya, 404), gagal menguraikan, membuang error selama eksekusi, atau ditolak selama penginstalan, pekerja layanan baru akan dibuang, namun yang ada saat ini akan tetap aktif.
+* Setelah berhasil diinstal, pekerja layanan yang telah diupdate akan `wait` hingga pekerja layanan yang ada tidak mengontrol klien sama sekali. (Perhatikan, klien akan tumpang tindih selama pemuatan ulang.)
+* `self.skipWaiting()` mencegah proses menunggu, yang berarti pekerja layanan akan diaktifkan begitu selesai diinstal.
 
 <div class="framebox-container-container">
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -423,7 +366,7 @@ Singkatnya:
 <svg class="lifecycle-diagram" style="display:none">
   <defs>
     <g id="diagram-static">
-      <text y="6.7" x="14.5" class="label">Memasang</text><text y="6.7" x="81.1" class="label">Aktif</text><circle r="14" cy="25.8" cx="14.5" class="state-placeholder"/><circle r="14" cy="25.8" cx="47.8" class="state-placeholder"/><circle r="14" cy="25.8" cx="81.2" class="state-placeholder"/>
+      <text y="6.7" x="14.5" class="label">Menginstal</text><text y="6.7" x="81.1" class="label">Aktif</text><circle r="14" cy="25.8" cx="14.5" class="state-placeholder"/><circle r="14" cy="25.8" cx="47.8" class="state-placeholder"/><circle r="14" cy="25.8" cx="81.2" class="state-placeholder"/>
     </g>
     <g id="diagram-page">
       <path d="M 191.3,0 12.8,0 C 5.8,0 0,5.7 0,12.8 L 0,167 c 0,7.2 5.7,13 12.8,13 l 178.5,0 c 7,0 12.8,-5.8 12.8,-13 l 0,-154 C 204,6 198.7,0.2 191.6,0.2 Z M 11,11 c 0.5,-0.5 1,-0.7 1.8,-0.8 l 178.5,0 c 0.7,0 1.3,0.3 1.8,0.8 0.8,0.5 1,1 1,1.8 l 0,13.5 -184.1,0 0,-13.5 c 0,-0.7 0.3,-1.3 0.8,-1.8 z m 182,158 c -0.4,0.4 -1,0.7 -1.7,0.7 l -178.5,0 c -0.7,0 -1.3,-0.3 -1.8,-0.8 -0.5,-0.8 -0.8,-1.4 -0.8,-2 l 0,-130.4 183.6,0 0,130.5 c 0,0.8 -0.2,1.4 -0.7,2 z" />
@@ -539,8 +482,7 @@ Singkatnya:
 </div>
 </div>
 
-Anggaplah kita mengubah skrip service worker untuk merespons dengan gambar
-kuda, bukan kucing:
+Anggaplah kita mengubah skrip pekerja layanan untuk merespons dengan gambar kuda, bukan kucing:
 
     const expectedCaches = ['static-v2'];
 
@@ -579,92 +521,49 @@ kuda, bukan kucing:
       }
     });
 
-Note: Saya tidak memiliki opini yang kuat soal kuda.
+Note: Saya tidak memiliki opini yang kuat mengenai kuda. [Lihat demo di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }. Anda seharusnya tetap melihat gambar kucing. Inilah alasannya...
 
-[Lihat demo
-di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}. Anda seharusnya tetap melihat gambar kucing. Inilah sebabnya...
+### Instal.
 
-### Memasang
+Perhatikan, saya telah mengubah nama cache dari `static-v1` menjadi `static-v2`. Ini berarti saya bisa menyiapkan cache baru tanpa menimpa apa yang ada di cache saat ini, yang masih digunakan oleh pekerja layanan lama.
 
-Perhatikan, saya telah mengubah nama cache dari `static-v1` menjadi `static-v2`. Ini
-berarti saya bisa menyiapkan cache baru tanpa menimpa apa yang ada di cache saat ini,
-yang masih digunakan oleh service worker lama.
-
-Pola ini akan membuat cache versi spesifik, semacam aset yang akan dibundel
-oleh aplikasi asli bersama file yang dapat dieksekusi. Anda mungkin juga memiliki cache yang bukan versi
-spesifik, misalnya `avatars`.
+Pola ini akan membuat cache versi tertentu, semacam aset yang akan dibundel oleh aplikasi asli bersama file yang dapat dieksekusi. Anda mungkin juga memiliki cache yang bukan versi tertentu, misalnya `avatars`.
 
 ### Menunggu
 
-Setelah berhasil memasangnya, service worker yang telah diperbarui akan menunda aktivasi
-hingga service worker yang ada tidak lagi mengontrol klien. Keadaan ini
-disebut "menunggu", dan inilah cara browser memastikan bahwa hanya ada satu versi
-service worker yang berjalan untuk satu waktu.
+Setelah berhasil menginstalnya, pekerja layanan yang telah diupdate akan menunda aktivasi hingga pekerja layanan yang ada tidak lagi mengontrol klien. Keadaan ini disebut "menunggu", dan inilah cara browser memastikan bahwa hanya ada satu versi pekerja layanan yang berjalan dalam satu waktu.
 
-Jika Anda menjalankan [demo
-yang telah diperbarui](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, Anda seharusnya tetap melihat gambar kucing, karena service worker V2
-belum diaktifkan. Anda bisa melihat service worker baru menunggu di tab
-"Application" pada DevTools:
+Jika Anda menjalankan [demo yang telah diupdate](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, Anda seharusnya tetap melihat gambar kucing, karena pekerja layanan V2 belum diaktifkan. Anda dapat melihat pekerja layanan baru menunggu di tab "Penerapan" pada DevTools:
 
 <figure>
-  <img src="images/waiting.png" class="browser-screenshot" alt="DevTools menampilkan service worker baru yang sedang menunggu">
+  <img src="images/waiting.png" class="browser-screenshot" alt="DevTools menampilkan pekerja layanan baru yang sedang menunggu"/>
 </figure>
 
-Bahkan jika Anda hanya memiliki satu tab dibuka ke demo, penyegaran laman tidak cukup
-untuk memungkinkan versi baru mengambil alih. Hal ini dikarenakan cara kerja navigasi browser.
-Bila Anda mengarahkan, laman saat ini tidak akan hilang hingga header respons
-diterima, dan bahkan laman saat ini mungkin tetap dibuka jika respons
-memiliki header `Content-Disposition`. Karena tumpang tindih ini, service worker saat ini
-selalu mengontrol klien selama penyegaran.
+Bahkan jika Anda hanya memiliki satu tab dibuka ke demo, pemuatan ulang halaman tidak cukup untuk memungkinkan versi baru mengambil alih. Ini berdasarkan bagaimana navigasi browser berfungsi. Jika Anda mengarahkan, halaman saat ini tidak akan hilang hingga header respons diterima, dan bahkan halaman saat ini mungkin tetap dibuka jika respons memiliki header `Content-Disposition`. Karena tumpang tindih ini, pekerja layanan saat ini selalu mengontrol klien selama pemuatan ulang.
 
-Untuk mendapatkan pembaruan, tutup atau arahkan meninggalkan semua tab dengan menggunakan service
-worker saat ini. Maka, bila Anda [mengarahkan ke demo
-lagi](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, Anda akan melihat gambar kuda.
+Untuk mendapatkan update, tutup atau arahkan semua tab dengan menggunakan pekerja layanan saat ini. Maka, jika Anda [mengarahkan ke demo lagi](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, Anda akan melihat gambar kuda.
 
-Pola ini serupa dengan cara pembaruan Chrome. Pembaruan pada unduhan Chrome di
-latar belakang, namun tidak diterapkan hingga Chrome dimulai ulang. Pada saat ini, Anda bisa
-tetap menggunakan versi saat ini tanpa kendala. Akan tetapi, hal ini menjengkelkan
-selama development, namun DevTools memiliki cara untuk membuatnya lebih mudah, yang akan saya bahas
-[nanti dalam artikel ini](#devtools).
+Pola ini serupa dengan cara update Chrome. Update pada hasil download Chrome dilatar belakang, namun tidak diterapkan hingga Chrome dimulai ulang. Pada saat ini, Anda bisa tetap menggunakan versi saat ini tanpa kendala. Akan tetapi, hal ini menjengkelkan selama pengembangan, namun DevTools memiliki cara untuk membuatnya lebih mudah, yang akan saya bahas [nanti dalam artikel ini](#devtools).
 
-### Mengaktifkan
+### Aktifkan
 
-Ini akan aktif setelah service worker lama hilang, dan service worker baru
-dapat mengontrol klien. Inilah saat yang ideal untuk melakukan hal-hal yang tidak bisa Anda lakukan
-saat service worker lama sedang digunakan, misalnya melakukan migrasi database dan mengosongkan
-cache.
+Ini akan aktif setelah pekerja layanan yang lama hilang, dan pekerja layanan baru dapat mengontrol klien. Inilah waktu yang ideal untuk melakukan hal-hal yang tidak bisa Anda lakukan saat pekerja layanan lama sedang digunakan, misalnya melakukan migrasi database dan mengosongkan cache.
 
-Dalam demo di atas, saya memelihara daftar cache yang saya harapkan akan ada, dan dalam
-kejadian `activate` saya menghilangkan yang lainnya, yang akan membuang cache
-`static-v1` lama.
+Dalam demo di atas, saya memelihara daftar cache yang saya harapkan akan ada, dan dalam peristiwa `activate` saya menghilangkan yang lainnya, yang akan membuang cache `static-v1` lama.
 
-Perhatian: Anda tidak boleh memperbarui dari versi sebelumnya. Service worker mungkin memiliki banyak versi lama.
+Perhatian: Anda tidak boleh mengupdate dari versi sebelumnya. Pekerja layanan mungkin memiliki banyak versi lama.
 
-Jika Anda meneruskan promise ke `event.waitUntil()` akan menjadi penyangga kejadian fungsional
-(`fetch`, `push`, `sync` dll.) hingga promise teratasi. Jadi bila kejadian `fetch`
-Anda dipicu, aktivasi akan selesai sepenuhnya.
+Jika Anda meneruskan promise ke `event.waitUntil()` akan menjadi buffering peristiwa fungsional (`fetch`, `push`, `sync` dll.) hingga promise teratasi. Jadi, jika peristiwa `fetch` Anda dipicu, aktivasi akan selesai sepenuhnya.
 
-Perhatian: Cache Storage API adalah "storage asal" (seperti localStorage, dan
-IndexedDB). Jika Anda menjalankan banyak situs pada asal yang sama (misalnya,
-`yourname.github.io/myapp`), berhati-hatilah agar Anda tidak menghapus cache untuk
-situs Anda yang lainnya. Untuk menghindarinya, berikan awalan yang unik pada nama cache Anda pada situs saat ini,
-misalnya `myapp-static-v1`, dan jangan sentuh cache kecuali jika memulai dengan `myapp-`.
+Perhatian: Cache Storage API adalah "penyimpanan asal" (seperti localStorage, dan IndexedDB). Jika Anda menjalankan banyak situs pada asal yang sama (misalnya, `yourname.github.io/myapp`), berhati-hatilah agar Anda tidak menghapus cache untuk situs Anda yang lainnya. Untuk menghindarinya, berikan awalan yang unik pada nama cache Anda pada situs saat ini, misalnya `myapp-static-v1`, dan jangan sentuh cache kecuali jika memulai dengan `myapp-`.
 
 ### Lewati tahap menunggu
 
-Tahap menunggu berarti Anda hanya menjalankan satu versi situs saat itu,
-namun jika Anda tidak membutuhkan fitur itu, Anda bisa mengaktifkan service worker
-baru lebih dini dengan memanggil `self.skipWaiting()`.
+Tahap menunggu berarti Anda hanya menjalankan satu versi situs saat itu, namun jika tidak membutuhkan fitur itu, Anda bisa mengaktifkan pekerja layanan baru lebih dini dengan memanggil `self.skipWaiting()`.
 
-Ini menyebabkan service worker Anda menyingkirkan service worker yang saat ini aktif dan mengaktifkannya
-sendiri begitu memasuki tahap menunggu (atau segera jika sudah dalam
-tahap menunggu). Ini *tidak* menyebabkan service worker Anda melewati pemasangan, cuma menunggu.
+Ini menyebabkan pekerja layanan Anda menyingkirkan pekerja layanan yang saat ini aktif dan mengaktifkannya sendiri begitu memasuki tahap menunggu (atau segera jika sudah dalam tahap menunggu). Ini *tidak* menyebabkan pekerja layanan Anda melewati penginstalan, hanya sedang menunggu.
 
-Hal ini tidak begitu penting bila Anda memanggil `skipWaiting()`, asalkan hal itu selama menunggu atau
-sebelum menunggu. Sudah umum memanggilnya dalam kejadian `install`:
+Hal ini tidak begitu penting jika Anda memanggil `skipWaiting()`, asalkan pemanggilan dilakukan selama menunggu atau sebelum menunggu. Sudah cukup umum memanggilnya dalam peristiwa `install`:
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -674,109 +573,73 @@ sebelum menunggu. Sudah umum memanggilnya dalam kejadian `install`:
       );
     });
 
-Namun Anda mungkin perlu memanggilnya sebagai hasil `postMessage()` ke service
-worker. Anda mungkin perlu `skipWaiting()` interaksi pengguna berikut.
+Namun, Anda mungkin perlu memanggilnya sebagai hasil `postMessage()` ke pekerja layanan. Anda mungkin perlu interaksi pengguna berikut `skipWaiting()`.
 
-[Inilah demo yang menggunakan
-`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
-.external}. Anda seharusnya akan melihat gambar sapi tanpa harus mengarahkan navigasi ke lain.
-Seperti `clients.claim()` ini menjadi balapan, jadi Anda hanya akan melihat sapi jika service
-worker baru mengambil, memasang, dan mengaktifkan sebelum laman berusaha memuat gambar.
+[Inilah demo yang menggunakan `skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){: .external }. Anda seharusnya akan melihat gambar sapi tanpa harus mengarahkan navigasi ke lain. Seperti `clients.claim()` menjadi sebuah pertandingan, jadi Anda hanya akan melihat sapi jika pekerja layanan baru mengambil, menginstal, dan mengaktifkan sebelum halaman berusaha memuat gambar.
 
-Perhatian: `skipWaiting()` berarti service worker baru Anda mungkin saja mengontrol
-laman yang telah dimuat bersama versi lama. Ini berarti sebagian pengambilan laman Anda
-akan ditangani oleh service worker Anda yang lama, namun service
-worker baru akan menangani pengambilan selanjutnya. Jika hal itu akan merusak suatu hal, jangan
-gunakan `skipWaiting()`.
+Perhatian: `skipWaiting()` berarti pekerja layanan baru Anda mungkin saja mengontrol halaman yang telah dimuat bersama versi lama. Ini berarti sebagian pengambilan halaman akan ditangani oleh pekerja layanan yang lama, namun pekerja layanan baru akan menangani pengambilan selanjutnya. Jika ini akan merusak hal lain, jangan gunakan `skipWaiting()`.
 
-### Pembaruan manual
+### Update manual
 
-Sebagaimana disebutkan sebelumnya, browser akan memeriksa pembaruan secara otomatis setelah kejadian fungsional
-dan navigasi, namun Anda juga bisa memicunya secara manual:
+Sebagaimana disebutkan sebelumnya, browser akan memeriksa update secara otomatis setelah peristiwa fungsional dan navigasi, namun Anda juga bisa memicunya secara manual:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       // sometime later…
       reg.update();
     });
 
-Jika Anda memperkirakan pengguna akan menggunakan situs dalam waktu lama tanpa memuat ulang,
-Anda mungkin perlu memanggil `update()` dengan interval (misalnya setiap jam).
+Jika Anda memperkirakan pengguna akan menggunakan situs dalam waktu lama tanpa memuat ulang, Anda mungkin perlu memanggil `update()` dengan interval (misalnya setiap jam).
 
-### Hindari mengubah URL skrip service worker Anda
+### Hindari mengubah URL skrip pekerja layanan
 
-Jika Anda telah membaca [entri blog saya mengenai praktik terbaik
-melakukan cache](https://jakearchibald.com/2016/caching-best-practices/){: .external},
-Anda mungkin mempertimbangkan memberikan URL unii ke setiap versi service worker.
-**Jangan lakukan ini!** Ini biasanya adalah kebiasaan buruk untuk service worker, cukup perbarui
-skrip di lokasi saat ini.
+Jika Anda telah membaca [postingan saya tentang praktik terbaik dalam cache](https://jakearchibald.com/2016/caching-best-practices/){: .external }, Anda dapat mempertimbangkan untuk memberikan setiap versi URL unik pekerja layanan Anda. **Jangan lakukan ini!** Ini biasanya praktik buruk bagi pekerja layanan, cukup update script di lokasi saat ini.
 
 Ini akan menghadapkan Anda pada masalah seperti ini:
 
-1. `index.html` mendaftarkan `sw-v1.js` sebagai service worker.
-1. `sw-v1.js` menyimpan ke cache dan menyajikan `index.html` sehingga ia bekerja offline terlebih dahulu.
-1. Anda memperbarui `index.html` sehingga ia mendaftarkan `sw-v2.js` Anda yang baru dan cemerlang.
+1. `index.html` mendaftarkan `sw-v1.js` sebagai pekerja layanan.
+1. `sw-v1.js` men-cache and menayangkan `index.html` sehingga itu bekerja offline terlebih dahulu.
+1. Anda mengupdate `index.html` sehingga itu mendaftarkan `sw-v2.js` baru dan mengkilap Anda.
 
-Jika Anda melakukan hal di atas, pengguna tidak akan mendapatkan `sw-v2.js`, karena `sw-v1.js` menyajikan
-versi lama `index.html` dari cache-nya. Anda menempatkan diri pada posisi
-di mana Anda perlu memperbarui service worker agar dapat memperbarui
-service worker. Ew.
+Jika Anda melakukan hal di atas, pengguna tidak akan mendapatkan `sw-v2.js`, karena `sw-v1.js` menyajikan versi lama `index.html` dari cache-nya. Anda menempatkan diri pada posisi di mana Anda perlu mengupdate pekerja layanan agar dapat mengupdatenya. Ew.
 
-Akan tetapi, untuk [demo
-di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, saya *telah* mengubah URL service worker. Begitulah, demi
-demo, Anda bisa beralih antar versi. Ini bukan sesuatu yang akan saya
-lakukan di produksi.
+Akan tetapi, untuk [demo di atas](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, saya *telah* mengubah URL pekerja layanan. Oleh karena itu, demi demo ini, Anda bisa beralih antar versi. Ini bukan sesuatu yang akan saya lakukan di produksi.
 
-## Mamudahkan development {: #devtools}
+## Memudahkan pengembangan {: #devtools}
 
-Daur hidup service worker dibuat dengan mempertimbangkan pengguna, namun selama
-development ini agak menyakitkan. Syukurlah ada beberapa alat untuk membantu:
+Daur hidup pekerja layanan dibuat dengan mempertimbangkan pengguna, namun selama pengembangan ini agak menjengkelkan. Syukurlah ada beberapa fitur untuk membantu:
 
-### Perbarui saat muat ulang
+### Update saat memuat ulang
 
-Inilah favorit saya.
+Ini adalah favorit saya.
 
 <figure>
-  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools menampilkan 'update on reload'">
+  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools menampilkan 'update pada pemuatan ulang'"/>
 </figure>
 
-Ini mengubah daur hidup menjadi ramah-developer. Setiap navigasi akan:
+Ini mengubah daur hidup menjadi mudah digunakan developer. Setiap navigasi akan:
 
-1. Ambil ulang service worker.
-1. Pasang sebagai versi baru sekalipun secara byte identik, maksudnya kejadian `install`
-   Anda akan dijalankan dan cache diperbarui.
-1. Lewati tahap menunggu sehingga service worker baru diaktifkan.
-1. Arahkan ke laman.
+1. Mengambil ulang pekerja layanan.
+1. Menginstalnya sebagai versi baru meskipun itu byte-identik, artinya peristiwa `install` Anda berjalan dan cache Anda diupdate.
+1. Melewati fase menunggu sehingga pekerja layanan baru diaktifkan.
+1. Menavigasikan halaman. Ini berarti Anda akan mendapatkan update pada setiap navigasi (termasuk pemuatan ulang) tanpa harus memuat ulang atau menutup tab.
 
-Ini berarti Anda akan mendapatkan pembaruan pada setiap navigasi (termasuk penyegaran)
-tanpa harus memuat ulang atau menutup tab.
-
-### Lewati menunggu
+### Lewati proses menunggu
 
 <figure>
-  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools menampilkan 'skip waiting'">
+  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools menampilkan 'lewati proses menunggu'"/>
 </figure>
 
-Jika Anda memiliki service worker yang sedang menunggu, Anda bisa memilih "skip waiting" di DevTools untuk
-segera mempromosikannya ke "active".
+Jika Anda memiliki pekerja layanan yang sedang menunggu, Anda bisa memilih "lewati proses menunggu" di DevTools untuk segera mengembangkannya menjadi "aktif".
 
-### Muat ulang geser
+### Ganti muat ulang
 
-Jika Anda memaksa muat ulang laman (muat ulang geser) ini akan melangkahi service worker
-sama sekali. Ini tidak akan dikontrol. Fitur ini ada dalam spesifikasi, sehingga akan berfungsi di
-browser lain yang mendukung service worker.
+Jika Anda memaksa muat ulang halaman (ganti muat ulang) ini akan melewati pekerja layanan sama sekali. Ini tidak akan dikontrol. Fitur ini ada dalam spesifikasi, sehingga akan berfungsi di browser lain yang mendukung pekerja layanan.
 
-## Menangani pembaruan
+## Menangani update
 
-Service worker didesain sebagai bagian dari [web
-yang dapat diperluas](https://extensiblewebmanifesto.org/){: .external }. Gagasannya adalah karena kita, sebagai
-developer browser, mengakui bahwa kita tidak lebih baik dalam hal development web dibandingkan
-developer web. Dan dengan demikian, kita seharusnya tidak menyediakan API tingkat tinggi yang sempit
-yang mengatasi masalah tertentu dengan menggunakan pola yang *kita* sukai, dan sebagai gantinya memberi Anda akses
-ke isi perut browser dan memungkinkan Anda melakukannya sesuka hati, dengan cara yang paling
-baik bagi para pengguna *Anda*.
+Pekerja layanan didesain sebagai bagian dari [web yang dapat diperluas](https://extensiblewebmanifesto.org/){: .external }. Gagasannya adalah karena kita, sebagai developer browser, mengakui bahwa kita tidak lebih baik dalam hal pengembangan web dibandingkan developer web. Dan dengan demikian, kita seharusnya tidak menyediakan API tingkat tinggi sempit yang mengatasi masalah tertentu dengan menggunakan pola yang *kita* sukai, dan sebagai gantinya memberi Anda akses ke pusat browser dan memungkinkan Anda melakukannya sesuka hati, dengan cara yang terbaik bagi para pengguna *Anda*.
 
-Jadi, untuk memungkinkan banyak pola sebisa kita, daur pembaruan keseluruhan dapat diamati:
+Jadi, untuk memungkinkan banyak pola sebisa mungkin, daur update keseluruhan dapat diamati:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       reg.installing; // the installing worker, or undefined
@@ -803,14 +666,14 @@ Jadi, untuk memungkinkan banyak pola sebisa kita, daur pembaruan keseluruhan dap
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
-      // changes, eg a new worker has as skipped waiting and become
-      // the new active worker. 
+      // changes, eg a new worker has skipped waiting and become
+      // the new active worker.
     });
 
-## Anda telah lolos!
+## Anda berhasil!
 
-Fiuh! Itu adalah teori teknis yang banyak. Tetap ikuti dalam beberapa minggu ke depan karena
-kita akan mendalami beberapa aplikasi praktis dari hal tersebut di atas.
+Fiuh! Ada banyak sekali teori teknis. Tetap ikuti dalam beberapa minggu ke depan karena kita akan mendalami beberapa penerapan praktis dari hal tersebut di atas.
 
+## Masukan {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

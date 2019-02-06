@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: "Promise menyederhanakan komputasi yang ditangguhkan dan asinkron. Sebuah promise mewakili sebuah operasi yang belum selesai."
+description: "Promise menyederhanakan komputasi yang tertunda dan asinkron. Sebuah promise mewakili sebuah operasi yang belum selesai."
 
 {# wf_published_on: 2013-12-16 #}
-{# wf_updated_on: 2018-12-14 #}
+{# wf_updated_on: 2019-02-06 #}
+{# wf_blink_components: Blink>JavaScript #}
 
 # Promise JavaScript: Pengantar {: .page-title }
 
@@ -14,23 +15,42 @@ development web.
 
 <em>[Tabuhan genderang dimulai]</em>
 
-Promise telah tiba sebagai bawaan asli di JavaScript!
+Promise telah tersedia secara native di JavaScript!
 
 <em>[Kembang api meletus, kertas warna-warni bertaburan dari atas, kerumunan orang bersuka ria]</em>
 
 Pada saat ini Anda termasuk dalam salah satu kategori ini:
 
-* Orang-orang bersuka ria di sekeliling Anda, namun Anda tidak tahu apa yang sedang diramaikan. Bahkan Anda mungkin tidak tahu apa yang dimaksud dengan "promise". Anda mengangkat bahu, namun berat kertas warna-warni membebani bahu Anda. Jika begitu, jangan khawatir, saya perlu waktu lama untuk mengetahui mengapa harus memedulikannya. Barangkali Anda ingin mulai dari [awal](#whats-all-the-fuss-about).
-* Anda mengangkat tinju! Soal waktu, ya? Anda pernah menggunakan Promise ini sebelumnya namun ia mengganggu Anda karena semua implementasi memiliki API yang sedikit berbeda. API apa untuk versi resmi JavaScript? Anda mungkin perlu mulai dengan [terminologi](#promise-terminology).
-* Anda sudah tahu tentang hal ini dan Anda mengejek mereka yang melompat kegirangan menyukai berita ini. Sisihkan waktu sebentar untuk mematangkan superioritas Anda, kemudian langsung saja ke [referensi API](#promise-api-reference).
+* Semua orang bersuka cita di sekeliling Anda, namun Anda tidak tahu keriuhan ini karena
+  apa. Bahkan Anda mungkin tidak tahu apa yang dimaksud dengan "promise". Anda mengangkat bahu, namun
+  berat kertas warna-warni membebani bahu Anda. Jika begitu, jangan
+  khawatir, saya perlu waktu lama untuk mengetahui mengapa harus
+  memedulikannya. Barangkali Anda ingin mulai dari [awal](#whats-all-the-fuss-about).
+* Anda mengangkat tinju! Sudah saatnya kan? Anda pernah menggunakan Promise ini sebelumnya
+  namun Anda heran karena semua implementasi memiliki API yang sedikit berbeda.
+  API apa untuk versi resmi JavaScript? Anda dapat memulai
+  dengan [terminologi](#promise-terminology).
+* Anda sudah tahu tentang hal ini dan Anda mengejek mereka yang melompat kegirangan
+  menyukai berita ini. Sisihkan waktu sebentar untuk mematangkan superioritas Anda,
+  kemudian langsung saja ke [referensi API](#promise-api-reference).
 
 ## Ada apa sebenarnya? {: #whats-all-the-fuss-about }
 
-JavaScript merupakan thread tunggal, yang berarti bahwa dua bit skrip tidak bisa dijalankan bersamaan; keduanya harus dijalankan satu per satu. Di browser, JavaScript berbagi thread dengan banyak hal lain yang berbeda pada setiap browser. Namun biasanya JavaScript berada dalam antrean yang sama dengan menggambar, memperbarui gaya, dan menangani tindakan pengguna (seperti menyorot teks dan berinteraksi dengan kontrol formulir). Aktivitas dalam semua ini akan menunda aktivitas yang lain.
+JavaScript merupakan thread tunggal, yang berarti bahwa dua bit skrip tidak dapat dijalankan
+bersamaan; keduanya harus dijalankan satu per satu. Di browser, JavaScript
+menggunakan thread bersama banyak item lain yang berbeda pada
+setiap browser. Namun, biasanya JavaScript berada dalam antrean yang sama dengan menggambar, memperbarui
+gaya, dan menangani tindakan pengguna (seperti menandai teks dan berinteraksi
+dengan kontrol formulir). Aktivitas pada salah satu tindakan ini akan menunda aktivitas lainnya.
 
-Sebagai manusia, Anda bisa dianggap multithread. Anda bisa mengetik dengan beberapa jari, bisa mengemudi dan melakukan percakapan sekaligus. Satu-satunya fungsi blokir yang harus kita tangani adalah bersin, karena semua aktivitas harus ditangguhkan selama bersin. Ini tentu sangat mengganggu, khususnya bila Anda sedang mengemudi dan akan melakukan percakapan. Anda tentu tidak ingin menulis kode yang sering bersin.
+Sebagai manusia, Anda dapat melakukan banyak thread. Anda dapat mengetik dengan beberapa jari,
+mengemudi, dan melakukan percakapan sekaligus. Satu-satunya fungsi
+blokir yang harus kita hadapi adalah bersin, karena semua aktivitas harus
+ditangguhkan selama bersin. Ini tentu sangat mengganggu,
+apalagi jika Anda sedang mengemudi dan akan melakukan percakapan. Anda tentu
+tidak ingin menulis kode yang sering bersin.
 
-Barangkali Anda sudah menggunakan kejadian dan callback untuk solusinya. Inilah kejadian tersebut:
+Barangkali Anda sudah menggunakan peristiwa dan callback untuk menyiasatinya. Inilah peristiwa tersebut:
 
     var img1 = document.querySelector('.img-1');
 
@@ -43,9 +63,12 @@ Barangkali Anda sudah menggunakan kejadian dan callback untuk solusinya. Inilah 
     });
 
 
-Ini sama sekali tidak sering bersin. Kita mendapatkan gambar, menambahkan listener, kemudian JavaScript bisa menghentikan eksekusi hingga salah satu dari listener itu dipanggil.
+Ini sama sekali tidak sering bersin. Kita mendapatkan gambar, menambahkan listener, kemudian
+JavaScript dapat menghentikan eksekusi hingga salah satu dari listener tersebut ditampilkan.
 
-Sayangnya, dalam contoh di atas, mungkin saja kejadian terjadi sebelum Anda mulai mendengarkannya, jadi kita perlu menanganinya dengan menggunakan properti "complete" gambar tersebut:
+Sayangnya, dalam contoh di atas, mungkin saja peristiwa terjadi
+sebelum Anda mulai mendengarkannya, jadi kita perlu mengatasinya dengan menggunakan
+properti "complete" gambar tersebut:
 
     var img1 = document.querySelector('.img-1');
 
@@ -64,12 +87,18 @@ Sayangnya, dalam contoh di atas, mungkin saja kejadian terjadi sebelum Anda mula
       // argh everything's broken
     });
 
-Ini tidak menangkap gambar yang mengalami kesalahan sebelum kita sempat mendengarkannya; sayangnya DOM tidak memberi kita cara untuk melakukannya. Selain itu, ini akan memuat satu gambar, keadaan akan semakin kompleks jika kita ingin mengetahui kapan serangkaian gambar dimuat.
+Tindakan ini tidak menyimpan gambar yang mengalami error sebelum kita sempat mendengarkannya
+; sayangnya DOM tidak memberi kita cara untuk melakukannya. Selain itu, tindakan ini
+akan memuat satu gambar, keadaan akan semakin kompleks jika kita ingin mengetahui kapan
+serangkaian gambar dimuat.
 
 
-## Kejadian selalu menjadi cara terbaik
+## Peristiwa tidak selalu menjadi cara terbaik
 
-Kejadian sangat cocok untuk hal-hal yang bisa terjadi berkali-kali pada objek yang sama&mdash;keyup, touchstart, dll. Dengan kejadian-kejadian itu, Anda benar-benar tidak peduli dengan apa yang terjadi sebelum melampirkan listener. Namun bila menyangkut keberhasilan/kegagalan asinkron, idealnya Anda memerlukan sesuatu seperti ini:
+Peristiwa sangat tepat untuk tindakan yang dapat terjadi beberapa kali pada objek
+yang sama&mdash;keyup, touchstart, dll. Dengan peristiwa tersebut, Anda tidak
+memerhatikan apa yang terjadi sebelum melampirkan listener. Namun, jika menyangkut
+keberhasilan/kegagalan asinkron, idealnya Anda memerlukan seperti ini:
 
     img1.callThisIfLoadedOrWhenLoaded(function() {
       // loaded
@@ -84,7 +113,8 @@ Kejadian sangat cocok untuk hal-hal yang bisa terjadi berkali-kali pada objek ya
       // one or more failed
     });
 
-Inilah yang dilakukan promise, namun dengan penamaan yang lebih baik. Jika elemen gambar HTML memiliki metode "ready" yang mengembalikan sebuah promise, kita bisa melakukan ini:
+Inilah yang dilakukan promise, namun dengan penamaan yang lebih baik. Jika elemen gambar HTML memiliki metode
+"ready" yang menampilkan sebuah promise, kita dapat melakukan ini:
 
     img1.ready().then(function() {
       // loaded
@@ -102,39 +132,63 @@ Inilah yang dilakukan promise, namun dengan penamaan yang lebih baik. Jika eleme
 
 Pada dasarnya, promise mirip event listener, hanya saja:
 
-* Promise hanya bisa gagal atau berhasil satu kali. Itu tidak bisa gagal atau berhasil dua kali, juga tidak bisa beralih dari berhasil ke gagal atau sebaliknya.
-* Jika sebuah promise berhasil atau gagal dan Anda kemudian menambahkan callback berhasil/gagal, callback yang benar akan dipanggil, walaupun kejadian tersebut lebih dulu terjadi.
+* Promise hanya dapat gagal atau berhasil satu kali. Promise tidak dapat gagal atau berhasil dua kali,
+  juga tidak dapat beralih dari berhasil ke gagal atau sebaliknya.
+* Jika promise berhasil atau gagal dan Anda kemudian menambahkan callback berhasil/gagal,
+ callback yang tepat akan ditampilkan, meski peristiwa tersebut terjadi
+  lebih awal.
 
-Ini sangat berguna untuk async berhasil/gagal, karena Anda menjadi kurang tertarik dengan waktu persis sesuatu menjadi tersedia, dan lebih tertarik dengan reaksi terhadap hasilnya.
+Ini sangat berguna untuk keberhasilan/kegagalan asinkron, karena Anda menjadi kurang
+tertarik dengan waktu persis sesuatu menjadi tersedia, dan lebih tertarik
+dengan reaksi terhadap hasilnya.
 
 
 ## Terminologi promise {: #promise-terminology }
 
-[Domenic Denicola](https://twitter.com/domenic) telah memeriksa draf pertama artikel ini dan memberi saya nilai "F" untuk terminologi. Ia menahan saya, memaksa saya menyalin [States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 100 kali, dan menulis surat yang mencemaskan kepada orang tua saya. Walaupun begitu, saya tetap mendapati banyak terminologi yang bercampur aduk, namun inilah dasar-dasarnya:
+[Domenic Denicola](https://twitter.com/domenic) telah memeriksa draf pertama
+artikel ini dan memberi saya nilai "F" untuk terminologi. Ia menahan saya,
+memaksa saya menyalin
+[States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)
+100 kali, dan menulis surat yang mencemaskan kepada orang tua saya. Walaupun begitu, saya masih
+mencampuradukkan banyak terminologi, namun berikut ini terminologi dasarnya:
 
-Sebuah promise bisa berupa:
+Promise dapat berupa:
 
-* **fulfilled** - Tindakan yang menyangkut promise telah berhasil
-* **rejected** - Tindakan yang menyangkut promise telah gagal
-* **pending** - belum terlaksana atau ditolak
-* **settled** - sudah terlaksana atau ditolak
+* **terpenuhi** - Tindakan terkait promise berhasil
+* **ditolak** - Tindakan terkait promise gagal
+* **pending** - Belum terpenuhi atau ditolak
+* **selesai** - Telah terpenuhi atau ditolak
 
 
-[Spesifikasi](https://www.ecma-international.org/ecma-262/#sec-promise-objects) juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise, karena ia memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi saya akan menggunakannya sesedikit mungkin.
+[Spesifikasi](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects)
+juga menggunakan istilah **thenable** untuk menjelaskan objek yang mirip promise,
+karena memiliki metode `then`. Istilah ini mengingatkan saya pada mantan Manajer
+Sepak Bola England [Terry Venables](https://en.wikipedia.org/wiki/Terry_Venables) jadi
+saya akan menggunakannya seminimal mungkin.
 
 
 ## Promise hadir di JavaScript!
 
-Promise sudah lama ada dalam bentuk pustaka, misalnya:
+Promise sudah lama ada dalam bentuk library, misalnya:
 
 * [Q](https://github.com/kriskowal/q)
 * [when](https://github.com/cujojs/when)
 * [WinJS](https://msdn.microsoft.com/en-us/library/windows/apps/br211867.aspx)
 * [RSVP.js](https://github.com/tildeio/rsvp.js)
 
-Promise di atas dan promise JavaScript menggunakan perilaku umum dan terstandardisasi yang sama dengan nama [Promises/A+](https://github.com/promises-aplus/promises-spec). Jika Anda pengguna jQuery, mereka memiliki sesuatu yang mirip bernama [Deferreds](https://api.jquery.com/category/deferred-object/). Akan tetapi, Deferred tidak mengikuti Promise/A+, yang membuatnya [sedikit berbeda dan kurang berguna](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken/), jadi harap maklum. jQuery juga memiliki [sebuah tipe Promise](https://api.jquery.com/Types/#Promise), namun ini bukan sekadar subset Deferred dan memiliki masalah yang sama.
+Promise di atas dan promise JavaScript menggunakan perilaku umum dan terstandardisasi
+yang disebut [Promises/A+](https://github.com/promises-aplus/promises-spec). Jika
+Anda pengguna jQuery, promise tersebut memiliki item yang mirip, yang disebut
+[Deferreds](https://api.jquery.com/category/deferred-object/). Namun,
+Deferreds tidak sesuai dengan Promise/A+, sehingga
+[agak berbeda dan kurang berguna](https://thewayofcode.wordpress.com/tag/jquery-deferred-broken/),
+jadi berhati-hatilah. jQuery juga memiliki
+[jenis Promise](https://api.jquery.com/Types/#Promise), namun ini hanya berupa
+subset Deferred dan memiliki masalah yang sama.
 
-Walaupun implementasi promise mengikuti perilaku terstandardisasi, API keseluruhannya berbeda. Promise JavaScript serupa di API hingga RSVP.js. Begini caranya membuat promise:
+Meski implementasi promise mengikuti perilaku terstandardisasi, API
+keseluruhannya berbeda. Promise JavaScript mirip dengan RSVP.js. dalam API.
+Begini caranya membuat promise:
 
     var promise = new Promise(function(resolve, reject) {
       // do a thing, possibly async, then…
@@ -148,11 +202,15 @@ Walaupun implementasi promise mengikuti perilaku terstandardisasi, API keseluruh
     });
 
 
-Konstruktor promise menggunakan satu argumen, callback dengan dua parameter, resolve dan reject. Lakukan sesuatu dalam callback, bisa async, kemudian panggil resolve jika semua berjalan lancar, jika tidak maka panggil reject.
+Konstruktor promise menggunakan satu argumen, callback dengan dua parameter,
+resolve dan reject. Lakukan sesuatu dalam callback, bisa asinkron, kemudian tampilkan
+resolve jika semua berjalan lancar, jika tidak maka tampilkan reject.
 
-Seperti `throw` di JavaScript lama, ini adalah kebiasaan, namun tidak diperlukan, untuk menolak objek Error. Manfaat objek Error adalah merekam pelacakan tumpukan, sehingga membuat alat debug jadi lebih berguna.
+Seperti `throw` di JavaScript lama, ini adalah kebiasaan, namun tidak diperlukan, untuk
+menolak objek Error. Manfaat objek Error adalah merekam
+pelacakan tumpukan, sehingga membuat alat debug menjadi lebih berguna.
 
-Begini caranya menggunakan promise itu:
+Begini caranya menggunakan promise tersebut:
 
     promise.then(function(result) {
       console.log(result); // "Stuff worked!"
@@ -161,33 +219,56 @@ Begini caranya menggunakan promise itu:
     });
 
 
-`then()` menggunakan dua argumen, satu callback untuk kasus berhasil, dan satu lagi untuk kasus gagal. Keduanya bersifat opsional, Anda bisa menambahkan callback untuk kasus berhasil atau gagal saja.
+`then()` menggunakan dua argumen, callback untuk kasus berhasil, dan satu
+lagi untuk kasus gagal. Keduanya bersifat opsional, jadi Anda dapat menambahkan callback untuk
+kasus berhasil atau gagal saja.
 
-Promise JavaScript dimulai di DOM sebagai "Futures", diganti namanya menjadi "Promises", dan terakhir dimasukkan ke JavaScript. Keberadaannya di JavaScript ketimbang DOM bagus sekali karena mereka akan tersedia dalam konteks JS non-browser seperti Node.js (lain lagi masalahnya jika menggunakannya dalam API intinya).
+Promise JavaScript dimulai di DOM sebagai "Futures", diganti namanya menjadi "Promises",
+dan terakhir dimasukkan ke JavaScript. Keberadaannya di JavaScript, bukan
+DOM, bagus sekali karena promise tersebut akan tersedia dalam konteks JS non-browser seperti
+Node.js (lain lagi masalahnya jika menggunakannya dalam API intinya).
 
-Walaupun menjadi fitur JavaScript, DOM tidak takut menggunakannya. Sebenarnya, DOM API serba baru dengan metode async berhasil/gagal akan menggunakan promise. Hal ini sudah terjadi pada [Quota Management](https://dvcs.w3.org/hg/quota/raw-file/tip/Overview.html#idl-def-StorageQuota), [Font Load Events](http://dev.w3.org/csswg/css-font-loading/#font-face-set-ready), [ServiceWorker](https://github.com/slightlyoff/ServiceWorker/blob/cf459d473ae09f6994e8539113d277cbd2bce939/service_worker.ts#L17), [Web MIDI](https://webaudio.github.io/web-midi-api/#widl-Navigator-requestMIDIAccess-Promise-MIDIOptions-options), [Streams](https://github.com/whatwg/streams#basereadablestream), dan lainnya.
+Meski menjadi fitur JavaScript, DOM tidak takut menggunakannya. Bahkan
+, DOM API serba baru dengan metode berhasil/gagal asinkron akan menggunakan promise.
+Hal ini sudah terjadi pada
+[Quota Management](https://dvcs.w3.org/hg/quota/raw-file/tip/Overview.html#idl-def-StorageQuota),
+[Font Load Events](http://dev.w3.org/csswg/css-font-loading/#font-face-set-ready),
+[ServiceWorker](https://github.com/slightlyoff/ServiceWorker/blob/cf459d473ae09f6994e8539113d277cbd2bce939/service_worker.ts#L17),
+[Web MIDI](https://webaudio.github.io/web-midi-api/#widl-Navigator-requestMIDIAccess-Promise-MIDIOptions-options),
+[Streams](https://github.com/whatwg/streams#basereadablestream), dan lainnya.
 
 
 ## Dukungan browser &amp; polyfill
 
-Sekarang ini sudah ada implementasi promise di browser.
+Sekarang sudah ada implementasi promise di browser.
 
-Sejak Chrome 32, Opera 19, Firefox 29, Safari 8 &amp; Microsoft Edge, promise sudah diaktifkan secara default.
+Sejak Chrome 32, Opera 19, Firefox 29, Safari 8 &amp; Microsoft Edge,
+promise diaktifkan secara default.
 
-Untuk meningkatkan browser yang tidak memiliki implementasi lengkap promise agar memenuhi spesifikasi, atau menambahkan promise ke browser lain dan Node.js, lihat [polyfill](https://github.com/jakearchibald/ES6-Promises#readme) (file gzip 2k).
+Untuk meningkatkan browser yang tidak memiliki implementasi lengkap promise agar memenuhi
+spesifikasi, atau menambahkan promise ke browser lain dan Node.js, lihat
+[polyfill](https://github.com/jakearchibald/ES6-Promises#readme)
+(file gzip 2k).
 
 
-## Kompatibilitas dengan pustaka lainnya
+## Kompatibilitas dengan library lainnya
 
-API promise JavaScript akan memperlakukan apa saja dengan metode `then()` sebagai mirip promise (atau `thenable` dalam istilah promise), jadi jika Anda menggunakan pustaka yang mengembalikan promise Q, bisa saja, cocok dengan promise JavaScript baru.
+API promise JavaScript akan memperlakukan apa saja dengan metode `then()` sebagai
+mirip promise (atau `thenable` dalam istilah promise), jadi jika Anda menggunakan library
+yang mengembalikan promise Q, bisa saja, cocok dengan promise
+JavaScript baru.
 
-Walaupun, seperti yang saya sebutkan, Deferred di jQuery agaknya … kurang berguna. Syukurlah Anda bisa men-transmisi-kan ke promise standar, yang patut dilakukan sesegera mungkin:
+Walaupun, seperti yang saya sebutkan, Deferred di jQuery sepertinya… kurang berguna.
+Syukurlah Anda dapat mentransmisikannya ke promise standar, yang patut
+dilakukan sesegera mungkin:
 
 
     var jsPromise = Promise.resolve($.ajax('/whatever.json'))
 
 
-Di sini, `$.ajax` jQuery mengembalikan sebuah Deferred. Karena memiliki metode `then()`, `Promise.resolve()` bisa mengubahnya menjadi promise JavaScript. Akan tetapi, kadang-kadang deferred meneruskan beberapa argumen ke callback-nya, misalnya:
+Di sini, `$.ajax` jQuery menampilkan sebuah Deferred. Karena memiliki metode `then()`,
+`Promise.resolve()` dapat mengubahnya menjadi promise JavaScript. Akan tetapi,
+kadang deferred meneruskan beberapa argumen ke callback-nya, misalnya:
 
     var jqDeferred = $.ajax('/whatever.json');
 
@@ -210,29 +291,38 @@ Sementara promise JS mengabaikan semua itu selain yang pertama:
 
 
 
-Untungnya inilah yang biasanya Anda inginkan, atau setidaknya memberi Anda akses ke apa yang Anda inginkan. Juga, ketahuilah bahwa jQuery tidak mengikuti konvensi penyaluran objek Error ke dalam penolakan.
+Untungnya promise inilah yang biasanya Anda inginkan, atau setidaknya memberi Anda akses ke
+promise yang Anda inginkan. Selain itu, perlu diperhatikan bahwa jQuery tidak mengikuti konvensi
+penerusan objek Error ke dalam penolakan.
 
 
-## Kode async yang rumit menjadi lebih mudah
+## Kode asinkron yang rumit menjadi lebih mudah
 
-Baiklah, mari kita membuat kode sedikit. Anggaplah kita ingin:
+Baiklah, mari kita membuat kode. Misalnya, kita ingin:
 
-1. Menjalankan spinner untuk menunjukkan pemuatan
-1. Mengambil sebagian JSON untuk cerita, yang akan memberi kita judul dan URL untuk setiap bab
-1. Menambahkan judul ke laman
-1. Mengambil setiap bab
-1. Menambahkan cerita ke laman
-1. Menghentikan spinner
+1. Menjalankan spinner untuk menandakan pemuatan
+1. Ambil sebagian JSON untuk cerita, yang akan memberi kita judul dan URL untuk tiap bab
+1. Tambahkan judul ke halaman
+1. Ambil tiap bab
+1. Tambahkan cerita ke halaman
+1. Hentikan spinner
 
-… namun beri tahu juga pengguna jika terjadi suatu kesalahan di tengah jalan. Kita juga perlu menghentikan spinner pada saat itu, jika tidak ia akan terus berputar, menjadi pusing, dan menabrak UI lainnya.
+… namun beri tahu juga pengguna jika terjadi masalah di tengah proses. Kita juga perlu
+menghentikan spinner pada saat itu, jika tidak spinner akan terus berputar, menjadi
+pusing, dan menabrak UI lainnya.
 
-Tentu saja, Anda tidak akan menggunakan JavaScript untuk menyajikan cerita, [lebih cepat bila berfungsi sebagai HTML](https://jakearchibald.com/2013/progressive-enhancement-is-faster/), namun pola ini sangat umum bila berurusan dengan API: Lipatgandakan pengambilan data, kemudian lakukan sesuatu setelah selesai.
+Tentu saja, Anda tidak akan menggunakan JavaScript untuk menyajikan cerita,
+[lebih cepat jika berfungsi sebagai HTML](https://jakearchibald.com/2013/progressive-enhancement-is-faster/),
+namun pola ini sangat umum jika berkaitan dengan API: Lipatgandakan
+pengambilan data, kemudian lakukan sesuatu setelah selesai.
 
-Untuk mulai, mari kita tangani pengambilan data dari jaringan:
+Untuk memulai, mari kita tangani pengambilan data dari jaringan:
 
 ## Mem-promise-kan XMLHttpRequest
 
-API lama akan diperbarui untuk menggunakan promise, jika memungkinkan dengan cara yang kompatibel ke belakang. `XMLHttpRequest` menjadi calon kuat, namun pada saat ini mari kita menulis sebuah fungsi sederhana untuk membuat permintaan GET:
+API lama akan diupdate untuk menggunakan promise, jika memungkinkan dengan cara kompatibel
+mundur. `XMLHttpRequest` adalah kandidat utama, namun untuk sementara,
+mari kita menuliskan fungsi sederhana untuk membuat permintaan GET:
 
 
 
@@ -277,16 +367,18 @@ Sekarang mari kita menggunakannya:
     })
 
 
-[Klik di sini untuk melihat aksinya](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, periksa konsol di DevTools untuk melihat hasilnya. Sekarang kita bisa membuat permintaan HTTP tanpa mengetikkan `XMLHttpRequest` secara manual, itu bagus karena semakin sedikit saya harus melihat cara penulisan camel-casing `XMLHttpRequest` yang menjengkelkan, semakin bahagia hidup saya.
+Sekarang kita dapat membuat permintaan HTTP tanpa mengetik `XMLHttpRequest` secara manual. Ini bagus karena
+saya tidak perlu sering melihat cara penulisan camel-casing `XMLHttpRequest` yang merepotkan ini.
 
 
-## Perantaian
+## Chaining
 
-`then()` bukanlah akhir cerita, Anda bisa merantai `then` bersama untuk mentransformasikan nilai atau menjalankan tindakan async tambahan satu per satu.
+`then()` bukanlah akhir cerita, Anda dapat merantai `then` bersama untuk
+mentransformasikan nilai atau menjalankan tindakan asinkron tambahan satu per satu.
 
 
 ### Mentransformasikan nilai
-Anda bisa mentransformasikan nilai cukup dengan mengembalikan nilai baru:
+Anda dapat mentransformasikan nilai hanya dengan menampilkan nilai baru:
 
     var promise = new Promise(function(resolve, reject) {
       resolve(1);
@@ -308,7 +400,10 @@ Sebagai contoh praktis, mari kita kembali ke:
 
 
 
-Responsnya adalah JSON, namun kita saat ini menerimanya sebagai teks biasa. Kita bisa mengubah fungsi get untuk menggunakan JSON [`responseType`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#responseType), namun kita juga bisa memecahkannya dalam konteks promise:
+Responsnya adalah JSON, namun kita saat ini menerimanya sebagai teks biasa. Kita
+dapat mengubah fungsi get untuk menggunakan JSON
+[`responseType`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#responseType),
+namun kita juga dapat memecahkannya dalam konteks promise:
 
     get('story.json').then(function(response) {
       return JSON.parse(response);
@@ -318,28 +413,32 @@ Responsnya adalah JSON, namun kita saat ini menerimanya sebagai teks biasa. Kita
 
 
 
-Oleh karena `JSON.parse()` mengambil satu argumen dan mengembalikan nilai hasil transformasi, kita bisa membuat sebuah pintasan:
+Karena `JSON.parse()` mengambil satu argumen dan menampilkan nilai hasil transformasi,
+kita dapat membuat sebuah pintasan:
 
     get('story.json').then(JSON.parse).then(function(response) {
       console.log("Yey JSON!", response);
     })
 
 
-[Lihat aksinya di sini](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, periksa konsol di DevTools untuk melihat hasilnya. Sebenarnya, kita bisa membuat fungsi `getJSON()` dengan sangat mudah:
-
+Bahkan, kita dapat membuat fungsi `getJSON()` dengan sangat mudah:
 
     function getJSON(url) {
       return get(url).then(JSON.parse);
     }
 
-`getJSON()` tetap mengembalikan sebuah promise, promise yang mengambil URL kemudian mem-parse respons sebagai JSON.
+`getJSON()` tetap mengembalikan sebuah promise, promise yang mengambil URL kemudian
+menguraikan respons sebagai JSON.
 
 
 ### Mengantre tindakan asinkron
 
-Anda juga bisa merangkai beberapa `then` untuk menjalankan tindakan asinkron secara berurutan.
+Anda juga dapat merantai beberapa `then` untuk menjalankan tindakan asinkron secara berurutan.
 
-Bila Anda mengembalikan sesuatu dari callback `then()`, ini agak ajaib. Jika Anda mengembalikan sebuah nilai, `then()` berikutnya akan dipanggil dengan nilai itu. Akan tetapi, jika Anda mengembalikan sesuatu yang mirip promise, `then()` berikutnya akan menunggunya, dan hanya dipanggil bila promise itu selesai (berhasil/gagal). Misalnya:
+Jika Anda menampilkan sesuatu dari callback `then()`, ini agak ajaib.
+Jika Anda menampilkan nilai, `then()` berikutnya akan ditampilkan dengan nilai tersebut. Akan tetapi,
+jika Anda menampilkan sesuatu yang mirip promise, `then()` berikutnya akan menunggunya, dan
+hanya ditampilkan jika promise tersebut selesai (berhasil/gagal). Misalnya:
 
     getJSON('story.json').then(function(story) {
       return getJSON(story.chapterUrls[0]);
@@ -349,9 +448,11 @@ Bila Anda mengembalikan sesuatu dari callback `then()`, ini agak ajaib. Jika And
 
 
 
-Di sini kita membuat permintaan async ke `story.json`, yang memberi kita satu set URL untuk permintaan, selanjutnya kita meminta yang pertama. Inilah saatnya promise benar-benar mulai unggul dari pola callback biasa.
+Di sini kita membuat permintaan asinkron ke `story.json`, yang memberi kita satu set
+URL untuk diminta, lalu kita meminta URL pertama. Pada saat ini promise
+benar-benar mulai menonjol dari pola callback biasa.
 
-Anda bahkan bisa membuat metode pintasan untuk mendapatkan bab:
+Anda bahkan dapat membuat metode pintasan untuk mendapatkan bab:
 
     var storyPromise;
 
@@ -372,12 +473,15 @@ Anda bahkan bisa membuat metode pintasan untuk mendapatkan bab:
     })
 
 
-Kita tidak mengunduh `story.json` hingga `getChapter` dipanggil, namun bila nanti `getChapter` dipanggil, kita akan menggunakan kembali promise cerita, sehingga `story.json` hanya diambil sekali. Yess Promise!
+Kita tidak mendownload `story.json` hingga `getChapter` ditampilkan, namun jika nanti
+`getChapter` ditampilkan, kita akan menggunakan kembali promise cerita, sehingga `story.json`
+hanya diambil satu kali. Yess Promise!
 
 
-## Penanganan kesalahan
+## Penanganan error
 
-Seperti yang telah kita lihat sebelumnya, `then()` menggunakan dua argumen, satu untuk berhasil, satu untuk gagal (atau fulfill dan reject, dalam istilah promise):
+Seperti yang telah kita lihat sebelumnya, `then()` menggunakan dua argumen, satu untuk berhasil, satu
+untuk gagal (atau fulfill dan reject, dalam istilah promise):
 
     get('story.json').then(function(response) {
       console.log("Success!", response);
@@ -386,7 +490,7 @@ Seperti yang telah kita lihat sebelumnya, `then()` menggunakan dua argumen, satu
     })
 
 
-Anda juga bisa menggunakan `catch()`:
+Anda juga dapat menggunakan `catch()`:
 
 
     get('story.json').then(function(response) {
@@ -396,7 +500,9 @@ Anda juga bisa menggunakan `catch()`:
     })
 
 
-Tidak ada yang spesial tentang `catch()`, ini cuma pemanis untuk `then(undefined, func)`, namun lebih mudah dibaca. Perhatikan, kedua contoh kode di atas tidak berperilaku sama, yang belakangan setara dengan:
+Tidak ada yang spesial dengan `catch()`, ini cuma pemanis untuk
+`then(undefined, func)`, namun lebih mudah dibaca. Perlu diperhatikan, dua contoh kode
+di atas tidak berperilaku sama, kode kedua setara dengan:
 
     get('story.json').then(function(response) {
       console.log("Success!", response);
@@ -405,7 +511,12 @@ Tidak ada yang spesial tentang `catch()`, ini cuma pemanis untuk `then(undefined
     })
 
 
-Perbedaannya kecil, namun sangat berguna. Penolakan promise akan melompat maju ke `then()` berikutnya dengan callback penolakan (atau `catch()`, karena setara). Dengan `then(func1, func2)`, `func1` atau `func2` akan dipanggil, tidak pernah keduanya. Namun pada `then(func1).catch(func2)`, keduanya akan dipanggil jika `func1` menolak, berhubung keduanya adalah langkah tersendiri dalam rantai tersebut. Perhatikan yang berikut ini:
+Perbedaannya kecil, namun sangat berguna. Penolakan promise akan melompat
+maju ke `then()` berikutnya dengan callback penolakan (atau `catch()`, karena
+setara). Dengan `then(func1, func2)`, `func1` atau `func2` akan
+ditampilkan, tidak pernah keduanya. Namun pada `then(func1).catch(func2)`, keduanya akan
+ditampilkan jika `func1` menolak, karena keduanya adalah langkah tersendiri dalam rantai tersebut. Perhatikan
+yang berikut:
 
 
     asyncThing1().then(function() {
@@ -426,18 +537,23 @@ Perbedaannya kecil, namun sangat berguna. Penolakan promise akan melompat maju k
 
 
 
-Alur di atas sangat mirip dengan try/catch JavaScript normal, kesalahan yang terjadi dalam "try" langsung masuk ke blok `catch()`. Seperti inilah bila berbentuk bagan alur (karena saya suka bagan alur):
+Alur di atas sangat mirip dengan try/catch JavaScript normal, error yang
+terjadi dalam "try" langsung masuk ke blok `catch()`. Seperti inilah
+jika berbentuk diagram alur (karena saya suka diagram alur):
 
 
 <div style="position: relative; padding-top: 93%;">
-  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden" src="imgs/promise-flow.svg" frameborder="0" allowtransparency="true"></iframe>
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden"
+   src="imgs/promise-flow.svg" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
 
-Ikuti garis biru untuk promise yang terlaksana, atau merah untuk yang ditolak.
+Ikuti garis biru untuk promise yang terpenuhi, atau merah untuk promise yang
+ditolak.
 
 ### Pengecualian dan promise JavaScript
-Penolakan terjadi bila promise secara eksplisit ditolak, namun juga secara implisit jika sebuah kesalahan dilontarkan dalam callback konstruktor:
+Penolakan terjadi jika promise secara eksplisit ditolak, namun juga secara implisit
+jika error ditampilkan dalam callback konstruktor:
 
     var jsonPromise = new Promise(function(resolve, reject) {
       // JSON.parse throws an error if you feed it some
@@ -454,9 +570,11 @@ Penolakan terjadi bila promise secara eksplisit ditolak, namun juga secara impli
     })
 
 
-Berarti ini berguna untuk melakukan semua pekerjaan yang menyangkut promise dalam callback konstruktor promise, sehingga kesalahan secara otomatis ditangkap dan menjadi penolakan.
+Berarti ini berguna untuk melakukan semua pekerjaan yang terkait promise dalam
+callback konstruktor promise, sehingga error secara otomatis direkam dan
+menjadi penolakan.
 
-Hal serupa berlaku untuk kesalahan yang dilontarkan dalam callback `then()`.
+Hal serupa berlaku untuk error yang ditampilkan dalam callback `then()`.
 
     get('/').then(JSON.parse).then(function() {
       // This never happens, '/' is an HTML page, not JSON
@@ -469,9 +587,9 @@ Hal serupa berlaku untuk kesalahan yang dilontarkan dalam callback `then()`.
 
 
 
-### Penanganan kesalahan dalam praktik
+### Penanganan error dalam praktik
 
-Dengan cerita dan bab, kita bisa menggunakan catch untuk menampilkan kesalahan kepada pengguna:
+Dengan cerita dan bab, kita dapat menggunakan catch untuk menampilkan error kepada pengguna:
 
 
 
@@ -487,9 +605,16 @@ Dengan cerita dan bab, kita bisa menggunakan catch untuk menampilkan kesalahan k
 
 
 
-Jika pengambilan `story.chapterUrls[0]` gagal (mis., http 500 atau pengguna sedang offline), maka akan melewati semua callback berhasil setelahnya, termasuk yang ada di `getJSON()` yang berusaha mem-parse respons sebagai JSON, juga akan melompati callback yang menambahkan chapter1.html ke laman. Sebagai gantinya, ia pindah ke callback catch. Akibatnya, "Failed to show chapter" akan ditambahkan ke laman jika tindakan sebelumnya ada yang gagal.
+Jika pengambilan `story.chapterUrls[0]` gagal (mis., http 500 atau pengguna sedang offline),
+catch akan melewati semua callback berhasil setelahnya, termasuk yang ada di
+`getJSON()` yang mencoba menguraikan respons sebagai JSON, juga akan melewati
+callback yang menambahkan chapter1.html ke halaman. Sebagai gantinya, catch pindah ke callback
+catch. Akibatnya, "Failed to show chapter" akan ditambahkan ke halaman jika
+tindakan sebelumnya ada yang gagal.
 
-Seperti try/catch di JavaScript, kesalahan akan ditangkap dan kode selebihnya akan dilanjutkan, sehingga spinner selalu tersembunyi, sebagaimana yang kita inginkan. Kode di atas akan menjadi versi async yang tidak memblokir untuk:
+Seperti try/catch di JavaScript, error akan ditangkap dan kode selanjutnya
+akan dilanjutkan, sehingga spinner selalu tersembunyi, seperti yang kita inginkan. Kode
+di atas menjadi versi asinkron yang tidak memblokir untuk:
 
     try {
       var story = getJSONSync('story.json');
@@ -502,7 +627,9 @@ Seperti try/catch di JavaScript, kesalahan akan ditangkap dan kode selebihnya ak
     document.querySelector('.spinner').style.display = 'none'
 
 
-Anda mungkin ingin `catch()` hanya untuk keperluan log, tanpa pemulihan dari kesalahan. Caranya, cukup lontarkan kembali kesalahan tersebut. Kita bisa melakukannya dalam metode `getJSON()`:
+Anda dapat `catch()` hanya untuk keperluan log, tanpa pemulihan
+dari error. Caranya, cukup tampilkan kembali error tersebut. Kita dapat melakukannya dalam
+metode `getJSON()`:
 
 
 
@@ -514,13 +641,15 @@ Anda mungkin ingin `catch()` hanya untuk keperluan log, tanpa pemulihan dari kes
     }
 
 
-Jadi kita telah berhasil mengambil satu bab, namun kita menginginkan semuanya. Mari kita lakukan.
+Jadi kita telah berhasil mengambil satu bab, namun kita menginginkan semuanya. Mari kita
+melakukannya.
 
 
-## Paralelisme dan pengurutan: mendapatkan yang terbaik dari keduanya
+## Paralelisme dan pengurutan: mengoptimalkan keduanya
 
 
-Membayangkan async tidaklah mudah. Jika Anda berusaha keras untuk memulai, cobalah menulis kode seakan-akan ia sinkron. Dalam hal ini:
+Membayangkan asinkron tidaklah mudah. Jika Anda berusaha keras untuk memulai,
+cobalah menulis kode seakan-akan kode tersebut sinkron. Dalam hal ini:
 
     try {
       var story = getJSONSync('story.json');
@@ -539,11 +668,12 @@ Membayangkan async tidaklah mudah. Jika Anda berusaha keras untuk memulai, cobal
 
     document.querySelector('.spinner').style.display = 'none'
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/sync-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/sync-example.html)
 
 
-Itu akan berhasil (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/sync-example.html){: target="_blank" .external })!
-Namun kode ini menyinkronkan dan mengunci browser saat ada yang diunduh. Untuk membuat
+Ini berhasil (lihat
+[kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/sync-example.html))!
+Namun kode ini sinkron dan mengunci browser saat item didownload. Untuk membuat
 pekerjaan ini asinkron, kita menggunakan `then()` untuk melakukannya satu per satu.
 
     getJSON('story.json').then(function(story) {
@@ -563,7 +693,8 @@ pekerjaan ini asinkron, kita menggunakan `then()` untuk melakukannya satu per sa
 
 
 
-Namun bagaimana kita bisa melakukan loop melalui URL bab dan mengambilnya secara berurutan? Ini **tidak berhasil**:
+Namun bagaimana kita dapat melakukan loop melalui URL bab dan mengambilnya secara berurutan? Ini
+**tidak berhasil**:
 
     story.chapterUrls.forEach(function(chapterUrl) {
       // Fetch chapter
@@ -575,11 +706,13 @@ Namun bagaimana kita bisa melakukan loop melalui URL bab dan mengambilnya secara
 
 
 
-`forEach` tidak kenal async, jadi bab kita akan muncul sesuai urutan pengunduhannya, yang pada dasarnya seperti cara menulis Pulp Fiction. Ini bukanlah Pulp Fiction, jadi ayo kita perbaiki.
+`forEach` tidak mengenal asinkron, jadi bab kita akan muncul sesuai urutan
+downloadnya, yang pada dasarnya seperti cara menulis Pulp Fiction. Ini bukanlah
+Pulp Fiction, jadi mari kita memperbaikinya.
 
 
 ### Membuat urutan
-Kita ingin mengubah larik `chapterUrls` kita menjadi sebuah urutan promise. Kita bisa melakukannya dengan menggunakan `then()`:
+Kita ingin mengubah array `chapterUrls` menjadi urutan promise. Kita dapat melakukannya menggunakan `then()`:
 
     // Start off with a promise that always resolves
     var sequence = Promise.resolve();
@@ -595,12 +728,22 @@ Kita ingin mengubah larik `chapterUrls` kita menjadi sebuah urutan promise. Kita
     })
 
 
-Inilah pertama kali kita melihat `Promise.resolve()`, yang membuat sebuah promise untuk mengurai nilai apa pun yang Anda berikan. Jika Anda meneruskan padanya sebuah instance `Promise`, ia cuma mengembalikannya (**catatan:** inilah perubahan pada spesifikasi yang belum diikuti oleh beberapa implementasi). Jika Anda meneruskan sesuatu yang seperti promise (memiliki metode `then()`) ke sana, maka akan dibuat `Promise` asli yang melaksanakan/menolak dengan cara yang sama. Jika Anda meneruskan nilai lain, mis., `Promise.resolve('Hello')`, maka akan dibuat promise yang melaksanakan dengan nilai itu. Jika Anda memanggilnya tanpa nilai, seperti di atas, ia akan melaksanakan dengan "undefined".
+Inilah pertama kali kita melihat `Promise.resolve()`, yang membuat
+promise untuk diselesaikan menjadi nilai apa pun yang Anda berikan. Jika Anda meneruskan
+instance `Promise`, maka hanya akan mengembalikannya (**Note:** inilah
+perubahan pada spesifikasi yang belum diikuti oleh beberapa implementasi). Jika Anda
+meneruskan item seperti promise (memiliki metode `then()`), maka akan membuat
+ `Promise` asli yang terpenuhi/ditolak dengan cara yang sama. Jika Anda meneruskan
+nilai lain, mis., `Promise.resolve('Hello')`, maka akan membuat
+promise yang terpenuhi dengan nilai tersebut. Jika Anda memanggilnya tanpa nilai,
+seperti di atas, maka akan terpenuhi dengan "undefined".
 
 
-Ada juga `Promise.reject(val)`, yang membuat promise yang akan menolak dengan nilai yang Anda berikan padanya (atau undefined).
+Ada juga `Promise.reject(val)`, yang membuat promise yang akan ditolak dengan
+nilai yang Anda berikan (atau undefined).
 
-Kita bisa merapikan kode di atas menggunakan [`array.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce):
+Kita dapat merapikan kode di atas menggunakan
+[`array.reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce):
 
 
 
@@ -616,9 +759,14 @@ Kita bisa merapikan kode di atas menggunakan [`array.reduce`](https://developer.
 
 
 
-Ini melakukan hal yang sama dengan contoh sebelumnya, namun tidak perlu variabel "sequence" terpisah. Callback reduce kita dipanggil untuk setiap item dalam larik. "sequence" adalah `Promise.resolve()` pertama kali, namun untuk panggilan "sequence" selanjutnya adalah apa saja yang kita kembalikan dari panggilan sebelumnya. `array.reduce` sangat berguna untuk meringkas larik menjadi satu nilai, yang dalam hal ini adalah sebuah promise.
+Ini melakukan tindakan yang sama dengan contoh sebelumnya, namun tidak memerlukan variabel "sequence"
+terpisah. Callback reduce ditampilkan untuk tiap item dalam array.
+"sequence" adalah `Promise.resolve()` yang pertama, namun pada
+call berikutnya, "sequence" adalah promise yang ditampilkan dari call sebelumnya. `array.reduce`
+sangat berguna untuk meringkas array menjadi satu nilai, yang dalamhal ini merupakan
+sebuah promise.
 
-Mari kita satukan semuanya:
+Mari kita merangkumnya:
 
     getJSON('story.json').then(function(story) {
       addHtmlToPage(story.heading);
@@ -644,16 +792,22 @@ Mari kita satukan semuanya:
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-example.html)
 
-Dan sekarang kita memilikinya (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-example.html){: target="_blank" .external }), versi asinkron penuh dari versi sinkron. Namun kita bisa melakukan dengan lebih baik. Untuk saat ini, laman kita akan diunduh seperti ini:
+Dan sekarang kita memilikinya (lihat
+[kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-example.html)),
+versi asinkron penuh dari versi sinkron. Namun, kita dapat melakukan dengan lebih baik. Untuk saat ini,
+halaman kita didownload seperti ini:
 
 
 <figure>
   <img src="imgs/promise1.gif">
 </figure>
 
-Browser lumayan bagus dalam mengunduh beberapa item sekaligus, jadi kita akan kehilangan kinerja dengan mengunduh bab satu per satu. Yang ingin kita lakukan adalah mengunduh semuanya sekaligus, kemudian memprosesnya setelah semuanya tiba. Untunglah ada API untuk ini:
+Browser lumayan bagus dalam mendownload beberapa item sekaligus, jadi kita akan kehilangan
+performa dengan mendownload bab satu per satu. Yang ingin kita lakukan adalah
+mendownload semua item sekaligus, lalu memprosesnya setelah semua item tiba.
+Untunglah ada API untuk ini:
 
 
     Promise.all(arrayOfPromises).then(function(arrayOfResults) {
@@ -662,7 +816,9 @@ Browser lumayan bagus dalam mengunduh beberapa item sekaligus, jadi kita akan ke
 
 
 
-`Promise.all` menggunakan satu larik promise dan membuat sebuah promise yang akan melaksanakan bila semua berhasil diselesaikan. Anda mendapatkan sebuah larik hasil (promise apa pun yang dilaksanakan) dalam urutan yang sama dengan promise yang Anda teruskan padanya.
+`Promise.all` menggunakan array promise dan membuat promise yang akan terpenuhi
+jika semua berhasil diselesaikan. Anda mendapatkan array hasil (hasil
+apa pun yang terpenuhi oleh promise) dalam urutan yang sama dengan promise yang Anda teruskan.
 
 
 
@@ -689,25 +845,33 @@ Browser lumayan bagus dalam mengunduh beberapa item sekaligus, jadi kita akan ke
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-all-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-all-example.html)
 
-Bergantung pada koneksi, pemuatannya bisa beberapa detik lebih cepat daripada memuatnya satu per satu (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-all-example.html){: target="_blank" .external }), dan kodenya lebih sedikit dari percobaan pertama kita. Bab bisa diunduh dalam urutan apa pun, namun mereka muncul di layar dalam urutan yang tepat.
+Bergantung pada koneksi, pemuatannya dapat beberapa detik lebih cepat daripada memuatnya satu per satu (lihat
+[kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-all-example.html)),
+dan kodenya lebih sedikit dari percobaan pertama kita. Bab dapat didownload dalam urutan
+apa pun, namun bab muncul di layar dalam urutan yang tepat.
 
 
 <figure>
   <img src="imgs/promise2.gif">
 </figure>
 
-Akan tetapi, kita tetap bisa memperbaiki kinerja yang dirasakan. Bila bab satu masuk, kita harus menambahkannya ke laman. Hal ini memungkinkan pengguna mulai membaca sebelum bab selebihnya tiba. Bila bab tiga tiba, kita tidak akan menambahkannya ke laman karena pengguna mungkin tidak menyadari bab dua terlewat. Bila bab dua tiba, kita bisa menambahkan bab dua dan tiga, dst dst.
+Akan tetapi, kita tetap dapat memperbaiki performa yang dirasakan. Jika bab satu masuk, kita
+harus menambahkannya ke halaman. Tindakan ini memungkinkan pengguna mulai membaca sebelum
+bab selanjutnya tiba. Jika bab tiga masuk, kita tidak akan menambahkannya ke
+halaman karena pengguna mungkin tidak menyadari bab dua tidak ada. Jika bab dua masuk
+, kita dapat menambahkan bab dua dan tiga, dst.
 
-Caranya, kita ambil JSON untuk semua bab sekaligus, kemudian buat satu urutan untuk menambahkannya ke dokumen:
+Caranya, kita mengambil JSON untuk semua bab sekaligus, lalu membuat satu
+urutan untuk menambahkannya ke dokumen:
 
     getJSON('story.json').then(function(story) {
       addHtmlToPage(story.heading);
 
       // Map our array of chapter urls to
       // an array of chapter json promises.
-      // This makes sure they all download parallel.
+      // This makes sure they all download in parallel.
       return story.chapterUrls.map(getJSON)
         .reduce(function(sequence, chapterPromise) {
           // Use reduce to chain the promises together,
@@ -729,28 +893,41 @@ Caranya, kita ambil JSON untuk semua bab sekaligus, kemudian buat satu urutan un
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-best-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-best-example.html)
 
-Dan itulah tujuan kita (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-best-example.html){: target="_blank" .external }), yang terbaik dari keduanya! Dibutuhkan waktu yang sama untuk mengirim semua materi, namun pengguna mendapatkan bagian dari materi pertama lebih cepat.
+Dan itulah tujuan kita (lihat
+[kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-best-example.html)),
+yang terbaik dari keduanya! Dibutuhkan waktu yang sama untuk mengirim semua konten,
+namun pengguna mendapatkan bagian pertama konten lebih cepat.
 
 
 <figure>
   <img src="imgs/promise3.gif">
 </figure>
 
-Dalam contoh sepele ini, semua bab tiba kurang lebih sama waktunya, namun manfaat menampilkannya satu per satu akan menjadi berlebihan pada bab yang lebih banyak dan lebih besar.
+Dalam contoh kecil ini, semua bab masuk kurang lebih sama waktunya, namun
+manfaat menampilkannya satu per satu akan menjadi berlebihan pada bab yang lebih
+banyak dan lebih besar.
 
 
-Melakukan hal di atas dengan [kejadian atau callback bergaya Node.js](https://gist.github.com/jakearchibald/0e652d95c07442f205ce) akan menggandakan kode, namun yang lebih penting adalah tidak mudah mengikutinya. Akan tetapi, ini bukan akhir cerita untuk promise, bila dikombinasikan dengan fitur ES6 lainnya, maka akan lebih mudah lagi.
+Melakukan tindakan di atas dengan [callback atau
+peristiwa bergaya Node.js](https://gist.github.com/jakearchibald/0e652d95c07442f205ce) akan
+menggandakan kode, namun yang lebih penting adalah tidak mudah mengikutinya. Akan tetapi, ini
+bukan akhir cerita untuk promise, jika dikombinasikan dengan fitur ES6 lainnya,
+maka akan lebih mudah lagi.
 
 
 ## Ronde bonus: promise dan generator
 
 
-Bagian berikutnya ini melibatkan sekelompok fitur baru ES6, namun ini bukanlah sesuatu yang Anda perlukan untuk memahami penggunaan promise di kode Anda saat ini. Anggaplah ini seperti cuplikan film untuk beberapa fitur blockbuster yang akan datang.
+Bagian berikutnya ini membahas fitur baru ES6, namun Anda tidak
+memerlukannya untuk memahami penggunaan promise dalam kode Anda saat ini. Anggaplah ini seperti cuplikan
+film untuk beberapa fitur blockbuster yang akan datang.
 
-ES6 juga memberi kita [generator](http://wiki.ecmascript.org/doku.php?id=harmony:generators), yang memungkinkan fungsi keluar pada titik tertentu, seperti "kembali", namun kemudian melanjutkan dari titik dan keadaan yang sama, misalnya:
-
+ES6 juga memberi
+[generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators),
+yang memungkinkan fungsi keluar pada titik tertentu, seperti "kembali", namun
+kemudian melanjutkan dari titik dan keadaan yang sama, misalnya:
 
 
     function *addGenerator() {
@@ -761,7 +938,8 @@ ES6 juga memberi kita [generator](http://wiki.ecmascript.org/doku.php?id=harmony
     }
 
 
-Perhatikan tanda bintang sebelum nama fungsi, ini menjadikannya pembuat (generator). Kata kunci yield adalah titik kembali/melanjutkan. Kita bisa menggunakannya seperti ini:
+Perhatikan tanda bintang di depan nama fungsi, yang menjadikannya sebagai generator. Kata kunci
+yield adalah titik kembali/lanjutkan. Kita dapat menggunakannya seperti ini:
 
     var adder = addGenerator();
     adder.next().value; // 0
@@ -771,7 +949,11 @@ Perhatikan tanda bintang sebelum nama fungsi, ini menjadikannya pembuat (generat
     adder.next(50).value; // 65
 
 
-Namun apa artinya bagi promise? Baiklah, kita Anda bisa menggunakan perilaku kembali/lanjutkan ini untuk menulis kode async yang terlihat seperti (dan mudah diikuti seperti) kode sinkron. Jangan terlalu khawatir memahaminya baris per baris, di sini ada fungsi pembantu yang memungkinkan kita menggunakan `yield` untuk menunggu promise selesai:
+Namun apa artinya bagi promise? Anda dapat menggunakan perilaku kembali/lanjutkan
+ini untuk menulis kode asinkron yang terlihat seperti (dan mudah diikuti seperti)
+kode sinkron. Jangan terlalu khawatir memahaminya baris per baris,
+di sini ada fungsi pembantu yang memungkinkan kita menggunakan `yield` untuk menunggu promise
+selesai:
 
     function spawn(generatorFunc) {
       function continuer(verb, arg) {
@@ -794,7 +976,11 @@ Namun apa artinya bagi promise? Baiklah, kita Anda bisa menggunakan perilaku kem
     }
 
 
-… yang banyak saya [ambil kata demi kata dari Q](https://github.com/kriskowal/q/blob/db9220d714b16b96a05e9a037fa44ce581715e41/q.js#L500), namun telah diadaptasikan untuk promise JavaScript. Dengan ini, kita bisa mengambil contoh bab final kasus terbaik, mencampurnya dengan sekian kebaikan ES6 baru, dan mengubahnya menjadi:
+… yang banyak saya
+[ambil kata demi kata dari Q](https://github.com/kriskowal/q/blob/db9220d714b16b96a05e9a037fa44ce581715e41/q.js#L500),
+namun telah diadaptasikan untuk promise JavaScript. Dengan ini, kita dapat mengambil contoh
+bab final kasus terbaik, mencampurnya dengan banyak keunggulan ES6 baru, dan mengubahnya
+menjadi:
 
     spawn(function *() {
       try {
@@ -805,7 +991,7 @@ Namun apa artinya bagi promise? Baiklah, kita Anda bisa menggunakan perilaku kem
 
         // Map our array of chapter urls to
         // an array of chapter json promises.
-        // This makes sure they all download parallel.
+        // This makes sure they all download in parallel.
         let chapterPromises = story.chapterUrls.map(getJSON);
 
         for (let chapterPromise of chapterPromises) {
@@ -823,20 +1009,34 @@ Namun apa artinya bagi promise? Baiklah, kita Anda bisa menggunakan perilaku kem
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
+[Cobalah](https://googlesamples.github.io/web-fundamentals/fundamentals/primers/async-generators-example.html)
 
-Ini berfungsi persis seperti sebelumnya namun jauh lebih mudah dibaca. Ini berfungsi di Chrome dan Opera (lihat [kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), dan di Microsoft Edge dengan masuk ke `about:flags` dan mengaktifkan setelan **Enable experimental JavaScript features**. Ini akan diaktifkan secara default di versi mendatang.
+Ini berfungsi persis seperti sebelumnya namun jauh lebih mudah dibaca. Generator ini berfungsi di
+Chrome dan Opera saat ini (lihat
+[kode](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/primers/async-generators-example.html)),
+dan berfungsi di Microsoft Edge dengan membuka `about:flags` dan mengaktifkan
+setelan **Enable experimental JavaScript features**. Setelan ini akan
+diaktifkan secara default di versi mendatang.
 
 
-Ini akan melontarkan sekaligus banyak fitur baru ES6: promise, generator, let, for-of. Bila kita menyerahkan promise, spawn helper akan menunggu promise untuk ditangani dan mengembalikan nilai final. Jika promise ditolak, spawn akan menyebabkan pernyataan yield kita melontarkan pengecualian, yang bisa kita tangkap dengan try/catch JavaScript biasa. Pengkodean async yang sangat sederhana!
+Setelan ini menampilkan sekaligus banyak fitur baru ES6: promise, generator, let, for-of.
+Jika kita menyerahkan promise, spawn helper akan menunggu promise untuk diselesaikan dan
+mengembalikan nilai final. Jika promise ditolak, spawn akan menyebabkan pernyataan
+yield kita menampilkan pengecualian, yang dapat disimpan dengan try/catch
+JavaScript biasa. Pengkodean asinkron ini sangat sederhana.
 
 
-Pola ini begitu berguna, yang hadir di ES7 dalam bentuk [fungsi async](https://jakearchibald.com/2014/es7-async-functions/). Ini sangat mirip dengan di atas, namun tidak perlu metode `spawn`.
+Pola ini begitu berguna, sehingga hadir di ES7 dalam bentuk
+[fungsi asinkron](https://jakearchibald.com/2014/es7-async-functions/). Fungsi ini
+sama dengan yang di atas, namun tidak memerlukan metode `spawn`.
 
 
 ## Referensi Promise API {: #promise-api-reference }
 
-Semua metode berfungsi di Chrome, Opera, Firefox, Microsoft Edge, dan Safari kecuali jika dinyatakan berbeda. [Polyfill](https://github.com/jakearchibald/ES6-Promises#readme) menyediakan yang di bawah ini untuk semua browser.
+Semua metode berfungsi di Chrome, Opera, Firefox, Microsoft Edge, dan Safari
+, kecuali diberi catatan lain.
+[Polyfill](https://github.com/jakearchibald/ES6-Promises#readme) menyediakan
+di bawah untuk semua browser.
 
 
 ### Metode Statis
@@ -847,31 +1047,49 @@ Semua metode berfungsi di Chrome, Opera, Firefox, Microsoft Edge, dan Safari kec
 </tr>
 <tr>
   <td><code>Promise.resolve(promise);</code></td>
-  <td>Mengembalikan promise (hanya jika <code>promise.constructor == Promise</code>)</td>
+  <td>Menampilkan promise (hanya jika <code>promise.constructor == Promise</code>)</td>
 </tr>
 <tr>
   <td><code>Promise.resolve(thenable);</code></td>
-  <td>Membuat promise baru dari thenable. Thenable seperti promise asalkan ia memiliki metode `then()`.</td>
+  <td>
+    Membuat promise baru dari thenable. Thenable seperti promise asalkan
+    memiliki metode `then()`.
+  </td>
 </tr>
 <tr>
   <td><code>Promise.resolve(obj);</code></td>
-  <td>Membuat promise yang melaksanakan <code>obj</code>. dalam situasi ini.</td>
+  <td>Membuat promise yang memenuhi <code>obj</code>. dalam situasi ini.</td>
 </tr>
 <tr>
   <td><code>Promise.reject(obj);</code></td>
-  <td>Membuat promise yang menolak <code>obj</code>. Untuk konsistensi dan melakukan debug (mis. pelacakan tumpukan), <code>obj</code> harus berupa <code>instanceof Error</code>.</td>
+  <td>
+    Membuat promise yang menolak <code>obj</code>. Untuk konsistensi dan
+    debug (mis., pelacakan tumpukan), <code>obj</code> harus berupa
+    <code>instanceof Error</code>.
+  </td>
 </tr>
 <tr>
   <td><code>Promise.all(array);</code></td>
-  <td>Membuat promise yang melaksanakan bila setiap item di larik melaksanakan, dan menolak jika (dan bila) ada item yang menolak. Setiap item larik diteruskan ke <code>Promise.resolve</code>, sehingga larik bisa berupa campuran objek mirip promise dan objek lainnya. Nilai pelaksanaan adalah sebuah larik (dalam urutan) nilai pelaksanaan. Nilai penolakan adalah nilai penolakan pertama.</td>
+  <td>
+    Membuat promise yang terpenuhi jika setiap item di array terpenuhi, dan
+    menolak jika (dan saat) ada item yang menolak. Tiap item array diteruskan ke
+    <code>Promise.resolve</code>, sehingga array dapat berupa campuran
+    objek mirip promise dan objek lainnya. Nilai pemenuhan adalah
+    sebuah array (dalam urutan) nilai pemenuhan. Nilai penolakan adalah
+    nilai penolakan pertama.
+  </td>
 </tr>
 <tr>
   <td><code>Promise.race(array);</code></td>
-  <td>Membuat Promise yang melaksanakan begitu ada item yang dilaksanakan, atau menolak begitu ada item yang ditolak, mana saja yang terjadi lebih dahulu.</td>
+  <td>
+    Membuat Promise yang terpenuhi begitu ada item yang terpenuhi, atau menolak begitu
+    ada item yang ditolak, bergantung pada mana yang terjadi lebih dahulu.
+  </td>
 </tr>
 </table>
 
-Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalikan `Promise.all` yang hanya menolak jika semua item ditolak.
+Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka
+kebalikan `Promise.all` yang hanya menolak jika semua item ditolak.
 
 ### Konstruktor
 
@@ -884,25 +1102,26 @@ Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalik
   <td>
     <p>
       <code>resolve(thenable)</code><br>
-      Promise Anda akan dilaksanakan/ditolak bersama hasil <code>thenable</code>
+      Promise akan terpenuhi/ditolak berdasarkan hasil
+      <code>thenable</code>
     </p>
 
     <p>
       <code>resolve(obj)</code><br>
-      Promise Anda dilaksanakan bersama <code>obj</code>
+      Promise terpenuhi dengan <code>obj</code>
     </p>
 
     <p>
       <code>reject(obj)</code><br>
-      Promise Anda ditolak bersama <code>obj</code>. Untuk konsistensi dan 
-      debug (mis., pelacakan tumpukan), objek harus berupa <code>instanceof Error</code>.
-      Kesalahan yang dilontarkan di callback konstruktor akan diteruskan secara implisit
-      ke <code>reject()</code>.
+      Promise ditolak dengan <code>obj</code>. Untuk konsistensi dan
+      debug (mis, pelacakan tumpukan), obj harus berupa <code>instanceof
+      Error</code>.  Error yang ditampilkan di callback kontruktor akan
+      secara implisit diteruskan ke <code>reject()</code>.
     </p>
   </td>
 </tr>
 </table>
-    
+
 ### Metode Instance
 
 <table class="responsive methods">
@@ -912,15 +1131,15 @@ Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalik
 <tr>
   <td><code>promise.then(onFulfilled, onRejected)</code></td>
   <td>
-    <code>onFulfilled</code> dipanggil bila/jika "promise" dipastikan. 
-    <code>onRejected</code> dipanggil bila/jika "promise" ditolak. Keduanya
-    bersifat opsional, jika salah satu/keduanya ditinggalkan, 
-    <code>onFulfilled</code>/<code>onRejected</code> berikutnya di rangkaian akan dipanggil.
-    Kedua callback memiliki parameter tunggal, nilai pemenuhan atau 
-    alasan penolakan. <code>then()</code> mengembalikan promise baru yang setara dengan 
+    <code>onFulfilled</code> ditampilkan saat/jika "promise" selesai.
+    <code>onRejected</code> ditampilkan saat/jika "promise" ditolak. Keduanya
+    bersifat opsional, jika salah satu/keduanya ditinggalkan,
+    <code>onFulfilled</code>/<code>onRejected</code> berikutnya dalam chain akan ditampilkan.
+    Kedua callback memiliki satu parameter, nilai pemenuhan atau
+    alasan penolakan. <code>then()</code> menampilkan promise baru yang setara dengan
     nilai yang Anda kembalikan dari <code>onFulfilled</code>/<code>onRejected</code>
-    setelah diteruskan melalui <code>Promise.resolve</code>. Jika sebuah kesalahan
-    dilontarkan di callback, promise yang dikembalikan akan ditolak bersama kesalahan itu.
+    setelah diteruskan melalui <code>Promise.resolve</code>. Jika error
+    ditampilkan di callback, promise yang dikembalikan akan ditolak bersama error tersebut.
   </td>
 </tr>
 <tr>
@@ -929,11 +1148,16 @@ Note: Saya tidak percaya dengan kegunaan `Promise.race`; saya lebih suka kebalik
 </tr>
 </table>
 
+## Masukan {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
 
-Terima kasih banyak untuk Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, dan Yutaka Hirano yang telah memeriksa dan membuat koreksi/saran.
+<div class="clearfix"></div>
 
-Terima kasih juga kepada [Mathias Bynens](https://mathiasbynens.be/){: .external } yang telah [memperbarui beragam bagian](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) dari artikel ini.
+Terima kasih banyak untuk Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp,
+Addy Osmani, Arthur Evans, dan Yutaka Hirano yang telah memeriksa dan membuat
+koreksi/saran.
 
-
-{# wf_devsite_translation #}
+Terima kasih juga kepada [Mathias Bynens](https://mathiasbynens.be/) yang telah
+[memperbarui beragam bagian](https://github.com/html5rocks/www.html5rocks.com/pull/921/files)
+dari artikel ini.
