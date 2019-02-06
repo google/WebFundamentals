@@ -33,6 +33,8 @@ toc:
     section:
     - title: Blackbox Chrome Extension Scripts
       path: /web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts
+    - title: Disable JavaScript
+      path: /web/tools/chrome-devtools/javascript/disable
   - title: Deprecated
     section:
     - title: Step Through Code

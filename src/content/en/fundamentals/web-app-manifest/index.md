@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2018-12-11 #}
+{# wf_updated_on: 2019-01-31 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -19,7 +19,6 @@ Having a manifest is required by Chrome to show the
 
 A typical manifest file includes information about the app `name`, `icons` it
 should use, the `start_url` it should start at when launched, and more.
-
 
 ## Create the manifest
 
@@ -47,22 +46,18 @@ A complete `manifest.json` file for a progressive web app.
       "theme_color": "#3367D6"
     }
 
-
 Note: See the [add to home screen criteria](/web/fundamentals/app-install-banners/#criteria)
 for the specific properties that are required to show the add to home screen
 prompt.
-
 
 ## Tell the browser about your manifest
 
 When you have created the manifest, add a `link` tag to all the pages that
 encompass your web app:
 
-
     <link rel="manifest" href="/manifest.json">
 
 ## Key manifest properties
-
 
 ### `short_name` and/or `name` {: #name }
 
@@ -73,7 +68,6 @@ places where space may be limited. `name` is used in the
 
     "short_name": "Maps",
     "name": "Google Maps"
-
 
 ### `icons` {: #icons }
 
@@ -183,12 +177,17 @@ Users prefer selecting the orientation.
 ### `scope` {: #scope }
 
 The `scope` defines the set of URLs that the browser considers to be within your
-app, and is used to decide when the user has left the app, and should be bounced
-back out to a browser tab. The `scope` controls the URL structure that
-encompasses all the entry and exit points in your web app. Your `start_url`
-must reside within the `scope`.
+app, and is used to decide when the user has left the app. The `scope`
+controls the URL structure that encompasses all the entry and exit points in
+your web app. Your `start_url` must reside within the `scope`.
 
     "scope": "/maps/"
+
+Caution: If the user clicks a link in your app that navigates outside of the
+`scope`, the link will open and render within the existing the PWA window. If
+you want the link to open in a browser tab, you must add `target="_blank"`
+to the `<a>` tag. On Android, links with `target="_blank"` will open in a
+Chrome Custom Tab.
 
 A few other tips:
 
@@ -274,7 +273,6 @@ check out [Lighthouse](/web/tools/lighthouse/). Lighthouse is a web app auditing
 tool. It's built into the Audits tab of Chrome DevTools, or can be run as an NPM
 module. You provide Lighthouse with a URL, it runs a suite of audits against that
 page, and then displays the results in a report.
-
 
 ## What's next?
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 
-{# wf_updated_on: 2019-01-21 #}
+{# wf_updated_on: 2019-01-29 #}
 {# wf_published_on: 2011-12-09 #}
 {# wf_tags: news,binary,performance,workers #}
 {# wf_blink_components: N/A #}

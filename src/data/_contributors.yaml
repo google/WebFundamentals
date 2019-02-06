@@ -433,6 +433,23 @@ wdenniss:
   description:
     en: Google Identity Product Manager
 
+housseindjirdeh:
+  name:
+    given: Houssein
+    family: Djirdeh
+  org:
+    name: Google
+    unit: Developer Relations
+  homepage: https://houssein.me
+  country: USA
+  twitter: hdjirdeh
+  github: housseindjirdeh
+  role:
+    - author
+  email: houssein@google.com
+  description:
+    en: "Developer Advocate"
+
 robdodson:
   name:
     given: Rob
@@ -502,8 +519,22 @@ arthurevans:
   twitter: devdocdude
   github: arthurevans
   description:
-    en: Arthur is a Tech Writer
+    en: Arthur writes words about code
 
+justinfagnani: 
+  name:
+    given: Justin
+    family: Fagnani
+  org:
+    name: Google
+    unit: Chrome
+  role:
+    - author
+  homepage: 'http://justinfagnani.com/'
+  twitter: justinfagnani
+  github: justinfagnani
+  description:
+    en: Justin is a Software Engineer on the Polymer Project
 
 flackr:
   name:
@@ -746,6 +777,17 @@ yangguo:
   email: yangguo@google.com
   description:
     en: Yang is an engineer working on V8
+
+shampson:
+  name:
+    given: Seth
+    family: Hampson
+  org:
+    name: Google
+  country: US
+  email: maciej@unit9.com
+  description:
+    en: Software Engineer at Google working on WebRTC.
 
 umarhansa:
   name:
@@ -1516,6 +1558,18 @@ alexshalamov:
   email: alexander.shalamov@intel.com
   description:
     en: Alex is an Engineer at Intel
+
+sahel:
+  name:
+    given: Sahel
+    family: Sharify
+  org:
+    name: Google
+    unit: Software Engineer
+  country: CA
+  role:
+    - engineer
+  email: sahel@google.com
 
 glenshires:
   name:
