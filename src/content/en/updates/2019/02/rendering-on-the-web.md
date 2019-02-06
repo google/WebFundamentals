@@ -162,7 +162,7 @@ requiring personalization are a concrete example of the type of request that
 would not work well with static rendering.
 
 Server rendering can also present interesting decisions when building a [PWA].
-Is it better to use full-page [Service Worker] caching, or just server-render
+Is it better to use full-page [service worker] caching, or just server-render
 individual pieces of content?
 
 ## Client-Side Rendering (CSR) {: #csr }
@@ -191,7 +191,7 @@ more scalable solution to these issues.
 
 For folks building a Single Page Application, identifying core parts of the User
 Interface shared by most pages means you can apply the [Application Shell
-caching] technique. Combined with Service Workers, this can dramatically improve
+caching] technique. Combined with service workers, this can dramatically improve
 perceived performance on repeat visits.
 
 ## Combining server rendering and CSR via rehydration {: #rehydration }
@@ -258,8 +258,8 @@ synchronous) means backpressure is handled well.
 
 Progressive rehydration is also worth keeping an eye on, and something React has
 been [exploring](https://github.com/facebook/react/pull/14717). With this
-approach, individual pieces of a server-rendered application are “booted up”
-over time, rather than the current common approach of initializing the entire
+approach, individual pieces of a server-rendered application are “booted up”over
+time, rather than the current common approach of initializing the entire
 application at once. This can help reduce the amount of JavaScript required to
 make pages interactive, since client-side upgrading of low priority parts of the
 page can be deferred to prevent blocking the main thread. It can also help avoid
@@ -285,9 +285,9 @@ unavailable.
 
 ### Trisomorphic Rendering {: #trisomorphic }
 
-If [Service Workers] are an option for you, "trisomorphic" rendering may also be
+If [service workers] are an option for you, "trisomorphic" rendering may also be
 of interest. It's a technique where you can use streaming server rendering for
-initial/non-JS navigations, and then have your Service Worker take on rendering
+initial/non-JS navigations, and then have your service worker take on rendering
 of HTML for navigations after it has been installed. This can keep cached
 components and templates up to date and enables SPA-style navigations for
 rendering new views in the same session. This approach works best when you can
@@ -356,8 +356,8 @@ Sebastian Markbåge
 [memoization]: https://speakerdeck.com/maxnajim/hastening-react-ssr-with-component-memoization-and-templatization
 [HTML caching]: https://freecontent.manning.com/caching-in-react/
 [PWA]: https://developers.google.com/web/progressive-web-apps/
-[Service Worker]: https://developers.google.com/web/fundamentals/primers/service-workers/
-[Service Workers]: https://developers.google.com/web/fundamentals/primers/service-workers/
+[service worker]: https://developers.google.com/web/fundamentals/primers/service-workers/
+[service workers]: https://developers.google.com/web/fundamentals/primers/service-workers/
 [tight JavaScript budget]: https://mobile.twitter.com/HenrikJoreteg/status/1039744716210950144
 [RTTs]: https://en.wikipedia.org/wiki/Round-trip_delay_time
 [HTTP/2 Server Push]: https://www.smashingmagazine.com/2017/04/guide-http2-server-push/
