@@ -109,6 +109,10 @@ Generally, static rendering means producing a separate HTML file for each URL
 ahead of time. With HTML responses being generated in advance, static renders
 can be deployed to multiple CDNs to take advantage of edge-caching.
 
+<img src="../../images/2019/02/rendering-on-the-web/static-rendering-tti.png"
+alt="Diagram showing static rendering and optional JS execution affecting FCP
+and TTI" width="280">
+
 Solutions for static rendering come in all shapes and sizes. Tools like [Gatsby]
 are designed to make developers feel like their application is being rendered
 dynamically rather than generated as a build step. Others like [Jekyl] and
@@ -178,6 +182,9 @@ Critical scripts and data can be delivered sooner using [HTTP/2 Server Push] or
 `<link rel=preload>`, which gets the parser working for you sooner. Patterns
 like [PRPL] are worth evaluating in order to ensure initial and subsequent
 navigations feel instant.
+
+<img src="../../images/2019/02/rendering-on-the-web/client-rendering-tti.png"
+alt="Diagram showing client-side rendering affecting FCP and TTI" width="500">
 
 The primary downside to Client-Side Rendering is that the amount of JavaScript
 required tends to grow as an application grows. This becomes especially
