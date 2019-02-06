@@ -253,13 +253,13 @@ Server rendering has had a number of developments over the last few years.
 [Streaming server rendering] allows you to send HTML in chunks that the browser
 can progressively render as it's received. This can provide a fast First Paint
 and First Contentful Paint as markup arrives to users faster. In React, streams
-being asynchronous in [renderToNodeStream()] - compared to renderToString which
-is synchronous - means backpressure is handled well.
+being asynchronous in [renderToNodeStream()] - compared to synchronous
+renderToString - means backpressure is handled well.
 
 Progressive rehydration is also worth keeping an eye on, and something React has
 been [exploring](https://github.com/facebook/react/pull/14717). With this
-approach, individual pieces of a server-rendered application are “booted up”over
-time, rather than the current common approach of initializing the entire
+approach, individual pieces of a server-rendered application are “booted up”
+over time, rather than the current common approach of initializing the entire
 application at once. This can help reduce the amount of JavaScript required to
 make pages interactive, since client-side upgrading of low priority parts of the
 page can be deferred to prevent blocking the main thread. It can also help avoid
@@ -285,7 +285,7 @@ unavailable.
 
 ### Trisomorphic Rendering {: #trisomorphic }
 
-If [service workers] are an option for you, "trisomorphic" rendering may also be
+If [service workers] are an option for you, “trisomorphic” rendering may also be
 of interest. It's a technique where you can use streaming server rendering for
 initial/non-JS navigations, and then have your service worker take on rendering
 of HTML for navigations after it has been installed. This can keep cached
