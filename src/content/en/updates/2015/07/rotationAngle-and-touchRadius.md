@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A small set of changes have landed in Chrome 45 that will make it easier for developers to build better touch based apps
 
-{# wf_updated_on: 2015-07-20 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2015-07-20 #}
 {# wf_tags: news,android,touch #}
+{# wf_blink_components: N/A #}
 
 # Using rotationAngle and touchRadius {: .page-title }
 
@@ -122,7 +123,10 @@ read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6
 
 ## See Also
 
-* [Precision Touch Getures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
+* [Precision Touch Gestures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
 * [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

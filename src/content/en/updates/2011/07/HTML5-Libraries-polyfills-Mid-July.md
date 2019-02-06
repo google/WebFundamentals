@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-07-25 #}
 {# wf_tags: news #}
 {# wf_blink_components: N/A #}
@@ -20,3 +20,6 @@ More awesome libraries popping up all over the place:
 - [canvas-toBlob.js](https://github.com/eligrey/canvas-toBlob.js) - Polyfill for HTML5 canvas's `toBlob()` method, which is not implemented by any browsers.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-17 #}
 {# wf_tags: news,storage,filesystem #}
 {# wf_blink_components: N/A #}
@@ -26,3 +26,6 @@ During my [endeavors](http://shop.oreilly.com/product/0636920021360.do) with the
 5. <b>Don't forget about error callbacks</b>. The Filesystem API lives in an asynchronous world (unless you're using the sync version in Workers). Always use error callback in your API calls. They're optional, but you'll save yourself a lot of grief later on when things blow up.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

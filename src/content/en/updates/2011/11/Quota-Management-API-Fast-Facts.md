@@ -51,4 +51,5 @@ There’s various offline related features introduced to modern browsers through
 
 * The API is described in WebIDL here: [https://groups.google.com/a/chromium.org/forum/#!msg/chromium-html5/m-ei3ATZr2c/ZkO6ZkLSYVIJ](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-html5/m-ei3ATZr2c/ZkO6ZkLSYVIJ)
 
-
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

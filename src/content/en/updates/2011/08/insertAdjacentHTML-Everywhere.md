@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-27 #}
 {# wf_tags: news,dom #}
 {# wf_blink_components: N/A #}
@@ -19,7 +19,7 @@ book_path: /web/updates/_book.yaml
 </ul>
 <p>One can arguably say we also have <code>document.write</code> for few use cases.</p>
 <p>
-<code>innerHTML</code> has been standarized in HTML5 and with it a brother method <code><a href="http://w3c.github.io/html/#insertadjacenthtml">insertAdjacentHTML</a></code> which works as <code>innerHTML</code> but allows us to define more specifically where we want to insert the HTML content: beforeBegin, afterBegin, beforeEnd and afterEnd.
+<code>innerHTML</code> has been standardized in HTML5 and with it a brother method <code><a href="http://w3c.github.io/html/#insertadjacenthtml">insertAdjacentHTML</a></code> which works as <code>innerHTML</code> but allows us to define more specifically where we want to insert the HTML content: beforeBegin, afterBegin, beforeEnd and afterEnd.
 </p>
 
 
@@ -39,3 +39,6 @@ Until now, the main issue with insertAdjacentHTML has been its lack of browser s
 </p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

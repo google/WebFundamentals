@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-07-14 #}
 {# wf_tags: news,webaudio,websockets,connectivity #}
 {# wf_blink_components: N/A #}
@@ -15,3 +15,6 @@ Using the Web Audio API, WebSockets and a very nice designed UI here comes a <a 
 We will keep posting quick updates with the demos that developers around the world make with HTML5.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -4,7 +4,7 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2012-01-09 #}
 {# wf_tags: news,webaudio,multimedia #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Blink>WebAudio #}
 
 # Web Audio FAQ {: .page-title }
 
@@ -14,7 +14,7 @@ book_path: /web/updates/_book.yaml
 Over the past few months, the WebKit [Web Audio API](https://webaudio.github.io/web-audio-api/) has emerged as a compelling platform for games and audio applications on the web. As developers familiarize themselves with it, I hear similar questions creep up repeatedly. This quick update is an attempt to address some of the more frequently asked questions to make your experience with the Web Audio API more pleasant.
 
 
-### Q: Halp, I can't make sounds!
+### Q: Help, I can't make sounds!
 
 A: If you're new to the Web Audio API, take a look at the [getting started tutorial](https://www.html5rocks.com/en/tutorials/webaudio/intro/){: .external }, or Eric's recipe for [playing audio based on user interaction](https://ericbidelman.tumblr.com/post/13471195250/web-audio-api-how-to-playing-audio-based-on-user).
 
@@ -113,3 +113,6 @@ A: Currently there is no support for this, but we’re looking into it. See [thi
 If you have additional questions, feel free to ask them on StackOverflow using the [web-audio](https://stackoverflow.com/questions/tagged/web-audio?sort=newest&pagesize=50) tag.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

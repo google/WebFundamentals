@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn about Web Animation Playback
 
-{# wf_updated_on: 2014-12-04 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2014-12-04 #}
 {# wf_tags: news,webanimations #}
+{# wf_blink_components: Blink>Animation #}
 
 # Web Animations Playback Control in Chrome 39 {: .page-title }
 
@@ -152,7 +153,7 @@ This creates an additional animation that performs a 'drift'. This plays between
 
 This works as animations have a priority based on their creation order: in this case, `driftPlayer` will take precedence over player. When `driftPlayer` completes, it and its effects will disappear. However, its final time will match the underlying player's currentTime, so your UI will remain consistent.
 
-Finally, if you like kittens, there's a [demo web application](http://whistlr.info/static/stuff/player/index.html) which shows off these gestures. It's mobile-friendly and uses the polyfill for backwards-compatability, so try loading it on your mobile device!
+Finally, if you like kittens, there's a [demo web application](http://whistlr.info/static/stuff/player/index.html) which shows off these gestures. It's mobile-friendly and uses the polyfill for backwards-compatibility, so try loading it on your mobile device!
 
 
 
@@ -165,3 +166,6 @@ These two features are also fully supported in other modern browsers [via a ligh
 The Web Animations spec will also continue to evolve. If you're interested in playing around with upcoming features, they're also available now in a [more detailed polyfill: web-animations-next](https://github.com/web-animations/web-animations-js#web-animations-nextminjs).
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}
