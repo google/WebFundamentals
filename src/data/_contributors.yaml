@@ -521,7 +521,7 @@ arthurevans:
   description:
     en: Arthur writes words about code
 
-justinfagnani: 
+justinfagnani:
   name:
     given: Justin
     family: Fagnani
@@ -1050,6 +1050,20 @@ kosamari:
   email: kosamari@google.com
   description:
     en: Mariko is a drawsplainer
+
+koto:
+  name:
+    given: Krzysztof
+    family: Kotowicz
+  country: CH
+  org:
+    name: Google
+    unit: Infomation Security Engineering
+  role:
+    - author
+  email: koto@google.com
+  description:
+    en: "Software Engineer in a Security Team at Google"
 
 mustafa:
   name:
