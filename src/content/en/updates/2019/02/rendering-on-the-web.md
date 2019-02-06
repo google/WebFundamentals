@@ -10,7 +10,7 @@ book_path: /web/updates/_book.yaml
 
 # Rendering on the Web {: .page-title }
 
-{% include "web/_shared/contributors/jasonjmiller.html" %}
+{% include "web/_shared/contributors/developit.html" %}
 {% include "web/_shared/contributors/addyosmani.html" %}
 
 As developers, we are often faced with decisions that will affect the entire
@@ -253,8 +253,8 @@ Server rendering has had a number of developments over the last few years.
 [Streaming server rendering] allows you to send HTML in chunks that the browser
 can progressively render as it's received. This can provide a fast First Paint
 and First Contentful Paint as markup arrives to users faster. In React, streams
-being asynchronous in [renderToNodeStream()] (vs renderToString which is
-synchronous) means backpressure is handled well.
+being asynchronous in [renderToNodeStream()] - compared to renderToString which
+is synchronous - means backpressure is handled well.
 
 Progressive rehydration is also worth keeping an eye on, and something React has
 been [exploring](https://github.com/facebook/react/pull/14717). With this
@@ -311,13 +311,6 @@ server-client spectrum:
 alt="Infographic showing the spectrum of options described in this article">
 
 
-
-## Feedback {: .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}
-
-<div class="clearfix"></div>
-
 ## Credits {: #credits }
 
 Thanks to everyone for their reviews and inspiration:
@@ -327,6 +320,12 @@ Houssein Djirdeh,
 Shubhie Panicker,
 Chris Harrelson, and
 Sebastian Markbåge
+
+<div class="clearfix"></div>
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
 
 
 [First Paint]: https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_paint_and_first_contentful_paint
