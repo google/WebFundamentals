@@ -1,57 +1,47 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Uma análise detalhada do ciclo de vida dos service workers.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2016-09-29 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # O ciclo de vida do Service Worker {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
-O ciclo de vida de um service worker é a parte mais complicada. Se você não
-sabe o que ele está tentando fazer e quais são os benefícios que ele gera, pode parecer que ele atua
-contra você. Mas, depois que se entende como ele funciona, pode-se fornecer atualizações fáceis
-e discretas aos usuários, misturando o melhor da web com o melhor dos padrões nativos.
+O ciclo de vida do service worker é a parte mais complicada.
+Se você não souber o que ele está tentando fazer nem os benefícios que ele traz, pode parecer que ele só atrapalha.
+Mas ao entender como ele funciona, é possível oferecer atualizações fáceis e discretas aos usuários, combinando o melhor da Web com o melhor dos padrões nativos.
 
-Essa é uma análise detalhada, mas os tópicos no início de cada seção abordam boa parte do
-que você precisa saber.
+Essa é uma análise detalhada, mas os tópicos no início de cada seção abordam boa parte do que você precisa saber.
 
 ## A intenção
 
-A intenção do ciclo de vida é:
+O intent do ciclo de vida é:
 
-* Poder começar o desenvolvimento com base no off-line.
-* Permitir que um novo service worker se prepare sem prejudicar o
-  atual.
-* Garantir que uma página de dentro do escopo seja totalmente controlada pelo mesmo service worker (ou por
-  nenhum).
-* Garantir que só haja uma versão do seu site sendo executada por vez.
+* possibilitar o início do desenvolvimento off-line;
+* permitir que um novo service worker se prepare sem prejudicar o atual;
+* garantir que uma página de dentro do escopo seja totalmente controlada pelo mesmo service worker (ou por nenhum);
+* garantir que só uma versão do seu site seja executada por vez.
 
-Esse último ponto é muito importante. Sem os service workers, os usuários podem carregar
-uma guia do seu site e depois abrir outra. Isso pode fazer com que haja duas versões do
-seu site em execução ao mesmo tempo. Às vezes, não tem problema, mas se você lida com
-armazenamento, pode facilmente terminar com duas abas tendo opiniões diferentes
-sobre como gerenciar o armazenamento compartilhado. Isso pode gerar erros, ou
-pior: perda de dados.
+Esse último ponto é muito importante.
+Sem os service workers, os usuários podem carregar uma guia do site e depois abrir outra.
+Isso pode fazer com que haja duas versões do seu site em execução ao mesmo tempo.
+Às vezes, não tem problema, mas se você lidar com armazenamento, pode facilmente terminar com duas guias tendo opiniões diferentes sobre como gerenciar o armazenamento compartilhado.
+Isso pode gerar erros, ou pior: perda de dados.
 
-Warning: os usuários odeiam perda de dados. Eles ficam extremamente desapontados.
+Atenção: os usuários odeiam perda de dados. Eles ficam extremamente desapontados.
 
-## O primeiro service worker
+## O primeiro service worker resumido
 
 Resumindo:
 
-* O evento `install` é o primeiro evento que um service worker recebe, e ele só
-  acontece uma vez.
-* Uma promessa passada a `installEvent.waitUntil()` sinaliza a duração e
-  o êxito ou uma falha na instalação.
-* Um service worker não receberá eventos como `fetch` e `push` até
-  finalizar com sucesso a instalação e ficar "ativo".
-* Por padrão, as buscas de uma página não passar por um service worker a menos que a solicitação
-  da página tenha passado por um. Por isso, você precisaria atualizar a
-  página para ver os efeitos do service worker.
-* `clients.claim()` pode suspender esse padrão e assumir o controle de
-  páginas não controladas.
+* O evento `install` é o primeiro evento que um service worker recebe e só acontece uma vez.
+* Uma promessa passada a `installEvent.waitUntil()` sinaliza a duração e o êxito ou uma falha na instalação.
+* Um service worker não receberá eventos como `fetch` e `push` até finalizar com sucesso a instalação e ficar "ativo".
+* Por padrão, as buscas de uma página não passam por um service worker a menos que a solicitação da página tenha passado por um. Por isso, você precisaria atualizar a página para ver os efeitos do service worker.
+* `clients.claim()` pode modificar esse padrão e assumir o controle de páginas não controladas.
 
 <style>
   .framebox-container-container {
@@ -76,9 +66,16 @@ Resumindo:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -216,7 +213,7 @@ Resumindo:
 Veja este HTML:
 
     <!DOCTYPE html>
-    An image will appear here in 3 seconds:
+    Uma imagem aparecerá em três segundos:
     <script>
       navigator.serviceWorker.register('/sw.js')
         .then(reg => console.log('SW registered!', reg))
@@ -229,9 +226,9 @@ Veja este HTML:
       }, 3000);
     </script>
 
-Ele registra um service worker e adiciona a imagem de um cachorro após 3 segundos.
+Ele registra um service worker e adiciona a imagem de um cachorro após três segundos.
 
-Conheça o service worker registrado, `sw.js`:
+Este é o service worker, `sw.js`:
 
     self.addEventListener('install', event => {
       console.log('V1 installing…');
@@ -256,127 +253,78 @@ Conheça o service worker registrado, `sw.js`:
       }
     });
 
-Ele armazena uma imagem de um gato em cache e entrega-a sempre que há uma solicitação de
-`/dog.svg`. Porém, se você [executar o exemplo
-acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, verá um cachorro na primeira vez que carregar a página. Atualize e
-você verá o gato.
+Ele armazena uma imagem de um gato em cache e a disponibiliza sempre que há uma solicitação de `/dog.svg`. Porém, se você [executar o exemplo acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }, verá um cachorro na primeira vez que carregar a página. Atualize e você verá o gato.
 
-Observação: gatos são melhores que cachorros. Porque *sim*.
+Note: gatos são melhores que cachorros. Porque *sim*.
 
 ### Escopo e controle
 
-O escopo padrão do registro de um service worker é `./` em relação ao
-URL do script. Isso significa que se você registrar um service worker em
-`//example.com/foo/bar.js`, seu escopo padrão será `//example.com/foo/`.
+O escopo padrão do registro de um service worker é `./` em relação ao URL do script. Isso significa que se você registrar um service worker em `//example.com/foo/bar.js`, seu escopo padrão será `//example.com/foo/`.
 
-Chamamos de páginas, workers e `clients` dos workers compartilhados. Seu service worker só
-pode controlar clientes que estejam no escopo. Quando um cliente é "controlado", suas
-buscas passam pelo service worker em escopo. Você pode detectar se um cliente é
-controlado por `navigator.serviceWorker.controller`, que será "null" ou uma instância do
-service worker.
+Chamamos de páginas, workers e `clients` dos workers compartilhados. Seu service worker só pode controlar clientes que estejam no escopo. Quando um cliente é "controlado", suas buscas passam pelo service worker em escopo. Você pode detectar se um cliente é controlado por `navigator.serviceWorker.controller`, que será "null" ou uma instância do service worker.
 
-### Baixar, analisar e executar
+### Fazer o download, analisar e executar
 
-Seu primeiro service worker é baixado quando você chama `.register()`. Se o seu
-script falhar em baixar, analisar ou acionar um erro na execução inicial,
-a promessa de registro é rejeitada e o service worker é descartado.
+Seu primeiro service worker é transferido quando você chama `.register()`. Caso seu script falhe ao fazer o download, analisar ou se acionar um erro na execução inicial, a promessa de registro será rejeitada e o service worker será descartado.
 
-O Chrome DevTools exibe o erro no console e na seção
-dos service workers na guia "Application":
+O Chrome DevTools exibe o erro no console e na seção de service workers na guia "Application":
 
 <figure>
-  <img src="images/register-fail.png" class="browser-screenshot" alt="Erro exibido na guia Service Worker do DevTools">
+  <img src="images/register-fail.png" class="browser-screenshot" alt="Erro exibido na guia Service Worker do DevTools"/>
 </figure>
 
-### Instalação
+### Instalar
 
-O primeiro evento que um service worker recebe é `install`. Esse evento é acionado assim que
-o worker é executado e só é chamado uma vez por service worker. Se
-você alterar o script do service worker, o navegador o considerará um service
-worker diferente e ele receberá o próprio evento `install`. Falarei sobre [atualizações em detalhes
-mais para a frente](#updates).
+O primeiro evento que um service worker recebe é `install`. Esse evento é acionado assim que o worker é executado e só é chamado uma vez por service worker. Se você alterar o script do service worker, o navegador o considerará um service worker diferente e ele receberá o próprio evento `install`. Falarei sobre [atualizações em detalhes mais tarde](#updates).
 
-O evento `install` é a sua chance de armazenar em cache tudo de que precisa antes de poder
-controlar clientes. A promessa que você passa a `event.waitUntil()` permite que o navegador
-saiba quando a instalação acaba e se foi concluída com sucesso.
+O evento `install` é sua chance de armazenar em cache tudo de que você precisa antes de poder controlar clientes. A promessa que você passa a `event.waitUntil()` permite que o navegador saiba quando a instalação acaba e se foi concluída com sucesso.
 
-Se a promessa for rejeitada, significa que houve um erro na instalação, e o navegador descarta
-o service worker. Ele nunca controlará clientes. Isso significa que podemos depender de
-"cat.svg" estar presente no cache em nossos eventos `fetch`. É uma dependência.
+Se a promessa for rejeitada, significa que houve um erro na instalação, e o navegador descarta o service worker. Ele nunca controlará clientes. Isso significa que não podemos depender de "cat.svg" estar presente no cache nos eventos `fetch`. É uma dependência.
 
-### Ativação
+### Ativar
 
-Quando o service worker está pronto para controlar clientes e gerenciar eventos
-funcionais como `push` e `sync`, você obterá um evento `activate`. Mas não
-significa que a página que chamou `.register()` será controlada.
+Quando o service worker estiver pronto para controlar clientes e gerenciar eventos funcionais como `push` e `sync`, você terá um evento `activate`. Mas isso não significa que a página que chamou `.register()` será controlada.
 
-Na primeira vez em que você carregar [a
-demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}, muito embora `dog.svg` seja solicitado bem depois de o service worker
-ser ativado, ele não gerenciará a solicitação e você ainda verá a imagem do
-cachorro. O padrão é *consistência*. Se sua página carrega sem um service worker,
-seus sub-recursos também carregarão dessa forma. Se você carregar [a
-demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external} pela segunda vez (em outras palavras, atualizar a página), ela será controlada.
-As duas páginas e as duas imagens passarão por eventos `fetch` e você verá um gato
-dessa vez.
+Na primeira vez que você carregar [a demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }, mesmo que `dog.svg` seja solicitado bem depois de o service worker ser ativado, ele não gerenciará a solicitação e você ainda verá a imagem do cachorro. O padrão é *consistência*. Caso sua página carregue sem um service worker, seus sub-recursos também carregarão dessa forma. Se você carregar [a demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external } uma segunda vez (em outras palavras, se atualizar a página), ela será controlada. A página e a imagem passarão por eventos `fetch`, e você verá um gato.
 
 ### clients.claim
 
-Você pode assumir o controle de clientes não controlados chamando `clients.claim()` dentro
-do service worker quando ele estiver ativo.
+Você pode controlar clientes fora do controle chamando `clients.claim()` dentro do service worker quando ele estiver ativo.
 
-Veja uma [variação da demonstração
-acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){:
-.external}, em que `clients.claim()` é chamado no evento `activate`. Você *deve* ver
-um gato na primeira vez. Digo *deve* porque, nesse caso, há uma condição de tempo. Você só
-verá um gato se o service worker for ativado e `clients.claim()` entrar em vigor
-antes de acontecer uma tentativa de carregamento da imagem.
+Veja uma [variação da demonstração acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){: .external }, em que `clients.claim()` é chamado no evento `activate`. Você *deve* ver um gato na primeira vez. Digo *deve* porque, nesse caso, há uma condição de tempo. Você só verá um gato se o service worker for ativado e `clients.claim()` entrar em vigor antes de acontecer uma tentativa de carregamento da imagem.
 
-Se você usar o service worker para carregar páginas de forma diferente de como elas são carregadas
-pela rede, `clients.claim()` pode ser um problema, já que o service worker
-acaba controlando alguns clientes que carregaram sem ele.
+Se você usar o service worker para carregar páginas de forma diferente de como elas são carregadas pela rede, `clients.claim()` poderá ser um problema, já que o service worker acaba controlando alguns clientes que carregaram sem ele.
 
-Observação: vejo muitas pessoas incluindo `clients.claim()` para todas as ocasiões, mas eu
-raramente faço isso. Ele só é importante no primeiro carregamento e, devido ao
-Progressive Enhancement, a página normalmente funciona muito bem sem um service
-worker.
+Note: vejo muitas pessoas incluindo `clients.claim()` em todos os casos, mas eu raramente faço isso. Ele só é importante no primeiro carregamento e, devido ao aprimoramento progressivo, a página normalmente funciona muito bem sem um service worker.
 
-## Como atualizar o service worker {: #updates}
+## Atualizar o service worker {: #updates}
 
-Resumindo:
+Em resumo:
 
 * Uma atualização é acionada:
-    * Na navegação, para uma página em escopo.
-    * Em eventos funcionais como `push` e `sync`, a menos que tenha ocorrido uma
-      verificação de atualização nas últimas 24 horas.
-    * Na chamada de `.register()` *somente se* o URL do service worker tiver mudado.
-* Os cabeçalhos de armazenamento em cache do script do service worker são respeitados (até 24
-  horas) quando se busca atualizações. Vamos tornar esse comportamento opcional, já que
-  ele deixa as pessoas em situação difícil. Você provavelmente quer `max-age` de 0 no script do seu
-  service worker.
-* Seu service worker é considerado atualizado se for diferente, em nível de byte, do que
-  o navegador já tem (estamos ampliando isso para incluir scripts/módulos
-  importados também).
-* O service worker atualizado é inicializado junto com o que já existe e recebe
-  seu próprio evento `install`.
-* Se o novo worker tiver um código de status diferente de "ok" (por exemplo, 404), falhar em analisar, acionar
-  um erro durante a execução ou for rejeitado durante a instalação, ele será descartado,
-  mas o atual continua ativo.
-* Depois de instalado com sucesso, o worker atualizado espera (`wait`) até que o worker
-  existente não esteja controlando nenhum cliente (observe que os clientes se sobrepõe durante uma
-  atualização).
-* `self.skipWaiting()` evita a espera, o que significa que o service worker
-  é ativado assim que a instalação é concluída.
+    * na navegação para uma página no escopo;
+    * em eventos funcionais como `push` e `sync`, a menos que tenha ocorrido uma verificação de atualização nas últimas 24 horas;
+    * na chamada de `.register()` *somente se* o URL do service worker tiver mudado.
+* A maioria dos navegadores, incluindo [Chrome 68 e versões posteriores](/web/updates/2018/06/fresher-sw), ignoram por padrão os cabeçalhos de cache ao verificar atualizações do script do service worker registrado. Eles ainda respeitam os cabeçalhos de cache ao buscarem recursos carregados em um service worker via `importScripts()`. Você pode modificar esse comportamento padrão definindo a opção [`updateViaCache`](/web/updates/2018/06/fresher-sw#updateviacache) ao registrar seu service worker.
+* Seu service worker é considerado atualizado se for diferente, em nível de byte, do que o navegador já tem. Estamos ampliando isso para incluir scripts/módulos importados também. * O service worker atualizado é inicializado junto com o que já existe e recebe o próprio evento `install`.
+* Se o novo worker tiver um código de status diferente de "ok" (por exemplo, 404), falhar em analisar, acionar um erro durante a execução ou for rejeitado durante a instalação, ele será descartado, mas o atual continuará ativo.
+* Depois de instalado, o worker atualizado espera (`wait`) até que o existente não esteja controlando nenhum cliente. Observe que os clientes se sobrepõem durante uma atualização.
+* `self.skipWaiting()` evita a espera, o que significa que o service worker é ativado assim que a instalação é concluída.
 
 <div class="framebox-container-container">
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -539,10 +487,9 @@ Resumindo:
 </div>
 </div>
 
-Digamos que tenhamos alterado o script do nosso service worker para responder a uma imagem de
-um cavalo em vez de a de um gato:
+Digamos que tenhamos alterado o script do nosso service worker para responder a uma imagem de um cavalo em vez de a de um gato:
 
-    const expectedCaches = ['static-v2'];
+     const expectedCaches = ['static-v2'];
 
     self.addEventListener('install', event => {
       console.log('V2 installing…');
@@ -579,92 +526,52 @@ um cavalo em vez de a de um gato:
       }
     });
 
-Observação: não tenho uma opinião relevante sobre os cavalos.
+Note: eu não tenho uma opinião relevante sobre cavalos.
 
-[Dê uma olhada em uma demonstração do
-mencionado acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}. Você ainda verá a imagem de um gato. Veja por que...
+[Confira uma demonstração da informação acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }.
+Você ainda verá a imagem de um gato. Veja porque…
 
-### Instalação
+### Instalar
 
-Veja que eu mudei o nome do cache de `static-v1` para `static-v2`. Isso
-significa que posso configurar o novo cache sem apagar nada no primeiro,
-que o service worker antigo ainda está usando.
+Veja que mudei o nome do cache de `static-v1` para `static-v2`. Isso significa que posso configurar o novo cache sem apagar nada no primeiro, que o service worker antigo ainda está usando.
 
-Esse padrão cria caches específicos de cada versão, o que se parece com como um aplicativo nativo
-agruparia ativos em seu executável. Você também pode ter caches que não sejam específicos
-de versão, como `avatars`.
+Esse padrão cria caches específicos de cada versão, o que se parece com a forma que um aplicativo nativo agruparia recursos no próprio executável. Você também pode ter caches que não sejam específicos de versão, como `avatars`.
 
 ### Aguardando
 
-Depois de instalado com sucesso, o service worker atualizado atrasa a ativação
-até que o service worker existente não esteja mais controlando nenhum cliente. Esse estado
-é chamado de "espera" e é como o navegador garante que somente uma versão do
-seu service worker fique em execução por vez.
+Depois de instalado, o service worker atualizado atrasa a ativação até que o existente não esteja mais controlando nenhum cliente. Esse estado é chamado de "espera" e é como o navegador garante que somente uma versão do seu service worker fique em execução por vez.
 
-Se você executou [a demonstração
-atualizada](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, deve continuar vendo a imagem de um gato, porque o worker versão 2
-ainda não foi ativado. É possível ver o novo service worker aguardando na
-guia "Application" do DevTools:
+Se você tiver executado [a demonstração atualizada](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, deve continuar vendo a imagem de um gato, porque o worker versão 2 ainda não foi ativado. É possível ver o novo service worker aguardando na guia "Application" do DevTools:
 
 <figure>
-  <img src="images/waiting.png" class="browser-screenshot" alt="DevTools exibindo o novo service worker esperando">
+  <img src="images/waiting.png" class="browser-screenshot" alt="DevTools exibindo o novo service worker esperando"/>
 </figure>
 
-Mesmo que você só tenha uma guia aberta para a demonstração, atualizar a página não é suficiente
-para permitir que a nova versão assuma. Isso acontece por causa da forma com que as navegações nos navegadores funcionam.
-Quando você navega, a página atual não é descartada até que os cabeçalhos de resposta
-sejam recebidos, e mesmo assim, se a resposta tiver um
-cabeçalho `Content-Disposition`, a página atual pode continuar lá. Por causa dessa sobreposição, o service worker atual
-está sempre controlando um cliente durante uma atualização.
+Mesmo que você só tenha uma guia aberta para a demonstração, atualizar a página não é suficiente para permitir que a nova versão assuma. Isso acontece por causa da forma com que as navegações nos navegadores funcionam. Quando você navega, a página atual não é descartada até que os cabeçalhos de resposta sejam recebidos, e mesmo assim, se a resposta tiver um cabeçalho `Content-Disposition`, a página atual pode continuar lá. Por causa dessa sobreposição, o service worker atual está sempre controlando um cliente durante uma atualização.
 
-Para receber a atualização, feche ou saia de todas as guias usando o service worker
-atual. Depois, quando [navegar de volta para
-a demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, você verá o cavalo.
+Para receber a atualização, feche ou saia de todas as guias usando o service worker atual. Depois, quando [navegar de volta para a demonstração](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, você verá o cavalo.
 
-Esse padrão é parecido com o processo de atualização do Chrome. As atualizações do Chrome são baixadas em
-segundo plano, mas não se aplicam até que o Chrome seja reiniciado. Enquanto isso, você pode
-continuar usando a versão atual sem interrupção. No entanto, isso é um problema
-durante o desenvolvimento, mas o DevTools tem formas de facilitar, o que é um dos
-[próximos assuntos deste artigo](#devtools).
+Esse padrão é parecido com o processo de atualização do Chrome. O download das atualizações do Chrome é feito em segundo plano, mas elas não são aplicadas até que o Chrome seja reiniciado. Enquanto isso, você pode continuar usando a versão atual sem interrupção. No entanto, isso é um problema durante o desenvolvimento, mas o DevTools tem formas de facilitar, o que é um dos [próximos assuntos deste artigo](#devtools).
 
-### Ativação
+### Ativar
 
-A ativação dispara quando o service worker antigo é descartado e seu novo service worker está
-pronto para controlar clientes. Esse é o momento ideal para fazer coisas que não dá
-para fazer enquanto o worker antigo ainda está em uso, como migrar bancos de dados e apagar
-caches.
+Isso dispara quando o service worker antigo é descartado e seu novo service worker está pronto para controlar clientes. Esse é o momento ideal para fazer o que não é possível fazer enquanto o worker antigo ainda está em uso, como migrar bancos de dados e apagar caches.
 
-Na demonstração acima, mantenho uma lista de caches que espero que estejam lá e, no
-evento `activate`, me livro de todo o resto, o que remove o antigo
-cache `static-v1`.
+Na demonstração acima, deixo uma lista de caches que espero que estejam lá e, no evento `activate`, me livro de todo o resto, o que remove o antigo cache `static-v1`.
 
-Warning: você pode não estar atualizando a versão antiga. Pode ser um service worker de muitas versões atrás.
+Atenção: você pode não estar atualizando a versão anterior. Talvez este seja o service worker de muitas versões atrás.
 
-Se você passar uma promessa `event.waitUntil()`, ele carregará em buffer os eventos funcionais
-(`fetch`, `push`, `sync` etc) até a promessa ser processada. Então, quando o evento `fetch`
-dispara, a ativação está completa.
+Se você passar uma promessa `event.waitUntil()`, ele carregará em buffer os eventos funcionais (`fetch`, `push`, `sync` etc.) até a promessa ser processada. Então, quando o evento `fetch` é acionado, a ativação está completa.
 
-Warning: a API de armazenamento em cache é o "armazenamento de origem" (como localStorage e
-IndexedDB). Se você tem muitos sites na mesma origem (por exemplo,
-`yourname.github.io/myapp`) tome cuidado para não excluir o cache dos outros
-sites. Para evitar isso, dê ao cache um nome com prefixo único relacionado ao site atual,
-por exemplo, `myapp-static-v1`, e não toque neles a menos que comecem com `myapp-`.
+Atenção: a API de armazenamento em cache é o "armazenamento de origem" (como localStorage e IndexedDB). Se você tiver muitos sites na mesma origem (por exemplo, `yourname.github.io/myapp`) tome cuidado para não excluir o cache dos outros sites. Para evitar isso, dê ao cache um nome com prefixo único relacionado ao site atual, por exemplo, `myapp-static-v1`, e não toque neles a menos que comecem com `myapp-`.
 
 ### Pular a fase de espera
 
-A fase de espera indica que você está executando apenas uma versão do site de cada vez,
-mas não é preciso esperar esse recurso. Você pode ativar o novo service
-worker antes chamando `self.skipWaiting()`.
+A fase de espera indica que você está executando apenas uma versão do site de cada vez, mas não é preciso aguardar esse recurso. Você pode ativar o novo service worker antes chamando `self.skipWaiting()`.
 
-Isso faz com que o service worker remova o worker atualmente ativo e ative-se
-assim que entra na fase de espera (ou imediatamente se já estiver na
-fase de espera). Ele *não* faz com que o worker pule a instalação, somente a espera.
+Isso faz com que o service worker remova o worker atualmente ativo e ative-se assim que entrar na fase de espera (ou imediatamente se já estiver na fase de espera). Ele *não* faz com que o worker pule a instalação, somente a espera.
 
-Não faz diferença quando se chama `skipWaiting()`, desde que seja durante ou
-antes da espera. É muito comum chamá-lo no evento `install`:
+Não faz diferença quando se chama `skipWaiting()`, desde que seja durante ou antes da espera. É muito comum chamá-lo no evento `install`:
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -674,109 +581,75 @@ antes da espera. É muito comum chamá-lo no evento `install`:
       );
     });
 
-Mas, você pode querer chamá-lo como resultado de um `postMessage()` ao service
-worker. Por exemplo, usar `skipWaiting()` após uma interação do usuário.
+Talvez você queira chamá-lo como resultado de um `postMessage()` ao service worker. Por exemplo, usar `skipWaiting()` após uma interação do usuário.
 
-[Veja uma demonstração que usa
-`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
-.external}. Você deve ver a imagem de uma vaca sem ter que sair.
-Como com `clients.claim()`, é uma corrida, então você só verá a vaca se o novo service
-worker buscar, instalar e ativar antes de a página tentar carregar a imagem.
+[Veja esta demonstração que usa `skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){: .external }. Você deve ver a imagem de uma vaca sem ter que sair da página. Como com `clients.claim()`, é uma corrida, então você só verá a vaca se o novo service worker buscar, instalar e ativar antes de a página tentar carregar a imagem.
 
-Warning: `skipWaiting()` significa que o seu novo service worker provavelmente controla
-páginas que foram carregadas com uma versão antiga. Isso quer dizer que algumas buscas
-da sua página serão gerenciadas pelo service worker antigo, mas o novo service
-worker gerenciará as buscas seguintes. Se isso pode dar problema, não
-use `skipWaiting()`.
+Atenção: `skipWaiting()` significa que seu novo service worker provavelmente controla páginas que foram carregadas com uma versão antiga. Isso quer dizer que algumas buscas da sua página serão gerenciadas pelo service worker antigo, mas o novo service worker gerenciará as buscas seguintes. Se isso puder causar problema, não use `skipWaiting()`.
 
 ### Atualizações manuais
 
-Como mencionei mais cedo, o navegador verifica se há atualizações automaticamente
-após navegação e eventos funcionais, mas você também pode acioná-las manualmente:
+Como mencionei mais cedo, o navegador verifica se há atualizações automaticamente após a navegação e eventos funcionais, mas você também pode acioná-las manualmente:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       // sometime later…
       reg.update();
     });
 
-Se acredita que o usuário usa seu site por muito tempo sem recarregar,
-pode ser uma boa ideia chamar `update()` em um intervalo (como de hora em hora).
+Se acreditar que o usuário usa seu site por muito tempo sem atualizar, pode ser uma boa ideia chamar `update()` em um intervalo (como de hora em hora).
 
-### Evite alterar o URL do script do seu service worker
+### Evitar alterar o URL do script do seu service worker
 
-Se você leu [minha postagem sobre práticas recomendadas
-para armazenamento em cache](https://jakearchibald.com/2016/caching-best-practices/){: .external},
-pode achar que é uma boa ideia dar a cada versão do seu service worker um URL exclusivo.
-**Não faça isso!** Essa normalmente é uma prática ruim para os service workers. Só atualize
-o script no seu local atual.
+Se você tiver lido [minha postagem sobre práticas recomendadas de armazenamento em cache](https://jakearchibald.com/2016/caching-best-practices/){: .external }, você pode considerar atribuir um URL único a cada versão do service worker. **Não faça isso!** Esta costuma ser uma prática ruim para service workers, simplesmente atualize o script na sua localização atual.
 
 Veja um dos problemas que essa abordagem pode gerar:
 
 1. `index.html` registra `sw-v1.js` como um service worker.
-1. `sw-v1.js` armazena `index.html` em cache e o fornece para poder funcionar off-line.
-1. Você atualiza `index.html` para que seu novo e reluzente `sw-v2.js` seja registrado.
+1. `sw-v1.js` armazena em cache e disponibiliza `index.html` de modo que funcione em modo off-line primeiro.
+1. Você atualiza `index.html` de modo que registre seu novo `sw-v2.js`.
 
-Se você fizer isso, o usuário nunca receberá `sw-v2.js`, porque `sw-v1.js`
-fornecerá a versão antiga de `index.html` que está no cache. Você se colocou em uma posição
-em que precisa atualizar o service worker para atualizar o
-service worker. Meu Deus.
+Se você fizer isso, o usuário nunca receberá `sw-v2.js`, porque `sw-v1.js` fornecerá a versão antiga de `index.html` do cache. Você se colocou em uma posição em que precisa atualizar o service worker para atualizar o service worker. Nossa!
 
-Porém, para [a demonstração
-acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, *alterei* o URL do service worker. Meu intuito é, para
-fins de demonstração, poder alternar entre as versões. Não é algo que faria
-na produção.
+Porém, para [a demonstração acima](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }, *alterei* o URL do service worker. Meu intuito é que você, para fins de demonstração, possa alternar entre as versões. Não é algo que eu faria na produção.
 
-## Facilitando o desenvolvimento {: #devtools}
+## Facilitar o desenvolvimento {: #devtools}
 
-O ciclo de vida de um service worker é criado pensando no usuário, mas,
-durante o desenvolvimento, isso é bem complicado. Felizmente, temos algumas abordagens que podem ajudar:
+O ciclo de vida de um service worker é criado pensando no usuário, mas durante o desenvolvimento, isso é bem complicado. Felizmente, temos algumas abordagens que podem ajudar:
 
 ### Atualizar no recarregamento
 
 Essa é a minha favorita.
 
 <figure>
-  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools mostrando a atualização no recarregamento">
+  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools mostrando a atualização no recarregamento"/>
 </figure>
 
 Isso torna o ciclo de vida fácil para o desenvolvedor. Cada navegação vai:
 
-1. Buscar o service worker novamente.
-1. Instalá-lo como uma nova versão, mesmo que seja idêntico em nível de bytes, o que significa que o evento `install`
-  será executado e o seu cache, atualizado.
-1. Pular a fase de espera para que o novo service worker seja ativado.
-1. Navegar pela página.
+1. buscar novamente o service worker;
+1. instalá-lo como uma nova versão, mesmo que tenha os mesmos bytes, o que significa que o evento `install` será executado e seu cache, atualizado;
+1. pular a fase de espera, de modo que o novo service worker seja ativado;
+1. navegar pela página.
 
-Isso significa que você terá atualizações em cada navegação (incluindo atualização)
-sem ter que recarregar ou fechar a guia.
+Isso significa que você terá atualizações em cada navegação (incluindo atualização) sem ter que recarregar ou fechar a guia.
 
 ### Pular a espera
 
 <figure>
-  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools mostrando como pular a espera">
+  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools mostrando como pular a espera"/>
 </figure>
 
-Se você tem um worker em espera, pode clicar em "skip waiting" no DevTools para
-promovê-lo a "active" imediatamente.
+Se você tiver um worker em espera, pode clicar em "skip waiting" no DevTools para promovê-lo a "active" imediatamente.
 
 ### Forçar recarregamento
 
-Se você forçar o recarregamento da página, o service worker será
-totalmente ignorado. Essa abordagem não será controlada. Esse recurso está na especificação, então funciona
-em outros navegadores que oferecem suporte a service workers.
+Se você forçar a atualização da página, o service worker será totalmente ignorado. Essa abordagem não será controlada. Esse recurso está na especificação, então funciona em outros navegadores compatíveis com service workers.
 
 ## Gerenciar atualizações
 
-O service worker foi projetado como parte da [web
-extensível](https://extensiblewebmanifesto.org/){: .external }. A ideia é que nós, como
-desenvolvedores de navegador, reconheçamos que não somos melhores no desenvolvimento web do
-que os desenvolvedores web. E, sendo assim, não devemos fornecer APIs de alto nível limitadas que
-resolvam um problema específico usando padrões de que *nós* gostamos, mas sim dar a você acesso
-ao âmago do navegador e permitir que você o acesse como quiser, da forma que funcionar
-melhor para os *seus* usuários.
+O service worker foi projetado como parte da [Web extensível](https://extensiblewebmanifesto.org/){: .external }. A ideia é que nós, como desenvolvedores de navegadores, reconheçamos que não somos melhores no desenvolvimento Web do que os desenvolvedores Web. Sendo assim, não devemos fornecer APIs de alto nível limitadas que resolvam um problema específico usando padrões de que *nós* gostamos. Em vez disso, devemos dar acesso total ao navegador para permitir que você o use como quiser, da forma que funcionar melhor para *seus* usuários.
 
-Por isso, para oferecer o máximo de padrões que podemos, vamos ver todo o ciclo de atualização:
+Por isso, para permitir o maior número possível de padrões, todo o ciclo de atualização pode ser observado:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       reg.installing; // the installing worker, or undefined
@@ -803,14 +676,14 @@ Por isso, para oferecer o máximo de padrões que podemos, vamos ver todo o cicl
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
-      // changes, eg a new worker has as skipped waiting and become
-      // the new active worker. 
+      // changes, eg a new worker has skipped waiting and become
+      // the new active worker.
     });
 
-## Você sobreviveu! Está tudo bem!
+## Você sobreviveu!
 
-Ufa! Quanta teoria técnica. Continue com a gente na próximas semanas. Vamos
-falar em detalhes sobre algumas aplicações práticas de tudo isso abordado aqui.
+Está tudo bem! Ufa! Quanta teoria técnica. Fique atento, nas próximas semanas falaremos em detalhes sobre algumas aplicações práticas de tudo que foi abordado aqui.
 
+## Feedback {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

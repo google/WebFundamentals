@@ -1,31 +1,32 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2014-12-09 #}
+{# wf_blink_components: N/A #}
 
 # 오프라인 설명서 {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
 AppCache가 현장에 도착했을 때 콘텐츠를 오프라인으로 작동하게 하는
-몇 가지 패턴을 제공했습니다. 해당 패턴이 필요로 했던 패턴이라면 
+몇 가지 패턴을 제공했습니다. 해당 패턴이 필요로 했던 패턴이라면
 (잭팟은 아니지만) 여러분은 AppCache 복권에 당첨된 것입니다. 하지만 남은 사람들은
 [중심을 잡지 못하고](http://alistapart.com/article/application-cache-is-a-douchebag) 코너에
 몰린 상황이었습니다.
 
-[ServiceWorker][sw_primer]와 함께 우리는 오프라인으로 해결을 시도하는 것을 포기하고 
-개발자에게 스스로 해결하도록 필요한 수단을 제공했습니다. 이를 통해 여러분은 캐싱 
+[ServiceWorker][sw_primer]와 함께 우리는 오프라인으로 해결을 시도하는 것을 포기하고
+개발자에게 스스로 해결하도록 필요한 수단을 제공했습니다. 이를 통해 여러분은 캐싱
 및 요청 처리 방법을 제어할 수 있습니다. 즉, 자신만의 패턴을
 만들 수 있습니다. 가능한 몇 가지 패턴을 따로 살펴보겠지만
 실제로는 URL 및 컨텍스트에 따라
 여러 패턴을 함께 사용할 것입니다.
 
-별도의 언급이 없는 한 모든 코드 예시는 Chrome과 Firefox에서 작동합니다.
-서비스 워커 지원에 대한 자세한 내용은 ['Is Service Worker Ready?'][is_sw_ready]를 참조하세요.
+별도의 언급이 없는 한 모든 코드 예시는 바로 Chrome 및 Firefox에서 작동합니다.
+서비스 워커 지원에 관한 자세한 내용은 ["Is Service Worker Ready?"][is_sw_ready]를 참조하세요.
 
-이러한 일부 패턴의 실제 데모를 보려면 [Trained-to-thrill][ttt]과, 
-성능 영향을 보여주는 [이 동영상](https://www.youtube.com/watch?v=px-J9Ghvcx4)을 
+이러한 일부 패턴의 실제 데모를 보려면 [Trained-to-thrill][ttt]과
+성능 영향을 보여주는 [이 동영상](https://www.youtube.com/watch?v=px-J9Ghvcx4)을
 살펴보세요.
 
 ## 캐시 시스템 - 리소스를 저장할 때
@@ -34,7 +35,7 @@ AppCache가 현장에 도착했을 때 콘텐츠를 오프라인으로 작동하
 처리할 수 있으므로 별도로 살펴보겠습니다. 먼저, 캐싱은 언제 해야
 합니까?
 
-### 설치 시 -  종속성 있음{: #on-install-as-dependency }
+### 설치 시 - 종속성 있음 {: #on-install-as-dependency }
 
 <img src="images/cm-on-install-dep.png">
 
@@ -67,7 +68,7 @@ ServiceWorker의 이전 버전이 여전히 실행 중이며 페이지를 제공
 `event.waitUntil`은 프라미스를 사용하여 설치의 길이와 성공을
 정의합니다. 프라미스가 거부되면 설치가 실패로 간주되어
 이 ServiceWorker가 중단됩니다(이전 버전이
-실행 중인 경우 그대로 유지됨). `caches.open` 및 `cache.addAll`은 
+실행 중인 경우 그대로 유지됨). `caches.open` 및 `cache.addAll`이
 프라미스를 반환합니다. 리소스가 가져오기가 실패할 경우 `cache.addAll` 호출이
 거부됩니다.
 
@@ -98,9 +99,9 @@ ServiceWorker의 이전 버전이 여전히 실행 중이며 페이지를 제공
       );
     });
 
-레벨 11-20에 대한 `cache.addAll` 프라미스는 
-`event.waitUntil`로 다시 전달되지 않으므로 실패하더라도 게임을 오프라인에서 계속 
-이용할 수 있습니다. 물론, 해당 레벨이 존재하지 않을 가능성에 대비하고
+레벨 11-20에 대한 `cache.addAll` 프라미스는
+`event.waitUntil`로 다시 전달되지 않으므로 실패하더라도 게임을 오프라인에서 계속
+이용할 수 있습니다. 물론 해당 레벨이 존재하지 않을 가능성에 대비하고
 누락된 경우 캐싱을 다시 시도해야 할 것입니다.
 
 ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
@@ -112,7 +113,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 
 <img src="images/cm-on-activate.png">
 
-**이상적인 대상:** 정리 및 마이그레이션
+**이상적인 대상:** 정리 및 마이그레이션.
 
 새 ServiceWorker가 설치되고 이전 버전이 사용되지 않는 경우
 새 버전이 활성화되고 `activate` 이벤트를 가져옵니다. 이 경우 이전 버전이
@@ -148,8 +149,8 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 <img src="images/cm-on-user-interaction.png">
 
 **이상적인 대상:** 전체 사이트를 오프라인으로 만들 수 없는 경우
-사용자가 오프라인에서 사용할 콘텐츠를 선택할 수 있습니다. (예: YouTube 등의
-동영상, Wikipedia의 글, Flickr의 특정 갤러리)
+사용자가 오프라인에서 사용할 콘텐츠를 선택할 수 있습니다. 예: YouTube 등의
+동영상, Wikipedia의 글, Flickr의 특정 갤러리
 
 사용자에게 'Read later' 또는 'Save for offline' 버튼을 제공합니다. 해당 버튼을
 클릭하면 네트워크에서 필요한 것을 가져와서 캐시에 넣습니다.
@@ -204,7 +205,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
     });
 
 효율적인 메모리 사용을 위해 응답/요청의 본문을 한 번만 읽을
-수 있습니다. 위의 코드에서 
+수 있습니다. 위의 코드에서
 [`.clone()`](https://fetch.spec.whatwg.org/#dom-request-clone)은 별도로
 읽을 수 있는 추가 복사본을 만드는 데 사용됩니다.
 
@@ -215,7 +216,7 @@ ServiceWorker는 이벤트 처리를 마쳤으므로 레벨 11-20이
 
 <img src="images/cm-stale-while-revalidate.png">
 
-**이상적인 대상:** 최신 버전을 유지하는 것이 필수적이지 않은,
+**이상적인 대상:** 최신 버전을 유지하는 것이 필수적이지 않은
 자주 업데이트되는 리소스. 아바타가 이 범주에 해당될 수 있습니다.
 
 캐시된 버전이 있으면 사용하되 다음을 위해 업데이트를
@@ -260,7 +261,7 @@ OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
   </iframe>
 </div>
 
-일반적인 최종 결과는 누를 때 관련 페이지를 열거나
+일반적인 최종 결과는 탭할 때 관련 페이지를 열거나
 포커스를 받는 알림이지만 이 상황이 발생하기 전에 캐시를
 업데이트하는 것은 _매우_ 중요합니다. 사용자는 푸시 메시지를 수신할 때 분명히
 온라인 상태이지만 알림과 최종 상호작용할 때에는 온라인 상태가
@@ -269,7 +270,7 @@ OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
 이를 약간 잘못 사용하고 있습니다.
 
 연결이 없으면 Twitter는 푸시 메시지와 관련된 콘텐츠를
-제공하지 못합니다. 그러나 푸시 메시지를 누르면 알림은 제거되고 사용자가
+제공하지 못합니다. 그러나 푸시 메시지를 탭하면 알림은 삭제되고 사용자가
 누르기 전보다 적은 정보를 제공합니다. 이렇게 하지 마세요!
 
 <div style="clear:both;"></div>
@@ -307,8 +308,6 @@ OS의 메시징 서비스의 메시지에 대한 응답으로 ServiceWorker를
 ### 백그라운드 동기화 시 {: #on-background-sync }
 
 <img src="images/cm-on-bg-sync.png">
-
-Dogfood: 백그라운드 동기화는 아직 Chrome에 안착되지 않았습니다.
 
 [백그라운드 동기화](/web/updates/2015/12/background-sync)는
 ServiceWorker 위에 빌드된
@@ -355,7 +354,7 @@ IndexedDB, Filesystem 및 Caches 등 모든 원본 저장소 사이에 공유됩
 못합니다.
 
 이 문제를 해결하도록 제안된 API인
-[`requestPersistent`](https://storage.spec.whatwg.org/){: .external }가 있습니다.
+[`requestPersistent`](https://storage.spec.whatwg.org/){: .external }가 있습니다:
 
     // From a page:
     navigator.storage.requestPersistent().then(function(granted) {
@@ -364,13 +363,13 @@ IndexedDB, Filesystem 및 Caches 등 모든 원본 저장소 사이에 공유됩
       }
     });
 
-물론 사용자가 권한을 부여해야 합니다. 이제 사용자가 삭제를
-제어할 수 있기 때문에 이 흐름에 사용자가 참여하도록 하는 것이 중요합니다.
+물론 사용자가 권한을 부여해야 합니다. 이제 사용자가 삭제를 제어할 수 있기 때문에 이
+흐름에 사용자를 포함하는 것이 중요합니다.
 기기가 저장 압력을 받는 상태에서 비필수적인 데이터를
 지워도 해결되지 않는 경우 사용자가 보존하고 삭제할 항목을
 판단하게 됩니다.
 
-이를 위해 브라우저를 단일 항목으로 보고하지 않고 '지속형' 원본을
+이를 위해 브라우저를 단일 항목으로 보고하지 않고 저장 공간 분석에서 '지속형' 원본을
 네이티브 앱과 동일한 것으로 취급하는
 운영체제가 필요합니다.
 
@@ -402,7 +401,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 
 <img src="images/ss-network-only.png">
 
-**이상적인 대상:** 분석 ping, 비 GET 요청과 같이 상응하는
+**이상적인 대상:** 분석 핑(pings), 비 GET 요청과 같이 상응하는
 오프라인 요소가 없는 항목.
 
     self.addEventListener('fetch', function(event) {
@@ -443,7 +442,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 
 오래된 하드 드라이브, 바이러스 스캐너 및 고속 인터넷 연결을
 조합하면 네트워크에서 리소스를 가져오는 것이 디스크로 이동하는 것보다
-빠를  수 있습니다. 그러나 사용자의 기기에 있는 콘텐츠를 가져오기 위해
+빠를 수 있습니다. 그러나 사용자의 기기에 있는 콘텐츠를 가져오기 위해
 네트워크로 이동하는 것은 데이터 낭비에 해당할 수 있으므로 주의해야 합니다.
 
     // Promise.race is no good to us because it rejects if
@@ -476,7 +475,7 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 <img src="images/ss-network-falling-back-to-cache.png">
 
 **이상적인 대상:** 사이트의 '버전' 범위 밖에서 자주 업데이트되는 리소스에
-대한 빠른 수정. 기사, 아바타, 소셜 미디어 타임라인,
+대한 빠른 수정. 예: 기사, 아바타, 소셜 미디어 타임라인,
 게임 순위표 등이 여기에 해당합니다.
 
 즉, 온라인 사용자는 최신 콘텐츠를 제공받지만 오프라인 사용자는
@@ -501,16 +500,16 @@ ServiceWorker가 캐시를 사용하지 않습니다. 다음은 요청 처리를
 
 <img src="images/ss-cache-then-network.png">
 
-**이상적인 대상:** 자주 업데이트되는 콘텐츠. 기사, 소셜 미디어 타임라인,
+**이상적인 대상:** 자주 업데이트되는 콘텐츠. 예: 기사, 소셜 미디어 타임라인,
 게임 순위표 등이 여기에 해당합니다.
 
 이를 위해서는 페이지가 두 개의 요청(캐시에 요청, 네트워크에 요청)을
 해야 합니다. 캐시된 데이터를 먼저 표시한 다음 네트워크 데이터가 도착하면
 페이지를 업데이트하는 방식입니다.
 
-때로는 새로운 데이터(예: 게임 순위표)가 도착할 때 현재 데이터를 바꿀
-수 있지만 훨씬 큰 콘텐츠로 인해 혼란스러울
-수 있습니다. 기본적으로 사용자가 읽고 있거나 상호작용하고 있을 수 있는
+때로는 새로운 데이터
+(예: 게임 순위표)가 도착할 때 현재 데이터를 바꿀 수 있지만 훨씬 큰
+콘텐츠로 인해 혼란스러울 수 있습니다. 기본적으로 사용자가 읽고 있거나 상호작용하고 있을 수 있는
 항목을 '사라지게 하지' 마세요.
 
 Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
@@ -519,7 +518,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 화면에 표시하기 위해 이 패턴을
 [trained-to-thrill][ttt]로 복사했는데, 최신 콘텐츠는 도착해야 표시됩니다.
 
-**페이지 코드:**
+**페이지 내 코드:**
 
     var networkDataReceived = false;
 
@@ -530,7 +529,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
       return response.json();
     }).then(function(data) {
       networkDataReceived = true;
-      updatePage();
+      updatePage(data);
     });
 
     // fetch cached data
@@ -548,7 +547,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
     }).catch(showErrorMessage).then(stopSpinner);
 
 
-**ServiceWorker 코드:**
+**ServiceWorker 내 코드:**
 
 캐시는 항상 네트워크로 이동할 때 업데이트됩니다.
 
@@ -563,7 +562,6 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
       );
     });
 
-참고: `fetch` 및 `caches`를 페이지에 노출([1번 티켓](https://code.google.com/p/chromium/issues/detail?id=436770), [2번 티켓](https://code.google.com/p/chromium/issues/detail?id=439389))하지 않으므로 위의 코드는 Chrome에서 작동하지 않습니다.
 
 [trained-to-thrill][ttt]에서
 [fetch 대신 XHR](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3)을
@@ -578,7 +576,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 캐시 및/또는 네트워크에서 응답이 없으면 일반적인 폴백을
 제공하도록 지정할 수 있습니다.
 
-**이상적인 대상:** 실패한 POST 요청, '오프라인에서 사용할 수 없음' 페이지,
+**이상적인 대상:** 실패한 게시(POST) 요청, '오프라인에서 사용할 수 없음' 페이지,
 아바타와 같은 보조 이미지.
 
     self.addEventListener('fetch', function(event) {
@@ -610,7 +608,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 **이상적인 대상:** 서버 응답을 캐시할 수 없는 페이지.
 
 [서버의 페이지를 렌더링하면 작업 속도가 빨라지지만](https://jakearchibald.com/2013/progressive-enhancement-is-faster/)
- 캐시에서 이해할 수
+캐시에서 이해할 수
 없는 상태 데이터(예: 'Logged in as…')를 포함할 수 있습니다. ServiceWorker가 페이지를 제어하는 경우
 그 대신에 JSON 데이터를 템플릿과 함께 요청하여
 렌더링할 수 있습니다.
@@ -618,7 +616,7 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
     importScripts('templating-engine.js');
 
     self.addEventListener('fetch', function(event) {
-      var requestURL = new URL(event.request);
+      var requestURL = new URL(event.request.url);
 
       event.respondWith(
         Promise.all([
@@ -648,10 +646,10 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 많은 메서드를 사용할 수 있습니다. 예를 들어,
 [trained-to-thrill][ttt]은 다음을 사용합니다.
 
-* [설치 시 캐시](#on-install-as-dependency): 정적 UI 및 동작의 경우
-* [네트워크 응답 시 캐시](#on-network-response): Flickr 이미지 및 데이터의 경우
-* [캐시에서 가져오기, 네트워크로 복귀](#cache-falling-back-to-network): 대부분의 요청의 경우
-* [캐시에서 가져온 다음 네트워크에서 가져오기](#cache-then-network): Flickr 검색 결과의 경우
+* 정적 UI 및 동작의 경우 [설치 시 캐시](#on-install-as-dependency), 
+* Flickr 이미지 및 데이터의 경우 [네트워크 응답 시 캐시](#on-network-response),
+* 대부분의 요청의 경우 [캐시에서 가져오기, 네트워크로 복귀](#cache-falling-back-to-network), 
+* Flickr 검색결과의 경우 [캐시에서 가져온 다음 네트워크에서 가져오기](#cache-then-network)
 
 요청을 살펴보고, 무엇을 할지 결정하세요.
 
@@ -699,27 +697,32 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 
 …이해하셨을 것입니다.
 
+## 의견 {: .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
+
+<div class="clearfix"></div>
 
 ### 크레딧 {: hide-from-toc }
 …아름다운 아이콘:
 
-* [코드](http://thenounproject.com/term/code/17547/){: .external } 아이콘: buzzyrobot 제공
-* [달력](http://thenounproject.com/term/calendar/4672/){: .external } 아이콘: Scott Lewis 제공
-* [네트워크](http://thenounproject.com/term/network/12676/){: .external } 아이콘: Ben Rizzo 제공
-* [SD 카드](http://thenounproject.com/term/sd-card/6185/) 아이콘: Thomas Le Bas 제공
-* [CPU](http://thenounproject.com/term/cpu/72043/){: .external } 아이콘: iconsmind.com 제공
-* [휴지통](http://thenounproject.com/term/trash/20538/){: .external } 아이콘: trasnik 제공
-* [알림](http://thenounproject.com/term/notification/32514/){: .external } 아이콘: @daosme 제공
-* [레이아웃](http://thenounproject.com/term/layout/36872/){: .external } 아이콘: Mister Pixel 제공
-* [구름](http://thenounproject.com/term/cloud/2788/){: .external } 아이콘: P.J. Onori 제공
+* [코드](http://thenounproject.com/term/code/17547/){: .external } buzzyrobot 제공
+* [캘린더](http://thenounproject.com/term/calendar/4672/){: .external } Scott Lewis 제공
+* [네트워크](http://thenounproject.com/term/network/12676/){: .external } Ben Rizzo 제공
+* [SD](http://thenounproject.com/term/sd-card/6185/) Thomas Le Bas 제공
+* [CPU](http://thenounproject.com/term/cpu/72043/){: .external } iconsmind.com 제공
+* [휴지통](http://thenounproject.com/term/trash/20538/){: .external } trasnik 제공
+* [알림](http://thenounproject.com/term/notification/32514/){: .external } @daosme 제공
+* [레이아웃](http://thenounproject.com/term/layout/36872/){: .external } Mister Pixel 제공
+* [클라우드](http://thenounproject.com/term/cloud/2788/){: .external } P.J. Onori 제공
 
 '게시하기' 전에 많은 오류를 찾아 주신 [Jeff Posnick](https://twitter.com/jeffposnick)에게도
 감사드립니다.
 
-### 추가 자료
-* [서비스 워커 소개][sw_primer]
+### 더 읽기
+* [ServiceWorkers - 소개][sw_primer]
 * [Is ServiceWorker ready?][is_sw_ready] - 주요 브라우저에서 구현 상태 추적
-* [자바스크립트 프라미스 소개](/web/fundamentals/getting-started/primers/promises) - 프라미스 안내
+* [자바스크립트 프라미스 - 소개](/web/fundamentals/getting-started/primers/promises) - 프라미스 안내
 
 
 [ttt]: https://jakearchibald.github.io/trained-to-thrill/
@@ -727,5 +730,6 @@ Twitter는 이전 콘텐츠 위에 새 콘텐츠를 추가하고 사용자를
 [sw_primer]: /web/fundamentals/getting-started/primers/service-workers
 [caches_api]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
+## 의견 {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

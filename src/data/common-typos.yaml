@@ -615,35 +615,34 @@
 
 # Call-outs
 
-- typo: '(注|注意|노트)[：:]'
+- typo: '(Nota|Catatan|注意|노트|Observação|注意 )[：:]'
   fix: 'Note:'
   description: Call-outs like 'Note:' should not be translated.
 
-- typo: '(警告|주의)[：:]'
+- typo: '(Precaución|あぶない|주의|Cuidado)[：:]'
   fix: 'Caution:'
   description: Call-outs like 'Caution:' should not be translated.
 
-- typo: '(경고)[：:]'
+- typo: '(Advertencia|警告|경고|Aviso|Peringatan)[：:]'
   fix: 'Warning:'
   description: Call-outs like 'Warning:' should not be translated.
 
-- typo: '(成功|성공)[：:]'
+- typo: '(Éxito|Keberhasilan|成功|성공|Sucesso)[：:]'
   fix: 'Success:'
   description: Call-outs like 'Success:' should not be translated.
 
-- typo: '(关键|핵심)[：:]'
+- typo: '(Punto clave|Inti|キーポイント|핵심|Ponto chave|关键点|關鍵點|关键)[：:]'
   fix: 'Key Point:'
   description: Call-outs like 'Key Point:' should not be translated.
 
-- typo: '(主要术语|주요 용어)[：:]'
+- typo: '(Término clave|Istilah kunci|キーターム|주요 용어|Termo-chave|关键术语|關鍵術語|主要术语)[：:]'
   fix: 'Key Term:'
   description: Call-outs like 'Key Term:' should not be translated.
 
-- typo: '(目的|목표)[：:]'
+- typo: '(Objetivo|Objetiva|Objektif|目的|목표)[：:]'
   fix: 'Objective:'
   description: Call-outs like 'Objective:' should not be translated.
 
-- typo: '(狗粮|개밥)[：:]'
+- typo: '(Comida de perro|Makanan anjing|ドッグフード|개밥|Comida de cão|狗粮|狗糧)[：:]'
   fix: 'Dogfood:'
   description: Call-outs like 'Dogfood:' should not be translated.
-

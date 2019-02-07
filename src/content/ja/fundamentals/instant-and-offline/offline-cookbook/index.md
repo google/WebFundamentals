@@ -1,52 +1,53 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-06 #}
-{# wf_published_on:2014-12-09 #}
+{# wf_updated_on: 2019-02-06 #}
+{# wf_published_on: 2014-12-09 #}
+{# wf_blink_components: N/A #}
 
 # オフライン クックブック {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
 AppCache が登場したとき、コンテンツをオフラインで動作させるためのパターンがいくつか提供されました。
-これらが必要としていたパターンならとてもラッキーです。宝くじに当たったも同然です（当選者はまだ現れていませんが）。しかし、それ以外のほとんどの人は為す術もなく[右往左往](http://alistapart.com/article/application-cache-is-a-douchebag)していました。
+ それらのパターンがあなたの求めていたものだったとしたらラッキーです。AppCache の宝くじに当たったも同然です（当選者はまだ名乗り出ていませんが）。しかし、ほとんどの人は [AppCache という問題児](http://alistapart.com/article/application-cache-is-a-douchebag)に悩まされていました。
 
 
 
 
-[Service Worker][sw_primer] により、オフラインの解決をあきらめ、デベロッパー自身が解決できるようにするための作用可能な部分を提供しました。
-Service Worker では、キャッシュや、リクエストの処理方法を制御できます。
-つまり、独自のパターンを作成できるようになったのです。
-考えられるいくつかのパターンを個別に見ていきましょう。ただし、実際には URL やコンテキストに応じて複数のパターンを組み合わせて使用することになると思います。
+Google はオフラインでの解決の試みを断念し、[Service Worker][sw_primer] によって、デベロッパー自身が解決できるようにするための実用的なツールを提供しました。
+ Service Worker では、キャッシュやリクエストの処理方法を制御できます。
+ つまり、独自のパターンを作成できるようになったのです。
+ 考えられるいくつかのパターンを個別に見ていきましょう。ただし、実際には URL やコンテキストに応じて、複数のパターンを組み合わせて使用することになります。
 
 
 
-特に記載のない限り、すべてのコードサンプルは Chrome と Firefox で機能します。Service Worker のサポートの詳細については、[Is Service Worker Ready?][is_sw_ready] をご覧ください。
+特に断りのない限り、現時点ではすべてのコードサンプルは Chrome と Firefox で動作します。
+Service Worker のサポートの詳細については、["Is Service Worker Ready?"][is_sw_ready] をご覧ください。
+
+これらのいくつかのパターンの実際のデモについては、[Trained-to-thrill][ttt] をご覧ください。そのパフォーマンスの効果は[この動画](https://www.youtube.com/watch?v=px-J9Ghvcx4)を見ればわかります。
 
 
-これらのいくつかのパターンの実際のデモについては、[Trained-to-thrill][ttt] と、そのパフォーマンスの影響がわかる[動画](https://www.youtube.com/watch?v=px-J9Ghvcx4)をご覧ください。
+
+## キャッシュ マシン - リソースを格納するタイミング
+
+[Service Worker][sw_primer] では、リクエストとキャッシュは別々に処理されるため、これらの説明も別々に行います。
+ まず、キャッシュはいつ実行する必要があるでしょうか？
 
 
-
-##  キャッシュ マシン - リソースを格納するタイミング
-
-[Service Worker][sw_primer] では、リクエストとキャッシュは別々に処理されるため、これらの説明も個別に行います。
-まず、キャッシュはどのタイミングで実行する必要がありますか。
-
-
-###  インストール時 - 依存関係として{: #on-install-as-dependency }
+### インストール時 - 依存関係として {: #on-install-as-dependency }
 
 <img src="images/cm-on-install-dep.png">
 
-Service Worker により `install` イベントが提供されます。これを使用して、他のイベントを処理する前にやっておくべき準備を行うことができます。
-ここで注意が必要なのは、この時点ではまだ前のバージョンの Service Worker が実行中であり、ページを処理しているということです。
+Service Worker は `install` イベントを提供します。 このイベントを使用して、他のイベントを処理する前にやっておくべき準備を行うことができます。
+ この時点では前のバージョンの Service Worker がまだ実行中で、ページを処理しているので、準備作業によってそれを中断してはなりません。
 
 
 
-** 適しているケース:** CSS、画像、フォント、JS、テンプレートなど（基本的にサイトの特定の「バージョン」に対して静的なすべてのもの）。
+**最適なケース:** CSS、画像、フォント、JS、テンプレートなど、基本的にサイトの特定の「バージョン」に対して静的と見なしうるすべてのもの。
 
 
-これらのフェッチに失敗した場合、サイト全体が機能不全に陥ってしまう原因になります。ネイティブ アプリの初期ダウンロードに含まれるものと同じです。
+それらのフェッチに失敗した場合、サイト全体が機能不全に陥る原因になります。それらはネイティブ アプリの初回ダウンロードに含まれるものと同じです。
 
 
 
@@ -64,21 +65,24 @@ Service Worker により `install` イベントが提供されます。これを
       );
     });
 
-`event.waitUntil` は Promise を受け取りインストールの長さと成功を定義します。Promise が棄却された場合、インストールは失敗したと見なされ、この Service Worker は放棄されます（古いバージョンが実行中の場合は影響を受けません）。`caches.open` と `cache.addAll` は Promise を返します。いずれかのリソースのフェッチに失敗すると、`cache.addAll` 呼び出しは棄却されます。
+`event.waitUntil` は Promise を受け取り、インストールの長さと成功を定義します。
+ Promise が棄却された場合、インストールは失敗したと見なされ、この Service Worker は破棄されます（古いバージョンが実行中の場合、古いバージョンは影響を受けません）。
+ `caches.open` と `cache.addAll` は Promise を返します。
+ いずれかのリソースのフェッチに失敗すると、`cache.addAll` 呼び出しは棄却されます。
 
 
-[trained-to-thrill][ttt] では、これを使用して[静的アセットをキャッシュしています](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L3)。
+[trained-to-thrill][ttt] では、これを使用して[静的アセットをキャッシュ](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L3)しています。
 
 
 
-###  インストール時 - 依存関係としてではなく{: #on-install-not }
+### インストール時 - 依存関係としてではなく {: #on-install-not }
 
 <img src="images/cm-on-install-not.png">
 
-上記に似ていますが、インストールの完了を遅延させず、キャッシュに失敗してもインストールは失敗しません。
+上記と似ていますが、インストールの完了を遅延させず、キャッシュに失敗してもインストールの失敗にはつながりません。
 
 
-** 適しているケース:** サイズが大きく、すぐには必要のないリソース（ゲームの後の方のレベルで使用されるアセットなど）。
+**最適なケース:** サイズが大きく、すぐには必要とされないリソース（ゲームの後の方のレベルで使用されるアセットなど）。
 
 
     self.addEventListener('install', function(event) {
@@ -94,22 +98,23 @@ Service Worker により `install` イベントが提供されます。これを
       );
     });
 
-levels 11-20 の `cache.addAll` Promise を `event.waitUntil` に渡していません。そのため、失敗してもゲームはオフラインで利用できます。これらのレベルが存在しない可能性を考慮し、存在しない場合はそれらのキャッシュを再試行することは必要になります。
+レベル 11～20 の `cache.addAll` Promise を `event.waitUntil` に渡していないので、これが失敗してもゲームはオフラインで続行できます。
+ 当然ながら、これらのレベルが存在しない可能性を考慮し、存在しない場合はそれらのキャッシュを再試行する必要があります。
 
 
-levels 11-20 のダウンロード中に Service Worker が強制終了される場合もあります。これはイベント処理が完了し、キャッシュする必要がないためです。
-今後、このようなケースや映画などの大容量のダウンロードに対応するために、バックグラウンドでダウンロードする API を追加する予定です。
+レベル 11～20 のダウンロード中に Service Worker が強制終了されることもあります。これはイベント処理が完了し、イベントをキャッシュする必要がなくなるためです。
+ 今後、このようなケースや映画などの大容量ダウンロードに対応するために、バックグラウンドでダウンロードする API を追加する予定です。
 
 
 
-###  アクティベート時{: #on-activate }
+### アクティベート時 {: #on-activate }
 
 <img src="images/cm-on-activate.png">
 
-** 適しているケース:** クリーンアップと移行。
+**最適なケース:** クリーンアップと移行。
 
-新しい Service Worker がインストールされて、前のバージョンが使用されなくなると、新しい Service Worker がアクティベートされ、`activate` イベントが発生します。
-古いバージョンが使用されなくなったので、このタイミングで IndexedDB のスキーマ移行の処理や不要なキャッシュの削除を行うとよいでしょう。
+新しい Service Worker がインストールされて前のバージョンが使用されなくなると、新しい Service Worker がアクティベートされ、`activate` イベントが発生します。
+ 古いバージョンはもう気にしなくてよいので、このタイミングで IndexedDB のスキーマ移行処理や使用しないキャッシュの削除を行うとよいでしょう。
 
 
 
@@ -129,23 +134,23 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       );
     });
 
-アクティベート中、`fetch` などの他のイベントはキューに入れられるため、アクティベートに時間がかかると、ページの読み込みがブロックされてしまう可能性があります。
-アクティベートはできるだけ短時間で済ませ、古いバージョンがアクティブだったときに実行できなかった処理のみにアクティベーションを使用するようにしてください。
+アクティベート中、`fetch` などの他のイベントはキューに入れられるため、アクティベートに時間がかかるとページの読み込みがブロックされてしまう可能性があります。
+ アクティベーションはできるだけ簡素なものにしておき、古いバージョンがアクティブだったときに実行できなかった処理のみにアクティベーションを使用するようにしてください。
 
 
 
-[trained-to-thrill][ttt] では、これを使用して[古いキャッシュを削除しています](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L17)。
+[trained-to-thrill][ttt] では、これを使用して[古いキャッシュを削除](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L17)しています。
 
 
-###  ユーザー操作時{: #on-user-interaction }
+### ユーザー操作時 {: #on-user-interaction }
 
 <img src="images/cm-on-user-interaction.png">
 
-** 適しているケース:** サイト全体をオフラインで利用できない場合に、オフラインで利用したいコンテンツをユーザーが選択できるようにします。
-たとえば、YouTube などでの動画、Wikipedia の記事、Flickr の特定のギャラリー。
+**最適なケース:** サイト全体をオフラインにできない場合に、ユーザーがオフラインで利用したいコンテンツを選択できるようにします。
+ たとえば、 YouTube などの動画、Wikipedia の記事、Flickr の特定のギャラリーなどです。
 
 
-ユーザーに「後で読む」ボタンや「オフライン用に保存」ボタンを提供します。ユーザーがボタンをクリックすると、ネットワークから必要なリソースがフェッチされ、キャッシュに保存されます。
+ユーザーに「後で読む」ボタンや「オフライン用に保存」ボタンを提供します。 ユーザーがボタンをクリックすると、必要なリソースがネットワークからフェッチされ、キャッシュに格納されます。
 
 
     document.querySelector('.cache-article').addEventListener('click', function(event) {
@@ -163,23 +168,24 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       });
     });
 
-[caches API][caches_api] は、ページと Service Worker から利用できます。つまり、キャッシュにリソースを追加するのに Service Worker を関与させる必要がありません。
+[Cache API][caches_api] は、Service Worker だけでなくページからも利用できます。つまり、キャッシュにリソースを追加するために Service Worker を使用する必要がありません。
 
 
 
 
-###  ネットワークの応答時{: #on-network-response }
+### ネットワークの応答時 {: #on-network-response }
 
 <img src="images/cm-on-network-response.png">
 
-** 適しているケース:** ユーザーの受信トレイや記事コンテンツなど、頻繁にアップデートされるリソース。
-また、注意が必要ではありますが、アバターなどの必須でないコンテンツ。
+**最適なケース:** ユーザーの受信トレイや記事コンテンツなど、頻繁に更新されるリソース。
+ また、アバターなどの必須でないコンテンツにも役立ちます（ただし、注意が必要です）。
 
 
-キャッシュ内にリクエストに一致するものがない場合は、ネットワークから取得してページに送信し、同時にキャッシュにも追加します。
+リクエストに一致するものがキャッシュ内になければ、ネットワークから取得してページに送信し、同時にキャッシュにも追加します。
 
 
-アバターなど、広範囲の URL に対してこれを実行する場合は、オリジンのストレージを肥大化させないよう注意が必要です。ユーザーがディスク領域を回収する必要があるときに、自分が第一候補にはなりたくありません。キャッシュ内の不要になったアイテムは削除するようにしてください。
+アバターなど広範囲の URL に対してこれを実行する場合は、オリジンのストレージを肥大化させないよう注意が必要です。ユーザーがディスク領域を再要求する必要が生じたときに、自分が第一候補になりたくはありません。
+ 不要になったキャッシュ内のアイテムは必ず削除するようにしてください。
 
 
     self.addEventListener('fetch', function(event) {
@@ -195,22 +201,22 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       );
     });
 
-メモリを効率的に使用するために、response と request の本文は 1 回しか読み出すことができません。
-上記のコードでは、[`.clone()`](https://fetch.spec.whatwg.org/#dom-request-clone) を使用して、個別に読み出すことができる追加のコピーを作成しています。
+メモリを効率的に使用するために、レスポンスとリクエストの本文の読み取りを 1 回に限定することができます。
+ 上記のコードでは、[`.clone()`](https://fetch.spec.whatwg.org/#dom-request-clone) を使用して、別個に読み取ることができる追加のコピーを作成しています。
 
 
 
-[trained-to-thrill][ttt] では、これを使用して [Flickr 画像をキャッシュしています](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L109)。
+[trained-to-thrill][ttt] では、これを使用して [Flickr 画像をキャッシュ](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L109)しています。
 
 
-###  stale-while-revalidate{: #stale-while-revalidate }
+### stale-while-revalidate {: #stale-while-revalidate }
 
 <img src="images/cm-stale-while-revalidate.png">
 
-** 適しているケース:** 頻繁にアップデートされるが、必ずしも最新のバージョンである必要がないリソース。
-アバターはこのカテゴリに該当します。
+**最適なケース:** 頻繁に更新されるが、必ずしも最新のバージョンでなくてもよいリソース。
+ アバターはこのカテゴリに該当します。
 
-キャッシュされたバージョンが利用可能な場合はこれを使用しますが、次回に備えてアップデートをフェッチします。
+キャッシュされたバージョンが利用可能であればそれを使用しますが、次回に備えて最新版をフェッチします。
 
 
     self.addEventListener('fetch', function(event) {
@@ -227,19 +233,21 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       );
     });
 
-これは HTTP の [stale-while-revalidate](https://www.mnot.net/blog/2007/12/12/stale) に非常に似ています。
+これは、HTTP の [stale-while-revalidate](https://www.mnot.net/blog/2007/12/12/stale) にとてもよく似ています。
 
 
-###  プッシュ メッセージ時{: #on-push-message }
+### プッシュ メッセージ時 {: #on-push-message }
 
 <img src="images/cm-on-push.png">
 
-[Push API](/web/fundamentals/push-notifications) は、Service Worker をベースに構築された別の機能です。OS のメッセージング サービスからのメッセージに応答して Service Worker を起動できます。このときユーザーがサイトのタブを開いていない場合でも、Service Worker のみが起動されます。
-ページからこれを実行するパーミッションをリクエストして、ユーザーにプロンプトを表示します。
+[Push API](/web/fundamentals/push-notifications) は、Service Worker をベースに構築された別の機能です。
+ この API により、OS のメッセージング サービスからのメッセージに応じて Service Worker を起動できます。
+ このとき、ユーザーがサイトのタブを開いていなくても、Service Worker のみが起動されます。
+ ページからタブを開くためのパーミッションをリクエストして、ユーザーにプロンプトを表示します。
 
 
-** 適しているケース:** チャット メッセージ、ニュース速報、メールなど、通知に関連するコンテンツ。
-また、頻繁に変更されるわけではないが即座に同期することに意味があるコンテンツ（TODO リストのアップデートやカレンダーの変更など）。
+**最適なケース:** チャット メッセージ、ニュース速報、メールなど、通知に関連するコンテンツ。
+ また、頻繁には変更されないが即座に同期することに意味があるコンテンツ（TODO リストの更新やカレンダーの予定変更など）。
 
 
 
@@ -249,17 +257,19 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
   </iframe>
 </div>
 
-通常、通知をタップすると、関連するページが開いたり、フォーカスされたりしますが、その前にキャッシュをアップデートしておくことが非常に重要です。ユーザーがプッシュ メッセージを受信するときは当然オンラインですが、その通知を最終的に操作するときはオンラインであるとは限りません。そのため、このコンテンツをオフラインで利用できるようにすることが重要です。Twitter のネイティブ アプリはそのほとんどがオフライン ファーストの代表的な例ですが、少し違う部分があります。
+通常、通知をタップすると、その最終結果として関連ページが開いたりフォーカスされたりしますが、それが起こる前にキャッシュを更新しておくことが非常に重要です。
+ ユーザーがプッシュ メッセージを受信するときは当然オンラインですが、その通知を最終的に操作するときはオンラインであるとは限りません。そのため、このコンテンツをオフラインで利用できるようにすることが重要です。
+ Twitter のネイティブ アプリは、その大部分がオフラインファーストの代表的な例ですが、そうとはいえない点もあります。
 
 
 
-ネットワーク接続がない場合、Twitter はプッシュ メッセージに関連するコンテンツを提供できません。
-しかも、メッセージをタップすると通知がなくなります。ユーザーが得られる情報はタップ前よりも少なくなってしまいます。
-このようにならないようにしてください。
+ネットワーク接続がなければ、Twitter はプッシュ メッセージに関連するコンテンツを提供できません。
+ また、メッセージをタップすると通知が削除されるので、ユーザーが得られる情報はタップする前より減ってしまいます。
+ そのような事態は避けてください。
 
 <div style="clear:both;"></div>
 
-以下のコードは、キャッシュをアップデートしてから通知を表示します。
+以下のコードは、キャッシュを更新してから通知を表示します。
 
     self.addEventListener('push', function(event) {
       if (event.data.text() == 'new-email') {
@@ -271,7 +281,7 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
             });
           }).then(function(emails) {
             registration.showNotification("New email", {
-              body: "From " + emails[0].from.name
+              body:"From " + emails[0].from.name
               tag: "new-email"
             });
           })
@@ -289,16 +299,17 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
     });
 
 
-###  バックグラウンド同期時{: #on-background-sync }
+### バックグラウンド同期時 {: #on-background-sync }
 
 <img src="images/cm-on-bg-sync.png">
 
-試験運用:バックグラウンド同期は Chrome ではまだ安定的にサポートされていません。
+[バックグラウンド同期](/web/updates/2015/12/background-sync)は、Service Worker をベースに構築された別の機能です。
+ これにより、バックグラウンド データの同期を 1 回限り、または（非常にヒューリスティックな）間隔をおいてリクエストできます。
+ このとき、ユーザーがサイトのタブを開いていなくても、Service Worker のみが起動されます。
+ ページからタブを開くためのパーミッションをリクエストして、ユーザーにプロンプトを表示します。
 
-[バックグラウンド同期](/web/updates/2015/12/background-sync)は、Service Worker をベースに構築された別の機能です。これにより、バックグラウンド データの同期を 1 回限りまたは（非常にヒューリスティックな）間隔でリクエストできます。このときユーザーがサイトのタブを開いていない場合でも、Service Worker のみが起動されます。ページからこれを実行するパーミッションをリクエストして、ユーザーにプロンプトを表示します。
 
-
-** 適しているケース:** 急を要さないアップデート。特に、ソーシャル メディアのタイムラインやニュース記事など、定期的にアップデートされるものは、そのたびにプッシュ メッセージが発生すると頻繁が高すぎます。
+**最適なケース:** 急を要さない更新。特に、ソーシャル メディアのタイムラインやニュース記事などで定期的に発生する更新（更新のたびにプッシュ メッセージが発生すると発生頻度があまりにも高くなってしまいます）。
 
 
 
@@ -313,14 +324,14 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
     });
 
 
-##  キャッシュの永続性{: #cache-persistence }
+## キャッシュの永続性 {: #cache-persistence }
 
-オリジンには、操作を実行するための一定の空き領域が確保されています。この空き領域はすべてのオリジン ストレージ間で共有されます
-（LocalStorage、IndexedDB、Filesystem、キャッシュ）。
+オリジンには、処理を実行するための一定の空き領域が与えられます。
+この空き領域はすべてのオリジン ストレージ間で共有されます。たとえば、LocalStorage、IndexedDB、ファイルシステム、（当然ながら）キャッシュなどです。
 
 
-与えられる領域は指定されておらず、端末やストレージの状況によって異なります。
-与えられている領域を確認するには次のようにします。
+与えられる領域は決まっておらず、端末やストレージの状況によって異なります。
+ 与えられている領域を確認するには、次のコードを使用します。
 
     navigator.storageQuota.queryInfo("temporary").then(function(info) {
       console.log(info.quota);
@@ -329,13 +340,13 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       // Result: <used data in bytes>
     });
 
-ただし、すべてのブラウザ ストレージのように、ブラウザは端末のストレージが不足してきたときにこれを強制的にスローできます。
-残念ながら、これらの動画はどうしても残したい、このゲームは削除されてもかまわないといった違いをブラウザは判断できません。
+ただし、すべてのブラウザ ストレージと同様に、端末のストレージが残り少なくなると、ブラウザはこの領域を自由に放棄することができます。
+ 残念ながら、これらの映画は残したい、このゲームは削除されてもかまわないといった違いをブラウザは判断できません。
 
 
 
-これを回避するために、API [`requestPersistent`](https://storage.spec.whatwg.org/){: .external } が用意されています。
-
+この問題の回避策として、API
+[`requestPersistent`](https://storage.spec.whatwg.org/){: .external } が用意されています。
 
     // From a page:
     navigator.storage.requestPersistent().then(function(granted) {
@@ -344,29 +355,28 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       }
     });
 
-もちろん、ユーザーはパーミッションを付与する必要があります。ユーザーをこのフローに組み込むことが重要です。そうすることで、削除の可否をユーザーに委ねることができます。端末の容量が不足してきたときに不必要なデータを削除しても解決しない場合は、どのアイテムを残すか削除するかをユーザーが決定します。
+もちろん、ユーザーはパーミッションを付与する必要があります。 重要なのは、ユーザーをこのフローに組み込むことです。それにより、削除の可否の判断をユーザーに委ねることができます。
+端末の容量が残り少なくなったとき、不要なデータを削除しても容量不足が解決しない場合は、どのアイテムを残すかまたは削除するかをユーザーが決定します。
+
+
+
+これがうまくいくためにオペレーティング システム側で必要となるのは、ブラウザを 1 つのアイテムとして報告するのではなく、ストレージ使用状況の分析において、「永続性のある」オリジンをネイティブ アプリと同等に扱うことです。
 
 
 
 
+## 提案の提供 - リクエストへの応答 {: #serving-suggestions }
 
-この機能のためにオペレーティング システム側で必要となるのは、ストレージ使用状況の内訳において、ブラウザを単一アイテムとして報告するのではなく、ネイティブ アプリと同等の「永続性のある」オリジンとして扱うことです。
-
-
-
-
-##  提案の提供 - リクエストへの応答{: #serving-suggestions }
-
-どれだけキャッシュしても、それらのキャッシュをいつ、どのように使用するかを Service Worker に指示しないとキャッシュが使用されることはありません。
-ここではリクエスト処理に関するいくつかのパターンを示します。
+どれだけキャッシュを行っても、それらのキャッシュをいつどのように使用するかを Service Worker に指示しないと、キャッシュは使用されません。
+ ここでは、リクエスト処理に関するパターンをいくつか示します。
 
 
-###  キャッシュのみ{: #cache-only }
+### キャッシュのみ {: #cache-only }
 
 <img src="images/ss-cache-only.png">
 
-** 適しているケース:** サイトの特定の「バージョン」に対して静的なものすべて。これらは install イベントでキャッシュされているため、存在するものとして当てにすることができます。
-
+**最適なケース:** サイトの特定の「バージョン」に対して静的と見なしうるすべてのもの。
+これらは install イベントでキャッシュされているはずなので、既にあるものとして当てにできます。
 
 
     self.addEventListener('fetch', function(event) {
@@ -375,14 +385,14 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       event.respondWith(caches.match(event.request));
     });
 
-このケースの処理が必要なことはあまりありませんが、[キャッシュになければネットワークから取得](#cache-falling-back-to-network)で説明します。
+このケースの処理が特に必要になることはほとんどありませんが、[キャッシュになければネットワークから取得](#cache-falling-back-to-network)で説明しています。
 
 
-###  ネットワークのみ{: #network-only }
+### ネットワークのみ {: #network-only }
 
 <img src="images/ss-network-only.png">
 
-** 適しているケース:** analytics ping、GET 以外のリクエストなど、オフラインに相当しないもの。
+**最適なケース:** アナリティクス ping、GET 以外のリクエストなど、オフラインに相当するものがないもの。
 
 
     self.addEventListener('fetch', function(event) {
@@ -391,15 +401,15 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       // will result in default browser behaviour
     });
 
-このケースの処理が必要なことはあまりありませんが、[キャッシュになければネットワークから取得](#cache-falling-back-to-network)で説明します。
+このケースの処理が特に必要になることはほとんどありませんが、[キャッシュになければネットワークから取得](#cache-falling-back-to-network)で説明しています。
 
 
-###  キャッシュになければネットワークから取得{: #cache-falling-back-to-network }
+### キャッシュになければネットワークから取得 {: #cache-falling-back-to-network }
 
 <img src="images/ss-falling-back-to-network.png">
 
-** 適しているケース:** オフライン ファーストの場合、ほとんどのリクエストの処理方法にこのパターンが適用されます。
-受信リクエストが例外的な場合は、他のパターンが適用されます。
+**最適なケース:** オフライン ファーストのアプリを作成する場合、ほとんどのリクエストの処理にこのパターンが適用されます。
+ 受信リクエストによっては、例外的に他のパターンが適用されます。
 
 
     self.addEventListener('fetch', function(event) {
@@ -410,22 +420,23 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       );
     });
 
-これは、キャッシュに見つかる場合は「キャッシュのみ」の動作を適用し、キャッシュに見つからない場合は「ネットワークのみ」の動作を適用します（GET 以外のすべてのリクエストはキャッシュに含まれないため、キャッシュできません）。
+これは、キャッシュ内にあるものには「キャッシュのみ」の動作を適用し、キャッシュ内にないものには「ネットワークのみ」の動作を適用します（GET 以外のすべてのリクエストはキャッシュできないため、後者が適用されます）。
 
 
 
-###  キャッシュとネットワークの競争{: #cache-and-network-race }
+### キャッシュとネットワークの優劣 {: #cache-and-network-race }
 
 <img src="images/ss-cache-and-network-race.png">
 
-** 適しているケース:** ディスク アクセスが低速な端末でパフォーマンスを追及している場合の小さいアセット。
+**最適なケース:** ディスク アクセスが低速な端末でパフォーマンスを追及する場合の小さなアセット。
 
 
-古いハードドライブ、ウィルス スキャン、高速インターネット接続の組み合わせにより、ネットワークからリソースを取得する方がディスクから取得するよりも速い場合があります。ただし、端末にコンテンツが存在する場合にネットワークから取得するのは、データの浪費につながることに留意してください。
+古いハードドライブ、ウィルス スキャンソフト、高速インターネット接続を一緒に使用している場合、ネットワークからリソースを取得する方がディスクから取得するより速い場合があります。
+ ただし、端末にコンテンツが存在するのにネットワークから取得すると、データの浪費につながるので注意してください。
 
 
     // Promise.race is no good to us because it rejects if
-    // a promise rejects before fulfilling.Let's make a proper
+    // a promise rejects before fulfilling. Let's make a proper
     // race function:
     function promiseAny(promises) {
       return new Promise((resolve, reject) => {
@@ -449,18 +460,21 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
     });
 
 
-###  ネットワークから取得できなければキャッシュから取得{: #network-falling-back-to-cache }
+### ネットワークから取得できなければキャッシュから取得 {: #network-falling-back-to-cache }
 
 <img src="images/ss-network-falling-back-to-cache.png">
 
-** 適しているケース:** サイトの「バージョン」外で頻繁にアップデートされるリソースが取得できなかった場合の応急策
-（記事、アバター、ソーシャル メディアのタイムライン、ゲームのリーダーボードなど）。
+**最適なケース:** サイトの「バージョン」外で頻繁に更新されるリソースが取得できなかった場合の応急策。
+ たとえば、 記事、アバター、ソーシャル メディアのタイムライン、ゲームの得点ランキングなどです。
 
 
-これは、オンラインのユーザーには最新のコンテンツを提供し、オフラインのユーザーにはキャッシュされた古いバージョンを提供することになります。ネットワーク リクエストが成功した場合は、おそらく[キャッシュ エントリをアップデート](#on-network-response)します。
+このパターンでは、オンラインのユーザーには最新のコンテンツを提供し、オフラインのユーザーにはキャッシュされた古いバージョンを提供することになります。
+ ネットワーク リクエストが成功したら、ほとんどの場合は[キャッシュ エントリを更新](#on-network-response)します。
 
 
-ただし、この方法には問題があります。ユーザーのネットワーク接続が途切れがちまたは低速である場合は、ネットワークからの取得が失敗するのを待ってから、既に端末に存在する表示可能なコンテンツを取得する必要があります。そのため、非常に時間がかかり、ユーザーがイライラしてしまいます。これをうまく解決するには、次のパターンの[先にキャッシュ、次にネットワーク](#cache-then-network)をご覧ください。
+しかし、この方法には短所があります。 ユーザーのネットワーク接続が途切れがちだったり低速だったりする場合、ユーザーは、既に端末に存在する完全に利用可能なコンテンツを取得できるにもかかわらず、ネットワークからの取得が失敗するのを待たねばなりません。
+ そのため、コンテンツの取得に非常に時間がかかり、ユーザーをイライラさせるおそれがあります。
+ もっとよい解決策として、次に紹介する[先にキャッシュ、次にネットワーク](#cache-then-network)をご覧ください。
 
 
     self.addEventListener('fetch', function(event) {
@@ -471,27 +485,29 @@ levels 11-20 のダウンロード中に Service Worker が強制終了される
       );
     });
 
-###  先にキャッシュ、次にネットワーク{: #cache-then-network }
+### 先にキャッシュ、次にネットワーク {: #cache-then-network }
 
 <img src="images/ss-cache-then-network.png">
 
-** 適しているケース:** 頻繁にアップデートされるコンテンツ（記事、ソーシャル メディアのタイムライン、ゲームのリーダーボードなど）。
+**最適なケース:** 頻繁に更新されるコンテンツ。 たとえば、 記事、ソーシャル メディアのタイムライン、ゲームの得点ランキングなどです。
 
 
-この場合、ページは、1 つはキャッシュに対して、もう 1 つはネットワークに対してと、2 つのリクエストを生成することが必要です。
-つまり、まずはキャッシュされたデータを表示してから、ネットワークから取得できた場合はそのページをアップデートするということです。
+このパターンでは、ページで 2 つのリクエスト（キャッシュとネットワークに対してそれぞれ 1 つずつ）を生成する必要があります。
+ つまり、まずはキャッシュされたデータを表示し、その後ネットワークから取得できたらページを更新します。
 
 
-新しいデータを取得したら現在のデータを置き換えられる場合もありますが（ゲームのリーダーボードなど）、コンテンツの大きい部分の置き換えは混乱を招くことがあります。基本的にユーザーが視聴中や操作中のコンテンツは「消去」しないでください。
+新しいデータを取得したときに現在のデータを置き換えるだけで済む場合もありますが（たとえば
+ ゲームの得点ランキング）、コンテンツの大部分を置き換えると混乱を招くことがあります。
+ 基本的に、ユーザーが視聴中または操作中のデータが「消失」してしまわないようにしてください。
 
 
-Twitter は古いコンテンツの上に新しいコンテンツを追加し、スクロール位置を調整するため、ユーザーの邪魔をすることがありません。
-これは、Twitter のコンテンツはほとんどリニアなデータ構造で順番が維持されているからです。
-[trained-to-thrill][ttt] ではこのパターンをコピーして、コンテンツが画面に表示されるまでの時間を短くし、新着のコンテンツを表示するようにしています。
+Twitter は古いコンテンツの上に新しいコンテンツを追加してスクロール位置を調整するので、ユーザーの邪魔をすることがありません。
+ これが可能なのは、Twitter のコンテンツでは、ほぼリニアな順序が維持されているためです。
+ [trained-to-thrill][ttt] では、このパターンをコピーして、コンテンツが画面に表示されるまでの時間をできる限り短縮する一方で、最新のコンテンツを取得できたらすぐに表示するようにしています。
 
 
 
-** ページのコード:**
+**ページのコード:**
 
     var networkDataReceived = false;
 
@@ -502,7 +518,7 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
       return response.json();
     }).then(function(data) {
       networkDataReceived = true;
-      updatePage();
+      updatePage(data);
     });
 
     // fetch cached data
@@ -520,9 +536,9 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
     }).catch(showErrorMessage).then(stopSpinner);
 
 
-** Service Worker のコード:**
+**Service Worker のコード:**
 
-常にネットワークから取得して、キャッシュをアップデートしています。
+常にネットワークにアクセスし、そのたびにキャッシュを更新します。
 
     self.addEventListener('fetch', function(event) {
       event.respondWith(
@@ -535,22 +551,21 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
       );
     });
 
-注: `fetch` と `caches` はまだページに公開していないため（[チケット #1](https://code.google.com/p/chromium/issues/detail?id=436770)、[チケット #2](https://code.google.com/p/chromium/issues/detail?id=439389)）、上記は Chrome ではまだ機能しません。
 
-これに対処するために [trained-to-thrill][ttt] では、[fetch の代わりに XHR](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3) を使用しました。また、Service Worker に結果の取得元を伝えるために Accept ヘッダーを不正に利用しています（[ページのコード](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70)、[Service Worker のコード](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)）。
-
+[trained-to-thrill][ttt] では、この問題の回避策として、[fetch の代わりに XHR](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3) を使用するとともに、Service Worker に結果の取得元を知らせるため Accept ヘッダーを変則的に使用しました（[ページのコード](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/index.js#L70)、[Service Worker のコード](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/sw/index.js#L61)）。
 
 
 
 
-###  汎用のフォールバック{: #generic-fallback }
+
+### 汎用的なフォールバック {: #generic-fallback }
 
 <img src="images/ss-generic-fallback.png">
 
-キャッシュやネットワークからリソースの提供に失敗した場合は、汎用のフォールバックを提供するようにします。
+キャッシュやネットワークからリソースを提供できない場合、通常は汎用的なフォールバックを提供します。
 
 
-** 適しているケース:** セカンダリ画像（アバター、POST リクエストの失敗、「このページはオフラインでは利用できません」といったページなど）。
+**最適なケース:** アバターなどのセカンダリ画像、失敗した POST リクエスト、「このページはオフラインでは利用できません」というページ。
 
 
     self.addEventListener('fetch', function(event) {
@@ -569,26 +584,27 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
       );
     });
 
-フォールバックするアイテムは、[依存関係としてインストール](#on-install-as-dependency)されている必要があります。
+フォールバックに使用するアイテムは、通常は[依存関係としてインストール](#on-install-as-dependency)されます。
 
-ページがメールを送信している場合は、Service Worker はフォールバックして IndexedDB の送信ボックスにメールを保存し、送信は失敗したものの、データは保存されていることをページでわかるように応答します。
+ページでメールを送信している場合、Service Worker がフォールバックを行う際は IDB の送信トレイにメールを保存し、ページに応答して送信は失敗したがデータの保存には成功したことを知らせます。
 
 
 
-###  Service Worker 側のテンプレート{: #serviceworker-side-templating }
+### Service Worker 側のテンプレート {: #serviceworker-side-templating }
 
 <img src="images/ss-sw-side-templating.png">
 
-** 適しているケース:** サーバー レスポンスをキャッシュできなかったページ。
+**最適なケース:** サーバー レスポンスをキャッシュできなかったページ。
 
-[サーバーでページをレンダリングすると高速ではあります](https://jakearchibald.com/2013/progressive-enhancement-is-faster/)が、これは、キャッシュに存在していても意味のない状態データが含まれてしまうことを意味しています（例: 「... としてログイン」）。Service Worker でページが制御される場合は、代わりに JSON データとテンプレートをリクエストしてレンダリングします。
+[サーバーでページをレンダリングすると高速になる](https://jakearchibald.com/2013/progressive-enhancement-is-faster/)とはいえ、これは、意味のない状態データがキャッシュに保存されることを意味します（例:
+ 「…としてログイン」）。 Service Worker でページが制御されている場合は、代わりに JSON データとテンプレートをリクエストしてレンダリングすることができます。
 
 
 
     importScripts('templating-engine.js');
 
     self.addEventListener('fetch', function(event) {
-      var requestURL = new URL(event.request);
+      var requestURL = new URL(event.request.url);
 
       event.respondWith(
         Promise.all([
@@ -612,18 +628,18 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
     });
 
 
-##  まとめ
+## 複数の方法を組み合わせる
 
-ここで紹介した方法のどれかを選択しなければならないわけではありません。リクエスト URL に応じてこのうちの複数を使用することになるでしょう。
-たとえば、[trained-to-thrill][ttt] では以下を使用しています。
+これまで紹介した方法のどれか 1 つを選択しなければならないということはありません。通常は、リクエスト URL に応じて複数の方法を使用することになります。
+ たとえば、[trained-to-thrill][ttt] では以下を使用しています。
 
 
-* [インストール時にキャッシュ](#on-install-as-dependency)、静的 UI と動作
-* [ネットワークの応答時にキャッシュ](#on-network-response)、Flickr 画像とデータ
-* [キャッシュになければネットワークからフェッチ](#cache-falling-back-to-network)、ほとんどのリクエスト
-* [キャッシュからフェッチしてさらにネットワークからフェチ](#cache-then-network)、Flickr 検索結果
+* [インストール時にキャッシュ](#on-install-as-dependency): 静的 UI と静的動作
+* [ネットワークの応答時にキャッシュ](#on-network-response): Flickr の画像とデータ
+* [キャッシュになければネットワークから取得](#cache-falling-back-to-network): ほとんどのリクエスト
+* [先にキャッシュ、次にネットワーク](#cache-then-network): Flickr の検索結果
 
-リクエストを確認して処理内容を決定します。
+次のコードは、リクエストを確認して処理方法を決定します。
 
     self.addEventListener('fetch', function(event) {
       // Parse the URL:
@@ -667,29 +683,34 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
       );
     });
 
-全体像を把握できたと思います。
+以上で、処理パターンの全容をおわかりいただけたと思います。
 
+## フィードバック {: .hide-from-toc }
 
-###  謝辞{: hide-from-toc }
-すばらしいアイコンをありがとうございました。
+{% include "web/_shared/helpful.html" %}
 
-* [Code](http://thenounproject.com/term/code/17547/){: .external }: buzzyrobot
-* [Calendar](http://thenounproject.com/term/calendar/4672/){: .external }: Scott Lewis
-* [Network](http://thenounproject.com/term/network/12676/){: .external }: Ben Rizzo
+<div class="clearfix"></div>
+
+### 謝辞 {: hide-from-toc }
+素敵なアイコンをありがとうございました。
+
+* [コード](http://thenounproject.com/term/code/17547/){: .external } : buzzyrobot
+* [カレンダー](http://thenounproject.com/term/calendar/4672/){: .external } : Scott Lewis
+* [ネットワーク](http://thenounproject.com/term/network/12676/){: .external } : Ben Rizzo
 * [SD](http://thenounproject.com/term/sd-card/6185/): Thomas Le Bas
-* [CPU](http://thenounproject.com/term/cpu/72043/){: .external }: iconsmind.com
-* [Trash](http://thenounproject.com/term/trash/20538/){: .external }: trasnik
-* [Notification](http://thenounproject.com/term/notification/32514/){: .external }: @daosme
-* [Layout](http://thenounproject.com/term/layout/36872/){: .external }: Mister Pixel
-* [Cloud](http://thenounproject.com/term/cloud/2788/){: .external }: P.J. Onori
+* [CPU](http://thenounproject.com/term/cpu/72043/){: .external } : iconsmind.com
+* [ごみ箱](http://thenounproject.com/term/trash/20538/){: .external } : trasnik
+* [通知](http://thenounproject.com/term/notification/32514/){: .external } : @daosme
+* [レイアウト](http://thenounproject.com/term/layout/36872/){: .external } : Mister Pixel
+* [クラウド](http://thenounproject.com/term/cloud/2788/){: .external } : P.J. Onori
 
-そして校正を手伝ってくれた [Jeff Posnick](https://twitter.com/jeffposnick) にも感謝の意を述べたいと思います。
+公開前にたくさんの間違いを見つけてくれた [Jeff Posnick](https://twitter.com/jeffposnick) にも感謝します。
 
 
 ### 参考資料
-* [ServiceWorkers: 概要][sw_primer]
-* [Is ServiceWorker ready?][is_sw_ready] - 主要なブラウザでの実装ステータスの追跡
-* [JavaScript の Promise: 概要](/web/fundamentals/getting-started/primers/promises) - Promise のガイド
+* [Service Worker の紹介][sw_primer]
+* [Is ServiceWorker ready?][is_sw_ready]: 主要なブラウザでの実装ステータスの追跡
+* [JavaScript の Promise: 概要](/web/fundamentals/getting-started/primers/promises): Promise のガイド
 
 
 [ttt]: https://jakearchibald.github.io/trained-to-thrill/
@@ -697,5 +718,6 @@ Twitter は古いコンテンツの上に新しいコンテンツを追加し、
 [sw_primer]: /web/fundamentals/getting-started/primers/service-workers
 [caches_api]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 
+## フィードバック {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}
