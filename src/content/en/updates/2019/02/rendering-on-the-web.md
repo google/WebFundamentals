@@ -5,7 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: fundamentals, performance, app-shell #}
 {# wf_featured_image: /web/updates/images/2019/02/rendering-on-the-web/icon.png #}
-{# wf_featured_snippet: Where should we implement logic and rendering in our applications? #}
+{# wf_featured_snippet: Where should we implement logic and rendering in our applications? Should we use Server Side Rendering? What about Rehydration? Let's find some answers! #}
 {# wf_blink_components: N/A #}
 
 # Rendering on the Web {: .page-title }
