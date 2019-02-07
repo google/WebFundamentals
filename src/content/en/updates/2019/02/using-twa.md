@@ -6,10 +6,10 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
-{# wf_featured_snippet: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs. #}
+{# wf_featured_snippet: Trusted Web Activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs. #}
 {# wf_blink_components: N/A #}
 
-# Using Trusted Web Activity {: .page-title }
+# Using Trusted Web Activities {: .page-title }
 
 _Last updated: February 6th, 2019_
 
