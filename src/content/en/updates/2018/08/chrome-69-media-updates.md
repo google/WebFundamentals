@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 69: AV1 and HDCP policy check.
 
-{# wf_updated_on: 2018-10-03 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2018-08-01 #}
 {# wf_tags: news,chrome69,media,removals #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -152,7 +152,7 @@ to try out all versions of HDCP.
     .then(mediaKeys => {
 
       // Get status for HDCP 2.2
-      return mediaKeys.getStatusForPolicy({ minHdcpVersion: 'hdcp-2.2' })
+      return mediaKeys.getStatusForPolicy({ minHdcpVersion: '2.2' })
       .then(status => {
         if (status !== 'usable')
           return Promise.reject(status);
@@ -167,12 +167,10 @@ to try out all versions of HDCP.
 
 ### Available for Origin Trials
 
-To get feedback from web developers, the HDCP Policy Check API is available as
-an [Origin Trial] in Chrome 69 for Desktop (Chrome OS, Linux, Mac, and
-Windows). You will need to [request a token], so that the feature is
-automatically enabled for your origin for a limited period of time, without the
-need to enable the experimental "Web Platform Features" flag at
-`chrome://flags/#enable-experimental-web-platform-features`.
+To get feedback from web developers, we've previously added the HDCP Policy
+Check API feature in Chrome 69 for Desktop (Chrome OS, Linux, Mac, and Windows).
+
+The trial has successfully ended in November 2018.
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ITzZ_yx4bF8) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5652917147140096) &#124;
