@@ -1029,8 +1029,10 @@ koto:
   role:
     - author
   email: koto@google.com
+  twitter: kkotowicz
+  github: koto
   description:
-    en: "Software Engineer in a Security Team at Google"
+    en: "Software Engineer in the Information Security Enginnering team at Google"
 
 mustafa:
   name:
