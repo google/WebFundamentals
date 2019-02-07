@@ -12,7 +12,7 @@ description: Trusted Types is a new experimental API available in Chrome that he
 # Trusted Types help prevent Cross-Site Scripting {: .page-title }
 
 #### TL;DR {: #tldr .hide-from-toc }
-We've created a new experimental API that aims tp prevent DOM-Based Cross
+We've created a new experimental API that aims to prevent DOM-Based Cross
 Site Scripting in modern web applications.
 
 {% include "web/_shared/contributors/koto.html" %}
@@ -33,8 +33,8 @@ Practice shows that maintaining an XSS-free application is still a difficult
 challenge, especially if the application is complex. While solutions for
 preventing server-side XSS are well known,
 [DOM-based Cross-Site Scripting](https://www.owasp.org/index.php/DOM_Based_XSS){: .external}
-(DOM XSS) becomes a *growing* problem. For example, in
-[Google Vulnerability Reward Program](https://g.co/vrp) DOM XSS is already the
+(DOM XSS) is a *growing* problem. For example, in
+[Google's Vulnerability Reward Program](https://g.co/vrp) DOM XSS is already the
 most common variant.
 
 Why is that? We think it's caused by two separate issues:
@@ -53,19 +53,19 @@ document.head.innerHTML += `<link rel="stylesheet" href="./templates/${templateI
 
 This code introduces DOM XSS by linking the attacker-controlled **source**
 (`location.hash`) with the injection **sink** (`innerHTML`). The attacker can
-exploit this bug by sending `https://example.com#tplid="><img src=x
-onerror=alert(1)>` URL for the victim to visit.
+exploit this bug by tricking their victim into visiting the URL `https://example.com#tplid="><img src=x
+onerror=alert(1)>`.
 
 It's easy to make this mistake in code, especially if the code changes often.
 For example, maybe `templateId` was once generated and validated on the server,
-so this value was trustworthy? When assigning to `innerHTML`', all we know is
-that the value is a string, but should it be trusted? Where does is come from
-really?
+so this value used to be trustworthy? When assigning to `innerHTML`', all we know
+is that the value is a string, but should it be trusted? Where does it really
+come from?
 
-Additionally, it's not just `innerHTML` that one must be careful of. In a
-typical browser environment, there are over 60 sink functions or properties that
-require this caution. The DOM API is **insecure by default** and requires
-special treatment to prevent XSS.
+Additionally, the problem is not limited to just `innerHTML`. In a typical
+browser environment, there are over 60 sink functions or properties that require
+this caution. The DOM API is **insecure by default** and requires special
+treatment to prevent XSS.
 
 ### XSS is difficult to detect
 
@@ -77,10 +77,12 @@ right function called?
 
 Looking at the source code alone, it's difficult to know if it introduces a DOM
 XSS. It's not enough to grep the `.js` files for sensitive patterns. For one,
-the sensitive functions are used through various wrappers, and the actual
-vulnerability will look more like
-[this](https://hackerone.com/reports/158853){: .external}. But sometimes it's
-just impossible:
+the sensitive functions are often used through various wrappers and real-world
+vulnerabilities look more like
+[this](https://hackerone.com/reports/158853){: .external}.
+
+Sometimes it's not even possible to tell if a codebase is vulnerable by only
+looking at it.
 
 ```js
 obj[prop] = templateID
@@ -88,7 +90,7 @@ obj[prop] = templateID
 
 If `obj` points to the `Location` object, and `prop` value is `"href"`, this is
 very likely a DOM XSS, but one can only find that out when executing the code.
-As any part of your application can potentially call a DOM sink, all of the code
+As any part of your application can potentially hit a DOM sink, all of the code
 should undergo a manual security review to be sure - and the reviewer has to be
 extra careful to spot the bug. That's unlikely to happen.
 
@@ -114,7 +116,7 @@ functions:
 ```js
 const templateId = location.hash.match(/tplid=([^;&]*)/)[1];
 // typeof templateId == "string"
-document.head.innerHTML += aString // Throws a TypeError.
+document.head.innerHTML += templateId // Throws a TypeError.
 ```
 
 To interact with those functions, you create special typed objects - *Trusted
@@ -154,7 +156,7 @@ Indeed, this line is necessary to fix XSS. However, the real change is more
 profound. With Trusted Types enforcement, the *only* code that could introduce a
 DOM XSS vulnerability is the code of the policies. No other code can produce a
 value that the sink functions accept. As such, only the policies need to be
-security reviewed. In our example, it doesn't really matter where the
+reviewed for security issues. In our example, it doesn't really matter where the
 `templateId` value comes from, as the policy makes sure it's correctly validated
 first - the output of this particular policy does not introduce XSS.
 
@@ -197,17 +199,18 @@ To get this new behavior on your site, you need to be
 experiment can be enabled on the command line:
 
 ```
-    chrome --enable-blink-features=TrustedDOMTypes
+chrome --enable-blink-features=TrustedDOMTypes
 ```
 
 or
 
 ```
-    chrome --enable-experimental-web-platform-features
+chrome --enable-experimental-web-platform-features
 ```
 
-Passing this flag on the command line enables the feature globally in Chrome for
-the current session.
+Alternatively, visit `chrome://flags/#enable-experimental-web-platform-features`
+and enable the feature. All of those options enable the feature globally in
+Chrome for the current session.
 
 We have also created a [polyfill](https://github.com/WICG/trusted-types) that
 enables you to test Trusted Types in other browsers.
