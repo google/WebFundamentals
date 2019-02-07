@@ -13,8 +13,7 @@ description: A round up of the audio/video updates in Chrome 73: Hardware media 
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
-Much has been added to Chrome's media capabilities in version 73. In this
-article, I'll discuss those new features which include:
+In this article, I'll discuss Chrome 73 new media features which include:
 
 - [Hardware media keys](#media-keys) are now supported to control media playback
   on desktop.
@@ -195,11 +194,16 @@ To provide this feature pass a function with `skipad` when calling
 `setActionHandler()`. To hide it pass `null`. As you can read below, it is
 pretty straightforward.
 
-    // Try to show a "Skip Ad" button in the Picture-in-Picture window.
     try {
-      navigator.mediaSession.setActionHandler('skipad', onSkipAdButtonClick);
+      navigator.mediaSession.setActionHandler('skipad', null);
+      showSkipAdButton();
     } catch(error) {
-      // Argh! The "Skip Ad" media session action is not supported.
+       // The "Skip Ad" media session action is not supported.
+    }
+
+    function showSkipAdButton() {
+      // The Picture-in-Picture window will show a "Skip Ad" button.
+      navigator.mediaSession.setActionHandler('skipad', onSkipAdButtonClick);
     }
 
     function onSkipAdButtonClick() {
