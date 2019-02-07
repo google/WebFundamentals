@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-01 #}
 {# wf_tags: news #}
 {# wf_blink_components: N/A #}
@@ -33,3 +33,6 @@ It'll give users a way to download content created/modified within your app.
 Browser support: only the current Chrome dev channel release (14.0.835.15+) supports this attribute.
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

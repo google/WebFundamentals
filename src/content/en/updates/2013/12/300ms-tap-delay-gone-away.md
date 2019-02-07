@@ -1,10 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Every click interaction in mobile browsers is hampered with a 300ms delay, but that's gone in Chrome 32 for mobile-optimised sites!
+description: Every click interaction in mobile browsers is hampered with a 300ms delay, but that's gone in Chrome 32 for mobile-optimized sites!
 
-{# wf_updated_on: 2016-06-26 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2013-12-12 #}
 {# wf_tags: news,mobile,performance,touchevent #}
+{# wf_blink_components: Mobile(Android),Mobile>WebView #}
 
 # 300ms tap delay, gone away {: .page-title }
 
@@ -26,7 +27,7 @@ description: Every click interaction in mobile browsers is hampered with a 300ms
 
 For many years, mobile browsers applied a 300-350ms delay between `touchend` and `click` while they waited to see if this was going to be a double-tap or not, since double-tap was a gesture to zoom into text.
 
-Ever since the first release of Chrome for Android, this delay was removed if pinch-zoom was also disabled. However, pinch zoom is an important accessibility feature. As of Chrome 32 (back in 2014) this **delay is gone** for **mobile-optimised** sites, **without removing pinch-zooming**! Firefox and IE/Edge did the same shortly afterwards, and in March 2016 a similar fix landed in iOS 9.3.
+Ever since the first release of Chrome for Android, this delay was removed if pinch-zoom was also disabled. However, pinch zoom is an important accessibility feature. As of Chrome 32 (back in 2014) this **delay is gone** for **mobile-optimized** sites, **without removing pinch-zooming**! Firefox and IE/Edge did the same shortly afterwards, and in March 2016 a similar fix landed in iOS 9.3.
 
 The performance difference is huge!
 
@@ -39,7 +40,7 @@ To remove the 300-350ms tap delay, all you need is the following in the `<head>`
     <meta name="viewport" content="width=device-width">
     
 
-This sets the viewport width to the same as the device, and is generally a best-practice for mobile-optimised sites. With this tag, browsers assume you've made text readable on mobile, and the double-tap-to-zoom feature is dropped in favour of faster clicks.
+This sets the viewport width to the same as the device, and is generally a best-practice for mobile-optimized sites. With this tag, browsers assume you've made text readable on mobile, and the double-tap-to-zoom feature is dropped in favour of faster clicks.
 
 If for some reason you cannot make this change, you can use `touch-action: manipulation` to achieve the same effect either across the page or on particular elements:
 
@@ -47,11 +48,11 @@ If for some reason you cannot make this change, you can use `touch-action: manip
       touch-action: manipulation;
     }
 
-This technique isn't supported in Firefox, so the viewport tag is much prefered.
+This technique isn't supported in Firefox, so the viewport tag is much preferred.
 
 ## Is losing double-tap-to-zoom an accessibility concern?
 
-No. Pinch zoom continues to work, and OS features cater for users who find this gesture difficult. On Android, [maginification gestures](https://support.google.com/accessibility/android/answer/6006949) takes care of it. Tools like this even work outside the browser.
+No. Pinch zoom continues to work, and OS features cater for users who find this gesture difficult. On Android, [magnification gestures](https://support.google.com/accessibility/android/answer/6006949) takes care of it. Tools like this even work outside the browser.
 
 ## What about older browsers?
 
@@ -60,3 +61,6 @@ No. Pinch zoom continues to work, and OS features cater for users who find this 
 <p>Adding a <code>touchstart</code> listener to everything has a performance impact, because lower-level interactions such as scrolling are delayed by calling the listener to see if it <code>event.preventDefault()</code>s. Thankfully, FastClick will avoid setting listeners in cases where the browser already removes the 300ms delay, so you get the best of both!</p>
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

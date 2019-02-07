@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-07 #}
 {# wf_tags: news,filesystem #}
 {# wf_blink_components: N/A #}
@@ -64,3 +64,6 @@ book_path: /web/updates/_book.yaml
 
 
 
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

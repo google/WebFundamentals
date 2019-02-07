@@ -1,320 +1,349 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Mulailah men-debug JavaScript dengan menggunakan Chrome DevTools dalam tutorial interaktif ini.
+description: Pelajari cara menggunakan Chrome DevTools untuk menemukan dan memperbaiki bug JavaScript.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_blink_components: Platform>DevTools #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2017-01-04 #}
 
-<style>
-.devtools-inline {
-  max-height: 1em;
-  vertical-align: middle;
-}
-</style>
+{% include "web/tools/chrome-devtools/_shared/styles.html" %}
 
-<!-- TODO
-     make demo responsive
--->
-
-# Memulai dengan Men-debug JavaScript di Chrome DevTools {: .page-title }
+# Mulailah dengan Men-debug JavaScript di Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Tutorial interaktif langkah-demi-langkah ini mengajari Anda
-alur kerja dasar untuk men-debug JavaScript di Chrome DevTools. Tutorial ini menampilkan
-cara men-debug satu masalah spesifik, namun alur kerja umum yang Anda pelajari berguna
-untuk men-debug semua tipe bug JavaScript.
+Tutorial ini mengajarkan Anda alur kerja dasar untuk men-debug masalah JavaScript di DevTools.
+Baca terus, atau tonton video dari tutorial ini, di bawah ini.
 
-Jika Anda menggunakan `console.log()` untuk menemukan dan memperbaiki bug dalam kode, pertimbangkan
-penggunaan alur kerja yang diuraikan dalam tutorial ini sebagai gantinya. Ini sering kali jauh lebih cepat
-dan lebih efektif.
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="H0XScE08hy8"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
-## Langkah 1: Ulangi kemunculan bug {: #step-1 }
 
-Mengulangi kemunculan bug selalu menjadi langkah pertama untuk men-debug.
-Untuk "mengulangi kemunculan bug" berarti menemukan serangkaian tindakan yang secara konsisten
-menyebabkan munculnya bug. Anda mungkin perlu mengulangi kemunculan bug beberapa kali,
-jadi cobalah menghilangkan langkah-langkah yang tidak penting.
+## Langkah 1: Ulangi kemunculan bug {: #reproduce }
 
-Ikuti petunjuk di bawah ini untuk mengulangi kemunculan bug yang akan Anda
-perbaiki dalam tutorial ini.
+Menemukan serangkaian tindakan yang secara konsisten mengulangi kemunculan selalu menjadi langkah pertama
+untuk proses debug.
 
 1. Klik **Open Demo**. Demo akan dibuka di tab baru.
 
      <a href="https://googlechrome.github.io/devtools-samples/debug-js/get-started"
        target="devtools"
        rel="noopener noreferrer">
-       <button>Open Demo</button>
+       <button>Buka Demo</button>
      </a>
 
-1. Pada demo, masukkan `5` untuk **Number 1**.
-1. Masukkan `1` untuk **Number 2**.
-1. Klik **Add Number 1 and Number 2**.
-1. Lihat label di bawah masukan dan tombol. Tertulis `5 + 1 = 51`.
-
-Ups. Hasilnya salah. Hasil seharusnya `6`. Inilah bug yang
-akan Anda perbaiki.
-
-## Langkah 2: Hentikan kode sementara dengan breakpoint
-
-DevTools memungkinkan Anda menghentikan kode sementara di tengah eksekusi, dan
-periksa nilai-nilai *semua* variabel pada saat itu. Alat (bantu) untuk
-menghentikan sementara kode Anda disebut **breakpoint**. Cobalah sekarang:
-
-1. Buka DevTools di demo dengan menekan
-   <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) atau
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux).
-
-1. Klik tab **Sources**.
-
-<!-- TODO add a screenshot. Don't create the screenshot until demo design is
-     finished. Add it here rather than previous screenshot in case Sources
-     is hidden -->
-
-1. Klik **Event Listener Breakpoints** untuk meluaskan bagian. DevTools akan menampilkan
-   daftar kategori kejadian yang bisa diluaskan, misalnya **Animation** dan
-   **Clipboard**.
-
-<!-- TODO or maybe add it here -->
-
-1. Di sebelah kategori kejadian **Mouse**, klik **Expand** ![ikon
-   Expand](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.
-   DevTools menampilkan daftar kejadian mouse, misalnya **click**,
-   bersama kotak centang di sebelahnya.
-1. Pilih kotak centang **click**.
+1. Masukkan `5` di kotak teks **Nomor 1**.
+1. Masukkan `1` di kotak teks **Nomor 2**.
+1. Klik **Add Number 1 and Number 2**. Label di bawah tombol bertuliskan `5 + 1 = 51`. Hasil
+   seharusnya `6`. Inilah bug yang akan Anda perbaiki.
 
      <figure>
-       <img src="imgs/get-started-click-breakpoint.png"
-         alt="DevTools dibuka pada demo, dengan panel Sources difokus
-              dan event listener breakpoint untuk klik diaktifkan."
+       <img src="imgs/bug.png"
+         alt="Hasil 5 + 1 adalah 51. Seharusnya 6."/>
        <figcaption>
-         <b>Gambar 1</b>: DevTools dibuka pada demo, dengan panel Sources
-         difokus dan event listener breakpoint untuk klik diaktifkan.
-         Jika jendela DevTools Anda besar, lokasi panel <b>Event
-         Listener Breakpoints</b> berada di sebelah kanan, bukan
-         di bagian kiri bawah, seperti dalam tangkapan layar.
+         <b>Gambar 1</b>. Hasil 5 + 1 adalah 51. Seharusnya 6.
        </figcaption>
      </figure>
 
-1. Kembali ke demo, klik lagi **Add Number 1 and Number 2**. DevTools
-   menghentikan demo sementara dan menyorot baris kode di panel **Sources**.
-   DevTools menyorot baris kode ini:
+## Langkah 2: Pahami UI panel Sumber {: #sources-ui }
 
-       `function onClick() {`
+DevTools menyediakan banyak fitur berbeda untuk tugas yang berbeda, misalnya mengubah CSS, membuat profil
+performa pemuatan halaman, dan memantau permintaan jaringan. Panel **Sources** adalah tempat Anda melakukan debug
+JavaScript.
 
-Bila memilih kotak centang **click**, siapkan breakpoint berbasis kejadian pada
-semua kejadian `click`. Bila *ada* simpul yang diklik, dan simpul itu memiliki penangan `click`,
-DevTools secara otomatis akan berhenti sementara pada baris pertama penangan
-`click` simpul itu.
+1. Buka DevTools dengan menekan <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac)
+   atau <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows, Linux). Pintasan ini membuka
+   panel **Console**.
 
-Note: Ini cuma salah satu dari sekian banyak tipe breakpoint yang ditawarkan DevTools.
-Breakpoint yang harus Anda gunakan bergantung pada masalah yang sedang Anda debug.
+     <figure>
+       <img src="imgs/console.png" alt="Panel Konsol."/>
+       <figcaption>
+         <b>Gambar 2</b>. Panel <b>Konsol</b> 
+       </figcaption>
+     </figure>
+
+1. Klik tab **Sources**.
+
+     <figure>
+       <img src="imgs/sources.png" alt="Panel Sumber."/>
+       <figcaption>
+         <b>Gambar 3</b>. Panel <b>Sumber</b> 
+       </figcaption>
+     </figure>
+
+UI panel **Sources** memiliki 3 bagian:
+
+<figure>
+  <img src="imgs/sources-annotated.png" alt="Tiga bagian UI panel Sumber."/>
+  <figcaption>
+    <b>Gambar 4</b>. Tiga bagian UI panel <b>Sumber</b> 
+  </figcaption>
+</figure>
+
+1. Panel **File Navigator**. Setiap file yang diminta oleh halaman tercantum di sini.
+2. Panel **Code Editor**. Setelah memilih file di panel **File Navigator**, konten
+   file tersebut ditampilkan di sini.
+3. Panel **JavaScript Debugging**. Beragam fitur untuk memeriksa JavaScript halaman. Jika
+   jendela DevTools lebar, panel ini ditampilkan di sebelah kanan panel **Code Editor**.
+
+## Langkah 3: Jeda kode dengan breakpoint {: #event-breakpoint }
+
+Metode umum untuk melakukan debug pada masalah seperti ini adalah menyisipkan banyak pernyataan `console.log()`
+ke dalam kode, untuk memeriksa nilai saat skrip dieksekusi. Misalnya:
+
+<pre class="prettyprint">function updateLabel() {
+  var addend1 = getNumber1();
+  <strong>console.log('addend1:', addend1);</strong>
+  var addend2 = getNumber2();
+  <strong>console.log('addend2:', addend2);</strong>
+  var sum = addend1 + addend2;
+  <strong>console.log('sum:', sum);</strong>
+  label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;
+}</pre>
+
+Metode `console.log()` mungkin dapat menyelesaikan tugas tersebut, namun **breakpoint** dapat menyelesaikannya lebih cepat.
+Breakpoint memungkinkan Anda menjeda kode di tengah eksekusi, dan memeriksa nilai
+pada saat itu. Breakpoint memiliki beberapa keunggulan dibanding metode `console.log()`:
+
+* Dengan `console.log()`, Anda perlu membuka kode sumber secara manual, menemukan kode yang relevan,
+  menyisipkan pernyataan `console.log()`, lalu memuat ulang halaman untuk melihat pesan
+  di Konsol. Dengan breakpoint, Anda dapat menjeda kode yang relevan tanpa perlu mengetahui cara
+  kode terstruktur.
+* Pada pernyataan `console.log()` Anda perlu secara eksplisit menentukan tiap nilai yang ingin Anda
+  periksa. Dengan breakpoint, DevTools menunjukkan nilai semua variable pada
+  saat itu. Kadang ada variabel yang memengaruhi kode bahkan tanpa Anda sadari.
+
+Singkatnya, breakpoint dapat membantu Anda menemukan dan memperbaiki bug lebih cepat daripada metode `console.log()`.
+
+Jika Anda mengingat-ingat kembali cara kerja aplikasi, Anda dapat menebak
+bahwa jumlah yang tidak tepat (`5 + 1 = 51`) dihitung di event listener `click` yang
+terkait dengan tombol **Tambahkan Nomor 1 dan Nomor 2**. Oleh karena itu, Anda dapat menjeda
+kode di sekitar waktu listener `click` dieksekusi. **Breakpoint Event Listener**
+memungkinkan Anda melakukan secara persis tindakan tersebut:
+
+1. Di panel **JavaScript Debugging**, klik **Event Listener Breakpoints** untuk meluaskan bagian
+. DevTools menampilkan daftar kategori peristiwa yang dapat diluaskan, misalnya **Animasi** dan
+   **Papan Klip**.
+1. Di samping kategori peristiwa **Mouse**, klik **Expand** ![ikon Luaskan
+](/web/tools/chrome-devtools/images/expand.png){: .devtools-inline}.
+   DevTools menampilkan daftar peristiwa mouse, seperti **click** dan **mousedown**. Tiap peristiwa memiliki
+   kotak centang di sampingnya.
+1. Centang kotak **click**. DevTools sekarang disiapkan untuk dijeda otomatis jika *salah satu*
+   event listener `click` dieksekusi.
+
+
+     <figure>
+       <img src="imgs/get-started-click-breakpoint.png"
+         alt="Kotak centang klik diaktifkan."/>
+       <figcaption>
+         <b>Gambar 5</b>. Kotak centang <b>klik</b> diaktifkan
+       </figcaption>
+     </figure>
+
+   
+1. Kembali pada demo, klik **Add Number 1 and Number 2** lagi. DevTools
+   menjeda demo dan menandai baris kode di panel **Sources**.
+   DevTools harus dijeda pada baris kode ini:
+
+     <pre class="prettyprint">function onClick() {</pre>
+
+     Jika Anda dijeda pada baris kode yang berbeda, tekan **Lanjutkan Eksekusi Skrip** ![Lanjutkan
+     Eksekusi Skrip][resume]{:.cdt-inl} hingga Anda dijeda pada baris yang tepat.
+
+     <aside class="note">
+       **Catatan**: Jika dijeda pada baris yang berbeda, Anda memiliki ekstensi browser yang
+       mendaftarkan event listener `click` di setiap halaman yang Anda buka. Anda dijeda di
+       listener `click` ekstensi. Jika menggunakan Mode Penyamaran untuk [mengakses secara
+       pribadi][incognito], yang menonaktifkan semua ekstensi, Anda dapat melihat bahwa Anda dijeda pada
+       baris kode yang tepat setiap waktu.
+     </aside>
+
+[incognito]: https://support.google.com/chrome/answer/95464
+
+**Breakpoint Event Listener** hanyalah salah satu dari banyak jenis breakpoint yang tersedia di DevTools.
+Semua jenis yang berbeda tersebut layak untuk diingat, karena tiap jenis pada akhirnya membantu Anda melakukan debug pada
+skenario yang berbeda secepatnya. Lihat [Menjeda Kode Dengan Breakpoint][breakpoints]
+untuk mempelajari kapan dan cara menggunakan tiap jenis.
 
 [resume]: /web/tools/chrome-devtools/images/resume-script-execution.png
+[breakpoints]: /web/tools/chrome-devtools/javascript/breakpoints
 
-## Langkah 3: Penyusuran kode
+## Langkah 4: Menyusuri kode {: #code-stepping }
 
-Satu penyebab bug yang umum adalah bila skrip mengeksekusi dalam
+Satu penyebab umum bug adalah jika skrip dieksekusi dalam
 urutan yang salah. Penyusuran kode memungkinkan Anda mengikuti proses
-eksekusi kode, baris demi baris, dan mengetahui secara persis bila
-baris dieksekusi dalam urutan yang berbeda dengan yang Anda harapkan. Cobalah sekarang:
+eksekusi kode, baris demi baris, dan mengetahui secara persis jika
+baris dieksekusi dalam urutan yang berbeda dengan yang Anda harapkan. Coba sekarang:
 
-1. Pada panel **Sources** di DevTools, klik **Step into next function
-   call** ![Step into next function call][into]{:.devtools-inline} untuk
-   menyusuri eksekusi fungsi `onClick()`, baris demi baris.
-   DevTools menyoroti baris kode berikut:
+1. Di panel **Sources** pada DevTools, klik pengaktifan **Step into next function
+   call** ![Pengaktifan Melangkah ke fungsi berikutnya][into]{:.devtools-inline} untuk menyusuri
+   eksekusi fungsi `onClick()`, baris demi baris.
+   DevTools menandai baris kode berikut:
 
-       `if (inputsAreEmpty()) {` 
+     <pre class="prettyprint">if (inputsAreEmpty()) {</pre>
 
-1. Klik **Step over next function call** ![Step over next function
-   call][over]{:.devtools-inline}. DevTools akan mengeksekusi `inputsAreEmpty()`
-   tanpa memasukinya. Perhatikan cara DevTools melangkahi beberapa baris kode.
+1. Klik **Step over next function call** ![Pengaktifkan Melangkah ke fungsi berikutnya
+   ][over]{:.devtools-inline}. DevTools mengeksekusi `inputsAreEmpty()`
+   tanpa melangkah ke dalamnya. Perhatikan cara DevTools melewati beberapa baris kode.
    Karena `inputsAreEmpty()` dievaluasi sebagai false, maka blok kode pernyataan `if`
    tidak dieksekusi.
 
 Itulah gambaran umum mengenai penyusuran kode. Jika mengamati kode dalam
-`get-started.js`, Anda bisa melihat bahwa bug tersebut mungkin ada di suatu tempat di fungsi
+`get-started.js`, Anda dapat melihat bahwa bug tersebut mungkin ada di suatu tempat di fungsi
 `updateLabel()`. Daripada menyusuri setiap baris kode,
-Anda bisa menggunakan tipe breakpoint lain untuk menghentikan sementara kode tersebut lebih dekat dengan
-lokasi bug.
+Anda dapat menggunakan jenis lain breakpoint untuk menjeda kode yang lebih dekat dengan
+kemungkinan lokasi bug.
 
 [into]: /web/tools/chrome-devtools/images/step-into.png
 [over]: /web/tools/chrome-devtools/images/step-over.png
 
-## Langkah 4: Setel breakpoint lain
+## Langkah 5: Setel breakpoint baris kode {: #line-breakpoint }
 
-Breakpoint baris kode adalah tipe breakpoint yang paling umum. Bila
-Anda ingin berhenti sementara di baris kode tertentu, gunakan
-breakpoint baris kode. Cobalah sekarang:
+Breakpoint baris kode adalah tipe breakpoint yang paling umum. Jika
+Anda ingin menjeda di baris kode tertentu, gunakan
+breakpoint baris kode.
 
-1. Perhatikan baris kode terakhir di `updateLabel()`, yang terlihat seperti ini:
+1. Lihat baris terakhir kode di `updateLabel()`:
 
-       `label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;`
+     <pre class="prettyprint">label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;</pre>
 
-1. Di sebelah kiri kode ini, Anda bisa melihat nomor baris
-   kode ini: **32**. Klik di **32**. DevTools akan menempatkan ikon biru di atas
-   **32**. Ini berarti ada breakpoint pada baris ini.
-   DevTools sekarang selalu berhenti sementara sebelum baris kode ini dieksekusi.
-1. Klik **Resume script execution** ![Resume script
-   execution][resume]{:.devtools-inline}. Skrip melanjutkan eksekusi
-   hingga mencapai baris kode yang Anda pasangi breakpoint.
-1. Perhatikan baris kode di `updateLabel()` yang sudah dieksekusi.
-   DevTools akan menampilkan nilai-nilai `addend1`, `addend2`, dan `sum`.
+1. Di sebelah kiri kode Anda dapat melihat nomor baris dari
+   baris kode tertentu ini, yaitu **32**. Klik **32**. DevTools menempatkan ikon biru di atas
+   **32**. Ini berarti ada breakpoint baris kode pada baris ini.
+   DevTools sekarang selalu dijeda sebelum baris kode ini dieksekusi.
+1. Klik **Resume script execution** ![Lanjutkan eksekusi
+   skrip][resume]{:.devtools-inline}. Skrip terus dieksekusi
+   hingga mencapai baris 32. Pada baris 29, 30, dan 31, DevTools mencetak nilai
+   `addend1`, `addend2`, dan `sum` ke sebelah kanan titik koma tiap baris.
 
-Nilai `sum` terlihat mencurigakan. Sepertinya nilai ini dievaluasi sebagai
-string, padahal seharusnya sebagai angka. Inilah yang mungkin menyebabkan bug.
+     <figure>
+       <img src="imgs/line-of-code-breakpoint.png"
+         alt="DevTools dijeda pada breakpoint baris kode pada baris 32."/>
+       <figcaption>
+         <b>Gambar 6</b>. DevTools dijeda pada breakpoint baris kode pada baris 32
+       </figcaption>
+     </figure>
 
-## Langkah 5: Periksa nilai-nilai variabel
+## Langkah 6: Periksa nilai variabel {: #check-values }
 
-Penyebab bug yang umum lainnya adalah bila variabel atau fungsi menghasilkan
-nilai yang berbeda dari yang diharapkan. Banyak developer menggunakan `console.log()` untuk
-melihat bagaimana nilai-nilai berubah dari waktu ke waktu, namun `console.log()` bisa membosankan dan
-tidak efektif karena dua alasan. Pertama, Anda mungkin perlu mengedit kode
-yang memiliki banyak panggilan ke `console.log()` secara manual. Kedua, Anda mungkin tidak tahu secara persis
-variabel mana yang berkaitan dengan bug tersebut, jadi Anda mungkin perlu mengeluarkan banyak variabel.
+Nilai `addend1`, `addend2`, dan `sum` terlihat mencurigakan. Nilai tersebut diberi tanda kutip, yang
+berarti string. Ini adalah hipotesis yang baik untuk menjelaskan penyebab bug.
+Sekarang saatnya untuk mengumpulkan informasi selengkapnya. DevTools menyediakan banyak fitur untuk memeriksa nilai
+variabel.
 
-Satu alternatif DevTools untuk `console.log()` adalah Watch Expressions. Gunakan
-Watch Expressions untuk memantau nilai variabel dari waktu ke waktu.
-Sebagaimana namanya, Watch Expressions tidak cuma dibatasi pada variabel. Anda bisa
-menyimpan ekspresi JavaScript yang valid di Watch Expression. Cobalah sekarang:
+### Metode 1: Panel Cakupan {: #scope }
 
-1. Di panel **Sources** di DevTools, klik **Watch**. Bagian ini akan diluaskan.
-1. Klik **Add Expression** ![Add Expression][add]{:.devtools-inline}.
-1. Ketikkan `typeof sum`.
+Jika Anda dijeda pada baris kode, panel **Cakupan** menampilkan variabel lokal dan global
+yang saat ini ditentukan, beserta nilai tiap variabel. Panel ini juga menampilkan variabel penutupan,
+jika berlaku. Klik dua kali nilai variabel untuk mengeditnya. Jika Anda tidak dijeda pada baris
+kode, panel **Cakupan** kosong.
+
+<figure>
+  <img src="imgs/scope-pane.png"
+    alt="Panel Cakupan."/>
+  <figcaption>
+    <b>Gambar 7</b>. Panel <b>Cakupan</b>
+  </figcaption>
+</figure>
+
+### Metode 2: Watch Expressions {: #watch-expressions }
+
+Tab **Watch Expressions** memungkinkan Anda memantau nilai variabel dari waktu ke waktu.
+Seperti tersirat dalam namanya, Watch Expressions tidak hanya dibatasi ke variabel. Anda dapat
+menyimpan ekspresi JavaScript yang valid di tab Pantau Ekspresi. Coba sekarang:
+
+1. Klik tab **Watch**.
+1. Klik **Add Expression** ![Tambahkan Ekspresi][add]{:.devtools-inline}.
+1. Ketik `typeof sum`.
 1. Tekan <kbd>Enter</kbd>. DevTools menampilkan `typeof sum: "string"`. Nilai
-   di sebelah kanan tanda titik dua adalah hasil Watch Expression.
+   di sebelah kanan tanda titik dua adalah hasil Pantau Ekspresi.
 
      <figure>
        <img src="imgs/get-started-watch-expression.png"
-         alt="Panel Watch Expression."
+         alt="Panel Pantau Ekspresi."/>
        <figcaption>
-         <b>Gambar 1</b>: Panel Watch Expression (kanan bawah), setelah
-         membuat <code>typeof sum</code> Watch Expression.
-         Jika jendela DevTools Anda besar, panel Watch Expression berada di
-         kanan, di atas panel <b>Event Listener Breakpoints</b>.
+         <b>Gambar 8</b>. Panel Pantau Ekspresi (kanan bawah), setelah
+         membuat <code>typeof sum</code> Pantau Ekspresi.
+         Jika jendela DevTools besar, panel Pantau Ekspresi berada di
+         kanan, di atas panel <b>Breakpoint Event Listener</b>.
        </figcaption>
      </figure>
 
 Seperti diduga, `sum` dievaluasi sebagai string, padahal seharusnya sebagai
-angka. Inilah penyebab bug di demo tersebut.
+angka. Anda sekarang telah mengonfirmasi bahwa inilah penyebab bug tersebut.
 
-Alternatif DevTools kedua untuk `console.log()` adalah Console. Gunakan
-Console untuk mengevaluasi pernyataan JavaScript arbitrer.
-Developer umumnya menggunakan Console untuk menimpa nilai-nilai variabel
-saat melakukan debug. Jika begitu halnya, Console bisa membantu Anda menguji
-perbaikan yang memungkinkan untuk bug yang baru saja ditemukan. Cobalah sekarang:
+### Metode 3: Konsol {: #console }
 
-1. Jika Anda tidak ada panel samping Console yang terbuka, tekan <kbd>Escape</kbd> untuk
-   membukanya. Panel samping akan terbuka di bagian bawah jendela DevTools.
-1. Di Console, ketikkan `parseInt(addend1) + parseInt(addend2)`.
-1. Tekan <kbd>Enter</kbd>. DevTools akan mengevaluasi pernyataan dan menampilkan
+Selain melihat pesan `console.log()`, Anda juga dapat menggunakan Konsol untuk mengevaluasi
+pernyataan JavaScript arbitrer. Dalam hal proses debug, Anda dapat menggunakan Konsol untuk menguji
+potensi perbaikan bug. Coba sekarang:
+
+1. Jika panel samping Konsol tidak terbuka, tekan <kbd>Escape</kbd> untuk membukanya
+   . Akan terbuka di bagian bawah jendela DevTools.
+1. Di Konsol, ketik `parseInt(addend1) + parseInt(addend2)`. Pernyataan ini berfungsi karena Anda
+   dijeda pada baris kode dengan `addend1` dan `addend2` dalam cakupan.
+1. Tekan <kbd>Enter</kbd>. DevTools akan mengevaluasi pernyataan dan mencetak
    `6`, yang merupakan hasil yang diharapkan dari demo tersebut.
 
      <figure>
        <img src="imgs/get-started-console.png"
-         alt="Panel samping Console, setelah mengevaluasi pernyataan."
+         alt="Panel samping Konsol, setelah mengevaluasi parseInt(addend1) + parseInt(addend2)."/>
        <figcaption>
-         <b>Gambar 1</b>: Panel samping Console, setelah mengevaluasi
-         <code>parseInt(addend1) + parseInt(addend2)</code>.
+         <b>Gambar 9</b>. Panel samping Konsol, setelah mengevaluasi
+        <code>parseInt(addend1) + parseInt(addend2)</code>.
        </figcaption>
      </figure>
 
 [add]: /web/tools/chrome-devtools/javascript/imgs/add-expression.png
 
-## Langkah 6: Terapkan perbaikan
+## Langkah 7: Terapkan perbaikan {: #apply-fix }
 
-Anda telah mengidentifikasi perbaikan yang memungkinkan untuk bug tersebut. Sekarang tinggal mencoba
-perbaikan dengan mengedit kode dan menjalankan kembali demo tersebut. Anda tidak
-perlu membiarkan DevTools menerapkan perbaikan. Anda bisa mengedit kode JavaScript secara langsung
-dalam UI DevTools. Cobalah sekarang:
+Anda telah menemukan perbaikan bug. Sekarang tinggal mencoba
+perbaikan dengan mengedit kode dan menjalankan ulang demo tersebut. Anda tidak
+perlu keluar dari DevTools untuk menerapkan perbaikan. Anda dapat mengedit kode JavaScript secara langsung
+dalam DevTools UI. Coba sekarang:
 
-1. Di editor kode pada panel **Sources** di DevTools, ganti
-   `var sum = addend1 + addend2` dengan
-   `var sum = parseInt(addend1) + parseInt(addend2);`. Lokasinya satu baris
-   di atas tempat Anda saat ini berhenti.
+1. Klik **Resume script execution** ![Lanjutkan eksekusi
+   skrip][resume]{:.devtools-inline}.
+1. Pada **Code Editor**, ganti baris 31, `var sum = addend1 + addend2`, dengan
+   `var sum = parseInt(addend1) + parseInt(addend2)`.
 1. Tekan <kbd>Command</kbd>+<kbd>S</kbd> (Mac) atau
    <kbd>Control</kbd>+<kbd>S</kbd> (Windows, Linux) untuk menyimpan perubahan.
-   Latar belakang kode berubah menjadi merah untuk menunjukkan bahwa skrip
-   telah berubah dalam DevTools.
-1. Klik **Deactivate breakpoints** ![Deactivate
-   breakpoints][deactivate]{:.devtools-inline}. Warnanya berubah jadi biru untuk menunjukkan
-   bahwa ia aktif. Walaupun telah disetel, DevTools akan mengabaikan breakpoint
+1. Klik **Deactivate breakpoints** ![Nonaktifkan
+   breakpoint][deactivate]{:.devtools-inline}. Akan berubah menjadi warna biru untuk menandakan
+   sudah aktif. Meski ini disetel, DevTools mengabaikan breakpoint
    yang telah Anda setel.
-1. Klik **Resume script execution** ![Resume script
-   execution][resume]{:.devtools-inline}.
-1. Cobalah demo dengan nilai-nilai yang berbeda. Kini demo seharusnya akan menghitung
-   jumlahnya dengan benar.
+1. Coba demo dengan nilai yang berbeda. Demo sekarang menghitung dengan benar.
 
-Ingatlah bahwa alur kerja ini hanya menerapkan perbaikan ke kode yang
-sedang dijalankan di browser Anda. Ini tidak akan memperbaiki kode untuk semua pengguna yang menjalankan
-laman Anda. Untuk melakukan hal itu, Anda perlu memperbaiki kode yang dijalankan di server
-yang menyediakan laman Anda.
+Perhatian: Alur kerja ini hanya berlaku untuk perbaikan kode yang sedang berjalan di browser.
+Alur kerja ini tidak akan memperbaiki kode untuk semua pengguna yang membuka halaman. Untuk melakukannya, Anda perlu memperbaiki
+kode yang ada di server.
 
 [deactivate]: /web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
 
-## Langkah berikutnya
+## Langkah berikutnya {: #next-steps }
 
-Selamat! Sekarang Anda mengetahui dasar-dasar men-debug JavaScript di DevTools.
+Selamat! Anda sekarang tahu cara mengoptimalkan Chrome DevTools saat melakukan debug
+JavaScript. Fitur dan metode yang Anda pelajari di tutorial ini dapat menghemat banyak waktu.
 
 Tutorial ini hanya menunjukkan dua cara untuk menyetel breakpoint. DevTools menawarkan banyak
-cara lainnya, termasuk:
+cara lainnya, antara lain:
 
-* Breakpoint bersyarat yang hanya dipicu bila ketentuan yang Anda
+* Breakpoint kondisional yang hanya dipicu jika kondisi yang Anda
   sediakan adalah true.
-* Breakpoint pada pengecualian yang tertangkap atau yang tidak tertangkap.
-* XHR breakpoints yang dipicu bila URL yang diminta cocok dengan
+* Breakpoint pada pengecualian yang terekam atau tidak terekam.
+* Breakpoint XHR yang dipicu jika URL yang diminta cocok dengan
   substring yang Anda sediakan.
 
-<a class="gc-analytics-event"
-   data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
-   href="add-breakpoints" target="_blank"
-   rel="noopener noreferrer"><button>Tampilkan Semua Breakpoint</button></a>
+Lihat [Menjeda Kode Dengan Breakpoint](/web/tools/chrome-devtools/javascript/breakpoints) 
+untuk mempelajari kapan dan cara menggunakan tiap jenis.
 
-Ada sepasang kontrol penyusuran kode yang belum dijelaskan dalam
-tutorial ini. Periksalah tautan di bawah untuk mengetahui selengkapnya tentang keduanya.
+Ada beberapa kontrol penyusuran kode yang belum dijelaskan dalam tutorial ini. Lihat [Menyusuri
+baris kode](/web/tools/chrome-devtools/javascript/reference#stepping) untuk mempelajari lebih lanjut.
 
-<a class="gc-analytics-event"
-   data-category="DevTools / Debug JS / Get Started / Next Steps / Breakpoints"
-   href="step-code#stepping_in_action" target="_blank"
-   rel="noopener noreferrer"><button>Saya Ingin Menguasai Penyusuran Kode</button></a>
+## Masukan {: #feedback }
 
-## Masukan
-
-Bantu kami membuat tutorial menjadi lebih baik dengan menjawab pertanyaan di bawah ini.
-
-{% framebox width="auto" height="auto" %}
-
-<p>Apakah Anda berhasil menyelesaikan tutorial ini?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Completed / Yes">Ya</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Completed / No">Tidak</button>
-
-<p>Apakah tutorial ini berisi informasi yang Anda cari?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Relevant / Yes">Ya</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Relevant / No">Tidak</button>
-
-<p>Apakah tutorial ini terlalu panjang?</p>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Too Long / Yes">Ya</button>
-
-<button class="gc-analytics-event"
-        data-category="DevTools / JS / Get Started"
-        data-label="Too Long / No">Tidak</button>
-
-{% endframebox %}
-
-
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}
