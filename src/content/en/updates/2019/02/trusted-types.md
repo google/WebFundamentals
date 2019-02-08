@@ -58,7 +58,7 @@ onerror=alert(1)>`.
 
 It's easy to make this mistake in code, especially if the code changes often.
 For example, maybe `templateId` was once generated and validated on the server,
-so this value used to be trustworthy? When assigning to `innerHTML`', all we know
+so this value used to be trustworthy? When assigning to `innerHTML`, all we know
 is that the value is a string, but should it be trusted? Where does it really
 come from?
 
