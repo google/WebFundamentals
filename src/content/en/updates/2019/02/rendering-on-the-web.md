@@ -305,6 +305,28 @@ server worker.
 alt="Diagram of Trisomorphic rendering, showing a browser and service worker
 communicating with the server">
 
+## SEO Considerations {: #seo }
+
+Teams often factor in the impact of SEO when choosing a strategy for rendering
+on the web. Server-rendering is often chosen for delivering a "complete looking"
+experience crawlers can interpret with ease. Crawlers [may understand
+JavaScript](https://web.dev/discoverable/how-search-works), but there are often
+[limitations](/search/docs/guides/rendering) worth being aware of in how they
+render. Client-side rendering can work but often not without additional testing
+and leg-work. More recently [dynamic
+rendering](/search/docs/guides/dynamic-rendering) has also become an option
+worth considering if your architecture is heavily driven by client-side
+JavaScript. 
+
+When in doubt, the
+[Mobile Friendly Test](https://search.google.com/test/mobile-friendly) tool is
+invaluable for testing that your chosen approach does what you're hoping for.
+It shows a visual preview of how any page appears to Google's crawler, the
+serialized HTML content found (after JavaScript executed), and any errors
+encountered during rendering.
+
+<img src="../../images/2019/02/rendering-on-the-web/mobile-friendly-test.png"
+alt="Screenshot of the Mobile Friendly Test UI">
 
 ## Wrapping up... {: #wrapup }
 
