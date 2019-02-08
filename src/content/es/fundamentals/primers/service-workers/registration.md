@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Prácticas recomendadas para saber cuándo registrar un service worker.
+description: Recomendaciones para saber cuándo registrar un service worker.
 
-{# wf_updated_on: 2018-12-21 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2016-11-28 #}
+{# wf_blink_components: Blink>ServiceWorker #}
 
 # Registro de los service workers {: .page-title }
 
@@ -18,7 +19,7 @@ visita del usuario.
 Por lo general, esperar hasta que se cargue la página inicial para
 [registrar](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register)
 el service worker brindará la mejor experiencia de usuario, sobre todo de
-aquellos usuarios que utilicen dispositivos móviles con conexiones de red más lentas.
+aquellos que utilicen dispositivos móviles con conexiones de red más lentas.
 
 ## Modelo convencional de registros
 
@@ -35,9 +36,9 @@ que detecta la actualización de un registro de service worker anterior, para qu
 usuarios sepan que hay que actualizar la página. Pero son solo pequeñas variaciones de las pocas líneas del
 código modelo.
 
-¿Existen entonces variaciones de `navigator.serviceWorker.register`? ¿Existen prácticas
-recomendadas que haya que seguir? No debería sorprender (dado que el artículo no termina
-aquí) que la respuesta es "¡sí!"
+¿Existen entonces variaciones de `navigator.serviceWorker.register`? ¿Existen recomendaciones
+que haya que seguir? No debería sorprender (dado que el artículo no termina
+aquí) que la respuesta es "¡sí!".
 
 ## La primera visita del usuario
 
@@ -47,13 +48,13 @@ uno.
 
 Como programador, tu prioridad debe ser que el navegador obtenga
 rápidamente el mínimo conjunto de recursos críticos que sean necesarios para mostrar una página
-interactiva. El elemento que demore este proceso es el enemigo de cualquier
+interactiva. El elemento que demore este proceso será enemigo de cualquier
 experiencia fluida e interactiva.
 
 Ahora supongamos que durante la descarga de JavaScript o de las imágenes que
 tu página necesita representar, el navegador decide iniciar un proceso o subproceso en
 segundo plano (para no explayarnos tanto, supongamos que es un subproceso). Supongamos que
-tu máquina no es muy potente; es el tipo de teléfono móvil
+tu máquina no es muy potente; es el tipo de teléfono celular
 con poca potencia que la mayoría de las personas usan como dispositivo principal. La ejecución
 de este subproceso adicional agrega cargas al tiempo de CPU y a la memoria, recursos que tu
 navegador usaría para representar la página web.
@@ -62,7 +63,7 @@ Es probable que los subprocesos en segundo plano que estén inactivos no marquen
 ocurre si el proceso no está inactivo y, en su lugar, decide que también comenzará
 a descargar recursos de la red? Cualquier preocupación sobre cargas en el CPU o la
 memoria será secundaria en comparación con los problemas de ancho de banda limitado
-que tienen muchos dispositivos móviles. El ancho de banda es un bien preciado, así que no descargues recursos secundarios al mismo tiempo porque debilitarás
+que tienen muchos dispositivos móviles. El ancho de banda es un bien preciado, así que no descargues recursos secundarios al mismo tiempo, ya que debilitarás
 los recursos críticos.
 
 Lo que quiero decir es que si ejecutas un nuevo proceso de service worker para descargar
@@ -70,9 +71,9 @@ y almacenar en caché recursos en segundo plano, es posible que vaya en contra d
 la experiencia más rápida e interactiva durante la primera visita del usuario
 a tu sitio.
 
-## Mejorar el modelo
+## Cómo mejorar el modelo
 
-La solución es controlar el inicio del service worker. Para eso, se debe elegir cuándo llamar a
+La solución es controlar el inicio del service worker. Para eso, se debe elegir cuándo realizar una llamada a
 `navigator.serviceWorker.register()`. Una regla simple es demorar
 el registro hasta después de que se ejecute el <code>[load
 event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
@@ -95,8 +96,8 @@ tener problemas. En lugar de brindar una mala experiencia a los usuarios,
 el registro del service worker hasta después de la animación, cuando
 es más probable que el navegador tenga unos segundos libres.
 
-Asimismo, si tu app web usa un framework que realiza configuraciones adicionales
-después de cargar la página, busca un evento específico del framework que indique cuándo termina
+Asimismo, si tu app web usa un marco de trabajo que realiza configuraciones adicionales
+después de cargar la página, busca un evento específico del marco que indique cuándo termina
 la tarea.
 
 ## Visitas posteriores
@@ -105,17 +106,16 @@ Hasta ahora, hablamos de la experiencia durante la primera visita. ¿Pero cómo 
 la demora del registro del service worker a visitas posteriores de tu sitio?
 Aunque sorprenda a más de uno, no debería afectarlas de ningún modo.
 
-Cuando se registra un service worker, pasa por los [eventos
-de ciclo de vida](/web/fundamentals/instant-and-offline/service-worker/lifecycle) `install` y
+Cuando se registra un service worker, pasa por los [eventos de ciclo de vida](/web/fundamentals/instant-and-offline/service-worker/lifecycle) `install` y
 `activate`.
-Cuando el service worker se activa, puede gestionar los eventos `fetch` en cualquier
+Cuando se activa el service worker, puede gestionar los eventos `fetch` en cualquier
 visita posterior a tu app web. El service worker se inicia *antes* de que se realice
-la solicitud a cualquier página de su ámbito; si lo piensas, tiene
+la solicitud a cualquier página de su ámbito. Si lo piensas, tiene
 mucho sentido. Si el service worker existente no estuviese funcionando antes de
 visitar la página, no podría realizar los eventos `fetch` para las solicitudes de
 navegación.
 
-Por lo tanto, si hay un service worker activo, no importa cuándo llamas a
+Por lo tanto, si hay un service worker activo, no importa cuándo realizas una llamada a
 `navigator.serviceWorker.register()` o, de hecho, no importa *si lo llamas o no*.
 A menos que cambies la URL de la secuencia de comandos del service worker,
 `navigator.serviceWorker.register()` será un elemento
@@ -127,26 +127,26 @@ la llamada es irrelevante.
 ¿En qué escenarios tiene sentido
 registrar el service worker apenas sea posible? Uno que se me viene a la mente es cuando tu service worker usa
 <code>[clients.claim()](https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim)</code>
-para controlar la página durante la primera visita y el service worker
-realiza un [almacenamiento en cache
+para controlar la página durante la primera visita y este
+realiza un [almacenamiento en caché
 en tiempo de ejecución](/web/fundamentals/instant-and-offline/offline-cookbook/#on-network-response)
-de forma agresiva dentro de su controlador de  <code>fetch</code>. En este caso, hay
+de forma agresiva dentro de su controlador de <code>fetch</code>. En este caso, hay
 una ventaja de activar el service worker lo antes posible: para
 llenar su caché en tiempo de ejecución con recursos que podrían ser útiles más adelante. Si
 tu app web hace uso de este mecanismo, vale la pena tomarse un tiempo para
 asegurarse de que el controlador de <code>install</code> del service worker no solicite
 recursos que compitan por ancho de banda con las solicitudes de la página principal.
 
-## Realizar pruebas
+## Cómo realizar pruebas
 
 Una buena forma de simular una primera visita es abrir la app web en una [ventana de
 incógnito de
 Chrome](https://support.google.com/chromebook/answer/95464?co=GENIE.Platform%3DDesktop)
 y analizar el tráfico de red en [DevTools de
 Chrome](/web/tools/chrome-devtools/). Como programador
-web, probablemente vuelves a cargar una instancia local de tu app web decenas y decenas de veces
-al día. Pero si visitas nuevamente tu sitio cuando ya hay un
-service worker y los cachés están completos, no obtienes la misma experiencia
+web, probablemente cargas una instancia local de tu app web decenas y decenas de veces
+al día. Sin embargo, si visitas nuevamente tu sitio cuando ya hay un
+service worker y las cachés están completas, no obtienes la misma experiencia
 que un usuario nuevo y es fácil pasar por alto cualquier problema potencial.
 
 Aquí se describe un ejemplo con la diferencia que puede
@@ -155,7 +155,7 @@ ejemplo](https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo)
 en modo incógnito con limitación de red para simular una conexión lenta.
 
 ![Tráfico de red con registro temprano.](images/early-registration.png
-"Tráfico de red con registro temprano.")
+"Network traffic with early registration.")
 
 La imagen anterior muestra el tráfico de red cuando se modificó la muestra
 para realizar el registro del service worker lo antes posible. Puedes ver
@@ -165,22 +165,22 @@ que provienen del controlador de `install` del service worker)
 mezcladas con las solicitudes de otros recursos necesarios para mostrar la página.
 
 ![Tráfico de red con registro tardío.](images/late-registration.png
-"Tráfico de red con registro tardío.")
+"Network traffic with late registration.")
 
 
 En la captura de pantalla anterior, se demoró el registro del service worker hasta después de cargar
 la página. Puedes ver que las solicitudes de almacenamiento previo en caché no comienzan hasta
-que se obtienen todos los recursos de la red; de esta forma, se elimina cualquier problema de
+que se obtienen todos los recursos de la red. De esta forma, se elimina cualquier problema de
 ancho de banda. Además, dado que algunos de los elementos que almacenamos previamente en caché ya se encuentran
 en la caché HTTP del navegador (los elementos con `(from disk cache)` en la columna
-Size), podemos llenar la caché del service worker sin recurrir nuevamente a la
+"Size"), podemos llenar la caché del service worker sin recurrir nuevamente a la
 red.
 
-Te ganas puntos extras si realizas este tipo de prueba en un dispositivo móvil de gama baja y una
+Ganas puntos adicionales si realizas este tipo de prueba en un dispositivo móvil de gama baja y una
 red móvil real. Puedes aprovechar las [capacidades de
 depuración remota](/web/tools/chrome-devtools/remote-debugging/)
 que ofrece Chrome para conectar un teléfono Android a tu máquina de escritorio vía USB y asegurarte de que las
-pruebas que realizas realmente reflejan la experiencia verdadera de muchos de tus
+pruebas que realizas reflejan la experiencia verdadera de muchos de tus
 usuarios.
 
 ## Conclusión
@@ -199,5 +199,6 @@ se realice después de la carga de la primera página.
       });
     }
 
+## Comentarios {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

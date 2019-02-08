@@ -65,8 +65,7 @@ accordingly.
 But wait, there’s more! With the [Media Session API] now available on desktop
 (it was supported on mobile only before), web developers can handle media
 related events such as track changing that are triggered by media keys. The
-events `previoustrack`, `nexttrack`, `seekbackward`, and `seekforward` are
-currently supported.
+events `previoustrack` and `nexttrack` are currently supported.
 
     navigator.mediaSession.setActionHandler('previoustrack', function() {
       // User hit "Previous Track" key.
@@ -74,14 +73,6 @@ currently supported.
 
     navigator.mediaSession.setActionHandler('nexttrack', function() {
       // User hit "Next Track" key.
-    });
-
-    navigator.mediaSession.setActionHandler('seekbackward', function() {
-      // User hit "Seek Backward" key.
-    });
-
-    navigator.mediaSession.setActionHandler('seekforward', function() {
-      // User hit "Seek Forward" key.
     });
 
 Play and pause keys are handled automatically by Chrome. However if the default

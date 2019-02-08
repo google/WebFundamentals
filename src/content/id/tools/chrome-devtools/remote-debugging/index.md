@@ -1,9 +1,10 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Debug materi langsung dari jauh di perangkat Android dari komputer Windows, Mac atau Linux.
+description: Melakukan debug konten langsung dari jarak jauh di perangkat Android dari komputer Windows, Mac, atau Linux.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2015-04-13 #}
+{# wf_blink_components: Platform>DevTools #}
 
 <style>
 .devtools-inline {
@@ -12,184 +13,210 @@ description: Debug materi langsung dari jauh di perangkat Android dari komputer 
 }
 </style>
 
-# Memulai dengan Men-debug Perangkat Android dari Jauh {: .page-title }
+# Memulai Proses Debug Jarak Jauh di Perangkat Android {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Debug materi langsung dari jauh di perangkat Android dari komputer 
+Melakukan debug konten langsung dari jauh di perangkat Android dari komputer 
 Windows, Mac, atau Linux. Tutorial ini mengajarkan kepada Anda cara:
 
-* Menyiapkan perangkat Android untuk debug dari jauh, dan menemukannya dari 
-  mesin development Anda.
-* Memeriksa dan men-debug materi langsung di perangkat Android dari
-  mesin development Anda.
-* Melakukan siaran layar atas materi dari perangkat Android ke instance DevTools di
-  mesin development.
+* Menyiapkan perangkat Android untuk debug dari jarak jauh, dan menemukannya dari
+  mesin pengembangan.
+* Memeriksa dan melakukan debug konten langsung di perangkat Android dari mesin
+  pengembangan.
+* Melakukan screencast konten dari perangkat Android ke instance DevTools di
+  mesin pengembangan.
 
-![ilustrasi debug dari jauh](imgs/remote-debugging.png)
+<figure>
+  <img src="imgs/remote-debugging.png"
+       alt="Dengan Proses Debug dari Jarak Jauh, Anda dapat memeriksa halaman yang beroperasi di perangkat Android dari
+            mesin pengembangan."/>
+  <figcaption>
+    <b>Gambar 1</b>. Dengan Proses Debug dari Jarak Jauh, Anda dapat memeriksa halaman yang beroperasi di perangkat Android
+    dari mesin pengembangan.
+  </figcaption>
+</figure>
 
-## Persyaratan {: #requirements }
+## Langkah 1: Temukan perangkat Android {: #discover }
 
-* Chrome 32 atau yang lebih baru telah dipasang di mesin development Anda.
-* [Driver USB][drivers] telah dipasang di mesin development, jika Anda menggunakan
-  Windows. Pastikan _Device Manager_ melaporkan driver USB dengan benar.
-* Kabel USB untuk menghubungkan perangkat Android ke mesin development Anda.
-* Android 4.0 atau yang lebih baru.
-* Chrome untuk Android telah dipasang di perangkat Android Anda.
+Alur kerja di bawah ini berfungsi untuk sebagian besar pengguna. Baca [Pemecahan masalah: DevTools tidak mendeteksi
+perangkat Android](#troubleshooting) untuk mendapatkan bantuan lebih lanjut.
 
-[drivers]: https://developer.android.com/tools/extras/oem-usb.html
-
-## Langkah 1: Temukan perangkat Android Anda {: #discover }
-
-1. Pada perangkat Android Anda, pilih **Settings** > **Developer Options** >
-   **Enable USB Debugging**. **Developer Options** disembunyikan secara default di
-   Android 4.2 dan yang lebih baru. Lihat [Mengaktifkan Opsi Developer Pada-Perangkat][android]
-   untuk mempelajari cara mengaktifkannya.
-
-[android]: https://developer.android.com/studio/run/device.html#developer-device-options
-
-1. Di mesin development, buka Chrome. Anda harus masuk ke
-   Chrome dengan salah satu akun Google. Debug dari jauh tidak berfungsi di
-   [Mode Penyamaran][incognito] atau [Akses Tamu][guest].
-
-[guest]: https://support.google.com/chrome/answer/6130773
-[incognito]: https://support.google.com/chrome/answer/95464
-
+1. Buka layar **Developer Options** di Android. Baca [Konfigurasi Opsi Developer
+   Di Perangkat](https://developer.android.com/studio/debug/dev-options.html){:.external}.
+1. Pilih **Enable USB Debugging**.
+1. Di mesin pengembangan, buka Chrome.
 1. [Buka DevTools](/web/tools/chrome-devtools/#open).
+1. Di DevTools, klik **Main Menu** ![Menu Utama][main]{:.devtools-inline} 
+   lalu pilih **More tools** > **Remote devices**. 
 
-1. Di DevTools, klik **Main Menu** ![Main Menu][main]{:.devtools-inline} 
-   kemudian pilih **More tools** > **Remote devices**. 
-
-     ![Membuka panel samping perangkat jauh][open]
+     <figure>
+       <img src="imgs/open-remote-devices.png"
+            alt="Membuka tab Perangkat Jarak Jauh melalui Menu Utama."/>
+       <figcaption>
+         <b>Gambar 2</b>. Membuka tab <b>Perangkat Jarak Jauh</b> melalui <b>Menu Utama</b>
+       </figcaption>
+     </figure>
 
 [main]: /web/tools/chrome-devtools/images/three-dot.png
 [open]: /web/tools/chrome-devtools/remote-debugging/imgs/open-remote-devices.png
 
-1. Di DevTools, klik tab **Settings**, jika ada tab lain yang ditampilkan.
+1. Di DevTools, buka tab **Settings**.
 
-1. Pastikan **Discover USB devices** telah diaktifkan.
+1. Pastikan kotak centang **Discover USB devices** diaktifkan.
 
-     ![Discover USB devices telah diaktifkan][discover]
+     <figure>
+       <img src="imgs/discover-usb-devices.png" alt="Kotak centang Temukan Perangkat USB
+           diaktifkan."/>
+       <figcaption>
+         <b>Gambar 3</b>. Kotak centang <b>Temukan Perangkat USB</b> diaktifkan
+       </figcaption>
+     </figure>
 
 [discover]: /web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png
 
-1. Hubungkan perangkat Android Anda secara langsung ke mesin development
-   dengan menggunakan kabel USB. Jangan gunakan hub USB perantara. Jika baru pertama kali
-   menghubungkan perangkat Android ke mesin development, perangkat
-   Anda akan ditampilkan pada **Unknown**, bersama teks **Pending Authorization** di
-   bawahnya.
+1. Sambungkan perangkat Android secara langsung ke mesin pengembangan menggunakan kabel
+   USB. Saat pertama kali melakukan ini, biasanya Anda melihat DevTools telah mendeteksi perangkat
+   yang tidak dikenal. Jika Anda melihat titik hijau dan teks **Connected** di bawah nama model
+   perangkat Android, DevTools berhasil membuat sambungan ke
+   perangkat. Lanjutkan ke [Langkah 2](#debug).
 
-       ![Perangkat tidak dikenal, menunggu otorisasi][unknown]
+     <figure>
+       <img src="imgs/unknown-device.png" alt="Tab Perangkat Jarak Jauh berhasil mendeteksi
+           perangkat yang tidak dikenal yang menunggu otorisasinya."/>
+       <figcaption>
+         <b>Gambar 4</b>. Tab <b>Perangkat Jarak Jauh</b> berhasil mendeteksi perangkat
+         tidak dikenal yang menunggu otorisasi
+       </figcaption>
+     </figure>
+
 
 [unknown]: /web/tools/chrome-devtools/remote-debugging/imgs/unknown-device.png
 
-1. Jika perangkat Anda ditampilkan sebagai **Unknown**, terimalah konfirmasi izin **Allow USB
-   Debugging** di perangkat Android. **Unknown** diganti
-   dengan nama model perangkat Android Anda. Lingkaran hijau
-   dan teks **Connected** menunjukkan bahwa Anda siap men-
-   debug dari jauh perangkat Android dari mesin development.
+1. Jika perangkat muncul sebagai **Tidak Dikenal**, terima permintaan izin **Allow USB
+   Debugging** di perangkat Android. 
 
-Note: Jika mengalami masalah selama proses pencarian, Anda 
-bisa mengulanginya dengan memilih **Settings** > **Developer Options** >
-**Revoke USB Debugging Authorizations** di perangkat Android.
+### Pemecahan masalah: DevTools tidak mendeteksi perangkat Android {: #troubleshooting }
 
-## Langkah 2: Debug materi di perangkat Android dari mesin development Anda {: #debug }
+Pastikan hardware disiapkan dengan benar:
 
-1. Jika Anda belum membuka Chrome di perangkat Android, bukalah sekarang.
+* Jika Anda menggunakan hub USB, coba sambungkan perangkat Android secara langsung ke
+  mesin pengembangan.
+* Coba cabut kabel USB antara perangkat Android dan mesin pengembangan,
+  lalu colokkan kembali. Lakukan saat layar Android dan mesin pengembangan
+  terbuka kuncinya.
+* Pastikan kabel USB berfungsi. Anda seharusnya dapat memeriksa file di perangkat Android
+  dari mesin pengembangan.
 
-1. Kembali ke DevTools, klik tab yang cocok dengan
-   nama model perangkat Anda. Di bagian atas laman ini, Anda akan melihat nama model
-   perangkat Android, diikuti dengan nomor serinya. Di bawahnya, Anda bisa melihat versi
-   Chrome yang dijalankan pada perangkat itu, bersama nomor versi
-   dalam tanda kurung. Setiap tab Chrome yang dibuka akan mendapatkan bagiannya sendiri. Anda bisa berinteraksi
-   berinteraksi dengan tab itu dari bagian ini. Jika ada aplikasi yang sedang menggunakan WebView, Anda
-   akan melihat bagian untuk setiap aplikasi itu juga. Tangkapan layar di bawah ini tidak
-   memiliki tab atau WebView yang terbuka.
+Pastikan software disiapkan dengan benar:
 
-       ![Perangkat jauh yang terhubung][connected]
+* Jika mesin pengembangan menjalankan Windows, coba instal driver USB secara manual untuk
+  perangkat Android. Lihat [Menginstal Driver USB OEM][drivers]{:.external}.
+* Beberapa kombinasi perangkat Windows dan Android (terutama Samsung) memerlukan penyiapan
+  ekstra. Lihat [Perangkat Chrome DevTools tidak mendeteksi perangkat saat dicolok][SO]{:.external}.
 
-[connected]: /web/tools/chrome-devtools/remote-debugging/imgs/connected-remote-device.png
+Jika Anda tidak melihat perintah **Allow USB Debugging** di perangkat Android, coba:
 
-1. Di sebelah **New tab**, masukkan URL kemudian klik **Open**. Laman akan dibuka
-   di sebuah tab baru di perangkat Android Anda.
+* Lepas dan sambungkan kembali kabel USB saat DevTools difokuskan di
+  mesin pengembangan dan layar utama Android muncul. Dengan kata lain,
+  kadang perintah tidak muncul jika layar Android atau mesin pengembangan
+  terkunci.
+* Perbarui setelan layar untuk perangkat Android dan mesin
+  pengembangan agar tidak pernah nonaktif.
+* Setel mode USB Android ke PTP. Lihat [Galaxy S4 tidak menampilkan kotak dialog Izinkan proses debug USB
+](https://android.stackexchange.com/questions/101933){: .external }.
+* Pilih **Revoke USB Debugging Authorizations** dari layar **Developer Options** di
+  perangkat Android untuk menyetel ulang ke keadaan baru.
 
-1. Klik **Inspect** di sebelah URL yang baru saja Anda buka. Sebuah instance baru DevTools
-   akan terbuka. Versi Chrome yang dijalankan pada perangkat Android
-   menentukan versi DevTools yang dibuka di mesin development Anda.
+Jika Anda menemukan solusi yang tidak disebutkan di bagian ini atau di [Perangkat Chrome DevTools
+tidak mendeteksi perangkat saat dicolok][SO]{: .external}, tambahkan jawaban atas pertanyaan Stack
+Overflow tersebut, atau [buka masalah di repositori webfundamentals][issue]{:.external}!
+
+[drivers]: https://developer.android.com/tools/extras/oem-usb.html
+[SO]: https://stackoverflow.com/questions/21925992
+[issue]: https://github.com/google/webfundamentals/issues/new?title=[Remote%20Debugging]
+
+## Langkah 2: Debug konten di perangkat Android dari mesin pengembangan {: #debug }
+
+1. Buka Chrome di perangkat Android.
+1. Di tab **Remote Devices**, klik tab yang cocok dengan nama model perangkat Android Anda.
+   Di bagian atas halaman ini, Anda akan melihat nama model perangkat Android, diikuti dengan nomor
+   serinya. Di bawahnya, Anda dapat melihat versi Chrome yang dijalankan di perangkat, beserta
+  nomor versi  dalam tanda kurung. Tiap tab Chrome yang dibuka akan mendapatkan bagiannya sendiri. Anda dapat
+   berinteraksi dengan tab tersebut dari bagian ini. Jika ada aplikasi yang sedang menggunakan WebView, Anda juga akan melihat
+   bagian untuk tiap aplikasi tersebut. Di <b>Gambar 5</b> tidak ada tab atau WebView yang terbuka.
+
+     <figure>
+       <img src="imgs/connected-remote-device.png" alt="Perangkat jarak jauh yang tersambung."/>
+       <figcaption>
+         <b>Gambar 5</b>. Perangkat jarak jauh yang tersambung
+       </figcaption>
+     </figure>
+
+1. Di kotak teks **New tab**, masukkan URL, lalu klik **Open**. Halaman akan dibuka
+   di tab baru di perangkat Android.
+
+1. Klik **Inspect** di samping URL yang baru saja Anda buka. Instance baru DevTools
+   akan terbuka. Versi Chrome yang dijalankan di perangkat Android
+   menentukan versi DevTools yang dibuka di mesin pengembangan Anda.
    Jadi, jika perangkat Android Anda menjalankan versi Chrome yang sudah sangat lama, instance
    DevTools mungkin terlihat sangat berbeda dari yang biasa Anda gunakan.
 
-### Tindakan selengkapnya: muat ulang, fokus, atau tutup tab {: #more-actions }
+### Tindakan lainnya: muat ulang, fokus, atau tutup tab {: #more-actions }
 
-Klik **More Options** ![More Options][more]{:.devtools-inline} di sebelah
-tab yang ingin Anda muat ulang, fokus, atau tutup.
+Klik **More Options** ![Opsi Lainnya][more]{:.devtools-inline} di samping
+tab yang ingin Anda muat ulang, fokuskan, atau tutup.
 
 [more]: /web/tools/chrome-devtools/images/three-dot.png
 
-![muat ulang, fokus, atau tutup tab](imgs/reload.png)
+<figure>
+  <img src="imgs/reload.png" alt="Menu untuk memuat ulang, menfokuskan, atau menutup tab."/>
+  <figcaption>
+    <b>Gambar 6</b>. Menu untuk memuat ulang, menfokuskan, atau menutup tab.
+  </figcaption>
+</figure>
 
-### Periksa elemen {: #inspect }
+### Memeriksa elemen {: #inspect }
 
-Masuklah ke panel **Elements** di instance DevTools Anda, dan arahkan ke atas
-elemen untuk menyorotnya di tampilan yang terlihat pada perangkat Android.
+Buka panel **Elements** di instance DevTools, dan arahkan kursor ke
+elemen untuk menandainya dalam viewport perangkat Android.
 
-Anda juga bisa mengetuk sebuah elemen pada layar perangkat Android untuk memilihnya di panel
-**Elements**. Klik **Select Element** ![Select
-Element][pilih]{:.devtools-inline} pada instance DevTools, kemudian ketuk
-elemen di layar perangkat Android Anda. Perhatikan, **Select Element**
+Anda juga dapat menge-tap sebuah elemen di layar perangkat Android untuk memilihnya di panel
+**Elements**. Klik **Select Element** ![Pilih
+Elemen][select]{:.devtools-inline} di instance DevTools, lalu tap
+elemen di layar perangkat Android Anda. Perlu diperhatikan, **Select Element**
 dinonaktifkan setelah sentuhan pertama, jadi Anda perlu mengaktifkannya kembali setiap kali
 ingin menggunakan fitur ini.
 
-[pilih]: imgs/select-element.png
+[select]: imgs/select-element.png
 
-### Siaran layar dari perangkat Android ke mesin development {: #screencast }
+### Screencast layar Android ke mesin pengembangan {: #screencast }
 
-Klik **Toggle Screencast** ![Toggle Screencast][screencast]{:.devtools-inline}
-untuk menampilkan isi perangkat Android Anda di instance DevTools.
+Klik **Toggle Screencast** ![Beralih Screencast][screencast]{:.devtools-inline}
+untuk melihat konten perangkat Android di instance DevTools.
 
 [screencast]: imgs/toggle-screencast.png
 
-Anda bisa berinteraksi dengan siaran layar dalam beberapa cara:
+Anda dapat berinteraksi dengan screencast dalam beberapa cara:
 
-* Klik diterjemahkan menjadi ketukan, yang akan memicu kejadian touch yang sesuai di perangkat. 
-* Penekanan tombol di komputer Anda akan dikirim ke perangkat. 
-* Untuk menyimulasikan isyarat mencubit, tahan tombol <kbd>Shift</kbd> saat menyeret. 
-* Untuk menggulir, gunakan trackpad atau roda mouse, atau gerakan membuang dengan
+* Klik diterjemahkan menjadi tap, yang akan mengaktifkan peristiwa sentuh yang sesuai di perangkat. 
+* Penekanan tombol di komputer akan dikirimkan ke perangkat. 
+* Untuk menyimulasikan gestur mencubit, tahan tombol <kbd>Shift</kbd> saat menarik. 
+* Untuk scroll, gunakan trackpad atau roda mouse, atau gerakan membuang dengan
   pointer mouse.
 
-Beberapa catatan mengenai siaran layar:
+Beberapa catatan mengenai screencast:
 
-* Siaran layar hanya menampilkan materi laman. Bagian transparan siaran layar 
-  menyatakan antarmuka perangkat, seperti Chrome omnibox, bilah status Android, 
-  atau keyboard Android.
-* Siaran layar berpengaruh negatif pada kecepatan bingkai. Nonaktifkan siaran layar saat
-  mengukur guliran atau animasi untuk mendapatkan gambaran kinerja laman
+* Screencast hanya menampilkan konten halaman. Bagian yang transparan di screencast 
+  merepresentasikan antarmuka perangkat, seperti kolom URL Chrome, status bar Android 
+  , atau keyboard Android.
+* Screencast secara negatif memengaruhi kecepatan gambar. Nonaktifkan screencast saat
+  mengukur scroll atau animasi untuk mendapatkan gambaran performa halaman
   yang lebih akurat.
-* Jika layar perangkat Android dikunci, materi siaran layar
-  Anda akan menghilang. Buka kunci layar perangkat Android Anda secara otomatis untuk melanjutkan
-  siaran layar.
+* Jika layar perangkat Android terkunci, konten screencast
+  menghilang. Buka kunci layar perangkat Android secara otomatis untuk melanjutkan
+  screencast.
 
 ## Masukan {: #feedback }
 
-Jika Anda ingin membantu kami meningkatkan tutorial ini, jawablah
-pertanyaan di bawah ini!
-
-{% framebox width="auto" height="auto" %}
-<p>Apakah Anda berhasil menyelesaikan tutorial ini?</p>
-<button class="gc-analytics-event"
-   data-category="DevTools / Remote Debugging"
-   data-label="Completed / Yes">Ya</button>
-<button class="gc-analytics-event"
-   data-category="DevTools / Remote Debugging"
-   data-label="Completed / No">Tidak</button>
-<p>Apakah tutorial ini berisi informasi yang Anda cari?</p>
-<button class="gc-analytics-event"
-   data-category="DevTools / Remote Debugging"
-   data-label="Relevant / Yes">Ya</button>
-<button class="gc-analytics-event"
-   data-category="DevTools / Remote Debugging"
-   data-label="Relevant / No">Tidak</button>
-{% endframebox %}
-
-
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}
