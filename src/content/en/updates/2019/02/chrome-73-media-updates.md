@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 73: Hardware media keys support, HDCP policy check, Picture-in-Picture origin trials, and more.
 
-{# wf_updated_on: 2019-02-07 #}
+{# wf_updated_on: 2019-02-08 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: news,chrome73,media #}
 {# wf_featured_image: /web/updates/images/generic/play-outline.png #}
@@ -204,7 +204,7 @@ pretty straightforward.
       // TODO: Stop ad and play video.
     }
 
-Note: Media session action handlers will persist. I’d suggest always reseting
+Note: Media session action handlers will persist. I’d suggest always resetting
 them when media playback starts and ends to avoid showing an unexpected "Skip
 Ad" button.
 
