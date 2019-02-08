@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
 {# wf_published_on: 2016-12-29 #}
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-02-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Understanding Resource Timing {: .page-title }

@@ -84,9 +84,6 @@ redirects:
 - from: /web/tools/chrome-devtools/evaluate-performance/rail
   to: /web/fundamentals/performance/rail
 
-- from: /web/tools/chrome-devtools/network-performance/
-  to: /web/tools/chrome-devtools/network-performance/resource-loading
-
 - from: /web/tools/chrome-devtools/evaluate-performance/
   to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
 
@@ -194,6 +191,9 @@ redirects:
 
 - from: /web/tools/chrome-devtools/javascript/console/...
   to: /web/tools/chrome-devtools/console/...
+
+- from: /web/tools/chrome-devtools/network-performance/...
+  to:   /web/tools/chrome-devtools/network/...
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/
