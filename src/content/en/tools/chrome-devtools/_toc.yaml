@@ -137,13 +137,13 @@ toc:
 - title: Network
   section:
   - title: Get Started
-    path: /web/tools/chrome-devtools/network-performance/
+    path: /web/tools/chrome-devtools/network/
   - title: Network Issues Guide
-    path: /web/tools/chrome-devtools/network-performance/issues
+    path: /web/tools/chrome-devtools/network/issues
   - title: Reference
-    path: /web/tools/chrome-devtools/network-performance/reference
+    path: /web/tools/chrome-devtools/network/reference
   - title: Resource Loading
-    path: /web/tools/chrome-devtools/network-performance/resource-loading
+    path: /web/tools/chrome-devtools/network/resource-loading
     status: deprecated
 - title: Memory
   section:
