@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/network-performance/
+  to:   /web/tools/chrome-devtools/network/
+
 - from: /web/tools/chrome-devtools/console/command-line-reference
   to: /web/tools/chrome-devtools/console/utilities
 
