@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications.
 
-{# wf_updated_on: 2019-02-07 #}
+{# wf_updated_on: 2019-02-08 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: news,security,trusted-types,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
@@ -110,8 +110,7 @@ HTTP response header:
 Content-Security-Policy: trusted-types *
 ```
 
-Then, in the document you can no longer use strings with the injection sink
-functions:
+Then, in the document you can no longer use strings with the injection sinks:
 
 ```js
 const templateId = location.hash.match(/tplid=([^;&]*)/)[1];
@@ -141,10 +140,11 @@ document.head.innerHTML += html;
 ```
 
 Here, we create a `template` policy that verifies the passed template ID
-parameter and creates the resulting HTML. The policy object `create*` functions
-return Trusted Type objects. In this case, `createHTML` returns a `TrustedHTML`
-object that the browser accepts to be used with the injection sinks that accept
-HTML.
+parameter and creates the resulting HTML. The policy object `create*` function
+calls into a respective user-defined function, and wraps the result in a Trusted
+Type object. In this case, `templatePolicy.createHTML` calls the provided templateId validation function, and returns a `TrustedHTML` with the `<link ...>` snippet.
+The browser allows `TrustedHTML` to be used with an injection sink that expects
+HTML - like `innerHTML`.
 
 It might seem that the only improvement is in adding the following check:
 
