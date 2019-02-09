@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A tutorial on the most popular network-related features in Chrome DevTools.
 
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2019-02-09 #}
 {# wf_published_on: 2019-02-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -37,7 +37,7 @@ improve your page. See [Optimize Website Speed][speed].
 To get the most out of this tutorial, open up the demo and try out the features on the
 demo page.
 
-1. Open the [Get Started Demo](https://devtools.glitch.me/network/basics.html){: .external }.
+1. Open the [Get Started Demo](https://devtools.glitch.me/network/getstarted.html){: .external }.
 
      <figure>
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/demo.png"
@@ -58,7 +58,7 @@ demo page.
      </figure>
 
 1. [Open DevTools](/web/tools/chrome-devtools/open) by pressing
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or 
+   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
    <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac). The **Console**
    panel opens.
 
@@ -408,7 +408,7 @@ The **Filter** text box supports many different types of filtering.
      </figure>
 
 1. Type `domain:raw.githubusercontent.com` into the **Filter** text box. DevTools filters
-   out any resource with a URL that does not match this domain. 
+   out any resource with a URL that does not match this domain.
 
      <figure>
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/property.png"
@@ -419,7 +419,7 @@ The **Filter** text box supports many different types of filtering.
      </figure>
 
 [props]: /web/tools/chrome-devtools/network-performance/reference#filter-by-property
-     
+
      See [Filter requests by properties][props] for the full list of filterable properties.
 
 ### Filter by resource type {: #type }
