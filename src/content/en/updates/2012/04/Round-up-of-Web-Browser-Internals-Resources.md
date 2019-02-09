@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-04-09 #}
+{# wf_updated_on: 2019-02-09 #}
 {# wf_published_on: 2012-04-09 #}
 {# wf_tags: news,internals,performance #}
+{# wf_blink_components: N/A #}
 
 # Round-up of Web Browser Internals Resources {: .page-title }
 
@@ -17,80 +18,80 @@ The links below capture most of the resources that explain the innerworkings of 
 
 <ul id="da-thumbs" class="da-thumbs" >
   <li>
-    <a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">
+    <a href="https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">
       How Browsers Work: Behind the scenes of modern web browsers, by Tali Garsiel
     </a>
   </li>
 
   <li>
-    <a href="http://www.vineetgupta.com/2010/11/how-browsers-work-part-1-architecture/">
-      How Browsers Work – Architecture, by Vineet Gupta
+    <a href="https://matome.naver.jp/odai/2134468175684874901/2134468224084915603">
+      How Browsers Work – Architecture, by Vineet Gupta (archived)
     </a>
   </li>
 
   <li>
-    <a href="http://blog.mozilla.com/dmandelin/2011/06/16/know-your-engines-at-oreilly-velocity-2011/">
+    <a href="https://conferences.oreilly.com/velocity/velocity2011/public/schedule/detail/18087">
       Know Your JavaScript Engines, by David Mandelin
     </a>
   </li>
 
   <li>
-    <a href="http://www.youtube.com/watch?v=XAqIpGU8ZZk">
+    <a href="https://www.youtube.com/watch?v=XAqIpGU8ZZk">
       From Console to Chrome, by Lilli Thompson
     </a>
   </li>
 
   <li>
-    <a href="http://dbaron.org/talks/2012-03-11-sxsw/master.xhtml">
+    <a href="https://dbaron.org/talks/2012-03-11-sxsw/master.xhtml">
       Fast CSS: How Browsers Lay Out Web Pages, by David Baron
     </a>
   </li>
 
-  <li>
+  <!-- <li>
     <a href="http://dayofjs.com/videos/22158462/web-browsers_alex-russel">
       What Browsers <em>Really</em> Think of your App, by Alex Russell
     </a>
-  </li>
+  </li> -->
 
   <li>
-    <a href="http://www.youtube.com/watch?v=a2_6bGNZ7bA">
+    <a href="https://www.youtube.com/watch?v=a2_6bGNZ7bA">
       Faster HTML and CSS: Layout Eng&shy;ine Internals for Web Dev&shy;elop&shy;ers, by David Baron
     </a>
   </li>
 
   <li>
-    <a href="http://stackoverflow.com/questions/5797014/css-selectors-parsed-right-to-left-why/5813672#5813672">
+    <a href="https://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left/5813672#5813672">
       CSS Selectors parsed right to left. Why?, by Boris Zbarsky
     </a>
   </li>
 
   <li>
-    <a href="http://www.webkit.org/blog/114/webcore-rendering-i-the-basics/">
+    <a href="https://webkit.org/blog/114/webcore-rendering-i-the-basics/">
       WebCore Rendering I – The Basics
     </a>
   </li>
 
   <li>
-    <a href="http://vimeo.com/32364192">
+    <a href="https://vimeo.com/32364192">
       Life Of A Button Element, by Alex Russell
     </a>
   </li>
 
 
   <li>
-    <a href="http://paulirish.com/2011/dom-html5-css3-performance/">
+    <a href="https://www.paulirish.com/2011/dom-html5-css3-performance/">
       DOM, HTML5, &amp; CSS3 Performance, by Paul Irish
     </a>
   </li>
 
   <li>
-    <a href="http://gent.ilcore.com/2011/05/how-web-page-loads.html">
-      How A Web Page Loads, by Tony Gentilcore
+    <a href="https://calendar.perfplanet.com/2010/benchmark-the-network/">
+      Benchmark the Network, by Tony Gentilcore
     </a>
   </li>
 
   <li>
-    <a href="http://paulirish.com/2011/primitives-html5-video/">
+    <a href="https://www.paulirish.com/2011/primitives-html5-video/">
       The Fund&shy;amentals, Prim&shy;itives and His&shy;tory of HTML5, by Paul Irish
     </a>
   </li>
@@ -103,7 +104,7 @@ The links below capture most of the resources that explain the innerworkings of 
 </ul>
 
 
-<a href="http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/">Thanks Codrops</a> for the fanciness. Thank you <a href="https://twitter.com/#!/rik24d">Anthony Ricaud</a> for the <a href="http://blogmarks.net/user/rik/marks/tag/navigateur-marche">resources</a>.
+<a href="https://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/">Thanks Codrops</a> for the fanciness. Thank you <a href="https://twitter.com/anthony_ricaud">Anthony Ricaud</a> for the <a href="http://blogmarks.net/user/rik/marks/tag/navigateur-marche">resources</a>.
 
 If you know of other browser internals posts to capture, link them in the comments!
 
