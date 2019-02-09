@@ -2,8 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC.
 
-{# wf_published_on: 2019-02-08 #} {# wf_updated_on: 2019-02-08 #}
-{# wf_featured_image: /web/updates/images/generic/css.png #}
+{# wf_published_on: 2019-02-08 #}
+{# wf_updated_on: 2019-02-08 #}
+{# wf_featured_image: /web/updates/images/generic/styles.png #}
 {# wf_tags: chrome73,css,style #}
 {# wf_featured_snippet: Shipping in Chrome 73, Constructable Stylesheets provide a seamless way to create and distribute styles to documents or shadow roots without worrying about FOUC. #}
 {# wf_blink_components: Blink>CSS #}
@@ -14,7 +15,7 @@ description: Shipping in Chrome 73, Constructable Stylesheets provide a seamless
 
 [Constructable Stylesheets](https://wicg.github.io/construct-stylesheets) are a
 new way to create and distribute reusable styles when using [Shadow
-DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom). 
+DOM](/web/fundamentals/web-components/shadowdom). 
 
 It has always been possible to create stylesheets using JavaScript. However, the
 process has historically been to create a `<style>` element using
@@ -30,7 +31,8 @@ offering a programmatic way to manipulate stylesheets as well as eliminating the
 problems associated with the old method.
 
 <img src="../../images/2019/02/constructable-stylesheets/overview.png"
-alt="Diagram showing client-side rendering affecting FCP and TTI" width="600">
+alt="Diagram showing client-side rendering affecting FCP and TTI" width="600"
+style="max-height:458px;">
 
 Constructable Stylesheets make it possible to define and prepare shared CSS
 styles, and then apply those styles to multiple Shadow Roots or the Document
@@ -98,13 +100,15 @@ subtree. To do so, we set the property to an array of one or more stylesheets to
 apply to that element.
 
 ```js
-// Create our shared stylesheet: const sheet = new CSSStyleSheet();
+// Create our shared stylesheet:
+const sheet = new CSSStyleSheet();
 sheet.replaceSync('a { color: red; }');
 
 // Apply the stylesheet to a document:
 document.adoptedStyleSheets = [sheet];
 
-// Apply the stylesheet to a Shadow Root: const node =
+// Apply the stylesheet to a Shadow Root:
+const node =
 document.createElement('div');
 const shadow = node.attachShadow({ mode: 'open' });
 shadow.adoptedStyleSheets = [sheet];
@@ -134,8 +138,8 @@ the browser’s built-in parser and loading semantics. Finally, we have a
 mechanism for applying stylesheet updates to all usages of a StyleSheet,
 simplifying things like theme changes and color preferences.
 
-<img src="../../images/2019/02/constructable-stylesheets/demo.gif" alt="Demo"
-width="400">
+<video autoplay loop muted playsinline height="298" width="379"
+src="../../images/2019/02/constructable-stylesheets/demo.mp4"></video>
 
 **[View Demo](https://construct-stylesheets.glitch.me/)**
 
