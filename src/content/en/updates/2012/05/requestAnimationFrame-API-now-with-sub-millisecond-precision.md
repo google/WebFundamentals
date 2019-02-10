@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-05-21 #}
+{# wf_updated_on: 2019-02-09 #}
 {# wf_published_on: 2012-05-21 #}
 {# wf_tags: news,internals,performance #}
+{# wf_blink_components: N/A #}
 
 # requestAnimationFrame API: now with sub-millisecond precision {: .page-title }
 
@@ -21,9 +22,9 @@ Just to be clear, here is what I'm talking about:
     requestAnimationFrame(function(timestamp){
     	// the value of timestamp is changing
     });
-    
 
-If you're using the common `requestAnimFrame` shim [provided here](http://paulirish.com/2011/requestanimationframe-for-smart-animating/), then you're not using the timestamp value. You're off the hook. :)
+
+If you're using the common `requestAnimFrame` shim [provided here](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/), then you're not using the timestamp value. You're off the hook. :)
 
 
 ## Why
@@ -35,12 +36,12 @@ Why? Well rAF helps you get the ultimate 60 fps that is ideal, and 60 fps transl
 As you can see above, the blue bar represents the maximum amount of time you have to do all your work before you paint a new frame (at 60fps). You're probably doing more than 16 things, but with integer milliseconds you only have the ability to schedule and measure in those very chunky increments. That's not good enough.
 
 
-The [High Resolution Timer](http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HighResolutionTime/Overview.html) solves this by providing a far more precise figure:
+The [High Resolution Timer](https://w3c.github.io/hr-time/) solves this by providing a far more precise figure:
 
 
     Date.now()         //  1337376068250
     performance.now()  //  20303.427000007
-    
+
 
 The high resolution timer is currently available in Chrome as `window.performance.webkitNow()`, and this value is generally equal to the new argument value passed into the rAF callback. Once the spec progresses through standards further, the method will drop the prefix and be available through `performance.now()`.
 
@@ -65,7 +66,7 @@ The key issue that crops is animation libraries that use this design pattern:
         ...
       requestAnimFrame(this.tick.bind(this));
     }
-    
+
 
 An edit to fix this is pretty easy... augment the `startTime` and `now` to use `window.performance.now()`.
 
@@ -73,7 +74,7 @@ An edit to fix this is pretty easy... augment the `startTime` and `now` to use `
     this.startTime = window.performance.now ?
                      (performance.now() + performance.timing.navigationStart) :
                      Date.now();
-    
+
 
 This is a fairly naive implementation, it doesn't use a prefixed `now()` method and also assumes `Date.now()` support, which isn't in IE8.
 
@@ -84,15 +85,15 @@ If you're not using the pattern above and just want to identify which sort of ca
 
 
     requestAnimationFrame(function(timestamp){
-    
+
       if (timestamp < 1e12){
           // .. high resolution timer
       } else {
           // integer milliseconds since unix epoch
       }
-    
+
       // ...
-    
+
 
 Checking `if (timestamp < 1e12)` is a quick duck test to see how big of a number we're dealing with. Technically it could false positive but only if a webpage is open continuously for 30 years. But we're not able to test if it's a floating point number (rather than floored to an integer). Ask for enough high resolution timers and you're [bound to get integer values](http://jsfiddle.net/xYKW6/3/){: .external } at some point.
 
