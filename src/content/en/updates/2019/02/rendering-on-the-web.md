@@ -49,7 +49,7 @@ the lens of performance.
 - **FP:**  First Paint - the first time any pixel gets becomes visible to the
   user.
 - **FCP:**  First Contentful Paint - the time when requested content (article
-  body, etc).
+  body, etc) becomes visible.
 - **TTI:**  Time To Interactive - the time at which a page becomes interactive
   (events wired up, etc).
 
@@ -284,11 +284,10 @@ those with little interactivity or no reactivity are identified. For each of
 these mostly-static parts, the corresponding JavaScript code is then transformed
 into inert references and decorative functionality, reducing their client-side
 footprint to near-zero.
-
 The partial hydration approach comes with its own issues and compromises. It
 poses some interesting challenges for caching, and client-side navigation means
 we can't assume server-rendered HTML for inert parts of the application will be
-unavailable.
+available without a full page load.
 
 ### Trisomorphic Rendering {: #trisomorphic }
 
