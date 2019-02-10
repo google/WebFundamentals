@@ -3,9 +3,10 @@ book_path: /web/updates/_book.yaml
 description: How to convert ArrayBuffer to and from String
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-01-08 #}
+{# wf_updated_on: 2019-02-09 #}
 {# wf_published_on: 2012-06-14 #}
 {# wf_tags: news,performance,arraybuffer #}
+{# wf_blink_components: N/A #}
 
 # How to convert ArrayBuffer to and from String {: .page-title }
 
@@ -16,21 +17,21 @@ number of browsers now support it natively. The information in this article
 still applies for browsers that don’t yet support the Encoding API, but the
 recommended approach is to use the official API wherever possible. See [Easier
 ArrayBuffer <-> String conversion with the Encoding
-API](http://updates.html5rocks.com/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API)
+API](/web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API)
 for more details.
 
 ArrayBuffers are used to transport raw data and several new APIs rely on them,
 including
-[WebSockets](http://www.html5rocks.com/en/tutorials/websockets/basics/),
-[Web Intents](http://webintents.org), [XMLHttpRequest version
-2](http://www.html5rocks.com/en/tutorials/file/xhr2/) and
-[WebWorkers](//www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the
+[WebSockets](https://www.html5rocks.com/en/tutorials/websockets/basics/),
+[Web Intents](https://www.w3.org/TR/web-intents/)
+2](https://www.html5rocks.com/en/tutorials/file/xhr2/) and
+[WebWorkers](https://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the
 JavaScript world, sometimes they are misinterpreted or misused.
 
-Semantically, an [ArrayBuffer](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBuffer)
+Semantically, an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 is simply an array of bytes viewed through a specific mask.
 This mask, an instance of
-[ArrayBufferView](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBufferView),
+[ArrayBufferView](https://developer.mozilla.org/en-US/docs/Web/API/ArrayBufferView),
 defines how bytes are aligned to match
 the expected structure of the content. For example, if you know that the bytes
 in an ArrayBuffer represent an array of 16-bit unsigned integers, you just wrap
@@ -78,23 +79,23 @@ itself, which is handled as Unicode by `String.fromCharCode` and
 
 Note: A robust implementation of the String to ArrayBuffer conversion capable of
 handling more encodings is provided by
-[the stringencoding library](http://code.google.com/p/stringencoding/).
+[the stringencoding library](https://github.com/inexorabletash/text-encoding).
 But, for simple usage where
 you control both sides of the communication pipe, the code above is probably
 enough. A standardized API specification for String encoding
-[is being drafted](http://wiki.whatwg.org/wiki/StringEncoding)
-[by the WHATWG](http://wiki.whatwg.org/wiki/StringEncoding) working group.
+[is being drafted](https://encoding.spec.whatwg.org/#api)
+[by the WHATWG](https://encoding.spec.whatwg.org/#api) working group.
 
 A popular StackOverflow
-[question about this](http://stackoverflow.com/questions/6965107converting-between-strings-and-arraybuffers)
+[question about this](https://stackoverflow.com/questions/6965107/converting-between-strings-and-arraybuffers)
 has a highly voted answer with a somewhat convoluted solution to the conversion:
 create a `FileReader` to act as a converter and feed a `Blob` containing the
 String into it. Although this method works, it has poor readability and I
 suspect it is slow. Since unfounded suspicions have driven many mistakes in the
 history of humanity, let's take a more scientific approach here. I have
-[jsperf'ed the two methods](http://jsperf.com/arraybuffer-string-conversion/4)
+[jsperf'ed the two methods](https://jsperf.com/arraybuffer-string-conversion/4)
 and the result confirms my suspicion and you
-<a href="http://www.html5rocks.com/en/tutorials/canvas/performance/embed.html?id=agt1YS1wcm9maWxlcnINCxIEVGVzdBixrYIRDA">
+<a href="https://www.html5rocks.com/en/tutorials/canvas/performance/">
 check out the demo here</a>.
 
 In Chrome 20, it is almost 27 times faster to use the direct `ArrayBuffer` manipulation code on this article than it is to use the `FileReader`/`Blob` method.
