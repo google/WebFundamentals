@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Inner workings of a browser rendering engine
 
 {# wf_published_on: 2018-09-20 #}
-{# wf_updated_on: 2019-01-17 #}
+{# wf_updated_on: 2019-02-09 #}
 {# wf_featured_image: /web/updates/images/inside-browser/cover.png #}
 {# wf_featured_snippet: Once the browser receives page data, what happens inside of the renderer process to display a page? #}
 {# wf_blink_components: N/A #}
@@ -20,32 +20,32 @@ description: Inner workings of a browser rendering engine
 
 ## Inner workings of a Renderer Process
 
-This is part 3 of 4 part blog series looking at how browsers work. Previously, we covered 
-[multi-process architecture](/web/updates/2018/09/inside-browser-part1) and 
-[navigation flow](/web/updates/2018/09/inside-browser-part2). In this post, we are going to look at 
+This is part 3 of 4 part blog series looking at how browsers work. Previously, we covered
+[multi-process architecture](/web/updates/2018/09/inside-browser-part1) and
+[navigation flow](/web/updates/2018/09/inside-browser-part2). In this post, we are going to look at
 what happens inside of the renderer process.
 
-Renderer process touches many aspects of web performance. Since there is a lot happening inside of 
-the renderer process, this post is only a general overview. If you'd like to dig deeper, 
-[the Performance section of Web Fundamentals](/web/fundamentals/performance/why-performance-matters/) 
+Renderer process touches many aspects of web performance. Since there is a lot happening inside of
+the renderer process, this post is only a general overview. If you'd like to dig deeper,
+[the Performance section of Web Fundamentals](/web/fundamentals/performance/why-performance-matters/)
 has many more resources.
 
 
 ## Renderer processes handle web contents
 
-The renderer process is responsible for everything that happens inside of a tab. 
-In a renderer process, the main thread handles most of the code you send to the user. 
-Sometimes parts of your JavaScript is handled by worker threads if you use a web worker or a 
-service worker. Compositor and raster threads are also run inside of a renderer processes to render 
-a page efficiently and smoothly. 
+The renderer process is responsible for everything that happens inside of a tab.
+In a renderer process, the main thread handles most of the code you send to the user.
+Sometimes parts of your JavaScript is handled by worker threads if you use a web worker or a
+service worker. Compositor and raster threads are also run inside of a renderer processes to render
+a page efficiently and smoothly.
 
-The renderer process's core job is to turn HTML, CSS, and JavaScript into a web page that the user 
+The renderer process's core job is to turn HTML, CSS, and JavaScript into a web page that the user
 can interact with.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/renderer.png" alt="Renderer process">
   <figcaption>
-    Figure 1: Renderer process with a main thread, worker threads, a compositor thread, and a 
+    Figure 1: Renderer process with a main thread, worker threads, a compositor thread, and a
     raster thread inside
   </figcaption>
 </figure>
@@ -54,28 +54,28 @@ can interact with.
 
 ### Construction of a DOM
 
-When the renderer process receives a commit message for a navigation and starts to receive HTML 
-data, the main thread begins to parse the text string (HTML) and turn it into a **D**ocument 
+When the renderer process receives a commit message for a navigation and starts to receive HTML
+data, the main thread begins to parse the text string (HTML) and turn it into a **D**ocument
 **O**bject **M**odel (**DOM**).
 
-The DOM is a browser's internal representation of the page as well as the data structure and API 
+The DOM is a browser's internal representation of the page as well as the data structure and API
 that web developer can interact with via JavaScript.
 
-Parsing an HTML document into a DOM is defined by the 
-[HTML Standard](https://html.spec.whatwg.org/). You may have noticed that feeding HTML to a browser 
-never throws an error. For example, missing closing `</p>` tag is a valid HTML.  Erroneous markup 
-like `Hi! <b>I'm <i>Chrome</b>!</i>` (b tag is closed before i tag) is treated as if you wrote 
-`Hi! <b>I'm <i>Chrome</i></b><i>!</i>`. This is because the HTML specification is designed to 
-handle those errors gracefully.  If you are curious how these things are done, you can read on 
-"[An introduction to error handling and strange cases in the parser](https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser)" 
+Parsing an HTML document into a DOM is defined by the
+[HTML Standard](https://html.spec.whatwg.org/). You may have noticed that feeding HTML to a browser
+never throws an error. For example, missing closing `</p>` tag is a valid HTML.  Erroneous markup
+like `Hi! <b>I'm <i>Chrome</b>!</i>` (b tag is closed before i tag) is treated as if you wrote
+`Hi! <b>I'm <i>Chrome</i></b><i>!</i>`. This is because the HTML specification is designed to
+handle those errors gracefully.  If you are curious how these things are done, you can read on
+"[An introduction to error handling and strange cases in the parser](https://html.spec.whatwg.org/multipage/parsing.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser)"
 section of the HTML spec.
 
 ### Subresource loading
 
-A website usually uses external resources like images, CSS, and JavaScript. Those files need to be 
-loaded from network or cache. The main thread _could_ request them one by one as they find them 
-while parsing to build a DOM, but in order to speed up, "preload scanner" is run concurrently. 
-If there are things like `<img>` or `<link>` in the HTML document, preload scanner peeks at tokens 
+A website usually uses external resources like images, CSS, and JavaScript. Those files need to be
+loaded from network or cache. The main thread _could_ request them one by one as they find them
+while parsing to build a DOM, but in order to speed up, "preload scanner" is run concurrently.
+If there are things like `<img>` or `<link>` in the HTML document, preload scanner peeks at tokens
 generated by HTML parser and sends requests to the network thread in the browser process.
 
 <figure>
@@ -85,26 +85,26 @@ generated by HTML parser and sends requests to the network thread in the browser
   </figcaption>
 </figure>
 
-### JavaScript can block the parsing 
+### JavaScript can block the parsing
 
-When the HTML parser finds a `<script>` tag, it pauses the parsing of the HTML document and has to 
-load, parse, and execute the JavaScript code. Why? because JavaScript can change the shape of the 
-document using things like `document.write()` which changes the entire DOM structure ([overview 
-of the parsing model](https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model) 
-in the HTML spec has a nice diagram). This is why the HTML parser has to wait for JavaScript to 
-run before it can resume parsing of the HTML document. If you are curious about what happens in 
-JavaScript execution, [the V8 team has talks and blog posts on this](https://mathiasbynens.be/notes/shapes-ics). 
+When the HTML parser finds a `<script>` tag, it pauses the parsing of the HTML document and has to
+load, parse, and execute the JavaScript code. Why? because JavaScript can change the shape of the
+document using things like `document.write()` which changes the entire DOM structure ([overview
+of the parsing model](https://html.spec.whatwg.org/multipage/parsing.html#overview-of-the-parsing-model)
+in the HTML spec has a nice diagram). This is why the HTML parser has to wait for JavaScript to
+run before it can resume parsing of the HTML document. If you are curious about what happens in
+JavaScript execution, [the V8 team has talks and blog posts on this](https://mathiasbynens.be/notes/shapes-ics).
 
 ## Hint to browser how you want to load resources
 
-There are many ways web developers can send hints to the browser in order to load resources nicely. 
-If your JavaScript does not use `document.write()`, you can add [`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async) or [`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer) attribute to the `<script>` tag. The browser then loads and runs the JavaScript code asynchronously and does not block the parsing. You may also use [JavaScript module](/web/fundamentals/primers/modules) if that's suitable. `<link rel="preload">` is a way to inform browser that the resource is definitely needed for current navigation and you would like to download as soon as possible. You are read more on this at [Resource Prioritization – Getting the Browser to Help You](/web/fundamentals/performance/resource-prioritization).
+There are many ways web developers can send hints to the browser in order to load resources nicely.
+If your JavaScript does not use `document.write()`, you can add [`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async) or [`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer) attribute to the `<script>` tag. The browser then loads and runs the JavaScript code asynchronously and does not block the parsing. You may also use [JavaScript module](/web/fundamentals/primers/modules) if that's suitable. `<link rel="preload">` is a way to inform browser that the resource is definitely needed for current navigation and you would like to download as soon as possible. You can read more on this at [Resource Prioritization – Getting the Browser to Help You](/web/fundamentals/performance/resource-prioritization).
 
 ## Style calculation
 
-Having a DOM is not enough to know what the page would look like because we can style page elements 
-in CSS. The main thread parses CSS and determines the computed style for each DOM node. This is 
-information about what kind of style is applied to each element based on CSS selectors. You can see 
+Having a DOM is not enough to know what the page would look like because we can style page elements
+in CSS. The main thread parses CSS and determines the computed style for each DOM node. This is
+information about what kind of style is applied to each element based on CSS selectors. You can see
 this information in the `computed` section of DevTools.
 
 <figure>
@@ -114,17 +114,17 @@ this information in the `computed` section of DevTools.
   </figcaption>
 </figure>
 
-Even if you do not provide any CSS, each DOM node has a computed style. `<h1>` tag is displayed 
-bigger than `<h2>` tag and margins are defined for each element. This is because the browser has a 
-default style sheet. If you want to know what Chrome's default CSS is like, 
+Even if you do not provide any CSS, each DOM node has a computed style. `<h1>` tag is displayed
+bigger than `<h2>` tag and margins are defined for each element. This is because the browser has a
+default style sheet. If you want to know what Chrome's default CSS is like,
 [you can see the source code here](https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/html/resources/html.css).
 
 ## Layout
 
-Now the renderer process knows the structure of a document and styles for each nodes, but that is 
-not enough to render a page. Imagine you are trying to describe a painting to your friend over a 
-phone. "There is a big red circle and a small blue square" is not enough information for your 
-friend to know what exactly the painting would look like. 
+Now the renderer process knows the structure of a document and styles for each nodes, but that is
+not enough to render a page. Imagine you are trying to describe a painting to your friend over a
+phone. "There is a big red circle and a small blue square" is not enough information for your
+friend to know what exactly the painting would look like.
 
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part3/tellgame.png" alt="game of human fax machine">
@@ -133,12 +133,12 @@ friend to know what exactly the painting would look like.
   </figcaption>
 </figure>
 
-The layout is a process to find the geometry of elements. The main thread walks through the DOM and 
-computed styles and creates the layout tree which has information like x y coordinates and bounding 
-box sizes. Layout tree may be similar structure to the DOM tree, but it only contains information 
-related to what's visible on the page. If `display: none` is applied, that element is not part of 
-the layout tree (however, an element with `visibility: hidden` is in the layout tree). Similarly, 
-if a pseudo class with content like `p::before{content:"Hi!"}` is applied, it is included in the 
+The layout is a process to find the geometry of elements. The main thread walks through the DOM and
+computed styles and creates the layout tree which has information like x y coordinates and bounding
+box sizes. Layout tree may be similar structure to the DOM tree, but it only contains information
+related to what's visible on the page. If `display: none` is applied, that element is not part of
+the layout tree (however, an element with `visibility: hidden` is in the layout tree). Similarly,
+if a pseudo class with content like `p::before{content:"Hi!"}` is applied, it is included in the
 layout tree even though that is not in the DOM.
 
 <div class="clearfix"></div>
@@ -161,16 +161,16 @@ layout tree even though that is not in the DOM.
   </figcaption>
 </figure>
 
-Determining the Layout of a page is a challenging task. Even the simplest page layout like a block 
-flow from top to bottom has to consider how big the font is and where to line break them because 
-those affect the size and shape of a paragraph; which then affects where the following paragraph 
-needs to be. 
+Determining the Layout of a page is a challenging task. Even the simplest page layout like a block
+flow from top to bottom has to consider how big the font is and where to line break them because
+those affect the size and shape of a paragraph; which then affects where the following paragraph
+needs to be.
 
-CSS can make element float to one side, mask overflow item, and change writing directions. You can 
-imagine, this layout stage has a mighty task. In Chrome, a whole team of engineers works on the 
-layout. If you want to see details of their work, 
-[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) are recorded and 
-quite interesting to watch. 
+CSS can make element float to one side, mask overflow item, and change writing directions. You can
+imagine, this layout stage has a mighty task. In Chrome, a whole team of engineers works on the
+layout. If you want to see details of their work,
+[few talks form BlinkOn Conference](https://www.youtube.com/watch?v=Y5Xa4H2wtVA) are recorded and
+quite interesting to watch.
 
 <div class="clearfix"></div>
 
@@ -179,36 +179,36 @@ quite interesting to watch.
 <figure class="attempt-right">
   <img src="/web/updates/images/inside-browser/part3/drawgame.png" alt="drawing game">
   <figcaption>
-    Figure 7: A person in front of a canvas holding paintbrush, wondering if they should draw a 
+    Figure 7: A person in front of a canvas holding paintbrush, wondering if they should draw a
     circle first or square first
   </figcaption>
 </figure>
 
-Having a DOM, style, and layout is still not enough to render a page. Let's say you are trying to 
-reproduce a painting. You know the size, shape, and location of elements, but you still have to 
+Having a DOM, style, and layout is still not enough to render a page. Let's say you are trying to
+reproduce a painting. You know the size, shape, and location of elements, but you still have to
 judge in what order you paint them.
 
-For example, `z-index` might be set for certain elements, in that case painting in order of 
-elements written in the HTML will result in incorrect rendering. 
+For example, `z-index` might be set for certain elements, in that case painting in order of
+elements written in the HTML will result in incorrect rendering.
 
 <div class="clearfix"></div>
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/zindex.png" alt="z-index fail">
   <figcaption>
-    Figure 8: Page elements appearing in order of an HTML markup, resulting in wrong rendered image 
+    Figure 8: Page elements appearing in order of an HTML markup, resulting in wrong rendered image
     because z-index was not taken into account
   </figcaption>
 </figure>
 
-At this paint step, the main thread walks the layout tree to create paint records. Paint record is 
-a note of painting process like "background first, then text, then rectangle". If you have drawn on 
-`<canvas>` element using JavaScript, this process might be familiar to you. 
+At this paint step, the main thread walks the layout tree to create paint records. Paint record is
+a note of painting process like "background first, then text, then rectangle". If you have drawn on
+`<canvas>` element using JavaScript, this process might be familiar to you.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/paint.png" alt="paint records">
   <figcaption>
-    Figure 9: The main thread walking through layout tree and producing paint records 
+    Figure 9: The main thread walking through layout tree and producing paint records
   </figcaption>
 </figure>
 
@@ -225,27 +225,27 @@ a note of painting process like "background first, then text, then rectangle". I
   </figcaption>
 </figure>
 
-The most important thing to grasp in rendering pipeline is that at each step the result of the 
-previous operation is used to create new data. For example, if something changes in the layout 
+The most important thing to grasp in rendering pipeline is that at each step the result of the
+previous operation is used to create new data. For example, if something changes in the layout
 tree, then the Paint order needs to be regenerated for affected parts of the document.
 
 <div class="clearfix"></div>
 
-If you are animating elements, the browser has to run these operations in between every frame. 
-Most of our displays refresh the screen 60 times a second (60 fps); animation will appear smooth to 
-human eyes when you are moving things across the screen at every frame. However, if the animation 
+If you are animating elements, the browser has to run these operations in between every frame.
+Most of our displays refresh the screen 60 times a second (60 fps); animation will appear smooth to
+human eyes when you are moving things across the screen at every frame. However, if the animation
 misses the frames in between,  then the page will appear "janky".
 
 <figure>
-  <img src="/web/updates/images/inside-browser/part3/pagejank1.png" 
+  <img src="/web/updates/images/inside-browser/part3/pagejank1.png"
        alt="jage jank by missing frames">
   <figcaption>
-    Figure 11: Animation frames on a timeline 
+    Figure 11: Animation frames on a timeline
   </figcaption>
 </figure>
 
-Even if your rendering operations are keeping up with screen refresh, these calculations are 
-running on the main thread, which means it could be blocked when your application is running 
+Even if your rendering operations are keeping up with screen refresh, these calculations are
+running on the main thread, which means it could be blocked when your application is running
 JavaScript.
 
 <figure>
@@ -255,10 +255,10 @@ JavaScript.
   </figcaption>
 </figure>
 
-You can divide JavaScript operation into small chunks and schedule to run at every frame using 
-`requestAnimationFrame()`. For more on this topic, please see 
+You can divide JavaScript operation into small chunks and schedule to run at every frame using
+`requestAnimationFrame()`. For more on this topic, please see
 [Optimize JavaScript Execution](/web/fundamentals/performance/rendering/optimize-javascript-execution)
-. You might also run your [JavaScript in Web Workers](https://www.youtube.com/watch?v=X57mh8tKkgE) 
+. You might also run your [JavaScript in Web Workers](https://www.youtube.com/watch?v=X57mh8tKkgE)
 to avoid blocking the main thread.
 
 <figure>
@@ -283,14 +283,14 @@ to avoid blocking the main thread.
   </figcaption>
 </figure>
 
-Now that the browser knows the structure of the document, the style of each element, the geometry 
-of the page, and the paint order, how does it draw a page? Turning this information into pixels on 
+Now that the browser knows the structure of the document, the style of each element, the geometry
+of the page, and the paint order, how does it draw a page? Turning this information into pixels on
 the screen is called rasterizing.
 
-Perhaps a naive way to handle this would be to raster parts inside of the viewport. If a user 
-scrolls the page, then move the rastered frame, and fill in the missing parts by rastering more. 
-This is how Chrome handled rasterizing when it was first released. However, the modern browser 
-runs a more sophisticated process called compositing. 
+Perhaps a naive way to handle this would be to raster parts inside of the viewport. If a user
+scrolls the page, then move the rastered frame, and fill in the missing parts by rastering more.
+This is how Chrome handled rasterizing when it was first released. However, the modern browser
+runs a more sophisticated process called compositing.
 
 <div class="clearfix"></div>
 
@@ -307,21 +307,21 @@ runs a more sophisticated process called compositing.
   </figcaption>
 </figure>
 
-Compositing is a technique to separate parts of a page into layers, rasterize them separately, and 
-composite as a page in a separate thread called compositor thread. If scroll happens, since layers 
-are already rasterized, all it has to do is to composite a new frame. Animation can be achieved in 
-the same way by moving layers and composite a new frame. 
+Compositing is a technique to separate parts of a page into layers, rasterize them separately, and
+composite as a page in a separate thread called compositor thread. If scroll happens, since layers
+are already rasterized, all it has to do is to composite a new frame. Animation can be achieved in
+the same way by moving layers and composite a new frame.
 
-You can see how your website is divided into layers in DevTools using 
+You can see how your website is divided into layers in DevTools using
 [Layers panel](https://blog.logrocket.com/eliminate-content-repaints-with-the-new-layers-panel-in-chrome-e2c306d4d752?gi=cd6271834cea).
 
 <div class="clearfix"></div>
 
 ### Dividing into layers
-In order to find out which elements need to be in which layers, the main thread walks through the 
-layout tree to create the layer tree (this part is called "Update Layer Tree" in the DevTools 
-performance panel). If certain parts of a page that should be separate layer (like slide-in side 
-menu) is not getting one, then you can hint to the browser by using `will-change` attribute in CSS. 
+In order to find out which elements need to be in which layers, the main thread walks through the
+layout tree to create the layer tree (this part is called "Update Layer Tree" in the DevTools
+performance panel). If certain parts of a page that should be separate layer (like slide-in side
+menu) is not getting one, then you can hint to the browser by using `will-change` attribute in CSS.
 
 
 <figure>
@@ -331,38 +331,38 @@ menu) is not getting one, then you can hint to the browser by using `will-change
   </figcaption>
 </figure>
 
-You might be tempted to give layers to every element, but compositing across an excess number of 
-layers could result in slower operation than rasterizing small parts of a page every frame, so it 
-is crucial that you measure rendering performance of your application. For more about on topic, see 
+You might be tempted to give layers to every element, but compositing across an excess number of
+layers could result in slower operation than rasterizing small parts of a page every frame, so it
+is crucial that you measure rendering performance of your application. For more about on topic, see
 [Stick to Compositor-Only Properties and Manage Layer Count](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count).
 
 ### Raster and composite off of the main thread
 
-Once the layer tree is created and paint orders are determined, the main thread commits that 
-information to the compositor thread. The compositor thread then rasterizes each layer. A layer 
-could be large like the entire length of a page, so the compositor thread divides them into tiles 
-and sends each tile off to raster threads. Raster threads rasterize each tile and store them in GPU 
-memory. 
+Once the layer tree is created and paint orders are determined, the main thread commits that
+information to the compositor thread. The compositor thread then rasterizes each layer. A layer
+could be large like the entire length of a page, so the compositor thread divides them into tiles
+and sends each tile off to raster threads. Raster threads rasterize each tile and store them in GPU
+memory.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/raster.png" alt="raster">
   <figcaption>
-    Figure 17: Raster threads creating the bitmap of tiles and sending to GPU 
+    Figure 17: Raster threads creating the bitmap of tiles and sending to GPU
   </figcaption>
 </figure>
 
-The compositor thread can prioritize different aster threads so that things within the viewport 
-(or nearby) can be rastered first. A layer also has multiple tilings for different resolutions to 
+The compositor thread can prioritize different raster threads so that things within the viewport
+(or nearby) can be rastered first. A layer also has multiple tilings for different resolutions to
 handle things like zoom-in action.
 
-Once tiles are rastered, compositor thread gathers tile information called **draw quads** to create 
-a **compositor frame**. 
+Once tiles are rastered, compositor thread gathers tile information called **draw quads** to create
+a **compositor frame**.
 
 <table class="responsive">
   <tr>
     <td>Draw quads</td>
     <td>
-      Contains information such as the tile's location in memory and where in the page to draw the 
+      Contains information such as the tile's location in memory and where in the page to draw the
       tile taking in consideration of the page compositing.
     </td>
   </tr>
@@ -372,34 +372,34 @@ a **compositor frame**.
   </tr>
 </table>
 
-A compositor frame is then submitted to the browser process via IPC. At this point, another 
-compositor frame could be added from UI thread for the browser UI change or from other renderer 
-processes for extensions. These compositor frames are sent to the GPU to display it on a screen. 
-If a scroll event comes in, compositor thread creates another compositor frame to be sent to the 
+A compositor frame is then submitted to the browser process via IPC. At this point, another
+compositor frame could be added from UI thread for the browser UI change or from other renderer
+processes for extensions. These compositor frames are sent to the GPU to display it on a screen.
+If a scroll event comes in, compositor thread creates another compositor frame to be sent to the
 GPU.
 
 <figure>
   <img src="/web/updates/images/inside-browser/part3/composit.png" alt="composit">
   <figcaption>
-    Figure 18: Compositor thread creating compositing frame. Fame is sent to the browser process 
+    Figure 18: Compositor thread creating compositing frame. Fame is sent to the browser process
     then to GPU
   </figcaption>
 </figure>
 
-The benefit of compositing is that it is done without involving the main thread. Compositor thread 
-does not need to wait on style calculation or JavaScript execution. This is why 
-[compositing only animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) 
-are considered the best for smooth performance. If layout or paint needs to be calculated again 
+The benefit of compositing is that it is done without involving the main thread. Compositor thread
+does not need to wait on style calculation or JavaScript execution. This is why
+[compositing only animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
+are considered the best for smooth performance. If layout or paint needs to be calculated again
 then the main thread has to be involved.
 
 ## Wrap Up
-In this post, we looked at rendering pipeline from parsing to compositing. Hopefully, you are now 
+In this post, we looked at rendering pipeline from parsing to compositing. Hopefully, you are now
 empowered to read more about performance optimization of a website.
 
-In the next and last post of this series, we'll look at the compositor thread in more details and 
+In the next and last post of this series, we'll look at the compositor thread in more details and
 see what happens when user input like `mouse move` and `click` comes in.
 
-Did you enjoy the post? If you have any questions or suggestions for the future post, I'd love to 
+Did you enjoy the post? If you have any questions or suggestions for the future post, I'd love to
 hear from you in the comment section below or [@kosamari](https://twitter.com/kosamari) on Twitter.
 
 <a class="button button-primary gc-analytics-event attempt-right"
