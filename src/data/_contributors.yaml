@@ -10,7 +10,6 @@
 #     given: First # Required
 #     family: Last # Optional
 #   homepage: https://developers.google.com/web/ # Optional
-#   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
 #   twitter: petele                              # Recommended - handle only (no @)
 #   github: petele                               # Recommended - handle only
 #   lanyrd: petele                               # Optional - handle only
@@ -21,6 +20,8 @@
 #     unit: Team              # Optional (not shown)
 #   country: US               # Optional - ISO Country Code (not shown)
 #   email: test@example.com   # Optional (not shown)
+#
+# Note: The 'google' link is no longer supported, Google+ has been deprecated.
 
 mustaqahmed:
   name:
@@ -65,7 +66,6 @@ jbnicolai:
     - engineer
     - contributor
   homepage: https://github.com/jbnicolai
-  google: +JoshuaAppelman
   twitter: jbnicolai_
   email: me@jbnicolai.com
   description:
@@ -82,7 +82,6 @@ jakearchibald:
   role:
     - author
   homepage: https://jakearchibald.com/
-  google: +jakearchibald
   twitter: jaffathecake
   email: jakearchibald@google.com
   lanyrd: jaffathecake
@@ -100,7 +99,6 @@ pbakaus:
   role:
     - author
   homepage: 'https://paulbakaus.com'
-  google: +PaulBakaus
   twitter: pbakaus
   email: pbakaus@google.com
   description:
@@ -117,7 +115,6 @@ ianbarber:
   role:
     - engineer
   homepage: 'http://www.riskcompletefailure.com/'
-  google: +IanBarber
   twitter: ianbarber
   email: ianbarber@google.com
   description:
@@ -146,7 +143,6 @@ beaufortfrancois:
   country: FR
   role:
     - author
-  google: +FrancoisBeaufort
   github: beaufortfrancois
   description:
     en: Dives into Chromium source code
@@ -163,7 +159,6 @@ lucaberton:
     - contributor
     - translator
   homepage: 'https://lucaberton.it'
-  google: +LucaBerton
   twitter: mrevolution85
   github: lucab85
   email: luca@lucaberton.it
@@ -177,7 +172,6 @@ ericbidelman:
     unit: Developer Relations
   country: USA
   homepage: 'http://ericbidelman.com'
-  google: +EricBidelman
   twitter: ebidel
   github: ebidel
   role:
@@ -209,7 +203,6 @@ aliceboxhall:
   country: USA
   role:
     - author
-  google: "111975973972817482025"
   twitter: sundress
   email: aboxhall@google.com
 
@@ -236,7 +229,6 @@ yatesbuckley:
   country: UK
   role:
     - author
-  google: +YatesBuckley
   email: yates@unit9.com
 
 mathiasbynens:
@@ -268,7 +260,6 @@ owencm:
   role:
     - contributor
   homepage: 'http://www.owencampbellmoore.com/'
-  google: +OwenCampbellMoore
   twitter: owencm
   email: owencm@google.com
 
@@ -304,7 +295,6 @@ samchen:
   role:
     - translator
   homepage: 'http://www.zfanw.com/blog/'
-  google: '104787680206754797134'
   twitter: chenxsan
   email: chenxsan@google.com
   description:
@@ -333,7 +323,6 @@ kenchris:
     - author
   twitter: kennethrohde
   email: kenneth.christiansen@gmail.com
-  google: +KennethRohdeChristiansen
   description:
     en: Kenneth is an Engineer at Intel
 
@@ -373,7 +362,6 @@ victorcostan:
   name:
     given: Victor
     family: Costan
-  google: "102128305988485092292"
   twitter: pwnall
   github: pwnall
   role:
@@ -396,7 +384,6 @@ dalecurtis:
   country: US
   role:
     - author
-  google: +DaleCurtis
   twitter: DaleCurtis
   email: dalecurtis@google.com
   homepage: 'https://github.com/dalecurtis'
@@ -413,7 +400,6 @@ alexdanilo:
   country: AU
   role:
     - author
-  google: +AlexDanilo
   twitter: alexanderdanilo
   email: adanilo@google.com
 
@@ -427,7 +413,6 @@ wdenniss:
   country: US
   role:
     - author
-  google: +WilliamDenniss
   twitter: WilliamDenniss
   email: wdenniss@google.com
   description:
@@ -461,7 +446,6 @@ robdodson:
   role:
     - author
   homepage: 'https://robdodson.me'
-  google: +RobDodson
   twitter: rob_dodson
   email: robdodson@google.com
 
@@ -476,7 +460,6 @@ cwdoh:
   role:
     - translator
   homepage: 'http://cwdoh.com'
-  google: +ChangwookDoh
   twitter: cwdoh
   email: changwook.doh@gmail.com
   description:
@@ -507,7 +490,6 @@ samdutton:
   country: UK
   role:
     - author
-  google: +samdutton
   email: dutton@google.com
   description:
     en: Sam is a Developer Advocate
@@ -521,7 +503,7 @@ arthurevans:
   description:
     en: Arthur writes words about code
 
-justinfagnani: 
+justinfagnani:
   name:
     given: Justin
     family: Fagnani
@@ -597,7 +579,6 @@ mattgaunt:
     - author
     - engineer
   homepage: 'https://gauntface.com/blog'
-  google: +MattGaunt
   twitter: gauntface
 
 mychaelgo:
@@ -609,7 +590,6 @@ mychaelgo:
     - translator
   twitter: mychaelgo
   github: mychaelgo
-  google: "113952063964933941833"
   description:
     en: Mychael Go is Fullstack Software Engineer
 
@@ -637,7 +617,6 @@ simongong:
   country: JP
   role:
     - translator
-  google: '113525015220376733647'
   email: simon.gong64@gmail.com
   description:
     en: Simon is a Full Stack Developer
@@ -681,7 +660,6 @@ greenido:
     - author
     - engineer
   homepage: 'https://greenido.wordpress.com'
-  google: +GreenIdo
   twitter: greenido
   email: idog@google.com
   description:
@@ -713,7 +691,6 @@ eligrey:
     - author
     - engineer
   homepage: 'https://eligrey.com'
-  google: +EliGreyDeveloper
   twitter: sephr
   email: me@eligrey.com
   description:
@@ -730,7 +707,6 @@ ilyagrigorik:
   role:
     - author
   homepage: 'https://igvita.com'
-  google: +IlyaGrigorik
   twitter: igrigorik
   description:
     en: Ilya is a Developer Advocate and Web Perf Guru
@@ -800,7 +776,6 @@ umarhansa:
   role:
     - contributor
   homepage: 'https://umaar.com'
-  google: +UmarHansa
   twitter: umaar
   email: umar.hansa@gmail.com
   description:
@@ -824,7 +799,6 @@ ilmariheikkinen:
     family: Heikkinen
   country: UK
   homepage: 'http://fhtr.org'
-  google: "105862726631119909094"
   twitter: ilmarihei
   role:
     - author
@@ -868,7 +842,6 @@ paulirish:
   role:
     - author
   homepage: 'https://www.paulirish.com'
-  google: +PaulIrish
   twitter: paul_irish
   email: paulirish@google.com
 
@@ -896,7 +869,6 @@ captainpangyo:
   role:
     - translator
   homepage: 'https://joshuajangblog.wordpress.com/'
-  google: "112235341337838764023"
   email: jangkeehyo@gmail.com
   description:
     en: Josh is a Singing Computer Scientist
@@ -909,7 +881,6 @@ kazukikanamori:
   role:
     - translator
   twitter: yogurito
-  google: "113987163927119714999"
   email: kazuki.kanamori@gmail.com
   description:
     en: Digital Marketing Engineer
@@ -936,7 +907,6 @@ megginkearney:
   country: US
   role:
     - author
-  google: "110573989653316535297"
   email: mkearney@google.com
   description:
     en: Meggin is a Tech Writer
@@ -982,7 +952,6 @@ swengineer:
   role:
     - translator
   homepage: 'http://fetobe.co.kr'
-  google: "112816149994035233646"
   email: kim.sw.engineer@gmail.com
   description:
     en: Sungwon is a front-end Developer
@@ -999,7 +968,6 @@ paulkinlan:
     - author
     - engineer
   homepage: 'https://paul.kinlan.me'
-  google: +PaulKinlan
   twitter: paul_kinlan
   email: paulkinlan@google.com
   description:
@@ -1016,7 +984,6 @@ agektmr:
   role:
     - author
   homepage: 'https://blog.agektmr.com'
-  google: +agektmr
   twitter: agektmr
   email: agektmr@google.com
   description:
@@ -1062,7 +1029,6 @@ mustafa:
   role:
     - author
   homepage: 'http://www.designtoday.info'
-  google: +MustafaKurtuldu
   twitter: mustafa_x
   email: mkurtuldu@google.com
   description:
@@ -1077,7 +1043,6 @@ sethladd:
     unit: Developer Relations
   country: US
   homepage: 'https://sethladd.com/'
-  google: +SethLadd
   twitter: sethladd
   role:
     - author
@@ -1121,7 +1086,6 @@ nurinamu:
   role:
     - translator
   homepage: 'http://www.nurinamu.com'
-  google: +nurinamu
   twitter: nurinamu
   email: nurinamu@gmail.com
   description:
@@ -1156,7 +1120,6 @@ petelepage:
     - author
     - engineer
   homepage: 'http://petelepage.com'
-  google: +PeteLePage
   twitter: petele
   github: petele
   email: petele@google.com
@@ -1170,7 +1133,6 @@ kennith:
     family: Leung
   homepage: http://kennithleung.com
   twitter: kennith
-  google: +kennith
   email: kennith.leung@gmail.com
   role:
     - translator
@@ -1186,7 +1148,6 @@ paullewis:
   role:
     - author
   homepage: 'https://aerotwist.com/'
-  google: +aerotwist
   twitter: aerotwist
   description:
     en: Paul is a Design and Perf Advocate
@@ -1202,7 +1163,6 @@ henrylim:
   role:
     - translator
   twitter: henrylim96
-  google: +HenryLim96
   homepage: 'https://limhenry.xyz'
   email: lets.email.henry@gmail.com
   description:
@@ -1229,7 +1189,6 @@ wayouliu:
     given: Wayou
     family: Liu
   homepage: https://wayou.github.io/
-  google: +WayouLiu
   twitter: liuwayong
   github: wayou
   description:
@@ -1249,7 +1208,6 @@ heathermahan:
   role:
     - author
   homepage: 'https://github.com/heatheramahan'
-  google: "108335678119817391642"
   twitter: heatheramahan
   email: heatheramahan@gmail.com
   description:
@@ -1266,7 +1224,6 @@ mikemahemoff:
   role:
     - author
   homepage: 'https://github.com/mahemoff'
-  google: +MichaelMahemoff
   twitter: mahemoff
   email: mahemoff@google.com
   lanyrd: mahemoff
@@ -1282,7 +1239,6 @@ renatomangini:
   role:
     - author
   homepage: 'http://www.renatomangini.com/'
-  google: +RenatoMangini
   twitter: renatomangini
   email: mangini@google.com
 
@@ -1321,7 +1277,6 @@ developit:
     - author
     - engineer
   homepage: 'https://jasonformat.com'
-  google: +developit
   twitter: _developit
   github: developit
   email: jasonjmiller@google.com
@@ -1352,7 +1307,6 @@ jacquerie:
     - engineer
     - contributor
   homepage: 'http://jacquerie.github.io'
-  google: +JacopoNotarstefano
   twitter: Jaconotar
   email: jacopo.notarstefano@gmail.com
   description:
@@ -1376,7 +1330,6 @@ addyosmani:
   country: USA
   role:
     - author
-  google: +AddyOsmani
   twitter: addyosmani
   email: addyo@google.com
   description:
@@ -1410,7 +1363,6 @@ jasonpark:
   country: SG
   role:
     - translator
-  google: +JasonPark0913
   twitter: hyunjO_on
   email: jpar225@gmail.com
   description:
@@ -1427,7 +1379,6 @@ jeffposnick:
   role:
     - author
   homepage: 'https://twitter.com/jeffposnick'
-  google: +jeffposnick
   twitter: jeffposnick
   email: jeffy@google.com
   description:
@@ -1457,7 +1408,6 @@ rupl:
   role:
     - author
   homepage: 'https://chrisruppel.com'
-  google: +ChrisRuppel
   twitter: rupl
   email: chris.ruppel@gmail.com
   description:
@@ -1474,7 +1424,6 @@ satyakresna:
   role:
     - translator
   homepage: 'https://satyakresna.com'
-  google: +SatyaKresnaAdiPratama
   twitter: _satyakresna
   email: satyakresna6295@gmail.com
   description:
@@ -1520,7 +1469,6 @@ yvoschaap:
     - translator
     - engineer
   homepage: http://www.directlyrics.com
-  google: +yvo
   twitter: yvoschaap
   email: yvo@yvoschaap.com
   description:
@@ -1537,7 +1485,6 @@ moinshaikh:
   role:
     - translator
   homepage: 'https://moingshaikh.wordpress.com/'
-  google: +MoinShaikhMS
   twitter: moingshaikh
   email: montugshaikh@gmail.com
   description:
@@ -1581,7 +1528,6 @@ glenshires:
   country: USA
   role:
     - author
-  google: +GlenShires
   email: gshires@google.com
 
 abdshomad:
@@ -1592,7 +1538,6 @@ abdshomad:
   role:
     - translator
   homepage: 'https://abdshomad.github.io'
-  google: +abdshomad
   twitter: abdshomad
   github: abdshomad
   email: abd.shomad@gmail.com
@@ -1650,7 +1595,6 @@ dmitryskripunov:
   role:
     - translator
   twitter: dmitryskripunov
-  google: "116954151022889696749"
   github: dmitryskripunov
   email: dskripunov@gmail.com
   description:
@@ -1665,7 +1609,6 @@ andismith:
     unit: Director of Web Development
   country: UK
   homepage: 'http://www.andismith.com'
-  google: +AndiSmithUK
   twitter: AndiSmith
   role:
     - author
@@ -1680,7 +1623,6 @@ borissmus:
     unit: Developer Relations
   country: USA
   homepage: 'http://smus.com'
-  google: +BorisSmus
   twitter: borismus
   role:
     - author
@@ -1718,7 +1660,6 @@ thomassteiner:
     given: Thomas
     family: Steiner
   homepage: https://blog.tomayac.com/
-  google: +ThomasSteiner
   twitter: tomayac
   github: tomayac
   description:
@@ -1777,7 +1718,6 @@ yoichiro:
   role:
     - translator
   twitter: yoichiro
-  google: +YoichiroTanaka
   homepage: 'https://www.eisbahn.jp/yoichiro/'
   email: yoichiro@eisbahn.jp
   description:
@@ -1835,7 +1775,6 @@ fouadvaladbeigi:
   country: UK
   role:
     - author
-  google: "115771375659957547634"
   email: fouad.valadbeigi@unit9.com
 
 majidvp:
@@ -1866,7 +1805,6 @@ johyphenel:
   role:
     - author
   homepage: 'https://plus.google.com/+Jo-elvanBergen'
-  google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
 
@@ -1939,7 +1877,6 @@ mikewest:
   role:
     - author
   homepage: 'https://mikewest.org/'
-  google: +MikeWest
   twitter: mikewest
   email: mkwst@google.com
 
@@ -1953,7 +1890,6 @@ chriswilson:
   country: USA
   role:
     - author
-  google: +ChrisWilson
   twitter: cwilso
   email: cwilso@google.com
 
@@ -1962,7 +1898,6 @@ tomwiltzius:
     given: Tom
     family: Wiltzius
   country: USA
-  google: +TomWiltzius
   role:
     - author
 
@@ -2003,5 +1938,4 @@ maciejzasada:
   country: UK
   role:
     - author
-  google: "104812516714503133849"
   email: maciej@unit9.com
