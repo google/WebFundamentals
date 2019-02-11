@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
-{# wf_updated_on: 2019-02-10 #}
-{# wf_published_on: 2019-02-10 #}
+{# wf_updated_on: 2019-02-11 #}
+{# wf_published_on: 2019-02-11 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
 {# wf_featured_snippet: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly? #}
@@ -56,7 +56,7 @@ less. An acceptable duration for this type of interaction.
       }
     }
 
-Edge and its JavaScript engine Chakra, however, takes over 8 seconds. There are
+In Edge, however, it takes over 8 seconds. There are
 no browser APIs involved that could affect performance, so this is just about
 raw execution speed. 8 seconds is much less acceptable. Enter WebAssembly.
 
@@ -221,19 +221,17 @@ even non-existent at times.
 
 #### Rust
 
-Rust is a new, modern systems programming language. Amongst other things, it
-aims to be useful in the same places that C has been used traditionally, but
-brings modern language concepts and tooling. Rust also supports WebAssembly as a
-first-class citizen and the Rust team has contributed a lot of excellent tooling
-to the WebAssembly ecosystem.
+Rust is a new, modern programming language with a rich type system, no runtime
+and an ownership model that guarantees memory-safety and thread-safety. Rust
+also supports WebAssembly as a first-class citizen and the Rust team has
+contributed a lot of excellent tooling to the WebAssembly ecosystem.
 
-One of these tools is [`wasm-pack`](https://rustwasm.github.io/wasm-pack/),
-which is mostly written by [Ashley Williams](https://twitter.com/ag_dubs) and
-[Nick Fitzgerald](https://twitter.com/fitzgen?lang=en). `wasm-pack` takes your
-code and turns it into a web-friendly npm package that works out-of-the-box with
-bundlers like webpack. `wasm-pack` is an extremely convenient experience, but
-currently only works for Rust. The plan is to add support for other
-WebAssembly-targeting languages in the future.
+One of these tools is [`wasm-pack`](https://rustwasm.github.io/wasm-pack/), by
+the [rustwasm working group](https://github.com/rustwasm/team). `wasm-pack`
+takes your code and turns it into a web-friendly module that works
+out-of-the-box with bundlers like webpack. `wasm-pack` is an extremely
+convenient experience, but currently only works for Rust. The group is
+considering to add support for other WebAssembly-targeting languages.
 
 In Rust, slices are what arrays are in C. And just like in C, we need to create
 slices that use our start addresses. This goes against the memory safety model
