@@ -108,8 +108,7 @@ sheet.replaceSync('a { color: red; }');
 document.adoptedStyleSheets = [sheet];
 
 // Apply the stylesheet to a Shadow Root:
-const node =
-document.createElement('div');
+const node = document.createElement('div');
 const shadow = node.attachShadow({ mode: 'open' });
 shadow.adoptedStyleSheets = [sheet];
 ```
