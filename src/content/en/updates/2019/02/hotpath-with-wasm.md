@@ -104,7 +104,7 @@ inaccessible to web developers (except through DevTools). As such it is possible
 to write WebAssembly modules that don't need any additional memory at all and
 only use the VM-internal stack.
 
-Note: For the curious: Compilers like Emscripten still use the WebAssembly
+Note: (for the curious) Compilers like Emscripten still use the WebAssembly
 memory to implement their own stack. This is necessary so you can access values
 anywhere on the stack through constructs like pointers in C, something the
 VM-internal stack does not allow. So, somewhat confusingly, when you run C via
@@ -187,7 +187,7 @@ ends:
     int bpp = 4;
     int imageSize = inputWidth * inputHeight * bpp;
     uint32_t* inBuffer = (uint32_t*) 4;
-    uint32_t* outBuffer = (uint32_t*) (imageSize + 4);
+    uint32_t* outBuffer = (uint32_t*) (inBuffer + imageSize);
 
     for (int d2 = d2Start; d2 >= 0 && d2 < d2Limit; d2 += d2Advance) {
       for (int d1 = d1Start; d1 >= 0 && d1 < d1Limit; d1 += d1Advance) {
