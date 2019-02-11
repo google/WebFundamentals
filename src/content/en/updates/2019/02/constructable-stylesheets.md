@@ -31,7 +31,7 @@ offering a programmatic way to manipulate stylesheets as well as eliminating the
 problems associated with the old method.
 
 <img src="../../images/2019/02/constructable-stylesheets/overview.png"
-alt="Diagram showing client-side rendering affecting FCP and TTI" width="600"
+alt="Diagram showing preparation and application of CSS" width="600"
 style="max-height:458px;">
 
 Constructable Stylesheets make it possible to define and prepare shared CSS
