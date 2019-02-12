@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When the user adds your Progressive Web App to their home screen on Android, Chrome automatically generates an APK for you, which we sometimes call a WebAPK. Being installed via an APK makes it possible for your app to show up in the app launcher, in Android's app settings and to register a set of intent filters.
 
-{# wf_updated_on: 2018-12-11 #}
+{# wf_updated_on: 2019-02-12 #}
 {# wf_published_on: 2017-05-21 #}
 {# wf_blink_components: Mobile>WebAPKs #}
 {# wf_previous_url: /web/updates/2017/02/improved-add-to-home-screen #}
@@ -11,6 +11,9 @@ description: When the user adds your Progressive Web App to their home screen on
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+_This article contains contributions from Jeff Posnick and
+[Peter Kotwicz](https://groups.google.com/a/chromium.org/forum/#!msg/chromium-discuss/NUjaM4QtFrU/gTJ1kSONBAAJ)_.
+
 [Add to Home Screen](/web/fundamentals/app-install-banners/) on Android does
 more than just add the Progressive Web App to the users Home Screen. Chrome
 automatically generates and installs a special APK of your app. We sometimes
@@ -18,16 +21,16 @@ refer to this as a **WebAPK**. Being installed via an APK makes it possible
 for your app to show up in the app launcher, in Android's app settings and
 to register a set of intent filters.
 
-To [generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
-Chrome looks at the [web app manifest](/web/fundamentals/web-app-manifest/), and
-other meta-data. Whenever the manifest changes, Chrome will need to generate a
-new APK.
+To
+[generate the WebAPK](https://chromium.googlesource.com/chromium/src/+/master/chrome/android/webapk/README)
+Chrome looks at the [web app manifest](/web/fundamentals/web-app-manifest/) and
+other metadata. [When an update to the manifest is detected](#update-webapk),
+Chrome will need to generate a new APK.
 
-Note: Since the WebAPK is generated each time the manifest changes, we
-recommend changing it only when necessary. Don't use it to store user specific
-identifiers, or other other data that will frequently change. Frequently
-changing the manifest will increase install time because the WebAPK will need
-to be re-generated with every change.
+Note: Since the WebAPK is regenerated each time an updated manifest is detected,
+we recommend changing it only when necessary. Don't use the manifest to store
+user specific identifiers, or other other data that might be customized.
+Frequently changing the manifest will increase overall install time.
 
 ## Android intent filters
 
@@ -37,18 +40,19 @@ for all URLs within the scope of the app. When a user clicks on a link that
 is within the scope of the app, the app will be opened, rather than opening
 within a browser tab.
 
-Consider the following partial `manifest.json`, when launched from the app
-launcher, it would launch `https://example.com/` as a standalone app,
-without any browser chrome.
+Consider the following partial `manifest.json`:
 
-```
+```text
 "start_url": "/",
 "display": "standalone",
 ```
 
+When a web app using it is launched from the app launcher, it would open
+`https://example.com/` as a standalone app, without any browser chrome.
+
 The WebAPK would include the following intent filters:
 
-```
+```xml
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
@@ -64,34 +68,36 @@ If the user clicks on a link within an installed app to
 `https://example.com/read`, it would be caught by the intent and opened
 in the Progressive Web App.
 
-Note: Navigating directly to `https://example.com/app/` from the address
-bar will work exactly as the same as it does for native apps that have an
+Note: Navigating directly to `https://example.com/app/` from the address bar in
+Chrome will work exactly as the same as it does for native apps that have an
 intent filter. Chrome assumes the user <b>intended</b> to visit the site and
 will open this site.
 
-### Using `scope`  to restrict intent filters
+### Using `scope` to restrict intent filters
 
 If you don't want your Progressive Web App to handle all URLs within your site,
-you can add the [`scope`](/web/fundamentals/web-app-manifest/#scope) property
-to your web app manifest. The `scope` property tells Android to only open your
-web app if the URL matches the `origin` + `scope`, and limits which URLs will
-be handled by your app and which should be opened in the browser. This is
-helpful when you have your app and other non-app content on the same domain.
+you can add the [`scope`](/web/fundamentals/web-app-manifest/#scope) property to
+your web app manifest. The `scope` property tells Android to only open your web
+app if the URL matches the `origin` + `scope`. It gives you control over which
+URLs will be handled by your app, and which should be opened in the browser.
+This is helpful when you have your app and other non-app content on the same
+domain.
 
-Consider the following partial `manifest.json`, when launched from the app
-launcher, it would launch `https://example.com/app/` as a standalone app,
-without any browser chrome.
+Consider the following partial `manifest.json`:
 
-```
+```text
 "scope": "/app/",
 "start_url": "/",
 "display": "standalone",
 ```
 
-Like before, the generated WebAPK would include an intent filter but would
-modify the `android:pathPrefix` attribute in the APK's `AndroidManifest.xml`:
+When launched from the app launcher, it would open `https://example.com/app/`
+as a standalone app, without any browser chrome.
 
-```
+Like before, the generated WebAPK would include an intent filter, but with a
+different `android:pathPrefix` attribute in the APK's `AndroidManifest.xml`:
+
+```xml
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
@@ -109,49 +115,78 @@ Let's take a look at a few examples:<br>
 <span class="compare-no"></span> `https://example.com/help/` - not in `/app/`<br>
 <span class="compare-no"></span> `https://example.com/about/` - not in `/app/`
 
-
-See [`scope`](/web/fundamentals/web-app-manifest/) for more information about
+See [`scope`](/web/fundamentals/web-app-manifest/#scope) for more information about
 `scope`, what happens when you don't set it, and how you can use it to define
 the scope of your app.
-
 
 ## Managing permissions
 
 Permissions work in the same way as other web apps and cannot be requested at
-install time, instead they must be requested at run time, ideally only when
+install time. Instead they must be requested at run time, ideally only when
 you really need them. For example, don't ask for camera permission on first
 load, but instead wait until the user attempts to take a picture.
 
 Note: Android normally grants immediate permission to show notifications for
 installed apps, but apps installed via WebAPKs are not granted this at install
-time, you must request it at runtime within your app.
+time; you must request it at runtime within your app.
 
 ## Managing storage and app state
 
 Even though the progressive web app is installed via an APK, Chrome uses the
 current profile to store any data, and it will not be segregated away. This
 allows a shared experience between the browser and the installed app. Cookies
-are shared an active, any client side storage is accessible and the service
+are shared and active, any client side storage is accessible and the service
 worker is installed and ready to go.
 
-Though, this can be an issue if the user clears their Chrome profile, or chooses
-to delete site data.
+Note: Keep in mind that if the user clears their Chrome profile, or chooses
+to delete site data, that will apply to the WebAPK as well.
 
 ## Updating the WebAPK {: #update-webapk }
 
-When the WebAPK is launched, Chrome checks the currently installed manifest
-against the live manifest. If any of the properties in the manifest required
-to add the PWA to the home screen have changed, Chrome will request an
-updated WebAPK. The request may be queued until the device is plugged in and
-has a WiFi connection.
+Chrome will periodically compare the locally installed manifest against a copy
+of the manifest fetched from the network. If any of the properties in the
+manifest required to add the PWA to the home screen have changed in the network
+copy, Chrome will request an updated WebAPK, reflecting those new values.
+
+There are a number of rules that govern how these update checks are triggered:
+
+- Update checks only happen when a WebAPK is launched. Launching Chrome directly
+  will not a trigger an update check for a given WebAPK.
+- Chrome checks for updates either every 3 days or every 30 days. Checking for
+  updates every 3 days happens the large majority of the time. It switches to
+  the 30 day interval in unlikely cases where the update server cannot provide
+  an update.
+- Clearing Chrome's data (via "CLEAR ALL DATA" in Android settings) resets the update timer.
+- Chrome will only update a WebAPK if the Web Manifest URL does not change. If
+  you change the web page from referencing `<link rel="manifest.json">` to
+  reference `<link rel="manifest2.json">` the WebAPK will no longer update.
+  (Don't do this!)
+- Chrome will only update a WebAPK if the WebAPK is not running. Moving the
+  WebAPK to the background is not sufficient if it keeps running.
+- Only WebAPKs created by an official version of Chrome (Stable/Beta/Dev/Canary)
+  will be updated. It does not work with Chromium (`org.chromium.chrome`).
+- The update check may be delayed until the device is plugged in and has a WiFi
+  connection.
+
+Here's a hypothetical example of how WebAPK update scheduling works over time:
+
+- **January 1**: Install WebAPK
+- **January 1**: Launch WebAPK → No update check (0 days have passed)
+- **January 2**: Launch WebAPK → No update check (1 day has passed)
+- **January 4**: Launch Chrome → No update check (Launching Chrome has no effect)
+- **January 4**: Launch WebAPK → Check whether update is needed (3+ days have passed)
+- **January 6**: Clear Chrome's data in Android settings
+- **January 9**: Launch WebAPK → No update check (From Chrome's perspective this is the first WebAPK launch)
+- **January 12**: Launch WebAPK → Check whether update is needed (3+ days have passed)
 
 See
 [`UpdateReason`](https://cs.chromium.org/chromium/src/chrome/browser/android/webapk/webapk.proto?l=35)
 enum in `message WebApk` for the reasons a WebAPK may be updated.
 
-Note: Icons may be cached, so it may be helpful to change the filenames when
-updating icons or other graphics.
-
+Note: Icons may be
+[cached](/web/fundamentals/performance/optimizing-content-efficiency/http-caching),
+so it may be helpful to change the filenames when updating icons or other
+graphics.
 
 ## Frequently asked questions
 
