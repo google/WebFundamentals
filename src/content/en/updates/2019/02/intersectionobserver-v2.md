@@ -56,7 +56,7 @@ To be clear, Intersection Observer&nbsp;v1 is great, but it's not perfect. There
 some corner cases where the API falls short. Let's have a closer look!
 The Intersection Observer&nbsp;v1 API can perfectly tell you when an element is scrolled into the
 window's viewport, but it *doesn't* tell you whether the element is covered
-by any other page content (that is, when the element is "occluded") or whether
+by any other page content (that is, when the element is occluded) or whether
 the element's visual display has been modified by visual effects like `transform`, `opacity`,
 `filter`, etc., which *effectively* can make it invisible.
 
@@ -218,7 +218,8 @@ posting.
 
 ## Acknowledgements
 
-Thanks to [Simeon Vincent](https://twitter.com/dotproto) for reviewing this article.
+Thanks to [Simeon Vincent](https://twitter.com/dotproto) and
+[Yoav Weiss](https://twitter.com/yoavweiss) for reviewing this article.
 
 {% include "web/_shared/helpful.html" %}
 
