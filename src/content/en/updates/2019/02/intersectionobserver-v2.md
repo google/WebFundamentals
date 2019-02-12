@@ -37,7 +37,7 @@ For the full details, check out the
 but as a short reminder, this is what the Intersection Observer&nbsp;v1 API looks like in the most
 basic case:
 
-```javascript
+```js
 const onIntersection = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -85,7 +85,7 @@ completely transparent when you (pretendedly involuntarily) clicked it.
 
 <img src="../../images/2019/02/trick-ad-click.png" alt="Tricking a user into clicking an ad by
     styling it transparent and overlaying it on top of something attractive"
-    intrinsicsize="1908x1270">
+    intrinsicsize="1000x666">
 
 ## How does Intersection Observer&nbsp;v2 fix this?
 
@@ -160,7 +160,7 @@ kind of click-jacking attacks, you *must not* `unobserve` the element after the 
 <button id="callToActionButton">Buy now!</button>
 ```
 
-```JavaScript
+```js
 // This is code running in the iframe.
 
 // The iframe must be visible for at least 800ms prior to an input event
