@@ -78,7 +78,7 @@ completely transparent by applying a CSS rule `iframe { opacity: 0; }` and overl
 on top of something attractive, like a cute cat video that users would actually want to click.
 This is called *clickjacking*.
 You can see such a clickjacking attack in action in the upper section of this
-[demo](https://trick-ad-click.glitch.me/) (try watching the 🐈 cat video
+[demo](https://trick-ad-click.glitch.me/) (try "watching" the 🐈 cat video
 and ☑️ activate "trick mode").
 You will notice that the ad in the iframe "thinks" it received legitimate clicks, even if it was
 completely transparent when you (pretendedly involuntarily) clicked it.
@@ -142,7 +142,7 @@ invisible.
 
 Below is a short code sample that illustrates the new API features. You can see this click tracking
 logic in action in the second section of the [demo](https://trick-ad-click.glitch.me/)
-(this time, try watching the 🐶 puppy video). Be sure to activate "trick mode" again to immediately
+(but now, try "watching" the 🐶 puppy video). Be sure to activate "trick mode" again to immediately
 convert yourself into a shady publisher and see how Intersection Observer&nbsp;v2 prevents
 non-legitimate ad clicks from being tracked.
 This time, Intersection Observer&nbsp;v2 has our back! 🎉
