@@ -2,27 +2,27 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augment IntersectionObserver to report information about occlusion and visual effects.
 
-{# wf_updated_on: 2019-02-11 #}
+{# wf_updated_on: 2019-02-12 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: intersectionobserver #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Lorem ipsum. #}
 {# wf_blink_components: Blink>Layout #}
 
-# Trust is Good, Observation is Better—Intersection Observer&nbsp;v2 {: .page-title}
+# Trust is Good, Observation is Better—Intersection Observer v2 {: .page-title}
 
 {% include "web/_shared/contributors/thomassteiner.html" %}
 
 <div class="clearfix"></div>
 
-Intersection Observer&nbsp;v1 is one of these APIs that's probably universally loved, and, now that
+Intersection Observer&nbsp;v1 is one of those APIs that's probably universally loved, and, now that
 [Safari supports it](https://webkit.org/blog/8582/intersectionobserver-in-webkit/) as well,
 it's also finally universally usable in all major browsers. For a quick refresher of the API,
 I recommend watching [Surma](../../../resources/contributors/surma)'s
 [Supercharged Microtip](https://www.youtube.com/embed/kW_atFXMG98) on Intersection
 Observer&nbsp;v1—also embedded below for your viewing pleasure—or reading Surma's in-depth
 [article](../../2016/04/intersectionobserver).
-People have used Intersection Observer&nbsp;v1 for a wide range of use cases, like, for example,
+People have used Intersection Observer&nbsp;v1 for a wide range of use cases like
 [lazy loading of images and videos](../../../fundamentals/performance/lazy-loading-guidance/images-and-video/),
 [being notified when elements reach `position: sticky`](../../2017/09/sticky-headers),
 [fire analytics events](https://github.com/ampproject/amphtml/blob/master/extensions/amp-analytics/0.1/visibility-manager.js),
@@ -52,7 +52,7 @@ observer.observe(document.querySelector('#some-target'));
 
 ## What's challenging with Intersection Observer&nbsp;v1?
 
-Let's get this straight: there's nothing wrong with Intersection Observer&nbsp;v1, yet there are
+To be clear, Intersection Observer&nbsp;v1 is great, but it's not perfect. There are
 some corner cases where the API falls short. Let's have a closer look!
 The Intersection Observer&nbsp;v1 API can perfectly tell you when an element is scrolled into the
 window's viewport, but it *doesn't* tell you whether the element is covered
@@ -77,8 +77,11 @@ Now if the publisher wanted to get users to click such ads, they could make the 
 completely transparent by applying a CSS rule `iframe { opacity: 0; }` and overlaying the iframes
 on top of something attractive, like a cute cat video that users would actually want to click.
 This is called *click-jacking*.
-You can see such a click-jacking attack in action in this [demo](https://trick-ad-click.glitch.me/)
-(try watching the 🐈 cat video).
+You can see such a click-jacking attack in action in the upper section of this
+[demo](https://trick-ad-click.glitch.me/) (try watching the 🐈 cat video
+and ☑️ activate "trick mode").
+You will notice that the ad in the iframe "thinks" it received legitimate clicks, even if it was
+completely transparent when you (pretendedly involuntarily) clicked it.
 
 <img src="../../images/2019/02/trick-ad-click.png" alt="Tricking a user into clicking an ad by
     styling it transparent and overlaying it on top of something attractive"
@@ -98,13 +101,15 @@ that the target element is completely unoccluded by other content
 and has no visual effects applied that would alter or distort its display on screen.
 In contrast, a `false` value means that the implementation cannot make that guarantee.
 
-An important detail of the spec is that the implementation is permitted to report false negatives
+An important detail of the
+[spec](https://w3c.github.io/IntersectionObserver/v2/#calculate-visibility-algo)
+is that the implementation *is permitted* to report false negatives
 (that is, setting `isVisible` to `false` even when the target element is completely visible and
-unmodified), but it may never report a false positive.
+unmodified), but it *may never* report a false positive.
 For performance or other reasons, an implementation may use an algorithm which is not 100% accurate,
 as long as all inaccuracies are false negatives.
 
-## How does the new code look like in practice?
+## What does the new code look like in practice?
 
 The `IntersectionObserver` constructor now takes two additional configuration properties: `delay`
 and `trackVisibility`.
@@ -112,36 +117,38 @@ The `delay` is a number indicating the minimum delay in milliseconds between not
 the observer for a given target.
 The `trackVisibility` is a boolean indicating whether the observer will track changes in a target's
 visibility.
-In the current spec, "visbility" is calculated as follows:
+In the current [spec](https://w3c.github.io/IntersectionObserver/v2/#calculate-visibility-algo),
+"visbility" is calculated as follows:
 
 - If the observer's `trackVisibility` attribute is `false`, then the target is considered visible.
 This corresponds to the current&nbsp;v1 behavior.
 
 - If the target has an effective transformation matrix other than a 2D&nbsp;translation
-or proportional 2D&nbsp;upscaling, then the target is considered invisble.
+or proportional 2D&nbsp;upscaling, then the target is considered invisible.
 
 - If the target, or any element in its containing block chain, has an effective opacity other than
-100%, then the target is considered invisble.
+1.0, then the target is considered invisible.
 
 - If the target, or any element in its containing block chain, has any filters applied,
-then the target is considered invisble.
+then the target is considered invisible.
 
 - If the implementation cannot guarantee that the target is completely unoccluded by other page
-content, then the target is considered invisble.
+content, then the target is considered invisible.
 
 This means current implementations are pretty conservative with guaranteeing visbility.
 For example, applying an almost unnoticable grayscale filter like `filter: grayscale(0.01%)`
-or setting an almost invisbile transparency with `opacity: 0.99` would all render the element
+or setting an almost invisible transparency with `opacity: 0.99` would all render the element
 invisible.
 
 Below is a short code sample that illustrates the new API features. You can see this click tracking
-logic in action in the [demo](https://trick-ad-click.glitch.me/) (this time, try watching the 🐶
-puppy video). Be sure to activate "trick mode" to immediately convert yourself in a shady
-publisher and see how Intersection Observer&nbsp;v2 prevents non-legimate ads from being clicked.
+logic in action in the second section of the [demo](https://trick-ad-click.glitch.me/)
+(this time, try watching the 🐶 puppy video). Be sure to activate "trick mode" again to immediately
+convert yourself into a shady publisher and see how Intersection Observer&nbsp;v2 prevents
+non-legitimate ad clicks from being tracked.
 This time, Intersection Observer&nbsp;v2 has our back! 🎉
 
-Note: Different from typical lazy-loading code, when you use Intersection Observer to prevent this
-kind of click-jacking attacks, you must not `unobserve` the element after the first intersection.
+Note: Different from typical lazy-loading code, if you use Intersection Observer to prevent this
+kind of click-jacking attacks, you *must not* `unobserve` the element after the first intersection.
 
 <img src="../../images/2019/02/intersectionobserver-v2.png"
     alt="Intersection Observer v2 preventing an unintended click on an ad."
@@ -208,3 +215,11 @@ observer.observe(document.getElementById('ad'));
 - Intersection Observer&nbsp;v2 [Chromium bug](https://crbug.com/827639).
 - [Intent to Implement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/tudxAHN9-AY/vz91o_aNDwAJ)
 posting.
+
+## Acknowledgements
+
+Thanks to [Simeon Vincent](https://twitter.com/dotproto) for reviewing this article.
+
+{% include "web/_shared/helpful.html" %}
+
+{% include "web/_shared/rss-widget-updates.html" %}
