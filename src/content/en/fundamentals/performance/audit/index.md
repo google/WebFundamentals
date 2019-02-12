@@ -58,8 +58,8 @@ against peers and estimate the potential revenue opportunity of improving site s
 
 Make sure to test your website as a
 first-time user sees it. Open the site an Incognito (Private) Window, or use browser tools to
-disable caching and clear storage. This ensures that every asset is retrieved from the network and not
-from a local cache, so you get an accurate picture of first-load performance.
+disable caching and clear storage. This ensures that every asset is retrieved from the 
+network and not from a local cache, so you get an accurate picture of first-load performance.
 
 <div class="note"><a href="(https://www.webpagetest.org">WebPagetest</a> is a free service that 
 runs performance tests from multiple locations globally using real browsers with real connections, 
@@ -91,16 +91,17 @@ an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javasc
   * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
 and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
   * Images that can be saved with higher compression or smaller pixel dimensions.
-  * Image files that would be smaller saved using a different format, for example photos saved as PNGs.
+  * Image files that would be smaller saved using a different format, for example 
+photos saved as PNGs.
 
 
 ## Audience, stakeholders, context
 
-Priorities for refactoring depend on your audience, content and functionality. Who visits your site?
-Why and how do they use it? What's your
-[performance budget](https://www.performancebudget.io/){:.external}? If you're not sure of the answer
-to these questions, try the requirements gathering exercises from our PWA training resources:
-[Your audience, your content](/web/ilt/pwa/your-audience-your-content) 
+Priorities for refactoring depend on your audience, content and functionality. 
+Who visits your site? Why and how do they use it? What's your
+[performance budget](https://www.performancebudget.io/){:.external}? If you're not sure of the 
+}answer to these questions, try the requirements gathering exercises from our PWA training 
+resources: [Your audience, your content](/web/ilt/pwa/your-audience-your-content) 
 and [Design for all your users](/web/ilt/pwa/design-for-all-your-users).
 
 Who are your stakeholders, and what are their priorities? This will affect the way you structure,
