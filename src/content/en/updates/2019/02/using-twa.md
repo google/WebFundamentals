@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2019-02-12 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -63,7 +63,7 @@ ways to integrate web content with your app:
 To make it easier to test, there are currently no qualifications for content
 opened in the preview of Trusted Web activities. You can expect, however, that
 Trusted Web activities will need to meet the same
-[Add to Home Screen](/web/fundamentals/app-install-banners/#what_are_the_criteria)
+[Add to Home Screen](/web/fundamentals/app-install-banners/#criteria)
 requirements. You can audit your site for these requirements using the
 [Lighthouse](/web/tools/lighthouse/) "*user can be prompted to Add to Home
 screen*" audit.
