@@ -150,7 +150,7 @@ in Google Analytics. Give it a name like "Offline Queue Time", set its
 [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit),
 and set its formatting type to "Time" (in seconds).
 
-1. Use the `hitFilter` option to get the value the
+1. Use the `hitFilter` option to get the value of the
 [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 param and divide it by 1000 (to convert it to seconds). Then set that value
 as a param with the index of the newly created metric. If this is your
