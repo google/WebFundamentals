@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors?  You get metrics to prioritize effort, and concrete evidence to brag about once you've made improvements.
 
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2019-02-12 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
@@ -61,11 +61,15 @@ first-time user sees it. Open the site an Incognito (Private) Window, or use bro
 disable caching and clear storage. This ensures that every asset is retrieved from the network and not
 from a local cache, so you get an accurate picture of first-load performance.
 
-<div class="note"><a href="(https://www.webpagetest.org">WebPagetest</a> is a free service that runs performance tests from multiple locations globally using real browsers with real connections, to provide detailed metrics and optimization advice.
+<div class="note"><a href="(https://www.webpagetest.org">WebPagetest</a> is a free service that 
+runs performance tests from multiple locations globally using real browsers with real connections, 
+to provide detailed metrics and optimization advice.
   <ul>
-    <li>Leverage <a href="(https://www.webpagetest.org/easy">webpagetest.org/easy</a> to quickly simulate differences between network connection types on mobile</li>
+    <li>Leverage <a href="(https://www.webpagetest.org/easy">webpagetest.org/easy</a> to quickly 
+simulate differences between network connection types on mobile</li>
     <li>Generate a Lighthouse audit and report with every WebPagetest trace.</li>
-    <li> Measure site on first visit as well as for repeat views — for example: to see how much service worker caching helps.</li>
+    <li> Measure site on first visit as well as for repeat views — for example: to see how much 
+service worker caching helps.</li>
     <li>Visually compare multiple sites and get filmstrip and waterfall comparisons.</li>
   </ul>
 </div>
@@ -81,9 +85,11 @@ If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
 
   * HTTPS: [every site should deliver all assets over HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https).
   * Server settings: your web server or CDN should [use compression correctly](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your browser to cache resources.
-  * Script elements that can be moved to the bottom of the page and/or given an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/){: .external} attribute.
+  * Script elements that can be moved to the bottom of the page and/or given 
+an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/){: .external} attribute.
   * JavaScript and libraries that can be removed.
-  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
+  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
+and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
   * Images that can be saved with higher compression or smaller pixel dimensions.
   * Image files that would be smaller saved using a different format, for example photos saved as PNGs.
 
@@ -94,7 +100,8 @@ Priorities for refactoring depend on your audience, content and functionality. W
 Why and how do they use it? What's your
 [performance budget](https://www.performancebudget.io/){:.external}? If you're not sure of the answer
 to these questions, try the requirements gathering exercises from our PWA training resources:
-[Your audience, your content](/web/ilt/pwa/your-audience-your-content) and [Design for all your users](/web/ilt/pwa/design-for-all-your-users).
+[Your audience, your content](/web/ilt/pwa/your-audience-your-content) 
+and [Design for all your users](/web/ilt/pwa/design-for-all-your-users).
 
 Who are your stakeholders, and what are their priorities? This will affect the way you structure,
 present and share your audit data.
@@ -112,3 +119,7 @@ development effort.
 
 Make sure to test multiple page types within your site — not just the home page. For single page
 apps, test different components, routes and UX flows, and not just the first load experience.
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
