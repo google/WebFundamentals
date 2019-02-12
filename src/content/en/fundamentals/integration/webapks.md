@@ -176,7 +176,8 @@ Here's a hypothetical example of how WebAPK update scheduling works over time:
 - **January 4**: Launch Chrome → No update check (Launching Chrome has no effect)
 - **January 4**: Launch WebAPK → Check whether update is needed (3+ days have passed)
 - **January 6**: Clear Chrome's data in Android settings
-- **January 9**: Launch WebAPK → No update check (From Chrome's perspective this is the first WebAPK launch)
+- **January 9**: Launch WebAPK → No update check (From Chrome's perspective this
+  is the first WebAPK launch)
 - **January 12**: Launch WebAPK → Check whether update is needed (3+ days have passed)
 
 See
