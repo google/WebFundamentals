@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A tutorial on the most popular network-related features in Chrome DevTools.
 
-{# wf_updated_on: 2019-02-09 #}
+{# wf_updated_on: 2019-02-13 #}
 {# wf_published_on: 2019-02-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -251,6 +251,7 @@ Screenshots let you see how a page looked over time while it was loading.
 
 1. Click **Capture Screenshots** ![Capture Screenshots][screenshots]{: .inline-icon } again
    to close the Screenshots pane.
+1. Reload the page again.
 
 ## Inspect a resource's details {: #details }
 
@@ -307,6 +308,18 @@ Click a resource to learn more information about it. Try it now:
        </figcaption>
      </figure>
 
+[close]: /web/tools/chrome-devtools/images/shared/close.png
+
+1. Click **Close** ![Close][close]{: .inline-icon } to view the Network Log again.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/close-timing.png"
+            alt="The Close button"/>
+       <figcaption>
+         <b>Figure 17</b>. The Close button
+       </figcaption>
+     </figure>
+
 ## Search network headers and responses {: #search }
 
 Use the **Search** pane when you need to search the HTTP headers and responses of all resources
@@ -352,6 +365,16 @@ policies][policies].
        </figcaption>
      </figure>
 
+1. Close the Search pane and the Timing tab.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/close-buttons.png"
+            alt="The Close buttons"/>
+       <figcaption>
+         <b>Figure 20</b>. The Close buttons
+       </figcaption>
+     </figure>
+
 ## Filter resources {: #filter }
 
 DevTools provides numerous workflows for filtering out resources that aren't relevant to the
@@ -375,7 +398,8 @@ The **Filters** toolbar should be enabled by default. If not:
 
 The **Filter** text box supports many different types of filtering.
 
-1. Type `png` into the **Filter** text box. Only the files that end with `png` are shown.
+1. Type `png` into the **Filter** text box. Only the files that contain the text `png` are
+   shown. In this case the only files that match the filter are the PNG images.
 
      <figure>
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/png.png"
@@ -421,6 +445,8 @@ The **Filter** text box supports many different types of filtering.
 [props]: /web/tools/chrome-devtools/network-performance/reference#filter-by-property
 
      See [Filter requests by properties][props] for the full list of filterable properties.
+
+1. Clear the **Filter** text box of any text.
 
 ### Filter by resource type {: #type }
 
@@ -504,6 +530,8 @@ to find out:
          <b>Figure 31</b>. <code>main.css</code> has been blocked
        </figcaption>
      </figure>
+
+1. Uncheck the **Enable request blocking** checkbox.
 
 ## Next steps {: #next }
 
