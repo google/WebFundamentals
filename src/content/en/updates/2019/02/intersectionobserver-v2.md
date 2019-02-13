@@ -170,7 +170,7 @@ const minimumVisibleDuration = 800;
 // Keep track of when the button transitioned to a visible state.
 let visibleSince = 0;
 
-const button = document.getElementById('callToActionButton');
+const button = document.querySelector('#callToActionButton');
 button.addEventListener('click', (event) => {
   if ((visibleSince > 0) &&
       (performance.now() - visibleSince >= minimumVisibleDuration)) {
