@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Augment IntersectionObserver to report information about occlusion and visual effects.
+description: Intersection Observer v2 adds the capability to not only observe intersections per se, but to also detect if the intersecting element was visible at the time of intersection.
 
 {# wf_updated_on: 2019-02-13 #}
-{# wf_published_on: 2019-02-06 #}
+{# wf_published_on: 2019-02-13 #}
 {# wf_tags: intersectionobserver #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
-{# wf_featured_snippet: Lorem ipsum. #}
+{# wf_featured_snippet: Intersection Observer v2 adds the capability to not only observe intersections per se, but to also detect if the intersecting element was visible at the time of intersection. #}
 {# wf_blink_components: Blink>Layout #}
 
 # Trust is Good, Observation is Better—Intersection Observer v2 {: .page-title}
