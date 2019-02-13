@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Augment IntersectionObserver to report information about occlusion and visual effects.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-02-13 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: intersectionobserver #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -39,11 +39,11 @@ basic case:
 
 ```js
 const onIntersection = (entries) => {
-  entries.forEach((entry) => {
+  for (const entry of entries) {
     if (entry.isIntersecting) {
       console.log(entry);
     }
-  });
+  }
 };
 
 const observer = new IntersectionObserver(onIntersection);
@@ -170,40 +170,39 @@ const minimumVisibleDuration = 800;
 // Keep track of when the button transitioned to a visible state.
 let visibleSince = 0;
 
-let button = document.getElementById('callToActionButton');
+const button = document.getElementById('callToActionButton');
 button.addEventListener('click', (event) => {
-  if (visibleSince && performance.now() - visibleSince >= minimumVisibleDuration) {
+  if ((visibleSince > 0) &&
+      (performance.now() - visibleSince >= minimumVisibleDuration)) {
     trackAdClick();
   } else {
     rejectAdClick();
   }
 });
 
-let observer = new IntersectionObserver((changes) => {
-  changes.forEach(change => {
-
+const observer = new IntersectionObserver((changes) => {
+  for (const change of changes) {
     // ⚠️ Feature detection
     if (typeof change.isVisible === 'undefined') {
       // The browser doesn't support Intersection Observer v2, falling back to v1 behavior.
       change.isVisible = true;
     }
-
     if (change.isIntersecting && change.isVisible) {
       visibleSince = change.time;
     } else {
       visibleSince = 0;
     }
-  });
+  }
 }, {
   threshold: [1.0],
   // 🆕 Track the actual visibility of the element
   trackVisibility: true,
-  // 🆕 Set a minimum delay between notification
+  // 🆕 Set a minimum delay between notifications
   delay: 100
 }));
 
 // Require that the entire iframe be visible.
-observer.observe(document.getElementById('ad'));
+observer.observe(document.querySelector('#ad'));
 ```
 
 ## Related Links
@@ -218,8 +217,9 @@ posting.
 
 ## Acknowledgements
 
-Thanks to [Simeon Vincent](https://twitter.com/dotproto) and
-[Yoav Weiss](https://twitter.com/yoavweiss) for reviewing this article.
+Thanks to [Simeon Vincent](https://twitter.com/dotproto),
+[Yoav Weiss](https://twitter.com/yoavweiss), and [Mathias Bynens](https://twitter.com/mathias)
+for reviewing this article.
 
 {% include "web/_shared/helpful.html" %}
 
