@@ -119,7 +119,8 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     <pre class="prettyprint">
     <code class="devsite-terminal">cd ~/Desktop/app</code>
-    <code class="devsite-terminal">python -m SimpleHTTPServer</code>
+    <code class="devsite-terminal">python -m SimpleHTTPServer</code> # Python 2
+    <code class="devsite-terminal">python -m http.server</code> # Python 3
     </pre>
 
 1. Open a tab in Google Chrome and go to locally-hosted version of the site. You should be
