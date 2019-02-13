@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A tutorial on the most popular network-related features in Chrome DevTools.
 
-{# wf_updated_on: 2019-02-09 #}
+{# wf_updated_on: 2019-02-13 #}
 {# wf_published_on: 2019-02-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -251,6 +251,7 @@ Screenshots let you see how a page looked over time while it was loading.
 
 1. Click **Capture Screenshots** ![Capture Screenshots][screenshots]{: .inline-icon } again
    to close the Screenshots pane.
+1. Reload the page again.
 
 ## Inspect a resource's details {: #details }
 
@@ -307,6 +308,18 @@ Click a resource to learn more information about it. Try it now:
        </figcaption>
      </figure>
 
+[close]: /web/tools/chrome-devtools/images/shared/close.png
+
+1. Click **Close** ![Close][close]{: .inline-icon } to view the Network Log again.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/close-timing.png"
+            alt="The Close button"/>
+       <figcaption>
+         <b>Figure 18</b>. The Close button
+       </figcaption>
+     </figure>
+
 ## Search network headers and responses {: #search }
 
 Use the **Search** pane when you need to search the HTTP headers and responses of all resources
@@ -326,7 +339,7 @@ policies][policies].
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/search.png"
             alt="The Search pane"/>
        <figcaption>
-         <b>Figure 18</b>. The Search pane
+         <b>Figure 19</b>. The Search pane
        </figcaption>
      </figure>
 
@@ -337,7 +350,7 @@ policies][policies].
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/results.png"
             alt="Search results for Cache-Control"/>
        <figcaption>
-         <b>Figure 19</b>. Search results for <code>Cache-Control</code>
+         <b>Figure 20</b>. Search results for <code>Cache-Control</code>
        </figcaption>
      </figure>
 
@@ -348,7 +361,17 @@ policies][policies].
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/cache.png"
             alt="A search result highlighted in the Headers tab"/>
        <figcaption>
-         <b>Figure 20</b>. A search result highlighted in the Headers tab
+         <b>Figure 21</b>. A search result highlighted in the Headers tab
+       </figcaption>
+     </figure>
+
+1. Close the Search pane and the Timing tab.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/close-buttons.png"
+            alt="The Close buttons"/>
+       <figcaption>
+         <b>Figure 22</b>. The Close buttons
        </figcaption>
      </figure>
 
@@ -361,7 +384,7 @@ task at hand.
   <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/filters.png"
        alt="The Filters toolbar"/>
   <figcaption>
-    <b>Figure 21</b>. The Filters toolbar
+    <b>Figure 23</b>. The Filters toolbar
   </figcaption>
 </figure>
 
@@ -375,13 +398,14 @@ The **Filters** toolbar should be enabled by default. If not:
 
 The **Filter** text box supports many different types of filtering.
 
-1. Type `png` into the **Filter** text box. Only the files that end with `png` are shown.
+1. Type `png` into the **Filter** text box. Only the files that contain the text `png` are
+   shown. In this case the only files that match the filter are the PNG images.
 
      <figure>
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/png.png"
             alt="A string filter"/>
        <figcaption>
-         <b>Figure 22</b>. A string filter
+         <b>Figure 24</b>. A string filter
        </figcaption>
      </figure>
 
@@ -392,7 +416,7 @@ The **Filter** text box supports many different types of filtering.
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/regex.png"
             alt="A regular expression filter"/>
        <figcaption>
-         <b>Figure 23</b>. A regular expression filter
+         <b>Figure 25</b>. A regular expression filter
        </figcaption>
      </figure>
 
@@ -403,7 +427,7 @@ The **Filter** text box supports many different types of filtering.
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/negative.png"
             alt="A negative filter"/>
        <figcaption>
-         <b>Figure 24</b>. A negative filter
+         <b>Figure 26</b>. A negative filter
        </figcaption>
      </figure>
 
@@ -414,13 +438,15 @@ The **Filter** text box supports many different types of filtering.
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/property.png"
             alt="A property filter"/>
        <figcaption>
-         <b>Figure 25</b>. A property filter
+         <b>Figure 27</b>. A property filter
        </figcaption>
      </figure>
 
 [props]: /web/tools/chrome-devtools/network-performance/reference#filter-by-property
 
      See [Filter requests by properties][props] for the full list of filterable properties.
+
+1. Clear the **Filter** text box of any text.
 
 ### Filter by resource type {: #type }
 
@@ -432,7 +458,7 @@ To focus in on a certain type of file, such as stylesheets:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/css.png"
             alt="Showing CSS files only"/>
        <figcaption>
-         <b>Figure 26</b>. Showing CSS files only
+         <b>Figure 28</b>. Showing CSS files only
        </figcaption>
      </figure>
 
@@ -443,7 +469,7 @@ To focus in on a certain type of file, such as stylesheets:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/cssjs.png"
             alt="Showing CSS and JS files only"/>
        <figcaption>
-         <b>Figure 27</b>. Showing CSS and JS files only
+         <b>Figure 29</b>. Showing CSS and JS files only
        </figcaption>
      </figure>
 
@@ -465,7 +491,7 @@ to find out:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/commandmenu.png"
             alt="The Command Menu"/>
        <figcaption>
-         <b>Figure 28</b>. The Command Menu
+         <b>Figure 30</b>. The Command Menu
        </figcaption>
      </figure>
 
@@ -475,7 +501,7 @@ to find out:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/block.png"
             alt="Show Request Blocking"/>
        <figcaption>
-         <b>Figure 29</b>. Show Request Blocking
+         <b>Figure 31</b>. Show Request Blocking
        </figcaption>
      </figure>
 
@@ -488,7 +514,7 @@ to find out:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/addblock.png"
             alt="Blocking main.css"/>
        <figcaption>
-         <b>Figure 30</b>. Blocking <code>main.css</code></main>
+         <b>Figure 32</b>. Blocking <code>main.css</code></main>
        </figcaption>
      </figure>
 
@@ -501,9 +527,11 @@ to find out:
        <img src="/web/tools/chrome-devtools/network-performance/imgs/tutorial/blockedstyles.png"
             alt="main.css has been blocked"/>
        <figcaption>
-         <b>Figure 31</b>. <code>main.css</code> has been blocked
+         <b>Figure 33</b>. <code>main.css</code> has been blocked
        </figcaption>
      </figure>
+
+1. Uncheck the **Enable request blocking** checkbox.
 
 ## Next steps {: #next }
 
