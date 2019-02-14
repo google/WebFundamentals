@@ -104,9 +104,10 @@ means priority can be changed not only for typical stylesheet includes, but
 also for `rel=preload` hints:
 
 
-``` <!-- We want to initiate an early fetch for a resource, but also
-deprioritize it --> <link rel="preload" href="/js/script.js" as="script"
-importance="low"> ```
+```
+<!-- We want to initiate an early fetch for a resource, but also deprioritize it -->
+<link rel="preload" href="/js/script.js" as="script" importance="low">
+```
 
 
 Priority Hints aren't restricted to HTML usage. You can also change the
@@ -116,8 +117,11 @@ requests via the <code>importance</code> option, which takes the same values as
 the HTML attribute:
 
 
-``` fetch("https://example.com/", {importance: "low"}).then(data => { // Do
-whatever you normally would with fetch data }); ```
+```
+fetch("https://example.com/", {importance: "low"}).then(data => {
+    // Do whatever you normally would with fetch data
+});
+```
 
 
 Priority Hints have a slightly different impact depending on your network
@@ -184,7 +188,9 @@ priority. Let's change that and give it an `importance` attribute with a value
 of `high`:
 
 
-``` &lt;script src="/js/app.js" defer importance="high"></script> ```
+```
+&lt;script src="/js/app.js" defer importance="high"></script>
+```
 
 
 When this change is made and deployed, I reload the page and check the value of
@@ -224,14 +230,16 @@ first slide visible and the remaining slides invisible. The markup of this
 carousel might look something like this:
 
 
-``` <ul class="carousel"> <!-- This item is visible, since it's the first. -->
-<li class="carousel__item"><img src="img/carousel-1.jpg" alt="I'm a carousel
-image!"></li> <!-- The next few, not so much, as they are hidden by CSS, or
-occluded by other elements. --> <li class="carousel__item"><img
-src="img/carousel-2.jpg" alt="I'm a carousel image!"></li> <li
-class="carousel__item"><img src="img/carousel-3.jpg" alt="I'm a carousel
-image!"></li> <li class="carousel__item"><img src="img/carousel-4.jpg" alt="I'm
-a carousel image!"></li> </ul> ```
+```
+<ul class="carousel">
+    <!-- This item is visible, since it's the first. -->
+    <li class="carousel__item"><img src="img/carousel-1.jpg" alt="I'm a carousel image!"></li>
+    <!-- The next few, not so much, as they are hidden by CSS, or occluded by other elements. -->
+    <li class="carousel__item"><img src="img/carousel-2.jpg" alt="I'm a carousel image!"></li>
+    <li class="carousel__item"><img src="img/carousel-3.jpg" alt="I'm a carousel image!"></li>
+    <li class="carousel__item"><img src="img/carousel-4.jpg" alt="I'm a carousel image!"></li>
+</ul>
+```
 
 
 Because of browser heuristics, all four images may be given a high priority
@@ -249,15 +257,16 @@ large, it may block rendering as it will get downloaded before critical
 stylesheets or blocking scripts. Priority Hints may be the solution here:
 
 
-``` <ul class="carousel"> <!-- We'll let the browser know this image is
-important: --> <li class="carousel__item"><img src="img/carousel-1.jpg"
-alt="I'm a carousel image!" importance="high"></li> <!-- But we'll set the
-less-important ones to low priority: --> <li class="carousel__item"><img
-src="img/carousel-2.jpg" alt="I'm a carousel image!" importance="low"></li> <li
-class="carousel__item"><img src="img/carousel-3.jpg" alt="I'm a carousel
-image!" importance="low"></li> <li class="carousel__item"><img
-src="img/carousel-4.jpg" alt="I'm a carousel image!" importance="low"></li>
-</ul> ```
+```
+<ul class="carousel">
+    <!-- We'll let the browser know this image is important: -->
+    <li class="carousel__item"><img src="img/carousel-1.jpg" alt="I'm a carousel image!" importance="high"></li>
+    <!-- But we'll set the less-important ones to low priority: -->
+    <li class="carousel__item"><img src="img/carousel-2.jpg" alt="I'm a carousel image!" importance="low"></li>
+    <li class="carousel__item"><img src="img/carousel-3.jpg" alt="I'm a carousel image!" importance="low"></li>
+    <li class="carousel__item"><img src="img/carousel-4.jpg" alt="I'm a carousel image!" importance="low"></li>
+</ul>
+```
 
 
 When we assign the off-screen images low priority, this will create less
@@ -293,7 +302,8 @@ to the browser and have it do the right thing.
 So, if you wanted to prioritize an async script, you could indicate:
 
 
-``` &lt;script src="async_but_important.js" async importance="high"></script>
+```
+&lt;script src="async_but_important.js" async importance="high"></script>
 ```
 
 
@@ -301,7 +311,9 @@ Similarly, for a bottom-of-the-page blocking script, you could indicate the
 fact that it's less important than other resources, by stating it explicitly:
 
 
-``` &lt;script src="blocking_but_unimportant.js" importance="low"></script> ```
+```
+&lt;script src="blocking_but_unimportant.js" importance="low"></script> 
+```
 
 
 
@@ -315,12 +327,14 @@ space of time. What you _could_ do in this scenario is set an `importance` of
 `low` on `fetch`es for non-critical data:
 
 
-``` // Important user data (high by default) let userData = await
-fetch("/user");
+```
+// Important user data (high by default)
+let userData = await fetch("/user");
 
-// Less important content data (explicitly low) let newsFeedContent = await
-fetch("/content/news-feed", {importance: "low"}); let suggestedContent = await
-fetch("/content/suggested", {importance: "low"}); ```
+// Less important content data (explicitly low)
+let newsFeedContent = await fetch("/content/news-feed", {importance: "low"});
+let suggestedContent = await fetch("/content/suggested", {importance: "low"});
+```
 
 
 This approach ensures that `fetch`es for critical data won't contend with other
