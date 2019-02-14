@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
-{# wf_updated_on: 2019-02-11 #}
+{# wf_updated_on: 2019-02-14 #}
 {# wf_published_on: 2019-02-11 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
@@ -32,6 +32,8 @@ layout and excessive paint but every now and then an app needs to do a
 computationally expensive task that takes a lot of time. WebAssembly can help
 here.
 
+Note: Due to legal concerns, I won’t name any browsers in this article.
+
 ## The Hot Path
 
 In squoosh we wrote a [JavaScript
@@ -45,8 +47,8 @@ This function iterates over every pixel of an input image and copies it to a
 different position in the output image to achieve rotation. For a 4094px by
 4096px image (16 megapixels) it would need over 16 million iterations of the
 inner code block, which is what we call a "hot path". Despite that rather big
-number of iterations, Chrome, Firefox and Safari finish the task in 1 second or
-less. An acceptable duration for this type of interaction.
+number of iterations, two out of three browsers we tested finish the task in 2
+seconds or less. An acceptable duration for this type of interaction.
 
     for (let d2 = d2Start; d2 >= 0 && d2 < d2Limit; d2 += d2Advance) {
       for (let d1 = d1Start; d1 >= 0 && d1 < d1Limit; d1 += d1Advance) {
@@ -56,9 +58,15 @@ less. An acceptable duration for this type of interaction.
       }
     }
 
-In Edge, however, it takes over 8 seconds. There are
-no browser APIs involved that could affect performance, so this is just about
-raw execution speed. 8 seconds is much less acceptable. Enter WebAssembly.
+One browser, however, takes over 8 seconds. The way browsers optimize JavaScript
+is _really complicated_, and different engines optimize for different things.
+Some optimize for raw execution, some optimize for interaction with the DOM. In
+this case, we've hit an unoptimised path in one browser.
+
+WebAssembly on the other hand is built entirely around raw execution speed. So
+if we want fast, _predictable_ performance across browsers for code like this,
+WebAssembly can help.
+
 
 ## WebAssembly for predictable performance
 
@@ -329,7 +337,7 @@ couple of tools that allow you to inspect and manipulate WebAssembly modules.
 `wasm2wat` is a disassembler that turns a binary wasm module into a
 human-readable format. Wabt also contains `wat2wasm` which allows you to turn
 that human-readable format back into a binary wasm module. While we did use
-these two complimentary tools to inspect our WebAssembly files, we found
+these two complementary tools to inspect our WebAssembly files, we found
 `wasm-strip` to be the most useful. `wasm-strip` removes unnecessary sections
 and metadata from a WebAssembly module:
 
@@ -409,10 +417,9 @@ src="/web/updates/images/2019/02/hotpath-with-wasm/speed-per-browser.svg">
 
 These two graphs are different views onto the same data. In the first graph we
 compare per browser, in the second graph we compare per language used. Please
-note that due to the massive outlier of Edge I chose a logarithmic timescale.
-It's also important that all benchmarks were using the same 16 megapixel test
-image and the same host machine, except for Edge which could not be run on the
-same machine.
+note that I chose a logarithmic timescale. It’s also important that all
+benchmarks were using the same 16 megapixel test image and the same host
+machine, except for one browser, which could not be run on the same machine.
 
 Without analyzing these graphs too much, it is clear that we solved our original
 performance problem: All WebAssembly modules run in ~500ms or less. This
