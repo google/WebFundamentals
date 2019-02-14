@@ -1866,6 +1866,23 @@ wangyu:
   description:
     en: WangYu is Front End Developer
 
+yoavweiss:
+  name:
+    given: Yoav
+    family: Weiss
+  twitter: yoavweiss
+  github: yoavweiss
+  org:
+    name: Google
+    unit: Developer Relations
+  country: FR
+  role: 
+    - author
+  email:
+    yoavweiss@google.com
+  description:
+    en: "Working for a faster web platform"
+
 mikewest:
   name:
     given: Mike
