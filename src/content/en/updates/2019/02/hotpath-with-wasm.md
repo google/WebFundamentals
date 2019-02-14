@@ -61,7 +61,7 @@ seconds or less. An acceptable duration for this type of interaction.
 One browser, however, takes over 8 seconds. The way browsers optimize JavaScript
 is _really complicated_, and different engines optimize for different things.
 Some optimize for raw execution, some optimize for interaction with the DOM. In
-this case, we've hit an unoptimised path in one browser.
+this case, we've hit an unoptimized path in one browser.
 
 WebAssembly on the other hand is built entirely around raw execution speed. So
 if we want fast, _predictable_ performance across browsers for code like this,
@@ -147,8 +147,12 @@ away without using any memory management at all!
 
 <video controls loop muted
 poster="/web/updates/images/2019/02/hotpath-with-wasm/poster.png">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/hotpath-with-wasm/animation_2_vp8.webm" type="video/webm; codecs=vp8">
-  <source src="https://storage.googleapis.com/webfundamentals-assets/hotpath-with-wasm/animation_2_x264.mp4" type="video/mp4; codecs=h264">
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/hotpath-with-wasm/animation_2_vp8.webm"
+    type="video/webm; codecs=vp8">
+  <source
+    src="https://storage.googleapis.com/webfundamentals-assets/hotpath-with-wasm/animation_2_x264.mp4"
+    type="video/mp4; codecs=h264">
 </video>
 
 ### Spoiled for choice
