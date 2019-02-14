@@ -45,7 +45,7 @@ the location of the resource reference in the document. For example in Chrome,
 CSS loaded in typical fashion via the `<link>` element in the `<head>` will be
 assigned a priority of **highest**, as it blocks rendering.  Images in the
 viewport may be assigned a priority of **high**, whereas images outside the
-viewport may be assigned a priority of **low**. A `&lt;script>` loaded at the
+viewport may be assigned a priority of **low**. A `<script>` loaded at the
 end of the document may receive a priority assignment of **medium** or **low**,
 but this can be influenced by
 <code>[defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)</code>
@@ -77,7 +77,7 @@ kind of situations Priority Hints can help developers address.
 ## Using priority hints
 
 Priority Hints can be set for resources in HTML by specifying an `importance`
-attribute on a `&lt;script>`, `<img>`, or `<link>` element (though other
+attribute on a `<script>`, `<img>`, or `<link>` element (though other
 elements such as `<iframe>` may see support later). An example can be something
 like this:
 
@@ -182,14 +182,14 @@ For example, I've chosen a script assigned a low priority in the browser:
 
 **_Figure 3. A script element listed in DevTools given a low priority._**
 
-This script is requested via a `&lt;script>` tag in the footer and uses the
+This script is requested via a `<script>` tag in the footer and uses the
 defer attribute as well, which causes the browser to lower this script's
 priority. Let's change that and give it an `importance` attribute with a value
 of `high`:
 
 
 ```
-&lt;script src="/js/app.js" defer importance="high"></script>
+<script src="/js/app.js" defer importance="high"></script>
 ```
 
 
@@ -303,7 +303,7 @@ So, if you wanted to prioritize an async script, you could indicate:
 
 
 ```
-&lt;script src="async_but_important.js" async importance="high"></script>
+<script src="async_but_important.js" async importance="high"></script>
 ```
 
 
@@ -312,7 +312,7 @@ fact that it's less important than other resources, by stating it explicitly:
 
 
 ```
-&lt;script src="blocking_but_unimportant.js" importance="low"></script> 
+<script src="blocking_but_unimportant.js" importance="low"></script> 
 ```
 
 
