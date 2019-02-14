@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
 {# wf_updated_on: 2019-02-14 #}
-{# wf_published_on: 2019-02-11 #}
+{# wf_published_on: 2019-02-14 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
 {# wf_featured_snippet: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly? #}
