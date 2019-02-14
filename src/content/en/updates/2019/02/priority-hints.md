@@ -1,4 +1,3 @@
-
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
