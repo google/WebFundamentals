@@ -18,14 +18,6 @@ book_path: /web/updates/_book.yaml
 # Get Ready for Priority Hints {: .page-title }
 
 
-<p style="text-align: right"> Yoav Weiss <<a
-href="mailto:yoavweiss@google.com">yoavweiss@google.com</a>></p>
-
-
-<p style="text-align: right"> Jeremy L. Wagner <<a
-href="mailto:jeremy.l.wagner@gmail.com">jeremy.l.wagner@gmail.com</a>></p>
-
-
 As performance becomes increasingly important, it's exciting to see browsers
 implement new features which give developers more control over resource
 loading. Resource Hints such as
@@ -90,9 +82,10 @@ elements such as `<iframe>` may see support later). An example can be something
 like this:
 
 
-``` <!-- An image the browser assigns "High" priority, but we don't actually
-want that. --> <img src="/images/in_viewport_but_not_important.svg"
-importance="low" alt="I'm an unimportant image!"> ```
+``` 
+<!-- An image the browser assigns "High" priority, but we don't actually want that. -->
+<img src="/images/in_viewport_but_not_important.svg" importance="low" alt="I'm an unimportant image!">
+```
 
 
 The `importance` attribute accepts one of three values:
