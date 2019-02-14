@@ -143,10 +143,10 @@ enabling the server to better prioritize the resources it is sending down.
 ---
 
 
-**_Note: Priority Hints in its current form does not affect
-<code><iframe></code> elements, but may, as the implementation matures. This
-could be useful for demoting priority of third party <code><iframe></code>s and
-their subresources.</em></strong>
+**_Note_**: Priority Hints in its current form does not affect
+`<iframe>` elements, but may, as the implementation matures. This
+could be useful for demoting priority of third party `<iframe>`s and
+their subresources.
 
 
 
