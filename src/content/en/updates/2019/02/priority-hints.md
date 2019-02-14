@@ -53,7 +53,6 @@ and
 <code>[async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)</code>.
 
 
-
 ![alt_text](../../images/2019/02/priority-hints/image1.png "image_tooltip")
 
 
