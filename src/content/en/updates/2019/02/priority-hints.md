@@ -52,8 +52,8 @@ and
 <code>[async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)</code>.
 
 
-![Resources and their priorities](../../images/2019/02/priority-hints/image1.png "Resources and their
-priorities in Chrome DevTools network panel")
+![Resources and their priorities](../../images/2019/02/priority-hints/image1.png "Resources and
+their priorities in Chrome DevTools network panel")
 
 
 **_Figure 1. A list of resources and their corresponding priorities in the
@@ -165,8 +165,8 @@ by right clicking on any of the column headers and potentially enabling it.
 
 
 
-![DevTools network panel header context menu](../../images/2019/02/priority-hints/image3.png "DevTools network
-panel header context menu")
+![DevTools network panel header context menu](../../images/2019/02/priority-hints/image3.png
+"DevTools network panel header context menu")
 
 
 **_Figure 2. The header options context menu in the network panel of DevTools
@@ -200,8 +200,8 @@ priority:
 
 
 
-![High priority script resource](../../images/2019/02/priority-hints/image4.png "High priority script
-resource")
+![High priority script resource](../../images/2019/02/priority-hints/image4.png "High priority
+script resource")
 
 
 **_Figure 4. A script element listed in DevTools given a high priority._**
