@@ -17,7 +17,6 @@ book_path: /web/updates/_book.yaml
 
 # Get Ready for Priority Hints {: .page-title }
 
-
 As performance becomes increasingly important, it's exciting to see browsers
 implement new features which give developers more control over resource
 loading. Resource Hints such as
