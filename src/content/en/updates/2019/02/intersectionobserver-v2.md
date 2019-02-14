@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Intersection Observer v2 adds the capability to not only observe intersections per se, but to also detect if the intersecting element was visible at the time of intersection.
 
-{# wf_updated_on: 2019-02-13 #}
+{# wf_updated_on: 2019-02-14 #}
 {# wf_published_on: 2019-02-13 #}
 {# wf_tags: intersectionobserver #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -103,11 +103,19 @@ In contrast, a `false` value means that the implementation cannot make that guar
 
 An important detail of the
 [spec](https://w3c.github.io/IntersectionObserver/v2/#calculate-visibility-algo)
-is that the implementation *is permitted* to report false negatives
-(that is, setting `isVisible` to `false` even when the target element is completely visible and
-unmodified), but it *may never* report a false positive.
-For performance or other reasons, an implementation may use an algorithm which is not 100% accurate,
-as long as all inaccuracies are false negatives.
+is that the implementation *is permitted* to report *false negatives* (that is, setting `isVisible`
+to `false` even when the target element is completely visible and unmodified).
+For performance or other reasons, implementations should limit themselves to working with bounding
+boxes and rectilinear geometry; they shouldn't try to achieve pixel-perfect results for
+modifications like `border-radius`.
+
+That said, *false positives* are *not permitted* under any circumstances (that is, setting
+`isVisible` to `true` when the target element is not completely visible and unmodified).
+
+Warning: Visibility is *much more expensive* to compute than intersection. For that reason,
+Intersection Observer&nbsp;v2 is *not intended to be used broadly* in the way that
+Intersection Observer&nbsp;v1 is. Intersection Observer&nbsp;v2 is focused on combatting fraud
+and should be used only when Intersection Observer&nbsp;v1 functionality is *truly* insufficient.
 
 ## What does the new code look like in practice?
 
@@ -117,8 +125,16 @@ The `delay` is a number indicating the minimum delay in milliseconds between not
 the observer for a given target.
 The `trackVisibility` is a boolean indicating whether the observer will track changes in a target's
 visibility.
-In the current [spec](https://w3c.github.io/IntersectionObserver/v2/#calculate-visibility-algo),
-"visibility" is calculated as follows:
+
+⚠️ It's important to note here that when `trackVisibility` is `true`, `delay` is required to be at
+least `100` (that is, no more than one notification every 100ms).
+As noted before, visibility is expensive to calculate, and this requirement is a precaution against
+performance degradation (and battery consumption). The responsible developer will use the
+*largest tolerable value* for delay.
+
+According to the current
+[spec](https://w3c.github.io/IntersectionObserver/v2/#calculate-visibility-algo), visibility is
+calculated as follows:
 
 - If the observer's `trackVisibility` attribute is `false`, then the target is considered visible.
 This corresponds to the current&nbsp;v1 behavior.
@@ -208,18 +224,19 @@ observer.observe(document.querySelector('#ad'));
 ## Related Links
 
 - Latest Editor's Draft of the
-[Intersection Observer](https://w3c.github.io/IntersectionObserver/v2/) spec.
+[Intersection Observer spec](https://w3c.github.io/IntersectionObserver/v2/).
 - Intersection Observer&nbsp;v2 on
 [Chrome Platform Status](https://www.chromestatus.com/feature/5878481493688320).
 - Intersection Observer&nbsp;v2 [Chromium bug](https://crbug.com/827639).
-- [Intent to Implement](https://groups.google.com/a/chromium.org/d/msg/blink-dev/tudxAHN9-AY/vz91o_aNDwAJ)
-posting.
+- Blink
+[Intent to Implement posting](https://groups.google.com/a/chromium.org/d/msg/blink-dev/tudxAHN9-AY/vz91o_aNDwAJ).
 
 ## Acknowledgements
 
 Thanks to [Simeon Vincent](https://twitter.com/dotproto),
 [Yoav Weiss](https://twitter.com/yoavweiss), and [Mathias Bynens](https://twitter.com/mathias)
-for reviewing this article.
+for reviewing this article, as well as [Stefan Zager](https://twitter.com/stefanzager) likewise
+for reviewing and for implementing the feature in Chrome.
 
 {% include "web/_shared/helpful.html" %}
 
