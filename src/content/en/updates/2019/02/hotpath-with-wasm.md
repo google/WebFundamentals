@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
-{# wf_updated_on: 2019-02-14 #}
+{# wf_updated_on: 2019-02-15 #}
 {# wf_published_on: 2019-02-14 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
@@ -71,12 +71,12 @@ WebAssembly can help.
 ## WebAssembly for predictable performance
 
 In general, JavaScript and WebAssembly can achieve the same peak performance.
-However, in JavaScript it's often tricky to stay on the "fast path". One key
-benefit that WebAssembly offers is _predictable_ performance, even across
-browsers. The strict typing and low-level architecture allows for stronger
-assumptions and more optimizations during compilation. The function above is a
-prime candidate for WebAssembly. But how do you turn hot path written in
-JavaScript into WebAssembly?
+However, for JavaScript this performance can only be reached on the "fast path",
+and it's often tricky to stay on that "fast path". One key benefit that
+WebAssembly offers is predictable performance, even across browsers. The strict
+typing and low-level architecture allows the compiler to make stronger
+guarantees so that WebAssembly code only has to be optimized once and will
+always use the “fast path”.
 
 ### Writing for WebAssembly
 
@@ -232,6 +232,10 @@ Note: We are working with the Emscripten team to make the glue code smaller or
 even non-existent at times.
 
 #### Rust
+
+Note: Since the release of this article, we have learned more about how to
+optimize Rust for WebAssembly. Please see the [update section](#update-rust) at
+the end of this article.
 
 Rust is a new, modern programming language with a rich type system, no runtime
 and an ownership model that guarantees memory-safety and thread-safety. Rust
@@ -493,8 +497,21 @@ language. The AssemblyScript team has been very responsive and is actively
 working on improving their toolchain. We will definitely keep an eye on
 AssemblyScript in the future.
 
+## Update: Rust {: #update-rust }
+
+After publishing this article, [Nick Fitzgerald](https://twitter.com/fitzgen)
+from the Rust team pointed us to their excellent Rust Wasm book, which contains
+[a section on optimizing file
+size](https://rustwasm.github.io/book/reference/code-size.html). Following the
+instructions there (most notably enabling link time optimizations and manual
+panic handling) allowed us to write “normal” Rust code and go back to using
+`Cargo` (the `npm` of Rust) without bloating the file size. The Rust module ends
+up with 370B after gzip. For details, please take a look at [the PR I opened on
+Squoosh](https://github.com/GoogleChromeLabs/squoosh/pull/462).
+
 _Special thanks to [Ashley Williams](https://twitter.com/ag_dubs), [Steve
-Klabnik](https://twitter.com/steveklabnik) and [Max
+Klabnik](https://twitter.com/steveklabnik), [Nick
+Fitzgerald](https://twitter.com/fitzgen) and [Max
 Graey](https://twitter.com/MaxGraey) for all their help on this journey._
 
 {% include "web/_shared/helpful.html" %}
