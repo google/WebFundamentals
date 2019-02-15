@@ -1018,6 +1018,22 @@ kosamari:
   description:
     en: Mariko is a drawsplainer
 
+koto:
+  name:
+    given: Krzysztof
+    family: Kotowicz
+  country: CH
+  org:
+    name: Google
+    unit: Infomation Security Engineering
+  role:
+    - author
+  email: koto@google.com
+  twitter: kkotowicz
+  github: koto
+  description:
+    en: "Software Engineer in the Information Security Enginnering team at Google"
+
 mustafa:
   name:
     given: Mustafa
@@ -1876,7 +1892,7 @@ yoavweiss:
     name: Google
     unit: Developer Relations
   country: FR
-  role: 
+  role:
     - author
   email:
     yoavweiss@google.com
