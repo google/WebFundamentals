@@ -233,6 +233,10 @@ even non-existent at times.
 
 #### Rust
 
+Note: Since the release of this article, we have learned more about how to
+optimize Rust for WebAssembly. Please see the [update section](#update-rust) at
+the end of this article.
+
 Rust is a new, modern programming language with a rich type system, no runtime
 and an ownership model that guarantees memory-safety and thread-safety. Rust
 also supports WebAssembly as a first-class citizen and the Rust team has
@@ -493,8 +497,21 @@ language. The AssemblyScript team has been very responsive and is actively
 working on improving their toolchain. We will definitely keep an eye on
 AssemblyScript in the future.
 
+## Update: Rust {: #update-rust }
+
+After publishing this article, [Nick Fitzgerald](https://twitter.com/fitzgen)
+from the Rust team pointed us to their excellent Rust WASM book, which contains
+[a section on optimizing file
+size](https://rustwasm.github.io/book/reference/code-size.html). Following the
+instructions there (most notably enabling link time optimizations and manual
+panic handling) allowed us to write “normal” Rust code and use `Cargo` (the
+`npm` of Rust) without bloating the file size. Our Rust module is now at a
+competitive 370B after gzip. For details, please take a look at [the PR I opened
+on Squoosh](https://github.com/GoogleChromeLabs/squoosh/pull/462).
+
 _Special thanks to [Ashley Williams](https://twitter.com/ag_dubs), [Steve
-Klabnik](https://twitter.com/steveklabnik) and [Max
+Klabnik](https://twitter.com/steveklabnik), [Nick
+Fitzgerald](https://twitter.com/fitzgen) and [Max
 Graey](https://twitter.com/MaxGraey) for all their help on this journey._
 
 {% include "web/_shared/helpful.html" %}
