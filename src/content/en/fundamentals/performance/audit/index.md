@@ -100,7 +100,7 @@ photos saved as PNGs.
 Priorities for refactoring depend on your audience, content and functionality. 
 Who visits your site? Why and how do they use it? What's your
 [performance budget](https://www.performancebudget.io/){:.external}? If you're not sure of the 
-}answer to these questions, try the requirements gathering exercises from our PWA training 
+answer to these questions, try the requirements gathering exercises from our PWA training 
 resources: [Your audience, your content](/web/ilt/pwa/your-audience-your-content) 
 and [Design for all your users](/web/ilt/pwa/design-for-all-your-users).
 
