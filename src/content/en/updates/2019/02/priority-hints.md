@@ -1,12 +1,14 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
+description: Priority Hints provide developers a way to indicate a resource's relative importance
+to the browser, allowing more control over the order resources are loaded.
 
-{# wf_updated_on: 2019-02-14 #}
+{# wf_updated_on: 2019-02-15 #}
 {# wf_published_on: 2019-02-14 #}
 {# wf_tags: fundamentals, performance #}
 {# wf_featured_image: /web/updates/images/2019/02/priority-hints/image1.png #}
 {# wf_featured_snippet: Priority Hints are coming to an Origin Trial near you! Try them out! #}
-{# wf_blink_components: N/A #}
+{# wf_blink_components: Blink>Loader #}
 
 
 {% include "web/_shared/rss-widget-updates.html" %}
