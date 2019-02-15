@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
-experiments_path: /web/updates/2018/04/_experiments.yaml
+
+{# experiments_path: /web/updates/2018/04/_experiments.yaml #}
 
 {# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-04-11 #}
@@ -191,7 +192,7 @@ an infinite loop by mistake while developing your site. To stop the infinite loo
   <iframe class="devsite-embedded-youtube-video" data-video-id="haFYwEBjaTo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 In the video above, the clock is being updated via a `setInterval()` timer. Clicking
 **Start Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because
