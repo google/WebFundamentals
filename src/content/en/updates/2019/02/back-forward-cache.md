@@ -4,7 +4,7 @@ description: bfcache creates a cache allowing for instant navigations to previou
 
 {# wf_updated_on: 2019-02-14 #}
 {# wf_published_on: 2019-02-15 #}
-{# wf_tags: bfcache, performance, back-forward-cache #}
+{# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: On the Chrome team, we are exploring a new back/forward cache to cache pages in-memory (preserving JavaScript & DOM state) when the user navigates away. #}
 {# wf_blink_components: Blink #}
