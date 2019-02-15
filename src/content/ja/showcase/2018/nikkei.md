@@ -5,14 +5,14 @@ book_path: /web/showcase/_book.yaml
 {# wf_updated_on: 2018-11-19 #}
 {# wf_blink_components: N/A #}
 {# wf_featured_image: /web/showcase/2018/images/nikkei/featured.jpg #}
-{# wf_featured_snippet: 日本経済新聞は140年を超える歴史を持つ、日本において信頼されるメディアの1つです。より優れたユーザ体験とWebにおけるビジ値すっを加速するため、日本経済新聞社は2017年11月、プログレッシブウェブアプリをローンチし、新たなプラットフォームで優れた結果を出すことができました。 #}
+{# wf_featured_snippet: 日本経済新聞は140年を超える歴史を持つ、日本において信頼されるメディアの1つです。より優れたユーザ体験とWebにおけるビジネスを加速するため、日本経済新聞社は2017年11月、プログレッシブウェブアプリをローンチし、新たなプラットフォームで優れた結果を出すことができました。 #}
 {# wf_tags: casestudy,progressive-web-apps #}
 {# wf_region: asia #}
 {# wf_vertical: media #}
 {# wf_featured_date: 2018-11-19 #}
 {# wf_blink_components: N/A #}
 
-# 日本経済新聞社は複数ページのPWAで新しいレベルの品質とパフォーマンスを実現  {：.page-title}
+# 日本経済新聞社は複数ページのPWAで新しいレベルの品質とパフォーマンスを実現  {: .page-title}
 
 <style>
   figcaption {
