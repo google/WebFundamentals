@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications.
 
 {# wf_updated_on: 2019-02-15 #}
-{# wf_published_on: 2019-02-06 #}
+{# wf_published_on: 2019-02-15 #}
 {# wf_tags: news,security,trusted-types,origintrials,chrome73 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications. #}
