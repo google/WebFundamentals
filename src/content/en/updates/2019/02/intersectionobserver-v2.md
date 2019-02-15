@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Intersection Observer v2 adds the capability to not only observe intersections per se, but to also detect if the intersecting element was visible at the time of intersection.
 
-{# wf_updated_on: 2019-02-14 #}
-{# wf_published_on: 2019-02-14 #}
+{# wf_updated_on: 2019-02-15 #}
+{# wf_published_on: 2019-02-15 #}
 {# wf_tags: intersectionobserver #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: Intersection Observer v2 adds the capability to not only observe intersections per se, but to also detect if the intersecting element was visible at the time of intersection. #}
