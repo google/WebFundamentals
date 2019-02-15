@@ -78,7 +78,7 @@ book_path: /web/showcase/_book.yaml
 
 ## ビジネスの概要
 
-### Challenge
+### チャレンジ
 
 日経では、スマートフォン利用者が増え、多くのユーザのウェブへの主導線となるにつれ、従来のウェブサイトへのモバイルからの流入が急激に増えていく中、[Lighthouse](/web/tools/lighthouse/)、ウェブページをスキャンし、複数のカテゴリにまたがって改善する方法についての改善レコメンデーションを提供する監査ツール、を利用し調査を行った結果、サイトが複数のエリアにおいてモバイル向けに最適化されていないこと、また読み込み速度にも多くの改善余地を見つけることができました。
 
@@ -129,7 +129,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 スピードはこれまで以上に重要視されるべき指標です。スマートフォンが多くのユーザにとってウェブを閲覧するメインのデバイスとなるにつれ、日本経済新聞社が提供するサービスでもモバイルからのトラフィックが急激に増えてきていました。しかし、[Lighthouse](/web/tools/lighthouse/)を使った調査で従来のサイトでSpeed Indexが平均10秒であり、初期読み込みが非常に遅く、巨大なJavaScriptを読み込んでいるなど、モバイル向けに最適化されていない状況であることを認識しました。 
 日経ではこれを機にウェブ・パフォーマンスにおけるベストプラクティスを適用しサイトをリニューアルすることにしました。以下に、新たに構築したPWA、<r.nikkei.com>における結果と、主要なパフォーマンス改善について紹介しましょう。
 
-### Leveraging web APIs & best practices to speed loading
+### Web APIとベストプラクティスを活用して読み込みを高速化する
 
 #### 主要なリクエストのPreload
 
@@ -151,7 +151,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 
 <div class="clearfix"></div>
 
-#### Dynamically prefetch the next page
+#### 次のページを動的にプリフェッチする
 
 <a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-04.jpg">
   <img src="/web/showcase/2018/images/nikkei/nikkei-04.jpg">
@@ -180,7 +180,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 
 <div class="clearfix"></div>
 
-#### Optimize JavaScript bundles
+#### JavaScriptバンドルの最適化
 
 <a class="attempt-right screenshot" href="/web/showcase/2018/images/nikkei/nikkei-08.jpg">
   <img src="/web/showcase/2018/images/nikkei/nikkei-08.jpg">
@@ -190,7 +190,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 
 <div class="clearfix"></div>
 
-#### Other best practices implemented
+#### その他のベストプラクティスの実装
 
 - [圧縮方式](/web/tools/lighthouse/audits/text-compression): Fastly CDNを通じて、すべてのリソースをGzip/Brotliで圧縮
 - [キャッシュ](/web/tools/lighthouse/audits/cache-policy): HTTPキャッシュやエッジ・サイドのキャッシの活用
@@ -200,7 +200,7 @@ Service Workerを採用することで、ネットワークの状態に関わら
 - [First Meaningful Paintの最適化](/web/tools/lighthouse/audits/first-contentful-paint):コンテンツをサーバーサイドでレンダリング
 - [パフォーマンスバジェットを採用](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/) ：JavaScriptの送信と解析/コンパイル時間を抑え続ける
 
-### Optimizing third-party JavaScript
+### サードパーティJavaScriptの最適化
 
 自前のJavaScriptの最適化に比べて、サーとパーティから供給されるJavaScriptを最適化することは簡単ではありませんが、日経では広告に関連するJavaScriptをすべてミニファイ、バンドル化し、日経側のコンテンツデリバリーネットワーク(CDN)から配信するようにしました。
 広告に関連するタグには大抵の場合、広告の表示などに必要となる他のJavaScriptを呼び出すスニペットが含まれており、ほとんどの場合にページのレンダリングの流れを止めてしまったり、必要なJavaScriptを呼び出すために複数のネットワーク処理が必要になってしまったりします。
