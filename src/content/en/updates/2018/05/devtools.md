@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.
-experiments_path: /web/updates/2018/05/_experiments.yaml
+
+{# experiments_path: /web/updates/2018/05/_experiments.yaml #}
 
 {# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-05-21 #}
@@ -95,10 +96,10 @@ Notes:
 * A question mark before an arg, such as `?options`, represents an
   [optional][optional]{:.external} arg.
 * An ellipsis before an arg, such as `...items`, represents a [spread][spread]{:.external}.
-* Some functions, such as `CSS.supports()`, accept multiple argument signatures. 
+* Some functions, such as `CSS.supports()`, accept multiple argument signatures.
 
 [optional]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
-[spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
+[spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 ### Autocomplete after function executions {: #autocomplete }
 
