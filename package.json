@@ -41,7 +41,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
-    "handlebars-helpers": "^0.7.5",
+    "handlebars-helpers": "^0.10.0",
     "js-yaml": "^3.6.1",
     "jsdoc": "^3.5.5",
     "jsonschema": "^1.2.0",
