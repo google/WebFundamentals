@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications.
 
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2019-02-15 #}
 {# wf_published_on: 2019-02-06 #}
-{# wf_tags: news,security,trusted-types,origintrials #}
+{# wf_tags: news,security,trusted-types,origintrials,chrome73 #}
 {# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Trusted Types is a new experimental API available in Chrome that helps prevent DOM-Based Cross-Site Scripting in your applications. #}
 {# wf_blink_components: N/A #}
@@ -19,7 +19,7 @@ Site Scripting in modern web applications.
 
 <aside class="caution"> We’re currently working on the specification and
 implementation details for this API. We’ll keep this post updated as Trusted
-Types mature. </aside>
+Types mature. Last update: 2019-02-15.</aside>
 
 ## Cross-Site Scripting {: #xss }
 
@@ -53,8 +53,11 @@ document.head.innerHTML += `<link rel="stylesheet" href="./templates/${templateI
 
 This code introduces DOM XSS by linking the attacker-controlled **source**
 (`location.hash`) with the injection **sink** (`innerHTML`). The attacker can
-exploit this bug by tricking their victim into visiting the URL `https://example.com#tplid="><img src=x
-onerror=alert(1)>`.
+exploit this bug by tricking their victim into visiting the following URL:
+
+```
+https://example.com#tplid="><img src=x onerror=alert(1)>
+```
 
 It's easy to make this mistake in code, especially if the code changes often.
 For example, maybe `templateId` was once generated and validated on the server,
@@ -142,7 +145,8 @@ document.head.innerHTML += html;
 Here, we create a `template` policy that verifies the passed template ID
 parameter and creates the resulting HTML. The policy object `create*` function
 calls into a respective user-defined function, and wraps the result in a Trusted
-Type object. In this case, `templatePolicy.createHTML` calls the provided templateId validation function, and returns a `TrustedHTML` with the `<link ...>` snippet.
+Type object. In this case, `templatePolicy.createHTML` calls the provided templateId
+validation function, and returns a `TrustedHTML` with the `<link ...>` snippet.
 The browser allows `TrustedHTML` to be used with an injection sink that expects
 HTML - like `innerHTML`.
 
@@ -195,8 +199,9 @@ experimenting with it.
 
 To get this new behavior on your site, you need to be
 [signed up](https://developers.chrome.com/origintrials){: .external} for the
-"Trusted Types" Origin Trial. If you just want to try it out locally, the
-experiment can be enabled on the command line:
+"Trusted Types" Origin Trial (in Chrome 73 through 76). If you just want to try
+it out locally, starting from Chrome 73 the experiment can be enabled on the
+command line:
 
 ```
 chrome --enable-blink-features=TrustedDOMTypes
@@ -211,6 +216,9 @@ chrome --enable-experimental-web-platform-features
 Alternatively, visit `chrome://flags/#enable-experimental-web-platform-features`
 and enable the feature. All of those options enable the feature globally in
 Chrome for the current session.
+
+<aside class="caution">If you experience crashes, use <code>--enable-features=BlinkHeapUnifiedGarbageCollection</code> as a workaround. See
+<a href="http://crbug.com/929601">bug&nbsp;929601</a> for details.</aside>
 
 We have also created a [polyfill](https://github.com/WICG/trusted-types) that
 enables you to test Trusted Types in other browsers.
