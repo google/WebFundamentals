@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: One key benefit that WebAssembly offers is _predictable_ performance across browsers. But how do you turn hot path written in JavaScript into WebAssembly?
 
-{# wf_updated_on: 2019-02-14 #}
+{# wf_updated_on: 2019-02-15 #}
 {# wf_published_on: 2019-02-14 #}
 {# wf_tags: webassembly #}
 {# wf_featured_image: /web/updates/images/2019/02/hotpath-with-wasm/social.png #}
@@ -71,12 +71,12 @@ WebAssembly can help.
 ## WebAssembly for predictable performance
 
 In general, JavaScript and WebAssembly can achieve the same peak performance.
-However, in JavaScript it's often tricky to stay on the "fast path". One key
-benefit that WebAssembly offers is _predictable_ performance, even across
-browsers. The strict typing and low-level architecture allows for stronger
-assumptions and more optimizations during compilation. The function above is a
-prime candidate for WebAssembly. But how do you turn hot path written in
-JavaScript into WebAssembly?
+However, for JavaScript this performance can only be reached on the "fast path",
+and it's often tricky to stay on that "fast path". One key benefit that
+WebAssembly offers is predictable performance, even across browsers. The strict
+typing and low-level architecture allows the compiler to make stronger
+assumption so that WebAssembly code only has to be optimized once and will
+always use the “fast path”.
 
 ### Writing for WebAssembly
 
