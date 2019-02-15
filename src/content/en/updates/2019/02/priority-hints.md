@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Priority Hints provide developers a way to indicate a resource's relative importance
-to the browser, allowing more control over the order resources are loaded.
+description: Priority Hints provide developers a way to indicate a resource's relative importance to the browser, allowing more control over the order resources are loaded.
 
 {# wf_updated_on: 2019-02-15 #}
 {# wf_published_on: 2019-02-14 #}
