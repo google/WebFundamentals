@@ -504,10 +504,10 @@ from the Rust team pointed us to their excellent Rust WASM book, which contains
 [a section on optimizing file
 size](https://rustwasm.github.io/book/reference/code-size.html). Following the
 instructions there (most notably enabling link time optimizations and manual
-panic handling) allowed us to write “normal” Rust code and use `Cargo` (the
-`npm` of Rust) without bloating the file size. Our Rust module is now at a
-competitive 370B after gzip. For details, please take a look at [the PR I opened
-on Squoosh](https://github.com/GoogleChromeLabs/squoosh/pull/462).
+panic handling) allowed us to write “normal” Rust code and go back to using
+`Cargo` (the `npm` of Rust) without bloating the file size. The Rust module ends
+up with 370B after gzip. For details, please take a look at [the PR I opened on
+Squoosh](https://github.com/GoogleChromeLabs/squoosh/pull/462).
 
 _Special thanks to [Ashley Williams](https://twitter.com/ag_dubs), [Steve
 Klabnik](https://twitter.com/steveklabnik), [Nick
