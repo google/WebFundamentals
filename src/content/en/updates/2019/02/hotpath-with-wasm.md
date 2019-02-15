@@ -75,7 +75,7 @@ However, for JavaScript this performance can only be reached on the "fast path",
 and it's often tricky to stay on that "fast path". One key benefit that
 WebAssembly offers is predictable performance, even across browsers. The strict
 typing and low-level architecture allows the compiler to make stronger
-assumption so that WebAssembly code only has to be optimized once and will
+guarantees so that WebAssembly code only has to be optimized once and will
 always use the “fast path”.
 
 ### Writing for WebAssembly
@@ -500,7 +500,7 @@ AssemblyScript in the future.
 ## Update: Rust {: #update-rust }
 
 After publishing this article, [Nick Fitzgerald](https://twitter.com/fitzgen)
-from the Rust team pointed us to their excellent Rust WASM book, which contains
+from the Rust team pointed us to their excellent Rust Wasm book, which contains
 [a section on optimizing file
 size](https://rustwasm.github.io/book/reference/code-size.html). Following the
 instructions there (most notably enabling link time optimizations and manual
