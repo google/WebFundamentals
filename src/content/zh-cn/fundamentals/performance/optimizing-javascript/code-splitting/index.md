@@ -28,10 +28,7 @@ description: 现代网站通常包含大量的JavaScript。这些脚本通常以
 
 ## 过早得加载太多的代码
 
-Many apps place all their scripts into one file and deliver a large bundle at
-initial load. This file contains not just support for the initial route, but
-support for *every* interaction in *every* route — regardless of whether
-those routes are ever visited!
+许多应用程序将所有脚本放在一个文件中，并在初始加载时提供大型捆绑包。此文件不仅包含对初始路由的支持，还支持*每条*路由中的*每个*交互 - 无论是否访问过这些路由！
 
 这种全有或全无的方法效率很低。在加载，解析和执行未使用代码的字节中花费的每一秒时间都会延长应用程序的[可交互时间（TTI）](/web/tools/lighthouse/audits/time-to-interactive) ，这意味着用户在可以使用之前不得不一直等待。移动设备上的用户会更多地感受到这个问题，其中较慢的处理器或网络连接会导致进一步的延迟。下图显示了移动设备与具有更强大处理器的台式机或笔记本电脑之间解析和编译脚本的时间消耗对比：
 
@@ -44,7 +41,7 @@ Source: by Addy Osmani.">
 
 我们知道更快的应用就是*更好的*应用。人们更喜欢使用它们，并且[有很多关于它们如何改进各种业务指标的案例研究](https://wpostats.com/) 。与全有或全无的方法相比，代码拆分强调捆绑可以根据当前路由的需要传输和解析最少的代码，而不是一次性全部交付代码。
 
-## Do I need to code split?
+## 我需要代码拆分吗？
 
 “我究竟需要在我的应用程序中拆分代码吗？”这是一个值得思考的问题，就像很多网站开发问题一样。如果您的应用程序有许多功能丰富的路由并且大量使用框架和库，那么答案大多数情况下一定是“需要”。但是，只有您可以自己回答这个问题，因为您需要依靠对您自己的应用程序的架构及其加载的脚本，并结合[Lighthouse,](/web/tools/lighthouse/)，DevTools，真实设备和[WebPagetest](https://www.webpagetest.org/)等工具来综合考量。
 
@@ -64,15 +61,14 @@ activity.">
   <img src="images/figure-3-1x.png" srcset="images/figure-3-1x.png 1x,
 images/figure-3-2x.png 2x" alt="The code coverage panel in DevTools showing how
 much JavaScript is used on the current page.">
-  <figcaption><b>Figure 3</b>. The code coverage panel in DevTools showing how
-much JavaScript is used on the current page.</figcaption>
+  <figcaption><b>图3</b> 。 DevTools中的代码覆盖面板显示了当前页面上使用了多少JavaScript。</figcaption>
 </figure>
 
 Note: 即使您在应用程序中使用代码拆分，您仍可能会在页面上发现一些未使用的代码。 [Tree shaking](/web/fundamentals/performance/optimizing-javascript/tree-shaking/)也是一种消除无用代码的解决方案！
 
 虽然Lighthouse非常适合评估性能，但你应该记住它是*综合性*的。设备的功能和处理能力沿着一个巨大的梯度，从极快的速度一直到极其缓慢，许多用户的设备介于两者之间。在*真实设备*上进行测试至关重要，特别是那些*不属于*最前沿的设备。仅仅因为您的网站在iPhone X上加载并不困难并不意味着某些人老旧的（但仍然可以使用）Galaxy S5的表现同样如此。如果您无法获得真正的设备来进行测试，您可以随时使用[WebPagetest](https://www.webpagetest.org/)来评估各种平台的性能。
 
-## Set a budget and stick to it
+## 设定预算并坚持下去
 
 如果您将性能视为一次性任务，那么您的性能改进最终*会*被淘汰，因为新功能和技术负担的增加将消除您所获得的收益。性能预算可帮助您巩固收益，并防止添加新功能以破坏应用程序的性能。
 
@@ -82,12 +78,7 @@ Note: 即使您在应用程序中使用代码拆分，您仍可能会在页面�
 
 性能预算通过内部流程来实现业务中的性能文化。组织化性能预算确保预算由每个人拥有，而不仅仅是由一个组（例如工程）定义。确保页面快速加载是团队设置的最常见的性能预算之一。
 
-When budgets have been set and the entire organization is aware early on what
-the budget parameters are, you're able to say performance isn't just an
-engineering issue, but a critical piece of the whole package as a site is
-constructed. It provides a guideline for design and engineering when considering
-performance and should be checked with each decision that could impact
-performance.
+在设定预算并且整个组织尽早了解预算参数的情况时，您可以说性能不仅仅是一个工程问题，而是构建整个软件包的关键部分。它在考虑性能时提供设计和工程指南，并应根据可能影响性能的每个决策进行检查。
 
 当团队制定性能预算时，他们需要审核自己的研究，并了解对用户最重要的指标。如果您尝试在中低端设备上快速交互，您不能发送5MB的JavaScript。
 
@@ -99,7 +90,7 @@ performance.
 
 一些用于为网站寻求如何设定预算灵感的选择：您可以查看竞争对手的网站或咨询纵向的案例研究中的的行业中值。
 
-## Getting hands on with code splitting
+## 开始使用代码拆分
 
 简单地*谈论*代码拆分而没有具体的例子可能只会给读者留下更多问题。为了提高清晰性，本指南将向您展示通过[示例应用](https://github.com/malchata/code-splitting-example)拆分代码的不同方法，您可以将其用作参考。
 
@@ -272,7 +263,7 @@ js/favorites.8da9eb04.js  2.18 KiB       4  [emitted]  favorites
 
 虽然删除所有重复的代码是一个有价值的目标，但实用也很重要。寻求尽可能多地删除重复代码，但要了解使用此配置执行此操作可能会通过拉入可能未在当前页面上使用的代码来扩大初始脚本文件。这可以通过延迟加载脚本来解决，我们将在后面介绍！
 
-### Splitting code dynamically
+### 动态拆分代码
 
 如上所示，通过多个入口拆分代码合乎逻辑并且很直观，但它可能不太适用于您的应用。另一种方法是使用[动态`import()`语句](/web/updates/2017/11/dynamic-import)延迟加载脚本：
 
@@ -299,7 +290,7 @@ module.andAnotherThing(); // Access a module's named export
 
 让我们首先介绍在Parcel中动态代码拆分的工作原理。
 
-#### Dynamic code splitting with Parcel
+#### 使用Parcel进行动态代码拆分
 
 用于动态代码拆分的最简便的工具是[Parcel](https://parceljs.org/) 。在没有任何配置的情况下，Parcel构建了一个依赖树，用于计算静态和动态模块，并输出与您的输入名称很好地对应的脚本。
 
@@ -336,13 +327,13 @@ render(<Router>
 </Router>, document.getElementById("app"));
 ```
 
-You'll notice a few things that are different from the previous example:
+你会注意到一些与前一个例子不同的东西：
 
 1. 我们只静态导入`Search`组件。这是因为默认路由使用此组件，因此需要预先加载它。
-2. preact-async-route handles asynchronous routing via the `AsyncRoute` component.
+2. preact-async-route通过`AsyncRoute`组件处理异步路由。
 3. 当用户通过使用`import()`语句的`AsyncRoute`组件导航到对应路由时， `PedalDetail`和`Favorites`组件是延迟加载的。
 
-When we build the app, Parcel outputs the following:
+当我们构建应用程序时，Parcel输出以下内容：
 
 ```
 dist/src.e54c18ce.js             65.56 KB    2.87s
@@ -357,7 +348,7 @@ Warning: 此示例没有利用公共依赖脚本拆分！
 
 当我们进入默认路由时，仅加载所需的脚本以支持它。当用户导航到踏板细节或收藏夹路由时，将按需加载这些路由的脚本。
 
-##### Dynamic code splitting with webpack
+##### 使用webpack进行动态代码拆分
 
 与Parcel一样，webpack可以将动态导入的代码拆分为单独的文件。事实上，它几乎不需要任何指导就可以做到。只是当webpack遇到`import()`调用时，它没有像Parcel那样命名输出文件：
 
@@ -472,7 +463,7 @@ module.exports = {
 
 如果您想要对这些资源提示进行深入了解，请[阅读本文](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf) 。由于考虑到本指南的目的，我将限制该指导为适用于webpack的范围。
 
-#### Prefetching
+#### 预取
 
 为合理确定用户将访问或使用的路由或功能预取脚本可能是合理的，但先不要这样做。本指南的示例应用中预提取的一个很好的用例发生在我们将应用程序的`Router`组件安装在*index.js*入口的地方：
 
@@ -490,8 +481,7 @@ render(<Router>
   <img src="images/figure-7-1x.png" srcset="images/figure-7-1x.png 1x,
 images/figure-7-2x.png 2x" alt="A request for scripts for the favorites route on
 a throttled (Slow 3G) connection.">
-  <figcaption><b>Figure 7</b>. A request for scripts for the favorites route on a
-throttled (Slow 3G) connection.</figcaption>
+  <figcaption><b>图7</b> 。在受限制（慢速3G）连接上请求收藏夹路由的脚本。</figcaption>
 </figure>
 
 在慢速连接上，用户可能必须等待几秒钟才能收到收藏路由的脚本。但是，当用户第一次登陆应用程序时，我们可以使用`webpackPrefetch` 预提取JavaScript来减少用户的等待时间：
@@ -508,13 +498,11 @@ the browser immediately pulls it from its cache.">
 
 Note: 如果您想了解这一切是如何工作的，请查看代码的[webpack-dynamic-splitting-prefetch分支](https://github.com/malchata/code-splitting-example/tree/webpack-dynamic-splitting-prefetch) ！
 
-#### Preloading
+#### 预加载
 
 预加载似乎类似于预提取，但与两者截然不同。 `webpackPreload`内联指令可以像`webpackPrefetch`为预提取一样调用预加载。然而，根据我的经验，使用`webpackPreload`预加载动态导入的内容与将给定路径的所有功能捆绑到一整个代码块中区别不大。
 
-Preloading, in my opinion, makes the most sense for scripts critical to
-rendering the initial route. Twitter does this to speed up loading of the
-[Twitter Lite](https://mobile.twitter.com/home) app:
+在我看来，预加载对于渲染初始路径至关重要的脚本最有意义。 Twitter这样做是为了加快[Twitter Lite](https://mobile.twitter.com/home)应用程序的加载速度：
 
 <figure>
   <img src="images/figure-9-1x.png" srcset="images/figure-9-1x.png 1x,
@@ -529,8 +517,7 @@ several preloaded JavaScript resources.">
 const PreloadWebpackPlugin = require("preload-webpack-plugin");
 ```
 
-Then we configure the plugin to preload the `main` and `vendors` chunks by
-adding an instance of the plugin to the `plugins` array:
+然后我们通过在`plugins`数组中添加插件实例来配置插件以预加载`main`和`vendors`块：
 
 ```javascript
 plugins: [
@@ -574,7 +561,4 @@ Note: preload-webpack-plugin *必须*与html-webpack-plugin一起使用！将它
 
 但请放心，代码拆分可以提高应用的性能，这会有很大收获，因为用户会发现您的应用更具吸引力且更易于使用。祝好运！
 
-*Special thanks to Patrick Meenan, Jason Miller, [Jeff
-Posnick](/web/resources/contributors/jeffposnick), Sam Saccone, [Philip
-Walton](/web/resources/contributors/philipwalton), for their valuable feedback,
-which significantly improved the quality of this article.*
+*特别感谢Patrick Meenan，Jason Miller， [Jeff Posnick](/web/resources/contributors/jeffposnick) ，Sam Saccone， [Philip Walton](/web/resources/contributors/philipwalton)提供的宝贵反馈，这些反馈显着提高了本文的质量。*
