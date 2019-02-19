@@ -298,7 +298,7 @@ of HTML for navigations after it has been installed. This can keep cached
 components and templates up to date and enables SPA-style navigations for
 rendering new views in the same session. This approach works best when you can
 share the same templating and routing code between the server, client page, and
-server worker.
+service worker.
 
 <img src="../../images/2019/02/rendering-on-the-web/trisomorphic.png"
 alt="Diagram of Trisomorphic rendering, showing a browser and service worker
