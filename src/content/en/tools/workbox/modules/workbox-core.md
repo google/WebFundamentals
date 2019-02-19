@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-02-19 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Core {: .page-title }
@@ -73,7 +73,7 @@ Some developers want to be able to publish a new service worker and have it
 update and control a web page as soon as possible, skipping the default
 [service worker lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
 
-If you find yourself wanting this behavior, `workbox-sw` provides some helper
+If you find yourself wanting this behavior, `workbox-core` provides some helper
 methods to make this easy:
 
 <pre class="prettyprint js">
