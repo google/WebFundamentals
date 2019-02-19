@@ -36,8 +36,7 @@ const cacheAvailable = 'caches' in self;
 const request = new Request('/images/sample1.jpg');
 ```
 
-The `Response` object constructor accepts many types of data, including `Blob`s, `ArrayBuffer`s,
-`FormData` objects, and strings.
+`Response`对象构造函数接受许多类型的数据，包括`Blob` ， `ArrayBuffer` ， `FormData`对象和字符串。
 
 ```
 const imageBlob = new Blob([data], {type: 'image/jpeg'});
@@ -46,7 +45,7 @@ const imageResponse = new Response(imageBlob);
 const stringResponse = new Response('Hello world');
 ```
 
-You can set the MIME type of a `Response` by setting the appropriate header.
+您可以通过设置适当的标头来设置`Response`的MIME类型。
 
 ```
 const options = {
@@ -57,10 +56,9 @@ const options = {
 const jsonResponse = new Response('{}', options);
 ```
 
-## Working with Response objects
+## 使用Response对象
 
-If you have retrieved a `Response` and wish to access its body, there are several helper methods
-you can use. Each returns a `Promise` that resolves with a value of a different type.
+如果您已检索到`Response`并希望访问其正文，则可以使用多种辅助方法。每个返回一个`Promise` ，使用不同类型的值解析。
 
 <table>
   <thead>
@@ -90,13 +88,12 @@ you can use. Each returns a `Promise` that resolves with a value of a different 
     </tr>
     <tr>
       <td><code>body</code></td>
-      <td>Returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">
-      ReadableStream</a> for the body data.</td>
+      <td>返回body数据的<a href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">ReadableStream</a> 。</td>
     </tr>
   </tbody>
 </table>
 
-For example
+例如
 
 ```
 const response = new Response('Hello world');
@@ -106,7 +103,7 @@ response.arrayBuffer().then((buffer) => {
 });
 ```
 
-## Creating and opening a cache
+## 创建和打开缓存
 
 要打开缓存，请使用`caches.open(name)`方法，将缓存名称作为单个参数传入。如果该命名的缓存不存在，则创建它。此方法返回一个在resolve中包含`Cache`对象的`Promise` 。
 
@@ -116,7 +113,7 @@ caches.open('my-cache').then((cache) => {
 });
 ```
 
-## Retrieving from a cache
+## 从缓存中检索
 
 要在缓存中查找条目，可以使用`match`方法。
 
@@ -124,8 +121,7 @@ caches.open('my-cache').then((cache) => {
 cache.match(request).then((response) => console.log(request, response));
 ```
 
-If `request` is a string it is first be converted to a `Request` by calling `new Request(request)`. The function returns a `Promise` that resolves to a `Response` if a matching
-entry is found, or `undefined` otherwise.
+如果`request`是字符串，则首先通过调用`new Request(request)`将其转换为`Request` 。该函数返回一个`Promise` ，如果找到匹配的条目则解析为`Response` ，否则返回`undefined` 。
 
 要确定两个`Requests`是否匹配， `Requests`使用的不仅仅是URL。如果两个请求具有不同的查询字符串， `Vary`标头和/或方法（ `GET` ， `POST` ， `PUT`等），则认为它们是不同的。
 
@@ -143,7 +139,7 @@ cache.match(request, options).then(...);
 
 如果有多个缓存与请求匹配，则返回首先创建的请求。
 
-If you want to retrieve *all* matching responses, you can use `cache.matchAll`.
+如果要检索*所有*匹配的响应，可以使用`cache.matchAll` 。
 
 ```
 const options = {
@@ -159,13 +155,11 @@ cache.matchAll(request, options).then((responses) => {
 
 作为一种快捷的方式，您可以直接使用一次`caches.match()`而不是为每个缓存都调用`cache.match()`来搜索所有缓存。
 
-## Searching
+## 搜索
 
-The Cache API does not provide a way to search for requests or responses except for matching entries
-against a `Response` object. However, you can implement your own search using filtering or by
-creating an index.
+除了匹配`Response`对象的条目之外，Cache API不提供搜索请求或响应的方法。但是，您可以使用过滤或创建索引来实现自己的搜索。
 
-### Filtering
+### 过滤
 
 实现自己的搜索的一种方法是迭代所有条目并过滤到您想要的条目。假设您要查找包含以“.png”结尾的URL的所有项目。
 
@@ -194,14 +188,13 @@ async function findImages() {
 
 这样，您可以使用`Request`和`Response`对象的任何属性来过滤条目。请注意，如果搜索大量数据集，则速度会很慢。
 
-### Creating an index
+### 创建索引
 
 实现自己的搜索的另一种方法是维护一个单独的条目索引，可以搜索并存储在IndexedDB中。由于这是IndexedDB为其设计的一种操作，因此具有大量条目的查询性能会更好。
 
-If you store the URL of the `Request` alongside the searchable properties then you can easily
-retrieve the correct cache entry after doing the search.
+如果将`Request`的URL与可搜索的属性一起存储，则可以在执行搜索后轻松检索正确的缓存条目。
 
-## Adding to a cache
+## 添加到缓存
 
 将项添加到缓存有三种方法 - `put` ， `add`和`addAll` 。这三种方法都返回一个`Promise` 。
 
@@ -237,7 +230,7 @@ cache.delete(request);
 cache.delete('/example/file.txt', {ignoreVary: true, ignoreSearch: true});
 ```
 
-## Deleting a cache
+## 删除缓存
 
 要删除缓存，请调用`caches.delete(name)`。如果缓存存在并被删除，则此函数返回一个结果为`true`的`Promise` ，否则返回`false` 。
 
