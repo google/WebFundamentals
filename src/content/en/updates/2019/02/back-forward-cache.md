@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: bfcache creates a cache allowing for instant navigations to previously-visited pages.
 
-{# wf_updated_on: 2019-02-14 #}
-{# wf_published_on: 2019-02-15 #}
+{# wf_updated_on: 2019-02-19 #}
+{# wf_published_on: 2019-02-20 #}
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 {# wf_featured_snippet: On the Chrome team, we are exploring a new back/forward cache to cache pages in-memory (preserving JavaScript & DOM state) when the user navigates away. #}
@@ -33,7 +33,7 @@ We also have a preview of the back/forward cache working on Chrome for Android:
   </iframe>
 </div>
 
-We estimate this change could **improve performance for 19% of all navigations** for mobile Chrome. You can find more detail about this feature in the [bfcache explainer](https://docs.google.com/document/d/1mrgp7XzR16rd1xqFYOJgC1IP0NPLZFaRU5Ukj3-TlLw/edit#heading=h.d9wqdzopmdcf).
+We estimate this change could **improve performance up to 19% of all navigations** for mobile Chrome. You can find more detail about this feature in the [bfcache explainer](https://docs.google.com/document/d/1mrgp7XzR16rd1xqFYOJgC1IP0NPLZFaRU5Ukj3-TlLw/edit#heading=h.d9wqdzopmdcf).
 
 There is medium cross-browser interop risk with this change. Both [Firefox](https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Working_with_BFCache) and [Safari](https://webkit.org/blog/427/webkit-page-cache-i-the-basics/) already have back-forward cache implementations that are subtly different. Chrome is opting not to use WebKit’s implementation of bfcache due to incompatibility with Chrome’s multiprocess architecture.
 
