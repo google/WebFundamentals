@@ -14,7 +14,7 @@ description: Learn how browser turn your code into functional website from high-
   }
 </style>
 
-# Inside look at modern web browser (part 1) {: .page-title }
+# 深入探索现代网络浏览器（第1部分） {: .page-title }
 
 {% include "web/_shared/contributors/kosamari.html" %}
 
@@ -22,12 +22,11 @@ description: Learn how browser turn your code into functional website from high-
 
 在这个4 部分的系列博客文章中，我们将介绍 Chrome 浏览器从高级架构到渲染流程的具体细节。如果你想知道浏览器如何将你的代码转换为一个具备功能的网站，或者你不确定为什么某种特定的技术被建议用来提高性能，那么本系列非常适合你。
 
-As part 1 of this series, we’ll take a look at core computing terminology and Chrome’s
-multi-process architecture.
+作为本系列的第1部分，我们将介绍核心计算术语和 Chrome 的多进程架构。
 
 注意：如果您熟悉 CPU / GPU 和进程/线程的概念，可以跳转至[浏览器架构](#browser-architecture) 小节。
 
-## At the core of the computer are the CPU and GPU
+## 计算机的核心是 CPU 和 GPU 
 
 为了理解浏览器运行的环境，我们先得了解计算机的一些部件与其功能。
 
@@ -101,7 +100,7 @@ multi-process architecture.
   </figcaption>
 </figure>
 
-## Browser Architecture {: #browser-architecture }
+## 浏览器架构 {: #browser-architecture }
 
 那 Web 浏览器是如何通过进程与线程构建的呢？可以有两种方式，一种是拥有许多不同线程的单一进程，另一种是许多通过 IPC 通信的不同进程，每个进程拥有较少的线程。
 
@@ -176,7 +175,7 @@ multi-process architecture.
 为了节省内存，Chrome 限制了其能运行的进程总数。
 该限制因您设备的内存与 CPU 而变化，但当达到该限额时，Chrome 会开始将统一站点的不同标签页运行在同一进程上。
 
-## Saving more memory - Servicification in Chrome
+## 节省更多内存 - Chrome中的服务化
 
 浏览器进程也使用了同样的方法。Chrome 正计划将浏览器程序的各部分以服务的方式运行，使各个服务分成多进程或合并成同一进程都变得简单。
 
@@ -221,7 +220,7 @@ multi-process architecture.
 
 <div class="clearfix"></div>
 
-## Feedback {: .hide-from-toc }
+## 反馈 {: .hide-from-toc }
 
 {% include "web/_shared/helpful.html" %}
 
