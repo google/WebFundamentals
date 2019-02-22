@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Also clip-path, bread, and urinals again.
 
-{# wf_updated_on: 2019-02-21 #}
-{# wf_published_on: 2018-02-21 #}
+{# wf_updated_on: 2019-02-22 #}
+{# wf_published_on: 2019-02-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-21.mp3 #}
 {# wf_podcast_duration: 01:07:52 #}
 {# wf_podcast_fileSize: 35766024 #}
