@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
-{# wf_updated_on: 2019-02-20 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -93,19 +93,15 @@ text. The following bullet list contains examples of use cases for all three fea
 | ------------------------------------------ | ---------------------------- |
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [In Progress][spec]          |
-| 3. Gather feedback & iterate on design     | [**In progress**](#feedback) |
-| **4. Origin trial**                        | [Complete](ot)               |
+| 3. Gather feedback & iterate on design     | [In progress](#feedback)     |
+| **4. Origin trial**                        | [**In progress**](ot)        |
 | 5. Launch                                  | Not started                  |
 
 ## How to use the Shape Detection API {: #use }
 
-Note: We're currently integrating feedback we gathered now that the Origin Trial has ended
-and the feature will be turned off for a cycle or two.
-
-Note: You can still use the Shape Detection API for local experiments by enabling the
+Note: The origin trial is expected to end in Chrome 74 and the API will be turned off while we integrate
+developer feedback. You can always use the Shape Detection API for local experiments by enabling the
 [`enable-experimental-web-platform-features` flag 🚩](chrome://flags/#enable-experimental-web-platform-features).
-Please carefully check the support matrix in the [Explainer](https://github.com/WICG/shape-detection-api#overview)
-for a detailed overview of the different platforms.
 
 The interfaces of all three detectors, the `FaceDetector`, the `BarcodeDetector`, and the
 `TextDetector`, are very similar. They all provide a single asynchronous method `detect` that takes
@@ -115,6 +111,9 @@ as an input (that is, either a
 [`CanvasImageSource`](https://html.spec.whatwg.org/multipage/canvas.html#canvasimagesource),  a
 [`Blob`](https://w3c.github.io/FileAPI/#dfn-Blob), or
 [`ImageData`](https://html.spec.whatwg.org/multipage/canvas.html#imagedata)).
+
+Note: Please carefully check the support matrix in the [Explainer](https://github.com/WICG/shape-detection-api#overview)
+for a detailed overview of the different platforms.
 
 In the case of `FaceDetector` and `BarcodeDetector`, optional parameters can be passed to the
 detector’s constructor that allow for providing hints to the underlying native detectors.
@@ -239,8 +238,6 @@ We’re also interested to hear how you plan to use the Shape Detection API:
 
 Share your thoughts on the [Shape Detection API WICG Discourse][wicg-discourse] discussion.
 
-{% include "web/_shared/helpful.html" %}
-
 ## Helpful Links {: #helpful }
 
 * [Public explainer][explainer]
@@ -248,6 +245,8 @@ Share your thoughts on the [Shape Detection API WICG Discourse][wicg-discourse] 
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
 * Blink Component: `Blink>ImageCapture`
+
+{% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
