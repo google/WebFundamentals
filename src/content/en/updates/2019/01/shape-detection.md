@@ -112,11 +112,11 @@ as an input (that is, either a
 [`Blob`](https://w3c.github.io/FileAPI/#dfn-Blob), or
 [`ImageData`](https://html.spec.whatwg.org/multipage/canvas.html#imagedata)).
 
-Note: Please carefully check the support matrix in the [Explainer](https://github.com/WICG/shape-detection-api#overview)
-for a detailed overview of the different platforms.
-
 In the case of `FaceDetector` and `BarcodeDetector`, optional parameters can be passed to the
 detector’s constructor that allow for providing hints to the underlying native detectors.
+
+Note: Please carefully check the support matrix in the [Explainer](https://github.com/WICG/shape-detection-api#overview)
+for a detailed overview of the different platforms.
 
 Note: If your `ImageBitmapSource` has an [effective script
 origin](https://html.spec.whatwg.org/multipage/#concept-origin) which is not the same as the
