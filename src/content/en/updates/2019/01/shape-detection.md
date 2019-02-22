@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Shape Detection API allows for faces, barcodes, and text to be detected in images.
 
-{# wf_updated_on: 2019-01-14 #}
+{# wf_updated_on: 2019-02-20 #}
 {# wf_published_on: 2019-01-07 #}
 {# wf_tags: capabilities,shape-detection,progressive-web-apps,webapp #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -93,11 +93,19 @@ text. The following bullet list contains examples of use cases for all three fea
 | ------------------------------------------ | ---------------------------- |
 | 1. Create explainer                        | [Complete][explainer]        |
 | 2. Create initial draft of specification   | [In Progress][spec]          |
-| 3. Gather feedback & iterate on design     | [In progress](#feedback)     |
-| **4. Origin trial**                        | **[In progress][ot]**        |
+| 3. Gather feedback & iterate on design     | [**In progress**](#feedback) |
+| **4. Origin trial**                        | [Complete](ot)               |
 | 5. Launch                                  | Not started                  |
 
 ## How to use the Shape Detection API {: #use }
+
+Note: We're currently integrating feedback we gathered now that the Origin Trial has ended
+and the feature will be turned off for a cycle or two.
+
+Note: You can still use the Shape Detection API for local experiments by enabling the
+[`enable-experimental-web-platform-features` flag 🚩](chrome://flags/#enable-experimental-web-platform-features).
+Please carefully check the support matrix in the [Explainer](https://github.com/WICG/shape-detection-api#overview)
+for a detailed overview of the different platforms.
 
 The interfaces of all three detectors, the `FaceDetector`, the `BarcodeDetector`, and the
 `TextDetector`, are very similar. They all provide a single asynchronous method `detect` that takes
