@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-08-14 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-08-14 #}
 {# wf_tags: news,forms,datalist #}
+{# wf_blink_components: N/A #}
 
 # [datalist] for range/color inputs offer some default choices   {: .page-title }
 
@@ -27,13 +28,13 @@ Chrome started to support `datalist` for `input[type=text]` in Chrome 20. `datal
       <option>50</option>
       <option>90</option>
     </datalist>
-    
+
 
 Moving the slider thumb on the input snaps to each of the ticks so that users can easily adjust to those values.
 
 ### input[type=color]
 
-`input[type=color]` is already [supported in Chrome](https://plus.google.com/107085977904914121234/posts/1hb7EsELAPH) and Opera. Users can pick arbitrary color without any help from JavaScript plugins.
+`input[type=color]` is already [supported in Chrome](https://caniuse.com/#feat=input-color) and Opera. Users can pick arbitrary color without any help from JavaScript plugins.
 
 By adding `datalist` to `input[type=color]`, users can now pick a color from developer selected color swatches as well as choosing arbitrary color from a color picker by themselves.
 
@@ -48,10 +49,10 @@ By adding `datalist` to `input[type=color]`, users can now pick a color from dev
       <option>#ffff00</option>
       <option>#00ffff</option>
     </datalist>
-    
+
 
 Note that `datalist` for `input[type=color]` only accepts the hex color values (ex. `#ff0000`) and values such as `#f00` or `red` won’t work.
 
-To see these new features in action, visit [a demo page](http://demo.agektmr.com/datalist/){: .external }.
+To see these new features in action, visit [a demo page](https://demo.agektmr.com/datalist/){: .external }.
 
 

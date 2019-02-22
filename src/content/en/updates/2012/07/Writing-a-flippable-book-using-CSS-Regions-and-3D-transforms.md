@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-07-03 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-07-03 #}
 {# wf_tags: news,regions,css #}
+{# wf_blink_components: N/A #}
 
 # Writing a flippable book using CSS Regions and 3D transforms {: .page-title }
 
@@ -12,7 +13,7 @@ book_path: /web/updates/_book.yaml
 
 So. The day has come. You have finally grown bored of long scrolls of text and are looking for a new format. Something elegant. Something compact. Something that takes the long scroll, cuts it into neat little rectangles and binds them together. I call this invention the "book".
 
-With the power of CSS regions ([CanIUse](http://caniuse.com/#feat=css-regions), go to [chrome://flags](chrome://flags) and enable CSS Regions) and CSS 3D transformations, cutting-edge book technology is finally available on modern browsers. All you need is a few lines of JavaScript and a whole lot of CSS.
+With the power of CSS regions ([CanIUse](https://caniuse.com/#feat=css-regions), go to [chrome://flags](chrome://flags) and enable CSS Regions) and CSS 3D transformations, cutting-edge book technology is finally available on modern browsers. All you need is a few lines of JavaScript and a whole lot of CSS.
 
 Let's start off by defining our book structure. The book consists of pages and the pages consists of two sides. The sides contain the book content:
 
@@ -43,7 +44,7 @@ Let's start off by defining our book structure. The book consists of pages and t
         <div class="book-pages"></div>
       </div>
     </div>
-    
+
 
 We're going to use CSS regions to flow the book text into the book pages. But first we need the book text.
 
@@ -51,7 +52,7 @@ We're going to use CSS regions to flow the book text into the book pages. But fi
     <span id="book-content">
       blah blah blah ...
     </span>
-    
+
 
 Now that we have written our book, let's define the flow CSS. I'm using the + character as a vendor prefix placeholder, replace it with `-webkit-` for WebKit browsers, `-moz-` for Firefox, and so on:
 
@@ -62,7 +63,7 @@ Now that we have written our book, let's define the flow CSS. I'm using the + ch
     .book-pages {
       +flow-from: book-text-flow;
     }
-    
+
 
 Now the content from the #book-content span will go into the .book-pages divs instead. This is a rather poor book though. For a more bookish book we must embark on a quest. Our journey shall lead over the rainbow bridge of CSS transforms to the clockwork kingdom of JavaScript. In the halls of the mechanist fairylords we shall unleash epic transition magicks and obtain the fabled three keys that control the overworld interface.
 
@@ -136,7 +137,7 @@ The guardian of the rainbow bridge imparts on us the wisdom of stylish structura
       margin-left: -1px;
       margin-top: -1px;
     }
-    
+
 
 In thus creating a somewhat paper-shaped style for our HTML, we arrive at the trillion-geared gates of the JavaScript kingdom. To pass through the gate, we must turn our flat book into a proper volume. To add some volume to the book, we offset each page slightly on the z-axis.
 
@@ -153,7 +154,7 @@ In thus creating a somewhat paper-shaped style for our HTML, we arrive at the tr
       }
     }
     })();
-    
+
 
 Casting transition magic to impress the fairylords is not the most difficult of invocations. Yet, the results make the pages of our book animate their turning in a smooth fashion.
 
@@ -161,7 +162,7 @@ Casting transition magic to impress the fairylords is not the most difficult of 
     .book > div {
       +transition: 1s ease-in-out;
     }
-    
+
 
 Finally, to make the pages actually turn, we need to bind the events themselves to our cause.
 
@@ -195,10 +196,10 @@ Finally, to make the pages actually turn, we need to bind the events themselves 
     	  }
     	};
     })();
-    
+
 
 With that, we have acquired the "book" technology and can evacuate the overworld crystal towers and leave behind their blinding glare and the fierce nuclear fires of Achenar, the great blue star of the overworld nexus. We triumphantly return to our homes, brandishing our books high above our heads, ready for the inevitable cascade of parades and celebrations in our honor.
 
-You can see an example online [here](http://kig.github.com/html-book) and get the [full source](http://github.com/kig/html-book) for the examples. If you don't have CSS Regions in your browser, the example will look quite broken. In which case you can try [this example](http://kig.github.com/html-book/no_regions.html) instead.
+You can see an example online [here](https://fhtr.org/html-book/) and get the [full source](https://github.com/kig/html-book) for the examples. If you don't have CSS Regions in your browser, the example will look quite broken. In which case you can try [this example](https://fhtr.org/html-book/no_regions.html) instead.
 
 
