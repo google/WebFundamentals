@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn about all the ways you can pause your code in Chrome DevTools.
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-02-16 #}
 {# wf_published_on: 2017-02-03 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -320,7 +320,7 @@ Ensuring the target function is in scope can be tricky if you're
 calling `debug()` from the DevTools Console. Here's one strategy:
 
 1. Set a [line-of-code breakpoint](#loc) somewhere where the function is
-   scope.
+   in scope.
 1. Trigger the breakpoint.
 1. Call `debug()` in the DevTools Console while the code is still paused
    on your line-of-code breakpoint.
