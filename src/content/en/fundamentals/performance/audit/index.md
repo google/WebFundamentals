@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Auditing your site or app will help you build a resilient, performant experience — and highlight quick wins that can be implemented with minimal sign-off. An audit also gives you a baseline for data-driven development. Did a change make things better? How does your site compare with competitors?  You get metrics to prioritize effort, and concrete evidence to brag about once you've made improvements.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2018-08-16 #}
 {# wf_blink_components: N/A #}
 
@@ -61,7 +61,7 @@ first-time user sees it. Open the site an Incognito (Private) Window, or use bro
 disable caching and clear storage. This ensures that every asset is retrieved from the 
 network and not from a local cache, so you get an accurate picture of first-load performance.
 
-<div class="note"><a href="(https://www.webpagetest.org">WebPagetest</a> is a free service that 
+<div class="note"><a href="https://www.webpagetest.org">WebPagetest</a> is a free service that 
 runs performance tests from multiple locations globally using real browsers with real connections, 
 to provide detailed metrics and optimization advice.
   <ul>
@@ -83,13 +83,12 @@ Take a look at our guide: [How To Think About Speed Tools](/web/fundamentals/per
 
 If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
 
-* HTTPS: [every site should deliver all assets over HTTPS]
-  (/web/fundamentals/security/encrypt-in-transit/why-https). 
-* Server settings: your web server or CDN should [use compression correctly]
-  (/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), 
-  [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers]
-  (/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your 
-  browser to cache resources.
+* HTTPS: [every site should deliver all assets over HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https). 
+* Server settings: your web server or CDN should 
+  [use compression correctly](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), 
+  [use HTTP/2](/web/fundamentals/performance/http2/), 
+  and [include appropriate headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching) 
+  to enable your browser to cache resources.
 * Script elements that can be moved to the bottom of the page and/or given 
   an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-
   javascript-execution-explained/){: .external} attribute.
