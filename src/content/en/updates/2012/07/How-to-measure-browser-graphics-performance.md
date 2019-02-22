@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-07-22 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-07-22 #}
 {# wf_tags: news,benchmark,graphics #}
+{# wf_blink_components: N/A #}
 
 # How to measure browser graphics performance {: .page-title }
 
@@ -41,7 +42,7 @@ Example time! Here's a small code snippet with a benchmarking `tick` function. T
         }
     };
     requestAnimationFrame(tick);
-    
+
 ​
 See [the live example at jsFiddle](http://jsfiddle.net/tbhZs/){: .external }
 

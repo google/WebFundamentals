@@ -43,7 +43,7 @@ use it. In this article, I will show you some things that are particular to
 ## What can &lt;model-viewer> do?
 
 More specifically, what can it do now? I'll show you its current capabilities.
-You'll get a great experience today, and `&lt;model-viewer>` will get better
+You'll get a great experience today, and `<model-viewer>` will get better
 over time as we add new features and improve rendering quality. The examples
 I've provided are just to give you a sense of what it does. If you want to try
 them there are installation and usage instructions in [its GitHub

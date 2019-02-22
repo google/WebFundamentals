@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2019-01-31 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -149,10 +149,10 @@ to go completely full screen.
     <tr>
       <td><code>minimal-ui</code></td>
       <td>
-        <b>Not supported by Chrome</b><br>
         This mode is similar to <code>fullscreen</code>, but provides the
         user with some means to access a minimal set of UI elements for
-        controlling navigation (i.e., back, forward, reload, etc).
+        controlling navigation (i.e., back, forward, reload, etc).<br>
+        <b>Note:</b> Only supported by Chrome on mobile.
       </td>
     </tr>
     <tr>
