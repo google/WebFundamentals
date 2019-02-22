@@ -44,8 +44,8 @@ more time you can also record results from other tools:
   Panel](/web/tools/chrome-devtools/network-performance/): load timings;
   resource sizes and number of requests for HTML, CSS, JavaScript, images, fonts and other files.
 * Chrome Task Manager: if your site constantly uses significant CPU or more memory than other apps
-  then you may need to fix memory leaks, task running or resource loading problems. Make sure to test
-  your site on devices representative of your users.
+  then you may need to fix memory leaks, task running or resource loading problems. 
+  Make sure to test your site on devices representative of your users.
 * [WebPagetest](https://www.webpagetest.org/easy){: .external}: performance for different locations
   and connection types, caching, time to first byte, CDN usage.
 * [Pagespeed
