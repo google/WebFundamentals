@@ -89,9 +89,9 @@ If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
   [use HTTP/2](/web/fundamentals/performance/http2/), 
   and [include appropriate headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching) 
   to enable your browser to cache resources.
-* Script elements that can be moved to the bottom of the page and/or given 
-  an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-
-  javascript-execution-explained/){: .external} attribute.
+* Script elements that can be moved to the bottom of the page and/or given an 
+  [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/){: .external} 
+  attribute.
 * JavaScript and libraries that can be removed.
 * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
   and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
