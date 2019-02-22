@@ -16,21 +16,3 @@ social_media:
     width: 1200
     height: 675
 gcs_id: ylj5ifxusvvmr4pp6ae5lwrctq
-announcement:
-  description: |
-    <style>
-      .devsite-banner-announcement {
-        background-color: #e8f0fe;
-        color: #424242;
-        font-weight: 500;
-      }
-      .devsite-banner-announcement :link,
-      .devsite-banner-announcement :visited {
-        background: #e8f0fe;
-        color: #039BE5;
-      }
-      .devsite-banner-announcement span.material-icons {
-        vertical-align: middle;
-        margin-right: 8px;
-      }
-    </style> Missed the action at the 2018 <b>Chrome Dev Summit</b>? Catch up with our playlist on the Google Chrome Developers channel on YouTube. <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF" class="gc-analytics-event" data-category="webFu" data-label="cds-watch-playlist">Watch now.</a>
