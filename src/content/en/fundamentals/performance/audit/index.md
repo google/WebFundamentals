@@ -41,20 +41,20 @@ more time you can also record results from other tools:
 
 * [Chrome DevTools Security panel](/web/tools/chrome-devtools/security): HTTPS usage.
 * [Chrome DevTools Network
-Panel](/web/tools/chrome-devtools/network-performance/): load timings;
-resource sizes and number of requests for HTML, CSS, JavaScript, images, fonts and other files.
+  Panel](/web/tools/chrome-devtools/network-performance/): load timings;
+  resource sizes and number of requests for HTML, CSS, JavaScript, images, fonts and other files.
 * Chrome Task Manager: if your site constantly uses significant CPU or more memory than other apps
-then you may need to fix memory leaks, task running or resource loading problems. Make sure to test
-your site on devices representative of your users.
+  then you may need to fix memory leaks, task running or resource loading problems. Make sure to test
+  your site on devices representative of your users.
 * [WebPagetest](https://www.webpagetest.org/easy){: .external}: performance for different locations
-and connection types, caching, time to first byte, CDN usage.
+  and connection types, caching, time to first byte, CDN usage.
 * [Pagespeed
-Insights](/speed/pagespeed/insights/): load performance, data cost and
-resource usage, including Chrome User Experience report data highlighting real-world performance
-statistics.
+  Insights](/speed/pagespeed/insights/): load performance, data cost and
+  resource usage, including Chrome User Experience report data highlighting real-world performance
+  statistics.
 * [Speed Scorecard and Impact
-Calculator](https://www.thinkwithgoogle.com/feature/mobile/){: .external}: compare site speed
-against peers and estimate the potential revenue opportunity of improving site speed.
+  Calculator](https://www.thinkwithgoogle.com/feature/mobile/){: .external}: compare site speed
+  against peers and estimate the potential revenue opportunity of improving site speed.
 
 Make sure to test your website as a
 first-time user sees it. Open the site an Incognito (Private) Window, or use browser tools to
@@ -83,23 +83,22 @@ Take a look at our guide: [How To Think About Speed Tools](/web/fundamentals/per
 
 If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
 
-  * HTTPS: [every site should deliver all assets over HTTPS]
-    (/web/fundamentals/security/encrypt-in-transit/why-https).
-  * Server settings: your web server or CDN should [use compression correctly]
-    (/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), 
-    [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers]
-    (/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your 
-    browser to cache resources.
-  * Script elements that can be moved to the bottom of the page and/or given 
-    an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-
-    javascript-execution-explained/){: .external} attribute.
-  * JavaScript and libraries that can be removed.
-  * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
-    and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
-  * Images that can be saved with higher compression or smaller pixel dimensions.
-  * Image files that would be smaller saved using a different format, for example 
-    photos saved as PNGs.
-
+* HTTPS: [every site should deliver all assets over HTTPS]
+  (/web/fundamentals/security/encrypt-in-transit/why-https). 
+* Server settings: your web server or CDN should [use compression correctly]
+  (/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), 
+  [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers]
+  (/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your 
+  browser to cache resources.
+* Script elements that can be moved to the bottom of the page and/or given 
+  an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-
+  javascript-execution-explained/){: .external} attribute.
+* JavaScript and libraries that can be removed.
+* [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
+  and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
+* Images that can be saved with higher compression or smaller pixel dimensions.
+* Image files that would be smaller saved using a different format, for example 
+  photos saved as PNGs.
 
 ## Audience, stakeholders, context
 
