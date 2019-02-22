@@ -83,16 +83,22 @@ Take a look at our guide: [How To Think About Speed Tools](/web/fundamentals/per
 
 If nothing else, simply use [Lighthouse](/web/tools/lighthouse/) to check for:
 
-  * HTTPS: [every site should deliver all assets over HTTPS](/web/fundamentals/security/encrypt-in-transit/why-https).
-  * Server settings: your web server or CDN should [use compression correctly](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers](/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your browser to cache resources.
+  * HTTPS: [every site should deliver all assets over HTTPS]
+    (/web/fundamentals/security/encrypt-in-transit/why-https).
+  * Server settings: your web server or CDN should [use compression correctly]
+    (/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer), 
+    [use HTTP/2](/web/fundamentals/performance/http2/), and [include appropriate headers]
+    (/web/fundamentals/performance/optimizing-content-efficiency/http-caching) to enable your 
+    browser to cache resources.
   * Script elements that can be moved to the bottom of the page and/or given 
-an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/){: .external} attribute.
+    an [async or defer](http://peter.sh/experiments/asynchronous-and-deferred-
+    javascript-execution-explained/){: .external} attribute.
   * JavaScript and libraries that can be removed.
   * [Unused CSS](https://umaar.com/dev-tips/121-css-coverage/){: .external} 
-and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
+    and [unused JavaScript](/web/updates/2017/04/devtools-release-notes).
   * Images that can be saved with higher compression or smaller pixel dimensions.
   * Image files that would be smaller saved using a different format, for example 
-photos saved as PNGs.
+    photos saved as PNGs.
 
 
 ## Audience, stakeholders, context
