@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-07-04 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-07-04 #}
 {# wf_tags: news,gpu,canvas,graphics #}
+{# wf_blink_components: N/A #}
 
 # Taking advantage of GPU acceleration in the 2D canvas {: .page-title }
 
