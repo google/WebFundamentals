@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Learn who are involved in the Web Payments ecosystem, how they interact each other and how you can get involved.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-25 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_blink_components: Blink>Payments #}
 
 # How the payment ecosystem works {: .page-title }
@@ -21,10 +21,10 @@ _Web Payments_ comprises multiple web standards.
     API](https://www.w3.org/TR/payment-request/) enables fast and easy checkouts
     through a native browser UI. It provides a consistent checkout flow while
     reducing the need for users to enter their shipping and payment information
-    on every checkout. Learn how it works at high level at [How payment request
-    api works](payments/basics/how-payment-request-api-works) or in detail at
+    on every checkout. Learn how it works at a high level at [How payment request
+    api works](/web/fundamentals/payments/basics/how-payment-request-api-works) or in detail at
     [Deep Dive into the Payment Request
-    API](payments/merchant-guide/deep-dive-into-payment-request).
+    API](/web/fundamentals/payments/merchant-guide/deep-dive-into-payment-request).
 *   **Payment Handler API:** The [Payment Handler
     API](https://w3c.github.io/payment-handler/) opens up the ecosystem to
     payment providers by allowing their web-based payment applications to act as
@@ -67,16 +67,16 @@ There are typically four participants in an online transaction.
   </tr>
   <tr>
    <td>Payment Service Providers (PSPs)</td>
-   <td>Third-party companies that actually process payments, 
-   which involves charging customers and crediting merchants. 
+   <td>Third-party companies that actually process payments,
+   which involves charging customers and crediting merchants.
    Alternatively called payment gateways or payment processors.
    </td>
    <td>Payment Request API</td>
   </tr>
   <tr>
    <td>Payment Handlers</td>
-   <td>Third-party companies which provide applications that typically 
-   store customers' payment credentials and on their authorization 
+   <td>Third-party companies which provide applications that typically
+   store customers' payment credentials and on their authorization
    provide them to merchants to process a transaction.
    </td>
    <td>Payment Handler API</td>

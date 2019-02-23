@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Understanding how payment methods are specified in the Payment Request API is mandatory for you. Learn 2 types of payment methods and how to create your own.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Payment Method Basics {: .page-title }
@@ -48,7 +48,7 @@ When the Payment Request UI is displayed to a customer during checkout, they see
 a subset of the payment methods specified by the merchant. The subset displayed
 to the user consists of all the payment methods available to the user on this
 device. The customer can select one of the methods to use for payment, as shown
-here. 
+here.
 
 <img src="../images/payment-method-basics/payment-methods.png" />
 
@@ -72,18 +72,18 @@ is not the future of web payments.
 
 There is a [registry of standardized payment
 methods](https://w3c.github.io/payment-method-id/#registry) in the spec, but
-there are other standardization candidates under active discussion. 
+there are other standardization candidates under active discussion.
 
 *   [Basic Credit Transfer
-    Payment](http://w3c.github.io/webpayments-methods-credit-transfer-direct-debit/)
+    Payment](https://w3c.github.io/payment-method-credit-transfer/)
     (basic-credit-transfer): A payment method to transfer money between bank
     accounts.
 *   [Tokenized Card
-    Payment](https://w3c.github.io/webpayments/proposals/interledger-payment-method.html)
+    Payment](https://w3c.github.io/webpayments/proposals/interledger/)
     (tokenized-card): A payment method that provides a token representing a card
     instead of a raw card number.
 *   [Interledger Payment
-    Method](https://w3c.github.io/webpayments/proposals/interledger-payment-method.html)
+    Method](https://w3c.github.io/webpayments/proposals/interledger/)
     (interledger): A payment method that transfers money using [the interledger
     protocol](https://interledger.org/).
 *   [Basic SEPAmail
@@ -127,7 +127,7 @@ as well as a specific `https://bobpay.xyz` method.
 
 Unlike standardized payment methods, URL-based payment methods have no registry.
 Anyone can develop and provide their own payment apps that support a payment
-method. This allows the Web Payments concept to inherently scale into quite 
+method. This allows the Web Payments concept to inherently scale into quite
 a large payment ecosystem.
 
 In the example below, Google Pay is invoked via its URL; any information to be
