@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-09-25 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2012-09-25 #}
 {# wf_tags: news,graphics,shaders,css #}
+{# wf_blink_components: N/A #}
 
 # Interactive Globe with CSS shaders & Google Maps {: .page-title }
 
@@ -15,7 +16,7 @@ book_path: /web/updates/_book.yaml
   </iframe>
 </div>
 
-Recently, I have read <a href="http://www.webmonkey.com/2012/09/adobes-css-shaders-now-an-official-web-standard/" title="" target="_blank">news on Webmonkey</a> that Adobe’s CSS Shaders proposal, which will bring high-quality cinematic effects to the web through some new CSS tools, has been accepted by the W3C. If you haven't seen it yet, watch the video.
+Recently, I have read <a href="https://www.wired.com/2012/09/adobes-css-shaders-now-an-official-web-standard/" title="" target="_blank">news on Webmonkey</a> that Adobe’s CSS Shaders proposal, which will bring high-quality cinematic effects to the web through some new CSS tools, has been accepted by the W3C. If you haven't seen it yet, watch the video.
 
 
 <!--The Web is developing so quickly, it surprises me.-->
@@ -29,7 +30,7 @@ Recently, I have read <a href="http://www.webmonkey.com/2012/09/adobes-css-shade
       class="globe"
       src="https://maps.google.com/?ie=UTF8&amp;amp;ll=14.597042,-15.625&amp;amp;spn=158.47027,316.054688&amp;amp;t=h&amp;amp;z=2&amp;amp;output=embed"
       scrolling="no"></iframe>
-    
+
 
     .globe {
       width: 550px;
@@ -46,10 +47,10 @@ Recently, I have read <a href="http://www.webmonkey.com/2012/09/adobes-css-shade
         lightColor 1 1 1 1,
         transform perspective(500));
     }
-    
+
 
 <p>
-Here, we're applying a vertex shader (<code>spherify.vs</code>) which will operate on a mesh that has 50 lines and 50 columns (<code>50 50 border-box</code>). Feel free to read the source of the vertex shader: <a href="http://is.gd/spherifyvs">spherify.vs</a>. It's written in <a href="http://en.wikipedia.org/wiki/GLSL">GLSL</a> but you can probably follow along.
+Here, we're applying a vertex shader (<code>spherify.vs</code>) which will operate on a mesh that has 50 lines and 50 columns (<code>50 50 border-box</code>). Feel free to read the source of the vertex shader: <a href="http://is.gd/spherifyvs">spherify.vs</a>. It's written in <a href="https://en.wikipedia.org/wiki/OpenGL_Shading_Language">GLSL</a> but you can probably follow along.
 </p>
 <p>The <code>mix()</code> function provides basic functionalities for color manipulation like blending and alpha compositing on a fragment shader. </p>
 
@@ -71,7 +72,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 <p><small>If you just see a flat google maps above, you can enable it with the instructions below</small></p>
 
 ### Browsers support: CSS shaders
-<p>This is currently cutting-edge, so it's only available in the latest <a href="https://www.google.com/intl/en/chrome/browser/canary.html" title="Download Google Chrome Canary" target="_blank">Google Chrome Canary</a> and WebKit nightly. To enjoy the full experience you'll need to turn a few knobs.
+<p>This is currently cutting-edge, so it's only available in the latest <a href="https://www.google.com/intl/en/chrome/canary/" title="Download Google Chrome Canary" target="_blank">Google Chrome Canary</a> and WebKit nightly. To enjoy the full experience you'll need to turn a few knobs.
 </p>
 #### Chrome Canary steps:
 <ul>
@@ -81,7 +82,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 </ul>
 #### WebKit nightly steps
 <ul>
-	<li>Download and install <a href="http://nightly.webkit.org/" title="Download WebKit nightly build for Mac" target="_blank">WebKit nightly</a> for Mac OSX</li>
+	<li>Download and install <a href="https://webkit.org/build-archives/" title="Download WebKit nightly build for Mac" target="_blank">WebKit nightly</a> for Mac OSX</li>
 	<li>Open the browser's preferences panel. Go to <b>Advanced</b> tab and tick to show <b>Develop > Enable WebGL</b> menu in the menu bar.</li>
 	<li>In the browser's menu bar select <b>Develop </b></li>
 </ul>
@@ -91,8 +92,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 <aside class="bio clearfix" style="border: 3px double #CCC;
 padding: 10px;">
 
-Avaz Bokiev is a web developer in NYC. <a href="https://twitter.com/samarkandiy">Follow him at @samarkandiy</a>, check out his recent experiments (including CSS Shader ones) at <a href="http://codepen.io/html5web">codepen.io/html5web</a> and his blog at <a href="http://azik.me/">azik.me</a>.
+Avaz Bokiev is a web developer in NYC. Check out his recent experiments (including CSS Shader) <a href="/web/updates/2012/09/Interactive-Globe-with-CSS-shaders-Google-Maps">here</a> and his blog at <a href="https://avaz.me/">avaz.me</a>.
 
 </aside>
-
 
