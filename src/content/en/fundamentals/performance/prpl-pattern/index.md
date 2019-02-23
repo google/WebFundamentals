@@ -215,7 +215,7 @@ request-response.
 
 With HTTP/1, developers bundle resources to reduce the number of HTTP
 requests required to render a page. However, bundling can reduce the efficiency
-of the browser's cache. if resources for each page are combined into a single
+of the browser's cache. If resources for each page are combined into a single
 bundle, each page gets its own bundle, and the browser can't identify shared
 resources.
 
