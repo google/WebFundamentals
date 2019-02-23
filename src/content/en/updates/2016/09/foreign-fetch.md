@@ -240,4 +240,3 @@ The browser starts from the top and, depending on the service worker implementat
 Chrome's implementation of the foreign fetch Origin Trial is subject to change as we address feedback from developers. We'll keep this post up to date via inline changes, and will make note the specific changes below as they happen. We'll also share information about major changes via the [@chromiumdev](https://twitter.com/@chromiumdev) Twitter account.
 
 
-{% include "comment-widget.html" %}

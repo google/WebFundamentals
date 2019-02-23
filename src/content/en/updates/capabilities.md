@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-11-09 #}
+{# wf_updated_on: 2019-01-28 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -9,6 +9,9 @@ book_path: /web/updates/_book.yaml
 {# wf_blink_components: N/A #}
 
 # Capabilities {: .page-title }
+
+> **We want to close the capability gap between the web and native and make it
+> easy for developers to build great experiences on the open web.**
 
 There are some capabilities, like file system access, idle detection, and
 more that are available to native but aren’t available on the web. These
@@ -19,12 +22,10 @@ We strongly believe that every developer should have access to the capabilities
 they need to make a great web experience, and we are committed to a more
 capable web.
 
-We want to close the capability gap between the web and native and make it
-easy for developers to build great experiences on the open web. We plan to
-design and develop these new capabilities in an open and transparent way,
-using the existing open web platform standards processes while getting early
-feedback from developers and other browser vendors as we iterate on the
-design, to ensure an interoperable design.
+We will design and develop these new capabilities in an
+[open and transparent way](#process), using the existing open web platform
+standards processes while getting early feedback from developers and other
+browser vendors as we iterate on the design, to ensure an interoperable design.
 
 ## In flight {: #in-flight }
 
@@ -37,13 +38,75 @@ design, to ensure an interoperable design.
   </thead>
   <tbody>
     <tr>
-      <td><a href="/web/updates/2018/11/writable-files">Writable Files API</a></td>
+      <td>
+        <a href="/web/updates/2018/12/badging-api">Badging API</a>
+      </td>
+      <td>
+        The Badging API is a new web platform API that allows installed web
+        apps to set an application-wide badge, shown in an
+        operating-system-specific place associated with the application, such
+        as the shelf or home screen. Badging makes it easy to subtly notify
+        the user that there is some new activity that might require their
+        attention, or it can be used to indicate a small amount of information,
+        such as an unread count.
+        <br><br>
+        <b>Current Status:</b> Available as an origin trial.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/get-installed-related-apps">
+          Get Installed Related Apps API
+        </a>
+      </td>
+      <td>
+        The <code>getInstalledRelatedApps</code> API is a new web platform API
+        that allows your web app to check to see if your native app is
+        installed on the users device, and vice versa.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2019/01/shape-detection">Shape Detection API</a>
+      </td>
+      <td>
+        The Shape Detection API opens up native implementations of shape
+        detection services and exposes them through a set of JavaScript
+        interfaces. Currently, the supported features are face detection,
+        barcode detection, and text detection (Optical Character Recognition).
+        <br><br>
+        <b>Current Status:</b> Available as an origin trial.
+      </td>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/wakelock">Wake Lock API</a>
+      </td>
+      <td>
+        To avoid draining the battery, most devices will quickly fall asleep
+        when left idle. While this is fine for most of the time, there are
+        some applications that need to keep the screen or the device awake in
+        order to complete some work. The Wake Lock API provides a way to
+        prevent the device from dimming or locking the screen or prevent
+        the device from going to sleep when an application needs to keep
+        running.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/11/writable-files">Writable Files API</a>
+      </td>
       <td>
         The writable files API is designed to increase interoperability of
         web applications with native applications, making it possible for users
         to choose files or directories that a web app can interact with on the
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
+        <br><br>
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
       </td>
     </tr>
     <tr>
@@ -55,7 +118,35 @@ design, to ensure an interoperable design.
   </tbody>
 </table>
 
+## Launched {: #launched }
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="/web/updates/2018/12/web-share-target">Web Share Target</a>
+      </td>
+      <td>
+        The Web Share Target API allows installed web apps to register with
+        the underlying OS as a share target to receive shared content from
+        either the Web Share API or system events, like the OS-level share
+        button.
+        <br><br>
+        <b>Status:</b> Launched in Chrome 71
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## How will we design & implement these new capabilities? {: #process }
+
+<img src="/web/updates/images/misc/capabilities-process.jpg">
 
 We developed this process to make it possible to design and develop new web
 platform capabilities that meet the needs of developers quickly, in the open,
@@ -124,6 +215,8 @@ process](https://www.chromium.org/blink/launching-features) have been completed,
 it’s time to ship it.
 
 
+<div class="clearfix"></div>
 
+{% include "web/_shared/helpful.html" %}
 
 

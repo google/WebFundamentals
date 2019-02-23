@@ -17,4 +17,3 @@ description: Learn how to show the function definition of a registered event lis
 Navigate to the Event Listeners pane and browse the events registered on any node. You can also view the source of an event listener by selecting Show Function Definition in the context menu.
 
 
-{% include "comment-widget.html" %}

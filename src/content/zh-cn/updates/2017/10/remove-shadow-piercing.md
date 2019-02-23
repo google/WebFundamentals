@@ -41,4 +41,3 @@ Note: 目前JavaScript API如`querySelector()` 和`querySelectorAll()`会继续�
 Translated by
 {% include "web/_shared/contributors/henrylim.html" %}
 
-{% include "comment-widget.html" %}

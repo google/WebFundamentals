@@ -70,4 +70,3 @@ On Chrome for Android, because the notifications are minimized in the notificati
 
 Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/push-notifications)
 
-{% include "comment-widget.html" %}

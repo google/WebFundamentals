@@ -111,4 +111,3 @@ I was curious if using `:scope` in qS/qSA gives a performance boost. So...like a
 In my experiment, WebKit currently takes ~1.5-2x longer than not using `:scope`. Drats! When [crbug.com/222028](http://crbug.com/222028) gets fixed, **using it should theoretically give you a slight performance boost** over not using it.
 
 
-{% include "comment-widget.html" %}

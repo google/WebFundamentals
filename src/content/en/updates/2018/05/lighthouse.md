@@ -337,6 +337,4 @@ Osmani](/web/resources/contributors/addyosmani), and [Vinamrata
 Singal](/web/resources/contributors/vinamratasingal) for their valuable
 feedback, which significantly improved the quality of this article._
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/rss-widget-updates.html" %}

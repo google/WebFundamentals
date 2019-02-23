@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-10-23 #}
+{# wf_updated_on: 2019-02-08 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -16,7 +16,6 @@ makes it easy for users to install your Progressive Web App on their mobile
 or [desktop device](/web/progressive-web-apps/desktop). After the user
 accepts the prompt, your PWA will be added to their launcher, and it will run
 like any other installed app.
-
 
 Chrome handles most of the heavy lifting for you:
 
@@ -127,30 +126,7 @@ You can only call `prompt()` on the deferred event once. If the user dismisses
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
 
-## The mini-info bar
-
-<figure class="attempt-right">
-  <img
-      class="screenshot"
-      src="/web/updates/images/2018/06/a2hs-infobar-cropped.png">
-  <figcaption>
-    The mini-infobar
-  </figcaption>
-</figure>
-
-The mini-infobar is an interim experience for Chrome on Android as we work
-towards creating a consistent experience across all platforms that includes
-an install button into the omnibox.
-
-The mini-infobar is a Chrome UI component and is not controllable by the site,
-but can be easily dismissed by the user. Once dismissed by the user, it will
-not appear again until a sufficient amount of time has passed
-(currently 3 months). The mini-infobar will appear when the site meets the
-[add to home screen criteria](/web/fundamentals/app-install-banners/#criteria),
-regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
-or not.
-
-Note: The mini-info bar is not displayed on desktop devices.
+<<_mini-info-bar.md>>
 
 ## Feedback {: .hide-from-toc }
 

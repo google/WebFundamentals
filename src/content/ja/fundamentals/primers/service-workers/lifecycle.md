@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Service Worker のライフサイクルの詳細
 
-{# wf_updated_on: 2017-07-12 #}
-{# wf_published_on: 2016-09-29 #}
+{# wf_updated_on:2019-02-06 #}
+{# wf_published_on:2016-09-29 #}
+{# wf_blink_components:Blink>ServiceWorker #}
 
 # Service Worker のライフサイクル {: .page-title }
 
@@ -11,11 +12,9 @@ description: Service Worker のライフサイクルの詳細
 
 Service Worker のライフサイクルは、最も複雑な部分です。その目的やメリットがわからない場合は、戦いを挑まれているかのようでしょう。しかしいったんその仕組みがわかれば、ウェブとネイティブ パターンのよいところを組み合わせて、ユーザーにシームレスかつ目立たないようにアップデートを提供できます。
 
-
 ここでは詳細を説明しますが、各セクションの先頭に必要な知識を箇条書きで示します。
 
-
-##  目的
+## 目的
 
 ライフサイクルの目的は次のとおりです。
 
@@ -26,20 +25,17 @@ Service Worker のライフサイクルは、最も複雑な部分です。そ�
 
 最後の 1 つは非常に重要です。Service Worker がない場合、ユーザーは 1 つのタブをサイトに読み込み、後で別のタブを開くことができます。これにより、同時に 2 つのバージョンのサイトが動作することになります。これでも正常に動作することがありますが、ストレージを処理する場合は、最終的に共有ストレージの管理方法が大きく異なる 2 つのタブが存在することになります。これにより、エラーが発生するか、もっと悪い場合はデータが失われる可能性があります。
 
-
-Warning: ユーザーはデータが失われるのを非常に嫌います。悲痛な気持ちになります。
+Note: ユーザーはデータが失われるのを非常に嫌います。悲痛な気持ちになります。
 
 ##  最初の Service Worker
 
 概要:
 
 * Service Worker が最初に取得するのは `install` イベントであり、これは一度だけ発生します。
-* `installEvent.waitUntil()` に渡された Promise によって、インストールの時間と成功または失敗が通知されます。
+* `installEvent.waitUntil()` に渡された Promise によって、インストールにかかった時間と成功または失敗が通知されます。
 * Service Worker は、インストールが正常に終了して「アクティブ」になるまで `fetch` や `push` などのイベントを受信しません。
-* デフォルトでは、ページ リクエスト自体が Service Worker を通過した場合を除き、ページの fetch は Service Worker を通過することはありません。
-そのため、Service Worker の効果を確認するには、ページを更新する必要があります。
+* デフォルトでは、ページ リクエスト自体が Service Worker を通過する場合を除き、ページのフェッチが Service Worker を通過することはありません。そのため、Service Worker の効果を確認するには、ページを更新する必要があります。
 * `clients.claim()` はこのデフォルトをオーバーライドし、制御対象外のページを制御下に置くことができます。
-
 
 <style>
   .framebox-container-container {
@@ -64,9 +60,16 @@ Warning: ユーザーはデータが失われるのを非常に嫌います。�
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -219,7 +222,7 @@ Warning: ユーザーはデータが失われるのを非常に嫌います。�
 
 これは Service Worker を登録し、3 秒後に犬の画像を追加します。
 
-その Service Worker `sw.js` は次のとおりです。
+その Service Worker は次のとおりです。`sw.js`:
 
     self.addEventListener('install', event => {
       console.log('V1 installing…');
@@ -244,114 +247,79 @@ Warning: ユーザーはデータが失われるのを非常に嫌います。�
       }
     });
 
-猫の画像をキャッシュし、`/dog.svg` のリクエストがあるたびに表示します。
-ただし、[上記の例を実行](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}した場合、ページを最初に読み込んだときは犬が表示されます。
-更新を押すと、猫が表示されます。
+これは、猫の画像をキャッシュし、`/dog.svg` のリクエストがあるたびに表示します。ただし、[上記の例を実行](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }した場合、ページを最初に読み込んだときは犬が表示されます。更新を押すと、猫が表示されます。
 
+注: 猫の方が犬よりいいですよね。まあ、*猫が好き*というだけのことですが。
 
-注: 猫の方が犬よりよいです。猫の方がよいと言ったらよいのです。
+### スコープと制御
 
-###  スコープと制御
+Service Worker 登録のデフォルトのスコープは、スクリプトの URL をルートにした相対的な `./` です。つまり、`//example.com/foo/bar.js` に Service Worker を登録すると、デフォルトのスコープは `//example.com/foo/` になります。
 
-Service Worker 登録のデフォルトのスコープは、スクリプト URL に対して相対的な `./` です。
-つまり、`//example.com/foo/bar.js` に Service Worker を登録すると、デフォルトのスコープは `//example.com/foo/` になります。
+ページ、ワーカー、共有ワーカーは、`clients` と呼ばれます。Service Worker で制御できるのは、スコープ内のクライアントのみです。クライアントが「制御」されるようになると、そのフェッチはスコープ内の Service Worker を通過するようになります。クライアントを制御している `navigator.serviceWorker.controller` が null と Service Worker インスタンスのどちらであるかを判別できます。
 
-
-ページ、ワーカー、共有ワーカーは、`clients` と呼ばれます。Service Worker で制御できるのは、スコープ内のクライアントのみです。
-クライアントが制御されるようになると、その fetch はスコープ内の Service Worker を通過するようになります。
-クライアントを制御している `navigator.serviceWorker.controller` が null と Service Worker インスタンスのどちらであるかを判別できます。
-
-
-
-###  ダウンロード、解析、実行
+### ダウンロード、解析、および実行
 
 最初の Service Worker は、`.register()` を呼び出すとダウンロードされます。スクリプトがダウンロードや解析に失敗したか、初期実行時にエラーをスローした場合、登録 Promise は棄却され、Service Worker は破棄されます。
 
-
-
 Chrome の DevTools によって、エラーがコンソールと [Application] タブの Service Worker セクションに表示されます。
 
-
 <figure>
-  <img src="images/register-fail.png" class="browser-screenshot" alt="Service Worker の DevTools タブに表示されたエラー">
+  <img src="images/register-fail.png" class="browser-screenshot" alt="Service Worker の DevTools タブに表示されたエラー"/>
 </figure>
 
-###  インストール
+### インストール
 
-Service Worker が最初に取得するイベントは `install` です。Service Worker が実行されるとすぐにトリガーされ、Service Worker ごとに一度だけ呼び出されます。Service Worker スクリプトを変更すると、ブラウザでは別の Service Worker と見なされ、その `install` イベントが取得されます。[アップデートの詳細については、後述します](#updates)。
+Service Worker が最初に取得するイベントは `install` です。このイベントは Service Worker が実行されるとすぐにトリガーされ、Service Worker ごとに一度だけ呼び出されます。Service Worker スクリプトを変更すると、ブラウザでは別の Service Worker と見なされ、その `install` イベントが取得されます。[アップデートの詳細については、後述します](#updates)。
 
+`install` イベントが発生すると、クライアントを制御する前に必要なものをすべてキャッシュできます。`event.waitUntil()` に Promise が渡されると、ブラウザはインストールの完了のタイミングと成功したかどうかを把握できます。
 
-`install` イベントが発生すると、クライアントを制御する前に必要なものをすべてキャッシュできます。
-`event.waitUntil()` に Promise が渡されると、ブラウザはインストールの完了のタイミングと成功したかどうかを把握できます。
+Promise が棄却されると、インストールは失敗したことになり、ブラウザは Service Worker を破棄します。クライアントは制御されません。つまり、`fetch` イベントでは、キャッシュに存在する「cat.svg」のみに依存することはできくなります。これは依存関係です。
 
+### アクティベート
 
-Promise が棄却されると、インストールは失敗したことになり、ブラウザは Service Worker を破棄します。
-クライアントは制御されません。つまり、`fetch` イベントではキャッシュに存在する「cat.svg」にのみ依存することになります。
-これは依存関係です。
+Service Worker がクライアントを制御したり、`push` や `sync` などの機能イベントを処理したりできるようになると、`activate` イベントを取得します。ただし、`.register()` を呼び出したページが制御されるようになるという意味ではありません。
 
-###  アクティベート
+[デモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }を最初に読み込んだ場合、Service Worker のアクティベート後しばらくしてから `dog.svg` をリクエストしても、Service Worker はリクエストの処理を行わず、犬の画像が表示されます。Service Worker なしでページが読み込まれ、サブリソースも読み込まれない場合、デフォルトは*一貫性*になります。[デモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){: .external }を 2 回目に読み込んだ場合（つまり、ページを更新した場合）は、Service Worker が制御するようになります。ページも画像も `fetch` イベントを通過し、猫が表示されます。
 
-Service Worker がクライアントを制御したり、`push` や `sync` などの機能イベントを処理したりできるようになると、`activate` イベントを取得します。
-ただし、`.register()` を呼び出したページが制御されるという意味ではありません。
-
-
-[デモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}を最初に読み込んだ場合、Service Worker のアクティベート後しばらくしてから `dog.svg` をリクエストしても、リクエストは処理されず、犬の画像が表示されます。Service Worker なしでページが読み込まれ、サブリソースも読み込まれない場合、デフォルトは「一貫性」です。
-[デモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external}を 2 回目に読み込んだ場合（つまり、ページを更新した場合）は制御されます。ページも画像も `fetch` イベントを通過し、猫が表示されます。
-
-
-
-
-###  clients.claim
+### `clients.claim`
 
 アクティベート後に Service Worker 内で `clients.claim()` を呼び出すことによって、制御されていないクライアントを制御できます。
 
+[前述のデモのバリエーション](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){: .external }（`activate` イベントで `clients.claim()` を呼び出す）を次に示します。最初に猫が表示される*はずです*。「はずです」というのは、タイミングによって異なるからです。猫が表示されるのは、画像が読み込まれる前に Service Worker がアクティベートされ、`clients.claim()` が有効になった場合のみです。
 
-[前述のデモのバリエーション](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){:
-.external}（`activate` イベントで `clients.claim()` を呼び出す）を次に示します。
-最初に猫が表示されるはずです。
-「はずです」というのは、タイミングによって異なるからです。猫が表示されるのは、画像が読み込まれる前に Service Worker がアクティベートされ、`clients.claim()` が有効になった場合のみです。
+ページをネットワーク経由で読み込む場合とは異なる Service Worker を使用した方法で読み込んだ場合、`clients.claim()` は問題になることがあります。それは、Service Worker は最終的にはそれがない状態で読み込まれた一部のクライアントを制御するためです。
 
-
-
-Service Worker を使用して、ページをネットワーク経由で読み込む場合とは異なる方法で読み込んだ場合、`clients.claim()` は問題になることがあります。それは、Service Worker は最終的にはそれがない状態で読み込まれた一部のクライアントを制御するためです。
-
-
-
-注: 多くのユーザーはボイラプレートとして `clients.claim()` を使用しているようですが、私自身はめったに使用しません。
-本当に重要になるのは最初の読み込み時のみであり、段階的な機能拡張により、ページは通常は Service Worker がなくても問題なく動作します。
-
-
+注: 多くのユーザーはボイラープレートとして `clients.claim()` を使用しているようですが、私自身はめったに使用しません。本当に重要になるのは最初の読み込み時のみであり、段階的な機能拡張により、ページは通常は Service Worker がなくても問題なく動作します。
 
 ##  Service Worker のアップデート{: #updates}
 
 概要:
 
-* アップデートは、次の場合にトリガーされます。
+* アップデートは、次の場合にトリガーされます:
     * スコープ内ページへのナビゲーション時
     * `push` や `sync` などの機能イベントの発生時（24 時間以内にアップデート チェックが実行された場合を除く）
-    * `.register()` の呼び出し時（Service Worker URL が変更された場合のみ）
-* アップデートの取得時、Service Worker スクリプトのキャッシュ ヘッダーが（最大 24 時間）優先されます。
-このオプトイン動作を行うのは、ユーザーを逃がさないためです。
-Service Worker スクリプトでは、`max-age` は 0 になります。
-* Service Worker がアップデート済みと見なされるのは、そのバイトレベルでブラウザに既にあるものと異なる場合です
-（これは、インポートされたスクリプトやモジュールも含むように拡張されています）。
-* アップデートされた Service Worker は、既存のものとともに起動され、`install` イベントを取得します。
+    * `.register()` の呼び出し時（Service Worker URL が変更された場合*のみ*）
+* ほとんどのブラウザ（[Chrome 68 以降](/web/updates/2018/06/fresher-sw)を含む）は、登録済みの Service Worker スクリプトが更新されているかどうかチェックするとき、デフォルトではキャッシュ ヘッダーを無視します。`importScripts()` で Service Worker 内に読み込まれたリソースを フェッチするときには、引き続きキャッシュ ヘッダーが優先されます。Service Worker 登録時に [`updateViaCache`](/web/updates/2018/06/fresher-sw#updateviacache) オプションを設定することで、このデフォルト動作をオーバーライドすることができます。
+* Service Worker がアップデートされていると見なされるのは、そのバイト数がブラウザに既にあるものと異なる場合です。（これは、インポートされたスクリプトやモジュールも含むように拡張されています）。
+* アップデートされた Service Worker は、既存のものとともに起動され、独自の `install` イベントを取得します。
 * 新しい Worker は、ステータス コードが正常でないか（たとえば 404）、解析に失敗するか、実行中にエラーをスローするか、インストール時に棄却される場合は破棄されますが、現行の Worker はアクティブなままです。
-* インストールに成功すると、アップデートされた Worker は、既存の Worker の制御しているクライアントがゼロになるまで `wait` 状態になります
-（クライアントは、更新中は重複します）。
+* インストールに成功すると、アップデートされた Worker は、既存の Worker の制御しているクライアントがゼロになるまで `wait` 状態になります（クライアントは、更新中は重複します）。
 * `self.skipWaiting()` は待機を回避します。つまり、Service Worker は、インストールが完了するとすぐにアクティベートされます。
-
 
 <div class="framebox-container-container">
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
+  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
+  crossorigin="anonymous" defer>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
+  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
+  crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
+  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
+  crossorigin="anonymous" defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -516,7 +484,6 @@ Service Worker スクリプトでは、`max-age` は 0 になります。
 
 猫ではなく馬の画像をレスポンスとして返すように Service Worker スクリプトを変更したとします。
 
-
     const expectedCaches = ['static-v2'];
 
     self.addEventListener('install', event => {
@@ -554,82 +521,51 @@ Service Worker スクリプトでは、`max-age` は 0 になります。
       }
     });
 
-注: 馬についてはっきりした意見はありません。
+注: 馬については特に好き嫌いはありません。
 
-[前述のデモを参照してください](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}。
-まだ猫の画像が表示されるはずです。その理由を次に説明します。
+[前述のデモを参照してください](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }。まだ猫の画像が表示されるはずです。その理由を次に説明します。
 
-###  インストール
+### インストール
 
-キャッシュ名を `static-v1` から `static-v2` に変更したことに注意してください。つまり、古い Service Worker でまだ使用されている現行のキャッシュ内のものを上書きせずに、新しいキャッシュをセットアップできます。
+キャッシュ名を `static-v1` から `static-v2` に変更したことに注意してください。つまり、古い Service Worker でまだ使用されている現行のキャッシュ内のものを上書きせずに、新しいキャッシュをセットアップできるということです。
 
+このパターンでは、バージョン固有のキャッシュが作成されます。これは、ネイティブ アプリがその実行可能ファイルにバンドルするアセットに似ています。`avatars` などのバージョン固有でないキャッシュを使用することもできます。
 
+### 待機
 
-このパターンでは、バージョン固有のキャッシュが作成されます。これは、ネイティブ アプリがその実行可能ファイルにバンドルするアセットに似ています。
-`avatars` などのバージョン固有でないキャッシュを使用することもできます。
+インストールに成功すると、アップデートされた Service Worker は、既存の Service Worker がクライアントを制御しなくなるまでアクティベートを遅らせます。この状態を「待機」といい、これによってブラウザでは同時に 1 つのバージョンの Service Worker のみが実行されることになります。
 
-
-###  待機
-
-インストールに成功すると、アップデートされた Service Worker は、既存の Service Worker がクライアントを制御しなくなるまでアクティベートを遅らせます。
-この状態は「待機中」と呼ばれ、これにより、ブラウザでは同時に 1 つのバージョンの Service Worker のみが実行されます。
-
-
-
-[アップデートされたデモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}を実行した場合、V2 Worker がまだアクティベートされていないため、まだ猫の画像が表示されるはずです。DevTools の [Application] タブで、新しい Service Worker が待機中であることを確認できます。
-
+[アップデートされたデモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }を実行してみると、V2 Worker がまだアクティベートされていないため、まだ猫の画像が表示されるはずです。DevTools の [Application] タブで、新しい Service Worker が待機中であることを確認できます。
 
 <figure>
-  <img src="images/waiting.png" class="browser-screenshot" alt="新しい Service Worker が待機中であることを示す DevTools">
+  <img src="images/waiting.png" class="browser-screenshot" alt="新しい Service Worker が待機中であることを示す DevTools"/>
 </figure>
 
-デモで 1 つのタブのみを開いている場合でも、ページを更新しただけでは新しいバージョンに引き継がれません。
-これは、ブラウザ ナビゲーションの動作によるものです。ナビゲートすると、現在のページはレスポンス ヘッダーを受信するまで消えません。さらに、レスポンスに `Content-Disposition` ヘッダーが含まれている場合、現在のページは消えないことがあります。このような重複があると、現行の Service Worker は、更新中は常にクライアントを制御していることになります。
+デモで 1 つのタブのみを開いている場合でも、ページを更新しただけでは新しいバージョンに引き継がれません。これは、ブラウザ ナビゲーションの動作によるものです。ナビゲートすると、現在のページはレスポンス ヘッダーを受信するまで消えません。さらに、レスポンスに `Content-Disposition` ヘッダーが含まれている場合、現在のページは消えないことがあります。このような重複があると、更新中は現行の Service Worker が常にクライアントを制御することになります。
 
+アップデートを取得するには、現行の Service Worker を使用しているすべてのタブを閉じるか、それらのタブから移動します。次に、[再びデモに移動](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }すると、馬が表示されるはずです。
 
-アップデートを取得するには、現行の Service Worker を使用しているすべてのタブを閉じるか、それらのタブから移動します。
-次に、[再びデモに移動](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}すると、馬が表示されるはずです。
+このパターンは、Chrome のアップデート方法に似ています。Chrome のアップデートはバックグラウンドでダウンロードされますが、Chrome が再起動するまで適用されません。再起動までの間、中断することなく引き続き現行バージョンを使用できます。とはいっても、このことは開発時には問題となります。そこで、DevTools にはこれを軽減する方法があります。これについては[後で](#devtools)説明します。
 
+### アクティベート
 
-このパターンは、Chrome のアップデート方法に似ています。Chrome のアップデートはバックグラウンドでダウンロードされますが、Chrome が再起動するまで適用されません。
-とりあえずは、引き続き混乱なしに現行バージョンを使用できます。
-これは開発中は問題となりますが、DevTools にはこれを簡単にする方法があります。これについては[後で](#devtools)説明します。
+アクティベートにより、古い Service Worker はなくなり、新しい Service Worker がクライアントを制御できるようになります。これは、データベースの移行やキャッシュの消去など、古い Worker を使用中に実行できなかったことを実行するのに最適なタイミングです。
 
+前述のデモでは、必要なキャッシュのリストを保持し、`activate` イベントでそれ以外のすべてのキャッシュを消去して、古い `static-v1` キャッシュを削除しています。
 
+Note: 前のバージョンからアップデートしていない場合があります。その場合は、Service Worker が数世代前のバージョンである可能性があります。
 
-###  アクティベート
+Promise を `event.waitUntil()` に渡すと、Promise が解決されるまで機能イベント（`fetch`、`push`、`sync` など）がバッファされます。そして、`fetch` イベントが発生すると、アクティベーションは完了します。
 
-アクティベートにより、古い Service Worker はなくなり、新しい Service Worker でクライアントを制御できるようになります。
-これは、データベースの移行やキャッシュの消去など、古い Worker の使用中に実行できなかったことを実行するのに最適な時間です。
+Note: Cache Storage API は、（localStorage や IndexedDB のように）「オリジン ストレージ」です。同じオリジンで多くのサイト（`yourname.github.io/myapp` など）を実行する場合は、他のサイトのキャッシュを削除しないように注意してください。これを回避するため、`myapp-static-v1` のようにキャッシュ名に現在のサイトに固有の接頭辞を付け、`myapp-` で始まらないキャッシュには触れないようにします。
 
-
-
-前述のデモでは、必要なキャッシュのリストを保持し、`activate` イベントで他のキャッシュを消去して、古い `static-v1` キャッシュを削除しています。
-
-
-
-Warning: 前のバージョンからアップデートしていない場合があります。その場合は、Service Worker の古いバージョンが多数存在する可能性があります。
-
-Promise を `event.waitUntil()` に渡すと、Promise が解決されるまで機能イベント（`fetch`、`push`、`sync` など）がバッファされます。
-そのため、`fetch` イベントが発生すると、アクティベーションは完了します。
-
-
-Warning: Cache Storage API は、（localStorage や IndexedDB のように）「オリジン ストレージ」です。同じオリジンで多くのサイト（`yourname.github.io/myapp` など）を実行する場合は、他のサイトのキャッシュを削除しないように注意してください。これを回避するには、`myapp-static-v1` のようにキャッシュ名に現在のサイトに固有の接頭辞を付け、`myapp-` で始まらないキャッシュには触れないようにします。
-
-
-###  待機段階のスキップ
+### 待機段階のスキップ
 
 待機段階とは、一度に 1 つのバージョンのサイトのみを実行していることを意味しますが、その機能が不要になった場合には、`self.skipWaiting()` を呼び出して新しい Service Worker をすぐにアクティベートできます。
 
+これにより、Service Worker は現在アクティブな Worker を追い出し、待機段階に入るとすぐに（または、既に待機段階に入っている場合は即座に）自身をアクティベートします。この場合、Worker はインストールをスキップ*するのではなく*、待機だけをスキップします。
 
-
-これにより、Service Worker は現在アクティブな Worker を追い出し、待機段階に入るとすぐに（または、既に待機段階に入っている場合は即座に）自身をアクティベートします。Worker はインストールをスキップせず、待機するだけです。
-
-待機中または待機前は、`skipWaiting()` をいつ呼び出しても実際には問題にはなりません。
-通常は `install` イベントで呼び出します。
+待機中または待機前であれば、`skipWaiting()` をいつ呼び出しても実際には問題にはなりません。通常は `install` イベントで呼び出します。
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -639,22 +575,15 @@ Warning: Cache Storage API は、（localStorage や IndexedDB のように）�
       );
     });
 
-ただし、Service Worker への `postMessage()` の結果として呼び出すことが必要になる場合があります。
-ユーザー インタラクションの後で `skipWaiting()` が必要になります。
+ただし、Service Worker への `postMessage()` の結果として呼び出すこともできます。たとえば、ユーザー インタラクションの後で `skipWaiting()` が必要になる場合などです。[`skipWaiting()` を使用するデモをご覧ください](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){: .external }。
 
-[`skipWaiting()` を使用するデモをご覧ください](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
-.external}。
-移動しなくても牛の画像が表示されるはずです。`clients.claim()` と同様にレースであるため、ページが画像を読み込もうとする前に新しい Service Woker がフェッチ、インストール、アクティベートを行うと、牛のみが表示されます。
+移動しなくても牛の画像が表示されるはずです。`clients.claim()` の場合と同じように、ここでも競争となるため、新しい Service Woker がフェッチ、インストール、アクティベートを行ってからページが画像を読み込むと、牛が表示されるということです。
 
+Note: `skipWaiting()` は、古いバージョンで読み込まれたページを新しい Service Worker で制御することを意味します。つまり、ページのフェッチの一部は古い Service Worker で処理され、その後のフェッチは新しい Service Worker で処理されます。これが問題になる可能性がある場合は、`skipWaiting()` を使用しないでください。
 
-
-Warning: `skipWaiting()` は、古いバージョンで読み込まれたページを新しい Service Worker で制御することを意味します。つまり、ページのフェッチの一部は古い Service Worker で処理され、その後のフェッチは新しい Service Worker で処理されます。これで問題になる可能性がある場合は、`skipWaiting()` を使用しないでください。
-
-
-###  手動アップデート
+### 手動アップデート
 
 前述したとおり、ブラウザはナビゲーションや機能イベントの後、自動的にアップデートを確認しますが、手動でトリガーすることもできます。
-
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
       // sometime later…
@@ -663,75 +592,54 @@ Warning: `skipWaiting()` は、古いバージョンで読み込まれたペー�
 
 ユーザーがサイトを再読み込みすることなく長時間使用できるようにするには、`update()` を定期的に呼び出す必要があります（1 時間ごとなど）。
 
+### Service Worker スクリプトの URL の変更の回避
 
-###  Service Worker スクリプトの URL の変更の回避
-
-[キャッシュのベスト プラクティスに関する私の投稿](https://jakearchibald.com/2016/caching-best-practices/){: .external}をご覧になったことがある場合は、Service Worker の各バージョンに一意の URL を指定することを検討するかもしれません。**その必要はありません。
-
-
-**通常、これは Service Worker に対してはベスト プラクティスどころかまったくお勧めできないので、現在の場所にあるスクリプトのみアップデートしてください。
-
+[キャッシュのベスト プラクティスに関する私の投稿](https://jakearchibald.com/2016/caching-best-practices/){: .external }をご覧になったことがある場合は、Service Worker の各バージョンに一意の URL を指定することを検討するかもしれません。**その必要はありません。** 通常、これは Service Worker に対してはまったくおすすめできないので、現在の場所にあるスクリプトをアップデートするだけにしてください。
 
 次のような問題が発生する可能性があるからです。
 
 1. `index.html` は `sw-v1.js` を Service Worker として登録します。
-1. `sw-v1.js` は、オフライン ファーストで動作するように `index.html` をキャッシュし、表示します。
+1. `sw-v1.js` は、オフライン ファーストで動作するように `index.html` をキャッシュし提供します。
 1. `index.html` をアップデートすると、新しい `sw-v2.js` が登録されます。
 
-このようにすると、ユーザーは `sw-v2.js` を取得しません。`sw-v1.js` はキャッシュから古いバージョンの `index.html` を表示するからです。
-Service Worker をアップデートするために、Service Worker をアップデートすることが必要になるという状況になってしまいました。これはいけません。
+このようにすると、ユーザーは `sw-v2.js` を取得しません。`sw-v1.js` はキャッシュから古いバージョンの `index.html` を提供するからです。Service Worker をアップデートするために、Service Worker をアップデートすることが必要になるという状況になってしまいました。これはいけません。
 
-ただし、[上記のデモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}では、Service Worker の URL を変更しています。
-デモ目的で、バージョンを切り替えることができるようにしています。
-本番環境でこのようにすることはありません。
+ただし、[上記のデモ](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){: .external }では、Service Worker の URL を*変更しています*。デモ目的で、バージョンを切り替えることができるようにしています。本番環境でこのようにすることはありません。
 
+## 開発の簡素化 {: #devtools}
 
-##  開発の簡素化{: #devtools}
+Service Worker のライフサイクルは、ユーザーを考慮して構築されていますが、開発時は少し問題があります。幸いなことに、この問題に役立つツールがあります。
 
-Service Worker のライフサイクルは、ユーザーを考慮して構築されていますが、開発時は少し問題があります。
-幸いなことに、この問題に役立つツールがあります。
-
-###  再読み込み時のアップデート
+### 再読み込み時のアップデート
 
 これは私のお気に入りです。
 
 <figure>
-  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools の [Update on reload]">
+  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools の [Update on reload]"/>
 </figure>
 
-これにより、ライフサイクルはデベロッパーにとって使いやすくなります。各ナビゲーションにより次が行われます。
+これにより、ライフサイクルはデベロッパーにとって使いやすくなります。各ナビゲーションにより次のことが行われます。
 
 1. Service Worker を再取得します。
 1. バイトレベルで同じでも、それを新しいバージョンとしてインストールします。つまり、`install` イベントが実行され、キャッシュがアップデートされます。
 1. 新しい Service Worker がアクティベートされるように、待機段階をスキップします。
-1. ページをナビゲートします。
-
-
-つまり、2 回再読み込みしたりタブを閉じたりすることなく、ナビゲーション（更新など）ごとにアップデートを取得します。
-
+1. ページをナビゲートします。つまり、2 回再読み込みしたりタブを閉じたりすることなく、ナビゲーション（更新など）ごとにアップデートを取得します。
 
 ###  待機のスキップ
 
 <figure>
-  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools の [skipWaiting]">
+  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools の [skipWaiting]"/>
 </figure>
 
 待機中の Worker がある場合は、DevTools で [skipWaiting] を選択すると、すぐに「アクティブ」になります。
 
+### シフト再読み込み
 
-###  シフト再読み込み
+ページを強制的に再読み込み（シフト再読み込み）すると、Service Worker 全体がスキップされます。これは制御されません。この機能は仕様どおりであり、他の Service Worker 対応ブラウザで動作します。
 
-ページを強制的に再読み込み（シフト再読み込み）すると、Service Worker 全体がスキップされます。
-これは制御されません。この機能は仕様どおりであり、他の Service Worker 対応ブラウザで動作します。
-
-
-##  アップデートの処理
+## アップデートの処理
 
 Service Worker は、[拡張可能ウェブ](https://extensiblewebmanifesto.org/){: .external }の一部としてデザインされました。我々ブラウザ デベロッパーは、ウェブ デベロッパーよりもウェブ開発が得意ではないと認識しています。したがって、ブラウザ デベロッパーの好きなパターンを使用して特定の問題を解決する、限られた高レベルの API を提供すべきではありません。代わりに、ブラウザの中心部へのアクセス権を付与し、ユーザーに最適な方法で好きなように実行してもらいます。
-
-
-
 
 できるだけ多くのパターンを有効にするために、アップデート サイクル全体は監視可能になっています。
 
@@ -760,10 +668,14 @@ Service Worker は、[拡張可能ウェブ](https://extensiblewebmanifesto.org/
 
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       // This fires when the service worker controlling this page
-      // changes, eg a new worker has as skipped waiting and become
-      // the new active worker. 
+      // changes, eg a new worker has skipped waiting and become
+      // the new active worker.
     });
 
-##  乗り切りました！
+## 乗り切りました！すばらしいですね！
 
-すばらしいですね！技術的な理論をたくさん説明しました。今後の数週間で上記の実用的なアプリケーションのいくつかに踏み込みますのでご期待ください。
+技術的な理論をたくさん説明しました。今後の数週間で上記の内容を実地に適用していきますので、どうぞご期待ください。
+
+##  フィードバック {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

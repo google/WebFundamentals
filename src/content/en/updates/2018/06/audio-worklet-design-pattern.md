@@ -411,4 +411,3 @@ reviewing a draft of this article and giving insightful feedback.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

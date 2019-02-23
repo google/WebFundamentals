@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-02-06 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2012-02-06 #}
 {# wf_tags: news,android #}
+{# wf_blink_components: N/A #}
 
 # Chrome for Android: Accelerating the Mobile Web {: .page-title }
 
@@ -55,11 +56,10 @@ Here's a quick screencast showing this feature in action:
 For more information about remote debugging, see this [remote debugging
 article][debugging].
 
-Try Chrome for Android Beta for yourself by [downloading it from the Android
-Market][market]. If you've written a mobile web app to use a feature, but
+Try Chrome for Android Beta for yourself by [downloading it from Google Play][market]. If you've written a mobile web app to use a feature, but
 Chrome for Android doesn't support it, keep in mind that this is a beta
 release, and see if this is already a [known issue][mcrbug], and star it if it is.
-Otherwise, please log a bug via [new.mcrbug.com][new-mcrbug].
+Otherwise, please [log a bug][new-mcrbug].
 
 I'm stoked about the positive impact Chrome for Android will make on the mobile
 web developer community, and looking forward to see the great things we can
@@ -68,22 +68,21 @@ answered in this [FAQ][faq]. Otherwise, if you have a Chrome-specific mobile
 web development question, please post it on Stack Overflow, tagged with the
 [google-chrome and android][so] tags.
 
-[so]: http://stackoverflow.com/questions/tagged/google-chrome+android
-[faq]: http://code.google.com/chrome/mobile/docs/faq.html
-[raf]: http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-[debugging]: http://code.google.com/chrome/mobile/docs/debugging.html
-[flexbox-new]: http://www.w3.org/TR/css3-flexbox/
-[flexbox-old]: http://www.html5rocks.com/en/tutorials/flexbox/quick/
-[market]: https://market.android.com/details?id=com.android.chrome
-[chromium-blog]: http://blog.chromium.org/2012/02/deeper-look-at-chrome-for-android.html
-[codesite]: http://code.google.com/chrome/mobile/
-[cdt]: http://code.google.com/chrome/devtools/docs/overview.html
-[IndexedDB]: http://www.html5rocks.com/en/tutorials/indexeddb/todo/
-[Web Workers]: //www.html5rocks.com/en/tutorials/workers/basics/
-[Web Sockets]: http://www.html5rocks.com/en/tutorials/websockets/basics/
-[mcrbug]: http://mcrbug.com
-[new-mcrbug]: http://new.mcrbug.com
-[File System API]: http://www.html5rocks.com/en/tutorials/file/filesystem/
+[so]: https://stackoverflow.com/questions/tagged/google-chrome+android
+[faq]: https://developer.chrome.com/multidevice/faq
+[raf]: https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+[debugging]: /web/tools/chrome-devtools/remote-debugging/
+[flexbox-new]: https://www.w3.org/TR/css-flexbox-1/
+[flexbox-old]: https://www.html5rocks.com/en/tutorials/flexbox/quick/
+[market]: https://play.google.com/store/apps/details?id=com.android.chrome
+[chromium-blog]: https://blog.chromium.org/2012/02/deeper-look-at-chrome-for-android.html
+[codesite]: https://developer.chrome.com/multidevice
+[cdt]: /web/tools/chrome-devtools/
+[IndexedDB]: https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/#toc-intro
+[Web Workers]: https://www.html5rocks.com/en/tutorials/workers/basics/
+[Web Sockets]: https://www.html5rocks.com/en/tutorials/websockets/basics/
+[mcrbug]: https://support.google.com/chrome/answer/95315
+[new-mcrbug]: https://support.google.com/chrome/answer/95315
+[File System API]: https://www.html5rocks.com/en/tutorials/file/filesystem/
 
 
-{% include "comment-widget.html" %}

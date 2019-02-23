@@ -142,4 +142,3 @@ This allows my app to provide at least a fallback experience to the user if they
 Web Components are a big addition to the web platform, and they're still in their infancy. As they land in more browsers, it'll be up to us, the developer community, to figure out the best practices for structuring our applications. The above solutions give us a starting point, but there's still much more to learn. Onward to building better apps!
 
 
-{% include "comment-widget.html" %}

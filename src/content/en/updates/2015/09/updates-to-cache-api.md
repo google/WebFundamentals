@@ -117,4 +117,3 @@ If you want to follow the Chrome implementation of the cache query options, chec
 See you next time for another exciting chapter of “what we implemented in the cache API”!
 
 
-{% include "comment-widget.html" %}

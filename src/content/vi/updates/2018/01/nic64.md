@@ -99,6 +99,4 @@ Tôi là Pete LePage và ngay sau khi Chrome 65 được phát hành, tôi sẽ 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

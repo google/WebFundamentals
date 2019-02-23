@@ -102,4 +102,3 @@ User stylesheets are now available through DevTools Experiments (checkbox: "Allo
 That’s it for this edition of the DevTools digest, if you haven’t already, check out the [November](http://www.html5rocks.com/en/tutorials/developertools/novdigest/){: .external } edition.
 
 
-{% include "comment-widget.html" %}

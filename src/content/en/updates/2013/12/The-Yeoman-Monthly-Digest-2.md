@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A regular round-up of articles, videos and talks authored by the Yeoman community.
 
-{# wf_updated_on: 2013-12-25 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2013-12-25 #}
 {# wf_tags: news,frontend,workflow,tools,yeoman #}
+{# wf_blink_components: N/A #}
 
 # The Yeoman Monthly Digest #2 {: .page-title }
 
@@ -82,7 +83,7 @@ yo [1.0.7-pre](https://npmjs.org/package/yo) is now available for testing on npm
 * [AngularJS](https://github.com/yeoman/generator-angular/releases) 0.7.1 with support for Angular 1.2.6 and grunt-bower-install
 * [Ember.js](https://github.com/yeoman/generator-ember/releases/tag/v0.8.0) 0.8.0 released. Scaffolding updated to Ember 1.2 syntax, improved CoffeeScript support, templating, REST routes
 * [WebApp](https://github.com/yeoman/generator-webapp/blob/master/changelog.md) 0.4.5 and 0.4.6 including improved HTMLMin, bower install fixes and grunt-bower-install support for CSS dependencies
-* [Polymer](https://github.com/yeoman/generator-polymer/releases/tag/0.0.8) generator 0.0.8 with Web Component concatenization and other updates
+* [Polymer](https://github.com/yeoman/generator-polymer/releases/tag/0.0.8) generator 0.0.8 with Web Component concatenation and other updates
 * [Chrome app](https://github.com/yeoman/generator-chromeapp) 0.2.5 - proper support for livereload, rewritten app generator, build task for packaging, new permissions code and more.
 
 Other official generators including [jQuery](https://github.com/yeoman/generator-jquery), [Gruntfile](https://github.com/yeoman/generator-gruntfile), [CommonJS](https://github.com/yeoman/generator-commonjs), [NodeJS](https://github.com/yeoman/generator-node) and [Mocha](https://github.com/yeoman/generator-mocha) have also been updated.
@@ -131,4 +132,6 @@ That's a wrap! If there are Yeoman resources you would like to suggest for the n
 *With special thanks to Stephen Sawchuk, Sindre Sorhus and Pascal Hartig for their review of this issue*
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

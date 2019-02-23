@@ -304,4 +304,3 @@ repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/paral
 
 Have a play, and let us know how you get on.
 
-{% include "comment-widget.html" %}

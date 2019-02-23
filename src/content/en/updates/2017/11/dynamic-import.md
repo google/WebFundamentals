@@ -169,4 +169,3 @@ Static `import` and dynamic `import()` are both useful. Each have their own, ver
 cases. Use static `import`s for initial paint dependencies, especially for above-the-fold content.
 In other cases, consider loading dependencies on-demand with dynamic `import()`.
 
-{% include "comment-widget.html" %}

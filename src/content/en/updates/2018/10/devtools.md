@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Highlight DOM nodes from Live expressions, store nodes as global variables, and more.
 
-{# wf_updated_on: 2018-10-10 #}
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-10-10 #}
 {# wf_tags: chrome71,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -20,6 +20,15 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 * [Initiator and priority information now in HAR imports and exports](#HAR)
 * [Access the Command Menu from the Main Menu](#command-menu)
 * [Picture-in-Picture breakpoints](#picture-in-picture)
+* [(Bonus Tip) Run monitorEvents() in the Console to watch an element's events fire](#bonus)
+
+Read on, or watch the video version of this page:
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="fJxFZO8OEEs"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Hover over a Live Expression to highlight a DOM node {: #hover }
 
@@ -176,6 +185,62 @@ fires. DevTools pauses on the first line of the handler.
   </figcaption>
 </figure>
 
+## (Bonus Tip) Run monitorEvents() in the Console to watch an element's events fire {: #bonus }
+
+[monitorevents]: /web/tools/chrome-devtools/console/command-line-reference#monitorevents
+[unmonitorevents]: /web/tools/chrome-devtools/console/command-line-reference#unmonitorevents
+
+Note: This section covers a lesser-known feature that has been in DevTools for a long time.
+
+Suppose you want to add a red border around a button after focusing it and pressing `R`, `E`, `D`,
+but you don't know what events to add listeners to. Use [`monitorEvents()`][monitorevents] to log
+all of the element's events to the Console.
+
+1. Get a reference to the node.
+
+     <figure>
+       <img src="/web/updates/images/2018/10/bonus1.png"
+            alt="Using 'Store as global variable' to get a reference to the node."/>
+       <figcaption>
+         <b>Figure 17</b>. Using <b>Store as global variable</b> to get a reference to the node
+       </figcaption>
+     </figure>
+
+1. Pass the node as the first argument to `monitorEvents()`.
+
+     <figure>
+       <img src="/web/updates/images/2018/10/bonus2.png"
+            alt="Passing the node to monitorEvents()."/>
+       <figcaption>
+         <b>Figure 18</b>. Passing the node to <code>monitorEvents()</code>
+       </figcaption>
+     </figure>
+
+1. Interact with the node. DevTools logs all of the node's events to the Console.
+
+     <figure>
+       <img src="/web/updates/images/2018/10/bonus3.png"
+            alt="The node's events in the Console."/>
+       <figcaption>
+         <b>Figure 19</b>. The node's events in the Console
+       </figcaption>
+     </figure>
+
+Call [`unmonitorEvents()`][unmonitorevents] to stop logging events to the Console.
+
+    unmonitorEvents(temp1);
+
+Pass an array as the second argument to `monitorEvents()` if you only want to monitor certain events or
+types of events:
+
+    monitorEvents(temp1, ['mouse', 'focus']);
+
+The `mouse` type tells DevTools to log all mouse-related events, such as `mousedown` and `click`.
+Other supported types are `key`, `touch`, and `control`.
+
+Check out [Command Line Reference](/web/tools/chrome-devtools/console/command-line-reference) for
+other handy functions that you can call from the Console.
+
 ## Feedback {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
@@ -205,11 +270,6 @@ Stable while Canary is broken.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
+<<../../_shared/discover.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}

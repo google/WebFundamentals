@@ -123,4 +123,3 @@ Comments on this post are of course valuable, and comments on the standard itsel
 <em>Thanks to Addy Osmani and Max Heinritz for their assistance with this post.</em>
 
 
-{% include "comment-widget.html" %}

@@ -269,8 +269,6 @@ Note: Web Audio FAQs can be found [here].
 
 <div class="clearfix"></div>
 
-{% include "comment-widget.html" %}
-
 [Policy List]: https://dev.chromium.org/administrators/policy-list-3
 ["AutoplayAllowed"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayAllowed
 ["AutoplayWhitelist"]: http://dev.chromium.org/administrators/policy-list-3#AutoplayWhitelist

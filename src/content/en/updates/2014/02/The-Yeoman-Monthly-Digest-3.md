@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A monthly digest of high-quality Yeoman articles, generators and project news.
 
-{# wf_updated_on: 2018-11-22 #}
+
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2014-02-16 #}
 {# wf_tags: news,frontend,scaffolding,yeoman,tools #}
 {# wf_blink_components: N/A #}
@@ -125,9 +126,11 @@ If you’ve written an article, given a talk or created a generator you think wo
 
 Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D
 
-<blockquote class="twitter-tweet" lang="en"><p>I’m genuinely scared that one day I’m going to be replaced by a <a href="https://twitter.com/yeoman">@yeoman</a> generator.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/statuses/431764751610548225">February 7, 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p>I’m genuinely scared that one day I’m going to be replaced by a <a href="https://twitter.com/yeoman">@yeoman</a> generator.</p>&mdash; I Am Developer (@iamdevloper) <a href="https://twitter.com/iamdevloper/statuses/431764751610548225">February 7, 2014</a></blockquote>
 
 *With thanks for the rest of the Yeoman team for their reviews*
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

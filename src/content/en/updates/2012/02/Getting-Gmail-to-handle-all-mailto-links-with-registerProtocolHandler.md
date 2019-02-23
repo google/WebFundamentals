@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-02-07 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2012-02-07 #}
 {# wf_tags: news,registerprotocolhandler,mailto #}
+{# wf_blink_components: N/A #}
 
 # Getting Gmail to handle all mailto: links with registerProtocolHandler {: .page-title }
 
@@ -12,12 +13,12 @@ book_path: /web/updates/_book.yaml
 
 <p>If you use Gmail you may become frustrated when you click a <code>mailto:</code> link by accident and now your desktop client of Outlook or Mail starts up.
 
-Thanks to <code>navigator.registerProtocolHandler()</code> (<a href="http://updates.html5rocks.com/2011/06/Registering-a-custom-protocol-handler">which we've covered here before</a>) you can wire up Gmail as your default mail client for all <code>mailto:</code> links in Chrome  and Firefox.
+Thanks to <code>navigator.registerProtocolHandler()</code> (<a href="/web/updates/2011/06/Registering-a-custom-protocol-handler">which we've covered here before</a>) you can wire up Gmail as your default mail client for all <code>mailto:</code> links in Chrome and Firefox.
 </p>
 
 <img alt="Screenshot of registerProtocolHandler prompt" src="/web/updates/images/2012-02-08-getting-gmail-to-handle-all-mailto-links-with-registerprotocolhandler/registerprotocolhandler-prompt.jpg" style="display:block; margin: 10px auto; border: 3px solid #999; box-shadow: 2px 2px 5px #ccc">
 
-Here's how: 
+Here's how:
 
 <ol>
 <li>First, open up a Gmail tab. You <em>must</em> do this from the Gmail tab, not your html5rocks one. :)
@@ -36,4 +37,3 @@ Here's how:
 <br>
 
 
-{% include "comment-widget.html" %}

@@ -1,5 +1,29 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/network-performance/
+  to:   /web/tools/chrome-devtools/network/
+
+- from: /web/tools/chrome-devtools/console/command-line-reference
+  to: /web/tools/chrome-devtools/console/utilities
+
+- from: /web/tools/chrome-devtools/console/console-reference
+  to: /web/tools/chrome-devtools/console/api
+
+- from: /web/tools/lighthouse/audits/required-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-required-attr
+
+- from: /web/tools/lighthouse/audits/valid-aria-values
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr-value
+
+- from: /web/tools/lighthouse/audits/valid-aria-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-valid-attr
+
+- from: /web/tools/lighthouse/audits/aria-allowed-attributes
+  to: https://dequeuniversity.com/rules/axe/2.2/aria-allowed-attr
+
+- from: /web/tools/lighthouse/audits/unoptimized-images
+  to: /web/tools/lighthouse/audits/optimize-images
+
 - from: /web/tools/lighthouse/audits/first-interactive
   to: /web/tools/lighthouse/audits/first-cpu-idle
 
@@ -62,9 +86,6 @@ redirects:
 
 - from: /web/tools/chrome-devtools/evaluate-performance/rail
   to: /web/fundamentals/performance/rail
-
-- from: /web/tools/chrome-devtools/network-performance/
-  to: /web/tools/chrome-devtools/network-performance/resource-loading
 
 - from: /web/tools/chrome-devtools/evaluate-performance/
   to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
@@ -173,6 +194,9 @@ redirects:
 
 - from: /web/tools/chrome-devtools/javascript/console/...
   to: /web/tools/chrome-devtools/console/...
+
+- from: /web/tools/chrome-devtools/network-performance/...
+  to:   /web/tools/chrome-devtools/network/...
 
 - from: /web/tools/service-worker-libraries/
   to: /web/tools/workbox/

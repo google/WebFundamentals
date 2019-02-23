@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ein Bild sagt mehr als 1000 Worte, und Bilder spielen eine sehr wichtige Rolle auf jeder einzelnen Seite. Leider stellen sie aber ebenso einen Großteil des Volumens dar, das heruntergeladen wird. Mit einem responsiven Webdesign können sich nicht nur unsere Layouts Gerätecharakteristiken anpassen, sondern ebenso die Bilder.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # Bilder {: .page-title }
@@ -30,7 +30,7 @@ In anderen Fällen sind möglicherweise noch drastischere Änderungen erforderli
 
 
 
-## Bilder im Markup 
+## Bilder im Markup
 
 Das `img`-Element erfüllt viele Funktionen. Es lädt Inhalte herunter, decodiert sie und zeigt sie an. Darüber hinaus unterstützen moderne Browser eine große Anzahl an Bildformaten. Die Nutzung von Bildern, die auf allen Geräten funktionieren, unterscheidet sich im Vergleich zu Desktopcomputern nicht. Es sind lediglich ein paar kleinere Handgriffe nötig, um eine gute Erfahrung zu gewährleisten.
 
@@ -53,7 +53,7 @@ Da es die CSS-Syntax zulässt, dass sich Inhalte über Container-Grenzen hinweg 
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Achten Sie darauf, dem `alt`-Attribut des `img`-Elements aussagekräftige Beschreibungen hinzuzufügen. Hierdurch wird Ihre Website zugänglicher, denn die Beschreibungen bieten einer Bildschirmsprachausgabe und anderen Hilfstechnologien Kontext.
 
@@ -72,7 +72,7 @@ Das <code>srcset</code>-Attribut erweitert das <code>img</code>-Element, indem e
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Browser, die `srcset` nicht unterstützen, nutzen einfach die Standardbilddatei, die im `src`-Attribut festgelegt ist. Aus diesem Grund ist es wichtig, immer ein 1x-Bild zur Verfügung zu stellen, das auf allen Geräten unabhängig von jeglichen Funktionen angezeigt werden kann. Bei `srcset`-Unterstützung wird die kommagetrennte Liste mit Bild/Bedingungen vor dem Senden von Anfragen analysiert und nur das am besten geeignete Bild heruntergeladen und angezeigt.
 
@@ -86,7 +86,7 @@ Das Ändern von Bildern auf Grundlage von Gerätecharakteristiken ist auch als A
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
-Note: Das <code>picture</code>-Element wird von Browsern zunehmend unterstützt. Es ist zwar noch nicht in allen Browsern verfügbar, wir empfehlen aufgrund seiner guten Rückwärtskompatibilität und der möglichen Nutzung von <a href='http://picturefill.responsiveimages.org/'>Picturefill/Polyfill</a> aber dennoch seinen Einsatz. Weitere Informationen erhalten Sie auf der Website <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: Das <code>picture</code>-Element wird von Browsern zunehmend unterstützt. Es ist zwar noch nicht in allen Browsern verfügbar, wir empfehlen aufgrund seiner guten Rückwärtskompatibilität und der möglichen Nutzung von <a href='https://scottjehl.github.io/picturefill/'>Picturefill/Polyfill</a> aber dennoch seinen Einsatz. Weitere Informationen erhalten Sie auf der Website <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -168,7 +168,7 @@ Im vorherigen Beispiel wird ein Bild dargestellt, das die Hälfte der Breite des
 
 #### Übergangspunkte in responsiven Bildern berücksichtigen
 
-In vielen Fällen ändert sich die Größe oder das Bild abhängig von den Layoutübergangspunkten der Website. So kann es bei kleinen Bildschirmen wünschenswert sein, die volle Breite des Darstellungsbereichs mit einem Bild abzudecken, während auf größeren Bildschirmen nur ein kleiner proportionaler Teil genutzt werden sollte. 
+In vielen Fällen ändert sich die Größe oder das Bild abhängig von den Layoutübergangspunkten der Website. So kann es bei kleinen Bildschirmen wünschenswert sein, die volle Breite des Darstellungsbereichs mit einem Bild abzudecken, während auf größeren Bildschirmen nur ein kleiner proportionaler Teil genutzt werden sollte.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
@@ -210,7 +210,7 @@ Ein großer Nachteil dieses Ansatzes ist, dass das Bild bei der Verwendung von J
 
 
 
-## Bilder in CSS 
+## Bilder in CSS
 
 
 
@@ -245,7 +245,7 @@ Die CSS-Funktion `image-set()` erweitert die Funktionalität der `background`-Ei
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Der Browser lädt das richtige Bild nicht nur, sondern skaliert es auch
 entsprechend. Anders ausgedrückt: Der Browser geht davon aus, dass 2x-Bilder doppelt so groß wie 1x-Bilder sind und reduziert das 2x-Bild um den Faktor 2, sodass das Bild in der gleichen Größe auf der Seite erscheint.
@@ -268,7 +268,7 @@ Medienabfragen können Regeln auf Grundlage des [Gerätepixelverhältnisses](htt
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox und Opera unterstützen alle standardmäßig `(min-resolution: 2dppx)`, während Safari und Android-Browser beide die ältere Syntax mit Anbieterpräfix ohne `dppx`-Einheit benötigen. Denken Sie daran, dass diese Stile nur dann geladen werden, wenn das Gerät der Medienabfrage entspricht, und Sie Stile für den Grundfall festlegen müssen. Dies hat den Vorteil, dass eine Darstellung auch in dem Fall gewährleistet ist, dass der Browser keine auflösungsspezifischen Medienabfragen unterstützt.
 
@@ -284,13 +284,13 @@ Sie können auch die `min-width`-Syntax nutzen, um abhängig von der Größe des
         background-image: url(bg.png);
       }
     }
-    	
 
 
 
 
 
-## SVG für Symbole verwenden 
+
+## SVG für Symbole verwenden
 
 
 
@@ -313,7 +313,7 @@ Unicode-Zeichen werden wie benannte Zeichen verwendet: `&#XXXX`, wobei `XXXX` de
 
 
     Du bist ein echter &#9733;
-    
+
 
 Du bist ein echter &#9733;
 
@@ -340,7 +340,7 @@ Symbolschriften sind zwar beliebt und leicht anwendbar, einige bergen jedoch im 
 * Die Gestaltungsmöglichkeiten mit CSS sind begrenzt.
 * Die perfekte Positionierung der Pixel kann schwierig sein, je nach Zeilenhöhe, Buchstabenabstand usw.
 * Sie sind nicht semantisch und die Verwendung mit Screenreadern oder anderen Bedienungshilfen kann sich als schwierig erweisen.
-* Wenn der Bereich nicht ordnungsgemäß festgelegt ist, kann die Datei riesig werden, obwohl nur eine kleine Teilmenge der verfügbaren Symbole verwendet wird. 
+* Wenn der Bereich nicht ordnungsgemäß festgelegt ist, kann die Datei riesig werden, obwohl nur eine kleine Teilmenge der verfügbaren Symbole verwendet wird.
 
 
 
@@ -360,7 +360,7 @@ Achten Sie darauf, dass die Last der zusätzlichen HTTP-Anfrage und Dateigröße
 
 
 
-## Bilder auf Leistung optimieren 
+## Bilder auf Leistung optimieren
 
 
 
@@ -419,7 +419,7 @@ Achten Sie beim Erstellen von Seiten mit unbegrenztem Scrollen jedoch darauf, da
 
 
 
-## Bilder nach Möglichkeit vermeiden 
+## Bilder nach Möglichkeit vermeiden
 
 
 
@@ -442,11 +442,11 @@ Wann immer möglich sollte Text in Text und nicht in Bilder eingebettet sein, wi
 Moderne Browser können auf CSS-Funktionen zurückgreifen, um Stile zu erschaffen, für die zuvor Bilder erforderlich waren. So können mit der <code>background</code>-Eigenschaft komplexe Farbverläufe erstellt und mit der <code>box-shadow</code>-Eigenschaft Schatten und der <code>border-radius</code>-Eigenschaft abgerundete Ecken hinzugefügt werden.
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -459,7 +459,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Beachten Sie, dass bei diesen Verfahren Renderingzyklen anfallen, deren Berechnung für Mobilgeräte ein Problem darstellen kann. Bei einer übermäßigen Inanspruchnahme gehen die Vorteile verloren und die Leistung wird möglicherweise zusätzlich beeinträchtigt.
 

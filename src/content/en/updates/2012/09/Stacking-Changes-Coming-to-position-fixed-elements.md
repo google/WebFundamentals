@@ -63,4 +63,3 @@ Chrome is the first desktop browser to cause position:fixed elements to create t
 **Updated Oct 1, 2012:** The original version of this article suggested that the CSS `z-index` specification had already been changed to reflect the new behavior of position: fixed elements. This is inaccurate; it has been discussed on the www-style list but as of yet no change has been taken into the spec.
 
 
-{% include "comment-widget.html" %}

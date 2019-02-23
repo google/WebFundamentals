@@ -22,4 +22,3 @@ In the Sources Panel editor, you can select the next occurrence with <kbd class=
 		
 
 
-{% include "comment-widget.html" %}

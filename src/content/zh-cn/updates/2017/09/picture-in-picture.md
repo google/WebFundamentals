@@ -96,4 +96,3 @@ window.addEventListener('resize', function() {
 Translated by
 {% include "web/_shared/contributors/henrylim.html" %}
 
-{% include "comment-widget.html" %}

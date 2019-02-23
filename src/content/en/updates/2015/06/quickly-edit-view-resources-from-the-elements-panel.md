@@ -24,4 +24,3 @@ If you see resources in the Elements Panel DOM tree, e.g.
 You can right click on them and select <em>Open</em>. The file opens in the Sources Panel where you can view the full source, or start editing it!
 
 
-{% include "comment-widget.html" %}

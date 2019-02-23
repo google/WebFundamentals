@@ -193,6 +193,4 @@ Note: Haltepunkte werden derzeit in der CSS-Paint-API nicht unterstützt, werden
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

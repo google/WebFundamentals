@@ -16,7 +16,7 @@ landing_page:
       image_path: images/chrome-devtools-16x9.png
       path: /web/tools/chrome-devtools/
       buttons:
-      - label: Get Started
+      - label: Get started
         path: /web/tools/chrome-devtools/
     - heading: Lighthouse
       description: >
@@ -27,7 +27,7 @@ landing_page:
       image_path: images/lighthouse-16x9.png
       path: /web/tools/lighthouse/
       buttons:
-      - label: Get Started
+      - label: Get started
         path: /web/tools/lighthouse/
     - heading: Puppeteer
       description: >
@@ -47,7 +47,7 @@ landing_page:
       image_path: images/workbox-16x9.png
       path: /web/tools/workbox/
       buttons:
-      - label: Get Started
+      - label: Get started
         path: /web/tools/workbox/
 
   - classname: devsite-landing-row-cards
@@ -63,7 +63,7 @@ landing_page:
       image_path: images/polymer-16x9.png
       path: https://www.polymer-project.org/
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: https://www.polymer-project.org/
 
     - heading: Angular
@@ -76,7 +76,7 @@ landing_page:
       image_path: images/angular-16x9.png
       path: https://angular.io/
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: https://angular.io/
 
     - heading: PageSpeed Module
@@ -86,7 +86,7 @@ landing_page:
       image_path: images/pagespeed-16x9.png
       path: /speed/pagespeed/module/
       buttons:
-      - label: Learn More
+      - label: Learn more
         path: /speed/pagespeed/module/
 
   - heading: More

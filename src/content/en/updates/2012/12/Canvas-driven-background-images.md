@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Powering a css background using canvas or webgl
 
-{# wf_updated_on: 2012-12-11 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-12-11 #}
 {# wf_tags: news,canvas,css,graphics #}
+{# wf_blink_components: Blink>Canvas #}
 
 # Canvas-driven background images {: .page-title }
 
@@ -93,11 +94,13 @@ Hold on a sec. Does this mean we can power a CSS background using webgl? Of cour
     var gl = document.getCSSCanvasContext('experimental-webgl', 'animation', 300, 150);
     
 
-Here's a proof of concept that contains a div with it's background drawn using vertext and fragment shaders: [DEMO](http://jsbin.com/odimig/269/edit)
+Here's a proof of concept that contains a div with it's background drawn using vertex and fragment shaders: [DEMO](http://jsbin.com/odimig/269/edit)
 
 ### Other approaches
 
 It's worth noting that Mozilla has had `-moz-element()` ([MDN](https://developer.mozilla.org/en-US/docs/CSS/element)) for quite some time. This is part of the [CSS Image Values and Replaced Content Module Level 4](http://dev.w3.org/csswg/css4-images/#element-notation) spec and allows you to create an image generated from arbitrary HTML: videos, canvas, DOM content,...you name it. However, there are security concerns with having full access to snapshot images of the DOM. This is primarily why other browsers have not adopted said feature.
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

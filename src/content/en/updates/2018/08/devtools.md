@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more.
-experiments_path: /web/updates/2018/08/_experiments.yaml
 
-{# wf_updated_on: 2018-10-15 #}
+{# experiments_path: /web/updates/2018/08/_experiments.yaml #}
+
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-08-29 #}
 {# wf_tags: chrome70,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -377,11 +378,6 @@ Stable while Canary is broken.
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
+<<../../_shared/discover.md>>
 
 {% include "web/_shared/rss-widget-updates.html" %}

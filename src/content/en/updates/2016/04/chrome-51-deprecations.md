@@ -88,4 +88,3 @@ Removal is expected in Chrome 53.
 
 
 
-{% include "comment-widget.html" %}

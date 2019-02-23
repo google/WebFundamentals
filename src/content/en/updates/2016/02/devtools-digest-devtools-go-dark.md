@@ -51,4 +51,3 @@ comments below, and submit bugs to [crbug.com/new](https://crbug.com/new).
 Until next month!  
 Paul Bakaus & the DevTools team
 
-{% include "comment-widget.html" %}

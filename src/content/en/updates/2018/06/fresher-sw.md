@@ -123,4 +123,3 @@ both by Jake Archibald, are recommended reading for all developers who deploy an
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

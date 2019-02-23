@@ -229,8 +229,6 @@ for its well structured deprecation reports and additional metadata like
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 [spec]: https://w3c.github.io/reporting
 [reportingobserver]: https://w3c.github.io/reporting/#observers
 [explainer]: https://github.com/W3C/reporting/blob/master/EXPLAINER.md

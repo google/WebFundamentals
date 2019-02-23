@@ -17,4 +17,3 @@ description: Right click on an image preview within the Resources Panel to copy 
 Right click on an image preview within the Resources Panel to copy it as a Data URI (base 64 encoded).
 
 
-{% include "comment-widget.html" %}

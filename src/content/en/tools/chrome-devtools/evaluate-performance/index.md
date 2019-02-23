@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to evaluate runtime performance in Chrome DevTools.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-28 #}
 {# wf_published_on: 2017-04-06 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -348,7 +348,7 @@ well, the next question to answer is: why?
 
      <aside class="note">
        **Note**: The **Animation Frame Fired** event occurs whenever a
-       [`requestAnimationFrame()`][raf] callback is executed. 
+       [`requestAnimationFrame()`][raf] callback is executed.
      </aside>
 
 [raf]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
@@ -433,7 +433,7 @@ Include screenshots or links to reproducible pages, if possible.
 
 [SO]: http://stackoverflow.com/questions/ask?tags=google-chrome-devtools
 
-To really master runtime performance, you've got learn how
+To really master runtime performance, you've got to learn how
 the browser translates HTML, CSS, and JS into pixels on a screen. The best
 place to start is the [Rendering Performance Overview][RP]. [The Anatomy Of A
 Frame][Anatomy] dives into even more detail.

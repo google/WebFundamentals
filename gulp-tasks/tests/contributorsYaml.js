@@ -34,7 +34,6 @@ const SCHEMA_CONTRIBUTOR = {
       additionalProperties: false,
     },
     homepage: {type: 'string', pattern: /^https?:\/\//i},
-    google: {type: 'string', pattern: /^(\+[a-z].*$|[0-9].*$)/i},
     twitter: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
     github: {type: 'string', pattern: /^[a-z0-9_-]+$/i},
     lanyrd: {type: 'string', pattern: /^[a-z0-9_-]+$/i},

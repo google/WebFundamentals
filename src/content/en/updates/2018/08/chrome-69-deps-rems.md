@@ -54,4 +54,3 @@ removed in Chrome 64, and 56 respectively, the abuse has been moving to
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

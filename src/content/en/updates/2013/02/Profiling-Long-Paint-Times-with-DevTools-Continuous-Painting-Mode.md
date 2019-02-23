@@ -196,4 +196,3 @@ Click below for a demo where Paul Irish uses continuous painting to identify a u
 </div>
 
 
-{% include "comment-widget.html" %}

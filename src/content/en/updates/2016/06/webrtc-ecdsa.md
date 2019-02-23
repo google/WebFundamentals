@@ -86,4 +86,3 @@ RTCCertificate IndexedDB storage has already shipped in Firefox and is in Opera 
 * [Getting started with WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
 
 
-{% include "comment-widget.html" %}

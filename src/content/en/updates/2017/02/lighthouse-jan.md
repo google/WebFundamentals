@@ -147,4 +147,3 @@ feature requests, or brainstorm
 [ideas](https://github.com/GoogleChrome/lighthouse/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+bug%22)
 on what you'd like to see next.
 
-{% include "comment-widget.html" %}

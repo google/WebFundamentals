@@ -96,4 +96,3 @@ Chrome 60+. Consider [transpiling your
 code](https://babeljs.io/docs/plugins/transform-object-rest-spread/) until this
 feature is more widely supported across engines.
 
-{% include "comment-widget.html" %}

@@ -323,4 +323,3 @@ hear it! Please file issues or submit pull requests on
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

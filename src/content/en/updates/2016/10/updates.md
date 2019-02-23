@@ -81,4 +81,3 @@ Web**Fundamentals** has been invaluable. We couldn't have done it without
 your help! Thank you!
 
 
-{% include "comment-widget.html" %}

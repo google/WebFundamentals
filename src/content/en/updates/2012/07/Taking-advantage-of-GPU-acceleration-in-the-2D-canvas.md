@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-07-04 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-07-04 #}
 {# wf_tags: news,gpu,canvas,graphics #}
+{# wf_blink_components: N/A #}
 
 # Taking advantage of GPU acceleration in the 2D canvas {: .page-title }
 
@@ -17,4 +18,3 @@ You can check out [this example](http://fhtr.org/gravityring/sprites.html) for t
 There are still some rough edges in the acceleration implementation, so you may see performance degradation in some use cases (please let the Chrome team know through [new.crbug.com](http://new.crbug.com) so that we can fix them!)
 
 
-{% include "comment-widget.html" %}

@@ -36,10 +36,6 @@ book_path: /web/resources/_book.yaml
   <img class="wf-icon-width" src="/site-assets/logo-twitter.svg">
 </a>
 {{/if}}
-{{#if contributor.google}}<a href="https://plus.google.com/{{contributor.google}}">
-  <img class="wf-icon-width" src="/site-assets/logo-google-plus.svg">
-</a>
-{{/if}}
 
 
 {{#each articles}}

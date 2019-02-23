@@ -317,4 +317,3 @@ wrapper library like
 [polymer/observe-js](https://github.com/polymer/observe-js).
 
 
-{% include "comment-widget.html" %}

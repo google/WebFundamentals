@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-12-09 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2012-12-09 #}
 {# wf_tags: news,video,webrtc,getusermedia #}
+{# wf_blink_components: Blink>WebRTC #}
 
 # WebRTC hits Firefox, Android and iOS {: .page-title }
 
@@ -16,13 +17,13 @@ book_path: /web/updates/_book.yaml
 
 <p><code>getUserMedia</code> is available now in Chrome with no flags, as well as Opera, and Firefox Nightly/Aurora (though for Firefox you'll need to <a href="https://hacks.mozilla.org/2012/11/progress-update-on-webrtc-for-firefox-on-desktop/comment-page-1/#comment-1851192" title="Progress update on WebRTC for Firefox on desktop">set preferences</a>). Take a look at the cross-browser demo of <code>getUserMedia</code> at <a href="https://simpl.info/gum" title="Simple cross-platform getUserMedia demo">simpl.info/gum</a>&mdash;and check out Chris Wilson's <a href="http://webaudiodemos.appspot.com/" title="">amazing examples</a> of using <code>getUserMedia</code> as input for Web Audio.</p>
 
-<p><code>webkitRTCPeerConnection</code> is now in Chrome stable and it's flagless. TURN server support is available in Chrome 24 and above. There's an ultra-simple demo of Chrome's RTCPeerConnection implementation at <a href="https://simpl.info/rtcpeerconnection" title="Simple cross-platform getUserMedia demo">simpl.info/pc</a> and a great video chat application at <a href="//apprtc.appspot.com" title="Video chat demo">apprtc.appspot.com</a>. (A word of explanation about the name: after several iterations, it's currently known as <code>webkitRTCPeerConnection</code>. Other names and implementations have been deprecated. When the standards process has stabilised, the <code>webkit</code> prefix will be removed.)</p>
+<p><code>webkitRTCPeerConnection</code> is now in Chrome stable and it's flagless. TURN server support is available in Chrome 24 and above. There's an ultra-simple demo of Chrome's RTCPeerConnection implementation at <a href="https://simpl.info/rtcpeerconnection" title="Simple cross-platform getUserMedia demo">simpl.info/pc</a> and a great video chat application at <a href="//apprtc.appspot.com" title="Video chat demo">apprtc.appspot.com</a>. (A word of explanation about the name: after several iterations, it's currently known as <code>webkitRTCPeerConnection</code>. Other names and implementations have been deprecated. When the standards process has stabilized, the <code>webkit</code> prefix will be removed.)</p>
 
 <p>WebRTC has also now been implemented for desktop in Firefox Nightly and Aurora, and for iOS and Android via the <a href="https://labs.ericsson.com/apps/bowser" title="Ericsson Bowser browser">Ericsson Bowser browser</a>.</p>
 
 ## DataChannel
 
-<p><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-datachannel" title="DataChannel section of HTML5 Rocks article">DataChannel</a> is a WebRTC API for high performance, low latency, peer-to-peer communication of arbritary data. The API is simple&mdash;similar to WebSocket&mdash;but communication occurs directly between browsers, so DataChannel can be much faster than WebSocket even if a relay (TURN) server is required (when 'hole punching' to cope with firewalls and NATs fails).</p>
+<p><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-datachannel" title="DataChannel section of HTML5 Rocks article">DataChannel</a> is a WebRTC API for high performance, low latency, peer-to-peer communication of arbitrary data. The API is simple&mdash;similar to WebSocket&mdash;but communication occurs directly between browsers, so DataChannel can be much faster than WebSocket even if a relay (TURN) server is required (when 'hole punching' to cope with firewalls and NATs fails).</p>
 
 <p>DataChannel is planned for version 25 of Chrome, behind a flag – though it may miss this version. This will be for experimentation only, may not be fully functional, and communication won't be possible with the Firefox implementation. DataChannel in later versions should be more stable and will be implemented so as to enable interaction with DataChannel in Firefox.</p>
 
@@ -91,4 +92,6 @@ book_path: /web/updates/_book.yaml
 <p>...and don't forget to file any bugs you encounter at <a href="http://new.crbug.com" title="Post Chrome bug">new.crbug.com</a>!</p>
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

@@ -155,4 +155,3 @@ dropping their dependency on hardcoded CLDR databases in favor of the
 native functionality, thereby improving load-time performance, parse-time
 performance, run-time performance, and memory usage.
 
-{% include "comment-widget.html" %}

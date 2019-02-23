@@ -25,4 +25,3 @@ Also, you probably see this all the time but don't forget, when you hover over a
 <img class="dt-38-tooltip" src="/web/updates/images/2015-05-20-scroll-elements-into-the-viewport/tooltip-f67ed3f1.png" alt="Tooltip indicating element position">
 
 
-{% include "comment-widget.html" %}

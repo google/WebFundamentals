@@ -2,8 +2,9 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Obtén más información sobre cómo navegar por el panel Console de JavaScript de Chrome DevTools.
 
-{# wf_updated_on: 2016-02-01 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2015-05-10 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # Uso de Console {: .page-title }
 
@@ -19,9 +20,9 @@ Console.
 
 ### TL;DR {: .hide-from-toc }
 - Abre Console como un panel dedicado o como un panel lateral junto a cualquier otro panel.
-- Apila mensajes redundantes o muéstralos en sus propias líneas.
-- Borra o conserva resultados entre páginas o guárdalos en un archivo.
-- Filtra los resultados por nivel de gravedad, ocultando los mensajes de la red o por patrones de expresiones regulares.
+- Apila los mensajes redundantes o muéstralos en sus propias líneas.
+- Borra o conserva los resultados cuando pases de una página a otra, o guárdalos en un archivo.
+- Filtra los resultados según el nivel de gravedad, ocultando los mensajes de red o usando patrones de expresiones regulares.
 
 ## Apertura de Console
 
@@ -35,17 +36,17 @@ También puedes acceder a Console como un panel lateral que se abre junto a cual
 
 ### Abrir como panel
 
-Para abrir el panel **Console** dedicado, puedes hacer esto:
+Para abrir el panel **Console** dedicado, puedes realizar una de las siguientes acciones:
 
-* Presiona <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows o Linux) o
- <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
-* Si DevTools ya está abierto, presiona el botón **Console**.
+* Presiona <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>J</kbd> (Windows o Linux) o
+  <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
+* Si ya abriste DevTools, presiona el botón **Console**.
 
 Cuando abres el panel Console, el panel lateral Console se contrae automáticamente.
 
 ### Abrir como panel lateral
 
-Para abrir Console como un panel lateral junto a cualquier otro panel, puedes hacer esto:
+Para abrir Console como un panel lateral junto a cualquier otro panel, puedes realizar una de las siguientes acciones:
 
 * Presiona <kbd>Esc</kbd> mientras DevTools esté seleccionada.
 * Presiona el botón **Customize and control DevTools** y luego presiona 
@@ -55,7 +56,7 @@ Para abrir Console como un panel lateral junto a cualquier otro panel, puedes ha
 
 ## Apilamiento de mensajes
 
-Si un mensaje se repite consecutivamente, en lugar de imprimir cada
+Si un mensaje se repite consecutivamente, en lugar de mostrar cada
 instancia del mensaje en una línea nueva, Console "apila" los mensajes
 y muestra un número en el margen izquierdo. El número indica cuántas veces
 se repitió el mensaje.
@@ -78,26 +79,26 @@ en su propia línea.
 
 Puedes borrar el historial de la consola con cualquiera de los siguientes métodos:
 
-* Haz clic con el botón secundario en la consola y selecciona **Clear console**.
-* Ingresa `clear()` en la consola.
+* Haz clic con el botón secundario en Console y presiona **Clear console**.
+* Escribe `clear()` en Console.
 * Llama a `console.clear()` en tu código JavaScript.
-* Escribe <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
-  (Mac, Windows, Linux).
+* Presiona <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
+  (Mac, Windows o Linux).
 
 ### Conservar el historial {: #preserve-log}
 
 Habilita la casilla de verificación **Preserve log** en la parte superior de Console para conservar
-el historial de Console entre actualizaciones y cambios de páginas. Los mensajes se guardarán
-hasta que borres la consola o cierres la pestaña.
+su historial entre las actualizaciones y los cambios de páginas. Los mensajes se guardarán
+hasta que borres la información de Console o cierres la pestaña.
 
 ### Guardar el historial
 
 Haz clic con el botón secundario en Console y selecciona **Save as** para guardar el resultado
-de la consola en un archivo de registro.
+de Console en un archivo de registro.
 
 ![Guardar el resultado de Console en un archivo de registro](images/console-save-as.png)
 
-## Elegir el contexto de ejecución {: #execution-context }
+## Elección del contexto de ejecución {: #execution-context }
 
 El menú desplegable destacado en azul en la captura de pantalla a continuación se denomina
 **selector de contexto de ejecución**.
@@ -128,8 +129,8 @@ es `undefined` (porque está definido en otro contexto).
 ## Filtrado de los resultados de Console
 
 Haz clic en el botón **Filter** 
-(![Botón filter](images/filter-button.png){:.inline})
-para filtrar el resultado de Console. Puedes filtrar por nivel de gravedad, por una expresión 
+(![botón Filter](images/filter-button.png){:.inline})
+para filtrar los resultados de Console. Puedes filtrar por nivel de gravedad, usando una expresión 
 regular u ocultando los mensajes de la red.
 
 ![Resultado filtrado de Console](images/filtered-console.png)
@@ -173,7 +174,7 @@ Filtrar por nivel de gravedad equivale a lo siguiente:
 ## Configuración adicional
 
 Abre la configuración de DevTools, ve a la pestaña **General** y baja hasta la
-sección **Console** para ver otra configuración de Console.
+sección **Console** para ver otros parámetros de configuración de Console.
 
 ![Configuración de Console](images/console-settings.png)
 
@@ -207,5 +208,6 @@ sección **Console** para ver otra configuración de Console.
   </tbody>
 </table>
 
+## Comentarios {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

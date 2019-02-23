@@ -2,11 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Also zombie optimizations and alphabets
 
-{# wf_updated_on: 2018-11-08 #}
+{# wf_updated_on: 2018-11-29 #}
 {# wf_published_on: 2018-11-08 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-19.mp3 #}
 {# wf_podcast_duration: 00:56:31 #}
-{# wf_podcast_fileSize: 34658544 #}
+{# wf_podcast_fileSize: 34864351 #}
 {# wf_podcast_subtitle: Also zombie optimizations and alphabets #}
 {# wf_featured_image: /web/shows/http203/podcast/images/surma-and-jake-2.jpg #}
 {# wf_blink_components: Blink>Canvas, Blink>Workers #}

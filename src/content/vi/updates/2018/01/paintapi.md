@@ -193,6 +193,4 @@ Note: ngắt hiện không được hỗ trợ trong CSS Paint API, nhưng sẽ 
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
 {% include "web/_shared/translation-end.html" %}

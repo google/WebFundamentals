@@ -307,4 +307,3 @@ Google has released a [limited polyfill for Proxy](https://github.com/GoogleChro
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

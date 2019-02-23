@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-08-15 #}
+{# wf_updated_on: 2018-12-20 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -362,9 +362,7 @@ since it can help avoid potential footguns before they sneak into your codebase.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
-[spec]: https://wicg.github.io/feature-policy/
+[spec]: https://wicg.github.io/webappsec-feature-policy/
 [jsapi]: https://www.chromestatus.com/features/5190687460950016
 [chromestatus]: https://www.chromestatus.com/features/5694225681219584
 [chromestatusfilter]: https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy

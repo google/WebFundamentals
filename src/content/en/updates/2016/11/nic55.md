@@ -175,4 +175,3 @@ Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our
 <link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="/web/shows/atom.xml">
 
 
-{% include "comment-widget.html" %}

@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-10-26 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_published_on: 2011-10-26 #}
 {# wf_tags: news,halloween #}
+{# wf_blink_components: N/A #}
 
 # Spooktacular HTML5 Pumpkin {: .page-title }
 
@@ -17,8 +18,7 @@ Thanks to <a href="https://plus.google.com/107226275692313566931/">Rachel Blum</
 </p>
 
 <p>
-Use the <a href="http://kaazingcorp.cachefly.net/com/file/kaazing-training-happy-halloween.pdf">HTML5 pumpkin carving template</a> yourself, thanks to Kaazing.
+Use the <a href="https://plus.google.com/+ChrisWilson/posts/inPnnYp8JoN">HTML5 pumpkin carving template</a> yourself.
 </p>
 
 
-{% include "comment-widget.html" %}

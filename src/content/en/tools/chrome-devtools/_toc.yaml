@@ -1,6 +1,8 @@
 toc:
 - title: Home
   path: /web/tools/chrome-devtools/
+- title: Open DevTools
+  path: /web/tools/chrome-devtools/open
 - title: DevTools for Beginners
   section:
   - title: HTML and the DOM
@@ -13,6 +15,10 @@ toc:
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
+  - title: Guides
+    section:
+    - title: Force DevTools Into Print Preview Mode
+      path: /web/tools/chrome-devtools/css/print-preview
 - title: JavaScript
   section:
   - title: Get Started
@@ -23,35 +29,61 @@ toc:
     path: /web/tools/chrome-devtools/javascript/source-maps
   - title: JS Debugging Reference
     path: /web/tools/chrome-devtools/javascript/reference
-  - title: Step Through Code
-    path: /web/tools/chrome-devtools/javascript/step-code
-    status: deprecated
-  - title: Pretty-Print Minified JavaScript
-    path: /web/tools/chrome-devtools/javascript/pretty-print
-    status: deprecated
-  - title: Watch Variables in Sources
-    path: /web/tools/chrome-devtools/javascript/watch-variables
-    status: deprecated
+  - title: Guides
+    section:
+    - title: Blackbox Chrome Extension Scripts
+      path: /web/tools/chrome-devtools/javascript/guides/blackbox-chrome-extension-scripts
+    - title: Disable JavaScript
+      path: /web/tools/chrome-devtools/javascript/disable
+  - title: Deprecated
+    section:
+    - title: Step Through Code
+      path: /web/tools/chrome-devtools/javascript/step-code
+      status: deprecated
+    - title: Pretty-Print Minified JavaScript
+      path: /web/tools/chrome-devtools/javascript/pretty-print
+      status: deprecated
+    - title: Watch Variables in Sources
+      path: /web/tools/chrome-devtools/javascript/watch-variables
+      status: deprecated
 - title: UI References and Overviews
   section:
   - title: UI Reference
     path: /web/tools/chrome-devtools/ui
   - title: Sources Panel Overview
     path: /web/tools/chrome-devtools/sources
-  - title: Keyboard Shortcuts Reference
+  - title: Keyboard Shortcuts
     path: /web/tools/chrome-devtools/shortcuts
 - title: Accessibility
-  path: /web/tools/chrome-devtools/accessibility/reference
+  section:
+  - title: Reference
+    path: /web/tools/chrome-devtools/accessibility/reference
+  - title: Guides
+    section:
+    - title: Track Which Element Has Focus
+      path: /web/tools/chrome-devtools/accessibility/focus
 - title: Simulate Mobile Devices
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
-  - title: Test Responsive and Device-Specific Viewports
-    path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
-  - title: Emulate Geolocation and Accelerometer Sensors
-    path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
   - title: Emulate and Test Other Browsers
     path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+  - title: Guides
+    section:
+    - title: Override The User Agent String
+      path: /web/tools/chrome-devtools/device-mode/override-user-agent
+    - title: Override Geolocation
+      path: /web/tools/chrome-devtools/device-mode/geolocation
+    - title: Simulate Device Orientation
+      path: /web/tools/chrome-devtools/device-mode/orientation
+  - title: Deprecated
+    section:
+    - title: Test Responsive and Device-Specific Viewports
+      path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      status: deprecated
+    - title: Emulate Geolocation and Accelerometer Sensors
+      path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      status: deprecated
 - title: Remote Debug Android Devices
   section:
   - title: Get Started
@@ -66,6 +98,10 @@ toc:
     path: /web/tools/chrome-devtools/console/
   - title: Get Started
     path: /web/tools/chrome-devtools/console/get-started
+  - title: API Reference
+    path: /web/tools/chrome-devtools/console/api
+  - title: Utilities API Reference
+    path: /web/tools/chrome-devtools/console/utilities
   - title: Diagnose and Log to the Console
     path: /web/tools/chrome-devtools/console/console-write
   - title: Compare Similar Data Objects
@@ -74,14 +110,10 @@ toc:
     path: /web/tools/chrome-devtools/console/track-executions
   - title: Handle Exceptions and Errors
     path: /web/tools/chrome-devtools/console/track-exceptions
-  - title: Console API Reference
-    path: /web/tools/chrome-devtools/console/console-reference
   - title: Evaluate Expressions
     path: /web/tools/chrome-devtools/console/expressions
   - title: Monitor Events
     path: /web/tools/chrome-devtools/console/events
-  - title: Command Line Reference
-    path: /web/tools/chrome-devtools/console/command-line-reference
 - title: Performance
   section:
   - title: Get Started
@@ -105,13 +137,13 @@ toc:
 - title: Network
   section:
   - title: Get Started
-    path: /web/tools/chrome-devtools/network-performance/
+    path: /web/tools/chrome-devtools/network/
   - title: Network Issues Guide
-    path: /web/tools/chrome-devtools/network-performance/issues
+    path: /web/tools/chrome-devtools/network/issues
   - title: Reference
-    path: /web/tools/chrome-devtools/network-performance/reference
+    path: /web/tools/chrome-devtools/network/reference
   - title: Resource Loading
-    path: /web/tools/chrome-devtools/network-performance/resource-loading
+    path: /web/tools/chrome-devtools/network/resource-loading
     status: deprecated
 - title: Memory
   section:

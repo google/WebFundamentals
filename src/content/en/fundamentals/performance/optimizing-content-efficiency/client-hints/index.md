@@ -1,8 +1,8 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TBD
+description: Client hints are a set of HTTP request headers we can use to change how we deliver page resources based on characteristics of a user's device and network connection. In this article, you'll learn all about client hints, how they work, and a few ideas on how you can use them to make your site faster for users.
 
-{# wf_updated_on: 2018-11-18 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-11-22 #}
 {# wf_blink_components: UI>Browser>Mobile>Settings>DataSaver,Blink>Fonts,Blink>CSS,Blink>JavaScript #}
 
@@ -130,7 +130,7 @@ For example, let’s take this markup:
 
 ```html
 <img src="whats-up-1x.png"
-     srcset="whats-up-1x.png 2x, whats-up-1x.png 1x"
+     srcset="whats-up-2x.png 2x, whats-up-1x.png 1x"
      alt="I'm that image you wanted.">
 ```
 
@@ -598,15 +598,12 @@ self.addEventListener("fetch", event => {
 });
 ```
 
-Warning: Because not all browsers support client hints, you’ll need to check
-what values `event.request.headers.get` returns. A possible alternative approach
-is to record JS equivalents such as
+Warning: Because not all browsers support client hints, you’ll need to check what values
+`event.request.headers.get` returns. A possible alternative approach is to record JS equivalents
+such as
 [`window.devicePixelRatio`](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
-or
-[`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth)
-to
-[`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage),
-which is accessible in the service worker scope.
+or [`window.innerWidth`](https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth) to
+[`IndexedDB`](/web/ilt/pwa/working-with-indexeddb), which is accessible in the service worker scope.
 
 Any client hint header you opt into can be read in this fashion. Though that’s
 not the only way you can get some of this information. Network-specific hints
@@ -670,10 +667,9 @@ Hints](https://cloudinary.com/blog/automatic_responsive_images_with_client_hints
 `Save-Data`](/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 
 _Thank you to [Ilya Grigorik](https://twitter.com/igrigorik), [Eric
-Portis](https://twitter.com/etportis), [Yoav
-Weiss](https://twitter.com/yoavweiss), and [Estelle
-Weyl](https://twitter.com/estellevw) for their valuable feedback and edits on
-this article._
+Portis](https://twitter.com/etportis), [Jeff Posnick](https://twitter.com/jeffposnick), [Yoav
+Weiss](https://twitter.com/yoavweiss), and [Estelle Weyl](https://twitter.com/estellevw) for their
+valuable feedback and edits on this article._
 
 ## Feedback {: #feedback .hide-from-toc }
 

@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2018-12-20 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -21,6 +21,20 @@ websites, faster.
 
 With DevTools you can view and change any page. Even the Google homepage, as the video
 demonstrates.
+
+## Open DevTools {: #open }
+
+There are many ways to open DevTools, because different users want quick access to different
+parts of the DevTools UI.
+
+* When you want to work with the DOM or CSS, right-click an element on the page and select **Inspect**
+  to jump into the **Elements** panel. Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or
+  <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, Chrome OS).
+* When you want to see logged messages or run JavaScript, press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd>
+  (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS) to
+  jump straight into the **Console** panel.
+
+See [Open Chrome DevTools](/web/tools/chrome-devtools/open) for more details and workflows.
 
 ## DevTools for Beginners {: #beginners }
 
@@ -42,7 +56,7 @@ DevTools can improve your productivity:
 
 ## Discover DevTools {: #discover }
 
-The DevTools UI can be a little overwhelming... there's so many tabs! But, if you take some
+The DevTools UI can be a little overwhelming... there are so many tabs! But, if you take some
 time to get familiar with each tab to understand what's possible, you may discover that DevTools
 can seriously boost your productivity.
 

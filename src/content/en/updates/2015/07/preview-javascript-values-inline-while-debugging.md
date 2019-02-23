@@ -23,4 +23,3 @@ To enable this feature (if it's not already):
 </ol>
 
 
-{% include "comment-widget.html" %}

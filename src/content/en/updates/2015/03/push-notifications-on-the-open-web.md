@@ -889,4 +889,3 @@ message which has the same 'collapse_key', with the new message.
 [More details can be found here](https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages).
 
 
-{% include "comment-widget.html" %}

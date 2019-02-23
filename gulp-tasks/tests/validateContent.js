@@ -186,6 +186,9 @@ function test(filename, contents, options) {
       logError(`'{% include %}' is badly quoted: ${include[0]}`, position);
     }
     if (inclFile === 'comment-widget.html') {
+      const widget = `{% include "comment-widget.html" %}`;
+      const msg = `The comments widget '${widget}' has been deprecated.`;
+      logError(`${msg} Do not use it.`, position);
       return;
     }
     if (inclFile.indexOf('web/') !== 0) {
@@ -274,21 +277,7 @@ function test(filename, contents, options) {
     }
   }
 
-  // Warn on missing comment widgets
-  if (!options.ignoreMissingCommentWidget) {
-    const reComment = /^{%\s?include "comment-widget\.html"\s?%}/m;
-    const reUpdatesPath = /src\/content\/.+?\/updates\/\d{4}\//;
-    if (reUpdatesPath.test(filename)) {
-      if (!reComment.test(contents)) {
-        const position = {line: getLineNumber(contents, contents.length - 1)};
-        const msg = `Updates post is missing comment widget: ` +
-          `'{% include "comment-widget.html" %}'`;
-        logWarning(msg, position);
-      }
-    }
-  }
-
-  // Warn on missing comment widgets
+  // Warn on missing feed widget
   if (!options.ignoreMissingFeedWidget) {
     const reWidget =
         /^{%\s?include "web\/_shared\/rss-widget-updates.html"\s?%}/m;

@@ -99,8 +99,6 @@ This magic behavior only happens when:
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=713233)
 
-{% include "comment-widget.html" %}
-
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/
 [keyframe]: https://en.wikipedia.org/wiki/Key_frame#Video_compression

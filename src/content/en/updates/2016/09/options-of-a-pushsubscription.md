@@ -57,4 +57,3 @@ event like so:
 It's a small change, that will be super useful in the future.
 
 
-{% include "comment-widget.html" %}

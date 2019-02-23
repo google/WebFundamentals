@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources panel of Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-01-30 #}
 {# wf_published_on: 2018-01-09 #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}
@@ -24,17 +24,17 @@ Use the Chrome DevTools **Sources** panel to:
 
 ## View files {: #files }
 
-Use the **Network** pane to view all of the resources that the page has loaded.
+Use the **Page** pane to view all of the resources that the page has loaded.
 
 <figure>
-  <img src="images/sources-network-pane.png"
-       alt="The Network pane"/>
+  <img src="images/sources-page-pane.png"
+       alt="The Page pane"/>
   <figcaption>
-    <b>Figure 1</b>. The <b>Network</b> pane
+    <b>Figure 1</b>. The <b>Page</b> pane
   </figcaption>
 </figure>
 
-How the **Network** pane is organized:
+How the **Page** pane is organized:
 
 * The top-level, such as `top` in <b>Figure 1</b>, represents an [HTML frame][frame].
   You'll find `top` on every page that you visit. `top` represents the main document
@@ -44,12 +44,12 @@ How the **Network** pane is organized:
 * The third-level, fourth-level, and so on, represent directories and resources that
   were loaded from that origin. For example, in <b>Figure 1</b> the full path to the
   resource `devsite-googler-button` is
-  `developers.google.com/_static/f6e16de9fa/css/devsite-googler-button`
+  `developers.google.com/_static/19aa27122b/css/devsite-googler-button`
 
 [frame]: https://www.w3.org/TR/html401/present/frames.html
-[origin]: https://www.w3.org/TR/2011/WD-html5-20110525/origin-0.html
+[origin]: https://html.spec.whatwg.org/multipage/origin.html#origin
 
-Click a file in the **Network** pane to view its contents in the **Editor** pane. You
+Click a file in the **Page** pane to view its contents in the **Editor** pane. You
 can view any type of file. For images, you see a preview of the image.
 
 <figure>
@@ -87,7 +87,7 @@ change, then the text `A` would have been logged to the **Console**.
   <img src="images/edit-js.gif"
        alt="Editing JavaScript in the Editor pane"/>
   <figcaption>
-    <b>Figure 5</b>. Editing JavaScript in the <b>Editor</b> pane
+    <b>Figure 4</b>. Editing JavaScript in the <b>Editor</b> pane
   </figcaption>
 </figure>
 
@@ -114,7 +114,7 @@ any time you need it. DevTools saves the **Snippet** to your file system.
   <img src="images/snippet.png"
        alt="A Snippet that inserts the jQuery library into a page."/>
   <figcaption>
-    <b>Figure 6</b>. A <b>Snippet</b> that inserts the jQuery library into a page
+    <b>Figure 5</b>. A <b>Snippet</b> that inserts the jQuery library into a page
   </figcaption>
 </figure>
 
@@ -146,7 +146,7 @@ basics of debugging in DevTools.
   <img src="images/debugging.png"
        alt="Debugging JavaScript"/>
   <figcaption>
-    <b>Figure 7</b>. Debugging JavaScript
+    <b>Figure 6</b>. Debugging JavaScript
   </figcaption>
 </figure>
 
@@ -156,7 +156,7 @@ By default, when you edit a file in the **Sources** panel, those changes are los
 reload the page. **Workspaces** enable you to save the changes that you make in DevTools to
 your file system. Essentially, this lets you use DevTools as your code editor.
 
-See [Set Up Persistence With DevTools Workspaces][WS] to get started.
+See [Edit Files With Workspaces][WS] to get started.
 
 [WS]: /web/tools/chrome-devtools/workspaces/
 

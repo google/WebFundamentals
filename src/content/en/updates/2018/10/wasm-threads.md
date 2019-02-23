@@ -231,4 +231,3 @@ process in the
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

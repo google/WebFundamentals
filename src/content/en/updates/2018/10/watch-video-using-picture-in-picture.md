@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2018-10-19 #}
+{# wf_updated_on: 2019-02-12 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -129,6 +129,11 @@ Chrome's implementation follows this pattern. This means users can only play
 one Picture-in-Picture video at a time. You should expect users to exit
 Picture-in-Picture even when you didn't ask for it.
 
+Warning: Listen to Picture-in-Picture events instead of waiting for promises
+to update your media player controls. It's possible for the video to enter and
+exit Picture-in-Picture at any time (e.g. user clicks some browser context menu
+or Picture-in-Picture is triggered automatically).
+
 The new `enterpictureinpicture` and `leavepictureinpicture` event handlers let
 us tailor the experience for users. It could be anything from browsing a
 catalog of videos, to surfacing a livestream chat.
@@ -208,6 +213,52 @@ handle your Picture-in-Picture button visibility.
                                   videoElement.disablePictureInPicture;
     }
 
+## MediaStream video support
+
+Video playing MediaStream objects (e.g. `getUserMedia()`, `getDisplayMedia()`,
+`canvas.captureStream()`) also support Picture-in-Picture in Chrome 71. This
+means you can show a Picture-in-Picture window that contains user's webcam
+video stream, display video stream, or even a canvas element. Note that the
+video element doesn't have to be attached to the DOM to enter
+Picture-in-Picture as shown below.
+
+### Show user's webcam in Picture-in-Picture window
+
+```js
+const video = document.createElement('video');
+video.muted = true;
+video.srcObject = await navigator.mediaDevices.getUserMedia({ video: true });
+video.play()
+
+// Later on, video.requestPictureInPicture();
+```
+
+### Show display in Picture-in-Picture window
+
+```js
+const video = document.createElement('video');
+video.muted = true;
+video.srcObject = await navigator.mediaDevices.getDisplayMedia({ video: true });
+video.play();
+
+// Later on, video.requestPictureInPicture();
+```
+
+### Show canvas element in Picture-in-Picture window
+
+```js
+const canvas = document.createElement('canvas');
+// Draw something to canvas.
+canvas.getContext('2d').fillRect(0, 0, canvas.width, canvas.height);
+
+const video = document.createElement('video');
+video.muted = true;
+video.srcObject = canvas.captureStream();
+video.play();
+
+// Later on, video.requestPictureInPicture();
+```
+
 ## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
@@ -222,9 +273,7 @@ API are currently implemented in Chrome and other browsers.
 
 Here's what you can expect to see in the near future:
 
-- Picture-in-Picture will be supported in Chrome OS and Android O.
-- MediaStreams from `MediaDevices.getUserMedia()` will work with
-  Picture-in-Picture.
+- Picture-in-Picture will be supported in Android O.
 - Web developers will be able to [add custom Picture-in-Picture controls].
 
 ## Resources {: #resources }
@@ -237,8 +286,8 @@ Here's what you can expect to see in the near future:
 - Unofficial Picture-in-Picture polyfill: [https://github.com/gbentaieb/pip-polyfill/]
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="5azRhKsSU_M"
-          data-start="714" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  <iframe class="devsite-embedded-youtube-video" data-video-id="iTC3mfe0DwE"
+          data-start="80" data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
@@ -249,8 +298,6 @@ involved in the [standardization effort].
 <div class="clearfix"></div>
 
 {% include "web/_shared/rss-widget-updates.html" %}
-
-{% include "comment-widget.html" %}
 
 [Picture-in-Picture Web API]: https://wicg.github.io/picture-in-picture/
 [Picture-in-Picture sample]: https://googlechrome.github.io/samples/picture-in-picture/

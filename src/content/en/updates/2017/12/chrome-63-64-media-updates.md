@@ -334,8 +334,6 @@ crazy fast now.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=289354)
 
-{% include "comment-widget.html" %}
-
 [Media Capabilities]: https://wicg.github.io/media-capabilities/
 [Windows 10 is in HDR mode]: https://support.microsoft.com/en-us/help/4040263/windows-10-hdr-advanced-color-settings
 [scRGB]: https://en.wikipedia.org/wiki/ScRGB

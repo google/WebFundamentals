@@ -482,8 +482,6 @@ Chrome Bugs:
 
 <div class="clearfix"></div>
 
-{% include "comment-widget.html" %}
-
 [Media Session API]: https://wicg.github.io/mediasession/
 [a user gesture]: https://html.spec.whatwg.org/multipage/interaction.html#activation
 [low-end devices]: https://chromium.googlesource.com/chromium/src/+/a66fe8713400ed760cd5d78931e536f33c5828d5/chrome/android/java/src/org/chromium/chrome/browser/media/ui/MediaNotificationManager.java#514

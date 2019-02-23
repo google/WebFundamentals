@@ -183,8 +183,6 @@ never rejects. It only happens if there are no valid sources.
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=718647)
 
-{% include "comment-widget.html" %}
-
 [Promise]: /web/fundamentals/getting-started/primers/promises
 [Chrome 50]: /web/updates/2016/03/play-returns-promise
 [Chrome]: https://www.chromestatus.com/feature/5920584248590336

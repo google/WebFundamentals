@@ -33,4 +33,3 @@ flex-basis: 45%;
 Just click the small arrow near the shorthand property to expand it.
 
 
-{% include "comment-widget.html" %}

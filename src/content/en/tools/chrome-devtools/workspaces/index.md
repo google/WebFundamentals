@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Learn how to save changes made within DevTools to disk.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-14 #}
 {# wf_published_on: 2018-04-10 #}
 
 {# Links #}
@@ -11,7 +11,7 @@ description: Learn how to save changes made within DevTools to disk.
 [ML]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [SO]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools 
 
-# Save Changes To Disk With Workspaces {: .page-title }
+# Edit Files With Workspaces {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 

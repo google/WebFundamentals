@@ -337,4 +337,3 @@ management capabilities on the client. This is the extensible web in action.
    feedback or other questions.
 
 
-{% include "comment-widget.html" %}

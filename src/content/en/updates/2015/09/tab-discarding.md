@@ -156,4 +156,3 @@ and let us know what you think in the comments. :) We'd also appreciate it if yo
 file tickets for any bugs you encounter on [crbug.com](https://crbug.com).
 
 
-{% include "comment-widget.html" %}

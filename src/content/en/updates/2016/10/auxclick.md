@@ -109,4 +109,3 @@ or not there's native support for `auxclick`:
     // Explicitly listen for auxclick in browsers that support it.
     document.querySelector('#my-link').addEventListener('auxclick', handleAuxClick);
 
-{% include "comment-widget.html" %}

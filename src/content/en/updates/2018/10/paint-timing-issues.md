@@ -46,4 +46,3 @@ For the nitty gritty details, see this
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

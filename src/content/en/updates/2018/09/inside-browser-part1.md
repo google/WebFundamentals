@@ -327,4 +327,3 @@ hear from you in the comment section below or [@kosamari](https://twitter.com/ko
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
