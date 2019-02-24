@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
-{# wf_published_on: 2019-02-25 #}
+{# wf_published_on: 2019-02-24 #}
 {# wf_updated_on: 2019-02-24 #}
 {# wf_blink_components: N/A #}
 
@@ -88,10 +88,9 @@ if ('serviceWorker' in navigator) {
 ```
 
 If your bundler supports [code splitting via dynamic import
-statements](/web/fundamentals/performance
-/optimizing-javascript/code-splitting/#splitting_code_dynamically), you can also
-conditionally load `workbox-window`, which should help reduce the size of your
-page's main bundle.
+statements](/web/fundamentals/performance/optimizing-javascript/code-splitting/#splitting_code_dynamically),
+you can also conditionally load `workbox-window`, which should help reduce the
+size of your page's main bundle.
 
 Even though `workbox-window` is quite small (1kb gzipped), there's no reason it
 needs to be loaded with your site's core application logic, as service workers,
@@ -151,8 +150,8 @@ Once you've imported the `Workbox` class, you can use it to register and
 interact with your service worker. Here are some examples of ways you might use
 `Workbox` in your application:
 
-<h4 id="example-first-active" class="hide-from-toc">Register a service worker and
-notify the user the very first time that service worker is active:</h4>
+<h4 id="example-first-active" class="hide-from-toc">Register a service worker
+and notify the user the very first time that service worker is active:</h4>
 
 Many web applications user service worker to precache assets so their app works
 offline on subsequent page loads. In some cases it could make sense to inform
@@ -185,8 +184,7 @@ controlled by the initial service worker have fully unloaded.
 
 This is a common source of confusion for developers, especially in cases where
 [reloading the current page doesn't cause the new service worker to
-activate](/web/fundamentals/primers/service-
-workers/lifecycle#waiting).
+activate](/web/fundamentals/primers/service-workers/lifecycle#waiting).
 
 To help minimize confusion and make it clear when this situation is happening,
 the `Workbox` class provides a `waiting` event that you can listen for:
@@ -203,12 +201,19 @@ wb.addEventListener('waiting', (event) => {
 wb.register();
 ```
 
-<h4 id="example-broadcast-updates" class="hide-from-toc">Notify the user of cache updates
-from the <code>workbox-broadcast-update</code> package</h4>
+<h4 id="example-broadcast-updates" class="hide-from-toc">Notify the user of
+cache updates from the <code>workbox-broadcast-update</code> package</h4>
 
-The [`workbox-broadcast-update` package](/web/tools/workbox/modules/workbox-broadcast-cache-update) is a great way to be able to serve content from the cache (for fast delivery) while also being able to inform the user of updates to that content (using the [stale-while-revalidate strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)).
+The [`workbox-broadcast-update`
+package](/web/tools/workbox/modules/workbox-broadcast-cache-update) is a great
 
-To receive those updates from the window, you can listen to `message` events of type `CACHE_UPDATE`:
+way to be able to serve content from the cache (for fast delivery) while also
+being able to inform the user of updates to that content (using the
+[stale-while-revalidate
+strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)).
+
+To receive those updates from the window, you can listen to `message` events of
+type `CACHE_UPDATE`:
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -228,11 +233,19 @@ wb.register();
 <h4 id="example-cache-urls" class="hide-from-toc">Send the service worker
 a list of URLs to cache</h4>
 
-For some applications, it's possible to know all the assets that need to be precached at build time, but some applications serve completely different pages, based on what URL the user lands on first.
+For some applications, it's possible to know all the assets that need to be
+precached at build time, but some applications serve completely different pages,
+based on what URL the user lands on first.
 
-For apps in the latter category, it might make sense to only cache the assets the user needed for the particular page they visited. When using the [`workbox-routing` package](/web/tools/workbox/modules/workbox-routing), you can send your router a list of URLs to cache, and it will cache those URLs according to the rules defined on the router itself.
+For apps in the latter category, it might make sense to only cache the assets
+the user needed for the particular page they visited. When using the
+[`workbox-routing` package](/web/tools/workbox/modules/workbox-routing), you can
+send your router a list of URLs to cache, and it will cache those URLs according
+to the rules defined on the router itself.
 
-This example sends a list of URLs loaded by the page to the router any time a new service worker is activated. Note, it's fine to send _all_ URLs because only the URLs that match a defined route in the service worker will be cached:
+This example sends a list of URLs loaded by the page to the router any time a
+new service worker is activated. Note, it's fine to send _all_ URLs because only
+the URLs that match a defined route in the service worker will be cached:
 
 ```javascript
 const wb = new Workbox('/sw.js');
@@ -265,17 +278,19 @@ wb.register();
 
 ## Important service worker lifecycle moments
 
-The [service worker lifecycle](/web/fundamentals/primers/service-
-workers/lifecycle) is complex and can be a challenge to fully understand. Part
-of the reason it's so complex is it must handle all the edge cases for all
-possible usages of service worker (e.g. registering more than one service
-worker, registering different service workers in different frames, registering
-service workers with different names, etc.).
+The [service worker
+lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
+is complex and can be a challenge to fully understand. Part of the reason it's
+so complex is it must handle all the edge cases for all possible usages of
+service worker (e.g. registering more than one service worker, registering
+different service workers in different frames, registering service workers with
+different names, etc.).
 
 But most developers implementing service worker should not need to worry about
 all these edge cases because their usage is quite simple. Most developer
 register just one service worker per page load, and they [don't change the name
-of the service worker](/web/fundamentals/primers /service-workers/lifecycle#avoid-url-change)
+of the service
+worker](/web/fundamentals/primers /service-workers/lifecycle#avoid-url-change)
 file they deploy to their server.
 
 The `Workbox` class embraces this simpler view for the service worker lifecycle
@@ -288,8 +303,8 @@ own, registered service worker and an external service worker:
     a service worker that started installing as a result of the
     <code>Workbox</code> instance calling <code>register()</code> or the
     already-active service worker if calling <code>register()</code> did not
-    trigger an
-    <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">
+    trigger an <a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">
     <code>updatefound</code></a> event on the registration.</p>
   </li>
   <li>
@@ -491,9 +506,8 @@ Consider a scenario where you have tab A running v1 of your site and tab B
 running v2. When tab B loads, it'll be controlled by the version of your service
 worker that shipped with v1, but the page returned by the server (if using a
 [network-first caching
-strategy](/web/tools/workbox/modules/workbox-
-strategies#network_first_network_falling_back_to_cache) for your navigation
-requests) will contain all your v2 assets.
+strategy](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache)
+for your navigation requests) will contain all your v2 assets.
 
 This is generally not a problem for tab B though, since when you wrote your v2
 code, you were aware of how your v1 code worked. **However, it could be a
@@ -546,7 +560,8 @@ instance registered.
 
 ## Avoiding common mistakes
 
-One of the most helpful features Workbox provides is it's developer logging. And this is especially true for `workbox-window`.
+One of the most helpful features Workbox provides is it's developer logging. And
+this is especially true for `workbox-window`.
 
 We know developing with service worker can often be confusing, and when things
 happen contrary to what you'd expect, it can be hard to know why.
@@ -563,8 +578,8 @@ help with debugging why things aren't as you'd expect.
 (../images/modules/workbox-window/logs-stuck-waiting.png)
 
 In addition, a common mistake developers make when first using service worker is
-to register a service worker in the [wrong scope](/web/ilt/pwa/introduction-to-
-service-worker#registration_and_scope).
+to register a service worker in the
+[wrong scope](/web/ilt/pwa/introduction-to-service-worker#registration_and_scope).
 
 To help prevent this from happening, the `Workbox` class will warn you if the
 page registering the service worker is not in that service worker's scope. It'll
@@ -686,9 +701,9 @@ For example, in the code above, if the service worker version returned by that
 `messageSW()` call is older than the expected version, it would be wise to wait
 until an update is found (which should happen when you call `register()`). At
 that point you can either notify the user or an update, or you can manually
-[skip the waiting phase](/web/fundamentals/primers/service-
-workers/lifecycle#skip_the_waiting_phase) to activate the new service worker
-right away.
+[skip the waiting
+phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+to activate the new service worker right away.
 
 <h4 class="hide-from-toc">Cache first</h4>
 
@@ -699,9 +714,8 @@ to use `messageSW()` right away.
 
 However, if an updated version of your service worker is found and activates
 when your page calls `register()` (i.e. you intentionally [skip the waiting
-phase](/web/fundamentals/primers/service-
-workers/lifecycle#skip_the_waiting_phase)), it may no longer be safe to send
-messages to it.
+phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)),
+it may no longer be safe to send messages to it.
 
 One strategy for managing this possibility is to use a versioning scheme that
 allows you to differentiate between breaking updates and non-breaking updates,

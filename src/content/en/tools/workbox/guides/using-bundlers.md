@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_published_on: 2019-02-25 #}
+{# wf_published_on: 2019-02-24 #}
 {# wf_updated_on: 2019-02-24 #}
 {# wf_blink_components: N/A #}
 
@@ -259,9 +259,8 @@ precache manifest based on the files generated from their webpack build process.
 
 If you also want to use webpack to generate your service worker file (as
 described in this article), beware that the `workbox-webpack-plugin`'s
-[injectManifest config](/web/tools/workbox/modules
-/workbox-build#full_injectmanifest_config) accepts a `swSrc` option that it will
-update with your precache manifest.
+[injectManifest config](/web/tools/workbox/modules/workbox-build#full_injectmanifest_config)
+accepts a `swSrc` option that it will update with your precache manifest.
 
 This can be problematic if you're using the same webpack configuration to
 generate your service worker file, since it may not exist by the time the
