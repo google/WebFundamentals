@@ -23,6 +23,9 @@ toc:
   path: /web/tools/workbox/guides/common-recipes
 - title: "Enable Offline Google Analytics"
   path: /web/tools/workbox/guides/enable-offline-analytics
+- title: "Using Bundlers (webpack/Rollup) with Workbox"
+  path: /web/tools/workbox/guides/using-bundlers
+  status: new
 - title: "Troubleshoot and Debug"
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 - title: "Understanding Storage Quota"
