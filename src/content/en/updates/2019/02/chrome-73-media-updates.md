@@ -98,7 +98,7 @@ Check out our existing [developer documentation] and try out the [official Media
 Session samples].
 
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5639924124483584) &#124;
-[Chromium Bug](hhttps://bugs.chromium.org/p/chromium/issues/detail?id=497735)
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=497735)
 
 ## Encrypted Media: HDCP Policy Check {: #hdcp }
 
