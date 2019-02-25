@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from Workbox v3 to v4.
 
 {# wf_updated_on: 2019-02-25 #}
-{# wf_published_on: 2019-0-25 #}
+{# wf_published_on: 2019-02-25 #}
 {# wf_blink_components: N/A #}
 
 # Migrate from Workbox v3 to v4 {: .page-title }
@@ -127,7 +127,7 @@ In v3, the `Queue` class also accepted several callbacks that allowed you to
 observe when requests were being replayed (`requestWillEnqueue`,
 `requestWillReplay`, `queueDidReplay`), but most developers found that, in
 addition to observation, they wanted control over how the queue was replayed,
-including the ability to dynamically modify, re-order, or event cancel
+including the ability to dynamically modify, re-order, or even cancel
 individual requests.
 
 In v4, these callbacks have been removed in favor of a single
@@ -226,7 +226,7 @@ your web app's `window` context.
 
 While using `workbox-window` is optional, we hope that developers will find it
 useful, and consider migrating some of their handwritten logic to use it when
-appropriate. You can learn more about using workbox-window in the [module's guide](/web/tools/workbox/modules/workbox-window).
+appropriate. You can learn more about using `workbox-window` in the [module's guide](/web/tools/workbox/modules/workbox-window).
 
 ## Example Migration
 
