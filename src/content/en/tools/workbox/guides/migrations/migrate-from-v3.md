@@ -104,7 +104,7 @@ While the factory method syntax will continue working in v4, using it will log a
 warning, and we encourage developers to migrate in advance of removing support
 in the future v5 release.
 
-### Workbox-background-sync
+### workbox-background-sync
 
 The
 [`workbox.backgroundSync.Queue` class](/web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Queue#Queue)
