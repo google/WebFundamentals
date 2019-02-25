@@ -19,8 +19,6 @@ toc:
   path: /web/tools/workbox/guides/handle-third-party-requests
 - title: "Using Plugins"
   path: /web/tools/workbox/guides/using-plugins
-- title: "Common Recipes"
-  path: /web/tools/workbox/guides/common-recipes
 - title: "Enable Offline Google Analytics"
   path: /web/tools/workbox/guides/enable-offline-analytics
 - title: "Using Bundlers (webpack/Rollup) with Workbox"
@@ -30,8 +28,13 @@ toc:
   path: /web/tools/workbox/guides/troubleshoot-and-debug
 - title: "Understanding Storage Quota"
   path: /web/tools/workbox/guides/storage-quota
+- title: "Common Recipes"
+  path: /web/tools/workbox/guides/common-recipes
+- title: "Advanced Recipes"
+  path: /web/tools/workbox/guides/advanced-recipes
+- title: "Service Worker Checklist"
+  path: /web/tools/workbox/guides/service-worker-checklist
 - title: "Generate a Complete Service Worker"
-  path: /web/tools/workbox/guides/generate-service-worker
   style: accordion
   section:
   - title: "CLI"
@@ -52,7 +55,7 @@ toc:
     - title: "Build a PWA using Workbox"
       path: "https://codelabs.developers.google.com/codelabs/workbox-lab/"
       status: external
-- title: "Migrating to Workbox"
+- title: "Migrating from Older Versions"
   style: accordion
   section:
   - title: "From sw-precache or sw-toolbox"
@@ -61,7 +64,5 @@ toc:
     path: /web/tools/workbox/guides/migrations/migrate-from-v2
   - title: "From Workbox v3 to v4"
     path: /web/tools/workbox/guides/migrations/migrate-from-v3
-- title: "Service Worker Checklist"
-  path: /web/tools/workbox/guides/service-worker-checklist
-- title: "Advanced Recipes"
-  path: /web/tools/workbox/guides/advanced-recipes
+    status: new
+
