@@ -45,7 +45,4 @@ Polymer 0.8: First Look -- Polycasts #13
 
 Polymer Slack: [http://bit.ly/polymerslack](http://bit.ly/polymerslack)
 
-Polymer G+ community: [https://plus.google.com/communities/115626364525706131031](https://plus.google.com/communities/115626364525706131031)
-
 [Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
-

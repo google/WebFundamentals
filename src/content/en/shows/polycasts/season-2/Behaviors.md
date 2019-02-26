@@ -42,6 +42,4 @@ Behaviors unlock amazing potential by letting you mix functionality into your el
 <https://www.youtube.com/watch?v=xz-yixRxZN8&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=3>
 
 - Polymer Slack: <http://bit.ly/polymerslack>
-- Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
 - [Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
-

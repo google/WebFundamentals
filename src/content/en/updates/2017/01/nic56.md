@@ -26,7 +26,7 @@ description: What's new in Chrome 56 for developers? Web Bluetooth API, CSS Posi
   elements that scroll normally until sticking to the top of the viewport.
 * And [HTML5 by Default](#html5-by-default) is enabled for all users.
 
-I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 56. 
+I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 56.
 
 <div class="clearfix"></div>
 
@@ -52,19 +52,18 @@ nearby devices even easier.
 Francois has a great
 [article on Updates](/web/updates/2015/07/interact-with-ble-devices-on-the-web),
 be sure to check out some of neat [demos](https://github.com/WebBluetoothCG/demos)
-to go along with it. And be sure to check out the
-[Web Bluetooth Community](https://plus.google.com/communities/108953318610326025178).
+to go along with it.
 
 ## CSS `position: sticky;` {: #position-sticky }
 
 Previously, building content headers that scrolled normally until sticking
 to the top of the viewport required listening to scroll events and
-switching an element’s position from relative to fixed at a specified threshold. 
+switching an element’s position from relative to fixed at a specified threshold.
 It was difficult to synchronize, and often results in small visual jumps.
 
 Chrome now supports CSS
 [`position: sticky;`](//developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning),
-a new way to position elements. 
+a new way to position elements.
 
 An element that is position sticky, starts relative; but becomes fixed,
 after the element reaches a certain scroll position.
@@ -88,7 +87,7 @@ Last August, we announced that we’d be
 to offer a safer, more power-efficient experience. This change disables Adobe
 Flash Player unless there’s a user indication that they want Flash content on
 specific sites, and eventually all websites will require the user’s permission
-to run Flash. 
+to run Flash.
 
 In Chrome 56,
 [HTML5 By Default has been enabled for all users](//blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html ),
@@ -108,7 +107,7 @@ And of course, there’s plenty more.
 
 
 If you want to stay up to date with Chrome and know what’s coming, be sure to
-[subscribe](https://goo.gl/6FP1a5), follow 
+[subscribe](https://goo.gl/6FP1a5), follow
 [@ChromiumDev](//twitter.com/chromiumdev) on Twitter and be sure to check
 out the [videos from the Chrome Dev Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj)
 for a deeper dive into some of the awesome things the Chrome team is working on.
@@ -116,7 +115,7 @@ for a deeper dive into some of the awesome things the Chrome team is working on.
 I’m Pete LePage, and as soon as Chrome 57 is released, I’ll be right here to tell you -- what’s new in Chrome!
 
 ## Subscribe to Chrome Developers on YouTube {: .hide-from-toc }
-Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our 
+Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our
 [RSS feed](/web/shows/rss.xml)
 
 <link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="/web/shows/rss.xml">
@@ -141,4 +140,3 @@ Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our
 
 Oh, and a big thanks to Andrew for lending me his shirt! I had a bit of a
 wardrobe malfunction.
-

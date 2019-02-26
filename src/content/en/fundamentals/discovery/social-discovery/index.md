@@ -97,14 +97,6 @@ in [this page](https://schema.org/docs/full.html).
 metadata to social sites, typical `itemprop` values are `name`, `description`,
 and `image`.
 
-### Learn more
-These microdata provide semantic information to crawlers, typically for
-[Google+](https://plus.google.com/){: .external } and Google Search. To learn more about
-snippets and rendering on Google+, read the following documents:
-
-* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](/+/web/snippet/)
-
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:
 
@@ -161,8 +153,7 @@ Properties and contents may take the following values:
 </table>
 
 These meta tags provide semantic information to crawlers from social sites,
-typically from [Google+](https://plus.google.com/){: .external } and
-[Facebook](https://www.facebook.com/){: .external }.
+like [Facebook](https://www.facebook.com/){: .external }.
 
 ### Learn more
 To learn more about things you can attach to the post on Facebook, visit the

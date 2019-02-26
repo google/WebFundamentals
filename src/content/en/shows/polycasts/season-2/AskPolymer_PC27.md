@@ -33,6 +33,4 @@ We’re trying something new here on Polycasts. If you have questions for the te
 <https://youtu.be/mw0ozps3jLM?t=19m46s>
 
 - Polymer Slack: <http://bit.ly/polymerslack>
-- Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
 - [Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
-

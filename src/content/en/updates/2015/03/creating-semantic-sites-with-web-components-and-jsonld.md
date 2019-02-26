@@ -64,7 +64,7 @@ As a first step, we embed the data in the page using a JSON-LD script:
     <script type="application/ld+json">
     {...}
     </script>
-    
+
 
 This way we ensure that the data is easily accessible to other consumers supporting schema.org standard and the JSON-LD format, e.g. search engines.
 
@@ -78,14 +78,14 @@ In order to do so, we import them to our page using [HTML imports](https://www.p
 
     <link rel="import" href="bower_components/google-map-jsonld/google-map-jsonld.html">
     <link rel="import" href="bower_components/address-dropdown-jsonld/address-dropdown-jsonld.html">
-    
+
 
 Once they are imported, we can use them on our page:
 
 
     <address-dropdown-jsonld jsonld=""></address-dropdown-jsonld>
     <google-map-jsonld jsonld=""></google-map-jsonld>
-    
+
 
 Finally, we hook the JSON-LD data and the elements together. We do so in a [polymer-ready callback](https://www.polymer-project.org/docs/polymer/polymer.html#polymer-ready) (it is an event that triggers when the components are ready to use). Because the elements can be configured via attributes, it is enough to assign our JSON-LD data to the appropriate attribute of the component:
 
@@ -97,7 +97,7 @@ Finally, we hook the JSON-LD data and the elements together. We do so in a [poly
         document.querySelector('google-map-jsonld').jsonld = jsonld['@graph'];
         document.querySelector('address-dropdown-jsonld').jsonld = jsonld['@graph'];
       });
-    
+
 
 ## JSON-LD, the powerful brother of JSON
 
@@ -114,6 +114,4 @@ To sum up, JSON-LD and schema.org combined with the web components technology en
 You can try out [the examples on Github](https://github.com/PolymerLabs/structured-data-web-components) or read the Polymer’s guide on [creating reusable components](https://www.polymer-project.org/docs/start/reusableelements.html) to start writing your own.
 Check the [Structured Data documentation](/structured-data/) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
 
-Consider submitting your shiny new elements to [customelements.io](http://customelements.io/){: .external } for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) or [+Polymer community](https://plus.google.com/communities/115626364525706131031) to show off the awesomeness!
-
-
+Consider submitting your shiny new elements to [customelements.io](http://customelements.io/){: .external } for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) to show off the awesomeness!

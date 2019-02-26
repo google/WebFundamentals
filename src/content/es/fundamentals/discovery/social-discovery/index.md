@@ -24,7 +24,7 @@ Puedes influenciar el modo en que aparece tu sitio cuando se comparte por redes 
 debes agregar algunas líneas de código a cada página. Lo anterior puede ayudar a incrementar la interacción de los usuarios gracias al
 suministro de vistas previas con más información de lo que estaría disponible de otra forma.
 Sin estas vistas previas, los sitios sociales solo brindarán información básica, sin imágenes o
-información útil de otro tipo. 
+información útil de otro tipo.
 
 ¿Sobre cuál crees que es más probable que se haga clic? Las personas se sienten más atraídas por las imágenes
 y están más seguras de que les gustará lo que encontrarán cuando tienen una vista previa
@@ -96,18 +96,10 @@ en [esta página](https://schema.org/docs/full.html).
 metadatos a sitios sociales, los valores `itemprop` típicos son `name`, `description`,
  y por último `image`.
 
-### Obtén más información
-Estos microdatos proveen información semántica a los rastreadores, generalmente para
-[Google+](https://plus.google.com/){: .external } y Búsqueda de Google. Para obtener más información sobre
-fragmentos y representación en Google+, lee los siguientes documentos:
-
-* [Representación de artículos - Plataforma Google+](/+/web/snippet/article-rendering)
-* [Fragmento - Plataforma Google+](/+/web/snippet/)
-
 ### Valida fragmentos enriquecidos
 Para validar fragmentos enriquecidos en Google+, puedes usar las siguientes herramientas:
 
-* [Herramienta de prueba de datos estructurados](https://www.google.com/webmasters/tools/richsnippets) - Herramientas para webmasters de Google  
+* [Herramienta de prueba de datos estructurados](https://www.google.com/webmasters/tools/richsnippets) - Herramientas para webmasters de Google
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -160,8 +152,7 @@ Las propiedades y los contenidos pueden tomar los siguientes valores:
 </table>
 
 Estas metaetiquetas proporcionan información semántica a los rastreadores desde los sitios sociales,
-generalmente desde [Google+](https://plus.google.com/){: .external } y
-[Facebook](https://www.facebook.com/){: .external }.
+generalmente desde [Facebook](https://www.facebook.com/){: .external }.
 
 ### Obtén más información
 Para obtener más información sobre los elementos que puedes adjuntar a la publicación de Facebook, visita el sitio oficial de
@@ -186,7 +177,7 @@ Para que una Twitter Card funcione, [tu dominio debe ser
 aprobado](https://cards-dev.twitter.com/validator) y debe
 contener una metaetiqueta que contiene `twitter:card` como el atributo `name` en lugar del atributo
 `property`.
-  
+
 Aquí puedes ver un ejemplo rápido:
 
 <pre class="prettyprint">
@@ -223,7 +214,7 @@ Nota que los microdatos y el OGP comparten cierto marcado:
 * `title` y `description` se comparten entre microdatos y OGP
 * `itemprop="image"` está utilizando la etiqueta `link` con el atributo `href` en lugar de
 reutilizar la etiqueta `meta` con `property="og:image"`
-  
+
 Por último, asegúrate de validar que tu página web aparezca como lo esperas en cada
 sitio social antes de publicarla.
 

@@ -298,11 +298,6 @@ Note: `max-age` 的计算单位为秒。您可以从较小的值开始，并随�
 大多数网络服务器都提供一种简单的重定向功能。使用 `301 (Moved Permanently)` 来告诉搜索引擎和浏览器，此 HTTPS 版本是规范的，并将用户从 HTTP 重定向到网站的 HTTPS 版本。
 
 
-## 迁移问题
-
-对于从 HTTP 迁移到 HTTPS，许多开发者有着合情合理的顾虑。Google 网站站长团队提供了一些[非常好的指导](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J)。
-
-
 ### 搜索排名
 
 Google 使用 [HTTPS 用作肯定性的搜索质量指标](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)。Google 还发布一个指南，说明在维护其搜索排名时[如何传输、移动或迁移您的网站](https://support.google.com/webmasters/topic/6029673)。

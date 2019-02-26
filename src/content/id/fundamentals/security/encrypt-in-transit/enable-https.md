@@ -299,11 +299,6 @@ yang disetelnya. [Laman OWASP ini menjelaskan cara menyetel flag Secure](https:/
 Sebagian besar server web menawarkan fitur pengalihan sederhana. Gunakan `301 (Moved Permanently)` untuk
 menunjukkan ke mesin telusur dan browser bahwa versi HTTPS bersifat kanonis dan mengalihkan pengguna Anda ke versi HTTPS situs Anda dari HTTP.
 
-## Persoalan dalam migrasi
-
-Banyak developer memiliki persoalan yang sudah sewajarnya tentang migrasi dari HTTP ke HTTPS.
-Google Webmaster Team memberikan beberapa [panduan bagus](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J).
-
 ### Peringkat penelusuran
 
 Google menggunakan [HTTPS sebagai indikator kualitas penelusuran positif](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html).

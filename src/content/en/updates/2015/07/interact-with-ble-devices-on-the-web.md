@@ -41,7 +41,7 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
 A subset of the Web Bluetooth API is available in Chrome OS,
-Chrome for Android M, Mac (Chrome 56) and Windows 10 (Chrome 70). 
+Chrome for Android M, Mac (Chrome 56) and Windows 10 (Chrome 70).
 This means you should be able to
 [request](#request_bluetooth_devices) and [connect to](#connect_to_a_bluetooth_device)
 nearby Bluetooth devices,
@@ -506,7 +506,6 @@ Though it's still incomplete, here's a sneak peek of what to expect in the near 
 ## Resources
 
 - Stack Overflow: [https://stackoverflow.com/questions/tagged/web-bluetooth](https://stackoverflow.com/questions/tagged/web-bluetooth)
-- Web Bluetooth Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
 - Implementation Bugs: [https://crbug.com/?q=component:Blink>Bluetooth](https://crbug.com/?q=component:Blink>Bluetooth)
 - Web Bluetooth Spec: [https://webbluetoothcg.github.io/web-bluetooth](https://webbluetoothcg.github.io/web-bluetooth)
@@ -518,5 +517,3 @@ Though it's still incomplete, here's a sneak peek of what to expect in the near 
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-
-
