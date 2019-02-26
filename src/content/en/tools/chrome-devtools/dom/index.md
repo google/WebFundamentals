@@ -6,6 +6,14 @@ description: TODO
 {# wf_published_on: 2019-02-26 #}
 {# wf_blink_components: Platform>DevTools #}
 
+<style>
+  .target {
+    display: inline-block;
+    background-color: black;
+    color: white;
+  }
+</style>
+
 # Get Started With Viewing And Changing The DOM {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -24,27 +32,27 @@ you're unsure about how HTML and the DOM relate to each other.
 When you're interested in a particular DOM node, **Inspect** is a fast way to open DevTools
 and investigate that node.
 
-1. Right-click **TODO** below and select **Inspect**.
+1. Right-click **Michelangelo** below and select **Inspect**.
 
-     <p>TODO</p>
+     **Michelangelo**
 
      The **Elements** panel of DevTools opens.
 
-     `<p>TODO</p>` is highlighted in the **DOM Tree**.
+     `<strong>Michelangelo</strong>` is highlighted in the **DOM Tree**.
 
 1. Hover over `<p>TODO</p>`. DevTools highlights the node in the viewport. This feature is
    helpful when you're not sure what node you're looking at, or when you want to see how
    a node is positioned on the page.
 
-1. Right-click **TODO** below and select **Inspect** again.
+1. Right-click **Donatello** below and select **Inspect** again.
 
-     <p>TODO</p>
+     **Donatello**
 
-     Now, `<p>TODO</p>` is highlighted in the DOM Tree.
+     Now, `<strong>Donatello</strong>` is highlighted in the DOM Tree.
 
 ### Navigate the DOM Tree with a keyboard {: #keynav }
 
-1. Right-click **Michelangelo** and select **Inspect**. `<li>Michelangelo</li>` is selected in
+1. Right-click **Elvis** and select **Inspect**. `<li>Michelangelo</li>` is selected in
    the DOM Tree.
 
      <ul>
@@ -79,9 +87,36 @@ Sometimes you're interested in a DOM node that's not in the viewport.
 
 ### Edit content {: #content }
 
+1. Right-click **TODO** below and select **Inspect**.
+
+     <p>TODO</p>
+
+1. Double-click the text between `<p>` and `</p>`. The text is highlighted
+   blue to indicate that it is selected.
+1. Type `TODO` and then press <kbd>Enter</kbd> to confirm the change.
+
 ### Edit attributes {: #attributes }
 
+1. Right-click **TODO** below and select **Inspect**.
+
+     **TODO**
+
+1. Double-click **strong**. The text is highlighted to indicate that the
+   node is selected.
+1. Type `i` and then press <kbd>Enter</kbd>. The node is changed to
+
 ### Reorder DOM nodes {: #reorder }
+
+1. Right-click **Elvis Presley** below and select **Inspect**.
+
+     <ul>
+       <li>Stevie Wonder</li>
+       <li>Tom Waits</li>
+       <li>Chris Thile</li>
+       <li>Elvis Presley</li>
+     </ul>
+
+1. Drag `<li>Elvis Presley</li>` to the top of the list.
 
 ### Hide a node {: #hide }
 
