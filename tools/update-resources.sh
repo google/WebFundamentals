@@ -3,7 +3,7 @@
 getResource() {
   local TEMP_FILE="$(mktemp)"
   echo "$1"
-  if curl --compressed --fail "$1" > "$TEMP_FILE"; then
+  if curl --compressed --fail --silent "$1" > "$TEMP_FILE"; then
     mv "$TEMP_FILE" "$2"
   else
     echo Unable to update "$1"
