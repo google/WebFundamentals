@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2019-02-24 #}
+{# wf_updated_on: 2019-02-27 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -62,9 +62,8 @@ prompt, we `postMessage()` the new service worker telling it to run
 `skipWaiting()` meaning it'll start to activate.
 
 Note: This is one possible approach. For a more in-depth explanation of the
-problem as well as alternative approaches, see this [article by Redfin
-Engineering](https://redfin.engineering/how-to-fix-the-refresh-button-when-
-using-service-workers-a8e27af6df68).
+problem as well as alternative approaches, see this
+[article by Redfin Engineering](https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68).
 
 **Add to your service worker**
 
