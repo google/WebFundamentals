@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A reference of convenience functions available in the Chrome DevTools Console.
 
-{# wf_updated_on: 2018-12-18 #}
+{# wf_updated_on: 2018-02-27 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -19,7 +19,7 @@ Warning: These functions only work when you call them from the Chrome DevTools C
 if you try to call them in your scripts.
 
 Looking for `console.log()`, `console.error()`, and the rest of the `console.*` functions?
-See [Console API Reference](/web/tools/chrome-devtools/api).
+See [Console API Reference](/web/tools/chrome-devtools/console/api).
 
 ## $_
 
