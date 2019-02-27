@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-11-27 #}
+{# wf_updated_on: 2019-02-22 #}
 {# wf_published_on: 2012-11-27 #}
 {# wf_tags: news,javascript #}
+{# wf_blink_components: N/A #}
 
 # Respond to change with Object.observe {: .page-title }
 
@@ -14,11 +15,11 @@ Lots of JavaScript frameworks using MVC or MDV need to respond to changes to the
 
 There are a number of different ways to monitor JavaScript objects and DOM properties to trigger some sort of action, but most of the techniques aren't ideal for various reasons such as performance, etc.
 
-In order to improve the performance of web applications, a new method called [Object.observe()](http://wiki.ecmascript.org/doku.php?id=harmony:observe) has been proposed to TC39 - the standards body overseeing development of ECMAScript (JavaScript).
+In order to improve the performance of web applications, a new method called [Object.observe()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe) has been proposed to TC39 - the standards body overseeing development of ECMAScript (JavaScript).
 
 Object.observe() lets you add a listener to any JavaScript object that gets called whenever that object, or its properties, change.
 
-You can try it out now in [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) version 25.
+You can try it out now in [Chrome Canary](https://www.google.com/intl/en/chrome/canary/) version 25.
 
 To experiment with this feature, you need to enable the *Enable Experimental JavaScript* flag in Chrome Canary and restart the browser. The flag can be found under 'about:flags' as shown in the image below:
 
@@ -43,7 +44,7 @@ So the JavaScript engine is free to buffer up a number of changes and pass them 
 
 The callback function will be triggered whenever a property is added, modified, deleted or reconfigured.
 
-Another really nice thing when observing arrays is that if an array has had a number of changes made to it, you can use a [Change Summary](https://github.com/rafaelw/ChangeSummary) helper library to create a minimal change set, so that client side JavaScript doesn't have to manually scan the array to check each item.
+Another really nice thing when observing arrays is that if an array has had a number of changes made to it, you can use a [Change Summary](https://github.com/googlearchive/observe-js) helper library to create a minimal change set, so that client side JavaScript doesn't have to manually scan the array to check each item.
 
 You can iterate through each change quite easily, by doing something like the following in your 'somethingChanged' callback function:
 
@@ -84,7 +85,7 @@ Here's a [great video introduction](https://www.youtube.com/watch?feature=player
   </iframe>
 </div>
 
-There's also a [nice descriptive write-up available](http://weblog.bocoup.com/JavaScript-object-observe/) and a [working example here](https://simpl.info/observe/){: .external }.
+There's also a [nice descriptive write-up available](https://bocoup.com/blog/JavaScript-object-observe) and a [working example here](https://simpl.info/observe/){: .external }.
 
 The TC39 standards body is seeking feedback on this feature, so go ahead and try it and let us know what you think.
 
