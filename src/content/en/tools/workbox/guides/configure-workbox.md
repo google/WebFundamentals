@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to configure Workbox.
 
-{# wf_updated_on: 2018-11-28 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -30,7 +30,7 @@ const runtimeCacheName = workbox.core.cacheNames.runtime;
 Both the precache and runtime cache names are made of three pieces of
 information:
 
-`<prefix>-<Cache ID>-<suffix>`
+`<prefix>-<cacheId>-<suffix>`
 
 You can alter the cache names by altering all or some of these pieces of
 information:
@@ -42,14 +42,8 @@ workbox.core.setCacheNameDetails({
 });
 ```
 
-The above would produce the cache names:
-
-**Precache:** my-app-precache-v1
-
-**Runtime:** my-app-runtime-v1
-
-You can customize the entire cache name by parsing in a `precache` and
-/ or `runtime` parameter.
+You can customize the entire cache name by passing in a `precache` and / or
+`runtime` parameter.
 
 ```javascript
 workbox.core.setCacheNameDetails({
@@ -66,22 +60,21 @@ without mixing up the caches.
 
 ### Custom Cache Names in Strategies
 
-Above discusses how to customize the **default cache names** used
-for precaching and runtime caching, but it’s not uncommon to want
-additional caches for specific uses, like a cache just for images.
+The previous section describes how to customize the **default cache names** used
+for precaching and runtime caching, but it’s not uncommon to want additional
+caches for specific uses, such as a cache just for images.
 
-In other parts of the Workbox API’s there will in an option to supply a
-`cacheName` property as an option. For example, the
-[runtime strategies](/web/tools/workbox/modules/workbox-strategies)
+In other parts of the Workbox APIs there is an option to supply a `cacheName`
+property as an option. For example, the [runtime strategies](/web/tools/workbox/modules/workbox-strategies)
 accepts a `cacheName` option. In these cases, the cache name will be used
-exactly as you define, the prefix and suffix **will not be used**.
+exactly as you specify; the prefix and suffix **will not be used**.
 
 If you wanted to use a cache for images, you might configure a route like this:
 
 ```javascript
 workbox.routing.registerRoute(
-  /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-  workbox.strategies.CacheFirst({
+  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  new workbox.strategies.CacheFirst({
     cacheName: 'my-image-cache',
   })
 );
@@ -108,8 +101,8 @@ using a credentials mode of 'include', you can set up the following route:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('https://third-party\.example\.com/'),
-  workbox.strategies.NetworkFirst({
+  new RegExp('https://third-party\\.example\\.com/'),
+  new workbox.strategies.NetworkFirst({
     fetchOptions: {
       credentials: 'include',
     },
@@ -117,20 +110,20 @@ workbox.routing.registerRoute(
 );
 ```
 
-Refer to the
-[Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
+Refer to the [Fetch API
+documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters)
 for a full list of possible configuration values.
 
 ### Configure Debug Builds vs Production Builds
 
-For each of the Workbox service worker libraries, there are two builds, one for
-development and one for production.
+For each of the Workbox libraries, there are two builds: one for development and
+one for production.
 
 - **Debug Builds:** Come un-minified, have additional logging and performs
-rigorous assertion checking to make development as easy as possible.
+  rigorous assertion checking to make development as easy as possible.
 
-- **Production Builds:** Are minified with any optional logging and logic
-stripped from the build.
+- **Production Builds:** Are minified with any optional logging and assertions
+  stripped from the build.
 
 If you are using `workbox-sw`, it’ll automatically use development builds
 whenever you are developing on a localhost origin, otherwise it’ll use
@@ -152,33 +145,3 @@ workbox.setConfig({ debug: false });
 If you are using the modules directly (via CDN or from `npm` modules), you can
 switch between development and production builds by changing the file extension
 between `<module>.dev.js` and `<module>.prod.js`.
-
-## Configure Log Levels
-
-Workbox will print messages to the console to help during development.
-
-![Workbox Welcome Message](../images/guides/configure-workbox/welcome-message.png)
-
-You can determine the level of a log from the color code:
-
-![Color coded logs in Workbox](../images/guides/configure-workbox/workbox-core_logs.png)
-
-You can alter the log level to show more or less logs by setting the log level,
-like so:
-
-```javascript
-// The most verbose - displays all logs.
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
-
-// Shows logs, warnings and errors.
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.log);
-
-// Show warnings and errors.
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.warn);
-
-// Show *just* errors
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.error);
-
-// Silence all of the Workbox logs.
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.silent);
-```

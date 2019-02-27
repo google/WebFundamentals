@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -148,9 +148,9 @@ to `debug` will result in more logs being printed to the console.
 workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
 ```
 
-## Stackoverflow
+## Stack Overflow
 
 If you are still struggling to figure out your problem try posting a question
-to [Stackoverflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox).
+to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox).
 This enables a wide audience of people to view, answer and learn from your
 question.

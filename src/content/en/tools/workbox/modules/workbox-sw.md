@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-sw.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-08-16 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox {: .page-title }
@@ -88,7 +88,7 @@ importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}
 // This will work!
 workbox.routing.registerRoute(
   new RegExp('\.png$'),
-  workbox.strategies.cacheFirst()
+  new workbox.strategies.CacheFirst()
 );
 </pre>
 
@@ -102,7 +102,7 @@ self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
-    const cacheFirst = workbox.strategies.cacheFirst();
+    const cacheFirst = new workbox.strategies.CacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
@@ -121,7 +121,7 @@ workbox.loadModule('workbox-strategies');
 self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Referencing workbox.strategies will now work as expected.
-    const cacheFirst = workbox.strategies.cacheFirst();
+    const cacheFirst = new workbox.strategies.CacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
@@ -139,7 +139,7 @@ const {strategies} = workbox;
 self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
     // Using the previously-initialized strategies will work as expected.
-    const cacheFirst = strategies.cacheFirst();
+    const cacheFirst = new strategies.CacheFirst();
     event.respondWith(cacheFirst.makeRequest({request: event.request}));
   }
 });
@@ -167,23 +167,3 @@ workbox.setConfig({
   debug: <true or false>
 });
 </pre>
-
-## Skip Waiting and Clients Claim
-
-Some developers want to be able to publish a new service worker and have it
-update and control a web page as soon as possible, skipping the default
-[service worker lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
-
-If you find yourself wanting this behavior, `workbox-sw` provides some helper
-methods to make this easy:
-
-<pre class="prettyprint js">
-workbox.skipWaiting();
-workbox.clientsClaim();
-</pre>
-
-Note: If your web app lazy-loads resources that are uniquely versioned with, e.g., hashes in their
-URLs, it's recommended that you avoid using skip waiting. Enabling it could
-[lead to failures](https://stackoverflow.com/questions/51715127)
-when lazily-loading URLs that were previously precached and were purged during an updated service
-worker's activation.

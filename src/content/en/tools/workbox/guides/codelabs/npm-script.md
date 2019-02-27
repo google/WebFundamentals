@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Learn how to make an npm-script-based app work offline by adding Workbox to it.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-12-27 #}
 {# wf_blink_components: N/A #}
 
@@ -137,7 +137,7 @@ that they had an internet connection.
       ...
       <strong>runtimeCaching: [{
         urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
-        handler: 'staleWhileRevalidate'
+        handler: 'StaleWhileRevalidate'
       }]</strong>
     }</pre>
 

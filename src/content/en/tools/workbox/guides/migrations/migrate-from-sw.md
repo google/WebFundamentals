@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to migrating from sw-precache or sw-toolbox to Workbox.
 
-{# wf_updated_on: 2018-10-31 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2018-01-25 #}
 {# wf_blink_components: N/A #}
 
@@ -20,7 +20,7 @@ following changes into account when migrating to Workbox.
 
 ### Renamed options
 
-The `dynamicUrlToDependencies` config parameter has been renamed `templatedUrls`.
+The `dynamicUrlToDependencies` config parameter has been renamed `templatedURLs`.
 
 The `staticFileGlobs` config parameter has been renamed `globPatterns`.
 
@@ -47,8 +47,8 @@ is equivalent to this Workbox configuration:
 ```
 runtimeCaching: [{
   urlPattern: /api/,
-  // 'fastest' is now 'staleWhileRevalidate'
-  handler: 'staleWhileRevalidate',
+  // 'fastest' is now 'StaleWhileRevalidate'
+  handler: 'StaleWhileRevalidate',
   options: {
     // options.cache.name is now options.cacheName
     cacheName: 'my-api-cache',
@@ -220,7 +220,7 @@ workbox.routing.registerRoute(
   new RegExp('^https://.*\.ytimg\.com'),
 
   // Apply a cache-first strategy to anything that matches.
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     // Configuration options are passed in to the strategy.
     cacheName: 'youtube-thumbnails',
     plugins: [
@@ -240,7 +240,7 @@ workbox.routing.registerRoute(
 
 // Set a default network-first strategy to use when
 // there is no explicit matching route:
-workbox.routing.setDefaultHandler(workbox.strategies.networkFirst());
+workbox.routing.setDefaultHandler(new workbox.strategies.NetworkFirst());
 ```
 
 ## Getting help

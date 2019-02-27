@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-04-03 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Routing {: .page-title }
@@ -26,15 +26,16 @@ will attempt to respond to the request using the supplied routes and handlers.
 
 The main things to note from the above is:
 
-- The type of request is important.
-    - By default, Routes are registered for 'GET' requests. If you wish to
-    intercept other types of requests, you’ll need to specify the method.
-- The order of the Route registration is important.
-    - If multiple Routes are registered that could handle a request, the
-    Route that is registered first will be used to respond to the Request.
+- The method of request is important. By default, Routes are registered for
+  'GET' requests. If you wish to intercept other types of requests, you’ll need
+  to specify the method.
 
-There are a few ways to register a route, you can use callbacks, regular
-expressions or Route instances each of which we’ll look at next.
+- The order of the Route registration is important. If multiple Routes are
+  registered that could handle a request, the Route that is registered first
+  will be used to respond to the request.
+
+There are a few ways to register a route: you can use callbacks, regular
+expressions or Route instances.
 
 ## Matching and Handling in Routes
 
@@ -102,7 +103,7 @@ by [workbox-strategies](./workbox-strategies) like so:
 ```js
 workbox.routing.registerRoute(
   matchCb,
-  workbox.strategies.staleWhileRevalidate()
+  new workbox.strategies.StaleWhileRevalidate()
 );
 ```
 
@@ -160,7 +161,11 @@ return a specific response for all
 [navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
 ```javascript
-workbox.routing.registerNavigationRoute('/single-page-app.html');
+workbox.routing.registerNavigationRoute(
+  // Assuming '/single-page-app.html' has been precached,
+  // look up its corresponding cache key.
+  workbox.precaching.getCacheKeyForURL('/single-page-app.html')
+);
 ```
 
 Whenever a user goes to your site in the browser, the request for the page
@@ -168,12 +173,15 @@ will be a navigation request and will be served the cached page
 '/single-page-app.html'. (Note: You should have the page cached via
 `workbox-precaching` or through your own installation step).
 
-By default this will respond to *all* navigation requests, if you want to
-restrict it to respond to a subset of URL’s you can use the `whitelist`
+By default this will respond to *all* navigation requests. If you want to
+restrict it to respond to a subset of URLs, you can use the `whitelist`
 and `blacklist` options to restrict which pages will match this route.
 
 ```javascript
-workbox.routing.registerNavigationRoute('/single-page-app.html', {
+workbox.routing.registerNavigationRoute(
+  // Assuming '/single-page-app.html' has been precached,
+  // look up its corresponding cache key.
+  workbox.precaching.getCacheKeyForURL('/single-page-app.html'), {
   whitelist: [
     new RegExp('/blog/')
   ],

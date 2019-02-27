@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-02-27 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Background Sync {: .page-title }
@@ -28,6 +28,13 @@ BackgroundSync API and integrate its usage with other Workbox modules. It
 also implements a fallback strategy for browsers that don't yet implement
 BackgroundSync.
 
+Browsers that support the BackgroundSync API will automatically replay failed
+requests on your behalf at an
+[interval managed by the browser](/web/updates/2015/12/background-sync#how_to_request_a_background_sync),
+and likely using exponential backoff between replay attempts. In browsers that
+don't natively support the BackgroundSync API, Workbox Background Sync will
+automatically attempt a replay whenever your service worker starts up.
+
 ## Basic Usage
 
 The easiest way to use Background Sync is to use the `Plugin` that will
@@ -41,7 +48,7 @@ const bgSyncPlugin = new workbox.backgroundSync.Plugin('myQueueName', {
 
 workbox.routing.registerRoute(
   /\/api\/.*\/*.json/,
-  workbox.strategies.networkOnly({
+  new workbox.strategies.NetworkOnly({
     plugins: [bgSyncPlugin]
   }),
   'POST'

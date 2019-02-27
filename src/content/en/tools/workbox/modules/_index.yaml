@@ -8,7 +8,7 @@ landing_page:
     - heading: Service Worker Libraries
       description: >
         Below is the list of service worker libraries that Workbox provides.
-        Each library serves a specific need and can be used together or on it's
+        Each library serves a specific need and can be used together or on its
         own.
       items:
       - heading: workbox
@@ -163,6 +163,24 @@ landing_page:
           path: ./workbox-navigation-preload
         - label: Reference
           path: ../reference-docs/latest/workbox.navigationPreload
+
+      # Force Devsite 4-up layout
+      - heading: ""
+      - heading: ""
+      - heading: ""
+
+    - heading: Window Modules
+      description: >
+        Workbox provides modules that run in the window context and complement
+        the service worker modules.
+      items:
+      - heading: workbox-window
+        description: >
+          A module that helps with registering a service worker, managing
+          updates, and responding to lifecycle events.
+        buttons:
+        - label: Learn more
+          path: ./workbox-window
 
       # Force Devsite 4-up layout
       - heading: ""

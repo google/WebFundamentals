@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description:Get Started with Workbox.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-08-10 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Get Started {: .page-title }
@@ -88,12 +88,12 @@ modules. It allows you to listen for requests from your web page and determine
 if and how that request should be cached and responded to.
 
 Let’s add a cache fallback to our JavaScript files. The easiest way to do this
-is to register a route with Workbox that will match any “.js” files that are
+is to register a route with Workbox that will match any `.js` files that are
 requested, which we can do with a regular expression:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
+  /\.js$/,
   …
 );
 ```
@@ -110,7 +110,7 @@ but fallback to the cached version if the network fails, we can use the
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('.*\.js'),
-  workbox.strategies.networkFirst()
+  new workbox.strategies.NetworkFirst()
 );
 ```
 
@@ -119,7 +119,7 @@ has JavaScript files in it, you should see some logs similar to this:
 
 ![Example console logs from routing a JavaScript file.](../images/guides/get-started/routing-example.png)
 
-Workbox has routed the request for any “.js” files and used the network first
+Workbox has routed the request for any `.js` files and used the network first
 strategy to determine how to respond to the request. You can look in the
 caches of DevTools to check that the request has actually been cached.
 
@@ -132,27 +132,27 @@ updating.
 
 ```javascript
 workbox.routing.registerRoute(
-  // Cache CSS files
-  /.*\.css/,
-  // Use cache but update in the background ASAP
-  workbox.strategies.staleWhileRevalidate({
-    // Use a custom cache name
+  // Cache CSS files.
+  /\.css$/,
+  // Use cache but update in the background.
+  new workbox.strategies.StaleWhileRevalidate({
+    // Use a custom cache name.
     cacheName: 'css-cache',
   })
 );
 
 workbox.routing.registerRoute(
-  // Cache image files
-  /.*\.(?:png|jpg|jpeg|svg|gif)/,
-  // Use the cache if it's available
-  workbox.strategies.cacheFirst({
-    // Use a custom cache name
+  // Cache image files.
+  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  // Use the cache if it's available.
+  new workbox.strategies.CacheFirst({
+    // Use a custom cache name.
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.Plugin({
-        // Cache only 20 images
+        // Cache only 20 images.
         maxEntries: 20,
-        // Cache for a maximum of a week
+        // Cache for a maximum of a week.
         maxAgeSeconds: 7 * 24 * 60 * 60,
       })
     ],

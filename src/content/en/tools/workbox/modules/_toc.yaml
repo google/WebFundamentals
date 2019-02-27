@@ -27,6 +27,11 @@ toc:
 - title: workbox.navigationPreload
   path: /web/tools/workbox/modules/workbox-navigation-preload
 
+- heading: Window Modules
+- title: Workbox Window
+  path: /web/tools/workbox/modules/workbox-window
+  status: new
+
 - heading: Node Modules
 - title: Workbox CLI
   path: /web/tools/workbox/modules/workbox-cli
