@@ -19,16 +19,16 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies.NetworkFirst
 - title: "NetworkOnly"
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies.NetworkOnly
-- title: "cacheableResponse.Plugin"
-  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse.Plugin
+- title: "backgroundSync.Plugin"
+  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Plugin
 - title: "expiration.Plugin"
   path: /web/tools/workbox/reference-docs/latest/workbox.expiration.Plugin
 - title: "rangeRequests.Plugin"
   path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests.Plugin
+- title: "cacheableResponse.Plugin"
+  path: /web/tools/workbox/reference-docs/latest/workbox.cacheableResponse.Plugin
 - title: "broadcastUpdate.Plugin"
   path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate.Plugin
-- title: "backgroundSync.Plugin"
-  path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync.Plugin
 - title: "PrecacheController"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController
 - title: "Queue"
@@ -43,6 +43,8 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies.StaleWhileRevalidate
 - title: "Workbox"
   path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
+- title: "workbox"
+  path: /web/tools/workbox/reference-docs/latest/workbox
 - title: "workbox.backgroundSync"
   path: /web/tools/workbox/reference-docs/latest/workbox.backgroundSync
 - title: "workbox.broadcastUpdate"
@@ -61,6 +63,8 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.precaching
 - title: "workbox.rangeRequests"
   path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
+- title: "workbox.routing"
+  path: /web/tools/workbox/reference-docs/latest/workbox.routing
 - title: "workbox.strategies"
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies
 - title: "workbox.streams"
