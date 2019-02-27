@@ -181,6 +181,8 @@ landing_page:
         buttons:
         - label: Learn more
           path: ./workbox-window
+        - label: Reference
+          path: ../reference-docs/latest/module-workbox-window
 
       # Force Devsite 4-up layout
       - heading: ""
