@@ -4,12 +4,14 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/index
 
 - heading: Service Worker Libraries
+- title: "workbox"
+  path: /web/tools/workbox/reference-docs/latest/workbox
 - title: "workbox.core"
   path: /web/tools/workbox/reference-docs/latest/workbox.core
 - title: "workbox.precaching"
   path: /web/tools/workbox/reference-docs/latest/workbox.precaching
 - title: "workbox.routing"
-  path: /web/tools/workbox/reference-docs/latest/workbox.routing.Router
+  path: /web/tools/workbox/reference-docs/latest/workbox.routing
 - title: "workbox.strategies"
   path: /web/tools/workbox/reference-docs/latest/workbox.strategies
 - title: "workbox.expiration"
