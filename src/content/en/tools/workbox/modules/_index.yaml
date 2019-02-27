@@ -17,8 +17,6 @@ landing_page:
         buttons:
         - label: Learn more
           path: ./workbox-sw
-        - label: Reference
-          path: ../reference-docs/latest/workbox
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-sw/
 
@@ -54,7 +52,7 @@ landing_page:
         - label: Learn more
           path: ./workbox-routing
         - label: Reference
-          path: ../reference-docs/latest/workbox.routing
+          path: ../reference-docs/latest/workbox.routing.Router
         - label: Demo
           path: https://workbox-demos.firebaseapp.com/demo/workbox-routing/
 
@@ -181,6 +179,8 @@ landing_page:
         buttons:
         - label: Learn more
           path: ./workbox-window
+        - label: Reference
+          path: ../reference-docs/latest/module-workbox-window.Workbox
 
       # Force Devsite 4-up layout
       - heading: ""

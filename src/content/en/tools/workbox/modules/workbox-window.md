@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-02-24 #}
+{# wf_updated_on: 2019-02-27 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -19,11 +19,11 @@ The key features/goals of `workbox-window` are:
 
 * To simplify the process of service worker registration and updates by helping
   developers identify the [most critical moments in the service worker
-  lifecycle](#important-service-worker-lifecycle-moments), and making it easier
+  lifecycle](#important_service_worker_lifecycle_moments), and making it easier
   to respond to those moments.
 * To help prevent developers from making the [most common
-  mistakes](#avoiding-common-mistakes).
-* To enable [easier communication](#window-to-service-worker-communication)
+  mistakes](#avoiding_common_mistakes).
+* To enable [easier communication](#window_to_service_worker_communication)
   between code running in the service worker and code running in the window.
 
 ## Importing and using workbox-window

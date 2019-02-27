@@ -32,7 +32,7 @@ gulp.task('workbox-generate-cdn-include', () => {
     // will be exposed
     const buildPath = path.dirname(require.resolve('workbox-build'));
     const workboxBuild = require(path.join(buildPath, 'lib', 'cdn-utils.js'));
-    const latestUrl = workboxBuild.getModuleUrl('workbox-sw');
+    const latestUrl = workboxBuild.getModuleURL('workbox-sw');
 
     // Substring removes the 'v' at the front of the git tag.
     if (latestUrl.indexOf(latestTags[0].substring(1)) === -1) {
