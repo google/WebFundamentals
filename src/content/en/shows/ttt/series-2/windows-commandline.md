@@ -17,7 +17,7 @@ description: Windows Tooling: If you develop for the web on Windows, this is the
 </div>
 
 
-As devs who spend the majority of our time coding on OSX and Linux, we were [curious](https://plus.google.com/+AddyOsmani/posts/91JeoX83S69) what a modern command-line setup might look like on Windows.
+As devs who spend the majority of our time coding on OSX and Linux, we were curious what a modern command-line setup might look like on Windows.
 
 A StackOverflow [developer survey](https://insights.stackoverflow.com/survey/2015) reminded us that there are more devs using Windows than any other OS so we were curious if the tooling there was on par with what we were used to in *nix land.
 

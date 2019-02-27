@@ -24,7 +24,7 @@ description: 각 페이지에 코드를 몇 줄 추가하여 소셜 미디어를
 사이트 모습에 변화를 줄 수 있습니다. 그러면 이런 방법을 사용할 수 없을 때에 비해
 미리보기에 더욱 풍성한 정보를 포함시킬 수 있으므로 사용자 참여도를 높이는 효과를 거둘 수 있습니다.
 이런 방법을 사용할 수 없다면
-소셜 사이트에서 이미지나 다른 유용한 정보가 없는 기본적인 정보만 제공할 것입니다. 
+소셜 사이트에서 이미지나 다른 유용한 정보가 없는 기본적인 정보만 제공할 것입니다.
 
 둘 중 어떤 소셜 사이트를 클릭할 가능성이 더 높을까요? 사람들은 무미건조한 텍스트보다는
 이미지에 끌리게 마련이고, 미리보기가 제공되어 찾으려 했던 정보와 연관된 이미지가 보이면
@@ -96,18 +96,10 @@ description: 각 페이지에 코드를 몇 줄 추가하여 소셜 미디어를
 메타데이터를 제공할 경우 일반적인 `itemprop` 값은 `name`, `description`
 및 `image`입니다.
 
-### 자세히 알아보기
-이런 마이크로데이터는 보통
-[Google+](https://plus.google.com/){: .external }와 Google 검색을 위해 크롤러에 의미론적 정보를 제공합니다. Google+에서의 스니펫과
-렌더링에 대한 자세한 내용은 다음 문서를 참조하세요.
-
-* [문서 렌더링 - Google+ 플랫폼](/+/web/snippet/article-rendering)
-* [스니펫 - Google+ 플랫폼](/+/web/snippet/)
-
 ### 리치 스니펫 유효성 검사
 Google+에서는 다음과 같은 도구를 사용하여 리치 스니펫의 유효성을 검사할 수 있습니다.
 
-* [구조적 데이터 테스트 도구](https://www.google.com/webmasters/tools/richsnippets) - 웹마스터 도구  
+* [구조적 데이터 테스트 도구](https://www.google.com/webmasters/tools/richsnippets) - 웹마스터 도구
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -160,8 +152,7 @@ Google+에서는 다음과 같은 도구를 사용하여 리치 스니펫의 유
 </table>
 
 이런 메타 태그는
-전형적으로 [Google+](https://plus.google.com/){: .external } 및
-[Facebook](https://www.facebook.com/){: .external } 같은 소셜 사이트에서 크롤러에게 의미론적 정보를 제공합니다.
+전형적으로 [Facebook](https://www.facebook.com/){: .external } 같은 소셜 사이트에서 크롤러에게 의미론적 정보를 제공합니다.
 
 ### 자세히 알아보기
 Facebook의 게시물에 첨부할 수 있는 항목에 대한 자세한 내용은
@@ -175,7 +166,7 @@ Open Graph Protocol 공식 사이트에서 확인할 수 있습니다.
 * [디버거](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Twitter Card를 사용하여 Twitter에서 리치 스니펫 제공
-[Twitter Card](https://dev.twitter.com/docs/cards)는 
+[Twitter Card](https://dev.twitter.com/docs/cards)는
 [Twitter에 사용할 수 있는 Open Graph Protocol](https://twitter.com/){: .external }에 대한 확장 프로그램입니다. Twitter Card를
 사용하면 자신의 웹페이지로 연결되는 링크를 포함한 트윗에 이미지와 동영상 같은 미디어 첨부파일을 추가할 수
 있습니다. 알맞은 메타데이터를 추가하면 페이지로 연결되는 링크를 포함한 트윗에 자신이 추가한
@@ -186,7 +177,7 @@ Twitter Card가 작동하도록 하려면 [도메인 승인을 받아야
 하고](https://cards-dev.twitter.com/validator)
 `twitter:card`가 `property` 속성 대신 `name` 속성으로 있는 메타 태그가 도메인에 포함되어 있어야
 합니다.
-  
+
 간단한 예를 들면 다음과 같습니다.
 
 <pre class="prettyprint">
@@ -223,7 +214,7 @@ Twitter Card에 대해 자세히 알아보려면 아래 사이트를 방문해 �
 * `title`과 `description`은 마이크로데이터와 OGP 사이에 공유됨
 * `itemprop="image"`는 `property="og:image"`로 `meta` 태그를 재사용하는 대신
 `href` 속성이 있는 `link` 태그를 사용함
-  
+
 마지막으로, 웹페이지가 각각의 소셜 사이트에서 생각했던 대로 나타나는지 확인한 후에
 게시해야 합니다.
 

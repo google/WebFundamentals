@@ -27,5 +27,4 @@ Curious to know how Polymer’s data binding system works under the hood? Today 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set>
 
 - Polymer Slack: <http://bit.ly/polymerslack>
-- Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
 - [Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

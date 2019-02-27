@@ -364,12 +364,6 @@ Most web servers offer a simple redirect feature. Use `301 (Moved Permanently)`
 to indicate to search engines and browsers that the HTTPS version is canonical,
 and redirect your users to the HTTPS version of your site from HTTP.
 
-## Migration concerns
-
-Many developers have legitimate concerns about migrating from HTTP to HTTPS.
-The Google Webmasters Team has some [excellent
-guidance](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) available.
-
 ### Search ranking
 
 Google uses [HTTPS as a positive search quality

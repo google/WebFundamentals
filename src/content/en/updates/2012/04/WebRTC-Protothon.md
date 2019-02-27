@@ -13,8 +13,4 @@ book_path: /web/updates/_book.yaml
 
 On March 24th, Google hosted the world's first WebRTC developer event, the WebRTC [Protothon](http://protothon.com). The hackathon brought together developers and designers from around the world, with browser engineers at hand to give assistance when needed.
 
-For more details, check out the WebRTC [Google+ post](https://plus.google.com/+WebRTCorg/posts/iVsQt4XQcV6) about the event.
-
 Note: the videos and demos have been removed. [The archived page is available](http://protothon.markupartist.com/events/webrtc/).
-
-

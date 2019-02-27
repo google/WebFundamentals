@@ -294,12 +294,6 @@ jquery.com など、ほとんどの会社はこのサービスを提供してい
 
 ほとんどのウェブサーバーは、単純なリダイレクト機能を提供しています。`301 (Moved Permanently)` を使用して、HTTPS バージョンが標準であり、ユーザーを HTTP からサイトの HTTPS バージョンにリダイレクトすることを、検索エンジンやブラウザに示します。
 
-
-##  移行に関する懸念事項
-
-多くのデベロッパーが HTTP から HTTPS への移行に懸念を抱くのはもっともです。そこで、Google Webmasters チームは[すばらしいガイダンス](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J)を用意しています。
-
-
 ###  検索ランキング
 
 [Google では、HTTPS を優れた検索品質のインジケーターとして使用しています](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html)。また、Google は、検索ランクを維持したまま[サイトを転送、移動、または移行する方法](https://support.google.com/webmasters/topic/6029673)に関するガイドも発行しています。

@@ -127,7 +127,7 @@ Other official generators including [jQuery](https://github.com/yeoman/generator
 
 ## yo newyear
 
-That's a wrap! If there are Yeoman resources you would like to suggest for the next issue, please feel free to suggest them to [@yeoman](http://twitter.com/yeoman) on Twitter or [+Yeoman](https://plus.google.com/101063139999404044459) on Plus and we’ll be sure to check em’ out. Happy Holidays and have a fantastic new year!
+That's a wrap! If there are Yeoman resources you would like to suggest for the next issue, please feel free to suggest them to [@yeoman](http://twitter.com/yeoman) on Twitter and we’ll be sure to check em’ out. Happy Holidays and have a fantastic new year!
 
 *With special thanks to Stephen Sawchuk, Sindre Sorhus and Pascal Hartig for their review of this issue*
 

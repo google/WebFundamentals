@@ -299,11 +299,6 @@ que se ejecutan. [Esta página de ONWASP explica cómo configurar el marcador Se
 La mayoría de los servidores web ofrecen una función simple de redireccionamiento. Usa `301 (Moved Permanently)` para
 indicar a los motores de búsqueda y a los navegadores que la versión de HTTPS es canónica y para redireccionar a tus usuarios de la versión HTTP a la versión HTTPS de tu sitio.
 
-## Inquietudes sobre la migración
-
-Muchos programadores tienen dudas válidas sobre la migración de HTTP a HTTPS.
-El equipo de Google Webmasters tiene algunas [pautas excelentes](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) disponibles.
-
 ### Ranking de búsqueda
 
 Google usa [HTTPS como indicador de buena calidad de búsqueda](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html).

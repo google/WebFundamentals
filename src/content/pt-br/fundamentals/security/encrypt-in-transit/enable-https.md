@@ -299,11 +299,6 @@ que ele define. [Essa página da OWASP explica como aplicar o sinalizador Secure
 A maioria dos servidores da Web oferece um recurso simples de redirecionamento. Use `301 (Moved Permanently)` para
 indicar aos mecanismos de pesquisa e navegadores que a versão HTTPS é canônica, e redirecione os usuários da versão HTTP para a versão HTTPS do site.
 
-## Questões da migração
-
-Muitos desenvolvedores têm preocupações válidas sobre a migração de HTTP para HTTPS.
-A equipe de webmasters do Google tem [orientações excelentes](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) disponíveis.
-
 ### Classificação das pesquisas
 
 O Google usa [HTTPS como um indicador de qualidade positivo para a pesquisa](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html) e,
