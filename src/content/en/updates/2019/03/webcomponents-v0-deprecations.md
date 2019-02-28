@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Web Components v0 deprecation and removal in Chrome 73 to help you plan.
+description: Web Components v0 deprecation and removal in Chrome 74 to help you plan.
 
-{# wf_updated_on: 2019-01-18 #}
-{# wf_published_on: 2019-01-18 #}
-{# wf_tags: deprecations,removals,chrome73,webcomponents,origintrials #}
+{# wf_updated_on: 2019-02-28 #}
+{# wf_published_on: 2019-03-01 #}
+{# wf_tags: deprecations,removals,chrome74,webcomponents,origintrials #}
 {# wf_blink_components: Blink>DOM #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
-{# wf_featured_snippet: Web Components v0 deprecation and removal in Chrome 73 to help you plan.#}
+{# wf_featured_snippet: Web Components v0 deprecation and removal in Chrome 74 to help you plan.#}
 
 # Web Components v0 deprecation {: .page-title }
 
@@ -18,7 +18,7 @@ Chrome is removing
 [Shadow DOM v0](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/),
 [Custom Elements v0](https://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
  and [HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/)
-  in Mar, 2019 at Chrome 73.
+  in Mar, 2019 at Chrome 74.
 
 [Intent to Deprecate](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/h-JwMiPUnuU/sl79aLoLBQAJ)
 
@@ -63,7 +63,7 @@ these features with an [origin trial](https://github.com/GoogleChrome/OriginTria
 After registering for the trial, you will receive a token that allows your site to use the three deprecated features for up to a year,
 until Chrome 81.
 We plan to remove the features permanently in the Chrome 81 release, although the trial tokens may expire before then.
-Soon after the Chrome 73 beta release, you can register for the trial at [Web Components V0](https://developers.chrome.com/origintrials/#/view_trial/2431943798780067841).
+Soon after the Chrome 74 beta release, you can register for the trial at [Web Components V0](https://developers.chrome.com/origintrials/#/view_trial/2431943798780067841).
 
 ## Remove Shadow DOM v0
 Shadow DOM v0 API `Element.createShadowRoot()` is removed.
