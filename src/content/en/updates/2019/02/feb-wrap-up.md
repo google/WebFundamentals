@@ -50,13 +50,12 @@ With the release of Chrome 72,
 have entered to the market! TWAs let you have full screen Chrome inside of an Android Activity, 
 which means you can bring your web content into app-sphere📱 Check out this 
 [getting started guide](/web/updates/2019/02/using-twa) or read on how @svenbudak put their 
-[PWA on Google Play Store](https://medium.com/@svenbudak/this-twa-stuff-rocks-finally-i-got-my-pwa-on-google-play-store-b92fe8dae31f)
-!
+[PWA on Google Play Store](https://medium.com/@svenbudak/this-twa-stuff-rocks-finally-i-got-my-pwa-on-google-play-store-b92fe8dae31f)!
 
 ## What's coming next
 
-With Chrome 73 stable release on the horizon ([March 12](https://www.chromestatus.com/features/schedule))
-, we have lots of exciting features to cover!
+With Chrome 73 stable release on the horizon ([March 12](https://www.chromestatus.com/features/schedule)), 
+we have lots of exciting features to cover!
  
 **V8** - Chrome's JavaScript engine has a bunch of updates including `Object.fromEntries` and 
 `String.prototype.matchAll`. Check out the [v8 release note](https://v8.dev/blog/v8-release-73).
