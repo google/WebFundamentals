@@ -43,8 +43,8 @@ next-generation web development libraries. Do you want to try it out? start with
 ### Trusted Web Activities 
 With the release of Chrome 72, 
 [Trusted Web Activity (TWA)](https://blog.chromium.org/2019/02/introducing-trusted-web-activity-for.html) 
-has entered to the market! TWA let you have full screen Chrome inside of an Android, which means 
-you can bring your web contents into app-sphere📱 Check out this 
+has entered to the market! TWA let you have full screen Chrome inside of an Android Activity, which means 
+you can bring your web content into app-sphere📱 Check out this 
 [getting started guide](/web/updates/2019/02/using-twa) or read on how @svenbudak put their 
 [PWA on Google Play Store](https://medium.com/@svenbudak/this-twa-stuff-rocks-finally-i-got-my-pwa-on-google-play-store-b92fe8dae31f)
 !
@@ -88,7 +88,7 @@ back/forward cache to cache pages in-memory when the user navigates away. Check 
 Lastly, [**Intersection observer v2**](/web/updates/2019/02/intersectionobserver-v2) introduces the 
 idea of tracking the actual "visibility" of a target.
 
-## What we are tinkering
+## What we are tinkering with
 Our work does not end at browser features! We also look at web application performance, build web 
 apps, and think different ways to help web developers everywhere. Here are some of the things we've 
 been tinkering this month. 
@@ -102,7 +102,7 @@ been tinkering this month.
 * [Progressive React](https://houssein.me/progressive-react)
 * [Web storefront performance problems](https://alankent.me/2019/02/16/common-web-storefront-performance-problems/)
 
-## New Video and Podcast 
+## New Videos and Podcasts 
 Martin is starting a new series called **JavaScript SEO**, the first episode is about 
 [how Google search indexes JavaScript sites](https://www.youtube.com/watch?v=LXF8bM4g-J4)! 
 Meggin recently presented 
@@ -110,8 +110,10 @@ Meggin recently presented
 Jake and Surma are back with 
 [new HTTP203 podcast episode discussing Image rotation experiment](/web/shows/http203/podcast/rotating-an-image-to-the-extreme).
 
-We also have regular shows such as "What's New in Chrome", "What's New in DevTools" and 
-"The State of the Web", on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
+We also have regular shows such as "[What's New in Chrome](https://www.youtube.com/watch?v=coh1k7TY1P0&list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m)"
+, "[What's New in DevTools](https://www.youtube.com/watch?v=XVJxlEdB230&list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD)"
+ and "[The State of the Web](https://www.youtube.com/watch?v=zO9U88i2S1M&list=PLNYkxOF6rcIBGvYSYO-VxOsaYQDw5rifJ)"
+ , on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
 
 ## Special shout-out 
 Have you seen [Puppeteer Examples](https://github.com/GoogleChromeLabs/puppeteer-examples) on our 
@@ -129,7 +131,7 @@ please do let me know on twitter [@kosamari](https://twitter.com/kosamari) ✅
 If you've built something new using features introduced here or changed something in your codebase 
 based on our articles, be sure to let us know at [@ChromiumDev](https://twitter.com/chromiumdev).
 
-In March, few of us are off to India hoping to learn more about mobile web experience there ✈️ 
+In March, a few of us are off to India hoping to learn more about mobile web experience there ✈️ 
 Looking forward to sharing what we learn there!
 
 See you next month👋
