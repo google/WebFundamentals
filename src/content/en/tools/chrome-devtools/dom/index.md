@@ -517,6 +517,18 @@ on.
 
 ## Next steps {: #next }
 
+[shortcuts]: /web/tools/chrome-devtools/shortcuts#elements
+
+That covers most of the DOM-related features in DevTools. You can discover the rest of them
+by right-clicking nodes in the DOM Tree and experimenting with the other options that weren't
+covered in this tutorial. See also [Elements panel keyboard shortcuts][shortcuts].
+
+Check out the [Chrome DevTools homepage](/web/tools/chrome-devtools/) to discover everything
+else you can do with DevTools.
+
+See [Community](/web/tools/chrome-devtools/#community) if you want to contact the DevTools team
+or get help from the DevTools community.
+
 {% include "web/_shared/helpful.html" %}
 
 ## Appendix: HTML versus the DOM {: #appendix }
