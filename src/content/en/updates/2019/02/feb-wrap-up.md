@@ -24,6 +24,7 @@ from the team.
 ## Releases
 
 ### Workbox
+
 Hot off the press, 
 [Workbox 4.0 was released](https://github.com/GoogleChrome/workbox/releases/tag/v4.0.0) just a few 
 days ago.🎉 This release includes great new  features like `workbox-window` and  `workbox-routing`. 
@@ -36,12 +37,14 @@ Not sure what problem workbox helps to solve? Check out this
 the State of the Web show. 
 
 ### lit-html and LitElement
+
 The team at the [polymer project](https://www.polymer-project.org/) has been busy working on 
 [stable release of lit-html and LitElement](/web/updates/2019/02/lit-element-and-lit-html) - two 
 next-generation web development libraries. Do you want to try them out? start with 
 [Try LitElement](https://lit-element.polymer-project.org/try) guide 📝
 
 ### Trusted Web Activities 
+
 With the release of Chrome 72, 
 [Trusted Web Activity (TWA)](https://blog.chromium.org/2019/02/introducing-trusted-web-activity-for.html) 
 have entered to the market! TWAs let you have full screen Chrome inside of an Android Activity, 
@@ -51,6 +54,7 @@ which means you can bring your web content into app-sphere📱 Check out this
 !
 
 ## What's coming next
+
 With Chrome 73 stable release on the horizon ([March 12](https://www.chromestatus.com/features/schedule))
 , we have lots of exciting features to cover!
  
@@ -75,6 +79,7 @@ As we say hello to new features, we also have to say goodbye, so be sure to chec
 **[deprecations and removals](/web/updates/2019/02/chrome-73-deps-rems) for Chrome 73** as well!
 
 ## New development
+
 Here are a few more things we've been working on that will hit a browser near you.
 
 To help prevent Cross-Site Scripting, **we are developing a new API called Trusted Types**. 
@@ -90,6 +95,7 @@ Lastly, [**Intersection observer v2**](/web/updates/2019/02/intersectionobserver
 idea of tracking the actual "visibility" of a target.
 
 ## What we are tinkering with
+
 Our work does not end at browser features! We also look at web application performance, build web 
 apps, and think about different ways to help web developers everywhere. 
 Here are some of the things we've been tinkering with this month. 
@@ -104,6 +110,7 @@ Here are some of the things we've been tinkering with this month.
 * [Web storefront performance problems](https://alankent.me/2019/02/16/common-web-storefront-performance-problems/)
 
 ## New Videos and Podcasts 
+
 Martin is starting a new series called **JavaScript SEO**, the first episode is about 
 [how Google search indexes JavaScript sites](https://www.youtube.com/watch?v=LXF8bM4g-J4)! 
 Meggin recently presented 
@@ -117,6 +124,7 @@ and ["The State of the Web"](https://www.youtube.com/watch?v=zO9U88i2S1M&list=PL
 on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
 
 ## Special shout-out 
+
 Have you seen [Puppeteer Examples](https://github.com/GoogleChromeLabs/puppeteer-examples)? 
 You might have seen it from Eric Bidelman's tweet ["📯The 12 Days of Puppeteer 🤹🏻‍♂️🎁"](https://twitter.com/ebidel/status/1079067020748967937) 
 last year. It's an awesome collection of Puppeteer code samples that let you think creatively 
@@ -126,6 +134,7 @@ about what you can do with the browser. You should check them out!
 We'll miss you!!)
 
 ## Wrapping up
+
 How did you like the first monthly wrap up? If you enjoyed it or have ideas to improve it, 
 please do let me know on twitter [@kosamari](https://twitter.com/kosamari) ✅ 
 
