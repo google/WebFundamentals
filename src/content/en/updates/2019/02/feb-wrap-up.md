@@ -28,7 +28,7 @@ from the team.
 Hot off the press, 
 [Workbox 4.0 was released](https://github.com/GoogleChrome/workbox/releases/tag/v4.0.0) just a few 
 days ago.🎉 This release includes great new features like `workbox-window` and improvements to many 
-of the existing workbox packages. For those of you who are already using workbox, check out the  
+of the existing workbox packages. For those of you who are already using workbox, check out the 
 [v3 to v4 migration guide](/web/tools/workbox/guides/migrations/migrate-from-v3). 
 Wondering how you can use Workbox in your existing project? Here is a guide to 
 [use them with bundlers of your choice](/web/tools/workbox/guides/using-bundlers). 
