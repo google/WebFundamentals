@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
 
-{# wf_updated_on: 2018-09-04 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
@@ -447,19 +447,12 @@ that pertain to lifecycle and lists what states they may transition to and from.
       point.</p>
       <aside class="warning">
         <strong>Warning:</strong>
-        The <code>beforeunload</code> event should only be used in two cases:
-        <ul>
-          <li>To alert the user of unsaved changes. Once those changes are
-            saved, the event should be removed. It should never be added
-            unconditionally to the page, as doing so can hurt performance in
-            some cases. See the
-            <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
-            for details.</li>
-          <li>Safari does not reliably fire the <code>pagehide</code> or
-            <code>visibilitychange</code> events when closing a tab. Adding a
-            Safari-only event handler to `beforeunload` is required to detect
-            some transitions to hidden state.</li>
-        </ul>
+        The <code>beforeunload</code> event should only be used to alert the
+        user of unsaved changes. Once those changes are saved, the event should
+        be removed. It should never be added unconditionally to the
+        page, as doing so can hurt performance in some cases. See the
+        <a href="#legacy-lifecycle-apis-to-avoid">legacy APIs section</a>
+        for details.
       </aside>
       <p>
         <strong>Possible previous states:</strong><br>
@@ -610,26 +603,6 @@ window.addEventListener('pagehide', (event) => {
     logStateChange('terminated');
   }
 }, {capture: true});
-
-// Safari does not reliably fire the `pagehide` or `visibilitychange`
-// events when closing a tab, so we have to use `beforeunload` with a
-// timeout to check whether the default action was prevented.
-// - https://bugs.webkit.org/show_bug.cgi?id=151610
-// - https://bugs.webkit.org/show_bug.cgi?id=151234
-// NOTE: we only add this to Safari because adding it to Firefox would
-// prevent the page from being eligible for bfcache.
-const isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent);
-if (isSafari) {
-  window.addEventListener('beforeunload', (event) => {
-    // Set a zero delay timeout to confirm other event listeners haven't
-    // canceled the event.
-    setTimeout(() => {
-      if (!(event.defaultPrevented || event.returnValue.length > 0)) {
-        logStateChange('hidden');
-      }
-    }, 0);
-  });
-}
 ```
 
 The above code does three things:
@@ -643,7 +616,7 @@ The above code does three things:
 <aside class="warning">
   <strong>Warning!</strong>
   This code yields different results in different browsers, as the order
-  (and reliability) of events has not been consistently implemented. To learn
+  and reliability of events has not been consistently implemented. To learn
   how best to handle these inconsistencies see
   <a href="#managing-cross-browsers-differences">managing cross-browsers
   differences</a>.
@@ -690,6 +663,17 @@ implemented consistently. For example:
   visibility state was visible when the page was being unloaded. New Chrome
   versions will dispatch `visibilitychange` before `pagehide`, regardless of
   the document's visibility state at unload time.
+* Safari does not reliably fire the `pagehide` or `visibilitychange` events
+  when closing a tab (webkit bugs: [151610](https://bugs.webkit.org/show_bug.cgi?id=151610)
+  and [151234](https://bugs.webkit.org/show_bug.cgi?id=151234)), so in Safari
+  you may need to _also_ listen to the `beforeunload` event in order to
+  detect a change to the hidden state. But since the `beforeunload` event can
+  be canceled, you need
+  [to wait until after the event has finished propagating](https://github.com/GoogleChromeLabs/page-lifecycle/blob/0.1.1/src/Lifecycle.mjs#L156-L172)
+  to know if the state has changed to hidden. __Important__: using the
+  `beforeunload` event this way should _only_ be done in Safari, as using this
+  event in other browsers can hurt performance. See the
+  [legacy APIs](#legacy-lifecycle-apis-to-avoid) section for details.
 
 To make it easier for developers to deal with these cross-browsers
 inconsistencies and focus solely on following the [lifecycle state recommendations
