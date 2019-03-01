@@ -1,9 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: TODO
+description: How to view nodes, search for nodes, edit nodes, reference nodes in the Console, break on node changes, and more.
 
 {# wf_updated_on: 2019-03-01 #}
-{# wf_published_on: 2019-02-26 #}
+{# wf_published_on: 2019-03-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
 <style>
@@ -36,9 +36,9 @@ and investigate that node.
 
      <figure>
        <img src="imgs/inspect4.png"
-            alt=""/>
+            alt="Inspecting a node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 1</b>. Inspecting a node
        </figcaption>
      </figure>
 
@@ -47,9 +47,9 @@ and investigate that node.
 
      <figure>
        <img src="imgs/inspect1.png"
-            alt=""/>
+            alt="Highlighting the Michelangelo< node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 2</b>. Highlighting the Michelangelo node
        </figcaption>
      </figure>
 
@@ -60,9 +60,9 @@ and investigate that node.
 
      <figure>
        <img src="imgs/inspect2.png"
-            alt=""/>
+            alt="Hovering over the Raphael node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 3</b>. Hovering over the Raphael node
        </figcaption>
      </figure>
 
@@ -73,9 +73,9 @@ and investigate that node.
 
      <figure>
        <img src="imgs/inspect3.png"
-            alt=""/>
+            alt="The Inspect icon"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 4</b>. The Inspect icon
        </figcaption>
      </figure>
 
@@ -104,9 +104,9 @@ keyboard.
 
      <figure>
        <img src="imgs/nav1.png"
-            alt=""/>
+            alt="Inspecting the Ringo node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 5</b>. Inspecting the Ringo node
        </figcaption>
      </figure>
 
@@ -114,9 +114,9 @@ keyboard.
 
      <figure>
        <img src="imgs/nav2.png"
-            alt=""/>
+            alt="Inspecting the ul node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 6</b>. Inspecting the ul node
        </figcaption>
      </figure>
 
@@ -153,9 +153,9 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
 
      <figure>
        <img src="imgs/search1.png"
-            alt=""/>
+            alt="Highlighting the query in the Search bar"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 7</b>. Highlighting the query in the Search bar
        </figcaption>
      </figure>
 
@@ -175,9 +175,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
      <figure>
        <img src="imgs/content1.png"
-            alt=""/>
+            alt="Editing the text"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 8</b>. Editing the text
        </figcaption>
      </figure>
 
@@ -196,9 +196,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
      <figure>
        <img src="imgs/attributes1.png"
-            alt=""/>
+            alt="Editing the node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 9</b>. Editing the node
        </figcaption>
      </figure>
 
@@ -208,9 +208,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
      <figure>
        <img src="imgs/attributes2.png"
-            alt=""/>
+            alt="Adding a style attribute to the node"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 10</b>. Adding a style attribute to the node
        </figcaption>
      </figure>
 
@@ -229,9 +229,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
      <figure>
        <img src="imgs/type1.png"
-            alt=""/>
+            alt="Changing the node type to button"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 11</b>. Changing the node type to button
        </figcaption>
      </figure>
 
@@ -251,9 +251,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
      <figure>
        <img src="imgs/reorder1.png"
-            alt=""/>
+            alt="Dragging the node to the top of the list"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 12</b>. Dragging the node to the top of the list
        </figcaption>
      </figure>
 
@@ -295,9 +295,9 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
      <figure>
        <img src="imgs/hide1.png"
-            alt=""/>
+            alt="What the node looks like in the DOM Tree after it's hidden"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 13</b>. What the node looks like in the DOM Tree after it's hidden
        </figcaption>
      </figure>
 
@@ -333,9 +333,9 @@ node in the Console with the variable `$0`.
 
      <figure>
        <img src="imgs/current1.png"
-            alt=""/>
+            alt="The result of the first $0 expression in the Console"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 14</b>. The result of the first $0 expression in the Console
        </figcaption>
      </figure>
 
@@ -345,9 +345,9 @@ node in the Console with the variable `$0`.
 
      <figure>
        <img src="imgs/current2.png"
-            alt=""/>
+            alt="The result of the second $0 expression in the Console"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 15</b>. The result of the second $0 expression in the Console
        </figcaption>
      </figure>
 
@@ -365,9 +365,9 @@ node in the Console with the variable `$0`.
 
      <figure>
        <img src="imgs/global1.png"
-            alt=""/>
+            alt="The result of the temp1 expression"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 16</b>. The result of the temp1 expression
        </figcaption>
      </figure>
 
@@ -387,9 +387,9 @@ node in the Console with the variable `$0`.
 
      <figure>
        <img src="imgs/path1.png"
-            alt=""/>
+            alt="The result of the Copy JS Path expression"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 17</b>. The result of the Copy JS Path expression
        </figcaption>
      </figure>
 
@@ -425,9 +425,9 @@ any attribute of a node to change.
 
      <figure>
        <img src="imgs/attrmod1.png"
-            alt=""/>
+            alt="Break on attribute modifications"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 18</b>. Break on attribute modifications
        </figcaption>
      </figure>
 
@@ -438,9 +438,9 @@ any attribute of a node to change.
 
      <figure>
        <img src="imgs/attrmod2.png"
-            alt=""/>
+            alt="Where to resume script execution"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 19</b>. Where to resume script execution
        </figcaption>
      </figure>
 
@@ -600,9 +600,9 @@ instructions below to complete the section.
 
      <figure>
        <img src="imgs/scroll1.png"
-            alt=""/>
+            alt="Scroll into view"/>
        <figcaption>
-         <b>Figure X</b>.
+         <b>Figure 20</b>. Scroll into view
        </figcaption>
      </figure>
 
