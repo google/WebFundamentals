@@ -5,7 +5,7 @@ team.
 
 {# wf_updated_on: 2019-02-28 #}
 {# wf_published_on: 2019-02-28 #}
-{# wf_featured_image:  #}
+{# wf_featured_image: /web/updates/images/generic/monthly.png #}
 {# wf_featured_snippet: February wrap up which we look back what's been happening in Web Developer 
 Ecosystem team.　#}
 {% include "web/_shared/rss-widget-updates.html" %}
@@ -56,7 +56,8 @@ you can bring your web contents into app-sphere📱 Check out this
 With Chrome 73 stable release on the horizon (March 12), we have lots of exciting features to cover! 
 
 **V8** - Chrome's JavaScript engine has a bunch of updates including `Object.fromEntries` and 
-`String.prototype.matchAll`. Be sure to check the [release notes here](https://v8.dev/blog/v8-release-73).
+`String.prototype.matchAll`. Be sure to check the [release notes here](https://v8.dev/blog/v8-release-73)
+.
 
 Working with **audio and video on the web**? Hardware media keys support is here and "Skip Ad" in 
 Picture-in-Picture window is now in origin trial! Check out 
