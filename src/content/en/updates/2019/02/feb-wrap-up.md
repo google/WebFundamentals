@@ -18,7 +18,7 @@ Web Developer Ecosystem team✨
 We are a team of engineers and communicators who produce articles and code samples such as this 
 website [web fundamentals](/web) and our brand new portal [web.dev](https://web.dev/). You can also 
 catch our work over on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers), and 
-don't forget to follow us on [@ChormiumDev](https://twitter.com/chromiumdev) :)
+don't forget to follow us on [@ChromiumDev](https://twitter.com/chromiumdev) :)
 
 February is a short month but we are certainly not short on content. Let's start with big releases 
 from the team.
