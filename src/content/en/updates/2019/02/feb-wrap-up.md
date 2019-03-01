@@ -117,9 +117,9 @@ We also have regular shows such as "[What's New in Chrome](https://www.youtube.c
 
 ## Special shout-out 
 Have you seen [Puppeteer Examples](https://github.com/GoogleChromeLabs/puppeteer-examples) on our 
-Github? You might have seen it from Eric Bidelman's tweet "[📯The 12 Days of Puppeteer 🤹🏻‍♂️🎁](https://twitter.com/ebidel/status/1079067020748967937)" last year. It's an awesome collection of 
-Puppeteer code samples that let you think creatively about what you can do with the browser. 
-You should check them out!
+Github? You might have seen it from Eric Bidelman's tweet "[📯The 12 Days of Puppeteer 🤹🏻‍♂️🎁](https://twitter.com/ebidel/status/1079067020748967937)
+" last year. It's an awesome collection of Puppeteer code samples that let you think creatively 
+about what you can do with the browser. You should check them out!
 
 (Best of luck to [your new endeavor](https://twitter.com/ebidel/status/1101191475189039109) Eric! 
 We'll miss you!!)
