@@ -1,14 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: February wrap up which we look back what's been happening in Web Developer Ecosystem 
-team.
+description: February wrap up which we look back what's been happening in Web Developer Ecosystem team.
 
-{# wf_updated_on: 2019-02-28 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2019-02-28 #}
 {# wf_featured_image: /web/updates/images/generic/monthly.png #}
-{# wf_featured_snippet: February wrap up which we look back what's been happening in Web Developer 
-Ecosystem team.　#}
-{% include "web/_shared/rss-widget-updates.html" %}
+{# wf_featured_snippet: February wrap up which we look back what's been happening in Web Developer Ecosystem team.　#}
 {# wf_blink_components: N/A #}
 
 # Web Dev Ecosystem team - February wrap up {: .page-title }
@@ -18,8 +15,8 @@ Web Developer Ecosystem team✨
 
 We are a team of engineers and communicators who produce articles and code samples such as this 
 website [web fundamentals](/web) and our brand new portal [web.dev](https://web.dev/). You can also 
-catch out work over on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers). 
-Don't forget to follow us on [@ChormiumDev](https://twitter.com/chromiumdev)!
+catch our work over on [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers), and 
+don't forget to follow us on [@ChormiumDev](https://twitter.com/chromiumdev) :)
 
 February is a short month but we are certainly not short on content. Let's start with big releases 
 from the team.
@@ -53,8 +50,8 @@ you can bring your web contents into app-sphere📱 Check out this
 !
 
 ## What's coming next
-With Chrome 73 stable release on the horizon (March 12), we have lots of exciting features to cover! 
-
+With Chrome 73 stable release on the horizon (March 12), we have lots of exciting features to cover!
+ 
 **V8** - Chrome's JavaScript engine has a bunch of updates including `Object.fromEntries` and 
 `String.prototype.matchAll`. Be sure to check the [release notes here](https://v8.dev/blog/v8-release-73)
 .
@@ -68,7 +65,6 @@ Speaking of origin trial, [get ready for Priority Hints](/web/updates/2019/02/pr
 to give the browser how to load them. It is still an experimental feature, so please do try out and 
 send feedback!
 
-
 Rendering performance is always on top of our mind. In Chrome 73 `wheel` and `mousewheel` listeners 
 registered on root targets (window, document, or body) will be 
 [passive listeners by default](/web/updates/2019/02/scrolling-intervention), providing fast 
@@ -77,23 +73,20 @@ registered on root targets (window, document, or body) will be
 As we say hello to new features, we also have to say goodbye, so be sure to check 
 **[deplications and removals](/web/updates/2019/02/chrome-73-deps-rems) for Chrome 73** as well!
 
-
 ## New Development
 Here are more things we've been working on that will hit browser near you.
 
-To help prevent Cross-Site Scripting, we are developing a new API called **Trusted Types**. 
+To help prevent Cross-Site Scripting, **we are developing a new API called Trusted Types**. 
 Opting into trusted-types (via Content Security Policy) will lock down the document from DOM 
 injection. We are working on providing more code examples and guides on this, but in the meanwhile 
 please [read more about it here](/web/updates/2019/02/trusted-types) to try it out.
 
-
-Hitting back and forward button on Chrome may soon be _really fast_! We are exploring a new 
+**Hitting back and forward button on Chrome may soon be _really fast_!** We are exploring a new 
 back/forward cache to cache pages in-memory when the user navigates away. Check out 
 [the explainer and a prototype of bfcache in this post](/web/updates/2019/02/back-forward-cache). 
 
-Lastly, [Intersection observer v2](/web/updates/2019/02/intersectionobserver-v2) introduces the 
+Lastly, [**Intersection observer v2**](/web/updates/2019/02/intersectionobserver-v2) introduces the 
 idea of tracking the actual "visibility" of a target.
-
 
 ## What we are tinkering
 Our work does not end at browser features! We also look at web application performance, build web 
@@ -118,11 +111,19 @@ Jake and Surma are back with
 [new HTTP203 podcast episode discussing Image rotation experiment](/web/shows/http203/podcast/rotating-an-image-to-the-extreme).
 
 We also have regular shows such as "What's New in Chrome", "What's New in DevTools" and 
-"The State of the Web", on our YouTube Channel!
+"The State of the Web", on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
 
+## Special shout-out 
+Have you seen [Puppeteer Examples](https://github.com/GoogleChromeLabs/puppeteer-examples) on our 
+Github? You might have seen it from Eric Bidelman's tweet "[📯The 12 Days of Puppeteer 🤹🏻‍♂️🎁](https://twitter.com/ebidel/status/1079067020748967937)" last year. It's an awesome collection of 
+Puppeteer code samples that let you think creatively about what you can do with the browser. 
+You should check them out!
+
+(Best of luck to [your new endeavor](https://twitter.com/ebidel/status/1101191475189039109) Eric! 
+We'll miss you!!)
 
 ## Wrapping up
-How did you like the first monthly wrap up? If you enjoyed it or have ideas to improve, 
+How did you like the first monthly wrap up? If you enjoyed it or have ideas to improve it, 
 please do let me know on twitter [@kosamari](https://twitter.com/kosamari) ✅ 
 
 If you've built something new using features introduced here or changed something in your codebase 
@@ -132,3 +133,6 @@ In March, few of us are off to India hoping to learn more about mobile web exper
 Looking forward to sharing what we learn there!
 
 See you next month👋
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}
