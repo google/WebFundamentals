@@ -50,7 +50,8 @@ you can bring your web content into app-sphere📱 Check out this
 !
 
 ## What's coming next
-With Chrome 73 stable release on the horizon (March 12), we have lots of exciting features to cover!
+With Chrome 73 stable release on the horizon ([March 12](https://www.chromestatus.com/features/schedule)
+), we have lots of exciting features to cover!
  
 **V8** - Chrome's JavaScript engine has a bunch of updates including `Object.fromEntries` and 
 `String.prototype.matchAll`. Be sure to check the [release notes here](https://v8.dev/blog/v8-release-73)
