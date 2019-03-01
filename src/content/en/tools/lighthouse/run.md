@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Run Lighthouse against any site.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2017-06-08 #}
 
 # Try Lighthouse {: .page-title }
