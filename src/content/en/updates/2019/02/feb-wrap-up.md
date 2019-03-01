@@ -92,7 +92,7 @@ idea of tracking the actual "visibility" of a target.
 ## What we are tinkering with
 Our work does not end at browser features! We also look at web application performance, build web 
 apps, and think different ways to help web developers everywhere. Here are some of the things we've 
-been tinkering this month. 
+been tinkering with this month. 
 
 * [Rendering on the Web](/web/updates/2019/02/rendering-on-the-web)
 * [JavaScript Loading Priorities in Chrome](https://addyosmani.com/blog/script-priorities/)
@@ -112,9 +112,9 @@ Jake and Surma are back with
 [new HTTP203 podcast episode discussing Image rotation experiment](/web/shows/http203/podcast/rotating-an-image-to-the-extreme).
 
 We also have regular shows such as "[What's New in Chrome](https://www.youtube.com/watch?v=coh1k7TY1P0&list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m)"
-, "[What's New in DevTools](https://www.youtube.com/watch?v=XVJxlEdB230&list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD)"
- and "[The State of the Web](https://www.youtube.com/watch?v=zO9U88i2S1M&list=PLNYkxOF6rcIBGvYSYO-VxOsaYQDw5rifJ)"
- , on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
+, "[What's New in DevTools](https://www.youtube.com/watch?v=XVJxlEdB230&list=PLNYkxOF6rcIBDSojZWBv4QJNoT4GNYzQD)
+", and "[The State of the Web](https://www.youtube.com/watch?v=zO9U88i2S1M&list=PLNYkxOF6rcIBGvYSYO-VxOsaYQDw5rifJ)"
+ on our [YouTube Channel](https://www.youtube.com/user/ChromeDevelopers).
 
 ## Special shout-out 
 Have you seen [Puppeteer Examples](https://github.com/GoogleChromeLabs/puppeteer-examples) on our 
