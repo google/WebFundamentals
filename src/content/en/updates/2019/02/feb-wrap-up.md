@@ -10,6 +10,8 @@ description: February wrap up which we look back what's been happening in Web De
 
 # Web Dev Ecosystem team - February wrap up {: .page-title }
 
+{% include "web/_shared/contributors/kosamari.html" %}
+
 Welcome to the first installment of a monthly wrap up which we look back what's been happening in 
 Web Developer Ecosystem team✨
 
