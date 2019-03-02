@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Get started with Google Chrome's built-in web developer tools.
 
-{# wf_updated_on: 2018-12-20 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2016-03-28 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -44,15 +44,17 @@ Check out [Get started](#get-started) below if you'd prefer tutorials that focus
 * [Get Started with HTML and the DOM](/web/tools/chrome-devtools/beginners/html)
 * [Get Started with CSS](/web/tools/chrome-devtools/beginners/css)
 
-## Get started {: #get-started }
+## Get started {: #start }
 
 If you're a more experienced web developer, here are the recommended starting points for learning how
 DevTools can improve your productivity:
 
+* [View and Change the DOM](/web/tools/chrome-devtools/dom/)
 * [View and Change a Page's Styles (CSS)](/web/tools/chrome-devtools/css/)
 * [Debug JavaScript](/web/tools/chrome-devtools/javascript/)
 * [View Messages and Run JavaScript in the Console](console/get-started)
 * [Optimize Website Speed](/web/tools/chrome-devtools/speed/get-started)
+* [Inspect Network Activity](/web/tools/chrome-devtools/network/)
 
 ## Discover DevTools {: #discover }
 
@@ -80,6 +82,7 @@ Simulate mobile devices.
 
 View and change the DOM and CSS.
 
+* [Get Started With Viewing And Changing The DOM](/web/tools/chrome-devtools/dom/)
 * [Get Started With Viewing And Changing CSS](/web/tools/chrome-devtools/css/)
 * [Inspect and Tweak Your Pages](/web/tools/chrome-devtools/inspect-styles/)
 * [Edit Styles](/web/tools/chrome-devtools/inspect-styles/edit-styles)
@@ -183,7 +186,7 @@ Debug mixed content issues, certificate problems, and more.
 
 <div style="clear:both;"></div>
 
-## Join the DevTools community {: #community }
+## Community {: #community }
 
 <style>
   .cdt-but {

@@ -9,12 +9,29 @@ toc:
     path: /web/tools/chrome-devtools/beginners/html
   - title: CSS
     path: /web/tools/chrome-devtools/beginners/css
+- title: DOM
+  section:
+  - title: Get Started
+    path: /web/tools/chrome-devtools/dom/
+  - title: Deprecated
+    section:
+    - title: DOM Guide
+      path: /web/tools/chrome-devtools/inspect-styles/
+      status: deprecated
+    - title: Edit the DOM
+      path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+      status: deprecated
 - title: CSS
   section:
   - title: Get Started with Viewing and Changing CSS
     path: /web/tools/chrome-devtools/css/
   - title: CSS Reference
     path: /web/tools/chrome-devtools/css/reference
+  - title: Inspect Animations
+    path: /web/tools/chrome-devtools/inspect-styles/animations
+  - title: Edit Styles
+    path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+    status: deprecated
   - title: Guides
     section:
     - title: Force DevTools Into Print Preview Mode
@@ -29,6 +46,8 @@ toc:
     path: /web/tools/chrome-devtools/javascript/source-maps
   - title: JS Debugging Reference
     path: /web/tools/chrome-devtools/javascript/reference
+  - title: Snippets
+    path: /web/tools/chrome-devtools/snippets
   - title: Guides
     section:
     - title: Blackbox Chrome Extension Scripts
@@ -84,7 +103,7 @@ toc:
     - title: Emulate Geolocation and Accelerometer Sensors
       path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
       status: deprecated
-- title: Remote Debug Android Devices
+- title: Remote Debugging
   section:
   - title: Get Started
     path: /web/tools/chrome-devtools/remote-debugging/
@@ -161,19 +180,6 @@ toc:
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security
   path: /web/tools/chrome-devtools/security
-- title: Snippets
-  path: /web/tools/chrome-devtools/snippets
-- title: HTML
-  section:
-  - title: Overview
-    path: /web/tools/chrome-devtools/inspect-styles/
-  - title: Inspect Animations
-    path: /web/tools/chrome-devtools/inspect-styles/animations
-  - title: Edit the DOM
-    path: /web/tools/chrome-devtools/inspect-styles/edit-dom
-  - title: Edit Styles
-    path: /web/tools/chrome-devtools/inspect-styles/edit-styles
-    status: deprecated
 - title: Storage and Resources
   section:
   - title: Inspect and Manage Storage, Databases, and Caches
