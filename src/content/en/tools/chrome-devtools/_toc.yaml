@@ -77,6 +77,8 @@ toc:
   section:
   - title: Reference
     path: /web/tools/chrome-devtools/accessibility/reference
+  - title: Navigating DevTools with assistive technology
+    path: /web/tools/chrome-devtools/accessibility/navigation
   - title: Guides
     section:
     - title: Track Which Element Has Focus
