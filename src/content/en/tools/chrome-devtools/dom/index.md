@@ -6,12 +6,6 @@ description: How to view nodes, search for nodes, edit nodes, reference nodes in
 {# wf_published_on: 2019-03-01 #}
 {# wf_blink_components: Platform>DevTools #}
 
-<style>
-  .target {
-    font-weight: bold;
-  }
-</style>
-
 # Get Started With Viewing And Changing The DOM {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -23,6 +17,8 @@ This tutorial assumes that you know the difference between the DOM and HTML. See
 [Appendix: HTML versus the DOM](#appendix) for an explanation.
 
 ## View DOM nodes {: #view }
+
+The DOM Tree of the Elements panel is where you do all DOM-related activities in DevTools.
 
 ### Inspect a node {: #inspect }
 
@@ -53,19 +49,6 @@ and investigate that node.
        </figcaption>
      </figure>
 
-
-1. In the DOM Tree hover `<li>Raphael</li>`. DevTools highlights the node in the viewport.
-   This feature is helpful when you're not sure what node you're looking at, or when you
-   want to see how a node is positioned on the page.
-
-     <figure>
-       <img src="imgs/inspect2.png"
-            alt="Hovering over the Raphael node"/>
-       <figcaption>
-         <b>Figure 3</b>. Hovering over the Raphael node
-       </figcaption>
-     </figure>
-
 [inspect]: /web/tools/chrome-devtools/images/shared/inspect.png
 
 1. Click the **Inspect** ![Inspect][inspect]{: .inline-icon } icon in the top-left corner of
@@ -75,7 +58,7 @@ and investigate that node.
        <img src="imgs/inspect3.png"
             alt="The Inspect icon"/>
        <figcaption>
-         <b>Figure 4</b>. The Inspect icon
+         <b>Figure 3</b>. The Inspect icon
        </figcaption>
      </figure>
 
@@ -106,7 +89,7 @@ keyboard.
        <img src="imgs/nav1.png"
             alt="Inspecting the Ringo node"/>
        <figcaption>
-         <b>Figure 5</b>. Inspecting the Ringo node
+         <b>Figure 4</b>. Inspecting the Ringo node
        </figcaption>
      </figure>
 
@@ -116,7 +99,7 @@ keyboard.
        <img src="imgs/nav2.png"
             alt="Inspecting the ul node"/>
        <figcaption>
-         <b>Figure 6</b>. Inspecting the ul node
+         <b>Figure 5</b>. Inspecting the ul node
        </figcaption>
      </figure>
 
@@ -142,6 +125,8 @@ lets you quickly reposition the viewport so that you can see the node.
 1. Go to the [Appendix: Scroll into view](#scroll2) section at the bottom of this page.
    The instructions continue there.
 
+After completing the instructions at the bottom of the page you should jump back up to here.
+
 ### Search for nodes {: #search }
 
 You can search the DOM Tree by string, CSS selector, or XPath selector.
@@ -155,7 +140,7 @@ You can search the DOM Tree by string, CSS selector, or XPath selector.
        <img src="imgs/search1.png"
             alt="Highlighting the query in the Search bar"/>
        <figcaption>
-         <b>Figure 7</b>. Highlighting the query in the Search bar
+         <b>Figure 6</b>. Highlighting the query in the Search bar
        </figcaption>
      </figure>
 
@@ -163,7 +148,11 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
 
 ## Edit the DOM {: #edit }
 
+You can edit the DOM on the fly and see how those changes affect the page.
+
 ### Edit content {: #content }
+
+To edit a node's content, double-click the content in the DOM Tree.
 
 1. Right-click **Michelle** below and select **Inspect**.
 
@@ -177,7 +166,7 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
        <img src="imgs/content1.png"
             alt="Editing the text"/>
        <figcaption>
-         <b>Figure 8</b>. Editing the text
+         <b>Figure 7</b>. Editing the text
        </figcaption>
      </figure>
 
@@ -185,6 +174,9 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
    above changes from **Michelle** to **Leela**.
 
 ### Edit attributes {: #attributes }
+
+To edit attributes, double-click the attribute name or value. Follow the instructions
+below to learn how to add attributes to a node.
 
 1. Right-click **Howard** below and select **Inspect**.
 
@@ -198,7 +190,7 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
        <img src="imgs/attributes1.png"
             alt="Editing the node"/>
        <figcaption>
-         <b>Figure 9</b>. Editing the node
+         <b>Figure 8</b>. Editing the node
        </figcaption>
      </figure>
 
@@ -210,11 +202,13 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
        <img src="imgs/attributes2.png"
             alt="Adding a style attribute to the node"/>
        <figcaption>
-         <b>Figure 10</b>. Adding a style attribute to the node
+         <b>Figure 9</b>. Adding a style attribute to the node
        </figcaption>
      </figure>
 
 ### Edit node type {: #type }
+
+To edit a node's type, double-click the type and then type in the new type.
 
 1. Right-click **Hank** below and select **Inspect**.
 
@@ -231,11 +225,13 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
        <img src="imgs/type1.png"
             alt="Changing the node type to button"/>
        <figcaption>
-         <b>Figure 11</b>. Changing the node type to button
+         <b>Figure 10</b>. Changing the node type to button
        </figcaption>
      </figure>
 
 ### Reorder DOM nodes {: #reorder }
+
+Drag nodes to reorder them.
 
 1. Right-click **Elvis Presley** below and select **Inspect**. Notice that it's the last item
    in the list.
@@ -253,7 +249,7 @@ As mentioned above, the Search bar also supports CSS and XPath selectors.
        <img src="imgs/reorder1.png"
             alt="Dragging the node to the top of the list"/>
        <figcaption>
-         <b>Figure 12</b>. Dragging the node to the top of the list
+         <b>Figure 11</b>. Dragging the node to the top of the list
        </figcaption>
      </figure>
 
@@ -286,6 +282,8 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 ### Hide a node {: #hide }
 
+Press <kbd>H</kbd> to hide a node.
+
 1. Right-click **The Stars My Destination** below and select **Inspect**.
 
      * The Count of Monte Cristo
@@ -297,13 +295,15 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
        <img src="imgs/hide1.png"
             alt="What the node looks like in the DOM Tree after it's hidden"/>
        <figcaption>
-         <b>Figure 13</b>. What the node looks like in the DOM Tree after it's hidden
+         <b>Figure 12</b>. What the node looks like in the DOM Tree after it's hidden
        </figcaption>
      </figure>
 
 1. Press the <kbd>H</kbd> key again. The node is shown again.
 
 ### Delete a node {: #delete }
+
+Press <kbd>Delete</kbd> to delete a node.
 
 1. Right-click **Foundation** below and select **Inspect**.
 
@@ -316,6 +316,9 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
    The last action is undone and the node reappears.
 
 ## Access nodes in the Console {: #console }
+
+DevTools provides a few shortcuts for accessing DOM nodes from the Console, or getting
+JavaScript references to them.
 
 ### Reference the currently-selected node with $0 {: #current }
 
@@ -335,7 +338,7 @@ node in the Console with the variable `$0`.
        <img src="imgs/current1.png"
             alt="The result of the first $0 expression in the Console"/>
        <figcaption>
-         <b>Figure 14</b>. The result of the first $0 expression in the Console
+         <b>Figure 13</b>. The result of the first $0 expression in the Console
        </figcaption>
      </figure>
 
@@ -347,11 +350,13 @@ node in the Console with the variable `$0`.
        <img src="imgs/current2.png"
             alt="The result of the second $0 expression in the Console"/>
        <figcaption>
-         <b>Figure 15</b>. The result of the second $0 expression in the Console
+         <b>Figure 14</b>. The result of the second $0 expression in the Console
        </figcaption>
      </figure>
 
 ### Store as global variable {: #global }
+
+If you need to refer back to a node many times, store it as a global variable.
 
 1. Right-click **The Big Sleep** below and select **Inspect**.
 
@@ -367,11 +372,13 @@ node in the Console with the variable `$0`.
        <img src="imgs/global1.png"
             alt="The result of the temp1 expression"/>
        <figcaption>
-         <b>Figure 16</b>. The result of the temp1 expression
+         <b>Figure 15</b>. The result of the temp1 expression
        </figcaption>
      </figure>
 
 ### Copy JS path {: #path }
+
+Copy the JavaScript path to a node when you need to reference it in an automated test.
 
 1. Right-click **The Brothers Karamazov** below and select **Inspect**.
 
@@ -389,11 +396,13 @@ node in the Console with the variable `$0`.
        <img src="imgs/path1.png"
             alt="The result of the Copy JS Path expression"/>
        <figcaption>
-         <b>Figure 17</b>. The result of the Copy JS Path expression
+         <b>Figure 16</b>. The result of the Copy JS Path expression
        </figcaption>
      </figure>
 
 ## Break on DOM changes {: #breakpoints }
+
+DevTools allows you to pause a page's JavaScript when the JavaScript modifies the DOM.
 
 [resume]: /web/tools/chrome-devtools/images/shared/resume-script-execution.png
 
@@ -427,7 +436,7 @@ any attribute of a node to change.
        <img src="imgs/attrmod1.png"
             alt="Break on attribute modifications"/>
        <figcaption>
-         <b>Figure 18</b>. Break on attribute modifications
+         <b>Figure 17</b>. Break on attribute modifications
        </figcaption>
      </figure>
 
@@ -440,7 +449,7 @@ any attribute of a node to change.
        <img src="imgs/attrmod2.png"
             alt="Where to resume script execution"/>
        <figcaption>
-         <b>Figure 19</b>. Where to resume script execution
+         <b>Figure 18</b>. Where to resume script execution
        </figcaption>
      </figure>
 
@@ -448,7 +457,7 @@ any attribute of a node to change.
    `background-color:thistle`. DevTools pauses the page and highlights the
    code that caused the attribute to change.
 
-1. Resume script execution, as mentioned earlier.
+1. Click **Resume Script Execution** ![Resume Script Execution][resume]{: .inline-icon }, as mentioned earlier.
 
 ### Break on node removal {: #noderemoval }
 
@@ -479,10 +488,8 @@ If you want to pause when a particular node is removed, use node removal breakpo
 
 ### Break on subtree modifications {: #subtree }
 
-Subtree modification is the most flexible type of DOM breakpoint. After you put a subtree
-modification breakpoint on a node, DevTools pauses the page when any of the node's descendants
-are modified. This includes adding or removing nodes, changing attributes, changing text, and so
-on.
+After you put a subtree modification breakpoint on a node, DevTools pauses the page
+when any of the node's descendants are added or removed.
 
 1. Right-click **A Fire Upon The Deep** below and select **Inspect**.
 
@@ -491,17 +498,12 @@ on.
          <li id="fire">A Fire Upon the Deep</li>
        </ul>
        <button id="child">Add Child</button>
-       <button id="attribute">Change Attribute</button>
        <script>
          document.getElementById('child').addEventListener('click', function (e) {
            e.target.disabled = true;
            const li = document.createElement('li');
            li.textContent = 'A Deepness in the Sky';
            document.getElementById('target').appendChild(li);
-         });
-         document.getElementById('attribute').addEventListener('click', function (e) {
-           e.target.disabled = true;
-           document.getElementById('fire').style = 'background-color:firebrick';
          });
        </script>
      {% endframebox %}
@@ -510,9 +512,6 @@ on.
    `<li>A Fire Upon the Deep</li>`, and select **Break On** > **Subtree Modifications**.
    See [Appendix: Missing options](#options) if you can't see this option.
 1. Click **Add Child**. The code pauses because a `<li>` node was added to the list.
-1. Resume script execution.
-1. Click **Change Attribute**. The code pauses again because an attribute of one of the
-   *descendants* of `<ul id="target">` was changed.
 1. Click **Resume Script Execution** ![Resume Script Execution][resume]{: .inline-icon }.
 
 ## Next steps {: #next }
@@ -532,6 +531,8 @@ or get help from the DevTools community.
 {% include "web/_shared/helpful.html" %}
 
 ## Appendix: HTML versus the DOM {: #appendix }
+
+This section quickly explains the difference between HTML and the DOM.
 
 When you use a web browser to request a page like `https://example.com` the server
 returns HTML like this:
@@ -602,7 +603,7 @@ instructions below to complete the section.
        <img src="imgs/scroll1.png"
             alt="Scroll into view"/>
        <figcaption>
-         <b>Figure 20</b>. Scroll into view
+         <b>Figure 19</b>. Scroll into view
        </figcaption>
      </figure>
 
@@ -612,4 +613,10 @@ Many of the instructions in this tutorial instruct you to right-click a node in 
 and then select an option from the context menu that pops up. If you don't see the specified
 option in the context menu, try right-clicking away from the node text.
 
-
+<figure>
+  <img src="imgs/options1.png"
+       alt="Where to click if you're not seeing all the options"/>
+  <figcaption>
+    <b>Figure 20</b>. Where to click if you're not seeing all the options
+  </figcaption>
+</figure>
