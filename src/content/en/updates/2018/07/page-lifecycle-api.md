@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Page Lifecycle API brings app lifecycle features common on mobile operating systems to the web. Browsers are now able to safely freeze and discard background pages to conserve resources, and developers can safely handle these interventions without affecting the user experience.
 
-{# wf_updated_on: 2018-09-04 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2018-07-24 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink #}
@@ -616,7 +616,7 @@ The above code does three things:
 <aside class="warning">
   <strong>Warning!</strong>
   This code yields different results in different browsers, as the order
-  (and reliability) of events has not been consistently implemented. To learn
+  and reliability of events has not been consistently implemented. To learn
   how best to handle these inconsistencies see
   <a href="#managing-cross-browsers-differences">managing cross-browsers
   differences</a>.
@@ -663,6 +663,17 @@ implemented consistently. For example:
   visibility state was visible when the page was being unloaded. New Chrome
   versions will dispatch `visibilitychange` before `pagehide`, regardless of
   the document's visibility state at unload time.
+* Safari does not reliably fire the `pagehide` or `visibilitychange` events
+  when closing a tab (webkit bugs: [151610](https://bugs.webkit.org/show_bug.cgi?id=151610)
+  and [151234](https://bugs.webkit.org/show_bug.cgi?id=151234)), so in Safari
+  you may need to _also_ listen to the `beforeunload` event in order to
+  detect a change to the hidden state. But since the `beforeunload` event can
+  be canceled, you need
+  [to wait until after the event has finished propagating](https://github.com/GoogleChromeLabs/page-lifecycle/blob/0.1.1/src/Lifecycle.mjs#L156-L172)
+  to know if the state has changed to hidden. __Important__: using the
+  `beforeunload` event this way should _only_ be done in Safari, as using this
+  event in other browsers can hurt performance. See the
+  [legacy APIs](#legacy-lifecycle-apis-to-avoid) section for details.
 
 To make it easier for developers to deal with these cross-browsers
 inconsistencies and focus solely on following the [lifecycle state recommendations
