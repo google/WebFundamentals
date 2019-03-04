@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Run Lighthouse against any site.
 
-{# wf_updated_on: 2017-06-08 #}
+{# wf_updated_on: 2019-03-01 #}
 {# wf_published_on: 2017-06-08 #}
 
 # Try Lighthouse {: .page-title }
@@ -16,15 +16,6 @@ description: Run Lighthouse against any site.
   margin-left: 0 !important;
   width: 100% !important;
 }
-.lighthouse-frame {
-  height: 475px;
-  width: 100%;
-}
 </style>
 
-Take [Lighthouse](/web/tools/lighthouse/) for a spin. Enter the URL of any site
-to get started.
-
-<iframe src="https://lighthouse-ci.appspot.com/try"
-        scrolling="no" class="lighthouse-frame"></iframe>
-
+Take [Lighthouse](/web/tools/lighthouse/) for a spin at [https://web.dev/measure](https://web.dev/measure).
