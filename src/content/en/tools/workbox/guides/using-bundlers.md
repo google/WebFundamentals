@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-02-24 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_blink_components: N/A #}
 
 # Using Bundlers (webpack/Rollup) with Workbox {: .page-title }
@@ -37,7 +37,7 @@ worker file using
 
 ```javascript
 // Import workbox-sw, which defines the global `workbox` object.
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // Then reference the workbox packages you need, which will dynamically
 // call `importScripts()` to load the individual packages.
@@ -108,11 +108,11 @@ the same logic written for a bundler using `import` statements:
 <h4 class="hide-from-toc">Using <code>importScripts</code>:</h4>
 
 ```javascript
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
+importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
       new workbox.expiration.Plugin({
@@ -128,12 +128,12 @@ workbox.routing.registerRoute(
 
 ```javascript
 import {registerRoute} from 'workbox-routing/registerRoute.mjs';
-import {cacheFirst} from 'workbox-strategies/cacheFirst.mjs';
+import {CacheFirst} from 'workbox-strategies/CacheFirst.mjs';
 import {Plugin as ExpirationPlugin} from 'workbox-expiration/Plugin.mjs';
 
 registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
-  cacheFirst({
+  new CacheFirst({
     cacheName: 'images',
     plugins: [
       new ExpirationPlugin({

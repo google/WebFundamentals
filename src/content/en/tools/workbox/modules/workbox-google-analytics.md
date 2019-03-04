@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-google-analytics.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-05-22 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Google Analytics  {: .page-title }
@@ -64,7 +64,7 @@ retried request.
 ### Modifying what data gets sent
 
 If you want to be able to differentiate retried requests from non-retried
-requests, you can specify either the `parameterOverrides` or `hitFilters`
+requests, you can specify either the `parameterOverrides` or `hitFilter`
 [configuration options](/web/tools/workbox/reference-docs/latest/workbox.googleAnalytics#.initialize).
 
 These options let you modify the
@@ -117,25 +117,39 @@ it'll make your reports easier to read.
 
     For example, if you used the default analytics.js tracking snippet to
     install Google Analytics, you could add the line
-    `ga('set', 'cd1', 'online')` to use a default value of "online" for your
+    `ga('set', 'dimension1', 'online')` to use a default value of "online" for your
     "Network Status" custom dimension for all requests not replayed by the
     service worker.
 
-    <pre class="prettyprint html">
-    &lt;script&gt;
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<pre class="prettyprint html">
+&lt;script&gt;
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-XXXXX-Y', 'auto');
+ga('create', 'UA-XXXXX-Y', 'auto');
 
-    // Set default value of custom dimension 1 to 'online'
-    ga('set', 'cd1', 'online');
+// Set default value of custom dimension 1 to 'online'
+ga('set', 'dimension1', 'online');
 
-    ga('send', 'pageview');
-    &lt;/script&gt;
-    </pre>
+ga('send', 'pageview');
+&lt;/script&gt;
+</pre>
+
+<aside>
+  <strong>Note:</strong>
+  <code>workbox-google-analytics</code> uses Measurement Protocol <a
+  href="/analytics/devguides/collection/protocol/v1/parameters">parameter
+  names</a>, which are different from the <a
+  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
+  field names</a> used by analytics.js. For example, with custom dimensions the
+  Measurement Protocol uses
+  <a href="/analytics/devguides/collection/protocol/v1/parameters#cd_">cdXX</a>
+  (e.g. <code>cd1</code>) whereas analytics.js uses <a
+  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
+  dimensionXX</a> (e.g. <code>dimension1</code>).
+</aside>
 
 ### Using a custom metric to track time requests spent in the queue
 
