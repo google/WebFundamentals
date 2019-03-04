@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
-{# wf_updated_on: 2017-12-06 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -82,19 +82,6 @@ length, and **can** include HTML.
 <pre class="prettyprint">
 &#123;# wf_featured_snippet: Use &lt;kbd class='kbd'>Cmd + ]&lt;/kbd>... #}
 </pre>
-
-### Comment Blocks
-
-Comment blocks are not automatically added to update pages. To allow users to
-comment on your documentation, you must the comment widget to the bottom of the
-page. For example:
-
-<pre class="prettyprint">
-&#123;% include "comment-widget.html" %}
-</pre>
-
-Note: the comment widget does **not** render in the staging or development
-environment, and will only be visible when the page is published on DevSite.
 
 ## Generating related files {: #build-related }
 

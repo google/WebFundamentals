@@ -2,16 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: "If you want to translate Web Fundamentals to other languages, anyone can contribute."
 
-{# wf_updated_on: 2017-10-10 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2016-09-13 #}
 
 # Translations {: .page-title }
 
-<!--div class="attempt-right">
-  <figure>
-    <img src="/web/images/gitlocalize_image0.png">
-  </figure>
-</div-->
+Warning: We are no longer using GitLocalize, these instructions are out of date
+and will be updated shortly.
+
 We are experimenting with a translation tool called
 [GitLocalize](https://gitlocalize.com/). Follow the steps to get started with
 your contribution:
@@ -66,7 +64,6 @@ to each article.  For example:
         - engineer
         - translator
       homepage: http://paul.kinlan.me
-      google: +PaulKinlan
       twitter: paul_kinlan
       email: paulkinlan@google.com
       description:
@@ -75,9 +72,6 @@ to each article.  For example:
 Also, make sure to append your credit to the bottom of the article. Because in
 GitLocalize you can't add a new section, add your credit after multiple empty
 lines in the existing last section like following screenshot:
-
-![](/web/images/gitlocalize_image1.png)
-
 
 ## License
 

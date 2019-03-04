@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Widgets you can use to simplify your writing and development
 
-{# wf_updated_on: 2018-10-12 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2016-09-13 #}
 {# wf_blink_components: N/A #}
 
@@ -174,13 +174,6 @@ Will render as:
 
 {% include "web/_shared/related-guides/heading.html" %}
 {% include "web/_shared/related-guides/service-workers.html" %}
-
-
-## User comments (deprecated)
-
-Caution: The User Comment widget is deprecated, and has been removed from all
-pages, do not add it to any new pages.
-
 
 ## Videos
 
