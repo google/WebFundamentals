@@ -35,14 +35,14 @@ worker file using
 [`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts):
 
 
-```javascript
+<pre class="prettyprint js">
 // Import workbox-sw, which defines the global `workbox` object.
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 // Then reference the workbox packages you need, which will dynamically
 // call `importScripts()` to load the individual packages.
 workbox.precaching.precacheAndRoute([...]);
-```
+</pre>
 
 When using a JavaScript bundler, you don't need (and actually shouldn't use) the
 `workbox` global or the `workbox-sw` module, as you can import the individual
@@ -107,7 +107,7 @@ the same logic written for a bundler using `import` statements:
 
 <h4 class="hide-from-toc">Using <code>importScripts</code>:</h4>
 
-```javascript
+<pre class="prettyprint js">
 importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
 
 workbox.routing.registerRoute(
@@ -122,7 +122,7 @@ workbox.routing.registerRoute(
     ],
   }),
 );
-```
+</pre>
 
 <h4 class="hide-from-toc">Using <code>import</code> via a bundler:</h4>
 
