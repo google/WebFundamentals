@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2019-02-22 #}
+{# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -55,7 +55,13 @@ prompt.
 When you have created the manifest, add a `link` tag to all the pages that
 encompass your web app:
 
-    <link rel="manifest" href="/manifest.json">
+```html
+<link rel="manifest" href="/manifest.json">
+```
+
+The request for the manifest is made **without** any credentials (even if it's
+on the same domain), thus if the manifest requires credentials, you must
+include `crossorigin="use-credentials"` in the manifest tag.
 
 ## Key manifest properties
 
