@@ -7,6 +7,7 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 {# wf_featured_image: /web/showcase/2015/images/gplus/card.jpg #}
 {# wf_featured_snippet: We hit our goal of never downloading more than 60k of HTML, 60k of JavaScript and 60k of CSS at any one time! #}
 {# wf_tags: casestudy,css #}
+{# wf_blink_components: N/A #}
 
 # Google+ {: .page-title }
 

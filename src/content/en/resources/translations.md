@@ -4,6 +4,7 @@ description: "If you want to translate Web Fundamentals to other languages, anyo
 
 {# wf_updated_on: 2019-03-04 #}
 {# wf_published_on: 2016-09-13 #}
+{# wf_blink_components: N/A #}
 
 # Translations {: .page-title }
 
