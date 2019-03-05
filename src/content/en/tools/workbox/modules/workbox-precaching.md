@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-03-05 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -158,7 +158,7 @@ By default, the `utm_` value is removed, changing a request like `/?utm_=123`
 to `/`.
 
 You can remove all search parameters or a specific set of parameters with the
-`ignoreUrlParametersMatching`.
+`ignoreURLParametersMatching`.
 
 ```javascript
 workbox.precaching.precacheAndRoute(
@@ -168,7 +168,7 @@ workbox.precaching.precacheAndRoute(
     { url: '/index.html', revision: '383676' },
   ],
   {
-    ignoreUrlParametersMatching: [/.*/]
+    ignoreURLParametersMatching: [/.*/]
   }
 );
 ```
@@ -304,6 +304,13 @@ const response = await cache.match(
   workbox.precaching.getCacheKeyForURL('/precached-file.html')
 );
 ```
+
+Note: If you are
+[using your own `PrecacheController` instance](#using_precachecontroller_directly)
+instead of using the default instance via `workbox.precaching.*`, you should
+call the
+[`getCacheKeyForURL()` method](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
+on that instance.
 
 ### Clean Up Old Precaches
 
