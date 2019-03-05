@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-core.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-03-05 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Precaching {: .page-title }
@@ -158,7 +158,7 @@ By default, the `utm_` value is removed, changing a request like `/?utm_=123`
 to `/`.
 
 You can remove all search parameters or a specific set of parameters with the
-`ignoreUrlParametersMatching`.
+`ignoreURLParametersMatching`.
 
 ```javascript
 workbox.precaching.precacheAndRoute(
@@ -168,7 +168,7 @@ workbox.precaching.precacheAndRoute(
     { url: '/index.html', revision: '383676' },
   ],
   {
-    ignoreUrlParametersMatching: [/.*/]
+    ignoreURLParametersMatching: [/.*/]
   }
 );
 ```
