@@ -307,8 +307,9 @@ const response = await cache.match(
 
 Note: If you are
 [using your own `PrecacheController` instance](#using_precachecontroller_directly)
-instead of using the default instance via `workbox.precaching.*`, you should call the
-[`getCacheKeyForURL()` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
+instead of using the default instance via `workbox.precaching.*`, you should
+call the
+[`getCacheKeyForURL()` method](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
 on that instance.
 
 ### Clean Up Old Precaches
