@@ -23,7 +23,6 @@ description: The Badging API is a new web platform API that allows installed web
   March 5th, 2019.
 </aside>
 
-
 ## What is the Badging API? {: #what }
 
 <figure class="attempt-right">
@@ -62,7 +61,6 @@ Examples of sites that may use this API include:
 * Games, to signal that a player action is required (e.g., in Chess, when it
   is the player's turn).
 
-
 ## Current status {: #status }
 
 | Step                                       | Status                       |
@@ -97,7 +95,6 @@ The badging API is supported (in an origin trial) on Windows and macOS.
 Android is not supported because it requires you to show a notification,
 though this may change in the future.
 Chrome OS support is pending implementation of badging on the platform.
-
 
 ### Register for the origin trial {: #ot }
 
