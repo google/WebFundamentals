@@ -244,4 +244,4 @@ Share your thoughts on the
 [ot-what-is]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/README.md
 [ot-dev-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [ot-use]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin
-[ot-request]: https://developers.chrome.com/origintrials/
+[ot-request]: https://developers.chrome.com/origintrials/#/view_trial/855683929200394241
