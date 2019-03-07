@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Adding 3D models to a website can be tricky for a variety of reasons including the hosting issues and the high bar of 3D programming. That's why we're introducing the &lt;model-viewer&gt; web component to let you use 3D models declaratively.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-03-06 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: 3d #}
 {# wf_featured_image: /web/updates/images/2019/02/space-suit.png #}
@@ -10,6 +10,10 @@ description: Adding 3D models to a website can be tricky for a variety of reason
 {# wf_blink_components: N/A #}
 
 # The model-viewer web component {: .page-title}
+
+Note: We're always [updating and improving](https://github.com/GoogleWebComponents/model-viewer/releases)
+`<model-viewer>`. Check out the [`<model-viewer>`homepage](https://googlewebcomponents.github.io/model-viewer/)
+to explore what it can do.
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
