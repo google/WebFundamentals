@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
 {# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-03-05 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
 {# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
 {# wf_blink_components: UI>Browser>WebAppInstalls #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # Badging for App Icons {: .page-title }
 
@@ -19,8 +21,8 @@ description: The Badging API is a new web platform API that allows installed web
   We’re currently working on this API as part of the new
   <a href="/web/updates/capabilities">capabilities project</a>, and starting
   in Chrome 73 is available as an <a href="#ot"><b>origin trial</b></a>.
-  This post will be updated as the Badging API evolves, and was last updated on
-  March 5th, 2019.
+  This post will be updated as the Badging API evolves.<br>
+  <b>Last Updated:</b> March 12th, 2019
 </aside>
 
 ## What is the Badging API? {: #what }

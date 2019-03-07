@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-28 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -50,7 +50,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>
@@ -218,5 +219,3 @@ it’s time to ship it.
 <div class="clearfix"></div>
 
 {% include "web/_shared/helpful.html" %}
-
-
