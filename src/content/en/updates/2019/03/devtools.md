@@ -1,21 +1,187 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: This is just a temporary placeholder. We'll have the full post up by Monday at latest.
+description: Highlight nodes affected by a CSS property, Lighthouse v4, WebSocket binary message viewer, and more.
 
-{# wf_updated_on: 2019-03-06 #}
-{# wf_published_on: 2019-03-06 #}
+{# wf_updated_on: 2019-03-07 #}
+{# wf_published_on: 2019-03-07 #}
 {# wf_tags: chrome74, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: Ths is just a temporary placeholder. We'll have the full post up by Monday at latest. #}
+{# wf_featured_snippet: Highlight nodes affected by a CSS property, Lighthouse v4, WebSocket binary message viewer, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 74) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Whoops! Our deadline snuck up on us. We'll have the full post up by Monday at latest.
+TODO
 
-In the meantime, check out our new [DOM tutorial](/web/tools/chrome-devtools/dom/).
+## Highlight all nodes affected by CSS property {: #highlight }
+
+Hover over a CSS property that affects a node's box model, such as `padding` or `margin`, to
+highlight all nodes affected by that declaration.
+
+<figure>
+  <img src="/web/updates/images/2019/03/highlight.png"
+       alt="Hovering over a margin property highlights all nodes affected by that
+            declaration"/>
+  <figcaption>
+    <b>Figure X</b>. Hovering over a <code>margin</code> property highlights the margins of
+    all nodes affected by that declaration
+  </figcaption>
+</figure>
+
+## Lighthouse v4 in the Audits panel {: #lighthouse }
+
+The new *Tap targets are not sized appropriately* audit checks that interactive elements like
+buttons and links are appropriately large and spaced apart on mobile devices.
+
+<figure>
+  <img src="/web/updates/images/2019/03/lighthouse3.png"
+       alt="The tap targets audit"/>
+  <figcaption>
+    <b>Figure X</b>. The tap targets audit
+  </figcaption>
+</figure>
+
+The PWA section of a report now uses a badging system.
+
+<figure>
+  <img src="/web/updates/images/2019/03/lighthouse1.png"
+       alt=""/>
+  <figcaption>
+    <b>Figure X</b>. 
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/03/lighthouse2.png"
+       alt=""/>
+  <figcaption>
+    <b>Figure X</b>. 
+  </figcaption>
+</figure>
+
+<aside class="objective">
+  <b>FYI!</b> Lighthouse is the same project that powers [PageSpeed Insights]
+</aside>
+
+## WebSocket binary message viewer {: #binary }
+
+To view the contents of a binary WebSocket message:
+
+1. Open the **Network** panel.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/binary1.png"
+            alt="The Network panel"/>
+       <figcaption>
+         <b>Figure X</b>. The Network panel
+       </figcaption>
+     </figure>
+
+1. Click **WS** to filter out all resources that aren't WebSocket connections.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/binary2.png"
+            alt="After clicking WS only WebSockety connections are shown"/>
+       <figcaption>
+         <b>Figure X</b>. After clicking WS only WebSockety connections are shown
+       </figcaption>
+     </figure>
+
+1. Click the **Name** of a WebSocket connection to inspect it.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/binary3.png"
+            alt="Inspecting a WebSocket connection"/>
+       <figcaption>
+         <b>Figure X</b>. Inspecting a WebSocket connection
+       </figcaption>
+     </figure>
+
+1. Click the **Messages** tab.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/binary6.png"
+            alt="The Messages tab"/>
+       <figcaption>
+         <b>Figure X</b>. The Messages tab
+       </figcaption>
+     </figure>
+
+1. Click one of the **Binary Message** entries to inspect it.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/binary4.png"
+            alt="Inspecting a binary message"/>
+       <figcaption>
+         <b>Figure X</b>. Inspecting a binary message
+       </figcaption>
+     </figure>
+
+[copy]: /web/tools/chrome-devtools/images/shared/copy-to-clipboard.png
+
+Use the dropdown menu at the bottom of the viewer to convert the message into
+Base64 or UTF-8. Click **Copy to clipboard** ![Copy to clipboard][copy]{: .inline-icon }
+to copy the binary message to your clipboard.
+
+<figure>
+  <img src="/web/updates/images/2019/03/binary5.png"
+       alt="Viewing a binary message as Base64"/>
+  <figcaption>
+    <b>Figure X</b>. Viewing a binary message as Base64
+  </figcaption>
+</figure>
+
+## Capture area screenshot in the Command Menu {: #screenshot }
+
+Area screenshots let you capture a screenshot of a portion of the viewport. This feature
+has been around for a while, but the workflow for accessing it was quite hidden. Area
+screenshots are now available from the Command Menu.
+
+1. Focus DevTools and then press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
+   <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/images/shared/command-menu.png"
+            alt="The Command Menu"/>
+       <figcaption>
+         <b>Figure X</b>. The Command Menu
+       </figcaption>
+     </figure>
+
+1. Start typing `area`, select **Capture area screenshots**, then press <kbd>Enter</kbd>.
+
+1. Drag your mouse over the section of the viewport that you want to screenshot.
+
+     <figure>
+       <img src="/web/updates/images/2019/03/screenshot1.png"
+            alt="Selecting the portion of viewport to screenshot"/>
+       <figcaption>
+         <b>Figure X</b>. Selecting the portion of viewport to screenshot
+       </figcaption>
+     </figure>
+
+## Service worker filters in the Network panel {: #swfilters }
+
+Type `is:service-worker-initiated` or `is:service-worker-intercepted` in the Network panel filter text box
+to view requests that were caused by (`initiated`) or modified by (`intercepted`) a service worker.
+
+<figure>
+  <img src="/web/updates/images/2019/03/swfilters1.png"
+       alt="Filtering by is:service-worker-initiated"/>
+  <figcaption>
+    <b>Figure X</b>. Filtering by <code>is:service-worker-initiated</code>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/03/swfilters2.png"
+       alt="Filtering by is:service-worker-intercepted"/>
+  <figcaption>
+    <b>Figure X</b>. Filtering by <code>is:service-worker-intercepted</code>
+  </figcaption>
+</figure>
 
 ## Feedback {: #feedback }
 
