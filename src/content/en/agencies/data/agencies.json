@@ -515,8 +515,8 @@
           "country_name": "Indonesia",
           "city_name": "Jakarta",
           "geo": {
-            "lat": -6.180495,
-            "lng": 106.8283415
+            "lat": -6.2087634,
+            "lng": 106.845599
           }
         }
       ]
@@ -564,19 +564,19 @@
       ],
       "locations_map": [
         {
-          "country_name": "Vietnam",
-          "city_name": "Ho Chi Minh City",
-          "geo": {
-            "lat": 10.8230989,
-            "lng": 106.6296638
-          }
-        },
-        {
           "country_name": "India",
           "city_name": "Bangalore",
           "geo": {
             "lat": 12.93389,
             "lng": 77.630443
+          }
+        },
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
           }
         }
       ]
@@ -697,7 +697,7 @@
       "region": [
         "Asia"
       ],
-      "description": "We deliver beautiful experiences and deliver digital happiness for medium and large enterprises. We believe building big digital platforms can be rewarding and enjoyable. Or put another way, we believe Elephants Can Dance.",
+      "description": "We deliver beautiful experiences and digital happiness for medium and large enterprises. We believe building big, diverse digital platforms can be simple, rewarding, amazing, successful, enjoyable and even fun.",
       "website": "https://www.elephantscandance.com.au/",
       "projects": [
         {
@@ -841,6 +841,231 @@
           }
         }
       ]
+    },
+    {
+      "countries_": [
+        "Germany"
+      ],
+      "agency_name": "MobX",
+      "region": [
+        "Europe"
+      ],
+      "description": "We build and ship your amazing App or Mobile Site (PWA) - with international expertise from the heart of Berlin. Pick any service from Conception, UX/UI Product Design, Development up to Rollout and Support - We got it covered.",
+      "website": "https://mobx.app/",
+      "projects": [
+        {
+          "url": "https://www.tajawal.ae/en",
+          "client_name": "",
+          "vertical": [
+            "Travel"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "contact@mobx.app",
+      "image_url": "/web/agencies/images/mobx.png",
+      "vertical": [
+        "Travel"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Germany",
+          "cities": [
+            "Berlin"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Germany",
+          "city_name": "Berlin",
+          "geo": {
+            "lat": 52.52000659999999,
+            "lng": 13.404954
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Spain"
+      ],
+      "agency_name": "digitalDot Servicios Informáticos SL",
+      "region": [
+        "Europe"
+      ],
+      "description": "DigitalDot Servicios Informáticos, provide all services related web design, app development, ecommerce design, SEO and Marketing Strategy.\nSpecialises in cross-platform mobile application development, expertise spans native application development, hybrid applications and Progressive Web Apps.",
+      "website": "https://www.digitaldot.es",
+      "projects": [
+        {
+          "url": "https://www.digitaldot.es",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "info@digitaldot.es",
+      "image_url": "/web/agencies/images/digitaldot_servicios_informaticos_sl.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Spain",
+          "cities": [
+            "Murcia"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Spain",
+          "city_name": "Murcia",
+          "geo": {
+            "lat": 37.9922399,
+            "lng": -1.1306544
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Belgium"
+      ],
+      "agency_name": "NETARUM",
+      "region": [
+        "Europe"
+      ],
+      "description": "We are a Brussels-based web agency specializing in PWAs. We create applications that run on all major platforms, mobile and desktop, are installable, support push notifications, and are partly or fully available offline, as well as supporting many other \"native\" functions. Welcome to the modern web!",
+      "website": "https://www.netarum.com",
+      "projects": [
+        {
+          "url": "https://www.netarum.com",
+          "client_name": "",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@netarum.com",
+      "image_url": "/web/agencies/images/netarum.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Belgium",
+          "cities": [
+            "Ixelles"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Belgium",
+          "city_name": "Ixelles",
+          "geo": {
+            "lat": 50.83334319999999,
+            "lng": 4.3666294
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Indonesia"
+      ],
+      "agency_name": "PT. LOGIQUE Digital Indonesia",
+      "region": [
+        "Asia"
+      ],
+      "description": "LOGIQUE has the experience and quality you need in developing website, web systems, mobile applications for today's digital business trends. We have collaborated with many international clients for various needs.",
+      "website": "https://www.logique.co.id",
+      "projects": [
+        {
+          "url": "https://m.vipplaza.co.id",
+          "client_name": "",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 83
+        }
+      ],
+      "max_lighthouse_score": 83,
+      "contact": "info@logique.co.id",
+      "image_url": "/web/agencies/images/pt._logique_digital_indonesia.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": [
+            "Jakarta"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Jakarta",
+          "geo": {
+            "lat": -6.2087634,
+            "lng": 106.845599
+          }
+        }
+      ]
+    },
+    {
+      "countries_": [
+        "Japan"
+      ],
+      "agency_name": "IMJ Corporation",
+      "region": [
+        "Asia"
+      ],
+      "description": "IMJ is one of the largest Full Service Digital Agencies in Japan which executes 5,700 projects for over 330 clients annually. IMJ together with Accenture brings leading-edge creativity, deep knowledge in advanced digital technology, providing seamless, end-to-end digital marketing services.",
+      "website": "https://www.imjp.co.jp/",
+      "projects": [
+        {
+          "url": "https://backyard.imjp.co.jp/static/common/amp/recommend/",
+          "client_name": "",
+          "vertical": [
+            "Media"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "sl-info@imjp.co.jp",
+      "image_url": "/web/agencies/images/imj_corporation.png",
+      "vertical": [
+        "Media"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
+        }
+      ]
     }
   ],
   "filters_": {
@@ -850,7 +1075,8 @@
       "Media",
       "Other",
       "Retail",
-      "Social"
+      "Social",
+      "Travel"
     ],
     "region": [
       "Asia",
