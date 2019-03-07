@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: Advanced recipes to use with Workbox.
 
-{# wf_updated_on: 2019-02-27 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: N/A #}
 
@@ -15,32 +15,42 @@ worker has updated and waiting to install.
 
 To do this you'll need to add some code to your page and to your service worker.
 
-**Add to your page**
+**Code in your page**
 
 ```html
 <script type="module">
-import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs';
+import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.1.0/workbox-window.prod.mjs';
 
 if ('serviceWorker' in navigator) {
   const wb = new Workbox('/sw.js');
 
   // Add an event listener to detect when the registered
   // service worker has installed but is waiting to activate.
-  wb.addEventListener('waiting', () => {
+  wb.addEventListener('waiting', (event) => {
+    // `event.wasWaitingBeforeRegister` will be true if this is
+    // the first time the updated service worker is waiting.
+    // When `event.wasWaitingBeforeRegister` is false, a previously
+    // updated same service worker is still waiting.
+    // You may want to customize the UI prompt accordingly.
+
     // Assumes your app has some sort of prompt UI element
     // that a user can either accept or reject.
     const prompt = createUIPrompt({
       onAccept: async () => {
-        // Send a message to the service worker telling it to
-        // skip waiting. If/when the service worker replies,
-        // you know that `skipWaiting()` was called.
+        // Assuming the user accepted the update, set up a listener
+        // that will reload the page as soon as the previously waiting
+        // service worker has taken control.
+        wb.addEventListener('controlling', (event) => {
+          window.location.reload();
+        });
+
+        // Send a message telling the service worker to skip waiting.
+        // This will trigger the `controlling` event handler above.
         // Note: for this to work, you have to add a message
         // listener in your service worker. See below.
-        await wb.messageSW({type: 'SKIP_WAITING'});
-
-        // Reload to be controlled by the new service worker.
-        window.location.reload();
+        wb.messageSW({type: 'SKIP_WAITING'});
       },
+
       onReject: () => {
         prompt.dismiss();
       }
@@ -53,32 +63,40 @@ if ('serviceWorker' in navigator) {
 ```
 
 This code uses the [`workbox-window`](/web/tools/workbox/modules/workbox-window)
-package to register a service worker and respond if it gets stuck in the waiting
+package to register a service worker and react if it gets stuck in the waiting
 phase.
 
 When a waiting service worker is found we inform the user that an updated
 version of the site is available and prompt them to reload. If they accept the
 prompt, we `postMessage()` the new service worker telling it to run
-`skipWaiting()` meaning it'll start to activate.
+`skipWaiting()`, meaning it'll start to activate. Once the new service worker
+has activated and taken control, we reload the current page, causing the latest
+version of all the precached assets to be displayed.
 
 Note: This is one possible approach. For a more in-depth explanation of the
 problem as well as alternative approaches, see this
 [article by Redfin Engineering](https://redfin.engineering/how-to-fix-the-refresh-button-when-using-service-workers-a8e27af6df68).
 
-**Add to your service worker**
+**Code in your service worker**
+
+If you're using one of the Workbox build tools in `GenerateSW` mode, and you
+have `skipWaiting` set to `false` (the default), then this code will
+automatically be included in your generated service worker file, and you don't
+need to add it yourself.
+
+If you're writing your own service worker code, perhaps in conjunction with a
+Workbox build tool in `InjectManifest` mode, then you need to add this to your
+service worker file yourself:
 
 ```javascript
 addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     skipWaiting();
-
-    // Reply to the window so it knows `skipWaiting()` was called.
-    event.ports[0].postMessage(true);
   }
 });
 ```
 
-This will listen for messages of type `SKIP_WAITING` and run the `skipWaiting()`
+This will listen for messages of `type: 'SKIP_WAITING'` and run the `skipWaiting()`
 method, forcing the service worker to activate right away.
 
 ## "Warm" the runtime cache
