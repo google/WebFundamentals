@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 74 to help you plan.
 
 {# wf_updated_on: 2019-03-07 #}
-{# wf_published_on: 2018-12-18 #}
+{# wf_published_on: 2019-03-21 #}
 {# wf_tags: deprecations,removals,chrome74 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
