@@ -177,3 +177,5 @@ toc:
     path: /web/tools/lighthouse/audits/indexing
   - title: robots.txt is not valid
     path: /web/tools/lighthouse/audits/robots
+  - title: Tap targets are not sized appropriately
+    path: /web/tools/lighthouse/audits/tap-targets
