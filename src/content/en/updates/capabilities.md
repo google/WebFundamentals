@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-03-06 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -64,7 +64,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         that allows your web app to check to see if your native app is
         installed on the users device, and vice versa.
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>

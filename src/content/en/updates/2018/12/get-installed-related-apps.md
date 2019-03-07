@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The getInstalledRelatedApps API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa..
 
 {# wf_published_on: 2018-12-20 #}
-{# wf_updated_on: 2019-03-06 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
 {# wf_tags: capabilities,progressive-web-apps,webapp,webapk,native,chrome73,origintrials #}
 {# wf_featured_snippet: As the capability gap between web and native gets smaller, it becomes easier to offer the same experience for both web and native users. This may lead to cases where users have both the web and native versions installed on the same device. Apps should be able to detect this situation. The <code>getInstalledRelatedApps</code> API is a new web platform API that allows your web app to check to see if your native app is installed on the users device, and vice versa.  #}
 {# wf_blink_components: Mobile>WebAPKs #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # Check If Your Native App Is Installed With getInstalledRelatedApps {: .page-title }
 
@@ -19,8 +21,8 @@ description: The getInstalledRelatedApps API is a new web platform API that allo
   We’re currently working on this API as part of the new
   <a href="/web/updates/capabilities">capabilities project</a>. Starting in
   Chrome 73, it is available as an <a href="#ot"><b>origin trial</b></a> on Android.
-  This post will be updated as the API evolves, and was last updated on
-  March 6th, 2019.
+  This post will be updated as the API evolves.<br>
+  <b>Last Updated:</b> March 12th, 2019
 </aside>
 
 ## What is the `getInstalledRelatedApps` API? {: #what }
