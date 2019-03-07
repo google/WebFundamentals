@@ -36,34 +36,22 @@ The new *Tap targets are not sized appropriately* audit checks that interactive 
 buttons and links are appropriately large and spaced apart on mobile devices.
 
 <figure>
-  <img src="/web/updates/images/2019/03/lighthouse3.png"
+  <img src="/web/tools/lighthouse/audits/images/tap-targets.png"
        alt="The tap targets audit"/>
   <figcaption>
     <b>Figure X</b>. The tap targets audit
   </figcaption>
 </figure>
 
-The PWA section of a report now uses a badging system.
+The PWA category of an audit now uses a badge scoring system.
 
 <figure>
   <img src="/web/updates/images/2019/03/lighthouse1.png"
-       alt=""/>
+       alt="The new badge scoring system for the PWA category"/>
   <figcaption>
-    <b>Figure X</b>. 
+    <b>Figure X</b>. The new badge scoring system for the PWA category
   </figcaption>
 </figure>
-
-<figure>
-  <img src="/web/updates/images/2019/03/lighthouse2.png"
-       alt=""/>
-  <figcaption>
-    <b>Figure X</b>. 
-  </figcaption>
-</figure>
-
-<aside class="objective">
-  <b>FYI!</b> Lighthouse is the same project that powers [PageSpeed Insights]
-</aside>
 
 ## WebSocket binary message viewer {: #binary }
 
@@ -180,6 +168,33 @@ to view requests that were caused by (`initiated`) or modified by (`intercepted`
        alt="Filtering by is:service-worker-intercepted"/>
   <figcaption>
     <b>Figure X</b>. Filtering by <code>is:service-worker-intercepted</code>
+  </figcaption>
+</figure>
+
+## Long tasks in Performance recordings {: #longtasks }
+
+Performance recordings now show long tasks.
+
+<figure>
+  <img src="/web/updates/images/2019/03/longtasks1.png"
+       alt="Hovering over a long task in a Performance recording"/>
+  <figcaption>
+    <b>Figure X</b>. Hovering over a long task in a Performance recording
+  </figcaption>
+</figure>
+
+See [Task queues](https://www.w3.org/TR/2016/WD-html51-20160310/webappapis.html#task-queues) and 
+[Tasks, microtasks, queues, and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/).
+
+## First Paint in the Timings section {: #FP }
+
+The [Timings section](/web/updates/2018/11/devtools#metrics) now marks First Paint.
+
+<figure>
+  <img src="/web/updates/images/2019/03/fp.png"
+       alt="First Paint in the Timings section"/>
+  <figcaption>
+    <b>Figure X</b>. First Paint in the Timings section
   </figcaption>
 </figure>
 
