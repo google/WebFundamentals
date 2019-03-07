@@ -27,9 +27,9 @@ if ('serviceWorker' in navigator) {
   // Add an event listener to detect when the registered
   // service worker has installed but is waiting to activate.
   wb.addEventListener('waiting', (event) => {
-    // `event.wasWaitingBeforeRegister` will be true if this is
+    // `event.wasWaitingBeforeRegister` will be false if this is
     // the first time the updated service worker is waiting.
-    // When `event.wasWaitingBeforeRegister` is false, a previously
+    // When `event.wasWaitingBeforeRegister` is true, a previously
     // updated same service worker is still waiting.
     // You may want to customize the UI prompt accordingly.
 
