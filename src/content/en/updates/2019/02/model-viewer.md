@@ -12,7 +12,7 @@ description: Adding 3D models to a website can be tricky for a variety of reason
 # The model-viewer web component {: .page-title}
 
 Note: We're always [updating and improving](https://github.com/GoogleWebComponents/model-viewer/releases)
-`<model-viewer>`. Check out the [`<model-viewer>`homepage](https://googlewebcomponents.github.io/model-viewer/)
+`<model-viewer>`. Check out the [`<model-viewer>` homepage](https://googlewebcomponents.github.io/model-viewer/)
 to explore what it can do.
 
 {% include "web/_shared/contributors/josephmedley.html" %}
