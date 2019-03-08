@@ -192,11 +192,9 @@ of using the Performance panel to analyze page load performance.
 
 ## Long tasks in Performance recordings {: #longtasks }
 
-[tasks]: https://www.w3.org/TR/2016/WD-html51-20160310/webappapis.html#task-queues
+[tasks]: https://w3c.github.io/longtasks/#sec-terminology
 
-Performance recordings now show long [tasks][tasks]{: .external }. See
-[Tasks, microtasks, queues, and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
-for an explanation of tasks.
+Performance recordings now show long [tasks][tasks]{: .external }.
 
 <figure>
   <img src="/web/updates/images/2019/03/longtasks1.png"
