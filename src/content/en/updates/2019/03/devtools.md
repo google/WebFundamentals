@@ -25,7 +25,7 @@ highlight all nodes affected by that declaration.
        alt="Hovering over a margin property highlights all nodes affected by that
             declaration"/>
   <figcaption>
-    <b>Figure X</b>. Hovering over a <code>margin</code> property highlights the margins of
+    <b>Figure 1</b>. Hovering over a <code>margin</code> property highlights the margins of
     all nodes affected by that declaration
   </figcaption>
 </figure>
@@ -40,7 +40,7 @@ apart on mobile devices.
   <img src="/web/tools/lighthouse/audits/images/tap-targets.png"
        alt="The tap targets audit"/>
   <figcaption>
-    <b>Figure X</b>. The tap targets audit
+    <b>Figure 2</b>. The tap targets audit
   </figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ The PWA category of a report now uses a badge scoring system.
   <img src="/web/updates/images/2019/03/lighthouse1.png"
        alt="The new badge scoring system for the PWA category"/>
   <figcaption>
-    <b>Figure X</b>. The new badge scoring system for the PWA category
+    <b>Figure 3</b>. The new badge scoring system for the PWA category
   </figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ To view the contents of a binary WebSocket message:
        <img src="/web/updates/images/2019/03/binary1.png"
             alt="The Network panel"/>
        <figcaption>
-         <b>Figure X</b>. The Network panel
+         <b>Figure 4</b>. The Network panel
        </figcaption>
      </figure>
 
@@ -83,7 +83,7 @@ To view the contents of a binary WebSocket message:
        <img src="/web/updates/images/2019/03/binary2.png"
             alt="After clicking WS only WebSockety connections are shown"/>
        <figcaption>
-         <b>Figure X</b>. After clicking WS only WebSockety connections are shown
+         <b>Figure 5</b>. After clicking WS only WebSockety connections are shown
        </figcaption>
      </figure>
 
@@ -93,7 +93,7 @@ To view the contents of a binary WebSocket message:
        <img src="/web/updates/images/2019/03/binary3.png"
             alt="Inspecting a WebSocket connection"/>
        <figcaption>
-         <b>Figure X</b>. Inspecting a WebSocket connection
+         <b>Figure 6</b>. Inspecting a WebSocket connection
        </figcaption>
      </figure>
 
@@ -103,7 +103,7 @@ To view the contents of a binary WebSocket message:
        <img src="/web/updates/images/2019/03/binary6.png"
             alt="The Messages tab"/>
        <figcaption>
-         <b>Figure X</b>. The Messages tab
+         <b>Figure 7</b>. The Messages tab
        </figcaption>
      </figure>
 
@@ -113,7 +113,7 @@ To view the contents of a binary WebSocket message:
        <img src="/web/updates/images/2019/03/binary4.png"
             alt="Inspecting a binary message"/>
        <figcaption>
-         <b>Figure X</b>. Inspecting a binary message
+         <b>Figure 8</b>. Inspecting a binary message
        </figcaption>
      </figure>
 
@@ -127,7 +127,7 @@ to copy the binary message to your clipboard.
   <img src="/web/updates/images/2019/03/binary5.png"
        alt="Viewing a binary message as Base64"/>
   <figcaption>
-    <b>Figure X</b>. Viewing a binary message as Base64
+    <b>Figure 9</b>. Viewing a binary message as Base64
   </figcaption>
 </figure>
 
@@ -144,7 +144,7 @@ screenshots are now available from the Command Menu.
        <img src="/web/tools/chrome-devtools/images/shared/command-menu.png"
             alt="The Command Menu"/>
        <figcaption>
-         <b>Figure X</b>. The Command Menu
+         <b>Figure 10</b>. The Command Menu
        </figcaption>
      </figure>
 
@@ -156,7 +156,7 @@ screenshots are now available from the Command Menu.
        <img src="/web/updates/images/2019/03/screenshot1.png"
             alt="Selecting the portion of viewport to screenshot"/>
        <figcaption>
-         <b>Figure X</b>. Selecting the portion of viewport to screenshot
+         <b>Figure 11</b>. Selecting the portion of viewport to screenshot
        </figcaption>
      </figure>
 
@@ -169,7 +169,7 @@ to view requests that were caused (`initiated`) or potentially modified (`interc
   <img src="/web/updates/images/2019/03/swfilters1.png"
        alt="Filtering by is:service-worker-initiated"/>
   <figcaption>
-    <b>Figure X</b>. Filtering by <code>is:service-worker-initiated</code>
+    <b>Figure 12</b>. Filtering by <code>is:service-worker-initiated</code>
   </figcaption>
 </figure>
 
@@ -177,7 +177,7 @@ to view requests that were caused (`initiated`) or potentially modified (`interc
   <img src="/web/updates/images/2019/03/swfilters2.png"
        alt="Filtering by is:service-worker-intercepted"/>
   <figcaption>
-    <b>Figure X</b>. Filtering by <code>is:service-worker-intercepted</code>
+    <b>Figure 13</b>. Filtering by <code>is:service-worker-intercepted</code>
   </figcaption>
 </figure>
 
@@ -202,7 +202,7 @@ for an explanation of tasks.
   <img src="/web/updates/images/2019/03/longtasks1.png"
        alt="Hovering over a long task in a Performance recording"/>
   <figcaption>
-    <b>Figure X</b>. Hovering over a long task in a Performance recording
+    <b>Figure 14</b>. Hovering over a long task in a Performance recording
   </figcaption>
 </figure>
 
@@ -215,7 +215,7 @@ now marks First Paint.
   <img src="/web/updates/images/2019/03/fp.png"
        alt="First Paint in the Timings section"/>
   <figcaption>
-    <b>Figure X</b>. First Paint in the Timings section
+    <b>Figure 15</b>. First Paint in the Timings section
   </figcaption>
 </figure>
 
