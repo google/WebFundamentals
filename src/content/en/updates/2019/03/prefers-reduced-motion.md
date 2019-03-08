@@ -42,7 +42,7 @@ on the web.
 ## Animation on the web
 
 Animation is oftentimes used to provide *feedback* to the user, for example, to let them know that
-an action was received and is being processed. More concretely, on a shoppping website, a product
+an action was received and is being processed. More concretely, on a shopping website, a product
 could be animated to "fly" into a virtual shopping cart, depicted as an icon in the top-right corner
 of the site.
 
@@ -58,7 +58,7 @@ background videos, and several others.
 While many users enjoy such animations, some users dislike
 them because they feel distracted or slowed down from them. In the worst case, users may even suffer
 from motion sick as if it were a real life experience, so for these users reducing animations is a
-*medical neccessity*.
+*medical necessity*.
 
 ## Motion-triggered vestibular spectrum disorder
 
@@ -76,7 +76,7 @@ Operating systems like Android, iOS, macOS, or Windows in their accessibility se
 users for a long time to reduce motion wherever possible. The screenshots below show Android Pie's
 "remove animations" preference and macOS Mojave's "reduce motion" preference that, when checked,
 cause the particular operating systems to not use decorative effects like app launching animations.
-Applications themselves can and should honor this setting, too, and remove all non-necessary
+Applications themselves can and should honor this setting, too, and remove all unnecessary
 animations.
 
 <img src="../../images/2019/03/prefers-reduced-motion/android-remove-animations.png" intrinsicsize="472x493" width="287" height="300" alt="Android settings screen with 'remove animations' checkbox checked">
