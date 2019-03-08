@@ -181,7 +181,7 @@ Not every site will use `prefers-reduced-motion`, or maybe not consequently enou
 If you, for whatever reason, want to stop motion on all websites, you actually can. One way to make
 this happen is to inject a stylesheet with the following CSS into every webpage you visit.
 There are several
-[browser extensions](https://chrome.google.com/webstore/search/user%20stylesheets?hl=en&_category=extensions)
+[browser extensions](https://chrome.google.com/webstore/search/user%20stylesheets?_category=extensions)
 out there (use at your own risk!) that allow for this.
 
 ```CSS
