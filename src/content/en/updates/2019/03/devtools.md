@@ -13,7 +13,7 @@ description: Highlight nodes affected by a CSS property, Lighthouse v4, WebSocke
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-TODO
+Welcome back! Here's what's new.
 
 ## Highlight all nodes affected by CSS property {: #highlight }
 
@@ -32,8 +32,9 @@ highlight all nodes affected by that declaration.
 
 ## Lighthouse v4 in the Audits panel {: #lighthouse }
 
-The new *Tap targets are not sized appropriately* audit checks that interactive elements like
-buttons and links are appropriately large and spaced apart on mobile devices.
+The new [Tap targets are not sized appropriately](/web/tools/lighthouse/audits/tap-targets) audit
+checks that interactive elements like buttons and links are appropriately large and spaced
+apart on mobile devices.
 
 <figure>
   <img src="/web/tools/lighthouse/audits/images/tap-targets.png"
@@ -43,7 +44,7 @@ buttons and links are appropriately large and spaced apart on mobile devices.
   </figcaption>
 </figure>
 
-The PWA category of an audit now uses a badge scoring system.
+The PWA category of a report now uses a badge scoring system.
 
 <figure>
   <img src="/web/updates/images/2019/03/lighthouse1.png"
@@ -53,11 +54,20 @@ The PWA category of an audit now uses a badge scoring system.
   </figcaption>
 </figure>
 
+<aside class="note">
+  <b>What's Lighthouse?</b> <a href="/web/tools/lighthouse">Lighthouse</a> is the auditing engine
+  that powers the Audits panel. It also powers <a href="https://web.dev/measure">web.dev/measure</a>
+  and <a href="/speed/pagespeed/insights/">PageSpeed Insights</a>. You can also run Lighthouse as
+  a Node module, a Chrome Extension, or from the command line. See 
+  <a href="/web/tools/lighthouse/#devtools">Run Lighthouse in Chrome DevTools</a> to get started.
+</aside>
+
 ## WebSocket binary message viewer {: #binary }
 
 To view the contents of a binary WebSocket message:
 
-1. Open the **Network** panel.
+1. Open the **Network** panel. See [Inspect Network Activity](/web/tools/chrome-devtools/network/) to
+   learn the basics of analyzing network activity.
 
      <figure>
        <img src="/web/updates/images/2019/03/binary1.png"
@@ -153,7 +163,7 @@ screenshots are now available from the Command Menu.
 ## Service worker filters in the Network panel {: #swfilters }
 
 Type `is:service-worker-initiated` or `is:service-worker-intercepted` in the Network panel filter text box
-to view requests that were caused by (`initiated`) or modified by (`intercepted`) a service worker.
+to view requests that were caused (`initiated`) or potentially modified (`intercepted`) by a service worker.
 
 <figure>
   <img src="/web/updates/images/2019/03/swfilters1.png"
@@ -171,9 +181,22 @@ to view requests that were caused by (`initiated`) or modified by (`intercepted`
   </figcaption>
 </figure>
 
+See [Filter resources](/web/tools/chrome-devtools/network/#filter) for more on filtering network logs.
+
+## Performance panel updates {: #perf }
+
+Performance recordings now mark up long tasks and First Paint.
+
+Check out [Do less main thread work](/web/tools/chrome-devtools/speed/get-started#main) for an example
+of using the Performance panel to analyze page load performance.
+
 ## Long tasks in Performance recordings {: #longtasks }
 
-Performance recordings now show long tasks.
+[tasks]: https://www.w3.org/TR/2016/WD-html51-20160310/webappapis.html#task-queues
+
+Performance recordings now show long [tasks][tasks]{: .external }. See
+[Tasks, microtasks, queues, and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+for an explanation of tasks.
 
 <figure>
   <img src="/web/updates/images/2019/03/longtasks1.png"
@@ -183,12 +206,10 @@ Performance recordings now show long tasks.
   </figcaption>
 </figure>
 
-See [Task queues](https://www.w3.org/TR/2016/WD-html51-20160310/webappapis.html#task-queues) and 
-[Tasks, microtasks, queues, and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/).
-
 ## First Paint in the Timings section {: #FP }
 
-The [Timings section](/web/updates/2018/11/devtools#metrics) now marks First Paint.
+The [Timings section](/web/updates/2018/11/devtools#metrics) of a Performance recording
+now marks First Paint.
 
 <figure>
   <img src="/web/updates/images/2019/03/fp.png"
@@ -197,6 +218,11 @@ The [Timings section](/web/updates/2018/11/devtools#metrics) now marks First Pai
     <b>Figure X</b>. First Paint in the Timings section
   </figcaption>
 </figure>
+
+## New DOM tutorial {: #dom }
+
+Check out [Get Started With Viewing And Changing The DOM](/web/tools/chrome-devtools/dom/) for
+a hands-on tour of DOM-related features.
 
 ## Feedback {: #feedback }
 
