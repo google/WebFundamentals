@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: A comprehensive reference of accessibility features in Chrome DevTools.
 
 {# wf_blink_components: Platform>DevTools #}
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-03-08 #}
 {# wf_published_on: 2018-07-13 #}
 
 # Accessibility Reference {: .page-title }
@@ -20,6 +20,9 @@ It is intended for web developers who:
 
 The purpose of this reference is to help you discover all of the tools available in
 DevTools that can help you examine a page's accessibility.
+
+See [Navigating Chrome DevTools With Assistive Technology](/web/tools/chrome-devtools/accessibility/navigation)
+if you're looking for help on navigating DevTools with an assistive technology like a screen reader.
 
 ## Overview of accessibility features in Chrome DevTools {: #overview }
 
