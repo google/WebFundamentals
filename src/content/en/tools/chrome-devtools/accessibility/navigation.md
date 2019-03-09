@@ -6,7 +6,7 @@ description: A guide on navigating Chrome DevTools using assistive technology li
 {# wf_published_on: 2019-03-08 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# Navigate Chrome DevTools With Assistive Technology
+# Navigate Chrome DevTools With Assistive Technology {: .page-title }
 
 {% include "web/_shared/contributors/robdodson.html" %}
 
