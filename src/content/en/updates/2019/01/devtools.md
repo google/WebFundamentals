@@ -13,9 +13,15 @@ description: Logpoints, detailed tooltips in Inspect Mode, and much more.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Note: We'll publish the video version of this page in mid-March 2019.
-
 Here's what's new in DevTools in Chrome 73.
+
+## Video version of these release notes {: #video }
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="uddZX9ZK6wY"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Logpoints {: #logpoints }
 
