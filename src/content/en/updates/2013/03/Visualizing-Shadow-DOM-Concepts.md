@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2013-03-12 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-03-12 #}
 {# wf_tags: news,shadowdom,webcomponents,semantics #}
+{# wf_blink_components: N/A #}
 
 # Visualizing Shadow DOM Concepts {: .page-title }
 
@@ -24,7 +25,7 @@ A few days ago, I released a tool I've been working on called [Shadow DOM Visual
 
 It allows you to visually see how Shadow DOM renders in the browser, something DevTools lacks today. Both black code blocks on the left are editable. Try changing the `<content>` insertion points, removing, or adding new ones to see how the composited (rendered) tree is affected on the right.
 
-Mouse over the nodes in the graph to highlight the relevant markup on the left. Yay for [d3.js](http://d3js.org/){: .external }! Blue nodes are coming from the host node. Yellow nodes come from the Shadow DOM. `<content>` insertion points are the bridge
+Mouse over the nodes in the graph to highlight the relevant markup on the left. Yay for [d3.js](https://d3js.org/){: .external }! Blue nodes are coming from the host node. Yellow nodes come from the Shadow DOM. `<content>` insertion points are the bridge
 between the two worlds. Because they're logically in the Shadow DOM, they're colored yellow. Their blue border indicates that they invite blue host nodes into the rendering party.
 
 
@@ -32,7 +33,7 @@ between the two worlds. Because they're logically in the Shadow DOM, they're col
   <iframe class="devsite-embedded-youtube-video" data-video-id="qnJ_s58ubxg"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 Shadow DOM is available in Chrome 25 and the `<template>` element is available in Chrome 26 (although you only need the first to try the demo).
 

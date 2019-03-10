@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2013-02-18 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-02-18 #}
 {# wf_tags: news,performance,devtools #}
+{# wf_blink_components: N/A #}
 
 # Profiling Long Paint Times with DevTools' Continuous Painting Mode {: .page-title }
 
@@ -11,8 +12,7 @@ book_path: /web/updates/_book.yaml
 
 
 
-<p><strong>Continuous painting mode</strong> for paint profiling is now available in<a href="https://www.google.com/intl/en/chrome/browser/canary.html">
-</a><a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome
+<p><strong>Continuous painting mode</strong> for paint profiling is now available in <a href="https://www.google.com/intl/en/chrome/canary/">Chrome
 Canary</a>. This
 article explains how you identify a problem in page painting time and how you
 can use this new tool to detect bottlenecks in painting performance.
@@ -89,7 +89,7 @@ elements and mutate styles, watching the counter, in order to figure out what is
 slow.
 </p>
 <h3>Setup</h3>
-<p>In order to use <strong>continuous painting mode</strong> you need to use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome
+<p>In order to use <strong>continuous painting mode</strong> you need to use <a href="https://www.google.com/intl/en/chrome/canary/">Chrome
 Canary</a>.
 </p>
 <p>On <strong>Linux</strong> systems (and some Macs) you need to make sure that Chrome runs in
@@ -181,7 +181,7 @@ general.
 
 
 <aside class="bio clearfix" style="border: 3px double #CCC; padding: 10px;">
-Eberhard Gräther is student of <a href="http://multimediatechnology.at/in-english/">MultiMediaTechnology</a> at <a href="http://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. He interned in the Chrome GPU team from 10/2012 to 03/2013 where he worked on rendering profiling tools. Follow him at  <a href="https://twitter.com/egraether">@egraether</a> or visit <a href="http://egraether.com">his site</a> to find graphics demos and web games he has built.
+Eberhard Gräther is student of <a href="https://multimediatechnology.at/in-english/">MultiMediaTechnology</a> at <a href="https://www.fh-salzburg.ac.at/en/">Salzburg University of Applied Sciences</a>. He interned in the Chrome GPU team from 10/2012 to 03/2013 where he worked on rendering profiling tools. Follow him at  <a href="https://twitter.com/egraether">@egraether</a> or visit <a href="http://egraether.com">his site</a> to find graphics demos and web games he has built.
 </aside>
 
 ### Live Demo
