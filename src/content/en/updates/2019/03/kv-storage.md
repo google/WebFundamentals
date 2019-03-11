@@ -70,7 +70,6 @@ browsers</a>, you could import the KV Storage module with the following code
 (see below for [how to use a KV Storage polyfill in unsupported
 browsers](#what_if_a_browser_doesnt_support_a_built-in_module)):
 
-
 ```js
 import {storage, StorageArea} from 'std:kv-storage';
 ```
@@ -270,11 +269,13 @@ Feel free to take a look if you're curious to see how it's built.
   <p><strong>Note:</strong> the demo uses <a href="https://rollupjs.org">
   Rollup</a> to bundle the application code, the polyfill, and to generate the
   various versions required to get it working cross-browser. I wanted to make a
-  similar demo built with webpack, but it doesn't currently support a module
-  output format, so this isn't yet possible.</p>
-  <p>I've filed a feature request to add support for built-in modules in
-  webpack. If you'd like to see this supported in webpack as well, please
-  voice your support in the issue.</p>
+  similar demo built with <a href="https://webpack.js.org/">webpack</a>, but it
+  doesn't currently support a module output format, so this isn't yet possible.
+  </p>
+  <p>I've filed a
+  <a href="https://github.com/webpack/webpack/issues/8896">feature request</a>
+  to add support for built-in modules in webpack. If you'd like to see this
+  supported in webpack as well, please voice your support in the issue.</p>
 </aside>
 
 In order to actually see the built-in module in action, you have to load the
