@@ -252,7 +252,8 @@ dark color scheme), and
 ## Acknowledgements
 
 Massive shout-out to [Stephen McGruer](https://github.com/stephenmcgruer) who has implemented
-`prefers-reduced-motion` in Chrome.
+`prefers-reduced-motion` in Chrome and—together with
+[Rob Dodson](https://twitter.com/rob_dodson)—has also reviewed this article.
 
 {% include "web/_shared/helpful.html" %}
 
