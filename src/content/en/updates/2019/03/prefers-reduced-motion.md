@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The prefers-reduced-motion media query detects whether the user has requested that the system minimize the amount of animation or motion it uses. This is for users who either require or prefer minimized animations; for example people with vestibular disorders often desire animations to be kept to a minimum.
 
-{# wf_updated_on: 2019-03-08 #}
-{# wf_published_on: 2019-03-01 #}
+{# wf_updated_on: 2019-03-11 #}
+{# wf_published_on: 2019-03-11 #}
 {# wf_tags: media-queries #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
 {# wf_featured_snippet: The prefers-reduced-motion media query detects whether the user has requested that the system minimize the amount of animation or motion it uses. #}
@@ -28,7 +28,10 @@ rink was crammed with people ⛸. The only issue with that: I don't cope with cr
 many moving targets, I fail to focus on anything, and end up lost and with a feeling of complete
 visual overload, almost like staring at an anthill 🐜.
 
-<img src="../../images/2019/03/prefers-reduced-motion/ice-skating.jpg" intrinsicsize="580×320" width="580" height="320" alt="Throng of feet of ice skating people">
+<figure>
+  <img src="../../images/2019/03/prefers-reduced-motion/ice-skating.jpg" intrinsicsize="580x320" width="580" height="320" alt="Throng of feet of ice skating people">
+  <figcaption><strong>Figure 1:</strong> Visual overload in real life.</figcaption>
+</figure>
 
 Occasionally, the same can happen on the web: with flashing ads, fancy parallax effects, surprising
 reveal animations, autoplaying videos, etc., *the web sometimes can honestly be quite
@@ -36,8 +39,10 @@ overwhelming*… Happily, unlike in real life, there is a solution to that. The 
 `prefers-reduced-motion` lets developers create a variant of a page for users who, well, prefer
 reduced motion. This can comprise anything from refraining from having autoplaying videos to
 disabling certain purely decorative effects, to completely redesigning a page for certain users.
+
 Before I dive into the feature, let's take one step back and think of what animations are used for
-on the web.
+on the web. If you want, you can also skip the background information and
+[jump right into the technical details](#working_with_the_media_query) below.
 
 ## Animation on the web
 
@@ -57,8 +62,8 @@ Finally, there are *decorative* effects like animated gradients, parallax scroll
 background videos, and several others.
 While many users enjoy such animations, some users dislike
 them because they feel distracted or slowed down from them. In the worst case, users may even suffer
-from motion sick as if it were a real life experience, so for these users reducing animations is a
-*medical necessity*.
+from motion sickness as if it were a real life experience, so for these users reducing animations is
+a *medical necessity*.
 
 ## Motion-triggered vestibular spectrum disorder
 
@@ -79,8 +84,13 @@ cause the particular operating systems to not use decorative effects like app la
 Applications themselves can and should honor this setting, too, and remove all unnecessary
 animations.
 
-<img src="../../images/2019/03/prefers-reduced-motion/android-remove-animations.png" intrinsicsize="472x493" width="287" height="300" alt="Android settings screen with 'remove animations' checkbox checked">
-<img src="../../images/2019/03/prefers-reduced-motion/macos-reduce-motion.png" intrinsicsize="780×588" width="398" height="300" alt="macOS settings screen with 'reduce motion' checkbox checked">
+<figure>
+  <img src="../../images/2019/03/prefers-reduced-motion/android-remove-animations.png" intrinsicsize="472x493" width="287" height="300" alt="Android settings screen with 'remove animations' checkbox checked">
+  <img src="../../images/2019/03/prefers-reduced-motion/macos-reduce-motion.png" intrinsicsize="780x588" width="398" height="300" alt="macOS settings screen with 'reduce motion' checkbox checked">
+  <figcaption>
+    <strong>Figure 2:</strong> Prefers reduced motion settings in Android and macOS.
+  </figcaption>
+</figure>
 
 ## Remove motion on the web
 
@@ -100,7 +110,8 @@ uses. It can take two possible values:
 
 ## Working with the media query
 
-Note: `prefers-reduced-motion` is available as of Chrome Canary&nbsp;74.
+Note: `prefers-reduced-motion` is available as of Chrome Canary&nbsp;74. For other browsers, let me
+refer you to the [Can&nbsp;I&nbsp;use](https://caniuse.com/#feat=prefers-reduced-motion) tables.
 
 As all media queries, `prefers-reduced-motion` can be checked from a CSS context and from a
 JavaScript context.
@@ -171,15 +182,23 @@ their preference on-the-fly, no reload required. If a user prefers reduced motio
 reveal animations are gone, and just the regular scrolling motion is left. The screencast below
 shows the demo in action:
 
-<video width="1098" height="870" intrinsicsize="1098x870" controls>
-  <source src="../../videos/2019/03/prefers-reduced-motion/prefers-reduced-motion.mp4" type="video/mp4">
-</video>
+<figure>
+  <video muted playsinline intrinsicsize="1098x870" controls
+    poster="../../videos/2019/03/prefers-reduced-motion/prefers-reduced-motion.png"
+  >
+    <source src="../../videos/2019/03/prefers-reduced-motion/prefers-reduced-motion.mp4" type="video/mp4">
+  </video>
+  <figcaption><strong>Figure 3:</strong> Video of the
+    <a href="https://prefers-reduced-motion.glitch.me"><code>prefers-reduced-motion</code> demo</a>
+    app (test it on Chrome Canary&nbsp;74 or later).
+  </figcaption>
+</figure>
 
 ## (Bonus) Forcing reduced motion on all websites
 
 Not every site will use `prefers-reduced-motion`, or maybe not consequently enough for your taste.
 If you, for whatever reason, want to stop motion on all websites, you actually can. One way to make
-this happen is to inject a stylesheet with the following CSS into every webpage you visit.
+this happen is to inject a stylesheet with the following CSS into every web page you visit.
 There are several
 [browser extensions](https://chrome.google.com/webstore/search/user%20stylesheets?_category=extensions)
 out there (use at your own risk!) that allow for this.
@@ -198,18 +217,27 @@ to such a short time that they are not noticeable anymore. As some websites depe
 to be run in order to work correctly (maybe because a certain step depends on the firing of the
 [`animationend` event](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event)),
 the more radical `animation: none !important;` approach wouldn't work. Even the above hack is not
-guaranteed to succeed on all websites, so be sure to deactivate it when you notice breakage.
+guaranteed to succeed on all websites (for example, it can't stop motion that was initiated via the
+[Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)),
+so be sure to deactivate it when you notice breakage.
 
 ## Conclusions
 
 Respecting user preferences is key for modern websites, and browsers expose more and more features
 to enable web developers to do so. The CSS Working Group are currently standardizing more
 [user preference media queries](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences)
-like `prefers-reduced-transparency` (detects if the user prefers reduced transparency),
-`prefers-contrast` (detects if the user has requested the system increase or decrease the amount of
-contrast between adjacent colors), `prefers-color-scheme` (detects if the user prefers a light or
-dark color scheme), and `prefers-reduced-transparency` (detects if the user prefers reduced
-transparency). Watch this space, we will let you know once they launch in Chrome!
+like
+[`prefers-reduced-transparency`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-transparency)
+(detects if the user prefers reduced transparency),
+[`prefers-contrast`](https://drafts.csswg.org/mediaqueries-5/#prefers-contrast)
+(detects if the user has requested the system increase or decrease the amount of
+contrast between adjacent colors),
+[`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme)
+(detects if the user prefers a light or
+dark color scheme), and
+[`inverted-colors`](https://drafts.csswg.org/mediaqueries-5/#inverted)
+(detects if the user prefers inverted colors).
+👀 Watch this space, we will definitely let you know once they launch in Chrome!
 
 ## Related Links
 
@@ -223,7 +251,7 @@ transparency). Watch this space, we will let you know once they launch in Chrome
 
 ## Acknowledgements
 
-Massive shout-out to [Stephen McGruer](https://twitter.com/stephenmcgruer) who has implemented
+Massive shout-out to [Stephen McGruer](https://github.com/stephenmcgruer) who has implemented
 `prefers-reduced-motion` in Chrome.
 
 {% include "web/_shared/helpful.html" %}
