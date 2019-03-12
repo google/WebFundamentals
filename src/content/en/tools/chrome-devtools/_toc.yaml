@@ -181,7 +181,7 @@ toc:
 - title: Progressive Web Apps
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security
-  path: /web/tools/chrome-devtools/security
+  path: /web/tools/chrome-devtools/security/
 - title: Storage and Resources
   section:
   - title: Inspect and Manage Storage, Databases, and Caches
