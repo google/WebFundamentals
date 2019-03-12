@@ -174,8 +174,8 @@ redirects:
 - from: /web/tools/chrome-devtools/progressive-web-apps/
   to: /web/tools/chrome-devtools/progressive-web-apps
 
-- from: /web/tools/chrome-devtools/security/
-  to: /web/tools/chrome-devtools/security
+- from: /web/tools/chrome-devtools/security
+  to: /web/tools/chrome-devtools/security/
 
 - from: /web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/
