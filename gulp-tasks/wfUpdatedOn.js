@@ -68,13 +68,15 @@ gulp.task('update-updated_on', async () => {
 
     const originalUpdatedOn = matched[0];
     const originalTimestamp = matched[1];
-    const newTimeStamp = moment().format(`YYYY-MM-DD`);
-    if (originalTimestamp === newTimeStamp) {
+    const momentNow = moment();
+
+    if (momentNow.isSameOrBefore(originalTimestamp)) {
+      // Updated date is today or in the future.
       continue;
     }
 
     const newUpdatedOn = originalUpdatedOn
-      .replace(originalTimestamp, newTimeStamp);
+      .replace(originalTimestamp, momentNow.format(`YYYY-MM-DD`));
     const newContents = fileContents.replace(originalUpdatedOn, newUpdatedOn);
     await fse.writeFile(changedFile, newContents);
     // Add the file to the current commit.
