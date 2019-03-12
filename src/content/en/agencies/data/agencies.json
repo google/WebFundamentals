@@ -2,9 +2,6 @@
   "initMap": true,
   "data": [
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Enovate",
       "region": [
         "Europe"
@@ -46,9 +43,6 @@
       ]
     },
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Selesti Ltd",
       "region": [
         "Europe"
@@ -90,9 +84,6 @@
       ]
     },
     {
-      "countries_": [
-        "India"
-      ],
       "agency_name": "22feet Tribal Worldwide Pvt Ltd",
       "region": [
         "Asia"
@@ -102,7 +93,6 @@
       "projects": [
         {
           "url": "http://m.pitchersapp.com",
-          "client_name": "",
           "vertical": [
             "Social"
           ],
@@ -135,9 +125,6 @@
       ]
     },
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Featurist Ltd",
       "region": [
         "Europe"
@@ -147,7 +134,6 @@
       "projects": [
         {
           "url": "https://shippingreport.com/",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -155,7 +141,6 @@
         },
         {
           "url": "https://www.featurist.co.uk/",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -166,8 +151,8 @@
       "contact": "enquiries@featurist.co.uk",
       "image_url": "/web/agencies/images/featurist_ltd.png",
       "vertical": [
-        "Other",
-        "Agency"
+        "Agency",
+        "Other"
       ],
       "locations_view": [
         {
@@ -189,9 +174,6 @@
       ]
     },
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Your Favourite Story",
       "region": [
         "Europe"
@@ -201,7 +183,6 @@
       "projects": [
         {
           "url": "https://closecircle-dev.yfs.io",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -234,9 +215,6 @@
       ]
     },
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Hex Digital Ltd",
       "region": [
         "Europe"
@@ -246,7 +224,6 @@
       "projects": [
         {
           "url": "https://new-hex.staging.tegu.hexdigital.com",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -279,9 +256,6 @@
       ]
     },
     {
-      "countries_": [
-        "India"
-      ],
       "agency_name": "Enforce",
       "region": [
         "Asia"
@@ -291,7 +265,6 @@
       "projects": [
         {
           "url": "https://praybox.info/",
-          "client_name": "",
           "vertical": [
             "Social"
           ],
@@ -324,9 +297,6 @@
       ]
     },
     {
-      "countries_": [
-        "India"
-      ],
       "agency_name": "PRODITECH Solutions",
       "region": [
         "Asia"
@@ -336,7 +306,6 @@
       "projects": [
         {
           "url": "https://tse.support",
-          "client_name": "",
           "vertical": [
             "Education"
           ],
@@ -369,9 +338,6 @@
       ]
     },
     {
-      "countries_": [
-        "India"
-      ],
       "agency_name": "Mediology Software (Readwhere CMS)",
       "region": [
         "Asia"
@@ -381,7 +347,6 @@
       "projects": [
         {
           "url": "https://mobi.uttamhindu.com/",
-          "client_name": "",
           "vertical": [
             "Media"
           ],
@@ -432,9 +397,6 @@
       ]
     },
     {
-      "countries_": [
-        "China"
-      ],
       "agency_name": "Wunderman",
       "region": [
         "Asia"
@@ -444,7 +406,6 @@
       "projects": [
         {
           "url": "https://www.victoriassecretcn.com/html/index.html",
-          "client_name": "",
           "vertical": [
             "Retail"
           ],
@@ -477,9 +438,6 @@
       ]
     },
     {
-      "countries_": [
-        "Indonesia"
-      ],
       "agency_name": "Uasoft",
       "region": [
         "Asia"
@@ -489,7 +447,6 @@
       "projects": [
         {
           "url": "https://cariharga.co.id",
-          "client_name": "",
           "vertical": [
             "Retail"
           ],
@@ -515,17 +472,13 @@
           "country_name": "Indonesia",
           "city_name": "Jakarta",
           "geo": {
-            "lat": -6.2087634,
-            "lng": 106.845599
+            "lat": -6.180495,
+            "lng": 106.8283415
           }
         }
       ]
     },
     {
-      "countries_": [
-        "Vietnam",
-        "India"
-      ],
       "agency_name": "DigiFutura",
       "region": [
         "Asia"
@@ -535,7 +488,6 @@
       "projects": [
         {
           "url": "https://housing.com/in/",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -564,14 +516,6 @@
       ],
       "locations_map": [
         {
-          "country_name": "India",
-          "city_name": "Bangalore",
-          "geo": {
-            "lat": 12.93389,
-            "lng": 77.630443
-          }
-        },
-        {
           "country_name": "Vietnam",
           "city_name": "Ho Chi Minh City",
           "geo": {
@@ -582,9 +526,6 @@
       ]
     },
     {
-      "countries_": [
-        "China"
-      ],
       "agency_name": "GIMC Chance",
       "region": [
         "Asia"
@@ -594,7 +535,6 @@
       "projects": [
         {
           "url": "https://pwa.coculm.cn/",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -636,9 +576,6 @@
       ]
     },
     {
-      "countries_": [
-        "United Kingdom"
-      ],
       "agency_name": "Lunar Works",
       "region": [
         "Europe"
@@ -648,7 +585,6 @@
       "projects": [
         {
           "url": "https://lunarworks.co.uk",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -656,7 +592,6 @@
         },
         {
           "url": "https://aurora.lunarworks.co.uk/",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -690,9 +625,6 @@
       ]
     },
     {
-      "countries_": [
-        "Australia"
-      ],
       "agency_name": "Elephants Can Dance",
       "region": [
         "Asia"
@@ -702,7 +634,6 @@
       "projects": [
         {
           "url": "https://www.elephantscandance.com.au/",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -735,9 +666,6 @@
       ]
     },
     {
-      "countries_": [
-        "Japan"
-      ],
       "agency_name": "Asial",
       "region": [
         "Asia"
@@ -747,7 +675,6 @@
       "projects": [
         {
           "url": "https://press.monaca.io/",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -780,9 +707,6 @@
       ]
     },
     {
-      "countries_": [
-        "Japan"
-      ],
       "agency_name": "iret",
       "region": [
         "Asia"
@@ -792,7 +716,6 @@
       "projects": [
         {
           "url": "https://cloudpack.media/",
-          "client_name": "",
           "vertical": [
             "Media"
           ],
@@ -843,9 +766,6 @@
       ]
     },
     {
-      "countries_": [
-        "Germany"
-      ],
       "agency_name": "MobX",
       "region": [
         "Europe"
@@ -855,7 +775,6 @@
       "projects": [
         {
           "url": "https://www.tajawal.ae/en",
-          "client_name": "",
           "vertical": [
             "Travel"
           ],
@@ -888,9 +807,6 @@
       ]
     },
     {
-      "countries_": [
-        "Spain"
-      ],
       "agency_name": "digitalDot Servicios Informáticos SL",
       "region": [
         "Europe"
@@ -900,7 +816,6 @@
       "projects": [
         {
           "url": "https://www.digitaldot.es",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -933,9 +848,6 @@
       ]
     },
     {
-      "countries_": [
-        "Belgium"
-      ],
       "agency_name": "NETARUM",
       "region": [
         "Europe"
@@ -945,7 +857,6 @@
       "projects": [
         {
           "url": "https://www.netarum.com",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -978,9 +889,6 @@
       ]
     },
     {
-      "countries_": [
-        "Indonesia"
-      ],
       "agency_name": "PT. LOGIQUE Digital Indonesia",
       "region": [
         "Asia"
@@ -990,7 +898,6 @@
       "projects": [
         {
           "url": "https://m.vipplaza.co.id",
-          "client_name": "",
           "vertical": [
             "Retail"
           ],
@@ -999,7 +906,7 @@
       ],
       "max_lighthouse_score": 83,
       "contact": "info@logique.co.id",
-      "image_url": "/web/agencies/images/pt._logique_digital_indonesia.png",
+      "image_url": "/web/agencies/images/pt_logique_digital_indonesia.png",
       "vertical": [
         "Retail"
       ],
@@ -1016,26 +923,22 @@
           "country_name": "Indonesia",
           "city_name": "Jakarta",
           "geo": {
-            "lat": -6.2087634,
-            "lng": 106.845599
+            "lat": -6.180495,
+            "lng": 106.8283415
           }
         }
       ]
     },
     {
-      "countries_": [
-        "Japan"
-      ],
       "agency_name": "IMJ Corporation",
       "region": [
         "Asia"
       ],
-      "description": "IMJ is one of the largest Full Service Digital Agencies in Japan which executes 5,700 projects for over 330 clients annually. IMJ together with Accenture brings leading-edge creativity, deep knowledge in advanced digital technology, providing seamless, end-to-end digital marketing services.",
+      "description": "IMJ is one of the largest Full Service Digital Agencies in Japan which executes 5,800 projects for over 300 clients annually. IMJ together with Accenture Interactive brings leading-edge creativity, deep knowledge in advanced digital technology and consulting capabilities, providing seamless, end-to-end digital marketing services. It also redefines, re-creates and re-invents the experience value in consumers, businesses and society, and upgrades each \"experience\" to the next stage. ",
       "website": "https://www.imjp.co.jp/",
       "projects": [
         {
           "url": "https://backyard.imjp.co.jp/static/common/amp/recommend/",
-          "client_name": "",
           "vertical": [
             "Media"
           ],
