@@ -64,7 +64,7 @@ worker, or service worker), and they won't consume any memory or CPU unless
 they're actually imported. Furthermore, they don't run the risk of naming
 collisions with other variables defined in your code.
 
-To import a built in module you use the prefix `std:` followed by the built-in
+To import a built-in module you use the prefix `std:` followed by the built-in
 module's identifier. For example, in <a href="#browser-support">supported
 browsers</a>, you could import the KV Storage module with the following code
 (see below for [how to use a KV Storage polyfill in unsupported
@@ -165,7 +165,7 @@ In the case of built-in modules, this allows you to reference a polyfill of the
 module in your application code, but a browser that supports the built-in module
 can load that version instead!
 
-Here's how to would declare an import map to make this work with the KV Storage
+Here's how you would declare an import map to make this work with the KV Storage
 module:
 
 ```
@@ -189,14 +189,14 @@ module:
 </script>
 ```
 
-They key point in the above code is the URL `/path/to/kv-storage-polyfill.mjs`
+The key point in the above code is the URL `/path/to/kv-storage-polyfill.mjs`
 is being mapped to _two_ different resources: `std:kv-storage` and then the
 original URL again, `/path/to/kv-storage-polyfill.mjs`.
 
-So when the browser encounters an import statement referencing
-`/path/to/kv-storage-polyfill.mjs`, it first tries to load `std:kv-storage`,
-and if it can't then it falls back to loading `/path/to/kv-storage-polyfill.mjs`
-(which is the same URL used in the import statement).
+So when the browser encounters an import statement referencing that URL
+(`/path/to/kv-storage-polyfill.mjs`), it first tries to load `std:kv-storage`,
+and if it can't then it falls back to loading
+`/path/to/kv-storage-polyfill.mjs`.
 
 Again, the magic here is that the browser doesn't need to support import maps
 _or_ built-in modules for this technique to work since the URL being passed to
@@ -210,9 +210,9 @@ actually use `import` statements, which also means you have to use [module
 scripts](/web/fundamentals/primers/modules#module-vs-script), i.e.
 `<script type="module">`.
 
-Currently, more than [80% of browsers support
-modules](https://caniuse.com/#feat=es6-module), and for browsers that don't, you
-can use the [module/nomodule
+Currently, [more than 80% of browsers support
+modules](https://caniuse.com/#feat=es6-module), and for browsers that don't,
+you can use the [module/nomodule
 technique](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
 to serve a legacy bundle to older browsers. Note that when generating your
 `nomodule` build, you'll need to include all polyfills because you know for sure
@@ -278,7 +278,7 @@ code or even put breakpoints in it!):
 
 This introduction should have given you a taste of what's possible with built-in
 modules. And hopefully you're excited! We'd really love for developers to try
-out the KV Storage module (as well as all the new featured discussed here) and
+out the KV Storage module (as well as all the new features discussed here) and
 give us feedback.
 
 Here are the GibHub links where you can give us feedback for each of the
