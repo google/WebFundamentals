@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The prefers-reduced-motion media query detects whether the user has requested that the system minimize the amount of animation or motion it uses. This is for users who either require or prefer minimized animations; for example people with vestibular disorders often desire animations to be kept to a minimum.
 
-{# wf_updated_on: 2019-03-11 #}
+{# wf_updated_on: 2019-03-12 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: media-queries #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -17,7 +17,7 @@ description: The prefers-reduced-motion media query detects whether the user has
 
 **tl;dr:** Not everyone likes decorative animations or transitions, and some users outright
 experience motion sickness when faced with parallax scrolling, zooming effects, etc.
-Chrome (as of Canary&nbsp;74) now supports a user preference media query `prefers-reduced-motion`
+Chrome 74 supports a user preference media query `prefers-reduced-motion`
 that lets you design a motion-reduced variant of your site for users who have expressed this
 preference.
 
@@ -110,7 +110,7 @@ uses. It can take two possible values:
 
 ## Working with the media query
 
-Note: `prefers-reduced-motion` is available as of Chrome Canary&nbsp;74. For other browsers, let me
+Note: `prefers-reduced-motion` is available as of Chrome 74. For other browsers, let me
 refer you to the [Can&nbsp;I&nbsp;use](https://caniuse.com/#feat=prefers-reduced-motion) tables.
 
 As all media queries, `prefers-reduced-motion` can be checked from a CSS context and from a
@@ -190,7 +190,7 @@ shows the demo in action:
   </video>
   <figcaption><strong>Figure 3:</strong> Video of the
     <a href="https://prefers-reduced-motion.glitch.me"><code>prefers-reduced-motion</code> demo</a>
-    app (test it on Chrome Canary&nbsp;74 or later).
+    app (test it on Chrome 74 or later).
   </figcaption>
 </figure>
 
