@@ -1,21 +1,20 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-
 {# wf_published_on: 2018-11-12 #}
-{# wf_updated_on: 2018-11-12 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/file.png #}
 {# wf_tags: writable-files,capabilities,file,filesystem #}
 {# wf_featured_snippet: The writable files API is being designed to increase interoperability of web applications with native applications, making it possible for users to choose files or directories that a web app can interact with on the native file system. #}
 {# wf_blink_components: Blink>Storage>FileSystem #}
 
+{# When updating this post, don't forget to update /updates/capabilities.md #}
+
 # The Writable Files API: Simplifying local file access {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
 <div class="clearfix"></div>
-
 
 {% include "web/updates/_shared/capabilities.html" %}
 

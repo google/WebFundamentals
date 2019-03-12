@@ -79,7 +79,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         interfaces. Currently, the supported features are face detection,
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> February 2nd, 2019
       </td>
     <tr>
       <td>
@@ -94,7 +95,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
+        <b>Last Updated:</b> December 18th, 2018
       </td>
     </tr>
     <tr>
@@ -108,7 +110,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
+        <b>Last Updated:</b> November 12th, 2018
       </td>
     </tr>
     <tr>
@@ -140,7 +143,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         either the Web Share API or system events, like the OS-level share
         button.
         <br><br>
-        <b>Status:</b> Launched in Chrome 71
+        <b>Status:</b> Launched in Chrome 71<br>
+        <b>Last Updated:</b> December 5th, 2018
       </td>
     </tr>
   </tbody>
@@ -215,7 +219,6 @@ Finally, after the spec has been finalized, the origin trial is complete and all
 of the steps and approvals from the [Blink launch
 process](https://www.chromium.org/blink/launching-features) have been completed,
 it’s time to ship it.
-
 
 <div class="clearfix"></div>
 

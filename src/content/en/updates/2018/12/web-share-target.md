@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2018-12-05 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
 {# wf_blink_components: Blink>WebShare #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # Registering as a Share Target with the Web Share Target API {: .page-title }
 
@@ -183,4 +185,3 @@ appear in the `text` field, or occasionally in the `title` field.
 [explainer]: https://github.com/WICG/web-share-target/blob/master/docs/explainer.md
 [issues]: https://github.com/WICG/web-share-target/issues
 [wicg-discourse]: https://discourse.wicg.io/t/web-share-target-api-for-websites-to-receive-shared-content/1854
-
