@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An introduction to the new KV Storage API, built-in modules, and import maps.
 
-{# wf_updated_on: 2019-03-11 #}
+{# wf_updated_on: 2019-03-12 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: chrome74, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
@@ -119,7 +119,7 @@ import {storage} from 'std:kv-storage';
 const main = async () => {
   const oldPreferences = await storage.get('preferences');
 
-  document.querySelector('form').addEventListener('submit', () => {
+  document.querySelector('form').addEventListener('submit', async () => {
     const newPreferences = Object.assign({}, oldPreferences, {
       // Updated preferences go here...
     });
@@ -152,7 +152,6 @@ code today, with the help of another new feature called
 [import maps](https://github.com/WICG/import-maps).
 
 ### Import maps
-
 
 [Import maps](https://github.com/WICG/import-maps) are essentially a mechanism
 by which developers can alias import identifiers to one or more alternate
