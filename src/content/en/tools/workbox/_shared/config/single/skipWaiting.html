@@ -9,7 +9,22 @@
     <p>
       Whether or not the service worker should skip over the
       <a href="/web/fundamentals/primers/service-workers/lifecycle#waiting">waiting</a> lifecycle
-      stage. Normally this is used with `clientsClaim: true`.
+      stage.
+    </p>
+    <p>
+      When <code>false</code>, the generated service worker will automatically
+      contain the following code:
+    </p>
+    <pre class="prettyprint">self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});</pre>
+    <p>
+      This allows your web app to trigger <code>skipWaiting()</code> on demand,
+      by using <code>postMessage()</code> to communicate with your service
+      worker. For more information about this technique, see
+      <a href="/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users">this recipe</a>.
     </p>
     <p>
       <strong>Example:</strong>

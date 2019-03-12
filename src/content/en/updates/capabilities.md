@@ -51,7 +51,7 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         such as an unread count.
         <br><br>
         <b>Current Status:</b> Available as an origin trial.<br>
-        <b>Last Updated:</b> January 29th, 2019
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>
@@ -65,8 +65,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         that allows your web app to check to see if your native app is
         installed on the users device, and vice versa.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
-        <b>Last Updated:</b> December 20th, 2018
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>

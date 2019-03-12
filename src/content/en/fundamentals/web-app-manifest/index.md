@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_updated_on: 2019-03-04 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_published_on: 2016-02-11 #}
 {# wf_blink_components: Manifest #}
 
@@ -249,12 +249,6 @@ no scaling will be applied to the image.
 
 Again, providing a 192px and a 512px icon will be sufficient for most cases,
 but you can provide additional icons as necessary.
-
-<div class="clearfix"></div>
-
-## Feedback {: .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}
 
 <div class="clearfix"></div>
 

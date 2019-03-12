@@ -1,9 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Reference documentation for the "TODO" Lighthouse audit.
+description: How to pass the "TODO" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
-{# wf_published_on: 2018-04-XX #}
+{# wf_updated_on: 2019-02-15 #}
+{# wf_published_on: 2019-02-15 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # TODO  {: .page-title }
