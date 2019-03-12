@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2013-01-31 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-01-31 #}
 {# wf_tags: news,mobile,graphics,css #}
+{# wf_blink_components: N/A #}
 
 # CSS Background shorthand coming to mobile WebKit browsers {: .page-title }
 
@@ -23,7 +24,7 @@ With Chrome for Android moving forward to current revisions on WebKit, this chan
       background-size: 50px 40px;
       background: url(foo.png) no-repeat;
     }
-    
+
 
 The `background` shorthand property does not contain any size property and will therefore reset the `background-size` to its default value of `auto auto`.
 
@@ -36,12 +37,12 @@ The `background` shorthand property does not contain any size property and will 
       background: url(foo.png) no-repeat;
       background-size: 50px 40px;
     }
-    
+
     // background-size is specified inline after position
     .fooB {
       background: url(foo.png) 0% / 50px 40px no-repeat;
     }
-    
+
 
 In `fooB`, specifying a `background-size` in the `background` shorthand requires the `position` (0%) be specified first, followed by a forward slash then the `background-size` (50px 40px). |
 
@@ -56,6 +57,6 @@ There are several options that will provide an easy fix for this:
 
 ### Bonus: background image offsets
 
-In addition to this change, there’s now greater flexibility in positioning the image within the background.  In the past, you could only specify the image position relative from the top left corner, now you can specify an offset from the edges of the container.  For example setting `background-position: right 5px bottom 5px;` the image will be positioned 5px from the right edge and 5px from the bottom.  Check out this [sample on JSBin](http://jsbin.com/ixogup/1/edit)
+In addition to this change, there’s now greater flexibility in positioning the image within the background.  In the past, you could only specify the image position relative from the top left corner, now you can specify an offset from the edges of the container.  For example setting `background-position: right 5px bottom 5px;` the image will be positioned 5px from the right edge and 5px from the bottom.  Check out this [sample on JSBin](https://jsbin.com/ixogup/1/edit?html,css,js,output)
 
 

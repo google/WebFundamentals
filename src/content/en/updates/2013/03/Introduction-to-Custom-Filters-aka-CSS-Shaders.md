@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2013-03-24 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-03-24 #}
 {# wf_tags: news,webgl,shaders,css,filters #}
+{# wf_blink_components: N/A #}
 
 # Introduction to Custom Filters (aka CSS Shaders) {: .page-title }
 
@@ -21,7 +22,7 @@ I've included a recorded version of a presentation I recently delivered to Londo
 
 ## Introduction to Shaders
 
-<p>I've previously written an <a href="http://www.html5rocks.com/en/tutorials/webgl/shaders/">introduction to shaders</a> which will give you a good breakdown of what shaders are and how you can use them from a WebGL point of view. If you've never dealt with shaders it's something of a required read before you go much further, because many of the Custom Filters concepts and language hinges on the existing WebGL shader terminology.</p>
+<p>I've previously written an <a href="https://www.html5rocks.com/en/tutorials/webgl/shaders/">introduction to shaders</a> which will give you a good breakdown of what shaders are and how you can use them from a WebGL point of view. If you've never dealt with shaders it's something of a required read before you go much further, because many of the Custom Filters concepts and language hinges on the existing WebGL shader terminology.</p>
 
 <p>So with that said, let's enable Custom Filters and plough on!</p>
 
@@ -38,18 +39,18 @@ I've included a recorded version of a presentation I recently delivered to Londo
 
     .customShader {
       -webkit-filter:
-    
+
         custom(
           url(vertexshader.vert)
           mix(url(fragment.frag) normal source-atop),
-    
+
         /* Row, columns - the vertices are made automatically */
         4 5,
-    
+
         /* We set uniforms; we can't set attributes */
         time 0)
     }
-    
+
 
 <p>You'll see from this that we declare our vertex and fragment shaders, the number of rows and columns we want our DOM element to get broken down into, and then any uniforms we want to pass through.</p>
 
@@ -70,14 +71,14 @@ I've included a recorded version of a presentation I recently delivered to Londo
                              0.0, 1.0, 0.0, 0.0,
                              0.0, 0.0, 1.0, 0.0,
                              0.0, 0.0, 0.0, 1.0);
-    
+
       css_MixColor = vec4(0.0, 0.0, 0.0, 0.0);
-    
+
       // umm, where did gl_FragColor go?
     }
-    
 
-<p>Each pixel of the DOM content is multiplied by the <code>css_ColorMatrix</code>, which in the above case does nothing as its the <a href="http://en.wikipedia.org/wiki/Identity_matrix">identity matrix</a> and changes none of the RGBA values. If we did want to, say, just keep the red values we would use a <code>css_ColorMatrix</code> like this:</p>
+
+<p>Each pixel of the DOM content is multiplied by the <code>css_ColorMatrix</code>, which in the above case does nothing as its the <a href="https://en.wikipedia.org/wiki/Identity_matrix">identity matrix</a> and changes none of the RGBA values. If we did want to, say, just keep the red values we would use a <code>css_ColorMatrix</code> like this:</p>
 
 
     // keep only red and alpha
@@ -85,13 +86,13 @@ I've included a recorded version of a presentation I recently delivered to Londo
                            0.0, 0.0, 0.0, 0.0,
                            0.0, 0.0, 0.0, 0.0,
                            0.0, 0.0, 0.0, 1.0);
-    
+
 
 <p>You can hopefully see that as you multiply the 4D (RGBA) pixel values by the matrix that you get a manipulated pixel value out of the other side, and in this case one that zeros out the green and blue components.</p>
 
 <p>The <code>css_MixColor</code> is mainly used as a base color that you want to, well, mix in with your DOM content. The mixing is done through the blend modes that you'll be familiar with from art packages: overlay, screen, color dodge, hard light and so on.</p>
 
-<p>There are plenty of ways that these two variables can manipulate the pixels, and included in <a href="//goo.gl/e3KMp">my presentation</a> is a <a href="http://aerotwist.com/presentations/custom-filters/demos/demo2.html">demo that you can play around with</a>. You should check out the <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html#shader-processing-model">Custom Filters specification</a> to get a better handle on how the blend and composite modes interact.</p>
+<p>There are plenty of ways that these two variables can manipulate the pixels. You should check out the <a href="https://www.w3.org/TR/filter-effects-1/">Filter Effects specification</a> to get a better handle on how the blend and composite modes interact.</p>
 
 ## Vertex Creation
 
@@ -116,14 +117,14 @@ I've included a recorded version of a presentation I recently delivered to Londo
     .shader {
       /* transition on the filter property */
       -webkit-transition: -webkit-filter 2500ms ease-out;
-    
+
       -webkit-filter: custom(
         url(vshader.vert)
         mix(url(fshader.frag) normal source-atop),
         1 1,
         time 0);
     }
-    
+
      .shader:hover {
       -webkit-filter: custom(
         url(vshader.vert)
@@ -131,26 +132,26 @@ I've included a recorded version of a presentation I recently delivered to Londo
         1 1,
         time 1);
     }
-    
+
 
 <p>So the thing to notice in the code above is that time is going to ease from <code>0</code> to <code>1</code> during the transition. Inside the shader we can declare the uniform <code>time</code> and use whatever its current value is:</p>
 
 
     uniform float time;
-    
+
     uniform mat4 u_projectionMatrix;
     attribute vec4 a_position;
-    
+
     void main() {
       // copy a_position to position - attributes are read only!
       vec4 position = a_position;
-    
+
       // use our time uniform from the CSS declaration
       position.x += time;
-    
+
       gl_Position = u_projectionMatrix * position;
     }
-    
+
 
 ## Get Playing!
 
@@ -160,10 +161,10 @@ I've included a recorded version of a presentation I recently delivered to Londo
 
 <ul>
 <li><a href="https://github.com/WebGLTools/GL-Shader-Validator">GL Shader Validator</a></li>
-<li><a href="http://www.html5rocks.com/en/tutorials/webgl/shaders/">Intro to Shaders</a></li>
-<li><a href="http://alteredqualia.com/css-shaders/article/">Getting Started with CSS Custom Filters</a></li>
+<li><a href="https://www.html5rocks.com/en/tutorials/webgl/shaders/">Intro to Shaders</a></li>
+<li><a href="https://alteredqualia.com/css-shaders/article/">Getting Started with CSS Custom Filters</a></li>
 <li><a href="http://learningwebgl.com/blog/?page_id=1217">Learning WebGL</a></li>
-<li><a href="http://html.adobe.com/webstandards/csscustomfilters/cssfilterlab/">Adobe CSS Filter Lab</a></li>
+<li><a href="https://github.com/adobe/cssfilterlab">Adobe CSS Filter Lab</a></li>
 </ul>
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: WebM just added alpha transparency, and support for it has landed in Chrome Canary.
 
-{# wf_updated_on: 2018-08-07 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-07-25 #}
 {# wf_tags: news,video,webm #}
 {# wf_blink_components: N/A #}
@@ -27,7 +27,7 @@ screen](https://en.wikipedia.org/wiki/Chroma_key)' videos encoded to WebM with
 an alpha channel. This means you can play videos with transparent backgrounds: over web pages, images or even other videos.
 
 There's a demo at
-[simpl.info/videoalpha](https://simpl.info/videoalpha). This only works in Chrome Canary at this point, and you'll need to enable VP8 alpha transparency from the chrome://flags page. Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
+[simpl.info/videoalpha](https://simpl.info/videoalpha/). This only works in Chrome Canary at this point, and you'll need to enable VP8 alpha transparency from the chrome://flags page. Somewhat surreal, and a bit rough around the edges (literally) but you get the idea!
 
 ## How to make alpha videos
 
@@ -41,7 +41,7 @@ The method we describe uses the open source tools Blender and ffmpeg:
 
 There are
 also proprietary tools to do the same job, such as [Adobe After
-Effects](http://www.adobe.com/products/aftereffects.html), which you may find
+Effects](https://www.adobe.com/products/aftereffects.html), which you may find
 simpler.
 
 ### 1. Make a green screen video
@@ -52,13 +52,13 @@ background can be 'removed' (made transparent) by subsequent processing.
 The easiest way to do this is to film in front of a single color background,
 such as a screen or curtain. Green or blue are the colors most often used, mostly because of their difference from skin tones.
 
-There are [several](http://www.youtube.com/watch?v=M_WdLkaOUic) [guides](https://en.wikipedia.org/wiki/Chroma_key#Process) [online](http://www.youtube.com/watch?v=q3PZO_lCBkw) to filming green screen video (also known as
+There are [several](http://www.youtube.com/watch?v=M_WdLkaOUic) [guides](https://en.wikipedia.org/wiki/Chroma_key#Process) [online](https://www.youtube.com/watch?v=q3PZO_lCBkw) to filming green screen video (also known as
 chroma key) and [lots of
 places](https://www.google.com/search?tbm=shop&q=chromakey) to buy green and
 blue screen backdrops. Alternatively, you can paint a background with [chroma
 key paint](https://www.google.com/search?tbm=shop&q=chroma+key+paint).
 
-[The Great Gatsby VFX reel](http://vimeo.com/68451324) shows just how much can be accomplished with green screen.
+[The Great Gatsby VFX reel](https://vimeo.com/68451324) shows just how much can be accomplished with green screen.
 
 Some tips for filming:
 
@@ -75,7 +75,7 @@ Some tips for filming:
 
 The following steps describe one way to create a raw alpha video from green screen videos:
 
-1. Once you've shot a green screen video, you can use an open source tool like [Blender](http://www.blender.org/download/get-blender) to convert the video
+1. Once you've shot a green screen video, you can use an open source tool like [Blender](https://www.blender.org/download/) to convert the video
    to an array of PNG files with alpha data. Use Blender's color keying to
    remove the green screen and make it transparent. (Note that PNG is not
    compulsory: any format that preserves alpha channel data is fine.)
@@ -112,7 +112,7 @@ Raw alpha videos can be encoded to WebM in two ways.
 
 2. Using webm-tools:
    <br/>
-   `git clone http://git.chromium.org/webm/libvpx.git`<br/>
+   `git clone https://chromium.googlesource.com/webm/libvpx`<br/>
    <br/>
    webm-tools is a set of simple open source tools related to WebM, maintained by the WebM Project authors, including a tool for creating WebM videos with alpha transparency.<br/>
    <br/>
@@ -128,7 +128,7 @@ in about:flags or [set the command line
 flag](http://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 `--enable-vp8-alpha-playback` when you start Chrome. When the flag is enabled,
 alpha playback also works with
-[MediaSource](http://updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API).
+[MediaSource](/web/updates/2011/11/Stream-video-using-the-MediaSource-API).
 
 ### How did they do it?
 
