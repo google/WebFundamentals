@@ -281,7 +281,7 @@ modules. And hopefully you're excited! We'd really love for developers to try
 out the KV Storage module (as well as all the new features discussed here) and
 give us feedback.
 
-Here are the GibHub links where you can give us feedback for each of the
+Here are the GitHub links where you can give us feedback for each of the
 features mentioned in this article:
 
 - [KV Storage](https://github.com/WICG/kv-storage)
