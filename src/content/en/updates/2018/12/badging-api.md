@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen.
 
 {# wf_published_on: 2018-12-11 #}
-{# wf_updated_on: 2019-01-29 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/generic/notifications.png #}
 {# wf_tags: capabilities,badging,install,progressive-web-apps,serviceworker,notifications,origintrials #}
 {# wf_featured_snippet: The Badging API is a new web platform API that allows installed web apps to set an application-wide badge, shown in an operating-system-specific place associated with the application, such as the shelf or home screen. Badging makes it easy to subtly notify the user that there is some new activity that might require their attention, or it can be used to indicate a small amount of information, such as an unread count. #}
 {# wf_blink_components: UI>Browser>WebAppInstalls #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # Badging for App Icons {: .page-title }
 
@@ -19,10 +21,9 @@ description: The Badging API is a new web platform API that allows installed web
   We’re currently working on this API as part of the new
   <a href="/web/updates/capabilities">capabilities project</a>, and starting
   in Chrome 73 is available as an <a href="#ot"><b>origin trial</b></a>.
-  This post will be updated as the Badging API evolves, and was last updated on
-  January 29th, 2019.
+  This post will be updated as the Badging API evolves.<br>
+  <b>Last Updated:</b> March 12th, 2019
 </aside>
-
 
 ## What is the Badging API? {: #what }
 
@@ -62,7 +63,6 @@ Examples of sites that may use this API include:
 * Games, to signal that a player action is required (e.g., in Chess, when it
   is the player's turn).
 
-
 ## Current status {: #status }
 
 | Step                                       | Status                       |
@@ -73,6 +73,14 @@ Examples of sites that may use this API include:
 | **4. Origin trial**                        | [**In progress**](#ot)       |
 | 5. Launch                                  | Not started                  |
 
+### See it in action
+
+1. Using Chrome 73 or later on Windows or Mac, open the [Badging API demo][demo].
+2. When prompted, click **Install** to install the app , or use the Chrome
+   menu to install it, then open it as an installed PWA. Note, it must be
+   running as an installed PWA (in your task bar or dock).
+3. Click the **Set** or **Clear** button to set or clear the badge from the app
+   icon. You can also provide a number for the *Badge value*.
 
 ## How to use the badging API {: #use }
 
@@ -90,7 +98,6 @@ Android is not supported because it requires you to show a notification,
 though this may change in the future.
 Chrome OS support is pending implementation of badging on the platform.
 
-
 ### Register for the origin trial {: #ot }
 
 1. [Request a token][ot-request] for your origin.
@@ -103,6 +110,10 @@ Chrome OS support is pending implementation of badging on the platform.
        using an `Origin-Trial` HTTP header. The resulting response header should
        look something like: `Origin-Trial: TOKEN_GOES_HERE`
 
+### Alternatives to the origin trial
+
+If you want to experiment with the badging API locally, without an origin trial,
+enable the `#enable-experimental-web-platform-features` flag in `chrome://flags`.
 
 ### Using the badging API during the origin trial
 
@@ -117,12 +128,10 @@ and a user must add it to their home screen.
 The `ExperimentalBadge` interface is a member object on `window`. It contains
 two methods:
 
-
 * `set([number])`: Sets the app's badge. If a value is provided, set the badge
   to the provided value otherwise, display a plain white dot (or other flag as
   appropriate to the platform).
 * `clear()`: Removes app's badge.
-
 
 ```js
 // In a web page
@@ -154,7 +163,6 @@ needs and that we’re not missing any key scenarios.
   hear your feedback.
 </aside>
 
-
 We’re also interested to hear how you plan to use the Badging API:
 
 * Have an idea for a use case or an idea where you'd use it?
@@ -169,6 +177,7 @@ discussion.
 ## Helpful Links {: #helpful }
 
 * [Public explainer][explainer]
+* [Badging API Demo][demo] | [Badging API Demo source][demo-source]
 * [Tracking bug][cr-bug]
 * [ChromeStatus.com entry][cr-status]
 * Request an [origin trial token][ot-request]
@@ -181,10 +190,11 @@ discussion.
 [issues]: https://github.com/WICG/badging/issues
 [cr-bug]: https://bugs.chromium.org/p/chromium/issues/detail?id=719176
 [cr-status]: https://www.chromestatus.com/features/6068482055602176
+[demo]: https://badging-api.glitch.me/
+[demo-source]: https://glitch.com/edit/#!/badging-api?path=demo.js
 [explainer]: https://github.com/WICG/badging/blob/master/explainer.md
 [wicg-discourse]: https://discourse.wicg.io/t/badging-api-for-showing-an-indicator-on-a-web-apps-shelf-icon/2900
 [ot-what-is]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/README.md
 [ot-dev-guide]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
 [ot-use]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin
 [ot-request]: https://developers.chrome.com/origintrials/#/view_trial/1711367858400788481
-
