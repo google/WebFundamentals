@@ -217,7 +217,7 @@ something like this to map values from 0 to 1 to an eased equivalent.
     }
 
 You can use [Google search to plot what that looks
-like](https://www.google.com/search?q=1%20-%20((1-x)%5E4)%20from%200%20to%201)
+like](https://www.google.com/search?q=1%20-%20%28%281-x%29%5E4%29%20from%200%20to%201)
 as well. Handy! If you’re in need of other easing equations do check out
 [Tween.js by Soledad Penadés](https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L421-L737),
 which contains a whole heap of them.
