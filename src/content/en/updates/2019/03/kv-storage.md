@@ -9,7 +9,7 @@ description: An introduction to the new KV Storage API, built-in modules, and im
 {# wf_featured_snippet: An introduction to the new KV Storage API, built-in modules, and import maps. #}
 {# wf_blink_components: Blink>Storage #}
 
-# KV Storage, the Web's First Built-in Module {: .page-title }
+# KV Storage: the Web's First Built-in Module {: .page-title }
 
 {% include "web/_shared/contributors/philipwalton.html" %}
 
@@ -38,10 +38,12 @@ But what if it were possible to get the performance of an asynchronous storage
 API with the simplicity of the `localStorage` API, without having to pay the
 file size cost?
 
-Well, now there is. Chrome is experimenting with a new feature called [built-in
+Well, soon there may be. Chrome is
+[experimenting](https://groups.google.com/a/chromium.org/d/msg/blink-dev/sEwWEF80T4s/Nss9VxM3BAAJ)
+with a new feature known as [built-in
 modules](https://github.com/tc39/proposal-javascript-standard-library), and the
 first one we're planning to ship is an asynchronous key/value storage module
-called [KV Storage](https://github.com/WICG/kv-storage)
+called [KV Storage](https://github.com/WICG/kv-storage).
 
 But before I get into the details of the KV Storage module, let me explain
 what I mean by _built-in modules_.
@@ -54,8 +56,15 @@ are just like regular JavaScript
 except that they don't have to be downloaded because they ship with the browser.
 
 Like traditional web APIs, built-in modules must go through a standardization
-process and have well-defined specifications, but unlike traditional web APIs,
-they're not exposed on the global scope&mdash;they're only available via
+process &mdash; each will have its own specification that requires a [design
+review](https://github.com/w3ctag/design-reviews) and positive signs of
+support from both web developers and other browser vendors before it can ship.
+(In Chrome, built-in modules will follow the same [launch
+process](https://www.chromium.org/blink/launching-features) we use to implement
+and ship all new APIs.)
+
+Unlike traditional web APIs, built-in modules are not exposed on the global
+scope &mdash; they're only available via
 [imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
 Not exposing built-in modules globally has a lot of advantages: they won't add
@@ -144,12 +153,13 @@ If you're familiar with using native JavaScript modules in browsers, you
 probably know that (at least up until now) importing anything other than a URL
 will generate an error. And `std:kv-storage` is not a valid URL.
 
-So that raises the question: _do we have to wait until all browsers support
-built-in module before we can use it in our code?_
+So that raises the question: _do we have to wait until all browsers support a
+built-in module before we can use it in our code?_ Thankfully, the answer is no!
 
-Thankfully, the answer is **no!** You can actually use built-in modules in your
-code today, with the help of another new feature called
-[import maps](https://github.com/WICG/import-maps).
+You can actually use built-in modules as soon as even one browser supports them
+thanks to the help of another feature we're
+[experimenting](https://groups.google.com/a/chromium.org/d/msg/blink-dev/sEwWEF80T4s/Nss9VxM3BAAJ)
+with called [import maps](https://github.com/WICG/import-maps).
 
 ### Import maps
 
@@ -220,10 +230,10 @@ modules.
 
 ## KV Storage demo
 
-To illustrate that it's possible to use built-in modules today while still
-supporting older browsers, I've put together a
-[demo](https://rollup-built-in-modules.glitch.me/)
-that incorporates all the techniques described above:
+To illustrate that it's possible to use built-in modules while still supporting
+older browsers, I've put together a
+[demo](https://rollup-built-in-modules.glitch.me/) that incorporates all the
+techniques described above and runs in all browsers today:
 
 * Browsers that support modules, import maps, and the built-in module do not
   load any unneeded code.
@@ -275,10 +285,10 @@ code or even put breakpoints in it!):
 
 ## Please give us feedback
 
-This introduction should have given you a taste of what's possible with built-in
-modules. And hopefully you're excited! We'd really love for developers to try
-out the KV Storage module (as well as all the new features discussed here) and
-give us feedback.
+This introduction should have given you a taste of what may be possible with
+built-in modules. And hopefully you're excited! We'd really love for developers
+to try out the KV Storage module (as well as all the new features discussed
+here) and give us feedback.
 
 Here are the GitHub links where you can give us feedback for each of the
 features mentioned in this article:
@@ -289,9 +299,11 @@ features mentioned in this article:
 - [Import Maps](https://github.com/WICG/import-maps)
 
 If your site currently uses `localStorage`, you should try switching to the KV
-Storage API, and if you sign up for the [KV Storage origin
+Storage API to see if it meets all your needs. And if you sign up for the [KV
+Storage origin
 trial](https://developers.chrome.com/origintrials/#/trials/active), you can
-actually deploy your changes today! All your users should benefit from better
-performance, and Chrome 74+ users won't have to pay any extra download cost.
+actually deploy these features today. All your users should benefit from better
+storage performance, and Chrome 74+ users won't have to pay any extra download
+cost.
 
 {% include "web/_shared/rss-widget-updates.html" %}
