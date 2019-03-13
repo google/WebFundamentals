@@ -182,14 +182,14 @@ toc:
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security
   path: /web/tools/chrome-devtools/security/
-- title: Storage and Resources
+- title: Storage
   section:
+  - title: Cookies
+    path: /web/tools/chrome-devtools/storage/cookies
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
-  - title: Inspect and Delete Cookies
-    path: /web/tools/chrome-devtools/manage-data/cookies
-  - title: Inspect Resources
-    path: /web/tools/chrome-devtools/manage-data/page-resources
+- title: Resources
+  path: /web/tools/chrome-devtools/manage-data/page-resources
 - title: Extend DevTools
   section:
   - title: Integrating with DevTools and Chrome

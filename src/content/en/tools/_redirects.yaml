@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/manage-data/cookies
+  to:   /web/tools/chrome-devtools/storage/cookies
+
 - from: /web/tools/chrome-devtools/network-performance/
   to:   /web/tools/chrome-devtools/network/
 
