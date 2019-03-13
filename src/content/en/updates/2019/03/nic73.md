@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 73 for developers?
 
 {# wf_published_on: 2019-03-12 #}
-{# wf_updated_on: 2019-03-11 #}
+{# wf_updated_on: 2019-03-13 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome73,new-in-chrome,desktop,progressive-web-apps,webpackage,css,regex #}
 {# wf_featured_snippet: Chrome 73 makes creating portable content easier with signed HTTP exchanges. Dynamically changing styles becomes way easier with constructable style sheets. And adds support for Progressive Web Apps on Mac, bringing support for PWAs to all desktop and mobile platforms, making it easy to create installable apps, delivered through the web. Let’s dive in and see what’s new for developers in Chrome 73! #}
@@ -192,7 +192,14 @@ there’s plenty more.
 * The `<link>` element now supports `imagesrcset` and `imagesizes` properties
   to correspond to `srcset` and `sizes` attributes of `HTMLImageElement`.
 * Blink's shadow blur radius implementation, now matches Firefox and Safari.
-* Dark mode is now supported on Mac, and Windows support is on the way.
+* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on 
+  the way. In addition, there's work on a CSS media query:
+  [`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme),
+  that can be used to detect if the user has requested the system use a light
+  or dark color theme. The tracking bug for this is
+  **Add support for CSS `prefers-color-scheme` media feature**
+  For [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=889087),
+  and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1494034).
 
 <div class="clearfix"></div>
 
