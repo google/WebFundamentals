@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2019-03-13 #}
+{# wf_updated_on: 2019-03-21 #}
 {# wf_published_on: 2018-06-26 #}
 {# wf_tags: ux,chrome60,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
@@ -208,17 +208,14 @@ This example would do the following:
 
 ## JavaScript API {: #js }
 
-Heads up: While Chrome 60 added support for the `Feature-Policy` HTTP header
-and the `allow` attribute on iframes, the [JavaScript API][jsapi] is still
-being fleshed out and is likely to change as it goes through the standardization
-process. You can enable the API using the
-`--enable-experimental-web-platform-features` flag in `chrome:flags`.
-{: .dogfood }
+While Chrome 60 added support for the `Feature-Policy` HTTP header and the
+`allow` attribute on iframes, the [JavaScript API][jsapi] was added in chrome
+74.
 
-Feature Policy includes a small [JavaScript API][jsapi] to allow client-side
-code to determine what features are allowed by a page or frame. You can access
-its goodies under `document.featurePolicy` for the main document or
-`frame.featurePolicy` for iframes.
+This API allows client-side code to determine which features are allowed by a
+page, frame, or browser. You can access its goodies under
+`document.featurePolicy` for the main document or `frame.featurePolicy` for
+iframes.
 
 ### Example {: #jsexample }
 
