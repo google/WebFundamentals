@@ -4,7 +4,7 @@ description: Feature Policy allows developers to selectively enable, disable, an
 
 {# wf_updated_on: 2019-03-21 #}
 {# wf_published_on: 2018-06-26 #}
-{# wf_tags: ux,chrome60,feature-policy #}
+{# wf_tags: ux,chrome60,chrome74,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
 {# wf_featured_snippet: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60. #}
 {# wf_blink_components: Blink>FeaturePolicy #}
