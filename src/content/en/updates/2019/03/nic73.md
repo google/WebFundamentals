@@ -192,8 +192,8 @@ there’s plenty more.
 * The `<link>` element now supports `imagesrcset` and `imagesizes` properties
   to correspond to `srcset` and `sizes` attributes of `HTMLImageElement`.
 * Blink's shadow blur radius implementation, now matches Firefox and Safari.
-* Dark mode is now supported on Mac, and Windows support is on the way. In
-  addition, there's work on a CSS media query:
+* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on 
+  the way. In addition, there's work on a CSS media query:
   [`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme),
   that can be used to detect if the user has requested the system use a light
   or dark color theme. The tracking bug for this is
