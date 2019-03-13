@@ -27,7 +27,7 @@ you how to view, edit, and delete a page's cookies with Chrome DevTools.
        <img src="/web/tools/chrome-devtools/storage/imgs/manifest.png"
             alt="The Manifest pane"/>
        <figcaption>
-         <b>Figure X</b>. The Manifest pane
+         <b>Figure 1</b>. The Manifest pane
        </figcaption>
      </figure>
 
@@ -37,7 +37,7 @@ you how to view, edit, and delete a page's cookies with Chrome DevTools.
        <img src="/web/tools/chrome-devtools/storage/imgs/cookies.png"
             alt="The Cookies pane"/>
        <figcaption>
-         <b>Figure X</b>. The Cookies pane
+         <b>Figure 2</b>. The Cookies pane
        </figcaption>
      </figure>
 
@@ -76,7 +76,7 @@ fields is not supported.
   <img src="/web/tools/chrome-devtools/storage/imgs/filtercookies.png"
        alt="Filtering out any cookies that don't contain the text 'NID'"/>
   <figcaption>
-    <b>Figure X</b>. Filtering out any cookies that don't contain the text <code>NID</code>
+    <b>Figure 3</b>. Filtering out any cookies that don't contain the text <code>NID</code>
   </figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ Double-click a field to edit it.
   <img src="/web/tools/chrome-devtools/storage/imgs/editcookie.png"
        alt="Setting the name of a cookie to 'DEVTOOL!'"/>
   <figcaption>
-    <b>Figure X</b>. Setting the name of a cookie to <code>DEVTOOLS!</code>
+    <b>Figure 4</b>. Setting the name of a cookie to <code>DEVTOOLS!</code>
   </figcaption>
 </figure>
 
@@ -103,7 +103,7 @@ Select a cookie and then click **Delete Selected** ![Delete Selected][delete]{: 
   <img src="/web/tools/chrome-devtools/storage/imgs/deletecookie.png"
        alt="Deleting a selected cookie"/>
   <figcaption>
-    <b>Figure X</b>. Deleting a selected cookie
+    <b>Figure 5</b>. Deleting a selected cookie
   </figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ Click **Clear All** ![Clear All][clear]{: .inline-icon } to delete all cookies.
   <img src="/web/tools/chrome-devtools/storage/imgs/clearallcookies.png"
        alt="Clearing all cookies"/>
   <figcaption>
-    <b>Figure X</b>. Clearing all cookies
+    <b>Figure 6</b>. Clearing all cookies
   </figcaption>
 </figure>
 
