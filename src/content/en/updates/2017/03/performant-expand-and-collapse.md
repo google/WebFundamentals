@@ -7,6 +7,7 @@ description: When making expand and collapse effects you can use scale transform
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/performant-expand-and-collapse/featured-image.jpg #}
 {# wf_featured_snippet: When making expand and collapse effects you can use scale transforms to keep your UI performant. #}
+{# wf_blink_components: N/A #}
 
 
 # Building performant expand & collapse animations {: .page-title }
