@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Web Payments allows any websites to act as a payment handler for the Payment Request API. Learn how to do it.
 
 {# wf_published_on: 2018-09-10 #}
-{# wf_updated_on: 2018-09-21 #}
+{# wf_updated_on: 2019-03-14 #}
 {# wf_blink_components: Blink>Payments #}
 
 # Web based payment apps developer guide {: .page-title }
@@ -29,6 +29,9 @@ related specifications like [Payment Method
 Identifier](https://www.w3.org/TR/payment-method-id/) and [Payment Method
 Manifest](https://www.w3.org/TR/payment-method-manifest/), the Payment Handler
 API can be integrated into and made available through the Payment Request API.
+
+![Web based payment apps diagram](/web/fundamentals/payments/images/web-payment-apps/payment-handler-flow.png)
+
 This document describes how you can implement a web-based payment app using the
 Payment Handler API.
 
