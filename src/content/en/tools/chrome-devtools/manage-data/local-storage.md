@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, databases, and caches from the Application panel.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-03-14 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -23,25 +23,9 @@ Inspect and manage storage, databases, and caches from the
 
 ## Local storage {:#local-storage}
 
-If you're using [local storage][ls] to store key-value pairs (KVPs), you can
-inspect, modify, and delete these KVPs from the **Local Storage** pane.
+[LS]: /web/tools/chrome-devtools/storage/localstorage
 
-![local storage pane][ls-pane]
-
-* Double-click on a key or value to edit that value.
-* Double-click on an empty cell to add a new KVP.
-* Click on a KVP and then press the **delete** button
-  (![delete button][delete]{:.inline}) to delete that KVP. You can
-  wipe all of your local storage data with a single button click from the
-  [**Clear storage** pane](#clear-storage).
-* If you're interacting with a page in a way that creates, deletes, or modifies
-  KVPs, you won't see those changes get updated in realtime. Click the
-  **refresh** button (![refresh button][refresh]{:.inline}) to see your changes.
-
-[ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-[ls-pane]: /web/tools/chrome-devtools/manage-data/imgs/local-storage.png
-[refresh]: /web/tools/chrome-devtools/manage-data/imgs/refresh.png
-[delete]: /web/tools/chrome-devtools/manage-data/imgs/delete.png
+See [View, Edit, And Delete localStorage With Chrome DevTools][LS].
 
 ## Session storage {:#session-storage}
 
