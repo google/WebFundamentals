@@ -25,15 +25,13 @@ Inspect and manage storage, databases, and caches from the
 
 [LS]: /web/tools/chrome-devtools/storage/localstorage
 
-See [View, Edit, And Delete localStorage With Chrome DevTools][LS].
+See [View And Edit Local Storage With Chrome DevTools][LS].
 
 ## Session storage {:#session-storage}
 
-The **Session Storage** pane works the same as the **Local Storage**
-pane. Check out the [Local storage](#local-storage) section above to learn how
-to view and edit [session storage][ss].
+[SS]: /web/tools/chrome-devtools/storage/sessionstorage
 
-[ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+See [View And Edit Session Storage With Chrome DevTools][SS].
 
 ## IndexedDB {:#indexeddb}
 

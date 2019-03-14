@@ -186,8 +186,10 @@ toc:
   section:
   - title: Cookies
     path: /web/tools/chrome-devtools/storage/cookies
-  - title: localStorage
+  - title: Local Storage
     path: /web/tools/chrome-devtools/storage/localstorage
+  - title: Session Storage
+    path: /web/tools/chrome-devtools/storage/sessionstorage
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
 - title: Resources
