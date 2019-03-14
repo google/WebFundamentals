@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/manage-data/page-resources
+  to:   /web/tools/chrome-devtools/resources/
+
 - from: /web/tools/chrome-devtools/manage-data/cookies
   to:   /web/tools/chrome-devtools/storage/cookies
 
