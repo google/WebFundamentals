@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This article explains how to build a device to take full advantage of the WebUSB API.
 
-{# wf_updated_on: 2019-01-24 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2018-12-20 #}
 {# wf_blink_components: Blink>USB #}
 
@@ -596,10 +596,14 @@ to peripherals:
 
     SUBSYSTEM=="usb", ATTR{idVendor}=="XXXX", ATTR{idProduct}=="XXXX", GROUP="plugdev"
 
-Replace `XXXX` with the hexadecimal vendor and product IDs for your device.
-These can be found by running a command like `lsusb`. This rule can be placed in
-a file in the `/etc/udev/rules.d` directory and takes effect as soon as the
-device is plugged in. No need to restart udev.
+Replace `XXXX` with the hexadecimal vendor and product IDs for your device,
+e.g. `ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e11"` would match a Nexus One
+phone. These must be written without the usual "0x" prefix and all lowercase
+to be recognized correctly. To find the IDs for your device run the command line
+tool `lsusb`.
+
+This rule should be placed in a file in the `/etc/udev/rules.d` directory and
+takes effect as soon as the device is plugged in. No need to restart udev.
 
 ### Android
 
