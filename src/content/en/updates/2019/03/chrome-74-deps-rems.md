@@ -48,7 +48,12 @@ Removal is expected in Chrome 74.
 
 ### Remove PaymentAddress's languageCode property
 
-The `PaymentAddress.languageCode` property has been removed from the Payment Request API. This property is the browser's best guess for the language of the text in the shipping, billing, delivery, or pickup address in Payment Request API. The languageCode property is marked at risk in the specification and has already been removed from Firefox and Safari. Usage in Chrome is small enough for safe removal.
+The `PaymentAddress.languageCode` property has been removed from the Payment
+Request API. This property is the browser's best guess for the language of the
+text in the shipping, billing, delivery, or pickup address in the Payment
+Request API. The languageCode property is marked at risk in the specification
+and has already been removed from Firefox and Safari. Usage in Chrome is small
+enough for safe removal.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-reviews/aBGjyKqok50/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/4992562146312192) &#124;
