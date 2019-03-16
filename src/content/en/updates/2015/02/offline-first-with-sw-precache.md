@@ -3,9 +3,10 @@ book_path: /web/updates/_book.yaml
 description: Add service worker-powered offline capabilities to your site with the sw-precache module.
 
 
-{# wf_updated_on: 2015-02-22 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-02-22 #}
 {# wf_tags: news,serviceworker,offline,cache,performance #}
+{# wf_blink_components: N/A #}
 
 # Offline-first, fast, with the sw-precache module {: .page-title }
 
@@ -18,13 +19,13 @@ it possible for web <em>pages</em> to act more like web <em>applications</em>. U
 like [background sync](https://www.chromestatus.com/feature/6170807885627392)
 and [push notifications](https://www.chromestatus.com/feature/5416033485586432)
 will rely on service workers, and following the
-[release of Chrome 40](http://blog.chromium.org/2014/12/chrome-40-beta-powerful-offline-and.html),
+[release of Chrome 40](https://blog.chromium.org/2014/12/chrome-40-beta-powerful-offline-and.html),
 service worker-based caching is available to use today. If you’ve wanted to add service worker-powered
 offline support to your sites, but weren’t sure how to get started, the
 <strong><code><a href="https://github.com/jeffposnick/sw-precache">sw-precache</a></code></strong>
 module is for you! <code>sw-precache</code> hooks into your existing <code>node</code>-based build
-process (e.g. <code><a href="http://gulpjs.com/">Gulp</a></code> or
-<code><a href="http://gruntjs.com/">Grunt</a></code>) and generates a list of versioned resources,
+process (e.g. <code><a href="https://gulpjs.com/">Gulp</a></code> or
+<code><a href="https://gruntjs.com/">Grunt</a></code>) and generates a list of versioned resources,
 along with the service worker code needed to precache them. Your site can start working offline and
 load faster even while online, by virtue of caching.
 
@@ -35,7 +36,7 @@ offline, and load fast on subsequent visits without any extra effort. For sites 
 dynamic content, or many large images that aren’t always needed, precaching a
 “skeleton” subset of your site often makes the most sense. You can combine <code>sw-precache</code> with one
 of the [service worker “recipes”](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) or
-techniques outlined in the [offline cookbook](http://jakearchibald.com/2014/offline-cookbook/) to provide a
+techniques outlined in the [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) to provide a
 robust offline experience with sensible fallbacks—e.g. when a
 large, uncached image is requested offline, serve up a smaller, cached
 placeholder image instead.
@@ -57,13 +58,13 @@ Here’s a basic example of using <code>sw-precache</code> as part of a <code>gu
       var path = require('path');
       var swPrecache = require('sw-precache');
       var rootDir = 'app';
-    
+
       swPrecache.write(path.join(rootDir, 'service-worker.js'), {
         staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif}'],
         stripPrefix: rootDir
       }, callback);
     });
-    
+
 
 You’ll see information about which resources will be precached, as well as the
 total precache size as part of the task output:
@@ -79,7 +80,7 @@ total precache size as part of the task output:
     Caching static resource 'app/js/service-worker-registration.js' (3.37 kB)
     Total precache size is about 6.77 kB for 7 resources.
     Finished 'generate-service-worker' after 14 ms
-    
+
 
 There’s a lot more information at the
 [GitHub project page](https://github.com/jeffposnick/sw-precache), including a demo project with

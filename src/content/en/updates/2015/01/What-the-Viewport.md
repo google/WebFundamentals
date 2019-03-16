@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The virtual viewport separates layout and viewing of the viewport.
 
-{# wf_updated_on: 2018-07-31 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,virtualviewport #}
 {# wf_blink_components: N/A #}
@@ -13,7 +13,7 @@ description: The virtual viewport separates layout and viewing of the viewport.
 
 
 
-In [Chrome M40](https://code.google.com/p/chromium/issues/detail?id=148816)
+In [Chrome M40](https://bugs.chromium.org/p/chromium/issues/detail?id=148816)
 there is a change to the viewport that is pretty subtle, but should make a big
 difference to users.
 

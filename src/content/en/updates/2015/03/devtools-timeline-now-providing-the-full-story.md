@@ -3,17 +3,18 @@ book_path: /web/updates/_book.yaml
 description: We've upgraded the Timeline panel for Chrome DevTools to give developers more insight on their site’s runtime performance.
 
 
-{# wf_updated_on: 2015-05-07 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-03-23 #}
 {# wf_tags: devtools,timeline #}
 {# wf_featured_image: /web/updates/images/2015-04-20-DevTools-Timeline/draw-calls.png #}
+{# wf_blink_components: N/A #}
 
 # DevTools Timeline: Now Providing the Full Story {: .page-title }
 
 {% include "web/_shared/contributors/heathermahan.html" %}
 
 
-The DevTools [Timeline panel](https://developer.chrome.com/devtools/docs/timeline) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
+The DevTools [Timeline panel](/web/tools/chrome-devtools/evaluate-performance/timeline-tool) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.
 
 We’ve added the following features:
 
@@ -25,7 +26,7 @@ Note that using the __Paint__ capture options described in this article do incur
 
 ## Integrated JavaScript Profiler
 
-If you’ve ever poked around in __Profiles__ panel, you’re probably familiar with the [JavaScript CPU profiler](https://developer.chrome.com/devtools/docs/cpu-profiling). This tool measures where execution time is spent in your JavaScript functions. By viewing JavaScript profiles with the Flame Chart, you can visualize your JavaScript processing over time.
+If you’ve ever poked around in __Profiles__ panel, you’re probably familiar with the [JavaScript CPU profiler](/web/tools/chrome-devtools/rendering-tools/). This tool measures where execution time is spent in your JavaScript functions. By viewing JavaScript profiles with the Flame Chart, you can visualize your JavaScript processing over time.
 
 Now, you can get this granular breakdown of your JavaScript execution in the __Timeline__ panel. By selecting the __JS Profiler__ capture option, you can see your JavaScript call stacks in the Timeline along with other browser events. Adding this feature to the Timeline helps streamline your debugging workflow. But more than that, it allows you to view your JavaScript in context and identify the parts of your code that affect page load time and rendering.
 
@@ -40,7 +41,7 @@ Note: Use WASD to zoom and pan through the Flame Chart. Shift-drag to draw a sel
 
 ## Frame Viewer
 
-The art of [layer compositing](http://www.html5rocks.com/en/tutorials/speed/layers/){: .external } is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using the Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
+The art of [layer compositing](https://www.html5rocks.com/en/tutorials/speed/layers/){: .external } is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using the Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
 
 When you select a gray frame bar above the __Main Thread__, its __Layers__ panel provides a visual model of the layers that compose your app.
 
@@ -57,7 +58,7 @@ You can zoom, rotate, and drag the layers model to explore its contents. Hoverin
 
 <p style="text-align: center; text-align: center; margin: 2em 0 2em 0;">
   <img style="max-width: 100%; height: auto;" src="/web/updates/images/2015-04-20-DevTools-Timeline/compositing-reasons.png" alt="Compositing Reasons" />
-  <span style="color: #999; display: block; margin-top: 1em;">Inspecting a layer from <a href="http://tympanus.net/Development/ScatteredPolaroidsGallery/">Codrops' Scattered Polaroids Gallery</a> to reveal the browser’s reasons for compositing.</span>
+  <span style="color: #999; display: block; margin-top: 1em;">Inspecting a layer from <a href="https://tympanus.net/Development/ScatteredPolaroidsGallery/">Codrops' Scattered Polaroids Gallery</a> to reveal the browser’s reasons for compositing.</span>
 </p>
 
 ## Paint Profiler
