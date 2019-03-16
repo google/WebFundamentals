@@ -3,9 +3,10 @@ book_path: /web/updates/_book.yaml
 description: Use theme-color to set the toolbar color in Chrome for Android.
 
 
-{# wf_updated_on: 2014-11-06 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-11-06 #}
 {# wf_tags: news,mobile,frontend #}
+{# wf_blink_components: N/A #}
 
 # Support for theme-color in Chrome 39 for Android {: .page-title }
 
@@ -17,7 +18,7 @@ Starting in version 39 of Chrome for Android on Lollipop, you’ll now be able
 to use the `theme-color` meta tag to set the toolbar color—this means no more
 Seattle gray toolbars! The syntax is pretty simple: add a `meta` tag to your
 page’s `<head>` with the `name="theme-color"`, and set the `content` to any
-valid CSS color.  
+valid CSS color.
 
 For example, to set the background to your favorite color or HTML5Rocks orange:
 

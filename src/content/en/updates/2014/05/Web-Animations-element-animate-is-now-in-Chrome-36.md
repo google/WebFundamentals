@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web Animations define a model for supporting animation and synchronization on the Web platform. element.animate() is the first of those pieces landing in Chrome.
 
-{# wf_updated_on: 2014-10-06 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-05-21 #}
 {# wf_tags: news,elementanimate,webanimations #}
+{# wf_blink_components: N/A #}
 
 # Web Animations - element.animate() is now in Chrome 36 {: .page-title }
 
@@ -13,9 +14,9 @@ description: Web Animations define a model for supporting animation and synchron
 
 Animation on the web was once the province of JavaScript, but as the world moved to mobile, animations moved to CSS for the declarative syntax and the optimizations browsers were able to make with it. With 60fps on mobile always your goal, it makes sense to never step outside of what browsers know how to efficiently display.
 
-More tools are appearing to make JavaScript-driven animations more efficient, but the holy grail is a unification of [declarative and imperative animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative) , where the decision of how to write your animations is based on what's the clearest code, not what is possible in one form and not in the other.
+More tools are appearing to make JavaScript-driven animations more efficient, but the holy grail is a unification of [declarative and imperative animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/#toc-imperative-declarative) , where the decision of how to write your animations is based on what's the clearest code, not what is possible in one form and not in the other.
 
-[Web Animations](http://dev.w3.org/fxtf/web-animations/) stand to answer that call, and the first part of it has landed in Chrome 36 in the form of <code>element.animate()</code>. This new function lets you create an animation purely in JavaScript and have it run as efficiently as any CSS Animation or Transition (in fact, as of Chrome 34, [the exact same Web Animations engine drives all of these methods](http://updates.html5rocks.com/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions)).
+[Web Animations](https://drafts.fxtf.org/web-animations/) stand to answer that call, and the first part of it has landed in Chrome 36 in the form of <code>element.animate()</code>. This new function lets you create an animation purely in JavaScript and have it run as efficiently as any CSS Animation or Transition (in fact, as of Chrome 34, [the exact same Web Animations engine drives all of these methods](/web/updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions)).
 
 The syntax is simple, and its parts should be familiar to you if you've ever written a CSS Transition or Animation:
 
@@ -30,12 +31,12 @@ The syntax is simple, and its parts should be familiar to you if you've ever wri
         iterations: iterationCount,
         delay: delayValue
     });
-    
+
 
 
 The biggest advantage of this new function is the elimination of a lot of awkward hoops we formerly had to jump through to get a smooth, jank-free animation.
 
-As an example, for [Santa Tracker](http://www.google.co.uk/santatracker/){: .external } last year, we wanted to have snow falling continuously, and we decided to animate it via CSS so that it could be [done so efficiently](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
+As an example, for [Santa Tracker](https://santatracker.google.com/){: .external } last year, we wanted to have snow falling continuously, and we decided to animate it via CSS so that it could be [done so efficiently](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
 However, we wanted to pick the snow's horizontal position dynamically based on screen and events going on in the scene itself, and of course the height of the snow's fall (the height of the user's browser window) wouldn't be known until we were actually running. This meant we really had to use CSS Transitions, as authoring a CSS Animation at runtime gets complex quickly (and hundreds of snowflakes means hundreds of new styling rules).
 
@@ -48,7 +49,7 @@ So we took the following approach, which should be familiar:
     snowFlake.style.transitionProperty = 'transform';
     snowFlake.style.transitionDuration = '1500ms';
     snowFlake.style.transform = 'translate(' + snowLeft + 'px, ' + window.innerHeight + 'px)';
-    
+
 
 
 The key is in that 'wait a frame' comment. In order to successfully start a transition, the browser has to acknowledge that the element is in the starting position. There are a few ways to do this. One of the most common ways is to read from one of the element properties that forces the browser to compute layout, thereby ensuring it knows that the element has a starting position before transitioning to the ending position. Using this method allows you to congratulate yourself on your superior knowledge of browser internals while still feeling dirty with every keystroke.
@@ -60,7 +61,7 @@ In contrast, the equivalent `element.animate()` call couldn't be more clear, say
       {transform: 'translate(' + snowLeft + 'px, -100%)'},
       {transform: 'translate(' + snowLeft + 'px, ' + window.innerHeight + 'px)'}
     ], 1500);
-    
+
 
 
 There are many more options. Just like with its CSS counterparts, Web Animations can be delayed and iterated:
@@ -74,7 +75,7 @@ There are many more options. Just like with its CSS counterparts, Web Animations
       iterations: 10,
       delay: 300
     });
-    
+
 
 
 ## AnimationPlayer
@@ -90,7 +91,7 @@ For now, though, AnimationPlayer only has two pieces of functionality, both very
     ], 1500);
     // less than 1500ms later...changed my mind
     player.cancel();
-    
+
 
 
 And, to the relief of everyone who has attempted to build an animation system around CSS Animations or Transitions in the past, Web Animations always fire an event when they're finished:
@@ -103,7 +104,7 @@ And, to the relief of everyone who has attempted to build an animation system ar
     player.onfinish = function(e) {
       console.log('per aspera ad terra!');
     }
-    
+
 
 
 ## Try it out

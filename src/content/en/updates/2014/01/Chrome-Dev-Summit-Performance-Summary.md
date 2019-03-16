@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Performance Matters
 
-{# wf_updated_on: 2014-01-07 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2014-01-07 #}
 {# wf_tags: news,mobile,performance #}
+{# wf_blink_components: N/A #}
 
 # Chrome Dev Summit: Performance Summary {: .page-title }
 
@@ -20,7 +21,7 @@ Knowing your way around your development tools is key to becoming a performance 
   <iframe class="devsite-embedded-youtube-video" data-video-id="8MMmg3bDOjc"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 + You can now profile Chrome on Android with the DevTools you know and love from desktop.
 + The iteration loop for performance work is: gather data, achieve insight, take action.
@@ -32,13 +33,13 @@ Knowing your way around your development tools is key to becoming a performance 
 
 Network and latency typically accounts for 70% of a site’s total page load time. That’s a large percentage, but it also means that any improvements you make there will reap huge benefits for your users. In this talk Ilya stepped through recent changes in Chrome that will improve loading time, as well as a few changes you can make in your environment to help keep network load to an absolute minimum.
 
-[Slides](http://bit.ly/cds-network)
+[Slides](https://bit.ly/cds-network)
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="MOEiQ6sjeaI"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 + Chrome M27 has a new and improved resource scheduler.
 + Chrome M28 has made SPDY sites (even) faster.
@@ -57,7 +58,7 @@ Hitting 60fps in your projects directly correlates to user engagement and is cru
   <iframe class="devsite-embedded-youtube-video" data-video-id="YyQYhhy1dZI"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 + A frame is 16ms long. It contains JavaScript, style calculations, painting and compositing.
 + Painting is _extremely_ expensive. A Paint Storm is where you unnecessarily repeat expensive paint work.
@@ -74,7 +75,7 @@ The Critical Rendering Path refers to anything (JavaScript, HTML, CSS, images) t
   <iframe class="devsite-embedded-youtube-video" data-video-id="VKTWdaupft0"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 + Eliminate render-blocking JavaScript and CSS.
 + Prioritize visible content.

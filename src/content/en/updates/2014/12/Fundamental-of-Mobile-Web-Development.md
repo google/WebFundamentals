@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A quick look at some of the efforts the Chrome team are doing to helps developers get started with Web Development and iterate on their sites.
 
-{# wf_updated_on: 2018-08-07 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-12-01 #}
 {# wf_tags: news,fundamentals,mobile,frontend #}
 {# wf_blink_components: N/A #}
@@ -11,8 +11,7 @@ description: A quick look at some of the efforts the Chrome team are doing to he
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/){: .external } there was a
-whole host of topics and brand spanking new API's covered, but its not all about
+At [Chrome Dev Summit 2014](/web/showcase/2015/chrome-dev-summit) there was a whole host of topics and brand spanking new API's covered, but its not all about
 the new and shiny.
 
 <div class="video-wrapper">
@@ -43,7 +42,7 @@ quickly as possible.
 
 One of the main goals of Web Fundamentals is to ensure that if you are new to a
 topic, the guidance reduces "choice paralysis" as much as possible. [Addy
-Osmani](http://addyosmani.com) covers this perfectly over at [Pastry
+Osmani](https://addyosmani.com/) covers this perfectly over at [Pastry
 Box](https://the-pastry-box-project.net/addy-osmani/2014-January-19).
 
 If you do spot any issues with the site or it's content or you'd like Web
@@ -113,11 +112,11 @@ encourages style driven development. You can alter existing styles to elements
 and add your own.
 
 In the next version of WSK, due for release early next year, we are working hard
-to simplify how the styleguide fits together and switching to a [Material
-Design](https://github.com/google/web-starter-kit/tree/material-sprint) look and
-feel. [Matt ](http://youtu.be/z6dg_V22wV0?t=15m5s)[showed
-an](http://youtu.be/z6dg_V22wV0?t=15m5s)[ early
-mock](http://youtu.be/z6dg_V22wV0?t=15m5s) of what this may look like at Chrome
+to simplify how the styleguide fits together and switching to a [material
+design](https://github.com/google/web-starter-kit/tree/material-sprint) look and
+feel. [Matt ](https://youtu.be/z6dg_V22wV0?t=15m5s)[showed
+an](https://youtu.be/z6dg_V22wV0?t=15m5s)[ early
+mock](https://youtu.be/z6dg_V22wV0?t=15m5s) of what this may look like at Chrome
 Dev Summit and you can see an example below.
 
 <p style="text-align: center;">
