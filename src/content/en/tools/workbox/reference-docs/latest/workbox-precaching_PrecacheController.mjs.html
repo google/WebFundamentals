@@ -199,7 +199,7 @@ class PrecacheController {
     let cacheWillUpdateCallback;
     for (const plugin of (plugins || [])) {
       if (&#x27;cacheWillUpdate&#x27; in plugin) {
-        cacheWillUpdateCallback &#x3D; plugin.cacheWillUpdate;
+        cacheWillUpdateCallback &#x3D; plugin.cacheWillUpdate.bind(plugin);
       }
     }
 

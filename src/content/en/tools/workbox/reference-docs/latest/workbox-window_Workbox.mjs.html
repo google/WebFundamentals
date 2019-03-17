@@ -127,10 +127,10 @@ class Workbox extends EventTargetShim {
 
     this._registration &#x3D; await this._registerScript();
 
-    // Only resolve deferreds now if we know we have a compatible controller.
+    // If we have a compatible controller, store the controller as the &quot;own&quot;
+    // SW, resolve active/controlling deferreds and add necessary listeners.
     if (this._compatibleControllingSW) {
       this._sw &#x3D; this._compatibleControllingSW;
-      this._swDeferred.resolve(this._compatibleControllingSW);
       this._activeDeferred.resolve(this._compatibleControllingSW);
       this._controllingDeferred.resolve(this._compatibleControllingSW);
 
@@ -140,17 +140,21 @@ class Workbox extends EventTargetShim {
     }
 
     // If there&#x27;s a waiting service worker with a matching URL before the
-    // &#x60;updatefound&#x60; event fires, it likely means the this site is open
-    // in another tab, or the user refreshed the page without unloading it
-    // first.
+    // &#x60;updatefound&#x60; event fires, it likely means that this site is open
+    // in another tab, or the user refreshed the page (and thus the prevoius
+    // page wasn&#x27;t fully unloaded before this page started loading).
     // /web/fundamentals/primers/service-workers/lifecycle#waiting
-    if (this._registration.waiting &amp;amp;&amp;amp;
-        urlsMatch(this._registration.waiting.scriptURL, this._scriptURL)) {
+    const waitingSW &#x3D; this._registration.waiting;
+    if (waitingSW &amp;amp;&amp;amp; urlsMatch(waitingSW.scriptURL, this._scriptURL)) {
+      // Store the waiting SW as the &quot;own&quot; Sw, even if it means overwriting
+      // a compatible controller.
+      this._sw &#x3D; waitingSW;
+
       // Run this in the next microtask, so any code that adds an event
       // listener after awaiting &#x60;register()&#x60; will get this event.
       Promise.resolve().then(() &#x3D;&gt; {
         this.dispatchEvent(new WorkboxEvent(&#x27;waiting&#x27;, {
-          sw: this._registration.waiting,
+          sw: waitingSW,
           wasWaitingBeforeRegister: true,
         }));
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
@@ -158,6 +162,11 @@ class Workbox extends EventTargetShim {
               &#x27;before this script was registered...&#x27;);
         }
       });
+    }
+
+    // If an &quot;own&quot; SW is already set, resolve the deferred.
+    if (this._sw) {
+      this._swDeferred.resolve(this._sw);
     }
 
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
@@ -233,21 +242,27 @@ class Workbox extends EventTargetShim {
    * Resolves with a reference to a service worker that matches the script URL
    * of this instance, as soon as it&#x27;s available.
    *
-   * If, at registration time, there’s already an active service worker with a
-   * matching script URL, that will be what is resolved. If there’s no active
-   * and matching service worker at registration time then the promise will
-   * not resolve until an update is found and starts installing, at which
-   * point the installing service worker is resolved.
+   * If, at registration time, there&#x27;s already an active or waiting service
+   * worker with a matching script URL, it will be used (with the waiting
+   * service worker taking precedence over the active service worker if both
+   * match, since the waiting service worker would have been registered more
+   * recently).
+   * If there&#x27;s no matching active or waiting service worker at registration
+   * time then the promise will not resolve until an update is found and starts
+   * installing, at which point the installing service worker is used.
    *
    * @return {Promise&amp;lt;ServiceWorker&gt;}
    */
   async getSW() {
-    return this._swDeferred.promise;
+    // If &#x60;this._sw&#x60; is set, resolve with that as we want &#x60;getSW()&#x60; to
+    // return the correct (new) service worker if an update is found.
+    return this._sw || this._swDeferred.promise;
   }
 
   /**
    * Sends the passed data object to the service worker registered by this
-   * instance and resolves with a response (if any).
+   * instance (via [&#x60;getSW()&#x60;]{@link module:workbox-window.Workbox#getSW}) and resolves
+   * with a response (if any).
    *
    * A response can be set in a message handler in the service worker by
    * calling &#x60;event.ports[0].postMessage(...)&#x60;, which will resolve the promise
@@ -259,31 +274,19 @@ class Workbox extends EventTargetShim {
    */
   async messageSW(data) {
     const sw &#x3D; await this.getSW();
-    return new Promise((resolve) &#x3D;&gt; {
-      let messageChannel &#x3D; new MessageChannel();
-      messageChannel.port1.onmessage &#x3D; (evt) &#x3D;&gt; resolve(evt.data);
-      sw.postMessage(data, [messageChannel.port2]);
-    });
+    return messageSW(sw, data);
   }
 
   /**
    * Checks for a service worker already controlling the page and returns
-   * it if its script URL (and optionally script version) match. The
-   * script version is determined by sending a message to the controlling
-   * service worker and waiting for a response. If no response is returned
-   * the service worker is assumed to not have a version.
+   * it if its script URL matchs.
    *
    * @private
    * @return {ServiceWorker|undefined}
    */
   _getControllingSWIfCompatible() {
     const controller &#x3D; navigator.serviceWorker.controller;
-
     if (controller &amp;amp;&amp;amp; urlsMatch(controller.scriptURL, this._scriptURL)) {
-      // If the URLs match and no script version is specified, assume the
-      // SW is the same. NOTE: without a script version, this isn&#x27;t a
-      // particularly good test. Using a script version is encouraged if
-      // you need to send messages to your service worker on all page loads.
       return controller;
     }
   }
