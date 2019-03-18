@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Signed Exchanges allow websites to sign web content in the way that the content can be safely redistributed and verified where it was originally from.
 
-{# wf_updated_on: 2019-03-05 #}
+{# wf_updated_on: 2019-03-18 #}
 {# wf_published_on: 2018-11-01 #}
 {# wf_tags: chrome73,webpackage,signed-exchange,loading #}
 {# wf_featured_image: /web/updates/images/2018/11/signed-exchanges.svg #}
@@ -108,7 +108,7 @@ are correctly set up:
 ```
 
 Note that SXG is only supported by the anchor tag (`<a>`) and `link rel=prefetch`
-in Chrome 71 and later. Also note that the signature’s validity is capped to 7
+in Chrome 73 and later. Also note that the signature’s validity is capped to 7
 days per spec, so your signed contents will expire relatively quickly.
 
 ## Providing Feedback
