@@ -20,11 +20,11 @@ can cache and serve these files using a service worker and Workbox.
 Before we can use Workbox, we need to create a service worker file and
 register it to our website.
 
-Start by creating a file called `sw.js` at the root of your site and add a
+Start by creating a file called `service-worker.js` at the root of your site and add a
 console message to the file (This is so we can see it load).
 
 ```javascript
-console.log('Hello from sw.js');
+console.log('Hello from service-worker.js');
 ```
 
 In your web page register your new service worker file like so:
