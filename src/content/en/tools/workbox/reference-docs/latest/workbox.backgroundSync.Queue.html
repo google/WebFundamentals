@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v4.0.0</small></span>
+              <span class="label label-version"><small>v4.1.1</small></span>
             </div>
             <p>A class to manage storing failed requests in IndexedDB and retrying them later. All parts of the storing and replaying process are observable via callbacks.
             </p>
@@ -70,7 +70,7 @@
                                 <p class="details-table-optional">Optional</p>
                                 <p class="details-table-types">function()</p>
                                 <p>A function that gets invoked whenever the 'sync' event fires. The function is invoked with an object containing the <code>queue</code> property (referencing this instance), and you can use the callback to customize the
-                                  replay behavior of the queue. When not set the <code>replayRequests()</code> method is called.</p>
+                                  replay behavior of the queue. When not set the <code>replayRequests()</code> method is called. Note: if the replay fails after a sync event, make sure you throw an error, so the browser knows to retry the sync event later.</p>
                               </td>
                             </tr>
                             <tr>

@@ -19,7 +19,7 @@
             <div class="symbol-detail-labels"><span class="label label-kind"><small>class</small></span>&nbsp;&nbsp;&nbsp;<span class="label label-static"><small>static</small></span></div>
             <div class="symbol-detail-labels">
               <span class="label label-kind"><small>Version</small></span> &nbsp;&nbsp;&nbsp;
-              <span class="label label-version"><small>v4.0.0</small></span>
+              <span class="label label-version"><small>v4.1.1</small></span>
             </div>
             <p>A class to aid in handling service worker registration, updates, and reacting to service worker lifecycle events.</p>
           </header>
@@ -106,8 +106,9 @@
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> getSW()&nbsp;returns&nbsp;Promise containing ServiceWorker</p>
               <p>Resolves with a reference to a service worker that matches the script URL of this instance, as soon as it's available.</p>
-              <p>If, at registration time, there’s already an active service worker with a matching script URL, that will be what is resolved. If there’s no active and matching service worker at registration time then the promise will not resolve until an
-                update is found and starts installing, at which point the installing service worker is resolved.</p>
+              <p>If, at registration time, there's already an active or waiting service worker with a matching script URL, it will be used (with the waiting service worker taking precedence over the active service worker if both match, since the waiting
+                service worker would have been registered more recently). If there's no matching active or waiting service worker at registration time then the promise will not resolve until an update is found and starts installing, at which point the
+                installing service worker is used.</p>
               <dl class="dl-compact">
                 <dt>Returns</dt>
                 <dd>
@@ -117,7 +118,7 @@
               <h3 id="messageSW" class="symbol-name">messageSW</h3>
               <div class="symbol-detail-labels"><span class="label label-async"><small>async</small></span></div>
               <p class="type-signature"> messageSW(data)&nbsp;returns&nbsp;Promise containing Object</p>
-              <p>Sends the passed data object to the service worker registered by this instance and resolves with a response (if any).</p>
+              <p>Sends the passed data object to the service worker registered by this instance (via <a href="module-workbox-window.Workbox.html#getSW"><code>getSW()</code></a>) and resolves with a response (if any).</p>
               <p>A response can be set in a message handler in the service worker by calling <code>event.ports[0].postMessage(...)</code>, which will resolve the promise returned by <code>messageSW()</code>. If no response is set, the promise will never
                 resolve.
               </p>

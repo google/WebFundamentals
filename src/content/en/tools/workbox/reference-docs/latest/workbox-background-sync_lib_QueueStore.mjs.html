@@ -5,7 +5,7 @@
   <meta name="project_path" value="/web/tools/workbox/_project.yaml" />
   <meta name="book_path" value="/web/tools/workbox/_book.yaml" />
   <meta name="gtm_var" data-key="docType" data-value="reference">
-  <title>Source: workbox-background-sync/models/QueueStore.mjs</title>
+  <title>Source: workbox-background-sync/lib/QueueStore.mjs</title>
   <link href="jsdoc.css" rel="stylesheet">
 </head>
 
@@ -17,7 +17,7 @@
         </div>
         <div id="jsdoc-main" role="main">
           <header class="page-header">
-            <h1>Source: workbox-background-sync/models/QueueStore.mjs</h1>
+            <h1>Source: workbox-background-sync/lib/QueueStore.mjs</h1>
           </header>
           <article>
             <pre class="prettyprint linenums"><code>/*
@@ -30,12 +30,13 @@
 
 import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
 import {DBWrapper} from &#x27;workbox-core/_private/DBWrapper.mjs&#x27;;
-import {migrateDb} from &#x27;workbox-core/_private/migrateDb.mjs&#x27;;
-import {DB_NAME, DB_VERSION, OBJECT_STORE_NAME, INDEXED_PROP}
-  from &#x27;../utils/constants.mjs&#x27;;
-
 import &#x27;../_version.mjs&#x27;;
 
+
+const DB_VERSION &#x3D; 3;
+const DB_NAME &#x3D; &#x27;workbox-background-sync&#x27;;
+const OBJECT_STORE_NAME &#x3D; &#x27;requests&#x27;;
+const INDEXED_PROP &#x3D; &#x27;queueName&#x27;;
 
 /**
  * A class to manage storing requests from a Queue in IndexedbDB,
@@ -177,54 +178,16 @@ export class QueueStore {
    */
   _upgradeDb(event) {
     const db &#x3D; event.target.result;
-    const txn &#x3D; event.target.transaction;
-    let oldEntries &#x3D; [];
 
-    migrateDb(event, {
-      v1: (next) &#x3D;&gt; {
-        // When migrating from version 0, this will not exist.
-        if (db.objectStoreNames.contains(OBJECT_STORE_NAME)) {
-          // Get any existing entries in the v1 requests store
-          // and then delete it.
-          const objStore &#x3D; txn.objectStore(OBJECT_STORE_NAME);
-          objStore.openCursor().onsuccess &#x3D; ({target}) &#x3D;&gt; {
-            const cursor &#x3D; target.result;
-            if (cursor) {
-              oldEntries.push(cursor.value);
-              cursor.continue();
-            } else {
-              db.deleteObjectStore(OBJECT_STORE_NAME);
-              next();
-            }
-          };
-        } else {
-          next();
-        }
-      },
-      v2: (next) &#x3D;&gt; {
-        // Creates v2 of the requests store and adds back any existing
-        // entries in the new format.
-        const objStore &#x3D; db.createObjectStore(OBJECT_STORE_NAME, {
-          autoIncrement: true,
-          keyPath: &#x27;id&#x27;,
-        });
-        objStore.createIndex(INDEXED_PROP, INDEXED_PROP, {unique: false});
+    if (event.oldVersion &gt; 0 &amp;amp;&amp;amp; event.oldVersion &amp;lt; DB_VERSION) {
+      db.deleteObjectStore(OBJECT_STORE_NAME);
+    }
 
-        if (oldEntries.length) {
-          for (const {queueName, storableRequest} of oldEntries) {
-            // Move the timestamp from &#x60;storableRequest&#x60; to the top level.
-            const timestamp &#x3D; storableRequest.timestamp;
-
-            // Reformat the storable request data
-            const requestData &#x3D; Object.assign(
-                storableRequest.requestInit, {url: storableRequest.url});
-
-            objStore.add({queueName, timestamp, requestData});
-          }
-        }
-        next();
-      },
+    const objStore &#x3D; db.createObjectStore(OBJECT_STORE_NAME, {
+      autoIncrement: true,
+      keyPath: &#x27;id&#x27;,
     });
+    objStore.createIndex(INDEXED_PROP, INDEXED_PROP, {unique: false});
   }
 }
 </code></pre>

@@ -32,10 +32,13 @@ import {WorkboxError} from &#x27;workbox-core/_private/WorkboxError.mjs&#x27;;
 import {logger} from &#x27;workbox-core/_private/logger.mjs&#x27;;
 import {assert} from &#x27;workbox-core/_private/assert.mjs&#x27;;
 import {getFriendlyURL} from &#x27;workbox-core/_private/getFriendlyURL.mjs&#x27;;
-import {QueueStore} from &#x27;./models/QueueStore.mjs&#x27;;
-import StorableRequest from &#x27;./models/StorableRequest.mjs&#x27;;
-import {TAG_PREFIX, MAX_RETENTION_TIME} from &#x27;./utils/constants.mjs&#x27;;
+import {QueueStore} from &#x27;./lib/QueueStore.mjs&#x27;;
+import {StorableRequest} from &#x27;./lib/StorableRequest.mjs&#x27;;
 import &#x27;./_version.mjs&#x27;;
+
+
+const TAG_PREFIX &#x3D; &#x27;workbox-background-sync&#x27;;
+const MAX_RETENTION_TIME &#x3D; 60 * 24 * 7; // 7 days in minutes
 
 const queueNames &#x3D; new Set();
 
@@ -60,6 +63,8 @@ class Queue {
    *     containing the &#x60;queue&#x60; property (referencing this instance), and you
    *     can use the callback to customize the replay behavior of the queue.
    *     When not set the &#x60;replayRequests()&#x60; method is called.
+   *     Note: if the replay fails after a sync event, make sure you throw an
+   *     error, so the browser knows to retry the sync event later.
    * @param {number} [options.maxRetentionTime&#x3D;7 days] The amount of time (in
    *     minutes) a request may be retried. After this amount of time has
    *     passed, the request will be deleted from the queue.
@@ -202,10 +207,19 @@ class Queue {
     }
 
     await this._queueStore[&#x60;${operation}Entry&#x60;](entry);
-    await this.registerSync();
+
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
       logger.log(&#x60;Request for &#x27;${getFriendlyURL(request.url)}&#x27; has &#x60; +
           &#x60;been added to background sync queue &#x27;${this._name}&#x27;.&#x60;);
+    }
+
+    // Don&#x27;t register for a sync if we&#x27;re in the middle of a sync. Instead,
+    // we wait until the sync is complete and call register if
+    // &#x60;this._requestsAddedDuringSync&#x60; is true.
+    if (this._syncInProgress) {
+      this._requestsAddedDuringSync &#x3D; true;
+    } else {
+      await this.registerSync();
     }
   }
 
@@ -299,7 +313,35 @@ class Queue {
             logger.log(&#x60;Background sync for tag &#x27;${event.tag}&#x27;&#x60; +
                 &#x60;has been received&#x60;);
           }
-          event.waitUntil(this._onSync({queue: this}));
+
+          const syncComplete &#x3D; async () &#x3D;&gt; {
+            this._syncInProgress &#x3D; true;
+
+            let syncError;
+            try {
+              await this._onSync({queue: this});
+            } catch (error) {
+              syncError &#x3D; error;
+
+              // Rethrow the error. Note: the logic in the finally clause
+              // will run before this gets rethrown.
+              throw syncError;
+            } finally {
+              // New items may have been added to the queue during the sync,
+              // so we need to register for a new sync if that&#x27;s happened...
+              // Unless there was an error during the sync, in which
+              // case the browser will automatically retry later, as long
+              // as &#x60;event.lastChance&#x60; is not true.
+              if (this._requestsAddedDuringSync &amp;amp;&amp;amp;
+                  !(syncError &amp;amp;&amp;amp; !event.lastChance)) {
+                await this.registerSync();
+              }
+
+              this._syncInProgress &#x3D; false;
+              this._requestsAddedDuringSync &#x3D; false;
+            }
+          };
+          event.waitUntil(syncComplete());
         }
       });
     } else {

@@ -116,7 +116,7 @@ const createOnSyncCallback &#x3D; (config) &#x3D;&gt; {
           logger.log(&#x60;Request for &#x27;${getFriendlyURL(url.href)}&#x27;&#x60; +
              &#x60;failed to replay, putting it back in the queue.&#x60;);
         }
-        return;
+        throw err;
       }
     }
     if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {

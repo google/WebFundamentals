@@ -120,7 +120,7 @@ class BroadcastCacheUpdate {
         // In the case of a navigation request, the requesting page will likely
         // not have loaded its JavaScript in time to recevied the update
         // notification, so we defer it until ready (or we timeout waiting).
-        if (event &amp;amp;&amp;amp; event.request.mode &#x3D;&#x3D;&#x3D; &#x27;navigate&#x27;) {
+        if (event &amp;amp;&amp;amp; event.request &amp;amp;&amp;amp; event.request.mode &#x3D;&#x3D;&#x3D; &#x27;navigate&#x27;) {
           if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
             logger.debug(&#x60;Original request was a navigation request, &#x60; +
                 &#x60;waiting for a ready message from the window&#x60;, event.request);
