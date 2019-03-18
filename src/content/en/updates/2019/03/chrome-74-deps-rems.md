@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 74 to help you plan.
 
-{# wf_updated_on: 2019-03-15 #}
+{# wf_updated_on: 2019-03-18 #}
 {# wf_published_on: 2019-03-21 #}
 {# wf_tags: deprecations,removals,chrome74 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -14,6 +14,33 @@ description: A round up of the deprecations and removals in Chrome 74 to help yo
 # Deprecations and removals in Chrome 74 {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+## Remove Custom Elements v0
+
+Custom Elements are a Web Components technology that lets you create new HTML
+tags, beef up existing tags, or extend components authored by other developers.
+Custom Elements v1 have been [implemented in
+Chrome](https://www.chromestatus.com/feature/4696261944934400) since version
+54, which shipped in October 2016. Custom Elements v0 was an experimental
+version not implemented in other browsers. As such it is now deprecated with
+removal expected in Chrome 73, around April 2019.
+
+[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
+[Chromium Bug](https://crbug.com/180965)
+
+### Remove PaymentAddress's languageCode property
+
+The `PaymentAddress.languageCode` property has been removed from the Payment
+Request API. This property is the browser's best guess for the language of the
+text in the shipping, billing, delivery, or pickup address in the Payment
+Request API. The languageCode property is marked at risk in the specification
+and has already been removed from Firefox and Safari. Usage in Chrome is small
+enough for safe removal.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-reviews/aBGjyKqok50/discussion) &#124;
+[Chrome Platform Status](https://www.chromestatus.com/feature/4992562146312192) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=877521)
 
 ## Don't allow popups during page unload
 
@@ -45,19 +72,6 @@ Removal is expected in Chrome 74.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/JdAQ6HNoZvk/discussion) &#124;
 [Chrome Platform Status](https://www.chromestatus.com/feature/5706745674465280) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=539938)
-
-### Remove PaymentAddress's languageCode property
-
-The `PaymentAddress.languageCode` property has been removed from the Payment
-Request API. This property is the browser's best guess for the language of the
-text in the shipping, billing, delivery, or pickup address in the Payment
-Request API. The languageCode property is marked at risk in the specification
-and has already been removed from Firefox and Safari. Usage in Chrome is small
-enough for safe removal.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-reviews/aBGjyKqok50/discussion) &#124;
-[Chrome Platform Status](https://www.chromestatus.com/feature/4992562146312192) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=877521)
 
 {% include "web/updates/_shared/deprecations-policy.html" %}
 
