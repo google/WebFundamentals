@@ -15,20 +15,6 @@ description: A round up of the deprecations and removals in Chrome 74 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-## Remove Custom Elements v0
-
-Custom Elements are a Web Components technology that lets you create new HTML
-tags, beef up existing tags, or extend components authored by other developers.
-Custom Elements v1 have been [implemented in
-Chrome](https://www.chromestatus.com/feature/4696261944934400) since version
-54, which shipped in October 2016. Custom Elements v0 was an experimental
-version not implemented in other browsers. As such it is now deprecated with
-removal expected in Chrome 73, around April 2019.
-
-[Intent to Deprecate](https://groups.google.com/a/chromium.org/d/topic/blink-dev/h-JwMiPUnuU/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/4642138092470272) &#124;
-[Chromium Bug](https://crbug.com/180965)
-
 ### Remove PaymentAddress's languageCode property
 
 The `PaymentAddress.languageCode` property has been removed from the Payment
