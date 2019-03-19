@@ -188,6 +188,8 @@ toc:
     path: /web/tools/chrome-devtools/storage/cookies
   - title: Local Storage
     path: /web/tools/chrome-devtools/storage/localstorage
+  - title: IndexedDB
+    path: /web/tools/chrome-devtools/storage/indexeddb
   - title: Session Storage
     path: /web/tools/chrome-devtools/storage/sessionstorage
   - title: Inspect and Manage Storage, Databases, and Caches
