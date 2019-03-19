@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, databases, and caches from the Application panel.
 
-{# wf_updated_on: 2019-03-14 #}
+{# wf_updated_on: 2019-03-19 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -35,51 +35,9 @@ See [View And Edit Session Storage With Chrome DevTools][SS].
 
 ## IndexedDB {:#indexeddb}
 
-Use the **IndexedDB** pane to inspect, modify, and delete IndexedDB data.
+[IDB]: /web/tools/chrome-devtools/storage/indexeddb
 
-When you expand the **IndexedDB** pane, the first level below that are
-databases. If there are multiple databases active, then you'll see multiple
-entries. In the screenshot below there's only one database active for the page.
-
-![indexeddb tab][idb-tab]
-
-Click on the name of a database to view the security origin, name, and version
-of that database.
-
-![indexeddb database][idb-db]
-
-Expand a database to view its key-value pairs (KVPs).
-
-![indexeddb key-value pairs][idb-kvps]
-
-Use the arrow buttons next to the **Start from key** textfield to move between
-pages of KVPs.
-
-Expand a value and double-click to edit that value.
-When you add, modify, or delete values, those changes won't get updated in
-realtime. Click the **refresh** button to update a database.
-![editing an indexeddb kvp][idb-edit]
-
-Enter a key in the **Start from key** textfield to filter out all keys with
-a value smaller than that one.
-
-![filtered kvps][idb-filter]
-
-When you add, modify, or delete values, those changes won't get updated in
-realtime. Click the **refresh** button (![refresh button][refresh]{:.inline})
-to update a database.
-
-Click the **clear object store** button (![clear object store][cos]{:.inline})
-to delete all data from your database. You can also accomplish this as well
-as unregistering service workers and removing other storage and caches with
-a single click from the [**Clear storage** pane](#clear-storage).
-
-[idb-tab]: /web/tools/chrome-devtools/manage-data/imgs/idb-tab.png
-[idb-db]: /web/tools/chrome-devtools/manage-data/imgs/idb-db.png
-[idb-kvps]: /web/tools/chrome-devtools/manage-data/imgs/idb-kvps.png
-[idb-edit]: /web/tools/chrome-devtools/manage-data/imgs/idb-edit.png
-[idb-filter]: /web/tools/chrome-devtools/manage-data/imgs/idb-filter.png
-[cos]: /web/tools/chrome-devtools/manage-data/imgs/clear-object-store.png
+See [View, Edit, And Delete IndexedDB Data With Chrome DevTools][IDB].
 
 ## Web SQL {:#web-sql}
 
