@@ -1,20 +1,20 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: How to view and edit IndexedDB data with Chrome DevTools.
+description: How to view and change IndexedDB data with the Application panel and Snippets.
 
 {# wf_updated_on: 2019-03-19 #}
 {# wf_published_on: 2019-03-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
-# View, Edit, and Delete IndexedDB Data With Chrome DevTools {: .page-title }
+# View And Change IndexedDB Data With Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 [API]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 [IDB]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 
-This guide shows you how to use [Chrome DevTools](/web/tools/chrome-devtools/) to view, edit,
-and delete [IndexedDB][API]{: .external } data. It assumes you're familiar with DevTools. If not,
+This guide shows you how to use [Chrome DevTools](/web/tools/chrome-devtools/) to view
+and change [IndexedDB][API]{: .external } data. It assumes you're familiar with DevTools. If not,
 see [Get started](/web/tools/chrome-devtools/#start). It also assumes you're familiar with
 IndexedDB. If not, see [Using IndexedDB][IDB]{: .external }.
 
@@ -48,7 +48,10 @@ IndexedDB. If not, see [Using IndexedDB][IDB]{: .external }.
        where **notes** is the name of the database and **https://mdn.github.io** is the origin that
        can access the database.
      * ![Object Store icon][os]{: .inline-icon } **notes** is an object store.
-     * **title** and **body** are [indexes](/web/ilt/pwa/working-with-indexeddb#defining_indexes).
+
+[index]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index
+
+     * **title** and **body** are [indexes][index]{: .external }.
 
      <aside class="note">
        <b>Known Limitation</b> Third-party databases are not visible. For example, if you use an
@@ -111,8 +114,8 @@ IndexedDB. If not, see [Using IndexedDB][IDB]{: .external }.
 ## Refresh IndexedDB data {: #refresh }
 
 IndexedDB values in the **Application** panel do not update in real-time. Click **Refresh**
-![Refresh](/web/tools/chrome-devtools/images/shared/reload.png){: .inline-icon } to refresh an
-object store's data, or view a database and click **Refresh database** to refresh all data.
+![Refresh](/web/tools/chrome-devtools/images/shared/reload.png){: .inline-icon } when viewing an
+object store to refresh its data, or view a database and click **Refresh database** to refresh all data.
 
 <figure>
   <img src="/web/tools/chrome-devtools/storage/imgs/idbdatabase.png"
@@ -124,7 +127,9 @@ object store's data, or view a database and click **Refresh database** to refres
 
 ## Edit IndexedDB data {: #edit }
 
-IndexedDB keys and values are not editable from the **Application** panel.
+IndexedDB keys and values are not editable from the **Application** panel. Since DevTools has
+access to page context, however, you can run JavaScript code within DevTools that edits
+IndexedDB data.
 
 ### Edit IndexedDB data with Snippets {: #snippets }
 

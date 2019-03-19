@@ -37,7 +37,7 @@ See [View And Edit Session Storage With Chrome DevTools][SS].
 
 [IDB]: /web/tools/chrome-devtools/storage/indexeddb
 
-See [View, Edit, And Delete IndexedDB Data With Chrome DevTools][IDB].
+See [View And Change IndexedDB Data With Chrome DevTools][IDB].
 
 ## Web SQL {:#web-sql}
 
