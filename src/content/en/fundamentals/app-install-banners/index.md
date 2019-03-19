@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2019-02-08 #}
+{# wf_updated_on: 2019-03-19 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -218,11 +218,6 @@ debugging; without it, Chrome will use the desktop install flow.
 2. Go to the **Application** panel.
 3. Go to the **Manifest** tab.
 4. Click **Add to home screen**
-
-
-Dogfood: To test the install flow for Desktop Progressive Web Apps on Mac,
-you'll need to enable the <code>#enable-desktop-pwas</code> flag.
-
 
 ### Will `beforeinstallprompt` be fired?
 
