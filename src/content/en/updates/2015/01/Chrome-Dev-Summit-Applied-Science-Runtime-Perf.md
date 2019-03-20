@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The story of building the Chrome Dev Summit site.
 
-{# wf_updated_on: 2015-01-04 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-04 #}
 {# wf_tags: news,performance,chromedevsummit,frontend #}
+{# wf_blink_components: N/A #}
 
 # Chrome Dev Summit 2014: The Applied Science of Runtime Performance {: .page-title }
 
@@ -12,7 +13,7 @@ description: The story of building the Chrome Dev Summit site.
 
 <img src="/web/updates/images/2015-05-01/takeover.gif" alt="The card takeover effect" class="attempt-right" />
 
-Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devsummit/){: .external } site. I wanted it to have a [Material Design](http://www.google.com/design/spec/) look and feel, since it’s a great design language, and I felt it would be a great fit for the kind of site I wanted to create. But, as with any new design language, there are questions, challenges, and decisions to take, and especially so when dealing with the conventions of the web.
+Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devsummit/){: .external } site. I wanted it to have a [Material Design](https://material.io/design/) look and feel, since it’s a great design language, and I felt it would be a great fit for the kind of site I wanted to create. But, as with any new design language, there are questions, challenges, and decisions to take, and especially so when dealing with the conventions of the web.
 
 One aspect of the site that was particularly challenging to create was the  “takeover” effect when you click on a card.
 
@@ -28,7 +29,7 @@ Getting an effect like this to run at 60fps took some thinking, prototyping, and
 
 ## Building a high performance animation
 
-[High performance animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/), today at least, are those that favor the browser’s compositor. If you’re able to stick to changing transform and opacity properties, typically you’ll see great performance. The general approach I took to the card animation does just that:
+[High performance animations](https://www.html5rocks.com/en/tutorials/speed/high-performance-animations/), today at least, are those that favor the browser’s compositor. If you’re able to stick to changing transform and opacity properties, typically you’ll see great performance. The general approach I took to the card animation does just that:
 
 1. Measure the position of all the elements in the card when the card is collapsed.
 1. Toggle the card’s classes to expand it (without animating).

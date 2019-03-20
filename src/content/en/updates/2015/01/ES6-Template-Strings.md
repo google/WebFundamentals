@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Template String literals with embedded expressions. We've been waiting for this for ages. Literally
 
-{# wf_updated_on: 2018-08-07 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,es6,javascript,ecmascript #}
 {# wf_blink_components: N/A #}
@@ -209,7 +209,7 @@ One of the most significant features they bring are tagged templates - a critica
 
 * [http://www.2ality.com/2015/01/template-strings-html.html](http://www.2ality.com/2015/01/template-strings-html.html)
 * [https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates](https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates)
-* [http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/](http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/)
-* [http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
+* [https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/](https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/)
+* [https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
 
 
