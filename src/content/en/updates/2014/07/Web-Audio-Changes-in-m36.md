@@ -1,10 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Description of Web Audio standards cleanup work in m36
+description: Description of Web Audio standards cleanup work in Chrome 36
 
-{# wf_updated_on: 2014-07-24 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-07-24 #}
 {# wf_tags: deprecations,removals,news,webaudio #}
+{# wf_blink_components: N/A #}
 
 # Web Audio Changes in m36 {: .page-title }
 
@@ -16,15 +17,15 @@ description: Description of Web Audio standards cleanup work in m36
 
 At Google, we love standards.  We’re on a mission to build out the standards-defined Web platform.  One of the small warts on that for some time has been the webkit- prefixed implementation of the Web Audio API (notably the webkitAudioContext object), and some of the deprecated bits of Web Audio that we’ve continued to support.
 
-It was originally planned that m36 would remove support for the prefixed webkitAudioContext, since we had begun supporting the unprefixed AudioContext object. This turned out to be more troublesome than expected, so m36 supports both unprefixed and prefixed - however, even in the reintroduced webkitAudioContext, several legacy methods and attributes like createGainNode and createJavaScriptNode have been removed. In short, in m36 webkitAudioContext and AudioContext are aliases of each other; there is no difference in functionality between the two.
+It was originally planned that Chrome 36 would remove support for the prefixed webkitAudioContext, since we had begun supporting the unprefixed AudioContext object. This turned out to be more troublesome than expected, so Chrome 36 supports both unprefixed and prefixed - however, even in the reintroduced webkitAudioContext, several legacy methods and attributes like createGainNode and createJavaScriptNode have been removed. In short, in Chrome 36 webkitAudioContext and AudioContext are aliases of each other; there is no difference in functionality between the two.
 
-We will remove the support for the prefix completely after m36, likely in a couple of releases. We'll make an announcement here when the change is imminent, and we are continuing to reach out to authors to fix their Web Audio applications.
+We will remove the support for the prefix completely after Chrome 36, likely in a couple of releases. We'll make an announcement here when the change is imminent, and we are continuing to reach out to authors to fix their Web Audio applications.
 
 Why have we done this, rather than reverting to the previous implementation?  Well, in part, we’ve been reticent to move too far backwards; we’ve already removed those APIs, and as a nice side-effect to this aliasing, applications can then work nicely on Firefox, which has never supported a prefixed AudioContext object (and quite right, too!) in their Web Audio support initially released last fall.
 
 The rest of this update provides a guide to fixing things that may be broken in your code due to this change.  The great thing about fixing these problems is that your code is then quite likely to just work in Firefox, too!  (I’d thought for a long time that my Vocoder application was broken due to Firefox’s implementation, but it turned out to be one of these problems!)
 
-If you just want to get up and running, you may want to take a look at a [monkey-patch](http://en.wikipedia.org/wiki/Monkey_patch) [library I wrote for applications that were written to the old Web Audio code](https://github.com/cwilso/webkitAudioContext-MonkeyPatch) - this can help you get up and running in a minimum amount of time, as it will alias the objects and methods appropriately.  Indeed, the patches the library lists is a good guide to the things that have changed.
+If you just want to get up and running, you may want to take a look at a [monkey-patch](https://en.wikipedia.org/wiki/Monkey_patch) [library I wrote for applications that were written to the old Web Audio code](https://github.com/cwilso/webkitAudioContext-MonkeyPatch) - this can help you get up and running in a minimum amount of time, as it will alias the objects and methods appropriately.  Indeed, the patches the library lists is a good guide to the things that have changed.
 
 ## First and foremost:
 
@@ -32,7 +33,7 @@ Any references to `window.webkitAudioContext` should be made to `window.AudioCon
 
 
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    
+
 
 If your app is responding with something like “Unfortunately, your browser does not support Web Audio.  Please use Chrome or Safari.” - it’s quite likely explicitly looking for `webkitAudioContext`.  Bad developer!  You could have been supporting Firefox for months!
 
@@ -59,19 +60,19 @@ Many of these (like the renaming of createGainNode, and the removal of the synch
 
 
     myFilterNode.type = myFilterNode.BANDPASS;
-    
+
 
 will not show up at all, and silently fail (myFilterNode.BANDPASS will now resolve to undefined, and the attempt to set .type to undefined will simply fail to produce any effect. This, by the way, was what was causing the vocoder to fail.)  Likewise, just assigning the filter.type to a number used to work:
 
 
     myFilterNode.type = 2;
-    
+
 
 But now, you need to use the string enumeration:
 
 
     myFilterNode.type = “bandpass”;
-    
+
 
 So, you may wish to grep your code for the following terms:
 

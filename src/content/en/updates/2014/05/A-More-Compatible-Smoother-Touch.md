@@ -1,10 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You and your users want mobile web apps that react and scroll smoothly to the touch. Developing them should be easy but, unfortunately, how mobile web browsers react to touch events during scrolling is left as an implementation detail in the [TouchEvent](http://www.w3.org/TR/touch-events/) specification.
+description: You and your users want mobile web apps that react and scroll smoothly to the touch. Developing them should be easy but, unfortunately, how mobile web browsers react to touch events during scrolling is left as an implementation detail in the [TouchEvent](https://www.w3.org/TR/touch-events/) specification.
 
-{# wf_updated_on: 2014-05-20 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-05-20 #}
 {# wf_tags: news,mobile,touchevent #}
+{# wf_blink_components: N/A #}
 
 # A More Compatible, Smoother Touch {: .page-title }
 
@@ -14,7 +15,7 @@ description: You and your users want mobile web apps that react and scroll smoot
 You and your users want mobile web apps that react and scroll smoothly to the
 touch. Developing them [should be easy](/web/fundamentals/documentation/user-input/touch-input/) but, unfortunately, how mobile web
 browsers react to touch events during scrolling is left as an implementation
-detail in the [TouchEvent](http://www.w3.org/TR/touch-events/) specification. As
+detail in the [TouchEvent](https://www.w3.org/TR/touch-events/) specification. As
 a result, approaches can be broken down roughly into 4 categories. This
 situation exposes a fundamental tension between delivering scroll smoothness and
 maintaining developer control.
@@ -44,7 +45,7 @@ The behavior differences between the browsers break down into four models.
 
 1. **Touchcancel on scroll start**
 
-    You can't have it both ways -- scroll smoothness and developer control -- and this model makes clear the trade-off between smooth scrolling and event handling, similar to the semantics of the [Pointer Events](http://www.w3.org/TR/pointerevents/){: .external } specification. Some experiences that may need to track the finger, like pull-to-refresh, are not possible.
+    You can't have it both ways -- scroll smoothness and developer control -- and this model makes clear the trade-off between smooth scrolling and event handling, similar to the semantics of the [Pointer Events](https://www.w3.org/TR/pointerevents/){: .external } specification. Some experiences that may need to track the finger, like pull-to-refresh, are not possible.
 
     > Browsers: Chrome Desktop M32+, Chrome Android
 
@@ -86,7 +87,7 @@ The new behavior is:
   terminates or isn't possible because the scroll limit has been hit
 * A touchend event **always** occurs when the user lifts their finger
 
-You can try this [demo](http://www.rbyers.net/touchevent-scroll.html) in Chrome for Android and toggle the
+You can try this [demo](https://rbyers.github.io/touchevent-scroll.html) in Chrome for Android and toggle the
 chrome://flags\#touch-scrolling-mode flag to see the difference.
 
 ## Let us know what you think

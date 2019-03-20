@@ -2,16 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: TouchEvents have changed in Chrome to return float values, instead of integers, to account for varying screen densities. This leads to more detailed feedback during slow gestures.
 
-{# wf_updated_on: 2014-09-14 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-09-14 #}
 {# wf_tags: news,touchevent #}
+{# wf_blink_components: N/A #}
 
 # Precision Touch for Precise Gestures {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
 
-A [change landed](https://code.google.com/p/chromium/issues/detail?id=323935) in
+A [change landed](https://bugs.chromium.org/p/chromium/issues/detail?id=323935) in
 the implementation of Chrome's [TouchEvents](https://dvcs.w3.org/hg/webevents/raw-file/v1-errata/touchevents.html#attributes)
 as of M37 (stable in 08/2014), which alters the reported co-ordinates to floats
 instead of integers.
@@ -52,7 +53,7 @@ screenY: 276.66668701171875
 The result of this change means you have a smoother response to the users
 gestures as it gives you higher accuracy of the fingers position.
 
-Using [Rick Byers' demo](http://www.rbyers.net/paint.html#points%20), you can
+Using [Rick Byers' demo](http://www.rbyers.net/paint.html#points), you can
 see what a huge difference this can make when slowly drawing a swirl.
 
 <p style="text-align: center;"><img src="/web/updates/images/2014/09/precision-touch/chrome-touch-events.png" alt="Differences in Touch Events" style="max-width: 600px; width: 100%;" /></p>

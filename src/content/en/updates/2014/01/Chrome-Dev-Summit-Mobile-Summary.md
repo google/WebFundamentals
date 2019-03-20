@@ -3,16 +3,17 @@ book_path: /web/updates/_book.yaml
 description: Here's the first in a series of reports from Chrome Dev Summit. There was a strong emphasis on Mobile and Cross-device development, so we'll kick off with that!
 
 
-{# wf_updated_on: 2014-01-05 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-01-05 #}
 {# wf_tags: news,ux,workflow,mobile,webview,grunt,serviceworker #}
+{# wf_blink_components: N/A #}
 
 # Chrome Dev Summit: Mobile Summary {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
 
-The [Chrome Dev Summit](http://developer.chrome.com/devsummit) finished a
+The [Chrome Dev Summit](https://developer.chrome.com/devsummit/) finished a
 couple of weeks ago, and here's the first in a series of reports from the
 event. There was a strong emphasis on Mobile and Cross-device development,
 so we'll kick off with that!
@@ -23,7 +24,7 @@ so we'll kick off with that!
   <iframe class="devsite-embedded-youtube-video" data-video-id="j3YbNHtnYo4"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 After an analysis of the mobile-friendliness of the top 1000 sites we found some problem areas: _53%_ still only provide a desktop-only experience, _82%_ of sites have issues with interactivity on a mobile device and _64%_ of sites have text that users will have issues reading.
 
@@ -50,7 +51,7 @@ Users will be accessing your sites and services from a multitude of devices with
   <iframe class="devsite-embedded-youtube-video" data-video-id="E0ojKLzXoZ4"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 ### Key ways to understand and address a11y issues
 
@@ -67,13 +68,13 @@ We all know the problems that developers have had in the past building for WebVi
 
 The WebView supports full [remote debugging](/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from JavaScript.
 
-[Slides: Build Mobile Apps using the Chrome WebView](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/chrome-webview/)
+[Slides: Build Mobile Apps using the Chrome WebView](/web/shows/cds/2013/build-mobile-apps-with-chrome-webview)
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="BTlzw5UAjQs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 ### Effective WebView development takeaways
 
@@ -92,14 +93,14 @@ If we have to develop for Desktop, Mobile, Tablet, wearables and other form fact
   <iframe class="devsite-embedded-youtube-video" data-video-id="bZRPetpUcjQ"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 ### Key points
 
 +  The number of devices that we are going to have to cater for is only going to increase
-+  Getting your workflow with the right with [Grunt](http://gruntjs.com/){: .external } and [Yeoman](http://yeoman.io/)
++  Getting your workflow with the right with [Grunt](https://gruntjs.com/){: .external } and [Yeoman](https://yeoman.io/)
 +  Simplify cross browser and cross device testing with [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab)
-+  Be smart with your emulation choice using Chrome DevTools Emulation, Stock Emulators, Cloud Based Emulators like [Saucelabs](https://saucelabs.com/){: .external }, [Browserstack](http://www.browserstack.com/) and [Device Anywhere](http://www.deviceanywhere.com/) and third party emulator [Genymotion](http://www.genymotion.com/)
++  Be smart with your emulation choice using Chrome DevTools Emulation, Stock Emulators, Cloud Based Emulators like [Saucelabs](https://saucelabs.com/){: .external }, [Browserstack](https://www.browserstack.com/) and [appexperience](https://appexperience.sigos.com/) and third party emulator [Genymotion](https://www.genymotion.com/)
 + Mobile testing means more than just testing on your wifi connection, use a proxy to simulate slower network speeds
 
 ## Network connectivity: optional by Jake Archibald
@@ -114,7 +115,7 @@ We learnt many things from this talk: Jake doesn’t wear shoes when presenting;
   <iframe class="devsite-embedded-youtube-video" data-video-id="Z7sRMg0f5Hk"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 ### ServiceWorker to the rescue
 
