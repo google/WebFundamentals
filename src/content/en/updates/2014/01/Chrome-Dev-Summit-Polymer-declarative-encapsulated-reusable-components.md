@@ -2,12 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit
 
-{# wf_updated_on: 2019-03-15 #}
-{# wf_published_on: 2019-03-17 #}
+{# wf_updated_on: 2019-03-21 #}
+{# wf_published_on: 2014-01-06 #}
 {# wf_tags: news,mobile,polymer,webcomponents #}
 {# wf_blink_components: N/A #}
 
 # Chrome Dev Summit: Polymer declarative, encapsulated, reusable components {: .page-title }
+
+Warning: This article is out of date! Check out our
+[Web Components](/web/fundamentals/web-components/) article, or see the
+[Polymer Project](https://www.polymer-project.org) site.
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -85,5 +89,3 @@ We're on the cusp of a very exciting time in web development. Unlike other new f
 - [Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/) - proper DOM templating for defining inert chunks of markup to be stamped out later
 
 If you want to learn more about the fundamentals of the APIs, check out webcomponents.org.
-
-
