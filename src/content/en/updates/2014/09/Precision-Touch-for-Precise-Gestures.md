@@ -53,8 +53,8 @@ screenY: 276.66668701171875
 The result of this change means you have a smoother response to the users
 gestures as it gives you higher accuracy of the fingers position.
 
-<!-- Using [Rick Byers' demo](http://www.rbyers.net/paint.html#points%20), you can
-see what a huge difference this can make when slowly drawing a swirl. -->
+Using [Rick Byers' demo](http://www.rbyers.net/paint.html#points), you can
+see what a huge difference this can make when slowly drawing a swirl.
 
 <p style="text-align: center;"><img src="/web/updates/images/2014/09/precision-touch/chrome-touch-events.png" alt="Differences in Touch Events" style="max-width: 600px; width: 100%;" /></p>
 
