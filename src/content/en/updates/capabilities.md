@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-03-20 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -26,6 +26,17 @@ We will design and develop these new capabilities in an
 [open and transparent way](#process), using the existing open web platform
 standards processes while getting early feedback from developers and other
 browser vendors as we iterate on the design, to ensure an interoperable design.
+
+You can see the [full list](https://goo.gl/JkDCXM) of capabilities we're
+considering on <crbug.com> and filtering issues with the `proj-fugu` label.
+
+<aside class="note">
+  <b>Have a suggestion for a capability you think we should consider?</b>
+  Tell us about it by filing a <a href="https://goo.gl/qWhHXU">new feature
+  request</a>. Please be sure to include as much detail as you can, such as
+  the problem you're trying to solve, suggested use cases, and anything else
+  that might be helpful.
+</aside>
 
 ## In flight {: #in-flight }
 
@@ -112,12 +123,6 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         <br><br>
         <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
         <b>Last Updated:</b> November 12th, 2018
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        See the <a href="https://goo.gl/JkDCXM">full list</a> of capabilities
-        including the backlog of ones we've haven't started working on yet.
       </td>
     </tr>
   </tbody>
