@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Permissions API gives you a central place to check the permission status of an API.
 
-{# wf_updated_on: 2015-05-07 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-04-04 #}
 {# wf_tags: news,permissions #}
+{# wf_blink_components: N/A #}
 
 # Permissions API for the Web {: .page-title }
 
@@ -13,7 +14,7 @@ description: The Permissions API gives you a central place to check the permissi
 If you've worked with the [Geolocation
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
 before, chances are you've wanted to check if you had permission to use
-Geolocation without causing a prompt. This simply wasn't possible. You had to request the current position and this would indicate the permission state or cause a prompt to be shown to the user.  
+Geolocation without causing a prompt. This simply wasn't possible. You had to request the current position and this would indicate the permission state or cause a prompt to be shown to the user.
 
 Not all APIs work this way. The Notifications API has its own way of allowing
 you to check the current permission state via
@@ -34,16 +35,16 @@ prompt (user needs
 to be prompted). For example:
 
 
-    // Check for Geolocation API permissions  
+    // Check for Geolocation API permissions
     navigator.permissions.query({name:'geolocation'})
-      .then(function(permissionStatus) {  
+      .then(function(permissionStatus) {
         console.log('geolocation permission state is ', permissionStatus.state);
-    
-        permissionStatus.onchange = function() {  
+
+        permissionStatus.onchange = function() {
           console.log('geolocation permission state has changed to ', this.state);
         };
       });
-    
+
 
 The query method takes a
 [PermissionDescriptor](https://w3c.github.io/permissions/#h-permission-descriptor)
@@ -58,7 +59,7 @@ state.
 ### Supported PermissionDescriptors
 
 In the above example, we highlight how to query the permission state for
-geolocation with the following permission descriptor: `{name:'geolocation'}`.  
+geolocation with the following permission descriptor: `{name:'geolocation'}`.
 
 The Notification permission descriptor is similar in that it only requires a
 name attribute: `{name:'notifications'}`.
@@ -74,14 +75,14 @@ supports push messages with notifications). You'd use it like so:
 
 
     navigator.permissions.query({name:'push', userVisibleOnly:true})
-    
+
 
 Midi allows a `sysex` parameter. This indicates whether you need to and/or receive
 system exclusive messages. For midi this would be:
 
 
     navigator.permissions.query({name:'midi', sysex:true})
-    
+
 
 ## Requesting Permissions
 
@@ -89,27 +90,27 @@ Requesting permission from the user depends on the specific API. For example,
 geolocation would show a permission prompt when you call `getCurrentPosition()`.
 
 
-    navigator.geolocation.getCurrentPosition(function(position) {  
-      console.log('Geolocation permissions granted');  
-      console.log('Latitude:' + position.coords.latitude);  
-      console.log('Longitude:' + position.coords.longitude);  
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log('Geolocation permissions granted');
+      console.log('Latitude:' + position.coords.latitude);
+      console.log('Longitude:' + position.coords.longitude);
     });
-    
+
 
 Whereas notifications would prompt the user when you call `requestPermission()`.
 
 
-    Notification.requestPermission(function(result) {  
-      if (result === 'denied') {  
-        console.log('Permission wasn\'t granted. Allow a retry.');  
-        return;  
-      } else if (result === 'default') {  
-        console.log('The permission request was dismissed.');  
-        return;  
-      }  
-      console.log('Permission was granted for notifications');  
+    Notification.requestPermission(function(result) {
+      if (result === 'denied') {
+        console.log('Permission wasn\'t granted. Allow a retry.');
+        return;
+      } else if (result === 'default') {
+        console.log('The permission request was dismissed.');
+        return;
+      }
+      console.log('Permission was granted for notifications');
     });
-    
+
 
 The point here is that the Permission API allows a consistent way to monitor the
 status of permissions while being able to support the range of APIs currently on
@@ -132,6 +133,6 @@ this, and Microsoft have shown interest in the API.
 
 * Geolocation will not re-show a prompt if the user dismisses the permission
   request. The permission status however remains 'prompt'.
-  [[crbug.com/476509](http://crbug.com/476509)]
+  [[bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/detail?id=476509)]
 
 

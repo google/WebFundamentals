@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome is becoming in line with the spec. Check your sites if you are assuming the WebKit logic for attribute propagation
 
-{# wf_updated_on: 2019-01-16 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_tags: news,dom #}
 {# wf_blink_components: Blink>DOM #}
@@ -13,7 +13,7 @@ description: Chrome is becoming in line with the spec. Check your sites if you a
 
 
 
-The Chrome team recently [announced that we are moving DOM properties to the prototype chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).  This change, implemented in [Chrome 43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid April 2015) -  brings Chrome more in line with the [Web IDL Spec](https://heycam.github.io/webidl/#es-attributes ) and other browsers’ implementations, such as IE and Firefox.  *Edit: clarified* &nbsp; Older WebKit based browsers, are currently not compatible with the spec, however Safari now is.
+The Chrome team recently [announced that we are moving DOM properties to the prototype chain](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/H0MGw0jkdn4).  This change, implemented in [Chrome 43](https://www.chromestatus.com/feature/6052436003258368) - (Beta as of mid April 2015) -  brings Chrome more in line with the [Web IDL Spec](https://heycam.github.io/webidl/#es-attributes) and other browsers’ implementations, such as IE and Firefox.  *Edit: clarified* &nbsp; Older WebKit based browsers, are currently not compatible with the spec, however Safari now is.
 
 Note: The use of the word Attribute and Property are used interchangeably in this post, the ECMA Script spec defines 'Properties' that have 'Attributes'.  A JS property _is_ a 'WebIDL Attribute'.  An Attribute in this article is not an HTML Attribute such as `class` on an image element.
 
@@ -30,7 +30,7 @@ For example, a hypothetical W3C specification includes some new functionality ca
       get: function() { return true; },
       set: function() { /* some logic to set it up */ },
     });
-    
+
 
 Prior to this change &mdash; for consistency with other DOM properties in Chrome &mdash; you would have had to create the new property on every instance, which for every `HTMLDivElement` on the page would be very inefficient.
 
@@ -47,26 +47,26 @@ Prior to and including Chrome 42 the following would return `true`.
 
     > div = document.createElement("div");
     > div.hasOwnProperty("isContentEditable");
-    
+
     true
-    
+
 
 In Chrome 43 onwards it will return `false`.
 
 
     > div = document.createElement("div");
     > div.hasOwnProperty("isContentEditable");
-    
+
     false
-    
+
 
 This now means if you want to check that `isContentEditable` is available on the element you will to have check the prototype on the HTMLElement object. For example `HTMLDivElement` inherits from `HTMLElement` which defines the `isContentEditable` property.
 
 
     > HTMLElement.prototype.hasOwnProperty("isContentEditable");
-    
+
     true
-    
+
 
 You are not locked in to using `hasOwnProperty`. We recommend to use the much simpler `in` operand as this will check property on the entire prototype chain.
 
@@ -74,7 +74,7 @@ You are not locked in to using `hasOwnProperty`. We recommend to use the much si
     if("isContentEditable" in div) {
       // We have support!!
     }
-    
+
 
 
 ### Object.getOwnPropertyDescriptor on DOM Object Instance will no longer return a property descriptor for Attributes.
@@ -85,25 +85,25 @@ If you wanted to get the property description in Chrome 42 and earlier you would
 
 
     > Object.getOwnPropertyDescriptor(div, "isContentEditable");
-    
+
     Object {value: "", writable: true, enumerable: true, configurable: true}
-    
+
 
 Chrome 43 onwards will return `undefined` in this scenario.
 
 
     > Object.getOwnPropertyDescriptor(div, "isContentEditable");
-    
+
     undefined
-    
+
 
 Which means to now get the property descriptor for the "isContentEditable" property you will need to follow the prototype chain as follows:
 
 
     > Object.getOwnPropertyDescriptor(HTMLElement.prototype, "isContentEditable");
-    
+
     Object {get: function, set: function, enumerable: false, configurable: false}
-    
+
 
 ### JSON.stringify will no longer serialize DOM Attributes
 
@@ -113,20 +113,20 @@ Chrome 42 and earlier the following would have worked:
 
 
     > JSON.stringify(subscription);
-    
+
     {
       "endpoint": "https://something",
       "subscriptionId": "SomeID"
     }
-    
+
 
 Chrome 43 onwards will not serialize the properties that are on defined on the prototype and you will be returned an empty object.
 
 
     > JSON.stringify(subscription);
-    
+
     {}
-    
+
 
 You will have to provide your own serialization method, for example you could do the following:
 
@@ -145,7 +145,7 @@ You will have to provide your own serialization method, for example you could do
         return JSON.stringify(deepCopy(object));
     }
     var s = stringifyDOMObject(domObject);
-    
+
 
 ### Writing to read-only properties in strict mode will throw an error
 
@@ -159,7 +159,7 @@ Writing to read-only properties is supposed to throw an exception when you are u
       d.isContentEditable = 1;
       console.log(d.isContentEditable);
     }
-    
+
 
 Chrome 42 and earlier the function would have continued and silently carried on executing the function, although `isContentEditable` would have not been changed.
 
@@ -192,7 +192,7 @@ Great question.  Most issues with sites will be based on the fact a site has cho
 
 ## I am generally interested in following this change
 
-* Original bug from 2010: [https://code.google.com/p/chromium/issues/detail?id=43394](https://code.google.com/p/chromium/issues/detail?id=43394) - note: has most of the work on it.
+* Original bug from 2010: [https://bugs.chromium.org/p/chromium/issues/detail?id=43394](https://bugs.chromium.org/p/chromium/issues/detail?id=43394) - note: has most of the work on it.
 * [Code Review](https://codereview.chromium.org/984523003/){: .external } for commit
 
 
