@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/snippets
+  to:   /web/tools/chrome-devtools/javascript/snippets
+
 - from: /web/tools/chrome-devtools/manage-data/page-resources
   to:   /web/tools/chrome-devtools/resources/
 
@@ -169,10 +172,7 @@ redirects:
   to: /web/tools/chrome-devtools/remote-debugging/
 
 - from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/snippets
-
-- from: /web/tools/chrome-devtools/javascript/snippets
-  to: /web/tools/chrome-devtools/snippets
+  to: /web/tools/chrome-devtools/javascript/snippets
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables
