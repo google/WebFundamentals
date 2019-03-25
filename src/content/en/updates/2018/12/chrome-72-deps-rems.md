@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 72 to help you plan.
 
-{# wf_updated_on: 2019-03-07 #}
+{# wf_updated_on: 2019-03-22 #}
 {# wf_published_on: 2018-12-18 #}
 {# wf_tags: deprecations,removals,chrome72 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -19,8 +19,8 @@ description: A round up of the deprecations and removals in Chrome 72 to help yo
 
 ### Don't allow popups during page unload
 
-Note: This feature was not removed in Chrome 72 as planned. Removal is expected
-in Chrome 74.
+Note: This feature was actually removed in Chrome 74. We apologize for the
+mistake.
 
 Pages may no longer use `window.open()` to open a new page during unload. The
 Chrome popup blocker already prohibited this, but now it is prohibited whether
