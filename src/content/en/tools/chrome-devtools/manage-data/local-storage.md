@@ -70,11 +70,7 @@ See [View Application Cache Data](/web/tools/chrome-devtools/storage/application
 
 ## Service Worker Caches {:#service-worker-caches}
 
-The **Cache Storage** pane on the **Application** panel lets you inspect,
-modify, and debug caches created with the (service worker) Cache API. Check
-out the guide below for more help.
-
-{# include shared/related_guides.liquid inline=true list=page.related-guides.pwa #}
+See [View Cache Data](/web/tools/chrome-devtools/storage/cache).
 
 ## Clear service workers, storage, databases, and caches {:#clear-storage}
 
