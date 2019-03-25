@@ -1,6 +1,7 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, databases, and caches from the Application panel.
+robots: noindex
 
 {# wf_updated_on: 2019-03-25 #}
 {# wf_published_on: 2015-04-13 #}
@@ -9,6 +10,9 @@ description: Inspect and manage storage, databases, and caches from the Applicat
 # Inspect and Manage Storage, Databases, and Caches {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
+<aside class="caution">This page is deprecated.</aside>
+
 Inspect and manage storage, databases, and caches from the
 <strong>Application</strong> panel.
 
@@ -19,7 +23,6 @@ Inspect and manage storage, databases, and caches from the
 - Execute statements on a Web SQL database.
 - View Application and Service Worker Caches.
 - Clear all storage, databases, caches, and service workers with a single button click.
-
 
 ## Local storage {:#local-storage}
 

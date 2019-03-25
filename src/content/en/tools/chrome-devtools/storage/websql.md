@@ -95,6 +95,31 @@ DevTools does not update tables in real-time. To update the data in a table:
        </figcaption>
      </figure>
 
+## Delete all Web SQL data {: #delete }
+
+1. Open the **Clear Storage** pane.
+1. Make sure that the **Web SQL** checkbox is enabled.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/storage/imgs/websqlcheckbox.png"
+            alt="The Web SQL checkbox."/>
+       <figcaption>
+         <b>Figure 6</b>. The <b>Web SQL</b> checkbox.
+       </figcaption>
+     </figure>
+
+1. Click **Clear site data**.
+
+     <figure>
+       <img src="/web/tools/chrome-devtools/storage/imgs/clearwebsql.png"
+            alt="The Clear Site Data button."/>
+       <figcaption>
+         <b>Figure 7</b>. The <b>Clear Site Data</b> button.
+       </figcaption>
+     </figure>
+
+
+
 ## Feedback {: #feedback }
 
 {% include "web/_shared/helpful.html" %}
