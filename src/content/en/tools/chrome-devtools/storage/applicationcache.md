@@ -11,8 +11,10 @@ description: How to view Application Cache data from the Sources panel of Chrome
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
 <aside class="warning">
-  The Application Cache API is <a href="https://html.spec.whatwg.org/multipage/offline.html#offline">deprecated</a>.
-  DevTools features related to the Application Cache are not being maintained. This guide also is not being maintained.
+  The Application Cache API is 
+  <a href="https://html.spec.whatwg.org/multipage/offline.html#offline">
+    being removed from the web platform
+  </a>.
 </aside>
 
 [MDN]: https://developer.mozilla.org/en-US/docs/Web/API/Window/applicationCache
