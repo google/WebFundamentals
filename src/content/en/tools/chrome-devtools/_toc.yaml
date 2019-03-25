@@ -192,6 +192,10 @@ toc:
     path: /web/tools/chrome-devtools/storage/indexeddb
   - title: Session Storage
     path: /web/tools/chrome-devtools/storage/sessionstorage
+  - title: Application Cache
+    path: /web/tools/chrome-devtools/storage/applicationcache
+  - title: Web SQL
+    path: /web/tools/chrome-devtools/storage/websql
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
 - title: Resources

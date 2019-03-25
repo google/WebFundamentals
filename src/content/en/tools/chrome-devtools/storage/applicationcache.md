@@ -1,6 +1,6 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: How to view Application Cache data from the Sources panel of Chrome DevTools.
+description: How to view Application Cache data from the Application panel of Chrome DevTools.
 
 {# wf_updated_on: 2019-03-25 #}
 {# wf_published_on: 2019-03-25 #}

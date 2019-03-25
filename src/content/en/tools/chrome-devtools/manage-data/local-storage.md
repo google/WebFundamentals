@@ -41,28 +41,7 @@ See [View And Change IndexedDB Data With Chrome DevTools][IDB].
 
 ## Web SQL {:#web-sql}
 
-Use the **Web SQL** pane to query and modify Web SQL databases.
-
-Click on a database name to open a console for that database. From here you
-can execute statements on the database.
-
-![web sql console][wsc]
-
-Click on a database table to view that table's data.
-
-![web sql table][wst]
-
-* You can't update values from here, but you can do so via the database
-  console (see above).
-* Click on a column's header to sort the table by that column.
-* Changes that you make to a table won't update in realtime. Click the
-  **refresh** button (![refresh button][refresh]{:.inline}) to view your
-  updates.
-* Enter a space-separated or comma-separated list of column names in the
-  **Visible columns** textfield to only display those columns.
-
-[wsc]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-console.png
-[wst]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-table.png
+See [View And Edit Web SQL Data](/web/tools/chrome-devtools/storage/websql).
 
 ## Application Cache {: #application-cache }
 
