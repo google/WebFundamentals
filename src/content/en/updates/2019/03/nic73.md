@@ -72,7 +72,7 @@ users find and launch them from the same place as other apps, they run in
 their own window, they appear in the task switcher, their icons can show
 notification badging, and so on.
 
-We want to close the [close the capability gap](/web/updates/capabilities)
+We want to [close the capability gap](/web/updates/capabilities)
 between the web and native to provide a solid foundation for modern
 applications delivered on the web. We’re working to add new web platform
 capabilities that give you access to things like the
@@ -192,7 +192,7 @@ there’s plenty more.
 * The `<link>` element now supports `imagesrcset` and `imagesizes` properties
   to correspond to `srcset` and `sizes` attributes of `HTMLImageElement`.
 * Blink's shadow blur radius implementation, now matches Firefox and Safari.
-* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on 
+* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on
   the way. In addition, there's work on a CSS media query:
   [`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme),
   that can be used to detect if the user has requested the system use a light
