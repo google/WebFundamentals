@@ -4,12 +4,12 @@ ignore_paths:
 - "/web/_common-links.md"
 - "/web/manifest.json"
 - "/web/_shared/sample.html"
-- 
-- 
-- 
-- 
+- "/web/resources/..."
+- "/web/showcase/..."
+- "/web/shows/..."
+- "/web/updates/..."
 - "/web/fundamentals/atom.xml"
-- 
+- "/web/fundamentals/rss.xml"
 - "/web/tools/atom.xml"
 - "/web/tools/rss.xml"
 title: Запрос перевода DevSite для / web /
