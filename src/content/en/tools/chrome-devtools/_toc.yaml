@@ -83,7 +83,7 @@ toc:
     section:
     - title: Track Which Element Has Focus
       path: /web/tools/chrome-devtools/accessibility/focus
-- title: Simulate Mobile Devices
+- title: Mobile Simulation
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/device-mode/
@@ -117,24 +117,38 @@ toc:
   section:
   - title: Overview
     path: /web/tools/chrome-devtools/console/
-  - title: Get Started
-    path: /web/tools/chrome-devtools/console/get-started
+  - title: Log Messages
+    path: /web/tools/chrome-devtools/console/log
+  - title: Run JavaScript
+    path: /web/tools/chrome-devtools/console/javascript
+  - title: Reference
+    path: /web/tools/chrome-devtools/console/reference
   - title: API Reference
     path: /web/tools/chrome-devtools/console/api
   - title: Utilities API Reference
     path: /web/tools/chrome-devtools/console/utilities
-  - title: Diagnose and Log to the Console
-    path: /web/tools/chrome-devtools/console/console-write
-  - title: Compare Similar Data Objects
-    path: /web/tools/chrome-devtools/console/structured-data
-  - title: Measure and Count Executions
-    path: /web/tools/chrome-devtools/console/track-executions
-  - title: Handle Exceptions and Errors
-    path: /web/tools/chrome-devtools/console/track-exceptions
-  - title: Evaluate Expressions
-    path: /web/tools/chrome-devtools/console/expressions
-  - title: Monitor Events
-    path: /web/tools/chrome-devtools/console/events
+  - title: Live Expressions
+    path: /web/tools/chrome-devtools/console/live-expressions
+  - title: Deprecated
+    section:
+    - title: Diagnose and Log to the Console
+      path: /web/tools/chrome-devtools/console/console-write
+      status: deprecated
+    - title: Compare Similar Data Objects
+      path: /web/tools/chrome-devtools/console/structured-data
+      status: deprecated
+    - title: Measure and Count Executions
+      path: /web/tools/chrome-devtools/console/track-executions
+      status: deprecated
+    - title: Handle Exceptions and Errors
+      path: /web/tools/chrome-devtools/console/track-exceptions
+      status: deprecated
+    - title: Evaluate Expressions
+      path: /web/tools/chrome-devtools/console/expressions
+      status: deprecated
+    - title: Monitor Events
+      path: /web/tools/chrome-devtools/console/events
+      status: deprecated
 - title: Performance
   section:
   - title: Get Started
@@ -178,6 +192,8 @@ toc:
     path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
 - title: Workspaces
   path: /web/tools/chrome-devtools/workspaces/
+- title: Command Menu
+  path: /web/tools/chrome-devtools/command-menu/
 - title: Progressive Web Apps
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security

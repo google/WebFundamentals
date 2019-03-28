@@ -2,9 +2,11 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-04-03 #}
 {# wf_published_on: 2016-03-21 #}
 {# wf_blink_components: Platform>DevTools #}
+
+[level]: /web/tools/chrome-devtools/console/reference#level
 
 # Console API Reference {: .page-title }
 
@@ -15,8 +17,9 @@ description: Use the Console API to write information to the console,  create Ja
 Use the Console API to write information to the console, 
 create JavaScript profiles, and start a debugging session.
 
-
 ## console.assert(expression, object) {:#assert}
+
+[Log level][level]: `Error`
 
 Writes an [error](#error) to the console when the evaluated expression is 
 `false`. 
@@ -48,6 +51,8 @@ See [Clearing the console](index#clearing) for more information.
 
 ## console.count([label]) {:#count}
 
+[Log level][level]: `Info`
+
 Writes the number of times that `count()` has been invoked at the same 
 line and with the same (optional) label.
 
@@ -74,9 +79,13 @@ If you pass a label, the count is reset for that label only.
 
 ## console.debug(object [, object, ...]) {: #debug }
 
+[Log level][level]: `Info`
+
 Identical to [`console.log()`](#log).
 
 ## console.dir(object) {:#dir}
+
+[Log level][level]: `Info`
 
 Prints a JavaScript representation of the specified object. If the object 
 being logged is an HTML element, then the properties of its DOM representation 
@@ -95,6 +104,8 @@ in [String substitution and formatting][of].
 
 ## console.dirxml(object) {: #dirxml }
 
+[Log level][level]: `Info`
+
 Prints an XML representation of the descendant elements of `object` if 
 possible, or the JavaScript representation if not. Calling `console.dirxml()`
 on HTML and XML elements is equivalent to calling [`console.log()`](#log).
@@ -106,6 +117,8 @@ on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 ![console.dirxml() example](images/dirxml.png)
 
 ## console.error(object [, object, ...]) {: #error }
+
+[Log level][level]: `Error`
 
 Prints a message similar to [`console.log()`](#log), styles the 
 message like an error, and includes a stack trace from where the method was 
@@ -177,9 +190,13 @@ Closes a logging group. See [`console.group`](#group) for an example.
 
 ## console.info(object [, object, ...]) {: #info }
 
+[Log level][level]: `Info`
+
 Identical to [`console.log()`](#log).
 
 ## console.log(object [, object, ...]) {:#log}
+
+[Log level][level]: `Info`
 
 Displays a message in the console. Pass one or more objects to this method.
 Each object is evaluated and concatenated into a space-delimited string.
@@ -220,6 +237,8 @@ prints the report to the **Profiles** panel.
 See [`console.profile()`](#profile) for an example.
 
 ## console.table(array) {: #table }
+
+[Log level][level]: `Info`
 
 Logs an array of objects as a table.
 
@@ -271,6 +290,8 @@ Use labels to run multiple timers at the same time.
 
 ## console.timeEnd([label]) {: #timeend }
 
+[Log level][level]: `Info`
+
 Stops a timer. See [`console.time()`](#time) for examples.
 
 ## console.timeStamp([label]) {:#timestamp}
@@ -290,6 +311,8 @@ Related Guides:
 
 ## console.trace(object) {:#trace}
 
+[Log level][level]: `Info`
+
 Prints a stack trace from the point where the method was called. 
 
     console.trace();
@@ -297,6 +320,8 @@ Prints a stack trace from the point where the method was called.
 ![console.trace() example](images/trace.png)
 
 ## console.warn(object [, object, ...]) {: #warn }
+
+[Log level][level]: `Warning`
 
 Prints a message like [`console.log()`](#log), but also displays a yellow 
 warning icon next to the logged message.

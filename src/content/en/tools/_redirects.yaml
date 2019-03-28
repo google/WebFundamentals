@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/console/get-started
+  to:   /web/tools/chrome-devtools/console/
+
 - from: /web/tools/chrome-devtools/snippets
   to:   /web/tools/chrome-devtools/javascript/snippets
 
