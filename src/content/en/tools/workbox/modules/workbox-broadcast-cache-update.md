@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-04-02 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -59,8 +59,10 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin('api-updates')
-    ]
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+      }),
+    ],
   })
 );
 ```
@@ -116,11 +118,11 @@ workbox.routing.registerRoute(
   new RegExp('/api/'),
   new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin(
-        'api-updates',
-        headersToCheck: ['X-My-Custom-Header']
-      )
-    ]
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+        headersToCheck: ['X-My-Custom-Header'],
+      }),
+    ],
   })
 );
 ```
@@ -132,12 +134,10 @@ of a particular strategy as shown above, it's possible to use the underlying
 logic in service worker code.
 
 ```js
-const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate(
-  'api-updates',
-  {
-    headersToCheck: ['X-My-Custom-Header'],
-  }
-);
+const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate({
+  channelName: 'api-updates',
+  headersToCheck: ['X-My-Custom-Header'],
+});
 
 const cacheName = 'api-cache';
 const url = 'https://example.com/api';
