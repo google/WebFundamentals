@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Learn about Web Animation Playback
 
-{# wf_updated_on: 2019-03-15 #}
+{# wf_updated_on: 2019-04-05 #}
 {# wf_published_on: 2014-12-04 #}
 {# wf_tags: news,webanimations #}
 {# wf_blink_components: Blink>Animation #}
@@ -54,7 +54,7 @@ You could also modify the `playbackRate` property:
 
 
 
-You can also call the `reverse()` method, which is normally equivalent to inverting the current `playbackRate` (mutiply by -1). There are a couple of special cases, however:
+You can also call the `reverse()` method, which is normally equivalent to inverting the current `playbackRate` (multiply by -1). There are a couple of special cases, however:
 
 * If the change caused by the `reverse()` method would cause the running animation to effectively end, the `currentTime` is also inverted - e.g., if a brand new animation is reversed, the whole animation will play backwards
 
