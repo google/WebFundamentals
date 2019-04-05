@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: When we measure loading performance, we often do so using testing tools that only describe performance from the perspective of the tester. If we want to measure loading performance from the user's perspective, we must rely on the Navigation and Resource Timing APIs.
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2018-04-03 #}
 {# wf_published_on: 2018-06-08 #}
 {# wf_blink_components: Blink>PerformanceAPIs,Blink>PerformanceAPIs>NavigationTiming,Blink>PerformanceAPIs>ResourceTiming #}
 
@@ -430,21 +430,6 @@ gets everything in the performance entry buffer by default:
 ```javascript
 // Get timing data for an important hero image
 var allTheTimings = performance.getEntries();
-```
-
-But wait, there's more! `getEntries` can also serve as more verbose alternatives
-to `getEntriesByName` and `getEntriesByType`:
-
-```javascript
-// Get timing data for an important hero image
-var allTheTimings = performance.getEntries({
-  // Get entries by name
-  "name": "https://somesite.com/images/hero-image.jpg",
-  // Get entries by type
-  "entryType": "resource",
-  // Get entries by their initiatorType value:
-  "initiatorType": "img"
-});
 ```
 
 If `initiatorType` looks new to you, that's because I didn't cover it here.
