@@ -65,3 +65,7 @@ p.symbol-index-name {
 h2.symbol-header {
   margin: 36px 0px 0px 0px;
 }
+
+table.function.param tr {
+  background: #80A7B9;
+}

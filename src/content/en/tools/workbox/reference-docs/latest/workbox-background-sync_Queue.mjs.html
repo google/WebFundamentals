@@ -192,6 +192,7 @@ class Queue {
    * @param {Object} [entry.metadata]
    * @param {number} [entry.timestamp&#x3D;Date.now()]
    * @param {string} operation (&#x27;push&#x27; or &#x27;unshift&#x27;)
+   * @private
    */
   async _addRequest(
       {request, metadata, timestamp &#x3D; Date.now()}, operation) {
@@ -229,6 +230,7 @@ class Queue {
    *
    * @param {string} operation (&#x27;pop&#x27; or &#x27;shift&#x27;)
    * @return {Object|undefined}
+   * @private
    */
   async _removeRequest(operation) {
     const now &#x3D; Date.now();
