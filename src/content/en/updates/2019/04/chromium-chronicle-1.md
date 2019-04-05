@@ -1,9 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: the Chromium Chronicle, a monthly series geared specifically to Chromium developers, developers who build the browser.
+description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-04-04 #}
-{# wf_published_on: 2019-04-04 #}
+{# wf_updated_on: 2019-04-16 #}
+{# wf_published_on: 2019-04-16 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
 {# wf_featured_snippet: The Chrome team is proud to introduce the Chromium Chronicle, a monthly series geared specifically to Chromium developers, developers who build the browser. This month, we take a look at task scheduling best practices. #}
@@ -43,7 +43,7 @@ The old paradigm is to receive a SequencedTaskRunner from the creator:
 {: .compare-worse }
 
 <pre class="prettyprint cc-bad lang-cpp">
-<strong>Foo::Foo(scoped_refptr<base::SequencedTaskRunner> backend_task_runner)</strong>
+<b>Foo::Foo(scoped_refptr<base::SequencedTaskRunner> backend_task_runner)</b>
     : backend_task_runner_(std::move(backend_task_runner)) {}
 </pre>
 
@@ -53,8 +53,8 @@ The preferred paradigm is to create an independent SequencedTaskRunner:
 <pre class="prettyprint cc-good lang-cpp">
 Foo::Foo()
     : backend_task_runner_(
-          <strong>base::CreateSequencedTaskRunnerWithTraits({
-              base::MayBlock(), base::TaskPriority::BEST_EFFORT})) {}</strong>
+          <b>base::CreateSequencedTaskRunnerWithTraits({
+              base::MayBlock(), base::TaskPriority::BEST_EFFORT})) {}</b>
 </pre>
 
 This is easier to read and write as all the information is local and there’s
@@ -69,7 +69,7 @@ class FooTest : public testing::Test {
  public
   (...)
  protected:
-  <strong>base::test::ScopedTaskEnvironment task_environment_;</strong>
+  <b>base::test::ScopedTaskEnvironment task_environment_;</b>
   Foo foo_;
 };
 </pre>
