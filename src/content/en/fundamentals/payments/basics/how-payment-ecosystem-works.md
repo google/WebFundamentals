@@ -36,7 +36,7 @@ _Web Payments_ comprises multiple web standards.
     payment method. Along with standardized payment method identifiers, it
     allows anyone to define their own payment method with URL-based payment
     method identifiers. Learn more at [Payment method
-    basics](payments/basics/payment-method-basics).
+    basics](/web/fundamentals/payments/basics/payment-method-basics).
 *   **Payment Method Manifest:** The [Payment Method
     Manifest](https://w3c.github.io/payment-method-manifest/) defines the
     machine-readable manifest file, known as a payment method manifest,
