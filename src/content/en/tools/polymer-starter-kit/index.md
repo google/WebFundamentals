@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Polymer Starter Kit.
 
 {# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2019-04-08 #}
 
 # Polymer Starter Kit {: .page-title }
 
@@ -28,10 +28,6 @@ The PRPL pattern, in a nutshell:
 * **Pre-cache** components for remaining routes
 * **Lazy-load** and progressively upgrade next routes on-demand
 
-### Migrating from Polymer Starter Kit v1?
-
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html){: .external }
-
 ## Setup
 
 ### Prerequisites
@@ -44,62 +40,75 @@ Install [polymer-cli](https://github.com/Polymer/polymer-cli){: .external }:
 
     mkdir my-app
     cd my-app
-    polymer init starter-kit
+    polymer init polymer-3-starter-kit
 
 ### Start the development server
 
-This command serves the app at `http://localhost:8080` and provides basic URL
+This command serves the app at `http://127.0.0.1:8081` and provides basic URL
 routing for the app:
 
-    polymer serve --open
-
+    npm start
 
 ### Build
 
-This command performs HTML, CSS, and JS minification on the application
-dependencies, and generates a service-worker.js file with code to pre-cache the
-dependencies based on the entrypoint and fragments specified in `polymer.json`.
-The minified files are output to the `build/unbundled` folder, and are suitable
-for serving from a HTTP/2+Push compatible server.
+The `npm run build` command builds your Polymer application for production, using 
+build configuration options provided by the command line or in your project's 
+`polymer.json` file.
 
-In addition the command also creates a fallback `build/bundled` folder,
-generated using fragment bundling, suitable for serving from non
-H2/push-compatible servers or to clients that do not support H2/Push.
+You can configure your `polymer.json` file to create multiple builds. This is 
+necessary if you will be serving different builds optimized for different 
+browsers. You can define your own named builds, or use presets. See the 
+documentation on 
+[building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production)
+for more information.
 
-    polymer build
+The Polymer Starter Kit is configured to create three builds. These builds will 
+be output to a subdirectory under the `build/` directory as follows:
+
+```
+build/
+  es5-bundled/
+  es6-bundled/
+  esm-bundled/
+```
+
+* `es5-bundled` is a bundled, minified build with a service worker. ES6 code is 
+compiled to ES5 for compatibility with older browsers.
+* `es6-bundled` is a bundled, minified build with a service worker. ES6 code is 
+served as-is. This build is for browsers that can handle ES6 code - see 
+[building your project for production](https://www.polymer-project.org/3.0/toolbox/build-for-production#compiling)
+for a list.
+* `esm-bundled` is a bundled, minified build with a service worker. It uses 
+standard ES module import/export statements for browsers that support them.
+
+Run `polymer help build` for the full list of available options and optimizations. 
+Also, see the documentation on the 
+[polymer.json specification](https://www.polymer-project.org/3.0/docs/tools/polymer-json)
+and [building your Polymer application for production](https://www.polymer-project.org/3.0/toolbox/build-for-production).
 
 ### Preview the build
 
-This command serves the minified version of the app at `http://localhost:8080`
-in an unbundled state, as it would be served by a push-compatible server:
+This command serves your app. Replace `build-folder-name` with the folder name of the build you want to serve.
 
-    polymer serve build/unbundled
-
-This command serves the minified version of the app at `http://localhost:8080`
-generated using fragment bundling:
-
-    polymer serve build/bundled
+    npm start build/build-folder-name/
 
 ### Run tests
 
-This command will run
-[Web Component Tester](https://github.com/Polymer/web-component-tester){: .external } against the
-browsers currently installed on your machine.
+This command will run [Web Component Tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester)
+against the browsers currently installed on your machine:
 
-    polymer test
+    npm test
 
-### Adding a new view
+If running Windows you will need to set the following environment variables:
 
-You can extend the app by adding more views that will be demand-loaded
-e.g. based on the route, or to progressively render non-critical sections
-of the application.  Each new demand-loaded fragment should be added to the
-list of `fragments` in the included `polymer.json` file.  This will ensure
-those components and their dependencies are added to the list of pre-cached
-components (and will have bundles created in the fallback `bundled` build).
+- LAUNCHPAD_BROWSERS
+- LAUNCHPAD_CHROME
+
+Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-variables-impacting-local-browsers-detection).
 
 ## Next Steps
 
-Check out the [getting started guide](https://www.polymer-project.org/1.0/start/toolbox/set-up){: .external }
+Check out the [getting started guide](https://polymer-library.polymer-project.org/3.0/docs/first-element/intro){: .external }.
 
 ## Learn More
 
