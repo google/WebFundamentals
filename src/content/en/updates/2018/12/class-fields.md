@@ -147,7 +147,7 @@ class FakeMath {
   // `random` is a static public method (ES2015 syntax)
   // that consumes `#computeRandomNumber`.
   static random() {
-    console.log('I heard you like random numbers…')
+    console.log('I heard you like random numbers…');
     return FakeMath.#computeRandomNumber();
   }
 }
