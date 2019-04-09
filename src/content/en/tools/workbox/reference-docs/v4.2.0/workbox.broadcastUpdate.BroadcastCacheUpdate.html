@@ -97,14 +97,8 @@
             </section>
           </section>
           <section>
-            <h2>Methods</h2>
+            <h2>Method</h2>
             <section>
-              <h3 id="_initWindowReadyDeferreds" class="symbol-name">_initWindowReadyDeferreds</h3>
-              <p class="type-signature"> _initWindowReadyDeferreds()</p>
-              <p>Creates a mapping between navigation fetch events and deferreds, and adds a listener for message events from the window. When message events arrive, all deferreds in the mapping are resolved.</p>
-              <p>Note: it would be easier if we could only resolve the deferred of navigation fetch event whose client ID matched the source ID of the message event, but currently client IDs are not exposed on navigation fetch events: https://<a href="http://www.chromestatus.com/feature/4846038800138240">www.chromestatus.com/feature/4846038800138240</a></p>
-              <dl class="dl-compact">
-              </dl>
               <h3 id="notifyIfUpdated" class="symbol-name">notifyIfUpdated</h3>
               <p class="type-signature"> notifyIfUpdated(options)&nbsp;returns&nbsp;Promise</p>
               <p>Compare two <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Responses</a> and send a message via the
