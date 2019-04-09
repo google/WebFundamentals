@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Push Messaging and Notifications are Landing in Chrome 42.
 
 
-{# wf_updated_on: 2019-03-16 #}
+{# wf_updated_on: 2019-03-28 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,webpush,notifications,serviceworker #}
 {# wf_blink_components: N/A #}
@@ -417,11 +417,11 @@ is a `registration\_id`.
 
 An example endpoint would be:
 
-    https://android.googleapis.com/gcm/send/APA91bHPffi8zclbIBDcToXN_LEpT6iA87pgR-J-MuuVVycM0SmptG-rXdCPKTM5pvKiHk2Ts-ukL1KV8exGOnurOAKdbvH9jcvg8h2gSi-zZJyToiiydjAJW6Fa9mE3_7vsNIgzF28KGspVmLUpMgYLBd1rxaVh-L4NDzD7HyTkhFOfwWiyVdKh__rEt15W9n2o6cZ8nxrP
+    https://fcm.googleapis.com/fcm/send/APA91bHPffi8zclbIBDcToXN_LEpT6iA87pgR-J-MuuVVycM0SmptG-rXdCPKTM5pvKiHk2Ts-ukL1KV8exGOnurOAKdbvH9jcvg8h2gSi-zZJyToiiydjAJW6Fa9mE3_7vsNIgzF28KGspVmLUpMgYLBd1rxaVh-L4NDzD7HyTkhFOfwWiyVdKh__rEt15W9n2o6cZ8nxrP
 
 The FCM URL is:
 
-    https://android.googleapis.com/gcm/send
+    https://fcm.googleapis.com/fcm/send
 
 The `registration_id` would be:
 
@@ -435,11 +435,11 @@ What this means is that on your server you'll need to check if the endpoint
 is for FCM and if it is, extract the registration_id. To do this in Python you
 could do something like:
 
-    if endpoint.startswith('https://android.googleapis.com/gcm/send'):
+    if endpoint.startswith('https://fcm.googleapis.com/fcm/send'):
         endpointParts = endpoint.split('/')
         registrationId = endpointParts[len(endpointParts) - 1]
 
-        endpoint = 'https://android.googleapis.com/gcm/send'
+        endpoint = 'https://fcm.googleapis.com/fcm/send'
 
 Once you've got the registration ID, you can make a call to the FCM API. You
 can find [reference docs on the FCM API here](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream-http-messages-json).
@@ -470,7 +470,7 @@ in this cURL command with your own and run it from a terminal.
 You should see a glorious notification:
 
     curl --header "Authorization: key=<YOUR_API_KEY>" --header
-    "Content-Type: application/json" https://android.googleapis.com/gcm/send -d
+    "Content-Type: application/json" https://fcm.googleapis.com/fcm/send -d
     "{\"registration_ids\":[\"<YOUR_REGISTRATION_ID>\"]}"
 
 <p style="text-align: center;">
@@ -774,7 +774,7 @@ support the Web Push Protocol, which is the reason why Chrome requires the
 The end goal for Chrome is to move towards using the Web Push Protocol with Chrome and FCM.
 
 Until then, you need to detect the endpoint
-"https://android.googleapis.com/gcm/send"
+"https://fcm.googleapis.com/fcm/send"
 and handle it separately from other endpoints, i.e. format the payload data in a
 specific way and add the Authorization key.
 
