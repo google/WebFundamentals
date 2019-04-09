@@ -261,6 +261,19 @@ video.play();
 // Later on, video.requestPictureInPicture();
 ```
 
+Combining `canvas.captureStream()` with the [Media Session API], you can for
+instance create an audio playlist window in Chrome 74. Check out the official
+[Audio playlist sample].
+
+<figure>
+  <img src="/web/updates/images/2018/10/audio-playlist.jpg"
+       alt="Audio playlist in a Picture-in-Picture window">
+  <figcaption>
+    <b>Figure 1.</b>
+    Audio playlist in a Picture-in-Picture window
+  </figcaption>
+</figure>
+
 ## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
@@ -325,3 +338,6 @@ involved in the [standardization effort].
 [https://github.com/gbentaieb/pip-polyfill/]: https://github.com/gbentaieb/pip-polyfill/
 [standardization effort]: https://github.com/WICG/picture-in-picture/issues?utf8=%E2%9C%93&q=
 [Jennifer Apacible]: https://twitter.com/japacible
+[Media Session API]: /web/updates/2017/02/media-session
+[Audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
+
