@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2018-04-16 #}
+{# wf_updated_on: 2019-04-11 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero-sm.jpg #}
@@ -92,9 +92,6 @@ the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/){: .exter
 As a security feature, getting access to connected USB devices with
 `navigator.usb.requestDevice` must be called via a user gesture
 like a touch or mouse click.
-
-Caution: User gesture do not propagate through async events like Promises. See
-[crbug.com/404161](http://crbug.com/404161)
 
 ### Feature Policy
 
