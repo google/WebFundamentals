@@ -21,7 +21,7 @@ announcement:
       .devsite-banner-announcement {
         background-color: #e8f0fe;
         color: #424242;
-        font-weight: 500;
+
       }
       .devsite-banner-announcement :link,
       .devsite-banner-announcement :visited {
