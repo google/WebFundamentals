@@ -60,7 +60,7 @@ You might want to use a cache-first images, by matching against a list of known 
 
 ```javascript
 workbox.routing.registerRoute(
-  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
   new workbox.strategies.CacheFirst({
     cacheName: 'images',
     plugins: [
