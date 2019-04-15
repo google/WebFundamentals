@@ -105,9 +105,9 @@ list of issues that the page caused:
 ```js
 const observer = new ReportingObserver((reports, observer) => {
   for (const report of reports) {
-    // → report.id === 'XMLHttpRequestSynchronousInNonWorkerOutsideBeforeUnload'
     // → report.type === 'deprecation'
     // → report.url === 'https://reporting-observer-api-demo.glitch.me'
+    // → report.body.id === 'XMLHttpRequestSynchronousInNonWorkerOutsideBeforeUnload'
     // → report.body.message === 'Synchronous XMLHttpRequest is deprecated...'
     // → report.body.lineNumber === 11
     // → report.body.columnNumber === 22
