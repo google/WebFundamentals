@@ -52,8 +52,7 @@ import &#x27;./_version.mjs&#x27;;
  * a light weight expiration check is performed and the request will not be
  * used immediately.
  *
- * When using &#x60;maxEntries&#x60;, the last request to be used will be the request
- * that is removed from the Cache.
+ * When using &#x60;maxEntries&#x60;, the entry least-recently requested will be removed from the cache first.
  *
  * @memberof workbox.expiration
  */

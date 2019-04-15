@@ -185,6 +185,32 @@ class Queue {
   }
 
   /**
+   * Returns all the entries that have not expired (per &#x60;maxRetentionTime&#x60;).
+   * Any expired entries are removed from the queue.
+   *
+   * @return {Promise&amp;lt;Array&amp;lt;Object&gt;&gt;}
+   */
+  async getAll() {
+    const allEntries &#x3D; await this._queueStore.getAll();
+    const now &#x3D; Date.now();
+
+    const unexpiredEntries &#x3D; [];
+    for (const entry of allEntries) {
+      // Ignore requests older than maxRetentionTime. Call this function
+      // recursively until an unexpired request is found.
+      const maxRetentionTimeInMs &#x3D; this._maxRetentionTime * 60 * 1000;
+      if (now - entry.timestamp &gt; maxRetentionTimeInMs) {
+        await this._queueStore.deleteEntry(entry.id);
+      } else {
+        unexpiredEntries.push(convertEntry(entry));
+      }
+    }
+
+    return unexpiredEntries;
+  }
+
+
+  /**
    * Adds the entry to the QueueStore and registers for a sync event.
    *
    * @param {Object} entry
@@ -226,7 +252,7 @@ class Queue {
 
   /**
    * Removes and returns the first or last (depending on &#x60;operation&#x60;) entry
-   * form the QueueStore that&#x27;s not older than the &#x60;maxRetentionTime&#x60;.
+   * from the QueueStore that&#x27;s not older than the &#x60;maxRetentionTime&#x60;.
    *
    * @param {string} operation (&#x27;pop&#x27; or &#x27;shift&#x27;)
    * @return {Object|undefined}
@@ -236,7 +262,7 @@ class Queue {
     const now &#x3D; Date.now();
     const entry &#x3D; await this._queueStore[&#x60;${operation}Entry&#x60;]();
 
-    if (entry ) {
+    if (entry) {
       // Ignore requests older than maxRetentionTime. Call this function
       // recursively until an unexpired request is found.
       const maxRetentionTimeInMs &#x3D; this._maxRetentionTime * 60 * 1000;
@@ -244,10 +270,7 @@ class Queue {
         return this._removeRequest(operation);
       }
 
-      entry.request &#x3D; new StorableRequest(entry.requestData).toRequest();
-      delete entry.requestData;
-
-      return entry;
+      return convertEntry(entry);
     }
   }
 
@@ -260,7 +283,7 @@ class Queue {
     let entry;
     while (entry &#x3D; await this.shiftRequest()) {
       try {
-        await fetch(entry.request);
+        await fetch(entry.request.clone());
 
         if (process.env.NODE_ENV !&#x3D;&#x3D; &#x27;production&#x27;) {
           logger.log(&#x60;Request for &#x27;${getFriendlyURL(entry.request.url)}&#x27;&#x60; +
@@ -368,6 +391,27 @@ class Queue {
     return queueNames;
   }
 }
+
+
+/**
+ * Converts a QueueStore entry into the format exposed by Queue. This entails
+ * converting the request data into a real request and omitting the &#x60;id&#x60; and
+ * &#x60;queueName&#x60; properties.
+ *
+ * @param {Object} queueStoreEntry
+ * @return {Object}
+ * @private
+ */
+const convertEntry &#x3D; (queueStoreEntry) &#x3D;&gt; {
+  const queueEntry &#x3D; {
+    request: new StorableRequest(queueStoreEntry.requestData).toRequest(),
+    timestamp: queueStoreEntry.timestamp,
+  };
+  if (queueStoreEntry.metadata) {
+    queueEntry.metadata &#x3D; queueStoreEntry.metadata;
+  }
+  return queueEntry;
+};
 
 export {Queue};
 </code></pre>
