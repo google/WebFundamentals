@@ -1,0 +1,10 @@
+name: Site Kit
+description: "Set up the Site Kit plugin for your WordPress site by creating a Google Cloud Platform project."
+home_url: /web/site-kit/
+is_family_root: true
+color: google-blue
+content_license: cc3-apache2
+buganizer_id: 488674
+footer_path: /web/site-kit/_footer.yaml
+icon:
+  path: https://www.gstatic.com/images/branding/product/1x/googleg_64dp.png
