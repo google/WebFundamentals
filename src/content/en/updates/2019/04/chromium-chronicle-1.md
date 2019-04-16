@@ -6,7 +6,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 {# wf_published_on: 2019-04-16 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
-{# wf_featured_snippet: The Chrome team is proud to introduce the Chromium Chronicle, a monthly series geared specifically to Chromium developers, developers who build the browser. This month, we take a look at task scheduling best practices. #}
+{# wf_featured_snippet: The Chrome team is proud to introduce the Chromium Chronicle, a monthly series geared specifically to Chromium developers - the developers who build the browser. This month, we take a look at task scheduling best practices. #}
 {# wf_blink_components: N/A #}
 
 <style>
