@@ -269,7 +269,7 @@ us to:
 * Use a single connection to deliver multiple requests and responses in parallel.
 * Remove unnecessary HTTP/1.x workarounds (see
   [Optimizing for HTTP/1.x](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x),
-  such as concatenated files, image sprites, and domain sharding.
+  such as concatenated files, image sprites, and domain sharding).
 * Deliver lower page load times by eliminating unnecessary latency and improving
   utilization of available network capacity.
 * *And much more…*
