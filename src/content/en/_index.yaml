@@ -2,7 +2,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  body_class: hide-devsite-banner
+  body_class: x-hide-devsite-banner
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
@@ -41,28 +41,6 @@ landing_page:
           </div>
 
   rows:
-
-  - classname:  wf-cds-banner devsite-landing-row-large-headings
-    background: grey
-    items:
-    - heading: "#AskChrome Live: Implementing Performance Budgets"
-      description: >
-        April 16, 2019 | 10:00 AM (PT)<br><br>
-        Join us for the first <b>#AskChrome Live</b> livestream to learn about
-        implementing performance budgets into your projects and to ask your
-        burning questions live.
-      icon:
-        path: https://www.gstatic.com/images/branding/product/2x/chrome_96dp.png
-      buttons:
-      - label: Register now
-        path: https://events.withgoogle.com/askchrome-live/registrations/new/
-        attributes:
-        - name: data-category
-          value: webFu
-        - name: data-label
-          value: askcr-19-hpp
-        - name: data-action
-          value: button
 
   - classname: wf-landing-row
     items:
