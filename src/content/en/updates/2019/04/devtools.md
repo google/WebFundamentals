@@ -15,33 +15,57 @@ description: TODO
 
 ## Meaningful preset values when autocompleting CSS functions {: #presets }
 
-https://crbug.com/931145
-
-* [preset CSS autocomplete values](https://chromium.googlesource.com/chromium/src/+/beaedbdb329d74e1d1b9a0166508e0a3f7f632f5)
+Relevant Chromium issue: [#931145](https://crbug.com/931145)
 
 ## Clear site data from the Command Menu {: #clear }
 
-https://crbug.com/942503
+Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
+<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu
+and then run the **Clear Site Data** command to clear all data related to the
+page, including: [Service workers](/web/ilt/pwa/introduction-to-service-worker),
+[`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){: .external },
+[`sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage){: .external }, 
+[IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API){: .external }, 
+[Web SQL](https://www.w3.org/TR/webdatabase/){: .external }, 
+[Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies){: .external }, 
+[Cache](https://developer.mozilla.org/en-US/docs/Web/API/Cache){: .external }, and
+[Application Cache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache){: .external }.
 
-* [clear site data in command menu](https://chromium.googlesource.com/chromium/src/+/37992194975b33cb4c09fa512591f3b7cf06b8b2)
+<figure>
+  <img src="/web/updates/images/2019/04/clearsitedata.png"
+       alt="The Clear Site Data command."/>
+  <figcaption>
+    <b>Figure X</b>. The <b>Clear Site Data</b> command.
+  </figcaption>
+</figure>
+
+Clearing site data has been available from **Application** > **Clear Storage** for a while now.
+The new feature in Chrome 75 is being able to run the command from the Command Menu.
+
+If you don't want to delete *all* site data, you can control what data gets deleted from
+**Application** > **Clear Storage**.
+
+<figure>
+  <img src="/web/updates/images/2019/04/clearstoragepane.png"
+       alt="Application > Clear Storage."/>
+  <figcaption>
+    <b>Figure X</b>. <b>Application</b> &gt; <b>Clear Storage</b>.
+  </figcaption>
+</figure>
+
+Relevant Chromium issue: [#942503](https://crbug.com/942503)
 
 ## IndexedDB {: #indexeddb }
 
-https://crbug.com/943770
-
-* [show all indexeddb databases](https://chromium.googlesource.com/chromium/src/+/198fb2cf9272b63c1f7e34d4dc5d292232c6dcb1)
+Relevant Chromium issue: [#943770](https://crbug.com/943770)
 
 ## View a resource's uncompressed size on hover {: #uncompressed }
 
-https://crbug.com/805429
-
-* [size column tooltip](https://chromium.googlesource.com/chromium/src/+/07e1ebde979461823f0b23f2247621ee0d1c9414)
+Relevant Chromium issue: [#805429](https://crbug.com/805429)
 
 ## Resource counts in the storage panes {: #counts }
 
-* [show number of entries in indexeddb store](https://chromium.googlesource.com/chromium/src/+/daaeb82ec89cec76961a1d69a21f405fb08d0220)
-* [indexeddb object store counts](https://chromium.googlesource.com/chromium/src/+/aba304658ae165a66c0f09756e92d7941818c474)
-* [cache storage counter](https://chromium.googlesource.com/chromium/src/+/45237b838f0aaf393967a9a8b46d83bbee20851b)
+Relevant Chromium issues: [#941197](https://crbug.com/941197), [#930773](https://crbug.com/930773), [#930865](https://crbug.com/930865)
 
 ## Inline breakpoints in the breakpoint pane {: #inline }
 
@@ -57,7 +81,7 @@ manage these 3 breakpoints individually.
 
 As of Chrome 75 each inline breakpoint gets its own entry in the **Breakpoints** pane.
 
-* [inline breakpoinst get their own column](https://chromium.googlesource.com/chromium/src/+/43005f59158e79ce01f4bfa77ea52b9732fc7a4d)
+Relevant Chromium issue: [#927961](https://crbug.com/927961)
 
 ## Setting for disabling the detailed inspect tooltip {: #inspect }
 
@@ -67,7 +91,7 @@ Chrome 73 introduced [detailed tooltips when in Inspect mode][inspect].
 
 You can now disable these detailed tooltips from **Settings** > **Preferences** > **Elements** > **Show Detailed Inspect Tooltip**.
 
-* [setting to disable inspect tooltip](https://chromium.googlesource.com/chromium/src/+/47e5d9a0f8f988e4d11d27a21dbf4c0414795f25)
+Relevant Chromium issue: [#948417](https://crbug.com/948417)
 
 ## Setting for toggling tab indentation in the Sources panel editor {: #tab }
 
@@ -78,7 +102,7 @@ into the **Editor**, they had no way to tab out of it because the <kbd>Tab</kbd>
 To override the default behavior and use <kbd>Tab</kbd> to move focus, enable **Settings** > **Preferences** >
 **Sources** > **Enable Tab Moves Focus**.
 
-* [toggle tab indentation](https://chromium.googlesource.com/chromium/src/+/27ff38b767bc1659a596830b864acf60850e6bd0)
+<!-- https://chromium.googlesource.com/chromium/src/+/27ff38b767bc1659a596830b864acf60850e6bd0 -->
 
 ## Feedback {: #feedback }
 
