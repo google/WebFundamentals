@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Several proposals expand the existing JavaScript class syntax with new functionality. This article explains the new public class fields syntax in V8 v7.2 and Chrome 72, as well as the upcoming private class fields syntax.
 
-{# wf_updated_on: 2018-12-18 #}
+{# wf_updated_on: 2019-04-08 #}
 {# wf_published_on: 2018-12-13 #}
 {# wf_tags: javascript,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/js.png #}
@@ -147,7 +147,7 @@ class FakeMath {
   // `random` is a static public method (ES2015 syntax)
   // that consumes `#computeRandomNumber`.
   static random() {
-    console.log('I heard you like random numbers…')
+    console.log('I heard you like random numbers…');
     return FakeMath.#computeRandomNumber();
   }
 }

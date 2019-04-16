@@ -2,17 +2,18 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: An exploration of ES6 Generators.
 
-{# wf_updated_on: 2014-10-06 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-10-06 #}
 {# wf_tags: news,iterators,generators,es6 #}
+{# wf_blink_components: N/A #}
 
 # Generators: the Gnarly Bits {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
-The [ECMAScript 6 draft specification](http://people.mozilla.org/~jorendorff/es6-draft.html) has already yielded many sources of joy for the modern JavaScript developer. We covered some new collections classes and `for..of` iteration loops in a [previous post](http://updates.html5rocks.com/2014/08/Collecting-and-Iterating-the-ES6-Way). In this post, we’re going to talk about something that goes hand-in-hand with `for..of` loops: [generator functions](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions).
+The [ECMAScript 6 draft specification](https://github.com/jorendorff/es-spec-html/blob/master/es6-draft.html) has already yielded many sources of joy for the modern JavaScript developer. We covered some new collections classes and `for..of` iteration loops in a [previous post](/web/updates/2014/08/Collecting-and-Iterating-the-ES6-Way). In this post, we’re going to talk about something that goes hand-in-hand with `for..of` loops: generator functions.
 
-There’s a [host](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) of [great material](http://www.2ality.com/2013/06/iterators-generators.html) out there already that covers the why and how of using generators. In a nutshell, generators are special functions which create [iterators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol), and iterators are objects that have a `next()` method, which can be called to obtain a value. Within a generator function, the keyword `yield` provides the value for `next()`. Using `yield` _suspends_ execution of the generator function, preserving the state until `next()` is called again, at which point the code starts back up and continues, until it `yield`s another value (or until the generator function terminates). There are several canonical use cases for generator functions, like [using them](http://wiki.ecmascript.org/doku.php?id=harmony:generators) to iterate over the numbers in the [Fibonacci sequence](http://en.wikipedia.org/wiki/Fibonacci_number).
+There’s a [host](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) of [great material](http://2ality.com/2013/06/iterators-generators.html) out there already that covers the why and how of using generators. In a nutshell, generators are special functions which create [iterators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), and iterators are objects that have a `next()` method, which can be called to obtain a value. Within a generator function, the keyword `yield` provides the value for `next()`. Using `yield` _suspends_ execution of the generator function, preserving the state until `next()` is called again, at which point the code starts back up and continues, until it `yield`s another value (or until the generator function terminates). There are several canonical use cases for generator functions, like using them to iterate over the numbers in the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 With the basics out of the way, let’s go in-depth with a JavaScript sample that covers some of the gotchas, or “gnarly bits”, of working with generators. There are extensive comments throughout, and you can play around with the [live version](https://googlechrome.github.io/samples/generators/index.html) of the code before reading through it:
 

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2019-01-28 #}
+{# wf_updated_on: 2019-03-20 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -27,6 +27,17 @@ We will design and develop these new capabilities in an
 standards processes while getting early feedback from developers and other
 browser vendors as we iterate on the design, to ensure an interoperable design.
 
+You can see the [full list](https://goo.gl/JkDCXM) of capabilities we're
+considering on <crbug.com> and filtering issues with the `proj-fugu` label.
+
+<aside class="note">
+  <b>Have a suggestion for a capability you think we should consider?</b>
+  Tell us about it by filing a <a href="https://goo.gl/qWhHXU">new feature
+  request</a>. Please be sure to include as much detail as you can, such as
+  the problem you're trying to solve, suggested use cases, and anything else
+  that might be helpful.
+</aside>
+
 ## In flight {: #in-flight }
 
 <table>
@@ -50,7 +61,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         attention, or it can be used to indicate a small amount of information,
         such as an unread count.
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>
@@ -64,7 +76,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         that allows your web app to check to see if your native app is
         installed on the users device, and vice versa.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> March 12th, 2019
       </td>
     </tr>
     <tr>
@@ -77,7 +90,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         interfaces. Currently, the supported features are face detection,
         barcode detection, and text detection (Optical Character Recognition).
         <br><br>
-        <b>Current Status:</b> Available as an origin trial.
+        <b>Current Status:</b> Available as an origin trial.<br>
+        <b>Last Updated:</b> February 2nd, 2019
       </td>
     <tr>
       <td>
@@ -92,7 +106,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         the device from going to sleep when an application needs to keep
         running.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
+        <b>Last Updated:</b> December 18th, 2018
       </td>
     </tr>
     <tr>
@@ -106,13 +121,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         native file system, and without having to use a native wrapper like
         Electron to ship your web app.
         <br><br>
-        <b>Current Status:</b> Gathering feedback &amp; iterating on design.
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        See the <a href="https://goo.gl/JkDCXM">full list</a> of capabilities
-        including the backlog of ones we've haven't started working on yet.
+        <b>Current Status:</b> Gathering feedback &amp; iterating on design.<br>
+        <b>Last Updated:</b> November 12th, 2018
       </td>
     </tr>
   </tbody>
@@ -138,7 +148,8 @@ browser vendors as we iterate on the design, to ensure an interoperable design.
         either the Web Share API or system events, like the OS-level share
         button.
         <br><br>
-        <b>Status:</b> Launched in Chrome 71
+        <b>Status:</b> Launched in Chrome 71<br>
+        <b>Last Updated:</b> December 5th, 2018
       </td>
     </tr>
   </tbody>
@@ -213,7 +224,6 @@ Finally, after the spec has been finalized, the origin trial is complete and all
 of the steps and approvals from the [Blink launch
 process](https://www.chromium.org/blink/launching-features) have been completed,
 it’s time to ship it.
-
 
 <div class="clearfix"></div>
 

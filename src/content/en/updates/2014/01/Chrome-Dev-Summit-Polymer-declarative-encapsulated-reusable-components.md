@@ -2,11 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Polymer is a gateway into the amazing future of Web Components.  Learn more about Web Components and Polymer from the Chrome Dev Summit
 
-{# wf_updated_on: 2017-01-30 #}
+{# wf_updated_on: 2019-03-21 #}
 {# wf_published_on: 2014-01-06 #}
 {# wf_tags: news,mobile,polymer,webcomponents #}
+{# wf_blink_components: N/A #}
 
 # Chrome Dev Summit: Polymer declarative, encapsulated, reusable components {: .page-title }
+
+Warning: This article is out of date! Check out our
+[Web Components](/web/fundamentals/web-components/) article, or see the
+[Polymer Project](https://www.polymer-project.org) site.
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -14,7 +19,7 @@ description: Polymer is a gateway into the amazing future of Web Components.  Le
   <iframe class="devsite-embedded-youtube-video" data-video-id="DH1vTVkqCDQ"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 [Polymer](https://www.polymer-project.org/) is one gateway into the amazing future of Web Components. We want to make it easy to consume and build custom elements. For the past year, the team has been working hard on a set of polyfills for the evolving specifications. On top of that, we've created a convenient sugaring library to make building web components easier. Lastly, we're crafting a set of UI and utility elements to reuse in your apps. At the 2013 Chrome Dev Summit, I dove into the different parts of Polymer and the philosophy behind our "Everything is an element" mantra.
 
@@ -25,7 +30,7 @@ description: Polymer is a gateway into the amazing future of Web Components.  Le
 
 **Slides**: [http://html5-demos.appspot.com/static/cds2013/index.html#6](http://html5-demos.appspot.com/static/cds2013/index.html#6)
 
-Building web pages in the 90s was limiting, but powerful. We only had a few elements at our disposal. The powerful part?...**everything was declarative**. It was remarkably simple to create a page, add form controls, and create an "app" without writing gobs of JavaScript.
+Building web pages in the 1990's was limiting, but powerful. We only had a few elements at our disposal. The powerful part?...**everything was declarative**. It was remarkably simple to create a page, add form controls, and create an "app" without writing gobs of JavaScript.
 
 Take the humble `<select>` element. There is a ton of functionality built into the element, simply by declaring it:
 
@@ -40,7 +45,7 @@ Web Components provide the tools to get back to this heyday of web development. 
 
     <polymer-ajax url="http://gdata.youtube.com/feeds/api/videos/"
                    params='{"alt":"json"}'></polymer-ajax>
-    
+
 
 Or [responsive elements](http://html5-demos.appspot.com/static/cds2013/index.html#44) that data-bind to a `queryMatches` attribute:
 
@@ -52,7 +57,7 @@ This is exactly the approach we're taking in Polymer. Instead of building monoli
 
 
     <my-app></my-app>
-    
+
 
 ## Building web components with Polymer's special sauce
 
@@ -76,7 +81,7 @@ Moral of the story is that writing Polymer elements is all about being declarati
 
 I would be remissed if I didn't give a shout out to the standards behind Web Components. After all, Polymer is based on these evolving foundational APIs.
 
-We're on the cusp of a very exciting time in web development. Unlike other new features being added to the web platform, the APIs that make up [Web Components](http://www.w3.org/TR/components-intro/) are not shiny or user-facing. They're purely for **developer productivity**. Each of the four main APIs is useful by itself, but together magical things happen!
+We're on the cusp of a very exciting time in web development. Unlike other new features being added to the web platform, the APIs that make up [Web Components](https://www.w3.org/TR/components-intro/) are not shiny or user-facing. They're purely for **developer productivity**. Each of the four main APIs are useful by themselves, but together, magical things happen!
 
 1. [Shadow DOM](/web/fundamentals/web-components/shadowdom) - style and DOM encapsulation
 - [Custom Elements](/web/fundamentals/getting-started/primers/customelements) - define new HTML elements. Give them an API with properties and methods.
@@ -84,5 +89,3 @@ We're on the cusp of a very exciting time in web development. Unlike other new f
 - [Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/) - proper DOM templating for defining inert chunks of markup to be stamped out later
 
 If you want to learn more about the fundamentals of the APIs, check out webcomponents.org.
-
-

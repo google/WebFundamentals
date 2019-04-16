@@ -1,23 +1,24 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-06-12 #}
 {# wf_tags: news,devtools #}
+{# wf_blink_components: N/A #}
 
 # sourceMappingURL and sourceURL syntax changed {: .page-title }
 
 {% include "web/_shared/contributors/paulirish.html" %}
 
 
-If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/){: .external }), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
+If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/){: .external }), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
 
 ![](/web/updates/images/2013/06/sourcemapping/37clIgB.png)
 
 Here's what that's about:
 
 ###Impetus
-`//@ sourceMappingURL` [was found](http://bugs.jquery.com/ticket/13274) to have a conflict with IE whenever it was
+`//@ sourceMappingURL` [was found](https://bugs.jquery.com/ticket/13274) to have a conflict with IE whenever it was
 found in the page after `//@cc_on` was interpreted to turn on conditional
 compilation in the IE JScript engine. A legacy version of the HTML5 Shiv is one
 particular offender here.
@@ -29,7 +30,7 @@ It was changed there to use `//#` syntax instead.
 ###sourceURL
 `//@ sourceURL` is also defined in the spec and was made to match the `//#` syntax
 for consistency. Follow through, for details on
-[what sourceURL does](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl). It's used by Ember's [minispade](https://github.com/wycats/minispade), Google's [concatenate.js](https://github.com/google/concatenate.js), and others. In Chrome, `sourceURL` is supported for inline scripts and inline styles, in addition to evaluated JS.
+[what sourceURL does](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl). It's used by Ember's [minispade](https://github.com/wycats/minispade), Google's [concatenate.js](https://github.com/google/concatenate.js), and others. In Chrome, `sourceURL` is supported for inline scripts and inline styles, in addition to evaluated JS.
 
 ###Implementation in Browser DevTools = done!
 

@@ -3,9 +3,10 @@ book_path: /web/updates/_book.yaml
 description: The fetch() API is landing in the window object and is looking to replace XHRs
 
 
-{# wf_updated_on: 2017-10-18 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-03-10 #}
 {# wf_tags: news,fetch,xhr #}
+{# wf_blink_components: N/A #}
 
 # Introduction to fetch() {: .page-title }
 
@@ -19,12 +20,12 @@ simpler and cleaner API, avoiding callback hell and having to remember the compl
 XMLHttpRequest.
 
 The [Fetch API](https://fetch.spec.whatwg.org/){: .external } has been available in the
-[Service Worker](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/){: .external } global
+[Service Worker](https://w3c.github.io/ServiceWorker/){: .external } global
 scope since Chrome 40, but it'll be enabled in the window scope in Chrome 42.
 There is also a rather fetching [polyfill by GitHub](https://github.com/github/fetch) that you can use today.
 
 If you've never used
-[Promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 before, check out [Introduction to JavaScript Promises](/web/fundamentals/getting-started/primers/promises).
 
 ## Basic Fetch Request
@@ -120,7 +121,7 @@ When a request is made for a resource on the same origin, the response will have
 a `basic` type and there aren't any restrictions on what you can view from the
 response.
 
-If a request is made for a resource on another origin which returns [the CORs headers](http://enable-cors.org/), then the type is `cors`. `cors` and `basic`
+If a request is made for a resource on another origin which returns [the CORs headers](https://enable-cors.org/), then the type is `cors`. `cors` and `basic`
 responses are almost identical except that a `cors` response restricts the
 headers you can view to \`Cache-Control\`, \`Content-Language\`,
 \`Content-Type\`, \`Expires\`, \`Last-Modified\`, and \`Pragma\`.
@@ -138,7 +139,7 @@ resolve. The modes you can set are as follows:
 * `cors` will allow requests for assets on the same-origin and other origins which return the
   appropriate CORs headers.
 * `cors-with-forced-preflight` will always perform a [preflight
-  check](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Preflighted_requests) before making the actual request.
+  check](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests) before making the actual request.
 * `no-cors` is intended to make requests to other origins that do not have CORS
   headers and result in an `opaque` response, but as stated, this isn't
   possible in the window global scope at the moment.
@@ -257,6 +258,6 @@ H/T [@Nexii](https://twitter.com/Nexii) for pointing this out.
 
 ### Why is "no-cors" supported in service workers but not the window?
 
-This is due to a security concern, you can [learn more here](https://code.google.com/p/chromium/issues/detail?id=457157&q=fetch%20no-cors&colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified).
+This is due to a security concern, you can [learn more here](https://bugs.chromium.org/p/chromium/issues/detail?id=457157&q=fetch%20no-cors&colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified).
 
 

@@ -181,15 +181,26 @@ toc:
 - title: Progressive Web Apps
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security
-  path: /web/tools/chrome-devtools/security
-- title: Storage and Resources
+  path: /web/tools/chrome-devtools/security/
+- title: Storage
   section:
+  - title: Cookies
+    path: /web/tools/chrome-devtools/storage/cookies
+  - title: Local Storage
+    path: /web/tools/chrome-devtools/storage/localstorage
+  - title: IndexedDB
+    path: /web/tools/chrome-devtools/storage/indexeddb
+  - title: Session Storage
+    path: /web/tools/chrome-devtools/storage/sessionstorage
+  - title: Application Cache
+    path: /web/tools/chrome-devtools/storage/applicationcache
+  - title: Web SQL
+    path: /web/tools/chrome-devtools/storage/websql
   - title: Inspect and Manage Storage, Databases, and Caches
     path: /web/tools/chrome-devtools/manage-data/local-storage
-  - title: Inspect and Delete Cookies
-    path: /web/tools/chrome-devtools/manage-data/cookies
-  - title: Inspect Resources
-    path: /web/tools/chrome-devtools/manage-data/page-resources
+    status: deprecated
+- title: Resources
+  path: /web/tools/chrome-devtools/resources/
 - title: Extend DevTools
   section:
   - title: Integrating with DevTools and Chrome

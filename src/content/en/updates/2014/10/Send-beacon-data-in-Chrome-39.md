@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 39 implements the Beacon API, which allows to send small async HTTP requests during the page unload events.
 
-{# wf_updated_on: 2014-10-01 #}
+{# wf_updated_on: 2019-03-15 #}
 {# wf_published_on: 2014-10-01 #}
 {# wf_tags: news,beacon,analytics #}
+{# wf_blink_components: N/A #}
 
 # Send beacon data in Chrome 39 {: .page-title }
 
@@ -22,7 +23,7 @@ to be synchronous, because most browsers typically ignore asynchronous XMLHttpRe
 This approach slows down navigation, as the user needs
 to wait for the request to come back before a new page could be rendered.
 
-The [*Beacon API*](http://www.w3.org/TR/beacon/){: .external } solves this problem by letting you asynchronously
+The [*Beacon API*](https://www.w3.org/TR/beacon/){: .external } solves this problem by letting you asynchronously
 send HTTP requests with small data payloads from a browser to a web server,
 without delaying other code in the page's unload event or
 affecting the performance of the next page navigation.
@@ -38,7 +39,7 @@ beacon data from our page at this address:
 
 
     https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop
-    
+
 
 If we add a `sendBeacon()` method in the `pagehide` event handler,
 the endpoint will receive the data when the user navigates away from the page:
@@ -52,6 +53,6 @@ Alternatively, you can visit the
 [PutsReq inspect page](https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop/inspect)
 to see if the beacon data was received.
 
-There is also a [Polymer](http://www.polymer-project.org/) custom element that lets you send beacon data - `<beacon-send>`. Check it out at [ebidel.github.io/beacon-send](http://ebidel.github.io/beacon-send/components/beacon-send/).
+There is also a [Polymer](https://www.polymer-project.org/) custom element that lets you send beacon data - `<beacon-send>`. Check it out at [ebidel.github.io/beacon-send](http://ebidel.github.io/beacon-send/components/beacon-send/).
 
 

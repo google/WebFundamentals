@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2018-12-05 #}
+{# wf_updated_on: 2019-04-11 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
 {# wf_blink_components: Blink>WebShare #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # Registering as a Share Target with the Web Share Target API {: .page-title }
 
@@ -94,6 +96,8 @@ In the `manifest.json` file, add the following:
 ```json
 "share_target": {
   "action": "/share-target/",
+  "method": "GET",
+  "enctype": "application/x-www-form-urlencoded",
   "params": {
     "title": "title",
     "text": "text",
@@ -107,6 +111,15 @@ If your application already has a share URL scheme, you can replace the
 URL scheme uses `body` instead of `text`, you could replace the above with
 `"text": "body",`.
 
+The `method` value will default to `"GET"` if not provided. You may need to
+switch it to `"POST"`, depending on what type of HTTP request your `action` URL
+expects to receive. If your web app accepts `POST`s, then the `enctype` value
+will determine what
+[type of encoding](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-enctype)
+is used for the body of the `POST` request. The default `enctype` is
+`"application/x-www-form-urlencoded"`, and the value is ignored if `method` is
+set to `"GET"`.
+
 When another application tries to share, your application will be listed as an
 option in the share intent chooser.
 
@@ -116,20 +129,27 @@ share target landing page.
 
 ### Handle the incoming content
 
-If the user selects your application, the browser opens a new window at the
-`action` URL. It will then generate a query string using the values supplied
-in the manifest. For example if the other app provides `title` and `text`,
-the query string would be `?title=hello&text=world`.
+If the user selects your application, and your `method` is `"GET"` (the
+default), the browser opens a new window at the `action` URL. It will generate a
+query string using the URL encoded values supplied in the manifest. For example
+if the other app provides `title` and `text`, the query string would be
+`?title=hello&text=world`.
 
 
 ```js
 window.addEventListener('DOMContentLoaded', () => {
   const parsedUrl = new URL(window.location);
+  // searchParams.get() will properly handle decoding the values.
   console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
   console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
   console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
 });
 ```
+
+If your `method` is `"POST"`, then the body of the incoming `POST` request will
+contain the same values, encoded using the `enctype` specified. You may choose
+to handle this request server-side, by decoding the request body and using the
+provided data.
 
 How you deal with the incoming shared data is up to you, and dependent on your
 app.
@@ -183,4 +203,3 @@ appear in the `text` field, or occasionally in the `title` field.
 [explainer]: https://github.com/WICG/web-share-target/blob/master/docs/explainer.md
 [issues]: https://github.com/WICG/web-share-target/issues
 [wicg-discourse]: https://discourse.wicg.io/t/web-share-target-api-for-websites-to-receive-shared-content/1854
-

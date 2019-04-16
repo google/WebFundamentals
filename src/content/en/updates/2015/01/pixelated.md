@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Pixelation of the nation. Now in Chrome 41
 
-{# wf_updated_on: 2015-01-17 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-17 #}
 {# wf_tags: news,css,pixelated,image-rendering #}
+{# wf_blink_components: N/A #}
 
 # image-rendering: pixelated {: .page-title }
 
@@ -15,7 +16,7 @@ description: Pixelation of the nation. Now in Chrome 41
 As web developers we play with images all the time and in most cases browsers are great
 at scaling images to fit the boundaries of our site designs whilst keeping the images pretty. But what happens when you want to control how the browser scales the images on your page?
 
-Chrome 41 (Beta in January 2015) introduces a new CSS property [`image-rendering: pixelated`](https://developer.mozilla.org/en/docs/Web/CSS/image-rendering) ([Spec](http://dev.w3.org/csswg/css-images-3/#the-image-rendering)) that gives you a little more control over how the browser renders a scaled up image.
+Chrome 41 (Beta in January 2015) introduces a new CSS property [`image-rendering: pixelated`](https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering) ([Spec](https://drafts.csswg.org/css-images-3/#the-image-rendering)) that gives you a little more control over how the browser renders a scaled up image.
 
 The CSS property `image-rendering` and the value `pixelated` are interesting because they turn off the
 browser's standard smooth scaling (normally bi-linear interpolation) and replaces it with another
@@ -76,6 +77,6 @@ If you are building an airline ticketing tool, or an app that displays [QR codes
     <figcaption>Preserving pixelation (only visible in Chrome M41+ or Opera 26+)</figcaption>
 </figure>
 
-If you are interested in seeing the implementation, checkout [Issue 317991](https://code.google.com/p/chromium/issues/detail?id=317991) (it is left open for the implementation of the crisp-edges value. Star the issue to track the implementation).
+If you are interested in seeing the implementation, checkout [Issue 317991](https://bugs.chromium.org/p/chromium/issues/detail?id=317991) (it is left open for the implementation of the crisp-edges value. Star the issue to track the implementation).
 
 

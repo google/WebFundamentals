@@ -24,7 +24,7 @@
     "husky": "^0.14.3",
     "inquirer": "^3.3.0",
     "jsdoc-baseline": "https://github.com/hegemonic/baseline/tarball/master",
-    "workbox-build": "^4.0.0"
+    "workbox-build": "^4.2.0"
   },
   "private": true,
   "dependencies": {
@@ -41,7 +41,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.7",
     "handlebars": "^4.0.5",
-    "handlebars-helpers": "^0.10.0",
+    "handlebars-helpers": "0.8.4",
     "js-yaml": "^3.6.1",
     "jsdoc": "^3.5.5",
     "jsonschema": "^1.2.0",

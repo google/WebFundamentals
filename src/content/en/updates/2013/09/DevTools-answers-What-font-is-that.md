@@ -2,16 +2,17 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Ever wondered which font is actually being used to render text? Wonder no more as Chrome DevTools reveals all!
 
-{# wf_updated_on: 2013-09-27 #}
+{# wf_updated_on: 2019-03-09 #}
 {# wf_published_on: 2013-09-27 #}
 {# wf_tags: news,devtools,webfonts,tools #}
+{# wf_blink_components: N/A #}
 
 # DevTools answers: What font is that?  {: .page-title }
 
 {% include "web/_shared/contributors/paulirish.html" %}
 
 
-Chrome DevTools can [now](http://crbug.com/135489) tell you **exactly what typeface is being used to render text**.
+Chrome DevTools can [now](https://bugs.chromium.org/p/chromium/issues/detail?id=135489) tell you **exactly what typeface is being used to render text**.
 
 Font stacks are a funny thing, more of a suggestion than a demand. Because the family you suggest may not be present, you're letting each user's browser handle the fall-through case, pulling something that will work and using that.
 

@@ -1,5 +1,14 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/snippets
+  to:   /web/tools/chrome-devtools/javascript/snippets
+
+- from: /web/tools/chrome-devtools/manage-data/page-resources
+  to:   /web/tools/chrome-devtools/resources/
+
+- from: /web/tools/chrome-devtools/manage-data/cookies
+  to:   /web/tools/chrome-devtools/storage/cookies
+
 - from: /web/tools/chrome-devtools/network-performance/
   to:   /web/tools/chrome-devtools/network/
 
@@ -163,10 +172,7 @@ redirects:
   to: /web/tools/chrome-devtools/remote-debugging/
 
 - from: /web/tools/chrome-devtools/debug/snippets/
-  to: /web/tools/chrome-devtools/snippets
-
-- from: /web/tools/chrome-devtools/javascript/snippets
-  to: /web/tools/chrome-devtools/snippets
+  to: /web/tools/chrome-devtools/javascript/snippets
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables
@@ -174,8 +180,8 @@ redirects:
 - from: /web/tools/chrome-devtools/progressive-web-apps/
   to: /web/tools/chrome-devtools/progressive-web-apps
 
-- from: /web/tools/chrome-devtools/security/
-  to: /web/tools/chrome-devtools/security
+- from: /web/tools/chrome-devtools/security
+  to: /web/tools/chrome-devtools/security/
 
 - from: /web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/

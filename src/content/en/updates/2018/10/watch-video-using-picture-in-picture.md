@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Control Picture-in-Picture for video elements on your website.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-04-08 #}
 {# wf_published_on: 2018-10-19 #}
 {# wf_tags: news,media #}
 {# wf_featured_image: /web/updates/images/2018/10/watch-video-using-picture-in-picture/hero.png #}
@@ -75,6 +75,8 @@ of the following reasons:
 - Video file is audio-only.
 - The new `disablePictureInPicture` attribute is present on the video element.
 - The call was not made in a user gesture event handler (e.g. a button click).
+  Starting in Chrome 74, this is [applicable only] if there's not an element in
+  Picture-in-Picture already.
 
 The [Feature support] section below shows how to enable/disable a button based on
 these restrictions.
@@ -259,6 +261,19 @@ video.play();
 // Later on, video.requestPictureInPicture();
 ```
 
+Combining `canvas.captureStream()` with the [Media Session API], you can for
+instance create an audio playlist window in Chrome 74. Check out the official
+[Audio playlist sample].
+
+<figure>
+  <img src="/web/updates/images/2018/10/audio-playlist.jpg"
+       alt="Audio playlist in a Picture-in-Picture window">
+  <figcaption>
+    <b>Figure 1.</b>
+    Audio playlist in a Picture-in-Picture window
+  </figcaption>
+</figure>
+
 ## Samples, demos, and codelabs {: #samples-demos-codelabs }
 
 Check out our official [Picture-in-Picture sample] to try the Picture-in-Picture
@@ -307,6 +322,7 @@ involved in the [standardization effort].
 [yet]: https://bugs.chromium.org/p/chromium/issues/detail?id=789591
 [promise]: https://developers.google.com/web/fundamentals/primers/promises
 [may reject]: https://wicg.github.io/picture-in-picture/#request-pip
+[applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [Feature support]: #feature-support
 [feature policy]: /web/updates/2018/06/feature-policy
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
@@ -322,3 +338,6 @@ involved in the [standardization effort].
 [https://github.com/gbentaieb/pip-polyfill/]: https://github.com/gbentaieb/pip-polyfill/
 [standardization effort]: https://github.com/WICG/picture-in-picture/issues?utf8=%E2%9C%93&q=
 [Jennifer Apacible]: https://twitter.com/japacible
+[Media Session API]: /web/updates/2017/02/media-session
+[Audio playlist sample]: https://googlechrome.github.io/samples/picture-in-picture/audio-playlist
+

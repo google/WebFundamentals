@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The prefers-reduced-motion media query detects whether the user has requested that the system minimize the amount of animation or motion it uses. This is for users who either require or prefer minimized animations; for example people with vestibular disorders often desire animations to be kept to a minimum.
 
-{# wf_updated_on: 2019-03-11 #}
+{# wf_updated_on: 2019-03-20 #}
 {# wf_published_on: 2019-03-11 #}
 {# wf_tags: media-queries #}
 {# wf_featured_image: /web/updates/images/generic/timeline.png #}
@@ -17,7 +17,7 @@ description: The prefers-reduced-motion media query detects whether the user has
 
 **tl;dr:** Not everyone likes decorative animations or transitions, and some users outright
 experience motion sickness when faced with parallax scrolling, zooming effects, etc.
-Chrome (as of Canary&nbsp;74) now supports a user preference media query `prefers-reduced-motion`
+Chrome 74 supports a user preference media query `prefers-reduced-motion`
 that lets you design a motion-reduced variant of your site for users who have expressed this
 preference.
 
@@ -96,21 +96,21 @@ animations.
 
 [Media Queries Level&nbsp;5](https://drafts.csswg.org/mediaqueries-5/)
 brings this user preference to the web as well. Media queries allow authors to test and query values
-or features of the user agent or display device, independent of the document being rendered.
+or features of the user agent or display device independent of the document being rendered.
 The media query
 [`prefers-reduced-motion`](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion)
-is used to detect if the user has requested the system minimize the amount of animation or motion it
-uses. It can take two possible values:
+is used to detect if the user has set an operating system preference to minimize the amount of
+animation or motion it uses. It can take two possible values:
 
-- `no-preference`: Indicates that the user has made no preference known to the system.
+- `no-preference`: Indicates that the user has made no preference in the underlying operating system.
   This keyword value evaluates as `false` in the boolean context.
-- `reduce`: Indicates that the user has notified the system that they prefer an interface that
-  minimizes the amount of movement or animation, preferably to the point where all non-essential
+- `reduce`: Indicates that the user has set an operating system preference indicating that
+  interfaces should minimize movement or animation, preferabley to the point where all non-essential
   movement is removed.
 
 ## Working with the media query
 
-Note: `prefers-reduced-motion` is available as of Chrome Canary&nbsp;74. For other browsers, let me
+Note: `prefers-reduced-motion` is available as of Chrome 74. For other browsers, let me
 refer you to the [Can&nbsp;I&nbsp;use](https://caniuse.com/#feat=prefers-reduced-motion) tables.
 
 As all media queries, `prefers-reduced-motion` can be checked from a CSS context and from a
@@ -190,7 +190,7 @@ shows the demo in action:
   </video>
   <figcaption><strong>Figure 3:</strong> Video of the
     <a href="https://prefers-reduced-motion.glitch.me"><code>prefers-reduced-motion</code> demo</a>
-    app (test it on Chrome Canary&nbsp;74 or later).
+    app (test it on Chrome 74 or later).
   </figcaption>
 </figure>
 

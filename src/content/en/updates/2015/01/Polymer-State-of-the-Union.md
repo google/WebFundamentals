@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The state of the Polymer Union.
 
-{# wf_updated_on: 2015-01-05 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-05 #}
 {# wf_tags: news,webcomponents,polymer,chromedevsummit #}
+{# wf_blink_components: N/A #}
 
 # Chrome Dev Summit 2014: Polymer - State of the Union {: .page-title }
 

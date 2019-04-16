@@ -59,11 +59,11 @@ In brief:
     max-width: 466px;
     margin: 1.8rem auto 0;
   }
-  .framebox-container {
+  body:not([theme]) .framebox-container {
     position: relative;
     padding-top: 75.3%;
   }
-  .framebox-container iframe {
+  body:not([theme]) .framebox-container iframe {
     position: absolute;
     top: 0;
     left: 0;

@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 73 introduces the String.prototype.matchAll() method. It behaves similarly to match(), but offers a simple way to iterate over matches, especially when you need access to capture groups.
 
 {# wf_published_on: 2019-02-07 #}
-{# wf_updated_on: 2019-01-30 #}
+{# wf_updated_on: 2019-03-18 #}
 {# wf_featured_image: /web/updates/images/generic/js.png #}
 {# wf_tags: chrome73,javascript,regex #}
 {# wf_featured_snippet: Chrome 73 introduces the <code>String.prototype.matchAll()</code> method. It behaves similarly to <code>match()</code>, but offers a simple way to iterate over matches, especially when you need access to capture groups. #}
@@ -68,7 +68,7 @@ each match, including the capturing groups with a few extras. If you print
 these to the console they'll look like this:
 
 ```js
-['test1', 'e', 'st1', '2', index: 0, input: 'test1test2', groups: undefined]
+['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', groups: undefined]
 ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', groups: undefined]
 ```
 

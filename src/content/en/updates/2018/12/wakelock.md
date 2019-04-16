@@ -3,11 +3,13 @@ book_path: /web/updates/_book.yaml
 description: The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.
 
 {# wf_published_on: 2018-12-18 #}
-{# wf_updated_on: 2018-12-18 #}
+{# wf_updated_on: 2019-03-07 #}
 {# wf_featured_image: /web/updates/images/2018/12/wake-logo-featured.png #}
 {# wf_tags: capabilities,wake-lock #}
 {# wf_featured_snippet: To avoid draining the battery, most devices will quickly fall asleep when left idle. While this is fine for most of the time, there are some applications that need to keep the screen or the device awake in order to complete some work. The Wake Lock API provides a way to prevent the device from dimming or locking the screen or prevent the device from going to sleep when an application needs to keep running.  #}
 {# wf_blink_components: Blink>WakeLock #}
+
+{# When updating this post, don't forget to update /updates/capabilities.md #}
 
 # I’m Awake! Stay Awake with the WakeLock API {: .page-title }
 
@@ -229,4 +231,3 @@ discussion.
 [cr-status]: https://www.chromestatus.com/features/4636879949398016
 [issues]: https://github.com/w3c/wake-lock/issues
 [wicg-discourse]: https://discourse.wicg.io/t/wake-lock-api-suppressing-power-management-screensavers/769
-
