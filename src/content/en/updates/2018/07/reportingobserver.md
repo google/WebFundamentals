@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: ReportingObserver gives developers insight into what their code is doing in the wild. ReportingObserver surfaces information on issues like deprecations and interventions, messages that were previously only available in the DevTools console.
 
-{# wf_updated_on: 2018-10-23 #}
+{# wf_updated_on: 2019-04-16 #}
 {# wf_published_on: 2018-07-26 #}
 {# wf_tags: chrome69,reporting-observer,analytics,interventions,deprecations #}
 {# wf_featured_image: /web/updates/images/generic/send.png #}
