@@ -31,7 +31,7 @@ figcaption {
 
 ## 记录网络请求 {: #record }
 
-默认情况下，只要 DevTools 处于打开状态，DevTools 就会在 Networ 面板中记录所有网络请求。
+默认情况下，只要 DevTools 处于打开状态，DevTools 就会在 Network 面板中记录所有网络请求。
 
 
 <figure>
