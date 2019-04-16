@@ -37,7 +37,7 @@ Take a look at our first episode below!
 
 **Episode 1:** April 2019
 
-*by Gabriel in Montreal*
+*by Gabriel Charette in Montreal*
 
 Chrome code that needs in-process asynchronous execution typically posts tasks
 to sequences. Sequences are chrome-managed “virtual threads” and are
