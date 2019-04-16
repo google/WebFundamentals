@@ -45,8 +45,8 @@ landing_page:
            data-henhouse-credential-type="OAUTH"
            data-henhouse-client-type="WEB_SERVER"
            {% dynamic if user.signed_in and setvar.projectName and setvar.productName and setvar.redirectURI %}
-             data-henhouse-project-name="Site Kit on {% dynamic print setvar.projectName|escape %}"
-             data-henhouse-product-name="Site Kit on {% dynamic print setvar.productName|escape %}"
+             data-henhouse-project-name="{% dynamic print setvar.projectName|escape %}"
+             data-henhouse-product-name="{% dynamic print setvar.productName|escape %}"
              data-henhouse-oauth-redirect-uri="{% dynamic print setvar.redirectURI|escape %}"
              data-henhouse-create-new-project-by-default="true"
            {% dynamic endif %}
