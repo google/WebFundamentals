@@ -153,8 +153,8 @@ If you're familiar with using native JavaScript modules in browsers, you
 probably know that (at least up until now) importing anything other than a URL
 will generate an error. And `std:kv-storage` is not a valid URL.
 
-So that raises the question: _do we have to wait until all browsers support a
-built-in module before we can use it in our code?_ Thankfully, the answer is no!
+So that raises the question: _do we have to wait until all browsers support
+built-in modules before we can use it in our code?_ Thankfully, the answer is no!
 
 You can actually use built-in modules as soon as even one browser supports them
 thanks to the help of another feature we're
