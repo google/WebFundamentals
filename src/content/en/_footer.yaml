@@ -26,6 +26,8 @@ footer:
       path: /web/billions/
     - label: Chrome Extension Docs
       path: https://developers.chrome.com/extensions/api_index
+    - label: Site-Kit
+      path: /web/site-kit/
     - label: Developer Feedback Program
       path: /web/feedback/
     - label: Progressive Web Apps
