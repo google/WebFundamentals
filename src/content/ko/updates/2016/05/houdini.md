@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 
-{# wf_updated_on: 2017-03-23 #}
+{# wf_updated_on: 2019-04-17 #}
 {# wf_published_on: 2016-05-19 #}
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png #}
@@ -261,5 +261,3 @@ CSS 구문 확장 API, 네이티브 스크롤 동작 확장 그리고 이와 유
 
 Translated By:
 {% include "web/_shared/contributors/jihyerish.html" %}
-
-{% include "comment-widget.html" %}
