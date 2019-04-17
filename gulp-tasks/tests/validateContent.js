@@ -52,6 +52,7 @@ function test(filename, contents, options) {
 
   const isLighthouse = wfRegEx.RE_LIGHTHOUSE_PATH.test(filename);
   const isWorkbox = wfRegEx.RE_WORKBOX_PATH.test(filename);
+  const isSiteKit = wfRegEx.RE_SITEKIT_PATH.test(filename);
   const isTranslation = testHelpers.isTranslation(filename, contents);
   const isInclude = testHelpers.isInclude(filename, contents);
 
@@ -122,8 +123,8 @@ function test(filename, contents, options) {
   }
 
   // Check for valid Blink components
-  if (options.blinkComponents &&
-      !isInclude && !isTranslation && !isLighthouse && !isWorkbox) {
+  if (options.blinkComponents && !isInclude &&
+      !isTranslation && !isLighthouse && !isWorkbox && !isSiteKit) {
     matches = wfRegEx.RE_BLINK_COMPONENTS.exec(contents);
     if (matches) {
       const position = {line: getLineNumber(contents, matches.index)};
