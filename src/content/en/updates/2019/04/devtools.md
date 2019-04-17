@@ -1,34 +1,53 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Meaningful autocomplete preset values, clear site data from the Command Menu, and more.
 
-{# wf_updated_on: 2019-04-19 #}
-{# wf_published_on: 2019-04-19 #}
+{# wf_updated_on: 2019-04-17 #}
+{# wf_published_on: 2019-04-17 #}
 {# wf_tags: chrome75, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Meaningful autocomplete preset values, clear site data from the Command Menu, and more. #}
 {# wf_blink_components: Platform>DevTools #}
+
+[settings]: /web/tools/chrome-devtools/ui#settings
 
 # What's New In DevTools (Chrome 75) {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
+Hello! Here's what's new in [Chrome DevTools](/web/tools/chrome-devtools/) in Chrome 75.
+
 ## Meaningful preset values when autocompleting CSS functions {: #presets }
 
 Some CSS properties, like [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter){: .external },
-take functions for values. For example, `filter: blur(1px)` adds a 1-pixel blur to an element.
-Previously, the autocomplete box of the Styles pane would autocomplete `filter: b` to `filter: blur`.
+take functions for values. For example, `filter: blur(1px)` adds a 1-pixel blur to a node.
+When autocompleting properties like `filter`, DevTools now populates the property with a meaningful
+value so that you can preview what kind of change the value will have on the node.
 
-Now, the autocomplete box autocompletes `filter: b` to `filter: blur(1px)`.
-The main benefit of this change is that you can get a general idea about how the property value will affect
-the page while trying out the various autocomplete options.
+<figure>
+  <img src="/web/updates/images/2019/04/blur1.png"
+       alt="The old autocomplete behavior."/>
+  <figcaption>
+    <b>Figure X</b>. The old autocomplete behavior. DevTools is autocompleting
+    to <code>filter: blur</code> and no change is visible in the viewport.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/04/blur2.png"
+       alt="The new autocomplete behavior."/>
+  <figcaption>
+    <b>Figure X</b>. The new autocomplete behavior. DevTools is autocompleting
+    to <code>filter: blur(1px)</code> and the change is visible in the viewport.
+  </figcaption>
+</figure>
 
 Relevant Chromium issue: [#931145](https://crbug.com/931145)
 
 ## Clear site data from the Command Menu {: #clear }
 
 Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
-<kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu
+<kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu
 and then run the **Clear Site Data** command to clear all data related to the
 page, including: [Service workers](/web/ilt/pwa/introduction-to-service-worker),
 [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage){: .external },
@@ -63,11 +82,27 @@ If you don't want to delete *all* site data, you can control what data gets dele
 
 Relevant Chromium issue: [#942503](https://crbug.com/942503)
 
-## IndexedDB {: #indexeddb }
+## View all IndexedDB databases {: #indexeddb }
 
-Suppose that you've got an `<iframe>` on your page, and that `<iframe>` is using IndexedDB.
-Previously, when [inspecting IndexedDB databases](/web/tools/chrome-devtools/storage/indexeddb)
-via **Application** > **IndexedDB**, you couldn't see the databases of the `<iframe>`. Now, you can.
+Previously **Application** > **IndexedDB** only allowed you to inspect IndexedDB databases from the
+main origin. For example, if you had an `<iframe>` on your page, and that `<iframe>` was using IndexedDB,
+you wouldn't be able to see its database(s). As of Chrome 75, DevTools shows IndexedDB databases for all origins.
+
+<figure>
+  <img src="/web/updates/images/2019/04/idb1.png"
+       alt="The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible."/>
+  <figcaption>
+    <b>Figure X</b>. The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/04/idb2.png"
+       alt="The new behavior. The demo's databases are visible."/>
+  <figcaption>
+    <b>Figure X</b>. The new behavior. The demo's databases are visible.
+  </figcaption>
+</figure>
 
 Relevant Chromium issue: [#943770](https://crbug.com/943770)
 
@@ -80,9 +115,27 @@ browser uncompresses them. Previously this information was only available when u
 [large request rows](/web/tools/chrome-devtools/network/reference#uncompressed). Now you can
 access this information by hovering over the **Size** column.
 
+<figure>
+  <img src="/web/updates/images/2019/04/hover.png"
+       alt="Hovering over the Size column to view a resource's uncompressed size."/>
+  <figcaption>
+    <b>Figure X</b>. Hovering over the Size column to view a resource's uncompressed size.
+  </figcaption>
+</figure>
+
 Relevant Chromium issue: [#805429](https://crbug.com/805429)
 
 ## Resource counts in the storage panes {: #counts }
+
+The **IndexedDB** and **Cache** panes now indicate the total number of resources in a database or cache.
+
+<figure>
+  <img src="/web/updates/images/2019/04/totalentries.png"
+       alt="Total entries in an IndexedDB database."/>
+  <figcaption>
+    <b>Figure X</b>. Total entries in an IndexedDB database.
+  </figcaption>
+</figure>
 
 Relevant Chromium issues: [#941197](https://crbug.com/941197), [#930773](https://crbug.com/930773), [#930865](https://crbug.com/930865)
 
@@ -91,14 +144,29 @@ Relevant Chromium issues: [#941197](https://crbug.com/941197), [#930773](https:/
 Suppose that you add a [line-of-code breakpoint](/web/tools/chrome-devtools/javascript/breakpoints#loc) to the following
 line of code:
 
-    document.querySelector('button').click();
+    document.querySelector('#dante').addEventListener('click', logWarning);
 
 For a while now DevTools has enabled you to specify when exactly it should pause on a breakpoint like this: at the
-beginning of the line, before `document.querySelector('button')` is called, or before `click()` is called. If you enable
-all 3, you're essentially creating 3 breakpoints. Previously the **Breakpoints** pane did not give you the ability to
-manage these 3 breakpoints individually.
+beginning of the line, before `document.querySelector('#dante')` is called, or before `addEventListener('click', logWarning)`
+is called. If you enable all 3, you're essentially creating 3 breakpoints. Previously the **Breakpoints** pane did not
+give you the ability to manage these 3 breakpoints individually. As of Chrome 75 each inline breakpoint gets its
+own entry in the **Breakpoints** pane.
 
-As of Chrome 75 each inline breakpoint gets its own entry in the **Breakpoints** pane.
+<figure>
+  <img src="/web/updates/images/2019/04/breakpoints1.png"
+       alt="The old behavior. There's only one entry in the Breakpoints pane."/>
+  <figcaption>
+    <b>Figure X</b>. The old behavior. There's only 1 entry in the <b>Breakpoints</b> pane.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/web/updates/images/2019/04/breakpoints2.png"
+       alt="The new behavior. There's 3 entries in the Breakpoints pane."/>
+  <figcaption>
+    <b>Figure X</b>. The new behavior. There's 3 entries in the <b>Breakpoints</b> pane.
+  </figcaption>
+</figure>
 
 Relevant Chromium issue: [#927961](https://crbug.com/927961)
 
@@ -108,7 +176,24 @@ Relevant Chromium issue: [#927961](https://crbug.com/927961)
 
 Chrome 73 introduced [detailed tooltips when in Inspect mode][inspect].
 
-You can now disable these detailed tooltips from **Settings** > **Preferences** > **Elements** > **Show Detailed Inspect Tooltip**.
+<figure>
+  <img src="/web/updates/images/2019/04/inspect1.png"
+       alt="A detailed tooltip."/>
+  <figcaption>
+    <b>Figure X</b>. A detailed tooltip showing color, font, margin, and contrast.
+  </figcaption>
+</figure>
+
+You can now disable these detailed tooltips from [**Settings**][settings] > **Preferences** > **Elements** >
+**Show Detailed Inspect Tooltip**.
+
+<figure>
+  <img src="/web/updates/images/2019/04/inspect2.png"
+       alt="A minimal tooltip."/>
+  <figcaption>
+    <b>Figure X</b>. A minimal tooltip showing only width and height.
+  </figcaption>
+</figure>
 
 Relevant Chromium issue: [#948417](https://crbug.com/948417)
 
@@ -118,8 +203,8 @@ Relevant Chromium issue: [#948417](https://crbug.com/948417)
 
 Accessibility testing revealed that there was a tab trap in the [**Editor**][editor]. Once a keyboard user tabbed
 into the **Editor**, they had no way to tab out of it because the <kbd>Tab</kbd> key was used for indentation.
-To override the default behavior and use <kbd>Tab</kbd> to move focus, enable **Settings** > **Preferences** >
-**Sources** > **Enable Tab Moves Focus**.
+To override the default behavior and use <kbd>Tab</kbd> to move focus, enable [**Settings**][settings] >
+**Preferences** > **Sources** > **Enable Tab Moves Focus**.
 
 <!-- https://chromium.googlesource.com/chromium/src/+/27ff38b767bc1659a596830b864acf60850e6bd0 -->
 
