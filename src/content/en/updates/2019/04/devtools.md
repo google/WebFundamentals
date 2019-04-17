@@ -28,7 +28,7 @@ value so that you can preview what kind of change the value will have on the nod
   <img src="/web/updates/images/2019/04/blur1.png"
        alt="The old autocomplete behavior."/>
   <figcaption>
-    <b>Figure X</b>. The old autocomplete behavior. DevTools is autocompleting
+    <b>Figure 1</b>. The old autocomplete behavior. DevTools is autocompleting
     to <code>filter: blur</code> and no change is visible in the viewport.
   </figcaption>
 </figure>
@@ -37,7 +37,7 @@ value so that you can preview what kind of change the value will have on the nod
   <img src="/web/updates/images/2019/04/blur2.png"
        alt="The new autocomplete behavior."/>
   <figcaption>
-    <b>Figure X</b>. The new autocomplete behavior. DevTools is autocompleting
+    <b>Figure 2</b>. The new autocomplete behavior. DevTools is autocompleting
     to <code>filter: blur(1px)</code> and the change is visible in the viewport.
   </figcaption>
 </figure>
@@ -62,7 +62,7 @@ page, including: [Service workers](/web/ilt/pwa/introduction-to-service-worker),
   <img src="/web/updates/images/2019/04/clearsitedata.png"
        alt="The Clear Site Data command."/>
   <figcaption>
-    <b>Figure X</b>. The <b>Clear Site Data</b> command.
+    <b>Figure 3</b>. The <b>Clear Site Data</b> command.
   </figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ If you don't want to delete *all* site data, you can control what data gets dele
   <img src="/web/updates/images/2019/04/clearstoragepane.png"
        alt="Application > Clear Storage."/>
   <figcaption>
-    <b>Figure X</b>. <b>Application</b> &gt; <b>Clear Storage</b>.
+    <b>Figure 4</b>. <b>Application</b> &gt; <b>Clear Storage</b>.
   </figcaption>
 </figure>
 
@@ -92,7 +92,7 @@ you wouldn't be able to see its database(s). As of Chrome 75, DevTools shows Ind
   <img src="/web/updates/images/2019/04/idb1.png"
        alt="The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible."/>
   <figcaption>
-    <b>Figure X</b>. The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible.
+    <b>Figure 5</b>. The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible.
   </figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ you wouldn't be able to see its database(s). As of Chrome 75, DevTools shows Ind
   <img src="/web/updates/images/2019/04/idb2.png"
        alt="The new behavior. The demo's databases are visible."/>
   <figcaption>
-    <b>Figure X</b>. The new behavior. The demo's databases are visible.
+    <b>Figure 6</b>. The new behavior. The demo's databases are visible.
   </figcaption>
 </figure>
 
@@ -119,25 +119,11 @@ access this information by hovering over the **Size** column.
   <img src="/web/updates/images/2019/04/hover.png"
        alt="Hovering over the Size column to view a resource's uncompressed size."/>
   <figcaption>
-    <b>Figure X</b>. Hovering over the Size column to view a resource's uncompressed size.
+    <b>Figure 7</b>. Hovering over the Size column to view a resource's uncompressed size.
   </figcaption>
 </figure>
 
 Relevant Chromium issue: [#805429](https://crbug.com/805429)
-
-## Resource counts in the storage panes {: #counts }
-
-The **IndexedDB** and **Cache** panes now indicate the total number of resources in a database or cache.
-
-<figure>
-  <img src="/web/updates/images/2019/04/totalentries.png"
-       alt="Total entries in an IndexedDB database."/>
-  <figcaption>
-    <b>Figure X</b>. Total entries in an IndexedDB database.
-  </figcaption>
-</figure>
-
-Relevant Chromium issues: [#941197](https://crbug.com/941197), [#930773](https://crbug.com/930773), [#930865](https://crbug.com/930865)
 
 ## Inline breakpoints in the breakpoint pane {: #inline }
 
@@ -156,7 +142,7 @@ own entry in the **Breakpoints** pane.
   <img src="/web/updates/images/2019/04/breakpoints1.png"
        alt="The old behavior. There's only one entry in the Breakpoints pane."/>
   <figcaption>
-    <b>Figure X</b>. The old behavior. There's only 1 entry in the <b>Breakpoints</b> pane.
+    <b>Figure 8</b>. The old behavior. There's only 1 entry in the <b>Breakpoints</b> pane.
   </figcaption>
 </figure>
 
@@ -164,11 +150,25 @@ own entry in the **Breakpoints** pane.
   <img src="/web/updates/images/2019/04/breakpoints2.png"
        alt="The new behavior. There's 3 entries in the Breakpoints pane."/>
   <figcaption>
-    <b>Figure X</b>. The new behavior. There's 3 entries in the <b>Breakpoints</b> pane.
+    <b>Figure 9</b>. The new behavior. There's 3 entries in the <b>Breakpoints</b> pane.
   </figcaption>
 </figure>
 
 Relevant Chromium issue: [#927961](https://crbug.com/927961)
+
+## IndexedDB and Cache resource counts {: #counts }
+
+The **IndexedDB** and **Cache** panes now indicate the total number of resources in a database or cache.
+
+<figure>
+  <img src="/web/updates/images/2019/04/totalentries.png"
+       alt="Total entries in an IndexedDB database."/>
+  <figcaption>
+    <b>Figure 10</b>. Total entries in an IndexedDB database.
+  </figcaption>
+</figure>
+
+Relevant Chromium issues: [#941197](https://crbug.com/941197), [#930773](https://crbug.com/930773), [#930865](https://crbug.com/930865)
 
 ## Setting for disabling the detailed inspect tooltip {: #inspect }
 
@@ -180,7 +180,7 @@ Chrome 73 introduced [detailed tooltips when in Inspect mode][inspect].
   <img src="/web/updates/images/2019/04/inspect1.png"
        alt="A detailed tooltip."/>
   <figcaption>
-    <b>Figure X</b>. A detailed tooltip showing color, font, margin, and contrast.
+    <b>Figure 11</b>. A detailed tooltip showing color, font, margin, and contrast.
   </figcaption>
 </figure>
 
@@ -191,7 +191,7 @@ You can now disable these detailed tooltips from [**Settings**][settings] > **Pr
   <img src="/web/updates/images/2019/04/inspect2.png"
        alt="A minimal tooltip."/>
   <figcaption>
-    <b>Figure X</b>. A minimal tooltip showing only width and height.
+    <b>Figure 12</b>. A minimal tooltip showing only width and height.
   </figcaption>
 </figure>
 
