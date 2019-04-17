@@ -15,6 +15,14 @@ description: TODO
 
 ## Meaningful preset values when autocompleting CSS functions {: #presets }
 
+Some CSS properties, like [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter){: .external },
+take functions for values. For example, `filter: blur(1px)` adds a 1-pixel blur to an element.
+Previously, the autocomplete box of the Styles pane would autocomplete `filter: b` to `filter: blur`.
+
+Now, the autocomplete box autocompletes `filter: b` to `filter: blur(1px)`.
+The main benefit of this change is that you can get a general idea about how the property value will affect
+the page while trying out the various autocomplete options.
+
 Relevant Chromium issue: [#931145](https://crbug.com/931145)
 
 ## Clear site data from the Command Menu {: #clear }
@@ -39,7 +47,7 @@ page, including: [Service workers](/web/ilt/pwa/introduction-to-service-worker),
   </figcaption>
 </figure>
 
-Clearing site data has been available from **Application** > **Clear Storage** for a while now.
+Clearing site data has been available from **Application** > **Clear Storage** for a while.
 The new feature in Chrome 75 is being able to run the command from the Command Menu.
 
 If you don't want to delete *all* site data, you can control what data gets deleted from
@@ -57,9 +65,20 @@ Relevant Chromium issue: [#942503](https://crbug.com/942503)
 
 ## IndexedDB {: #indexeddb }
 
+Suppose that you've got an `<iframe>` on your page, and that `<iframe>` is using IndexedDB.
+Previously, when [inspecting IndexedDB databases](/web/tools/chrome-devtools/storage/indexeddb)
+via **Application** > **IndexedDB**, you couldn't see the databases of the `<iframe>`. Now, you can.
+
 Relevant Chromium issue: [#943770](https://crbug.com/943770)
 
 ## View a resource's uncompressed size on hover {: #uncompressed }
+
+Suppose that you're [inspecting network activity](/web/tools/chrome-devtools/network/).
+Your site uses [text compression](/web/tools/lighthouse/audits/text-compression) to reduce
+the transfer size of resources. You want to see how large the page's resources are after the
+browser uncompresses them. Previously this information was only available when using
+[large request rows](/web/tools/chrome-devtools/network/reference#uncompressed). Now you can
+access this information by hovering over the **Size** column.
 
 Relevant Chromium issue: [#805429](https://crbug.com/805429)
 
