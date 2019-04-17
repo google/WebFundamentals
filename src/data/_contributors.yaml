@@ -816,6 +816,20 @@ katiehempenius:
   twitter: katiehempenius
   email: khempenius@google.com
 
+jihyerish:
+  name:
+    given: Jihye
+    family: Hong
+  org:
+    name: LG Electronics
+  country: KR
+  role:
+    - translator
+  twitter: jihyerish
+  email: jh.hong@lge.com
+  description:
+    en: "Software Engineer at LG Electronics working on the web standards"
+
 patrickhulce:
   name:
     given: Patrick
