@@ -3,7 +3,7 @@ landing_page:
   rows:
   - heading: Get Credentials for Site Kit
     items:
-    - custom_html: |
+    - custom_html: >
       <div id="site-kit-setup">
         {% dynamic if request.query_string.sitename %}
           {% dynamic setvar projectName %}{% dynamic print request.query_string.sitename|escape %}{% dynamic endsetvar %}
