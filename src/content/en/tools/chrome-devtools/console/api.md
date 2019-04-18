@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
-{# wf_updated_on: 2019-04-03 #}
+{# wf_updated_on: 2019-04-18 #}
 {# wf_published_on: 2016-03-21 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -11,8 +11,6 @@ description: Use the Console API to write information to the console,  create Ja
 # Console API Reference {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
-{% include "web/_shared/contributors/pbakaus.html" %}
 
 Use the Console API to write information to the console, 
 create JavaScript profiles, and start a debugging session.
