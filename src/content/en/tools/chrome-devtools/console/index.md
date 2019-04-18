@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The main uses of the Chrome DevTools Console are logging messages and running JavaScript.
 
-{# wf_updated_on: 2019-04-11 #}
-{# wf_published_on: 2019-04-11 #}
+{# wf_updated_on: 2019-04-18 #}
+{# wf_published_on: 2019-04-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Console Overview {: .page-title }

@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: If you find yourself typing the same JavaScript expressions into the Console repeatedly, try Live Expressions instead.
 
-{# wf_updated_on: 2019-04-04 #}
-{# wf_published_on: 2019-04-04 #}
+{# wf_updated_on: 2019-04-18 #}
+{# wf_published_on: 2019-04-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
 # Watch JavaScript Expression Values In Real-Time With Live Expressions {: .page-title }
@@ -26,14 +26,12 @@ and then pin it to the top of your Console. The value of the expression updates 
        <img src="/web/tools/chrome-devtools/console/images/liveexpressiontextbox.png"
             alt="Typing document.activeElement into the Live Expression text box."/>
        <figcaption>
-         <b>Figure X</b> Typing <code>document.activeElement</code> into the <b>Live Expression</b> text box.
+         <b>Figure 1</b> Typing <code>document.activeElement</code> into the <b>Live Expression</b> text box.
        </figcaption>
      </figure>
 
 1. Type <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) to save the
    expression, or click outside of the **Live Expression** text box.
-
-
 
 ## Feedback {: #feedback }
 

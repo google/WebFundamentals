@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Learn how to run JavaScript in the Console.
 
 {# wf_updated_on: 2019-04-18 #}
-{# wf_published_on: 2018-04-16 #}
+{# wf_published_on: 2018-04-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
 {% include "web/tools/chrome-devtools/_shared/styles.html" %}

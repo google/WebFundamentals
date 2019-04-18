@@ -2,8 +2,8 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: A comprehensive reference on every feature and behavior related to the Console UI in Chrome DevTools.
 
-{# wf_updated_on: 2019-04-11 #}
-{# wf_published_on: 2019-04-11 #}
+{# wf_updated_on: 2019-04-18 #}
+{# wf_published_on: 2019-04-18 #}
 {# wf_blink_components: Platform>DevTools #}
 
 [commandmenu]: /web/tools/chrome-devtools/command-menu/
@@ -36,7 +36,7 @@ Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
   <img src="/web/tools/chrome-devtools/console/images/panel.png"
        alt="The Console panel."/>
   <figcaption>
-    <b>Figure X</b>. The Console panel.
+    <b>Figure 1</b>. The Console panel.
   </figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ run the **Show Console** command that has the **Panel** badge next to it.
   <img src="/web/tools/chrome-devtools/console/images/showpanelcommand.png"
        alt="The command for showing the Console panel."/>
   <figcaption>
-    <b>Figure X</b>. The command for showing the Console panel.
+    <b>Figure 2</b>. The command for showing the Console panel.
   </figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Press <kbd>Escape</kbd> or click **Customize And Control DevTools**
   <img src="/web/tools/chrome-devtools/console/images/showconsoledrawer.png"
        alt="Show Console Drawer."/>
   <figcaption>
-    <b>Figure X</b>. Show Console Drawer.
+    <b>Figure 3</b>. Show Console Drawer.
   </figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ The Drawer pops up at the bottom of your DevTools window, with the **Console** t
   <img src="/web/tools/chrome-devtools/console/images/drawer.png"
        alt="The Console tab in the Drawer."/>
   <figcaption>
-    <b>Figure X</b>. The Console tab in the Drawer.
+    <b>Figure 4</b>. The Console tab in the Drawer.
   </figcaption>
 </figure>
 
@@ -84,7 +84,7 @@ run the **Show Console** command that has the **Drawer** badge next to it.
   <img src="/web/tools/chrome-devtools/console/images/showdrawercommand.png"
        alt="The command for showing the Console tab in the Drawer."/>
   <figcaption>
-    <b>Figure X</b>. The command for showing the Console tab in the Drawer.
+    <b>Figure 5</b>. The command for showing the Console tab in the Drawer.
   </figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ Click **Console Settings** ![Console Settings][settings]{: .inline-icon }.
   <img src="/web/tools/chrome-devtools/console/images/consolesettings.png"
        alt="Console Settings."/>
   <figcaption>
-    <b>Figure X</b>. Console Settings.
+    <b>Figure 6</b>. Console Settings.
   </figcaption>
 </figure>
 
@@ -123,7 +123,7 @@ which is useful for filtering.
   <img src="/web/tools/chrome-devtools/console/images/sidebar.png"
        alt="Console Sidebar."/>
   <figcaption>
-    <b>Figure X</b>. Console Sidebar.
+    <b>Figure 7</b>. Console Sidebar.
   </figcaption>
 </figure>
 
@@ -147,7 +147,7 @@ default message grouping behavior. See [Log XHR and Fetch requests](#xhr) for an
   <img src="/web/tools/chrome-devtools/console/images/xhrgrouped.png"
        alt="Logging XMLHttpRequest and Fetch requests."/>
   <figcaption>
-    <b>Figure X</b>. Logging <code>XMLHttpRequest</code> and <code>Fetch</code> requests.
+    <b>Figure 8</b>. Logging <code>XMLHttpRequest</code> and <code>Fetch</code> requests.
   </figcaption>
 </figure>
 
@@ -158,7 +158,7 @@ how the same log looks after [disabling message grouping](#group).
   <img src="/web/tools/chrome-devtools/console/images/xhrungrouped.png"
        alt="How the logged XMLHttpRequest and Fetch requests look after ungrouping."/>
   <figcaption>
-    <b>Figure X</b>. How the logged <code>XMLHttpRequest</code> and <code>Fetch</code> requests
+    <b>Figure 9</b>. How the logged <code>XMLHttpRequest</code> and <code>Fetch</code> requests
     look after ungrouping.
   </figcaption>
 </figure>
@@ -177,7 +177,7 @@ in **Figure X** represents a 404.
   <img src="/web/tools/chrome-devtools/console/images/404.png"
        alt="A 404 message in the Console."/>
   <figcaption>
-    <b>Figure X</b>. A 404 message in the Console.
+    <b>Figure 10</b>. A 404 message in the Console.
   </figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ JavaScript.
   <img src="/web/tools/chrome-devtools/console/images/usermessages.png"
        alt="Viewing user messages."/>
   <figcaption>
-    <b>Figure X</b>. Viewing user messages.
+    <b>Figure 11</b>. Viewing user messages.
   </figcaption>
 </figure>
 
@@ -219,7 +219,7 @@ Click the **Log Levels** dropdown to enable or disable `Verbose`, `Info`, `Warni
   <img src="/web/tools/chrome-devtools/console/images/loglevels.png"
        alt="The Log Levels dropdown."/>
   <figcaption>
-    <b>Figure X</b>. The <b>Log Levels</b> dropdown.
+    <b>Figure 12</b>. The <b>Log Levels</b> dropdown.
   </figcaption>
 </figure>
 
@@ -230,7 +230,7 @@ You can also filter by log level by [opening the Console Sidebar](#sidebar) and 
   <img src="/web/tools/chrome-devtools/console/images/sidebarwarnings.png"
        alt="Using the Sidebar to view warnings."/>
   <figcaption>
-    <b>Figure X</b>. Using the Sidebar to view warnings.
+    <b>Figure 13</b>. Using the Sidebar to view warnings.
   </figcaption>
 </figure>
 
@@ -245,7 +245,7 @@ After you type `url:` DevTools shows all relevant URLs. Domains also work. For e
   <img src="/web/tools/chrome-devtools/console/images/urlfilter.png"
        alt="A URL filter."/>
   <figcaption>
-    <b>Figure X</b>. A URL filter.
+    <b>Figure 14</b>. A URL filter.
   </figcaption>
 </figure>
 
@@ -256,7 +256,7 @@ Type `-url:` to hide messages from that URL. This is called a negative URL filte
        alt="A negative URL filter. DevTools is hiding all messages that match the URL
             https://b.wal.co"/>
   <figcaption>
-    <b>Figure X</b>. A negative URL filter. DevTools is hiding all messages that match the URL
+    <b>Figure 15</b>. A negative URL filter. DevTools is hiding all messages that match the URL
     <code>https://b.wal.co</code>.
   </figcaption>
 </figure>
@@ -268,7 +268,7 @@ You can also show messages from a single URL by [opening the Console Sidebar](#s
   <img src="/web/tools/chrome-devtools/console/images/negativeurlfilter.png"
        alt="Viewing the messages that came from wp-ad.min.js."/>
   <figcaption>
-    <b>Figure X</b>. Viewing the messages that came from <code>wp-ad.min.js</code>.
+    <b>Figure 16</b>. Viewing the messages that came from <code>wp-ad.min.js</code>.
   </figcaption>
 </figure>
 
@@ -289,7 +289,7 @@ message text or the script that caused the message to be logged.
   <img src="/web/tools/chrome-devtools/console/images/regexfilter.png"
        alt="Filtering out any messages that don't match /[gm][ta][mi]/."/>
   <figcaption>
-    <b>Figure X</b>. Filtering out any messages that don't match <code>/[gm][ta][mi]/</code>.
+    <b>Figure 17</b>. Filtering out any messages that don't match <code>/[gm][ta][mi]/</code>.
   </figcaption>
 </figure>
 
@@ -329,7 +329,7 @@ expressions are prepended with the `>` character. [Open Console Settings](#setti
   <img src="/web/tools/chrome-devtools/console/images/historyautocomplete.png"
        alt="The autocomplete popup showing expressions from history."/>
   <figcaption>
-    <b>Figure X</b>. <code>document.querySelector('a')</code> and <code>document.querySelector('img')</code>
+    <b>Figure 18</b>. <code>document.querySelector('a')</code> and <code>document.querySelector('img')</code>
     are expressions that were evaluated earlier.
   </figcaption>
 </figure>
@@ -343,7 +343,7 @@ main document's [browsing context](https://developer.mozilla.org/en-US/docs/Glos
   <img src="/web/tools/chrome-devtools/console/images/jscontext.png"
        alt="The JavaScript Context dropdown."/>
   <figcaption>
-    <b>Figure X</b>. The <b>JavaScript Context</b> dropdown.
+    <b>Figure 19</b>. The <b>JavaScript Context</b> dropdown.
   </figcaption>
 </figure>
 
@@ -355,7 +355,7 @@ to tweak the ad's DOM. To do this, you first need to select the ad's browsing co
   <img src="/web/tools/chrome-devtools/console/images/selectcontext.png"
        alt="Selecting a different JavaScript context."/>
   <figcaption>
-    <b>Figure X</b>. Selecting a different JavaScript context.
+    <b>Figure 20</b>. Selecting a different JavaScript context.
   </figcaption>
 </figure>
 
