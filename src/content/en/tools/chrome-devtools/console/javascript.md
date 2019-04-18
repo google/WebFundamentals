@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to run JavaScript in the Console.
 
-{# wf_updated_on: 2019-04-16 #}
+{# wf_updated_on: 2019-04-18 #}
 {# wf_published_on: 2018-04-16 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -12,140 +12,120 @@ description: Learn how to run JavaScript in the Console.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-[DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[log]: /web/tools/chrome-devtools/console/log
 
-You can view and change the page's [DOM][DOM]{:.external} by typing
-JavaScript statements in the **Console**. Or, if you just want to experiment, you can
-use the **Console** as your code playground to run code that is not related to the page at all.
+This interactive tutorial shows you how to run JavaScript in the
+[Chrome DevTools](/web/tools/chrome-devtools/) Console. See [Get Started
+With Logging Messages][log] to learn how to log messages to the Console.
+See [Get Started With Debugging JavaScript](/web/tools/chrome-devtools/javascript/) to
+learn how to pause JavaScript code and step through it one line at a time.
 
 <figure>
-  <img src="/web/tools/chrome-devtools/images/panels/console.png"
+  <img src="images/playground.png"
        alt="The Console.">
-  <figcaption><b>Figure 1</b>. The <b>Console</b></figcaption>
+  <figcaption>
+    <b>Figure 1</b>. The <b>Console</b>.
+  </figcaption>
 </figure>
+
+## Overview {: #overview }
+
+[REPL]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
+[expression]: http://2ality.com/2012/09/expressions-vs-statements.html
+
+The **Console** is a [REPL][REPL]{:.external}, which stands for Read, Evaluate, Print, and
+Loop. It reads the JavaScript that you type into it, evaluates your code, prints out the
+result of your [expression][expression]{: .external }, and then loops back to the first step.
 
 ## Set up DevTools {: #setup }
 
-This tutorial is interactive. You're going to open up DevTools on
-this very page in order to get hands-on experience with the **Console**.
+This tutorial is designed so that you can open up the demo and try all the workflows yourself.
+When you physically follow along, you're more likely to remember the workflows later.
 
 1. Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or
    <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS) to open the
    **Console**, right here on this very page.
 
-## Run JavaScript that interacts with the page {: #page }
+     <figure>
+       <img src="images/setupjs.png"
+            alt="This tutorial on the left, and DevTools on the right.">
+       <figcaption>
+         <b>Figure 2</b>. This tutorial on the left, and DevTools on the right.
+       </figcaption>
+     </figure>
 
-The **Console** is also a [REPL][REPL]{:.external}, which stands for Read, Evaluate, Print, and
-Loop. In other words, you can run JavaScript statements in the **Console**, and the **Console**
-prints out the results.
-
-[REPL]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
-
-### Part A: View and change the page's JavaScript or DOM {: #page }
+## View and change the page's JavaScript or DOM {: #page }
 
 When building or debugging a page, it's often useful to run statements in the **Console**
 in order to change how the page looks or runs.
 
-1. Your **Console** is probably cluttered up from all the messages in the previous section.
-   Click **Clear Console** ![Clear Console][clear]{.cdt-inl}. Hover over the button to see
-   its keyboard shortcuts.
+1. Notice the text in the button below.
 
-[clear]: images/clear-console-button.png
+     <button id="hello">Hello, World!</button>
 
-1. Type `document.getElementById('changeMyText').textContent = 'Hello'` in the **Console**
-   and then press <kbd>Enter</kbd> to attempt to change the text of the button below from
-   `Change My Text` to `Hello`. It probably won't work. You'll find out why next.
-
-       {% framebox width="auto" height="auto" enable_widgets="true" %}
-         <button id="changeMyText">Change My Text</button>
-         <script>
-           document.getElementById('changeMyText').addEventListener('click', function () {
-             console.log('This button doesn\'t do anything :)');
-           });
-         </script>
-       {% endframebox %}
-
-     This probably didn't work for you because the button is embedded in an
-     [`iframe`][iframe]{:.external}, which means it's in a different execution context. An
-     `iframe` element lets you embed a page within another page, without giving that sub-page
-     access to your main page. This is how most ads on the web are distributed.
+1. Type `document.getElementById('hello').textContent = 'Hello, Console!'` in the **Console** and then press
+   <kbd>Enter</kbd> to evaluate the expression. Notice how the text inside the button changes.
 
      <figure>
-       <img src="images/change-fail.png"
-            alt="Unsuccessfully attempting to change the button's text.">
+       <img src="images/textcontentchange.png"
+            alt="How the Console looks after evaluating the expression above.">
        <figcaption>
-         <b>Figure 6</b>. Unsuccessfully attempting to change the button's text
+         <b>Figure 3</b>. How the Console looks after evaluating the expression above.
        </figcaption>
      </figure>
 
-1. Notice the dropdown menu to the left of the **Filter** text box. It probably says **Top**.
-   **Top** represents the execution context of your main page.
-1. Right-click **Change My Text** and select **Inspect**. DevTools jumps to the **Elements**
-   panel and highlights the element in the **DOM Tree**.
+     Below the code that you evaluated you see `"Hello, Console!"`. Recall the 4 steps
+     of REPL: read, evaluate, print, loop. After evaluating your code, a REPL prints the
+     result of the expression. So `"Hello, Console!"` must be the result of evaluating
+     `document.getElementById('hello').textContent = 'Hello, Console!'`.
 
-     <figure>
-       <img src="images/inspect-button.png"
-            alt="Inspecting the button.">
-       <figcaption>
-         <b>Figure 7</b>. Inspecting the button
-       </figcaption>
-     </figure>
-
-1. Press <kbd>Escape</kbd>. The **Console** opens up at the bottom of the **Elements** panel.
-   Note how the dropdown that used to say **Top** now says something else, and it's background
-   is colored red. This means that the **Console** is now in a different execution context.
-   You're in a different execution context because the **Change My Text** button is selected
-   in the **DOM Tree**, and that button is embedded in an `iframe`.
-
-     <figure>
-       <img src="images/iframe-context.png"
-            alt="The Console opened at the bottom of the Elements panel, and in a different
-                 execution context.">
-       <figcaption>
-         <b>Figure 8</b>. The <b>Console</b> opened at the bottom of the <b>Elements</b> panel,
-         and in a different execution context
-       </figcaption>
-     </figure>
-
-1. Try running `document.getElementById('changeMyText').textContent = 'Hello'` again. You don't
-   have to type it out or copy-paste it. Just focus the **Console** and press the <kbd>Up
-   Arrow</kbd> key. DevTools remembers your history. After running the statement, look at the
-   button's text again. This time, it should have successfully changed.
-
-[iframe]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
-
-Hopefully you get the idea that this workflow is completely open-ended. You can run any
-JavaScript here. This is a flexible way to debug pages and explore how they're built.
 
 ## Run arbitrary JavaScript that's not related to the page {: #playground }
 
-Sometimes, you just want a code playground where you can test out JavaScript features that
-you're not familiar with. The **Console** is the perfect place to do this. For example,
-ES6 introduced a nice feature where you can [define default values for function
-arguments][default]{:.external}. Try it now:
+Sometimes, you just want a code playground where you can test some code, or try out new
+JavaScript features you're not familiar with. The Console is a perfect place for these kinds
+of experiments.
 
-[default]: http://es6-features.org/#DefaultParameterValues
+1. Type `5 + 15` in the Console and press <kbd>Enter</kbd> to evaluate the expression.
+   The Console prints out the result of the expression below your code. **Figure 4** below shows
+   how your Console should look after evaluating this expression.
 
-1. Type the following code into the **Console**. Try typing it, rather than copy-pasting it,
-   in order to to see how DevTools intelligently decides whether to continue to let you enter
-   input, or to evaluate the code.
+1. Type the following code into the **Console**. Try typing it out, character-by-character,
+   rather than copy-pasting it.
 
         function add(a, b=20) {
           return a + b;
         }
 
-1. Type the following code in the **Console** to call the function that you just defined.
+     See [define default values for function arguments](http://es6-features.org/#DefaultParameterValues){:.external}
+     if you're unfamiliar with the `b=20` syntax.
+
+1. Now, call the function that you just defined.
 
         add(25);
 
+     <figure>
+       <img src="images/playground.png"
+            alt="How the Console looks after evaluating the expressions above.">
+       <figcaption>
+         <b>Figure 4</b>. How the Console looks after evaluating the expressions above.
+       </figcaption>
+     </figure>
+
+     `add(25)` evaluates to `45` because when the `add` function is called without a second argument,
+     `b` defaults to `20`.
+
 ## Next steps {: #next }
 
-DevTools lets you pause a script in the middle of its execution. While you're paused, you
-can use the **Console** to view and change the page at that moment in time. This makes for a
-powerful debugging workflow. See [Get Started With Debugging JavaScript][Debugging] for
-an interactive tutorial.
+See [Run JavaScript](/web/tools/chrome-devtools/console/reference#js) to explore more features related
+to running JavaScript in the Console.
 
 [Debugging]: /web/tools/chrome-devtools/javascript/
+
+DevTools lets you pause a script in the middle of its execution. While you're paused, you
+can use the **Console** to view and change the page's `window` or `DOM` at that moment in time.
+This makes for a powerful debugging workflow. See [Get Started With Debugging JavaScript][Debugging] for
+an interactive tutorial.
 
 The **Console** also has a set of convenience functions that make it easier to interact
 with a page. For example:
@@ -156,9 +136,9 @@ with a page. For example:
 * `debug(function)` effectively sets a breakpoint on the first line of that function.
 * `keys(object)` returns an array containing the keys of the specified object.
 
-See [Command Line API Reference][CLAPI] for the full reference.
+[utils]: /web/tools/chrome-devtools/console/utilities
 
-[CLAPI]: /web/tools/chrome-devtools/console/command-line-reference
+See [Console Utilities API Reference][utils] to explore all the convenience functions.
 
 ## Feedback {: #feedback }
 
