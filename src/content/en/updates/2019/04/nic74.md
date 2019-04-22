@@ -43,7 +43,7 @@ what’s new for developers in Chrome 74!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 74.
 
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/73.0.3683.74..73.0.3683.74)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/73.0.3683.74..74.0.3729.108)
 * [ChromeStatus.com updates for Chrome 74](https://www.chromestatus.com/features#milestone%3D74)
 * [Chrome 74 deprecations & removals](/web/updates/2019/03/chrome-74-deps-rems)
 * [What's new in JavaScript in Chrome 74](https://v8.dev/blog/v8-release-74)
