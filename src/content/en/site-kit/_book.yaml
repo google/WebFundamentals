@@ -13,11 +13,11 @@ upper_tabs:
       value: upper-site-kit
     lower_tabs:
       other:
-      - name: About Site-Kit
+      - name: About Site Kit
         contents:
-        - title: About Site-Kit
+        - title: About Site Kit
           path: https://sitekit.withgoogle.com/
-      - name: Set-up
+      - name: Setup
         contents:
-        - title: Set-up
+        - title: Setup
           path: /web/site-kit/
