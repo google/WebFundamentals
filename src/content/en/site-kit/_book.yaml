@@ -12,12 +12,6 @@ upper_tabs:
     - name: data-label
       value: upper-site-kit
     lower_tabs:
-      other:
-      - name: About Site Kit
-        contents:
-        - title: About Site Kit
-          path: https://sitekit.withgoogle.com/
-      - name: Setup
-        contents:
-        - title: Setup
-          path: /web/site-kit/
+      guides:
+      - title: Site Kit
+        path: /web/site-kit/
