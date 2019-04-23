@@ -16,7 +16,7 @@ description: What's new in Chrome 74 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="zBlItTR8BsY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -43,10 +43,11 @@ what’s new for developers in Chrome 74!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 74.
 
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/73.0.3683.74..74.0.3729.108)
-* [ChromeStatus.com updates for Chrome 74](https://www.chromestatus.com/features#milestone%3D74)
+* [What's new in Chrome DevTools (74)](/web/updates/2019/03/devtools)
 * [Chrome 74 deprecations & removals](/web/updates/2019/03/chrome-74-deps-rems)
+* [ChromeStatus.com updates for Chrome 74](https://www.chromestatus.com/features#milestone%3D74)
 * [What's new in JavaScript in Chrome 74](https://v8.dev/blog/v8-release-74)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/73.0.3683.74..74.0.3729.108)
 
 ## Private class fields {: #private-class-fields }
 
@@ -172,7 +173,7 @@ Feature policies, allow you to selectively enable, disable, and modify the
 behavior of APIs and other web features. This is done either through the
 Feature-Policy header or through the allow attribute on an iframe.
 
-HTTP Header: `Feature-Policy: geolocation 'self'`
+**HTTP Header:** `Feature-Policy: geolocation 'self'`
 
 ```html
 <iframe ... allow="geolocation self">
