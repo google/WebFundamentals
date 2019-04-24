@@ -41,7 +41,7 @@ En este código, vas a construir una aplicación web del tiempo utilizando las t
 * Sea rápido, use un trabajador del servicio para guardar en antememoria los recursos de la aplicación (HTML, CSS, JavaScript, imágenes) necesarios para ejecutar y almacenar en caché los datos meteorológicos en tiempo de ejecución para mejorar el rendimiento.
 * Sea instalable, utilizando un manifiesto de aplicación web y el evento `beforeinstallprompt` para notificar al usuario que es instalable.
 
-! [95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
+![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
 
 Warning: para simplificar este código y explicar los fundamentos de proporcionar una experiencia fuera de línea, estamos usando JavaScript de vainilla. En una aplicación de producción, le recomendamos que utilice herramientas como [Workbox](/web/tools/workbox/) para construir su trabajador de servicio. Elimina muchos de los bordes afilados y las esquinas oscuras con las que puede encontrarse.
 
@@ -94,7 +94,7 @@ Alternativa de #### : Descargar código y trabajar localmente
 
 Si desea descargar el código y trabajar de manera local, deberá tener una versión reciente de Node y la configuración del editor de códigos y listo para usar.
 
-Caution: si trabaja localmente, algunas de las auditorías de Lighthouse no se aprobarán y es posible que la instalación no esté disponible porque el servidor local no sirve el contenido en un contexto seguro. </p>
+Caution: si trabaja localmente, algunas de las auditorías de Lighthouse no se aprobarán y es posible que la instalación no esté disponible porque el servidor local no sirve el contenido en un contexto seguro.
 
 [Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
@@ -118,7 +118,7 @@ Algunas cosas para probar ...
 
 [Lighthouse](/web/tools/lighthouse/#devtools) es una herramienta fácil de usar para ayudar a mejorar la calidad de sus sitios y páginas. Cuenta con auditorías de rendimiento, accesibilidad, aplicaciones web progresivas y más. Cada auditoría tiene un documento de referencia que explica por qué la auditoría es importante, así como la forma de solucionarla.
 
-! [b112675caafccef0.png](img/b112675caafccef0.png)
+![b112675caafccef0.png](img/b112675caafccef0.png)
 
 Usaremos Lighthouse para auditar nuestra aplicación Weather y verificar los cambios que hemos realizado.
 
@@ -134,7 +134,7 @@ Note: Puede ejecutar Lighthouse en Chrome DevTools, desde la línea de comandos 
 
 Nos centraremos en los resultados de la auditoría de la aplicación web progresiva.
 
-! [af1a64a13725428e.png](img/af1a64a13725428e.png)
+![af1a64a13725428e.png](img/af1a64a13725428e.png)
 
 Y hay mucho rojo para centrarse en:
 
@@ -227,7 +227,7 @@ A continuación, debemos informarle al navegador acerca de nuestro manifiesto ag
 
 DevTools proporciona una manera rápida y fácil de revisar su archivo `manifest.json` . Abra el panel __Manifest__ en el panel __Aplication__. Si ha agregado la información del manifiesto correctamente, podrá verla analizada y mostrada en un formato fácil de usar en este panel.
 
-! [c462743e1bc26958.png](img/c462743e1bc26958.png)
+![c462743e1bc26958.png](img/c462743e1bc26958.png)
 
 ### Añadir meta etiquetas e íconos de iOS
 
@@ -371,13 +371,13 @@ Una vez que el caché está abierto, podemos llamar a `cache.addAll()` , que tom
 
 Veamos cómo puede usar DevTools para comprender y depurar a los trabajadores de servicios. Antes de volver a cargar su página, abra DevTools, vaya al panel __Service Workers__ en el panel __Aplication__. Debe tener un aspecto como este:
 
-! [b3aa37b67863fd03.png](img/b3aa37b67863fd03.png)
+![b3aa37b67863fd03.png](img/b3aa37b67863fd03.png)
 
 Cuando ve una página en blanco como esta, significa que la página actualmente abierta no tiene ningún trabajador de servicio registrado.
 
 Ahora, recarga tu página. El panel Trabajadores de servicio ahora debería tener este aspecto:
 
-! [69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
+![69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
 
 Cuando vea información como esta, significa que la página tiene un trabajador de servicio en ejecución.
 
@@ -409,7 +409,7 @@ evt.waitUntil(
 
 Con el panel Trabajadores de servicio abierto, actualice la página, verá el nuevo trabajador de servicio instalado y el incremento del número de estado.
 
-! [1db827d76bc0b359.png](img/1db827d76bc0b359.png)
+![1db827d76bc0b359.png](img/1db827d76bc0b359.png)
 
 El trabajador del servicio actualizado toma el control inmediatamente porque nuestro evento `install` finaliza con `self.skipWaiting()` y el evento `activate` finaliza con `self.clients.claim()` . Sin esos, el trabajador de servicio anterior continuaría controlando la página siempre que haya una pestaña abierta en la página.
 
@@ -417,7 +417,7 @@ El trabajador del servicio actualizado toma el control inmediatamente porque nue
 
 Y finalmente, necesitamos manejar los eventos de `fetch` . Vamos a utilizar un [network, falling back to cache strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache) . El trabajador del servicio primero intentará recuperar el recurso de la red, si eso falla, devolverá la página fuera de línea del caché.
 
-! [6302ad4ba8460944.png](img/6302ad4ba8460944.png)
+![6302ad4ba8460944.png](img/6302ad4ba8460944.png)
 
 #### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L43)
 
@@ -449,11 +449,11 @@ Revisemos para asegurarnos de que todo funcione como lo esperamos. Con el panel 
 
 También podemos verificar qué ha sido almacenado en caché. Vaya al panel __Cache Storage__ en el panel __Aplicación__ de DevTools. Haga clic con el botón derecho en __Caché de almacenamiento__, seleccione __Refrescar cachés__, expanda la sección y debería ver el nombre de su caché estático en el lado izquierdo. Al hacer clic en el nombre de la memoria caché se muestran todos los archivos que están en caché.
 
-! [c80a2a2e93c1c3ee.png](img/c80a2a2e93c1c3ee.png)
+![c80a2a2e93c1c3ee.png](img/c80a2a2e93c1c3ee.png)
 
 Ahora, vamos a probar el modo fuera de línea. Vuelva al panel __Service Workers__ de DevTools y marque la casilla __Offline__. Después de comprobarlo, debería ver un pequeño icono de advertencia amarillo junto a la pestaña del panel __Network__. Esto indica que estás desconectado.
 
-! [984b34dc2aa667a.png](img/984b34dc2aa667a.png)
+![984b34dc2aa667a.png](img/984b34dc2aa667a.png)
 
 Recarga tu página y ... ¡funciona! ¡Obtenemos __our__ panda desconectado, en lugar del dino desconectado de Chrome!
 
@@ -465,7 +465,7 @@ Depurar a los trabajadores del servicio puede ser un desafío, y cuando se trata
 
 En el panel Trabajadores de servicio del panel de la aplicación, hay algunas casillas de verificación que harán su vida mucho más fácil.
 
-! [c7ac93904f473a91.png](img/c7ac93904f473a91.png)
+![c7ac93904f473a91.png](img/c7ac93904f473a91.png)
 
 * __Offline__ - Cuando se marca, simula una experiencia fuera de línea y evita que cualquier solicitud vaya a la red.
 * __Actualización en la recarga__ - Cuando se marque, se obtendrá el trabajador de servicio más reciente, se instalará y se activará de inmediato.
@@ -475,7 +475,7 @@ En el panel Trabajadores de servicio del panel de la aplicación, hay algunas ca
 
 En algunos casos, es posible que esté cargando datos en caché o que las cosas no se actualicen como espera. Para borrar todos los datos guardados (localStorage, indexedDB data, cached files) y eliminar cualquier trabajador de servicio, use el panel Borrar almacenamiento en la pestaña Aplicación. Alternativamente, también puede trabajar en una ventana de incógnito.
 
-! [398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
+![398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
 
 Consejos adicionales:
 
@@ -517,7 +517,7 @@ Key Point: Este código de código solo cubre los conceptos básicos del ciclo d
 
 El primer evento que recibe un trabajador de servicio es `install` . Se activa tan pronto como el trabajador se ejecuta, y solo se llama una vez por trabajador del servicio. __Si modifica la secuencia de comandos de su trabajador de servicio, el navegador lo considerará un trabajador de servicio diferente__, y obtendrá su propio evento `install` .
 
-! [72ed77b1720512da.png](img/72ed77b1720512da.png)
+![72ed77b1720512da.png](img/72ed77b1720512da.png)
 
 Normalmente, el evento `install` se usa para almacenar en caché todo lo que necesita para que su aplicación se ejecute.
 
@@ -543,7 +543,7 @@ Unir previamente a sus recursos es un concepto similar a lo que sucede cuando un
 
 Para nuestra aplicación, almacenaremos previamente todos nuestros recursos estáticos cuando nuestro trabajador de servicio esté instalado, de modo que todo lo que necesitamos para ejecutar nuestra aplicación se almacene en el dispositivo del usuario. Para garantizar que nuestra aplicación se cargue a la velocidad de la luz, usaremos la estrategia [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) ; en lugar de ir a la red para obtener los recursos, se extraen de la caché local; Sólo si no está disponible, intentaremos obtenerlo de la red.
 
-! [44860840e2090bd8.png](img/44860840e2090bd8.png)
+![44860840e2090bd8.png](img/44860840e2090bd8.png)
 
 Extraer de la memoria caché local elimina cualquier variabilidad de la red. No importa en qué tipo de red esté el usuario (WiFi, 5G, 3G o incluso 2G), los recursos clave que necesitamos para ejecutar están disponibles casi de inmediato.
 
@@ -553,7 +553,7 @@ Caution: en este ejemplo, los recursos estáticos se sirven utilizando una estra
 
 [stale-while-revalidate strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate) es ideal para ciertos tipos de datos y funciona bien para nuestra aplicación. Obtiene los datos en la pantalla lo más rápido posible, luego actualiza que una vez que la red ha devuelto los datos más recientes. El tiempo de revalidación tardío significa que debemos iniciar dos solicitudes asíncronas, una para la memoria caché y otra para la red.
 
-! [6ebb2681eb1f58cb.png](img/6ebb2681eb1f58cb.png)
+![6ebb2681eb1f58cb.png](img/6ebb2681eb1f58cb.png)
 
 En circunstancias normales, los datos almacenados en la memoria caché se devolverán casi inmediatamente proporcionando la aplicación con datos recientes que puede usar. Luego, cuando vuelva la solicitud de red, la aplicación se actualizará utilizando los datos más recientes de la red.
 
@@ -723,7 +723,7 @@ La aplicación debe estar completamente fuera de línea funcional ahora. Actuali
 
 Luego vaya al panel __Cache Storage__ en el panel __Aplicación__ de DevTools. Expanda la sección y verá el nombre de su caché estático y el caché de datos en el lado izquierdo. Al abrir el caché de datos se deben mostrar los datos almacenados para cada ciudad.
 
-! [731e91776cb6ef18.png](img/731e91776cb6ef18.png)
+![731e91776cb6ef18.png](img/731e91776cb6ef18.png)
 
 Luego, abra DevTools y cambie al panel Trabajadores de servicio, y marque la casilla de verificación Sin conexión, luego intente volver a cargar la página, luego desconecte y vuelva a cargar la página.
 
@@ -750,7 +750,7 @@ __Auditoría de aplicación web progresiva__
 
 Cuando se instala una aplicación web progresiva, se ve y se comporta como todas las demás aplicaciones instaladas. Se inicia desde el mismo lugar que se lanzan otras aplicaciones. Se ejecuta en una aplicación sin una barra de direcciones u otra interfaz de usuario del navegador. Y como todas las demás aplicaciones instaladas, es una aplicación de nivel superior en el conmutador de tareas.
 
-! [d824e1712e46a1cc.png](img/d824e1712e46a1cc.png)
+![d824e1712e46a1cc.png](img/d824e1712e46a1cc.png)
 
 En Chrome, una aplicación web progresiva puede instalarse a través del menú contextual de tres puntos, o puede proporcionar un botón u otro componente de UI al usuario que le pedirá que instale su aplicación.
 
@@ -760,7 +760,7 @@ Success: dado que la experiencia de instalación en el menú contextual de tres 
 
 Para que un usuario pueda instalar su aplicación web progresiva, debe cumplir con [certain criteria](/web/fundamentals/app-install-banners/#criteria) . La forma más fácil de verificar es usar Lighthouse y asegurarse de que cumpla con los criterios instalables.
 
-! [b921f5583fcddf03.png](img/b921f5583fcddf03.png)
+![b921f5583fcddf03.png](img/b921f5583fcddf03.png)
 
 Si ha trabajado con este código, su PWA ya debería cumplir con estos criterios.
 

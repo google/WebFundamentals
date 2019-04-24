@@ -94,7 +94,7 @@ Using Glitch is the recommended method for working through this codelab.
 
 If you want to download the code and work locally, you'll need to have a recent version of Node, and code editor setup and ready to go.
 
-Caution: If you work locally, some of the Lighthouse audits won't pass, and installation may not be available because the local server doesn't serve the content over a secure context.</p>
+Caution: If you work locally, some of the Lighthouse audits won't pass, and installation may not be available because the local server doesn't serve the content over a secure context.
 
 [Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
