@@ -446,7 +446,6 @@ evt.respondWith(
 Handler `fetch` hanya perlu menangani navigasi halaman, sehingga permintaan lain dapat dibuang dari handler dan akan ditangani secara normal oleh browser. Tetapi, jika permintaan `.mode` adalah `navigate` , gunakan `fetch` untuk mencoba mendapatkan item dari jaringan. Jika gagal, pengendali `catch` membuka cache dengan `caches.open(CACHE_NAME)` dan menggunakan `cache.match('offline.html')` untuk mendapatkan halaman offline yang didahului. Hasilnya kemudian diteruskan kembali ke browser menggunakan `evt.respondWith()` .
 
 Key Point: Membungkus panggilan `fetch` di [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) mencegah penanganan peramban bawaan bawaan dan memberi tahu peramban bahwa kami ingin menangani sendiri responsnya. Jika Anda tidak memanggil `evt.respondWith()` di dalam pengendali `fetch` , Anda hanya akan mendapatkan perilaku jaringan default.
-</aside>
 
 #### Memutar
 

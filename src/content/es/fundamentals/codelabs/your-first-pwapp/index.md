@@ -441,7 +441,6 @@ evt.respondWith(
 El controlador `fetch` solo necesita manejar las navegaciones de la página, por lo que otras solicitudes pueden ser eliminadas del controlador y serán tratadas normalmente por el navegador. Pero, si la solicitud `.mode` es `navigate` , use `fetch` para intentar obtener el elemento de la red. Si falla, el manejador de `catch` abre el caché con `caches.open(CACHE_NAME)` y usa `cache.match('offline.html')` para obtener la página sin conexión de predefinido. El resultado se devuelve al navegador mediante `evt.respondWith()` .
 
 Key Point: envolver la llamada `fetch` en [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) evita el manejo de recuperación predeterminado del navegador y le dice al navegador que queremos manejar la respuesta por nosotros mismos. Si no llama a `evt.respondWith()` dentro de un controlador de `fetch` , solo obtendrá el comportamiento de red predeterminado.
-</aside>
 
 #### DevTools Desvío
 
