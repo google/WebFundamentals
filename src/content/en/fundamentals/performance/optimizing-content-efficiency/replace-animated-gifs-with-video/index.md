@@ -338,8 +338,8 @@ reduce data usage for _all_ users over relying on animated GIFs.
 
 Additionally, converting all your GIFs to video takes time. Time you might not
 have. In this case, you might consider a cloud-based media hosting service such
-as [Cloudinary](https://cloudinary.com/), which does the work for you. Check out
-[this resource from Cloudinary's
+as [Cloudinary](https://cloudinary.com/) or [Uploadcare](https://uploadcare.com/),
+which does the work for you. Check out [this resource from Cloudinary's
 blog](https://cloudinary.com/blog/reduce_size_of_animated_gifs_automatically_convert_to_webm_and_mp4),
 which explains how their service can transcode GIF to video for you.
 
