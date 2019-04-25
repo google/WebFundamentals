@@ -179,8 +179,9 @@ DevTools:
 
 
 You may also be familiar of other performance auditing tools like [PageSpeed
-Insights](/speed/pagespeed/insights/) or [Website Speed
-Test](https://webspeedtest.cloudinary.com/) by Cloudinary which includes a
+Insights](/speed/pagespeed/insights/), [Website Speed
+Test](https://webspeedtest.cloudinary.com/) by Cloudinary or
+[PageDetox](https://pagedetox.com/) by Uploadcare which includes a
 detailed image analysis audit.
 
 ## <a id="choosing-an-image-format" href="#choosing-an-image-format">How do I choose an image format?</a>
