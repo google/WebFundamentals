@@ -205,8 +205,8 @@ class Cat extends Animal {
 
 ## Conclusion
 
-Public class fields shipped in V8 v7.2 and Chrome 72, and private class fields are shipping in V8 v7.4
-and Chrome 74. We plan on shipping support for private methods and accessors soon.
+Public class fields shipped in V8 v7.2 and Chrome 72, and private class fields are shipping in V8
+v7.4 and Chrome 74. We plan on shipping support for private methods and accessors soon.
 
 Questions about this new feature? Comments about this article? Feel free to ping me on Twitter via
 [@mathias](https://twitter.com/mathias)!
