@@ -6,17 +6,11 @@ description: In this codelab, you'll build an installable, Progressive Web App, 
 {# wf_updated_on: 2019-04-19 #}
 {# wf_published_on: 2016-01-01 #}
 
-
 # Your First Progressive Web App {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-
 ## Introduction
-
-
-
 
 ### What makes a web app, a Progressive Web App?
 
@@ -48,10 +42,7 @@ In this codelab, you're going to build a weather web app using Progressive Web A
 
 ![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
 
-<aside markdown="1" class="warning">
-<p>Note: To simplify this codelab, and explain the fundamentals of providing an offline experience, we're using vanilla JavaScript. In a production app, we strongly recommend using tools like  <a href="/web/tools/workbox/">Workbox</a> to build your service worker. It removes many of the sharp edges and dark corners you may run into.</p>
-</aside>
-
+Warning: To simplify this codelab, and explain the fundamentals of providing an offline experience, we're using vanilla JavaScript. In a production app, we strongly recommend using tools like [Workbox](/web/tools/workbox/) to build your service worker. It removes many of the sharp edges and dark corners you may run into.
 
 ### What you'll learn
 
@@ -68,10 +59,7 @@ This codelab is focused on Progressive Web Apps. Non-relevant concepts and code 
 PWAs are just web apps, and work in all browsers, but we'll be using a few features of the Chrome DevTools to better understand what's happening at the browser level, and use it to test the install experience.
 * Knowledge of HTML, CSS, JavaScript, and  [Chrome DevTools](https://developer.chrome.com/devtools).
 
-
 ## Getting set up
-
-
 
 ### Get a key for the Dark Sky API
 
@@ -79,10 +67,7 @@ Our weather data comes from the  [Dark Sky API](https://darksky.net/dev). In ord
 
 [Register for API Key](https://darksky.net/dev/register)
 
-<aside markdown="1" class="key-point">
-<p>Note: You can still complete this codelab without a Dark Sky API key. If our server is unable to get real data from the Dark Sky API, it will return fake data instead.</p>
-</aside>
-
+Note: You can still complete this codelab without a Dark Sky API key. If our server is unable to get real data from the Dark Sky API, it will return fake data instead.
 
 #### Verify your API key is working properly
 
@@ -109,10 +94,7 @@ Using Glitch is the recommended method for working through this codelab.
 
 If you want to download the code and work locally, you'll need to have a recent version of Node, and code editor setup and ready to go.
 
-<aside markdown="1" class="warning">
-<p><strong>Caution:</strong> If you work locally, some of the Lighthouse audits won't pass, and installation may not be available because the local server doesn't serve the content over a secure context.</p>
-</aside>
-
+Caution: If you work locally, some of the Lighthouse audits won't pass, and installation may not be available because the local server doesn't serve the content over a secure context.
 
 [Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
@@ -122,10 +104,7 @@ If you want to download the code and work locally, you'll need to have a recent 
 4. Run `node server.js` to start the server on port 8000.
 5. Open a browser tab to  [http://localhost:8000](http://localhost:8000)
 
-
 ## Establish a baseline
-
-
 
 ### What's our starting point?
 
@@ -149,10 +128,7 @@ Some things to try...
 
 We'll use Lighthouse to audit our Weather app, and verify the changes we've made.
 
-<aside markdown="1" class="key-point">
-<p><strong>Tip: </strong>You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. Consider  <a href="https://github.com/GoogleChromeLabs/lighthousebot">adding Lighthouse</a> to your build process to make sure your web app doesn't regress. </p>
-</aside>
-
+Note: You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. Consider [adding Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) to your build process to make sure your web app doesn't regress.
 
 ### Let's run Lighthouse
 
@@ -169,7 +145,7 @@ We're going to focus on the results of the Progressive Web App audit.
 And there's a lot of red to focus on:
 
 * __❗FAILED:__ Current page does not respond with a 200 when offline.
-* __❗FAILED: __`start_url` does not respond with a 200 when offline.
+* __❗FAILED:__ `start_url` does not respond with a 200 when offline.
 * __❗FAILED:__ Does not register a service worker that controls page and `start_url.`
 * __❗FAILED:__ Web app manifest does not meet the installability requirements.
 * __❗FAILED:__ Is not configured for a custom splash screen.
@@ -177,10 +153,7 @@ And there's a lot of red to focus on:
 
 Let's jump in and start fixing some of these issues!
 
-
 ## Add a web app manifest
-
-
 
 By the end of this section, our weather app will pass the following audits:
 
@@ -205,7 +178,7 @@ Create a file named `public/manifest.json` in your project and copy/paste the fo
 
 `public/manifest.json`
 
-```
+```json
 {
   "name": "Weather",
   "short_name": "Weather",
@@ -243,18 +216,15 @@ Create a file named `public/manifest.json` in your project and copy/paste the fo
 
 The manifest supports an array of icons, intended for different screen sizes. For this code lab, we've included a few others since we needed them for our iOS integration.
 
-<aside markdown="1" class="key-point">
-<p><strong>TIP:</strong> To be installable, Chrome requires that you provide at least a 192x192px icon and a 512x512px icon. But you can also provide other sizes. Chrome uses the icon closest to 48dp, for example, 96px on a 2x device or 144px for a 3x device.</p>
-</aside>
-
+Note: To be installable, Chrome requires that you provide at least a 192x192px icon and a 512x512px icon. But you can also provide other sizes. Chrome uses the icon closest to 48dp, for example, 96px on a 2x device or 144px for a 3x device.
 
 ### Add a link to the web app manifest
 
 Next, we need to tell the browser about our manifest by adding a `<link rel="manifest"...`  to each page in our app. Add the following line to the `<head>` element in your `index.html` file.
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L30)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L30)
 
-```
+```html
 <!-- CODELAB: Add link rel manifest -->
 <link rel="manifest" href="/manifest.json">
 ```
@@ -267,11 +237,11 @@ DevTools provides a quick, easy way to check your `manifest.json` file. Open up 
 
 ### Add iOS meta tags & icons
 
-Safari on iOS doesn't support the web app manifest ( [yet](https://webkit.org/status/#specification-web-app-manifest)), so you'll need to add the  [traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) to the `<head>` of your `index.html` file:
+Safari on iOS doesn't support the web app manifest ([yet](https://webkit.org/status/#specification-web-app-manifest)), so you'll need to add the  [traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) to the `<head>` of your `index.html` file:
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
 
-```
+```html
 <!-- CODELAB: Add iOS meta tags and icons -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -289,9 +259,9 @@ Under the SEO audit, Lighthouse noted our " [Document does not have a meta descr
 
 To add a description, add the following `meta` tag to the `<head>` of your document:
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L32)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L32)
 
-```
+```html
 <!-- CODELAB: Add description here -->
 <meta name="description" content="A sample weather app">
 ```
@@ -302,9 +272,9 @@ In the PWA audit, Lighthouse noted our app " [Does not set an address-bar theme 
 
 To set the theme color on mobile, add the following `meta` tag to the `<head>` of your document:
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L33)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L33)
 
-```
+```html
 <!-- CODELAB: Add meta theme-color -->
 <meta name="theme-color" content="#2F3BA2" />
 ```
@@ -320,16 +290,13 @@ __SEO Audit__
 __Progressive Web App Audit__
 
 * __❗FAILED:__ Current page does not respond with a 200 when offline.
-* __❗FAILED: __`start_url` does not respond with a 200 when offline.
+* __❗FAILED:__ `start_url` does not respond with a 200 when offline.
 * __❗FAILED:__ Does not register a service worker that controls page and `start_url.`
 * __✅ PASSED:__ Web app manifest meets the installability requirements.
 * __✅ PASSED:__ Configured for a custom splash screen.
 * __✅ PASSED:__ Sets an address-bar theme color.
 
-
 ## Provide a basic offline experience
-
-
 
 There is an expectation from users that installed apps will always have a baseline experience if they're offline. That's why it's critical for installable web apps to never show Chrome's offline dinosaur. The offline experience can range from a simple, offline page, to a read-only experience with previously cached data, all the way to a fully functional offline experience that automatically syncs when the network connection is restored.
 
@@ -347,18 +314,15 @@ If you're unfamiliar with service workers, you can get a basic understanding by 
 
 Features provided via service workers should be considered a progressive enhancement, and added only if supported by the browser. For example, with service workers you can cache the  [app shell](/web/fundamentals/architecture/app-shell) and data for your app, so that it's available even when the network isn't. When service workers aren't supported, the offline code isn't called, and the user gets a basic experience. Using feature detection to provide progressive enhancement has little overhead and it won't break in older browsers that don't support that feature.
 
-<aside markdown="1" class="warning">
-<p><strong>Remember:</strong> Service worker functionality is only available on pages that are accessed via HTTPS (<a href="http://localhost">http://localhost</a> and equivalents will also work to facilitate testing).</p>
-</aside>
-
+Warning: Service worker functionality is only available on pages that are accessed via HTTPS (http://localhost and equivalents will also work to facilitate testing).
 
 ### Register the service worker
 
 The first step is to register the service worker. Add the following code to your `index.html` file:
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L206)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L206)
 
-```
+```js
 // CODELAB: Register service worker.
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -380,9 +344,9 @@ First, we need to tell the service worker what to cache. We've already created a
 
 In your `service-worker.js`, add `'/offline.html',` to the `FILES_TO_CACHE` array, the final result should look like this:
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
 
-```
+```js
 // CODELAB: Update cache names any time any of the cached files change.
 const FILES_TO_CACHE = [
   '/offline.html',
@@ -391,9 +355,9 @@ const FILES_TO_CACHE = [
 
 Next, we need to update the `install` event to tell the service worker to pre-cache the offline page:
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L29)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L29)
 
-```
+```js
 // CODELAB: Precache static resources here.
 evt.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -403,10 +367,7 @@ evt.waitUntil(
 );
 ```
 
-<aside markdown="1" class="key-point">
-<p>Note: Service worker events and life cycle is covered in the next section.</p>
-</aside>
-
+Note: Service worker events and life cycle is covered in the next section.
 
 Our `install` event now opens the cache with `caches.open()` and provides a cache name. Providing a cache name allows us to version files, or separate data from the cached resources so that we can easily update one but not affect the other.
 
@@ -426,7 +387,7 @@ Now, reload your page. The Service Workers pane should now look like this:
 
 When you see information like this, it means the page has a service worker running.
 
-Next to the Status label, there's a number ( *34251*  in this case), keep an eye on that number as you're working with service workers. It's an easy way to tell if your service worker has been updated.
+Next to the Status label, there's a number (*34251*  in this case), keep an eye on that number as you're working with service workers. It's an easy way to tell if your service worker has been updated.
 
 ### Clean-up old offline pages
 
@@ -434,9 +395,9 @@ We'll use the `activate` event to clean up any old data in our cache. This code 
 
 Add the following code to your `activate` event:
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L36)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L36)
 
-```
+```js
 // CODELAB: Remove previous cached data from disk.
 evt.waitUntil(
     caches.keys().then((keyList) => {
@@ -464,9 +425,9 @@ And finally, we need to handle `fetch` events. We're going to use a  [network, f
 
 ![6302ad4ba8460944.png](img/6302ad4ba8460944.png)
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L43)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L43)
 
-```
+```js
 // CODELAB: Add fetch event handler here.
 if (evt.request.mode !== 'navigate') {
   // Not a page navigation, bail.
@@ -485,10 +446,7 @@ evt.respondWith(
 
 The `fetch` handler only needs to handle page navigations, so other requests can be dumped out of the handler and will be dealt with normally by the browser.  But, if the request `.mode` is `navigate`, use `fetch` to try to get the item from the network. If it fails, the `catch` handler opens the cache with `caches.open(CACHE_NAME)` and uses `cache.match('offline.html')` to get the precached offline page. The result is then passed back to the browser using `evt.respondWith()`.
 
-<aside markdown="1" class="key-point">
-<p>Wrapping the <code>fetch</code> call in  <a href="https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith"><code>evt.respondWith()</code></a> prevents the browsers default fetch handling and tells the browser we want to handle the response ourselves. If you don't call <code>evt.respondWith()</code> inside of a <code>fetch</code> handler, you'll just get the default network behavior.</p>
-</aside>
-
+Key Point: Wrapping the `fetch` call in  [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) prevents the browsers default fetch handling and tells the browser we want to handle the response ourselves. If you don't call `evt.respondWith()` inside of a `fetch` handler, you'll just get the default network behavior.
 
 #### DevTools Detour
 
@@ -506,7 +464,7 @@ Reload your page and... it works! We get __our__ offline panda, instead of Chrom
 
 ### Tips for testing service workers
 
-Debugging service workers can be a challenge, and when it involves caching, things can become even more of a nightmare if the cache isn't updated when you expect it. Between the typical service worker lifecycle and a bug in your code, you may become quickly frustrated. __But don't. __
+Debugging service workers can be a challenge, and when it involves caching, things can become even more of a nightmare if the cache isn't updated when you expect it. Between the typical service worker lifecycle and a bug in your code, you may become quickly frustrated. __But don't.__
 
 #### Use DevTools
 
@@ -542,34 +500,25 @@ __SEO Audit__
 __Progressive Web App Audit__
 
 * __✅ PASSED:__ Current page responds with a 200 when offline.
-* __✅ PASSED: __`start_url` responds with a 200 when offline.
+* __✅ PASSED:__ `start_url` responds with a 200 when offline.
 * __✅ PASSED:__ Registers a service worker that controls page and `start_url.`
 * __✅ PASSED:__ Web app manifest meets the installability requirements.
 * __✅ PASSED:__ Configured for a custom splash screen.
 * __✅ PASSED:__ Sets an address-bar theme color.
 
-
 ## Provide a full offline experience
-
-
 
 Take a moment and put your phone into airplane mode, and try running some of your favorite apps. In almost all cases, they provide a fairly robust offline experience. Users expect that robust experience from their apps. And the web should be no different. Progressive Web Apps should be designed with offline as a core scenario.
 
-<aside markdown="1" class="key-point">
-<p>Designing for offline-first can drastically improve the performance of your web app by reducing the number of network requests made by your app, instead resources can be precached and served directly from the local cache. Even with the fastest network connection, serving from the local cache will be faster!</p>
-</aside>
-
+Key Point: Designing for offline-first can drastically improve the performance of your web app by reducing the number of network requests made by your app, instead resources can be precached and served directly from the local cache. Even with the fastest network connection, serving from the local cache will be faster!
 
 ### Service worker life cycle
 
 The life cycle of the service worker is the most complicated part. If you don't know what it's trying to do and what the benefits are, it can feel like it's fighting you. But once you know how it works, you can deliver seamless, unobtrusive updates to users, mixing the best of the web and native patterns.
 
-<aside markdown="1" class="key-point">
-<p><strong>Dive Deeper:</strong> This codelab only covers the very basics of the service worker life cycle. To dive deeper, refer to  <a href="/web/fundamentals/primers/service-workers/lifecycle">The Service Worker Lifecycle</a> article on WebFundamentals.</p>
-</aside>
+Key Point: This codelab only covers the very basics of the service worker life cycle. To dive deeper, refer to [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle) article on WebFundamentals.
 
-
-#### `install`__ event__
+#### `install` event
 
 The first event a service worker gets is `install`. It's triggered as soon as the worker executes, and it's only called once per service worker. __If you alter your service worker script the browser considers it a different service worker__, and it'll get its own `install` event.
 
@@ -577,11 +526,11 @@ The first event a service worker gets is `install`. It's triggered as soon as th
 
 Typically the `install` event is used to cache everything you need for your app to run.
 
-#### `activate`__ event__
+#### `activate` event
 
 The service worker will receive an `activate` event every time it starts up. The main purpose of the `activate` event is to configure the service worker's behavior, clean up any resources left behind from previous runs (e.g. old caches), and get the service worker ready to handle network requests (for example the `fetch` event described below).
 
-#### `fetch`__ event__
+#### `fetch` event
 
 The fetch event allows the service worker to intercept any network requests and handle requests. It can go to the network to get the resource, it can pull it from its own cache, generate a custom response or any number of different options. Check out the  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) for different strategies that you can use.
 
@@ -603,10 +552,7 @@ For our app, we'll precache all of our static resources when our service worker 
 
 Pulling from the local cache eliminates any network variability. No matter what kind of network the user is on (WiFi, 5G, 3G, or even 2G), the key resources we need to run are available almost immediately.
 
-<aside markdown="1" class="warning">
-<p><strong>Caution:</strong> In this sample, static resources are served using a  <a href="/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network"><code>cache-first</code></a> strategy, which results in a copy of any cached content being returned without consulting the network. While a <code>cache-first</code> strategy is easy to implement, it can cause challenges in the future.</p>
-</aside>
-
+Caution: In this sample, static resources are served using a  [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) strategy, which results in a copy of any cached content being returned without consulting the network. While a `cache-first` strategy is easy to implement, it can cause challenges in the future.
 
 #### Caching the app data
 
@@ -624,9 +570,9 @@ As mentioned previously, the app needs to kick off two asynchronous requests, on
 
 Update the `getForecastFromCache()` function, to check if the `caches` object is available in the global `window` object, and if it is, request the data from the cache.
 
-####  [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L164)
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L164)
 
-```
+```js
 // CODELAB: Add code to get weather forecast from the caches object.
 if (!('caches' in window)) {
   return null;
@@ -647,9 +593,9 @@ return caches.match(url)
 
 Then, we need to modify  [`updateData()`](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L196) so that it makes two calls, one to `getForecastFromNetwork()` to get the forecast from the network, and one to `getForecastFromCache()` to get the latest cached forecast:
 
-####  [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L200)
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L200)
 
-```
+```js
 // CODELAB: Add code to call getForecastFromCache.
 getForecastFromCache(location.geo)
     .then((forecast) => {
@@ -661,9 +607,9 @@ Our weather app now makes two asynchronous requests for data, one from the cache
 
 Notice how the cache request and the `fetch` request both end with a call to update the forecast card. How does the app know whether it's displaying the latest data? This is handled in the following code from `renderForecast()`:
 
-####  [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L85)
+#### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L85)
 
-```
+```js
 // If the data on the element is newer, skip the update.
 if (lastUpdated >= data.currently.time) {
   return;
@@ -676,9 +622,9 @@ Every time that a card is updated, the app stores the timestamp of the data on a
 
 In the service worker, let's add a `DATA_CACHE_NAME` so that we can separate our applications data from the app shell. When the app shell is updated and older caches are purged, our data will remain untouched, ready for a super fast load. Keep in mind, if your data format changes in the future, you'll need a way to handle that and ensure the app shell and content stay in sync.
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L21)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L21)
 
-```
+```js
 // CODELAB: Update cache names any time any of the cached files change.
 const CACHE_NAME = 'static-cache-v2';
 const DATA_CACHE_NAME = 'data-cache-v1';
@@ -690,9 +636,9 @@ In order for our app to work offline, we need to precache all of the resources i
 
 Update the `FILES_TO_CACHE` array with the list of files:
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L23)
 
-```
+```js
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
   '/',
@@ -720,12 +666,9 @@ const FILES_TO_CACHE = [
 ];
 ```
 
-Since we are manually generating the list of files to cache, every time we update a file we __must update the ____`CACHE_NAME`__. We were able to remove `offline.html` from our list of cached files because our app now has all the necessary resources it needs to work offline, and won't ever show the offline page again.
+Since we are manually generating the list of files to cache, every time we update a file we __must update the `CACHE_NAME`__. We were able to remove `offline.html` from our list of cached files because our app now has all the necessary resources it needs to work offline, and won't ever show the offline page again.
 
-<aside markdown="1" class="warning">
-<p><strong>Caution:</strong> In this sample, we hand-rolled our own service worker. Each time we update any of the static resources, we need to re-roll the service worker and update the cache, otherwise the old content will be served. In addition, when one file changes, the entire cache is invalidated and needs to be re-downloaded. That means fixing a simple single character spelling mistake will invalidate the cache and require everything to be downloaded again—not exactly efficient.  <a href="/web/tools/workbox/">Workbox</a> handles this gracefully, by integrating it into your build process, only changed files will be updated, saving bandwidth for users and easier maintenance for you!</p>
-</aside>
-
+Caution: In this sample, we hand-rolled our own service worker. Each time we update any of the static resources, we need to re-roll the service worker and update the cache, otherwise the old content will be served. In addition, when one file changes, the entire cache is invalidated and needs to be re-downloaded. That means fixing a simple single character spelling mistake will invalidate the cache and require everything to be downloaded again—not exactly efficient.  [Workbox](/web/tools/workbox/) handles this gracefully, by integrating it into your build process, only changed files will be updated, saving bandwidth for users and easier maintenance for you!
 
 #### Update the activate event handler
 
@@ -733,7 +676,7 @@ To ensure our `activate` event doesn't accidentally delete our data, in the `act
 
 #### public/service-worker.js
 
-```
+```js
 if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
 ```
 
@@ -743,9 +686,9 @@ We need to modify the service worker to intercept requests to the weather API an
 
 Update the `fetch` event handler to handle requests to the data API separately from other requests.
 
-####  [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L42)
+#### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L42)
 
-```
+```js
 // CODELAB: Add fetch event handler here.
 if (evt.request.url.includes('/forecast/')) {
   console.log('[Service Worker] Fetch (data)', evt.request.url);
@@ -802,16 +745,13 @@ __SEO Audit__
 __Progressive Web App Audit__
 
 * __✅ PASSED:__ Current page responds with a 200 when offline.
-* __✅ PASSED: __`start_url` responds with a 200 when offline.
+* __✅ PASSED:__ `start_url` responds with a 200 when offline.
 * __✅ PASSED:__ Registers a service worker that controls page and `start_url.`
 * __✅ PASSED:__ Web app manifest meets the installability requirements.
 * __✅ PASSED:__ Configured for a custom splash screen.
 * __✅ PASSED:__ Sets an address-bar theme color.
 
-
 ## Add install experience
-
-
 
 When a Progressive Web App is installed, it looks and behaves like all of the other installed apps. It launches from the same place as other apps launch. It runs in an app without an address bar or other browser UI. And like all other installed apps, it's a top level app in the task switcher.
 
@@ -819,10 +759,7 @@ When a Progressive Web App is installed, it looks and behaves like all of the ot
 
 In Chrome, a Progressive Web App can either be installed through the three-dot context menu, or you can provide a button or other UI component to the user that will prompt them to install your app.
 
-<aside markdown="1" class="key-point">
-<p><strong>Tip:</strong> Since the install experience in Chrome's three-dot context menu is somewhat buried, we recommend that you provide some indication within your app to notify the user your app can be installed, and an install button to complete the install process.</p>
-</aside>
-
+Success: Since the install experience in Chrome's three-dot context menu is somewhat buried, we recommend that you provide some indication within your app to notify the user your app can be installed, and an install button to complete the install process.
 
 ### Audit with Lighthouse
 
@@ -832,29 +769,26 @@ In order for a user to be able to install your Progressive Web App, it needs to 
 
 If you're worked through this codelab, your PWA should already meet these criteria.
 
-<aside markdown="1" class="key-point">
-<p><strong>DevTip:</strong> For this section, enable the <strong>Bypass for network</strong> checkbox in the <strong>Service Workers</strong> pane of the <strong>Application</strong> panel in DevTools. When checked, requests bypass the service worker and are sent directly to the network. This simplifies our development process since we don't have to update our service worker while working through this section.</p>
-</aside>
-
+Key Point: For this section, enable the **Bypass for network** checkbox in the **Service Workers** pane of the **Application** panel in DevTools. When checked, requests bypass the service worker and are sent directly to the network. This simplifies our development process since we don't have to update our service worker while working through this section.
 
 ### Add install.js to index.html
 
 First, let's add the `install.js` to our `index.html` file.
 
-####  [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L204)
+#### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L204)
 
-```
+```html
 <!-- CODELAB: Add the install script here -->
 <script src="/scripts/install.js"></script>
 ```
 
-### Listen for `beforeinstallprompt`__ event__
+### Listen for `beforeinstallprompt` event
 
 If the add to home screen  [criteria](/web/fundamentals/app-install-banners/#criteria) are met, Chrome will fire a `beforeinstallprompt` event, that you can use to indicate your app can be 'installed', and then prompt the user to install it. Add the code below to listen for the `beforeinstallprompt` event:
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
 
-```
+```js
 // CODELAB: Add event listener for beforeinstallprompt event
 window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 ```
@@ -863,9 +797,9 @@ window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
 In our `saveBeforeInstallPromptEvent` function, we'll save a reference to the `beforeinstallprompt` event so that we can call `prompt()` on it later, and update our UI to show the install button.
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L34)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L34)
 
-```
+```js
 // CODELAB: Add code to save event & show the install button.
 deferredInstallPrompt = evt;
 installButton.removeAttribute('hidden');
@@ -875,9 +809,9 @@ installButton.removeAttribute('hidden');
 
 When the user clicks the install button, we need to call `.prompt()` on the saved `beforeinstallprompt` event. We also need to hide the install button, because `.prompt()` can only be called once on each saved event.
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L45)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L45)
 
-```
+```js
 // CODELAB: Add code show install prompt & hide the install button.
 deferredInstallPrompt.prompt();
 // Hide the install button, it can't be called twice.
@@ -890,9 +824,9 @@ Calling `.prompt()` will show a modal dialog to the user, asking them to add you
 
 You can check to see how the user responded to the install dialog by listening for the promise returned by the `userChoice` property of the saved `beforeinstallprompt` event. The promise returns an object with an `outcome` property after the prompt has shown and the user has responded to it.
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L47)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L47)
 
-```
+```js
 // CODELAB: Log user response to prompt.
 deferredInstallPrompt.userChoice
     .then((choice) => {
@@ -911,18 +845,18 @@ One comment about `userChoice`, the  [spec defines it as a property](https://w3c
 
 In addition to any UI you add to install your app, users can also install your PWA through other methods, for example Chrome's three-dot menu. To track these events, listen for the appinstalled event.
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L51)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L51)
 
-```
+```js
 // CODELAB: Add event listener for appinstalled event
 window.addEventListener('appinstalled', logAppInstalled);
 ```
 
 Then, we'll need to update the `logAppInstalled` function, for this codelab, we'll just use `console.log`, but in a production app, you probably want to log this as an event with your analytics software.
 
-####  [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L60)
+#### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L60)
 
-```
+```js
 // CODELAB: Add code to log the event
 console.log('Weather App was installed.', evt);
 ```
@@ -941,7 +875,7 @@ First, let's verify our install icon shows up properly, be sure to try this on b
 
 1. Open the URL in a new Chrome tab.
 2. Open Chrome's three-dot menu (next to the address bar).
-▢ Verify you see " *Install Weather...* " in the menu.
+▢ Verify you see "*Install Weather...*" in the menu.
 3. Refresh the weather data using the refresh button in the upper right corner to ensure we meet the  [user engagement heuristics](/web/fundamentals/app-install-banners/#criteria).
 ▢ Verify the install icon is visible in the app header.
 
@@ -955,11 +889,11 @@ Next, let's make sure everything installs properly, and our events are properly 
 ▢ Verify the install button disappears
 ▢ Verify the install modal dialog is shown.
 4. Click Cancel.
-▢ Verify " *User dismissed the A2HS prompt* " is shown in the console output.
+▢ Verify "*User dismissed the A2HS prompt*" is shown in the console output.
 ▢ Verify the install button reappears.
 5. Click the install button again, then click the install button in the modal dialog.
-▢ Verify " *User accepted the A2HS prompt* " is shown in the console output.
-▢ Verify " *Weather App was installed* " is shown in the console output.
+▢ Verify "*User accepted the A2HS prompt*" is shown in the console output.
+▢ Verify "*Weather App was installed*" is shown in the console output.
 ▢ Verify the Weather app is added to the place where you'd typically find apps.
 6. Launch the Weather PWA.
 ▢ Verify the app opens as a standalone app, either in an app window on desktop, or full screen on mobile.
@@ -971,11 +905,11 @@ Note, if you're running on desktop from localhost, your installed PWA may show a
 Let's also check the behavior on iOS. If you have an iOS device, you can use that, or if you're on a Mac, try the iOS Simulator available with Xcode.
 
 1. Open Safari and in a new browser tab, navigate to your Weather PWA.
-2. Click the  *Share *  ![8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) button.
+2. Click the  *Share*  ![8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) button.
 3. Scroll right and click on the  *Add to Home Screen*  button.
 ▢ Verify the title, URL and icon are correct.
-4. Click  *Add.
-* ▢ Verify the app icon is added to the home screen.
+4. Click  *Add.*
+▢ Verify the app icon is added to the home screen.
 5. Launch the Weather PWA from the home screen.
 ▢ Verify the app launches full screen.
 
@@ -983,7 +917,7 @@ Let's also check the behavior on iOS. If you have an iOS device, you can use tha
 
 The `display-mode` media query makes it possible to apply styles depending on how the app was launched, or determine how it was launched with JavaScript.
 
-```
+```css
 @media all and (display-mode: standalone) {
   body {
     background-color: yellow;
@@ -1023,11 +957,7 @@ On Mac and Windows, PWAs must be uninstalled through Chrome.
 * Right click (alt-click) on the Weather PWA.
 * Click  *Remove from Chrome...*
 
-
 ## Congratulations
-
-
-
 
 Congratulations, you've successfully built your first Progressive Web App!
 
@@ -1037,23 +967,19 @@ You now know the key steps required to turn any web app into a Progressive Web A
 
 ### Further reading
 
-*  [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
-*  [Service Worker Caching Strategies Based on Request Types](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Service Worker Caching Strategies Based on Request Types](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
 
 ### Reference docs
 
-*  [Web App Manifest docs](/web/fundamentals/web-app-manifest)
-*  [Web App Manifest properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members)
-*  [Install & Add to Home Screen](/web/fundamentals/app-install-banners/)
-*  [Service Worker Overview](/web/fundamentals/primers/service-workers/)
-*  [Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
-*  [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
-*  [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/#generic-fallback)
-
-
-
-
+* [Web App Manifest docs](/web/fundamentals/web-app-manifest)
+* [Web App Manifest properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members)
+* [Install & Add to Home Screen](/web/fundamentals/app-install-banners/)
+* [Service Worker Overview](/web/fundamentals/primers/service-workers/)
+* [Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
+* [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
+* [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/#generic-fallback)
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
-[issue](https://github.com/googlecodelabs/your-first-pwapp/issues) today. And thanks!
+
+Help us make our code labs better by submitting an [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) today. And thanks!
