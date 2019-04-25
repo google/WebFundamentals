@@ -23,13 +23,14 @@ Most CDNs (e.g
 and third-party solutions like [Cloudinary](https://cloudinary.com),
 [imgix](https://imgix.com), [Fastly's Image
 Optimizer](https://www.fastly.com/io/), [Instart Logic's
-SmartVision](https://www.instartlogic.com/technology/machine-learning/smartvision)
-or [ImageOptim API](https://imageoptim.com/api) offer comprehensive automated
+SmartVision](https://www.instartlogic.com/technology/machine-learning/smartvision),
+[ImageOptim API](https://imageoptim.com/api)
+or [Uploadcare](https://uploadcare.com/) offer comprehensive automated
 image optimization solutions.
 
 The amount of time you'll spend reading blog posts and tweaking your config is
-greater than the monthly fee for a service (Cloudinary has a
-[free](http://cloudinary.com/pricing) tier). If you don't want to outsource this
+greater than the monthly fee for a service (both [Cloudinary](http://cloudinary.com/pricing) and [Uploadcare](https://uploadcare.com/pricing/) have a
+free tier). If you don't want to outsource this
 work for cost or latency concerns, the open-source options above are solid.
 Projects like [Imageflow](https://github.com/imazen/imageflow) or
 [Thumbor](https://github.com/thumbor/thumbor) enable self-hosted alternatives.
@@ -1794,9 +1795,10 @@ to the default `src` specified in the `<img>` tag.
 ```
 
 Image CDNs like
-[Cloudinary](http://cloudinary.com/blog/how_to_automatically_adapt_website_images_to_retina_and_hidpi_devices)
-and [Imgix](https://docs.imgix.com/apis/url/dpr) both support controlling image
-density to serve the best density to users from a single canonical source.
+[Cloudinary](http://cloudinary.com/blog/how_to_automatically_adapt_website_images_to_retina_and_hidpi_devices),
+[Imgix](https://docs.imgix.com/apis/url/dpr) and
+[Uploadcare](https://uploadcare.com/docs/image_transformations/responsive_images/#ri-html-hidpi)
+both support controlling image density to serve the best density to users from a single canonical source.
 
 Note: You can learn more about Device Pixel Ratio and responsive images in this
 free [Udacity](https://www.udacity.com/course/responsive-images--ud882) course
