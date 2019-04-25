@@ -381,7 +381,8 @@ libraries like [imagemin](https://github.com/imagemin/imagemin).
 
 This way you make sure that the images added in the future get optimized automatically.
 Some CDNs, for example [Akamai](https://www.akamai.com) or third-party solutions like
-[Cloudinary](https://cloudinary.com/) or [Fastly](https://www.fastly.com/) offer you comprehensive
+[Cloudinary](https://cloudinary.com/), [Fastly](https://www.fastly.com/)
+or [Uploadcare](https://uploadcare.com/) offer you comprehensive
 image optimization solutions. so you can also simply host your images on those services.
 
 If you don't want to do that because of the cost, or latency issues, projects like
