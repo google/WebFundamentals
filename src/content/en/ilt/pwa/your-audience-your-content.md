@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Your Audience, Your Content {: .page-title }
@@ -15,3 +16,7 @@ cost, and the usage context.
 {% setvar slidesId "154nnHaw5kgj9fwMu8PQA6nr0f6nZmzwwr0Oq-0j6GfY" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

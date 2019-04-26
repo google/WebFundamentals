@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to Push Notifications {: .page-title }
@@ -14,3 +15,7 @@ implement push notifications in Progressive Web Apps.
 {% setvar slidesId "1vd6cFL0Vg3-ciDq2xpN0HxN_UowyKjJsTrCOdulkExM" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Working with Promises {: .page-title }
@@ -15,3 +16,7 @@ the pitfalls of promise.race.
 {% setvar slidesId "1zoC41pP9aMR02pc7F8rz0GlaNMs7yzWmIqKQYn5D18A" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Responsive Images {: .page-title }
@@ -14,3 +15,7 @@ your images load as quickly as possible and work well in any form factor.
 {% setvar slidesId "1rXdSHcN7i11AApafDfqb_uCKNPuyt89WuDFI07Bejqc" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Core Technologies {: .page-title }
@@ -14,3 +15,7 @@ introduction to ES2015.
 {% setvar slidesId "1CxS9SD8DEm5qsonsg_M41A6lmZrdLwrBXuayQBGoK3g" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}

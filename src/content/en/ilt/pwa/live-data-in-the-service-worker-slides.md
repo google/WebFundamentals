@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/ilt/pwa/_book.yaml
 
-{# wf_updated_on: 2017-04-14 #}
+{# wf_blink_components: N/A #}
+{# wf_updated_on: 2019-04-26 #}
 {# wf_published_on: 2017-04-14 #}
 
 # Live Data in the Service Worker {: .page-title }
@@ -14,3 +15,7 @@ store multiple types of data.
 {% setvar slidesId "1wk9XH8yV3NT8fsEp5KpWktfKRl5myYWnhkqbHkPtBx4" %}
 
 {% include "web/ilt/pwa/_slides.html" %}
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
