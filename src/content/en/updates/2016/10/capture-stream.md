@@ -128,4 +128,3 @@ and above by default.
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5522768674160640)
 
 
-{% include "comment-widget.html" %}

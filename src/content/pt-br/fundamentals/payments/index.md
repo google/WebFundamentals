@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A Payment Request API oferece pagamentos rápidos e fáceis na web.
 
-{# wf_published_on: 2016-07-25 #}
-{# wf_updated_on: 2016-12-06 #}
+{# wf_published_on: 2018-08-30 #}
+{# wf_updated_on: 2018-08-30 #}
 
 # Guia de integração da Payment Request API {: .page-title }
 
@@ -66,7 +66,7 @@ O processo começa quando o site do comerciante cria um novo `PaymentRequest` e 
 
 Em seguida, o navegador apresenta a IU de pagamentos ao usuário, que seleciona um método de pagamento e autoriza a transação. Um método de pagamento pode ser simples como um cartão de crédito já armazenado no navegador ou complexo como um aplicativo de terceiros criado especificamente para fazer os pagamentos nesse site (essa funcionalidade estará disponível em breve). Depois que o usuário autorizar a transação, todos os detalhes de pagamento necessários serão enviados diretamente ao site. Por exemplo, para um pagamento com cartão de crédito, o site receberá um número de cartão, o nome do titular, uma data de validade e um CVC.
 
-O Payment Request também pode ser estendido para retornar outras informações, como endereços, opções de envio, e-mail e telefone do pagador. Isso permite que você obtenha todas as informações necessárias para finalizar um pagamento sem mostrar um formulário de conclusão de compra ao usuário.
+O Payment Request também pode ser estendido para retornar outras informações, como endereços, opções de envio, email e telefone do pagador. Isso permite que você obtenha todas as informações necessárias para finalizar um pagamento sem mostrar um formulário de conclusão de compra ao usuário.
 
 
 O novo processo apresenta três vantagens: do ponto de vista do usuário, todas as aquelas interações tediosas &mdash; como solicitação, autorização, pagamento e resultado &mdash; passam a ocorrer em uma única etapa. Do ponto de vista do site, só é preciso fazer uma única chamada à JavaScript API. E do ponto de vista do método de pagamento, não há nenhuma mudança no processo.
@@ -234,7 +234,7 @@ Depois que o usuário aprovar uma solicitação de pagamento, a promessa do mét
 </tr>
 <tr>
   <td><code>payerEmail</code></td>
-  <td>O endereço de e-mail do pagador, se solicitado</td>
+  <td>O endereço de email do pagador, se solicitado</td>
 </tr>
 <tr>
   <td><code>payerPhone</code></td>
@@ -507,7 +507,7 @@ Após a aprovação da solicitação de pagamento pelo usuário, a promessa do m
 
 
 ## Adicionar informações de contato opcionais {: #contact-information}
-Você pode obter o endereço de e-mail, número de telefone ou nome de um usuário configurando o objeto `options`.
+Você pode obter o endereço de email, número de telefone ou nome de um usuário configurando o objeto `options`.
 
 
     var options = {

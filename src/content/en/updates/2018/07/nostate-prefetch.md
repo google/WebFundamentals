@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 63 shipped with NoState Prefetch. NoState Prefetch is a mechanism for fetching resources in advance that uses less memory than the deprecated prerendering process.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2018-11-27 #}
 {# wf_published_on: 2018-07-20 #}
 {# wf_tags: performance, chrome63 #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -59,7 +59,7 @@ The following steps explain how NoState Prefetch works.
 
  1. **NoStatePrefetch is triggered.**
 
-      A prerender resource hint (i.e. `<link rel=”prerender”>`) and some Chrome features will 
+      A prerender resource hint (i.e. `<link rel="prerender">`) and some Chrome features will 
       trigger NoState Prefetch provided that the following two conditions are met: a) the user is 
       not on a low-end device, and b) the user is not on a cellular network.
 
@@ -131,10 +131,11 @@ times depending on whether the tool collects data on the client-side or the serv
 Client-side analytics scripts register a pageview when the page is shown to the user. These 
 scripts rely on the execution of JavaScript and NoState Prefetch does not execute any JavaScript.
 
-Server-side analytics tools register metrics when a request is handled. For resources loaded via 
-NoState Prefetch, there can be a significant gap of time between when a request is handled and 
-when the response is actually used by the client (if it is used at all). Currently, there is no 
-server-side mechanism for determining whether a request was made via NoStatePrefetch.
+Server-side analytics tools register metrics when a request is handled. For resources loaded via
+NoState Prefetch, there can be a significant gap of time between when a request is handled and when
+the response is actually used by the client (if it is used at all). Since Chrome 69 NoState Prefetch
+adds the header `Purpose: Prefetch` to all requests in order to make them distinguishable from
+normal browsing.
 
 ## Check it out {: #check-it-out }
 
@@ -160,4 +161,3 @@ of NoState Prefetch:
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

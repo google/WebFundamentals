@@ -24,7 +24,7 @@ Anda bisa memengaruhi cara penampilan situs saat dibagikan lewat media sosial de
 menambahkan beberapa baris kode ke setiap laman. Ini bisa membantu meningkatkan interaksi dengan menyediakan
 pratinjau dengan informasi yang lebih lengkap daripada yang disediakan situs lain.
 Tanpa ini, situs sosial hanya akan menyediakan informasi dasar, tanpa gambar atau
-informasi berguna lainnya. 
+informasi berguna lainnya.
 
 Manakah yang menurut Anda lebih cenderung diklik? Orang-orang tertarik pada gambar
 dan merasa lebih yakin mereka akan suka apa mereka temukan bila mereka memiliki
@@ -96,18 +96,10 @@ di [laman ini](https://schema.org/docs/full.html).
 metadata ke situs sosial, nilai-nilai `itemprop` yang umum adalah `name`, `description`,
 dan `image`.
 
-### Ketahui selengkapnya
-Mikrodata ini menyediakan informasi semantik kepada perayap, biasanya untuk
-[Google+](https://plus.google.com/){: .external } dan Google Penelusuran. Untuk mengetahui selengkapnya tentang
-cuplikan kode dan rendering di Google+, bacalah dokumen berikut:
-
-* [Rendering Artikel - Platform Google+](/+/web/snippet/article-rendering)
-* [Cuplikan - Platform Google+](/+/web/snippet/)
-
 ### Validasikan cuplikan yang lengkap
 Untuk memvalidasi cuplikan yang lengkap di Google+, Anda bisa menggunakan alat seperti:
 
-* [Alat (Bantu) Pengujian Data Terstruktur](https://www.google.com/webmasters/tools/richsnippets) - Alat Webmaster  
+* [Alat (Bantu) Pengujian Data Terstruktur](https://www.google.com/webmasters/tools/richsnippets) - Alat Webmaster
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -160,8 +152,7 @@ Properti dan materi dapat mengambil nilai-nilai berikut:
 </table>
 
 Tag meta ini menyediakan informasi semantik kepada perayap dari situs sosial,
-biasanya dari [Google+](https://plus.google.com/){: .external } dan
-[Facebook](https://www.facebook.com/){: .external }.
+biasanya dari [Facebook](https://www.facebook.com/){: .external }.
 
 ### Ketahui selengkapnya
 Untuk mengetahui selengkapnya tentang apa saja yang bisa Anda lampirkan ke entri blog di Facebook, kunjungi
@@ -186,7 +177,7 @@ Agar Twitter Card bisa berfungsi, [domain Anda harus
 telah disetujui](https://cards-dev.twitter.com/validator) dan harus
 berisi tag meta yang memiliki `twitter:card` sebagai atribut `name`, sebagai ganti atribut
 `property`.
-  
+
 Inilah contoh ringkasnya:
 
 <pre class="prettyprint">
@@ -223,7 +214,7 @@ Perhatikan, mikrodata dan OGP berbagi beberapa markup:
 * `title` dan `description` digunakan bersama mikrodata dan OGP
 * `itemprop="image"` menggunakan tag `link` dengan atribut `href` sebagai ganti
 menggunakan ulang tag `meta` dengan `property="og:image"`
-  
+
 Terakhir, pastikan memvalidasi bahwa laman web Anda tampil sesuai harapan pada setiap
 situs sosial sebelum mempublikasikannya.
 

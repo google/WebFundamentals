@@ -2,13 +2,16 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution.
 
-{# wf_updated_on: 2018-03-02 #}
+{# wf_updated_on: 2018-12-17 #}
 {# wf_published_on: 2014-09-19 #}
 {# wf_blink_components: Blink>CSS #}
 
 # Web Font Optimization {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
+
+*This article contains contributions from [Monica Dinculescu](https://meowni.ca/posts/web-fonts/),
+[Rob Dodson](/web/updates/2016/02/font-display), and Jeff Posnick.*
 
 Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable
 all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly,
@@ -753,5 +756,23 @@ infrequently updated. Make sure that your servers provide a long-lived max-age t
 revalidation token to allow for efficient font reuse between different pages. If using a service
 worker, a cache-first strategy is appropriate.
 
-*This article contains contributions from [Monica Dinculescu](https://meowni.ca/posts/web-fonts/),
-[Rob Dodson](/web/updates/2016/02/font-display), and Jeff Posnick.*
+## Automated testing for web font optimization with Lighthouse {: #lighthouse }
+
+[Lighthouse](/web/tools/lighthouse) can help automate the process of making sure that you're
+following web font optimization best practices. Lighthouse is an auditing tool built by
+the Chrome DevTools team. You can run it as a Node module, from the command line, or from the
+Audits panel of Chrome DevTools. You tell Lighthouse what URL to audit, and then it runs
+a bunch of tests on the page, and gives you a report of what the page is doing well, and how
+it can improve.
+
+The following audits can help you make sure that your pages are continuing to follow web
+font optimization best practices over time:
+
+* [Enable text compression](/web/tools/lighthouse/audits/text-compression)
+* [Preload key requests](/web/tools/lighthouse/audits/preload)
+* [Uses inefficient cache policy on static assets](/web/tools/lighthouse/audits/cache-policy)
+* [All text remains visible during webfont loads](/web/updates/2016/02/font-display)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

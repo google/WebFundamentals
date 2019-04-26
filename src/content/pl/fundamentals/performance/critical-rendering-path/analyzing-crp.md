@@ -32,7 +32,7 @@ Jeszcze jedna rzecz, zanim rozpoczniemy. Dotychczas koncentrowaliśmy się tylko
 
 Zaczynamy od podstawowych znaczników HTML i jednego obrazu, bez CSS czy JavaScriptu. To najprostsza wersja. Otwieramy oś czasu sieci w Narzędziach Chrome dla programistów i sprawdzamy uzyskany wykres zasobów:
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="Krytyczna ścieżka renderowania">
+<img src="images/waterfall-dom.png" class="center" alt="Krytyczna ścieżka renderowania">
 
 Zgodnie z oczekiwaniami pobieranie pliku HTML zajęło ok. 200&nbsp;ms. Pamiętaj, że przezroczysta część niebieskiego paska oznacza czas oczekiwania przeglądarki na sieć (przed odebraniem bajtów odpowiedzi), a wypełniona &ndash; czas potrzebny na zakończenie pobierania po otrzymaniu pierwszych bajtów odpowiedzi. W naszym przykładzie plik HTML jest mały (poniżej 4&nbsp;KB), więc wystarczy jeden cykl wymiany danych, by pobrać go w całości. W efekcie pobieranie dokumentu HTML trwa około 200&nbsp;ms, z czego jedna połowa to oczekiwanie na sieć, a druga &ndash; na odpowiedź serwera.
 
@@ -191,6 +191,3 @@ Na koniec przypuśćmy, że arkusz stylów CSS jest potrzebny tylko do drukowani
 <img src="images/analysis-dom-css-nb-js-async.png" alt="Krytyczna ścieżka renderowania: DOM, nieblokujący CSS i asynchroniczny JavaScript" class="center">
 
 Zasób style.css jest używany tylko do drukowania, więc przeglądarka nie musi z jego powodu blokować renderowania strony. Dzięki temu od razu po utworzeniu modelu DOM ma dość informacji, by wyświetlić stronę. W efekcie strona zawiera tylko jeden zasób krytyczny (dokument HTML), a minimalna długość krytycznej ścieżki renderowania to jeden cykl wymiany danych.
-
-
-

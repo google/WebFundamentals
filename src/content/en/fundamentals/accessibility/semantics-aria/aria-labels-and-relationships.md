@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Using ARIA labels to create accessible element descriptions
 
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # ARIA Labels and Relationships {: .page-title }
@@ -140,3 +141,7 @@ use dynamic HTML techniques to ensure that the user can explore the full list on
 demand.
 
 ![using aria-posinset and aria-setsize to establish a relationship in a list](imgs/aria-posinset.jpg)
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

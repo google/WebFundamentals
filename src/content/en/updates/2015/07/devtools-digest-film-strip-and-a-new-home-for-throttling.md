@@ -136,4 +136,3 @@ See you soon!
 Paul Bakaus & the DevTools team
 
 
-{% include "comment-widget.html" %}

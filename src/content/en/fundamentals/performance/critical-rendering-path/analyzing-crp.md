@@ -2,17 +2,15 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn to identify and resolve critical rendering path performance bottlenecks.
 
-{# wf_updated_on: 2017-07-24 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2014-03-31 #}
+{# wf_blink_components: N/A #}
 
 # Analyzing Critical Rendering Path Performance {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Identifying and resolving critical rendering path performance bottlenecks 
-requires good knowledge of the common pitfalls. Let's take a hands-on tour 
-and extract common performance patterns that will help you optimize your 
-pages.
+Identifying and resolving critical rendering path performance bottlenecks requires good knowledge of the common pitfalls. Let's take a hands-on tour and extract common performance patterns that will help you optimize your pages.
 
 
 Optimizing the critical rendering path allows the browser to paint the page as quickly as possible: faster pages translate into higher engagement, more pages viewed, and [improved conversion](https://www.google.com/think/multiscreen/success.html). To minimize the amount of time a visitor spends viewing a blank screen, we need to optimize which resources are loaded and in which order.
@@ -34,7 +32,7 @@ So far we've focused exclusively on what happens in the browser after the resour
 
 We'll start with basic HTML markup and a single image; no CSS or JavaScript. Let's open up our Network timeline in Chrome DevTools and inspect the resulting resource waterfall:
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 Note: Although this doc uses DevTools to illustrate CRP concepts, DevTools is
 currently not well-suited for CRP analysis. See [What about
@@ -214,3 +212,8 @@ Finally, if the CSS stylesheet were only needed for print, how would that look?
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 
 Because the style.css resource is only used for print, the browser doesn't need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page. As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.
+
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

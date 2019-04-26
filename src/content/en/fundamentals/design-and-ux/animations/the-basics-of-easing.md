@@ -2,7 +2,8 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to soften and give weighting to your animations.
 
-{# wf_updated_on: 2016-08-23 #}
+{# wf_blink_components: Blink>Animation #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-08-08 #}
 
 # The Basics of Easing {: .page-title }
@@ -129,4 +130,6 @@ To get an ease-in-out animation, you can use the `ease-in-out` CSS keyword:
     transition: transform 500ms ease-in-out;
     
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

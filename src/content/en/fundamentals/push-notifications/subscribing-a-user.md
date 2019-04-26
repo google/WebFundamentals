@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-07-02 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -394,3 +394,7 @@ as well?
 Unfortunately not. A user must register for push on each browser they wish to
 receive messages on. It's also worth noting that this will require
 the user granting permission on each device.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

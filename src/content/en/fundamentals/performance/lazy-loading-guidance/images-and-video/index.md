@@ -573,7 +573,7 @@ These changes can be disorienting for users and trigger expensive DOM layout
 operations that consume system resources and contribute to jank. At a minimum,
 consider using a solid color placeholder occupying the same dimensions as the
 target image, or techniques such as
-[LQIP](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/) or
+[LQIP](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders) or
 [SQIP](https://github.com/technopagan/sqip) that hint at the content of a media
 item before it loads.
 

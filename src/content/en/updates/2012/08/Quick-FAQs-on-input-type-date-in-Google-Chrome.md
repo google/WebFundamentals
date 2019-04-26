@@ -1,18 +1,19 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-08-05 #}
+{# wf_updated_on: 2019-02-21 #}
 {# wf_published_on: 2012-08-05 #}
 {# wf_tags: news,forms #}
+{# wf_blink_components: N/A #}
 
 # Quick FAQs on input[type=date] in Google Chrome {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
 
-* This article is written by a Chrome software engineer [Kent Tamura](https://plus.google.com/104770450049736549185/about).
+* This article is written by a Chrome software engineer Kent Tamura.
 
-As you might have already noticed, [Google Chrome supports a datepicker since Chrome 20](https://plus.google.com/107085977904914121234/posts/R5LyvTSa21k). Just by setting the `type` attribute of the `input` element to `date`, the user can click the arrow button and Chrome will pop up a nice calendar widget.
+As you might have already noticed, Google Chrome supports a datepicker since Chrome 20. Just by setting the `type` attribute of the `input` element to `date`, the user can click the arrow button and Chrome will pop up a nice calendar widget.
 
 As we have received a lot of feedback from developers, we'd like to clarify a few things about how to get the best out of using the date picker in this article.
 
@@ -44,7 +45,7 @@ You cannot currently style the appearance of the date picker.  In WebKit, we hav
 
 If you have tried jQuery Datepicker on `input[type=date]` in Google Chrome, you might have noticed overlapping calendars of both the jQuery UI and the native calendar popup.
 If you'd like to apply jQuery Datepicker on all platforms, use `input[type=text]` instead of `input[type=date]`. Not only Google Chrome but also iOS Safari, the BlackBerry browser, and Opera have their own UI for `input[type=date]`, and there is currently no way to achieve a unified UI on all platforms using `input[type=date]`.
-If you'd like to apply jQuery Datepicker only on platforms without `input[type=date]` support, you may use [Modernizr](http://modernizr.com/){: .external }, or the following code:
+If you'd like to apply jQuery Datepicker only on platforms without `input[type=date]` support, you may use [Modernizr](https://modernizr.com/){: .external }, or the following code:
 
 
     var isDateInputSupported = function(){
@@ -53,10 +54,6 @@ If you'd like to apply jQuery Datepicker only on platforms without `input[type=d
     elem.value = 'foo';
     return (elem.type == 'date' && elem.value != 'foo');
     }
-    
+
     if (!isDateInputSupported())  // or.. !Modernizr.inputtypes.date
       $('input[type="date"]').datepicker();
-    
-
-
-{% include "comment-widget.html" %}

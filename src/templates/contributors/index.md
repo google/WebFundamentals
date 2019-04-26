@@ -73,11 +73,6 @@ book_path: /web/resources/_book.yaml
           <img src="/site-assets/logo-twitter.svg">
         </a>
         {{/if}}
-        {{#if google}}
-        <a itemprop="sameAs" href="https://plus.google.com/{{google}}">
-          <img src="/site-assets/logo-google-plus.svg">
-        </a>
-        {{/if}}
       </div>
     </section>
   </div>

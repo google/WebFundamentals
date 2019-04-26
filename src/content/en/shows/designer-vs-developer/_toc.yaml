@@ -3,6 +3,18 @@ toc:
     section:
     - title: 'Podcast'
       section:
+      - title: 'Progressive Web Apps and Firebase'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E06-pwas-firebase
+      - title: 'Using autocomplete to improve user experience'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E05-using-autocomplete
+      - title: 'Prototyping motion and material design'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E04-prototyping-motion
+      - title: 'Material Design Components'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E03-material-design-components
+      - title: 'UX research and usability testing'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E02-ux-research-usability-testingy
+      - title: 'How we designed Chrome'
+        path: /web/shows/designer-vs-developer/podcast/DVDS4E01-how-we-designed-chrome
       - title: 'Designing for offline'
         path: /web/shows/designer-vs-developer/podcast/DVDS3E07-Designing-for-offline
       - title: 'Designing a VR game in a week'

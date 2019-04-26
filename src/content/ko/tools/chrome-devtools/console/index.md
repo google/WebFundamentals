@@ -1,9 +1,10 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Chrome DevTools JavaScript 콘솔을 탐색하는 방법에 대해 자세히 알아봅니다.
+description: Chrome DevTools 자바스크립트 콘솔을 탐색하는 방법에 대해 자세히 알아봅니다.
 
-{# wf_updated_on: 2016-02-01 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2015-05-10 #}
+{# wf_blink_components: Platform>DevTools #}
 
 # 콘솔 사용 {: .page-title }
 
@@ -13,12 +14,12 @@ description: Chrome DevTools JavaScript 콘솔을 탐색하는 방법에 대해 
 {% include "web/_shared/contributors/pbakaus.html" %}
 
 방법: DevTools Console을 열고 중복 
-메시지를 스택하거나 자체 줄에 표시하고, 출력을 지우거나 유지하거나
+메시지를 스택하거나 자체 줄에 표시하고, 출력을 지우거나 유지하거나 
 파일에 저장하고, 출력을 필터링하고 추가
 Console 설정에 액세스합니다.
 
-### TL;DR {: .hide-from-toc }
-- Console을 전용 패널로 열거나 다른 패널 옆에 창으로 엽니다.
+### 짧은 요약 {: .hide-from-toc }
+- Console을 전용 패널로 열거나 다른 패널 옆에 서랍으로 엽니다.
 - 중복 메시지를 스택하거나 자체 줄에 표시합니다.
 - 페이지 사이의 출력을 지우거나 유지하거나 파일에 저장합니다.
 - 출력을 심각도 레벨, 네트워크 메시지 숨기기 또는 정규 표현식 패턴으로 필터링합니다.
@@ -38,14 +39,13 @@ Console을 전체 화면에 표시되는 전용 패널로 액세스합니다.
 전용 **Console** 패널로 열려면 다음 두 방법 중 하나를 사용합니다.
 
 * <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows / Linux) 또는
-  <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac)를 누릅니다.
-* DevTools가 이미 열린 경우 **Console**  버튼을 누릅니다.
+ <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac)를 누릅니다.
+DevTools가 이미 열린 경우 **Console** 버튼을 누릅니다.
+* Console 패널을 열면 Console 서랍이 자동으로 접힙니다.
 
-Console 패널을 열면  Console 창이 자동으로 접힙니다.
+### 서랍으로 열기
 
-### 창으로 열기
-
-Console을 다른 패널 옆의 창으로 열려면 다음 두 방법 중 하나를 사용합니다.
+Console을 다른 패널 옆의 서랍으로 열려면 다음 두 방법 중 하나를 사용합니다.
 
 * DevTools에 포커스를 맞춘 상태에서 <kbd>Esc</kbd> 키를 누릅니다.
 * **Customize and control DevTools** 버튼을 누른 다음 
@@ -86,7 +86,7 @@ Console을 다른 패널 옆의 창으로 열려면 다음 두 방법 중 하나
 
 ### 기록 유지 {: #preserve-log}
 
- 콘솔 맨 위에 있는 **Preserve log** 확인란을 활성화하여 페이지 새로고침 또는 변경 사이에
+콘솔 맨 위에 있는 **Preserve log** 확인란을 활성화하여 페이지 새로고침 또는 변경 사이에
 콘솔 기록을 유지합니다. Console을 지우거나
 해당 탭을 닫을 때까지 메시지가 저장됩니다.
 
@@ -108,7 +108,7 @@ Console을 마우스 오른쪽 버튼으로 클릭하고 **Save as** 선택하�
 
 다른 프레임과 확장 프로그램은 자체 컨텍스트로 작동합니다. 이런 다른
 컨텍스트와 함께 작동하려면 드롭다운 메뉴에서 선택해야 합니다. 예를 들어
-`<iframe>` 요소의 로깅 출력을 확인하고
+`<iframe>` 요소의 로그 기록 출력을 확인하고
 컨텍스트 안에 있는 변수를 수정하고 싶다면
 Execution Context Selector 드롭다운 메뉴에서 선택해야 합니다.
 
@@ -127,10 +127,10 @@ Execution Context Selector를 빨간색으로 강조표시합니다. 개발자�
 
 ## Console 출력 필터링
 
-**Filter** 버튼
-(![필터 버튼](images/filter-button.png){:.inline})
-을 클릭하여 콘솔 출력을 필터링합니다. 심각도 레벨, 정규 표현식,
-또는 네트워크 메시지 숨기기로 필터링할 수 있습니다.
+**Filters** 
+버튼(![필터 버튼](images/filter-button.png){:.inline})을
+클릭하여 콘솔 출력을 필터링합니다. 심각도 레벨, 정규 
+표현식 또는 네트워크 메시지 숨기기로 필터링할 수 있습니다.
 
 ![필터링된 콘솔 출력](images/filtered-console.png)
 
@@ -139,33 +139,33 @@ Execution Context Selector를 빨간색으로 강조표시합니다. 개발자�
 <table class="responsive">
   <thead>
      <tr>
-      <th colspan="2">옵션 및 표시</th>
+      <th colspan="2">옵션 &amp; 표시</th>
     </tr>   
   </thead>
   <tbody>
   <tr>
-    <td>All</td>
-    <td>모든 콘솔 출력을 표시합니다.</td>
+    <td>전체</td>
+    <td>모든 콘솔 출력 표시</td>
   </tr>
   <tr>
-    <td>Errors</td>
-    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-">console.error()</a>의 출력만 표시합니다.</td>
+    <td>오류</td>
+    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-">console.error()</a>의 출력만 표시</td>
   </tr>
   <tr>
-    <td>Warnings</td>
-    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-">console.warn()</a>의 출력만 표시합니다.</td>
+    <td>경고</td>
+    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-">console.warn()</a>의 출력만 표시</td>
   </tr>
   <tr>
-    <td>Info</td>
-    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleinfoobject--object-">console.info()</a>의 출력만 표시합니다.</td>
+    <td>정보</td>
+    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleinfoobject--object-">console.info()</a>의 출력만 표시</td>
   </tr>
   <tr>
-    <td>Logs</td>
-    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a>의 출력만 표시합니다.</td>
+    <td>로그</td>
+    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a>의 출력만 표시</td>
   </tr>
   <tr>
-    <td>Debug</td>
-    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoletimeendlabel">console.timeEnd()</a>와 <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoledebugobject--object-">console.debug()</a>의 출력만 표시합니다.</td>
+    <td>디버그</td>
+    <td><a href="/web/tools/chrome-devtools/debug/console/console-reference#consoletimeendlabel">console.timeEnd()</a>와 <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoledebugobject--object-">console.debug()</a>의 출력만 표시</td>
   </tr>
   </tbody>
 </table>
@@ -180,7 +180,7 @@ Execution Context Selector를 빨간색으로 강조표시합니다. 개발자�
 <table class="responsive">
   <thead>
      <tr>
-      <th colspan="2">설정 및 설명</th>
+      <th colspan="2">설정 &amp; 설명</th>
     </tr>   
   </thead>
   <tbody>
@@ -207,5 +207,6 @@ Execution Context Selector를 빨간색으로 강조표시합니다. 개발자�
   </tbody>
 </table>
 
+## 의견 {: #feedback }
 
-{# wf_devsite_translation #}
+{% include "web/_shared/helpful.html" %}

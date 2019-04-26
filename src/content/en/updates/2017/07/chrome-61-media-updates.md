@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the audio/video updates in Chrome 61.
 
-{# wf_updated_on: 2017-12-20 #}
+{# wf_updated_on: 2018-07-31 #}
 {# wf_published_on: 2017-07-28 #}
 {# wf_tags: news,chrome61,media #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
@@ -77,7 +77,7 @@ If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
 portrait puts the video back to windowed mode.
 
-Note that you can implement manually this behaviour yourself. (See the [Mobile Web Video
+Note that you can implement manually this behavior yourself. (See the [Mobile Web Video
 Playback] article).
 
 <figure>
@@ -85,7 +85,7 @@ Playback] article).
        alt="Automatic video fullscreen when device is rotated">
 </figure>
 
-This magic behaviour only happens when:
+This magic behavior only happens when:
 
 - device is an Android phone (not a tablet)
 - user's screen orientation is set to "Auto-rotate"
@@ -98,8 +98,6 @@ This magic behaviour only happens when:
 - screen is not locked using the [Screen Orientation API]
 
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=713233)
-
-{% include "comment-widget.html" %}
 
 [Media Source Extensions (MSE)]: /web/fundamentals/media/mse/basics
 [Page Visibility API]: https://www.w3.org/TR/page-visibility/

@@ -215,7 +215,7 @@ function parseJSON(filename, contents) {
   try {
     return JSON.parse(contents);
   } catch (ex) {
-    let msg = `Unable to parse JSON: ${ex.message}`;
+    const msg = `Unable to parse JSON: ${ex.message}`;
     logError(filename, null, msg, ex);
   }
   return null;
@@ -546,11 +546,14 @@ gulp.task('test:travis-init', function() {
     if (ciFlags.indexOf('FEED_WIDGET') >= 0) {
       global.WF.options.ignoreMissingFeedWidget = true;
     }
-    if (ciFlags.indexOf('SKIP_TYPOS') >= 0) {
-      global.WF.options.skipTypos = true;
+    if (ciFlags.indexOf('TYPOS') >= 0) {
+      global.WF.options.ignoreTypos = true;
     }
     if (ciFlags.indexOf('TEMPLATE_TAGS') >= 0) {
       global.WF.options.ignoreTemplateTags = true;
+    }
+    if (ciFlags.indexOf('HELPFUL_WIDGET') >= 0) {
+      global.WF.options.ignoreHelpfulWidget = true;
     }
   });
 });
@@ -572,12 +575,13 @@ gulp.task('test', ['test:travis-init'], function() {
     gutil.log(' ', chalk.cyan('--ignoreFileSize'), 'Skips file size checks');
     gutil.log(' ', chalk.cyan('--ignorePermissions'), 'Skips permission check');
     gutil.log(' ', chalk.cyan('--ignoreLastUpdated'), 'Skips wf_updated_on');
-    gutil.log(' ', chalk.cyan('--ignoreCommentWidget'), 'Skips comment widget');
+    gutil.log(' ', chalk.cyan('--ignoreHelpfulWidget'), 'Skips helpful widget');
     gutil.log(' ', chalk.cyan('--ignoreTemplateTags'),
       'Skips template tag check ({{)');
     gutil.log(' ', chalk.cyan('--ignoreMissingFeedWidget'),
       'Skips feed widget check on updates');
-    gutil.log(' ', chalk.cyan('--skipTypos'), 'Skips common typo checks');
+    gutil.log(' ', chalk.cyan('--ignoreTypos'), 'Ignores common typos');
+    return true;
   }
 
   if ((global.WF.options.testMaster) ||
@@ -591,9 +595,10 @@ gulp.task('test', ['test:travis-init'], function() {
     global.WF.options.ignoreLastUpdated = true;
     global.WF.options.ignoreTemplateTags = true;
     global.WF.options.ignoreCommentWidget = true;
+    global.WF.options.ignoreHelpfulWidget = true;
     global.WF.options.ignoreMissingFeedWidget = true;
+    global.WF.options.ignoreTypos = true;
     global.WF.options.hideIgnored = true;
-    global.WF.options.skipTypos = true;
   }
 
   let opts = {
@@ -605,15 +610,18 @@ gulp.task('test', ['test:travis-init'], function() {
     contributors: parseYAML(CONTRIBUTORS_FILE, readFile(CONTRIBUTORS_FILE)),
   };
 
+  // Comment widget will be deprecated in 2019Q2-3, disabling the warning
+  global.WF.options.ignoreCommentWidget = true;
+
   // Test master
   if (global.WF.options.testMaster) {
-    let msg = `${chalk.cyan('--testMaster')} was used.`;
+    const msg = `${chalk.cyan('--testMaster')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
   }
 
   // Test all files
   if (global.WF.options.testAll) {
-    let msg = `${chalk.cyan('--testAll')} was used.`;
+    const msg = `${chalk.cyan('--testAll')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
   }
 
@@ -625,7 +633,7 @@ gulp.task('test', ['test:travis-init'], function() {
 
   // Supress ESLinter
   if (global.WF.options.ignoreESLint) {
-    let msg = `${chalk.cyan('--ignoreESLint')} was used.`;
+    const msg = `${chalk.cyan('--ignoreESLint')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
   } else {
     esLintConfig = parseJSON(ESLINT_RC_FILE, readFile(ESLINT_RC_FILE));
@@ -633,7 +641,7 @@ gulp.task('test', ['test:travis-init'], function() {
 
   // Supress wf_blink_components warnings
   if (global.WF.options.ignoreBlink) {
-    let msg = `${chalk.cyan('--ignoreBlink')} was used.`;
+    const msg = `${chalk.cyan('--ignoreBlink')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
   } else {
     opts.blinkComponents = parseJSON(BLINK_COMPONENTS_FILE,
@@ -642,21 +650,21 @@ gulp.task('test', ['test:travis-init'], function() {
 
   // Supress max line length warnings
   if (global.WF.options.ignoreMaxLen) {
-    let msg = `${chalk.cyan('--ignoreMaxLen')} was used.`;
+    const msg = `${chalk.cyan('--ignoreMaxLen')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.enforceLineLengths = false;
   }
 
   // Supress markdown script warnings
   if (global.WF.options.ignoreScript) {
-    let msg = `${chalk.cyan('--ignoreScript')} was used.`;
+    const msg = `${chalk.cyan('--ignoreScript')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.ignoreScriptTags = true;
   }
 
   // Supress file size warnings
   if (global.WF.options.ignoreFileSize) {
-    let msg = `${chalk.cyan('--ignoreFileSize')} was used.`;
+    const msg = `${chalk.cyan('--ignoreFileSize')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.ignoreFileSize = true;
   }
@@ -669,11 +677,11 @@ gulp.task('test', ['test:travis-init'], function() {
     opts.checkPermissions = false;
   }
 
-  // Supress missing comment widget warnings
-  if (global.WF.options.ignoreCommentWidget) {
-    let msg = `${chalk.cyan('--ignoreCommentWidget')} was used.`;
+  // Supress missing helpful widget warnings
+  if (global.WF.options.ignoreHelpfulWidget) {
+    const msg = `${chalk.cyan('--ignoreHelpfulWidget')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
-    opts.ignoreMissingCommentWidget = true;
+    opts.ignoreMissingHelpfulWidget = true;
   }
 
   // Supress missing feed widget checks
@@ -685,30 +693,30 @@ gulp.task('test', ['test:travis-init'], function() {
 
   // Supress last updated warnings
   if (global.WF.options.ignoreLastUpdated) {
-    let msg = `${chalk.cyan('--ignoreLastUpdated')} was used.`;
+    const msg = `${chalk.cyan('--ignoreLastUpdated')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.lastUpdateMaxDays = false;
   }
 
   // Supress template tag ({{}}) checks
   if (global.WF.options.ignoreTemplateTags) {
-    let msg = `${chalk.cyan('--ignoreTemplateTags')} was used.`;
+    const msg = `${chalk.cyan('--ignoreTemplateTags')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
     opts.ignoreTemplateTags = true;
   }
 
-  // Hide ignored file warning
-  if (global.WF.options.hideIgnored) {
-    let msg = `${chalk.cyan('--hideIgnored')} was used.`;
+  // Skips the common typos checks
+  if (global.WF.options.ignoreTypos) {
+    const msg = `${chalk.cyan('--ignoreTypos')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
-    opts.hideIgnored = true;
+    opts.ignoreTypos = true;
   }
 
-  // Skips the common typos checks
-  if (global.WF.options.skipTypos) {
-    const msg = `${chalk.cyan('--skipTypos')} was used.`;
+  // Hide ignored file warning
+  if (global.WF.options.hideIgnored) {
+    const msg = `${chalk.cyan('--hideIgnored')} was used.`;
     gutil.log(chalk.bold.blue(' Option:'), msg);
-    opts.skipTypos = true;
+    opts.hideIgnored = true;
   }
 
   return getFiles()
@@ -735,7 +743,7 @@ gulp.task('test', ['test:travis-init'], function() {
       }));
     })
     .catch(function(ex) {
-      let msg = `A critical gulp task exception occurred: ${ex.message}`;
+      const msg = `A critical gulp task exception occurred: ${ex.message}`;
       logError('gulp-tasks/test.js', null, msg, ex);
     })
     .then(printSummary)

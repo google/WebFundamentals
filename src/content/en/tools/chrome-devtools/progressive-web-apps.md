@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Use the Application panel to inspect, modify, and debug web app manifests, service workers, and service worker caches.
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-11-20 #}
 {# wf_published_on: 2016-07-25 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -177,6 +177,32 @@ If you've got two or more caches open, you'll see them listed below the
 [sw-cache]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [sw-cache-pane]: images/sw-cache.png
 [multiple-caches]: images/multiple-caches.png
+
+## Quota usage {:#opaque-responses}
+
+Some responses within the Cache Storage pane may be flagged as being
+"[opaque](/web/fundamentals/glossary#opaque-response)". This refers to a response retrieved from a
+different origin, like from a [CDN](/web/fundamentals/glossary#CDN) or remote API, when
+[CORS](https://fetch.spec.whatwg.org/#http-cors-protocol) is not enabled.
+
+In order to avoid leakage of cross-domain information, there's significant padding added to the size
+of an opaque response used for calculating storage quota limits (i.e. whether a `QuotaExceeded`
+exception is thrown) and reported by the [`navigator.storage`
+API](/web/updates/2017/08/estimating-available-storage-space).
+
+The details of this padding vary from browser to browser, but for Google Chrome, this means that the
+*minimum* size that any single cached opaque response contributes to the overall storage usage is
+[approximately 7 megabytes](https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17). You
+should keep this in mind when determining how many opaque responses you want to cache, since you
+could easily exceeded storage quota limitations much sooner than you'd otherwise expect based on the
+actual size of the opaque resources.
+
+Related Guides:
+
+* [Stack Overflow: What limitations apply to opaque
+  responses?](https://stackoverflow.com/q/39109789/385997)
+* [Workbox: Understanding Storage
+  Quota](/web/tools/workbox/guides/storage-quota#beware_of_opaque_responses)
 
 ## Clear storage {:#clear-storage}
 

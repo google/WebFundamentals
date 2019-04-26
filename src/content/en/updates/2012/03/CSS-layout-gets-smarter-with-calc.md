@@ -1,16 +1,17 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2012-03-28 #}
+{# wf_updated_on: 2019-02-02 #}
 {# wf_published_on: 2012-03-28 #}
 {# wf_tags: news,presentation,css #}
+{# wf_blink_components: N/A #}
 
 # CSS layout gets smarter with calc() {: .page-title }
 
 {% include "web/_shared/contributors/alexdanilo.html" %}
 
 
-Creating a nice CSS layout starts with assigning sizes for all the things being placed in a web application. One highly requested feature has always been the ability to specify sizes using a mixture of sizing units. For example, it’d be nice to be able to reserve 50% of an area plus a fixed amount of space, say 10px. Well you can do that right now using the [`calc()`](http://www.w3.org/TR/css3-values/#calc) property. You can use this feature anywhere a length or number is used, so you can use it for positioning things, or in `rgb()` color values as well, so it has lots of great uses in a style sheet.
+Creating a nice CSS layout starts with assigning sizes for all the things being placed in a web application. One highly requested feature has always been the ability to specify sizes using a mixture of sizing units. For example, it’d be nice to be able to reserve 50% of an area plus a fixed amount of space, say 10px. Well you can do that right now using the [`calc()`](https://www.w3.org/TR/css3-values/#calc) property. You can use this feature anywhere a length or number is used, so you can use it for positioning things, or in `rgb()` color values as well, so it has lots of great uses in a style sheet.
 
 ## What you can do with calc()?
 
@@ -28,9 +29,9 @@ Let’s take a look at an example of mixing percentages with absolute units. Say
     #foo {
       width: calc(50% - 100px);
     }
-    
+
     <div id="foo">Always 100 pixels less than half the available area</div>
-    
+
 
 If it had a background color of green it’d look like:
 
@@ -50,13 +51,12 @@ Another great thing is the ability to combine units with different measurements 
     #bar {
       height: calc(10em + 3px);
     }
-    
 
-You can find some great examples of combining values [here](http://thecssninja.com/demo/css_calc/){: .external } and [here](http://peter.sh/files/calc.html).
+
+You can find some great examples of combining values [here](https://thecssninja.com/demo/css_calc/){: .external } and [here](https://peter.sh/2012/03/improved-calc-support-managed-mode-and-flexible-box-wrapping/){: .external }.
 
 ## Try it out
 
 With `calc()` you can use +, -, *  and / to add, subtract, multiply and divide values, allowing all sorts of possibilities. You can use `calc()` anywhere a CSS length or number can be used. We’re also working on adding `calc()` for angle and frequency properties soon. The `calc()` property for lengths is available now in Chrome 19 (Dev channel build) by use of the `-webkit-calc` property, in Firefox since version 8 using the `-moz-calc` property and in Internet Explorer since version 9 unprefixed. Let us know what you think by leaving a comment below.
 
-
-{% include "comment-widget.html" %}
+{% include "web/_shared/helpful.html" %}

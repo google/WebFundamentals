@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Explore the state of any item on your page from the DevTools console.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2019-03-28 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -10,6 +11,13 @@ description: Explore the state of any item on your page from the DevTools consol
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/josephmedley.html" %}
+
+
+<aside class="warning">
+  This page is deprecated.
+</aside>
+
+
 Explore the state of any item on your page from the DevTools console using one of its evaluation capabilities.
 
 The DevTools console allows you to learn the state of items

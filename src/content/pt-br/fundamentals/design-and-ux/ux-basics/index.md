@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Um guia passo a passo sobre os conceitos básicos do design de UX.
 
-{# wf_updated_on: 2016-10-01 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2016-10-01 #}
 
 # Conceitos básicos da UX {: .page-title }
@@ -231,7 +231,7 @@ Para isso, recomendo um método chamado oito maluco, que envolve dobrar um peda�
 duas vezes para que ele oito painéis. Em seguida, você desenha em cada painel uma ideia
 baseada no que você aprendeu até o momento. Reserve dez minutos para
 pensar em ideias para preencher todos os painéis. Se tiver mais de 20
-minutos, você poderá começar a procrastinar, ir fazer um café, conferir seu e-mail,
+minutos, você poderá começar a procrastinar, ir fazer um café, conferir seu email,
 conversar com a equipe sobre outros assuntos e evitar a tarefa a ser feita. É
 preciso criar uma sensação de urgência nessa etapa, pois isso força você a trabalhar com mais rapidez
 e eficácia.

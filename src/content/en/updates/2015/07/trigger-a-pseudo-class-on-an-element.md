@@ -30,4 +30,3 @@ Also note, when you do this, a small orange indicator appears to the left of the
 		
 
 
-{% include "comment-widget.html" %}

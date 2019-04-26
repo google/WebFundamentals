@@ -19,4 +19,3 @@ Local modifications lets you see what changes have been made (via DevTools) to c
 Once you've made your change and saved it, right click on the file within Sources Panel and select Local modifications. Each modification will be listed as a new change and each can be reverted.
 
 
-{% include "comment-widget.html" %}

@@ -9,10 +9,7 @@ description: Saiba como identificar e resolver gargalos de desempenho do caminho
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-Para identificar e resolver gargalos de desempenho no caminho crítico da renderização, 
-é preciso ter bom nível de conhecimento sobre os obstáculos mais comuns. Vamos dar uma pincelada sobre o assunto 
-e extrair padrões de desempenho comuns que ajudarão a otimizar suas 
-páginas.
+Para identificar e resolver gargalos de desempenho no caminho crítico da renderização, é preciso ter bom nível de conhecimento sobre os obstáculos mais comuns. Vamos dar uma pincelada sobre o assunto e extrair padrões de desempenho comuns que ajudarão a otimizar suas páginas.
 
 
 Ao otimizar o caminho crítico de renderização, o navegador pode colorir a página com a maior velocidade possível: páginas mais rápidas geram maior envolvimento, mais visualizações de páginas e [maior taxa de conversão](https://www.google.com/think/multiscreen/success.html). Para minimizar o tempo que um visitante perde olhando para uma tela em branco, precisamos definir os recursos a serem carregados e a ordem deles da maneira mais eficaz possível.
@@ -34,7 +31,7 @@ Até aqui, trabalhamos exclusivamente com o que acontece no navegador depois que
 
 Vamos começar com uma marcação HTML básica e uma única imagem, sem CSS e JavaScript. Vamos abrir a linha do tempo de "Network" no Chrome DevTools e dar uma olhada na cascata de recursos gerada:
 
-<img src="images/waterfall-dom.png" alt=""  alt="CRP">
+<img src="images/waterfall-dom.png" alt="CRP">
 
 Observação: Embora esse documento use o DevTools para ilustrar conceitos do caminho crítico de renderização, hoje o DevTools
 não é a ferramenta mais indicada para análise de caminho crítico. Leia [O que o

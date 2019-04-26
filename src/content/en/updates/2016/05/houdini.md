@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Houdini is a collection of APIs that expose the CSS engine’s internals to developers
 
-{# wf_updated_on: 2018-01-22 #}
+{# wf_updated_on: 2019-03-14 #}
 {# wf_published_on: 2016-05-19 #}
 {# wf_blink_components: N/A #}
 {# wf_tags: houdini,css #}
@@ -85,7 +85,7 @@ current iteration of the API can be found
 Even though the compositor worklet spec has been moved to the WICG and will
 be iterated on, it’s the one the specs that excites me the most. As you might know, some
 operations are outsourced to the graphics card of your computer by the CSS
-engine, although that is dependent on both your grapics card and your device in
+engine, although that is dependent on both your graphics card and your device in
 general. A browser usually takes the DOM tree and, based on specific criteria,
 decides to give some branches and subtrees their own [layer][HTML5Rocks layers].
 These subtrees paint themselves onto it (maybe using a paint worklet in the
@@ -244,7 +244,7 @@ at runtime.
 ### Properties and values
 ([spec][Properties and Values spec])
 
-Note: Spec is pretty stable. No accesible implementation as of yet.
+Note: Spec is pretty stable. No accessible implementation as of yet.
 
 Do you know [CSS Custom Properties] (or their unofficial alias “CSS Variables”)?
 This is them but with types! So far, variables could only have string values and
@@ -310,10 +310,12 @@ If you want to get involved, there’s always the [Houdini mailing list].
 [Web Components]: http://webcomponents.org/
 [parallax scrolling]: https://en.wikipedia.org/wiki/Parallax_scrolling
 [CSS Custom Properties]: /web/updates/2016/02/css-variables-why-should-you-care
-[Houdini Demo]: https://googlechrome.github.io/houdini-samples/animation-worklet/twitter-header/
+[Houdini Demo]: https://googlechromelabs.github.io/houdini-samples/animation-worklet/twitter-header/
 [Paint Worklet demo]: http://googlechrome.github.io/houdini-samples/paint-worklet/ripple/
 [Paint Worklet source]: https://github.com/GoogleChrome/houdini-samples/tree/master/paint-worklet/ripple
 
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

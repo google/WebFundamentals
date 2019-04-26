@@ -53,4 +53,3 @@ And the specification's repository to learn how to implement passive event liste
 
 
 
-{% include "comment-widget.html" %}

@@ -159,4 +159,3 @@ aren't hit tested. Some fields such as currentTarget, and eventPhase will have
 their default values. Calling dispatch related methods such as `stopPropagation()`
 or `preventDefault()` will have no effect on the parent event.
 
-{% include "comment-widget.html" %}

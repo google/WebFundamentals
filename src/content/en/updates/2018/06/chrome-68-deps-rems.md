@@ -65,4 +65,3 @@ Group and support for it is now removed from Chrome.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}

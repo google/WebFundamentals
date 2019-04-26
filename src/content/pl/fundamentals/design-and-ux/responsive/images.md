@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obraz jest wart tysiąc słów, a grafiki są nieodłączną częścią każdej strony. Jednak często stanowią większość pobieranych danych. Elastyczne projektowanie witryn pozwala na podstawie cech urządzenia zmieniać nie tylko układ strony, ale też obrazy.
 
-{# wf_updated_on: 2014-04-29 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Obrazy {: .page-title }
@@ -52,7 +52,7 @@ CSS pozwala, by treści wychodziły poza swój kontener, więc czasami trzeba u�
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 Pamiętaj, by w atrybucie `alt` elementów `img` podać treściwe opisy. Zwiększają one dostępność strony, przekazując informacje czytnikom ekranu i innym funkcjom ułatwień dostępu.
 
@@ -70,7 +70,7 @@ Atrybut <code>srcset</code> rozszerza działanie elementu <code>img</code>, uła
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 Przeglądarki, które nie obsługują atrybutu `srcset`, wyświetlają domyślny plik graficzny podany w atrybucie `src`. Dlatego zawsze trzeba dołączać obraz 1x, który można pokazać na dowolnym urządzeniu, niezależnie od jego możliwości. Gdy atrybut `srcset` jest obsługiwany, przed wysłaniem jakichkolwiek żądań przeglądarka analizuje listę rozdzielonych przecinkami par obrazów i warunków, po czym pobiera i wyświetla najbardziej odpowiednią grafikę.
 
@@ -83,7 +83,7 @@ Jeśli chcesz wyświetlać obrazy na podstawie cech urządzenia, czyli dostosowy
 <img class="center" src="img/art-direction.png" alt="Przykład dostosowywania grafiki"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Note: Element <code>picture</code> zaczyna pojawiać się w przeglądarkach. Mimo że jeszcze nie jest dostępny w każdej z nich, zalecamy jego stosowanie, bo ma dużą zgodność wsteczną i pozwala wykorzystać kod <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Szczegółowe informacje znajdziesz na <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
+Note: Element <code>picture</code> zaczyna pojawiać się w przeglądarkach. Mimo że jeszcze nie jest dostępny w każdej z nich, zalecamy jego stosowanie, bo ma dużą zgodność wsteczną i pozwala wykorzystać kod <a href='https://scottjehl.github.io/picturefill/'>polyfill Picturefill</a>. Szczegółowe informacje znajdziesz na <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -165,7 +165,7 @@ W przykładzie powyżej renderujemy obraz, który ma połowę szerokości widocz
 
 #### Uwzględnianie punktów granicznych przy elastycznych obrazach
 
-W wielu przypadkach rozmiar lub obraz może się zmieniać w zależności od punktów granicznych w układzie strony. Na przykład na małym ekranie obraz może rozciągać się na całą szerokość widocznego obszaru, a na większym &ndash; zajmować tylko jego część. 
+W wielu przypadkach rozmiar lub obraz może się zmieniać w zależności od punktów granicznych w układzie strony. Na przykład na małym ekranie obraz może rozciągać się na całą szerokość widocznego obszaru, a na większym &ndash; zajmować tylko jego część.
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto" content_path="web/fundamentals/design-and-ux/responsive/_code/breakpoints.html" region_tag="picture" %}
@@ -235,7 +235,7 @@ Funkcja `image-set()` w CSS rozszerza działanie właściwości `background`, u�
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 Oprócz wczytania poprawnej grafiki przeglądarka także odpowiednio
 ją skaluje. Krótko mówiąc, przeglądarka zakłada, że obrazy 2x są dwa razy większe niż 1x, więc pomniejsza je dwukrotnie, by miały właściwy rozmiar na stronie.
@@ -258,7 +258,7 @@ W zapytaniach o media można tworzyć reguły, które zależą od [współczynni
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome, Firefox i Opera obsługują standardowe polecenie `(min-resolution: 2dppx)`, a Safari i przeglądarka w Androidzie wymagają starszej wersji składni z przedrostkiem dostawcy i bez jednostki `dppx`. Pamiętaj, że te style wczytują się tylko wtedy, gdy urządzenie pasuje do zapytania o media, więc musisz zdefiniować też style stosowane w podstawowym przypadku. Dzięki temu zyskasz pewność, że nawet gdy przeglądarka nie obsługuje rozdzielczości podanej w konkretnych zapytaniach o media, wyrenderuje poprawny widok.
 
@@ -274,7 +274,7 @@ Możesz też użyć polecenia `min-width`, by wyświetlać alternatywne obrazy w
         background-image: url(bg.png);
       }
     }
-      
+
 
 
 ## Używanie obrazów SVG jako ikon
@@ -296,7 +296,7 @@ Znaki Unicode można dodawać do strony tak samo jak nazwane elementy &ndash; `&
 
 
     Jesteś super&#9733;
-    
+
 
 Jesteś super&#9733;
 
@@ -323,7 +323,7 @@ Czcionki z ikonami są popularne i łatwe w użyciu, ale w porównaniu z ikonami
 * W ograniczonym stopniu działają ze stylami CSS.
 * Dokładne pozycjonowanie pikseli może być trudne ze względu na wysokość wiersza, odstępy między literami itp.
 * Nie mają charakteru semantycznego i niezbyt dobrze współpracują z czytnikami ekranu oraz innymi funkcjami ułatwień dostępu.
-* Przy braku prawidłowego zakresu mogą powodować pobieranie dużych plików, mimo że używasz tylko niewielkiego podzbioru dostępnych ikon. 
+* Przy braku prawidłowego zakresu mogą powodować pobieranie dużych plików, mimo że używasz tylko niewielkiego podzbioru dostępnych ikon.
 
 
 
@@ -412,11 +412,11 @@ Gdy to tylko możliwe, tekst powinien być tekstem, a nie elementem obrazu. Na p
 Wiele przeglądarek pozwala korzystać z funkcji CSS, by tworzyć style, które dawniej wymagały stosowania obrazów. Na przykład właściwość <code>background</code> umożliwia tworzenie złożonych gradientów, <code>box-shadow</code> &ndash; cieni, a <code>border-radius</code> &ndash; zaokrąglonych narożników.
 
 <p id="noImage">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit 
-amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas 
-nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus 
-dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare 
-fringilla dui non vehicula. In hac habitasse platea dictumst. Donec 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit
+amet augue eu magna scelerisque porta ut ut dolor. Nullam placerat egestas
+nisl sed sollicitudin. Fusce placerat, ipsum ac vestibulum porta, purus
+dolor mollis nunc, pharetra vehicula nulla nunc quis elit. Duis ornare
+fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
@@ -429,7 +429,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 Pamiętaj, że te techniki wymagają cykli renderowania, co może mieć znaczenie na urządzeniach mobilnych. Jeśli będziesz ich nadużywać, możesz stracić uzyskane korzyści i obniżyć wydajność strony.
 

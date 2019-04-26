@@ -26,6 +26,14 @@ toc:
   path: /web/tools/workbox/reference-docs/latest/workbox.broadcastUpdate
 - title: "workbox.rangeRequests"
   path: /web/tools/workbox/reference-docs/latest/workbox.rangeRequests
+- title: "workbox.navigationPreload"
+  path: /web/tools/workbox/reference-docs/latest/workbox.navigationPreload
+- title: "workbox.streams"
+  path: /web/tools/workbox/reference-docs/latest/workbox.streams
+
+- heading: Window Modules
+- title: workbox-window
+  path: /web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox
 
 - heading: Node Modules
 - title: workbox-build

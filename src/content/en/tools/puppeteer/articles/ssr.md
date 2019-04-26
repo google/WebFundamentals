@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: This article shows how to run headless Chrome and Puppeteer as part of your web server to "SSR" a static version of client-side JS apps for improved loading performance and better crawler indexability.
 
-{# wf_updated_on: 2018-04-02 #}
+{# wf_updated_on: 2019-01-15 #}
 {# wf_published_on: 2018-04-01 #}
 {# wf_blink_components: Internals>Headless #}
 {# wf_tags: puppeteer,headless,testing,ssr,prerender,search,crawler #}
@@ -76,7 +76,7 @@ Your app might be a <abbr title="Single Page Application">SPA</abbr>,
 something more complex like a library or framework. To be honest, your tech
 stack doesn't matter. What matters is that you spent a lot of time building
 Awesome Web Thing and users are unable to discover it. The other reason you
-might be here is because some article out on The Webz mentioned that
+might be here is because some article out on The Web mentioned that
 server-side rendering is good for performance. You're here for that quick win to
 reduce [JavaScript startup cost](/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization/)
 and improve
@@ -860,8 +860,6 @@ rendering some of my apps:
 </figure>
 
 <br>
-
-{% include "comment-widget.html" %}
 
 {% include "web/_shared/rss-widget-tools.html" %}
 

@@ -387,4 +387,3 @@ To learn more about the Credential Management API, checkout [Integration Guide](
 * [Demo source code](https://github.com/GoogleChrome/credential-management-sample)
 * [Codelab "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
 
-{% include "comment-widget.html" %}

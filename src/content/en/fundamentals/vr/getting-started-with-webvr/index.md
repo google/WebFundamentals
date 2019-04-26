@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to take a WebGL scene in Three.js and add WebVR capabilities.
 
-{# wf_updated_on: 2018-04-28 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-12-12 #}
 {# wf_blink_components: Blink>WebVR #}
 
@@ -212,3 +212,7 @@ While we’re here, there are plenty of resources out there to give you a flying
 * **[Ray-Input](https://github.com/borismus/ray-input)**. A library to help you handle the various types of input for VR- and non-VR-devices, such as mouse, touch, and VR Gamepad controllers.
 
 Now go and make some awesome VR!
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

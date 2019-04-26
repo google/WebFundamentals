@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-cache-expiration.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-06-15 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Cache Expiration {: .page-title }
@@ -25,7 +25,7 @@ To restrict the number of entries stored in a cache you can use the
 ```javascript
 workbox.routing.registerRoute(
   new RegExp('/images/'),
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.Plugin({
@@ -51,7 +51,7 @@ seconds using the `maxAgeSeconds` option like so:
 ```javascript
 workbox.routing.registerRoute(
   /\/images\//,
-  workbox.strategies.cacheFirst({
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.Plugin({

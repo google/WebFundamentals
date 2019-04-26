@@ -137,4 +137,3 @@ excited by this.
 <link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="/web/shows/rss.xml">
 <link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="/web/shows/atom.xml">
 
-{% include "comment-widget.html" %}

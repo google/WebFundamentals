@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Enabling HTTPS on your servers is critical to securing your webpages.
 
-{# wf_updated_on: 2018-03-05 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2015-03-27 #}
 {# wf_blink_components: Blink>SecurityFeature,Internals>Network>SSL #}
 
@@ -364,12 +364,6 @@ Most web servers offer a simple redirect feature. Use `301 (Moved Permanently)`
 to indicate to search engines and browsers that the HTTPS version is canonical,
 and redirect your users to the HTTPS version of your site from HTTP.
 
-## Migration concerns
-
-Many developers have legitimate concerns about migrating from HTTP to HTTPS.
-The Google Webmasters Team has some [excellent
-guidance](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) available.
-
 ### Search ranking
 
 Google uses [HTTPS as a positive search quality
@@ -430,3 +424,7 @@ should ask advertisers that do not serve HTTPS at all to at least start.
 You may wish to defer completing
 [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough
 advertisers interoperate properly.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

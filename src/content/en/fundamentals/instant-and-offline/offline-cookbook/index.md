@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-10-06 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2014-12-09 #}
 {# wf_blink_components: N/A #}
 
@@ -562,7 +562,6 @@ We always go to the network & update a cache as we go.
       );
     });
 
-Note: The above doesn't work in Chrome yet, as we've yet to expose `fetch` and `caches` to pages ([ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770), [ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)).
 
 In [trained-to-thrill][ttt] I worked around this by
 using [XHR instead of fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3),
@@ -730,3 +729,7 @@ before I hit "publish".
 [is_sw_ready]: https://jakearchibald.github.io/isserviceworkerready/
 [sw_primer]: /web/fundamentals/getting-started/primers/service-workers
 [caches_api]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

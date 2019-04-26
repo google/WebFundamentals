@@ -43,4 +43,3 @@ Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/){: .extern
 Let us know what you think and come by often!
 
 
-{% include "comment-widget.html" %}

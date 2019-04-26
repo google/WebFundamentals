@@ -22,4 +22,3 @@ You can use <kbd class="kbd">Cmd + ]</kbd> (or <kbd class="kbd">Cmd + [</kbd>) t
 		
 
 
-{% include "comment-widget.html" %}

@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
 
-{# wf_updated_on: 2015-10-06 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2015-03-20 #}
+{# wf_blink_components: Blink>JavaScript #}
 
 # Debounce Your Input Handlers {: .page-title }
 
@@ -61,3 +62,7 @@ The solution to both of the problems above is the same: you should always deboun
 
 
 Doing this also has the added benefit of keeping your input handlers light, which is awesome because now you’re not blocking things like scrolling or touch on computationally expensive code!
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

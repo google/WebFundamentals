@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A deep-dive into the service worker lifecycle.
 
-{# wf_updated_on: 2018-06-07 #}
+{# wf_updated_on: 2018-12-05 #}
 {# wf_published_on: 2016-09-29 #}
 {# wf_blink_components: Blink>ServiceWorker #}
 
@@ -59,11 +59,11 @@ In brief:
     max-width: 466px;
     margin: 1.8rem auto 0;
   }
-  .framebox-container {
+  body:not([theme]) .framebox-container {
     position: relative;
     padding-top: 75.3%;
   }
-  .framebox-container iframe {
+  body:not([theme]) .framebox-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -77,16 +77,13 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
-  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
-  crossorigin="anonymous" defer>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TweenLite.min.js"
+  defer>
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
-  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
-  crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
-  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
-  crossorigin="anonymous" defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TimelineLite.min.js"
+  defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/plugins/CSSPlugin.min.js"
+  defer></script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -355,11 +352,12 @@ worker anyway.
 
 In brief:
 
-* An update is triggered:
-    * On navigation to an in-scope page.
-    * On functional events such as `push` and `sync`, unless there's been an
-      update check within the previous 24 hours.
-    * On calling `.register()` *only if* the service worker URL has changed.
+* An update is triggered if any of the following happens:
+    * A navigation to an in-scope page.
+    * A functional events such as `push` and `sync`, unless there's been an update check within the
+      previous 24 hours.
+    * Calling `.register()` *only if* the service worker URL has changed. However, you should [avoid
+      changing the worker URL](#avoid-url-change).
 * Most browsers, including [Chrome 68 and later](/web/updates/2018/06/fresher-sw), default to
   ignoring caching headers when checking for updates of the registered service worker script. They
   still respect caching headers when fetching resources loaded inside a service worker via
@@ -383,16 +381,12 @@ In brief:
 <div class="framebox-container">
 {% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"
-  integrity="sha384-al3qvxiX1jQs5ZPPnL8UubdkVRFveHNxF3ZNTbMXFxd8JBFwMIq8BVaVOW/CEUKB"
-  crossorigin="anonymous" defer>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TweenLite.min.js" defer>
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"
-  integrity="sha384-fw2pCo41nKTwSnKUUxW43cI1kDLRw2qLaZQR2ZEQnh1s6xM6pP3H+SbM/Ehm6uI7"
-  crossorigin="anonymous" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"
-  integrity="sha384-yn7MLKNpLL+YDD9r3YvNFKEBhs/bzA4i51f28+h6KCYsZIhbif9+JcdK/lZOlnEY"
-  crossorigin="anonymous" defer></script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/TimelineLite.min.js" defer>
+</script>
+<script src="https://www.gstatic.com/external_hosted/gsap/v1_18_0/plugins/CSSPlugin.min.js" defer>
+</script>
 <style>
 .lifecycle-diagram {
   width: 100%;
@@ -717,7 +711,7 @@ navigations and functional events, but you can also trigger them manually:
 If you expect the user to be using your site for a long time without reloading,
 you may want to call `update()` on an interval (such as hourly).
 
-### Avoid changing the URL of your service worker script
+### Avoid changing the URL of your service worker script {: #avoid-url-change}
 
 If you've read [my post on caching best
 practices](https://jakearchibald.com/2016/caching-best-practices/){: .external },
@@ -826,3 +820,7 @@ So, to enable as many patterns as we can, the whole update cycle is observable:
 
 Phew! That was a lot of technical theory. Stay tuned in the coming weeks where
 we'll dive into some practical applications of the above.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

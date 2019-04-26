@@ -56,6 +56,7 @@ const RE_DEVSITE_TRANSLATION = /{#\s?wf_devsite_translation\s?#}/;
 const RE_TRANSLATED_PATH = /^src\/content\/(?!en)\w\w(-\w\w)?\/.*/;
 const RE_LIGHTHOUSE_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/lighthouse.*/;
 const RE_WORKBOX_PATH = /^src\/content\/\w\w(-\w\w)?\/tools\/workbox.*/;
+const RE_SITEKIT_PATH = /^src\/content\/\w\w(-\w\w)?\/site-kit\/.*/;
 
 /**
  * Gets the first regEx match on a string
@@ -127,4 +128,5 @@ exports.RE_DEVSITE_TRANSLATION = RE_DEVSITE_TRANSLATION;
 exports.RE_TRANSLATED_PATH = RE_TRANSLATED_PATH;
 exports.RE_LIGHTHOUSE_PATH = RE_LIGHTHOUSE_PATH;
 exports.RE_WORKBOX_PATH = RE_WORKBOX_PATH;
+exports.RE_SITEKIT_PATH = RE_SITEKIT_PATH;
 exports.RE_IGNORE_FILE = RE_IGNORE_FILE;

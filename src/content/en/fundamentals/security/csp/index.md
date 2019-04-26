@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
 {# wf_published_on: 2012-06-15 #}
-{# wf_updated_on: 2017-08-11 #}
+{# wf_updated_on: 2019-01-21 #}
 {# wf_blink_components: Blink>SecurityFeature #}
 
 # Content Security Policy {: .page-title }
@@ -49,8 +49,8 @@ between script that's part of your application and script that's been
 maliciously injected by a third-party. For example, the Google +1 button at the
 bottom of this page loads and executes code from
 `https://apis.google.com/js/plusone.js` in the context of this page's origin. We
-trust that code, but we can't expect the browser to figure out on it's own that
-code from `apis.google.com` is awesome, while code from `apis.evil.example.com`
+trust that code, but we can't expect the browser to figure out on its own that code
+from `apis.google.com` is awesome, while code from `apis.evil.example.com`
 probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
 
@@ -287,7 +287,7 @@ code if you do the work to move code into external resources.
 Inline style is treated in the same way: both the `style` attribute and `style`
 tags should be consolidated into external stylesheets to protect against a
 variety of [surprisingly
-clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
+clever](https://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
 data exfiltration methods that CSS enables.
 
 If you must have inline script and style, you can enable it
@@ -358,7 +358,7 @@ This has more than a few impacts on the way you build applications:
 
 *   You must parse JSON via the built-in `JSON.parse`, rather than relying on
     `eval`. Native JSON operations are available in
-    [every browser since IE8](http://caniuse.com/#feat=json), and they're
+    [every browser since IE8](https://caniuse.com/#feat=json), and they're
     completely safe.
 *   Rewrite any `setTimeout` or `setInterval` calls you're currently making
     with inline functions rather than strings. For example:
@@ -452,10 +452,10 @@ turn up; when you're satisfied with its effect, start enforcing the new policy.
 ## Real World Usage
 
 CSP 1 is quite usable in Chrome, Safari, and Firefox, but has very limited
-support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
+support in IE 10. You can <a href="https://caniuse.com/#feat=contentsecuritypolicy">
 view specifics at caniuse.com</a>. CSP Level 2 has been available in Chrome since
 version 40. Massive sites like Twitter and Facebook have deployed the header
-(<a href="https://blog.twitter.com/2011/improving-browser-security-with-csp">Twitter's
+(<a href="https://blog.twitter.com/engineering/en_us/a/2011/improving-browser-security-with-csp.html">Twitter's
 case study</a> is worth a read), and the standard is very much ready
 for you to start deploying on your own sites.
 
@@ -536,7 +536,7 @@ overwrites the default for that specific type of resource.
 ## The future
 
 
-Content Security Policy Level 2 is a <a href="http://www.w3.org/TR/CSP2/">
+Content Security Policy Level 2 is a <a href="https://www.w3.org/TR/CSP2/">
 Candidate Recommendation</a>. The W3C's Web Application Security Working Group
 has already begun work on the specification's next iteration,
 [Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }.
@@ -545,3 +545,7 @@ has already begun work on the specification's next iteration,
 If you're interested in the discussion around these upcoming features,
 [skim the public-webappsec@ mailing list archives](http://lists.w3.org/Archives/Public/public-webappsec/),
 or join in yourself.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

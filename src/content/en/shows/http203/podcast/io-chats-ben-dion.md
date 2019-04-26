@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: The state of the union of the web.
 
-{# wf_updated_on: 2018-05-21 #}
+{# wf_updated_on: 2018-10-15 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/io-2018-ben-dion.mp3 #}
 {# wf_podcast_duration: 00:29:02 #}
@@ -29,7 +29,7 @@ Chrome. We cover:
 * How Google Search is using service workers.
 * Jake plugs [wiki-offline](https://wiki-offline.jakearchibald.com/) again.
 * [Google Bulletin](https://posts.google.com/bulletin/share).
-* [Desktop PWAs](/web/updates/2018/05/dpwa).
+* [Desktop PWAs](/web/progressive-web-apps/desktop).
 * Bringing [AutoCAD](https://web.autocad.com/) to the web.
 * Fixing the long tail of the web.
 * Fixing AMP URLs using [web packaging and signed exchanges](https://github.com/WICG/webpackage).

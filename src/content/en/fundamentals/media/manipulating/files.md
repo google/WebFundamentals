@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Let's take a raw video file off a camera and transform it into an encrypted resource that you can play back using a video library such as Google's Shaka Player on a mobile device.
 
-{# wf_updated_on: 2017-08-22 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2017-06-30 #}
+{# wf_blink_components: Blink>Media #}
 
 # From Raw Video to Web Ready {: .page-title }
 
@@ -359,3 +360,7 @@ This does not cover everything you could do to a media file before posting it to
 the web, not by a longshot. To be fair, this subject is one deserving of its own
 website. I'm hoping this introduction will give you enough to help you find your
 own answers to questions.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

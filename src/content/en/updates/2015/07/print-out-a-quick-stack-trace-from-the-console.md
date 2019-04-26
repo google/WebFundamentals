@@ -26,4 +26,3 @@ Notes:
 </ul>
 
 
-{% include "comment-widget.html" %}

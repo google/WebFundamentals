@@ -24,7 +24,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 这可能有助于提高吸引力，因为提供的预览所包含的信息要比以其他方式提供的信息更加丰富。如果没有它，社交网站只能提供不含图片或其他有帮助信息的基本信息。
 
 
- 
+
 
 您认为下面哪一个被点击的可能性更大？用户容易被图片吸引，如果能提前预览，就会更坚信他们会喜欢自己找到的内容。
 
@@ -90,19 +90,10 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 `itemprop` 定义作用域中 `itemtype` 的属性。对于向社交网站提供元数据，典型的 `itemprop` 值为 `name`、`description` 和 `image`。
 
 
-
-### 了解详情
-这些 microdata 向抓取工具（通常是 [Google+](https://plus.google.com/){: .external } 和 Google 搜索）提供语义信息。
-如需了解有关 Google+ 上摘要和渲染的更多信息，请阅读下列文档：
-
-
-* [文章渲染 - Google+ 平台](/+/web/snippet/article-rendering)
-* [摘要 - Google+ 平台](/+/web/snippet/)
-
 ### 验证丰富摘要
 要验证 Google+ 上的丰富摘要，您可以使用下面这样的工具：
 
-* [结构化数据测试工具](https://www.google.com/webmasters/tools/richsnippets) - 网站站长工具  
+* [结构化数据测试工具](https://www.google.com/webmasters/tools/richsnippets) - 网站站长工具
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
@@ -154,7 +145,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
   </tbody>
 </table>
 
-这些元标记向社交网站（通常是 [Google+](https://plus.google.com/){: .external } 和 [Facebook](https://www.facebook.com/){: .external }）的抓取工具提供语义信息。
+这些元标记向社交网站（通常是 [Facebook](https://www.facebook.com/){: .external }）的抓取工具提供语义信息。
 
 
 
@@ -182,7 +173,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 
 
 
-  
+
 
 
 <pre class="prettyprint">
@@ -219,7 +210,7 @@ description:您只需为每个页面添加几行代码，就可以影响通过�
 * `title` 和 `description` 在 microdata 与 OGP 之间共享
 * `itemprop="image"` 使用带 `href` 属性的 `link` 标记，而不是重复使用带 `property="og:image"` 的 `meta` 标记
 最后，务必验证网页在各社交网站上的呈现方式合乎预期，然后再进行发布。
-  
+
 
 
 

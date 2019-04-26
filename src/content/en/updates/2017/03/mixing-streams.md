@@ -45,4 +45,3 @@ media streams, you must set the
 [MediaKeys](https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys)
 up front. As before, you cannot mix HTTP and HTTPS in the same source.
 
-{% include "comment-widget.html" %}

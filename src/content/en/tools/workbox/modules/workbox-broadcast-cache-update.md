@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-background-sync.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-04-02 #}
 {# wf_published_on: 2017-11-29 #}
 {# wf_blink_components: N/A #}
 
@@ -57,10 +57,12 @@ strategy options.
 ```js
 workbox.routing.registerRoute(
   new RegExp('/api/'),
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin('api-updates')
-    ]
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+      }),
+    ],
   })
 );
 ```
@@ -86,9 +88,6 @@ updatesChannel.addEventListener('message', async (event) => {
 ```
 
 ### Message format
-
-The message that's sent via the Broadcast Channel API adheres to the
-
 
 When a `message` event listener as received in your web app, the
 `event.data` property will have the following format:
@@ -117,13 +116,13 @@ property.
 ```js
 workbox.routing.registerRoute(
   new RegExp('/api/'),
-  workbox.strategies.staleWhileRevalidate({
+  new workbox.strategies.StaleWhileRevalidate({
     plugins: [
-      new workbox.broadcastUpdate.Plugin(
-        'api-updates',
-        headersToCheck: ['X-My-Custom-Header']
-      )
-    ]
+      new workbox.broadcastUpdate.Plugin({
+        channelName: 'api-updates',
+        headersToCheck: ['X-My-Custom-Header'],
+      }),
+    ],
   })
 );
 ```
@@ -135,12 +134,10 @@ of a particular strategy as shown above, it's possible to use the underlying
 logic in service worker code.
 
 ```js
-const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate(
-  'api-updates',
-  {
-    headersToCheck: ['X-My-Custom-Header'],
-  }
-);
+const broadcastUpdate = new workbox.broadcastUpdate.BroadcastCacheUpdate({
+  channelName: 'api-updates',
+  headersToCheck: ['X-My-Custom-Header'],
+});
 
 const cacheName = 'api-cache';
 const url = 'https://example.com/api';

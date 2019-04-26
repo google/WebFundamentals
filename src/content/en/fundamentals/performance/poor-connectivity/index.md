@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: It's important to understand what using your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
-{# wf_updated_on: 2018-01-10 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2016-05-09 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -162,3 +162,7 @@ for the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch
 and the [Streams API](https://www.w3.org/TR/streams-api/) should help by optimizing
 content delivery and avoiding monolithic requests. Jake Archibald gives more details
 about tackling lie-fi in [Supercharging page load](https://youtu.be/d5_6yHixpsQ?t=6m42s).
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

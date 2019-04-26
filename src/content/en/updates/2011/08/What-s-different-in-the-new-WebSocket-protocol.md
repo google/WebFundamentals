@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2011-08-30 #}
+{# wf_updated_on: 2019-01-16 #}
 {# wf_published_on: 2011-08-30 #}
 {# wf_tags: news,websockets,connectivity #}
+{# wf_blink_components: N/A #}
 
 # What's different in the new WebSocket protocol {: .page-title }
 
@@ -66,4 +67,6 @@ The WebSocket protocol specification has recently been updated to solve previous
 * Chrome 14 supports HyBi 10 protocol although the WebSocket JavaScript API changes mentioned above are still on the way. Firefox 7 is also planned to support HyBi 10.
 
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

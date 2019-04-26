@@ -333,6 +333,4 @@ DevTools プロトコルに関するバグは [github.com/ChromeDevTools/devtool
 
 <br>
 
-{% include "comment-widget.html" %}
-
 [dtviewer]: https://chromedevtools.github.io/debugger-protocol-viewer/

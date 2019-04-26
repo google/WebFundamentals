@@ -37,4 +37,3 @@ Using `toBlob()` is great, because instead of manipulating a base64 encoded stri
 If you’re wondering whether you can draw image blobs to another canvas context, the answer is -- in Firefox and Chrome -- yes, absolutely! [You can do this with the `createImageBitmap()` API](./createimagebitmap-in-chrome-50), which is also landing in Chrome 50.
 
 
-{% include "comment-widget.html" %}

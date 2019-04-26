@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Template String literals with embedded expressions. We've been waiting for this for ages. Literally
 
-{# wf_updated_on: 2015-01-19 #}
+{# wf_updated_on: 2019-03-16 #}
 {# wf_published_on: 2015-01-19 #}
 {# wf_tags: news,es6,javascript,ecmascript #}
+{# wf_blink_components: N/A #}
 
 # Getting Literal With ES6 Template Strings {: .page-title }
 
@@ -18,7 +19,7 @@ Strings in JavaScript have been historically limited, lacking the capabilities o
 * Embedded expressions
 * Multiline strings without hacks
 * String formatting
-* String tagging for safe HTML escaping, localisation and more.
+* String tagging for safe HTML escaping, localization and more.
 
 Rather than stuffing yet another feature into Strings as we know them today, Template Strings introduce a completely different way of solving these problems.
 
@@ -84,7 +85,7 @@ Multiline strings in JavaScript have required hacky workarounds for some time. C
     var greeting = "Yo \
     World";
 
-Whilst this should work fine in most modern JavaScript engines, the behaviour itself is still a bit of a hack. One can also use string concatenation to fake multiline support, but this equally leaves something to be desired:
+Whilst this should work fine in most modern JavaScript engines, the behavior itself is still a bit of a hack. One can also use string concatenation to fake multiline support, but this equally leaves something to be desired:
 
     var greeting = "Yo " +
     "World";
@@ -181,7 +182,7 @@ Our tagged template solution could thus be written as follows:
     //=> <b>Domenic Denicola says</b>: "&amp; is a fun tag"
 
 
-Other possible uses include auto-escaping, formatting, localisation and in general, more complex substitutions:
+Other possible uses include auto-escaping, formatting, localization and in general, more complex substitutions:
 
     // Contextual auto-escaping
     qsa`.${className}`;
@@ -208,8 +209,7 @@ One of the most significant features they bring are tagged templates - a critica
 
 * [http://www.2ality.com/2015/01/template-strings-html.html](http://www.2ality.com/2015/01/template-strings-html.html)
 * [https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates](https://leanpub.com/understandinges6/read/#leanpub-auto-tagged-templates)
-* [http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/](http://jaysoo.ca/2014/03/20/i18n-with-es6-template-strings/)
-* [http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
+* [https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/](https://jaysoo.ca/2014/03/20/i18n-with-es2015-template-literals/)
+* [https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](https://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
 
 
-{% include "comment-widget.html" %}

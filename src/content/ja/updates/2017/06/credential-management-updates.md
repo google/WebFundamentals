@@ -287,4 +287,3 @@ let c = await navigator.credentials.create({
 
 を参考にして下さい。新しい API への対応方法をステップ・バイ・ステップでご紹介します。
 
-{% include "comment-widget.html" %}

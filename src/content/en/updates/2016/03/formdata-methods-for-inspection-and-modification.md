@@ -71,4 +71,3 @@ Check this example out:
     
 
 
-{% include "comment-widget.html" %}

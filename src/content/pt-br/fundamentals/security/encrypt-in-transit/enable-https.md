@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Usar HTTPS nos servidores é fundamental para proteger páginas da web.
 
-{# wf_updated_on: 2018-02-12 #}
+{# wf_updated_on: 2018-08-30 #}
 {# wf_published_on: 2015-03-27 #}
 
 # Como usar o HTTPS nos servidores {: .page-title }
@@ -106,7 +106,7 @@ E a resposta deve ser parecida com esta:
 
 Cada autoridade certificadora (CA) tem o próprio método de envio de
 CSRs. Os métodos podem incluir usar um formulário no site, enviar a CSR
-por e-mail ou outro. Algumas CAs (ou seus revendedores) podem até mesmo automatizar alguns ou
+por email ou outro. Algumas CAs (ou seus revendedores) podem até mesmo automatizar alguns ou
 todos os processos (inclusive, em alguns casos, incluir o par de chaves e a geração
 da CSR).
 
@@ -298,11 +298,6 @@ que ele define. [Essa página da OWASP explica como aplicar o sinalizador Secure
 
 A maioria dos servidores da Web oferece um recurso simples de redirecionamento. Use `301 (Moved Permanently)` para
 indicar aos mecanismos de pesquisa e navegadores que a versão HTTPS é canônica, e redirecione os usuários da versão HTTP para a versão HTTPS do site.
-
-## Questões da migração
-
-Muitos desenvolvedores têm preocupações válidas sobre a migração de HTTP para HTTPS.
-A equipe de webmasters do Google tem [orientações excelentes](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J) disponíveis.
 
 ### Classificação das pesquisas
 

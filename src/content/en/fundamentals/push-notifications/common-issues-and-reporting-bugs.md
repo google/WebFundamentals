@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are right ways of using notifications, and ways of using them better. Learn what makes a good notification. We won't just show you what to do. We'll show you how to do it.
 
-{# wf_updated_on: 2017-03-30 #}
+{# wf_updated_on: 2019-04-12 #}
 {# wf_published_on: 2017-03-30 #}
+{# wf_blink_components: Blink>PushAPI #}
 
 # Web Push: Common Issues and Reporting Bugs {: .page-title }
 
@@ -172,9 +173,8 @@ poorly formatted.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found. The subscription has expired. In this case you
-should delete the PushSubscription from your back end and wait for an
-opportunity to resubscribe the user.</td>
+<td>Not Found. In this case you should delete the PushSubscription from your
+back end and wait for an opportunity to resubscribe the user.</td>
 </tr>
 <tr>
 <td>410</td>
@@ -270,3 +270,7 @@ To provide a good bug report you should provide the following details:
 
 If you can provide a reproducible example, either source code or a hosted web
 site, it often speeds up diagnosing and solving the problem.
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

@@ -228,4 +228,3 @@ revolutionary
 step for web design and it is now enabled by default in Chrome so you can start
 using it today.
 
-{% include "comment-widget.html" %}

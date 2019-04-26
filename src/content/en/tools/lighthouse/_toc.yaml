@@ -12,8 +12,6 @@ toc:
 - heading: Audit References
 - title: Performance
   section:
-  - title: Consistently Interactive
-    path: /web/tools/lighthouse/audits/consistently-interactive
   - title: Critical Request Chains
     path: /web/tools/lighthouse/audits/critical-request-chains
   - title: Defer unused CSS
@@ -22,8 +20,10 @@ toc:
     path: /web/tools/lighthouse/audits/text-compression
   - title: Estimated Input Latency
     path: /web/tools/lighthouse/audits/estimated-input-latency
-  - title: First Interactive
-    path: /web/tools/lighthouse/audits/first-interactive
+  - title: First Contentful Paint
+    path: /web/tools/lighthouse/audits/first-contentful-paint
+  - title: First CPU Idle
+    path: /web/tools/lighthouse/audits/first-cpu-idle
   - title: First Meaningful Paint
     path: /web/tools/lighthouse/audits/first-meaningful-paint
   - title: Has Enormous Network Payloads
@@ -42,7 +42,7 @@ toc:
     path: /web/tools/lighthouse/audits/optimize-images
   - title: Oversized Images
     path: /web/tools/lighthouse/audits/oversized-images
-  - title: Perceptual Speed Index
+  - title: Speed Index
     path: /web/tools/lighthouse/audits/speed-index
   - title: Preload key requests
     path: /web/tools/lighthouse/audits/preload
@@ -108,14 +108,6 @@ toc:
     path: /web/tools/lighthouse/audits/button-name
   - title: Document Doesn't Have A Title Element
     path: /web/tools/lighthouse/audits/title
-  - title: Element aria-* Attributes Are Allowed For This Role
-    path: /web/tools/lighthouse/audits/aria-allowed-attributes
-  - title: Element aria-* Attributes Are Valid And Not Misspelled Or Non-Existent
-    path: /web/tools/lighthouse/audits/valid-aria-attributes
-  - title: Element aria-* Attributes Have Valid Values
-    path: /web/tools/lighthouse/audits/valid-aria-values
-  - title: Elements With ARIA Roles Have The Required aria-* Attributes
-    path: /web/tools/lighthouse/audits/required-aria-attributes
   - title: Every Form Element Has A Label
     path: /web/tools/lighthouse/audits/form-labels
   - title: Every Image Has An alt Attribute
@@ -142,15 +134,13 @@ toc:
     path: /web/tools/lighthouse/audits/geolocation-on-load
   - title: Avoids Requesting The Notification Permission On Page Load
     path: /web/tools/lighthouse/audits/notifications-on-load
-  - title: Avoids Web SQL
-    path: /web/tools/lighthouse/audits/web-sql
   - title: Displays Images With Incorrect Aspect Ratio
     path: /web/tools/lighthouse/audits/aspect-ratio
   - title: Includes Front-End JavaScript Libraries With Known Security Vulnerabilities
     path: /web/tools/lighthouse/audits/vulnerabilities
   - title: Manifest's short_Name Won't Be Truncated When Displayed On Homescreen
     path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
-  - title: Opens External Anchors Using rel="noopener"
+  - title: Links to cross-origin destinations are unsafe
     path: /web/tools/lighthouse/audits/noopener
   - title: Prevents Users From Pasting Into Password Fields
     path: /web/tools/lighthouse/audits/password-pasting
@@ -162,6 +152,9 @@ toc:
     path: /web/tools/lighthouse/audits/http2
   - title: Uses Passive Event Listeners To Improve Scrolling Performance
     path: /web/tools/lighthouse/audits/passive-event-listeners
+  - title: Avoids Web SQL
+    path: /web/tools/lighthouse/audits/web-sql
+    status: deprecated
 - title: SEO
   section:
   - title: Document Does Not Have A Meta Description
@@ -184,3 +177,5 @@ toc:
     path: /web/tools/lighthouse/audits/indexing
   - title: robots.txt is not valid
     path: /web/tools/lighthouse/audits/robots
+  - title: Tap targets are not sized appropriately
+    path: /web/tools/lighthouse/audits/tap-targets

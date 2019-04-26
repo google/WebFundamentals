@@ -1,16 +1,18 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
-{# wf_updated_on: 2016-11-03 #}
+
+{# wf_updated_on: 2019-01-29 #}
 {# wf_published_on: 2011-12-09 #}
 {# wf_tags: news,binary,performance,workers #}
+{# wf_blink_components: N/A #}
 
 # Transferable Objects: Lightning Fast! {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 
-Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](http://updates.html5rocks.com/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.
+Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](/web/updates/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.
 
 ### Faster is better
 
@@ -24,13 +26,13 @@ To play with transferables, there's a new version of `postMessage()` that suppor
 
     worker.postMessage(arrayBuffer, [transferableList]);
     window.postMessage(arrayBuffer, targetOrigin, [transferableList]);
-    
 
-For the worker case, the first argument is the `ArrayBuffer` message. The second argument is a list of items that should be transferred. In this example, you'd specify the `arrayBuffer` in the transerable list.
+
+For the worker case, the first argument is the `ArrayBuffer` message. The second argument is a list of items that should be transferred. In this example, you'd specify the `arrayBuffer` in the transferable list.
 
 ### Benchmark demo
 
-To see the performance gains of transferrables, I've put together [a demo](http://html5-demos.appspot.com/static/workers/transferables/index.html).
+To see the performance gains of transferables, I've put together [a demo](http://html5-demos.appspot.com/static/workers/transferables/index.html).
 
 The demo sends a 32MB `ArrayBuffer` to a worker and back using `postMessage()`. If your browser doesn't support transferables, the sample falls back to structured cloning. Averaging 5 runs in different browsers, here's what I got:
 
@@ -57,4 +59,6 @@ Feature detecting is a bit tricky with this one. My recommendation is to send a 
 *Updated (2011-12-13):* Code snippet to show `webkitPostMessage()` signature is different for window and worker.
 *Updated (2016-11-03):* Removed vendor prefixes and updated code snippets
 
-{% include "comment-widget.html" %}
+
+{% include "web/_shared/helpful.html" %}
+{% include "web/_shared/rss-widget-updates.html" %}

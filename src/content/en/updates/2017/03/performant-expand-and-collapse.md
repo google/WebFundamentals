@@ -7,6 +7,7 @@ description: When making expand and collapse effects you can use scale transform
 {# wf_tags: performance #}
 {# wf_featured_image: /web/updates/images/2017/03/performant-expand-and-collapse/featured-image.jpg #}
 {# wf_featured_snippet: When making expand and collapse effects you can use scale transforms to keep your UI performant. #}
+{# wf_blink_components: N/A #}
 
 
 # Building performant expand & collapse animations {: .page-title }
@@ -217,7 +218,7 @@ something like this to map values from 0 to 1 to an eased equivalent.
     }
 
 You can use [Google search to plot what that looks
-like](https://www.google.com/search?q=1%20-%20((1-x)%5E4)%20from%200%20to%201)
+like](https://www.google.com/search?q=1%20-%20%28%281-x%29%5E4%29%20from%200%20to%201)
 as well. Handy! If you’re in need of other easing equations do check out
 [Tween.js by Soledad Penadés](https://github.com/tweenjs/tween.js/blob/master/src/Tween.js#L421-L737),
 which contains a whole heap of them.
@@ -309,4 +310,3 @@ If you want to have a look through the code for this effect take a look at the
 [UI Element Samples Github repo](https://github.com/GoogleChromeLabs/ui-element-samples/tree/gh-pages/animated-clip)
 and, as always, let us know how you get on in the comments below.
 
-{% include "comment-widget.html" %}

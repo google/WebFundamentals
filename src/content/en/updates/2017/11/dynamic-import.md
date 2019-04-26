@@ -159,10 +159,13 @@ dependencies, including comments, on first load. [The updated
 version](https://dynamic-import.firebaseapp.com/) uses dynamic `import()` to lazily load the
 comments, avoiding the load, parse, and compile cost until the user really needs them.
 
+Note: if your app imports scripts from another domain (either statically or dynamically), the scripts
+need to be returned with valid CORS headers (such as `Access-Control-Allow-Origin: *`). This is
+because unlike regular scripts, module scripts (and their imports) are fetched with CORS.
+
 ## Recommendations
 
 Static `import` and dynamic `import()` are both useful. Each have their own, very distinct, use
 cases. Use static `import`s for initial paint dependencies, especially for above-the-fold content.
 In other cases, consider loading dependencies on-demand with dynamic `import()`.
 
-{% include "comment-widget.html" %}

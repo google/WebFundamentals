@@ -1,9 +1,10 @@
-project_path: /web/_project.yaml
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Almacenar en caché y reutilizar recursos obtenidos previamente es un aspecto crítico de la optimización para lograr un buen rendimiento.
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2019-02-06 #}
 {# wf_published_on: 2013-12-31 #}
+{# wf_blink_components: Blink>Network #}
 
 # Almacenamiento en caché de HTTP {: .page-title }
 
@@ -18,7 +19,7 @@ Note: Si usas una WebView para obtener y mostrar contenido web en tu app, es pos
 
 <img src="images/http-request.png"  alt="Solicitud HTTP">
 
-Cuando el servidor muestra una respuesta, también emite un conjunto de encabezados HTTP que describen el tipo de contenido, la extensión, las directivas de almacenamiento en caché y el token de validación, entre otros aspectos. Por ejemplo, en el intercambio anterior, en el servidor se muestra una respuesta de 1024 bytes, se indica al cliente que la almacene en caché durante un plazo de hasta 120 segundos y se proporciona el token de validación (“x234dff”) que se puede usar después de que la respuesta caduca para verificar si se modificó el recurso.
+Cuando el servidor muestra una respuesta, también emite un conjunto de encabezados HTTP que describen el tipo de contenido, la extensión, las directivas de almacenamiento en caché y el token de validación, entre otros aspectos. Por ejemplo, en el intercambio anterior, en el servidor se muestra una respuesta de 1,024 bytes, se indica al cliente que la almacene en caché durante un plazo de hasta 120 segundos y se proporciona un token de validación (“x234dff”) que se puede usar después de que la respuesta caduca para verificar si se modificó el recurso.
 
 
 ## Validación de respuestas almacenadas en caché con ETags
@@ -36,7 +37,7 @@ Ese es el problema que pueden resolver los tokens de validación, tal como se es
 
 En el ejemplo anterior, el cliente proporciona automáticamente el token ETag en el encabezado de la solicitud HTTP “If-None-Match”, el servidor compara el token con el recurso actual. Si el token no ha cambiado, muestra una respuesta “304 Not Modified” en la cual se indica al navegador que la respuesta que tiene en la caché no cambió y puede renovarse durante otros 120 segundos. Ten en cuenta que no es necesario volver a descargar la respuesta; esto nos ahorra tiempo y ancho de banda.
 
-Como desarrollador web, ¿cómo aprovechas una revalidación eficaz? El navegador hace todo el trabajo por nosotros. El navegador detecta de manera automática si se especificó un token de validación previamente, lo anexará a la solicitud en curso y actualizará las marcas de tiempo de la caché según sea necesario en función de la respuesta recibida desde el servidor. **Lo único que queda por hacer es asegurarse de que el servidor proporcione los tokens ETag necesarios: consulta la documentación de tu servidor para obtener los marcadores de configuración necesarios.**
+Como desarrollador web, ¿cómo aprovechas una revalidación eficaz? El navegador hace todo el trabajo por nosotros. El navegador detecta de manera automática si se especificó un token de validación previamente, lo anexa a la solicitud en curso y actualiza las marcas de tiempo de la caché según sea necesario en función de la respuesta recibida desde el servidor. **Lo único que queda por hacer es asegurarse de que el servidor proporcione los tokens ETag necesarios. Consulta la documentación de tu servidor para obtener los marcadores de configuración requeridos.**
 
 Note: Sugerencia: El proyecto HTML5 Boilerplate contiene <a href='https://github.com/h5bp/server-configs'>ejemplos de archivos de configuración</a> para los servidores más populares con comentarios detallados para cada marcador de configuración y cada ajuste: encuentra tu servidor favorito en la lista, busca los ajustes correspondientes, copia tu servidor y confirma que esté configurado con los ajustes recomendados.
 
@@ -61,17 +62,17 @@ Por el contrario, "no-store" es mucho más simple, ya que no permite al navegado
 
 ### "public" frente a "private"
 
-Si la respuesta está marcada como “public”, se puede almacenar en caché aunque tenga autenticación HTTP asociada a ella, y aunque el código de estado de la respuesta normalmente no se pueda almacenar de esta manera. La mayor parte del tiempo, “public” no es necesario porque la información explícita del almacenamiento en caché (como "max-age") indica que la respuesta puede almacenarse en caché de todas maneras.
+Si la respuesta está marcada como “public”, se puede almacenar en caché aunque tenga la autenticación HTTP asociada a ella y aunque el código de estado de la respuesta normalmente no se pueda almacenar de esta manera. La mayor parte del tiempo, “public” no es necesario porque la información explícita del almacenamiento en caché (como "max-age") indica que la respuesta puede almacenarse en caché de todas maneras.
 
 Por el contrario, el navegador puede almacenar en caché las respuestas “private”, pero generalmente están destinadas a un solo usuario y, por lo tanto, no pueden almacenarse en caché a través de ningún caché intermedio; p. ej., una página HTML con información de usuario privada puede almacenarse en caché a través del navegador de ese usuario, pero no de una CDN.
 
 ### "max-age"
 
-Esta directiva especifica el tiempo máximo en segundos durante el cual la respuesta obtenida se puede volver a usar desde el momento de envío de la solicitud;  p. ej., “max-age=60” indica que la respuesta puede almacenarse en caché y volver a usarse durante los próximos 60 segundos.
+Esta directiva especifica el tiempo máximo en segundos durante el cual la respuesta obtenida se puede volver a usar desde el momento de envío de la solicitud; p. ej., "max-age=60" indica que la respuesta puede almacenarse en caché y volver a usarse durante los próximos 60 segundos.
 
 ## Definición de la política óptima de Cache-Control
 
-<img src="images/http-cache-decision-tree.png"  alt="Árbol de decisión del caché">
+<img src="images/http-cache-decision-tree.png"  alt="Árbol de decisión de la caché">
 
 Usa el árbol de decisión anterior a fin de determinar la política óptima de almacenamiento en caché para un recurso específico o un conjunto de recursos utilizado por tu app. Idealmente, debes intentar almacenar en caché en el cliente la mayor cantidad de respuestas posible durante el período más extenso posible, y proporcionar tokens de validación para cada respuesta a fin de permitir una revalidación eficaz.
 
@@ -95,7 +96,7 @@ Usa el árbol de decisión anterior a fin de determinar la política óptima de 
 </tr>
 </table>
 
-Según HTTP Archive, entre los 300 000 sitios principales (conforme a la clasificación de Alexa), el navegador puede almacenar en caché [aproximadamente la mitad de todas las respuestas descargadas](http://httparchive.org/trends.php#maxage0), lo cual implica un enorme ahorro para visitas y páginas vistas repetidas. Por supuesto, esto no significa que tu app específica tendrá un 50% de recursos que pueden almacenarse en caché. Algunos sitios pueden almacenar en caché más del 90% de sus recursos, mientras que otros pueden contener una gran cantidad de datos privados o sujetos a limitaciones temporales que no pueden almacenarse en caché bajo ninguna circunstancia.
+Según HTTP Archive, entre los 300,000 sitios principales (conforme a la clasificación de Alexa), el navegador puede almacenar en caché [aproximadamente la mitad de todas las respuestas descargadas](http://httparchive.org/trends.php#maxage0), lo cual implica un enorme ahorro para visitas y páginas vistas repetidas. Por supuesto, esto no significa que tu app específica tendrá un 50% de recursos que pueden almacenarse en caché. Algunos sitios pueden almacenar en caché más del 90% de sus recursos, mientras que otros pueden contener una gran cantidad de datos privados o sujetos a limitaciones temporales que no pueden almacenarse en caché bajo ninguna circunstancia.
 
 **Audita tus páginas para identificar los recursos que pueden almacenarse en caché y garantizar que muestren los encabezados Cache-Control y ETag correspondientes.**
 
@@ -107,21 +108,21 @@ Según HTTP Archive, entre los 300 000 sitios principales (conforme a la clasifi
 * Cada app debe definir su propia jerarquía de caché para alcanzar un rendimiento óptimo.
 
 
-Todas las solicitudes HTTP que realiza el navegador primero se direccionan al caché del navegador para comprobar si hay una respuesta válida almacenada en caché que pueda usarse para responder a la solicitud. Si hay una coincidencia, se lee la respuesta desde la caché y, de esta manera, se eliminan la latencia de la red y los costos por datos de la transferencia. 
+Todas las solicitudes HTTP que realiza el navegador primero se direccionan a la caché del navegador para comprobar si hay una respuesta válida almacenada en caché que pueda usarse para responder a la solicitud. Si hay una coincidencia, se lee la respuesta desde la caché y, de esta manera, se eliminan la latencia de la red y los costos por datos de la transferencia.
 
-**No obstante, ¿qué ocurre si deseamos actualizar o invalidar una respuesta almacenada en caché?** Por ejemplo, supongamos que pediste a tus visitantes almacenar en caché una hoja de estilo CSS durante hasta 24 horas (max-age=86400), pero tu diseñador acaba de agregar una actualización que deseas poner a disposición de todos los usuarios ¿Cómo indicas a todos los visitantes, a través de lo que ahora es una copia “caduca” almacenada en caché de tu CSS, que actualicen sus cachés? No puedes, al menos si no cambias la URL del recurso.
+**No obstante, ¿qué ocurre si deseamos actualizar o invalidar una respuesta almacenada en caché?** Por ejemplo, supongamos que pediste a tus visitantes almacenar en caché una hoja de estilo CSS durante hasta 24 horas (max-age=86400), pero tu diseñador acaba de agregar una actualización que deseas poner a disposición de todos los usuarios. ¿Cómo indicas a todos los visitantes, a través de lo que ahora es una copia “caduca” almacenada en caché de tu CSS, que actualicen sus cachés? No puedes, al menos si no cambias la URL del recurso.
 
 Una vez que el navegador almacene la respuesta en caché, se usará la versión almacenada hasta que ya no esté actualizada, según lo determine el tiempo máximo o de caducidad, o hasta que se elimine de la caché por algún otro motivo; p. ej., al limpiar el usuario la caché de su navegador. Como consecuencia, diferentes usuarios podrían terminar usando diferentes versiones del archivo durante la construcción de la página; los usuarios que acaban de obtener el recurso usan la versión nueva y los que almacenaron en caché una copia anterior (pero aún válida) usan una versión anterior de la respuesta.
 
-**¿Cómo obtienes lo mejor de ambos mundos (almacenamiento en caché en el cliente y actualizaciones rápidas)?** Es simple. Puedes cambiar la URL del recurso y hacer que el usuario deba descargar la nueva respuesta cada vez que cambie su contenido. Generalmente, esto se logra incorporando una huella digital del archivo, o un número de versión, en su nombre de archivo; por ejemplo, style.**x234dff**.css.
+**¿Cómo obtienes lo mejor de ambos mundos (almacenamiento en caché en el cliente y actualizaciones rápidas)?** Es simple. Puedes cambiar la URL del recurso y hacer que el usuario deba descargar la nueva respuesta cada vez que cambie su contenido. Generalmente, esto se logra incorporando una huella digital del archivo, o un número de versión, en el nombre de archivo; por ejemplo, style.**x234dff**.css.
 
-<img src="images/http-cache-hierarchy.png"  alt="Jerarquía del caché">
+<img src="images/http-cache-hierarchy.png"  alt="Jerarquía de la caché">
 
 La capacidad de definir políticas de almacenamiento en caché para cada recurso te permite definir “jerarquías de la caché” con las cuales puedes controlar no solo la duración del almacenamiento en caché, sino también la rapidez con la que los visitantes ven las nuevas versiones. Para ilustrar esto, analiza el ejemplo anterior:
 
 * El HTML está marcado con “no-cache”, lo cual significa que el navegador siempre revalida el documento en cada solicitud y obtiene la última versión si el contenido cambia. Asimismo, en el lenguaje de marcado HTML incorporas huellas digitales en las URL para los recursos CSS y JavaScript. Si cambia el contenido de esos archivos, el lenguaje de marcado HTML de la página también cambia y se descarga una nueva copia de la respuesta HTML.
-* La CSS puede almacenarse en caché a través de navegadores y cachés intermedios (por ejemplo, una CDN), y está configurada para caducar en 1 año. Ten en cuenta que puedes usar la “caducidad lejana” de un año de forma segura, ya que incorporas la huella digital del archivo al nombre de archivo: si se actualiza la CSS, la URL también se modifica.
-* JavaScript también está configurado para caducar en 1 año, pero está marcado como “private”, quizá porque contiene algunos datos privados del usuario que la CDN no podría almacenar en caché.
+* La CSS puede almacenarse en caché a través de navegadores y cachés intermedias (por ejemplo, una CDN), y está configurada para caducar en 1 año. Ten en cuenta que puedes usar la "caducidad lejana" de un año de forma segura, ya que incorporas la huella digital del archivo al nombre de archivo: si se actualiza la CSS, la URL también se modifica.
+* JavaScript también está configurado para caducar en 1 año, pero está marcado como “private”, quizá porque contiene algunos datos privados del usuario que la CDN no debe almacenar en caché.
 * La imagen se almacena en caché sin una versión ni huella digital única, y está configurada para caducar en 1 día.
 
 La combinación de ETag, Cache-Control y URL únicas te permite proporcionar lo mejor de ambos mundos: tiempos de caducidad prolongados, control sobre el lugar en el cual se puede almacenar la respuesta en caché y actualizaciones a pedido.
@@ -130,15 +131,17 @@ La combinación de ETag, Cache-Control y URL únicas te permite proporcionar lo 
 
 No hay una política de almacenamiento en caché que sea superior a otra. Según los patrones de tráfico, el tipo de datos proporcionados y los requisitos específicos de la app para la actualización de datos, debes definir y configurar los ajustes adecuados para cada recurso y la “jerarquía de almacenamiento en caché” general.
 
-Te damos algunas sugerencias y técnicas para que recuerdes mientras trabajas en tu estrategia de almacenamiento en caché:
+Aquí te damos algunas sugerencias y técnicas para que recuerdes mientras trabajas en tu estrategia de almacenamiento en caché:
 
-* **Usa URLs consistentes:** si proporcionas el mismo contenido en diferentes URL, ese contenido se obtendrá y se almacenará varias veces. Sugerencia: ten en cuenta que en las [URLs se distinguen mayúsculas y minúsculas](http://www.w3.org/TR/WD-html40-970708/htmlweb.html).
+* **Usa URL uniformes:** Si proporcionas el mismo contenido en diferentes URL, ese contenido se obtendrá y se almacenará varias veces. Sugerencia: Ten en cuenta que en las [URL se distinguen mayúsculas y minúsculas](http://www.w3.org/TR/WD-html40-970708/htmlweb.html).
 * **Asegúrate de que el servidor proporcione un token de validación (ETag):** los tokens de validación eliminan la necesidad de transferir los mismos bytes cuando un recurso no sufre cambios en el servidor.
-* **Identifica los recursos que pueden almacenarse en caché a través de intermediarios:** aquellos cuyas respuestas son idénticas para todos los usuarios son excelentes candidatos para almacenarse en caché a través de una CDN y otros intermediarios.
+* **Identifica los recursos que pueden almacenarse en caché a través de intermediarios:** aquellos recursos cuyas respuestas son idénticas para todos los usuarios son excelentes candidatos para almacenarse en caché a través de una CDN y otros intermediarios.
 * **Determina la vida útil óptima en caché para cada recurso:** diferentes recursos pueden tener diferentes requisitos de actualización. Audita y determina la vida útil máxima para cada uno.
-* **Determina la mejor jerarquía de caché para tu sitio:** la combinación de URLs de recursos con huellas digitales de contenido y las vidas útiles breves o sin almacenamiento en caché (no-cache) para documentos HTML te permiten controlar la rapidez con la cual el cliente recibe las actualizaciones.
-* **Minimiza la migración de clientes:** algunos recursos se actualizan con más frecuencia que otros. Si una parte específica del recurso (por ejemplo, una función JavaScript o un conjunto de estilos CSS) se actualiza con frecuencia, considera proporcionar ese código como un archivo independiente. Esto permitirá que el resto del contenido (por ejemplo, códigos de biblioteca que no cambien con mucha frecuencia) se obtenga de la caché y minimiza la cantidad de contenido descargado cada vez que se obtiene una actualización.
+* **Determina la mejor jerarquía de caché para tu sitio:** la combinación de URL de recursos con huellas digitales de contenido y vidas útiles breves o sin almacenamiento en caché (no-cache) para documentos HTML te permiten controlar la rapidez con la cual el cliente recibe las actualizaciones.
+* **Minimiza la migración de clientes:** algunos recursos se actualizan con más frecuencia que otros. Si una parte específica del recurso (por ejemplo, una función JavaScript o un conjunto de estilos CSS) se actualiza con frecuencia, considera proporcionar ese código como un archivo independiente. Esto permitirá que el resto del contenido (por ejemplo, códigos de biblioteca que no cambien con mucha frecuencia) se obtenga de la caché y minimizará la cantidad de contenido descargado cada vez que se obtenga una actualización.
 
+## Comentarios {: .hide-from-toc }
 
+{% include "web/_shared/helpful.html" %}
 
-{# wf_devsite_translation #}
+<div class="clearfix"></div>

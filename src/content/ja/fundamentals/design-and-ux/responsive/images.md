@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 1 枚の写真は 1000 語にも匹敵する内容を伝えます。また、画像はすべてのページにおいて非常に重要な役割を果たします。一方で、ダウンロードされるデータ量のほとんどを画像が占めることも少なくありません。レスポンシブ ウェブデザインでは、レイアウトだけでなく画像もデバイス特性に応じて変えることができます。
 
-{# wf_updated_on: 2017-07-12 #}
+{# wf_updated_on: 2018-12-15 #}
 {# wf_published_on: 2014-04-29 #}
 
 # 画像 {: .page-title }
@@ -80,7 +80,7 @@ CSS ではコンテンツをコンテナからオーバーフローさせるこ�
     img, embed, object, video {
       max-width: 100%;
     }
-    
+
 
 `img` 要素の `alt` 属性を使用して、画像についてのわかりやすい説明を必ず追加してください。これらの情報をスクリーン リーダーなどのユーザー補助機能に提供することで、サイトのアクセシビリティを向上させることができます。
 
@@ -109,7 +109,7 @@ CSS ネイティブの
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
-    
+
 
 `srcset` をサポートしていないブラウザでは、`src` 属性に指定されたデフォルトの画像ファイルが使用されます。このため、機能に関係なくあらゆるデバイスで表示できる 1x の画像を必ず含めることが重要です。
 `srcset` がサポートされている場合は、カンマ区切りで指定された複数の画像と 条件のリストの解析後にリクエストが送信され、最適な画像のみがダウンロードされて表示されます。
@@ -135,7 +135,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 <div style="clear:both;"></div>
 
-試験運用:`picture` 要素に対応したブラウザが増えてきています。まだ未対応のブラウザもありますが、強力な下位互換性があり、[Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external } を使用できるものもあるため、使用することをお勧めします。さらに詳しい内容は [ResponsiveImages.org](http://responsiveimages.org/#implementation) のサイトをご覧ください。
+試験運用:`picture` 要素に対応したブラウザが増えてきています。まだ未対応のブラウザもありますが、強力な下位互換性があり、[Picturefill polyfill](https://scottjehl.github.io/picturefill/){: .external } を使用できるものもあるため、使用することをお勧めします。さらに詳しい内容は [ResponsiveImages.org](http://responsiveimages.org/#implementation) のサイトをご覧ください。
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -391,14 +391,14 @@ Data URI を使用して、次の形式で  <code>img</code> 要素の src を B
 
 
     <img src="data:image/svg+xml;base64,[data]">
-    
+
 
 上記の HTML5 ロゴのコードの開始部分は次のようになります。
 
 
     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
     BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
-    
+
 
 （完全なコードの長さは 5000 文字に及びます！）
 
@@ -473,7 +473,7 @@ CSS の `image-set()` 関数を使用して `background` プロパティの動�
       url(icon1x.jpg) 1x,
       url(icon2x.jpg) 2x
     );
-    
+
 
 適切な画像を読み込むほかに、ブラウザではスケーリングも適宜実施します。つまり、ブラウザでは
 2x の画像は 1x の画像の 2 倍のサイズであると推定し、2x の画像を係数 2 でスケールダウンして、ページ上で同じサイズに見えるようにします。
@@ -505,7 +505,7 @@ CSS の `image-set()` 関数を使用して `background` プロパティの動�
     {
       /* High dpi styles & resources here */
     }
-    
+
 
 Chrome、Firefox、Opera は標準の `(min-resolution: 2dppx)` をサポートしていますが、Safari と Android のブラウザでは、`dppx`
 単位を付けない古いベンダー プレフィックスの構文を使用する必要があります。
@@ -531,10 +531,10 @@ Chrome、Firefox、Opera は標準の `(min-resolution: 2dppx)` をサポート�
         background-image: url(bg.png);
       }
     }
-    
 
 
-##  アイコンに SVG を使用する 
+
+##  アイコンに SVG を使用する
 
 ページにアイコンを追加する際は、できるだけ SVG のアイコンを使用し、状況に応じて Unicode 文字を使います。
 
@@ -560,7 +560,7 @@ Unicode 文字は、HTML エンティティと同じように「`&#XXXX`」の�
 
 
     You're a super &#9733;
-    
+
 
 You're a super &#9733;
 
@@ -574,7 +574,7 @@ SVG には、ラスター画像と比較して次のような数多くのメリ�
 * 色、影、透明度、アニメーションなどの CSS 効果を直接適用できます。
 * SVG 画像はインラインでドキュメントに直接含めることができます。
 * セマンティックです。
-* 適切な属性の使用により、ユーザー補助機能にも対応できます。
+* 適切な属性の使用により、アクセシビリティにも対応できます。
 
 
 
@@ -603,7 +603,7 @@ SVG には、ラスター画像と比較して次のような数多くのメリ�
 * line-height や letter-spacing などの設定によっては、ピクセル単位での完全な位置指定が難しい場合があります。
 * セマンティックではないため、スクリーン リーダーなどのユーザー補助機能で利用しづらい場合があります。
 * 適切な範囲で使用しないと、一部のアイコンを使用するためだけにファイルサイズが大きくなる場合があります。
- 
+
 
 <div style="clear:both;"></div>
 
@@ -772,7 +772,7 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
         background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
       }
     </style>
-    
+
 
 これらの手法はレンダリング サイクルを必要とするため、モバイルではパフォーマンスに影響する可能性があります。
 使いすぎると、CSS のメリットが失われるだけでなく、パフォーマンスが低下するおそれもあります。

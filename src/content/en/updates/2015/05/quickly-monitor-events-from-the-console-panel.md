@@ -17,4 +17,3 @@ description: You can log all the events dispatched to an object using the Comman
 You can log all the events dispatched to an object using the Command Line API method <strong>monitorEvents(object [, events])</strong>. The event objects are then logged to the Console. Useful when you need a reminder of the available properties on the event object.﻿
 
 
-{% include "comment-widget.html" %}

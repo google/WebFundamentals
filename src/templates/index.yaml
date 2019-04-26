@@ -20,6 +20,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.0.url}}
+        classname: button button-primary
 
 
   - items:
@@ -30,6 +31,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.1.url}}
+        classname: button button-primary
     - heading: "{{articles.2.title}}"
       description: "{{{replace articles.2.description '"' '\"'}}}"
       {{#if articles.2.image }}image_path: {{articles.2.image}}{{/if}}
@@ -37,6 +39,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.2.url}}
+        classname: button button-primary
     - heading: "{{articles.3.title}}"
       description: "{{{replace articles.3.description '"' '\"'}}}"
       {{#if articles.3.image }}image_path: {{articles.3.image}}{{/if}}
@@ -44,6 +47,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.3.url}}
+        classname: button button-primary
 
 
   - items:
@@ -57,6 +61,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.4.url}}
+        classname: button button-primary
     - heading: "{{articles.5.title}}"
       description: "{{{replace articles.5.description '"' '\"'}}}"
       {{#if articles.5.image }}image_path: {{articles.5.image}}{{/if}}
@@ -64,6 +69,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.5.url}}
+        classname: button button-primary
     - heading: "{{articles.6.title}}"
       description: "{{{replace articles.6.description '"' '\"'}}}"
       {{#if articles.6.image }}image_path: {{articles.6.image}}{{/if}}
@@ -71,6 +77,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.6.url}}
+        classname: button button-primary
 
   - items:
     - custom_html: <hr>
@@ -83,6 +90,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.7.url}}
+        classname: button button-primary
     - heading: "{{articles.8.title}}"
       description: "{{{replace articles.8.description '"' '\"'}}}"
       {{#if articles.8.image }}image_path: {{articles.8.image}}{{/if}}
@@ -90,6 +98,7 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.8.url}}
+        classname: button button-primary
     - heading: "{{articles.9.title}}"
       description: "{{{replace articles.9.description '"' '\"'}}}"
       {{#if articles.9.image }}image_path: {{articles.9.image}}{{/if}}
@@ -97,17 +106,18 @@ landing_page:
       buttons:
       - label: Read more
         path: {{articles.9.url}}
+        classname: button button-primary
 
 
   - heading: More Updates
     classname: devsite-landing-row-100
     items:
     - description: >
-        <h4>{{articles.10.title}}</h4>
+        <h4><a href="{{articles.10.url}}">{{articles.10.title}}</a></h4>
         <p>{{{articles.10.description}}} <a href="{{articles.10.url}}">Read more</a></p>
-        <h4>{{articles.11.title}}</h4>
+        <h4><a href="{{articles.11.url}}">{{articles.11.title}}</a></h4>
         <p>{{{articles.11.description}}} <a href="{{articles.11.url}}">Read more</a></p>
-        <h4>{{articles.12.title}}</h4>
+        <h4><a href="{{articles.12.url}}">{{articles.12.title}}</a></h4>
         <p>{{{articles.12.description}}} <a href="{{articles.12.url}}">Read more</a></p>
         <h4>Even more</h4>
         <p>See more from the <a href="/web/{{section}}/{{articles.12.datePublishedYear}}/">archives</a>

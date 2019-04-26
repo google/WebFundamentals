@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60.
 
-{# wf_updated_on: 2018-07-19 #}
+{# wf_updated_on: 2019-03-21 #}
 {# wf_published_on: 2018-06-26 #}
-{# wf_tags: ux,chrome60,feature-policy #}
+{# wf_tags: ux,chrome60,chrome74,feature-policy #}
 {# wf_featured_image: /web/updates/images/generic/checklist.png #}
 {# wf_featured_snippet: Feature Policy allows developers to selectively enable, disable, and modify the behavior of certain APIs and features in the browser. It's like CSP, but for features! Shipped in Chrome 60. #}
 {# wf_blink_components: Blink>FeaturePolicy #}
@@ -208,16 +208,13 @@ This example would do the following:
 
 ## JavaScript API {: #js }
 
-Heads up: While Chrome 60 added support for the `Feature-Policy` HTTP header
-and the `allow` attribute on iframes, the [JavaScript API][jsapi] is still
-being fleshed out and is likely to change as it goes through the standardization
-process. You can enable the API using the
-`--enable-experimental-web-platform-features` flag in `chrome:flags`.
-{: .dogfood }
+While Chrome 60 added support for the `Feature-Policy` HTTP header and the
+`allow` attribute on iframes, the [JavaScript API][jsapi] was added in chrome
+74.
 
-Feature Policy includes a small [JavaScript API][jsapi] to allow client-side
-code to determine what features are allowed by a page or frame. You can access
-its goodies under `document.policy` for the main document or `frame.policy` for
+This API allows client-side code to determine which features are allowed by a
+page, frame, or browser. You can access its goodies under
+`document.featurePolicy` for the main document or `frame.featurePolicy` for
 iframes.
 
 ### Example {: #jsexample }
@@ -227,20 +224,25 @@ The example below illustrates the results of sending a policy of
 
 ```js
 /* @return {Array<string>} List of feature policies allowed by the page. */
-document.policy.allowedFeatures();
+document.featurePolicy.allowedFeatures();
 // → ["geolocation", "midi",  "camera", "usb", "autoplay",...]
 
 /* @return {boolean} True if the page allows the 'geolocation' feature. */
-document.policy.allowsFeature('geolocation');
+document.featurePolicy.allowsFeature('geolocation');
 // → true
 
 /* @return {boolean} True if the provided origin allows the 'geolocation' feature. */
-document.policy.allowsFeature('geolocation', 'https://google-developers.appspot.com/');
+document.featurePolicy.allowsFeature('geolocation', 'https://google-developers.appspot.com/');
 // → false
+
+/* @return {Array<string>} List of feature policies allowed by the browser
+regardless of whether they are in force. */
+document.featurePolicy.features();
+// → ["geolocation", "midi",  "camera", "usb", "autoplay",...]
 
 /* @return {Array<string>} List of origins (used throughout the page) that are
    allowed to use the 'geolocation' feature. */
-document.policy.getAllowlistForFeature('geolocation');
+document.featurePolicy.getAllowlistForFeature('geolocation');
 // → ["https://example.com"]
 ```
 
@@ -260,7 +262,7 @@ For now, there are a couple of ways to see what features are controllable.
 -  Check [Chrome's source](https://cs.chromium.org/chromium/src/third_party/blink/renderer/platform/feature_policy/feature_policy.cc?l=138&rcl=ab90b51c5b60de15054a32b0bd18e4839536a1c9)
   for the list of feature names.
 - If you have the `--enable-experimental-web-platform-features` flag turned on
-  in `chrome:flags`, query `document.policy.allowedFeatures()` on `about:blank`
+  in `chrome:flags`, query `document.featurePolicy.allowedFeatures()` on `about:blank`
   to find the list:
 
         ["geolocation",
@@ -311,7 +313,8 @@ to guarantee a certain UX for users.
 #### Is there a way to report policy violations to my server? {: #report }
 
 A [Reporting API](https://github.com/WICG/feature-policy/blob/master/reporting.md)
-is in the works! Similar to how sites can opt-in to receiving reports about
+is [in the works](https://github.com/WICG/feature-policy/blob/master/reporting.md)!
+Similar to how sites can opt-in to receiving reports about
 [CSP violations](https://www.chromestatus.com/feature/5826576096690176) or
 [deprecations](https://www.chromestatus.com/feature/4691191559880704), you'll
 be able to receive reports about feature policy violations in the wild.
@@ -361,9 +364,7 @@ since it can help avoid potential footguns before they sneak into your codebase.
 
 {% include "web/_shared/rss-widget-updates.html" %}
 
-{% include "comment-widget.html" %}
-
-[spec]: https://wicg.github.io/feature-policy/
+[spec]: https://wicg.github.io/webappsec-feature-policy/
 [jsapi]: https://www.chromestatus.com/features/5190687460950016
 [chromestatus]: https://www.chromestatus.com/features/5694225681219584
 [chromestatusfilter]: https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy

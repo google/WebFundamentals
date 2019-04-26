@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to generate a complete service worker with workbox-build.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-18 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 
 # Generate a Service Worker with workbox-build {: .page-title }
@@ -81,7 +81,7 @@ const buildSW = () => {
       urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
       // Apply a cache-first strategy.
-      handler: 'cacheFirst',
+      handler: 'CacheFirst',
 
       options: {
         // Use a custom cache name.

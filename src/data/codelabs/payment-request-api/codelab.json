@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2018-05-15T18:38:15Z",
+  "updated": "2018-09-12T15:29:52Z",
   "id": "payment-request-api",
   "duration": 44,
   "title": "Frictionless payment with Payment Request API",
@@ -14,10 +14,12 @@
     "draft"
   ],
   "category": [
-    "Web"
+    "Web",
+    "Ads"
   ],
   "tags": [
     "cds17",
+    "devfest18",
     "io2017",
     "kiosk",
     "web"

@@ -78,4 +78,3 @@ We're looking forward to having you with us you for 2 days of web fun, soon!
 Don't forget to join the social conversation at
 [#ChromeDevSummit](https://twitter.com/search?q=%23ChromeDevSummit).
 
-{% include "comment-widget.html" %}

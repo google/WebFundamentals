@@ -1,18 +1,5 @@
 {
   "initMap": true,
-  "filters_": {
-    "vertical": [
-      "Agency",
-      "Education",
-      "News",
-      "Other",
-      "Social"
-    ],
-    "region": [
-      "Asia",
-      "Europe"
-    ]
-  },
   "data": [
     {
       "agency_name": "Enovate",
@@ -106,7 +93,6 @@
       "projects": [
         {
           "url": "http://m.pitchersapp.com",
-          "client_name": "",
           "vertical": [
             "Social"
           ],
@@ -148,7 +134,6 @@
       "projects": [
         {
           "url": "https://shippingreport.com/",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -156,7 +141,6 @@
         },
         {
           "url": "https://www.featurist.co.uk/",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -167,8 +151,8 @@
       "contact": "enquiries@featurist.co.uk",
       "image_url": "/web/agencies/images/featurist_ltd.png",
       "vertical": [
-        "Other",
-        "Agency"
+        "Agency",
+        "Other"
       ],
       "locations_view": [
         {
@@ -199,7 +183,6 @@
       "projects": [
         {
           "url": "https://closecircle-dev.yfs.io",
-          "client_name": "",
           "vertical": [
             "Other"
           ],
@@ -241,7 +224,6 @@
       "projects": [
         {
           "url": "https://new-hex.staging.tegu.hexdigital.com",
-          "client_name": "",
           "vertical": [
             "Agency"
           ],
@@ -283,7 +265,6 @@
       "projects": [
         {
           "url": "https://praybox.info/",
-          "client_name": "",
           "vertical": [
             "Social"
           ],
@@ -325,7 +306,6 @@
       "projects": [
         {
           "url": "https://tse.support",
-          "client_name": "",
           "vertical": [
             "Education"
           ],
@@ -367,9 +347,8 @@
       "projects": [
         {
           "url": "https://mobi.uttamhindu.com/",
-          "client_name": "",
           "vertical": [
-            "News"
+            "Media"
           ],
           "lighthouse_score": 100
         }
@@ -378,13 +357,15 @@
       "contact": "mobile@readwhere.com",
       "image_url": "/web/agencies/images/mediology_software_readwhere_cms.png",
       "vertical": [
-        "News"
+        "Media"
       ],
       "locations_view": [
         {
           "country_name": "India",
           "cities": [
-            "Delhi"
+            "Delhi",
+            "Hyderabad",
+            "Chennai"
           ]
         }
       ],
@@ -396,8 +377,613 @@
             "lat": 28.7040592,
             "lng": 77.10249019999999
           }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Hyderabad",
+          "geo": {
+            "lat": 17.385044,
+            "lng": 78.486671
+          }
+        },
+        {
+          "country_name": "India",
+          "city_name": "Chennai",
+          "geo": {
+            "lat": 13.0826802,
+            "lng": 80.2707184
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Wunderman",
+      "region": [
+        "Asia"
+      ],
+      "description": "The Wunderman network in Greater China includes Wunderman, AGENDA and Blast Radius, with 9 offices in Beijing, Shanghai, Guangzhou, Hong Kong and Taipei.",
+      "website": "http://wunderman.com.cn",
+      "projects": [
+        {
+          "url": "https://www.victoriassecretcn.com/html/index.html",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 88
+        }
+      ],
+      "max_lighthouse_score": 88,
+      "contact": "contacts@wunderman.com",
+      "image_url": "/web/agencies/images/wunderman.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": [
+            "Shanghai"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Uasoft",
+      "region": [
+        "Asia"
+      ],
+      "description": "Uasoft is digital agency based in Jakarta, Indonesia. We connect brands and businesses with their markets through the digital medium. We are trusted by various brands and companies to build valuable, functional, and beautiful digital applications.",
+      "website": "https://soft.uatech.co.id/",
+      "projects": [
+        {
+          "url": "https://cariharga.co.id",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@uatech.co.id",
+      "image_url": "/web/agencies/images/uasoft.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": [
+            "Jakarta"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Jakarta",
+          "geo": {
+            "lat": -6.180495,
+            "lng": 106.8283415
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "DigiFutura",
+      "region": [
+        "Asia"
+      ],
+      "description": "Award Winning Web & Mobile App Development Company. Think With Google case Study: https://developers.google.com/web/showcase/2016/housing",
+      "website": "https://www.digifutura.com/",
+      "projects": [
+        {
+          "url": "https://housing.com/in/",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 92
+        }
+      ],
+      "max_lighthouse_score": 92,
+      "contact": "raghav@digifutura.com",
+      "image_url": "/web/agencies/images/digifutura.png",
+      "vertical": [
+        "Other"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Vietnam",
+          "cities": [
+            "Ho Chi Minh City"
+          ]
+        },
+        {
+          "country_name": "India",
+          "cities": [
+            "Bangalore"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "GIMC Chance",
+      "region": [
+        "Asia"
+      ],
+      "description": "Chance Ads is a leading mobile driven agency in China. It was acquired by GIMC in 2017. GIMC is the first advertising company and currently is also the largest local marketing communications group in China.  It has more than 300 well-known clients. In 2010, it was public listed on “Small and Medium Enterprise Board” in the Shenzhen stock exchange (stock code: 002400) as “The First Shares of Chinese Advertising”. \n",
+      "website": "http://www.cocounion.com/",
+      "projects": [
+        {
+          "url": "https://pwa.coculm.cn/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 96
+        }
+      ],
+      "max_lighthouse_score": 96,
+      "contact": "lingyun.zhang@chance-ad.com",
+      "image_url": "/web/agencies/images/gimc_chance.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "China",
+          "cities": [
+            "Shanghai",
+            "Beijing"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "China",
+          "city_name": "Shanghai",
+          "geo": {
+            "lat": 31.2303904,
+            "lng": 121.4737021
+          }
+        },
+        {
+          "country_name": "China",
+          "city_name": "Beijing",
+          "geo": {
+            "lat": 39.90419989999999,
+            "lng": 116.4073963
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Lunar Works",
+      "region": [
+        "Europe"
+      ],
+      "description": "Lunar Works Lab Ltd create impactful websites and digital platforms using cutting edge technologies. Driven by their creativity and passion for their projects, they are always looking to help businesses succeed in their market.",
+      "website": "https://lunarworks.co.uk",
+      "projects": [
+        {
+          "url": "https://lunarworks.co.uk",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        },
+        {
+          "url": "https://aurora.lunarworks.co.uk/",
+          "vertical": [
+            "Other"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "launch@lunarworks.co.uk",
+      "image_url": "/web/agencies/images/lunar_works.png",
+      "vertical": [
+        "Agency",
+        "Other"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United Kingdom",
+          "cities": [
+            "Tenterden"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United Kingdom",
+          "city_name": "Tenterden",
+          "geo": {
+            "lat": 51.069358,
+            "lng": 0.689122
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Elephants Can Dance",
+      "region": [
+        "Asia"
+      ],
+      "description": "We deliver beautiful experiences and digital happiness for medium and large enterprises. We believe building big, diverse digital platforms can be simple, rewarding, amazing, successful, enjoyable and even fun.",
+      "website": "https://www.elephantscandance.com.au/",
+      "projects": [
+        {
+          "url": "https://www.elephantscandance.com.au/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@ecddigital.com.au",
+      "image_url": "/web/agencies/images/elephants_can_dance.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Australia",
+          "cities": [
+            "Sydney"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Australia",
+          "city_name": "Sydney",
+          "geo": {
+            "lat": -33.8688197,
+            "lng": 151.2092955
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Asial",
+      "region": [
+        "Asia"
+      ],
+      "description": "Asial has been a leading Web and Mobile App development agency over a decade, based in Tokyo. It provides end-to-end services from design, front-end to server-side development.\nAsial’s mobile app development platform, Monaca, has been used by Web developers around the world to create iOS and Android apps as well as PWAs. Asial also open-sources its popular mobile UI framework, Onsen UI, that can be used with any JavaScript frameworks.",
+      "website": "https://www.asial.co.jp/",
+      "projects": [
+        {
+          "url": "https://press.monaca.io/",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "info@monaca.mobi",
+      "image_url": "/web/agencies/images/asial.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "iret",
+      "region": [
+        "Asia"
+      ],
+      "description": "iret, Inc.specializes in web system and application development. There are 3 locations - Tokyo, Osaka, and Nagoya – which provide an \"one-stop\" service from AMP designing to PWA development.",
+      "website": "https://www.iret.co.jp/",
+      "projects": [
+        {
+          "url": "https://cloudpack.media/",
+          "vertical": [
+            "Media"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "sales@cloudpack.jp",
+      "image_url": "/web/agencies/images/iret.png",
+      "vertical": [
+        "Media"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo",
+            "Osaka",
+            "Nagoya"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
+        },
+        {
+          "country_name": "Japan",
+          "city_name": "Osaka",
+          "geo": {
+            "lat": 34.6937378,
+            "lng": 135.5021651
+          }
+        },
+        {
+          "country_name": "Japan",
+          "city_name": "Nagoya",
+          "geo": {
+            "lat": 35.1814464,
+            "lng": 136.906398
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "MobX",
+      "region": [
+        "Europe"
+      ],
+      "description": "We build and ship your amazing App or Mobile Site (PWA) - with international expertise from the heart of Berlin. Pick any service from Conception, UX/UI Product Design, Development up to Rollout and Support - We got it covered.",
+      "website": "https://mobx.app/",
+      "projects": [
+        {
+          "url": "https://www.tajawal.ae/en",
+          "vertical": [
+            "Travel"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "contact@mobx.app",
+      "image_url": "/web/agencies/images/mobx.png",
+      "vertical": [
+        "Travel"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Germany",
+          "cities": [
+            "Berlin"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Germany",
+          "city_name": "Berlin",
+          "geo": {
+            "lat": 52.52000659999999,
+            "lng": 13.404954
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "digitalDot Servicios Informáticos SL",
+      "region": [
+        "Europe"
+      ],
+      "description": "DigitalDot Servicios Informáticos, provide all services related web design, app development, ecommerce design, SEO and Marketing Strategy.\nSpecialises in cross-platform mobile application development, expertise spans native application development, hybrid applications and Progressive Web Apps.",
+      "website": "https://www.digitaldot.es",
+      "projects": [
+        {
+          "url": "https://www.digitaldot.es",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "info@digitaldot.es",
+      "image_url": "/web/agencies/images/digitaldot_servicios_informaticos_sl.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Spain",
+          "cities": [
+            "Murcia"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Spain",
+          "city_name": "Murcia",
+          "geo": {
+            "lat": 37.9922399,
+            "lng": -1.1306544
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "NETARUM",
+      "region": [
+        "Europe"
+      ],
+      "description": "We are a Brussels-based web agency specializing in PWAs. We create applications that run on all major platforms, mobile and desktop, are installable, support push notifications, and are partly or fully available offline, as well as supporting many other \"native\" functions. Welcome to the modern web!",
+      "website": "https://www.netarum.com",
+      "projects": [
+        {
+          "url": "https://www.netarum.com",
+          "vertical": [
+            "Agency"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "hello@netarum.com",
+      "image_url": "/web/agencies/images/netarum.png",
+      "vertical": [
+        "Agency"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Belgium",
+          "cities": [
+            "Ixelles"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Belgium",
+          "city_name": "Ixelles",
+          "geo": {
+            "lat": 50.83334319999999,
+            "lng": 4.3666294
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "PT. LOGIQUE Digital Indonesia",
+      "region": [
+        "Asia"
+      ],
+      "description": "LOGIQUE has the experience and quality you need in developing website, web systems, mobile applications for today's digital business trends. We have collaborated with many international clients for various needs.",
+      "website": "https://www.logique.co.id",
+      "projects": [
+        {
+          "url": "https://m.vipplaza.co.id",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 83
+        }
+      ],
+      "max_lighthouse_score": 83,
+      "contact": "info@logique.co.id",
+      "image_url": "/web/agencies/images/pt_logique_digital_indonesia.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Indonesia",
+          "cities": [
+            "Jakarta"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Indonesia",
+          "city_name": "Jakarta",
+          "geo": {
+            "lat": -6.180495,
+            "lng": 106.8283415
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "IMJ Corporation",
+      "region": [
+        "Asia"
+      ],
+      "description": "IMJ is one of the largest Full Service Digital Agencies in Japan which executes 5,800 projects for over 300 clients annually. IMJ together with Accenture Interactive brings leading-edge creativity, deep knowledge in advanced digital technology and consulting capabilities, providing seamless, end-to-end digital marketing services. It also redefines, re-creates and re-invents the experience value in consumers, businesses and society, and upgrades each \"experience\" to the next stage. ",
+      "website": "https://www.imjp.co.jp/",
+      "projects": [
+        {
+          "url": "https://backyard.imjp.co.jp/static/common/amp/recommend/",
+          "vertical": [
+            "Media"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "sl-info@imjp.co.jp",
+      "image_url": "/web/agencies/images/imj_corporation.png",
+      "vertical": [
+        "Media"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Japan",
+          "cities": [
+            "Tokyo"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Japan",
+          "city_name": "Tokyo",
+          "geo": {
+            "lat": 35.6894875,
+            "lng": 139.6917064
+          }
         }
       ]
     }
-  ]
+  ],
+  "filters_": {
+    "vertical": [
+      "Agency",
+      "Education",
+      "Media",
+      "Other",
+      "Retail",
+      "Social",
+      "Travel"
+    ],
+    "region": [
+      "Asia",
+      "Europe"
+    ]
+  }
 }

@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-range-requests.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-27 #}
 
 # Workbox Range Requests {: .page-title }
@@ -31,14 +31,18 @@ strategy you want to check for range requests against.
 
 ```javascript
 workbox.routing.registerRoute(
-  /.*.mp4/,
-  workbox.strategies.cacheFirst({
+  /\.mp4$/,
+  new workbox.strategies.CacheFirst({
     plugins: [
       new workbox.rangeRequests.Plugin(),
     ],
   });
 );
 ```
+
+Note: There are some additional considerations to take into account when serving
+cached media content. Read more in the
+["Serve cached audio and video" recipe](/web/tools/workbox/guides/advanced-recipes#cached-av)
 
 ## Advanced Usage
 

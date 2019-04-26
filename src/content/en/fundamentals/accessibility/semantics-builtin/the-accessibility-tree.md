@@ -3,7 +3,8 @@ book_path: /web/fundamentals/_book.yaml
 description: Introduction to the Accessibility Tree
 
 
-{# wf_updated_on: 2016-10-04 #}
+{# wf_blink_components: Blink>Accessibility #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-10-04 #}
 
 # The Accessibility Tree {: .page-title }
@@ -187,4 +188,6 @@ Success: You can actually use the screen reader to find improperly-associated
 labels by tabbing through the page and verifying the spoken roles, states, and
 names.
 
+## Feedback {: #feedback }
 
+{% include "web/_shared/helpful.html" %}

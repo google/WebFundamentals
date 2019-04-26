@@ -43,7 +43,7 @@ Things to note about Service Worker:
 
 
 
-Note: Services like <a href=" [https://letsencrypt.org/](https://letsencrypt.org/)">Let's Encrypt</a> let you procure SSL certificates for free to install on your server.
+Note: Services like [https://letsencrypt.org/](https://letsencrypt.org/) let you procure SSL certificates for free to install on your server.
 
 
 

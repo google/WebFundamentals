@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more.
-experiments_path: /web/updates/2018/05/_experiments.yaml
 
-{# wf_updated_on: 2018-07-17 #}
+{# experiments_path: /web/updates/2018/05/_experiments.yaml #}
+
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-05-21 #}
 {# wf_tags: chrome68,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -95,17 +96,17 @@ Notes:
 * A question mark before an arg, such as `?options`, represents an
   [optional][optional]{:.external} arg.
 * An ellipsis before an arg, such as `...items`, represents a [spread][spread]{:.external}.
-* Some functions, such as `CSS.supports()`, accept multiple argument signatures. 
+* Some functions, such as `CSS.supports()`, accept multiple argument signatures.
 
 [optional]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
-[spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
+[spread]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
 ### Autocomplete after function executions {: #autocomplete }
 
 Note: This feature depends on [Eager Evaluation](#eagerevaluation), which needs to be enabled
 from **Console Settings** ![Console Settings][settings]{:.inline-icon}.
 
-After enabling Eager Evaluation, the Console now also shows you which which properties and
+After enabling Eager Evaluation, the Console now also shows you which properties and
 functions are available after you type out a function.
 
 <figure>
@@ -298,11 +299,4 @@ fixed within a day. You can go back to using Chrome Stable while Canary is broke
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
-
-{% include "web/_shared/rss-widget-updates.html" %}
+<<../../_shared/discover.md>>

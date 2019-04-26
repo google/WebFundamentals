@@ -26,4 +26,3 @@ Do you frequently emulate devices of a certain dimension? In DevTools Device Mod
 You can now find your device in the top left corner from the 'Device' dropdown option.
 
 
-{% include "comment-widget.html" %}

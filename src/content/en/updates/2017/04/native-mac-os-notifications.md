@@ -142,4 +142,3 @@ no longer be used on macOS.
   </figcaption>
 </figure>
 
-{% include "comment-widget.html" %}

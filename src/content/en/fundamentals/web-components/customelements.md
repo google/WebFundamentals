@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2018-07-11 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-28 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -977,12 +977,11 @@ article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){:
 
 ### Browser support
 
-Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) and
-Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)) have
-Custom Elements v1. Edge has [begun
-prototyping](https://twitter.com/AaronGustafson/status/717028669948977153).
-Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230)
-to implement.
+Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)),
+Safari 10.1 ([status](https://webkit.org/status/#feature-custom-elements)), and
+Firefox 63 ([status](https://platform-status.mozilla.org/#custom-elements)) have
+Custom Elements v1. Edge has [begun 
+development](https://developer.microsoft.com/microsoft-edge/platform/status/customelements/).
 
 To feature detect custom elements, check for the existence of
 `window.customElements`:
@@ -1058,3 +1057,7 @@ picture of Web Components:
 
 [spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

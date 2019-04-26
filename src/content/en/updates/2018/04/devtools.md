@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Search across network headers, copy requests as fetch, audit pages using desktop conditions, and much more.
-experiments_path: /web/updates/2018/04/_experiments.yaml
 
-{# wf_updated_on: 2018-05-03 #}
+{# experiments_path: /web/updates/2018/04/_experiments.yaml #}
+
+{# wf_updated_on: 2018-12-03 #}
 {# wf_published_on: 2018-04-11 #}
 {# wf_tags: chrome67,devtools,devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -191,7 +192,7 @@ an infinite loop by mistake while developing your site. To stop the infinite loo
   <iframe class="devsite-embedded-youtube-video" data-video-id="haFYwEBjaTo"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
-</div> 
+</div>
 
 In the video above, the clock is being updated via a `setInterval()` timer. Clicking
 **Start Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because
@@ -395,11 +396,4 @@ fixed within a day. You can go back to using Chrome Stable while Canary is broke
 
 [canary]: https://www.google.com/chrome/browser/canary.html
 
-## Previous release notes {: #links }
-
-See the [devtools-whatsnew][tag] tag for links to all previous DevTools
-release notes.
-
-[tag]: /web/updates/tags/devtools-whatsnew
-
-{% include "web/_shared/rss-widget-updates.html" %}
+<<../../_shared/discover.md>>

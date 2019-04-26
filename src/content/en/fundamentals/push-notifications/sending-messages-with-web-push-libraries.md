@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-05-01 #}
+{# wf_updated_on: 2018-09-20 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 # Sending Messages with Web Push Libraries {: .page-title }
@@ -290,3 +290,7 @@ Regardless of your backend (Node, PHP, Python, ...) the steps for implementing p
 to be the same.
 
 Next up, what exactly are these web-push libraries doing for us?
+
+## Feedback {: #feedback }
+
+{% include "web/_shared/helpful.html" %}

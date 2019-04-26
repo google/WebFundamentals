@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: User-centric Performance Metrics
 
-{# wf_updated_on: 2018-02-06 #}
+{# wf_updated_on: 2018-08-17 #}
 {# wf_published_on: 2017-06-01 #}
 {# wf_tags: performance #}
 {# wf_blink_components: Blink>PerformanceAPIs #}
@@ -775,6 +775,8 @@ delight their users and create great applications.
 
 ## Staying connected
 
+{% include "web/_shared/helpful.html" %}
+
 File spec issues:
 
 * [https://github.com/w3c/longtasks/issues](https://github.com/w3c/longtasks/issues)
@@ -794,4 +796,3 @@ Voice your support on concerns on new API proposals:
 
 * [https://github.com/w3c/charter-webperf/issues](https://github.com/w3c/charter-webperf/issues)
 
-{% include "comment-widget.html" %}

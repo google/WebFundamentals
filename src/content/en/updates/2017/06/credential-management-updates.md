@@ -307,4 +307,3 @@ migration guide
 doc](https://docs.google.com/document/d/154cO-0d5paDFfhN79GNdet1VeMUmELKhNv3YHvVSOh8/edit)
 you can follow to upgrade to the new version.
 
-{% include "comment-widget.html" %}

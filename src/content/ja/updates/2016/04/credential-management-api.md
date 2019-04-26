@@ -365,4 +365,3 @@ mediation モードを有効にすることができます。
 Translated By:
 {% include "web/_shared/contributors/yoichiro.html" %}
 
-{% include "comment-widget.html" %}

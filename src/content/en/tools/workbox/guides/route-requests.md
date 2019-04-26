@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to route requests with Workbox.
 
-{# wf_updated_on: 2018-03-13 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -40,7 +40,7 @@ workbox.routing.registerRoute(
 
 The only thing to be wary of is that this would only match for requests
 on your origin. If there was a separate site that had the URL
-"https://some-other-origin.com/logo.png", this route wouldn’t match, because
+`https://some-other-origin.com/logo.png`, this route wouldn’t match, because
 in most cases, that’s not what was intended. Instead you’d need to define
 the entire URL to match.
 
@@ -53,48 +53,63 @@ workbox.routing.registerRoute(
 
 ## Matching a Route with a Regular Expression
 
-When you have a set of URLs that you want to route as a group, Regular
-Expressions are the best way to go.
+When you have a set of URLs that you want to route as a group, regular
+expressions are the best way to go.
 
-The regular expression needs to match part of the URL to be treated as a
-match for that route. This provides a lot of flexibility as to how you use it.
+The regular expression provided is tested against the full URL. If there's a match, the route will
+be triggered. This provides a lot of flexibility as to how you use it.
 If we wanted to route specific file extensions we could write routes such as:
 
 ```javascript
 workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
+  new RegExp('\\.js$'),
   jsHandler
 );
 
 workbox.routing.registerRoute(
-  new RegExp('.*\.css'),
+  new RegExp('\\.css$'),
   cssHandler
 );
 ```
 
-Or you can write regular expressions that test for a specific URL format, for
-example a blog that follows the format `/blog/<year>/<month>/<post title slug>`.
+Or you can write regular expressions that test for a specific URL format: for
+example, a blog that follows the format `/blog/<year>/<month>/<post title slug>`:
 
 ```javascript
 workbox.routing.registerRoute(
-  /\/blog\/\d\d\d\d\/\d\d\/.+/,
+  new RegExp('/blog/\\d{4}/\\d{2}/.+'),
   handler
 );
 ```
 
-Just like the string matching, requests for different origins are treated
-differently. Instead of needing match a part of the URL, it must match from
-the beginning of the URL. For example,
-`https://some-other-origin.com/blog/<year>/<month>/<post title slug>` would
-need to match against "https://some-other-origin.com" as well as the path
-name. So we’d have to change our regular expression to something like the
-following if we wanted to capture both same origin and third party origin
-requests:
+Just like with string matching, requests for different origins are treated differently. Instead of
+matching against any part of the URL, the regular expression must match from
+the beginning of the URL in order to trigger a route when there's a cross-origin request.
+
+For example, the previous regular expression `new RegExp('/blog/\\d{4}/\\d{2}/.+')` would not match
+a request for `https://some-other-origin.com/blog/<year>/<month>/<post title slug>`. If we wanted a
+route that would match that general path pattern made against both same- and cross-origin requests,
+using a regular expression with a wildcard (`.+`)at the start is one approach:
 
 ```javascript
 workbox.routing.registerRoute(
-  /(?:https:\/\/.*)?\/blog\/\d\d\d\d\/\d\d\/.+/,
+  new RegExp('.+/blog/\\d{4}/\\d{2}/.+'),
   handler
+);
+```
+
+Similarly, if we wanted to take the previous examples that matched CSS or JS URLs and have them
+apply to both same- and cross-origin requests, they can be modified to add in a wildcard:
+
+```javascript
+workbox.routing.registerRoute(
+  new RegExp('.+\\.js$'),
+  jsHandler
+);
+
+workbox.routing.registerRoute(
+  new RegExp('.+\\.css$'),
+  cssHandler
 );
 ```
 
@@ -159,27 +174,27 @@ Using these as your `handler` can be done like so:
 ```javascript
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.staleWhileRevalidate()
+  new workbox.strategies.StaleWhileRevalidate()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.networkFirst()
+  new workbox.strategies.NetworkFirst()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.cacheFirst()
+  new workbox.strategies.CacheFirst()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.networkOnly()
+  new workbox.strategies.NetworkOnly()
 );
 
 workbox.routing.registerRoute(
   match,
-  workbox.strategies.cacheOnly()
+  new workbox.strategies.CacheOnly()
 );
 ```
 
@@ -187,11 +202,11 @@ With each strategy you can customize the behavior of the Route by defining
 a custom cache to use and / or adding plugins.
 
 ```javascript
-workbox.strategies.staleWhileRevalidate({
-   // Use a custom cache for this route
+new workbox.strategies.StaleWhileRevalidate({
+   // Use a custom cache for this route.
   cacheName: 'my-cache-name',
 
-  // Add an array of custom plugins (like workbox.expiration.Plugin)
+  // Add an array of custom plugins (like workbox.expiration.Plugin).
   plugins: [
     ...
   ]
@@ -204,13 +219,14 @@ device is limited).
 
 ## Handling a Route with a Custom Callback
 
-There may be scenarios where you’d like to respond to a request with a
-different strategy of your own or simply generating the request in the
-service worker with templating. For this you can provide a function and
-it’ll be called with an object containing the request url and `FetchEvent`.
+There may be scenarios where you’d like to respond to a request with a different
+strategy of your own or simply generating the request in the service worker with
+templating. For this you can provide an `async`function which returns a
+`Response` object. It'll be called with a parameter object containing `url` and
+`event` (the `FetchEvent`) properties.
 
 ```javascript
-const handler = ({url, event}) => {
+const handler = async ({url, event}) => {
   return new Response(`Custom handler response.`);
 };
 
@@ -228,10 +244,10 @@ const match = ({url, event}) => {
   };
 };
 
-const handler = ({url, event, params}) => {
-   // Response will be “A guide on Workbox”
+const handler = async ({url, event, params}) => {
+   // Response will be "A guide to Workbox"
   return new Response(
-    `A ${params.type} on ${params.name}`
+    `A ${params.type} to ${params.name}`
   );
 };
 
@@ -239,4 +255,4 @@ workbox.routing.registerRoute(match, handler);
 ```
 
 This may be helpful if there are pieces of information in the URL that can
-be parsed once in the *match* callback and used in your *handler*.
+be parsed once in the `match` callback and used in your `handler`.

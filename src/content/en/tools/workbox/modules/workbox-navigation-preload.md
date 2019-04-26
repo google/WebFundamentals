@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-navigation-preload.
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2019-02-01 #}
 {# wf_published_on: 2018-07-12 #}
 
 # Workbox Navigation Preload {: .page-title }
@@ -45,8 +45,8 @@ HTML will be used unconditionally.
 // Enable navigation preload.
 workbox.navigationPreload.enable();
 
-// Swap in networkOnly, cacheFirst, or staleWhileRevalidate as needed.
-const strategy = workbox.strategies.networkFirst({
+// Swap in NetworkOnly, CacheFirst, or StaleWhileRevalidate as needed.
+const strategy = new workbox.strategies.NetworkFirst({
   cacheName: 'cached-navigations',
   plugins: [
     // Any plugins, like workbox.expiration, etc.

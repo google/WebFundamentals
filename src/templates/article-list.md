@@ -10,19 +10,19 @@ book_path: /web/{{section}}/_book.yaml
 
 {{#each articles}}
 
-## {{ title }}
+## [{{ title }}]({{url}})
 
 <div class="attempt-right">
-  {{#if image}}
-    <img src="{{image}}">
-  {{else}}
-    <img src="/web/updates/images/generic/star.png">
-  {{/if}}
+  <a href="{{url}}">
+    {{#if image}}
+      <img src="{{image}}">
+    {{else}}
+      <img src="/web/updates/images/generic/star.png">
+    {{/if}}
+  </a>
 </div>
 
 {{{description}}}
-
-[Read more]({{url}})
 
 {{#if author}}
 [{{author}}](/web/resources/contributors#{{author}})
@@ -30,8 +30,11 @@ book_path: /web/{{section}}/_book.yaml
 {{published}}
 
 {{#if tags}}
-Tags: {{#each tags}}[{{this}}](/web/{{../../section}}/tags/{{this}}) {{/each}}
+<span class="material-icons">local_offer</span>
+{{#each tags}}[`{{this}}`](/web/{{../../section}}/tags/{{this}}) {{/each}}
 {{/if}}
+
+[Read article]({{url}}){: .button .button-primary }
 
 <div style="clear:both"></div>
 

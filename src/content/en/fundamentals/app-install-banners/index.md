@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2018-07-24 #}
+{# wf_updated_on: 2019-03-19 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -11,25 +11,30 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 {% include "web/_shared/contributors/petelepage.html" %}
 
 
-**Add to Home Screen**, sometimes referred to as the web app install prompt
+**Add to Home Screen**, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
-or desktop device. When installed, it adds your PWA to to their launcher,
-and runs it like any other installed app.
+or [desktop device](/web/progressive-web-apps/desktop). After the user
+accepts the prompt, your PWA will be added to their launcher, and it will run
+like any other installed app.
 
-Chrome handles most of the heavy lifting for you, and on Android, Chrome will
-generate a [WebAPK](/web/fundamentals/integration/webapks) creating an even
-more integrated experience for your users.
+Chrome handles most of the heavy lifting for you:
 
-## What is the criteria? {: #criteria }
+* On mobile, Chrome will generate a
+  [WebAPK](/web/fundamentals/integration/webapks), creating an even
+  more integrated experience for your users.
+* On desktop, your app will installed, and run in an
+  [app window](/web/progressive-web-apps/desktop#app-window).
+
+## What are the criteria? {: #criteria }
 
 {% include "web/fundamentals/app-install-banners/_a2hs-criteria.html" %}
 
-If the web app manifest includes <code>related_applications</code> and
+Note: If the web app manifest includes <code>related_applications</code> and
 has <code>"prefer_related_applications": true</code>, the
 <a href="/web/fundamentals/app-install-banners/native">native app install
 prompt</a> will be shown instead.
 
-## Show the add to home screen dialog {: #trigger }
+## Show the Add to Home Screen dialog {: #trigger }
 
 <figure class="attempt-right">
   <img src="images/a2hs-dialog-g.png" alt="Add to Home Screen dialog on Android">
@@ -46,7 +51,7 @@ In order to show the Add to Home Screen dialog, you need to:
 
 <div class="clearfix"></div>
 
-Note: Chrome 67 and earlier showed an add to home screen banner, the banner
+Note: Chrome 67 and earlier showed an "Add to home screen" banner. It
 was removed in Chrome 68.
 
 ### Listen for `beforeinstallprompt`
@@ -117,32 +122,11 @@ shown and the user has responded to it.
         });
     });
 
-You can only call `prompt()` on the deferred event once, if the user dismissed
+You can only call `prompt()` on the deferred event once. If the user dismisses
 it, you'll need to wait until the `beforeinstallprompt` event is fired on
 the next page navigation.
 
-## The mini-info bar
-
-<figure class="attempt-right">
-  <img
-      class="screenshot"
-      src="/web/updates/images/2018/06/a2hs-infobar-cropped.png">
-  <figcaption>
-    The mini-infobar
-  </figcaption>
-</figure>
-
-The mini-infobar is an interim experience for Chrome on Android as we work
-towards creating a consistent experience across all platforms that includes
-an install button into the omnibox.
-
-The mini-infobar is a Chrome UI component and is not controllable by the site,
-but can be easily dismissed by the user. Once dismissed by the user, it will
-not appear again until a sufficient amount of time has passed
-(currently 3 months). The mini-infobar will appear when the site meets the
-[add to home screen criteria](/web/fundamentals/app-install-banners/#criteria),
-regardless of whether you `preventDefault()` on the `beforeinstallprompt` event
-or not.
+<<_mini-info-bar.md>>
 
 ## Feedback {: .hide-from-toc }
 
@@ -152,7 +136,7 @@ or not.
 
 ## Determine if the app was successfully installed {: #appinstalled }
 
-To determine if the app was successfully added to the users home screen _after_
+To determine if the app was successfully added to the user's home screen _after_
 they accepted the prompt, you can listen for the `appinstalled` event.
 
     window.addEventListener('appinstalled', (evt) => {
@@ -194,13 +178,17 @@ use JavaScript to check:
 
 ## Updating your app's icon and name
 
-If you change any of the properties in your manifest, those changes will be
-reflected to the user after they've run your app again.
+### Android
 
-<aside class="note">
-  <b>Tip:</b> Icons may be cached, so it may be helpful to change the
-  filenames when updating icons or other graphics.
-</aside>
+On Android, when the WebAPK is launched, Chrome will check the currently
+installed manifest against the live manifest. If an update is required, it will
+be [queued and updated](/web/fundamentals/integration/webapks#update-webapk)
+once the device has is plugged in and connected to WiFi.
+
+### Desktop
+
+On Desktop, the manifest is not automatically updated, but this is planned
+for a future update.
 
 
 ## Test your add to home screen experience {: #test }
@@ -212,7 +200,7 @@ Chrome will throw an exception in the console, and the event will not be fired.
 
 Caution: Chrome has a slightly different install flow for desktop and mobile.
 Although the instructions are similar, testing on mobile <b>requires</b> remote
-debugging, without it, it will use the desktop install flow.
+debugging; without it, Chrome will use the desktop install flow.
 
 
 ### Chrome for Android
@@ -224,18 +212,12 @@ debugging, without it, it will use the desktop install flow.
 4. Click **Add to home screen**
 
 
-### Chrome OS
+### Chrome OS, Linux, or Windows
 
 1. Open Chrome DevTools
 2. Go to the **Application** panel.
 3. Go to the **Manifest** tab.
 4. Click **Add to home screen**
-
-
-Dogfood: To test the install flow for Desktop Progressive Web Apps on Mac or
-Windows, you'll need to <a href="/web/updates/2018/05/dpwa#getting-started">
-enable the <code>#enable-desktop-pwas</code> flag.</a>
-
 
 ### Will `beforeinstallprompt` be fired?
 

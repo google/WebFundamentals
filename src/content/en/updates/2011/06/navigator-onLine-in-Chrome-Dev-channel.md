@@ -35,4 +35,3 @@ A web app can also listen for `online` and `offline` events to determine when th
 I've posted a working demo at [http://html5-demos.appspot.com/static/navigator.onLine.html](http://html5-demos.appspot.com/static/navigator.onLine.html) and more information on offline events can be found in the [MDN](https://developer.mozilla.org/en/Online_and_offline_events).
 
 
-{% include "comment-widget.html" %}

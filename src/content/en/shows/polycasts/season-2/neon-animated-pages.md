@@ -41,6 +41,4 @@ Now that you understand behaviors, neon-animations, and how the iron-pages eleme
 <https://www.youtube.com/watch?v=YrlmieL3Z0k&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=4>
 
 - Polymer Slack: <http://bit.ly/polymerslack>
-- Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
 - [Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
-

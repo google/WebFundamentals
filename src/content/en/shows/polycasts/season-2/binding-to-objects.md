@@ -27,5 +27,4 @@ Binding to objects and subproperties has always confused me. Until now! Today on
 <https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#set-path>
 
 - Polymer Slack: <http://bit.ly/polymerslack>
-- Polymer G+ community: <https://plus.google.com/communities/115626364525706131031>
 - [Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

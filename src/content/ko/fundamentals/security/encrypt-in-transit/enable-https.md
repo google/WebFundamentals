@@ -299,11 +299,6 @@ HTTPS가 사이트에 액세스할 수 있는 가장 좋은 방법임을 검색 
 대부분의 웹 서버는 단순한 리디렉션 기능을 제공합니다. `301 (Moved Permanently)`를 사용하여
 검색 엔진 및 브라우저에 HTTPS 버전이 기본임을 알리고 사용자를 사이트의 HTTP 버전에서 HTTPS 버전으로 리디렉션하세요.
 
-## 마이그레이션 우려 사항
-
-대부분의 개발자는 HTTP에서 HTTPS로 마이그레이션에 대해 우려합니다.
-Google 웹마스터 팀에서 [우수한 안내 서비스](https://plus.google.com/+GoogleWebmasters/posts/eYmUYvNNT5J)를 제공합니다.
-
 ### 검색 순위
 
 Google은 [HTTPS를 긍정적인 검색 품질 지표로 사용합니다](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html).

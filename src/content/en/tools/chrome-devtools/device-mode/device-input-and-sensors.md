@@ -1,8 +1,9 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors.
+robots: noindex
 
-{# wf_updated_on: 2018-07-27 #}
+{# wf_updated_on: 2018-12-18 #}
 {# wf_published_on: 2015-04-13 #}
 {# wf_blink_components: Platform>DevTools #}
 
@@ -10,6 +11,11 @@ description: Touch screens, GPS chips, and accelerometers can be difficult to te
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
+
+<aside class="warning">
+  <b>This page is deprecated</b>. There are links to up-to-date documentation
+  throughout the page.
+</aside>
 
 GPS chips and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools Sensors emulation pane reduces the overhead of testing by emulating common mobile device sensors.
 
@@ -38,6 +44,10 @@ Note: If your app detects sensors onload using JavaScript (such as Modernizr), m
 
 ## Override geolocation data
 
+<aside class="warning">
+  <b>This page is deprecated</b>. See <a href="/web/tools/chrome-devtools/device-mode/geolocation">Override Geolocation</a>.
+</aside>
+
 Unlike desktops, mobile devices commonly use GPS hardware to detect location. In the Sensors pane, you can simulate geolocation coordinates to use with the <a href='http://www.w3.org/TR/geolocation-API/'>Geolocation API</a>.
 
 <div class="wf-devtools-flex">
@@ -52,6 +62,10 @@ Unlike desktops, mobile devices commonly use GPS hardware to detect location. In
 You can use this emulator to override position values for `navigator.geolocation`, as well as to simulate cases when geolocation data is unavailable.
 
 ## Emulate Accelerometer (Device Orientation)
+
+<aside class="warning">
+  <b>This page is deprecated</b>. See <a href="/web/tools/chrome-devtools/device-mode/orientation">Simulate Device Orientation</a>.
+</aside>
 
 <div class="wf-devtools-flex">
   <div>

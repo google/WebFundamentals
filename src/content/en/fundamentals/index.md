@@ -2,8 +2,9 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 page_type: landing
 
-{# wf_updated_on: 2017-09-10 #}
+{# wf_updated_on: 2018-08-05 #}
 {# wf_published_on: 2016-09-27 #}
+{# wf_blink_components: Blink>DOM #}
 
 <style>
   .wf-hot {padding-top: 0 !important;}
@@ -45,7 +46,7 @@ page_type: landing
             Users don’t expect janky scrolling or slow load performance. Making your
             site fast is a process that starts with understanding
             <a href="performance/rail">how RAIL affects the performance</a> of your
-            site and how use that to measure and improve your performance. 
+            site and how to use that to measure and improve your performance.
           </p>
           <ul>
             <li><span class="compare-yes"></span> <a href="performance/critical-rendering-path/">Critical Rendering Path</a></li>
