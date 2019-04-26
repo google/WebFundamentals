@@ -9,10 +9,14 @@ description: The desynchronized hint invokes bypasses the DOM to eliminate the l
 {# wf_featured_snippet: The desynchronized hint invokes bypasses the DOM to eliminate the latency caused by using the renderer compositor queue. #}
 {# wf_blink_components: Blink>Canvas #}
 
-# Lot-latency rendering contexts
+# Lot-latency rendering contexts {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 [Content here.]
+
+## Feedback {: #feedback .hide-from-toc }
+
+{% include "web/_shared/helpful.html" %}
 
 {% include "web/_shared/rss-widget-updates.html" %}
