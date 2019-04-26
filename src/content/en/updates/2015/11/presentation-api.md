@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome on Android now allows mobile sites to present to Google Cast devices using the Presentation API and the Cast Web SDK.
 
-{# wf_updated_on: 2015-12-17 #}
+{# wf_updated_on: 2019-04-25 #}
 {# wf_published_on: 2015-12-17 #}
-{# wf_tags: news,audio,video,media,secondscreen #}
+{# wf_tags: news,audio,video,media,secondscreen,cast #}
+{# wf_blink_components: Blink>PresentationAPI #}
 {# wf_featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg #}
 
 # Google Cast for Chrome on Android {: .page-title }
