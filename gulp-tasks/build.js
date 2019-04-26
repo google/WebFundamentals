@@ -314,6 +314,27 @@ gulp.task('build:tools', function() {
 
 
 /**
+ * Builds Site Kit pages at /web/site-kit/
+ */
+gulp.task('build:sitekit', function() {
+  const section = 'site-kit';
+  const baseOutputPath = path.join(global.WF.src.content, section);
+  const options = {
+    title: 'Site Kit',
+    description: 'The latest changes to https://developers.google.com/web/site-kit',
+    section: section,
+    outputPath: baseOutputPath,
+  };
+  const startPath = path.join(global.WF.src.content, section);
+  let files = wfHelper.getFileList(startPath, ['**/*.md']);
+  files.sort(wfHelper.updatedComparator);
+  wfTemplateHelper.generateFeeds(files, options);
+
+  generateFeedsForEveryYear(files, options);
+});
+
+
+/**
  * Builds all of the listing pages, including RSS & ATOM feeds
  * for /web/updates/
  */
@@ -397,6 +418,7 @@ gulp.task('build', function(cb) {
       'build:tools',
       'build:updates',
       'build:shows',
+      'build:sitekit',
     ],
     cb);
 });
