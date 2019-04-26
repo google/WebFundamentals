@@ -7,6 +7,8 @@ book_path: /web/ilt/pwa/_book.yaml
 
 # Progressive Web Apps Training {: .page-title }
 
+{% include "/web/ilt/pwa/_shared/update.md" %}
+
 <div class="video-wrapper ilt-video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="17kGWJOuL-A"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
