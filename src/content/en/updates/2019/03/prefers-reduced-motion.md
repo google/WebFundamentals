@@ -205,7 +205,9 @@ out there (use at your own risk!) that allow for this.
 
 ```CSS
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001s !important;
     transition-duration: 0.001s !important;
   }
