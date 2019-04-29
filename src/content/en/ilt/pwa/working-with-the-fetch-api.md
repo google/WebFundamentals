@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Working with the Fetch API {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

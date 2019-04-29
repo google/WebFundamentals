@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Working with Promises {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Promises make asynchronous programming much easier than the traditional event-
 listener or callback approaches. This video explains promises, promise-chaining,

@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Core Technologies {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Most API’s in the PWA space are built on JavaScript Promises and the Fetch API.
 This video provides an explanation of these technologies, as well as a brief

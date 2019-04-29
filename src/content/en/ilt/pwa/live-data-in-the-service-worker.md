@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Live Data in the Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

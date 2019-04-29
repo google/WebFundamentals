@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to Push Notifications {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 With service workers, push notifications are now available on the web. This
 video explains the Notifications API and the Push API, and how they are used to

@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Tools for PWA Developers {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

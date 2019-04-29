@@ -9,6 +9,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Working with IndexedDB {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

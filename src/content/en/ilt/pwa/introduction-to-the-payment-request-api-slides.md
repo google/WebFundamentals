@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to the Payment Request API {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Payments on mobile web are notorious for their poor user experience. This video
 describes the current state of mobile payments and explains how the new

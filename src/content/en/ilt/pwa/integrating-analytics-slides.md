@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Integrating Analytics {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Google Analytics is a valuable tool for analyzing user interactions with your
 app. This video explains the basics of what Google Analytics is, what it can do,

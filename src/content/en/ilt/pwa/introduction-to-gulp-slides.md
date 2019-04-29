@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to Gulp {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Modern web development requires many repetitive tasks. These slides discuss
 [gulp](http://gulpjs.com/), a build tool for automating these tasks.

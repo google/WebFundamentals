@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Challenge: Convert a news app to a PWA {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Setting Up the Labs {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

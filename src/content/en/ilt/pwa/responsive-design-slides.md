@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Responsive Design {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Users interact with the web using an increasingly diverse range of devices.
 These devices all have different viewport sizes, pixel widths and densities,

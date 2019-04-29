@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Caching Files with Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Caching provides a mechanism for storing request/response object pairs in the
 browser. This video covers the basics of the Cache API and outlines a few common

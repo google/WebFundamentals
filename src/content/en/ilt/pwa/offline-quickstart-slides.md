@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Offline Quickstart {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 One of the best features of Progressive Web Apps is their ability to function
 even when offline. This video explains how to use the service worker and Cache

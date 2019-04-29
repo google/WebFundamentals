@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # E-Commerce Lab 2: Add to Homescreen {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

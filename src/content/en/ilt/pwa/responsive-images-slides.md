@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Responsive Images {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 There are two major issues to consider when working with images on the web:
 performance and responsiveness. This video describes a set of techniques to make

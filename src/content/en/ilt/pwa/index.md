@@ -7,7 +7,6 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_blink_components: N/A #}
 
 # Progressive Web Apps Training {: .page-title }
-
 {% include "web/ilt/pwa/_shared/update.html" %}
 
 <div class="video-wrapper ilt-video-wrapper">

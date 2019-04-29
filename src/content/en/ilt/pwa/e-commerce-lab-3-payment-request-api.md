@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # E-Commerce Lab 3: Payment Request API {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

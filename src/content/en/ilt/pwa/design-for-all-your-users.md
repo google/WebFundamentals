@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Design for All Your Users {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 When we say design we mean something more than just graphic or visual design.
 “Design” in the context of PWAs means taking a mobile-first approach when

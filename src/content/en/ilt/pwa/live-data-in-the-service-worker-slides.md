@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Live Data in the Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Most modern web apps rely on a combination of static and dynamic resources. This
 video describes how to use the Cache API and IndexedDB together in your app to

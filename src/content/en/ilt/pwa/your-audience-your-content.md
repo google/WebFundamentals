@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Your Audience, Your Content {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 How do you start thinking about building an app or a website? This video
 explores some of the factors you need to consider before building your

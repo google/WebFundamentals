@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Challenge: Convert an E-Commerce site to a PWA {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Why Build Progressive Web Apps {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 The hardest problem with software is distribution. App developers often
 spend more on distribution than they earn back. This problem is solved by

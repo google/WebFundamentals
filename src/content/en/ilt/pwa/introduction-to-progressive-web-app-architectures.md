@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Introduction to Progressive Web App Architectures {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to Progressive Web App Architectures {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 What makes a Progressive Web App? This video explains the architecture of a
 PWAs, and many of the major features and best practices. Topics covered include

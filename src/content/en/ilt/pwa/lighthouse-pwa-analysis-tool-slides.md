@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Lighthouse PWA Analysis Tool {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Lighthouse is an open-source analysis tool that provides insights and feedback
 for Progressive Web Apps. This video provides a brief explanation of how to use

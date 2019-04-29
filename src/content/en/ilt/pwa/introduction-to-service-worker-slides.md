@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Introduction to Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Service workers are at the core of PWA techniques for resource-caching and push
 notifications. This video covers what a service worker is, what it can do, and

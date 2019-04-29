@@ -6,6 +6,7 @@ book_path: /web/ilt/pwa/_book.yaml
 {# wf_published_on: 2017-04-14 #}
 
 # Working with the Fetch API {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 Fetch is a modern replacement for XMLHttpRequest that lays the foundation for
 Progressive Web Apps. This video covers the basics of using Fetch to request

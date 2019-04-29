@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Caching Files with Service Worker {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 

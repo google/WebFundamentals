@@ -8,6 +8,7 @@ book_path: /web/ilt/pwa/_book.yaml
 
 
 # Lab: Migrating to Workbox from sw-precache and sw-toolbox {: .page-title }
+{% include "web/ilt/pwa/_shared/update.html" %}
 
 
 
