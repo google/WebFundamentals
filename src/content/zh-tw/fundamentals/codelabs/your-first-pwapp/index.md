@@ -39,7 +39,7 @@ book_path: /web/fundamentals/_book.yaml
 
 * 使用回應式設計，因此可在桌面或行動裝置上使用。
 * 快速，使用服務工作者來預先運行運行所需的應用程式資源（HTML，CSS，JavaScript，Images），並在運行時快取天氣數據以提高性能。
-* 可安裝，使用 Web 應用程式清單(manifest)和`beforeinstallprompt`事件通知用戶它是可安裝的。
+* 可安裝，使用 Web 應用程式資訊清單(manifest)和`beforeinstallprompt`事件通知用戶它是可安裝的。
 
 ![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
 
@@ -47,7 +47,7 @@ Warning: 為了簡化此代碼實驗室，並解釋提供離線體驗的基礎�
 
 ### 你將學到什麼
 
-* 如何建立和新增 Web 應用程式清單
+* 如何建立和新增 Web 應用程式資訊清單
 * 如何提供簡單的離線體驗
 * 如何提供完整的離線體驗
 * 如何使您的應用程式可安裝
@@ -147,25 +147,25 @@ Note: 您可以在Chrome DevTools中，從命令行或作為節點模塊運行 L
 * __❗失敗:__ 離線時當前頁面不回應200。
 * __❗失敗:__ `start_url`在離線時不回應200。
 * __❗失敗:__ 不註冊控制頁面和`start_url.`的服務工作者
-* __❗失敗:__ Web應用程式清單不符合可安裝性要求。
+* __❗失敗:__ Web應用程式資訊清單不符合可安裝性要求。
 * __❗失敗:__ 未配置自定義初始螢幕。
 * __❗失敗:__ 不設定位址列主題顏色。
 
 讓我們進入並開始修復其中的一些問題！
 
-## 新增 Web 應用程式清單
+## 新增 Web 應用程式資訊清單
 
 到本節結束時，我們的天氣應用程式將通過以下審核:
 
-* Web應用程式清單不符合可安裝性要求。
+* Web應用程式資訊清單不符合可安裝性要求。
 * 未配置自定義初始螢幕。
 * 不設定位址列主題顏色。
 
-### 建立 Web 應用程式清單
+### 建立 Web 應用程式資訊清單
 
 [web app manifest](/web/fundamentals/web-app-manifest)是一個簡單的JSON文件，它使開發人員能夠控制應用程式對用戶的顯示方式。
 
-使用 Web 應用程式清單，您的 Web 應用程式可以:
+使用 Web 應用程式資訊清單，您的 Web 應用程式可以:
 
 * 告訴瀏覽器您希望應用程式在獨立窗口中打開（ `display` ）。
 * 定義首次啟動應用程式時打開的頁面（ `start_url` ）。
@@ -218,7 +218,7 @@ Note: 您可以在Chrome DevTools中，從命令行或作為節點模塊運行 L
 
 Note: 要安裝，Chrome要求您提供至少192x192p、圖示和512x512p、圖示。但是你也可以提供其他尺碼。 Chrome使用最接近48dp、圖示，例如，2x設備上的96px或3x設備的144px。
 
-### 新增指向 Web 應用程式清單的連結
+### 新增指向 Web 應用程式資訊清單的連結
 
 接下來，我們需要通過向應用程式中的每個頁面新增`<link rel="manifest"...`來告訴瀏覽器我們的清單。 `<head>`新增到`index.html`文件中的`<head>`元素。
 
@@ -237,7 +237,7 @@ DevTools 提供了一種快速簡便的方法來檢查您的`manifest.json`文�
 
 ### 新增 iOS 元標記、圖示
 
-iOS 上的 Safari 不支持 Web 應用程式清單（ [yet](https://webkit.org/status/#specification-web-app-manifest) ），因此您需要將[traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)新增到`index.html`文件的`<head>`中:
+iOS 上的 Safari 不支持 Web 應用程式資訊清單（ [yet](https://webkit.org/status/#specification-web-app-manifest) ），因此您需要將[traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)新增到`index.html`文件的`<head>`中:
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
 
@@ -292,7 +292,7 @@ __Progressive Web App Audit__
 * __❗失敗:__ 離線時當前頁面不回應200。
 * __❗失敗:__ `start_url`在離線時不回應200。
 * __❗失敗:__ 不註冊控制頁面和`start_url.`的服務工作者
-* __✅通過:__ Web應用程式清單符合可安裝性要求。
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
 * __✅通過:__ 已配置為自定義初始螢幕。
 * __✅通過:__ 設定位址列主題顏色。
 
@@ -502,7 +502,7 @@ __Progressive Web App Audit__
 * __✅通過:__ 當前頁面在離線時以200回應。
 * __✅通過:__ `start_url`在離線時以200回應。
 * __✅通過:__ 註冊一個控制頁面和`start_url.`的服務工作者
-* __✅通過:__ Web應用程式清單符合可安裝性要求。
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
 * __✅通過:__ 已配置為自定義初始螢幕。
 * __✅通過:__ 設定位址列主題顏色。
 
@@ -747,7 +747,7 @@ __Progressive Web App Audit__
 * __✅通過:__ 當前頁面在離線時以200回應。
 * __✅通過:__  `start_url`在離線時以200回應。
 * __✅通過:__ 註冊一個控制頁面和`start_url.`的服務工作者
-* __✅通過:__ Web應用程式清單符合可安裝性要求。
+* __✅通過:__ Web應用程式資訊清單符合可安裝性要求。
 * __✅通過:__ 已配置為自定義初始螢幕。
 * __✅通過:__ 設定位址列主題顏色。
 
@@ -957,7 +957,7 @@ console.log('Weather App was installed.', evt);
 
 恭喜，您已經成功建置了第一個 Progressive Web App！
 
-您新增了一個 Web 應用程式清單以使其能夠安裝，並且您新增了一個服務工作者以確保您的 PWA 始終快速且可靠。您學習瞭如何使用 DevTools 審核應用程式以及它如何幫助您改善用戶體驗。
+您新增了一個 Web 應用程式資訊清單以使其能夠安裝，並且您新增了一個服務工作者以確保您的 PWA 始終快速且可靠。您學習瞭如何使用 DevTools 審核應用程式以及它如何幫助您改善用戶體驗。
 
 您現在知道將任何 Web 應用程式轉換為Progressive Web App所需的關鍵步驟。
 
