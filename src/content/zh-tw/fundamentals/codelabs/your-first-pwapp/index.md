@@ -117,12 +117,12 @@ Caution: 如果您在本地工作，某些 Lighthouse 審核將無法通過，�
 3. 使用每張城市卡右上角的x刪除城市。
 4. 了解它在桌面和行動裝置上的工作原理。
 5. 看看你離線時會發生什麼。
-6. 使用 Chrome 的“網路”面板，查看當網路受限制為慢速 3G 時會發生什麼。
+6. 使用 Chrome 的 “網路” 面板，查看當網路受限制為慢速 3G 時會發生什麼。
 7. 通過更改`FORECAST_DELAY`中的`server.js`向預測伺服器新增延遲
 
 ### 審計與Lighthouse
 
-[Lighthouse](/web/tools/lighthouse/#devtools)是一款易於使用的工具，可幫助您提高網站和網頁的質量。它具有性能，可訪問性，漸進式 Web 應用程式等審計。每個審核都有一個參考文檔，解釋了審核為何重要，以及如何解決。
+[Lighthouse](/web/tools/lighthouse/#devtools)是一款易於使用的工具，可幫助您提高網站和網頁的質量。它具有性能，可訪問性，漸進式 Web 應用程式等審計。每個審核都有一個參考文件，解釋了審核為何重要，以及如何解決。
 
 ![b112675caafccef0.png](img/b112675caafccef0.png)
 
@@ -255,9 +255,9 @@ iOS 上的 Safari 不支持 Web 應用程式資訊清單（ [yet](https://webkit
 
 #### 設定 Meta 描述
 
-根據SEO審計，Lighthouse注意到我們的“ [Document does not have a meta description.](/web/tools/lighthouse/audits/description) ”描述可以顯示在Google的搜尋結果中。高質量，獨特的描述可以使您的搜尋結果與搜尋用戶更相關，並可以增加搜尋流量。
+根據SEO審計，Lighthouse注意到我們的 “ [Document does not have a meta description.](/web/tools/lighthouse/audits/description) ” 描述可以顯示在Google的搜尋結果中。高質量，獨特的描述可以使您的搜尋結果與搜尋用戶更相關，並可以增加搜尋流量。
 
-要新增說明，請將以下`meta`標記新增到文檔的`<head>`中:
+要新增說明，請將以下`meta`標記新增到文件的`<head>`中:
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L32)
 
@@ -268,9 +268,9 @@ iOS 上的 Safari 不支持 Web 應用程式資訊清單（ [yet](https://webkit
 
 #### 設定位址列主題顏色
 
-在 PWA 審計中，Lighthouse注意到我們的應用程式“ [Does not set an address-bar theme color](/web/tools/lighthouse/audits/address-bar) ”。將瀏覽器的位址列設定為與您品牌的顏色相匹配，可以提供更加身臨其境的用戶體驗。
+在 PWA 審計中，Lighthouse注意到我們的應用程式 “ [Does not set an address-bar theme color](/web/tools/lighthouse/audits/address-bar) ”。將瀏覽器的位址列設定為與您品牌的顏色相匹配，可以提供更加身臨其境的用戶體驗。
 
-要在行動裝置上設定主題顏色，請將以下`meta`標記新增到文檔的`<head>` :
+要在行動裝置上設定主題顏色，請將以下`meta`標記新增到文件的`<head>` :
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L33)
 
@@ -281,7 +281,7 @@ iOS 上的 Safari 不支持 Web 應用程式資訊清單（ [yet](https://webkit
 
 ### 驗證 Lighthouse 的變化
 
-再次運行Lighthouse（通過單擊“審核”窗格左上角的+號）並驗證您的更改。
+再次運行Lighthouse（通過單擊 “審核” 窗格左上角的+號）並驗證您的更改。
 
 __SEO審計___
 
@@ -381,13 +381,13 @@ Note: 服務工作者事件和生命週期將在下一節中介紹。
 
 當您看到這樣的空白頁面時，表示當前打開的頁面沒有任何已註冊的服務工作者。
 
-現在，重新載同時兼具可靠性與執行效能時我們間您說怎樣的壓力下才能算是同時擁有可靠性與效能者”窗格現在應如下所示:
+現在，重新載入頁面。現在服務工作者窗格應該會長這樣：
 
 ![69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
 
 當您看到這樣的信息時，表示該頁面正在運行服務工作者。
 
-狀態標籤旁邊有一個數字（在這種情況下為* 34251 *），在您與服務工作人員合作時，請密切注意該數字。這是一種簡單的方法來判斷您的服務工作者是否已更新。
+狀態標籤旁邊有一個數字（在這種情況下為 *34251*），在您與服務工作人員合作時，請密切注意該數字。這是一種簡單的方法來判斷您的服務工作者是否已更新。
 
 ### 清理舊的離線頁面
 
@@ -413,7 +413,7 @@ evt.waitUntil(
 
 #### DevTools Detour
 
-打開“服務工作者”窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
+打開  “服務工作者”  窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
 
 ![1db827d76bc0b359.png](img/1db827d76bc0b359.png)
 
@@ -450,7 +450,7 @@ Key Point: 中包裝`fetch`呼叫[`evt.respondWith()`](https://developer.mozilla
 
 #### DevTools Detour
 
-讓我們檢查一下，確保一切正常。打開“服務工作者”窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
+讓我們檢查一下，確保一切正常。打開  “服務工作者”  窗格，重整頁面，您將看到安裝了新的服務工作者，並且狀態編號會增加。
 
 我們還可以查看已快取的內容。轉到 DevTools 的__Application__面板上的__Cache Storage__窗格。右鍵單擊__Cache Storage __，選擇__Refresh Caches__，展開該部分，您應該會在左側看到靜態快取的名稱。單擊快取名稱將顯示快取的所有文件。
 
@@ -468,7 +468,7 @@ Key Point: 中包裝`fetch`呼叫[`evt.respondWith()`](https://developer.mozilla
 
 #### 使用DevTools
 
-在“應用程式”面板的“服務工作者”窗格中，有一些複選框可以使您的生活更輕鬆。
+在 “應用程式” 面板的 “服務工作者” 窗格中，有一些複選框可以使您的生活更輕鬆。
 
 ![c7ac93904f473a91.png](img/c7ac93904f473a91.png)
 
@@ -478,7 +478,7 @@ Key Point: 中包裝`fetch`呼叫[`evt.respondWith()`](https://developer.mozilla
 
 #### 開始新鮮
 
-在某些情況下同時兼具可靠性與執行效能您我們可能說怎樣的壓力下才能算是同時擁有可靠性與效能間快取數據或者沒有按預期更新內容。要清除所有已保存的數據（localStorage，indexedDB數據，快取文件）並刪除任何服務工作者，請使用“應用程式”頁籤中的“清除儲存”窗格。或者，您也可以在隱身窗口中工作。
+在某些情況下同時兼具可靠性與執行效能您我們可能說怎樣的壓力下才能算是同時擁有可靠性與效能間快取數據或者沒有按預期更新內容。要清除所有已保存的數據（localStorage，indexedDB數據，快取文件）並刪除任何服務工作者，請使用 “應用程式” 頁籤中的 “清除儲存” 窗格。或者，您也可以在隱身窗口中工作。
 
 ![398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
 
@@ -491,7 +491,7 @@ Key Point: 中包裝`fetch`呼叫[`evt.respondWith()`](https://developer.mozilla
 
 ### 驗證 Lighthouse 的變化
 
-再次運行 Lighthouse 並驗證您的更改。在驗證更改之前，請不要忘記取消選中“離線”複選框！
+再次運行 Lighthouse 並驗證您的更改。在驗證更改之前，請不要忘記取消選中 “離線” 複選框！
 
 __SEO審計___
 
@@ -682,7 +682,7 @@ if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
 
 #### 更新fetch事件處理程序
 
-我們需要修改服務工作者以攔截對weather API的請求並將其回應儲存在快取中，以便我們以後可以輕鬆訪問它們。在陳舊的重新驗證策略中，我們期望網路回應成為“事實來源”，始終向我們提供最新信息。如果不能，則可以失敗，因為我們已經在應用程式中檢索了最新的快取數據。
+我們需要修改服務工作者以攔截對weather API的請求並將其回應儲存在快取中，以便我們以後可以輕鬆訪問它們。在陳舊的重新驗證策略中，我們期望網路回應成為 “事實來源”，始終向我們提供最新信息。如果不能，則可以失敗，因為我們已經在應用程式中檢索了最新的快取數據。
 
 更新`fetch`事件處理程序以獨立於其他請求處理對數據API的請求。
 
@@ -784,7 +784,7 @@ Key Point: 對於本節，在 DevTools 的** Application **面板的** Service W
 
 ### 收聽`beforeinstallprompt`活動
 
-如果符合新增到主螢幕[criteria](/web/fundamentals/app-install-banners/#criteria) ，Chrome將觸發`beforeinstallprompt`事件，您可以使用該事件指示您的應用可以“安裝”，然後提示用戶安裝它。新增以下代碼以收聽`beforeinstallprompt`事件:
+如果符合新增到主螢幕[criteria](/web/fundamentals/app-install-banners/#criteria) ，Chrome將觸發`beforeinstallprompt`事件，您可以使用該事件指示您的應用可以 “安裝”，然後提示用戶安裝它。新增以下代碼以收聽`beforeinstallprompt`事件:
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
 
@@ -863,7 +863,7 @@ console.log('Weather App was installed.', evt);
 
 ### 更新服務工作者
 
-不要忘記更新`CACHE_NAME`在`service-worker.js`文件，因為你所做的已快取文件的更改。在 DevTools 的“應用程式”面板的“服務工作者”窗格中啟用__Bypass for network__複選框將在開發中工作，但在現實世界中無濟於事。
+不要忘記更新`CACHE_NAME`在`service-worker.js`文件，因為你所做的已快取文件的更改。在 DevTools 的 “應用程式” 面板的 “服務工作者” 窗格中啟用__Bypass for network__複選框將在開發中工作，但在現實世界中無濟於事。
 
 ### 試一試
 
@@ -875,7 +875,7 @@ console.log('Weather App was installed.', evt);
 
 1. 在新的 Chrome 標籤頁中打開網址。
 2. 打開 Chrome 的三點選單（位址列旁邊）。
-▢確認您在選單中看到“*安裝天氣...... *”。
+▢確認您在選單中看到 “*安裝 Weather......*”。
 3. 使用右上角的重新整理按鈕重整天氣數據，以確保我們符合[user engagement heuristics](/web/fundamentals/app-install-banners/#criteria) 。
 ▢確認應用程式標題中顯示安、圖示。
 
@@ -884,15 +884,15 @@ console.log('Weather App was installed.', evt);
 接下來，讓我們確保一切安裝正確，並正確觸發我們的事件。您可以在桌面設備或行動裝置上執行此操作。如果您想在行動裝置上進行測試，請確保使用遠程偵錯，以便查看登錄到控制台的內容。
 
 1. 打開Chrome，然後在新的瀏覽器標籤中，導航到您的Weather PWA。
-2. 打開 DevTools 並切換到“控制台”窗格。
+2. 打開 DevTools 並切換到 “控制台” 窗格。
 3. 單擊右上角的安裝按鈕。
 ▢確認安裝按鈕消失▢確認顯示安裝模式對話框。
-4. 單擊“取消”。
-▢驗證“*用戶解除了A2HS提示*”顯示在控制台輸出中。
+4. 單擊 “取消”。
+▢驗證 “*用戶解除了A2HS提示*” 顯示在控制台輸出中。
 ▢確認重新出現安裝按鈕。
 5. 再次單擊安裝按鈕，然後單擊模式對話框中的安裝按鈕。
-▢驗證“*用戶接受A2HS提示*”顯示在控制台輸出中。
-▢確認“*已安裝天氣應用程式*”顯示在控制台輸出中。
+▢驗證 “*用戶接受A2HS提示*” 顯示在控制台輸出中。
+▢確認 “*已安裝天氣應用程式*” 顯示在控制台輸出中。
 ▢確認天氣應用已新增到您通常會找到應用的位置。
 6.啟動Weather PWA。
 ▢驗證應用程式是作為獨立應用程式打開的，可以在桌面上的應用程式窗口中，也可以在行動裝置上全屏顯示。
@@ -923,7 +923,7 @@ console.log('Weather App was installed.', evt);
 
 您還可以檢查`display-mode`在媒體查詢[JavaScript to see if you're running in standalone](/web/fundamentals/app-install-banners/#detect-mode) 。
 
-### 獎勵:卸載您的PWA
+### 獎勵:卸載您的 PWA
 
 請記住，如果已經安裝了應用程式，則`beforeinstallevent`不會觸發，因此在開發期間，您可能需要多次安裝和卸載應用程式，以確保一切正常運行。
 
@@ -941,11 +941,11 @@ console.log('Weather App was installed.', evt);
 在ChromeOS上，可以從啟動器搜尋框輕鬆卸載 PWA。
 
 * 打開發射器。
-* 在搜尋框中輸入 “* Weather *” ，您的 Weather PWA 應出現在搜尋結果中。
+* 在搜尋框中輸入 “*Weather*” ，您的 Weather PWA 應出現在搜尋結果中。
 * 右鍵單擊（按住 alt 鍵單擊）Weather PWA。
 * 點擊*從 Chrome 中刪除...*
 
-#### macOS和Windows
+#### macOS 和 Windows
 
 在 Mac 和 Windows 上，必須通過 Chrome 卸載 PWA。
 
@@ -961,12 +961,14 @@ console.log('Weather App was installed.', evt);
 
 您現在知道將任何 Web 應用程式轉換為Progressive Web App所需的關鍵步驟。
 
+※ 本文由 [Will 保哥](https://blog.miniasp.com/) 協助正體中文翻譯。
+
 ### 進一步閱讀
 
 * [High-performance service worker loading](/web/fundamentals/primers/service-workers/high-performance-loading)
 * [Service Worker Caching Strategies Based on Request Types](https://medium.com/dev-channel/service-worker-caching-strategies-based-on-request-types-57411dd7652c)
 
-### 參考文檔
+### 參考文件
 
 * [Web App Manifest docs](/web/fundamentals/web-app-manifest)
 * [Web App Manifest properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members)
