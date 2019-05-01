@@ -20,14 +20,12 @@ description: Chrome 75 introduces file sharing from a web app, which lets your w
   </figcaption>
 </figure>
 
-# Web share supports files
-
 Over the last few years, we've been working to bring native sharing capabilities
 to the web. The
-[Web Share API](https://developers.google.com/web/updates/2016/09/navigator-share)
+[Web Share API](/web/updates/2016/09/navigator-share)
 allows web apps to invoke the same share dialog box that a native app user would
 see. The
-[Web Share Target API](https://developers.google.com/web/updates/2018/12/web-share-target)
+[Web Share Target API](/web/updates/2018/12/web-share-target)
 allows web apps to receive data from a share.
 
 The only resource previously supported by these APIs was files. Chrome 75
@@ -40,7 +38,7 @@ virtually anything else on a user's device.
 This article assumes some familiarity with the web share APIs. If this is new to
 you, check out the links above. 
 
-# The canShare() method
+## The canShare() method
 
 If you're familiar with the earlier API, you're used to doing feature detection
 by testing for `navigator.share()`. With files it's more complicated. You need
@@ -90,7 +88,7 @@ Note: The shareData argument is required for both `canShare()` and `share()`
 even though the specification labels it as optional in both cases. As the
 specification itself states, this is because of a quirk of the Web IDL rules.
 
-# More information
+## More information
 
 +   Web share demo
 +   [Web share explainer](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
