@@ -9,7 +9,7 @@ description: The desynchronized hint invokes bypasses the DOM to eliminate the l
 {# wf_featured_snippet: The desynchronized hint invokes bypasses the DOM to eliminate the latency caused by using the renderer compositor queue. #}
 {# wf_blink_components: Blink>Canvas #}
 
-# Lot-latency rendering contexts {: .page-title }
+# Low-latency rendering with the desynchronized hint {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -30,7 +30,8 @@ renderer compositor queue.
 
 ## How good is it?
 
-To see it in action, you need a device with a touch screen, and preferably a stylus. (Fingers work too.) If you have one, try the
+To see it in action, you need a device with a touch screen, and preferably a
+stylus. (Fingers work too.) If you have one, try the
 [2d](https://www.google.com/url?q=https://codepen.io/miguelao/full/ZjJNNw&sa=D&ust=1556721118370000&usg=AFQjCNGjpffZOOmf99D_ixBGNlYHGLiF7w)
 or
 [webgl](https://www.google.com/url?q=https://codepen.io/miguelao/full/WKZaqd&sa=D&ust=1556721118370000&usg=AFQjCNGcfmYlh3Serjw0d8o4isSYv8eywg)
