@@ -67,7 +67,7 @@ Data cuaca kita berasal dari [API Dark Sky](https://darksky.net/dev). Untuk meng
 
 [Register untuk mendapatkan API Key](https://darksky.net/dev/register)
 
-Catatan: Anda masih dapat menyelesaikan codelab ini tanpa kunci API Dark Sky. Jika server kita tidak dapat memperoleh data nyata dari Dark Sky API, server akan mengembalikan data palsu.
+Note: Anda masih dapat menyelesaikan codelab ini tanpa kunci API Dark Sky. Jika server kita tidak dapat memperoleh data nyata dari Dark Sky API, server akan mengembalikan data palsu.
 
 #### Pastikan kunci API Anda berfungsi dengan benar
 
@@ -93,7 +93,7 @@ Menggunakan Glitch adalah metode yang disarankan untuk bekerja melalui codelab i
 
 Jika Anda ingin mengunduh kode dan bekerja secara lokal, Anda harus memiliki Node versi terbaru, dan pengaturan editor kode dan siap untuk digunakan.
 
-Perhatian: Jika Anda bekerja secara lokal, beberapa audit Lighthouse tidak akan terpenuhi, dan instalasi mungkin tidak tersedia karena server lokal tidak menyajikan konten dalam konteks yang aman.
+Caution: Jika Anda bekerja secara lokal, beberapa audit Lighthouse tidak akan terpenuhi, dan instalasi mungkin tidak tersedia karena server lokal tidak menyajikan konten dalam konteks yang aman.
 
 [Unduh kode sumber](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
@@ -127,7 +127,7 @@ Beberapa hal untuk dicoba ...
 
 Kita akan menggunakan Lighthouse untuk mengaudit aplikasi Cuaca kita, dan memastikan perubahan yang telah kita buat.
 
-Catatan: Anda dapat menjalankan Lighthouse dari Chrome DevTools, dari baris perintah, atau sebagai modul Node. Pertimbangkan untuk menambahkan [Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) ke _build process_ Anda untuk memastikan aplikasi web Anda tidak mengalami penurunan performa.
+Note: Anda dapat menjalankan Lighthouse dari Chrome DevTools, dari baris perintah, atau sebagai modul Node. Pertimbangkan untuk menambahkan [Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) ke _build process_ Anda untuk memastikan aplikasi web Anda tidak mengalami penurunan performa.
 
 ### Ayo jalankan Lighthouse
 
@@ -366,7 +366,7 @@ evt.waitUntil(
 );
 ```
 
-Catatan: Peristiwa dan siklus hidup _service worker_ dicakup di bagian selanjutnya.
+Note: Peristiwa dan siklus hidup _service worker_ dicakup di bagian selanjutnya.
 
 Proses `install` sekarang membuka cache dengan `caches.open()` dan memberikan nama cache. Memberi nama cache memungkinkan kita untuk membedakan versi file, atau memisahkan data dari sumber daya yang di-cache sehingga kita dapat dengan mudah memperbarui satu tetapi tidak mempengaruhi yang lain.
 
@@ -509,13 +509,13 @@ __Audit Aplikasi Web Progresif__
 
 Luangkan waktu sejenak dan letakkan ponsel Anda dalam mode pesawat, dan coba jalankan beberapa aplikasi favorit Anda. Dalam hampir semua kasus, mereka memberikan pengalaman offline yang cukup bagus. Pengguna mengharapkan pengalaman yang bagus dari aplikasi mereka. Dan web seharusnya tidak berbeda. Aplikasi Web Progresif harus dirancang dengan offline sebagai skenario inti.
 
-Poin Penting: Merancang untuk offline-first dapat secara drastis meningkatkan kinerja aplikasi web Anda dengan mengurangi jumlah permintaan jaringan yang dibuat oleh aplikasi Anda, alih-alih sumber daya dapat dicache diawal dan disajikan langsung dari cache lokal. Bahkan dengan koneksi jaringan tercepat, melayani dari cache lokal akan lebih cepat!
+Key Point: Merancang untuk offline-first dapat secara drastis meningkatkan kinerja aplikasi web Anda dengan mengurangi jumlah permintaan jaringan yang dibuat oleh aplikasi Anda, alih-alih sumber daya dapat dicache diawal dan disajikan langsung dari cache lokal. Bahkan dengan koneksi jaringan tercepat, melayani dari cache lokal akan lebih cepat!
 
 ### Daur hidup service worker
 
 Siklus hidup _service worker_ adalah bagian yang paling rumit. Jika Anda tidak tahu apa yang ia coba lakukan dan apa manfaatnya, itu bisa terasa seperti melawan Anda. Tetapi begitu Anda tahu cara kerjanya, Anda dapat memberikan pembaruan yang mulus dan mencolok kepada pengguna, memadukan yang terbaik dari web dan bentuk aplikasi native.
 
-Poin Penting: Codelab ini hanya mencakup dasar-dasar siklus hidup _service worker_. Untuk melihat lebih dalam, lihat artikel tentang WebFundamentals berikut [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
+Key Point: Codelab ini hanya mencakup dasar-dasar siklus hidup _service worker_. Untuk melihat lebih dalam, lihat artikel tentang WebFundamentals berikut [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
 
 #### Event `install`
 
@@ -551,7 +551,7 @@ Untuk aplikasi kita, kita akan melakukan cache diawal (_precache_) semua sumber 
 
 Menarik dari cache lokal menghilangkan segala variabilitas jaringan. Tidak peduli apa pun jenis jaringan yang digunakan pengguna (WiFi, 5G, 3G, atau bahkan 2G), sumber daya utama yang perlu kita jalankan tersedia segera.
 
-Hati-hati: Dalam contoh ini, sumber daya statis disajikan menggunakan strategi [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), yang menghasilkan salinan dari konten yang di-cache dikembalikan tanpa berkonsultasi dengan jaringan. Meskipun strategi `cache-first` mudah diimplementasikan, itu dapat menyebabkan tantangan di masa depan.
+Warning: Dalam contoh ini, sumber daya statis disajikan menggunakan strategi [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), yang menghasilkan salinan dari konten yang di-cache dikembalikan tanpa berkonsultasi dengan jaringan. Meskipun strategi `cache-first` mudah diimplementasikan, itu dapat menyebabkan tantangan di masa depan.
 
 #### Caching data aplikasi
 
@@ -667,7 +667,7 @@ const FILES_TO_CACHE = [
 
 Karena kita secara manual membuat daftar file ke cache, setiap kali kita memperbarui file, kita harus memperbarui `CACHE_NAME` . Kita dapat menghapus `offline.html` dari daftar file cache kita karena aplikasi kita sekarang memiliki semua sumber daya yang diperlukan untuk bekerja offline, dan tidak akan pernah menampilkan halaman offline lagi.
 
-Perhatian: Dalam contoh ini, kita membuat sendiri _service worker_ kita. Setiap kali kita memperbarui sumber daya statis apa pun, kita perlu memutar ulang _service worker_ dan memperbarui cache, jika tidak, konten lama akan disajikan. Selain itu, ketika satu file berubah, seluruh cache tidak valid dan perlu diunduh ulang. Itu berarti memperbaiki kesalahan pengejaan karakter tunggal sederhana akan membuat cache tidak valid dan semuanya harus diunduh lagi — tidak terlalu efisien. [Workbox](/web/tools/workbox/) menangani ini dengan indah, dengan mengintegrasikannya ke dalam proses _build_ Anda, hanya file yang diubah akan diperbarui, menghemat _bandwidth_ untuk pengguna dan perawatan yang lebih mudah untuk Anda!
+Caution: Dalam contoh ini, kita membuat sendiri _service worker_ kita. Setiap kali kita memperbarui sumber daya statis apa pun, kita perlu memutar ulang _service worker_ dan memperbarui cache, jika tidak, konten lama akan disajikan. Selain itu, ketika satu file berubah, seluruh cache tidak valid dan perlu diunduh ulang. Itu berarti memperbaiki kesalahan pengejaan karakter tunggal sederhana akan membuat cache tidak valid dan semuanya harus diunduh lagi — tidak terlalu efisien. [Workbox](/web/tools/workbox/) menangani ini dengan indah, dengan mengintegrasikannya ke dalam proses _build_ Anda, hanya file yang diubah akan diperbarui, menghemat _bandwidth_ untuk pengguna dan perawatan yang lebih mudah untuk Anda!
 
 #### Memperbarui handler event activate
 
@@ -758,7 +758,7 @@ Ketika Aplikasi Web Progresif diinstal, ia terlihat dan berperilaku seperti semu
 
 Di Chrome, Aplikasi Web Progresif dapat dipasang melalui menu konteks tiga titik, atau Anda dapat memberikan tombol atau komponen UI lainnya kepada pengguna yang akan meminta mereka untuk menginstal aplikasi Anda.
 
-Berhasil: Karena pengalaman pemasangan di menu konteks tiga titik Chrome agak panjang, kita sarankan Anda memberikan beberapa indikasi dalam aplikasi Anda untuk memberi tahu pengguna bahwa aplikasi Anda dapat dipasang, dan tombol instal untuk menyelesaikan proses pemasangan.
+Success: Karena pengalaman pemasangan di menu konteks tiga titik Chrome agak panjang, kita sarankan Anda memberikan beberapa indikasi dalam aplikasi Anda untuk memberi tahu pengguna bahwa aplikasi Anda dapat dipasang, dan tombol instal untuk menyelesaikan proses pemasangan.
 
 ### Audit dengan Lighthouse
 
@@ -768,7 +768,7 @@ Agar pengguna dapat menginstal Aplikasi Web Progresif Anda, ia harus memenuhi [b
 
 Jika Anda bekerja melalui codelab ini, PWA Anda harus sudah memenuhi kriteria ini.
 
-Poin Penting: Untuk bagian ini, aktifkan kotak centang **Bypass for network** di panel **_Service Worker** dari panel **Aplikasi** di DevTools. Ketika dicentang, permintaan melakukan interupsi _service worker_ dan dikirim langsung ke jaringan. Ini menyederhanakan proses pengembangan kita karena kita tidak perlu memperbarui _service worker_ kita saat mengerjakan bagian ini.
+Key Point: Untuk bagian ini, aktifkan kotak centang **Bypass for network** di panel **_Service Worker** dari panel **Aplikasi** di DevTools. Ketika dicentang, permintaan melakukan interupsi _service worker_ dan dikirim langsung ke jaringan. Ini menyederhanakan proses pengembangan kita karena kita tidak perlu memperbarui _service worker_ kita saat mengerjakan bagian ini.
 
 ### Tambahkan install.js ke index.html
 
