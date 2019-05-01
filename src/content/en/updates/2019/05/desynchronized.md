@@ -13,6 +13,15 @@ description: The desynchronized hint invokes bypasses the DOM to eliminate the l
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
+<img src="/web/updates/images/2019/05/latency.png" class="hint-image attempt-right" alt="Differences in stylus rendering">
+     
+<style>
+.hint {
+  height: 150px;
+  width: auto;
+}
+</style>
+
 Stylus-based drawing applications built for the web have long suffered from
 latency issues because a web page has to synchronize graphics updates with the
 DOM. In any drawing application, latencies longer than 50 milliseconds can
@@ -27,16 +36,16 @@ is able and in some cases, the canvas's underlying buffer is sent directly to
 the screen's display controller. This eliminates the latency that would be
 caused by using the renderer compositor queue.
 
-<img src="/web/updates/images/2019/05/latency.png" class="hint-image attempt-right" alt="Differences in stylus rendering">
+## How good is it?
+
+<img src="/web/updates/images/2019/05/sintel.png" class="sintel attempt-right" alt="Simultaneous rendering of Sintel">
      
 <style>
-.hint {
-  height: 150px;
+.sintel {
+  height: 300px;
   width: auto;
 }
 </style>
-
-## How good is it?
 
 To see it in action, you need a device with a touch screen, and preferably a
 stylus. (Fingers work too.) If you have one, try the
@@ -56,14 +65,7 @@ do this without tearing, though devices with front buffer rendering such as
 Chrome OS for example may have tearing. (The movie is great, but heartbreaking.
 I was useless for an hour after I saw it. Consider yourself warned.)
 
-<img src="/web/updates/images/2019/05/sintel.png" class="sintel attempt-right" alt="Simultaneous rendering of Sintel">
-     
-<style>
-.sintel {
-  height: 300px;
-  width: auto;
-}
-</style>
+
 
 ## Using the hint
 
