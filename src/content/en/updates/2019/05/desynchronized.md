@@ -27,7 +27,14 @@ is able and in some cases, the canvas's underlying buffer is sent directly to
 the screen's display controller. This eliminates the latency that would be
 caused by using the renderer compositor queue.
 
-![Differences in stylus rendering](/web/updates/images/2019/05/latency.png)
+<img src="/web/updates/images/2019/05/latency.png" class="hint-image attempt-right" alt="Differences in stylus rendering">
+     
+<style>
+.hint {
+  height: 150px;
+  width: auto;
+}
+</style>
 
 ## How good is it?
 
@@ -47,9 +54,16 @@ project. In this example, the movie is played in a `<video>` element whose
 contents are simultaneously rendered to a `<canvas>` element.  Many devices can
 do this without tearing, though devices with front buffer rendering such as
 Chrome OS for example may have tearing. (The movie is great, but heartbreaking.
-I was useless for an hour after I saw it. Consider yourself warned.)  
+I was useless for an hour after I saw it. Consider yourself warned.)
 
-![Simultaneous rendering of Sintel](/web/updates/images/2019/05/sintel.png)
+<img src="/web/updates/images/2019/05/sintel.png" class="sintel attempt-right" alt="Simultaneous rendering of Sintel">
+     
+<style>
+.sintel {
+  height: 300px;
+  width: auto;
+}
+</style>
 
 ## Using the hint
 
