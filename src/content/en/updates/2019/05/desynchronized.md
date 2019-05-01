@@ -114,7 +114,7 @@ the image being drawn to flicker. To avoid this is to set
 <pre class="prettyprint lang-JavaScript">const canvas = document.querySelector('myCanvas');
 const ctx = canvas.getContext('webgl', { 
   desynchronized: true,
-  <em>preserveDrawingBuffer: true</em>
+  <strong>preserveDrawingBuffer: true</strong>
 });</pre>
 
 Flicker can also occur when you clear the screen context in your own drawing
@@ -161,50 +161,26 @@ other than '2d' context types are supported. The table below shows the context
 types that support `desynchronized`.
 
 <table>
-<thead>
-<tr>
-<th><strong>contextType</strong></th>
-<th><strong>Context type object</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p><pre>
-'2d'
-</pre></p>
-
-</td>
-<td><p><pre>
-CanvasRenderingContext2D
-</pre></p>
-
-</td>
-</tr>
-<tr>
-<td><p><pre>
-'webgl'
-</pre></p>
-
-</td>
-<td><p><pre>
-WebGLRenderingContext
-</pre></p>
-
-</td>
-</tr>
-<tr>
-<td><p><pre>
-'webgl2'
-</pre></p>
-
-</td>
-<td><p><pre>
-WebGL2RenderingContext
-</pre></p>
-
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><strong>contextType</strong></th>
+      <th><strong>Context type object</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><code>'2d'</code></p></td>
+      <td><p><code>CanvasRenderingContext2D</code></p></td>
+    </tr>
+    <tr>
+      <td><p><code>'webgl'</code></p></td>
+      <td><p><code>WebGLRenderingContext</code></p></td>
+    </tr>
+    <tr>
+      <td><p><code>'webgl2'</code></p></td>
+      <td><p><code>WebGL2RenderingContext</code></p></td>
+    </tr>
+  </tbody>
 </table>
 
 ## Conclusion
