@@ -20,11 +20,12 @@ interfere with a user's hand-eye coordination, making applications difficult to
 use.   
 
 The `desynchronized` hint for `canvas.getContext()` invokes a different code
-path that bypasses the usual DOM update mechanism. Instead the hint tells the
-underlying system to skip as much compositing as it is able and in some cases,
-the canvas's underlying buffer is sent directly to the screen's display
-controller. This eliminates the latency that would be caused by using the
-renderer compositor queue.
+path that bypasses the [usual DOM update
+mechanism](https://docs.google.com/presentation/d/1boPxbgNrTU0ddsc144rcXayGA_WF53k96imRH8Mp34Y/edit#slide=id.p).
+Instead the hint tells the underlying system to skip as much compositing as it
+is able and in some cases, the canvas's underlying buffer is sent directly to
+the screen's display controller. This eliminates the latency that would be
+caused by using the renderer compositor queue.
 
 ![Differences in stylus rendering](/web/updates/images/2019/05/latency.png)
 
