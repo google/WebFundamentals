@@ -999,3 +999,5 @@ Anda sekarang tahu langkah-langkah kunci yang diperlukan untuk mengubah aplikasi
 Bantu kita membuat lab kode kita lebih baik dengan mengirimkan [isu](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. Dan terimakasih!
 
 {% include "web/_shared/translation-end.html" %}
+
+Translated by: Riza Fahmi
