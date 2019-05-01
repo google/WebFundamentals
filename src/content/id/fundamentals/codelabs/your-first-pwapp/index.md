@@ -15,59 +15,59 @@ book_path: /web/fundamentals/_book.yaml
 
 ### Apa yang membuat aplikasi web, Aplikasi Web Progresif?
 
-Aplikasi Web Progresif menyediakan pengalaman yang dapat diinstal dan seperti aplikasi di desktop dan seluler yang dibangun dan dikirim langsung melalui web. Itu adalah aplikasi web yang cepat dan andal. Dan yang paling penting, mereka adalah aplikasi web yang berfungsi di browser apa pun. Jika Anda membuat aplikasi web hari ini, Anda sudah berada di jalur untuk membangun Aplikasi Web Progresif.
+Aplikasi Web Progresif menyediakan pengalaman yang dapat diinstal dan seperti aplikasi di desktop dan seluler yang dibangun dan dikirim langsung melalui web. Itu adalah aplikasi web yang cepat dan andal. Dan yang paling penting, aplikasi tersebut adalah aplikasi web yang berjalan di browser apa pun. Jika Anda membuat aplikasi web hari ini, Anda sudah berada di jalur untuk membangun Aplikasi Web Progresif.
 
 #### Cepat &amp; Andal
 
-Setiap pengalaman web harus cepat, dan ini terutama berlaku untuk Aplikasi Web Progresif. Cepat mengacu pada waktu yang diperlukan untuk mendapatkan konten yang berarti di layar, dan memberikan pengalaman interaktif dalam waktu kurang dari 5 detik.
+Setiap pengalaman web harus cepat, dan ini terutama berlaku untuk Aplikasi Web Progresif. Cepat mengacu pada waktu yang diperlukan untuk mendapatkan konten yang memiliki makna di layar, dan memberikan pengalaman interaktif dalam waktu kurang dari 5 detik.
 
-Dan, itu harus sangat cepat. Sulit untuk menekankan seberapa jauh kinerja yang andal lebih baik. Pikirkan seperti ini: beban pertama aplikasi asli membuat frustrasi. Ini dilindungi oleh toko aplikasi dan unduhan besar, tetapi begitu Anda sampai pada titik di mana aplikasi diinstal, biaya di muka diamortisasi di semua mulai aplikasi, dan tidak ada yang mulai memiliki penundaan variabel. Setiap permulaan aplikasi secepat yang terakhir, tidak ada perbedaan. Aplikasi Web Progresif harus memberikan kinerja andal yang diharapkan pengguna dari pengalaman apa pun yang diinstal.
+Dan, hal tersebut **harus sangat cepat**. Sulit untuk menekankan seberapa pentingnya kinerja yang andal. Renungkan hal berikut: beban pertama aplikasi _native_ cukup membuat frustrasi. Ini disebabkan oleh _app store_ dan ukuran unduhan yang besar, tetapi begitu Anda sampai pada titik di mana aplikasi sudah diinstal, seluruh masalah tidak hilang begitu saja. Setiap kali aplikasi dibuka kecepatannya sama dengan saat aplikasi dibuka sebelumnya, tidak ada perbedaan. Aplikasi Web Progresif harus memberikan kinerja andal yang diharapkan pengguna dari pengalaman instalasi dari manapun.
 
 #### Installability
 
-Aplikasi Web Progresif dapat berjalan di tab browser, tetapi juga dapat diinstal. Memberi bookmark pada sebuah situs hanya menambahkan pintasan, tetapi Aplikasi Web Progresif yang terinstal terlihat dan berperilaku seperti semua aplikasi lain yang diinstal. Ini diluncurkan dari tempat yang sama dengan peluncuran aplikasi lain. Anda dapat mengontrol pengalaman peluncuran, termasuk layar splash yang disesuaikan, ikon dan banyak lagi. Ini berjalan sebagai aplikasi, di jendela aplikasi tanpa bilah alamat atau UI browser lainnya. Dan seperti semua aplikasi terpasang lainnya, ini adalah aplikasi tingkat atas di pengalih tugas.
+Aplikasi Web Progresif dapat berjalan di tab browser, tetapi juga dapat diinstal. Memberi bookmark pada sebuah situs hanya menambahkan pintasan, tetapi Aplikasi Web Progresif yang terinstal terlihat dan bergaya seperti semua aplikasi lain yang diinstal. Dapat diluncurkan dari tempat yang sama dengan peluncuran aplikasi lain. Anda dapat mengontrol pengalaman peluncuran, termasuk layar pembuka (_splash screen_) yang disesuaikan, ikon dan banyak lagi. Aplikasi Web Progresif ini berjalan sebagai aplikasi, di jendela aplikasi tanpa bilah alamat atau UI browser lainnya. Dan seperti semua aplikasi terpasang lainnya, PWA adalah aplikasi tingkat atas di pengalih tugas (_task switcher_).
 
-Ingat, penting bahwa PWA yang dapat diinstal cepat dan dapat diandalkan. Pengguna yang memasang PWA berharap aplikasi mereka berfungsi, tidak peduli apa pun koneksi jaringannya. Ini harapan dasar yang harus dipenuhi oleh setiap aplikasi yang diinstal.
+Ingat, penting bahwa PWA yang dapat diinstal cepat dan dapat diandalkan. Pengguna yang memasang PWA berharap aplikasi mereka berfungsi, tidak peduli apa pun koneksi jaringannya. Ini merupakan harapan utama yang harus dipenuhi oleh setiap aplikasi yang diinstal.
 
 #### Mobile &amp; Desktop
 
-Dengan menggunakan teknik desain responsif, Aplikasi Web Progresif bekerja pada desktop __and__ seluler, menggunakan basis kode tunggal antar platform. Jika Anda mempertimbangkan untuk menulis aplikasi asli, lihat manfaat yang ditawarkan PWA.
+Dengan menggunakan teknik desain responsif, Aplikasi Web Progresif bekerja pada desktop __dan__ seluler, menggunakan basis kode tunggal antar platform. Jika Anda mempertimbangkan untuk menulis aplikasi _native_, lihat manfaat yang ditawarkan PWA.
 
 ### Apa yang akan Anda bangun
 
 Dalam codelab ini, Anda akan membuat aplikasi web cuaca menggunakan teknik Aplikasi Web Progresif. Aplikasi Anda akan:
 
 * Gunakan desain responsif, sehingga berfungsi di desktop atau seluler.
-* Jadilah cepat, menggunakan pekerja layanan untuk melakukan precache sumber daya aplikasi (HTML, CSS, JavaScript, gambar) yang diperlukan untuk menjalankan, dan cache data cuaca saat runtime untuk meningkatkan kinerja.
-* Dapat diinstal, menggunakan manifes aplikasi web dan acara `beforeinstallprompt` untuk memberi tahu pengguna bahwa itu dapat diinstal.
+* Cepat, menggunakan _service worker_ untuk melakukan _precache_ sumber daya aplikasi (HTML, CSS, JavaScript, gambar) yang diperlukan untuk menjalankan aplikasi, dan _cache_ data cuaca saat aplikasi berjalan untuk meningkatkan kinerja.
+* Dapat diinstal, dengan menggunakan manifes aplikasi web (web app manifest) dan menggunakan _event_ `beforeinstallprompt` untuk membuat pengguna sadar bahwa aplikasi web ini dapat diinstal.
 
 ![95fe6f7fbeee5bb1.png](img/95fe6f7fbeee5bb1.png)
 
-Warning: Untuk menyederhanakan codelab ini, dan menjelaskan dasar-dasar pemberian pengalaman offline, kami menggunakan JavaScript vanilla. Dalam aplikasi produksi, kami sangat menyarankan menggunakan alat-alat seperti [Workbox](/web/tools/workbox/) untuk membangun pekerja layanan Anda. Ini menghilangkan banyak ujung tajam dan sudut gelap yang mungkin Anda temui.
+Peringatan: Untuk menyederhanakan codelab ini, dan menjelaskan dasar-dasar memberikan pengalaman _offline_, kita menggunakan _vanilla_ JavaScript. Dalam aplikasi produksi, kita sangat menyarankan menggunakan alat bantu seperti pustaka [Workbox](/web/tools/workbox/) untuk membangun _service worker_ Anda. Ini menghilangkan banyak kesulitan yang mungkin Anda temui.
 
 ### Apa yang akan Anda pelajari
 
 * Cara membuat dan menambahkan manifes aplikasi web
-* Cara memberikan pengalaman offline yang sederhana
-* Cara memberikan pengalaman offline penuh
+* Cara memberikan pengalaman _offline_ yang sederhana
+* Cara memberikan pengalaman _offline_ penuh
 * Cara membuat aplikasi Anda dapat diinstal
 
-Codelab ini difokuskan pada Aplikasi Web Progresif. Konsep dan blok kode yang tidak relevan dipoles dan disediakan bagi Anda untuk hanya menyalin dan menempel.
+Codelab ini difokuskan pada Aplikasi Web Progresif. Konsep dan blok kode yang tidak relevan akan disediakan bagi Anda untuk disalin langsung (_copy-paste_).
 
 ### Yang Anda butuhkan
 
-* Versi terbaru dari Chrome (74 atau lebih baru) PWA hanyalah aplikasi web, dan berfungsi di semua browser, tetapi kami akan menggunakan beberapa fitur Chrome DevTools untuk lebih memahami apa yang terjadi di tingkat browser, dan menggunakannya untuk uji pengalaman instal.
+* Versi terbaru dari Chrome (74 atau lebih baru) PWA hanyalah aplikasi web, dan berfungsi di semua browser, tetapi kita akan menggunakan beberapa fitur Chrome DevTools untuk lebih memahami apa yang terjadi di tingkat browser, dan menggunakannya untuk uji pengalaman instal.
 * Pengetahuan tentang HTML, CSS, JavaScript, dan [Chrome DevTools](https://developer.chrome.com/devtools) .
 
 ## Mempersiapkan
 
-### Dapatkan kunci untuk API Langit Gelap
+### Dapatkan kunci untuk API Dark Sky
 
-Data cuaca kami berasal dari [Dark Sky API](https://darksky.net/dev) . Untuk menggunakannya, Anda harus meminta kunci API. Mudah digunakan, dan gratis untuk proyek non-komersial.
+Data cuaca kita berasal dari [API Dark Sky](https://darksky.net/dev). Untuk menggunakannya, Anda harus meminta kunci API. Mudah digunakan, dan gratis untuk proyek non-komersial.
 
-[Register for API Key](https://darksky.net/dev/register)
+[Register untuk mendapatkan API Key](https://darksky.net/dev/register)
 
-Note: Anda masih dapat menyelesaikan codelab ini tanpa kunci API Dark Sky. Jika server kami tidak dapat memperoleh data nyata dari Dark Sky API, itu akan mengembalikan data palsu.
+Catatan: Anda masih dapat menyelesaikan codelab ini tanpa kunci API Dark Sky. Jika server kita tidak dapat memperoleh data nyata dari Dark Sky API, server akan mengembalikan data palsu.
 
 #### Pastikan kunci API Anda berfungsi dengan benar
 
@@ -77,37 +77,37 @@ Untuk menguji apakah Kunci API Anda berfungsi dengan benar, buat permintaan HTTP
 
 ### Dapatkan kodenya
 
-Kami telah memasukkan semua yang Anda butuhkan untuk proyek ini ke dalam repo Git. Untuk memulai, Anda harus mengambil kode dan membukanya di lingkungan pengembang favorit Anda. Untuk codelab ini, kami sarankan menggunakan Glitch.
+Kita telah memasukkan semua yang Anda butuhkan untuk proyek ini ke dalam repo Git. Untuk memulai, Anda harus mengambil kode dan membukanya di lingkungan pengembang (IDE) favorit Anda. Untuk codelab ini, kami sarankan menggunakan Glitch.
 
 #### Sangat Dianjurkan: Gunakan Glitch untuk mengimpor repo
 
 Menggunakan Glitch adalah metode yang disarankan untuk bekerja melalui codelab ini.
 
-1. Buka tab browser baru dan pergi ke [https://glitch.com](https://glitch.com) .
+1. Buka tab browser baru dan pergi ke [https://glitch.com](https://glitch.com).
 2. Jika Anda tidak memiliki akun, Anda harus mendaftar.
 3. Klik __New Project__, lalu __Klik dari Git Repo .__
-4. Klon __https: //github.com/googlecodelabs/your-first-pwapp.git__ dan klik OK.
+4. Duplikasi (_clone_) __https: //github.com/googlecodelabs/your-first-pwapp.git__ dan klik OK.
 5. Setelah repo dimuat, edit file `.env` , dan perbarui dengan kunci API DarkSky Anda. 6. Klik tombol __Tampilkan Live__ untuk melihat PWA dalam aksi.
 
 #### Alternatif: Unduh kode &amp; bekerja secara lokal
 
 Jika Anda ingin mengunduh kode dan bekerja secara lokal, Anda harus memiliki Node versi terbaru, dan pengaturan editor kode dan siap untuk digunakan.
 
-Caution: Jika Anda bekerja secara lokal, beberapa audit Lighthouse tidak akan berlalu, dan instalasi mungkin tidak tersedia karena server lokal tidak menyajikan konten dalam konteks yang aman.
+Perhatian: Jika Anda bekerja secara lokal, beberapa audit Lighthouse tidak akan terpenuhi, dan instalasi mungkin tidak tersedia karena server lokal tidak menyajikan konten dalam konteks yang aman.
 
-[Download source code](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
+[Unduh kode sumber](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
 1. Buka kemasan file zip yang diunduh.
 2. Jalankan `npm install` untuk menginstal dependensi yang diperlukan untuk menjalankan server.
-3. Edit `server.js` dan setel kunci API DarkSky Anda.
+3. Edit `server.js` dan tambahkan kunci API DarkSky Anda.
 4. Jalankan `node server.js` untuk memulai server pada port 8000.
 5. Buka tab browser ke [http://localhost:8000](http://localhost:8000)
 
-## Menetapkan garis dasar
+## Menetapkan Tolok Ukur
 
 ### Apa titik awal kita?
 
-Titik awal kami adalah aplikasi cuaca dasar yang dirancang untuk codelab ini. Kode ini telah terlalu disederhanakan untuk menunjukkan konsep-konsep dalam codelab ini, dan memiliki sedikit penanganan kesalahan. Jika Anda memilih untuk menggunakan kembali kode ini di aplikasi produksi, pastikan Anda menangani kesalahan dan sepenuhnya menguji semua kode.
+Titik awal kita adalah aplikasi cuaca dasar yang dirancang untuk codelab ini. Kode ini telah disederhanakan untuk menunjukkan konsep-konsep dalam codelab ini, dan memiliki sedikit penanganan kesalahan. Jika Anda memilih untuk menggunakan kembali kode ini di aplikasi produksi, pastikan Anda menangani kesalahan dan sepenuhnya menguji semua kode.
 
 Beberapa hal untuk dicoba ...
 
@@ -119,17 +119,17 @@ Beberapa hal untuk dicoba ...
 6. Menggunakan panel Jaringan Chrome, lihat apa yang terjadi ketika jaringan dibatasi ke Slow 3G.
 7. Tambahkan penundaan ke server perkiraan dengan mengubah `FORECAST_DELAY` di `server.js`
 
-### Audit dengan Mercusuar
+### Audit dengan Lighthouse
 
-[Lighthouse](/web/tools/lighthouse/#devtools) adalah alat yang mudah digunakan untuk membantu meningkatkan kualitas situs dan halaman Anda. Ini memiliki audit untuk kinerja, aksesibilitas, aplikasi web progresif, dan banyak lagi. Setiap audit memiliki dokumen rujukan yang menjelaskan mengapa audit itu penting, serta cara memperbaikinya.
+[Lighthouse](/web/tools/lighthouse/#devtools) adalah alat yang mudah digunakan untuk membantu meningkatkan kualitas situs dan halaman web Anda. Alat ini memiliki audit untuk kinerja, aksesibilitas, aplikasi web progresif, dan banyak lagi. Setiap audit memiliki dokumen rujukan yang menjelaskan mengapa audit itu penting, serta cara memperbaikinya.
 
 ![b112675caafccef0.png](img/b112675caafccef0.png)
 
-Kami akan menggunakan Mercusuar untuk mengaudit aplikasi Cuaca kami, dan memverifikasi perubahan yang telah kami buat.
+Kita akan menggunakan Lighthouse untuk mengaudit aplikasi Cuaca kita, dan memastikan perubahan yang telah kita buat.
 
-Note: Anda dapat menjalankan Mercusuar di Chrome DevTools, dari baris perintah, atau sebagai modul Node. Pertimbangkan [adding Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) ke proses pembuatan Anda untuk memastikan aplikasi web Anda tidak mundur.
+Catatan: Anda dapat menjalankan Lighthouse dari Chrome DevTools, dari baris perintah, atau sebagai modul Node. Pertimbangkan untuk menambahkan [Lighthouse](https://github.com/GoogleChromeLabs/lighthousebot) ke _build process_ Anda untuk memastikan aplikasi web Anda tidak mengalami penurunan performa.
 
-### Ayo jalankan Mercusuar
+### Ayo jalankan Lighthouse
 
 1. Buka proyek Anda di tab baru.
 2. Buka Chrome DevTools dan beralih ke tab __Audits__, DevTools menampilkan daftar kategori audit, biarkan semuanya diaktifkan.
@@ -137,7 +137,7 @@ Note: Anda dapat menjalankan Mercusuar di Chrome DevTools, dari baris perintah, 
 
 ### Audit Aplikasi Web Progresif
 
-Kami akan fokus pada hasil audit Aplikasi Web Progresif.
+Kita akan fokus pada hasil audit Aplikasi Web Progresif.
 
 ![af1a64a13725428e.png](img/af1a64a13725428e.png)
 
@@ -145,33 +145,33 @@ Dan ada banyak warna merah untuk fokus:
 
 * __❗GAGAL:__ Halaman saat ini tidak merespons dengan 200 ketika offline.
 * __❗GAGAL:__ `start_url` tidak merespons dengan 200 ketika offline.
-* __❗GAGAL:__ Tidak mendaftarkan pekerja layanan yang mengontrol halaman dan `start_url.`
+* __❗GAGAL:__ Tidak mendaftarkan _service worker_ yang mengontrol halaman dan `start_url.`
 * __❗GAGAL:__ Manifes aplikasi web tidak memenuhi persyaratan pemasangan.
-* __❗GAGAL:__ Tidak dikonfigurasikan untuk layar splash khusus.
+* __❗GAGAL:__ Tidak dikonfigurasikan untuk _splash screen_ khusus.
 * __❗GAGAL:__ Tidak mengatur warna tema address-bar.
 
 Mari kita mulai dan mulai memperbaiki beberapa masalah ini!
 
 ## Tambahkan manifes aplikasi web
 
-Pada akhir bagian ini, aplikasi cuaca kami akan melewati audit berikut:
+Pada akhir bagian ini, aplikasi cuaca kita akan melewati audit berikut:
 
 * Manifes aplikasi web tidak memenuhi persyaratan pemasangan.
-* Tidak dikonfigurasikan untuk layar splash khusus.
+* Tidak dikonfigurasikan untuk _splash scfeen_ khusus.
 * Tidak mengatur warna tema address-bar.
 
 ### Buat manifes aplikasi web
 
-[web app manifest](/web/fundamentals/web-app-manifest) adalah file JSON sederhana yang memberi Anda, pengembang, kemampuan untuk mengontrol bagaimana aplikasi Anda muncul kepada pengguna.
+[Web app manifest](/web/fundamentals/web-app-manifest) adalah file JSON sederhana yang memberikan Anda, sebagai pengembang (_developer_), kemampuan untuk mengontrol bagaimana aplikasi Anda muncul kepada pengguna.
 
 Menggunakan manifes aplikasi web, aplikasi web Anda dapat:
 
-* Beri tahu peramban bahwa Anda ingin aplikasi Anda dibuka di jendela mandiri ( `display` ).
+* Beri tahu browser bahwa Anda ingin aplikasi Anda dibuka di jendela tersendiri ( `display` ).
 * Tentukan halaman apa yang dibuka saat aplikasi pertama kali diluncurkan ( `start_url` ).
 * Tetapkan seperti apa tampilan aplikasi di dok atau peluncur aplikasi ( `short_name` , `icons` ).
-* Buat layar splash ( `name` , `icons` , `colors` ).
+* Buat _splash screen_ ( `name` , `icons` , `colors` ).
 * Beri tahu browser untuk membuka jendela dalam mode landscape, atau portrait ( `orientation` ).
-* Dan [plenty more](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members) .
+* Dan [banyak lagi](https://developer.mozilla.org/en-US/docs/Web/Manifest#Members) .
 
 Buat file bernama `public/manifest.json` di proyek Anda dan salin / rekatkan konten berikut:
 
@@ -213,7 +213,7 @@ Buat file bernama `public/manifest.json` di proyek Anda dan salin / rekatkan kon
 }
 ```
 
-Manifes mendukung berbagai ikon, yang ditujukan untuk berbagai ukuran layar. Untuk lab kode ini, kami telah memasukkan beberapa lainnya karena kami membutuhkannya untuk integrasi iOS kami.
+Manifes mendukung berbagai ikon, yang ditujukan untuk berbagai ukuran layar. Untuk lab kode ini, kita telah memasukkan beberapa lainnya karena kita membutuhkannya untuk integrasi iOS kita.
 
 Note: Agar dapat dipasang, Chrome mengharuskan Anda memberikan setidaknya ikon 192x192px dan ikon 512x512px. Tapi Anda juga bisa memberikan ukuran lain. Chrome menggunakan ikon yang paling dekat dengan 48dp, misalnya, 96px pada perangkat 2x atau 144px untuk perangkat 3x.
 
@@ -230,13 +230,13 @@ Selanjutnya, kita perlu memberi tahu browser tentang manifes kita dengan menamba
 
 #### Memutar
 
-DevTools menyediakan cara cepat dan mudah untuk memeriksa file `manifest.json` Anda. Buka panel __Manifest__ pada panel __Application__. Jika Anda telah menambahkan informasi manifes dengan benar, Anda dapat melihatnya diurai dan ditampilkan dalam format yang ramah-manusia pada panel ini.
+DevTools menyediakan cara cepat dan mudah untuk memeriksa file `manifest.json` Anda. Buka panel __Manifest__ pada panel __Application__. Jika Anda telah menambahkan informasi manifes dengan benar, Anda dapat melihatnya diurai dan ditampilkan dalam format yang mudah dibaca pada panel ini.
 
 ![c462743e1bc26958.png](img/c462743e1bc26958.png)
 
 ### Tambahkan meta tag &amp; ikon iOS
 
-Safari di iOS tidak mendukung aplikasi web manifest ( [yet](https://webkit.org/status/#specification-web-app-manifest) ), sehingga Anda akan perlu menambahkan [traditional `meta` tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) ke `<head>` dari Anda `index.html` berkas:
+Safari di iOS belum mendukung aplikasi web manifest ( [untuk saat ini](https://webkit.org/status/#specification-web-app-manifest) ), sehingga Anda akan perlu menambahkan [`meta` tag tradisional](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html) ke `<head>` dari `index.html` Anda:
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L31)
 
@@ -248,13 +248,13 @@ Safari di iOS tidak mendukung aplikasi web manifest ( [yet](https://webkit.org/s
 <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
 ```
 
-### Bonus: Perbaikan Mercusuar yang mudah
+### Bonus: Perbaikan Lighthouse yang mudah
 
-Audit Lighthouse kami menyebutkan beberapa hal lain yang cukup mudah untuk diperbaiki, jadi mari kita selesaikan itu sementara kita di sini.
+Audit Lighthouse kita menyebutkan beberapa hal lain yang cukup mudah untuk diperbaiki, jadi mari kita selesaikan itu sementara kita di sini.
 
 #### Tetapkan deskripsi meta
 
-Di bawah audit SEO, Lighthouse mencatat bahwa [Document does not have a meta description.](/web/tools/lighthouse/audits/description) &quot; [Document does not have a meta description.](/web/tools/lighthouse/audits/description) &quot; kami dapat ditampilkan dalam hasil pencarian Google. Deskripsi unik berkualitas tinggi dapat menjadikan hasil Anda lebih relevan bagi pengguna pencarian dan dapat meningkatkan lalu lintas pencarian Anda.
+Di bawah audit SEO, Lighthouse mencatat bahwa &quot; [Document does not have a meta description.](/web/tools/lighthouse/audits/description) &quot;. Deskripsi unik berkualitas tinggi dapat menjadikan hasil Anda lebih relevan bagi pengguna pencarian dan dapat meningkatkan lalu lintas pencarian Anda.
 
 Untuk menambahkan deskripsi, tambahkan tag `meta` berikut ke `<head>` dokumen Anda:
 
@@ -267,7 +267,7 @@ Untuk menambahkan deskripsi, tambahkan tag `meta` berikut ke `<head>` dokumen An
 
 #### Mengatur warna tema bilah alamat
 
-Dalam audit PWA, Lighthouse mencatat aplikasi kami &quot; [Does not set an address-bar theme color](/web/tools/lighthouse/audits/address-bar) &quot;. Mereka bilah alamat browser untuk mencocokkan warna merek Anda memberikan pengalaman pengguna yang lebih mendalam.
+Dalam audit PWA, Lighthouse mencatat aplikasi &quot;[Does not set an address-bar theme color](/web/tools/lighthouse/audits/address-bar)&quot;. Mencocokkan warna tema Anda memberikan pengalaman pengguna yang lebih mendalam.
 
 Untuk mengatur warna tema di ponsel, tambahkan tag `meta` berikut ke `<head>` dokumen Anda:
 
@@ -278,9 +278,9 @@ Untuk mengatur warna tema di ponsel, tambahkan tag `meta` berikut ke `<head>` do
 <meta name="theme-color" content="#2F3BA2" />
 ```
 
-### Verifikasi perubahan dengan Mercusuar
+### Verifikasi perubahan dengan Lighthouse
 
-Jalankan Mercusuar lagi (dengan mengklik tanda + di sudut kiri atas panel Audit) dan verifikasi perubahan Anda.
+Jalankan Lighthouse lagi (dengan mengklik tanda + di sudut kiri atas panel Audit) dan verifikasi perubahan Anda.
 
 __SEO Audit__
 
@@ -290,34 +290,34 @@ __Audit Aplikasi Web Progresif__
 
 * __❗GAGAL:__ Halaman saat ini tidak merespons dengan 200 ketika offline.
 * __❗GAGAL:__ `start_url` tidak merespons dengan 200 ketika offline.
-* __❗GAGAL:__ Tidak mendaftarkan pekerja layanan yang mengontrol halaman dan `start_url.`
+* __❗GAGAL:__ Tidak mendaftarkan _service worker_ yang mengontrol halaman dan `start_url.`
 * __✅ LULUS:__ Manifes aplikasi web memenuhi persyaratan pemasangan.
 * __✅ LULUS:__ Dikonfigurasi untuk layar splash khusus.
 * __✅ LULUS:__ Mengatur warna tema address-bar.
 
-## Berikan pengalaman offline dasar
+## Berikan pengalaman offline sederhana
 
-Ada harapan dari pengguna bahwa aplikasi yang diinstal akan selalu memiliki pengalaman dasar jika sedang offline. Itulah mengapa sangat penting bagi aplikasi web yang dapat diinstal untuk tidak pernah menampilkan dinosaurus offline Chrome. Pengalaman offline dapat berkisar dari halaman offline yang sederhana, hingga pengalaman hanya baca dengan data yang di-cache sebelumnya, hingga pengalaman offline yang berfungsi penuh yang secara otomatis disinkronkan ketika koneksi jaringan dipulihkan.
+Ada harapan dari pengguna bahwa aplikasi yang diinstal akan tetap dapat dijalankan meskipun sedang dalam keadaan offline. Itulah mengapa sangat penting bagi aplikasi web yang dapat diinstal untuk tidak pernah menampilkan _dinosaurus offline_ Chrome. Pengalaman offline dapat berupa halaman offline yang sederhana, hingga kemampuan untuk membuka dan membaca data yang sudah di-_cache_ sebelumnya, hingga pengalaman offline yang berfungsi penuh yang secara otomatis disinkronkan ketika koneksi jaringan dipulihkan.
 
-Di bagian ini, kita akan menambahkan halaman offline sederhana ke aplikasi cuaca kita. Jika pengguna mencoba memuat aplikasi saat offline, itu akan menampilkan halaman khusus kami, bukan halaman offline khas yang ditampilkan browser. Pada akhir bagian ini, aplikasi cuaca kami akan melewati audit berikut:
+Di bagian ini, kita akan menambahkan halaman offline sederhana ke aplikasi cuaca kita. Jika pengguna mencoba memuat aplikasi saat offline, itu akan menampilkan halaman khusus kita, bukan halaman offline khas yang ditampilkan browser. Pada akhir bagian ini, aplikasi cuaca kita akan melewati audit berikut:
 
 * Halaman saat ini tidak merespons dengan 200 ketika offline.
 * `start_url` tidak merespons dengan 200 ketika offline.
-* Tidak mendaftarkan pekerja layanan yang mengontrol halaman dan `start_url.`
+* Tidak mendaftarkan _service worker_ yang mengontrol halaman dan `start_url.`
 
-Di bagian selanjutnya, kami akan mengganti halaman offline khusus kami dengan pengalaman offline penuh. Ini akan meningkatkan pengalaman offline, tetapi yang lebih penting, ini akan secara signifikan meningkatkan kinerja kami, karena sebagian besar aset kami (HTML, CSS dan JavaScript) akan disimpan dan disajikan secara lokal, menghilangkan jaringan sebagai potensi hambatan.
+Di bagian selanjutnya, kita akan mengganti halaman offline khusus kita dengan pengalaman offline penuh. Ini akan meningkatkan pengalaman offline, tetapi yang lebih penting, ini akan secara signifikan meningkatkan kinerja kita, karena sebagian besar aset kita (HTML, CSS dan JavaScript) akan disimpan dan disajikan secara lokal, menghilangkan jaringan sebagai potensi hambatan.
 
-### Pekerja layanan untuk menyelamatkan
+### Service Worker sang penyelamat
 
-Jika Anda tidak terbiasa dengan pekerja layanan, Anda bisa mendapatkan pemahaman dasar dengan membaca [Introduction To Service Workers](/web/fundamentals/primers/service-worker/) tentang apa yang dapat mereka lakukan, bagaimana siklus hidup mereka bekerja dan banyak lagi. Setelah Anda menyelesaikan lab kode ini, pastikan untuk memeriksa [Debugging Service Workers code lab](http://goo.gl/jhXCBy) untuk melihat lebih mendalam bagaimana bekerja dengan pekerja layanan.
+Jika Anda tidak terbiasa dengan _service worker_, Anda bisa mendapatkan pemahaman dasar dengan membaca [Introduction To Service Workers](/web/fundamentals/primers/service-worker/) tentang apa yang dapat mereka lakukan, bagaimana siklus hidup mereka bekerja dan banyak lagi. Setelah Anda menyelesaikan codelab ini, pastikan untuk memeriksa [Debugging Service Workers code lab](http://goo.gl/jhXCBy) untuk melihat lebih mendalam bagaimana menggunakan dengan _service worker_.
 
-Fitur yang disediakan melalui pekerja layanan harus dianggap sebagai peningkatan progresif, dan hanya ditambahkan jika didukung oleh browser. Misalnya, dengan pekerja layanan Anda dapat [app shell](/web/fundamentals/architecture/app-shell) -cache [app shell](/web/fundamentals/architecture/app-shell) dan data untuk aplikasi Anda, sehingga itu tersedia bahkan ketika jaringan tidak. Ketika pekerja layanan tidak didukung, kode offline tidak dipanggil, dan pengguna mendapatkan pengalaman dasar. Menggunakan deteksi fitur untuk memberikan peningkatan progresif memiliki sedikit overhead dan tidak akan terputus di browser lama yang tidak mendukung fitur itu.
+Fitur yang disediakan melalui _service worker_ harus dianggap sebagai peningkatan progresif, dan hanya ditambahkan jika didukung oleh browser. Misalnya, dengan _service worker_ Anda dapat menampung (_cache_) [app shell](/web/fundamentals/architecture/app-shell) dan data untuk aplikasi Anda, sehingga dapat dibuka meskipun saat jaringan _offline_. Ketika _service worker_ tidak didukung, kode offline tidak dipanggil, dan pengguna mendapatkan pengalaman dasar. Menggunakan deteksi fitur untuk memberikan peningkatan progresif memang sedikit memerlukan pekerjaan tambahan namun membuat aplikasi tetap dapat dibuka di browser lama yang tidak mendukung fitur itu.
 
-Warning: Fungsionalitas pekerja layanan hanya tersedia pada halaman yang diakses melalui HTTPS (http: // localhost dan yang setara juga akan berfungsi untuk memfasilitasi pengujian).
+Warning: Fungsionalitas _service worker_ hanya tersedia pada halaman yang diakses melalui HTTPS (http: // localhost dan yang setara juga akan berfungsi untuk memfasilitasi pengujian).
 
-### Daftarkan pekerja layanan
+### Daftarkan service worker
 
-Langkah pertama adalah mendaftarkan pekerja layanan. Tambahkan kode berikut ke file `index.html` Anda:
+Langkah pertama adalah mendaftarkan _service worker_. Tambahkan kode berikut ke file `index.html` Anda:
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L206)
 
@@ -333,13 +333,13 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Kode ini memeriksa untuk melihat apakah API pekerja layanan tersedia, dan jika ya, pekerja layanan di `/service-worker.js` terdaftar setelah halaman tersebut [loaded](/web/fundamentals/primers/service-workers/registration) .
+Kode ini akan memeriksa apakah API _service worker_ tersedia, dan jika ya, _service worker_ di `/service-worker.js` didaftarkan setelah halaman tersebut [berhasil dibuka sepenuhnya](/web/fundamentals/primers/service-workers/registration) .
 
-Catatan, pekerja layanan dilayani dari direktori root, bukan dari direktori `/scripts/` . Ini adalah cara termudah untuk mengatur __ `scope` __ dari pekerja layanan Anda. `scope` pekerja layanan menentukan file mana yang dikontrol pekerja layanan, dengan kata lain, dari jalur mana pekerja layanan akan memotong permintaan. `scope` default adalah lokasi file pekerja layanan, dan meluas ke semua direktori di bawah ini. Jadi jika `service-worker.js` terletak di direktori root, pekerja layanan akan mengontrol permintaan dari semua halaman web di domain ini.
+Catatan, _service worker_ dilayani dari direktori utama (_root_), bukan dari direktori `/scripts/` . Ini adalah cara termudah untuk mengatur __ `scope` __ dari _service worker_ Anda. `scope` _service worker_ menentukan file mana yang dikontrol _service worker_, dengan kata lain, dari jalur mana _service worker_ akan melakukan interupsi permintaan (_request_). `scope` secara default adalah lokasi file _service worker_, dan meluas ke semua direktori di bawahnya. Jadi jika `service-worker.js` terletak di direktori utama (_root_), _service worker_ akan mengontrol permintaan dari semua halaman web di domain ini.
 
 ### Halaman offline Precache
 
-Pertama, kita perlu memberi tahu pekerja layanan apa yang harus di-cache. Kami telah membuat [offline page](https://your-first-pwa.glitch.me/offline.html) ( `public/offline.html` ) sederhana yang akan kami tampilkan kapan saja tidak ada koneksi jaringan.
+Pertama, kita perlu memberi tahu _service worker_ apa yang harus di-cache. Kita telah membuat [halaman offline](https://your-first-pwa.glitch.me/offline.html) ( `public/offline.html` ) sederhana yang akan kita tampilkan kapan saja ketika tidak ada koneksi jaringan.
 
 Di `service-worker.js` Anda, tambahkan `'/offline.html',` ke array `FILES_TO_CACHE` , hasil akhirnya harus seperti ini:
 
@@ -352,7 +352,7 @@ const FILES_TO_CACHE = [
 ];
 ```
 
-Selanjutnya, kita perlu memperbarui acara `install` untuk memberitahu pekerja layanan untuk melakukan pra-cache halaman offline:
+Selanjutnya, kita perlu memperbarui acara `install` untuk memberitahu _service worker_ untuk melakukan pra-cache halaman offline:
 
 #### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L29)
 
@@ -366,33 +366,33 @@ evt.waitUntil(
 );
 ```
 
-Note: Peristiwa dan siklus hidup pekerja layanan dicakup di bagian selanjutnya.
+Catatan: Peristiwa dan siklus hidup _service worker_ dicakup di bagian selanjutnya.
 
-Acara `install` kami sekarang membuka cache dengan `caches.open()` dan memberikan nama cache. Memberi nama cache memungkinkan kita untuk versi file, atau memisahkan data dari sumber daya yang di-cache sehingga kita dapat dengan mudah memperbarui satu tetapi tidak mempengaruhi yang lain.
+Proses `install` sekarang membuka cache dengan `caches.open()` dan memberikan nama cache. Memberi nama cache memungkinkan kita untuk membedakan versi file, atau memisahkan data dari sumber daya yang di-cache sehingga kita dapat dengan mudah memperbarui satu tetapi tidak mempengaruhi yang lain.
 
-Setelah cache terbuka, kita dapat memanggil `cache.addAll()` , yang mengambil daftar URL, mengambilnya dari server dan menambahkan respons ke cache. Perhatikan bahwa `cache.addAll()` akan menolak jika ada permintaan individu yang gagal. Itu berarti Anda dijamin bahwa, jika langkah pemasangan berhasil, cache Anda akan berada dalam kondisi yang konsisten. Tetapi, jika gagal karena suatu alasan, itu akan secara otomatis mencoba lagi saat pekerja layanan memulai.
+Setelah cache terbuka, kita dapat memanggil `cache.addAll()`, yang mengambil daftar URL, mengambilnya dari server dan menambahkan respon ke cache. Perhatikan bahwa `cache.addAll()` akan menolak jika ada permintaan individu yang gagal. Itu berarti Anda dijamin bahwa, jika langkah pemasangan berhasil, cache Anda akan berada dalam kondisi yang konsisten. Tetapi, jika gagal karena suatu alasan, itu akan secara otomatis mencoba lagi saat _service worker_ kembali dijalankan.
 
-#### Memutar
+#### Melihat Kembali DevTools
 
-Mari kita lihat bagaimana Anda dapat menggunakan DevTools untuk memahami dan men-debug pekerja layanan. Sebelum memuat ulang halaman Anda, buka DevTools, buka panel __Layanan Pekerja__ pada panel __Aplikasi__. Seharusnya terlihat seperti ini:
+Mari kita lihat bagaimana Anda dapat menggunakan DevTools untuk memahami dan men-debug _service worker_. Sebelum memuat ulang halaman Anda, buka DevTools, buka panel __Layanan Pekerja__ pada panel __Aplikasi__. Seharusnya terlihat seperti ini:
 
 ![b3aa37b67863fd03.png](img/b3aa37b67863fd03.png)
 
-Ketika Anda melihat halaman kosong seperti ini, itu berarti bahwa halaman yang sedang terbuka tidak memiliki pekerja layanan terdaftar.
+Ketika Anda melihat halaman kosong seperti ini, itu berarti bahwa halaman yang sedang terbuka tidak memiliki _service worker_ terdaftar.
 
-Sekarang, muat ulang halaman Anda. Panel Pekerja Layanan sekarang akan terlihat seperti ini:
+Sekarang, muat ulang halaman Anda. Panel _Service Worker_ sekarang akan terlihat seperti ini:
 
 ![69808e4bf3aee41b.png](img/69808e4bf3aee41b.png)
 
-Ketika Anda melihat informasi seperti ini, itu berarti halaman memiliki pekerja layanan yang sedang berjalan.
+Ketika Anda melihat informasi seperti ini, itu berarti halaman memiliki _service worker_ yang sedang berjalan.
 
-Di sebelah label Status, ada nomor (*34251* dalam kasus ini), awasi nomor itu saat Anda bekerja dengan pekerja layanan. Ini cara mudah untuk mengetahui apakah pekerja layanan Anda telah diperbarui.
+Di sebelah label Status, ada nomor (*34251* dalam kasus ini), perhatikan nomor itu saat Anda bekerja dengan _service worker_. Ini cara mudah untuk mengetahui apakah _service worker_ Anda telah diperbarui.
 
 ### Bersihkan halaman offline lama
 
-Kami akan menggunakan acara `activate` untuk membersihkan data lama di cache kami. Kode ini memastikan bahwa pekerja layanan Anda memperbarui cache setiap kali ada file shell aplikasi berubah. Agar ini berfungsi, Anda harus menambahkan variabel `CACHE_NAME` di bagian atas file pekerja layanan Anda.
+Kita akan menggunakan _event_ `activate` untuk membersihkan data lama di _cache_ kita. Kode ini memastikan bahwa _service worker_ Anda memperbarui _cache_ setiap kali ada file shell aplikasi yang berubah. Agar dapat berfungsi, Anda harus menambahkan variabel `CACHE_NAME` di bagian atas file _service worker_ Anda.
 
-Tambahkan kode berikut ke acara `activate` Anda:
+Tambahkan kode berikut ke _event_ `activate` Anda:
 
 #### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L36)
 
@@ -410,17 +410,17 @@ evt.waitUntil(
 );
 ```
 
-#### Memutar
+#### Melihat Kembali DevTools
 
-Dengan panel Pekerja Layanan terbuka, segarkan halaman, Anda akan melihat pekerja layanan baru diinstal, dan kenaikan nomor status.
+Dengan panel _Service Worker_ terbuka, segarkan halaman, Anda akan melihat _service worker_ baru diinstal, dan kenaikan nomor status.
 
 ![1db827d76bc0b359.png](img/1db827d76bc0b359.png)
 
-Pekerja layanan yang diperbarui segera mengambil kendali karena acara `install` kami selesai dengan `self.skipWaiting()` , dan acara `activate` selesai dengan `self.clients.claim()` . Tanpa itu, pekerja layanan lama akan terus mengontrol halaman selama ada tab yang terbuka ke halaman.
+_Service worker_ yang diperbarui segera mengambil kendali karena _event_ `install` kita selesai dengan `self.skipWaiting()`, dan _event_ `activate` selesai dengan `self.clients.claim()`. Tanpa hal tersebut, _service worker_ lama akan terus mengontrol halaman selama ada tab yang terbuka ke halaman.
 
 ### Menangani permintaan jaringan yang gagal
 
-Dan akhirnya, kita perlu menangani acara `fetch` . Kita akan menggunakan [network, falling back to cache strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache) . Pekerja layanan pertama-tama akan mencoba mengambil sumber daya dari jaringan, jika gagal, ia akan mengembalikan halaman offline dari cache.
+Dan akhirnya, kita perlu menangani _event_ `fetch`. Kita akan menggunakan [jaringan, kembali ke strategi cache](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache) . _Service worker_ pertama-tama akan mencoba mengambil sumber daya dari jaringan, jika gagal, ia akan mengembalikan halaman _offline_ dari _cache_.
 
 ![6302ad4ba8460944.png](img/6302ad4ba8460944.png)
 
@@ -443,54 +443,54 @@ evt.respondWith(
 );
 ```
 
-Handler `fetch` hanya perlu menangani navigasi halaman, sehingga permintaan lain dapat dibuang dari handler dan akan ditangani secara normal oleh browser. Tetapi, jika permintaan `.mode` adalah `navigate` , gunakan `fetch` untuk mencoba mendapatkan item dari jaringan. Jika gagal, pengendali `catch` membuka cache dengan `caches.open(CACHE_NAME)` dan menggunakan `cache.match('offline.html')` untuk mendapatkan halaman offline yang didahului. Hasilnya kemudian diteruskan kembali ke browser menggunakan `evt.respondWith()` .
+_Handler_ `fetch` hanya perlu menangani navigasi halaman, sehingga permintaan lain dapat dibuang dari _handler_ dan akan ditangani secara normal oleh browser. Tetapi, jika permintaan `.mode` adalah `navigate`, gunakan `fetch` untuk mencoba mendapatkan item dari jaringan. Jika gagal, pengendali `catch` membuka cache dengan `caches.open(CACHE_NAME)` dan menggunakan `cache.match('offline.html')` untuk mendapatkan halaman offline yang sudah di-cache. Hasilnya kemudian diteruskan kembali ke browser menggunakan `evt.respondWith()`.
 
-Key Point: Membungkus panggilan `fetch` di [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) mencegah penanganan peramban bawaan bawaan dan memberi tahu peramban bahwa kami ingin menangani sendiri responsnya. Jika Anda tidak memanggil `evt.respondWith()` di dalam pengendali `fetch` , Anda hanya akan mendapatkan perilaku jaringan default.
+Poin utama: Membungkus panggilan `fetch` di [`evt.respondWith()`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith) mencegah penanganan browser bawaan bawaan dan memberi tahu browser bahwa kita ingin menangani sendiri responnya. Jika Anda tidak memanggil `evt.respondWith()` di dalam _handler_ `fetch` , Anda hanya akan mendapatkan perilaku jaringan sebagai _default_.
 
-#### Memutar
+#### Melihat Ulang DevTools
 
-Mari kita periksa untuk memastikan semuanya berfungsi seperti yang kita harapkan. Dengan panel Pekerja Layanan terbuka, segarkan halaman, Anda akan melihat pekerja layanan baru diinstal, dan kenaikan nomor status.
+Mari kita periksa untuk memastikan semuanya berfungsi seperti yang kita harapkan. Dengan panel _Service Worker_ terbuka, segarkan halaman (_refresh_), Anda akan melihat _service worker_ baru diinstal, dan kenaikan angka status.
 
-Kami juga dapat memeriksa untuk melihat apa yang telah di-cache. Buka panel __Cache Storage__ pada panel __Application__ dari DevTools. Klik kanan __Cache Storage__, pilih __Refresh Caches__, perluas bagian dan Anda akan melihat nama cache statis Anda tercantum di sisi kiri. Mengklik pada nama cache menunjukkan semua file yang di-cache.
+Kita juga dapat memeriksa untuk melihat apa yang telah di-cache. Buka panel __Cache Storage__ pada panel __Application__ dari DevTools. Klik kanan __Cache Storage__, pilih __Refresh Caches__, perluas bagian dan Anda akan melihat nama cache statis Anda tercantum di sisi kiri. Mengklik pada nama cache menunjukkan semua file yang di-cache.
 
 ![c80a2a2e93c1c3ee.png](img/c80a2a2e93c1c3ee.png)
 
-Sekarang, mari kita coba mode offline. Kembali ke panel __Service Workers__ dari DevTools dan centang kotak centang __Offline__. Setelah memeriksanya, Anda akan melihat ikon peringatan kuning kecil di sebelah tab panel __Network__. Ini menunjukkan bahwa Anda sedang luring.
+Sekarang, mari kita coba mode offline. Kembali ke panel __Service Workers__ dari DevTools dan centang kotak centang __Offline__. Setelah memeriksanya, Anda akan melihat ikon peringatan kuning kecil di sebelah tab panel __Network__. Ini menunjukkan bahwa Anda sedang offline.
 
 ![984b34dc2aa667a.png](img/984b34dc2aa667a.png)
 
-Muat ulang halaman Anda dan ... berfungsi! Kami mendapatkan panda offline __our__, alih-alih dino offline Chrome!
+Muat ulang halaman Anda dan ... berfungsi! Kita mendapatkan offline panda , alih-alih dino offline Chrome!
 
-### Kiat untuk pekerja layanan pengujian
+### Kiat untuk menguji service worker
 
-Pekerja layanan debug bisa menjadi tantangan, dan ketika itu melibatkan caching, hal-hal bisa menjadi lebih dari mimpi buruk jika cache tidak diperbarui ketika Anda mengharapkannya. Antara siklus pekerja pekerja biasa dan bug dalam kode Anda, Anda mungkin menjadi cepat frustrasi. __Tapi jangan .__
+Melakukan debug terhadap _service worker_ bisa menjadi tantangan, dan ketika melibatkan caching, hal-hal bisa menjadi mimpi buruk jika cache tidak diperbarui padahal Anda mengharapkannya. Antara siklus _service worker_ biasa dan bug dalam kode Anda, Anda mungkin menjadi cepat frustrasi. __Tapi jangan .__
 
 #### Gunakan DevTools
 
-Di panel Pekerja Layanan dari panel Aplikasi, ada beberapa kotak centang yang akan membuat hidup Anda lebih mudah.
+Di panel _Service Worker_ dari panel Aplikasi, ada beberapa kotak centang yang akan membuat hidup Anda lebih mudah.
 
 ![c7ac93904f473a91.png](img/c7ac93904f473a91.png)
 
-* __Offline__ - Ketika dicentang mensimulasikan pengalaman offline dan mencegah permintaan untuk pergi ke jaringan.
-* __Perbarui pada reload__ - Ketika dicentang akan mendapatkan pekerja layanan terbaru, instal, dan segera aktifkan.
-* __Bypass untuk jaringan__ - Ketika permintaan yang dicentang memotong pekerja layanan dan dikirim langsung ke jaringan.
+* __Offline__ - Ketika dicentang mensimulasikan pengalaman offline dan mencegah permintaan untuk menggunakan jaringan.
+* __Update on reload__ - Ketika dicentang akan mendapatkan _service worker_ terbaru, instal, dan segera aktifkan.
+* __Bypass for network__ - Ketika permintaan yang dicentang melewati _service worker_ dan dikirim langsung ke jaringan.
 
-#### Mulai Segar
+#### Memulai Kembali
 
-Dalam beberapa kasus, Anda mungkin menemukan diri Anda memuat data cache atau bahwa hal-hal tidak diperbarui seperti yang Anda harapkan. Untuk menghapus semua data yang disimpan (penyimpanan lokal, data diindeksDB, file cache) dan menghapus semua pekerja layanan, gunakan panel Hapus penyimpanan di tab aplikasi. Atau, Anda juga bisa bekerja di jendela Penyamaran.
+Dalam beberapa kasus, Anda mungkin menemukan diri Anda memuat data cache atau bahwa hal-hal tidak diperbarui seperti yang Anda harapkan. Untuk menghapus semua data yang disimpan (penyimpanan lokal, data di indexedDB, file cache) dan menghapus semua _service worker_, gunakan panel "Clear storage" di tab aplikasi. Atau, Anda juga bisa bekerja di mode Penyamaran (_Incognito_).
 
 ![398bbcd285e2c5dd.png](img/398bbcd285e2c5dd.png)
 
 Kiat tambahan:
 
-* Setelah seorang pekerja layanan telah tidak terdaftar, ia mungkin tetap terdaftar sampai jendela browser yang berisi ditutup.
-* Jika beberapa jendela ke aplikasi Anda terbuka, pekerja layanan baru tidak akan berlaku sampai semua jendela dimuat ulang dan diperbarui ke pekerja layanan terbaru.
-* Membatalkan pendaftaran pekerja layanan tidak menghapus cache!
-* Jika seorang pekerja layanan ada dan seorang pekerja layanan baru terdaftar, pekerja layanan baru tidak akan mengambil kendali sampai halaman dimuat kembali, kecuali jika Anda [take immediate control](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim) .
+* Setelah _service worker_ sudah tidak terdaftar, ia mungkin tetap terdaftar sampai jendela browser yang berisi ditutup.
+* Jika beberapa jendela ke aplikasi Anda terbuka, _service worker_ baru tidak akan berlaku sampai semua jendela dimuat ulang dan diperbarui ke _service worker_ terbaru.
+* Membatalkan pendaftaran _service worker_ tidak akan menghapus cache!
+* Jika sebuah _service worker_ ada dan sebuah _service worker_ baru terdaftar, _service worker_ baru tidak akan mengambil kendali sampai halaman dimuat kembali, kecuali jika Anda [mengambil kontrol langsung](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim) .
 
-### Verifikasi perubahan dengan Mercusuar
+### Verifikasi perubahan dengan Lighthouse
 
-Jalankan Mercusuar lagi dan verifikasi perubahan Anda. Jangan lupa untuk menghapus centang pada kotak centang Offline sebelum Anda memverifikasi perubahan Anda!
+Jalankan Lighthouse lagi dan verifikasi perubahan Anda. Jangan lupa untuk menghapus centang pada kotak centang Offline sebelum Anda memverifikasi perubahan Anda!
 
 __SEO Audit__
 
@@ -500,74 +500,74 @@ __Audit Aplikasi Web Progresif__
 
 * __✅ LULUS:__ Halaman saat ini merespons dengan 200 ketika offline.
 * __✅ LULUS:__ `start_url` merespons dengan 200 ketika offline.
-* __✅ LULUS:__ Mendaftarkan pekerja layanan yang mengontrol halaman dan `start_url.`
+* __✅ LULUS:__ Mendaftarkan _service worker_ yang mengontrol halaman dan `start_url.`
 * __✅ LULUS:__ Manifes aplikasi web memenuhi persyaratan pemasangan.
 * __✅ LULUS:__ Dikonfigurasi untuk layar splash khusus.
 * __✅ LULUS:__ Mengatur warna tema address-bar.
 
 ## Berikan pengalaman offline penuh
 
-Luangkan waktu sejenak dan letakkan ponsel Anda dalam mode pesawat, dan coba jalankan beberapa aplikasi favorit Anda. Dalam hampir semua kasus, mereka memberikan pengalaman offline yang cukup kuat. Pengguna mengharapkan pengalaman yang kuat dari aplikasi mereka. Dan web seharusnya tidak berbeda. Aplikasi Web Progresif harus dirancang dengan offline sebagai skenario inti.
+Luangkan waktu sejenak dan letakkan ponsel Anda dalam mode pesawat, dan coba jalankan beberapa aplikasi favorit Anda. Dalam hampir semua kasus, mereka memberikan pengalaman offline yang cukup bagus. Pengguna mengharapkan pengalaman yang bagus dari aplikasi mereka. Dan web seharusnya tidak berbeda. Aplikasi Web Progresif harus dirancang dengan offline sebagai skenario inti.
 
-Key Point: Merancang untuk offline-pertama dapat secara drastis meningkatkan kinerja aplikasi web Anda dengan mengurangi jumlah permintaan jaringan yang dibuat oleh aplikasi Anda, alih-alih sumber daya dapat diberlakukan dan disajikan langsung dari cache lokal. Bahkan dengan koneksi jaringan tercepat, melayani dari cache lokal akan lebih cepat!
+Poin Penting: Merancang untuk offline-first dapat secara drastis meningkatkan kinerja aplikasi web Anda dengan mengurangi jumlah permintaan jaringan yang dibuat oleh aplikasi Anda, alih-alih sumber daya dapat dicache diawal dan disajikan langsung dari cache lokal. Bahkan dengan koneksi jaringan tercepat, melayani dari cache lokal akan lebih cepat!
 
-### Daur hidup pekerja layanan
+### Daur hidup service worker
 
-Siklus hidup pekerja layanan adalah bagian yang paling rumit. Jika Anda tidak tahu apa yang ia coba lakukan dan apa manfaatnya, itu bisa terasa seperti melawan Anda. Tetapi begitu Anda tahu cara kerjanya, Anda dapat memberikan pembaruan yang mulus dan mencolok kepada pengguna, memadukan yang terbaik dari web dan pola asli.
+Siklus hidup _service worker_ adalah bagian yang paling rumit. Jika Anda tidak tahu apa yang ia coba lakukan dan apa manfaatnya, itu bisa terasa seperti melawan Anda. Tetapi begitu Anda tahu cara kerjanya, Anda dapat memberikan pembaruan yang mulus dan mencolok kepada pengguna, memadukan yang terbaik dari web dan bentuk aplikasi native.
 
-Key Point: Codelab ini hanya mencakup dasar-dasar siklus hidup pekerja layanan. Untuk menyelam lebih dalam, lihat [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle) artikel tentang WebFundamentals.
+Poin Penting: Codelab ini hanya mencakup dasar-dasar siklus hidup _service worker_. Untuk melihat lebih dalam, lihat artikel tentang WebFundamentals berikut [The Service Worker Lifecycle](/web/fundamentals/primers/service-workers/lifecycle).
 
-Acara #### `install`
+#### Event `install`
 
-Acara pertama yang didapatkan oleh pekerja layanan adalah `install` . Ini dipicu segera setelah pekerja dieksekusi, dan itu hanya dipanggil sekali per pekerja layanan. __Jika Anda mengubah skrip pekerja layanan Anda, browser menganggapnya sebagai pekerja layanan yang berbeda__, dan itu akan mendapatkan acara `install` sendiri.
+Event pertama yang didapatkan oleh _service worker_ adalah `install`. Ini segera terpicu setelah pekerja dieksekusi, dan itu hanya dipanggil sekali untuk setiap _service worker_. __Jika Anda mengubah skrip _service worker_ Anda, browser menganggapnya sebagai _service worker_ yang berbeda__, dan itu akan mendapatkan event `install` sendiri.
 
 ![72ed77b1720512da.png](img/72ed77b1720512da.png)
 
-Biasanya acara `install` digunakan untuk menyimpan semua yang Anda butuhkan agar aplikasi berjalan.
+Biasanya event `install` digunakan untuk menyimpan semua yang Anda butuhkan agar aplikasi berjalan.
 
-Acara #### `activate`
+#### Event `activate`
 
-Pekerja layanan akan menerima acara `activate` setiap kali dimulai. Tujuan utama acara `activate` adalah untuk mengonfigurasi perilaku pekerja layanan, membersihkan semua sumber daya yang tertinggal dari proses sebelumnya (misalnya cache lama), dan membuat pekerja layanan siap menangani permintaan jaringan (misalnya acara `fetch` yang dijelaskan di bawah).
+_Service worker_ akan menerima event `activate` setiap kali dimulai. Tujuan utama event `activate` adalah untuk mengonfigurasi perilaku _service worker_, membersihkan semua sumber daya yang tertinggal dari proses sebelumnya (misalnya cache lama), dan membuat _service worker_ siap menangani permintaan jaringan (misalnya event `fetch` yang dijelaskan di bawah).
 
-Acara #### `fetch`
+#### Event `fetch`
 
-Acara pengambilan memungkinkan pekerja layanan untuk mencegat permintaan jaringan dan menangani permintaan. Itu dapat pergi ke jaringan untuk mendapatkan sumber daya, dapat menariknya dari cache sendiri, menghasilkan respons khusus atau sejumlah opsi yang berbeda. Lihatlah [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) untuk berbagai strategi yang dapat Anda gunakan.
+Event `fetch` memungkinkan _service worker_ untuk mencegat permintaan jaringan dan menangani permintaan. Event ini dapat menuju ke jaringan untuk mendapatkan sumber daya, dapat menariknya dari cache sendiri, menghasilkan respon khusus atau sejumlah opsi yang berbeda. Lihatlah [Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/) untuk berbagai strategi yang dapat Anda gunakan.
 
-#### Memperbarui pekerja layanan
+#### Memperbarui _service worker_
 
-Peramban memeriksa untuk melihat apakah ada versi baru pekerja layanan Anda pada setiap pemuatan halaman. Jika menemukan versi baru, versi baru diunduh dan diinstal di latar belakang, tetapi tidak diaktifkan. Itu duduk dalam keadaan menunggu, sampai tidak ada lagi halaman yang terbuka yang menggunakan pekerja layanan lama. Setelah semua jendela menggunakan pekerja layanan lama ditutup, pekerja layanan baru diaktifkan dan dapat mengambil kendali. Rujuk ke bagian [Updating the service worker](/web/fundamentals/primers/service-workers/lifecycle#updates) dari dokumen Siklus Hidup Pekerja Layanan untuk detail lebih lanjut.
+Browser memeriksa apakah ada versi baru _service worker_ pada setiap pemuatan halaman. Jika menemukan versi baru, versi baru diunduh dan diinstal di belakang layar, tetapi tidak diaktifkan. Dia akan menunggu, sampai tidak ada lagi halaman yang terbuka yang menggunakan _service worker_ lama. Setelah semua jendela menggunakan _service worker_ lama ditutup, _service worker_ baru diaktifkan dan dapat mengambil kendali. Rujuk ke bagian [Updating the service worker](/web/fundamentals/primers/service-workers/lifecycle#updates) dari dokumen Siklus Hidup _service worker_ untuk detail lebih lanjut.
 
 ### Memilih strategi caching yang tepat
 
-Memilih [caching strategy](/web/fundamentals/instant-and-offline/offline-cookbook/) tepat tergantung pada jenis sumber daya yang Anda coba cache dan bagaimana Anda mungkin membutuhkannya nanti. Untuk aplikasi cuaca kami, kami akan membagi sumber yang kami butuhkan untuk cache menjadi dua kategori: sumber daya yang ingin kami ambil sebelumnya dan data yang akan kami cache saat runtime.
+Memilih [strategi caching](/web/fundamentals/instant-and-offline/offline-cookbook/) tepat tergantung pada jenis sumber daya yang Anda coba cache dan bagaimana Anda mungkin membutuhkannya nanti. Untuk aplikasi cuaca kita, kita akan membagi sumber yang kita butuhkan untuk cache menjadi dua kategori: sumber daya yang ingin kita ambil sebelumnya dan data yang akan kita cache saat _runtime_.
 
 #### Caching sumber daya statis
 
-Mengkhotbahkan sumber daya Anda adalah konsep yang mirip dengan apa yang terjadi ketika pengguna menginstal aplikasi desktop atau seluler. Sumber daya utama yang diperlukan untuk menjalankan aplikasi diinstal, atau di-cache pada perangkat sehingga dapat dimuat nanti apakah ada koneksi jaringan atau tidak.
+Melakukan cache diawal (_precache_) terhadap sumber daya Anda adalah konsep yang mirip dengan apa yang terjadi ketika pengguna menginstal aplikasi desktop atau seluler. Sumber daya utama yang diperlukan untuk menjalankan aplikasi diinstal, atau di-cache pada perangkat sehingga dapat dimuat nanti apakah ada koneksi jaringan atau tidak.
 
-Untuk aplikasi kami, kami akan melakukan precut semua sumber daya statis kami ketika pekerja layanan kami diinstal sehingga semua yang kami butuhkan untuk menjalankan aplikasi disimpan di perangkat pengguna. Untuk memastikan aplikasi kami memuat kilat dengan cepat, kami akan menggunakan strategi [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) ; alih-alih pergi ke jaringan untuk mendapatkan sumber daya, mereka malah ditarik dari cache lokal; hanya jika tidak tersedia maka kami akan mencoba mendapatkannya dari jaringan.
+Untuk aplikasi kita, kita akan melakukan cache diawal (_precache_) semua sumber daya statis kita ketika _service worker_ kita diinstal sehingga semua yang kita butuhkan untuk menjalankan aplikasi disimpan di perangkat pengguna. Untuk memastikan aplikasi kita memuat kilat dengan cepat, kita akan menggunakan strategi [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network); alih-alih langsung menuju ke jaringan untuk mendapatkan sumber daya, mereka akan ditarik dari cache lokal; hanya jika tidak tersedia maka kita akan mencoba mendapatkannya dari jaringan.
 
 ![44860840e2090bd8.png](img/44860840e2090bd8.png)
 
 Menarik dari cache lokal menghilangkan segala variabilitas jaringan. Tidak peduli apa pun jenis jaringan yang digunakan pengguna (WiFi, 5G, 3G, atau bahkan 2G), sumber daya utama yang perlu kita jalankan tersedia segera.
 
-Caution: Dalam sampel ini, sumber daya statis disajikan menggunakan strategi [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network) , yang menghasilkan salinan dari konten yang di-cache dikembalikan tanpa berkonsultasi dengan jaringan. Meskipun strategi `cache-first` mudah diimplementasikan, itu dapat menyebabkan tantangan di masa depan.
+Hati-hati: Dalam contoh ini, sumber daya statis disajikan menggunakan strategi [`cache-first`](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), yang menghasilkan salinan dari konten yang di-cache dikembalikan tanpa berkonsultasi dengan jaringan. Meskipun strategi `cache-first` mudah diimplementasikan, itu dapat menyebabkan tantangan di masa depan.
 
 #### Caching data aplikasi
 
-[stale-while-revalidate strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate) adalah tipe data tertentu yang ideal dan berfungsi dengan baik untuk aplikasi kami. Ia mendapat data di layar secepat mungkin, lalu memperbarui bahwa setelah jaringan mengembalikan data terbaru. Stale-while -valvalate artinya kita harus memulai dua permintaan asinkron, satu ke cache dan satu ke jaringan.
+[stale-while-revalidate strategy](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate) adalah tipe data tertentu yang ideal dan berfungsi dengan baik untuk aplikasi kita. Ia mendapat data di layar secepat mungkin, lalu memperbaruinya setelah jaringan mengembalikan data terbaru. Stale-while-valvalate artinya kita harus memulai dua permintaan asinkron, satu ke cache dan satu ke jaringan.
 
 ![6ebb2681eb1f58cb.png](img/6ebb2681eb1f58cb.png)
 
 Dalam keadaan normal, data yang di-cache akan dikembalikan segera menyediakan aplikasi dengan data terbaru yang dapat digunakan. Kemudian, ketika permintaan jaringan kembali, aplikasi akan diperbarui menggunakan data terbaru dari jaringan.
 
-Untuk aplikasi kami, ini memberikan pengalaman yang lebih baik daripada jaringan, kembali ke strategi cache karena pengguna tidak perlu menunggu sampai permintaan jaringan habis untuk melihat sesuatu di layar. Mereka mungkin awalnya melihat data yang lebih tua, tetapi begitu permintaan jaringan kembali, aplikasi akan diperbarui dengan data terbaru.
+Untuk aplikasi kita, ini memberikan pengalaman yang lebih baik daripada jaringan, kembali ke strategi cache karena pengguna tidak perlu menunggu sampai permintaan jaringan habis untuk melihat sesuatu di layar. Mereka mungkin awalnya melihat data yang lebih tua, tetapi begitu permintaan jaringan kembali, aplikasi akan diperbarui dengan data terbaru.
 
 ### Perbarui logika aplikasi
 
 Seperti yang disebutkan sebelumnya, aplikasi harus memulai dua permintaan asinkron, satu ke cache dan satu ke jaringan. Aplikasi ini menggunakan objek `caches` tersedia di `window` untuk mengakses cache dan mengambil data terbaru. Ini adalah contoh yang sangat baik untuk peningkatan progresif karena objek `caches` mungkin tidak tersedia di semua browser, dan jika tidak, permintaan jaringan tetap berfungsi.
 
-Perbarui fungsi `getForecastFromCache()` , untuk memeriksa apakah objek `caches` tersedia di objek `window` global, dan jika ya, minta data dari cache.
+Perbarui fungsi `getForecastFromCache()`, untuk memeriksa apakah objek `caches` tersedia di objek `window` global, dan jika ya, minta data dari cache.
 
 #### [public/scripts/app.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/app.js#L164)
 
@@ -602,7 +602,7 @@ getForecastFromCache(location.geo)
     });
 ```
 
-Aplikasi cuaca kami sekarang membuat dua permintaan data tidak sinkron, satu dari cache dan satu melalui `fetch` . Jika ada data dalam cache, itu akan dikembalikan dan diberikan dengan sangat cepat (puluhan milidetik). Kemudian, ketika `fetch` merespons, kartu akan diperbarui dengan data terbaru langsung dari API cuaca.
+Aplikasi cuaca kita sekarang membuat dua permintaan data tidak sinkron, satu dari cache dan satu melalui `fetch` . Jika ada data dalam cache, itu akan dikembalikan dan diberikan dengan sangat cepat (puluhan milidetik). Kemudian, ketika `fetch` merespon, kartu akan diperbarui dengan data terbaru langsung dari API cuaca.
 
 Perhatikan bagaimana permintaan cache dan permintaan `fetch` diakhiri dengan panggilan untuk memperbarui kartu perkiraan. Bagaimana aplikasi mengetahui apakah itu menampilkan data terbaru? Ini ditangani dalam kode berikut dari `renderForecast()` :
 
@@ -615,11 +615,11 @@ if (lastUpdated >= data.currently.time) {
 }
 ```
 
-Setiap kali kartu diperbarui, aplikasi menyimpan stempel waktu data pada atribut tersembunyi pada kartu. Aplikasi hanya menebus jika cap waktu yang sudah ada pada kartu lebih baru daripada data yang diteruskan ke fungsi.
+Setiap kali kartu diperbarui, aplikasi menyimpan stempel waktu data pada atribut tersembunyi pada kartu. Aplikasi hanya dijalankan jika cap waktu yang sudah ada pada kartu lebih baru daripada data yang diteruskan ke fungsi.
 
-### Pre-cache sumber daya aplikasi kami
+### Pre-cache sumber daya aplikasi kita
 
-Di pekerja layanan, mari kita tambahkan `DATA_CACHE_NAME` sehingga kita dapat memisahkan data aplikasi kita dari shell aplikasi. Saat shell aplikasi diperbarui dan cache lama dihapus, data kami akan tetap tak tersentuh, siap untuk memuat yang sangat cepat. Ingat, jika format data Anda berubah di masa mendatang, Anda akan memerlukan cara untuk mengatasinya dan memastikan shell aplikasi dan konten tetap sinkron.
+Di _service worker_, mari kita tambahkan `DATA_CACHE_NAME` sehingga kita dapat memisahkan data aplikasi kita dari shell aplikasi. Saat shell aplikasi diperbarui dan cache lama dihapus, data kita akan tetap tak tersentuh, siap untuk memuat yang sangat cepat. Ingat, jika format data Anda berubah di masa mendatang, Anda akan memerlukan cara untuk mengatasinya dan memastikan shell aplikasi dan konten tetap sinkron.
 
 #### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L21)
 
@@ -629,9 +629,9 @@ const CACHE_NAME = 'static-cache-v2';
 const DATA_CACHE_NAME = 'data-cache-v1';
 ```
 
-Jangan lupa juga perbarui `CACHE_NAME` ; kami akan mengubah semua sumber daya statis kami juga.
+Jangan lupa juga perbarui `CACHE_NAME`; kita akan mengubah semua sumber daya statis kita juga.
 
-Agar aplikasi kami dapat bekerja secara offline, kita perlu melakukan precache semua sumber daya yang dibutuhkan. Ini juga akan membantu kinerja kami. Alih-alih harus mendapatkan semua sumber daya dari jaringan, aplikasi akan dapat memuat semuanya dari cache lokal, menghilangkan ketidakstabilan jaringan.
+Agar aplikasi kita dapat bekerja secara offline, kita perlu melakukan precache semua sumber daya yang dibutuhkan. Ini juga akan membantu kinerja kita. Alih-alih harus mendapatkan semua sumber daya dari jaringan, aplikasi akan dapat memuat semuanya dari cache lokal, menghilangkan ketidakstabilan jaringan.
 
 Perbarui array `FILES_TO_CACHE` dengan daftar file:
 
@@ -665,13 +665,13 @@ const FILES_TO_CACHE = [
 ];
 ```
 
-Karena kita secara manual membuat daftar file ke cache, setiap kali kita memperbarui file, kita harus memperbarui `CACHE_NAME` . Kami dapat menghapus `offline.html` dari daftar file cache kami karena aplikasi kami sekarang memiliki semua sumber daya yang diperlukan untuk bekerja offline, dan tidak akan pernah menampilkan halaman offline lagi.
+Karena kita secara manual membuat daftar file ke cache, setiap kali kita memperbarui file, kita harus memperbarui `CACHE_NAME` . Kita dapat menghapus `offline.html` dari daftar file cache kita karena aplikasi kita sekarang memiliki semua sumber daya yang diperlukan untuk bekerja offline, dan tidak akan pernah menampilkan halaman offline lagi.
 
-Caution: Dalam sampel ini, kami menggulung sendiri pekerja layanan kami. Setiap kali kami memperbarui sumber daya statis apa pun, kami perlu memutar ulang pekerja layanan dan memperbarui cache, jika tidak, konten lama akan disajikan. Selain itu, ketika satu file berubah, seluruh cache tidak valid dan perlu diunduh ulang. Itu berarti memperbaiki kesalahan pengejaan karakter tunggal sederhana akan membuat cache tidak valid dan semuanya harus diunduh lagi — tidak terlalu efisien. [Workbox](/web/tools/workbox/) menangani ini dengan anggun, dengan mengintegrasikannya ke dalam proses build Anda, hanya file yang diubah akan diperbarui, menghemat bandwidth untuk pengguna dan perawatan yang lebih mudah untuk Anda!
+Perhatian: Dalam contoh ini, kita membuat sendiri _service worker_ kita. Setiap kali kita memperbarui sumber daya statis apa pun, kita perlu memutar ulang _service worker_ dan memperbarui cache, jika tidak, konten lama akan disajikan. Selain itu, ketika satu file berubah, seluruh cache tidak valid dan perlu diunduh ulang. Itu berarti memperbaiki kesalahan pengejaan karakter tunggal sederhana akan membuat cache tidak valid dan semuanya harus diunduh lagi — tidak terlalu efisien. [Workbox](/web/tools/workbox/) menangani ini dengan indah, dengan mengintegrasikannya ke dalam proses _build_ Anda, hanya file yang diubah akan diperbarui, menghemat _bandwidth_ untuk pengguna dan perawatan yang lebih mudah untuk Anda!
 
-#### Memperbarui pengaktif acara yang diaktifkan
+#### Memperbarui handler event activate
 
-Untuk memastikan kami `activate` acara tidak sengaja menghapus data kami, dalam `activate` terjadi `service-worker.js` , ganti `if (key !== CACHE_NAME) {` dengan:
+Untuk memastikan event `activate` tidak sengaja menghapus data kita, `activate` yang ada didalam `service-worker.js`, ganti `if (key !== CACHE_NAME) {` dengan:
 
 #### public / service-worker.js
 
@@ -681,9 +681,9 @@ if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
 
 #### Perbarui fetch event handler
 
-Kami perlu memodifikasi pekerja layanan untuk mencegat permintaan ke API cuaca dan menyimpan respons mereka di cache, sehingga kami dapat dengan mudah mengaksesnya nanti. Dalam strategi basi-sementara-memvalidasi ulang, kami berharap respons jaringan menjadi &#39;sumber kebenaran&#39;, selalu memberi kami informasi terbaru. Jika tidak bisa, tidak masalah untuk gagal karena kami telah mengambil data cache terbaru di aplikasi kami.
+Kita perlu memodifikasi _service worker_ untuk mencegat permintaan ke API cuaca dan menyimpan respons mereka di cache, sehingga kita dapat dengan mudah mengaksesnya nanti. Dalam strategi stale-while-revalidate, kita berharap respon jaringan menjadi 'sumber kebenaran', selalu memberi kita informasi terbaru. Jika tidak bisa, tidak masalah untuk gagal karena kita telah mengambil data cache terbaru di aplikasi kita.
 
-Perbarui pengendali acara `fetch` untuk menangani permintaan ke API data secara terpisah dari permintaan lainnya.
+Perbarui handler event `fetch` untuk menangani permintaan ke API data secara terpisah dari permintaan lainnya.
 
 #### [public/service-worker.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/service-worker.js#L42)
 
@@ -717,25 +717,25 @@ evt.respondWith(
 );
 ```
 
-Kode memotong permintaan dan memeriksa apakah itu untuk ramalan cuaca. Jika ya, gunakan `fetch` untuk mengajukan permintaan. Setelah respons dikembalikan, buka cache, tirukan respons, simpan di cache, dan kembalikan respons ke pemohon semula.
+Kode melakukan intersepsi permintaan dan memeriksa apakah itu untuk ramalan cuaca. Jika ya, gunakan `fetch` untuk mengajukan permintaan. Setelah respon dikembalikan, buka cache, duplikasi respon, simpan di cache, dan kembalikan respon kepada yang melakukan permintaan.
 
-Kami perlu menghapus centang `evt.request.mode !== 'navigate'` karena kami ingin pekerja layanan kami menangani semua permintaan (termasuk gambar, skrip, file CSS, dll), bukan hanya navigasi. Jika kami meninggalkan check-in itu, hanya HTML yang akan disajikan dari cache pekerja layanan, semua yang lain akan diminta dari jaringan.
+Kita perlu menghapus centang `evt.request.mode !== 'navigate'` karena kita ingin _service worker_ kita menangani semua permintaan (termasuk gambar, skrip, file CSS, dll), bukan hanya navigasi. Jika kita meninggalkan check-in itu, hanya HTML yang akan disajikan dari cache _service worker_, semua yang lain akan diminta dari jaringan.
 
-### Cobalah
+### Coba jalankan
 
-Aplikasi harus benar-benar berfungsi offline sekarang. Refresh halaman untuk memastikan Anda mendapatkan pekerja layanan terinstal, kemudian simpan beberapa kota dan tekan tombol refresh pada aplikasi untuk mendapatkan data cuaca segar.
+Aplikasi harus benar-benar berfungsi offline sekarang. Refresh halaman untuk memastikan Anda mendapatkan _service worker_ terinstal, kemudian simpan beberapa kota dan tekan tombol refresh pada aplikasi untuk mendapatkan data cuaca baru.
 
 Lalu pergi ke panel __Cache Storage__ pada panel __Application__ dari DevTools. Buka bagian itu dan Anda akan melihat nama cache statis dan cache data Anda tercantum di sebelah kiri. Membuka cache data harus menunjukkan data yang disimpan untuk setiap kota.
 
 ![731e91776cb6ef18.png](img/731e91776cb6ef18.png)
 
-Kemudian, buka DevTools dan beralih ke panel Pekerja Layanan, dan centang kotak centang Offline, lalu coba muat ulang halaman, lalu buka offline dan muat ulang halaman.
+Kemudian, buka DevTools dan beralih ke panel _Service Worker_, dan centang kotak centang Offline, lalu coba muat ulang halaman, lalu buka offline dan muat ulang halaman.
 
 Jika Anda berada di jaringan yang cepat dan ingin melihat bagaimana cuaca data diperbarui pada koneksi yang lambat, mengatur `FORECAST_DELAY` properti di `server.js` ke `5000` . Semua permintaan ke API perkiraan akan ditunda hingga 5.000 ms.
 
-### Verifikasi perubahan dengan Mercusuar
+### Verifikasi perubahan dengan Lighthouse
 
-Ini juga merupakan ide bagus untuk menjalankan Mercusuar lagi.
+Ini juga merupakan ide bagus untuk menjalankan Lighthouse lagi.
 
 __SEO Audit__
 
@@ -745,34 +745,34 @@ __Audit Aplikasi Web Progresif__
 
 * __✅ LULUS:__ Halaman saat ini merespons dengan 200 ketika offline.
 * __✅ LULUS:__ `start_url` merespons dengan 200 ketika offline.
-* __✅ LULUS:__ Mendaftarkan pekerja layanan yang mengontrol halaman dan `start_url.`
+* __✅ LULUS:__ Mendaftarkan _service worker_ yang mengontrol halaman dan `start_url.`
 * __✅ LULUS:__ Manifes aplikasi web memenuhi persyaratan pemasangan.
 * __✅ LULUS:__ Dikonfigurasi untuk layar splash khusus.
 * __✅ LULUS:__ Mengatur warna tema address-bar.
 
 ## Tambahkan pengalaman menginstal
 
-Ketika Aplikasi Web Progresif diinstal, ia terlihat dan berperilaku seperti semua aplikasi lain yang diinstal. Ini diluncurkan dari tempat yang sama dengan peluncuran aplikasi lain. Ini berjalan di aplikasi tanpa bilah alamat atau UI browser lainnya. Dan seperti semua aplikasi terpasang lainnya, ini adalah aplikasi tingkat atas di pengalih tugas.
+Ketika Aplikasi Web Progresif diinstal, ia terlihat dan berperilaku seperti semua aplikasi lain yang diinstal. Dapat diluncurkan dari tempat yang sama dengan peluncuran aplikasi lain. Dapat berjalan di aplikasi tanpa bilah alamat atau UI browser lainnya. Dan seperti semua aplikasi terpasang lainnya, ini adalah aplikasi tingkat atas di pengalih tugas (_task switcher_).
 
 ![d824e1712e46a1cc.png](img/d824e1712e46a1cc.png)
 
 Di Chrome, Aplikasi Web Progresif dapat dipasang melalui menu konteks tiga titik, atau Anda dapat memberikan tombol atau komponen UI lainnya kepada pengguna yang akan meminta mereka untuk menginstal aplikasi Anda.
 
-Success: Karena pengalaman pemasangan di menu konteks tiga titik Chrome agak terkubur, kami sarankan Anda memberikan beberapa indikasi dalam aplikasi Anda untuk memberi tahu pengguna bahwa aplikasi Anda dapat dipasang, dan tombol instal untuk menyelesaikan proses pemasangan.
+Berhasil: Karena pengalaman pemasangan di menu konteks tiga titik Chrome agak panjang, kita sarankan Anda memberikan beberapa indikasi dalam aplikasi Anda untuk memberi tahu pengguna bahwa aplikasi Anda dapat dipasang, dan tombol instal untuk menyelesaikan proses pemasangan.
 
-### Audit dengan Mercusuar
+### Audit dengan Lighthouse
 
-Agar pengguna dapat menginstal Aplikasi Web Progresif Anda, ia harus memenuhi [certain criteria](/web/fundamentals/app-install-banners/#criteria) . Cara termudah untuk memeriksa adalah menggunakan Mercusuar dan pastikan memenuhi kriteria yang dapat diinstal.
+Agar pengguna dapat menginstal Aplikasi Web Progresif Anda, ia harus memenuhi [beberapa kriteria](/web/fundamentals/app-install-banners/#criteria). Cara termudah untuk memeriksa adalah menggunakan Lighthouse dan pastikan memenuhi kriteria yang dapat diinstal.
 
 ![b921f5583fcddf03.png](img/b921f5583fcddf03.png)
 
 Jika Anda bekerja melalui codelab ini, PWA Anda harus sudah memenuhi kriteria ini.
 
-Key Point: Untuk bagian ini, aktifkan kotak centang **Bypass untuk jaringan** di panel Pekerja Layanan **dari panel** Aplikasi di DevTools. Ketika dicentang, permintaan memotong pekerja layanan dan dikirim langsung ke jaringan. Ini menyederhanakan proses pengembangan kami karena kami tidak perlu memperbarui pekerja layanan kami saat mengerjakan bagian ini.
+Poin Penting: Untuk bagian ini, aktifkan kotak centang **Bypass for network** di panel **_Service Worker** dari panel **Aplikasi** di DevTools. Ketika dicentang, permintaan melakukan interupsi _service worker_ dan dikirim langsung ke jaringan. Ini menyederhanakan proses pengembangan kita karena kita tidak perlu memperbarui _service worker_ kita saat mengerjakan bagian ini.
 
 ### Tambahkan install.js ke index.html
 
-Pertama, mari kita tambahkan `install.js` ke file `index.html` kami.
+Pertama, mari kita tambahkan `install.js` ke file `index.html` kita.
 
 #### [public/index.html](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/index.html#L204)
 
@@ -781,9 +781,9 @@ Pertama, mari kita tambahkan `install.js` ke file `index.html` kami.
 <script src="/scripts/install.js"></script>
 ```
 
-### Dengarkan acara `beforeinstallprompt`
+### Dengarkan event `beforeinstallprompt`
 
-Jika menambahkan ke layar beranda [criteria](/web/fundamentals/app-install-banners/#criteria) terpenuhi, Chrome akan memecat acara `beforeinstallprompt` , yang dapat Anda gunakan untuk menunjukkan aplikasi Anda dapat &#39;diinstal&#39;, dan kemudian meminta pengguna untuk menginstalnya. Tambahkan kode di bawah ini untuk mendengarkan acara `beforeinstallprompt` :
+Jika menambahkan ke layar beranda [kriteria](/web/fundamentals/app-install-banners/#criteria) terpenuhi, Chrome akan memecat acara `beforeinstallprompt` , yang dapat Anda gunakan untuk menunjukkan aplikasi Anda dapat 'diinstal', dan kemudian meminta pengguna untuk menginstalnya. Tambahkan kode di bawah ini untuk mendengarkan event `beforeinstallprompt` :
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L24)
 
@@ -794,7 +794,7 @@ window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
 ### Simpan acara dan tampilkan tombol instal
 
-Dalam fungsi `saveBeforeInstallPromptEvent` kami, kami akan menyimpan referensi ke acara `beforeinstallprompt` sehingga kami dapat memanggil `prompt()` nanti, dan memperbarui UI kami untuk menunjukkan tombol instal.
+Dalam fungsi `saveBeforeInstallPromptEvent` kita, kita akan menyimpan referensi ke event `beforeinstallprompt` sehingga kita dapat memanggil `prompt()` nanti, dan memperbarui UI kita untuk menunjukkan tombol instal.
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L34)
 
@@ -806,7 +806,7 @@ installButton.removeAttribute('hidden');
 
 ### Tampilkan prompt / sembunyikan tombol
 
-Ketika pengguna mengklik tombol instal, kita perlu memanggil `.prompt()` pada acara `beforeinstallprompt` disimpan. Kita juga perlu menyembunyikan tombol instal, karena `.prompt()` hanya dapat dipanggil satu kali pada setiap event yang disimpan.
+Ketika pengguna mengklik tombol instal, kita perlu memanggil `.prompt()` pada event `beforeinstallprompt` disimpan. Kita juga perlu menyembunyikan tombol instal, karena `.prompt()` hanya dapat dipanggil satu kali pada setiap event yang disimpan.
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L45)
 
@@ -821,7 +821,7 @@ Memanggil `.prompt()` akan menampilkan dialog modal kepada pengguna, meminta mer
 
 ### Catat hasilnya
 
-Anda dapat memeriksa untuk melihat bagaimana pengguna merespons dialog instal dengan mendengarkan janji yang dikembalikan oleh properti `userChoice` dari acara `beforeinstallprompt` disimpan. Janji mengembalikan objek dengan properti `outcome` setelah prompt ditampilkan dan pengguna meresponsnya.
+Anda dapat memeriksa untuk melihat bagaimana pengguna merespon dialog instal dengan mendengarkan _promise_ yang dikembalikan oleh properti `userChoice` dari event `beforeinstallprompt` disimpan. Promise mengembalikan objek dengan properti `outcome` setelah prompt ditampilkan dan pengguna meresponnya.
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L47)
 
@@ -838,11 +838,11 @@ deferredInstallPrompt.userChoice
     });
 ```
 
-Satu komentar tentang `userChoice` , [spec defines it as a property](https://w3c.github.io/manifest/#beforeinstallpromptevent-interface) , bukan fungsi seperti yang Anda harapkan.
+Satu komentar tentang `userChoice` , [spesifikasi mendefinisikannya sebagai properti](https://w3c.github.io/manifest/#beforeinstallpromptevent-interface) , bukan fungsi seperti yang Anda harapkan.
 
-#### Log semua instal acara
+#### Log semua event instal
 
-Selain UI apa pun yang Anda tambahkan untuk menginstal aplikasi Anda, pengguna juga dapat menginstal PWA Anda melalui metode lain, misalnya menu tiga titik Chrome. Untuk melacak peristiwa ini, dengarkan acara yang diinstal.
+Selain UI apa pun yang Anda tambahkan untuk menginstal aplikasi Anda, pengguna juga dapat menginstal PWA Anda melalui metode lain, misalnya menu tiga titik Chrome. Untuk melacak peristiwa ini, dengarkan event `appinstalled`.
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L51)
 
@@ -851,7 +851,7 @@ Selain UI apa pun yang Anda tambahkan untuk menginstal aplikasi Anda, pengguna j
 window.addEventListener('appinstalled', logAppInstalled);
 ```
 
-Kemudian, kita perlu memperbarui fungsi `logAppInstalled` , untuk codelab ini, kita hanya akan menggunakan `console.log` , tetapi dalam aplikasi produksi, Anda mungkin ingin mencatat ini sebagai peristiwa dengan perangkat lunak analitik Anda.
+Kemudian, kita perlu memperbarui fungsi `logAppInstalled` , untuk codelab ini, kita hanya akan menggunakan `console.log` , tetapi dalam aplikasi sebenarnya, Anda mungkin ingin mencatat ini sebagai event dengan perangkat lunak analitik Anda.
 
 #### [public/scripts/install.js](https://github.com/googlecodelabs/your-first-pwapp/blob/master/public/scripts/install.js#L60)
 
@@ -860,41 +860,51 @@ Kemudian, kita perlu memperbarui fungsi `logAppInstalled` , untuk codelab ini, k
 console.log('Weather App was installed.', evt);
 ```
 
-### Perbarui pekerja layanan
+### Perbarui _service worker_
 
-Jangan lupa untuk memperbarui `CACHE_NAME` di file `service-worker.js` Anda karena Anda telah membuat perubahan pada file yang sudah di-cache. Mengaktifkan kotak centang __Bypass for network__ di panel Pekerja Layanan dari panel Aplikasi di DevTools akan berfungsi dalam pengembangan, tetapi tidak akan membantu di dunia nyata.
+Jangan lupa untuk memperbarui `CACHE_NAME` di file `service-worker.js` Anda karena Anda telah membuat perubahan pada file yang sudah di-cache. Mengaktifkan kotak centang __Bypass for network__ di panel _Service Worker_ dari panel Aplikasi di DevTools akan berfungsi dalam pengembangan, tetapi tidak akan membantu di dunia nyata.
 
-### Cobalah
+### Coba jalankan
 
 Mari kita lihat bagaimana langkah instalasi kita. Agar aman, gunakan tombol __Clear site data__ di panel Aplikasi DevTools untuk menghapus semuanya dan pastikan kita mulai baru. Jika sebelumnya Anda menginstal aplikasi, pastikan untuk menghapus instalannya, jika tidak ikon instalasi tidak akan muncul lagi.
 
 #### Pastikan tombol instal terlihat
 
-Pertama, mari kita verifikasi ikon instal kami muncul dengan benar, pastikan untuk mencoba ini di desktop dan seluler.
+Pertama, mari kita verifikasi ikon instal kita muncul dengan benar, pastikan untuk mencoba ini di desktop dan seluler.
 
 1. Buka URL di tab Chrome baru.
 2. Buka menu tiga titik Chrome (di sebelah bilah alamat).
-▢ Pastikan Anda melihat &quot;* Instal Cuaca ... *&quot; di menu.
-3. Refresh data cuaca menggunakan tombol refresh di sudut kanan atas untuk memastikan kami memenuhi [user engagement heuristics](/web/fundamentals/app-install-banners/#criteria) .
+
+▢ Pastikan Anda melihat '*Instal Cuaca ...*' di menu.
+
+3. Refresh data cuaca menggunakan tombol refresh di sudut kanan atas untuk memastikan kita memenuhi [heuristik keterlibatan pengguna](/web/fundamentals/app-install-banners/#criteria) .
+
 ▢ Pastikan ikon instal terlihat di header aplikasi.
 
 #### Verifikasi tombol instal berfungsi
 
-Selanjutnya, mari kita pastikan semuanya terpasang dengan benar, dan acara kami dipecat dengan benar. Anda dapat melakukan ini di desktop atau seluler. Jika Anda ingin menguji ini di ponsel, pastikan Anda menggunakan debugging jarak jauh sehingga Anda dapat melihat apa yang masuk ke konsol.
+Selanjutnya, mari kita pastikan semuanya terpasang dengan benar, dan event kita terpicu dengan benar. Anda dapat melakukan ini di desktop atau seluler. Jika Anda ingin menguji ini di ponsel, pastikan Anda menggunakan remote debugging sehingga Anda dapat melihat apa yang masuk ke konsol.
 
 1. Buka Chrome, dan di tab browser baru, navigasikan ke Weather PWA Anda.
 2. Buka DevTools dan alihkan ke panel Console.
 3. Klik tombol install di sudut kanan atas.
+
 ▢ Verifikasi tombol instal menghilang
 ▢ Verifikasi dialog instal modal ditampilkan.
+
 4. Klik Batal.
-▢ Verifikasi &quot;* Pengguna menolak prompt A2HS *&quot; ditampilkan di output konsol.
+
+▢ Verifikasi '*Pengguna menolak prompt A2HS*' ditampilkan di output konsol.
 ▢ Verifikasi tombol instal muncul kembali.
+
 5. Klik tombol install lagi, lalu klik tombol install di dialog modal.
-▢ Verifikasi &quot;* Pengguna menerima prompt A2HS *&quot; ditampilkan di output konsol.
-▢ Verifikasi &quot;* Aplikasi Cuaca telah dipasang *&quot; ditampilkan di output konsol.
+
+▢ Verifikasi '*Pengguna menerima prompt A2HS*' ditampilkan di output konsol.
+▢ Verifikasi '*Aplikasi Cuaca telah dipasang*' ditampilkan di output konsol.
 ▢ Verifikasi aplikasi Cuaca ditambahkan ke tempat Anda biasanya menemukan aplikasi.
+
 6. Luncurkan PWA Cuaca.
+
 ▢ Verifikasi aplikasi terbuka sebagai aplikasi mandiri, baik di jendela aplikasi di desktop, atau layar penuh di ponsel.
 
 Catatan, jika Anda menjalankan pada desktop dari localhost, PWA yang Anda instal dapat menampilkan spanduk alamat karena localhost tidak dianggap sebagai host yang aman.
@@ -904,11 +914,17 @@ Catatan, jika Anda menjalankan pada desktop dari localhost, PWA yang Anda instal
 Mari kita juga periksa perilaku di iOS. Jika Anda memiliki perangkat iOS, Anda dapat menggunakannya, atau jika Anda menggunakan Mac, coba iOS Simulator yang tersedia dengan Xcode.
 
 1. Buka Safari dan di tab browser baru, navigasikan ke Weather PWA Anda.
-2. Klik *Bagikan*! Tombol [8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) .
+2. Klik tombol *Share*! [8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) .
 3. Gulir ke kanan dan klik tombol *Add to Home Screen*.
+
 ▢ Pastikan judul, URL, dan ikonnya benar.
-4. Klik *Tambah.* ▢ Pastikan ikon aplikasi ditambahkan ke layar beranda.
+
+4. Klik *Tambah.*
+
+▢ Pastikan ikon aplikasi ditambahkan ke layar beranda.
+
 5. Luncurkan PWA Cuaca dari layar beranda.
+
 ▢ Verifikasi aplikasi meluncurkan layar penuh.
 
 ### Bonus: Mendeteksi jika aplikasi Anda diluncurkan dari layar beranda
@@ -923,7 +939,7 @@ Mari kita juga periksa perilaku di iOS. Jika Anda memiliki perangkat iOS, Anda d
 }
 ```
 
-Anda juga dapat memeriksa `display-mode` permintaan media dalam [JavaScript to see if you're running in standalone](/web/fundamentals/app-install-banners/#detect-mode) .
+Anda juga dapat memeriksa `display-mode` permintaan media dalam [JavaScript untuk melihat apakah berjalan di mode standalone](/web/fundamentals/app-install-banners/#detect-mode) .
 
 ### Bonus: Menghapus Instalasi PWA Anda
 
@@ -933,17 +949,17 @@ Ingat, `beforeinstallevent` tidak menyala jika aplikasi sudah diinstal, jadi sel
 
 Di Android, PWA dihapus instalasinya dengan cara yang sama seperti aplikasi lain yang diinstal dihapus.
 
-* Buka laci aplikasi.
+* Buka app drawer.
 * Gulir ke bawah untuk menemukan ikon Cuaca.
 * Seret ikon aplikasi ke atas layar.
-* Pilih *Copot pemasangan.*
+* Pilih *Uninstall*
 
 #### ChromeOS
 
 Di ChromeOS, PWA mudah dihapus dari kotak pencarian peluncur.
 
 * Buka peluncur.
-* Ketik &quot;* Cuaca *&quot; di kotak pencarian, PWA Cuaca Anda akan muncul di hasil.
+* Ketik '*Cuaca*' di kotak pencarian, PWA Cuaca Anda akan muncul di hasil.
 * Klik kanan (alt-klik) pada Weather PWA.
 * Klik *Hapus dari Chrome ...*
 
@@ -959,7 +975,7 @@ Di Mac dan Windows, PWA harus dihapus instalasinya melalui Chrome.
 
 Selamat, Anda telah berhasil membangun Aplikasi Web Progresif pertama Anda!
 
-Anda menambahkan manifes aplikasi web agar dapat diinstal, dan Anda menambahkan pekerja layanan untuk memastikan bahwa PWA Anda selalu cepat, dan dapat diandalkan. Anda belajar cara menggunakan DevTools untuk mengaudit aplikasi dan bagaimana hal itu dapat membantu Anda meningkatkan pengalaman pengguna.
+Anda menambahkan manifes aplikasi web agar dapat diinstal, dan Anda menambahkan _service worker_ untuk memastikan bahwa PWA Anda selalu cepat, dan dapat diandalkan. Anda belajar cara menggunakan DevTools untuk mengaudit aplikasi dan bagaimana hal itu dapat membantu Anda meningkatkan pengalaman pengguna.
 
 Anda sekarang tahu langkah-langkah kunci yang diperlukan untuk mengubah aplikasi web apa pun menjadi Aplikasi Web Progresif.
 
@@ -980,6 +996,6 @@ Anda sekarang tahu langkah-langkah kunci yang diperlukan untuk mengubah aplikasi
 
 ## Menemukan masalah, atau memiliki umpan balik? {: .hide-from-toc }
 
-Bantu kami membuat lab kode kami lebih baik dengan mengirimkan [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. Dan terimakasih!
+Bantu kita membuat lab kode kita lebih baik dengan mengirimkan [isu](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. Dan terimakasih!
 
 {% include "web/_shared/translation-end.html" %}
