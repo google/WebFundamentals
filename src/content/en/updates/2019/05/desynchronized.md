@@ -1,16 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Stylus-based drawing applications built for the web suffer from
-latency issues because a web page has to synchronize graphics updates with the
-DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency.
+description: Stylus-based drawing applications built for the web suffer from latency issues because a web page has to synchronize graphics updates with the DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency.
 
 {# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2019-05-02 #}
 {# wf_tags: chrome75 #}
 {# wf_featured_image: /web/updates/images/2019/05/latency.png #}
-{# wf_featured_snippet: Stylus-based drawing applications built for the web suffer from
-latency issues because a web page has to synchronize graphics updates with the
-DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency. #}
+{# wf_featured_snippet: Stylus-based drawing applications built for the web suffer from latency issues because a web page has to synchronize graphics updates with the DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency. #}
 {# wf_blink_components: Blink>Canvas #}
 
 # Low-latency rendering with the desynchronized hint {: .page-title }
@@ -51,9 +47,9 @@ caused by using the renderer compositor queue.
 }
 </style>
 
-To see it in action, you need a device with a touch screen, and preferably a
-stylus. (Fingers work too.) If you have one, try the
-[2d](https://codepen.io/miguelao/full/WKZaqd) or
+If you want to get to the code, scroll ahead. To see it in action, you need a
+device with a touch screen, and preferably a stylus. (Fingers work too.) If you
+have one, try the [2d](https://codepen.io/miguelao/full/WKZaqd) or
 [webgl](https://codepen.io/miguelao/full/WKZaqd) samples. For the rest of you
 check out this [demo by Miguel Casas](https://codepen.io/miguelao/full/mLLKLg),
 one of the engineers who implemented this feature. Open the demo, press play,
@@ -71,12 +67,12 @@ I was useless for an hour after I saw it. Consider yourself warned.)
 
 There's more to using low latency than adding `desynchronized` to 
 `canvas.getContext()`. I'll go over the issues one at a time.
+ 
+### Create the canvas
 
-### Feature detection 
-
-Feature detection is mixed up with how you create a desynchronized canvas, so
-I'll discuss them together. First, call `canvas.getContext()` and pass it the
-new `desynchronized` hint with a value of `true`. 
+On another API I'd discuss feature detection first. For the `desynchronized`
+hint you must create the canvas first. Call `canvas.getContext()` and pass it
+the new `desynchronized` hint with a value of `true`. 
 
 ```javascript
 const canvas = document.querySelector('myCanvas');
@@ -86,7 +82,10 @@ const ctx = canvas.getContext('2d', {
 });
 ```
 
-Next, call `getContextAttributes()` to determine if the hint is supported. 
+### Feature detection
+
+Next, call `getContextAttributes()`. If the returned attributes object has a
+`desynchronized` property, then test it. 
 
 ```javascript
 if (ctx.getContextAttributes().desynchronized) {
