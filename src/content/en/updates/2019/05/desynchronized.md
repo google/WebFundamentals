@@ -14,7 +14,7 @@ description: The desynchronized hint invokes bypasses the DOM to eliminate the l
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 <img src="/web/updates/images/2019/05/latency.png" class="hint-image attempt-right" alt="Differences in stylus rendering">
-     
+
 <style>
 .hint {
   height: 150px;
@@ -39,7 +39,7 @@ caused by using the renderer compositor queue.
 ## How good is it?
 
 <img src="/web/updates/images/2019/05/sintel.png" class="sintel attempt-right" alt="Simultaneous rendering of Sintel">
-     
+
 <style>
 .sintel {
   height: 300px;
@@ -86,13 +86,9 @@ const ctx = canvas.getContext('2d', {
 });
 ```
 
-Alas, this does not guarantee a desynchronized canvas because the feature
-requires hardware support. Call `getContextAttributes()` to determine hardware
-support. The check of desynchronized in the example below covers two
-different conditions:
-
-+   It will be undefined if there's no API support.
-+   It will be false if there's API support, but no hardware support.
+Next, call `getContextAttributes()` to determine if the hint is supported. Alas,
+this does not guarantee a desynchronized canvas because the feature requires
+hardware support. 
 
 ```javascript
 if (ctx.getContextAttributes().desynchronized) {
