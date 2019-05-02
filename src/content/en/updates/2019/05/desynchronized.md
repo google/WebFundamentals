@@ -1,12 +1,16 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The desynchronized hint invokes bypasses the DOM to eliminate the latency caused by using the renderer compositor queue.
+description: Stylus-based drawing applications built for the web suffer from
+latency issues because a web page has to synchronize graphics updates with the
+DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency.
 
 {# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2019-05-02 #}
 {# wf_tags: chrome75 #}
 {# wf_featured_image: /web/updates/images/2019/05/latency.png #}
-{# wf_featured_snippet: The desynchronized hint invokes bypasses the DOM to eliminate the latency caused by using the renderer compositor queue. #}
+{# wf_featured_snippet: Stylus-based drawing applications built for the web suffer from
+latency issues because a web page has to synchronize graphics updates with the
+DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency. #}
 {# wf_blink_components: Blink>Canvas #}
 
 # Low-latency rendering with the desynchronized hint {: .page-title }
@@ -49,13 +53,11 @@ caused by using the renderer compositor queue.
 
 To see it in action, you need a device with a touch screen, and preferably a
 stylus. (Fingers work too.) If you have one, try the
-[2d](https://www.google.com/url?q=https://codepen.io/miguelao/full/ZjJNNw&sa=D&ust=1556721118370000&usg=AFQjCNGjpffZOOmf99D_ixBGNlYHGLiF7w)
-or
-[webgl](https://www.google.com/url?q=https://codepen.io/miguelao/full/WKZaqd&sa=D&ust=1556721118370000&usg=AFQjCNGcfmYlh3Serjw0d8o4isSYv8eywg)
-samples. For the rest of you check out this [demo by Miguel
-Casas](https://codepen.io/miguelao/full/mLLKLg), one of the engineers who
-implemented this feature. Open the demo, press play, then move the slider back
-and forth randomly and quickly. 
+[2d](https://codepen.io/miguelao/full/WKZaqd) or
+[webgl](https://codepen.io/miguelao/full/WKZaqd) samples. For the rest of you
+check out this [demo by Miguel Casas](https://codepen.io/miguelao/full/mLLKLg),
+one of the engineers who implemented this feature. Open the demo, press play,
+then move the slider back and forth randomly and quickly. 
 
 This example uses a one-minute, twenty-one second clip from the short film
 [Sintel](https://durian.blender.org/download/) by Durian, the Blender open movie
