@@ -3,7 +3,7 @@ book_path: /web/shows/_book.yaml
 description: Also camping, compositing, and building games.
 
 {# wf_updated_on: 2019-05-02 #}
-{# wf_published_on: 2019-05-02  #}
+{# wf_published_on: 2019-05-02 #}
 {# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-22.mp3 #}
 {# wf_podcast_duration: 01:05:39 #}
 {# wf_podcast_fileSize: 33946299 #}
