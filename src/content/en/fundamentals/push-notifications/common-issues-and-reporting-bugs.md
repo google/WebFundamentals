@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are right ways of using notifications, and ways of using them better. Learn what makes a good notification. We won't just show you what to do. We'll show you how to do it.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-04-12 #}
 {# wf_published_on: 2017-03-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -173,9 +173,8 @@ poorly formatted.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found. The subscription has expired. In this case you
-should delete the PushSubscription from your back end and wait for an
-opportunity to resubscribe the user.</td>
+<td>Not Found. In this case you should delete the PushSubscription from your
+back end and wait for an opportunity to resubscribe the user.</td>
 </tr>
 <tr>
 <td>410</td>

@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API.
 
-{# wf_updated_on: 2018-05-18 #}
+{# wf_updated_on: 2019-04-25 #}
 {# wf_published_on: 2018-04-05 #}
-{# wf_tags: news,media,presentation #}
+{# wf_tags: news,media,presentation,cast #}
 {# wf_featured_image: /web/updates/images/2018/04/present-web-pages-to-secondary-attached-displays/hero.jpg #}
 {# wf_featured_snippet: Chrome 66 allows web pages to use a secondary attached display through the Presentation API and to control its contents through the Presentation Receiver API. #}
 {# wf_blink_components: Blink>PresentationAPI #}

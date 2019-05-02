@@ -16,6 +16,14 @@ to inspecting a page's network activity.
 See [Network Reference](/web/tools/chrome-devtools/network-performance/reference) if you'd
 like to browse features instead.
 
+Read on, or watch the video version of this tutorial:
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="e1gAyQuIFQo"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## When to use the Network panel {: #overview }
 
 In general, use the Network panel when you need to make sure that resources are being

@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide to using plugins with Workbox.
 
-{# wf_updated_on: 2019-03-19 #}
+{# wf_updated_on: 2019-04-03 #}
 {# wf_published_on: 2017-12-17 #}
 {# wf_blink_components: n/a #}
 
@@ -72,6 +72,11 @@ following functions:
   entry is updated. Useful if you wish to perform an action after a cache
   update.
 
+* `cacheKeyWillBeUsed`: Called before a request is used as a cache key, for
+  both cache lookups (when `mode` is `'read'`) and cache writes (when `mode`
+  is `'write'`). This can come in handy if you need to override or normalize
+  your URLs prior to using them for cache access.
+
 * `cachedResponseWillBeUsed`: Called prior to a response from the cache being
   used, this callback allows you to examine that response, and potentially
   return `null` or a different response to be used instead.
@@ -104,6 +109,12 @@ const myPlugin = {
     // meaning the body has already been read. If you need access to
     // the body of the fresh response, use a technique like:
     // const freshResponse = await caches.match(request, {cacheName});
+  },
+  cacheKeyWillBeUsed: async function ({request, mode}) {
+  // request is the Request object that would otherwise be used as the cache key.
+  // mode is either 'read' or 'write'.
+  // Return either a string, or a Request whose url property will be used as the cache key.
+  // Returning the original request will make this a no-op.
   },
   cachedResponseWillBeUsed: async ({cacheName, request, matchOptions, cachedResponse, event}) => {
     // Return `cachedResponse`, a different Response object or null

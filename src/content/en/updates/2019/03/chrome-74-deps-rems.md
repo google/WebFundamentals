@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome 74 to help you plan.
 
-{# wf_updated_on: 2019-03-22 #}
+{# wf_updated_on: 2019-04-22 #}
 {# wf_published_on: 2019-03-22 #}
 {# wf_tags: deprecations,removals,chrome74 #}
 {# wf_blink_components: Blink,Security,Internals>Network>FTP,Internals>Network>SSL,Blink>Payments #}
@@ -15,7 +15,7 @@ description: A round up of the deprecations and removals in Chrome 74 to help yo
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-### Remove PaymentAddress's `languageCode` property
+## Remove PaymentAddress's languageCode property
 
 The `PaymentAddress.languageCode` property has been removed from the Payment
 Request API. This property is the browser's best guess for the language of the

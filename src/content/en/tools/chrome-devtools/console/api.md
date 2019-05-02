@@ -1,309 +1,297 @@
 project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
+description: Use the Console API to write messages to the Console.
 
-{# wf_updated_on: 2018-12-19 #}
+{# wf_updated_on: 2019-04-18 #}
 {# wf_published_on: 2016-03-21 #}
 {# wf_blink_components: Platform>DevTools #}
+
+[level]: /web/tools/chrome-devtools/console/reference#level
 
 # Console API Reference {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-{% include "web/_shared/contributors/megginkearney.html" %}
-{% include "web/_shared/contributors/pbakaus.html" %}
 
-Use the Console API to write information to the console, 
-create JavaScript profiles, and start a debugging session.
+Use the Console API to write messages to the Console from your JavaScript. See
+[Get Started With Logging Messages To The Console](log) for an interactive introduction
+to the topic. See [Console Utilities API Reference](utilities) if you're looking for the
+convenience methods like `debug(function)` or `monitorEvents(node)` which are only available from
+the Console.
 
+## console.assert(expression, object) {: #assert }
 
-## console.assert(expression, object) {:#assert}
+[Log level][level]: `Error`
 
-Writes an [error](#error) to the console when the evaluated expression is 
-`false`. 
+Writes an [error](#error) to the console when `expression` evaluates to `false`.
 
-
-    function greaterThan(a,b) {
-      console.assert(a > b, {"message":"a is not greater than b","a":a,"b":b});
-    }
-    greaterThan(5,6);
+    const x = 5;
+    const y = 3;
+    const reason = 'x is expected to be less than y';
+    console.assert(x < y, {x, y, reason});
     
+<figure>
+  <img src="images/assert.png"
+       alt="The result of the console.assert() example above."/>
+  <figcaption>
+    <b>Figure 1</b>. The result of the <code>console.assert()</code> example above.
+  </figcaption>
+</figure>
 
-![console.assert() example](images/assert.png)
-
-## console.clear() {:#clear}
+## console.clear() {: #clear }
 
 Clears the console.
 
-
     console.clear();
     
+If [**Preserve Log**](/web/tools/chrome-devtools/console/reference#persist) is enabled,
+`console.clear()` is disabled.
 
-If the [**Preserve log**](index#preserve-log) checkbox is enabled, 
-`console.clear()` is disabled. However, pressing the **clear console** button 
-(![clear console button](images/clear-console-button.png){:.inline})
-or typing the shortcut <kbd>Ctrl</kbd>+<kbd>L</kbd> while the Console is in
-focus still works. 
+See also: [Clear the Console](/web/tools/chrome-devtools/console/reference#clear)
 
-See [Clearing the console](index#clearing) for more information.
+## console.count([label]) {: #count }
 
-## console.count([label]) {:#count}
+[Log level][level]: `Info`
 
 Writes the number of times that `count()` has been invoked at the same 
-line and with the same (optional) label.
+line and with the same `label`. Call [`console.countReset([label])`](#countreset)
+to reset the count.
 
-    console.count(); // default: 1
-    console.count(); // default: 2
-    console.count('cat'); // cat: 1
-    console.count(); // default: 3
-    console.count('cat'); // cat: 2
+    console.count();
+    console.count('coffee');
+    console.count();
+    console.count();
 
-See also [`console.countReset([label])`](#countreset).
+<figure>
+  <img src="images/count.png"
+       alt="The result of the console.count() example above."/>
+  <figcaption>
+    <b>Figure 2</b>. The result of the <code>console.count()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.countReset([label]) {: #countreset }
 
-Resets the count.
+Resets a count.
 
     console.countReset();
-
-If you pass a label, the count is reset for that label only.
-
-    console.count('cat'); // cat: 1
-    console.count('cat'); // cat: 2
-    console.countReset('cat');
-    console.count('cat'); // cat: 1
+    console.countReset('coffee');
 
 ## console.debug(object [, object, ...]) {: #debug }
 
-Identical to [`console.log()`](#log).
+[Log level][level]: `Info`
 
-## console.dir(object) {:#dir}
+Identical to [`console.log(object [, object, ...])`](#log).
 
-Prints a JavaScript representation of the specified object. If the object 
-being logged is an HTML element, then the properties of its DOM representation 
-are printed, as shown below:
+    console.debug('debug');
 
+<figure>
+  <img src="images/debug.png"
+       alt="The result of the console.debug() example above."/>
+  <figcaption>
+    <b>Figure 3</b>. The result of the <code>console.debug()</code> example above.
+  </figcaption>
+</figure>
 
-    console.dir(document.body);
+## console.dir(object) {: #dir }
+
+[Log level][level]: `Info`
+
+Prints a JSON representation of the specified object.
+
+    console.dir(document.head);
     
+<figure>
+  <img src="images/dir.png"
+       alt="The result of the console.dir() example above."/>
+  <figcaption>
+    <b>Figure 4</b>. The result of the <code>console.dir()</code> example above.
+  </figcaption>
+</figure>
 
-![`console.dir()` example](images/dir.png)
+## console.dirxml(node) {: #dirxml }
 
-Learn about the functionally equivalent object formatter (`%O`) and more 
-in [String substitution and formatting][of].
+[Log level][level]: `Info`
 
-[of]: console-write#string-substitution-and-formatting
-
-## console.dirxml(object) {: #dirxml }
-
-Prints an XML representation of the descendant elements of `object` if 
-possible, or the JavaScript representation if not. Calling `console.dirxml()`
-on HTML and XML elements is equivalent to calling [`console.log()`](#log).
-
+Prints an XML representation of the descendants of `node`.
 
     console.dirxml(document);
     
-
-![console.dirxml() example](images/dirxml.png)
+<figure>
+  <img src="images/dirxml.png"
+       alt="The result of the console.dirxml() example above."/>
+  <figcaption>
+    <b>Figure 5</b>. The result of the <code>console.dirxml()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.error(object [, object, ...]) {: #error }
 
-Prints a message similar to [`console.log()`](#log), styles the 
-message like an error, and includes a stack trace from where the method was 
-called.
+[Log level][level]: `Error`
 
+Prints `object` to the Console, formats it as an error, and includes a stack trace.
 
-    console.error('error: name is undefined');
+    console.error("I'm sorry, Dave. I'm afraid I can't do that.");
     
+<figure>
+  <img src="images/error.png"
+       alt="The result of the console.error() example above."/>
+  <figcaption>
+    <b>Figure 6</b>. The result of the <code>console.error()</code> example above.
+  </figcaption>
+</figure>
 
-![console.error() example](images/error.png)
+## console.group(label) {: #group }
 
-## console.group(object[, object, ...]) {: #group }
+Visually groups messages together until `console.groupEnd(label)` is called. Use
+`console.groupCollapsed(label)` to collapse the group when it's
+initially logged to the Console.
 
-Starts a new logging group with an optional title. All console output that
-occurs after `console.group()` and before `console.groupEnd()` is visually
-grouped together. 
+    const label = 'Adolescent Irradiated Espionage Tortoises';
+    console.group(label);
+    console.info('Leo');
+    console.info('Mike');
+    console.info('Don');
+    console.info('Raph');
+    console.groupEnd(label);
 
+<figure>
+  <img src="images/group.png"
+       alt="The result of the console.group() example above."/>
+  <figcaption>
+    <b>Figure 7</b>. The result of the <code>console.group()</code> example above.
+  </figcaption>
+</figure>
 
-    function name(obj) {
-      console.group('name');
-      console.log('first: ', obj.first);
-      console.log('middle: ', obj.middle);
-      console.log('last: ', obj.last);
-      console.groupEnd();
-    }
-    
-    name({"first":"Wile","middle":"E","last":"Coyote"});
-    
+## console.groupCollapsed(label) {: #groupcollapsed }
 
-![console.group() example](images/group.png)
+Same as [`console.group(label)`](#group), except the group is initially collapsed when it's logged to the Console.
 
-You can also nest groups:
+## console.groupEnd(label) {: #groupend }
 
-
-    function name(obj) {
-      console.group('name');
-      console.log('first: ', obj.first);
-      console.log('middle: ', obj.middle);
-      console.log('last: ', obj.last);
-      console.groupEnd();
-    }
-    
-    function doStuff() {
-      console.group('doStuff()');
-      name({"first":"Wile","middle":"E","last":"coyote"});
-      console.groupEnd();
-    }
-    
-    doStuff();
-    
-
-![nested console.group() example](images/nested-group.png)
-
-{# include shared/related_guides.liquid inline=true list=page.related-guides.organizing #}
-
-## console.groupCollapsed(object[, object, ...]) {: #groupcollapsed }
-
-Creates a new logging group that is initially collapsed instead of open. 
-
-
-    console.groupCollapsed('status');
-    console.log("peekaboo, you can't see me");
-    console.groupEnd();
-    
-
-## console.groupEnd() {: #groupend }
-
-Closes a logging group. See [`console.group`](#group) for an example.
+Stops visually grouping messages. See [`console.group`](#group).
 
 ## console.info(object [, object, ...]) {: #info }
 
-Identical to [`console.log()`](#log).
+[Log level][level]: `Info`
 
-## console.log(object [, object, ...]) {:#log}
+Identical to [`console.log(object [, object, ...])`](#log).
 
-Displays a message in the console. Pass one or more objects to this method.
-Each object is evaluated and concatenated into a space-delimited string.
+    console.info('info');
 
+<figure>
+  <img src="images/info.png"
+       alt="The result of the console.info() example above."/>
+  <figcaption>
+    <b>Figure 8</b>. The result of the <code>console.info()</code> example above.
+  </figcaption>
+</figure>
 
-    console.log('Hello, Logs!');
-    
+## console.log(object [, object, ...]) {: #log }
 
-### Format specifiers {:#format}
+[Log level][level]: `Info`
 
-The first object you pass can contain one or more **format specifiers**. A
-format specifier is composed of the percent sign (`%`) followed by a letter
-that indicates the formatting to apply. 
+Prints a message to the Console.
 
-Related Guides:
+    console.log('log');
 
-* [Organizing Console Output](console-write)
-
-## console.profile([label]) {:#profile}
-
-Starts a JavaScript CPU profile with an optional label. To complete the 
-profile, call `console.profileEnd()`. Each profile is added to the **Profiles**
-panel.
-
-
-    function processPixels() {
-      console.profile("processPixels()");
-      // later, after processing pixels
-      console.profileEnd();
-    }
-    
-
-## console.profileEnd() {:#profileend}
-
-Stops the current JavaScript CPU profiling session if one is in progress and 
-prints the report to the **Profiles** panel.
-
-See [`console.profile()`](#profile) for an example.
+<figure>
+  <img src="images/log.png"
+       alt="The result of the console.log() example above."/>
+  <figcaption>
+    <b>Figure 9</b>. The result of the <code>console.log()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.table(array) {: #table }
 
+[Log level][level]: `Info`
+
 Logs an array of objects as a table.
 
-    let data = [
-      { name: "Yusuf", age: 26 },
-      { age: 34, name: "Chen" }
-    ];
+    console.table([
+      {
+        first: 'René',
+        last: 'Magritte',
+      },
+      {
+        first: 'Chaim',
+        last: 'Soutine',
+        birthday: '18930113',
+      },
+      {
+        first: 'Henri',
+        last: 'Matisse',
+      }
+    ]);
 
-    console.table(data);
-
-![an example of console.table()](images/table2.png)
+<figure>
+  <img src="images/table.png"
+       alt="The result of the console.table() example above."/>
+  <figcaption>
+    <b>Figure 10</b>. The result of the <code>console.table()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.time([label]) {: #time }
 
-Starts a new timer. Call [`console.timeEnd()`](#timeend) to stop the timer and
+Starts a new timer. Call `console.timeEnd([label])` to stop the timer and
 print the elapsed time to the Console.
 
     console.time();
-    var arr = new Array(10000);
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = new Object();
+    for (var i = 0; i < 100000; i++) {
+      let square = i ** 2;
     }
     console.timeEnd();
-    // default: 3.696044921875ms
 
-Pass an optional label to change the output text that precedes the elapsed
-time. Call `console.timeEnd()` with the same label to stop the timer.
-
-    console.time('total');
-    var arr = new Array(10000);
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = new Object();
-    }
-    console.timeEnd('total');
-    // total: 3.696044921875ms
-
-Use labels to run multiple timers at the same time.
-
-    console.time('total');
-    console.time('init arr');
-    var arr = new Array(10000);
-    console.timeEnd('init arr');
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = new Object();
-    }
-    console.timeEnd('total');
-    // init arr: 0.0546875ms
-    // total: 2.5419921875ms
+<figure>
+  <img src="images/time.png"
+       alt="The result of the console.time() example above."/>
+  <figcaption>
+    <b>Figure 11</b>. The result of the <code>console.time()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.timeEnd([label]) {: #timeend }
 
-Stops a timer. See [`console.time()`](#time) for examples.
+[Log level][level]: `Info`
 
-## console.timeStamp([label]) {:#timestamp}
+Stops a timer. See [`console.time()`](#time).
 
-Adds an event to the **Timeline** during a recording session. 
+## console.trace() {: #trace }
 
+[Log level][level]: `Info`
 
-    console.timeStamp('check out this custom timestamp thanks to console.timeStamp()!');
-    
+Prints a stack trace to the Console.
 
-![console.timeStamp() example](images/timestamp.png)
+    const first = () => { second(); };
+    const second = () => { third(); };
+    const third = () => { fourth(); };
+    const fourth = () => { console.trace(); };
+    first();
 
-Related Guides:
-
-* [Using the Timeline
-  Tool](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
-
-## console.trace(object) {:#trace}
-
-Prints a stack trace from the point where the method was called. 
-
-    console.trace();
-
-![console.trace() example](images/trace.png)
+<figure>
+  <img src="images/trace.png"
+       alt="The result of the console.trace() example above."/>
+  <figcaption>
+    <b>Figure 12</b>. The result of the <code>console.trace()</code> example above.
+  </figcaption>
+</figure>
 
 ## console.warn(object [, object, ...]) {: #warn }
 
-Prints a message like [`console.log()`](#log), but also displays a yellow 
-warning icon next to the logged message.
+[Log level][level]: `Warning`
 
-    console.warn('user limit reached!');
+Prints a warning to the Console.
 
-![console.warn() example](images/warn.png)
+    console.warn('warn');
+
+<figure>
+  <img src="images/warn.png"
+       alt="The result of the console.warn() example above."/>
+  <figcaption>
+    <b>Figure 13</b>. The result of the <code>console.warn()</code> example above.
+  </figcaption>
+</figure>
 
 ## Feedback {: #feedback }
 

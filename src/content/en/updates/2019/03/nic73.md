@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: What's new in Chrome 73 for developers?
 
 {# wf_published_on: 2019-03-12 #}
-{# wf_updated_on: 2019-03-13 #}
+{# wf_updated_on: 2019-04-15 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome73,new-in-chrome,desktop,progressive-web-apps,webpackage,css,regex #}
 {# wf_featured_snippet: Chrome 73 makes creating portable content easier with signed HTTP exchanges. Dynamically changing styles becomes way easier with constructable style sheets. And adds support for Progressive Web Apps on Mac, bringing support for PWAs to all desktop and mobile platforms, making it easy to create installable apps, delivered through the web. Let’s dive in and see what’s new for developers in Chrome 73! #}
@@ -23,7 +23,7 @@ description: What's new in Chrome 73 for developers?
 
 In Chrome 73, we've added support for:
 
-* Creating portable content easier with [signed HTTP exchanges](#sgx).
+* Creating portable content easier with [signed HTTP exchanges](#sxg).
 * Dynamically changing styles becomes way easier with
   [constructable style sheets](#constructable-style-sheets).
 * Support for Progressive Web Apps arrives for on Mac, bringing support for
@@ -72,7 +72,7 @@ users find and launch them from the same place as other apps, they run in
 their own window, they appear in the task switcher, their icons can show
 notification badging, and so on.
 
-We want to close the [close the capability gap](/web/updates/capabilities)
+We want to [close the capability gap](/web/updates/capabilities)
 between the web and native to provide a solid foundation for modern
 applications delivered on the web. We’re working to add new web platform
 capabilities that give you access to things like the
@@ -95,9 +95,9 @@ Then, iterate from there.
 
 <div class="clearfix"></div>
 
-## Signed HTTP Exchanges {: #sgx }
+## Signed HTTP Exchanges {: #sxg }
 
-Signed HTTP Exchanges (SGX), part of an emerging technology called
+Signed HTTP Exchanges (SXG), part of an emerging technology called
 [Web Packages](https://github.com/WICG/webpackage) is now available in Chrome 73.
 A Signed HTTP Exchange makes it possible to create “portable” content that can
 be delivered by other parties, and this is the key aspect, it retains the
@@ -192,7 +192,7 @@ there’s plenty more.
 * The `<link>` element now supports `imagesrcset` and `imagesizes` properties
   to correspond to `srcset` and `sizes` attributes of `HTMLImageElement`.
 * Blink's shadow blur radius implementation, now matches Firefox and Safari.
-* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on 
+* Dark mode for Chrome's UI is now supported on Mac, and Windows support is on
   the way. In addition, there's work on a CSS media query:
   [`prefers-color-scheme`](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme),
   that can be used to detect if the user has requested the system use a light

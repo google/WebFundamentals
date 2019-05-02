@@ -292,7 +292,7 @@ ratio recommendation][AAA]{: .external }. The AA line has been there since Chrom
 
 Colors between the 2 lines represent colors that meet the AA recommendation but do not
 meet the AAA recommendation. When a color meets the AAA recommendation, anything on the
-same side of that color also meets the recommendation. For example, in **Figure X** anything
+same side of that color also meets the recommendation. For example, in **Figure 15** anything
 below the lower line is AAA, and anything above the upper line does not even meet the AA
 recommendation.
 

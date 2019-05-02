@@ -85,6 +85,7 @@ Image optimization CDNs:
 * [imgix](https://www.imgix.com/){: .external target="_blank" rel="noopener" }
 * [Image Engine](https://imageengine.io/){: .external target="_blank" rel="noopener" }
 * [Cloudinary](https://cloudinary.com/){: .external target="_blank" rel="noopener" }
+* [Uploadcare](https://uploadcare.com/){: .external target="_blank" rel="noopener" }
 
 Image optimization APIs:
 

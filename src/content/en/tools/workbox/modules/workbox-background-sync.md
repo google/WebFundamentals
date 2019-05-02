@@ -99,7 +99,7 @@ self.addEventListener('fetch', (event) => {
   // adding to the Queue.
   const promiseChain = fetch(event.request.clone())
   .catch((err) => {
-      return queue.addRequest(event.request);
+      return queue.pushRequest({request: event.request});
   });
 
   event.waitUntil(promiseChain);

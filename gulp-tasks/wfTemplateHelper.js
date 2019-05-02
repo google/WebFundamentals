@@ -103,6 +103,9 @@ function generateFeeds(files, options) {
   if (!global.WF.options.buildRSS) {
     return;
   }
+  if (!files || files.length === 0) {
+    return;
+  }
   gutil.log(' ', `Generating '${options.title}' RSS & ATOM feeds...`);
   const maxItems = options.maxItems || global.WF.maxArticlesInFeed;
   let context = {

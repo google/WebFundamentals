@@ -42,13 +42,11 @@ Selection With Client Hints][ch] to learn more.
 
 [ch]: /web/updates/2015/09/automating-resource-selection-with-client-hints
 
-Tools like [gulp-responsive][gr] or [responsive-images-generator][rig] can
-help automate the process of converting an image into multiple formats.
-There are also image CDNs which let you generate multiple versions, either
-when you upload an image, or request it from your page.
+Tools like [gulp-responsive][gr] can help automate the process of converting
+an image into multiple formats. There are also image CDNs which let you generate
+multiple versions, either when you upload an image, or request it from your page.
 
 [gr]: https://www.npmjs.com/package/gulp-responsive
-[rig]: https://www.npmjs.com/package/responsive-images-generator
 
 ## More information {: #more-info }
 

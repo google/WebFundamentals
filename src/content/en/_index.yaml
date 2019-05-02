@@ -2,7 +2,7 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  body_class: xx-hide-devsite-banner
+  body_class: x-hide-devsite-banner
   meta_tags:
   - name: google-site-verification
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
@@ -41,6 +41,7 @@ landing_page:
           </div>
 
   rows:
+
   - classname: wf-landing-row
     items:
     - heading: Move to HTTPS
