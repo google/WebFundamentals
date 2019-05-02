@@ -2,7 +2,7 @@ project_path: /web/tools/workbox/_project.yaml
 book_path: /web/tools/workbox/_book.yaml
 description: A guide on how to troubleshoot and debugging issues with Workbox.
 
-{# wf_updated_on: 2019-02-01 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2017-11-15 #}
 {# wf_blink_components: N/A #}
 
@@ -140,13 +140,14 @@ If you are using the module files directly, just swap `.prod.js` for `.dev.js`.
 
 ### Enable 'debug' Logs
 
-To avoid clogging up the console with Workbox logs it has a log level feature
-that by default will be set to `log` for debug builds. Changing the log level
-to `debug` will result in more logs being printed to the console.
+The debug builds of Workbox will, by default, log extensive messages to the [JavaScript
+console](/web/tools/chrome-devtools/console/). These messages are tagged with specific log levels,
+and your JavaScript console might not be configured to show all log levels by default.
 
-```javascript
-workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
-```
+We recommend checking your JavaScript console's [log level
+filtering](/web/tools/chrome-devtools/console/log#level) and adjusting it accordingly. Setting it to
+display the "Verbose" level will result in seeing the most detailed messages, and can help in your
+debugging.
 
 ## Stack Overflow
 
