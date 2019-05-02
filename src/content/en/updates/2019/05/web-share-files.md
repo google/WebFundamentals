@@ -9,7 +9,7 @@ description: Chrome 75 introduces file sharing from a web app, which lets your w
 {# wf_featured_snippet: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device. #}
 {# wf_blink_components: Blink>WebShare #}
 
-# Web share supports files {: .page-title }
+# Share files with Web Share {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -28,12 +28,13 @@ see. The
 [Web Share Target API](/web/updates/2018/12/web-share-target)
 allows web apps to receive data from a share.
 
-The only resource previously supported by these APIs was files. Chrome 75
-introduces file sharing from a web app with its implementation of the [Web Share
-API - Level 2](https://wicg.github.io/web-share/level-2/). [In the
+The only resource previously supported by these APIs was links. Chrome 75 adds
+support for Web [Web Share API - Level
+2](https://wicg.github.io/web-share/level-2/), making it easy for web apps to
+share files to other apps using the system provided picker.[In the
 future](https://www.chromestatus.com/feature/6124071381106688), you'll also be
-able to use web apps as a share target. For now, your web app can share with
-virtually anything else on a user's device.
+able to use web apps as a share target. For now, your web app can share files
+with other web share targets registered on your device.
 
 This article assumes some familiarity with the web share APIs. If this is new to
 you, check out the links above or [the demo](http://wicg.github.io/web-share/demos/share-files.html). 
@@ -55,7 +56,7 @@ if (navigator.canShare && navigator.canShare(shareData)) {
 }
 ```
 
-Take note of what's not in shareData. When calling `canShare()` for files,
+Take note of what's not in `shareData`. When calling `canShare()` for files,
 `shareData` cannot contain other members. If you need title, text, or url you'll
 need to add them afterwards.
 
@@ -70,7 +71,7 @@ if (navigator.canShare && navigator.canShare( { files: filesArray } )) {
   navigator.share({
     files: files,
     title: 'Vacation Pictures',
-    text: 'Barb\nHere\s the pictures from our vacation.\n\nJoe',  })
+    text: 'Barb\nHere are the pictures from our vacation.\n\nJoe',  })
   .then(() => console.log('Share was successful.'))
   .catch((error) => console.log('Sharing failed', error));
 } else {
@@ -80,11 +81,11 @@ if (navigator.canShare && navigator.canShare( { files: filesArray } )) {
 
 It may seem odd to include other data members when sharing files. Allowing these
 members explands the flexibility of use cases. Imagine if after running the code
-above, the user chose an email application as the target. The title parameter
-might become an email subject, the text, the body of the message and the files
-attachments.
+above, the user chose an email application as the target. The `title` parameter
+might become an email subject, the `text`, the body of the message, and the
+`files`, attachments.
 
-Note: The shareData argument is required for both `canShare()` and `share()`
+Note: The `shareData` argument is required for both `canShare()` and `share()`
 even though the specification labels it as optional in both cases. As the
 specification itself states, this is because of a quirk of the Web IDL rules.
 
