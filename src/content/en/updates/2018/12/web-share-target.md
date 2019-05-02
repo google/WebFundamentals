@@ -3,9 +3,9 @@ book_path: /web/updates/_book.yaml
 description: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button.
 
 {# wf_published_on: 2018-12-05 #}
-{# wf_updated_on: 2019-04-11 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
-{# wf_tags: capabilities,sharing,chrome71 #}
+{# wf_tags: capabilities,sharing,android,chrome71 #}
 {# wf_featured_snippet: The Web Share Target API allows installed web apps to register with the underlying OS as a share target to receive shared content from either the Web Share API or system events, like the OS-level share button. #}
 {# wf_blink_components: Blink>WebShare #}
 
