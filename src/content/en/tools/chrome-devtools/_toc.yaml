@@ -130,6 +130,8 @@ toc:
     path: /web/tools/chrome-devtools/javascript/reference
   - title: Snippets
     path: /web/tools/chrome-devtools/snippets
+  - title: Sources Panel Overview
+    path: /web/tools/chrome-devtools/sources
   - title: Guides
     section:
     - title: Blackbox Chrome Extension Scripts
@@ -201,22 +203,24 @@ toc:
   path: /web/tools/chrome-devtools/progressive-web-apps
 - title: Security
   path: /web/tools/chrome-devtools/security/
+- title: Keyboard Shortcuts
+  path: /web/tools/chrome-devtools/shortcuts
 - title: DevTools for Beginners
   section:
   - title: HTML and the DOM
     path: /web/tools/chrome-devtools/beginners/html
   - title: CSS
     path: /web/tools/chrome-devtools/beginners/css
-- title: UI References and Overviews
-  section:
-  - title: UI Reference
-    path: /web/tools/chrome-devtools/ui
-  - title: Sources Panel Overview
-    path: /web/tools/chrome-devtools/sources
-  - title: Keyboard Shortcuts
-    path: /web/tools/chrome-devtools/shortcuts
 - title: Resources
   path: /web/tools/chrome-devtools/resources/
+- title: Customize
+  section:
+  - title: Overview
+    path: /web/tools/chrome-devtools/customize/
+  - title: Dark Theme
+    path: /web/tools/chrome-devtools/customize/dark-theme
+  - title: Change Placement
+    path: /web/tools/chrome-devtools/customize/placement
 - title: Extend DevTools
   section:
   - title: Integrating with DevTools and Chrome
