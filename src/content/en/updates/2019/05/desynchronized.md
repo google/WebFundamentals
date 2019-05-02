@@ -65,8 +65,6 @@ do this without tearing, though devices with front buffer rendering such as
 Chrome OS for example may have tearing. (The movie is great, but heartbreaking.
 I was useless for an hour after I saw it. Consider yourself warned.)
 
-
-
 ## Using the hint
 
 There's more to using low latency than adding `desynchronized` to 
@@ -86,9 +84,7 @@ const ctx = canvas.getContext('2d', {
 });
 ```
 
-Next, call `getContextAttributes()` to determine if the hint is supported. Alas,
-this does not guarantee a desynchronized canvas because the feature requires
-hardware support. 
+Next, call `getContextAttributes()` to determine if the hint is supported. 
 
 ```javascript
 if (ctx.getContextAttributes().desynchronized) {
