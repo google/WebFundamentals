@@ -20,9 +20,9 @@ description: A round up of the deprecations and removals in Chrome 75 to help yo
 These are old webkit-specific properties that allowed developers to fragment
 content over columns inside a scrollable region. They are now removed.
 
-Practically speaking aren't used. Most developers use it accidentally, and
-typically when it is used, this property forces a new formatting context
-similar to setting "overflow: hidden".
+Practically speaking these aren't used. Most developers use them accidentally,
+and typically when they are they force a new formatting context similar to
+setting `overflow: hidden`.
 
 [Chrome Platform Status](https://www.chromestatus.com/feature/5731653806718976) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=940652)
