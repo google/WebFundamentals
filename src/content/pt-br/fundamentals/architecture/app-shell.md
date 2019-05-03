@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A arquitetura de shell dos aplicativos mantém sua IU local e carrega conteúdo dinamicamente, sem sacrificar o potencial da web de oferecer links e de descobrir e encontrar. 
+description: A arquitetura de shell dos aplicativos mantém sua IU local e carrega conteúdo dinamicamente, sem sacrificar o potencial da web de oferecer links e de descobrir e encontrar.
 
-{# wf_updated_on: 2017-07-12 #} 
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 # O modelo de shell dos aplicativos {: .page-title }
@@ -162,11 +162,11 @@ de índice completo. Vejamos o que ele contém.
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -197,8 +197,7 @@ de índice completo. Vejamos o que ele contém.
 <div class="clearfix"></div>
 
 
-Observação: Acesse [https://app-shell.appspot.com/](https://app-shell.appspot.com/)
-para ver um PWA real muito simples que usa um shell de aplicativo e renderização
+Observação: Acesse [The App Shell Model](/web/fundamentals/architecture/app-shell) para ver um PWA real muito simples que usa um shell de aplicativo e renderização
 no servidor para o conteúdo. Pode-se implementar um shell de aplicativo usando qualquer biblioteca
 ou estrutura, conforme explicado na nossa palestra <a
 href="https://www.youtube.com/watch?v=srdKq0DckXQ">Progressive Web Apps em
@@ -207,7 +206,7 @@ href="https://shop.polymer-project.org">Shop</a>) e o React (<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
- 
+
 
 ### Armazenar o shell do aplicativo em cache {: #app-shell-caching }
 

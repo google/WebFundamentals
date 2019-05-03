@@ -1,8 +1,8 @@
-project_path: /web/fundamentals/_project.yaml 
+project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
+description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web.
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: N/A #}
 
@@ -162,11 +162,11 @@ index file. Let's look at what it contains.
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -197,8 +197,7 @@ index file. Let's look at what it contains.
 <div class="clearfix"></div>
 
 
-Note: See [https://app-shell.appspot.com/](https://app-shell.appspot.com/) for a
-real-life look at a very simple PWA using an application shell and server-side
+Note: See [Your First Progressive Web App](/web/fundamentals/codelabs/your-first-pwapp/) for more on using an application shell and server-side
 rendering for content. An app shell can be implemented using any library or
 framework as covered in our <a
 href="https://www.youtube.com/watch?v=srdKq0DckXQ">Progressive Web Apps across
@@ -207,7 +206,7 @@ href="https://shop.polymer-project.org">Shop</a>) and React (<a
 href="https://github.com/insin/react-hn">ReactHN</a>,
 <a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
- 
+
 
 ### Caching the application shell {: #app-shell-caching }
 
