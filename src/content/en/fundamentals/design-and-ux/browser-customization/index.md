@@ -4,7 +4,7 @@ description: Modern browsers make it easy to customize certain components, like 
 
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-05-06 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Icons & Browser Colors {: .page-title }
