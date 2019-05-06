@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device.
 
 {# wf_published_on: 2019-05-02 #}
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2019-05-06 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome75 #}
 {# wf_featured_snippet: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device. #}
@@ -52,7 +52,7 @@ const shareData = { files: filesArray };
 if (navigator.canShare && navigator.canShare(shareData)) {
   // Share the data.
 } else {
-  console.log('Your system doesn't support sharing files.');
+  console.log('Your system doesn\'t support sharing files.');
 }
 ```
 
@@ -75,7 +75,7 @@ if (navigator.canShare && navigator.canShare( { files: filesArray } )) {
   .then(() => console.log('Share was successful.'))
   .catch((error) => console.log('Sharing failed', error));
 } else {
-  console.log('Your system doesn't support sharing files.');
+  console.log('Your system doesn\'t support sharing files.');
 }
 ```
 
