@@ -6,7 +6,7 @@ description: A quick overview of paint holding. A Chrome feature for reducing th
 {# wf_published_on: 2019-05-05 #}
 {# wf_tags: paint-holding, rendering, holding flash white paint, chrome76 #}
 {# wf_blink_components: Blink,Internals>Network #}
-{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_image: /web/updates/images/generic/visibility.png #}
 {# wf_featured_snippet: A quick overview of paint holding. A Chromium feature for reducing the flash of white on same-origin navigations #}
 
 # Paint Holding - reducing the flash of white on same-origin navigations {: .page-title }
