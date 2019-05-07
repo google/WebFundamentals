@@ -26,7 +26,7 @@ audit is available in all Lighthouse runtime environments.
   <img src="images/requestcounts.png"
        alt="The Keep Request Counts And File Sizes Small audit."/>
   <figcaption>
-    <b>Figure X</b>. The <b>Keep Request Counts And File Sizes Small</b> audit.
+    <b>Figure 1</b>. The <b>Keep Request Counts And File Sizes Small</b> audit.
   </figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ your budget file the new **Over Budget** column tells you whether you're exceedi
   <img src="images/budgetscustom.png"
        alt="A custom budget report."/>
   <figcaption>
-    <b>Figure X</b>. A custom budget report.
+    <b>Figure 2</b>. A custom budget report.
   </figcaption>
 </figure>
 
