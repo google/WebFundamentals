@@ -37,7 +37,7 @@ and methods. After
 use it like any HTML element.
 
 ```html
-&lt;model-viewer alt="A 3D model of an astronaut." src="Astronaut.gltf" ios-src="Astronaut.usdz" magic-leap ar>
+<model-viewer alt="A 3D model of an astronaut." src="Astronaut.gltf" ios-src="Astronaut.usdz" magic-leap ar>
 ```
 
 This looks much the same as what I had in my earlier article. Notice the thing
@@ -56,13 +56,13 @@ below. Then watch
 for updates.
 
 ```html
-&lt;script type="module" 
+<script type="module" 
   src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
-&lt;/script>
+</script>
 
-&lt;script nomodule
+<script nomodule
   src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer-legacy.js">
-&lt;/script>
+</script>
 ```
 
 ## Conclusion
