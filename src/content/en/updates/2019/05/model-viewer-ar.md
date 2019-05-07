@@ -24,9 +24,9 @@ attribute. This attribute is built on a new ARCore feature called Scene Viewer,
 and external app for viewing 3D models. To learn more about Scene Viewer,
 checkout out [Viewing 3D models in AR from an Android browser](/ar/develop/java/scene-viewer).
 
-Let's see how to do augmented reality with &lt;model-viewer>.
-
 ![Mars Rover](/web/updates/images/2019/05/rover.png)
+
+Let's see how to do augmented reality with &lt;model-viewer>.
 
 ## The attribute
 
