@@ -4,7 +4,7 @@ description: Modern browsers make it easy to customize certain components, like 
 
 
 {# wf_blink_components: N/A #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-05-06 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Icons & Browser Colors {: .page-title }
@@ -46,17 +46,16 @@ Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192
 
 ### Safari
 
-Safari also uses the `<link>` tag with the `rel` attribute: `apple-touch-icon`.
-
-You can specify [explicit sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27) 
-by providing a separate link tag for each icon, preventing the OS from 
-having to resize the icon:
-
+Safari also uses the `<link>` tag with the `rel` attribute: `apple-touch-icon` to 
+indicate the home screen icon.
 
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+
+A non-transparent PNG that's 180px or 192px square is ideal for the apple-touch-icon.
+
+Including multiple versions via the `sizes` attribute is not recommended. 
+Previously, Safari for iOS would consider the `-precomposed` keyword to avoid
+adding visual effects, but it hasn't been necessary since iOS 7. 
     
 
 ### Internet Explorer & Windows Phone
