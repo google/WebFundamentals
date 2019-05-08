@@ -20,7 +20,7 @@ resource, the browser uses its local copy, rather than going to the network to g
 
 Configure your server to return the `Cache-Control` HTTP response header.
 
-     Cache-Control: max-age=31536000
+     Cache-Control: max-age=31557600
 
 [Invalidate]: /web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating_and_updating_cached_responses
 
@@ -28,8 +28,8 @@ Caution: Make sure to provide yourself a way to [invalidate and update
 cached responses][Invalidate].
 
 The `max-age` directive tells the browser how long it should cache the resource, in seconds.
-`31536000` corresponds to 1 year: 60 seconds * 60 minutes * 24 hours * 365 days = 
-31536000 seconds.
+`31557600` corresponds to 1 year: 60 seconds * 60 minutes * 24 hours * 365.25 days = 
+31557600 seconds.
 
 [webpack]: https://webpack.js.org/guides/caching/
 
