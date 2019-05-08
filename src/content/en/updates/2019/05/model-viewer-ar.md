@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: In February, we introduced the model-viewer web component which let you declaratively add a 3D model to a web page. Now we're announcing support for AR on Android with the addition of the ar attribute. 
 
-{# wf_updated_on: 2019-05-07 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2019-05-07 #}
 {# wf_tags: 3d,model-viewer,ar,augmented-reality #}
 {# wf_featured_image: /web/updates/images/2019/05/masthead.jpg #}
@@ -22,7 +22,7 @@ To do that, we've since added support for Magic Leap, and Quick Look on iOS. Now
 we're announcing support for AR on Android with the addition of the `ar`
 attribute. This attribute is built on a new ARCore feature called Scene Viewer,
 and external app for viewing 3D models. To learn more about Scene Viewer,
-checkout out [Viewing 3D models in AR from an Android browser](/ar/develop/java/scene-viewer).
+check out [Viewing 3D models in AR from an Android browser](/ar/develop/java/scene-viewer).
 
 ![Mars Rover](/web/updates/images/2019/05/rover.png)
 
