@@ -47,7 +47,7 @@ Note: Icons sizes should be based on 48px, for example 48px, 96px, 144px and 192
 ### Safari
 
 Safari also uses the `<link>` tag with the `rel` attribute: `apple-touch-icon` to 
-indicate the homescreen icon.
+indicate the home screen icon.
 
     <link rel="apple-touch-icon" href="touch-icon-iphone.png">
 
