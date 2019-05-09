@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "No Element Has a tabindex Attribute Greater Than 0" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-01-23 #}
 {# wf_blink_components: N/A #}
 
@@ -32,7 +32,7 @@ it earlier in the DOM.
 This audit is powered by the aXe Accessibility Engine. See [Elements should not
 have tabindex greater than zero][axe] for more information.
 
-[axe]: https://dequeuniversity.com/rules/axe/1.1/tabindex
+[axe]: https://dequeuniversity.com/rules/axe/3.2/tabindex
 
 
 ## Feedback {: #feedback }

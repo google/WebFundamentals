@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Lighthouse 검사 항목 "역할을 위해 요소에 ARIA 속성을 허용합니다"를 위한 참조 문서
 
-{# wf_updated_on: 2017-02-20 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-01-13 #}
 
 # 역할을 위해 요소에 ARIA 속성을 허용합니다.  {: .page-title }
@@ -26,7 +26,7 @@ description: Lighthouse 검사 항목 "역할을 위해 요소에 ARIA 속성을
 1. **Required States and Properties**나 **Supported States and Properties** 목록에서
   요소의 `aria-*` 속성을 다시한번 체크하세요. 이 두 목록 중 하나에없는 속성은 유효하지 않습니다.
 
-유효하지 않은 조합을 수정하려면 요소에서 유효하지 않은 속성을 
+유효하지 않은 조합을 수정하려면 요소에서 유효하지 않은 속성을
 제거하거나 요소의 역할을 속성이 지원하는 것으로 변경하십시오.
 
 [qs]: /web/tools/chrome-devtools/console/command-line-reference#queryselector
@@ -39,4 +39,4 @@ description: Lighthouse 검사 항목 "역할을 위해 요소에 ARIA 속성을
 이 검사는 aXe 접근성 엔진에 의해 검사합니다.
 더 자세한 정보는 [Elements must only use allowed ARIA attributes][axe]를 참고하세요.
 
-[axe]: https://dequeuniversity.com/rules/axe/1.1/aria-allowed-attr
+[axe]: https://dequeuniversity.com/rules/axe/3.2/aria-allowed-attr
