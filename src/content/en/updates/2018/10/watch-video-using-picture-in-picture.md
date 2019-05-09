@@ -158,7 +158,7 @@ Chrome 74 supports play/pause, previous track and next track buttons in the
 Picture-in-Picture window you can control by using the [Media Session API].
 
 <figure>
-  <img src="/web/updates/images/2018/10/media-playback-controls.jpg"
+  <img src="/web/updates/images/2018/10/media-playback-controls.png"
        alt="Media playback controls in a Picture-in-Picture window">
   <figcaption>
     <b>Figure 1.</b>
