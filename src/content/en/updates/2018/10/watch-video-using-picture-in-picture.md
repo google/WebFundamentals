@@ -152,6 +152,49 @@ catalog of videos, to surfacing a livestream chat.
       // User may have played a Picture-in-Picture video from a different page.
     });
 
+### Customize the Picture-in-Picture window
+
+Chrome 74 supports play/pause, previous track and next track buttons in the
+Picture-in-Picture window you can control by using the [Media Session API].
+
+<figure>
+  <img src="/web/updates/images/2018/10/media-playback-controls.jpg"
+       alt="Media playback controls in a Picture-in-Picture window">
+  <figcaption>
+    <b>Figure 1.</b>
+    Media playback controls in a Picture-in-Picture window
+  </figcaption>
+</figure>
+
+By default, a play/pause button is always shown in the Picture-in-Picture
+window unless the video is playing MediaStream objects (e.g. `getUserMedia()`,
+`getDisplayMedia()`, `canvas.captureStream()`) or the video has a MediaSource
+duration set to `+Infinity` (e.g. live feed). To make  sure a play/pause button
+is always visible, set somesee Media Session action handlers for both "Play" and
+"Pause" media events as below.
+
+      // Show a play/pause button in the Picture-in-Picture window
+      navigator.mediaSession.setActionHandler('play', function() {
+        // User clicked "Play" button.
+      });
+      navigator.mediaSession.setActionHandler('pause', function() {
+        // User clicked "Pause" button.
+      });
+
+Showing "Previous Track" and "Next track" window controls is similar. Setting
+Media Session action handlers for those will show them in the Picture-in-Picture
+window and you'll be able to handle these actions.
+
+      navigator.mediaSession.setActionHandler('previoustrack', function() {
+        // User clicked "Previous Track" button.
+      });
+
+      navigator.mediaSession.setActionHandler('nexttrack', function() {
+        // User clicked "Next Track" button.
+      });
+
+To see this in action, try out the official [Media Session sample].
+
 ### Get the Picture-in-Picture window size
 
 If you want to adjust the video quality when the video enters and leaves
@@ -272,7 +315,7 @@ instance create an audio playlist window in Chrome 74. Check out the official
   <img src="/web/updates/images/2018/10/audio-playlist.jpg"
        alt="Audio playlist in a Picture-in-Picture window">
   <figcaption>
-    <b>Figure 1.</b>
+    <b>Figure 2.</b>
     Audio playlist in a Picture-in-Picture window
   </figcaption>
 </figure>
@@ -329,6 +372,7 @@ involved in the [standardization effort].
 [Feature support]: #feature-support
 [feature policy]: /web/updates/2018/06/feature-policy
 [video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
+[Media Session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
 [disabled by a feature policy]: https://github.com/WICG/feature-policy/blob/master/features.md#picture-in-picture
