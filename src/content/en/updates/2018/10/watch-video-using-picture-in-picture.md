@@ -124,8 +124,8 @@ the original tab. Note that this method also returns a promise.
     }
     ...
 
-Note: I'd recommend video exit Picture-in-Picture automatically when [video
-enters fullscreen].
+Note: I'd recommend the video leaves Picture-in-Picture automatically when 
+[video enters fullscreen].
 
 ### Listen to Picture-in-Picture events {: #listen-pip-events }
 
