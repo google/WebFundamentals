@@ -124,6 +124,9 @@ the original tab. Note that this method also returns a promise.
     }
     ...
 
+Note: I'd recommend video exit Picture-in-Picture automatically when [video
+enters fullscreen].
+
 ### Listen to Picture-in-Picture events {: #listen-pip-events }
 
 Operating systems usually restrict Picture-in-Picture to one window, so
@@ -368,6 +371,7 @@ involved in the [standardization effort].
 [applicable only]: https://github.com/WICG/picture-in-picture/issues/116
 [Feature support]: #feature-support
 [feature policy]: /web/updates/2018/06/feature-policy
+[video enters fullscreen]: https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreenchange_event
 [Media Session sample]: https://googlechrome.github.io/samples/media-session/video.html
 [throttling and debouncing]: https://css-tricks.com/debouncing-throttling-explained-examples/
 [user may have turned it off]: https://support.google.com/youtube/answer/7552722
