@@ -3,7 +3,7 @@ book_path: /web/tools/workbox/_book.yaml
 description: The module guide for workbox-routing.
 
 {# wf_published_on: 2019-02-24 #}
-{# wf_updated_on: 2019-02-27 #}
+{# wf_updated_on: 2019-05-09 #}
 {# wf_blink_components: N/A #}
 
 # Workbox Window {: .page-title }
@@ -213,13 +213,13 @@ being able to inform the user of updates to that content (using the
 strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)).
 
 To receive those updates from the window, you can listen to `message` events of
-type `CACHE_UPDATE`:
+type `CACHE_UPDATED`:
 
 ```javascript
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('message', (event) => {
-  if (event.data.type === 'CACHE_UPDATE') {
+  if (event.data.type === 'CACHE_UPDATED') {
     const {updatedURL} = event.data.payload;
 
     console.log(`A newer version of ${updatedURL} is available!`);
