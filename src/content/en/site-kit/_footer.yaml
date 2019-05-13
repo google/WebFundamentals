@@ -14,6 +14,6 @@ footer:
     icon_name: bug_report
     contents:
     - label: File an Issue
-      path: https://github.com/google/wp-site-kit/issues
+      path: https://github.com/google/site-kit-wp/issues
     - label: View Plugin Source
-      path: https://github.com/google/wp-site-kit
+      path: https://github.com/google/site-kit-wp

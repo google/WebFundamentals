@@ -1,6 +1,6 @@
 parent_project_metadata_path: /web/_project.yaml
 name: Site Kit
-description: Set up the Site Kit plugin for your WordPress site by creating a Google Cloud Platform project.
+description: Set up the Site Kit plugin for your WordPress site by obtaining credentials for your Google Cloud Platform project.
 home_url: /web/site-kit/
 buganizer_id: 488674
 color: google-blue
