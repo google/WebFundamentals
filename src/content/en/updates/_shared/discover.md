@@ -2,6 +2,39 @@
 
 Below is a list of everything that's been covered in the *What's New In DevTools* series.
 
+### Chrome 75 {: #discover75 .hide-from-toc }
+
+* [Meaningful presets when autocompleting CSS functions](/web/updates/2019/04/devtools#presets).
+* [Clear site data from the Command Menu](/web/updates/2019/04/devtools#clear).
+* [View all IndexedDB databases](/web/updates/2019/04/devtools#indexeddb).
+* [View a resource's uncompressed size on hover](/web/updates/2019/04/devtools#uncompressed).
+* [Inline breakpoints in the Breakpoints pane](/web/updates/2019/04/devtools#inline).
+* [IndexedDB and Cache resource counts](/web/updates/2019/04/devtools#counts).
+* [Setting for disabling the detailed Inspect tooltip](/web/updates/2019/04/devtools#inspect).
+* [Setting for toggling tab indentation in the Editor](/web/updates/2019/04/devtools#tab).
+
+### Chrome 74 {: #discover74 .hide-from-toc }
+
+* [Highlight all nodes affected by CSS property](/web/updates/2019/03/devtools#highlight).
+* [Lighthouse v4 in the Audits panel](/web/updates/2019/03/devtools#lighthouse).
+* [WebSocket binary message viewer](/web/updates/2019/03/devtools#binary).
+* [Capture area screenshot in the Command Menu](/web/updates/2019/03/devtools#screenshot).
+* [Service worker filters in the Network panel](/web/updates/2019/03/devtools#swfilters).
+* [Performance panel updates](/web/updates/2019/03/devtools#perf).
+* [Long tasks in Performance panel recordings](/web/updates/2019/03/devtools#longtasks).
+* [First Paint in the Timing section](/web/updates/2019/03/devtools#FP).
+
+### Chrome 73 {: #discover73 .hide-from-toc }
+
+* [Logpoints](/web/updates/2019/01/devtools#logpoints).
+* [Detailed tooltips in Inspect Mode](/web/updates/2019/01/devtools#inspect).
+* [Export code coverage data](/web/updates/2019/01/devtools#coverage).
+* [Navigate the Console with a keyboard](/web/updates/2019/01/devtools#keyboard).
+* [AAA contrast ratio line in the Color Picker](/web/updates/2019/01/devtools#AAA).
+* [Save custom geolocation overrides](/web/updates/2019/01/devtools#geolocation).
+* [Code folding](/web/updates/2019/01/devtools#folding).
+* [Frames tab renamed to Messages tab](/web/updates/2019/01/devtools#messages).
+
 ### Chrome 72 {: #discover72 .hide-from-toc }
 
 * [Visualize performance metrics](/web/updates/2018/11/devtools#metrics) in the Performance panel.
