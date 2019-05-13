@@ -55,7 +55,7 @@ offline.
 However, if using only the code above, the retried requests are
 indistinguishable from request that succeed on the first try. This means
 you'll receive all the interaction data from offline users, but you won't
-be able to which interactions occurred while the user was offline.
+be able to tell which interactions occurred while the user was offline.
 
 To address this concern you can use one of the configuration options
 described below to modify or annotate the data that gets sent in the
