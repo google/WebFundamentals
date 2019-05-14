@@ -206,6 +206,11 @@ into the **Editor**, they had no way to tab out of it because the <kbd>Tab</kbd>
 To override the default behavior and use <kbd>Tab</kbd> to move focus, enable [**Settings**][settings] >
 **Preferences** > **Sources** > **Enable Tab Moves Focus**.
 
+[a11y]: /web/tools/chrome-devtools/accessibility/navigation
+
+There's been a lot of work recently around making the DevTools UI itself more keyboard navigable. Check out
+Rob's [Navigate Chrome DevTools With Assistive Technology][a11y] to learn more.
+
 <!-- https://chromium.googlesource.com/chromium/src/+/27ff38b767bc1659a596830b864acf60850e6bd0 -->
 
 ## Feedback {: #feedback }
