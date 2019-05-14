@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: L'architettura della shell dell'applicazione mantiene l'interfaccia utente locale e carica il contenuto in modo dinamico senza sacrificare la capacità di collegamento e l'individuabilità del Web.
 
-{# wf_updated_on: 2018-03-09 #}
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: N/A #}
 
@@ -177,11 +177,11 @@ offline.
   <header class="header">
     <h1 class="header__title">App Shell</h1>
   </header>
-  
+
   <nav class="nav">
   ...
   </nav>
-  
+
   <main class="main">
   ...
   </main>
@@ -212,8 +212,7 @@ offline.
 
 <div class="clearfix"></div>
 
-Note: vai a vedere [https://app-shell.appspot.com/](https://app-shell.appspot.com/)
-per vedere una PWA reale, molto semplice, che utilizza una shell
+Note: vai a vedere [The App Shell Model](/web/fundamentals/architecture/app-shell) per vedere una PWA reale, molto semplice, che utilizza una shell
 dell'applicazione e il rendering sul lato server per il contenuto. La shell dell'applicazione può
 essere implementata utilizzando qualsiasi libreria o framework come descritto
 nel nostro talk <a

@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: App Shell アーキテクチャでは UI をローカルに保持して、ウェブのリンク可能性と見つけやすさを損なうことなくコンテンツを動的に読み込むことができます。 
+description: App Shell アーキテクチャでは UI をローカルに保持して、ウェブのリンク可能性と見つけやすさを損なうことなくコンテンツを動的に読み込むことができます。
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 #  App Shell モデル {: .page-title }
@@ -137,11 +137,11 @@ Service Worker を使用することで、すべての UI とインフラスト�
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -172,17 +172,17 @@ Service Worker を使用することで、すべての UI とインフラスト�
 <div class="clearfix"></div>
 
 
-注: コンテンツに App Shell とサーバー側のレンダリングを使用した非常にシンプルな PWA を [https://app-shell.appspot.com/](https://app-shell.appspot.com/) で実際に確認できます。<a
+注: コンテンツに App Shell とサーバー側のレンダリングを使用した非常にシンプルな PWA を [The App Shell Model](/web/fundamentals/architecture/app-shell) で実際に確認できます。<a
 href="https://www.youtube.com/watch?v=srdKq0DckXQ">あらゆるフレームワークをまたがる Progressive Web App</a> の動画で紹介されているとおり、App Shell は、どのライブラリまたはフレームワークを使用しても実装できます。Polymer （<a
 href="https://shop.polymer-project.org">Shop</a>）と React（<a
 href="https://github.com/insin/react-hn">ReactHN</a>、<a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>）を使用したサンプルもご覧いただけます。
 
- 
+
 
 ###  App Shell のキャッシング{: #app-shell-caching }
 
-App Shell は、手動で記述された Service Worker、または 
+App Shell は、手動で記述された Service Worker、または
 [sw-precache](https://github.com/googlechrome/sw-precache) などの静的なアセットのプリキャッシュ ツールを使用して生成された Service Worker を使用してキャッシュすることができます。
 
 

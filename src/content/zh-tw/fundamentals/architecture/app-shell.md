@@ -1,8 +1,8 @@
-project_path: /web/_project.yaml 
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:App Shell 架構可保證 UI 的本地化和動態加載內容，同時不影響 Web 的可鏈接性和可檢測性。 
+description:App Shell 架構可保證 UI 的本地化和動態加載內容，同時不影響 Web 的可鏈接性和可檢測性。
 
-{# wf_updated_on: 2016-09-26 #} 
+{# wf_updated_on: 2019-05-02 #}
 {# wf_published_on: 2016-09-27 #}
 
 # App Shell 模型 {: .page-title }
@@ -140,11 +140,11 @@ Note: [Lighthouse](https://github.com/googlechrome/lighthouse) 審覈擴展可�
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
-      
+
       <nav class="nav">
       ...
       </nav>
-      
+
       <main class="main">
       ...
       </main>
@@ -175,13 +175,13 @@ Note: [Lighthouse](https://github.com/googlechrome/lighthouse) 審覈擴展可�
 <div class="clearfix"></div>
 
 
-Note: 請參閱 [https://app-shell.appspot.com/](https://app-shell.appspot.com/)，查看一個非常簡單的、使用 App Shell 和內容服務器端渲染的 PWA 的真實演示。App Shell 可通過使用任意內容庫或框架實現（如我們的<a
+Note: 請參閱 [The App Shell Model](/web/fundamentals/architecture/app-shell)，查看一個非常簡單的、使用 App Shell 和內容服務器端渲染的 PWA 的真實演示。App Shell 可通過使用任意內容庫或框架實現（如我們的<a
 href="https://www.youtube.com/watch?v=srdKq0DckXQ">所有框架上的 Progressive Web App</a> 講座中所述）。您可以使用 Polymer (<a
 href="https://shop.polymer-project.org">Shop</a>) 和 React （<a
 href="https://github.com/insin/react-hn">ReactHN</a>、<a
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>）查看示例。
 
- 
+
 
 ### 緩存 App Shell {: #app-shell-caching }
 
