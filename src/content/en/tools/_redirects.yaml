@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/ui
+  to:   /web/tools/chrome-devtools/customize/
+
 - from: /web/tools/chrome-devtools/console/get-started
   to:   /web/tools/chrome-devtools/console/
 
