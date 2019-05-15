@@ -1,8 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{% include "web/_shared/machine-translation-start.html" %}
-
 {# wf_auto_generated #}
 {# wf_updated_on: 2019-04-19 #}
 {# wf_published_on: 2016-01-01 #}
@@ -86,7 +84,7 @@ Usar Glitch es el método recomendado para trabajar a través de este código.
 1. Abre una nueva pestaña del navegador y ve a [https://glitch.com](https://glitch.com) .
 2. Si no tienes una cuenta, deberás registrarte.
 3. Haz clic en __New Project__, luego __Clone from Git Repo.__
-4. Clone __https: //github.com/googlecodelabs/your-first-pwapp.git__ y Haz clic en __Accept__.
+4. Clone __https://github.com/googlecodelabs/your-first-pwapp.git__ y Haz clic en __Accept__.
 5. Una vez que se haya cargado el repositorio, edita el archivo `.env` y actualízalo con tu API key DarkSky.
 6. HAz clic en el botón __Mostrar Live__ para ver la PWA en acción.
 
@@ -983,5 +981,3 @@ Ahora conoce los pasos clave necesarios para convertir cualquier aplicación web
 ## Encontró un problema o tiene comentarios? {: .hide-from-toc }
 
 Ayúdanos a mejorar nuestros laboratorios de códigos enviando una [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) hoy. ¡Y gracias!
-
-{% include "web/_shared/translation-end.html" %}

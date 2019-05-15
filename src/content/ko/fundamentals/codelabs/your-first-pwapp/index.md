@@ -86,7 +86,7 @@ API 키가 제대로 작동하는지 테스트하려면 DarkSky API에 대한 HT
 1. 새 브라우저 탭을 열고 [https://glitch.com](https://glitch.com) 이동 [https://glitch.com](https://glitch.com) .
 2. 계정이 없다면 가입해야합니다.
 3. __New Project__를 클릭 한 다음, Git Repo에서 __Clone을 클릭하십시오 .__
-4. __https : //github.com/googlecodelabs/your-first-pwapp.git__를 복제하고 OK를 클릭하십시오.
+4. __https ://github.com/googlecodelabs/your-first-pwapp.git__를 복제하고 OK를 클릭하십시오.
 5. repo `.env` 드되면 `.env` 파일을 편집하고 DarkSky API 키로 업데이트하십시오.
 6. __Show Live__ 단추를 클릭하여 PWA가 실제로 작동하는지 확인합니다.
 

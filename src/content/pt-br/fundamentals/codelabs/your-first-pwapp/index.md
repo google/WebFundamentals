@@ -86,7 +86,7 @@ Usar o Glitch é o método recomendado para trabalhar com este codelab.
 1. Abra uma nova guia do navegador e vá para [https://glitch.com](https://glitch.com) .
 2. Se você não tiver uma conta, precisará se inscrever.
 3. Clique em __Novo projeto__ e depois em __Clone em Git Repo .__
-4. Clone __https: //github.com/googlecodelabs/your-first-pwapp.git__ e clique em OK.
+4. Clone __https://github.com/googlecodelabs/your-first-pwapp.git__ e clique em OK.
 5. Depois que o repositório for carregado, edite o arquivo `.env` e atualize-o com sua chave da API do DarkSky.
 6. Clique no botão __Show Live__ para ver o PWA em ação.
 

@@ -1,8 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{% include "web/_shared/machine-translation-start.html" %}
-
 {# wf_auto_generated #}
 {# wf_updated_on: 2019-04-19 #}
 {# wf_published_on: 2016-01-01 #}
@@ -86,7 +84,7 @@ Menggunakan Glitch adalah metode yang disarankan untuk bekerja melalui codelab i
 1. Buka tab browser baru dan pergi ke [https://glitch.com](https://glitch.com).
 2. Jika Anda tidak memiliki akun, Anda harus mendaftar.
 3. Klik __New Project__, lalu __Klik dari Git Repo .__
-4. Duplikasi (_clone_) __https: //github.com/googlecodelabs/your-first-pwapp.git__ dan klik OK.
+4. Duplikasi (_clone_) __https://github.com/googlecodelabs/your-first-pwapp.git__ dan klik OK.
 5. Setelah repo dimuat, edit file `.env` , dan perbarui dengan kunci API DarkSky Anda. 6. Klik tombol __Tampilkan Live__ untuk melihat PWA dalam aksi.
 
 #### Alternatif: Unduh kode &amp; bekerja secara lokal
@@ -874,11 +872,8 @@ Pertama, mari kita verifikasi ikon instal kita muncul dengan benar, pastikan unt
 
 1. Buka URL di tab Chrome baru.
 2. Buka menu tiga titik Chrome (di sebelah bilah alamat).
-
 ▢ Pastikan Anda melihat '*Instal Cuaca ...*' di menu.
-
 3. Refresh data cuaca menggunakan tombol refresh di sudut kanan atas untuk memastikan kita memenuhi [heuristik keterlibatan pengguna](/web/fundamentals/app-install-banners/#criteria) .
-
 ▢ Pastikan ikon instal terlihat di header aplikasi.
 
 #### Verifikasi tombol instal berfungsi
@@ -888,23 +883,16 @@ Selanjutnya, mari kita pastikan semuanya terpasang dengan benar, dan event kita 
 1. Buka Chrome, dan di tab browser baru, navigasikan ke Weather PWA Anda.
 2. Buka DevTools dan alihkan ke panel Console.
 3. Klik tombol install di sudut kanan atas.
-
 ▢ Verifikasi tombol instal menghilang
 ▢ Verifikasi dialog instal modal ditampilkan.
-
 4. Klik Batal.
-
 ▢ Verifikasi '*Pengguna menolak prompt A2HS*' ditampilkan di output konsol.
 ▢ Verifikasi tombol instal muncul kembali.
-
 5. Klik tombol install lagi, lalu klik tombol install di dialog modal.
-
 ▢ Verifikasi '*Pengguna menerima prompt A2HS*' ditampilkan di output konsol.
 ▢ Verifikasi '*Aplikasi Cuaca telah dipasang*' ditampilkan di output konsol.
 ▢ Verifikasi aplikasi Cuaca ditambahkan ke tempat Anda biasanya menemukan aplikasi.
-
 6. Luncurkan PWA Cuaca.
-
 ▢ Verifikasi aplikasi terbuka sebagai aplikasi mandiri, baik di jendela aplikasi di desktop, atau layar penuh di ponsel.
 
 Catatan, jika Anda menjalankan pada desktop dari localhost, PWA yang Anda instal dapat menampilkan spanduk alamat karena localhost tidak dianggap sebagai host yang aman.
@@ -916,15 +904,10 @@ Mari kita juga periksa perilaku di iOS. Jika Anda memiliki perangkat iOS, Anda d
 1. Buka Safari dan di tab browser baru, navigasikan ke Weather PWA Anda.
 2. Klik tombol *Share*! [8ac92dd483c689d3.png](img/8ac92dd483c689d3.png) .
 3. Gulir ke kanan dan klik tombol *Add to Home Screen*.
-
 ▢ Pastikan judul, URL, dan ikonnya benar.
-
 4. Klik *Tambah.*
-
 ▢ Pastikan ikon aplikasi ditambahkan ke layar beranda.
-
 5. Luncurkan PWA Cuaca dari layar beranda.
-
 ▢ Verifikasi aplikasi meluncurkan layar penuh.
 
 ### Bonus: Mendeteksi jika aplikasi Anda diluncurkan dari layar beranda
@@ -997,7 +980,5 @@ Anda sekarang tahu langkah-langkah kunci yang diperlukan untuk mengubah aplikasi
 ## Menemukan masalah, atau memiliki umpan balik? {: .hide-from-toc }
 
 Bantu kita membuat lab kode kita lebih baik dengan mengirimkan [isu](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. Dan terimakasih!
-
-{% include "web/_shared/translation-end.html" %}
 
 Translated by: Riza Fahmi
