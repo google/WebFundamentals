@@ -24,7 +24,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 
 *by Vasilii in Munich*
 
-[flaky Tests][flaky-tests-context] are a common problem in Chrome. They
+[Flaky tests][flaky-tests-context] are a common problem in Chrome. They
 impact the productivity of other developers, and get disabled over time.
 Disabled tests mean diminishing test coverage.
 
@@ -40,12 +40,12 @@ The owners of that component should have better judgement about the failure,
 ## Debugging Stage
 
 A number of [command-line flags][useful-command-lines] are useful for
-fixing flaky tests. For example, **'--enable-pixel-output-in-tests'**
+fixing flaky tests. For example, **`--enable-pixel-output-in-tests`**
 will render the actual browser UI.
 
 **Have fallback tools** if the debugger makes flakiness disappear. It's
 possible that, under debugger, the test is never flaky. In that case, log
-statements or 'base::debug::StackTrace can be handy'.
+statements or `base::debug::StackTrace can be handy`.
 
 Keep in mind common reasons for EXPECT__* failures besides bugs in production
 code:
@@ -92,7 +92,7 @@ WaitUntilCredentialPromptVisible();
 </pre>
 
 The fix above is correct under the assumption that
-'WaitUntilCredentialPromptVisible()' doesn’t actually check the UI.
+`WaitUntilCredentialPromptVisible()` doesn’t actually check the UI.
 **The browser tests should not depend on external UI events** like "focus lost"
 or “window became foreground”. Imagine an implementation where the prompt
 appears only when the browser window is active. Such an implementation
