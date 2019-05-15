@@ -49,9 +49,12 @@ statements or 'base::debug::StackTrace can be handy'.
 
 Keep in mind common reasons for EXPECT__* failures besides bugs in production
 code:
+{: .compare-worse }
 
+<pre class="prettyprint cc-bad lang-cpp">
 * **Incorrect expectations** (e.g. secure page means HTTPS; it can be a localhost instead).
 * Race conditions due to tests not **waiting for the proper event.**
+</pre>
 
 [Don't test the implementation][not-implementation] but the behavior.
 
