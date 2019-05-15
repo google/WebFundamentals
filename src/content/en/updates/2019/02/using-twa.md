@@ -13,13 +13,13 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 
 _Last updated: February 6th, 2019_
 
-<!--
+
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TCgT8dzSiU8"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="6lHBw3F4cWs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
--->
+
 
 **Trusted Web Activities** are a new way to integrate _your_ web-app content
 such as _your_ PWA with _your_ Android app using a protocol based on Custom
