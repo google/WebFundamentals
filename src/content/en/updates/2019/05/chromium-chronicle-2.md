@@ -58,7 +58,7 @@ code:
 
 [Don't test the implementation][not-implementation] but the behavior.
 
-```
+```cpp
 // It takes 2 round trips between the UI and the background thread to complete.
 SyncWithTheStore();
 SyncWithTheStore();
