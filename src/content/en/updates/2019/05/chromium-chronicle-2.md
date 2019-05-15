@@ -64,6 +64,7 @@ SyncWithTheStore();
 SyncWithTheStore();
 CheckTheStore();
 ```
+
 The two round trips may change into three in the future, making the test flaky.
 However, only the store state is relevant. Instead, use an observer for the
 store.
