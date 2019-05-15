@@ -45,7 +45,7 @@ will render the actual browser UI.
 
 **Have fallback tools** if the debugger makes flakiness disappear. It's
 possible that, under debugger, the test is never flaky. In that case, log
-statements or base::debug::StackTrace can be handy.
+statements or 'base::debug::StackTrace can be handy'.
 
 Keep in mind common reasons for EXPECT__* failures besides bugs in production
 code:
