@@ -73,12 +73,10 @@ Beware of common patterns such as the following:
 {: .compare-worse }
 
 <pre class="prettyprint cc-bad lang-cpp">
-```cpp
 Submit TestPasswordForm();
 // Wait until things settle down.
 RunLoop().RunUntilIdle();
 CheckCredentialPromptVisible();
-```
 </pre>
 
 A snippet like the above from a browser test is almost surely incorrect.
