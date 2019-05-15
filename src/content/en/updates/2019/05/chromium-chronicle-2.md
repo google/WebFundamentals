@@ -24,7 +24,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 
 *by Vasilii in Munich*
 
-[Flaky Tests][flaky-tests-context] are a common problem in Chrome. They
+[flaky Tests][flaky-tests-context] are a common problem in Chrome. They
 impact the productivity of other developers, and get disabled over time.
 Disabled tests mean diminishing test coverage.
 
