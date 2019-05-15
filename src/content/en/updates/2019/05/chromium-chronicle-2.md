@@ -40,7 +40,7 @@ The owners of that component should have better judgement about the failure,
 ## Debugging Stage
 
 A number of [command-line flags][useful-command-lines] are useful for
-fixing flaky tests. For example, **--enable-pixel-output-in-tests**
+fixing flaky tests. For example, **'--enable-pixel-output-in-tests'**
 will render the actual browser UI.
 
 **Have fallback tools** if the debugger makes flakiness disappear. It's
