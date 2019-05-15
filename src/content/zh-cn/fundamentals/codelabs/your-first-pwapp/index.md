@@ -1,8 +1,6 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{% include "web/_shared/machine-translation-start.html" %}
-
 {# wf_auto_generated #}
 {# wf_updated_on: 2019-04-19 #}
 {# wf_published_on: 2016-01-01 #}
@@ -149,7 +147,7 @@ Note: 你可以在 Chrome DevTools 中，以命令行或 Node 模块的方式运
 
 * __❗失败:__ 在离线时当前页面未给出 200 响应。
 * __❗失败:__ 在离线时 `start_url` 未给出 200 响应。
-* __❗失败:__ 未注册用来控制页面和 `start_url` 的 Service Worker。 
+* __❗失败:__ 未注册用来控制页面和 `start_url` 的 Service Worker。
 * __❗失败:__ Web 应用清单 (manifest) 不符合可安装性要求。
 * __❗失败:__ 未配置自定义闪屏。
 * __❗失败:__ 未设置地址栏的主题颜色。
@@ -294,7 +292,7 @@ __渐进式应用审计__
 
 * __❗失败:__ 在离线时当前页面未给出 200 响应。
 * __❗失败:__ 在离线时 `start_url` 未给出 200 响应。
-* __❗失败:__ 未注册用来控制页面和 `start_url` 的 Service Worker。 
+* __❗失败:__ 未注册用来控制页面和 `start_url` 的 Service Worker。
 *__✅通过:__ Web 应用清单符合可安装性要求。
 *__✅通过:__ 已配置自定义闪屏。
 *__✅通过:__ 已设置地址栏的主题颜色。
@@ -307,7 +305,7 @@ __渐进式应用审计__
 
 * 在离线时当前页面未给出 200 响应。
 * 在离线时 `start_url` 未给出 200 响应。
-* 未注册用来控制页面和 `start_url` 的 Service Worker。 
+* 未注册用来控制页面和 `start_url` 的 Service Worker。
 
 在下一部分中，我们将使用完整的离线体验替换我们的自定义离线页面。这将改善离线体验，但更重要的是，它将显著提高我们的性能，因为我们的大多数资产（HTML，CSS 和 JavaScript）都将在本地存储和提供，从而消除了网络方面的潜在瓶颈。
 
@@ -319,7 +317,7 @@ __渐进式应用审计__
 
 Warning: Service Worker 功能仅在通过 HTTPS 访问的页面上可用（http://localhost 及其等价物也可用来协助我们进行测试）。
 
-### 注册 Service Worker 
+### 注册 Service Worker
 
 第一步是注册 Service Worker 。将以下代码添加到 `index.html` 文件中:
 
@@ -504,7 +502,7 @@ __渐进式应用审计__
 
 *__✅通过:__ 在离线时当前页面未给出 200 响应。
 *__✅通过:__ 在离线时 `start_url` 未给出 200 响应。
-*__✅通过:__ 未注册用来控制页面和 `start_url` 的 Service Worker。 
+*__✅通过:__ 未注册用来控制页面和 `start_url` 的 Service Worker。
 *__✅通过:__ Web 应用清单符合可安装性要求。
 *__✅通过:__ 已配置自定义闪屏。
 *__✅通过:__ 已设置地址栏的主题颜色。
@@ -515,7 +513,7 @@ __渐进式应用审计__
 
 Key Point:离线优先的设计可以通过减少应用发出的网络请求数量并改用预先缓存资源并直接从本地缓存提供资源来大幅提高Web 应用的性能。即使用最快的网络连接，从本地缓存提供的服务也仍然会更快！
 
-###  Service Worker 生命周期
+### Service Worker 生命周期
 
 Service Worker 的生命周期是最复杂的部分。如果你不知道它想要做什么以及有什么好处，你可能会觉得它处处和你作对。但是一旦你知道它是如何工作的，你就可以为用户提供无缝、免打扰的更新，将网络应用和本机应用中最好的一面结合起来。
 
@@ -537,7 +535,7 @@ Service Worker 每次启动时都会收到 `activate` 事件。 `activate` 事�
 
 fetch 事件允许 Service Worker 拦截并处理任何网络请求。它可以通过网络获取资源、可以从自己的缓存中提取资源、生成自定义响应，以及很多种不同的选择。查看[离线宝典](/web/fundamentals/instant-and-offline/offline-cookbook/)了解你可以使用的不同策略。
 
-#### 更新 Service Worker 
+#### 更新 Service Worker
 
 浏览器会检查每个页面加载时是否有新版本的 Service Worker 。如果找到新版本，则会下载这个新版本并在后台安装，但不会激活它。它会处于等待状态，直到不再打开任何使用旧 Service Worker 的页面。一旦关闭了使用旧 Service Worker 的所有窗口，新的 Service Worker 就会被激活并获得控制权。更多详细信息，请参阅 Service Worker 生命周期文档中的[更新 Service Worker](/web/fundamentals/primers/service-workers/lifecycle#updates)部分。
 
@@ -749,7 +747,7 @@ __渐进式应用审计__
 
 *__✅通过:__ 在离线时当前页面未给出 200 响应。
 *__✅通过:__ 在离线时 `start_url` 未给出 200 响应。
-*__✅通过:__ 未注册用来控制页面和 `start_url` 的 Service Worker。 
+*__✅通过:__ 未注册用来控制页面和 `start_url` 的 Service Worker。
 *__✅通过:__ Web 应用清单符合可安装性要求。
 *__✅通过:__ 已配置自定义闪屏。
 *__✅通过:__ 已设置地址栏的主题颜色。
@@ -764,7 +762,7 @@ __渐进式应用审计__
 
 Success: 由于 Chrome 的 "三点菜单" 的安装体验不够显眼，我们建议你在应用中提供一些指示以通知用户你的应用可以安装，并使用安装按钮来完成安装过程。
 
-### 用 Lighthouse 进行审计 
+### 用 Lighthouse 进行审计
 
 为了使用户能够安装渐进式 Web 应用，它需要满足[一些条件](/web/fundamentals/app-install-banners/#criteria) 。最简单的方法是使用 Lighthouse 来确保它符合可安装的标准。
 
@@ -864,7 +862,7 @@ window.addEventListener('appinstalled', logAppInstalled);
 console.log('Weather App was installed.', evt);
 ```
 
-### 更新 Service Worker 
+### 更新 Service Worker
 
 不要忘记修改 `service-worker.js` 文件中的 `CACHE_NAME`，因为你对已缓存的文件做了些更改。在 DevTools 的 “Application” 面板上的 “Service Worker” 窗格中启用 **Bypass for network** 复选框只在开发中有用，在现实世界中是无济于事的。
 
@@ -888,7 +886,7 @@ console.log('Weather App was installed.', evt);
 
 1. 打开 Chrome，然后在新的浏览器标签中，导航到你的 Weather PWA。
 2. 打开 DevTools 并切换到 “Console” 窗格。
-3. 单击右上角的安装按钮。 
+3. 单击右上角的安装按钮。
 ▢确认安装按钮消失了
 ▢确认显示了安装模态对话框。
 4. 单击 “Cancel”。
@@ -898,7 +896,7 @@ console.log('Weather App was installed.', evt);
 ▢确认 “*User accepted the A2HS prompt*” 显示在了控制台输出中。
 ▢确认 “*Weather App was installed*” 显示在了控制台输出中。
 ▢确认天气应用已添加到你查找应用的典型位置。
-6. 启动 Weather PWA。 
+6. 启动 Weather PWA。
 ▢确认应用是作为独立应用打开的，可以在桌面上的应用窗口中，也可以在移动设备上全屏显示。
 
 请注意，如果你从 localhost 在桌面上运行，则你安装的 PWA 可能会显示地址标题，因为 localhost 不认为是安全主机。
@@ -986,5 +984,3 @@ console.log('Weather App was installed.', evt);
 ## 发现了问题，或有反馈？ {: .hide-from-toc }
 
 马上提交[issue](https://github.com/googlecodelabs/your-first-pwapp/issues)来帮助我们改进 codelab 。谢谢！
-
-{% include "web/_shared/translation-end.html" %}
