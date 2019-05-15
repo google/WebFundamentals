@@ -28,7 +28,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 impact the productivity of other developers, and get disabled over time.
 Disabled tests mean diminishing test coverage.
 
-**Triaging Stage**
+##Triaging Stage
 
 **The OWNERS of directories are responsible for fixing their flaky tests.**
 If you received a bug about a flaky test, spend a few minutes and
