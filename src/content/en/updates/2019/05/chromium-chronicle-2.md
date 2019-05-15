@@ -28,7 +28,7 @@ description: The Chromium Chronicle, a monthly series geared specifically to Chr
 impact the productivity of other developers, and get disabled over time.
 Disabled tests mean diminishing test coverage.
 
-##Triaging Stage
+## Triaging Stage
 
 **The OWNERS of directories are responsible for fixing their flaky tests.**
 If you received a bug about a flaky test, spend a few minutes and
@@ -37,7 +37,7 @@ it's unclear what went wrong, **try to simply re-enable** the test.
 **Reassign the bug ASAP** if it's clearly a problem in another component.
 The owners of that component should have better judgement about the failure,
 
-**Debugging Stage:**
+## Debugging Stage
 
 A number of [command-line flags][useful-command-lines] are useful for
 fixing flaky tests. For example, **--enable-pixel-output-in-tests**
@@ -94,7 +94,7 @@ or “window became foreground”. Imagine an implementation where the prompt
 appears only when the browser window is active. Such an implementation
 would be correct; however, checking for the actual window makes the test flaky.
 
-**Post-fix Stage**
+## Post-fix Stage
 
 Once the test is fixed, run it hundreds of times locally. Keep an eye on the
 [Flakiness Portal][flakiness-portal].
