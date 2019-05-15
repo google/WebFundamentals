@@ -1,34 +1,55 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
+description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-03-20 #}
+{# wf_updated_on: 2019-05-15 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
 {# wf_featured_snippet: We strongly believe that every developer should have access to the capabilities they need to make a great web experience, and we are committed to a more capable web. Learn about some of the new APIs we're considering and how you can get involved. #}
 {# wf_blink_components: N/A #}
 
-# Capabilities {: .page-title }
+# Unlocking new capabilities for the web {: .page-title }
 
-> **We want to close the capability gap between the web and native and make it
-> easy for developers to build great experiences on the open web.**
+<style>
+  .proj-goal {
+    font-size: inherit;
+    font-family: Google Sans, sans-serif;
+  }
+</style>
 
-There are some capabilities, like file system access, idle detection, and
-more that are available to native but aren’t available on the web. These
-missing capabilities mean some types of apps can't be delivered on the
-web, or are less useful.
+<aside class="success proj-goal">
+  Web apps should be able to do anything native apps can.
+  We want to make it possible for you to build and deliver apps on the open
+  web that have never been possible before.
+</aside>
 
-We strongly believe that every developer should have access to the capabilities
-they need to make a great web experience, and we are committed to a more
-capable web.
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="GSiUzuB-PoI"
+          data-autohide="1" data-showinfo="1" frameborder="1" allowfullscreen>
+  </iframe>
+</div>
 
-We will design and develop these new capabilities in an
-[open and transparent way](#process), using the existing open web platform
-standards processes while getting early feedback from developers and other
-browser vendors as we iterate on the design, to ensure an interoperable design.
+The web is an amazing platform, it reaches users all around the world - on
+essentially any device. It’s easy to use, and easy to share. There’s nothing
+to install. But most importantly, it’s an open-ecosystem that anyone can use
+or build on.
 
-You can see the [full list](https://goo.gl/JkDCXM) of capabilities we're
-considering on <crbug.com> and filtering issues with the `proj-fugu` label.
+There are some apps that are not possible to build and deliver on the open
+web today. We call this, the *app gap*. The gap between what’s possible on the
+web and what’s possible on native. We want to close that gap. We believe web
+apps should be able to do anything native apps can.
+
+> Throught our capabilities project, we want to make it possible for web apps
+> to do anything native apps can, by exposing the capabilities of native
+> platforms to the web platform, while maintaining user security, privacy,
+> trust, and other core tenets of the web.
+
+## The new capabilities
+
+You can see the [full list](crbug.com/?q=proj-fugu) of capabilities we're
+considering on [crbug.com](https://crbug.com) and filtering issues with the
+`proj-fugu` label.
 
 <aside class="note">
   <b>Have a suggestion for a capability you think we should consider?</b>
@@ -38,7 +59,7 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
   that might be helpful.
 </aside>
 
-## In flight {: #in-flight }
+### Capabilities in flight {: #in-flight }
 
 <table>
   <thead>
@@ -128,7 +149,7 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
   </tbody>
 </table>
 
-## Launched {: #launched }
+### Launched capabilities {: #launched }
 
 <table>
   <thead>
@@ -154,6 +175,11 @@ considering on <crbug.com> and filtering issues with the `proj-fugu` label.
     </tr>
   </tbody>
 </table>
+
+<aside class="key-point">
+  <b>Want to try some of these new capabilities?</b> Check out the
+  <a href="https://codelabs.developers.google.com/codelabs/web-capabilities/">Web Capabilities Codelab</a>
+</aside>
 
 ## How will we design & implement these new capabilities? {: #process }
 
@@ -193,11 +219,10 @@ on bugs.chromium.org](https://bugs.chromium.org/p/chromium/issues/list?can=2&q=T
 ### Create an explainer
 
 After identifying the need for a new capability, create an
-[explainer](https://github.com/w3ctag/w3ctag.github.io/blob/master/explainers.md).
-The explainer should have enough detail to identify the problem the new
-capability provides and helps people understand the scope of the problem. The
-Explainer is a living design document that will go through heavy iteration as
-the new capability evolves.
+[explainer](https://github.com/w3ctag/w3ctag.github.io/blob/master/explainers.md),
+essentially a design doc that is meant to explain the problem, along with some
+sample code showing how the API might work. The explainer is a living design
+document that will go through heavy iteration as the new capability evolves.
 
 ### Get feedback and iterate on the explainer
 
@@ -209,21 +234,35 @@ there really is a need for this capability.
 
 ### Move the design to a specification & iterate
 
-At this point, the design work will transition into the standards process,
-creating a formal specification, working with developers and other browser
-vendors to iterate and improve on the design.
+Once the explainer is in a good state, the design work transitions into a
+formal specification, working with developers and other browser vendors to
+iterate and improve on the design.
 
-As the design begins to stabilize, an [origin
-trial](https://github.com/GoogleChrome/OriginTrials) might be helpful. Origin
-trials provide a means to safely experiment with new web platform features in
-Chrome and help to verify the proposal solves the problem it set out to solve.
+Then, once the design starts to stabilize, we typically use an
+[origin trial](https://github.com/GoogleChrome/OriginTrials) to experiment
+with the implementation. Origin trials allow you to try new features with
+real users, and give feedback on the implementation. This real world feedback
+helps shape and validate the design, ensuring we get it right, before it
+becomes a standard.
 
 ### Ship it
 
-Finally, after the spec has been finalized, the origin trial is complete and all
-of the steps and approvals from the [Blink launch
-process](https://www.chromium.org/blink/launching-features) have been completed,
-it’s time to ship it.
+Finally, once the origin trial is complete, the spec has been finalized, and
+all of the other launch steps have been completed, it’s time to ship it to
+stable.
+
+## Design for user security, privacy, and trust
+
+Some of these features may seem scary at first, especially in light of how
+they’re implemented on native. But the web is inherently safer than native,
+opening a web page shouldn’t be scary.
+
+Nothing should ever be granted access by default, but instead rely on a
+permission model that puts the user in total control, and is easily
+revoke-able. It needs to be crystal clear when, and how these APIs are being
+used. We've outlined some of our thought process in
+[Controlling Access to Powerful Web Platform Features](bit.ly/powerful-apis).
+
 
 <div class="clearfix"></div>
 
