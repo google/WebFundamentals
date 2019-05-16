@@ -42,6 +42,22 @@ landing_page:
 
   rows:
 
+  - classname:  devsite-landing-row-large-headings
+    background: grey
+    items:
+    - heading: chrome dev summit 2019
+      description: >
+        November 11-12 | San Francisco, USA<br><br>
+        Chrome Dev Summit is back! Join us for our annual developer conference
+        at the Yerba Buena Center for the Arts in San Francisco, CA on November
+        11-12, 2019. Over two days, you’ll learn about the latest tools and
+        updates coming to the web platform and hear directly from the Chrome
+        product engineering teams. Sign up for updates on the
+        <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit 2019 website.</a>
+      icon:
+        path: https://www.gstatic.com/images/branding/product/2x/chrome_96dp.png
+    - youtube_id: nImH_dq1NpM
+
   - classname: wf-landing-row
     items:
     - heading: Move to HTTPS
