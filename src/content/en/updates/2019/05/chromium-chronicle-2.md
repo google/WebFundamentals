@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The Chromium Chronicle, a monthly series geared specifically to Chromium developers — the developers who build the browser.
 
-{# wf_updated_on: 2019-05-14 #}
+{# wf_updated_on: 2019-05-16 #}
 {# wf_published_on: 2019-05-21 #}
 {# wf_tags: chromium-chronicle #}
 {# wf_featured_image: /web/updates/images/generic/cr-chron.jpg #}
@@ -51,10 +51,8 @@ Keep in mind common reasons for EXPECT__* failures besides bugs in production
 code:
 {: .compare-worse }
 
-<pre class="prettyprint cc-bad lang-cpp">
 * **Incorrect expectations** (e.g. secure page means HTTPS; it can be a localhost instead).
 * Race conditions due to tests not **waiting for the proper event.**
-</pre>
 
 [Don't test the implementation][not-implementation] but the behavior.
 
@@ -102,7 +100,6 @@ would be correct; however, checking for the actual window makes the test flaky.
 
 Once the test is fixed, run it hundreds of times locally. Keep an eye on the
 [Flakiness Portal][flakiness-portal].
-
 
 {% include "web/_shared/helpful.html" %}
 
