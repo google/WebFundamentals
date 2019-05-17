@@ -1283,6 +1283,18 @@ smcgruer:
   role:
     - author
 
+pjmclachlan:
+  name:
+    given: Peter
+    family: Mclachlan
+  org:
+    name: Google
+    unit: Chrome
+  description:
+    en: Peter is a Product Manager on Google's Chrome team responsible for web applications including Chrome advanced permissions, progressive web apps and web platform strategy for mobile.
+  role:
+    - author
+
 josephmedley:
   name:
     given: Joseph
