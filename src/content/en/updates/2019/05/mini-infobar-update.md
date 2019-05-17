@@ -14,7 +14,7 @@ description: Adding more control to the mini-infobar for PWAs in Chrome 76.
 {% include "web/_shared/contributors/pjmclachlan.html" %}
 
 <aside class="note">
-  <b>TL;DR:</b> We're giving you more control over PWA Add to Home Screen
+  <b>TL;DR:</b> We're giving you more control over the PWA Add to Home Screen
   mini-infobar. Starting in Chrome 76, you can prevent the mini-infobar
   from appearing by calling <code>preventDefault()</code> on the
   <code>beforeinstallprompt</code> event.
