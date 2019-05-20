@@ -969,6 +969,170 @@
           }
         }
       ]
+    },
+    {
+      "agency_name": "e-point SA",
+      "region": [
+        "Europe"
+      ],
+      "description": "For over 20 years we have been creating end-to-end online systems, basing our operations on three pillars: Design, Technology and Execution. Currently, our main strategy is focused on mobile, where Progressive Web Applications are the future - at this moment, we are running several PWA projects.",
+      "website": "https://www.e-point.com",
+      "projects": [
+        {
+          "url": "https://pwa-accelerator.ext.e-point.pl/",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "mszklarski@e-point.pl",
+      "image_url": "/web/agencies/images/e-point_sa.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Poland",
+          "cities": [
+            "Warsaw"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Poland",
+          "city_name": "Warsaw",
+          "geo": {
+            "lat": 52.2296756,
+            "lng": 21.0122287
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "MicrotekBlue Inc.",
+      "region": [
+        "North America"
+      ],
+      "description": "MicrotekBlue Inc. is a Digital Agency providing Specialized Web Development and Search Engine Optimization services.",
+      "website": "https://www.webdesigndevelopment.ca/",
+      "projects": [
+        {
+          "url": "https://www.ontariohighwaytrafficact.com/",
+          "vertical": [
+            "Social"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "info@microtekblue.com",
+      "image_url": "/web/agencies/images/microtekblue_inc.png",
+      "vertical": [
+        "Social"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Canada",
+          "cities": [
+            "Toronto"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Canada",
+          "city_name": "Toronto",
+          "geo": {
+            "lat": 43.653226,
+            "lng": -79.3831843
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "SimiCart Joint Stock Company ",
+      "region": [
+        "Asia"
+      ],
+      "description": "SimiCart is an expert in mobile commerce with over 8 years of experience. We provide a complete solution to build PWAs and Native Mobile Apps for Magento merchants. The quality of our products and services has been proven by 1000+ Magento merchants worldwide.",
+      "website": "https://www.simicart.com/",
+      "projects": [
+        {
+          "url": "https://simicart.pwa-commerce.com/",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "support@simicart.com ",
+      "image_url": "/web/agencies/images/simicart_joint_stock_company_.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "Vietnam",
+          "cities": [
+            "Ho Chi Minh City"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "Vietnam",
+          "city_name": "Ho Chi Minh City",
+          "geo": {
+            "lat": 10.8230989,
+            "lng": 106.6296638
+          }
+        }
+      ]
+    },
+    {
+      "agency_name": "Unbound Commerce",
+      "region": [
+        "North America"
+      ],
+      "description": "Unbound Commerce is building lightning fast PWAs for the nation’s top retailers. PWAs offer significant speed and conversion rate lift, as well as \"app-like\" deep engagement features. By working hand-in-hand with Google’s technical and business teams, we are employing best practices for PWA builds.",
+      "website": "https://www.unboundcommerce.com",
+      "projects": [
+        {
+          "url": "https://app.ashleyfurniture.com",
+          "vertical": [
+            "Retail"
+          ],
+          "lighthouse_score": 100
+        }
+      ],
+      "max_lighthouse_score": 100,
+      "contact": "info@unboundcommerce.com ",
+      "image_url": "/web/agencies/images/unbound_commerce.png",
+      "vertical": [
+        "Retail"
+      ],
+      "locations_view": [
+        {
+          "country_name": "United States",
+          "cities": [
+            "Boston"
+          ]
+        }
+      ],
+      "locations_map": [
+        {
+          "country_name": "United States",
+          "city_name": "Boston",
+          "geo": {
+            "lat": 42.3600825,
+            "lng": -71.0588801
+          }
+        }
+      ]
     }
   ],
   "filters_": {
@@ -983,7 +1147,8 @@
     ],
     "region": [
       "Asia",
-      "Europe"
+      "Europe",
+      "North America"
     ]
   }
 }
