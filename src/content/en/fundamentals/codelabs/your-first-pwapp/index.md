@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build an installable, Progressive Web App, which loads quickly, even on flaky networks, and when launched looks like any other installed app.
 
 {# wf_auto_generated #}
-{# wf_updated_on: 2019-04-19 #}
+{# wf_updated_on: 2019-05-20 #}
 {# wf_published_on: 2016-01-01 #}
 
 # Your First Progressive Web App {: .page-title }
@@ -951,11 +951,14 @@ On ChromeOS, PWAs are easily uninstalled from the launcher search box.
 
 #### macOS and Windows
 
-On Mac and Windows, PWAs must be uninstalled through Chrome.
+On Mac and Windows, PWAs may be uninstalled through Chrome.
 
 * In a new browser tab, open chrome://apps.
 * Right click (alt-click) on the Weather PWA.
 * Click  *Remove from Chrome...*
+
+You can also open the installed PWA, click the the dot menu in the upper
+right corner, and choose *Uninstall Weather PWA…*
 
 ## Congratulations
 
