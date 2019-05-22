@@ -19,13 +19,13 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 
 其實，要打造功能完善的回應式網站並沒有想像中那麼困難。為了證明這一點，這份指南會帶您逐漸邁出成功的第一步。  我們將整個程序分為兩個步驟：
 
-1.  定義資訊架構 (通常簡稱為 IA) 和網頁架構  
+1.  定義資訊架構 (通常簡稱為 IA) 和網頁架構
 2.  加入設計元素，讓網頁在所有裝置上都能靈活回應並讓人目不轉睛。
 
 
 
 
-## 建立內容和架構 
+## 建立內容和架構
 
 
 
@@ -191,14 +191,14 @@ Note: 樣式以後還會來
   </figure>
 </div>
 
-您也許注意到網頁外觀目前有些慘不忍睹，但我們是刻意的。 
+您也許注意到網頁外觀目前有些慘不忍睹，但我們是刻意的。
 對任何網站來說，內容絕對是最重要的一環。因此，我們必須先確認網站的資訊架構穩固且紮實。 這份指南協助我們打好了地基。 在下一份指南中，我們將要為內容好好包裝一番。
 
 
 
 
 
-## 賦予網站靈活回應的能力 
+## 賦予網站靈活回應的能力
 
 
 
@@ -270,7 +270,6 @@ Note: 樣式以後還會來
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -293,7 +292,7 @@ Note: 樣式以後還會來
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 為了避免圖片喧賓奪主，我們選擇了模糊處理的簡約背景圖片，然後將圖片設為 `cover` 整個元素。如此一來，每當圖片需要放大時，仍然可以保持正確的長寬比。
 
@@ -315,9 +314,9 @@ Note: 樣式以後還會來
 
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 
 較大的螢幕擁有更充裕的空間，因此顯示網頁時也會有較大的彈性。
 
@@ -434,7 +433,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 

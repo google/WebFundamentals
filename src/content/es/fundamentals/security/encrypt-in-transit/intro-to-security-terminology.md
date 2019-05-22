@@ -9,7 +9,7 @@ description: Dos de los obstáculos a los que se enfrentan los desarrolladores c
 
 {% include "web/_shared/contributors/chrispalmer.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
-  
+
 ### TL;DR {: .hide-from-toc }
 
 * Las claves públicas y privadas se usan para firmar y desencriptar mensajes entre el navegador y el servidor.
@@ -37,7 +37,7 @@ una clave determinada es la real para un sitio en particular usando
 su propia clave privada para **[firmar
 criptográficamente](https://en.wikipedia.org/wiki/RSA_(cryptosystem)Signing_messages){: .external}** la
 clave pública del sitio web. Esta firma es imposible de falsificar a nivel computacional.
-Los navegadores (y otros clientes) mantienen** las tiendas de anclaje de veracidad** que contienen las
+Los navegadores (y otros clientes) mantienen **las tiendas de anclaje de veracidad** que contienen las
 claves públicas que son propiedad de las CA reconocidas, y usan dichas claves públicas para
 **verificar criptográficamente** las firmas de las CA.
 

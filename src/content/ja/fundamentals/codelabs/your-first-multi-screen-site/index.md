@@ -160,7 +160,7 @@ Warning: この記事はしばらくアップデートされていないため�
 ページの画像セクションは、コンテンツ画像の集合で構成されます。
 
 コンテンツ画像はページの内容を伝えるうえで不可欠です。新聞記事で使用される画像と同じ役割があると考えてください。
-ここでは、プロジェクトの講師である 
+ここでは、プロジェクトの講師である
 Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
 
 
@@ -177,7 +177,7 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
 
 
 
-`alt` タグを追加する際は、できるだけ簡潔な代替テキストで画像の内容を十分に説明するようにしてください。たとえば、このデモでは alt 属性の代替テキストを「名前: 
+`alt` タグを追加する際は、できるだけ簡潔な代替テキストで画像の内容を十分に説明するようにしてください。たとえば、このデモでは alt 属性の代替テキストを「名前:
 役割」というシンプルな形式にしています。これで、ここが担当者とその役割についてのセクションだと理解するのに十分な情報がユーザーに伝わります。
 
 
@@ -297,7 +297,6 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -326,7 +325,7 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 コンテンツよりも目立たないよう、ぼかしの入ったシンプルな背景画像を選び、要素全体にフィット（`cover`）するよう設定しました。これにより、画像は常に正しいアスペクト比を保ちつつ画面いっぱいに表示されます。
 
@@ -350,9 +349,9 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
 600px は画面に合うよう要素を再配置する機会になることから、最初のブレークポイントの作成に適したサイズだと言えます。ブレークポイントは、[メディアクエリ](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries)という機能を使用することで作成できます。
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 大きな画面では使えるスペースが広くなるため、コンテンツをより柔軟な方法で表示できます。
 
 
@@ -498,7 +497,7 @@ Chris Wilson、Peter Lubbers、Sean Bennet の写真を使用します。
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 ####  表
 

@@ -69,11 +69,11 @@ description:在此代碼實驗室中，您將學習如何使用新版 DevTools A
 
 [鏈接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安裝 Web Server for Chrome 後，點擊書籤欄上的 Apps 快捷方式： 
+安裝 Web Server for Chrome 後，點擊書籤欄上的 Apps 快捷方式：
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-在隨後出現的窗口中，點擊 Web Server 圖標： 
+在隨後出現的窗口中，點擊 Web Server 圖標：
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -127,7 +127,7 @@ description:在此代碼實驗室中，您將學習如何使用新版 DevTools A
 
 __Service Workers__ 視圖提供有關當前源中活動的服務工作線程的信息。頂部的一行是一系列複選框。
 
-* __Offline __- 將模擬斷開與網絡的連接。這將有助於快速驗證您的服務工作線程的抓取處理程序是否正常運行。
+* __Offline__ - 將模擬斷開與網絡的連接。這將有助於快速驗證您的服務工作線程的抓取處理程序是否正常運行。
 * __Update on reload__ - 將用新的服務工作線程強制替換當前服務工作線程（如果開發者已更新 `service-worker.js`）。通常情況下，瀏覽器將等待，直到用戶在更新到新的服務工作線程之前關閉包含當前網站的所有標籤。
 * __Bypass for network__ - 將強制瀏覽器忽略所有活動服務工作線程並從網絡中獲取資源。這有助於您使用 CSS 或 JavaScript 而不必擔心服務工作線程意外緩存或返回舊文件。
 * __Show all__ - 將在不考慮來源的情況下，顯示所有活動服務工作線程。
@@ -143,9 +143,9 @@ __Service Workers__ 視圖提供有關當前源中活動的服務工作線程的
     self.addEventListener('install', function(event) {
       console.log('Service Worker installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Service Worker activating.');  
+      console.log('Service Worker activating.');
     });
 
 如果您切換回 DevTools 然後查看控制檯，可以看到兩個日誌都已成功輸出。
@@ -159,9 +159,9 @@ __Service Workers__ 視圖提供有關當前源中活動的服務工作線程的
     self.addEventListener('install', function(event) {
       console.log('A *new* Service Worker is installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Finally active. Ready to start serving content!');  
+      console.log('Finally active. Ready to start serving content!');
     });
 
 * 刷新頁面並在 DevTools 中打開控制檯
@@ -224,11 +224,11 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 
 self.addEventListener('activate', function(event) {
-  console.log('Finally active. Ready to start serving content!');  
+  console.log('Finally active. Ready to start serving content!');
 });
 ```
 
@@ -387,7 +387,7 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 ```
 
@@ -456,18 +456,18 @@ self.addEventListener('install', function(event) {
 * 打開 `service-worker.js`，然後在 `fetch` 處理程序後添加以下幾行
 
 ```
-self.addEventListener('push', function(event) {  
-  var title = 'Yay a message.';  
-  var body = 'We have received a push message.';  
-  var icon = '/images/smiley.svg';  
+self.addEventListener('push', function(event) {
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';
+  var icon = '/images/smiley.svg';
   var tag = 'simple-push-example-tag';
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
-    })  
-  );  
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
 });
 ```
 

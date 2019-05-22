@@ -14,7 +14,7 @@ Warning: Este artículo no se ha actualizado durante un largo tiempo y puede ser
 <img src="images/finaloutput-2x.jpg" alt="muchos dispositivos que muestran el proyecto final" class="attempt-right">
 
 La creación de experiencias multidispositivos no es tan difícil como podría parecer.
-En esta guía, crearemos una página de destino de producto para el 
+En esta guía, crearemos una página de destino de producto para el
 [Curso de desarrollo web móvil CS256](https://www.udacity.com/course/mobile-web-development--cs256)
 que funcione bien en distintos tipos de dispositivos.
 
@@ -260,13 +260,13 @@ soportes todas las variedades de dispositivos.
 
 
 Estamos compilando un sitio que funcione en diferentes pantallas y tipos de
-dispositivos. Hemos creado la arquitectura de la información de la página y creado una 
+dispositivos. Hemos creado la arquitectura de la información de la página y creado una
 estructura básica. En esta sección, tomaremos nuestra estructura básica con
-contenido y la convertiremos en una hermosa página que sea receptiva en una gran 
+contenido y la convertiremos en una hermosa página que sea receptiva en una gran
 cantidad de tamaños de pantalla.
 
-Siguiendo los principios de desarrollo web con prioridad en los dispositivos móviles, comenzamos con una 
-ventana de visualización estrecha &mdash; similar a la de un teléfono móvil &mdash; y desarrollaremos 
+Siguiendo los principios de desarrollo web con prioridad en los dispositivos móviles, comenzamos con una
+ventana de visualización estrecha &mdash; similar a la de un teléfono móvil &mdash; y desarrollaremos
 primero para ese tipo de experiencia. Luego ascendemos a clases de dispositivos más grandes. Podemos hacerlo
 generando una ventana de visualización más ancha y tomando una decisión sobre si el
 diseño luce bien.
@@ -318,7 +318,6 @@ de la página y te ayuda a asegurarte de mantener la uniformidad en todo el dise
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -347,7 +346,7 @@ encabezado y lo aplicaremos mediante CSS sencilla.
       background-image: url(backgroundimage.jpg);
       background-size: cover;
     }
-    
+
 
 Escogimos una imagen de fondo simple que se ve borrosa de modo que no se quite
 del contenido, y la configuramos para que `cover` todo el elemento; de ese modo, cuando
@@ -368,14 +367,14 @@ es donde deseamos cambiarla.
   </p>
 </video>
 
-600 px parece ser un buen lugar para crear nuestro primer punto de interrupción, ya que 
+600 px parece ser un buen lugar para crear nuestro primer punto de interrupción, ya que
 nos brindará alcance para volver a ubicar los elementos para que entren mejor en la pantalla.
 Podemos hacerlo usando una tecnología llamada [Consultas de medios](/web/fundamentals/design-and-ux/responsive/fundamentals/use-media-queries).
 
     @media (min-width: 600px) {
-    
+
     }
-    
+
 Una pantalla más grande ofrece más espacio; por lo tanto, existe más flexibilidad con respecto a cómo
 puede mostrarse el contenido.
 
@@ -530,7 +529,7 @@ soportan, puedes mostrar una imagen de alta densidad en una pantalla de alta den
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
-    
+
 
 #### Tablas
 

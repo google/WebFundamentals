@@ -12,7 +12,7 @@ Es importante elegir los adecuados mecanismos de almacenamiento, tanto para el a
 dispositivos como para el almacenamiento de servidor basado en la nube.  Un buen motor de almacenamiento se asegura de que
 tu información se guarde con seguridad, disminuye el ancho de banda y mejora
 la capacidad de respuesta. La correcta estrategia de almacenamiento en caché es un componente elemental
-para ofrecer experiencias de web móvil sin conexión. 
+para ofrecer experiencias de web móvil sin conexión.
 
 En este artículo, se proporcionan breves aspectos básicos para evaluar distintas API y servicios de
 almacenamiento. A seguir, mostraremos una tabla de comparación y algunas
@@ -29,9 +29,9 @@ las distintas opciones de almacenamiento disponibles para los programadores web.
 
 El modelo para almacenar unidades de datos determina cómo se organizan los datos internamente,
 lo cual afecta a la facilidad de uso, al costo, y al rendimiento de las solicitudes de almacenamiento y
-recuperación de datos. 
+recuperación de datos.
 
-* **Estructurado: **Los datos almacenados en tablas con campos predefinidos, como es común
+* **Estructurado:** Los datos almacenados en tablas con campos predefinidos, como es común
 en sistemas de administración de base de datos basadas en SQL,
 permiten realizar consultas flexibles
 y dinámicas cuando el rango completo de los tipos de consulta puede ser desconocido a priori. Un ejemplo destacado de un almacenamiento de datos estructurado es IndexedDB en el
@@ -54,7 +54,7 @@ sistemas de archivo y los servicios de almacenamiento en la nube.
 Los métodos de almacenamiento de las apps web se pueden analizar de acuerdo con el ámbito de datos
 persistentes.
 
-* **Persistencia de sesión: **Los datos de esta categoría se conservan siempre y cuando
+* **Persistencia de sesión:** Los datos de esta categoría se conservan siempre y cuando
 haya una sesión web o pestaña del navegador activa. Un ejemplo de un mecanismo
 de almacenamiento con persistencia de sesión es la Session Storage API.
 
@@ -98,7 +98,7 @@ y las compararemos en las dimensiones descritas anteriormente.
 <table>
   <thead>
     <th>API</th>
-    <th>Modelo de 
+    <th>Modelo de
 datos</th>
     <th>Persistencia</th>
     <th>Compatibilidad con

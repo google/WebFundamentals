@@ -12,7 +12,7 @@ book_path: /web/fundamentals/_book.yaml
 para armazenamento em dispositivos locais e em servidores baseados na nuvem.  Um bom mecanismo de armazenamento garante
 que as informações sejam salvas com confiabilidade, reduz a largura de banda e aumenta
 a capacidade de resposta. A estratégia correta de armazenamento em cache é um elemento básico essencial para
-permitir experiências Web para dispositivos móveis off-line. 
+permitir experiências Web para dispositivos móveis off-line.
 
 Este artigo fornece uma fundamentação breve para a avaliação de APIs e
 serviços de armazenamento. Em seguida, ofereceremos uma tabela comparativa e algumas orientações
@@ -29,9 +29,9 @@ as diversas opções de armazenamento disponíveis para desenvolvedores Web.
 
 O modelo para armazenamento de unidades de dados determina como eles são organizados internamente.
 Isso afeta a facilidade de uso, o custo e o desempenho das solicitações de armazenamento e
-recuperação. 
+recuperação.
 
-* **Estruturados: **dados armazenados em tabelas com campos predefinidos, como é típico
+* **Estruturados:** dados armazenados em tabelas com campos predefinidos, como é típico
 em sistemas de gerenciamento de bancos de dados baseados em SQL. Ideal para consultas flexíveis e dinâmicas
 em que o escopo completo dos tipos de consultas pode não ser conhecido
 inicialmente. Um exemplo conhecido de um armazenamento de dados estruturado é o IndexedDB
@@ -54,7 +54,7 @@ sistemas de arquivos e serviços de armazenamento na nuvem.
 Os métodos de armazenamento de apps da Web podem ser analisados de acordo com o escopo
 da persistência dos dados.
 
-* **Persistência de sessão: **os dados dessa categoria são retidos apenas enquanto
+* **Persistência de sessão:** os dados dessa categoria são retidos apenas enquanto
 uma única sessão da Web ou guia de navegador permanecer ativa. Um exemplo de um mecanismo
 de armazenamento com persistência de sessão é a Session Storage API.
 
@@ -98,7 +98,7 @@ e faremos uma comparação entre elas em relação às dimensões descritas acim
 <table>
   <thead>
     <th>API</th>
-    <th>Modelo 
+    <th>Modelo
 de dados</th>
     <th>Persistência</th>
     <th>Compatibilidade

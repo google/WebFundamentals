@@ -12,7 +12,7 @@ description: Application 패널을 사용하여 웹 앱 매니페스트, 서비�
 <strong>Application</strong> 패널을 사용하여 웹 앱 매니페스트, 서비스 워커 및 서비스 워커 캐시를 검사, 수정
 및 디버그합니다.
 
-관련 가이드: 
+관련 가이드:
 
 * [Progressive Web App](/web/progressive-web-apps)
 
@@ -85,8 +85,7 @@ app](https://events.google.com/io2016/){: .external }을
 가능합니다.
 
 진정한 모바일 경험을 테스트하려면
-실제 휴대기기를 [원격 디버깅][remote
-debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescreen** 버튼을
+실제 휴대기기를 [원격 디버깅][remote debugging]을 통해 DevTools에 연결한 다음 DevTools의 **Add to Homescreen** 버튼을
 클릭하여 연결된 휴대기기에서 'add to homescreen' 프롬프트를 트리거할 수 있습니다.
 
 [shelf]: images/io.png
