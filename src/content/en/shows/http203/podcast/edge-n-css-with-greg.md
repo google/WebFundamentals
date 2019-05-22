@@ -31,7 +31,7 @@ In this episode we chat to Microsoft's [Greg Whitworth](https://twitter.com/greg
 * Monica's [article on inputs](https://meowni.ca/posts/a-story-about-input/).
 * [line-clamp](https://css-tricks.com/almanac/properties/l/line-clamp/).
 * Fantasi's [talk on auto](https://vimeo.com/channels/cssday/134597090).
-* Canvas's
+* Canvas'
   [measureText](https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-measuretext).
 * [CSS font metrics](https://github.com/w3c/css-houdini-drafts/tree/master/font-metrics-api).
 
