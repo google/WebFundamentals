@@ -114,6 +114,35 @@ as well as avoiding bright lights or irregular lights in general through dark th
 
 ## Supporting Dark Mode
 
+[Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+allow authors to test and query values or features of the user agent or display device,
+independent of the document being rendered.
+They are used in the CSS `@media` rule to conditionally apply styles to a document,
+and in various other contexts and languages, such as HTML and JavaScript.
+[Media Queries Level&nbsp;5](https://drafts.csswg.org/mediaqueries-5/)
+introduces so-called user preference media features, that is,
+a way for sites to detect the user's preferred way to display content.
+
+Note: An established user preference media feature is `prefers-reduced-motion`
+that lets you detect the desire for less motion on a page.
+If you're interested, I have written about
+[`prefers-reduced-motion`](/web/updates/2019/03/prefers-reduced-motion) before.
+
+The `prefers-color-scheme` media feature is used to detect
+if the user has requested the page to use a light or dark color theme.
+It takes the following values:
+
+- `no-preference`:
+  Indicates that the user has made no preference known to the system.
+  This keyword value evaluates as false in the
+  [boolean context](https://drafts.csswg.org/mediaqueries-5/#boolean-context).
+- `light`:
+  Indicates that the user has notified the system that they prefer a page that has a light theme
+  (dark text on light background).
+- `dark`:
+  Indicates that the user has notified the system that they prefer a page that has a dark theme
+  (light text on dark background).
+
 ## Dark Mode Best Practices
 
 ## Related Links
