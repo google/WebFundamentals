@@ -12,7 +12,7 @@ description: Application 패널을 사용하여 웹 앱 매니페스트, 서비�
 <strong>Application</strong> 패널을 사용하여 웹 앱 매니페스트, 서비스 워커 및 서비스 워커 캐시를 검사, 수정
 및 디버그합니다.
 
-관련 가이드: 
+관련 가이드:
 
 * [Progressive Web App](/web/progressive-web-apps)
 

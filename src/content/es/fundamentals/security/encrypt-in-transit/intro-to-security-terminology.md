@@ -9,7 +9,7 @@ description: Dos de los obstáculos a los que se enfrentan los desarrolladores c
 
 {% include "web/_shared/contributors/chrispalmer.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
-  
+
 ### TL;DR {: .hide-from-toc }
 
 * Las claves públicas y privadas se usan para firmar y desencriptar mensajes entre el navegador y el servidor.

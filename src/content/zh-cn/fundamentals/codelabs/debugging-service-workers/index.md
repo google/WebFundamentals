@@ -69,11 +69,11 @@ description:在此代码实验室中，您将学习如何使用新版 DevTools A
 
 [链接](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式： 
+安装 Web Server for Chrome 后，点击书签栏上的 Apps 快捷方式：
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-在随后出现的窗口中，点击 Web Server 图标： 
+在随后出现的窗口中，点击 Web Server 图标：
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -143,9 +143,9 @@ __Service Workers__ 视图提供有关当前源中活动的服务工作线程的
     self.addEventListener('install', function(event) {
       console.log('Service Worker installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Service Worker activating.');  
+      console.log('Service Worker activating.');
     });
 
 如果您切换回 DevTools 然后查看控制台，可以看到两个日志都已成功输出。
@@ -159,9 +159,9 @@ __Service Workers__ 视图提供有关当前源中活动的服务工作线程的
     self.addEventListener('install', function(event) {
       console.log('A *new* Service Worker is installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
-      console.log('Finally active. Ready to start serving content!');  
+      console.log('Finally active. Ready to start serving content!');
     });
 
 * 刷新页面并在 DevTools 中打开控制台
@@ -224,11 +224,11 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 
 self.addEventListener('activate', function(event) {
-  console.log('Finally active. Ready to start serving content!');  
+  console.log('Finally active. Ready to start serving content!');
 });
 ```
 
@@ -387,7 +387,7 @@ self.addEventListener('install', function(event) {
       .then(function(cache) {
         return cache.addAll(urlsToCache);
       })
-  );  
+  );
 });
 ```
 
@@ -456,18 +456,18 @@ self.addEventListener('install', function(event) {
 * 打开 `service-worker.js`，然后在 `fetch` 处理程序后添加以下几行
 
 ```
-self.addEventListener('push', function(event) {  
-  var title = 'Yay a message.';  
-  var body = 'We have received a push message.';  
-  var icon = '/images/smiley.svg';  
+self.addEventListener('push', function(event) {
+  var title = 'Yay a message.';
+  var body = 'We have received a push message.';
+  var icon = '/images/smiley.svg';
   var tag = 'simple-push-example-tag';
-  event.waitUntil(  
-    self.registration.showNotification(title, {  
-      body: body,  
-      icon: icon,  
-      tag: tag  
-    })  
-  );  
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: body,
+      icon: icon,
+      tag: tag
+    })
+  );
 });
 ```
 

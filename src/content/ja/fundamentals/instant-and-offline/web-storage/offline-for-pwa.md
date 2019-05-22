@@ -13,7 +13,7 @@ description: レスポンス タイムとオフライン サポートの向上�
 <figure class="attempt-right">
   <img src="images/pwa-in-devtools.jpg" alt="DevTools での PWA">
   <figcaption>
-    <a href="https://pokedex.org" class="external">Pokedex</a> 
+    <a href="https://pokedex.org" class="external">Pokedex</a>
     Progressive Web App では、アプリの状態とポケモン データセットには IndexedDB を使用し、
     URL 指定可能なリソースには Cache API を使用しています。
   </figcaption>

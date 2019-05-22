@@ -37,8 +37,8 @@ Note: Kiểm tra xem bạn đang chạy phiên bản Chrome nào tại `chrome:/
 
 ## Ghi đè {: #overrides }
 
-** Ghi đè cục bộ ** cho phép bạn thực hiện thay đổi trong DevTools và giữ những thay đổi đó trên các lần tải trang. Trước đây, mọi thay đổi bạn đã thực hiện trong DevTools sẽ bị mất khi bạn tải lại trang.
-** Ghi đè cục bộ ** hoạt động đối với hầu hết các loại tệp, với một vài ngoại lệ. Xem [Limitations](#overrides-limitations) .
+**Ghi đè cục bộ** cho phép bạn thực hiện thay đổi trong DevTools và giữ những thay đổi đó trên các lần tải trang. Trước đây, mọi thay đổi bạn đã thực hiện trong DevTools sẽ bị mất khi bạn tải lại trang.
+**Ghi đè cục bộ** hoạt động đối với hầu hết các loại tệp, với một vài ngoại lệ. Xem [Limitations](#overrides-limitations) .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -238,7 +238,7 @@ Chrome 65 mang đến các cập nhật cho **Bước vào**! Nút [Step Into][i
 
 Khi bạn bước vào mã chuyển các thông điệp giữa các luồng, DevTools sẽ hiển thị cho bạn những gì xảy ra trong mỗi luồng.
 
-Ví dụ, ứng dụng trong **Hình 8** truyền một thông điệp giữa chủ đề chính và chuỗi công nhân. Sau khi bước vào cuộc gọi `postMessage()` trên chủ đề chính, DevTools tạm dừng trong trình xử lý `onmessage` trong luồng công nhân. Trình xử lý `onmessage` tự đăng một thông điệp trở lại luồng chính. Bước vào cuộc gọi * đó * sẽ tạm dừng DevTools trở lại trong chuỗi chính.
+Ví dụ, ứng dụng trong **Hình 8** truyền một thông điệp giữa chủ đề chính và chuỗi công nhân. Sau khi bước vào cuộc gọi `postMessage()` trên chủ đề chính, DevTools tạm dừng trong trình xử lý `onmessage` trong luồng công nhân. Trình xử lý `onmessage` tự đăng một thông điệp trở lại luồng chính. Bước vào cuộc gọi *đó* sẽ tạm dừng DevTools trở lại trong chuỗi chính.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"

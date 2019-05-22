@@ -12,7 +12,7 @@ Es importante elegir los adecuados mecanismos de almacenamiento, tanto para el a
 dispositivos como para el almacenamiento de servidor basado en la nube.  Un buen motor de almacenamiento se asegura de que
 tu información se guarde con seguridad, disminuye el ancho de banda y mejora
 la capacidad de respuesta. La correcta estrategia de almacenamiento en caché es un componente elemental
-para ofrecer experiencias de web móvil sin conexión. 
+para ofrecer experiencias de web móvil sin conexión.
 
 En este artículo, se proporcionan breves aspectos básicos para evaluar distintas API y servicios de
 almacenamiento. A seguir, mostraremos una tabla de comparación y algunas
@@ -29,7 +29,7 @@ las distintas opciones de almacenamiento disponibles para los programadores web.
 
 El modelo para almacenar unidades de datos determina cómo se organizan los datos internamente,
 lo cual afecta a la facilidad de uso, al costo, y al rendimiento de las solicitudes de almacenamiento y
-recuperación de datos. 
+recuperación de datos.
 
 * **Estructurado:** Los datos almacenados en tablas con campos predefinidos, como es común
 en sistemas de administración de base de datos basadas en SQL,
@@ -98,7 +98,7 @@ y las compararemos en las dimensiones descritas anteriormente.
 <table>
   <thead>
     <th>API</th>
-    <th>Modelo de 
+    <th>Modelo de
 datos</th>
     <th>Persistencia</th>
     <th>Compatibilidad con

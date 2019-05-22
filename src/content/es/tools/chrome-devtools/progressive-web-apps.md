@@ -12,7 +12,7 @@ description: Usa el panel Application para inspeccionar, modificar y depurar man
 Usa el panel <strong>Application</strong> para inspeccionar, modificar
 y depurar manifiestos de apps web, service worker y cachés de procesos de trabajo.
 
-Guías relacionadas: 
+Guías relacionadas:
 
 * [Progressive Web App](/web/progressive-web-apps)
 
