@@ -74,11 +74,11 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
 现在，您可以使用 Chrome DevTools 模拟离线模式了。
 
-打开 DevTools，转至 __Application__ 面板，然后启用 __Offline __ 复选框。在下面的屏幕截图中，鼠标悬停在复选框上。 
+打开 DevTools，转至 __Application__ 面板，然后启用 __Offline__ 复选框。在下面的屏幕截图中，鼠标悬停在复选框上。 
 
 ![479219dc5f6ea4eb.png](img/479219dc5f6ea4eb.png)
 
-点击复选框后，请注意 __Network __ 面板标签旁边的警告图标（带有感叹号的黄色三角形）。这表示您处于离线状态。 
+点击复选框后，请注意 __Network__ 面板标签旁边的警告图标（带有感叹号的黄色三角形）。这表示您处于离线状态。 
 
 如需证明您处于离线模式，请转至  [https://google.com](https://google.com)。您会看到 Chrome 的“there is no Internet connection”错误消息。 
 
@@ -97,11 +97,11 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
     $ git checkout code-lab
 
-返回到 DevTools 的 __Application __ 面板，禁用 __Offline __ 复选框，以便重新返回在线状态。
+返回到 DevTools 的 __Application__ 面板，禁用 __Offline__ 复选框，以便重新返回在线状态。
 
 运行页面。应用应能如期运行。
 
-现在，使用 DevTools 重新模拟离线模式（通过在 __Application __ 面板中启用 __Offline __ 复选框）。__注意！如果您不是非常了解服务工作线程，则会看到一些异常行为。
+现在，使用 DevTools 重新模拟离线模式（通过在 __Application__ 面板中启用 __Offline__ 复选框）。__注意！如果您不是非常了解服务工作线程，则会看到一些异常行为。
 
 您可能会看到什么？因为您处于离线状态，并且这个版本的应用没有服务工作线程，您将看到 Chrome 中显示典型的“there is no Internet connection”错误消息。
 
@@ -111,7 +111,7 @@ description:学习如何将服务工作线程集成到现有应用内，以使�
 
 这是怎么回事？回想一下您在开始此代码实验室时的情景，您尝试了应用的完整版本。当您运行那个版本时，应用实际上安装了服务工作线程。现在，在您每次运行应用时，服务工作线程都会自动运行。一旦 `localhost:3000` 等作用域（您将会在下一部分中了解有关作用域的更多内容）中安装了服务工作线程，服务工作线程会在您每次访问作用域时自动启动，除非您以编程方式或手动将其删除。 
 
-如需修复这一问题，请转至 DevTools 的 __Application __ 面板，点击 __Service Workers __ 选项卡，然后点击 __Unregister __ 按钮。在下面的屏幕截图中，鼠标悬停在按钮上。 
+如需修复这一问题，请转至 DevTools 的 __Application__ 面板，点击 __Service Workers__ 选项卡，然后点击 __Unregister__ 按钮。在下面的屏幕截图中，鼠标悬停在按钮上。
 
 ![837b46360756810a.png](img/837b46360756810a.png)
 
@@ -145,11 +145,11 @@ if('serviceWorker' in navigator) {
 
 脚本会检查浏览器是否支持服务工作线程。如果不支持，它会将我们当前使用的空白文件 `sw.js` 注册为服务工作线程，然后记录到控制台。
 
-在重新运行网站之前，返回到 DevTools，查看  __Application __面板的 __Service Workers __ 标签。此标签当前应为空，表示网站没有安装服务工作线程。 
+在重新运行网站之前，返回到 DevTools，查看  __Application__ 面板的 __Service Workers__ 标签。此标签当前应为空，表示网站没有安装服务工作线程。 
 
 ![37d374c4b51d273.png](img/37d374c4b51d273.png)
 
-确保已停用 DevTools 中的 __Offline __ 复选框。重新加载页面。在加载页面时，您可以看到服务工作线程已经完成注册。
+确保已停用 DevTools 中的 __Offline__ 复选框。重新加载页面。在加载页面时，您可以看到服务工作线程已经完成注册。
 
 ![b9af9805d4535bd3.png](img/b9af9805d4535bd3.png)
 
@@ -157,7 +157,7 @@ if('serviceWorker' in navigator) {
 
 ![3519a5068bc773ea.png](img/3519a5068bc773ea.png)
 
-如果您想要检查当前为页面安装的服务工作线程，请点击链接。这将会在 DevTools 的 __Sources __ 面板中为您显示服务工作线程的源代码。例如，现在点击链接，您会看到一个空文件。 
+如果您想要检查当前为页面安装的服务工作线程，请点击链接。这将会在 DevTools 的 __Sources__ 面板中为您显示服务工作线程的源代码。例如，现在点击链接，您会看到一个空文件。 
 
 ![dbc14cbb8ca35312.png](img/dbc14cbb8ca35312.png)
 
@@ -206,13 +206,13 @@ self.addEventListener('install', function(e) {
 
 将以下代码添加到 `sw.js` 的底部，以便记录父页面发出的请求。
 
-我们来测试一下这个功能。__注意！__您将会看到更加异常的服务工作线程行为。 
+我们来测试一下这个功能。__注意__ 您将会看到更加异常的服务工作线程行为。 
 
-打开 DevTools，转至 __Application__ 面板。应停用 __Offline __复选框。按 `Esc` 键以打开 DevTools 窗口底部的 __Console __抽屉。您的 DevTools 窗口应类似于以下屏幕截图：
+打开 DevTools，转至 __Application__ 面板。应停用 __Offline__ 复选框。按 `Esc` 键以打开 DevTools 窗口底部的 __Console__ 抽屉。您的 DevTools 窗口应类似于以下屏幕截图：
 
 ![c96de824be6852d7.png](img/c96de824be6852d7.png)
 
-现在重新加载页面并查看 DevTools 窗口。首先，我们预期能看到记录到控制台中的大量请求，但没有看到。其次，在 __Service Worker __窗格中，我们可以看到 __Status __已发生更改：
+现在重新加载页面并查看 DevTools 窗口。首先，我们预期能看到记录到控制台中的大量请求，但没有看到。其次，在 __Service Worker__ 窗格中，我们可以看到 __Status__ 已发生更改：
 
 ![c7cfb6099e79d5aa.png](img/c7cfb6099e79d5aa.png)
 

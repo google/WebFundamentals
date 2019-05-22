@@ -275,6 +275,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 </div>
 
 <div style="clear:both;"></div>
+
 您可以使用 JavaScript 或 CSS 控制影片尺寸。JavaScript 程式庫和 [FitVids](//fitvidsjs.com/) 等外掛程式可協助您維持合適的影片大小及長寬比，即使是 YouTube 和其他來源中的 Flash 影片也不例外。
 
 使用 [CSS 媒體查詢](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)，即可根據檢視區尺寸指定元素大小；`max-width: 100%` 是您的最佳幫手。
@@ -285,13 +286,13 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。過度擠壓或延展都會導致不佳的視覺效果。
 
-**CSS：**
+**CSS**
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
-**HTML：**
+**HTML**
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}

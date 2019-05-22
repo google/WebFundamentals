@@ -37,8 +37,8 @@ Note: comprueba qué versión de Chrome estás ejecutando en `chrome://version` 
 
 ## Locales {: #overrides }
 
-** Anulaciones locales ** le permiten realizar cambios en DevTools y mantener esos cambios en todas las cargas de la página. Anteriormente, cualquier cambio que hiciera en DevTools se perdería al volver a cargar la página.
-** Anulaciones locales ** funcionan para la mayoría de los tipos de archivos, con un par de excepciones. Ver [Limitations](#overrides-limitations) .
+**Anulaciones locales** le permiten realizar cambios en DevTools y mantener esos cambios en todas las cargas de la página. Anteriormente, cualquier cambio que hiciera en DevTools se perdería al volver a cargar la página.
+**Anulaciones locales** funcionan para la mayoría de los tipos de archivos, con un par de excepciones. Ver [Limitations](#overrides-limitations) .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -54,9 +54,9 @@ Cómo funciona:
 * Cuando realiza cambios en DevTools, DevTools guarda una copia del archivo modificado en su directorio.
 * Cuando recarga la página, DevTools sirve el archivo local, modificado, en lugar del recurso de red.
 
-Para configurar ** Anulaciones Locales **:
+Para configurar **Anulaciones Locales**:
 
-1. Abra el panel ** Fuentes **. 1. Abra la pestaña ** Anulaciones **.
+1. Abra el panel **Fuentes**. 1. Abra la pestaña **Anulaciones**.
 
      <figure>
        <img src="/web/updates/images/2018/01/overrides.png"
@@ -66,12 +66,12 @@ Para configurar ** Anulaciones Locales **:
        </figcaption>
      </figure>
 
-1. Haga clic en ** Anulaciones de configuración **. 1. Seleccione el directorio en el que desea guardar sus cambios. 1. En la parte superior de su ventana gráfica, haga clic en ** Permitir ** para dar a DevTools acceso de lectura y escritura al directorio. 1. Haz tus cambios.
+1. Haga clic en **Anulaciones de configuración**. 1. Seleccione el directorio en el que desea guardar sus cambios. 1. En la parte superior de su ventana gráfica, haga clic en **Permitir** para dar a DevTools acceso de lectura y escritura al directorio. 1. Haz tus cambios.
 
 ### Limitaciones {: #overrides-limitations }
 
-* DevTools no guarda los cambios realizados en el ** Árbol DOM ** del panel ** Elementos **. Edite HTML en el panel ** Fuentes ** en su lugar.
-* Si editas CSS en el panel ** Estilos **, y la fuente de ese CSS es un archivo HTML, DevTools no guardará el cambio. Edite el archivo HTML en el panel ** Fuentes ** en su lugar.
+* DevTools no guarda los cambios realizados en el **Árbol DOM** del panel **Elementos**. Edite HTML en el panel **Fuentes** en su lugar.
+* Si editas CSS en el panel **Estilos**, y la fuente de ese CSS es un archivo HTML, DevTools no guardará el cambio. Edite el archivo HTML en el panel **Fuentes** en su lugar.
 
 ### Funciones relacionadas {: #overrides-related }
 
@@ -93,11 +93,11 @@ Realice un seguimiento de los cambios que realice localmente en DevTools a trav�
 
 ## Nuevas herramientas de accesibilidad {: #a11y }
 
-Use el nuevo panel ** Accesibilidad ** para inspeccionar las propiedades de accesibilidad de un elemento e inspeccione la relación de contraste de los elementos de texto en el ** Selector de color ** para asegurarse de que sean accesibles para usuarios con problemas de visión o color. -visiones deficiencias.
+Use el nuevo panel **Accesibilidad** para inspeccionar las propiedades de accesibilidad de un elemento e inspeccione la relación de contraste de los elementos de texto en el **Selector de color** para asegurarse de que sean accesibles para usuarios con problemas de visión o color. -visiones deficiencias.
 
 ### accesibilidad de {: #a11y-pane }
 
-Use el panel ** Accesibilidad ** en el panel ** Elementos ** para investigar las propiedades de accesibilidad del elemento actualmente seleccionado.
+Use el panel **Accesibilidad** en el panel **Elementos** para investigar las propiedades de accesibilidad del elemento actualmente seleccionado.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y-pane.png"
@@ -134,13 +134,13 @@ Mejorar el contraste de color de sus elementos de texto hace que su sitio sea m�
   </figcaption>
 </figure>
 
-En ** Figura 5 **, las dos marcas de verificación junto a ** 4.61 ** significan que este elemento cumple con las [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Si solo tuviera una marca de verificación, eso significaría que cumplió con las [minimum recommended contrast ratio (AA)][minimum]{:.external} .
+En **Figura 5**, las dos marcas de verificación junto a **4.61** significan que este elemento cumple con las [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Si solo tuviera una marca de verificación, eso significaría que cumplió con las [minimum recommended contrast ratio (AA)][minimum]{:.external} .
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Haga clic en ** Mostrar más **! [Show More][SM]{:.cdt-inl} para expandir la sección ** Relación de contraste **. La línea blanca en el cuadro ** Espectro de color ** representa el límite entre los colores que cumplen con la relación de contraste recomendada y los que no. Por ejemplo, ya que el color gris en
-** La Figura 6 ** cumple con las recomendaciones, lo que significa que todos los colores debajo de la línea blanca también cumplen con las recomendaciones.
+Haga clic en **Mostrar más**! [Show More][SM]{:.cdt-inl} para expandir la sección **Relación de contraste**. La línea blanca en el cuadro **Espectro de color** representa el límite entre los colores que cumplen con la relación de contraste recomendada y los que no. Por ejemplo, ya que el color gris en
+**La Figura 6** cumple con las recomendaciones, lo que significa que todos los colores debajo de la línea blanca también cumplen con las recomendaciones.
 
 <figure>
   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -156,10 +156,10 @@ Haga clic en ** Mostrar más **! [Show More][SM]{:.cdt-inl} para expandir la sec
 
 #### Funciones relacionadas {: #contrast-related }
 
-El panel ** Auditorías ** tiene una auditoría de accesibilidad automatizada para garantizar que
-* cada * elemento de texto en una página tiene una relación de contraste suficiente.
+El panel **Auditorías** tiene una auditoría de accesibilidad automatizada para garantizar que
+*cada* elemento de texto en una página tiene una relación de contraste suficiente.
 
-Vea [Run Lighthouse in Chrome DevTools][audit] , o vea el A11ycast a continuación, para aprender cómo usar el panel ** Auditorías ** para probar la accesibilidad.
+Vea [Run Lighthouse in Chrome DevTools][audit] , o vea el A11ycast a continuación, para aprender cómo usar el panel **Auditorías** para probar la accesibilidad.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -174,7 +174,7 @@ Vea [Run Lighthouse in Chrome DevTools][audit] , o vea el A11ycast a continuaci�
 
 Chrome 65 incluye una categoría completamente nueva de auditorías de SEO y muchas auditorías de rendimiento nuevas.
 
-Note: El panel ** Auditorías ** está alimentado por [Lighthouse][LH] . Chrome 64 ejecuta la versión 2.5 del faro. Chrome 65 ejecuta la versión 2.8 de Faro. Así que esta sección es simplemente un resumen de las actualizaciones de Lighthouse de 2.6, 2.7 y 2.8.
+Note: El panel **Auditorías** está alimentado por [Lighthouse][LH] . Chrome 64 ejecuta la versión 2.5 del faro. Chrome 65 ejecuta la versión 2.8 de Faro. Así que esta sección es simplemente un resumen de las actualizaciones de Lighthouse de 2.6, 2.7 y 2.8.
 
 ### Nuevas auditorías de SEO {: #seo }
 
@@ -229,7 +229,7 @@ Chrome 65 también viene con muchas auditorías de rendimiento nuevas:
 
 ## paso de código confiable con trabajadores y código asíncrono {: #stepping }
 
-Chrome 65 trae actualizaciones para el ** Step Into **! Botón [Step Into][into]{:.cdt-inl} al entrar en el código que pasa mensajes entre subprocesos y código asíncrono. Si desea el comportamiento de paso anterior, puede utilizar el nuevo ** Paso **! Botón [Step][step]{:.cdt-inl} , en su lugar.
+Chrome 65 trae actualizaciones para el **Step Into**! Botón [Step Into][into]{:.cdt-inl} al entrar en el código que pasa mensajes entre subprocesos y código asíncrono. Si desea el comportamiento de paso anterior, puede utilizar el nuevo **Paso**! Botón [Step][step]{:.cdt-inl} , en su lugar.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -238,7 +238,7 @@ Chrome 65 trae actualizaciones para el ** Step Into **! Botón [Step Into][into]
 
 Cuando entras en el código que pasa mensajes entre subprocesos, DevTools ahora te muestra lo que sucede en cada subproceso.
 
-Por ejemplo, la aplicación en ** Figura 8 ** pasa un mensaje entre el hilo principal y el hilo trabajador. Después de ingresar a la llamada `postMessage()` en el hilo principal, DevTools se detiene en el controlador `onmessage` en el hilo trabajador. El controlador `onmessage` envía un mensaje al hilo principal. Al entrar en * esa * llamada se detiene DevTools nuevamente en el hilo principal.
+Por ejemplo, la aplicación en **Figura 8** pasa un mensaje entre el hilo principal y el hilo trabajador. Después de ingresar a la llamada `postMessage()` en el hilo principal, DevTools se detiene en el controlador `onmessage` en el hilo trabajador. El controlador `onmessage` envía un mensaje al hilo principal. Al entrar en * esa * llamada se detiene DevTools nuevamente en el hilo principal.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -262,7 +262,7 @@ Cuando ingresó a un código como este en versiones anteriores de Chrome, Chrome
 
 Al entrar en el código asíncrono, DevTools ahora asume que desea hacer una pausa en el código asíncrono que finalmente se ejecuta.
 
-Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()` , DevTools ejecuta todo el código que lleva hasta ese punto detrás de la escena y luego se detiene en la función que se pasa a `setTimeout()` .
+Por ejemplo, en **Figura 10** después de ingresar a `setTimeout()` , DevTools ejecuta todo el código que lleva hasta ese punto detrás de la escena y luego se detiene en la función que se pasa a `setTimeout()` .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -272,7 +272,7 @@ Por ejemplo, en ** Figura 10 ** después de ingresar a `setTimeout()` , DevTools
   </figcaption>
 </figure>
 
-Cuando ingresó a un código como este en Chrome 63, DevTools se detuvo en el código mientras se ejecutaba cronológicamente, como puede ver en ** Figura 11 **.
+Cuando ingresó a un código como este en Chrome 63, DevTools se detuvo en el código mientras se ejecutaba cronológicamente, como puede ver en **Figura 11**.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
@@ -284,7 +284,7 @@ Cuando ingresó a un código como este en Chrome 63, DevTools se detuvo en el c�
 
 ## Grabaciones múltiples en el panel Performance {: #recordings }
 
-El panel ** Performance ** ahora le permite guardar temporalmente hasta 5 grabaciones. Las grabaciones se eliminan al cerrar la ventana de DevTools. Vea [Get Started with Analyzing Runtime Performance][runtime] para [Get Started with Analyzing Runtime Performance][runtime] cómodo con el panel ** Performance **.
+El panel **Performance** ahora le permite guardar temporalmente hasta 5 grabaciones. Las grabaciones se eliminan al cerrar la ventana de DevTools. Vea [Get Started with Analyzing Runtime Performance][runtime] para [Get Started with Analyzing Runtime Performance][runtime] cómodo con el panel **Performance**.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 

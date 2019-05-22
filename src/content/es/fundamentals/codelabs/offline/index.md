@@ -78,7 +78,7 @@ Abre DevTools, dirígete al panel __Application__ y habilita la casilla de verif
 
 ![479219dc5f6ea4eb.png](img/479219dc5f6ea4eb.png)
 
-Después de hacer clic en la casilla de verificación, nota el ícono de advertencia (triángulo amarillo con signo de admiración) junto a la pestaña del panel __Network __. Esto indica que trabajas sin conexión. 
+Después de hacer clic en la casilla de verificación, nota el ícono de advertencia (triángulo amarillo con signo de admiración) junto a la pestaña del panel __Network__. Esto indica que trabajas sin conexión. 
 
 Para probar que trabajas sin conexión, visita  [https://google.com](https://google.com). Deberías ver el mensaje de error "there is no Internet connection" de Chrome. 
 

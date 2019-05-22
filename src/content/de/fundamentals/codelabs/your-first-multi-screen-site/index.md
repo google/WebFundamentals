@@ -236,7 +236,6 @@ Ein Styleguide stellt eine gute Möglichkeit dar, ein umfassendes Verständnis f
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>
@@ -427,7 +426,7 @@ Dadurch sorgen wir für einen klaren und konsequenten Übergang.
 
 ### Abschluss
 
-** Wir gratulieren!** Wenn Sie diesen Text lesen, haben Sie Ihre erste einfache Produktzielseite erstellt, die auf vielen verschiedenen Geräten, Formfaktoren und Bildschirmgrößen richtig angezeigt wird.
+**Wir gratulieren!** Wenn Sie diesen Text lesen, haben Sie Ihre erste einfache Produktzielseite erstellt, die auf vielen verschiedenen Geräten, Formfaktoren und Bildschirmgrößen richtig angezeigt wird.
 
 Indem Sie sich an die folgenden Richtlinien halten, sorgen Sie für einen guten Start:
 

@@ -70,7 +70,7 @@ DevToolsを変更すると、DevToolsは変更されたファイルのコピー�
 
 ### 制限{: #overrides-limitations }
 
-* DevToolsは、** Elements **パネルの** DOM Tree **の変更を保存しません。代わりに**ソース**パネルでHTMLを編集してください。
+* DevToolsは、**Elements** パネルの **DOM Tree** の変更を保存しません。代わりに**ソース**パネルでHTMLを編集してください。
 * **スタイル**ペインでCSSを編集し、そのCSSのソースがHTMLファイルの場合、DevToolsは変更を保存しません。代わりに**ソース**パネルでHTMLファイルを編集してください。
 
 ### 関連機能{: #overrides-related }
@@ -97,7 +97,7 @@ DevToolsでローカルで行った変更を新しい**変更**タブで追跡�
 
 ### アクセシビリティペイン{: #a11y-pane }
 
-** Elements **パネルの** Accessibility **ペインを使用して、現在選択されている要素のアクセシビリティプロパティを調べます。
+**Elements** パネルの **Accessibility** ペインを使用して、現在選択されている要素のアクセシビリティプロパティを調べます。
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y-pane.png"
@@ -178,7 +178,7 @@ Note: ** [Lighthouse][LH] **パネルは[Lighthouse][LH]によって強化され
 
 ### 新しいSEO監査{: #seo }
 
-ページが新しい** SEO **カテゴリの各監査に合格するようにすることで、検索エンジンのランキングが向上する場合があります。
+ページが新しい **SEO** カテゴリの各監査に合格するようにすることで、検索エンジンのランキングが向上する場合があります。
 
 <figure>
   <img src="/web/updates/images/2018/01/seo.png"

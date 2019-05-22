@@ -37,8 +37,8 @@ Note: Periksa versi Chrome apa yang Anda jalankan di `chrome://version` . Jika A
 
 ## Local Overridees {: #overrides }
 
-** Local Overrides ** memungkinkan Anda membuat perubahan di DevTools, dan menjaga perubahan tersebut di seluruh beban halaman. Sebelumnya, perubahan apa pun yang Anda buat di DevTools akan hilang saat Anda memuat ulang halaman.
-** Local Override ** berfungsi untuk sebagian besar jenis file, dengan beberapa pengecualian. Lihat [Limitations](#overrides-limitations) .
+**Local Overrides** memungkinkan Anda membuat perubahan di DevTools, dan menjaga perubahan tersebut di seluruh beban halaman. Sebelumnya, perubahan apa pun yang Anda buat di DevTools akan hilang saat Anda memuat ulang halaman.
+**Local Override** berfungsi untuk sebagian besar jenis file, dengan beberapa pengecualian. Lihat [Limitations](#overrides-limitations) .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/overrides.gif"
@@ -54,9 +54,9 @@ Bagaimana itu bekerja:
 * Saat Anda membuat perubahan di DevTools, DevTools menyimpan salinan file yang diubah ke direktori Anda.
 * Saat Anda memuat ulang halaman, DevTools melayani file lokal yang dimodifikasi, alih-alih sumber daya jaringan.
 
-Untuk mengatur ** Local Overrides **:
+Untuk mengatur **Local Overrides**:
 
-1. Buka panel ** Sources **. 1. Buka tab ** Mengganti **.
+1. Buka panel **Sources**. 1. Buka tab **Mengganti**.
 
      <figure>
        <img src="/web/updates/images/2018/01/overrides.png"
@@ -66,12 +66,12 @@ Untuk mengatur ** Local Overrides **:
        </figcaption>
      </figure>
 
-1. Klik ** Pengaturan Mengganti **. 1. Pilih direktori mana Anda ingin menyimpan perubahan Anda. 1. Di bagian atas viewport Anda, klik ** Allow ** untuk memberi DevTools akses baca dan tulis ke direktori. 1. Buat perubahan Anda.
+1. Klik **Pengaturan Mengganti**. 1. Pilih direktori mana Anda ingin menyimpan perubahan Anda. 1. Di bagian atas viewport Anda, klik **Allow** untuk memberi DevTools akses baca dan tulis ke direktori. 1. Buat perubahan Anda.
 
 ### Batasan {: #overrides-limitations }
 
-* DevTools tidak menyimpan perubahan yang dibuat di ** DOM Tree ** dari panel ** Elements **. Edit HTML di panel ** Sumber ** sebagai gantinya.
-* Jika Anda mengedit CSS di ** Styles ** pane, dan sumber CSS itu adalah file HTML, DevTools tidak akan menyimpan perubahan. Edit file HTML di panel ** Sources **.
+* DevTools tidak menyimpan perubahan yang dibuat di **DOM Tree** dari panel **Elements**. Edit HTML di panel **Sumber** sebagai gantinya.
+* Jika Anda mengedit CSS di **Styles** pane, dan sumber CSS itu adalah file HTML, DevTools tidak akan menyimpan perubahan. Edit file HTML di panel **Sources**.
 
 ### Fitur terkait {: #overrides-related }
 
@@ -81,7 +81,7 @@ Untuk mengatur ** Local Overrides **:
 
 ## Tab Perubahan {: #changes }
 
-Lacak perubahan yang Anda buat secara lokal di DevTools melalui tab ** Perubahan ** yang baru.
+Lacak perubahan yang Anda buat secara lokal di DevTools melalui tab **Perubahan** yang baru.
 
 <figure>
   <img src="/web/updates/images/2018/01/changes.png"
@@ -93,11 +93,11 @@ Lacak perubahan yang Anda buat secara lokal di DevTools melalui tab ** Perubahan
 
 ## Alat aksesibilitas baru {: #a11y }
 
-Gunakan panel ** Accessibility ** baru untuk memeriksa properti aksesibilitas suatu elemen, dan periksa rasio kontras elemen teks di ** Color Picker ** untuk memastikan bahwa mereka dapat diakses oleh pengguna dengan gangguan penglihatan atau warna rendah -visi kekurangan.
+Gunakan panel **Accessibility** baru untuk memeriksa properti aksesibilitas suatu elemen, dan periksa rasio kontras elemen teks di **Color Picker** untuk memastikan bahwa mereka dapat diakses oleh pengguna dengan gangguan penglihatan atau warna rendah -visi kekurangan.
 
 ### Accessibility pane {: #a11y-pane }
 
-Gunakan ** Accessibility ** pane pada panel ** Elements ** untuk menyelidiki properti aksesibilitas dari elemen yang saat ini dipilih.
+Gunakan **Accessibility** pane pada panel **Elements** untuk menyelidiki properti aksesibilitas dari elemen yang saat ini dipilih.
 
 <figure>
   <img src="/web/updates/images/2018/01/a11y-pane.png"
@@ -111,7 +111,7 @@ Gunakan ** Accessibility ** pane pada panel ** Elements ** untuk menyelidiki pro
   </figcaption>
 </figure>
 
-Lihat A11ycast Rob Dodson tentang pelabelan di bawah ini untuk melihat panel ** Accessibility ** dalam tindakan.
+Lihat A11ycast Rob Dodson tentang pelabelan di bawah ini untuk melihat panel **Accessibility** dalam tindakan.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="8dCUzOiMRy4"
@@ -134,13 +134,13 @@ Meningkatkan kontras warna elemen teks Anda membuat situs Anda lebih bermanfaat 
   </figcaption>
 </figure>
 
-Di ** Gambar 5 **, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Jika hanya ada satu tanda centang, itu berarti ia bertemu dengan [minimum recommended contrast ratio (AA)][minimum]{:.external} .
+Di **Gambar 5**, dua tanda centang di samping ** 4,61 ** berarti bahwa elemen ini memenuhi [enhanced recommended contrast ratio (AAA)][enhanced]{:.external} . Jika hanya ada satu tanda centang, itu berarti ia bertemu dengan [minimum recommended contrast ratio (AA)][minimum]{:.external} .
 
 [enhanced]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [minimum]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 
-Klik ** Tampilkan Lebih Banyak **! [Show More][SM]{:.cdt-inl} untuk memperluas bagian ** Contrast Ratio **. Garis putih di kotak ** Color Spectrum ** menunjukkan batas antara warna yang memenuhi rasio kontras yang direkomendasikan, dan yang tidak. Misalnya, karena warna abu-abu di
-** Gambar 6 ** memenuhi rekomendasi, itu berarti bahwa semua warna di bawah garis putih juga memenuhi rekomendasi.
+Klik ** Tampilkan Lebih Banyak **! [Show More][SM]{:.cdt-inl} untuk memperluas bagian **Contrast Ratio**. Garis putih di kotak **Color Spectrum** menunjukkan batas antara warna yang memenuhi rasio kontras yang direkomendasikan, dan yang tidak. Misalnya, karena warna abu-abu di
+**Gambar 6** memenuhi rekomendasi, itu berarti bahwa semua warna di bawah garis putih juga memenuhi rekomendasi.
 
 <figure>
   <img src="/web/updates/images/2018/01/contrast-ratio-expanded.png"
@@ -156,10 +156,10 @@ Klik ** Tampilkan Lebih Banyak **! [Show More][SM]{:.cdt-inl} untuk memperluas b
 
 #### Fitur terkait {: #contrast-related }
 
-Panel ** Audit ** memiliki audit akses otomatis untuk memastikannya
+Panel **Audit** memiliki audit akses otomatis untuk memastikannya
 * setiap elemen * teks pada halaman memiliki rasio kontras yang cukup.
 
-Lihat [Run Lighthouse in Chrome DevTools][audit] , atau tonton A11ycast di bawah ini, untuk mempelajari cara menggunakan ** ** panel ** untuk menguji aksesibilitas.
+Lihat [Run Lighthouse in Chrome DevTools][audit] , atau tonton A11ycast di bawah ini, untuk mempelajari cara menggunakan ** **panel** untuk menguji aksesibilitas.
 
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="b0Q5Zp_yKaU"
@@ -174,11 +174,11 @@ Lihat [Run Lighthouse in Chrome DevTools][audit] , atau tonton A11ycast di bawah
 
 Chrome 65 dikirimkan dengan kategori baru audit SEO, dan banyak audit kinerja baru.
 
-Note: Panel ** Audit ** didukung oleh [Lighthouse][LH] . Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
+Note: Panel **Audit** didukung oleh [Lighthouse][LH] . Chrome 64 menjalankan Lighthouse versi 2.5. Chrome 65 menjalankan Lighthouse versi 2.8. Jadi bagian ini hanyalah ringkasan pembaruan Lighthouse dari 2.6, 2.7, dan 2.8.
 
 ### Audit SEO baru {: #seo }
 
-Memastikan bahwa halaman Anda melewati setiap audit dalam kategori ** SEO ** yang baru dapat membantu meningkatkan peringkat mesin pencari Anda.
+Memastikan bahwa halaman Anda melewati setiap audit dalam kategori **SEO** yang baru dapat membantu meningkatkan peringkat mesin pencari Anda.
 
 <figure>
   <img src="/web/updates/images/2018/01/seo.png"
@@ -229,7 +229,7 @@ Chrome 65 juga dikirimkan dengan banyak audit kinerja baru:
 
 ## Kode yang dapat dipercaya melangkah dengan pekerja dan kode asynchronous {: #stepping }
 
-Chrome 65 menghadirkan pembaruan ke ** Step Into **! Tombol [Step Into][into]{:.cdt-inl} saat masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan ** Langkah ** yang baru! Tombol [Step][step]{:.cdt-inl} , sebagai gantinya.
+Chrome 65 menghadirkan pembaruan ke **Step Into**! Tombol [Step Into][into]{:.cdt-inl} saat masuk ke kode yang meneruskan pesan antar utas, dan kode asinkron. Jika Anda menginginkan perilaku loncatan sebelumnya, Anda dapat menggunakan **Langkah** yang baru! Tombol [Step][step]{:.cdt-inl} , sebagai gantinya.
 
 [into]: /web/tools/chrome-devtools/javascript/imgs/step-into.png
 [step]: /web/tools/chrome-devtools/javascript/imgs/step.png
@@ -238,7 +238,7 @@ Chrome 65 menghadirkan pembaruan ke ** Step Into **! Tombol [Step Into][into]{:.
 
 Ketika Anda masuk ke kode yang mengirimkan pesan antar utas, DevTools sekarang menunjukkan apa yang terjadi di setiap utas.
 
-Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke dalam panggilan `postMessage()` pada utas utama, DevTools berhenti di handler `onmessage` di thread pekerja. Penangan `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
+Misalnya, aplikasi dalam **Gambar 8** meneruskan pesan antara utas utama dan utas pekerja. Setelah masuk ke dalam panggilan `postMessage()` pada utas utama, DevTools berhenti di handler `onmessage` di thread pekerja. Penangan `onmessage` itu sendiri mengirim pesan kembali ke utas utama. Masuk ke * bahwa * panggilan berhenti DevTools kembali di utas utama.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-worker-stepping.gif"
@@ -248,7 +248,7 @@ Misalnya, aplikasi dalam ** Gambar 8 ** meneruskan pesan antara utas utama dan u
   </figcaption>
 </figure>
 
-Saat Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya menunjukkan Anda sisi utas-utama dari kode, seperti yang Anda lihat di ** Gambar 9 **.
+Saat Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya menunjukkan Anda sisi utas-utama dari kode, seperti yang Anda lihat di **Gambar 9**.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-worker-stepping.gif"
@@ -262,7 +262,7 @@ Saat Anda masuk ke kode seperti ini di versi Chrome sebelumnya, Chrome hanya men
 
 Ketika melangkah ke kode asynchronous, DevTools sekarang mengasumsikan bahwa Anda ingin berhenti di kode asynchronous yang akhirnya berjalan.
 
-Sebagai contoh, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()` , DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti dalam fungsi yang diteruskan ke `setTimeout()` .
+Sebagai contoh, dalam **Gambar 10** setelah melangkah ke `setTimeout()` , DevTools menjalankan semua kode yang mengarah ke titik di belakang layar, dan kemudian berhenti dalam fungsi yang diteruskan ke `setTimeout()` .
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/new-async-stepping.gif"
@@ -272,7 +272,7 @@ Sebagai contoh, dalam ** Gambar 10 ** setelah melangkah ke `setTimeout()` , DevT
   </figcaption>
 </figure>
 
-Ketika Anda masuk ke kode seperti ini di Chrome 63, DevTools berhenti dalam kode karena secara kronologis berjalan, seperti yang Anda lihat di ** Gambar 11 **.
+Ketika Anda masuk ke kode seperti ini di Chrome 63, DevTools berhenti dalam kode karena secara kronologis berjalan, seperti yang Anda lihat di **Gambar 11**.
 
 <figure>
   <img src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/01/old-async-stepping.gif"
@@ -284,7 +284,7 @@ Ketika Anda masuk ke kode seperti ini di Chrome 63, DevTools berhenti dalam kode
 
 ## Beberapa rekaman dalam panel Performance {: #recordings }
 
-Panel ** Performance ** sekarang memungkinkan Anda menyimpan hingga 5 rekaman secara sementara. Rekaman akan dihapus ketika Anda menutup jendela DevTools Anda. Lihat [Get Started with Analyzing Runtime Performance][runtime] untuk merasa nyaman dengan panel ** Performance **.
+Panel **Performance** sekarang memungkinkan Anda menyimpan hingga 5 rekaman secara sementara. Rekaman akan dihapus ketika Anda menutup jendela DevTools Anda. Lihat [Get Started with Analyzing Runtime Performance][runtime] untuk merasa nyaman dengan panel **Performance**.
 
 [runtime]: /web/tools/chrome-devtools/evaluate-performance/
 

@@ -239,7 +239,6 @@ Een stijlgids is een erg handige manier om een goed inzicht te krijgen in de vis
   <div style="background-color: #39b1a4">#39b1a4</div>
   <div style="background-color: white">#ffffff</div>
   <div style="background-color: #f5f5f5">#f5f5f5</div>
-
   <div style="background-color: #e9e9e9">#e9e9e9</div>
   <div style="background-color: #dc4d38">#dc4d38</div>
 </div>

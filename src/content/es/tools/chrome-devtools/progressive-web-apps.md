@@ -85,9 +85,9 @@ correctamente tu app a tu biblioteca de escritorio, también funcionará en disp
 móviles.
 
 Si deseas probar la experiencia real en dispositivos móviles, puedes
-conectar un dispositivo móvil real a DevTools a través de [la depuración remota][remote
-debugging] y hacer clic en el botón **Add to Homescreen** (en DevTools)
-para que aparezca la solicitud “Add to Homescreen” en el dispositivo móvil conectado.
+conectar un dispositivo móvil real a DevTools a través de [la depuración remota][remote debugging]
+y hacer clic en el botón **Add to Homescreen** (en DevTools) para que aparezca
+la solicitud “Add to Homescreen” en el dispositivo móvil conectado.
 
 [shelf]: images/io.png
 [remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
