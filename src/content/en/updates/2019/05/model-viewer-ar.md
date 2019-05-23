@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: In February, we introduced the model-viewer web component which let you declaratively add a 3D model to a web page. Now we're announcing support for AR on Android with the addition of the ar attribute. 
 
-{# wf_updated_on: 2019-05-08 #}
+{# wf_updated_on: 2019-05-23 #}
 {# wf_published_on: 2019-05-07 #}
 {# wf_tags: 3d,model-viewer,ar,augmented-reality #}
 {# wf_featured_image: /web/updates/images/2019/05/masthead.jpg #}
@@ -11,9 +11,9 @@ description: In February, we introduced the model-viewer web component which let
 
 # Augmented reality with model-viewer {: .page-title }
 
-In February, we introduced the [&lt;model-viewer> web
+In February, we introduced the [`<model-viewer>` web
 component](/web/updates/2019/02/model-viewer),
-which let you declaratively add a 3D model to a web page, while hosting the
+which lets you declaratively add a 3D model to a web page, while hosting the
 model on your own site. One thing it didn't support  was augmented reality. That
 is, you could not render the component's source image on top of a device's
 camera feed.  
@@ -21,20 +21,20 @@ camera feed.
 To do that, we've since added support for Magic Leap, and Quick Look on iOS. Now
 we're announcing support for AR on Android with the addition of the `ar`
 attribute. This attribute is built on a new ARCore feature called Scene Viewer,
-and external app for viewing 3D models. To learn more about Scene Viewer,
+an external app for viewing 3D models. To learn more about Scene Viewer,
 check out [Viewing 3D models in AR from an Android browser](/ar/develop/java/scene-viewer).
 
 ![Mars Rover](/web/updates/images/2019/05/rover.png)
 
-Let's see how to do augmented reality with &lt;model-viewer>.
+Let's see how to do augmented reality with `<model-viewer>`.
 
 ## The attribute
 
-A web component, you may recall, requires no special knowledge to use. It
+A web component, as you may recall, requires no special knowledge to use. It
 behaves like a standard HTML element, having a unique tag as well as properties
 and methods. After
 [installing it with a &lt;script> tag](https://github.com/GoogleWebComponents/model-viewer#installing),
-use it like any HTML element.
+use it like any other HTML element.
 
 ```html
 <model-viewer alt="A 3D model of an astronaut." src="Astronaut.gltf" ios-src="Astronaut.usdz" magic-leap ar>
@@ -45,13 +45,13 @@ I've highlighted at the very end. That's the new attribute.
 
 ## Installing the new version
 
-If you're using &lt;model-viewer> already, you're probably importing the component
+If you're using `<model-viewer>` already, you're probably importing the component
 using the &lt;script> tags exactly
 [as shown in the documentation](https://googlewebcomponents.github.io/model-viewer/).
 We're continually making improvements. If you want to test new features before
 deliberately upgrading and deploying, you'll want to install a specific version
-of &lt;model-viewer>. To do this add the version number to the file URLs as shown
-below. Then watch
+of `<model-viewer>`. To do this, add the version number to the file URLs as shown
+below. Then, watch
 [the releases page](https://github.com/GoogleWebComponents/model-viewer/releases)
 for updates.
 
@@ -67,9 +67,9 @@ for updates.
 
 ## Conclusion
 
-Give the new version of &lt;model-viewer> a try and let us know what you think.
+Give the new version of `<model-viewer>` a try and let us know what you think.
 Issues and feedback are
-[welcome in GitHub](https://github.com/GoogleWebComponents/model-viewer/issues).
+[welcome on GitHub](https://github.com/GoogleWebComponents/model-viewer/issues).
 
 {% include "web/_shared/helpful.html" %}
 
