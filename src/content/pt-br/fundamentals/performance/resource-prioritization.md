@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -157,7 +157,7 @@ do seu site e também evitar dissonâncias desagradáveis entre as fontes do sis
 favoritas, você pode usar o `<link rel="preload">` no seu HTML. Dessa forma, o
 navegador entenderá imediatamente que uma fonte é necessária.
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
 
 O uso de `crossorigin` aqui é importante. Sem esse atributo,
 a fonte pré-carregada é ignorada pelo navegador e uma nova busca é

@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -157,7 +157,7 @@ situs Anda, serta menghindari konflik antara font sistem dan
 font yang dipilih, Anda dapat menggunakan `<link rel="preload">` di HTML agar
 browser segera mengetahui bahwa font diperlukan.
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
 
 Perhatikan bahwa penggunaan `crossorigin` di sini sangat penting; tanpa atribut ini,
 font yang dimuat sebelumnya akan diabaikan oleh browser, dan dilakukan pengambilan

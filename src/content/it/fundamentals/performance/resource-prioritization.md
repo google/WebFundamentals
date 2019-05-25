@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2017-11-28 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -165,7 +165,7 @@ testuale del tuo sito e per evitare fastidiosi flash tra i font di sistema e
 quelli preferiti puoi usare `<link rel="preload">` nel tuo HTML per far sapere
 immediatamente al browser che è necessario un font.
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
 
 Si noti che l'uso di `crossorigin` qui è importante; senza questo attributo,
 il font precaricato viene ignorato dal browser e viene eseguito un nuovo
@@ -304,7 +304,7 @@ un contenuto impaginato.
     <link rel="prefetch" href="page-2.html">
 
 Tieni comunque presente che prefetch non funziona in modo ricorsivo.
-Nell'esempio precedente recupereresti l'HTML ma qualsiasi risorsa di cui 
+Nell'esempio precedente recupereresti l'HTML ma qualsiasi risorsa di cui
 abbia bisogno `page-2.html` non viene scaricata prima del tempo a meno che tu
 non espliciti prefetch anche su di essa.
 

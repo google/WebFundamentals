@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-02-06 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -147,7 +147,7 @@ as 属性以外の部分はおそらく予想どおりでしょう。
 
 
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
 
 ここで重要なのは `crossorigin` を使用していることです。この属性がないと、プリロードされたフォントはブラウザで無視され、新たなフェッチが行われます。
  これは、フォントはブラウザにより匿名でフェッチされることが予期されているためです。プリロード リクエストは、`crossorigin` 属性を指定した場合にのみ匿名になります。

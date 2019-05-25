@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-08-17 #}
+{# wf_updated_on: 2019-05-25 #}
 {# wf_published_on: 2017-11-01 #}
 {# wf_blink_components: Blink>Network,Blink>Loader #}
 
@@ -157,7 +157,7 @@ of your site, as well as avoid jarring flashes between system fonts and your
 preferred ones, you can use `<link rel="preload">` in your HTML to let the
 browser know immediately that a font is needed.
 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="myfont.woff2">
+    <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="myfont.woff2">
 
 Note that the use of `crossorigin` here is important; without this attribute,
 the preloaded font is ignored by the browser, and a new fetch takes
