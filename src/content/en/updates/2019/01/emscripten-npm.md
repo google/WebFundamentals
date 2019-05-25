@@ -176,7 +176,7 @@ that I think are most important for web developers:
   need to switch to `dlmalloc` if you are allocating a lot of small objects
   frequently or if you want to use threading.
 * `-s EXPORT_ES6=1` will turn the JavaScript code into an ES6 module with a
-  default export that works with any bundler. Also requires `-s MODULARIZE=1 to
+  default export that works with any bundler. Also requires `-s MODULARIZE=1` to
   be set.
 
 The following flags are not always necessary or are only helpful for debugging
