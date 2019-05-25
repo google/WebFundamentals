@@ -100,7 +100,7 @@ Let's take a look at `build.sh`:
     export OPTIMIZE="-Os"
     export LDFLAGS="${OPTIMIZE}"
     export CFLAGS="${OPTIMIZE}"
-    export CPPFLAGS="${OPTIMIZE}"
+    export CXXFLAGS="${OPTIMIZE}"
 
     echo "============================================="
     echo "Compiling wasm bindings"
@@ -137,7 +137,7 @@ message or the error that caused the build to fail.
 
 With the `export` statements you define the values of a couple of environment
 variables. They allow you to pass additional command-line parameters to the C
-compiler (`CFLAGS`), the C++ compiler (`CPPFLAGS`) and the linker (`LDFLAGS`).
+compiler (`CFLAGS`), the C++ compiler (`CXXFLAGS`) and the linker (`LDFLAGS`).
 They all receive the optimizer settings via `OPTIMIZE` to make sure that
 everything gets optimized the same way. There are a couple of possible values
 for the `OPTIMIZE` variable:
@@ -176,7 +176,7 @@ that I think are most important for web developers:
   need to switch to `dlmalloc` if you are allocating a lot of small objects
   frequently or if you want to use threading.
 * `-s EXPORT_ES6=1` will turn the JavaScript code into an ES6 module with a
-  default export that works with any bundler. Also requires `-s MODULARIZE=1 to
+  default export that works with any bundler. Also requires `-s MODULARIZE=1` to
   be set.
 
 The following flags are not always necessary or are only helpful for debugging
