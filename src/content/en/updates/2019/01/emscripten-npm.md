@@ -100,7 +100,7 @@ Let's take a look at `build.sh`:
     export OPTIMIZE="-Os"
     export LDFLAGS="${OPTIMIZE}"
     export CFLAGS="${OPTIMIZE}"
-    export CPPFLAGS="${OPTIMIZE}"
+    export CXXFLAGS="${OPTIMIZE}"
 
     echo "============================================="
     echo "Compiling wasm bindings"
@@ -137,7 +137,7 @@ message or the error that caused the build to fail.
 
 With the `export` statements you define the values of a couple of environment
 variables. They allow you to pass additional command-line parameters to the C
-compiler (`CFLAGS`), the C++ compiler (`CPPFLAGS`) and the linker (`LDFLAGS`).
+compiler (`CFLAGS`), the C++ compiler (`CXXFLAGS`) and the linker (`LDFLAGS`).
 They all receive the optimizer settings via `OPTIMIZE` to make sure that
 everything gets optimized the same way. There are a couple of possible values
 for the `OPTIMIZE` variable:
