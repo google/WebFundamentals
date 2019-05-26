@@ -305,11 +305,11 @@ commands `emconfigure` and `emmake`:
     echo "============================================="
     # ... below is unchanged ...
 
-Note: Some libraries provided a `--target` flag (or similar) to target a
-specific processor architecture. This will often pull in assembler code that
-takes advantage of features specific to that architecture and can't be compiled
-to WebAssembly. If a flag like that is present (check with `./configure
---help`), make sure to set it to a generic target.
+Note: Some projects provid a `--host` flag (or similar; libvpx uses non-standard
+`--target`) to build for a specific processor architecture. This will often pull
+in assembler code that takes advantage of features specific to that architecture
+and can't be compiled to WebAssembly. If a flag like that is present (check with
+`./configure --help`), make sure to set it to a generic target.
 
 A C/C++ library is split into two parts: The headers (traditionally `.h` or
 `.hpp` files) that define the data structures, classes, constants etc that a
