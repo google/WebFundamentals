@@ -58,7 +58,7 @@ You're going to build your site in an online code editor called Glitch.
 
 1. Open the <a class="external gc-analytics-event" target="_blank" rel="noopener"
    data-category="CTA" data-label="/web/tools/chrome-devtools/beginners/html"
-   href="https://glitch.com/edit/#!/dfb1?path=index.html">source code</a>.
+   href="https://glitch.com/edit/#!/dfb1?path=index.html">source code via this link</a>.
    This tab will be called the **editor tab** throughout this tutorial.
 
      <figure>
