@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Autocomplete with CSS values, a new UI for network settings, and more.
 
-{# wf_updated_on: 2019-05-27 #}
-{# wf_published_on: 2019-05-27 #}
+{# wf_updated_on: 2019-05-28 #}
+{# wf_published_on: 2019-05-28 #}
 {# wf_tags: chrome76, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 {# wf_featured_snippet: Autocomplete with CSS values, a new UI for network settings, and more. #}
@@ -129,6 +129,21 @@ tracking memory usage in real-time.
 
 Send feedback on this new feature to [Chromium issue #958177](https://crbug.com/958177).
 
+## Service worker registration port numbers {: #ports }
+
+The **Service Workers** pane now includes port numbers in its titles to make it 
+easier to keep track of which service worker you're debugging.
+
+<figure>
+  <img src="/web/updates/images/2019/05/sw-ports.png"
+       alt="Service worker ports."/>
+  <figcaption>
+    Figure 6. Service worker ports.
+  </figcaption>
+</figure>
+
+Send feedback on this UI change to [Chromium issue #601286](https://crbug.com/601286).
+
 ## Inspect Background Fetch and Background Sync events {: #background }
 
 [fetch]: https://medium.com/google-developer-experts/background-fetch-api-get-ready-to-use-it-69cca522cd8f
@@ -141,7 +156,7 @@ Use the new **Background Services** section of the **Application** panel to moni
   <img src="/web/updates/images/2019/05/fetch.png"
        alt="The Background Fetch pane."/>
   <figcaption>
-    Figure 6. The Background Fetch pane. <a href="https://background-fetch.glitch.me">Demo</a>
+    Figure 7. The Background Fetch pane. <a href="https://background-fetch.glitch.me">Demo</a>
     by <a href="https://twitter.com/webmaxru">Maxim Salnikov</a>.
   </figcaption>
 </figure>
@@ -150,45 +165,11 @@ Use the new **Background Services** section of the **Application** panel to moni
   <img src="/web/updates/images/2019/05/sync.png"
        alt="The Background Sync pane."/>
   <figcaption>
-    Figure 7. The Background Sync pane.
+    Figure 8. The Background Sync pane.
   </figcaption>
 </figure>
 
 Send feedback on these new features to [Chromium issue #927726](https://crbug.com/927726).
-
-## Service worker registration port numbers {: #ports }
-
-The **Service Workers** pane now includes port numbers in its titles to make it 
-easier to keep track of which service worker you're debugging.
-
-<figure>
-  <img src="/web/updates/images/2019/05/sw-ports.png"
-       alt="Service worker ports."/>
-  <figcaption>
-    Figure 8. Service worker ports.
-  </figcaption>
-</figure>
-
-Send feedback on this UI change to [Chromium issue #601286](https://crbug.com/601286).
-
-## Portals in the DOM Tree {: #portals }
-
-[portals]: https://web.dev/hands-on-portals
-
-[Portal][portals] nodes now show up in the **DOM Tree**.
-
-<figure>
-  <img src="/web/updates/images/2019/05/portals.png"
-       alt="A portal node in the DOM Tree."/>
-  <figcaption>
-    Figure 9. A portal node in the DOM Tree.
-  </figcaption>
-</figure>
-
-Portals are currently only supported in Chrome. Enable the `chrome://flags/#enable-portals`
-experiment and go to [Portals Demo](https://uskay-portals-demo.glitch.me) to try them out.
-
-Send feedback on this new feature to [Chromium issue #947311](https://crbug.com/947311).
 
 ## Puppeteer for Firefox {: #puppeteer }
 
