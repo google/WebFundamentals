@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Web apps should be able to do anything native apps can. Through Project Fugu, we want to make it possible to build and deliver any kind of app on the open web.
 
-{# wf_updated_on: 2019-05-15 #}
+{# wf_updated_on: 2019-05-23 #}
 {# wf_published_on: 2018-11-12 #}
 {# wf_tags: capabilities #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
@@ -261,7 +261,7 @@ Nothing should ever be granted access by default, but instead rely on a
 permission model that puts the user in total control, and is easily
 revoke-able. It needs to be crystal clear when, and how these APIs are being
 used. We've outlined some of our thought process in
-[Controlling Access to Powerful Web Platform Features](bit.ly/powerful-apis).
+[Controlling Access to Powerful Web Platform Features](https://bit.ly/powerful-apis).
 
 
 <div class="clearfix"></div>
