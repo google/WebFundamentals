@@ -254,9 +254,6 @@ The RingBuffer class can be found
 
 ### WebAudio Powerhouse: Audio Worklet and SharedArrayBuffer
 
-Note: SharedArrayBuffer is disabled by default at the time of writing. Go to
-`chrome://flags` and enable _SharedArrayBuffer_ to play with this feature.
-
   - [Example code](https://googlechromelabs.github.io/web-audio-samples/audio-worklet/design-pattern/shared-buffer/)
 
 The last design pattern in this article is to put several cutting edge APIs into
