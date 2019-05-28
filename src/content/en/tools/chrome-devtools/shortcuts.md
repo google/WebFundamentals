@@ -41,7 +41,10 @@ on the browser viewport:
     </tr>
     <tr>
       <td>Open the <b>Elements</b> panel</td>
-      <td><kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd></td>
+      <td>
+        <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> or
+        <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd>
+      </td>
       <td><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></td>
     </tr>
   </tbody>
