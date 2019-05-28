@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
 {# wf_published_on: 2018-06-18 #}
-{# wf_updated_on: 2018-07-12 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_featured_image: /web/updates/images/generic/webaudio.png #}
 {# wf_tags: chrome68,webaudio,worklet #}
 {# wf_featured_snippet: Advanced design patterns to unlock Audio Worklet's fullest power with WebAssembly and SharedArrayBuffer. #}
@@ -153,12 +153,6 @@ of AudioWorkletNode. This pattern makes even more sense when you have to load
 the module dynamically after the AudioWorkletGlobalScope starts rendering the
 audio stream. Depending on the size of the module, compiling it in the middle of
 the rendering can cause glitches in the stream.
-
-Currently, the pattern B is only supported behind an experimental flag because
-it requires WebAssembly structured cloning.
-(`chrome://flags/#enable-webassembly`)
-If a WASM module should be a part of your AudioWorkletNode design, passing it
-through AudioWorkletNode constructor can definitely be useful.
 
 #### WASM Heap and Audio Data
 
