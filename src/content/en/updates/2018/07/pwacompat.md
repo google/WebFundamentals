@@ -63,8 +63,8 @@ async loaded bundle:
 ```html
 <link rel="manifest" href="manifest.webmanifest" />
 <!-- include PWACompat _after_ your manifest -->
-<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js"
-    integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA"
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
+    integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
     crossorigin="anonymous"></script>
 ```
 
