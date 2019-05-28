@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: TODO
+description: Autocomplete with CSS values, a new UI for network settings, and more.
 
-{# wf_updated_on: 2019-05-24 #}
-{# wf_published_on: 2019-05-23 #}
+{# wf_updated_on: 2019-05-27 #}
+{# wf_published_on: 2019-05-27 #}
 {# wf_tags: chrome76, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
-{# wf_featured_snippet: TODO #}
+{# wf_featured_snippet: Autocomplete with CSS values, a new UI for network settings, and more. #}
 {# wf_blink_components: Platform>DevTools #}
 
 # What's New In DevTools (Chrome 76) {: .page-title }
@@ -28,14 +28,14 @@ for.
   <img src="/web/updates/images/2019/05/values.png"
        alt="After typing 'bold' the Styles pane autocompletes to 'font-weight: bold'."/>
   <figcaption>
-    Figure X. After typing <code>bold</code> the Styles pane autocompletes to 
+    Figure 1. After typing <code>bold</code> the Styles pane autocompletes to 
     <code>font-weight: bold</code>.
   </figcaption>
 </figure>
 
-Chromium issue [#931145](https://crbug.com/931145)
+Send feedback on this new feature to [Chromium issue #931145](https://crbug.com/931145).
 
-## Network settings {: #settings }
+## A new UI for network settings {: #settings }
 
 [settings]: /web/tools/chrome-devtools/images/shared/settings.png
 
@@ -48,19 +48,22 @@ de-clutter the Network panel, a few lesser-used options have been moved behind t
   <img src="/web/updates/images/2019/05/settings.png"
        alt="Network Settings."/>
   <figcaption>
-    Figure X. Network Settings.
+    Figure 2. Network Settings.
   </figcaption>
 </figure>
+
+The following options have moved to **Network Settings**: **Use Large Request Rows**, **Group By Frame**,
+**Show Overview**, **Capture Screenshots**. Figure 3 maps the old locations to the new ones.
 
 <figure>
   <img src="/web/updates/images/2019/05/mapping.png"
        alt="Mapping the old locations to the new."/>
   <figcaption>
-    Figure X. Mapping the old locations to the new.
+    Figure 3. Mapping the old locations to the new.
   </figcaption>
 </figure>
 
-Chromium issue [#892969](https://crbug.com/892969)
+Send feedback on this UI change to [Chromium issue #892969](https://crbug.com/892969).
 
 ## WebSocket messages in HAR exports {: #websocket }
 
@@ -85,7 +88,7 @@ property begins with an underscore to indicate that it's a custom field.
     ]
     ...
 
-Chromium issue [#496006](https://crbug.com/496006)
+Send feedback on this new feature to [Chromium issue #496006](https://crbug.com/496006).
 
 ## HAR import and export buttons {: #HAR }
 
@@ -101,11 +104,11 @@ discoverable buttons are the new change.
   <img src="/web/updates/images/2019/05/har-buttons.png"
        alt="The new HAR buttons."/>
   <figcaption>
-    Figure X. The new HAR buttons.
+    Figure 4. The new HAR buttons.
   </figcaption>
 </figure>
 
-Chromium issue [#904585](https://crbug.com/904585)
+Send feedback on this UI change to [Chromium issue #904585](https://crbug.com/904585).
 
 ## Real-time total memory usage {: #memory }
 
@@ -115,29 +118,16 @@ The Memory panel now shows total memory usage in real-time.
   <img src="/web/updates/images/2019/05/memory.png"
        alt="Real-time total memory usage."/>
   <figcaption>
-    Figure X. The bottom of the Memory panel shows that the page
+    Figure 5. The bottom of the Memory panel shows that the page
     is using <b>43.4 MB</b> of memory in total. <b>209 KB/s</b> indicates that
     total memory usage is increasing 209 KB per second.
   </figcaption>
 </figure>
 
-See also the [Performance Monitor](/web/updates/2017/11/devtools-release-notes#perf-monitor).
+See also the [Performance Monitor](/web/updates/2017/11/devtools-release-notes#perf-monitor) for
+tracking memory usage in real-time.
 
-Chromium issue [#958177](https://crbug.com/958177)
-
-## Puppeteer for Firefox {: #puppeteer }
-
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="YSni7t2ktMA"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-<div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="MbnATLCuKI4"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
+Send feedback on this new feature to [Chromium issue #958177](https://crbug.com/958177).
 
 ## Inspect Background Fetch and Background Sync events {: #background }
 
@@ -151,7 +141,7 @@ Use the new **Background Services** section of the **Application** panel to moni
   <img src="/web/updates/images/2019/05/fetch.png"
        alt="The Background Fetch pane."/>
   <figcaption>
-    Figure X. The Background Fetch pane. <a href="https://background-fetch.glitch.me">Demo</a>
+    Figure 6. The Background Fetch pane. <a href="https://background-fetch.glitch.me">Demo</a>
     by <a href="https://twitter.com/webmaxru">Maxim Salnikov</a>.
   </figcaption>
 </figure>
@@ -160,11 +150,11 @@ Use the new **Background Services** section of the **Application** panel to moni
   <img src="/web/updates/images/2019/05/sync.png"
        alt="The Background Sync pane."/>
   <figcaption>
-    Figure X. The Background Sync pane.
+    Figure 7. The Background Sync pane.
   </figcaption>
 </figure>
 
-Chromium issue [#927726](https://crbug.com/927726)
+Send feedback on these new features to [Chromium issue #927726](https://crbug.com/927726).
 
 ## Service worker registration port numbers {: #ports }
 
@@ -175,28 +165,61 @@ easier to keep track of which service worker you're debugging.
   <img src="/web/updates/images/2019/05/sw-ports.png"
        alt="Service worker ports."/>
   <figcaption>
-    Figure X. Service worker ports.
+    Figure 8. Service worker ports.
   </figcaption>
 </figure>
 
-Chromium issue [#601286](https://crbug.com/601286)
+Send feedback on this UI change to [Chromium issue #601286](https://crbug.com/601286).
 
 ## Portals in the DOM Tree {: #portals }
 
 [portals]: https://web.dev/hands-on-portals
 
-[Portal][portals] nodes now show up in the **DOM Tree** as expected.
+[Portal][portals] nodes now show up in the **DOM Tree**.
 
 <figure>
   <img src="/web/updates/images/2019/05/portals.png"
        alt="A portal node in the DOM Tree."/>
   <figcaption>
-    Figure X. A portal node in the DOM Tree.
+    Figure 9. A portal node in the DOM Tree.
   </figcaption>
 </figure>
 
 Portals are currently only supported in Chrome. Enable the `chrome://flags/#enable-portals`
 experiment and go to [Portals Demo](https://uskay-portals-demo.glitch.me) to try them out.
+
+Send feedback on this new feature to [Chromium issue #947311](https://crbug.com/947311).
+
+## Puppeteer for Firefox {: #puppeteer }
+
+<aside class="note">
+  Puppeteer is a high-level Node API for automating Chromium. We mention Puppeteer in the DevTools 
+  release notes because Puppeteer was started by the DevTools team and because you might be able to
+  use it to automate tasks that were previously only possible in DevTools.
+</aside>
+
+Puppeteer for Firefox is a new experimental project that enables you to automate Firefox with the
+Puppeteer API. In other words, you can now automate Firefox and Chromium with the same Node API,
+as demonstrated in the video below.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="YSni7t2ktMA"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
+After running `node example.js`, Firefox opens and the text `page` is inserted into the 
+search box on Puppeteer's documentation site. Then the same task is repeated in Chromium.
+
+Check out the Puppeteer talk by [Joel](https://twitter.com/joeleinbinder) and
+[Andrey](https://twitter.com/aslushnikov) from Google I/O 2019 to learn more about Puppeteer 
+and Puppeteer for Firefox. The Firefox announcement happens around 4:05.
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="MbnATLCuKI4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 ## Feedback {: #feedback }
 
