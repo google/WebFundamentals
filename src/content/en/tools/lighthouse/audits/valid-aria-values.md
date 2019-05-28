@@ -2,7 +2,7 @@ project_path: /web/tools/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Reference documentation for the "Element aria-* Attributes Have Valid Values" Lighthouse audit.
 
-{# wf_updated_on: 2018-07-23 #}
+{# wf_updated_on: 2019-05-08 #}
 {# wf_published_on: 2017-01-18 #}
 {# wf_blink_components: N/A #}
 
@@ -41,7 +41,7 @@ To find each listed element's invalid attribute values:
 This audit is powered by the aXe Accessibility Engine. See [ARIA attributes
 must conform to valid values][axe] for more information.
 
-[axe]: https://dequeuniversity.com/rules/axe/1.1/aria-valid-attr-value
+[axe]: https://dequeuniversity.com/rules/axe/3.2/aria-valid-attr-value
 
 
 ## Feedback {: #feedback }
