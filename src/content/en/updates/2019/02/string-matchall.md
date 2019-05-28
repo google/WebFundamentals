@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 73 introduces the String.prototype.matchAll() method. It behaves similarly to match(), but offers a simple way to iterate over matches, especially when you need access to capture groups.
 
 {# wf_published_on: 2019-02-07 #}
-{# wf_updated_on: 2019-03-18 #}
+{# wf_updated_on: 2019-05-26 #}
 {# wf_featured_image: /web/updates/images/generic/js.png #}
 {# wf_tags: chrome73,javascript,regex #}
 {# wf_featured_snippet: Chrome 73 introduces the <code>String.prototype.matchAll()</code> method. It behaves similarly to <code>match()</code>, but offers a simple way to iterate over matches, especially when you need access to capture groups. #}
@@ -62,8 +62,8 @@ for (const match of matches) {
 ```
 
 There are a few things to note about this. Unlike `match()` which returns an
-array on a global search, `matchAll()` returns an iterable object that works
-beautifully with `for...of` loops. The iterable object produces an array for
+array on a global search, `matchAll()` returns an iterator that works
+beautifully with `for...of` loops. The iterator produces an array for
 each match, including the capturing groups with a few extras. If you print
 these to the console they'll look like this:
 
@@ -73,7 +73,7 @@ these to the console they'll look like this:
 ```
 
 You may notice that the value for each match is an array in exactly the same
-format returned by `match()` for non-global regular expressions.
+format as returned by `match()` for non-global regular expressions.
 
 ## Bonus material
 
