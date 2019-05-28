@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: In February, we introduced the model-viewer web component which let you declaratively add a 3D model to a web page. Now we're announcing support for AR on Android with the addition of the ar attribute. 
+description: In February, we introduced the model-viewer web component which let you declaratively add a 3D model to a web page. Now we're announcing support for AR on Android with the addition of the ar attribute.
 
-{# wf_updated_on: 2019-05-23 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_published_on: 2019-05-07 #}
 {# wf_tags: 3d,model-viewer,ar,augmented-reality #}
 {# wf_featured_image: /web/updates/images/2019/05/masthead.jpg #}
@@ -16,7 +16,7 @@ component](/web/updates/2019/02/model-viewer),
 which lets you declaratively add a 3D model to a web page, while hosting the
 model on your own site. One thing it didn't support  was augmented reality. That
 is, you could not render the component's source image on top of a device's
-camera feed.  
+camera feed.
 
 To do that, we've since added support for Magic Leap, and Quick Look on iOS. Now
 we're announcing support for AR on Android with the addition of the `ar`
@@ -33,7 +33,7 @@ Let's see how to do augmented reality with `<model-viewer>`.
 A web component, as you may recall, requires no special knowledge to use. It
 behaves like a standard HTML element, having a unique tag as well as properties
 and methods. After
-[installing it with a &lt;script> tag](https://github.com/GoogleWebComponents/model-viewer#installing),
+[installing it with a `<script>` tag](https://github.com/GoogleWebComponents/model-viewer#installing),
 use it like any other HTML element.
 
 ```html
@@ -41,12 +41,12 @@ use it like any other HTML element.
 ```
 
 This looks much the same as what I had in my earlier article. Notice the thing
-I've highlighted at the very end. That's the new attribute. 
+I've highlighted at the very end. That's the new attribute.
 
 ## Installing the new version
 
 If you're using `<model-viewer>` already, you're probably importing the component
-using the &lt;script> tags exactly
+using the `<script>` tags exactly
 [as shown in the documentation](https://googlewebcomponents.github.io/model-viewer/).
 We're continually making improvements. If you want to test new features before
 deliberately upgrading and deploying, you'll want to install a specific version
@@ -56,7 +56,7 @@ below. Then, watch
 for updates.
 
 ```html
-<script type="module" 
+<script type="module"
   src="https://unpkg.com/@google/model-viewer@0.3.1/dist/model-viewer.js">
 </script>
 
