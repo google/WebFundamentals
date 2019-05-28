@@ -42,7 +42,7 @@ When you physically follow along, you're more likely to remember the workflows l
      </figure>
 
 1. Focus the demo and then press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kdb>J</kbd> or
-   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kdb>J</kbd> (Mac) to open DevTools. By default DevTools opens to the
+   <kbd>Command</kbd>+<kbd>Option</kbd>+<kdb>J</kbd> (Mac) to open DevTools. By default DevTools opens to the
    right of the demo.
 
      <figure>
