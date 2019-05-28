@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A quick overview of paint holding. A Chrome feature for reducing the flash of white on same-origin navigations
 
-{# wf_updated_on: 2019-05-06 #}
+{# wf_updated_on: 2019-05-24 #}
 {# wf_published_on: 2019-05-06 #}
 {# wf_tags: performance, chrome76 #}
 {# wf_blink_components: Blink,Internals>Network #}
@@ -31,7 +31,7 @@ poster="../../images/2019/05/paint-holding-poster.jpg">
 
 We are big fans of this website and it kills us that their quality experience
 has a flash of white, and we wanted to fix it. We did so with a new behavior
-that were calling Paint Holding, where the browser waits briefly before
+that we're calling Paint Holding, where the browser waits briefly before
 starting to paint, especially if the page is fast enough. This ensures that the
 page renders as a whole delivering a truly instant experience.
 
@@ -42,7 +42,7 @@ distinguish between main-thread rendering work and commit to the impl thread
 flashes of white/solid-color.
 
 Our goal with this work was for navigations in Chrome between two pages that
-are of the same origin should have a seamless and fast default navigation
+are of the same origin to be seamless and thus deliver a fast default navigation
 experience with no flashes of white/solid-color background between old and new
 content.
 
