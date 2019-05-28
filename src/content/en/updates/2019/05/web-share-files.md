@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device.
 
 {# wf_published_on: 2019-05-02 #}
-{# wf_updated_on: 2019-05-25 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_featured_image: /web/updates/images/generic/share.png #}
 {# wf_tags: capabilities,sharing,chrome75 #}
 {# wf_featured_snippet: Chrome 75 introduces file sharing from a web app, which lets your web app can share with virtually anything on a user's device. #}
@@ -43,7 +43,7 @@ you, check out the links above or [the demo](http://wicg.github.io/web-share/dem
 
 If you're familiar with the earlier API, you're used to doing feature detection
 by testing for `navigator.share()`. With files it's more complicated. You need
-to know whether the file a user is sharing is sharable on the current system. To
+to know whether the file a user is sharing is shareable on the current system. To
 find out, you test for the presence of `navigator.canShare()`, and if present,
 you call it with a reference to the files you want to share. 
 
