@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Stylus-based drawing applications built for the web suffer from latency issues because a web page has to synchronize graphics updates with the DOM. The desynchronized hint for contexts bypasses the DOM to eliminate the latency.
 
-{# wf_updated_on: 2019-05-02 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_published_on: 2019-05-02 #}
 {# wf_tags: chrome75 #}
 {# wf_featured_image: /web/updates/images/2019/05/latency.png #}
@@ -149,7 +149,7 @@ context with alpha equal to true is never created.
 ## Supported canvas types
 
 The first parameter passed to `getContext()` is the `contextType`. If you're
-already familliar with `getContext()` you're no doubt wondering if anything
+already familiar with `getContext()` you're no doubt wondering if anything
 other than '2d' context types are supported. The table below shows the context
 types that support `desynchronized`.
 
