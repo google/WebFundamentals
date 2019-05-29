@@ -3,7 +3,7 @@ description: Workbox is a set of service worker libraries that making build prog
 home_url: /web/tools/workbox/
 buganizer_id: 180451
 color: orange
-content_license: cc3-apache2
+content_license: cc-apache
 footer_path: /web/tools/workbox/_footer.yaml
 google_analytics_ids:
   - UA-52746336-1
