@@ -31,7 +31,7 @@ const SCHEMA_PROJECT = {
     buganizer_id: {type: 'number', pattern: /^180451$/, required: true},
     content_license: {
       type: 'string',
-      pattern: /^cc3-apache2$/,
+      pattern: /^cc-apache$/,
       required: true,
     },
     announcement: {

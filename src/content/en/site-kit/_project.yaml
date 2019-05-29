@@ -4,7 +4,7 @@ description: Set up the Site Kit plugin for your WordPress site by obtaining cre
 home_url: /web/site-kit/
 buganizer_id: 488674
 color: google-blue
-content_license: cc3-apache2
+content_license: cc-apache
 footer_path: /web/site-kit/_footer.yaml
 icon:
   path: 'https://www.gstatic.com/images/branding/product/1x/googleg_64dp.png'
