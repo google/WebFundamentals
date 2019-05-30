@@ -130,7 +130,7 @@ description:使用 Chrome DevTools CPU 分析器识别开销大的函数。
 *  **Total time**。完成此函数和其调用的任何函数当前的调用所需的时间。
 *  **URL**。形式为 `file.js:100` 的函数定义的位置，其中 `file.js` 是定义函数的文件名称，`100` 是定义的行号。
 *  **Aggregated self time**。记录中函数所有调用的总时间，不包含此函数调用的函数。
-*  **Aggregated total time**。函数所有调用的总时间，不包含此函数调用的函数。
+*  **Aggregated total time**。函数所有调用的总时间，包含此函数调用的函数。
 *  **Not optimized**。如果分析器已检测出函数存在潜在的优化，会在此处列出。
 
 
