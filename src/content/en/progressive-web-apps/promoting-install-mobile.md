@@ -84,7 +84,7 @@ header content often includes site branding such as a logo and the hamburger
 menu.  Headers may be `position:fixed` or not depending on your site’s
 functionality and user needs.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/header.png">
 
 When used appropriately, promoting PWA install from the header of your site
 is a great way to make it easier for your most loyal customers to return to
@@ -107,7 +107,7 @@ Make sure you:
 
 Add an install button/promotion in a slide out navigation menu.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/nav.png">
 
 The navigation menu is a great place for promoting the installation of your
 app since users who open the menu are signaling engagement with your
@@ -128,7 +128,7 @@ The purpose of a landing page is to promote your products & services, so
 this is one place where it can be appropriate to go large with promoting
 the benefits of installing your PWA.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/landing.png">
 
 First, explain your site’s value proposition, then let visitors know what
 they’ll get from installation.
@@ -148,7 +148,7 @@ Make sure you:
 
 A dismissible banner at the top of the page.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/banner.png">
 
 Most users have encountered install banners in mobile experiences and are
 familiar with the interactions offered by a banner. Banners should be used
@@ -180,7 +180,7 @@ but not so much that it detracts from the quality of your user experience.
 An in-feed install promotion appears between news articles or other lists
 of information cards in your PWA.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/in-feed.png">
 
 Your goal is to show users how to access the content they’re enjoying more
 conveniently. Focus on promoting features and functionality that will be
@@ -201,7 +201,7 @@ booking or checkout flows.  If you’re displaying the promotion after the user
 has completed the journey, you can often make it more prominent since the
 journey is completed.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/journey.png">
 
 Make sure you:
 
@@ -222,7 +222,7 @@ Make sure you:
 This promotion is a special case of the [journey](#journey) promotional
 pattern where the promotion card can be a more prominent.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/sign-up.png">
 
 These pages are usually only viewed by engaged users, where the value
 proposition of your PWA has already been established.  There’s also often
@@ -265,7 +265,7 @@ Patterns that work well for eCommerce PWAs include:
 This is a special case of the in-feed install promotional pattern, where the
 feed is products or category listings.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/plp.png">
 
 Make sure you:
 
@@ -325,10 +325,12 @@ Patterns that work well for PWA games include:
 
 This is really just a special case of the [inline journey](#journey) UI pattern.
 
-<img class="attempt-right" src="https://via.placeholder.com/500x700">
+<img class="attempt-right" src="/web/progressive-web-apps/images/install-promo/game-over.png">
 
 Most casual and hyper casual games end quickly. If your users are enjoying the
 game, this is a great chance to invite them to install.
+
+<div class="clearfix"></div>
 
 [a2hs-criteria]: /web/fundamentals/app-install-banners/
 [mini-infobar-control]: /web/updates/2019/05/mini-infobar-update
