@@ -19,7 +19,8 @@ If your PWA has use cases where it’s helpful for a user to install your app,
 for example if you have users who use your app more than once a week, you
 should be promoting installation of your PWA within the web UI of your app.
 
-<img class="attempt-right" src="/web/fundamentals/app-install-banners/images/install-promo/in-feed.png">
+<img class="attempt-right"
+     src="/web/fundamentals/app-install-banners/images/install-promo/in-feed.png">
 
 **But how should you notify the user that your PWA can be installed?**
 
