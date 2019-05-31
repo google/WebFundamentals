@@ -150,7 +150,7 @@ Send feedback on this UI change to [Chromium issue #601286](https://crbug.com/60
 [sync]: /web/updates/2015/12/background-sync
 
 Use the new **Background Services** section of the **Application** panel to monitor
-[Background Fetch][fetch] and [Background Sync][sync] events. You can continue recording these events even after you close DevTools.
+[Background Fetch][fetch] and [Background Sync][sync] events. You can continue recording these events after you close DevTools and even after the browser restarts.
 
 <figure>
   <img src="/web/updates/images/2019/05/fetch.png"
