@@ -79,6 +79,9 @@ include:
 {"default_applications": ["https://bobpay.com/bobpay-app.json"]}
 ```
 
+Note: The origin of `default_applications` must be the same origin as the
+payment method manifest URL.
+
 The browser then downloads `https://bobpay.com/bobpay-app.json` and verifies the
 installed app against the version and signatures in it. The requirements for
 this verification are that all downloads must be over HTTPS, HTTP response codes
