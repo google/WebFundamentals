@@ -12,8 +12,6 @@ upper_tabs:
         contents:
         - title: Overview
           path: /web/progressive-web-apps/
-        - title: Patterns for Promoting PWA Installation (mobile)
-          path: /web/progressive-web-apps/promoting-install-mobile
         - title: PWAs on Desktop
           path: /web/progressive-web-apps/desktop
         - title: Progressive Web App Checklist
