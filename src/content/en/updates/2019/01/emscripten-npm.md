@@ -305,7 +305,7 @@ commands `emconfigure` and `emmake`:
     echo "============================================="
     # ... below is unchanged ...
 
-Note: Some projects provid a `--host` flag (or similar; libvpx uses non-standard
+Note: Some projects provide a `--host` flag (or similar; libvpx uses non-standard
 `--target`) to build for a specific processor architecture. This will often pull
 in assembler code that takes advantage of features specific to that architecture
 and can't be compiled to WebAssembly. If a flag like that is present (check with
