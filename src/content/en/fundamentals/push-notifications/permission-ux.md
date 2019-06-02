@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
 {# wf_blink_components: Blink>PushAPI #}
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-02 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Permission UX {: .page-title }
@@ -115,7 +115,7 @@ Clicking on the checkbox displays the permission prompt. No hidden surprises.
 
 ![Google IO's web app displaying the permission prompt.](./images/ux-examples/google-io/google-io-permission-prompt.png){: .device-image .center-image }
 
-After the permission has been granted the checkbox is checked and the user
+After the permission has been granted, the checkbox is checked and the user
 is good to go. The great thing about this UI is that users can enable and
 disable notifications from one location on the website.
 
@@ -131,7 +131,7 @@ website. For sites like blogs that might have some regular viewers as well
 as high bounce rates, this is a solid option as it targets regular viewers
 without annoying drive-by visitors.
 
-On my personal site I have a toggle switch for push messaging in the footer.
+On my personal site, I have a toggle switch for push messaging in the footer.
 
 ![Example of Gauntface.com push notification toggle in
 footer.](./images/ux-examples/gauntface/gauntface-intro.png)
@@ -151,7 +151,7 @@ enabled.](./images/ux-examples/gauntface/gauntface-enabled.png)
 Those are some of the common practices I've noticed on the web. Sadly, there is one very common
 bad practice.
 
-The worst thing you can do is instantly show the permission dialog to users as soon as they
+The worst thing you can do is to show the permission dialog to users as soon as they
 land on your site.
 
 They have zero context on why they are being asked for a permission, they may
@@ -160,8 +160,8 @@ permissions at this point out of frustration is not uncommon, this pop-up is
 getting in the way of what they are trying to do.
 
 Remember, if the user *blocks* the permission request, your web app can't ask for permission
-again. To get permission after being blocked the user has to change the permission in the
-browsers UI and doing so is not easy, obvious or fun for the user.
+again. To get permission after being blocked, the user has to change the permission in the
+browser's UI and doing so is not easy, obvious or fun for the user.
 
 No matter what, don't ask for permission as soon as the user opens your site, consider some
 other UI or approach that has an incentive for the user to grant permission.
@@ -171,8 +171,8 @@ other UI or approach that has an incentive for the user to grant permission.
 In addition to considering the UX to subscribe a user to push, **please** consider how a user
 should unsubscribe or opt out of push messaging.
 
-The number of sites that ask for permission as soon as the page load and then
-offers no UI for disabling push notifications is astounding.
+The number of sites that ask for permission as soon as the page loads and then
+offer no UI for disabling push notifications is astounding.
 
 
 
