@@ -78,7 +78,7 @@ to their home screen.
 
 There are many different [patterns][install-patterns-mobile] that you can
 use to notify the user your app can be installed and promote the installation,
-for example, a button in the header, an item in the navigation menu, or as an
+for example, a button in the header, an item in the navigation menu, or an
 item in your content feed.
 
 <pre class="prettyprint">
