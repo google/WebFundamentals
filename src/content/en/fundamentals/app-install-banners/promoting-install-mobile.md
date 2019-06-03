@@ -260,7 +260,7 @@ Make sure you:
 ### eCommerce
 
 Many eCommerce brands have a core group of loyal customers. These customers
-want push notifications for early access to new collection and to know when
+want push notifications for early access to new collections and to know when
 their items have shipped. They want the app on their home screen for quick
 access to the catalog and a full screen experience.
 
