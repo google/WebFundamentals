@@ -12,7 +12,7 @@ description: How to promote installation of Progressive Web Apps and best practi
 
 Progressive Web Apps (PWAs) are a [pattern](/web/progressive-web-apps/) for
 creating app-like, instant loading, reliable and installable websites.
-Although PWAs are available for all screens, including
+Although PWAs are available for all devices, including
 [Desktop](/web/progressive-web-apps/desktop), this article focuses on mobile
 PWA install promotion patterns.
 
