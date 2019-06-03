@@ -9,7 +9,7 @@ description: How to promote installation of Progressive Web Apps and best practi
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
 {# wf_featured_snippet: If your PWA has use cases where it’s helpful for a user to install your app, for example if you have users who use your app more than once a week, you should be promoting the installation of your PWA within the web UI of your app. We have new recommendations on how you can promote the installation of your app. #}
 
-# How do I notify users my PWA is installable? {: .page-title }
+# How do I notify users that my PWA is installable? {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
