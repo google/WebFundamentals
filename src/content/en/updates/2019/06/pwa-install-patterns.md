@@ -7,7 +7,7 @@ description: How to promote installation of Progressive Web Apps and best practi
 {# wf_tags: addtohomescreen,android,progressive-web-apps,install #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 {# wf_featured_image: /web/updates/images/generic/thumbs-up.png #}
-{# wf_featured_snippet: If your PWA has use cases where it’s helpful for a user to install your app, for example if you have users who use your app more than once a week, you should be promoting installation of your PWA within the web UI of your app. We have new recommendations on how you can promote the installation of your app. #}
+{# wf_featured_snippet: If your PWA has use cases where it’s helpful for a user to install your app, for example if you have users who use your app more than once a week, you should be promoting the installation of your PWA within the web UI of your app. We have new recommendations on how you can promote the installation of your app. #}
 
 # How do I notify users my PWA is installable? {: .page-title }
 
