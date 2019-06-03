@@ -29,7 +29,7 @@ of recommended patterns and best practices that you can use to promote the
 installation of your Progressive Web App.
 
 It includes patterns for notifying users within the core UI of your app,
-embedding it within content, or letting the browser notify the user. And,
+within your app's content, or just letting the browser notify the user. And,
 it includes recommendations on how to place the notification for different
 types of apps.
 
