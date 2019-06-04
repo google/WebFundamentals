@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 page_type: landing
 
-{# wf_updated_on: 2018-08-05 #}
+{# wf_updated_on: 2019-05-28 #}
 {# wf_published_on: 2016-09-27 #}
 {# wf_blink_components: Blink>DOM #}
 
@@ -133,7 +133,7 @@ page_type: landing
 
 <section class="wf-hot devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards">
   <div class="devsite-landing-row-group">
-    <div class="devsite-landing-row-item" id="fast">
+    <div class="devsite-landing-row-item" id="web-components">
       <figure class="devsite-landing-row-item-image">
         <img src="images/web-comp.png">
       </figure>
@@ -148,7 +148,7 @@ page_type: landing
       </div>
     </div>
     <!-- -->
-    <div class="devsite-landing-row-item" id="integrated">
+    <div class="devsite-landing-row-item" id="payments">
       <figure class="devsite-landing-row-item-image">
         <img src="images/pay-req.png">
       </figure>
@@ -163,7 +163,7 @@ page_type: landing
       </div>
     </div>
     <!-- -->
-    <div class="devsite-landing-row-item" id="fast">
+    <div class="devsite-landing-row-item" id="credential-management">
       <figure class="devsite-landing-row-item-image">
         <img src="images/cred-mgt.png">
       </figure>
