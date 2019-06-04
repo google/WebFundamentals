@@ -129,7 +129,7 @@ You are welcome to [add your own tool to this list][doc]{:.external}.
 Caution: None of these tools have been vetted. Make sure to do your own due diligence.
 
 * [loadCSS](https://github.com/filamentgroup/loadCSS){: .external }
-* [asyncCSS](https://github.com/style-tools/async-css/wiki/Defer-Unused-CSS-for-Google-Lighthouse-Optimization){: .external }
+* [$async](https://github.com/style-tools/async/){: .external }
 
 ## More information {: #more-info }
 
