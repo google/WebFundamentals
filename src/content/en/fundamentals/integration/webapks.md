@@ -188,7 +188,8 @@ Icons may be [cached](/web/fundamentals/performance/optimizing-content-efficienc
 so it may be helpful to change the filenames when updating icons or other
 graphics.
 
-Note: The previous interval was 3 days, and was changed to 1 day in Chrome XX.
+Note: The update interval was reduced to 1 day (from 3 days) in Chrome 76.
+
 
 ## Frequently asked questions
 
