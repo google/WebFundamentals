@@ -4,7 +4,7 @@ description: What's New in Chrome 75 for developers?
 
 {# wf_published_on: 2019-06-04 #}
 {# wf_updated_on: 2019-06-04 #}
-{# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
+{# wf_featured_image: /web/updates/images/2019/06/nic075.jpg #}
 {# wf_tags: chrome75,new-in-chrome,canvas,performance,google-io,graphics,sharing #}
 {# wf_featured_snippet: Chrome 75 is rolling out now. There’s a new way to reduce latency on <code>canvas</code> elements. Web apps can now share files to other installed apps using the system level share sheet. All of talks from Google I/O are on our YouTube channel. And plenty more. Let’s dive in and see what’s new for developers in Chrome 75! #}
 {# wf_blink_components: N/A #}
@@ -16,7 +16,7 @@ description: What's New in Chrome 75 for developers?
 <div class="clearfix"></div>
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="TODO"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="_BtaAIhC2UU"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
@@ -45,7 +45,7 @@ additional changes in Chrome 75.
 * [Chrome 75 deprecations & removals](/web/updates/2019/05/chrome-75-deps-rems)
 * [ChromeStatus.com updates for Chrome 75](https://www.chromestatus.com/features#milestone%3D75)
 * [What's new in JavaScript in Chrome 75](https://v8.dev/blog/v8-release-75)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/74.0.3729.108..75.0.TODO.108)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/74.0.3729.108..75.0.3770.67)
 
 ## Hint for low latency `canvas` contexts {: #desync }
 
