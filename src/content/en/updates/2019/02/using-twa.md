@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Trusted Web activities are a new way to integrate your web-app content such as your PWA with your Android app using a similar protocol to Chrome Custom Tabs.
 
-{# wf_updated_on: 2019-02-12 #}
+{# wf_updated_on: 2019-05-29 #}
 {# wf_published_on: 2019-02-06 #}
 {# wf_tags: trusted-web-activity,chrome72 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
@@ -403,7 +403,22 @@ and serve it from your domain, from the URL `/.well-known/assetlinks.json`.
 Note: The `AssetLinks` file must be under `/.well-known/assetlinks.json`, at the
 root of the domain, as that's only the place Chrome will look for it.
 
-### Wrapping Up
+
+### Creating an Icon
+
+When Android Studio creates a new project, it will come with a default Icon.
+As a developer, you will want to create your own icon and differentiate your
+application from others on the Android Launcher.
+
+Android Studio contains the [Image Asset Studio](https://developer.android.com/studio/write/image-asset-studio),
+which provides the tools necessary to create the correct icons, for every
+resolution and shape your application needs.
+
+Inside Android Studio, navigate to `File > New > Image Asset`, select
+`Launcher Icons (Adaptative and Legacy)` and follow the steps from the Wizard.
+to create a custom icon for the application.
+
+### Generating a signed APK
 
 With the `assetlinks` file in place in your domain and the `asset_statements` tag
 configured in the Android application, the next step is generating a signed app.
