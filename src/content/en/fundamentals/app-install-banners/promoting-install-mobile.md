@@ -49,6 +49,8 @@ your site.
 3. Combine more than one of these techniques in different parts of your PWA,
    but be careful not to overwhelm or annoy your user with install promotion.
    Remember rule #1!
+4. Only show the promotion when you [detect][beforeinstallprompt-event]
+   that the `beforeinstallprompt` event has been fired.
 
 ## Automatic browser promotion
 
@@ -109,6 +111,9 @@ Make sure you:
   to offer your user in the header, and weigh the priority of the install
   promotion relative to other options.
 
+
+[beforeinstallprompt-event]: /web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt
+
 <div class="clearfix"></div>
 
 ### Navigation menu {: #nav }
@@ -163,7 +168,7 @@ A dismissible banner at the top of the page.
 
 Most users have encountered install banners in mobile experiences and are
 familiar with the interactions offered by a banner. Banners should be used
-carefully because they can be very disruptive toof the user experience.
+carefully because they can be very disruptive to the user experience.
 
 Make sure you:
 
@@ -230,7 +235,7 @@ Make sure you:
 
 <div class="clearfix"></div>
 
-### Sign up or sign out flow {: #sign-up }
+### Sign up, sign in, or sign out flow {: #sign-up }
 
 This promotion is a special case of the [journey](#journey) promotional
 pattern where the promotion card can be a more prominent.
