@@ -134,7 +134,7 @@ Try the [demo][file-share-demo] and check out the article
 [Share files with Web Share][web-share-files] for complete details.
 
 [web-share-files]: /web/updates/2019/05/web-share-files
-[file-share-demo]: http://wicg.github.io/web-share/demos/share-files.html
+[file-share-demo]: https://wicg.github.io/web-share/demos/share-files.html
 [web-share-ok]: https://docs.google.com/document/d/1tKPkHA5nnJtmh2TgqWmGSREUzXgMUFDL6yMdVZHqUsg/edit
 
 <div class="clearfix"></div>
