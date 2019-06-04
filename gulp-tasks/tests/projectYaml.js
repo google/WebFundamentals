@@ -10,7 +10,7 @@ const JSONValidator = require('jsonschema').Validator;
 
 const VALID_ANALYTICS_UA_STRINGS = [
   'UA-52746336-1',
-  'UA-130569087-4',
+  'UA-130569087-3',
 ];
 
 JSONValidator.prototype.customFormats.wfUAString = function(input) {
