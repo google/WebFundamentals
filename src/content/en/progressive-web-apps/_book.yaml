@@ -12,7 +12,7 @@ upper_tabs:
         contents:
         - title: Overview
           path: /web/progressive-web-apps/
-        - title: Desktop PWAs
+        - title: PWAs on Desktop
           path: /web/progressive-web-apps/desktop
         - title: Progressive Web App Checklist
           path: /web/progressive-web-apps/checklist

@@ -2,7 +2,7 @@ project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Add to Home Screen gives you the ability to let users quickly and seamlessly add your web app to their home screens without leaving the browser.
 
-{# wf_updated_on: 2019-03-19 #}
+{# wf_updated_on: 2019-06-04 #}
 {# wf_published_on: 2014-12-16 #}
 {# wf_blink_components: Platform>Apps>AppLauncher>Install #}
 
@@ -10,8 +10,12 @@ description: Add to Home Screen gives you the ability to let users quickly and s
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
+**If your PWA has use cases where it’s helpful for a user to install
+your app, for example if you have users who use your app more than once a
+week, you should be promoting the installation of your PWA within the web UI of
+your app.**
 
-**Add to Home Screen**, sometimes referred to as the web app install prompt,
+Add to Home Screen, sometimes referred to as the web app install prompt,
 makes it easy for users to install your Progressive Web App on their mobile
 or [desktop device](/web/progressive-web-apps/desktop). After the user
 accepts the prompt, your PWA will be added to their launcher, and it will run
@@ -51,9 +55,6 @@ In order to show the Add to Home Screen dialog, you need to:
 
 <div class="clearfix"></div>
 
-Note: Chrome 67 and earlier showed an "Add to home screen" banner. It
-was removed in Chrome 68.
-
 ### Listen for `beforeinstallprompt`
 
 If the add to home screen [criteria](#criteria) are met, Chrome will fire a
@@ -75,9 +76,10 @@ to their home screen.
 
 ### Notify the user your app can be installed
 
-The best way to notify the user your app can be installed is by adding a button
-or other element to your user interface. **Don't show a full page interstitial
-or other elements that may be annoying or distracting.**
+There are many different [patterns][install-patterns-mobile] that you can
+use to notify the user your app can be installed and promote the installation,
+for example, a button in the header, an item in the navigation menu, or an
+item in your content feed.
 
 <pre class="prettyprint">
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -90,10 +92,16 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 </pre>
 
-Success: you may want to wait before showing the prompt to the user,
+Note: See [Patterns for Promoting PWA Installation][install-patterns-mobile]
+for recommended patterns and best practices for notifying the user your PWA is
+installable.
+
+You may want to wait before showing the prompt to the user,
 so you don't distract them from what they're doing. For example, if the user
 is in a check-out flow, or creating their account, let them complete that
 before interrupting them with the prompt.
+
+[install-patterns-mobile]: /web/fundamentals/app-install-banners/promoting-install-mobile
 
 ### Show the prompt
 

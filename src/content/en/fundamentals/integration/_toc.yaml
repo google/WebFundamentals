@@ -8,6 +8,8 @@ toc:
       path: /web/fundamentals/app-install-banners/
     - title: App Install Prompt (Native)
       path: /web/fundamentals/app-install-banners/native
+    - title: Patterns for Promoting PWA Installation (mobile)
+      path: /web/fundamentals/app-install-banners/promoting-install-mobile
     - title: Additional Colors and Icons
       path: /web/fundamentals/design-and-ux/browser-customization/
   - include: /web/fundamentals/native-hardware/_toc.yaml
