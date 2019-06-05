@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2018-09-20 #}
+{# wf_updated_on: 2019-06-05 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
@@ -31,7 +31,7 @@ On Mac OS X, you can tell if a program is running or not by a marking
 under the app icon in the dock.
 
 If you compare the two Chrome icons in the following dock, the one on the left
-is running, illustrated by the marking under the icon, whereas the Chrome
+is running, as illustrated by the marking under the icon, whereas the Chrome
 on the right is **not running**, hence the lack of the marking underneath.
 
 ![Example of OS X](./images/faq/os-x-dock.png){: .center-image }
@@ -42,7 +42,7 @@ when the browser is running, i.e. has the marking underneath the icon.
 This means the browser can have no windows open, and you'll still receive the push message in
 your service worker, because the browser in running in the background.
 
-The only time a push won't be received is if the browser is completely closed, i.e. not running
+The only time a push won't be received is when the browser is completely closed, i.e. not running
 at all (no marking). The same applies for Windows, although it's a little trickier to determine
 whether or not Chrome is running in the background.
 
@@ -118,16 +118,16 @@ it as a sign that it's either old content OR it's focusing too much on Chrome. (
 doing this in a number of old posts.)
 
 Instead, think of web push as consisting of a browser, which uses a push service to manage
-sending and receiving message, where the push service will accept a "web push protocol"
+sending and receiving messages, where the push service will accept a "web push protocol"
 request. If you think in these terms, you can ignore which browser and which push service it's
 using and get to work.
 
-This book has been written to focus on the standards approach of web push and
+This guide has been written to focus on the standards approach of web push and
 purposefully ignores anything else.
 
 ## Firebase has a JavaScript SDK. What and Why?
 
-For those of you who have found the Firebase web SDK and noticed is has a messaging API for
+For those of you who have found the Firebase web SDK and noticed it has a messaging API for
 JavaScript, you may be wondering how it differs from web push.
 
 The messaging SDK (known as Firebase Cloud Messaging JS SDK) does a few tricks behind the
@@ -137,16 +137,16 @@ scenes to make it easier to implement web push.
 you only need to worry about an FCM Token (a string).
 - Using the tokens for each user, you can use the proprietary FCM API to
 trigger push messages. This API doesn't require encrypting payloads. You
-can send a plain test payload in a POST request body.
+can send a plain text payload in a POST request body.
 - FCM's proprietary API supports custom features, for example
 [FCM Topics](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging)
 (It works on the web too, though it's poorly documented).
-- Finally FCM supports Android, iOS and web, so for some teams it is
+- Finally, FCM supports Android, iOS and web, so for some teams it is
 easier to work with in existing projects.
 
 This uses web push behind the scenes, but its goal is to abstract it away.
 
-Like I said in the previous question, if you consider web push as just a browser and push
+Like I said in the previous question, if you consider web push as just a browser and a push
 service, then you can consider the Messaging SDK in Firebase as a library to simplify
 implementing web push.
 
