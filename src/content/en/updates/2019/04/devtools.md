@@ -17,6 +17,14 @@ description: Meaningful autocomplete preset values, clear site data from the Com
 
 Hello! Here's what's new in [Chrome DevTools](/web/tools/chrome-devtools/) in Chrome 75.
 
+## Video version of this page {: #video }
+
+<div class="video-wrapper-full-width">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="6zKPwOMFsa4"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 ## Meaningful preset values when autocompleting CSS functions {: #presets }
 
 Some CSS properties, like [`filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter){: .external },
