@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Autocomplete with CSS values, a new UI for network settings, and more.
 
-{# wf_updated_on: 2019-05-28 #}
+{# wf_updated_on: 2019-06-05 #}
 {# wf_published_on: 2019-05-28 #}
 {# wf_tags: chrome76, devtools, devtools-whatsnew #}
 {# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
@@ -150,7 +150,17 @@ Send feedback on this UI change to [Chromium issue #601286](https://crbug.com/60
 [sync]: /web/updates/2015/12/background-sync
 
 Use the new **Background Services** section of the **Application** panel to monitor
-[Background Fetch][fetch] and [Background Sync][sync] events. You can continue recording these events after you close DevTools and even after the browser restarts.
+[Background Fetch][fetch] and [Background Sync][sync] events. Given that Background Fetch
+and Background Sync events occur in the... well... background, it wouldn't be very useful if
+DevTools only recorded Background Fetch and Background Sync events while DevTools was open. 
+So, once you start recording, Background Fetch and Background Sync events will continue to 
+be recorded, even after you close the tab, and even after you close Chrome.
+
+[record]: /web/tools/chrome-devtools/images/shared/record.png
+
+Go to the **Application** panel, open the **Background Fetch** or **Background Sync** tab,
+then click **Record** ![Record][record]{: .inline-icon } to start logging events. Click an
+event to view more information about it.
 
 <figure>
   <img src="/web/updates/images/2019/05/fetch.png"
