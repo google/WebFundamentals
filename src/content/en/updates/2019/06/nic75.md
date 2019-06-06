@@ -94,7 +94,7 @@ The [web share API](/web/updates/2016/09/navigator-share) allows you to plug
 into the share service provided by the OS, making it easy to share web pages
 and apps with other installed apps on the users device.
 
-In Chrome 75, the Web Share API now supports the sharing file of files! I’m
+In Chrome 75, the Web Share API now supports the sharing of files! I’m
 particularly excited about this because it makes it way easier for apps to
 share photos, videos and more. Squoosh is adding support for this to share a
 file once you’ve finished compressing it. The Web Share API currently supports
