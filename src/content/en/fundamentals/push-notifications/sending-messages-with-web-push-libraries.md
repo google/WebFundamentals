@@ -1,7 +1,7 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-06-03 #}
+{# wf_updated_on: 2019-06-06 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 # Sending Messages with Web Push Libraries {: .page-title }
@@ -231,10 +231,11 @@ provided subscription.
     const triggerPushMsg = function(subscription, dataToSend) {
       return webpush.sendNotification(subscription, dataToSend)
       .catch((err) => {
-        if (err.statusCode === 410) {
+        if (err.statusCode === 404 || err.statusCode === 410) {
+          console.log('Subscription has expired or is no longer valid: ', err);
           return deleteSubscriptionFromDatabase(subscription._id);
         } else {
-          console.log('Subscription is no longer valid: ', err);
+          throw err;
         }
       });
     };
@@ -251,6 +252,9 @@ messages vary between push services and some are more helpful than others.
 In this example, it checks for status codes `404` and `410`, which are the HTTP status codes for
 'Not Found' and 'Gone'. If we receive one of these, it means the subscription has expired
 or is no longer valid. In these scenarios, we need to remove the subscriptions from our database.
+
+In case of some other error, we just `throw err`, which will make the promise returned by
+`triggerPushMsg()` reject.
 
 We'll cover some of the other status codes in the next section when we look at the web push
 protocol in more detail.
