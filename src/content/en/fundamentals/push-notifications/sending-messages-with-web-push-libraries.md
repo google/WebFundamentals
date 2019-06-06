@@ -232,7 +232,7 @@ provided subscription.
       return webpush.sendNotification(subscription, dataToSend)
       .catch((err) => {
         if (err.statusCode === 404 || err.statusCode === 410) {
-          console.error('Subscription has expired or is no longer valid: ', err);
+          console.log('Subscription has expired or is no longer valid: ', err);
           return deleteSubscriptionFromDatabase(subscription._id);
         } else {
           throw err;
