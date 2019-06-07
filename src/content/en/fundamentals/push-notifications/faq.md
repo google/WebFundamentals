@@ -1,15 +1,13 @@
 project_path: /web/fundamentals/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2019-06-05 #}
+{# wf_updated_on: 2019-06-06 #}
 {# wf_published_on: 2016-06-30 #}
 {# wf_blink_components: Blink>PushAPI #}
 
 # FAQ {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
-
-
 
 ## Why doesn't push work when the browser is closed?
 
@@ -72,7 +70,7 @@ fairly regularly, your notifications will open in the normal browser UI.
 
 This issue will be worked on further.
 
-**Note:** This is just the behavior of Chrome, though other browsers may do different things as well.
+Note: This is just the behavior of Chrome, though other browsers may do different things as well.
 Feel free to [raise an issue](https://github.com/gauntface/web-push-book/issues) if you have
 anything to add to this discussion.
 
@@ -87,7 +85,8 @@ web page is kept open.
 This question has a number of facets to it and the easiest way to explain is to
 step through the history of web push and Chrome. (Don't worry, it's short.)
 
-##### December 2014
+### December 2014
+
 When Chrome first implemented web push, Chrome used Google Cloud Messaging (GCM)
 to power the sending of push messages from the server to the browser.
 
@@ -99,7 +98,8 @@ This **was not web push**. There are a few reasons this early set-up of Chrome a
 messaging correctly.
 - GCM's servers accepted a custom API request that wasn't a web standard.
 
-##### July 2016
+### July 2016
+
 In July a new feature in web push landed - Application Server Keys (or VAPID, as
 the spec is known). When Chrome added support for this new API, it used Firebase
 Cloud Messaging (also known as FCM) instead of GCM as a messaging service. This
@@ -111,7 +111,8 @@ or Firebase. It'll just work.
 support. This means that regardless of what push service a browser uses, you just make the same
 kind of request and it'll send the message.
 
-##### Why is it confusing today?
+### Why is it confusing today?
+
 There is a large amount of confusion now that content has been written on the topic of web
 push, much of which references GCM or FCM. If content references GCM, you should probably treat
 it as a sign that it's either old content OR it's focusing too much on Chrome. (I'm guilty of
