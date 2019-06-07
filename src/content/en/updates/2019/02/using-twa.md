@@ -11,15 +11,13 @@ description: Trusted Web activities are a new way to integrate your web-app cont
 
 # Using Trusted Web Activities {: .page-title }
 
-_Last updated: February 6th, 2019_
-
+_Last updated: June 7th, 2019_
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="6lHBw3F4cWs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-
 
 **Trusted Web Activities** are a new way to integrate _your_ web-app content
 such as _your_ PWA with _your_ Android app using a protocol based on Custom
@@ -388,8 +386,8 @@ Issuer: CN=Test Test, OU=Test, O=Test, L=London, ST=London, C=GB
 Serial number: ea67d3d
 Valid from: Mon Jan 28 14:58:00 GMT 2019 until: Fri Jan 22 14:58:00 GMT 2044
 Certificate fingerprints:
-	 SHA1: 38:03:D6:95:91:7C:9C:EE:4A:A0:58:43:A7:43:A5:D2:76:52:EF:9B
-	 SHA256: F5:08:9F:8A:D4:C8:4A:15:6D:0A:B1:3F:61:96:BE:C7:87:8C:DE:05:59:92:B2:A3:2D:05:05:A5:62:A5:2F:34
+   SHA1: 38:03:D6:95:91:7C:9C:EE:4A:A0:58:43:A7:43:A5:D2:76:52:EF:9B
+   SHA256: F5:08:9F:8A:D4:C8:4A:15:6D:0A:B1:3F:61:96:BE:C7:87:8C:DE:05:59:92:B2:A3:2D:05:05:A5:62:A5:2F:34
 Signature algorithm name: SHA256withRSA
 Subject Public Key Algorithm: 2048-bit RSA key
 Version: 3
@@ -402,7 +400,6 @@ and serve it from your domain, from the URL `/.well-known/assetlinks.json`.
 
 Note: The `AssetLinks` file must be under `/.well-known/assetlinks.json`, at the
 root of the domain, as that's only the place Chrome will look for it.
-
 
 ### Creating an Icon {: #create-icon}
 
@@ -452,6 +449,7 @@ Make sure to update to **Chrome 75 or above** and use the
 [latest version of TWA Support Library](https://jitpack.io/#GoogleChrome/custom-tabs-client).
 
 ### Generating the images for the Splash Screen {: #create-images }
+
 Android devices can have different [screen sizes](https://developer.android.com/training/multiscreen/screensizes)
 and [pixel densities](https://developer.android.com/training/multiscreen/screendensities).
 To ensure the Splash Screen looks good on all devices, you will need to generate
@@ -483,10 +481,10 @@ offers tools to help developers to transform SVGs into Android Vector Drawables.
 ### Updating the application {: #add-splash-markup }
 
 With the images for the splash screen generated, it's time to add the necessary
-configurations to the project.  
+configurations to the project.
 
 First, add a [content-provider](https://developer.android.com/guide/topics/providers/content-provider-basics)
-to the Android Manifest (`AndroidManifest.xml`). 
+to the Android Manifest (`AndroidManifest.xml`).
 
 ```xml
 <application>
@@ -507,6 +505,7 @@ Note: Make sure to change the `android:authorities` attribute when creating the 
 as two applications cannot have the same authority on a device.
 
 Then, add `res/xml/filepaths.xml` resource, and specify the path to the twa splash screen:
+
 ```xml
 <paths>
     <files-path path="twa_splash/" name="twa_splash" />
@@ -514,6 +513,7 @@ Then, add `res/xml/filepaths.xml` resource, and specify the path to the twa spla
 ```
 
 Finally, add `meta-tags` to the Android Manifest to customize the LauncherActivity:
+
 ```xml
 <activity android:name="android.support.customtabs.trusted.LauncherActivity">
     ...
@@ -528,6 +528,7 @@ Finally, add `meta-tags` to the Android Manifest to customize the LauncherActivi
     ...
 </activity>
 ```
+
 Ensure that the value of the `android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY`
 tag matches the value defined of the `android:authorities` attribute inside the
 `provider` tag.
@@ -537,7 +538,7 @@ tag matches the value defined of the `android:authorities` attribute inside the
 Additionally, make sure the LauncherActivity is transparent to avoid a white screen
 showing before the splash.
 
-Add a new theme to `res/styles.xml`: 
+Add a new theme to `res/styles.xml`:
 
 ```xml
 <style name="Theme.LauncherActivity" parent="Theme.AppCompat.NoActionBar">
@@ -550,6 +551,7 @@ Add a new theme to `res/styles.xml`:
 ```
 
 Then, add a reference to the new style in the Android Manifest:
+
 ```xml
 <application>
     ...
@@ -557,7 +559,7 @@ Then, add a reference to the new style in the Android Manifest:
               android:theme="@style/Theme.LauncherActivity">
     ...
     </activity>
-</application>    
+</application>
 ```
 
 We are looking forward to see what developers build with Trusted Web
@@ -565,4 +567,5 @@ Activities. To drop any feedback, reach out to us at
 [@ChromiumDev](https://twitter.com/ChromiumDev).
 
 {% include "web/_shared/helpful.html" %}
+
 {% include "web/_shared/rss-widget-updates.html" %}
